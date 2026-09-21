@@ -1,6 +1,7 @@
 #if FEATURE_BIOMETRICS || FEATURE_VISION
 using Domain.Interfaces.Biometrics;
 using Biometrics.Processor.Services;
+using IFaceIdService = Domain.Interfaces.Biometrics.IFaceIdService;
 using Identifying.Application.Protos;
 using SkiaSharp;
 using Domain.DTOs;
