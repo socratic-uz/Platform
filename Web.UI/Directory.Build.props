@@ -1,86 +1,64 @@
 <Project>
+  <!-- Import parent Platform Directory.Build.props -->
+  <Import Project="$(MSBuildThisFileDirectory)../Directory.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)../Directory.Build.props')" />
+
+  <!-- Standalone & Fallback Defaults -->
   <PropertyGroup>
-    <_SocraticRootProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</_SocraticRootProps>
-  </PropertyGroup>
-
-  <!-- If in monorepo, import parent Directory.Build.props -->
-  <Import Project="$(_SocraticRootProps)" Condition="'$(_SocraticRootProps)' != '' and Exists('$(_SocraticRootProps)')" />
-
-  <!-- Standalone Mode (when Web.UI is cloned inside a feature like Commerce/Web.UI) -->
-  <PropertyGroup Condition="'$(_SocraticRootProps)' == '' or !Exists('$(_SocraticRootProps)')">
     <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)../</SolutionDir>
-    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
-    <TargetFramework>net10.0</TargetFramework>
-    <LangVersion>preview</LangVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <Configurations Condition="'$(Configurations)' == ''">Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">net10.0</TargetFramework>
+    <LangVersion Condition="'$(LangVersion)' == ''">preview</LangVersion>
+    <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
+    <ImplicitUsings Condition="'$(ImplicitUsings)' == ''">enable</ImplicitUsings>
 
-    <!-- Core -->
-    <CoreDir Condition="Exists('$(MSBuildThisFileDirectory)../Core/Domain/Domain.csproj')">$(MSBuildThisFileDirectory)../Core/</CoreDir>
-    <CoreDir Condition="'$(CoreDir)' == ''">$(MSBuildThisFileDirectory)../../../Core/</CoreDir>
-    <Domain>$(CoreDir)Domain/Domain.csproj</Domain>
-    <Infrastructure>$(CoreDir)Infrastructure/Infrastructure.csproj</Infrastructure>
-    <Shared>$(CoreDir)Shared/Shared.csproj</Shared>
-    <CoreDomain>$(Domain)</CoreDomain>
-    <CoreInfrastructure>$(Infrastructure)</CoreInfrastructure>
-    <CoreShared>$(Shared)</CoreShared>
+    <!-- Core / Shared inside Platform -->
+    <Domain Condition="'$(Domain)' == ''">$(MSBuildThisFileDirectory)../Shared/Domain/Domain.csproj</Domain>
+    <Infrastructure Condition="'$(Infrastructure)' == ''">$(MSBuildThisFileDirectory)../Shared/Infrastructure/Infrastructure.csproj</Infrastructure>
+    <Shared Condition="'$(Shared)' == ''">$(MSBuildThisFileDirectory)../Shared/Shared/Shared.csproj</Shared>
+    <CoreDomain Condition="'$(CoreDomain)' == ''">$(Domain)</CoreDomain>
+    <CoreInfrastructure Condition="'$(CoreInfrastructure)' == ''">$(Infrastructure)</CoreInfrastructure>
+    <CoreShared Condition="'$(CoreShared)' == ''">$(Shared)</CoreShared>
 
-    <!-- Design System -->
-    <DesignSystemDir Condition="Exists('$(MSBuildThisFileDirectory)../DesignSystem/Material.Web/Material.Web.csproj')">$(MSBuildThisFileDirectory)../DesignSystem/</DesignSystemDir>
-    <DesignSystemDir Condition="'$(DesignSystemDir)' == ''">$(MSBuildThisFileDirectory)../../../DesignSystem/</DesignSystemDir>
-    <MaterialWeb>$(DesignSystemDir)Material.Web/Material.Web.csproj</MaterialWeb>
-    <SmartWeb>$(DesignSystemDir)Smart.Web/Smart.Web.csproj</SmartWeb>
-    <QuickGrid>$(DesignSystemDir)QuickGrid/QuickGrid.csproj</QuickGrid>
+    <!-- Design System inside Platform -->
+    <MaterialWeb Condition="'$(MaterialWeb)' == ''">$(MSBuildThisFileDirectory)../Shared/DesignSystem/Material.Web/Material.Web.csproj</MaterialWeb>
+    <SmartWeb Condition="'$(SmartWeb)' == ''">$(MSBuildThisFileDirectory)../Shared/DesignSystem/Smart.Web/Smart.Web.csproj</SmartWeb>
+    <QuickGrid Condition="'$(QuickGrid)' == ''">$(MSBuildThisFileDirectory)../Shared/DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>
+    <Layout Condition="'$(Layout)' == ''">$(MSBuildThisFileDirectory)../Shared/DesignSystem/Layout/Layout.csproj</Layout>
+    <Shell Condition="'$(Shell)' == ''">$(Layout)</Shell>
 
     <!-- Hardware -->
-    <HardwareDir Condition="Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">$(MSBuildThisFileDirectory)../Hardware/</HardwareDir>
+    <HardwareDir Condition="Exists('$(MSBuildThisFileDirectory)../../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">$(MSBuildThisFileDirectory)../../Hardware/</HardwareDir>
+    <HardwareDir Condition="Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj') and '$(HardwareDir)' == ''">$(MSBuildThisFileDirectory)../Hardware/</HardwareDir>
     <HardwareDir Condition="'$(HardwareDir)' == ''">$(MSBuildThisFileDirectory)../../../Hardware/</HardwareDir>
-    <ReceiptPrinter>$(HardwareDir)ReceiptPrinter/ReceiptPrinter.csproj</ReceiptPrinter>
-    <CameraStreamer>$(HardwareDir)CameraStreamer/CameraStreamer.csproj</CameraStreamer>
-    <BiometricsProcessor>$(HardwareDir)Biometrics.Processor/Biometrics.Processor.csproj</BiometricsProcessor>
-    <FFmpegProcessor>$(HardwareDir)FFmpegProcessor/FFmpegProcessor.csproj</FFmpegProcessor>
+    <ReceiptPrinter Condition="'$(ReceiptPrinter)' == ''">$(HardwareDir)ReceiptPrinter/ReceiptPrinter.csproj</ReceiptPrinter>
+    <CameraStreamer Condition="'$(CameraStreamer)' == ''">$(HardwareDir)CameraStreamer/CameraStreamer.csproj</CameraStreamer>
+    <BiometricsProcessor Condition="'$(BiometricsProcessor)' == ''">$(HardwareDir)Biometrics.Processor/Biometrics.Processor.csproj</BiometricsProcessor>
+    <FFmpegProcessor Condition="'$(FFmpegProcessor)' == ''">$(HardwareDir)FFmpegProcessor/FFmpegProcessor.csproj</FFmpegProcessor>
 
     <!-- SharedKernel -->
-    <SharedKernel Condition="Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj</SharedKernel>
+    <SharedKernel Condition="Exists('$(MSBuildThisFileDirectory)../../SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../SharedKernel/SharedKernel.csproj</SharedKernel>
     <SharedKernel Condition="'$(SharedKernel)' == '' and Exists('$(MSBuildThisFileDirectory)../SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../SharedKernel/SharedKernel.csproj</SharedKernel>
+    <SharedKernel Condition="'$(SharedKernel)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj</SharedKernel>
     <SharedKernel Condition="'$(SharedKernel)' == '' and Exists('$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj</SharedKernel>
     <SharedKernelDir Condition="'$(SharedKernel)' != ''">$([System.IO.Path]::GetDirectoryName($(SharedKernel)))/</SharedKernelDir>
-    <SharedKernelProtos>$(SharedKernelDir)</SharedKernelProtos>
+    <SharedKernelProtos Condition="'$(SharedKernelDir)' != ''">$(SharedKernelDir)</SharedKernelProtos>
     <SharedKernelWeb Condition="Exists('$(SharedKernelDir)SharedKernel.Web/SharedKernel.Web.csproj')">$(SharedKernelDir)SharedKernel.Web/SharedKernel.Web.csproj</SharedKernelWeb>
     <ServiceDefaults Condition="Exists('$(SharedKernelDir)ServiceDefaults/ServiceDefaults.csproj')">$(SharedKernelDir)ServiceDefaults/ServiceDefaults.csproj</ServiceDefaults>
 
     <!-- Feature Submodule Paths inside parent feature directory (Standalone Mode) -->
-    <Commerce Condition="Exists('$(MSBuildThisFileDirectory)../Commerce.csproj')">$(MSBuildThisFileDirectory)../Commerce.csproj</Commerce>
-    <POS Condition="Exists('$(MSBuildThisFileDirectory)../POS.csproj')">$(MSBuildThisFileDirectory)../POS.csproj</POS>
-    <Kiosk Condition="Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj')">$(MSBuildThisFileDirectory)../Kiosk.csproj</Kiosk>
-    <Vision Condition="Exists('$(MSBuildThisFileDirectory)../Vision.csproj')">$(MSBuildThisFileDirectory)../Vision.csproj</Vision>
-    <Map Condition="Exists('$(MSBuildThisFileDirectory)../Map/Map.csproj')">$(MSBuildThisFileDirectory)../Map/Map.csproj</Map>
-    <QrDesigner Condition="Exists('$(MSBuildThisFileDirectory)../QrDesigner/QrDesigner.csproj')">$(MSBuildThisFileDirectory)../QrDesigner/QrDesigner.csproj</QrDesigner>
-    <SeatDesigner Condition="Exists('$(MSBuildThisFileDirectory)../SeatDesigner/SeatDesigner.csproj')">$(MSBuildThisFileDirectory)../SeatDesigner/SeatDesigner.csproj</SeatDesigner>
-    <Landing Condition="Exists('$(MSBuildThisFileDirectory)../Landing.csproj')">$(MSBuildThisFileDirectory)../Landing.csproj</Landing>
-    <Checkout Condition="Exists('$(MSBuildThisFileDirectory)../Checkout.csproj')">$(MSBuildThisFileDirectory)../Checkout.csproj</Checkout>
-    <Orders Condition="Exists('$(MSBuildThisFileDirectory)../Orders.csproj')">$(MSBuildThisFileDirectory)../Orders.csproj</Orders>
-    <Chat Condition="Exists('$(MSBuildThisFileDirectory)../Chat.csproj')">$(MSBuildThisFileDirectory)../Chat.csproj</Chat>
-    <Identity Condition="Exists('$(MSBuildThisFileDirectory)../Identity.csproj')">$(MSBuildThisFileDirectory)../Identity.csproj</Identity>
-    <Organization Condition="Exists('$(MSBuildThisFileDirectory)../Organization.csproj')">$(MSBuildThisFileDirectory)../Organization.csproj</Organization>
-  </PropertyGroup>
-
-  <!-- Local Feature Submodule Overrides (when Web.UI is cloned inside a feature like Commerce/Web.UI) -->
-  <PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">
-    <HardwareDir>$(MSBuildThisFileDirectory)../Hardware/</HardwareDir>
-    <ReceiptPrinter>$(HardwareDir)ReceiptPrinter/ReceiptPrinter.csproj</ReceiptPrinter>
-    <CameraStreamer Condition="Exists('$(HardwareDir)CameraStreamer/CameraStreamer.csproj')">$(HardwareDir)CameraStreamer/CameraStreamer.csproj</CameraStreamer>
-    <BiometricsProcessor Condition="Exists('$(HardwareDir)Biometrics.Processor/Biometrics.Processor.csproj')">$(HardwareDir)Biometrics.Processor/Biometrics.Processor.csproj</BiometricsProcessor>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory)../Core/Shared/Shared.csproj')">
-    <CoreDir>$(MSBuildThisFileDirectory)../Core/</CoreDir>
-    <Domain>$(CoreDir)Domain/Domain.csproj</Domain>
-    <Infrastructure>$(CoreDir)Infrastructure/Infrastructure.csproj</Infrastructure>
-    <Shared>$(CoreDir)Shared/Shared.csproj</Shared>
-    <CoreDomain>$(Domain)</CoreDomain>
-    <CoreInfrastructure>$(Infrastructure)</CoreInfrastructure>
-    <CoreShared>$(Shared)</CoreShared>
+    <Commerce Condition="Exists('$(MSBuildThisFileDirectory)../../Commerce.csproj')">$(MSBuildThisFileDirectory)../../Commerce.csproj</Commerce>
+    <POS Condition="Exists('$(MSBuildThisFileDirectory)../../POS.csproj')">$(MSBuildThisFileDirectory)../../POS.csproj</POS>
+    <Kiosk Condition="Exists('$(MSBuildThisFileDirectory)../../Kiosk.csproj')">$(MSBuildThisFileDirectory)../../Kiosk.csproj</Kiosk>
+    <Vision Condition="Exists('$(MSBuildThisFileDirectory)../../Vision.csproj')">$(MSBuildThisFileDirectory)../../Vision.csproj</Vision>
+    <Map Condition="Exists('$(MSBuildThisFileDirectory)../../Map/Map.csproj')">$(MSBuildThisFileDirectory)../../Map/Map.csproj</Map>
+    <QrDesigner Condition="Exists('$(MSBuildThisFileDirectory)../../QrDesigner/QrDesigner.csproj')">$(MSBuildThisFileDirectory)../../QrDesigner/QrDesigner.csproj</QrDesigner>
+    <SeatDesigner Condition="Exists('$(MSBuildThisFileDirectory)../../SeatDesigner/SeatDesigner.csproj')">$(MSBuildThisFileDirectory)../../SeatDesigner/SeatDesigner.csproj</SeatDesigner>
+    <Landing Condition="Exists('$(MSBuildThisFileDirectory)../../Landing.csproj')">$(MSBuildThisFileDirectory)../../Landing.csproj</Landing>
+    <Checkout Condition="Exists('$(MSBuildThisFileDirectory)../../Checkout.csproj')">$(MSBuildThisFileDirectory)../../Checkout.csproj</Checkout>
+    <Orders Condition="Exists('$(MSBuildThisFileDirectory)../../Orders.csproj')">$(MSBuildThisFileDirectory)../../Orders.csproj</Orders>
+    <Chat Condition="Exists('$(MSBuildThisFileDirectory)../../Chat.csproj')">$(MSBuildThisFileDirectory)../../Chat.csproj</Chat>
+    <Identity Condition="Exists('$(MSBuildThisFileDirectory)../../Identity.csproj')">$(MSBuildThisFileDirectory)../../Identity.csproj</Identity>
+    <Organization Condition="Exists('$(MSBuildThisFileDirectory)../../Organization.csproj')">$(MSBuildThisFileDirectory)../../Organization.csproj</Organization>
   </PropertyGroup>
 
   <PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">
