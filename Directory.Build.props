@@ -39,6 +39,24 @@
 
   <!-- Canonical Platform Paths (always evaluated for Platform projects) -->
   <PropertyGroup>
+    <!-- Resolve SharedKernelDir and Proto contract paths if not already provided by parent -->
+    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelDir Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' != ''">$(SharedKernelRoot)</SharedKernelDir>
+    <SharedKernelDir Condition="'$(SharedKernelDir)' == '' and '$(SharedKernel)' != '' and Exists('$(SharedKernel)')">$([System.IO.Path]::GetDirectoryName($(SharedKernel)))/</SharedKernelDir>
+
+    <ContractsProtos Condition="'$(ContractsProtos)' == '' and Exists('$(SharedKernelDir)Protos/Contracts/')">$(SharedKernelDir)Protos/Contracts/</ContractsProtos>
+    <ContractsProtos Condition="'$(ContractsProtos)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/Protos/Contracts/')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/Protos/Contracts/</ContractsProtos>
+    <Identifying Condition="'$(Identifying)' == '' and Exists('$(ContractsProtos)Identifying/')">$(ContractsProtos)Identifying/</Identifying>
+    <Shopping Condition="'$(Shopping)' == '' and Exists('$(ContractsProtos)Shopping/')">$(ContractsProtos)Shopping/</Shopping>
+    <Ordering Condition="'$(Ordering)' == '' and Exists('$(ContractsProtos)Ordering/')">$(ContractsProtos)Ordering/</Ordering>
+    <Paying Condition="'$(Paying)' == '' and Exists('$(ContractsProtos)Paying/')">$(ContractsProtos)Paying/</Paying>
+    <IdentifyingProtos Condition="'$(IdentifyingProtos)' == '' and '$(Identifying)' != ''">$(Identifying)</IdentifyingProtos>
+    <ShoppingProtos Condition="'$(ShoppingProtos)' == '' and '$(Shopping)' != ''">$(Shopping)</ShoppingProtos>
+    <OrderingProtos Condition="'$(OrderingProtos)' == '' and '$(Ordering)' != ''">$(Ordering)</OrderingProtos>
+    <PayingProtos Condition="'$(PayingProtos)' == '' and '$(Paying)' != ''">$(Paying)</PayingProtos>
+
     <PlatformRoot>$(MSBuildThisFileDirectory)</PlatformRoot>
     <PlatformSharedDir>$(PlatformRoot)Shared/</PlatformSharedDir>
     <WebUIDir>$(PlatformRoot)Web.UI/</WebUIDir>
