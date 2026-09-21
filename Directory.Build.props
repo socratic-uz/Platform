@@ -52,4 +52,44 @@
     <QuickGrid>$(PlatformSharedDir)DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>
     <Markdown>$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj</Markdown>
   </PropertyGroup>
+
+  <!-- Feature Detection & DefineConstants for Platform -->
+  <PropertyGroup>
+    <HasFeaturePOS Condition="('$(POS)' != '' and Exists('$(POS)')) or Exists('$(MSBuildThisFileDirectory)../POS.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/POS.csproj')">true</HasFeaturePOS>
+    <HasFeatureKiosk Condition="('$(Kiosk)' != '' and Exists('$(Kiosk)')) or Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Kiosk/Kiosk.csproj')">true</HasFeatureKiosk>
+    <HasFeatureCommerce Condition="('$(Commerce)' != '' and Exists('$(Commerce)')) or Exists('$(MSBuildThisFileDirectory)../Commerce.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Commerce/Commerce.csproj')">true</HasFeatureCommerce>
+    <HasFeatureVision Condition="('$(Vision)' != '' and Exists('$(Vision)')) or Exists('$(MSBuildThisFileDirectory)../Vision.csproj') or Exists('$(MSBuildThisFileDirectory)../Intelligence/Vision/Vision.csproj')">true</HasFeatureVision>
+    <HasFeatureChat Condition="('$(Chat)' != '' and Exists('$(Chat)')) or Exists('$(MSBuildThisFileDirectory)../Chat.csproj') or Exists('$(MSBuildThisFileDirectory)../Intelligence/Chat/Chat.csproj')">true</HasFeatureChat>
+    <HasFeatureLanding Condition="('$(Landing)' != '' and Exists('$(Landing)')) or Exists('$(MSBuildThisFileDirectory)../Landing.csproj') or Exists('$(MSBuildThisFileDirectory)../Portal/Landing/Landing.csproj')">true</HasFeatureLanding>
+    <HasFeatureCheckout Condition="('$(Checkout)' != '' and Exists('$(Checkout)')) or Exists('$(MSBuildThisFileDirectory)../Checkout.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Checkout/Checkout.csproj')">true</HasFeatureCheckout>
+    <HasFeatureOrders Condition="('$(Orders)' != '' and Exists('$(Orders)')) or Exists('$(MSBuildThisFileDirectory)../Orders.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Orders/Orders.csproj')">true</HasFeatureOrders>
+    <HasFeatureOrganization Condition="('$(Organization)' != '' and Exists('$(Organization)')) or Exists('$(MSBuildThisFileDirectory)../Organization.csproj') or Exists('$(MSBuildThisFileDirectory)../Portal/Organization/Organization.csproj')">true</HasFeatureOrganization>
+    <HasFeatureIdentity Condition="('$(Identity)' != '' and Exists('$(Identity)')) or Exists('$(MSBuildThisFileDirectory)../Identity.csproj') or Exists('$(MSBuildThisFileDirectory)../Portal/Identity/Identity.csproj')">true</HasFeatureIdentity>
+    <HasFeatureMap Condition="('$(Map)' != '' and Exists('$(Map)')) or Exists('$(MSBuildThisFileDirectory)../Map/Map.csproj') or Exists('$(MSBuildThisFileDirectory)../Studio/Map/Map.csproj')">true</HasFeatureMap>
+    <HasFeatureQrDesigner Condition="('$(QrDesigner)' != '' and Exists('$(QrDesigner)')) or Exists('$(MSBuildThisFileDirectory)../QrDesigner/QrDesigner.csproj') or Exists('$(MSBuildThisFileDirectory)../Studio/QrDesigner/QrDesigner.csproj')">true</HasFeatureQrDesigner>
+    <HasFeatureSeatDesigner Condition="('$(SeatDesigner)' != '' and Exists('$(SeatDesigner)')) or Exists('$(MSBuildThisFileDirectory)../SeatDesigner/SeatDesigner.csproj') or Exists('$(MSBuildThisFileDirectory)../Studio/SeatDesigner/SeatDesigner.csproj')">true</HasFeatureSeatDesigner>
+
+    <HasMarkdown Condition="Exists('$(Markdown)') or Exists('$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj')">true</HasMarkdown>
+    <HasFFmpeg Condition="Exists('$(FFmpegProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/FFmpegProcessor/FFmpegProcessor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/FFmpegProcessor/FFmpegProcessor.csproj')">true</HasFFmpeg>
+    <HasBiometrics Condition="Exists('$(BiometricsProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/Biometrics.Processor/Biometrics.Processor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/Biometrics.Processor/Biometrics.Processor.csproj')">true</HasBiometrics>
+    <HasReceiptPrinter Condition="Exists('$(ReceiptPrinter)') or Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">true</HasReceiptPrinter>
+
+    <DefineConstants Condition="'$(HasFeaturePOS)' == 'true'">$(DefineConstants);FEATURE_POS</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureKiosk)' == 'true'">$(DefineConstants);FEATURE_KIOSK</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureCommerce)' == 'true'">$(DefineConstants);FEATURE_COMMERCE</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureVision)' == 'true'">$(DefineConstants);FEATURE_VISION</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureChat)' == 'true'">$(DefineConstants);FEATURE_CHAT</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureLanding)' == 'true'">$(DefineConstants);FEATURE_LANDING</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureCheckout)' == 'true'">$(DefineConstants);FEATURE_CHECKOUT</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureOrders)' == 'true'">$(DefineConstants);FEATURE_ORDERS</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureOrganization)' == 'true'">$(DefineConstants);FEATURE_ORGANIZATION</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureIdentity)' == 'true'">$(DefineConstants);FEATURE_IDENTITY</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureMap)' == 'true'">$(DefineConstants);FEATURE_MAP</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureQrDesigner)' == 'true'">$(DefineConstants);FEATURE_QRDESIGNER</DefineConstants>
+    <DefineConstants Condition="'$(HasFeatureSeatDesigner)' == 'true'">$(DefineConstants);FEATURE_SEATDESIGNER</DefineConstants>
+    <DefineConstants Condition="'$(HasMarkdown)' == 'true'">$(DefineConstants);FEATURE_MARKDOWN</DefineConstants>
+    <DefineConstants Condition="'$(HasFFmpeg)' == 'true'">$(DefineConstants);FEATURE_FFMPEG</DefineConstants>
+    <DefineConstants Condition="'$(HasBiometrics)' == 'true'">$(DefineConstants);FEATURE_BIOMETRICS</DefineConstants>
+    <DefineConstants Condition="'$(HasReceiptPrinter)' == 'true'">$(DefineConstants);FEATURE_RECEIPTPRINTER</DefineConstants>
+  </PropertyGroup>
 </Project>
