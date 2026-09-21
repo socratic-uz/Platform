@@ -120,6 +120,7 @@
     <HasFFmpeg Condition="Exists('$(FFmpegProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/FFmpegProcessor/FFmpegProcessor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/FFmpegProcessor/FFmpegProcessor.csproj')">true</HasFFmpeg>
     <HasBiometrics Condition="Exists('$(BiometricsProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/Biometrics.Processor/Biometrics.Processor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/Biometrics.Processor/Biometrics.Processor.csproj')">true</HasBiometrics>
     <HasReceiptPrinter Condition="Exists('$(ReceiptPrinter)') or Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">true</HasReceiptPrinter>
+    <HasCameraStreamer Condition="Exists('$(CameraStreamer)') or Exists('$(MSBuildThisFileDirectory)../Hardware/CameraStreamer/CameraStreamer.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/CameraStreamer/CameraStreamer.csproj')">true</HasCameraStreamer>
 
     <DefineConstants Condition="'$(HasFeaturePOS)' == 'true'">$(DefineConstants);FEATURE_POS</DefineConstants>
     <DefineConstants Condition="'$(HasFeatureKiosk)' == 'true'">$(DefineConstants);FEATURE_KIOSK</DefineConstants>
@@ -138,5 +139,6 @@
     <DefineConstants Condition="'$(HasFFmpeg)' == 'true'">$(DefineConstants);FEATURE_FFMPEG</DefineConstants>
     <DefineConstants Condition="'$(HasBiometrics)' == 'true'">$(DefineConstants);FEATURE_BIOMETRICS</DefineConstants>
     <DefineConstants Condition="'$(HasReceiptPrinter)' == 'true'">$(DefineConstants);FEATURE_RECEIPTPRINTER</DefineConstants>
+    <DefineConstants Condition="'$(HasCameraStreamer)' == 'true'">$(DefineConstants);FEATURE_CAMERA_STREAMER</DefineConstants>
   </PropertyGroup>
 </Project>

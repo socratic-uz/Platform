@@ -18,7 +18,9 @@ using Chat.Web;
 #if FEATURE_MARKDOWN
 using Markdown.Web;
 #endif
+#if FEATURE_CAMERA_STREAMER
 using CameraStreamer.Web;
+#endif
 using System.Text.Json.Serialization;
 
 using Domain.Interfaces;
@@ -58,7 +60,6 @@ using Socratic.QrDesigner;
 #if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_KIOSK || FEATURE_COMMERCE
 using Socratic.ReceiptPrinter;
 #endif
-using CameraStreamer.Web;
 
 using static Shared.Helpers.FileHelper;
 
@@ -230,7 +231,9 @@ builder.Services.AddQrDesignerServices();
 #if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_KIOSK || FEATURE_COMMERCE
 builder.Services.AddReceiptPrinterServices();
 #endif
+#if FEATURE_CAMERA_STREAMER
 builder.Services.AddCameraStreamer();
+#endif
 
 // Server overrides
 #if FEATURE_CHAT
