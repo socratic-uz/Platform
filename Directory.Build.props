@@ -25,7 +25,16 @@
     <SharedKernelProtos>$(SharedKernelDir)</SharedKernelProtos>
     <SharedKernel>$(SharedKernelDir)SharedKernel.csproj</SharedKernel>
     <ServiceDefaults>$(SharedKernelDir)ServiceDefaults/ServiceDefaults.csproj</ServiceDefaults>
-    <ContractsProtos>$(SharedKernelDir)Protos/Contracts/</ContractsProtos>
+    <ContractsProtos Condition="Exists('$(SharedKernelDir)Protos/Contracts/')">$(SharedKernelDir)Protos/Contracts/</ContractsProtos>
+    <ContractsProtos Condition="'$(ContractsProtos)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/Protos/Contracts/')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/Protos/Contracts/</ContractsProtos>
+    <Identifying Condition="Exists('$(ContractsProtos)Identifying/')">$(ContractsProtos)Identifying/</Identifying>
+    <Shopping Condition="Exists('$(ContractsProtos)Shopping/')">$(ContractsProtos)Shopping/</Shopping>
+    <Ordering Condition="Exists('$(ContractsProtos)Ordering/')">$(ContractsProtos)Ordering/</Ordering>
+    <Paying Condition="Exists('$(ContractsProtos)Paying/')">$(ContractsProtos)Paying/</Paying>
+    <IdentifyingProtos Condition="'$(Identifying)' != ''">$(Identifying)</IdentifyingProtos>
+    <ShoppingProtos Condition="'$(Shopping)' != ''">$(Shopping)</ShoppingProtos>
+    <OrderingProtos Condition="'$(Ordering)' != ''">$(Ordering)</OrderingProtos>
+    <PayingProtos Condition="'$(Paying)' != ''">$(Paying)</PayingProtos>
   </PropertyGroup>
 
   <!-- Canonical Platform Paths (always evaluated for Platform projects) -->
