@@ -51,6 +51,26 @@
     <SmartWeb>$(PlatformSharedDir)DesignSystem/Smart.Web/Smart.Web.csproj</SmartWeb>
     <QuickGrid>$(PlatformSharedDir)DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>
     <Markdown>$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj</Markdown>
+
+    <!-- Submodule Features when Platform is inside a feature root (e.g. POS/Platform) -->
+    <POS Condition="'$(POS)' == '' and Exists('$(MSBuildThisFileDirectory)../POS.csproj')">$(MSBuildThisFileDirectory)../POS.csproj</POS>
+    <Kiosk Condition="'$(Kiosk)' == '' and Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj')">$(MSBuildThisFileDirectory)../Kiosk.csproj</Kiosk>
+    <Commerce Condition="'$(Commerce)' == '' and Exists('$(MSBuildThisFileDirectory)../Commerce.csproj')">$(MSBuildThisFileDirectory)../Commerce.csproj</Commerce>
+    <Vision Condition="'$(Vision)' == '' and Exists('$(MSBuildThisFileDirectory)../Vision.csproj')">$(MSBuildThisFileDirectory)../Vision.csproj</Vision>
+    <Chat Condition="'$(Chat)' == '' and Exists('$(MSBuildThisFileDirectory)../Chat.csproj')">$(MSBuildThisFileDirectory)../Chat.csproj</Chat>
+    <Landing Condition="'$(Landing)' == '' and Exists('$(MSBuildThisFileDirectory)../Landing.csproj')">$(MSBuildThisFileDirectory)../Landing.csproj</Landing>
+    <Checkout Condition="'$(Checkout)' == '' and Exists('$(MSBuildThisFileDirectory)../Checkout.csproj')">$(MSBuildThisFileDirectory)../Checkout.csproj</Checkout>
+    <Orders Condition="'$(Orders)' == '' and Exists('$(MSBuildThisFileDirectory)../Orders.csproj')">$(MSBuildThisFileDirectory)../Orders.csproj</Orders>
+    <Organization Condition="'$(Organization)' == '' and Exists('$(MSBuildThisFileDirectory)../Organization.csproj')">$(MSBuildThisFileDirectory)../Organization.csproj</Organization>
+    <Identity Condition="'$(Identity)' == '' and Exists('$(MSBuildThisFileDirectory)../Identity.csproj')">$(MSBuildThisFileDirectory)../Identity.csproj</Identity>
+    <Map Condition="'$(Map)' == '' and Exists('$(MSBuildThisFileDirectory)../Map/Map.csproj')">$(MSBuildThisFileDirectory)../Map/Map.csproj</Map>
+    <QrDesigner Condition="'$(QrDesigner)' == '' and Exists('$(MSBuildThisFileDirectory)../QrDesigner/QrDesigner.csproj')">$(MSBuildThisFileDirectory)../QrDesigner/QrDesigner.csproj</QrDesigner>
+    <SeatDesigner Condition="'$(SeatDesigner)' == '' and Exists('$(MSBuildThisFileDirectory)../SeatDesigner/SeatDesigner.csproj')">$(MSBuildThisFileDirectory)../SeatDesigner/SeatDesigner.csproj</SeatDesigner>
+
+    <!-- Submodule Hardware when in a feature root -->
+    <ReceiptPrinter Condition="'$(ReceiptPrinter)' == '' and Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj')">$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj</ReceiptPrinter>
+    <CameraStreamer Condition="'$(CameraStreamer)' == '' and Exists('$(MSBuildThisFileDirectory)../Hardware/CameraStreamer/CameraStreamer.csproj')">$(MSBuildThisFileDirectory)../Hardware/CameraStreamer/CameraStreamer.csproj</CameraStreamer>
+    <BiometricsProcessor Condition="'$(BiometricsProcessor)' == '' and Exists('$(MSBuildThisFileDirectory)../Hardware/Biometrics.Processor/Biometrics.Processor.csproj')">$(MSBuildThisFileDirectory)../Hardware/Biometrics.Processor/Biometrics.Processor.csproj</BiometricsProcessor>
   </PropertyGroup>
 
   <!-- Feature Detection & DefineConstants for Platform -->
