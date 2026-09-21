@@ -18,6 +18,7 @@ using Chat.Web;
 #if FEATURE_MARKDOWN
 using Markdown.Web;
 #endif
+using CameraStreamer.Web;
 using System.Text.Json.Serialization;
 
 using Domain.Interfaces;
