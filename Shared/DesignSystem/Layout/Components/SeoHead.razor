@@ -1,0 +1,79 @@
+@using System.Globalization
+
+<PageTitle>@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : $"{Title} | Socratic")</PageTitle>
+
+<HeadContent>
+    @if (NoIndex)
+    {
+        <meta name="robots" content="noindex, nofollow" />
+    }
+    else
+    {
+        <meta name="robots" content="index, follow" />
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Description))
+    {
+        <meta name="description" content="@Description" />
+        <meta property="og:description" content="@Description" />
+        <meta name="twitter:description" content="@Description" />
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Keywords))
+    {
+        <meta name="keywords" content="@Keywords" />
+    }
+
+    <meta property="og:title" content="@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title)" />
+    <meta property="og:type" content="@(string.IsNullOrWhiteSpace(Type) ? "website" : Type)" />
+    <meta property="og:image" content="@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl)" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title)" />
+    <meta name="twitter:image" content="@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl)" />
+
+    @if (!string.IsNullOrWhiteSpace(CanonicalUrl))
+    {
+        <link rel="canonical" href="@CanonicalUrl" />
+        <meta property="og:url" content="@CanonicalUrl" />
+
+        <link rel="alternate" hreflang="ru" href="@GetLocalizedUrl("ru")" />
+        <link rel="alternate" hreflang="uz" href="@GetLocalizedUrl("uz")" />
+        <link rel="alternate" hreflang="en" href="@GetLocalizedUrl("en")" />
+        <link rel="alternate" hreflang="x-default" href="@CanonicalUrl" />
+    }
+
+    @if (!string.IsNullOrWhiteSpace(JsonLd))
+    {
+        <script type="application/ld+json">
+            @((MarkupString)JsonLd)
+        </script>
+    }
+</HeadContent>
+
+@code {
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public string? Keywords { get; set; }
+    [Parameter] public string? CanonicalUrl { get; set; }
+    [Parameter] public string? ImageUrl { get; set; }
+    [Parameter] public string? Type { get; set; }
+    [Parameter] public string? JsonLd { get; set; }
+    [Parameter] public bool NoIndex { get; set; }
+
+    private const string DefaultTitle = "Socratic - Универсальная AI-платформа для бизнеса, торговли и сферы услуг";
+    private const string DefaultImage = "https://socratic.uz/img/icon-512.png";
+
+    private string GetLocalizedUrl(string culture)
+    {
+        if (string.IsNullOrWhiteSpace(CanonicalUrl)) return string.Empty;
+        var uri = new Uri(CanonicalUrl, UriKind.RelativeOrAbsolute);
+        if (!uri.IsAbsoluteUri) return CanonicalUrl;
+
+        var builder = new UriBuilder(uri);
+        var query = System.Web.HttpUtility.ParseQueryString(builder.Query);
+        query["culture"] = culture;
+        builder.Query = query.ToString();
+        return builder.ToString();
+    }
+}

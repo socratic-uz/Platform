@@ -1,0 +1,334 @@
+.socratic-subscription-card {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 20px;
+    padding: 1.75rem;
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.subscription-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.subscription-status-badge {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.badge-trial {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-with-ads {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-pro {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-expired {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-icon {
+    font-size: 1.1rem;
+}
+
+.trial-counter {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.trial-days-highlight {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.trial-days-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.subscription-current-info {
+    margin-bottom: 1.75rem;
+}
+
+.subscription-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.subscription-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+/* Сетка тарифов */
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.tier-box {
+    position: relative;
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: grid;
+    align-content: space-between;
+    gap: 1.25rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tier-box:hover {
+    transform: translateY(-2px);
+    border-color: var(--md-sys-color-outline);
+}
+
+.tier-box.active-tier {
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+.tier-box.pro-tier {
+    border-color: var(--md-sys-color-tertiary);
+}
+
+.pro-tag {
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.tier-header {
+    margin-bottom: 0.5rem;
+}
+
+.tier-name {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.tier-price {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.tier-price small {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.tier-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.tier-features li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-icon {
+    font-size: 1.15rem;
+}
+
+.feature-icon.ok { color: var(--md-sys-color-primary); }
+.feature-icon.info { color: var(--md-sys-color-tertiary); }
+.feature-icon.star { color: var(--md-sys-color-secondary); }
+
+.current-plan-indicator {
+    display: block;
+    text-align: center;
+    padding: 0.6rem;
+    background: var(--md-sys-color-surface-container-highest);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.current-plan-indicator.pro {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.tier-select-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    display: inline-grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.tier-select-btn.primary {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.tier-select-btn.secondary {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+.tier-select-btn:hover {
+    opacity: 0.9;
+}
+
+/* Modal */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: var(--md-sys-color-scrim);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.subscription-modal {
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 1.75rem;
+    box-shadow: 0 16px 48px var(--md-sys-color-shadow);
+    display: grid;
+    gap: 1.25rem;
+}
+
+.modal-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1.25rem;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+}
+
+.payment-methods-selector {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.method-option {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    min-height: 48px;
+    color: var(--md-sys-color-on-surface);
+}
+
+.modal-footer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 0.75rem;
+}
+
+.btn-cancel {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--md-sys-color-outline);
+    background: transparent;
+    color: var(--md-sys-color-on-surface);
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+}
+
+.btn-confirm {
+    padding: 0.6rem 1.4rem;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+}

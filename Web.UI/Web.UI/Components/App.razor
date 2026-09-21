@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" data-theme="@InitialTheme" style="color-scheme: @InitialTheme;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="google-site-verification" content="ZzYX_zi3JaHQXKOG-cpb2L2vaCYo9fY9mKyCLdp7acU" />
+    <meta name="google-adsense-account" content="ca-pub-3226044876387611">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3226044876387611" crossorigin="anonymous"></script>
+    <!-- Yandex Autoplacement 20027116 -->
+    <script>window.yaContextCb = window.yaContextCb || [];</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script data-page-id="20027116" src="https://yandex.ru/ads/system/ap-loader.js" async></script>
+    <meta name="robots" content="index, follow">
+    <base href="/" />
+    <script>
+        (function() {
+            try {
+                var cookieTheme = document.cookie.split('; ').find(function(row) { return row.startsWith('Theme='); });
+                var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) || 
+                            localStorage.getItem('Theme') || 
+                            (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
+                var normalized = theme.toLowerCase();
+                document.documentElement.setAttribute('data-theme', normalized);
+                document.documentElement.style.colorScheme = normalized;
+            } catch(e) {}
+        })();
+    </script>
+    <link rel="preload" href="_content/Shared/css/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
+    <script src="_content/Material.Web/material-web.bundle.js" defer></script>
+    <style>
+        md-icon {
+            font-family: 'Material Symbols Outlined' !important;
+            font-weight: normal;
+            font-style: normal;
+            font-size: var(--md-icon-size, 24px);
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-grid;
+            place-items: center;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+            width: var(--md-icon-size, 24px);
+            height: var(--md-icon-size, 24px);
+            vertical-align: middle;
+        }
+        md-dialog:not(:defined) {
+            display: none !important;
+        }
+    </style>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="_content/Shared/css/fonts.css" />
+    <link rel="stylesheet" href="_content/Shared/css/font-styles.css" />
+    <link rel="stylesheet" href="_content/Shared/css/touch.css" />
+    <link rel="stylesheet" href="_content/Shared/css/grid.css" />
+    <link rel="stylesheet" href="_content/Shared/css/material-theme.css/dark.css" />
+    <link rel="stylesheet" href="_content/Shared/css/material-theme.css/light.css" />
+    <link rel="stylesheet" href="_content/Shared/css/effects/liquid-glass.css" />
+    
+    <SectionOutlet SectionName="style" />
+    <link rel="stylesheet" href="@Assets["Web.UI.styles.css"]" />
+    <link href="_content/Shared/manifest.webmanifest" rel="manifest" />
+    <ImportMap />
+    <link rel="icon" type="image/png" href="_content/Shared/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="_content/Shared/img/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="_content/Shared/img/icon-192.png" />
+    <HeadOutlet @rendermode="InteractiveAuto" />
+    <AntiforgeryToken />
+</head>
+<body oncontextmenu="return false;">
+    <Routes @rendermode="InteractiveAuto" />
+
+    <SectionOutlet SectionName="script" />
+
+    <ReconnectModal />
+    <script src="https://oauth.telegram.org/js/telegram-login.js?6"></script>
+    <script src="_content/Shared/js/passkeyHelper.js"></script>
+    <script src="_content/Shared/js/telegramHelper.js"></script>
+    <script src="_content/Shared/js/oauthPopupHelper.js"></script>
+    <script>
+        window.socraticAdNetwork = {
+            pushGoogle: function() {
+                try {
+                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                } catch(e) {}
+            },
+            renderYandex: function(blockId, containerId) {
+                try {
+                    var render = function() {
+                        if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
+                            window.Ya.Context.AdvManager.render({
+                                blockId: blockId,
+                                renderTo: containerId
+                            });
+                        }
+                    };
+                    if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
+                        render();
+                    } else {
+                        window.yaContextCb = window.yaContextCb || [];
+                        window.yaContextCb.push(render);
+                    }
+                } catch(e) {}
+            }
+        };
+        window.socraticAdSense = {
+            push: function() {
+                window.socraticAdNetwork.pushGoogle();
+            }
+        };
+    </script>
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
+</body>
+</html>
+
+@code {
+    [CascadingParameter] private HttpContext? HttpContext { get; set; }
+
+    private string InitialTheme =>
+        HttpContext?.Request.Cookies["Theme"]?.ToLowerInvariant() switch
+        {
+            "light" => "light",
+            _ => "dark"
+        };
+}

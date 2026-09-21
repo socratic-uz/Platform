@@ -1,0 +1,43 @@
+@inject IStringLocalizer L
+
+<div class="material-search-container" style="display: grid; align-items: center; width: 100%; max-width: 420px; min-width: 0; box-sizing: border-box;">
+    <TextField TValue="string" Variant="TextField<string>.TextFieldVariant.Outlined" Placeholder="@(L["Search_Placeholder"] ?? "Поиск...")" Value="@SearchText" ValueChanged="v => SearchText = v" ValueExpression="() => SearchText" style="width: 100%; min-width: 0;">
+        <Icon Name="search" Slot="leading-icon" />
+        @if (!string.IsNullOrEmpty(SearchText))
+        {
+            <IconButton Icon="clear" Slot="trailing-icon" OnClick="() => SearchText = string.Empty" />
+        }
+    </TextField>
+</div>
+
+@code {
+    protected async Task Submit() => await OnSubmit.InvokeAsync(searchText);
+
+    string? searchText;
+    string? SearchText
+    {
+        get => searchText;
+        set
+        {
+            searchText = value;
+            OnSubmit.InvokeAsync(value);
+        }
+    }
+    [Parameter] public EventCallback<string> OnSubmit { get; set; }
+
+    string? FilterAttribute;
+
+    protected Task ToggleFilter()
+    {
+        if (FilterAttribute != null)
+        {
+            FilterAttribute = null;
+        }
+        else
+        {
+            FilterAttribute = "open";
+        }
+		return Task.CompletedTask;
+    }
+
+}

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Hardware\WebRtc\WebRtc.csproj" />
+    <ProjectReference Include="..\..\..\Hardware\RemoteControl\RemoteControl.csproj" />
+    <ProjectReference Include="..\..\..\Hardware\FFmpegProcessor\FFmpegProcessor.csproj" />
+  </ItemGroup>
+
+</Project>

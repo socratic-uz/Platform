@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+
+<md-sub-menu anchor-corner="@AnchorCorner"
+             menu-corner="@MenuCorner"
+             hover-open-delay="@HoverOpenDelay"
+             hover-close-delay="@HoverCloseDelay"
+             @attributes="AdditionalAttributes">
+    
+    <md-menu-item slot="item"
+                  disabled="@ItemDisabled"
+                  selected="@ItemSelected"
+                  @onclick="OnItemClick">
+        
+        @if (!string.IsNullOrEmpty(ItemStartIcon))
+        {
+            <md-icon slot="start">@ItemStartIcon</md-icon>
+        }
+        
+        @if (!string.IsNullOrEmpty(ItemHeadline))
+        {
+            <div slot="headline">@ItemHeadline</div>
+        }
+        
+        @if (!string.IsNullOrEmpty(ItemSupportingText))
+        {
+            <div slot="supporting-text">@ItemSupportingText</div>
+        }
+        
+        @if (!string.IsNullOrEmpty(ItemEndIcon))
+        {
+            <md-icon slot="end">@ItemEndIcon</md-icon>
+        }
+        
+        @ItemContent
+    </md-menu-item>
+    
+    <md-menu slot="menu" @attributes="MenuAttributes">
+        @ChildContent
+    </md-menu>
+    
+</md-sub-menu>
+
+@code {
+    [Parameter] public string AnchorCorner { get; set; } = "start-end";
+    [Parameter] public string MenuCorner { get; set; } = "start-start";
+    [Parameter] public int HoverOpenDelay { get; set; } = 400;
+    [Parameter] public int HoverCloseDelay { get; set; } = 400;
+    
+    // Item properties
+    [Parameter] public bool ItemDisabled { get; set; } = false;
+    [Parameter] public bool ItemSelected { get; set; } = false;
+    [Parameter] public string? ItemHeadline { get; set; }
+    [Parameter] public string? ItemSupportingText { get; set; }
+    [Parameter] public string? ItemStartIcon { get; set; }
+    [Parameter] public string? ItemEndIcon { get; set; }
+    [Parameter] public RenderFragment? ItemContent { get; set; }
+    [Parameter] public EventCallback<MouseEventArgs> OnItemClick { get; set; }
+    
+    // Menu content
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    
+    [Parameter] public Dictionary<string, object> MenuAttributes { get; set; } = new();
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+}

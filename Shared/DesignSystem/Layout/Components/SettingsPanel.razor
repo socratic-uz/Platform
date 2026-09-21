@@ -1,0 +1,35 @@
+@namespace Shared.Components
+@using Material.Web.Components
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer L
+
+<div class="settings-panel-container">
+    <div class="settings-section">
+        <h4 style="margin-bottom: 8px; color: var(--md-sys-color-on-surface);">@(L?["Settings_ThemeTitle"] ?? "Тема оформления")</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); gap: 8px;">
+            <Button Variant="@(ThemeMode == "light" ? ButtonVariant.Filled : ButtonVariant.Outlined)"
+                    OnClick='() => SetTheme("light")'>
+                <Icon Name="light_mode" />
+                @(L?["Settings_ThemeLight"] ?? "Светлая")
+            </Button>
+            <Button Variant="@(ThemeMode == "dark" ? ButtonVariant.Filled : ButtonVariant.Outlined)"
+                    OnClick='() => SetTheme("dark")'>
+                <Icon Name="dark_mode" />
+                @(L?["Settings_ThemeDark"] ?? "Тёмная")
+            </Button>
+            <Button Variant="@(ThemeMode == "system" ? ButtonVariant.Filled : ButtonVariant.Outlined)"
+                    OnClick='() => SetTheme("system")'>
+                <Icon Name="brightness_auto" />
+                @(L?["Settings_ThemeAuto"] ?? "Авто")
+            </Button>
+        </div>
+    </div>
+
+    <Divider style="margin: 16px 0;" />
+
+    <div class="settings-section">
+        <h4 style="margin-bottom: 8px; color: var(--md-sys-color-on-surface);">@(L?["Settings_AccentColor"] ?? "Акцентный цвет")</h4>
+        <ColorPicker @bind-Value="AccentColor" Compact="true" />
+    </div>
+</div>
+

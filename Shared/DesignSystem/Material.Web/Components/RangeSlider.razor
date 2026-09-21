@@ -1,0 +1,431 @@
+@using System.Linq.Expressions
+@using Microsoft.AspNetCore.Components.Forms
+@typeparam TValue where TValue : struct, IComparable<TValue>
+
+<md-slider id="@Id"
+           class="@CssClass material-range-slider"
+           min="@GetStringValue(Min)"
+           max="@GetStringValue(Max)"
+           value-start="@GetStringValue(ValueStart)"
+           value-end="@GetStringValue(ValueEnd)"
+           step="@GetStringValue(Step)"
+           @attributes="AdditionalAttributes"
+           disabled="@Disabled"
+           ticks="@ShowTicks"
+           labeled="@ShowLabel"
+           range="@true"
+           value-label-start="@GetValueLabelStart()"
+           value-label-end="@GetValueLabelEnd()"
+           aria-label-start="@AriaLabelStart"
+           aria-label-end="@AriaLabelEnd"
+           aria-valuetext-start="@GetAriaValueTextStart()"
+           aria-valuetext-end="@GetAriaValueTextEnd()"
+           @ref="sliderElement"
+           @oninput=@HandleInput
+           @onchange=@HandleChange>
+</md-slider>
+
+@code {
+    private ElementReference sliderElement;
+
+    [Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
+    [Parameter] public TValue Min { get; set; } = default!;
+    [Parameter] public TValue Max { get; set; } = default!;
+    [Parameter] public TValue ValueStart { get; set; } = default!;
+    [Parameter] public EventCallback<TValue> ValueStartChanged { get; set; }
+    [Parameter] public TValue ValueEnd { get; set; } = default!;
+    [Parameter] public EventCallback<TValue> ValueEndChanged { get; set; }
+    [Parameter] public TValue Step { get; set; } = default!;
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public bool ShowTicks { get; set; } = false;
+    [Parameter] public bool ShowLabel { get; set; } = false;
+    [Parameter] public string ValueLabelStart { get; set; } = "";
+    [Parameter] public string ValueLabelEnd { get; set; } = "";
+    [Parameter] public string AriaLabelStart { get; set; } = "";
+    [Parameter] public string AriaLabelEnd { get; set; } = "";
+    [Parameter] public string AriaValueTextStart { get; set; } = "";
+    [Parameter] public string AriaValueTextEnd { get; set; } = "";
+    [Parameter] public Func<TValue, string>? ValueFormatter { get; set; }
+
+    // Äîïîëíèòåëüíûå àòðèáóòû
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object>? AdditionalAttributes { get; set; }
+
+    // Ñîáûòèÿ
+    [Parameter] public EventCallback<SliderRangeEventArgs<TValue>> OnRangeSlide { get; set; }
+    [Parameter] public EventCallback<SliderRangeEventArgs<TValue>> OnRangeChange { get; set; }
+
+    // Âàëèäàöèÿ
+    [Parameter] public Expression<Func<TValue>>? ForStart { get; set; }
+    [Parameter] public Expression<Func<TValue>>? ForEnd { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Óñòàíàâëèâàåì çíà÷åíèÿ ïî óìîë÷àíèþ
+        if (EqualityComparer<TValue>.Default.Equals(Min, default(TValue)))
+        {
+            Min = GetDefaultMin();
+        }
+        if (EqualityComparer<TValue>.Default.Equals(Max, default(TValue)))
+        {
+            Max = GetDefaultMax();
+        }
+        if (EqualityComparer<TValue>.Default.Equals(Step, default(TValue)))
+        {
+            Step = GetDefaultStep();
+        }
+        
+        // Óñòàíàâëèâàåì çíà÷åíèÿ äèàïàçîíà ïî óìîë÷àíèþ
+        if (EqualityComparer<TValue>.Default.Equals(ValueStart, default(TValue)))
+        {
+            ValueStart = GetDefaultRangeStart();
+        }
+        if (EqualityComparer<TValue>.Default.Equals(ValueEnd, default(TValue)))
+        {
+            ValueEnd = GetDefaultRangeEnd();
+        }
+
+        base.OnInitialized();
+    }
+
+    // Îáðàáîò÷èêè ñîáûòèé
+    private async Task HandleInput(ChangeEventArgs e)
+    {
+        await UpdateValuesFromEvent(e);
+        await OnRangeSlide.InvokeAsync(new SliderRangeEventArgs<TValue>(ValueStart, ValueEnd));
+    }
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        await UpdateValuesFromEvent(e);
+        await OnRangeChange.InvokeAsync(new SliderRangeEventArgs<TValue>(ValueStart, ValueEnd));
+    }
+
+    private async Task UpdateValuesFromEvent(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            var strVal = e.Value.ToString();
+            if (!string.IsNullOrEmpty(strVal))
+            {
+                var parts = strVal.Split(new[] { ',', ';', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (parts.Length >= 2)
+                {
+                    if (TryParseTValue(parts[0], out var start))
+                    {
+                        ValueStart = start;
+                        await ValueStartChanged.InvokeAsync(ValueStart);
+                    }
+                    if (TryParseTValue(parts[1], out var end))
+                    {
+                        ValueEnd = end;
+                        await ValueEndChanged.InvokeAsync(ValueEnd);
+                    }
+                }
+            }
+        }
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private bool TryParseTValue(string input, out TValue result)
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int) && int.TryParse(input, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var i))
+        {
+            result = (TValue)(object)i;
+            return true;
+        }
+        if (type == typeof(decimal) && decimal.TryParse(input, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var d))
+        {
+            result = (TValue)(object)d;
+            return true;
+        }
+        if (type == typeof(double) && double.TryParse(input, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var db))
+        {
+            result = (TValue)(object)db;
+            return true;
+        }
+        if (type == typeof(float) && float.TryParse(input, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var f))
+        {
+            result = (TValue)(object)f;
+            return true;
+        }
+        if (type == typeof(long) && long.TryParse(input, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var l))
+        {
+            result = (TValue)(object)l;
+            return true;
+        }
+
+        result = default!;
+        return false;
+    }
+
+    // Âñïîìîãàòåëüíûå ìåòîäû
+    private string GetStringValue(TValue value)
+    {
+        return FormatValue(value);
+    }
+
+    private string GetValueLabelStart()
+    {
+        if (!string.IsNullOrEmpty(ValueLabelStart))
+            return ValueLabelStart;
+
+        if (ValueFormatter != null)
+            return ValueFormatter(ValueStart);
+
+        return FormatValue(ValueStart);
+    }
+
+    private string GetValueLabelEnd()
+    {
+        if (!string.IsNullOrEmpty(ValueLabelEnd))
+            return ValueLabelEnd;
+
+        if (ValueFormatter != null)
+            return ValueFormatter(ValueEnd);
+
+        return FormatValue(ValueEnd);
+    }
+
+    private string GetAriaValueTextStart()
+    {
+        if (!string.IsNullOrEmpty(AriaValueTextStart))
+            return AriaValueTextStart;
+
+        return GetValueLabelStart();
+    }
+
+    private string GetAriaValueTextEnd()
+    {
+        if (!string.IsNullOrEmpty(AriaValueTextEnd))
+            return AriaValueTextEnd;
+
+        return GetValueLabelEnd();
+    }
+
+    private string FormatValue(TValue value)
+    {
+        if (EqualityComparer<TValue>.Default.Equals(value, default(TValue)))
+            return "0";
+
+        var type = typeof(TValue);
+        
+        if (type == typeof(decimal))
+        {
+            var decimalValue = (decimal)(object)value;
+            return decimalValue.ToString("0.##");
+        }
+        else if (type == typeof(double))
+        {
+            var doubleValue = (double)(object)value;
+            return doubleValue.ToString("0.##");
+        }
+        else if (type == typeof(float))
+        {
+            var floatValue = (float)(object)value;
+            return floatValue.ToString("0.##");
+        }
+
+        return value.ToString() ?? "0";
+    }
+
+    private TValue GetDefaultMin()
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int)) return (TValue)(object)0;
+        if (type == typeof(decimal)) return (TValue)(object)0m;
+        if (type == typeof(double)) return (TValue)(object)0.0;
+        if (type == typeof(float)) return (TValue)(object)0f;
+        if (type == typeof(long)) return (TValue)(object)0L;
+        return default!;
+    }
+
+    private TValue GetDefaultMax()
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int)) return (TValue)(object)100;
+        if (type == typeof(decimal)) return (TValue)(object)100m;
+        if (type == typeof(double)) return (TValue)(object)100.0;
+        if (type == typeof(float)) return (TValue)(object)100f;
+        if (type == typeof(long)) return (TValue)(object)100L;
+        return default!;
+    }
+
+    private TValue GetDefaultStep()
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int)) return (TValue)(object)1;
+        if (type == typeof(decimal)) return (TValue)(object)1m;
+        if (type == typeof(double)) return (TValue)(object)1.0;
+        if (type == typeof(float)) return (TValue)(object)1f;
+        if (type == typeof(long)) return (TValue)(object)1L;
+        return default!;
+    }
+
+    private TValue GetDefaultRangeStart()
+    {
+        var range = GetRangeSize();
+        return AddValues(Min, DivideValue(range, 3));
+    }
+
+    private TValue GetDefaultRangeEnd()
+    {
+        var range = GetRangeSize();
+        return AddValues(Min, MultiplyValue(DivideValue(range, 3), 2));
+    }
+
+    private TValue GetRangeSize()
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int))
+        {
+            var min = (int)(object)Min;
+            var max = (int)(object)Max;
+            return (TValue)(object)(max - min);
+        }
+        else if (type == typeof(decimal))
+        {
+            var min = (decimal)(object)Min;
+            var max = (decimal)(object)Max;
+            return (TValue)(object)(max - min);
+        }
+        else if (type == typeof(double))
+        {
+            var min = (double)(object)Min;
+            var max = (double)(object)Max;
+            return (TValue)(object)(max - min);
+        }
+        else if (type == typeof(float))
+        {
+            var min = (float)(object)Min;
+            var max = (float)(object)Max;
+            return (TValue)(object)(max - min);
+        }
+        else if (type == typeof(long))
+        {
+            var min = (long)(object)Min;
+            var max = (long)(object)Max;
+            return (TValue)(object)(max - min);
+        }
+        
+        return default!;
+    }
+
+    private TValue AddValues(TValue a, TValue b)
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int))
+        {
+            var valA = (int)(object)a;
+            var valB = (int)(object)b;
+            return (TValue)(object)(valA + valB);
+        }
+        else if (type == typeof(decimal))
+        {
+            var valA = (decimal)(object)a;
+            var valB = (decimal)(object)b;
+            return (TValue)(object)(valA + valB);
+        }
+        else if (type == typeof(double))
+        {
+            var valA = (double)(object)a;
+            var valB = (double)(object)b;
+            return (TValue)(object)(valA + valB);
+        }
+        else if (type == typeof(float))
+        {
+            var valA = (float)(object)a;
+            var valB = (float)(object)b;
+            return (TValue)(object)(valA + valB);
+        }
+        else if (type == typeof(long))
+        {
+            var valA = (long)(object)a;
+            var valB = (long)(object)b;
+            return (TValue)(object)(valA + valB);
+        }
+        
+        return default!;
+    }
+
+    private TValue DivideValue(TValue value, int divisor)
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int))
+        {
+            var val = (int)(object)value;
+            return (TValue)(object)(val / divisor);
+        }
+        else if (type == typeof(decimal))
+        {
+            var val = (decimal)(object)value;
+            return (TValue)(object)(val / divisor);
+        }
+        else if (type == typeof(double))
+        {
+            var val = (double)(object)value;
+            return (TValue)(object)(val / divisor);
+        }
+        else if (type == typeof(float))
+        {
+            var val = (float)(object)value;
+            return (TValue)(object)(val / divisor);
+        }
+        else if (type == typeof(long))
+        {
+            var val = (long)(object)value;
+            return (TValue)(object)(val / divisor);
+        }
+        
+        return default!;
+    }
+
+    private TValue MultiplyValue(TValue value, int multiplier)
+    {
+        var type = typeof(TValue);
+        if (type == typeof(int))
+        {
+            var val = (int)(object)value;
+            return (TValue)(object)(val * multiplier);
+        }
+        else if (type == typeof(decimal))
+        {
+            var val = (decimal)(object)value;
+            return (TValue)(object)(val * multiplier);
+        }
+        else if (type == typeof(double))
+        {
+            var val = (double)(object)value;
+            return (TValue)(object)(val * multiplier);
+        }
+        else if (type == typeof(float))
+        {
+            var val = (float)(object)value;
+            return (TValue)(object)(val * multiplier);
+        }
+        else if (type == typeof(long))
+        {
+            var val = (long)(object)value;
+            return (TValue)(object)(val * multiplier);
+        }
+        
+        return default!;
+    }
+
+    // CSS êëàññ äëÿ ñòèëèçàöèè
+    private string CssClass => AdditionalAttributes?.TryGetValue("class", out var cssClass) == true 
+        ? $"material-range-slider {cssClass}" 
+        : "material-range-slider";
+
+    public class SliderRangeEventArgs<T>
+    {
+        public T ValueStart { get; }
+        public T ValueEnd { get; }
+
+        public SliderRangeEventArgs(T valueStart, T valueEnd)
+        {
+            ValueStart = valueStart;
+            ValueEnd = valueEnd;
+        }
+    }
+}

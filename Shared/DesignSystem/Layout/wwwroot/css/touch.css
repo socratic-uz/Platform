@@ -1,0 +1,329 @@
+/**
+ * Socratic Platform - Touch & Gesture Optimization Architecture
+ * Provides fine-grained touch-action boundaries, overscroll protection,
+ * hardware acceleration layers, and safe-area insets for MAUI Blazor Hybrid & Web.
+ */
+
+/* ─── 1. Global Viewport & Touch Protection ─────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Prevent rubber-banding / pull-to-refresh overscroll bounce */
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    
+    /* Eliminate default gray tap highlight on mobile WebKit/Blink */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Disable accidental system callout on long press (iOS) */
+    -webkit-touch-callout: none;
+    
+    /* Prevent unwanted text selection during gestures */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Allow text selection specifically for editable inputs and reading containers */
+input, textarea, [contenteditable="true"], .selectable-text {
+    -webkit-user-select: text;
+    user-select: text;
+    -webkit-touch-callout: default;
+}
+
+/* ─── 2. Touch Action Primitives ────────────────────────────── */
+
+/* 
+ * touch-action: pan-y
+ * Essential for horizontal swipers, tabs, and carousels.
+ * Allows the user to freely scroll the page vertically without gesture hijacking,
+ * while allowing horizontal swipes to be captured by component handlers.
+ */
+.touch-pan-y,
+[data-gesture="swipe-horizontal"],
+.swipe-container-x {
+    touch-action: pan-y !important;
+}
+
+/* 
+ * touch-action: pan-x
+ * For vertical nested lists inside horizontally swipeable cards.
+ */
+.touch-pan-x,
+[data-gesture="swipe-vertical"],
+.swipe-container-y {
+    touch-action: pan-x !important;
+}
+
+/* 
+ * touch-action: none
+ * For custom interactive canvases, drag-to-reorder, signature pads, and sliders.
+ * Completely disables browser-level scrolling/pinch gesture handling.
+ */
+.touch-none,
+[data-gesture="interactive-canvas"],
+.drag-handle {
+    touch-action: none !important;
+}
+
+/* 
+ * touch-action: manipulation
+ * Disables the 300ms double-tap-to-zoom delay on buttons and links.
+ */
+.touch-manipulation,
+button,
+a,
+md-filled-button,
+md-outlined-button,
+md-text-button,
+md-elevated-button,
+md-icon-button,
+.interactive-action {
+    touch-action: manipulation;
+}
+
+/* ─── 3. Smooth Touch Scroll Containers ─────────────────────── */
+
+.touch-scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-y;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.touch-scroll-x::-webkit-scrollbar {
+    display: none;
+}
+
+.touch-scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: pan-x;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.touch-scroll-y::-webkit-scrollbar {
+    display: none;
+}
+
+/* ─── 4. Hardware Acceleration & Compositor Layers ──────────── */
+
+/* Promotes animated elements to a dedicated GPU layer (60/120 FPS) */
+.gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity;
+}
+
+/* ─── 5. Safe Area Insets Protection (Notch, Home Pill) ─────── */
+
+.safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-left {
+    padding-left: env(safe-area-inset-left, 0px);
+}
+
+.safe-area-right {
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+.safe-area-all {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Edge swipe guard: 16px safe buffer to prevent triggering system back gestures */
+.edge-swipe-guard-left {
+    margin-left: max(16px, env(safe-area-inset-left, 0px));
+}
+
+.edge-swipe-guard-right {
+    margin-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* ─── 5. Web Components Anti-Flicker & Hydration Isolation ─── */
+md-dialog:not(:defined) {
+    display: none !important;
+}
+
+/* ─── 6. M3 Expressive Grid Primitives & Z-Index Tokens ─────── */
+:root {
+    --m3-z-content: 1;
+    --m3-z-sticky: 10;
+    --m3-z-drawer: 50;
+    --m3-z-dialog: 100;
+    --m3-z-popover: 200;
+}
+
+/* Reusable Grid Primitives for Flexbox Elimination */
+.grid-flow-col {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+}
+
+.grid-stack {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.grid-split {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+/* ─── 7. Universal Alignment & Defect Fixes ─────────────────── */
+
+/* Prevent horizontal page blowouts and stabilize scrollbar gutter against layout shift */
+html {
+    overflow-x: clip;
+    scrollbar-gutter: stable;
+    background: var(--md-sys-color-background);
+}
+
+body {
+    overflow-x: clip;
+    background: var(--md-sys-color-background);
+}
+
+/* Material Dialog: ensure it stays completely out of document flow */
+md-dialog {
+    position: fixed !important;
+    inset: 0 !important;
+    margin: auto !important;
+}
+
+/* Universal font and alignment for md-icon (prevents delay and text morphing) */
+md-icon {
+    font-family: 'Material Symbols Outlined' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--md-icon-size, 24px);
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-grid;
+    place-items: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    width: var(--md-icon-size, 24px);
+    height: var(--md-icon-size, 24px);
+    vertical-align: middle;
+}
+
+/* Icons inside buttons in default slot (unslotted) - fix vertical misalignment */
+md-filled-button md-icon:not([slot]),
+md-outlined-button md-icon:not([slot]),
+md-elevated-button md-icon:not([slot]),
+md-text-button md-icon:not([slot]),
+md-filled-tonal-button md-icon:not([slot]) {
+    vertical-align: middle;
+    margin-inline-end: 8px;
+    font-size: var(--md-icon-size, 18px);
+    width: var(--md-icon-size, 18px);
+    height: var(--md-icon-size, 18px);
+    line-height: 1;
+}
+
+/* Trailing unslotted icons in buttons */
+md-filled-button > *:last-child:is(md-icon:not([slot])),
+md-outlined-button > *:last-child:is(md-icon:not([slot])),
+md-elevated-button > *:last-child:is(md-icon:not([slot])),
+md-text-button > *:last-child:is(md-icon:not([slot])),
+md-filled-tonal-button > *:last-child:is(md-icon:not([slot])) {
+    margin-inline-end: 0;
+    margin-inline-start: 8px;
+}
+
+/* Avatar button circular icon centering (no margin offsets) */
+.avatar-button md-icon,
+md-outlined-button.avatar-button md-icon {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    margin-inline-end: 0 !important;
+    margin-inline-start: 0 !important;
+}
+
+/* HTML button elements and button-like chips */
+button,
+.btn,
+.delivery-preset-chip,
+.date-preset-chip,
+.map-toolbar-chip,
+.map-toolbar-segment,
+.showcase-card-btn,
+.search-route-btn,
+.search-clear-btn {
+    display: inline-grid;
+    place-items: center;
+    vertical-align: middle;
+}
+
+button md-icon,
+.btn md-icon,
+.delivery-preset-chip md-icon,
+.date-preset-chip md-icon,
+.map-toolbar-chip md-icon {
+    display: inline-grid;
+    place-items: center;
+    vertical-align: middle;
+    width: var(--md-icon-size, 1.25em);
+    height: var(--md-icon-size, 1.25em);
+    font-size: var(--md-icon-size, 1.25em);
+    line-height: 1;
+}
+
+/* Dialog content formatting context: prevents collapsing margins and false horizontal scrollbars */
+md-dialog [slot="content"] {
+    display: flow-root;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Dialog actions container: prevents action buttons from squishing or overflowing */
+md-dialog [slot="actions"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+}
+
+

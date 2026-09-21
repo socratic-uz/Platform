@@ -1,0 +1,64 @@
+@namespace Smart.Web.Components
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Linq.Expressions
+@typeparam TEnum where TEnum : struct, Enum
+
+<div class="smart-checkbox-container @ContainerClass"
+	 @attributes="AdditionalAttributes">
+
+	@if (!string.IsNullOrEmpty(GroupTitle))
+	{
+		<div class="smart-checkbox-group-title">
+			@GroupTitle
+			@if (IsRequired)
+			{
+				<span class="required">*</span>
+			}
+		</div>
+	}
+
+	@if (ShowAsGroup)
+	{
+		<div class="smart-checkbox-group @(UseVerticalLayout ? "vertical" : "horizontal")"
+			 role="group"
+			 aria-label="@(GroupAriaLabel ?? GroupTitle)">
+			@foreach (var enumValue in GetEnumValues())
+			{
+				var isChecked = IsEnumValueChecked(enumValue);
+				var checkboxId = $"{Id}_{enumValue}";
+				var checkboxClass = GetCheckboxClass(enumValue, isChecked);
+
+				<div class="smart-checkbox-item @checkboxClass">
+					<Checkbox @key="enumValue"
+							  Label="@GetEnumText(enumValue)"
+							  Value="@isChecked"
+							  ValueChanged="@(async (bool val) => await HandleEnumChange(enumValue, val))"
+							  Disabled="@Disabled"
+							  Required="@(IsRequired && !HasAnySelection())"
+							  AriaLabel="@GetEnumAriaLabel(enumValue)" />
+
+					@if (HasEnumIcon(enumValue))
+					{
+						<Icon Name="@GetEnumIcon(enumValue)" class="checkbox-icon" />
+					}
+				</div>
+			}
+		</div>
+	}
+	else
+	{
+		<!-- Single checkbox mode для простых boolean значений -->
+		@if (typeof(TEnum) == typeof(bool))
+		{
+			var value = GetBooleanValue();
+			<div class="smart-checkbox-single">
+				<Checkbox Label="@Label"
+						  Value="@value"
+						  ValueChanged="@(async (bool val) => await HandleBooleanChange(val))"
+						  Disabled="@Disabled"
+						  Required="@IsRequired"
+						  AriaLabel="@(AriaLabel ?? Label)" />
+			</div>
+		}
+	}
+</div>

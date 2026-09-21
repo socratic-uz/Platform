@@ -1,0 +1,84 @@
+@using Shared.Services
+@inject IJSRuntime js
+@inject ISettingsManager settings
+
+<color style="display:none;" class=@($"{Accent?.ToString().ToLower()} {ModeClass}")>
+</color>
+
+@code {
+	[Parameter] public SharedKernel.ValueObjects.Theme? Theme { get; set; }
+	[Parameter] public int? Accent { get; set; }
+
+	bool isDark;
+
+	string ModeClass => isDark ? "dark-mode" : "light-mode";
+
+	public static string ToHex(int val)
+	{
+		if (val <= 3)
+		{
+			return val switch
+			{
+				0 => "#00ffb3",
+				1 => "#3b82f6",
+				2 => "#ef4444",
+				3 => "#eab308",
+				_ => "#00ffb3"
+			};
+		}
+		var rgb = val & 0xFFFFFF;
+		return $"#{rgb:x6}";
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		try
+		{
+			Accent ??= await settings.GetAccentAsync();
+			Theme ??= await settings.GetThemeAsync();
+
+			if (Theme == SharedKernel.ValueObjects.Theme.Dark || Theme == null)
+			{
+				isDark = true;
+			}
+			else if (Theme == SharedKernel.ValueObjects.Theme.Light)
+			{
+				isDark = false;
+			}
+		}
+		catch
+		{
+			isDark = true;
+		}
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			try
+			{
+				Accent ??= await settings.GetAccentAsync();
+				Theme ??= await settings.GetThemeAsync();
+
+				var hexAccent = ToHex(Accent.Value);
+				var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Shared/Layout/Color.razor.js");
+
+				if (Theme == SharedKernel.ValueObjects.Theme.System)
+				{
+					isDark = await module.InvokeAsync<bool>("isSystemDark");
+				}
+				else
+				{
+					isDark = Theme == SharedKernel.ValueObjects.Theme.Dark;
+				}
+
+				await module.InvokeAsync<string>("applyTheme", hexAccent, isDark);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine($"Color.razor error: {e.Message}");
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+@inject NavigationManager Nav
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		Nav.NavigateTo($"/signin?ReturnUrl={Uri.EscapeDataString(Nav.Uri)}");
+		await Task.CompletedTask;
+	}
+}

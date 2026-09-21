@@ -1,0 +1,24 @@
+@using Domain.Interfaces
+
+<Router AppAssembly="typeof(Layout.MainLayout).Assembly" AdditionalAssemblies="FeatureRegistry.GetFeatureAssemblies()">
+   <Found Context="routeData">
+	   <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
+		   <NotAuthorized>
+			   <RedirectToSignIn />
+		   </NotAuthorized>
+	   </AuthorizeRouteView>
+   </Found>
+   <NotFound>
+	   <LayoutView Layout="typeof(Layout.MainLayout)">
+		   <div class="grid-center" style="min-height: 60vh; text-align: center; padding: 2rem;">
+			   <h2 style="color: var(--md-sys-color-primary, #006875);">Страница не найдена</h2>
+			   <p style="color: var(--md-sys-color-on-surface-variant, #3f484a); margin-top: 0.5rem;">Запрошенная страница не существует или была перемещена.</p>
+			   <div style="margin-top: 1.5rem;">
+				   <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--md-sys-color-primary, #006875); color: var(--md-sys-color-on-primary, #ffffff); border-radius: 9999px; text-decoration: none; font-weight: 500;">
+					   На главную
+				   </a>
+			   </div>
+		   </div>
+	   </LayoutView>
+   </NotFound>
+</Router>

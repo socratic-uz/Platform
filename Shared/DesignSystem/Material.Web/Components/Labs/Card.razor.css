@@ -1,0 +1,88 @@
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    background: var(--md-sys-color-surface-container, #1e293b);
+    color: var(--md-sys-color-on-surface, #f8fafc);
+    display: grid;
+    align-content: stretch;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 20px;
+    transition: background-color .2s cubic-bezier(.2, 0, 0, 1), box-shadow .2s cubic-bezier(.2, 0, 0, 1), border-color .2s cubic-bezier(.2, 0, 0, 1);
+    position: relative;
+    font: inherit;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+md-filled-card:hover,
+md-outlined-card:hover,
+md-elevated-card:hover {
+    background: var(--md-sys-color-surface-container-high, #2b3548);
+}
+
+::deep figure {
+    margin: 0;
+    background: var(--md-sys-color-surface-container-highest, #334155);
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+    width: 100%;
+}
+
+::deep figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+::deep section {
+    display: grid;
+    gap: 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+::deep h5, ::deep h5.product-title {
+    text-align: left;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface, #ffffff);
+    line-height: 1.3;
+}
+
+::deep p {
+    text-align: left;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant, #94a3b8);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.4;
+}
+
+::deep .card-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+::deep .price-tag {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--md-sys-color-primary, #38bdf8);
+    text-align: left;
+}

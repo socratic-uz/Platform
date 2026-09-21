@@ -1,0 +1,1700 @@
+@page "/components"
+@layout NavOnlyLayout
+@namespace Shared.Pages
+
+@using Material.Web.Components
+@using Material.Web.Components.Labs
+@using Smart.Web.Components
+@using Smart.Web.Services
+@using Socratic.QrDesigner
+@using Socratic.ReceiptPrinter
+@using Markdown.Web
+@using QuickGrid
+@using QuickGrid.Infrastructure
+@using Chat.Web
+@using Microsoft.Extensions.AI
+@using SeatDesigner.Components
+@using Shared.Components
+@using Shared.Modules.Auction
+@using Shared.Modules.Booking
+@using Shared.Modules.Donation
+@using Shared.Modules.Gift
+@using Shared.Modules.GroupBuy
+@using Shared.Modules.Hotel
+@using Shared.Modules.Quote
+@using Shared.Modules.Delivery
+@using Shared.Modules.Subscription
+@using Shopping.Application.Protos
+@using SharedKernel.ValueObjects
+@using Domain.Entities
+
+<PageTitle>Компоненты платформы Socratic • Showcase</PageTitle>
+
+<main class="showcase-page">
+    @if (isMobileSidebarOpen)
+    {
+        <div class="showcase-sidebar-backdrop" @onclick="ToggleMobileSidebar"></div>
+    }
+
+    <!-- Sidebar Navigation -->
+    <aside class="showcase-sidebar @(isMobileSidebarOpen ? "open" : "")">
+        <div class="showcase-sidebar-header">
+            <div class="showcase-brand">
+                <div class="showcase-brand-icon">
+                    <Icon Name="widgets" />
+                </div>
+                <div style="display: grid; gap: 2px;">
+                    <span class="showcase-brand-title">Socratic UI</span>
+                    <span style="font-size: 0.72rem; color: var(--md-sys-color-on-surface-variant);">Design System & Catalog</span>
+                </div>
+            </div>
+            <span class="showcase-brand-badge">v2.0</span>
+        </div>
+
+        <div class="showcase-search-box">
+            <TextField Value="@searchQuery"
+                       ValueChanged="@((string val) => { searchQuery = val; HandleSearchInput(new ChangeEventArgs { Value = val }); })"
+                       ValueExpression="() => searchQuery"
+                       Placeholder="Поиск компонентов..."
+                       HasLeadingIcon="true"
+                       LeadingIcon="search"
+                       Variant="TextField<string>.TextFieldVariant.Outlined"
+                       class="showcase-search-field" />
+        </div>
+
+        <List class="showcase-sidebar-nav">
+            <ListItem Headline="Все компоненты"
+                      Selected=@(selectedCategory == "all")
+                      OnClick=@(() => SelectCategory("all"))>
+                <StartContent>
+                    <Icon Name="dashboard" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">@TotalComponentsCount</span>
+                </EndContent>
+            </ListItem>
+
+            <div class="showcase-nav-category-header">Material.Web</div>
+            <ListItem Headline="Кнопки, FAB & Выбор"
+                      Selected=@(selectedCategory == "mat-buttons")
+                      OnClick=@(() => SelectCategory("mat-buttons"))>
+                <StartContent>
+                    <Icon Name="smart_button" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">4</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Элементы управления"
+                      Selected=@(selectedCategory == "mat-controls")
+                      OnClick=@(() => SelectCategory("mat-controls"))>
+                <StartContent>
+                    <Icon Name="tune" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">5</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Поля ввода & Формы"
+                      Selected=@(selectedCategory == "mat-inputs")
+                      OnClick=@(() => SelectCategory("mat-inputs"))>
+                <StartContent>
+                    <Icon Name="edit_note" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">3</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Вкладки & Навигация"
+                      Selected=@(selectedCategory == "mat-nav")
+                      OnClick=@(() => SelectCategory("mat-nav"))>
+                <StartContent>
+                    <Icon Name="tab" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">3</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Карточки & Обратная связь"
+                      Selected=@(selectedCategory == "mat-surface")
+                      OnClick=@(() => SelectCategory("mat-surface"))>
+                <StartContent>
+                    <Icon Name="layers" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">6</span>
+                </EndContent>
+            </ListItem>
+
+            <div class="showcase-nav-category-header">Специализированные библиотеки</div>
+            <ListItem Headline="Smart.Web"
+                      Selected=@(selectedCategory == "smart-web")
+                      OnClick=@(() => SelectCategory("smart-web"))>
+                <StartContent>
+                    <Icon Name="auto_awesome" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">5</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="QuickGrid Таблица"
+                      Selected=@(selectedCategory == "quickgrid")
+                      OnClick=@(() => SelectCategory("quickgrid"))>
+                <StartContent>
+                    <Icon Name="table_chart" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">2</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="QrDesigner"
+                      Selected=@(selectedCategory == "qr-designer")
+                      OnClick=@(() => SelectCategory("qr-designer"))>
+                <StartContent>
+                    <Icon Name="qr_code_2" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">1</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="ReceiptPrinter"
+                      Selected=@(selectedCategory == "receipt-printer")
+                      OnClick=@(() => SelectCategory("receipt-printer"))>
+                <StartContent>
+                    <Icon Name="receipt_long" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">1</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Markdown Section"
+                      Selected=@(selectedCategory == "markdown")
+                      OnClick=@(() => SelectCategory("markdown"))>
+                <StartContent>
+                    <Icon Name="code" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">1</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Chat & AI Messaging"
+                      Selected=@(selectedCategory == "chat")
+                      OnClick=@(() => SelectCategory("chat"))>
+                <StartContent>
+                    <Icon Name="forum" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">4</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Карты & Геолокация"
+                      Selected=@(selectedCategory == "map")
+                      OnClick=@(() => SelectCategory("map"))>
+                <StartContent>
+                    <Icon Name="map" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">3</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="SeatDesigner"
+                      Selected=@(selectedCategory == "seat-designer")
+                      OnClick=@(() => SelectCategory("seat-designer"))>
+                <StartContent>
+                    <Icon Name="chair" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">2</span>
+                </EndContent>
+            </ListItem>
+            <ListItem Headline="Shared Модули"
+                      Selected=@(selectedCategory == "modules")
+                      OnClick=@(() => SelectCategory("modules"))>
+                <StartContent>
+                    <Icon Name="extension" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">9</span>
+                </EndContent>
+            </ListItem>
+        </List>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="showcase-content">
+        <!-- Top Bar -->
+        <header class="showcase-topbar">
+            <div class="showcase-topbar-left">
+                <IconButton class="showcase-mobile-toggle" Icon="menu" OnClick="ToggleMobileSidebar" Title="Меню" AriaLabel="Меню" />
+                <div>
+                    <h2 class="showcase-topbar-title">Каталог компонентов Razor</h2>
+                    <p class="showcase-topbar-subtitle">Единая интерактивная витрина всех библиотек компонентов Socratic</p>
+                </div>
+            </div>
+            <div class="showcase-topbar-actions">
+                <Button Variant="ButtonVariant.Outlined" Href="/docs">
+                    <Icon Name="menu_book" Slot="icon" />
+                    Документация
+                </Button>
+                <Button Variant="ButtonVariant.Filled" Href="/home">
+                    <Icon Name="home" Slot="icon" />
+                    На главную
+                </Button>
+            </div>
+        </header>
+
+        <!-- Hero Stats Banner -->
+        <section class="showcase-hero">
+            <div class="showcase-hero-content">
+                <h1>Интерактивная библиотека компонентов</h1>
+                <p>
+                    В данном каталоге собраны все Razor-компоненты экосистемы Socratic: Material Design 3, умные компоненты Smart.Web, генераторы QR и чеков, карты, мессенджер и отраслевые модули электронной коммерции.
+                </p>
+                <div class="showcase-stats">
+                    <div class="showcase-stat-pill">
+                        <Icon Name="extension" class="showcase-stat-icon" />
+                        <div class="showcase-stat-info">
+                            <span class="showcase-stat-val">40+</span>
+                            <span class="showcase-stat-lbl">Компонентов</span>
+                        </div>
+                    </div>
+                    <div class="showcase-stat-pill">
+                        <Icon Name="library_books" class="showcase-stat-icon" />
+                        <div class="showcase-stat-info">
+                            <span class="showcase-stat-val">10</span>
+                            <span class="showcase-stat-lbl">Библиотек</span>
+                        </div>
+                    </div>
+                    <div class="showcase-stat-pill">
+                        <Icon Name="bolt" class="showcase-stat-icon" />
+                        <div class="showcase-stat-info">
+                            <span class="showcase-stat-val">Native AOT</span>
+                            <span class="showcase-stat-lbl">Готовность</span>
+                        </div>
+                    </div>
+                    <div class="showcase-stat-pill">
+                        <Icon Name="palette" class="showcase-stat-icon" />
+                        <div class="showcase-stat-info">
+                            <span class="showcase-stat-val">Material 3</span>
+                            <span class="showcase-stat-lbl">Дизайн-система</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container for all Component Cards -->
+        <div class="showcase-main-body">
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 1: MATERIAL.WEB - BUTTONS & ACTIONS                   *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("mat-buttons") && MatchesSearch("Button IconButton Fab SegmentedButton Кнопка"))
+            {
+                <section class="showcase-section" id="mat-buttons">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="smart_button" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Кнопки, FAB & Сегментированный выбор</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Material.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Button Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Button</h4>
+                                    <p class="showcase-card-desc">Все варианты Material 3 кнопок с иконками и состояниями</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("button")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row">
+                                        <Button Variant="ButtonVariant.Filled" OnClick="@(() => IncrementClick("Filled Button"))">
+                                            <Icon Name="check" Slot="icon" />
+                                            Filled
+                                        </Button>
+                                        <Button Variant="ButtonVariant.Outlined" OnClick="@(() => IncrementClick("Outlined Button"))">
+                                            <Icon Name="star" Slot="icon" />
+                                            Outlined
+                                        </Button>
+                                        <Button Variant="ButtonVariant.Elevated" OnClick="@(() => IncrementClick("Elevated Button"))">
+                                            Elevated
+                                        </Button>
+                                        <Button Variant="ButtonVariant.FilledTonal" OnClick="@(() => IncrementClick("Tonal Button"))">
+                                            Tonal
+                                        </Button>
+                                        <Button Variant="ButtonVariant.Text" OnClick="@(() => IncrementClick("Text Button"))">
+                                            Text
+                                        </Button>
+                                    </div>
+                                    <div class="showcase-demo-row">
+                                        <Button Variant="ButtonVariant.Filled" Disabled="true">Disabled</Button>
+                                        <Button Variant="ButtonVariant.Outlined" Disabled="true">Disabled</Button>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("button"))
+                            {
+                                <div class="showcase-card-code">&lt;Button Variant="ButtonVariant.Filled" OnClick="HandleClick"&gt;
+    &lt;Icon Name="check" Slot="icon" /&gt;
+    Filled Button
+&lt;/Button&gt;
+&lt;Button Variant="ButtonVariant.Outlined"&gt;Outlined&lt;/Button&gt;
+&lt;Button Variant="ButtonVariant.FilledTonal"&gt;Tonal&lt;/Button&gt;
+&lt;Button Variant="ButtonVariant.Elevated"&gt;Elevated&lt;/Button&gt;
+&lt;Button Variant="ButtonVariant.Text"&gt;Text&lt;/Button&gt;</div>
+                            }
+                            <div class="showcase-controls-bar">
+                                <span>Последнее действие: <strong>@lastAction</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- IconButton Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">IconButton</h4>
+                                    <p class="showcase-card-desc">Компактные кнопки с иконками и поддержкой Toggle-состояния</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("iconbutton")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row">
+                                        <IconButton Icon="favorite" Variant="IconButtonVariant.Filled" OnClick="@(() => IncrementClick("Filled Icon"))" />
+                                        <IconButton Icon="share" Variant="IconButtonVariant.FilledTonal" OnClick="@(() => IncrementClick("Tonal Icon"))" />
+                                        <IconButton Icon="bookmark" Variant="IconButtonVariant.Outlined" OnClick="@(() => IncrementClick("Outlined Icon"))" />
+                                        <IconButton Icon="settings" Variant="IconButtonVariant.Standard" OnClick="@(() => IncrementClick("Standard Icon"))" />
+                                        <IconButton Icon="thumb_up" Toggle="true" Selected="@isIconSelected" SelectedChanged="v => isIconSelected = v" />
+                                    </div>
+                                    <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">
+                                        Toggle-кнопка лайка: <strong>@(isIconSelected ? "❤️ Выбрано" : "🤍 Не выбрано")</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("iconbutton"))
+                            {
+                                <div class="showcase-card-code">&lt;IconButton Icon="favorite" Variant="IconButtonVariant.Filled" /&gt;
+&lt;IconButton Icon="share" Variant="IconButtonVariant.FilledTonal" /&gt;
+&lt;IconButton Icon="bookmark" Variant="IconButtonVariant.Outlined" /&gt;
+&lt;IconButton Icon="thumb_up" Toggle="true" @@bind-Selected="isLiked" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Fab Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Floating Action Button (FAB)</h4>
+                                    <p class="showcase-card-desc">Плавающие кнопки действий разных размеров и цветовых вариантов</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("fab")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row" style="align-items: center;">
+                                        <Fab Icon="add" Size="small" Variant="primary" OnClick="@(() => IncrementClick("Small FAB"))" />
+                                        <Fab Icon="edit" Size="medium" Variant="surface" OnClick="@(() => IncrementClick("Medium Surface FAB"))" />
+                                        <Fab Icon="shopping_cart" Size="medium" Variant="secondary" Label="В корзину" OnClick="@(() => IncrementClick("Extended FAB"))" />
+                                        <Fab Icon="navigation" Size="large" Variant="tertiary" OnClick="@(() => IncrementClick("Large FAB"))" />
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("fab"))
+                            {
+                                <div class="showcase-card-code">&lt;Fab Icon="add" Size="small" Variant="primary" /&gt;
+&lt;Fab Icon="edit" Size="medium" Variant="surface" /&gt;
+&lt;Fab Icon="shopping_cart" Size="medium" Variant="secondary" Label="В корзину" /&gt;
+&lt;Fab Icon="navigation" Size="large" Variant="tertiary" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- SegmentedButton Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">SegmentedButtonSet & SegmentedButton</h4>
+                                    <p class="showcase-card-desc">Набор связанных кнопок для выбора одного или нескольких вариантов</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("segmented")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <SegmentedButtonSet>
+                                        <SegmentedButton Label="День" Selected="@(selectedTimePeriod == "Day")" OnClick="@(() => selectedTimePeriod = "Day")">
+                                            <Icon Name="calendar_today" Slot="icon" />
+                                        </SegmentedButton>
+                                        <SegmentedButton Label="Неделя" Selected="@(selectedTimePeriod == "Week")" OnClick="@(() => selectedTimePeriod = "Week")">
+                                            <Icon Name="calendar_view_week" Slot="icon" />
+                                        </SegmentedButton>
+                                        <SegmentedButton Label="Месяц" Selected="@(selectedTimePeriod == "Month")" OnClick="@(() => selectedTimePeriod = "Month")">
+                                            <Icon Name="calendar_month" Slot="icon" />
+                                        </SegmentedButton>
+                                    </SegmentedButtonSet>
+                                    <span style="font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); margin-top: 8px;">
+                                        Выбранный период: <strong style="color: var(--md-sys-color-primary);">@selectedTimePeriod</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("segmented"))
+                            {
+                                <div class="showcase-card-code">&lt;SegmentedButtonSet&gt;
+    &lt;SegmentedButton Label="День" Selected="@@(period == \"Day\")" OnClick="@@(() =&gt; period = \"Day\")" /&gt;
+    &lt;SegmentedButton Label="Неделя" Selected="@@(period == \"Week\")" OnClick="@@(() =&gt; period = \"Week\")" /&gt;
+    &lt;SegmentedButton Label="Месяц" Selected="@@(period == \"Month\")" OnClick="@@(() =&gt; period = \"Month\")" /&gt;
+&lt;/SegmentedButtonSet&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 2: MATERIAL.WEB - SELECTION & CONTROLS                *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("mat-controls") && MatchesSearch("Checkbox Switch Radio Slider RangeSlider ColorPicker Выбор"))
+            {
+                <section class="showcase-section" id="mat-controls">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="tune" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Элементы управления & Выбор параметров</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Material.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Checkbox & Switch Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Checkbox & Switch</h4>
+                                    <p class="showcase-card-desc">Флажки и переключатели с поддержкой иконок и событий</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("checkbox-switch")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row">
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px; cursor: pointer;">
+                                            <Checkbox @bind-Value="demoCheckbox" />
+                                            <span>Уведомления: <strong>@(demoCheckbox ? "Вкл" : "Выкл")</strong></span>
+                                        </label>
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px; cursor: pointer;">
+                                            <Checkbox @bind-Value="demoIndeterminateCheckbox" Indeterminate="true" />
+                                            <span>Частично выбран</span>
+                                        </label>
+                                    </div>
+                                    <div class="showcase-demo-row">
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 10px; cursor: pointer;">
+                                            <Switch @bind-Value="demoSwitch" Icons="true" />
+                                            <span>Темный режим: <strong>@(demoSwitch ? "Активен" : "Отключен")</strong></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("checkbox-switch"))
+                            {
+                                <div class="showcase-card-code">&lt;Checkbox @@bind-Value="isChecked" /&gt;
+&lt;Switch @@bind-Value="isDark" Icons="true" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Radio Group Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Radio</h4>
+                                    <p class="showcase-card-desc">Группы радиокнопок для взаимно исключающего выбора</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("radio")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-col">
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px; cursor: pointer;">
+                                            <Radio Name="delivery-opt" Checked="@(selectedDelivery == "courier")" Value="courier" OnChange="@(() => selectedDelivery = "courier")" />
+                                            <span>🚀 Курьерская экспресс-доставка</span>
+                                        </label>
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px; cursor: pointer;">
+                                            <Radio Name="delivery-opt" Checked="@(selectedDelivery == "pickup")" Value="pickup" OnChange="@(() => selectedDelivery = "pickup")" />
+                                            <span>🏪 Самовывоз из филиала</span>
+                                        </label>
+                                        <label style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px; cursor: pointer;">
+                                            <Radio Name="delivery-opt" Checked="@(selectedDelivery == "post")" Value="post" OnChange="@(() => selectedDelivery = "post")" />
+                                            <span>📦 Почтовое отправление</span>
+                                        </label>
+                                    </div>
+                                    <span style="font-size: 0.8rem; color: var(--md-sys-color-primary);">Выбран способ: <strong>@selectedDelivery</strong></span>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("radio"))
+                            {
+                                <div class="showcase-card-code">&lt;Radio Name="delivery" Checked="@@(opt == \"courier\")" OnChange="@@(() =&gt; opt = \"courier\")" /&gt;
+&lt;Radio Name="delivery" Checked="@@(opt == \"pickup\")" OnChange="@@(() =&gt; opt = \"pickup\")" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Slider & RangeSlider Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Slider & RangeSlider</h4>
+                                    <p class="showcase-card-desc">Ползунки диапазона и одиночных числовых значений</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("slider")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-col">
+                                        <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem;">
+                                            <span>Громкость / Интенсивность:</span>
+                                            <strong style="color: var(--md-sys-color-primary);">@sliderValue %</strong>
+                                        </div>
+                                        <Slider @bind-Value="sliderValue" Min="0m" Max="100m" Step="1m" ShowLabel="true" ShowTicks="true" />
+                                    </div>
+                                    <div class="showcase-demo-col" style="margin-top: 8px;">
+                                        <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem;">
+                                            <span>Диапазон цен (тыс. сум):</span>
+                                            <strong style="color: var(--md-sys-color-primary);">@rangeStart — @rangeEnd</strong>
+                                        </div>
+                                        <RangeSlider TValue="decimal" ValueStart="@rangeStart" ValueEnd="@rangeEnd" Min="0m" Max="1000m" Step="50m" ShowLabel="true"
+                                                     ValueStartChanged="HandleRangeStartChanged" ValueEndChanged="HandleRangeEndChanged" />
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("slider"))
+                            {
+                                <div class="showcase-card-code">&lt;Slider @@bind-Value="sliderVal" Min="0m" Max="100m" ShowLabel="true" ShowTicks="true" /&gt;
+&lt;RangeSlider TValue="decimal" ValueStart="@@start" ValueEnd="@@end" Min="0m" Max="1000m" ShowLabel="true" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- ColorPicker Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">ColorPicker</h4>
+                                    <p class="showcase-card-desc">Интерактивный палитровый селектор цвета темы</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("colorpicker")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row" style="align-items: center;">
+                                        <ColorPicker Value="@pickedColor" ValueChanged="c => pickedColor = c" />
+                                        <div style="display: grid; gap: 4px;">
+                                            <span style="font-size: 0.85rem;">Текущий Hex-код: <strong style="color: @pickedColor;">@pickedColor</strong></span>
+                                            <div style="width: 120px; height: 24px; border-radius: 6px; background-color: @pickedColor; border: 1px solid rgba(255,255,255,0.2);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("colorpicker"))
+                            {
+                                <div class="showcase-card-code">&lt;ColorPicker Value="@@pickedColor" ValueChanged="c =&gt; pickedColor = c" /&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 3: MATERIAL.WEB - INPUTS & FORMS                      *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("mat-inputs") && MatchesSearch("TextField Select FilePicker Поле ввода Форма"))
+            {
+                <section class="showcase-section" id="mat-inputs">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="edit_note" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Поля ввода, Выпадающие списки & Файлы</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Material.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- TextField Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">TextField (Outlined & Filled)</h4>
+                                    <p class="showcase-card-desc">Поля ввода с иконками, суффиксами и подсказками</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("textfield")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-col">
+                                        <TextField TValue="string"
+                                                   Variant="TextField<string>.TextFieldVariant.Outlined"
+                                                   Label="Имя пользователя"
+                                                   LeadingIcon="person"
+                                                   HasLeadingIcon="true"
+                                                   SupportingText="Введите ваш логин или email"
+                                                   @bind-Value="demoInputText" />
+
+                                        <TextField TValue="string"
+                                                   Variant="TextField<string>.TextFieldVariant.Filled"
+                                                   Label="Сумма платежа"
+                                                   PrefixText="$"
+                                                   SuffixText=".00"
+                                                   LeadingIcon="payments"
+                                                   HasLeadingIcon="true"
+                                                   @bind-Value="demoAmountText" />
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("textfield"))
+                            {
+                                <div class="showcase-card-code">&lt;TextField TValue="string"
+           Variant="TextField&lt;string&gt;.TextFieldVariant.Outlined"
+           Label="Имя пользователя"
+           LeadingIcon="person"
+           HasLeadingIcon="true"
+           SupportingText="Введите ваш логин"
+           @@bind-Value="username" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Select Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Select</h4>
+                                    <p class="showcase-card-desc">Стилизованный выпадающий список вариантов</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("select")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <Select Label="Способ оплаты"
+                                            Variant="Select.SelectVariant.Outlined"
+                                            Options="@demoPaymentOptions"
+                                            @bind-Value="selectedPaymentMethod" />
+
+                                    <span style="font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant);">
+                                        Выбран вариант: <strong style="color: var(--md-sys-color-primary);">@selectedPaymentMethod</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("select"))
+                            {
+                                <div class="showcase-card-code">&lt;Select Label="Способ оплаты"
+        Variant="Select.SelectVariant.Outlined"
+        Options="@@optionsList"
+        @@bind-Value="selectedMethod" /&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 4: MATERIAL.WEB - TABS & NAVIGATION                   *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("mat-nav") && MatchesSearch("Tabs Tab NavigationBar NavigationDrawer Menu Навигация Вкладки"))
+            {
+                <section class="showcase-section" id="mat-nav">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="tab" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Вкладки & Навигационные компоненты</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Material.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Tabs Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Tabs & Tab</h4>
+                                    <p class="showcase-card-desc">Material 3 вкладки с иконками и поддержкой индикатора активного таба</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("tabs")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <Tabs ActiveTabIndex="@activeTabIndex" ActiveTabIndexChanged="idx => activeTabIndex = idx">
+                                        <Tab Index="0" Icon="explore" InlineIcon="true">Обзор</Tab>
+                                        <Tab Index="1" Icon="analytics" InlineIcon="true">Аналитика</Tab>
+                                        <Tab Index="2" Icon="settings" InlineIcon="true">Параметры</Tab>
+                                    </Tabs>
+
+                                    <div style="padding: 16px; border-radius: 12px; background: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-color-outline-variant); text-align: center;">
+                                        @if (activeTabIndex == 0)
+                                        {
+                                            <p style="margin: 0; color: var(--md-sys-color-primary);">🚀 Содержимое вкладки: <strong>Обзор платформы</strong></p>
+                                        }
+                                        else if (activeTabIndex == 1)
+                                        {
+                                            <p style="margin: 0; color: var(--md-sys-color-tertiary);">📊 Содержимое вкладки: <strong>Статистика и графики</strong></p>
+                                        }
+                                        else
+                                        {
+                                            <p style="margin: 0; color: var(--md-sys-color-secondary);">⚙️ Содержимое вкладки: <strong>Конфигурация системы</strong></p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("tabs"))
+                            {
+                                <div class="showcase-card-code">&lt;Tabs ActiveTabIndex="@@activeTab" ActiveTabIndexChanged="idx =&gt; activeTab = idx"&gt;
+    &lt;Tab Index="0" Icon="explore" InlineIcon="true"&gt;Обзор&lt;/Tab&gt;
+    &lt;Tab Index="1" Icon="analytics" InlineIcon="true"&gt;Аналитика&lt;/Tab&gt;
+    &lt;Tab Index="2" Icon="settings" InlineIcon="true"&gt;Параметры&lt;/Tab&gt;
+&lt;/Tabs&gt;</div>
+                            }
+                        </div>
+
+                        <!-- NavigationBar & NavigationTab Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">NavigationBar & NavigationTab</h4>
+                                    <p class="showcase-card-desc">Нижняя/верхняя панель навигации для мобильных и десктопных представлений</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("navbar")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <NavigationBar>
+                                        <NavigationTab Label="Главная" Icon="home" Active="@(activeNavTab == 0)" OnClick="@(() => activeNavTab = 0)" />
+                                        <NavigationTab Label="Поиск" Icon="search" Active="@(activeNavTab == 1)" OnClick="@(() => activeNavTab = 1)" />
+                                        <NavigationTab Label="Заказы" Icon="receipt" Active="@(activeNavTab == 2)" OnClick="@(() => activeNavTab = 2)" />
+                                        <NavigationTab Label="Профиль" Icon="person" Active="@(activeNavTab == 3)" OnClick="@(() => activeNavTab = 3)" />
+                                    </NavigationBar>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("navbar"))
+                            {
+                                <div class="showcase-card-code">&lt;NavigationBar&gt;
+    &lt;NavigationTab Label="Главная" Icon="home" Active="true" /&gt;
+    &lt;NavigationTab Label="Поиск" Icon="search" /&gt;
+    &lt;NavigationTab Label="Заказы" Icon="receipt" /&gt;
+&lt;/NavigationBar&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 5: MATERIAL.WEB - FEEDBACK & SURFACE                  *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("mat-surface") && MatchesSearch("Card Badge Progress Divider Chip List ListItem Dialog Модалка Карточка"))
+            {
+                <section class="showcase-section" id="mat-surface">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="layers" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Карточки, Списки, Прогресс & Модальные окна</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Material.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Card Types Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Card (Elevated, Filled, Outlined)</h4>
+                                    <p class="showcase-card-desc">Контейнеры содержимого с тенями и обводками</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("cards")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row">
+                                        <Card Type="filled" style="padding: 16px; width: 100%; border-radius: 12px;">
+                                            <h5 style="margin: 0 0 6px 0; color: var(--md-sys-color-primary);">Filled Card</h5>
+                                            <p style="margin: 0; font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Заполненная карточка с фоновым тоном</p>
+                                        </Card>
+                                        <Card Type="outlined" style="padding: 16px; width: 100%; border-radius: 12px;">
+                                            <h5 style="margin: 0 0 6px 0; color: var(--md-sys-color-tertiary);">Outlined Card</h5>
+                                            <p style="margin: 0; font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Карточка с четким контуром границы</p>
+                                        </Card>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("cards"))
+                            {
+                                <div class="showcase-card-code">&lt;Card Type="filled"&gt;Filled Card Content&lt;/Card&gt;
+&lt;Card Type="outlined"&gt;Outlined Card Content&lt;/Card&gt;
+&lt;Card Type="elevated"&gt;Elevated Card Content&lt;/Card&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Progress & Badges Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Progress & Badge</h4>
+                                    <p class="showcase-card-desc">Индикаторы загрузки и бейджи уведомлений</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("progress")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row" style="align-items: center; justify-content: space-around;">
+                                        <Progress IsCircular="true" Indeterminate="true" FourColor="true" />
+                                        <Progress IsCircular="true" Value="0.75" />
+                                        <div style="position: relative; display: inline-block;">
+                                            <IconButton Icon="notifications" Variant="IconButtonVariant.FilledTonal" />
+                                            <Badge Value="9+" style="position: absolute; top: 0; right: 0;" />
+                                        </div>
+                                        <div style="position: relative; display: inline-block;">
+                                            <IconButton Icon="shopping_cart" Variant="IconButtonVariant.Filled" />
+                                            <Badge Value="3" style="position: absolute; top: 0; right: 0;" />
+                                        </div>
+                                    </div>
+                                    <div class="showcase-demo-col" style="margin-top: 10px;">
+                                        <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Линейный прогресс (детерминированный):</span>
+                                        <Progress IsCircular="false" Value="0.65" Indeterminate="false" />
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("progress"))
+                            {
+                                <div class="showcase-card-code">&lt;Progress IsCircular="true" Indeterminate="true" FourColor="true" /&gt;
+&lt;Progress IsCircular="false" Value="0.65" Indeterminate="false" /&gt;
+&lt;Badge Value="9+"&gt;Icon / Button&lt;/Badge&gt;</div>
+                            }
+                        </div>
+
+                        <!-- ChipSet & Chip Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">ChipSet & Chip</h4>
+                                    <p class="showcase-card-desc">Интерактивные фильтры, теги и чипы категорий</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("chips")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <ChipSet>
+                                        <Chip Label="Все категории" ChipType="ChipType.Filter" Selected="@(selectedChip == "all")" OnClick="@(() => selectedChip = "all")" />
+                                        <Chip Label="Пицца" ChipType="ChipType.Filter" Selected="@(selectedChip == "pizza")" OnClick="@(() => selectedChip = "pizza")" />
+                                        <Chip Label="Бургеры" ChipType="ChipType.Filter" Selected="@(selectedChip == "burgers")" OnClick="@(() => selectedChip = "burgers")" />
+                                        <Chip Label="Напитки" ChipType="ChipType.Filter" Selected="@(selectedChip == "drinks")" OnClick="@(() => selectedChip = "drinks")" />
+                                        <Chip Label="Десерты" ChipType="ChipType.Filter" Selected="@(selectedChip == "desserts")" OnClick="@(() => selectedChip = "desserts")" />
+                                    </ChipSet>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("chips"))
+                            {
+                                <div class="showcase-card-code">&lt;ChipSet&gt;
+    &lt;Chip Label="Пицца" ChipType="ChipType.Filter" Selected="true" /&gt;
+    &lt;Chip Label="Бургеры" ChipType="ChipType.Filter" /&gt;
+&lt;/ChipSet&gt;</div>
+                            }
+                        </div>
+
+                        <!-- MaterialDialog Trigger Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">MaterialDialog</h4>
+                                    <p class="showcase-card-desc">Полнофункциональное модальное диалоговое окно</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("dialog")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas" style="align-items: center;">
+                                    <Button Variant="ButtonVariant.Filled" OnClick="@(() => isDemoDialogOpen = true)">
+                                        <Icon Name="open_in_new" Slot="icon" />
+                                        Открыть MaterialDialog
+                                    </Button>
+                                    <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant); margin-top: 6px;">
+                                        Состояние диалога: <strong>@(isDemoDialogOpen ? "Открыт" : "Закрыт")</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("dialog"))
+                            {
+                                <div class="showcase-card-code">&lt;MaterialDialog Open="@@isOpen" OpenChanged="v =&gt; isOpen = v"&gt;
+    &lt;Headline&gt;Подтверждение заказа&lt;/Headline&gt;
+    &lt;Content&gt;Вы уверены, что хотите оформить заказ?&lt;/Content&gt;
+    &lt;Actions&gt;
+        &lt;Button Variant="ButtonVariant.Text" OnClick="@@(() =&gt; isOpen = false)"&gt;Отмена&lt;/Button&gt;
+        &lt;Button Variant="ButtonVariant.Filled" OnClick="Confirm"&gt;Да, оформить&lt;/Button&gt;
+    &lt;/Actions&gt;
+&lt;/MaterialDialog&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 6: SMART.WEB COMPONENTS                               *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("smart-web") && MatchesSearch("Smart.Web SmartToast SmartSchedulePicker SmartEnum SmartCheckbox SmartFilterBar SmartKanban"))
+            {
+                <section class="showcase-section" id="smart-web">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="auto_awesome" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Smart.Web — Умные бизнес-компоненты</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Smart.Web.Components</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Smart Toast Triggers Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">SmartToastContainer & Service</h4>
+                                    <p class="showcase-card-desc">Всплывающие интерактивные тост-уведомления 4 уровней важности</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("toasts")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="toast-triggers-row">
+                                        <Button Variant="ButtonVariant.Filled" OnClick="@(() => toastService.ShowSuccess("Операция успешно завершена!", "Успешно"))">
+                                            <Icon Name="check_circle" Slot="icon" />
+                                            Success Toast
+                                        </Button>
+                                        <Button Variant="ButtonVariant.FilledTonal" OnClick="@(() => toastService.ShowInfo("Новое системное уведомление получено", "Информация"))">
+                                            <Icon Name="info" Slot="icon" />
+                                            Info Toast
+                                        </Button>
+                                        <Button Variant="ButtonVariant.Outlined" OnClick="@(() => toastService.ShowWarning("Истекает срок действия сессии", "Внимание"))">
+                                            <Icon Name="warning" Slot="icon" />
+                                            Warning Toast
+                                        </Button>
+                                        <Button Variant="ButtonVariant.Elevated" OnClick="@(() => toastService.ShowError("Ошибка соединения с шлюзом оплаты", "Ошибка"))">
+                                            <Icon Name="error" Slot="icon" />
+                                            Error Toast
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("toasts"))
+                            {
+                                <div class="showcase-card-code">&lt;SmartToastContainer /&gt;
+
+// Вызов из C# кода:
+toastService.ShowSuccess("Товар добавлен в корзину!");
+toastService.ShowError("Не удалось выполнить платеж");</div>
+                            }
+                        </div>
+
+                        <!-- SmartSchedulePicker Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">SmartSchedulePicker</h4>
+                                    <p class="showcase-card-desc">Интерактивный планировщик рабочих дней, интервалов времени и часового пояса</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("scheduler")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <SmartSchedulePicker Schedule="@demoSchedule" ScheduleChanged="s => demoSchedule = s" />
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("scheduler"))
+                            {
+                                <div class="showcase-card-code">&lt;SmartSchedulePicker Schedule="@@schedule" ScheduleChanged="s =&gt; schedule = s" /&gt;</div>
+                            }
+                        </div>
+
+                        <!-- SmartFilterBar Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">SmartFilterBar</h4>
+                                    <p class="showcase-card-desc">Панель быстрого поиска и интерактивных фильтр-тегов</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("filterbar")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <SmartFilterBar TItem="DemoGridRow"
+                                                    Placeholder="Поиск по меню ресторана..."
+                                                    SearchText="@filterBarText"
+                                                    SearchTextChanged="t => filterBarText = t"
+                                                    FilterChips="@demoFilterChips"
+                                                    OnChipToggled="HandleFilterChipToggled" />
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("filterbar"))
+                            {
+                                <div class="showcase-card-code">&lt;SmartFilterBar TItem="Product"
+                Placeholder="Поиск..."
+                @@bind-SearchText="searchQuery"
+                FilterChips="@@chips" /&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 7: QUICKGRID DATA TABLE                               *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("quickgrid") && MatchesSearch("QuickGrid Paginator Таблица Сортировка Пагинация"))
+            {
+                <section class="showcase-section" id="quickgrid">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="table_chart" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">QuickGrid — Высокоскоростная таблица данных</h3>
+                        </div>
+                        <span class="showcase-lib-badge">QuickGrid</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">QuickGrid & Paginator</h4>
+                                <p class="showcase-card-desc">Сортировка по колонкам, постраничная пагинация, шаблонизация ячеек</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("quickgrid-code")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div style="overflow-x: auto; background: rgba(15,23,42,0.4); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                                    <QuickGrid Items="@demoGridItems.AsQueryable()" Pagination="@quickGridPagination">
+                                        <PropertyColumn Property="@(p => p.Id)" Title="ID" Sortable="true" />
+                                        <PropertyColumn Property="@(p => p.Name)" Title="Наименование" Sortable="true" />
+                                        <PropertyColumn Property="@(p => p.Category)" Title="Категория" Sortable="true" />
+                                        <PropertyColumn Property="@(p => p.Price)" Title="Цена (сум)" Format="N0" Sortable="true" />
+                                        <TemplateColumn Title="Наличие">
+                                            @if (context.InStock)
+                                            {
+                                                <span style="color: var(--md-sys-color-tertiary); font-weight: 600; font-size: 0.8rem; display: inline-grid; grid-auto-flow: column; align-items: center; gap: 4px;">
+                                                    <Icon Name="check_circle" style="font-size: 16px;" /> В наличии
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span style="color: var(--md-sys-color-error); font-weight: 600; font-size: 0.8rem; display: inline-grid; grid-auto-flow: column; align-items: center; gap: 4px;">
+                                                    <Icon Name="cancel" style="font-size: 16px;" /> Нет
+                                                </span>
+                                            }
+                                        </TemplateColumn>
+                                    </QuickGrid>
+                                </div>
+                                <Paginator State="@quickGridPagination" />
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("quickgrid-code"))
+                        {
+                            <div class="showcase-card-code">&lt;QuickGrid Items="@@items.AsQueryable()" Pagination="@@pagination"&gt;
+    &lt;PropertyColumn Property="@@(p =&gt; p.Id)" Title="ID" Sortable="true" /&gt;
+    &lt;PropertyColumn Property="@@(p =&gt; p.Name)" Title="Наименование" Sortable="true" /&gt;
+    &lt;PropertyColumn Property="@@(p =&gt; p.Price)" Title="Цена" Format="N0" Sortable="true" /&gt;
+    &lt;TemplateColumn Title="Статус"&gt; ... &lt;/TemplateColumn&gt;
+&lt;/QuickGrid&gt;
+&lt;Paginator State="@@pagination" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 8: QR DESIGNER                                        *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("qr-designer") && MatchesSearch("QrDesigner QrCode QR Генератор Код"))
+            {
+                <section class="showcase-section" id="qr-designer">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="qr_code_2" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">QrDesigner — Интерактивный генератор QR-кодов</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Socratic.QrDesigner</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">QrCode Component</h4>
+                                <p class="showcase-card-desc">Генерация векторного SVG QR-кода в реальном времени со стилизацией</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("qrcode")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center; justify-items: center;">
+                                    <!-- QR Display -->
+                                    <div style="background: var(--md-sys-color-surface-container-lowest); padding: 20px; border-radius: 20px; box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.3); width: 240px; height: 240px; display: grid; place-items: center;">
+                                        <QrCode Data="@qrInputData"
+                                                Options="@qrStylingOptions"
+                                                style="width: 200px; height: 200px;" />
+                                    </div>
+
+                                    <!-- QR Live Controls -->
+                                    <div style="width: 100%; max-width: 450px; display: grid; gap: 14px;">
+                                        <TextField TValue="string"
+                                                   Variant="TextField<string>.TextFieldVariant.Outlined"
+                                                   Label="Текст или ссылка для QR"
+                                                   Value="@qrInputData"
+                                                   ValueChanged="v => qrInputData = v"
+                                                   ValueExpression="() => qrInputData" />
+
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center;">
+                                            <div style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px;">
+                                                <span style="font-size: 0.85rem;">Цвет QR:</span>
+                                                <ColorPicker Value="@qrStylingOptions.PrimaryColor"
+                                                             ValueChanged="c => { qrStylingOptions.PrimaryColor = c; StateHasChanged(); }" />
+                                            </div>
+                                            <div style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px;">
+                                                <span style="font-size: 0.85rem;">Цвет углов:</span>
+                                                <ColorPicker Value="@qrStylingOptions.CornerColor"
+                                                             ValueChanged="c => { qrStylingOptions.CornerColor = c; StateHasChanged(); }" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("qrcode"))
+                        {
+                            <div class="showcase-card-code">&lt;QrCode Data="https://socratic.uz"
+        Options="@@new QrStylingOptions { PrimaryColor = \"#0ea5e9\", DotType = DotType.Rounded }"
+        style="width: 200px; height: 200px;" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 9: RECEIPT PRINTER                                    *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("receipt-printer") && MatchesSearch("ReceiptPrinter InvoiceViewer Чек Печать Оплата"))
+            {
+                <section class="showcase-section" id="receipt-printer">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="receipt_long" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">ReceiptPrinter — Печать фискальных чеков</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Socratic.ReceiptPrinter</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">InvoiceViewer</h4>
+                                <p class="showcase-card-desc">Термальный чек с расчетом НДС, перечнем товаров и кнопкой печати</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("receipt")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body" style="background: rgba(15,23,42,0.6);">
+                            <div class="showcase-demo-canvas">
+                                <InvoiceViewer TItem="DemoReceiptRow"
+                                               Items="@demoReceiptRows"
+                                               NameSelector="@(x => x.Name)"
+                                               PriceSelector="@(x => x.Price)"
+                                               QuantitySelector="@(x => x.Quantity)"
+                                               InvoiceNumber="SOC-2026-8841"
+                                               OrganizationName="Socratic Smart Store"
+                                               OrganizationAddress="г. Ташкент, ул. Мустакиллик, 15"
+                                               PaymentMethod="UzCard / Humo Онлайн"
+                                               OnItemClick="@(item => toastService.ShowInfo($"Выбрана позиция: {item.Name}"))" />
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("receipt"))
+                        {
+                            <div class="showcase-card-code">&lt;InvoiceViewer TItem="OrderItem"
+               Items="@@orderItems"
+               NameSelector="@@(x =&gt; x.ProductName)"
+               PriceSelector="@@(x =&gt; x.Price)"
+               QuantitySelector="@@(x =&gt; x.Quantity)"
+               InvoiceNumber="SOC-001"
+               OrganizationName="Socratic Cafe" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 10: MARKDOWN                                          *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("markdown") && MatchesSearch("Markdown MarkdownSection Текст Документ"))
+            {
+                <section class="showcase-section" id="markdown">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="code" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Markdown Section — Рендеринг документации</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Markdown.Web</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">MarkdownSection</h4>
+                                <p class="showcase-card-desc">Быстрый парсинг и стилизация разметки Markdown с таблицами и кодом</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("markdown-code")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div style="background: rgba(15,23,42,0.4); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                                    <MarkdownSection Content="@demoMarkdownContent" />
+                                </div>
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("markdown-code"))
+                        {
+                            <div class="showcase-card-code">&lt;MarkdownSection Content="### Заголовок\nТекст с **жирным** выделением и списком:\n- Пункт 1\n- Пункт 2" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 11: CHAT & AI MESSAGING                               *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("chat") && MatchesSearch("Chat ChatHeader ChatMessageItem ChatSuggestions LoadingSpinner Чат Сообщения"))
+            {
+                <section class="showcase-section" id="chat">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="forum" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Chat & AI Messaging — Диалоги и ИИ-ассистент</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Chat.Features.Messaging</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">Chat Interface Components</h4>
+                                <p class="showcase-card-desc">Заголовок чата, рендеринг сообщений пользователя и ИИ, подсказки</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("chat-code")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body" style="background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);">
+                            <div class="showcase-demo-canvas" style="max-width: 650px; margin: 0 auto; width: 100%;">
+                                <ChatHeader />
+
+                                <div style="display: grid; gap: 12px; padding: 16px 0;">
+                                    <ChatMessageItem Message="@demoUserChatMessage" />
+                                    <ChatMessageItem Message="@demoAssistantChatMessage" />
+                                </div>
+
+                                <div style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; overflow-x: auto; margin-top: 8px;">
+                                    @foreach (var s in demoChatSuggestions)
+                                    {
+                                        <Button Variant="ButtonVariant.Outlined" OnClick="@(() => toastService.ShowSuccess($"Выбрана подсказка: {s}"))">
+                                            @s
+                                        </Button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("chat-code"))
+                        {
+                            <div class="showcase-card-code">&lt;ChatHeader /&gt;
+&lt;ChatMessageItem Message="@@userMsg" /&gt;
+&lt;ChatMessageItem Message="@@assistantMsg" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 12: SEAT DESIGNER                                     *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("seat-designer") && MatchesSearch("SeatDesigner Canvas Toolbar Рассадка Зал Места"))
+            {
+                <section class="showcase-section" id="seat-designer">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="chair" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">SeatDesigner — Редактор залов и рассадки</h3>
+                        </div>
+                        <span class="showcase-lib-badge">SeatDesigner.Components</span>
+                    </div>
+
+                    <div class="showcase-card" style="width: 100%;">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h4 class="showcase-card-title">SeatDesignerCanvas & Toolbar</h4>
+                                <p class="showcase-card-desc">Холст для проектирования и выбора столиков/мест в заведениях</p>
+                            </div>
+                            <div class="showcase-card-actions">
+                                <IconButton Icon="code" OnClick=@(() => ToggleCode("seat-code")) Title="Код" AriaLabel="Код" />
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <SeatDesignerToolbar />
+                                <SeatDesignerCanvas ContainerId="showcase-seat-canvas-container" />
+                            </div>
+                        </div>
+                        @if (IsCodeOpen("seat-code"))
+                        {
+                            <div class="showcase-card-code">&lt;SeatDesignerToolbar /&gt;
+&lt;SeatDesignerCanvas ContainerId="my-canvas-id" /&gt;</div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 13: Shared DOMAIN MODULES                          *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("modules") && MatchesSearch("Modules Auction Booking Donation Gift GroupBuy Hotel Quote Subscription Модули"))
+            {
+                <section class="showcase-section" id="modules">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="extension" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Shared — Отраслевые модули (Universal Modules)</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Shared.Modules</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Module Card: Auction -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">AuctionBiddingModule</h4>
+                                    <p class="showcase-card-desc">Модуль аукциона с живым таймером и вводом ставки</p>
+                                </div>
+                            </div>
+                            <div class="showcase-card-body" style="align-items: center;">
+                                <Button Variant="ButtonVariant.Filled" OnClick="@(() => isAuctionModalOpen = true)">
+                                    <Icon Name="gavel" Slot="icon" />
+                                    Открыть модуль торгов
+                                </Button>
+                            </div>
+                        </div>
+
+                        <!-- Module Card: Donation -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">DonationWidgetModule</h4>
+                                    <p class="showcase-card-desc">Виджет благотворительности с быстрыми пресетами сумм</p>
+                                </div>
+                            </div>
+                            <div class="showcase-card-body" style="align-items: center;">
+                                <Button Variant="ButtonVariant.FilledTonal" OnClick="@(() => isDonationModalOpen = true)">
+                                    <Icon Name="favorite" Slot="icon" />
+                                    Открыть модуль доната
+                                </Button>
+                            </div>
+                        </div>
+
+                        <!-- Module Card: Subscription -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">SubscriptionPlanModule</h4>
+                                    <p class="showcase-card-desc">Тарифные планы и карточки регулярной подписки</p>
+                                </div>
+                            </div>
+                            <div class="showcase-card-body" style="align-items: center;">
+                                <Button Variant="ButtonVariant.Outlined" OnClick="@(() => isSubscriptionModalOpen = true)">
+                                    <Icon Name="card_membership" Slot="icon" />
+                                    Открыть тарифы подписки
+                                </Button>
+                            </div>
+                        </div>
+
+                        <!-- Module Card: Booking -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">BookingCalendarModule</h4>
+                                    <p class="showcase-card-desc">Календарное бронирование услуг и времени специалистов</p>
+                                </div>
+                            </div>
+                            <div class="showcase-card-body" style="align-items: center;">
+                                <Button Variant="ButtonVariant.Filled" OnClick="@(() => isBookingModalOpen = true)">
+                                    <Icon Name="calendar_today" Slot="icon" />
+                                    Открыть календарь брони
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            }
+
+        </div>
+    </div>
+</main>
+
+<!-- Dialog Component Demo Modal -->
+<MaterialDialog Open="@isDemoDialogOpen" OpenChanged="v => isDemoDialogOpen = v">
+    <Headline>
+        <div style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; align-items: center; gap: 8px;">
+            <Icon Name="verified" style="color: var(--md-sys-color-primary);" />
+            <span>Демонстрация MaterialDialog</span>
+        </div>
+    </Headline>
+    <Content>
+        <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--md-sys-color-on-surface-variant);">
+            Это полноценное диалоговое окно Material Design 3. Оно поддерживает настраиваемые заголовки, произвольное содержимое, анимацию появления и кнопки действий.
+        </p>
+    </Content>
+    <Actions>
+        <Button Variant="ButtonVariant.Text" OnClick="@(() => isDemoDialogOpen = false)">Закрыть</Button>
+        <Button Variant="ButtonVariant.Filled" OnClick="@(() => { isDemoDialogOpen = false; toastService.ShowSuccess("Действие подтверждено!"); })">Подтвердить</Button>
+    </Actions>
+</MaterialDialog>
+
+<!-- Domain Modules Modals -->
+<AuctionBiddingModule IsOpen="@isAuctionModalOpen"
+                      IsOpenChanged="v => isAuctionModalOpen = v"
+                      Product="@demoProduct"
+                      UxMode="@demoUxMode"
+                      OnConfirmed="@(res => toastService.ShowSuccess($"Ставка {res.slot} принята!"))" />
+
+<DonationWidgetModule IsOpen="@isDonationModalOpen"
+                      IsOpenChanged="v => isDonationModalOpen = v"
+                      Product="@demoProduct"
+                      UxMode="@demoUxMode"
+                      OnConfirmed="@(res => toastService.ShowSuccess($"Пожертвование успешно отправлено!"))" />
+
+<SubscriptionPlanModule IsOpen="@isSubscriptionModalOpen"
+                        IsOpenChanged="v => isSubscriptionModalOpen = v"
+                        Product="@demoProduct"
+                        UxMode="@demoUxMode"
+                        OnConfirmed="@(res => toastService.ShowSuccess($"Подписка оформлена!"))" />
+
+<BookingCalendarModule IsOpen="@isBookingModalOpen"
+                       IsOpenChanged="v => isBookingModalOpen = v"
+                       Product="@demoProduct"
+                       UxMode="@demoUxMode"
+                       OnConfirmed="@(res => toastService.ShowSuccess($"Бронирование на {res.date:dd.MM.yyyy} успешно!"))" />
+
+<!-- Global Smart Toast Container -->
+<SmartToastContainer />
+
+@code {
+    [Inject] private SmartToastService toastService { get; set; } = default!;
+
+    private string selectedCategory = "all";
+    private string searchQuery = "";
+    private bool isMobileSidebarOpen = false;
+    private HashSet<string> openCodeSnippets = new();
+
+    private string lastAction = "Нажмите на любой компонент для теста";
+    private bool isIconSelected = true;
+    private string selectedTimePeriod = "Week";
+    private bool demoCheckbox = true;
+    private bool demoIndeterminateCheckbox = true;
+    private bool demoSwitch = true;
+    private string selectedDelivery = "courier";
+    private decimal sliderValue = 65m;
+    private decimal rangeStart = 150m;
+    private decimal rangeEnd = 750m;
+    private string pickedColor = "#0ea5e9";
+    private string demoInputText = "alex_developer";
+    private string demoAmountText = "250000";
+    private string selectedPaymentMethod = "UzCard";
+    private int activeTabIndex = 0;
+    private int activeNavTab = 0;
+    private string selectedChip = "pizza";
+    private bool isDemoDialogOpen = false;
+
+    private void HandleSliderChanged(decimal v) => sliderValue = v;
+    private void HandleRangeStartChanged(decimal v) => rangeStart = v;
+    private void HandleRangeEndChanged(decimal v) => rangeEnd = v;
+
+    // Smart.Web State
+    private string filterBarText = "";
+    private WorkSchedule demoSchedule = new WorkSchedule();
+    private List<FilterChip> demoFilterChips = new()
+    {
+        new FilterChip { Label = "В наличии", IsSelected = true },
+        new FilterChip { Label = "Популярное", IsSelected = false }
+    };
+
+    private void HandleFilterChipToggled(FilterChip chip)
+    {
+        toastService.ShowInfo("Переключен фильтр: " + chip.Label);
+    }
+
+    // QuickGrid State
+    private PaginationState quickGridPagination = new PaginationState { ItemsPerPage = 4 };
+    private List<DemoGridRow> demoGridItems = new()
+    {
+        new DemoGridRow(1, "Пицца Маргарита", "Пицца", 65000, true),
+        new DemoGridRow(2, "Бургер Классик", "Бургеры", 45000, true),
+        new DemoGridRow(3, "Кофе Капучино", "Напитки", 22000, true),
+        new DemoGridRow(4, "Чизкейк Нью-Йорк", "Десерты", 38000, false),
+        new DemoGridRow(5, "Стейк Рибай", "Горячее", 145000, true),
+        new DemoGridRow(6, "Лимонад Цитрус", "Напитки", 18000, true),
+        new DemoGridRow(7, "Цезарь с курицей", "Салаты", 48000, true),
+    };
+
+    // QR State
+    private string qrInputData = "https://socratic.uz/components";
+    private QrStylingOptions qrStylingOptions = new QrStylingOptions
+    {
+        PrimaryColor = "#0ea5e9",
+        CornerColor = "#6366f1",
+        BackgroundColor = "#ffffff"
+    };
+
+    // Receipt State
+    private List<DemoReceiptRow> demoReceiptRows = new()
+    {
+        new DemoReceiptRow("Пицца Пепперони 35см", 85000, 1),
+        new DemoReceiptRow("Капучино XL", 25000, 2),
+        new DemoReceiptRow("Соус Чесночный", 5000, 2)
+    };
+
+    // Chat Messages
+    private ChatMessage demoUserChatMessage = new ChatMessage(ChatRole.User, "Здравствуйте! Подскажите, как забронировать столик на вечер?");
+    private ChatMessage demoAssistantChatMessage = new ChatMessage(ChatRole.Assistant, "Добрый день! С радостью помогу. Выберите желаемый зал и время через наш интерактивный модуль рассадки.");
+
+    // Markdown Content
+    private string demoMarkdownContent = @"### Платформа Socratic UI
+
+**Socratic UI** предоставляет набор современных компонентов для создания веб-приложений и киосков:
+- ⚡ **Высокая скорость работы**: интеграция с Native AOT и Blazor WebAssembly.
+- 🎨 **Material Design 3**: динамическая адаптация под светлую и темную темы.
+- 📱 **Адаптивность**: поддержка мобильных устройств, планшетов и сенсорных терминалов.
+
+| Библиотека | Назначение | Статус |
+| :--- | :--- | :--- |
+| `Material.Web` | Базовые элементы UI | ✅ Стабильно |
+| `Smart.Web` | Комплексные виджеты | ✅ Стабильно |
+| `QrDesigner` | Векторные QR-коды | ✅ Стабильно |";
+
+    // Chat Suggestions
+    private string[] demoChatSuggestions = new[]
+    {
+        "Показать меню на сегодня",
+        "Какие акции действуют?",
+        "Рассчитать время доставки"
+    };
+
+    // Domain Modules State
+    private bool isAuctionModalOpen = false;
+    private bool isDonationModalOpen = false;
+    private bool isSubscriptionModalOpen = false;
+    private bool isBookingModalOpen = false;
+
+    private Product demoProduct = new Product
+    {
+        Id = Guid.NewGuid(),
+        Name = "Премиум комбо Socratic",
+        Price = 120000,
+        Description = "Демонстрационный товар для проверки работы модулей"
+    };
+
+    private ProductUxMode demoUxMode = ProductUxMode.CatalogItem;
+
+    private List<Select.SelectOption> demoPaymentOptions = new()
+    {
+        new Select.SelectOption("UzCard", "UzCard Онлайн", "Мгновенное списание", "credit_card"),
+        new Select.SelectOption("Humo", "Humo Pay", "Бесконтактная оплата", "contactless"),
+        new Select.SelectOption("Cash", "Наличные при получении", "Курьеру в руки", "payments")
+    };
+
+    private int TotalComponentsCount => 38;
+
+    private void ToggleMobileSidebar() => isMobileSidebarOpen = !isMobileSidebarOpen;
+
+    private void SelectCategory(string category)
+    {
+        selectedCategory = category;
+        isMobileSidebarOpen = false;
+    }
+
+    private void HandleSearchInput(ChangeEventArgs e)
+    {
+        searchQuery = e.Value?.ToString() ?? "";
+    }
+
+    private bool MatchesCategory(string category)
+    {
+        return selectedCategory == "all" || selectedCategory == category;
+    }
+
+    private bool MatchesSearch(string keywords)
+    {
+        if (string.IsNullOrWhiteSpace(searchQuery)) return true;
+        return keywords.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+               searchQuery.Contains(keywords, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private void ToggleCode(string codeKey)
+    {
+        if (openCodeSnippets.Contains(codeKey))
+            openCodeSnippets.Remove(codeKey);
+        else
+            openCodeSnippets.Add(codeKey);
+    }
+
+    private bool IsCodeOpen(string codeKey) => openCodeSnippets.Contains(codeKey);
+
+    private void IncrementClick(string btnName)
+    {
+        lastAction = $"Клик по: {btnName} в {DateTime.Now:HH:mm:ss}";
+        toastService.ShowInfo(lastAction);
+    }
+
+    public record DemoGridRow(int Id, string Name, string Category, decimal Price, bool InStock);
+    public record DemoReceiptRow(string Name, decimal Price, int Quantity);
+}
+

@@ -1,0 +1,8 @@
+<md-list @attributes="AdditionalAttributes">
+    @ChildContent
+</md-list>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+}

@@ -1,0 +1,47 @@
+
+@using System.Net.Http
+@using System.Globalization
+@using System.Net.Http.Json
+@using System.Net.Http.Headers
+@using Microsoft.AspNetCore.Components
+@attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "Blazor UI components and queries are statically preserved in Native AOT")]
+@attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "Blazor UI components and queries are statically preserved in Native AOT")]
+
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Sections
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.JSInterop
+@using Microsoft.Extensions.Localization
+@using Microsoft.Extensions.Logging
+@using Grpc.Core
+@using Grpc.Net.Client
+@using Grpc.Net.Client.Web
+@using Shared
+@using Shared.Components
+@using Shared.Layout
+@using Material.Web.Components
+@using Material.Web.Components.Labs
+@using Smart.Web.Components
+@using QuickGrid
+@using QuickGrid.Infrastructure
+@using Shared.Helpers
+@using Shared.Extensions
+@using Shared.Resources
+@using SharedKernel.ValueObjects
+@using SharedKernel.Extensions
+
+@using Infrastructure.Services
+@using Domain.Abstractions
+@using Domain.Entities
+@using System.Runtime.CompilerServices
+
+@using global::Identifying.Application.Protos
+@using global::Shopping.Application.Protos
+@using global::Ordering.Application.Protos
+
+

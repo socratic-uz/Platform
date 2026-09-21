@@ -1,0 +1,12 @@
+﻿<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="LocalDebug" />
+    <BuildType Name="Runner" />
+    <BuildType Name="Cluster" />
+  </Configurations>
+  <Project Path="Web.UI/Web.UI.csproj" />
+  <Project Path="Web.UI.Client/Web.UI.Client.csproj" />
+</Solution>
+

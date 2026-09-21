@@ -1,0 +1,12 @@
+[binobj]
+**/bin/
+**/obj/
+.vs/
+*.user
+**/node_modules/
+
+*.onnx
+**/Assets/
+UI.Web/Assets
+Assets
+

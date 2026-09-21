@@ -1,0 +1,29 @@
+<CascadingValue Value="this">
+    <md-tabs active-tab-index="@ActiveTabIndex" @onchange="HandleTabChange" @attributes="AdditionalAttributes">
+        @ChildContent
+    </md-tabs>
+</CascadingValue>
+
+@code {
+    [Parameter] public int ActiveTabIndex { get; set; } = 0;
+    [Parameter] public EventCallback<int> ActiveTabIndexChanged { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    internal async Task SelectTab(int index)
+    {
+        if (index != ActiveTabIndex)
+        {
+            ActiveTabIndex = index;
+            await ActiveTabIndexChanged.InvokeAsync(index);
+        }
+    }
+
+    private async Task HandleTabChange(ChangeEventArgs e)
+    {
+        if (e.Value != null && int.TryParse(e.Value.ToString(), out var index))
+        {
+            await SelectTab(index);
+        }
+    }
+}

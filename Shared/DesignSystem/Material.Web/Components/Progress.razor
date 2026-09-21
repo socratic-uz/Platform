@@ -1,0 +1,25 @@
+@if (IsCircular)
+{
+    <md-circular-progress value="@(IsIndeterminate ? null : Value)"
+                          indeterminate="@IsIndeterminate"
+                          four-color="@FourColor"
+                          @attributes="AdditionalAttributes"></md-circular-progress>
+}
+else
+{
+    <md-linear-progress value="@(IsIndeterminate ? null : Value)"
+                        buffer="@(IsIndeterminate ? null : Buffer)"
+                        indeterminate="@IsIndeterminate"
+                        @attributes="AdditionalAttributes"></md-linear-progress>
+}
+
+@code {
+    [Parameter] public bool IsCircular { get; set; } = false;
+    [Parameter] public double? Value { get; set; }
+    [Parameter] public double? Buffer { get; set; }
+    [Parameter] public bool Indeterminate { get; set; } = true;
+    [Parameter] public bool FourColor { get; set; } = false;
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private bool IsIndeterminate => Indeterminate && !Value.HasValue;
+}

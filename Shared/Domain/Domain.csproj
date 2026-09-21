@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+	  <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>Domain</RootNamespace>
+		<AssemblyName>Domain</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="$(SharedKernel)" Condition="'$(SharedKernel)' != '' and Exists('$(SharedKernel)')" />
+		<ProjectReference Include="..\..\..\Shared\SharedKernel\SharedKernel.csproj" Condition="('$(SharedKernel)' == '' or !Exists('$(SharedKernel)')) and Exists('..\..\..\Shared\SharedKernel\SharedKernel.csproj')" />
+		<ProjectReference Include="..\..\SharedKernel\SharedKernel.csproj" Condition="('$(SharedKernel)' == '' or !Exists('$(SharedKernel)')) and Exists('..\..\SharedKernel\SharedKernel.csproj')" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="DTOs\" />
+	  <Folder Include="Interfaces\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="ValueObjects\" />
+	</ItemGroup>
+
+</Project>

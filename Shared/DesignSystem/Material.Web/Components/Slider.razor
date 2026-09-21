@@ -1,0 +1,126 @@
+@using System.Linq.Expressions
+@using Microsoft.AspNetCore.Components.Forms
+@inherits InputBase<decimal>
+
+<md-slider id="@Id"
+           class="@CssClass material-slider"
+           min="@Min"
+           max="@Max"
+           value="@CurrentValueAsString"
+           step="@Step"
+           @attributes="AdditionalAttributes"
+           disabled="@Disabled"
+           ticks="@ShowTicks"
+           labeled="@ShowLabel"
+           range="@false"
+           value-label="@ValueLabel"
+           aria-label="@AriaLabel"
+           aria-valuetext="@AriaValueText"
+           @ref="sliderElement"
+           @oninput=@HandleInput
+           @onchange=@HandleChange>
+</md-slider>
+
+@code {
+    private ElementReference sliderElement;
+
+    [Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
+    [Parameter] public decimal Min { get; set; } = 0;
+    [Parameter] public decimal Max { get; set; } = 100;
+    [Parameter] public decimal Step { get; set; } = 1;
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public bool ShowTicks { get; set; } = false;
+    [Parameter] public bool ShowLabel { get; set; } = false;
+    [Parameter] public string ValueLabel { get; set; } = "";
+    [Parameter] public string AriaLabel { get; set; } = "";
+    [Parameter] public string AriaValueText { get; set; } = "";
+
+    // Ïàðàìåòðû äëÿ âàëèäàöèè
+    [Parameter] public Expression<Func<decimal>>? For { get; set; }
+    [Parameter] public bool ShowValidationMessage { get; set; } = true;
+
+    // Ñîáûòèÿ
+    [Parameter] public EventCallback<ChangeEventArgs> OnSlide { get; set; }
+
+    // Ñâîéñòâî äëÿ ïðîâåðêè íàëè÷èÿ îøèáîê âàëèäàöèè
+    private bool HasValidationErrors => EditContext?.GetValidationMessages(FieldIdentifier).Any() == true;
+
+    // Обработчики событий
+    private async Task HandleInput(ChangeEventArgs e)
+    {
+        var parsed = ParseDecimal(e.Value);
+        if (parsed.HasValue)
+        {
+            CurrentValue = parsed.Value;
+            await OnSlide.InvokeAsync(e);
+        }
+    }
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        var parsed = ParseDecimal(e.Value);
+        if (parsed.HasValue)
+        {
+            CurrentValue = parsed.Value;
+        }
+        await Task.CompletedTask;
+    }
+
+    private decimal? ParseDecimal(object? val)
+    {
+        if (val is null) return null;
+        if (val is decimal d) return d;
+        if (val is double db) return (decimal)db;
+        if (val is int i) return i;
+        if (val is long l) return l;
+        if (val is float f) return (decimal)f;
+        
+        var str = val.ToString();
+        if (decimal.TryParse(str, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var res1))
+            return res1;
+        if (decimal.TryParse(str, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.CurrentCulture, out var res2))
+            return res2;
+            
+        return null;
+    }
+
+    protected override string? FormatValueAsString(decimal value)
+    {
+        return value.ToString(System.Globalization.CultureInfo.InvariantCulture);
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (For != null && EditContext != null)
+        {
+            FieldIdentifier = FieldIdentifier.Create(For);
+        }
+        base.OnParametersSet();
+    }
+
+    protected override bool TryParseValueFromString(string? value, out decimal result, out string? validationErrorMessage)
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            result = 0;
+            validationErrorMessage = null;
+            return true;
+        }
+
+        if (decimal.TryParse(value, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out result))
+        {
+            // Проверка диапазона
+            if (result < Min || result > Max)
+            {
+                validationErrorMessage = $"Значение должно быть между {Min} и {Max}";
+                return false;
+            }
+
+            validationErrorMessage = null;
+            return true;
+        }
+
+        validationErrorMessage = "Неверный числовой формат";
+        return false;
+    }
+}

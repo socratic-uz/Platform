@@ -1,0 +1,113 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Apps.Shared</RootNamespace>
+    <AssemblyName>Apps.Shared</AssemblyName>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+    <DefaultItemExcludes>$(DefaultItemExcludes);bin/**;obj/**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+    <PackageReference Include="Microsoft.Extensions.Localization" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="SkiaSharp.Views.Blazor" />
+  </ItemGroup>
+
+  <!-- Layout & Design System -->
+  <ItemGroup>
+    <ProjectReference Include="$(Layout)" Condition="'$(Layout)' != '' and Exists('$(Layout)')" />
+    <ProjectReference Include="$(Shell)" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and '$(Shell)' != '' and Exists('$(Shell)')" />
+    <ProjectReference Include="..\DesignSystem\Layout\Layout.csproj" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and Exists('..\DesignSystem\Layout\Layout.csproj')" />
+
+    <ProjectReference Include="$(MaterialWeb)" Condition="'$(MaterialWeb)' != '' and Exists('$(MaterialWeb)')" />
+    <ProjectReference Include="..\DesignSystem\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\DesignSystem\Material.Web\Material.Web.csproj')" />
+
+    <ProjectReference Include="$(SmartWeb)" Condition="'$(SmartWeb)' != '' and Exists('$(SmartWeb)')" />
+    <ProjectReference Include="..\DesignSystem\Smart.Web\Smart.Web.csproj" Condition="('$(SmartWeb)' == '' or !Exists('$(SmartWeb)')) and Exists('..\DesignSystem\Smart.Web\Smart.Web.csproj')" />
+
+    <ProjectReference Include="$(QuickGrid)" Condition="'$(QuickGrid)' != '' and Exists('$(QuickGrid)')" />
+    <ProjectReference Include="..\DesignSystem\QuickGrid\QuickGrid.csproj" Condition="('$(QuickGrid)' == '' or !Exists('$(QuickGrid)')) and Exists('..\DesignSystem\QuickGrid\QuickGrid.csproj')" />
+
+    <ProjectReference Include="$(Markdown)" Condition="'$(Markdown)' != '' and Exists('$(Markdown)')" />
+    <ProjectReference Include="..\DesignSystem\Markdown\Markdown.csproj" Condition="('$(Markdown)' == '' or !Exists('$(Markdown)')) and Exists('..\DesignSystem\Markdown\Markdown.csproj')" />
+  </ItemGroup>
+
+  <!-- Core & Hardware -->
+  <ItemGroup>
+    <ProjectReference Include="$(Domain)" Condition="'$(Domain)' != '' and Exists('$(Domain)')" />
+    <ProjectReference Include="..\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\Domain\Domain.csproj')" />
+
+    <ProjectReference Include="$(Infrastructure)" Condition="'$(Infrastructure)' != '' and Exists('$(Infrastructure)')" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" Condition="('$(Infrastructure)' == '' or !Exists('$(Infrastructure)')) and Exists('..\Infrastructure\Infrastructure.csproj')" />
+
+    <ProjectReference Include="$(ReceiptPrinter)" Condition="'$(ReceiptPrinter)' != '' and Exists('$(ReceiptPrinter)')" />
+    <ProjectReference Include="..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj" Condition="('$(ReceiptPrinter)' == '' or !Exists('$(ReceiptPrinter)')) and Exists('..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj')" />
+
+    <ProjectReference Include="$(CameraStreamer)" Condition="'$(CameraStreamer)' != '' and Exists('$(CameraStreamer)')" />
+    <ProjectReference Include="..\..\..\Hardware\CameraStreamer\CameraStreamer.csproj" Condition="('$(CameraStreamer)' == '' or !Exists('$(CameraStreamer)')) and Exists('..\..\..\Hardware\CameraStreamer\CameraStreamer.csproj')" />
+
+    <ProjectReference Include="$(FFmpegProcessor)" Condition="'$(FFmpegProcessor)' != '' and Exists('$(FFmpegProcessor)')" />
+    <ProjectReference Include="..\..\..\Hardware\FFmpegProcessor\FFmpegProcessor.csproj" Condition="('$(FFmpegProcessor)' == '' or !Exists('$(FFmpegProcessor)')) and Exists('..\..\..\Hardware\FFmpegProcessor\FFmpegProcessor.csproj')" />
+
+    <ProjectReference Include="$(BiometricsProcessor)" Condition="'$(BiometricsProcessor)' != '' and Exists('$(BiometricsProcessor)')" />
+    <ProjectReference Include="..\..\..\Hardware\Biometrics.Processor\Biometrics.Processor.csproj" Condition="('$(BiometricsProcessor)' == '' or !Exists('$(BiometricsProcessor)')) and Exists('..\..\..\Hardware\Biometrics.Processor\Biometrics.Processor.csproj')" />
+  </ItemGroup>
+
+  <!-- All 13 Autonomous Domain Modules (Grouped: Retail, Intelligence, Studio, Portal) -->
+  <ItemGroup>
+    <!-- Retail: POS, Kiosk, Commerce, Checkout, Orders -->
+    <ProjectReference Include="$(POS)" Condition="'$(POS)' != '' and Exists('$(POS)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\POS\POS.csproj" Condition="('$(POS)' == '' or !Exists('$(POS)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\POS\POS.csproj')" />
+
+    <ProjectReference Include="$(Kiosk)" Condition="'$(Kiosk)' != '' and Exists('$(Kiosk)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Kiosk\Kiosk.csproj" Condition="('$(Kiosk)' == '' or !Exists('$(Kiosk)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Kiosk\Kiosk.csproj')" />
+
+    <ProjectReference Include="$(Commerce)" Condition="'$(Commerce)' != '' and Exists('$(Commerce)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Commerce\Commerce.csproj" Condition="('$(Commerce)' == '' or !Exists('$(Commerce)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Commerce\Commerce.csproj')" />
+
+    <ProjectReference Include="$(Checkout)" Condition="'$(Checkout)' != '' and Exists('$(Checkout)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Checkout\Checkout.csproj" Condition="('$(Checkout)' == '' or !Exists('$(Checkout)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Checkout\Checkout.csproj')" />
+
+    <ProjectReference Include="$(Orders)" Condition="'$(Orders)' != '' and Exists('$(Orders)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Orders\Orders.csproj" Condition="('$(Orders)' == '' or !Exists('$(Orders)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Orders\Orders.csproj')" />
+
+    <!-- Intelligence: Vision, Chat -->
+    <ProjectReference Include="$(Vision)" Condition="'$(Vision)' != '' and Exists('$(Vision)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Intelligence\Vision\Vision.csproj" Condition="('$(Vision)' == '' or !Exists('$(Vision)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Intelligence\Vision\Vision.csproj')" />
+
+    <ProjectReference Include="$(Chat)" Condition="'$(Chat)' != '' and Exists('$(Chat)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Intelligence\Chat\Chat.csproj" Condition="('$(Chat)' == '' or !Exists('$(Chat)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Intelligence\Chat\Chat.csproj')" />
+
+    <!-- Studio: Map, QrDesigner, SeatDesigner -->
+    <ProjectReference Include="$(Map)" Condition="'$(Map)' != '' and Exists('$(Map)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Studio\Map\Map.csproj" Condition="('$(Map)' == '' or !Exists('$(Map)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Studio\Map\Map.csproj')" />
+
+    <ProjectReference Include="$(QrDesigner)" Condition="'$(QrDesigner)' != '' and Exists('$(QrDesigner)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Studio\QrDesigner\QrDesigner.csproj" Condition="('$(QrDesigner)' == '' or !Exists('$(QrDesigner)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Studio\QrDesigner\QrDesigner.csproj')" />
+
+    <ProjectReference Include="$(SeatDesigner)" Condition="'$(SeatDesigner)' != '' and Exists('$(SeatDesigner)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Studio\SeatDesigner\SeatDesigner.csproj" Condition="('$(SeatDesigner)' == '' or !Exists('$(SeatDesigner)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Studio\SeatDesigner\SeatDesigner.csproj')" />
+
+    <!-- Portal: Identity, Organization, Landing -->
+    <ProjectReference Include="$(Identity)" Condition="'$(Identity)' != '' and Exists('$(Identity)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Portal\Identity\Identity.csproj" Condition="('$(Identity)' == '' or !Exists('$(Identity)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Portal\Identity\Identity.csproj')" />
+
+    <ProjectReference Include="$(Organization)" Condition="'$(Organization)' != '' and Exists('$(Organization)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Portal\Organization\Organization.csproj" Condition="('$(Organization)' == '' or !Exists('$(Organization)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Portal\Organization\Organization.csproj')" />
+
+    <ProjectReference Include="$(Landing)" Condition="'$(Landing)' != '' and Exists('$(Landing)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Portal\Landing\Landing.csproj" Condition="('$(Landing)' == '' or !Exists('$(Landing)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Portal\Landing\Landing.csproj')" />
+  </ItemGroup>
+
+</Project>
+

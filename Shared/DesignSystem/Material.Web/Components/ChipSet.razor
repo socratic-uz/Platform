@@ -1,0 +1,34 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Linq.Expressions
+
+<md-chip-set aria-label="@AriaLabel"
+			 @attributes="AdditionalAttributes">
+
+	@if (EnumData != null)
+	{
+		var enumType = EnumData.GetType();
+		foreach (var i in Enum.GetValuesAsUnderlyingType(enumType))
+		{
+			<Chip Label=@i.ToString()
+				  OnClick=@(e => isFlag? OnFlagClick(i): OnEnumClick(i))
+				  Selected=@(isFlag? EnumData.HasFlag((Enum)Enum.ToObject(enumType, i)): EnumData.Equals(Enum.ToObject(enumType, i))) />
+		}
+	}
+	else if (Data != null)
+	{
+		foreach (var i in Data)
+		{
+			<Chip Label=@(i is Type t ? t.Name : i?.ToString())
+				  OnClick=@(e => OnObjClick(i))
+				  Selected=@(Selected != null && Selected.Equals(i)) />
+		}
+	}
+	else
+	{
+		@ChildContent
+	}
+</md-chip-set>
+
+@code {
+
+}

@@ -1,0 +1,162 @@
+/* ============================================================ */
+/* COLOR PICKER SPECIFIC STYLES                                */
+/* ============================================================ */
+
+.color-badge-swatch {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
+}
+
+.picker-native-input {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Compact Mode */
+.picker-compact-box {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-low, #f7f9fc);
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+}
+
+.picker-swatch-wrapper {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
+    cursor: pointer;
+}
+
+.picker-swatch {
+    width: 100%;
+    height: 100%;
+}
+
+.picker-hex-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 2px;
+    background: var(--md-sys-color-surface, #ffffff);
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+}
+
+.picker-hex-prefix {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant, #79747e);
+    user-select: none;
+}
+
+.picker-hex-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface, #1d1b20);
+    width: 68px;
+    text-transform: uppercase;
+}
+
+/* Popover Panel */
+.picker-popover-panel {
+    background: var(--md-sys-color-surface-container, #f3edf7);
+    border: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.18);
+    display: grid;
+    gap: 10px;
+    margin-bottom: 12px;
+    animation: fadeInScale 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(-4px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.picker-popover-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+}
+
+.picker-popover-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+}
+
+.picker-palette-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.picker-palette-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    cursor: pointer;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.picker-palette-swatch:hover {
+    transform: scale(1.12);
+    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+}
+
+.picker-palette-swatch.selected {
+    box-shadow: 0 0 0 2px var(--md-sys-color-primary, #6750a4);
+}
+
+.picker-swatch-check {
+    font-size: 16px;
+    color: var(--md-sys-color-on-primary, #ffffff);
+    filter: drop-shadow(0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.8));
+}
+
+.picker-popover-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+}

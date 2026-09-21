@@ -1,0 +1,29 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-area: 1 / span 1 / 2 / -1;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+    border-radius: 0 0 24px 24px;
+    color: var(--md-sys-color-on-surface);
+    padding: 0.75rem 1.5rem;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0.5rem 0.75rem;
+        box-sizing: border-box;
+    }
+}

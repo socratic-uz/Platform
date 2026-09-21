@@ -1,0 +1,45 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+div {
+    overflow: hidden;
+    display: grid;
+    width: 46px;
+    border-radius: 24px;
+    justify-content: center;
+}
+
+figure {
+    background: var(--md-sys-color-primary-container);
+    height: 46px;
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    grid-auto-flow: column;
+    justify-items: center;
+    align-content: center;
+}
+
+svg {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    transition: grid-column 0.5s cubic-bezier(.2, 0, 0, 1);
+}
+
+figure > svg:nth-child(1) {
+    stroke: var(--md-sys-color-on-primary-container);
+    grid-column: -3 / -2;
+}
+
+figure > svg:nth-child(2) {
+    fill: var(--md-sys-color-on-surface);
+    grid-column: -2 / -1;
+}
+
+#app.dark-mode svg {
+    grid-column: initial;
+}

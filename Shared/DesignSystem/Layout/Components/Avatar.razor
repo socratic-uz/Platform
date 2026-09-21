@@ -1,0 +1,404 @@
+@inherits DataComponentBase
+@inject IStringLocalizer l
+
+<div class="avatar-container">
+	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="avatar-button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
+		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
+		{
+			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
+		}
+		else
+		{
+			<Icon Name="person" />
+		}
+	</Button>
+
+	@if (IsOpen)
+	{
+	<MaterialDialog class="contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
+		<span slot="headline">
+			<span class="headline">@l?["Edit profile"]</span>
+			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@(e => IsOpen = false) Icon="close" />
+		</span>
+		@if (FormModel is null)
+		{
+			<div slot="content" class="content">
+				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
+			</div>
+		}
+		else
+		{
+			<EditForm Model="@FormModel" slot="content" method="dialog" class="content" @onsubmit:preventDefault>
+				<AntiforgeryToken />
+				<List>
+					<!--Id-->
+					<details @ontoggle=@(e => GetRoles())>
+						<summary>
+							<ListItem type="button">
+								<p>@FormModel?.Name.FirstName @FormModel?.Name?.LastName</p>
+								<Icon Name="person" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+						<div class="content">
+							<input type="hidden" name=@profile.Id value=@FormModel.Id />
+							<TextField TValue="Guid?"
+									   Variant="TextField<Guid?>.TextFieldVariant.Outlined"
+									   Label="@l?["Id"]"
+									   Value="@FormModel.Id"
+									   ValueExpression="() => FormModel.Id"
+									   Disabled="true" />
+							@if (Roles.Any())
+							{
+								@foreach (var role in Roles.Where(r => r.UserId == profile?.Id))
+								{
+									<label>
+										<Radio Name="role"
+											   Checked=@(role.Id.ToString() == roleId)
+											   OnChange=@(async () => await Switch(role.Id.ToString()))
+											   touch-target="wrapper" />
+										<span aria-hidden="true">@role.Name</span>
+									</label>
+								}
+							}
+							else
+							{
+								<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
+							}
+						</div>
+						<Divider />
+					</details>
+
+					<Divider />
+
+					<!--Phone-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Phone"]</div>
+								<Icon Name="phone" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+
+						<div class="content">
+							<TextField TValue="string"
+									   Variant="TextField<string>.TextFieldVariant.Outlined"
+									   Label="@l?["Phone"]"
+									   Value="@FormModel.Phone"
+									   ValueExpression="() => FormModel.Phone"
+									   Disabled="true" />
+						</div>
+						<Divider />
+					</details>
+
+					<!--Photo-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Photo"]</div>
+								<Icon Name="add_photo_alternate" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+
+						<div class="content" style="padding: 16px;">
+							<Material.Web.Components.FilePicker 
+								Attachments="@_imageAttachments"
+								Label="@l?["Photo"]"
+								UploadLabel="@(l?["Upload photo"] ?? "Загрузить фото")"
+								RemoveLabel="@(l?["Delete"] ?? "Удалить")"
+								Multiple="false"
+								Accept="image/*"
+								MaxAllowedFiles="1"
+								OnChanged="@HandleImageChanged" />
+						</div>
+						<Divider />
+					</details>
+
+					<!--Name-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Name"]</div>
+								<Icon Name="id_card" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+
+						<div class="content">
+							<TextField TValue="string"
+									   Variant="TextField<string>.TextFieldVariant.Outlined"
+									   Label="@l?["FirstName"]"
+									   autofocus
+									   Value="@FormModel.Name.FirstName"
+									   ValueChanged="@(val => FormModel.Name.FirstName = val)"
+									   ValueExpression="() => FormModel.Name.FirstName"
+									   OnInput="@(e => FormModel.Name.FirstName = e.Value?.ToString() ?? string.Empty)"
+									   MaxLength="10"
+									   Required="true"
+									   SupportingText="*required"
+									   ErrorText="Please fill out this field" />
+
+							<TextField TValue="string"
+									   Variant="TextField<string>.TextFieldVariant.Outlined"
+									   Label="@l?["LastName"]"
+									   Value="@FormModel.Name.LastName"
+									   ValueChanged="@(val => FormModel.Name.LastName = val)"
+									   ValueExpression="() => FormModel.Name.LastName"
+									   OnInput="@(e => FormModel.Name.LastName = e.Value?.ToString() ?? string.Empty)"
+									   MaxLength="10"
+									   Required="true"
+									   SupportingText="*required"
+									   ErrorText="Please fill out this field" />
+
+							<TextField TValue="string"
+									   Variant="TextField<string>.TextFieldVariant.Outlined"
+									   Label="@l?["MiddleName"]"
+									   Value="@FormModel.Name.MiddleName"
+									   ValueChanged="@(val => FormModel.Name.MiddleName = val)"
+									   ValueExpression="() => FormModel.Name.MiddleName"
+									   OnInput="@(e => FormModel.Name.MiddleName = e.Value?.ToString() ?? string.Empty)"
+									   MaxLength="10"
+									   Required="true"
+									   SupportingText="*required"
+									   ErrorText="Please fill out this field" />
+						</div>
+						<Divider />
+					</details>
+
+					<!--Address-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Address"]</div>
+								<Icon Name="location_on" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+						<div class="content" style="display: grid; gap: 12px; padding: 16px;">
+							<TextField TValue="string"
+							           Variant="TextField<string>.TextFieldVariant.Outlined"
+							           Label="@(l?["City"] ?? "Город")"
+							           Value="@(FormModel.Address?.City ?? string.Empty)"
+							           ValueChanged="@(c => { if (FormModel.Address == null) FormModel.Address = new(); FormModel.Address.City = c; })" />
+							<TextField TValue="string"
+							           Variant="TextField<string>.TextFieldVariant.Outlined"
+							           Label="@(l?["Street"] ?? "Улица / Дом")"
+							           Value="@(FormModel.Address?.Street ?? string.Empty)"
+							           ValueChanged="@(s => { if (FormModel.Address == null) FormModel.Address = new(); FormModel.Address.Street = s; })" />
+						</div>
+						<Divider />
+					</details>
+
+					<!--Language-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Language"]</div>
+								<Icon Name="translate" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+
+						<div class="content">
+							@foreach (var language in languages)
+							{
+								<label>
+									<Radio Name="language"
+										   Checked=@(language == (Language)FormModel.Language)
+										   OnChange=@(async () => FormModel.Language = language)
+										   touch-target="wrapper" />
+									<span aria-hidden="true">@l?[language.ToString()]</span>
+								</label>
+							}
+						</div>
+						<Divider />
+					</details>
+
+					<!--Accent-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@l?["Accent"]</div>
+								<Icon Name="palette" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+
+						<div class="content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
+							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;">
+								<Select Label="@l?["Theme"]"
+										Value="@ThemeString"
+										ValueChanged="OnThemeChanged"
+										ValueExpression="() => ThemeString"
+										Options="@ThemeOptions" />
+								<div style="display: grid; grid-auto-flow: row; justify-items: center; gap: 0.25rem;">
+									<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@l?["Color"]</span>
+									<ColorPicker Value="@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3")" ValueChanged="ChangeTheme" />
+								</div>
+							</div>
+						</div>
+						<Divider />
+					</details>
+
+					<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
+					<details>
+						<summary>
+							<ListItem type="button">
+								<div>@(l?["Security & Quick Access"] ?? "Безопасность и быстрый вход")</div>
+								<Icon Name="security" Slot="start" />
+								<Icon Name="arrow_drop_down" Slot="end" />
+							</ListItem>
+						</summary>
+						<div class="content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
+							<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); margin: 0;">
+								@(l?["FastLoginSubtitle"] ?? "Настройте методы для входа в 1 клик без ожидания SMS.")
+							</p>
+
+							<!-- Face ID -->
+							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+									<Icon Name="@(isFaceIdConfigured ? "check_circle" : "face")" style="@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};")" />
+									<div style="display: grid; grid-auto-flow: row;">
+										<span style="font-size: 0.85rem; font-weight: 600;">@(l?["Auth_FaceId_Title"] ?? "Face ID (Биометрия)")</span>
+										<span style="font-size: 0.75rem; color: @(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)");">
+											@(isFaceIdConfigured ? (l?["Auth_FaceId_Bound"] ?? "✅ Привязано к аккаунту") : (l?["Auth_FaceId_Hint"] ?? "Вход по взгляду в камеру"))
+										</span>
+									</div>
+								</div>
+								<div style="display: grid; grid-auto-flow: column; align-items: center; gap: 6px;">
+									<Button Variant="ButtonVariant.Outlined" OnClick="NavigateToFaceIdSetup">
+										@(isFaceIdConfigured ? (l?["Update"] ?? "Обновить") : (l?["Setup"] ?? "Настроить"))
+									</Button>
+									@if (isFaceIdConfigured)
+									{
+										<IconButton OnClick="RemoveFaceId" title="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")" AriaLabel="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")">
+											<Icon Name="delete_outline" style="color: var(--md-sys-color-error); font-size: 20px;" />
+										</IconButton>
+									}
+								</div>
+							</div>
+
+							<!-- Google SSO -->
+							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+									<Icon Name="account_circle" />
+									<div style="display: grid; grid-auto-flow: row;">
+										<span style="font-size: 0.85rem; font-weight: 600;">Google SSO</span>
+										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Auth_NotLinked"] ?? "Не привязано") : FormModelEmail)</span>
+									</div>
+								</div>
+								<Button Variant="ButtonVariant.Outlined" OnClick="LinkGoogleAccount">
+									@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Link"] ?? "Привязать") : (l?["Update"] ?? "Изменить"))
+								</Button>
+							</div>
+
+							<!-- Passkeys (FIDO2 / WebAuthn) -->
+							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+									<Icon Name="fingerprint" style="color: var(--md-sys-color-tertiary);" />
+									<div style="display: grid; grid-auto-flow: row;">
+										<span style="font-size: 0.85rem; font-weight: 600;">Passkeys (WebAuthn)</span>
+										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@(l?["Auth_Passkeys_Subtitle"] ?? "Вход по Touch ID / Face ID устройства")</span>
+									</div>
+								</div>
+								<Button Variant="ButtonVariant.Outlined" OnClick="RegisterPasskey">
+									@(isPasskeyConfigured ? (l?["Update"] ?? "Обновить") : (l?["Setup"] ?? "Подключить"))
+								</Button>
+							</div>
+						</div>
+						<Divider />
+					</details>
+
+					<!--Support-->
+					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link">
+						<div>@l?["Support"]</div>
+						<Icon Name="support_agent" Slot="start" />
+						<Icon Name="link" Slot="end" />
+					</ListItem>
+
+					@if (permission > Permission.Customer)
+					{
+						<!--Roles-->
+						<ListItem Href="roles" type="button">
+							<div>@l?["Roles"]</div>
+							<Icon Name="group" Slot="start" />
+							<Icon Name="chevron_right" Slot="end" />
+						</ListItem>
+					}
+
+					<!--Log out-->
+					<ListItem type="button" OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); })>
+						<div>@l?["Log out"]</div>
+						<Icon Name="logout" Slot="start" />
+					</ListItem>
+				</List>
+			</EditForm>
+		}
+		<div slot="actions">
+			<Button Variant="ButtonVariant.Text" value="reset" Type="reset" OnClick=@(e => FormModel = profile?.Clone())>Reset</Button>
+			<div style="display: block;"></div>
+			<Button Variant="ButtonVariant.Text" value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l?["Save"]</Button>
+			<Button Variant="ButtonVariant.Text" value="cancel" OnClick=@(e => IsOpen = false)>@l?["Cancel"]</Button>
+		</div>
+	</MaterialDialog>
+	}
+
+	@if (isFaceIdModalOpen)
+	{
+	<MaterialDialog class="faceid-profile-modal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
+		<span slot="headline">
+			<span class="headline">@l?["Face ID (Биометрия)"]</span>
+			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@CloseFaceIdModal Icon="close" />
+		</span>
+		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
+			<!-- 3-Step Calibration Progress Bar -->
+			<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; width: 100%; max-width: 240px; justify-items: stretch;">
+				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 1 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
+				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 2 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
+				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 3 ? "var(--md-sys-color-tertiary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
+			</div>
+
+			<div style="width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid @faceIdStatusColor; box-shadow: 0 0 24px var(--md-sys-color-shadow); position: relative; display: grid; place-items: center;">
+				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
+				{
+					<DynamicComponent Type="@CameraStreamerUiProvider.CameraStreamerComponentType"
+									  Parameters="@CameraStreamerParameters" />
+				}
+				else if (isFaceIdModalOpen)
+				{
+					<div style="display: grid; place-items: center; text-align: center; padding: 1rem; color: var(--md-sys-color-on-surface-variant);">
+						<md-icon style="font-size: 48px; margin-bottom: 8px;">videocam_off</md-icon>
+						<span>Камера недоступна</span>
+					</div>
+				}
+				<!-- Dynamic Pose Direction Badge -->
+				<div style="position: absolute; bottom: 12px; padding: 4px 12px; background: var(--md-sys-color-surface-container-highest); backdrop-filter: blur(8px); border-radius: 20px; font-size: 0.75rem; color: var(--md-sys-color-on-surface); font-weight: 600; pointer-events: none; border: 1px solid var(--md-sys-color-outline-variant);">
+					@if (currentEnrollmentStage == 1)
+					{
+						<span>@(l?["FaceId_LookStraight"] ?? "🎯 Смотрите прямо")</span>
+					}
+					else if (currentEnrollmentStage == 2)
+					{
+						<span>@(l?["FaceId_TurnLeft"] ?? "👈 Поверните влево")</span>
+					}
+					else
+					{
+						<span>@(l?["FaceId_TurnRight"] ?? "👉 Поверните вправо")</span>
+					}
+				</div>
+			</div>
+			<div style="font-weight: 600; font-size: 0.95rem; color: @faceIdStatusColor; text-align: center;">
+				@faceIdStatusMessage
+			</div>
+			<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); text-align: center; margin: 0; max-width: 320px;">
+				@(l?["FaceId_CenterFace"] ?? "Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.")
+			</p>
+		</div>
+		<div slot="actions">
+			<Button Variant="ButtonVariant.Text" value="cancel" OnClick=@CloseFaceIdModal>@l?["Cancel"]</Button>
+		</div>
+	</MaterialDialog>
+	}
+</div>

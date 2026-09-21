@@ -1,0 +1,1401 @@
+@namespace Smart.Web.Components
+@using System.Reflection
+@inject Microsoft.JSInterop.IJSRuntime JS
+
+@typeparam TItem where TItem : class, new()
+@attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "SmartForm dynamic enum/reflection helpers are preserved for UI rendering")]
+@attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "SmartForm dynamic enum/reflection helpers are preserved for UI rendering")]
+
+
+<style>
+    .smart-form-dialog,
+    md-dialog.smart-form-dialog {
+        --md-dialog-container-min-inline-size: min(550px, 92vw);
+        --md-dialog-container-max-inline-size: min(840px, 96vw);
+        max-width: min(840px, 96vw) !important;
+        width: min(840px, 96vw) !important;
+        max-height: min(92vh, 920px) !important;
+    }
+    .smart-form-dialog [slot="content"] {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 16px 24px !important;
+    }
+    .smart-form-dialog form,
+    .smart-form-dialog .smart-form-content {
+        display: grid;
+        gap: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .smart-form-dialog fieldset,
+    .smart-form-dialog .smart-form-fieldset {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+        border-radius: 12px;
+        padding: 14px;
+        margin: 0 0 10px 0;
+        display: grid;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .smart-form-dialog fieldset legend,
+    .smart-form-dialog .smart-form-fieldset legend {
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0 8px;
+        color: var(--md-sys-color-primary, #6750a4);
+        max-width: 100%;
+        word-break: break-word;
+    }
+    .smart-form-dialog .smart-form-field {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        gap: 6px;
+    }
+    .smart-form-dialog md-outlined-text-field,
+    .smart-form-dialog md-filled-text-field,
+    .smart-form-dialog md-select,
+    .smart-form-dialog .material-text-field {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    .smart-form-dialog .smart-form-chip-container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 8px;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+    }
+    .smart-form-dialog .smart-form-chip-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--md-sys-color-on-surface-variant, #49454f);
+        margin-bottom: 2px;
+    }
+    .smart-form-dialog .smart-form-switch-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 14px;
+        background: var(--md-sys-color-surface-container-low, rgba(255, 255, 255, 0.03));
+        border-radius: 12px;
+        border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.1));
+        min-width: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .smart-form-dialog .smart-form-switch-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--md-sys-color-on-surface, #1d1b20);
+        min-width: 0;
+        word-break: break-word;
+    }
+    .smart-form-dialog .smart-form-checkbox-container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+        gap: 12px;
+        padding: 6px 0;
+        min-width: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .smart-form-dialog [slot="actions"] {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+    }
+    @@media (max-width: 600px) {
+        .smart-form-dialog,
+        md-dialog.smart-form-dialog {
+            max-width: 98vw !important;
+            width: 98vw !important;
+            --md-dialog-container-min-inline-size: 92vw;
+            --md-dialog-container-max-inline-size: 96vw;
+        }
+        .smart-form-dialog [slot="content"] {
+            padding: 14px 10px !important;
+        }
+    }
+</style>
+
+<MaterialDialog id=@Id
+                class="smart-form-dialog"
+                Open=@Open
+                Type=@Type
+                NoFocusTrap=@NoFocusTrap
+                aria-label="@AriaLabel"
+                @attributes=@AdditionalAttributes
+                OnClose=@OnClose
+                OnCancel=@OnCancel>
+
+    <Headline>
+        @Headline
+    </Headline>
+    <Content>
+        <EditForm EditContext="@editContext" id="@formId" class="smart-form-content" style="display: grid; gap: 16px; box-sizing: border-box; width: 100%; min-width: 0; overflow-x: hidden;">
+            <DataAnnotationsValidator />
+
+            @if (ShowValidationSummary)
+            {
+                <ValidationSummary />
+            }
+
+            @if (ChildContent != null)
+            {
+                @ChildContent
+            }
+            else
+            {
+                @foreach (var info in propertyInfos ?? Array.Empty<PropertyInfo>())
+                {
+                    @RenderField(info, Item)
+                }
+
+                @AdditionalFields
+            }
+        </EditForm>
+    </Content>
+    <Actions>
+        @if (Actions != null)
+        {
+            @Actions
+        }
+        else
+        {
+            <Button Variant="ButtonVariant.Text" Type="button" OnClick="e => OnCancel.InvokeAsync(e)">
+                @(string.IsNullOrWhiteSpace(CancelText) ? "Отмена" : CancelText)
+            </Button>
+            <Button Variant="ButtonVariant.Filled" Type="button" OnClick="SubmitFormAsync">
+                @(string.IsNullOrWhiteSpace(SubmitText) ? "Сохранить" : SubmitText)
+            </Button>
+        }
+    </Actions>
+</MaterialDialog>
+
+@code
+{
+
+@using System.Linq.Expressions
+@using System.Linq
+@using System.Reflection
+@using System.ComponentModel
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Components.Forms
+
+@using SystemEnum = System.Enum
+@using SystemType = System.Type;
+
+ string formId = Guid.NewGuid().ToString();
+PropertyInfo[]? propertyInfos;
+PropertyInfo? imagesProperty;
+PropertyInfo? newImagesContentProperty;
+PropertyInfo? newImagesFileNameProperty;
+PropertyInfo? newImagesContentTypeProperty;
+
+[Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
+[Parameter] public bool Open { get; set; } = false;
+[Parameter] public bool Quick { get; set; } = false;
+[Parameter] public string Type { get; set; } = "alert";
+[Parameter] public bool NoFocusTrap { get; set; } = false;
+[Parameter] public string AriaLabel { get; set; } = "";
+[Parameter] public EventCallback<EventArgs> OnClose { get; set; }
+[Parameter] public EventCallback<EventArgs> OnCancel { get; set; }
+[Parameter] public EventCallback<EditContext> OnValidSubmit { get; set; }
+[Parameter] public EventCallback<EditContext> OnInvalidSubmit { get; set; }
+
+[Parameter] public RenderFragment? Headline { get; set; }
+[Parameter] public RenderFragment? ChildContent { get; set; }
+[Parameter] public RenderFragment? Actions { get; set; }
+[Parameter] public RenderFragment? AdditionalFields { get; set; }
+
+[Parameter] public TItem Item { get; set; } = new();
+
+// Новые параметры для улучшенной функциональности
+[Parameter] public bool ShowValidationSummary { get; set; } = true;
+[Parameter] public string SubmitText { get; set; } = "Submit";
+[Parameter] public string CancelText { get; set; } = "Cancel";
+[Parameter] public List<string> ExcludeProperties { get; set; } = new();
+[Parameter] public Dictionary<string, string> PropertyDisplayNames { get; set; } = new();
+[Parameter] public Dictionary<string, string> PropertyTypes { get; set; } = new();
+[Parameter] public bool UseCheckboxForBool { get; set; } = false; // Новый параметр
+[Parameter] public bool UseChipsForEnum { get; set; } = true; // Новый параметр
+[Parameter] public bool UseChipSetForEnum { get; set; } = true; // Новый параметр для ChipSet
+[Parameter] public bool UseSmartCheckboxForEnum { get; set; } = false; // Новый параметр для SmartCheckbox
+[Parameter] public Func<string, string>? ImageUrlResolver { get; set; }
+
+[Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+
+    private EditContext? editContext;
+
+    protected override void OnParametersSet()
+    {
+        if (editContext == null || editContext.Model != Item)
+        {
+            editContext = new EditContext(Item);
+        }
+        base.OnParametersSet();
+    }
+
+    private async Task SubmitFormAsync()
+    {
+        editContext ??= new EditContext(Item);
+        bool isValid = editContext.Validate();
+        if (isValid)
+        {
+            await OnValidSubmit.InvokeAsync(editContext);
+        }
+        else
+        {
+            await OnInvalidSubmit.InvokeAsync(editContext);
+        }
+    }
+
+protected override Task OnInitializedAsync()
+{
+    var allProps = typeof(TItem).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+    
+    imagesProperty = allProps.FirstOrDefault(p => p.Name.Equals("Images", StringComparison.OrdinalIgnoreCase));
+    newImagesContentProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesContent", StringComparison.OrdinalIgnoreCase));
+    newImagesFileNameProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesFileName", StringComparison.OrdinalIgnoreCase));
+    newImagesContentTypeProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesContentType", StringComparison.OrdinalIgnoreCase));
+
+    var imageRelatedNames = new List<string>();
+    if (imagesProperty != null && newImagesContentProperty != null)
+    {
+        imageRelatedNames.Add(newImagesContentProperty.Name);
+        if (newImagesFileNameProperty != null) imageRelatedNames.Add(newImagesFileNameProperty.Name);
+        if (newImagesContentTypeProperty != null) imageRelatedNames.Add(newImagesContentTypeProperty.Name);
+    }
+
+    propertyInfos = allProps
+        .Where(p => 
+            p.GetCustomAttribute<ScaffoldColumnAttribute>()?.Scaffold != false &&
+            ((p.CanRead && p.CanWrite) || 
+             (imagesProperty != null && p.Name.Equals(imagesProperty.Name, StringComparison.OrdinalIgnoreCase)) ||
+             IsFileCollection(p)) && 
+            !ExcludeProperties.Contains(p.Name) && 
+            !imageRelatedNames.Contains(p.Name) &&
+            !(p.Name.StartsWith("Has") && p.PropertyType == typeof(bool) && typeof(TItem).GetProperty(p.Name.Substring(3)) != null))
+        .ToArray();
+
+    return Task.CompletedTask;
+}
+
+private bool IsFileCollection(PropertyInfo prop)
+{
+    var type = prop.PropertyType;
+    if (!type.IsGenericType) return false;
+    
+    var genericArgs = type.GetGenericArguments();
+    if (genericArgs.Length == 1 && (genericArgs[0].FullName == "SharedKernel.Protos.File" || genericArgs[0].FullName == "Core.Domain.Entities.File"))
+    {
+        return true;
+    }
+    
+    var iListInterface = type.GetInterfaces()
+        .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IList<>));
+    if (iListInterface != null)
+    {
+        var ifaceArgs = iListInterface.GetGenericArguments();
+        if (ifaceArgs.Length == 1 && (ifaceArgs[0].FullName == "SharedKernel.Protos.File" || ifaceArgs[0].FullName == "Core.Domain.Entities.File"))
+        {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+private bool IsSimpleType(SystemType type)
+{
+    return type.IsPrimitive ||
+           type == typeof(string) ||
+           type == typeof(decimal) ||
+           type == typeof(DateTime) ||
+           type == typeof(Guid) ||
+           type.IsEnum;
+}
+
+
+private string GetDisplayName(PropertyInfo property)
+{
+    if (PropertyDisplayNames.TryGetValue(property.Name, out var customName))
+        return customName;
+
+    var displayAttribute = property.GetCustomAttribute<DisplayAttribute>();
+    return displayAttribute?.Name ?? property.Name;
+}
+
+private bool IsRequired(PropertyInfo property)
+{
+    return property.GetCustomAttribute<RequiredAttribute>() != null;
+}
+
+private string GetFieldType(PropertyInfo property)
+{
+    if (PropertyTypes.ContainsKey(property.Name))
+        return PropertyTypes[property.Name];
+
+    var dataTypeAttribute = property.GetCustomAttribute<DataTypeAttribute>();
+    if (dataTypeAttribute != null)
+    {
+        return dataTypeAttribute.DataType switch
+        {
+            DataType.Password => "password",
+            DataType.EmailAddress => "email",
+            DataType.MultilineText => "textarea",
+            DataType.PhoneNumber => "tel",
+            DataType.Url => "url",
+            DataType.Date => "date",
+            DataType.DateTime => "datetime-local",
+            DataType.Time => "time",
+            DataType.Currency => "number",
+            DataType.Text => "text",
+            DataType.ImageUrl => "text",
+            DataType.Upload => "file",
+            _ => "text"
+        };
+    }
+
+    var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+
+    if (propertyType == typeof(int) || propertyType == typeof(long) ||
+        propertyType == typeof(decimal) || propertyType == typeof(double) ||
+        propertyType == typeof(float))
+    {
+        return "number";
+    }
+
+    if (propertyType == typeof(DateTime))
+    {
+        var propertyName = property.Name.ToLower();
+        if (propertyName.Contains("date") && !propertyName.Contains("time"))
+            return "date";
+        if (propertyName.Contains("time") && !propertyName.Contains("date"))
+            return "time";
+        return "datetime-local";
+    }
+
+    if (propertyType == typeof(bool))
+        return "switch";
+
+    if (property.Name.ToLower().Contains("email"))
+        return "email";
+
+    if (property.Name.ToLower().Contains("password"))
+        return "password";
+
+    if (property.Name.ToLower().Contains("description") ||
+        property.Name.ToLower().Contains("comment") ||
+        property.Name.ToLower().Contains("note"))
+        return "textarea";
+
+    return "text";
+}
+
+private int GetTextAreaRows(PropertyInfo property)
+{
+    var stringLengthAttribute = property.GetCustomAttribute<StringLengthAttribute>();
+    if (stringLengthAttribute != null && stringLengthAttribute.MaximumLength > 100)
+        return 4;
+    return 2;
+}
+
+private string GetEnumDisplayText(object enumValue, SystemType enumType)
+{
+    // Получаем DisplayAttribute если есть
+    var memberInfo = enumType.GetMember(enumValue.ToString() ?? "").FirstOrDefault();
+    if (memberInfo != null)
+    {
+        var displayAttribute = memberInfo.GetCustomAttribute<DisplayAttribute>();
+        if (displayAttribute?.Name != null)
+            return displayAttribute.Name;
+
+        var descriptionAttribute = memberInfo.GetCustomAttribute<DescriptionAttribute>();
+        if (descriptionAttribute?.Description != null)
+            return descriptionAttribute.Description;
+    }
+
+    return enumValue.ToString() ?? "";
+}
+
+private bool IsZoneField(PropertyInfo info, SystemType propertyType)
+{
+    if (propertyType.Name.Contains("Zone", StringComparison.OrdinalIgnoreCase) || propertyType.Name.Contains("Polygon", StringComparison.OrdinalIgnoreCase))
+        return true;
+
+    if (propertyType.IsGenericType)
+    {
+        var genericArgs = propertyType.GetGenericArguments();
+        if (genericArgs.Length == 1 && (genericArgs[0].Name.Contains("Zone", StringComparison.OrdinalIgnoreCase) || genericArgs[0].Name.Contains("Polygon", StringComparison.OrdinalIgnoreCase)))
+            return true;
+    }
+    return false;
+}
+
+private RenderFragment RenderField(PropertyInfo info, object? obj)
+{
+    if (obj == null || info.GetIndexParameters().Length > 0 || !info.CanRead) return
+@<text></text>;
+
+    try
+    {
+        var propertyType = Nullable.GetUnderlyingType(info.PropertyType) ?? info.PropertyType;
+        var value = info.GetValue(obj);
+
+        if (info.Name.Equals("Images", StringComparison.OrdinalIgnoreCase) && newImagesContentProperty != null)
+        {
+            return RenderImageUploadField(info, obj);
+        }
+        else if (IsFileCollection(info))
+        {
+            return RenderFilePickerField(info, obj);
+        }
+        else if (IsZoneField(info, propertyType))
+        {
+            return RenderZoneField(info, obj, value);
+        }
+        else if (IsSimpleType(propertyType))
+        {
+            return RenderSimpleField(info, obj, value, propertyType);
+        }
+        else if (propertyType.Name == "Address")
+        {
+            return RenderAddressField(info, obj, value, propertyType);
+        }
+        else if (propertyType.Name == "WorkSchedule" || propertyType == typeof(SharedKernel.ValueObjects.WorkSchedule))
+        {
+            return RenderWorkScheduleField(info, obj, value);
+        }
+        else
+        {
+            return RenderComplexField(info, obj, value, propertyType);
+        }
+    }
+    catch (Exception ex)
+    {
+        return @<div style="color: red; padding: 5px; border: 1px solid red;">
+            Error rendering field '@info.Name': @ex.Message
+        </div>;
+    }
+}
+
+private RenderFragment RenderWorkScheduleField(PropertyInfo info, object obj, object? value)
+{
+    var schedule = value as SharedKernel.ValueObjects.WorkSchedule ?? new SharedKernel.ValueObjects.WorkSchedule();
+    info.SetValue(obj, schedule);
+
+    return @<text>
+        <div class="smart-form-field" style="margin-bottom: 12px;">
+            <SmartSchedulePicker Schedule="@schedule"
+                                 ScheduleChanged="@((SharedKernel.ValueObjects.WorkSchedule updated) => { info.SetValue(obj, updated); })" />
+        </div>
+    </text>;
+}
+
+
+
+private RenderFragment RenderSimpleField(PropertyInfo info, object obj, object? value, SystemType propertyType)
+{
+    var displayName = GetDisplayName(info);
+    var isRequired = IsRequired(info);
+    var fieldType = GetFieldType(info);
+
+    return propertyType switch
+    {
+        SystemType t when t == typeof(bool) => UseCheckboxForBool ? CreateCheckbox(info, obj) : CreateSwitch(info, obj),
+        SystemType t when t == typeof(string) => CreateTextField<string>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t == typeof(int) || t == typeof(int?) => CreateTextField<int?>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t == typeof(decimal) || t == typeof(decimal?) => CreateTextField<decimal?>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t == typeof(double) || t == typeof(double?) => CreateTextField<double?>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t == typeof(DateTime) || t == typeof(DateTime?) => CreateTextField<DateTime?>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t == typeof(Guid) || t == typeof(Guid?) => CreateTextField<Guid?>(info, obj, displayName, isRequired, fieldType),
+        SystemType t when t.IsEnum => CreateSmartEnum(info, obj, displayName, isRequired, propertyType),
+        _ => CreateTextField<string>(info, obj, displayName, isRequired, fieldType)
+    };
+}
+
+private RenderFragment RenderComplexField(PropertyInfo info, object parentObj, object? value, SystemType propertyType)
+{
+    var displayName = GetDisplayName(info);
+
+    if (value == null)
+    {
+        try
+        {
+            value = Activator.CreateInstance(propertyType);
+            info.SetValue(parentObj, value);
+        }
+        catch
+        {
+            return @<div style="color: gray; padding: 5px;">Cannot create instance of @propertyType.Name</div>;
+        }
+    }
+
+    var childProperties = propertyType.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+        .Where(p => p.CanRead && p.CanWrite && p.GetIndexParameters().Length == 0 && !ExcludeProperties.Contains(p.Name))
+        .ToArray();
+
+    return @<text>
+        <fieldset class="smart-form-fieldset">
+            <legend>@displayName</legend>
+            @foreach (var childProp in childProperties)
+            {
+                if (value != null)
+                {
+                    @RenderField(childProp, value)
+                }
+            }
+        </fieldset>
+    </text>;
+}
+
+private RenderFragment CreateTextField<T>(PropertyInfo property, object parentObj, string displayName, bool isRequired, string fieldType)
+{
+    var canUseTextField = true;
+    T typedValue = default(T)!;
+
+    try
+    {
+        var currentValue = property.GetValue(parentObj);
+        typedValue = currentValue is T val ? val : default(T)!;
+    }
+    catch
+    {
+        canUseTextField = false;
+    }
+
+    return @<text>
+        @if (canUseTextField)
+        {
+            Expression<Func<T>> fallbackExpression = () => typedValue;
+            <TextField T="T"
+                       Label="@displayName"
+                       Type="@fieldType"
+                       Required="@isRequired"
+                       Variant="TextField<T>.TextFieldVariant.Outlined"
+                       Rows="@(fieldType == "textarea" ? GetTextAreaRows(property) : 0)"
+                       Value="@typedValue"
+                       ValueChanged="@((T value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
+                       ValueExpression="@fallbackExpression" />
+        }
+        else
+        {
+            var rawVal = property.GetValue(parentObj)?.ToString() ?? "";
+            <TextField Value="@rawVal"
+                       ValueChanged="@((string valStr) =>
+                       {
+                           if (typeof(T) == typeof(string))
+                           {
+                               property.SetValue(parentObj, valStr);
+                           }
+                           else if (typeof(T) == typeof(int) || typeof(T) == typeof(int?))
+                           {
+                               if (int.TryParse(valStr, out var intVal)) property.SetValue(parentObj, intVal);
+                           }
+                           else if (typeof(T) == typeof(decimal) || typeof(T) == typeof(decimal?))
+                           {
+                               if (decimal.TryParse(valStr, out var decVal)) property.SetValue(parentObj, decVal);
+                           }
+                           StateHasChanged();
+                       })"
+                       ValueExpression="() => rawVal"
+                       Label="@displayName"
+                       Type="@fieldType"
+                       Required="@isRequired"
+                       Variant="TextField<string>.TextFieldVariant.Outlined"
+                       Rows="@(fieldType == "textarea" ? GetTextAreaRows(property) : 0)" />
+        }
+    </text>;
+}
+
+private RenderFragment CreateSwitch(PropertyInfo property, object parentObj)
+{
+    var displayName = GetDisplayName(property);
+    var isRequired = IsRequired(property);
+
+    var canUseSwitch = true;
+    bool boolValue = false;
+
+    try
+    {
+        var currentValue = property.GetValue(parentObj);
+        boolValue = currentValue is bool val && val;
+    }
+    catch
+    {
+        canUseSwitch = false;
+    }
+
+    return @<text>
+        @if (canUseSwitch)
+        {
+            <div class="smart-form-switch-container">
+                <div class="smart-form-switch-label">
+                    @displayName
+                    @if (isRequired)
+                    {
+                        <span class="required"> *</span>
+                    }
+                </div>
+                @{
+                    Expression<Func<bool>> fallbackExpression = () => boolValue;
+                }
+                <Switch Required="@isRequired"
+                        AriaLabel="@displayName"
+                        Icons="true"
+                        Value="@boolValue"
+                        ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
+                        ValueExpression="@fallbackExpression" />
+            </div>
+        }
+        else
+        {
+            <div class="smart-form-field">
+                @{
+                    Expression<Func<bool>> fallbackCheckboxExpression = () => boolValue;
+                }
+                <Checkbox Label="@(isRequired ? $"{displayName} *" : displayName)"
+                          Required="@isRequired"
+                          AriaLabel="@displayName"
+                          Value="@boolValue"
+                          ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
+                          ValueExpression="@fallbackCheckboxExpression" />
+            </div>
+        }
+    </text>;
+}
+
+private RenderFragment CreateCheckbox(PropertyInfo property, object parentObj)
+{
+    var displayName = GetDisplayName(property);
+    var isRequired = IsRequired(property);
+
+    var canUseCheckbox = true;
+    bool boolValue = false;
+
+    try
+    {
+        var currentValue = property.GetValue(parentObj);
+        boolValue = currentValue is bool val && val;
+    }
+    catch
+    {
+        canUseCheckbox = false;
+    }
+
+    return @<text>
+        @if (canUseCheckbox)
+        {
+            <div class="smart-form-checkbox-container">
+                @{
+                    Expression<Func<bool>> fallbackExpression = () => boolValue;
+                }
+                <Checkbox Label="@displayName"
+                          Required="@isRequired"
+                          AriaLabel="@displayName"
+                          Value="@boolValue"
+                          ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
+                          ValueExpression="@fallbackExpression" />
+            </div>
+        }
+        else
+        {
+            <div class="smart-form-error">
+                Error in checkbox '@displayName': Cannot read property value
+            </div>
+        }
+    </text>;
+}
+
+private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, string displayName, bool isRequired, SystemType enumType)
+{
+    var canRender = true;
+    object? currentValue = null;
+    var enumValues = new List<object>();
+    var isFlagsEnum = false;
+    var isLongEnum = false;
+
+    try
+    {
+        currentValue = property.GetValue(parentObj);
+        enumValues = SystemEnum.GetValues(enumType).Cast<object>().ToList();
+        isFlagsEnum = enumType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+
+        var underlyingType = SystemEnum.GetUnderlyingType(enumType);
+        isLongEnum = underlyingType == typeof(long);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error in CreateEnumChip for {enumType.Name}: {ex.Message}");
+        canRender = false;
+    }
+
+    return @<text>
+        @if (canRender)
+        {
+            <div class="smart-form-chip-label">
+                @displayName
+                @if (isRequired)
+                {
+                    <span class="required">*</span>
+                }
+            </div>
+
+            <div class="smart-form-chip-container">
+                @if (isFlagsEnum)
+                {
+                    @foreach (var enumValue in enumValues)
+                    {
+                        bool isSelected;
+                        if (isLongEnum)
+                        {
+                            var enumLong = Convert.ToInt64(enumValue);
+                            var currentLong = Convert.ToInt64(currentValue ?? 0L);
+                            isSelected = (currentLong & enumLong) == enumLong && enumLong != 0;
+                        }
+                        else
+                        {
+                            var enumInt = Convert.ToInt32(enumValue);
+                            var currentInt = Convert.ToInt32(currentValue ?? 0);
+                            isSelected = (currentInt & enumInt) == enumInt && enumInt != 0;
+                        }
+                        <Chip ChipType="ChipType.Filter"
+                              Label="@GetEnumDisplayText(enumValue, enumType)"
+                              Selected="@isSelected"
+                              Removable="@isSelected"
+                              OnClick="@(async (e) =>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                                                                                                                                                                                                                            if (isLongEnum)
+                                                                                                                                                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                var enumLong = Convert.ToInt64(enumValue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                var currentLong = Convert.ToInt64(property.GetValue(parentObj) ?? 0L);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentLong ^ enumLong));
+                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                            else
+                                                                                                                                                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                var enumInt = Convert.ToInt32(enumValue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                var currentInt = Convert.ToInt32(property.GetValue(parentObj) ?? 0);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentInt ^ enumInt));
+                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                            StateHasChanged();
+                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                    }
+                }
+                else
+                {
+                    @foreach (var enumValue in enumValues)
+                    {
+                        var isSelected = currentValue?.Equals(enumValue) == true;
+                        <Chip ChipType="ChipType.Filter"
+                              Label="@GetEnumDisplayText(enumValue, enumType)"
+                              Selected="@isSelected"
+                              OnClick="@(async (e) =>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                                                                                                                                                                                                                            property.SetValue(parentObj, enumValue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                            StateHasChanged();
+                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                    }
+                }
+            </div>
+        }
+        else
+        {
+            <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+                Chip display for '@displayName': Using fallback to Select component due to complex enum structure
+            </div>
+            @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
+        }
+    </text>;
+}
+
+private RenderFragment CreateEnumSelect(PropertyInfo property, object parentObj, string displayName, bool isRequired, SystemType enumType)
+{
+    var canUseSelect = true;
+    object? currentValue = null;
+    var options = new List<Select.SelectOption>();
+
+    try
+    {
+        currentValue = property.GetValue(parentObj);
+        var enumValues = SystemEnum.GetValues(enumType);
+
+        foreach (var enumValue in enumValues)
+        {
+            options.Add(new Select.SelectOption(
+                enumValue.ToString() ?? "",
+                GetEnumDisplayText(enumValue, enumType)
+            ));
+        }
+    }
+    catch
+    {
+        canUseSelect = false;
+    }
+
+    return @<text>
+        @if (canUseSelect)
+        {
+            <Select Label="@displayName"
+                    Required="@isRequired"
+                    Variant="Select.SelectVariant.Outlined"
+                    Options="@options"
+                    Value="@(currentValue?.ToString() ?? "")"
+                    ValueChanged="@((string value) =>
+                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                if (!string.IsNullOrEmpty(value))
+                                                                                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                                                                                    property.SetValue(parentObj, SystemEnum.Parse(enumType, value));
+                                                                                                                                                                                                                                                                                                    StateHasChanged();
+                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                            })" />
+        }
+        else
+        {
+            var selectOptions = SystemEnum.GetValues(enumType)
+                .Cast<object>()
+                .Select(v => new Select.SelectOption { Value = v.ToString() ?? "", Text = GetEnumDisplayText(v, enumType) })
+                .ToList();
+            var currentValStr = currentValue?.ToString() ?? "";
+
+            <div class="smart-form-field">
+                <Select Variant="Select.SelectVariant.Outlined"
+                        Label="@(isRequired ? $"{displayName} *" : displayName)"
+                        Value="@currentValStr"
+                        ValueChanged="@((string val) =>
+                        {
+                            if (!string.IsNullOrEmpty(val))
+                            {
+                                property.SetValue(parentObj, SystemEnum.Parse(enumType, val));
+                                StateHasChanged();
+                            }
+                        })"
+                        ValueExpression="() => currentValStr"
+                        Options="@selectOptions"
+                        style="width: 100%;" />
+            </div>
+        }
+    </text>;
+}
+
+private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj, string displayName, bool isRequired, SystemType enumType)
+{
+    var canRender = true;
+    object? currentValue = null;
+    var enumValues = new List<object>();
+    var isFlagsEnum = false;
+    var isLongEnum = false;
+
+    try
+    {
+        currentValue = property.GetValue(parentObj);
+        enumValues = SystemEnum.GetValues(enumType).Cast<object>().ToList();
+        isFlagsEnum = enumType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+
+        var underlyingType = SystemEnum.GetUnderlyingType(enumType);
+        isLongEnum = underlyingType == typeof(long);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error in CreateEnumChipSet for {enumType.Name}: {ex.Message}");
+        canRender = false;
+    }
+
+    return @<text>
+        @if (canRender)
+        {
+            <div class="smart-form-chip-label">
+                @displayName
+                @if (isRequired)
+                {
+                    <span class="required">*</span>
+                }
+            </div>
+
+            <ChipSet>
+                @if (isFlagsEnum)
+                {
+                    @foreach (var enumValue in enumValues)
+                    {
+                        bool isSelected;
+                        if (isLongEnum)
+                        {
+                            var enumLong = Convert.ToInt64(enumValue);
+                            var currentLong = Convert.ToInt64(currentValue ?? 0L);
+                            isSelected = (currentLong & enumLong) == enumLong && enumLong != 0;
+                        }
+                        else
+                        {
+                            var enumInt = Convert.ToInt32(enumValue);
+                            var currentInt = Convert.ToInt32(currentValue ?? 0);
+                            isSelected = (currentInt & enumInt) == enumInt && enumInt != 0;
+                        }
+                        <Chip ChipType="ChipType.Filter"
+                              Label="@GetEnumDisplayText(enumValue, enumType)"
+                              Selected="@isSelected"
+                              Removable="@isSelected"
+                              OnClick="@(async (e) =>
+                                                                                                                        {
+                                                                                                                            if (isLongEnum)
+                                                                                                                            {
+                                                                                                                                var enumLong = Convert.ToInt64(enumValue);
+                                                                                                                                var currentLong = Convert.ToInt64(property.GetValue(parentObj) ?? 0L);
+                                                                                                                                property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentLong ^ enumLong));
+                                                                                                                            }
+                                                                                                                            else
+                                                                                                                            {
+                                                                                                                                var enumInt = Convert.ToInt32(enumValue);
+                                                                                                                                var currentInt = Convert.ToInt32(property.GetValue(parentObj) ?? 0);
+                                                                                                                                property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentInt ^ enumInt));
+                                                                                                                            }
+                                                                                                                            StateHasChanged();
+                                                                                                                        })" />
+                    }
+                }
+                else
+                {
+                    @foreach (var enumValue in enumValues)
+                    {
+                        var isSelected = currentValue?.Equals(enumValue) == true;
+                        <Chip ChipType="ChipType.Filter"
+                              Label="@GetEnumDisplayText(enumValue, enumType)"
+                              Selected="@isSelected"
+                              OnClick="@(async (e) =>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                                                                                                                                                                                                                            property.SetValue(parentObj, enumValue);
+                                                                                                                                                                                                                                                                                                                                                                                                                                            StateHasChanged();
+                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                    }
+                }
+            </ChipSet>
+        }
+        else
+        {
+            <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+                Chip display for '@displayName': Using fallback to Select component due to complex enum structure
+            </div>
+            @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
+        }
+    </text>;
+}
+
+private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object parentObj, string displayName, bool isRequired, SystemType enumType)
+{
+    // Проверяем, что тип действительно enum
+    if (!enumType.IsEnum)
+    {
+        return @<div class="smart-form-error">Error: @displayName is not an enum type</div>;
+    }
+
+    return @<text>
+        @{
+            try
+            {
+                // Динамически создаем закрытый тип компонента
+                var smartCheckboxType = typeof(SmartCheckbox<>).MakeGenericType(enumType);
+
+                // Собираем базовые параметры
+                var parameters = new Dictionary<string, object>
+                    {
+                        { "GroupTitle", displayName },
+                        { "IsRequired", isRequired },
+                        { "UseVerticalLayout", true },
+                        { "ContainerClass", "smart-form-smartcheckbox" }
+                    };
+
+                var currentValue = property.GetValue(parentObj);
+                var isFlagsEnum = enumType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+
+                if (isFlagsEnum)
+                {
+                    // Настройка для Flags Enum
+                    parameters.Add("SelectedValue", currentValue!);
+                    parameters.Add("OnValueChanged", EventCallback.Factory.Create(this, (object newValue) =>
+                    {
+                        property.SetValue(parentObj, newValue);
+                        StateHasChanged();
+                    }));
+                }
+                else
+                {
+                    // Настройка для обычного Enum
+                    if (currentValue != null)
+                    {
+                        parameters.Add("SelectedValues", new[] { currentValue });
+                    }
+
+                    parameters.Add("OnValuesChanged", EventCallback.Factory.Create(this, (System.Collections.IEnumerable selectedValues) =>
+                    {
+                        var enumerable = selectedValues.Cast<object>();
+                        var firstValue = enumerable.FirstOrDefault();
+                        if (firstValue != null)
+                        {
+                            property.SetValue(parentObj, firstValue);
+                            StateHasChanged();
+                        }
+                    }));
+                }
+
+                // Рендерим компонент через декларативный DynamicComponent
+                <DynamicComponent Type="@smartCheckboxType" Parameters="@parameters" />
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in CreateEnumSmartCheckbox for {enumType.Name}: {ex.Message}");
+
+                <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+                    SmartCheckbox for '@displayName': Using fallback to Select component due to complex enum structure
+                </div>
+
+                @* Вызываем метод-fallback напрямую как RenderFragment *@
+                @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
+            }
+        }
+    </text>;
+}
+
+    private RenderFragment RenderAddressField(PropertyInfo info, object parentObj, object? value, SystemType propertyType)
+    {
+        if (value == null)
+        {
+            try
+            {
+                value = Activator.CreateInstance(propertyType);
+                info.SetValue(parentObj, value);
+            }
+            catch
+            {
+                return @<div style="color: gray; padding: 5px;">Cannot create instance of @propertyType.Name</div>;
+            }
+        }
+
+        var parentTypeName = typeof(TItem).Name.ToLowerInvariant();
+
+        var localValue = value; // Avoid capture issues
+        var displayName = GetDisplayName(info);
+
+        var pointPickerType = SystemType.GetType("Map.Components.PointPicker, Map");
+        if (pointPickerType != null)
+        {
+            var parameters = new Dictionary<string, object?>
+            {
+                { "Address", localValue },
+                { "AddressChanged", EventCallback.Factory.Create<object?>(this, (object? val) => { info.SetValue(parentObj, val); StateHasChanged(); }) }
+            };
+            return @<text>
+                <fieldset class="smart-form-fieldset">
+                    <legend>@displayName</legend>
+                    <DynamicComponent Type="@pointPickerType" Parameters="@parameters" />
+                </fieldset>
+            </text>;
+        }
+
+        return RenderComplexField(info, parentObj, value, propertyType);
+    }
+
+    private RenderFragment RenderZoneField(PropertyInfo info, object parentObj, object? value)
+    {
+        var propertyType = Nullable.GetUnderlyingType(info.PropertyType) ?? info.PropertyType;
+
+        if (value == null)
+        {
+            try
+            {
+                value = Activator.CreateInstance(propertyType);
+                info.SetValue(parentObj, value);
+            }
+            catch {}
+        }
+
+        var isCollection = typeof(System.Collections.IList).IsAssignableFrom(propertyType);
+        var localValue = value;
+
+        var zonePickerType = SystemType.GetType("Map.Components.ZonePicker, Map");
+        if (zonePickerType != null)
+        {
+            var parameters = new Dictionary<string, object?>
+            {
+                { "Zone", localValue },
+                { "ZoneChanged", EventCallback.Factory.Create<object?>(this, (object? val) => {
+                    try
+                    {
+                        if (isCollection)
+                        {
+                            var listProp = info.GetValue(parentObj) as System.Collections.IList;
+                            if (listProp == null)
+                            {
+                                listProp = Activator.CreateInstance(propertyType) as System.Collections.IList;
+                                info.SetValue(parentObj, listProp);
+                            }
+
+                            if (listProp != null)
+                            {
+                                if (val != null && !ReferenceEquals(listProp, val))
+                                {
+                                    listProp.Clear();
+                                    if (val is System.Collections.IEnumerable enumVal && val is not string)
+                                    {
+                                        foreach (var item in enumVal)
+                                        {
+                                            if (item != null) listProp.Add(item);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        listProp.Add(val);
+                                    }
+                                }
+                                else if (val == null)
+                                {
+                                    listProp.Clear();
+                                }
+                            }
+
+                            var singleZoneProp = parentObj.GetType().GetProperty("Zone");
+                            if (singleZoneProp != null && listProp != null)
+                            {
+                                try
+                                {
+                                    var firstItem = listProp.Count > 0 ? listProp[0] : null;
+                                    if (firstItem != null)
+                                    {
+                                        if (firstItem is SharedKernel.ValueObjects.Zone vZone)
+                                        {
+                                            singleZoneProp.SetValue(parentObj, (SharedKernel.Protos.ZoneDto)vZone);
+                                        }
+                                        else
+                                        {
+                                            singleZoneProp.SetValue(parentObj, firstItem);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        singleZoneProp.SetValue(parentObj, null);
+                                    }
+                                }
+                                catch {}
+                            }
+                        }
+                        else
+                        {
+                            object? singleZone = val;
+                            if (val is System.Collections.IList listVal)
+                            {
+                                singleZone = listVal.Count > 0 ? listVal[0] : null;
+                            }
+
+                            info.SetValue(parentObj, singleZone);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"[SmartForm] ZoneChanged error for '{info.Name}': {ex.Message}");
+                    }
+                    StateHasChanged();
+                }) }
+            };
+
+            return @<text>
+                <DynamicComponent Type="@zonePickerType" Parameters="@parameters" />
+            </text>;
+        }
+
+        return RenderComplexField(info, parentObj, value, propertyType);
+    }
+
+    private RenderFragment RenderImageUploadField(PropertyInfo info, object parentObj)
+    {
+        var existingImages = info.GetValue(parentObj) as System.Collections.IList;
+        var newContent = newImagesContentProperty?.GetValue(parentObj) as System.Collections.IList;
+        var newFileNames = newImagesFileNameProperty?.GetValue(parentObj) as System.Collections.IList;
+        var newContentTypes = newImagesContentTypeProperty?.GetValue(parentObj) as System.Collections.IList;
+
+        return @<text>
+            <Material.Web.Components.FilePicker 
+                ExistingImages="@existingImages"
+                NewImagesContent="@newContent"
+                NewImagesFileName="@newFileNames"
+                NewImagesContentType="@newContentTypes"
+                Label="@GetDisplayName(info)"
+                ImageUrlResolver="@ResolveImageUrl" />
+        </text>;
+    }
+
+    private string ResolveImageUrl(string image)
+    {
+        if (ImageUrlResolver != null)
+        {
+            return ImageUrlResolver(image);
+        }
+        
+        var typeName = typeof(TItem).Name.ToLower();
+        if (typeName.Contains("organization") || typeName.Contains("org"))
+        {
+            return BuildDefaultImageUrl(image, "org");
+        }
+        else if (typeName.Contains("product"))
+        {
+            return BuildDefaultImageUrl(image, "product");
+        }
+        else if (typeName.Contains("profile") || typeName.Contains("user"))
+        {
+            return BuildDefaultImageUrl(image, "profile");
+        }
+        
+        return BuildDefaultImageUrl(image, "general");
+    }
+
+    [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "Dynamic reflection lookup for FileHelper is preserved for AOT UI fallback")]
+    private string BuildDefaultImageUrl(string image, string category)
+    {
+        var fileHelperType = typeof(TItem).Assembly.GetType("Core.Shared.Helpers.FileHelper") ?? 
+                             AppDomain.CurrentDomain.GetAssemblies()
+                                .SelectMany(a => {
+                                    try { return a.GetTypes(); } catch { return System.Type.EmptyTypes; }
+                                })
+                                .FirstOrDefault(t => t.FullName == "Core.Shared.Helpers.FileHelper");
+
+        if (fileHelperType != null)
+        {
+            var minIoUrlProp = fileHelperType.GetProperty("MinIOUrl", BindingFlags.Public | BindingFlags.Static);
+            var minIoUrl = minIoUrlProp?.GetValue(null)?.ToString();
+            if (!string.IsNullOrEmpty(minIoUrl))
+            {
+                if (string.IsNullOrWhiteSpace(image))
+                {
+                    return $"{minIoUrl}/img/{category}/default.png";
+                }
+                if (Uri.TryCreate(image, UriKind.Absolute, out _))
+                {
+                    return image;
+                }
+                var normalized = image.TrimStart('/');
+                if (normalized.StartsWith("img/", StringComparison.OrdinalIgnoreCase))
+                {
+                    return $"{minIoUrl}/{normalized}";
+                }
+                if (normalized.Contains('/'))
+                {
+                    return $"{minIoUrl}/img/{normalized}";
+                }
+                return $"{minIoUrl}/img/{category}/{normalized}";
+            }
+        }
+        
+        return image;
+    }
+
+    private RenderFragment RenderFilePickerField(PropertyInfo info, object parentObj)
+    {
+        var attachments = info.GetValue(parentObj) as System.Collections.IList;
+
+        return @<text>
+            <Material.Web.Components.FilePicker 
+                Attachments="@attachments"
+                Label="@GetDisplayName(info)"
+                ImageUrlResolver="@ResolveImageUrl" />
+        </text>;
+    }
+
+    private RenderFragment CreateSmartEnum(PropertyInfo property, object parentObj, string displayName, bool isRequired, SystemType enumType)
+    {
+        if (!enumType.IsEnum)
+        {
+            return @<div class="smart-form-error">Error: @displayName is not an enum type</div>;
+        }
+
+        return @<text>
+            @{
+                try
+                {
+                    var smartEnumType = typeof(SmartEnum<>).MakeGenericType(enumType);
+                    var currentValue = property.GetValue(parentObj);
+                    if (currentValue == null)
+                    {
+                        currentValue = Activator.CreateInstance(enumType);
+                    }
+
+                    var displayType = SmartEnumDisplayType.Auto;
+                    if (UseSmartCheckboxForEnum)
+                    {
+                        var isFlagsEnum = enumType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+                        displayType = isFlagsEnum ? SmartEnumDisplayType.Checkboxes : SmartEnumDisplayType.Radio;
+                    }
+                    else if (UseChipSetForEnum || UseChipsForEnum)
+                    {
+                        displayType = SmartEnumDisplayType.Chips;
+                    }
+
+                    var helperMethod = typeof(EnumCallbackHelper).GetMethod(nameof(EnumCallbackHelper.CreateCallback)).MakeGenericMethod(enumType);
+                    var callback = helperMethod.Invoke(null, new object[] { this, property, parentObj, new Action(StateHasChanged) });
+
+                    var expressionMethod = typeof(EnumCallbackHelper).GetMethod(nameof(EnumCallbackHelper.CreateExpression)).MakeGenericMethod(enumType);
+                    var valueExpression = expressionMethod.Invoke(null, new object[] { property, parentObj });
+
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "Label", displayName },
+                        { "Required", isRequired },
+                        { "DisplayType", displayType },
+                        { "Value", currentValue! },
+                        { "ValueChanged", callback! },
+                        { "ValueExpression", valueExpression! }
+                    };
+
+                    <DynamicComponent Type="@smartEnumType" Parameters="@parameters" />
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error in CreateSmartEnum for {enumType.Name}: {ex.Message}");
+                    <div class="smart-form-error" style="color: red; padding: 8px;">Error rendering enum selector for @displayName</div>
+                }
+            }
+        </text>;
+    }
+
+    private static class EnumCallbackHelper
+    {
+        public static object CreateCallback<TEnum>(object receiver, PropertyInfo property, object parentObj, Action stateHasChanged) where TEnum : struct, Enum
+        {
+            return EventCallback.Factory.Create<TEnum>(receiver, new Action<TEnum>((TEnum value) =>
+            {
+                property.SetValue(parentObj, value);
+                stateHasChanged();
+            }));
+        }
+
+        public static System.Linq.Expressions.Expression<Func<TEnum>> CreateExpression<TEnum>(PropertyInfo property, object parentObj)
+        {
+            var constantExpr = System.Linq.Expressions.Expression.Constant(parentObj);
+            var memberExpr = System.Linq.Expressions.Expression.Property(constantExpr, property);
+            return System.Linq.Expressions.Expression.Lambda<Func<TEnum>>(memberExpr);
+        }
+    }
+}

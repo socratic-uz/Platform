@@ -1,0 +1,57 @@
+@inherits ComponentBase
+
+@if (!string.IsNullOrEmpty(Label))
+{
+    <label style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; align-items: center; gap: 8px; cursor: pointer;">
+        <md-radio checked="@ComputedChecked"
+                  value="@(OptionValue ?? Value)"
+                  name="@Name"
+                  disabled="@Disabled"
+                  @attributes="AdditionalAttributes"
+                  @onchange="HandleChange"></md-radio>
+        @Label
+    </label>
+}
+else
+{
+    <md-radio checked="@ComputedChecked"
+              value="@(OptionValue ?? Value)"
+              name="@Name"
+              disabled="@Disabled"
+              @attributes="AdditionalAttributes"
+              @onchange="HandleChange"></md-radio>
+}
+
+@code {
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public string? Value { get; set; }
+    [Parameter] public EventCallback<string> ValueChanged { get; set; }
+    [Parameter] public string? OptionValue { get; set; }
+    [Parameter] public bool? Checked { get; set; }
+    [Parameter] public EventCallback<bool> CheckedChanged { get; set; }
+    [Parameter] public EventCallback OnChange { get; set; }
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private bool ComputedChecked => Checked.HasValue 
+        ? Checked.Value 
+        : (!string.IsNullOrEmpty(Value) && !string.IsNullOrEmpty(OptionValue) && Value == OptionValue);
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        var isChecked = e.Value is bool b ? b : (e.Value?.ToString() == "true" || e.Value?.ToString() == "on");
+        if (Checked.HasValue)
+        {
+            await CheckedChanged.InvokeAsync(isChecked);
+        }
+
+        var val = OptionValue ?? Value ?? e.Value?.ToString() ?? "";
+        await ValueChanged.InvokeAsync(val);
+
+        if (OnChange.HasDelegate)
+        {
+            await OnChange.InvokeAsync();
+        }
+    }
+}

@@ -1,0 +1,246 @@
+@namespace Smart.Web.Components
+@using System.Reflection
+@using System.ComponentModel
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
+@typeparam TEnum where TEnum : struct, Enum
+@inherits InputBase<TEnum>
+@attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "SmartEnum generic instantiations use preserved enum types")]
+
+
+<div class="smart-enum-container" style="display: grid; gap: 8px;">
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <div class="smart-enum-label" style="font-weight: 500; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">
+            @Label
+            @if (Required)
+            {
+                <span style="color: red;"> *</span>
+            }
+        </div>
+    }
+
+    @switch (ResolvedDisplayType)
+    {
+        case SmartEnumDisplayType.Dropdown:
+            <Select Required="@Required"
+                    Disabled="@Disabled"
+                    Variant="Select.SelectVariant.Outlined"
+                    Options="@GetSelectOptions()"
+                    Value="@(CurrentValue.ToString())"
+                    ValueChanged="@HandleDropdownChange" />
+            break;
+
+        case SmartEnumDisplayType.Segmented:
+            <SegmentedButtonSet style="width: 100%;">
+                @foreach (var val in EnumValues)
+                {
+                    var isSelected = IsSelected(val);
+                    <SegmentedButton Label="@GetEnumText(val)"
+                                     Selected="@isSelected"
+                                     Disabled="@Disabled"
+                                     OnClick="@(() => HandleSelect(val))" />
+                }
+            </SegmentedButtonSet>
+            break;
+
+        case SmartEnumDisplayType.Chips:
+            <ChipSet>
+                @foreach (var val in EnumValues)
+                {
+                    var isSelected = IsSelected(val);
+                    <Chip ChipType="ChipType.Filter"
+                          Label="@GetEnumText(val)"
+                          Selected="@isSelected"
+                          Disabled="@Disabled"
+                          OnClick="@(() => ToggleValue(val))" />
+                }
+            </ChipSet>
+            break;
+
+        case SmartEnumDisplayType.Checkboxes:
+            <div style="display: grid; gap: 8px; padding-left: 4px;">
+                @foreach (var val in EnumValues)
+                {
+                    var isSelected = IsSelected(val);
+                    <Checkbox Value="@isSelected"
+                              ValueChanged="@((bool check) => HandleCheckboxToggle(val, check))"
+                              Disabled="@Disabled"
+                              Label="@GetEnumText(val)" />
+                }
+            </div>
+            break;
+
+        case SmartEnumDisplayType.Radio:
+            <div style="display: grid; gap: 8px; padding-left: 4px;">
+                @foreach (var val in EnumValues)
+                {
+                    var isSelected = IsSelected(val);
+                    <Radio Value="@(val.ToString())"
+                           ValueChanged="@((string selectedVal) => HandleRadioSelect(val, selectedVal))"
+                           Label="@GetEnumText(val)"
+                           Disabled="@Disabled" />
+                }
+            </div>
+            break;
+    }
+</div>
+
+@code {
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public SmartEnumDisplayType DisplayType { get; set; } = SmartEnumDisplayType.Auto;
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public bool Required { get; set; } = false;
+
+    private static readonly TEnum[] EnumValues = Enum.GetValues<TEnum>();
+    private static readonly bool IsFlagsEnum = typeof(TEnum).GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+
+    private SmartEnumDisplayType ResolvedDisplayType
+    {
+        get
+        {
+            if (IsFlagsEnum)
+            {
+                // Для Flags-энумов (множественный выбор) допустимы только Checkboxes или Chips.
+                if (DisplayType == SmartEnumDisplayType.Chips)
+                    return SmartEnumDisplayType.Chips;
+
+                return SmartEnumDisplayType.Checkboxes;
+            }
+            else
+            {
+                // Для обычных энумов (одиночный выбор) допустимы только Radio, Segmented, Dropdown, Chips.
+                // Если разработчик передал Checkboxes, корректируем на семантически корректный Radio.
+                if (DisplayType == SmartEnumDisplayType.Checkboxes)
+                    return SmartEnumDisplayType.Radio;
+
+                if (DisplayType != SmartEnumDisplayType.Auto)
+                    return DisplayType;
+
+                return EnumValues.Length <= 5 ? SmartEnumDisplayType.Segmented : SmartEnumDisplayType.Dropdown;
+            }
+        }
+    }
+
+    private static readonly System.Collections.Concurrent.ConcurrentDictionary<TEnum, string> EnumTextCache = new();
+
+    private string GetEnumText(TEnum val)
+    {
+        return EnumTextCache.GetOrAdd(val, v =>
+        {
+            var memberInfo = typeof(TEnum).GetMember(v.ToString() ?? "").FirstOrDefault();
+            if (memberInfo != null)
+            {
+                var display = memberInfo.GetCustomAttribute<DisplayAttribute>();
+                if (display?.Name != null) return display.Name;
+
+                var desc = memberInfo.GetCustomAttribute<DescriptionAttribute>();
+                if (desc?.Description != null) return desc.Description;
+            }
+            return v.ToString();
+        });
+    }
+
+    private bool IsSelected(TEnum val)
+    {
+        if (IsFlagsEnum)
+        {
+            var currentVal = Convert.ToInt64(CurrentValue);
+            var targetVal = Convert.ToInt64(val);
+            if (targetVal == 0) return currentVal == 0;
+            return (currentVal & targetVal) == targetVal;
+        }
+        return val.Equals(CurrentValue);
+    }
+
+    private async Task HandleSelect(TEnum val)
+    {
+        if (Disabled) return;
+        CurrentValue = val;
+        await Task.CompletedTask;
+    }
+
+    private async Task ToggleValue(TEnum val)
+    {
+        if (Disabled) return;
+
+        if (IsFlagsEnum)
+        {
+            var currentVal = Convert.ToInt64(CurrentValue);
+            var targetVal = Convert.ToInt64(val);
+            long newVal;
+            if (targetVal == 0)
+            {
+                newVal = 0;
+            }
+            else
+            {
+                newVal = currentVal ^ targetVal;
+            }
+            CurrentValue = (TEnum)Enum.ToObject(typeof(TEnum), newVal);
+        }
+        else
+        {
+            CurrentValue = val;
+        }
+        await Task.CompletedTask;
+    }
+
+    private async Task HandleCheckboxToggle(TEnum val, bool checkedState)
+    {
+        if (Disabled) return;
+
+        var currentVal = Convert.ToInt64(CurrentValue);
+        var targetVal = Convert.ToInt64(val);
+        long newVal;
+        if (checkedState)
+        {
+            newVal = currentVal | targetVal;
+        }
+        else
+        {
+            newVal = currentVal & ~targetVal;
+        }
+        CurrentValue = (TEnum)Enum.ToObject(typeof(TEnum), newVal);
+        await Task.CompletedTask;
+    }
+
+    private List<Select.SelectOption> GetSelectOptions()
+    {
+        var options = new List<Select.SelectOption>();
+        foreach (var val in EnumValues)
+        {
+            options.Add(new Select.SelectOption(val.ToString(), GetEnumText(val)));
+        }
+        return options;
+    }
+
+    private async Task HandleDropdownChange(string value)
+    {
+        if (Disabled) return;
+
+        if (Enum.TryParse<TEnum>(value, out var parsed))
+        {
+            CurrentValue = parsed;
+        }
+        await Task.CompletedTask;
+    }
+
+    private async Task HandleRadioSelect(TEnum val, string selectedVal)
+    {
+        if (Disabled) return;
+        CurrentValue = val;
+        await Task.CompletedTask;
+    }
+
+    protected override bool TryParseValueFromString(string? value, out TEnum result, out string? validationErrorMessage)
+    {
+        if (Enum.TryParse<TEnum>(value, out result))
+        {
+            validationErrorMessage = null;
+            return true;
+        }
+        validationErrorMessage = "Invalid enum value";
+        return false;
+    }
+}

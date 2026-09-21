@@ -1,0 +1,14 @@
+@namespace Material.Web.Components.Labs
+
+<md-badge value="@Value"
+          aria-label="@AriaLabel"
+          @attributes="AdditionalAttributes">
+    @ChildContent
+</md-badge>
+
+@code {
+    [Parameter] public string? Value { get; set; }
+    [Parameter] public string? AriaLabel { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+}

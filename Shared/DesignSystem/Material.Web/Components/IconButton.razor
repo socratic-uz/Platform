@@ -1,0 +1,69 @@
+@using Microsoft.AspNetCore.Components.Web
+
+@switch (Variant)
+{
+    case IconButtonVariant.Filled:
+        <md-filled-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+            @if (!string.IsNullOrEmpty(Icon))
+            {
+                <md-icon>@Icon</md-icon>
+            }
+            @ChildContent
+        </md-filled-icon-button>
+        break;
+    case IconButtonVariant.FilledTonal:
+        <md-filled-tonal-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+            @if (!string.IsNullOrEmpty(Icon))
+            {
+                <md-icon>@Icon</md-icon>
+            }
+            @ChildContent
+        </md-filled-tonal-icon-button>
+        break;
+    case IconButtonVariant.Outlined:
+        <md-outlined-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+            @if (!string.IsNullOrEmpty(Icon))
+            {
+                <md-icon>@Icon</md-icon>
+            }
+            @ChildContent
+        </md-outlined-icon-button>
+        break;
+    case IconButtonVariant.Standard:
+    default:
+        <md-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+            @if (!string.IsNullOrEmpty(Icon))
+            {
+                <md-icon>@Icon</md-icon>
+            }
+            @ChildContent
+        </md-icon-button>
+        break;
+}
+
+@code {
+    [Parameter] public IconButtonVariant Variant { get; set; } = IconButtonVariant.Standard;
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public string? Href { get; set; }
+    [Parameter] public string? Target { get; set; }
+    [Parameter] public string? Type { get; set; }
+    [Parameter] public string? AriaLabel { get; set; }
+    [Parameter] public bool Toggle { get; set; } = false;
+    [Parameter] public bool Selected { get; set; } = false;
+    [Parameter] public EventCallback<bool> SelectedChanged { get; set; }
+    [Parameter] public string? Icon { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private async Task HandleClick(MouseEventArgs e)
+    {
+        if (Disabled) return;
+        if (Toggle)
+        {
+            Selected = !Selected;
+            await SelectedChanged.InvokeAsync(Selected);
+        }
+        await OnClick.InvokeAsync(e);
+    }
+}

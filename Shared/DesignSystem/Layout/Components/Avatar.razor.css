@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.avatar-container {
+    display: inline-grid;
+    place-items: center;
+    position: relative;
+}
+
+/* ─── Кнопка Аватара ─────────────────────────────────────────── */
+.avatar-container ::deep md-outlined-button.avatar-button,
+.avatar-container ::deep .avatar-button,
+::deep md-outlined-button.avatar-button,
+::deep .avatar-button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 !important;
+    --md-outlined-button-container-shape: 9999px;
+    --md-outlined-button-container-height: 48px;
+    --md-outlined-button-leading-space: 0px;
+    --md-outlined-button-trailing-space: 0px;
+    --md-outlined-button-with-leading-icon-leading-space: 0px;
+    --md-outlined-button-with-leading-icon-trailing-space: 0px;
+    --md-outlined-button-icon-size: 24px;
+    --md-outlined-button-outline-width: 1.5px;
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-container ::deep md-outlined-button.avatar-button img,
+.avatar-container ::deep .avatar-button img,
+::deep md-outlined-button.avatar-button img,
+::deep .avatar-button img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.avatar-container ::deep md-outlined-button.avatar-button md-icon,
+.avatar-container ::deep .avatar-button md-icon,
+.avatar-container ::deep .avatar-button .material-symbols-outlined,
+::deep md-outlined-button.avatar-button md-icon,
+::deep .avatar-button md-icon,
+::deep .avatar-button .material-symbols-outlined {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
+    display: grid !important;
+    place-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.avatar-container ::deep svg *,
+::deep svg * {
+    fill: var(--md-sys-color-on-primary-container);
+}
+
+/* ─── Диалог Профиля и Биометрии (Material 3 md-dialog) ────────── */
+.avatar-container ::deep md-dialog:not(:defined),
+::deep md-dialog:not(:defined) {
+    display: none !important;
+}
+
+.avatar-container ::deep md-dialog.contacts,
+.avatar-container ::deep md-dialog.faceid-profile-modal,
+.avatar-container ::deep md-dialog,
+::deep md-dialog.contacts,
+::deep md-dialog.faceid-profile-modal,
+::deep md-dialog {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100vh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: 28px;
+}
+
+/* Стили слотов и дочерних компонентов с поддержкой Blazor CSS isolation (::deep) */
+.avatar-container ::deep [slot='headline'],
+::deep [slot='headline'] {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 24px 16px 24px;
+}
+
+.avatar-container ::deep .headline,
+::deep .headline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.avatar-container ::deep form.content,
+::deep form.content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container ::deep .row,
+::deep .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 8px;
+}
+
+.avatar-container ::deep md-list,
+::deep md-list {
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container);
+    width: 100%;
+}
+
+.avatar-container ::deep label,
+::deep label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.avatar-container ::deep [slot='actions'],
+::deep [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px 24px 24px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container ::deep details,
+::deep details {
+    width: 100%;
+}
+
+.avatar-container ::deep details summary,
+::deep details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.avatar-container ::deep details summary::-webkit-details-marker,
+::deep details summary::-webkit-details-marker {
+    display: none;
+}
+
+.avatar-container ::deep details summary md-list-item,
+::deep details summary md-list-item {
+    cursor: pointer;
+}
+
+.avatar-container ::deep details .content,
+::deep details .content {
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container ::deep md-outlined-text-field,
+.avatar-container ::deep .material-text-field,
+::deep md-outlined-text-field,
+::deep .material-text-field {
+    width: 100%;
+}

@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<RootNamespace>Web.UI</RootNamespace>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<WasmEnableSIMD>false</WasmEnableSIMD>
+
+		<ContainerUser>root</ContainerUser>
+		<UserSecretsId>Socratic</UserSecretsId>
+		<LangVersion>preview</LangVersion>
+		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+		<AttachWeakETagToCompressedAssetsDuringDevelopment>true</AttachWeakETagToCompressedAssetsDuringDevelopment>
+
+		<!-- Отключаем инвариантную глобализацию для правильной работы локализации -->
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<EnableRequestDelegateGenerator>true</EnableRequestDelegateGenerator>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Задаем переменные окружения контейнера для загрузки нативных библиотек -->
+		<ContainerEnvironmentVariable Include="LD_LIBRARY_PATH" Value="/app" />
+	</ItemGroup>
+
+	<Target Name="BundleMermaid" BeforeTargets="Build" Condition="'$(BundleMermaidAssets)' == 'true' and Exists('node_modules')">
+		<Exec Command="npm exec -- rollup -c rollup.config.js" ContinueOnError="true" />
+		<Copy SourceFiles="node_modules/mermaid/dist/mermaid.js" DestinationFolder="..\Markdown\wwwroot\lib" SkipUnchangedFiles="true" ContinueOnError="true" />
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
+		<!-- #region AI-->
+		<PackageReference Include="Aspire.Azure.AI.OpenAI" />
+		<PackageReference Include="Microsoft.Extensions.AI.OpenAI" />
+		<PackageReference Include="Microsoft.SemanticKernel.Core" />
+		<PackageReference Include="PdfPig" />
+		<PackageReference Include="Aspire.Qdrant.Client" />
+		<PackageReference Include="Microsoft.SemanticKernel.Connectors.Qdrant" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" />
+		<!-- #endregion -->
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="../Web.UI.Client/Web.UI.Client.csproj" />
+
+		<!-- Unified Shared App Layer (aggregating Shell, all Features, Hardware, Domain, and Infrastructure) -->
+		<ProjectReference Include="$(Shared)" Condition="'$(Shared)' != '' and Exists('$(Shared)')" ReferenceOutputAssembly="true" />
+		<ProjectReference Include="../../Shared/Shared/Shared.csproj" Condition="('$(Shared)' == '' or !Exists('$(Shared)')) and Exists('../../Shared/Shared/Shared.csproj')" ReferenceOutputAssembly="true" />
+
+		<ProjectReference Include="$(ServiceDefaults)" Condition="'$(ServiceDefaults)' != '' and Exists('$(ServiceDefaults)')" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="../../../../../docs/**/*.md" Condition="Exists('../../../../../docs')" Link="wwwroot/_docs/%(RecursiveDir)%(Filename)%(Extension)" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="../../../../../README.md" Condition="Exists('../../../../../README.md')" Link="wwwroot/_docs/ROOT_README.md" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="libgomp.so.1" Condition="Exists('libgomp.so.1')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="libgomp.so.1.0.0" Condition="Exists('libgomp.so.1.0.0')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="runtimes/**/libgomp.so.1*" Condition="Exists('runtimes')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(HasFeatureChat)' != 'true' or '$(HasMarkdown)' != 'true'">
+		<Compile Remove="Components\Pages\ComponentsShowcase.razor*" />
+		<Content Remove="Components\Pages\ComponentsShowcase.razor*" />
+		<None Remove="Components\Pages\ComponentsShowcase.razor*" />
+	</ItemGroup>
+	
+</Project>
+<!--CI/CD Trigger * -->

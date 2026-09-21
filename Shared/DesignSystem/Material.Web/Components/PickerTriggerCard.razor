@@ -1,0 +1,112 @@
+@namespace Material.Web.Components
+@using Microsoft.AspNetCore.Components.Web
+
+<div class="picker-trigger-card @(Disabled ? "disabled" : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
+    <div class="picker-trigger-left">
+        <!-- Icon Badge (44x44px, R12) -->
+        <div class="picker-icon-badge @(HasValue ? "active" : "")">
+            @if (CustomIconBadge != null)
+            {
+                @CustomIconBadge
+            }
+            else
+            {
+                <Icon Name="@(HasValue ? (ActiveIcon ?? Icon) : Icon)" />
+            }
+        </div>
+
+        <!-- Text & Preview Area -->
+        <div class="picker-trigger-text">
+            <div class="picker-header-row">
+                <span class="picker-trigger-title">@Label</span>
+                @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
+                {
+                    <span class="picker-badge">
+                        @if (!string.IsNullOrEmpty(BadgeIcon))
+                        {
+                            <Icon Name="@BadgeIcon" />
+                        }
+                        @BadgeText
+                    </span>
+                }
+            </div>
+            <div class="picker-preview-text" title="@PreviewText">
+                @PreviewText
+            </div>
+            @if (CustomPreview != null)
+            {
+                <div class="picker-custom-preview">
+                    @CustomPreview
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Actions Panel -->
+    <div class="picker-trigger-actions">
+        @if (CustomActions != null)
+        {
+            @CustomActions
+        }
+        else if (!string.IsNullOrEmpty(ActionLabel))
+        {
+            <Button Variant="ButtonVariant.FilledTonal" OnClick="HandleAction" Disabled="@Disabled">
+                @if (!string.IsNullOrEmpty(ActionIcon))
+                {
+                    <Icon Name="@ActionIcon" Slot="icon" />
+                }
+                @ActionLabel
+            </Button>
+        }
+
+        @if (HasValue && ShowResetButton)
+        {
+            <IconButton Icon="@ResetIcon"
+                        AriaLabel="@ResetAriaLabel"
+                        Disabled="@Disabled"
+                        OnClick="HandleReset" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Label { get; set; } = "Выбор";
+    [Parameter] public string Icon { get; set; } = "tune";
+    [Parameter] public string? ActiveIcon { get; set; }
+    [Parameter] public RenderFragment? CustomIconBadge { get; set; }
+
+    [Parameter] public string? BadgeText { get; set; }
+    [Parameter] public string? BadgeIcon { get; set; }
+
+    [Parameter] public string? PreviewText { get; set; }
+    [Parameter] public RenderFragment? CustomPreview { get; set; }
+
+    [Parameter] public string? ActionLabel { get; set; } = "Выбрать";
+    [Parameter] public string? ActionIcon { get; set; } = "edit";
+    [Parameter] public EventCallback<MouseEventArgs> OnAction { get; set; }
+
+    [Parameter] public bool HasValue { get; set; } = false;
+    [Parameter] public bool Disabled { get; set; } = false;
+
+    [Parameter] public bool ShowResetButton { get; set; } = true;
+    [Parameter] public string ResetIcon { get; set; } = "close";
+    [Parameter] public string ResetAriaLabel { get; set; } = "Сбросить значение";
+    [Parameter] public EventCallback OnReset { get; set; }
+
+    [Parameter] public RenderFragment? CustomActions { get; set; }
+
+    [Parameter] public string? Class { get; set; }
+    [Parameter] public string? Style { get; set; }
+
+    private async Task HandleAction(MouseEventArgs e)
+    {
+        if (Disabled) return;
+        await OnAction.InvokeAsync(e);
+    }
+
+    private async Task HandleReset()
+    {
+        if (Disabled) return;
+        await OnReset.InvokeAsync();
+    }
+}

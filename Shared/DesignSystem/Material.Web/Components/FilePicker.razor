@@ -1,0 +1,502 @@
+@namespace Material.Web.Components
+@using Microsoft.AspNetCore.Components.Forms
+@using System.IO
+
+<div class="file-picker-container">
+    <PickerTriggerCard Label="@(Label ?? "Прикрепленные файлы")"
+                       Icon="attach_file"
+                       ActiveIcon="folder_open"
+                       HasValue="@(TotalFilesCount > 0)"
+                       BadgeText="@(TotalFilesCount > 0 ? $"{TotalFilesCount} {(TotalFilesCount == 1 ? "файл" : (TotalFilesCount < 5 ? "файла" : "файлов"))}" : null)"
+                       BadgeIcon="folder"
+                       PreviewText="@(TotalFilesCount > 0 ? $"Загружено файлов: {TotalFilesCount}. Нажмите или перетащите для добавления." : "Файлы не прикреплены. Поддерживаются изображения, документы и архивы.")"
+                       ResetIcon="delete_sweep"
+                       ResetAriaLabel="Очистить все файлы"
+                       OnReset="ClearAll">
+        <CustomActions>
+            <label for="@inputId" class="file-add-btn-label">
+                <Button Variant="ButtonVariant.FilledTonal" Type="button">
+                    <Icon Name="add_photo_alternate" Slot="icon" />
+                    @UploadLabel
+                </Button>
+            </label>
+
+            @if (TotalFilesCount > 0)
+            {
+                <IconButton Icon="delete_sweep"
+                            AriaLabel="Очистить все файлы"
+                            OnClick="ClearAll" />
+            }
+        </CustomActions>
+    </PickerTriggerCard>
+
+    <div class="file-grid">
+        <!-- Universal Attachments -->
+        @if (Attachments != null)
+        {
+            @for (int i = 0; i < Attachments.Count; i++)
+            {
+                var index = i;
+                if (index < Attachments.Count)
+                {
+                    var attachment = Attachments[index];
+                    if (attachment != null)
+                    {
+                        var fileName = GetProperty<string>(attachment, "FileName") ?? "";
+                        var contentType = GetProperty<string>(attachment, "ContentType") ?? "";
+                        var url = GetProperty<string>(attachment, "Url") ?? "";
+                        
+                        var contentObj = GetPropertyObject(attachment, "Content");
+                        var isNew = false;
+                        byte[]? bytesData = null;
+                        if (contentObj is Google.Protobuf.ByteString bs)
+                        {
+                            isNew = !bs.IsEmpty;
+                            bytesData = bs.ToByteArray();
+                        }
+                        else if (contentObj is byte[] arr)
+                        {
+                            isNew = arr.Length > 0;
+                            bytesData = arr;
+                        }
+
+                        <div class="file-card @(isNew ? "new-file" : "")">
+                            <div class="file-preview-area">
+                                @if (IsImage(contentType, fileName))
+                                {
+                                    var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
+                                    <img src="@imgUrl" alt="@fileName" class="image-preview" />
+                                }
+                                else
+                                {
+                                    <div class="icon-preview @GetIconClass(contentType, fileName)">
+                                        <Icon Name="@GetFileIcon(contentType, fileName)" />
+                                    </div>
+                                }
+                            </div>
+                            <div class="file-info">
+                                <span class="file-name" title="@fileName">@fileName</span>
+                            </div>
+                            @if (isNew)
+                            {
+                                <div class="new-badge">New</div>
+                            }
+                            <div class="file-overlay">
+                                <IconButton Icon="delete"
+                                            AriaLabel="@RemoveLabel"
+                                            OnClick="() => RemoveAttachment(index)" />
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+
+        <!-- Legacy Existing Images -->
+        @if (ExistingImages != null)
+        {
+            @for (int i = 0; i < ExistingImages.Count; i++)
+            {
+                var index = i;
+                if (index < ExistingImages.Count)
+                {
+                    var item = ExistingImages[index];
+                    if (item is string url)
+                    {
+                        var previewUrl = GetPreviewUrl(url);
+                        var fileName = Path.GetFileName(url);
+                        if (string.IsNullOrEmpty(fileName)) fileName = "image";
+                        
+                        <div class="file-card">
+                            <div class="file-preview-area">
+                                <img src="@previewUrl" alt="@fileName" class="image-preview" />
+                            </div>
+                            <div class="file-info">
+                                <span class="file-name" title="@fileName">@fileName</span>
+                            </div>
+                            <div class="file-overlay">
+                                <IconButton Icon="delete"
+                                            AriaLabel="@RemoveLabel"
+                                            OnClick="() => RemoveExistingImage(index)" />
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+
+        <!-- Legacy New Images -->
+        @if (NewImagesContent != null)
+        {
+            @for (int i = 0; i < NewImagesContent.Count; i++)
+            {
+                var index = i;
+                if (index < NewImagesContent.Count)
+                {
+                    var contentObj = NewImagesContent[index];
+                    byte[] bytes = Array.Empty<byte>();
+                    
+                    if (contentObj is byte[] byteArray)
+                    {
+                        bytes = byteArray;
+                    }
+                    else if (contentObj is Google.Protobuf.ByteString byteString)
+                    {
+                        bytes = byteString.ToByteArray();
+                    }
+                    else if (contentObj != null)
+                    {
+                        var method = contentObj.GetType().GetMethod("ToByteArray");
+                        if (method != null)
+                        {
+                            bytes = (byte[])method.Invoke(contentObj, null)!;
+                        }
+                    }
+
+                    var base64Data = Convert.ToBase64String(bytes);
+                    var contentType = "image/png";
+                    var fileName = "new-file";
+                    if (NewImagesContentType != null && index < NewImagesContentType.Count && NewImagesContentType[index] is string ct)
+                    {
+                        contentType = ct;
+                    }
+                    if (NewImagesFileName != null && index < NewImagesFileName.Count && NewImagesFileName[index] is string fn)
+                    {
+                        fileName = fn;
+                    }
+                    var dataUrl = $"data:{contentType};base64,{base64Data}";
+                    
+                    <div class="file-card new-file">
+                        <div class="file-preview-area">
+                            @if (IsImage(contentType, fileName))
+                            {
+                                <img src="@dataUrl" alt="@fileName" class="image-preview" />
+                            }
+                            else
+                            {
+                                <div class="icon-preview @GetIconClass(contentType, fileName)">
+                                    <Icon Name="@GetFileIcon(contentType, fileName)" />
+                                </div>
+                            }
+                        </div>
+                        <div class="file-info">
+                            <span class="file-name" title="@fileName">@fileName</span>
+                        </div>
+                        <div class="new-badge">New</div>
+                        <div class="file-overlay">
+                            <IconButton Icon="delete"
+                                        AriaLabel="@RemoveLabel"
+                                        OnClick="() => RemoveNewImage(index)" />
+                        </div>
+                    </div>
+                }
+            }
+        }
+
+        <!-- Upload Card -->
+        <div class="upload-card @(isDragging ? "dragging" : "")"
+             @ondragenter="HandleDragEnter"
+             @ondragleave="HandleDragLeave"
+             @ondragover="HandleDragOver"
+             @ondragover:preventDefault
+             @ondrop="HandleDrop"
+             @ondrop:preventDefault>
+            
+            <div class="upload-zone-label">
+                <Icon Name="cloud_upload" class="upload-icon" />
+                <span class="upload-text">@UploadLabel</span>
+                <span class="upload-subtext">Перетащите файлы или нажмите</span>
+            </div>
+            
+            <InputFile id="@inputId" 
+                       OnChange="HandleFileSelected" 
+                       multiple="@Multiple" 
+                       accept="@Accept" 
+                       class="file-input-hidden" />
+        </div>
+    </div>
+</div>
+
+@code {
+    private string inputId = $"file-picker-{Guid.NewGuid():N}";
+    private bool isDragging = false;
+    private Type? fileType;
+
+    // Universal Mode Parameters
+    [Parameter] public System.Collections.IList? Attachments { get; set; }
+    
+    // Legacy Mode Parameters
+    [Parameter] public System.Collections.IList? ExistingImages { get; set; }
+    [Parameter] public System.Collections.IList? NewImagesContent { get; set; }
+    [Parameter] public System.Collections.IList? NewImagesFileName { get; set; }
+    [Parameter] public System.Collections.IList? NewImagesContentType { get; set; }
+
+    [Parameter] public Func<string, string>? ImageUrlResolver { get; set; }
+
+    [Parameter] public string Label { get; set; } = "Прикрепленные файлы";
+    [Parameter] public string UploadLabel { get; set; } = "Загрузить файлы";
+    [Parameter] public string RemoveLabel { get; set; } = "Удалить";
+    [Parameter] public bool Multiple { get; set; } = true;
+    [Parameter] public string Accept { get; set; } = "*";
+    [Parameter] public int MaxAllowedFiles { get; set; } = 10;
+    [Parameter] public long MaxFileSize { get; set; } = 15 * 1024 * 1024; // 15MB
+
+    [Parameter] public EventCallback OnChanged { get; set; }
+    [Parameter] public EventCallback OnReset { get; set; }
+
+    private int TotalFilesCount => (Attachments?.Count ?? 0) + (ExistingImages?.Count ?? 0) + (NewImagesContent?.Count ?? 0);
+
+    private static readonly System.Collections.Concurrent.ConcurrentDictionary<(Type, string), System.Reflection.PropertyInfo?> PropertyCache = new();
+
+    protected override void OnInitialized()
+    {
+        if (Attachments != null)
+        {
+            var listType = Attachments.GetType();
+            fileType = listType.IsGenericType 
+                ? listType.GetGenericArguments()[0] 
+                : (listType.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ICollection<>))?.GetGenericArguments()[0] ?? typeof(object));
+        }
+    }
+
+    private void HandleDragEnter() => isDragging = true;
+    private void HandleDragLeave() => isDragging = false;
+    private void HandleDragOver() { }
+    private void HandleDrop() => isDragging = false;
+
+    private T? GetProperty<T>(object obj, string propName)
+    {
+        if (obj == null) return default;
+        try
+        {
+            var type = obj.GetType();
+            var prop = PropertyCache.GetOrAdd((type, propName), key => key.Item1.GetProperty(key.Item2));
+            var val = prop?.GetValue(obj);
+            if (val is T typedVal) return typedVal;
+        }
+        catch {}
+        return default;
+    }
+
+    private bool IsImage(string contentType, string fileName)
+    {
+        if (!string.IsNullOrEmpty(contentType) && contentType.StartsWith("image/", StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        var ext = Path.GetExtension(fileName).ToLowerInvariant();
+        return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".webp" || ext == ".gif" || ext == ".bmp";
+    }
+
+    private object? GetPropertyObject(object obj, string propName)
+    {
+        if (obj == null) return null;
+        try
+        {
+            var type = obj.GetType();
+            var prop = PropertyCache.GetOrAdd((type, propName), key => key.Item1.GetProperty(key.Item2));
+            return prop?.GetValue(obj);
+        }
+        catch {}
+        return null;
+    }
+
+    private string GetBase64DataUrl(byte[] bytes, string contentType)
+    {
+        var base64 = Convert.ToBase64String(bytes);
+        var mime = string.IsNullOrWhiteSpace(contentType) ? "application/octet-stream" : contentType;
+        return $"data:{mime};base64,{base64}";
+    }
+
+    private string GetPreviewUrl(string url)
+    {
+        if (ImageUrlResolver != null)
+        {
+            return ImageUrlResolver(url);
+        }
+        return url;
+    }
+
+    private string GetFileIcon(string contentType, string fileName)
+    {
+        var mime = contentType.ToLowerInvariant();
+        var ext = Path.GetExtension(fileName).ToLowerInvariant();
+
+        if (mime == "application/pdf" || ext == ".pdf") return "picture_as_pdf";
+        
+        if (mime.Contains("zip") || mime.Contains("compressed") || mime.Contains("archive") || 
+            ext == ".zip" || ext == ".rar" || ext == ".7z" || ext == ".tar" || ext == ".gz")
+            return "archive";
+
+        if (mime.Contains("word") || mime.Contains("document") || ext == ".doc" || ext == ".docx" || ext == ".rtf" || ext == ".odt")
+            return "description";
+
+        if (mime.Contains("excel") || mime.Contains("sheet") || ext == ".xls" || ext == ".xlsx" || ext == ".ods" || ext == ".csv")
+            return "table_view";
+
+        if (mime.Contains("presentation") || mime.Contains("powerpoint") || ext == ".ppt" || ext == ".pptx")
+            return "co_present";
+
+        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase) || ext == ".mp3" || ext == ".wav" || ext == ".ogg" || ext == ".m4a")
+            return "audiotrack";
+
+        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase) || ext == ".mp4" || ext == ".avi" || ext == ".mkv" || ext == ".mov")
+            return "video_file";
+
+        if (mime.StartsWith("text/", StringComparison.OrdinalIgnoreCase) || ext == ".txt" || ext == ".html" || ext == ".css" || ext == ".js" || ext == ".json")
+            return "code";
+
+        return "insert_drive_file";
+    }
+
+    private string GetIconClass(string contentType, string fileName)
+    {
+        var mime = contentType.ToLowerInvariant();
+        var ext = Path.GetExtension(fileName).ToLowerInvariant();
+
+        if (mime == "application/pdf" || ext == ".pdf") return "pdf-type";
+        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return "archive-type";
+        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return "doc-type";
+        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return "sheet-type";
+        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return "audio-type";
+        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return "video-type";
+
+        return "generic-type";
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var files = Multiple ? e.GetMultipleFiles(MaxAllowedFiles) : new[] { e.File };
+
+        foreach (var file in files)
+        {
+            try
+            {
+                await using var stream = file.OpenReadStream(MaxFileSize);
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                var bytes = ms.ToArray();
+
+                if (Attachments != null && fileType != null)
+                {
+                    var newAttachment = Activator.CreateInstance(fileType);
+                    if (newAttachment != null)
+                    {
+                        fileType.GetProperty("Url")?.SetValue(newAttachment, "");
+                        
+                        var contentProp = fileType.GetProperty("Content");
+                        if (contentProp != null)
+                        {
+                            if (contentProp.PropertyType == typeof(Google.Protobuf.ByteString))
+                            {
+                                contentProp.SetValue(newAttachment, Google.Protobuf.ByteString.CopyFrom(bytes));
+                            }
+                            else
+                            {
+                                contentProp.SetValue(newAttachment, bytes);
+                            }
+                        }
+                        
+                        fileType.GetProperty("FileName")?.SetValue(newAttachment, file.Name);
+                        fileType.GetProperty("ContentType")?.SetValue(newAttachment, file.ContentType ?? "application/octet-stream");
+
+                        Attachments.Add(newAttachment);
+                    }
+                }
+                
+                if (NewImagesContent != null)
+                {
+                    var listType = NewImagesContent.GetType();
+                    var itemType = listType.IsGenericType 
+                        ? listType.GetGenericArguments()[0] 
+                        : (listType.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ICollection<>))?.GetGenericArguments()[0] ?? typeof(object));
+
+                    if (itemType == typeof(Google.Protobuf.ByteString))
+                    {
+                        NewImagesContent.Add(Google.Protobuf.ByteString.CopyFrom(bytes));
+                    }
+                    else if (itemType == typeof(byte[]))
+                    {
+                        NewImagesContent.Add(bytes);
+                    }
+                    else
+                    {
+                        NewImagesContent.Add(bytes);
+                    }
+                }
+
+                if (NewImagesFileName != null)
+                {
+                    NewImagesFileName.Add(file.Name);
+                }
+
+                if (NewImagesContentType != null)
+                {
+                    NewImagesContentType.Add(string.IsNullOrWhiteSpace(file.ContentType)
+                        ? "application/octet-stream"
+                        : file.ContentType);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error uploading file {file.Name}: {ex.Message}");
+            }
+        }
+
+        await OnChanged.InvokeAsync();
+        StateHasChanged();
+    }
+
+    private async Task RemoveAttachment(int index)
+    {
+        if (Attachments != null && index >= 0 && index < Attachments.Count)
+        {
+            Attachments.RemoveAt(index);
+            await OnChanged.InvokeAsync();
+            StateHasChanged();
+        }
+    }
+
+    private async Task RemoveExistingImage(int index)
+    {
+        if (ExistingImages != null && index >= 0 && index < ExistingImages.Count)
+        {
+            ExistingImages.RemoveAt(index);
+            await OnChanged.InvokeAsync();
+            StateHasChanged();
+        }
+    }
+
+    private async Task RemoveNewImage(int index)
+    {
+        if (NewImagesContent != null && index >= 0 && index < NewImagesContent.Count)
+        {
+            NewImagesContent.RemoveAt(index);
+            
+            if (NewImagesFileName != null && index < NewImagesFileName.Count)
+            {
+                NewImagesFileName.RemoveAt(index);
+            }
+            
+            if (NewImagesContentType != null && index < NewImagesContentType.Count)
+            {
+                NewImagesContentType.RemoveAt(index);
+            }
+
+            await OnChanged.InvokeAsync();
+            StateHasChanged();
+        }
+    }
+
+    public async Task ClearAll()
+    {
+        Attachments?.Clear();
+        ExistingImages?.Clear();
+        NewImagesContent?.Clear();
+        NewImagesFileName?.Clear();
+        NewImagesContentType?.Clear();
+
+        await OnChanged.InvokeAsync();
+        await OnReset.InvokeAsync();
+        StateHasChanged();
+    }
+}

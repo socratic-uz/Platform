@@ -1,0 +1,101 @@
+@if (!string.IsNullOrEmpty(Height) || !string.IsNullOrEmpty(Width))
+{
+    var customStyle = $"{(!string.IsNullOrEmpty(Height) ? $"height: {Height};" : "")} {(!string.IsNullOrEmpty(Width) ? $"width: {Width};" : "")} {(!string.IsNullOrEmpty(BorderRadius) ? $"border-radius: {BorderRadius};" : "")}";
+    <div class="skeleton-custom shimmer @Class" style="@customStyle" @attributes="AdditionalAttributes"></div>
+}
+else
+{
+    <div class="skeleton-container @Type @Class" @attributes="AdditionalAttributes">
+        @for (int i = 0; i < Count; i++)
+        {
+            @if (Type == "card")
+            {
+                <div class="skeleton-card glass-panel">
+                    <div class="skeleton-image shimmer"></div>
+                    <div class="skeleton-body">
+                        <div class="skeleton-line headline-line shimmer"></div>
+                        <div class="skeleton-line body-line shimmer"></div>
+                        <div class="skeleton-footer">
+                            <div class="skeleton-line price-line shimmer"></div>
+                            <div class="skeleton-button shimmer"></div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if (Type == "list")
+            {
+                <div class="skeleton-list-item glass-panel">
+                    <div class="skeleton-avatar shimmer"></div>
+                    <div class="skeleton-body">
+                        <div class="skeleton-line headline-line shimmer"></div>
+                        <div class="skeleton-line body-line shimmer"></div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="skeleton-line text-line shimmer"></div>
+            }
+        }
+    </div>
+}
+
+<style>
+    .skeleton-custom {
+        background: var(--md-sys-color-surface-container-highest);
+        border-radius: 12px;
+        display: block;
+    }
+    .skeleton-container {
+        display: grid; gap: 16px; width: 100%;
+    }
+    .skeleton-container.card {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .skeleton-card {
+        border-radius: 16px; padding: 16px; border: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container); display: grid; gap: 12px;
+    }
+    .skeleton-image { height: 140px; border-radius: 12px; background: var(--md-sys-color-surface-container-highest); }
+    .skeleton-body { display: grid; gap: 8px; align-content: space-between; }
+    .skeleton-line { height: 14px; border-radius: 6px; background: var(--md-sys-color-surface-container-highest); }
+    .headline-line { width: 70%; height: 18px; }
+    .body-line { width: 90%; }
+    .price-line { width: 40%; height: 20px; }
+    .skeleton-footer { display: grid; grid-template-columns: 1fr auto; align-items: center; }
+    .skeleton-button { width: 80px; height: 36px; border-radius: 18px; background: var(--md-sys-color-surface-container-highest); }
+    .skeleton-list-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; padding: 12px; border-radius: 12px; background: var(--md-sys-color-surface-container); }
+    .skeleton-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--md-sys-color-surface-container-highest); }
+    .text-line { width: 100%; height: 16px; margin: 4px 0; }
+
+    .shimmer {
+        position: relative; overflow: hidden;
+    }
+    .shimmer::after {
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(
+            90deg,
+            transparent 0,
+            var(--md-sys-color-surface-variant, rgba(255, 255, 255, 0.08)) 20%,
+            var(--md-sys-color-surface-container-highest, rgba(255, 255, 255, 0.18)) 60%,
+            transparent
+        );
+        animation: shimmer-anim 1.5s infinite;
+        content: '';
+    }
+    @@keyframes shimmer-anim {
+        100% { transform: translateX(100%); }
+    }
+</style>
+
+@code {
+    [Parameter] public int Count { get; set; } = 3;
+    [Parameter] public string Type { get; set; } = "card"; // "card", "list", "text"
+    [Parameter] public string? Height { get; set; }
+    [Parameter] public string? Width { get; set; }
+    [Parameter] public string? BorderRadius { get; set; }
+    [Parameter] public string? Class { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? AdditionalAttributes { get; set; }
+}

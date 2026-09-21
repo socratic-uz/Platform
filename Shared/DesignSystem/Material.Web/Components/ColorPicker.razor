@@ -1,0 +1,260 @@
+@namespace Material.Web.Components
+@using Microsoft.JSInterop
+
+@if (Compact)
+{
+    <div class="picker-compact-box @CssClass @(Disabled ? "disabled" : "")" style="@Style">
+        <!-- Color Swatch & Native Color Trigger -->
+        <div class="picker-swatch-wrapper" title="Нажмите для выбора цвета">
+            <div class="picker-swatch" style="background-color: @NormalizedValue;">
+                <input type="color"
+                       class="picker-native-input"
+                       value="@HexValue"
+                       disabled="@Disabled"
+                       @onchange="OnNativeColorChanged"
+                       @oninput="OnNativeColorInput" />
+            </div>
+        </div>
+
+        <!-- Text Input for HEX -->
+        <div class="picker-hex-wrapper">
+            <span class="picker-hex-prefix">#</span>
+            <input type="text"
+                   class="picker-hex-input"
+                   placeholder="RRGGBB"
+                   value="@RawHexValue"
+                   disabled="@Disabled"
+                   @onchange="OnTextInputChanged" />
+        </div>
+
+        <IconButton Icon="@(isCopied ? "check" : "content_copy")"
+                    Disabled="@Disabled"
+                    AriaLabel="@(isCopied ? "Скопировано!" : "Скопировать HEX")"
+                    OnClick="CopyColorAsync" />
+
+        @if (ShowPresets)
+        {
+            <IconButton Icon="palette"
+                        Disabled="@Disabled"
+                        Selected="@isPaletteOpen"
+                        Toggle="true"
+                        AriaLabel="Палитра пресетов"
+                        OnClick="TogglePalette" />
+        }
+
+        @if (HasValue)
+        {
+            <IconButton Icon="close"
+                        Disabled="@Disabled"
+                        AriaLabel="Сбросить цвет"
+                        OnClick="Clear" />
+        }
+    </div>
+}
+else
+{
+    <!-- Unified Base Picker Trigger Card -->
+    <PickerTriggerCard Label="@(Label ?? "Выбор цвета")"
+                       HasValue="@HasValue"
+                       BadgeText="@NormalizedValue"
+                       BadgeIcon="colorize"
+                       PreviewText="@(HasValue ? $"Выбран цвет: {NormalizedValue}" : "Цвет не выбран (по умолчанию)")"
+                       ActionLabel="@(isPaletteOpen ? "Закрыть" : "Палитра")"
+                       ActionIcon="palette"
+                       OnAction="TogglePalette"
+                       ResetAriaLabel="Сбросить цвет"
+                       OnReset="Clear"
+                       Disabled="@Disabled"
+                       Class="@CssClass"
+                       Style="@Style">
+        <CustomIconBadge>
+            <div class="color-badge-swatch" style="background-color: @NormalizedValue;">
+                <input type="color"
+                       class="picker-native-input"
+                       value="@HexValue"
+                       disabled="@Disabled"
+                       @onchange="OnNativeColorChanged"
+                       @oninput="OnNativeColorInput" />
+            </div>
+        </CustomIconBadge>
+
+        <CustomActions>
+            <Button Variant="ButtonVariant.FilledTonal" OnClick="TogglePalette" Disabled="@Disabled">
+                <Icon Name="palette" Slot="icon" />
+                @(isPaletteOpen ? "Закрыть" : "Палитра")
+            </Button>
+
+            <IconButton Icon="@(isCopied ? "check" : "content_copy")"
+                        Disabled="@Disabled"
+                        AriaLabel="Скопировать HEX"
+                        OnClick="CopyColorAsync" />
+
+            @if (HasValue)
+            {
+                <IconButton Icon="close"
+                            Disabled="@Disabled"
+                            AriaLabel="Сбросить цвет"
+                            OnClick="Clear" />
+            }
+        </CustomActions>
+    </PickerTriggerCard>
+}
+
+<!-- Presets Popover / Dialog -->
+@if (ShowPresets && isPaletteOpen)
+{
+    <div class="picker-popover-panel">
+        <div class="picker-popover-header">
+            <span class="picker-popover-title">Рекомендованные цвета Material 3</span>
+            <IconButton Icon="close" AriaLabel="Закрыть" OnClick="() => isPaletteOpen = false" />
+        </div>
+        <div class="picker-palette-grid">
+            @foreach (var color in EffectivePresets)
+            {
+                var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
+                <button type="button"
+                        class="picker-palette-swatch @(isSelected ? "selected" : "")"
+                        style="background-color: @color;"
+                        title="@color"
+                        @onclick="() => SelectPreset(color)">
+                    @if (isSelected)
+                    {
+                        <Icon Name="check" class="picker-swatch-check" />
+                    }
+                </button>
+            }
+        </div>
+        <div class="picker-popover-footer">
+            <div class="picker-hex-wrapper" style="width: auto; max-width: 140px;">
+                <span class="picker-hex-prefix">#</span>
+                <input type="text"
+                       class="picker-hex-input"
+                       placeholder="RRGGBB"
+                       value="@RawHexValue"
+                       disabled="@Disabled"
+                       @onchange="OnTextInputChanged" />
+            </div>
+            @if (HasValue)
+            {
+                <Button Variant="ButtonVariant.Text" OnClick="Clear">
+                    <Icon Name="restart_alt" Slot="icon" />
+                    Сбросить
+                </Button>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public string? Value { get; set; } = "#6750A4";
+    [Parameter] public EventCallback<string?> ValueChanged { get; set; }
+    [Parameter] public EventCallback OnReset { get; set; }
+
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public string? CssClass { get; set; }
+    [Parameter] public string? Style { get; set; }
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public bool Compact { get; set; } = false;
+    [Parameter] public bool ShowPresets { get; set; } = true;
+    [Parameter] public string[]? CustomPresets { get; set; }
+
+    [Inject] private IJSRuntime JS { get; set; } = null!;
+
+    private bool isPaletteOpen = false;
+    private bool isCopied = false;
+
+    private bool HasValue => !string.IsNullOrWhiteSpace(Value);
+
+    private static readonly string[] DefaultPresets = new[]
+    {
+        "#6750A4", // MD3 Primary Purple
+        "#00639B", // Ocean Blue
+        "#006874", // Cyan / Teal
+        "#006D44", // Emerald Green
+        "#7E525E", // Dusty Rose
+        "#8B5000", // Warm Amber
+        "#BA1A1A", // Material Red / Error
+        "#1E293B", // Dark Slate
+        "#475569", // Medium Slate
+        "#64748B", // Cool Gray
+        "#F8FAFC", // Pure Light
+        "#FFFFFF"  // White
+    };
+
+    private string[] EffectivePresets => CustomPresets is { Length: > 0 } ? CustomPresets : DefaultPresets;
+
+    private string NormalizedValue => string.IsNullOrWhiteSpace(Value) ? "#6750A4" : (Value.StartsWith("#") ? Value : $"#{Value}");
+
+    private string HexValue
+    {
+        get
+        {
+            var val = NormalizedValue;
+            return val.Length == 7 ? val : (val.Length > 7 ? val.Substring(0, 7) : "#6750A4");
+        }
+    }
+
+    private string RawHexValue => NormalizedValue.TrimStart('#');
+
+    private async Task OnNativeColorChanged(ChangeEventArgs e)
+    {
+        var val = e.Value?.ToString() ?? "#000000";
+        await SetValueAsync(val);
+    }
+
+    private async Task OnNativeColorInput(ChangeEventArgs e)
+    {
+        var val = e.Value?.ToString() ?? "#000000";
+        await SetValueAsync(val);
+    }
+
+    private async Task OnTextInputChanged(ChangeEventArgs e)
+    {
+        var text = e.Value?.ToString()?.Trim() ?? "";
+        if (!text.StartsWith("#")) text = $"#{text}";
+        if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"))
+        {
+            await SetValueAsync(text);
+        }
+    }
+
+    private async Task SelectPreset(string color)
+    {
+        await SetValueAsync(color);
+        isPaletteOpen = false;
+    }
+
+    private async Task SetValueAsync(string? val)
+    {
+        Value = val;
+        await ValueChanged.InvokeAsync(val);
+    }
+
+    private void TogglePalette()
+    {
+        isPaletteOpen = !isPaletteOpen;
+    }
+
+    private async Task CopyColorAsync()
+    {
+        try
+        {
+            await JS.InvokeVoidAsync("navigator.clipboard.writeText", NormalizedValue);
+            isCopied = true;
+            StateHasChanged();
+            await Task.Delay(1500);
+            isCopied = false;
+            StateHasChanged();
+        }
+        catch
+        {
+            // Clipboard fallback
+        }
+    }
+
+    public async Task Clear()
+    {
+        await SetValueAsync(null);
+        await OnReset.InvokeAsync();
+    }
+}

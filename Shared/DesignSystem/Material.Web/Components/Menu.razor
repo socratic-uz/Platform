@@ -1,0 +1,80 @@
+<md-menu id="@Id"
+         anchor="@Anchor"
+         positioning="@Positioning"
+         quick="@Quick"
+         has-overflow="@HasOverflow"
+         open="@Open"
+         x-offset="@XOffset"
+         y-offset="@YOffset"
+         no-horizontal-flip="@NoHorizontalFlip"
+         no-vertical-flip="@NoVerticalFlip"
+         typeahead-delay="@TypeaheadDelay"
+         anchor-corner="@AnchorCorner"
+         menu-corner="@MenuCorner"
+         stay-open-on-outside-click="@StayOpenOnOutsideClick"
+         stay-open-on-focusout="@StayOpenOnFocusout"
+         skip-restore-focus="@SkipRestoreFocus"
+         default-focus="@DefaultFocus"
+         no-navigation-wrap="@NoNavigationWrap"
+         @onclosed="HandleClosed"
+         @onclosing="HandleClosing"
+         @onopened="HandleOpened"
+         @onopening="HandleOpening"
+         @attributes="AdditionalAttributes">
+    @ChildContent
+</md-menu>
+
+@code {
+    [Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
+    [Parameter] public string Anchor { get; set; } = "";
+    [Parameter] public string Positioning { get; set; } = "absolute";
+    [Parameter] public bool Quick { get; set; } = false;
+    [Parameter] public bool HasOverflow { get; set; } = false;
+    [Parameter] public bool Open { get; set; } = false;
+    [Parameter] public EventCallback<bool> OpenChanged { get; set; }
+    [Parameter] public int XOffset { get; set; } = 0;
+    [Parameter] public int YOffset { get; set; } = 0;
+    [Parameter] public bool NoHorizontalFlip { get; set; } = false;
+    [Parameter] public bool NoVerticalFlip { get; set; } = false;
+    [Parameter] public int TypeaheadDelay { get; set; } = 200;
+    [Parameter] public string AnchorCorner { get; set; } = "end-start";
+    [Parameter] public string MenuCorner { get; set; } = "start-start";
+    [Parameter] public bool StayOpenOnOutsideClick { get; set; } = false;
+    [Parameter] public bool StayOpenOnFocusout { get; set; } = false;
+    [Parameter] public bool SkipRestoreFocus { get; set; } = false;
+    [Parameter] public string DefaultFocus { get; set; } = "first-item";
+    [Parameter] public bool NoNavigationWrap { get; set; } = false;
+    
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    
+    [Parameter] public EventCallback<EventArgs> OnOpening { get; set; }
+    [Parameter] public EventCallback<EventArgs> OnOpened { get; set; }
+    [Parameter] public EventCallback<EventArgs> OnClosing { get; set; }
+    [Parameter] public EventCallback<EventArgs> OnClosed { get; set; }
+    
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+
+    private async Task HandleClosed(EventArgs e)
+    {
+        Open = false;
+        await OpenChanged.InvokeAsync(false);
+        await OnClosed.InvokeAsync(e);
+    }
+
+    private async Task HandleClosing(EventArgs e)
+    {
+        await OnClosing.InvokeAsync(e);
+    }
+
+    private async Task HandleOpened(EventArgs e)
+    {
+        Open = true;
+        await OpenChanged.InvokeAsync(true);
+        await OnOpened.InvokeAsync(e);
+    }
+
+    private async Task HandleOpening(EventArgs e)
+    {
+        await OnOpening.InvokeAsync(e);
+    }
+}

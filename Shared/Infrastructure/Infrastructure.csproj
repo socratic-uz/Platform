@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<RootNamespace>Infrastructure</RootNamespace>
+		<AssemblyName>Infrastructure</AssemblyName>
+		<PackageId>Infrastructure</PackageId>
+		<Version>3.0.1</Version>
+		<Authors>Socratic</Authors>
+		<Description>Infrastructure layer for Socratic Core (gRPC clients and adapters)</Description>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+	</PropertyGroup>
+
+	<!--Protobuf-->
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" />
+		<PackageReference Include="Grpc.Net.Client.Web" />
+		<PackageReference Include="Grpc.Net.ClientFactory" />
+		<PackageReference Include="Grpc.Tools" />
+	</ItemGroup>
+
+	<!-- Identifying Service Protos -->
+	<ItemGroup>
+		<Protobuf GrpcServices="Client" Include="$(IdentifyingProtos)Role.proto" Link="Protos\Role.proto" ProtoRoot="$(Identifying)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(IdentifyingProtos)User.proto" Link="Protos\User.proto" ProtoRoot="$(Identifying)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(IdentifyingProtos)Auth.proto" Link="Protos\Auth.proto" ProtoRoot="$(Identifying)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(IdentifyingProtos)Profile.proto" Link="Protos\Profile.proto" ProtoRoot="$(Identifying)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(OrderingProtos)Order.proto" Link="Protos\Order.proto" ProtoRoot="$(Ordering)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(OrderingProtos)OrderItem.proto" Link="Protos\OrderItem.proto" ProtoRoot="$(Ordering)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(PayingProtos)Payment.proto" Link="Protos\Payment.proto" ProtoRoot="$(Paying)" AdditionalImportDirs="$(SharedKernelDir)" />
+
+		<Protobuf GrpcServices="Client" Include="$(ShoppingProtos)Product.proto" Link="Protos\Product.proto" ProtoRoot="$(Shopping)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(ShoppingProtos)Wish.proto" Link="Protos\Wish.proto" ProtoRoot="$(Shopping)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(ShoppingProtos)Organization.proto" Link="Protos\Organization.proto" ProtoRoot="$(Shopping)" AdditionalImportDirs="$(SharedKernelDir)" />
+		<Protobuf GrpcServices="Client" Include="$(ShoppingProtos)Layout.proto" Link="Protos\Layout.proto" ProtoRoot="$(Shopping)" AdditionalImportDirs="$(SharedKernelDir)" />
+	</ItemGroup>
+
+	<!--Dependencies-->
+	<ItemGroup>
+		<ProjectReference Include="$(SharedKernel)" Condition="Exists('$(SharedKernel)')" />
+		<ProjectReference Include="..\..\..\Shared\SharedKernel\SharedKernel.csproj" Condition="('$(SharedKernel)' == '' or !Exists('$(SharedKernel)')) and Exists('..\..\..\Shared\SharedKernel\SharedKernel.csproj')" />
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Runner|AnyCPU'">
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LocalDebug|AnyCPU'">
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NETCore.Platforms" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+	</ItemGroup>
+</Project>
+

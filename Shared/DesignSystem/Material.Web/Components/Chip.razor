@@ -1,0 +1,94 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Linq.Expressions
+
+@if (ChipType == ChipType.Filter)
+{
+    <md-filter-chip label="@Label"
+                   selected="@Selected"
+                   disabled="@Disabled"
+                   removable="@Removable"
+                   elevated="@Elevated"
+                   class="@CssClass"
+                   aria-label="@AriaLabel"
+                   @onclick="@HandleClick"
+                   @onremove="@OnRemove"
+                   @attributes="AdditionalAttributes">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            <md-icon slot="icon">@Icon</md-icon>
+        }
+        @if (Selected && ShowSelectedIcon && !string.IsNullOrEmpty(SelectedIcon))
+        {
+            <md-icon slot="selected-icon">@SelectedIcon</md-icon>
+        }
+        @ChildContent
+    </md-filter-chip>
+}
+else if (ChipType == ChipType.Input)
+{
+    <md-input-chip label="@Label"
+                  selected="@Selected"
+                  disabled="@Disabled"
+                  remove-only="@RemoveOnly"
+                  avatar="@Avatar"
+                  class="@CssClass"
+                  href="@Href"
+                  target="@Target"
+                  aria-label="@AriaLabel"
+                  @onclick="@HandleClick"
+                  @onremove="@OnRemove"
+                  @attributes="AdditionalAttributes">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            @if (Avatar)
+            {
+                <img slot="icon" src="@Icon" alt="@Label" />
+            }
+            else
+            {
+                <md-icon slot="icon">@Icon</md-icon>
+            }
+        }
+        @ChildContent
+    </md-input-chip>
+}
+else if (ChipType == ChipType.Assist)
+{
+    <md-assist-chip label="@Label"
+                   disabled="@Disabled"
+                   elevated="@Elevated"
+                   href="@Href"
+                   target="@Target"
+                   class="@CssClass"
+                   aria-label="@AriaLabel"
+                   @onclick="@HandleClick"
+                   @attributes="AdditionalAttributes">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            <md-icon slot="icon">@Icon</md-icon>
+        }
+        @ChildContent
+    </md-assist-chip>
+}
+else // Suggestion
+{
+    <md-suggestion-chip label="@Label"
+                       disabled="@Disabled"
+                       elevated="@Elevated"
+                       href="@Href"
+                       target="@Target"
+                       class="@CssClass"
+                       aria-label="@AriaLabel"
+                       @onclick="@HandleClick"
+                       @attributes="AdditionalAttributes">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            <md-icon slot="icon">@Icon</md-icon>
+        }
+        @ChildContent
+    </md-suggestion-chip>
+}
+
+@code
+{
+}

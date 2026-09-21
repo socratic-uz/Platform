@@ -1,0 +1,7 @@
+﻿@using Microsoft.AspNetCore.Components
+
+<md-divider role="separator" tabindex="-1" @attributes="AdditionalAttributes"></md-divider>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+}

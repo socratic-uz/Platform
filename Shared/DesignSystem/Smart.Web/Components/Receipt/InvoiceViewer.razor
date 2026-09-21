@@ -1,0 +1,228 @@
+@namespace Smart.Web.Components
+@using Microsoft.Extensions.Localization
+@typeparam TItem
+
+<style id="check-style">
+    .receipt-container {
+        font-family: 'Inter', -apple-system, monospace;
+        color: var(--md-sys-color-on-surface, #1e293b);
+        background: var(--md-sys-color-surface-container-lowest, #ffffff);
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 24px 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        border: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+        position: relative;
+    }
+
+    @@media print {
+        .receipt-container {
+            box-shadow: none !important;
+            border: none !important;
+            background: #ffffff !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: 100% !important;
+            color: #000000 !important;
+        }
+    }
+
+    .receipt-container table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .receipt-header {
+        text-align: center;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+    }
+
+    .receipt-header h3 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin: 0 0 4px 0;
+        color: var(--md-sys-color-on-surface, #0f172a);
+    }
+
+    .receipt-header p {
+        font-size: 0.75rem;
+        color: var(--md-sys-color-on-surface-variant, #64748b);
+        margin: 0;
+    }
+
+    .receipt-meta {
+        font-size: 0.78rem;
+        color: var(--md-sys-color-on-surface-variant, #475569);
+        margin-bottom: 14px;
+    }
+
+    .receipt-meta td {
+        padding: 2px 0;
+    }
+
+    .receipt-table {
+        font-size: 0.82rem;
+        margin: 12px 0;
+    }
+
+    .receipt-table th {
+        text-align: left;
+        color: var(--md-sys-color-outline, #64748b);
+        font-weight: 700;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--md-sys-color-outline-variant, #cbd5e1);
+        padding: 6px 0;
+    }
+
+    .receipt-table td {
+        padding: 6px 0;
+        border-bottom: 1px dotted var(--md-sys-color-outline-variant, #e2e8f0);
+    }
+
+    .receipt-table tr:hover {
+        background: var(--md-sys-color-surface-container-highest, #f1f5f9);
+    }
+
+    .receipt-totals {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 2px solid var(--md-sys-color-on-surface, #0f172a);
+        font-size: 0.85rem;
+    }
+
+    .receipt-totals td {
+        padding: 3px 0;
+    }
+
+    .receipt-totals .grand-total {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--md-sys-color-primary, #0284c7);
+    }
+
+    .receipt-footer {
+        text-align: center;
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+        font-size: 0.72rem;
+        color: var(--md-sys-color-on-surface-variant, #64748b);
+    }
+</style>
+
+<div id="check" class="receipt-container">
+    <header class="receipt-header">
+        <h3>@(OrganizationName ?? "Socratic Platform")</h3>
+        <p>@(OrganizationAddress ?? "Универсальная Торговая Система Socratic")</p>
+    </header>
+
+    <table class="receipt-meta">
+        <tr>
+            <td>Чек №: <strong>#@(InvoiceNumber ?? "SOC-001")</strong></td>
+            <td style="text-align: right;">Дата: <strong>@(InvoiceDate?.ToString("dd.MM.yyyy HH:mm") ?? DateTime.Now.ToString("dd.MM.yyyy HH:mm"))</strong></td>
+        </tr>
+        <tr>
+            <td>Кассир: <strong>Касса POS-1</strong></td>
+            <td style="text-align: right;">Оплата: <strong>@PaymentMethod</strong></td>
+        </tr>
+    </table>
+
+    <table class="receipt-table">
+        <thead>
+            <tr>
+                <th style="width: 12%;">Кол</th>
+                <th style="width: 48%;">Наименование</th>
+                <th style="width: 20%; text-align: right;">Цена</th>
+                <th style="width: 20%; text-align: right;">Сумма</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Items != null && QuantitySelector != null && NameSelector != null && PriceSelector != null)
+            {
+                @foreach (var op in Items)
+                {
+                    var qty = QuantitySelector(op);
+                    var name = NameSelector(op);
+                    var price = PriceSelector(op);
+                    <tr style="@(OnItemClick.HasDelegate ? "cursor: pointer;" : "")" @onclick="() => HandleItemClick(op)" title="Нажмите для удаления позиции">
+                        <td style="font-weight: 700; text-align: center;">
+                            @qty
+                        </td>
+                        <td style="font-weight: 600;">@name</td>
+                        <td style="text-align: right;">@price.ToString("N0")</td>
+                        <td style="text-align: right; font-weight: 700;">@((qty * price).ToString("N0"))</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    @{
+        var total = (Items != null && QuantitySelector != null && PriceSelector != null)
+            ? Items.Sum(x => QuantitySelector(x) * PriceSelector(x))
+            : 0m;
+        var vat = total * 0.12m;
+    }
+
+    <table class="receipt-totals">
+        <tr>
+            <td>В т.ч. НДС (12%):</td>
+            <td style="text-align: right;">@vat.ToString("N0") сум</td>
+        </tr>
+        <tr class="grand-total">
+            <td>ИТОГО К ОПЛАТЕ:</td>
+            <td style="text-align: right;">@total.ToString("N0") сум</td>
+        </tr>
+    </table>
+
+    <footer class="receipt-footer">
+        <div style="font-weight: 700; margin-bottom: 4px;">Спасибо за покупку!</div>
+        <div>Фискальный чек Socratic Demo • www.socratic.uz</div>
+    </footer>
+</div>
+
+@code {
+    [Inject] public IStringLocalizer L { get; set; } = default!;
+
+    [Parameter] public IEnumerable<TItem> Items { get; set; } = Array.Empty<TItem>();
+    [Parameter] public Func<TItem, int> QuantitySelector { get; set; } = default!;
+    [Parameter] public Func<TItem, string> NameSelector { get; set; } = default!;
+    [Parameter] public Func<TItem, decimal> PriceSelector { get; set; } = default!;
+    [Parameter] public EventCallback<TItem> OnItemClick { get; set; }
+    [Parameter] public EventCallback<(TItem Item, int Delta)> OnQuantityChange { get; set; }
+
+    [Parameter] public string ClientName { get; set; } = "Client Name";
+    [Parameter] public string? OrganizationName { get; set; }
+    [Parameter] public string? OrganizationAddress { get; set; }
+    [Parameter] public string? InvoiceNumber { get; set; }
+    [Parameter] public DateTime? InvoiceDate { get; set; }
+
+    [Parameter] public string PaymentMethod { get; set; } = "Card";
+    [Parameter] public string AccountNumber { get; set; } = "•••• 7744";
+    [Parameter] public string RoutingNumber { get; set; } = "120000547";
+    [Parameter] public string ContactEmail { get; set; } = "socratic.uz@gmail.com";
+    [Parameter] public string ContactPhone { get; set; } = "+998958228850";
+    [Parameter] public string Website { get; set; } = "socratic.uz";
+    [Parameter] public string LogoUrl { get; set; } = "https://app.useanvil.com/img/email-logo-black.png";
+    [Parameter] public string HeartIconUrl { get; set; } = "/img/heart.png";
+
+    private async Task HandleItemClick(TItem item)
+    {
+        if (OnItemClick.HasDelegate)
+        {
+            await OnItemClick.InvokeAsync(item);
+        }
+    }
+
+    private async Task ChangeQuantity(TItem item, int delta)
+    {
+        if (OnQuantityChange.HasDelegate)
+        {
+            await OnQuantityChange.InvokeAsync((item, delta));
+        }
+    }
+}

@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Collected" xml:space="preserve">
+    <value>Collected</value>
+  </data>
+  <data name="Collecting" xml:space="preserve">
+    <value>Collecting</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Control panel" xml:space="preserve">
+    <value>Control panel</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Create organization" xml:space="preserve">
+    <value>Create organization</value>
+  </data>
+  <data name="Create product" xml:space="preserve">
+    <value>Create product</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Unpaid</value>
+  </data>
+  <data name="Created at" xml:space="preserve">
+    <value>Created at</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Edit organization" xml:space="preserve">
+    <value>Edit organization</value>
+  </data>
+  <data name="Edit profile" xml:space="preserve">
+    <value>Edit profile</value>
+  </data>
+  <data name="En" xml:space="preserve">
+    <value>En</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>House</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Accent" xml:space="preserve">
+    <value>Accent</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Palette</value>
+  </data>
+  <data name="Kiosk" xml:space="preserve">
+    <value>Kiosk</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Made" xml:space="preserve">
+    <value>Made</value>
+  </data>
+  <data name="Making" xml:space="preserve">
+    <value>Making</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>MiddleName</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="New organization" xml:space="preserve">
+    <value>New organization</value>
+  </data>
+  <data name="New product" xml:space="preserve">
+    <value>New product</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Order products" xml:space="preserve">
+    <value>Order products</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Order status</value>
+  </data>
+  <data name="Organizations" xml:space="preserve">
+    <value>Organizations</value>
+  </data>
+  <data name="OwnerId" xml:space="preserve">
+    <value>Owner ID</value>
+  </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="ParentId" xml:space="preserve">
+    <value>Parent ID</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Payment type</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Places" xml:space="preserve">
+    <value>Places</value>
+  </data>
+  <data name="Preparing" xml:space="preserve">
+    <value>Preparing</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Product type</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Organizations &amp; Locations</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Ru" xml:space="preserve">
+    <value>Ru</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Shipping" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="ThemeColor" xml:space="preserve">
+    <value>Theme color</value>
+  </data>
+  <data name="Total amount" xml:space="preserve">
+    <value>Total amount</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Upload image" xml:space="preserve">
+    <value>Upload image</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Uz" xml:space="preserve">
+    <value>Uz</value>
+  </data>
+  <data name="Wish list" xml:space="preserve">
+    <value>Wish list</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="msah1" xml:space="preserve">
+    <value>Welcome to Socratic:</value>
+  </data>
+  <data name="msah2" xml:space="preserve">
+    <value>Your All-in-One Business &amp; Omnichannel Commerce Platform</value>
+  </data>
+  <data name="msaa" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
+  <data name="ms2ah" xml:space="preserve">
+    <value>Elevate Your Business Operations with Socratic</value>
+  </data>
+  <data name="ms2ap" xml:space="preserve">
+    <value>At Socratic, we build a complete full-cycle ecosystem: from self-service smart kiosks and dynamic catalogs to inventory tracking, AI vision, and multi-currency payments. Our platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.</value>
+  </data>
+  <data name="ms3ah" xml:space="preserve">
+    <value>What We Offer:</value>
+  </data>
+  <data name="ms3aul1" xml:space="preserve">
+    <value>Universal Product &amp; Service Catalog: Effortlessly manage goods, services, tickets, memberships, and rentals with real-time stock sync.</value>
+  </data>
+  <data name="ms3aul2" xml:space="preserve">
+    <value>Streamlined Order &amp; Booking Management: From kiosk checkout to final fulfillment, track and update order states in real-time with zero friction.</value>
+  </data>
+  <data name="ms3aul3" xml:space="preserve">
+    <value>Customer Engagement &amp; Face ID Loyalty: Enable instant client accounts, personalized favorites, fast checkout, and biometric recognition.</value>
+  </data>
+  <data name="ms3aul4" xml:space="preserve">
+    <value>Role-Based Access: Secure your platform by controlling who sees what. Different roles mean different access levels, keeping your data safe and operations smooth.</value>
+  </data>
+  <data name="ms3aul5" xml:space="preserve">
+    <value>Comprehensive Analytics: Gain actionable insights into sales, inventory turnover, customer preferences, and revenue drivers.</value>
+  </data>
+  <data name="ms4ah" xml:space="preserve">
+    <value>Why Choose Socratic?</value>
+  </data>
+  <data name="ms4aul1" xml:space="preserve">
+    <value>User-Friendly Interface: Easy to navigate and designed for efficiency, our platform minimizes training time and maximizes productivity.</value>
+  </data>
+  <data name="ms4aul2" xml:space="preserve">
+    <value>Scalable Solutions: Whether a boutique store, service studio, or multi-location enterprise, Socratic scales seamlessly with your business.</value>
+  </data>
+  <data name="ms4aul3" xml:space="preserve">
+    <value>24/7 Support: Our dedicated customer success team is here to support you around the clock, ensuring you get the most out of our platform.</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="DownloadTitle" xml:space="preserve">
+    <value>Download Socratic UI</value>
+  </data>
+  <data name="DownloadSubTitle" xml:space="preserve">
+    <value>Access Socratic anywhere. Multi-platform support for Desktop, Mobile, and Web.</value>
+  </data>
+  <data name="ScanQrText" xml:space="preserve">
+    <value>Scan to open or download on Mobile</value>
+  </data>
+  <data name="PlatformWindows" xml:space="preserve">
+    <value>Windows (x64 / ARM64)</value>
+  </data>
+  <data name="PlatformAndroid" xml:space="preserve">
+    <value>Android (APK / Play Store)</value>
+  </data>
+  <data name="PlatformIOS" xml:space="preserve">
+    <value>iOS / iPadOS</value>
+  </data>
+  <data name="PlatformMacOS" xml:space="preserve">
+    <value>macOS (Apple Silicon &amp; Intel)</value>
+  </data>
+  <data name="PlatformWeb" xml:space="preserve">
+    <value>Web App (PWA)</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="LaunchButton" xml:space="preserve">
+    <value>Open Web App</value>
+  </data>
+  <data name="UxMode_CatalogItem_Title" xml:space="preserve">
+    <value>Product Catalog</value>
+  </data>
+  <data name="UxMode_Configurator_Title" xml:space="preserve">
+    <value>Configurator / Customizer</value>
+  </data>
+  <data name="UxMode_BookableResource_Title" xml:space="preserve">
+    <value>Service &amp; Time Booking</value>
+  </data>
+  <data name="UxMode_TicketBooking_Title" xml:space="preserve">
+    <value>E-Ticket &amp; Event Booking</value>
+  </data>
+  <data name="UxMode_HotelAccommodation_Title" xml:space="preserve">
+    <value>Hotel Accommodation</value>
+  </data>
+  <data name="UxMode_VehicleRental_Title" xml:space="preserve">
+    <value>Vehicle &amp; Equipment Rental</value>
+  </data>
+  <data name="UxMode_DeliveryScheduled_Title" xml:space="preserve">
+    <value>Scheduled Delivery</value>
+  </data>
+  <data name="UxMode_LocationBased_Title" xml:space="preserve">
+    <value>Location-Based Service</value>
+  </data>
+  <data name="UxMode_Subscription_Title" xml:space="preserve">
+    <value>Subscription Plan</value>
+  </data>
+  <data name="UxMode_DigitalGoods_Title" xml:space="preserve">
+    <value>Digital Goods &amp; Download</value>
+  </data>
+  <data name="UxMode_OnlineService_Title" xml:space="preserve">
+    <value>Online Service</value>
+  </data>
+  <data name="UxMode_Donation_Title" xml:space="preserve">
+    <value>Donation &amp; Tips</value>
+  </data>
+  <data name="UxMode_GiftCertificate_Title" xml:space="preserve">
+    <value>Gift Certificate</value>
+  </data>
+  <data name="UxMode_PriceQuoteRequest_Title" xml:space="preserve">
+    <value>Price Quote Request (RFQ)</value>
+  </data>
+  <data name="UxMode_BiddingAuction_Title" xml:space="preserve">
+    <value>Auction &amp; Bidding</value>
+  </data>
+  <data name="UxMode_ListingClassified_Title" xml:space="preserve">
+    <value>Classified Listing</value>
+  </data>
+  <data name="UxMode_ServiceMarketplace_Title" xml:space="preserve">
+    <value>Services Marketplace</value>
+  </data>
+  <data name="UxMode_ProductBundle_Title" xml:space="preserve">
+    <value>Product Bundle</value>
+  </data>
+  <data name="UxMode_PriceCalculator_Title" xml:space="preserve">
+    <value>Price Calculator</value>
+  </data>
+  <data name="UxMode_ApplicationForm_Title" xml:space="preserve">
+    <value>Application Form</value>
+  </data>
+  <data name="UxMode_RaffleLottery_Title" xml:space="preserve">
+    <value>Raffle &amp; Lottery</value>
+  </data>
+  <data name="UxMode_PreOrder_Title" xml:space="preserve">
+    <value>Pre-Order</value>
+  </data>
+  <data name="UxMode_GroupBuy_Title" xml:space="preserve">
+    <value>Group Buy</value>
+  </data>
+  <data name="UxMode_Membership_Title" xml:space="preserve">
+    <value>Membership &amp; Pass</value>
+  </data>
+  <data name="UxMode_Crowdfunding_Title" xml:space="preserve">
+    <value>Crowdfunding</value>
+  </data>
+  <data name="UxMode_ExchangeTrading_Title" xml:space="preserve">
+    <value>Trading &amp; Exchange</value>
+  </data>
+  <data name="UxMode_ResourceReservation_Title" xml:space="preserve">
+    <value>Resource Reservation</value>
+  </data>
+  <data name="UxMode_HourlyService_Title" xml:space="preserve">
+    <value>Hourly Service</value>
+  </data>
+  <data name="Currency_Uzs" xml:space="preserve">
+    <value>UZS</value>
+  </data>
+  <data name="Auth_FaceId_Title" xml:space="preserve">
+    <value>Face ID (Biometrics)</value>
+  </data>
+  <data name="Auth_FaceId_Bound" xml:space="preserve">
+    <value>✅ Linked to account</value>
+  </data>
+  <data name="Auth_FaceId_Hint" xml:space="preserve">
+    <value>Login by looking at camera</value>
+  </data>
+  <data name="Auth_FaceId_Delete" xml:space="preserve">
+    <value>Delete biometrics</value>
+  </data>
+  <data name="Auth_NotLinked" xml:space="preserve">
+    <value>Not linked</value>
+  </data>
+  <data name="Auth_Passkeys_Subtitle" xml:space="preserve">
+    <value>Login with device Touch ID / Face ID</value>
+  </data>
+  <data name="Auth_Telegram_Subtitle" xml:space="preserve">
+    <value>Login via Telegram Widget</value>
+  </data>
+  <data name="FaceId_LookStraight" xml:space="preserve">
+    <value>🎯 Look straight</value>
+  </data>
+  <data name="FaceId_TurnLeft" xml:space="preserve">
+    <value>👈 Turn left</value>
+  </data>
+  <data name="FaceId_TurnRight" xml:space="preserve">
+    <value>👉 Turn right</value>
+  </data>
+  <data name="FaceId_CenterFace" xml:space="preserve">
+    <value>Position your face in the center of the circle to capture the 3D biometric template.</value>
+  </data>
+  <data name="Geo_Title" xml:space="preserve">
+    <value>Select Address &amp; Route</value>
+  </data>
+  <data name="Geo_Subtitle" xml:space="preserve">
+    <value>Specify delivery address or route waypoints for taxi</value>
+  </data>
+  <data name="Geo_DeliveryTab" xml:space="preserve">
+    <value>Scheduled Delivery</value>
+  </data>
+  <data name="Geo_TaxiTab" xml:space="preserve">
+    <value>Taxi / Courier (A ➔ B)</value>
+  </data>
+  <data name="Geo_DeliveryAddress" xml:space="preserve">
+    <value>Delivery Address</value>
+  </data>
+  <data name="Geo_DetectLocation" xml:space="preserve">
+    <value>Geolocation</value>
+  </data>
+  <data name="Geo_DeliveryZone" xml:space="preserve">
+    <value>Delivery zone:</value>
+  </data>
+  <data name="Geo_CentralZone" xml:space="preserve">
+    <value>Central District (Free over 150,000 UZS)</value>
+  </data>
+  <data name="Geo_PointA" xml:space="preserve">
+    <value>Point A (Pickup location)</value>
+  </data>
+  <data name="Geo_PointB" xml:space="preserve">
+    <value>Point B (Dropoff location)</value>
+  </data>
+  <data name="Geo_RouteDistance" xml:space="preserve">
+    <value>Route distance:</value>
+  </data>
+  <data name="Geo_EstimatedTime" xml:space="preserve">
+    <value>Estimated time:</value>
+  </data>
+  <data name="Geo_Km" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="Geo_Min" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="Geo_SaveLocation" xml:space="preserve">
+    <value>Save Location</value>
+  </data>
+  <data name="Checkout_HeaderTitle" xml:space="preserve">
+    <value>Select Payment Method &amp; Checkout</value>
+  </data>
+  <data name="Checkout_HeaderSubtitle" xml:space="preserve">
+    <value>Secure payment via partner gateways (Payme, Click, Uzum)</value>
+  </data>
+  <data name="Checkout_StepCart" xml:space="preserve">
+    <value>Cart</value>
+  </data>
+  <data name="Checkout_StepPayment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Checkout_StepFulfillment" xml:space="preserve">
+    <value>Fulfillment</value>
+  </data>
+  <data name="Checkout_SelectGateway" xml:space="preserve">
+    <value>Select Payment Service</value>
+  </data>
+  <data name="Checkout_CashbackBadge" xml:space="preserve">
+    <value>Cashback</value>
+  </data>
+  <data name="Checkout_ScanQrToPay" xml:space="preserve">
+    <value>📱 Scan to pay with</value>
+  </data>
+  <data name="Checkout_ScanQrHint" xml:space="preserve">
+    <value>Scan with your smartphone camera or tap the button below to open the app</value>
+  </data>
+  <data name="Checkout_OpenInApp" xml:space="preserve">
+    <value>Open in app</value>
+  </data>
+  <data name="Checkout_SplitPaymentTitle" xml:space="preserve">
+    <value>📊 Split Payment</value>
+  </data>
+  <data name="Checkout_SplitAutoBadge" xml:space="preserve">
+    <value>Automatic Split</value>
+  </data>
+  <data name="Checkout_SplitVendor" xml:space="preserve">
+    <value>To Vendor / Partner:</value>
+  </data>
+  <data name="Checkout_SplitCommission" xml:space="preserve">
+    <value>Platform commission:</value>
+  </data>
+  <data name="Checkout_TabOnline" xml:space="preserve">
+    <value>Online / QR</value>
+  </data>
+  <data name="Checkout_TabCash" xml:space="preserve">
+    <value>Cash on delivery</value>
+  </data>
+  <data name="Checkout_TotalLabel" xml:space="preserve">
+    <value>Total to pay:</value>
+  </data>
+  <data name="Checkout_PayButton" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Receipt_OfdTitle" xml:space="preserve">
+    <value>SOLIQ.UZ • OFD ELECTRONIC RECEIPT</value>
+  </data>
+  <data name="Receipt_InnLabel" xml:space="preserve">
+    <value>Tax ID (TIN):</value>
+  </data>
+  <data name="Receipt_TerminalLabel" xml:space="preserve">
+    <value>Terminal:</value>
+  </data>
+  <data name="Receipt_ReceiptNo" xml:space="preserve">
+    <value>Receipt #</value>
+  </data>
+  <data name="Receipt_MxikCode" xml:space="preserve">
+    <value>Commodity Code:</value>
+  </data>
+  <data name="Receipt_IncludingVat" xml:space="preserve">
+    <value>Incl. 12% VAT:</value>
+  </data>
+  <data name="Receipt_TotalToPay" xml:space="preserve">
+    <value>TOTAL AMOUNT:</value>
+  </data>
+  <data name="Receipt_VatAmount" xml:space="preserve">
+    <value>VAT Amount (12%):</value>
+  </data>
+  <data name="Receipt_PaymentMethod" xml:space="preserve">
+    <value>Payment method:</value>
+  </data>
+  <data name="Receipt_FiscalSign" xml:space="preserve">
+    <value>Fiscal Sign:</value>
+  </data>
+  <data name="Receipt_OfdHint" xml:space="preserve">
+    <value>Scan the QR code to verify the receipt in the Soliq app or at ofd.soliq.uz</value>
+  </data>
+  <data name="Receipt_VerifySoliq" xml:space="preserve">
+    <value>Verify on Soliq.uz</value>
+  </data>
+  <data name="Receipt_PrintEscPos" xml:space="preserve">
+    <value>Print Fiscal Receipt (ESC/POS)</value>
+  </data>
+  <data name="Cart_ItemsCount" xml:space="preserve">
+    <value>items</value>
+  </data>
+  <data name="Cart_EmptyTitle" xml:space="preserve">
+    <value>Your cart is empty</value>
+  </data>
+  <data name="Cart_EmptySubtitle" xml:space="preserve">
+    <value>Add products or services from the catalog</value>
+  </data>
+  <data name="Cart_VariantLabel" xml:space="preserve">
+    <value>Variant:</value>
+  </data>
+  <data name="Cart_PromoTitle" xml:space="preserve">
+    <value>Promo Code</value>
+  </data>
+  <data name="Cart_ApplyPromo" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Cart_PromoApplied" xml:space="preserve">
+    <value>✓ Promo code applied! Discount</value>
+  </data>
+  <data name="Cart_ShippingFee" xml:space="preserve">
+    <value>🚚 Delivery fee:</value>
+  </data>
+  <data name="Cart_Free" xml:space="preserve">
+    <value>FREE</value>
+  </data>
+  <data name="Cart_Subtotal" xml:space="preserve">
+    <value>Subtotal:</value>
+  </data>
+  <data name="Cart_Discount" xml:space="preserve">
+    <value>Discount:</value>
+  </data>
+  <data name="Cart_Shipping" xml:space="preserve">
+    <value>Shipping:</value>
+  </data>
+  <data name="Cart_Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="Cart_ProceedCheckout" xml:space="preserve">
+    <value>Proceed to Checkout</value>
+  </data>
+  <data name="Booking_DialogTitle" xml:space="preserve">
+    <value>Booking Details &amp; Voucher</value>
+  </data>
+  <data name="Booking_GuestName" xml:space="preserve">
+    <value>Guest / Passenger Full Name</value>
+  </data>
+  <data name="Booking_GuestNameHint" xml:space="preserve">
+    <value>Enter name as in ID</value>
+  </data>
+  <data name="Booking_DocumentNumber" xml:space="preserve">
+    <value>Passport / ID Document</value>
+  </data>
+  <data name="Booking_DocumentNumberHint" xml:space="preserve">
+    <value>Series and number (e.g., AA 1234567)</value>
+  </data>
+  <data name="Booking_GuestCount" xml:space="preserve">
+    <value>Number of Guests</value>
+  </data>
+  <data name="Booking_GuestCountHint" xml:space="preserve">
+    <value>From 1 to 20 people</value>
+  </data>
+  <data name="Booking_SpecialRequests" xml:space="preserve">
+    <value>Special Requests</value>
+  </data>
+  <data name="Booking_VoucherActive" xml:space="preserve">
+    <value>✓ Electronic voucher is active</value>
+  </data>
+  <data name="Booking_ReservationCode" xml:space="preserve">
+    <value>Booking code:</value>
+  </data>
+  <data name="Booking_ConfirmBtn" xml:space="preserve">
+    <value>Confirm Booking</value>
+  </data>
+  <data name="Booking_PrintVoucher" xml:space="preserve">
+    <value>Print Voucher</value>
+  </data>
+  <data name="Booking_SaveDetails" xml:space="preserve">
+    <value>Save Details</value>
+  </data>
+  <data name="Booking_QrHint" xml:space="preserve">
+    <value>Present this QR code upon check-in or inspection</value>
+  </data>
+  <data name="Config_CalcTitle" xml:space="preserve">
+    <value>🧮 Price Calculator</value>
+  </data>
+  <data name="Config_ConfigTitle" xml:space="preserve">
+    <value>⚙ Configurator &amp; Build</value>
+  </data>
+  <data name="Config_CalcPrompt" xml:space="preserve">
+    <value>Set the required volume/parameters for instant calculation of the final estimate:</value>
+  </data>
+  <data name="Config_TierLabel" xml:space="preserve">
+    <value>Complexity Level / Package:</value>
+  </data>
+  <data name="Config_TierBase" xml:space="preserve">
+    <value>Basic (1.0x)</value>
+  </data>
+  <data name="Config_TierStandard" xml:space="preserve">
+    <value>Standard (1.3x)</value>
+  </data>
+  <data name="Config_TierPremium" xml:space="preserve">
+    <value>Premium (1.6x)</value>
+  </data>
+  <data name="Config_UnitsLabel" xml:space="preserve">
+    <value>Number of units / Area (sq.m / pcs / hrs):</value>
+  </data>
+  <data name="Config_ExtraServices" xml:space="preserve">
+    <value>Related Services:</value>
+  </data>
+  <data name="Config_Express" xml:space="preserve">
+    <value>⚡ Express Departure (+50k)</value>
+  </data>
+  <data name="Config_ExtendedWarranty" xml:space="preserve">
+    <value>🛡 Extended Warranty (+80k)</value>
+  </data>
+  <data name="Config_ChooseComponents" xml:space="preserve">
+    <value>Select components and options to customize your configuration:</value>
+  </data>
+  <data name="Config_BaseVariant" xml:space="preserve">
+    <value>Base Execution Variant:</value>
+  </data>
+  <data name="Config_BaseTraditional" xml:space="preserve">
+    <value>Traditional</value>
+  </data>
+  <data name="Config_BaseThin" xml:space="preserve">
+    <value>Thin Crust</value>
+  </data>
+  <data name="Config_BaseCheeseEdge" xml:space="preserve">
+    <value>Cheese Crust (+15k)</value>
+  </data>
+  <data name="Config_ExtraOptions" xml:space="preserve">
+    <value>Additional Options &amp; Add-ons:</value>
+  </data>
+  <data name="Config_OptCheese" xml:space="preserve">
+    <value>🧀 Double Cheese (+10k)</value>
+  </data>
+  <data name="Config_OptPepperoni" xml:space="preserve">
+    <value>🥓 Premium Topping (+12k)</value>
+  </data>
+  <data name="Config_OptMushrooms" xml:space="preserve">
+    <value>🍄 Fresh Mushrooms (+8k)</value>
+  </data>
+  <data name="Config_OptJalapeno" xml:space="preserve">
+    <value>🫑 Spicy Pepper (+5k)</value>
+  </data>
+  <data name="Config_CalculatedTotal" xml:space="preserve">
+    <value>Calculated Total:</value>
+  </data>
+  <data name="Config_ApplyCalc" xml:space="preserve">
+    <value>Apply Calculation</value>
+  </data>
+  <data name="Config_ConfirmBuild" xml:space="preserve">
+    <value>Confirm Build</value>
+  </data>
+  <data name="Lottery_Title" xml:space="preserve">
+    <value>🎟 Raffle &amp; Lottery:</value>
+  </data>
+  <data name="Lottery_Jackpot" xml:space="preserve">
+    <value>Draw Jackpot:</value>
+  </data>
+  <data name="Lottery_DrawDate" xml:space="preserve">
+    <value>📅 Draw Date:</value>
+  </data>
+  <data name="Lottery_DrawNo" xml:space="preserve">
+    <value>Draw #:</value>
+  </data>
+  <data name="Lottery_TicketCountLabel" xml:space="preserve">
+    <value>Number of Lottery Tickets:</value>
+  </data>
+  <data name="Lottery_1Ticket" xml:space="preserve">
+    <value>1 ticket</value>
+  </data>
+  <data name="Lottery_3Tickets" xml:space="preserve">
+    <value>3 tickets</value>
+  </data>
+  <data name="Lottery_5Tickets" xml:space="preserve">
+    <value>5 tickets</value>
+  </data>
+  <data name="Lottery_10Tickets" xml:space="preserve">
+    <value>10 tickets</value>
+  </data>
+  <data name="Lottery_YourNumbers" xml:space="preserve">
+    <value>Your Lucky Numbers in the Draw:</value>
+  </data>
+  <data name="Lottery_RandomNumbers" xml:space="preserve">
+    <value>Random Numbers</value>
+  </data>
+  <data name="Lottery_BetAmount" xml:space="preserve">
+    <value>Bet Amount</value>
+  </data>
+  <data name="Lottery_BuyTickets" xml:space="preserve">
+    <value>Buy Tickets</value>
+  </data>
+  <data name="Bundle_ComboTitle" xml:space="preserve">
+    <value>Great Value Combo Bundle</value>
+  </data>
+  <data name="Bundle_ComboSubtitle" xml:space="preserve">
+    <value>All essential items in one pack with a guaranteed discount</value>
+  </data>
+  <data name="Bundle_Savings" xml:space="preserve">
+    <value>Savings</value>
+  </data>
+  <data name="Bundle_Composition" xml:space="preserve">
+    <value>Bundle Contents / Included Services:</value>
+  </data>
+  <data name="Bundle_MainItem" xml:space="preserve">
+    <value>Primary Bundle Product</value>
+  </data>
+  <data name="Bundle_MainItemDesc" xml:space="preserve">
+    <value>High quality base item</value>
+  </data>
+  <data name="Bundle_Included" xml:space="preserve">
+    <value>Included</value>
+  </data>
+  <data name="Bundle_Accessory" xml:space="preserve">
+    <value>Branded Accessory / Extra Service</value>
+  </data>
+  <data name="Bundle_AccessoryDesc" xml:space="preserve">
+    <value>Gift add-on with your order</value>
+  </data>
+  <data name="Bundle_Bonus" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Bundle_Service" xml:space="preserve">
+    <value>Premium Care &amp; Extended Warranty</value>
+  </data>
+  <data name="Bundle_ServiceDesc" xml:space="preserve">
+    <value>Priority support and dedicated service</value>
+  </data>
+  <data name="Bundle_BuyBundle" xml:space="preserve">
+    <value>Buy Bundle</value>
+  </data>
+  <data name="Quote_AppFormTitle" xml:space="preserve">
+    <value>📑 Application / Service Request</value>
+  </data>
+  <data name="Quote_RfqTitle" xml:space="preserve">
+    <value>📋 Request for Quote (RFQ)</value>
+  </data>
+  <data name="Quote_AppFormPrompt" xml:space="preserve">
+    <value>Complete the official application form for evaluation by our specialists:</value>
+  </data>
+  <data name="Quote_RfqPrompt" xml:space="preserve">
+    <value>Describe object specifications or attach project requirements for an accurate estimate:</value>
+  </data>
+  <data name="Quote_ApplicantName" xml:space="preserve">
+    <value>Applicant Full Name</value>
+  </data>
+  <data name="Quote_ApplicantNameHint" xml:space="preserve">
+    <value>Full name matching passport</value>
+  </data>
+  <data name="Quote_Document" xml:space="preserve">
+    <value>Passport / ID Card</value>
+  </data>
+  <data name="Quote_DocumentHint" xml:space="preserve">
+    <value>Series and number</value>
+  </data>
+  <data name="Quote_Phone" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Quote_Purpose" xml:space="preserve">
+    <value>Application Purpose / Remarks</value>
+  </data>
+  <data name="Quote_ProjectNotes" xml:space="preserve">
+    <value>Project Notes / Scope Parameters</value>
+  </data>
+  <data name="Quote_ProjectNotesHint" xml:space="preserve">
+    <value>Floor area, material requirements, deadlines</value>
+  </data>
+  <data name="Quote_ContactChannel" xml:space="preserve">
+    <value>Phone / Telegram</value>
+  </data>
+  <data name="Quote_ContactChannelHint" xml:space="preserve">
+    <value>To deliver the prepared commercial proposal</value>
+  </data>
+  <data name="Quote_AppFree" xml:space="preserve">
+    <value>Application submission is free</value>
+  </data>
+  <data name="Quote_RfqFree" xml:space="preserve">
+    <value>Preliminary estimate: free</value>
+  </data>
+  <data name="Quote_SubmitApp" xml:space="preserve">
+    <value>Submit Application</value>
+  </data>
+  <data name="Quote_SubmitRfq" xml:space="preserve">
+    <value>Submit RFQ</value>
+  </data>
+  <data name="Donation_CrowdTitle" xml:space="preserve">
+    <value>🚀 Crowdfunding / Fundraising</value>
+  </data>
+  <data name="Donation_CharityTitle" xml:space="preserve">
+    <value>❤️ Charity / Donation</value>
+  </data>
+  <data name="Donation_Raised" xml:space="preserve">
+    <value>Raised:</value>
+  </data>
+  <data name="Donation_Goal" xml:space="preserve">
+    <value>Goal:</value>
+  </data>
+  <data name="Donation_Sponsors" xml:space="preserve">
+    <value>backers</value>
+  </data>
+  <data name="Donation_Days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Donation_SelectReward" xml:space="preserve">
+    <value>Select a backer tier or specify a custom donation amount:</value>
+  </data>
+  <data name="Donation_SelectAmount" xml:space="preserve">
+    <value>Choose or enter a voluntary contribution amount:</value>
+  </data>
+  <data name="Donation_CustomAmount" xml:space="preserve">
+    <value>Custom contribution amount (UZS)</value>
+  </data>
+  <data name="Donation_SupportProject" xml:space="preserve">
+    <value>Support Project</value>
+  </data>
+  <data name="Donation_Donate" xml:space="preserve">
+    <value>Donate</value>
+  </data>
+  <data name="GroupBuy_PreOrderTitle" xml:space="preserve">
+    <value>⏳ Pre-order New Arrival</value>
+  </data>
+  <data name="GroupBuy_GroupTitle" xml:space="preserve">
+    <value>👥 Group Buy</value>
+  </data>
+  <data name="GroupBuy_ShipmentStart" xml:space="preserve">
+    <value>Official shipment launch:</value>
+  </data>
+  <data name="GroupBuy_DaysLeft" xml:space="preserve">
+    <value>In 14 days</value>
+  </data>
+  <data name="GroupBuy_ExpectedDate" xml:space="preserve">
+    <value>📅 Expected date:</value>
+  </data>
+  <data name="GroupBuy_Queue" xml:space="preserve">
+    <value>Queue: #28 in pre-order</value>
+  </data>
+  <data name="GroupBuy_PriceLock" xml:space="preserve">
+    <value>First batch price lock guarantee</value>
+  </data>
+  <data name="GroupBuy_PriceLockDesc" xml:space="preserve">
+    <value>If market price rises after release, your price remains fixed.</value>
+  </data>
+  <data name="GroupBuy_PreOrderPrompt" xml:space="preserve">
+    <value>Reserve the item among the first immediately after customs clearance and warehouse arrival.</value>
+  </data>
+  <data name="GroupBuy_Gathered" xml:space="preserve">
+    <value>Joined: 7 of 10 participants</value>
+  </data>
+  <data name="GroupBuy_DiscountBadge" xml:space="preserve">
+    <value>Discount -25%</value>
+  </data>
+  <data name="GroupBuy_JoinPrompt" xml:space="preserve">
+    <value>Join the group! The discounted price will be {0} UZS when 3 more people join.</value>
+  </data>
+  <data name="GroupBuy_ToPay" xml:space="preserve">
+    <value>To pay:</value>
+  </data>
+  <data name="GroupBuy_PreOrderBtn" xml:space="preserve">
+    <value>Place Pre-order</value>
+  </data>
+  <data name="GroupBuy_JoinBtn" xml:space="preserve">
+    <value>Join Group</value>
+  </data>
+  <data name="Search_Placeholder" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="Payment_FaceIdBiometrics" xml:space="preserve">
+    <value>👁️ Face ID (Biometrics)</value>
+  </data>
+  <data name="Payment_SslSafe" xml:space="preserve">
+    <value>256-bit SSL • Secure Payments</value>
+  </data>
+  <data name="Payment_CustomerCare" xml:space="preserve">
+    <value>Customer Care Service</value>
+  </data>
+  <data name="Order_ByRequirements" xml:space="preserve">
+    <value>By Spec</value>
+  </data>
+  <data name="Common_Decrease" xml:space="preserve">
+    <value>Decrease</value>
+  </data>
+  <data name="Common_Increase" xml:space="preserve">
+    <value>Increase</value>
+  </data>
+  <data name="Common_DeleteItem" xml:space="preserve">
+    <value>Delete item</value>
+  </data>
+  <data name="Booking_PickTitle" xml:space="preserve">
+    <value>Booking Selection</value>
+  </data>
+  <data name="Booking_PickSubtitle" xml:space="preserve">
+    <value>Specify the desired date, resource and time slot</value>
+  </data>
+  <data name="Booking_TabTable" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Booking_TabRoom" xml:space="preserve">
+    <value>Room / Hotel</value>
+  </data>
+  <data name="Booking_TabSpecialist" xml:space="preserve">
+    <value>Specialist</value>
+  </data>
+  <data name="Booking_TabCar" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="Booking_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Booking_Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Booking_Weekend" xml:space="preserve">
+    <value>Weekend</value>
+  </data>
+  <data name="Booking_Plus7Days" xml:space="preserve">
+    <value>+7 days</value>
+  </data>
+  <data name="Booking_DateLabel" xml:space="preserve">
+    <value>Booking Date</value>
+  </data>
+  <data name="Booking_HallScheme" xml:space="preserve">
+    <value>🗺️ Interactive Hall Layout</value>
+  </data>
+  <data name="Booking_HallSchemeHint" xml:space="preserve">
+    <value>Click on an available table to select</value>
+  </data>
+  <data name="Booking_AvailableSlots" xml:space="preserve">
+    <value>Available Time Slots</value>
+  </data>
+  <data name="Booking_ResetChoice" xml:space="preserve">
+    <value>Reset Selection</value>
+  </data>
+  <data name="Booking_ConfirmChoice" xml:space="preserve">
+    <value>Confirm Selection</value>
+  </data>
+  <data name="Booking_AtTime" xml:space="preserve">
+    <value>at</value>
+  </data>
+  <data name="Chat_WelcomeTitle" xml:space="preserve">
+    <value>👋 Welcome to Socratic Intelligent Assistant!</value>
+  </data>
+  <data name="Chat_WelcomeSubtitle" xml:space="preserve">
+    <value>I will quickly assist you with any questions across the platform:</value>
+  </data>
+  <data name="Chat_RoleBuyers" xml:space="preserve">
+    <value>For Customers:</value>
+  </data>
+  <data name="Chat_WelcomeBuyers" xml:space="preserve">
+    <value>finding goods and services, bookings, checkout and delivery</value>
+  </data>
+  <data name="Chat_RoleOwners" xml:space="preserve">
+    <value>For Business Owners:</value>
+  </data>
+  <data name="Chat_WelcomeOwners" xml:space="preserve">
+    <value>launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation</value>
+  </data>
+  <data name="Chat_RoleStaff" xml:space="preserve">
+    <value>For Employees:</value>
+  </data>
+  <data name="Chat_WelcomeStaff" xml:space="preserve">
+    <value>cash register, orders, product catalog, payments and POS terminals</value>
+  </data>
+  <data name="Schedule_NotSet" xml:space="preserve">
+    <value>Schedule not set</value>
+  </data>
+  <data name="Schedule_AllWeekends" xml:space="preserve">
+    <value>Closed all week</value>
+  </data>
+  <data name="Schedule_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Schedule_DaysShort" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Common_Configure" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="Schedule_ResetSchedule" xml:space="preserve">
+    <value>Reset schedule</value>
+  </data>
+  <data name="Schedule_Title" xml:space="preserve">
+    <value>Work Schedule Settings</value>
+  </data>
+  <data name="Schedule_QuickPresets" xml:space="preserve">
+    <value>Quick Presets:</value>
+  </data>
+  <data name="Schedule_Weekdays" xml:space="preserve">
+    <value>Weekdays 09:00–18:00</value>
+  </data>
+  <data name="Schedule_Retail" xml:space="preserve">
+    <value>All days 10:00–22:00</value>
+  </data>
+  <data name="Schedule_247" xml:space="preserve">
+    <value>24/7 (Round-the-clock)</value>
+  </data>
+  <data name="Schedule_ResetAll" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="Schedule_WorkingDays" xml:space="preserve">
+    <value>Working Days &amp; Hours</value>
+  </data>
+  <data name="Schedule_Timezone" xml:space="preserve">
+    <value>Time Zone</value>
+  </data>
+  <data name="Schedule_WorkingDay" xml:space="preserve">
+    <value>Working day</value>
+  </data>
+  <data name="Schedule_DayOff" xml:space="preserve">
+    <value>Day off</value>
+  </data>
+  <data name="OAuth_PageTitleGoogle" xml:space="preserve">
+    <value>Google Authorization - Socratic</value>
+  </data>
+  <data name="OAuth_PageTitleTelegram" xml:space="preserve">
+    <value>Telegram Authorization - Socratic</value>
+  </data>
+  <data name="OAuth_AuthError" xml:space="preserve">
+    <value>Authorization Error</value>
+  </data>
+  <data name="OAuth_Retry" xml:space="preserve">
+    <value>Retry Sign-in</value>
+  </data>
+  <data name="OAuth_Close" xml:space="preserve">
+    <value>Close window</value>
+  </data>
+  <data name="OAuth_GoogleTitle" xml:space="preserve">
+    <value>Sign in with Google</value>
+  </data>
+  <data name="OAuth_TelegramTitle" xml:space="preserve">
+    <value>Sign in with Telegram</value>
+  </data>
+  <data name="OAuth_GoogleProcessing" xml:space="preserve">
+    <value>Verifying credentials and setting up profile...</value>
+  </data>
+  <data name="OAuth_TelegramProcessing" xml:space="preserve">
+    <value>Verifying auth signature and setting up profile...</value>
+  </data>
+  <data name="Kiosk_OrgSwitchTitleDemo" xml:space="preserve">
+    <value>Business or franchise owner?</value>
+  </data>
+  <data name="Kiosk_OrgSwitchDescDemo" xml:space="preserve">
+    <value>Connect your establishment to the Socratic ecosystem, choose a cloud POS plan, or apply for organization registration.</value>
+  </data>
+  <data name="Kiosk_OrgSwitchBtnDemo" xml:space="preserve">
+    <value>Socratic plans and connection →</value>
+  </data>
+  <data name="Kiosk_OrgSwitchTitleSocratic" xml:space="preserve">
+    <value>Interactive Showroom (28 UX modes)</value>
+  </data>
+  <data name="Kiosk_OrgSwitchDescSocratic" xml:space="preserve">
+    <value>Explore industry-ready scenarios: restaurant menu, pizza configurator, tickets, hotels, car rental, delivery, and QR menu.</value>
+  </data>
+  <data name="Kiosk_OrgSwitchBtnSocratic" xml:space="preserve">
+    <value>Open Demo Showroom →</value>
+  </data>
+  <data name="Kiosk_UxModeLabel" xml:space="preserve">
+    <value>UX Mode:</value>
+  </data>
+  <data name="Kiosk_AllUxModes" xml:space="preserve">
+    <value>All (28)</value>
+  </data>
+  <data name="Kiosk_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Kiosk_EmptyTitle" xml:space="preserve">
+    <value>Nothing found</value>
+  </data>
+  <data name="Kiosk_EmptyDesc" xml:space="preserve">
+    <value>Try changing the search query or resetting categories</value>
+  </data>
+  <data name="Kiosk_ResetFilters" xml:space="preserve">
+    <value>Reset filters</value>
+  </data>
+  <data name="UX_Bid" xml:space="preserve">
+    <value>Place Bid</value>
+  </data>
+  <data name="UX_JoinGroup" xml:space="preserve">
+    <value>Join Group</value>
+  </data>
+  <data name="UX_Book" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="UX_BuyTicket" xml:space="preserve">
+    <value>Buy Ticket</value>
+  </data>
+  <data name="UX_BookRoom" xml:space="preserve">
+    <value>Book Room</value>
+  </data>
+  <data name="UX_Rent" xml:space="preserve">
+    <value>Rent</value>
+  </data>
+  <data name="UX_Route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="UX_Subscribe" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="UX_Donate" xml:space="preserve">
+    <value>Donate</value>
+  </data>
+  <data name="UX_QuoteRequest" xml:space="preserve">
+    <value>Request Quote</value>
+  </data>
+  <data name="UX_Configure" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="UX_ChooseTime" xml:space="preserve">
+    <value>Choose Time</value>
+  </data>
+  <data name="UX_BuyTopUp" xml:space="preserve">
+    <value>Buy / Top Up</value>
+  </data>
+  <data name="UX_Connect" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="UX_Gift" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="UX_ViewP2P" xml:space="preserve">
+    <value>View P2P</value>
+  </data>
+  <data name="UX_CallMaster" xml:space="preserve">
+    <value>Call Specialist</value>
+  </data>
+  <data name="UX_ChooseTour" xml:space="preserve">
+    <value>Choose Tour</value>
+  </data>
+  <data name="UX_Calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="UX_ApplyForm" xml:space="preserve">
+    <value>Submit Application</value>
+  </data>
+  <data name="UX_Participate" xml:space="preserve">
+    <value>Participate</value>
+  </data>
+  <data name="UX_PreOrder" xml:space="preserve">
+    <value>Pre-order</value>
+  </data>
+  <data name="UX_JoinClub" xml:space="preserve">
+    <value>Join Club</value>
+  </data>
+  <data name="UX_Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="UX_ExchangeP2P" xml:space="preserve">
+    <value>Exchange P2P</value>
+  </data>
+  <data name="UX_Reserve" xml:space="preserve">
+    <value>Reserve</value>
+  </data>
+  <data name="UX_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="ProductVariant_SelectConfig" xml:space="preserve">
+    <value>Choose SKU configuration and additions</value>
+  </data>
+  <data name="ProductVariant_Sku" xml:space="preserve">
+    <value>Variant / SKU</value>
+  </data>
+  <data name="ProductVariant_Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="ProductVariant_AddToCart" xml:space="preserve">
+    <value>Add to Cart</value>
+  </data>
+  <data name="Store_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Store_Showcase" xml:space="preserve">
+    <value>Showcase</value>
+  </data>
+  <data name="Store_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="Store_NotFoundTitle" xml:space="preserve">
+    <value>Product or service not found</value>
+  </data>
+  <data name="Store_NotFoundDesc" xml:space="preserve">
+    <value>The item may have been unlisted or the link has expired.</value>
+  </data>
+  <data name="Store_BackToShowcase" xml:space="preserve">
+    <value>Back to showcase</value>
+  </data>
+  <data name="Store_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Store_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Store_Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Store_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Store_Liters" xml:space="preserve">
+    <value>l</value>
+  </data>
+  <data name="Store_Availability" xml:space="preserve">
+    <value>Availability</value>
+  </data>
+  <data name="Store_InStock" xml:space="preserve">
+    <value>In Stock</value>
+  </data>
+  <data name="Store_OrderInKiosk" xml:space="preserve">
+    <value>Order in online kiosk</value>
+  </data>
+  <data name="Store_Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="Store_LinkCopied" xml:space="preserve">
+    <value>Link copied to clipboard!</value>
+  </data>
+  <data name="Store_AllOrgProducts" xml:space="preserve">
+    <value>All products and services →</value>
+  </data>
+  <data name="Store_OfficialOrg" xml:space="preserve">
+    <value>Official establishment</value>
+  </data>
+  <data name="Store_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Store_CatalogFallback" xml:space="preserve">
+    <value>Store catalog</value>
+  </data>
+  <data name="Store_OpenSmartKiosk" xml:space="preserve">
+    <value>Open smart kiosk</value>
+  </data>
+  <data name="Store_QrMenu" xml:space="preserve">
+    <value>QR Menu</value>
+  </data>
+  <data name="Store_SearchPlaceholder" xml:space="preserve">
+    <value>Search products and services...</value>
+  </data>
+  <data name="Store_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Store_ProductsNotFound" xml:space="preserve">
+    <value>Products not found</value>
+  </data>
+  <data name="Store_TryChangeSearch" xml:space="preserve">
+    <value>Try changing search parameters or choose another category.</value>
+  </data>
+  <data name="Store_DetailsArrow" xml:space="preserve">
+    <value>Details →</value>
+  </data>
+  <data name="Common_CurrencySum" xml:space="preserve">
+    <value>UZS</value>
+  </data>
+  <data name="Settings_ThemeTitle" xml:space="preserve">
+    <value>Theme Mode</value>
+  </data>
+  <data name="Settings_ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Settings_ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Settings_ThemeAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Settings_AccentColor" xml:space="preserve">
+    <value>Accent Color</value>
+  </data>
+  <data name="Kiosk_Auction_MinBid" xml:space="preserve">
+    <value>Min. bid:</value>
+  </data>
+  <data name="Kiosk_Auction_Ending" xml:space="preserve">
+    <value>Ending</value>
+  </data>
+  <data name="Kiosk_Auction_Bids" xml:space="preserve">
+    <value>bids</value>
+  </data>
+  <data name="Kiosk_GroupBuy_Collected" xml:space="preserve">
+    <value>Collected</value>
+  </data>
+  <data name="Kiosk_Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Kiosk_Ticket_Hall" xml:space="preserve">
+    <value>Hall #1 • Parterre</value>
+  </data>
+  <data name="Kiosk_Ticket_QrVoucher" xml:space="preserve">
+    <value>QR Voucher</value>
+  </data>
+  <data name="Kiosk_Hotel_Nights" xml:space="preserve">
+    <value>2 Nights • Breakfast</value>
+  </data>
+  <data name="Kiosk_Hotel_Balcony" xml:space="preserve">
+    <value>Balcony</value>
+  </data>
+  <data name="Kiosk_Vehicle_Electric" xml:space="preserve">
+    <value>Electric • 5 Seats</value>
+  </data>
+  <data name="Kiosk_Vehicle_Insurance" xml:space="preserve">
+    <value>CASCO</value>
+  </data>
+  <data name="Kiosk_Location_PointAB" xml:space="preserve">
+    <value>Point A ➔ B</value>
+  </data>
+  <data name="Kiosk_MinutesShort" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="Kiosk_Subscription_PlanPro" xml:space="preserve">
+    <value>PRO Plan</value>
+  </data>
+  <data name="Kiosk_Subscription_CancelAnytime" xml:space="preserve">
+    <value>Cancel 24/7</value>
+  </data>
+  <data name="Kiosk_Quote_EngineerEstimate" xml:space="preserve">
+    <value>Quote calculation per tech requirements</value>
+  </data>
+  <data name="Common_LangRu" xml:space="preserve">
+    <value>RUS</value>
+  </data>
+  <data name="Common_LangUz" xml:space="preserve">
+    <value>UZB</value>
+  </data>
+  <data name="Common_LangEn" xml:space="preserve">
+    <value>ENG</value>
+  </data>
+</root>

@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Организации и заведения</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Отменен</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Карта</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Наличные</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="Collected" xml:space="preserve">
+    <value>Собрано</value>
+  </data>
+  <data name="Collecting" xml:space="preserve">
+    <value>Сбирается</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Готов</value>
+  </data>
+  <data name="Control panel" xml:space="preserve">
+    <value>Панель управления</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="Create product" xml:space="preserve">
+    <value>Создать продукт</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Неоплачен</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>Округ</value>
+  </data>
+  <data name="Edit organization" xml:space="preserve">
+    <value>Редактировать организацию</value>
+  </data>
+  <data name="Edit profile" xml:space="preserve">
+    <value>Редактировать профиль</value>
+  </data>
+  <data name="En" xml:space="preserve">
+    <value>Ан</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Зеленый</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>Дом</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="Accent" xml:space="preserve">
+    <value>Акцент</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Палитра</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="Made" xml:space="preserve">
+    <value>Сделано</value>
+  </data>
+  <data name="Making" xml:space="preserve">
+    <value>Делается</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="New organization" xml:space="preserve">
+    <value>Новая организация</value>
+  </data>
+  <data name="New product" xml:space="preserve">
+    <value>Новый продукт</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Онлайн</value>
+  </data>
+  <data name="Order products" xml:space="preserve">
+    <value>Заказывать продукты</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Статус заказа</value>
+  </data>
+  <data name="Organizations" xml:space="preserve">
+    <value>Организации</value>
+  </data>
+  <data name="OwnerId" xml:space="preserve">
+    <value>ID владелеца</value>
+  </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Оплачен</value>
+  </data>
+  <data name="ParentId" xml:space="preserve">
+    <value>Id родителя</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Оплата</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Способ оплаты</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Разрешение</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="Places" xml:space="preserve">
+    <value>Места</value>
+  </data>
+  <data name="Preparing" xml:space="preserve">
+    <value>Готовится</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Тип продукта</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Профили</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Область</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Роли</value>
+  </data>
+  <data name="Ru" xml:space="preserve">
+    <value>Ру</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Shipping" xml:space="preserve">
+    <value>Доставляется</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>Сум</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Поддержка</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Терминал</value>
+  </data>
+  <data name="ThemeColor" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="Total amount" xml:space="preserve">
+    <value>Общая сумма</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Единица</value>
+  </data>
+  <data name="Upload image" xml:space="preserve">
+    <value>Загрузить изображение</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+  <data name="Uz" xml:space="preserve">
+    <value>Уз</value>
+  </data>
+  <data name="Wish list" xml:space="preserve">
+    <value>Избранное</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>Желтый</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Created at" xml:space="preserve">
+    <value>Создан в</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="Create organization" xml:space="preserve">
+    <value>Создать организацию</value>
+  </data>
+  <data name="Kiosk" xml:space="preserve">
+    <value>Киоск</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="msah1" xml:space="preserve">
+    <value>Добро пожаловать в Socratic:</value>
+  </data>
+  <data name="msah2" xml:space="preserve">
+    <value>Ваша универсальная экосистема для автоматизации бизнеса и торговли</value>
+  </data>
+  <data name="msaa" xml:space="preserve">
+    <value>Начать</value>
+  </data>
+  <data name="ms2ah" xml:space="preserve">
+    <value>Выведите свой бизнес на новый уровень с помощью Socratic</value>
+  </data>
+  <data name="ms2ap" xml:space="preserve">
+    <value>В Socratic мы создаем экосистему полного цикла: от смарт-киосков самообслуживания и онлайн-каталогов до складского учета, AI-аналитики и приема платежей. Наша платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.</value>
+  </data>
+  <data name="ms3ah" xml:space="preserve">
+    <value>Что мы предлагаем:</value>
+  </data>
+  <data name="ms3aul1" xml:space="preserve">
+    <value>Универсальный каталог товаров и услуг: Без особых усилий управляйте номенклатурой, услугами, тарифами и билетами с синхронизацией в реальном времени.</value>
+  </data>
+  <data name="ms3aul2" xml:space="preserve">
+    <value>Управление заказами и бронированием: От оформления в киоске или приложении до исполнения и выдачи. Отслеживание статусов в режиме реального времени и сокращение времени обслуживания.</value>
+  </data>
+  <data name="ms3aul3" xml:space="preserve">
+    <value>Вовлечение и Face ID лояльность: Персональные профили клиентов, история заказов, избранное и распознавание лиц для мгновенной персонализации.</value>
+  </data>
+  <data name="ms3aul4" xml:space="preserve">
+    <value>Доступ на основе ролей: защитите свою платформу, контролируя, кто и что видит. Разные роли означают разные уровни доступа, что обеспечивает безопасность ваших данных и бесперебойную работу.</value>
+  </data>
+  <data name="ms3aul5" xml:space="preserve">
+    <value>Сквозная аналитика: Получайте глубокие инсайты об эффективности продаж, остатках на складах, конверсиях и предпочтениях аудитории для принятия data-driven решений.</value>
+  </data>
+  <data name="ms4ah" xml:space="preserve">
+    <value>Почему стоит выбрать Socratic?</value>
+  </data>
+  <data name="ms4aul1" xml:space="preserve">
+    <value>Удобный интерфейс: Простая в навигации и разработанная для повышения эффективности, наша платформа сводит к минимуму время обучения и максимизирует производительность.</value>
+  </data>
+  <data name="ms4aul2" xml:space="preserve">
+    <value>Масштабируемые решения: От небольшого магазина или сервисной точки до крупной омниканальной сети — Socratic масштабируется вместе с вами.</value>
+  </data>
+  <data name="ms4aul3" xml:space="preserve">
+    <value>Поддержка 24/7: Наша специализированная команда по работе с клиентами готова поддерживать вас круглосуточно, гарантируя, что вы получите максимальную отдачу от нашей платформы.</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Системная</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Темная</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="DownloadTitle" xml:space="preserve">
+    <value>Скачать Socratic UI</value>
+  </data>
+  <data name="DownloadSubTitle" xml:space="preserve">
+    <value>Доступ к Socratic в любом месте. Поддержка десктопных, мобильных и веб-платформ.</value>
+  </data>
+  <data name="ScanQrText" xml:space="preserve">
+    <value>Отсканируйте QR-код для мобильных устройств</value>
+  </data>
+  <data name="PlatformWindows" xml:space="preserve">
+    <value>Windows (x64 / ARM64)</value>
+  </data>
+  <data name="PlatformAndroid" xml:space="preserve">
+    <value>Android (APK / Play Store)</value>
+  </data>
+  <data name="PlatformIOS" xml:space="preserve">
+    <value>iOS / iPadOS</value>
+  </data>
+  <data name="PlatformMacOS" xml:space="preserve">
+    <value>macOS (Apple Silicon &amp; Intel)</value>
+  </data>
+  <data name="PlatformWeb" xml:space="preserve">
+    <value>Веб-приложение (PWA)</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="LaunchButton" xml:space="preserve">
+    <value>Открыть Веб-приложение</value>
+  </data>
+  <data name="UxMode_CatalogItem_Title" xml:space="preserve">
+    <value>Каталог товаров</value>
+  </data>
+  <data name="UxMode_Configurator_Title" xml:space="preserve">
+    <value>Конфигуратор / Мастер сборки</value>
+  </data>
+  <data name="UxMode_BookableResource_Title" xml:space="preserve">
+    <value>Бронирование услуги/времени</value>
+  </data>
+  <data name="UxMode_TicketBooking_Title" xml:space="preserve">
+    <value>Электронный билет / Мероприятие</value>
+  </data>
+  <data name="UxMode_HotelAccommodation_Title" xml:space="preserve">
+    <value>Размещение / Гостиница</value>
+  </data>
+  <data name="UxMode_VehicleRental_Title" xml:space="preserve">
+    <value>Аренда транспорта / Оборудования</value>
+  </data>
+  <data name="UxMode_DeliveryScheduled_Title" xml:space="preserve">
+    <value>Доставка по адресу</value>
+  </data>
+  <data name="UxMode_LocationBased_Title" xml:space="preserve">
+    <value>Гео-сервис / Точка А ➔ Б</value>
+  </data>
+  <data name="UxMode_Subscription_Title" xml:space="preserve">
+    <value>Тариф / Регулярная подписка</value>
+  </data>
+  <data name="UxMode_DigitalGoods_Title" xml:space="preserve">
+    <value>Цифровой продукт / Скачивание</value>
+  </data>
+  <data name="UxMode_OnlineService_Title" xml:space="preserve">
+    <value>Онлайн-сервис / Доступ в продукт</value>
+  </data>
+  <data name="UxMode_Donation_Title" xml:space="preserve">
+    <value>Благотворительность / Донат</value>
+  </data>
+  <data name="UxMode_GiftCertificate_Title" xml:space="preserve">
+    <value>Подарочный сертификат</value>
+  </data>
+  <data name="UxMode_PriceQuoteRequest_Title" xml:space="preserve">
+    <value>Запрос расчёта сметы (RFQ)</value>
+  </data>
+  <data name="UxMode_BiddingAuction_Title" xml:space="preserve">
+    <value>Аукцион / Торги</value>
+  </data>
+  <data name="UxMode_ListingClassified_Title" xml:space="preserve">
+    <value>Объявление / P2P-площадка</value>
+  </data>
+  <data name="UxMode_ServiceMarketplace_Title" xml:space="preserve">
+    <value>Биржа услуг и исполнителей</value>
+  </data>
+  <data name="UxMode_ProductBundle_Title" xml:space="preserve">
+    <value>Комплект / Набор / Тур</value>
+  </data>
+  <data name="UxMode_PriceCalculator_Title" xml:space="preserve">
+    <value>Калькулятор стоимости</value>
+  </data>
+  <data name="UxMode_ApplicationForm_Title" xml:space="preserve">
+    <value>Анкета / Заявка на услугу</value>
+  </data>
+  <data name="UxMode_RaffleLottery_Title" xml:space="preserve">
+    <value>Лотерея / Розыгрыш</value>
+  </data>
+  <data name="UxMode_PreOrder_Title" xml:space="preserve">
+    <value>Предзаказ новинки</value>
+  </data>
+  <data name="UxMode_GroupBuy_Title" xml:space="preserve">
+    <value>Совместная покупка</value>
+  </data>
+  <data name="UxMode_Membership_Title" xml:space="preserve">
+    <value>Абонемент / VIP-клуб</value>
+  </data>
+  <data name="UxMode_Crowdfunding_Title" xml:space="preserve">
+    <value>Краудфандинг / Сбор средств</value>
+  </data>
+  <data name="UxMode_ExchangeTrading_Title" xml:space="preserve">
+    <value>Торговая площадка / P2P Обмен</value>
+  </data>
+  <data name="UxMode_ResourceReservation_Title" xml:space="preserve">
+    <value>Резервирование ресурса</value>
+  </data>
+  <data name="UxMode_HourlyService_Title" xml:space="preserve">
+    <value>Почасовая услуга</value>
+  </data>
+  <data name="Currency_Uzs" xml:space="preserve">
+    <value>сум</value>
+  </data>
+  <data name="Auth_FaceId_Title" xml:space="preserve">
+    <value>Face ID (Биометрия)</value>
+  </data>
+  <data name="Auth_FaceId_Bound" xml:space="preserve">
+    <value>✅ Привязано к аккаунту</value>
+  </data>
+  <data name="Auth_FaceId_Hint" xml:space="preserve">
+    <value>Вход по взгляду в камеру</value>
+  </data>
+  <data name="Auth_FaceId_Delete" xml:space="preserve">
+    <value>Удалить биометрию</value>
+  </data>
+  <data name="Auth_NotLinked" xml:space="preserve">
+    <value>Не привязано</value>
+  </data>
+  <data name="Auth_Passkeys_Subtitle" xml:space="preserve">
+    <value>Вход по Touch ID / Face ID устройства</value>
+  </data>
+  <data name="Auth_Telegram_Subtitle" xml:space="preserve">
+    <value>Вход через Telegram Widget</value>
+  </data>
+  <data name="FaceId_LookStraight" xml:space="preserve">
+    <value>🎯 Смотрите прямо</value>
+  </data>
+  <data name="FaceId_TurnLeft" xml:space="preserve">
+    <value>👈 Поверните влево</value>
+  </data>
+  <data name="FaceId_TurnRight" xml:space="preserve">
+    <value>👉 Поверните вправо</value>
+  </data>
+  <data name="FaceId_CenterFace" xml:space="preserve">
+    <value>Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.</value>
+  </data>
+  <data name="Geo_Title" xml:space="preserve">
+    <value>Выбор адреса и маршрута</value>
+  </data>
+  <data name="Geo_Subtitle" xml:space="preserve">
+    <value>Укажите адрес доставки или точки маршрута для такси</value>
+  </data>
+  <data name="Geo_DeliveryTab" xml:space="preserve">
+    <value>Доставка по адресу</value>
+  </data>
+  <data name="Geo_TaxiTab" xml:space="preserve">
+    <value>Заказ такси / Курьер (А ➔ Б)</value>
+  </data>
+  <data name="Geo_DeliveryAddress" xml:space="preserve">
+    <value>Адрес доставки</value>
+  </data>
+  <data name="Geo_DetectLocation" xml:space="preserve">
+    <value>Геолокация</value>
+  </data>
+  <data name="Geo_DeliveryZone" xml:space="preserve">
+    <value>Зона доставки:</value>
+  </data>
+  <data name="Geo_CentralZone" xml:space="preserve">
+    <value>Центральный район (Бесплатно от 150 000 сум)</value>
+  </data>
+  <data name="Geo_PointA" xml:space="preserve">
+    <value>Точка А (Откуда забрать)</value>
+  </data>
+  <data name="Geo_PointB" xml:space="preserve">
+    <value>Точка Б (Куда доставить)</value>
+  </data>
+  <data name="Geo_RouteDistance" xml:space="preserve">
+    <value>Расстояние маршрута:</value>
+  </data>
+  <data name="Geo_EstimatedTime" xml:space="preserve">
+    <value>Ориентировочное время:</value>
+  </data>
+  <data name="Geo_Km" xml:space="preserve">
+    <value>км</value>
+  </data>
+  <data name="Geo_Min" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="Geo_SaveLocation" xml:space="preserve">
+    <value>Сохранить локацию</value>
+  </data>
+  <data name="Checkout_HeaderTitle" xml:space="preserve">
+    <value>Выбор способа оплаты и оформление</value>
+  </data>
+  <data name="Checkout_HeaderSubtitle" xml:space="preserve">
+    <value>Безопасная оплата через эквайринги партнёров (Payme, Click, Uzum)</value>
+  </data>
+  <data name="Checkout_StepCart" xml:space="preserve">
+    <value>Корзина</value>
+  </data>
+  <data name="Checkout_StepPayment" xml:space="preserve">
+    <value>Оплата</value>
+  </data>
+  <data name="Checkout_StepFulfillment" xml:space="preserve">
+    <value>Выполнение</value>
+  </data>
+  <data name="Checkout_SelectGateway" xml:space="preserve">
+    <value>Выберите платёжный сервис</value>
+  </data>
+  <data name="Checkout_CashbackBadge" xml:space="preserve">
+    <value>Кэшбэк</value>
+  </data>
+  <data name="Checkout_ScanQrToPay" xml:space="preserve">
+    <value>📱 Сканируйте для оплаты в</value>
+  </data>
+  <data name="Checkout_ScanQrHint" xml:space="preserve">
+    <value>Отсканируйте камерой смартфона или нажмите кнопку ниже для перехода в приложение</value>
+  </data>
+  <data name="Checkout_OpenInApp" xml:space="preserve">
+    <value>Открыть в приложении</value>
+  </data>
+  <data name="Checkout_SplitPaymentTitle" xml:space="preserve">
+    <value>📊 Сплитование платежа</value>
+  </data>
+  <data name="Checkout_SplitAutoBadge" xml:space="preserve">
+    <value>Автоматическое расщепление</value>
+  </data>
+  <data name="Checkout_SplitVendor" xml:space="preserve">
+    <value>Продавцу / Партнёру:</value>
+  </data>
+  <data name="Checkout_SplitCommission" xml:space="preserve">
+    <value>Комиссия платформы:</value>
+  </data>
+  <data name="Checkout_TabOnline" xml:space="preserve">
+    <value>Онлайн / QR</value>
+  </data>
+  <data name="Checkout_TabCash" xml:space="preserve">
+    <value>Наличные при получении</value>
+  </data>
+  <data name="Checkout_TotalLabel" xml:space="preserve">
+    <value>К оплате:</value>
+  </data>
+  <data name="Checkout_PayButton" xml:space="preserve">
+    <value>Оплатить</value>
+  </data>
+  <data name="Receipt_OfdTitle" xml:space="preserve">
+    <value>SOLIQ.UZ • ЭЛЕКТРОННЫЙ ЧЕК ОФД</value>
+  </data>
+  <data name="Receipt_InnLabel" xml:space="preserve">
+    <value>ИНН (STIR):</value>
+  </data>
+  <data name="Receipt_TerminalLabel" xml:space="preserve">
+    <value>Терминал:</value>
+  </data>
+  <data name="Receipt_ReceiptNo" xml:space="preserve">
+    <value>Чек №</value>
+  </data>
+  <data name="Receipt_MxikCode" xml:space="preserve">
+    <value>ИКПУ:</value>
+  </data>
+  <data name="Receipt_IncludingVat" xml:space="preserve">
+    <value>В т.ч. НДС 12%:</value>
+  </data>
+  <data name="Receipt_TotalToPay" xml:space="preserve">
+    <value>ИТОГО К ОПЛАТЕ:</value>
+  </data>
+  <data name="Receipt_VatAmount" xml:space="preserve">
+    <value>Сумма НДС (12%):</value>
+  </data>
+  <data name="Receipt_PaymentMethod" xml:space="preserve">
+    <value>Способ оплаты:</value>
+  </data>
+  <data name="Receipt_FiscalSign" xml:space="preserve">
+    <value>ФП:</value>
+  </data>
+  <data name="Receipt_OfdHint" xml:space="preserve">
+    <value>Отсканируйте QR-код для проверки чека в приложении Soliq или на портале ofd.soliq.uz</value>
+  </data>
+  <data name="Receipt_VerifySoliq" xml:space="preserve">
+    <value>Проверить в Soliq.uz</value>
+  </data>
+  <data name="Receipt_PrintEscPos" xml:space="preserve">
+    <value>Распечатать фискальный чек (ESC/POS)</value>
+  </data>
+  <data name="Cart_ItemsCount" xml:space="preserve">
+    <value>позиций</value>
+  </data>
+  <data name="Cart_EmptyTitle" xml:space="preserve">
+    <value>Корзина пока пуста</value>
+  </data>
+  <data name="Cart_EmptySubtitle" xml:space="preserve">
+    <value>Добавьте товары или услуги из каталога</value>
+  </data>
+  <data name="Cart_VariantLabel" xml:space="preserve">
+    <value>Вариант:</value>
+  </data>
+  <data name="Cart_PromoTitle" xml:space="preserve">
+    <value>Промокод на скидку</value>
+  </data>
+  <data name="Cart_ApplyPromo" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="Cart_PromoApplied" xml:space="preserve">
+    <value>✓ Промокод применён! Скидка</value>
+  </data>
+  <data name="Cart_ShippingFee" xml:space="preserve">
+    <value>🚚 Стоимость доставки:</value>
+  </data>
+  <data name="Cart_Free" xml:space="preserve">
+    <value>БЕСПЛАТНО</value>
+  </data>
+  <data name="Cart_Subtotal" xml:space="preserve">
+    <value>Подытог:</value>
+  </data>
+  <data name="Cart_Discount" xml:space="preserve">
+    <value>Скидка:</value>
+  </data>
+  <data name="Cart_Shipping" xml:space="preserve">
+    <value>Доставка:</value>
+  </data>
+  <data name="Cart_Total" xml:space="preserve">
+    <value>Итого:</value>
+  </data>
+  <data name="Cart_ProceedCheckout" xml:space="preserve">
+    <value>Перейти к оформлению</value>
+  </data>
+  <data name="Booking_DialogTitle" xml:space="preserve">
+    <value>Детали бронирования и ваучер</value>
+  </data>
+  <data name="Booking_GuestName" xml:space="preserve">
+    <value>ФИО гостя / пассажира</value>
+  </data>
+  <data name="Booking_GuestNameHint" xml:space="preserve">
+    <value>Укажите ФИО как в удостоверении</value>
+  </data>
+  <data name="Booking_DocumentNumber" xml:space="preserve">
+    <value>Паспорт / Документ</value>
+  </data>
+  <data name="Booking_DocumentNumberHint" xml:space="preserve">
+    <value>Серия и номер (например: AA 1234567)</value>
+  </data>
+  <data name="Booking_GuestCount" xml:space="preserve">
+    <value>Количество гостей</value>
+  </data>
+  <data name="Booking_GuestCountHint" xml:space="preserve">
+    <value>От 1 до 20 человек</value>
+  </data>
+  <data name="Booking_SpecialRequests" xml:space="preserve">
+    <value>Пожелания к бронированию</value>
+  </data>
+  <data name="Booking_VoucherActive" xml:space="preserve">
+    <value>✓ Электронный ваучер активен</value>
+  </data>
+  <data name="Booking_ReservationCode" xml:space="preserve">
+    <value>Код брони:</value>
+  </data>
+  <data name="Booking_ConfirmBtn" xml:space="preserve">
+    <value>Подтвердить бронирование</value>
+  </data>
+  <data name="Booking_PrintVoucher" xml:space="preserve">
+    <value>Распечатать ваучер</value>
+  </data>
+  <data name="Booking_SaveDetails" xml:space="preserve">
+    <value>Сохранить детали</value>
+  </data>
+  <data name="Booking_QrHint" xml:space="preserve">
+    <value>Предъявите этот QR-код при заезде или контролю</value>
+  </data>
+  <data name="Config_CalcTitle" xml:space="preserve">
+    <value>🧮 Калькулятор расчёта стоимости</value>
+  </data>
+  <data name="Config_ConfigTitle" xml:space="preserve">
+    <value>⚙ Конфигуратор &amp; Сборка</value>
+  </data>
+  <data name="Config_CalcPrompt" xml:space="preserve">
+    <value>Задайте требуемый объем/параметры для мгновенного расчёта итоговой сметы:</value>
+  </data>
+  <data name="Config_TierLabel" xml:space="preserve">
+    <value>Уровень сложности / Пакет:</value>
+  </data>
+  <data name="Config_TierBase" xml:space="preserve">
+    <value>Базовый (1.0x)</value>
+  </data>
+  <data name="Config_TierStandard" xml:space="preserve">
+    <value>Стандарт (1.3x)</value>
+  </data>
+  <data name="Config_TierPremium" xml:space="preserve">
+    <value>Премиум (1.6x)</value>
+  </data>
+  <data name="Config_UnitsLabel" xml:space="preserve">
+    <value>Количество единиц / Площадь (кв.м / шт / ч):</value>
+  </data>
+  <data name="Config_ExtraServices" xml:space="preserve">
+    <value>Сопутствующие услуги:</value>
+  </data>
+  <data name="Config_Express" xml:space="preserve">
+    <value>⚡ Срочный выезд (+50k)</value>
+  </data>
+  <data name="Config_ExtendedWarranty" xml:space="preserve">
+    <value>🛡 Расширенная гарантия (+80k)</value>
+  </data>
+  <data name="Config_ChooseComponents" xml:space="preserve">
+    <value>Выберите компоненты и параметры для настройки вашей конфигурации:</value>
+  </data>
+  <data name="Config_BaseVariant" xml:space="preserve">
+    <value>Базовый вариант исполнения:</value>
+  </data>
+  <data name="Config_BaseTraditional" xml:space="preserve">
+    <value>Традиционный</value>
+  </data>
+  <data name="Config_BaseThin" xml:space="preserve">
+    <value>Облегчённый</value>
+  </data>
+  <data name="Config_BaseCheeseEdge" xml:space="preserve">
+    <value>Премиум бортик (+15k)</value>
+  </data>
+  <data name="Config_ExtraOptions" xml:space="preserve">
+    <value>Дополнительные опции и надбавки:</value>
+  </data>
+  <data name="Config_OptCheese" xml:space="preserve">
+    <value>🧀 Двойная порция (+10k)</value>
+  </data>
+  <data name="Config_OptPepperoni" xml:space="preserve">
+    <value>🥓 Премиум топпинг (+12k)</value>
+  </data>
+  <data name="Config_OptMushrooms" xml:space="preserve">
+    <value>🍄 Свежие грибы (+8k)</value>
+  </data>
+  <data name="Config_OptJalapeno" xml:space="preserve">
+    <value>🫑 Пряный акцент (+5k)</value>
+  </data>
+  <data name="Config_CalculatedTotal" xml:space="preserve">
+    <value>Итоговый расчет:</value>
+  </data>
+  <data name="Config_ApplyCalc" xml:space="preserve">
+    <value>Применить расчёт</value>
+  </data>
+  <data name="Config_ConfirmBuild" xml:space="preserve">
+    <value>Подтвердить сборку</value>
+  </data>
+  <data name="Lottery_Title" xml:space="preserve">
+    <value>🎟 Лотерея &amp; Розыгрыш:</value>
+  </data>
+  <data name="Lottery_Jackpot" xml:space="preserve">
+    <value>Суперприз тиража:</value>
+  </data>
+  <data name="Lottery_DrawDate" xml:space="preserve">
+    <value>📅 Дата розыгрыша:</value>
+  </data>
+  <data name="Lottery_DrawNo" xml:space="preserve">
+    <value>Тираж:</value>
+  </data>
+  <data name="Lottery_TicketCountLabel" xml:space="preserve">
+    <value>Количество лотерейных билетов:</value>
+  </data>
+  <data name="Lottery_1Ticket" xml:space="preserve">
+    <value>1 билет</value>
+  </data>
+  <data name="Lottery_3Tickets" xml:space="preserve">
+    <value>3 билета</value>
+  </data>
+  <data name="Lottery_5Tickets" xml:space="preserve">
+    <value>5 билетов</value>
+  </data>
+  <data name="Lottery_10Tickets" xml:space="preserve">
+    <value>10 билетов</value>
+  </data>
+  <data name="Lottery_YourNumbers" xml:space="preserve">
+    <value>Ваши номера в розыгрыше:</value>
+  </data>
+  <data name="Lottery_RandomNumbers" xml:space="preserve">
+    <value>Случайные номера</value>
+  </data>
+  <data name="Lottery_BetAmount" xml:space="preserve">
+    <value>Сумма ставки</value>
+  </data>
+  <data name="Lottery_BuyTickets" xml:space="preserve">
+    <value>Купить билеты</value>
+  </data>
+  <data name="Bundle_ComboTitle" xml:space="preserve">
+    <value>Выгодный комбо-пакет</value>
+  </data>
+  <data name="Bundle_ComboSubtitle" xml:space="preserve">
+    <value>Все необходимые позиции в одном наборе с гарантированной скидкой</value>
+  </data>
+  <data name="Bundle_Savings" xml:space="preserve">
+    <value>Экономия</value>
+  </data>
+  <data name="Bundle_Composition" xml:space="preserve">
+    <value>Состав набора / пакета услуг:</value>
+  </data>
+  <data name="Bundle_MainItem" xml:space="preserve">
+    <value>Основная позиция пакета</value>
+  </data>
+  <data name="Bundle_MainItemDesc" xml:space="preserve">
+    <value>Базовый продукт высокого качества</value>
+  </data>
+  <data name="Bundle_Included" xml:space="preserve">
+    <value>В комплекте</value>
+  </data>
+  <data name="Bundle_Accessory" xml:space="preserve">
+    <value>Фирменный аксессуар / Доп. услуга</value>
+  </data>
+  <data name="Bundle_AccessoryDesc" xml:space="preserve">
+    <value>Подарочное дополнение к заказу</value>
+  </data>
+  <data name="Bundle_Bonus" xml:space="preserve">
+    <value>Бонус</value>
+  </data>
+  <data name="Bundle_Service" xml:space="preserve">
+    <value>Премиальное обслуживание &amp; Гарантия</value>
+  </data>
+  <data name="Bundle_ServiceDesc" xml:space="preserve">
+    <value>Приоритетная поддержка и сервис</value>
+  </data>
+  <data name="Bundle_BuyBundle" xml:space="preserve">
+    <value>Купить комплект</value>
+  </data>
+  <data name="Quote_AppFormTitle" xml:space="preserve">
+    <value>📑 Анкета / Заявка на услугу</value>
+  </data>
+  <data name="Quote_RfqTitle" xml:space="preserve">
+    <value>📋 Запрос расчёта сметы (RFQ)</value>
+  </data>
+  <data name="Quote_AppFormPrompt" xml:space="preserve">
+    <value>Заполните официальную анкету для рассмотрения заявки профильными специалистами:</value>
+  </data>
+  <data name="Quote_RfqPrompt" xml:space="preserve">
+    <value>Опишите параметры объекта или прикрепите ТЗ для подготовки детальной сметы:</value>
+  </data>
+  <data name="Quote_ApplicantName" xml:space="preserve">
+    <value>ФИО заявителя</value>
+  </data>
+  <data name="Quote_ApplicantNameHint" xml:space="preserve">
+    <value>Полное имя по паспорту</value>
+  </data>
+  <data name="Quote_Document" xml:space="preserve">
+    <value>Паспорт / ID карта</value>
+  </data>
+  <data name="Quote_DocumentHint" xml:space="preserve">
+    <value>Серия и номер</value>
+  </data>
+  <data name="Quote_Phone" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="Quote_Purpose" xml:space="preserve">
+    <value>Цель обращения / Примечания</value>
+  </data>
+  <data name="Quote_ProjectNotes" xml:space="preserve">
+    <value>Заметки к проекту / Параметры объекта</value>
+  </data>
+  <data name="Quote_ProjectNotesHint" xml:space="preserve">
+    <value>Площадь, требования к материалам, сроки</value>
+  </data>
+  <data name="Quote_ContactChannel" xml:space="preserve">
+    <value>Контактный телефон / Telegram</value>
+  </data>
+  <data name="Quote_ContactChannelHint" xml:space="preserve">
+    <value>Для отправки готового коммерческого предложения</value>
+  </data>
+  <data name="Quote_AppFree" xml:space="preserve">
+    <value>Регистрация заявки бесплатно</value>
+  </data>
+  <data name="Quote_RfqFree" xml:space="preserve">
+    <value>Предварительная смета: бесплатно</value>
+  </data>
+  <data name="Quote_SubmitApp" xml:space="preserve">
+    <value>Подать анкету</value>
+  </data>
+  <data name="Quote_SubmitRfq" xml:space="preserve">
+    <value>Отправить запрос на смету</value>
+  </data>
+  <data name="Donation_CrowdTitle" xml:space="preserve">
+    <value>🚀 Краудфандинг / Сбор средств</value>
+  </data>
+  <data name="Donation_CharityTitle" xml:space="preserve">
+    <value>❤️ Благотворительность / Донат</value>
+  </data>
+  <data name="Donation_Raised" xml:space="preserve">
+    <value>Собрано:</value>
+  </data>
+  <data name="Donation_Goal" xml:space="preserve">
+    <value>Цель проекта:</value>
+  </data>
+  <data name="Donation_Sponsors" xml:space="preserve">
+    <value>спонсоров</value>
+  </data>
+  <data name="Donation_Days" xml:space="preserve">
+    <value>дней</value>
+  </data>
+  <data name="Donation_SelectReward" xml:space="preserve">
+    <value>Выберите пакет спонсорского вознаграждения или укажите произвольный взнос:</value>
+  </data>
+  <data name="Donation_SelectAmount" xml:space="preserve">
+    <value>Выберите или введите сумму добровольного пожертвования:</value>
+  </data>
+  <data name="Donation_CustomAmount" xml:space="preserve">
+    <value>Произвольная сумма взноса (сум)</value>
+  </data>
+  <data name="Donation_SupportProject" xml:space="preserve">
+    <value>Поддержать проект</value>
+  </data>
+  <data name="Donation_Donate" xml:space="preserve">
+    <value>Пожертвовать</value>
+  </data>
+  <data name="GroupBuy_PreOrderTitle" xml:space="preserve">
+    <value>⏳ Предзаказ новинки</value>
+  </data>
+  <data name="GroupBuy_GroupTitle" xml:space="preserve">
+    <value>👥 Совместная покупка</value>
+  </data>
+  <data name="GroupBuy_ShipmentStart" xml:space="preserve">
+    <value>Официальный старт отгрузок:</value>
+  </data>
+  <data name="GroupBuy_DaysLeft" xml:space="preserve">
+    <value>Через 14 дней</value>
+  </data>
+  <data name="GroupBuy_ExpectedDate" xml:space="preserve">
+    <value>📅 Ожидаемая дата:</value>
+  </data>
+  <data name="GroupBuy_Queue" xml:space="preserve">
+    <value>Очередь: #28 в предзаказе</value>
+  </data>
+  <data name="GroupBuy_PriceLock" xml:space="preserve">
+    <value>Гарантия фиксации цены первого тиража</value>
+  </data>
+  <data name="GroupBuy_PriceLockDesc" xml:space="preserve">
+    <value>При повышении рыночной стоимости после релиза для вас цена останется неизменной.</value>
+  </data>
+  <data name="GroupBuy_PreOrderPrompt" xml:space="preserve">
+    <value>Забронируйте получение товара в числе первых сразу после таможенной очистки и поступления на склад.</value>
+  </data>
+  <data name="GroupBuy_Gathered" xml:space="preserve">
+    <value>Собрано: 7 из 10 участников</value>
+  </data>
+  <data name="GroupBuy_DiscountBadge" xml:space="preserve">
+    <value>Скидка -25%</value>
+  </data>
+  <data name="GroupBuy_JoinPrompt" xml:space="preserve">
+    <value>Присоединяйтесь к группе! Цена со скидкой составит {0} сум при сборе еще 3 человек.</value>
+  </data>
+  <data name="GroupBuy_ToPay" xml:space="preserve">
+    <value>К оплате:</value>
+  </data>
+  <data name="GroupBuy_PreOrderBtn" xml:space="preserve">
+    <value>Оформить предзаказ</value>
+  </data>
+  <data name="GroupBuy_JoinBtn" xml:space="preserve">
+    <value>Вступить в группу</value>
+  </data>
+  <data name="Search_Placeholder" xml:space="preserve">
+    <value>Поиск...</value>
+  </data>
+  <data name="Payment_FaceIdBiometrics" xml:space="preserve">
+    <value>👁️ Face ID (Биометрия)</value>
+  </data>
+  <data name="Payment_SslSafe" xml:space="preserve">
+    <value>256-bit SSL • Безопасные платежи</value>
+  </data>
+  <data name="Payment_CustomerCare" xml:space="preserve">
+    <value>Служба заботы о клиентах</value>
+  </data>
+  <data name="Order_ByRequirements" xml:space="preserve">
+    <value>По ТЗ</value>
+  </data>
+  <data name="Common_Decrease" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="Common_Increase" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="Common_DeleteItem" xml:space="preserve">
+    <value>Удалить позицию</value>
+  </data>
+  <data name="Booking_PickTitle" xml:space="preserve">
+    <value>Выбор бронирования</value>
+  </data>
+  <data name="Booking_PickSubtitle" xml:space="preserve">
+    <value>Укажите желаемую дату, ресурс и временной интервал</value>
+  </data>
+  <data name="Booking_TabTable" xml:space="preserve">
+    <value>Столик</value>
+  </data>
+  <data name="Booking_TabRoom" xml:space="preserve">
+    <value>Номер / Отель</value>
+  </data>
+  <data name="Booking_TabSpecialist" xml:space="preserve">
+    <value>Специалист</value>
+  </data>
+  <data name="Booking_TabCar" xml:space="preserve">
+    <value>Автомобиль</value>
+  </data>
+  <data name="Booking_Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Booking_Tomorrow" xml:space="preserve">
+    <value>Завтра</value>
+  </data>
+  <data name="Booking_Weekend" xml:space="preserve">
+    <value>Выходные</value>
+  </data>
+  <data name="Booking_Plus7Days" xml:space="preserve">
+    <value>+7 дней</value>
+  </data>
+  <data name="Booking_DateLabel" xml:space="preserve">
+    <value>Дата бронирования</value>
+  </data>
+  <data name="Booking_HallScheme" xml:space="preserve">
+    <value>🗺️ Интерактивная схема залов</value>
+  </data>
+  <data name="Booking_HallSchemeHint" xml:space="preserve">
+    <value>Кликните по свободному столику для выбора</value>
+  </data>
+  <data name="Booking_AvailableSlots" xml:space="preserve">
+    <value>Доступные временные слоты</value>
+  </data>
+  <data name="Booking_ResetChoice" xml:space="preserve">
+    <value>Сбросить выбор</value>
+  </data>
+  <data name="Booking_ConfirmChoice" xml:space="preserve">
+    <value>Подтвердить выбор</value>
+  </data>
+  <data name="Booking_AtTime" xml:space="preserve">
+    <value>в</value>
+  </data>
+  <data name="Chat_WelcomeTitle" xml:space="preserve">
+    <value>👋 Добро пожаловать в интеллектуальный помощник Socratic!</value>
+  </data>
+  <data name="Chat_WelcomeSubtitle" xml:space="preserve">
+    <value>Я помогу вам быстро решить любые вопросы по платформе:</value>
+  </data>
+  <data name="Chat_RoleBuyers" xml:space="preserve">
+    <value>Покупателям:</value>
+  </data>
+  <data name="Chat_WelcomeBuyers" xml:space="preserve">
+    <value>подбор товаров и услуг, бронирование, оформление заказов и доставка</value>
+  </data>
+  <data name="Chat_RoleOwners" xml:space="preserve">
+    <value>Владельцам бизнеса:</value>
+  </data>
+  <data name="Chat_WelcomeOwners" xml:space="preserve">
+    <value>запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли</value>
+  </data>
+  <data name="Chat_RoleStaff" xml:space="preserve">
+    <value>Сотрудникам:</value>
+  </data>
+  <data name="Chat_WelcomeStaff" xml:space="preserve">
+    <value>работа с кассой, заказами, каталогом, оплатами и POS-терминалами</value>
+  </data>
+  <data name="Schedule_NotSet" xml:space="preserve">
+    <value>График работы не задан</value>
+  </data>
+  <data name="Schedule_AllWeekends" xml:space="preserve">
+    <value>Выходные дни на всю неделю</value>
+  </data>
+  <data name="Schedule_Active" xml:space="preserve">
+    <value>Активен</value>
+  </data>
+  <data name="Schedule_DaysShort" xml:space="preserve">
+    <value>дн.</value>
+  </data>
+  <data name="Common_Configure" xml:space="preserve">
+    <value>Настроить</value>
+  </data>
+  <data name="Schedule_ResetSchedule" xml:space="preserve">
+    <value>Сбросить расписание</value>
+  </data>
+  <data name="Schedule_Title" xml:space="preserve">
+    <value>Настройка графика работы</value>
+  </data>
+  <data name="Schedule_QuickPresets" xml:space="preserve">
+    <value>Быстрые шаблоны:</value>
+  </data>
+  <data name="Schedule_Weekdays" xml:space="preserve">
+    <value>Будни 09:00–18:00</value>
+  </data>
+  <data name="Schedule_Retail" xml:space="preserve">
+    <value>Все дни 10:00–22:00</value>
+  </data>
+  <data name="Schedule_247" xml:space="preserve">
+    <value>24/7 (Круглосуточно)</value>
+  </data>
+  <data name="Schedule_ResetAll" xml:space="preserve">
+    <value>Сбросить всё</value>
+  </data>
+  <data name="Schedule_WorkingDays" xml:space="preserve">
+    <value>Рабочие дни и часы</value>
+  </data>
+  <data name="Schedule_Timezone" xml:space="preserve">
+    <value>Часовой пояс</value>
+  </data>
+  <data name="Schedule_WorkingDay" xml:space="preserve">
+    <value>Рабочий</value>
+  </data>
+  <data name="Schedule_DayOff" xml:space="preserve">
+    <value>Выходной</value>
+  </data>
+  <data name="OAuth_PageTitleGoogle" xml:space="preserve">
+    <value>Авторизация Google - Socratic</value>
+  </data>
+  <data name="OAuth_PageTitleTelegram" xml:space="preserve">
+    <value>Авторизация Telegram - Socratic</value>
+  </data>
+  <data name="OAuth_AuthError" xml:space="preserve">
+    <value>Ошибка авторизации</value>
+  </data>
+  <data name="OAuth_Retry" xml:space="preserve">
+    <value>Повторить вход</value>
+  </data>
+  <data name="OAuth_Close" xml:space="preserve">
+    <value>Закрыть окно</value>
+  </data>
+  <data name="OAuth_GoogleTitle" xml:space="preserve">
+    <value>Вход через Google</value>
+  </data>
+  <data name="OAuth_TelegramTitle" xml:space="preserve">
+    <value>Вход через Telegram</value>
+  </data>
+  <data name="OAuth_GoogleProcessing" xml:space="preserve">
+    <value>Подтверждаем учетные данные и настраиваем профиль...</value>
+  </data>
+  <data name="OAuth_TelegramProcessing" xml:space="preserve">
+    <value>Проверяем подпись авторизации и настраиваем профиль...</value>
+  </data>
+  <data name="Kiosk_OrgSwitchTitleDemo" xml:space="preserve">
+    <value>Владелец бизнеса или франшизы?</value>
+  </data>
+  <data name="Kiosk_OrgSwitchDescDemo" xml:space="preserve">
+    <value>Подключите своё заведение к экосистеме Socratic, выберите тариф облачной кассы или подайте заявку на регистрацию организации.</value>
+  </data>
+  <data name="Kiosk_OrgSwitchBtnDemo" xml:space="preserve">
+    <value>Тарифы и подключение Socratic →</value>
+  </data>
+  <data name="Kiosk_OrgSwitchTitleSocratic" xml:space="preserve">
+    <value>Интерактивный шоурум возможностей (28 UX-режимов)</value>
+  </data>
+  <data name="Kiosk_OrgSwitchDescSocratic" xml:space="preserve">
+    <value>Исследуйте готовые отраслевые сценарии: ресторанное меню, пицца-конструктор, билеты, отели, аренда авто, доставка и QR-меню.</value>
+  </data>
+  <data name="Kiosk_OrgSwitchBtnSocratic" xml:space="preserve">
+    <value>Открыть Demo Showroom →</value>
+  </data>
+  <data name="Kiosk_UxModeLabel" xml:space="preserve">
+    <value>Режим UX:</value>
+  </data>
+  <data name="Kiosk_AllUxModes" xml:space="preserve">
+    <value>Все (28)</value>
+  </data>
+  <data name="Kiosk_Reset" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="Kiosk_EmptyTitle" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="Kiosk_EmptyDesc" xml:space="preserve">
+    <value>Попробуйте изменить поисковый запрос или сбросить категории</value>
+  </data>
+  <data name="Kiosk_ResetFilters" xml:space="preserve">
+    <value>Сбросить фильтры</value>
+  </data>
+  <data name="UX_Bid" xml:space="preserve">
+    <value>Сделать ставку</value>
+  </data>
+  <data name="UX_JoinGroup" xml:space="preserve">
+    <value>Вступить в группу</value>
+  </data>
+  <data name="UX_Book" xml:space="preserve">
+    <value>Забронировать</value>
+  </data>
+  <data name="UX_BuyTicket" xml:space="preserve">
+    <value>Купить билет</value>
+  </data>
+  <data name="UX_BookRoom" xml:space="preserve">
+    <value>Забронировать номер</value>
+  </data>
+  <data name="UX_Rent" xml:space="preserve">
+    <value>Арендовать</value>
+  </data>
+  <data name="UX_Route" xml:space="preserve">
+    <value>Маршрут</value>
+  </data>
+  <data name="UX_Subscribe" xml:space="preserve">
+    <value>Подписаться</value>
+  </data>
+  <data name="UX_Donate" xml:space="preserve">
+    <value>Пожертвовать</value>
+  </data>
+  <data name="UX_QuoteRequest" xml:space="preserve">
+    <value>Запрос сметы</value>
+  </data>
+  <data name="UX_Configure" xml:space="preserve">
+    <value>Сконфигурировать</value>
+  </data>
+  <data name="UX_ChooseTime" xml:space="preserve">
+    <value>Выбрать время</value>
+  </data>
+  <data name="UX_BuyTopUp" xml:space="preserve">
+    <value>Купить / Пополнить</value>
+  </data>
+  <data name="UX_Connect" xml:space="preserve">
+    <value>Подключить</value>
+  </data>
+  <data name="UX_Gift" xml:space="preserve">
+    <value>Подарить</value>
+  </data>
+  <data name="UX_ViewP2P" xml:space="preserve">
+    <value>Посмотреть P2P</value>
+  </data>
+  <data name="UX_CallMaster" xml:space="preserve">
+    <value>Вызвать мастера</value>
+  </data>
+  <data name="UX_ChooseTour" xml:space="preserve">
+    <value>Выбрать тур</value>
+  </data>
+  <data name="UX_Calculate" xml:space="preserve">
+    <value>Рассчитать</value>
+  </data>
+  <data name="UX_ApplyForm" xml:space="preserve">
+    <value>Заполнить заявку</value>
+  </data>
+  <data name="UX_Participate" xml:space="preserve">
+    <value>Участвовать</value>
+  </data>
+  <data name="UX_PreOrder" xml:space="preserve">
+    <value>Предзаказ</value>
+  </data>
+  <data name="UX_JoinClub" xml:space="preserve">
+    <value>Вступить в клуб</value>
+  </data>
+  <data name="UX_Support" xml:space="preserve">
+    <value>Поддержать</value>
+  </data>
+  <data name="UX_ExchangeP2P" xml:space="preserve">
+    <value>Обменять P2P</value>
+  </data>
+  <data name="UX_Reserve" xml:space="preserve">
+    <value>Зарезервировать</value>
+  </data>
+  <data name="UX_Details" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="ProductVariant_SelectConfig" xml:space="preserve">
+    <value>Выберите конфигурацию SKU и дополнения</value>
+  </data>
+  <data name="ProductVariant_Sku" xml:space="preserve">
+    <value>Вариант / SKU</value>
+  </data>
+  <data name="ProductVariant_Required" xml:space="preserve">
+    <value>Обязательно</value>
+  </data>
+  <data name="ProductVariant_AddToCart" xml:space="preserve">
+    <value>Добавить в корзину</value>
+  </data>
+  <data name="Store_Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Store_Showcase" xml:space="preserve">
+    <value>Витрина</value>
+  </data>
+  <data name="Store_Product" xml:space="preserve">
+    <value>Товар</value>
+  </data>
+  <data name="Store_NotFoundTitle" xml:space="preserve">
+    <value>Товар или услуга не найдены</value>
+  </data>
+  <data name="Store_NotFoundDesc" xml:space="preserve">
+    <value>Возможно, позиция была снята с публикации или ссылка устарела.</value>
+  </data>
+  <data name="Store_BackToShowcase" xml:space="preserve">
+    <value>Вернуться к витрине</value>
+  </data>
+  <data name="Store_Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Store_Weight" xml:space="preserve">
+    <value>Вес</value>
+  </data>
+  <data name="Store_Kg" xml:space="preserve">
+    <value>кг</value>
+  </data>
+  <data name="Store_Volume" xml:space="preserve">
+    <value>Объем</value>
+  </data>
+  <data name="Store_Liters" xml:space="preserve">
+    <value>л</value>
+  </data>
+  <data name="Store_Availability" xml:space="preserve">
+    <value>Доступность</value>
+  </data>
+  <data name="Store_InStock" xml:space="preserve">
+    <value>В наличии</value>
+  </data>
+  <data name="Store_OrderInKiosk" xml:space="preserve">
+    <value>Заказать в онлайн-киоске</value>
+  </data>
+  <data name="Store_Share" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+  <data name="Store_LinkCopied" xml:space="preserve">
+    <value>Ссылка скопирована в буфер обмена!</value>
+  </data>
+  <data name="Store_AllOrgProducts" xml:space="preserve">
+    <value>Все товары и услуги заведения →</value>
+  </data>
+  <data name="Store_OfficialOrg" xml:space="preserve">
+    <value>Официальное заведение</value>
+  </data>
+  <data name="Store_Open" xml:space="preserve">
+    <value>Открыто</value>
+  </data>
+  <data name="Store_CatalogFallback" xml:space="preserve">
+    <value>Каталог заведения</value>
+  </data>
+  <data name="Store_OpenSmartKiosk" xml:space="preserve">
+    <value>Открыть смарт-киоск</value>
+  </data>
+  <data name="Store_QrMenu" xml:space="preserve">
+    <value>QR Меню</value>
+  </data>
+  <data name="Store_SearchPlaceholder" xml:space="preserve">
+    <value>Поиск товаров и услуг...</value>
+  </data>
+  <data name="Store_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Store_ProductsNotFound" xml:space="preserve">
+    <value>Товары не найдены</value>
+  </data>
+  <data name="Store_TryChangeSearch" xml:space="preserve">
+    <value>Попробуйте изменить параметры поиска или выбрать другую категорию.</value>
+  </data>
+  <data name="Store_DetailsArrow" xml:space="preserve">
+    <value>Подробнее →</value>
+  </data>
+  <data name="Common_CurrencySum" xml:space="preserve">
+    <value>сум</value>
+  </data>
+  <data name="Settings_ThemeTitle" xml:space="preserve">
+    <value>Тема оформления</value>
+  </data>
+  <data name="Settings_ThemeLight" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="Settings_ThemeDark" xml:space="preserve">
+    <value>Тёмная</value>
+  </data>
+  <data name="Settings_ThemeAuto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="Settings_AccentColor" xml:space="preserve">
+    <value>Акцентный цвет</value>
+  </data>
+  <data name="Kiosk_Auction_MinBid" xml:space="preserve">
+    <value>Мин. ставка:</value>
+  </data>
+  <data name="Kiosk_Auction_Ending" xml:space="preserve">
+    <value>Завершение</value>
+  </data>
+  <data name="Kiosk_Auction_Bids" xml:space="preserve">
+    <value>ставки</value>
+  </data>
+  <data name="Kiosk_GroupBuy_Collected" xml:space="preserve">
+    <value>Собрано</value>
+  </data>
+  <data name="Kiosk_Of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="Kiosk_Ticket_Hall" xml:space="preserve">
+    <value>Зал #1 • Партер</value>
+  </data>
+  <data name="Kiosk_Ticket_QrVoucher" xml:space="preserve">
+    <value>QR Ваучер</value>
+  </data>
+  <data name="Kiosk_Hotel_Nights" xml:space="preserve">
+    <value>2 Ночи • Завтрак</value>
+  </data>
+  <data name="Kiosk_Hotel_Balcony" xml:space="preserve">
+    <value>Балкон</value>
+  </data>
+  <data name="Kiosk_Vehicle_Electric" xml:space="preserve">
+    <value>Электро • 5 Мест</value>
+  </data>
+  <data name="Kiosk_Vehicle_Insurance" xml:space="preserve">
+    <value>КАСКО</value>
+  </data>
+  <data name="Kiosk_Location_PointAB" xml:space="preserve">
+    <value>Точка А ➔ Б</value>
+  </data>
+  <data name="Kiosk_MinutesShort" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="Kiosk_Subscription_PlanPro" xml:space="preserve">
+    <value>План PRO</value>
+  </data>
+  <data name="Kiosk_Subscription_CancelAnytime" xml:space="preserve">
+    <value>Отмена 24/7</value>
+  </data>
+  <data name="Kiosk_Quote_EngineerEstimate" xml:space="preserve">
+    <value>Расчет сметы по ТЗ инженера</value>
+  </data>
+  <data name="Common_LangRu" xml:space="preserve">
+    <value>РУС</value>
+  </data>
+  <data name="Common_LangUz" xml:space="preserve">
+    <value>UZB</value>
+  </data>
+  <data name="Common_LangEn" xml:space="preserve">
+    <value>ENG</value>
+  </data>
+</root>

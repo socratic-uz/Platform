@@ -1,0 +1,206 @@
+@namespace Smart.Web.Components
+@using SharedKernel.Fiscalization
+@using SharedKernel.ValueObjects
+@using Domain.Interfaces.Common
+@using Domain.Interfaces.Hardware
+@using Microsoft.Extensions.Localization
+@inject Domain.Interfaces.Hardware.IReceiptPrinterService PrinterService
+@inject IStringLocalizer L
+@inject IServiceProvider ServiceProvider
+
+<article id="fiscal-receipt-element" class="fiscal-receipt glass-panel">
+    <header class="receipt-header">
+        <div class="tax-badge">
+            <span class="soliq-icon">🏛️</span>
+            <span class="soliq-title">@(L["Receipt_OfdTitle"] ?? "SOLIQ.UZ • ЭЛЕКТРОННЫЙ ЧЕК ОФД")</span>
+        </div>
+        <h4 class="org-name">@OrganizationName</h4>
+        <p class="org-details">@(L["Receipt_InnLabel"] ?? "ИНН (STIR):") <strong>@TaxId</strong> | @(L["Receipt_TerminalLabel"] ?? "Терминал:") <strong>@TerminalId</strong></p>
+        <p class="receipt-meta">@(L["Receipt_ReceiptNo"] ?? "Чек №") <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
+    </header>
+
+    <div class="receipt-divider"></div>
+
+    <!-- Список фискализированных позиций -->
+    <section class="receipt-items">
+        @foreach (var item in Items)
+        {
+            <div class="receipt-item-row">
+                <div class="item-main">
+                    <span class="item-name">@item.Name</span>
+                    <span class="item-mxik">@(L["Receipt_MxikCode"] ?? "ИКПУ:") @item.MxikCode (@item.PackageCode)</span>
+                </div>
+                <div class="item-calc">
+                    <span class="item-qty">@item.Quantity × @item.Price.ToString("N0")</span>
+                    <span class="item-total">@item.TotalPrice.ToString("N0") @(L["Currency_Uzs"] ?? "сум")</span>
+                </div>
+            </div>
+            <div class="item-vat-row">
+                <span>@(L["Receipt_IncludingVat"] ?? "В т.ч. НДС 12%:")</span>
+                <span>@item.VatAmount.ToString("N0") @(L["Currency_Uzs"] ?? "сум")</span>
+            </div>
+        }
+    </section>
+
+    <div class="receipt-divider"></div>
+
+    <!-- Итого и разбивка НДС -->
+    <section class="receipt-totals">
+        <div class="total-row main">
+            <span>@(L["Receipt_TotalToPay"] ?? "ИТОГО К ОПЛАТЕ:")</span>
+            <span class="total-val">@TotalAmount.ToString("N0") @(L["Currency_Uzs"] ?? "сум")</span>
+        </div>
+        <div class="total-row vat">
+            <span>@(L["Receipt_VatAmount"] ?? "Сумма НДС (12%):")</span>
+            <span>@TotalVatAmount.ToString("N0") @(L["Currency_Uzs"] ?? "сум")</span>
+        </div>
+        <div class="total-row payment-type">
+            <span>@(L["Receipt_PaymentMethod"] ?? "Способ оплаты:")</span>
+            <span>@PaymentGatewayName (@PaymentTypeName)</span>
+        </div>
+    </section>
+
+    <div class="receipt-divider"></div>
+
+    <!-- Фискальный блок и QR-код Soliq.uz -->
+    <footer class="receipt-fiscal-footer">
+        <div class="qr-container">
+            @if (!string.IsNullOrWhiteSpace(qrSvg))
+            {
+                <div class="qr-svg-wrap">
+                    @((MarkupString)qrSvg)
+                </div>
+            }
+            else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
+            {
+                <div class="qr-placeholder">
+                    <span class="material-symbols-outlined">qr_code_2</span>
+                </div>
+            }
+        </div>
+        <div class="fiscal-info">
+            <p class="fiscal-sign">@(L["Receipt_FiscalSign"] ?? "ФП:") <code>@FiscalSign</code></p>
+            <p class="ofd-hint">@(L["Receipt_OfdHint"] ?? "Отсканируйте QR-код для проверки чека в приложении Soliq или на портале ofd.soliq.uz")</p>
+            <a href="@SoliqQrUrl" target="_blank" class="verify-link">
+                <Icon Name="verified" /> @(L["Receipt_VerifySoliq"] ?? "Проверить в Soliq.uz")
+            </a>
+        </div>
+    </footer>
+
+    <!-- Кнопка печати на кассовом термопринтере -->
+    <div class="receipt-actions">
+        <Button Variant="ButtonVariant.Filled" class="print-btn" OnClick="PrintReceiptAsync">
+            <Icon Name="print" Slot="icon" /> @(L["Receipt_PrintEscPos"] ?? "Распечатать фискальный чек (ESC/POS)")
+        </Button>
+    </div>
+</article>
+
+<style id="receipt-styles">
+    .fiscal-receipt {
+        background: var(--md-sys-color-surface-container-high);
+        color: var(--md-sys-color-on-surface);
+        border: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 16px;
+        padding: 24px;
+        max-width: 420px;
+        margin: 0 auto;
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+        box-shadow: 0 10px 30px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
+    }
+    .receipt-header { text-align: center; }
+    .tax-badge {
+        display: inline-grid; grid-auto-flow: column; align-items: center; gap: 6px;
+        background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font-size: 0.7rem; font-weight: 700;
+        padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;
+    }
+    .org-name { font-size: 1.15rem; font-weight: 800; margin: 10px 0 2px 0; color: var(--md-sys-color-on-surface); }
+    .org-details { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); margin: 0; }
+    .receipt-meta { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); margin: 4px 0 0 0; }
+    .receipt-divider {
+        border-top: 1px dashed var(--md-sys-color-outline-variant);
+        margin: 14px 0;
+    }
+    .receipt-items { display: grid; gap: 10px; }
+    .receipt-item-row { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 12px; font-size: 0.85rem; }
+    .item-main { display: grid; gap: 2px; }
+    .item-name { font-weight: 600; color: var(--md-sys-color-on-surface); }
+    .item-mxik { font-size: 0.7rem; color: var(--md-sys-color-primary); font-family: monospace; font-weight: 600; }
+    .item-calc { text-align: right; display: grid; gap: 2px; justify-items: end; }
+    .item-qty { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); }
+    .item-total { font-weight: 700; color: var(--md-sys-color-on-surface); }
+    .item-vat-row { display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.7rem; color: var(--md-sys-color-on-surface-variant); margin-top: -4px; }
+    .receipt-totals { display: grid; gap: 6px; }
+    .total-row { display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); }
+    .total-row.main { font-size: 1.1rem; font-weight: 800; color: var(--md-sys-color-on-surface); }
+    .total-val { color: var(--md-sys-color-primary); }
+    .receipt-fiscal-footer {
+        display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px; margin-top: 8px;
+    }
+    .qr-container { background: #ffffff; padding: 4px; border: 1px solid var(--md-sys-color-outline-variant); border-radius: 10px; width: 110px; height: 110px; display: grid; place-items: center; }
+    .qr-svg-wrap { width: 100%; height: 100%; display: grid; place-items: center; }
+    .qr-svg-wrap svg { width: 100%; height: 100%; }
+    .qr-placeholder { display: grid; place-items: center; color: var(--md-sys-color-outline); font-size: 48px; }
+    .fiscal-info { display: grid; gap: 4px; font-size: 0.75rem; }
+    .fiscal-sign { font-weight: 700; color: var(--md-sys-color-on-surface); margin: 0; }
+    .fiscal-sign code { background: var(--md-sys-color-surface-container); padding: 2px 6px; border-radius: 4px; color: var(--md-sys-color-primary); }
+    .ofd-hint { color: var(--md-sys-color-on-surface-variant); margin: 0; font-size: 0.7rem; line-height: 1.2; }
+    .verify-link {
+        display: inline-grid; grid-auto-flow: column; align-items: center; gap: 4px; color: var(--md-sys-color-primary); font-weight: 700;
+        text-decoration: none; font-size: 0.75rem; margin-top: 2px;
+    }
+    .receipt-actions { margin-top: 16px; display: grid; justify-items: center; }
+    .print-btn { width: 100%; border-radius: 10px; font-weight: 700; }
+</style>
+
+@code {
+    [Parameter] public string OrganizationName { get; set; } = "Socratic Ecosystem Partner";
+    [Parameter] public string TaxId { get; set; } = "309182736";
+    [Parameter] public string TerminalId { get; set; } = "SOC_TERM_01";
+    [Parameter] public long ReceiptSeq { get; set; } = 1042;
+    [Parameter] public DateTime ReceiptDate { get; set; } = DateTime.UtcNow;
+    [Parameter] public List<FiscalItem> Items { get; set; } = new();
+    [Parameter] public decimal TotalAmount { get; set; } = 120000;
+    [Parameter] public decimal TotalVatAmount { get; set; } = 12857;
+    [Parameter] public string PaymentGatewayName { get; set; } = "Click";
+    [Parameter] public string PaymentTypeName { get; set; } = "Онлайн-карта";
+    [Parameter] public string FiscalSign { get; set; } = "8F1A29D4E03B";
+    [Parameter] public string SoliqQrUrl { get; set; } = "https://ofd.soliq.uz/check?t=SOC_TERM_01&r=1042&c=20260823103000&s=8F1A29D4E03B";
+
+    private string? qrSvg;
+    private QrStylingOptions qrOptions = new QrStylingOptions
+    {
+        Size = 110,
+        Margin = 2,
+        PrimaryColor = "#0f172a",
+        BackgroundColor = "#ffffff",
+        CornerColor = "#0284c7",
+        CornerDotColor = "#0284c7",
+        DotType = "square",
+        CornerType = "square",
+        CornerDotType = "dot"
+    };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
+        {
+            var qrService = ServiceProvider.GetService(typeof(Domain.Interfaces.Common.IQrDesignerService)) as Domain.Interfaces.Common.IQrDesignerService;
+            if (qrService != null)
+            {
+                try
+                {
+                    qrSvg = await qrService.GenerateQrCodeSvgAsync(SoliqQrUrl, "", qrOptions);
+                }
+                catch
+                {
+                    qrSvg = null;
+                }
+            }
+        }
+    }
+
+    private async Task PrintReceiptAsync()
+    {
+        await PrinterService.PrintElementByIdAsync("fiscal-receipt-element", "receipt-styles");
+    }
+}

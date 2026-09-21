@@ -1,0 +1,48 @@
+@using Microsoft.AspNetCore.Components.Rendering
+@using Microsoft.AspNetCore.Components.Sections
+@using Shared.Services
+@inject IFormFactor FormFactor;
+
+<nav class="glass @(FormFactor.IsMobile() ? "nav-mobile" : "nav-desktop")">
+	<NavLink class="nav-item" href="/home" Match="NavLinkMatch.All">
+		<Icon Name="home" />
+		<span>@L?["Home"]</span>
+	</NavLink>
+	<NavLink class="nav-item" href="/wishlist">
+		<Icon Name="favorite" />
+		<span>@L?["Wish list"]</span>
+	</NavLink>
+	<NavLink class="nav-item" href="/chat">
+		<AIBlob style="position:absolute;height:1px;width:1px;--blob-scale:100" />
+		<svg>
+			<filter id="glass-distortion">
+				<feTurbulence type="turbulence" baseFrequency="0.008" numOctaves="2" result="noise" />
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="77"></feDisplacementMap>
+			</filter>
+		</svg>
+		<span>@L?["Chat"]</span>
+	</NavLink>
+	<NavLink class="nav-item" href="/orders">
+		<Icon Name="shopping_bag" />
+		<span>@L?["Orders"]</span>
+	</NavLink>
+	<NavLink class="nav-item" href="/data">
+		<Icon Name="dataset" />
+		<span>@L?["Data"]</span>
+	</NavLink>
+</nav>
+@code {
+
+	[Inject] public IStringLocalizerFactory F { get; set; } = default!;
+	[Inject] public ISettingsManager Settings { get; set; } = default!;
+
+	IStringLocalizer? L { get; set; } = default!;
+
+	[Parameter] public RenderFragment? ChildContent { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		L = await F.Create(Settings);
+		StateHasChanged();
+	}
+}

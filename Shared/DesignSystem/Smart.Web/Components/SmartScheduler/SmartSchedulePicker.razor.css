@@ -1,0 +1,187 @@
+/* ============================================================ */
+/* SMARTSCHEDULEPICKER SPECIFIC STYLES                         */
+/* ============================================================ */
+
+.picker-week-mini-dots {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.picker-day-dot {
+    font-size: 10px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: inline-grid;
+    place-items: center;
+    background: var(--md-sys-color-surface-container-highest, #e6e0e9);
+    color: var(--md-sys-color-outline, #79747e);
+    user-select: none;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.picker-day-dot.active {
+    background: var(--md-sys-color-primary, #6750a4);
+    color: var(--md-sys-color-on-primary, #ffffff);
+}
+
+/* Modal Schedule Dialog styling */
+.md3-dialog-headline {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface, #1d1b20);
+}
+
+.md3-headline-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary, #6750a4);
+}
+
+.md3-schedule-picker {
+    display: grid;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.md3-presets-section {
+    display: grid;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-low, #f7f9fc);
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+}
+
+.md3-presets-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+}
+
+.md3-presets-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    overflow-x: auto;
+}
+
+.md3-schedule-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.md3-schedule-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.md3-schedule-days {
+    display: grid;
+    gap: 8px;
+}
+
+.md3-schedule-day-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-low, #f7f9fc);
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+    gap: 12px;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.md3-schedule-day-card.active {
+    background: var(--md-sys-color-surface-container-lowest, #ffffff);
+    border-color: var(--md-sys-color-primary, #6750a4);
+}
+
+.md3-schedule-day-left {
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+}
+
+.md3-schedule-time-group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 6px;
+}
+
+.md3-time-picker-box {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 4px;
+    background: var(--md-sys-color-surface, #ffffff);
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+}
+
+.md3-time-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--md-sys-color-outline, #79747e);
+}
+
+.md3-time-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface, #1d1b20);
+    cursor: pointer;
+}
+
+.md3-time-separator {
+    color: var(--md-sys-color-outline, #79747e);
+    font-size: 12px;
+}
+
+.md3-closed-badge {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--md-sys-color-surface-container-high, #ece6f0);
+    color: var(--md-sys-color-outline, #79747e);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.md3-dialog-actions-row {
+    padding-top: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}

@@ -1,0 +1,52 @@
+@namespace Material.Web.Components
+
+@if (!string.IsNullOrEmpty(EffectiveSlot))
+{
+    <md-icon slot="@EffectiveSlot" @attributes="UnmatchedAttributes">@IconText</md-icon>
+}
+else
+{
+    <md-icon @attributes="UnmatchedAttributes">@IconText</md-icon>
+}
+
+@code {
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public string? Slot { get; set; }
+    [Parameter] public string? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private string IconText
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(Name)) return Name;
+            if (!string.IsNullOrWhiteSpace(ChildContent)) return ChildContent;
+            return string.Empty;
+        }
+    }
+
+    private string? EffectiveSlot
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(Slot)) return Slot;
+            if (AdditionalAttributes != null && AdditionalAttributes.TryGetValue("slot", out var slotObj) && slotObj != null)
+            {
+                return slotObj.ToString();
+            }
+            return null;
+        }
+    }
+
+    private IDictionary<string, object>? UnmatchedAttributes
+    {
+        get
+        {
+            if (AdditionalAttributes == null) return null;
+            var copy = new Dictionary<string, object>(AdditionalAttributes);
+            copy.Remove("slot");
+            copy.Remove("name");
+            return copy;
+        }
+    }
+}

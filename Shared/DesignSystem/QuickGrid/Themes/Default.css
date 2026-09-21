@@ -1,0 +1,80 @@
+.quickgrid[theme=default] {
+    --col-gap: 1rem;
+}
+
+.quickgrid[theme=default] .col-header-content {
+    padding-right: var(--col-gap);
+}
+
+.quickgrid[theme=default] > thead > tr > th {
+    font-weight: normal;
+}
+
+.quickgrid[theme=default].loading > tbody {
+    opacity: 0.85;
+    transition: none;
+}
+
+.quickgrid[theme=default] .col-title {
+    padding: 0.1rem 0.4rem;
+}
+
+    .quickgrid[theme=default] > tbody > tr > td {
+        padding: 0.1rem calc(0.4rem + var(--col-gap)) 0.1rem 0.4rem;
+    }
+
+.quickgrid[theme=default] .col-title {
+    gap: 0.4rem; /* Separate the sort indicator from title text */
+    font-weight: bold;
+}
+
+.quickgrid[theme=default] .sort-indicator {
+    opacity: 0.5;
+}
+
+.quickgrid[theme=default] .col-options-button {
+    width: 1.5rem;
+}
+
+.quickgrid[theme=default] button.col-title:hover, .quickgrid[theme=default] .col-options-button:hover {
+    background-color: rgb(from var(--md-sys-color-on-surface) r g b / 0.2);
+}
+
+.quickgrid[theme=default] button.col-title:active, .quickgrid[theme=default] .col-options-button:active {
+    background-color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
+}
+
+    .quickgrid[theme=default] > thead .col-width-draghandle {
+        width: 1rem;
+        right: calc(var(--col-gap)/2 - 0.5rem);
+    }
+
+    .quickgrid[theme=default] > thead .col-width-draghandle:hover {
+        background: rgb(from var(--md-sys-color-on-surface) r g b / 0.2);
+    }
+
+    .quickgrid[theme=default] > thead .col-width-draghandle:active {
+        background: rgb(from var(--md-sys-color-on-surface) r g b / 0.4);
+    }
+
+    .quickgrid[theme=default] > thead .col-width-draghandle:hover:after, .quickgrid[theme=default] > thead .col-width-draghandle:active:after {
+        border-color: black;
+    }
+
+    .quickgrid[theme=default] > thead .col-width-draghandle:after {
+        border-color: var(--md-sys-color-outline-variant);
+        left: 0.5rem;
+        top: 5px;
+        bottom: 5px;
+    }
+
+.quickgrid[theme=default] .col-options {
+    box-shadow: 0 3px 8px 1px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+    border-color: var(--md-sys-color-outline-variant);
+    border-radius: 0.3rem;
+}
+
+.quickgrid[theme=default] > tbody > tr > td.grid-cell-placeholder:after {
+    content: '\2026';
+    opacity: 0.75;
+}

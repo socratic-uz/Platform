@@ -1,0 +1,7 @@
+﻿md-dialog {
+    width: auto;
+}
+
+    md-dialog > * {
+        background: var(--md-sys-color-surface-1);
+    }

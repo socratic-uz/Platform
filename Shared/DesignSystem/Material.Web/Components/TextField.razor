@@ -1,0 +1,566 @@
+@using System.Linq.Expressions
+@using Google.Protobuf.WellKnownTypes
+@using Microsoft.AspNetCore.Components.Forms
+@using Enum = System.Enum
+@typeparam TValue
+@inherits InputBase<TValue>
+
+@if (Type == "textarea")
+{
+    <style>
+        .material-text-field {
+            resize: @Resize;
+        }
+    </style>
+}
+
+@if (Variant == TextFieldVariant.Filled)
+{
+    <md-filled-text-field id="@Id"
+                          class="@CssClass material-text-field"
+                          label="@Label"
+                          value="@CurrentValueAsString"
+                          type="@Type"
+                          placeholder="@Placeholder"
+                          prefix-text="@PrefixText"
+                          suffix-text="@SuffixText"
+                          supporting-text="@GetSupportingText()"
+                          error-text="@GetErrorText()"
+                          rows="@Rows"
+                          cols="@Cols"
+                          max="@Max"
+                          maxlength="@MaxLength"
+                          min="@Min"
+                          minlength="@MinLength"
+                          pattern="@Pattern"
+                          step="@Step"
+                          inputmode="@InputMode"
+                          autocomplete="@Autocomplete"
+                          text-direction="@TextDirection"
+                          count="@(ShowCharacterCount ? CurrentValueAsString?.Length : null)"
+                          @attributes="AdditionalAttributes"
+                          disabled="@Disabled"
+                          readonly="@ReadOnly"
+                          required="@Required"
+                          no-asterisk="@NoAsterisk"
+                          no-spinner="@NoSpinner"
+                          multiple="@Multiple"
+                          error="@HasValidationErrors"
+                          has-leading-icon="@HasLeadingIcon"
+                          has-trailing-icon="@HasTrailingIcon"
+                          @ref="textFieldElement"
+                          @oninput=@HandleInput
+                          @onchange=@HandleChange
+                          @onselect=@OnSelect
+                          @onfocus=@OnFocus
+                          @onblur=@OnBlur>
+        @if (HasLeadingIcon)
+        {
+            <md-icon slot="leading-icon">@LeadingIcon</md-icon>
+        }
+        @if (HasTrailingIcon)
+        {
+            @if (TrailingIconToggle)
+            {
+                <md-icon-button toggle slot="trailing-icon" @onclick="HandleTrailingIconClick">
+                    <md-icon>@TrailingIcon</md-icon>
+                    <md-icon slot="selected">@TrailingIconSelected</md-icon>
+                </md-icon-button>
+            }
+            else
+            {
+                <md-icon slot="trailing-icon" @onclick="HandleTrailingIconClick">@TrailingIcon</md-icon>
+            }
+        }
+        @ChildContent
+    </md-filled-text-field>
+}
+else
+{
+    <md-outlined-text-field id="@Id"
+                            class="@CssClass material-text-field"
+                            label="@Label"
+                            value="@CurrentValueAsString"
+                            type="@Type"
+                            placeholder="@Placeholder"
+                            prefix-text="@PrefixText"
+                            suffix-text="@SuffixText"
+                            supporting-text="@GetSupportingText()"
+                            error-text="@GetErrorText()"
+                            rows="@Rows"
+                            cols="@Cols"
+                            max="@Max"
+                            maxlength="@MaxLength"
+                            min="@Min"
+                            minlength="@MinLength"
+                            pattern="@Pattern"
+                            step="@Step"
+                            inputmode="@InputMode"
+                            autocomplete="@Autocomplete"
+                            text-direction="@TextDirection"
+                            count="@(ShowCharacterCount ? CurrentValueAsString?.Length : null)"
+                            @attributes="AdditionalAttributes"
+                            disabled="@Disabled"
+                            readonly="@ReadOnly"
+                            required="@Required"
+                            no-asterisk="@NoAsterisk"
+                            no-spinner="@NoSpinner"
+                            multiple="@Multiple"
+                            error="@HasValidationErrors"
+                            has-leading-icon="@HasLeadingIcon"
+                            has-trailing-icon="@HasTrailingIcon"
+                            @ref="textFieldElement"
+                            @oninput=@HandleInput
+                            @onchange=@HandleChange
+                            @onselect=@OnSelect
+                            @onfocus=@OnFocus
+                            @onblur=@OnBlur>
+        @if (HasLeadingIcon)
+        {
+            <md-icon slot="leading-icon">@LeadingIcon</md-icon>
+        }
+        @if (HasTrailingIcon)
+        {
+            @if (TrailingIconToggle)
+            {
+                <md-icon-button toggle slot="trailing-icon" @onclick="HandleTrailingIconClick">
+                    <md-icon>@TrailingIcon</md-icon>
+                    <md-icon slot="selected">@TrailingIconSelected</md-icon>
+                </md-icon-button>
+            }
+            else
+            {
+                <md-icon slot="trailing-icon" @onclick="HandleTrailingIconClick">@TrailingIcon</md-icon>
+            }
+        }
+        @ChildContent
+    </md-outlined-text-field>
+}
+
+@code {
+    private ElementReference textFieldElement;
+    private bool isTrailingIconToggled = false;
+
+    [Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
+    [Parameter] public TextFieldVariant Variant { get; set; } = TextFieldVariant.Filled;
+    [Parameter] public string Label { get; set; } = "";
+    [Parameter] public string Type { get; set; } = "text";
+    [Parameter] public string Placeholder { get; set; } = "";
+    [Parameter] public string PrefixText { get; set; } = "";
+    [Parameter] public string SuffixText { get; set; } = "";
+    [Parameter] public string SupportingText { get; set; } = "";
+    [Parameter] public string ErrorText { get; set; } = "";
+    [Parameter] public int Rows { get; set; } = 2;
+    [Parameter] public int Cols { get; set; } = 20;
+    [Parameter] public string Max { get; set; } = "";
+    [Parameter] public int? MaxLength { get; set; }
+    [Parameter] public string Min { get; set; } = "";
+    [Parameter] public int? MinLength { get; set; }
+    [Parameter] public string Pattern { get; set; } = "";
+    [Parameter] public string Step { get; set; } = "";
+    [Parameter] public string InputMode { get; set; } = "";
+    [Parameter] public string Autocomplete { get; set; } = "";
+    [Parameter] public string TextDirection { get; set; } = "";
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public bool ReadOnly { get; set; } = false;
+    [Parameter] public bool Required { get; set; } = false;
+    [Parameter] public bool NoAsterisk { get; set; } = false;
+    [Parameter] public bool NoSpinner { get; set; } = false;
+    [Parameter] public bool Multiple { get; set; } = false;
+    [Parameter] public bool HasLeadingIcon { get; set; } = false;
+    [Parameter] public string LeadingIcon { get; set; } = "";
+    [Parameter] public bool HasTrailingIcon { get; set; } = false;
+    [Parameter] public string TrailingIcon { get; set; } = "";
+    [Parameter] public bool TrailingIconToggle { get; set; } = false;
+    [Parameter] public string TrailingIconSelected { get; set; } = "";
+    [Parameter] public string Resize { get; set; } = "none";
+    [Parameter] public bool ShowCharacterCount { get; set; } = false;
+
+    // Validation parameters
+    [Parameter] public Expression<Func<TValue>>? For { get; set; }
+    [Parameter] public bool ShowValidationMessage { get; set; } = true;
+
+    // Events
+    [Parameter] public EventCallback<ChangeEventArgs> OnInput { get; set; }
+    [Parameter] public EventCallback<ChangeEventArgs> OnChange { get; set; }
+    [Parameter] public EventCallback<EventArgs> OnSelect { get; set; }
+    [Parameter] public EventCallback<FocusEventArgs> OnFocus { get; set; }
+    [Parameter] public EventCallback<FocusEventArgs> OnBlur { get; set; }
+    [Parameter] public EventCallback<MouseEventArgs> OnTrailingIconClick { get; set; }
+
+    // Content
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    // Ã‘Ã¢Ã®Ã©Ã±Ã²Ã¢Ã® Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ¨ Ã­Ã Ã«Ã¨Ã·Ã¨Ã¿ Ã®Ã¸Ã¨Ã¡Ã®Ãª Ã¢Ã Ã«Ã¨Ã¤Ã Ã¶Ã¨Ã¨
+    private bool HasValidationErrors => EditContext?.GetValidationMessages(FieldIdentifier).Any() == true;
+
+    // CSS ÃªÃ«Ã Ã±Ã± Ã± Ã³Ã·Ã¥Ã²Ã®Ã¬ Ã¤Ã®Ã¯Ã®Ã«Ã­Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ãµ ÃªÃ«Ã Ã±Ã±Ã®Ã¢
+    private new string CssClass => AdditionalAttributes?.TryGetValue("class", out var cssClass) == true 
+        ? $"material-text-field {cssClass}" 
+        : "material-text-field";
+
+    protected override void OnParametersSet()
+    {
+        if (For != null && EditContext != null)
+        {
+            FieldIdentifier = FieldIdentifier.Create(For);
+        }
+        base.OnParametersSet();
+    }
+
+    // ÃŒÃ¥Ã²Ã®Ã¤Ã» Ã¤Ã«Ã¿ Ã¯Ã®Ã«Ã³Ã·Ã¥Ã­Ã¨Ã¿ Ã²Ã¥ÃªÃ±Ã²Ã  Ã¯Ã®Ã¤Ã¤Ã¥Ã°Ã¦ÃªÃ¨ Ã¨ Ã®Ã¸Ã¨Ã¡Ã®Ãª
+    private string GetSupportingText()
+    {
+        if (HasValidationErrors && ShowValidationMessage)
+            return "";
+        return SupportingText;
+    }
+
+    private string GetErrorText()
+    {
+        if (HasValidationErrors && ShowValidationMessage)
+        {
+            var messages = EditContext?.GetValidationMessages(FieldIdentifier);
+            return messages?.FirstOrDefault() ?? ErrorText;
+        }
+        return ErrorText;
+    }
+
+    // ÃŽÃ¡Ã°Ã Ã¡Ã®Ã²Ã·Ã¨ÃªÃ¨ Ã±Ã®Ã¡Ã»Ã²Ã¨Ã©
+    private async Task HandleInput(ChangeEventArgs e)
+    {
+        CurrentValueAsString = e.Value?.ToString();
+        await OnInput.InvokeAsync(e);
+    }
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        CurrentValueAsString = e.Value?.ToString();
+        await OnChange.InvokeAsync(e);
+    }
+
+    private async Task HandleTrailingIconClick(MouseEventArgs e)
+    {
+        if (TrailingIconToggle)
+        {
+            isTrailingIconToggled = !isTrailingIconToggled;
+            StateHasChanged();
+        }
+        await OnTrailingIconClick.InvokeAsync(e);
+    }
+
+    // ÃŒÃ¥Ã²Ã®Ã¤Ã» Ã¤Ã«Ã¿ Ã¢Ã§Ã Ã¨Ã¬Ã®Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¿ Ã± ÃªÃ®Ã¬Ã¯Ã®Ã­Ã¥Ã­Ã²Ã®Ã¬
+    public async Task Focus()
+    {
+        await textFieldElement.FocusAsync();
+    }
+
+    public async Task Blur()
+    {
+        // Blazor doesn't have BlurAsync, using JS interop would be needed
+        await Task.CompletedTask;
+    }
+
+    public async Task Select()
+    {
+        // Would need JS interop to call select() method
+        await Task.CompletedTask;
+    }
+
+    // ÃÃ®Ã«Ã³Ã·Ã¥Ã­Ã¨Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¿ ÃªÃ Ãª Ã·Ã¨Ã±Ã«Ã® (Ã¤Ã«Ã¿ Ã·Ã¨Ã±Ã«Ã®Ã¢Ã»Ãµ Ã¯Ã®Ã«Ã¥Ã©)
+    public double? ValueAsNumber
+    {
+        get
+        {
+            if (double.TryParse(CurrentValueAsString, out var result))
+                return result;
+            return null;
+        }
+        set
+        {
+            CurrentValueAsString = value?.ToString() ?? "";
+        }
+    }
+
+    // Получение значения как дата (для полей даты)
+    public DateTime? ValueAsDate
+    {
+        get
+        {
+            if (DateTime.TryParse(CurrentValueAsString, out var result))
+                return result;
+            return null;
+        }
+        set
+        {
+            CurrentValueAsString = value?.ToString("yyyy-MM-dd") ?? "";
+        }
+    }
+
+    // Переопределение базовых методов InputBase
+    protected override bool TryParseValueFromString(string? value, out TValue result, out string? validationErrorMessage)
+    {
+        result = default!;
+        validationErrorMessage = null;
+
+        // Handle null or empty values
+        if (string.IsNullOrEmpty(value))
+        {
+            if (Required)
+            {
+                validationErrorMessage = "Поле обязательно для заполнения";
+                return false;
+            }
+
+            // For nullable types, return default value
+            if (typeof(TValue) == typeof(string) || Nullable.GetUnderlyingType(typeof(TValue)) != null)
+            {
+                result = default!;
+                return true;
+            }
+
+            validationErrorMessage = "Поле обязательно для заполнения";
+            return false;
+        }
+
+        // Try to convert the value based on the target type
+        var targetType = Nullable.GetUnderlyingType(typeof(TValue)) ?? typeof(TValue);
+
+        try
+        {
+            if (targetType == typeof(string))
+            {
+                result = (TValue)(object)value;
+                return ValidateStringValue(value, out validationErrorMessage);
+            }
+            else if (targetType == typeof(int))
+            {
+                if (int.TryParse(value, out var intValue))
+                {
+                    result = (TValue)(object)intValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(long))
+            {
+                if (long.TryParse(value, out var longValue))
+                {
+                    result = (TValue)(object)longValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(decimal))
+            {
+                if (decimal.TryParse(value, CultureInfo.InvariantCulture, out var decimalValue))
+                {
+                    result = (TValue)(object)decimalValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(double))
+            {
+                if (double.TryParse(value, out var doubleValue))
+                {
+                    result = (TValue)(object)doubleValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(float))
+            {
+                if (float.TryParse(value, out var floatValue))
+                {
+                    result = (TValue)(object)floatValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(DateTime))
+            {
+                if (DateTime.TryParse(value, out var dateValue))
+                {
+                    result = (TValue)(object)dateValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(DateOnly))
+            {
+                if (DateOnly.TryParse(value, out var dateOnlyValue))
+                {
+                    result = (TValue)(object)dateOnlyValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(TimeOnly))
+            {
+                if (TimeOnly.TryParse(value, out var timeOnlyValue))
+                {
+                    result = (TValue)(object)timeOnlyValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(Timestamp))
+            {
+                if (DateTimeOffset.TryParse(value, out var dateTimeOffsetValue))
+                {
+					var timestampValue = Timestamp.FromDateTimeOffset(dateTimeOffsetValue);
+					result = (TValue)(object)timestampValue;
+                    return true;
+                }
+            }
+            else if (targetType == typeof(DateTimeOffset))
+            {
+                if (DateTimeOffset.TryParse(value, out var dateTimeOffsetValue))
+                {
+                    result = (TValue)(object)dateTimeOffsetValue;
+                    return true;
+                }
+			}
+            else if (targetType == typeof(Guid))
+            {
+                if (Guid.TryParse(value, out var guidValue))
+                {
+                    result = (TValue)(object)guidValue;
+                    return true;
+                }
+            }
+            else if (targetType.IsEnum)
+            {
+                if (Enum.TryParse(targetType, value, true, out var enumValue))
+                {
+                    result = (TValue)enumValue!;
+                    return true;
+                }
+            }
+            else
+            {
+                // Try generic conversion for other types
+                var convertedValue = Convert.ChangeType(value, targetType, CultureInfo.InvariantCulture);
+                result = (TValue)convertedValue;
+                return true;
+            }
+        }
+        catch (Exception ex)
+        {
+            validationErrorMessage = $"Невозможно преобразовать значение: {ex.Message}";
+            return false;
+        }
+
+        validationErrorMessage = $"Невозможно преобразовать '{value}' в тип {typeof(TValue).Name}";
+        return false;
+    }
+
+    private bool ValidateStringValue(string value, out string? validationErrorMessage)
+    {
+        validationErrorMessage = null;
+
+        // Валидация по типу поля
+        switch (Type.ToLowerInvariant())
+        {
+            case "email":
+                if (!IsValidEmail(value))
+                {
+                    validationErrorMessage = "Неверный формат email адреса";
+                    return false;
+                }
+                break;
+            case "url":
+                if (!Uri.TryCreate(value, UriKind.Absolute, out _))
+                {
+                    validationErrorMessage = "Неверный формат URL";
+                    return false;
+                }
+                break;
+            case "tel":
+                if (!IsValidPhoneNumber(value))
+                {
+                    validationErrorMessage = "Неверный формат номера телефона";
+                    return false;
+                }
+                break;
+        }
+
+        // Валидация по паттерну
+        if (!string.IsNullOrEmpty(Pattern))
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(value, Pattern))
+            {
+                validationErrorMessage = "Значение не соответствует требуемому формату";
+                return false;
+            }
+        }
+
+        // Валидация длины
+        if (MinLength.HasValue && value.Length < MinLength.Value)
+        {
+            validationErrorMessage = $"Минимальная длина: {MinLength.Value} символов";
+            return false;
+        }
+
+        if (MaxLength.HasValue && value.Length > MaxLength.Value)
+        {
+            validationErrorMessage = $"Максимальная длина: {MaxLength.Value} символов";
+            return false;
+        }
+
+        return true;
+    }
+
+    protected override string? FormatValueAsString(TValue? value)
+    {
+        if (value == null)
+            return null;
+
+        // Handle different value types appropriately
+        if (value is DateTime dateTime)
+        {
+            return Type.ToLowerInvariant() switch
+            {
+                "date" => dateTime.ToString("yyyy-MM-dd"),
+                "datetime-local" => dateTime.ToString("yyyy-MM-ddTHH:mm"),
+                "time" => dateTime.ToString("HH:mm"),
+                _ => dateTime.ToString(CultureInfo.InvariantCulture)
+            };
+        }
+        else if (value is DateOnly dateOnly)
+        {
+            return dateOnly.ToString("yyyy-MM-dd");
+        }
+        else if (value is TimeOnly timeOnly)
+        {
+            return timeOnly.ToString("HH:mm");
+        }
+        else if (value is decimal || value is double || value is float)
+        {
+            return value.ToString();
+        }
+        else
+        {
+            return value.ToString();
+        }
+    }
+
+    // Ã‚Ã±Ã¯Ã®Ã¬Ã®Ã£Ã Ã²Ã¥Ã«Ã¼Ã­Ã»Ã¥ Ã¬Ã¥Ã²Ã®Ã¤Ã» Ã¢Ã Ã«Ã¨Ã¤Ã Ã¶Ã¨Ã¨
+    private static bool IsValidEmail(string email)
+    {
+        try
+        {
+            var mail = new System.Net.Mail.MailAddress(email);
+            return mail.Address == email;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    private static bool IsValidPhoneNumber(string phone)
+    {
+        // ÃÃ°Ã®Ã±Ã²Ã Ã¿ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã²Ã¥Ã«Ã¥Ã´Ã®Ã­Ã  (Ã¬Ã®Ã¦Ã­Ã® Ã°Ã Ã±Ã¸Ã¨Ã°Ã¨Ã²Ã¼)
+        return System.Text.RegularExpressions.Regex.IsMatch(phone, @"^[\+]?[0-9\s\-\(\)]{7,15}$");
+    }
+
+    public enum TextFieldVariant
+    {
+        Filled,
+        Outlined
+    }
+}

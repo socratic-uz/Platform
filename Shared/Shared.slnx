@@ -1,0 +1,24 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="LocalDebug" />
+    <BuildType Name="Runner" />
+    <BuildType Name="Cluster" />
+  </Configurations>
+  <Folder Name="/Core/">
+    <Project Path="Domain/Domain.csproj" />
+    <Project Path="Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/DesignSystem/">
+    <Project Path="DesignSystem/Layout/Layout.csproj" />
+    <Project Path="DesignSystem/Material.Web/Material.Web.csproj" />
+    <Project Path="DesignSystem/Smart.Web/Smart.Web.csproj" />
+    <Project Path="DesignSystem/QuickGrid/QuickGrid.csproj" />
+    <Project Path="DesignSystem/Markdown/Markdown.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="../../../Shared/SharedKernel/SharedKernel.csproj" />
+  </Folder>
+</Solution>
+

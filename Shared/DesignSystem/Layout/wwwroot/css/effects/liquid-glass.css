@@ -1,0 +1,54 @@
+.glass {
+    position: relative;
+    overflow: hidden;
+}
+
+    .glass::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        filter: url('#glass-distortion') saturate(125%) brightness(1.1);
+        border-radius: inherit;
+    }
+
+    .glass > * {
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+@keyframes floatDistort {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+/* Glass Card Container */
+.glass-preview {
+    background-image: url('https://images.pexels.com/photos/2563854/pexels-photo-2563854.jpeg');
+    animation: preview-bg-move 5s ease-in-out infinite alternate;
+}
+
+@keyframes preview-bg-move {
+    from {
+        background-position: center center;
+    }
+
+    to {
+        background-position: center bottom;
+    }
+}

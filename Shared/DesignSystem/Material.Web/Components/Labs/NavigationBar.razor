@@ -1,0 +1,14 @@
+@namespace Material.Web.Components.Labs
+
+<md-navigation-bar active-index="@ActiveIndex"
+                   hide-inactive-labels="@HideInactiveLabels"
+                   @attributes="AdditionalAttributes">
+    @ChildContent
+</md-navigation-bar>
+
+@code {
+    [Parameter] public int ActiveIndex { get; set; } = 0;
+    [Parameter] public bool HideInactiveLabels { get; set; } = false;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+}

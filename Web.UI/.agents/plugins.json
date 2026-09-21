@@ -1,0 +1,10 @@
+{
+  "entries": [
+    {
+      "path": ".agents/plugins/dotnet-blazor"
+    },
+    {
+      "path": ".agents/plugins/dotnet-test"
+    }
+  ]
+}

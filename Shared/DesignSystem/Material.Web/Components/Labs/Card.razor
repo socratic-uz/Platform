@@ -1,0 +1,27 @@
+@namespace Material.Web.Components.Labs
+
+@if (Type == "filled")
+{
+    <md-filled-card disabled="@Disabled" @attributes="AdditionalAttributes">
+        @ChildContent
+    </md-filled-card>
+}
+else if (Type == "outlined")
+{
+    <md-outlined-card disabled="@Disabled" @attributes="AdditionalAttributes">
+        @ChildContent
+    </md-outlined-card>
+}
+else
+{
+    <md-elevated-card disabled="@Disabled" @attributes="AdditionalAttributes">
+        @ChildContent
+    </md-elevated-card>
+}
+
+@code {
+    [Parameter] public string Type { get; set; } = "elevated"; // elevated, filled, outlined
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+}

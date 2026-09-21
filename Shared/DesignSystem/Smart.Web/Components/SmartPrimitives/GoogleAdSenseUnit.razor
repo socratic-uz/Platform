@@ -1,0 +1,14 @@
+@namespace Smart.Web.Components
+@using Microsoft.JSInterop
+
+@if (Visible)
+{
+    <div class="google-adsense-wrapper @Class" style="@Style">
+        <ins class="adsbygoogle"
+             style="@InsStyle"
+             data-ad-client="@Client"
+             data-ad-slot="@Slot"
+             data-ad-format="@Format"
+             data-full-width-responsive="@(FullWidthResponsive ? "true" : "false")"></ins>
+    </div>
+}

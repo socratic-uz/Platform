@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Shared</RootNamespace>
+    <AssemblyName>Layout</AssemblyName>
+    <StaticWebAssetBasePath>Shared</StaticWebAssetBasePath>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" />
+    <PackageReference Include="Microsoft.Extensions.Localization" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SmartWeb)" Condition="'$(SmartWeb)' != '' and Exists('$(SmartWeb)')" />
+    <ProjectReference Include="..\Smart.Web\Smart.Web.csproj" Condition="('$(SmartWeb)' == '' or !Exists('$(SmartWeb)')) and Exists('..\Smart.Web\Smart.Web.csproj')" />
+    <ProjectReference Include="..\..\DesignSystem\Smart.Web\Smart.Web.csproj" Condition="('$(SmartWeb)' == '' or !Exists('$(SmartWeb)')) and Exists('..\..\DesignSystem\Smart.Web\Smart.Web.csproj')" />
+    <ProjectReference Include="$(MaterialWeb)" Condition="'$(MaterialWeb)' != '' and Exists('$(MaterialWeb)')" />
+    <ProjectReference Include="..\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\Material.Web\Material.Web.csproj')" />
+    <ProjectReference Include="..\..\DesignSystem\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\..\DesignSystem\Material.Web\Material.Web.csproj')" />
+    <ProjectReference Include="$(QuickGrid)" Condition="'$(QuickGrid)' != '' and Exists('$(QuickGrid)')" />
+    <ProjectReference Include="..\QuickGrid\QuickGrid.csproj" Condition="('$(QuickGrid)' == '' or !Exists('$(QuickGrid)')) and Exists('..\QuickGrid\QuickGrid.csproj')" />
+    <ProjectReference Include="..\..\DesignSystem\QuickGrid\QuickGrid.csproj" Condition="('$(QuickGrid)' == '' or !Exists('$(QuickGrid)')) and Exists('..\..\DesignSystem\QuickGrid\QuickGrid.csproj')" />
+    <ProjectReference Include="$(Infrastructure)" Condition="'$(Infrastructure)' != '' and Exists('$(Infrastructure)')" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj" Condition="('$(Infrastructure)' == '' or !Exists('$(Infrastructure)')) and Exists('..\..\Infrastructure\Infrastructure.csproj')" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" Condition="('$(Infrastructure)' == '' or !Exists('$(Infrastructure)')) and Exists('..\Infrastructure\Infrastructure.csproj')" />
+    <ProjectReference Include="$(Domain)" Condition="'$(Domain)' != '' and Exists('$(Domain)')" />
+    <ProjectReference Include="..\..\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\..\Domain\Domain.csproj')" />
+    <ProjectReference Include="..\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\Domain\Domain.csproj')" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ResourceEn.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ResourceRu.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="**\*.razor" Pack="false" />
+  </ItemGroup>
+</Project>

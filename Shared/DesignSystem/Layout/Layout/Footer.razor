@@ -1,0 +1,11 @@
+@using Microsoft.AspNetCore.Components.Rendering
+@using Microsoft.AspNetCore.Components.Sections
+
+@if (ChildContent is not null)
+{
+	<footer>@ChildContent</footer>
+}
+
+@code {
+	[Parameter] public RenderFragment? ChildContent { get; set; }
+}

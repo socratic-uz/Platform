@@ -1,0 +1,15 @@
+<div class="material-counter">
+	@if (OrderItem != null)
+	{
+		<IconButton Icon="remove" Variant="IconButtonVariant.FilledTonal" OnClick=@(async e => await Remove.InvokeAsync(OrderItem)) />
+		<span style="font-weight: 700; color: var(--md-sys-color-on-surface); font-size: 0.9rem; min-width: 24px; text-align: center; display: inline-block;">@OrderItem.Quantity</span>
+		<IconButton Icon="add" Variant="IconButtonVariant.Filled" OnClick=@(async e => await Add.InvokeAsync(OrderItem)) />
+	}
+	else
+	{
+		<Button Variant="ButtonVariant.Filled" OnClick=@(async e => await CreateOrderItem.InvokeAsync((Product, OrderItem))) style="--md-filled-button-leading-space: 12px; --md-filled-button-trailing-space: 12px; --md-filled-button-label-text-size: 0.85rem;">
+			<Icon Name="add_shopping_cart" Slot="icon" />
+			В корзину
+		</Button>
+	}
+</div>

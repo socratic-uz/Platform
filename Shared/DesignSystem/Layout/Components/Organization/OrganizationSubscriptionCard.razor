@@ -1,0 +1,119 @@
+@namespace Shared.Components
+@using SharedKernel.ValueObjects
+@using Domain.Entities
+
+<div class="socratic-subscription-card">
+    <div class="subscription-header">
+        <div class="subscription-status-badge @GetTierBadgeClass()">
+            <Icon Name="@GetTierIcon()" class="badge-icon" />
+            <span>@GetTierBadgeTitle()</span>
+        </div>
+        @if (Subscription.IsTrialActive)
+        {
+            <div class="trial-counter">
+                <span class="trial-days-highlight">@Subscription.RemainingTrialDays</span>
+                <span class="trial-days-label">дней триала осталось</span>
+            </div>
+        }
+    </div>
+
+    <div class="subscription-current-info">
+        <h2 class="subscription-title">@GetTierHeadline()</h2>
+        <p class="subscription-description">@GetTierDescription()</p>
+    </div>
+
+    <!-- Сетка сравнения 3-х тарифов -->
+    <div class="tiers-grid">
+        <!-- 1. Пробный период -->
+        <div class="tier-box @(Subscription.Tier == SubscriptionTier.Trial ? "active-tier" : "")">
+            <div class="tier-header">
+                <h3 class="tier-name">1. Пробный период</h3>
+                <span class="tier-price">0$ <small>/ 30 дней</small></span>
+            </div>
+            <ul class="tier-features">
+                <li><Icon Name="check_circle" class="feature-icon ok" /> <strong>Без рекламы</strong></li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Полный доступ ко всем 28 режимам</li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Фирменная заставка заведения</li>
+            </ul>
+            @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
+            {
+                <span class="current-plan-indicator">Текущий тариф</span>
+            }
+        </div>
+
+        <!-- 2. С рекламой -->
+        <div class="tier-box @(Subscription.Tier == SubscriptionTier.WithAds ? "active-tier" : "")">
+            <div class="tier-header">
+                <h3 class="tier-name">2. С рекламой</h3>
+                <span class="tier-price">5$ <small>/ мес</small></span>
+            </div>
+            <ul class="tier-features">
+                <li><Icon Name="info" class="feature-icon info" /> Реклама партнеров на киосках</li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Все функции облачной кассы</li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Фискализация Soliq.uz</li>
+            </ul>
+            @if (Subscription.Tier == SubscriptionTier.WithAds)
+            {
+                <span class="current-plan-indicator">Текущий тариф</span>
+            }
+            else
+            {
+                <Button Variant="ButtonVariant.Outlined" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.WithAds)">
+                    Выбрать (5$/мес)
+                </Button>
+            }
+        </div>
+
+        <!-- 3. Без рекламы (PRO) -->
+        <div class="tier-box pro-tier @(Subscription.Tier == SubscriptionTier.ProAdFree ? "active-tier" : "")">
+            <div class="pro-tag">Рекомендуется</div>
+            <div class="tier-header">
+                <h3 class="tier-name">3. PRO Без рекламы</h3>
+                <span class="tier-price">25$ <small>/ мес</small></span>
+            </div>
+            <ul class="tier-features">
+                <li><Icon Name="star" class="feature-icon star" /> <strong>100% Без рекламы</strong></li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Фирменный экранозаставка ресторана</li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Приоритетный саппорт 24/7</li>
+                <li><Icon Name="check_circle" class="feature-icon ok" /> Премиальный White-Label стиль</li>
+            </ul>
+            @if (Subscription.Tier == SubscriptionTier.ProAdFree)
+            {
+                <span class="current-plan-indicator pro">Активен PRO</span>
+            }
+            else
+            {
+                <Button Variant="ButtonVariant.Filled" Icon="rocket_launch" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree)">
+                    Подключить PRO (25$/мес)
+                </Button>
+            }
+        </div>
+    </div>
+
+    @if (isChangePlanModalOpen)
+    {
+        <div class="modal-backdrop" @onclick="CloseSelectPlanDialog">
+            <div class="subscription-modal" @onclick:stopPropagation="true">
+                <div class="modal-header">
+                    <h3 class="modal-title">Подключение тарифа: @(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы (25$/мес)" : "С рекламой (5$/мес)")</h3>
+                    <IconButton Icon="close" Variant="IconButtonVariant.Standard" AriaLabel="Закрыть" OnClick="CloseSelectPlanDialog" />
+                </div>
+                <div class="modal-body">
+                    <p class="modal-summary">
+                        Вы выбрали тариф <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы — 25$ в месяц" : "С рекламой — 5$ в месяц")</strong>.
+                    </p>
+                    <div class="payment-methods-selector">
+                        <Radio Name="payment_method" Value="click" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Click Business / Payme Merchant" />
+                        <Radio Name="payment_method" Value="invoice" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Безналичный расчет для юр. лиц (Договор и счет)" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <Button Variant="ButtonVariant.Text" OnClick="CloseSelectPlanDialog">Отмена</Button>
+                    <Button Variant="ButtonVariant.Filled" OnClick="ConfirmPlanChange">
+                        Подтвердить активацию
+                    </Button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

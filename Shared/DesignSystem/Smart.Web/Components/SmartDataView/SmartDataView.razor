@@ -1,0 +1,85 @@
+@namespace Smart.Web.Components
+@typeparam TItem where TItem : class, new()
+
+<div class="smart-data-view">
+    <div class="smart-data-view-header">
+        <SmartFilterBar TItem="TItem"
+                        Placeholder="@FilterPlaceholder"
+                        SearchText="@SearchText"
+                        SearchTextChanged="OnSearchTextChanged"
+                        FilterChips="@FilterChips"
+                        OnChipToggled="OnChipToggled" />
+
+        <div class="smart-view-mode-toggle" style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px;">
+            <Button Variant="@(CurrentMode == ViewMode.Grid ? ButtonVariant.Filled : ButtonVariant.Outlined)"
+                    OnClick="() => SetViewMode(ViewMode.Grid)">
+                <Icon Name="table_chart" Slot="icon" />
+                Таблица
+            </Button>
+            <Button Variant="@(CurrentMode == ViewMode.Kanban ? ButtonVariant.Filled : ButtonVariant.Outlined)"
+                    OnClick="() => SetViewMode(ViewMode.Kanban)">
+                <Icon Name="view_kanban" Slot="icon" />
+                Канбан
+            </Button>
+        </div>
+    </div>
+
+    <div class="smart-data-view-content">
+        @if (CurrentMode == ViewMode.Grid)
+        {
+            <SmartGrid TItem="TItem"
+                       Items="@FilteredItems"
+                       PageSize="@PageSize"
+                       OnValidSubmit="OnValidSubmit" />
+        }
+        else if (CurrentMode == ViewMode.Kanban)
+        {
+            <SmartKanban TItem="TItem"
+                         Items="@FilteredItems"
+                         Columns="@KanbanColumns"
+                         StatusSelector="@StatusSelector"
+                         TitleSelector="@TitleSelector"
+                         SubtitleSelector="@SubtitleSelector"
+                         OnCardClicked="OnCardClicked"
+                         OnCardMoved="OnCardMoved" />
+        }
+    </div>
+</div>
+
+<style>
+    .smart-data-view {
+        display: grid;
+        gap: 16px;
+    }
+    .smart-data-view-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 12px;
+    }
+    .smart-view-mode-toggle {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        background: #edf2f7;
+        padding: 4px;
+        border-radius: 10px;
+        gap: 4px;
+    }
+    .smart-view-toggle-btn {
+        padding: 6px 14px;
+        border-radius: 8px;
+        border: none;
+        background: transparent;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        color: #4a5568;
+        transition: all 0.2s;
+    }
+    .smart-view-toggle-btn.active {
+        background: #ffffff;
+        color: #2b6cb0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+</style>

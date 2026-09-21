@@ -1,0 +1,55 @@
+<Project>
+  <PropertyGroup>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <_ParentProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</_ParentProps>
+  </PropertyGroup>
+
+  <!-- Import parent props if running inside Socratic monorepo or meta-frontend -->
+  <Import Project="$(_ParentProps)" Condition="'$(_ParentProps)' != '' and Exists('$(_ParentProps)')" />
+
+  <!-- Standalone Platform Configuration (when cloned or opened directly as Platform.git) -->
+  <PropertyGroup Condition="'$(_ParentProps)' == '' or !Exists('$(_ParentProps)')">
+    <SolutionDir>$(MSBuildThisFileDirectory)</SolutionDir>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Submodule SharedKernel detection -->
+    <SharedKernelRoot Condition="Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == ''">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+
+    <SharedKernelDir>$(SharedKernelRoot)</SharedKernelDir>
+    <SharedKernelProtos>$(SharedKernelDir)</SharedKernelProtos>
+    <SharedKernel>$(SharedKernelDir)SharedKernel.csproj</SharedKernel>
+    <ServiceDefaults>$(SharedKernelDir)ServiceDefaults/ServiceDefaults.csproj</ServiceDefaults>
+    <ContractsProtos>$(SharedKernelDir)Protos/Contracts/</ContractsProtos>
+  </PropertyGroup>
+
+  <!-- Canonical Platform Paths (always evaluated for Platform projects) -->
+  <PropertyGroup>
+    <PlatformRoot>$(MSBuildThisFileDirectory)</PlatformRoot>
+    <PlatformSharedDir>$(PlatformRoot)Shared/</PlatformSharedDir>
+    <WebUIDir>$(PlatformRoot)Web.UI/</WebUIDir>
+    <WebUI>$(WebUIDir)Web.UI/Web.UI.csproj</WebUI>
+    <WebUIClient>$(WebUIDir)Web.UI.Client/Web.UI.Client.csproj</WebUIClient>
+    <NativeUI>$(PlatformRoot)Native.UI/Native.UI.csproj</NativeUI>
+
+    <Domain>$(PlatformSharedDir)Domain/Domain.csproj</Domain>
+    <Infrastructure>$(PlatformSharedDir)Infrastructure/Infrastructure.csproj</Infrastructure>
+    <Layout>$(PlatformSharedDir)DesignSystem/Layout/Layout.csproj</Layout>
+    <Shell Condition="'$(Shell)' == ''">$(Layout)</Shell>
+    <Shared>$(PlatformSharedDir)Shared/Shared.csproj</Shared>
+
+    <CoreDomain>$(Domain)</CoreDomain>
+    <CoreInfrastructure>$(Infrastructure)</CoreInfrastructure>
+    <CoreShared>$(Shared)</CoreShared>
+
+    <MaterialWeb>$(PlatformSharedDir)DesignSystem/Material.Web/Material.Web.csproj</MaterialWeb>
+    <SmartWeb>$(PlatformSharedDir)DesignSystem/Smart.Web/Smart.Web.csproj</SmartWeb>
+    <QuickGrid>$(PlatformSharedDir)DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>
+    <Markdown>$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj</Markdown>
+  </PropertyGroup>
+</Project>
