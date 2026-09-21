@@ -132,6 +132,7 @@ public static class StreamingEndpoints
 
                     if (frameBitmap == null) continue;
 
+#if FEATURE_VISION
                     if (Detector.yolo != null)
                     {
                         Detector.yolo.SetupYoloDefaultLabels();
@@ -161,6 +162,7 @@ public static class StreamingEndpoints
                             canvas.Flush();
                         }
                     }
+#endif
 
                     byte[] jpegBytes;
                     using (var image = SKImage.FromBitmap(frameBitmap))
