@@ -61,7 +61,7 @@
 		<None Include="runtimes/**/libgomp.so.1*" Condition="Exists('runtimes')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(HasFeatureChat)' != 'true' or '$(HasMarkdown)' != 'true'">
+	<ItemGroup Condition="'$(HasFeatureSeatDesigner)' != 'true' or '$(HasFeatureQrDesigner)' != 'true' or '$(HasFeatureCommerce)' != 'true' or '$(HasFeatureChat)' != 'true' or '$(HasMarkdown)' != 'true'">
 		<Compile Remove="Components\Pages\ComponentsShowcase.razor*" />
 		<Content Remove="Components\Pages\ComponentsShowcase.razor*" />
 		<None Remove="Components\Pages\ComponentsShowcase.razor*" />
