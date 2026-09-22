@@ -50,8 +50,8 @@
     <ProjectReference Include="$(Infrastructure)" Condition="'$(Infrastructure)' != '' and Exists('$(Infrastructure)')" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" Condition="('$(Infrastructure)' == '' or !Exists('$(Infrastructure)')) and Exists('..\Infrastructure\Infrastructure.csproj')" />
 
-    <ProjectReference Include="$(ReceiptPrinter)" Condition="'$(ReceiptPrinter)' != '' and Exists('$(ReceiptPrinter)')" />
-    <ProjectReference Include="..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj" Condition="('$(ReceiptPrinter)' == '' or !Exists('$(ReceiptPrinter)')) and Exists('..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj')" />
+    <ProjectReference Include="$(ReceiptPrinter)" Condition="'$(HasReceiptPrinter)' == 'true' and '$(ReceiptPrinter)' != '' and Exists('$(ReceiptPrinter)')" />
+    <ProjectReference Include="..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj" Condition="'$(HasReceiptPrinter)' == 'true' and ('$(ReceiptPrinter)' == '' or !Exists('$(ReceiptPrinter)')) and Exists('..\..\..\Hardware\ReceiptPrinter\ReceiptPrinter.csproj')" />
 
     <ProjectReference Include="$(CameraStreamer)" Condition="'$(CameraStreamer)' != '' and Exists('$(CameraStreamer)')" />
     <ProjectReference Include="..\..\..\Hardware\CameraStreamer\CameraStreamer.csproj" Condition="('$(CameraStreamer)' == '' or !Exists('$(CameraStreamer)')) and Exists('..\..\..\Hardware\CameraStreamer\CameraStreamer.csproj')" />
