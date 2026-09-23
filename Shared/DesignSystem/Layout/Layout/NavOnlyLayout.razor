@@ -8,8 +8,12 @@
 </HeadContent>
 <Color />
 
-@Body
+<div class="socratic-grid-shell nav-only">
+	<Nav>
+		<SectionOutlet SectionName="nav" />
+	</Nav>
 
-<Nav>
-	<SectionOutlet SectionName="nav" />
-</Nav>
+	<main class="socratic-main-content">
+		@Body
+	</main>
+</div>
