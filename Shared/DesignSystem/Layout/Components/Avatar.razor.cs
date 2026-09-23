@@ -374,7 +374,7 @@ namespace Shared.Components
             var theme = await settings.GetThemeAsync();
 
             bool isDark = false;
-            var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Shared/Layout/Color.razor.js");
+            var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Layout/Layout/Color.razor.js");
             if (theme == Theme.System)
             {
                 isDark = await module.InvokeAsync<bool>("isSystemDark");
@@ -418,7 +418,7 @@ namespace Shared.Components
                 await settings.SetThemeAsync(newTheme);
 
                 bool isDark = false;
-                var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Shared/Layout/Color.razor.js");
+                var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Layout/Layout/Color.razor.js");
                 if (newTheme == Theme.System)
                 {
                     isDark = await module.InvokeAsync<bool>("isSystemDark");

@@ -62,7 +62,7 @@
 				Theme ??= await settings.GetThemeAsync();
 
 				var hexAccent = ToHex(Accent.Value);
-				var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Shared/Layout/Color.razor.js");
+				var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Layout/Layout/Color.razor.js");
 
 				if (Theme == SharedKernel.ValueObjects.Theme.System)
 				{

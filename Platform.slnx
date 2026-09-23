@@ -16,7 +16,7 @@
     <Project Path="Web.UI/Web.UI.Client/Web.UI.Client.csproj" />
   </Folder>
   <Folder Name="/Shared/">
-    <Project Path="Shared/Shared/Shared.csproj" />
+    <Project Path="Shared/Composition/Composition.csproj" />
     <Project Path="Shared/Domain/Domain.csproj" />
     <Project Path="Shared/Infrastructure/Infrastructure.csproj" />
     <Project Path="Shared/RemoteSupport.Agent/RemoteSupport.Agent.csproj" />
