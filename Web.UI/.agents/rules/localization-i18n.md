@@ -1,11 +1,11 @@
-﻿# Socratic Localization & i18n Standards
+# Socratic Localization & i18n Standards
 
 The Socratic ecosystem operates in a multilingual environment supporting **Uzbek (uz)**, **Russian (ru)**, and **English (en)**.
 
 ---
 
 ## 1. Resource Files Architecture
-- Resources are centralized in `src/Frontend/Core/Shared/Resources/`:
+- Resources are centralized in `src/Frontend/Platform/Shared/DesignSystem/Layout/Resources/`:
   - `ResourceRu.resx` — Russian (Default)
   - `ResourceUz.resx` — Uzbek (Latin)
   - `ResourceEn.resx` — English

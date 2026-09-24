@@ -180,13 +180,15 @@
 							<TextField TValue="string"
 							           Variant="TextField<string>.TextFieldVariant.Outlined"
 							           Label="@(l?["City"] ?? "Город")"
-							           Value="@(FormModel.Address?.City ?? string.Empty)"
-							           ValueChanged="@(c => { if (FormModel.Address == null) FormModel.Address = new(); FormModel.Address.City = c; })" />
+							           Value="@(GetOrCreateAddress().City)"
+							           ValueChanged="@(c => GetOrCreateAddress().City = c)"
+							           ValueExpression="() => GetOrCreateAddress().City" />
 							<TextField TValue="string"
 							           Variant="TextField<string>.TextFieldVariant.Outlined"
 							           Label="@(l?["Street"] ?? "Улица / Дом")"
-							           Value="@(FormModel.Address?.Street ?? string.Empty)"
-							           ValueChanged="@(s => { if (FormModel.Address == null) FormModel.Address = new(); FormModel.Address.Street = s; })" />
+							           Value="@(GetOrCreateAddress().Street)"
+							           ValueChanged="@(s => GetOrCreateAddress().Street = s)"
+							           ValueExpression="() => GetOrCreateAddress().Street" />
 						</div>
 						<Divider />
 					</details>
