@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "post_edit": [
+      {
+        "matcher": "**/*.proto",
+        "command": "dotnet build src/Shared/SharedKernel/SharedKernel.csproj",
+        "description": "Recompile protobuf contracts when .proto definitions change"
+      },
+      {
+        "matcher": "**/*.csproj",
+        "command": "pwsh -NoProfile -Command \"param([string]$file); if ($file -and (Test-Path $file)) { if (Select-String -Path $file -Pattern 'Microsoft.EntityFrameworkCore') { Write-Error 'CRITICAL: Entity Framework Core is strictly prohibited in Socratic ecosystem. Use ScyllaDB!' } }\"",
+        "description": "Enforce strict NoSQL rule: prevent introducing Entity Framework Core"
+      },
+      {
+        "matcher": "src/Frontend/Platform/Shared/DesignSystem/Layout/Resources/*.resx",
+        "command": "pwsh -NoProfile -Command \"Write-Host '[Localization Check] Remember to keep ResourceRu.resx, ResourceUz.resx, and ResourceEn.resx synchronized!'\"",
+        "description": "Remind developer about 3-way localization sync across RU, UZ, EN"
+      }
+    ]
+  }
+}

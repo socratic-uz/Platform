@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "path": ".agents/plugins/dotnet-blazor"
+    },
+    {
+      "path": ".agents/plugins/dotnet-test"
+    },
+    {
+      "path": ".agents/plugins/dotnet-msbuild"
+    },
+    {
+      "path": ".agents/plugins/dotnet-diag"
+    },
+    {
+      "path": ".agents/plugins/dotnet-advanced"
+    },
+    {
+      "path": ".agents/plugins/dotnet-upgrade"
+    }
+  ]
+}

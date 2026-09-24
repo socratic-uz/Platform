@@ -276,6 +276,56 @@ md-dialog.expressive {
     }
 }
 
+/* ─── 9. Touch & POS/Kiosk Ergonomics ───────────────────────────────────────── */
+:root {
+    --md-sys-touch-target-min: 48px;
+    --md-sys-touch-target-kiosk: 56px;
+    --md-sys-touch-target-action: 64px;
+    --md-sys-touch-gap: 12px;
+}
+
+.touch-target-pos {
+    min-height: var(--md-sys-touch-target-min) !important;
+    min-width: var(--md-sys-touch-target-min) !important;
+}
+
+.touch-target-kiosk {
+    min-height: var(--md-sys-touch-target-kiosk) !important;
+    min-width: var(--md-sys-touch-target-kiosk) !important;
+}
+
+.touch-target-action {
+    min-height: var(--md-sys-touch-target-action) !important;
+}
+
+/* ─── 10. Strict CSS Grid Architecture (Strictly NO Flexbox) ───────────────── */
+.grid-stack-col {
+    display: grid !important;
+    grid-auto-flow: row;
+    gap: 16px;
+}
+
+.grid-stack-row {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 16px;
+}
+
+.grid-responsive-cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+}
+
+.grid-pos-split {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
+    gap: 20px;
+    height: 100%;
+}
+
 /* ─── 9. Accessibility & Reduced Motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
