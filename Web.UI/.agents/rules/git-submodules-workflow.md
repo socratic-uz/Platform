@@ -6,7 +6,7 @@ Socratic uses the **Federated Meta-Repository Pattern** (also known as *Umbrella
 
 ### Key Architectural Tenet:
 > **Maximum Team Autonomy with Unified Ecosystem Orchestration:**
-> A new engineer joining a stream-aligned team (e.g., Commerce, POS, Kiosk, or Vision) does **NOT** clone the massive monorepo. They clone **only their feature repository** (`git clone --recurse-submodules https://github.com/socratic-uz/<Feature>.git`) and immediately get a fully functional, self-contained development environment with its own submodules, host, and launch profiles.
+> A new engineer joining a stream-aligned team (e.g., Retail/Commerce, Retail/POS, Retail/Kiosk, or Intelligence/Vision) does **NOT** clone the entire umbrella repository. They clone **only their feature repository** (`git clone --recurse-submodules https://github.com/socratic-uz/<Feature>.git`) and immediately get a fully functional, self-contained development environment with its own submodules, host, and launch profiles.
 > Simultaneously, the root `Socratic` meta-repository orchestrates all microservices, frontend features, and infrastructure as a unified whole.
 
 ---
@@ -17,7 +17,7 @@ Socratic uses the **Federated Meta-Repository Pattern** (also known as *Umbrella
 graph TD
     Root["👑 Socratic.git (Root Umbrella Meta-Repo)"]
     
-    %% Tier 2
+    %% Tier 2 - Backend & Platform Services
     Root --> Backend_Ident["🔐 Identifying.git"]
     Root --> Backend_Shop["🛍️ Shopping.git"]
     Root --> Backend_Order["📦 Ordering.git"]
@@ -28,50 +28,42 @@ graph TD
     Root --> Docs["📚 docs.git"]
     Root --> IaC["☁️ IaC.git"]
     
-    %% Tier 3 - Frontend Feature Slices
-    Frontend --> Feat_Commerce["🛍️ Commerce.git (28 UX Modes)"]
-    Frontend --> Feat_POS["🖥️ POS.git (Cashier Terminal)"]
-    Frontend --> Feat_Kiosk["📱 Kiosk.git (Self-Service)"]
-    Frontend --> Feat_Vision["👁️ Vision.git (YOLO / Biometrics)"]
-    Frontend --> Host_WebUI["🚀 WebUI.git (Decoupled Host)"]
-    Frontend --> Core_DesignSystem["🎨 DesignSystem.git"]
-    Frontend --> Core_UICore["🧱 Core.git"]
-    Frontend --> Core_Hardware["🖨️ Hardware.git"]
-
-    %% Standalone Feature Submodules
-    Feat_Commerce -.-> Sub_WebUI["WebUI.git"]
-    Feat_Commerce -.-> Sub_DS["DesignSystem.git"]
-    Feat_Commerce -.-> Sub_Core["Core.git"]
-    Feat_Commerce -.-> Sub_SK["SharedKernel.git"]
+    %% Tier 3 - Frontend Architecture & Domains
+    Frontend --> Plat_Platform["🚀 Platform.git (Shared + Web.UI + Native.UI)"]
+    Frontend --> Dom_Retail["🛒 Retail Domain (Commerce, POS, Kiosk, Checkout, Orders)"]
+    Frontend --> Dom_Intel["👁️ Intelligence Domain (Vision, Chat)"]
+    Frontend --> Dom_Studio["🎨 Studio Domain (Map, QrDesigner, SeatDesigner)"]
+    Frontend --> Dom_Portal["🏛️ Portal Domain (Identity, Landing, Organization)"]
+    Frontend --> Plat_Hardware["🖨️ Hardware (Biometrics, Camera, Printers, WebRTC)"]
 ```
 
 ### Complete Submodule Registry:
 
-| Tier | Submodule Path (Root Meta-Repo) | Remote Repository | Domain / Ownership |
+| Tier | Submodule Path (Frontend Meta-Repo) | Remote Repository | Domain / Ownership |
 |---|---|---|---|
 | **Root** | `src/Frontend` | `https://github.com/socratic-uz/Frontend.git` | Frontend Umbrella Meta-Repo |
-| **Feature** | `src/Frontend/Features/Commerce` | `https://github.com/socratic-uz/Commerce.git` | Stream: 28 Universal Product UX Modes |
-| **Feature** | `src/Frontend/Features/POS` | `https://github.com/socratic-uz/POS.git` | Stream: Cashier & POS Terminal |
-| **Feature** | `src/Frontend/Features/Kiosk` | `https://github.com/socratic-uz/Kiosk.git` | Stream: Self-Service Kiosks |
-| **Feature** | `src/Frontend/Features/Vision` | `https://github.com/socratic-uz/Vision.git` | Stream: YOLOv10 & Computer Vision |
-| **Platform** | `src/Frontend/Apps/Web.UI` | `https://github.com/socratic-uz/WebUI.git` | Decoupled Blazor Host (Server + Client) |
-| **Platform** | `src/Frontend/DesignSystem` | `https://github.com/socratic-uz/DesignSystem.git` | Material Web 3, Tokens, Theme |
-| **Platform** | `src/Frontend/Core` | `https://github.com/socratic-uz/Core.git` | Primitives, Base Components |
-| **Platform** | `src/Frontend/Core/Hardware` | `https://github.com/socratic-uz/Hardware.git` | ESC/POS, Scales, Barcode Scanners |
-| **Shared** | `src/Shared/SharedKernel` | `https://github.com/socratic-uz/SharedKernel.git` | gRPC Protos, ValueObjects, DTOs |
-| **Backend** | `src/Backend/Identifying` | `https://github.com/socratic-uz/Identifying.git` | Auth, Identity, FaceID, SMS |
-| **Backend** | `src/Backend/Shopping` | `https://github.com/socratic-uz/Shopping.git` | Catalog, Products, Places, ScyllaDB |
-| **Backend** | `src/Backend/Ordering` | `https://github.com/socratic-uz/Ordering.git` | Orders, State Machine, ScyllaDB |
-| **Backend** | `src/Backend/Paying` | `https://github.com/socratic-uz/Paying.git` | Payme, Ledger, Installments, Scoring |
-| **DevOps** | `gitops` | `https://github.com/socratic-uz/gitops.git` | Kubernetes manifests, Helm charts |
-| **Docs** | `docs` | `https://github.com/socratic-uz/docs.git` | Architecture documentation |
-| **Infra** | `scripts/IaC` | `https://github.com/socratic-uz/IaC.git` | Infrastructure as Code |
+| **Platform** | `Platform` | `https://github.com/socratic-uz/Platform.git` | Shared, DesignSystem (Material.Web/Smart.Web), Web.UI, Native.UI |
+| **Retail** | `Retail/Commerce` | `https://github.com/socratic-uz/Commerce.git` | 28 Universal Product UX Modes & Catalog |
+| **Retail** | `Retail/POS` | `https://github.com/socratic-uz/POS.git` | Cashier Terminal & Barcode Operations |
+| **Retail** | `Retail/Kiosk` | `https://github.com/socratic-uz/Kiosk.git` | Self-Service Kiosks & Customer Flow |
+| **Retail** | `Retail/Checkout` | `https://github.com/socratic-uz/Checkout.git` | Fast-Checkout, Carts & Drawer |
+| **Retail** | `Retail/Orders` | `https://github.com/socratic-uz/Orders.git` | Order Management & History |
+| **Intelligence** | `Intelligence/Vision` | `https://github.com/socratic-uz/Vision.git` | YOLOv10, Biometrics & FaceID |
+| **Intelligence** | `Intelligence/Chat` | `https://github.com/socratic-uz/Chat.git` | AI Concierge, gRPC Chat Client |
+| **Portal** | `Portal/Identity` | `https://github.com/socratic-uz/Identity.git` | Auth, Passkeys, Profiles, Security |
+| **Portal** | `Portal/Landing` | `https://github.com/socratic-uz/Landing.git` | Public Landing & Showcase Pages |
+| **Portal** | `Portal/Organization` | `https://github.com/socratic-uz/Organization.git` | Multi-Tenant Organizations & Settings |
+| **Studio** | `Studio/Map` | `https://github.com/socratic-uz/Map.git` | Interactive Venue & Seating Maps |
+| **Studio** | `Studio/QrDesigner` | `https://github.com/socratic-uz/QrDesigner.git` | QR Code Design & Print Studio |
+| **Studio** | `Studio/SeatDesigner` | `https://github.com/socratic-uz/SeatDesigner.git` | Table & Seat Layout Editor |
+| **Hardware** | `Hardware` | Local Platform Module | ESC/POS, Scales, Scanners, WebRTC |
+| **Shared** | `src/Shared/SharedKernel` | `https://github.com/socratic-uz/SharedKernel.git` | gRPC Protos, SmartEnums, ValueObjects |
 
 ---
 
 ## 3. ⚙️ Standard Build Configurations (Strict Standard)
 
-All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the entire ecosystem must define exactly the **5 standardized configurations**:
+All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the entire ecosystem define the **5 standardized configurations**:
 
 ```xml
 <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
@@ -87,22 +79,17 @@ All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the 
 
 ---
 
-## 4. 🧠 Smart Multi-Level Build System
+## 4. 🧠 Dual-Mode Build System (Standalone vs Monorepo)
 
-Every standalone feature repository (`Commerce.git`, `POS.git`, `Kiosk.git`, `Vision.git`) operates under a **Dual-Mode Discovery Pattern**:
+Every feature module operates under the **Dual-Mode Discovery Pattern**:
 
 1. **Standalone Mode** (Feature Developer):
    - Developer clones: `git clone --recurse-submodules https://github.com/socratic-uz/Commerce.git`
-   - `Directory.Build.props` in the feature root checks:
-     ```xml
-     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildProjectDirectory)/..'))"
-             Condition="'$(_SocraticRootProps)' == '' and Exists('$([MSBuild]::GetPathOfFileAbove(...))')" />
-     ```
-   - If parent props do not exist, local fallback properties and packages from local `Directory.Packages.props` take effect.
-   - Solution uses the local standalone host (`src/Platform/Web.UI` or `src/Host/Web.UI`) to run the feature in total isolation.
+   - `Directory.Build.props` in the feature root imports local properties and fallback packages.
+   - Solution uses the local standalone host (`Platform/Web.UI`) to run the feature in total isolation.
 
-2. **Monorepo Mode** (Orchestration Developer / Architect):
-   - Developer opens `Socratic.slnx` or `src/Frontend/Frontend.slnx`.
+2. **Monorepo Mode** (Umbrella Developer / Architect):
+   - Developer opens `Frontend.slnx` or `Socratic.slnx`.
    - Root `Directory.Build.props` sets `<_SocraticRootProps>true</_SocraticRootProps>`.
    - Sub-features inherit root packages, centralized analyzers, and Aspire orchestration.
 
@@ -110,63 +97,16 @@ Every standalone feature repository (`Commerce.git`, `POS.git`, `Kiosk.git`, `Vi
 
 ## 5. 🚀 Developer Workflows & Submodule Initialization
 
-### ⚠️ Критическое правило: Запрет вложенных субмодулей в мета-репозитории (Zero Nested Duplication)
-Внутри мета-репозитория `Socratic` все общие зависимости уже развернуты на верхних уровнях:
-- `src/Shared/SharedKernel` — общие gRPC контракты, Protobuf и DTO.
-- `src/Frontend/Core/*` — Domain, Infrastructure, Shared.
-- `src/Frontend/DesignSystem/*` — Material.Web, Smart.Web, QuickGrid, Markdown.
-- `src/Frontend/Hardware/*` — Принтеры чеков, сканеры, биометрия.
-- `src/Frontend/Apps/Web.UI` — Универсальный хост Blazor.
+### ⚠️ Critical Rule: Zero Nested Duplication in Umbrella Repositories
+Inside the `Frontend` and `Socratic` meta-repositories, all shared dependencies are already unified:
+- `src/Shared/SharedKernel` — Shared gRPC contracts, Protobuf, and DTOs.
+- `src/Frontend/Platform/Shared` — Domain, Infrastructure, Composition, DesignSystem (Material.Web, Smart.Web).
+- `src/Frontend/Hardware` — Hardware drivers (printers, cameras, scales).
+- `src/Frontend/Platform/Web.UI` — Universal Blazor host.
 
 > [!CAUTION]
-> **Субмодулям фич (`Commerce`, `POS`, `Kiosk`, `Vision`) и микросервисов (`Identifying`, `Ordering`, `Paying`, `Shopping`) категорически запрещено инициализировать свои собственные субмодули внутри мета-репозитория!**
-> Если их субмодули будут загружены, возникнет массивное дублирование кода, конфликты типов в компиляторе Roslyn, замедление сборки и раздувание Git.
-> Их собственные субмодули нужны **ТОЛЬКО** при автономном клонировании конкретной фичи вне мета-репозитория.
-
-### Scenario A: Stream-Aligned Feature Developer (Standalone Mode, e.g. Commerce)
-Разработчик работает только над одной фичей вне мета-репозитория:
-```bash
-# 1. Клонирование с рекурсивными субмодулями (нужны все локальные платформенные сабмодули)
-git clone --recurse-submodules https://github.com/socratic-uz/Commerce.git
-cd Commerce
-
-# 2. Сборка и запуск локального решения:
-dotnet build Commerce.slnx -c Debug
-dotnet run --project Web.UI/Web.UI/Web.UI.csproj -c Debug
-```
-
-### Scenario B: Monorepo Umbrella Developer (Мета-репозиторий Socratic)
-Разработчик работает в монорепозитории. Загружаются только субмодули 1-го и 2-го уровней:
-```bash
-# 1. Клонирование мета-репозитория (БЕЗ флага --recurse-submodules!)
-git clone https://github.com/socratic-uz/Socratic.git
-cd Socratic
-
-# 2. Инициализация только 1-го уровня (бэкенд, фронтенд, SharedKernel):
-git submodule update --init
-
-# 3. Инициализация 2-го уровня (Apps/Web.UI и фичи внутри src/Frontend):
-git -C src/Frontend submodule update --init
-
-# 4. Сборка решения:
-dotnet build Socratic.slnx -c Debug
-```
-
-### 🧹 Команда очистки / деинициализации вложенных субмодулей
-Если разработчик или скрипт случайно инициализировал вложенные субмодули внутри фич/сервисов:
-```bash
-# Деинициализировать вложенные субмодули фич:
-git -C src/Frontend/Features/Commerce submodule deinit --all -f
-git -C src/Frontend/Features/POS submodule deinit --all -f
-git -C src/Frontend/Features/Kiosk submodule deinit --all -f
-git -C src/Frontend/Features/Vision submodule deinit --all -f
-
-# Деинициализировать вложенные субмодули бэкенда:
-git -C src/Backend/Identifying submodule deinit --all -f
-git -C src/Backend/Ordering submodule deinit --all -f
-git -C src/Backend/Paying submodule deinit --all -f
-git -C src/Backend/Shopping submodule deinit --all -f
-```
+> **Never recursively clone or initialize nested submodules inside the umbrella repository!**
+> If nested submodules are initialized inside features, type ambiguity and duplicate compilation errors will occur.
 
 ---
 
@@ -177,33 +117,35 @@ git -C src/Backend/Shopping submodule deinit --all -f
 > When instructed to commit, always commit in **bottom-up order** through the hierarchy.
 
 ### Commit Sequence (Bottom-Up):
-1. **Tier 1 (Innermost Platform Submodules)**:
-   If changes were made to `Hardware`, `DesignSystem`, `Core`, or `WebUI`:
+1. **Tier 1 (Platform, Hardware & Shared Kernel)**:
    ```bash
-   git -C <submodule_path> add .
-   git -C <submodule_path> commit -m "<type>(<scope>): <message>"
-   git -C <submodule_path> push origin HEAD
+   # Example: Platform
+   git -C src/Frontend/Platform status
+   git -C src/Frontend/Platform add .
+   git -C src/Frontend/Platform commit -m "<type>(platform): <message>"
+   git -C src/Frontend/Platform push origin HEAD
    ```
 
 2. **Tier 2 (Stream-Aligned Feature Repositories)**:
-   Commit the updated platform pointers and feature code:
    ```bash
-   git -C src/Frontend/Features/Commerce add .
-   git -C src/Frontend/Features/Commerce commit -m "feat(commerce): <message>"
-   git -C src/Frontend/Features/Commerce push origin HEAD
+   # Example: Retail/Commerce
+   git -C src/Frontend/Retail/Commerce status
+   git -C src/Frontend/Retail/Commerce add .
+   git -C src/Frontend/Retail/Commerce commit -m "feat(commerce): <message>"
+   git -C src/Frontend/Retail/Commerce push origin HEAD
    ```
 
 3. **Tier 3 (Frontend Umbrella Meta-Repo)**:
-   Commit the updated feature pointers in `src/Frontend`:
    ```bash
+   git -C src/Frontend status
    git -C src/Frontend add .
-   git -C src/Frontend commit -m "chore(features): update feature pointers"
+   git -C src/Frontend commit -m "chore(features): update submodule pointers"
    git -C src/Frontend push origin HEAD
    ```
 
 4. **Tier 4 (Root Umbrella Meta-Repo)**:
-   Commit the updated `src/Frontend` and backend submodule pointers in root:
    ```bash
+   git status
    git add src/Frontend src/Backend/*
    git commit -m "chore(ecosystem): synchronize submodule pointers"
    git push origin HEAD
@@ -222,5 +164,3 @@ git -C src/Backend/Shopping submodule deinit --all -f
   ```bash
   git submodule foreach --recursive "git status -s"
   ```
-
-

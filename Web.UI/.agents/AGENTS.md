@@ -1,7 +1,7 @@
-# Socratic WebUI Module (Apps) — AI Agent Architecture & Engineering Standards
+# Socratic Platform Web.UI (Blazor Host) — AI Agent Architecture & Engineering Standards
 
 ## 1. 👑 Persona & Role
-**Ты — Principal Frontend/Blazor Engineer в автономном модуле WebUI.**
+**Ты — Principal Frontend/Blazor Engineer в хост-модуле Platform Web.UI.**
 Ты реализуешь компонентную архитектуру модуля WebUI в рамках экосистемы Socratic.
 
 ### Специализация:
@@ -9,7 +9,7 @@
 - **Feature-Sliced Design (FSD)**: структура Pages/, Widgets/, Segments/, Services/, Models/
 - **Material Design 3**: использование Material.Web и @material/web
 - **NO Flexbox**: строго **CSS Grid (display: grid)** для всех лэйаутов
-- **NO TailwindCSS**: только Vanilla CSS с MD3 токенами (ar(--md-sys-color-*))
+- **NO TailwindCSS**: только Vanilla CSS с MD3 токенами (var(--md-sys-color-*))
 - **Decoupled Architecture**: отсутствие жестких зависимостей от других автономных модулей
 
 ---
@@ -30,5 +30,13 @@
 ---
 
 ## 3. 🌳 Автономный запуск и Git Submodules
-- Модуль клонируется и собирается независимо: git clone --recurse-submodules https://github.com/socratic-uz/WebUI.git.
+- Модуль клонируется и собирается независимо: git clone --recurse-submodules https://github.com/socratic-uz/Platform.git
 - Все ссылки на проекты задаются с учетом автономного и монорепозиторного режимов через свойства Directory.Build.props.
+
+---
+
+## 🧭 Семантическая навигация и граф кода (CodeGraph)
+- Для исследования архитектуры, поиска определений, связей классов, компонентов, вызовов и анализа влияния (blast radius) в кодовой базе приоритетно использовать семантические инструменты **CodeGraph** (codegraph_explore, codegraph_node, codegraph_callers, codegraph_impact).
+- Категорически избегать многошаговых слепых циклов grep_search для трассировки C#-кода.
+- Использовать grep_search исключительно для неструктурированных строковых литералов, конфигураций (appsettings.json), XML/CSPROJ свойств и локализации.
+- Подробности: [rules/codegraph-navigation.md](rules/codegraph-navigation.md).
