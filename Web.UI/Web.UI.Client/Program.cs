@@ -37,5 +37,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddAuthenticationStateDeserialization();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Shared.Services.ClientFaceIdService>();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Shared.Services.ClientSupportSessionProvider>();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
 
 await builder.Build().RunAsync();

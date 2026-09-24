@@ -33,6 +33,7 @@ namespace Shared.Components
 {
     public partial class Avatar : DataComponentBase
     {
+        [Inject] private IServiceProvider? ServiceProvider { get; set; }
         [Inject] public NavigationManager nav { get; set; } = default!;
         [Inject] public AuthServiceClient authClient { get; set; } = default!;
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;
@@ -528,7 +529,7 @@ namespace Shared.Components
             return FormModel.Address;
         }
 
-        [Inject] public IFaceIdService? FaceIdService { get; set; }
+        public IFaceIdService? FaceIdService => ServiceProvider?.GetService(typeof(IFaceIdService)) as IFaceIdService;
 
         public bool isFaceIdModalOpen = false;
         public string faceIdStatusMessage = "Пожалуйста, смотрите прямо в камеру...";
@@ -536,7 +537,8 @@ namespace Shared.Components
         public int currentEnrollmentStage = 1;
         private bool _isFaceProcessingFrame = false;
         private string? _enrollmentSessionId = null;
-        [Inject] public Domain.Interfaces.Hardware.ICameraStreamerUiProvider? CameraStreamerUiProvider { get; set; }
+        public Domain.Interfaces.Hardware.ICameraStreamerUiProvider? CameraStreamerUiProvider =>
+            ServiceProvider?.GetService(typeof(Domain.Interfaces.Hardware.ICameraStreamerUiProvider)) as Domain.Interfaces.Hardware.ICameraStreamerUiProvider;
 
         private Dictionary<string, object> CameraStreamerParameters => new()
         {
@@ -547,8 +549,8 @@ namespace Shared.Components
             { "Style", "width: 100%; height: 100%; object-fit: cover;" }
         };
 
-        [Inject] public HttpClient? Http { get; set; }
-        [Inject] public IHttpClientFactory? HttpClientFactory { get; set; }
+        public HttpClient? Http => ServiceProvider?.GetService(typeof(HttpClient)) as HttpClient;
+        public IHttpClientFactory? HttpClientFactory => ServiceProvider?.GetService(typeof(IHttpClientFactory)) as IHttpClientFactory;
 
         private HttpClient GetHttpClient() => Http ?? HttpClientFactory?.CreateClient() ?? new HttpClient();
 
@@ -740,7 +742,7 @@ namespace Shared.Components
             }
         }
 
-        [Inject] public IPasskeyService? PasskeyService { get; set; }
+        public IPasskeyService? PasskeyService => ServiceProvider?.GetService(typeof(IPasskeyService)) as IPasskeyService;
         private bool isPasskeyConfigured = false;
 
         private async Task RegisterPasskey()

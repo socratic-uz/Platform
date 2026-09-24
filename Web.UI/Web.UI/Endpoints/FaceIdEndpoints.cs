@@ -2,6 +2,7 @@
 using Domain.Interfaces.Biometrics;
 using Biometrics.Processor.Services;
 using IFaceIdService = Domain.Interfaces.Biometrics.IFaceIdService;
+using IFaceBiometricProcessor = Domain.Interfaces.Biometrics.IFaceBiometricProcessor;
 using Identifying.Application.Protos;
 using SkiaSharp;
 using Domain.DTOs;

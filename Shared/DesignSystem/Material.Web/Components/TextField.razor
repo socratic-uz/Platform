@@ -199,6 +199,18 @@ else
         ? $"material-text-field {cssClass}" 
         : "material-text-field";
 
+    public override Task SetParametersAsync(ParameterView parameters)
+    {
+        if (!parameters.TryGetValue<Expression<Func<TValue>>>(nameof(ValueExpression), out var valExpr) || valExpr == null)
+        {
+            var dict = new Dictionary<string, object?>(parameters.ToDictionary());
+            dict[nameof(ValueExpression)] = (Expression<Func<TValue>>)(() => Value);
+            return base.SetParametersAsync(ParameterView.FromDictionary(dict));
+        }
+
+        return base.SetParametersAsync(parameters);
+    }
+
     protected override void OnParametersSet()
     {
         if (For != null && EditContext != null)

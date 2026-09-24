@@ -1,7 +1,8 @@
+using System;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-
+using System.Threading.Tasks;
 using SharedKernel.ValueObjects;
 
 namespace Shared.Services
@@ -19,7 +20,6 @@ namespace Shared.Services
 
         Task<string?> GetAccessTokenAsync();
         Task SetAccessTokenAsync(string accessToken);
-
 
         async Task<Permission> GetPermissionAsync()
         {

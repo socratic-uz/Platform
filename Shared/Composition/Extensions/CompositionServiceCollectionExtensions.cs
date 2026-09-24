@@ -113,6 +113,8 @@ namespace Apps.Composition.Extensions
             services.AddScoped<IDetectorService, RemoteDetectorService>();
             services.AddScoped<ISettingsManager, SettingsManager>();
             services.AddScoped<IPasskeyService, PasskeyService>();
+            services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
+            services.AddSingleton<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
             services.AddLocalization().AddScoped<IStringLocalizer, StringLocalizer>();
 
             // 4. gRPC Clients & Auth
