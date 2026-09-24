@@ -3,7 +3,7 @@ using Microsoft.Extensions.Localization;
 
 using Shared;
 using Shared.Services;
-using Apps.Shared.Extensions;
+using Apps.Composition.Extensions;
 #if FEATURE_MARKDOWN
 using Markdown.Web;
 #endif
@@ -28,8 +28,8 @@ using static Shared.Helpers.FileHelper;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
-// 1. Unified Shared Application Services (Shell, all 13 features, Design System, gRPC, Localization)
-builder.Services.AddSharedAppServices(builder.Configuration);
+// 1. Unified Composition Application Services (Shell, all 13 features, Design System, gRPC, Localization)
+builder.Services.AddCompositionServices(builder.Configuration);
 
 // 2. WebAssembly platform-specific adaptations
 builder.Services.AddSingleton<IFormFactor, WebFormFactor>();
@@ -37,5 +37,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddAuthenticationStateDeserialization();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Shared.Services.ClientFaceIdService>();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Shared.Services.ClientSupportSessionProvider>();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
 
 await builder.Build().RunAsync();

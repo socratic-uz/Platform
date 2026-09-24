@@ -68,11 +68,13 @@
     <Infrastructure>$(PlatformSharedDir)Infrastructure/Infrastructure.csproj</Infrastructure>
     <Layout>$(PlatformSharedDir)DesignSystem/Layout/Layout.csproj</Layout>
     <Shell Condition="'$(Shell)' == ''">$(Layout)</Shell>
-    <Shared>$(PlatformSharedDir)Shared/Shared.csproj</Shared>
+    <Composition>$(PlatformSharedDir)Composition/Composition.csproj</Composition>
+    <Shared>$(Composition)</Shared>
 
     <CoreDomain>$(Domain)</CoreDomain>
     <CoreInfrastructure>$(Infrastructure)</CoreInfrastructure>
-    <CoreShared>$(Shared)</CoreShared>
+    <CoreComposition>$(Composition)</CoreComposition>
+    <CoreShared>$(Composition)</CoreShared>
 
     <MaterialWeb>$(PlatformSharedDir)DesignSystem/Material.Web/Material.Web.csproj</MaterialWeb>
     <SmartWeb>$(PlatformSharedDir)DesignSystem/Smart.Web/Smart.Web.csproj</SmartWeb>

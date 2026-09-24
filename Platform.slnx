@@ -6,20 +6,22 @@
     <BuildType Name="Runner" />
     <BuildType Name="Cluster" />
   </Configurations>
-  <Folder Name="/Hosts/">
+  <Folder Name="/Native.UI/">
     <Project Path="Native.UI/Native.UI.csproj">
       <BuildType Solution="LocalDebug|*" Project="Debug" />
     </Project>
+  </Folder>
+  <Folder Name="/Web.UI/">
     <Project Path="Web.UI/Web.UI/Web.UI.csproj" />
     <Project Path="Web.UI/Web.UI.Client/Web.UI.Client.csproj" />
   </Folder>
   <Folder Name="/Shared/">
-    <Project Path="Shared/Shared/Shared.csproj" />
+    <Project Path="Shared/Composition/Composition.csproj" />
     <Project Path="Shared/Domain/Domain.csproj" />
     <Project Path="Shared/Infrastructure/Infrastructure.csproj" />
     <Project Path="Shared/RemoteSupport.Agent/RemoteSupport.Agent.csproj" />
   </Folder>
-  <Folder Name="/DesignSystem/">
+  <Folder Name="/Shared/DesignSystem/">
     <Project Path="Shared/DesignSystem/Layout/Layout.csproj" />
     <Project Path="Shared/DesignSystem/Material.Web/Material.Web.csproj" />
     <Project Path="Shared/DesignSystem/Smart.Web/Smart.Web.csproj" />

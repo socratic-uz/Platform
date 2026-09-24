@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>Apps.Shared</RootNamespace>
-    <AssemblyName>Apps.Shared</AssemblyName>
+    <RootNamespace>Apps.Composition</RootNamespace>
+    <AssemblyName>Composition</AssemblyName>
     <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

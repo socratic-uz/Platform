@@ -25,10 +25,34 @@
             } catch(e) {}
         })();
     </script>
-    <link rel="preload" href="_content/Shared/css/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preconnect & Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <!-- Local font preload fallback -->
+    <link rel="preload" href="_content/Layout/css/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
     <script src="_content/Material.Web/material-web.bundle.js" defer></script>
     <style>
-        md-icon {
+        :root {
+            --md-ref-typeface-brand: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --md-ref-typeface-plain: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --md-icon-font: 'Material Symbols Outlined';
+            --md-icon-size: 24px;
+        }
+        html, body {
+            font-family: var(--md-ref-typeface-plain);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+        }
+        md-icon,
+        .material-symbols-outlined,
+        [class*="material-symbols"] {
             font-family: 'Material Symbols Outlined' !important;
             font-weight: normal;
             font-style: normal;
@@ -44,8 +68,18 @@
             -webkit-font-feature-settings: 'liga';
             font-feature-settings: 'liga';
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             width: var(--md-icon-size, 24px);
             height: var(--md-icon-size, 24px);
+            vertical-align: middle;
+        }
+        md-icon:not(:defined) {
+            display: inline-grid;
+            place-items: center;
+            width: var(--md-icon-size, 24px);
+            height: var(--md-icon-size, 24px);
+            overflow: hidden;
+            font-family: 'Material Symbols Outlined' !important;
             vertical-align: middle;
         }
         md-dialog:not(:defined) {
@@ -53,21 +87,21 @@
         }
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link rel="stylesheet" href="_content/Shared/css/fonts.css" />
-    <link rel="stylesheet" href="_content/Shared/css/font-styles.css" />
-    <link rel="stylesheet" href="_content/Shared/css/touch.css" />
-    <link rel="stylesheet" href="_content/Shared/css/grid.css" />
-    <link rel="stylesheet" href="_content/Shared/css/material-theme.css/dark.css" />
-    <link rel="stylesheet" href="_content/Shared/css/material-theme.css/light.css" />
-    <link rel="stylesheet" href="_content/Shared/css/effects/liquid-glass.css" />
+    <link rel="stylesheet" href="_content/Layout/css/fonts.css" />
+    <link rel="stylesheet" href="_content/Layout/css/font-styles.css" />
+    <link rel="stylesheet" href="_content/Layout/css/touch.css" />
+    <link rel="stylesheet" href="_content/Layout/css/grid.css" />
+    <link rel="stylesheet" href="_content/Layout/css/material-theme.css/dark.css" />
+    <link rel="stylesheet" href="_content/Layout/css/material-theme.css/light.css" />
+    <link rel="stylesheet" href="_content/Layout/css/effects/liquid-glass.css" />
     
     <SectionOutlet SectionName="style" />
     <link rel="stylesheet" href="@Assets["Web.UI.styles.css"]" />
-    <link href="_content/Shared/manifest.webmanifest" rel="manifest" />
+    <link href="_content/Layout/manifest.webmanifest" rel="manifest" />
     <ImportMap />
-    <link rel="icon" type="image/png" href="_content/Shared/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="512x512" href="_content/Shared/img/icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="_content/Shared/img/icon-192.png" />
+    <link rel="icon" type="image/png" href="_content/Layout/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="_content/Layout/img/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="_content/Layout/img/icon-192.png" />
     <HeadOutlet @rendermode="InteractiveAuto" />
     <AntiforgeryToken />
 </head>
@@ -78,9 +112,9 @@
 
     <ReconnectModal />
     <script src="https://oauth.telegram.org/js/telegram-login.js?6"></script>
-    <script src="_content/Shared/js/passkeyHelper.js"></script>
-    <script src="_content/Shared/js/telegramHelper.js"></script>
-    <script src="_content/Shared/js/oauthPopupHelper.js"></script>
+    <script src="_content/Layout/js/passkeyHelper.js"></script>
+    <script src="_content/Layout/js/telegramHelper.js"></script>
+    <script src="_content/Layout/js/oauthPopupHelper.js"></script>
     <script>
         window.socraticAdNetwork = {
             pushGoogle: function() {

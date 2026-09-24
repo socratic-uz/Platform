@@ -3,7 +3,6 @@
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>Shared</RootNamespace>
     <AssemblyName>Layout</AssemblyName>
-    <StaticWebAssetBasePath>Shared</StaticWebAssetBasePath>
     <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
   </PropertyGroup>
   <ItemGroup>
