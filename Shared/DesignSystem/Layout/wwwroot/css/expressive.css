@@ -326,7 +326,82 @@ md-dialog.expressive {
     height: 100%;
 }
 
-/* ─── 9. Accessibility & Reduced Motion ─────────────────────────────────────── */
+/* ─── 11. M3 Adaptive Window Classes & Canonical Panes ──────────────────────── */
+:root {
+    /* M3 Breakpoint Thresholds */
+    --m3-breakpoint-compact: 599.98px;
+    --m3-breakpoint-medium: 839.98px;
+    --m3-breakpoint-expanded: 1199.98px;
+    --m3-breakpoint-large: 1599.98px;
+
+    /* Pane Dimensions */
+    --m3-pane-supporting-min: 340px;
+    --m3-pane-supporting-max: 440px;
+    --m3-pane-supporting-width: clamp(var(--m3-pane-supporting-min), 28vw, var(--m3-pane-supporting-max));
+    --m3-nav-rail-width: 80px;
+
+    /* Fluid Clamped Typography */
+    --m3-type-fluid-headline: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+    --m3-type-fluid-title: clamp(1.1rem, 0.95rem + 0.6vw, 1.5rem);
+    --m3-type-fluid-body: clamp(0.875rem, 0.825rem + 0.25vw, 1.05rem);
+}
+
+.m3-text-fluid-headline {
+    font-size: var(--m3-type-fluid-headline) !important;
+}
+
+.m3-text-fluid-title {
+    font-size: var(--m3-type-fluid-title) !important;
+}
+
+/* Adaptive Supporting-Pane Layout (POS / Catalog + Cart) */
+.m3-layout-supporting-pane {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) var(--m3-pane-supporting-width);
+    gap: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 839.98px) {
+    .m3-layout-supporting-pane {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr auto !important;
+    }
+}
+
+/* Adaptive List-Detail Layout */
+.m3-layout-list-detail {
+    display: grid !important;
+    grid-template-columns: clamp(280px, 32%, 380px) minmax(0, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+@media (max-width: 599.98px) {
+    .m3-layout-list-detail {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Kiosk ADA Accessible Action Dock (Lower 60% hot zone) */
+.m3-kiosk-accessible-dock {
+    position: sticky;
+    bottom: 0;
+    display: grid !important;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: var(--md-sys-color-surface-container-high);
+    border-radius: var(--md-sys-shape-expressive-dock);
+    box-shadow: var(--md-sys-elevation-expressive-3);
+    backdrop-filter: var(--md-sys-glass-blur);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur);
+    z-index: 100;
+}
+
+/* ─── 12. Accessibility & Reduced Motion ────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;

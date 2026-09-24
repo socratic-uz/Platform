@@ -120,3 +120,24 @@ box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
   - `var(--md-sys-color-on-primary)`
   - `var(--md-sys-color-outline-variant)`
 - Run `Audit-ThemeColors.ps1` and `Audit-BlazorUiQuality.ps1` to ensure compliance.
+
+---
+
+## 5. 🎬 GSAP Motion & Spring Orchestration
+
+For advanced choreography, dynamic list reordering, touch gestures, or multi-step sequences where CSS animations are insufficient, use **GSAP 3** following the official `gsap-*` skills (`gsap-core`, `gsap-timeline`, `gsap-plugins`, `gsap-performance`, `gsap-frameworks`).
+
+### M3X to GSAP Token Mapping:
+| M3X CSS Motion Token | GSAP Equivalent | Notes |
+| :--- | :--- | :--- |
+| `--md-sys-motion-easing-spring` | `ease: "back.out(1.4)"` | Tactile overshoot for cards/modals |
+| `--md-sys-motion-easing-spring-snappy` | `ease: "back.out(2)"` | High-energy tactile button press/release |
+| `--md-sys-motion-easing-emphasized` | `ease: "power3.out"` | Standard entrance acceleration-deceleration |
+| `--md-sys-motion-duration-short4` | `duration: 0.2` | Micro-interactions, ripples, badges |
+| `--md-sys-motion-duration-medium3` | `duration: 0.35` | Dialogs, sheets, and card expansions |
+
+### Critical Rules:
+1. **Always use Transform Aliases**: Animate `x`, `y`, `scale`, `rotation`, and `autoAlpha`. Never animate layout properties (`top`, `left`, `width`, `height`).
+2. **Component Scoping**: Always wrap animations in `gsap.context(() => { ... }, containerRef)` so selectors are strictly scoped to the Blazor component.
+3. **Blazor Lifecycle**: Instantiate in `OnAfterRenderAsync(firstRender: true)` and call `ctx.revert()` in `IAsyncDisposable.DisposeAsync()`.
+4. **Layout Transitions**: Use the free **Flip** plugin (`gsap/Flip`) for seamless product catalog reordering, cart drawer collapses, and split-screen toggles without layout jump.
