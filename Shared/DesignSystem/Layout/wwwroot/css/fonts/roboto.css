@@ -1,9 +1,11 @@
-﻿@font-face {
+/* Roboto Variable Font */
+@font-face {
     font-family: 'Roboto';
     src: url('./Roboto/Roboto-VariableFont.ttf') format('truetype');
     font-weight: 100 900;
     font-stretch: 75% 125%;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,4 +14,30 @@
     font-weight: 100 900;
     font-stretch: 75% 125%;
     font-style: italic;
+    font-display: swap;
+}
+
+/* Static weights fallback */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/static/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/static/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/static/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }

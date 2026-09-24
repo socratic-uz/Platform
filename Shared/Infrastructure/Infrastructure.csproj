@@ -17,12 +17,17 @@
 		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
 	</PropertyGroup>
 
-	<!--Protobuf-->
+	<!--Protobuf & Network-->
 	<ItemGroup>
 		<PackageReference Include="Google.Protobuf" />
 		<PackageReference Include="Grpc.Net.Client.Web" />
 		<PackageReference Include="Grpc.Net.ClientFactory" />
 		<PackageReference Include="Grpc.Tools" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" />
+		<PackageReference Include="Microsoft.JSInterop" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Http" />
 	</ItemGroup>
 
 	<!-- Identifying Service Protos -->

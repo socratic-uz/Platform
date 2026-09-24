@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using SharedKernel.ValueObjects;
 using System.Diagnostics;
 using Native.UI.Services;
-using Apps.Shared.Extensions;
+using Apps.Composition.Extensions;
 using Shared;
 using Shared.Services;
 using Domain.Interfaces;
@@ -84,8 +84,8 @@ namespace Native.UI
 
             MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
-            // 1. Единое подключение всех возможностей Shared (Shell, 13 фич, дизайн-система, gRPC, аппаратные интерфейсы)
-            builder.Services.AddSharedAppServices(builder.Configuration);
+            // 1. Единое подключение всех возможностей Composition (Shell, 13 фич, дизайн-система, gRPC, аппаратные интерфейсы)
+            builder.Services.AddCompositionServices(builder.Configuration);
 
             // 2. Специфичные платформенные адаптеры для MAUI
             builder.Services.AddSingleton<IFormFactor, MauiFormFactor>();

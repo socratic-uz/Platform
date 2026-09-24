@@ -4,12 +4,16 @@
 @using Microsoft.AspNetCore.Components
 
 <HeadContent>
-	<link rel="stylesheet" href="_content/Shared/css/grid.css" />
+	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
 </HeadContent>
 <Color />
 
-@Body
+<div class="socratic-grid-shell nav-only">
+	<Nav>
+		<SectionOutlet SectionName="nav" />
+	</Nav>
 
-<Nav>
-	<SectionOutlet SectionName="nav" />
-</Nav>
+	<main class="socratic-main-content">
+		@Body
+	</main>
+</div>

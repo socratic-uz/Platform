@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Shared.Serialization
 {
     /// <summary>
-    /// Source-generated JsonSerializerContext for Native AOT zero-reflection JSON operations across Blazor UI.
+    /// Source-generated JsonSerializerContext for Native AOT zero-reflection JSON operations across Socratic Core & UI.
     /// </summary>
     [JsonSourceGenerationOptions(
         WriteIndented = false,

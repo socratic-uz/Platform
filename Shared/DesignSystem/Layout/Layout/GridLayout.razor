@@ -4,37 +4,40 @@
 @using Microsoft.AspNetCore.Components
 
 <HeadContent>
-	<link rel="stylesheet" href="_content/Shared/css/grid.css" />
+	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
 </HeadContent>
 <Color />
 
-<Header>
-	<SectionOutlet SectionName="header" />
-</Header>
+<div class="socratic-grid-shell">
+	<Header>
+		<SectionOutlet SectionName="header" />
+	</Header>
 
-<ErrorBoundary @ref="_errorBoundary">
-	<ChildContent>
-		@Body
-	</ChildContent>
-	<ErrorContent Context="ex">
-		<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при отображении компонента</h3>
-			<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-			<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
-		</div>
-	</ErrorContent>
-</ErrorBoundary>
+	<Nav>
+		<SectionOutlet SectionName="nav" />
+	</Nav>
 
-<Footer>
-	<SectionOutlet SectionName="footer" />
-</Footer>
+	<main class="socratic-main-content">
+		<ErrorBoundary @ref="_errorBoundary">
+			<ChildContent>
+				@Body
+			</ChildContent>
+			<ErrorContent Context="ex">
+				<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
+					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при отображении компонента</h3>
+					<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
+					<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
+				</div>
+			</ErrorContent>
+		</ErrorBoundary>
+	</main>
 
-<Nav>
-	<SectionOutlet SectionName="nav" />
-</Nav>
+	<Footer>
+		<SectionOutlet SectionName="footer" />
+	</Footer>
+</div>
 
 @code {
 	private ErrorBoundary? _errorBoundary;
 	private void Recover() => _errorBoundary?.Recover();
 }
-

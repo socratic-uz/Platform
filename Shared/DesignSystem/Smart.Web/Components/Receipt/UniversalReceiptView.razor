@@ -4,7 +4,8 @@
 @using Domain.Interfaces.Common
 @using Domain.Interfaces.Hardware
 @using Microsoft.Extensions.Localization
-@inject Domain.Interfaces.Hardware.IReceiptPrinterService PrinterService
+@using Microsoft.JSInterop
+@inject Domain.Interfaces.Hardware.IReceiptPrinterService? PrinterService
 @inject IStringLocalizer L
 @inject IServiceProvider ServiceProvider
 
@@ -201,6 +202,21 @@
 
     private async Task PrintReceiptAsync()
     {
-        await PrinterService.PrintElementByIdAsync("fiscal-receipt-element", "receipt-styles");
+        if (PrinterService != null)
+        {
+            await PrinterService.PrintElementByIdAsync("fiscal-receipt-element", "receipt-styles");
+        }
+        else
+        {
+            var js = ServiceProvider.GetService(typeof(Microsoft.JSInterop.IJSRuntime)) as Microsoft.JSInterop.IJSRuntime;
+            if (js != null)
+            {
+                try
+                {
+                    await js.InvokeVoidAsync("window.print");
+                }
+                catch { }
+            }
+        }
     }
 }
