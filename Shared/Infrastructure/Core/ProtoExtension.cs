@@ -1,7 +1,5 @@
 using System.Linq;
-
 using Google.Protobuf.Collections;
-
 using SharedKernel.ValueObjects;
 
 namespace Shared.Extensions
@@ -18,5 +16,4 @@ namespace Shared.Extensions
             return string.Join(separator, mapField.Select(x => $"{((Language)x.Key).ToString()}: {x.Value}"));
         }
     }
-
 }

@@ -46,9 +46,10 @@
 	<ItemGroup>
 		<ProjectReference Include="../Web.UI.Client/Web.UI.Client.csproj" />
 
-		<!-- Unified Shared App Layer (aggregating Shell, all Features, Hardware, Domain, and Infrastructure) -->
-		<ProjectReference Include="$(Shared)" Condition="'$(Shared)' != '' and Exists('$(Shared)')" ReferenceOutputAssembly="true" />
-		<ProjectReference Include="../../Shared/Shared/Shared.csproj" Condition="('$(Shared)' == '' or !Exists('$(Shared)')) and Exists('../../Shared/Shared/Shared.csproj')" ReferenceOutputAssembly="true" />
+		<!-- Unified Composition App Layer (aggregating Shell, all Features, Hardware, Domain, and Infrastructure) -->
+		<ProjectReference Include="$(Composition)" Condition="'$(Composition)' != '' and Exists('$(Composition)')" ReferenceOutputAssembly="true" />
+		<ProjectReference Include="$(Shared)" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and '$(Shared)' != '' and Exists('$(Shared)')" ReferenceOutputAssembly="true" />
+		<ProjectReference Include="../../Shared/Composition/Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and ('$(Shared)' == '' or !Exists('$(Shared)')) and Exists('../../Shared/Composition/Composition.csproj')" ReferenceOutputAssembly="true" />
 
 		<ProjectReference Include="$(ServiceDefaults)" Condition="'$(ServiceDefaults)' != '' and Exists('$(ServiceDefaults)')" />
 	</ItemGroup>

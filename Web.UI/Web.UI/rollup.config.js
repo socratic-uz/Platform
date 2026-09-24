@@ -7,7 +7,7 @@ export default [
     {
         input: 'node_modules/@material/material-color-utilities/index.js',
         output: {
-            file: '../../DesignSystem/Material.Web/wwwroot/material-color-utilities.bundle.js',
+            file: '../../Shared/DesignSystem/Material.Web/wwwroot/material-color-utilities.bundle.js',
             format: 'esm',
             name: 'MaterialColorUtils'
         },
@@ -18,7 +18,7 @@ export default [
     {
         input: 'node_modules/@material/web/all.js', // основной вход
         output: {
-            file: '../../DesignSystem/Material.Web/wwwroot/material-web.bundle.js',
+            file: '../../Shared/DesignSystem/Material.Web/wwwroot/material-web.bundle.js',
             format: 'iife',
             name: 'MaterialWeb'
         },
