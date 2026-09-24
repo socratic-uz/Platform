@@ -1,27 +1,52 @@
 @namespace Material.Web.Components.Labs
 
+@{
+    var cssClass = $"{(Expressive ? "expressive" : "")} {GetCustomClass()}".Trim();
+}
+
 @if (Type == "filled")
 {
-    <md-filled-card disabled="@Disabled" @attributes="AdditionalAttributes">
+    <md-filled-card class="@cssClass" disabled="@Disabled" @attributes="FilteredAttributes">
         @ChildContent
     </md-filled-card>
 }
 else if (Type == "outlined")
 {
-    <md-outlined-card disabled="@Disabled" @attributes="AdditionalAttributes">
+    <md-outlined-card class="@cssClass" disabled="@Disabled" @attributes="FilteredAttributes">
         @ChildContent
     </md-outlined-card>
 }
 else
 {
-    <md-elevated-card disabled="@Disabled" @attributes="AdditionalAttributes">
+    <md-elevated-card class="@cssClass" disabled="@Disabled" @attributes="FilteredAttributes">
         @ChildContent
     </md-elevated-card>
 }
 
 @code {
     [Parameter] public string Type { get; set; } = "elevated"; // elevated, filled, outlined
+    [Parameter] public bool Expressive { get; set; } = true;
     [Parameter] public bool Disabled { get; set; } = false;
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private string GetCustomClass()
+    {
+        if (AdditionalAttributes != null && AdditionalAttributes.TryGetValue("class", out var cls) && cls != null)
+        {
+            return cls.ToString() ?? "";
+        }
+        return "";
+    }
+
+    private IDictionary<string, object>? FilteredAttributes
+    {
+        get
+        {
+            if (AdditionalAttributes == null) return null;
+            var copy = new Dictionary<string, object>(AdditionalAttributes);
+            copy.Remove("class");
+            return copy;
+        }
+    }
 }

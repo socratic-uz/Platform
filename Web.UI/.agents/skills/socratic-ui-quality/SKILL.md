@@ -112,15 +112,15 @@ Use the `socratic-ui-quality` MCP server tools:
 All UI quality tools are fully integrated and self-contained inside the Socratic repository:
 
 1. **.NET 10 Source Analyzer**:
-   - Path: [src/Tools/BlazorUiQuality.Analyzer](file:///c:/Users/owner/source/repos/Socratic/src/Tools/BlazorUiQuality.Analyzer)
-   - CLI: `dotnet run --project src/Tools/BlazorUiQuality.Analyzer -- --source-root src/Frontend/Platform/Shared [--format human|json]`
+   - Path: [Platform/Tools/BlazorUiQuality.Analyzer](file:///c:/Users/owner/source/repos/Socratic/src/Frontend/Platform/Tools/BlazorUiQuality.Analyzer)
+   - CLI: `dotnet run --project Platform/Tools/BlazorUiQuality.Analyzer -- --source-root Platform/Shared [--format human|json]`
    - Analyzers: `@rendermode`, `[Parameter]`, `::deep` CSS, hardcoded HEX/RGB colors, and touch target risks.
    - 100% Native AOT & Trimming compliant (zero IL warnings).
 
 2. **Local Playwright MCP Server**:
-   - Path: [tools/socratic-ui-mcp](file:///c:/Users/owner/source/repos/Socratic/tools/socratic-ui-mcp)
+   - Path: [Platform/Tools/socratic-ui-mcp](file:///c:/Users/owner/source/repos/Socratic/src/Frontend/Platform/Tools/socratic-ui-mcp)
    - Built via `npm run build` (`dist/index.js`).
-   - Configured in [.agents/mcp_config.json](file:///c:/Users/owner/source/repos/Socratic/.agents/mcp_config.json).
+   - Configured in `.agents/mcp_config.json` (`Platform/Tools/socratic-ui-mcp/dist/index.js`).
    - Features: Shadow DOM traversal for `@material/web`, automatic touch target validation (<48x48px on mobile/tablet), inline HEX token violation detection.
 
 3. **Fast Standalone CLI Script**:

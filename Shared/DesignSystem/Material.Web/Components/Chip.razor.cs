@@ -15,8 +15,11 @@ public partial class Chip
     [Parameter] public bool Selected { get; set; } = false;
     [Parameter] public bool Disabled { get; set; } = false;
     [Parameter] public bool Elevated { get; set; } = false;
+    [Parameter] public bool Expressive { get; set; } = true;
     [Parameter] public string? CssClass { get; set; }
     [Parameter] public string? AriaLabel { get; set; }
+
+    protected string ComputedCssClass => $"{(Expressive ? "expressive" : "")} {CssClass}".Trim();
     
     // Icon properties
     [Parameter] public string? Icon { get; set; }

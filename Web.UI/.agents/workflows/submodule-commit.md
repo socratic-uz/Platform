@@ -31,14 +31,14 @@ git submodule foreach --recursive "git status -s"
 
 ## 3. Multi-Tier Bottom-Up Commit Sequence
 
-### Tier 1: Platform & Shared Submodules (Innermost)
-If changes were made to platform submodules (`DesignSystem`, `Core`, `Hardware`, `WebUI`, `SharedKernel`):
+### Tier 1: Platform, Hardware & Shared Submodules (Innermost)
+If changes were made to platform or hardware submodules (`Platform`, `Hardware/*`, `SharedKernel`):
 ```bash
-# Example for DesignSystem:
-git -C src/Frontend/Platform/Shared/DesignSystem status
-git -C src/Frontend/Platform/Shared/DesignSystem add .
-git -C src/Frontend/Platform/Shared/DesignSystem commit -m "<type>(design-system): <message>"
-git -C src/Frontend/Platform/Shared/DesignSystem push origin HEAD
+# Example for Platform:
+git -C Platform status
+git -C Platform add .
+git -C Platform commit -m "<type>(platform): <message>"
+git -C Platform push origin HEAD
 ```
 
 ### Tier 2: Stream-Aligned Feature Repositories

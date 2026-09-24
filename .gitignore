@@ -5,3 +5,4 @@ obj/
 *.suo
 node_modules/
 dist/
+!Tools/socratic-ui-mcp/dist/

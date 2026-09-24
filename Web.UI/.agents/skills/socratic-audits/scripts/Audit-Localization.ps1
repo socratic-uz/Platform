@@ -1,4 +1,4 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param(
     [string]$RootPath = "$PSScriptRoot\..\..\..\..",
     [switch]$CheckRazor = $true,
@@ -8,16 +8,44 @@ param(
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-# Normalize root path
+# Resolve repository or target root dynamically
 $repoRoot = [System.IO.Path]::GetFullPath($RootPath)
-$resourcesDir = Join-Path $repoRoot "src\Frontend\Core\Shared\Resources"
+
+$candidates = @(
+    (Join-Path $repoRoot "Platform\Shared\DesignSystem\Layout\Resources"),
+    (Join-Path $repoRoot "src\Frontend\Platform\Shared\DesignSystem\Layout\Resources"),
+    (Join-Path $repoRoot "Shared\DesignSystem\Layout\Resources"),
+    (Join-Path $repoRoot "Layout\Resources"),
+    (Join-Path $repoRoot "Resources")
+)
+
+$resourcesDir = $null
+foreach ($c in $candidates) {
+    if (Test-Path (Join-Path $c "ResourceRu.resx")) {
+        $resourcesDir = $c
+        break
+    }
+}
+
+if (-not $resourcesDir) {
+    $found = Get-ChildItem -Path $repoRoot -Filter "ResourceRu.resx" -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($found) {
+        $resourcesDir = $found.DirectoryName
+    } else {
+        $frontendPlatform = "c:\Users\owner\source\repos\Socratic\src\Frontend\Platform\Shared\DesignSystem\Layout\Resources"
+        if (Test-Path (Join-Path $frontendPlatform "ResourceRu.resx")) {
+            $resourcesDir = $frontendPlatform
+        }
+    }
+}
 
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host "  🔍 Socratic Localization (i18n) Auditor" -ForegroundColor Cyan
 Write-Host "  Root: $repoRoot" -ForegroundColor DarkGray
+Write-Host "  Resources: $resourcesDir" -ForegroundColor DarkGray
 Write-Host "==================================================" -ForegroundColor Cyan
 
-if (-not (Test-Path $resourcesDir)) {
+if (-not $resourcesDir -or -not (Test-Path $resourcesDir)) {
     Write-Error "Resources directory not found at: $resourcesDir"
     return
 }
@@ -114,14 +142,21 @@ $hardcodedMatches = @()
 
 if ($CheckRazor) {
     Write-Host "`n🔎 Scanning .razor files for hardcoded text..." -ForegroundColor Yellow
-    $razorFiles = Get-ChildItem -Path (Join-Path $repoRoot "src\Frontend") -Filter "*.razor" -Recurse
+    $scanDir = if (Test-Path (Join-Path $repoRoot "src\Frontend")) {
+        Join-Path $repoRoot "src\Frontend"
+    } elseif (Test-Path (Join-Path $repoRoot "src")) {
+        Join-Path $repoRoot "src"
+    } else {
+        $repoRoot
+    }
+    $razorFiles = Get-ChildItem -Path $scanDir -Filter "*.razor" -Recurse -File
 
     $cyrillicMarkupRegex = [regex]'>([^<@\r\n]*[\u0400-\u04FF]+[^<@]*)<'
     $cyrillicAttrRegex = [regex]'(?:Label|Title|Placeholder|Text|HelperText|Tooltip)="([^"@\r\n]*[\u0400-\u04FF]+[^"@\r\n]*)"'
 
     foreach ($file in $razorFiles) {
-        # Skip obj/bin directories
-        if ($file.FullName -match '[\\/](obj|bin)[\\/]') { continue }
+        # Skip obj/bin/.git/dist directories
+        if ($file.FullName -match '[\\/](obj|bin|\.git|dist)[\\/]') { continue }
 
         $lines = @(Get-Content -Path $file.FullName)
         for ($i = 0; $i -lt $lines.Count; $i++) {

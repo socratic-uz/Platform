@@ -28,4 +28,7 @@
     <Project Path="Shared/DesignSystem/QuickGrid/QuickGrid.csproj" />
     <Project Path="Shared/DesignSystem/Markdown/Markdown.csproj" />
   </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="Tools/BlazorUiQuality.Analyzer/BlazorUiQuality.Analyzer.csproj" />
+  </Folder>
 </Solution>

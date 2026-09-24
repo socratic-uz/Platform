@@ -1,23 +1,34 @@
 [CmdletBinding()]
 param(
-    [string]$RootPath = "$PSScriptRoot\..\..\..\..",
+    [string]$TargetFolder = ".",
+    [string]$RootPath = "",
     [switch]$ExportJson = $false
 )
 
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-# Normalize root path
-$repoRoot = [System.IO.Path]::GetFullPath($RootPath)
-$frontendDir = Join-Path $repoRoot "src\Frontend"
+# Resolve target directory dynamically
+$targetDir = $PWD.Path
+if ($TargetFolder -and $TargetFolder -ne ".") {
+    $targetDir = Join-Path $PWD.Path $TargetFolder
+} elseif ($RootPath) {
+    if (Test-Path (Join-Path $RootPath "src\Frontend")) {
+        $targetDir = Join-Path $RootPath "src\Frontend"
+    } else {
+        $targetDir = $RootPath
+    }
+}
+$targetDir = [System.IO.Path]::GetFullPath($targetDir)
+$repoRoot = $targetDir
 
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host "  🎨 Socratic Theme & Accent Colors Auditor" -ForegroundColor Cyan
-Write-Host "  Frontend: $frontendDir" -ForegroundColor DarkGray
+Write-Host "  Target: $targetDir" -ForegroundColor DarkGray
 Write-Host "==================================================" -ForegroundColor Cyan
 
-if (-not (Test-Path $frontendDir)) {
-    Write-Error "Frontend directory not found at: $frontendDir"
+if (-not (Test-Path $targetDir)) {
+    Write-Error "Target directory not found at: $targetDir"
     return
 }
 
@@ -63,7 +74,7 @@ function Get-Suggestion([string]$snippet, [string]$lineContent) {
     return "var(--md-sys-color-*)"
 }
 
-$files = Get-ChildItem -Path $frontendDir -Include "*.razor", "*.css" -Recurse -File
+$files = Get-ChildItem -Path $targetDir -Include "*.razor", "*.css" -Recurse -File
 
 $findings = @()
 

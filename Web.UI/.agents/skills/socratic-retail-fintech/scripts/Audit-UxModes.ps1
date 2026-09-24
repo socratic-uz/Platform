@@ -11,13 +11,69 @@ Write-Host "=====================================================" -ForegroundCo
 Write-Host "   🔍 SOCRATIC 28 UNIVERSAL UX MODES AUDIT           " -ForegroundColor Cyan
 Write-Host "=====================================================" -ForegroundColor Cyan
 
-$uxModeFile = Join-Path $RepoRoot "src/Shared/SharedKernel/ValueObjects/ProductUxMode.cs"
-$registryFile = Join-Path $RepoRoot "src/Frontend/Retail/Commerce/Architecture/ProductModuleRegistry.cs"
-$modulesDir = Join-Path $RepoRoot "src/Frontend/Retail/Commerce/Modules"
-$resourcesDir = Join-Path $RepoRoot "src/Frontend/Platform/Shared/DesignSystem/Layout/Resources"
+$resolvedRoot = [System.IO.Path]::GetFullPath($RepoRoot)
 
-if (-not (Test-Path $uxModeFile)) {
-    Write-Error "Could not find ProductUxMode.cs at $uxModeFile"
+# 1. Resolve ProductUxMode.cs
+$uxCandidates = @(
+    (Join-Path $resolvedRoot "src/Shared/SharedKernel/ValueObjects/ProductUxMode.cs"),
+    (Join-Path $resolvedRoot "Shared/SharedKernel/ValueObjects/ProductUxMode.cs"),
+    (Join-Path $resolvedRoot "src/Frontend/Retail/Commerce/Shared/SharedKernel/ValueObjects/ProductUxMode.cs"),
+    (Join-Path $resolvedRoot "Retail/Commerce/Shared/SharedKernel/ValueObjects/ProductUxMode.cs")
+)
+$uxModeFile = $uxCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+if (-not $uxModeFile) {
+    $found = Get-ChildItem -Path $resolvedRoot -Filter "ProductUxMode.cs" -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($found) { $uxModeFile = $found.FullName }
+    else {
+        $std = "c:/Users/owner/source/repos/Socratic/src/Shared/SharedKernel/ValueObjects/ProductUxMode.cs"
+        if (Test-Path $std) { $uxModeFile = $std }
+    }
+}
+
+# 2. Resolve ProductModuleRegistry.cs
+$regCandidates = @(
+    (Join-Path $resolvedRoot "src/Frontend/Retail/Commerce/Architecture/ProductModuleRegistry.cs"),
+    (Join-Path $resolvedRoot "Retail/Commerce/Architecture/ProductModuleRegistry.cs"),
+    (Join-Path $resolvedRoot "Architecture/ProductModuleRegistry.cs")
+)
+$registryFile = $regCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+if (-not $registryFile) {
+    $found = Get-ChildItem -Path $resolvedRoot -Filter "ProductModuleRegistry.cs" -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($found) { $registryFile = $found.FullName }
+    else {
+        $std = "c:/Users/owner/source/repos/Socratic/src/Frontend/Retail/Commerce/Architecture/ProductModuleRegistry.cs"
+        if (Test-Path $std) { $registryFile = $std }
+    }
+}
+
+# 3. Resolve modulesDir
+$modCandidates = @(
+    (Join-Path $resolvedRoot "src/Frontend/Retail/Commerce/Modules"),
+    (Join-Path $resolvedRoot "Retail/Commerce/Modules"),
+    (Join-Path $resolvedRoot "Modules")
+)
+$modulesDir = $modCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+if (-not $modulesDir) {
+    $std = "c:/Users/owner/source/repos/Socratic/src/Frontend/Retail/Commerce/Modules"
+    if (Test-Path $std) { $modulesDir = $std }
+}
+
+# 4. Resolve resourcesDir
+$resCandidates = @(
+    (Join-Path $resolvedRoot "src/Frontend/Platform/Shared/DesignSystem/Layout/Resources"),
+    (Join-Path $resolvedRoot "Platform/Shared/DesignSystem/Layout/Resources"),
+    (Join-Path $resolvedRoot "Shared/DesignSystem/Layout/Resources"),
+    (Join-Path $resolvedRoot "Layout/Resources"),
+    (Join-Path $resolvedRoot "Resources")
+)
+$resourcesDir = $resCandidates | Where-Object { Test-Path (Join-Path $_ "ResourceRu.resx") } | Select-Object -First 1
+if (-not $resourcesDir) {
+    $std = "c:/Users/owner/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Layout/Resources"
+    if (Test-Path $std) { $resourcesDir = $std }
+}
+
+if (-not $uxModeFile -or -not (Test-Path $uxModeFile)) {
+    Write-Error "Could not find ProductUxMode.cs in $resolvedRoot or standard locations."
     exit 1
 }
 
@@ -51,12 +107,16 @@ if (Test-Path $registryFile) {
 }
 
 # 3. Locate Razor files in UI.Shared/Modules
-$moduleFiles = Get-ChildItem -Path $modulesDir -Filter "*.razor" -Recurse -File | Select-Object -ExpandProperty BaseName
+$moduleFiles = if ($modulesDir -and (Test-Path $modulesDir)) {
+    Get-ChildItem -Path $modulesDir -Filter "*.razor" -Recurse -File | Select-Object -ExpandProperty BaseName
+} else {
+    @()
+}
 
 # 4. Check Resx Localization
-$ruResx = Join-Path $resourcesDir "ResourceRu.resx"
-$uzResx = Join-Path $resourcesDir "ResourceUz.resx"
-$enResx = Join-Path $resourcesDir "ResourceEn.resx"
+$ruResx = if ($resourcesDir) { Join-Path $resourcesDir "ResourceRu.resx" } else { "" }
+$uzResx = if ($resourcesDir) { Join-Path $resourcesDir "ResourceUz.resx" } else { "" }
+$enResx = if ($resourcesDir) { Join-Path $resourcesDir "ResourceEn.resx" } else { "" }
 
 $ruKeys = @{}
 $uzKeys = @{}

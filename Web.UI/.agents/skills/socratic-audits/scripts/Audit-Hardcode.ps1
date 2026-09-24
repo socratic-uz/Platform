@@ -7,19 +7,21 @@ param(
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-# Normalize root path
-$repoRoot = [System.IO.Path]::GetFullPath($RootPath)
-$srcDir = Join-Path $repoRoot "src"
+# Resolve repository or target root dynamically
+$resolvedPath = [System.IO.Path]::GetFullPath($RootPath)
+
+if (Test-Path (Join-Path $resolvedPath "src")) {
+    $targetDir = Join-Path $resolvedPath "src"
+    $repoRoot = $resolvedPath
+} else {
+    $targetDir = $resolvedPath
+    $repoRoot = $resolvedPath
+}
 
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host "  🔒 Socratic Hardcode & Security Auditor" -ForegroundColor Cyan
-Write-Host "  Source: $srcDir" -ForegroundColor DarkGray
+Write-Host "  Target: $targetDir" -ForegroundColor DarkGray
 Write-Host "==================================================" -ForegroundColor Cyan
-
-if (-not (Test-Path $srcDir)) {
-    Write-Error "Source directory not found at: $srcDir"
-    return
-}
 
 # 1. Regex patterns
 # Secrets & sensitive keys
@@ -37,13 +39,13 @@ $unixHomePathRegex = [regex]'/(?:home|Users)/[^"''\s\r\n]{4,}'
 # Raw GUIDs in production code
 $guidRegex = [regex]'[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
 
-$files = Get-ChildItem -Path $srcDir -Include "*.cs", "*.razor", "*.json" -Recurse -File
+$files = Get-ChildItem -Path $targetDir -Include "*.cs", "*.razor", "*.json" -Recurse -File
 
 $findings = @()
 
 foreach ($file in $files) {
-    # Skip obj, bin, launchSettings, and test files (for GUIDs and mock secrets)
-    if ($file.FullName -match '[\\/](obj|bin)[\\/]' -or 
+    # Skip obj, bin, .git, dist, launchSettings, and test files (for GUIDs and mock secrets)
+    if ($file.FullName -match '[\\/](obj|bin|\.git|dist)[\\/]' -or 
         $file.FullName -match 'node_modules' -or
         $file.Name -eq 'launchSettings.json') {
         continue

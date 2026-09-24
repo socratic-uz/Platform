@@ -124,6 +124,16 @@
                     <span class="showcase-nav-count">6</span>
                 </EndContent>
             </ListItem>
+            <ListItem Headline="M3 Expressive (M3X)"
+                      Selected=@(selectedCategory == "m3-expressive")
+                      OnClick=@(() => SelectCategory("m3-expressive"))>
+                <StartContent>
+                    <Icon Name="auto_awesome" class="nav-icon" />
+                </StartContent>
+                <EndContent>
+                    <span class="showcase-nav-count">3</span>
+                </EndContent>
+            </ListItem>
 
             <div class="showcase-nav-category-header">Специализированные библиотеки</div>
             <ListItem Headline="Smart.Web"
@@ -284,6 +294,139 @@
 
         <!-- Container for all Component Cards -->
         <div class="showcase-main-body">
+
+            @* ------------------------------------------------------------- *@
+            @* SECTION 0: MATERIAL DESIGN 3 EXPRESSIVE (M3X)                 *@
+            @* ------------------------------------------------------------- *@
+            @if (MatchesCategory("m3-expressive") && MatchesSearch("Expressive Card Button Pill Shape Asymmetric Dock M3X Карточки Кнопки Формы"))
+            {
+                <section class="showcase-section" id="m3-expressive">
+                    <div class="showcase-section-header">
+                        <div class="showcase-section-title-wrap">
+                            <Icon Name="auto_awesome" class="showcase-section-icon" />
+                            <h3 class="showcase-section-title">Material Design 3 Expressive (M3X)</h3>
+                        </div>
+                        <span class="showcase-lib-badge">Google M3 Expressive</span>
+                    </div>
+
+                    <div class="showcase-cards-grid">
+                        <!-- Expressive Cards Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Expressive Cards & Glow Elevation</h4>
+                                    <p class="showcase-card-desc">24px скругление, световой блик по верхней грани, тактильный пружинный lift и мягкое свечение первичного цвета</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("m3x-cards")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; width: 100%;">
+                                        <Card Type="elevated" Expressive="true">
+                                            <div style="padding: 16px; display: grid; gap: 8px;">
+                                                <span class="label-expressive-upper">PREMIUM PLAN</span>
+                                                <h5 class="headline-expressive" style="margin: 0;">Business Pro</h5>
+                                                <p style="margin: 0; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant);">Тактильная карточка с пружинным подъемом и подсветкой.</p>
+                                                <div style="margin-top: 8px; display: grid; grid-auto-flow: column; justify-content: space-between; align-items: center;">
+                                                    <span class="price-tag">$49/мес</span>
+                                                    <Button Variant="ButtonVariant.Filled" Pill="true">Выбрать</Button>
+                                                </div>
+                                            </div>
+                                        </Card>
+                                        <Card Type="filled" Expressive="true">
+                                            <div style="padding: 16px; display: grid; gap: 8px;">
+                                                <span class="m3-expressive-badge" style="width: fit-content;">EXPRESSIVE</span>
+                                                <h5 class="headline-expressive" style="margin: 0;">Smart POS Terminal</h5>
+                                                <p style="margin: 0; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant);">Полный сенсорный контроль и поддержка M3X токенов.</p>
+                                                <div style="margin-top: 8px;">
+                                                    <Button Variant="ButtonVariant.FilledTonal" Pill="true">Подробнее</Button>
+                                                </div>
+                                            </div>
+                                        </Card>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("m3x-cards"))
+                            {
+                                <div class="showcase-card-code">&lt;Card Type="elevated" Expressive="true"&gt;
+    &lt;h5 class="headline-expressive"&gt;Business Pro&lt;/h5&gt;
+    &lt;Button Variant="ButtonVariant.Filled" Pill="true"&gt;Выбрать&lt;/Button&gt;
+&lt;/Card&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Expressive Buttons & Pills Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Expressive Buttons & Spring Press</h4>
+                                    <p class="showcase-card-desc">20px и Pill (9999px) формы, тактильное сжатие при клике, микро-пружины</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("m3x-buttons")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row" style="flex-wrap: wrap; gap: 12px;">
+                                        <Button Variant="ButtonVariant.Filled" Expressive="true" Icon="rocket_launch">Filled M3X</Button>
+                                        <Button Variant="ButtonVariant.Elevated" Expressive="true" Pill="true" Icon="bolt">Pill Elevated</Button>
+                                        <Button Variant="ButtonVariant.FilledTonal" Expressive="true" Pill="true">Tonal Pill</Button>
+                                        <Button Variant="ButtonVariant.Outlined" Expressive="true">Outlined M3X</Button>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("m3x-buttons"))
+                            {
+                                <div class="showcase-card-code">&lt;Button Variant="ButtonVariant.Filled" Expressive="true" Icon="rocket_launch"&gt;Filled M3X&lt;/Button&gt;
+&lt;Button Variant="ButtonVariant.Elevated" Expressive="true" Pill="true"&gt;Pill Elevated&lt;/Button&gt;</div>
+                            }
+                        </div>
+
+                        <!-- Asymmetric Shapes & Badges Card -->
+                        <div class="showcase-card">
+                            <div class="showcase-card-header">
+                                <div class="showcase-card-title-group">
+                                    <h4 class="showcase-card-title">Асимметричные Expressive-формы & Бейджи</h4>
+                                    <p class="showcase-card-desc">Динамические радиусы скругления (28px 10px 28px 10px) и вибрантные M3X бейджи</p>
+                                </div>
+                                <div class="showcase-card-actions">
+                                    <IconButton Icon="code" OnClick=@(() => ToggleCode("m3x-shapes")) Title="Код" AriaLabel="Код" />
+                                </div>
+                            </div>
+                            <div class="showcase-card-body">
+                                <div class="showcase-demo-canvas">
+                                    <div class="showcase-demo-row" style="flex-wrap: wrap; gap: 16px;">
+                                        <div class="m3-shape-asymmetric-start" style="padding: 16px 24px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); font-weight: 700;">
+                                            Asymmetric Start (28px/10px)
+                                        </div>
+                                        <div class="m3-shape-asymmetric-end" style="padding: 16px 24px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); font-weight: 700;">
+                                            Asymmetric End (10px/28px)
+                                        </div>
+                                        <div class="m3-shape-bubble" style="padding: 16px 24px; background: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface); font-weight: 700;">
+                                            Speech Bubble Corner
+                                        </div>
+                                    </div>
+                                    <div class="showcase-demo-row" style="margin-top: 12px; gap: 8px; flex-wrap: wrap;">
+                                        <span class="m3-expressive-badge">Live Orders</span>
+                                        <span class="m3-expressive-badge" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container);">AI Active</span>
+                                        <Chip Label="Expressive Filter" ChipType="ChipType.Filter" Selected="true" Expressive="true" />
+                                        <Chip Label="Expressive Suggestion" ChipType="ChipType.Suggestion" Expressive="true" />
+                                    </div>
+                                </div>
+                            </div>
+                            @if (IsCodeOpen("m3x-shapes"))
+                            {
+                                <div class="showcase-card-code">&lt;div class="m3-shape-asymmetric-start"&gt;Asymmetric (28px 10px)&lt;/div&gt;
+&lt;span class="m3-expressive-badge"&gt;Live Orders&lt;/span&gt;
+&lt;Chip Label="Expressive" ChipType="ChipType.Filter" Expressive="true" /&gt;</div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
 
             @* ------------------------------------------------------------- *@
             @* SECTION 1: MATERIAL.WEB - BUTTONS & ACTIONS                   *@

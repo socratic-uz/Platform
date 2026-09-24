@@ -1,0 +1,287 @@
+/**
+ * Socratic Platform — Material Design 3 Expressive (M3X) System
+ * Authoritative tokens, shape scales, spring physics, and expressive components.
+ * Fully compliant with Google M3 Expressive (2024-2025) and WCAG 2.1 AA.
+ */
+
+/* ─── 1. M3 Expressive Design Tokens ────────────────────────────────────────── */
+:root {
+    /* Expressive Shape Tokens */
+    --md-sys-shape-corner-none: 0px;
+    --md-sys-shape-corner-extra-small: 4px;
+    --md-sys-shape-corner-small: 8px;
+    --md-sys-shape-corner-medium: 12px;
+    --md-sys-shape-corner-large: 16px;
+    --md-sys-shape-corner-extra-large: 28px;
+    --md-sys-shape-corner-full: 9999px;
+
+    /* M3X Expressive Specific Shapes */
+    --md-sys-shape-expressive-pill: 9999px;
+    --md-sys-shape-expressive-button: 20px;
+    --md-sys-shape-expressive-card: 24px;
+    --md-sys-shape-expressive-dock: 32px;
+    --md-sys-shape-expressive-dialog: 32px;
+    --md-sys-shape-expressive-sheet: 32px 32px 0 0;
+    --md-sys-shape-expressive-asymmetric-start: 28px 10px 28px 10px;
+    --md-sys-shape-expressive-asymmetric-end: 10px 28px 10px 28px;
+    --md-sys-shape-expressive-bubble: 24px 24px 6px 24px;
+
+    /* Expressive Motion Durations */
+    --md-sys-motion-duration-short1: 50ms;
+    --md-sys-motion-duration-short2: 100ms;
+    --md-sys-motion-duration-short3: 150ms;
+    --md-sys-motion-duration-short4: 200ms;
+    --md-sys-motion-duration-medium1: 250ms;
+    --md-sys-motion-duration-medium2: 300ms;
+    --md-sys-motion-duration-medium3: 350ms;
+    --md-sys-motion-duration-medium4: 400ms;
+    --md-sys-motion-duration-long1: 450ms;
+    --md-sys-motion-duration-long2: 500ms;
+    --md-sys-motion-duration-long3: 600ms;
+
+    /* Expressive Motion Easing & Spring Physics */
+    --md-sys-motion-easing-expressive-standard: cubic-bezier(0.2, 0.0, 0, 1.0);
+    --md-sys-motion-easing-expressive-entrance: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+    --md-sys-motion-easing-expressive-exit: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+    --md-sys-motion-easing-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --md-sys-motion-easing-spring-snappy: cubic-bezier(0.2, 1.3, 0.4, 1.0);
+    --md-sys-motion-easing-spring-soft: cubic-bezier(0.3, 1.15, 0.5, 1.0);
+
+    /* Expressive Colored Ambient Elevations */
+    --md-sys-elevation-expressive-1: 0 2px 10px -2px rgba(0, 0, 0, 0.15), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --md-sys-elevation-expressive-2: 0 6px 20px -4px rgba(0, 0, 0, 0.22), 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+    --md-sys-elevation-expressive-3: 0 12px 32px -6px rgba(0, 0, 0, 0.28), 0 4px 14px 0 rgba(0, 0, 0, 0.20);
+    --md-sys-elevation-expressive-4: 0 18px 44px -8px rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
+
+    /* Expressive Primary Glows */
+    --md-sys-glow-primary-subtle: 0 0 16px -2px var(--md-sys-color-primary);
+    --md-sys-glow-primary-bold: 0 0 28px 2px var(--md-sys-color-primary);
+
+    /* Expressive Glass & Sheen */
+    --md-sys-glass-blur: blur(24px) saturate(180%);
+    --md-sys-glass-border-dark: 1px solid rgba(255, 255, 255, 0.08);
+    --md-sys-glass-border-light: 1px solid rgba(0, 0, 0, 0.06);
+    --md-sys-glass-sheen: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* ─── 2. Expressive Cards & Containers ──────────────────────────────────────── */
+.m3-expressive-card,
+md-elevated-card.expressive,
+md-filled-card.expressive,
+md-outlined-card.expressive {
+    border-radius: var(--md-sys-shape-expressive-card) !important;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard) !important;
+    border: var(--md-sys-glass-border-dark);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    box-sizing: border-box;
+}
+
+[data-theme="light"] .m3-expressive-card,
+[data-theme="light"] md-elevated-card.expressive,
+[data-theme="light"] md-filled-card.expressive,
+[data-theme="light"] md-outlined-card.expressive {
+    border: var(--md-sys-glass-border-light);
+}
+
+.m3-expressive-card:hover,
+md-elevated-card.expressive:hover,
+md-filled-card.expressive:hover,
+md-outlined-card.expressive:hover {
+    transform: translateY(-3px) scale(1.004);
+    box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle) !important;
+}
+
+.m3-expressive-card:active,
+md-elevated-card.expressive:active,
+md-filled-card.expressive:active {
+    transform: translateY(0) scale(0.985);
+    transition-duration: var(--md-sys-motion-duration-short2) !important;
+}
+
+/* Subtle top sheen on cards for rich Material 3 feel */
+.m3-expressive-card::before,
+md-elevated-card.expressive::before,
+md-filled-card.expressive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.22) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ─── 3. Expressive Buttons & Interactive Controls ──────────────────────────── */
+.m3-expressive-btn,
+md-filled-button.expressive,
+md-elevated-button.expressive,
+md-filled-tonal-button.expressive {
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-button);
+    --md-elevated-button-container-shape: var(--md-sys-shape-expressive-button);
+    --md-filled-tonal-button-container-shape: var(--md-sys-shape-expressive-button);
+    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button);
+    --md-text-button-container-shape: var(--md-sys-shape-expressive-button);
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard) !important;
+    position: relative;
+}
+
+.m3-expressive-btn:hover,
+md-filled-button.expressive:hover,
+md-elevated-button.expressive:hover {
+    transform: translateY(-1.5px);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+.m3-expressive-btn:active,
+md-filled-button.expressive:active,
+md-elevated-button.expressive:active,
+md-filled-tonal-button.expressive:active {
+    transform: scale(0.96) !important;
+    transition-duration: var(--md-sys-motion-duration-short1) !important;
+}
+
+/* Pill Variant */
+.m3-expressive-btn.pill,
+md-filled-button.pill {
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
+    --md-elevated-button-container-shape: var(--md-sys-shape-expressive-pill);
+}
+
+/* ─── 4. Expressive Floating Dock & Navigation ──────────────────────────────── */
+.m3-expressive-dock {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--md-sys-shape-expressive-dock);
+    background: rgba(var(--md-sys-color-surface-container-highest), 0.75);
+    backdrop-filter: var(--md-sys-glass-blur);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur);
+    border: var(--md-sys-glass-border-dark);
+    box-shadow: var(--md-sys-elevation-expressive-3);
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 990;
+    transition: transform var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-spring-soft);
+}
+
+[data-theme="light"] .m3-expressive-dock {
+    background: rgba(255, 255, 255, 0.82);
+    border: var(--md-sys-glass-border-light);
+}
+
+/* ─── 5. Expressive Chips & Badges ──────────────────────────────────────────── */
+.m3-expressive-chip,
+md-chip.expressive {
+    --md-chip-container-shape: var(--md-sys-shape-expressive-pill);
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
+                background-color var(--md-sys-motion-duration-short4) ease !important;
+}
+
+.m3-expressive-chip:hover,
+md-chip.expressive:hover {
+    transform: scale(1.04);
+}
+
+.m3-expressive-chip:active,
+md-chip.expressive:active {
+    transform: scale(0.95);
+}
+
+.m3-expressive-badge {
+    display: inline-grid;
+    place-items: center;
+    padding: 4px 10px;
+    border-radius: var(--md-sys-shape-expressive-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    line-height: 1;
+}
+
+/* ─── 6. Expressive Asymmetric Shapes ───────────────────────────────────────── */
+.m3-shape-asymmetric-start {
+    border-radius: var(--md-sys-shape-expressive-asymmetric-start) !important;
+}
+
+.m3-shape-asymmetric-end {
+    border-radius: var(--md-sys-shape-expressive-asymmetric-end) !important;
+}
+
+.m3-shape-bubble {
+    border-radius: var(--md-sys-shape-expressive-bubble) !important;
+}
+
+/* ─── 7. Expressive Typography Utilities ────────────────────────────────────── */
+.display-expressive {
+    font-family: var(--md-ref-typeface-brand, 'Montserrat', sans-serif);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--md-sys-color-on-surface);
+}
+
+.headline-expressive {
+    font-family: var(--md-ref-typeface-brand, 'Montserrat', sans-serif);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--md-sys-color-on-surface);
+}
+
+.title-expressive {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+.label-expressive-upper {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ─── 8. Expressive Dialog & Modal Animation ────────────────────────────────── */
+.m3-expressive-dialog,
+md-dialog.expressive {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+    animation: m3-expressive-dialog-enter var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring);
+}
+
+@keyframes m3-expressive-dialog-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ─── 9. Accessibility & Reduced Motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transform: none !important;
+    }
+}

@@ -12,13 +12,11 @@
     "socratic-ui-quality": {
       "command": "node",
       "args": [
-        "c:/Users/owner/source/repos/Socratic/tools/socratic-ui-mcp/dist/index.js"
+        "Platform/Tools/socratic-ui-mcp/dist/index.js"
       ],
       "description": "Socratic UI Quality Engine: live browser DOM/CSSOM inspection, responsive matrix, overlap detection, Material 3 token checks, and accessibility",
       "env": {
-        "UI_BASE_URL": "https://localhost:6443",
-        "UI_SOURCE_ROOT": "c:/Users/owner/source/repos/Socratic/src/Frontend/Platform/Shared",
-        "UI_ANALYZER_DLL": "c:/Users/owner/source/repos/Socratic/src/Tools/BlazorUiQuality.Analyzer/bin/Debug/net10.0/BlazorUiQuality.Analyzer.dll"
+        "UI_BASE_URL": "https://localhost:6443"
       }
     },
     "codegraph": {
