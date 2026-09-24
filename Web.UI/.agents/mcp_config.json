@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/mcp-config.json",
+  "mcpServers": {
+    "aspire": {
+      "command": "aspire",
+      "args": [
+        "agent",
+        "mcp"
+      ],
+      "description": "Official .NET Aspire MCP agent server for live resources, health checks, and distributed traces"
+    },
+    "socratic-ui-quality": {
+      "command": "node",
+      "args": [
+        "Platform/Tools/socratic-ui-mcp/dist/index.js"
+      ],
+      "description": "Socratic UI Quality Engine: live browser DOM/CSSOM inspection, responsive matrix, overlap detection, Material 3 token checks, and accessibility",
+      "env": {
+        "UI_BASE_URL": "https://localhost:6443"
+      }
+    },
+    "codegraph": {
+      "command": "C:/Users/owner/AppData/Local/codegraph/current/bin/codegraph.cmd",
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "description": "CodeGraph: Semantic code intelligence, AST knowledge graph, symbol exploration, blast-radius and caller/callee analysis"
+    }
+  }
+}
