@@ -1,10 +1,37 @@
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
+@inject IStringLocalizer L
 
-@if (ChildContent is not null)
-{
-	<footer>@ChildContent</footer>
-}
+<footer class="socratic-global-footer">
+	@if (ChildContent is not null)
+	{
+		<div class="custom-footer-content">
+			@ChildContent
+		</div>
+	}
+	<div class="default-footer-links">
+		<ul>
+			<li class="footer-title">@(L?["Management"] ?? "Управление")</li>
+			<li><a href="/orders">@(L?["Orders"] ?? "Заказы")</a></li>
+			<li><a href="/qr-designer">@(L?["QR Designer"] ?? "QR Конструктор")</a></li>
+			<li><a href="/payment">@(L?["Payment"] ?? "Оплата и финансы")</a></li>
+			<li><a href="/seat-designer">@(L?["Seat Designer"] ?? "Схема залов")</a></li>
+		</ul>
+		<ul>
+			<li class="footer-title">@(L?["Services"] ?? "Сервисы")</li>
+			<li><a href="/map">@(L?["Map"] ?? "Карта заведений")</a></li>
+			<li><a href="/chat">@(L?["Chat"] ?? "Чат поддержки")</a></li>
+			<li><a href="/wishlist">@(L?["Wishlist"] ?? "Избранное")</a></li>
+			<li><a href="/commerce">@(L?["Commerce"] ?? "Демо UX-режимов")</a></li>
+		</ul>
+		<ul>
+			<li class="footer-title">@(L?["Information"] ?? "Информация")</li>
+			<li><a href="/docs">@(L?["Documentation"] ?? "Документация")</a></li>
+			<li><a href="/help">@(L?["Help"] ?? "Справка и FAQ")</a></li>
+			<li><a href="/about">@(L?["About"] ?? "О проекте")</a></li>
+		</ul>
+	</div>
+</footer>
 
 @code {
 	[Parameter] public RenderFragment? ChildContent { get; set; }

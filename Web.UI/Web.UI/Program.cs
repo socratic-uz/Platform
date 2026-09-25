@@ -297,6 +297,26 @@ app.UseRequestLocalization(localizationOptions);
 
 app.UseAntiforgery();
 app.UseAuthentication();
+
+if (app.Environment.IsDevelopment())
+{
+    app.Use(async (context, next) =>
+    {
+        if (context.User.Identity?.IsAuthenticated != true)
+        {
+            var identity = new System.Security.Claims.ClaimsIdentity(
+            [
+                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, "00000000-0000-0000-0000-000000000001"),
+                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, "Dev Cashier"),
+                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Role, "Admin"),
+                new System.Security.Claims.Claim("OrganizationId", "00000000-0000-0000-0000-000000000001")
+            ], "StandaloneAuth");
+            context.User = new System.Security.Claims.ClaimsPrincipal(identity);
+        }
+        await next();
+    });
+}
+
 app.UseAuthorization();
 
 // Configure MIME types for static assets (especially RCL JavaScript modules)

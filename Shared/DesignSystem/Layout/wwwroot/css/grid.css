@@ -43,6 +43,16 @@ body {
     grid-template-columns: 1fr;
 }
 
+.socratic-grid-shell:has(main.no-footer) > footer,
+.socratic-grid-shell:has(.no-footer) > footer {
+    display: none !important;
+}
+
+.socratic-grid-shell:has(main.no-header) > header,
+.socratic-grid-shell:has(.no-header) > header {
+    display: none !important;
+}
+
 .socratic-grid-shell > header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;

@@ -1,6 +1,6 @@
 footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     align-items: start;
     text-align: start;
     grid-column: 2 / 3;
@@ -16,15 +16,31 @@ footer {
     max-width: 100%;
 }
 
+.custom-footer-content {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.default-footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
 @media screen and (max-width: 767px) {
     footer {
         grid-column: 1 / -1;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         padding: 2rem 1rem calc(5rem + env(safe-area-inset-bottom, 0px)) 1rem;
         gap: 1.5rem;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+    }
+
+    .default-footer-links {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.5rem;
     }
 }
 

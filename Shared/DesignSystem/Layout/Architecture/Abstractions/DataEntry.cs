@@ -39,13 +39,43 @@ namespace Domain.Abstractions
             Data.AddRange(await _client.Read(Query));
         }
 
+        private string GetKey()
+        {
+            var baseKey = $"DataComponentBase_{DtoType.FullName}";
+            if (Query != null)
+            {
+                try
+                {
+                    string? queryStr = null;
+                    if (Query is Google.Protobuf.IMessage msg)
+                    {
+                        queryStr = Google.Protobuf.JsonFormatter.Default.Format(msg);
+                    }
+                    else
+                    {
+                        queryStr = System.Text.Json.JsonSerializer.Serialize(Query);
+                    }
+
+                    if (!string.IsNullOrEmpty(queryStr) && queryStr != "{}" && queryStr != "null")
+                    {
+                        return $"{baseKey}_{Math.Abs(queryStr.GetHashCode()):X}";
+                    }
+                }
+                catch { }
+            }
+            return baseKey;
+        }
+
         [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "DTO types for DataEntry are explicitly preserved in the AOT Json Context")]
         public override bool TryRestore(PersistentComponentState state)
         {
-            var key = $"DataComponentBase_{DtoType.FullName}";
+            var key = GetKey();
+            var fallbackKey = $"DataComponentBase_{DtoType.FullName}";
+
             if (typeof(Google.Protobuf.IMessage).IsAssignableFrom(typeof(TDto)))
             {
-                if (state.TryTakeProtobufListReflection(key, typeof(TDto), out var restoredList))
+                if (state.TryTakeProtobufListReflection(key, typeof(TDto), out var restoredList) ||
+                    (key != fallbackKey && state.TryTakeProtobufListReflection(fallbackKey, typeof(TDto), out restoredList)))
                 {
                     Data.Clear();
                     if (restoredList != null)
@@ -60,7 +90,8 @@ namespace Domain.Abstractions
             }
             else
             {
-                if (state.TryTakeFromJson<List<TDto>>(key, out var restoredData))
+                if (state.TryTakeFromJson<List<TDto>>(key, out var restoredData) ||
+                    (key != fallbackKey && state.TryTakeFromJson<List<TDto>>(fallbackKey, out restoredData)))
                 {
                     Data.Clear();
                     if (restoredData != null)
@@ -76,7 +107,7 @@ namespace Domain.Abstractions
         [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "DTO types for DataEntry are explicitly preserved in the AOT Json Context")]
         public override void Persist(PersistentComponentState state)
         {
-            var key = $"DataComponentBase_{DtoType.FullName}";
+            var key = GetKey();
             if (typeof(Google.Protobuf.IMessage).IsAssignableFrom(typeof(TDto)))
             {
                 state.PersistProtobufList(key, Data.Cast<Google.Protobuf.IMessage>());
