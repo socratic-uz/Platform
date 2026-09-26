@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.QuickGrid;
 using Microsoft.Extensions.AI;
 using Smart.Web.Components;
 using Smart.Web.Services;
@@ -9,6 +8,7 @@ using Socratic.QrDesigner;
 using Domain.Entities;
 using SharedKernel.ValueObjects;
 using Material.Web.Components;
+using QuickGrid;
 
 namespace Shared.Pages;
 

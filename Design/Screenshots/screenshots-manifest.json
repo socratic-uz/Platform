@@ -1,0 +1,172 @@
+[
+  {
+    "device": "Mobile",
+    "badge": "Mobile 390x844",
+    "width": 390,
+    "height": 844,
+    "file": "real-mobile-landing.png",
+    "title": "[Mobile 390x844] Universal Landing Page",
+    "url": "http://localhost:6080/",
+    "fullPage": true
+  },
+  {
+    "device": "Mobile",
+    "badge": "Mobile 390x844",
+    "width": 390,
+    "height": 844,
+    "file": "real-mobile-commerce.png",
+    "title": "[Mobile 390x844] Customer Marketplace & 28 UX Modes",
+    "url": "http://localhost:6080/commerce",
+    "fullPage": true
+  },
+  {
+    "device": "Mobile",
+    "badge": "Mobile 390x844",
+    "width": 390,
+    "height": 844,
+    "file": "real-mobile-kiosk.png",
+    "title": "[Mobile 390x844] Customer Mobile Ordering & Kiosk",
+    "url": "http://localhost:6080/kiosk",
+    "fullPage": true
+  },
+  {
+    "device": "Mobile",
+    "badge": "Mobile 390x844",
+    "width": 390,
+    "height": 844,
+    "file": "real-mobile-director.png",
+    "title": "[Mobile 390x844] Director Organization Console",
+    "url": "http://localhost:6080/home",
+    "fullPage": true
+  },
+  {
+    "device": "Tablet",
+    "badge": "Tablet 1024x768",
+    "width": 1024,
+    "height": 768,
+    "file": "real-tablet-pos.png",
+    "title": "[Tablet 1024x768] Cashier POS Terminal Workstation",
+    "url": "http://localhost:6080/terminal",
+    "fullPage": false
+  },
+  {
+    "device": "Tablet",
+    "badge": "Tablet 1024x768",
+    "width": 1024,
+    "height": 768,
+    "file": "real-tablet-director.png",
+    "title": "[Tablet 1024x768] Director Organization Dashboard",
+    "url": "http://localhost:6080/home",
+    "fullPage": true
+  },
+  {
+    "device": "Tablet",
+    "badge": "Tablet 1024x768",
+    "width": 1024,
+    "height": 768,
+    "file": "real-tablet-seat-designer.png",
+    "title": "[Tablet 1024x768] 3D Seat Designer (Studio)",
+    "url": "http://localhost:6080/seat-designer",
+    "fullPage": false
+  },
+  {
+    "device": "Tablet",
+    "badge": "Tablet 1024x768",
+    "width": 1024,
+    "height": 768,
+    "file": "real-tablet-commerce.png",
+    "title": "[Tablet 1024x768] Commerce 28 UX Modes Showcase",
+    "url": "http://localhost:6080/commerce",
+    "fullPage": true
+  },
+  {
+    "device": "Kiosk",
+    "badge": "Kiosk 1080x1920",
+    "width": 1080,
+    "height": 1920,
+    "file": "real-kiosk-portrait.png",
+    "title": "[Kiosk 1080x1920] Customer Self-Service Ordering Kiosk",
+    "url": "http://localhost:6080/kiosk",
+    "fullPage": true
+  },
+  {
+    "device": "Kiosk",
+    "badge": "Kiosk 1080x1920",
+    "width": 1080,
+    "height": 1920,
+    "file": "real-kiosk-commerce.png",
+    "title": "[Kiosk 1080x1920] Universal Catalog & 28 UX Modes",
+    "url": "http://localhost:6080/commerce",
+    "fullPage": true
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-landing.png",
+    "title": "[Desktop 1440x900] Universal Landing Page",
+    "url": "http://localhost:6080/",
+    "fullPage": true
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-commerce.png",
+    "title": "[Desktop 1440x900] Customer Marketplace & 28 UX Modes",
+    "url": "http://localhost:6080/commerce",
+    "fullPage": true
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-pos.png",
+    "title": "[Desktop 1440x900] Cashier POS Terminal Workstation",
+    "url": "http://localhost:6080/terminal",
+    "fullPage": false
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-director.png",
+    "title": "[Desktop 1440x900] Director Organization Dashboard",
+    "url": "http://localhost:6080/home",
+    "fullPage": true
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-seat-designer.png",
+    "title": "[Desktop 1440x900] 3D Seat Designer (Studio)",
+    "url": "http://localhost:6080/seat-designer",
+    "fullPage": false
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-qr-designer.png",
+    "title": "[Desktop 1440x900] Dynamic QR Designer (Studio)",
+    "url": "http://localhost:6080/qr-designer",
+    "fullPage": false
+  },
+  {
+    "device": "Desktop",
+    "badge": "Desktop 1440x900",
+    "width": 1440,
+    "height": 900,
+    "file": "real-desktop-components.png",
+    "title": "[Desktop 1440x900] Material.Web Components Library",
+    "url": "http://localhost:6080/components",
+    "fullPage": true
+  }
+]

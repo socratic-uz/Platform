@@ -41,7 +41,8 @@ public static class DocsEndpoints
         var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
         while (dir != null)
         {
-            if (dir.GetFiles("Socratic.slnx").Any() || dir.GetDirectories(".git").Any())
+            if (dir.GetFiles("Socratic.slnx").Any() ||
+                (Directory.Exists(Path.Combine(dir.FullName, "docs")) && File.Exists(Path.Combine(dir.FullName, "README.md"))))
             {
                 return dir.FullName;
             }
@@ -86,22 +87,16 @@ public static class DocsEndpoints
                 foreach (var subDir in subDirs)
                 {
                     var dirName = Path.GetFileName(subDir);
-                    if (dirName.Equals("bin", StringComparison.OrdinalIgnoreCase) ||
+                    if (dirName.StartsWith(".") ||
+                        dirName.Equals("bin", StringComparison.OrdinalIgnoreCase) ||
                         dirName.Equals("obj", StringComparison.OrdinalIgnoreCase) ||
                         dirName.Equals("node_modules", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals(".git", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals(".gemini", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals(".agents", StringComparison.OrdinalIgnoreCase) ||
                         dirName.Equals("appdata", StringComparison.OrdinalIgnoreCase) ||
+                        dirName.Equals("ffmpeg", StringComparison.OrdinalIgnoreCase) ||
+                        dirName.Equals("lib", StringComparison.OrdinalIgnoreCase) ||
+                        dirName.Equals("wwwroot", StringComparison.OrdinalIgnoreCase) ||
                         dirName.Equals("AppHost", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("CameraStreamer", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("Chat", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("Map", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("Markdown", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("Material.Web", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("QuickGrid", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("ServiceDefaults", StringComparison.OrdinalIgnoreCase) ||
-                        dirName.Equals("Smart.Web", StringComparison.OrdinalIgnoreCase))
+                        dirName.Equals("ServiceDefaults", StringComparison.OrdinalIgnoreCase))
                     {
                         continue;
                     }
