@@ -1664,4 +1664,43 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Barchasi</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Buyurtmalar</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Buyurtma</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Yangi</value>
+  </data>
+  <data name="Kiosk_Reset" xml:space="preserve">
+    <value>Tozalash</value>
+  </data>
+  <data name="Kiosk_ResetFilters" xml:space="preserve">
+    <value>Filtrlarni tozalash</value>
+  </data>
+  <data name="Kiosk_EmptyTitle" xml:space="preserve">
+    <value>Hech narsa topilmadi</value>
+  </data>
+  <data name="Kiosk_EmptyDesc" xml:space="preserve">
+    <value>Qidiruv so'rovini o'zgartiring yoki filtrlarni tozalang</value>
+  </data>
+  <data name="Kiosk_UniversalKiosk" xml:space="preserve">
+    <value>Universal AI Kiosk</value>
+  </data>
+  <data name="Kiosk_Trial" xml:space="preserve">
+    <value>Sinov ({0} kun)</value>
+  </data>
+  <data name="Kiosk_ProTier" xml:space="preserve">
+    <value>PRO Reklamasiz</value>
+  </data>
+  <data name="Kiosk_StandardTier" xml:space="preserve">
+    <value>Tarif 5$/oy</value>
+  </data>
+  <data name="Search_Placeholder" xml:space="preserve">
+    <value>Mahsulotlarni qidirish...</value>
+  </data>
 </root>

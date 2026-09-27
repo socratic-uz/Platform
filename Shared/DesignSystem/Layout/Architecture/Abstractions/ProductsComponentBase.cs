@@ -42,6 +42,13 @@ namespace Shared.Pages.ProductPages
             StateHasChanged();
         }
 
+        protected string T(string key, string fallback)
+        {
+            if (L == null) return fallback;
+            var loc = L[key];
+            return (loc == null || loc.ResourceNotFound || string.IsNullOrWhiteSpace(loc.Value) || loc.Value == key) ? fallback : loc.Value;
+        }
+
         [SupplyParameterFromQuery] public string OrganizationId { get; set; } = default!;
         [SupplyParameterFromQuery] public string? PlaceId { get; set; }
         [SupplyParameterFromQuery] public string? SearchText { get; set; }

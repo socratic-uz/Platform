@@ -1664,4 +1664,43 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Kiosk_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Kiosk_ResetFilters" xml:space="preserve">
+    <value>Reset filters</value>
+  </data>
+  <data name="Kiosk_EmptyTitle" xml:space="preserve">
+    <value>Nothing found</value>
+  </data>
+  <data name="Kiosk_EmptyDesc" xml:space="preserve">
+    <value>Try changing your search query or reset categories</value>
+  </data>
+  <data name="Kiosk_UniversalKiosk" xml:space="preserve">
+    <value>Universal AI Kiosk</value>
+  </data>
+  <data name="Kiosk_Trial" xml:space="preserve">
+    <value>Trial ({0} d.)</value>
+  </data>
+  <data name="Kiosk_ProTier" xml:space="preserve">
+    <value>PRO Ad-free</value>
+  </data>
+  <data name="Kiosk_StandardTier" xml:space="preserve">
+    <value>Plan 5$/mo</value>
+  </data>
+  <data name="Search_Placeholder" xml:space="preserve">
+    <value>Search products...</value>
+  </data>
 </root>

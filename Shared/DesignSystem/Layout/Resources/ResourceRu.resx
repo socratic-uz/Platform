@@ -1664,4 +1664,43 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Заказ</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="Kiosk_Reset" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="Kiosk_ResetFilters" xml:space="preserve">
+    <value>Сбросить фильтры</value>
+  </data>
+  <data name="Kiosk_EmptyTitle" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="Kiosk_EmptyDesc" xml:space="preserve">
+    <value>Попробуйте изменить поисковый запрос или сбросить категории</value>
+  </data>
+  <data name="Kiosk_UniversalKiosk" xml:space="preserve">
+    <value>Универсальный AI-киоск</value>
+  </data>
+  <data name="Kiosk_Trial" xml:space="preserve">
+    <value>Триал ({0} дн.)</value>
+  </data>
+  <data name="Kiosk_ProTier" xml:space="preserve">
+    <value>PRO Без рекламы</value>
+  </data>
+  <data name="Kiosk_StandardTier" xml:space="preserve">
+    <value>Тариф 5$/мес</value>
+  </data>
+  <data name="Search_Placeholder" xml:space="preserve">
+    <value>Поиск товаров...</value>
+  </data>
 </root>
