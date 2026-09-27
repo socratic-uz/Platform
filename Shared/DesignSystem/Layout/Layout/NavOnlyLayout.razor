@@ -9,8 +9,19 @@
 <Color />
 
 <div class="socratic-grid-shell nav-only">
-	<Header>
-		<SectionOutlet SectionName="header" />
+	<Header ShowAvatar="true">
+		<StartContent>
+			<SectionOutlet SectionName="header-start" />
+		</StartContent>
+		<CenterContent>
+			<SectionOutlet SectionName="header-center" />
+		</CenterContent>
+		<EndContent>
+			<SectionOutlet SectionName="header-end" />
+		</EndContent>
+		<ChildContent>
+			<SectionOutlet SectionName="header" />
+		</ChildContent>
 	</Header>
 
 	<Nav>

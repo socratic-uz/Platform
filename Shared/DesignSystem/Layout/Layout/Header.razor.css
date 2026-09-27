@@ -25,11 +25,32 @@ header.socratic-app-header.header-sticky {
 
 .header-grid-layout {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(min-content, max-content) minmax(0, 1fr) minmax(min-content, max-content);
     align-items: center;
     gap: 1.25rem;
     width: 100%;
     min-width: 0;
+}
+
+/* START ZONE: Brand + Breadcrumbs/Tenant info */
+.header-start-zone {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: max-content;
+    justify-content: start;
+}
+
+::deep .header-context-divider {
+    color: var(--md-sys-color-outline-variant);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1;
+    user-select: none;
+    display: grid;
+    place-items: center;
 }
 
 /* Brand Zone */
@@ -48,9 +69,8 @@ header.socratic-app-header.header-sticky {
     gap: 0.65rem;
     text-decoration: none;
     color: var(--md-sys-color-on-surface);
-    min-height: 48px;
-    min-width: 48px;
-    border-radius: 14px;
+    min-height: 40px;
+    border-radius: 12px;
     padding: 0.25rem 0.5rem;
     transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -62,17 +82,17 @@ header.socratic-app-header.header-sticky {
 .header-brand-icon-box {
     display: grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     color: var(--md-sys-color-on-primary);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .header-brand-text {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
@@ -80,30 +100,31 @@ header.socratic-app-header.header-sticky {
     -webkit-text-fill-color: transparent;
 }
 
-/* Dynamic Slot */
-.header-dynamic-zone {
+/* CENTER ZONE: Search or Navigation */
+.header-center-zone {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
     width: 100%;
     min-width: 0;
 }
 
-.header-dynamic-zone:has(> search, > [data-blazor-component="Search"], > .search-container, > div:nth-child(2)) {
-    grid-template-columns: minmax(0, 1fr) auto;
-    justify-items: stretch;
+/* If legacy content is placed in center zone, allow it to stretch */
+.header-center-zone:has(> .kiosk-header-content) {
+    justify-content: stretch;
 }
 
-/* Actions Slot */
-.header-actions-zone {
+/* END ZONE: Actions + Language + Avatar */
+.header-end-zone {
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: auto;
     align-items: center;
-    gap: 0.75rem;
-    justify-self: end;
+    justify-content: end;
+    gap: 0.65rem;
+    min-width: max-content;
 }
+
 
 /* Landing Navigation Links in Header */
 ::deep .landing-header-nav {

@@ -5,48 +5,64 @@
 
 <header class="socratic-app-header @(Sticky ? "header-sticky" : "") @Class">
 	<div class="header-grid-layout">
-		@if (ShowBrand)
-		{
-			<div class="header-brand-zone">
-				<a href="/" class="header-brand-link" title="Socratic">
-					<span class="header-brand-icon-box">
-						<Icon Name="auto_awesome" />
-					</span>
-					<span class="header-brand-text">Socratic</span>
-				</a>
-			</div>
-		}
+		<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
+		<div class="header-start-zone">
+			@if (ShowBrand)
+			{
+				<div class="header-brand-zone">
+					<a href="/" class="header-brand-link" title="Socratic">
+						<span class="header-brand-icon-box">
+							<Icon Name="auto_awesome" />
+						</span>
+						<span class="header-brand-text">Socratic</span>
+					</a>
+				</div>
+			}
+			@if (StartContent != null)
+			{
+				@StartContent
+			}
+		</div>
 
-		<div class="header-dynamic-zone">
+		<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
+		<div class="header-center-zone">
+			@if (CenterContent != null)
+			{
+				@CenterContent
+			}
 			@if (ChildContent != null)
 			{
 				@ChildContent
 			}
-			else if (CenterContent != null)
-			{
-				@CenterContent
-			}
 		</div>
 
-		<div class="header-actions-zone">
+		<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
+		<div class="header-end-zone">
 			@if (EndContent != null)
 			{
 				@EndContent
 			}
-			else if (ShowDefaultActions)
+			@if (ShowDefaultActions)
 			{
 				<LanguageSelector Variant="pill" />
+			}
+			@if (ShowAvatar)
+			{
+				<Avatar />
 			}
 		</div>
 	</div>
 </header>
 
 @code {
-	[Parameter] public RenderFragment? ChildContent { get; set; }
+	[Parameter] public RenderFragment? StartContent { get; set; }
 	[Parameter] public RenderFragment? CenterContent { get; set; }
 	[Parameter] public RenderFragment? EndContent { get; set; }
+	[Parameter] public RenderFragment? ChildContent { get; set; }
 	[Parameter] public bool ShowBrand { get; set; } = true;
 	[Parameter] public bool ShowDefaultActions { get; set; } = true;
+	[Parameter] public bool ShowAvatar { get; set; } = false;
 	[Parameter] public bool Sticky { get; set; } = true;
 	[Parameter] public string Class { get; set; } = string.Empty;
 }
+
