@@ -2,6 +2,7 @@
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
 @using SharedKernel.Extensions
+@inject IStringLocalizer L
 
 <HeadContent>
 	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
@@ -12,38 +13,77 @@
 <div class="socratic-landing-shell">
 	<Header Class="socratic-landing-header">
 		<CenterContent>
-			<nav class="landing-header-nav" aria-label="Main Navigation">
+			<nav class="landing-header-nav" aria-label="@T("MainNavigation", "Главная навигация")">
 				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
 					<Icon Name="storefront" />
-					<span>Витрина</span>
+					<span>@T("Showroom", "Витрина")</span>
 				</a>
 				<a href="/commerce" class="landing-nav-link">
 					<Icon Name="rocket_launch" />
-					<span>28 UX-режимов</span>
+					<span>@T("UXModes", "28 UX-режимов")</span>
 				</a>
 				<a href="/docs" class="landing-nav-link">
 					<Icon Name="menu_book" />
-					<span>Документация</span>
+					<span>@T("Documentation", "Документация")</span>
 				</a>
 				<a href="/help" class="landing-nav-link">
 					<Icon Name="help_outline" />
-					<span>Справка</span>
+					<span>@T("Help", "Справка")</span>
 				</a>
 				<a href="/about" class="landing-nav-link">
 					<Icon Name="info" />
-					<span>О платформе</span>
+					<span>@T("About", "О платформе")</span>
 				</a>
 			</nav>
 		</CenterContent>
 		<EndContent>
 			<div class="landing-header-actions">
+				<LanguageSelector Variant="pill" />
 				<a href="/signin" class="landing-auth-btn">
 					<Icon Name="login" />
-					<span>Socratic ID</span>
+					<span>@T("SocraticID", "Socratic ID")</span>
 				</a>
+				<button type="button"
+						class="landing-mobile-menu-toggle"
+						@onclick="ToggleMobileMenu"
+						aria-label="@(isMobileMenuOpen ? "Закрыть меню" : "Открыть меню")"
+						aria-expanded="@(isMobileMenuOpen ? "true" : "false")">
+					<Icon Name="@(isMobileMenuOpen ? "close" : "menu")" />
+				</button>
 			</div>
 		</EndContent>
 	</Header>
+
+	@if (isMobileMenuOpen)
+	{
+		<div class="landing-mobile-menu-backdrop" @onclick="CloseMobileMenu"></div>
+		<nav class="landing-mobile-menu-drawer" aria-label="Mobile Navigation">
+			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="mobile-nav-item" @onclick="CloseMobileMenu">
+				<Icon Name="storefront" />
+				<span>@T("Showroom", "Витрина")</span>
+			</a>
+			<a href="/commerce" class="mobile-nav-item" @onclick="CloseMobileMenu">
+				<Icon Name="rocket_launch" />
+				<span>@T("UXModes", "28 UX-режимов")</span>
+			</a>
+			<a href="/docs" class="mobile-nav-item" @onclick="CloseMobileMenu">
+				<Icon Name="menu_book" />
+				<span>@T("Documentation", "Документация")</span>
+			</a>
+			<a href="/help" class="mobile-nav-item" @onclick="CloseMobileMenu">
+				<Icon Name="help_outline" />
+				<span>@T("Help", "Справка")</span>
+			</a>
+			<a href="/about" class="mobile-nav-item" @onclick="CloseMobileMenu">
+				<Icon Name="info" />
+				<span>@T("About", "О платформе")</span>
+			</a>
+			<div class="mobile-nav-divider"></div>
+			<div class="mobile-nav-footer">
+				<LanguageSelector Variant="inline" />
+			</div>
+		</nav>
+	}
 
 	<main class="socratic-landing-main">
 		<ErrorBoundary @ref="_errorBoundary">
@@ -52,9 +92,9 @@
 			</ChildContent>
 			<ErrorContent Context="ex">
 				<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при загрузке</h3>
+					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@T("ErrorLoading", "Произошла ошибка при загрузке")</h3>
 					<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-					<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
+					<Button Variant="ButtonVariant.Filled" OnClick="Recover">@T("TryAgain", "Попробовать снова")</Button>
 				</div>
 			</ErrorContent>
 		</ErrorBoundary>
@@ -65,5 +105,27 @@
 
 @code {
 	private ErrorBoundary? _errorBoundary;
+	private bool isMobileMenuOpen = false;
+
+	private void ToggleMobileMenu() => isMobileMenuOpen = !isMobileMenuOpen;
+	private void CloseMobileMenu() => isMobileMenuOpen = false;
 	private void Recover() => _errorBoundary?.Recover();
+
+	private string T(string key, string fallback)
+	{
+		if (L == null) return fallback;
+		try
+		{
+			var localized = L[key];
+			if (localized == null || localized.ResourceNotFound || string.IsNullOrWhiteSpace(localized.Value) || localized.Value == key)
+			{
+				return fallback;
+			}
+			return localized.Value;
+		}
+		catch
+		{
+			return fallback;
+		}
+	}
 }

@@ -191,13 +191,13 @@ footer.socratic-global-footer {
 /* Sub-Footer Bottom Bar */
 .footer-bottom-bar {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     gap: 1.5rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-copyright {
@@ -206,9 +206,16 @@ footer.socratic-global-footer {
     opacity: 0.8;
 }
 
+.footer-lang-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-trust-info {
     display: grid;
     align-items: center;
+    justify-content: end;
 }
 
 .trust-badge {
@@ -230,10 +237,17 @@ footer.socratic-global-footer {
 }
 
 /* Responsive Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .footer-primary-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 2.5rem 1.5rem;
+        grid-template-columns: minmax(260px, 1.35fr) repeat(4, minmax(140px, 1fr));
+        gap: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+    .footer-primary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 2rem;
     }
 
     .footer-brand-col {
@@ -247,6 +261,12 @@ footer.socratic-global-footer {
         padding: 2.5rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 16px)) 1.25rem;
     }
 
+    /* When inside landing layout or no-nav, avoid the tall 5.5rem bottom nav buffer */
+    :global(.socratic-landing-shell) footer.socratic-global-footer,
+    :global(.nav-only) footer.socratic-global-footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom, 16px));
+    }
+
     .footer-primary-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -254,9 +274,13 @@ footer.socratic-global-footer {
 
     .footer-bottom-bar {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 1.25rem;
         text-align: center;
         justify-items: center;
+    }
+
+    .footer-trust-info {
+        justify-content: center;
     }
 }
 

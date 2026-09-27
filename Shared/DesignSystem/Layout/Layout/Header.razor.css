@@ -83,11 +83,17 @@ header.socratic-app-header.header-sticky {
 /* Dynamic Slot */
 .header-dynamic-zone {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
     gap: 1rem;
     width: 100%;
     min-width: 0;
+}
+
+.header-dynamic-zone:has(> search, > [data-blazor-component="Search"], > .search-container, > div:nth-child(2)) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    justify-items: stretch;
 }
 
 /* Actions Slot */
@@ -164,9 +170,92 @@ header.socratic-app-header.header-sticky {
     box-shadow: 0 6px 20px rgb(from var(--md-sys-color-primary) r g b / 0.35);
 }
 
+::deep .landing-mobile-menu-toggle {
+    display: none;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.6);
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+::deep .landing-mobile-menu-backdrop {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: 80;
+}
+
+::deep .landing-mobile-menu-drawer {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--md-sys-color-surface-container-high);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.5rem;
+    z-index: 90;
+    box-shadow: 0 16px 32px var(--md-sys-color-shadow);
+    animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes slideDownDrawer {
+    from { transform: translateY(-16px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+::deep .mobile-nav-item {
+    display: inline-grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 14px;
+    color: var(--md-sys-color-on-surface);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    min-height: 48px;
+    box-sizing: border-box;
+    transition: background 0.15s ease;
+}
+
+::deep .mobile-nav-item:hover,
+::deep .mobile-nav-item:active {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+    color: var(--md-sys-color-primary);
+}
+
+::deep .mobile-nav-divider {
+    height: 1px;
+    background: var(--md-sys-color-outline-variant);
+    margin: 0.5rem 0;
+}
+
+::deep .mobile-nav-footer {
+    display: grid;
+    place-items: center;
+    padding-top: 0.25rem;
+}
+
 @media screen and (max-width: 960px) {
     ::deep .landing-header-nav {
         display: none;
+    }
+
+    ::deep .landing-mobile-menu-toggle {
+        display: grid;
     }
 }
 
@@ -174,6 +263,11 @@ header.socratic-app-header.header-sticky {
     header.socratic-app-header {
         padding: 0.4rem 0.75rem;
         min-height: 56px;
+    }
+
+    ::deep .landing-mobile-menu-backdrop,
+    ::deep .landing-mobile-menu-drawer {
+        top: 56px;
     }
 
     .header-grid-layout {

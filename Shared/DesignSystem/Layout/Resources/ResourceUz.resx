@@ -1536,4 +1536,132 @@
   <data name="Common_LangEn" xml:space="preserve">
     <value>ING</value>
   </data>
+  <!-- Layout, Header & Global Footer Translations -->
+  <data name="Footer_Tagline" xml:space="preserve">
+    <value>Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.</value>
+  </data>
+  <data name="Footer_Status" xml:space="preserve">
+    <value>Barcha tizimlar barqaror ishlamoqda</value>
+  </data>
+  <data name="Footer_Col_Catalog" xml:space="preserve">
+    <value>Katalog &amp; Kiosklar</value>
+  </data>
+  <data name="Footer_Col_Management" xml:space="preserve">
+    <value>Boshqaruv &amp; POS</value>
+  </data>
+  <data name="Footer_Col_Resources" xml:space="preserve">
+    <value>Resurslar &amp; Ma'lumot</value>
+  </data>
+  <data name="Footer_Col_Community" xml:space="preserve">
+    <value>Qo'llab-quvvatlash &amp; Aloqa</value>
+  </data>
+  <data name="Showroom" xml:space="preserve">
+    <value>Tovarlar vitrinasi</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Tariflar va ulanish</value>
+  </data>
+  <data name="UXModes" xml:space="preserve">
+    <value>28 UX-rejimi</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Interaktiv xarita</value>
+  </data>
+  <data name="QRDesigner" xml:space="preserve">
+    <value>QR Konstruktor</value>
+  </data>
+  <data name="SeatDesigner" xml:space="preserve">
+    <value>Zallar sxemasi</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Hujjatlar</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>Barcha huquqlar himoyalangan.</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Ma'lumotlar</value>
+  </data>
+  <data name="SocraticID" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="MainNavigation" xml:space="preserve">
+    <value>Asosiy navigatsiya</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Qaytadan urinib ko'rish</value>
+  </data>
+  <data name="ErrorLoading" xml:space="preserve">
+    <value>Yuklashda xatolik yuz berdi</value>
+  </data>
+  <data name="ErrorRendering" xml:space="preserve">
+    <value>Komponentni ko'rsatishda xatolik yuz berdi</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Diqqat</value>
+  </data>
+  <!-- Identity & Auth (SignIn) Translations -->
+  <data name="SignIn_Title" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="SignIn_Subtitle" xml:space="preserve">
+    <value>Yagona kirish va biometriya tizimi</value>
+  </data>
+  <data name="SignIn_PrimaryAuth" xml:space="preserve">
+    <value>Birlamchi kirish</value>
+  </data>
+  <data name="SignIn_QuickAccess" xml:space="preserve">
+    <value>Tezkor kirish</value>
+  </data>
+  <data name="SignIn_PhoneLabel" xml:space="preserve">
+    <value>Telefon raqami</value>
+  </data>
+  <data name="SignIn_ViaTelegram" xml:space="preserve">
+    <value>Telegram orqali</value>
+  </data>
+  <data name="SignIn_ViaSms" xml:space="preserve">
+    <value>SMS orqali</value>
+  </data>
+  <data name="SignIn_OrVerifiedTelegram" xml:space="preserve">
+    <value>yoki tasdiqlangan raqam orqali</value>
+  </data>
+  <data name="SignIn_WithTelegram" xml:space="preserve">
+    <value>Telegram orqali kirish</value>
+  </data>
+  <data name="SignIn_OtpLabel" xml:space="preserve">
+    <value>Xabardagi 6 xonali kod</value>
+  </data>
+  <data name="SignIn_ResendCountdown" xml:space="preserve">
+    <value>Kodni qayta yuborish:</value>
+  </data>
+  <data name="SignIn_ResendBtn" xml:space="preserve">
+    <value>Kodni qayta yuborish</value>
+  </data>
+  <data name="SignIn_SigningIn" xml:space="preserve">
+    <value>Kirilmoqda...</value>
+  </data>
+  <data name="SignIn_ConfirmAndSignIn" xml:space="preserve">
+    <value>Tasdiqlash va kirish</value>
+  </data>
+  <data name="SignIn_StartFaceCamera" xml:space="preserve">
+    <value>Kirish uchun kamerani yoqish</value>
+  </data>
+  <data name="SignIn_StopFaceCamera" xml:space="preserve">
+    <value>Kamerani to'xtatish</value>
+  </data>
+  <data name="SignIn_WithPasskey" xml:space="preserve">
+    <value>Passkey (Touch ID / Face ID) orqali kirish</value>
+  </data>
+  <data name="SignIn_OrConnectedAccounts" xml:space="preserve">
+    <value>yoki ulangan xizmatlar</value>
+  </data>
+  <data name="SignIn_WithGoogle" xml:space="preserve">
+    <value>Google orqali kirish</value>
+  </data>
+  <data name="SignIn_FastAccessNotice" xml:space="preserve">
+    <value>Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.</value>
+  </data>
 </root>

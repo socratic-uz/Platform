@@ -21,54 +21,54 @@
 					<span class="footer-brand-title">Socratic</span>
 				</a>
 				<p class="footer-brand-tagline">
-					@(L?["Footer_Tagline"] ?? "Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.")
+					@T("Footer_Tagline", "Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.")
 				</p>
 				<div class="footer-system-status">
 					<span class="status-pulse-dot" aria-hidden="true"></span>
-					<span class="status-text">@(L?["Footer_Status"] ?? "Все системы работают стабильно")</span>
+					<span class="status-text">@T("Footer_Status", "Все системы работают стабильно")</span>
 				</div>
 			</div>
 
 			<!-- Nav Column 1: Каталог & Киоски -->
 			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@(L?["Footer_Col_Catalog"] ?? "Каталог & Киоски")</h4>
+				<h4 class="footer-col-title">@T("Footer_Col_Catalog", "Каталог & Киоски")</h4>
 				<ul class="footer-links-list">
-					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name="storefront" /> <span>@(L?["Showroom"] ?? "Витрина товаров")</span></a></li>
-					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name="business_center" /> <span>@(L?["Plans"] ?? "Тарифы и подключение")</span></a></li>
-					<li><a href="/home"><Icon Name="domain" /> <span>@(L?["Places"] ?? "Каталог заведений")</span></a></li>
-					<li><a href="/commerce"><Icon Name="rocket_launch" /> <span>@(L?["UXModes"] ?? "28 UX-режимов")</span></a></li>
-					<li><a href="/map"><Icon Name="map" /> <span>@(L?["Map"] ?? "Интерактивная карта")</span></a></li>
+					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name="storefront" /> <span>@T("Showroom", "Витрина товаров")</span></a></li>
+					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name="business_center" /> <span>@T("Plans", "Тарифы и подключение")</span></a></li>
+					<li><a href="/home"><Icon Name="domain" /> <span>@T("Places", "Каталог заведений")</span></a></li>
+					<li><a href="/commerce"><Icon Name="rocket_launch" /> <span>@T("UXModes", "28 UX-режимов")</span></a></li>
+					<li><a href="/map"><Icon Name="map" /> <span>@T("Map", "Интерактивная карта")</span></a></li>
 				</ul>
 			</div>
 
 			<!-- Nav Column 2: Управление & POS -->
 			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@(L?["Footer_Col_Management"] ?? "Управление & POS")</h4>
+				<h4 class="footer-col-title">@T("Footer_Col_Management", "Управление & POS")</h4>
 				<ul class="footer-links-list">
-					<li><a href="/orders"><Icon Name="receipt_long" /> <span>@(L?["Orders"] ?? "Заказы")</span></a></li>
-					<li><a href="/payment"><Icon Name="payments" /> <span>@(L?["Payment"] ?? "Оплата и финансы")</span></a></li>
-					<li><a href="/qr-designer"><Icon Name="qr_code_2" /> <span>@(L?["QRDesigner"] ?? "QR Конструктор")</span></a></li>
-					<li><a href="/seat-designer"><Icon Name="event_seat" /> <span>@(L?["SeatDesigner"] ?? "Схема залов")</span></a></li>
-					<li><a href="/terminal"><Icon Name="point_of_sale" /> <span>@(L?["Terminal"] ?? "POS Терминал")</span></a></li>
+					<li><a href="/orders"><Icon Name="receipt_long" /> <span>@T("Orders", "Заказы")</span></a></li>
+					<li><a href="/payment"><Icon Name="payments" /> <span>@T("Payment", "Оплата и финансы")</span></a></li>
+					<li><a href="/qr-designer"><Icon Name="qr_code_2" /> <span>@T("QRDesigner", "QR Конструктор")</span></a></li>
+					<li><a href="/seat-designer"><Icon Name="event_seat" /> <span>@T("SeatDesigner", "Схема залов")</span></a></li>
+					<li><a href="/terminal"><Icon Name="point_of_sale" /> <span>@T("Terminal", "POS Терминал")</span></a></li>
 				</ul>
 			</div>
 
 			<!-- Nav Column 3: Ресурсы & Инфо -->
 			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@(L?["Footer_Col_Resources"] ?? "Ресурсы & Инфо")</h4>
+				<h4 class="footer-col-title">@T("Footer_Col_Resources", "Ресурсы & Инфо")</h4>
 				<ul class="footer-links-list">
-					<li><a href="/docs"><Icon Name="menu_book" /> <span>@(L?["Documentation"] ?? "Документация")</span></a></li>
-					<li><a href="/help"><Icon Name="help_outline" /> <span>@(L?["Help"] ?? "Справка и FAQ")</span></a></li>
-					<li><a href="/about"><Icon Name="info" /> <span>@(L?["About"] ?? "О платформе")</span></a></li>
-					<li><a href="/signin"><Icon Name="login" /> <span>Socratic ID</span></a></li>
+					<li><a href="/docs"><Icon Name="menu_book" /> <span>@T("Documentation", "Документация")</span></a></li>
+					<li><a href="/help"><Icon Name="help_outline" /> <span>@T("Help", "Справка и FAQ")</span></a></li>
+					<li><a href="/about"><Icon Name="info" /> <span>@T("About", "О платформе")</span></a></li>
+					<li><a href="/signin"><Icon Name="login" /> <span>@T("SocraticID", "Socratic ID")</span></a></li>
 				</ul>
 			</div>
 
 			<!-- Nav Column 4: Сообщество & Поддержка -->
 			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@(L?["Footer_Col_Community"] ?? "Поддержка & Связь")</h4>
+				<h4 class="footer-col-title">@T("Footer_Col_Community", "Поддержка & Связь")</h4>
 				<ul class="footer-links-list">
-					<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name="support_agent" /> <span>@(L?["Support"] ?? "Служба заботы")</span></a></li>
+					<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name="support_agent" /> <span>@T("Support", "Служба заботы")</span></a></li>
 					<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name="send" /> <span>Telegram Bot</span></a></li>
 					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name="camera_alt" /> <span>Instagram</span></a></li>
 				</ul>
@@ -78,7 +78,10 @@
 		<!-- Sub-Footer Bottom Bar -->
 		<div class="footer-bottom-bar">
 			<div class="footer-copyright">
-				&copy; @DateTime.Now.Year Socratic. @(L?["AllRightsReserved"] ?? "Все права защищены.")
+				&copy; @DateTime.Now.Year Socratic. @T("AllRightsReserved", "Все права защищены.")
+			</div>
+			<div class="footer-lang-container">
+				<LanguageSelector Variant="inline" />
 			</div>
 			<div class="footer-trust-info">
 				<span class="trust-badge">
@@ -93,4 +96,22 @@
 @code {
 	[Parameter] public RenderFragment? ChildContent { get; set; }
 	[Parameter] public string Class { get; set; } = string.Empty;
+
+	private string T(string key, string fallback)
+	{
+		if (L == null) return fallback;
+		try
+		{
+			var localized = L[key];
+			if (localized == null || localized.ResourceNotFound || string.IsNullOrWhiteSpace(localized.Value) || localized.Value == key)
+			{
+				return fallback;
+			}
+			return localized.Value;
+		}
+		catch
+		{
+			return fallback;
+		}
+	}
 }

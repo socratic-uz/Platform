@@ -1536,4 +1536,132 @@
   <data name="Common_LangEn" xml:space="preserve">
     <value>ENG</value>
   </data>
+  <!-- Layout, Header & Global Footer Translations -->
+  <data name="Footer_Tagline" xml:space="preserve">
+    <value>Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.</value>
+  </data>
+  <data name="Footer_Status" xml:space="preserve">
+    <value>All systems operational</value>
+  </data>
+  <data name="Footer_Col_Catalog" xml:space="preserve">
+    <value>Catalog &amp; Kiosks</value>
+  </data>
+  <data name="Footer_Col_Management" xml:space="preserve">
+    <value>Management &amp; POS</value>
+  </data>
+  <data name="Footer_Col_Resources" xml:space="preserve">
+    <value>Resources &amp; Info</value>
+  </data>
+  <data name="Footer_Col_Community" xml:space="preserve">
+    <value>Support &amp; Community</value>
+  </data>
+  <data name="Showroom" xml:space="preserve">
+    <value>Product Showroom</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Plans &amp; Connect</value>
+  </data>
+  <data name="UXModes" xml:space="preserve">
+    <value>28 UX Modes</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Interactive Map</value>
+  </data>
+  <data name="QRDesigner" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="SeatDesigner" xml:space="preserve">
+    <value>Seat Designer</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="SocraticID" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="MainNavigation" xml:space="preserve">
+    <value>Main Navigation</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="ErrorLoading" xml:space="preserve">
+    <value>An error occurred while loading</value>
+  </data>
+  <data name="ErrorRendering" xml:space="preserve">
+    <value>An error occurred while rendering component</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Notice</value>
+  </data>
+  <!-- Identity & Auth (SignIn) Translations -->
+  <data name="SignIn_Title" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="SignIn_Subtitle" xml:space="preserve">
+    <value>Unified Authentication &amp; Biometrics</value>
+  </data>
+  <data name="SignIn_PrimaryAuth" xml:space="preserve">
+    <value>Primary Auth</value>
+  </data>
+  <data name="SignIn_QuickAccess" xml:space="preserve">
+    <value>Quick Access</value>
+  </data>
+  <data name="SignIn_PhoneLabel" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="SignIn_ViaTelegram" xml:space="preserve">
+    <value>Via Telegram</value>
+  </data>
+  <data name="SignIn_ViaSms" xml:space="preserve">
+    <value>Via SMS</value>
+  </data>
+  <data name="SignIn_OrVerifiedTelegram" xml:space="preserve">
+    <value>or verified telegram phone</value>
+  </data>
+  <data name="SignIn_WithTelegram" xml:space="preserve">
+    <value>Sign in with Telegram</value>
+  </data>
+  <data name="SignIn_OtpLabel" xml:space="preserve">
+    <value>6-Digit Verification Code</value>
+  </data>
+  <data name="SignIn_ResendCountdown" xml:space="preserve">
+    <value>Resend code in:</value>
+  </data>
+  <data name="SignIn_ResendBtn" xml:space="preserve">
+    <value>Resend verification code</value>
+  </data>
+  <data name="SignIn_SigningIn" xml:space="preserve">
+    <value>Signing In...</value>
+  </data>
+  <data name="SignIn_ConfirmAndSignIn" xml:space="preserve">
+    <value>Confirm and Sign In</value>
+  </data>
+  <data name="SignIn_StartFaceCamera" xml:space="preserve">
+    <value>Start Face ID Camera</value>
+  </data>
+  <data name="SignIn_StopFaceCamera" xml:space="preserve">
+    <value>Stop Camera</value>
+  </data>
+  <data name="SignIn_WithPasskey" xml:space="preserve">
+    <value>Sign in with Passkey (Touch ID / Face ID)</value>
+  </data>
+  <data name="SignIn_OrConnectedAccounts" xml:space="preserve">
+    <value>or connected accounts</value>
+  </data>
+  <data name="SignIn_WithGoogle" xml:space="preserve">
+    <value>Sign in with Google</value>
+  </data>
+  <data name="SignIn_FastAccessNotice" xml:space="preserve">
+    <value>Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.</value>
+  </data>
 </root>

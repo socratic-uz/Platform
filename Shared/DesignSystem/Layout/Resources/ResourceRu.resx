@@ -1536,4 +1536,132 @@
   <data name="Common_LangEn" xml:space="preserve">
     <value>ENG</value>
   </data>
+  <!-- Layout, Header & Global Footer Translations -->
+  <data name="Footer_Tagline" xml:space="preserve">
+    <value>Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.</value>
+  </data>
+  <data name="Footer_Status" xml:space="preserve">
+    <value>Все системы работают стабильно</value>
+  </data>
+  <data name="Footer_Col_Catalog" xml:space="preserve">
+    <value>Каталог &amp; Киоски</value>
+  </data>
+  <data name="Footer_Col_Management" xml:space="preserve">
+    <value>Управление &amp; POS</value>
+  </data>
+  <data name="Footer_Col_Resources" xml:space="preserve">
+    <value>Ресурсы &amp; Инфо</value>
+  </data>
+  <data name="Footer_Col_Community" xml:space="preserve">
+    <value>Поддержка &amp; Связь</value>
+  </data>
+  <data name="Showroom" xml:space="preserve">
+    <value>Витрина товаров</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Тарифы и подключение</value>
+  </data>
+  <data name="UXModes" xml:space="preserve">
+    <value>28 UX-режимов</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Интерактивная карта</value>
+  </data>
+  <data name="QRDesigner" xml:space="preserve">
+    <value>QR Конструктор</value>
+  </data>
+  <data name="SeatDesigner" xml:space="preserve">
+    <value>Схема залов</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Документация</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>Все права защищены.</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Чат</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Данные</value>
+  </data>
+  <data name="SocraticID" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="MainNavigation" xml:space="preserve">
+    <value>Главная навигация</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Попробовать снова</value>
+  </data>
+  <data name="ErrorLoading" xml:space="preserve">
+    <value>Произошла ошибка при загрузке</value>
+  </data>
+  <data name="ErrorRendering" xml:space="preserve">
+    <value>Произошла ошибка при отображении компонента</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <!-- Identity & Auth (SignIn) Translations -->
+  <data name="SignIn_Title" xml:space="preserve">
+    <value>Socratic ID</value>
+  </data>
+  <data name="SignIn_Subtitle" xml:space="preserve">
+    <value>Единая система входа и биометрии</value>
+  </data>
+  <data name="SignIn_PrimaryAuth" xml:space="preserve">
+    <value>Первичный вход</value>
+  </data>
+  <data name="SignIn_QuickAccess" xml:space="preserve">
+    <value>Быстрый вход</value>
+  </data>
+  <data name="SignIn_PhoneLabel" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="SignIn_ViaTelegram" xml:space="preserve">
+    <value>В Telegram</value>
+  </data>
+  <data name="SignIn_ViaSms" xml:space="preserve">
+    <value>По SMS</value>
+  </data>
+  <data name="SignIn_OrVerifiedTelegram" xml:space="preserve">
+    <value>или через подтверждённый номер</value>
+  </data>
+  <data name="SignIn_WithTelegram" xml:space="preserve">
+    <value>Войти через Telegram</value>
+  </data>
+  <data name="SignIn_OtpLabel" xml:space="preserve">
+    <value>6-значный код из сообщения</value>
+  </data>
+  <data name="SignIn_ResendCountdown" xml:space="preserve">
+    <value>Отправить код повторно через:</value>
+  </data>
+  <data name="SignIn_ResendBtn" xml:space="preserve">
+    <value>Отправить код повторно</value>
+  </data>
+  <data name="SignIn_SigningIn" xml:space="preserve">
+    <value>Вход...</value>
+  </data>
+  <data name="SignIn_ConfirmAndSignIn" xml:space="preserve">
+    <value>Подтвердить и войти</value>
+  </data>
+  <data name="SignIn_StartFaceCamera" xml:space="preserve">
+    <value>Включить камеру для входа</value>
+  </data>
+  <data name="SignIn_StopFaceCamera" xml:space="preserve">
+    <value>Остановить камеру</value>
+  </data>
+  <data name="SignIn_WithPasskey" xml:space="preserve">
+    <value>Войти с Passkey (Touch ID / Face ID)</value>
+  </data>
+  <data name="SignIn_OrConnectedAccounts" xml:space="preserve">
+    <value>или привязанные сервисы</value>
+  </data>
+  <data name="SignIn_WithGoogle" xml:space="preserve">
+    <value>Войти с Google</value>
+  </data>
+  <data name="SignIn_FastAccessNotice" xml:space="preserve">
+    <value>Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.</value>
+  </data>
 </root>

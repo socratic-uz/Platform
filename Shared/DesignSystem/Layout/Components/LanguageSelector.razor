@@ -1,0 +1,132 @@
+@using SharedKernel.ValueObjects
+@using Shared.Services
+@inject ISettingsManager Settings
+@inject NavigationManager Navigation
+@inject IStringLocalizer L
+
+<div class="socratic-lang-selector @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
+	@if (Variant == "inline")
+	{
+		<div class="lang-inline-grid" role="group" aria-label="@(L?["Language"] ?? "Язык")">
+			<button type="button"
+					class="lang-chip-btn @(currentLanguage == Language.Uz ? "lang-chip--active" : "")"
+					@onclick="() => SelectLanguage(Language.Uz)"
+					aria-pressed="@(currentLanguage == Language.Uz ? "true" : "false")"
+					title="O'zbekcha">
+				<span>UZ</span>
+			</button>
+			<button type="button"
+					class="lang-chip-btn @(currentLanguage == Language.Ru ? "lang-chip--active" : "")"
+					@onclick="() => SelectLanguage(Language.Ru)"
+					aria-pressed="@(currentLanguage == Language.Ru ? "true" : "false")"
+					title="Русский">
+				<span>RU</span>
+			</button>
+			<button type="button"
+					class="lang-chip-btn @(currentLanguage == Language.En ? "lang-chip--active" : "")"
+					@onclick="() => SelectLanguage(Language.En)"
+					aria-pressed="@(currentLanguage == Language.En ? "true" : "false")"
+					title="English">
+				<span>EN</span>
+			</button>
+		</div>
+	}
+	else
+	{
+		<div class="lang-dropdown-wrapper">
+			<button type="button"
+					class="lang-toggle-btn"
+					@onclick="ToggleDropdown"
+					aria-expanded="@(isOpen ? "true" : "false")"
+					aria-label="@(L?["Language"] ?? "Выбор языка")">
+				<Icon Name="language" />
+				<span class="lang-current-label">@GetLangShortLabel(currentLanguage)</span>
+				<Icon Name="@(isOpen ? "arrow_drop_up" : "arrow_drop_down")" />
+			</button>
+
+			@if (isOpen)
+			{
+				<div class="lang-menu-backdrop" @onclick="CloseDropdown"></div>
+				<div class="lang-dropdown-menu" role="menu">
+					<button type="button"
+							class="lang-menu-item @(currentLanguage == Language.Uz ? "lang-menu-item--active" : "")"
+							role="menuitem"
+							@onclick="() => SelectLanguage(Language.Uz)">
+						<span class="lang-flag">🇺🇿</span>
+						<span class="lang-name">O'zbekcha</span>
+						@if (currentLanguage == Language.Uz)
+						{
+							<Icon Name="check" />
+						}
+					</button>
+					<button type="button"
+							class="lang-menu-item @(currentLanguage == Language.Ru ? "lang-menu-item--active" : "")"
+							role="menuitem"
+							@onclick="() => SelectLanguage(Language.Ru)">
+						<span class="lang-flag">🇷🇺</span>
+						<span class="lang-name">Русский</span>
+						@if (currentLanguage == Language.Ru)
+						{
+							<Icon Name="check" />
+						}
+					</button>
+					<button type="button"
+							class="lang-menu-item @(currentLanguage == Language.En ? "lang-menu-item--active" : "")"
+							role="menuitem"
+							@onclick="() => SelectLanguage(Language.En)">
+						<span class="lang-flag">🇬🇧</span>
+						<span class="lang-name">English</span>
+						@if (currentLanguage == Language.En)
+						{
+							<Icon Name="check" />
+						}
+					</button>
+				</div>
+			}
+		</div>
+	}
+</div>
+
+@code {
+	[Parameter] public string Variant { get; set; } = "pill";
+	[Parameter] public string Class { get; set; } = string.Empty;
+
+	private Language currentLanguage = Language.Ru;
+	private bool isOpen = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		try
+		{
+			currentLanguage = await Settings.GetLanguageAsync();
+		}
+		catch
+		{
+			currentLanguage = Language.Ru;
+		}
+	}
+
+	private void ToggleDropdown() => isOpen = !isOpen;
+	private void CloseDropdown() => isOpen = false;
+
+	private async Task SelectLanguage(Language lang)
+	{
+		isOpen = false;
+		if (currentLanguage == lang) return;
+		currentLanguage = lang;
+		try
+		{
+			await Settings.SetLanguageAsync(lang);
+		}
+		catch { }
+		Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+	}
+
+	private static string GetLangShortLabel(Language lang) => lang switch
+	{
+		Language.Uz => "UZ",
+		Language.Ru => "RU",
+		Language.En => "EN",
+		_ => "RU"
+	};
+}
