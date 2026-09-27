@@ -1,39 +1,202 @@
-header {
+header.socratic-app-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    color: var(--md-sys-color-on-surface);
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: 0.5rem 1.5rem;
+    min-height: 64px;
+    box-sizing: border-box;
+    z-index: 50;
+    position: relative;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+header.socratic-app-header.header-sticky {
+    position: sticky;
+    top: 0;
+}
+
+.header-grid-layout {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Brand Zone */
+.header-brand-zone {
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    min-width: max-content;
+}
+
+.header-brand-link {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+    min-height: 48px;
+    min-width: 48px;
+    border-radius: 14px;
+    padding: 0.25rem 0.5rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.header-brand-link:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+.header-brand-icon-box {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+    font-size: 20px;
+}
+
+.header-brand-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Dynamic Slot */
+.header-dynamic-zone {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 1rem;
-    grid-area: 1 / span 1 / 2 / -1;
-    align-self: stretch;
-    justify-self: stretch;
     width: 100%;
-    color: var(--md-sys-color-on-surface);
-    background: var(--md-sys-color-surface);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    padding: 0.75rem 1.5rem;
-    min-height: 64px;
     min-width: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    z-index: 10;
 }
 
-header:empty {
-    display: none;
+/* Actions Slot */
+.header-actions-zone {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
+}
+
+/* Landing Navigation Links in Header */
+::deep .landing-header-nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+}
+
+::deep .landing-nav-link {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+::deep .landing-nav-link:hover {
+    color: var(--md-sys-color-primary);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+::deep .landing-header-actions {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
+}
+
+::deep .landing-auth-btn {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 1.15rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    min-height: 48px;
+    box-shadow: 0 4px 14px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+::deep .landing-auth-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgb(from var(--md-sys-color-primary) r g b / 0.35);
+}
+
+@media screen and (max-width: 960px) {
+    ::deep .landing-header-nav {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    header {
-        grid-column: 1 / -1;
-        grid-row: auto;
-        height: auto;
+    header.socratic-app-header {
+        padding: 0.4rem 0.75rem;
         min-height: 56px;
-        width: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        padding: 0.5rem 0.75rem;
+    }
+
+    .header-grid-layout {
+        gap: 0.65rem;
+    }
+
+    .header-brand-text {
+        font-size: 1.1rem;
+    }
+
+    .header-brand-icon-box {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .header-dynamic-zone {
         gap: 0.5rem;
-        box-sizing: border-box;
+    }
+}
+
+@media all and (display-mode: fullscreen) {
+    header.socratic-app-header {
+        display: none;
     }
 }

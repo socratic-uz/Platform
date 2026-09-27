@@ -1,20 +1,67 @@
 @inherits LayoutComponentBase
+@using Domain.Enums
+@using Microsoft.AspNetCore.Components
+@using SharedKernel.Extensions
 
+<HeadContent>
+	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
+</HeadContent>
 <Color />
 <Blob />
 
-<ErrorBoundary @ref="_errorBoundary">
-	<ChildContent>
-		@Body
-	</ChildContent>
-	<ErrorContent Context="ex">
-		<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при загрузке</h3>
-			<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-			<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
-		</div>
-	</ErrorContent>
-</ErrorBoundary>
+<div class="socratic-landing-shell">
+	<Header Class="socratic-landing-header">
+		<CenterContent>
+			<nav class="landing-header-nav" aria-label="Main Navigation">
+				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
+					<Icon Name="storefront" />
+					<span>Витрина</span>
+				</a>
+				<a href="/commerce" class="landing-nav-link">
+					<Icon Name="rocket_launch" />
+					<span>28 UX-режимов</span>
+				</a>
+				<a href="/docs" class="landing-nav-link">
+					<Icon Name="menu_book" />
+					<span>Документация</span>
+				</a>
+				<a href="/help" class="landing-nav-link">
+					<Icon Name="help_outline" />
+					<span>Справка</span>
+				</a>
+				<a href="/about" class="landing-nav-link">
+					<Icon Name="info" />
+					<span>О платформе</span>
+				</a>
+			</nav>
+		</CenterContent>
+		<EndContent>
+			<div class="landing-header-actions">
+				<a href="/signin" class="landing-auth-btn">
+					<Icon Name="login" />
+					<span>Socratic ID</span>
+				</a>
+			</div>
+		</EndContent>
+	</Header>
+
+	<main class="socratic-landing-main">
+		<ErrorBoundary @ref="_errorBoundary">
+			<ChildContent>
+				@Body
+			</ChildContent>
+			<ErrorContent Context="ex">
+				<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
+					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при загрузке</h3>
+					<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
+					<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
+				</div>
+			</ErrorContent>
+		</ErrorBoundary>
+	</main>
+
+	<Footer />
+</div>
 
 @code {
 	private ErrorBoundary? _errorBoundary;
