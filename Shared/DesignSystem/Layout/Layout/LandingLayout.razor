@@ -8,81 +8,97 @@
 	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
 </HeadContent>
 <Color />
-<Blob />
+@if (!isRootLanding)
+{
+	<Blob />
+}
 
 <div class="socratic-landing-shell">
-	<Header Class="socratic-landing-header" ShowDefaultActions="false">
-		<CenterContent>
-			<nav class="landing-header-nav" aria-label="@T("MainNavigation", "Главная навигация")">
-				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
+	@if (isRootLanding)
+	{
+		<aside class="landing-floating-controls" aria-label="Quick Actions">
+			<LanguageSelector Variant="pill" />
+			<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
+				<Icon Name="login" />
+				<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
+			</a>
+		</aside>
+	}
+	else
+	{
+		<Header Class="socratic-landing-header" ShowDefaultActions="false">
+			<CenterContent>
+				<nav class="landing-header-nav" aria-label="@T("MainNavigation", "Главная навигация")">
+					<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
+						<Icon Name="storefront" />
+						<span>@T("Showroom", "Витрина")</span>
+					</a>
+					<a href="/commerce" class="landing-nav-link">
+						<Icon Name="rocket_launch" />
+						<span>@T("UXModes", "28 UX-режимов")</span>
+					</a>
+					<a href="/docs" class="landing-nav-link">
+						<Icon Name="menu_book" />
+						<span>@T("Documentation", "Документация")</span>
+					</a>
+					<a href="/help" class="landing-nav-link">
+						<Icon Name="help_outline" />
+						<span>@T("Help", "Справка")</span>
+					</a>
+					<a href="/about" class="landing-nav-link">
+						<Icon Name="info" />
+						<span>@T("About", "О платформе")</span>
+					</a>
+				</nav>
+			</CenterContent>
+			<EndContent>
+				<div class="landing-header-actions">
+					<LanguageSelector Variant="pill" />
+					<a href="/signin" class="landing-auth-btn">
+						<Icon Name="login" />
+						<span>@T("SocraticID", "Socratic ID")</span>
+					</a>
+					<button type="button"
+							class="landing-mobile-menu-toggle"
+							@onclick="ToggleMobileMenu"
+							aria-label="@(isMobileMenuOpen ? "Закрыть меню" : "Открыть меню")"
+							aria-expanded="@(isMobileMenuOpen ? "true" : "false")">
+						<Icon Name="@(isMobileMenuOpen ? "close" : "menu")" />
+					</button>
+				</div>
+			</EndContent>
+		</Header>
+
+		@if (isMobileMenuOpen)
+		{
+			<div class="landing-mobile-menu-backdrop" @onclick="CloseMobileMenu"></div>
+			<nav class="landing-mobile-menu-drawer" aria-label="Mobile Navigation">
+				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="storefront" />
 					<span>@T("Showroom", "Витрина")</span>
 				</a>
-				<a href="/commerce" class="landing-nav-link">
+				<a href="/commerce" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="rocket_launch" />
 					<span>@T("UXModes", "28 UX-режимов")</span>
 				</a>
-				<a href="/docs" class="landing-nav-link">
+				<a href="/docs" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="menu_book" />
 					<span>@T("Documentation", "Документация")</span>
 				</a>
-				<a href="/help" class="landing-nav-link">
+				<a href="/help" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="help_outline" />
 					<span>@T("Help", "Справка")</span>
 				</a>
-				<a href="/about" class="landing-nav-link">
+				<a href="/about" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="info" />
 					<span>@T("About", "О платформе")</span>
 				</a>
+				<div class="mobile-nav-divider"></div>
+				<div class="mobile-nav-footer">
+					<LanguageSelector Variant="inline" />
+				</div>
 			</nav>
-		</CenterContent>
-		<EndContent>
-			<div class="landing-header-actions">
-				<LanguageSelector Variant="pill" />
-				<a href="/signin" class="landing-auth-btn">
-					<Icon Name="login" />
-					<span>@T("SocraticID", "Socratic ID")</span>
-				</a>
-				<button type="button"
-						class="landing-mobile-menu-toggle"
-						@onclick="ToggleMobileMenu"
-						aria-label="@(isMobileMenuOpen ? "Закрыть меню" : "Открыть меню")"
-						aria-expanded="@(isMobileMenuOpen ? "true" : "false")">
-					<Icon Name="@(isMobileMenuOpen ? "close" : "menu")" />
-				</button>
-			</div>
-		</EndContent>
-	</Header>
-
-	@if (isMobileMenuOpen)
-	{
-		<div class="landing-mobile-menu-backdrop" @onclick="CloseMobileMenu"></div>
-		<nav class="landing-mobile-menu-drawer" aria-label="Mobile Navigation">
-			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="storefront" />
-				<span>@T("Showroom", "Витрина")</span>
-			</a>
-			<a href="/commerce" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="rocket_launch" />
-				<span>@T("UXModes", "28 UX-режимов")</span>
-			</a>
-			<a href="/docs" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="menu_book" />
-				<span>@T("Documentation", "Документация")</span>
-			</a>
-			<a href="/help" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="help_outline" />
-				<span>@T("Help", "Справка")</span>
-			</a>
-			<a href="/about" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="info" />
-				<span>@T("About", "О платформе")</span>
-			</a>
-			<div class="mobile-nav-divider"></div>
-			<div class="mobile-nav-footer">
-				<LanguageSelector Variant="inline" />
-			</div>
-		</nav>
+		}
 	}
 
 	<main class="socratic-landing-main">
@@ -100,12 +116,17 @@
 		</ErrorBoundary>
 	</main>
 
-	<Footer />
+	@if (Nav != null && !string.IsNullOrEmpty(Nav.ToBaseRelativePath(Nav.Uri).Trim('/')))
+	{
+		<Footer />
+	}
 </div>
 
 @code {
+	[Inject] private NavigationManager? Nav { get; set; }
 	private ErrorBoundary? _errorBoundary;
 	private bool isMobileMenuOpen = false;
+	private bool isRootLanding => Nav == null || string.IsNullOrEmpty(Nav.ToBaseRelativePath(Nav.Uri).Trim('/'));
 
 	private void ToggleMobileMenu() => isMobileMenuOpen = !isMobileMenuOpen;
 	private void CloseMobileMenu() => isMobileMenuOpen = false;

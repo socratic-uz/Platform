@@ -59,11 +59,11 @@
     grid-auto-columns: auto auto auto;
     align-items: center;
     gap: 0.35rem;
-    height: 40px;
-    min-height: 40px;
-    min-width: 40px;
+    height: 44px;
+    min-height: 44px;
+    min-width: 44px;
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: 22px;
     border: 1px solid var(--md-sys-color-outline-variant);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.6);
     backdrop-filter: blur(8px);

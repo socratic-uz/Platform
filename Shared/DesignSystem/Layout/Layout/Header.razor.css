@@ -126,40 +126,115 @@ header.socratic-app-header.header-sticky {
 }
 
 
-/* Landing Navigation Links in Header */
-::deep .landing-header-nav {
+/* ==========================================================================
+   Landing Header (Dark Cyber-Fintech Glassmorphism Theme)
+   ========================================================================== */
+header.socratic-app-header.socratic-landing-header {
+    background: rgba(4, 6, 10, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
+    color: #f8fafc;
+    min-height: 64px;
+    padding: 0.35rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.socratic-landing-header .header-grid-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header.socratic-landing-header .header-brand-link {
+    min-height: 40px;
+    gap: 0.65rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+header.socratic-landing-header .header-brand-link:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-1px);
+}
+
+header.socratic-landing-header .header-brand-icon-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
+    font-size: 18px;
+}
+
+header.socratic-landing-header .header-brand-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header.socratic-landing-header ::deep .landing-header-nav {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
     justify-content: center;
-    gap: 0.35rem;
-    width: 100%;
+    gap: 0.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    backdrop-filter: blur(12px);
 }
 
-::deep .landing-nav-link {
+header.socratic-landing-header ::deep .landing-nav-link {
     display: inline-grid;
     grid-auto-flow: column;
-    grid-auto-columns: auto auto;
+    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.5rem 0.85rem;
-    border-radius: 20px;
-    color: var(--md-sys-color-on-surface-variant);
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+    color: #94a3b8;
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.84rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-    min-height: 48px;
+    letter-spacing: -0.01em;
+    min-height: 40px;
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid transparent;
 }
 
-::deep .landing-nav-link:hover {
-    color: var(--md-sys-color-primary);
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+header.socratic-landing-header ::deep .landing-nav-link md-icon {
+    font-size: 16px;
+    color: #38bdf8;
+    opacity: 0.8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-::deep .landing-header-actions {
+header.socratic-landing-header ::deep .landing-nav-link:hover {
+    color: #f8fafc;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+header.socratic-landing-header ::deep .landing-nav-link:hover md-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+header.socratic-landing-header ::deep .landing-header-actions {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -167,67 +242,125 @@ header.socratic-app-header.header-sticky {
     justify-self: end;
 }
 
-::deep .landing-auth-btn {
+header.socratic-landing-header ::deep .lang-toggle-btn {
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+header.socratic-landing-header ::deep .lang-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+}
+
+header.socratic-landing-header ::deep .lang-dropdown-menu {
+    background: rgba(13, 19, 34, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+header.socratic-landing-header ::deep .lang-menu-item {
+    color: #cbd5e1;
+}
+
+header.socratic-landing-header ::deep .lang-menu-item:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #f8fafc;
+}
+
+header.socratic-landing-header ::deep .landing-auth-btn {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
     gap: 0.45rem;
-    padding: 0.45rem 1.15rem;
-    border-radius: 24px;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.875rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #ffffff;
+    font-size: 0.84rem;
     font-weight: 600;
     text-decoration: none;
-    min-height: 48px;
-    box-shadow: 0 4px 14px rgb(from var(--md-sys-color-primary) r g b / 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 40px;
+    box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     box-sizing: border-box;
 }
 
-::deep .landing-auth-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgb(from var(--md-sys-color-primary) r g b / 0.35);
+header.socratic-landing-header ::deep .landing-auth-btn md-icon {
+    font-size: 16px;
+    color: #38bdf8;
 }
 
-::deep .landing-mobile-menu-toggle {
+header.socratic-landing-header ::deep .landing-auth-btn:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
+    transform: translateY(-1px);
+    color: #ffffff;
+}
+
+header.socratic-landing-header ::deep .landing-auth-btn:hover md-icon {
+    color: #ffffff;
+}
+
+header.socratic-landing-header ::deep .landing-mobile-menu-toggle {
     display: none;
     place-items: center;
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.6);
-    color: var(--md-sys-color-on-surface);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+header.socratic-landing-header ::deep .landing-mobile-menu-toggle:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
 }
 
 ::deep .landing-mobile-menu-backdrop {
     position: fixed;
-    top: 64px;
+    top: 68px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
     z-index: 80;
 }
 
 ::deep .landing-mobile-menu-drawer {
     position: fixed;
-    top: 64px;
+    top: 68px;
     left: 0;
     right: 0;
-    background: var(--md-sys-color-surface-container-high);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    background: rgba(4, 6, 10, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem 1.5rem 2rem 1.5rem;
     display: grid;
     grid-auto-flow: row;
-    gap: 0.5rem;
+    gap: 0.6rem;
     z-index: 90;
-    box-shadow: 0 16px 32px var(--md-sys-color-shadow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
     animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -241,26 +374,31 @@ header.socratic-app-header.header-sticky {
     grid-template-columns: 24px 1fr;
     align-items: center;
     gap: 1rem;
-    padding: 0.75rem 1rem;
-    border-radius: 14px;
-    color: var(--md-sys-color-on-surface);
+    padding: 0.85rem 1.15rem;
+    border-radius: 16px;
+    color: #cbd5e1;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     min-height: 48px;
     box-sizing: border-box;
-    transition: background 0.15s ease;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+::deep .mobile-nav-item md-icon {
+    color: #38bdf8;
+    font-size: 20px;
 }
 
 ::deep .mobile-nav-item:hover,
 ::deep .mobile-nav-item:active {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
-    color: var(--md-sys-color-primary);
+    background: rgba(56, 189, 248, 0.12);
+    color: #ffffff;
 }
 
 ::deep .mobile-nav-divider {
     height: 1px;
-    background: var(--md-sys-color-outline-variant);
+    background: rgba(255, 255, 255, 0.08);
     margin: 0.5rem 0;
 }
 
@@ -271,10 +409,12 @@ header.socratic-app-header.header-sticky {
 }
 
 @media screen and (max-width: 960px) {
+    header.socratic-landing-header ::deep .landing-header-nav,
     ::deep .landing-header-nav {
-        display: none;
+        display: none !important;
     }
 
+    header.socratic-landing-header ::deep .landing-mobile-menu-toggle,
     ::deep .landing-mobile-menu-toggle {
         display: grid;
     }
