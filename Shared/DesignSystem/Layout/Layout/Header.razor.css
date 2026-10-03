@@ -371,7 +371,7 @@ header.socratic-landing-header ::deep .landing-mobile-menu-toggle:hover {
 
 ::deep .mobile-nav-item {
     display: inline-grid;
-    grid-template-columns: 24px 1fr;
+    grid-template-columns: 24px minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
     padding: 0.85rem 1.15rem;

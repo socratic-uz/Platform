@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>Apps.Composition</RootNamespace>
+    <RootNamespace>Socratic.Platform.Composition</RootNamespace>
     <AssemblyName>Composition</AssemblyName>
     <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -26,7 +26,6 @@
   <!-- Layout & Design System -->
   <ItemGroup>
     <ProjectReference Include="$(Layout)" Condition="'$(Layout)' != '' and Exists('$(Layout)')" />
-    <ProjectReference Include="$(Shell)" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and '$(Shell)' != '' and Exists('$(Shell)')" />
     <ProjectReference Include="..\DesignSystem\Layout\Layout.csproj" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and Exists('..\DesignSystem\Layout\Layout.csproj')" />
 
     <ProjectReference Include="$(MaterialWeb)" Condition="'$(MaterialWeb)' != '' and Exists('$(MaterialWeb)')" />

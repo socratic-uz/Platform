@@ -106,7 +106,7 @@
 
 .picker-popover-header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding-bottom: 6px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
@@ -122,7 +122,7 @@
 
 .picker-palette-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 8px;
 }
 
@@ -155,7 +155,7 @@
 
 .picker-popover-footer {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding-top: 8px;
     border-top: 1px solid var(--md-sys-color-outline-variant, #cac4d0);

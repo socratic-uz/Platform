@@ -16,7 +16,7 @@ namespace Web.UI.Services
         public ServerChatService(IServiceProvider serviceProvider)
         {
             var registeredClient = serviceProvider.GetService<IChatClient>();
-            _chatClient = new FallbackChatClient(registeredClient);
+            _chatClient = new global::Chat.Services.FallbackChatClient(registeredClient);
         }
 
         public async IAsyncEnumerable<string> StreamResponseAsync(

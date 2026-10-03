@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Domain.Interfaces.Map;
 
@@ -11,10 +12,12 @@ public interface IMapUiProvider
     /// <summary>
     /// Возвращает тип Razor-компонента интерактивного выбора точки на карте.
     /// </summary>
+    [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? GetPointPickerComponentType();
 
     /// <summary>
     /// Возвращает тип Razor-компонента выбора/проверки геозон доставки.
     /// </summary>
+    [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? GetZonePickerComponentType();
 }

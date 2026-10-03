@@ -41,7 +41,6 @@ using Qdrant.Client.Grpc;
 using SharedKernel.ValueObjects;
 
 using Shared;
-using Shared.Pages;
 using SkiaSharp;
 using Shared.Services;
 using Web.UI.Components;
@@ -143,7 +142,7 @@ try
     {
         var endpoint = new Uri(googleEndpoint);
         var openAiClient = new OpenAIClient(new System.ClientModel.ApiKeyCredential(googleApiKey), new OpenAIClientOptions { Endpoint = endpoint });
-        var chatClient = new Web.UI.Services.GoogleChatClient(openAiClient.GetChatClient(googleModel), googleModel, endpoint);
+        var chatClient = new global::Chat.Services.GoogleChatClient(openAiClient.GetChatClient(googleModel), googleModel, endpoint);
         builder.Services.AddSingleton<IChatClient>(chatClient);
 
         var embeddingGenerator = openAiClient.GetEmbeddingClient(googleEmbeddingModel).AsIEmbeddingGenerator();
@@ -220,7 +219,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingAuthenticationStateProvider>();
 builder.Services.AddScoped<ISettingsManager, Web.UI.Services.ServerSettingsManager>();
-builder.Services.AddScoped<IPasskeyService, PasskeyService>();
+builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
 #if FEATURE_MARKDOWN
 builder.Services.AddMarkdownServices();
 #endif

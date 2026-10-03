@@ -10,7 +10,7 @@ using SharedKernel.ValueObjects;
 using Material.Web.Components;
 using QuickGrid;
 
-namespace Shared.Pages;
+namespace Web.UI.Components.Pages;
 
 public partial class ComponentsShowcase : ComponentBase
 {

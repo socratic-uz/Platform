@@ -122,20 +122,20 @@
         margin: 14px 0;
     }
     .receipt-items { display: grid; gap: 10px; }
-    .receipt-item-row { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 12px; font-size: 0.85rem; }
-    .item-main { display: grid; gap: 2px; }
+    .receipt-item-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 12px; font-size: 0.85rem; min-width: 0; }
+    .item-main { display: grid; gap: 2px; min-width: 0; }
     .item-name { font-weight: 600; color: var(--md-sys-color-on-surface); }
     .item-mxik { font-size: 0.7rem; color: var(--md-sys-color-primary); font-family: monospace; font-weight: 600; }
     .item-calc { text-align: right; display: grid; gap: 2px; justify-items: end; }
     .item-qty { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); }
     .item-total { font-weight: 700; color: var(--md-sys-color-on-surface); }
-    .item-vat-row { display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.7rem; color: var(--md-sys-color-on-surface-variant); margin-top: -4px; }
+    .item-vat-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.7rem; color: var(--md-sys-color-on-surface-variant); margin-top: -4px; min-width: 0; }
     .receipt-totals { display: grid; gap: 6px; }
-    .total-row { display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); }
+    .total-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); min-width: 0; }
     .total-row.main { font-size: 1.1rem; font-weight: 800; color: var(--md-sys-color-on-surface); }
     .total-val { color: var(--md-sys-color-primary); }
     .receipt-fiscal-footer {
-        display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px; margin-top: 8px;
+        display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 16px; margin-top: 8px; min-width: 0;
     }
     .qr-container { background: #ffffff; padding: 4px; border: 1px solid var(--md-sys-color-outline-variant); border-radius: 10px; width: 110px; height: 110px; display: grid; place-items: center; }
     .qr-svg-wrap { width: 100%; height: 100%; display: grid; place-items: center; }

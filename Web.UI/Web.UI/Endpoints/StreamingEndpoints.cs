@@ -4,7 +4,9 @@ using FFmpegProcessor.Models;
 using FFmpegProcessor.Services;
 using Web.UI.Hubs;
 using SkiaSharp;
-using Shared.Pages;
+#if FEATURE_VISION
+using Socratic.Vision.Pages;
+#endif
 
 namespace Web.UI.Endpoints;
 

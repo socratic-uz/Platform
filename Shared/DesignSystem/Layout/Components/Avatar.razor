@@ -1,5 +1,7 @@
 @inherits DataComponentBase
+@using System.Diagnostics.CodeAnalysis
 @inject IStringLocalizer l
+@attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
 <div class="avatar-container">
 	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="avatar-button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
@@ -229,7 +231,7 @@
 						</summary>
 
 						<div class="content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
-							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;">
+							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;">
 								<Select Label="@l?["Theme"]"
 										Value="@ThemeString"
 										ValueChanged="OnThemeChanged"
@@ -259,10 +261,10 @@
 							</p>
 
 							<!-- Face ID -->
-							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
 									<Icon Name="@(isFaceIdConfigured ? "check_circle" : "face")" style="@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};")" />
-									<div style="display: grid; grid-auto-flow: row;">
+									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">@(l?["Auth_FaceId_Title"] ?? "Face ID (Биометрия)")</span>
 										<span style="font-size: 0.75rem; color: @(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)");">
 											@(isFaceIdConfigured ? (l?["Auth_FaceId_Bound"] ?? "✅ Привязано к аккаунту") : (l?["Auth_FaceId_Hint"] ?? "Вход по взгляду в камеру"))
@@ -283,10 +285,10 @@
 							</div>
 
 							<!-- Google SSO -->
-							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
 									<Icon Name="account_circle" />
-									<div style="display: grid; grid-auto-flow: row;">
+									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Google SSO</span>
 										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Auth_NotLinked"] ?? "Не привязано") : FormModelEmail)</span>
 									</div>
@@ -297,10 +299,10 @@
 							</div>
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
-							<div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto 1fr; align-items: center; gap: 8px;">
+							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
+								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
 									<Icon Name="fingerprint" style="color: var(--md-sys-color-tertiary);" />
-									<div style="display: grid; grid-auto-flow: row;">
+									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Passkeys (WebAuthn)</span>
 										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@(l?["Auth_Passkeys_Subtitle"] ?? "Вход по Touch ID / Face ID устройства")</span>
 									</div>
@@ -356,7 +358,7 @@
 		</span>
 		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
 			<!-- 3-Step Calibration Progress Bar -->
-			<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; width: 100%; max-width: 240px; justify-items: stretch;">
+			<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 240px; justify-items: stretch;">
 				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 1 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
 				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 2 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
 				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 3 ? "var(--md-sys-color-tertiary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>

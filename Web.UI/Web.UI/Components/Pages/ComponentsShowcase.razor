@@ -1,6 +1,6 @@
 @page "/components"
 @layout NavOnlyLayout
-@namespace Shared.Pages
+@namespace Web.UI.Components.Pages
 
 @using Material.Web.Components
 @using Material.Web.Components.Labs
@@ -707,14 +707,14 @@
                             <div class="showcase-card-body">
                                 <div class="showcase-demo-canvas">
                                     <div class="showcase-demo-col">
-                                        <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem;">
+                                        <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.85rem;">
                                             <span>Громкость / Интенсивность:</span>
                                             <strong style="color: var(--md-sys-color-primary);">@sliderValue %</strong>
                                         </div>
                                         <Slider @bind-Value="sliderValue" Min="0m" Max="100m" Step="1m" ShowLabel="true" ShowTicks="true" />
                                     </div>
                                     <div class="showcase-demo-col" style="margin-top: 8px;">
-                                        <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 0.85rem;">
+                                        <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.85rem;">
                                             <span>Диапазон цен (тыс. сум):</span>
                                             <strong style="color: var(--md-sys-color-primary);">@rangeStart — @rangeEnd</strong>
                                         </div>
@@ -1327,7 +1327,7 @@ toastService.ShowError("Не удалось выполнить платеж");</
                                                    ValueChanged="v => qrInputData = v"
                                                    ValueExpression="() => qrInputData" />
 
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center;">
+                                        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: center;">
                                             <div style="display: inline-grid; grid-auto-flow: column; align-items: center; gap: 8px;">
                                                 <span style="font-size: 0.85rem;">Цвет QR:</span>
                                                 <ColorPicker Value="@qrStylingOptions.PrimaryColor"

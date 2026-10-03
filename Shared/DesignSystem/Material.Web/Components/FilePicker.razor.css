@@ -18,7 +18,7 @@
 /* File Grid Styles */
 .file-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 110px), 1fr));
     gap: 12px;
     align-items: stretch;
 }
@@ -32,7 +32,7 @@
     box-shadow: 0 2px 4px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
     background-color: var(--md-sys-color-surface-container-lowest, #ffffff);
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: minmax(0, 1fr) auto;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

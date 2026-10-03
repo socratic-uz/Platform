@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Domain.Interfaces.Commerce;
 
@@ -11,10 +12,12 @@ public interface ISeatDesignerUiProvider
     /// <summary>
     /// Возвращает тип Razor-компонента интерактивного холста рассадки.
     /// </summary>
+    [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? GetCanvasComponentType();
 
     /// <summary>
     /// Возвращает тип Razor-компонента панели инструментов редактора схемы.
     /// </summary>
+    [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? GetToolbarComponentType();
 }

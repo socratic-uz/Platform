@@ -62,8 +62,7 @@
 
   <ItemGroup>
     <ProjectReference Include="$(Composition)" Condition="'$(Composition)' != '' and Exists('$(Composition)')" />
-    <ProjectReference Include="$(Shared)" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and '$(Shared)' != '' and Exists('$(Shared)')" />
-    <ProjectReference Include="..\Shared\Composition\Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and ('$(Shared)' == '' or !Exists('$(Shared)')) and Exists('..\Shared\Composition\Composition.csproj')" />
+    <ProjectReference Include="..\Shared\Composition\Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and Exists('..\Shared\Composition\Composition.csproj')" />
     <ProjectReference Include="$(Layout)" Condition="'$(Layout)' != '' and Exists('$(Layout)')" />
     <ProjectReference Include="..\Shared\DesignSystem\Layout\Layout.csproj" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and Exists('..\Shared\DesignSystem\Layout\Layout.csproj')" />
   </ItemGroup>

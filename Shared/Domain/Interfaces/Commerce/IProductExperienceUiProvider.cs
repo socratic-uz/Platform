@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics.CodeAnalysis;
+
 namespace Domain.Interfaces.Commerce;
 
 /// <summary>
@@ -9,5 +12,6 @@ public interface IProductExperienceUiProvider
     /// <summary>
     /// Тип Razor-компонента рендерера коммерческих режимов (UniversalProductExperienceRenderer).
     /// </summary>
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? ExperienceRendererType { get; }
 }

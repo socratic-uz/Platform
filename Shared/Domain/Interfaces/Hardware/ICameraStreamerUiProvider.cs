@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Domain.Interfaces.Hardware;
 
@@ -10,5 +11,6 @@ public interface ICameraStreamerUiProvider
     /// <summary>
     /// Тип Blazor-компонента CameraStreamer.
     /// </summary>
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? CameraStreamerComponentType { get; }
 }

@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics.CodeAnalysis;
+
 namespace Domain.Interfaces.Checkout;
 
 /// <summary>
@@ -9,10 +12,12 @@ public interface ICheckoutUiProvider
     /// <summary>
     /// Тип Razor-компонента универсальной панели оформления заказа (UniversalCheckoutPanel).
     /// </summary>
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? CheckoutPanelType { get; }
 
     /// <summary>
     /// Тип Razor-компонента боковой панели корзины/заказа (OrderDrawer).
     /// </summary>
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? OrderDrawerType { get; }
 }

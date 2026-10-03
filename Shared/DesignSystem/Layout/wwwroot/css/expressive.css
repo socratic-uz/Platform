@@ -365,8 +365,8 @@ md-dialog.expressive {
 
 @media (max-width: 839.98px) {
     .m3-layout-supporting-pane {
-        grid-template-columns: 1fr !important;
-        grid-template-rows: 1fr auto !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: minmax(0, 1fr) auto !important;
     }
 }
 
@@ -380,7 +380,7 @@ md-dialog.expressive {
 
 @media (max-width: 599.98px) {
     .m3-layout-list-detail {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: minmax(0, 1fr) !important;
     }
 }
 
@@ -389,7 +389,8 @@ md-dialog.expressive {
     position: sticky;
     bottom: 0;
     display: grid !important;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
     align-items: center;
     gap: 16px;
     padding: 16px 24px;

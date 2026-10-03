@@ -79,7 +79,7 @@
 
 .md3-schedule-header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 12px;
 }
@@ -99,7 +99,7 @@
 
 .md3-schedule-day-card {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 8px 14px;
     border-radius: 12px;
@@ -180,7 +180,7 @@
     padding-top: 12px;
     border-top: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
     gap: 12px;

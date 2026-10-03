@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using SharedKernel.ValueObjects;
 using System.Diagnostics;
 using Native.UI.Services;
-using Apps.Composition.Extensions;
+using Socratic.Platform.Composition.Extensions;
 using Shared;
 using Shared.Services;
 using Domain.Interfaces;
@@ -84,13 +84,13 @@ namespace Native.UI
 
             MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
-            // 1. Единое подключение всех возможностей Composition (Shell, 13 фич, дизайн-система, gRPC, аппаратные интерфейсы)
+            // 1. Единое подключение всех возможностей Composition (Layout, 13 фич, дизайн-система, gRPC, аппаратные интерфейсы)
             builder.Services.AddCompositionServices(builder.Configuration);
 
             // 2. Специфичные платформенные адаптеры для MAUI
             builder.Services.AddSingleton<IFormFactor, MauiFormFactor>();
-            builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, ClientFaceIdService>();
-            builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, ClientSupportSessionProvider>();
+            builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Infrastructure.Gateways.Biometrics.ClientFaceIdService>();
+            builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
             builder.Services.AddScoped(sp => new HttpClient());
             builder.Services.AddScoped<Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider, MauiAuthenticationStateProvider>();
 

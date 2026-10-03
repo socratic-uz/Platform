@@ -1,6 +1,6 @@
 footer.socratic-global-footer {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -160,7 +160,7 @@ footer.socratic-global-footer {
 .footer-links-list a {
     display: inline-grid;
     grid-auto-flow: column;
-    grid-auto-columns: auto 1fr;
+    grid-auto-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.55rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -191,7 +191,7 @@ footer.socratic-global-footer {
 /* Sub-Footer Bottom Bar */
 .footer-bottom-bar {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 1.5rem;
     padding-top: 1.75rem;
@@ -246,7 +246,7 @@ footer.socratic-global-footer {
 
 @media screen and (max-width: 1024px) and (min-width: 641px) {
     .footer-primary-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2.5rem 2rem;
     }
 
@@ -268,12 +268,12 @@ footer.socratic-global-footer {
     }
 
     .footer-primary-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
     }
 
     .footer-bottom-bar {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 1.25rem;
         text-align: center;
         justify-items: center;

@@ -13,7 +13,7 @@ using Shopping.Application.Protos;
 using Shared.Extensions;
 using SharedKernel.ValueObjects;
 
-namespace Shared.Pages.ProductPages
+namespace Domain.Abstractions
 {
     public abstract class ProductsComponentBase : DataComponentBase
     {

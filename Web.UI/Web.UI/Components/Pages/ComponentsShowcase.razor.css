@@ -4,7 +4,7 @@
 
 main.showcase-page {
     display: grid !important;
-    grid-template-columns: 320px 1fr !important;
+    grid-template-columns: minmax(min(100%, 320px), 320px) minmax(0, 1fr) !important;
     padding: 0 !important;
     gap: 0 !important;
     align-content: stretch !important;
@@ -21,14 +21,14 @@ main.showcase-page {
     background: var(--md-sys-color-surface-container-low);
     border-right: 1px solid var(--md-sys-color-outline-variant);
     display: grid;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto minmax(0, 1fr);
     z-index: 10;
 }
 
 .showcase-sidebar-header {
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.4);
@@ -136,7 +136,7 @@ main.showcase-page {
 
 .showcase-nav-btn {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
     padding: 9px 14px;
@@ -154,7 +154,7 @@ main.showcase-page {
 .showcase-nav-btn-left {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: max-content 1fr;
+    grid-auto-columns: max-content minmax(0, 1fr);
     align-items: center;
     gap: 10px;
     overflow: hidden;
@@ -220,7 +220,7 @@ main.showcase-page {
     top: 0;
     z-index: 5;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 16px 32px;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.75);
@@ -304,7 +304,7 @@ main.showcase-page {
 .showcase-stat-pill {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: max-content 1fr;
+    grid-auto-columns: max-content minmax(0, 1fr);
     align-items: center;
     gap: 10px;
     padding: 8px 16px;
@@ -353,7 +353,7 @@ main.showcase-page {
 
 .showcase-section-header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     border-bottom: 2px solid var(--md-sys-color-outline-variant);
     padding-bottom: 12px;
@@ -401,7 +401,7 @@ main.showcase-page {
     border-radius: 20px;
     overflow: hidden;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto minmax(0, 1fr) auto;
     box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -416,7 +416,7 @@ main.showcase-page {
     background: var(--md-sys-color-surface-container);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
 
@@ -512,7 +512,7 @@ main.showcase-page {
     background: var(--md-sys-color-surface-container);
     border-top: 1px solid var(--md-sys-color-outline-variant);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 10px;
     font-size: 0.8rem;
@@ -531,14 +531,14 @@ main.showcase-page {
 /* Responsive Styles */
 @media (max-width: 900px) {
     .showcase-cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     main.showcase-page {
-        grid-template-columns: 1fr !important;
-        grid-template-rows: auto 1fr !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: auto minmax(0, 1fr) !important;
         height: 100vh;
         overflow: hidden;
     }

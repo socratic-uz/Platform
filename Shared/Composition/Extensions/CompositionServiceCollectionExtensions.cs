@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using Domain.Interfaces;
 using Domain.Interfaces.Pages;
+using Socratic.Platform.Layout.Extensions;
 using Shared;
 using Shared.Services;
 using Smart.Web;
@@ -19,7 +20,7 @@ using FFmpegProcessor;
 using Biometrics.Processor;
 #endif
 
-namespace Apps.Composition.Extensions
+namespace Socratic.Platform.Composition.Extensions
 {
     /// <summary>
     /// Centralized service registration and feature module discovery for all platform hosts (Web, MAUI, Desktop).
@@ -70,13 +71,13 @@ namespace Apps.Composition.Extensions
                 FeatureRegistry.Register(new Socratic.Identity.IdentityFeatureModule());
 #endif
 #if FEATURE_MAP
-                FeatureRegistry.Register(new Map.MapFeatureModule());
+                FeatureRegistry.Register(new global::Map.MapFeatureModule());
 #endif
 #if FEATURE_QRDESIGNER
-                FeatureRegistry.Register(new QrDesigner.QrDesignerFeatureModule());
+                FeatureRegistry.Register(new global::QrDesigner.QrDesignerFeatureModule());
 #endif
 #if FEATURE_SEATDESIGNER
-                FeatureRegistry.Register(new SeatDesigner.SeatDesignerFeatureModule());
+                FeatureRegistry.Register(new global::SeatDesigner.SeatDesignerFeatureModule());
 #endif
 
                 _featuresRegistered = true;
@@ -106,13 +107,14 @@ namespace Apps.Composition.Extensions
             services.AddBiometricProcessorServices();
 #endif
 
-            // 3. Register Core & Shell services
+            // 3. Register Platform & Layout services
+            services.AddLayoutServices();
 #if FEATURE_CHAT
             services.AddScoped<Chat.Abstractions.IChatService, Chat.Services.SignalRChatService>();
 #endif
-            services.AddScoped<IDetectorService, RemoteDetectorService>();
+            services.AddScoped<IDetectorService, Infrastructure.Gateways.Vision.RemoteDetectorService>();
             services.AddScoped<ISettingsManager, SettingsManager>();
-            services.AddScoped<IPasskeyService, PasskeyService>();
+            services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
             services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
             services.AddSingleton<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
             services.AddLocalization().AddScoped<IStringLocalizer, StringLocalizer>();
@@ -134,28 +136,5 @@ namespace Apps.Composition.Extensions
 
             return services;
         }
-
-        /// <summary>
-        /// Backward-compatible alias for <see cref="AddCompositionServices"/>.
-        /// </summary>
-        [Obsolete("Use AddCompositionServices instead.")]
-        public static IServiceCollection AddSharedAppServices(this IServiceCollection services, IConfiguration? configuration = null)
-            => AddCompositionServices(services, configuration);
-    }
-}
-
-namespace Apps.Shared.Extensions
-{
-    /// <summary>
-    /// Backward-compatibility wrapper for legacy references.
-    /// </summary>
-    public static class SharedAppServiceCollectionExtensions
-    {
-        /// <summary>
-        /// Backward-compatible alias for <see cref="Apps.Composition.Extensions.CompositionServiceCollectionExtensions.AddCompositionServices"/>.
-        /// </summary>
-        [Obsolete("Use AddCompositionServices instead.")]
-        public static IServiceCollection AddSharedAppServices(this IServiceCollection services, IConfiguration? configuration = null)
-            => Apps.Composition.Extensions.CompositionServiceCollectionExtensions.AddCompositionServices(services, configuration);
     }
 }

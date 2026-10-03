@@ -47,7 +47,7 @@ svg {
     color: var(--md-sys-color-on-surface);
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1rem;
     align-items: center;
     text-decoration: none;
@@ -92,6 +92,6 @@ svg {
 ::deep dl {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 0 2rem;
 }

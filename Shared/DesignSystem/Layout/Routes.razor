@@ -1,4 +1,6 @@
 @using Domain.Interfaces
+@using System.Diagnostics.CodeAnalysis
+@attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(MainLayout)")]
 @inject NavigationManager Nav
 
 <Router AppAssembly="typeof(Layout.MainLayout).Assembly" AdditionalAssemblies="FeatureRegistry.GetFeatureAssemblies()">
@@ -17,7 +19,7 @@
 		   }
 		   <div class="grid-center" style="min-height: 80vh; padding: 2rem; display: grid; place-items: center; background: var(--md-sys-color-surface, #101415); color: var(--md-sys-color-on-surface, #e1e3e4);">
 			   <div style="display: grid; gap: 1.5rem; max-width: 600px; width: 100%; padding: 2rem; background: var(--md-sys-color-surface-container, #1d2021); border: 1px solid var(--md-sys-color-outline-variant, #40484b); border-radius: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.25);">
-				   <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem;">
+				   <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1rem; min-width: 0;">
 					   <div style="display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--md-sys-color-primary-container, #004f58); color: var(--md-sys-color-on-primary-container, #8bf2ff);">
 						   <md-icon>rocket_launch</md-icon>
 					   </div>
@@ -36,7 +38,7 @@
 					   <div style="display: grid; gap: 0.75rem;">
 						   @foreach (var mod in modules)
 						   {
-							   <a href="@mod.RoutePrefix" style="display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high, #272a2b); border: 1px solid var(--md-sys-color-outline-variant, #40484b); border-radius: 16px; text-decoration: none; color: inherit;">
+							   <a href="@mod.RoutePrefix" style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high, #272a2b); border: 1px solid var(--md-sys-color-outline-variant, #40484b); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
 								   <div style="display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--md-sys-color-secondary-container, #324b4f); color: var(--md-sys-color-on-secondary-container, #cde7ec);">
 									   <md-icon>@(mod.Icon ?? "widgets")</md-icon>
 								   </div>
@@ -57,7 +59,7 @@
 					   </div>
 				   }
 
-				   <div style="display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--md-sys-color-outline-variant, #40484b); padding-top: 1rem;">
+				   <div style="display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--md-sys-color-outline-variant, #40484b); padding-top: 1rem;">
 					   <span style="font-size: 0.75rem; color: var(--md-sys-color-outline, #899295); text-align: center;">
 						   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
 					   </span>
