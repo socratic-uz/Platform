@@ -25,7 +25,7 @@ CodeGraph устраняет медленный и затратный по то�
    - `codegraph affected [files...]`
 
 ### 🔍 Используй `grep_search` ТОЛЬКО для:
-- Поиска строковых литералов, конфигурационных ключей в `appsettings.json`, `launchSettings.json`.
+- Поиска строковых литералов, конфигурационных ключей в `aappsettings.json`, `launchSettings.json`.
 - Поиска в XML/CSPROJ свойствах (`<Configurations>`, `<TargetFramework>`).
 - Поиска в локализационных `.resx` или markdown-документации.
 

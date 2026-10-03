@@ -1,0 +1,3 @@
+[submodule "Shared/SharedKernel"]
+	path = Shared/SharedKernel
+	url = https://github.com/socratic-uz/SharedKernel.git

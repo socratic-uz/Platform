@@ -16,10 +16,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <!-- Submodule SharedKernel detection -->
-    <SharedKernelRoot Condition="Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="Exists('$(MSBuildThisFileDirectory)Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
     <SharedKernelRoot Condition="'$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/</SharedKernelRoot>
     <SharedKernelRoot Condition="'$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/</SharedKernelRoot>
-    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == ''">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelRoot)' == ''">$(MSBuildThisFileDirectory)Shared/SharedKernel/</SharedKernelRoot>
 
     <SharedKernelDir>$(SharedKernelRoot)</SharedKernelDir>
     <SharedKernelProtos>$(SharedKernelDir)</SharedKernelProtos>
@@ -40,7 +41,8 @@
   <!-- Canonical Platform Paths (always evaluated for Platform projects) -->
   <PropertyGroup>
     <!-- Resolve SharedKernelDir and Proto contract paths if not already provided by parent -->
-    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and Exists('$(MSBuildThisFileDirectory)Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)Shared/SharedKernel/</SharedKernelRoot>
+    <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)SharedKernel/</SharedKernelRoot>
     <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../Shared/SharedKernel/</SharedKernelRoot>
     <SharedKernelRoot Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' == '' and Exists('$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/SharedKernel.csproj')">$(MSBuildThisFileDirectory)../../../Shared/SharedKernel/</SharedKernelRoot>
     <SharedKernelDir Condition="'$(SharedKernelDir)' == '' and '$(SharedKernelRoot)' != ''">$(SharedKernelRoot)</SharedKernelDir>

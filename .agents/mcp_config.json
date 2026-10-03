@@ -12,7 +12,7 @@
     "socratic-ui-quality": {
       "command": "node",
       "args": [
-        "Platform/Tools/socratic-ui-mcp/dist/index.js"
+        "src/Frontend/Platform/Tools/socratic-ui-mcp/dist/index.js"
       ],
       "description": "Socratic UI Quality Engine: live browser DOM/CSSOM inspection, responsive matrix, overlap detection, Material 3 token checks, and accessibility",
       "env": {

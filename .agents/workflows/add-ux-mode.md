@@ -1,14 +1,14 @@
 ---
-description: Step-by-step guide for implementing or extending one of the 28 Universal Product UX Modes in Socratic.
+description: Step-by-step guide for implementing or extending one of the 28 Commerce Features in Socratic Commerce Frontend Module.
 ---
 
-# Workflow: Implementing & Extending a Universal Product UX Mode
+# Workflow: Implementing & Extending a Commerce Feature
 
-Follow this step-by-step workflow when adding, customizing, or verifying a `ProductUxMode` experience in Socratic.
+Follow this step-by-step workflow when adding, customizing, or verifying one of the 28 Commerce Features in the **Commerce Frontend Module**.
 
 ---
 
-## 1. Verify Mode Definition
+## 1. Verify Feature Definition
 1. Inspect the enum definition with CodeGraph:
    - Run `codegraph_node(name="ProductUxMode")` to view all 28 enum constants, values (1–28), emoji icons, and titles.
    - Alternatively, open [SharedKernel/ValueObjects/ProductUxMode.cs](file:///c:/Users/owner/source/repos/Socratic/src/Shared/SharedKernel/ValueObjects/ProductUxMode.cs).
@@ -17,13 +17,13 @@ Follow this step-by-step workflow when adding, customizing, or verifying a `Prod
 ---
 
 ## 2. Define Metadata Model & AOT Serialization
-1. Create or update the mode DTO in `src/Frontend/Retail/Commerce/Modules/<Domain>/Models/<Mode>Metadata.cs`.
-2. Register the DTO in `src/Frontend/Retail/Commerce/Serialization/AotJsonContext.cs` with `[JsonSerializable(typeof(<Mode>Metadata))]` to prevent Native AOT trimming crashes.
+1. Create or update the feature DTO in `src/Frontend/Retail/Commerce/Modules/<Domain>/Models/<Feature>Metadata.cs`.
+2. Register the DTO in `src/Frontend/Retail/Commerce/Serialization/AotJsonContext.cs` with `[JsonSerializable(typeof(<Feature>Metadata))]` to prevent Native AOT trimming crashes.
 
 ---
 
-## 3. Implement Experience Dialog Module
-1. Create or modify the Blazor module component in `src/Frontend/Retail/Commerce/Modules/<Domain>/<Mode>Module.razor`.
+## 3. Implement Commerce Feature Dialog
+1. Create or modify the Blazor feature dialog component in `src/Frontend/Retail/Commerce/Modules/<Domain>/<Feature>Module.razor`.
 2. Implement standard parameters:
    ```razor
    [Parameter] public Product? Product { get; set; }
