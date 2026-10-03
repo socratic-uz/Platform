@@ -273,7 +273,7 @@ Sitemap: https://socratic.uz/sitemap.xml";
             sb.AppendLine("    <categories>");
             sb.AppendLine("      <category id=\"1\">Каталог товаров</category>");
             sb.AppendLine("    </categories>");
-            sb.AppendLine("    <offers>");
+            sb.AppendLine("    <shops>");
 
             foreach (var org in orgs)
             {
@@ -294,7 +294,7 @@ Sitemap: https://socratic.uz/sitemap.xml";
                             var desc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
                             var price = (long)Math.Round(prod.Price);
 
-                            sb.AppendLine($"      <offer id=\"{prod.Id}\" available=\"true\">");
+                            sb.AppendLine($"      <shop id=\"{prod.Id}\" available=\"true\">");
                             sb.AppendLine($"        <name>{EscapeXml(prod.Name)}</name>");
                             sb.AppendLine($"        <url>{prodUrl}</url>");
                             sb.AppendLine($"        <price>{price}</price>");
@@ -303,7 +303,7 @@ Sitemap: https://socratic.uz/sitemap.xml";
                             sb.AppendLine($"        <picture>{EscapeXml(img)}</picture>");
                             sb.AppendLine($"        <description>{EscapeXml(desc)}</description>");
                             sb.AppendLine($"        <vendor>{EscapeXml(org.Name)}</vendor>");
-                            sb.AppendLine("      </offer>");
+                            sb.AppendLine("      </shop>");
                         }
                     }
                 }
@@ -311,12 +311,12 @@ Sitemap: https://socratic.uz/sitemap.xml";
 
                 if (prodCount == 0)
                 {
-                    void AddFallbackOffer(string id, string name, decimal price, string desc)
+                    void AddFallbackShop(string id, string name, decimal price, string desc)
                     {
                         var slug = SlugHelper.GenerateSlug(name);
                         var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{id}/{slug}";
                         var img = $"{baseUrl}/img/icon-512.png";
-                        sb.AppendLine($"      <offer id=\"{id}\" available=\"true\">");
+                        sb.AppendLine($"      <shop id=\"{id}\" available=\"true\">");
                         sb.AppendLine($"        <name>{EscapeXml(name)}</name>");
                         sb.AppendLine($"        <url>{prodUrl}</url>");
                         sb.AppendLine($"        <price>{(long)price}</price>");
@@ -325,25 +325,25 @@ Sitemap: https://socratic.uz/sitemap.xml";
                         sb.AppendLine($"        <picture>{EscapeXml(img)}</picture>");
                         sb.AppendLine($"        <description>{EscapeXml(desc)}</description>");
                         sb.AppendLine($"        <vendor>{EscapeXml(org.Name)}</vendor>");
-                        sb.AppendLine("      </offer>");
+                        sb.AppendLine("      </shop>");
                     }
 
                     if (org.Id == SharedKernel.Extensions.ObjectIdExtension.DemoId)
                     {
-                        AddFallbackOffer("b1a10001-0000-0000-0000-000000000001", "Узбекский Плов Ташкент", 45000, "Традиционный праздничный ташкентский плов на хлопковом масле с желтой морковью и казы.");
-                        AddFallbackOffer("b1a10001-0000-0000-0000-000000000002", "Персональный Конфигуратор Пиццы", 65000, "Свежая пицца с индивидуальным подбором топпингов и сырного борта.");
-                        AddFallbackOffer("b1a10001-0000-0000-0000-000000000003", "VIP Билет на Концерт", 250000, "Электронный билет в первый сектор с доступом в лаунж-зону.");
+                        AddFallbackShop("b1a10001-0000-0000-0000-000000000001", "Узбекский Плов Ташкент", 45000, "Традиционный праздничный ташкентский плов на хлопковом масле с желтой морковью и казы.");
+                        AddFallbackShop("b1a10001-0000-0000-0000-000000000002", "Персональный Конфигуратор Пиццы", 65000, "Свежая пицца с индивидуальным подбором топпингов и сырного борта.");
+                        AddFallbackShop("b1a10001-0000-0000-0000-000000000003", "VIP Билет на Концерт", 250000, "Электронный билет в первый сектор с доступом в лаунж-зону.");
                     }
                     else if (org.Id == SharedKernel.Extensions.ObjectIdExtension.SocraticId)
                     {
-                        AddFallbackOffer("b1a10002-0000-0000-0000-000000000001", "Тариф Бизнес Про Сети и Ритейл", 500000, "Подписка на облачный бэкофис, аналитику и мониторинг точек.");
-                        AddFallbackOffer("b1a10002-0000-0000-0000-000000000002", "Заявка на подключение и регистрацию организации", 100000, "Быстрый старт автоматизации торговой точки под ключ.");
-                        AddFallbackOffer("b1a10002-0000-0000-0000-000000000003", "Комплект POS терминал и Киоск самообслуживания", 8500000, "Готовое аппаратное решение с термопринтером и сканером QR.");
+                        AddFallbackShop("b1a10002-0000-0000-0000-000000000001", "Тариф Бизнес Про Сети и Ритейл", 500000, "Подписка на облачный бэкофис, аналитику и мониторинг точек.");
+                        AddFallbackShop("b1a10002-0000-0000-0000-000000000002", "Заявка на подключение и регистрацию организации", 100000, "Быстрый старт автоматизации торговой точки под ключ.");
+                        AddFallbackShop("b1a10002-0000-0000-0000-000000000003", "Комплект POS терминал и Киоск самообслуживания", 8500000, "Готовое аппаратное решение с термопринтером и сканером QR.");
                     }
                 }
             }
 
-            sb.AppendLine("    </offers>");
+            sb.AppendLine("    </shops>");
             sb.AppendLine("  </shop>");
             sb.AppendLine("</yml_catalog>");
 

@@ -115,10 +115,10 @@ namespace RemoteSupport.Agent
                 inputSimulator?.SimulateInput(command);
             });
 
-            // Получение SDP Offer от браузера оператора
-            connection.On<string>("ReceiveSdpOffer", async (sdp) =>
+            // Получение SDP Shop от браузера оператора
+            connection.On<string>("ReceiveSdpShop", async (sdp) =>
             {
-                Console.WriteLine("[WebRTC] Получен SDP Offer от оператора. Согласование...");
+                Console.WriteLine("[WebRTC] Получен SDP Shop от оператора. Согласование...");
                 await InitializeWebRtcPeerConnection(sdp);
             });
 

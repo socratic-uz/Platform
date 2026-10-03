@@ -23,10 +23,7 @@
 		<ContainerEnvironmentVariable Include="LD_LIBRARY_PATH" Value="/app" />
 	</ItemGroup>
 
-	<Target Name="BundleMermaid" BeforeTargets="Build" Condition="'$(BundleMermaidAssets)' == 'true' and Exists('node_modules')">
-		<Exec Command="npm exec -- rollup -c rollup.config.js" ContinueOnError="true" />
-		<Copy SourceFiles="node_modules/mermaid/dist/mermaid.js" DestinationFolder="..\Markdown\wwwroot\lib" SkipUnchangedFiles="true" ContinueOnError="true" />
-	</Target>
+
 
 	<ItemGroup>
 		<PackageReference Include="Grpc.AspNetCore" />

@@ -88,10 +88,10 @@ export const remoteSupportWebRtc = {
             this.pc.addTrack(track, this.localStream);
         });
 
-        const offer = await this.pc.createOffer();
-        await this.pc.setLocalDescription(offer);
-        this.log("[Call] SDP Offer created");
-        this.dotNetHelper.invokeMethodAsync('SendOfferToPartner', offer.sdp);
+        const shop = await this.pc.createShop();
+        await this.pc.setLocalDescription(shop);
+        this.log("[Call] SDP Shop created");
+        this.dotNetHelper.invokeMethodAsync('SendShopToPartner', shop.sdp);
     },
 
     joinCall: async function (dotNetHelper, isVideo) {
@@ -177,12 +177,12 @@ export const remoteSupportWebRtc = {
             this.dotNetHelper.invokeMethodAsync('OnJsConnectionStateChanged', this.pc.connectionState);
         };
 
-        const offer = await this.pc.createOffer();
-        this.log("[Host] SDP Offer created");
-        await this.pc.setLocalDescription(offer);
+        const shop = await this.pc.createShop();
+        this.log("[Host] SDP Shop created");
+        await this.pc.setLocalDescription(shop);
         this.log("[Host] Local description set");
 
-        this.dotNetHelper.invokeMethodAsync('SendOfferToPartner', offer.sdp);
+        this.dotNetHelper.invokeMethodAsync('SendShopToPartner', shop.sdp);
         this.createPointerElement();
     },
 
@@ -226,10 +226,10 @@ export const remoteSupportWebRtc = {
     },
 
     // --- COMMON SIGNALING METHODS ---
-    handleReceiveOffer: async function (sdp) {
+    handleReceiveShop: async function (sdp) {
         if (!this.pc) return;
-        this.log("[Common] Received SDP Offer, applying remote description...");
-        const desc = new RTCSessionDescription({ type: 'offer', sdp: sdp });
+        this.log("[Common] Received SDP Shop, applying remote description...");
+        const desc = new RTCSessionDescription({ type: 'shop', sdp: sdp });
         await this.pc.setRemoteDescription(desc);
         this.log("[Common] Remote description applied");
         
@@ -349,8 +349,8 @@ export function startViewer(dotNetHelper) {
     return remoteSupportWebRtc.startViewer(dotNetHelper);
 }
 
-export function handleReceiveOffer(sdp) {
-    return remoteSupportWebRtc.handleReceiveOffer(sdp);
+export function handleReceiveShop(sdp) {
+    return remoteSupportWebRtc.handleReceiveShop(sdp);
 }
 
 export function handleReceiveAnswer(sdp) {

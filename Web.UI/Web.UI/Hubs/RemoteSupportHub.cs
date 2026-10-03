@@ -98,11 +98,11 @@ namespace Web.UI.Hubs
         }
 
         /// <summary>
-        /// Отправляет SDP Offer (предложение соединения) от оператора к клиенту.
+        /// Отправляет SDP Shop (предложение соединения) от оператора к клиенту.
         /// </summary>
-        public async Task SendSdpOffer(string sessionId, string sdp)
+        public async Task SendSdpShop(string sessionId, string sdp)
         {
-            await Clients.OthersInGroup(sessionId).SendAsync("ReceiveSdpOffer", sdp);
+            await Clients.OthersInGroup(sessionId).SendAsync("ReceiveSdpShop", sdp);
         }
 
         /// <summary>
