@@ -6,3 +6,5 @@ obj/
 node_modules/
 dist/
 !Tools/socratic-ui-mcp/dist/
+*.zip
+Design/Screenshots/
