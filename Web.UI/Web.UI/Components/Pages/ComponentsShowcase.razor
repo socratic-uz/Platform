@@ -14,15 +14,15 @@
 @using Microsoft.Extensions.AI
 @using SeatDesigner.Components
 @using Shared.Components
-@using Shared.Modules.Auction
-@using Shared.Modules.Booking
-@using Shared.Modules.Donation
-@using Shared.Modules.Gift
-@using Shared.Modules.GroupBuy
-@using Shared.Modules.Hotel
-@using Shared.Modules.Quote
-@using Shared.Modules.Delivery
-@using Shared.Modules.Subscription
+@using Socratic.Commerce.Features.Auction
+@using Socratic.Commerce.Features.Booking
+@using Socratic.Commerce.Features.Donation
+@using Socratic.Commerce.Features.Gift
+@using Socratic.Commerce.Features.GroupBuy
+@using Socratic.Commerce.Features.Hotel
+@using Socratic.Commerce.Features.Quote
+@using Socratic.Commerce.Features.Delivery
+@using Socratic.Commerce.Features.Subscription
 @using Shopping.Application.Protos
 @using SharedKernel.ValueObjects
 @using Domain.Entities
@@ -1545,49 +1545,49 @@ toastService.ShowError("Не удалось выполнить платеж");</
                     <div class="showcase-section-header">
                         <div class="showcase-section-title-wrap">
                             <Icon Name="extension" class="showcase-section-icon" />
-                            <h3 class="showcase-section-title">Shared — Отраслевые модули (Universal Modules)</h3>
+                            <h3 class="showcase-section-title">Commerce — Коммерческие фичи (Commerce Features)</h3>
                         </div>
-                        <span class="showcase-lib-badge">Shared.Modules</span>
+                        <span class="showcase-lib-badge">Commerce.Features</span>
                     </div>
 
                     <div class="showcase-cards-grid">
-                        <!-- Module Card: Auction -->
+                        <!-- Feature Card: Auction -->
                         <div class="showcase-card">
                             <div class="showcase-card-header">
                                 <div class="showcase-card-title-group">
-                                    <h4 class="showcase-card-title">AuctionBiddingModule</h4>
-                                    <p class="showcase-card-desc">Модуль аукциона с живым таймером и вводом ставки</p>
+                                    <h4 class="showcase-card-title">AuctionBiddingFeature</h4>
+                                    <p class="showcase-card-desc">Фича аукциона с живым таймером и вводом ставки</p>
                                 </div>
                             </div>
                             <div class="showcase-card-body" style="align-items: center;">
                                 <Button Variant="ButtonVariant.Filled" OnClick="@(() => isAuctionModalOpen = true)">
                                     <Icon Name="gavel" Slot="icon" />
-                                    Открыть модуль торгов
+                                    Открыть фичу торгов
                                 </Button>
                             </div>
                         </div>
 
-                        <!-- Module Card: Donation -->
+                        <!-- Feature Card: Donation -->
                         <div class="showcase-card">
                             <div class="showcase-card-header">
                                 <div class="showcase-card-title-group">
-                                    <h4 class="showcase-card-title">DonationWidgetModule</h4>
+                                    <h4 class="showcase-card-title">DonationWidgetFeature</h4>
                                     <p class="showcase-card-desc">Виджет благотворительности с быстрыми пресетами сумм</p>
                                 </div>
                             </div>
                             <div class="showcase-card-body" style="align-items: center;">
                                 <Button Variant="ButtonVariant.FilledTonal" OnClick="@(() => isDonationModalOpen = true)">
                                     <Icon Name="favorite" Slot="icon" />
-                                    Открыть модуль доната
+                                    Открыть фичу доната
                                 </Button>
                             </div>
                         </div>
 
-                        <!-- Module Card: Subscription -->
+                        <!-- Feature Card: Subscription -->
                         <div class="showcase-card">
                             <div class="showcase-card-header">
                                 <div class="showcase-card-title-group">
-                                    <h4 class="showcase-card-title">SubscriptionPlanModule</h4>
+                                    <h4 class="showcase-card-title">SubscriptionPlanFeature</h4>
                                     <p class="showcase-card-desc">Тарифные планы и карточки регулярной подписки</p>
                                 </div>
                             </div>
@@ -1599,11 +1599,11 @@ toastService.ShowError("Не удалось выполнить платеж");</
                             </div>
                         </div>
 
-                        <!-- Module Card: Booking -->
+                        <!-- Feature Card: Booking -->
                         <div class="showcase-card">
                             <div class="showcase-card-header">
                                 <div class="showcase-card-title-group">
-                                    <h4 class="showcase-card-title">BookingCalendarModule</h4>
+                                    <h4 class="showcase-card-title">BookingCalendarFeature</h4>
                                     <p class="showcase-card-desc">Календарное бронирование услуг и времени специалистов</p>
                                 </div>
                             </div>
@@ -1641,26 +1641,26 @@ toastService.ShowError("Не удалось выполнить платеж");</
     </Actions>
 </MaterialDialog>
 
-<!-- Domain Modules Modals -->
-<AuctionBiddingModule IsOpen="@isAuctionModalOpen"
+<!-- Domain Features Modals -->
+<AuctionBiddingFeature IsOpen="@isAuctionModalOpen"
                       IsOpenChanged="v => isAuctionModalOpen = v"
                       Product="@demoProduct"
                       UxMode="@demoUxMode"
                       OnConfirmed="@(res => toastService.ShowSuccess($"Ставка {res.slot} принята!"))" />
 
-<DonationWidgetModule IsOpen="@isDonationModalOpen"
+<DonationWidgetFeature IsOpen="@isDonationModalOpen"
                       IsOpenChanged="v => isDonationModalOpen = v"
                       Product="@demoProduct"
                       UxMode="@demoUxMode"
                       OnConfirmed="@(res => toastService.ShowSuccess($"Пожертвование успешно отправлено!"))" />
 
-<SubscriptionPlanModule IsOpen="@isSubscriptionModalOpen"
+<SubscriptionPlanFeature IsOpen="@isSubscriptionModalOpen"
                         IsOpenChanged="v => isSubscriptionModalOpen = v"
                         Product="@demoProduct"
                         UxMode="@demoUxMode"
                         OnConfirmed="@(res => toastService.ShowSuccess($"Подписка оформлена!"))" />
 
-<BookingCalendarModule IsOpen="@isBookingModalOpen"
+<BookingCalendarFeature IsOpen="@isBookingModalOpen"
                        IsOpenChanged="v => isBookingModalOpen = v"
                        Product="@demoProduct"
                        UxMode="@demoUxMode"
