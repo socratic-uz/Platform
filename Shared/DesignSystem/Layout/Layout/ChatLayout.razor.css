@@ -1,0 +1,16 @@
+/* Socratic Chat Layout Primitives - Collocated with ChatLayout */
+
+.chat-view {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+}
+
+.page-width {
+    max-width: 1024px;
+    width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+}

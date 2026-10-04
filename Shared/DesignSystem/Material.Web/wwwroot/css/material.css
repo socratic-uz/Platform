@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Socratic Material.Web - Master Design System Stylesheet (M3 & M3 Expressive)
+   ========================================================================== */
+
+/* Typography Fonts (Local M3 Icon & Typeface Fonts) */
+@import "fonts/material-symbols-outlined.css";
+@import "fonts/roboto.css";
+@import "fonts/montserrat.css";
+
+/* Design Tokens */
+@import "tokens/spacing.css";
+@import "tokens/geometry.css";
+@import "tokens/elevation.css";
+@import "tokens/motion.css";
+@import "tokens/shape.css";
+@import "tokens/z-index.css";
+@import "tokens/typography.css";
+
+/* Themes (Default Color Tokens) */
+@import "themes/dark.css";
+@import "themes/light.css";
+
+/* Component Primitives */
+@import "components/cards.css";
+@import "components/badges.css";
+@import "components/skeletons.css";
+@import "components/empty-state.css";
+@import "components/chips.css";
+@import "components/forms.css";

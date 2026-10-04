@@ -1,0 +1,125 @@
+/* Material Design 3 Expressive - Form Controls & Button Enhancements */
+
+/* Button & Interactive Enhancements */
+md-filled-button,
+md-outlined-button,
+md-elevated-button,
+md-tonal-button,
+md-text-button {
+    --md-filled-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
+    min-height: 48px;
+    touch-action: manipulation;
+    font-weight: 600;
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+md-filled-button:active,
+md-outlined-button:active,
+md-elevated-button:active,
+md-tonal-button:active {
+    transform: scale(0.97);
+}
+
+/* Form Controls & Fieldsets (Strict CSS Grid) */
+.m3-form-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.m3-form-grid.two-cols {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.m3-fieldset {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
+    margin: 0;
+    background: var(--md-sys-color-surface-container-low);
+}
+
+.m3-legend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+    padding: 0 0.5rem;
+}
+
+md-outlined-text-field,
+md-filled-text-field,
+md-outlined-select,
+md-filled-select {
+    width: 100%;
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
+}
+
+/* Blazor EditForm Validation Indicators */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--md-sys-color-primary);
+}
+
+.invalid {
+    outline: 1px solid var(--md-sys-color-error);
+}
+
+.validation-message {
+    color: var(--md-sys-color-error);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
+}
+
+/* Input Type Number Reset */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Material Design Color Picker Inputs */
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    height: 48px;
+    width: 48px;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+}
+
+::-webkit-color-swatch {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    height: 48px;
+    width: 48px;
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+}
+
+::-moz-color-swatch {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+}
+

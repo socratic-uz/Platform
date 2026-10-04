@@ -11,19 +11,20 @@ nav {
     top: 0;
     width: 4rem;
     height: 100vh;
+    height: 100dvh;
     border-radius: 0 24px 24px 0;
     z-index: 2;
     background: rgb(from var(--md-sys-color-surface-container) r g b / .7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: var(--md-sys-color-on-surface);
-    padding: 20px 0;
+    padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
     align-self: start;
     order: 1;
     overflow: visible;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 839.98px) {
     nav {
         position: fixed;
         top: auto;

@@ -7,6 +7,7 @@
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
+    container-type: inline-size;
 }
 
 ::deep .table-container {
@@ -87,7 +88,7 @@
 ::deep input,
 ::deep select,
 ::deep textarea {
-    background: var(--md-sys-color-surface-5);
+    background: var(--md-sys-color-surface-container-highest, var(--md-sys-color-surface-variant));
     color: var(--md-sys-color-on-surface);
     padding: 0.25rem 1rem;
     justify-self: start;
@@ -204,7 +205,14 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 540px) {
+@container (max-width: 599.98px) {
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
     .card-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 0.75rem;

@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Material Design 3 Expressive - Spatial Geometry & Breakpoint Scale
+   Specifies standard aspect ratios, M3 Window Size Classes, and Viewport Safeties
+   ========================================================================== */
+
+:root {
+    /* ─── 1. M3 Expressive Mathematical Aspect Ratios ────────────── */
+    --md-sys-ratio-square: 1 / 1;        /* QR codes, Avatars, Keypad Buttons, Steppers */
+    --md-sys-ratio-video: 16 / 9;        /* Video Streams, CCTV, Promo Hero Banners */
+    --md-sys-ratio-card: 4 / 3;          /* Universal Product Cards & Media Previews */
+    --md-sys-ratio-portrait: 3 / 4;      /* Smart Badges, Tickets, Loyalty Pass */
+    --md-sys-ratio-kiosk: 16 / 10;       /* Self-Service Kiosks & POS Customer Displays */
+    --md-sys-ratio-wide: 21 / 9;         /* Cinematic Panoramic Headers */
+
+    /* ─── 2. M3 Window Size Class Breakpoint Constants ───────────── */
+    /* Reference values matching M3 specification:
+       Compact:   < 600px
+       Medium:    600px - 839.98px
+       Expanded:  840px - 1199.98px
+       Large:     1200px - 1599.98px
+       ExtraLarge: >= 1600px
+    */
+    --md-sys-breakpoint-compact: 599.98px;
+    --md-sys-breakpoint-medium: 839.98px;
+    --md-sys-breakpoint-expanded: 1199.98px;
+    --md-sys-breakpoint-large: 1599.98px;
+
+    /* ─── 3. Fluid Page Gutters & Safe Margins (clamp without media query) ── */
+    --md-sys-gutter-page: clamp(1rem, 2vw + 0.5rem, 2.5rem);
+    --md-sys-gutter-section: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* ─── Aspect Ratio Utility Classes ─────────────────────────────────────── */
+.m3-ratio-square {
+    aspect-ratio: var(--md-sys-ratio-square) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-video {
+    aspect-ratio: var(--md-sys-ratio-video) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-card {
+    aspect-ratio: var(--md-sys-ratio-card) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-portrait {
+    aspect-ratio: var(--md-sys-ratio-portrait) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-kiosk {
+    aspect-ratio: var(--md-sys-ratio-kiosk) !important;
+    object-fit: cover;
+}
+
+/* ─── Scrollbar Utility Classes ────────────────────────────────────────── */
+.scrollbar-thin {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent !important;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-outline);
+}
+
+.scrollbar-none,
+.no-scrollbar {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}

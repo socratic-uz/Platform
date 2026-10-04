@@ -1,11 +1,12 @@
 @namespace Shared.Components
 @using SharedKernel.ValueObjects
 @using Domain.Entities
+@using Material.Web.Components
 
 @if (IsOpen && Product != null)
 {
-    <div class="promotion-modal-backdrop" @onclick="CloseModal">
-        <div class="promotion-modal-card glass" @onclick:stopPropagation="true" role="dialog" aria-modal="true">
+    <MaterialDialog Open="@IsOpen" OpenChanged="@((bool v) => { if (!v) CloseModal(); })" style="max-width: 860px; width: 100%;">
+        <Headline>
             <div class="promotion-modal-header">
                 <div class="header-title-group">
                     <div class="header-icon-wrap">
@@ -18,7 +19,8 @@
                 </div>
                 <IconButton Icon="close" Variant="IconButtonVariant.Standard" AriaLabel="Закрыть" OnClick="CloseModal" />
             </div>
-
+        </Headline>
+        <Content>
             @if (CurrentStep == PromotionModalStep.SelectPlan)
             {
                 <div class="promotion-modal-body">
@@ -36,7 +38,7 @@
                             <div class="plan-card @(isSelected ? "selected" : "")" @onclick="() => SelectPlan(plan)">
                                 @if (plan.PlanType == PromotionPlanType.MonthlyTurbo)
                                 {
-                                    <span class="popular-badge">Популярный выбор</span>
+                                    <span class="badge badge-pro popular-badge">Популярный выбор</span>
                                 }
                                 <div class="plan-card-header">
                                     <h4 class="plan-name">@plan.Name</h4>
@@ -94,13 +96,6 @@
                         </label>
                     </div>
                 </div>
-
-                <div class="promotion-modal-footer">
-                    <Button Variant="ButtonVariant.Text" OnClick="CloseModal">Отмена</Button>
-                    <Button Variant="ButtonVariant.Filled" Icon="lock" OnClick="ProceedToPayment">
-                        Оплатить @SelectedPlan.PriceUzs.ToString("N0") UZS
-                    </Button>
-                </div>
             }
             else if (CurrentStep == PromotionModalStep.PaymentProcessing)
             {
@@ -147,10 +142,6 @@
                         }
                     </div>
                 </div>
-
-                <div class="promotion-modal-footer">
-                    <Button Variant="ButtonVariant.Text" OnClick="() => CurrentStep = PromotionModalStep.SelectPlan">← Назад к выбору тарифа</Button>
-                </div>
             }
             else if (CurrentStep == PromotionModalStep.Success)
             {
@@ -184,11 +175,25 @@
                         Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).
                     </p>
                 </div>
-
-                <div class="promotion-modal-footer">
-                    <Button Variant="ButtonVariant.Filled" OnClick="CloseModal">Готово</Button>
-                </div>
             }
-        </div>
-    </div>
+        </Content>
+        <Actions>
+            @if (CurrentStep == PromotionModalStep.SelectPlan)
+            {
+                <Button Variant="ButtonVariant.Text" OnClick="CloseModal">Отмена</Button>
+                <Button Variant="ButtonVariant.Filled" Icon="lock" OnClick="ProceedToPayment">
+                    Оплатить @SelectedPlan.PriceUzs.ToString("N0") UZS
+                </Button>
+            }
+            else if (CurrentStep == PromotionModalStep.PaymentProcessing)
+            {
+                <Button Variant="ButtonVariant.Text" OnClick="() => CurrentStep = PromotionModalStep.SelectPlan">← Назад к выбору тарифа</Button>
+            }
+            else if (CurrentStep == PromotionModalStep.Success)
+            {
+                <Button Variant="ButtonVariant.Filled" OnClick="CloseModal">Готово</Button>
+            }
+        </Actions>
+    </MaterialDialog>
 }
+

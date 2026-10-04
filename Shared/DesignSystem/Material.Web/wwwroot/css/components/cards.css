@@ -1,0 +1,144 @@
+/* Material Design 3 Expressive - Universal Card Surfaces & Micro-Interactions */
+
+.m3-card {
+    position: relative;
+    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    transition: transform var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+    min-width: 0;
+}
+
+/* Glass Surface Card */
+.m3-card-glass,
+.card-glass,
+.glass-card {
+    background: var(--md-sys-glass-surface-container, rgb(from var(--md-sys-color-surface-container) r g b / 0.65));
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px) saturate(180%));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px) saturate(180%));
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+}
+
+/* Elevated Surface Card */
+.m3-card-elevated {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+/* Outlined Surface Card */
+.m3-card-outlined {
+    background: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    box-shadow: none;
+}
+
+/* Interactive Card Behavior with M3 Sheen & Spring Physics */
+.m3-card-interactive {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.m3-card-interactive::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgb(255 255 255 / 0.12) 0%,
+        rgb(255 255 255 / 0.03) 40%,
+        transparent 100%
+    );
+    opacity: 0.6;
+    transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.m3-card-interactive:hover {
+    transform: translateY(-3px) scale(1.006);
+    box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
+    border-color: var(--md-sys-color-primary);
+}
+
+.m3-card-interactive:hover::before {
+    opacity: 1;
+}
+
+.m3-card-interactive:active {
+    transform: scale(0.97);
+    transition: transform var(--md-sys-motion-duration-short1, 50ms) var(--md-sys-motion-easing-spring);
+}
+
+/* ─── Standard Class Aliases for Direct Use in Blazor Markup ──────────────── */
+.card-glass,
+.card-elevated,
+.card-outlined {
+    position: relative;
+    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    transition: transform var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+    min-width: 0;
+}
+
+.card-glass {
+    background: var(--md-sys-glass-surface-container, rgb(from var(--md-sys-color-surface-container) r g b / 0.65));
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px) saturate(180%));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px) saturate(180%));
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+.card-elevated {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+.card-outlined {
+    background: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    box-shadow: none;
+}
+
+.card-interactive {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-interactive:hover {
+    transform: translateY(-3px) scale(1.006);
+    box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
+    border-color: var(--md-sys-color-primary);
+}
+
+.card-interactive:active {
+    transform: scale(0.97);
+    transition: transform var(--md-sys-motion-duration-short1, 50ms) var(--md-sys-motion-easing-spring);
+}
+
+/* Card Padding Presets */
+.card-padding-sm {
+    padding: var(--space-2, 0.5rem);
+}
+
+.card-padding-md {
+    padding: var(--space-4, 1rem);
+}
+
+.card-padding-lg {
+    padding: var(--space-6, 1.5rem);
+}

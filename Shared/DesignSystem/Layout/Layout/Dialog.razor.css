@@ -1,7 +1,11 @@
-﻿md-dialog {
+md-dialog {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog, 28px);
     width: auto;
+    max-width: min(92vw, 560px);
+    max-height: min(90vh, 90dvh);
+    box-sizing: border-box;
 }
 
-    md-dialog > * {
-        background: var(--md-sys-color-surface-1);
-    }
+md-dialog > * {
+    background: var(--md-sys-color-surface-container-high, var(--md-sys-color-surface-container));
+}

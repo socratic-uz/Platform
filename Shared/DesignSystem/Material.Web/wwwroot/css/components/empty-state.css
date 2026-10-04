@@ -1,0 +1,49 @@
+/* Material Design 3 Expressive - Universal Empty State (Zero-Data Experience) */
+
+.m3-empty-state {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: var(--md-sys-spacing-3, 12px);
+    padding: var(--md-sys-spacing-12, 48px) var(--md-sys-spacing-6, 24px);
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    width: 100%;
+    box-sizing: border-box;
+    margin: var(--md-sys-spacing-6, 24px) 0;
+}
+
+.m3-empty-state-icon {
+    font-size: 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+    color: var(--md-sys-color-primary);
+    opacity: 0.85;
+    display: grid;
+    place-items: center;
+    margin-bottom: var(--md-sys-spacing-2, 8px);
+}
+
+.m3-empty-state-title {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    letter-spacing: -0.01em;
+}
+
+.m3-empty-state-desc {
+    margin: 0 0 var(--md-sys-spacing-3, 12px) 0;
+    font-size: 0.95rem;
+    color: var(--md-sys-color-on-surface-variant);
+    max-width: 440px;
+    line-height: 1.55;
+}
+
+.m3-empty-state-action {
+    display: grid;
+    place-items: center;
+    margin-top: var(--md-sys-spacing-2, 8px);
+}

@@ -323,7 +323,7 @@
                             </div>
                             <div class="showcase-card-body">
                                 <div class="showcase-demo-canvas">
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; width: 100%;">
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; width: 100%;">
                                         <Card Type="elevated" Expressive="true">
                                             <div style="padding: 16px; display: grid; gap: 8px;">
                                                 <span class="label-expressive-upper">PREMIUM PLAN</span>
@@ -1310,7 +1310,7 @@ toastService.ShowError("Не удалось выполнить платеж");</
                         </div>
                         <div class="showcase-card-body">
                             <div class="showcase-demo-canvas">
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center; justify-items: center;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 32px; align-items: center; justify-items: center; width: 100%;">
                                     <!-- QR Display -->
                                     <div style="background: var(--md-sys-color-surface-container-lowest); padding: 20px; border-radius: 20px; box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.3); width: 240px; height: 240px; display: grid; place-items: center;">
                                         <QrCode Data="@qrInputData"

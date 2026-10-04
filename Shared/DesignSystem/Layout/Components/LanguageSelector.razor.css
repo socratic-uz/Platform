@@ -1,4 +1,4 @@
-.socratic-lang-selector {
+.lang-select {
     display: grid;
     align-items: center;
     position: relative;
@@ -14,7 +14,7 @@
     align-items: center;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-button, 20px);
     padding: 0.2rem;
     box-sizing: border-box;
 }
@@ -26,25 +26,32 @@
     min-height: 36px;
     padding: 0.2rem 0.65rem;
     border: none;
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     background: transparent;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .lang-chip-btn:hover {
     color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+    transform: translateY(-1px);
+}
+
+.lang-chip-btn:active {
+    transform: scale(0.96);
 }
 
 .lang-chip-btn.lang-chip--active {
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
-    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-primary) r g b / 0.3);
+    box-shadow: var(--md-sys-glow-primary-subtle);
 }
 
 /* Pill Dropdown Mode (ideal for Header) */
@@ -63,15 +70,19 @@
     min-height: 44px;
     min-width: 44px;
     padding: 0.25rem 0.75rem;
-    border-radius: 22px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     border: 1px solid var(--md-sys-color-outline-variant);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.6);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--md-sys-color-on-surface);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
     box-sizing: border-box;
 }
 
@@ -79,6 +90,11 @@
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.9);
     border-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-primary);
+    transform: translateY(-1px);
+}
+
+.lang-toggle-btn:active {
+    transform: scale(0.97);
 }
 
 .lang-toggle-btn ::deep md-icon {
@@ -107,14 +123,14 @@
     min-width: 160px;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
-    padding: 0.4rem;
-    box-shadow: 0 8px 24px var(--md-sys-color-shadow);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    padding: 0.45rem;
+    box-shadow: var(--md-sys-elevation-expressive-2);
     display: grid;
     grid-auto-flow: row;
     gap: 0.25rem;
     z-index: 100;
-    animation: menuFadeIn 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: menuFadeIn var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-expressive-entrance);
 }
 
 @keyframes menuFadeIn {
@@ -137,14 +153,15 @@
     min-height: 44px;
     padding: 0.4rem 0.75rem;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: transparent;
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
     font-weight: 500;
     text-align: left;
     cursor: pointer;
-    transition: background 0.15s ease;
+    transition: background var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
     box-sizing: border-box;
 }
 

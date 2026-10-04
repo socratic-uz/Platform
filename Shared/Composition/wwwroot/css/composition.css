@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Socratic Platform - Unified Cross-Platform Stylesheet (Composition Layer)
+   Orchestrates Design System, Layout Engine, M3 Tokens and Platform Themes
+   ========================================================================== */
+
+/* 1. Google Material Design 3 Design System (Fonts, M3 Tokens, Themes, Components) */
+@import "../../Material.Web/css/material.css";
+
+/* 2. Master Layout Engine (Grid, Primitives, Navigation, Touch, Glass) */
+@import "../../Layout/css/layout.css";
+
+/* 3. Blazor Runtime UI & Error Boundary Diagnostics */
+@import "blazor.css";

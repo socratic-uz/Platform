@@ -1,4 +1,4 @@
-footer.socratic-global-footer {
+footer.app-footer {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     background: var(--md-sys-color-surface-container-low);
@@ -236,15 +236,25 @@ footer.socratic-global-footer {
     color: var(--md-sys-color-secondary);
 }
 
-/* Responsive Media Queries */
-@media screen and (min-width: 1025px) {
+/* Responsive Media Queries (M3 Breakpoints: 840px / 600px) */
+@media screen and (min-width: 840px) {
     .footer-primary-grid {
         grid-template-columns: minmax(260px, 1.35fr) repeat(4, minmax(140px, 1fr));
         gap: 3rem 2rem;
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 641px) {
+@media screen and (max-width: 839.98px) {
+    footer.app-footer {
+        padding: 2.5rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 16px)) 1.25rem;
+    }
+
+    /* When inside landing layout or no-nav, avoid the tall 5.5rem bottom nav buffer */
+    :global(.landing-grid) footer.app-footer,
+    :global(.nav-only) footer.app-footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom, 16px));
+    }
+
     .footer-primary-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2.5rem 2rem;
@@ -256,17 +266,7 @@ footer.socratic-global-footer {
     }
 }
 
-@media screen and (max-width: 767px) {
-    footer.socratic-global-footer {
-        padding: 2.5rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 16px)) 1.25rem;
-    }
-
-    /* When inside landing layout or no-nav, avoid the tall 5.5rem bottom nav buffer */
-    :global(.socratic-landing-shell) footer.socratic-global-footer,
-    :global(.nav-only) footer.socratic-global-footer {
-        padding-bottom: calc(2rem + env(safe-area-inset-bottom, 16px));
-    }
-
+@media screen and (max-width: 599.98px) {
     .footer-primary-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
@@ -285,7 +285,7 @@ footer.socratic-global-footer {
 }
 
 @media all and (display-mode: fullscreen) {
-    footer.socratic-global-footer {
+    footer.app-footer {
         display: none;
     }
 }

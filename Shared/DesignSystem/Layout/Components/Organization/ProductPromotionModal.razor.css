@@ -1,35 +1,9 @@
-.promotion-modal-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    background: rgb(from var(--md-sys-color-scrim) r g b / 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: grid;
-    place-items: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    animation: fadeIn 0.25s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.promotion-modal-card {
-    width: 100%;
-    max-width: 840px;
-    max-height: 90vh;
-    overflow-y: auto;
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 28px;
-    box-shadow: 0 24px 60px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
-    display: grid;
-    color: var(--md-sys-color-on-surface);
-}
 
 .promotion-modal-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding: 1.5rem 1.75rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -67,26 +41,8 @@
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.btn-close-modal {
-    background: none;
-    border: none;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1.25rem;
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    transition: background 0.2s;
-}
-
-.btn-close-modal:hover {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
 .promotion-modal-body {
-    padding: 1.5rem 1.75rem;
+    padding: 1rem 0;
     display: grid;
     gap: 1.25rem;
 }
@@ -124,7 +80,7 @@
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
     gap: 1rem;
 }
 
@@ -135,7 +91,7 @@
     border-radius: 20px;
     padding: 1.25rem;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1));
     display: grid;
     gap: 0.6rem;
     align-content: start;
@@ -156,13 +112,6 @@
     position: absolute;
     top: -10px;
     right: 16px;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
 }
 
 .plan-card-header {
@@ -262,51 +211,6 @@
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.promotion-modal-footer {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: end;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 1.75rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.btn-cancel {
-    padding: 0.65rem 1.25rem;
-    background: transparent;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface);
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    min-height: 48px;
-    display: grid;
-    place-items: center;
-}
-
-.btn-primary-pay {
-    display: inline-grid;
-    grid-auto-flow: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.65rem 1.75rem;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    border: none;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    cursor: pointer;
-    min-height: 48px;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.btn-primary-pay:hover {
-    transform: translateY(-1px);
-    opacity: 0.94;
-}
-
 .invoice-summary-box {
     padding: 1.25rem;
     background: var(--md-sys-color-surface-container);
@@ -348,23 +252,6 @@
     color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
     text-align: center;
-}
-
-.btn-confirm-paid {
-    display: inline-grid;
-    grid-auto-flow: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 2rem;
-    background: var(--md-sys-color-tertiary);
-    color: var(--md-sys-color-on-tertiary);
-    border: none;
-    border-radius: 14px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    min-height: 48px;
-    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-tertiary) r g b / 0.35);
 }
 
 .success-step {

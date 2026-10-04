@@ -26,19 +26,21 @@
 .file-card {
     position: relative;
     aspect-ratio: 1;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     overflow: hidden;
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-shadow: 0 2px 4px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
-    background-color: var(--md-sys-color-surface-container-lowest, #ffffff);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    background-color: var(--md-sys-color-surface-container-lowest);
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
 
 .file-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
+    border-color: var(--md-sys-color-primary);
 }
 
 .file-preview-area {
@@ -153,24 +155,27 @@
 .upload-card {
     position: relative;
     aspect-ratio: 1;
-    border-radius: 12px;
-    border: 2px dashed var(--md-sys-color-outline, #79747e);
-    background: var(--md-sys-color-surface-container-low, #f4f4f4);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border: 2px dashed var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface-container-low);
     display: grid;
     place-items: center;
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
 }
 
 .upload-card:hover {
-    background: var(--md-sys-color-surface-container-high, #ececec);
-    border-color: var(--md-sys-color-primary, #6750a4);
-    transform: translateY(-2px);
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-primary);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
 .upload-card.dragging {
-    background: var(--md-sys-color-primary-container, #eaddff);
-    border-color: var(--md-sys-color-primary, #6750a4);
+    background: var(--md-sys-color-primary-container);
+    border-color: var(--md-sys-color-primary);
     border-style: solid;
 }
 
@@ -189,12 +194,12 @@
 
 .upload-icon {
     font-size: 28px;
-    color: var(--md-sys-color-primary, #6750a4);
-    transition: transform 0.2s ease;
+    color: var(--md-sys-color-primary);
+    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-spring-bouncy);
 }
 
 .upload-card:hover .upload-icon {
-    transform: scale(1.1) rotate(3deg);
+    transform: scale(1.2) rotate(6deg);
 }
 
 .upload-text {

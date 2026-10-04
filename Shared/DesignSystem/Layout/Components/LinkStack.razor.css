@@ -1,25 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-}
-
 section {
     align-self: start;
     display: grid;
     grid-auto-flow: row;
     text-align: start;
-    background: var(--md-sys-color-surface-1);
-    white-space: break-spaces;
+    background: var(--md-sys-color-surface-container, var(--md-sys-color-surface));
     border-radius: 24px;
     overflow: auto;
-    white-space: nowrap;
-    font-size: .75rem;
+    font-size: .875rem;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 839.98px) {
     section {
         grid-column: initial;
     }

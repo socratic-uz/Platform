@@ -4,7 +4,7 @@
 @inject NavigationManager Navigation
 @inject IStringLocalizer L
 
-<div class="socratic-lang-selector @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
+<div class="lang-select @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
 	@if (Variant == "inline")
 	{
 		<div class="lang-inline-grid" role="group" aria-label="@(L?["Language"] ?? "Язык")">

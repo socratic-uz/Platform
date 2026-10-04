@@ -1,3 +1,4 @@
+/* Material Design 3 Theme - Dark Color Roles */
 :root, :root[data-theme="dark"], body.dark, [data-theme="dark"] {
   --md-sys-color-primary: rgb(112 220 188);
   --md-sys-color-surface-tint: rgb(112 220 188);
@@ -49,7 +50,7 @@
   --md-sys-color-on-tertiary-fixed-variant: rgb(44 74 96);
   --md-sys-color-surface-dim: rgb(14 21 19);
   --md-sys-color-surface-bright: rgb(52 59 57);
-  --md-sys-color-surface-container-lowest: rgb(9 15 14);
+  --md-sys-color-surface-container-lowest: rgb(9 16 14);
   --md-sys-color-surface-container-low: rgb(23 29 27);
   --md-sys-color-surface-container: rgb(27 33 31);
   --md-sys-color-surface-container-high: rgb(37 43 41);

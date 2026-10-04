@@ -1,11 +1,6 @@
-.socratic-subscription-card {
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
-    padding: 1.75rem;
-    color: var(--md-sys-color-on-surface);
-    margin-bottom: 2rem;
-    box-sizing: border-box;
+.pricing-card {
+    padding: var(--space-6, 1.75rem);
+    margin-bottom: var(--space-6, 2rem);
 }
 
 .subscription-header {
@@ -13,41 +8,6 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     margin-bottom: 1.25rem;
-}
-
-.subscription-status-badge {
-    display: inline-grid;
-    grid-auto-flow: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.35rem 0.9rem;
-    border-radius: 24px;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.badge-trial {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-with-ads {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-error);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-pro {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-expired {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-error);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .badge-icon {
@@ -94,7 +54,7 @@
 /* Сетка тарифов */
 .tiers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.25rem;
     margin-top: 1.5rem;
 }
@@ -103,12 +63,12 @@
     position: relative;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     padding: 1.5rem;
     display: grid;
     align-content: space-between;
     gap: 1.25rem;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1)), border-color var(--md-sys-motion-duration-short2, 100ms) ease;
 }
 
 .tier-box:hover {
@@ -200,135 +160,8 @@
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
-
-.tier-select-btn {
-    width: 100%;
-    min-height: 48px;
-    padding: 0.7rem 1rem;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-    display: inline-grid;
-    grid-auto-flow: column;
-    place-items: center;
-    gap: 0.5rem;
-    transition: opacity 0.2s ease;
-}
-
-.tier-select-btn.primary {
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-}
-
-.tier-select-btn.secondary {
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-
-.tier-select-btn:hover {
-    opacity: 0.9;
-}
-
-/* Modal */
-.modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: var(--md-sys-color-scrim);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 9999;
-    display: grid;
-    place-items: center;
-    padding: 1rem;
-}
-
-.subscription-modal {
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
-    width: 100%;
-    max-width: 500px;
-    padding: 1.75rem;
-    box-shadow: 0 16px 48px var(--md-sys-color-shadow);
-    display: grid;
-    gap: 1.25rem;
-}
-
-.modal-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-}
-
-.modal-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.modal-close-btn {
-    background: transparent;
-    border: none;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1.25rem;
-    cursor: pointer;
-    min-width: 48px;
-    min-height: 48px;
-    display: grid;
-    place-items: center;
-}
-
 .payment-methods-selector {
     display: grid;
     gap: 0.75rem;
-    margin: 0.5rem 0;
-}
-
-.method-option {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    min-height: 48px;
-    color: var(--md-sys-color-on-surface);
-}
-
-.modal-footer {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: end;
-    gap: 0.75rem;
-}
-
-.btn-cancel {
-    padding: 0.6rem 1.2rem;
-    border: 1px solid var(--md-sys-color-outline);
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-    border-radius: 8px;
-    cursor: pointer;
-    min-height: 48px;
-    display: grid;
-    place-items: center;
-}
-
-.btn-confirm {
-    padding: 0.6rem 1.4rem;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    min-height: 48px;
-    display: grid;
-    place-items: center;
+    margin: 1rem 0;
 }

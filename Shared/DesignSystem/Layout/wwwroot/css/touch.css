@@ -25,8 +25,8 @@ html, body {
     user-select: none;
 }
 
-/* Allow text selection specifically for editable inputs and reading containers */
-input, textarea, [contenteditable="true"], .selectable-text {
+/* Allow text selection specifically for editable inputs, reading containers, and semantic text */
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
     -webkit-user-select: text;
     user-select: text;
     -webkit-touch-callout: default;
@@ -168,11 +168,11 @@ md-dialog:not(:defined) {
 
 /* ─── 6. M3 Expressive Grid Primitives & Z-Index Tokens ─────── */
 :root {
-    --m3-z-content: 1;
-    --m3-z-sticky: 10;
-    --m3-z-drawer: 50;
-    --m3-z-dialog: 100;
-    --m3-z-popover: 200;
+    --m3-z-content: var(--md-sys-z-index-content, 1);
+    --m3-z-sticky: var(--md-sys-z-index-sticky, 10);
+    --m3-z-drawer: var(--md-sys-z-index-drawer, 50);
+    --m3-z-dialog: var(--md-sys-z-index-dialog, 100);
+    --m3-z-popover: var(--md-sys-z-index-popover, 200);
 }
 
 /* Reusable Grid Primitives for Flexbox Elimination */
@@ -325,5 +325,33 @@ md-dialog [slot="actions"] {
     align-items: center;
     gap: 8px;
 }
+
+/* Touch Target Ergonomics & A11y Standards (Fitts's Law >= 48px) */
+.touch-target-48,
+md-icon-button,
+button.eco-btn,
+.qty-stepper button,
+.gateway-card,
+.option-item {
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.touch-target-44 {
+    min-width: 44px;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+
+.interactive-chip {
+    display: inline-grid;
+    place-items: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+
 
 

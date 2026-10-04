@@ -1,0 +1,53 @@
+/* Material Design 3 Expressive - Elevation Levels & Colored Shadows */
+:root {
+    --md-sys-elevation-level0: none;
+    --md-sys-elevation-level1: 0 1px 3px 1px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.15),
+                              0 1px 2px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.30);
+    --md-sys-elevation-level2: 0 2px 6px 2px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.15),
+                              0 1px 2px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.30);
+    --md-sys-elevation-level3: 0 4px 8px 3px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.15),
+                              0 1px 3px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.30);
+    --md-sys-elevation-level4: 0 6px 10px 4px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.15),
+                              0 2px 3px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.30);
+    --md-sys-elevation-level5: 0 8px 12px 6px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.15),
+                              0 4px 4px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.30);
+
+    /* Aliases with hyphen for CSS property consistency */
+    --md-sys-elevation-level-0: var(--md-sys-elevation-level0);
+    --md-sys-elevation-level-1: var(--md-sys-elevation-level1);
+    --md-sys-elevation-level-2: var(--md-sys-elevation-level2);
+    --md-sys-elevation-level-3: var(--md-sys-elevation-level3);
+    --md-sys-elevation-level-4: var(--md-sys-elevation-level4);
+    --md-sys-elevation-level-5: var(--md-sys-elevation-level5);
+
+    /* M3 Expressive Chromatic Elevations (Tinted with Primary / Ambient) */
+    --md-sys-elevation-expressive-1: 0 8px 24px -4px rgb(from var(--md-sys-color-primary) r g b / 0.12),
+                                     0 2px 6px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.08);
+    --md-sys-elevation-expressive-2: 0 14px 34px -6px rgb(from var(--md-sys-color-primary) r g b / 0.20),
+                                     0 4px 12px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.10);
+    --md-sys-elevation-expressive-3: 0 20px 48px -8px rgb(from var(--md-sys-color-primary) r g b / 0.28),
+                                     0 6px 18px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.12);
+
+    /* M3 Expressive Glows */
+    --md-sys-glow-primary-subtle: 0 0 20px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+    --md-sys-glow-primary-strong: 0 0 32px rgb(from var(--md-sys-color-primary) r g b / 0.45);
+    --md-sys-glow-tertiary-subtle: 0 0 20px rgb(from var(--md-sys-color-tertiary) r g b / 0.25);
+    --md-sys-glow-error-subtle: 0 0 20px rgb(from var(--md-sys-color-error) r g b / 0.25);
+
+    /* Legacy M3 Glow Aliases */
+    --md-sys-elevation-primary-glow: var(--md-sys-glow-primary-subtle);
+    --md-sys-elevation-tertiary-glow: var(--md-sys-glow-tertiary-subtle);
+    --md-sys-elevation-surface-tint: 0 0 0 1px rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
+
+    /* Liquid Glass & Translucency Tokens */
+    --md-sys-glass-surface: rgb(from var(--md-sys-color-surface) r g b / 0.72);
+    --md-sys-glass-surface-container: rgb(from var(--md-sys-color-surface-container) r g b / 0.65);
+    --md-sys-glass-surface-container-high: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.75);
+    --md-sys-glass-border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
+    --md-sys-glass-border-dark: 1px solid rgb(255 255 255 / 0.08);
+    --md-sys-glass-border-light: 1px solid rgb(0 0 0 / 0.08);
+    --md-sys-glass-blur-subtle: blur(12px) saturate(160%);
+    --md-sys-glass-blur-standard: blur(20px) saturate(180%);
+    --md-sys-glass-blur-heavy: blur(32px) saturate(200%);
+    --md-sys-glass-backdrop: rgb(from var(--md-sys-color-scrim, #000) r g b / 0.45);
+}

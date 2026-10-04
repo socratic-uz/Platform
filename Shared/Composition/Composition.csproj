@@ -108,5 +108,9 @@
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Portal\Landing\Landing.csproj" Condition="('$(Landing)' == '' or !Exists('$(Landing)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Portal\Landing\Landing.csproj')" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
 </Project>
 

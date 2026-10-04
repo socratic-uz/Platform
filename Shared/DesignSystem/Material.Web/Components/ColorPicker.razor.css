@@ -82,21 +82,21 @@
 
 /* Popover Panel */
 .picker-popover-panel {
-    background: var(--md-sys-color-surface-container, #f3edf7);
-    border: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
-    border-radius: 16px;
-    padding: 14px;
-    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.18);
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    padding: 16px;
+    box-shadow: var(--md-sys-elevation-expressive-2);
     display: grid;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 12px;
-    animation: fadeInScale 0.15s cubic-bezier(0.2, 0, 0, 1);
+    animation: fadeInScale var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-expressive-entrance);
 }
 
 @keyframes fadeInScale {
     from {
         opacity: 0;
-        transform: translateY(-4px) scale(0.98);
+        transform: translateY(-6px) scale(0.96);
     }
     to {
         opacity: 1;
@@ -108,8 +108,8 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .picker-popover-title {
@@ -117,7 +117,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--md-sys-color-on-surface-variant, #49454f);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 .picker-palette-grid {
@@ -129,18 +129,19 @@
 .picker-palette-swatch {
     width: 32px;
     height: 32px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     border: 1px solid var(--md-sys-color-outline-variant);
     cursor: pointer;
     padding: 0;
     display: grid;
     place-items: center;
-    transition: transform 0.15s, box-shadow 0.15s;
+    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-spring-snappy),
+                box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard);
 }
 
 .picker-palette-swatch:hover {
-    transform: scale(1.12);
-    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+    transform: scale(1.15);
+    box-shadow: var(--md-sys-elevation-level-2), var(--md-sys-glow-primary-subtle);
 }
 
 .picker-palette-swatch.selected {

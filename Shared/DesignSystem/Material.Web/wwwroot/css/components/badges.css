@@ -1,0 +1,226 @@
+/* Material Design 3 Expressive - Badges & Status Indicators */
+
+.badge,
+.m3-badge,
+.m3-status-badge,
+.order-status-badge,
+.item-status-pill {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.m3-status-badge.success,
+.m3-status-badge.paid,
+.m3-status-badge.status-paid,
+.order-status-badge.status-paid,
+.item-status-pill.status-paid,
+.m3-status-badge.completed,
+.m3-status-badge.status-completed,
+.order-status-badge.status-completed,
+.item-status-pill.status-completed,
+.badge-ready {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.m3-status-badge.warning,
+.m3-status-badge.making,
+.m3-status-badge.status-making,
+.order-status-badge.status-making,
+.item-status-pill.status-making,
+.badge-making {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.m3-status-badge.made,
+.m3-status-badge.status-made,
+.order-status-badge.status-made,
+.item-status-pill.status-made {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.m3-status-badge.info,
+.m3-status-badge.collecting,
+.m3-status-badge.status-collecting,
+.order-status-badge.status-collecting,
+.item-status-pill.status-collecting,
+.m3-status-badge.collected,
+.m3-status-badge.status-collected,
+.order-status-badge.status-collected,
+.item-status-pill.status-collected,
+.m3-status-badge.shipping,
+.m3-status-badge.status-shipping,
+.order-status-badge.status-shipping,
+.item-status-pill.status-shipping {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.m3-status-badge.error,
+.m3-status-badge.canceled,
+.m3-status-badge.status-canceled,
+.order-status-badge.status-canceled,
+.item-status-pill.status-canceled {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+}
+
+.m3-status-badge.created,
+.m3-status-badge.status-created,
+.order-status-badge.status-created,
+.item-status-pill.status-created {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.badge-trial,
+.badge.trial {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-with-ads,
+.badge.with-ads {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-pro,
+.badge.pro {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-expired,
+.badge.expired {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-verified,
+.badge.verified {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-none,
+.badge.none,
+.badge-blocked,
+.badge.blocked {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.badge-active,
+.badge.active {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.badge-completed,
+.badge.completed {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.badge-paused,
+.badge.paused {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.badge-cancelled,
+.badge.cancelled {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.badge-counter {
+    display: inline-grid;
+    place-items: center;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow, #000000) r g b / 0.25);
+    line-height: 1;
+}
+
+.m3-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background: currentColor;
+}
+
+.m3-status-dot.pulse {
+    position: relative;
+}
+
+.m3-status-dot.pulse::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.4;
+    animation: m3-pulse 2s cubic-bezier(0.2, 0, 0, 1) infinite;
+}
+
+@keyframes m3-pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Universal Pill Badges (Section Headers, Feature Tags) */
+.m3-pill-badge {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
+    color: var(--md-sys-color-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.m3-pill-badge.tertiary {
+    background: rgb(from var(--md-sys-color-tertiary) r g b / 0.15);
+    border-color: rgb(from var(--md-sys-color-tertiary) r g b / 0.35);
+    color: var(--md-sys-color-tertiary);
+}
+
+.m3-pill-badge.secondary {
+    background: rgb(from var(--md-sys-color-secondary) r g b / 0.15);
+    border-color: rgb(from var(--md-sys-color-secondary) r g b / 0.35);
+    color: var(--md-sys-color-secondary);
+}

@@ -1,4 +1,4 @@
-header.socratic-app-header {
+header.app-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
@@ -10,15 +10,15 @@ header.socratic-app-header {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    padding: 0.5rem 1.5rem;
-    min-height: 64px;
+    padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+    min-height: calc(64px + env(safe-area-inset-top, 0px));
     box-sizing: border-box;
     z-index: 50;
     position: relative;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-header.socratic-app-header.header-sticky {
+header.app-header.header-sticky {
     position: sticky;
     top: 0;
 }
@@ -129,7 +129,7 @@ header.socratic-app-header.header-sticky {
 /* ==========================================================================
    Landing Header (Dark Cyber-Fintech Glassmorphism Theme)
    ========================================================================== */
-header.socratic-app-header.socratic-landing-header {
+header.app-header.landing-header {
     background: rgba(4, 6, 10, 0.6);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -144,13 +144,13 @@ header.socratic-app-header.socratic-landing-header {
     transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header.socratic-landing-header .header-grid-layout {
+header.landing-header .header-grid-layout {
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
 }
 
-header.socratic-landing-header .header-brand-link {
+header.landing-header .header-brand-link {
     min-height: 40px;
     gap: 0.65rem;
     padding: 0.25rem 0.65rem;
@@ -158,12 +158,12 @@ header.socratic-landing-header .header-brand-link {
     transition: all 0.25s ease;
 }
 
-header.socratic-landing-header .header-brand-link:hover {
+header.landing-header .header-brand-link:hover {
     background: rgba(56, 189, 248, 0.1);
     transform: translateY(-1px);
 }
 
-header.socratic-landing-header .header-brand-icon-box {
+header.landing-header .header-brand-icon-box {
     width: 32px;
     height: 32px;
     border-radius: 9px;
@@ -173,7 +173,7 @@ header.socratic-landing-header .header-brand-icon-box {
     font-size: 18px;
 }
 
-header.socratic-landing-header .header-brand-text {
+header.landing-header .header-brand-text {
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -182,7 +182,7 @@ header.socratic-landing-header .header-brand-text {
     -webkit-text-fill-color: transparent;
 }
 
-header.socratic-landing-header ::deep .landing-header-nav {
+header.landing-header ::deep .landing-header-nav {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -196,7 +196,7 @@ header.socratic-landing-header ::deep .landing-header-nav {
     backdrop-filter: blur(12px);
 }
 
-header.socratic-landing-header ::deep .landing-nav-link {
+header.landing-header ::deep .landing-nav-link {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -215,26 +215,26 @@ header.socratic-landing-header ::deep .landing-nav-link {
     border: 1px solid transparent;
 }
 
-header.socratic-landing-header ::deep .landing-nav-link md-icon {
+header.landing-header ::deep .landing-nav-link md-icon {
     font-size: 16px;
     color: #38bdf8;
     opacity: 0.8;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-header.socratic-landing-header ::deep .landing-nav-link:hover {
+header.landing-header ::deep .landing-nav-link:hover {
     color: #f8fafc;
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.12);
     transform: translateY(-1px);
 }
 
-header.socratic-landing-header ::deep .landing-nav-link:hover md-icon {
+header.landing-header ::deep .landing-nav-link:hover md-icon {
     opacity: 1;
     transform: scale(1.1);
 }
 
-header.socratic-landing-header ::deep .landing-header-actions {
+header.landing-header ::deep .landing-header-actions {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -242,7 +242,7 @@ header.socratic-landing-header ::deep .landing-header-actions {
     justify-self: end;
 }
 
-header.socratic-landing-header ::deep .lang-toggle-btn {
+header.landing-header ::deep .lang-toggle-btn {
     height: 40px;
     min-height: 40px;
     min-width: 40px;
@@ -257,29 +257,29 @@ header.socratic-landing-header ::deep .lang-toggle-btn {
     transition: all 0.2s ease;
 }
 
-header.socratic-landing-header ::deep .lang-toggle-btn:hover {
+header.landing-header ::deep .lang-toggle-btn:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(56, 189, 248, 0.3);
     color: #38bdf8;
 }
 
-header.socratic-landing-header ::deep .lang-dropdown-menu {
+header.landing-header ::deep .lang-dropdown-menu {
     background: rgba(13, 19, 34, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(20px);
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
-header.socratic-landing-header ::deep .lang-menu-item {
+header.landing-header ::deep .lang-menu-item {
     color: #cbd5e1;
 }
 
-header.socratic-landing-header ::deep .lang-menu-item:hover {
+header.landing-header ::deep .lang-menu-item:hover {
     background: rgba(56, 189, 248, 0.15);
     color: #f8fafc;
 }
 
-header.socratic-landing-header ::deep .landing-auth-btn {
+header.landing-header ::deep .landing-auth-btn {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
@@ -299,12 +299,12 @@ header.socratic-landing-header ::deep .landing-auth-btn {
     box-sizing: border-box;
 }
 
-header.socratic-landing-header ::deep .landing-auth-btn md-icon {
+header.landing-header ::deep .landing-auth-btn md-icon {
     font-size: 16px;
     color: #38bdf8;
 }
 
-header.socratic-landing-header ::deep .landing-auth-btn:hover {
+header.landing-header ::deep .landing-auth-btn:hover {
     background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
     border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
@@ -312,11 +312,11 @@ header.socratic-landing-header ::deep .landing-auth-btn:hover {
     color: #ffffff;
 }
 
-header.socratic-landing-header ::deep .landing-auth-btn:hover md-icon {
+header.landing-header ::deep .landing-auth-btn:hover md-icon {
     color: #ffffff;
 }
 
-header.socratic-landing-header ::deep .landing-mobile-menu-toggle {
+header.landing-header ::deep .landing-mobile-menu-toggle {
     display: none;
     place-items: center;
     width: 44px;
@@ -329,7 +329,7 @@ header.socratic-landing-header ::deep .landing-mobile-menu-toggle {
     transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-header.socratic-landing-header ::deep .landing-mobile-menu-toggle:hover {
+header.landing-header ::deep .landing-mobile-menu-toggle:hover {
     background: rgba(56, 189, 248, 0.15);
     border-color: rgba(56, 189, 248, 0.4);
     color: #38bdf8;
@@ -409,21 +409,21 @@ header.socratic-landing-header ::deep .landing-mobile-menu-toggle:hover {
 }
 
 @media screen and (max-width: 960px) {
-    header.socratic-landing-header ::deep .landing-header-nav,
+    header.landing-header ::deep .landing-header-nav,
     ::deep .landing-header-nav {
         display: none !important;
     }
 
-    header.socratic-landing-header ::deep .landing-mobile-menu-toggle,
+    header.landing-header ::deep .landing-mobile-menu-toggle,
     ::deep .landing-mobile-menu-toggle {
         display: grid;
     }
 }
 
-@media screen and (max-width: 767px) {
-    header.socratic-app-header {
-        padding: 0.4rem 0.75rem;
-        min-height: 56px;
+@media screen and (max-width: 839.98px) {
+    header.app-header {
+        padding: max(0.4rem, env(safe-area-inset-top, 0px)) max(0.75rem, env(safe-area-inset-right, 0px)) 0.4rem max(0.75rem, env(safe-area-inset-left, 0px));
+        min-height: calc(56px + env(safe-area-inset-top, 0px));
     }
 
     ::deep .landing-mobile-menu-backdrop,
@@ -451,7 +451,7 @@ header.socratic-landing-header ::deep .landing-mobile-menu-toggle:hover {
 }
 
 @media all and (display-mode: fullscreen) {
-    header.socratic-app-header {
+    header.app-header {
         display: none;
     }
 }

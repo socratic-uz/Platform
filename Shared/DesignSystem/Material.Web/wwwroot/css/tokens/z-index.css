@@ -1,0 +1,16 @@
+/* Material Design 3 Expressive - Layering & Z-Index Tokens */
+:root {
+    --m3-z-deep: -1;
+    --m3-z-base: 0;
+    --m3-z-raised: 1;
+    --m3-z-sticky: 10;
+    --m3-z-appbar: 20;
+    --m3-z-drawer: 30;
+    --m3-z-bottom-nav: 40;
+    --m3-z-dropdown: 50;
+    --m3-z-backdrop: 90;
+    --m3-z-modal: 100;
+    --m3-z-popover: 110;
+    --m3-z-toast: 120;
+    --m3-z-tooltip: 130;
+}

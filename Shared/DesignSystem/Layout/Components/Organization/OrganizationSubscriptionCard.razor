@@ -2,9 +2,9 @@
 @using SharedKernel.ValueObjects
 @using Domain.Entities
 
-<div class="socratic-subscription-card">
+<div class="card-outlined pricing-card">
     <div class="subscription-header">
-        <div class="subscription-status-badge @GetTierBadgeClass()">
+        <div class="badge @GetTierBadgeClass()">
             <Icon Name="@GetTierIcon()" class="badge-icon" />
             <span>@GetTierBadgeTitle()</span>
         </div>
@@ -90,30 +90,24 @@
         </div>
     </div>
 
-    @if (isChangePlanModalOpen)
-    {
-        <div class="modal-backdrop" @onclick="CloseSelectPlanDialog">
-            <div class="subscription-modal" @onclick:stopPropagation="true">
-                <div class="modal-header">
-                    <h3 class="modal-title">Подключение тарифа: @(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы (25$/мес)" : "С рекламой (5$/мес)")</h3>
-                    <IconButton Icon="close" Variant="IconButtonVariant.Standard" AriaLabel="Закрыть" OnClick="CloseSelectPlanDialog" />
-                </div>
-                <div class="modal-body">
-                    <p class="modal-summary">
-                        Вы выбрали тариф <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы — 25$ в месяц" : "С рекламой — 5$ в месяц")</strong>.
-                    </p>
-                    <div class="payment-methods-selector">
-                        <Radio Name="payment_method" Value="click" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Click Business / Payme Merchant" />
-                        <Radio Name="payment_method" Value="invoice" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Безналичный расчет для юр. лиц (Договор и счет)" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <Button Variant="ButtonVariant.Text" OnClick="CloseSelectPlanDialog">Отмена</Button>
-                    <Button Variant="ButtonVariant.Filled" OnClick="ConfirmPlanChange">
-                        Подтвердить активацию
-                    </Button>
-                </div>
+    <MaterialDialog Open="@isChangePlanModalOpen" OpenChanged="@(v => isChangePlanModalOpen = v)">
+        <Headline>
+            <span>Подключение тарифа: @(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы (25$/мес)" : "С рекламой (5$/мес)")</span>
+        </Headline>
+        <Content>
+            <p class="modal-summary">
+                Вы выбрали тариф <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы — 25$ в месяц" : "С рекламой — 5$ в месяц")</strong>.
+            </p>
+            <div class="payment-methods-selector">
+                <Radio Name="payment_method" Value="click" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Click Business / Payme Merchant" />
+                <Radio Name="payment_method" Value="invoice" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Безналичный расчет для юр. лиц (Договор и счет)" />
             </div>
-        </div>
-    }
+        </Content>
+        <Actions>
+            <Button Variant="ButtonVariant.Text" OnClick="CloseSelectPlanDialog">Отмена</Button>
+            <Button Variant="ButtonVariant.Filled" OnClick="ConfirmPlanChange">
+                Подтвердить активацию
+            </Button>
+        </Actions>
+    </MaterialDialog>
 </div>

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Socratic Platform - Master Layout Engine Stylesheet
+   Aggregates CSS Grid Architecture, Responsive Primitives, Navigation & Effects
+   ========================================================================== */
+
+/* 1. Strict CSS Grid Engine */
+@import "grid.css";
+
+/* 2. Universal Layout Primitives & Container Queries */
+@import "layout/primitives.css";
+
+/* 3. Navigation & App Scaffolding (Headers, Rails, Drawers, BottomNav) */
+@import "layout/navigation.css";
+
+/* 4. Touch, POS & Kiosk Viewport Ergonomics */
+@import "touch.css";
+
+/* 5. Liquid Glass Translucency & Compositor Effects */
+@import "effects/liquid-glass.css";

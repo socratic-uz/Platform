@@ -1,0 +1,57 @@
+/* Material Design 3 Expressive - Filter Chips & Segmented Controls */
+
+.m3-filter-chip {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto max-content;
+    align-items: center;
+    gap: 0.5rem;
+    height: 40px;
+    padding: 0 1rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+.m3-filter-chip:hover {
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface);
+    transform: translateY(-1px);
+}
+
+.m3-filter-chip:active {
+    transform: scale(0.96);
+}
+
+.m3-filter-chip.active,
+.m3-filter-chip[aria-selected="true"] {
+    background: var(--md-sys-color-secondary-container);
+    border-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-weight: 600;
+}
+
+.m3-filter-chip-icon {
+    font-size: 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.m3-filter-chip-count {
+    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.1);
+    padding: 0.1rem 0.45rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.75rem;
+    font-weight: 600;
+}

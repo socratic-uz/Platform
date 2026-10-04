@@ -1,0 +1,50 @@
+/* Material Design 3 Expressive - Zero-CLS Skeleton Shimmer Engine */
+
+.m3-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+}
+
+.m3-skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.45) 50%,
+        transparent 100%
+    );
+    animation: m3-shimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes m3-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.m3-skeleton-text {
+    height: 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
+}
+
+.m3-skeleton-text.short {
+    width: 60%;
+}
+
+.m3-skeleton-circle {
+    border-radius: 50% !important;
+    width: 48px;
+    height: 48px;
+}
+
+.m3-skeleton-card {
+    height: 240px;
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+}
