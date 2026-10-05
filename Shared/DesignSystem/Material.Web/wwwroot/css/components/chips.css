@@ -1,6 +1,7 @@
 /* Material Design 3 Expressive - Filter Chips & Segmented Controls */
 
 .m3-filter-chip {
+    position: relative;
     display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content auto max-content;
@@ -17,10 +18,17 @@
     cursor: pointer;
     user-select: none;
     box-sizing: border-box;
+    touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+@media (pointer: coarse) {
+    .m3-filter-chip {
+        min-height: 48px;
+    }
 }
 
 .m3-filter-chip:hover {

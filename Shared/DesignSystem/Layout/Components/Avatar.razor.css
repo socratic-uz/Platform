@@ -24,8 +24,9 @@
     min-width: 40px;
     max-width: 40px;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: visible;
     cursor: pointer;
+    touch-action: manipulation;
     padding: 0 !important;
     --md-outlined-button-container-shape: 9999px;
     --md-outlined-button-container-height: 40px;
@@ -39,6 +40,17 @@
     --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
     --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
     --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-container ::deep .avatar-button::before,
+::deep .avatar-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .avatar-container ::deep md-outlined-button.avatar-button img,
@@ -97,7 +109,7 @@
 ::deep md-dialog {
     width: min(620px, calc(100vw - 32px));
     max-width: min(620px, calc(100vw - 32px));
-    max-height: min(880px, calc(100vh - 48px));
+    max-height: min(880px, calc(100dvh - 48px));
     --md-dialog-container-color: var(--md-sys-color-surface-container-high);
     --md-dialog-container-shape: 28px;
 }

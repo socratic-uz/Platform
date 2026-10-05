@@ -17,3 +17,6 @@
 
 /* 5. Liquid Glass Translucency & Compositor Effects */
 @import "effects/liquid-glass.css";
+
+/* 6. M3 Expressive Architecture (Shapes, Spring Physics, Colored Glows, Fluid Grid) */
+@import "expressive.css";

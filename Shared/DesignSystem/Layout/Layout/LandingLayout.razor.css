@@ -76,8 +76,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.45rem 1.15rem;
-    min-height: 44px;
-    height: 44px;
+    min-height: 48px;
+    height: 48px;
     border-radius: 9999px;
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.25) 0%, rgba(124, 58, 237, 0.25) 100%);
     border: 1px solid rgba(56, 189, 248, 0.35);
@@ -88,6 +88,7 @@
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     box-sizing: border-box;
+    touch-action: manipulation;
 }
 
 .landing-floating-auth-btn md-icon {
@@ -109,7 +110,7 @@
     transform: translateX(2px);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 599.98px) {
     .landing-floating-controls {
         top: 0.85rem;
         right: 0.85rem;
@@ -122,12 +123,13 @@
     }
 
     .landing-floating-auth-btn {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
         padding: 0;
         place-items: center;
         border-radius: 50%;
+        touch-action: manipulation;
     }
 }

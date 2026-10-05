@@ -22,8 +22,8 @@
 .lang-chip-btn {
     display: grid;
     place-items: center;
-    min-width: 44px;
-    min-height: 36px;
+    min-width: 48px;
+    min-height: 48px;
     padding: 0.2rem 0.65rem;
     border: none;
     border-radius: var(--md-sys-shape-corner-large, 16px);
@@ -33,6 +33,7 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     cursor: pointer;
+    touch-action: manipulation;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
@@ -66,9 +67,9 @@
     grid-auto-columns: auto auto auto;
     align-items: center;
     gap: 0.35rem;
-    height: 44px;
-    min-height: 44px;
-    min-width: 44px;
+    height: 48px;
+    min-height: 48px;
+    min-width: 48px;
     padding: 0.25rem 0.75rem;
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -79,6 +80,7 @@
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
+    touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -150,7 +152,7 @@
     align-items: center;
     gap: 0.65rem;
     width: 100%;
-    min-height: 44px;
+    min-height: 48px;
     padding: 0.4rem 0.75rem;
     border: none;
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -160,6 +162,7 @@
     font-weight: 500;
     text-align: left;
     cursor: pointer;
+    touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
     box-sizing: border-box;

@@ -138,7 +138,7 @@
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 599.98px) {
     .picker-trigger-card {
         grid-template-columns: minmax(0, 1fr);
         padding: 10px 12px;

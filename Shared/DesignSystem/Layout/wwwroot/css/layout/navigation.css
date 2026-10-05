@@ -137,7 +137,6 @@
     grid-template-rows: auto minmax(0, 1fr) auto;
     align-items: center;
     width: calc(80px + env(safe-area-inset-left, 0px));
-    height: 100vh;
     height: 100dvh;
     background: var(--md-sys-color-surface);
     border-right: 1px solid var(--md-sys-color-outline-variant);

@@ -8,16 +8,17 @@ main.showcase-page {
     padding: 0 !important;
     gap: 0 !important;
     align-content: stretch !important;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     background-color: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Outfit', 'Roboto', system-ui, -apple-system, sans-serif;
 }
 
 /* Sidebar Navigation */
 .showcase-sidebar {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     background: var(--md-sys-color-surface-container-low);
     border-right: 1px solid var(--md-sys-color-outline-variant);
     display: grid;
@@ -528,18 +529,16 @@ main.showcase-page {
     overflow-x: auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 900px) {
+/* Responsive Styles (M3 Medium & Compact: < 840px) */
+@media (max-width: 839.98px) {
     .showcase-cards-grid {
         grid-template-columns: minmax(0, 1fr);
     }
-}
 
-@media (max-width: 768px) {
     main.showcase-page {
         grid-template-columns: minmax(0, 1fr) !important;
         grid-template-rows: auto minmax(0, 1fr) !important;
-        height: 100vh;
+        height: 100dvh;
         overflow: hidden;
     }
 
@@ -548,7 +547,7 @@ main.showcase-page {
         top: 0;
         left: 0;
         bottom: 0;
-        height: 100vh;
+        height: 100dvh;
         z-index: 1000;
         transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);

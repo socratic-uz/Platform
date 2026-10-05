@@ -243,40 +243,42 @@ header.landing-header ::deep .landing-header-actions {
 }
 
 header.landing-header ::deep .lang-toggle-btn {
-    height: 40px;
-    min-height: 40px;
-    min-width: 40px;
+    height: 48px;
+    min-height: 48px;
+    min-width: 48px;
     padding: 0.3rem 0.75rem;
-    border-radius: 9999px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
+    background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
     backdrop-filter: blur(12px);
-    color: #cbd5e1;
+    color: var(--md-sys-color-on-surface-variant, #cbd5e1);
     font-size: 0.8rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    touch-action: manipulation;
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
 }
 
 header.landing-header ::deep .lang-toggle-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(56, 189, 248, 0.3);
-    color: #38bdf8;
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-primary);
 }
 
 header.landing-header ::deep .lang-dropdown-menu {
-    background: rgba(13, 19, 34, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--md-sys-color-surface-container-high, rgba(13, 19, 34, 0.95));
+    border: 1px solid var(--md-sys-color-outline-variant);
     backdrop-filter: blur(20px);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    box-shadow: var(--md-sys-elevation-level3, 0 16px 36px rgba(0, 0, 0, 0.6));
 }
 
 header.landing-header ::deep .lang-menu-item {
-    color: #cbd5e1;
+    color: var(--md-sys-color-on-surface-variant, #cbd5e1);
 }
 
 header.landing-header ::deep .lang-menu-item:hover {
-    background: rgba(56, 189, 248, 0.15);
-    color: #f8fafc;
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
 }
 
 header.landing-header ::deep .landing-auth-btn {
@@ -286,27 +288,28 @@ header.landing-header ::deep .landing-auth-btn {
     align-items: center;
     gap: 0.45rem;
     padding: 0.4rem 1.1rem;
-    border-radius: 9999px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.35);
-    color: #ffffff;
+    border: 1px solid var(--md-sys-color-outline-variant, rgba(56, 189, 248, 0.35));
+    color: var(--md-sys-color-on-primary, #ffffff);
     font-size: 0.84rem;
     font-weight: 600;
     text-decoration: none;
-    min-height: 40px;
+    min-height: 48px;
+    touch-action: manipulation;
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all var(--md-sys-motion-duration-short4, 250ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1));
     box-sizing: border-box;
 }
 
 header.landing-header ::deep .landing-auth-btn md-icon {
     font-size: 16px;
-    color: #38bdf8;
+    color: var(--md-sys-color-primary, #38bdf8);
 }
 
 header.landing-header ::deep .landing-auth-btn:hover {
     background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: var(--md-sys-color-primary);
     box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
     transform: translateY(-1px);
     color: #ffffff;
@@ -319,20 +322,23 @@ header.landing-header ::deep .landing-auth-btn:hover md-icon {
 header.landing-header ::deep .landing-mobile-menu-toggle {
     display: none;
     place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.05);
-    color: #f8fafc;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
+    background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
+    color: var(--md-sys-color-on-surface, #f8fafc);
     cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease;
+    touch-action: manipulation;
+    transition: background var(--md-sys-motion-duration-short4, 200ms) ease, border-color var(--md-sys-motion-duration-short4, 200ms) ease;
 }
 
 header.landing-header ::deep .landing-mobile-menu-toggle:hover {
-    background: rgba(56, 189, 248, 0.15);
-    border-color: rgba(56, 189, 248, 0.4);
-    color: #38bdf8;
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-primary);
 }
 
 ::deep .landing-mobile-menu-backdrop {
@@ -408,7 +414,7 @@ header.landing-header ::deep .landing-mobile-menu-toggle:hover {
     padding-top: 0.25rem;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 839.98px) {
     header.landing-header ::deep .landing-header-nav,
     ::deep .landing-header-nav {
         display: none !important;
