@@ -79,6 +79,8 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.18.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.18.0" />
     <PackageVersion Include="PdfPig" Version="0.1.13" />
+    <PackageVersion Include="Redth.MauiDevFlow.Agent" Version="0.8.1" />
+    <PackageVersion Include="Redth.MauiDevFlow.Blazor" Version="0.8.1" />
     <PackageVersion Include="ScyllaDBCSharpDriver" Version="3.22.0.2" />
     <PackageVersion Include="SIPSorcery" Version="10.0.16" />
     <PackageVersion Include="SkiaSharp" Version="3.119.2" />

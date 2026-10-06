@@ -33,12 +33,25 @@ namespace Web.UI.Hubs
             Console.WriteLine($"[ChatHub {DateTime.UtcNow:HH:mm:ss.fff}] StreamChat completed for client {cid}. Streamed {tokenCount} tokens.");
         }
 
-        public async Task<List<string>> GetSuggestions(
-            List<ChatMessageDto> messages,
-            CancellationToken cancellationToken)
+        public async Task<List<string>> GetSuggestions(List<ChatMessageDto>? messages)
         {
-            var suggestions = await _chatService.GetSuggestionsAsync(messages, cancellationToken);
-            return suggestions.ToList();
+            var cancellationToken = Context.ConnectionAborted;
+            try
+            {
+                var list = messages ?? new List<ChatMessageDto>();
+                var suggestions = await _chatService.GetSuggestionsAsync(list, cancellationToken);
+                return suggestions?.ToList() ?? new List<string>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ChatHub.GetSuggestions Error] {ex.Message}");
+                return new List<string>
+                {
+                    "Какие есть 28 UX-режимов?",
+                    "Как устроен смарт-киоск?",
+                    "Каковы преимущества ScyllaDB?"
+                };
+            }
         }
     }
 }

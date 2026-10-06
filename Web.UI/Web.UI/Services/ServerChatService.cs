@@ -157,7 +157,7 @@ namespace Web.UI.Services
                 System.Console.WriteLine($"[GetSuggestionsAsync Error] {ex.Message}");
             }
 
-            return GetFallbackSuggestions();
+            return GetFallbackSuggestions(conversationMessages);
         }
 
         private static string[]? ParseSuggestions(string rawText)
@@ -190,13 +190,81 @@ namespace Web.UI.Services
             return lines.Length > 0 ? lines : null;
         }
 
-        private static string[] GetFallbackSuggestions()
+        private static string[] GetFallbackSuggestions(IReadOnlyList<ChatMessageDto>? conversationMessages = null)
         {
+            if (conversationMessages != null && conversationMessages.Count > 0)
+            {
+                var combined = string.Join(" ", conversationMessages.Select(m => m.Content)).ToLowerInvariant();
+                if (combined.Contains("заказ") || combined.Contains("корзин") || combined.Contains("доставк") || combined.Contains("оплат"))
+                {
+                    return new[]
+                    {
+                        "Как оформить доставку курьером?",
+                        "Какие способы оплаты поддерживаются?",
+                        "Как отследить статус заказа?"
+                    };
+                }
+                if (combined.Contains("отел") || combined.Contains("номер") || combined.Contains("бронь") || combined.Contains("заезд"))
+                {
+                    return new[]
+                    {
+                        "Как выбрать категорию номера?",
+                        "Включен ли завтрак в стоимость?",
+                        "Как работает отмена бронирования?"
+                    };
+                }
+                if (combined.Contains("киоск") || combined.Contains("pos") || combined.Contains("касс") || combined.Contains("чек"))
+                {
+                    return new[]
+                    {
+                        "Как подключить QR-чеки Soliq?",
+                        "Как настроить термопринтер чеков?",
+                        "Как работает кассовый режим POS?"
+                    };
+                }
+                if (combined.Contains("мест") || combined.Contains("зал") || combined.Contains("билет") || combined.Contains("схем"))
+                {
+                    return new[]
+                    {
+                        "Как выбрать место на схеме зала?",
+                        "Как получить электронный QR-билет?",
+                        "Есть ли скидки для групповых заказов?"
+                    };
+                }
+                if (combined.Contains("scylla") || combined.Contains("бд") || combined.Contains("баз") || combined.Contains("архитектур"))
+                {
+                    return new[]
+                    {
+                        "Как устроен partition key в ScyllaDB?",
+                        "Почему EF Core запрещен в системе?",
+                        "Как реплицируются данные в кластере?"
+                    };
+                }
+                if (combined.Contains("28") || combined.Contains("ux") || combined.Contains("режим"))
+                {
+                    return new[]
+                    {
+                        "Как запустить режим аукциона?",
+                        "Как работает аренда транспорта?",
+                        "Как подключить подписки на услуги?"
+                    };
+                }
+                if (combined.Contains("товар") || combined.Contains("каталог") || combined.Contains("цена") || combined.Contains("купит"))
+                {
+                    return new[]
+                    {
+                        "Как добавить товар в корзину?",
+                        "Есть ли сезонные скидки?",
+                        "Как применить промокод при покупке?"
+                    };
+                }
+            }
+
             return new[]
             {
-                "Как работают 28 UX-режимов?",
-                "Опиши архитектуру ScyllaDB",
-                "Как запустить смарт-киоск?"
+                "Какие есть 28 UX-режимов?",
+                "Как устроен смарт-киоск?",
+                "Каковы преимущества ScyllaDB?"
             };
         }
     }

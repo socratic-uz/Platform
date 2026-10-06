@@ -17,6 +17,11 @@ using Domain.Interfaces.Pages;
 using static SharedKernel.Options.MinioOptions;
 using static Shared.Helpers.FileHelper;
 
+#if DEBUG || LOCALDEBUG
+using MauiDevFlow.Agent;
+using MauiDevFlow.Blazor;
+#endif
+
 namespace Native.UI
 {
     public static class MauiProgram
@@ -96,9 +101,11 @@ namespace Native.UI
 
             builder.Services.AddMauiBlazorWebView();
 
-#if DEBUG
+#if DEBUG || LOCALDEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
             builder.Logging.AddDebug();
+            builder.AddMauiDevFlowAgent();
+            builder.AddMauiBlazorDevFlowTools();
 #endif
 
             try

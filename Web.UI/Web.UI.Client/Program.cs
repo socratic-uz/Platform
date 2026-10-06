@@ -28,10 +28,18 @@ using static Shared.Helpers.FileHelper;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
-// 1. Unified Composition Application Services (Layout, all 13 features, Design System, gRPC, Localization)
+// 1. WebAssembly IHostEnvironment bridge
+builder.Services.AddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(new Socratic.Platform.Composition.Services.SocraticHostEnvironment
+{
+    EnvironmentName = builder.HostEnvironment.Environment,
+    ApplicationName = "Socratic.Web.UI.Client",
+    ContentRootPath = builder.HostEnvironment.BaseAddress
+});
+
+// 2. Unified Composition Application Services (Layout, all 13 features, Design System, gRPC, Localization)
 builder.Services.AddCompositionServices(builder.Configuration);
 
-// 2. WebAssembly platform-specific adaptations
+// 3. WebAssembly platform-specific adaptations
 builder.Services.AddSingleton<IFormFactor, WebFormFactor>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddAuthenticationStateDeserialization();

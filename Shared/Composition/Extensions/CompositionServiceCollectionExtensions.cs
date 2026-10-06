@@ -1,6 +1,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Localization;
+using Socratic.Platform.Composition.Services;
 using Domain.Interfaces;
 using Domain.Interfaces.Pages;
 using Socratic.Platform.Layout.Extensions;
@@ -127,6 +130,21 @@ namespace Socratic.Platform.Composition.Extensions
 
             services.AddAuthorizationCore();
             services.AddCascadingAuthenticationState();
+
+            // 5. Universal IHostEnvironment for client-side hosts (WASM / MAUI / Tests)
+            services.TryAddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(sp =>
+            {
+                var config = sp.GetService<IConfiguration>();
+                var env = config?["ASPNETCORE_ENVIRONMENT"]
+                       ?? config?["DOTNET_ENVIRONMENT"]
+                       ?? Environments.Development;
+
+                return new SocraticHostEnvironment
+                {
+                    EnvironmentName = env,
+                    ApplicationName = "Socratic"
+                };
+            });
 
             // 5. Feature module service extensions
             if (configuration != null)

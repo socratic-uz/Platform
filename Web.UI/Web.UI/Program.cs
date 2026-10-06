@@ -74,6 +74,11 @@ builder.Services.AddRazorComponents()
                 .AddInteractiveWebAssemblyComponents()
                 .AddAuthenticationStateSerialization(options => options.SerializeAllClaims = true);
 
+builder.Services.AddSignalR(options =>
+{
+    options.EnableDetailedErrors = true;
+});
+
 // Register Feature Modules explicitly for AOT-safe dynamic micro-frontend routing and services
 foreach (var module in new Domain.Interfaces.IFeatureModule[] {
 #if FEATURE_LANDING
