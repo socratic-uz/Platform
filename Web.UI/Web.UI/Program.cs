@@ -80,10 +80,7 @@ foreach (var module in new Domain.Interfaces.IFeatureModule[] {
     new Socratic.Landing.LandingFeatureModule(),
 #endif
 #if FEATURE_POS
-    new Socratic.POS.POSFeatureModule(),
-#endif
-#if FEATURE_KIOSK
-    new Socratic.Kiosk.KioskFeatureModule(),
+    new Socratic.PointOfSale.PointOfSaleFeatureModule(),
 #endif
 #if FEATURE_COMMERCE
     new Socratic.Commerce.CommerceFeatureModule(),

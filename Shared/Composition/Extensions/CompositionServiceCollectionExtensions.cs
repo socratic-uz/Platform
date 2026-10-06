@@ -41,10 +41,7 @@ namespace Socratic.Platform.Composition.Extensions
                 if (_featuresRegistered) return;
 
 #if FEATURE_POS
-                FeatureRegistry.Register(new Socratic.POS.POSFeatureModule());
-#endif
-#if FEATURE_KIOSK
-                FeatureRegistry.Register(new Socratic.Kiosk.KioskFeatureModule());
+                FeatureRegistry.Register(new Socratic.PointOfSale.PointOfSaleFeatureModule());
 #endif
 #if FEATURE_COMMERCE
                 FeatureRegistry.Register(new Socratic.Commerce.CommerceFeatureModule());

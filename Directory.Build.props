@@ -77,6 +77,7 @@
     <Markdown>$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj</Markdown>
 
     <!-- Submodule Features when Platform is inside a feature root (e.g. POS/Platform) -->
+    <POS Condition="'$(POS)' == '' and Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj')">$(MSBuildThisFileDirectory)../PointOfSale.csproj</POS>
     <POS Condition="'$(POS)' == '' and Exists('$(MSBuildThisFileDirectory)../POS.csproj')">$(MSBuildThisFileDirectory)../POS.csproj</POS>
     <Kiosk Condition="'$(Kiosk)' == '' and Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj')">$(MSBuildThisFileDirectory)../Kiosk.csproj</Kiosk>
     <Commerce Condition="'$(Commerce)' == '' and Exists('$(MSBuildThisFileDirectory)../Commerce.csproj')">$(MSBuildThisFileDirectory)../Commerce.csproj</Commerce>
@@ -99,7 +100,7 @@
 
   <!-- Feature Detection & DefineConstants for Platform -->
   <PropertyGroup>
-    <HasFeaturePOS Condition="('$(POS)' != '' and Exists('$(POS)')) or Exists('$(MSBuildThisFileDirectory)../POS.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/POS.csproj')">true</HasFeaturePOS>
+    <HasFeaturePOS Condition="('$(POS)' != '' and Exists('$(POS)')) or Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj') or Exists('$(MSBuildThisFileDirectory)../POS.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/PointOfSale.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/POS.csproj')">true</HasFeaturePOS>
     <HasFeatureKiosk Condition="('$(Kiosk)' != '' and Exists('$(Kiosk)')) or Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Kiosk/Kiosk.csproj')">true</HasFeatureKiosk>
     <HasFeatureCommerce Condition="('$(Commerce)' != '' and Exists('$(Commerce)')) or Exists('$(MSBuildThisFileDirectory)../Commerce.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Commerce/Commerce.csproj')">true</HasFeatureCommerce>
     <HasFeatureVision Condition="('$(Vision)' != '' and Exists('$(Vision)')) or Exists('$(MSBuildThisFileDirectory)../Vision.csproj') or Exists('$(MSBuildThisFileDirectory)../Intelligence/Vision/Vision.csproj')">true</HasFeatureVision>

@@ -64,12 +64,10 @@
 
   <!-- All 13 Autonomous Domain Modules (Grouped: Retail, Intelligence, Studio, Portal) -->
   <ItemGroup>
-    <!-- Retail: POS, Kiosk, Commerce, Checkout, Orders -->
+    <!-- Retail: Point of Sale, Commerce, Checkout, Orders -->
     <ProjectReference Include="$(POS)" Condition="'$(POS)' != '' and Exists('$(POS)')" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\POS\PointOfSale.csproj" Condition="('$(POS)' == '' or !Exists('$(POS)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\POS\PointOfSale.csproj')" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\POS\POS.csproj" Condition="('$(POS)' == '' or !Exists('$(POS)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\POS\POS.csproj')" />
-
-    <ProjectReference Include="$(Kiosk)" Condition="'$(Kiosk)' != '' and Exists('$(Kiosk)')" />
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Kiosk\Kiosk.csproj" Condition="('$(Kiosk)' == '' or !Exists('$(Kiosk)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Kiosk\Kiosk.csproj')" />
 
     <ProjectReference Include="$(Commerce)" Condition="'$(Commerce)' != '' and Exists('$(Commerce)')" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\Retail\Commerce\Commerce.csproj" Condition="('$(Commerce)' == '' or !Exists('$(Commerce)')) and Exists('$(MSBuildThisFileDirectory)..\..\..\Retail\Commerce\Commerce.csproj')" />
