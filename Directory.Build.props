@@ -76,10 +76,9 @@
     <QuickGrid>$(PlatformSharedDir)DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>
     <Markdown>$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj</Markdown>
 
-    <!-- Submodule Features when Platform is inside a feature root (e.g. POS/Platform) -->
-    <POS Condition="'$(POS)' == '' and Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj')">$(MSBuildThisFileDirectory)../PointOfSale.csproj</POS>
-    <POS Condition="'$(POS)' == '' and Exists('$(MSBuildThisFileDirectory)../POS.csproj')">$(MSBuildThisFileDirectory)../POS.csproj</POS>
-    <Kiosk Condition="'$(Kiosk)' == '' and Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj')">$(MSBuildThisFileDirectory)../Kiosk.csproj</Kiosk>
+    <!-- Submodule Features when Platform is inside a feature root (e.g. PointOfSale/Platform) -->
+    <PointOfSale Condition="'$(PointOfSale)' == '' and Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj')">$(MSBuildThisFileDirectory)../PointOfSale.csproj</PointOfSale>
+    <PointOfSale Condition="'$(PointOfSale)' == '' and Exists('$(MSBuildThisFileDirectory)../Retail/PointOfSale/PointOfSale.csproj')">$(MSBuildThisFileDirectory)../Retail/PointOfSale/PointOfSale.csproj</PointOfSale>
     <Commerce Condition="'$(Commerce)' == '' and Exists('$(MSBuildThisFileDirectory)../Commerce.csproj')">$(MSBuildThisFileDirectory)../Commerce.csproj</Commerce>
     <Vision Condition="'$(Vision)' == '' and Exists('$(MSBuildThisFileDirectory)../Vision.csproj')">$(MSBuildThisFileDirectory)../Vision.csproj</Vision>
     <Chat Condition="'$(Chat)' == '' and Exists('$(MSBuildThisFileDirectory)../Chat.csproj')">$(MSBuildThisFileDirectory)../Chat.csproj</Chat>
@@ -100,8 +99,7 @@
 
   <!-- Feature Detection & DefineConstants for Platform -->
   <PropertyGroup>
-    <HasFeaturePOS Condition="('$(POS)' != '' and Exists('$(POS)')) or Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj') or Exists('$(MSBuildThisFileDirectory)../POS.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/PointOfSale.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/POS/POS.csproj')">true</HasFeaturePOS>
-    <HasFeatureKiosk Condition="('$(Kiosk)' != '' and Exists('$(Kiosk)')) or Exists('$(MSBuildThisFileDirectory)../Kiosk.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Kiosk/Kiosk.csproj')">true</HasFeatureKiosk>
+    <HasFeaturePOS Condition="('$(PointOfSale)' != '' and Exists('$(PointOfSale)')) or Exists('$(MSBuildThisFileDirectory)../PointOfSale.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/PointOfSale/PointOfSale.csproj')">true</HasFeaturePOS>
     <HasFeatureCommerce Condition="('$(Commerce)' != '' and Exists('$(Commerce)')) or Exists('$(MSBuildThisFileDirectory)../Commerce.csproj') or Exists('$(MSBuildThisFileDirectory)../Retail/Commerce/Commerce.csproj')">true</HasFeatureCommerce>
     <HasFeatureVision Condition="('$(Vision)' != '' and Exists('$(Vision)')) or Exists('$(MSBuildThisFileDirectory)../Vision.csproj') or Exists('$(MSBuildThisFileDirectory)../Intelligence/Vision/Vision.csproj')">true</HasFeatureVision>
     <HasFeatureChat Condition="('$(Chat)' != '' and Exists('$(Chat)')) or Exists('$(MSBuildThisFileDirectory)../Chat.csproj') or Exists('$(MSBuildThisFileDirectory)../Intelligence/Chat/Chat.csproj')">true</HasFeatureChat>
@@ -117,11 +115,10 @@
     <HasMarkdown Condition="Exists('$(Markdown)') or Exists('$(PlatformSharedDir)DesignSystem/Markdown/Markdown.csproj')">true</HasMarkdown>
     <HasFFmpeg Condition="Exists('$(FFmpegProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/FFmpegProcessor/FFmpegProcessor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/FFmpegProcessor/FFmpegProcessor.csproj')">true</HasFFmpeg>
     <HasBiometrics Condition="Exists('$(BiometricsProcessor)') or Exists('$(MSBuildThisFileDirectory)../Hardware/Biometrics.Processor/Biometrics.Processor.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/Biometrics.Processor/Biometrics.Processor.csproj')">true</HasBiometrics>
-    <HasReceiptPrinter Condition="('$(HasFeaturePOS)' == 'true' or '$(HasFeatureKiosk)' == 'true' or '$(HasFeatureCommerce)' == 'true' or '$(HasFeatureCheckout)' == 'true' or '$(FEATURE_RECEIPTPRINTER)' == 'true') and (Exists('$(ReceiptPrinter)') or Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/ReceiptPrinter/ReceiptPrinter.csproj'))">true</HasReceiptPrinter>
+    <HasReceiptPrinter Condition="('$(HasFeaturePOS)' == 'true' or '$(HasFeatureCommerce)' == 'true' or '$(HasFeatureCheckout)' == 'true' or '$(FEATURE_RECEIPTPRINTER)' == 'true') and (Exists('$(ReceiptPrinter)') or Exists('$(MSBuildThisFileDirectory)../Hardware/ReceiptPrinter/ReceiptPrinter.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/ReceiptPrinter/ReceiptPrinter.csproj'))">true</HasReceiptPrinter>
     <HasCameraStreamer Condition="Exists('$(CameraStreamer)') or Exists('$(MSBuildThisFileDirectory)../Hardware/CameraStreamer/CameraStreamer.csproj') or Exists('$(MSBuildThisFileDirectory)../../../Hardware/CameraStreamer/CameraStreamer.csproj')">true</HasCameraStreamer>
 
     <DefineConstants Condition="'$(HasFeaturePOS)' == 'true'">$(DefineConstants);FEATURE_POS</DefineConstants>
-    <DefineConstants Condition="'$(HasFeatureKiosk)' == 'true'">$(DefineConstants);FEATURE_KIOSK</DefineConstants>
     <DefineConstants Condition="'$(HasFeatureCommerce)' == 'true'">$(DefineConstants);FEATURE_COMMERCE</DefineConstants>
     <DefineConstants Condition="'$(HasFeatureVision)' == 'true'">$(DefineConstants);FEATURE_VISION</DefineConstants>
     <DefineConstants Condition="'$(HasFeatureChat)' == 'true'">$(DefineConstants);FEATURE_CHAT</DefineConstants>

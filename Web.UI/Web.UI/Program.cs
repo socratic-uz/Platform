@@ -56,7 +56,7 @@ using Map;
 #if FEATURE_QRDESIGNER
 using Socratic.QrDesigner;
 #endif
-#if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_KIOSK || FEATURE_COMMERCE
+#if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_COMMERCE
 using Socratic.ReceiptPrinter;
 #endif
 
@@ -224,8 +224,10 @@ builder.Services.AddSmartWebServices();
 #if FEATURE_QRDESIGNER
 builder.Services.AddQrDesignerServices();
 #endif
-#if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_KIOSK || FEATURE_COMMERCE
+#if FEATURE_RECEIPTPRINTER || FEATURE_POS || FEATURE_COMMERCE
 builder.Services.AddReceiptPrinterServices();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.IPosPinPadService, Infrastructure.Gateways.Hardware.MockPosPinPadService>();
+builder.Services.AddScoped<Domain.Interfaces.Hardware.ICashAcceptorService, Infrastructure.Gateways.Hardware.MockCashAcceptorService>();
 #endif
 #if FEATURE_CAMERA_STREAMER
 builder.Services.AddCameraStreamer();
@@ -296,21 +298,21 @@ app.UseAuthentication();
 
 if (app.Environment.IsDevelopment())
 {
-    app.Use(async (context, next) =>
-    {
-        if (context.User.Identity?.IsAuthenticated != true)
-        {
-            var identity = new System.Security.Claims.ClaimsIdentity(
-            [
-                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, "00000000-0000-0000-0000-000000000001"),
-                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, "Dev Cashier"),
-                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Role, "Admin"),
-                new System.Security.Claims.Claim("OrganizationId", "00000000-0000-0000-0000-000000000001")
-            ], "StandaloneAuth");
-            context.User = new System.Security.Claims.ClaimsPrincipal(identity);
-        }
-        await next();
-    });
+//     app.Use(async (context, next) =>
+//     {
+//         if (context.User.Identity?.IsAuthenticated != true)
+//         {
+//             var identity = new System.Security.Claims.ClaimsIdentity(
+//             [
+//                 new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, "00000000-0000-0000-0000-000000000001"),
+//                 new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, "Dev Cashier"),
+//                 new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Role, "Admin"),
+//                 new System.Security.Claims.Claim("OrganizationId", "00000000-0000-0000-0000-000000000001")
+//             ], "StandaloneAuth");
+//             context.User = new System.Security.Claims.ClaimsPrincipal(identity);
+//         }
+//         await next();
+//     });
 }
 
 app.UseAuthorization();
