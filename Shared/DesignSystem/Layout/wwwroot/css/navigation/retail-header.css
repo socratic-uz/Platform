@@ -1,0 +1,134 @@
+/* ==========================================================================
+/* ==========================================================================
+   App Rail Navigation & Mobile Nav Scaffolding
+   ========================================================================== */
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        display: var(--nav-display, grid);
+        align-items: center;
+        justify-content: stretch;
+        justify-items: stretch;
+        text-align: start;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        align-content: start;
+        position: sticky;
+        top: 0;
+        width: 4rem;
+        height: 100dvh;
+        border-radius: 0 24px 24px 0;
+        z-index: 2;
+        background: rgb(from var(--md-sys-color-surface-container) r g b / .7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: var(--md-sys-color-on-surface);
+        padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
+        align-self: start;
+        order: 1;
+        overflow: visible;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        align-content: stretch;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        gap: initial;
+        display: grid !important;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 24px 24px 0 0 !important;
+        border-right: none !important;
+        padding: 0.25rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px)) 0.25rem !important;
+        z-index: 100 !important;
+        box-sizing: border-box;
+        background: var(--md-sys-color-surface-container) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--md-sys-color-outline-variant) !important;
+    }
+}
+
+nav.glass a.nav-item,
+nav a.nav-item {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    gap: .25rem;
+    padding: .5rem;
+    color: var(--md-sys-color-on-surface-variant);
+    overflow: visible;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+nav.glass a.nav-item.active,
+nav.glass a.nav-item:active,
+nav.glass a.nav-item:hover,
+nav.glass a.nav-item:focus,
+nav a.nav-item.active,
+nav a.nav-item:active,
+nav a.nav-item:hover,
+nav a.nav-item:focus {
+    color: var(--md-sys-color-on-surface);
+}
+
+nav.glass a.nav-item:hover svg path,
+nav a.nav-item:hover svg path {
+    stroke: var(--md-sys-color-on-surface);
+}
+
+nav.glass a.nav-item.active svg,
+nav.glass a.nav-item.active svg path,
+nav a.nav-item.active svg,
+nav a.nav-item.active svg path {
+    stroke: var(--md-sys-color-on-secondary-container);
+    background: var(--md-sys-color-secondary-container);
+}
+
+nav.glass a.nav-item.active span,
+nav a.nav-item.active span {
+    color: var(--md-sys-color-on-surface);
+}
+
+nav.glass a.nav-item svg,
+nav a.nav-item svg {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    border-radius: 24px;
+}
+
+nav.glass a.nav-item svg,
+nav.glass a.nav-item svg path,
+nav a.nav-item svg,
+nav a.nav-item svg path {
+    stroke: var(--md-sys-color-on-surface-variant);
+}
+
+nav.glass a.nav-item span,
+nav a.nav-item span {
+    text-align: center;
+    word-break: break-word;
+    font-size: .5rem;
+}
+

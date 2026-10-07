@@ -1,0 +1,158 @@
+/* ─── Chat Floating Header Scaffolding ─────────────────────────────────── */
+.m3-chat-header,
+.chat-header-container {
+    width: 100%;
+    top: 0;
+    padding: 0.75rem 1.5rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+    background: var(--md-sys-glass-surface-container, rgb(from var(--md-sys-color-surface-container) r g b / 0.65));
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(20px));
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    z-index: 20;
+    box-sizing: border-box;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--md-sys-color-primary);
+}
+
+.chat-header-controls {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Universal App Header & Landing Header
+   ========================================================================== */
+header.app-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    color: var(--md-sys-color-on-surface);
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+    min-height: calc(64px + env(safe-area-inset-top, 0px));
+    box-sizing: border-box;
+    z-index: 50;
+    position: relative;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+header.app-header.header-sticky {
+    position: sticky;
+    top: 0;
+}
+
+.header-grid-layout {
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) minmax(0, 1fr) minmax(min-content, max-content);
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Header Start Zone: Brand + Context info */
+.header-start-zone {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: max-content;
+    justify-content: start;
+}
+
+.header-context-divider {
+    color: var(--md-sys-color-outline-variant);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1;
+    user-select: none;
+    display: grid;
+    place-items: center;
+}
+
+/* Brand Zone */
+.header-brand-zone {
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    min-width: max-content;
+}
+
+.header-brand-link {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+    min-height: 40px;
+    border-radius: 12px;
+    padding: 0.25rem 0.5rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.header-brand-link:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+.header-brand-icon-box {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+    font-size: 18px;
+}
+
+.header-brand-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header Center Zone: Search / Navigation */
+.header-center-zone {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.header-center-zone:has(> .kiosk-header-content) {
+    justify-content: stretch;
+}
+
+/* Header End Zone: Actions / Language / Avatar */
+.header-end-zone {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    align-items: center;
+    justify-content: end;
+    gap: 0.65rem;
+    min-width: max-content;
+}
+

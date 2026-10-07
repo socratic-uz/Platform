@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Universal M3 Segmented Navigation, Mode Pills & Period Selectors
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+.analytics-header-title-group,
+.m3-page-header-title-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.analytics-header-icon,
+.m3-page-header-icon {
+    font-size: 1.75rem;
+    color: var(--md-sys-color-primary);
+}
+
+.analytics-header-title,
+.m3-page-header-title {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--md-sys-color-on-surface);
+}
+
+.analytics-header-controls,
+.m3-header-controls {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.analytics-mode-pill-group,
+.m3-segmented-pill-group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 4px;
+    padding: 4px;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.analytics-mode-btn,
+.m3-segmented-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 9999px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-mode-btn md-icon,
+.m3-segmented-btn md-icon {
+    font-size: 1.1rem;
+}
+
+.analytics-mode-btn.active,
+.m3-segmented-btn.active {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.analytics-config-btn,
+.m3-toolbar-action-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 14px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-config-btn md-icon,
+.m3-toolbar-action-btn md-icon {
+    font-size: 1.15rem;
+}
+
+.analytics-config-btn:hover,
+.m3-toolbar-action-btn:hover {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.analytics-toolbar-grid,
+.m3-subtoolbar-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.analytics-period-selector,
+.m3-period-selector {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.35rem;
+    background: var(--md-sys-color-surface-container);
+    padding: 4px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.analytics-period-chip,
+.m3-period-chip {
+    display: grid;
+    place-items: center;
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 9999px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-period-chip:hover:not(.active),
+.m3-period-chip:hover:not(.active) {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+}
+
+.analytics-period-chip.active,
+.m3-period-chip.active {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-weight: 600;
+}
+
+.analytics-status-pill,
+.m3-live-status-pill {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 4px 12px;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.pulse-indicator {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary, #10b981);
+    box-shadow: 0 0 8px var(--md-sys-color-primary, #10b981);
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (max-width: 839.98px) {
+    .analytics-toolbar-grid,
+    .m3-subtoolbar-grid {
+        grid-template-columns: 100%;
+        gap: 0.75rem;
+    }
+
+    .analytics-period-selector,
+    .m3-period-selector {
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .analytics-header-controls .btn-text {
+        display: none;
+    }
+}
+

@@ -1,0 +1,43 @@
+/* ─── 3. Search Bar Component ─────────────────────────────────────── */
+.material-search-container {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.material-search-container md-outlined-text-field,
+.material-search-container .material-text-field {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    --md-outlined-text-field-container-shape: 24px;
+    --md-outlined-text-field-top-space: 2px;
+    --md-outlined-text-field-bottom-space: 2px;
+    --md-outlined-text-field-leading-space: 14px;
+    --md-outlined-text-field-trailing-space: 12px;
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+    border-radius: 24px;
+    transition: box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard, ease);
+}
+
+.material-search-container md-outlined-text-field:focus-within {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.material-search-container md-icon[slot="leading-icon"] {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.material-search-container [slot="trailing-icon"] {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+

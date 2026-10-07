@@ -1,100 +1,147 @@
-nav {
-    display: var(--nav-display, grid);
-    align-items: center;
-    justify-content: stretch;
-    justify-items: stretch;
-    text-align: start;
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
-    align-content: start;
-    position: sticky;
-    top: 0;
-    width: 4rem;
-    height: 100dvh;
-    border-radius: 0 24px 24px 0;
-    z-index: 2;
-    background: rgb(from var(--md-sys-color-surface-container) r g b / .7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: var(--md-sys-color-on-surface);
-    padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
-    align-self: start;
-    order: 1;
-    overflow: visible;
+/* ==========================================================================
+   Desktop Navigation Rail (>= 840px)
+   ========================================================================== */
+@media screen and (min-width: 840px) {
+    nav {
+        display: var(--nav-display, grid);
+        align-items: center;
+        justify-content: stretch;
+        justify-items: stretch;
+        text-align: start;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        align-content: start;
+        position: sticky;
+        top: 0;
+        width: 4.5rem;
+        height: 100dvh;
+        border-radius: 0 24px 24px 0;
+        z-index: 2;
+        background: rgb(from var(--md-sys-color-surface-container) r g b / .7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: var(--md-sys-color-on-surface);
+        padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
+        align-self: start;
+        order: 1;
+        overflow: visible;
+        gap: 0.5rem;
+    }
+
+    ::deep a {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none;
+        gap: .25rem;
+        padding: .5rem .25rem;
+        color: var(--md-sys-color-on-surface-variant);
+        overflow: visible;
+        min-height: 56px;
+    }
 }
 
+/* ==========================================================================
+   Mobile Bottom Navigation Bar (< 840px)
+   ========================================================================== */
 @media screen and (max-width: 839.98px) {
     nav {
-        position: fixed;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        grid-column: 1 / -1;
-        grid-row: auto;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
         align-content: stretch;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
         gap: initial;
-        display: grid;
+        display: grid !important;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
         justify-content: space-around;
         align-items: center;
-        -moz-border-radius: 24px 24px 0 0;
-        -webkit-border-radius: 24px 24px 0 0;
-        border-radius: 24px 24px 0 0;
-        padding: 0.25rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px)) 0.25rem;
-        z-index: 100;
+        border-radius: 24px 24px 0 0 !important;
+        border-right: none !important;
+        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px)) 0.25rem !important;
+        z-index: 100 !important;
         box-sizing: border-box;
-        background: var(--md-sys-color-surface-container);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-top: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--md-sys-color-outline-variant) !important;
+        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow, #000000) r g b / 0.15);
     }
 
     ::deep a {
-        font-size: 1rem;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none;
         min-width: 48px;
         min-height: 48px;
-        padding: 0.35rem 0.25rem calc(0.25rem + env(safe-area-inset-bottom, 0px)) 0.25rem;
+        padding: 0.25rem 0.2rem;
+        gap: 2px;
+        color: var(--md-sys-color-on-surface-variant);
     }
 }
 
-@media all and (display-mode: fullscreen) {
-    nav {
-        display: none;
-    }
-}
-
+/* ==========================================================================
+   Item States & Material 3 Indicator Pill
+   ========================================================================== */
 ::deep a {
-    position: relative;
-    display: grid;
-    -webkit-align-items: center;
-    align-items: center;
-    justify-items: center;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    /*   width: 100%;
-    height: 100%;*/
-    font-size: 2rem;
-    gap: .25rem;
-    padding: .5rem;
-    color: var(--md-sys-color-on-surface-variant);
-    overflow: visible;
-
+    touch-action: manipulation;
+    transition: color 0.2s ease;
 }
 
-::deep a.active,
-::deep a:active,
-::deep a:hover,
-::deep a:focus {
+::deep a md-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 24px;
+    color: var(--md-sys-color-on-surface-variant);
+    transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+::deep a.active md-icon {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+::deep a:hover md-icon {
     color: var(--md-sys-color-on-surface);
 }
 
-::deep a:hover svg path {
-    stroke: var(--md-sys-color-on-surface);
+::deep a span {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--md-sys-color-on-surface-variant);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+::deep a.active span {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
+}
+
+/* SVG Fallbacks */
+::deep a svg {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    border-radius: 24px;
+    stroke: var(--md-sys-color-on-surface-variant);
 }
 
 ::deep a.active svg,
@@ -103,31 +150,14 @@ nav {
     background: var(--md-sys-color-secondary-container);
 }
 
-::deep a.active span {
-    color: var(--md-sys-color-on-surface);
+::deep a:hover svg path {
+    stroke: var(--md-sys-color-on-surface);
 }
 
-svg {
-    width: 24px;
-    height: 24px;
-    display: grid;
-    -moz-border-radius: 24px;
-    -webkit-border-radius: 24px;
-    border-radius: 24px;
-}
-
-svg,
-svg path {
-    stroke: var(--md-sys-color-on-surface-variant);
-}
-
-
-span {
-    text-align: center;
-    -ms-word-break: break-word;
-    word-break: break-word;
-    font-size: .5rem;
-    /*font-size: .75rem;*/
+@media all and (display-mode: fullscreen) {
+    nav {
+        display: none !important;
+    }
 }
 
 @media print {

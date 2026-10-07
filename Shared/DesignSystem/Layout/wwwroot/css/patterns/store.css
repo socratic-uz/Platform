@@ -1,0 +1,106 @@
+/* ─── Store Product Page Container & Typography ─────────────────────────── */
+.store-product-page {
+    min-height: 100vh;
+    padding: 2rem 1.5rem 5rem;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+@media (max-width: 839.98px) {
+    .store-product-page {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+}
+
+.store-product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.product-info-panel {
+    display: grid !important;
+    gap: 1.5rem;
+    align-content: start;
+    box-sizing: border-box;
+}
+
+.product-tags {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow-x: auto;
+}
+
+.product-tag-chip {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.product-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .product-title {
+        font-size: 1.75rem;
+    }
+}
+
+.product-price-section {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.product-price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+    letter-spacing: -0.02em;
+}
+
+.product-currency {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.product-unit {
+    font-size: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-left: 0.25rem;
+}
+
+.product-description-block h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    white-space: pre-line;
+}
+

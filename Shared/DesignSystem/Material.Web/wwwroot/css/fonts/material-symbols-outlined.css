@@ -7,6 +7,7 @@
     src: url('./MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2') format('woff2');
 }
 
+md-icon,
 .material-symbols-outlined,
 [class*="material-symbols"] {
     font-family: 'Material Symbols Outlined' !important;

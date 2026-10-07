@@ -1,0 +1,50 @@
+/* ─── 15. Chat Viewport Scaffolding ───────────────────────────────────── */
+.m3-chat-view,
+.chat-view {
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.m3-page-width,
+.page-width {
+    max-width: 1024px;
+    width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
+.chat-page-root {
+    display: grid !important;
+    grid-template-rows: minmax(0, 1fr) auto;
+    height: var(--tg-viewport-height, 100dvh);
+    max-height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.chat-bottom-section {
+    width: 100%;
+    display: grid !important;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-sizing: border-box;
+}
+

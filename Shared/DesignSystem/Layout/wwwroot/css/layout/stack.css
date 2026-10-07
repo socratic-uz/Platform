@@ -1,0 +1,10 @@
+/* ─── 4. Vertical Stack (Replaces flex-direction: column) ─────────────── */
+.m3-grid-stack {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    width: 100%;
+    box-sizing: border-box;
+}
+

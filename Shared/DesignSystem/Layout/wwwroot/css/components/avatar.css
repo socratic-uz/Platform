@@ -1,0 +1,223 @@
+/* ─── 1. Avatar & Profile Trigger Component ──────────────────────── */
+.avatar-container {
+    display: inline-grid;
+    place-items: center;
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.avatar-container md-outlined-button.avatar-button,
+.avatar-container .avatar-button,
+md-outlined-button.avatar-button,
+.avatar-button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    border-radius: 50%;
+    overflow: visible;
+    cursor: pointer;
+    touch-action: manipulation;
+    padding: 0 !important;
+    --md-outlined-button-container-shape: 9999px;
+    --md-outlined-button-container-height: 40px;
+    --md-outlined-button-leading-space: 0px;
+    --md-outlined-button-trailing-space: 0px;
+    --md-outlined-button-with-leading-icon-leading-space: 0px;
+    --md-outlined-button-with-leading-icon-trailing-space: 0px;
+    --md-outlined-button-icon-size: 20px;
+    --md-outlined-button-outline-width: 1.5px;
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-container .avatar-button::before,
+.avatar-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.avatar-container md-outlined-button.avatar-button img,
+.avatar-container .avatar-button img,
+md-outlined-button.avatar-button img,
+.avatar-button img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.avatar-container md-outlined-button.avatar-button md-icon,
+.avatar-container .avatar-button md-icon,
+.avatar-container .avatar-button .material-symbols-outlined,
+md-outlined-button.avatar-button md-icon,
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
+    display: grid !important;
+    place-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.avatar-container svg *,
+.avatar-button svg * {
+    fill: var(--md-sys-color-on-primary-container);
+}
+
+.avatar-container md-dialog:not(:defined),
+md-dialog.contacts:not(:defined),
+md-dialog.faceid-profile-modal:not(:defined) {
+    display: none !important;
+}
+
+.avatar-container md-dialog.contacts,
+.avatar-container md-dialog.faceid-profile-modal,
+.avatar-container md-dialog,
+md-dialog.contacts,
+md-dialog.faceid-profile-modal {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: 28px;
+}
+
+.avatar-container [slot='headline'],
+md-dialog.contacts [slot='headline'],
+md-dialog.faceid-profile-modal [slot='headline'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 24px 16px 24px;
+}
+
+.avatar-container .headline,
+md-dialog.contacts .headline,
+md-dialog.faceid-profile-modal .headline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.avatar-container form.content,
+md-dialog.contacts form.content,
+md-dialog.faceid-profile-modal form.content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container .row,
+md-dialog.contacts .row,
+md-dialog.faceid-profile-modal .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 8px;
+}
+
+.avatar-container md-list,
+md-dialog.contacts md-list,
+md-dialog.faceid-profile-modal md-list {
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container);
+    width: 100%;
+}
+
+.avatar-container label,
+md-dialog.contacts label,
+md-dialog.faceid-profile-modal label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.avatar-container [slot='actions'],
+md-dialog.contacts [slot='actions'],
+md-dialog.faceid-profile-modal [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px 24px 24px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container details,
+md-dialog.contacts details {
+    width: 100%;
+}
+
+.avatar-container details summary,
+md-dialog.contacts details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.avatar-container details summary::-webkit-details-marker,
+md-dialog.contacts details summary::-webkit-details-marker {
+    display: none;
+}
+
+.avatar-container details summary md-list-item,
+md-dialog.contacts details summary md-list-item {
+    cursor: pointer;
+}
+
+.avatar-container details .content,
+md-dialog.contacts details .content {
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.avatar-container md-outlined-text-field,
+.avatar-container .material-text-field,
+md-dialog.contacts md-outlined-text-field,
+md-dialog.faceid-profile-modal md-outlined-text-field {
+    width: 100%;
+}
+
+

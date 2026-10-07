@@ -1,0 +1,156 @@
+
+.analytics-modal-backdrop,
+.m3-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+.analytics-config-dialog,
+.m3-config-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    padding: 1.75rem;
+    display: grid;
+    gap: 1.25rem;
+    z-index: 1001;
+    box-shadow: var(--md-sys-elevation-level4, 0 16px 40px rgba(0, 0, 0, 0.3));
+}
+
+.dialog-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dialog-title-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dialog-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 1.35rem;
+}
+
+.dialog-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.dialog-close-btn {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dialog-close-btn:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.dialog-description {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.4;
+}
+
+.dialog-options-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.config-toggle-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.config-toggle-item:hover {
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-primary);
+}
+
+.config-toggle-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--md-sys-color-primary);
+    cursor: pointer;
+}
+
+.toggle-text {
+    display: grid;
+    gap: 0.15rem;
+}
+
+.toggle-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.toggle-desc {
+    font-size: 0.78rem;
+    color: var(--md-sys-color-outline);
+}
+
+.toggle-icon {
+    font-size: 1.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.dialog-actions {
+    display: grid;
+    padding-top: 0.5rem;
+}
+
+.dialog-btn-primary {
+    display: grid;
+    place-items: center;
+    padding: 0.85rem;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.dialog-btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Режим Реестров (Data Explorer & Entity Table Wrapper)

@@ -1,0 +1,45 @@
+/* ─── 4. Mode Toggle Switcher ─────────────────────────────────────── */
+.mode-toggle {
+    overflow: hidden;
+    display: grid !important;
+    width: 46px;
+    border-radius: var(--md-sys-shape-corner-full, 24px);
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mode-toggle-figure {
+    background: var(--md-sys-color-primary-container);
+    height: 46px;
+    margin: 0;
+    display: grid !important;
+    grid-template-columns: repeat(3, 46px);
+    grid-auto-flow: column;
+    justify-items: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.mode-toggle-icon {
+    display: grid !important;
+    width: 30px;
+    height: 30px;
+    transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
+    stroke: var(--md-sys-color-on-primary-container);
+    grid-column: -3 / -2;
+}
+
+.mode-toggle-figure > .mode-toggle-icon:nth-child(2) {
+    fill: var(--md-sys-color-on-surface);
+    grid-column: -2 / -1;
+}
+
+#app.dark-mode .mode-toggle-icon {
+    grid-column: initial;
+}
+
+

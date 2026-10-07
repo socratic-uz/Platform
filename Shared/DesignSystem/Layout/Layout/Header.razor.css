@@ -438,21 +438,228 @@ header.landing-header ::deep .landing-mobile-menu-toggle:hover {
     }
 
     .header-grid-layout {
-        gap: 0.65rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
+        row-gap: 0.4rem;
+        column-gap: 0.5rem;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .header-start-zone {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        min-width: 0;
+        overflow: hidden;
+        gap: 0.4rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+    }
+
+    .header-end-zone {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: end;
+        gap: 0.35rem;
+        min-width: 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+    }
+
+    .header-center-zone {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        width: 100%;
+        min-width: 0;
+        justify-content: stretch;
+        display: grid;
+    }
+
+    .header-center-zone:empty {
+        display: none !important;
+    }
+
+    .header-center-zone ::deep .home-search-container,
+    .header-center-zone ::deep .kiosk-search-container,
+    .header-center-zone ::deep .search-container,
+    .header-center-zone ::deep form {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .header-center-zone ::deep input {
+        width: 100% !important;
+        height: 42px !important;
+    }
+
+    .m3-page-header-start,
+    ::deep .m3-page-header-start,
+    ::deep .commerce-header-titles,
+    ::deep .docs-header-bar,
+    ::deep .kiosk-brand {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+        gap: 0.4rem;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .m3-page-header-title,
+    ::deep .m3-page-header-title,
+    ::deep .commerce-header-heading,
+    ::deep .kiosk-brand-name,
+    ::deep .docs-header-breadcrumb {
+        font-size: 1.05rem;
+        max-width: min(220px, 45vw);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .header-brand-text {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 
     .header-brand-icon-box {
-        width: 32px;
-        height: 32px;
-        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
     }
 
     .header-dynamic-zone {
         gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    header.app-header {
+        padding: max(0.35rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-right, 0px)) 0.35rem max(0.5rem, env(safe-area-inset-left, 0px));
+    }
+
+    .header-brand-text {
+        display: none !important;
+    }
+
+    .header-brand-link {
+        padding: 0.2rem;
+        min-height: 36px;
+        min-width: 36px;
+    }
+
+    ::deep .header-context-divider {
+        display: none !important;
+    }
+
+    /* Back buttons: hide verbose text on compact screens, keep touchable back arrow */
+    ::deep a.back-button span,
+    ::deep a.back-link span {
+        display: none !important;
+    }
+
+    ::deep a.back-button,
+    ::deep a.back-link {
+        min-width: 36px;
+        min-height: 36px;
+        padding: 0.25rem !important;
+    }
+
+    .m3-page-header-icon,
+    ::deep .m3-page-header-icon,
+    ::deep .commerce-header-icon {
+        font-size: 20px !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .m3-page-header-title,
+    ::deep .m3-page-header-title,
+    ::deep .commerce-header-heading,
+    ::deep .kiosk-brand-name {
+        font-size: 0.95rem;
+        max-width: min(150px, 38vw);
+    }
+
+    ::deep .kiosk-brand-tagline {
+        display: none !important;
+    }
+
+    ::deep .kiosk-brand-logo,
+    ::deep .kiosk-brand-logo-fallback {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+    }
+
+    ::deep .m3-count-badge,
+    ::deep .order-status-badge,
+    ::deep .items-count-badge {
+        padding: 2px 6px !important;
+        font-size: 0.72rem !important;
+    }
+
+    /* End Zone Controls: Compact geometry */
+    .header-end-zone ::deep md-outlined-button,
+    .header-end-zone ::deep md-filled-button,
+    .header-end-zone ::deep md-filled-tonal-button,
+    .header-end-zone ::deep md-elevated-button,
+    .header-end-zone ::deep md-text-button {
+        --md-outlined-button-container-height: 36px;
+        --md-filled-button-container-height: 36px;
+        --md-filled-tonal-button-container-height: 36px;
+        --md-elevated-button-container-height: 36px;
+        --md-text-button-container-height: 36px;
+        --md-outlined-button-leading-space: 8px;
+        --md-outlined-button-trailing-space: 8px;
+        --md-filled-button-leading-space: 8px;
+        --md-filled-button-trailing-space: 8px;
+        font-size: 0.78rem;
+        max-width: 120px;
+    }
+
+    ::deep .lang-toggle-btn {
+        height: 36px;
+        min-height: 36px;
+        min-width: 36px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
+        gap: 0.2rem;
+    }
+
+    ::deep .lang-toggle-btn md-icon:last-of-type {
+        display: none !important;
+    }
+
+    ::deep .avatar-container .avatar-button,
+    ::deep md-outlined-button.avatar-button {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+    }
+
+    /* POS swipeable top action buttons */
+    ::deep .pos-top-header-actions {
+        display: grid !important;
+        grid-auto-flow: column !important;
+        grid-auto-columns: max-content !important;
+        gap: 6px !important;
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    ::deep .pos-top-header-actions::-webkit-scrollbar {
+        display: none !important;
     }
 }
 

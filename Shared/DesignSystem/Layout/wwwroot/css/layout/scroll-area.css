@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Socratic Layout - Scroll Area & Viewport Containment Primitives
+   Custom M3 Expressive Thin Scrollbars & Touch Snap Engines
+   ========================================================================== */
+
+.m3-scroll-thin,
+.scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3)) transparent;
+}
+
+.m3-scroll-thin::-webkit-scrollbar,
+.scroll-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.m3-scroll-thin::-webkit-scrollbar-track,
+.scroll-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3));
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    transition: background 0.2s ease;
+}
+
+.m3-scroll-thin::-webkit-scrollbar-thumb:hover,
+.scroll-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-primary, #6750A4);
+}
+
+.m3-scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--md-sys-spacing-4, 1rem);
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.m3-scroll-snap-x > * {
+    scroll-snap-align: start;
+}

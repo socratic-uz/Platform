@@ -1,0 +1,94 @@
+/* ─── 13. Kanban & KDS Column Layout Primitives ─────────────────────────── */
+.m3-kanban-board,
+.orders-kanban-board,
+.kds-board {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    width: 100%;
+    align-items: start;
+    box-sizing: border-box;
+    container-type: inline-size;
+}
+
+.m3-kanban-column,
+.kanban-column,
+.kds-column {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-5, 1.25rem);
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    min-height: 380px;
+    box-sizing: border-box;
+}
+
+.column-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.column-title-group,
+.header-title-group {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.column-icon,
+.header-icon {
+    font-size: 20px;
+}
+
+.column-icon.icon-making,
+.header-icon.icon-making {
+    color: var(--md-sys-color-tertiary);
+}
+
+.column-icon.icon-ready,
+.header-icon.icon-ready {
+    color: var(--md-sys-color-primary);
+}
+
+.column-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.column-content,
+.kds-cards-container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    align-content: start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 839.98px) {
+    .m3-kanban-board,
+    .orders-kanban-board,
+    .kds-board {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .m3-kanban-column,
+    .kanban-column,
+    .kds-column {
+        min-height: auto;
+    }
+}
+

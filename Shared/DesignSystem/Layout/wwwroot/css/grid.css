@@ -87,6 +87,15 @@ body:has(main.no-nav) {
     align-content: start;
     min-width: 0;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.app-main > main {
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    min-width: 0;
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -121,6 +130,22 @@ body:has(main.no-nav) {
         grid-column: 1 / -1;
     }
 
+    .app-grid > nav {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        z-index: 100 !important;
+        border-radius: 24px 24px 0 0 !important;
+        border-right: none !important;
+    }
+
     .app-grid > main,
     .app-grid .app-main {
         padding: var(--md-sys-spacing-3, 0.75rem);
@@ -141,6 +166,17 @@ body:has(main.no-nav) {
 *:focus-visible {
     outline: 2px solid var(--md-sys-color-primary);
     outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
+    border-radius: inherit;
+}
+
+/* Enhanced visibility on primary-filled / saturated backgrounds */
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline: 2px solid var(--md-sys-color-tertiary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
 }
 
 /* ==========================================================================

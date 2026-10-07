@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Socratic Layout - Navigation & App Scaffolding (Headers, Rails, Drawers, BottomNav)
+   Material Design 3 Navigation Standard & Safe-Area Ergonomics
+   ========================================================================== */
+
+/* Universal Page Header (Header Start / Actions Slot) */
+.m3-page-header-start {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.m3-page-header-icon {
+    font-size: 28px !important;
+    width: 28px !important;
+    height: 28px !important;
+    color: var(--md-sys-color-primary);
+    line-height: 1;
+    display: inline-grid;
+    place-items: center;
+}
+
+.m3-page-header-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m3-page-header-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
+}
+
+/* Universal Modal & Navigation Drawer Backdrop */
+.m3-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: var(--m3-z-dialog, 100);
+    background: var(--md-sys-glass-backdrop);
+    backdrop-filter: var(--md-sys-glass-blur-standard);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
+    display: grid !important;
+    place-items: center;
+    padding: max(1rem, env(safe-area-inset-top, 0px)) max(1rem, env(safe-area-inset-right, 0px)) max(1rem, env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
+    box-sizing: border-box;
+    animation: m3-fade-in var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-entrance);
+}
+
+/* Bottom Navigation & Mobile App Bar */
+.m3-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--m3-z-bottom-nav, 40);
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--md-sys-glass-surface);
+    backdrop-filter: var(--md-sys-glass-blur-heavy);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-heavy);
+    border-top: var(--md-sys-glass-border);
+    box-shadow: 0 -2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
+}
+
+.m3-bottom-nav-item {
+    display: grid !important;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+    gap: 0.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    min-height: 48px;
+    padding: 0.5rem;
+    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+.m3-bottom-nav-item.active {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.m3-nav-fab {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--md-sys-elevation-level3), var(--md-sys-elevation-primary-glow);
+}
+
+/* Navigation Drawer & Responsive Navigation Rail */
+.m3-drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--m3-z-drawer, 30);
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: min(85vw, 360px);
+    background: var(--md-sys-color-surface-container-low);
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--md-sys-spacing-4);
+    padding-top: max(var(--md-sys-spacing-4), env(safe-area-inset-top, 0px));
+    padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+    padding-bottom: max(var(--md-sys-spacing-4), env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+    transition: transform var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-expressive-entrance);
+}
+
+.m3-drawer.closed {
+    transform: translateX(-100%);
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-expressive-exit);
+}
+
+.m3-nav-rail {
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    align-items: center;
+    width: calc(80px + env(safe-area-inset-left, 0px));
+    height: 100dvh;
+    background: var(--md-sys-color-surface);
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--md-sys-spacing-3) 0;
+    padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-bottom: max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+}
+

@@ -123,3 +123,390 @@ input[type="color"] {
     border-radius: var(--md-sys-shape-corner-large, 24px);
 }
 
+/* ─── Banner & Notice Primitives ───────────────────────────────────────── */
+.m3-banner-error,
+.error-banner {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    align-items: center;
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    border: 1px solid var(--md-sys-color-error);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    font-size: 0.9375rem;
+    box-sizing: border-box;
+}
+
+.m3-banner-error .error-icon,
+.error-banner .error-icon {
+    font-size: 1.5rem;
+}
+
+/* ─── Quantity Counter Control (Strict Grid Cluster) ─────────────────── */
+.m3-counter,
+.material-counter {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-sizing: border-box;
+}
+
+.m3-counter button,
+.m3-counter md-filled-button,
+.m3-counter md-outlined-button,
+.material-counter button,
+.material-counter md-filled-button,
+.material-counter md-outlined-button {
+    --md-filled-button-container-height: 48px;
+    --md-outlined-button-container-height: 48px;
+    --md-filled-icon-button-container-width: 48px;
+    --md-filled-icon-button-container-height: 48px;
+    font-size: 0.85rem;
+}
+
+/* ─── Material Dialog Component ───────────────────────────────────────── */
+md-dialog {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog, 28px);
+    width: auto;
+    max-width: min(92vw, 560px);
+    max-height: min(90vh, 90dvh);
+    box-sizing: border-box;
+}
+
+md-dialog > * {
+    background: var(--md-sys-color-surface-container-high, var(--md-sys-color-surface-container));
+}
+
+/* ─── Resource Booking Picker (Commerce) ─────────────────────────────────── */
+.booking-picker-card {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    padding: clamp(14px, 2.5vw, 20px);
+    color: var(--md-sys-color-on-surface);
+    display: grid !important;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.picker-title-row {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.picker-icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    display: grid !important;
+    place-items: center;
+}
+
+.booking-picker-card .headline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    margin: 0;
+}
+
+.booking-picker-card .body-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.resource-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.date-presets-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+    gap: 6px;
+}
+
+.date-preset-chip {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.date-preset-chip md-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+.date-preset-chip:hover {
+    background: var(--md-sys-color-primary-container);
+    border-color: var(--md-sys-color-primary);
+    transform: translateY(-1px);
+}
+
+.date-preset-chip.active {
+    background: var(--md-sys-color-primary);
+    border-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.date-preset-chip.active md-icon {
+    color: var(--md-sys-color-on-primary);
+}
+
+.date-field-row {
+    width: 100%;
+}
+
+.canvas-card {
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 14px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.canvas-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 4px;
+}
+
+.label-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.canvas-wrapper {
+    height: clamp(180px, 30vh, 240px);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.time-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slots-chip-set {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.booking-summary-banner {
+    background: var(--md-sys-color-primary-container);
+    border: 1px solid var(--md-sys-color-primary);
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 599.98px) {
+    .booking-summary-banner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.summary-left {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.summary-check-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 28px;
+}
+
+.summary-text-box {
+    display: grid !important;
+    gap: 2px;
+}
+
+.summary-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.summary-date {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.summary-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ─── Product Variant Selector (Commerce) ────────────────────────────────── */
+.variant-dialog-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    width: 100%;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.variant-dialog-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--md-sys-color-on-surface);
+    display: block;
+}
+
+.variant-dialog-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+    margin-top: 2px;
+}
+
+.variant-dialog-body {
+    display: grid !important;
+    gap: 16px;
+    margin-top: 8px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.option-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option-fieldset .label-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+}
+
+.required-badge {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    text-transform: none;
+    font-weight: 600;
+}
+
+.variants-chip-set {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
+    gap: 8px;
+}
+
+.options-list-container {
+    display: grid !important;
+    gap: 4px;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.option-item-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    cursor: pointer;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    transition: background-color 0.15s ease;
+    box-sizing: border-box;
+}
+
+.option-item-row:last-child {
+    border-bottom: none;
+}
+
+.option-item-row:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.option-add-price {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+}
+
+.variant-dialog-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.price-box {
+    display: grid !important;
+    gap: 2px;
+}
+
+.price-label {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+}
+
+.price-box .price-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+

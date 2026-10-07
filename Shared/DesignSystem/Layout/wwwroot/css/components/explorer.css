@@ -1,0 +1,54 @@
+   ========================================================================== */
+.analytics-explorer-section,
+.m3-explorer-section {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+}
+
+.explorer-header {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.explorer-title-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.explorer-title-group md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 1.25rem;
+}
+
+.explorer-title-group h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.explorer-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.explorer-chipset-wrapper {
+    display: grid;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+}
+
+.explorer-grid-container {
+    display: grid;
+    width: 100%;
+    min-height: 380px;
+}
+

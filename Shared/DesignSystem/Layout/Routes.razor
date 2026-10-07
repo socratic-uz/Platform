@@ -17,17 +17,17 @@
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Nav.ToBaseRelativePath(Nav.Uri));
 		   }
-		   <div class="grid-center" style="min-height: 80vh; padding: 2rem; display: grid; place-items: center; background: var(--md-sys-color-surface, #101415); color: var(--md-sys-color-on-surface, #e1e3e4);">
-			   <div style="display: grid; gap: 1.5rem; max-width: 600px; width: 100%; padding: 2rem; background: var(--md-sys-color-surface-container, #1d2021); border: 1px solid var(--md-sys-color-outline-variant, #40484b); border-radius: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.25);">
+		   <div class="grid-center" style="min-height: 80vh; padding: 2rem; display: grid; place-items: center; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface);">
+			   <div style="display: grid; gap: 1.5rem; max-width: 600px; width: 100%; padding: 2rem; background: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-color-outline-variant); border-radius: var(--md-sys-shape-corner-extra-large, 24px); box-shadow: var(--md-sys-elevation-level3, 0 8px 32px rgba(0,0,0,0.25));">
 				   <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1rem; min-width: 0;">
-					   <div style="display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--md-sys-color-primary-container, #004f58); color: var(--md-sys-color-on-primary-container, #8bf2ff);">
+					   <div style="display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
 						   <md-icon>rocket_launch</md-icon>
 					   </div>
 					   <div style="display: grid; gap: 0.25rem;">
-						   <h2 style="margin: 0; font-size: 1.35rem; font-weight: 600; color: var(--md-sys-color-on-surface, #e1e3e4);">
+						   <h2 style="margin: 0; font-size: 1.35rem; font-weight: 600; color: var(--md-sys-color-on-surface);">
 							   @(isRoot ? "Socratic Standalone Host" : "Страница не найдена")
 						   </h2>
-						   <p style="margin: 0; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant, #bfc8cb);">
+						   <p style="margin: 0; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">
 							   @(isRoot ? "Автономный режим разработки. Выберите страницу активного модуля:" : "Запрошенный маршрут не найден. Доступные модули в этом решении:")
 						   </p>
 					   </div>
@@ -38,29 +38,29 @@
 					   <div style="display: grid; gap: 0.75rem;">
 						   @foreach (var mod in modules)
 						   {
-							   <a href="@mod.RoutePrefix" style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high, #272a2b); border: 1px solid var(--md-sys-color-outline-variant, #40484b); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
-								   <div style="display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--md-sys-color-secondary-container, #324b4f); color: var(--md-sys-color-on-secondary-container, #cde7ec);">
+							   <a href="@mod.RoutePrefix" style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
+								   <div style="display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">
 									   <md-icon>@(mod.Icon ?? "widgets")</md-icon>
 								   </div>
 								   <div style="display: grid; gap: 0.15rem;">
-									   <span style="font-weight: 600; font-size: 1rem; color: var(--md-sys-color-on-surface, #e1e3e4);">@mod.DisplayTitle</span>
-									   <span style="font-size: 0.8rem; color: var(--md-sys-color-primary, #4dd9e8); font-family: monospace;">@mod.RoutePrefix</span>
+									   <span style="font-weight: 600; font-size: 1rem; color: var(--md-sys-color-on-surface);">@mod.DisplayTitle</span>
+									   <span style="font-size: 0.8rem; color: var(--md-sys-color-primary); font-family: monospace;">@mod.RoutePrefix</span>
 								   </div>
-								   <md-icon style="color: var(--md-sys-color-outline, #899295);">arrow_forward</md-icon>
+								   <md-icon style="color: var(--md-sys-color-outline);">arrow_forward</md-icon>
 							   </a>
 						   }
 					   </div>
 				   }
 				   else
 				   {
-					   <div style="display: grid; gap: 0.5rem; text-align: center; padding: 1.5rem; background: var(--md-sys-color-surface-container-low, #191c1d); border-radius: 16px;">
-						   <p style="margin: 0; color: var(--md-sys-color-error, #ffb4ab);">Модули не обнаружены в FeatureRegistry</p>
-						   <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant, #bfc8cb);">Проверьте регистрацию в FeatureRegistry.Register()</span>
+					   <div style="display: grid; gap: 0.5rem; text-align: center; padding: 1.5rem; background: var(--md-sys-color-surface-container-low); border-radius: 16px;">
+						   <p style="margin: 0; color: var(--md-sys-color-error);">Модули не обнаружены в FeatureRegistry</p>
+						   <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Проверьте регистрацию в FeatureRegistry.Register()</span>
 					   </div>
 				   }
 
-				   <div style="display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--md-sys-color-outline-variant, #40484b); padding-top: 1rem;">
-					   <span style="font-size: 0.75rem; color: var(--md-sys-color-outline, #899295); text-align: center;">
+				   <div style="display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--md-sys-color-outline-variant); padding-top: 1rem;">
+					   <span style="font-size: 0.75rem; color: var(--md-sys-color-outline); text-align: center;">
 						   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
 					   </span>
 				   </div>

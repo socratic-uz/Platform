@@ -1,0 +1,512 @@
+/* Material Design 3 Expressive - Data Tables & QuickGrid Scaffolding */
+
+.m3-table-wrapper,
+.order-items-table-wrapper {
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    overflow-x: auto;
+    padding: var(--md-sys-spacing-2, 0.5rem);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.m3-table,
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+}
+
+.m3-table th,
+.order-items-table th {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    text-align: left;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.m3-table td,
+.order-items-table td {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    color: var(--md-sys-color-on-surface);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    vertical-align: middle;
+}
+
+.m3-table tr:last-child td,
+.order-items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.amount-cell {
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+}
+
+.table-row-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    justify-content: end;
+}
+
+.table-actions-bar {
+    display: grid !important;
+    justify-content: start;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--md-sys-color-on-surface);
+    min-width: min(100%, 680px);
+}
+
+.orders-table th {
+    background: var(--md-sys-color-surface-container-high);
+    padding: 0.85rem 1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: left;
+    color: var(--md-sys-color-on-surface-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.orders-table td {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    vertical-align: middle;
+}
+
+.orders-table tr:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.payment-cell,
+.date-cell {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.4rem;
+}
+
+.table-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-outline);
+}
+
+/* ==========================================================================
+   QuickGrid & SmartGrid Architecture & Pagination Engine
+   Strict CSS Grid, Material Design 3 Expressive Tokens
+   ========================================================================== */
+.smart-grid-container {
+    display: grid !important;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    container-type: inline-size;
+}
+
+.smart-grid-container h4 {
+    padding: 0 0.5rem;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow: auto;
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    display: grid !important;
+    border-radius: 24px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.table-container *:not(a) {
+    border-collapse: collapse;
+}
+
+.table-container > table,
+table.quickgrid {
+    grid-column: 1 / -1;
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--md-sys-color-surface);
+}
+
+.table-container th,
+.table-container td,
+table.quickgrid th,
+table.quickgrid td {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    vertical-align: middle;
+}
+
+.table-container th,
+table.quickgrid th {
+    position: relative;
+    padding: 1rem;
+    white-space: nowrap;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
+}
+
+.table-container td,
+table.quickgrid td {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.table-container tr:hover td,
+table.quickgrid tr:hover td {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+/* Border cleanups on edges to fit 24px rounded container seamlessly */
+.table-container thead > :first-child > *,
+table.quickgrid thead > :first-child > * {
+    border-top: none;
+}
+
+.table-container tbody > :last-child > *,
+table.quickgrid tbody > :last-child > * {
+    border-bottom: none;
+}
+
+.table-container thead > * > :first-child,
+.table-container tbody > * > :first-child,
+table.quickgrid thead > * > :first-child,
+table.quickgrid tbody > * > :first-child {
+    border-left: none;
+}
+
+.table-container thead > * > :last-child,
+.table-container tbody > * > :last-child,
+table.quickgrid thead > * > :last-child,
+table.quickgrid tbody > * > :last-child {
+    border-right: none;
+}
+
+/* Sticky Action Column */
+.table-container th.actions-column,
+table.quickgrid th.actions-column {
+    position: sticky;
+    right: 0;
+    background: var(--md-sys-color-surface-container-high) !important;
+    z-index: 2;
+    text-align: right;
+    justify-items: end;
+}
+
+.table-container td.actions-column,
+table.quickgrid td.actions-column {
+    position: sticky;
+    right: 0;
+    background: var(--md-sys-color-surface) !important;
+    z-index: 1;
+    text-align: right;
+    justify-items: end;
+}
+
+.table-container tr:hover td.actions-column,
+table.quickgrid tr:hover td.actions-column {
+    background: var(--md-sys-color-surface-container-highest) !important;
+}
+
+/* SmartGrid Flag Chips & Readonly Controls */
+.grid-enum-flags {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+.grid-chip-readonly {
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Scrollbar Ergonomics for SmartGrid */
+.table-container::-webkit-scrollbar {
+    width: auto;
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-button {
+    display: none;
+}
+
+.table-container::-webkit-scrollbar-track {
+    border-radius: 24px;
+    background: var(--md-sys-color-surface);
+    margin: 1rem;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-outline);
+    border-radius: 24px;
+    border: 0.15rem solid transparent;
+    border-color: var(--md-sys-color-surface);
+}
+
+/* QuickGrid Column Headers & Sorting */
+.col-header-content {
+    position: relative;
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+}
+
+.col-title {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    width: 100%;
+    min-width: 0px;
+    padding: 0;
+}
+
+button.col-title {
+    border: none;
+    background: none;
+    position: relative;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+.col-title-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sort-indicator {
+    width: 1rem;
+    height: 1rem;
+    align-self: center;
+    text-align: center;
+}
+
+.col-sort-desc .sort-indicator,
+.col-sort-asc .sort-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.col-sort-asc .sort-indicator {
+    transform: scaleY(-1);
+}
+
+.col-options-button {
+    border: none;
+    padding: 0;
+    width: 1rem;
+    align-self: stretch;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 21 24" stroke="%2379747e" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" /></svg>') center center / 1rem no-repeat;
+    cursor: pointer;
+}
+
+.col-options {
+    position: absolute;
+    background: var(--md-sys-color-surface-container-high, var(--md-sys-color-surface));
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    box-shadow: var(--md-sys-elevation-level3, 0 8px 24px rgba(0,0,0,0.3));
+    left: 0;
+    padding: 1rem;
+    z-index: 10;
+}
+
+.col-justify-end .col-options {
+    left: unset;
+    right: 0;
+}
+
+.col-justify-start .col-options {
+    left: 0;
+    right: unset;
+}
+
+.col-width-draghandle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0rem;
+    cursor: ew-resize;
+}
+
+.col-width-draghandle:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--md-sys-color-outline);
+}
+
+td.col-justify-center,
+.col-justify-center .col-title {
+    text-align: center;
+    justify-content: center;
+}
+
+td.col-justify-end,
+.col-justify-end .col-title {
+    text-align: right;
+    justify-content: end;
+}
+
+.col-justify-end .col-title .sort-indicator {
+    order: -1;
+}
+
+td.col-justify-start,
+td.col-justify-left {
+    text-align: left;
+}
+
+td.col-justify-right {
+    text-align: right;
+}
+
+/* QuickGrid & SmartGrid Paginator */
+.paginator,
+.table-container > .paginator {
+    position: sticky;
+    left: 0;
+    grid-column: 1 / -1;
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: space-between;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    margin: 0;
+    padding: 0.5rem 1rem !important;
+    align-items: center;
+    width: 100%;
+    background: var(--md-sys-color-surface-container);
+    box-sizing: border-box;
+}
+
+.pagination-text {
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.paginator nav {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    margin-left: auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.paginator nav button {
+    border: 0;
+    background: none center center / 1rem no-repeat;
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background-color 0.15s ease;
+}
+
+.paginator nav button[disabled] {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.paginator nav button:not([disabled]):hover {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.paginator nav button:not([disabled]):active {
+    background-color: var(--md-sys-color-primary-container);
+}
+
+.go-first, .go-last {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z" fill="%236750a4"/><rect height="2" width="20" y="20.5" x="2" fill="%236750a4"/></g></svg>') !important;
+}
+
+.go-previous, .go-next {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" fill="%236750a4"/></g></svg>') !important;
+}
+
+.go-next, .go-last {
+    transform: scaleX(-1);
+}
+
+/* SmartGrid Drop Container & Card Grid */
+.drop-container {
+    position: relative;
+    display: grid !important;
+    grid-column: 1 / -1;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-radius: 12px;
+    border: 2px dashed var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface-variant);
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+    overflow: hidden;
+}
+
+.drop-container:hover {
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-primary);
+}
+
+.drop-title {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+.card-grid {
+    display: grid !important;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    grid-auto-rows: minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@container (max-width: 599.98px) {
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 0.75rem;
+    }
+}
+

@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Socratic Layout - Universal Grid Layout Primitives (Strict CSS Grid)
+   Material Design 3 Responsive Geometry, Container Queries & Spatial Engines
+   ========================================================================== */
+
+/* ─── 1. Container Query Roots ─────────────────────────────────────────── */
+.m3-container-query {
+    container-type: inline-size;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ─── 2. Universal Page Container (Fluid Gutters & 4-Way Safe Area) ───── */
+.m3-page-container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-6, 24px);
+    padding-top: max(1.5rem, env(safe-area-inset-top, 0px));
+    padding-left: max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-right, 0px));
+    padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: clip;
+    min-width: 0;
+}
+

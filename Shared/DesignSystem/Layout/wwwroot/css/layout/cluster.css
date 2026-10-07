@@ -1,0 +1,12 @@
+/* ─── 5. Inline Grid Cluster (Replaces inline-flex wrapping rows) ─────── */
+.m3-grid-cluster {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+

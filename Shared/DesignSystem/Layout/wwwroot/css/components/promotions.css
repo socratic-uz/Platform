@@ -1,0 +1,132 @@
+/* ─── 6. Organization Subscription & Promotion Modals ──────────────── */
+.trial-counter {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.trial-days-highlight {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.trial-days-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.subscription-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.subscription-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.promotion-modal-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.header-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
+    display: grid !important;
+    place-items: center;
+}
+
+.header-rocket-icon {
+    font-size: 1.75rem;
+    color: var(--md-sys-color-on-primary);
+}
+
+.promotion-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.promotion-modal-subtitle {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.promotion-modal-body {
+    padding: 1rem 0;
+    display: grid !important;
+    gap: 1.25rem;
+}
+
+.product-preview-pill {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: var(--md-sys-color-surface-container);
+    border-radius: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    font-size: 0.9rem;
+}
+
+.preview-label {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.preview-product-price {
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-align: right;
+}
+
+.section-heading {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.invoice-summary-box {
+    padding: 1.25rem;
+    background: var(--md-sys-color-surface-container);
+    border-radius: 18px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    display: grid !important;
+    gap: 0.4rem;
+}
+
+.invoice-amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.qr-instruction {
+    max-width: 480px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.45;
+}
+
+/* ==========================================================================
+   Universal M3 Configuration Dialog, Modal Backdrop & Explorer Panel
+   Strict CSS Grid, Zero Flexbox Standard
+   ========================================================================== */

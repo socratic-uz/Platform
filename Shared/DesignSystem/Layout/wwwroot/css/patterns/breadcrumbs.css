@@ -1,0 +1,51 @@
+/* ─── Breadcrumbs (Universal Navigation) ─────────────────────────────────── */
+.m3-breadcrumbs,
+.store-breadcrumbs {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+.crumb-link {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    min-height: 48px;
+    padding: 0 4px;
+}
+
+.crumb-link:hover {
+    color: var(--md-sys-color-primary);
+}
+
+.crumb-link:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    border-radius: 4px;
+}
+
+.crumb-icon {
+    font-size: 1.1rem;
+}
+
+.crumb-sep {
+    color: var(--md-sys-color-outline);
+    opacity: 0.5;
+}
+
+.crumb-current {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 500;
+}
+

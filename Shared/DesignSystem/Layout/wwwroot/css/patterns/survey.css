@@ -1,0 +1,28 @@
+/* ─── Survey Prompt Bar ───────────────────────────────────────────────── */
+.m3-survey-prompt,
+.surveyContainer {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    margin: 0.5rem auto;
+    max-width: 1024px;
+    color: var(--md-sys-color-on-surface-variant);
+    box-sizing: border-box;
+}
+
+.surveyContainer a {
+    text-decoration: underline;
+    color: var(--md-sys-color-primary);
+}
+
+.surveyContainer .tool-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: grid !important;
+    place-items: center;
+}
+

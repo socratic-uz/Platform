@@ -224,3 +224,99 @@
     border-color: rgb(from var(--md-sys-color-secondary) r g b / 0.35);
     color: var(--md-sys-color-secondary);
 }
+
+/* Count Indicator Pill */
+.m3-count-badge,
+.count-badge,
+.badge-counter {
+    display: inline-grid !important;
+    place-items: center;
+    min-width: 28px;
+    height: 24px;
+    padding: 0 0.5rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.ready-badge {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.kds-qty-badge,
+.item-qty-badge {
+    font-size: 0.875rem;
+    padding: 0.2rem 0.6rem;
+    height: auto;
+}
+
+.kds-status-tag {
+    justify-self: end;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+/* Header Context Indicators & Back Navigation */
+.back-button,
+.m3-back-button {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    min-height: 48px;
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: transparent;
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+    box-sizing: border-box;
+}
+
+.back-button:hover,
+.back-button:focus-visible,
+.m3-back-button:hover,
+.m3-back-button:focus-visible {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    outline: none;
+}
+
+.back-icon,
+.m3-back-icon {
+    font-size: 1.25rem;
+}
+
+.items-count-badge {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.375rem);
+    padding: var(--md-sys-spacing-2, 0.375rem) var(--md-sys-spacing-4, 0.875rem);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.badge-icon {
+    font-size: 1.125rem;
+}
+

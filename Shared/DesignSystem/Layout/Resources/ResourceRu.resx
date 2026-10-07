@@ -1585,6 +1585,9 @@
   <data name="Data" xml:space="preserve">
     <value>Данные</value>
   </data>
+  <data name="Analytics" xml:space="preserve">
+    <value>Аналитика</value>
+  </data>
   <data name="SocraticID" xml:space="preserve">
     <value>Socratic ID</value>
   </data>

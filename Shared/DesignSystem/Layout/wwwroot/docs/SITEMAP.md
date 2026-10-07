@@ -13,7 +13,7 @@
 | **`/docs`** | Интерактивная документация системы | `Portal/Landing` | Desktop, Tablet | `Portal/Landing/Pages/Docs.razor` |
 | **`/help`** | Центр поддержки и FAQ | `Portal/Landing` | Desktop, Mobile, Tablet | `Portal/Landing/Pages/Help.razor` |
 | **`/example`** | Примеры сценариев и интеграций | `Portal/Landing` | Desktop, Tablet | `Portal/Landing/Pages/Example.razor` |
-| **`/data`** | Просмотр системных данных | `Portal/Landing` | Desktop, Tablet | `Portal/Landing/Pages/Data.razor` |
+| **`/analytics`** | Настраиваемая аналитика и реестры данных | `Portal/Landing` | Desktop, Tablet, Mobile | `Portal/Landing/Pages/Analytics.razor` |
 | **`/player`** | Медиаплеер / Видео-презентации | `Portal/Landing` | Desktop, Mobile, Tablet | `Portal/Landing/Pages/Player.razor` |
 | **`/qr`** | QR-сканер и просмотрщик кодов | `Portal/Landing` | Mobile, Tablet | `Portal/Landing/Pages/QR.razor` |
 | **`/3d`** | 3D WebGL интерактивная сцена | `Portal/Landing` | Desktop, Tablet | `Portal/Landing/Pages/3d.razor` |
