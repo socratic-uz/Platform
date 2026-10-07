@@ -14,12 +14,11 @@ namespace Shared.Services;
 public class StandaloneAuthenticationStateProvider : AuthenticationStateProvider
 {
     private static readonly AuthenticationState DefaultState = new(
-        new ClaimsPrincipal(new ClaimsIdentity(
-        [
-            new Claim(ClaimTypes.NameIdentifier, "00000000-0000-0000-0000-000000000001"),
-            new Claim(ClaimTypes.Name, "Dev Cashier"),
-            new Claim(ClaimTypes.Role, "Admin"),
-            new Claim("OrganizationId", "00000000-0000-0000-0000-000000000001")
+        new ClaimsPrincipal(new ClaimsIdentity([
+            new Claim("OrganizationId", "20240824-0000-0000-0000-000000000001"),
+            new Claim("UserId", "9b5273f7-218e-433b-bb39-fb4b1b9bc9cc"),
+            new Claim("RoleId", "6e789daf-3b35-4052-9370-9a67d880e4ce"),
+            new Claim("Permission", "1098654101708")
         ], "StandaloneAuth")));
 
     public override Task<AuthenticationState> GetAuthenticationStateAsync() => Task.FromResult(DefaultState);

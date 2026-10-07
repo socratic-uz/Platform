@@ -535,3 +535,27 @@ footer.app-footer {
         top: 56px;
     }
 }
+
+@media screen and (max-width: 599.98px) {
+    .landing-header-actions {
+        gap: 0.35rem;
+    }
+
+    .landing-auth-btn span {
+        display: none !important;
+    }
+
+    .landing-auth-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0;
+        place-items: center;
+        border-radius: 50%;
+    }
+
+    header.landing-header .header-brand-text {
+        display: none;
+    }
+}

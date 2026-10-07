@@ -7,6 +7,8 @@
     nav.nav-desktop,
     nav.glass:not(.nav-mobile) {
         display: var(--nav-display, grid);
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
         align-items: center;
         justify-content: stretch;
         justify-items: stretch;
@@ -16,7 +18,7 @@
         align-content: start;
         position: sticky;
         top: 0;
-        width: 4rem;
+        width: calc(76px + env(safe-area-inset-left, 0px));
         height: 100dvh;
         border-radius: 0 24px 24px 0;
         z-index: 2;
@@ -28,31 +30,73 @@
         align-self: start;
         order: 1;
         overflow: visible;
+        gap: 0.5rem;
     }
 
     nav.nav-desktop a.nav-item,
     nav.glass:not(.nav-mobile) a.nav-item {
         display: grid;
-        place-items: center;
-        width: 48px;
-        height: 48px;
-        margin: 6px auto;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        align-content: center;
+        gap: 3px;
+        width: 64px;
+        min-height: 56px;
+        margin: 4px auto;
+        padding: 4px 2px;
         border-radius: 16px;
         color: var(--md-sys-color-on-surface-variant);
         text-decoration: none;
         transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
     }
 
-    nav.nav-desktop a.nav-item:hover,
-    nav.glass:not(.nav-mobile) a.nav-item:hover {
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 30px;
+        border-radius: 16px;
+        font-size: 22px;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    nav.nav-desktop a.nav-item:hover md-icon,
+    nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined {
         background: var(--md-sys-color-surface-container-highest);
         color: var(--md-sys-color-on-surface);
     }
 
-    nav.nav-desktop a.nav-item.active,
-    nav.glass:not(.nav-mobile) a.nav-item.active {
+    nav.nav-desktop a.nav-item.active md-icon,
+    nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined {
         background: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
+    }
+
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        text-align: center;
+        font-size: 0.72rem;
+        font-weight: 500;
+        line-height: 1.15;
+        color: var(--md-sys-color-on-surface-variant);
+        max-width: 64px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    nav.nav-desktop a.nav-item.active span,
+    nav.glass:not(.nav-mobile) a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+        font-weight: 700;
     }
 }
 

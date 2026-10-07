@@ -153,6 +153,10 @@ body:has(main.no-nav) {
         padding-right: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-right, 0px));
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1rem);
     }
+
+    .app-grid > footer {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+    }
 }
 
 /* ==========================================================================

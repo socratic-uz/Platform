@@ -6,6 +6,7 @@
 
 <HeadContent>
 	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
+	<link rel="stylesheet" href="_content/Layout/css/patterns/navigation/landing-bar.css" />
 </HeadContent>
 <Color />
 @if (!isRootLanding)
@@ -16,13 +17,15 @@
 <div class="landing-grid">
 	@if (isRootLanding)
 	{
-		<aside class="landing-floating-controls" aria-label="Quick Actions">
-			<LanguageSelector Variant="pill" />
-			<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
-				<Icon Name="login" />
-				<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
-			</a>
-		</aside>
+		<div class="landing-top-bar-wrapper">
+			<aside class="landing-floating-controls" aria-label="Quick Actions">
+				<LanguageSelector Variant="pill" />
+				<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
+					<Icon Name="login" />
+					<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
+				</a>
+			</aside>
+		</div>
 	}
 	else
 	{

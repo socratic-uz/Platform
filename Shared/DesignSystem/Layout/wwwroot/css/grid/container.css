@@ -27,4 +27,10 @@
     overflow-x: clip;
     min-width: 0;
 }
-
+/* ─── 3. Universal Centered Content Width ───────────────────────────────── */
+.page-width {
+    max-width: 1024px;
+    width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+}
