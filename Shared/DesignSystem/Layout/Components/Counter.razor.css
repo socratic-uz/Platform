@@ -1,17 +1,1 @@
-.material-counter {
-    display: inline-grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-.material-counter button,
-.material-counter md-filled-button,
-.material-counter md-outlined-button {
-    --md-filled-button-container-height: 48px;
-    --md-outlined-button-container-height: 48px;
-    --md-filled-icon-button-container-width: 48px;
-    --md-filled-icon-button-container-height: 48px;
-    font-size: 0.85rem;
-}
+/* Socratic Material Counter — Scoped styles minimized; full pattern provided globally by _content/Material.Web/css/components/badges.css */

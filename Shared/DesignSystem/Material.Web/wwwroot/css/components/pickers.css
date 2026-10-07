@@ -761,3 +761,160 @@
     gap: 12px;
 }
 
+/* ==========================================================================
+   4. Language Selector & Localization Chips
+   ========================================================================== */
+.lang-select {
+    display: grid;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Inline Segmented Mode (ideal for Footer) */
+.lang-inline-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 0.35rem;
+    align-items: center;
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.lang-chip-btn {
+    display: grid;
+    place-items: center;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.2rem 0.65rem;
+    border: none;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-chip-btn:hover {
+    color: var(--md-sys-color-on-surface);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+    transform: translateY(-1px);
+}
+
+.lang-chip-btn:active {
+    transform: scale(0.96);
+}
+
+.lang-chip-btn.lang-chip--active {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: var(--md-sys-glow-primary-subtle);
+}
+
+/* Pill Dropdown Mode (ideal for Header) */
+.lang-dropdown-wrapper {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.lang-pill-btn {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto auto;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 40px;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-pill-btn:hover {
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-outline);
+}
+
+.lang-globe-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+.lang-current-label {
+    letter-spacing: 0.02em;
+}
+
+.lang-chevron {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: var(--md-sys-color-on-surface-variant);
+    transition: transform 0.2s ease;
+}
+
+.lang-chevron.is-open {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 100;
+    min-width: 130px;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 0.35rem;
+    box-shadow: var(--md-sys-elevation-level3);
+    display: grid;
+    gap: 0.2rem;
+}
+
+.lang-menu-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border: none;
+    background: transparent;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.825rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    min-height: 48px;
+    touch-action: manipulation;
+    transition: background 0.15s ease;
+}
+
+.lang-menu-item:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.lang-menu-item.is-selected {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+

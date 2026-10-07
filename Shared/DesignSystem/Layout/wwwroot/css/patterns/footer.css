@@ -69,10 +69,228 @@
     }
 }
 
+/* ─── 2. Universal App Footer Structure ──────────────────────────────────── */
+footer.app-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    background: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    padding: 3.5rem 2rem 2rem 2rem;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
 
+.footer-container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.footer-custom-slot {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+/* Primary Column Grid */
+.footer-primary-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
+    gap: 3rem 2rem;
+    align-items: start;
+    width: 100%;
+}
+
+/* Brand Column */
+.footer-brand-col {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: start;
+    gap: 1rem;
+    max-width: 320px;
+}
+
+.footer-brand-link {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+    min-height: 48px;
+    min-width: 48px;
+    width: max-content;
+}
+
+.footer-brand-badge {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+    font-size: 20px;
+}
+
+.footer-brand-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-brand-tagline {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.footer-system-status {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    width: max-content;
+    margin-top: 0.25rem;
+}
+
+.status-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00e676;
+    box-shadow: 0 0 8px #00e676;
+    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+}
+
+.status-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Nav Columns */
+.footer-nav-col {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: start;
+    gap: 0.85rem;
+}
+
+.footer-col-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-sys-color-primary);
+    margin: 0;
+}
+
+.footer-links-list {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    display: grid;
+}
+
+.footer-links-list a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 0.25rem 0.5rem;
+    min-height: 36px;
+    border-radius: 8px;
+    transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--md-sys-color-on-surface);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
+    transform: translateX(2px);
+}
+
+.footer-links-list a md-icon,
+.footer-links-list a .material-symbols-outlined {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: var(--md-sys-color-primary);
+    opacity: 0.85;
+}
+
+/* Sub-Footer Bottom Bar */
+.footer-bottom-bar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 0.8;
+}
+
+.footer-lang-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-trust-info {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+}
 
 /* ─── Global Footer Responsive Breakpoints ───────────────────────────────── */
-
 @media screen and (min-width: 840px) {
     .footer-primary-grid {
         grid-template-columns: minmax(0, 1.35fr) repeat(4, minmax(0, 1fr));
