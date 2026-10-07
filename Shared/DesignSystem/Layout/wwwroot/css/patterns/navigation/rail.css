@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Material Design 3 - Navigation Rail Pattern
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        display: var(--nav-display, grid);
+        align-items: center;
+        justify-content: stretch;
+        justify-items: stretch;
+        text-align: start;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        align-content: start;
+        position: sticky;
+        top: 0;
+        width: 4rem;
+        height: 100dvh;
+        border-radius: 0 24px 24px 0;
+        z-index: 2;
+        background: rgb(from var(--md-sys-color-surface-container) r g b / .7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: var(--md-sys-color-on-surface);
+        padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
+        align-self: start;
+        order: 1;
+        overflow: visible;
+    }
+
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin: 6px auto;
+        border-radius: 16px;
+        color: var(--md-sys-color-on-surface-variant);
+        text-decoration: none;
+        transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    nav.nav-desktop a.nav-item:hover,
+    nav.glass:not(.nav-mobile) a.nav-item:hover {
+        background: var(--md-sys-color-surface-container-highest);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    nav.nav-desktop a.nav-item.active,
+    nav.glass:not(.nav-mobile) a.nav-item.active {
+        background: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+    }
+}
+
+.m3-nav-rail {
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    align-items: center;
+    width: calc(80px + env(safe-area-inset-left, 0px));
+    height: 100dvh;
+    background: var(--md-sys-color-surface);
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--md-sys-spacing-3) 0;
+    padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-bottom: max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+}

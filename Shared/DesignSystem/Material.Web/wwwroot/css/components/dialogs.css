@@ -152,5 +152,37 @@
     opacity: 0.9;
 }
 
-/* ==========================================================================
-   Режим Реестров (Data Explorer & Entity Table Wrapper)
+/* ─── Material Design 3 md-dialog Web Component ────────────────────────── */
+md-dialog {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog, 28px);
+    width: auto;
+    max-width: min(92vw, 560px);
+    max-height: min(90vh, 90dvh);
+    box-sizing: border-box;
+}
+
+md-dialog > * {
+    background: var(--md-sys-color-surface-container-high, var(--md-sys-color-surface-container));
+}
+
+md-dialog:not(:defined) {
+    display: none !important;
+}
+
+md-dialog [slot="content"] {
+    display: flow-root;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-width: 0;
+}
+
+md-dialog [slot="actions"] {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 8px);
+}
+

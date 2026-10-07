@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Socratic Platform - Strict CSS Grid Architecture (Zero-Flexbox Standard)
+   Defines root viewport grid, app root grid, and responsive layout structure.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--md-sys-color-background);
+}
+
+body {
+    background: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(0, 1fr);
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+}
+
+body:has(main.no-nav) {
+    --nav-display: none;
+}
+
+/* ==========================================================================
+   Root Application Grid Architecture (Strict CSS Grid)
+   ========================================================================== */
+
+.app-grid {
+    display: grid;
+    grid-template-columns: min-content minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 100%;
+}
+
+.app-grid:not(:has(nav)),
+.app-grid:has(main.no-nav),
+.app-grid.nav-only:not(:has(nav)) {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.app-grid:has(main.no-footer) > footer,
+.app-grid:has(.no-footer) > footer {
+    display: none !important;
+}
+
+.app-grid:has(main.no-header) > header,
+.app-grid:has(.no-header) > header {
+    display: none !important;
+}
+
+.app-grid > header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 10;
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+.app-grid > nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    padding-left: env(safe-area-inset-left, 0px);
+}
+
+.app-grid > main,
+.app-grid .app-main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: var(--md-sys-spacing-4, 1rem);
+    padding-left: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-right, 0px));
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.app-main > main {
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.app-grid:not(:has(nav)) > main,
+.app-grid:has(main.no-nav) > main,
+.app-grid:not(:has(nav)) .app-main,
+.app-grid:has(main.no-nav) .app-main {
+    grid-column: 1 / -1;
+}
+
+.app-grid > footer {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoint (M3 Standard: Compact / Medium < 840px)
+   ========================================================================== */
+
+@media screen and (max-width: 839.98px) {
+    .app-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .app-grid > header,
+    .app-grid > main,
+    .app-grid .app-main,
+    .app-grid > footer {
+        grid-column: 1 / -1;
+    }
+
+    .app-grid > nav {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        z-index: 100 !important;
+        border-radius: 24px 24px 0 0 !important;
+        border-right: none !important;
+    }
+
+    .app-grid > main,
+    .app-grid .app-main {
+        padding: var(--md-sys-spacing-3, 0.75rem);
+        padding-left: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-right, 0px));
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1rem);
+    }
+}
+
+/* ==========================================================================
+   Global A11y Standards (WCAG 2.1 AA Focus States)
+   ========================================================================== */
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
+    border-radius: inherit;
+}
+
+/* Enhanced visibility on primary-filled / saturated backgrounds */
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline: 2px solid var(--md-sys-color-tertiary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
+}
+
+/* ==========================================================================
+   M3 Fluid Scrollbars (Chrome, Safari, Firefox, Edge)
+   ========================================================================== */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-on-surface-variant);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+/* ==========================================================================
+   Reduced Motion Accessibility (Vestibular Protection)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   Scrollbar Utility Classes (Zero-scrollbar & Compact scrollbar)
+   ========================================================================== */
+
+.scrollbar-none,
+.no-scrollbar {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Reusable Strict CSS Grid Topology Classes
+   ========================================================================== */
+
+/* Universal Catalog / Products Grid */
+.grid-catalog {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+    gap: var(--space-4, 1rem);
+    align-content: start;
+    width: 100%;
+}
+
+/* Horizontal Action Bar / Button Rows */
+.grid-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+}
+
+/* Vertical Stacking Layout */
+.grid-stack {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3, 0.75rem);
+    align-content: start;
+    width: 100%;
+}
+
+/* Equal 2-Column Split */
+.grid-2-col {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4, 1rem);
+    width: 100%;
+}
+
+@media (max-width: 839.98px) {
+    .grid-2-col {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

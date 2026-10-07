@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Socratic Platform - Pricing Grid & Subscription Tier Patterns
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+.m3-pricing-grid,
+.tiers-grid,
+.plans-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tier-box,
+.plan-card {
+    position: relative;
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 20px);
+    padding: var(--md-sys-spacing-5, 1.25rem);
+    display: grid !important;
+    align-content: space-between;
+    gap: var(--md-sys-spacing-4, 1rem);
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short2, 100ms) ease;
+}
+
+.tier-box:hover,
+.plan-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--md-sys-color-outline);
+}
+
+.tier-box.active-tier,
+.plan-card.selected {
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+.tier-box.pro-tier {
+    border-color: var(--md-sys-color-tertiary);
+}
+
+.pro-tag,
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.tier-header,
+.plan-card-header {
+    display: grid !important;
+    gap: 0.35rem;
+}
+
+.tier-name,
+.plan-name {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.tier-price,
+.plan-price-wrap {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.tier-price small,
+.plan-currency {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.tier-features,
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid !important;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.tier-features li,
+.plan-features li {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-icon.ok,
+.feat-icon { color: var(--md-sys-color-primary); }
+.feature-icon.info { color: var(--md-sys-color-tertiary); }
+.feature-icon.star { color: var(--md-sys-color-secondary); }
+
+.current-plan-indicator {
+    display: block;
+    text-align: center;
+    padding: 0.4rem;
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.current-plan-indicator.pro {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}

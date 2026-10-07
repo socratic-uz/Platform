@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Material Design 3 Expressive - Button Primitives & Interactive Enhancements
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+md-filled-button,
+md-outlined-button,
+md-elevated-button,
+md-tonal-button,
+md-text-button {
+    --md-filled-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
+    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
+    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
+    min-height: 48px;
+    touch-action: manipulation;
+    font-weight: 600;
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+md-filled-button:active,
+md-outlined-button:active,
+md-elevated-button:active,
+md-tonal-button:active {
+    transform: scale(0.97);
+}
+
+/* Touch-optimized Icon Button (48px Touch Target) */
+md-icon-button {
+    min-width: 48px;
+    min-height: 48px;
+    touch-action: manipulation;
+}
+
+/* Icons inside buttons in default slot (unslotted) - fix vertical misalignment */
+md-filled-button md-icon:not([slot]),
+md-outlined-button md-icon:not([slot]),
+md-elevated-button md-icon:not([slot]),
+md-text-button md-icon:not([slot]),
+md-tonal-button md-icon:not([slot]),
+md-filled-tonal-button md-icon:not([slot]) {
+    vertical-align: middle;
+    margin-inline-end: 8px;
+    font-size: var(--md-icon-size, 18px);
+    width: var(--md-icon-size, 18px);
+    height: var(--md-icon-size, 18px);
+    line-height: 1;
+}
+
+/* Trailing unslotted icons in buttons */
+md-filled-button > *:last-child:is(md-icon:not([slot])),
+md-outlined-button > *:last-child:is(md-icon:not([slot])),
+md-elevated-button > *:last-child:is(md-icon:not([slot])),
+md-text-button > *:last-child:is(md-icon:not([slot])),
+md-tonal-button > *:last-child:is(md-icon:not([slot])),
+md-filled-tonal-button > *:last-child:is(md-icon:not([slot])) {
+    margin-inline-end: 0;
+    margin-inline-start: 8px;
+}

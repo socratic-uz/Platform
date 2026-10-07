@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Material Design 3 - Bottom Navigation Bar Pattern
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        align-content: stretch;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        gap: initial;
+        display: grid !important;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 24px 24px 0 0 !important;
+        border-right: none !important;
+        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px)) 0.25rem !important;
+        z-index: 100 !important;
+        box-sizing: border-box;
+        background: var(--md-sys-color-surface-container) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--md-sys-color-outline-variant) !important;
+        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow, #000000) r g b / 0.15);
+    }
+
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0.25rem 0.2rem;
+        gap: 2px;
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 0.75rem;
+    }
+
+    nav.glass a.nav-item md-icon,
+    nav a.nav-item md-icon {
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 32px;
+        border-radius: 16px;
+        font-size: 24px;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    nav.glass a.nav-item.active md-icon,
+    nav a.nav-item.active md-icon {
+        background: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+    }
+
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--md-sys-color-on-surface-variant);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    nav.glass a.nav-item.active span,
+    nav a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+        font-weight: 600;
+    }
+}
+
+.m3-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--m3-z-bottom-nav, 40);
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--md-sys-glass-surface);
+    backdrop-filter: var(--md-sys-glass-blur-heavy);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-heavy);
+    border-top: var(--md-sys-glass-border);
+    box-shadow: 0 -2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
+}
+
+.m3-bottom-nav-item {
+    display: grid !important;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+    gap: 0.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    min-height: 48px;
+    padding: 0.5rem;
+    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+.m3-bottom-nav-item.active {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.m3-nav-fab {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--md-sys-elevation-level3), var(--md-sys-elevation-primary-glow);
+}

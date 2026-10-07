@@ -515,3 +515,23 @@ footer.app-footer {
     color: var(--md-sys-color-secondary);
 }
 
+
+
+/* ─── Responsive Landing Bar & Mobile Navigation Drawer ──────────────────── */
+
+@media screen and (max-width: 839.98px) {
+    header.landing-header .landing-header-nav,
+    .landing-header-nav {
+        display: none !important;
+    }
+
+    header.landing-header .landing-mobile-menu-toggle,
+    .landing-mobile-menu-toggle {
+        display: grid;
+    }
+
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer {
+        top: 56px;
+    }
+}

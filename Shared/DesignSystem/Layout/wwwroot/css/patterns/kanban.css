@@ -92,3 +92,105 @@
     }
 }
 
+/* ─── Kanban & KDS Card Primitives ───────────────────────────────────── */
+.kanban-card {
+    display: grid !important;
+    grid-template-rows: auto auto auto;
+    gap: 0.5rem;
+    padding: 1rem 1.15rem;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.card-top-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-order-id {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    letter-spacing: 0.02em;
+}
+
+.card-mid-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.card-amount {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.card-payment {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-outline);
+}
+
+.card-bottom-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 0.25rem;
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+.advance-prompt {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: end;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+    min-height: 48px;
+}
+
+.advance-icon {
+    font-size: 18px;
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.kanban-card:hover .advance-icon {
+    transform: translateX(3px);
+}
+
+/* KDS Specific Cards & Action Buttons */
+.kds-card {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    padding: var(--md-sys-spacing-4, 1rem);
+    border-radius: var(--md-sys-shape-corner-medium, 14px);
+    box-sizing: border-box;
+}
+
+.preparing-column,
+.column-making {
+    border-top: 4px solid var(--md-sys-color-tertiary) !important;
+}
+
+.ready-column,
+.column-ready {
+    border-top: 4px solid var(--md-sys-color-primary) !important;
+}
+
+.card-making {
+    border-left: 4px solid var(--md-sys-color-tertiary);
+}
+
+.card-ready {
+    border-left: 4px solid var(--md-sys-color-primary);
+}
+
+

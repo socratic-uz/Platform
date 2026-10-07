@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Socratic Platform - Vertical Stack Primitives
+   Architecture: Pure CSS Grid, Zero Flexbox Standard
+   ========================================================================== */
+
+.m3-grid-stack,
+.grid-stack {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    width: 100%;
+    box-sizing: border-box;
+}

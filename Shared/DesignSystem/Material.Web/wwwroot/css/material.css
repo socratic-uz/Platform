@@ -2,12 +2,15 @@
    Socratic Material.Web - Master Design System Stylesheet (M3 & M3 Expressive)
    ========================================================================== */
 
-/* Typography Fonts (Local M3 Icon & Typeface Fonts) */
+/* 0. Foundations (Normalize / CSS Reset) */
+@import "foundations/normalize.css";
+
+/* 1. Typography Fonts (Local M3 Icon & Typeface Fonts) */
 @import "fonts/material-symbols-outlined.css";
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
 
-/* Design Tokens */
+/* 2. Design Tokens */
 @import "tokens/spacing.css";
 @import "tokens/geometry.css";
 @import "tokens/elevation.css";
@@ -16,17 +19,26 @@
 @import "tokens/z-index.css";
 @import "tokens/typography.css";
 
-/* Themes (Default Color Tokens) */
+/* 3. Themes & Expressive Specifications */
 @import "themes/dark.css";
 @import "themes/light.css";
+@import "themes/expressive.css";
 
-/* Component Primitives */
+/* 4. Component Primitives */
+@import "components/buttons.css";
 @import "components/cards.css";
 @import "components/badges.css";
 @import "components/skeletons.css";
+@import "components/progress.css";
 @import "components/empty-state.css";
 @import "components/chips.css";
 @import "components/forms.css";
 @import "components/tables.css";
 @import "components/pickers.css";
+@import "components/avatar.css";
+@import "components/dialogs.css";
+@import "components/search.css";
+@import "components/theme-toggle.css";
+@import "components/segmented-button.css";
+@import "components/info-grid.css";
 

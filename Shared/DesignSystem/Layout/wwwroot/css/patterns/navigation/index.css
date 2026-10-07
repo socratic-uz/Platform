@@ -1,0 +1,10 @@
+/* ==========================================================================
+   Socratic Platform - Navigation System (FAANG Standard)
+   Modular Aggregator: App Bar, Landing Bar, Navigation Rail & Bottom Bar
+   Strict CSS Grid Architecture (Zero Flexbox)
+   ========================================================================== */
+
+@import "app-bar.css";
+@import "landing-bar.css";
+@import "rail.css";
+@import "bottom-bar.css";

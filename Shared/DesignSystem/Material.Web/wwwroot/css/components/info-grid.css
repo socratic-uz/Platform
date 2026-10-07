@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Material Design 3 Expressive - Key-Value Info Grid Component
+   Used for: Profile summaries, Specifications, Key-Value details
+   Strict CSS Grid, Zero Flexbox Standard
+   ========================================================================== */
+
+.m3-info-grid,
+.info-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.m3-info-item,
+.info-item {
+    display: grid !important;
+    gap: var(--md-sys-spacing-1, 0.25rem);
+    align-content: start;
+    box-sizing: border-box;
+}
+
+.m3-info-label,
+.info-label {
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.m3-info-value,
+.info-value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
