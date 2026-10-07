@@ -7,4 +7,7 @@ node_modules/
 dist/
 !Tools/socratic-ui-mcp/dist/
 *.zip
-Design/Screenshots/
+Design/Screenshots/*.png
+!Design/Screenshots/sync-3-devices-all-pages.js
+!Design/Screenshots/Update-Screenshots.ps1
+!Design/Screenshots/screenshots-manifest.json
