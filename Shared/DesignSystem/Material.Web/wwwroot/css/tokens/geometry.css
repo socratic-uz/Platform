@@ -28,6 +28,22 @@
     /* ─── 3. Fluid Page Gutters & Safe Margins (clamp without media query) ── */
     --md-sys-gutter-page: clamp(1rem, 2vw + 0.5rem, 2.5rem);
     --md-sys-gutter-section: clamp(1.25rem, 3vw, 3rem);
+
+    /* ─── 4. Touch Target Ergonomics (M3 & WCAG 2.1 AA) ───────────── */
+    --md-sys-touch-target-min: 48px;
+    --md-sys-touch-target-kiosk: 56px;
+    --md-sys-touch-target-compact: 40px;
+
+    /* ─── 5. PWA & Device Safe Area Insets ────────────────────────── */
+    --md-sys-safe-area-top: env(safe-area-inset-top, 0px);
+    --md-sys-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --md-sys-safe-area-left: env(safe-area-inset-left, 0px);
+    --md-sys-safe-area-right: env(safe-area-inset-right, 0px);
+
+    /* ─── 6. Modern Dynamic Viewport Heights (Zero Mobile-URL Bar Jitter) ─ */
+    --md-sys-viewport-height: 100dvh;
+    --md-sys-viewport-height-small: 100svh;
+    --md-sys-viewport-height-large: 100lvh;
 }
 
 /* ─── Aspect Ratio Utility Classes ─────────────────────────────────────── */
@@ -54,6 +70,30 @@
 .m3-ratio-kiosk {
     aspect-ratio: var(--md-sys-ratio-kiosk) !important;
     object-fit: cover;
+}
+
+.m3-ratio-wide {
+    aspect-ratio: var(--md-sys-ratio-wide) !important;
+    object-fit: cover;
+}
+
+/* ─── Layout Gutter & Touch Utilities ──────────────────────────────────── */
+.m3-page-gutter {
+    padding-inline: var(--md-sys-gutter-page) !important;
+}
+
+.m3-section-gutter {
+    padding-inline: var(--md-sys-gutter-section) !important;
+}
+
+.m3-touch-target {
+    min-width: var(--md-sys-touch-target-min) !important;
+    min-height: var(--md-sys-touch-target-min) !important;
+}
+
+.m3-touch-target-kiosk {
+    min-width: var(--md-sys-touch-target-kiosk) !important;
+    min-height: var(--md-sys-touch-target-kiosk) !important;
 }
 
 /* ─── Scrollbar Utility Classes ────────────────────────────────────────── */
