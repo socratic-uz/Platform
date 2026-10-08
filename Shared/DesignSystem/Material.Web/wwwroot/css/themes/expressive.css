@@ -219,45 +219,28 @@
 }
 
 /* Tactile haptic-like active press feedback for interactive controls */
-.m3x-btn-pill:active:not([disabled]),
-.showcase-card-btn:active:not([disabled]),
-md-filled-button:active,
-md-outlined-button:active,
-md-elevated-button:active,
-md-tonal-button:active,
-md-icon-button:active,
-md-filter-chip:active,
-md-suggestion-chip:active,
-md-assist-chip:active {
+:is(.m3x-btn-pill, .showcase-card-btn):active:not([disabled]),
+:is(md-filled-button, md-outlined-button, md-elevated-button, md-tonal-button, md-icon-button, md-filter-chip, md-suggestion-chip, md-assist-chip):active {
     transform: scale(0.965);
     transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
 }
 
 /* Fluid spring lift for interactive surface cards */
-.m3x-card-interactive,
-.showcase-card,
-.product-card,
-.commerce-card {
+:is(.m3x-card-interactive, .showcase-card, .product-card, .commerce-card) {
     transition: transform 260ms var(--md-sys-motion-easing-spring-gentle),
                 box-shadow 260ms var(--md-sys-motion-easing-standard),
                 border-color 150ms ease;
     will-change: transform, box-shadow;
 }
 
-.m3x-card-interactive:hover,
-.showcase-card:hover,
-.product-card:hover,
-.commerce-card:hover {
+:is(.m3x-card-interactive, .showcase-card, .product-card, .commerce-card):hover {
     transform: translateY(-4px) scale(1.006);
     box-shadow: 0 16px 36px -6px rgb(from var(--md-sys-color-primary) r g b / 0.18),
                 0 6px 16px -2px rgb(from var(--md-sys-color-shadow) r g b / 0.14);
     border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
 }
 
-.m3x-card-interactive:active,
-.showcase-card:active,
-.product-card:active,
-.commerce-card:active {
+:is(.m3x-card-interactive, .showcase-card, .product-card, .commerce-card):active {
     transform: scale(0.985);
     transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
 }
