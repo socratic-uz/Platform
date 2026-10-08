@@ -1,11 +1,10 @@
 /* ─── 1. Avatar & Profile Trigger Component ──────────────────────── */
-.avatar-container  {
+.avatar-container   {
     /* consolidated to w3c rules */
 }
 
 .avatar-button {
     align-content: center;
-    justify-content: center;
     width: 40px;
     height: 40px;
     min-width: 40px;
@@ -38,7 +37,6 @@
     inset: 0;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
     z-index: 1;
 }
 
@@ -103,7 +101,7 @@ md-dialog.faceid-profile-modal,
     padding: 12px 24px 24px 24px;
 }
 
-:is(.avatar-container, md-dialog.contacts) details  {
+:is(.avatar-container, md-dialog.contacts) details   {
     /* consolidated to w3c rules */
 }
 
@@ -115,7 +113,7 @@ md-dialog.faceid-profile-modal,
     display: none;
 }
 
-:is(.avatar-container, md-dialog.contacts) details summary md-list-item   {
+:is(.avatar-container, md-dialog.contacts) details summary md-list-item    {
     /* consolidated to w3c rules */
 }
 
@@ -126,7 +124,7 @@ md-dialog.faceid-profile-modal,
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-outlined-text-field,
-.material-text-field  {
+.material-text-field   {
     /* consolidated to w3c rules */
 }
 

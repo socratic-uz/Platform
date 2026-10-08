@@ -46,3 +46,59 @@
 ) {
     white-space: nowrap;
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Text Decoration Reset */
+:is(
+    .back-button,
+    .m3-back-button,
+    .m3-card-interactive,
+    .card-interactive,
+    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .btn-primary-link
+) {
+    text-decoration: none;
+}
+
+/* Universal Text Align Left */
+:is(
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    .product-title,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag,
+    .lang-menu-item,
+    .m3-table th,
+    .order-items-table th,
+    .orders-table th,
+    td.col-justify-start,
+    td.col-justify-left,
+    .col-justify-start .col-title
+) {
+    text-align: left;
+}
+
+/* Universal Text Align Center */
+:is(
+    .m3-empty-state,
+    .m3-empty-column,
+    .column-empty,
+    .kds-empty-col,
+    .store-not-found,
+    .pos-empty-state,
+    .kiosk-empty-state,
+    .file-name,
+    .upload-zone-label,
+    .sort-indicator,
+    td.col-justify-center,
+    .col-justify-center .col-title,
+    .drop-title
+) {
+    text-align: center;
+}

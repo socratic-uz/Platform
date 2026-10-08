@@ -31,7 +31,6 @@ md-icon-button {
     font-size: var(--md-icon-size, 18px);
     width: var(--md-icon-size, 18px);
     height: var(--md-icon-size, 18px);
-    line-height: 1;
 }
 
 /* Trailing unslotted icons in buttons */

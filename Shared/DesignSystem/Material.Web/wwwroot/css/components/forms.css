@@ -5,8 +5,8 @@
 
 
 /* Form Controls & Fieldsets (Strict CSS Grid) */
-.m3-form-grid {
-    gap: var(--md-sys-spacing-4);
+.m3-form-grid  {
+    /* consolidated to w3c rules */
 }
 
 .m3-form-grid.two-cols {
@@ -73,12 +73,12 @@ input[type="color"] {
     width: var(--md-sys-touch-target-min);
 }
 
-::-webkit-color-swatch-wrapper  {
+::-webkit-color-swatch-wrapper   {
     /* consolidated to w3c rules */
 }
 
 ::-webkit-color-swatch,
-::-moz-color-swatch  {
+::-moz-color-swatch   {
     /* consolidated to w3c rules */
 }
 
@@ -98,7 +98,6 @@ input[type="color"] {
 
 /* ─── Quantity Counter Control (Strict Grid Cluster) ─────────────────── */
 :is(.m3-counter, .material-counter) {
-    justify-content: center;
     gap: 6px;
 }
 

@@ -7,7 +7,7 @@
 /* ==========================================================================
    1. Reusable Base Picker Trigger Card & Shared Surfaces
    ========================================================================== */
-:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card)  {
+:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card)   {
     /* consolidated to w3c rules */
 }
 
@@ -50,15 +50,15 @@
                 transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
 }
 
-.picker-icon-badge.active {
-    color: var(--md-sys-color-on-primary-container);
+.picker-icon-badge.active  {
+    /* consolidated to w3c rules */
 }
 
 .picker-trigger-text {
     gap: 3px;
 }
 
-.picker-header-row  {
+.picker-header-row   {
     /* consolidated to w3c rules */
 }
 
@@ -76,12 +76,10 @@
     font-size: 13px;
     width: 13px;
     height: 13px;
-    line-height: 1;
 }
 
 .picker-preview-text {
     font-size: 13px;
-    line-height: 1.4;
     word-break: break-word;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -146,13 +144,12 @@
     min-width: var(--md-sys-touch-target-min);
 }
 
-.picker-swatch  {
+.picker-swatch   {
     /* consolidated to w3c rules */
 }
 
 .picker-hex-wrapper {
     gap: 2px;
-    background: var(--md-sys-color-surface);
     padding: 3px 8px;
 }
 
@@ -238,7 +235,7 @@
     margin-bottom: 8px;
 }
 
-.file-add-btn-label   {
+.file-add-btn-label    {
     /* consolidated to w3c rules */
 }
 
@@ -297,13 +294,9 @@
     font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.75rem;
     text-overflow: ellipsis;
-    text-align: center;
 }
 
 .file-overlay {
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
     opacity: 0;
@@ -318,7 +311,6 @@
 .new-badge {
     top: 6px;
     left: 6px;
-    background: var(--md-sys-color-primary);
     font-size: 0.65rem;
     font-weight: bold;
     padding: 2px 6px;
@@ -348,7 +340,6 @@
     align-content: center;
     justify-items: center;
     padding: 8px;
-    text-align: center;
 }
 
 .upload-icon {
@@ -371,8 +362,6 @@
 }
 
 .file-input-hidden {
-    top: 0;
-    left: 0;
     opacity: 0;
     z-index: 2;
 }
@@ -388,12 +377,11 @@
     font-size: 10px;
     width: 20px;
     height: 20px;
-    color: var(--md-sys-color-outline);
     transition: background-color 0.15s, color 0.15s;
 }
 
-.picker-day-dot.active {
-    background: var(--md-sys-color-primary);
+.picker-day-dot.active  {
+    /* consolidated to w3c rules */
 }
 
 .md3-dialog-headline {
@@ -405,7 +393,6 @@
 }
 
 .md3-schedule-picker {
-    gap: 16px;
     padding: 8px 0;
 }
 
@@ -413,7 +400,7 @@
     padding: 12px 14px;
 }
 
-.md3-presets-label  {
+.md3-presets-label   {
     /* consolidated to w3c rules */
 }
 
@@ -422,7 +409,7 @@
     overflow-x: auto;
 }
 
-.md3-schedule-header  {
+.md3-schedule-header   {
     /* consolidated to w3c rules */
 }
 
@@ -430,7 +417,7 @@
     font-size: 13px;
 }
 
-.md3-schedule-days  {
+.md3-schedule-days   {
     /* consolidated to w3c rules */
 }
 
@@ -443,7 +430,7 @@
     background: var(--md-sys-color-surface-container-lowest);
 }
 
-.md3-schedule-day-left  {
+.md3-schedule-day-left   {
     /* consolidated to w3c rules */
 }
 
@@ -452,13 +439,11 @@
 }
 
 .md3-time-picker-box {
-    background: var(--md-sys-color-surface);
     padding: 3px 8px;
 }
 
 .md3-time-label {
     font-size: 11px;
-    color: var(--md-sys-color-outline);
 }
 
 .md3-time-input {
@@ -468,13 +453,11 @@
 }
 
 .md3-time-separator {
-    color: var(--md-sys-color-outline);
     font-size: 12px;
 }
 
 .md3-closed-badge {
     padding: 4px 10px;
-    color: var(--md-sys-color-outline);
     font-size: 12px;
 }
 
@@ -486,7 +469,7 @@
 /* ==========================================================================
    4. Language Selector & Localization Chips
    ========================================================================== */
-.lang-select   {
+.lang-select    {
     /* consolidated to w3c rules */
 }
 
@@ -519,12 +502,11 @@
 }
 
 .lang-chip-btn.lang-chip--active {
-    background: var(--md-sys-color-primary);
     box-shadow: var(--md-sys-glow-primary-subtle);
 }
 
 /* Pill Dropdown Mode (ideal for Header) */
-.lang-dropdown-wrapper   {
+.lang-dropdown-wrapper    {
     /* consolidated to w3c rules */
 }
 
@@ -566,7 +548,6 @@
 
 .lang-dropdown-menu {
     top: calc(100% + 6px);
-    right: 0;
     z-index: 100;
     min-width: 130px;
     padding: 0.35rem;
@@ -577,11 +558,10 @@
 .lang-menu-item {
     padding: 0.5rem 0.75rem;
     font-size: 0.825rem;
-    text-align: left;
     transition: background 0.15s ease;
 }
 
-.lang-menu-item:hover  {
+.lang-menu-item:hover   {
     /* consolidated to w3c rules */
 }
 
@@ -596,21 +576,18 @@
 
 .variant-dialog-title {
     font-size: 1.2rem;
-    display: block;
 }
 
 .variant-dialog-subtext {
     font-size: 0.85rem;
-    display: block;
     margin-top: 2px;
 }
 
 .variant-dialog-body {
-    gap: 16px;
     margin-top: 8px;
 }
 
-.option-fieldset  {
+.option-fieldset   {
     /* consolidated to w3c rules */
 }
 
@@ -647,7 +624,7 @@
     border-bottom: none;
 }
 
-.option-item-row:hover  {
+.option-item-row:hover   {
     /* consolidated to w3c rules */
 }
 
@@ -655,7 +632,7 @@
     font-size: 0.82rem;
 }
 
-.variant-dialog-actions  {
+.variant-dialog-actions   {
     /* consolidated to w3c rules */
 }
 
@@ -665,7 +642,6 @@
 
 .price-label {
     font-size: 0.82rem;
-    display: block;
 }
 
 .price-value {
@@ -713,7 +689,7 @@
     height: clamp(180px, 30vh, 240px);
 }
 
-.time-fieldset  {
+.time-fieldset   {
     /* consolidated to w3c rules */
 }
 
@@ -747,14 +723,13 @@
 
 .summary-title {
     font-size: 0.95rem;
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .summary-date {
     font-size: 0.82rem;
 }
 
-.summary-actions  {
+.summary-actions   {
     /* consolidated to w3c rules */
 }
 

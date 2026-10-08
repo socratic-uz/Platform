@@ -1,7 +1,6 @@
 /* Material Design 3 Expressive - Filter Chips & Segmented Controls */
 
 .m3-filter-chip {
-    display: inline-grid !important;
     grid-auto-columns: max-content auto max-content;
     gap: 0.5rem;
     height: 40px;
@@ -29,9 +28,7 @@
 
 .m3-filter-chip.active,
 .m3-filter-chip[aria-selected="true"] {
-    background: var(--md-sys-color-secondary-container);
     border-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
 }
 
 .m3-filter-chip-icon {

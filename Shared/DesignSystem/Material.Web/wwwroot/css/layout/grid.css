@@ -293,3 +293,25 @@ md-dialog [slot="actions"],
 ) {
     grid-template-columns: minmax(0, 1fr);
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Inline-Grid Components */
+:is(
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .badge-counter,
+    .m3-pill-badge,
+    .m3-count-badge,
+    .count-badge,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    .m3-filter-chip
+) {
+    display: inline-grid !important;
+}

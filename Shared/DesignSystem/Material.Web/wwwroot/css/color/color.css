@@ -176,3 +176,73 @@
 ) {
     color: var(--md-sys-color-on-primary);
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Outline Color Elements */
+:is(
+    .m3-dialog-toggle-desc,
+    .picker-day-dot,
+    .md3-time-label,
+    .md3-time-separator,
+    .md3-closed-badge,
+    .table-icon
+) {
+    color: var(--md-sys-color-outline);
+}
+
+/* Universal On-Primary-Container Color Elements */
+:is(
+    .m3-status-badge.success,
+    .m3-status-badge.paid,
+    .m3-status-badge.status-paid,
+    .order-status-badge.status-paid,
+    .item-status-pill.status-paid,
+    .m3-status-badge.completed,
+    .m3-status-badge.status-completed,
+    .order-status-badge.status-completed,
+    .item-status-pill.status-completed,
+    .badge-ready,
+    .badge-completed,
+    .badge.completed,
+    .ready-badge,
+    .badge-trial,
+    .badge.trial,
+    .badge-verified,
+    .badge.verified,
+    .kds-status-tag,
+    .picker-icon-badge.active,
+    .summary-title
+) {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* Universal On-Secondary-Container Color Elements */
+:is(
+    .m3-status-badge.info,
+    .m3-status-badge.collecting,
+    .m3-status-badge.status-collecting,
+    .order-status-badge.status-collecting,
+    .item-status-pill.status-collecting,
+    .m3-status-badge.collected,
+    .m3-status-badge.status-collected,
+    .order-status-badge.status-collected,
+    .item-status-pill.status-collected,
+    .m3-status-badge.shipping,
+    .m3-status-badge.status-shipping,
+    .order-status-badge.status-shipping,
+    .item-status-pill.status-shipping,
+    .badge-active,
+    .badge.active,
+    .m3-count-badge,
+    .count-badge,
+    .back-button:hover,
+    .back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-back-button:focus-visible,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    :is(.analytics-mode-btn, .m3-segmented-btn).active
+) {
+    color: var(--md-sys-color-on-secondary-container);
+}

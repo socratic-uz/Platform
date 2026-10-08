@@ -91,3 +91,43 @@
 .m3-skeleton::after {
     position: absolute;
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Left Inset 0 */
+:is(
+    .file-overlay,
+    .file-input-hidden,
+    .col-options,
+    .col-justify-start .col-options,
+    .paginator,
+    .table-container > .paginator
+),
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    left: 0;
+}
+
+/* Universal Right Inset 0 */
+:is(
+    .file-overlay,
+    .lang-dropdown-menu,
+    .table-container th.actions-column,
+    table.quickgrid th.actions-column,
+    .table-container td.actions-column,
+    table.quickgrid td.actions-column,
+    .col-justify-end .col-options
+),
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    right: 0;
+}
+
+/* Universal Top Inset 0 */
+:is(
+    .file-overlay,
+    .file-input-hidden,
+    .col-width-draghandle
+),
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before,
+.col-width-draghandle::after {
+    top: 0;
+}

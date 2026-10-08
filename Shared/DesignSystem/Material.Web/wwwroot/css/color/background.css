@@ -166,3 +166,63 @@
 ) {
     background: transparent;
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Base Surface Background Elements */
+:is(
+    .m3-card-outlined,
+    .card-outlined,
+    .picker-hex-wrapper,
+    .md3-time-picker-box,
+    .table-container > table,
+    table.quickgrid,
+    .table-container td,
+    table.quickgrid td,
+    .table-container td.actions-column,
+    table.quickgrid td.actions-column
+),
+.table-container::-webkit-scrollbar-track {
+    background: var(--md-sys-color-surface);
+}
+
+/* Universal Secondary Container Background Elements */
+:is(
+    .m3-status-badge.info,
+    .m3-status-badge.collecting,
+    .m3-status-badge.status-collecting,
+    .order-status-badge.status-collecting,
+    .item-status-pill.status-collecting,
+    .m3-status-badge.collected,
+    .m3-status-badge.status-collected,
+    .order-status-badge.status-collected,
+    .item-status-pill.status-collected,
+    .m3-status-badge.shipping,
+    .m3-status-badge.status-shipping,
+    .order-status-badge.status-shipping,
+    .item-status-pill.status-shipping,
+    .badge-active,
+    .badge.active,
+    .m3-count-badge,
+    .count-badge,
+    .back-button:hover,
+    .back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-back-button:focus-visible,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    :is(.analytics-mode-btn, .m3-segmented-btn).active
+) {
+    background: var(--md-sys-color-secondary-container);
+}
+
+/* Universal Solid Primary Brand Background Elements */
+:is(
+    .badge-counter,
+    .m3-dialog-btn-primary,
+    .new-badge,
+    .picker-day-dot.active,
+    .lang-chip-btn.lang-chip--active
+) {
+    background: var(--md-sys-color-primary);
+}

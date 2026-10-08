@@ -309,3 +309,33 @@
 ) {
     gap: var(--md-sys-spacing-1);
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Justify Content Center Elements */
+:is(
+    .avatar-button,
+    .btn-primary-link,
+    :is(.m3-counter, .material-counter),
+    td.col-justify-center,
+    .col-justify-center .col-title,
+    .drop-container,
+    .m3-mode-toggle,
+    .mode-toggle
+) {
+    justify-content: center;
+}
+
+/* Universal 16px Component Grid Gap */
+:is(
+    :is(.m3-summary-card, .summary-card),
+    media screen and (max-width: 839.98px),
+    .m3-dialog-header,
+    .m3-dialog-toggle-item,
+    .m3-form-grid,
+    :is(.m3-info-grid, .info-grid),
+    .md3-schedule-picker,
+    .variant-dialog-body
+) {
+    gap: var(--md-sys-spacing-4);
+}

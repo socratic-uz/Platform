@@ -9,14 +9,13 @@
 .pos-empty-state,
 .kiosk-empty-state {
     justify-items: center;
-    text-align: center;
 }
 
 /* Common Titles */
 .m3-empty-state-title,
 .store-not-found h2,
 .pos-empty-state h5,
-.kiosk-empty-state h3  {
+.kiosk-empty-state h3   {
     /* consolidated to w3c rules */
 }
 
@@ -27,7 +26,7 @@
 .kds-empty-col p,
 .store-not-found p,
 .pos-empty-state p,
-.kiosk-empty-state p  {
+.kiosk-empty-state p   {
     /* consolidated to w3c rules */
 }
 
@@ -110,9 +109,8 @@
     margin-bottom: 1.5rem;
 }
 
-.btn-primary-link {
-    text-decoration: none;
-    justify-content: center;
+.btn-primary-link  {
+    /* consolidated to w3c rules */
 }
 
 /* ─── 4. POS Terminal Empty State ────────────────────────────────────────── */

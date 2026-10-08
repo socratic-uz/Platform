@@ -246,3 +246,34 @@ md-dialog:not(:defined) {
 ) {
     font-weight: 800;
 }
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Line Height 1 (Icon & Compact Alignments) */
+:is(
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .badge-counter,
+    .m3-pill-badge,
+    .m3-count-badge,
+    .count-badge,
+    :is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]),
+    .picker-badge md-icon
+) {
+    line-height: 1;
+}
+
+/* Universal Line Height 1.4 (Standard Typography) */
+:is(
+    :is(.m3-card-subtitle, .card-subtitle),
+    .org-card-desc,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    .m3-dialog-description,
+    .picker-preview-text
+) {
+    line-height: 1.4;
+}

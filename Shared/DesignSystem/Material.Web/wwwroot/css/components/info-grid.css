@@ -6,7 +6,6 @@
 
 :is(.m3-info-grid, .info-grid) {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: var(--md-sys-spacing-4);
 }
 
 :is(.m3-info-item, .info-item) {

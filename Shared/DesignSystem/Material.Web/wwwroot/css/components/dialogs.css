@@ -29,15 +29,15 @@
 }
 
 /* Common Grid Layout Declarations */
-:is(.m3-dialog-close-btn, .m3-dialog-btn-primary)   {
+:is(.m3-dialog-close-btn, .m3-dialog-btn-primary)    {
     /* consolidated to w3c rules */
 }
 
-.m3-dialog-header {
-    gap: var(--md-sys-spacing-4);
+.m3-dialog-header  {
+    /* consolidated to w3c rules */
 }
 
-.m3-dialog-title-group  {
+.m3-dialog-title-group   {
     /* consolidated to w3c rules */
 }
 
@@ -57,27 +57,25 @@
     transition: background 0.2s ease;
 }
 
-.m3-dialog-close-btn:hover  {
+.m3-dialog-close-btn:hover   {
     /* consolidated to w3c rules */
 }
 
 .m3-dialog-description {
     font-size: 0.88rem;
-    line-height: 1.4;
 }
 
-.m3-dialog-options-list  {
+.m3-dialog-options-list   {
     /* consolidated to w3c rules */
 }
 
 .m3-dialog-toggle-item {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease;
 }
 
-.m3-dialog-toggle-item:hover  {
+.m3-dialog-toggle-item:hover   {
     /* consolidated to w3c rules */
 }
 
@@ -97,7 +95,6 @@
 
 .m3-dialog-toggle-desc {
     font-size: 0.78rem;
-    color: var(--md-sys-color-outline);
 }
 
 .m3-dialog-toggle-icon {
@@ -110,7 +107,6 @@
 
 .m3-dialog-btn-primary {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-5);
-    background: var(--md-sys-color-primary);
     font-size: 0.95rem;
     transition: opacity 0.2s ease;
 }
@@ -128,7 +124,7 @@ md-dialog {
     max-height: min(90vh, 90dvh);
 }
 
-md-dialog > *  {
+md-dialog > *   {
     /* consolidated to w3c rules */
 }
 

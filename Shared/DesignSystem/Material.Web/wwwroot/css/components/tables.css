@@ -24,7 +24,6 @@
 .m3-table th,
 .order-items-table th,
 .orders-table th {
-    text-align: left;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -61,7 +60,7 @@
 }
 
 .m3-amount-cell,
-.amount-cell  {
+.amount-cell   {
     /* consolidated to w3c rules */
 }
 
@@ -76,7 +75,7 @@
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-.orders-table tr:hover  {
+.orders-table tr:hover   {
     /* consolidated to w3c rules */
 }
 
@@ -88,7 +87,6 @@
 
 .table-icon {
     font-size: 18px;
-    color: var(--md-sys-color-outline);
 }
 
 /* ==========================================================================
@@ -118,7 +116,6 @@
 table.quickgrid {
     grid-column: 1 / -1;
     border-collapse: collapse;
-    background: var(--md-sys-color-surface);
 }
 
 .table-container th,
@@ -136,11 +133,10 @@ table.quickgrid th {
 .table-container td,
 table.quickgrid td {
     padding: 0.5rem 1rem;
-    background: var(--md-sys-color-surface);
 }
 
 .table-container tr:hover td,
-table.quickgrid tr:hover td  {
+table.quickgrid tr:hover td   {
     /* consolidated to w3c rules */
 }
 
@@ -173,7 +169,6 @@ table.quickgrid tbody > * > :last-child {
 .table-container th.actions-column,
 table.quickgrid th.actions-column {
     position: sticky;
-    right: 0;
     z-index: 2;
     text-align: right;
     justify-items: end;
@@ -182,15 +177,13 @@ table.quickgrid th.actions-column {
 .table-container td.actions-column,
 table.quickgrid td.actions-column {
     position: sticky;
-    right: 0;
-    background: var(--md-sys-color-surface) !important;
     z-index: 1;
     text-align: right;
     justify-items: end;
 }
 
 .table-container tr:hover td.actions-column,
-table.quickgrid tr:hover td.actions-column  {
+table.quickgrid tr:hover td.actions-column   {
     /* consolidated to w3c rules */
 }
 
@@ -216,7 +209,6 @@ table.quickgrid tr:hover td.actions-column  {
 
 .table-container::-webkit-scrollbar-track {
     border-radius: 24px;
-    background: var(--md-sys-color-surface);
     margin: 1rem;
 }
 
@@ -228,7 +220,7 @@ table.quickgrid tr:hover td.actions-column  {
 }
 
 /* QuickGrid Column Headers & Sorting */
-.col-header-content   {
+.col-header-content    {
     /* consolidated to w3c rules */
 }
 
@@ -250,7 +242,6 @@ button.col-title {
     width: 1rem;
     height: 1rem;
     align-self: center;
-    text-align: center;
 }
 
 .col-sort-desc .sort-indicator,
@@ -272,23 +263,19 @@ button.col-title {
 
 .col-options {
     box-shadow: var(--md-sys-elevation-level3);
-    left: 0;
     padding: 1rem;
     z-index: 10;
 }
 
 .col-justify-end .col-options {
     left: unset;
-    right: 0;
 }
 
 .col-justify-start .col-options {
-    left: 0;
     right: unset;
 }
 
 .col-width-draghandle {
-    top: 0;
     bottom: 0;
     right: 0rem;
     cursor: ew-resize;
@@ -296,15 +283,13 @@ button.col-title {
 
 .col-width-draghandle:after {
     content: ' ';
-    top: 0;
     bottom: 0;
     border-left: 1px solid var(--md-sys-color-outline);
 }
 
 td.col-justify-center,
-.col-justify-center .col-title {
-    text-align: center;
-    justify-content: center;
+.col-justify-center .col-title  {
+    /* consolidated to w3c rules */
 }
 
 td.col-justify-end,
@@ -321,7 +306,6 @@ td.col-justify-right,
 td.col-justify-start,
 td.col-justify-left,
 .col-justify-start .col-title {
-    text-align: left;
     justify-content: start;
 }
 
@@ -329,7 +313,6 @@ td.col-justify-left,
 .paginator,
 .table-container > .paginator {
     position: sticky;
-    left: 0;
     grid-column: 1 / -1;
     justify-content: space-between;
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -386,21 +369,19 @@ td.col-justify-left,
 .drop-container {
     grid-column: 1 / -1;
     gap: 10px;
-    justify-content: center;
     padding: 1.5rem 0;
     border-radius: 12px;
     border: 2px dashed var(--md-sys-color-outline);
     transition: background .2s ease-in-out, border .2s ease-in-out;
 }
 
-.drop-container:hover  {
+.drop-container:hover   {
     /* consolidated to w3c rules */
 }
 
 .drop-title {
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
     transition: color .2s ease-in-out;
 }
 

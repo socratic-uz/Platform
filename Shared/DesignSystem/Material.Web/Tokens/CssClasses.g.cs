@@ -27,12 +27,14 @@ public static class M3
         public const string BadgeCounter = "badge-counter";
         public const string BannerError = "m3-banner-error";
         public const string BookingSummaryBanner = "booking-summary-banner";
+        public const string BtnPrimaryLink = "btn-primary-link";
         public const string CanvasHeader = "canvas-header";
         public const string CardActions = "m3-card-actions";
         public const string CardFooter = "m3-card-footer";
         public const string CardHeader = "m3-card-header";
         public const string CardMediaPlaceholder = "m3-card-media-placeholder";
         public const string ColHeaderContent = "col-header-content";
+        public const string ColJustifyCenter = "col-justify-center";
         public const string ColTitle = "col-title";
         public const string ColumnEmpty = "column-empty";
         public const string Contacts = "contacts";
@@ -60,6 +62,7 @@ public static class M3
         public const string FileOverlay = "file-overlay";
         public const string FilePreviewArea = "file-preview-area";
         public const string FilterChip = "m3-filter-chip";
+        public const string FormGrid = "m3-form-grid";
         public const string Gap0 = "m3-gap-0";
         public const string Gap1 = "m3-gap-1";
         public const string Gap2 = "m3-gap-2";
@@ -71,6 +74,7 @@ public static class M3
         public const string GridEnumFlags = "grid-enum-flags";
         public const string HeaderControls = "m3-header-controls";
         public const string IconPreview = "icon-preview";
+        public const string InfoGrid = "m3-info-grid";
         public const string InfoItem = "m3-info-item";
         public const string ItemStatusPill = "item-status-pill";
         public const string ItemsCenter = "m3-items-center";
@@ -102,8 +106,10 @@ public static class M3
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
         public const string Md3ScheduleDays = "md3-schedule-days";
         public const string Md3ScheduleHeader = "md3-schedule-header";
+        public const string Md3SchedulePicker = "md3-schedule-picker";
         public const string Md3ScheduleTimeGroup = "md3-schedule-time-group";
         public const string Md3TimePickerBox = "md3-time-picker-box";
+        public const string ModeToggle = "m3-mode-toggle";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
         public const string OptionItemRow = "option-item-row";
         public const string OptionsListContainer = "options-list-container";
@@ -141,6 +147,7 @@ public static class M3
         public const string SlotsChipSet = "slots-chip-set";
         public const string StatusBadge = "m3-status-badge";
         public const string SummaryActions = "m3-summary-actions";
+        public const string SummaryCard = "m3-summary-card";
         public const string SummaryLeft = "summary-left";
         public const string SummaryRow = "m3-summary-row";
         public const string SummaryRows = "m3-summary-rows";
@@ -149,6 +156,7 @@ public static class M3
         public const string UploadCard = "upload-card";
         public const string UploadZoneLabel = "upload-zone-label";
         public const string VariantDialogActions = "variant-dialog-actions";
+        public const string VariantDialogBody = "variant-dialog-body";
         public const string VariantDialogHeader = "variant-dialog-header";
         public const string VariantsChipSet = "variants-chip-set";
         public const string WishlistCardFooter = "wishlist-card-footer";
@@ -187,8 +195,10 @@ public static class M3
         public const string AvatarContainer = "avatar-container";
         public const string BackButton = "m3-back-button";
         public const string Badge = "badge";
+        public const string BadgeActive = "badge-active";
         public const string BadgeCancelled = "badge-cancelled";
         public const string BadgeCompleted = "badge-completed";
+        public const string BadgeCounter = "badge-counter";
         public const string BadgeReady = "badge-ready";
         public const string BadgeTrial = "badge-trial";
         public const string BadgeVerified = "badge-verified";
@@ -205,11 +215,16 @@ public static class M3
         public const string CardElevated = "m3-card-elevated";
         public const string CardFilled = "m3-card-filled";
         public const string CardMedia = "m3-card-media";
+        public const string CardOutlined = "m3-card-outlined";
         public const string ColOptions = "col-options";
+        public const string Collected = "collected";
+        public const string Collecting = "collecting";
         public const string Completed = "completed";
         public const string ConfigDialog = "m3-config-dialog";
         public const string Contacts = "contacts";
+        public const string CountBadge = "m3-count-badge";
         public const string Created = "created";
+        public const string DialogBtnPrimary = "m3-dialog-btn-primary";
         public const string DialogCloseBtn = "m3-dialog-close-btn";
         public const string DialogSurface = "m3-dialog-surface";
         public const string DialogToggleItem = "m3-dialog-toggle-item";
@@ -219,10 +234,12 @@ public static class M3
         public const string FaceidProfileModal = "faceid-profile-modal";
         public const string Fieldset = "m3-fieldset";
         public const string FilterChip = "m3-filter-chip";
+        public const string Info = "info";
         public const string ItemStatusPill = "item-status-pill";
         public const string ItemsCountBadge = "items-count-badge";
         public const string KdsStatusTag = "kds-status-tag";
         public const string KioskEmptyState = "kiosk-empty-state";
+        public const string LangChipActive = "lang-chip--active";
         public const string LangChipBtn = "lang-chip-btn";
         public const string LangDropdownMenu = "lang-dropdown-menu";
         public const string LangMenuItem = "lang-menu-item";
@@ -232,7 +249,9 @@ public static class M3
         public const string Md3PresetsSection = "md3-presets-section";
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
         public const string Md3TimeInput = "md3-time-input";
+        public const string Md3TimePickerBox = "md3-time-picker-box";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
+        public const string NewBadge = "new-badge";
         public const string OptionItemRow = "option-item-row";
         public const string OptionsListContainer = "options-list-container";
         public const string OrderItemsTableWrapper = "order-items-table-wrapper";
@@ -246,6 +265,7 @@ public static class M3
         public const string PickerCompactBox = "picker-compact-box";
         public const string PickerDayDot = "picker-day-dot";
         public const string PickerHexInput = "picker-hex-input";
+        public const string PickerHexWrapper = "picker-hex-wrapper";
         public const string PickerIconBadge = "picker-icon-badge";
         public const string PickerPopoverPanel = "picker-popover-panel";
         public const string PickerTriggerCard = "picker-trigger-card";
@@ -254,13 +274,17 @@ public static class M3
         public const string ReadyBadge = "ready-badge";
         public const string SegmentedBtn = "m3-segmented-btn";
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
+        public const string Shipping = "shipping";
         public const string Skeleton = "m3-skeleton";
         public const string SmartGridContainer = "smart-grid-container";
         public const string StatusBadge = "m3-status-badge";
+        public const string StatusCollected = "status-collected";
+        public const string StatusCollecting = "status-collecting";
         public const string StatusCompleted = "status-completed";
         public const string StatusCreated = "status-created";
         public const string StatusMade = "status-made";
         public const string StatusPaid = "status-paid";
+        public const string StatusShipping = "status-shipping";
         public const string Success = "success";
         public const string SummaryCard = "m3-summary-card";
         public const string TableContainer = "table-container";
@@ -522,22 +546,32 @@ public static class M3
         public const string AvatarContainer = "avatar-container";
         public const string BackButton = "m3-back-button";
         public const string Badge = "badge";
+        public const string BadgeActive = "badge-active";
         public const string BadgeCancelled = "badge-cancelled";
+        public const string BadgeCompleted = "badge-completed";
         public const string BadgeCounter = "badge-counter";
+        public const string BadgeReady = "badge-ready";
+        public const string BadgeTrial = "badge-trial";
+        public const string BadgeVerified = "badge-verified";
         public const string BodySubtext = "body-subtext";
         public const string BookingPickerCard = "booking-picker-card";
         public const string Cancelled = "cancelled";
         public const string CardMediaPlaceholder = "m3-card-media-placeholder";
         public const string CardSubtitle = "m3-card-subtitle";
         public const string CardTitle = "m3-card-title";
+        public const string Collected = "collected";
+        public const string Collecting = "collecting";
         public const string ColumnEmpty = "column-empty";
+        public const string Completed = "completed";
         public const string Contacts = "contacts";
+        public const string CountBadge = "m3-count-badge";
         public const string Created = "created";
         public const string DialogBtnPrimary = "m3-dialog-btn-primary";
         public const string DialogCloseBtn = "m3-dialog-close-btn";
         public const string DialogDescription = "m3-dialog-description";
         public const string DialogHeader = "m3-dialog-header";
         public const string DialogIcon = "m3-dialog-icon";
+        public const string DialogToggleDesc = "m3-dialog-toggle-desc";
         public const string DialogToggleIcon = "m3-dialog-toggle-icon";
         public const string DialogToggleTitle = "m3-dialog-toggle-title";
         public const string DropContainer = "drop-container";
@@ -553,6 +587,7 @@ public static class M3
         public const string FileName = "file-name";
         public const string FilterChip = "m3-filter-chip";
         public const string Headline = "headline";
+        public const string Info = "info";
         public const string InfoLabel = "m3-info-label";
         public const string InfoValue = "m3-info-value";
         public const string IsSelected = "is-selected";
@@ -560,6 +595,7 @@ public static class M3
         public const string ItemsCountBadge = "items-count-badge";
         public const string KdsEmptyCol = "kds-empty-col";
         public const string KdsEmptyIcon = "kds-empty-icon";
+        public const string KdsStatusTag = "kds-status-tag";
         public const string KioskEmptyIcon = "kiosk-empty-icon";
         public const string KioskEmptyState = "kiosk-empty-state";
         public const string LabelTitle = "label-title";
@@ -572,11 +608,14 @@ public static class M3
         public const string Legend = "m3-legend";
         public const string Made = "made";
         public const string MaterialSearchContainer = "material-search-container";
+        public const string Md3ClosedBadge = "md3-closed-badge";
         public const string Md3DialogHeadline = "md3-dialog-headline";
         public const string Md3HeadlineIcon = "md3-headline-icon";
         public const string Md3PresetsLabel = "md3-presets-label";
         public const string Md3ScheduleSubtitle = "md3-schedule-subtitle";
         public const string Md3TimeInput = "md3-time-input";
+        public const string Md3TimeLabel = "md3-time-label";
+        public const string Md3TimeSeparator = "md3-time-separator";
         public const string NewBadge = "new-badge";
         public const string NotFoundIcon = "not-found-icon";
         public const string OnSurface = "m3-color-on-surface";
@@ -589,6 +628,7 @@ public static class M3
         public const string OrgCardName = "org-card-name";
         public const string OrgMediaPlaceholder = "org-media-placeholder";
         public const string PaginationText = "pagination-text";
+        public const string Paid = "paid";
         public const string PeriodPickerTrigger = "m3-period-picker-trigger";
         public const string PickerBadge = "picker-badge";
         public const string PickerDayDot = "picker-day-dot";
@@ -609,27 +649,38 @@ public static class M3
         public const string ProductTitle = "product-title";
         public const string ProgressLabels = "m3-progress-labels";
         public const string Quickgrid = "quickgrid";
+        public const string ReadyBadge = "ready-badge";
         public const string RowLabel = "m3-row-label";
         public const string RowValue = "m3-row-value";
         public const string SearchContainer = "m3-search-container";
         public const string SegmentedBtn = "m3-segmented-btn";
+        public const string Shipping = "shipping";
         public const string SmartGridContainer = "smart-grid-container";
         public const string StatusBadge = "m3-status-badge";
+        public const string StatusCollected = "status-collected";
+        public const string StatusCollecting = "status-collecting";
+        public const string StatusCompleted = "status-completed";
         public const string StatusCreated = "status-created";
         public const string StatusMade = "status-made";
+        public const string StatusPaid = "status-paid";
+        public const string StatusShipping = "status-shipping";
         public const string StoreNotFound = "store-not-found";
+        public const string Success = "success";
         public const string SummaryCheckIcon = "summary-check-icon";
         public const string SummaryDate = "summary-date";
         public const string SummaryTitle = "m3-summary-title";
         public const string Table = "m3-table";
         public const string TableContainer = "table-container";
+        public const string TableIcon = "table-icon";
         public const string TotalLabel = "m3-total-label";
         public const string TotalValue = "m3-total-value";
+        public const string Trial = "trial";
         public const string UploadIcon = "upload-icon";
         public const string UploadSubtext = "upload-subtext";
         public const string UploadText = "upload-text";
         public const string VariantDialogSubtext = "variant-dialog-subtext";
         public const string VariantDialogTitle = "variant-dialog-title";
+        public const string Verified = "verified";
         public const string WishlistDescText = "wishlist-desc-text";
         public const string WishlistDetailsDesc = "wishlist-details-desc";
         public const string WishlistDetailsPrice = "wishlist-details-price";
@@ -669,11 +720,18 @@ public static class M3
 
     public static class Display
     {
+        public const string AvatarButton = "avatar-button";
         public const string Block = "m3-block";
+        public const string CardMedia = "m3-card-media";
         public const string Hidden = "m3-hidden";
         public const string InlineBlock = "m3-inline-block";
         public const string Invisible = "m3-invisible";
+        public const string OrgMedia = "org-media";
+        public const string PriceLabel = "price-label";
+        public const string VariantDialogSubtext = "variant-dialog-subtext";
+        public const string VariantDialogTitle = "variant-dialog-title";
         public const string Visible = "m3-visible";
+        public const string WishlistMedia = "wishlist-media";
     }
 
     public static class Elevation
@@ -714,10 +772,12 @@ public static class M3
         public const string BadgeCounter = "badge-counter";
         public const string BodyLarge = "m3-body-large";
         public const string BodyMedium = "m3-body-medium";
+        public const string CardSubtitle = "m3-card-subtitle";
         public const string CardTitle = "m3-card-title";
         public const string Contacts = "contacts";
         public const string CountBadge = "m3-count-badge";
         public const string DialogBtnPrimary = "m3-dialog-btn-primary";
+        public const string DialogDescription = "m3-dialog-description";
         public const string DialogHeader = "m3-dialog-header";
         public const string DialogToggleTitle = "m3-dialog-toggle-title";
         public const string DisplayLarge = "m3-display-large";
@@ -753,12 +813,14 @@ public static class M3
         public const string OrderItemsTable = "order-items-table";
         public const string OrderStatusBadge = "order-status-badge";
         public const string OrdersTable = "orders-table";
+        public const string OrgCardDesc = "org-card-desc";
         public const string OrgCardName = "org-card-name";
         public const string PickerBadge = "picker-badge";
         public const string PickerDayDot = "picker-day-dot";
         public const string PickerHexInput = "picker-hex-input";
         public const string PickerHexPrefix = "picker-hex-prefix";
         public const string PickerPopoverTitle = "picker-popover-title";
+        public const string PickerPreviewText = "picker-preview-text";
         public const string PickerTriggerTitle = "picker-trigger-title";
         public const string PillBadge = "m3-pill-badge";
         public const string PosEmptyState = "pos-empty-state";
@@ -834,6 +896,9 @@ public static class M3
         public const string AutoRow = "m3-grid-auto-row";
         public const string AvatarButton = "avatar-button";
         public const string AvatarContainer = "avatar-container";
+        public const string BackButton = "m3-back-button";
+        public const string Badge = "m3-badge";
+        public const string BadgeCounter = "badge-counter";
         public const string BannerError = "m3-banner-error";
         public const string BookingPickerCard = "booking-picker-card";
         public const string BookingSummaryBanner = "booking-summary-banner";
@@ -859,6 +924,7 @@ public static class M3
         public const string ConfigDialog = "m3-config-dialog";
         public const string Contacts = "contacts";
         public const string Content = "content";
+        public const string CountBadge = "m3-count-badge";
         public const string DateCell = "date-cell";
         public const string DatePresetsRow = "date-presets-row";
         public const string DialogActions = "m3-dialog-actions";
@@ -886,6 +952,7 @@ public static class M3
         public const string FileOverlay = "file-overlay";
         public const string FilePickerContainer = "file-picker-container";
         public const string FilePreviewArea = "file-preview-area";
+        public const string FilterChip = "m3-filter-chip";
         public const string FormGrid = "m3-form-grid";
         public const string GlassCard = "glass-card";
         public const string HeaderControls = "m3-header-controls";
@@ -893,6 +960,8 @@ public static class M3
         public const string InfoGrid = "m3-info-grid";
         public const string InfoItem = "m3-info-item";
         public const string InlineGrid = "m3-inline-grid";
+        public const string ItemStatusPill = "item-status-pill";
+        public const string ItemsCountBadge = "items-count-badge";
         public const string KdsEmptyCol = "kds-empty-col";
         public const string KdsEmptyIcon = "kds-empty-icon";
         public const string KioskEmptyIcon = "kiosk-empty-icon";
@@ -922,6 +991,7 @@ public static class M3
         public const string ModeToggleIcon = "m3-mode-toggle-icon";
         public const string OptionItemRow = "option-item-row";
         public const string OptionsListContainer = "options-list-container";
+        public const string OrderStatusBadge = "order-status-badge";
         public const string OrgCard = "org-card";
         public const string OrgCardContent = "org-card-content";
         public const string OrgMediaPlaceholder = "org-media-placeholder";
@@ -942,6 +1012,7 @@ public static class M3
         public const string PickerTriggerLeft = "picker-trigger-left";
         public const string PickerTriggerText = "picker-trigger-text";
         public const string PickerWeekMiniDots = "picker-week-mini-dots";
+        public const string PillBadge = "m3-pill-badge";
         public const string PosEmptyIcon = "pos-empty-icon";
         public const string PosEmptyState = "pos-empty-state";
         public const string PriceBox = "price-box";
@@ -956,6 +1027,7 @@ public static class M3
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
         public const string SlotsChipSet = "slots-chip-set";
         public const string SmartGridContainer = "smart-grid-container";
+        public const string StatusBadge = "m3-status-badge";
         public const string StoreNotFound = "store-not-found";
         public const string SummaryActions = "m3-summary-actions";
         public const string SummaryCard = "m3-summary-card";
@@ -1252,6 +1324,7 @@ public static class M3
     public static class Position
     {
         public const string Absolute = "m3-absolute";
+        public const string ActionsColumn = "actions-column";
         public const string AvatarButton = "avatar-button";
         public const string AvatarContainer = "avatar-container";
         public const string Card = "m3-card";
@@ -1262,6 +1335,8 @@ public static class M3
         public const string CardMedia = "m3-card-media";
         public const string CardOutlined = "card-outlined";
         public const string ColHeaderContent = "col-header-content";
+        public const string ColJustifyEnd = "col-justify-end";
+        public const string ColJustifyStart = "col-justify-start";
         public const string ColOptions = "col-options";
         public const string ColTitle = "col-title";
         public const string ColWidthDraghandle = "col-width-draghandle";
@@ -1280,6 +1355,7 @@ public static class M3
         public const string MaterialSymbolsOutlined = "material-symbols-outlined";
         public const string NewBadge = "new-badge";
         public const string OrgMedia = "org-media";
+        public const string Paginator = "paginator";
         public const string PickerIconBadge = "picker-icon-badge";
         public const string PickerNativeInput = "picker-native-input";
         public const string PickerPaletteSwatch = "picker-palette-swatch";
@@ -1590,19 +1666,44 @@ public static class M3
 
     public static class TextWrapping
     {
+        public const string BackButton = "m3-back-button";
         public const string Badge = "m3-badge";
+        public const string BtnPrimaryLink = "btn-primary-link";
+        public const string CardInteractive = "m3-card-interactive";
+        public const string ColJustifyCenter = "col-justify-center";
+        public const string ColJustifyLeft = "col-justify-left";
+        public const string ColJustifyStart = "col-justify-start";
+        public const string ColTitle = "col-title";
         public const string ColTitleText = "col-title-text";
+        public const string ColumnEmpty = "column-empty";
+        public const string DropTitle = "drop-title";
+        public const string EmptyColumn = "m3-empty-column";
+        public const string EmptyState = "m3-empty-state";
         public const string FileName = "file-name";
         public const string ItemStatusPill = "item-status-pill";
         public const string ItemsCountBadge = "items-count-badge";
+        public const string KdsEmptyCol = "kds-empty-col";
+        public const string KioskEmptyState = "kiosk-empty-state";
+        public const string LangMenuItem = "lang-menu-item";
         public const string LineClamp2 = "m3-line-clamp-2";
         public const string LineClamp3 = "m3-line-clamp-3";
+        public const string OrderItemsTable = "order-items-table";
         public const string OrderStatusBadge = "order-status-badge";
+        public const string OrdersTable = "orders-table";
         public const string OrgCardName = "org-card-name";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string PriceTag = "price-tag";
+        public const string ProductTitle = "product-title";
         public const string Quickgrid = "quickgrid";
+        public const string SortIndicator = "sort-indicator";
         public const string StatusBadge = "m3-status-badge";
+        public const string StoreNotFound = "store-not-found";
+        public const string SummaryActions = "m3-summary-actions";
+        public const string SummaryBackLink = "summary-back-link";
+        public const string Table = "m3-table";
         public const string TableContainer = "table-container";
         public const string Truncate = "m3-truncate";
+        public const string UploadZoneLabel = "upload-zone-label";
     }
 
     public static class ThemeToggle

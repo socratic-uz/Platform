@@ -6,12 +6,10 @@
 .m3-status-badge,
 .order-status-badge,
 .item-status-pill {
-    display: inline-grid !important;
     grid-auto-columns: max-content auto;
     gap: 0.4rem;
     padding: 0.25rem 0.75rem;
     font-size: 0.8rem;
-    line-height: 1;
 }
 
 /* Status Variants: Primary / Success / Ready / Completed */
@@ -27,15 +25,15 @@
 .badge-ready,
 .badge-completed,
 .badge.completed,
-.ready-badge {
-    color: var(--md-sys-color-on-primary-container);
+.ready-badge  {
+    /* consolidated to w3c rules */
 }
 
 .badge-trial,
 .badge.trial,
 .badge-verified,
-.badge.verified {
-    color: var(--md-sys-color-on-primary-container);
+.badge.verified  {
+    /* consolidated to w3c rules */
 }
 
 /* Status Variants: Warning / Making / In-Progress */
@@ -61,7 +59,7 @@
 .m3-status-badge.made,
 .m3-status-badge.status-made,
 .order-status-badge.status-made,
-.item-status-pill.status-made  {
+.item-status-pill.status-made   {
     /* consolidated to w3c rules */
 }
 
@@ -80,9 +78,8 @@
 .order-status-badge.status-shipping,
 .item-status-pill.status-shipping,
 .badge-active,
-.badge.active {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+.badge.active  {
+    /* consolidated to w3c rules */
 }
 
 /* Status Variants: Error / Canceled / Blocked */
@@ -113,17 +110,14 @@
 .order-status-badge.status-created,
 .item-status-pill.status-created,
 .badge-cancelled,
-.badge.cancelled  {
+.badge.cancelled   {
     /* consolidated to w3c rules */
 }
 
 .badge-counter {
-    display: inline-grid;
-    background: var(--md-sys-color-primary);
     font-size: 0.75rem;
     padding: 2px 8px;
     box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
-    line-height: 1;
 }
 
 .m3-status-dot,
@@ -136,7 +130,7 @@
 }
 
 .m3-status-dot.pulse,
-.status-dot.pulse   {
+.status-dot.pulse    {
     /* consolidated to w3c rules */
 }
 
@@ -157,7 +151,6 @@
 
 /* Universal Pill Badges (Section Headers, Feature Tags) */
 .m3-pill-badge {
-    display: inline-grid !important;
     grid-auto-columns: max-content auto;
     gap: 0.5rem;
     padding: 0.4rem 1.1rem;
@@ -165,7 +158,6 @@
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
     font-size: 0.875rem;
     letter-spacing: 0.02em;
-    line-height: 1;
 }
 
 .m3-pill-badge.tertiary {
@@ -183,14 +175,10 @@
 /* Count Indicator Pill */
 .m3-count-badge,
 .count-badge {
-    display: inline-grid !important;
     min-width: 28px;
     height: 24px;
     padding: 0 0.5rem;
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
     font-size: 0.8rem;
-    line-height: 1;
 }
 
 .kds-qty-badge,
@@ -203,17 +191,14 @@
 .kds-status-tag {
     justify-self: end;
     font-size: 0.75rem;
-    color: var(--md-sys-color-on-primary-container);
     padding: 0.2rem 0.5rem;
 }
 
 /* Header Context Indicators & Back Navigation */
 .back-button,
 .m3-back-button {
-    display: inline-grid !important;
     grid-auto-columns: max-content auto;
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    text-decoration: none;
     font-size: 0.9375rem;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
@@ -223,8 +208,6 @@
 .back-button:focus-visible,
 .m3-back-button:hover,
 .m3-back-button:focus-visible {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
     outline: none;
 }
 
@@ -234,7 +217,6 @@
 }
 
 .items-count-badge {
-    display: inline-grid !important;
     grid-auto-columns: max-content auto;
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
     font-size: 0.875rem;

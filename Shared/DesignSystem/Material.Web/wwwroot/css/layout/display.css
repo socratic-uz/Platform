@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Layout - Display & Visibility Rules Module
    Display State Utilities (Excluding Flexbox)
@@ -21,4 +22,18 @@
 
 .m3-visible {
     visibility: visible !important;
+}
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Block Layout Elements */
+:is(
+    .avatar-button img,
+    :is(.m3-card-media, .org-media, .wishlist-media) img,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
+    .variant-dialog-title,
+    .variant-dialog-subtext,
+    .price-label
+) {
+    display: block;
 }
