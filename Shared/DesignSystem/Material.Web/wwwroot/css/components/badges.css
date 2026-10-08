@@ -163,7 +163,7 @@
     font-weight: 800;
     padding: 2px 8px;
     border-radius: var(--md-sys-shape-corner-full, 9999px);
-    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow, #000000) r g b / 0.25);
+    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
     line-height: 1;
 }
 

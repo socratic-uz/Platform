@@ -1,10 +1,11 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Web
+@using Material.Web
 
-<div class="picker-trigger-card @(Disabled ? "disabled" : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
-    <div class="picker-trigger-left">
+<div class="@M3.Picker.TriggerCard @(Disabled ? "disabled" : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
+    <div class="@M3.Picker.TriggerLeft">
         <!-- Icon Badge (44x44px, R12) -->
-        <div class="picker-icon-badge @(HasValue ? "active" : "")">
+        <div class="@M3.Picker.IconBadge @(HasValue ? "active" : "")">
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge
@@ -16,12 +17,12 @@
         </div>
 
         <!-- Text & Preview Area -->
-        <div class="picker-trigger-text">
-            <div class="picker-header-row">
-                <span class="picker-trigger-title">@Label</span>
+        <div class="@M3.Picker.TriggerText">
+            <div class="@M3.Picker.HeaderRow">
+                <span class="@M3.Picker.TriggerTitle">@Label</span>
                 @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
                 {
-                    <span class="picker-badge">
+                    <span class="@M3.Picker.Badge">
                         @if (!string.IsNullOrEmpty(BadgeIcon))
                         {
                             <Icon Name="@BadgeIcon" />
@@ -30,12 +31,12 @@
                     </span>
                 }
             </div>
-            <div class="picker-preview-text" title="@PreviewText">
+            <div class="@M3.Picker.PreviewText" title="@PreviewText">
                 @PreviewText
             </div>
             @if (CustomPreview != null)
             {
-                <div class="picker-custom-preview">
+                <div class="@M3.Picker.CustomPreview">
                     @CustomPreview
                 </div>
             }
@@ -43,7 +44,7 @@
     </div>
 
     <!-- Actions Panel -->
-    <div class="picker-trigger-actions">
+    <div class="@M3.Picker.TriggerActions">
         @if (CustomActions != null)
         {
             @CustomActions

@@ -1,4 +1,4 @@
-/* ─── 3. Search Bar Component ─────────────────────────────────────── */
+.m3-search-container,
 .material-search-container {
     display: grid;
     align-items: center;
@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+.m3-search-container md-outlined-text-field,
 .material-search-container md-outlined-text-field,
 .material-search-container .material-text-field {
     width: 100%;
@@ -25,8 +26,9 @@
     transition: box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard, ease);
 }
 
+.m3-search-container md-outlined-text-field:focus-within,
 .material-search-container md-outlined-text-field:focus-within {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--md-sys-elevation-level1);
 }
 
 .material-search-container md-icon[slot="leading-icon"] {

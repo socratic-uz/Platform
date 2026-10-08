@@ -34,6 +34,7 @@
     border-radius: var(--md-sys-shape-corner-extra-small, 4px);
 }
 
+.m3-skeleton-text.m3-short,
 .m3-skeleton-text.short {
     width: 60%;
 }

@@ -34,6 +34,13 @@
           StandardOutputImportance="Low" />
   </Target>
 
+  <!-- Level 3: Produces single-file production CSS bundle on Release / Publish -->
+  <Target Name="BundleCss" AfterTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs')">
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs&quot;" 
+          ContinueOnError="true" 
+          StandardOutputImportance="Low" />
+  </Target>
+
   <!-- Level 4: Socratic Quality Gate stop-lever for Release / CI builds -->
   <Target Name="ValidateCssQuality" BeforeTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1')">
     <Exec Command="pwsh -File &quot;$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1&quot;" 

@@ -376,7 +376,7 @@ public static class M3
         public const string WeekMiniDots = "picker-week-mini-dots";
     }
 
-    public static class Progres
+    public static class Progress
     {
         public const string Container = "m3-progress-container";
         public const string Fill = "m3-progress-fill";
@@ -390,6 +390,7 @@ public static class M3
 
     public static class Search
     {
+        public const string Container = "m3-search-container";
         public const string MaterialSearchContainer = "material-search-container";
         public const string MaterialTextField = "material-text-field";
     }
@@ -412,7 +413,8 @@ public static class M3
         public const string Card = "m3-skeleton-card";
         public const string Circle = "m3-skeleton-circle";
         public const string Root = "m3-skeleton";
-        public const string Short = "short";
+        public const string Short = "m3-short";
+        public const string Short_2 = "short";
         public const string Text = "m3-skeleton-text";
     }
 
@@ -465,9 +467,12 @@ public static class M3
     public static class ThemeToggle
     {
         public const string DarkMode = "dark-mode";
-        public const string ModeToggle = "mode-toggle";
-        public const string ModeToggleFigure = "mode-toggle-figure";
-        public const string ModeToggleIcon = "mode-toggle-icon";
+        public const string ModeToggle = "m3-mode-toggle";
+        public const string ModeToggleFigure = "m3-mode-toggle-figure";
+        public const string ModeToggleFigure_2 = "mode-toggle-figure";
+        public const string ModeToggleIcon = "m3-mode-toggle-icon";
+        public const string ModeToggleIcon_2 = "mode-toggle-icon";
+        public const string ModeToggle_2 = "mode-toggle";
     }
 
 }

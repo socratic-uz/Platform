@@ -1,4 +1,4 @@
-/* ─── 4. Mode Toggle Switcher ─────────────────────────────────────── */
+.m3-mode-toggle,
 .mode-toggle {
     overflow: hidden;
     display: grid !important;
@@ -9,6 +9,7 @@
     box-sizing: border-box;
 }
 
+.m3-mode-toggle-figure,
 .mode-toggle-figure {
     background: var(--md-sys-color-primary-container);
     height: 46px;
@@ -21,6 +22,7 @@
     box-sizing: border-box;
 }
 
+.m3-mode-toggle-icon,
 .mode-toggle-icon {
     display: grid !important;
     width: 30px;
