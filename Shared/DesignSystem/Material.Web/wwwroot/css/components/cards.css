@@ -109,24 +109,20 @@
 }
 
 /* ─── 4. Card Padding Presets ────────────────────────────────────────────── */
-.m3-card-padding-sm,
-.card-padding-sm {
+:is(.m3-card-padding-sm, .card-padding-sm) {
     padding: var(--md-sys-spacing-2);
 }
 
-.m3-card-padding-md,
-.card-padding-md {
+:is(.m3-card-padding-md, .card-padding-md) {
     padding: var(--md-sys-spacing-4);
 }
 
-.m3-card-padding-lg,
-.card-padding-lg {
+:is(.m3-card-padding-lg, .card-padding-lg) {
     padding: var(--md-sys-spacing-6);
 }
 
 /* ─── 5. Card Structural Elements (Slots) ────────────────────────────────── */
-.m3-card-header,
-.card-header {
+:is(.m3-card-header, .card-header) {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -135,8 +131,7 @@
     box-sizing: border-box;
 }
 
-.m3-card-title,
-.card-title {
+:is(.m3-card-title, .card-title) {
     margin: 0;
     font-size: 1.15rem;
     font-weight: 600;
@@ -145,26 +140,21 @@
     line-height: 1.25;
 }
 
-.m3-card-subtitle,
-.card-subtitle {
+:is(.m3-card-subtitle, .card-subtitle) {
     margin: 0;
     font-size: 0.875rem;
     color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
 }
 
-.m3-card-body,
-.card-body {
+:is(.m3-card-body, .card-body) {
     display: grid !important;
     gap: 0.75rem;
     min-width: 0;
     box-sizing: border-box;
 }
 
-.m3-card-footer,
-.card-footer,
-.m3-card-actions,
-.card-actions {
+:is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions) {
     display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -175,8 +165,7 @@
 }
 
 /* ─── 6. Summary Card Pattern ────────────────────────────────────────────── */
-.m3-summary-card,
-.summary-card {
+:is(.m3-summary-card, .summary-card) {
     display: grid !important;
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-5) var(--md-sys-spacing-6);
@@ -186,8 +175,7 @@
     box-sizing: border-box;
 }
 
-.m3-summary-title,
-.summary-title {
+:is(.m3-summary-title, .summary-title) {
     margin: 0;
     font-size: 1.15rem;
     font-weight: 700;
@@ -195,81 +183,67 @@
     letter-spacing: -0.01em;
 }
 
-.m3-summary-rows,
-.summary-rows {
+:is(.m3-summary-rows, .summary-rows) {
     display: grid !important;
     gap: var(--md-sys-spacing-3);
 }
 
-.m3-summary-row,
-.summary-row {
+:is(.m3-summary-row, .summary-row) {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-2);
 }
 
-.m3-row-label,
-.row-label {
+:is(.m3-row-label, .row-label) {
     font-size: 0.9375rem;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.m3-row-value,
-.row-value {
+:is(.m3-row-value, .row-value) {
     font-size: 0.9375rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
     text-align: right;
 }
 
-.m3-summary-divider,
-.summary-divider {
+:is(.m3-summary-divider, .summary-divider) {
     height: 1px;
     background: var(--md-sys-color-outline-variant);
     margin: var(--md-sys-spacing-1) 0;
 }
 
-.m3-total-row,
-.total-row {
+:is(.m3-total-row, .total-row) {
     align-items: baseline;
     padding-top: var(--md-sys-spacing-1);
 }
 
-.m3-total-label,
-.total-label {
+:is(.m3-total-label, .total-label) {
     font-size: 1.0625rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
-.m3-total-value,
-.total-value {
+:is(.m3-total-value, .total-value) {
     font-size: 1.45rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
 }
 
-.m3-summary-actions,
-.summary-actions {
+:is(.m3-summary-actions, .summary-actions) {
     display: grid !important;
     gap: var(--md-sys-spacing-3);
     margin-top: var(--md-sys-spacing-2);
 }
 
-.m3-summary-actions button,
-.summary-actions button,
-.m3-summary-actions .summary-back-link,
-.summary-actions .summary-back-link {
+:is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link) {
     width: 100%;
     min-height: var(--md-sys-touch-target-min);
     text-decoration: none;
 }
 
 /* ─── 7. Media Card Pattern ──────────────────────────────────────────────── */
-.m3-media-card,
-.media-card,
-.org-card {
+:is(.m3-media-card, .media-card, .org-card) {
     cursor: pointer;
     height: 100%;
     display: grid !important;
@@ -283,15 +257,11 @@
     min-width: 0;
 }
 
-.m3-media-card:hover,
-.media-card:hover,
-.org-card:hover {
+:is(.m3-media-card, .media-card, .org-card):hover {
     transform: translateY(-2px);
 }
 
-.m3-card-media,
-.org-media,
-.wishlist-media {
+:is(.m3-card-media, .org-media, .wishlist-media) {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: var(--md-sys-color-surface-container-highest);
@@ -301,9 +271,7 @@
     border-radius: var(--md-sys-shape-corner-medium);
 }
 
-.m3-card-media img,
-.org-media img,
-.wishlist-media img {
+:is(.m3-card-media, .org-media, .wishlist-media) img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -311,15 +279,11 @@
     transition: transform var(--md-sys-motion-duration-medium1) ease;
 }
 
-.m3-media-card:hover .m3-card-media img,
-.org-card:hover .org-media img,
-.product-card:hover .wishlist-media img {
+:is(.m3-media-card:hover .m3-card-media, .org-card:hover .org-media, .product-card:hover .wishlist-media) img {
     transform: scale(1.04);
 }
 
-.m3-card-media-placeholder,
-.org-media-placeholder,
-.wishlist-placeholder {
+:is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder) {
     width: 100%;
     height: 100%;
     display: grid !important;
@@ -328,9 +292,7 @@
     opacity: 0.6;
 }
 
-.m3-card-media-placeholder md-icon,
-.org-media-placeholder md-icon,
-.org-media-placeholder .material-symbols-outlined {
+:is(.m3-card-media-placeholder, .org-media-placeholder) :is(md-icon, .material-symbols-outlined) {
     font-size: 48px;
     width: 48px;
     height: 48px;

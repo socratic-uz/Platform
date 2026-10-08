@@ -5,20 +5,31 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. Reusable Base Picker Trigger Card
+   1. Reusable Base Picker Trigger Card & Shared Surfaces
    ========================================================================== */
+:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card) {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    box-sizing: border-box;
+}
+
+:is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title) {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
 .picker-trigger-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     margin-bottom: var(--md-sys-spacing-2);
     gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     min-height: 64px;
-    box-sizing: border-box;
     width: 100%;
     max-width: 100%;
     container-type: inline-size;
@@ -401,34 +412,13 @@
 }
 
 /* Document Type Colors */
-.m3-pdf-type, .pdf-type {
-    background-color: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-}
-.m3-doc-type, .doc-type {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-.m3-sheet-type, .sheet-type {
-    background-color: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-.m3-archive-type, .archive-type {
-    background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-.m3-audio-type, .audio-type {
-    background-color: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-}
-.m3-video-type, .video-type {
-    background-color: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-.m3-generic-type, .generic-type {
-    background-color: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface-variant);
-}
+:is(.m3-pdf-type, .pdf-type) { background-color: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
+:is(.m3-doc-type, .doc-type) { background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+:is(.m3-sheet-type, .sheet-type) { background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+:is(.m3-archive-type, .archive-type) { background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+:is(.m3-audio-type, .audio-type) { background-color: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-primary); }
+:is(.m3-video-type, .video-type) { background-color: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
+:is(.m3-generic-type, .generic-type) { background-color: var(--md-sys-color-surface-container); color: var(--md-sys-color-on-surface-variant); }
 
 .file-info {
     padding: 6px 8px;
@@ -612,16 +602,10 @@
     gap: 8px;
     padding: 12px 14px;
     border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .md3-presets-label {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
 }
 
 .md3-presets-row {
@@ -641,10 +625,6 @@
 
 .md3-schedule-subtitle {
     font-size: 13px;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface-variant);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .md3-schedule-days {
@@ -658,8 +638,6 @@
     align-items: center;
     padding: 8px 14px;
     border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     gap: 12px;
     transition: background-color 0.15s, border-color 0.15s;
 }
@@ -967,8 +945,6 @@
 .options-list-container {
     display: grid !important;
     gap: 4px;
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     padding: 6px 8px;
 }
@@ -1025,15 +1001,12 @@
 
 /* Resource Booking Picker */
 .booking-picker-card {
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     padding: clamp(14px, 2.5vw, 20px);
     color: var(--md-sys-color-on-surface);
     display: grid !important;
     gap: 14px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .picker-title-row {
