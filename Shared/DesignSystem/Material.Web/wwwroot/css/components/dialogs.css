@@ -1,141 +1,150 @@
+/* ==========================================================================
+   Material Design 3 Expressive - Dialogs & Modal Surfaces
+   Strict CSS Grid Architecture (Zero-Flexbox), M3 Expressive Tokens
+   ========================================================================== */
 
-.analytics-modal-backdrop,
-.m3-modal-backdrop {
+/* ─── 1. Custom M3 Modal Backdrop & Surface Primitives ─────────────────── */
+.m3-modal-backdrop,
+.m3-dialog-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
     backdrop-filter: blur(4px);
-    z-index: 1000;
+    -webkit-backdrop-filter: blur(4px);
+    z-index: var(--md-sys-z-dialog-backdrop, 1000);
 }
 
-.analytics-config-dialog,
-.m3-config-dialog {
+.m3-config-dialog,
+.m3-dialog-surface {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 520px;
-    max-height: 85vh;
+    width: min(90vw, 540px);
+    max-height: min(85dvh, 720px);
     overflow-y: auto;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
-    padding: 1.75rem;
-    display: grid;
+    border-radius: var(--md-sys-shape-expressive-dialog, 28px);
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    display: grid !important;
     gap: 1.25rem;
-    z-index: 1001;
-    box-shadow: var(--md-sys-elevation-level4, 0 16px 40px rgba(0, 0, 0, 0.3));
+    z-index: var(--md-sys-z-dialog, 1001);
+    box-shadow: var(--md-sys-elevation-level4);
 }
 
-.dialog-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
+.m3-dialog-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 1rem;
 }
 
-.dialog-title-group {
-    display: grid;
-    grid-template-columns: auto auto;
+.m3-dialog-title-group {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.5rem;
 }
 
-.dialog-icon {
+.m3-dialog-icon {
     color: var(--md-sys-color-primary);
     font-size: 1.35rem;
 }
 
-.dialog-header h3 {
+.m3-dialog-header h3 {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
-.dialog-close-btn {
-    display: grid;
+.m3-dialog-close-btn {
+    display: grid !important;
     place-items: center;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     border: none;
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
     cursor: pointer;
-    transition: background 0.2s;
+    touch-action: manipulation;
+    transition: background 0.2s ease;
 }
 
-.dialog-close-btn:hover {
+.m3-dialog-close-btn:hover {
     background: var(--md-sys-color-surface-container-highest);
 }
 
-.dialog-description {
+.m3-dialog-description {
     margin: 0;
     font-size: 0.88rem;
     color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
 }
 
-.dialog-options-list {
-    display: grid;
+.m3-dialog-options-list {
+    display: grid !important;
     gap: 0.65rem;
 }
 
-.config-toggle-item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+.m3-dialog-toggle-item {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 1rem;
     padding: 0.75rem 1rem;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease;
 }
 
-.config-toggle-item:hover {
+.m3-dialog-toggle-item:hover {
     background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-primary);
 }
 
-.config-toggle-item input[type="checkbox"] {
+.m3-dialog-toggle-item input[type="checkbox"] {
     width: 20px;
     height: 20px;
     accent-color: var(--md-sys-color-primary);
     cursor: pointer;
 }
 
-.toggle-text {
-    display: grid;
+.m3-dialog-toggle-text {
+    display: grid !important;
     gap: 0.15rem;
 }
 
-.toggle-title {
+.m3-dialog-toggle-title {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
 }
 
-.toggle-desc {
+.m3-dialog-toggle-desc {
     font-size: 0.78rem;
     color: var(--md-sys-color-outline);
 }
 
-.toggle-icon {
+.m3-dialog-toggle-icon {
     font-size: 1.25rem;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.dialog-actions {
-    display: grid;
+.m3-dialog-actions {
+    display: grid !important;
     padding-top: 0.5rem;
 }
 
-.dialog-btn-primary {
-    display: grid;
+.m3-dialog-btn-primary {
+    display: grid !important;
     place-items: center;
     padding: 0.85rem;
     background: var(--md-sys-color-primary);
@@ -145,16 +154,18 @@
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.2s;
+    touch-action: manipulation;
+    transition: opacity 0.2s ease;
 }
 
-.dialog-btn-primary:hover {
+.m3-dialog-btn-primary:hover {
     opacity: 0.9;
 }
 
-/* ─── Material Design 3 md-dialog Web Component ────────────────────────── */
+/* ─── 2. Material Design 3 md-dialog Web Component ─────────────────────── */
 md-dialog {
     --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog, 28px);
+
     width: auto;
     max-width: min(92vw, 560px);
     max-height: min(90vh, 90dvh);
@@ -185,4 +196,3 @@ md-dialog [slot="actions"] {
     align-items: center;
     gap: var(--md-sys-spacing-2, 8px);
 }
-
