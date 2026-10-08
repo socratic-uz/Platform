@@ -71,38 +71,43 @@ h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
-h1 {
+h1, .m3-display-large {
     font-size: var(--md-sys-typescale-display-large-size);
     line-height: var(--md-sys-typescale-display-large-line-height);
     font-weight: var(--md-sys-typescale-display-large-weight);
     letter-spacing: var(--md-sys-typescale-display-large-tracking);
+    overflow-wrap: break-word;
 }
 
-h2 {
+h2, .m3-headline-large {
     font-size: var(--md-sys-typescale-headline-large-size);
     line-height: var(--md-sys-typescale-headline-large-line-height);
     font-weight: var(--md-sys-typescale-headline-large-weight);
     letter-spacing: var(--md-sys-typescale-headline-large-tracking);
+    overflow-wrap: break-word;
 }
 
-h3 {
+h3, .m3-headline-medium {
     font-size: var(--md-sys-typescale-headline-medium-size);
     line-height: var(--md-sys-typescale-headline-medium-line-height);
     font-weight: var(--md-sys-typescale-headline-medium-weight);
     letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+    overflow-wrap: break-word;
 }
 
-h4 {
+h4, .m3-title-large {
     font-size: var(--md-sys-typescale-title-large-size);
     line-height: var(--md-sys-typescale-title-large-line-height);
     font-weight: var(--md-sys-typescale-title-large-weight);
     letter-spacing: var(--md-sys-typescale-title-large-tracking);
+    overflow-wrap: break-word;
 }
 
-h5 {
+h5, .m3-title-medium {
     font-size: var(--md-sys-typescale-title-medium-size);
     line-height: var(--md-sys-typescale-title-medium-line-height);
     font-weight: var(--md-sys-typescale-title-medium-weight);
+    overflow-wrap: break-word;
 }
 
 h6 {
@@ -111,13 +116,17 @@ h6 {
     font-weight: 600;
 }
 
+p, .m3-body-large {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    font-weight: var(--md-sys-typescale-body-large-weight);
+    overflow-wrap: break-word;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: var(--md-sys-typescale-body-large-size);
-    line-height: var(--md-sys-typescale-body-large-line-height);
     color: var(--md-sys-color-on-surface-variant);
-    overflow-wrap: break-word;
 }
 
 ol, ul {
@@ -167,52 +176,6 @@ md-dialog:not(:defined) {
 }
 
 /* Typography Utility Classes (with Word-Wrap & Truncation) */
-.m3-display-large {
-    font-size: var(--md-sys-typescale-display-large-size);
-    line-height: var(--md-sys-typescale-display-large-line-height);
-    font-weight: var(--md-sys-typescale-display-large-weight);
-    letter-spacing: var(--md-sys-typescale-display-large-tracking);
-    overflow-wrap: break-word;
-}
-
-.m3-headline-large {
-    font-size: var(--md-sys-typescale-headline-large-size);
-    line-height: var(--md-sys-typescale-headline-large-line-height);
-    font-weight: var(--md-sys-typescale-headline-large-weight);
-    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
-    overflow-wrap: break-word;
-}
-
-.m3-headline-medium {
-    font-size: var(--md-sys-typescale-headline-medium-size);
-    line-height: var(--md-sys-typescale-headline-medium-line-height);
-    font-weight: var(--md-sys-typescale-headline-medium-weight);
-    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
-    overflow-wrap: break-word;
-}
-
-.m3-title-large {
-    font-size: var(--md-sys-typescale-title-large-size);
-    line-height: var(--md-sys-typescale-title-large-line-height);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    letter-spacing: var(--md-sys-typescale-title-large-tracking);
-    overflow-wrap: break-word;
-}
-
-.m3-title-medium {
-    font-size: var(--md-sys-typescale-title-medium-size);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    overflow-wrap: break-word;
-}
-
-.m3-body-large {
-    font-size: var(--md-sys-typescale-body-large-size);
-    line-height: var(--md-sys-typescale-body-large-line-height);
-    font-weight: var(--md-sys-typescale-body-large-weight);
-    overflow-wrap: break-word;
-}
-
 .m3-body-medium {
     font-size: var(--md-sys-typescale-body-medium-size);
     line-height: var(--md-sys-typescale-body-medium-line-height);
@@ -234,16 +197,17 @@ md-dialog:not(:defined) {
     white-space: nowrap;
 }
 
-.m3-line-clamp-2 {
+.m3-line-clamp-2,
+.m3-line-clamp-3 {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
+.m3-line-clamp-2 {
+    -webkit-line-clamp: 2;
+}
+
 .m3-line-clamp-3 {
-    display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }

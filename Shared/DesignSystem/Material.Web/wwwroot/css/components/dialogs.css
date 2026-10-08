@@ -4,8 +4,7 @@
    ========================================================================== */
 
 /* ─── 1. Custom M3 Modal Backdrop & Surface Primitives ─────────────────── */
-.m3-modal-backdrop,
-.m3-dialog-backdrop {
+:is(.m3-modal-backdrop, .m3-dialog-backdrop) {
     position: fixed;
     inset: 0;
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
@@ -14,8 +13,7 @@
     z-index: var(--md-sys-z-dialog-backdrop);
 }
 
-.m3-config-dialog,
-.m3-dialog-surface {
+:is(.m3-config-dialog, .m3-dialog-surface) {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -33,22 +31,12 @@
 }
 
 /* Common Grid Layout Declarations */
-.m3-config-dialog,
-.m3-dialog-surface,
-.m3-dialog-header,
-.m3-dialog-title-group,
-.m3-dialog-close-btn,
-.m3-dialog-options-list,
-.m3-dialog-toggle-item,
-.m3-dialog-toggle-text,
-.m3-dialog-actions,
-.m3-dialog-btn-primary,
+:is(.m3-config-dialog, .m3-dialog-surface, .m3-dialog-header, .m3-dialog-title-group, .m3-dialog-close-btn, .m3-dialog-options-list, .m3-dialog-toggle-item, .m3-dialog-toggle-text, .m3-dialog-actions, .m3-dialog-btn-primary),
 md-dialog [slot="actions"] {
     display: grid !important;
 }
 
-.m3-dialog-close-btn,
-.m3-dialog-btn-primary {
+:is(.m3-dialog-close-btn, .m3-dialog-btn-primary) {
     place-items: center;
 }
 
