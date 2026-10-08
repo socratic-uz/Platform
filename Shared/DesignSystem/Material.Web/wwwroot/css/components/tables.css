@@ -4,9 +4,9 @@
 .order-items-table-wrapper {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     overflow-x: auto;
-    padding: var(--md-sys-spacing-2, 0.5rem);
+    padding: var(--md-sys-spacing-2);
     box-sizing: border-box;
     width: 100%;
 }
@@ -20,7 +20,7 @@
 
 .m3-table th,
 .order-items-table th {
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     text-align: left;
     font-weight: 600;
     color: var(--md-sys-color-on-surface-variant);
@@ -29,7 +29,7 @@
 
 .m3-table td,
 .order-items-table td {
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     color: var(--md-sys-color-on-surface);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     vertical-align: middle;
@@ -50,7 +50,7 @@
 .table-row-actions {
     display: grid !important;
     grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-2);
     justify-content: end;
 }
 
@@ -58,7 +58,7 @@
 .table-actions-bar {
     display: grid !important;
     justify-content: start;
-    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
+    margin-bottom: var(--md-sys-spacing-2);
 }
 
 .orders-table {
@@ -331,10 +331,10 @@ button.col-title {
 
 .col-options {
     position: absolute;
-    background: var(--md-sys-color-surface-container-high, var(--md-sys-color-surface));
+    background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    box-shadow: var(--md-sys-elevation-level3, 0 8px 24px rgba(0,0,0,0.3));
+    border-radius: var(--md-sys-shape-corner-medium);
+    box-shadow: var(--md-sys-elevation-level3);
     left: 0;
     padding: 1rem;
     z-index: 10;
@@ -516,10 +516,10 @@ td.col-justify-right {
 .smart-grid-container input,
 .smart-grid-container select,
 .smart-grid-container textarea {
-    background: var(--md-sys-color-surface-container-highest, var(--md-sys-color-surface-variant));
+    background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
     padding: 0.25rem 1rem;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 

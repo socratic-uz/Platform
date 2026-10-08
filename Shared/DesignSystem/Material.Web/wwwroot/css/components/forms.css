@@ -8,7 +8,7 @@
 .m3-form-grid {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     width: 100%;
     box-sizing: border-box;
 }
@@ -20,10 +20,10 @@
 .m3-fieldset {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
+    border-radius: var(--md-sys-shape-corner-large);
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
     margin: 0;
     background: var(--md-sys-color-surface-container-low);
 }
@@ -40,9 +40,9 @@ md-filled-text-field,
 md-outlined-select,
 md-filled-select {
     width: 100%;
-    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
-    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
-    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium, 12px);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
 }
 
 /* Blazor EditForm Validation Indicators */
@@ -58,7 +58,7 @@ md-filled-select {
     color: var(--md-sys-color-error);
     font-size: 0.8125rem;
     font-weight: 500;
-    margin-top: var(--md-sys-spacing-1, 0.25rem);
+    margin-top: var(--md-sys-spacing-1);
 }
 
 /* Input Type Number Reset */
@@ -81,27 +81,27 @@ input[type="color"] {
     border: 0;
     cursor: pointer;
     padding: 0;
-    height: 48px;
-    width: 48px;
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
 }
 
 ::-webkit-color-swatch-wrapper {
     padding: 0;
-    height: 48px;
-    width: 48px;
-    border-radius: var(--md-sys-shape-corner-large, 24px);
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
+    border-radius: var(--md-sys-shape-corner-large);
 }
 
 ::-webkit-color-swatch {
     border: 1px solid var(--md-sys-color-outline-variant);
-    height: 48px;
-    width: 48px;
-    border-radius: var(--md-sys-shape-corner-large, 24px);
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
+    border-radius: var(--md-sys-shape-corner-large);
 }
 
 ::-moz-color-swatch {
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 24px);
+    border-radius: var(--md-sys-shape-corner-large);
 }
 
 /* ─── Banner & Notice Primitives ───────────────────────────────────────── */
@@ -109,13 +109,13 @@ input[type="color"] {
 .error-banner {
     display: grid !important;
     grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border: 1px solid var(--md-sys-color-error);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     font-size: 0.9375rem;
     box-sizing: border-box;
 }
@@ -143,10 +143,10 @@ input[type="color"] {
 .material-counter button,
 .material-counter md-filled-button,
 .material-counter md-outlined-button {
-    --md-filled-button-container-height: 48px;
-    --md-outlined-button-container-height: 48px;
-    --md-filled-icon-button-container-width: 48px;
-    --md-filled-icon-button-container-height: 48px;
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-filled-icon-button-container-width: var(--md-sys-touch-target-min);
+    --md-filled-icon-button-container-height: var(--md-sys-touch-target-min);
     font-size: 0.85rem;
 }
 

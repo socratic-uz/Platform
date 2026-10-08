@@ -11,18 +11,20 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding: 12px 16px;
-    border-radius: 16px;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    margin-bottom: 10px;
-    gap: 12px 16px;
+    margin-bottom: var(--md-sys-spacing-2);
+    gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     min-height: 64px;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
     container-type: inline-size;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .picker-trigger-card.disabled {
@@ -47,13 +49,15 @@
     position: relative;
     width: 44px;
     height: 44px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface-variant);
     display: grid;
     place-items: center;
     overflow: hidden;
-    transition: background-color 0.2s, color 0.2s, transform 0.15s;
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
 }
 
 .picker-icon-badge.active {
@@ -92,7 +96,7 @@
     font-size: 11px;
     font-weight: 600;
     padding: 2px 8px;
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-primary);
 }
@@ -165,7 +169,7 @@
 .color-badge-swatch {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium);
     position: relative;
     cursor: pointer;
     box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
@@ -188,9 +192,9 @@
     grid-auto-columns: max-content;
     align-items: center;
     gap: 8px;
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
     padding: 6px 10px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
     box-sizing: border-box;
@@ -200,7 +204,7 @@
     position: relative;
     width: 28px;
     height: 28px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small);
     overflow: visible;
     box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
     cursor: pointer;
@@ -213,8 +217,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 48px;
-    min-height: 48px;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
 }
 
 .picker-swatch {
@@ -230,7 +234,7 @@
     gap: 2px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -257,13 +261,13 @@
 .picker-popover-panel {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    border-radius: var(--md-sys-shape-expressive-card);
     padding: 16px;
     box-shadow: var(--md-sys-elevation-expressive-2);
     display: grid;
     gap: 12px;
     margin-bottom: 12px;
-    animation: fadeInScale var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-expressive-entrance);
+    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
 }
 
 @keyframes fadeInScale {
@@ -303,15 +307,15 @@
     position: relative;
     width: 32px;
     height: 32px;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
     cursor: pointer;
     touch-action: manipulation;
     padding: 0;
     display: grid;
     place-items: center;
-    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-spring-snappy),
-                box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard);
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
+                box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
 
 .picker-palette-swatch::before {
@@ -320,8 +324,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 48px;
-    min-height: 48px;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
 }
 
 .picker-palette-swatch:hover {
@@ -375,15 +379,15 @@
 .file-card {
     position: relative;
     aspect-ratio: 1;
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     overflow: hidden;
     border: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: var(--md-sys-elevation-expressive-1);
     background-color: var(--md-sys-color-surface-container-lowest);
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .file-card:hover {
@@ -458,7 +462,7 @@
 }
 
 .file-name {
-    font-family: var(--md-sys-typescale-body-small-font, Roboto, sans-serif);
+    font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--md-sys-color-on-surface);
@@ -495,7 +499,7 @@
     font-size: 0.65rem;
     font-weight: bold;
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: var(--md-sys-shape-corner-extra-small);
     box-shadow: 0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
     z-index: 4;
 }
@@ -504,15 +508,15 @@
 .upload-card {
     position: relative;
     aspect-ratio: 1;
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     border: 2px dashed var(--md-sys-color-outline);
     background: var(--md-sys-color-surface-container-low);
     display: grid;
     place-items: center;
     cursor: pointer;
-    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-                border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-                transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
 .upload-card:hover {
@@ -544,7 +548,7 @@
 .upload-icon {
     font-size: 28px;
     color: var(--md-sys-color-primary);
-    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-spring-bouncy);
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-bouncy);
 }
 
 .upload-card:hover .upload-icon {
@@ -552,14 +556,14 @@
 }
 
 .upload-text {
-    font-family: var(--md-sys-typescale-body-small-font, Roboto, sans-serif);
+    font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--md-sys-color-on-surface);
 }
 
 .upload-subtext {
-    font-family: var(--md-sys-typescale-body-small-font, Roboto, sans-serif);
+    font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.65rem;
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -591,7 +595,7 @@
     font-weight: 700;
     width: 20px;
     height: 20px;
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small);
     display: inline-grid;
     place-items: center;
     background: var(--md-sys-color-surface-container-highest);
@@ -631,7 +635,7 @@
     display: grid !important;
     gap: 8px;
     padding: 12px 14px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
@@ -677,7 +681,7 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 8px 14px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
     gap: 12px;
@@ -711,7 +715,7 @@
     gap: 4px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -744,7 +748,7 @@
     align-items: center;
     gap: 4px;
     padding: 4px 10px;
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-outline);
     font-size: 12px;
@@ -780,7 +784,7 @@
     align-items: center;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    border-radius: var(--md-sys-shape-expressive-button);
     padding: 0.2rem;
     box-sizing: border-box;
 }
@@ -788,11 +792,11 @@
 .lang-chip-btn {
     display: grid;
     place-items: center;
-    min-width: 48px;
-    min-height: 48px;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
     padding: 0.2rem 0.65rem;
     border: none;
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     background: transparent;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
@@ -834,9 +838,9 @@
     grid-auto-columns: auto auto auto;
     align-items: center;
     gap: 0.4rem;
-    min-height: 40px;
+    min-height: var(--md-sys-touch-target-compact);
     padding: 0.25rem 0.65rem;
-    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    border-radius: var(--md-sys-shape-expressive-button);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     border: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface);
@@ -883,7 +887,7 @@
     min-width: 130px;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     padding: 0.35rem;
     box-shadow: var(--md-sys-elevation-level3);
     display: grid;
@@ -895,7 +899,7 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 0.5rem 0.75rem;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border-radius: var(--md-sys-shape-corner-small);
     border: none;
     background: transparent;
     color: var(--md-sys-color-on-surface);
@@ -903,7 +907,7 @@
     font-weight: 500;
     cursor: pointer;
     text-align: left;
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
     touch-action: manipulation;
     transition: background 0.15s ease;
 }
@@ -973,7 +977,7 @@
     color: var(--md-sys-color-on-error-container);
     font-size: 0.7rem;
     padding: 2px 8px;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border-radius: var(--md-sys-shape-corner-small);
     text-transform: none;
     font-weight: 600;
 }
@@ -989,7 +993,7 @@
     gap: 4px;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     padding: 6px 8px;
 }
 
@@ -1000,7 +1004,7 @@
     padding: 6px 8px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     cursor: pointer;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border-radius: var(--md-sys-shape-corner-small);
     transition: background-color 0.15s ease;
 }
 
@@ -1047,7 +1051,7 @@
 .booking-picker-card {
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large);
     padding: clamp(14px, 2.5vw, 20px);
     color: var(--md-sys-color-on-surface);
     display: grid !important;
@@ -1092,7 +1096,7 @@
 .canvas-card {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 14px;
+    border-radius: var(--md-sys-shape-corner-medium);
     padding: 12px;
 }
 
@@ -1106,7 +1110,7 @@
 
 .canvas-wrapper {
     height: clamp(180px, 30vh, 240px);
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium);
     overflow: hidden;
     background: var(--md-sys-color-surface-container-highest);
 }
@@ -1127,7 +1131,7 @@
 .booking-summary-banner {
     background: var(--md-sys-color-primary-container);
     border: 1px solid var(--md-sys-color-primary);
-    border-radius: 14px;
+    border-radius: var(--md-sys-shape-corner-medium);
     padding: 12px 16px;
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
