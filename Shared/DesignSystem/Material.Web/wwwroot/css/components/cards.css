@@ -134,14 +134,17 @@
 }
 
 /* ─── 4. Card Padding Presets ────────────────────────────────────────────── */
+.m3-card-padding-sm,
 .card-padding-sm {
     padding: var(--space-2, 0.5rem);
 }
 
+.m3-card-padding-md,
 .card-padding-md {
     padding: var(--space-4, 1rem);
 }
 
+.m3-card-padding-lg,
 .card-padding-lg {
     padding: var(--space-6, 1.5rem);
 }
@@ -208,6 +211,7 @@
     box-sizing: border-box;
 }
 
+.m3-summary-title,
 .summary-title {
     margin: 0;
     font-size: 1.15rem;
@@ -216,11 +220,13 @@
     letter-spacing: -0.01em;
 }
 
+.m3-summary-rows,
 .summary-rows {
     display: grid !important;
     gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
+.m3-summary-row,
 .summary-row {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -228,11 +234,13 @@
     gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
+.m3-row-label,
 .row-label {
     font-size: 0.9375rem;
     color: var(--md-sys-color-on-surface-variant);
 }
 
+.m3-row-value,
 .row-value {
     font-size: 0.9375rem;
     font-weight: 600;
@@ -240,36 +248,43 @@
     text-align: right;
 }
 
+.m3-summary-divider,
 .summary-divider {
     height: 1px;
     background: var(--md-sys-color-outline-variant);
     margin: var(--md-sys-spacing-1, 0.25rem) 0;
 }
 
+.m3-total-row,
 .total-row {
     align-items: baseline;
     padding-top: var(--md-sys-spacing-1, 0.25rem);
 }
 
+.m3-total-label,
 .total-label {
     font-size: 1.0625rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
+.m3-total-value,
 .total-value {
     font-size: 1.45rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
 }
 
+.m3-summary-actions,
 .summary-actions {
     display: grid !important;
     gap: var(--md-sys-spacing-3, 0.75rem);
     margin-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
+.m3-summary-actions button,
 .summary-actions button,
+.m3-summary-actions .summary-back-link,
 .summary-actions .summary-back-link {
     width: 100%;
     min-height: 48px;

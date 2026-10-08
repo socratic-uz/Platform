@@ -40,11 +40,13 @@
     border-bottom: none;
 }
 
+.m3-amount-cell,
 .amount-cell {
     font-weight: 700;
     color: var(--md-sys-color-primary);
 }
 
+.m3-table-row-actions,
 .table-row-actions {
     display: grid !important;
     grid-auto-flow: column;
@@ -52,6 +54,7 @@
     justify-content: end;
 }
 
+.m3-table-actions-bar,
 .table-actions-bar {
     display: grid !important;
     justify-content: start;
