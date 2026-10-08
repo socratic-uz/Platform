@@ -4,26 +4,26 @@
 @inject NavigationManager Navigation
 @inject IStringLocalizer L
 
-<div class="lang-select @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
+<div class="@M3.Picker.LangSelect @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
 	@if (Variant == "inline")
 	{
-		<div class="lang-inline-grid" role="group" aria-label="@(L?["Language"] ?? "Язык")">
+		<div class="@M3.Picker.LangInlineGrid" role="group" aria-label="@(L?["Language"] ?? "Язык")">
 			<button type="button"
-					class="lang-chip-btn @(currentLanguage == Language.Uz ? "lang-chip--active" : "")"
+					class="@M3.Picker.LangChipBtn @(currentLanguage == Language.Uz ? M3.Picker.LangChipActive : "")"
 					@onclick="() => SelectLanguage(Language.Uz)"
 					aria-pressed="@(currentLanguage == Language.Uz ? "true" : "false")"
 					title="O'zbekcha">
 				<span>UZ</span>
 			</button>
 			<button type="button"
-					class="lang-chip-btn @(currentLanguage == Language.Ru ? "lang-chip--active" : "")"
+					class="@M3.Picker.LangChipBtn @(currentLanguage == Language.Ru ? M3.Picker.LangChipActive : "")"
 					@onclick="() => SelectLanguage(Language.Ru)"
 					aria-pressed="@(currentLanguage == Language.Ru ? "true" : "false")"
 					title="Русский">
 				<span>RU</span>
 			</button>
 			<button type="button"
-					class="lang-chip-btn @(currentLanguage == Language.En ? "lang-chip--active" : "")"
+					class="@M3.Picker.LangChipBtn @(currentLanguage == Language.En ? M3.Picker.LangChipActive : "")"
 					@onclick="() => SelectLanguage(Language.En)"
 					aria-pressed="@(currentLanguage == Language.En ? "true" : "false")"
 					title="English">
@@ -33,23 +33,23 @@
 	}
 	else
 	{
-		<div class="lang-dropdown-wrapper">
+		<div class="@M3.Picker.LangDropdownWrapper">
 			<button type="button"
 					class="lang-toggle-btn"
 					@onclick="ToggleDropdown"
 					aria-expanded="@(isOpen ? "true" : "false")"
 					aria-label="@(L?["Language"] ?? "Выбор языка")">
 				<Icon Name="language" />
-				<span class="lang-current-label">@GetLangShortLabel(currentLanguage)</span>
+				<span class="@M3.Picker.LangCurrentLabel">@GetLangShortLabel(currentLanguage)</span>
 				<Icon Name="@(isOpen ? "arrow_drop_up" : "arrow_drop_down")" />
 			</button>
 
 			@if (isOpen)
 			{
 				<div class="lang-menu-backdrop" @onclick="CloseDropdown"></div>
-				<div class="lang-dropdown-menu" role="menu">
+				<div class="@M3.Picker.LangDropdownMenu" role="menu">
 					<button type="button"
-							class="lang-menu-item @(currentLanguage == Language.Uz ? "lang-menu-item--active" : "")"
+							class="@M3.Picker.LangMenuItem @(currentLanguage == Language.Uz ? "lang-menu-item--active" : "")"
 							role="menuitem"
 							@onclick="() => SelectLanguage(Language.Uz)">
 						<span class="lang-flag">🇺🇿</span>
@@ -60,7 +60,7 @@
 						}
 					</button>
 					<button type="button"
-							class="lang-menu-item @(currentLanguage == Language.Ru ? "lang-menu-item--active" : "")"
+							class="@M3.Picker.LangMenuItem @(currentLanguage == Language.Ru ? "lang-menu-item--active" : "")"
 							role="menuitem"
 							@onclick="() => SelectLanguage(Language.Ru)">
 						<span class="lang-flag">🇷🇺</span>
@@ -71,7 +71,7 @@
 						}
 					</button>
 					<button type="button"
-							class="lang-menu-item @(currentLanguage == Language.En ? "lang-menu-item--active" : "")"
+							class="@M3.Picker.LangMenuItem @(currentLanguage == Language.En ? "lang-menu-item--active" : "")"
 							role="menuitem"
 							@onclick="() => SelectLanguage(Language.En)">
 						<span class="lang-flag">🇬🇧</span>

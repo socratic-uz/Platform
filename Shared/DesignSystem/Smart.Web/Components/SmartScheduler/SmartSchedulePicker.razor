@@ -30,19 +30,19 @@
 
 <MaterialDialog Open="@_isDialogOpen" OpenChanged="@(open => _isDialogOpen = open)" class="md3-schedule-dialog">
     <Headline>
-        <div class="md3-dialog-headline">
-            <Icon Name="edit_calendar" class="md3-headline-icon" />
+        <div class="@M3.Picker.Md3DialogHeadline">
+            <Icon Name="edit_calendar" class="@M3.Picker.Md3HeadlineIcon" />
             <span>@(L?["Schedule_Title"] ?? "Настройка графика работы")</span>
         </div>
     </Headline>
 
     <Content>
-        <div class="md3-schedule-picker">
+        <div class="@M3.Picker.Md3SchedulePicker">
             
             <!-- Quick Presets Bar -->
-            <div class="md3-presets-section">
-                <span class="md3-presets-label">@(L?["Schedule_QuickPresets"] ?? "Быстрые шаблоны:")</span>
-                <div class="md3-presets-row">
+            <div class="@M3.Picker.Md3PresetsSection">
+                <span class="@M3.Picker.Md3PresetsLabel">@(L?["Schedule_QuickPresets"] ?? "Быстрые шаблоны:")</span>
+                <div class="@M3.Picker.Md3PresetsRow">
                     <Button Variant="ButtonVariant.Outlined" OnClick="ApplyWeekdaysPreset">
                         <Icon Name="work" Slot="icon" />
                         @(L?["Schedule_Weekdays"] ?? "Будни 09:00–18:00")
@@ -62,8 +62,8 @@
                 </div>
             </div>
 
-            <div class="md3-schedule-header">
-                <span class="md3-schedule-subtitle">@(L?["Schedule_WorkingDays"] ?? "Рабочие дни и часы")</span>
+            <div class="@M3.Picker.Md3ScheduleHeader">
+                <span class="@M3.Picker.Md3ScheduleSubtitle">@(L?["Schedule_WorkingDays"] ?? "Рабочие дни и часы")</span>
                 <div class="md3-schedule-tz-container">
                     <TextField TValue="string"
                                Variant="TextField<string>.TextFieldVariant.Outlined"
@@ -80,15 +80,15 @@
             </div>
 
             <!-- Days List -->
-            <div class="md3-schedule-days">
+            <div class="@M3.Picker.Md3ScheduleDays">
                 @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
                 {
                     var item = GetOrCreateItem(day);
                     var isOpen = !item.IsClosed && item.Intervals != null && item.Intervals.Count > 0;
                     var firstInterval = isOpen ? item.Intervals.First() : null;
 
-                    <div class="md3-schedule-day-card @(isOpen ? "active" : "closed")">
-                        <div class="md3-schedule-day-left" @onclick="() => ToggleDay(day, !isOpen)">
+                    <div class="@($"{M3.Picker.Md3ScheduleDayCard} {(isOpen ? M3.Picker.Active : "closed")}")">
+                        <div class="@M3.Picker.Md3ScheduleDayLeft" @onclick="() => ToggleDay(day, !isOpen)">
                             <Checkbox Value="@isOpen"
                                       ValueChanged="@(active => ToggleDay(day, active))"
                                       ValueExpression="() => isOpen"
@@ -97,19 +97,19 @@
 
                         @if (isOpen && firstInterval != null)
                         {
-                            <div class="md3-schedule-time-group">
-                                <div class="md3-time-picker-box">
-                                    <span class="md3-time-label">С</span>
+                            <div class="@M3.Picker.Md3ScheduleTimeGroup">
+                                <div class="@M3.Picker.Md3TimePickerBox">
+                                    <span class="@M3.Picker.Md3TimeLabel">С</span>
                                     <input type="time"
-                                           class="md3-time-input"
+                                           class="@M3.Picker.Md3TimeInput"
                                            value="@FormatTime(firstInterval.Start)"
                                            @onchange="(e) => UpdateOpenTime(day, e.Value?.ToString())" />
                                 </div>
-                                <span class="md3-time-separator">─</span>
-                                <div class="md3-time-picker-box">
-                                    <span class="md3-time-label">До</span>
+                                <span class="@M3.Picker.Md3TimeSeparator">─</span>
+                                <div class="@M3.Picker.Md3TimePickerBox">
+                                    <span class="@M3.Picker.Md3TimeLabel">До</span>
                                     <input type="time"
-                                           class="md3-time-input"
+                                           class="@M3.Picker.Md3TimeInput"
                                            value="@FormatTime(firstInterval.End)"
                                            @onchange="(e) => UpdateCloseTime(day, e.Value?.ToString())" />
                                 </div>
@@ -117,7 +117,7 @@
                         }
                         else
                         {
-                            <div class="md3-closed-badge">
+                            <div class="@M3.Picker.Md3ClosedBadge">
                                 <Icon Name="block" class="md3-closed-icon" />
                                 <span>Выходной</span>
                             </div>
@@ -129,7 +129,7 @@
     </Content>
 
     <Actions>
-        <div class="md3-dialog-actions-row">
+        <div class="@M3.Picker.Md3DialogActionsRow">
             <Button Variant="ButtonVariant.Text" OnClick="ClearSchedule">
                 <Icon Name="restart_alt" Slot="icon" />
                 Сбросить график
