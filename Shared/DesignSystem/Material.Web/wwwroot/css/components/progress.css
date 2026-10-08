@@ -3,16 +3,14 @@
    Strict CSS Grid Architecture (Zero Flexbox)
    ========================================================================== */
 
-.m3-progress-container,
-.progress-bar-container {
+:is(.m3-progress-container, .progress-bar-container) {
     display: grid !important;
     gap: var(--md-sys-spacing-1);
     width: 100%;
     box-sizing: border-box;
 }
 
-.m3-progress-track,
-.progress-bar-bg {
+:is(.m3-progress-track, .progress-bar-bg) {
     background-color: var(--md-sys-color-surface-variant);
     height: 8px;
     border-radius: var(--md-sys-shape-corner-full);
@@ -20,16 +18,14 @@
     width: 100%;
 }
 
-.m3-progress-fill,
-.progress-bar-fill {
+:is(.m3-progress-fill, .progress-bar-fill) {
     background-color: var(--md-sys-color-primary);
     height: 100%;
     border-radius: inherit;
     transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
 }
 
-.m3-progress-labels,
-.progress-labels {
+:is(.m3-progress-labels, .progress-labels) {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.8125rem;

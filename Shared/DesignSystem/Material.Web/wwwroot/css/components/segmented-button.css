@@ -3,8 +3,7 @@
    Strict CSS Grid Architecture (Zero Flexbox)
    ========================================================================== */
 
-.analytics-mode-pill-group,
-.m3-segmented-pill-group {
+:is(.analytics-mode-pill-group, .m3-segmented-pill-group) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -15,8 +14,7 @@
     border-radius: var(--md-sys-shape-corner-full);
 }
 
-.analytics-mode-btn,
-.m3-segmented-btn {
+:is(.analytics-mode-btn, .m3-segmented-btn) {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -34,27 +32,23 @@
     touch-action: manipulation;
 }
 
-.analytics-mode-btn:hover,
-.m3-segmented-btn:hover {
+:is(.analytics-mode-btn, .m3-segmented-btn):hover {
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
 }
 
-.analytics-mode-btn.active,
-.m3-segmented-btn.active {
+:is(.analytics-mode-btn, .m3-segmented-btn).active {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     font-weight: 600;
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-.analytics-mode-btn md-icon,
-.m3-segmented-btn md-icon {
+:is(.analytics-mode-btn, .m3-segmented-btn) md-icon {
     font-size: 1.1rem;
 }
 
-.analytics-date-picker-trigger,
-.m3-period-picker-trigger {
+:is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
@@ -70,14 +64,12 @@
     min-height: var(--md-sys-touch-target-min);
 }
 
-.analytics-date-picker-trigger:hover,
-.m3-period-picker-trigger:hover {
+:is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
     background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-outline);
 }
 
-.analytics-header-controls,
-.m3-header-controls {
+:is(.analytics-header-controls, .m3-header-controls) {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;

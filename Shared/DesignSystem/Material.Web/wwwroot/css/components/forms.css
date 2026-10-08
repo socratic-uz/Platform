@@ -85,28 +85,25 @@ input[type="color"] {
     width: var(--md-sys-touch-target-min);
 }
 
+::-webkit-color-swatch-wrapper,
+::-webkit-color-swatch {
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
+    border-radius: var(--md-sys-shape-corner-large);
+}
+
 ::-webkit-color-swatch-wrapper {
     padding: 0;
-    height: var(--md-sys-touch-target-min);
-    width: var(--md-sys-touch-target-min);
-    border-radius: var(--md-sys-shape-corner-large);
 }
 
-::-webkit-color-swatch {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    height: var(--md-sys-touch-target-min);
-    width: var(--md-sys-touch-target-min);
-    border-radius: var(--md-sys-shape-corner-large);
-}
-
+::-webkit-color-swatch,
 ::-moz-color-swatch {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
 }
 
 /* ─── Banner & Notice Primitives ───────────────────────────────────────── */
-.m3-banner-error,
-.error-banner {
+:is(.m3-banner-error, .error-banner) {
     display: grid !important;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
@@ -120,14 +117,12 @@ input[type="color"] {
     box-sizing: border-box;
 }
 
-.m3-banner-error .error-icon,
-.error-banner .error-icon {
+:is(.m3-banner-error, .error-banner) .error-icon {
     font-size: 1.5rem;
 }
 
 /* ─── Quantity Counter Control (Strict Grid Cluster) ─────────────────── */
-.m3-counter,
-.material-counter {
+:is(.m3-counter, .material-counter) {
     display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -137,12 +132,7 @@ input[type="color"] {
     box-sizing: border-box;
 }
 
-.m3-counter button,
-.m3-counter md-filled-button,
-.m3-counter md-outlined-button,
-.material-counter button,
-.material-counter md-filled-button,
-.material-counter md-outlined-button {
+:is(.m3-counter, .material-counter) :is(button, md-filled-button, md-outlined-button) {
     --md-filled-button-container-height: var(--md-sys-touch-target-min);
     --md-outlined-button-container-height: var(--md-sys-touch-target-min);
     --md-filled-icon-button-container-width: var(--md-sys-touch-target-min);
