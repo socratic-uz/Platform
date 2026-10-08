@@ -6,7 +6,6 @@
 
 /* Form Controls & Fieldsets (Strict CSS Grid) */
 .m3-form-grid {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
     width: 100%;
@@ -18,7 +17,6 @@
 }
 
 .m3-fieldset {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -104,7 +102,6 @@ input[type="color"] {
 
 /* ─── Banner & Notice Primitives ───────────────────────────────────────── */
 :is(.m3-banner-error, .error-banner) {
-    display: grid !important;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
@@ -123,7 +120,6 @@ input[type="color"] {
 
 /* ─── Quantity Counter Control (Strict Grid Cluster) ─────────────────── */
 :is(.m3-counter, .material-counter) {
-    display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;

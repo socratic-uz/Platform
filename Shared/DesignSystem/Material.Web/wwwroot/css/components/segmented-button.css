@@ -4,7 +4,6 @@
    ========================================================================== */
 
 :is(.analytics-mode-pill-group, .m3-segmented-pill-group) {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 4px;
@@ -15,7 +14,6 @@
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn) {
-    display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     gap: 0.4rem;
@@ -49,7 +47,6 @@
 }
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
-    display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
     gap: 0.5rem;
@@ -70,7 +67,6 @@
 }
 
 :is(.analytics-header-controls, .m3-header-controls) {
-    display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     gap: 0.75rem;

@@ -1,7 +1,6 @@
 .m3-mode-toggle,
 .mode-toggle {
     overflow: hidden;
-    display: grid !important;
     width: 46px;
     border-radius: var(--md-sys-shape-corner-full);
     justify-content: center;
@@ -14,7 +13,6 @@
     background: var(--md-sys-color-primary-container);
     height: 46px;
     margin: 0;
-    display: grid !important;
     grid-template-columns: repeat(3, 46px);
     grid-auto-flow: column;
     justify-items: center;
@@ -24,7 +22,6 @@
 
 .m3-mode-toggle-icon,
 .mode-toggle-icon {
-    display: grid !important;
     width: 30px;
     height: 30px;
     transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);

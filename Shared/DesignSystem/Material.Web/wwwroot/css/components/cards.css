@@ -14,7 +14,6 @@
 .card-filled {
     position: relative;
     box-sizing: border-box;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     border-radius: var(--md-sys-shape-expressive-card);
     transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
@@ -123,7 +122,6 @@
 
 /* ─── 5. Card Structural Elements (Slots) ────────────────────────────────── */
 :is(.m3-card-header, .card-header) {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.75rem;
@@ -148,14 +146,12 @@
 }
 
 :is(.m3-card-body, .card-body) {
-    display: grid !important;
     gap: 0.75rem;
     min-width: 0;
     box-sizing: border-box;
 }
 
 :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions) {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -166,7 +162,6 @@
 
 /* ─── 6. Summary Card Pattern ────────────────────────────────────────────── */
 :is(.m3-summary-card, .summary-card) {
-    display: grid !important;
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-5) var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
@@ -184,12 +179,10 @@
 }
 
 :is(.m3-summary-rows, .summary-rows) {
-    display: grid !important;
     gap: var(--md-sys-spacing-3);
 }
 
 :is(.m3-summary-row, .summary-row) {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-2);
@@ -231,7 +224,6 @@
 }
 
 :is(.m3-summary-actions, .summary-actions) {
-    display: grid !important;
     gap: var(--md-sys-spacing-3);
     margin-top: var(--md-sys-spacing-2);
 }
@@ -246,7 +238,6 @@
 :is(.m3-media-card, .media-card, .org-card) {
     cursor: pointer;
     height: 100%;
-    display: grid !important;
     grid-template-rows: auto minmax(0, 1fr);
     overflow: hidden;
     border-radius: var(--md-sys-shape-corner-large);
@@ -286,7 +277,6 @@
 :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder) {
     width: 100%;
     height: 100%;
-    display: grid !important;
     place-items: center;
     color: var(--md-sys-color-on-surface-variant);
     opacity: 0.6;
@@ -299,7 +289,6 @@
 }
 
 .org-card-content {
-    display: grid !important;
     gap: 0.35rem;
     align-content: start;
     padding: 0.75rem 0.25rem 0.5rem;
@@ -342,7 +331,6 @@ md-elevated-card {
     border: none;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
-    display: grid;
     align-content: stretch;
     height: 100%;
     margin-bottom: 0;
@@ -410,7 +398,6 @@ md-elevated-card {
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) section {
-    display: grid;
     gap: 6px;
     margin: 10px 0;
     box-sizing: border-box;
@@ -441,7 +428,6 @@ md-elevated-card {
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 8px;
@@ -459,7 +445,6 @@ md-elevated-card {
 
 /* ─── 11. Wishlist & Product Grid Surfaces ─────────────────────────────── */
 .card-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
     gap: 20px;
     width: 100%;
@@ -467,7 +452,6 @@ md-elevated-card {
 
 md-filled-card.product-card,
 .product-card {
-    display: grid !important;
     grid-template-rows: auto minmax(0, 1fr) auto !important;
     position: relative;
     overflow: hidden;
@@ -491,7 +475,6 @@ md-filled-card.product-card,
 .wishlist-content {
     cursor: pointer;
     margin-top: 10px;
-    display: grid;
     gap: 4px;
     align-content: start;
 }
@@ -515,7 +498,6 @@ md-filled-card.product-card,
 }
 
 .wishlist-card-footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     min-width: 0;
     align-items: center;
@@ -535,12 +517,10 @@ md-filled-card.product-card,
 .wishlist-details-dl {
     margin: 0;
     padding: 16px;
-    display: grid;
     gap: 12px;
 }
 
 .wishlist-details-images {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
     gap: 8px;
 }

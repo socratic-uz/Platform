@@ -8,7 +8,6 @@
 .store-not-found,
 .pos-empty-state,
 .kiosk-empty-state {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
@@ -44,7 +43,6 @@
 .kds-empty-icon,
 .pos-empty-icon,
 .kiosk-empty-icon {
-    display: grid;
     place-items: center;
     color: var(--md-sys-color-primary);
     opacity: 0.8;
@@ -82,7 +80,6 @@
 }
 
 .m3-empty-state-action {
-    display: grid;
     place-items: center;
     margin-top: var(--md-sys-spacing-2);
 }
@@ -130,7 +127,6 @@
 
 .btn-primary-link {
     text-decoration: none;
-    display: inline-grid;
     justify-content: center;
 }
 

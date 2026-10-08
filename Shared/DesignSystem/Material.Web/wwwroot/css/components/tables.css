@@ -79,7 +79,6 @@
 
 .m3-table-row-actions,
 .table-row-actions {
-    display: grid !important;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
     justify-content: end;
@@ -87,7 +86,6 @@
 
 .m3-table-actions-bar,
 .table-actions-bar {
-    display: grid !important;
     justify-content: start;
     margin-bottom: var(--md-sys-spacing-2);
 }
@@ -98,7 +96,6 @@
 
 .payment-cell,
 .date-cell {
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
@@ -115,7 +112,6 @@
    Strict CSS Grid, Material Design 3 Expressive Tokens
    ========================================================================== */
 .smart-grid-container {
-    display: grid !important;
     gap: 1rem;
     width: 100%;
     max-width: 100%;
@@ -136,7 +132,6 @@
     overflow: auto;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
-    display: grid !important;
     border-radius: 24px;
     border: 1px solid var(--md-sys-color-outline-variant);
     grid-template-columns: minmax(0, 1fr);
@@ -241,7 +236,6 @@ table.quickgrid tr:hover td.actions-column {
 
 /* SmartGrid Flag Chips & Readonly Controls */
 .grid-enum-flags {
-    display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.35rem;
@@ -279,14 +273,12 @@ table.quickgrid tr:hover td.actions-column {
 /* QuickGrid Column Headers & Sorting */
 .col-header-content {
     position: relative;
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
 }
 
 .col-title {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     width: 100%;
@@ -403,7 +395,6 @@ td.col-justify-left,
     position: sticky;
     left: 0;
     grid-column: 1 / -1;
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     justify-content: space-between;
@@ -423,7 +414,6 @@ td.col-justify-left,
 }
 
 .paginator nav {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     margin-left: auto;
@@ -472,7 +462,6 @@ td.col-justify-left,
 /* SmartGrid Drop Container & Card Grid */
 .drop-container {
     position: relative;
-    display: grid !important;
     grid-column: 1 / -1;
     gap: 10px;
     justify-content: center;
@@ -500,7 +489,6 @@ td.col-justify-left,
 }
 
 .card-grid {
-    display: grid !important;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;

@@ -22,7 +22,6 @@
 }
 
 .picker-trigger-card {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
@@ -49,7 +48,6 @@
 }
 
 .picker-trigger-left {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 14px;
@@ -63,7 +61,6 @@
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface-variant);
-    display: grid;
     place-items: center;
     overflow: hidden;
     transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -77,14 +74,12 @@
 }
 
 .picker-trigger-text {
-    display: grid;
     gap: 3px;
     min-width: 0;
     overflow: hidden;
 }
 
 .picker-header-row {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -99,7 +94,6 @@
 }
 
 .picker-badge {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -135,7 +129,6 @@
 }
 
 .picker-trigger-actions {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -183,7 +176,6 @@
 
 /* Compact Mode */
 .picker-compact-box {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -224,7 +216,6 @@
 }
 
 .picker-hex-wrapper {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -261,7 +252,6 @@
     border-radius: var(--md-sys-shape-expressive-card);
     padding: 16px;
     box-shadow: var(--md-sys-elevation-expressive-2);
-    display: grid;
     gap: 12px;
     margin-bottom: 12px;
     animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
@@ -279,7 +269,6 @@
 }
 
 .picker-popover-header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding-bottom: 8px;
@@ -295,7 +284,6 @@
 }
 
 .picker-palette-grid {
-    display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 8px;
 }
@@ -309,7 +297,6 @@
     cursor: pointer;
     touch-action: manipulation;
     padding: 0;
-    display: grid;
     place-items: center;
     transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
                 box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
@@ -331,7 +318,6 @@
 }
 
 .picker-popover-footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding-top: 8px;
@@ -343,7 +329,6 @@
    3. File Picker Component
    ========================================================================== */
 .file-picker-container {
-    display: grid;
     gap: 10px;
     width: 100%;
     margin-top: 4px;
@@ -351,13 +336,11 @@
 }
 
 .file-add-btn-label {
-    display: inline-grid;
     cursor: pointer;
 }
 
 /* File Grid Styles */
 .file-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 110px), 1fr));
     gap: 12px;
     align-items: stretch;
@@ -371,7 +354,6 @@
     border: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: var(--md-sys-elevation-expressive-1);
     background-color: var(--md-sys-color-surface-container-lowest);
-    display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
                 box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
@@ -387,7 +369,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    display: grid;
     place-items: center;
     background-color: var(--md-sys-color-surface-container-low);
 }
@@ -401,7 +382,6 @@
 .icon-preview {
     width: 100%;
     height: 100%;
-    display: grid;
     place-items: center;
     transition: background-color 0.2s ease;
 }
@@ -424,7 +404,6 @@
     padding: 6px 8px;
     background: var(--md-sys-color-surface-container-lowest);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    display: grid;
 }
 
 .file-name {
@@ -445,7 +424,6 @@
     right: 0;
     bottom: 0;
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
-    display: grid;
     place-items: center;
     opacity: 0;
     transition: opacity 0.2s ease;
@@ -477,7 +455,6 @@
     border-radius: var(--md-sys-shape-corner-large);
     border: 2px dashed var(--md-sys-color-outline);
     background: var(--md-sys-color-surface-container-low);
-    display: grid;
     place-items: center;
     cursor: pointer;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -501,7 +478,6 @@
 .upload-zone-label {
     width: 100%;
     height: 100%;
-    display: grid;
     align-content: center;
     justify-items: center;
     gap: 4px;
@@ -549,7 +525,6 @@
    4. Smart Schedule Picker Component
    ========================================================================== */
 .picker-week-mini-dots {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 4px;
@@ -562,7 +537,6 @@
     width: 20px;
     height: 20px;
     border-radius: var(--md-sys-shape-corner-small);
-    display: inline-grid;
     place-items: center;
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-outline);
@@ -576,7 +550,6 @@
 }
 
 .md3-dialog-headline {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -592,13 +565,11 @@
 }
 
 .md3-schedule-picker {
-    display: grid !important;
     gap: 16px;
     padding: 8px 0;
 }
 
 .md3-presets-section {
-    display: grid !important;
     gap: 8px;
     padding: 12px 14px;
     border-radius: var(--md-sys-shape-corner-medium);
@@ -609,7 +580,6 @@
 }
 
 .md3-presets-row {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 6px;
@@ -617,7 +587,6 @@
 }
 
 .md3-schedule-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 12px;
@@ -628,12 +597,10 @@
 }
 
 .md3-schedule-days {
-    display: grid !important;
     gap: 8px;
 }
 
 .md3-schedule-day-card {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 8px 14px;
@@ -654,7 +621,6 @@
 }
 
 .md3-schedule-time-group {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -662,7 +628,6 @@
 }
 
 .md3-time-picker-box {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -696,7 +661,6 @@
 }
 
 .md3-closed-badge {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -712,7 +676,6 @@
 .md3-dialog-actions-row {
     padding-top: 12px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
@@ -723,7 +686,6 @@
    4. Language Selector & Localization Chips
    ========================================================================== */
 .lang-select {
-    display: grid;
     align-items: center;
     position: relative;
     box-sizing: border-box;
@@ -731,7 +693,6 @@
 
 /* Inline Segmented Mode (ideal for Footer) */
 .lang-inline-grid {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
     gap: 0.35rem;
@@ -744,7 +705,6 @@
 }
 
 .lang-chip-btn {
-    display: grid;
     place-items: center;
     min-width: var(--md-sys-touch-target-min);
     min-height: var(--md-sys-touch-target-min);
@@ -782,12 +742,10 @@
 /* Pill Dropdown Mode (ideal for Header) */
 .lang-dropdown-wrapper {
     position: relative;
-    display: grid;
     place-items: center;
 }
 
 .lang-pill-btn {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto auto;
     align-items: center;
@@ -844,12 +802,10 @@
     border-radius: var(--md-sys-shape-corner-medium);
     padding: 0.35rem;
     box-shadow: var(--md-sys-elevation-level3);
-    display: grid;
     gap: 0.2rem;
 }
 
 .lang-menu-item {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 0.5rem 0.75rem;
@@ -878,7 +834,6 @@
 
 /* ─── 8. Product Variant Selector Dialog & Resource Booking Pickers ──────── */
 .variant-dialog-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
     width: 100%;
@@ -900,7 +855,6 @@
 }
 
 .variant-dialog-body {
-    display: grid !important;
     gap: 16px;
     margin-top: 8px;
     min-width: 0;
@@ -919,7 +873,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -937,20 +890,17 @@
 }
 
 .variants-chip-set {
-    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
     gap: 8px;
 }
 
 .options-list-container {
-    display: grid !important;
     gap: 4px;
     border-radius: var(--md-sys-shape-corner-medium);
     padding: 6px 8px;
 }
 
 .option-item-row {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 6px 8px;
@@ -975,7 +925,6 @@
 }
 
 .variant-dialog-actions {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
@@ -983,7 +932,6 @@
 }
 
 .price-box {
-    display: grid !important;
     gap: 2px;
 }
 
@@ -1004,13 +952,11 @@
     border-radius: var(--md-sys-shape-corner-large);
     padding: clamp(14px, 2.5vw, 20px);
     color: var(--md-sys-color-on-surface);
-    display: grid !important;
     gap: 14px;
     width: 100%;
 }
 
 .picker-title-row {
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
@@ -1037,7 +983,6 @@
 }
 
 .date-presets-row {
-    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
     gap: 6px;
 }
@@ -1050,7 +995,6 @@
 }
 
 .canvas-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     margin-bottom: 8px;
@@ -1071,7 +1015,6 @@
 }
 
 .slots-chip-set {
-    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
     gap: 8px;
     margin-top: 8px;
@@ -1082,7 +1025,6 @@
     border: 1px solid var(--md-sys-color-primary);
     border-radius: var(--md-sys-shape-corner-medium);
     padding: 12px 16px;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 12px;
@@ -1095,7 +1037,6 @@
 }
 
 .summary-left {
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
@@ -1108,7 +1049,6 @@
 }
 
 .summary-text-box {
-    display: grid !important;
     gap: 2px;
 }
 
@@ -1124,7 +1064,6 @@
 }
 
 .summary-actions {
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 8px;

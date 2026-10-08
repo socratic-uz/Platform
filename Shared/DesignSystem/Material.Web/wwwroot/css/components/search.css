@@ -1,5 +1,4 @@
 :is(.m3-search-container, .material-search-container) {
-    display: grid;
     align-items: center;
     width: 100%;
     min-width: 0;

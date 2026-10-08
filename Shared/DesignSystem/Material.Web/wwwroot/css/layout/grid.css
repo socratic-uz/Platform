@@ -1,16 +1,219 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Layout - Strict Grid Rules Module
    100% CSS Grid Architecture (Strict Zero-Flexbox Standard)
+   Universal Grid Container Selector Grouping (Single-Declaration Consolidation)
    ========================================================================== */
 
-.m3-grid {
+/* ─── 1. Universal Grid Container Master Grouping ───────────────────────── */
+:is(
+    /* Base Grid System */
+    .m3-grid,
+    .m3-form-grid,
+    .m3-fieldset,
+
+    /* Cards & Surfaces */
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    .m3-card-header,
+    .card-header,
+    .m3-card-body,
+    .card-body,
+    .m3-card-footer,
+    .card-footer,
+    .m3-card-actions,
+    .card-actions,
+    .m3-summary-card,
+    .summary-card,
+    .m3-summary-rows,
+    .summary-rows,
+    .m3-summary-row,
+    .summary-row,
+    .m3-summary-actions,
+    .summary-actions,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .m3-card-media-placeholder,
+    .org-media-placeholder,
+    .wishlist-placeholder,
+    .org-card-content,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .card-grid,
+    .product-card,
+    .wishlist-content,
+    .wishlist-card-footer,
+    .wishlist-details-dl,
+    .wishlist-details-images,
+
+    /* Dialogs & Overlays */
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-header,
+    .m3-dialog-title-group,
+    .m3-dialog-close-btn,
+    .m3-dialog-options-list,
+    .m3-dialog-toggle-item,
+    .m3-dialog-toggle-text,
+    .m3-dialog-actions,
+    .m3-dialog-btn-primary,
+
+    /* Pickers & Booking Controls */
+    .picker-trigger-card,
+    .picker-trigger-left,
+    .picker-icon-badge,
+    .picker-trigger-text,
+    .picker-header-row,
+    .picker-trigger-actions,
+    .picker-hex-wrapper,
+    .picker-popover-panel,
+    .picker-popover-header,
+    .picker-palette-grid,
+    .picker-palette-swatch,
+    .picker-popover-footer,
+    .file-picker-container,
+    .file-grid,
+    .file-card,
+    .file-preview-area,
+    .icon-preview,
+    .file-info,
+    .file-overlay,
+    .upload-card,
+    .upload-zone-label,
+    .picker-week-mini-dots,
+    .md3-dialog-headline,
+    .md3-schedule-picker,
+    .md3-presets-section,
+    .md3-presets-row,
+    .md3-schedule-header,
+    .md3-schedule-days,
+    .md3-schedule-day-card,
+    .md3-schedule-time-group,
+    .md3-time-picker-box,
+    .md3-dialog-actions-row,
+    .lang-select,
+    .lang-inline-grid,
+    .lang-chip-btn,
+    .lang-dropdown-wrapper,
+    .lang-dropdown-menu,
+    .lang-menu-item,
+    .variant-dialog-header,
+    .variant-dialog-body,
+    .label-title,
+    .variants-chip-set,
+    .options-list-container,
+    .option-item-row,
+    .variant-dialog-actions,
+    .price-box,
+    .booking-picker-card,
+    .picker-title-row,
+    .date-presets-row,
+    .canvas-header,
+    .slots-chip-set,
+    .booking-summary-banner,
+    .summary-left,
+    .summary-text-box,
+    .summary-actions,
+
+    /* Form Banners */
+    .m3-banner-error,
+    .error-banner,
+
+    /* Tables, Grids & Paginators */
+    .m3-table-row-actions,
+    .table-row-actions,
+    .m3-table-actions-bar,
+    .table-actions-bar,
+    .payment-cell,
+    .date-cell,
+    .smart-grid-container,
+    .table-container,
+    .col-header-content,
+    .col-title,
+    .paginator,
+    .drop-container,
+
+    /* Segmented Controls & Header Triggers */
+    .analytics-mode-pill-group,
+    .m3-segmented-pill-group,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .analytics-date-picker-trigger,
+    .m3-period-picker-trigger,
+    .analytics-header-controls,
+    .m3-header-controls,
+
+    /* Theme Toggle */
+    .m3-mode-toggle,
+    .mode-toggle,
+    .m3-mode-toggle-figure,
+    .mode-toggle-figure,
+    .m3-mode-toggle-icon,
+    .mode-toggle-icon,
+
+    /* Search & Progress */
+    .m3-search-container,
+    .material-search-container,
+    .m3-progress-container,
+    .progress-bar-container,
+    .m3-progress-labels,
+    .progress-labels,
+
+    /* Avatar & Profile */
+    .avatar-button,
+    .avatar-container,
+
+    /* Empty States */
+    .m3-empty-state,
+    .m3-empty-column,
+    .column-empty,
+    .kds-empty-col,
+    .store-not-found,
+    .pos-empty-state,
+    .kiosk-empty-state,
+    .m3-empty-state-icon,
+    .m3-empty-column-icon,
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .pos-empty-icon,
+    .kiosk-empty-icon,
+    .m3-empty-state-action,
+
+    /* Info Grids */
+    .m3-info-grid,
+    .info-grid,
+    .m3-info-item,
+    .info-item
+),
+:is(md-filled-card, md-outlined-card, md-elevated-card) section,
+:is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer,
+md-dialog [slot="actions"],
+.table-container > .paginator,
+.paginator nav,
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined,
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'],
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content,
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row,
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label,
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'],
+:is(.avatar-container, md-dialog.contacts) details .content {
     display: grid !important;
 }
 
+/* ─── 2. Universal Inline-Grid Grouping ─────────────────────────────────── */
 .m3-inline-grid {
     display: inline-grid !important;
 }
 
+/* ─── 3. Grid Template Columns Scale ────────────────────────────────────── */
 .m3-grid-col-1 {
     grid-template-columns: minmax(0, 1fr) !important;
 }

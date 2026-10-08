@@ -4,7 +4,6 @@
    ========================================================================== */
 
 :is(.m3-progress-container, .progress-bar-container) {
-    display: grid !important;
     gap: var(--md-sys-spacing-1);
     width: 100%;
     box-sizing: border-box;
@@ -26,7 +25,6 @@
 }
 
 :is(.m3-progress-labels, .progress-labels) {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.8125rem;
     color: var(--md-sys-color-on-surface-variant);

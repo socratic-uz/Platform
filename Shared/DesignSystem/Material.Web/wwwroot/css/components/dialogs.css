@@ -31,11 +31,6 @@
 }
 
 /* Common Grid Layout Declarations */
-:is(.m3-config-dialog, .m3-dialog-surface, .m3-dialog-header, .m3-dialog-title-group, .m3-dialog-close-btn, .m3-dialog-options-list, .m3-dialog-toggle-item, .m3-dialog-toggle-text, .m3-dialog-actions, .m3-dialog-btn-primary),
-md-dialog [slot="actions"] {
-    display: grid !important;
-}
-
 :is(.m3-dialog-close-btn, .m3-dialog-btn-primary) {
     place-items: center;
 }
