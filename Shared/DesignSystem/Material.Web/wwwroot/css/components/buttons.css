@@ -12,7 +12,6 @@ md-text-button {
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
     --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
-    font-weight: 600;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
 }
 

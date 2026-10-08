@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Color - Color Rules Module
    Semantic Text Colors (Material Design 3 Palette)
@@ -17,4 +18,161 @@
 
 .m3-color-error {
     color: var(--md-sys-color-error) !important;
+}
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal On-Surface Variant Text Color */
+:is(
+    .m3-status-badge.created,
+    .m3-status-badge.status-created,
+    .order-status-badge.status-created,
+    .item-status-pill.status-created,
+    .badge-cancelled,
+    .badge.cancelled,
+    .items-count-badge,
+    :is(.m3-card-subtitle, .card-subtitle),
+    :is(.m3-row-label, .row-label),
+    :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder),
+    .org-card-desc,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    .wishlist-desc-text,
+    .wishlist-details-desc,
+    .m3-filter-chip,
+    .m3-dialog-description,
+    .m3-dialog-toggle-icon,
+    .m3-empty-state-desc,
+    .m3-empty-column p,
+    .column-empty p,
+    .kds-empty-col p,
+    .store-not-found p,
+    .pos-empty-state p,
+    .kiosk-empty-state p,
+    .store-not-found .not-found-icon,
+    :is(.m3-info-label, .info-label),
+    :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title),
+    .picker-icon-badge,
+    .picker-preview-text,
+    .picker-hex-prefix,
+    .picker-popover-title,
+    .upload-subtext,
+    .lang-chip-btn,
+    .lang-chevron,
+    .variant-dialog-subtext,
+    .price-label,
+    .body-subtext,
+    .summary-date,
+    :is(.m3-progress-labels, .progress-labels),
+    :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"],
+    :is(.m3-search-container, .material-search-container) [slot="trailing-icon"],
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    .m3-table th,
+    .order-items-table th,
+    .orders-table th,
+    .pagination-text,
+    .drop-container,
+    .drop-title
+) {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Universal On-Surface High-Emphasis Text Color */
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline,
+    :is(.m3-card-title, .card-title),
+    :is(.m3-summary-title, .summary-title),
+    :is(.m3-row-value, .row-value),
+    :is(.m3-total-label, .total-label),
+    .org-card-name,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    .product-title,
+    .wishlist-title-text,
+    .m3-filter-chip:hover,
+    .m3-dialog-header h3,
+    .m3-dialog-close-btn,
+    .m3-dialog-toggle-title,
+    .m3-empty-state-title,
+    .store-not-found h2,
+    .pos-empty-state h5,
+    .kiosk-empty-state h3,
+    :is(.m3-info-value, .info-value),
+    .picker-trigger-title,
+    .picker-hex-input,
+    .file-name,
+    .upload-text,
+    .md3-dialog-headline,
+    .md3-time-input,
+    .lang-chip-btn:hover,
+    .lang-pill-btn,
+    .lang-menu-item,
+    .variant-dialog-title,
+    .booking-picker-card,
+    :is(.analytics-mode-btn, .m3-segmented-btn):hover,
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
+    .orders-table,
+    .m3-table td,
+    .order-items-table td,
+    .smart-grid-container h4,
+    .table-container,
+    .table-container th,
+    table.quickgrid th,
+    .table-container td,
+    table.quickgrid td,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea
+) {
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Universal Primary Brand Text Color */
+:is(
+    .m3-status-badge.made,
+    .m3-status-badge.status-made,
+    .order-status-badge.status-made,
+    .item-status-pill.status-made,
+    .m3-pill-badge,
+    .back-button,
+    .m3-back-button,
+    :is(.m3-total-value, .total-value),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag,
+    .wishlist-price-tag,
+    .wishlist-details-price,
+    .m3-dialog-icon,
+    .m3-empty-state-icon,
+    .m3-empty-column-icon,
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .pos-empty-icon,
+    .kiosk-empty-icon,
+    .m3-legend,
+    .picker-badge,
+    .upload-icon,
+    .md3-headline-icon,
+    .lang-globe-icon,
+    .lang-menu-item.is-selected,
+    .label-title,
+    .option-add-price,
+    .price-value,
+    .headline,
+    .summary-check-icon,
+    .m3-amount-cell,
+    .amount-cell
+) {
+    color: var(--md-sys-color-primary);
+}
+
+/* Universal On-Primary High-Contrast Text Color */
+:is(
+    .badge-counter,
+    .m3-dialog-btn-primary,
+    .picker-swatch-check,
+    .new-badge,
+    .picker-day-dot.active,
+    .lang-chip-btn.lang-chip--active
+) {
+    color: var(--md-sys-color-on-primary);
 }

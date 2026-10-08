@@ -7,27 +7,21 @@
 /* ==========================================================================
    1. Reusable Base Picker Trigger Card & Shared Surfaces
    ========================================================================== */
-:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card) {
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
+:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card)  {
+    /* consolidated to w3c rules */
 }
 
 :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title) {
     font-size: 12px;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .picker-trigger-card {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     margin-bottom: var(--md-sys-spacing-2);
     gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     min-height: 64px;
-    width: 100%;
-    max-width: 100%;
     container-type: inline-size;
     transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -51,15 +45,12 @@
 .picker-icon-badge {
     width: 44px;
     height: 44px;
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface-variant);
     transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
 }
 
 .picker-icon-badge.active {
-    background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
@@ -67,24 +58,18 @@
     gap: 3px;
 }
 
-.picker-header-row {
-    gap: 8px;
+.picker-header-row  {
+    /* consolidated to w3c rules */
 }
 
 .picker-trigger-title {
     font-size: 14px;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
     line-height: 1.3;
 }
 
 .picker-badge {
-    gap: 4px;
     font-size: 11px;
-    font-weight: 600;
     padding: 2px 8px;
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
 }
 
 .picker-badge md-icon {
@@ -96,7 +81,6 @@
 
 .picker-preview-text {
     font-size: 13px;
-    color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
     word-break: break-word;
     display: -webkit-box;
@@ -109,13 +93,11 @@
 }
 
 .picker-trigger-actions {
-    gap: 8px;
     margin-left: auto;
 }
 
 @container (max-width: 480px) {
     .picker-trigger-card {
-        grid-template-columns: minmax(0, 1fr);
         padding: 10px 12px;
         gap: 10px;
     }
@@ -123,7 +105,6 @@
         min-width: 100%;
     }
     .picker-trigger-actions {
-        width: 100%;
         justify-content: end;
     }
 }
@@ -133,8 +114,6 @@
    2. Color Picker Component
    ========================================================================== */
 .color-badge-swatch {
-    width: 100%;
-    height: 100%;
     box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
 }
 
@@ -148,10 +127,7 @@
 
 /* Compact Mode */
 .picker-compact-box {
-    gap: 8px;
     padding: 6px 10px;
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .picker-swatch-wrapper {
@@ -170,44 +146,32 @@
     min-width: var(--md-sys-touch-target-min);
 }
 
-.picker-swatch {
-    width: 100%;
-    height: 100%;
+.picker-swatch  {
+    /* consolidated to w3c rules */
 }
 
 .picker-hex-wrapper {
     gap: 2px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .picker-hex-prefix {
     font-size: 13px;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface-variant);
-    user-select: none;
 }
 
 .picker-hex-input {
-    border: none;
     outline: none;
-    background: transparent;
     font-family: 'Roboto Mono', monospace;
     font-size: 13px;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
     width: 68px;
     text-transform: uppercase;
 }
 
 /* Popover Panel */
 .picker-popover-panel {
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: 16px;
     box-shadow: var(--md-sys-elevation-expressive-2);
-    gap: 12px;
     margin-bottom: 12px;
     animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
 }
@@ -224,29 +188,23 @@
 }
 
 .picker-popover-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .picker-popover-title {
     font-size: 12px;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .picker-palette-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 8px;
 }
 
 .picker-palette-swatch {
     width: 32px;
     height: 32px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    padding: 0;
     transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
                 box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
@@ -262,12 +220,10 @@
 
 .picker-swatch-check {
     font-size: 16px;
-    color: var(--md-sys-color-on-primary);
     filter: drop-shadow(0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.8));
 }
 
 .picker-popover-footer {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-top: 8px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
@@ -278,25 +234,22 @@
    ========================================================================== */
 .file-picker-container {
     gap: 10px;
-    width: 100%;
     margin-top: 4px;
     margin-bottom: 8px;
 }
 
-.file-add-btn-label  {
+.file-add-btn-label   {
     /* consolidated to w3c rules */
 }
 
 /* File Grid Styles */
 .file-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 110px), 1fr));
-    gap: 12px;
     align-items: stretch;
 }
 
 .file-card {
     aspect-ratio: 1;
-    border: 1px solid var(--md-sys-color-outline-variant);
     background-color: var(--md-sys-color-surface-container-lowest);
     grid-template-rows: minmax(0, 1fr) auto;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
@@ -306,24 +259,17 @@
 .file-card:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
-    border-color: var(--md-sys-color-primary);
 }
 
 .file-preview-area {
-    width: 100%;
-    height: 100%;
     background-color: var(--md-sys-color-surface-container-low);
 }
 
 .image-preview {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
 .icon-preview {
-    width: 100%;
-    height: 100%;
     transition: background-color 0.2s ease;
 }
 
@@ -350,9 +296,6 @@
 .file-name {
     font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--md-sys-color-on-surface);
-    white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
 }
@@ -376,7 +319,6 @@
     top: 6px;
     left: 6px;
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     font-size: 0.65rem;
     font-weight: bold;
     padding: 2px 6px;
@@ -389,37 +331,28 @@
 .upload-card {
     aspect-ratio: 1;
     border: 2px dashed var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-container-low);
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
 .upload-card:hover {
-    background: var(--md-sys-color-surface-container-high);
-    border-color: var(--md-sys-color-primary);
     transform: translateY(-3px) scale(1.02);
 }
 
 .upload-card.dragging {
-    background: var(--md-sys-color-primary-container);
-    border-color: var(--md-sys-color-primary);
     border-style: solid;
 }
 
 .upload-zone-label {
-    width: 100%;
-    height: 100%;
     align-content: center;
     justify-items: center;
-    gap: 4px;
     padding: 8px;
     text-align: center;
 }
 
 .upload-icon {
     font-size: 28px;
-    color: var(--md-sys-color-primary);
     transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-bouncy);
 }
 
@@ -430,21 +363,16 @@
 .upload-text {
     font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--md-sys-color-on-surface);
 }
 
 .upload-subtext {
     font-family: var(--md-sys-typescale-body-small-font);
     font-size: 0.65rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .file-input-hidden {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     opacity: 0;
     z-index: 2;
 }
@@ -453,36 +381,27 @@
    4. Smart Schedule Picker Component
    ========================================================================== */
 .picker-week-mini-dots {
-    gap: 4px;
     margin-top: 2px;
 }
 
 .picker-day-dot {
     font-size: 10px;
-    font-weight: 700;
     width: 20px;
     height: 20px;
-    background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-outline);
-    user-select: none;
     transition: background-color 0.15s, color 0.15s;
 }
 
 .picker-day-dot.active {
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
 }
 
 .md3-dialog-headline {
-    gap: 12px;
     font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
 }
 
 .md3-headline-icon {
     font-size: 24px;
-    color: var(--md-sys-color-primary);
 }
 
 .md3-schedule-picker {
@@ -491,12 +410,11 @@
 }
 
 .md3-presets-section {
-    gap: 8px;
     padding: 12px 14px;
 }
 
-.md3-presets-label {
-    margin: 0;
+.md3-presets-label  {
+    /* consolidated to w3c rules */
 }
 
 .md3-presets-row {
@@ -504,34 +422,29 @@
     overflow-x: auto;
 }
 
-.md3-schedule-header {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 12px;
+.md3-schedule-header  {
+    /* consolidated to w3c rules */
 }
 
 .md3-schedule-subtitle {
     font-size: 13px;
 }
 
-.md3-schedule-days {
-    gap: 8px;
+.md3-schedule-days  {
+    /* consolidated to w3c rules */
 }
 
 .md3-schedule-day-card {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: 8px 14px;
-    gap: 12px;
     transition: background-color 0.15s, border-color 0.15s;
 }
 
 .md3-schedule-day-card.active {
     background: var(--md-sys-color-surface-container-lowest);
-    border-color: var(--md-sys-color-primary);
 }
 
-.md3-schedule-day-left {
-    user-select: none;
-    font-weight: 600;
+.md3-schedule-day-left  {
+    /* consolidated to w3c rules */
 }
 
 .md3-schedule-time-group {
@@ -539,26 +452,19 @@
 }
 
 .md3-time-picker-box {
-    gap: 4px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .md3-time-label {
     font-size: 11px;
-    font-weight: 600;
     color: var(--md-sys-color-outline);
 }
 
 .md3-time-input {
-    border: none;
     outline: none;
-    background: transparent;
     font-family: inherit;
     font-size: 13px;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .md3-time-separator {
@@ -567,26 +473,20 @@
 }
 
 .md3-closed-badge {
-    gap: 4px;
     padding: 4px 10px;
-    background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-outline);
     font-size: 12px;
-    font-weight: 600;
 }
 
 .md3-dialog-actions-row {
     padding-top: 12px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    grid-template-columns: minmax(0, 1fr) auto;
-    width: 100%;
-    gap: 12px;
 }
 
 /* ==========================================================================
    4. Language Selector & Localization Chips
    ========================================================================== */
-.lang-select  {
+.lang-select   {
     /* consolidated to w3c rules */
 }
 
@@ -595,7 +495,6 @@
     grid-auto-columns: auto;
     gap: 0.35rem;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-button);
     padding: 0.2rem;
 }
@@ -603,11 +502,7 @@
 .lang-chip-btn {
     min-width: var(--md-sys-touch-target-min);
     padding: 0.2rem 0.65rem;
-    border: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
-    font-weight: 700;
     letter-spacing: 0.04em;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -615,7 +510,6 @@
 }
 
 .lang-chip-btn:hover {
-    color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
     transform: translateY(-1px);
 }
@@ -626,12 +520,11 @@
 
 .lang-chip-btn.lang-chip--active {
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     box-shadow: var(--md-sys-glow-primary-subtle);
 }
 
 /* Pill Dropdown Mode (ideal for Header) */
-.lang-dropdown-wrapper  {
+.lang-dropdown-wrapper   {
     /* consolidated to w3c rules */
 }
 
@@ -642,15 +535,11 @@
     padding: 0.25rem 0.65rem;
     border-radius: var(--md-sys-shape-expressive-button);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface);
     font-size: 0.8rem;
-    font-weight: 600;
     transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .lang-pill-btn:hover {
-    background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-outline);
 }
 
@@ -658,7 +547,6 @@
     font-size: 18px;
     width: 18px;
     height: 18px;
-    color: var(--md-sys-color-primary);
 }
 
 .lang-current-label {
@@ -669,7 +557,6 @@
     font-size: 16px;
     width: 16px;
     height: 16px;
-    color: var(--md-sys-color-on-surface-variant);
     transition: transform 0.2s ease;
 }
 
@@ -682,53 +569,38 @@
     right: 0;
     z-index: 100;
     min-width: 130px;
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: 0.35rem;
     box-shadow: var(--md-sys-elevation-level3);
     gap: 0.2rem;
 }
 
 .lang-menu-item {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: 0.5rem 0.75rem;
-    border: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
     font-size: 0.825rem;
-    font-weight: 500;
     text-align: left;
     transition: background 0.15s ease;
 }
 
-.lang-menu-item:hover {
-    background: var(--md-sys-color-surface-container-highest);
+.lang-menu-item:hover  {
+    /* consolidated to w3c rules */
 }
 
 .lang-menu-item.is-selected {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
 /* ─── 8. Product Variant Selector Dialog & Resource Booking Pickers ──────── */
 .variant-dialog-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
-    width: 100%;
-    gap: 12px;
 }
 
 .variant-dialog-title {
     font-size: 1.2rem;
-    font-weight: 800;
-    color: var(--md-sys-color-on-surface);
     display: block;
 }
 
 .variant-dialog-subtext {
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
     display: block;
     margin-top: 2px;
 }
@@ -738,20 +610,15 @@
     margin-top: 8px;
 }
 
-.option-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+.option-fieldset  {
+    /* consolidated to w3c rules */
 }
 
 .label-title {
     font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
-    gap: 8px;
 }
 
 .required-badge {
@@ -760,21 +627,17 @@
     font-size: 0.7rem;
     padding: 2px 8px;
     text-transform: none;
-    font-weight: 600;
 }
 
 .variants-chip-set {
     grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
-    gap: 8px;
 }
 
 .options-list-container {
-    gap: 4px;
     padding: 6px 8px;
 }
 
 .option-item-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: 6px 8px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     transition: background-color 0.15s ease;
@@ -784,20 +647,16 @@
     border-bottom: none;
 }
 
-.option-item-row:hover {
-    background: var(--md-sys-color-surface-container-highest);
+.option-item-row:hover  {
+    /* consolidated to w3c rules */
 }
 
 .option-add-price {
     font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
 }
 
-.variant-dialog-actions {
-    grid-template-columns: minmax(0, 1fr) auto;
-    width: 100%;
-    gap: 12px;
+.variant-dialog-actions  {
+    /* consolidated to w3c rules */
 }
 
 .price-box {
@@ -806,40 +665,29 @@
 
 .price-label {
     font-size: 0.82rem;
-    color: var(--md-sys-color-on-surface-variant);
     display: block;
 }
 
 .price-value {
     font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--md-sys-color-primary);
 }
 
 /* Resource Booking Picker */
 .booking-picker-card {
     padding: clamp(14px, 2.5vw, 20px);
-    color: var(--md-sys-color-on-surface);
     gap: 14px;
-    width: 100%;
 }
 
 .picker-title-row {
     justify-content: start;
-    gap: 12px;
 }
 
 .headline {
     font-size: clamp(1rem, 2vw, 1.15rem);
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
-    margin: 0;
 }
 
 .body-subtext {
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
 .resource-tabs {
@@ -854,45 +702,33 @@
 }
 
 .canvas-card {
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: 12px;
 }
 
 .canvas-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     margin-bottom: 8px;
-    gap: 4px;
 }
 
 .canvas-wrapper {
     height: clamp(180px, 30vh, 240px);
-    background: var(--md-sys-color-surface-container-highest);
 }
 
-.time-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+.time-fieldset  {
+    /* consolidated to w3c rules */
 }
 
 .slots-chip-set {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
-    gap: 8px;
     margin-top: 8px;
 }
 
 .booking-summary-banner {
-    background: var(--md-sys-color-primary-container);
     border: 1px solid var(--md-sys-color-primary);
     padding: 12px 16px;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 12px;
 }
 
 @media (max-width: 599.98px) {
     .booking-summary-banner {
-        grid-template-columns: minmax(0, 1fr);
     }
 }
 
@@ -902,7 +738,6 @@
 }
 
 .summary-check-icon {
-    color: var(--md-sys-color-primary);
     font-size: 28px;
 }
 
@@ -912,17 +747,15 @@
 
 .summary-title {
     font-size: 0.95rem;
-    font-weight: 700;
     color: var(--md-sys-color-on-primary-container);
 }
 
 .summary-date {
     font-size: 0.82rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
-.summary-actions {
-    gap: 8px;
+.summary-actions  {
+    /* consolidated to w3c rules */
 }
 
 

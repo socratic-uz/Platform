@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Color - Background Rules Module
    Semantic Surface Backgrounds (Material Design 3 Palette)
@@ -21,4 +22,147 @@
 
 .m3-bg-primary {
     background-color: var(--md-sys-color-primary) !important;
+}
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal Surface Container High Background */
+:is(
+    .m3-status-badge.made,
+    .m3-status-badge.status-made,
+    .order-status-badge.status-made,
+    .item-status-pill.status-made,
+    .m3-status-badge.created,
+    .m3-status-badge.status-created,
+    .order-status-badge.status-created,
+    .item-status-pill.status-created,
+    .badge-cancelled,
+    .badge.cancelled,
+    .items-count-badge,
+    :is(md-filled-card, md-outlined-card, md-elevated-card):hover,
+    .m3-filter-chip:hover,
+    .m3-dialog-close-btn,
+    .m3-dialog-toggle-item:hover,
+    md-dialog > *,
+    .picker-badge,
+    .upload-card:hover,
+    .md3-closed-badge,
+    .lang-pill-btn:hover,
+    .lang-dropdown-menu,
+    .canvas-card,
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover,
+    .orders-table th,
+    .table-container th,
+    table.quickgrid th,
+    .table-container th.actions-column,
+    table.quickgrid th.actions-column,
+    .col-options,
+    .drop-container:hover
+) {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+/* Universal Surface Container Default Background */
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    .m3-card-filled,
+    .card-filled,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-filter-chip,
+    :is(.m3-config-dialog, .m3-dialog-surface),
+    .pos-empty-state,
+    .kiosk-empty-state,
+    .picker-popover-panel,
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
+    .m3-skeleton,
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    .table-container,
+    .paginator,
+    .table-container > .paginator
+) {
+    background: var(--md-sys-color-surface-container);
+}
+
+/* Universal Surface Container Highest Background */
+:is(
+    :is(.m3-card-media, .org-media, .wishlist-media),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    .m3-dialog-close-btn:hover,
+    .picker-icon-badge,
+    .picker-day-dot,
+    .lang-menu-item:hover,
+    .option-item-row:hover,
+    .canvas-wrapper,
+    :is(.analytics-mode-btn, .m3-segmented-btn):hover,
+    .orders-table tr:hover,
+    .table-container tr:hover td,
+    table.quickgrid tr:hover td,
+    .table-container tr:hover td.actions-column,
+    table.quickgrid tr:hover td.actions-column,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea
+) {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+/* Universal Surface Container Low Background */
+:is(
+    .m3-card-elevated,
+    .card-elevated,
+    :is(.m3-summary-card, .summary-card),
+    .m3-dialog-toggle-item,
+    .m3-empty-state,
+    .m3-fieldset,
+    :is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card),
+    .picker-compact-box,
+    .upload-card
+) {
+    background: var(--md-sys-color-surface-container-low);
+}
+
+/* Universal Primary Container Background */
+:is(
+    .m3-status-badge.success,
+    .m3-status-badge.paid,
+    .m3-status-badge.status-paid,
+    .order-status-badge.status-paid,
+    .item-status-pill.status-paid,
+    .m3-status-badge.completed,
+    .m3-status-badge.status-completed,
+    .order-status-badge.status-completed,
+    .item-status-pill.status-completed,
+    .badge-ready,
+    .badge-completed,
+    .badge.completed,
+    .ready-badge,
+    .badge-trial,
+    .badge.trial,
+    .badge-verified,
+    .badge.verified,
+    .kds-status-tag,
+    .picker-icon-badge.active,
+    .upload-card.dragging,
+    .booking-summary-banner,
+    .m3-mode-toggle-figure,
+    .mode-toggle-figure
+) {
+    background: var(--md-sys-color-primary-container);
+}
+
+/* Universal Transparent Background */
+:is(
+    .back-button,
+    .m3-back-button,
+    .picker-hex-input,
+    .md3-time-input,
+    .lang-chip-btn,
+    .lang-menu-item,
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+) {
+    background: transparent;
 }

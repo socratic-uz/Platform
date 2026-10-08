@@ -8,7 +8,6 @@
 .store-not-found,
 .pos-empty-state,
 .kiosk-empty-state {
-    grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
 }
@@ -17,10 +16,8 @@
 .m3-empty-state-title,
 .store-not-found h2,
 .pos-empty-state h5,
-.kiosk-empty-state h3 {
-    margin: 0;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
+.kiosk-empty-state h3  {
+    /* consolidated to w3c rules */
 }
 
 /* Common Descriptions */
@@ -30,9 +27,8 @@
 .kds-empty-col p,
 .store-not-found p,
 .pos-empty-state p,
-.kiosk-empty-state p {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
+.kiosk-empty-state p  {
+    /* consolidated to w3c rules */
 }
 
 /* Common Icons */
@@ -42,17 +38,13 @@
 .kds-empty-icon,
 .pos-empty-icon,
 .kiosk-empty-icon {
-    color: var(--md-sys-color-primary);
     opacity: 0.8;
 }
 
 /* ─── 1. Universal Large Empty State ────────────────────────────────────── */
 .m3-empty-state {
-    gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
-    background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    width: 100%;
     margin: var(--md-sys-spacing-6) 0;
 }
 
@@ -84,7 +76,6 @@
 .m3-empty-column,
 .column-empty,
 .kds-empty-col {
-    gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
     font-size: 0.9rem;
 }
@@ -112,7 +103,6 @@
 
 .store-not-found .not-found-icon {
     font-size: 4rem;
-    color: var(--md-sys-color-on-surface-variant);
     margin-bottom: 0.5rem;
 }
 
@@ -130,9 +120,7 @@
     grid-column: 1 / -1;
     place-content: center;
     padding: 40px 16px;
-    background: var(--md-sys-color-surface-container);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    gap: 8px;
 }
 
 .pos-empty-icon {
@@ -151,10 +139,8 @@
 .kiosk-empty-state {
     place-content: center;
     padding: 48px 24px;
-    background: var(--md-sys-color-surface-container);
     border: 1px dashed var(--md-sys-color-outline-variant);
     margin: var(--md-sys-spacing-4) 0;
-    gap: var(--md-sys-spacing-3);
 }
 
 .kiosk-empty-icon {

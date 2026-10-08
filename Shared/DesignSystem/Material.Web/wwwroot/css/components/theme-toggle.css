@@ -6,9 +6,7 @@
 
 .m3-mode-toggle-figure,
 .mode-toggle-figure {
-    background: var(--md-sys-color-primary-container);
     height: 46px;
-    margin: 0;
     grid-template-columns: repeat(3, 46px);
     justify-items: center;
     align-content: center;

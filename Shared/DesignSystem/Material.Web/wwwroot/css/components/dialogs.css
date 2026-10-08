@@ -21,8 +21,6 @@
     width: min(90vw, 540px);
     max-height: min(85dvh, 720px);
     overflow-y: auto;
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-dialog);
     padding: var(--md-sys-gutter-section);
     gap: var(--md-sys-spacing-5);
@@ -31,29 +29,24 @@
 }
 
 /* Common Grid Layout Declarations */
-:is(.m3-dialog-close-btn, .m3-dialog-btn-primary)  {
+:is(.m3-dialog-close-btn, .m3-dialog-btn-primary)   {
     /* consolidated to w3c rules */
 }
 
 .m3-dialog-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-4);
 }
 
-.m3-dialog-title-group {
-    gap: var(--md-sys-spacing-2);
+.m3-dialog-title-group  {
+    /* consolidated to w3c rules */
 }
 
 .m3-dialog-icon {
-    color: var(--md-sys-color-primary);
     font-size: 1.35rem;
 }
 
 .m3-dialog-header h3 {
-    margin: 0;
     font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
 }
 
 .m3-dialog-close-btn {
@@ -61,39 +54,31 @@
     height: var(--md-sys-touch-target-compact);
     min-width: var(--md-sys-touch-target-compact);
     min-height: var(--md-sys-touch-target-compact);
-    border: none;
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
     transition: background 0.2s ease;
 }
 
-.m3-dialog-close-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
+.m3-dialog-close-btn:hover  {
+    /* consolidated to w3c rules */
 }
 
 .m3-dialog-description {
-    margin: 0;
     font-size: 0.88rem;
-    color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
 }
 
-.m3-dialog-options-list {
-    gap: var(--md-sys-spacing-3);
+.m3-dialog-options-list  {
+    /* consolidated to w3c rules */
 }
 
 .m3-dialog-toggle-item {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease;
 }
 
-.m3-dialog-toggle-item:hover {
-    background: var(--md-sys-color-surface-container-high);
-    border-color: var(--md-sys-color-primary);
+.m3-dialog-toggle-item:hover  {
+    /* consolidated to w3c rules */
 }
 
 .m3-dialog-toggle-item input[type="checkbox"] {
@@ -108,8 +93,6 @@
 
 .m3-dialog-toggle-title {
     font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .m3-dialog-toggle-desc {
@@ -119,7 +102,6 @@
 
 .m3-dialog-toggle-icon {
     font-size: 1.25rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .m3-dialog-actions {
@@ -129,10 +111,7 @@
 .m3-dialog-btn-primary {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-5);
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    border: none;
     font-size: 0.95rem;
-    font-weight: 600;
     transition: opacity 0.2s ease;
 }
 
@@ -149,8 +128,8 @@ md-dialog {
     max-height: min(90vh, 90dvh);
 }
 
-md-dialog > * {
-    background: var(--md-sys-color-surface-container-high);
+md-dialog > *  {
+    /* consolidated to w3c rules */
 }
 
 md-dialog:not(:defined) {
@@ -160,10 +139,8 @@ md-dialog:not(:defined) {
 md-dialog [slot="content"] {
     display: flow-root;
     overflow-x: hidden;
-    max-width: 100%;
 }
 
 md-dialog [slot="actions"] {
     justify-content: end;
-    gap: var(--md-sys-spacing-2);
 }

@@ -6,9 +6,7 @@
 
 /* Form Controls & Fieldsets (Strict CSS Grid) */
 .m3-form-grid {
-    grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
-    width: 100%;
 }
 
 .m3-form-grid.two-cols {
@@ -16,18 +14,11 @@
 }
 
 .m3-fieldset {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3);
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
-    margin: 0;
-    background: var(--md-sys-color-surface-container-low);
 }
 
 .m3-legend {
     font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--md-sys-color-primary);
     padding: 0 0.5rem;
 }
 
@@ -35,7 +26,6 @@ md-outlined-text-field,
 md-filled-text-field,
 md-outlined-select,
 md-filled-select {
-    width: 100%;
     --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
     --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
     --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
@@ -53,7 +43,6 @@ md-filled-select {
 .validation-message {
     color: var(--md-sys-color-error);
     font-size: 0.8125rem;
-    font-weight: 500;
     margin-top: var(--md-sys-spacing-1);
 }
 
@@ -61,7 +50,6 @@ md-filled-select {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
 }
 
 input[type=number] {
@@ -75,7 +63,6 @@ input[type="color"] {
     -webkit-appearance: none;
     background: none;
     border: 0;
-    padding: 0;
     height: var(--md-sys-touch-target-min);
     width: var(--md-sys-touch-target-min);
 }
@@ -86,19 +73,18 @@ input[type="color"] {
     width: var(--md-sys-touch-target-min);
 }
 
-::-webkit-color-swatch-wrapper {
-    padding: 0;
+::-webkit-color-swatch-wrapper  {
+    /* consolidated to w3c rules */
 }
 
 ::-webkit-color-swatch,
-::-moz-color-swatch {
-    border: 1px solid var(--md-sys-color-outline-variant);
+::-moz-color-swatch  {
+    /* consolidated to w3c rules */
 }
 
 /* ─── Banner & Notice Primitives ───────────────────────────────────────── */
 :is(.m3-banner-error, .error-banner) {
     grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border: 1px solid var(--md-sys-color-error);

@@ -11,8 +11,6 @@
     gap: 0.4rem;
     padding: 0.25rem 0.75rem;
     font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
     line-height: 1;
 }
 
@@ -30,7 +28,6 @@
 .badge-completed,
 .badge.completed,
 .ready-badge {
-    background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
@@ -38,9 +35,7 @@
 .badge.trial,
 .badge-verified,
 .badge.verified {
-    background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 /* Status Variants: Warning / Making / In-Progress */
@@ -60,17 +55,14 @@
 .badge.pro {
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 /* Status Variants: High Surface / Made */
 .m3-status-badge.made,
 .m3-status-badge.status-made,
 .order-status-badge.status-made,
-.item-status-pill.status-made {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    border: 1px solid var(--md-sys-color-outline-variant);
+.item-status-pill.status-made  {
+    /* consolidated to w3c rules */
 }
 
 /* Status Variants: Info / Secondary Container */
@@ -113,7 +105,6 @@
 .badge.expired {
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-error);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 /* Status Variants: Neutral / Created / Cancelled */
@@ -122,17 +113,14 @@
 .order-status-badge.status-created,
 .item-status-pill.status-created,
 .badge-cancelled,
-.badge.cancelled {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
+.badge.cancelled  {
+    /* consolidated to w3c rules */
 }
 
 .badge-counter {
     display: inline-grid;
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     font-size: 0.75rem;
-    font-weight: 800;
     padding: 2px 8px;
     box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
     line-height: 1;
@@ -148,7 +136,7 @@
 }
 
 .m3-status-dot.pulse,
-.status-dot.pulse  {
+.status-dot.pulse   {
     /* consolidated to w3c rules */
 }
 
@@ -175,9 +163,7 @@
     padding: 0.4rem 1.1rem;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
-    color: var(--md-sys-color-primary);
     font-size: 0.875rem;
-    font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1;
 }
@@ -204,7 +190,6 @@
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     font-size: 0.8rem;
-    font-weight: 700;
     line-height: 1;
 }
 
@@ -218,9 +203,7 @@
 .kds-status-tag {
     justify-self: end;
     font-size: 0.75rem;
-    font-weight: 700;
     color: var(--md-sys-color-on-primary-container);
-    background: var(--md-sys-color-primary-container);
     padding: 0.2rem 0.5rem;
 }
 
@@ -229,13 +212,9 @@
 .m3-back-button {
     display: inline-grid !important;
     grid-auto-columns: max-content auto;
-    gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    background: transparent;
-    color: var(--md-sys-color-primary);
     text-decoration: none;
     font-size: 0.9375rem;
-    font-weight: 600;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
@@ -257,13 +236,8 @@
 .items-count-badge {
     display: inline-grid !important;
     grid-auto-columns: max-content auto;
-    gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
-    font-weight: 600;
-    white-space: nowrap;
 }
 
 .badge-icon {

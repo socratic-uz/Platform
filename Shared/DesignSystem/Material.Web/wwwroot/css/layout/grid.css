@@ -239,3 +239,57 @@ md-dialog [slot="actions"],
     grid-auto-flow: row !important;
     grid-auto-rows: max-content !important;
 }
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal 2-Column Responsive Layout (Main + Action) */
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'],
+    :is(.m3-card-header, .card-header),
+    :is(.m3-summary-row, .summary-row),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer,
+    .wishlist-card-footer,
+    .m3-dialog-header,
+    .picker-trigger-card,
+    .picker-popover-header,
+    .picker-popover-footer,
+    .md3-schedule-header,
+    .md3-schedule-day-card,
+    .md3-dialog-actions-row,
+    .lang-menu-item,
+    .variant-dialog-header,
+    .option-item-row,
+    .variant-dialog-actions,
+    .canvas-header,
+    .booking-summary-banner,
+    :is(.m3-progress-labels, .progress-labels)
+) {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+/* Universal 1-Column Responsive Content Layout */
+:is(
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    .wishlist-card-footer,
+    .m3-empty-state,
+    .m3-empty-column,
+    .column-empty,
+    .kds-empty-col,
+    .store-not-found,
+    .pos-empty-state,
+    .kiosk-empty-state,
+    .m3-form-grid,
+    .m3-fieldset,
+    container (max-width: 480px),
+    media (max-width: 599.98px),
+    .table-container,
+    media screen and (max-width: 599.98px)
+) {
+    grid-template-columns: minmax(0, 1fr);
+}

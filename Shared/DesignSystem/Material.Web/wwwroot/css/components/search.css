@@ -1,9 +1,8 @@
-:is(.m3-search-container, .material-search-container) {
-    width: 100%;
+:is(.m3-search-container, .material-search-container)  {
+    /* consolidated to w3c rules */
 }
 
 :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
-    width: 100%;
     height: 40px;
     --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
     --md-outlined-text-field-top-space: 2px;
@@ -18,19 +17,18 @@
     transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
 
-:is(.m3-search-container, .material-search-container) md-outlined-text-field:focus-within  {
+:is(.m3-search-container, .material-search-container) md-outlined-text-field:focus-within   {
     /* consolidated to w3c rules */
 }
 
 :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"] {
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 20px;
     width: 20px;
     height: 20px;
 }
 
-:is(.m3-search-container, .material-search-container) [slot="trailing-icon"] {
-    color: var(--md-sys-color-on-surface-variant);
+:is(.m3-search-container, .material-search-container) [slot="trailing-icon"]  {
+    /* consolidated to w3c rules */
 }
 
 

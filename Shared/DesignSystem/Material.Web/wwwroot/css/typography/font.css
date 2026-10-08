@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Typography - Font & Typeface Rules Module
    Semantic Headings, Body Text & Fluid Typescale Utilities
@@ -136,4 +137,112 @@ md-dialog:not(:defined) {
     font-weight: var(--md-sys-typescale-label-small-weight);
     letter-spacing: var(--md-sys-typescale-label-small-tracking);
     text-transform: uppercase;
+}
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal Font Weight Semi-Bold (600) */
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline,
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .m3-pill-badge,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    :is(.m3-card-title, .card-title),
+    :is(.m3-row-value, .row-value),
+    .org-card-name,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    .m3-filter-chip-count,
+    .m3-dialog-toggle-title,
+    .m3-dialog-btn-primary,
+    .m3-legend,
+    :is(.m3-info-label, .info-label),
+    :is(.m3-info-value, .info-value),
+    .picker-badge,
+    .picker-hex-input,
+    .md3-schedule-day-left,
+    .md3-time-label,
+    .md3-time-input,
+    .md3-closed-badge,
+    .lang-pill-btn,
+    .required-badge,
+    :is(.analytics-mode-btn, .m3-segmented-btn).active,
+    .m3-table th,
+    .order-items-table th,
+    .orders-table th,
+    .smart-grid-container h4,
+    .table-container th,
+    table.quickgrid th
+) {
+    font-weight: 600;
+}
+
+/* Universal Font Weight Bold (700) */
+:is(
+    .m3-count-badge,
+    .count-badge,
+    .kds-status-tag,
+    :is(.m3-summary-title, .summary-title),
+    :is(.m3-total-label, .total-label),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    .product-title,
+    .wishlist-title-text,
+    .m3-dialog-header h3,
+    .m3-empty-state-title,
+    .store-not-found h2,
+    .pos-empty-state h5,
+    .kiosk-empty-state h3,
+    :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title),
+    .picker-trigger-title,
+    .picker-hex-prefix,
+    .picker-popover-title,
+    .picker-day-dot,
+    .md3-dialog-headline,
+    .lang-chip-btn,
+    .lang-menu-item.is-selected,
+    .label-title,
+    .option-add-price,
+    .headline,
+    .summary-title,
+    .m3-amount-cell,
+    .amount-cell
+) {
+    font-weight: 700;
+}
+
+/* Universal Font Weight Medium (500) */
+:is(
+    .m3-filter-chip,
+    .validation-message,
+    .file-name,
+    .upload-text,
+    .lang-menu-item,
+    :is(.m3-progress-labels, .progress-labels),
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+) {
+    font-weight: 500;
+}
+
+/* Universal Font Weight Extra-Bold (800) */
+:is(
+    .badge-counter,
+    :is(.m3-total-value, .total-value),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag,
+    .wishlist-price-tag,
+    .variant-dialog-title,
+    .price-value
+) {
+    font-weight: 800;
 }

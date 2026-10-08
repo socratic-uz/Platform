@@ -180,3 +180,107 @@
 ) {
     min-width: 0;
 }
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal Full Width Elements */
+:is(
+    .avatar-button img,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'],
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'],
+    :is(.avatar-container, md-dialog.contacts) details,
+    :is(.avatar-container, md-dialog.contacts) details .content,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-outlined-text-field,
+    .material-text-field,
+    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
+    :is(.m3-media-card, .media-card, .org-card),
+    :is(.m3-card-media, .org-media, .wishlist-media),
+    :is(.m3-card-media, .org-media, .wishlist-media) img,
+    :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder),
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
+    .card-grid,
+    .m3-empty-state,
+    .m3-form-grid,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-outlined-select,
+    md-filled-select,
+    :is(.m3-info-grid, .info-grid),
+    .picker-trigger-card,
+    .picker-trigger-actions,
+    .color-badge-swatch,
+    .picker-swatch,
+    .file-picker-container,
+    .file-preview-area,
+    .image-preview,
+    .icon-preview,
+    .upload-zone-label,
+    .file-input-hidden,
+    .md3-dialog-actions-row,
+    .variant-dialog-header,
+    .variant-dialog-actions,
+    .booking-picker-card,
+    :is(.m3-progress-container, .progress-bar-container),
+    :is(.m3-progress-track, .progress-bar-bg),
+    :is(.m3-search-container, .material-search-container),
+    :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field),
+    .m3-skeleton-text,
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    .m3-table,
+    .order-items-table,
+    .orders-table,
+    .smart-grid-container,
+    .table-container,
+    .table-container > table,
+    table.quickgrid,
+    .col-title,
+    .paginator,
+    .table-container > .paginator
+) {
+    width: 100%;
+}
+
+/* Universal Full Height Elements */
+:is(
+    .avatar-button img,
+    :is(.m3-media-card, .media-card, .org-card),
+    :is(.m3-card-media, .org-media, .wishlist-media) img,
+    :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder),
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
+    md-filled-card.product-card,
+    .product-card,
+    .color-badge-swatch,
+    .picker-swatch,
+    .file-preview-area,
+    .image-preview,
+    .icon-preview,
+    .upload-zone-label,
+    .file-input-hidden,
+    :is(.m3-progress-fill, .progress-bar-fill)
+) {
+    height: 100%;
+}
+
+/* Universal Max Width 100% Elements */
+:is(
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .wishlist-details-thumb,
+    md-dialog [slot="content"],
+    .picker-trigger-card,
+    .smart-grid-container,
+    .table-container
+) {
+    max-width: 100%;
+}

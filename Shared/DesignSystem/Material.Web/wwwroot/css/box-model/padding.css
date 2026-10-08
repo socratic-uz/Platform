@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Box Model - Padding Rules Module
    Fluid Page Gutters & Section Spacings
@@ -9,4 +10,23 @@
 
 .m3-section-gutter {
     padding-inline: var(--md-sys-gutter-section) !important;
+}
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal Zero Padding Resets */
+:is(
+    .avatar-button,
+    .avatar-button img,
+    .avatar-button md-icon,
+    .avatar-button .material-symbols-outlined,
+    input[type="color"],
+    .picker-palette-swatch,
+    .option-fieldset,
+    .time-fieldset,
+    .col-title,
+    .col-options-button
+),
+::-webkit-color-swatch-wrapper {
+    padding: 0;
 }

@@ -170,3 +170,92 @@
 ) {
     border-radius: var(--md-sys-shape-corner-small);
 }
+
+/* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
+
+/* Universal Outline Variant 1px Border */
+:is(
+    .badge-trial,
+    .badge.trial,
+    .badge-verified,
+    .badge.verified,
+    .badge-pro,
+    .badge.pro,
+    .m3-status-badge.made,
+    .m3-status-badge.status-made,
+    .order-status-badge.status-made,
+    .item-status-pill.status-made,
+    .badge-with-ads,
+    .badge.with-ads,
+    .badge-expired,
+    .badge.expired,
+    .m3-card-outlined,
+    .card-outlined,
+    :is(.m3-summary-card, .summary-card),
+    .m3-filter-chip,
+    :is(.m3-config-dialog, .m3-dialog-surface),
+    .m3-dialog-toggle-item,
+    .m3-fieldset,
+    :is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card),
+    .picker-compact-box,
+    .picker-hex-wrapper,
+    .picker-popover-panel,
+    .picker-palette-swatch,
+    .file-card,
+    .md3-time-picker-box,
+    .lang-inline-grid,
+    .lang-pill-btn,
+    .lang-dropdown-menu,
+    .canvas-card,
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    .table-container,
+    .table-container th,
+    .table-container td,
+    table.quickgrid th,
+    table.quickgrid td,
+    .col-options,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea
+),
+::-webkit-color-swatch,
+::-moz-color-swatch {
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Universal Border Resets */
+:is(
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    .picker-hex-input,
+    .md3-time-input,
+    .lang-chip-btn,
+    .lang-menu-item,
+    .option-fieldset,
+    .time-fieldset,
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    button.col-title,
+    .col-options-button
+) {
+    border: none;
+}
+
+/* Universal Primary Border Color */
+:is(
+    .m3-card-interactive:hover,
+    .card-interactive:hover,
+    .m3-dialog-toggle-item:hover,
+    .file-card:hover,
+    .upload-card:hover,
+    .upload-card.dragging,
+    .md3-schedule-day-card.active,
+    .drop-container:hover
+) {
+    border-color: var(--md-sys-color-primary);
+}

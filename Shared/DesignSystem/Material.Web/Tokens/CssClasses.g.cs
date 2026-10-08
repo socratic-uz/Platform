@@ -36,22 +36,27 @@ public static class M3
         public const string ColTitle = "col-title";
         public const string ColumnEmpty = "column-empty";
         public const string Contacts = "contacts";
+        public const string Content = "content";
         public const string CountBadge = "m3-count-badge";
         public const string Counter = "m3-counter";
         public const string DateCell = "date-cell";
         public const string DialogBtnPrimary = "m3-dialog-btn-primary";
         public const string DialogCloseBtn = "m3-dialog-close-btn";
         public const string DialogHeader = "m3-dialog-header";
+        public const string DialogOptionsList = "m3-dialog-options-list";
         public const string DialogTitleGroup = "m3-dialog-title-group";
         public const string DialogToggleItem = "m3-dialog-toggle-item";
         public const string DropContainer = "drop-container";
         public const string EmptyColumn = "m3-empty-column";
         public const string EmptyColumnIcon = "m3-empty-column-icon";
         public const string EmptyMiniIcon = "empty-mini-icon";
+        public const string EmptyState = "m3-empty-state";
         public const string EmptyStateAction = "m3-empty-state-action";
         public const string EmptyStateIcon = "m3-empty-state-icon";
         public const string ErrorBanner = "error-banner";
         public const string FaceidProfileModal = "faceid-profile-modal";
+        public const string Fieldset = "m3-fieldset";
+        public const string FileGrid = "file-grid";
         public const string FileOverlay = "file-overlay";
         public const string FilePreviewArea = "file-preview-area";
         public const string FilterChip = "m3-filter-chip";
@@ -66,6 +71,7 @@ public static class M3
         public const string GridEnumFlags = "grid-enum-flags";
         public const string HeaderControls = "m3-header-controls";
         public const string IconPreview = "icon-preview";
+        public const string InfoItem = "m3-info-item";
         public const string ItemStatusPill = "item-status-pill";
         public const string ItemsCenter = "m3-items-center";
         public const string ItemsCountBadge = "items-count-badge";
@@ -77,6 +83,7 @@ public static class M3
         public const string KdsEmptyCol = "kds-empty-col";
         public const string KdsEmptyIcon = "kds-empty-icon";
         public const string KioskEmptyIcon = "kiosk-empty-icon";
+        public const string KioskEmptyState = "kiosk-empty-state";
         public const string LabelTitle = "label-title";
         public const string LangChipBtn = "lang-chip-btn";
         public const string LangDropdownWrapper = "lang-dropdown-wrapper";
@@ -91,12 +98,15 @@ public static class M3
         public const string Md3DialogActionsRow = "md3-dialog-actions-row";
         public const string Md3DialogHeadline = "md3-dialog-headline";
         public const string Md3PresetsRow = "md3-presets-row";
+        public const string Md3PresetsSection = "md3-presets-section";
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
+        public const string Md3ScheduleDays = "md3-schedule-days";
         public const string Md3ScheduleHeader = "md3-schedule-header";
         public const string Md3ScheduleTimeGroup = "md3-schedule-time-group";
         public const string Md3TimePickerBox = "md3-time-picker-box";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
         public const string OptionItemRow = "option-item-row";
+        public const string OptionsListContainer = "options-list-container";
         public const string OrderStatusBadge = "order-status-badge";
         public const string OrgMediaPlaceholder = "org-media-placeholder";
         public const string Paginator = "paginator";
@@ -108,9 +118,11 @@ public static class M3
         public const string PickerHeaderRow = "picker-header-row";
         public const string PickerHexWrapper = "picker-hex-wrapper";
         public const string PickerIconBadge = "picker-icon-badge";
+        public const string PickerPaletteGrid = "picker-palette-grid";
         public const string PickerPaletteSwatch = "picker-palette-swatch";
         public const string PickerPopoverFooter = "picker-popover-footer";
         public const string PickerPopoverHeader = "picker-popover-header";
+        public const string PickerPopoverPanel = "picker-popover-panel";
         public const string PickerTitleRow = "picker-title-row";
         public const string PickerTriggerActions = "picker-trigger-actions";
         public const string PickerTriggerCard = "picker-trigger-card";
@@ -119,19 +131,30 @@ public static class M3
         public const string PillBadge = "m3-pill-badge";
         public const string PlaceCenter = "m3-place-center";
         public const string PosEmptyIcon = "pos-empty-icon";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string ProgressBarContainer = "progress-bar-container";
+        public const string ProgressContainer = "m3-progress-container";
         public const string Row = "row";
         public const string SearchContainer = "m3-search-container";
         public const string SegmentedBtn = "m3-segmented-btn";
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
+        public const string SlotsChipSet = "slots-chip-set";
         public const string StatusBadge = "m3-status-badge";
-        public const string SummaryActions = "summary-actions";
+        public const string SummaryActions = "m3-summary-actions";
         public const string SummaryLeft = "summary-left";
         public const string SummaryRow = "m3-summary-row";
+        public const string SummaryRows = "m3-summary-rows";
         public const string TableContainer = "table-container";
         public const string TableRowActions = "m3-table-row-actions";
         public const string UploadCard = "upload-card";
+        public const string UploadZoneLabel = "upload-zone-label";
         public const string VariantDialogActions = "variant-dialog-actions";
+        public const string VariantDialogHeader = "variant-dialog-header";
+        public const string VariantsChipSet = "variants-chip-set";
         public const string WishlistCardFooter = "wishlist-card-footer";
+        public const string WishlistContent = "wishlist-content";
+        public const string WishlistDetailsDl = "wishlist-details-dl";
+        public const string WishlistDetailsImages = "wishlist-details-images";
         public const string WishlistPlaceholder = "wishlist-placeholder";
     }
 
@@ -156,11 +179,96 @@ public static class M3
 
     public static class Background
     {
+        public const string ActionsColumn = "actions-column";
+        public const string Active = "active";
+        public const string AnalyticsDatePickerTrigger = "analytics-date-picker-trigger";
+        public const string AnalyticsModeBtn = "analytics-mode-btn";
+        public const string AnalyticsModePillGroup = "analytics-mode-pill-group";
+        public const string AvatarContainer = "avatar-container";
+        public const string BackButton = "m3-back-button";
+        public const string Badge = "badge";
+        public const string BadgeCancelled = "badge-cancelled";
+        public const string BadgeCompleted = "badge-completed";
+        public const string BadgeReady = "badge-ready";
+        public const string BadgeTrial = "badge-trial";
+        public const string BadgeVerified = "badge-verified";
         public const string BgPrimary = "m3-bg-primary";
         public const string BgSurface = "m3-bg-surface";
         public const string BgSurfaceContainer = "m3-bg-surface-container";
         public const string BgSurfaceContainerHigh = "m3-bg-surface-container-high";
         public const string BgSurfaceContainerLow = "m3-bg-surface-container-low";
+        public const string BookingPickerCard = "booking-picker-card";
+        public const string BookingSummaryBanner = "booking-summary-banner";
+        public const string Cancelled = "cancelled";
+        public const string CanvasCard = "canvas-card";
+        public const string CanvasWrapper = "canvas-wrapper";
+        public const string CardElevated = "m3-card-elevated";
+        public const string CardFilled = "m3-card-filled";
+        public const string CardMedia = "m3-card-media";
+        public const string ColOptions = "col-options";
+        public const string Completed = "completed";
+        public const string ConfigDialog = "m3-config-dialog";
+        public const string Contacts = "contacts";
+        public const string Created = "created";
+        public const string DialogCloseBtn = "m3-dialog-close-btn";
+        public const string DialogSurface = "m3-dialog-surface";
+        public const string DialogToggleItem = "m3-dialog-toggle-item";
+        public const string Dragging = "dragging";
+        public const string DropContainer = "drop-container";
+        public const string EmptyState = "m3-empty-state";
+        public const string FaceidProfileModal = "faceid-profile-modal";
+        public const string Fieldset = "m3-fieldset";
+        public const string FilterChip = "m3-filter-chip";
+        public const string ItemStatusPill = "item-status-pill";
+        public const string ItemsCountBadge = "items-count-badge";
+        public const string KdsStatusTag = "kds-status-tag";
+        public const string KioskEmptyState = "kiosk-empty-state";
+        public const string LangChipBtn = "lang-chip-btn";
+        public const string LangDropdownMenu = "lang-dropdown-menu";
+        public const string LangMenuItem = "lang-menu-item";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string Made = "made";
+        public const string Md3ClosedBadge = "md3-closed-badge";
+        public const string Md3PresetsSection = "md3-presets-section";
+        public const string Md3ScheduleDayCard = "md3-schedule-day-card";
+        public const string Md3TimeInput = "md3-time-input";
+        public const string ModeToggleFigure = "m3-mode-toggle-figure";
+        public const string OptionItemRow = "option-item-row";
+        public const string OptionsListContainer = "options-list-container";
+        public const string OrderItemsTableWrapper = "order-items-table-wrapper";
+        public const string OrderStatusBadge = "order-status-badge";
+        public const string OrdersTable = "orders-table";
+        public const string OrgMedia = "org-media";
+        public const string Paginator = "paginator";
+        public const string Paid = "paid";
+        public const string PeriodPickerTrigger = "m3-period-picker-trigger";
+        public const string PickerBadge = "picker-badge";
+        public const string PickerCompactBox = "picker-compact-box";
+        public const string PickerDayDot = "picker-day-dot";
+        public const string PickerHexInput = "picker-hex-input";
+        public const string PickerIconBadge = "picker-icon-badge";
+        public const string PickerPopoverPanel = "picker-popover-panel";
+        public const string PickerTriggerCard = "picker-trigger-card";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string Quickgrid = "quickgrid";
+        public const string ReadyBadge = "ready-badge";
+        public const string SegmentedBtn = "m3-segmented-btn";
+        public const string SegmentedPillGroup = "m3-segmented-pill-group";
+        public const string Skeleton = "m3-skeleton";
+        public const string SmartGridContainer = "smart-grid-container";
+        public const string StatusBadge = "m3-status-badge";
+        public const string StatusCompleted = "status-completed";
+        public const string StatusCreated = "status-created";
+        public const string StatusMade = "status-made";
+        public const string StatusPaid = "status-paid";
+        public const string Success = "success";
+        public const string SummaryCard = "m3-summary-card";
+        public const string TableContainer = "table-container";
+        public const string TableWrapper = "m3-table-wrapper";
+        public const string Trial = "trial";
+        public const string UploadCard = "upload-card";
+        public const string Verified = "verified";
+        public const string WishlistMedia = "wishlist-media";
     }
 
     public static class Badge
@@ -221,12 +329,18 @@ public static class M3
 
     public static class Border
     {
+        public const string Active = "active";
         public const string AnalyticsDatePickerTrigger = "analytics-date-picker-trigger";
         public const string AnalyticsModeBtn = "analytics-mode-btn";
         public const string AnalyticsModePillGroup = "analytics-mode-pill-group";
         public const string BackButton = "m3-back-button";
         public const string Badge = "m3-badge";
         public const string BadgeCounter = "badge-counter";
+        public const string BadgeExpired = "badge-expired";
+        public const string BadgePro = "badge-pro";
+        public const string BadgeTrial = "badge-trial";
+        public const string BadgeVerified = "badge-verified";
+        public const string BadgeWithAds = "badge-with-ads";
         public const string BannerError = "m3-banner-error";
         public const string BookingPickerCard = "booking-picker-card";
         public const string BookingSummaryBanner = "booking-summary-banner";
@@ -236,16 +350,24 @@ public static class M3
         public const string CardElevated = "m3-card-elevated";
         public const string CardFilled = "m3-card-filled";
         public const string CardGlass = "m3-card-glass";
+        public const string CardInteractive = "m3-card-interactive";
         public const string CardMedia = "m3-card-media";
         public const string CardOutlined = "m3-card-outlined";
         public const string ColOptions = "col-options";
+        public const string ColOptionsButton = "col-options-button";
+        public const string ColTitle = "col-title";
         public const string ColorBadgeSwatch = "color-badge-swatch";
+        public const string ConfigDialog = "m3-config-dialog";
         public const string CountBadge = "m3-count-badge";
         public const string DialogBtnPrimary = "m3-dialog-btn-primary";
         public const string DialogCloseBtn = "m3-dialog-close-btn";
+        public const string DialogSurface = "m3-dialog-surface";
         public const string DialogToggleItem = "m3-dialog-toggle-item";
+        public const string Dragging = "dragging";
+        public const string DropContainer = "drop-container";
         public const string EmptyState = "m3-empty-state";
         public const string ErrorBanner = "error-banner";
+        public const string Expired = "expired";
         public const string Fieldset = "m3-fieldset";
         public const string FileCard = "file-card";
         public const string FilterChip = "m3-filter-chip";
@@ -257,14 +379,19 @@ public static class M3
         public const string KioskEmptyState = "kiosk-empty-state";
         public const string LangChipBtn = "lang-chip-btn";
         public const string LangDropdownMenu = "lang-dropdown-menu";
+        public const string LangInlineGrid = "lang-inline-grid";
         public const string LangMenuItem = "lang-menu-item";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string Made = "made";
         public const string Md3ClosedBadge = "md3-closed-badge";
         public const string Md3PresetsSection = "md3-presets-section";
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
+        public const string Md3TimeInput = "md3-time-input";
         public const string Md3TimePickerBox = "md3-time-picker-box";
         public const string MediaCard = "m3-media-card";
         public const string ModeToggle = "m3-mode-toggle";
         public const string None = "m3-border-none";
+        public const string OptionFieldset = "option-fieldset";
         public const string OptionItemRow = "option-item-row";
         public const string OptionsListContainer = "options-list-container";
         public const string OrderItemsTableWrapper = "order-items-table-wrapper";
@@ -275,6 +402,7 @@ public static class M3
         public const string PickerBadge = "picker-badge";
         public const string PickerCompactBox = "picker-compact-box";
         public const string PickerDayDot = "picker-day-dot";
+        public const string PickerHexInput = "picker-hex-input";
         public const string PickerHexWrapper = "picker-hex-wrapper";
         public const string PickerIconBadge = "picker-icon-badge";
         public const string PickerPaletteSwatch = "picker-palette-swatch";
@@ -283,8 +411,10 @@ public static class M3
         public const string PickerTriggerCard = "picker-trigger-card";
         public const string PillBadge = "m3-pill-badge";
         public const string PosEmptyState = "pos-empty-state";
+        public const string Pro = "pro";
         public const string ProgressBarBg = "progress-bar-bg";
         public const string ProgressTrack = "m3-progress-track";
+        public const string Quickgrid = "quickgrid";
         public const string RequiredBadge = "required-badge";
         public const string SegmentedBtn = "m3-segmented-btn";
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
@@ -302,11 +432,17 @@ public static class M3
         public const string SkeletonCard = "m3-skeleton-card";
         public const string SmartGridContainer = "smart-grid-container";
         public const string StatusBadge = "m3-status-badge";
+        public const string StatusMade = "status-made";
         public const string SummaryCard = "m3-summary-card";
+        public const string TableContainer = "table-container";
         public const string TableWrapper = "m3-table-wrapper";
+        public const string TimeFieldset = "time-fieldset";
+        public const string Trial = "trial";
         public const string UploadCard = "upload-card";
+        public const string Verified = "verified";
         public const string WishlistDetailsThumb = "wishlist-details-thumb";
         public const string WishlistMedia = "wishlist-media";
+        public const string WithAds = "with-ads";
     }
 
     public static class Cards
@@ -379,10 +515,127 @@ public static class M3
 
     public static class Color
     {
+        public const string Active = "active";
+        public const string AmountCell = "m3-amount-cell";
+        public const string AnalyticsDatePickerTrigger = "analytics-date-picker-trigger";
+        public const string AnalyticsModeBtn = "analytics-mode-btn";
+        public const string AvatarContainer = "avatar-container";
+        public const string BackButton = "m3-back-button";
+        public const string Badge = "badge";
+        public const string BadgeCancelled = "badge-cancelled";
+        public const string BadgeCounter = "badge-counter";
+        public const string BodySubtext = "body-subtext";
+        public const string BookingPickerCard = "booking-picker-card";
+        public const string Cancelled = "cancelled";
+        public const string CardMediaPlaceholder = "m3-card-media-placeholder";
+        public const string CardSubtitle = "m3-card-subtitle";
+        public const string CardTitle = "m3-card-title";
+        public const string ColumnEmpty = "column-empty";
+        public const string Contacts = "contacts";
+        public const string Created = "created";
+        public const string DialogBtnPrimary = "m3-dialog-btn-primary";
+        public const string DialogCloseBtn = "m3-dialog-close-btn";
+        public const string DialogDescription = "m3-dialog-description";
+        public const string DialogHeader = "m3-dialog-header";
+        public const string DialogIcon = "m3-dialog-icon";
+        public const string DialogToggleIcon = "m3-dialog-toggle-icon";
+        public const string DialogToggleTitle = "m3-dialog-toggle-title";
+        public const string DropContainer = "drop-container";
+        public const string DropTitle = "drop-title";
+        public const string EmptyColumn = "m3-empty-column";
+        public const string EmptyColumnIcon = "m3-empty-column-icon";
+        public const string EmptyMiniIcon = "empty-mini-icon";
+        public const string EmptyStateDesc = "m3-empty-state-desc";
+        public const string EmptyStateIcon = "m3-empty-state-icon";
+        public const string EmptyStateTitle = "m3-empty-state-title";
         public const string Error = "m3-color-error";
+        public const string FaceidProfileModal = "faceid-profile-modal";
+        public const string FileName = "file-name";
+        public const string FilterChip = "m3-filter-chip";
+        public const string Headline = "headline";
+        public const string InfoLabel = "m3-info-label";
+        public const string InfoValue = "m3-info-value";
+        public const string IsSelected = "is-selected";
+        public const string ItemStatusPill = "item-status-pill";
+        public const string ItemsCountBadge = "items-count-badge";
+        public const string KdsEmptyCol = "kds-empty-col";
+        public const string KdsEmptyIcon = "kds-empty-icon";
+        public const string KioskEmptyIcon = "kiosk-empty-icon";
+        public const string KioskEmptyState = "kiosk-empty-state";
+        public const string LabelTitle = "label-title";
+        public const string LangChevron = "lang-chevron";
+        public const string LangChipActive = "lang-chip--active";
+        public const string LangChipBtn = "lang-chip-btn";
+        public const string LangGlobeIcon = "lang-globe-icon";
+        public const string LangMenuItem = "lang-menu-item";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string Legend = "m3-legend";
+        public const string Made = "made";
+        public const string MaterialSearchContainer = "material-search-container";
+        public const string Md3DialogHeadline = "md3-dialog-headline";
+        public const string Md3HeadlineIcon = "md3-headline-icon";
+        public const string Md3PresetsLabel = "md3-presets-label";
+        public const string Md3ScheduleSubtitle = "md3-schedule-subtitle";
+        public const string Md3TimeInput = "md3-time-input";
+        public const string NewBadge = "new-badge";
+        public const string NotFoundIcon = "not-found-icon";
         public const string OnSurface = "m3-color-on-surface";
         public const string OnSurfaceVariant = "m3-color-on-surface-variant";
+        public const string OptionAddPrice = "option-add-price";
+        public const string OrderItemsTable = "order-items-table";
+        public const string OrderStatusBadge = "order-status-badge";
+        public const string OrdersTable = "orders-table";
+        public const string OrgCardDesc = "org-card-desc";
+        public const string OrgCardName = "org-card-name";
+        public const string OrgMediaPlaceholder = "org-media-placeholder";
+        public const string PaginationText = "pagination-text";
+        public const string PeriodPickerTrigger = "m3-period-picker-trigger";
+        public const string PickerBadge = "picker-badge";
+        public const string PickerDayDot = "picker-day-dot";
+        public const string PickerHexInput = "picker-hex-input";
+        public const string PickerHexPrefix = "picker-hex-prefix";
+        public const string PickerIconBadge = "picker-icon-badge";
+        public const string PickerPopoverTitle = "picker-popover-title";
+        public const string PickerPreviewText = "picker-preview-text";
+        public const string PickerSwatchCheck = "picker-swatch-check";
+        public const string PickerTriggerTitle = "picker-trigger-title";
+        public const string PillBadge = "m3-pill-badge";
+        public const string PosEmptyIcon = "pos-empty-icon";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string PriceLabel = "price-label";
+        public const string PriceTag = "price-tag";
+        public const string PriceValue = "price-value";
         public const string Primary = "m3-color-primary";
+        public const string ProductTitle = "product-title";
+        public const string ProgressLabels = "m3-progress-labels";
+        public const string Quickgrid = "quickgrid";
+        public const string RowLabel = "m3-row-label";
+        public const string RowValue = "m3-row-value";
+        public const string SearchContainer = "m3-search-container";
+        public const string SegmentedBtn = "m3-segmented-btn";
+        public const string SmartGridContainer = "smart-grid-container";
+        public const string StatusBadge = "m3-status-badge";
+        public const string StatusCreated = "status-created";
+        public const string StatusMade = "status-made";
+        public const string StoreNotFound = "store-not-found";
+        public const string SummaryCheckIcon = "summary-check-icon";
+        public const string SummaryDate = "summary-date";
+        public const string SummaryTitle = "m3-summary-title";
+        public const string Table = "m3-table";
+        public const string TableContainer = "table-container";
+        public const string TotalLabel = "m3-total-label";
+        public const string TotalValue = "m3-total-value";
+        public const string UploadIcon = "upload-icon";
+        public const string UploadSubtext = "upload-subtext";
+        public const string UploadText = "upload-text";
+        public const string VariantDialogSubtext = "variant-dialog-subtext";
+        public const string VariantDialogTitle = "variant-dialog-title";
+        public const string WishlistDescText = "wishlist-desc-text";
+        public const string WishlistDetailsDesc = "wishlist-details-desc";
+        public const string WishlistDetailsPrice = "wishlist-details-price";
+        public const string WishlistPlaceholder = "wishlist-placeholder";
+        public const string WishlistPriceTag = "wishlist-price-tag";
+        public const string WishlistTitleText = "wishlist-title-text";
     }
 
     public static class Contain
@@ -452,14 +705,86 @@ public static class M3
 
     public static class Font
     {
+        public const string Active = "active";
+        public const string AmountCell = "m3-amount-cell";
+        public const string AnalyticsModeBtn = "analytics-mode-btn";
+        public const string AvatarContainer = "avatar-container";
+        public const string BackButton = "m3-back-button";
+        public const string Badge = "m3-badge";
+        public const string BadgeCounter = "badge-counter";
         public const string BodyLarge = "m3-body-large";
         public const string BodyMedium = "m3-body-medium";
+        public const string CardTitle = "m3-card-title";
+        public const string Contacts = "contacts";
+        public const string CountBadge = "m3-count-badge";
+        public const string DialogBtnPrimary = "m3-dialog-btn-primary";
+        public const string DialogHeader = "m3-dialog-header";
+        public const string DialogToggleTitle = "m3-dialog-toggle-title";
         public const string DisplayLarge = "m3-display-large";
+        public const string EmptyStateTitle = "m3-empty-state-title";
+        public const string FaceidProfileModal = "faceid-profile-modal";
+        public const string FileName = "file-name";
+        public const string FilterChip = "m3-filter-chip";
+        public const string FilterChipCount = "m3-filter-chip-count";
+        public const string Headline = "headline";
         public const string HeadlineLarge = "m3-headline-large";
         public const string HeadlineMedium = "m3-headline-medium";
+        public const string InfoLabel = "m3-info-label";
+        public const string InfoValue = "m3-info-value";
+        public const string IsSelected = "is-selected";
+        public const string ItemStatusPill = "item-status-pill";
+        public const string ItemsCountBadge = "items-count-badge";
+        public const string KdsStatusTag = "kds-status-tag";
+        public const string KioskEmptyState = "kiosk-empty-state";
         public const string LabelSmall = "m3-label-small";
+        public const string LabelTitle = "label-title";
+        public const string LangChipBtn = "lang-chip-btn";
+        public const string LangMenuItem = "lang-menu-item";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string Legend = "m3-legend";
+        public const string Md3ClosedBadge = "md3-closed-badge";
+        public const string Md3DialogHeadline = "md3-dialog-headline";
+        public const string Md3PresetsLabel = "md3-presets-label";
+        public const string Md3ScheduleDayLeft = "md3-schedule-day-left";
+        public const string Md3ScheduleSubtitle = "md3-schedule-subtitle";
+        public const string Md3TimeInput = "md3-time-input";
+        public const string Md3TimeLabel = "md3-time-label";
+        public const string OptionAddPrice = "option-add-price";
+        public const string OrderItemsTable = "order-items-table";
+        public const string OrderStatusBadge = "order-status-badge";
+        public const string OrdersTable = "orders-table";
+        public const string OrgCardName = "org-card-name";
+        public const string PickerBadge = "picker-badge";
+        public const string PickerDayDot = "picker-day-dot";
+        public const string PickerHexInput = "picker-hex-input";
+        public const string PickerHexPrefix = "picker-hex-prefix";
+        public const string PickerPopoverTitle = "picker-popover-title";
+        public const string PickerTriggerTitle = "picker-trigger-title";
+        public const string PillBadge = "m3-pill-badge";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string PriceTag = "price-tag";
+        public const string PriceValue = "price-value";
+        public const string ProductTitle = "product-title";
+        public const string ProgressLabels = "m3-progress-labels";
+        public const string Quickgrid = "quickgrid";
+        public const string RequiredBadge = "required-badge";
+        public const string RowValue = "m3-row-value";
+        public const string SegmentedBtn = "m3-segmented-btn";
+        public const string SmartGridContainer = "smart-grid-container";
+        public const string StatusBadge = "m3-status-badge";
+        public const string StoreNotFound = "store-not-found";
+        public const string SummaryTitle = "m3-summary-title";
+        public const string Table = "m3-table";
+        public const string TableContainer = "table-container";
         public const string TitleLarge = "m3-title-large";
         public const string TitleMedium = "m3-title-medium";
+        public const string TotalLabel = "m3-total-label";
+        public const string TotalValue = "m3-total-value";
+        public const string UploadText = "upload-text";
+        public const string ValidationMessage = "validation-message";
+        public const string VariantDialogTitle = "variant-dialog-title";
+        public const string WishlistPriceTag = "wishlist-price-tag";
+        public const string WishlistTitleText = "wishlist-title-text";
     }
 
     public static class Form
@@ -664,7 +989,42 @@ public static class M3
 
     public static class Margin
     {
+        public const string AvatarButton = "avatar-button";
+        public const string BodySubtext = "body-subtext";
+        public const string CardMedia = "m3-card-media";
+        public const string CardSubtitle = "m3-card-subtitle";
+        public const string CardTitle = "m3-card-title";
+        public const string ColumnEmpty = "column-empty";
+        public const string DialogDescription = "m3-dialog-description";
+        public const string DialogHeader = "m3-dialog-header";
+        public const string EmptyColumn = "m3-empty-column";
+        public const string EmptyStateDesc = "m3-empty-state-desc";
+        public const string EmptyStateTitle = "m3-empty-state-title";
+        public const string Fieldset = "m3-fieldset";
+        public const string Headline = "headline";
+        public const string KdsEmptyCol = "kds-empty-col";
+        public const string KioskEmptyState = "kiosk-empty-state";
         public const string M0 = "m3-m-0";
+        public const string MaterialSymbolsOutlined = "material-symbols-outlined";
+        public const string Md3PresetsLabel = "md3-presets-label";
+        public const string ModeToggleFigure = "m3-mode-toggle-figure";
+        public const string OptionFieldset = "option-fieldset";
+        public const string OrgCardDesc = "org-card-desc";
+        public const string OrgCardName = "org-card-name";
+        public const string OrgMedia = "org-media";
+        public const string Paginator = "paginator";
+        public const string PosEmptyState = "pos-empty-state";
+        public const string ProductTitle = "product-title";
+        public const string SmartGridContainer = "smart-grid-container";
+        public const string StoreNotFound = "store-not-found";
+        public const string SummaryTitle = "m3-summary-title";
+        public const string TableContainer = "table-container";
+        public const string TimeFieldset = "time-fieldset";
+        public const string WishlistDescText = "wishlist-desc-text";
+        public const string WishlistDetailsDl = "wishlist-details-dl";
+        public const string WishlistDetailsPriceRow = "wishlist-details-price-row";
+        public const string WishlistMedia = "wishlist-media";
+        public const string WishlistTitleText = "wishlist-title-text";
     }
 
     public static class Motion
@@ -710,8 +1070,15 @@ public static class M3
 
     public static class Padding
     {
+        public const string AvatarButton = "avatar-button";
+        public const string ColOptionsButton = "col-options-button";
+        public const string ColTitle = "col-title";
+        public const string MaterialSymbolsOutlined = "material-symbols-outlined";
+        public const string OptionFieldset = "option-fieldset";
         public const string PageGutter = "m3-page-gutter";
+        public const string PickerPaletteSwatch = "picker-palette-swatch";
         public const string SectionGutter = "m3-section-gutter";
+        public const string TimeFieldset = "time-fieldset";
     }
 
     public static class Picker
@@ -980,6 +1347,12 @@ public static class M3
 
     public static class Selection
     {
+        public const string AvatarContainer = "avatar-container";
+        public const string CardInteractive = "m3-card-interactive";
+        public const string FilterChip = "m3-filter-chip";
+        public const string Md3ScheduleDayLeft = "md3-schedule-day-left";
+        public const string PickerDayDot = "picker-day-dot";
+        public const string PickerHexPrefix = "picker-hex-prefix";
         public const string SelectAll = "m3-select-all";
         public const string SelectNone = "m3-select-none";
         public const string SelectText = "m3-select-text";
@@ -1037,7 +1410,11 @@ public static class M3
         public const string CardGlass = "card-glass";
         public const string CardGrid = "card-grid";
         public const string CardHeader = "m3-card-header";
+        public const string CardMedia = "m3-card-media";
+        public const string CardMediaPlaceholder = "m3-card-media-placeholder";
         public const string CardOutlined = "card-outlined";
+        public const string ColTitle = "col-title";
+        public const string ColorBadgeSwatch = "color-badge-swatch";
         public const string ColumnEmpty = "column-empty";
         public const string Contacts = "contacts";
         public const string Content = "content";
@@ -1049,9 +1426,14 @@ public static class M3
         public const string EmptyState = "m3-empty-state";
         public const string ErrorBanner = "error-banner";
         public const string FaceidProfileModal = "faceid-profile-modal";
+        public const string FileInputHidden = "file-input-hidden";
+        public const string FilePickerContainer = "file-picker-container";
+        public const string FilePreviewArea = "file-preview-area";
         public const string FilterChip = "m3-filter-chip";
         public const string FormGrid = "m3-form-grid";
         public const string GlassCard = "glass-card";
+        public const string IconPreview = "icon-preview";
+        public const string ImagePreview = "image-preview";
         public const string InfoGrid = "m3-info-grid";
         public const string InfoItem = "m3-info-item";
         public const string ItemStatusPill = "item-status-pill";
@@ -1065,28 +1447,41 @@ public static class M3
         public const string MaterialCounter = "material-counter";
         public const string MaterialSearchContainer = "material-search-container";
         public const string MaterialTextField = "material-text-field";
+        public const string Md3DialogActionsRow = "md3-dialog-actions-row";
         public const string Md3PresetsSection = "md3-presets-section";
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
         public const string MediaCard = "m3-media-card";
         public const string ModeToggle = "m3-mode-toggle";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
         public const string OptionsListContainer = "options-list-container";
+        public const string OrderItemsTable = "order-items-table";
         public const string OrderItemsTableWrapper = "order-items-table-wrapper";
         public const string OrderStatusBadge = "order-status-badge";
+        public const string OrdersTable = "orders-table";
         public const string OrgCard = "org-card";
         public const string OrgCardContent = "org-card-content";
+        public const string OrgMedia = "org-media";
+        public const string OrgMediaPlaceholder = "org-media-placeholder";
         public const string Paginator = "paginator";
         public const string PeriodPickerTrigger = "m3-period-picker-trigger";
         public const string PickerCompactBox = "picker-compact-box";
         public const string PickerPaletteSwatch = "picker-palette-swatch";
+        public const string PickerSwatch = "picker-swatch";
         public const string PickerSwatchWrapper = "picker-swatch-wrapper";
+        public const string PickerTriggerActions = "picker-trigger-actions";
         public const string PickerTriggerCard = "picker-trigger-card";
         public const string PickerTriggerLeft = "picker-trigger-left";
         public const string PickerTriggerText = "picker-trigger-text";
         public const string PillBadge = "m3-pill-badge";
         public const string PosEmptyState = "pos-empty-state";
+        public const string ProductCard = "product-card";
+        public const string ProgressBarBg = "progress-bar-bg";
         public const string ProgressBarContainer = "progress-bar-container";
+        public const string ProgressBarFill = "progress-bar-fill";
         public const string ProgressContainer = "m3-progress-container";
+        public const string ProgressFill = "m3-progress-fill";
+        public const string ProgressTrack = "m3-progress-track";
+        public const string Quickgrid = "quickgrid";
         public const string RatioCard = "m3-ratio-card";
         public const string RatioKiosk = "m3-ratio-kiosk";
         public const string RatioPortrait = "m3-ratio-portrait";
@@ -1095,19 +1490,26 @@ public static class M3
         public const string RatioWide = "m3-ratio-wide";
         public const string SearchContainer = "m3-search-container";
         public const string SegmentedBtn = "m3-segmented-btn";
+        public const string SkeletonText = "m3-skeleton-text";
         public const string SmartGridContainer = "smart-grid-container";
         public const string StatusBadge = "m3-status-badge";
         public const string StoreNotFound = "store-not-found";
         public const string SummaryActions = "m3-summary-actions";
         public const string SummaryBackLink = "summary-back-link";
         public const string SummaryCard = "m3-summary-card";
+        public const string Table = "m3-table";
         public const string TableContainer = "table-container";
         public const string TableWrapper = "m3-table-wrapper";
         public const string TouchTarget = "m3-touch-target";
         public const string TouchTargetKiosk = "m3-touch-target-kiosk";
         public const string UploadZoneLabel = "upload-zone-label";
+        public const string VariantDialogActions = "variant-dialog-actions";
         public const string VariantDialogBody = "variant-dialog-body";
+        public const string VariantDialogHeader = "variant-dialog-header";
         public const string WishlistCardFooter = "wishlist-card-footer";
+        public const string WishlistDetailsThumb = "wishlist-details-thumb";
+        public const string WishlistMedia = "wishlist-media";
+        public const string WishlistPlaceholder = "wishlist-placeholder";
     }
 
     public static class Skeleton
@@ -1188,8 +1590,18 @@ public static class M3
 
     public static class TextWrapping
     {
+        public const string Badge = "m3-badge";
+        public const string ColTitleText = "col-title-text";
+        public const string FileName = "file-name";
+        public const string ItemStatusPill = "item-status-pill";
+        public const string ItemsCountBadge = "items-count-badge";
         public const string LineClamp2 = "m3-line-clamp-2";
         public const string LineClamp3 = "m3-line-clamp-3";
+        public const string OrderStatusBadge = "order-status-badge";
+        public const string OrgCardName = "org-card-name";
+        public const string Quickgrid = "quickgrid";
+        public const string StatusBadge = "m3-status-badge";
+        public const string TableContainer = "table-container";
         public const string Truncate = "m3-truncate";
     }
 

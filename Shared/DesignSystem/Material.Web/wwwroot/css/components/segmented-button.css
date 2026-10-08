@@ -4,33 +4,24 @@
    ========================================================================== */
 
 :is(.analytics-mode-pill-group, .m3-segmented-pill-group) {
-    gap: 4px;
     padding: 4px;
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn) {
     grid-template-columns: auto auto;
     gap: 0.4rem;
     padding: 6px 14px;
-    background: transparent;
-    border: none;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
-    font-weight: 500;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-:is(.analytics-mode-btn, .m3-segmented-btn):hover {
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
+:is(.analytics-mode-btn, .m3-segmented-btn):hover  {
+    /* consolidated to w3c rules */
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn).active {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
-    font-weight: 600;
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn) md-icon {
@@ -41,15 +32,11 @@
     grid-template-columns: auto auto auto;
     gap: 0.5rem;
     padding: 8px 16px;
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface);
     font-size: 0.875rem;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
-    background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-outline);
 }
 

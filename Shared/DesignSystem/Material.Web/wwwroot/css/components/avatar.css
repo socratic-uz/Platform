@@ -1,6 +1,6 @@
 /* ─── 1. Avatar & Profile Trigger Component ──────────────────────── */
-.avatar-container {
-    user-select: none;
+.avatar-container  {
+    /* consolidated to w3c rules */
 }
 
 .avatar-button {
@@ -12,7 +12,6 @@
     max-width: 40px;
     border-radius: 50%;
     overflow: visible;
-    padding: 0 !important;
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-outlined-button-container-height: 40px;
     --md-outlined-button-leading-space: 0px;
@@ -37,13 +36,9 @@
 
 .avatar-button img {
     inset: 0;
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    margin: 0;
-    padding: 0;
     z-index: 1;
 }
 
@@ -56,8 +51,6 @@
     height: 24px !important;
     font-size: 24px !important;
     line-height: 24px !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .avatar-button svg * {
@@ -80,50 +73,38 @@ md-dialog.faceid-profile-modal,
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'] {
-    grid-template-columns: minmax(0, 1fr) auto;
-    width: 100%;
     padding: 24px 24px 16px 24px;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content {
     grid-auto-flow: row;
-    gap: 12px;
     padding: 1rem;
-    width: 100%;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row {
     grid-auto-columns: minmax(0, 1fr);
-    gap: 8px;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list {
     border-radius: var(--md-sys-shape-expressive-button);
-    background: var(--md-sys-color-surface-container);
-    width: 100%;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label {
     grid-auto-columns: auto minmax(0, 1fr);
-    gap: 8px;
     padding: 0.5rem 0;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'] {
     grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 8px;
     padding: 12px 24px 24px 24px;
-    width: 100%;
 }
 
-:is(.avatar-container, md-dialog.contacts) details {
-    width: 100%;
+:is(.avatar-container, md-dialog.contacts) details  {
+    /* consolidated to w3c rules */
 }
 
 :is(.avatar-container, md-dialog.contacts) details summary {
@@ -134,7 +115,7 @@ md-dialog.faceid-profile-modal,
     display: none;
 }
 
-:is(.avatar-container, md-dialog.contacts) details summary md-list-item  {
+:is(.avatar-container, md-dialog.contacts) details summary md-list-item   {
     /* consolidated to w3c rules */
 }
 
@@ -142,12 +123,11 @@ md-dialog.faceid-profile-modal,
     padding: 1rem 1.25rem;
     grid-auto-flow: row;
     gap: 0.85rem;
-    width: 100%;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-outlined-text-field,
-.material-text-field {
-    width: 100%;
+.material-text-field  {
+    /* consolidated to w3c rules */
 }
 
 
