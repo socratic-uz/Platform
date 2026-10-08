@@ -212,12 +212,35 @@ public static class M3
         public const string ValidationMessage = "validation-message";
     }
 
+    public static class Geometry
+    {
+        public const string NoScrollbar = "no-scrollbar";
+        public const string PageGutter = "m3-page-gutter";
+        public const string RatioCard = "m3-ratio-card";
+        public const string RatioKiosk = "m3-ratio-kiosk";
+        public const string RatioPortrait = "m3-ratio-portrait";
+        public const string RatioSquare = "m3-ratio-square";
+        public const string RatioVideo = "m3-ratio-video";
+        public const string RatioWide = "m3-ratio-wide";
+        public const string ScrollbarNone = "scrollbar-none";
+        public const string ScrollbarThin = "scrollbar-thin";
+        public const string SectionGutter = "m3-section-gutter";
+        public const string TouchTarget = "m3-touch-target";
+        public const string TouchTargetKiosk = "m3-touch-target-kiosk";
+    }
+
     public static class InfoGrid
     {
         public const string InfoItem = "m3-info-item";
         public const string InfoLabel = "m3-info-label";
         public const string InfoValue = "m3-info-value";
         public const string Root = "m3-info-grid";
+    }
+
+    public static class Motion
+    {
+        public const string HoverLift = "m3-hover-lift";
+        public const string PressScale = "m3-press-scale";
     }
 
     public static class Picker
@@ -385,6 +408,18 @@ public static class M3
         public const string Text = "m3-skeleton-text";
     }
 
+    public static class Spacing
+    {
+        public const string Gap0 = "m3-gap-0";
+        public const string Gap1 = "m3-gap-1";
+        public const string Gap2 = "m3-gap-2";
+        public const string Gap3 = "m3-gap-3";
+        public const string Gap4 = "m3-gap-4";
+        public const string Gap5 = "m3-gap-5";
+        public const string Gap6 = "m3-gap-6";
+        public const string Gap8 = "m3-gap-8";
+    }
+
     public static class Table
     {
         public const string ActionsBar = "m3-table-actions-bar";
@@ -437,6 +472,21 @@ public static class M3
         public const string ModeToggle = "m3-mode-toggle";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
         public const string ModeToggleIcon = "m3-mode-toggle-icon";
+    }
+
+    public static class Typography
+    {
+        public const string BodyLarge = "m3-body-large";
+        public const string BodyMedium = "m3-body-medium";
+        public const string DisplayLarge = "m3-display-large";
+        public const string HeadlineLarge = "m3-headline-large";
+        public const string HeadlineMedium = "m3-headline-medium";
+        public const string LabelSmall = "m3-label-small";
+        public const string LineClamp2 = "m3-line-clamp-2";
+        public const string LineClamp3 = "m3-line-clamp-3";
+        public const string TitleLarge = "m3-title-large";
+        public const string TitleMedium = "m3-title-medium";
+        public const string Truncate = "m3-truncate";
     }
 
 }
