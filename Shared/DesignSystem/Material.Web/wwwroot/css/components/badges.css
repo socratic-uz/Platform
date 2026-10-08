@@ -2,6 +2,7 @@
 
 .badge,
 .m3-badge,
+.status-badge,
 .m3-status-badge,
 .order-status-badge,
 .item-status-pill {
@@ -167,7 +168,8 @@
     line-height: 1;
 }
 
-.m3-status-dot {
+.m3-status-dot,
+.status-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -175,11 +177,13 @@
     background: currentColor;
 }
 
-.m3-status-dot.pulse {
+.m3-status-dot.pulse,
+.status-dot.pulse {
     position: relative;
 }
 
-.m3-status-dot.pulse::after {
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
     content: '';
     position: absolute;
     inset: -3px;

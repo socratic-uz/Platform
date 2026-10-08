@@ -7,8 +7,8 @@
 {
     <MaterialDialog Open="@IsOpen" OpenChanged="@((bool v) => { if (!v) CloseModal(); })" style="max-width: 860px; width: 100%;">
         <Headline>
-            <div class="promotion-modal-header">
-                <div class="header-title-group">
+            <div class="@($"{M3.Dialog.Header} promotion-modal-header")">
+                <div class="@($"{M3.Dialog.TitleGroup} header-title-group")">
                     <div class="header-icon-wrap">
                         <Icon Name="rocket_launch" class="header-rocket-icon" />
                     </div>
@@ -35,10 +35,10 @@
                         @foreach (var plan in ProductPromotionPlanDefinition.AllPlans)
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
-                            <div class="plan-card @(isSelected ? "selected" : "")" @onclick="() => SelectPlan(plan)">
+                            <div class="plan-card @(isSelected ? M3.Picker.Selected : "")" @onclick="() => SelectPlan(plan)">
                                 @if (plan.PlanType == PromotionPlanType.MonthlyTurbo)
                                 {
-                                    <span class="badge badge-pro popular-badge">Популярный выбор</span>
+                                    <span class="@M3.Badge.Root @M3.Badge.Pro popular-badge">Популярный выбор</span>
                                 }
                                 <div class="plan-card-header">
                                     <h4 class="plan-name">@plan.Name</h4>
@@ -63,7 +63,7 @@
 
                     <h3 class="section-heading mt-4">2. Выберите удобный способ оплаты</h3>
                     <div class="payment-methods-grid">
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.UzQr ? "active" : "")">
+                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.UzQr ? M3.Picker.Active : "")">
                             <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.UzQr)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr)" Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">📱 UzQR (MUNIS QR-Online)</span>
@@ -71,7 +71,7 @@
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Click ? "active" : "")">
+                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Click ? M3.Picker.Active : "")">
                             <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Click)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Click)" Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟡 Click / Click Up</span>
@@ -79,7 +79,7 @@
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Payme ? "active" : "")">
+                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Payme ? M3.Picker.Active : "")">
                             <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Payme)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Payme)" Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟢 Payme Business</span>
@@ -87,7 +87,7 @@
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Uzum ? "active" : "")">
+                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Uzum ? M3.Picker.Active : "")">
                             <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Uzum)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum)" Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟣 Uzum Bank</span>
