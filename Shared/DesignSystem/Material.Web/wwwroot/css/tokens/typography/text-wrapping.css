@@ -1,0 +1,25 @@
+/* ==========================================================================
+   W3C CSS Typography - Text Wrapping & Overflow Module
+   Truncation, Line Clamping & Text Wrapping Utilities
+   ========================================================================== */
+
+.m3-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m3-line-clamp-2,
+.m3-line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.m3-line-clamp-2 {
+    -webkit-line-clamp: 2;
+}
+
+.m3-line-clamp-3 {
+    -webkit-line-clamp: 3;
+}

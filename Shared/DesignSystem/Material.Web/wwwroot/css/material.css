@@ -10,14 +10,16 @@
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
 
-/* 2. Design Tokens */
-@import "tokens/spacing.css";
-@import "tokens/geometry.css";
-@import "tokens/elevation.css";
-@import "tokens/motion.css";
-@import "tokens/shape.css";
-@import "tokens/z-index.css";
-@import "tokens/typography.css";
+/* 2. Design Tokens (W3C CSS Specification Modules) */
+@import "tokens/box-model/sizing.css";
+@import "tokens/box-model/spacing.css";
+@import "tokens/box-model/border.css";
+@import "tokens/positioning/stacking.css";
+@import "tokens/overflow/scrollbars.css";
+@import "tokens/typography/font.css";
+@import "tokens/typography/text-wrapping.css";
+@import "tokens/effects/shadow.css";
+@import "tokens/motion/transitions.css";
 
 /* 3. Themes & Expressive Specifications */
 @import "themes/dark.css";

@@ -1,0 +1,72 @@
+/* ==========================================================================
+   W3C CSS Box Model - Sizing Module
+   Specifies standard aspect ratios, touch target ergonomics & viewport heights
+   ========================================================================== */
+
+:root {
+    /* ─── 1. Mathematical Aspect Ratios ────────────────────────────────────── */
+    --md-sys-ratio-square: 1 / 1;        /* QR codes, Avatars, Keypad Buttons, Steppers */
+    --md-sys-ratio-video: 16 / 9;        /* Video Streams, CCTV, Promo Hero Banners */
+    --md-sys-ratio-card: 4 / 3;          /* Universal Product Cards & Media Previews */
+    --md-sys-ratio-portrait: 3 / 4;      /* Smart Badges, Tickets, Loyalty Pass */
+    --md-sys-ratio-kiosk: 16 / 10;       /* Self-Service Kiosks & POS Customer Displays */
+    --md-sys-ratio-wide: 21 / 9;         /* Cinematic Panoramic Headers */
+
+    /* ─── 2. Touch Target Ergonomics (WCAG 2.1 AA) ────────────────────────── */
+    --md-sys-touch-target-min: 48px;
+    --md-sys-touch-target-kiosk: 56px;
+    --md-sys-touch-target-compact: 40px;
+
+    /* ─── 3. Modern Dynamic Viewport Heights (Zero Mobile-URL Bar Jitter) ─── */
+    --md-sys-viewport-height: 100dvh;
+    --md-sys-viewport-height-small: 100svh;
+    --md-sys-viewport-height-large: 100lvh;
+
+    /* ─── 4. Window Size Class Breakpoint Constants ───────────────────────── */
+    --md-sys-breakpoint-compact: 599.98px;
+    --md-sys-breakpoint-medium: 839.98px;
+    --md-sys-breakpoint-expanded: 1199.98px;
+    --md-sys-breakpoint-large: 1599.98px;
+}
+
+/* ─── Aspect Ratio Utility Classes ─────────────────────────────────────────── */
+.m3-ratio-square {
+    aspect-ratio: var(--md-sys-ratio-square) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-video {
+    aspect-ratio: var(--md-sys-ratio-video) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-card {
+    aspect-ratio: var(--md-sys-ratio-card) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-portrait {
+    aspect-ratio: var(--md-sys-ratio-portrait) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-kiosk {
+    aspect-ratio: var(--md-sys-ratio-kiosk) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-wide {
+    aspect-ratio: var(--md-sys-ratio-wide) !important;
+    object-fit: cover;
+}
+
+/* ─── Touch Target Utility Classes ─────────────────────────────────────────── */
+.m3-touch-target {
+    min-width: var(--md-sys-touch-target-min) !important;
+    min-height: var(--md-sys-touch-target-min) !important;
+}
+
+.m3-touch-target-kiosk {
+    min-width: var(--md-sys-touch-target-kiosk) !important;
+    min-height: var(--md-sys-touch-target-kiosk) !important;
+}

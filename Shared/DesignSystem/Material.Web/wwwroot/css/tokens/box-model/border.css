@@ -1,0 +1,34 @@
+/* ==========================================================================
+   W3C CSS Box Model - Border & Shape Module
+   Corner Radii, Pill & Organic Asymmetric Shapes
+   ========================================================================== */
+
+:root {
+    --md-sys-shape-corner-none: 0px;
+    --md-sys-shape-corner-extra-small: 4px;
+    --md-sys-shape-corner-small: 8px;
+    --md-sys-shape-corner-medium: 12px;
+    --md-sys-shape-corner-large: 16px;
+    --md-sys-shape-corner-extra-large: 28px;
+    --md-sys-shape-corner-full: 9999px;
+
+    /* M3 Expressive Asymmetric Pill & Corner Tokens */
+    --md-sys-shape-expressive-card: 24px;
+    --md-sys-shape-expressive-pill: 9999px;
+    --md-sys-shape-expressive-button: 20px;
+    --md-sys-shape-expressive-dock: 32px;
+    --md-sys-shape-expressive-dialog: 28px;
+    --md-sys-shape-expressive-container: 24px;
+
+    /* Asymmetric Organic Radii */
+    --md-sys-shape-expressive-asymmetric-1: 28px 8px 28px 8px;
+    --md-sys-shape-expressive-asymmetric-2: 8px 28px 8px 28px;
+    --md-sys-shape-expressive-cutout: 24px 24px 8px 24px;
+
+    /* Legacy M3 Shape Aliases */
+    --md-sys-shape-asymmetric-start: var(--md-sys-shape-expressive-asymmetric-1);
+    --md-sys-shape-asymmetric-end: var(--md-sys-shape-expressive-asymmetric-2);
+    --md-sys-shape-card-expressive: var(--md-sys-shape-expressive-card);
+    --md-sys-shape-dialog-expressive: var(--md-sys-shape-expressive-dialog);
+    --md-sys-shape-chip-expressive: var(--md-sys-shape-expressive-pill);
+}

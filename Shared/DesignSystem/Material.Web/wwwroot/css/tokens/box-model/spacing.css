@@ -1,0 +1,49 @@
+/* ==========================================================================
+   W3C CSS Box Model - Spacing Module
+   Spatial Grid & Spacing Scale (4/8pt System) & Safe Area Gutters
+   ========================================================================== */
+
+:root {
+    --md-sys-spacing-0: 0px;
+    --md-sys-spacing-1: 0.25rem;   /* 4px */
+    --md-sys-spacing-2: 0.5rem;    /* 8px */
+    --md-sys-spacing-3: 0.75rem;   /* 12px */
+    --md-sys-spacing-4: 1rem;      /* 16px */
+    --md-sys-spacing-5: 1.25rem;   /* 20px */
+    --md-sys-spacing-6: 1.5rem;    /* 24px */
+    --md-sys-spacing-7: 1.75rem;   /* 28px */
+    --md-sys-spacing-8: 2rem;      /* 32px */
+    --md-sys-spacing-10: 2.5rem;   /* 40px */
+    --md-sys-spacing-12: 3rem;     /* 48px */
+    --md-sys-spacing-16: 4rem;     /* 64px */
+    --md-sys-spacing-bottom-nav: 72px;
+
+    /* ─── Fluid Page Gutters & Safe Margins ───────────────────────────────── */
+    --md-sys-gutter-page: clamp(1rem, 2vw + 0.5rem, 2.5rem);
+    --md-sys-gutter-section: clamp(1.25rem, 3vw, 3rem);
+
+    /* ─── PWA & Device Safe Area Insets ───────────────────────────────────── */
+    --md-sys-safe-area-top: env(safe-area-inset-top, 0px);
+    --md-sys-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --md-sys-safe-area-left: env(safe-area-inset-left, 0px);
+    --md-sys-safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+/* ─── Layout Gutter Utilities ──────────────────────────────────────────────── */
+.m3-page-gutter {
+    padding-inline: var(--md-sys-gutter-page) !important;
+}
+
+.m3-section-gutter {
+    padding-inline: var(--md-sys-gutter-section) !important;
+}
+
+/* ─── Grid Gap Utilities (Strict CSS Grid) ─────────────────────────────────── */
+.m3-gap-0 { gap: var(--md-sys-spacing-0) !important; }
+.m3-gap-1 { gap: var(--md-sys-spacing-1) !important; }
+.m3-gap-2 { gap: var(--md-sys-spacing-2) !important; }
+.m3-gap-3 { gap: var(--md-sys-spacing-3) !important; }
+.m3-gap-4 { gap: var(--md-sys-spacing-4) !important; }
+.m3-gap-5 { gap: var(--md-sys-spacing-5) !important; }
+.m3-gap-6 { gap: var(--md-sys-spacing-6) !important; }
+.m3-gap-8 { gap: var(--md-sys-spacing-8) !important; }
