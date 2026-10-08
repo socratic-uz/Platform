@@ -35,7 +35,7 @@
   </Target>
 
   <!-- Level 4: Socratic Quality Gate stop-lever for Release / CI builds -->
-  <Target Name="ValidateCssQualityOnBuild" BeforeTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1')">
+  <Target Name="ValidateCssQuality" BeforeTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1')">
     <Exec Command="pwsh -File &quot;$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1&quot;" 
           ContinueOnError="false" />
   </Target>
