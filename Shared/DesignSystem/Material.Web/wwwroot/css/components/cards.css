@@ -4,7 +4,14 @@
    ========================================================================== */
 
 /* ─── 1. Base M3 Card Surface ────────────────────────────────────────────── */
-.m3-card {
+/* ─── 1. Base M3 Card Surface (Shared Grid Layout & Motion Physics) ── */
+.m3-card,
+[class*="m3-card-"],
+.card-glass,
+.glass-card,
+.card-elevated,
+.card-outlined,
+.card-filled {
     position: relative;
     box-sizing: border-box;
     display: grid !important;
@@ -16,77 +23,45 @@
     min-width: 0;
 }
 
-/* ─── 2. Surface Variants (Glass, Elevated, Outlined, Filled) ─────────────── */
+/* ─── 2. Surface Variants (Modifying only surface tokens) ─────────────── */
 
 /* Glass Surface Card */
 .m3-card-glass,
 .card-glass,
 .glass-card {
-    position: relative;
-    box-sizing: border-box;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
     background: var(--md-sys-glass-surface-container);
     backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
     box-shadow: var(--md-sys-elevation-expressive-1);
     border-radius: var(--md-sys-shape-corner-extra-large);
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 /* Elevated Surface Card */
 .m3-card-elevated,
 .card-elevated {
-    position: relative;
-    box-sizing: border-box;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
     box-shadow: var(--md-sys-elevation-expressive-1);
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 /* Outlined Surface Card */
 .m3-card-outlined,
 .card-outlined {
-    position: relative;
-    box-sizing: border-box;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface);
     border: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: none;
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 /* Filled Surface Card */
 .m3-card-filled,
 .card-filled {
-    position: relative;
-    box-sizing: border-box;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container);
     border: 1px solid transparent;
     box-shadow: none;
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 /* ─── 3. Interactive Micro-Interactions (Spring Sheen & Glow) ───────────── */
@@ -315,7 +290,8 @@
 }
 
 .m3-card-media,
-.org-media {
+.org-media,
+.wishlist-media {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: var(--md-sys-color-surface-container-highest);
@@ -326,7 +302,8 @@
 }
 
 .m3-card-media img,
-.org-media img {
+.org-media img,
+.wishlist-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -335,12 +312,14 @@
 }
 
 .m3-media-card:hover .m3-card-media img,
-.org-card:hover .org-media img {
+.org-card:hover .org-media img,
+.product-card:hover .wishlist-media img {
     transform: scale(1.04);
 }
 
 .m3-card-media-placeholder,
-.org-media-placeholder {
+.org-media-placeholder,
+.wishlist-placeholder {
     width: 100%;
     height: 100%;
     display: grid !important;
@@ -570,36 +549,7 @@ md-filled-card.product-card,
 
 .wishlist-media {
     cursor: pointer;
-    position: relative;
-    border-radius: var(--md-sys-shape-corner-medium);
-    overflow: hidden;
     height: 180px;
-    width: 100%;
-    margin: 0;
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-.wishlist-media img {
-    border-radius: var(--md-sys-shape-corner-medium);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
-}
-
-.product-card:hover .wishlist-media img {
-    transform: scale(1.04);
-}
-
-.wishlist-placeholder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-outline);
-    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 .wishlist-content {
