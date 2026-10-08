@@ -4,8 +4,8 @@
 
 <div class="card-outlined pricing-card">
     <div class="subscription-header">
-        <div class="badge @GetTierBadgeClass()">
-            <Icon Name="@GetTierIcon()" class="badge-icon" />
+        <div class="@M3.Badge.Root @GetTierBadgeClass()">
+            <Icon Name="@GetTierIcon()" class="@M3.Badge.Icon" />
             <span>@GetTierBadgeTitle()</span>
         </div>
         @if (Subscription.IsTrialActive)

@@ -6,6 +6,7 @@ using SharedKernel.Abstractions;
 using Domain.Abstractions;
 using Domain.Entities;
 using Domain.Interfaces;
+using Material.Web;
 
 namespace Shared.Components
 {
@@ -23,9 +24,9 @@ namespace Shared.Components
 
         public string GetTierBadgeClass() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? "badge-trial" : "badge-expired",
-            SubscriptionTier.WithAds => "badge-with-ads",
-            SubscriptionTier.ProAdFree => "badge-pro",
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? M3.Badge.Trial : M3.Badge.Expired,
+            SubscriptionTier.WithAds => M3.Badge.WithAds,
+            SubscriptionTier.ProAdFree => M3.Badge.Pro,
             _ => "badge-default"
         };
 
