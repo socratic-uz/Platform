@@ -16,11 +16,11 @@
                    OnReset="ClearSchedule"
                    Disabled="@Disabled">
     <CustomPreview>
-        <div class="picker-week-mini-dots">
+        <div class="@M3.Picker.WeekMiniDots">
             @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
             {
                 var active = IsDayActive(day);
-                <span class="picker-day-dot @(active ? "active" : "")" title="@($"{GetDayName(day)}: {(active ? (L?["Schedule_WorkingDay"] ?? "Рабочий") : (L?["Schedule_DayOff"] ?? "Выходной"))}")">
+                <span class="@M3.Picker.DayDot @(active ? M3.Picker.Active : "")" title="@($"{GetDayName(day)}: {(active ? (L?["Schedule_WorkingDay"] ?? "Рабочий") : (L?["Schedule_DayOff"] ?? "Выходной"))}")">
                     @GetDayShort(day)
                 </span>
             }

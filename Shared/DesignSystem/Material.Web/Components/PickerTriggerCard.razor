@@ -2,10 +2,10 @@
 @using Microsoft.AspNetCore.Components.Web
 @using Material.Web
 
-<div class="@M3.Picker.TriggerCard @(Disabled ? "disabled" : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
+<div class="@M3.Picker.TriggerCard @(Disabled ? M3.Picker.Disabled : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
     <div class="@M3.Picker.TriggerLeft">
         <!-- Icon Badge (44x44px, R12) -->
-        <div class="@M3.Picker.IconBadge @(HasValue ? "active" : "")">
+        <div class="@M3.Picker.IconBadge @(HasValue ? M3.Picker.Active : "")">
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge
