@@ -1,0 +1,740 @@
+/* ==========================================================================
+   Socratic Platform - Kiosk Self-Service Experience Patterns
+   Strict CSS Grid Architecture (Zero-Flexbox), M3 Expressive Tokens
+   ========================================================================== */
+
+.kiosk-main,
+.kiosk-hero,
+.product-card {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ─── Main Container ────────────────────────────────────────── */
+.kiosk-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 20px 140px 20px;
+    display: grid !important;
+    grid-auto-flow: row;
+    gap: 20px;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ─── Header Section ────────────────────────────────────────── */
+.kiosk-brand {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.kiosk-brand-logo {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-lowest);
+    padding: 2px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    aspect-ratio: 1 / 1;
+}
+
+.kiosk-brand-logo-fallback {
+    height: 36px;
+    width: 36px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    display: grid !important;
+    place-items: center;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.kiosk-brand-info {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.kiosk-brand-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kiosk-brand-tagline {
+    font-size: 0.72rem;
+    color: var(--md-sys-color-on-surface-variant);
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    padding: 2px 8px;
+    font-weight: 600;
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.kiosk-brand-icon {
+    font-size: 13px;
+    color: var(--md-sys-color-primary);
+}
+
+.kiosk-search-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.kiosk-tier-btn {
+    border-radius: 20px !important;
+    font-weight: 600;
+    white-space: nowrap;
+    height: 48px !important;
+    min-height: 48px !important;
+    display: inline-grid !important;
+    align-items: center !important;
+    touch-action: manipulation;
+}
+
+/* ─── Hero Banner ────────────────────────────────────────── */
+.kiosk-hero {
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
+    border-radius: clamp(16px, 3vw, 28px);
+    padding: clamp(20px, 3vw, 36px);
+    display: grid !important;
+    gap: 12px;
+    box-shadow: var(--md-sys-elevation-level-1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.kiosk-hero::before {
+    content: "";
+    position: absolute;
+    inset: -30% auto auto -30%;
+    width: 85%;
+    height: 150%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.kiosk-hero-content {
+    display: grid !important;
+    gap: 8px;
+    z-index: var(--m3-z-content, 1);
+}
+
+.kiosk-hero-content h1 {
+    font-size: clamp(1.3rem, 2.8vw, 2.25rem);
+    font-weight: 800;
+    color: var(--md-sys-color-on-surface);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.kiosk-hero-content p {
+    font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+    color: var(--md-sys-color-on-surface-variant);
+    max-width: 700px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ─── Unified Category Filter Bar ──────────────────────────── */
+.unified-kiosk-filter-bar {
+    margin: 4px 0 12px 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    min-height: auto;
+}
+
+.kiosk-filter-inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    width: 100%;
+}
+
+.kiosk-filter-inner:has(.kiosk-reset-btn) {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+}
+
+.kiosk-filter-stack {
+    display: grid !important;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+.kiosk-filter-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    padding-bottom: 2px;
+}
+
+.kiosk-category-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+    white-space: nowrap;
+    align-self: center;
+}
+
+.kiosk-category-chipset,
+.unified-kiosk-filter-bar md-chip-set {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: max-content !important;
+    gap: 8px !important;
+    align-items: center;
+    width: max-content !important;
+}
+
+.kiosk-reset-btn {
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    align-self: start;
+}
+
+/* ─── Active Orders Tabs ──────────────────────────────────── */
+.active-orders-tabs {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    background: var(--md-sys-color-surface-container-low);
+    padding: 8px 16px;
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    width: 100%;
+    min-height: 52px;
+    box-sizing: border-box;
+}
+
+.active-orders-label {
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.active-orders-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-y;
+    min-width: 0;
+}
+
+.kiosk-new-order-btn {
+    min-width: max-content;
+    min-height: 48px;
+}
+
+/* ─── Product Card & Media ────────────────────────────────── */
+md-filled-card.product-card,
+.product-card {
+    container-type: inline-size;
+    container-name: product-card;
+    padding: 0;
+    min-height: 380px;
+}
+
+.product-media {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: var(--md-sys-color-surface-container-highest);
+    margin: 0;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 16 / 10;
+    transition: transform 0.3s ease;
+}
+
+.product-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: grid !important;
+    place-items: center;
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-outline);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+}
+
+.product-placeholder-icon {
+    font-size: 36px;
+    opacity: 0.45;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.04);
+}
+
+.ux-mode-badge-overlay {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 85%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    padding: 4px 10px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    z-index: var(--m3-z-content, 1);
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 4px;
+    pointer-events: none;
+}
+
+.kiosk-wish-btn-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: var(--m3-z-sticky, 10);
+}
+
+.kiosk-wish-icon {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    border-radius: 50% !important;
+    color: var(--md-sys-color-outline) !important;
+    width: 44px;
+    height: 44px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.kiosk-wish-icon.wished {
+    color: var(--md-sys-color-error) !important;
+    background: var(--md-sys-color-error-container) !important;
+    border-color: var(--md-sys-color-error) !important;
+}
+
+.product-details {
+    cursor: pointer;
+    display: grid !important;
+    gap: 4px;
+    padding: 12px 16px 8px 16px;
+    align-content: start;
+    height: 100%;
+}
+
+.kiosk-product-title-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.kiosk-product-title-link:hover {
+    color: var(--md-sys-color-primary);
+    text-decoration: underline;
+}
+
+.product-desc {
+    font-size: clamp(0.8rem, 1vw, 0.88rem);
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.product-desc:empty {
+    display: none !important;
+    margin: 0 !important;
+}
+
+/* Inline Card Experience Body */
+.inline-card-experience-body {
+    padding: 0 16px 8px 16px;
+    margin-top: auto;
+    margin-bottom: 4px;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    display: grid !important;
+    align-content: center;
+}
+
+.inline-card-experience-body:empty {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+}
+
+.ux-widget {
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: grid !important;
+    gap: 4px;
+}
+
+.ux-widget-auction {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.ux-widget-group {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.ux-widget-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    font-weight: 700;
+}
+
+.ux-widget-subrow {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    font-size: 0.72rem;
+    opacity: 0.85;
+}
+
+.ux-discount-badge {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.ux-widget-ticket,
+.ux-widget-hotel,
+.ux-widget-vehicle,
+.ux-widget-location,
+.ux-widget-subscription {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+}
+
+.ux-widget-quote {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+}
+
+.ux-widget-chips {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+/* Card Footer */
+.kiosk-main .card-footer {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    padding: 10px 16px 12px 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    gap: 8px;
+    min-height: 52px;
+    align-self: end !important;
+    margin-top: auto !important;
+    box-sizing: border-box;
+}
+
+.price-tag {
+    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+/* Cart Bottom Bar */
+.cart-bar {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: var(--m3-z-dialog, 100);
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px)) 24px;
+    background: var(--md-sys-color-surface-container-high);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+    gap: 16px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.cart-summary {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.cart-summary.interactive {
+    cursor: pointer;
+}
+
+.cart-expand-icon {
+    font-size: 20px;
+    opacity: 0.7;
+    margin-left: 4px;
+    color: var(--md-sys-color-on-surface);
+}
+
+.cart-count {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.cart-total {
+    font-weight: 800;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+}
+
+.pay-button {
+    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk, 56px);
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
+    --md-filled-button-label-text-size: 1.05rem;
+    font-weight: 700;
+    min-width: 160px;
+    box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
+}
+
+/* Dialog & Alert Helpers */
+.dialog-headline-wrap {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 12px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.kiosk-dialog-text {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+/* ─── Responsive & Breakpoints ────────────────────────────── */
+@container product-card (max-width: 320px) {
+    .product-title {
+        font-size: 0.88rem;
+    }
+
+    .kiosk-main .card-footer {
+        grid-template-columns: minmax(0, 1fr) !important;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .price-tag {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .kiosk-main .card-footer md-filled-button,
+    .kiosk-main .card-footer md-outlined-button,
+    .kiosk-main .card-footer button,
+    .kiosk-main .card-footer .material-counter {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .kiosk-main {
+        padding: 24px 24px 140px 24px;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    .kiosk-main {
+        padding: 20px 16px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px) 16px;
+    }
+
+    .kiosk-header-content {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        min-width: 0;
+        grid-template-areas:
+            "brand tier"
+            "search actions";
+        gap: 10px 14px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .kiosk-brand {
+        grid-area: brand;
+        min-width: 0;
+    }
+
+    .kiosk-header-actions {
+        display: contents;
+    }
+
+    .kiosk-tier-btn {
+        grid-area: tier;
+        justify-self: end;
+    }
+
+    .kiosk-search-wrapper {
+        grid-area: search;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .kiosk-lang-switcher {
+        grid-area: actions;
+        justify-self: end;
+    }
+
+    .cart-bar {
+        bottom: calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0px));
+        border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
+        margin: 0;
+        inset: auto 0 calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0px)) 0;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .kiosk-main {
+        padding: 16px 12px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px) 12px;
+        gap: 16px;
+    }
+
+    .kiosk-header-content {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        min-width: 0;
+        grid-template-areas:
+            "brand tier"
+            "search search"
+            "actions actions";
+        gap: 8px;
+        padding: 0;
+    }
+
+    .kiosk-brand-tagline {
+        display: none !important;
+    }
+
+    .kiosk-tier-btn {
+        grid-area: tier;
+        justify-self: end;
+    }
+
+    .kiosk-search-wrapper {
+        grid-area: search;
+        width: 100%;
+    }
+
+    .kiosk-lang-switcher {
+        grid-area: actions;
+        justify-self: start;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .cart-bar {
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)) 16px;
+    }
+
+    .kiosk-main .card-footer {
+        grid-template-columns: minmax(0, 1fr) !important;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .kiosk-main .card-footer md-filled-button,
+    .kiosk-main .card-footer md-outlined-button,
+    .kiosk-main .card-footer button,
+    .kiosk-main .card-footer .material-counter {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .price-tag {
+        text-align: left;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .kiosk-category-chipset md-chip,
+    .pay-button,
+    .kiosk-new-order-btn {
+        min-height: 48px;
+    }
+}

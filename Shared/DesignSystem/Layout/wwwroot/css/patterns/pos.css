@@ -1,0 +1,774 @@
+/* ==========================================================================
+   Socratic Platform - Point of Sale (POS) & Store Product Experience Patterns
+   Strict CSS Grid Architecture (Zero-Flexbox), Material Design 3 Expressive
+   ========================================================================== */
+
+/* ─── 1. POS Terminal Core Layout ────────────────────────────────────────── */
+.pos-header-link {
+    text-decoration: none;
+    display: inline-grid !important;
+}
+
+.pos-main {
+    padding: 16px 24px;
+    background-color: var(--md-sys-color-surface);
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.pos-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
+    gap: 20px;
+    height: calc(100vh - 130px);
+    align-items: stretch;
+}
+
+/* Left Catalog Panel */
+.pos-catalog {
+    display: grid !important;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 16px;
+    overflow: hidden;
+    height: 100%;
+    min-width: 0;
+}
+
+.pos-catalog-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding-bottom: 12px;
+    gap: 12px;
+}
+
+.pos-header-title-group {
+    display: grid !important;
+    gap: 4px;
+}
+
+.pos-catalog-header h4 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+}
+
+.pos-org-name {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-outline);
+    margin-top: 2px;
+}
+
+.pos-search-wrapper {
+    width: clamp(200px, 25vw, 320px);
+    justify-self: end;
+}
+
+.pos-search-input {
+    --md-outlined-text-field-container-shape: 12px;
+    width: 100%;
+}
+
+.pos-loading {
+    display: grid !important;
+    place-content: center;
+    justify-items: center;
+    gap: 12px;
+    height: 100%;
+}
+
+.pos-filters {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    padding-bottom: 4px;
+}
+
+.pos-chip-set,
+.pos-filters md-chip-set {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: max-content !important;
+    gap: 8px !important;
+    width: max-content !important;
+}
+
+.pos-grid {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding-right: 4px;
+    padding-bottom: 24px;
+}
+
+/* POS Product Cards */
+.pos-product-card {
+    padding: var(--space-3, 12px);
+    min-height: 130px;
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--space-2, 8px);
+    text-align: left;
+}
+
+.pos-badge-qty {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: var(--m3-z-content, 1);
+}
+
+.pos-card-header-row {
+    display: grid !important;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.pos-card-img,
+.pos-card-img-placeholder {
+    width: 52px;
+    height: 52px;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    object-fit: cover;
+    display: grid !important;
+    place-items: center;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-outline);
+}
+
+.pos-card-title-group {
+    min-width: 0;
+    display: grid !important;
+    gap: 2px;
+    align-content: center;
+}
+
+.pos-ux-mode-title {
+    font-size: 0.7rem;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.pos-product-title-text {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    line-height: 1.25;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pos-card-footer-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    align-self: end;
+    padding-top: 8px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    width: 100%;
+}
+
+.pos-price-text {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.pos-card-footer-row md-icon-button,
+.pos-sidebar-header-row md-icon-button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+/* Right Sidebar Panel */
+.pos-sidebar {
+    background-color: var(--md-sys-color-surface-container-lowest);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-dock, 32px);
+    padding: 20px;
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100%;
+    box-shadow: var(--md-sys-elevation-expressive-2);
+    overflow: hidden;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.pos-sidebar-header {
+    display: grid !important;
+    gap: 8px;
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.pos-sidebar-header-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.pos-orders-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--md-sys-color-on-surface);
+}
+
+.pos-orders-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+}
+
+.pos-invoice-container {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    margin-bottom: 16px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    min-height: 200px;
+}
+
+.pos-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    padding-top: 16px;
+}
+
+.pos-action-btn {
+    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button, 20px);
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
+    height: 52px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.pos-complete-btn {
+    box-shadow: var(--md-sys-elevation-expressive-1), var(--md-sys-glow-primary-subtle);
+}
+
+.pos-quick-bill-btn {
+    display: grid !important;
+    place-items: center;
+    padding: 10px 4px;
+    border-radius: 10px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.pos-quick-bill-btn:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.pos-quick-bill-btn:active {
+    transform: scale(0.97);
+}
+
+.pos-exact-bill-btn {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-color: transparent;
+}
+
+.pos-exact-bill-btn:hover {
+    filter: brightness(0.95);
+}
+
+.pos-tech-chip {
+    display: inline-grid !important;
+    place-items: center;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* ─── 2. Store Product Detail Page ───────────────────────────────────────── */
+.store-product-page {
+    min-height: 100vh;
+    padding: 2rem 1.5rem 5rem;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.store-product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-detail-card {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    background: transparent;
+    border: none;
+    border-radius: 24px;
+    padding: 0;
+}
+
+.product-gallery {
+    display: grid !important;
+    gap: 1rem;
+    align-content: start;
+}
+
+.product-main-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.product-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-main-image-wrap:hover .product-main-img {
+    transform: scale(1.02);
+}
+
+.badge-age-restriction {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgb(from var(--md-sys-color-error) r g b / 0.9);
+    color: var(--md-sys-color-on-error);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+}
+
+.product-thumbnails {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+}
+
+.thumb-btn {
+    width: 72px;
+    height: 72px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.thumb-btn.active, .thumb-btn:hover {
+    opacity: 1;
+    border-color: var(--md-sys-color-primary);
+}
+
+.thumb-btn:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+.thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info-panel {
+    display: grid !important;
+    gap: 1.5rem;
+    align-content: start;
+}
+
+.product-tags {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow-x: auto;
+}
+
+.product-tag-chip {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.product-price-section {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.product-price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+    letter-spacing: -0.02em;
+}
+
+.product-currency {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.product-unit {
+    font-size: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-left: 0.25rem;
+}
+
+.product-description-block h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    white-space: pre-line;
+}
+
+.product-specs-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.spec-item {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.spec-icon {
+    font-size: 1.5rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.spec-icon.in-stock {
+    color: var(--md-sys-color-tertiary);
+}
+
+.spec-details {
+    display: grid !important;
+    gap: 2px;
+    min-width: 0;
+}
+
+.spec-label {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.spec-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.in-stock-text {
+    color: var(--md-sys-color-tertiary);
+}
+
+.product-actions-bar {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.cta-link {
+    text-decoration: none;
+    display: grid !important;
+    width: 100%;
+}
+
+.cta-link .btn-order-kiosk,
+.product-actions-bar md-filled-button,
+.product-actions-bar md-outlined-button,
+.product-actions-bar md-filled-tonal-button {
+    width: 100%;
+    min-height: 48px;
+}
+
+.share-toast {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
+    border: 1px solid var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary-container);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+/* Seller / Store Card */
+.store-seller-card {
+    margin-top: auto;
+    padding: 1.25rem;
+    border-radius: 16px;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    display: grid !important;
+    gap: 1rem;
+}
+
+.seller-header {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+.seller-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.seller-logo-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-highest);
+    display: grid !important;
+    place-items: center;
+    color: var(--md-sys-color-primary);
+}
+
+.seller-info {
+    display: grid !important;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.seller-name-link {
+    text-decoration: none;
+}
+
+.seller-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    transition: color 0.2s ease;
+}
+
+.seller-name:hover {
+    color: var(--md-sys-color-primary);
+}
+
+.seller-address {
+    font-size: 0.825rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.seller-icon {
+    font-size: 1rem;
+}
+
+.seller-browse-all {
+    font-size: 0.875rem;
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    display: inline-grid !important;
+    align-items: center;
+    min-height: 48px;
+}
+
+.seller-browse-all:hover {
+    text-decoration: underline;
+}
+
+.store-not-found {
+    text-align: center;
+    padding: 5rem 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.not-found-icon {
+    font-size: 4rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1rem;
+}
+
+.store-not-found h2 {
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: 0.5rem;
+}
+
+.store-not-found p {
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary-link {
+    text-decoration: none;
+    display: inline-grid !important;
+    justify-content: center;
+}
+
+/* ─── 3. Media Queries for POS & Store Products ──────────────────────────── */
+@media screen and (max-width: 839.98px) {
+    .pos-main {
+        padding: 12px 16px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 32px);
+    }
+
+    .pos-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+        height: auto;
+        gap: 16px;
+    }
+    
+    .pos-sidebar {
+        height: auto;
+        min-height: 440px;
+    }
+
+    .store-product-page {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+
+    .product-detail-card {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .pos-main {
+        padding: 8px 12px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 36px);
+    }
+
+    .pos-catalog-header {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .pos-search-wrapper {
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    .pos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+        gap: 10px;
+        padding-bottom: 24px;
+    }
+
+    .pos-card-header-row {
+        grid-template-columns: 44px minmax(0, 1fr) !important;
+        gap: 8px;
+    }
+
+    .pos-card-img,
+    .pos-card-img-placeholder {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pos-actions {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .product-actions-bar {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 0.625rem;
+    }
+}

@@ -34,3 +34,13 @@
     margin-inline: auto;
     box-sizing: border-box;
 }
+
+/* ─── 4. Universal Chat View ────────────────────────────────────────────── */
+.chat-view {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+}
+

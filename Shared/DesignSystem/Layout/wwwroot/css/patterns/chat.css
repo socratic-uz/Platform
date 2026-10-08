@@ -1,0 +1,417 @@
+/* ==========================================================================
+   Socratic Platform - Conversational AI & Messaging Patterns (M3 Expressive)
+   Covers ChatPage, MessageList, MessageItem, ChatInput, Citations, Suggestions
+   Strict CSS Grid, Zero Flexbox Standard
+   ========================================================================== */
+
+/* ─── 1. Chat Page Root & Layout ─────────────────────────────────────────── */
+.chat-page-root {
+    height: var(--tg-viewport-height, 100dvh);
+    max-height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    color-scheme: dark;
+    background: radial-gradient(circle at 50% 15%, #0f172a 0%, #030712 100%);
+    color: var(--md-sys-color-on-surface, #f8fafc);
+}
+
+.chat-bottom-section {
+    width: 100%;
+    display: grid !important;
+    z-index: 10;
+}
+
+.chat-container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    box-sizing: border-box;
+}
+
+@media (max-width: 599.98px) {
+    .chat-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+    }
+}
+
+/* ─── 2. Chat Header Toolbar ─────────────────────────────────────────────── */
+.chat-header-container {
+    width: 100%;
+    top: 0;
+    padding: 0.75rem 1.5rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+    background: var(--md-sys-color-surface-container, rgba(13, 15, 34, 0.65));
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.1));
+    z-index: 20;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-back-link {
+    display: grid !important;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--md-sys-shape-corner-full, 50%);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--md-sys-color-on-surface, #ffffff);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.chat-back-link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.05);
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 30%, var(--md-sys-color-primary, #818cf8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ─── 3. Message Stream & List ───────────────────────────────────────────── */
+.message-list-container {
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
+    color: var(--md-sys-color-on-surface);
+    box-sizing: border-box;
+}
+
+.message-list {
+    display: grid !important;
+    align-content: start;
+    gap: 1.25rem;
+    min-height: 100%;
+}
+
+.no-messages {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--md-sys-color-on-surface, #f8fafc);
+    margin-top: calc(35vh - 10rem);
+}
+
+.no-messages .text-muted {
+    color: var(--md-sys-color-on-surface-variant, #cbd5e1) !important;
+}
+
+chat-messages > div:last-of-type {
+    margin-bottom: 1rem;
+}
+
+/* ─── 4. Message Items (User & Assistant) ────────────────────────────────── */
+.user-message {
+    background: var(--md-sys-color-primary-container);
+    justify-self: end;
+    min-width: 25%;
+    max-width: calc(100% - 5rem);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
+    color: var(--md-sys-color-on-primary-container);
+    box-shadow: var(--md-sys-elevation-level1, 0 1px 3px rgba(0, 0, 0, 0.12));
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.assistant-message,
+.assistant-search {
+    display: grid !important;
+    grid-template-rows: min-content;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.25rem;
+}
+
+.assistant-message-header {
+    font-weight: 600;
+}
+
+.assistant-message-text {
+    grid-column-start: 2;
+}
+
+.assistant-message-icon {
+    display: grid !important;
+    place-items: center;
+    border-radius: 9999px;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--md-sys-color-on-primary);
+    background: var(--md-sys-color-primary);
+}
+
+.assistant-message-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.assistant-search {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.assistant-search-icon {
+    display: grid !important;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.assistant-search-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.assistant-search-content {
+    align-content: center;
+}
+
+.assistant-search-phrase {
+    font-weight: 600;
+}
+
+/* Assistant Markdown Formats */
+assistant-message ul,
+.assistant-message-text ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+assistant-message ol,
+.assistant-message-text ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+}
+
+assistant-message li,
+.assistant-message-text li {
+    margin: 0.5rem 0;
+}
+
+assistant-message strong,
+.assistant-message-text strong {
+    font-weight: 600;
+}
+
+assistant-message h3,
+.assistant-message-text h3 {
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+assistant-message p + p,
+.assistant-message-text p + p {
+    margin-top: 1rem;
+}
+
+assistant-message table,
+.assistant-message-text table {
+    margin: 1rem 0;
+}
+
+assistant-message th,
+.assistant-message-text th {
+    text-align: left;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+assistant-message th,
+assistant-message td,
+.assistant-message-text th,
+.assistant-message-text td {
+    padding: 0.1rem 0.5rem;
+}
+
+assistant-message th,
+assistant-message tr:nth-child(even),
+.assistant-message-text th,
+.assistant-message-text tr:nth-child(even) {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+assistant-message pre > code,
+.assistant-message-text pre > code {
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+/* ─── 5. Citations ───────────────────────────────────────────────────────── */
+.citation {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom: 2px solid var(--md-sys-color-tertiary);
+    gap: 0.5rem;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level1, 0 1px 3px rgba(0, 0, 0, 0.1));
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.citation[href]:hover {
+    border-color: var(--md-sys-color-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+.citation svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.citation:active {
+    transform: scale(0.96);
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+.citation-content {
+    display: grid !important;
+}
+
+.citation-file {
+    font-weight: 600;
+}
+
+/* ─── 6. Prompt Suggestions ─────────────────────────────────────────────── */
+.suggestions-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    display: grid !important;
+    box-sizing: border-box;
+}
+
+.suggestions-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.suggestions {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: start;
+    padding: 0.25rem 0;
+    width: max-content;
+}
+
+@media (min-width: 600px) {
+    .suggestions-wrapper {
+        justify-content: end;
+    }
+    .suggestions {
+        justify-content: end;
+        width: auto;
+    }
+}
+
+/* ─── 7. Chat Input Field & Controls ─────────────────────────────────────── */
+.chat-input-wrapper,
+.chat-input-form {
+    width: 100%;
+    display: grid !important;
+    box-sizing: border-box;
+}
+
+.input-box {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    background: var(--md-sys-color-surface-container, rgba(30, 41, 59, 0.88));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.16));
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    padding: 0.25rem 0.35rem 0.25rem 1.25rem;
+    min-height: 48px;
+    width: 100%;
+    box-shadow: var(--md-sys-elevation-level1, 0 4px 20px rgba(0, 0, 0, 0.25));
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+    box-sizing: border-box;
+    cursor: text;
+}
+
+.input-box:focus-within {
+    border-color: var(--md-sys-color-primary, #38bdf8);
+    box-shadow: 0 0 0 1px var(--md-sys-color-primary, #38bdf8);
+    outline: none;
+}
+
+.chat-input-wrapper textarea,
+.input-box textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    max-height: 120px;
+    padding: 0.4rem 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface, #f8fafc);
+    box-sizing: border-box;
+    display: block;
+}
+
+.chat-input-wrapper textarea::placeholder,
+.input-box textarea::placeholder {
+    color: var(--md-sys-color-on-surface-variant, #94a3b8);
+}
+
+.tools {
+    display: grid !important;
+    place-items: center;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 599.98px) {
+    .input-box {
+        padding: 0.2rem 0.25rem 0.2rem 0.85rem;
+    }
+    .tools {
+        margin-left: 0.25rem;
+    }
+}

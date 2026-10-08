@@ -130,3 +130,338 @@
    Universal M3 Configuration Dialog, Modal Backdrop & Explorer Panel
    Strict CSS Grid, Zero Flexbox Standard
    ========================================================================== */
+
+/* ─── 7. Universal Ad Slot & Ad Network Container ─────────────────────── */
+.ad-slot {
+    display: grid !important;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.ad-slot.ad-placement-catalog {
+    min-height: 100px;
+}
+
+.ad-slot-container {
+    display: grid !important;
+    align-items: stretch;
+    background: var(--md-sys-color-surface-container);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 16px);
+    overflow: hidden;
+    padding: 0.75rem;
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
+}
+
+.ad-slot-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--md-sys-elevation-expressive-2);
+}
+
+.ad-network-container .google-adsense-wrapper,
+.ad-network-container .yandex-ads-wrapper {
+    width: 100%;
+    min-height: 90px;
+    display: grid !important;
+    place-items: center;
+}
+
+.ad-network-footer {
+    display: grid !important;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: center;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.ad-disclaimer {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+}
+
+.ad-upgrade-link {
+    color: var(--md-sys-color-tertiary);
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ad-upgrade-link:hover {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+
+/* ─── 8. Universal Fullscreen Media Player ───────────────────────────────── */
+.fullscreen-player {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--md-sys-color-scrim);
+    display: grid !important;
+    place-items: center;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.fullscreen-video {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100dvh;
+    object-fit: contain;
+    background-color: var(--md-sys-color-scrim);
+}
+
+.fullscreen-loading {
+    display: grid !important;
+    place-items: center;
+    gap: 1.2rem;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* ─── 9. Kiosk Attract Loop & Screensaver Engine ───────────────────────────────── */
+.kiosk-attract-loop {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100dvh;
+    display: grid !important;
+    align-content: end;
+    justify-items: center;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    animation: kioskFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+@keyframes kioskFadeIn {
+    from { opacity: 0; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.attract-loop-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-in-out;
+    filter: brightness(0.85);
+}
+
+.attract-loop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.2) 0%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.5) 50%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.92) 100%
+    );
+}
+
+.attract-loop-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding: 3rem 2rem 5rem;
+    box-sizing: border-box;
+    display: grid !important;
+    justify-items: center;
+    text-align: center;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Brand Screensaver (PRO / Trial) */
+.brand-screensaver-body {
+    display: grid !important;
+    justify-items: center;
+    gap: 1.25rem;
+    animation: kioskSlideUp 0.6s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.brand-screensaver-logo-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 28px;
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 12px;
+    box-shadow: 0 12px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+    border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.2);
+    display: grid !important;
+    place-items: center;
+}
+
+.brand-screensaver-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.brand-screensaver-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.6);
+}
+
+.brand-screensaver-tagline {
+    font-size: 1.35rem;
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.4;
+    text-shadow: 0 2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+}
+
+.brand-screensaver-cta,
+.ad-slide-touch-prompt {
+    position: relative;
+    margin-top: 1.5rem;
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
+    transition: transform 0.2s ease;
+}
+
+.brand-touch-icon,
+.ad-touch-icon {
+    font-size: 1.75rem;
+}
+
+.pulse-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 54px;
+    border: 2px solid var(--md-sys-color-primary);
+    animation: kioskRingPulse 2s cubic-bezier(0.24, 0, 0, 0.38) infinite;
+    pointer-events: none;
+}
+
+@keyframes kioskRingPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.08); opacity: 0; }
+    100% { transform: scale(1.08); opacity: 0; }
+}
+
+.screensaver-pro-badge {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    margin-top: 1rem;
+    border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.18);
+}
+
+.pro-badge-icon {
+    color: var(--md-sys-color-tertiary-fixed);
+    font-size: 1.1rem;
+}
+
+/* Ad Network Screensaver (Google AdSense / Яндекс РСЯ) */
+.ad-network-screensaver-body {
+    display: grid !important;
+    justify-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    animation: kioskSlideUp 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ad-network-unit-card {
+    width: 100%;
+    max-width: 800px;
+    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.15);
+    border-radius: 24px;
+    padding: 1.25rem;
+    box-shadow: 0 16px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+    display: grid !important;
+    gap: 0.75rem;
+}
+
+.ad-network-badge-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.08);
+}
+
+.ad-network-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--md-sys-color-primary);
+    letter-spacing: 0.05em;
+}
+
+.ad-network-partner {
+    font-size: 0.75rem;
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
+}
+
+.ad-network-render-slot {
+    min-height: 250px;
+    display: grid !important;
+    place-items: center;
+}
+
+.ad-screensaver-footer {
+    display: grid !important;
+    justify-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.ad-org-context {
+    font-size: 0.85rem;
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
+}
+
+@keyframes kioskSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 839.98px) {
+    .brand-screensaver-title {
+        font-size: 2rem;
+    }
+
+    .brand-screensaver-tagline {
+        font-size: 1rem;
+    }
+}
+
+
+

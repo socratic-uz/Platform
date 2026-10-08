@@ -16,7 +16,8 @@
     min-width: 0;
 }
 
-.m3-page-header-title {
+.m3-page-header-title,
+.home-title {
     margin: 0;
     font-size: 1.75rem;
     font-weight: 700;

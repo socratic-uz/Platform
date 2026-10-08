@@ -918,3 +918,263 @@
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
+/* ─── 8. Product Variant Selector Dialog & Resource Booking Pickers ──────── */
+.variant-dialog-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    width: 100%;
+    gap: 12px;
+}
+
+.variant-dialog-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--md-sys-color-on-surface);
+    display: block;
+}
+
+.variant-dialog-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+    margin-top: 2px;
+}
+
+.variant-dialog-body {
+    display: grid !important;
+    gap: 16px;
+    margin-top: 8px;
+    min-width: 0;
+}
+
+.option-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.label-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+}
+
+.required-badge {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    text-transform: none;
+    font-weight: 600;
+}
+
+.variants-chip-set {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
+    gap: 8px;
+}
+
+.options-list-container {
+    display: grid !important;
+    gap: 4px;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 6px 8px;
+}
+
+.option-item-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    cursor: pointer;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    transition: background-color 0.15s ease;
+}
+
+.option-item-row:last-child {
+    border-bottom: none;
+}
+
+.option-item-row:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.option-add-price {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+}
+
+.variant-dialog-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.price-box {
+    display: grid !important;
+    gap: 2px;
+}
+
+.price-label {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+}
+
+.price-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+/* Resource Booking Picker */
+.booking-picker-card {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    padding: clamp(14px, 2.5vw, 20px);
+    color: var(--md-sys-color-on-surface);
+    display: grid !important;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.picker-title-row {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.headline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    margin: 0;
+}
+
+.body-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.resource-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.date-presets-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+    gap: 6px;
+}
+
+.canvas-card {
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.canvas-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 4px;
+}
+
+.canvas-wrapper {
+    height: clamp(180px, 30vh, 240px);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.time-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slots-chip-set {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.booking-summary-banner {
+    background: var(--md-sys-color-primary-container);
+    border: 1px solid var(--md-sys-color-primary);
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 599.98px) {
+    .booking-summary-banner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.summary-left {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.summary-check-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 28px;
+}
+
+.summary-text-box {
+    display: grid !important;
+    gap: 2px;
+}
+
+.summary-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.summary-date {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.summary-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 8px;
+}
+
+

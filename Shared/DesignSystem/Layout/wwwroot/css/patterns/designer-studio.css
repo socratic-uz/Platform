@@ -1,0 +1,512 @@
+/* ==========================================================================
+   Socratic Platform - Interactive Studio Designer Pattern (M3 Expressive)
+   Covers QrDesigner, SeatDesigner, FloorPlan, and Spatial Studios
+   Strict CSS Grid, Zero Flexbox Standard
+   ========================================================================== */
+
+/* ─── 1. Designer Page Root Container ───────────────────────────────────── */
+.designer-page-root,
+.seat-designer-page-root,
+.qr-designer-page-root {
+    display: grid !important;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 1.5rem;
+    min-height: calc(100dvh - 80px);
+    padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    box-sizing: border-box;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.qr-designer-page-root {
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+/* ─── 2. Designer Header Toolbar ─────────────────────────────────────────── */
+.designer-header,
+.qr-designer-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+}
+
+.header-title-group {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.header-icon {
+    font-size: 2.25rem;
+    color: var(--md-sys-color-primary);
+}
+
+.header-text {
+    display: grid;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.page-heading {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ─── 3. Header Presets & Actions ───────────────────────────────────────── */
+.header-presets {
+    display: grid;
+    grid-template-columns: auto repeat(3, max-content);
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.preset-label {
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-right: 0.25rem;
+    font-weight: 500;
+}
+
+.preset-btn {
+    min-height: 48px;
+    padding: 0.5rem 1rem;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    border: 1px solid var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-grid;
+    align-items: center;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+}
+
+.preset-btn:hover {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-color: transparent;
+    transform: translateY(-1px);
+}
+
+.preset-btn:active {
+    transform: scale(0.96);
+}
+
+.header-actions {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mode-indicator {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    min-height: 48px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    font-weight: 500;
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.mode-edit {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.mode-preview {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+/* ─── 4. Notification & Banners ─────────────────────────────────────────── */
+.notification-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
+    font-size: 0.9rem;
+}
+
+.banner-close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-grid;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+/* ─── 5. Designer Workspaces & Panels ───────────────────────────────────── */
+.designer-workspace {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.designer-sidebar {
+    width: clamp(260px, 30vw, 340px);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    overflow: hidden;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    box-sizing: border-box;
+}
+
+.designer-canvas-area {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    min-height: 540px;
+    min-width: 0;
+}
+
+.seat-selection-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
+    min-width: 0;
+}
+
+.card-icon {
+    color: var(--md-sys-color-tertiary);
+    font-size: 1.5rem;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
+.qr-workspace {
+    display: grid;
+    grid-template-columns: min(100%, 420px) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    min-width: 0;
+}
+
+.qr-controls-panel {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+}
+
+.panel-section-title {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.control-group {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.control-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
+}
+
+.text-input, .select-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border: 1px solid var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.text-input:focus, .select-input:focus {
+    outline: none;
+    border-color: var(--md-sys-color-primary);
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.color-item {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.color-picker-row {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+}
+
+.color-picker-row input[type="color"] {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border: none;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.color-hex {
+    font-size: 0.825rem;
+    font-family: monospace;
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
+}
+
+.style-selects-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+}
+
+/* ─── 7. QR & Canvas Preview Area ───────────────────────────────────────── */
+.qr-preview-area {
+    display: grid;
+    align-content: start;
+    min-width: 0;
+}
+
+.preview-card {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    min-width: 0;
+    container-type: inline-size;
+}
+
+.preview-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    min-width: 0;
+}
+
+.preview-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.resolution-badge {
+    font-size: 0.775rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    background: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.qr-stage {
+    display: grid;
+    place-items: center;
+    padding: 2.5rem 1.25rem;
+    background: var(--md-sys-color-surface-container-lowest);
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.qr-canvas-box {
+    display: grid;
+    place-items: center;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
+    max-width: 100%;
+}
+
+.preview-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    min-width: 0;
+}
+
+.preview-info {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    min-width: 0;
+}
+
+.info-icon {
+    color: var(--md-sys-color-tertiary);
+    font-size: 1.25rem;
+}
+
+/* ─── 8. Responsive Geometry ────────────────────────────────────────────── */
+@media (max-width: 839.98px) {
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+        gap: 1.25rem;
+    }
+
+    .designer-header,
+    .qr-designer-header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+
+    .header-presets {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+        gap: 0.6rem;
+    }
+
+    .preset-label {
+        grid-column: 1 / -1;
+        margin-bottom: 0.25rem;
+    }
+
+    .header-actions {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+        gap: 0.6rem;
+    }
+
+    .designer-workspace,
+    .qr-workspace {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+
+    .designer-sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 599.98px) {
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: clamp(0.75rem, 3vw, 1rem) clamp(0.5rem, 2vw, 0.75rem) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.25rem);
+        gap: 1rem;
+    }
+
+    .designer-header,
+    .qr-designer-header {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
+    }
+
+    .page-heading {
+        font-size: clamp(1.05rem, 4vw, 1.15rem);
+    }
+
+    .page-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .header-presets {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .preset-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-actions {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+
+    .mode-indicator {
+        width: 100%;
+    }
+
+    .designer-canvas-area {
+        min-height: 420px;
+    }
+
+    .color-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .qr-stage {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .preview-card {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1rem);
+    }
+
+    .qr-controls-panel {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1.25rem);
+    }
+}
+
+@container (max-width: 340px) {
+    .qr-canvas-box svg,
+    .qr-canvas-box canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}

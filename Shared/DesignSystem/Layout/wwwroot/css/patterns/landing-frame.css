@@ -46,6 +46,38 @@
     display: none;
 }
 
+/* Top Bar Wrapper & Floating Glass Controls for Landing Page */
+.landing-top-bar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    justify-content: end;
+    padding: 1.25rem 1.5rem 0;
+    z-index: 100;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.landing-top-bar-wrapper > * {
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .landing-top-bar-wrapper {
+        position: relative;
+        padding: 0.85rem 1rem 0;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .landing-top-bar-wrapper {
+        padding: 0.65rem 0.75rem 0;
+    }
+}
+
 /* Floating Glass Controls for Landing Page */
 .landing-floating-controls {
     position: absolute;

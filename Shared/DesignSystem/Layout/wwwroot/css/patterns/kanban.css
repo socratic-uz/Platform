@@ -193,4 +193,193 @@
     border-left: 4px solid var(--md-sys-color-primary);
 }
 
+/* ─── Column Badges & Empty States ─────────────────────────────────── */
+.column-badge,
+.count-badge {
+    display: inline-grid;
+    place-items: center;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    line-height: 1;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+}
+
+.badge-making {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.badge-ready {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.column-empty,
+.kds-empty-col {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 2.5rem 1rem;
+    color: var(--md-sys-color-outline);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.empty-mini-icon,
+.kds-empty-icon {
+    font-size: 36px;
+    opacity: 0.6;
+    color: var(--md-sys-color-primary);
+}
+
+/* ─── KDS Card Internal Structure ───────────────────────────────────── */
+.kds-card-top {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+}
+
+.kds-order-ref {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    letter-spacing: 0.04em;
+}
+
+.kds-time-ago {
+    justify-self: end;
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.kds-status-tag {
+    justify-self: end;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-primary-container);
+    background: var(--md-sys-color-primary-container);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.kds-card-main {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+}
+
+.kds-product-name {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.25;
+}
+
+.kds-qty-badge {
+    font-size: 0.9375rem;
+}
+
+.kds-card-actions {
+    display: grid !important;
+    margin-top: var(--md-sys-spacing-2, 0.375rem);
+}
+
+.kds-action-btn {
+    display: grid !important;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    min-height: 48px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.kds-action-btn:active {
+    transform: scale(0.97);
+}
+
+.btn-ready {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.btn-complete {
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+}
+
+.btn-icon {
+    font-size: 1.25rem;
+}
+
+/* ─── Card Status Color Modifiers ───────────────────────────────────── */
+.card-paid .card-status-chip {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.card-making .card-status-chip {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.card-collecting .card-status-chip {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.card-shipping .card-status-chip {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.card-completed .card-status-chip {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.card-created .card-status-chip {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.error-banner {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    align-items: center;
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    border: 1px solid var(--md-sys-color-error);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    font-size: 0.9375rem;
+    margin-top: var(--md-sys-spacing-4, 1rem);
+}
+
+.error-icon {
+    font-size: 1.5rem;
+}
+
+
+
 

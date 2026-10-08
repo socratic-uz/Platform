@@ -148,3 +148,173 @@
     border-radius: 9999px;
     transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
+
+/* ─── 4. Analytics Toolbar & Control Primitives ─────────────────────────── */
+.analytics-toolbar-grid {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+    .analytics-toolbar-grid {
+        grid-template-columns: 100%;
+        gap: 0.75rem;
+    }
+}
+
+.analytics-mode-pill-group {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    padding: 3px;
+    gap: 2px;
+}
+
+.analytics-mode-btn {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.35rem;
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    border: none;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    padding: 0.4rem 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-mode-btn:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+.analytics-mode-btn.active {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-config-btn {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    padding: 0.4rem 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    min-height: 36px;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-config-btn:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    border-color: var(--md-sys-color-outline);
+}
+
+.analytics-period-selector {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 2px;
+}
+
+.analytics-period-chip {
+    display: grid !important;
+    place-items: center;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    touch-action: manipulation;
+    min-height: 36px;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.analytics-period-chip:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    border-color: var(--md-sys-color-outline);
+}
+
+.analytics-period-chip.active {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.analytics-toolbar-actions {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: end;
+}
+
+@media (max-width: 599.98px) {
+    .analytics-toolbar-actions {
+        display: grid !important;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .analytics-status-pill .pill-text {
+        display: none;
+    }
+}
+
+.analytics-status-pill {
+    display: inline-grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.pulse-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-tertiary, #00e676);
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary, #00e676);
+    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
