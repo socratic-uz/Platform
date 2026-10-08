@@ -12,8 +12,6 @@ md-text-button {
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
     --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
-    min-height: var(--md-sys-touch-target-min);
-    touch-action: manipulation;
     font-weight: 600;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
 }
@@ -25,8 +23,6 @@ md-text-button {
 /* Touch-optimized Icon Button (48px Touch Target) */
 md-icon-button {
     min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-    touch-action: manipulation;
 }
 
 /* Icons inside buttons in default slot (unslotted) - fix vertical misalignment */

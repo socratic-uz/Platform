@@ -10,7 +10,6 @@
 :is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card) {
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title) {
@@ -23,9 +22,7 @@
 
 .picker-trigger-card {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border-radius: var(--md-sys-shape-corner-large);
     margin-bottom: var(--md-sys-spacing-2);
     gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     min-height: 64px;
@@ -44,25 +41,18 @@
 
 .picker-trigger-card:hover {
     border-color: var(--md-sys-color-outline);
-    box-shadow: var(--md-sys-elevation-level1);
 }
 
 .picker-trigger-left {
     grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 14px;
-    min-width: 0;
 }
 
 .picker-icon-badge {
-    position: relative;
     width: 44px;
     height: 44px;
-    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface-variant);
-    place-items: center;
-    overflow: hidden;
     transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
@@ -75,14 +65,9 @@
 
 .picker-trigger-text {
     gap: 3px;
-    min-width: 0;
-    overflow: hidden;
 }
 
 .picker-header-row {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 8px;
 }
 
@@ -94,14 +79,10 @@
 }
 
 .picker-badge {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 4px;
     font-size: 11px;
     font-weight: 600;
     padding: 2px 8px;
-    border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-primary);
 }
@@ -121,7 +102,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .picker-custom-preview {
@@ -129,9 +109,6 @@
 }
 
 .picker-trigger-actions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 8px;
     margin-left: auto;
 }
@@ -158,56 +135,39 @@
 .color-badge-swatch {
     width: 100%;
     height: 100%;
-    border-radius: var(--md-sys-shape-corner-medium);
-    position: relative;
-    cursor: pointer;
     box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
 }
 
 .picker-native-input {
-    position: absolute;
     top: -10px;
     left: -10px;
     width: 200%;
     height: 200%;
     opacity: 0;
-    cursor: pointer;
 }
 
 /* Compact Mode */
 .picker-compact-box {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 8px;
-    min-height: var(--md-sys-touch-target-min);
     padding: 6px 10px;
-    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .picker-swatch-wrapper {
-    position: relative;
     width: 28px;
     height: 28px;
-    border-radius: var(--md-sys-shape-corner-small);
     overflow: visible;
     box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
-    cursor: pointer;
-    touch-action: manipulation;
 }
 
 .picker-swatch-wrapper::before,
 .picker-palette-swatch::before {
     content: '';
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
 }
 
 .picker-swatch {
@@ -216,13 +176,9 @@
 }
 
 .picker-hex-wrapper {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 2px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -249,7 +205,6 @@
 .picker-popover-panel {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
     padding: 16px;
     box-shadow: var(--md-sys-elevation-expressive-2);
     gap: 12px;
@@ -270,7 +225,6 @@
 
 .picker-popover-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
@@ -289,15 +243,10 @@
 }
 
 .picker-palette-swatch {
-    position: relative;
     width: 32px;
     height: 32px;
-    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
-    cursor: pointer;
-    touch-action: manipulation;
     padding: 0;
-    place-items: center;
     transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
                 box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
@@ -319,7 +268,6 @@
 
 .picker-popover-footer {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding-top: 8px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
@@ -335,8 +283,8 @@
     margin-bottom: 8px;
 }
 
-.file-add-btn-label {
-    cursor: pointer;
+.file-add-btn-label  {
+    /* consolidated to w3c rules */
 }
 
 /* File Grid Styles */
@@ -347,12 +295,8 @@
 }
 
 .file-card {
-    position: relative;
     aspect-ratio: 1;
-    border-radius: var(--md-sys-shape-corner-large);
-    overflow: hidden;
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-shadow: var(--md-sys-elevation-expressive-1);
     background-color: var(--md-sys-color-surface-container-lowest);
     grid-template-rows: minmax(0, 1fr) auto;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
@@ -368,8 +312,6 @@
 .file-preview-area {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    place-items: center;
     background-color: var(--md-sys-color-surface-container-low);
 }
 
@@ -382,7 +324,6 @@
 .icon-preview {
     width: 100%;
     height: 100%;
-    place-items: center;
     transition: background-color 0.2s ease;
 }
 
@@ -412,19 +353,16 @@
     font-weight: 500;
     color: var(--md-sys-color-on-surface);
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
 }
 
 .file-overlay {
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
-    place-items: center;
     opacity: 0;
     transition: opacity 0.2s ease;
     z-index: 3;
@@ -435,7 +373,6 @@
 }
 
 .new-badge {
-    position: absolute;
     top: 6px;
     left: 6px;
     background: var(--md-sys-color-primary);
@@ -450,13 +387,9 @@
 
 /* Upload Card Style */
 .upload-card {
-    position: relative;
     aspect-ratio: 1;
-    border-radius: var(--md-sys-shape-corner-large);
     border: 2px dashed var(--md-sys-color-outline);
     background: var(--md-sys-color-surface-container-low);
-    place-items: center;
-    cursor: pointer;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
@@ -466,7 +399,6 @@
     background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-primary);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
 .upload-card.dragging {
@@ -482,9 +414,7 @@
     justify-items: center;
     gap: 4px;
     padding: 8px;
-    cursor: pointer;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .upload-icon {
@@ -511,13 +441,11 @@
 }
 
 .file-input-hidden {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    cursor: pointer;
     z-index: 2;
 }
 
@@ -525,8 +453,6 @@
    4. Smart Schedule Picker Component
    ========================================================================== */
 .picker-week-mini-dots {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 4px;
     margin-top: 2px;
 }
@@ -536,8 +462,6 @@
     font-weight: 700;
     width: 20px;
     height: 20px;
-    border-radius: var(--md-sys-shape-corner-small);
-    place-items: center;
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-outline);
     user-select: none;
@@ -550,9 +474,6 @@
 }
 
 .md3-dialog-headline {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 12px;
     font-size: 1.2rem;
     font-weight: 700;
@@ -572,7 +493,6 @@
 .md3-presets-section {
     gap: 8px;
     padding: 12px 14px;
-    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 .md3-presets-label {
@@ -580,15 +500,12 @@
 }
 
 .md3-presets-row {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 6px;
     overflow-x: auto;
 }
 
 .md3-schedule-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 12px;
 }
 
@@ -602,9 +519,7 @@
 
 .md3-schedule-day-card {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding: 8px 14px;
-    border-radius: var(--md-sys-shape-corner-medium);
     gap: 12px;
     transition: background-color 0.15s, border-color 0.15s;
 }
@@ -615,26 +530,18 @@
 }
 
 .md3-schedule-day-left {
-    cursor: pointer;
     user-select: none;
     font-weight: 600;
 }
 
 .md3-schedule-time-group {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 6px;
 }
 
 .md3-time-picker-box {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 4px;
     background: var(--md-sys-color-surface);
     padding: 3px 8px;
-    border-radius: var(--md-sys-shape-corner-small);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -652,7 +559,6 @@
     font-size: 13px;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
-    cursor: pointer;
 }
 
 .md3-time-separator {
@@ -661,12 +567,8 @@
 }
 
 .md3-closed-badge {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 4px;
     padding: 4px 10px;
-    border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-outline);
     font-size: 12px;
@@ -677,7 +579,6 @@
     padding-top: 12px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     width: 100%;
     gap: 12px;
 }
@@ -685,39 +586,29 @@
 /* ==========================================================================
    4. Language Selector & Localization Chips
    ========================================================================== */
-.lang-select {
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
+.lang-select  {
+    /* consolidated to w3c rules */
 }
 
 /* Inline Segmented Mode (ideal for Footer) */
 .lang-inline-grid {
-    grid-auto-flow: column;
     grid-auto-columns: auto;
     gap: 0.35rem;
-    align-items: center;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-button);
     padding: 0.2rem;
-    box-sizing: border-box;
 }
 
 .lang-chip-btn {
-    place-items: center;
     min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
     padding: 0.2rem 0.65rem;
     border: none;
-    border-radius: var(--md-sys-shape-corner-large);
     background: transparent;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    cursor: pointer;
-    touch-action: manipulation;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
@@ -740,15 +631,12 @@
 }
 
 /* Pill Dropdown Mode (ideal for Header) */
-.lang-dropdown-wrapper {
-    position: relative;
-    place-items: center;
+.lang-dropdown-wrapper  {
+    /* consolidated to w3c rules */
 }
 
 .lang-pill-btn {
-    grid-auto-flow: column;
     grid-auto-columns: auto auto auto;
-    align-items: center;
     gap: 0.4rem;
     min-height: var(--md-sys-touch-target-compact);
     padding: 0.25rem 0.65rem;
@@ -758,8 +646,6 @@
     color: var(--md-sys-color-on-surface);
     font-size: 0.8rem;
     font-weight: 600;
-    cursor: pointer;
-    touch-action: manipulation;
     transition: background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -792,14 +678,12 @@
 }
 
 .lang-dropdown-menu {
-    position: absolute;
     top: calc(100% + 6px);
     right: 0;
     z-index: 100;
     min-width: 130px;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
     padding: 0.35rem;
     box-shadow: var(--md-sys-elevation-level3);
     gap: 0.2rem;
@@ -807,18 +691,13 @@
 
 .lang-menu-item {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding: 0.5rem 0.75rem;
-    border-radius: var(--md-sys-shape-corner-small);
     border: none;
     background: transparent;
     color: var(--md-sys-color-on-surface);
     font-size: 0.825rem;
     font-weight: 500;
-    cursor: pointer;
     text-align: left;
-    min-height: var(--md-sys-touch-target-min);
-    touch-action: manipulation;
     transition: background 0.15s ease;
 }
 
@@ -857,7 +736,6 @@
 .variant-dialog-body {
     gap: 16px;
     margin-top: 8px;
-    min-width: 0;
 }
 
 .option-fieldset {
@@ -873,9 +751,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 8px;
 }
 
@@ -884,7 +759,6 @@
     color: var(--md-sys-color-on-error-container);
     font-size: 0.7rem;
     padding: 2px 8px;
-    border-radius: var(--md-sys-shape-corner-small);
     text-transform: none;
     font-weight: 600;
 }
@@ -896,17 +770,13 @@
 
 .options-list-container {
     gap: 4px;
-    border-radius: var(--md-sys-shape-corner-medium);
     padding: 6px 8px;
 }
 
 .option-item-row {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     padding: 6px 8px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    cursor: pointer;
-    border-radius: var(--md-sys-shape-corner-small);
     transition: background-color 0.15s ease;
 }
 
@@ -926,7 +796,6 @@
 
 .variant-dialog-actions {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     width: 100%;
     gap: 12px;
 }
@@ -949,7 +818,6 @@
 
 /* Resource Booking Picker */
 .booking-picker-card {
-    border-radius: var(--md-sys-shape-corner-large);
     padding: clamp(14px, 2.5vw, 20px);
     color: var(--md-sys-color-on-surface);
     gap: 14px;
@@ -957,8 +825,6 @@
 }
 
 .picker-title-row {
-    grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 12px;
 }
@@ -990,21 +856,17 @@
 .canvas-card {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
     padding: 12px;
 }
 
 .canvas-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     margin-bottom: 8px;
     gap: 4px;
 }
 
 .canvas-wrapper {
     height: clamp(180px, 30vh, 240px);
-    border-radius: var(--md-sys-shape-corner-medium);
-    overflow: hidden;
     background: var(--md-sys-color-surface-container-highest);
 }
 
@@ -1023,10 +885,8 @@
 .booking-summary-banner {
     background: var(--md-sys-color-primary-container);
     border: 1px solid var(--md-sys-color-primary);
-    border-radius: var(--md-sys-shape-corner-medium);
     padding: 12px 16px;
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 12px;
 }
 
@@ -1037,8 +897,6 @@
 }
 
 .summary-left {
-    grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 10px;
 }
@@ -1064,8 +922,6 @@
 }
 
 .summary-actions {
-    grid-auto-flow: column;
-    align-items: center;
     gap: 8px;
 }
 

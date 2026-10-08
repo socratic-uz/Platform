@@ -7,16 +7,12 @@
 .order-status-badge,
 .item-status-pill {
     display: inline-grid !important;
-    grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: 0.4rem;
     padding: 0.25rem 0.75rem;
-    border-radius: var(--md-sys-shape-corner-full);
     font-size: 0.8rem;
     font-weight: 600;
     white-space: nowrap;
-    box-sizing: border-box;
     line-height: 1;
 }
 
@@ -133,13 +129,11 @@
 
 .badge-counter {
     display: inline-grid;
-    place-items: center;
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     font-size: 0.75rem;
     font-weight: 800;
     padding: 2px 8px;
-    border-radius: var(--md-sys-shape-corner-full);
     box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
     line-height: 1;
 }
@@ -154,14 +148,13 @@
 }
 
 .m3-status-dot.pulse,
-.status-dot.pulse {
-    position: relative;
+.status-dot.pulse  {
+    /* consolidated to w3c rules */
 }
 
 .m3-status-dot.pulse::after,
 .status-dot.pulse::after {
     content: '';
-    position: absolute;
     inset: -3px;
     border-radius: 50%;
     background: inherit;
@@ -177,19 +170,15 @@
 /* Universal Pill Badges (Section Headers, Feature Tags) */
 .m3-pill-badge {
     display: inline-grid !important;
-    grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1.1rem;
-    border-radius: var(--md-sys-shape-corner-full);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
     color: var(--md-sys-color-primary);
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    box-sizing: border-box;
     line-height: 1;
 }
 
@@ -209,17 +198,14 @@
 .m3-count-badge,
 .count-badge {
     display: inline-grid !important;
-    place-items: center;
     min-width: 28px;
     height: 24px;
     padding: 0 0.5rem;
-    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     font-size: 0.8rem;
     font-weight: 700;
     line-height: 1;
-    box-sizing: border-box;
 }
 
 .kds-qty-badge,
@@ -236,20 +222,15 @@
     color: var(--md-sys-color-on-primary-container);
     background: var(--md-sys-color-primary-container);
     padding: 0.2rem 0.5rem;
-    border-radius: var(--md-sys-shape-corner-full);
 }
 
 /* Header Context Indicators & Back Navigation */
 .back-button,
 .m3-back-button {
     display: inline-grid !important;
-    grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: var(--md-sys-spacing-2);
-    min-height: var(--md-sys-touch-target-min);
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    border-radius: var(--md-sys-shape-corner-full);
     background: transparent;
     color: var(--md-sys-color-primary);
     text-decoration: none;
@@ -257,7 +238,6 @@
     font-weight: 600;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    box-sizing: border-box;
 }
 
 .back-button:hover,
@@ -276,18 +256,14 @@
 
 .items-count-badge {
     display: inline-grid !important;
-    grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
     font-weight: 600;
     white-space: nowrap;
-    box-sizing: border-box;
 }
 
 .badge-icon {

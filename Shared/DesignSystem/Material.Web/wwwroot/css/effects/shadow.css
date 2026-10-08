@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Effects - Shadow & Elevation Rules Module
    Material Design 3 Surface Elevations & Liquid Glass Surfaces
@@ -50,4 +51,41 @@
     background: var(--md-sys-glass-surface-container) !important;
     backdrop-filter: var(--md-sys-glass-blur-heavy);
     border: var(--md-sys-glass-border-dark);
+}
+
+/* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
+
+/* Universal Expressive Level 1 Elevation Grouping */
+:is(
+    .m3-card-glass,
+    .card-glass,
+    .glass-card,
+    .m3-card-elevated,
+    .card-elevated,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .file-card,
+    .upload-card:hover
+) {
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+/* Universal Level 1 Elevation Grouping */
+:is(
+    .picker-trigger-card:hover,
+    :is(.m3-search-container, .material-search-container) md-outlined-text-field:focus-within,
+    :is(.analytics-mode-btn, .m3-segmented-btn).active
+) {
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+/* Universal No Shadow Grouping */
+:is(
+    .m3-card-outlined,
+    .card-outlined,
+    .m3-card-filled,
+    .card-filled
+) {
+    box-shadow: none;
 }

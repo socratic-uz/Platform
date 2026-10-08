@@ -12,14 +12,10 @@
 .card-elevated,
 .card-outlined,
 .card-filled {
-    position: relative;
-    box-sizing: border-box;
     grid-template-columns: minmax(0, 1fr);
-    border-radius: var(--md-sys-shape-expressive-card);
     transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
                 box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    min-width: 0;
 }
 
 /* ─── 2. Surface Variants (Modifying only surface tokens) ─────────────── */
@@ -32,41 +28,32 @@
     backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
-    box-shadow: var(--md-sys-elevation-expressive-1);
-    border-radius: var(--md-sys-shape-corner-extra-large);
 }
 
 /* Elevated Surface Card */
 .m3-card-elevated,
 .card-elevated {
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
-    box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
 /* Outlined Surface Card */
 .m3-card-outlined,
 .card-outlined {
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-shadow: none;
 }
 
 /* Filled Surface Card */
 .m3-card-filled,
 .card-filled {
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container);
     border: 1px solid transparent;
-    box-shadow: none;
 }
 
 /* ─── 3. Interactive Micro-Interactions (Spring Sheen & Glow) ───────────── */
 .m3-card-interactive,
 .card-interactive {
-    cursor: pointer;
     user-select: none;
     text-decoration: none;
     color: inherit;
@@ -75,7 +62,6 @@
 .m3-card-interactive::before,
 .card-interactive::before {
     content: '';
-    position: absolute;
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
@@ -123,10 +109,7 @@
 /* ─── 5. Card Structural Elements (Slots) ────────────────────────────────── */
 :is(.m3-card-header, .card-header) {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 0.75rem;
-    min-width: 0;
-    box-sizing: border-box;
 }
 
 :is(.m3-card-title, .card-title) {
@@ -147,17 +130,10 @@
 
 :is(.m3-card-body, .card-body) {
     gap: 0.75rem;
-    min-width: 0;
-    box-sizing: border-box;
 }
 
 :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions) {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: 0.75rem;
-    min-width: 0;
-    box-sizing: border-box;
 }
 
 /* ─── 6. Summary Card Pattern ────────────────────────────────────────────── */
@@ -166,8 +142,6 @@
     padding: var(--md-sys-spacing-5) var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large);
-    box-sizing: border-box;
 }
 
 :is(.m3-summary-title, .summary-title) {
@@ -184,7 +158,6 @@
 
 :is(.m3-summary-row, .summary-row) {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: var(--md-sys-spacing-2);
 }
 
@@ -230,22 +203,16 @@
 
 :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link) {
     width: 100%;
-    min-height: var(--md-sys-touch-target-min);
     text-decoration: none;
 }
 
 /* ─── 7. Media Card Pattern ──────────────────────────────────────────────── */
 :is(.m3-media-card, .media-card, .org-card) {
-    cursor: pointer;
     height: 100%;
     grid-template-rows: auto minmax(0, 1fr);
-    overflow: hidden;
-    border-radius: var(--md-sys-shape-corner-large);
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    box-sizing: border-box;
     width: 100%;
-    min-width: 0;
 }
 
 :is(.m3-media-card, .media-card, .org-card):hover {
@@ -256,10 +223,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     background: var(--md-sys-color-surface-container-highest);
-    overflow: hidden;
-    position: relative;
     margin: 0;
-    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 :is(.m3-card-media, .org-media, .wishlist-media) img {
@@ -277,7 +241,6 @@
 :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder) {
     width: 100%;
     height: 100%;
-    place-items: center;
     color: var(--md-sys-color-on-surface-variant);
     opacity: 0.6;
 }
@@ -292,9 +255,6 @@
     gap: 0.35rem;
     align-content: start;
     padding: 0.75rem 0.25rem 0.5rem;
-    box-sizing: border-box;
-    min-width: 0;
-    overflow: hidden;
 }
 
 .org-card-name {
@@ -304,7 +264,6 @@
     line-height: 1.3;
     color: var(--md-sys-color-on-surface);
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -316,7 +275,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
     word-break: break-word;
 }
 
@@ -324,33 +282,26 @@
 md-filled-card,
 md-outlined-card,
 md-elevated-card {
-    overflow: hidden;
     text-align: left;
     text-decoration: none;
-    box-sizing: border-box;
     border: none;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     align-content: stretch;
     height: 100%;
     margin-bottom: 0;
-    border-radius: var(--md-sys-shape-expressive-card);
     transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
                 box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
                 background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard);
-    position: relative;
     font: inherit;
     width: 100%;
-    min-width: 0;
     max-width: 100%;
     border: var(--md-sys-glass-border-dark);
-    box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card)::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -379,9 +330,6 @@ md-elevated-card {
 :is(md-filled-card, md-outlined-card, md-elevated-card) figure {
     margin: 0;
     background: var(--md-sys-color-surface-container-highest);
-    overflow: hidden;
-    border-radius: var(--md-sys-shape-corner-large);
-    position: relative;
     width: 100%;
 }
 
@@ -400,8 +348,6 @@ md-elevated-card {
 :is(md-filled-card, md-outlined-card, md-elevated-card) section {
     gap: 6px;
     margin: 10px 0;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
@@ -417,7 +363,6 @@ md-elevated-card {
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) p {
     text-align: left;
-    overflow: hidden;
     margin: 0;
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -429,9 +374,7 @@ md-elevated-card {
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 8px;
-    box-sizing: border-box;
     margin-top: 4px;
 }
 
@@ -453,27 +396,22 @@ md-elevated-card {
 md-filled-card.product-card,
 .product-card {
     grid-template-rows: auto minmax(0, 1fr) auto !important;
-    position: relative;
-    overflow: hidden;
     padding: 12px;
     height: 100% !important;
     min-height: 320px;
 }
 
 .wishlist-wish-btn {
-    position: absolute;
     top: 10px;
     right: 10px;
     z-index: 3;
 }
 
 .wishlist-media {
-    cursor: pointer;
     height: 180px;
 }
 
 .wishlist-content {
-    cursor: pointer;
     margin-top: 10px;
     gap: 4px;
     align-content: start;
@@ -494,13 +432,10 @@ md-filled-card.product-card,
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .wishlist-card-footer {
     grid-template-columns: minmax(0, 1fr) auto;
-    min-width: 0;
-    align-items: center;
     gap: 8px;
     padding-top: 12px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -529,7 +464,6 @@ md-filled-card.product-card,
     max-width: 100%;
     max-height: 150px;
     object-fit: cover;
-    border-radius: var(--md-sys-shape-corner-small);
 }
 
 .wishlist-details-desc {

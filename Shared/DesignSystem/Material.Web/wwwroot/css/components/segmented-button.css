@@ -4,30 +4,22 @@
    ========================================================================== */
 
 :is(.analytics-mode-pill-group, .m3-segmented-pill-group) {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 4px;
     padding: 4px;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full);
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn) {
     grid-template-columns: auto auto;
-    align-items: center;
     gap: 0.4rem;
     padding: 6px 14px;
     background: transparent;
     border: none;
-    border-radius: var(--md-sys-shape-corner-full);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
     font-weight: 500;
-    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-    min-height: var(--md-sys-touch-target-min);
-    touch-action: manipulation;
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn):hover {
@@ -39,7 +31,6 @@
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     font-weight: 600;
-    box-shadow: var(--md-sys-elevation-level1);
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn) md-icon {
@@ -48,17 +39,13 @@
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
     grid-template-columns: auto auto auto;
-    align-items: center;
     gap: 0.5rem;
     padding: 8px 16px;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full);
     color: var(--md-sys-color-on-surface);
     font-size: 0.875rem;
-    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-    min-height: var(--md-sys-touch-target-min);
 }
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
@@ -68,6 +55,5 @@
 
 :is(.analytics-header-controls, .m3-header-controls) {
     grid-template-columns: auto auto;
-    align-items: center;
     gap: 0.75rem;
 }

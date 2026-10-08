@@ -1,14 +1,9 @@
 /* ─── 1. Avatar & Profile Trigger Component ──────────────────────── */
 .avatar-container {
-    place-items: center;
-    position: relative;
-    box-sizing: border-box;
     user-select: none;
 }
 
 .avatar-button {
-    position: relative;
-    place-items: center;
     align-content: center;
     justify-content: center;
     width: 40px;
@@ -17,8 +12,6 @@
     max-width: 40px;
     border-radius: 50%;
     overflow: visible;
-    cursor: pointer;
-    touch-action: manipulation;
     padding: 0 !important;
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-outlined-button-container-height: 40px;
@@ -36,23 +29,19 @@
 
 .avatar-button::before {
     content: '';
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
 }
 
 .avatar-button img {
-    position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     z-index: 1;
@@ -60,7 +49,6 @@
 
 .avatar-button md-icon,
 .avatar-button .material-symbols-outlined {
-    position: absolute !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
@@ -68,7 +56,6 @@
     height: 24px !important;
     font-size: 24px !important;
     line-height: 24px !important;
-    place-items: center !important;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -94,9 +81,7 @@ md-dialog.faceid-profile-modal,
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'] {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     width: 100%;
-    box-sizing: border-box;
     padding: 24px 24px 16px 24px;
 }
 
@@ -110,38 +95,30 @@ md-dialog.faceid-profile-modal,
     grid-auto-flow: row;
     gap: 12px;
     padding: 1rem;
-    box-sizing: border-box;
     width: 100%;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row {
-    grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr);
     gap: 8px;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list {
     border-radius: var(--md-sys-shape-expressive-button);
-    overflow: hidden;
     background: var(--md-sys-color-surface-container);
     width: 100%;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label {
-    grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 8px;
-    cursor: pointer;
     padding: 0.5rem 0;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'] {
     grid-template-columns: auto minmax(0, 1fr) auto auto;
-    align-items: center;
     gap: 8px;
     padding: 12px 24px 24px 24px;
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -151,22 +128,20 @@ md-dialog.faceid-profile-modal,
 
 :is(.avatar-container, md-dialog.contacts) details summary {
     list-style: none;
-    cursor: pointer;
 }
 
 :is(.avatar-container, md-dialog.contacts) details summary::-webkit-details-marker {
     display: none;
 }
 
-:is(.avatar-container, md-dialog.contacts) details summary md-list-item {
-    cursor: pointer;
+:is(.avatar-container, md-dialog.contacts) details summary md-list-item  {
+    /* consolidated to w3c rules */
 }
 
 :is(.avatar-container, md-dialog.contacts) details .content {
     padding: 1rem 1.25rem;
     grid-auto-flow: row;
     gap: 0.85rem;
-    box-sizing: border-box;
     width: 100%;
 }
 

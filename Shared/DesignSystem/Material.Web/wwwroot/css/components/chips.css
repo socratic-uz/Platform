@@ -1,24 +1,17 @@
 /* Material Design 3 Expressive - Filter Chips & Segmented Controls */
 
 .m3-filter-chip {
-    position: relative;
     display: inline-grid !important;
-    grid-auto-flow: column;
     grid-auto-columns: max-content auto max-content;
-    align-items: center;
     gap: 0.5rem;
     height: 40px;
     padding: 0 1rem;
-    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
     font-weight: 500;
-    cursor: pointer;
     user-select: none;
-    box-sizing: border-box;
-    touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
                 border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
@@ -27,7 +20,6 @@
 
 @media (pointer: coarse) {
     .m3-filter-chip {
-        min-height: var(--md-sys-touch-target-min);
     }
 }
 
@@ -59,7 +51,6 @@
 .m3-filter-chip-count {
     background: rgb(from var(--md-sys-color-on-surface) r g b / 0.1);
     padding: 0.1rem 0.45rem;
-    border-radius: var(--md-sys-shape-corner-full);
     font-size: 0.75rem;
     font-weight: 600;
 }

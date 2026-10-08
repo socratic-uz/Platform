@@ -6,14 +6,11 @@
 :is(.m3-progress-container, .progress-bar-container) {
     gap: var(--md-sys-spacing-1);
     width: 100%;
-    box-sizing: border-box;
 }
 
 :is(.m3-progress-track, .progress-bar-bg) {
     background-color: var(--md-sys-color-surface-variant);
     height: 8px;
-    border-radius: var(--md-sys-shape-corner-full);
-    overflow: hidden;
     width: 100%;
 }
 

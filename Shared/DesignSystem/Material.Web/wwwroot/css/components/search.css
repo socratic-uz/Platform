@@ -1,13 +1,9 @@
 :is(.m3-search-container, .material-search-container) {
-    align-items: center;
     width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
 }
 
 :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
     width: 100%;
-    min-width: 0;
     height: 40px;
     --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
     --md-outlined-text-field-top-space: 2px;
@@ -22,8 +18,8 @@
     transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
 
-:is(.m3-search-container, .material-search-container) md-outlined-text-field:focus-within {
-    box-shadow: var(--md-sys-elevation-level1);
+:is(.m3-search-container, .material-search-container) md-outlined-text-field:focus-within  {
+    /* consolidated to w3c rules */
 }
 
 :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"] {

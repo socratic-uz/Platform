@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Positioning - Position & Inset Rules Module
    Position Primitives & Bounding Insets
@@ -21,4 +22,72 @@
 
 .m3-inset-0 {
     inset: 0 !important;
+}
+
+/* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
+
+/* Universal Relative Positioning Grouping */
+:is(
+    .avatar-container,
+    .avatar-button,
+    .m3-status-dot.pulse,
+    .status-dot.pulse,
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    :is(.m3-card-media, .org-media, .wishlist-media),
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    md-filled-card.product-card,
+    .product-card,
+    .m3-filter-chip,
+    .picker-icon-badge,
+    .color-badge-swatch,
+    .picker-swatch-wrapper,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .lang-select,
+    .lang-dropdown-wrapper,
+    .m3-skeleton,
+    .table-container th,
+    table.quickgrid th,
+    .col-header-content,
+    button.col-title,
+    .drop-container
+) {
+    position: relative;
+}
+
+/* Universal Absolute Positioning Grouping */
+:is(
+    .avatar-button img,
+    .avatar-button md-icon,
+    .avatar-button .material-symbols-outlined,
+    .wishlist-wish-btn,
+    .picker-native-input,
+    .file-overlay,
+    .new-badge,
+    .file-input-hidden,
+    .lang-dropdown-menu,
+    .col-options,
+    .col-width-draghandle
+),
+.col-width-draghandle::after,
+.avatar-button::before,
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after,
+.m3-card-interactive::before,
+.card-interactive::before,
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before,
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before,
+.m3-skeleton::after {
+    position: absolute;
 }

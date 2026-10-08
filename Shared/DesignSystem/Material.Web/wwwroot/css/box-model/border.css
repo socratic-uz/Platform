@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Box Model - Border & Corner Shapes Rules Module
    Material Design 3 Expressive Corner Shapes & Border Utilities
@@ -42,4 +43,130 @@
 
 .m3-border-none {
     border: none !important;
+}
+
+/* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
+
+/* Universal Full / Pill Shape Grouping */
+:is(
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .badge-counter,
+    .m3-pill-badge,
+    .m3-count-badge,
+    .count-badge,
+    .kds-status-tag,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    .m3-filter-chip,
+    .m3-filter-chip-count,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    :is(.m3-progress-track, .progress-bar-bg),
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
+    .m3-mode-toggle,
+    .mode-toggle
+) {
+    border-radius: var(--md-sys-shape-corner-full);
+}
+
+/* Universal Expressive Card Shape Grouping */
+:is(
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    .m3-card-elevated,
+    .m3-card-outlined,
+    .m3-card-filled,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .picker-popover-panel,
+    .m3-skeleton-card
+) {
+    border-radius: var(--md-sys-shape-expressive-card);
+}
+
+/* Universal Extra Large Surface Shape Grouping */
+:is(
+    .m3-card-glass,
+    .card-glass,
+    .glass-card,
+    :is(.m3-summary-card, .summary-card),
+    .m3-empty-state,
+    .kiosk-empty-state
+) {
+    border-radius: var(--md-sys-shape-corner-extra-large);
+}
+
+/* Universal Large Container Shape Grouping */
+:is(
+    :is(.m3-media-card, .media-card, .org-card),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    .m3-dialog-toggle-item,
+    .pos-empty-state,
+    .m3-fieldset,
+    .picker-trigger-card,
+    .file-card,
+    .upload-card,
+    .lang-chip-btn,
+    .booking-picker-card,
+    .m3-table-wrapper,
+    .order-items-table-wrapper
+),
+::-webkit-color-swatch-wrapper,
+::-webkit-color-swatch,
+::-moz-color-swatch {
+    border-radius: var(--md-sys-shape-corner-large);
+}
+
+/* Universal Medium Container Shape Grouping */
+:is(
+    :is(.m3-card-media, .org-media, .wishlist-media),
+    :is(.m3-banner-error, .error-banner),
+    .picker-icon-badge,
+    .color-badge-swatch,
+    .picker-compact-box,
+    .md3-presets-section,
+    .md3-schedule-day-card,
+    .lang-dropdown-menu,
+    .options-list-container,
+    .canvas-card,
+    .canvas-wrapper,
+    .booking-summary-banner,
+    .m3-skeleton,
+    .col-options
+) {
+    border-radius: var(--md-sys-shape-corner-medium);
+}
+
+/* Universal Small Element Shape Grouping */
+:is(
+    .wishlist-details-thumb,
+    .picker-badge,
+    .picker-swatch-wrapper,
+    .picker-hex-wrapper,
+    .picker-palette-swatch,
+    .picker-day-dot,
+    .md3-time-picker-box,
+    .md3-closed-badge,
+    .lang-menu-item,
+    .required-badge,
+    .option-item-row,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea
+) {
+    border-radius: var(--md-sys-shape-corner-small);
 }

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Overflow Module - Overflow Primitives
    Container Clipping & Scroll Boundary Utilities
@@ -17,4 +18,40 @@
 
 .m3-overflow-y-auto {
     overflow-y: auto !important;
+}
+
+/* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
+
+/* Universal Hidden Overflow Grouping */
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    :is(.m3-media-card, .media-card, .org-card),
+    :is(.m3-card-media, .org-media, .wishlist-media),
+    .org-card-content,
+    .org-card-name,
+    .org-card-desc,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) section,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    md-filled-card.product-card,
+    .product-card,
+    .wishlist-desc-text,
+    .picker-icon-badge,
+    .picker-trigger-text,
+    .picker-preview-text,
+    .file-card,
+    .file-preview-area,
+    .file-name,
+    .canvas-wrapper,
+    :is(.m3-progress-track, .progress-bar-bg),
+    .m3-skeleton,
+    .col-title-text,
+    .drop-container,
+    .m3-mode-toggle,
+    .mode-toggle
+) {
+    overflow: hidden;
 }

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Box Model - Sizing Rules Module
    Ergonomic Touch Targets & Mathematical Aspect Ratios
@@ -43,4 +44,139 @@
 .m3-touch-target-kiosk {
     min-width: var(--md-sys-touch-target-kiosk) !important;
     min-height: var(--md-sys-touch-target-kiosk) !important;
+}
+
+/* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
+
+/* Universal Border-Box Sizing Grouping */
+:is(
+    .avatar-container,
+    .avatar-button img,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'],
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'],
+    :is(.avatar-container, md-dialog.contacts) details .content,
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .m3-pill-badge,
+    .m3-count-badge,
+    .count-badge,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    :is(.m3-card-header, .card-header),
+    :is(.m3-card-body, .card-body),
+    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
+    :is(.m3-summary-card, .summary-card),
+    :is(.m3-media-card, .media-card, .org-card),
+    .org-card-content,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) section,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer,
+    .m3-filter-chip,
+    .m3-dialog-toggle-item,
+    .m3-dialog-btn-primary,
+    md-dialog,
+    md-dialog [slot="content"],
+    .m3-empty-state,
+    .m3-empty-column,
+    .column-empty,
+    .kds-empty-col,
+    .store-not-found,
+    .pos-empty-state,
+    .kiosk-empty-state,
+    .m3-form-grid,
+    :is(.m3-banner-error, .error-banner),
+    :is(.m3-counter, .material-counter),
+    :is(.m3-info-grid, .info-grid),
+    :is(.m3-info-item, .info-item),
+    :is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card),
+    .picker-compact-box,
+    .upload-zone-label,
+    .lang-select,
+    .lang-inline-grid,
+    :is(.m3-progress-container, .progress-bar-container),
+    :is(.m3-search-container, .material-search-container),
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    .smart-grid-container,
+    .table-container,
+    .paginator,
+    .table-container > .paginator,
+    .card-grid,
+    .m3-mode-toggle,
+    .mode-toggle,
+    .m3-mode-toggle-figure,
+    .mode-toggle-figure
+) {
+    box-sizing: border-box;
+}
+
+/* Universal Minimum Touch Target (48px) Grouping */
+:is(
+    .back-button,
+    .m3-back-button,
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
+    media (pointer: coarse),
+    .m3-dialog-toggle-item,
+    .m3-dialog-btn-primary,
+    .picker-compact-box,
+    .lang-chip-btn,
+    .lang-menu-item,
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger)
+),
+.avatar-button::before,
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
+    min-height: var(--md-sys-touch-target-min);
+}
+
+/* Universal Zero Minimum Width (Grid Truncation Protection) Grouping */
+:is(
+    .m3-card,
+    [class*="m3-card-"],
+    .card-glass,
+    .glass-card,
+    .card-elevated,
+    .card-outlined,
+    .card-filled,
+    :is(.m3-card-header, .card-header),
+    :is(.m3-card-body, .card-body),
+    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
+    :is(.m3-media-card, .media-card, .org-card),
+    .org-card-content,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .wishlist-card-footer,
+    md-dialog [slot="content"],
+    .picker-trigger-left,
+    .picker-trigger-text,
+    .variant-dialog-body,
+    :is(.m3-search-container, .material-search-container),
+    :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field),
+    .smart-grid-container,
+    .card-grid
+) {
+    min-width: 0;
 }

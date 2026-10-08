@@ -8,13 +8,11 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
     gap: var(--md-sys-spacing-4);
     width: 100%;
-    box-sizing: border-box;
 }
 
 :is(.m3-info-item, .info-item) {
     gap: var(--md-sys-spacing-1);
     align-content: start;
-    box-sizing: border-box;
 }
 
 :is(.m3-info-label, .info-label) {

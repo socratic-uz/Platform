@@ -31,20 +31,16 @@
 }
 
 /* Common Grid Layout Declarations */
-:is(.m3-dialog-close-btn, .m3-dialog-btn-primary) {
-    place-items: center;
+:is(.m3-dialog-close-btn, .m3-dialog-btn-primary)  {
+    /* consolidated to w3c rules */
 }
 
 .m3-dialog-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: var(--md-sys-spacing-4);
 }
 
 .m3-dialog-title-group {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
     gap: var(--md-sys-spacing-2);
 }
 
@@ -65,12 +61,9 @@
     height: var(--md-sys-touch-target-compact);
     min-width: var(--md-sys-touch-target-compact);
     min-height: var(--md-sys-touch-target-compact);
-    border-radius: var(--md-sys-shape-corner-full);
     border: none;
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    cursor: pointer;
-    touch-action: manipulation;
     transition: background 0.2s ease;
 }
 
@@ -91,15 +84,10 @@
 
 .m3-dialog-toggle-item {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
     gap: var(--md-sys-spacing-4);
-    min-height: var(--md-sys-touch-target-min);
-    box-sizing: border-box;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    cursor: pointer;
     transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease;
 }
 
@@ -112,7 +100,6 @@
     width: 20px;
     height: 20px;
     accent-color: var(--md-sys-color-primary);
-    cursor: pointer;
 }
 
 .m3-dialog-toggle-text {
@@ -140,17 +127,12 @@
 }
 
 .m3-dialog-btn-primary {
-    min-height: var(--md-sys-touch-target-min);
-    box-sizing: border-box;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-5);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     border: none;
-    border-radius: var(--md-sys-shape-corner-full);
     font-size: 0.95rem;
     font-weight: 600;
-    cursor: pointer;
-    touch-action: manipulation;
     transition: opacity 0.2s ease;
 }
 
@@ -165,7 +147,6 @@ md-dialog {
     width: auto;
     max-width: min(92vw, 560px);
     max-height: min(90vh, 90dvh);
-    box-sizing: border-box;
 }
 
 md-dialog > * {
@@ -178,16 +159,11 @@ md-dialog:not(:defined) {
 
 md-dialog [slot="content"] {
     display: flow-root;
-    box-sizing: border-box;
     overflow-x: hidden;
     max-width: 100%;
-    min-width: 0;
 }
 
 md-dialog [slot="actions"] {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     justify-content: end;
-    align-items: center;
     gap: var(--md-sys-spacing-2);
 }
