@@ -177,8 +177,8 @@ footer.app-footer {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #00e676;
-    box-shadow: 0 0 8px #00e676;
+    background: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 

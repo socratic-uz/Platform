@@ -5,7 +5,7 @@ header.app-header.landing-header {
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
-    color: #f8fafc;
+    color: var(--md-sys-color-on-surface);
     min-height: 64px;
     padding: 0.35rem 1.5rem;
     position: sticky;
@@ -37,8 +37,8 @@ header.landing-header .header-brand-icon-box {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    color: var(--md-sys-color-on-primary);
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
     font-size: 18px;
 }
@@ -47,7 +47,7 @@ header.landing-header .header-brand-text {
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, #38bdf8 100%);
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 60%, var(--md-sys-color-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -74,7 +74,7 @@ header.landing-header .header-brand-text {
     gap: 0.4rem;
     padding: 0.4rem 0.85rem;
     border-radius: 9999px;
-    color: #94a3b8;
+    color: var(--md-sys-color-outline);
     text-decoration: none;
     font-size: 0.84rem;
     font-weight: 500;
@@ -87,13 +87,13 @@ header.landing-header .header-brand-text {
 
 .landing-nav-link md-icon {
     font-size: 16px;
-    color: #38bdf8;
+    color: var(--md-sys-color-primary);
     opacity: 0.8;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .landing-nav-link:hover {
-    color: #f8fafc;
+    color: var(--md-sys-color-on-surface);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.12);
     transform: translateY(-1px);
@@ -121,7 +121,7 @@ header.landing-header .header-brand-text {
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
     backdrop-filter: blur(12px);
-    color: var(--md-sys-color-on-surface-variant, #cbd5e1);
+    color: var();
     font-size: 0.8rem;
     font-weight: 600;
     touch-action: manipulation;
@@ -143,7 +143,7 @@ header.landing-header .header-brand-text {
 }
 
 .lang-menu-item {
-    color: var(--md-sys-color-on-surface-variant, #cbd5e1);
+    color: var();
 }
 
 .lang-menu-item:hover {
@@ -161,7 +161,7 @@ header.landing-header .header-brand-text {
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
     border: 1px solid var(--md-sys-color-outline-variant, rgba(56, 189, 248, 0.35));
-    color: var(--md-sys-color-on-primary, #ffffff);
+    color: var();
     font-size: 0.84rem;
     font-weight: 600;
     text-decoration: none;
@@ -174,19 +174,19 @@ header.landing-header .header-brand-text {
 
 .landing-auth-btn md-icon {
     font-size: 16px;
-    color: var(--md-sys-color-primary, #38bdf8);
+    color: var();
 }
 
 .landing-auth-btn:hover {
-    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     border-color: var(--md-sys-color-primary);
     box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
     transform: translateY(-1px);
-    color: #ffffff;
+    color: var(--md-sys-color-on-primary);
 }
 
 .landing-auth-btn:hover md-icon {
-    color: #ffffff;
+    color: var(--md-sys-color-on-primary);
 }
 
 .landing-mobile-menu-toggle {
@@ -199,7 +199,7 @@ header.landing-header .header-brand-text {
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
-    color: var(--md-sys-color-on-surface, #f8fafc);
+    color: var();
     cursor: pointer;
     touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4, 200ms) ease, border-color var(--md-sys-motion-duration-short4, 200ms) ease;
@@ -252,7 +252,7 @@ header.landing-header .header-brand-text {
     gap: 1rem;
     padding: 0.85rem 1.15rem;
     border-radius: 16px;
-    color: #cbd5e1;
+    color: var(--md-sys-color-on-surface-variant);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
@@ -262,14 +262,14 @@ header.landing-header .header-brand-text {
 }
 
 .mobile-nav-item md-icon {
-    color: #38bdf8;
+    color: var(--md-sys-color-primary);
     font-size: 20px;
 }
 
 .mobile-nav-item:hover,
 .mobile-nav-item:active {
     background: rgba(56, 189, 248, 0.12);
-    color: #ffffff;
+    color: var(--md-sys-color-on-primary);
 }
 
 .mobile-nav-divider {
@@ -392,8 +392,8 @@ footer.app-footer {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #00e676;
-    box-shadow: 0 0 8px #00e676;
+    background: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 

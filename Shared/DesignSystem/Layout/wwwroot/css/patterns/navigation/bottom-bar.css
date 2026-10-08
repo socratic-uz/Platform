@@ -35,7 +35,7 @@
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border-top: 1px solid var(--md-sys-color-outline-variant) !important;
-        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow, #000000) r g b / 0.15);
+        box-shadow: 0 -4px 16px rgb(from var() r g b / 0.15);
     }
 
     nav.glass a.nav-item,

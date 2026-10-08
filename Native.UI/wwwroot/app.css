@@ -20,7 +20,7 @@ html, body {
         position: sticky;
         top: 0;
         height: env(safe-area-inset-top);
-        background-color: var(--md-sys-color-surface-container, #1e293b);
+        background-color: var();
         width: 100%;
         z-index: 1000;
     }

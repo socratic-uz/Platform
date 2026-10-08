@@ -29,7 +29,7 @@
 
 .m3-scroll-thin::-webkit-scrollbar-thumb:hover,
 .scroll-thin::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-color-primary, #6750A4);
+    background: var();
 }
 
 .m3-scroll-snap-x {

@@ -32,7 +32,7 @@
 .order-number {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--md-sys-color-on-surface, #e1e3e4);
+    color: var();
     letter-spacing: 0.02em;
 }
 
@@ -48,32 +48,32 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant, #bfc8cb);
+    color: var();
 }
 
 .detail-icon {
     font-size: 18px;
-    color: var(--md-sys-color-outline, #899295);
+    color: var();
 }
 
 .total-amount {
     margin-top: 0.25rem;
     padding-top: 0.5rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant, #40484b);
+    border-top: 1px solid var();
     font-weight: 700;
-    color: var(--md-sys-color-on-surface, #e1e3e4);
+    color: var();
 }
 
 .amount-value {
     font-size: 1.05rem;
-    color: var(--md-sys-color-primary, #4dd9e8);
+    color: var();
 }
 
 .order-card-footer {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    color: var(--md-sys-color-primary, #4dd9e8);
+    color: var();
     font-size: 0.85rem;
     font-weight: 600;
     min-height: 48px;
@@ -103,8 +103,8 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    background: var(--md-sys-color-surface-container, #1f2324);
-    border: 1px solid var(--md-sys-color-outline-variant, #40484b);
+    background: var();
+    border: 1px solid var();
     border-radius: var(--md-sys-shape-corner-large, 16px);
     box-sizing: border-box;
 }
@@ -113,32 +113,32 @@
 .order-items-table {
     width: 100%;
     border-collapse: collapse;
-    color: var(--md-sys-color-on-surface, #e1e3e4);
+    color: var();
     min-width: min(100%, 680px);
 }
 
 .orders-table th,
 .order-items-table th {
-    background: var(--md-sys-color-surface-container-high, #272a2b);
+    background: var();
     padding: 0.85rem 1rem;
     font-weight: 600;
     font-size: 0.85rem;
     text-align: left;
-    color: var(--md-sys-color-on-surface-variant, #bfc8cb);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant, #40484b);
+    color: var();
+    border-bottom: 1px solid var();
 }
 
 .orders-table td,
 .order-items-table td {
     padding: 0.85rem 1rem;
     font-size: 0.9rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant, #40484b);
+    border-bottom: 1px solid var();
     vertical-align: middle;
 }
 
 .orders-table tr:hover,
 .order-items-table tr:hover {
-    background: var(--md-sys-color-surface-container-highest, #323536);
+    background: var();
 }
 
 .payment-cell,
@@ -153,12 +153,12 @@
 
 .amount-cell {
     font-weight: 700;
-    color: var(--md-sys-color-primary, #4dd9e8);
+    color: var();
 }
 
 .table-icon {
     font-size: 18px;
-    color: var(--md-sys-color-outline, #899295);
+    color: var();
 }
 
 .table-row-actions {
@@ -175,8 +175,8 @@
     gap: 0.75rem;
     padding: 1rem 1.25rem;
     border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-error-container, #93000a);
-    color: var(--md-sys-color-on-error-container, #ffdad6);
+    background: var();
+    color: var();
     font-size: 0.9rem;
 }
 
