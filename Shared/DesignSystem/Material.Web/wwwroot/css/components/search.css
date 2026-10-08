@@ -31,6 +31,7 @@
     box-shadow: var(--md-sys-elevation-level1);
 }
 
+.m3-search-container md-icon[slot="leading-icon"],
 .material-search-container md-icon[slot="leading-icon"] {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 20px;
@@ -38,6 +39,7 @@
     height: 20px;
 }
 
+.m3-search-container [slot="trailing-icon"],
 .material-search-container [slot="trailing-icon"] {
     color: var(--md-sys-color-on-surface-variant);
 }

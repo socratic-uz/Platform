@@ -10,7 +10,7 @@
 @inherits QuickGrid<TItem>
 @typeparam TItem where TItem : class, new()
 
-<div class="smart-grid-container">
+<div class="@M3.Table.SmartGridContainer">
     @if (!AsCards)
     {
         <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
@@ -71,10 +71,10 @@
 
                                     if (selectedValues.Any())
                                     {
-                                        <div class="grid-enum-flags">
+                                        <div class="@M3.Table.GridEnumFlags">
                                             @foreach (var value in selectedValues)
                                             {
-                                                <Chip ChipType="ChipType.Input" Label="@value" Disabled="true" CssClass="grid-chip-readonly" />
+                                                <Chip ChipType="ChipType.Input" Label="@value" Disabled="true" CssClass="@M3.Table.GridChipReadonly" />
                                             }
                                         </div>
                                     }
@@ -85,7 +85,7 @@
                                 }
                                 else
                                 {
-                                    <Chip ChipType="ChipType.Input" Label="@GetEnumDisplayText(propertyValue, propertyType)" Disabled="true" CssClass="grid-chip-readonly" />
+                                    <Chip ChipType="ChipType.Input" Label="@GetEnumDisplayText(propertyValue, propertyType)" Disabled="true" CssClass="@M3.Table.GridChipReadonly" />
                                 }
                             }
                             else
@@ -122,7 +122,7 @@
                 }
             }
 
-            <TemplateColumn Context="item" TGridItem="TItem" Class="actions-column">
+            <TemplateColumn Context="item" TGridItem="TItem" Class="@M3.Table.ActionsColumn">
                 <HeaderTemplate>
                     <Fab Variant="primary" Lowered="true" Icon="add" AriaLabel="Create" OnClick=@(e => OpenCreateDialog()) />
                 </HeaderTemplate>
@@ -140,7 +140,7 @@
 
             @if (AsCards)
             {
-                <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="card-grid">
+                <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="@M3.Table.CardGrid">
                     @if (Virtualize)
                     {
                         <Virtualize @ref="@_virtualizeComponent"
@@ -159,7 +159,7 @@
             }
             else
             {
-                <div class="table-container">
+                <div class="@M3.Table.Container">
                     <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="@GridClass()">
                         <thead>
                             <tr>

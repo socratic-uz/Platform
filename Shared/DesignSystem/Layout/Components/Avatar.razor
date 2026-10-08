@@ -3,8 +3,8 @@
 @inject IStringLocalizer l
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<div class="avatar-container">
-	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="avatar-button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
+<div class="@M3.Avatar.Container">
+	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="@M3.Avatar.Button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
 		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
 			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
@@ -17,20 +17,20 @@
 
 	@if (IsOpen)
 	{
-	<MaterialDialog class="contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
+	<MaterialDialog class="@M3.Avatar.Contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
 		<span slot="headline">
-			<span class="headline">@l?["Edit profile"]</span>
+			<span class="@M3.Avatar.Headline">@l?["Edit profile"]</span>
 			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@(e => IsOpen = false) Icon="close" />
 		</span>
 		@if (FormModel is null)
 		{
-			<div slot="content" class="content">
+			<div slot="content" class="@M3.Avatar.Content">
 				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
 			</div>
 		}
 		else
 		{
-			<EditForm Model="@FormModel" slot="content" method="dialog" class="content" @onsubmit:preventDefault>
+			<EditForm Model="@FormModel" slot="content" method="dialog" class="@M3.Avatar.Content" @onsubmit:preventDefault>
 				<AntiforgeryToken />
 				<List>
 					<!--Id-->
@@ -42,7 +42,7 @@
 								<Icon Name="arrow_drop_down" Slot="end" />
 							</ListItem>
 						</summary>
-						<div class="content">
+						<div class="@M3.Avatar.Content">
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
 							<TextField TValue="Guid?"
 									   Variant="TextField<Guid?>.TextFieldVariant.Outlined"
@@ -83,7 +83,7 @@
 							</ListItem>
 						</summary>
 
-						<div class="content">
+						<div class="@M3.Avatar.Content">
 							<TextField TValue="string"
 									   Variant="TextField<string>.TextFieldVariant.Outlined"
 									   Label="@l?["Phone"]"
@@ -104,7 +104,7 @@
 							</ListItem>
 						</summary>
 
-						<div class="content" style="padding: 16px;">
+						<div class="@M3.Avatar.Content" style="padding: 16px;">
 							<Material.Web.Components.FilePicker 
 								Attachments="@_imageAttachments"
 								Label="@l?["Photo"]"
@@ -128,7 +128,7 @@
 							</ListItem>
 						</summary>
 
-						<div class="content">
+						<div class="@M3.Avatar.Content">
 							<TextField TValue="string"
 									   Variant="TextField<string>.TextFieldVariant.Outlined"
 									   Label="@l?["FirstName"]"
@@ -178,7 +178,7 @@
 								<Icon Name="arrow_drop_down" Slot="end" />
 							</ListItem>
 						</summary>
-						<div class="content" style="display: grid; gap: 12px; padding: 16px;">
+						<div class="@M3.Avatar.Content" style="display: grid; gap: 12px; padding: 16px;">
 							<TextField TValue="string"
 							           Variant="TextField<string>.TextFieldVariant.Outlined"
 							           Label="@(l?["City"] ?? "Город")"
@@ -205,7 +205,7 @@
 							</ListItem>
 						</summary>
 
-						<div class="content">
+						<div class="@M3.Avatar.Content">
 							@foreach (var language in languages)
 							{
 								<label>
@@ -230,7 +230,7 @@
 							</ListItem>
 						</summary>
 
-						<div class="content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
+						<div class="@M3.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;">
 								<Select Label="@l?["Theme"]"
 										Value="@ThemeString"
@@ -255,7 +255,7 @@
 								<Icon Name="arrow_drop_down" Slot="end" />
 							</ListItem>
 						</summary>
-						<div class="content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
+						<div class="@M3.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
 							<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); margin: 0;">
 								@(l?["FastLoginSubtitle"] ?? "Настройте методы для входа в 1 клик без ожидания SMS.")
 							</p>
@@ -351,9 +351,9 @@
 
 	@if (isFaceIdModalOpen)
 	{
-	<MaterialDialog class="faceid-profile-modal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
+	<MaterialDialog class="@M3.Avatar.FaceidProfileModal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
 		<span slot="headline">
-			<span class="headline">@l?["Face ID (Биометрия)"]</span>
+			<span class="@M3.Avatar.Headline">@l?["Face ID (Биометрия)"]</span>
 			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@CloseFaceIdModal Icon="close" />
 		</span>
 		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
