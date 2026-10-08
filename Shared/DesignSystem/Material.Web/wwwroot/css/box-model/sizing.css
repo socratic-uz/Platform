@@ -1,0 +1,46 @@
+/* ==========================================================================
+   W3C CSS Box Model - Sizing Rules Module
+   Ergonomic Touch Targets & Mathematical Aspect Ratios
+   ========================================================================== */
+
+/* Aspect Ratio Utilities (Zero-Layout-Shift) */
+.m3-ratio-square {
+    aspect-ratio: var(--md-sys-ratio-square) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-video {
+    aspect-ratio: var(--md-sys-ratio-video) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-card {
+    aspect-ratio: var(--md-sys-ratio-card) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-portrait {
+    aspect-ratio: var(--md-sys-ratio-portrait) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-kiosk {
+    aspect-ratio: var(--md-sys-ratio-kiosk) !important;
+    object-fit: cover;
+}
+
+.m3-ratio-wide {
+    aspect-ratio: var(--md-sys-ratio-wide) !important;
+    object-fit: cover;
+}
+
+/* Touch Target Ergonomics (WCAG 2.1 AA >= 48px) */
+.m3-touch-target {
+    min-width: var(--md-sys-touch-target-min) !important;
+    min-height: var(--md-sys-touch-target-min) !important;
+}
+
+.m3-touch-target-kiosk {
+    min-width: var(--md-sys-touch-target-kiosk) !important;
+    min-height: var(--md-sys-touch-target-kiosk) !important;
+}

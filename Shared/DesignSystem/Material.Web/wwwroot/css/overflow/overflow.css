@@ -1,0 +1,20 @@
+/* ==========================================================================
+   W3C CSS Overflow Module - Overflow Primitives
+   Container Clipping & Scroll Boundary Utilities
+   ========================================================================== */
+
+.m3-overflow-hidden {
+    overflow: hidden !important;
+}
+
+.m3-overflow-auto {
+    overflow: auto !important;
+}
+
+.m3-overflow-x-auto {
+    overflow-x: auto !important;
+}
+
+.m3-overflow-y-auto {
+    overflow-y: auto !important;
+}

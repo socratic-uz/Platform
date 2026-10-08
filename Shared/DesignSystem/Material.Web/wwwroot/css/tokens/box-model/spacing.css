@@ -1,6 +1,6 @@
 /* ==========================================================================
-   W3C CSS Box Model - Spacing Module
-   Spatial Grid & Spacing Scale (4/8pt System) & Safe Area Gutters
+   W3C CSS Box Model - Spacing Tokens Module
+   Spatial Grid & Spacing Scale (4/8pt System) & Safe Area Constants
    ========================================================================== */
 
 :root {
@@ -28,22 +28,3 @@
     --md-sys-safe-area-left: env(safe-area-inset-left, 0px);
     --md-sys-safe-area-right: env(safe-area-inset-right, 0px);
 }
-
-/* ─── Layout Gutter Utilities ──────────────────────────────────────────────── */
-.m3-page-gutter {
-    padding-inline: var(--md-sys-gutter-page) !important;
-}
-
-.m3-section-gutter {
-    padding-inline: var(--md-sys-gutter-section) !important;
-}
-
-/* ─── Grid Gap Utilities (Strict CSS Grid) ─────────────────────────────────── */
-.m3-gap-0 { gap: var(--md-sys-spacing-0) !important; }
-.m3-gap-1 { gap: var(--md-sys-spacing-1) !important; }
-.m3-gap-2 { gap: var(--md-sys-spacing-2) !important; }
-.m3-gap-3 { gap: var(--md-sys-spacing-3) !important; }
-.m3-gap-4 { gap: var(--md-sys-spacing-4) !important; }
-.m3-gap-5 { gap: var(--md-sys-spacing-5) !important; }
-.m3-gap-6 { gap: var(--md-sys-spacing-6) !important; }
-.m3-gap-8 { gap: var(--md-sys-spacing-8) !important; }

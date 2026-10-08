@@ -1,0 +1,20 @@
+/* ==========================================================================
+   W3C CSS Containment - Contain Rules Module
+   Performance & Content Visibility Optimizations
+   ========================================================================== */
+
+.m3-contain-paint {
+    contain: paint !important;
+}
+
+.m3-contain-layout {
+    contain: layout !important;
+}
+
+.m3-contain-strict {
+    contain: strict !important;
+}
+
+.m3-content-auto {
+    content-visibility: auto !important;
+}

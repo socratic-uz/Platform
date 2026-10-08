@@ -1,0 +1,12 @@
+/* ==========================================================================
+   W3C CSS Box Model - Padding Rules Module
+   Fluid Page Gutters & Section Spacings
+   ========================================================================== */
+
+.m3-page-gutter {
+    padding-inline: var(--md-sys-gutter-page) !important;
+}
+
+.m3-section-gutter {
+    padding-inline: var(--md-sys-gutter-section) !important;
+}

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   W3C CSS Box Model - Border & Corner Shapes Rules Module
+   Material Design 3 Expressive Corner Shapes & Border Utilities
+   ========================================================================== */
+
+.m3-shape-none {
+    border-radius: var(--md-sys-shape-corner-none) !important;
+}
+
+.m3-shape-extra-small {
+    border-radius: var(--md-sys-shape-corner-extra-small) !important;
+}
+
+.m3-shape-small {
+    border-radius: var(--md-sys-shape-corner-small) !important;
+}
+
+.m3-shape-medium {
+    border-radius: var(--md-sys-shape-corner-medium) !important;
+}
+
+.m3-shape-large {
+    border-radius: var(--md-sys-shape-corner-large) !important;
+}
+
+.m3-shape-extra-large {
+    border-radius: var(--md-sys-shape-corner-extra-large) !important;
+}
+
+.m3-shape-full,
+.m3-shape-pill {
+    border-radius: var(--md-sys-shape-corner-full) !important;
+}
+
+.m3-shape-card {
+    border-radius: var(--md-sys-shape-expressive-card) !important;
+}
+
+.m3-shape-dock {
+    border-radius: var(--md-sys-shape-expressive-dock) !important;
+}
+
+.m3-border-none {
+    border: none !important;
+}

@@ -1,0 +1,26 @@
+/* ==========================================================================
+   W3C CSS Motion - Transitions Rules Module
+   Physical Spring Transitions & Micro-Interaction Rules
+   ========================================================================== */
+
+.m3-press-scale {
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+.m3-press-scale:active {
+    transform: scale(0.97) !important;
+}
+
+.m3-hover-lift {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+.m3-hover-lift:active {
+    transform: scale(0.985);
+}

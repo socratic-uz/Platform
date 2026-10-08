@@ -1,0 +1,49 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Overflow Module - Scrollbar Rules
+   Thin Ergonomic & Hidden Scrollbar Primitives
+   ========================================================================== */
+
+.scrollbar-thin,
+.m3-config-dialog,
+.m3-dialog-surface {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent !important;
+}
+
+.scrollbar-thin::-webkit-scrollbar,
+.m3-config-dialog::-webkit-scrollbar,
+.m3-dialog-surface::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track,
+.m3-config-dialog::-webkit-scrollbar-track,
+.m3-dialog-surface::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb,
+.m3-config-dialog::-webkit-scrollbar-thumb,
+.m3-dialog-surface::-webkit-scrollbar-thumb {
+    background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover,
+.m3-config-dialog::-webkit-scrollbar-thumb:hover,
+.m3-dialog-surface::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-outline);
+}
+
+.scrollbar-none,
+.no-scrollbar {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}

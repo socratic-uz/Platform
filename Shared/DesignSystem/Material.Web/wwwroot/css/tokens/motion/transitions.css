@@ -1,10 +1,10 @@
 /* ==========================================================================
-   W3C CSS Motion Module - Transitions & Spring Physics
-   Material Design 3 Expressive - Motion Durations & Physical Spring Curves
+   W3C CSS Motion - Transitions Tokens Module
+   Material Design 3 Expressive Motion Durations & Spring Curves
    ========================================================================== */
 
 :root {
-    /* ─── Durations ───────────────────────────────────────────────────────── */
+    /* Durations */
     --md-sys-motion-duration-short1: 50ms;
     --md-sys-motion-duration-short2: 100ms;
     --md-sys-motion-duration-short3: 150ms;
@@ -18,13 +18,13 @@
     --md-sys-motion-duration-long3: 550ms;
     --md-sys-motion-duration-long4: 600ms;
 
-    /* ─── Standard Easings ────────────────────────────────────────────────── */
+    /* Standard Easings */
     --md-sys-motion-easing-linear: cubic-bezier(0, 0, 1, 1);
     --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
     --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
     --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
 
-    /* ─── M3 Expressive Spring Curves (Physical Bounce) ───────────────────── */
+    /* M3 Expressive Spring Curves (Physical Bounce) */
     --md-sys-motion-easing-spring: cubic-bezier(0.2, 0, 0, 1);
     --md-sys-motion-easing-spring-soft: cubic-bezier(0.3, 1.15, 0.5, 1);
     --md-sys-motion-easing-spring-snappy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -33,48 +33,3 @@
     --md-sys-motion-easing-expressive-entrance: cubic-bezier(0.05, 0.7, 0.1, 1.0);
     --md-sys-motion-easing-expressive-exit: cubic-bezier(0.3, 0.0, 0.8, 0.15);
 }
-
-/* ─── Micro-Interactions & Spring Physics Classes ──────────────────────────── */
-.m3-press-scale {
-    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
-}
-.m3-press-scale:active {
-    transform: scale(0.97) !important;
-}
-
-.m3-hover-lift {
-    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
-                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-}
-.m3-hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--md-sys-elevation-level2);
-}
-.m3-hover-lift:active {
-    transform: scale(0.985);
-}
-
-@keyframes m3-fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(4px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes m3-scale-up {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-

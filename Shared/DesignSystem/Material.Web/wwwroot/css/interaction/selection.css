@@ -1,0 +1,16 @@
+/* ==========================================================================
+   W3C CSS Interaction - Selection Rules Module
+   User Select Primitives
+   ========================================================================== */
+
+.m3-select-none {
+    user-select: none !important;
+}
+
+.m3-select-text {
+    user-select: text !important;
+}
+
+.m3-select-all {
+    user-select: all !important;
+}

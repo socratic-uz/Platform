@@ -1,5 +1,6 @@
 /* ==========================================================================
    Socratic Material.Web - Master Design System Stylesheet (M3 & M3 Expressive)
+   W3C CSS Specification Modules Architecture
    ========================================================================== */
 
 /* 0. Foundations (Normalize / CSS Reset) */
@@ -10,7 +11,7 @@
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
 
-/* 2. Design Tokens (W3C CSS Specification Modules) */
+/* 2. Design Tokens (W3C Custom Properties Architecture) */
 @import "tokens/box-model/sizing.css";
 @import "tokens/box-model/spacing.css";
 @import "tokens/box-model/border.css";
@@ -26,7 +27,33 @@
 @import "themes/light.css";
 @import "themes/expressive.css";
 
-/* 4. Component Primitives */
+/* 4. W3C Rule Modules (Deduplication & Layout Primitives) */
+@import "box-model/sizing.css";
+@import "box-model/padding.css";
+@import "box-model/margin.css";
+@import "box-model/border.css";
+@import "layout/display.css";
+@import "layout/grid.css";
+@import "layout/alignment.css";
+@import "layout/table.css";
+@import "positioning/position.css";
+@import "positioning/stacking.css";
+@import "overflow/overflow.css";
+@import "overflow/scrollbars.css";
+@import "typography/font.css";
+@import "typography/text-wrapping.css";
+@import "color/color.css";
+@import "color/background.css";
+@import "effects/shadow.css";
+@import "transforms/transform.css";
+@import "motion/transitions.css";
+@import "motion/animations.css";
+@import "content/replaced.css";
+@import "interaction/pointer.css";
+@import "interaction/selection.css";
+@import "containment/contain.css";
+
+/* 5. Component Primitives */
 @import "components/buttons.css";
 @import "components/cards.css";
 @import "components/badges.css";
@@ -43,4 +70,3 @@
 @import "components/theme-toggle.css";
 @import "components/segmented-button.css";
 @import "components/info-grid.css";
-

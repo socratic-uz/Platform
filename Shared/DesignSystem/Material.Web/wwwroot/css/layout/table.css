@@ -1,8 +1,9 @@
 /* ==========================================================================
-   W3C CSS Typography - Text Wrapping Tokens Module
-   Text Truncation & Wrapping Custom Properties
+   W3C CSS Layout - Table Rules Module
+   Standard Table Reset & Semantic Properties
    ========================================================================== */
 
-:root {
-    --md-sys-typescale-truncate: ellipsis;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }

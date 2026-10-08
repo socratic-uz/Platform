@@ -1,0 +1,12 @@
+/* ==========================================================================
+   W3C CSS Transforms - Transform Rules Module
+   Hardware Accelerated Coordinate Transforms
+   ========================================================================== */
+
+.m3-transform-gpu {
+    transform: translateZ(0);
+}
+
+.m3-origin-center {
+    transform-origin: center !important;
+}

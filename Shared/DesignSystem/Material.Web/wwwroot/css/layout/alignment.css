@@ -1,0 +1,43 @@
+/* ==========================================================================
+   W3C CSS Layout - Alignment Rules Module
+   Grid Gap Scale & Alignment Primitives
+   ========================================================================== */
+
+/* Grid Gap Utilities */
+.m3-gap-0 { gap: var(--md-sys-spacing-0) !important; }
+.m3-gap-1 { gap: var(--md-sys-spacing-1) !important; }
+.m3-gap-2 { gap: var(--md-sys-spacing-2) !important; }
+.m3-gap-3 { gap: var(--md-sys-spacing-3) !important; }
+.m3-gap-4 { gap: var(--md-sys-spacing-4) !important; }
+.m3-gap-5 { gap: var(--md-sys-spacing-5) !important; }
+.m3-gap-6 { gap: var(--md-sys-spacing-6) !important; }
+.m3-gap-8 { gap: var(--md-sys-spacing-8) !important; }
+
+/* Grid Alignment & Distribution */
+.m3-place-center {
+    place-items: center !important;
+}
+
+.m3-items-center {
+    align-items: center !important;
+}
+
+.m3-items-start {
+    align-items: start !important;
+}
+
+.m3-items-end {
+    align-items: end !important;
+}
+
+.m3-justify-center {
+    justify-content: center !important;
+}
+
+.m3-justify-between {
+    justify-content: space-between !important;
+}
+
+.m3-justify-end {
+    justify-content: end !important;
+}

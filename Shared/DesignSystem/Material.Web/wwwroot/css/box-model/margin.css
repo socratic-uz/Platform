@@ -1,8 +1,8 @@
 /* ==========================================================================
-   W3C CSS Typography - Text Wrapping Tokens Module
-   Text Truncation & Wrapping Custom Properties
+   W3C CSS Box Model - Margin Rules Module
+   Margin Resets & Utilities
    ========================================================================== */
 
-:root {
-    --md-sys-typescale-truncate: ellipsis;
+.m3-m-0 {
+    margin: 0 !important;
 }
