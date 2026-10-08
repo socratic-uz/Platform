@@ -3,12 +3,12 @@
 
 @if (Compact)
 {
-    <div class="picker-compact-box @CssClass @(Disabled ? "disabled" : "")" style="@Style">
+    <div class="@M3.Picker.CompactBox @CssClass @(Disabled ? M3.Picker.Disabled : "")" style="@Style">
         <!-- Color Swatch & Native Color Trigger -->
-        <div class="picker-swatch-wrapper" title="Нажмите для выбора цвета">
-            <div class="picker-swatch" style="background-color: @NormalizedValue;">
+        <div class="@M3.Picker.SwatchWrapper" title="Нажмите для выбора цвета">
+            <div class="@M3.Picker.Swatch" style="background-color: @NormalizedValue;">
                 <input type="color"
-                       class="picker-native-input"
+                       class="@M3.Picker.NativeInput"
                        value="@HexValue"
                        disabled="@Disabled"
                        @onchange="OnNativeColorChanged"
@@ -17,10 +17,10 @@
         </div>
 
         <!-- Text Input for HEX -->
-        <div class="picker-hex-wrapper">
-            <span class="picker-hex-prefix">#</span>
+        <div class="@M3.Picker.HexWrapper">
+            <span class="@M3.Picker.HexPrefix">#</span>
             <input type="text"
-                   class="picker-hex-input"
+                   class="@M3.Picker.HexInput"
                    placeholder="RRGGBB"
                    value="@RawHexValue"
                    disabled="@Disabled"
@@ -68,9 +68,9 @@ else
                        Class="@CssClass"
                        Style="@Style">
         <CustomIconBadge>
-            <div class="color-badge-swatch" style="background-color: @NormalizedValue;">
+            <div class="@M3.Picker.ColorBadgeSwatch" style="background-color: @NormalizedValue;">
                 <input type="color"
-                       class="picker-native-input"
+                       class="@M3.Picker.NativeInput"
                        value="@HexValue"
                        disabled="@Disabled"
                        @onchange="OnNativeColorChanged"
@@ -103,32 +103,32 @@ else
 <!-- Presets Popover / Dialog -->
 @if (ShowPresets && isPaletteOpen)
 {
-    <div class="picker-popover-panel">
-        <div class="picker-popover-header">
-            <span class="picker-popover-title">Рекомендованные цвета Material 3</span>
+    <div class="@M3.Picker.PopoverPanel">
+        <div class="@M3.Picker.PopoverHeader">
+            <span class="@M3.Picker.PopoverTitle">Рекомендованные цвета Material 3</span>
             <IconButton Icon="close" AriaLabel="Закрыть" OnClick="() => isPaletteOpen = false" />
         </div>
-        <div class="picker-palette-grid">
+        <div class="@M3.Picker.PaletteGrid">
             @foreach (var color in EffectivePresets)
             {
                 var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
                 <button type="button"
-                        class="picker-palette-swatch @(isSelected ? "selected" : "")"
+                        class="@M3.Picker.PaletteSwatch @(isSelected ? "selected" : "")"
                         style="background-color: @color;"
                         title="@color"
                         @onclick="() => SelectPreset(color)">
                     @if (isSelected)
                     {
-                        <Icon Name="check" class="picker-swatch-check" />
+                        <Icon Name="check" class="@M3.Picker.SwatchCheck" />
                     }
                 </button>
             }
         </div>
-        <div class="picker-popover-footer">
-            <div class="picker-hex-wrapper" style="width: auto; max-width: 140px;">
-                <span class="picker-hex-prefix">#</span>
+        <div class="@M3.Picker.PopoverFooter">
+            <div class="@M3.Picker.HexWrapper" style="width: auto; max-width: 140px;">
+                <span class="@M3.Picker.HexPrefix">#</span>
                 <input type="text"
-                       class="picker-hex-input"
+                       class="@M3.Picker.HexInput"
                        placeholder="RRGGBB"
                        value="@RawHexValue"
                        disabled="@Disabled"

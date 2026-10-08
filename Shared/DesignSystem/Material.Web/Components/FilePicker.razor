@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Components.Forms
 @using System.IO
 
-<div class="file-picker-container">
+<div class="@M3.Picker.FilePickerContainer">
     <PickerTriggerCard Label="@(Label ?? "Прикрепленные файлы")"
                        Icon="attach_file"
                        ActiveIcon="folder_open"
@@ -14,7 +14,7 @@
                        ResetAriaLabel="Очистить все файлы"
                        OnReset="ClearAll">
         <CustomActions>
-            <label for="@inputId" class="file-add-btn-label">
+            <label for="@inputId" class="@M3.Picker.FileAddBtnLabel">
                 <Button Variant="ButtonVariant.FilledTonal" Type="button">
                     <Icon Name="add_photo_alternate" Slot="icon" />
                     @UploadLabel
@@ -30,7 +30,7 @@
         </CustomActions>
     </PickerTriggerCard>
 
-    <div class="file-grid">
+    <div class="@M3.Picker.FileGrid">
         <!-- Universal Attachments -->
         @if (Attachments != null)
         {
@@ -60,28 +60,28 @@
                             bytesData = arr;
                         }
 
-                        <div class="file-card @(isNew ? "new-file" : "")">
-                            <div class="file-preview-area">
+                        <div class="@M3.Picker.FileCard @(isNew ? "new-file" : "")">
+                            <div class="@M3.Picker.FilePreviewArea">
                                 @if (IsImage(contentType, fileName))
                                 {
                                     var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
-                                    <img src="@imgUrl" alt="@fileName" class="image-preview" />
+                                    <img src="@imgUrl" alt="@fileName" class="@M3.Picker.ImagePreview" />
                                 }
                                 else
                                 {
-                                    <div class="icon-preview @GetIconClass(contentType, fileName)">
+                                    <div class="@M3.Picker.IconPreview @GetIconClass(contentType, fileName)">
                                         <Icon Name="@GetFileIcon(contentType, fileName)" />
                                     </div>
                                 }
                             </div>
-                            <div class="file-info">
-                                <span class="file-name" title="@fileName">@fileName</span>
+                            <div class="@M3.Picker.FileInfo">
+                                <span class="@M3.Picker.FileName" title="@fileName">@fileName</span>
                             </div>
                             @if (isNew)
                             {
-                                <div class="new-badge">New</div>
+                                <div class="@M3.Picker.NewBadge">New</div>
                             }
-                            <div class="file-overlay">
+                            <div class="@M3.Picker.FileOverlay">
                                 <IconButton Icon="delete"
                                             AriaLabel="@RemoveLabel"
                                             OnClick="() => RemoveAttachment(index)" />
@@ -107,14 +107,14 @@
                         var fileName = Path.GetFileName(url);
                         if (string.IsNullOrEmpty(fileName)) fileName = "image";
                         
-                        <div class="file-card">
-                            <div class="file-preview-area">
-                                <img src="@previewUrl" alt="@fileName" class="image-preview" />
+                        <div class="@M3.Picker.FileCard">
+                            <div class="@M3.Picker.FilePreviewArea">
+                                <img src="@previewUrl" alt="@fileName" class="@M3.Picker.ImagePreview" />
                             </div>
-                            <div class="file-info">
-                                <span class="file-name" title="@fileName">@fileName</span>
+                            <div class="@M3.Picker.FileInfo">
+                                <span class="@M3.Picker.FileName" title="@fileName">@fileName</span>
                             </div>
-                            <div class="file-overlay">
+                            <div class="@M3.Picker.FileOverlay">
                                 <IconButton Icon="delete"
                                             AriaLabel="@RemoveLabel"
                                             OnClick="() => RemoveExistingImage(index)" />
@@ -166,24 +166,24 @@
                     }
                     var dataUrl = $"data:{contentType};base64,{base64Data}";
                     
-                    <div class="file-card new-file">
-                        <div class="file-preview-area">
+                    <div class="@M3.Picker.FileCard new-file">
+                        <div class="@M3.Picker.FilePreviewArea">
                             @if (IsImage(contentType, fileName))
                             {
-                                <img src="@dataUrl" alt="@fileName" class="image-preview" />
+                                <img src="@dataUrl" alt="@fileName" class="@M3.Picker.ImagePreview" />
                             }
                             else
                             {
-                                <div class="icon-preview @GetIconClass(contentType, fileName)">
+                                <div class="@M3.Picker.IconPreview @GetIconClass(contentType, fileName)">
                                     <Icon Name="@GetFileIcon(contentType, fileName)" />
                                 </div>
                             }
                         </div>
-                        <div class="file-info">
-                            <span class="file-name" title="@fileName">@fileName</span>
+                        <div class="@M3.Picker.FileInfo">
+                            <span class="@M3.Picker.FileName" title="@fileName">@fileName</span>
                         </div>
-                        <div class="new-badge">New</div>
-                        <div class="file-overlay">
+                        <div class="@M3.Picker.NewBadge">New</div>
+                        <div class="@M3.Picker.FileOverlay">
                             <IconButton Icon="delete"
                                         AriaLabel="@RemoveLabel"
                                         OnClick="() => RemoveNewImage(index)" />
@@ -194,7 +194,7 @@
         }
 
         <!-- Upload Card -->
-        <div class="upload-card @(isDragging ? "dragging" : "")"
+        <div class="@M3.Picker.UploadCard @(isDragging ? M3.Picker.Dragging : "")"
              @ondragenter="HandleDragEnter"
              @ondragleave="HandleDragLeave"
              @ondragover="HandleDragOver"
@@ -202,17 +202,17 @@
              @ondrop="HandleDrop"
              @ondrop:preventDefault>
             
-            <div class="upload-zone-label">
-                <Icon Name="cloud_upload" class="upload-icon" />
-                <span class="upload-text">@UploadLabel</span>
-                <span class="upload-subtext">Перетащите файлы или нажмите</span>
+            <div class="@M3.Picker.UploadZoneLabel">
+                <Icon Name="cloud_upload" class="@M3.Picker.UploadIcon" />
+                <span class="@M3.Picker.UploadText">@UploadLabel</span>
+                <span class="@M3.Picker.UploadSubtext">Перетащите файлы или нажмите</span>
             </div>
             
             <InputFile id="@inputId" 
                        OnChange="HandleFileSelected" 
                        multiple="@Multiple" 
                        accept="@Accept" 
-                       class="file-input-hidden" />
+                       class="@M3.Picker.FileInputHidden" />
         </div>
     </div>
 </div>
@@ -353,14 +353,14 @@
         var mime = contentType.ToLowerInvariant();
         var ext = Path.GetExtension(fileName).ToLowerInvariant();
 
-        if (mime == "application/pdf" || ext == ".pdf") return "pdf-type";
-        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return "archive-type";
-        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return "doc-type";
-        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return "sheet-type";
-        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return "audio-type";
-        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return "video-type";
+        if (mime == "application/pdf" || ext == ".pdf") return M3.Picker.PdfType;
+        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return M3.Picker.ArchiveType;
+        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return M3.Picker.DocType;
+        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return M3.Picker.SheetType;
+        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return M3.Picker.AudioType;
+        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return M3.Picker.VideoType;
 
-        return "generic-type";
+        return M3.Picker.GenericType;
     }
 
     private async Task HandleFileSelected(InputFileChangeEventArgs e)
