@@ -23,12 +23,14 @@
     width: min(90vw, 540px);
     max-height: min(85dvh, 720px);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-dialog, 28px);
-    padding: clamp(1.25rem, 3vw, 1.75rem);
+    padding: var(--md-sys-gutter-section, clamp(1.25rem, 3vw, 1.75rem));
     display: grid !important;
-    gap: 1.25rem;
+    gap: var(--md-sys-spacing-5, 1.25rem);
     z-index: var(--md-sys-z-dialog, 1001);
     box-shadow: var(--md-sys-elevation-level4);
 }
@@ -37,7 +39,7 @@
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .m3-dialog-title-group {
@@ -45,7 +47,7 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .m3-dialog-icon {
@@ -63,10 +65,10 @@
 .m3-dialog-close-btn {
     display: grid !important;
     place-items: center;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
+    width: var(--md-sys-touch-target-compact, 40px);
+    height: var(--md-sys-touch-target-compact, 40px);
+    min-width: var(--md-sys-touch-target-compact, 40px);
+    min-height: var(--md-sys-touch-target-compact, 40px);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     border: none;
     background: var(--md-sys-color-surface-container-high);
@@ -89,15 +91,17 @@
 
 .m3-dialog-options-list {
     display: grid !important;
-    gap: 0.65rem;
+    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .m3-dialog-toggle-item {
     display: grid !important;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
+    gap: var(--md-sys-spacing-4, 1rem);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    box-sizing: border-box;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large, 16px);
@@ -140,13 +144,15 @@
 
 .m3-dialog-actions {
     display: grid !important;
-    padding-top: 0.5rem;
+    padding-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .m3-dialog-btn-primary {
     display: grid !important;
     place-items: center;
-    padding: 0.85rem;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    box-sizing: border-box;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     border: none;
