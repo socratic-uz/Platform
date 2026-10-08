@@ -12,27 +12,58 @@
 }
 
 .m3-table,
-.order-items-table {
+.order-items-table,
+.orders-table {
     width: 100%;
     border-collapse: collapse;
+}
+
+.m3-table,
+.order-items-table {
     font-size: 0.9375rem;
 }
 
+.orders-table {
+    color: var(--md-sys-color-on-surface);
+    min-width: min(100%, 680px);
+}
+
 .m3-table th,
-.order-items-table th {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+.order-items-table th,
+.orders-table th {
     text-align: left;
     font-weight: 600;
     color: var(--md-sys-color-on-surface-variant);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
+.m3-table th,
+.order-items-table th {
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+}
+
+.orders-table th {
+    background: var(--md-sys-color-surface-container-high);
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+}
+
+.m3-table td,
+.order-items-table td,
+.orders-table td {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    vertical-align: middle;
+}
+
 .m3-table td,
 .order-items-table td {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     color: var(--md-sys-color-on-surface);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    vertical-align: middle;
+}
+
+.orders-table td {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
 }
 
 .m3-table tr:last-child td,
@@ -59,30 +90,6 @@
     display: grid !important;
     justify-content: start;
     margin-bottom: var(--md-sys-spacing-2);
-}
-
-.orders-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: var(--md-sys-color-on-surface);
-    min-width: min(100%, 680px);
-}
-
-.orders-table th {
-    background: var(--md-sys-color-surface-container-high);
-    padding: 0.85rem 1rem;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-align: left;
-    color: var(--md-sys-color-on-surface-variant);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.orders-table td {
-    padding: 0.85rem 1rem;
-    font-size: 0.9rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    vertical-align: middle;
 }
 
 .orders-table tr:hover {
@@ -373,6 +380,7 @@ td.col-justify-center,
 }
 
 td.col-justify-end,
+td.col-justify-right,
 .col-justify-end .col-title {
     text-align: right;
     justify-content: end;
@@ -383,12 +391,10 @@ td.col-justify-end,
 }
 
 td.col-justify-start,
-td.col-justify-left {
+td.col-justify-left,
+.col-justify-start .col-title {
     text-align: left;
-}
-
-td.col-justify-right {
-    text-align: right;
+    justify-content: start;
 }
 
 /* QuickGrid & SmartGrid Paginator */

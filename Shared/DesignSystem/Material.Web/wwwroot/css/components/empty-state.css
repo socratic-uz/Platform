@@ -1,17 +1,63 @@
 /* Material Design 3 Expressive - Universal Empty State (Zero-Data Experience) */
 
-.m3-empty-state {
+/* ─── Shared Base Empty State Architecture ──────────────────────────────── */
+.m3-empty-state,
+.m3-empty-column,
+.column-empty,
+.kds-empty-col,
+.store-not-found,
+.pos-empty-state,
+.kiosk-empty-state {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
+    box-sizing: border-box;
+}
+
+/* Common Titles */
+.m3-empty-state-title,
+.store-not-found h2,
+.pos-empty-state h5,
+.kiosk-empty-state h3 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Common Descriptions */
+.m3-empty-state-desc,
+.m3-empty-column p,
+.column-empty p,
+.kds-empty-col p,
+.store-not-found p,
+.pos-empty-state p,
+.kiosk-empty-state p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Common Icons */
+.m3-empty-state-icon,
+.m3-empty-column-icon,
+.empty-mini-icon,
+.kds-empty-icon,
+.pos-empty-icon,
+.kiosk-empty-icon {
+    display: grid;
+    place-items: center;
+    color: var(--md-sys-color-primary);
+    opacity: 0.8;
+}
+
+/* ─── 1. Universal Large Empty State ────────────────────────────────────── */
+.m3-empty-state {
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     width: 100%;
-    box-sizing: border-box;
     margin: var(--md-sys-spacing-6) 0;
 }
 
@@ -19,27 +65,20 @@
     font-size: 56px !important;
     width: 56px !important;
     height: 56px !important;
-    color: var(--md-sys-color-primary);
     opacity: 0.85;
-    display: grid;
-    place-items: center;
     margin-bottom: var(--md-sys-spacing-2);
 }
 
 .m3-empty-state-title {
-    margin: 0;
     font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
     letter-spacing: -0.01em;
 }
 
 .m3-empty-state-desc {
-    margin: 0 0 var(--md-sys-spacing-3) 0;
     font-size: 0.95rem;
-    color: var(--md-sys-color-on-surface-variant);
     max-width: 440px;
     line-height: 1.55;
+    margin-bottom: var(--md-sys-spacing-3);
 }
 
 .m3-empty-state-action {
@@ -48,26 +87,19 @@
     margin-top: var(--md-sys-spacing-2);
 }
 
-/* ─── Mini Column Empty State (Kanban, KDS, Drawers) ──────────────────── */
+/* ─── 2. Mini Column Empty State (Kanban, KDS, Drawers) ──────────────────── */
 .m3-empty-column,
 .column-empty,
 .kds-empty-col {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr);
-    justify-items: center;
     align-items: center;
-    text-align: center;
     gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
-    box-sizing: border-box;
 }
 
 .m3-empty-column p,
 .column-empty p,
 .kds-empty-col p {
-    margin: 0;
     font-size: 0.9375rem;
 }
 
@@ -75,18 +107,14 @@
 .empty-mini-icon,
 .kds-empty-icon {
     font-size: 36px !important;
-    color: var(--md-sys-color-primary);
     opacity: 0.7;
 }
 
-/* ─── Store / Product Showcase Not Found ────────────────────────────────── */
+/* ─── 3. Store / Product Showcase Not Found ─────────────────────────────── */
 .store-not-found {
-    text-align: center;
     padding: 5rem 1rem;
     max-width: 500px;
     margin: 0 auto;
-    display: grid !important;
-    justify-items: center;
     gap: 0.5rem;
 }
 
@@ -96,14 +124,8 @@
     margin-bottom: 0.5rem;
 }
 
-.store-not-found h2 {
-    color: var(--md-sys-color-on-surface);
-    margin: 0 0 0.5rem 0;
-}
-
 .store-not-found p {
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1.5rem;
 }
 
 .btn-primary-link {
@@ -112,72 +134,50 @@
     justify-content: center;
 }
 
-/* ─── POS Terminal Empty State ────────────────────────────────────────── */
+/* ─── 4. POS Terminal Empty State ────────────────────────────────────────── */
 .pos-empty-state {
     grid-column: 1 / -1;
-    display: grid !important;
     place-content: center;
-    justify-items: center;
     padding: 40px 16px;
-    text-align: center;
     background: var(--md-sys-color-surface-container);
     border-radius: var(--md-sys-shape-corner-large);
     border: 1px dashed var(--md-sys-color-outline-variant);
     gap: 8px;
-    box-sizing: border-box;
 }
 
 .pos-empty-icon {
     font-size: 44px;
-    color: var(--md-sys-color-primary);
-    opacity: 0.8;
 }
 
 .pos-empty-state h5 {
     font-size: 1.1rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
 }
 
 .pos-empty-state p {
     font-size: 0.82rem;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
-/* ─── Kiosk Catalog Empty State ───────────────────────────────────────── */
+/* ─── 5. Kiosk Catalog Empty State ───────────────────────────────────────── */
 .kiosk-empty-state {
-    display: grid !important;
     place-content: center;
-    justify-items: center;
     padding: 48px 24px;
-    text-align: center;
     background: var(--md-sys-color-surface-container);
     border-radius: var(--md-sys-shape-corner-extra-large);
     border: 1px dashed var(--md-sys-color-outline-variant);
     margin: var(--md-sys-spacing-4) 0;
     gap: var(--md-sys-spacing-3);
-    box-sizing: border-box;
 }
 
 .kiosk-empty-icon {
     font-size: 56px;
-    color: var(--md-sys-color-primary);
-    opacity: 0.8;
 }
 
 .kiosk-empty-state h3 {
     font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
 }
 
 .kiosk-empty-state p {
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
     max-width: 380px;
 }
 

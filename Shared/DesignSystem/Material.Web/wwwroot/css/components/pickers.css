@@ -147,21 +147,6 @@
     }
 }
 
-@media (max-width: 599.98px) {
-    .picker-trigger-card {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 10px 12px;
-        gap: 10px;
-    }
-    .picker-trigger-left {
-        min-width: 100%;
-    }
-    .picker-trigger-actions {
-        width: 100%;
-        justify-content: end;
-    }
-}
-
 
 /* ==========================================================================
    2. Color Picker Component
@@ -211,7 +196,8 @@
     touch-action: manipulation;
 }
 
-.picker-swatch-wrapper::before {
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -316,16 +302,6 @@
     place-items: center;
     transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
                 box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
-}
-
-.picker-palette-swatch::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
 }
 
 .picker-palette-swatch:hover {

@@ -20,6 +20,7 @@
     line-height: 1;
 }
 
+/* Status Variants: Primary / Success / Ready / Completed */
 .m3-status-badge.success,
 .m3-status-badge.paid,
 .m3-status-badge.status-paid,
@@ -29,21 +30,44 @@
 .m3-status-badge.status-completed,
 .order-status-badge.status-completed,
 .item-status-pill.status-completed,
-.badge-ready {
+.badge-ready,
+.badge-completed,
+.badge.completed,
+.ready-badge {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
+.badge-trial,
+.badge.trial,
+.badge-verified,
+.badge.verified {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Status Variants: Warning / Making / In-Progress */
 .m3-status-badge.warning,
 .m3-status-badge.making,
 .m3-status-badge.status-making,
 .order-status-badge.status-making,
 .item-status-pill.status-making,
-.badge-making {
+.badge-making,
+.badge-paused,
+.badge.paused {
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
 
+.badge-pro,
+.badge.pro {
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Status Variants: High Surface / Made */
 .m3-status-badge.made,
 .m3-status-badge.status-made,
 .order-status-badge.status-made,
@@ -53,6 +77,7 @@
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
+/* Status Variants: Info / Secondary Container */
 .m3-status-badge.info,
 .m3-status-badge.collecting,
 .m3-status-badge.status-collecting,
@@ -65,49 +90,29 @@
 .m3-status-badge.shipping,
 .m3-status-badge.status-shipping,
 .order-status-badge.status-shipping,
-.item-status-pill.status-shipping {
+.item-status-pill.status-shipping,
+.badge-active,
+.badge.active {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
+/* Status Variants: Error / Canceled / Blocked */
 .m3-status-badge.error,
 .m3-status-badge.canceled,
 .m3-status-badge.status-canceled,
 .order-status-badge.status-canceled,
-.item-status-pill.status-canceled {
+.item-status-pill.status-canceled,
+.badge-none,
+.badge.none,
+.badge-blocked,
+.badge.blocked {
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
 }
 
-.m3-status-badge.created,
-.m3-status-badge.status-created,
-.order-status-badge.status-created,
-.item-status-pill.status-created {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.badge-trial,
-.badge.trial {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
 .badge-with-ads,
-.badge.with-ads {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-error);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-pro,
-.badge.pro {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
+.badge.with-ads,
 .badge-expired,
 .badge.expired {
     background: var(--md-sys-color-error-container);
@@ -115,40 +120,11 @@
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.badge-verified,
-.badge.verified {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-none,
-.badge.none,
-.badge-blocked,
-.badge.blocked {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.badge-active,
-.badge.active {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.badge-completed,
-.badge.completed {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-.badge-paused,
-.badge.paused {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
+/* Status Variants: Neutral / Created / Cancelled */
+.m3-status-badge.created,
+.m3-status-badge.status-created,
+.order-status-badge.status-created,
+.item-status-pill.status-created,
 .badge-cancelled,
 .badge.cancelled {
     background: var(--md-sys-color-surface-container-high);
@@ -231,8 +207,7 @@
 
 /* Count Indicator Pill */
 .m3-count-badge,
-.count-badge,
-.badge-counter {
+.count-badge {
     display: inline-grid !important;
     place-items: center;
     min-width: 28px;
@@ -245,11 +220,6 @@
     font-weight: 700;
     line-height: 1;
     box-sizing: border-box;
-}
-
-.ready-badge {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .kds-qty-badge,
