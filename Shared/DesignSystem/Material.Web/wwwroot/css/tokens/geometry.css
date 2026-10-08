@@ -97,26 +97,36 @@
 }
 
 /* ─── Scrollbar Utility Classes ────────────────────────────────────────── */
-.scrollbar-thin {
+.scrollbar-thin,
+.m3-config-dialog,
+.m3-dialog-surface {
     scrollbar-width: thin !important;
     scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent !important;
 }
 
-.scrollbar-thin::-webkit-scrollbar {
+.scrollbar-thin::-webkit-scrollbar,
+.m3-config-dialog::-webkit-scrollbar,
+.m3-dialog-surface::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
 
-.scrollbar-thin::-webkit-scrollbar-track {
+.scrollbar-thin::-webkit-scrollbar-track,
+.m3-config-dialog::-webkit-scrollbar-track,
+.m3-dialog-surface::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.scrollbar-thin::-webkit-scrollbar-thumb {
+.scrollbar-thin::-webkit-scrollbar-thumb,
+.m3-config-dialog::-webkit-scrollbar-thumb,
+.m3-dialog-surface::-webkit-scrollbar-thumb {
     background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
 }
 
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+.scrollbar-thin::-webkit-scrollbar-thumb:hover,
+.m3-config-dialog::-webkit-scrollbar-thumb:hover,
+.m3-dialog-surface::-webkit-scrollbar-thumb:hover {
     background: var(--md-sys-color-outline);
 }
 

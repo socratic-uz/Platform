@@ -213,6 +213,8 @@ public static class M3
 
     public static class Geometry
     {
+        public const string ConfigDialog = "m3-config-dialog";
+        public const string DialogSurface = "m3-dialog-surface";
         public const string NoScrollbar = "no-scrollbar";
         public const string PageGutter = "m3-page-gutter";
         public const string RatioCard = "m3-ratio-card";

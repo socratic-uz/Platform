@@ -125,7 +125,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
     padding: 0.5rem 1.5rem;
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     font-size: 0.9375rem;

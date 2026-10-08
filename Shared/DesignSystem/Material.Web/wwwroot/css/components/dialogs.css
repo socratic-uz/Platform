@@ -23,8 +23,6 @@
     width: min(90vw, 540px);
     max-height: min(85dvh, 720px);
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-dialog);
