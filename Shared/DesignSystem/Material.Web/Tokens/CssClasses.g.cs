@@ -29,28 +29,20 @@ public static class M3
 
     public static class Badge
     {
-        public const string Active = "active";
-        public const string Active_2 = "badge-active";
-        public const string BackButton = "back-button";
-        public const string BackButton_2 = "m3-back-button";
-        public const string BackIcon = "back-icon";
-        public const string BackIcon_2 = "m3-back-icon";
+        public const string Active = "badge-active";
+        public const string BackButton = "m3-back-button";
+        public const string BackIcon = "m3-back-icon";
         public const string Blocked = "badge-blocked";
-        public const string Blocked_2 = "blocked";
         public const string Canceled = "canceled";
         public const string Cancelled = "badge-cancelled";
-        public const string Cancelled_2 = "cancelled";
         public const string Collected = "collected";
         public const string Collecting = "collecting";
         public const string Completed = "badge-completed";
-        public const string Completed_2 = "completed";
-        public const string CountBadge = "count-badge";
-        public const string CountBadge_2 = "m3-count-badge";
+        public const string CountBadge = "m3-count-badge";
         public const string Counter = "badge-counter";
         public const string Created = "created";
         public const string Error = "error";
         public const string Expired = "badge-expired";
-        public const string Expired_2 = "expired";
         public const string Icon = "badge-icon";
         public const string Info = "info";
         public const string ItemQtyBadge = "item-qty-badge";
@@ -60,22 +52,17 @@ public static class M3
         public const string KdsStatusTag = "kds-status-tag";
         public const string Made = "made";
         public const string Making = "badge-making";
-        public const string Making_2 = "making";
         public const string MaterialCounter = "material-counter";
         public const string None = "badge-none";
-        public const string None_2 = "none";
         public const string OrderStatusBadge = "order-status-badge";
         public const string Paid = "paid";
         public const string Paused = "badge-paused";
-        public const string Paused_2 = "paused";
         public const string PillBadge = "m3-pill-badge";
         public const string Pro = "badge-pro";
-        public const string Pro_2 = "pro";
         public const string Pulse = "pulse";
         public const string Ready = "badge-ready";
         public const string ReadyBadge = "ready-badge";
-        public const string Root = "badge";
-        public const string Root_2 = "m3-badge";
+        public const string Root = "m3-badge";
         public const string Secondary = "secondary";
         public const string Shipping = "shipping";
         public const string StatusBadge = "m3-status-badge";
@@ -92,39 +79,27 @@ public static class M3
         public const string Success = "success";
         public const string Tertiary = "tertiary";
         public const string Trial = "badge-trial";
-        public const string Trial_2 = "trial";
         public const string Verified = "badge-verified";
-        public const string Verified_2 = "verified";
         public const string Warning = "warning";
         public const string WithAds = "badge-with-ads";
-        public const string WithAds_2 = "with-ads";
     }
 
     public static class Cards
     {
-        public const string Actions = "card-actions";
-        public const string Actions_2 = "m3-card-actions";
-        public const string Body = "card-body";
-        public const string Body_2 = "m3-card-body";
+        public const string Actions = "m3-card-actions";
+        public const string Body = "m3-card-body";
         public const string Card = "m3-card";
-        public const string Elevated = "card-elevated";
-        public const string Elevated_2 = "m3-card-elevated";
-        public const string Filled = "card-filled";
-        public const string Filled_2 = "m3-card-filled";
-        public const string Footer = "card-footer";
-        public const string Footer_2 = "m3-card-footer";
-        public const string Glass = "card-glass";
+        public const string Elevated = "m3-card-elevated";
+        public const string Filled = "m3-card-filled";
+        public const string Footer = "m3-card-footer";
+        public const string Glass = "m3-card-glass";
         public const string GlassCard = "glass-card";
-        public const string Glass_2 = "m3-card-glass";
         public const string Grid = "card-grid";
-        public const string Header = "card-header";
-        public const string Header_2 = "m3-card-header";
-        public const string Interactive = "card-interactive";
-        public const string Interactive_2 = "m3-card-interactive";
+        public const string Header = "m3-card-header";
+        public const string Interactive = "m3-card-interactive";
         public const string MaterialSymbolsOutlined = "material-symbols-outlined";
         public const string Media = "m3-card-media";
         public const string MediaCard = "m3-media-card";
-        public const string MediaCard_2 = "media-card";
         public const string MediaPlaceholder = "m3-card-media-placeholder";
         public const string OrgCard = "org-card";
         public const string OrgCardContent = "org-card-content";
@@ -132,44 +107,27 @@ public static class M3
         public const string OrgCardName = "org-card-name";
         public const string OrgMedia = "org-media";
         public const string OrgMediaPlaceholder = "org-media-placeholder";
-        public const string Outlined = "card-outlined";
-        public const string Outlined_2 = "m3-card-outlined";
-        public const string PaddingLg = "card-padding-lg";
-        public const string PaddingLg_2 = "m3-card-padding-lg";
-        public const string PaddingMd = "card-padding-md";
-        public const string PaddingMd_2 = "m3-card-padding-md";
-        public const string PaddingSm = "card-padding-sm";
-        public const string PaddingSm_2 = "m3-card-padding-sm";
+        public const string Outlined = "m3-card-outlined";
+        public const string PaddingLg = "m3-card-padding-lg";
+        public const string PaddingMd = "m3-card-padding-md";
+        public const string PaddingSm = "m3-card-padding-sm";
         public const string PriceTag = "price-tag";
         public const string ProductCard = "product-card";
         public const string ProductTitle = "product-title";
         public const string RowLabel = "m3-row-label";
-        public const string RowLabel_2 = "row-label";
         public const string RowValue = "m3-row-value";
-        public const string RowValue_2 = "row-value";
-        public const string Subtitle = "card-subtitle";
-        public const string Subtitle_2 = "m3-card-subtitle";
+        public const string Subtitle = "m3-card-subtitle";
         public const string SummaryActions = "m3-summary-actions";
-        public const string SummaryActions_2 = "summary-actions";
         public const string SummaryBackLink = "summary-back-link";
         public const string SummaryCard = "m3-summary-card";
-        public const string SummaryCard_2 = "summary-card";
         public const string SummaryDivider = "m3-summary-divider";
-        public const string SummaryDivider_2 = "summary-divider";
         public const string SummaryRow = "m3-summary-row";
-        public const string SummaryRow_2 = "summary-row";
         public const string SummaryRows = "m3-summary-rows";
-        public const string SummaryRows_2 = "summary-rows";
         public const string SummaryTitle = "m3-summary-title";
-        public const string SummaryTitle_2 = "summary-title";
-        public const string Title = "card-title";
-        public const string Title_2 = "m3-card-title";
+        public const string Title = "m3-card-title";
         public const string TotalLabel = "m3-total-label";
-        public const string TotalLabel_2 = "total-label";
         public const string TotalRow = "m3-total-row";
-        public const string TotalRow_2 = "total-row";
         public const string TotalValue = "m3-total-value";
-        public const string TotalValue_2 = "total-value";
         public const string WishlistCardFooter = "wishlist-card-footer";
         public const string WishlistContent = "wishlist-content";
         public const string WishlistDescText = "wishlist-desc-text";
@@ -256,23 +214,17 @@ public static class M3
 
     public static class InfoGrid
     {
-        public const string InfoItem = "info-item";
-        public const string InfoItem_2 = "m3-info-item";
-        public const string InfoLabel = "info-label";
-        public const string InfoLabel_2 = "m3-info-label";
-        public const string InfoValue = "info-value";
-        public const string InfoValue_2 = "m3-info-value";
-        public const string Root = "info-grid";
-        public const string Root_2 = "m3-info-grid";
+        public const string InfoItem = "m3-info-item";
+        public const string InfoLabel = "m3-info-label";
+        public const string InfoValue = "m3-info-value";
+        public const string Root = "m3-info-grid";
     }
 
     public static class Picker
     {
         public const string Active = "active";
-        public const string ArchiveType = "archive-type";
-        public const string ArchiveType_2 = "m3-archive-type";
-        public const string AudioType = "audio-type";
-        public const string AudioType_2 = "m3-audio-type";
+        public const string ArchiveType = "m3-archive-type";
+        public const string AudioType = "m3-audio-type";
         public const string Badge = "picker-badge";
         public const string BodySubtext = "body-subtext";
         public const string BookingPickerCard = "booking-picker-card";
@@ -286,8 +238,7 @@ public static class M3
         public const string DatePresetsRow = "date-presets-row";
         public const string DayDot = "picker-day-dot";
         public const string Disabled = "disabled";
-        public const string DocType = "doc-type";
-        public const string DocType_2 = "m3-doc-type";
+        public const string DocType = "m3-doc-type";
         public const string Dragging = "dragging";
         public const string FileAddBtnLabel = "file-add-btn-label";
         public const string FileCard = "file-card";
@@ -298,8 +249,7 @@ public static class M3
         public const string FileOverlay = "file-overlay";
         public const string FilePickerContainer = "file-picker-container";
         public const string FilePreviewArea = "file-preview-area";
-        public const string GenericType = "generic-type";
-        public const string GenericType_2 = "m3-generic-type";
+        public const string GenericType = "m3-generic-type";
         public const string HeaderRow = "picker-header-row";
         public const string Headline = "headline";
         public const string HexInput = "picker-hex-input";
@@ -349,7 +299,6 @@ public static class M3
         public const string PaletteGrid = "picker-palette-grid";
         public const string PaletteSwatch = "picker-palette-swatch";
         public const string PdfType = "m3-pdf-type";
-        public const string PdfType_2 = "pdf-type";
         public const string PopoverFooter = "picker-popover-footer";
         public const string PopoverHeader = "picker-popover-header";
         public const string PopoverPanel = "picker-popover-panel";
@@ -362,7 +311,6 @@ public static class M3
         public const string ResourceTabs = "resource-tabs";
         public const string Selected = "selected";
         public const string SheetType = "m3-sheet-type";
-        public const string SheetType_2 = "sheet-type";
         public const string SlotsChipSet = "slots-chip-set";
         public const string SummaryActions = "summary-actions";
         public const string SummaryCheckIcon = "summary-check-icon";
@@ -392,7 +340,6 @@ public static class M3
         public const string VariantDialogTitle = "variant-dialog-title";
         public const string VariantsChipSet = "variants-chip-set";
         public const string VideoType = "m3-video-type";
-        public const string VideoType_2 = "video-type";
         public const string Web = "Web";
         public const string WeekMiniDots = "picker-week-mini-dots";
     }
@@ -435,17 +382,14 @@ public static class M3
         public const string Circle = "m3-skeleton-circle";
         public const string Root = "m3-skeleton";
         public const string Short = "m3-short";
-        public const string Short_2 = "short";
         public const string Text = "m3-skeleton-text";
     }
 
     public static class Table
     {
         public const string ActionsBar = "m3-table-actions-bar";
-        public const string ActionsBar_2 = "table-actions-bar";
         public const string ActionsColumn = "actions-column";
-        public const string AmountCell = "amount-cell";
-        public const string AmountCell_2 = "m3-amount-cell";
+        public const string AmountCell = "m3-amount-cell";
         public const string CardGrid = "card-grid";
         public const string ColHeaderContent = "col-header-content";
         public const string ColJustifyCenter = "col-justify-center";
@@ -481,7 +425,6 @@ public static class M3
         public const string Quickgrid = "quickgrid";
         public const string Root = "m3-table";
         public const string RowActions = "m3-table-row-actions";
-        public const string RowActions_2 = "table-row-actions";
         public const string SmartGridContainer = "smart-grid-container";
         public const string SortIndicator = "sort-indicator";
         public const string W3 = "w3";
@@ -493,10 +436,7 @@ public static class M3
         public const string DarkMode = "dark-mode";
         public const string ModeToggle = "m3-mode-toggle";
         public const string ModeToggleFigure = "m3-mode-toggle-figure";
-        public const string ModeToggleFigure_2 = "mode-toggle-figure";
         public const string ModeToggleIcon = "m3-mode-toggle-icon";
-        public const string ModeToggleIcon_2 = "mode-toggle-icon";
-        public const string ModeToggle_2 = "mode-toggle";
     }
 
 }
