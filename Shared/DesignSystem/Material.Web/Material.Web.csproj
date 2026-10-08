@@ -21,6 +21,23 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Compile Update="Tokens\CssClasses.g.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
+
+  <!-- Level 2: Generates strongly-typed C# class constants from CSS stylesheets -->
+  <Target Name="GenerateCssClasses" BeforeTargets="BeforeCompile" Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/generate-css-classes.mjs')">
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)../../../../../scripts/generate-css-classes.mjs&quot;" 
+          ContinueOnError="true" 
+          StandardOutputImportance="Low" />
+  </Target>
+
+  <!-- Level 4: Socratic Quality Gate stop-lever for Release / CI builds -->
+  <Target Name="ValidateCssQualityOnBuild" BeforeTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1')">
+    <Exec Command="pwsh -File &quot;$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1&quot;" 
+          ContinueOnError="false" />
+  </Target>
 
 </Project>
