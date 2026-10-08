@@ -7,9 +7,6 @@
     user-select: none;
 }
 
-.avatar-container md-outlined-button.avatar-button,
-.avatar-container .avatar-button,
-md-outlined-button.avatar-button,
 .avatar-button {
     position: relative;
     display: grid;
@@ -39,7 +36,6 @@ md-outlined-button.avatar-button,
     --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
 }
 
-.avatar-container .avatar-button::before,
 .avatar-button::before {
     content: '';
     position: absolute;
@@ -50,9 +46,6 @@ md-outlined-button.avatar-button,
     min-height: var(--md-sys-touch-target-min);
 }
 
-.avatar-container md-outlined-button.avatar-button img,
-.avatar-container .avatar-button img,
-md-outlined-button.avatar-button img,
 .avatar-button img {
     position: absolute;
     inset: 0;
@@ -67,10 +60,6 @@ md-outlined-button.avatar-button img,
     z-index: 1;
 }
 
-.avatar-container md-outlined-button.avatar-button md-icon,
-.avatar-container .avatar-button md-icon,
-.avatar-container .avatar-button .material-symbols-outlined,
-md-outlined-button.avatar-button md-icon,
 .avatar-button md-icon,
 .avatar-button .material-symbols-outlined {
     position: absolute !important;
@@ -87,22 +76,18 @@ md-outlined-button.avatar-button md-icon,
     padding: 0 !important;
 }
 
-.avatar-container svg *,
 .avatar-button svg * {
     fill: var(--md-sys-color-on-primary-container);
 }
 
-.avatar-container md-dialog:not(:defined),
-md-dialog.contacts:not(:defined),
-md-dialog.faceid-profile-modal:not(:defined) {
+/* ─── 2. Avatar Profile Modals & Dialogs ─────────────────────────────── */
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-dialog:not(:defined) {
     display: none !important;
 }
 
-.avatar-container md-dialog.contacts,
-.avatar-container md-dialog.faceid-profile-modal,
-.avatar-container md-dialog,
 md-dialog.contacts,
-md-dialog.faceid-profile-modal {
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
     width: min(620px, calc(100vw - 32px));
     max-width: min(620px, calc(100vw - 32px));
     max-height: min(880px, calc(100dvh - 48px));
@@ -110,9 +95,7 @@ md-dialog.faceid-profile-modal {
     --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
 }
 
-.avatar-container [slot='headline'],
-md-dialog.contacts [slot='headline'],
-md-dialog.faceid-profile-modal [slot='headline'] {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -121,17 +104,13 @@ md-dialog.faceid-profile-modal [slot='headline'] {
     padding: 24px 24px 16px 24px;
 }
 
-.avatar-container .headline,
-md-dialog.contacts .headline,
-md-dialog.faceid-profile-modal .headline {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
 }
 
-.avatar-container form.content,
-md-dialog.contacts form.content,
-md-dialog.faceid-profile-modal form.content {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content {
     display: grid;
     grid-auto-flow: row;
     gap: 12px;
@@ -140,27 +119,21 @@ md-dialog.faceid-profile-modal form.content {
     width: 100%;
 }
 
-.avatar-container .row,
-md-dialog.contacts .row,
-md-dialog.faceid-profile-modal .row {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr);
     gap: 8px;
 }
 
-.avatar-container md-list,
-md-dialog.contacts md-list,
-md-dialog.faceid-profile-modal md-list {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list {
     border-radius: var(--md-sys-shape-expressive-button);
     overflow: hidden;
     background: var(--md-sys-color-surface-container);
     width: 100%;
 }
 
-.avatar-container label,
-md-dialog.contacts label,
-md-dialog.faceid-profile-modal label {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
@@ -170,9 +143,7 @@ md-dialog.faceid-profile-modal label {
     padding: 0.5rem 0;
 }
 
-.avatar-container [slot='actions'],
-md-dialog.contacts [slot='actions'],
-md-dialog.faceid-profile-modal [slot='actions'] {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'] {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto auto;
     align-items: center;
@@ -182,29 +153,24 @@ md-dialog.faceid-profile-modal [slot='actions'] {
     width: 100%;
 }
 
-.avatar-container details,
-md-dialog.contacts details {
+:is(.avatar-container, md-dialog.contacts) details {
     width: 100%;
 }
 
-.avatar-container details summary,
-md-dialog.contacts details summary {
+:is(.avatar-container, md-dialog.contacts) details summary {
     list-style: none;
     cursor: pointer;
 }
 
-.avatar-container details summary::-webkit-details-marker,
-md-dialog.contacts details summary::-webkit-details-marker {
+:is(.avatar-container, md-dialog.contacts) details summary::-webkit-details-marker {
     display: none;
 }
 
-.avatar-container details summary md-list-item,
-md-dialog.contacts details summary md-list-item {
+:is(.avatar-container, md-dialog.contacts) details summary md-list-item {
     cursor: pointer;
 }
 
-.avatar-container details .content,
-md-dialog.contacts details .content {
+:is(.avatar-container, md-dialog.contacts) details .content {
     padding: 1rem 1.25rem;
     display: grid;
     grid-auto-flow: row;
@@ -213,10 +179,8 @@ md-dialog.contacts details .content {
     width: 100%;
 }
 
-.avatar-container md-outlined-text-field,
-.avatar-container .material-text-field,
-md-dialog.contacts md-outlined-text-field,
-md-dialog.faceid-profile-modal md-outlined-text-field {
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-outlined-text-field,
+.material-text-field {
     width: 100%;
 }
 

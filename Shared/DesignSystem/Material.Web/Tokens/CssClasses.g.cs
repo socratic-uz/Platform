@@ -52,7 +52,6 @@ public static class M3
         public const string KdsStatusTag = "kds-status-tag";
         public const string Made = "made";
         public const string Making = "badge-making";
-        public const string MaterialCounter = "material-counter";
         public const string None = "badge-none";
         public const string OrderStatusBadge = "order-status-badge";
         public const string Paid = "paid";

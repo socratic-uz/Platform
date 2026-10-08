@@ -1,5 +1,5 @@
 @using Material.Web
-<div class="@M3.Badge.MaterialCounter">
+<div class="@M3.Form.MaterialCounter">
 	@if (OrderItem != null)
 	{
 		<IconButton Icon="remove" Variant="IconButtonVariant.FilledTonal" OnClick=@(async e => await Remove.InvokeAsync(OrderItem)) />

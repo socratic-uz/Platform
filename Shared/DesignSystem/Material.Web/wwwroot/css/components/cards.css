@@ -398,9 +398,7 @@ md-elevated-card {
     box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
-md-filled-card::before,
-md-outlined-card::before,
-md-elevated-card::before {
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -413,30 +411,22 @@ md-elevated-card::before {
     z-index: 1;
 }
 
-[data-theme="light"] md-filled-card,
-[data-theme="light"] md-outlined-card,
-[data-theme="light"] md-elevated-card {
+[data-theme="light"] :is(md-filled-card, md-outlined-card, md-elevated-card) {
     border: var(--md-sys-glass-border-light);
 }
 
-md-filled-card:hover,
-md-outlined-card:hover,
-md-elevated-card:hover {
+:is(md-filled-card, md-outlined-card, md-elevated-card):hover {
     background: var(--md-sys-color-surface-container-high);
     transform: translateY(-3px) scale(1.004);
     box-shadow: var(--md-sys-elevation-expressive-2), var(--md-sys-glow-primary-subtle);
 }
 
-md-filled-card:active,
-md-outlined-card:active,
-md-elevated-card:active {
+:is(md-filled-card, md-outlined-card, md-elevated-card):active {
     transform: translateY(0) scale(0.985);
     transition-duration: var(--md-sys-motion-duration-short2);
 }
 
-md-filled-card figure,
-md-outlined-card figure,
-md-elevated-card figure {
+:is(md-filled-card, md-outlined-card, md-elevated-card) figure {
     margin: 0;
     background: var(--md-sys-color-surface-container-highest);
     overflow: hidden;
@@ -445,9 +435,7 @@ md-elevated-card figure {
     width: 100%;
 }
 
-md-filled-card figure > img,
-md-outlined-card figure > img,
-md-elevated-card figure > img {
+:is(md-filled-card, md-outlined-card, md-elevated-card) figure > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -455,15 +443,11 @@ md-elevated-card figure > img {
     transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-expressive-standard);
 }
 
-md-filled-card:hover figure > img,
-md-outlined-card:hover figure > img,
-md-elevated-card:hover figure > img {
+:is(md-filled-card, md-outlined-card, md-elevated-card):hover figure > img {
     transform: scale(1.03);
 }
 
-md-filled-card section,
-md-outlined-card section,
-md-elevated-card section {
+:is(md-filled-card, md-outlined-card, md-elevated-card) section {
     display: grid;
     gap: 6px;
     margin: 10px 0;
@@ -471,12 +455,8 @@ md-elevated-card section {
     overflow: hidden;
 }
 
-md-filled-card h5,
-md-outlined-card h5,
-md-elevated-card h5,
-md-filled-card h5.product-title,
-md-outlined-card h5.product-title,
-md-elevated-card h5.product-title {
+:is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+.product-title {
     text-align: left;
     margin: 0;
     font-size: 1.05rem;
@@ -486,9 +466,7 @@ md-elevated-card h5.product-title {
     line-height: 1.25;
 }
 
-md-filled-card p,
-md-outlined-card p,
-md-elevated-card p {
+:is(md-filled-card, md-outlined-card, md-elevated-card) p {
     text-align: left;
     overflow: hidden;
     margin: 0;
@@ -500,9 +478,7 @@ md-elevated-card p {
     line-height: 1.4;
 }
 
-md-filled-card .card-footer,
-md-outlined-card .card-footer,
-md-elevated-card .card-footer {
+:is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -511,9 +487,7 @@ md-elevated-card .card-footer {
     margin-top: 4px;
 }
 
-md-filled-card .price-tag,
-md-outlined-card .price-tag,
-md-elevated-card .price-tag {
+:is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag {
     font-weight: 800;
     font-size: 1.1rem;
     letter-spacing: -0.02em;
