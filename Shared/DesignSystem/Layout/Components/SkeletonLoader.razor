@@ -1,22 +1,24 @@
+@using Material.Web
+
 @if (!string.IsNullOrEmpty(Height) || !string.IsNullOrEmpty(Width))
 {
     var customStyle = $"{(!string.IsNullOrEmpty(Height) ? $"height: {Height};" : "")} {(!string.IsNullOrEmpty(Width) ? $"width: {Width};" : "")} {(!string.IsNullOrEmpty(BorderRadius) ? $"border-radius: {BorderRadius};" : "")}";
-    <div class="skeleton-custom shimmer @Class" style="@customStyle" @attributes="AdditionalAttributes"></div>
+    <div class="skeleton-custom shimmer @M3.Skeleton.Root @Class" style="@customStyle" @attributes="AdditionalAttributes"></div>
 }
 else
 {
-    <div class="skeleton-container @Type @Class" @attributes="AdditionalAttributes">
+    <div class="skeleton-container @M3.Skeleton.Root @Type @Class" @attributes="AdditionalAttributes">
         @for (int i = 0; i < Count; i++)
         {
             @if (Type == "card")
             {
-                <div class="skeleton-card glass-panel">
+                <div class="skeleton-card glass-panel @M3.Skeleton.Card">
                     <div class="skeleton-image shimmer"></div>
                     <div class="skeleton-body">
-                        <div class="skeleton-line headline-line shimmer"></div>
-                        <div class="skeleton-line body-line shimmer"></div>
+                        <div class="skeleton-line headline-line shimmer @M3.Skeleton.Text"></div>
+                        <div class="skeleton-line body-line shimmer @M3.Skeleton.Text"></div>
                         <div class="skeleton-footer">
-                            <div class="skeleton-line price-line shimmer"></div>
+                            <div class="skeleton-line price-line shimmer @M3.Skeleton.Text"></div>
                             <div class="skeleton-button shimmer"></div>
                         </div>
                     </div>
@@ -25,16 +27,16 @@ else
             else if (Type == "list")
             {
                 <div class="skeleton-list-item glass-panel">
-                    <div class="skeleton-avatar shimmer"></div>
+                    <div class="skeleton-avatar shimmer @M3.Skeleton.Circle"></div>
                     <div class="skeleton-body">
-                        <div class="skeleton-line headline-line shimmer"></div>
-                        <div class="skeleton-line body-line shimmer"></div>
+                        <div class="skeleton-line headline-line shimmer @M3.Skeleton.Text"></div>
+                        <div class="skeleton-line body-line shimmer @M3.Skeleton.Text"></div>
                     </div>
                 </div>
             }
             else
             {
-                <div class="skeleton-line text-line shimmer"></div>
+                <div class="skeleton-line text-line shimmer @M3.Skeleton.Text"></div>
             }
         }
     </div>
