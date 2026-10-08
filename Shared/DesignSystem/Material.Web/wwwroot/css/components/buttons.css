@@ -8,11 +8,11 @@ md-outlined-button,
 md-elevated-button,
 md-tonal-button,
 md-text-button {
-    --md-filled-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
-    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
-    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
-    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
-    min-height: 48px;
+    --md-filled-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
+    min-height: var(--md-sys-touch-target-min);
     touch-action: manipulation;
     font-weight: 600;
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
@@ -27,8 +27,8 @@ md-tonal-button:active {
 
 /* Touch-optimized Icon Button (48px Touch Target) */
 md-icon-button {
-    min-width: 48px;
-    min-height: 48px;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
     touch-action: manipulation;
 }
 
@@ -40,7 +40,7 @@ md-text-button md-icon:not([slot]),
 md-tonal-button md-icon:not([slot]),
 md-filled-tonal-button md-icon:not([slot]) {
     vertical-align: middle;
-    margin-inline-end: 8px;
+    margin-inline-end: var(--md-sys-spacing-2);
     font-size: var(--md-icon-size, 18px);
     width: var(--md-icon-size, 18px);
     height: var(--md-icon-size, 18px);
@@ -55,5 +55,5 @@ md-text-button > *:last-child:is(md-icon:not([slot])),
 md-tonal-button > *:last-child:is(md-icon:not([slot])),
 md-filled-tonal-button > *:last-child:is(md-icon:not([slot])) {
     margin-inline-end: 0;
-    margin-inline-start: 8px;
+    margin-inline-start: var(--md-sys-spacing-2);
 }

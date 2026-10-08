@@ -4,7 +4,7 @@
     position: relative;
     overflow: hidden;
     background: var(--md-sys-color-surface-container);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 .m3-skeleton::after {
@@ -31,7 +31,7 @@
     height: 1rem;
     width: 100%;
     margin-bottom: 0.5rem;
-    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
+    border-radius: var(--md-sys-shape-corner-extra-small);
 }
 
 .m3-skeleton-text.m3-short,
@@ -41,11 +41,11 @@
 
 .m3-skeleton-circle {
     border-radius: 50% !important;
-    width: 48px;
-    height: 48px;
+    width: var(--md-sys-touch-target-min);
+    height: var(--md-sys-touch-target-min);
 }
 
 .m3-skeleton-card {
     height: 240px;
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    border-radius: var(--md-sys-shape-expressive-card);
 }

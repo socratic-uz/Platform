@@ -5,14 +5,14 @@
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
-    gap: var(--md-sys-spacing-3, 12px);
-    padding: var(--md-sys-spacing-12, 48px) var(--md-sys-spacing-6, 24px);
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     width: 100%;
     box-sizing: border-box;
-    margin: var(--md-sys-spacing-6, 24px) 0;
+    margin: var(--md-sys-spacing-6) 0;
 }
 
 .m3-empty-state-icon {
@@ -23,7 +23,7 @@
     opacity: 0.85;
     display: grid;
     place-items: center;
-    margin-bottom: var(--md-sys-spacing-2, 8px);
+    margin-bottom: var(--md-sys-spacing-2);
 }
 
 .m3-empty-state-title {
@@ -35,7 +35,7 @@
 }
 
 .m3-empty-state-desc {
-    margin: 0 0 var(--md-sys-spacing-3, 12px) 0;
+    margin: 0 0 var(--md-sys-spacing-3) 0;
     font-size: 0.95rem;
     color: var(--md-sys-color-on-surface-variant);
     max-width: 440px;
@@ -45,7 +45,7 @@
 .m3-empty-state-action {
     display: grid;
     place-items: center;
-    margin-top: var(--md-sys-spacing-2, 8px);
+    margin-top: var(--md-sys-spacing-2);
 }
 
 /* ─── Mini Column Empty State (Kanban, KDS, Drawers) ──────────────────── */
@@ -57,8 +57,8 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding: var(--md-sys-spacing-8, 2rem) var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
     box-sizing: border-box;
@@ -121,7 +121,7 @@
     padding: 40px 16px;
     text-align: center;
     background: var(--md-sys-color-surface-container);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     border: 1px dashed var(--md-sys-color-outline-variant);
     gap: 8px;
     box-sizing: border-box;
@@ -154,10 +154,10 @@
     padding: 48px 24px;
     text-align: center;
     background: var(--md-sys-color-surface-container);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    margin: 16px 0;
-    gap: 12px;
+    margin: var(--md-sys-spacing-4) 0;
+    gap: var(--md-sys-spacing-3);
     box-sizing: border-box;
 }
 

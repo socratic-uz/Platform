@@ -13,7 +13,7 @@
     width: 100%;
     min-width: 0;
     height: 40px;
-    --md-outlined-text-field-container-shape: 24px;
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
     --md-outlined-text-field-top-space: 2px;
     --md-outlined-text-field-bottom-space: 2px;
     --md-outlined-text-field-leading-space: 14px;
@@ -22,8 +22,8 @@
     --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
     --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
     --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
-    border-radius: 24px;
-    transition: box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard, ease);
+    border-radius: var(--md-sys-shape-expressive-container);
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
 
 .m3-search-container md-outlined-text-field:focus-within,

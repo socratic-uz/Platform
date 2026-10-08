@@ -8,7 +8,7 @@
 .info-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     width: 100%;
     box-sizing: border-box;
 }
@@ -16,7 +16,7 @@
 .m3-info-item,
 .info-item {
     display: grid !important;
-    gap: var(--md-sys-spacing-1, 0.25rem);
+    gap: var(--md-sys-spacing-1);
     align-content: start;
     box-sizing: border-box;
 }

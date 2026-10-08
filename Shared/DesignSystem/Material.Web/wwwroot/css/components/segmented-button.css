@@ -12,7 +12,7 @@
     padding: 4px;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
 }
 
 .analytics-mode-btn,
@@ -24,13 +24,13 @@
     padding: 6px 14px;
     background: transparent;
     border: none;
-    border-radius: 9999px;
+    border-radius: var(--md-sys-shape-corner-full);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
     touch-action: manipulation;
 }
 
@@ -62,12 +62,12 @@
     padding: 8px 16px;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
     color: var(--md-sys-color-on-surface);
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
 }
 
 .analytics-date-picker-trigger:hover,

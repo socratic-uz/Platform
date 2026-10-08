@@ -25,7 +25,7 @@ md-outlined-button.avatar-button,
     cursor: pointer;
     touch-action: manipulation;
     padding: 0 !important;
-    --md-outlined-button-container-shape: 9999px;
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-outlined-button-container-height: 40px;
     --md-outlined-button-leading-space: 0px;
     --md-outlined-button-trailing-space: 0px;
@@ -46,8 +46,8 @@ md-outlined-button.avatar-button,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 48px;
-    min-height: 48px;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
 }
 
 .avatar-container md-outlined-button.avatar-button img,
@@ -107,7 +107,7 @@ md-dialog.faceid-profile-modal {
     max-width: min(620px, calc(100vw - 32px));
     max-height: min(880px, calc(100dvh - 48px));
     --md-dialog-container-color: var(--md-sys-color-surface-container-high);
-    --md-dialog-container-shape: 28px;
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
 }
 
 .avatar-container [slot='headline'],
@@ -152,7 +152,7 @@ md-dialog.faceid-profile-modal .row {
 .avatar-container md-list,
 md-dialog.contacts md-list,
 md-dialog.faceid-profile-modal md-list {
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-button);
     overflow: hidden;
     background: var(--md-sys-color-surface-container);
     width: 100%;

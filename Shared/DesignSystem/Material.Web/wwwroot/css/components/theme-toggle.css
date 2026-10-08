@@ -3,7 +3,7 @@
     overflow: hidden;
     display: grid !important;
     width: 46px;
-    border-radius: var(--md-sys-shape-corner-full, 24px);
+    border-radius: var(--md-sys-shape-corner-full);
     justify-content: center;
     cursor: pointer;
     box-sizing: border-box;
