@@ -269,7 +269,9 @@ public static class M3
     {
         public const string Active = "active";
         public const string ArchiveType = "archive-type";
+        public const string ArchiveType_2 = "m3-archive-type";
         public const string AudioType = "audio-type";
+        public const string AudioType_2 = "m3-audio-type";
         public const string Badge = "picker-badge";
         public const string BodySubtext = "body-subtext";
         public const string BookingPickerCard = "booking-picker-card";
@@ -284,6 +286,7 @@ public static class M3
         public const string DayDot = "picker-day-dot";
         public const string Disabled = "disabled";
         public const string DocType = "doc-type";
+        public const string DocType_2 = "m3-doc-type";
         public const string Dragging = "dragging";
         public const string FileAddBtnLabel = "file-add-btn-label";
         public const string FileCard = "file-card";
@@ -295,6 +298,7 @@ public static class M3
         public const string FilePickerContainer = "file-picker-container";
         public const string FilePreviewArea = "file-preview-area";
         public const string GenericType = "generic-type";
+        public const string GenericType_2 = "m3-generic-type";
         public const string HeaderRow = "picker-header-row";
         public const string Headline = "headline";
         public const string HexInput = "picker-hex-input";
@@ -343,7 +347,8 @@ public static class M3
         public const string OptionsListContainer = "options-list-container";
         public const string PaletteGrid = "picker-palette-grid";
         public const string PaletteSwatch = "picker-palette-swatch";
-        public const string PdfType = "pdf-type";
+        public const string PdfType = "m3-pdf-type";
+        public const string PdfType_2 = "pdf-type";
         public const string PopoverFooter = "picker-popover-footer";
         public const string PopoverHeader = "picker-popover-header";
         public const string PopoverPanel = "picker-popover-panel";
@@ -355,7 +360,8 @@ public static class M3
         public const string RequiredBadge = "required-badge";
         public const string ResourceTabs = "resource-tabs";
         public const string Selected = "selected";
-        public const string SheetType = "sheet-type";
+        public const string SheetType = "m3-sheet-type";
+        public const string SheetType_2 = "sheet-type";
         public const string SlotsChipSet = "slots-chip-set";
         public const string SummaryActions = "summary-actions";
         public const string SummaryCheckIcon = "summary-check-icon";
@@ -384,7 +390,8 @@ public static class M3
         public const string VariantDialogSubtext = "variant-dialog-subtext";
         public const string VariantDialogTitle = "variant-dialog-title";
         public const string VariantsChipSet = "variants-chip-set";
-        public const string VideoType = "video-type";
+        public const string VideoType = "m3-video-type";
+        public const string VideoType_2 = "video-type";
         public const string Web = "Web";
         public const string WeekMiniDots = "picker-week-mini-dots";
     }
