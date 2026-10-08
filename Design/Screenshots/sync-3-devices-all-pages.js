@@ -30,6 +30,7 @@ const pages = [
   { path: '/wishlist', slug: 'wishlist', title: 'Wishlist & Saved Items' },
   { path: '/orders', slug: 'orders', title: 'Orders Registry & Live Status' },
   { path: '/order-items', slug: 'order-items', title: 'Order Items & Kitchen Display System' },
+  { path: '/analytics', slug: 'analytics', title: 'Platform Analytics & Data Registry' },
   { path: '/payment', slug: 'payment', title: 'Checkout & Payment Processing' },
   { path: '/seat-designer', slug: 'seat-designer', title: '3D Seat Designer Studio' },
   { path: '/qr-designer', slug: 'qr-designer', title: 'Dynamic QR Designer Studio' },
@@ -65,13 +66,14 @@ const devices = [
   }
 ];
 
-// CLI Arguments: --device=desktop|tablet|mobile, --page=landing|home|all
+// CLI Arguments: --device=desktop|tablet|mobile, --page=landing,home,chat,...
 const args = process.argv.slice(2);
 const deviceFilter = args.find(a => a.startsWith('--device='))?.split('=')[1] || null;
 const pageFilter = args.find(a => a.startsWith('--page='))?.split('=')[1] || null;
 
 const filteredDevices = deviceFilter ? devices.filter(d => d.slug === deviceFilter.toLowerCase()) : devices;
-const filteredPages = pageFilter ? pages.filter(p => p.slug === pageFilter.toLowerCase()) : pages;
+const pageFilters = pageFilter ? pageFilter.toLowerCase().split(',').map(s => s.trim()) : null;
+const filteredPages = pageFilters ? pages.filter(p => pageFilters.includes(p.slug)) : pages;
 
 async function run() {
   console.log(`================================================================`);

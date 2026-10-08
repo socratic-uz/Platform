@@ -176,6 +176,34 @@ header.app-header.header-sticky {
         display: none !important;
     }
 
+    /* When page header is present in StartContent, prioritize the page title on mobile */
+    .header-start-zone:has(.m3-page-header-start) .header-brand-zone,
+    .header-start-zone:has(.analytics-header-title-group) .header-brand-zone,
+    .header-start-zone:has(.header-context-divider) .header-brand-zone {
+        display: none !important;
+    }
+
+    .header-context-divider {
+        display: none !important;
+    }
+
+    .m3-page-header-start {
+        display: grid !important;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+        gap: 0.35rem;
+        min-width: 0;
+    }
+
+    .m3-page-header-title {
+        font-size: 1.05rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
+    }
+
     .header-brand-link {
         padding: 0.2rem;
         min-height: 36px;
@@ -194,22 +222,54 @@ header.app-header.header-sticky {
         padding: 0.25rem !important;
     }
 
+    .header-end-zone {
+        gap: 0.25rem !important;
+    }
+
     .header-end-zone md-outlined-button,
     .header-end-zone md-filled-button,
     .header-end-zone md-filled-tonal-button,
     .header-end-zone md-elevated-button,
     .header-end-zone md-text-button {
-        --md-outlined-button-container-height: 36px;
-        --md-filled-button-container-height: 36px;
-        --md-filled-tonal-button-container-height: 36px;
-        --md-elevated-button-container-height: 36px;
-        --md-text-button-container-height: 36px;
-        --md-outlined-button-leading-space: 8px;
-        --md-outlined-button-trailing-space: 8px;
-        --md-filled-button-leading-space: 8px;
-        --md-filled-button-trailing-space: 8px;
-        font-size: 0.78rem;
-        max-width: 120px;
+        --md-outlined-button-container-height: 34px;
+        --md-filled-button-container-height: 34px;
+        --md-filled-tonal-button-container-height: 34px;
+        --md-elevated-button-container-height: 34px;
+        --md-text-button-container-height: 34px;
+        --md-outlined-button-leading-space: 6px;
+        --md-outlined-button-trailing-space: 6px;
+        --md-filled-button-leading-space: 6px;
+        --md-filled-button-trailing-space: 6px;
+        font-size: 0.75rem;
+    }
+
+    .header-end-zone .btn-text,
+    .header-end-zone .orders-refresh-btn .btn-text,
+    .header-end-zone .analytics-config-btn .btn-text {
+        display: none !important;
+    }
+
+    .header-end-zone md-outlined-button:has([slot="icon"]),
+    .header-end-zone md-filled-button:has([slot="icon"]),
+    .header-end-zone md-elevated-button:has([slot="icon"]),
+    .header-end-zone .orders-refresh-btn {
+        min-width: 36px !important;
+        width: 36px !important;
+        padding: 0 !important;
+        --md-outlined-button-leading-space: 0px !important;
+        --md-outlined-button-trailing-space: 0px !important;
+        --md-filled-button-leading-space: 0px !important;
+        --md-filled-button-trailing-space: 0px !important;
+    }
+
+    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn span {
+        display: none !important;
+    }
+
+    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn {
+        padding: 0 0.5rem !important;
+        min-width: 36px !important;
+        height: 34px !important;
     }
 
     .pos-top-header-actions {
