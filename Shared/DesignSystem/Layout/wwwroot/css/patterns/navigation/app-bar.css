@@ -215,9 +215,7 @@ header.app-header.header-sticky {
 
     .m3-page-header-title {
         font-size: 1.05rem !important;
-        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
         max-width: 140px;
     }
 

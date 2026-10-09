@@ -151,9 +151,7 @@
 .item-headline {
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .item-support {

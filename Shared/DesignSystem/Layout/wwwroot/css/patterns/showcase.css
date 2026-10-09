@@ -127,9 +127,7 @@ main.showcase-page {
 }
 
 .showcase-nav-btn-left span {
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .showcase-nav-btn:hover {

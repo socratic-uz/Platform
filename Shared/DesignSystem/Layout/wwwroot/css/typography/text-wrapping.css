@@ -1,5 +1,24 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C typography/text-wrapping.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Truncation & Text Wrapping Master Rules via :is(...)
    ========================================================================== */
 
+/* Master Truncation (Ellipsis & No-Wrap) Grouping */
+:is(
+    .item-headline,
+    .kiosk-brand-name,
+    .m3-page-header-title,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

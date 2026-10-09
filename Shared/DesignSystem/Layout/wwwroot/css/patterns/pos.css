@@ -150,9 +150,7 @@
     color: var(--md-sys-color-primary);
     font-weight: 700;
     display: block;
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -508,9 +506,7 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .in-stock-text {
