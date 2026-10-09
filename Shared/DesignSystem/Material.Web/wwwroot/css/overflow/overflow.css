@@ -4,22 +4,6 @@
    Container Clipping & Scroll Boundary Utilities
    ========================================================================== */
 
-.m3-overflow-hidden {
-    overflow: hidden !important;
-}
-
-.m3-overflow-auto {
-    overflow: auto !important;
-}
-
-.m3-overflow-x-auto {
-    overflow-x: auto !important;
-}
-
-.m3-overflow-y-auto {
-    overflow-y: auto !important;
-}
-
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 
 /* Universal Hidden Overflow Grouping */

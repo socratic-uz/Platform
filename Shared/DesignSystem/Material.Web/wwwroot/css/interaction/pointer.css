@@ -4,22 +4,6 @@
    Cursor States & Pointer Event Controls
    ========================================================================== */
 
-.m3-cursor-pointer {
-    cursor: pointer !important;
-}
-
-.m3-cursor-not-allowed {
-    cursor: not-allowed !important;
-}
-
-.m3-pointer-events-none {
-    pointer-events: none !important;
-}
-
-.m3-pointer-events-auto {
-    pointer-events: auto !important;
-}
-
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 
 /* Universal Pointer Cursor Grouping */

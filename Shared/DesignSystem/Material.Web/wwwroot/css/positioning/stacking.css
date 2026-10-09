@@ -3,52 +3,8 @@
    Z-Index Layer Utilities & Stacking Context Isolation
    ========================================================================== */
 
-.m3-isolate {
-    isolation: isolate !important;
-}
-
-.m3-z-deep {
-    z-index: var(--md-sys-z-deep) !important;
-}
-
-.m3-z-base {
-    z-index: var(--md-sys-z-base) !important;
-}
-
-.m3-z-raised {
-    z-index: var(--md-sys-z-raised) !important;
-}
-
-.m3-z-sticky {
-    z-index: var(--md-sys-z-sticky) !important;
-}
-
-.m3-z-appbar {
-    z-index: var(--md-sys-z-appbar) !important;
-}
-
-.m3-z-drawer {
-    z-index: var(--md-sys-z-drawer) !important;
-}
-
-.m3-z-bottom-nav {
-    z-index: var(--md-sys-z-bottom-nav) !important;
-}
-
-.m3-z-dropdown {
-    z-index: var(--md-sys-z-dropdown) !important;
-}
-
-.m3-z-modal {
-    z-index: var(--md-sys-z-dialog) !important;
-}
-
 .m3-z-toast {
     z-index: var(--md-sys-z-toast) !important;
-}
-
-.m3-z-tooltip {
-    z-index: var(--md-sys-z-tooltip) !important;
 }
 
 /* ─── Consolidated Component Rules (positioning/stacking.css) ────────────────────────── */

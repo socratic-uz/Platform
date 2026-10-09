@@ -4,54 +4,7 @@
    Material Design 3 Surface Elevations & Liquid Glass Surfaces
    ========================================================================== */
 
-.m3-elevation-0 {
-    box-shadow: var(--md-sys-elevation-level0) !important;
-}
-
-.m3-elevation-1 {
-    box-shadow: var(--md-sys-elevation-level1) !important;
-}
-
-.m3-elevation-2 {
-    box-shadow: var(--md-sys-elevation-level2) !important;
-}
-
-.m3-elevation-3 {
-    box-shadow: var(--md-sys-elevation-level3) !important;
-}
-
-.m3-elevation-4 {
-    box-shadow: var(--md-sys-elevation-level4) !important;
-}
-
-.m3-elevation-5 {
-    box-shadow: var(--md-sys-elevation-level5) !important;
-}
-
-.m3-elevation-expressive-1 {
-    box-shadow: var(--md-sys-elevation-expressive-1) !important;
-}
-
-.m3-elevation-expressive-2 {
-    box-shadow: var(--md-sys-elevation-expressive-2) !important;
-}
-
-.m3-elevation-expressive-3 {
-    box-shadow: var(--md-sys-elevation-expressive-3) !important;
-}
-
 /* Liquid Glass Surface Utilities */
-.m3-glass {
-    background: var(--md-sys-glass-surface) !important;
-    backdrop-filter: var(--md-sys-glass-blur-standard);
-    border: var(--md-sys-glass-border);
-}
-
-.m3-glass-container {
-    background: var(--md-sys-glass-surface-container) !important;
-    backdrop-filter: var(--md-sys-glass-blur-heavy);
-    border: var(--md-sys-glass-border-dark);
-}
 
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 

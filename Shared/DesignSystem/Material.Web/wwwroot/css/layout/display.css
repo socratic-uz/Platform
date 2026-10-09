@@ -4,26 +4,6 @@
    Display State Utilities (Excluding Flexbox)
    ========================================================================== */
 
-.m3-block {
-    display: block !important;
-}
-
-.m3-inline-block {
-    display: inline-block !important;
-}
-
-.m3-hidden {
-    display: none !important;
-}
-
-.m3-invisible {
-    visibility: hidden !important;
-}
-
-.m3-visible {
-    visibility: visible !important;
-}
-
 /* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
 
 /* Universal Block Layout Elements */

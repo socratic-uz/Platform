@@ -24,23 +24,8 @@ public static class M3
         public const string Gap5 = "m3-gap-5";
         public const string Gap6 = "m3-gap-6";
         public const string Gap8 = "m3-gap-8";
-        public const string ItemsCenter = "m3-items-center";
-        public const string ItemsEnd = "m3-items-end";
-        public const string ItemsStart = "m3-items-start";
-        public const string JustifyBetween = "m3-justify-between";
-        public const string JustifyCenter = "m3-justify-center";
-        public const string JustifyEnd = "m3-justify-end";
-        public const string PlaceCenter = "m3-place-center";
         public const string SummaryRow = "summary-row";
         public const string SummaryRows = "summary-rows";
-    }
-
-    public static class Animations
-    {
-        public const string AnimateFadeIn = "m3-animate-fade-in";
-        public const string AnimatePopover = "m3-animate-popover";
-        public const string AnimateScaleUp = "m3-animate-scale-up";
-        public const string AnimateShimmer = "m3-animate-shimmer";
     }
 
     public static class Avatar
@@ -60,11 +45,6 @@ public static class M3
     {
         public const string ArchiveType = "archive-type";
         public const string AudioType = "audio-type";
-        public const string BgPrimary = "m3-bg-primary";
-        public const string BgSurface = "m3-bg-surface";
-        public const string BgSurfaceContainer = "m3-bg-surface-container";
-        public const string BgSurfaceContainerHigh = "m3-bg-surface-container-high";
-        public const string BgSurfaceContainerLow = "m3-bg-surface-container-low";
         public const string Blocked = "blocked";
         public const string Completed = "completed";
         public const string DocType = "doc-type";
@@ -139,17 +119,8 @@ public static class M3
     public static class Border
     {
         public const string Expired = "expired";
-        public const string None = "m3-border-none";
         public const string Pro = "pro";
-        public const string ShapeDock = "m3-shape-dock";
-        public const string ShapeExtraLarge = "m3-shape-extra-large";
-        public const string ShapeExtraSmall = "m3-shape-extra-small";
         public const string ShapeFull = "m3-shape-full";
-        public const string ShapeLarge = "m3-shape-large";
-        public const string ShapeMedium = "m3-shape-medium";
-        public const string ShapeNone = "m3-shape-none";
-        public const string ShapePill = "m3-shape-pill";
-        public const string ShapeSmall = "m3-shape-small";
         public const string StatusDot = "status-dot";
         public const string Trial = "trial";
         public const string Verified = "verified";
@@ -207,7 +178,6 @@ public static class M3
         public const string RatioCard = "m3-ratio-card";
         public const string RowLabel = "m3-row-label";
         public const string RowValue = "m3-row-value";
-        public const string ShapeCard = "m3-shape-card";
         public const string Subtitle = "m3-card-subtitle";
         public const string Subtitle_2 = "card-subtitle";
         public const string SummaryActions = "m3-summary-actions";
@@ -248,22 +218,6 @@ public static class M3
         public const string UxWidgetChips = "ux-widget-chips";
     }
 
-    public static class Color
-    {
-        public const string Error = "m3-color-error";
-        public const string OnSurface = "m3-color-on-surface";
-        public const string OnSurfaceVariant = "m3-color-on-surface-variant";
-        public const string Primary = "m3-color-primary";
-    }
-
-    public static class Contain
-    {
-        public const string ContentAuto = "m3-content-auto";
-        public const string Layout = "m3-contain-layout";
-        public const string Paint = "m3-contain-paint";
-        public const string Strict = "m3-contain-strict";
-    }
-
     public static class Dialog
     {
         public const string Actions = "m3-dialog-actions";
@@ -285,16 +239,6 @@ public static class M3
         public const string ToggleItem = "m3-dialog-toggle-item";
         public const string ToggleText = "m3-dialog-toggle-text";
         public const string ToggleTitle = "m3-dialog-toggle-title";
-        public const string ZModal = "m3-z-modal";
-    }
-
-    public static class Display
-    {
-        public const string Block = "m3-block";
-        public const string Hidden = "m3-hidden";
-        public const string InlineBlock = "m3-inline-block";
-        public const string Invisible = "m3-invisible";
-        public const string Visible = "m3-visible";
     }
 
     public static class EmptyState
@@ -346,7 +290,6 @@ public static class M3
         public const string Legend = "m3-legend";
         public const string MaterialCounter = "material-counter";
         public const string Modified = "modified";
-        public const string TransformGpu = "m3-transform-gpu";
         public const string TwoCols = "two-cols";
         public const string Valid = "valid";
         public const string ValidationMessage = "validation-message";
@@ -373,13 +316,6 @@ public static class M3
 
     public static class Grid
     {
-        public const string AutoCol = "m3-grid-auto-col";
-        public const string AutoRow = "m3-grid-auto-row";
-        public const string Col1 = "m3-grid-col-1";
-        public const string Col2 = "m3-grid-col-2";
-        public const string Col3 = "m3-grid-col-3";
-        public const string Col4 = "m3-grid-col-4";
-        public const string InlineGrid = "m3-inline-grid";
         public const string Root = "m3-grid";
     }
 
@@ -397,7 +333,6 @@ public static class M3
 
     public static class Margin
     {
-        public const string M0 = "m3-m-0";
         public const string SummaryDivider = "summary-divider";
     }
 
@@ -415,14 +350,6 @@ public static class M3
         public const string HasError = "has-error";
         public const string IsInvalid = "is-invalid";
         public const string None = "m3-outline-none";
-    }
-
-    public static class Overflow
-    {
-        public const string Auto = "m3-overflow-auto";
-        public const string Hidden = "m3-overflow-hidden";
-        public const string XAuto = "m3-overflow-x-auto";
-        public const string YAuto = "m3-overflow-y-auto";
     }
 
     public static class Padding
@@ -558,23 +485,6 @@ public static class M3
         public const string WeekMiniDots = "picker-week-mini-dots";
     }
 
-    public static class Pointer
-    {
-        public const string CursorNotAllowed = "m3-cursor-not-allowed";
-        public const string CursorPointer = "m3-cursor-pointer";
-        public const string EventsAuto = "m3-pointer-events-auto";
-        public const string EventsNone = "m3-pointer-events-none";
-    }
-
-    public static class Position
-    {
-        public const string Absolute = "m3-absolute";
-        public const string Fixed = "m3-fixed";
-        public const string Inset0 = "m3-inset-0";
-        public const string Relative = "m3-relative";
-        public const string Sticky = "m3-sticky";
-    }
-
     public static class Progress
     {
         public const string Container = "m3-progress-container";
@@ -587,22 +497,13 @@ public static class M3
         public const string Track = "m3-progress-track";
     }
 
-    public static class Replaced
-    {
-        public const string ObjectContain = "m3-object-contain";
-        public const string ObjectCover = "m3-object-cover";
-        public const string ObjectFill = "m3-object-fill";
-    }
-
     public static class Scrollbar
     {
         public const string ActiveOrdersScroll = "active-orders-scroll";
         public const string MapCategoriesScroll = "map-categories-scroll";
         public const string None = "scrollbar-none";
         public const string NoScrollbar = "no-scrollbar";
-        public const string OverscrollContain = "overscroll-contain";
         public const string PosOrdersScroll = "pos-orders-scroll";
-        public const string ScrollSmooth = "scroll-smooth";
         public const string Thin = "scrollbar-thin";
     }
 
@@ -641,28 +542,6 @@ public static class M3
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
     }
 
-    public static class Selection
-    {
-        public const string SelectAll = "m3-select-all";
-        public const string SelectNone = "m3-select-none";
-        public const string SelectText = "m3-select-text";
-    }
-
-    public static class Shadow
-    {
-        public const string Elevation0 = "m3-elevation-0";
-        public const string Elevation1 = "m3-elevation-1";
-        public const string Elevation2 = "m3-elevation-2";
-        public const string Elevation3 = "m3-elevation-3";
-        public const string Elevation4 = "m3-elevation-4";
-        public const string Elevation5 = "m3-elevation-5";
-        public const string ElevationExpressive1 = "m3-elevation-expressive-1";
-        public const string ElevationExpressive2 = "m3-elevation-expressive-2";
-        public const string ElevationExpressive3 = "m3-elevation-expressive-3";
-        public const string Glass = "m3-glass";
-        public const string GlassContainer = "m3-glass-container";
-    }
-
     public static class Sizing
     {
         public const string RatioKiosk = "m3-ratio-kiosk";
@@ -686,17 +565,7 @@ public static class M3
 
     public static class Stacking
     {
-        public const string Isolate = "m3-isolate";
-        public const string ZAppbar = "m3-z-appbar";
-        public const string ZBase = "m3-z-base";
-        public const string ZBottomNav = "m3-z-bottom-nav";
-        public const string ZDeep = "m3-z-deep";
-        public const string ZDrawer = "m3-z-drawer";
-        public const string ZDropdown = "m3-z-dropdown";
-        public const string ZRaised = "m3-z-raised";
-        public const string ZSticky = "m3-z-sticky";
         public const string ZToast = "m3-z-toast";
-        public const string ZTooltip = "m3-z-tooltip";
     }
 
     public static class Table
@@ -769,11 +638,6 @@ public static class M3
         public const string ModeToggleFigure_2 = "mode-toggle-figure";
         public const string ModeToggleIcon = "m3-mode-toggle-icon";
         public const string ModeToggleIcon_2 = "mode-toggle-icon";
-    }
-
-    public static class Transform
-    {
-        public const string OriginCenter = "m3-origin-center";
     }
 
     public static class Transitions

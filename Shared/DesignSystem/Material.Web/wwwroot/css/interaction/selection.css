@@ -4,18 +4,6 @@
    User Select Primitives
    ========================================================================== */
 
-.m3-select-none {
-    user-select: none !important;
-}
-
-.m3-select-text {
-    user-select: text !important;
-}
-
-.m3-select-all {
-    user-select: all !important;
-}
-
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
 /* Universal Non-Selectable Elements */

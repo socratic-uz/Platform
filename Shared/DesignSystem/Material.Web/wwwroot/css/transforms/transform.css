@@ -3,14 +3,6 @@
    Hardware Accelerated Coordinate Transforms
    ========================================================================== */
 
-.m3-transform-gpu {
-    transform: translateZ(0);
-}
-
-.m3-origin-center {
-    transform-origin: center !important;
-}
-
 /* ─── Consolidated Component Rules (transforms/transform.css) ────────────────────────── */
 .avatar-button::before {
     transform: translate(-50%, -50%);

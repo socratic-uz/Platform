@@ -3,18 +3,6 @@
    Object Fit & Image Rendering Primitives
    ========================================================================== */
 
-.m3-object-cover {
-    object-fit: cover !important;
-}
-
-.m3-object-contain {
-    object-fit: contain !important;
-}
-
-.m3-object-fill {
-    object-fit: fill !important;
-}
-
 /* ─── Consolidated Component Rules (content/replaced.css) ────────────────────────── */
 .avatar-button::before {
     content: '';

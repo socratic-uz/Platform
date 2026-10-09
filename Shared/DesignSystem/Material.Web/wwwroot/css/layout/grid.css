@@ -209,36 +209,8 @@ md-dialog [slot="actions"],
 }
 
 /* ─── 2. Universal Inline-Grid Grouping ─────────────────────────────────── */
-.m3-inline-grid {
-    display: inline-grid !important;
-}
 
 /* ─── 3. Grid Template Columns Scale ────────────────────────────────────── */
-.m3-grid-col-1 {
-    grid-template-columns: minmax(0, 1fr) !important;
-}
-
-.m3-grid-col-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-
-.m3-grid-col-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-
-.m3-grid-col-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-}
-
-.m3-grid-auto-col {
-    grid-auto-flow: column !important;
-    grid-auto-columns: max-content !important;
-}
-
-.m3-grid-auto-row {
-    grid-auto-flow: row !important;
-    grid-auto-rows: max-content !important;
-}
 
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 

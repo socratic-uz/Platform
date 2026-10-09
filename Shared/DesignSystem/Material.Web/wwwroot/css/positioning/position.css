@@ -4,26 +4,6 @@
    Position Primitives & Bounding Insets
    ========================================================================== */
 
-.m3-relative {
-    position: relative !important;
-}
-
-.m3-absolute {
-    position: absolute !important;
-}
-
-.m3-fixed {
-    position: fixed !important;
-}
-
-.m3-sticky {
-    position: sticky !important;
-}
-
-.m3-inset-0 {
-    inset: 0 !important;
-}
-
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 
 /* Universal Relative Positioning Grouping */

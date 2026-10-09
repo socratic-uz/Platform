@@ -169,13 +169,6 @@
 }
 
 /* ─── 3. Utility Classes for Behavior & Containment ──────────────────────── */
-.scroll-smooth {
-    scroll-behavior: smooth !important;
-}
-
-.overscroll-contain {
-    overscroll-behavior: contain !important;
-}
 
 /* ─── Consolidated Component Rules (overflow/scrollbars.css) ────────────────────────── */
 .resource-tabs {
