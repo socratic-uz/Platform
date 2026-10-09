@@ -1,49 +1,178 @@
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Overflow Module - Scrollbar Rules
-   Thin Ergonomic & Hidden Scrollbar Primitives
+   Ergonomic Thin & Zero-Scrollbar Primitives (Material Design 3 Expressive)
+   Cross-Browser W3C scrollbar-width / scrollbar-color & WebKit Engine Support
    ========================================================================== */
 
-.scrollbar-thin,
-.m3-config-dialog,
-.m3-dialog-surface {
+/* ─── 1. Universal Thin Ergonomic Scrollbar Containers ────────────────────── */
+:is(
+    .scrollbar-thin,
+
+    /* Modal Dialogs & Surfaces */
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+
+    /* Data Grids & Responsive Tables */
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+
+    /* Popovers, Menus & Dropdown Options */
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+
+    /* Domain Sidebars & Lists */
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+) {
     scrollbar-width: thin !important;
-    scrollbar-color: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5) transparent !important;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent) !important;
+    overscroll-behavior: contain;
 }
 
-.scrollbar-thin::-webkit-scrollbar,
-.m3-config-dialog::-webkit-scrollbar,
-.m3-dialog-surface::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+:is(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
 }
 
-.scrollbar-thin::-webkit-scrollbar-track,
-.m3-config-dialog::-webkit-scrollbar-track,
-.m3-dialog-surface::-webkit-scrollbar-track {
-    background: transparent;
+:is(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
 }
 
-.scrollbar-thin::-webkit-scrollbar-thumb,
-.m3-config-dialog::-webkit-scrollbar-thumb,
-.m3-dialog-surface::-webkit-scrollbar-thumb {
-    background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+:is(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-thumb {
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
 }
 
-.scrollbar-thin::-webkit-scrollbar-thumb:hover,
-.m3-config-dialog::-webkit-scrollbar-thumb:hover,
-.m3-dialog-surface::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-color-outline);
+:is(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
 }
 
-.scrollbar-none,
-.no-scrollbar {
+/* ─── 2. Universal Hidden Scrollbar (Touch Drag / Horizontal Carousels) ──── */
+:is(
+    .scrollbar-none,
+    .no-scrollbar,
+
+    /* Horizontal Carousels & Breadcrumbs */
+    .kiosk-filter-row,
+    .active-orders-scroll,
+    .ux-widget-chips,
+    .store-breadcrumbs,
+    .pos-top-header-actions,
+    .pos-filters,
+    .pos-orders-scroll,
+    .map-categories-scroll
+) {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
 
-.scrollbar-none::-webkit-scrollbar,
-.no-scrollbar::-webkit-scrollbar {
+:is(
+    .scrollbar-none,
+    .no-scrollbar,
+    .kiosk-filter-row,
+    .active-orders-scroll,
+    .ux-widget-chips,
+    .store-breadcrumbs,
+    .pos-top-header-actions,
+    .pos-filters,
+    .pos-orders-scroll,
+    .map-categories-scroll
+)::-webkit-scrollbar {
     display: none !important;
+}
+
+/* ─── 3. Utility Classes for Behavior & Containment ──────────────────────── */
+.scroll-smooth {
+    scroll-behavior: smooth !important;
+}
+
+.overscroll-contain {
+    overscroll-behavior: contain !important;
 }

@@ -1430,11 +1430,36 @@ public static class M3
 
     public static class Scrollbar
     {
+        public const string ActiveOrdersScroll = "active-orders-scroll";
+        public const string CartItemsContainer = "cart-items-container";
         public const string ConfigDialog = "m3-config-dialog";
+        public const string DialogBody = "m3-dialog-body";
+        public const string DialogContent = "dialog-content";
         public const string DialogSurface = "m3-dialog-surface";
+        public const string DropdownMenu = "dropdown-menu";
+        public const string KioskFilterRow = "kiosk-filter-row";
+        public const string LangMenuList = "lang-menu-list";
+        public const string MapCategoriesScroll = "map-categories-scroll";
+        public const string MapPanelContent = "map-panel-content";
         public const string NoScrollbar = "no-scrollbar";
         public const string None = "scrollbar-none";
+        public const string OptionsContainer = "options-container";
+        public const string OrderSummaryList = "order-summary-list";
+        public const string OrdersTableWrapper = "orders-table-wrapper";
+        public const string OverscrollContain = "overscroll-contain";
+        public const string PickerPopoverBody = "picker-popover-body";
+        public const string PosFilters = "pos-filters";
+        public const string PosOrdersScroll = "pos-orders-scroll";
+        public const string PosTopHeaderActions = "pos-top-header-actions";
+        public const string ProductThumbnails = "product-thumbnails";
+        public const string Quickgrid = "quickgrid";
+        public const string ScrollSmooth = "scroll-smooth";
+        public const string SelectOptions = "select-options";
+        public const string StoreBreadcrumbs = "store-breadcrumbs";
+        public const string TableContainer = "table-container";
+        public const string TableScrollContainer = "table-scroll-container";
         public const string Thin = "scrollbar-thin";
+        public const string UxWidgetChips = "ux-widget-chips";
     }
 
     public static class Search

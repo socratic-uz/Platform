@@ -1,9 +1,14 @@
 /* ==========================================================================
    W3C CSS Overflow - Scrollbars Tokens Module
    Ergonomic Scrollbar Dimensions & Custom Property Tokens
+   Material Design 3 Expressive Standard (FAANG UX)
    ========================================================================== */
 
 :root {
     --md-sys-scrollbar-width: 6px;
+    --md-sys-scrollbar-height: 6px;
     --md-sys-scrollbar-thumb-radius: var(--md-sys-shape-corner-full, 9999px);
+    --md-sys-scrollbar-color-thumb: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+    --md-sys-scrollbar-color-thumb-hover: var(--md-sys-color-outline);
+    --md-sys-scrollbar-color-track: transparent;
 }
