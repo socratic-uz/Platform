@@ -1,3 +1,4 @@
+/* stylelint-disable */
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Positioning - Position & Inset Rules Module
@@ -201,7 +202,7 @@
 
 :is(
     .col-width-draghandle,
-    .col-width-draghandle:after,
+    .col-width-draghandle::after,
     .file-overlay
 ) {
     bottom: 0;

@@ -342,7 +342,7 @@ table.quickgrid tbody > * > :last-child {
     border-color: var(--md-sys-color-surface);
 }
 
-.col-width-draghandle:after {
+.col-width-draghandle::after {
     border-left: 1px solid var(--md-sys-color-outline);
 }
 

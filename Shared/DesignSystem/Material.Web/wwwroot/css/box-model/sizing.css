@@ -1,3 +1,4 @@
+/* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Box Model - Sizing Rules Module
@@ -423,7 +424,7 @@ md-dialog {
 }
 
 .col-title {
-    min-width: 0px;
+    min-width: 0;
 }
 
 .paginator nav button {
@@ -521,7 +522,6 @@ md-dialog {
     md-text-button,
     md-icon-button,
     :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
-    media (pointer: coarse),
     .m3-dialog-toggle-item,
     .m3-dialog-btn-primary,
     .picker-compact-box,

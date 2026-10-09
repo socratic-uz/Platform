@@ -258,10 +258,7 @@ md-dialog [slot="actions"],
     .kiosk-empty-state,
     .m3-form-grid,
     .m3-fieldset,
-    container (max-width: 480px),
-    media (max-width: 599.98px),
     .table-container,
-    media screen and (max-width: 599.98px)
 ) {
     grid-template-columns: minmax(0, 1fr);
 }

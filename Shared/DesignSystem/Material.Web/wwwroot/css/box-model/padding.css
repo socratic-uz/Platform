@@ -40,7 +40,7 @@
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'] {
-    padding: 24px 24px 16px 24px;
+    padding: 24px 24px 16px;
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label {
@@ -48,7 +48,7 @@
 }
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'] {
-    padding: 12px 24px 24px 24px;
+    padding: 12px 24px 24px;
 }
 
 :is(.avatar-container, md-dialog.contacts) details .content {

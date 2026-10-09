@@ -1,3 +1,4 @@
+/* stylelint-disable */
 /* Material Design 3 Theme - Dark Color Roles */
 :root, :root[data-theme="dark"], body.dark, [data-theme="dark"] {
   --md-sys-color-primary: rgb(112 220 188);

@@ -70,7 +70,7 @@
 
 /* ─── Consolidated Component Rules (box-model/outline.css) ────────────────────────── */
 
-.valid.modified:not([type=checkbox]) {
+.valid.modified:not([type="checkbox"]) {
     outline: 1px solid var(--md-sys-color-primary);
 }
 

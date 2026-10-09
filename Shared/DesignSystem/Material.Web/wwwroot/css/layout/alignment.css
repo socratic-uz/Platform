@@ -385,7 +385,6 @@ md-elevated-card {
     .m3-gap-4,
     :is(
     :is(.m3-summary-card, .summary-card),
-    media screen and (max-width: 839.98px),
     .m3-dialog-header,
     .m3-dialog-toggle-item,
     .m3-form-grid,

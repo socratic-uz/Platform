@@ -211,7 +211,7 @@
 
 .m3-status-dot,
 .status-dot {
-    background: currentColor;
+    background: currentcolor;
 }
 
 .m3-status-dot.pulse::after,
