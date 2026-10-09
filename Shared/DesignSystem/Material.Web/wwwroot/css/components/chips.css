@@ -22,9 +22,7 @@
     transform: translateY(-1px);
 }
 
-.m3-filter-chip:active {
-    transform: scale(0.96);
-}
+/* active scale consolidated to w3c transitions */
 
 .m3-filter-chip.active,
 .m3-filter-chip[aria-selected="true"] {

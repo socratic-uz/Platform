@@ -1,8 +1,9 @@
 /* ==========================================================================
    W3C CSS Motion - Animations Rules Module
-   Hardware-Accelerated Fluid Entrance & Scale Keyframes
+   Hardware-Accelerated Fluid Entrance, Pulse & Shimmer Keyframes
    ========================================================================== */
 
+/* ─── 1. Core Entrances (Zero Layout-Shift Transforms) ───────────────────── */
 @keyframes m3-fade-in {
     from {
         opacity: 0;
@@ -27,10 +28,50 @@
     }
 }
 
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ─── 2. Continuous Micro-Motion (Pulse & Shimmer) ───────────────────────── */
+@keyframes m3-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+@keyframes m3-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ─── 3. Utility Classes for Fluid Keyframe Binding ──────────────────────── */
 .m3-animate-fade-in {
     animation: m3-fade-in var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-spring) forwards;
 }
 
 .m3-animate-scale-up {
     animation: m3-scale-up var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-spring) forwards;
+}
+
+.m3-animate-popover {
+    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance) forwards;
+}
+
+.m3-animate-shimmer {
+    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
 }

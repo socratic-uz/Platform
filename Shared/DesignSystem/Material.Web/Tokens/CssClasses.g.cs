@@ -172,7 +172,9 @@ public static class M3
     public static class Animation
     {
         public const string AnimateFadeIn = "m3-animate-fade-in";
+        public const string AnimatePopover = "m3-animate-popover";
         public const string AnimateScaleUp = "m3-animate-scale-up";
+        public const string AnimateShimmer = "m3-animate-shimmer";
     }
 
     public static class Avatar
@@ -1734,8 +1736,27 @@ public static class M3
 
     public static class Transition
     {
+        public const string AnalyticsModeBtn = "analytics-mode-btn";
+        public const string CardInteractive = "m3-card-interactive";
+        public const string CardMedia = "m3-card-media";
+        public const string DialogBtnPrimary = "m3-dialog-btn-primary";
+        public const string DialogCloseBtn = "m3-dialog-close-btn";
+        public const string FileCard = "file-card";
+        public const string FilterChip = "m3-filter-chip";
         public const string HoverLift = "m3-hover-lift";
+        public const string LangChipBtn = "lang-chip-btn";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string MediaCard = "m3-media-card";
+        public const string OrgCard = "org-card";
+        public const string OrgMedia = "org-media";
+        public const string Paginator = "paginator";
+        public const string PickerPaletteSwatch = "picker-palette-swatch";
+        public const string PickerTriggerCard = "picker-trigger-card";
         public const string PressScale = "m3-press-scale";
+        public const string ProductCard = "product-card";
+        public const string SegmentedBtn = "m3-segmented-btn";
+        public const string UploadCard = "upload-card";
+        public const string WishlistMedia = "wishlist-media";
     }
 
     public static class Typography

@@ -54,7 +54,7 @@
     height: var(--md-sys-touch-target-compact);
     min-width: var(--md-sys-touch-target-compact);
     min-height: var(--md-sys-touch-target-compact);
-    transition: background 0.2s ease;
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .m3-dialog-close-btn:hover    {
@@ -72,7 +72,7 @@
 .m3-dialog-toggle-item {
     grid-template-columns: auto minmax(0, 1fr) auto;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease;
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .m3-dialog-toggle-item:hover    {
@@ -108,7 +108,7 @@
 .m3-dialog-btn-primary {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-5);
     font-size: 0.95rem;
-    transition: opacity 0.2s ease;
+    transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .m3-dialog-btn-primary:hover {

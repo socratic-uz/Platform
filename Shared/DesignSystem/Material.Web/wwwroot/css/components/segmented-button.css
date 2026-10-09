@@ -12,7 +12,7 @@
     gap: 0.4rem;
     padding: 6px 14px;
     font-size: 0.85rem;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
 :is(.analytics-mode-btn, .m3-segmented-btn):hover    {
@@ -32,7 +32,7 @@
     gap: 0.5rem;
     padding: 8px 16px;
     font-size: 0.875rem;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {

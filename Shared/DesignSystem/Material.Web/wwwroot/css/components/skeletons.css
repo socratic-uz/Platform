@@ -14,20 +14,13 @@
         rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.45) 50%,
         transparent 100%
     );
-    animation: m3-shimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes m3-shimmer {
-    100% {
-        transform: translateX(100%);
-    }
+    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
 }
 
 .m3-skeleton-text {
     height: 1rem;
     margin-bottom: 0.5rem;
     border-radius: var(--md-sys-shape-corner-extra-small);
-}
 
 .m3-skeleton-text.m3-short,
 .m3-skeleton-text.short {

@@ -15,9 +15,7 @@ md-text-button {
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
 }
 
-:is(md-filled-button, md-outlined-button, md-elevated-button, md-tonal-button):active {
-    transform: scale(0.97);
-}
+/* active scale consolidated to w3c transitions */
 
 /* Touch-optimized Icon Button (48px Touch Target) */
 md-icon-button {

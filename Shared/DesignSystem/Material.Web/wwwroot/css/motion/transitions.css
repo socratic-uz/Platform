@@ -1,10 +1,120 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Motion - Transitions Rules Module
-   Physical Spring Transitions & Micro-Interaction Rules
+   Material Design 3 Expressive (M3X) Spring Motion & Micro-Interactions
+   Strict Hardware-Accelerated 60 FPS (Zero-Layout-Shift Standard)
    ========================================================================== */
 
+/* ─── 1. Universal Interactive Elements Spring Transition ────────────────── */
+:is(
+    /* Buttons & Touch Controls */
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    .paginator nav button:not([disabled]),
+
+    /* Cards, Panels & Swatches */
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+) {
+    transition:
+        transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* ─── 2. Universal Hover Lift (Elevation & Translate) ───────────────────── */
+:is(
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card
+):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* ─── 3. Universal Press Scale (Tactile Physical Compression) ───────────── */
+:is(
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    .paginator nav button:not([disabled]),
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+):active {
+    transform: scale(0.97) !important;
+}
+
+/* ─── 4. Universal Card Media Subtle Zoom on Hover ─────────────────────── */
+:is(
+    .m3-media-card,
+    .org-card,
+    .product-card,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card
+) img {
+    transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring-soft);
+    will-change: transform;
+}
+
+:is(
+    .m3-media-card:hover .m3-card-media,
+    .org-card:hover .org-media,
+    .product-card:hover .wishlist-media,
+    md-filled-card:hover figure,
+    md-outlined-card:hover figure,
+    md-elevated-card:hover figure
+) img {
+    transform: scale(1.04);
+}
+
+/* ─── 5. Utility Classes for Manual Spring Binding ──────────────────────── */
 .m3-press-scale {
     transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+    will-change: transform;
 }
 
 .m3-press-scale:active {
@@ -12,8 +122,10 @@
 }
 
 .m3-hover-lift {
-    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
-                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    transition:
+        transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    will-change: transform;
 }
 
 .m3-hover-lift:hover {
@@ -23,4 +135,16 @@
 
 .m3-hover-lift:active {
     transform: scale(0.985);
+}
+
+/* ─── 6. WCAG 2.1 AA Accessible Reduced Motion Standard ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
