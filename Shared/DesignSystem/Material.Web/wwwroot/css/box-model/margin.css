@@ -69,10 +69,6 @@ input::-webkit-inner-spin-button {
     margin: var(--md-sys-spacing-1) 0;
 }
 
-:is(.m3-summary-actions, .summary-actions) {
-    margin-top: var(--md-sys-spacing-2);
-}
-
 md-filled-card,
 md-outlined-card,
 md-elevated-card {
@@ -83,44 +79,16 @@ md-elevated-card {
     margin: 10px 0;
 }
 
-:is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer {
-    margin-top: 4px;
-}
-
 .wishlist-content {
     margin-top: 10px;
-}
-
-.wishlist-card-footer {
-    margin-top: 12px;
-}
-
-.wishlist-details-price-row {
-    margin-top: 12px;
 }
 
 .m3-empty-state {
     margin: var(--md-sys-spacing-6) 0;
 }
 
-.m3-empty-state-icon {
-    margin-bottom: var(--md-sys-spacing-2);
-}
-
 .m3-empty-state-desc {
     margin-bottom: var(--md-sys-spacing-3);
-}
-
-.m3-empty-state-action {
-    margin-top: var(--md-sys-spacing-2);
-}
-
-.store-not-found {
-    margin: 0 auto;
-}
-
-.store-not-found .not-found-icon {
-    margin-bottom: 0.5rem;
 }
 
 .store-not-found p {
@@ -135,58 +103,8 @@ md-elevated-card {
     margin-top: var(--md-sys-spacing-1);
 }
 
-.picker-trigger-card {
-    margin-bottom: var(--md-sys-spacing-2);
-}
-
-.picker-custom-preview {
-    margin-top: 2px;
-}
-
-.picker-trigger-actions {
-    margin-left: auto;
-}
-
 .picker-popover-panel {
     margin-bottom: 12px;
-}
-
-.file-picker-container {
-    margin-top: 4px;
-    margin-bottom: 8px;
-}
-
-.picker-week-mini-dots {
-    margin-top: 2px;
-}
-
-.variant-dialog-subtext {
-    margin-top: 2px;
-}
-
-.variant-dialog-body {
-    margin-top: 8px;
-}
-
-.label-title {
-    margin-bottom: 8px;
-}
-
-.canvas-header {
-    margin-bottom: 8px;
-}
-
-.slots-chip-set {
-    margin-top: 8px;
-}
-
-.m3-skeleton-text {
-    margin-bottom: 0.5rem;
-}
-
-.m3-table-actions-bar,
-.table-actions-bar {
-    margin-bottom: var(--md-sys-spacing-2);
 }
 
 .table-container::-webkit-scrollbar-track {
@@ -197,11 +115,97 @@ md-elevated-card {
     margin: 0 0.5rem;
 }
 
-.paginator nav {
+/* Consolidated Master Rule: margin-top */
+
+:is(
+    .m3-empty-state-action,
+    :is(.m3-summary-actions, .summary-actions)
+) {
+    margin-top: var(--md-sys-spacing-2);
+}
+
+/* Consolidated Master Rule: margin-top */
+
+:is(
+    .file-picker-container,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer
+) {
+    margin-top: 4px;
+}
+
+/* Consolidated Master Rule: margin-top */
+
+:is(
+    .wishlist-card-footer,
+    .wishlist-details-price-row
+) {
+    margin-top: 12px;
+}
+
+/* Consolidated Master Rule: margin-bottom */
+
+:is(
+    .m3-empty-state-icon,
+    .m3-table-actions-bar,
+    .picker-trigger-card,
+    .table-actions-bar
+) {
+    margin-bottom: var(--md-sys-spacing-2);
+}
+
+/* Consolidated Master Rule: margin */
+
+:is(
+    .card-grid,
+    .store-not-found
+) {
+    margin: 0 auto;
+}
+
+/* Consolidated Master Rule: margin-bottom */
+
+:is(
+    .m3-skeleton-text,
+    .store-not-found .not-found-icon
+) {
+    margin-bottom: 0.5rem;
+}
+
+/* Consolidated Master Rule: margin-top */
+
+:is(
+    .picker-custom-preview,
+    .picker-week-mini-dots,
+    .variant-dialog-subtext
+) {
+    margin-top: 2px;
+}
+
+/* Consolidated Master Rule: margin-left */
+
+:is(
+    .paginator nav,
+    .picker-trigger-actions
+) {
     margin-left: auto;
 }
 
-.card-grid {
-    margin: 0 auto;
+/* Consolidated Master Rule: margin-bottom */
+
+:is(
+    .canvas-header,
+    .file-picker-container,
+    .label-title
+) {
+    margin-bottom: 8px;
+}
+
+/* Consolidated Master Rule: margin-top */
+
+:is(
+    .slots-chip-set,
+    .variant-dialog-body
+) {
+    margin-top: 8px;
 }
 

@@ -1,17 +1,11 @@
+/*  stylelint-disable selector-class-pattern  */
+
 /* ==========================================================================
    W3C CSS Transforms - Transform Rules Module
    Hardware Accelerated Coordinate Transforms
    ========================================================================== */
 
 /* ─── Consolidated Component Rules (transforms/transform.css) ────────────────────────── */
-.avatar-button::before {
-    transform: translate(-50%, -50%);
-}
-
-.avatar-button md-icon,
-.avatar-button .material-symbols-outlined {
-    transform: translate(-50%, -50%) !important;
-}
 
 .m3-card-interactive:hover,
 .card-interactive:hover {
@@ -43,37 +37,12 @@
     transform: scale(1.03);
 }
 
-.m3-filter-chip:hover {
-    transform: translateY(-1px);
-}
-
-:is(.m3-config-dialog, .m3-dialog-surface) {
-    transform: translate(-50%, -50%);
-}
-
-.picker-swatch-wrapper::before,
-.picker-palette-swatch::before {
-    transform: translate(-50%, -50%);
-}
-
 .picker-palette-swatch:hover {
     transform: scale(1.15);
 }
 
-.file-card:hover {
-    transform: translateY(-3px) scale(1.02);
-}
-
-.upload-card:hover {
-    transform: translateY(-3px) scale(1.02);
-}
-
 .upload-card:hover .upload-icon {
     transform: scale(1.2) rotate(6deg);
-}
-
-.lang-chip-btn:hover {
-    transform: translateY(-1px);
 }
 
 .lang-chip-btn:active {
@@ -94,5 +63,36 @@
 
 .go-next, .go-last {
     transform: scaleX(-1);
+}
+
+/* Consolidated Master Rule: transform */
+
+:is(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .avatar-button::before,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    :is(.m3-config-dialog, .m3-dialog-surface)
+) {
+    transform: translate(-50%, -50%);
+}
+
+/* Consolidated Master Rule: transform */
+
+:is(
+    .lang-chip-btn:hover,
+    .m3-filter-chip:hover
+) {
+    transform: translateY(-1px);
+}
+
+/* Consolidated Master Rule: transform */
+
+:is(
+    .file-card:hover,
+    .upload-card:hover
+) {
+    transform: translateY(-3px) scale(1.02);
 }
 

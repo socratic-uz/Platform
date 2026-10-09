@@ -43,10 +43,6 @@
     padding: 24px 24px 16px 24px;
 }
 
-:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content {
-    padding: 1rem;
-}
-
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label {
     padding: 0.5rem 0;
 }
@@ -68,17 +64,8 @@
     padding: 0.25rem 0.75rem;
 }
 
-.badge-counter {
-    padding: 2px 8px;
-}
-
 .m3-pill-badge {
     padding: 0.4rem 1.1rem;
-}
-
-.m3-count-badge,
-.count-badge {
-    padding: 0 0.5rem;
 }
 
 .kds-qty-badge,
@@ -88,19 +75,6 @@
 
 .kds-status-tag {
     padding: 0.2rem 0.5rem;
-}
-
-.back-button,
-.m3-back-button {
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-}
-
-.items-count-badge {
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-}
-
-:is(.m3-card-padding-sm, .card-padding-sm) {
-    padding: var(--md-sys-spacing-2);
 }
 
 :is(.m3-card-padding-md, .card-padding-md) {
@@ -123,19 +97,6 @@
     padding: 0.75rem 0.25rem 0.5rem;
 }
 
-md-filled-card.product-card,
-.product-card {
-    padding: 12px;
-}
-
-.wishlist-card-footer {
-    padding-top: 12px;
-}
-
-.wishlist-details-dl {
-    padding: 16px;
-}
-
 .m3-filter-chip {
     padding: 0 1rem;
 }
@@ -146,10 +107,6 @@ md-filled-card.product-card,
 
 :is(.m3-config-dialog, .m3-dialog-surface) {
     padding: var(--md-sys-gutter-section);
-}
-
-.m3-dialog-toggle-item {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
 }
 
 .m3-dialog-actions {
@@ -186,32 +143,8 @@ md-filled-card.product-card,
     padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
 }
 
-.m3-legend {
-    padding: 0 0.5rem;
-}
-
-:is(.m3-banner-error, .error-banner) {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-}
-
-.picker-trigger-card {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-}
-
-.picker-badge {
-    padding: 2px 8px;
-}
-
 .picker-compact-box {
     padding: 6px 10px;
-}
-
-.picker-hex-wrapper {
-    padding: 3px 8px;
-}
-
-.picker-popover-panel {
-    padding: 16px;
 }
 
 .picker-popover-header {
@@ -220,10 +153,6 @@ md-filled-card.product-card,
 
 .picker-popover-footer {
     padding-top: 8px;
-}
-
-.file-info {
-    padding: 6px 8px;
 }
 
 .new-badge {
@@ -246,16 +175,8 @@ md-filled-card.product-card,
     padding: 8px 14px;
 }
 
-.md3-time-picker-box {
-    padding: 3px 8px;
-}
-
 .md3-closed-badge {
     padding: 4px 10px;
-}
-
-.md3-dialog-actions-row {
-    padding-top: 12px;
 }
 
 .lang-inline-grid {
@@ -278,24 +199,8 @@ md-filled-card.product-card,
     padding: 0.5rem 0.75rem;
 }
 
-.required-badge {
-    padding: 2px 8px;
-}
-
-.options-list-container {
-    padding: 6px 8px;
-}
-
-.option-item-row {
-    padding: 6px 8px;
-}
-
 .booking-picker-card {
     padding: clamp(14px, 2.5vw, 20px);
-}
-
-.canvas-card {
-    padding: 12px;
 }
 
 .booking-summary-banner {
@@ -321,52 +226,6 @@ md-filled-card.product-card,
     padding: 8px 16px;
 }
 
-.m3-table-wrapper,
-.order-items-table-wrapper {
-    padding: var(--md-sys-spacing-2);
-}
-
-.m3-table th,
-.order-items-table th {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-}
-
-.orders-table th {
-    padding: 0.85rem 1rem;
-}
-
-.m3-table td,
-.order-items-table td {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-}
-
-.orders-table td {
-    padding: 0.85rem 1rem;
-}
-
-.smart-grid-container h4 {
-    padding: 0 0.5rem;
-}
-
-.table-container th,
-table.quickgrid th {
-    padding: 1rem;
-}
-
-.table-container td,
-table.quickgrid td {
-    padding: 0.5rem 1rem;
-}
-
-.col-options {
-    padding: 1rem;
-}
-
-.paginator,
-.table-container > .paginator {
-    padding: 0.5rem 1rem !important;
-}
-
 .drop-container {
     padding: 1.5rem 0;
 }
@@ -382,5 +241,138 @@ table.quickgrid td {
         padding: 10px 12px;
     }
 
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .col-options,
+    .table-container th,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content,
+    table.quickgrid th
+) {
+    padding: 1rem;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .badge-counter,
+    .picker-badge,
+    .required-badge
+) {
+    padding: 2px 8px;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .count-badge,
+    .m3-count-badge,
+    .m3-legend,
+    .smart-grid-container h4
+) {
+    padding: 0 0.5rem;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .back-button,
+    .items-count-badge,
+    .m3-back-button
+) {
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    :is(.m3-card-padding-sm, .card-padding-sm)
+) {
+    padding: var(--md-sys-spacing-2);
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .canvas-card,
+    .product-card,
+    md-filled-card.product-card
+) {
+    padding: 12px;
+}
+
+/* Consolidated Master Rule: padding-top */
+
+:is(
+    .md3-dialog-actions-row,
+    .wishlist-card-footer
+) {
+    padding-top: 12px;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .picker-popover-panel,
+    .wishlist-details-dl
+) {
+    padding: 16px;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .m3-dialog-toggle-item,
+    .m3-table td,
+    .m3-table th,
+    .order-items-table td,
+    .order-items-table th,
+    .picker-trigger-card,
+    :is(.m3-banner-error, .error-banner)
+) {
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .md3-time-picker-box,
+    .picker-hex-wrapper
+) {
+    padding: 3px 8px;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .file-info,
+    .option-item-row,
+    .options-list-container
+) {
+    padding: 6px 8px;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .orders-table td,
+    .orders-table th
+) {
+    padding: 0.85rem 1rem;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .paginator,
+    .table-container > .paginator,
+    .table-container td,
+    table.quickgrid td
+) {
+    padding: 0.5rem 1rem;
 }
 

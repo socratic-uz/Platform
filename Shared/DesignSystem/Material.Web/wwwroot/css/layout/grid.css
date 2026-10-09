@@ -289,9 +289,6 @@ md-dialog [slot="actions"],
 }
 
 /* ─── Consolidated Component Rules (layout/grid.css) ────────────────────────── */
-:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content {
-    grid-auto-flow: row;
-}
 
 :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row {
     grid-auto-columns: minmax(0, 1fr);
@@ -306,56 +303,11 @@ md-dialog [slot="actions"],
 }
 
 :is(.avatar-container, md-dialog.contacts) details .content {
-    grid-auto-flow: row;
     gap: 0.85rem;
-}
-
-.badge,
-.m3-badge,
-.status-badge,
-.m3-status-badge,
-.order-status-badge,
-.item-status-pill {
-    grid-auto-columns: max-content auto;
-    gap: 0.4rem;
-}
-
-.m3-pill-badge {
-    grid-auto-columns: max-content auto;
-    gap: 0.5rem;
-}
-
-.back-button,
-.m3-back-button {
-    grid-auto-columns: max-content auto;
-}
-
-.items-count-badge {
-    grid-auto-columns: max-content auto;
-}
-
-:is(.m3-card-header, .card-header) {
-    gap: 0.75rem;
-}
-
-:is(.m3-card-body, .card-body) {
-    gap: 0.75rem;
-}
-
-:is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions) {
-    gap: 0.75rem;
 }
 
 :is(.m3-media-card, .media-card, .org-card) {
     grid-template-rows: auto minmax(0, 1fr);
-}
-
-.org-card-content {
-    gap: 0.35rem;
-}
-
-:is(md-filled-card, md-outlined-card, md-elevated-card) section {
-    gap: 6px;
 }
 
 .card-grid {
@@ -375,7 +327,6 @@ md-filled-card.product-card,
 
 .m3-filter-chip {
     grid-auto-columns: max-content auto max-content;
-    gap: 0.5rem;
 }
 
 :is(.m3-config-dialog, .m3-dialog-surface) {
@@ -390,24 +341,8 @@ md-filled-card.product-card,
     gap: 0.15rem;
 }
 
-.store-not-found {
-    gap: 0.5rem;
-}
-
-.pos-empty-state {
-    grid-column: 1 / -1;
-}
-
 .m3-form-grid.two-cols {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-}
-
-:is(.m3-banner-error, .error-banner) {
-    grid-template-columns: auto minmax(0, 1fr);
-}
-
-:is(.m3-counter, .material-counter) {
-    gap: 6px;
 }
 
 :is(.m3-info-grid, .info-grid) {
@@ -418,25 +353,12 @@ md-filled-card.product-card,
     gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
 }
 
-.picker-trigger-left {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 14px;
-}
-
 .picker-trigger-text {
     gap: 3px;
 }
 
-.picker-hex-wrapper {
-    gap: 2px;
-}
-
 .picker-palette-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.file-picker-container {
-    gap: 10px;
 }
 
 .file-grid {
@@ -447,22 +369,12 @@ md-filled-card.product-card,
     grid-template-rows: minmax(0, 1fr) auto;
 }
 
-.md3-presets-row {
-    gap: 6px;
-}
-
-.md3-schedule-time-group {
-    gap: 6px;
-}
-
 .lang-inline-grid {
     grid-auto-columns: auto;
-    gap: 0.35rem;
 }
 
 .lang-pill-btn {
     grid-auto-columns: auto auto auto;
-    gap: 0.4rem;
 }
 
 .lang-dropdown-menu {
@@ -473,80 +385,24 @@ md-filled-card.product-card,
     grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
 }
 
-.price-box {
-    gap: 2px;
-}
-
-.booking-picker-card {
-    gap: 14px;
-}
-
 .date-presets-row {
     grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
-    gap: 6px;
 }
 
 .slots-chip-set {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
 }
 
-.summary-left {
-    gap: 10px;
-}
-
-.summary-text-box {
-    gap: 2px;
-}
-
-:is(.analytics-mode-btn, .m3-segmented-btn) {
-    grid-template-columns: auto auto;
-    gap: 0.4rem;
-}
-
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
     grid-template-columns: auto auto auto;
-    gap: 0.5rem;
-}
-
-:is(.analytics-header-controls, .m3-header-controls) {
-    grid-template-columns: auto auto;
-    gap: 0.75rem;
-}
-
-.payment-cell,
-.date-cell {
-    gap: 0.4rem;
 }
 
 .smart-grid-container {
     gap: 1rem;
 }
 
-.table-container > table,
-table.quickgrid {
-    grid-column: 1 / -1;
-}
-
-.grid-enum-flags {
-    gap: 0.35rem;
-}
-
 .col-justify-end .col-title .sort-indicator {
     order: -1;
-}
-
-.paginator,
-.table-container > .paginator {
-    grid-column: 1 / -1;
-}
-
-.paginator nav {
-    gap: 0.5rem;
-}
-
-.drop-container {
-    grid-column: 1 / -1;
-    gap: 10px;
 }
 
 .m3-mode-toggle-figure,
@@ -589,5 +445,153 @@ table.quickgrid {
         gap: 10px;
     }
 
+}
+
+/* Consolidated Master Rule: grid-auto-flow */
+
+:is(
+    :is(.avatar-container, md-dialog.contacts) details .content,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content
+) {
+    grid-auto-flow: row;
+}
+
+/* Consolidated Master Rule: grid-auto-columns */
+
+:is(
+    .back-button,
+    .badge,
+    .item-status-pill,
+    .items-count-badge,
+    .m3-back-button,
+    .m3-badge,
+    .m3-pill-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .status-badge
+) {
+    grid-auto-columns: max-content auto;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .badge,
+    .date-cell,
+    .item-status-pill,
+    .lang-pill-btn,
+    .m3-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .payment-cell,
+    .status-badge,
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+) {
+    gap: 0.4rem;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .m3-filter-chip,
+    .m3-pill-badge,
+    .paginator nav,
+    .store-not-found,
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger)
+) {
+    gap: 0.5rem;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    :is(.analytics-header-controls, .m3-header-controls),
+    :is(.m3-card-body, .card-body),
+    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
+    :is(.m3-card-header, .card-header)
+) {
+    gap: 0.75rem;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .grid-enum-flags,
+    .lang-inline-grid,
+    .org-card-content
+) {
+    gap: 0.35rem;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .date-presets-row,
+    .md3-presets-row,
+    .md3-schedule-time-group,
+    :is(.m3-counter, .material-counter),
+    :is(md-filled-card, md-outlined-card, md-elevated-card) section
+) {
+    gap: 6px;
+}
+
+/* Consolidated Master Rule: grid-column */
+
+:is(
+    .drop-container,
+    .paginator,
+    .pos-empty-state,
+    .table-container > .paginator,
+    .table-container > table,
+    table.quickgrid
+) {
+    grid-column: 1 / -1;
+}
+
+/* Consolidated Master Rule: grid-template-columns */
+
+:is(
+    .picker-trigger-left,
+    :is(.m3-banner-error, .error-banner)
+) {
+    grid-template-columns: auto minmax(0, 1fr);
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .booking-picker-card,
+    .picker-trigger-left
+) {
+    gap: 14px;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .picker-hex-wrapper,
+    .price-box,
+    .summary-text-box
+) {
+    gap: 2px;
+}
+
+/* Consolidated Master Rule: gap */
+
+:is(
+    .drop-container,
+    .file-picker-container,
+    .summary-left
+) {
+    gap: 10px;
+}
+
+/* Consolidated Master Rule: grid-template-columns */
+
+:is(
+    :is(.analytics-header-controls, .m3-header-controls),
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+) {
+    grid-template-columns: auto auto;
 }
 

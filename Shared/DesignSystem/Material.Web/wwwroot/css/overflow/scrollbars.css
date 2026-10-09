@@ -149,7 +149,6 @@
     .pos-orders-scroll,
     .map-categories-scroll
 ) {
-    scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
 
@@ -171,7 +170,26 @@
 /* ─── 3. Utility Classes for Behavior & Containment ──────────────────────── */
 
 /* ─── Consolidated Component Rules (overflow/scrollbars.css) ────────────────────────── */
-.resource-tabs {
+
+/* Consolidated Master Rule: scrollbar-width */
+
+:is(
+    .resource-tabs,
+    :is(
+    .scrollbar-none,
+    .no-scrollbar,
+
+    
+    .kiosk-filter-row,
+    .active-orders-scroll,
+    .ux-widget-chips,
+    .store-breadcrumbs,
+    .pos-top-header-actions,
+    .pos-filters,
+    .pos-orders-scroll,
+    .map-categories-scroll
+)
+) {
     scrollbar-width: none;
 }
 

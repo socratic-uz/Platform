@@ -41,9 +41,6 @@
 }
 
 /* ─── Consolidated Component Rules (overflow/overflow.css) ────────────────────────── */
-.avatar-button {
-    overflow: visible;
-}
 
 :is(.m3-config-dialog, .m3-dialog-surface) {
     overflow-y: auto;
@@ -53,29 +50,36 @@ md-dialog [slot="content"] {
     overflow-x: hidden;
 }
 
-.picker-swatch-wrapper {
-    overflow: visible;
-}
-
-.md3-presets-row {
-    overflow-x: auto;
-}
-
 .resource-tabs {
-    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.m3-table-wrapper,
-.order-items-table-wrapper {
+/* Consolidated Master Rule: overflow */
+
+:is(
+    .avatar-button,
+    .picker-swatch-wrapper
+) {
+    overflow: visible;
+}
+
+/* Consolidated Master Rule: overflow-x */
+
+:is(
+    .m3-table-wrapper,
+    .md3-presets-row,
+    .order-items-table-wrapper,
+    .resource-tabs
+) {
     overflow-x: auto;
 }
 
-.table-container {
-    overflow: auto;
-}
+/* Consolidated Master Rule: overflow */
 
-.smart-grid-container textarea {
+:is(
+    .smart-grid-container textarea,
+    .table-container
+) {
     overflow: auto;
 }
 

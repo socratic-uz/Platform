@@ -7,7 +7,92 @@
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
 /* Universal On-Surface Variant Text Color */
+
+/* Universal On-Surface High-Emphasis Text Color */
+
+/* Universal Primary Brand Text Color */
+
+/* Universal On-Primary High-Contrast Text Color */
 :is(
+    .badge-counter,
+    .m3-dialog-btn-primary,
+    .picker-swatch-check,
+    .new-badge,
+    .picker-day-dot.active,
+    .lang-chip-btn.lang-chip--active
+) {
+    color: var(--md-sys-color-on-primary);
+}
+
+/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
+
+/* Universal Outline Color Elements */
+:is(
+    .m3-dialog-toggle-desc,
+    .picker-day-dot,
+    .md3-time-label,
+    .md3-time-separator,
+    .md3-closed-badge,
+    .table-icon
+) {
+    color: var(--md-sys-color-outline);
+}
+
+/* Universal On-Primary-Container Color Elements */
+
+/* Universal On-Secondary-Container Color Elements */
+
+/* ─── Consolidated Component Rules (color/color.css) ────────────────────────── */
+.avatar-button {
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button svg * {
+    fill: var(--md-sys-color-on-primary-container);
+}
+
+md-dialog.contacts,
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.m3-pill-badge.tertiary {
+    color: var(--md-sys-color-tertiary);
+}
+
+.m3-pill-badge.secondary {
+    color: var(--md-sys-color-secondary);
+}
+
+.m3-dialog-toggle-item input[type="checkbox"] {
+    accent-color: var(--md-sys-color-primary);
+}
+
+:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.m3-mode-toggle-figure > :nth-child(1),
+.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
+    stroke: var(--md-sys-color-on-primary-container);
+}
+
+.m3-mode-toggle-figure > :nth-child(2),
+.mode-toggle-figure > .mode-toggle-icon:nth-child(2) {
+    fill: var(--md-sys-color-on-surface);
+}
+
+/* Consolidated Master Rule: color */
+
+:is(
+    :is(
     .m3-status-badge.created,
     .m3-status-badge.status-created,
     .order-status-badge.status-created,
@@ -56,12 +141,16 @@
     .pagination-text,
     .drop-container,
     .drop-title
+),
+    :is(.m3-generic-type, .generic-type)
 ) {
     color: var(--md-sys-color-on-surface-variant);
 }
 
-/* Universal On-Surface High-Emphasis Text Color */
+/* Consolidated Master Rule: color */
+
 :is(
+    :is(
     :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline,
     :is(.m3-card-title, .card-title),
     :is(.m3-summary-title, .summary-title),
@@ -108,12 +197,16 @@
     .smart-grid-container input,
     .smart-grid-container select,
     .smart-grid-container textarea
+),
+    :is(.m3-video-type, .video-type)
 ) {
     color: var(--md-sys-color-on-surface);
 }
 
-/* Universal Primary Brand Text Color */
+/* Consolidated Master Rule: color */
+
 :is(
+    :is(
     .m3-status-badge.made,
     .m3-status-badge.status-made,
     .order-status-badge.status-made,
@@ -145,38 +238,16 @@
     .summary-check-icon,
     .m3-amount-cell,
     .amount-cell
+),
+    :is(.m3-audio-type, .audio-type)
 ) {
     color: var(--md-sys-color-primary);
 }
 
-/* Universal On-Primary High-Contrast Text Color */
-:is(
-    .badge-counter,
-    .m3-dialog-btn-primary,
-    .picker-swatch-check,
-    .new-badge,
-    .picker-day-dot.active,
-    .lang-chip-btn.lang-chip--active
-) {
-    color: var(--md-sys-color-on-primary);
-}
+/* Consolidated Master Rule: color */
 
-/* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
-
-/* Universal Outline Color Elements */
 :is(
-    .m3-dialog-toggle-desc,
-    .picker-day-dot,
-    .md3-time-label,
-    .md3-time-separator,
-    .md3-closed-badge,
-    .table-icon
-) {
-    color: var(--md-sys-color-outline);
-}
-
-/* Universal On-Primary-Container Color Elements */
-:is(
+    :is(
     .m3-status-badge.success,
     .m3-status-badge.paid,
     .m3-status-badge.status-paid,
@@ -197,12 +268,16 @@
     .kds-status-tag,
     .picker-icon-badge.active,
     .summary-title
+),
+    :is(.m3-doc-type, .doc-type)
 ) {
     color: var(--md-sys-color-on-primary-container);
 }
 
-/* Universal On-Secondary-Container Color Elements */
+/* Consolidated Master Rule: color */
+
 :is(
+    :is(
     .m3-status-badge.info,
     .m3-status-badge.collecting,
     .m3-status-badge.status-collecting,
@@ -227,138 +302,68 @@
     .m3-filter-chip.active,
     .m3-filter-chip[aria-selected="true"],
     :is(.analytics-mode-btn, .m3-segmented-btn).active
+),
+    :is(.m3-archive-type, .archive-type)
 ) {
     color: var(--md-sys-color-on-secondary-container);
 }
 
-/* ─── Consolidated Component Rules (color/color.css) ────────────────────────── */
-.avatar-button {
-    --md-outlined-button-outline-color: var(--md-sys-color-outline);
-    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
-    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
-    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
-}
+/* Consolidated Master Rule: color */
 
-.avatar-button svg * {
-    fill: var(--md-sys-color-on-primary-container);
-}
-
-md-dialog.contacts,
-md-dialog.faceid-profile-modal,
-.avatar-container md-dialog {
-    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
-}
-
-.m3-status-badge.warning,
-.m3-status-badge.making,
-.m3-status-badge.status-making,
-.order-status-badge.status-making,
-.item-status-pill.status-making,
-.badge-making,
-.badge-paused,
-.badge.paused {
+:is(
+    .badge-making,
+    .badge-paused,
+    .badge-pro,
+    .badge.paused,
+    .badge.pro,
+    .item-status-pill.status-making,
+    .m3-status-badge.making,
+    .m3-status-badge.status-making,
+    .m3-status-badge.warning,
+    .order-status-badge.status-making,
+    :is(.m3-sheet-type, .sheet-type)
+) {
     color: var(--md-sys-color-on-tertiary-container);
 }
 
-.badge-pro,
-.badge.pro {
-    color: var(--md-sys-color-on-tertiary-container);
-}
+/* Consolidated Master Rule: color */
 
-.m3-status-badge.error,
-.m3-status-badge.canceled,
-.m3-status-badge.status-canceled,
-.order-status-badge.status-canceled,
-.item-status-pill.status-canceled,
-.badge-none,
-.badge.none,
-.badge-blocked,
-.badge.blocked {
+:is(
+    .badge-blocked,
+    .badge-none,
+    .badge.blocked,
+    .badge.none,
+    .item-status-pill.status-canceled,
+    .m3-status-badge.canceled,
+    .m3-status-badge.error,
+    .m3-status-badge.status-canceled,
+    .order-status-badge.status-canceled,
+    .required-badge,
+    :is(.m3-banner-error, .error-banner),
+    :is(.m3-pdf-type, .pdf-type)
+) {
     color: var(--md-sys-color-on-error-container);
 }
 
-.badge-with-ads,
-.badge.with-ads,
-.badge-expired,
-.badge.expired {
+/* Consolidated Master Rule: color */
+
+:is(
+    .badge-expired,
+    .badge-with-ads,
+    .badge.expired,
+    .badge.with-ads,
+    .validation-message
+) {
     color: var(--md-sys-color-error);
 }
 
-.m3-pill-badge.tertiary {
-    color: var(--md-sys-color-tertiary);
-}
+/* Consolidated Master Rule: color */
 
-.m3-pill-badge.secondary {
-    color: var(--md-sys-color-secondary);
-}
-
-.m3-card-interactive,
-.card-interactive {
+:is(
+    .card-interactive,
+    .m3-card-interactive,
+    button.col-title
+) {
     color: inherit;
-}
-
-.m3-dialog-toggle-item input[type="checkbox"] {
-    accent-color: var(--md-sys-color-primary);
-}
-
-.validation-message {
-    color: var(--md-sys-color-error);
-}
-
-:is(.m3-banner-error, .error-banner) {
-    color: var(--md-sys-color-on-error-container);
-}
-
-:is(.m3-pdf-type, .pdf-type) {
-    color: var(--md-sys-color-on-error-container);
-}
-
-:is(.m3-doc-type, .doc-type) {
-    color: var(--md-sys-color-on-primary-container);
-}
-
-:is(.m3-sheet-type, .sheet-type) {
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
-:is(.m3-archive-type, .archive-type) {
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-:is(.m3-audio-type, .audio-type) {
-    color: var(--md-sys-color-primary);
-}
-
-:is(.m3-video-type, .video-type) {
-    color: var(--md-sys-color-on-surface);
-}
-
-:is(.m3-generic-type, .generic-type) {
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.required-badge {
-    color: var(--md-sys-color-on-error-container);
-}
-
-:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
-    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
-    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
-    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
-    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
-}
-
-button.col-title {
-    color: inherit;
-}
-
-.m3-mode-toggle-figure > :nth-child(1),
-.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
-    stroke: var(--md-sys-color-on-primary-container);
-}
-
-.m3-mode-toggle-figure > :nth-child(2),
-.mode-toggle-figure > .mode-toggle-icon:nth-child(2) {
-    fill: var(--md-sys-color-on-surface);
 }
 

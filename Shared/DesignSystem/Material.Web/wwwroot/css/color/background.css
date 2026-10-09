@@ -208,40 +208,6 @@
 }
 
 /* ─── Consolidated Component Rules (color/background.css) ────────────────────────── */
-.m3-status-badge.warning,
-.m3-status-badge.making,
-.m3-status-badge.status-making,
-.order-status-badge.status-making,
-.item-status-pill.status-making,
-.badge-making,
-.badge-paused,
-.badge.paused {
-    background: var(--md-sys-color-tertiary-container);
-}
-
-.badge-pro,
-.badge.pro {
-    background: var(--md-sys-color-tertiary-container);
-}
-
-.m3-status-badge.error,
-.m3-status-badge.canceled,
-.m3-status-badge.status-canceled,
-.order-status-badge.status-canceled,
-.item-status-pill.status-canceled,
-.badge-none,
-.badge.none,
-.badge-blocked,
-.badge.blocked {
-    background: var(--md-sys-color-error-container);
-}
-
-.badge-with-ads,
-.badge.with-ads,
-.badge-expired,
-.badge.expired {
-    background: var(--md-sys-color-error-container);
-}
 
 .m3-status-dot,
 .status-dot {
@@ -297,14 +263,6 @@
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
 }
 
-input[type="color"] {
-    background: none;
-}
-
-:is(.m3-banner-error, .error-banner) {
-    background: var(--md-sys-color-error-container);
-}
-
 .file-card {
     background-color: var(--md-sys-color-surface-container-lowest);
 }
@@ -315,10 +273,6 @@ input[type="color"] {
 
 :is(.m3-pdf-type, .pdf-type) {
     background-color: var(--md-sys-color-error-container);
-}
-
-:is(.m3-doc-type, .doc-type) {
-    background-color: var(--md-sys-color-primary-container);
 }
 
 :is(.m3-sheet-type, .sheet-type) {
@@ -333,44 +287,12 @@ input[type="color"] {
     background-color: var(--md-sys-color-surface-container-high);
 }
 
-:is(.m3-video-type, .video-type) {
-    background-color: var(--md-sys-color-surface-container-highest);
-}
-
 :is(.m3-generic-type, .generic-type) {
     background-color: var(--md-sys-color-surface-container);
 }
 
-.file-info {
-    background: var(--md-sys-color-surface-container-lowest);
-}
-
 .file-overlay {
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
-}
-
-.md3-schedule-day-card.active {
-    background: var(--md-sys-color-surface-container-lowest);
-}
-
-.lang-inline-grid {
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-}
-
-.lang-chip-btn:hover {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
-}
-
-.lang-pill-btn {
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-}
-
-.lang-menu-item.is-selected {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
-}
-
-.required-badge {
-    background: var(--md-sys-color-error-container);
 }
 
 :is(.m3-progress-track, .progress-bar-bg) {
@@ -394,10 +316,6 @@ input[type="color"] {
     background: var(--md-sys-color-outline);
 }
 
-button.col-title {
-    background: none;
-}
-
 .col-sort-desc .sort-indicator,
 .col-sort-asc .sort-indicator {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
@@ -413,19 +331,104 @@ button.col-title {
     background: none center center / 1rem no-repeat;
 }
 
-.paginator nav button:not([disabled]):hover {
-    background-color: var(--md-sys-color-surface-container-highest);
-}
-
-.paginator nav button:not([disabled]):active {
-    background-color: var(--md-sys-color-primary-container);
-}
-
 .go-first, .go-last {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z" fill="%236750a4"/><rect height="2" width="20" y="20.5" x="2" fill="%236750a4"/></g></svg>') !important;
 }
 
 .go-previous, .go-next {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" fill="%236750a4"/></g></svg>') !important;
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    .badge-making,
+    .badge-paused,
+    .badge-pro,
+    .badge.paused,
+    .badge.pro,
+    .item-status-pill.status-making,
+    .m3-status-badge.making,
+    .m3-status-badge.status-making,
+    .m3-status-badge.warning,
+    .order-status-badge.status-making
+) {
+    background: var(--md-sys-color-tertiary-container);
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    .badge-blocked,
+    .badge-expired,
+    .badge-none,
+    .badge-with-ads,
+    .badge.blocked,
+    .badge.expired,
+    .badge.none,
+    .badge.with-ads,
+    .item-status-pill.status-canceled,
+    .m3-status-badge.canceled,
+    .m3-status-badge.error,
+    .m3-status-badge.status-canceled,
+    .order-status-badge.status-canceled,
+    .required-badge,
+    :is(.m3-banner-error, .error-banner)
+) {
+    background: var(--md-sys-color-error-container);
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    button.col-title,
+    input[type="color"]
+) {
+    background: none;
+}
+
+/* Consolidated Master Rule: background-color */
+
+:is(
+    .paginator nav button:not([disabled]):active,
+    :is(.m3-doc-type, .doc-type)
+) {
+    background-color: var(--md-sys-color-primary-container);
+}
+
+/* Consolidated Master Rule: background-color */
+
+:is(
+    .paginator nav button:not([disabled]):hover,
+    :is(.m3-video-type, .video-type)
+) {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    .file-info,
+    .md3-schedule-day-card.active
+) {
+    background: var(--md-sys-color-surface-container-lowest);
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    .lang-inline-grid,
+    .lang-pill-btn
+) {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+}
+
+/* Consolidated Master Rule: background */
+
+:is(
+    .lang-chip-btn:hover,
+    .lang-menu-item.is-selected
+) {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 

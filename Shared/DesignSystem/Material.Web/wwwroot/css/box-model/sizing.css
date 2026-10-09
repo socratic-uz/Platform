@@ -7,39 +7,29 @@
 /* Aspect Ratio Utilities (Zero-Layout-Shift) */
 .m3-ratio-square {
     aspect-ratio: var(--md-sys-ratio-square) !important;
-    object-fit: cover;
 }
 
 .m3-ratio-video {
     aspect-ratio: var(--md-sys-ratio-video) !important;
-    object-fit: cover;
 }
 
 .m3-ratio-card {
     aspect-ratio: var(--md-sys-ratio-card) !important;
-    object-fit: cover;
 }
 
 .m3-ratio-portrait {
     aspect-ratio: var(--md-sys-ratio-portrait) !important;
-    object-fit: cover;
 }
 
 .m3-ratio-kiosk {
     aspect-ratio: var(--md-sys-ratio-kiosk) !important;
-    object-fit: cover;
 }
 
 .m3-ratio-wide {
     aspect-ratio: var(--md-sys-ratio-wide) !important;
-    object-fit: cover;
 }
 
 /* Touch Target Ergonomics (WCAG 2.1 AA >= 48px) */
-.m3-touch-target {
-    min-width: var(--md-sys-touch-target-min) !important;
-    min-height: var(--md-sys-touch-target-min) !important;
-}
 
 .m3-touch-target-kiosk {
     min-width: var(--md-sys-touch-target-kiosk) !important;
@@ -126,30 +116,6 @@
 }
 
 /* Universal Minimum Touch Target (48px) Grouping */
-:is(
-    .back-button,
-    .m3-back-button,
-    md-filled-button,
-    md-outlined-button,
-    md-elevated-button,
-    md-tonal-button,
-    md-text-button,
-    md-icon-button,
-    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
-    media (pointer: coarse),
-    .m3-dialog-toggle-item,
-    .m3-dialog-btn-primary,
-    .picker-compact-box,
-    .lang-chip-btn,
-    .lang-menu-item,
-    :is(.analytics-mode-btn, .m3-segmented-btn),
-    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger)
-),
-.avatar-button::before,
-.picker-swatch-wrapper::before,
-.picker-palette-swatch::before {
-    min-height: var(--md-sys-touch-target-min);
-}
 
 /* Universal Zero Minimum Width (Grid Truncation Protection) Grouping */
 :is(
@@ -288,20 +254,10 @@
 /* ─── Universal Consolidated Groupings (Round 4 Deduplication) ───── */
 
 /* Universal Media Fit (Cover) */
-:is(
-    .avatar-button img,
-    :is(.m3-card-media, .org-media, .wishlist-media) img,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
-    .wishlist-details-thumb,
-    .image-preview
-) {
-    object-fit: cover;
-}
 
 /* ─── Consolidated Component Rules (box-model/sizing.css) ────────────────────────── */
 .avatar-button {
     width: 40px;
-    height: 40px;
     min-width: 40px;
     max-width: 40px;
     --md-outlined-button-container-height: 40px;
@@ -309,14 +265,9 @@
     --md-outlined-button-outline-width: 1.5px;
 }
 
-.avatar-button::before {
-    min-width: var(--md-sys-touch-target-min);
-}
-
 .avatar-button md-icon,
 .avatar-button .material-symbols-outlined {
     width: 24px !important;
-    height: 24px !important;
 }
 
 md-dialog.contacts,
@@ -330,13 +281,11 @@ md-dialog.faceid-profile-modal,
 .m3-status-dot,
 .status-dot {
     width: 8px;
-    height: 8px;
 }
 
 .m3-count-badge,
 .count-badge {
     min-width: 28px;
-    height: 24px;
 }
 
 .kds-qty-badge,
@@ -344,17 +293,9 @@ md-dialog.faceid-profile-modal,
     height: auto;
 }
 
-md-icon-button {
-    min-width: var(--md-sys-touch-target-min);
-}
-
 :is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
     width: var(--md-icon-size, 18px);
     height: var(--md-icon-size, 18px);
-}
-
-:is(.m3-summary-divider, .summary-divider) {
-    height: 1px;
 }
 
 :is(.m3-card-media, .org-media, .wishlist-media) {
@@ -364,10 +305,6 @@ md-icon-button {
 :is(.m3-card-media-placeholder, .org-media-placeholder) :is(md-icon, .material-symbols-outlined) {
     width: 48px;
     height: 48px;
-}
-
-:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
-    height: 1px;
 }
 
 md-filled-card.product-card,
@@ -383,15 +320,6 @@ md-filled-card.product-card,
     max-height: 150px;
 }
 
-.m3-filter-chip {
-    height: 40px;
-}
-
-.m3-filter-chip-icon {
-    width: 18px !important;
-    height: 18px !important;
-}
-
 :is(.m3-config-dialog, .m3-dialog-surface) {
     width: min(90vw, 540px);
     max-height: min(85dvh, 720px);
@@ -401,16 +329,9 @@ md-filled-card.product-card,
     width: var(--md-sys-touch-target-compact);
     height: var(--md-sys-touch-target-compact);
     min-width: var(--md-sys-touch-target-compact);
-    min-height: var(--md-sys-touch-target-compact);
-}
-
-.m3-dialog-toggle-item input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
 }
 
 md-dialog {
-    width: auto;
     max-width: min(92vw, 560px);
     max-height: min(90vh, 90dvh);
 }
@@ -430,17 +351,6 @@ md-dialog {
 
 .kiosk-empty-state p {
     max-width: 380px;
-}
-
-input[type="color"] {
-    height: var(--md-sys-touch-target-min);
-    width: var(--md-sys-touch-target-min);
-}
-
-::-webkit-color-swatch-wrapper,
-::-webkit-color-swatch {
-    height: var(--md-sys-touch-target-min);
-    width: var(--md-sys-touch-target-min);
 }
 
 :is(.m3-counter, .material-counter) :is(button, md-filled-button, md-outlined-button) {
@@ -474,11 +384,6 @@ input[type="color"] {
     height: 28px;
 }
 
-.picker-swatch-wrapper::before,
-.picker-palette-swatch::before {
-    min-width: var(--md-sys-touch-target-min);
-}
-
 .picker-hex-input {
     width: 68px;
 }
@@ -488,34 +393,8 @@ input[type="color"] {
     height: 32px;
 }
 
-.file-card {
-    aspect-ratio: 1;
-}
-
 .icon-preview md-icon {
     --md-icon-size: 40px;
-}
-
-.upload-card {
-    aspect-ratio: 1;
-}
-
-.picker-day-dot {
-    width: 20px;
-    height: 20px;
-}
-
-.lang-chip-btn {
-    min-width: var(--md-sys-touch-target-min);
-}
-
-.lang-pill-btn {
-    min-height: var(--md-sys-touch-target-compact);
-}
-
-.lang-globe-icon {
-    width: 18px;
-    height: 18px;
 }
 
 .lang-chevron {
@@ -531,30 +410,8 @@ input[type="color"] {
     height: clamp(180px, 30vh, 240px);
 }
 
-:is(.m3-progress-track, .progress-bar-bg) {
-    height: 8px;
-}
-
-:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
-    height: 40px;
-}
-
-:is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"] {
-    width: 20px;
-    height: 20px;
-}
-
-.m3-skeleton-text {
-    height: 1rem;
-}
-
 :is(.m3-skeleton-text.m3-short, .m3-skeleton-text.short) {
     width: 60%;
-}
-
-.m3-skeleton-circle {
-    width: var(--md-sys-touch-target-min);
-    height: var(--md-sys-touch-target-min);
 }
 
 .m3-skeleton-card {
@@ -565,22 +422,8 @@ input[type="color"] {
     min-width: min(100%, 680px);
 }
 
-.table-container::-webkit-scrollbar {
-    width: auto;
-    height: 8px;
-}
-
 .col-title {
     min-width: 0px;
-}
-
-.sort-indicator {
-    width: 1rem;
-    height: 1rem;
-}
-
-.col-options-button {
-    width: 1rem;
 }
 
 .paginator nav button {
@@ -626,5 +469,214 @@ input[type="color"] {
         min-width: 100%;
     }
 
+}
+
+/* Consolidated Master Rule: object-fit */
+
+:is(
+    .m3-ratio-card,
+    .m3-ratio-kiosk,
+    .m3-ratio-portrait,
+    .m3-ratio-square,
+    .m3-ratio-video,
+    .m3-ratio-wide,
+    :is(
+    .avatar-button img,
+    :is(.m3-card-media, .org-media, .wishlist-media) img,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
+    .wishlist-details-thumb,
+    .image-preview
+)
+) {
+    object-fit: cover;
+}
+
+/* Consolidated Master Rule: min-width */
+
+:is(
+    .avatar-button::before,
+    .lang-chip-btn,
+    .m3-touch-target,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    md-icon-button
+) {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+/* Consolidated Master Rule: min-height */
+
+:is(
+    .avatar-button::before,
+    .m3-touch-target,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    :is(
+    .back-button,
+    .m3-back-button,
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
+    media (pointer: coarse),
+    .m3-dialog-toggle-item,
+    .m3-dialog-btn-primary,
+    .picker-compact-box,
+    .lang-chip-btn,
+    .lang-menu-item,
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger)
+)
+) {
+    min-height: var(--md-sys-touch-target-min);
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .avatar-button,
+    .m3-filter-chip,
+    :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field)
+) {
+    height: 40px;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .count-badge,
+    .m3-count-badge
+) {
+    height: 24px;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .m3-status-dot,
+    .status-dot,
+    .table-container::-webkit-scrollbar,
+    :is(.m3-progress-track, .progress-bar-bg)
+) {
+    height: 8px;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    :is(.m3-summary-divider, .summary-divider),
+    :is(md-filled-card, md-outlined-card, md-elevated-card)::before
+) {
+    height: 1px;
+}
+
+/* Consolidated Master Rule: width */
+
+:is(
+    .lang-globe-icon,
+    .m3-filter-chip-icon
+) {
+    width: 18px;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .lang-globe-icon,
+    .m3-filter-chip-icon
+) {
+    height: 18px;
+}
+
+/* Consolidated Master Rule: min-height */
+
+:is(
+    .lang-pill-btn,
+    .m3-dialog-close-btn
+) {
+    min-height: var(--md-sys-touch-target-compact);
+}
+
+/* Consolidated Master Rule: width */
+
+:is(
+    .m3-dialog-toggle-item input[type="checkbox"],
+    .picker-day-dot,
+    :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"]
+) {
+    width: 20px;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .m3-dialog-toggle-item input[type="checkbox"],
+    .picker-day-dot,
+    :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"]
+) {
+    height: 20px;
+}
+
+/* Consolidated Master Rule: width */
+
+:is(
+    .table-container::-webkit-scrollbar,
+    md-dialog
+) {
+    width: auto;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .m3-skeleton-circle,
+    ::-webkit-color-swatch,
+    ::-webkit-color-swatch-wrapper,
+    input[type="color"]
+) {
+    height: var(--md-sys-touch-target-min);
+}
+
+/* Consolidated Master Rule: width */
+
+:is(
+    .m3-skeleton-circle,
+    ::-webkit-color-swatch,
+    ::-webkit-color-swatch-wrapper,
+    input[type="color"]
+) {
+    width: var(--md-sys-touch-target-min);
+}
+
+/* Consolidated Master Rule: aspect-ratio */
+
+:is(
+    .file-card,
+    .upload-card
+) {
+    aspect-ratio: 1;
+}
+
+/* Consolidated Master Rule: height */
+
+:is(
+    .m3-skeleton-text,
+    .sort-indicator
+) {
+    height: 1rem;
+}
+
+/* Consolidated Master Rule: width */
+
+:is(
+    .col-options-button,
+    .sort-indicator
+) {
+    width: 1rem;
 }
 

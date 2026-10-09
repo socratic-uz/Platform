@@ -4,41 +4,9 @@
    Material Design 3 Expressive Corner Shapes & Border Utilities
    ========================================================================== */
 
-.m3-shape-full {
-    border-radius: var(--md-sys-shape-corner-full) !important;
-}
-
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 
 /* Universal Full / Pill Shape Grouping */
-:is(
-    .badge,
-    .m3-badge,
-    .status-badge,
-    .m3-status-badge,
-    .order-status-badge,
-    .item-status-pill,
-    .badge-counter,
-    .m3-pill-badge,
-    .m3-count-badge,
-    .count-badge,
-    .kds-status-tag,
-    .back-button,
-    .m3-back-button,
-    .items-count-badge,
-    .m3-filter-chip,
-    .m3-filter-chip-count,
-    .m3-dialog-close-btn,
-    .m3-dialog-btn-primary,
-    :is(.m3-progress-track, .progress-bar-bg),
-    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
-    :is(.analytics-mode-btn, .m3-segmented-btn),
-    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
-    .m3-mode-toggle,
-    .mode-toggle
-) {
-    border-radius: var(--md-sys-shape-corner-full);
-}
 
 /* Universal Expressive Card Shape Grouping */
 :is(
@@ -262,10 +230,6 @@ md-dialog.faceid-profile-modal,
     --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
 }
 
-:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list {
-    border-radius: var(--md-sys-shape-expressive-button);
-}
-
 .m3-pill-badge {
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
 }
@@ -305,11 +269,6 @@ md-text-button {
     border: 1px solid transparent;
 }
 
-.m3-card-interactive::before,
-.card-interactive::before {
-    border-radius: inherit;
-}
-
 md-filled-card,
 md-outlined-card,
 md-elevated-card {
@@ -318,10 +277,6 @@ md-elevated-card {
 
 [data-theme="light"] :is(md-filled-card, md-outlined-card, md-elevated-card) {
     border: var(--md-sys-glass-border-light);
-}
-
-.m3-filter-chip:hover {
-    border-color: var(--md-sys-color-outline);
 }
 
 .m3-filter-chip.active,
@@ -337,18 +292,6 @@ md-dialog {
     --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
 }
 
-.m3-empty-state {
-    border: 1px dashed var(--md-sys-color-outline-variant);
-}
-
-.pos-empty-state {
-    border: 1px dashed var(--md-sys-color-outline-variant);
-}
-
-.kiosk-empty-state {
-    border: 1px dashed var(--md-sys-color-outline-variant);
-}
-
 md-outlined-text-field,
 md-filled-text-field,
 md-outlined-select,
@@ -358,60 +301,16 @@ md-filled-select {
     --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
 }
 
-input[type="color"] {
-    border: 0;
-}
-
 :is(.m3-banner-error, .error-banner) {
     border: 1px solid var(--md-sys-color-error);
-}
-
-.picker-trigger-card:hover {
-    border-color: var(--md-sys-color-outline);
-}
-
-.picker-popover-header {
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.new-badge {
-    border-radius: var(--md-sys-shape-corner-extra-small);
-}
-
-.upload-card {
-    border: 2px dashed var(--md-sys-color-outline);
 }
 
 .upload-card.dragging {
     border-style: solid;
 }
 
-.lang-inline-grid {
-    border-radius: var(--md-sys-shape-expressive-button);
-}
-
-.lang-pill-btn {
-    border-radius: var(--md-sys-shape-expressive-button);
-}
-
-.lang-pill-btn:hover {
-    border-color: var(--md-sys-color-outline);
-}
-
-.option-item-row {
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.option-item-row:last-child {
-    border-bottom: none;
-}
-
 .booking-summary-banner {
     border: 1px solid var(--md-sys-color-primary);
-}
-
-:is(.m3-progress-fill, .progress-bar-fill) {
-    border-radius: inherit;
 }
 
 :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
@@ -419,43 +318,9 @@ input[type="color"] {
     border-radius: var(--md-sys-shape-expressive-container);
 }
 
-:is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
-    border-color: var(--md-sys-color-outline);
-}
-
-.m3-skeleton-text {
-    border-radius: var(--md-sys-shape-corner-extra-small);
-}
-
-.m3-table th,
-.order-items-table th,
-.orders-table th {
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.m3-table td,
-.order-items-table td,
-.orders-table td {
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.m3-table tr:last-child td,
-.order-items-table tr:last-child td {
-    border-bottom: none;
-}
-
-.table-container {
-    border-radius: 24px;
-}
-
 .table-container thead > :first-child > *,
 table.quickgrid thead > :first-child > * {
     border-top: none;
-}
-
-.table-container tbody > :last-child > *,
-table.quickgrid tbody > :last-child > * {
-    border-bottom: none;
 }
 
 .table-container thead > * > :first-child,
@@ -472,12 +337,7 @@ table.quickgrid tbody > * > :last-child {
     border-right: none;
 }
 
-.table-container::-webkit-scrollbar-track {
-    border-radius: 24px;
-}
-
 .table-container::-webkit-scrollbar-thumb {
-    border-radius: 24px;
     border: 0.15rem solid transparent;
     border-color: var(--md-sys-color-surface);
 }
@@ -486,12 +346,146 @@ table.quickgrid tbody > * > :last-child {
     border-left: 1px solid var(--md-sys-color-outline);
 }
 
-.paginator nav button {
+.drop-container {
+    border-radius: 12px;
+}
+
+/* Consolidated Master Rule: border-radius */
+
+:is(
+    .m3-shape-full,
+    :is(
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .badge-counter,
+    .m3-pill-badge,
+    .m3-count-badge,
+    .count-badge,
+    .kds-status-tag,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    .m3-filter-chip,
+    .m3-filter-chip-count,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    :is(.m3-progress-track, .progress-bar-bg),
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    :is(.analytics-mode-btn, .m3-segmented-btn),
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
+    .m3-mode-toggle,
+    .mode-toggle
+)
+) {
+    border-radius: var(--md-sys-shape-corner-full);
+}
+
+/* Consolidated Master Rule: border-radius */
+
+:is(
+    .lang-inline-grid,
+    .lang-pill-btn,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list
+) {
+    border-radius: var(--md-sys-shape-expressive-button);
+}
+
+/* Consolidated Master Rule: border-radius */
+
+:is(
+    .card-interactive::before,
+    .m3-card-interactive::before,
+    :is(.m3-progress-fill, .progress-bar-fill)
+) {
+    border-radius: inherit;
+}
+
+/* Consolidated Master Rule: border-color */
+
+:is(
+    .lang-pill-btn:hover,
+    .m3-filter-chip:hover,
+    .picker-trigger-card:hover,
+    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover
+) {
+    border-color: var(--md-sys-color-outline);
+}
+
+/* Consolidated Master Rule: border */
+
+:is(
+    .kiosk-empty-state,
+    .m3-empty-state,
+    .pos-empty-state
+) {
+    border: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+/* Consolidated Master Rule: border */
+
+:is(
+    .paginator nav button,
+    input[type="color"]
+) {
     border: 0;
 }
 
-.drop-container {
-    border-radius: 12px;
+/* Consolidated Master Rule: border-bottom */
+
+:is(
+    .m3-table td,
+    .m3-table th,
+    .option-item-row,
+    .order-items-table td,
+    .order-items-table th,
+    .orders-table td,
+    .orders-table th,
+    .picker-popover-header
+) {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Consolidated Master Rule: border-radius */
+
+:is(
+    .m3-skeleton-text,
+    .new-badge
+) {
+    border-radius: var(--md-sys-shape-corner-extra-small);
+}
+
+/* Consolidated Master Rule: border */
+
+:is(
+    .drop-container,
+    .upload-card
+) {
     border: 2px dashed var(--md-sys-color-outline);
+}
+
+/* Consolidated Master Rule: border-bottom */
+
+:is(
+    .m3-table tr:last-child td,
+    .option-item-row:last-child,
+    .order-items-table tr:last-child td,
+    .table-container tbody > :last-child > *,
+    table.quickgrid tbody > :last-child > *
+) {
+    border-bottom: none;
+}
+
+/* Consolidated Master Rule: border-radius */
+
+:is(
+    .table-container,
+    .table-container::-webkit-scrollbar-thumb,
+    .table-container::-webkit-scrollbar-track
+) {
+    border-radius: 24px;
 }
 

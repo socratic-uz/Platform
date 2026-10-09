@@ -4,21 +4,9 @@
    Truncation, Line Clamping & Text Wrapping Utilities
    ========================================================================== */
 
-.m3-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 .m3-line-clamp-2,
 .m3-line-clamp-3 {
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.m3-line-clamp-2 {
-    -webkit-line-clamp: 2;
 }
 
 .m3-line-clamp-3 {
@@ -28,24 +16,6 @@
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
 /* Universal No-Wrap Elements */
-:is(
-    .badge,
-    .m3-badge,
-    .status-badge,
-    .m3-status-badge,
-    .order-status-badge,
-    .item-status-pill,
-    .items-count-badge,
-    .org-card-name,
-    .file-name,
-    .table-container th,
-    table.quickgrid th,
-    .table-container td,
-    table.quickgrid td,
-    .col-title-text
-) {
-    white-space: nowrap;
-}
 
 /* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
 
@@ -104,37 +74,83 @@
 }
 
 /* ─── Consolidated Component Rules (typography/text-wrapping.css) ────────────────────────── */
-.org-card-name {
+
+/* Consolidated Master Rule: overflow */
+
+:is(
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
+    .m3-truncate
+) {
+    overflow: hidden;
+}
+
+/* Consolidated Master Rule: text-overflow */
+
+:is(
+    .col-title-text,
+    .file-name,
+    .m3-truncate,
+    .org-card-name
+) {
     text-overflow: ellipsis;
 }
 
-.org-card-desc {
-    -webkit-line-clamp: 2;
+/* Consolidated Master Rule: white-space */
+
+:is(
+    .m3-truncate,
+    :is(
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .items-count-badge,
+    .org-card-name,
+    .file-name,
+    .table-container th,
+    table.quickgrid th,
+    .table-container td,
+    table.quickgrid td,
+    .col-title-text
+)
+) {
+    white-space: nowrap;
+}
+
+/* Consolidated Master Rule: -webkit-box-orient */
+
+:is(
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
+    .org-card-desc,
+    .picker-preview-text,
+    .wishlist-desc-text,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p
+) {
     -webkit-box-orient: vertical;
+}
+
+/* Consolidated Master Rule: -webkit-line-clamp */
+
+:is(
+    .m3-line-clamp-2,
+    .org-card-desc,
+    .picker-preview-text,
+    .wishlist-desc-text,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p
+) {
+    -webkit-line-clamp: 2;
+}
+
+/* Consolidated Master Rule: overflow-wrap */
+
+:is(
+    .org-card-desc,
+    .picker-preview-text
+) {
     overflow-wrap: break-word;
-}
-
-:is(md-filled-card, md-outlined-card, md-elevated-card) p {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.wishlist-desc-text {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.picker-preview-text {
-    overflow-wrap: break-word;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.file-name {
-    text-overflow: ellipsis;
-}
-
-.col-title-text {
-    text-overflow: ellipsis;
 }
 

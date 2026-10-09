@@ -1,14 +1,18 @@
+/*  stylelint-disable selector-class-pattern  */
+
 /* ==========================================================================
    W3C CSS Containment - Contain Rules Module
    Performance & Content Visibility Optimizations
    ========================================================================== */
 
 /* ─── Consolidated Component Rules (containment/contain.css) ────────────────────────── */
-.picker-trigger-card {
-    container-type: inline-size;
-}
 
-.smart-grid-container {
+/* Consolidated Master Rule: container-type */
+
+:is(
+    .picker-trigger-card,
+    .smart-grid-container
+) {
     container-type: inline-size;
 }
 

@@ -1,26 +1,27 @@
+/*  stylelint-disable selector-class-pattern  */
+
 /* ==========================================================================
    W3C CSS Layout - Table Rules Module
    Standard Table Reset & Semantic Properties
    ========================================================================== */
 
 table {
-    border-collapse: collapse;
     border-spacing: 0;
 }
 
 /* ─── Consolidated Component Rules (layout/table.css) ────────────────────────── */
-.m3-table,
-.order-items-table,
-.orders-table {
-    border-collapse: collapse;
-}
 
-.table-container *:not(a) {
-    border-collapse: collapse;
-}
+/* Consolidated Master Rule: border-collapse */
 
-.table-container > table,
-table.quickgrid {
+:is(
+    .m3-table,
+    .order-items-table,
+    .orders-table,
+    .table-container *:not(a),
+    .table-container > table,
+    table,
+    table.quickgrid
+) {
     border-collapse: collapse;
 }
 
