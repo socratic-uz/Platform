@@ -9,9 +9,7 @@
 .help-container,
 .example-container,
 .landing-subpage-container {
-    grid-auto-flow: row;
     max-width: 1200px;
-    margin: 0 auto;
     gap: 3.5rem;
     padding: 2.5rem 1.5rem 3rem 1.5rem;
     overflow-x: clip;
@@ -21,7 +19,6 @@
 .help-hero,
 .example-hero,
 .landing-subpage-hero {
-    gap: 1.5rem;
 }
 
 .about-title,
@@ -45,14 +42,12 @@
 }
 
 .m3-pill-badge {
-    gap: 0.5rem;
     padding: 0.4rem 1rem;
     font-size: 0.85rem;
 }
 
 .m3-pill-badge.tertiary {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 .m3-text-gradient {
@@ -62,7 +57,6 @@
 }
 
 .section-header {
-    gap: 0.75rem;
 }
 
 /* ─── 2. Video Card Showcase ─────────────────────────────────────────────── */
@@ -70,15 +64,12 @@
 }
 
 .video-card {
-    gap: 1.5rem;
     padding: 2.5rem;
 }
 
 .video-card-header {
-    grid-auto-flow: row;
     align-items: start;
     justify-items: start;
-    gap: 0.75rem;
 }
 
 .video-card-header h3 {
@@ -92,7 +83,6 @@
 .video-player-wrapper video {
     max-height: 540px;
     object-fit: cover;
-    border-radius: 20px;
     display: block;
 }
 
@@ -113,12 +103,10 @@
 .pillars-grid,
 .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
 }
 
 .pillar-card,
 .tech-card {
-    gap: 1.25rem;
     padding: 1.75rem;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -135,67 +123,55 @@
 }
 
 .pillar-features {
-    gap: 0.5rem;
     list-style: none;
 }
 
 .pillar-features li {
     grid-auto-columns: max-content auto;
-    gap: 0.5rem;
     font-size: 0.9rem;
 }
 
 .cta-card {
-    gap: 1.5rem;
     padding: 3.5rem 2rem;
     background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
 }
 
 .cta-actions {
-    gap: 1rem;
 }
 
 /* ─── 4. Categories, FAQ & Example Grids ─────────────────────────────────── */
 .help-categories,
 .example-categories {
-    gap: 0.75rem;
-    justify-content: start;
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
     scrollbar-width: thin;
 }
 
 .help-search-section {
     max-width: 680px;
-    margin: 0 auto;
 }
 
 .help-search-bar {
 }
 
 .faq-section {
-    gap: 1.5rem;
 }
 
 .faq-grid,
 .example-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-    gap: 1.5rem;
 }
 
 .faq-card,
 .example-card {
-    gap: 1rem;
     padding: 1.5rem;
 }
 
 .contact-card {
-    gap: 1.5rem;
     padding: 2.5rem;
 }
 
 .contact-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
 }
 
 /* ─── 5. Standalone QR Generator Engine ──────────────────────────────────── */
@@ -214,14 +190,11 @@
 .qrg-sidebar {
     grid-area: sidebar;
     grid-template-rows: auto auto minmax(0, 1fr) auto;
-    gap: 16px;
     padding: 24px 20px;
     border-right: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .qrg-sidebar-scrollable {
-    overflow-y: auto;
-    gap: 16px;
     margin: 8px 0;
     padding-right: 4px;
 }
@@ -248,7 +221,6 @@
     gap: 6px;
     font-size: 0.85rem;
     padding: 8px 10px;
-    border-radius: 12px;
     transition: background 0.15s, color 0.15s;
     width: fit-content;
 }
@@ -261,11 +233,9 @@
 
 .qrg-customizer {
     padding: 16px;
-    gap: 12px;
 }
 
 .qrg-section-title {
-    gap: 8px;
     font-size: 0.85rem;
     letter-spacing: 0.8px;
     padding-bottom: 8px;
@@ -284,7 +254,6 @@
 }
 
 .qrg-color-inputs {
-    gap: 16px;
 }
 
 .qrg-color-picker-wrapper {
@@ -308,13 +277,10 @@
 }
 
 .qrg-lists {
-    overflow-y: auto;
-    gap: 16px;
     padding-right: 4px;
 }
 
 .qrg-group {
-    gap: 8px;
 }
 
 .qrg-group-head {
@@ -333,7 +299,6 @@
 }
 
 .qrg-empty-list {
-    gap: 8px;
     padding: 24px;
     font-size: 0.85rem;
 }
@@ -341,15 +306,12 @@
 .qrg-preview {
     grid-area: preview;
     grid-template-rows: auto minmax(0, 1fr);
-    overflow-y: auto;
     padding: 28px 32px;
     gap: 24px;
     background: var(--md-sys-color-surface);
 }
 
 .qrg-preview-header {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 12px;
     padding-bottom: 16px;
 }
 
@@ -360,7 +322,6 @@
 .qrg-badge {
     font-size: 0.75rem;
     padding: 4px 10px;
-    border-radius: 20px;
 }
 
 .qrg-cards {
@@ -372,7 +333,6 @@
     box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
     align-content: center;
     padding: 32px;
-    gap: 16px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -402,7 +362,6 @@
 
 .qrg-empty {
     align-content: center;
-    gap: 12px;
     padding: 60px;
 }
 
@@ -425,8 +384,6 @@ main.docs-page {
 
 .docs-sidebar-header {
     padding: 8px 16px;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 12px;
     min-height: 56px;
 }
 
@@ -443,17 +400,10 @@ main.docs-page {
 
 .docs-refresh-btn {
     width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-    background: transparent;
-    border: none;
-    border-radius: 50%;
 }
 
 .docs-sidebar-menu {
-    overflow-y: auto;
     padding: 16px 12px;
-    gap: 16px;
 }
 
 .docs-group-container {
@@ -472,7 +422,6 @@ main.docs-page {
 }
 
 .docs-content {
-    overflow-y: auto;
     overflow-x: clip;
     background-color: var(--md-sys-color-background);
 }
@@ -486,12 +435,10 @@ main.docs-page {
     max-width: 480px;
     padding: 32px;
     background-color: var(--md-sys-color-surface-container-low);
-    gap: 8px;
 }
 
 .docs-article {
     max-width: 900px;
-    margin: 0 auto;
     padding: 40px 56px;
     color: var(--md-sys-color-on-background);
     font-size: 1rem;
@@ -501,7 +448,6 @@ main.docs-page {
 }
 
 .docs-header-bar {
-    gap: 0.75rem;
 }
 
 .docs-header-breadcrumb {
@@ -513,8 +459,6 @@ main.docs-page {
 }
 
 .docs-header-actions {
-    gap: 0.75rem;
-    justify-self: end;
 }
 
 .docs-mobile-menu-btn {

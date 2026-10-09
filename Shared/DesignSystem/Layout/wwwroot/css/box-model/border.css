@@ -299,3 +299,85 @@
 ) {
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* Universal Border None Master Rule */
+:is(
+    .analytics-mode-btn,
+    .banner-close-btn,
+    .chat-input-wrapper textarea,
+    .color-picker-row input[type="color"],
+    .docs-refresh-btn,
+    .input-box textarea,
+    .kds-action-btn,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .product-detail-card,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .unified-kiosk-filter-bar
+) {
+    border: none;
+}
+
+/* Universal Primary Border Color Master Rule */
+:is(
+    .analytics-period-chip.active,
+    .citation[href]:hover,
+    .landing-auth-btn:hover,
+    .landing-mobile-menu-toggle:hover,
+    .lang-toggle-btn:hover,
+    .plan-card.selected,
+    .select-input:focus,
+    .showcase-card:hover,
+    .text-input:focus,
+    .thumb-btn.active,
+    .thumb-btn:hover,
+    .tier-box.active-tier
+) {
+    border-color: var(--md-sys-color-primary);
+}
+
+/* Universal Corner 12px Master Rule */
+:is(
+    .auth-error-banner,
+    .otp-target-hint,
+    .product-preview-pill,
+    .qrg-back,
+    .seller-logo,
+    .seller-logo-placeholder,
+    .showcase-brand-icon,
+    .showcase-stat-pill,
+    .signin-error-banner,
+    .thumb-btn,
+    header.landing-header .header-brand-link
+) {
+    border-radius: 12px;
+}
+
+/* Universal Corner 20px Master Rule */
+:is(
+    .footer-system-status,
+    .kiosk-tier-btn,
+    .product-main-image-wrap,
+    .qrg-badge,
+    .screensaver-pro-badge,
+    .showcase-brand-badge,
+    .showcase-card,
+    .video-player-wrapper video
+) {
+    border-radius: 20px;
+}
+
+/* Universal Circle (50%) Master Rule */
+:is(
+    .docs-refresh-btn,
+    .empty-plans-icon-wrapper,
+    .faceid-scanner-frame,
+    .kiosk-wish-icon,
+    .pulse-indicator,
+    .score-circle,
+    .status-pulse-dot
+) {
+    border-radius: 50%;
+}

@@ -4,7 +4,6 @@
    ========================================================================== */
 
 header.app-header {
-    grid-template-columns: minmax(0, 1fr);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
     padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
     min-height: calc(64px + env(safe-area-inset-top, 0px));
@@ -24,11 +23,9 @@ header.app-header.header-sticky {
 }
 
 .header-start-zone {
-    gap: 0.75rem;
 }
 
 .m3-page-header-start {
-    gap: 0.5rem;
 }
 
 .m3-page-header-icon {
@@ -41,22 +38,16 @@ header.app-header.header-sticky {
 
 .pos-top-header-actions {
     gap: var(--space-2, 8px);
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
     padding-bottom: 2px;
 }
 
 .header-center-zone {
-    justify-content: center;
 }
 
 .header-end-zone {
-    gap: 0.5rem;
-    justify-self: end;
 }
 
 .header-brand-link {
-    gap: 0.5rem;
     font-size: 1.15rem;
     touch-action: manipulation;
 }

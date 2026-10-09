@@ -70,3 +70,54 @@
 ) {
     overflow-x: auto;
 }
+
+/* Universal Touch Scrolling Master Rule */
+:is(
+    .active-orders-scroll,
+    .drawer-body,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .message-list-container,
+    .order-items-table-wrapper,
+    .orders-table-wrapper,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-thumbnails,
+    .store-breadcrumbs,
+    .suggestions-wrapper
+) {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Universal Overflow Y Auto Master Rule */
+:is(
+    .docs-content,
+    .docs-sidebar-menu,
+    .drawer-body,
+    .message-list-container,
+    .pos-grid,
+    .pos-invoice-container,
+    .qrg-lists,
+    .qrg-preview,
+    .qrg-sidebar-scrollable,
+    .showcase-content,
+    .showcase-sidebar-nav
+) {
+    overflow-y: auto;
+}
+
+/* Universal Overscroll X Contain Master Rule */
+:is(
+    .active-orders-scroll,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-thumbnails,
+    .store-breadcrumbs,
+    .ux-widget-chips
+) {
+    overscroll-behavior-x: contain;
+}

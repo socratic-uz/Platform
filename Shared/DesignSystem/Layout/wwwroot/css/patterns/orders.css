@@ -7,18 +7,15 @@
 /* ─── 1. Orders List View - Card Grid ────────────────────────────────────── */
 .orders-list-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: 1rem;
 }
 
 .order-card {
     grid-template-rows: auto minmax(0, 1fr) auto;
-    gap: 1rem;
     padding: 1.25rem;
     min-height: 140px;
 }
 
 .order-card-header {
-    gap: 0.5rem;
 }
 
 .order-number {
@@ -28,13 +25,9 @@
 }
 
 .order-card-details {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.5rem;
 }
 
 .detail-item {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
     font-size: 0.9rem;
     color: var();
 }
@@ -73,14 +66,11 @@
 /* ─── 2. Orders Table View ───────────────────────────────────────────────── */
 .table-actions-bar {
     grid-template-columns: auto;
-    justify-content: end;
-    gap: 0.5rem;
     margin-bottom: 0.75rem;
 }
 
 .orders-table-wrapper,
 .order-items-table-wrapper {
-    -webkit-overflow-scrolling: touch;
     background: var();
     border: 1px solid var();
 }
@@ -118,7 +108,6 @@
 .payment-cell,
 .date-cell,
 .amount-cell {
-    justify-content: start;
     gap: 0.4rem;
 }
 
@@ -133,12 +122,9 @@
 
 .table-row-actions {
     gap: var(--md-sys-spacing-2, 0.5rem);
-    justify-content: end;
 }
 
 .orders-error-banner {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
     padding: 1rem 1.25rem;
     background: var();
     color: var();
@@ -153,7 +139,6 @@
     grid-auto-columns: max-content auto;
     gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-    background: transparent;
     font-size: 0.9375rem;
     transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
@@ -161,7 +146,6 @@
 
 .back-button:hover,
 .back-button:focus-visible {
-    background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     outline: none;
 }
@@ -187,7 +171,6 @@
 }
 
 .order-subtitle {
-    justify-content: start;
     gap: var(--md-sys-spacing-2, 0.5rem);
     font-size: 0.9375rem;
 }
@@ -225,7 +208,6 @@
 }
 
 .item-card {
-    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
 }
@@ -267,7 +249,6 @@
 }
 
 .item-total-price {
-    justify-self: end;
     font-size: 1.125rem;
 }
 

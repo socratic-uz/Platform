@@ -7,28 +7,20 @@
 /* ─── 1. Trust & Security Footer Primitive ──────────────────────────────── */
 .m3-trust-footer,
 .payment-trust-footer {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1.5rem;
     max-width: 1100px;
-    margin: 0 auto;
     padding: 0.5rem 0;
     font-size: 0.875rem;
 }
 
 .trust-badge {
-    grid-auto-columns: auto auto;
-    gap: 0.5rem;
     font-size: 0.85rem;
 }
 
 .trust-badge md-icon {
-    color: var(--md-sys-color-tertiary);
     font-size: 20px;
 }
 
 .payment-methods {
-    gap: 0.5rem;
-    justify-content: center;
 }
 
 .payment-support a {
@@ -51,15 +43,12 @@
 
 /* ─── 2. Universal App Footer Structure ──────────────────────────────────── */
 footer.app-footer {
-    grid-template-columns: minmax(0, 1fr);
     padding: 3.5rem 2rem 2rem 2rem;
 }
 
 .footer-container {
-    grid-auto-flow: row;
     gap: 3rem;
     max-width: 1280px;
-    margin: 0 auto;
 }
 
 .footer-custom-slot {
@@ -76,16 +65,11 @@ footer.app-footer {
 
 /* Brand Column */
 .footer-brand-col {
-    grid-auto-flow: row;
-    gap: 1rem;
     max-width: 320px;
 }
 
 .footer-brand-link {
-    grid-auto-columns: auto auto;
     gap: 0.65rem;
-    min-width: 48px;
-    width: max-content;
 }
 
 .footer-brand-badge {
@@ -110,19 +94,15 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    grid-auto-columns: auto auto;
     gap: 0.65rem;
     padding: 0.35rem 0.85rem;
-    border-radius: 20px;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    width: max-content;
     margin-top: 0.25rem;
 }
 
 .status-pulse-dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
     background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -145,7 +125,6 @@ footer.app-footer {
 
 /* Nav Columns */
 .footer-nav-col {
-    grid-auto-flow: row;
     gap: 0.85rem;
 }
 
@@ -155,7 +134,6 @@ footer.app-footer {
 }
 
 .footer-links-list {
-    grid-auto-flow: row;
     gap: 0.25rem;
     list-style: none;
 }
@@ -188,8 +166,6 @@ footer.app-footer {
 
 /* Sub-Footer Bottom Bar */
 .footer-bottom-bar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1.5rem;
     padding-top: 1.75rem;
 }
 
@@ -199,11 +175,9 @@ footer.app-footer {
 }
 
 .footer-lang-container {
-    justify-content: center;
 }
 
 .footer-trust-info {
-    justify-content: end;
 }
 
 /* ─── Global Footer Responsive Breakpoints ───────────────────────────────── */

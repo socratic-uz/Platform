@@ -282,3 +282,266 @@
 ) {
     align-content: start;
 }
+
+/* Universal Gap 0.5rem (8px) Master Rule */
+:is(
+    .ad-screensaver-footer,
+    .analytics-kpi-card,
+    .analytics-period-selector,
+    .analytics-status-pill,
+    .auth-error-banner,
+    .auth-header,
+    .card-mid-row,
+    .card-top-row,
+    .cart-items-list,
+    .citation,
+    .column-empty,
+    .column-title-group,
+    .detail-item,
+    .docs-welcome-card,
+    .drawer-header .headline,
+    .empty-cart-view,
+    .header-brand-link,
+    .header-end-zone,
+    .header-title-box,
+    .header-title-group,
+    .item-actions,
+    .kanban-card,
+    .kds-empty-col,
+    .kiosk-brand-info,
+    .kiosk-category-chipset,
+    .kiosk-filter-stack,
+    .kiosk-hero-content,
+    .kiosk-main .card-footer,
+    .kpi-header,
+    .m3-breadcrumbs,
+    .m3-page-header-start,
+    .m3-pill-badge,
+    .order-card-details,
+    .order-card-header,
+    .payment-methods,
+    .pillar-features,
+    .pillar-features li,
+    .plan-features li,
+    .pos-chip-set,
+    .pos-filters md-chip-set,
+    .pos-sidebar-header,
+    .price-breakdown,
+    .product-tags,
+    .profile-title,
+    .promo-input-group,
+    .qrg-empty-list,
+    .qrg-group,
+    .qrg-section-title,
+    .score-box,
+    .share-toast,
+    .signin-error-banner,
+    .signin-header,
+    .store-breadcrumbs,
+    .suggestions,
+    .table-actions-bar,
+    .tier-features li,
+    .trust-badge,
+    .unified-kiosk-filter-bar md-chip-set,
+    .ux-widget-chips
+) {
+    gap: 0.5rem;
+}
+
+/* Universal Gap 0.75rem (12px) Master Rule */
+:is(
+    .active-orders-tabs,
+    .ad-network-unit-card,
+    .ad-slide-touch-prompt,
+    .analytics-toolbar-actions,
+    .analytics-toolbar-grid,
+    .auth-divider,
+    .brand-screensaver-cta,
+    .cart-item-row,
+    .cart-summary,
+    .column-content,
+    .column-header,
+    .designer-canvas-area,
+    .dialog-headline-wrap,
+    .docs-header-actions,
+    .docs-header-bar,
+    .docs-sidebar-header,
+    .example-categories,
+    .header-actions,
+    .header-start-zone,
+    .help-categories,
+    .kds-cards-container,
+    .kiosk-hero,
+    .landing-header-actions,
+    .notification-banner,
+    .orders-error-banner,
+    .pos-actions,
+    .pos-card-header-row,
+    .pos-catalog-header,
+    .pos-loading,
+    .product-actions-bar,
+    .product-preview-pill,
+    .product-thumbnails,
+    .qrg-customizer,
+    .qrg-empty,
+    .qrg-preview-header,
+    .seat-selection-card,
+    .section-header,
+    .showcase-brand,
+    .showcase-demo-col,
+    .showcase-demo-row,
+    .showcase-section-title-wrap,
+    .showcase-topbar-actions,
+    .spec-item,
+    .video-card-header
+) {
+    gap: 0.75rem;
+}
+
+/* Universal Gap 1rem (16px) Master Rule */
+:is(
+    .analytics-panel-card,
+    .cart-bar,
+    .cta-actions,
+    .docs-sidebar-menu,
+    .drawer-body,
+    .empty-plans-card,
+    .example-card,
+    .faq-card,
+    .footer-brand-col,
+    .header-title-group,
+    .kiosk-filter-inner,
+    .link-stack a,
+    .link-stack article,
+    .mobile-nav-item,
+    .order-card,
+    .orders-list-grid,
+    .payment-dashboard .glass-card,
+    .payment-dashboard .info-grid,
+    .plan-header,
+    .pos-catalog,
+    .product-gallery,
+    .qrg-card,
+    .qrg-color-inputs,
+    .qrg-lists,
+    .qrg-sidebar,
+    .qrg-sidebar-scrollable,
+    .seller-header,
+    .showcase-demo-canvas,
+    .showcase-stats,
+    .showcase-topbar-left,
+    .store-seller-card
+) {
+    gap: 1rem;
+}
+
+/* Universal Gap 1.5rem (24px) Master Rule */
+:is(
+    .about-hero,
+    .auth-card,
+    .contact-card,
+    .contact-grid,
+    .cta-card,
+    .designer-page-root,
+    .designer-workspace,
+    .example-grid,
+    .example-hero,
+    .faq-grid,
+    .faq-section,
+    .footer-bottom-bar,
+    .help-hero,
+    .landing-subpage-hero,
+    .m3-trust-footer,
+    .payment-trust-footer,
+    .pillars-grid,
+    .product-info-panel,
+    .product-specs-grid,
+    .profile-container,
+    .qr-designer-page-root,
+    .qr-workspace,
+    .seat-designer-page-root,
+    .signin-card,
+    .tech-grid,
+    .video-card
+) {
+    gap: 1.5rem;
+}
+
+/* Universal Gap 1.25rem (20px) Master Rule */
+:is(
+    .ad-network-screensaver-body,
+    .brand-screensaver-body,
+    .designer-header,
+    .faceid-viewfinder-card,
+    .form-step,
+    .message-list,
+    .pillar-card,
+    .plans-list,
+    .plans-section,
+    .preview-card,
+    .promotion-modal-body,
+    .qr-controls-panel,
+    .qr-designer-header,
+    .tech-card
+) {
+    gap: 1.25rem;
+}
+
+/* Universal Justify Content Center Master Rule */
+:is(
+    .btn-primary-link,
+    .footer-lang-container,
+    .header-center-zone,
+    .kds-action-btn,
+    .landing-header-nav,
+    .mode-indicator,
+    .payment-methods
+) {
+    justify-content: center;
+}
+
+/* Universal Justify Content Start Master Rule */
+:is(
+    .amount-cell,
+    .auth-error-banner,
+    .column-title-group,
+    .date-cell,
+    .example-categories,
+    .header-title-box,
+    .header-title-group,
+    .help-categories,
+    .order-subtitle,
+    .payment-cell,
+    .profile-title,
+    .signin-error-banner,
+    .suggestions
+) {
+    justify-content: start;
+}
+
+/* Universal Justify Content End Master Rule */
+:is(
+    .ad-network-footer,
+    .advance-prompt,
+    .analytics-toolbar-actions,
+    .footer-trust-info,
+    .landing-top-bar-wrapper,
+    .table-actions-bar,
+    .table-row-actions
+) {
+    justify-content: end;
+}
+
+/* Universal Justify Self End Master Rule */
+:is(
+    .docs-header-actions,
+    .header-end-zone,
+    .item-total-price,
+    .kds-status-tag,
+    .kds-time-ago,
+    .landing-header-actions,
+    .pos-search-wrapper,
+    .user-message
+) {
+    justify-self: end;
+}

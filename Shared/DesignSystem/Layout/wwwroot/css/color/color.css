@@ -331,3 +331,34 @@
 ) {
     color: var(--md-sys-color-on-primary);
 }
+
+/* Material Design 3 Tertiary Text Color Master Rule */
+:is(
+    .ad-upgrade-link,
+    .card-icon,
+    .column-icon.icon-making,
+    .discount-row,
+    .feature-icon.info,
+    .header-icon.icon-making,
+    .in-stock-text,
+    .info-icon,
+    .promo-success-text,
+    .spec-icon.in-stock,
+    .trust-badge md-icon
+) {
+    color: var(--md-sys-color-tertiary);
+}
+
+/* Material Design 3 On-Tertiary-Container Text Color Master Rule */
+:is(
+    .badge-making,
+    .card-making .card-status-chip,
+    .card-shipping .card-status-chip,
+    .current-plan-indicator.pro,
+    .m3-pill-badge.tertiary,
+    .mode-preview,
+    .share-toast,
+    .ux-widget-auction
+) {
+    color: var(--md-sys-color-on-tertiary-container);
+}

@@ -25,12 +25,10 @@
 /* Left Catalog Panel */
 .pos-catalog {
     grid-template-rows: auto auto minmax(0, 1fr);
-    gap: 16px;
 }
 
 .pos-catalog-header {
     padding-bottom: 12px;
-    gap: 12px;
 }
 
 .pos-header-title-group {
@@ -48,7 +46,6 @@
 
 .pos-search-wrapper {
     width: clamp(200px, 25vw, 320px);
-    justify-self: end;
 }
 
 .pos-search-input {
@@ -57,24 +54,18 @@
 
 .pos-loading {
     place-content: center;
-    gap: 12px;
 }
 
 .pos-filters {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
     touch-action: pan-x;
     padding-bottom: 4px;
 }
 
 .pos-chip-set,
 .pos-filters md-chip-set {
-    gap: 8px !important;
-    width: max-content !important;
 }
 
 .pos-grid {
-    overflow-y: auto;
     overscroll-behavior-y: contain;
     padding-right: 4px;
     padding-bottom: 24px;
@@ -90,7 +81,6 @@
 }
 
 .pos-badge-qty {
-    position: absolute;
     top: 6px;
     right: 6px;
     z-index: var(--m3-z-content, 1);
@@ -98,7 +88,6 @@
 
 .pos-card-header-row {
     grid-template-columns: 52px minmax(0, 1fr);
-    gap: 12px;
 }
 
 .pos-card-img,
@@ -107,7 +96,6 @@
     height: 52px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .pos-card-title-group {
@@ -142,7 +130,6 @@
 
 .pos-card-footer-row md-icon-button,
 .pos-sidebar-header-row md-icon-button {
-    min-width: 48px;
 }
 
 /* Right Sidebar Panel */
@@ -154,7 +141,6 @@
 }
 
 .pos-sidebar-header {
-    gap: 8px;
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
     padding-bottom: 12px;
     margin-bottom: 12px;
@@ -169,12 +155,9 @@
 }
 
 .pos-orders-scroll {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
 }
 
 .pos-invoice-container {
-    overflow-y: auto;
     overscroll-behavior-y: contain;
     margin-bottom: 16px;
     min-height: 200px;
@@ -182,7 +165,6 @@
 
 .pos-actions {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-    gap: 12px;
     padding-top: 16px;
 }
 
@@ -202,14 +184,12 @@
 }
 
 .pos-quick-bill-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .pos-quick-bill-btn:active {
 }
 
 .pos-exact-bill-btn {
-    background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     border-color: transparent;
 }
@@ -232,23 +212,18 @@
 
 .store-product-container {
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 .product-detail-card {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
-    background: transparent;
-    border: none;
 }
 
 .product-gallery {
-    gap: 1rem;
 }
 
 .product-main-image-wrap {
     aspect-ratio: 4 / 3;
-    border-radius: 20px;
 }
 
 .product-main-img {
@@ -262,7 +237,6 @@
 }
 
 .badge-age-restriction {
-    position: absolute;
     top: 1rem;
     right: 1rem;
     background: rgb(from var(--md-sys-color-error) r g b / 0.9);
@@ -273,17 +247,12 @@
 }
 
 .product-thumbnails {
-    gap: 0.75rem;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
     padding-bottom: 0.5rem;
 }
 
 .thumb-btn {
     width: 72px;
     height: 72px;
-    min-width: 48px;
-    border-radius: 12px;
     border: 2px solid transparent;
     background: none;
     opacity: 0.6;
@@ -292,7 +261,6 @@
 
 .thumb-btn.active, .thumb-btn:hover {
     opacity: 1;
-    border-color: var(--md-sys-color-primary);
 }
 
 .thumb-btn:focus-visible {
@@ -305,18 +273,15 @@
 }
 
 .product-info-panel {
-    gap: 1.5rem;
 }
 
 .product-tags {
-    gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 .product-tag-chip {
     font-size: 0.75rem;
     padding: 0.2rem 0.75rem;
-    background: var(--md-sys-color-surface-container-highest);
     letter-spacing: 0.02em;
 }
 
@@ -354,13 +319,11 @@
 
 .product-specs-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
-    gap: 1.5rem;
     padding: 1rem 0;
 }
 
 .spec-item {
     grid-auto-columns: max-content minmax(0, 1fr);
-    gap: 0.75rem;
 }
 
 .spec-icon {
@@ -368,7 +331,6 @@
 }
 
 .spec-icon.in-stock {
-    color: var(--md-sys-color-tertiary);
 }
 
 .spec-details {
@@ -384,13 +346,11 @@
 }
 
 .in-stock-text {
-    color: var(--md-sys-color-tertiary);
 }
 
 .product-actions-bar {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
     align-items: stretch;
-    gap: 0.75rem;
     margin-top: 0.5rem;
 }
 
@@ -404,10 +364,8 @@
 }
 
 .share-toast {
-    gap: 0.5rem;
     background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
     border: 1px solid var(--md-sys-color-tertiary);
-    color: var(--md-sys-color-on-tertiary-container);
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
 }
@@ -416,26 +374,19 @@
 .store-seller-card {
     margin-top: auto;
     padding: 1.25rem;
-    gap: 1rem;
 }
 
 .seller-header {
     grid-auto-columns: max-content minmax(0, 1fr);
-    gap: 1rem;
 }
 
 .seller-logo {
     width: 48px;
-    height: 48px;
-    border-radius: 12px;
     object-fit: cover;
 }
 
 .seller-logo-placeholder {
     width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .seller-info {
@@ -474,7 +425,6 @@
 .store-not-found {
     padding: 5rem 1rem;
     max-width: 500px;
-    margin: 0 auto;
 }
 
 .not-found-icon {
@@ -491,7 +441,6 @@
 }
 
 .btn-primary-link {
-    justify-content: center;
 }
 
 /* ─── 3. Media Queries for POS & Store Products ──────────────────────────── */

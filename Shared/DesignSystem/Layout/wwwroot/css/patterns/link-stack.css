@@ -2,7 +2,6 @@
 .link-stack,
 section.link-stack {
     align-self: start;
-    grid-auto-flow: row;
     text-align: start;
     background: var(--md-sys-color-surface-container, var(--md-sys-color-surface));
     overflow: auto;
@@ -30,13 +29,10 @@ section.link-stack {
 
 .link-stack a:hover,
 .link-stack article:hover {
-    background: var(--md-sys-color-secondary-container);
 }
 
 .link-stack a,
 .link-stack article {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1rem;
     border-radius: 0;
     padding: 1.5rem;
     justify-self: stretch;
@@ -46,7 +42,6 @@ section.link-stack {
 .link-stack a::before,
 .link-stack article::before {
     content: "";
-    position: absolute;
     background-color: var(--md-sys-color-secondary-container);
     opacity: 0;
     top: 50%;
@@ -66,7 +61,6 @@ section.link-stack {
 
 .link-stack dl {
     grid-column: 1 / -1;
-    grid-template-columns: auto minmax(0, 1fr);
     gap: 0 2rem;
 }
 

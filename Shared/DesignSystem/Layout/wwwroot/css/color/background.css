@@ -109,3 +109,54 @@
 ) {
     background: var(--md-sys-color-primary-container);
 }
+
+/* Material Design 3 Surface Container Highest Background Master Rule */
+:is(
+    .analytics-config-btn:hover,
+    .analytics-mode-btn:hover,
+    .analytics-period-chip:hover,
+    .current-plan-indicator,
+    .lang-menu-item:hover,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-quick-bill-btn:hover,
+    .product-img-placeholder,
+    .product-media,
+    .product-tag-chip,
+    .seller-logo-placeholder,
+    .showcase-card-btn:hover
+) {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+/* Universal Transparent Background Master Rule */
+:is(
+    .analytics-mode-btn,
+    .back-button,
+    .chat-input-wrapper textarea,
+    .docs-refresh-btn,
+    .input-box textarea,
+    .product-detail-card,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .unified-kiosk-filter-bar
+) {
+    background: transparent;
+}
+
+/* Material Design 3 Secondary Container Background Master Rule */
+:is(
+    .analytics-mode-btn.active,
+    .back-button:focus-visible,
+    .back-button:hover,
+    .card-collecting .card-status-chip,
+    .drawer-header .badge,
+    .link-stack a:hover,
+    .link-stack article:hover,
+    .otp-target-hint,
+    .pos-exact-bill-btn,
+    .ux-widget-group
+) {
+    background: var(--md-sys-color-secondary-container);
+}

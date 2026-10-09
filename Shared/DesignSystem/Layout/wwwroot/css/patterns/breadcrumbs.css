@@ -1,11 +1,8 @@
 /* ─── Breadcrumbs (Universal Navigation) ─────────────────────────────────── */
 .m3-breadcrumbs,
 .store-breadcrumbs {
-    gap: 0.5rem;
     font-size: 0.875rem;
     margin-bottom: 2rem;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
 }
 
 .crumb-link {

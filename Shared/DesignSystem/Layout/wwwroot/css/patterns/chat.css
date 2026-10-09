@@ -71,15 +71,12 @@
 /* ─── 3. Message Stream & List ───────────────────────────────────────────── */
 .message-list-container {
     min-height: 0;
-    overflow-y: auto;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
     padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
 }
 
 .message-list {
-    gap: 1.25rem;
     min-height: 100%;
 }
 
@@ -99,7 +96,6 @@ chat-messages > div:last-of-type {
 
 /* ─── 4. Message Items (User & Assistant) ────────────────────────────────── */
 .user-message {
-    justify-self: end;
     min-width: 25%;
     max-width: calc(100% - 5rem);
     padding: 0.5rem 1.25rem;
@@ -224,14 +220,12 @@ assistant-message pre > code,
     margin-top: 1rem;
     margin-right: 1rem;
     border-bottom: 2px solid var(--md-sys-color-tertiary);
-    gap: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
 }
 
 .citation[href]:hover {
-    border-color: var(--md-sys-color-primary);
 }
 
 .citation svg {
@@ -252,7 +246,6 @@ assistant-message pre > code,
 /* ─── 6. Prompt Suggestions ─────────────────────────────────────────────── */
 .suggestions-wrapper {
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 0 1.5rem;
     margin-bottom: 0.5rem;
@@ -263,10 +256,7 @@ assistant-message pre > code,
 }
 
 .suggestions {
-    gap: 0.5rem;
-    justify-content: start;
     padding: 0.25rem 0;
-    width: max-content;
 }
 
 @media (min-width: 600px) {
@@ -300,9 +290,7 @@ assistant-message pre > code,
 .chat-input-wrapper textarea,
 .input-box textarea {
     resize: none;
-    border: none;
     outline: none;
-    background: transparent;
     font-family: inherit;
     font-size: 0.9375rem;
     line-height: 1.5;

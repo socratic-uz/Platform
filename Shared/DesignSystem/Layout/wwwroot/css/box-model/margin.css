@@ -80,3 +80,24 @@
 ) {
     margin: 0;
 }
+
+/* Universal Center Margin (0 auto) Master Rule */
+:is(
+    .about-container,
+    .docs-article,
+    .example-container,
+    .footer-container,
+    .help-container,
+    .help-search-section,
+    .kiosk-main,
+    .kiosk-search-container,
+    .landing-subpage-container,
+    .m3-trust-footer,
+    .payment-dashboard,
+    .payment-trust-footer,
+    .store-not-found,
+    .store-product-container,
+    header.landing-header .header-grid-layout
+) {
+    margin: 0 auto;
+}

@@ -25,7 +25,6 @@
 
 .tier-box.active-tier,
 .plan-card.selected {
-    border-color: var(--md-sys-color-primary);
 }
 
 .tier-box.pro-tier {
@@ -34,7 +33,6 @@
 
 .pro-tag,
 .popular-badge {
-    position: absolute;
     top: -10px;
     right: 18px;
     background: var(--md-sys-color-tertiary);
@@ -73,23 +71,19 @@
 
 .tier-features li,
 .plan-features li {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
 }
 
 .feature-icon.ok,
 .feat-icon { }
-.feature-icon.info { color: var(--md-sys-color-tertiary); }
+.feature-icon.info { }
 .feature-icon.star { color: var(--md-sys-color-secondary); }
 
 .current-plan-indicator {
     display: block;
     padding: 0.4rem;
-    background: var(--md-sys-color-surface-container-highest);
     font-size: 0.85rem;
 }
 
 .current-plan-indicator.pro {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }

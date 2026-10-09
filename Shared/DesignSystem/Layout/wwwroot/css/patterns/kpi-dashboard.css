@@ -10,7 +10,6 @@
 
 .analytics-kpi-card {
     grid-template-rows: auto auto auto;
-    gap: 0.5rem;
     padding: var(--md-sys-spacing-4, 1.25rem);
     background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
@@ -23,7 +22,6 @@
 }
 
 .kpi-header {
-    gap: 0.5rem;
 }
 
 .kpi-title {
@@ -65,7 +63,6 @@
 
 .analytics-panel-card {
     grid-template-rows: auto minmax(0, 1fr);
-    gap: 1rem;
     padding: var(--md-sys-spacing-5, 1.25rem);
     background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
@@ -106,8 +103,6 @@
 
 /* ─── 4. Analytics Toolbar & Control Primitives ─────────────────────────── */
 .analytics-toolbar-grid {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
 }
 
 @media (max-width: 960px) {
@@ -124,18 +119,14 @@
 
 .analytics-mode-btn {
     gap: 0.35rem;
-    background: transparent;
-    border: none;
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
 }
 
 .analytics-mode-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .analytics-mode-btn.active {
-    background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
@@ -147,12 +138,10 @@
 }
 
 .analytics-config-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
     border-color: var(--md-sys-color-outline);
 }
 
 .analytics-period-selector {
-    gap: 0.5rem;
     padding-bottom: 2px;
 }
 
@@ -164,17 +153,13 @@
 }
 
 .analytics-period-chip:hover {
-    background: var(--md-sys-color-surface-container-highest);
     border-color: var(--md-sys-color-outline);
 }
 
 .analytics-period-chip.active {
-    border-color: var(--md-sys-color-primary);
 }
 
 .analytics-toolbar-actions {
-    gap: 0.75rem;
-    justify-content: end;
 }
 
 @media (max-width: 599.98px) {
@@ -190,7 +175,6 @@
 }
 
 .analytics-status-pill {
-    gap: 0.5rem;
     padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
 }
@@ -198,7 +182,6 @@
 .pulse-indicator {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
     background: var();
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;

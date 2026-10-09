@@ -13,9 +13,7 @@
 /* ─── Main Container ────────────────────────────────────────── */
 .kiosk-main {
     max-width: 1440px;
-    margin: 0 auto;
     padding: 24px 20px 140px 20px;
-    grid-auto-flow: row;
     gap: 20px;
     font-family: inherit;
 }
@@ -41,8 +39,6 @@
 }
 
 .kiosk-brand-info {
-    grid-auto-columns: auto auto;
-    gap: 8px;
 }
 
 .kiosk-brand-name {
@@ -54,7 +50,6 @@
     padding: 2px 8px;
     gap: 4px;
     white-space: nowrap;
-    width: max-content;
 }
 
 .kiosk-brand-icon {
@@ -63,13 +58,10 @@
 
 .kiosk-search-container {
     max-width: 480px;
-    margin: 0 auto;
 }
 
 .kiosk-tier-btn {
-    border-radius: 20px !important;
     white-space: nowrap;
-    height: 48px !important;
     touch-action: manipulation;
 }
 
@@ -78,13 +70,11 @@
     background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
     border-radius: clamp(16px, 3vw, 28px);
     padding: clamp(20px, 3vw, 36px);
-    gap: 12px;
     box-shadow: var(--md-sys-elevation-level-1);
 }
 
 .kiosk-hero::before {
     content: "";
-    position: absolute;
     inset: -30% auto auto -30%;
     width: 85%;
     height: 150%;
@@ -93,7 +83,6 @@
 }
 
 .kiosk-hero-content {
-    gap: 8px;
     z-index: var(--m3-z-content, 1);
 }
 
@@ -112,29 +101,21 @@
 /* ─── Unified Category Filter Bar ──────────────────────────── */
 .unified-kiosk-filter-bar {
     margin: 4px 0 12px 0;
-    background: transparent;
     border-radius: 0;
-    border: none;
     min-height: auto;
 }
 
 .kiosk-filter-inner {
-    grid-template-columns: minmax(0, 1fr);
     align-items: start;
-    gap: 16px;
 }
 
 .kiosk-filter-inner:has(.kiosk-reset-btn) {
 }
 
 .kiosk-filter-stack {
-    gap: 8px;
 }
 
 .kiosk-filter-row {
-    grid-template-columns: minmax(0, 1fr);
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
     touch-action: pan-x;
     padding-bottom: 2px;
 }
@@ -147,8 +128,6 @@
 
 .kiosk-category-chipset,
 .unified-kiosk-filter-bar md-chip-set {
-    gap: 8px !important;
-    width: max-content !important;
 }
 
 .kiosk-reset-btn {
@@ -159,8 +138,6 @@
 
 /* ─── Active Orders Tabs ──────────────────────────────────── */
 .active-orders-tabs {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 12px;
     margin-bottom: 8px;
     padding: 8px 16px;
     min-height: 52px;
@@ -172,8 +149,6 @@
 }
 
 .active-orders-scroll {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
     touch-action: pan-y;
 }
 
@@ -191,7 +166,6 @@ md-filled-card.product-card,
 
 .product-media {
     aspect-ratio: 16 / 10;
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .product-img {
@@ -202,7 +176,6 @@ md-filled-card.product-card,
 }
 
 .product-img-placeholder {
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .product-placeholder-icon {
@@ -215,7 +188,6 @@ md-filled-card.product-card,
 }
 
 .ux-mode-badge-overlay {
-    position: absolute;
     top: 8px;
     left: 8px;
     background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 85%, transparent);
@@ -227,7 +199,6 @@ md-filled-card.product-card,
 }
 
 .kiosk-wish-btn-wrapper {
-    position: absolute;
     top: 8px;
     right: 8px;
     z-index: var(--m3-z-sticky, 10);
@@ -235,7 +206,6 @@ md-filled-card.product-card,
 
 .kiosk-wish-icon {
     background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent) !important;
-    border-radius: 50% !important;
     width: 44px;
     height: 44px;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -295,11 +265,9 @@ md-filled-card.product-card,
 
 .ux-widget-auction {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 .ux-widget-group {
-    background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
@@ -328,14 +296,11 @@ md-filled-card.product-card,
 }
 
 .ux-widget-chips {
-    gap: 8px;
-    overscroll-behavior-x: contain;
 }
 
 /* Card Footer */
 .kiosk-main .card-footer {
     padding: 10px 16px 12px 16px;
-    gap: 8px;
     min-height: 52px;
     align-self: end !important;
     margin-top: auto !important;
@@ -352,11 +317,9 @@ md-filled-card.product-card,
     z-index: var(--m3-z-dialog, 100);
     padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px)) 24px;
     box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
-    gap: 16px;
 }
 
 .cart-summary {
-    gap: 12px;
 }
 
 .cart-summary.interactive {
@@ -387,7 +350,6 @@ md-filled-card.product-card,
 
 /* Dialog & Alert Helpers */
 .dialog-headline-wrap {
-    gap: 12px;
     font-size: 1.25rem;
 }
 

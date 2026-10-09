@@ -11,7 +11,6 @@
 .m3-kanban-column,
 .kanban-column,
 .kds-column {
-    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem);
@@ -19,14 +18,11 @@
 }
 
 .column-header {
-    gap: 0.75rem;
     padding-bottom: 0.75rem;
 }
 
 .column-title-group,
 .header-title-group {
-    justify-content: start;
-    gap: 0.5rem;
 }
 
 .column-icon,
@@ -36,7 +32,6 @@
 
 .column-icon.icon-making,
 .header-icon.icon-making {
-    color: var(--md-sys-color-tertiary);
 }
 
 .column-icon.icon-ready,
@@ -49,8 +44,6 @@
 
 .column-content,
 .kds-cards-container {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
 }
 
 @media (max-width: 839.98px) {
@@ -71,13 +64,11 @@
 /* ─── Kanban & KDS Card Primitives ───────────────────────────────────── */
 .kanban-card {
     grid-template-rows: auto auto auto;
-    gap: 0.5rem;
     padding: 1rem 1.15rem;
     min-height: 80px;
 }
 
 .card-top-row {
-    gap: 0.5rem;
 }
 
 .card-order-id {
@@ -86,7 +77,6 @@
 }
 
 .card-mid-row {
-    gap: 0.5rem;
     font-size: 0.9rem;
 }
 
@@ -98,14 +88,12 @@
 }
 
 .card-bottom-row {
-    grid-template-columns: minmax(0, 1fr);
     margin-top: 0.25rem;
     padding-top: 0.4rem;
     border-top: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 .advance-prompt {
-    justify-content: end;
     gap: 0.4rem;
     font-size: 0.85rem;
 }
@@ -121,7 +109,6 @@
 
 /* KDS Specific Cards & Action Buttons */
 .kds-card {
-    grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-3, 0.75rem);
     padding: var(--md-sys-spacing-4, 1rem);
 }
@@ -154,7 +141,6 @@
 
 .badge-making {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 .badge-ready {
@@ -162,8 +148,6 @@
 
 .column-empty,
 .kds-empty-col {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.5rem;
     padding: 2.5rem 1rem;
     font-size: 0.9rem;
     opacity: 0.8;
@@ -177,7 +161,6 @@
 
 /* ─── KDS Card Internal Structure ───────────────────────────────────── */
 .kds-card-top {
-    grid-template-columns: auto minmax(0, 1fr);
     justify-content: space-between;
     gap: var(--md-sys-spacing-2, 0.5rem);
 }
@@ -188,12 +171,10 @@
 }
 
 .kds-time-ago {
-    justify-self: end;
     font-size: 0.8125rem;
 }
 
 .kds-status-tag {
-    justify-self: end;
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
 }
@@ -217,11 +198,9 @@
 
 .kds-action-btn {
     grid-template-columns: auto auto;
-    justify-content: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
     font-size: 0.9375rem;
-    border: none;
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
@@ -249,17 +228,14 @@
 
 .card-making .card-status-chip {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 .card-collecting .card-status-chip {
-    background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
 .card-shipping .card-status-chip {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 .card-completed .card-status-chip {
@@ -269,7 +245,6 @@
 }
 
 .error-banner {
-    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3, 0.75rem);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);

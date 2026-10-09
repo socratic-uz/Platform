@@ -290,3 +290,46 @@
 ) {
     max-width: 100%;
 }
+
+/* Universal Min-Width 48px Touch Target Master Rule */
+:is(
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .docs-refresh-btn,
+    .footer-brand-link,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .pos-card-footer-row md-icon-button,
+    .pos-sidebar-header-row md-icon-button,
+    .thumb-btn
+) {
+    min-width: 48px;
+}
+
+/* Universal Width Max-Content Master Rule */
+:is(
+    .footer-brand-link,
+    .footer-system-status,
+    .kiosk-brand-tagline,
+    .kiosk-category-chipset,
+    .pos-chip-set,
+    .pos-filters md-chip-set,
+    .suggestions,
+    .unified-kiosk-filter-bar md-chip-set
+) {
+    width: max-content;
+}
+
+/* Universal Height 48px Touch Target Master Rule */
+:is(
+    .color-picker-row input[type="color"],
+    .docs-refresh-btn,
+    .header-icon-wrap,
+    .kiosk-tier-btn,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .seller-logo,
+    .seller-logo-placeholder
+) {
+    height: 48px;
+}

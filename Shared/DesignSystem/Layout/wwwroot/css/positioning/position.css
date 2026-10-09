@@ -34,3 +34,25 @@
 ) {
     position: relative;
 }
+
+/* Universal Position Absolute Master Rule */
+:is(
+    .attract-loop-background,
+    .attract-loop-overlay,
+    .badge-age-restriction,
+    .faceid-scanner-frame.scanning::after,
+    .kiosk-hero::before,
+    .kiosk-wish-btn-wrapper,
+    .landing-floating-controls,
+    .landing-top-bar-wrapper,
+    .link-stack a::before,
+    .link-stack article::before,
+    .m3-nav-fab,
+    .popular-badge,
+    .pos-badge-qty,
+    .pro-tag,
+    .pulse-ring,
+    .ux-mode-badge-overlay
+) {
+    position: absolute;
+}

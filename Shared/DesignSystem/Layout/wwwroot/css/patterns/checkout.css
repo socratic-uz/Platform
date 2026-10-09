@@ -5,7 +5,6 @@
 
 .payment-dashboard {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
     gap: 2rem;
     font-family: inherit;
@@ -20,24 +19,19 @@
 /* Profile Container & Cards */
 .profile-container {
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 1.5rem;
 }
 
 .payment-dashboard .glass-card {
     padding: 1.5rem;
-    gap: 1rem;
 }
 
 .profile-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    justify-content: start;
-    gap: 0.5rem;
 }
 
 .payment-dashboard .info-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: 1rem;
 }
 
 .payment-dashboard .info-item {
@@ -55,7 +49,6 @@
 
 /* Score Box */
 .score-box {
-    gap: 0.5rem;
     border-left: 1px solid var(--md-sys-color-outline-variant);
     padding-left: 1.5rem;
 }
@@ -63,14 +56,12 @@
 .score-circle {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     border: 6px solid var(--md-sys-color-primary);
     font-size: 1.625rem;
 }
 
 /* Plans Section & Cards */
 .plans-section {
-    gap: 1.25rem;
 }
 
 .plans-section h2 {
@@ -78,7 +69,6 @@
 }
 
 .plans-list {
-    gap: 1.25rem;
 }
 
 .plan-card {
@@ -89,7 +79,6 @@
 .plan-header {
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
     padding-bottom: 0.875rem;
-    gap: 1rem;
 }
 
 .plan-title {
@@ -126,14 +115,12 @@
 /* Empty Plans Card */
 .empty-plans-card {
     padding: 3rem 1.5rem;
-    gap: 1rem;
     border: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 .empty-plans-icon-wrapper {
     width: 64px;
     height: 64px;
-    border-radius: 50%;
 }
 
 .empty-plans-icon {
@@ -174,28 +161,21 @@
 
 /* Payment Trust Footer */
 .payment-trust-footer {
-    grid-template-columns: auto minmax(0, 1fr) auto;
     max-width: 1100px;
-    margin: 0 auto;
-    gap: 1.5rem;
     font-size: 0.875rem;
     padding: 0.5rem 0;
 }
 
 .trust-badge {
-    grid-auto-columns: auto auto;
     gap: 6px;
     font-size: 0.85rem;
 }
 
 .trust-badge md-icon {
-    color: var(--md-sys-color-tertiary);
     font-size: 20px;
 }
 
 .payment-methods {
-    justify-content: center;
-    gap: 0.5rem;
 }
 
 .payment-support a {

@@ -13,14 +13,12 @@ header.app-header.landing-header {
 
 header.landing-header .header-grid-layout {
     max-width: 1280px;
-    margin: 0 auto;
 }
 
 header.landing-header .header-brand-link {
     min-height: 40px;
     gap: 0.65rem;
     padding: 0.25rem 0.65rem;
-    border-radius: 12px;
     transition: all 0.25s ease;
 }
 
@@ -45,7 +43,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-header-nav {
-    justify-content: center;
     gap: 0.25rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -79,13 +76,9 @@ header.landing-header .header-brand-text {
 }
 
 .landing-header-actions {
-    gap: 0.75rem;
-    justify-self: end;
 }
 
 .lang-toggle-btn {
-    height: 48px;
-    min-width: 48px;
     padding: 0.3rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
@@ -95,7 +88,6 @@ header.landing-header .header-brand-text {
 }
 
 .lang-toggle-btn:hover {
-    border-color: var(--md-sys-color-primary);
 }
 
 .lang-dropdown-menu {
@@ -107,11 +99,9 @@ header.landing-header .header-brand-text {
 }
 
 .lang-menu-item:hover {
-    background: var(--md-sys-color-surface-container-highest);
 }
 
 .landing-auth-btn {
-    grid-auto-columns: auto auto;
     gap: 0.45rem;
     padding: 0.4rem 1.1rem;
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
@@ -129,7 +119,6 @@ header.landing-header .header-brand-text {
 
 .landing-auth-btn:hover {
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    border-color: var(--md-sys-color-primary);
     box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
 }
 
@@ -139,8 +128,6 @@ header.landing-header .header-brand-text {
 .landing-mobile-menu-toggle {
     display: none;
     width: 48px;
-    height: 48px;
-    min-width: 48px;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
     color: var();
@@ -149,7 +136,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-mobile-menu-toggle:hover {
-    border-color: var(--md-sys-color-primary);
 }
 
 .landing-mobile-menu-backdrop {
@@ -170,7 +156,6 @@ header.landing-header .header-brand-text {
     background: rgba(4, 6, 10, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.25rem 1.5rem 2rem 1.5rem;
-    grid-auto-flow: row;
     gap: 0.6rem;
     z-index: 90;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
@@ -184,7 +169,6 @@ header.landing-header .header-brand-text {
 
 .mobile-nav-item {
     grid-template-columns: 24px minmax(0, 1fr);
-    gap: 1rem;
     padding: 0.85rem 1.15rem;
     font-size: 1rem;
     transition: background 0.2s ease, color 0.2s ease;
@@ -213,15 +197,12 @@ header.landing-header .header-brand-text {
    Universal App Footer
    ========================================================================== */
 footer.app-footer {
-    grid-template-columns: minmax(0, 1fr);
     padding: 3.5rem 2rem 2rem 2rem;
 }
 
 .footer-container {
-    grid-auto-flow: row;
     gap: 3rem;
     max-width: 1280px;
-    margin: 0 auto;
 }
 
 .footer-custom-slot {
@@ -236,16 +217,11 @@ footer.app-footer {
 }
 
 .footer-brand-col {
-    grid-auto-flow: row;
-    gap: 1rem;
     max-width: 320px;
 }
 
 .footer-brand-link {
-    grid-auto-columns: auto auto;
     gap: 0.65rem;
-    min-width: 48px;
-    width: max-content;
 }
 
 .footer-brand-badge {
@@ -270,19 +246,15 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    grid-auto-columns: auto auto;
     gap: 0.65rem;
     padding: 0.35rem 0.85rem;
-    border-radius: 20px;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    width: max-content;
     margin-top: 0.25rem;
 }
 
 .status-pulse-dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
     background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -298,7 +270,6 @@ footer.app-footer {
 }
 
 .footer-nav-col {
-    grid-auto-flow: row;
     gap: 0.85rem;
 }
 
@@ -308,7 +279,6 @@ footer.app-footer {
 }
 
 .footer-links-list {
-    grid-auto-flow: row;
     gap: 0.25rem;
     list-style: none;
 }
@@ -340,8 +310,6 @@ footer.app-footer {
 }
 
 .footer-bottom-bar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1.5rem;
     padding-top: 1.75rem;
 }
 
@@ -351,15 +319,12 @@ footer.app-footer {
 }
 
 .footer-lang-container {
-    justify-content: center;
 }
 
 .footer-trust-info {
-    justify-content: end;
 }
 
 .trust-badge {
-    grid-auto-columns: auto auto;
     gap: 0.4rem;
     font-size: 0.75rem;
     opacity: 0.75;

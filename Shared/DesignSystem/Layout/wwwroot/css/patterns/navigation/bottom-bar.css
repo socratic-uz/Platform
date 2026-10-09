@@ -110,7 +110,6 @@
 }
 
 .m3-nav-fab {
-    position: absolute;
     top: -24px;
     left: 50%;
     transform: translateX(-50%);

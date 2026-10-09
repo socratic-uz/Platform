@@ -634,3 +634,89 @@
 ) {
     grid-auto-flow: column;
 }
+
+/* Universal 1-Column Minmax Grid Master Rule */
+:is(
+    .card-bottom-row,
+    .column-content,
+    .column-empty,
+    .kanban-column,
+    .kds-card,
+    .kds-cards-container,
+    .kds-column,
+    .kds-empty-col,
+    .kiosk-filter-inner,
+    .kiosk-filter-row,
+    .m3-kanban-column,
+    .order-card-details,
+    .preview-footer,
+    .style-selects-grid,
+    footer.app-footer,
+    header.app-header
+) {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* Universal Grid Auto-Flow Row Master Rule */
+:is(
+    .about-container,
+    .example-container,
+    .footer-brand-col,
+    .footer-container,
+    .footer-links-list,
+    .footer-nav-col,
+    .help-container,
+    .kiosk-main,
+    .landing-mobile-menu-drawer,
+    .landing-subpage-container,
+    .link-stack,
+    .video-card-header,
+    section.link-stack
+) {
+    grid-auto-flow: row;
+}
+
+/* Universal 2-Column (auto 1fr) Grid Master Rule */
+:is(
+    .designer-workspace,
+    .detail-item,
+    .error-banner,
+    .header-title-group,
+    .item-card,
+    .kds-card-top,
+    .link-stack dl,
+    .orders-error-banner,
+    .plan-features li,
+    .preview-info,
+    .qrg-preview-header,
+    .seat-selection-card,
+    .tier-features li
+) {
+    grid-template-columns: auto minmax(0, 1fr);
+}
+
+/* Universal 3-Column (auto 1fr auto) Grid Master Rule */
+:is(
+    .active-orders-tabs,
+    .analytics-toolbar-grid,
+    .docs-sidebar-header,
+    .footer-bottom-bar,
+    .link-stack a,
+    .link-stack article,
+    .m3-trust-footer,
+    .payment-trust-footer,
+    .product-preview-pill
+) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+/* Universal Grid Auto-Columns (auto auto) Master Rule */
+:is(
+    .footer-brand-link,
+    .footer-system-status,
+    .kiosk-brand-info,
+    .landing-auth-btn,
+    .trust-badge
+) {
+    grid-auto-columns: auto auto;
+}

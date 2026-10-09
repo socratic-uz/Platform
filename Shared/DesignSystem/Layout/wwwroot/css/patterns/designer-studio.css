@@ -9,7 +9,6 @@
 .seat-designer-page-root,
 .qr-designer-page-root {
     grid-template-rows: auto auto minmax(0, 1fr);
-    gap: 1.5rem;
     min-height: calc(100dvh - 80px);
     padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
     background-color: var(--md-sys-color-surface);
@@ -22,13 +21,10 @@
 /* ─── 2. Designer Header Toolbar ─────────────────────────────────────────── */
 .designer-header,
 .qr-designer-header {
-    gap: 1.25rem;
     padding: 1.25rem 1.5rem;
 }
 
 .header-title-group {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 1rem;
 }
 
 .header-icon {
@@ -76,13 +72,11 @@
 
 .header-actions {
     grid-template-columns: auto auto auto;
-    gap: 0.75rem;
 }
 
 .mode-indicator {
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
-    justify-content: center;
 }
 
 .mode-edit {
@@ -90,28 +84,22 @@
 
 .mode-preview {
     background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
 }
 
 /* ─── 4. Notification & Banners ─────────────────────────────────────────── */
 .notification-banner {
-    gap: 0.75rem;
     padding: 0.75rem 1.25rem;
     font-size: 0.9rem;
 }
 
 .banner-close-btn {
     background: none;
-    border: none;
     color: inherit;
     font-size: 1.1rem;
-    min-width: 48px;
 }
 
 /* ─── 5. Designer Workspaces & Panels ───────────────────────────────────── */
 .designer-workspace {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 1.5rem;
     align-items: stretch;
 }
 
@@ -121,18 +109,14 @@
 
 .designer-canvas-area {
     grid-template-rows: minmax(0, 1fr) auto;
-    gap: 0.75rem;
     min-height: 540px;
 }
 
 .seat-selection-card {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
     padding: 0.75rem 1rem;
 }
 
 .card-icon {
-    color: var(--md-sys-color-tertiary);
     font-size: 1.5rem;
 }
 
@@ -147,12 +131,10 @@
 /* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
 .qr-workspace {
     grid-template-columns: min(100%, 420px) minmax(0, 1fr);
-    gap: 1.5rem;
     align-items: start;
 }
 
 .qr-controls-panel {
-    gap: 1.25rem;
     padding: 1.5rem;
 }
 
@@ -179,7 +161,6 @@
 
 .text-input:focus, .select-input:focus {
     outline: none;
-    border-color: var(--md-sys-color-primary);
 }
 
 .color-grid {
@@ -198,9 +179,6 @@
 
 .color-picker-row input[type="color"] {
     width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border: none;
     background: none;
 }
 
@@ -210,7 +188,6 @@
 }
 
 .style-selects-grid {
-    grid-template-columns: minmax(0, 1fr);
     gap: 0.9rem;
 }
 
@@ -220,7 +197,6 @@
 
 .preview-card {
     grid-template-rows: auto minmax(0, 1fr) auto;
-    gap: 1.25rem;
     padding: 1.5rem;
     container-type: inline-size;
 }
@@ -249,17 +225,14 @@
 }
 
 .preview-footer {
-    grid-template-columns: minmax(0, 1fr);
 }
 
 .preview-info {
-    grid-template-columns: auto minmax(0, 1fr);
     gap: 0.6rem;
     font-size: 0.85rem;
 }
 
 .info-icon {
-    color: var(--md-sys-color-tertiary);
     font-size: 1.25rem;
 }
 
