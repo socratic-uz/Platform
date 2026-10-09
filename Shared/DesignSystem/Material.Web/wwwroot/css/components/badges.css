@@ -25,14 +25,14 @@
 .badge-ready,
 .badge-completed,
 .badge.completed,
-.ready-badge  {
+.ready-badge   {
     /* consolidated to w3c rules */
 }
 
 .badge-trial,
 .badge.trial,
 .badge-verified,
-.badge.verified  {
+.badge.verified   {
     /* consolidated to w3c rules */
 }
 
@@ -59,7 +59,7 @@
 .m3-status-badge.made,
 .m3-status-badge.status-made,
 .order-status-badge.status-made,
-.item-status-pill.status-made   {
+.item-status-pill.status-made    {
     /* consolidated to w3c rules */
 }
 
@@ -78,7 +78,7 @@
 .order-status-badge.status-shipping,
 .item-status-pill.status-shipping,
 .badge-active,
-.badge.active  {
+.badge.active   {
     /* consolidated to w3c rules */
 }
 
@@ -110,7 +110,7 @@
 .order-status-badge.status-created,
 .item-status-pill.status-created,
 .badge-cancelled,
-.badge.cancelled   {
+.badge.cancelled    {
     /* consolidated to w3c rules */
 }
 
@@ -124,13 +124,12 @@
 .status-dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
     display: inline-block;
     background: currentColor;
 }
 
 .m3-status-dot.pulse,
-.status-dot.pulse    {
+.status-dot.pulse     {
     /* consolidated to w3c rules */
 }
 
@@ -138,7 +137,6 @@
 .status-dot.pulse::after {
     content: '';
     inset: -3px;
-    border-radius: 50%;
     background: inherit;
     opacity: 0.4;
     animation: m3-pulse 2s cubic-bezier(0.2, 0, 0, 1) infinite;

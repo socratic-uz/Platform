@@ -37,7 +37,7 @@
 
 /* Outlined Surface Card */
 .m3-card-outlined,
-.card-outlined  {
+.card-outlined   {
     /* consolidated to w3c rules */
 }
 
@@ -132,11 +132,11 @@
     letter-spacing: -0.01em;
 }
 
-:is(.m3-summary-rows, .summary-rows)   {
+:is(.m3-summary-rows, .summary-rows)    {
     /* consolidated to w3c rules */
 }
 
-:is(.m3-summary-row, .summary-row)   {
+:is(.m3-summary-row, .summary-row)    {
     /* consolidated to w3c rules */
 }
 
@@ -172,7 +172,7 @@
     margin-top: var(--md-sys-spacing-2);
 }
 
-:is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link)  {
+:is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link)   {
     /* consolidated to w3c rules */
 }
 
@@ -192,7 +192,6 @@
 }
 
 :is(.m3-card-media, .org-media, .wishlist-media) img {
-    object-fit: cover;
     transition: transform var(--md-sys-motion-duration-medium1) ease;
 }
 
@@ -267,12 +266,11 @@ md-elevated-card {
     transition-duration: var(--md-sys-motion-duration-short2);
 }
 
-:is(md-filled-card, md-outlined-card, md-elevated-card) figure   {
+:is(md-filled-card, md-outlined-card, md-elevated-card) figure    {
     /* consolidated to w3c rules */
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img {
-    object-fit: cover;
     transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-expressive-standard);
 }
 
@@ -350,7 +348,6 @@ md-filled-card.product-card,
 
 .wishlist-card-footer {
     padding-top: 12px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     margin-top: 12px;
 }
 
@@ -369,7 +366,6 @@ md-filled-card.product-card,
 
 .wishlist-details-thumb {
     max-height: 150px;
-    object-fit: cover;
 }
 
 .wishlist-details-desc {

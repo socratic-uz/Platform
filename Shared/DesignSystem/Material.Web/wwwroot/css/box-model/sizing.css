@@ -284,3 +284,16 @@
 ) {
     max-width: 100%;
 }
+
+/* ─── Universal Consolidated Groupings (Round 4 Deduplication) ───── */
+
+/* Universal Media Fit (Cover) */
+:is(
+    .avatar-button img,
+    :is(.m3-card-media, .org-media, .wishlist-media) img,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure > img,
+    .wishlist-details-thumb,
+    .image-preview
+) {
+    object-fit: cover;
+}

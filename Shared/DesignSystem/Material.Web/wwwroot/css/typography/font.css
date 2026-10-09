@@ -277,3 +277,16 @@ md-dialog:not(:defined) {
 ) {
     line-height: 1.4;
 }
+
+/* ─── Universal Consolidated Groupings (Round 4 Deduplication) ───── */
+
+/* Universal Uppercase Text Transformation */
+:is(
+    :is(.m3-info-label, .info-label),
+    :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title),
+    .picker-hex-input,
+    .picker-popover-title,
+    .label-title
+) {
+    text-transform: uppercase;
+}

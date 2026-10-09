@@ -3,7 +3,7 @@
    Strict CSS Grid Architecture (Zero Flexbox)
    ========================================================================== */
 
-:is(.m3-progress-container, .progress-bar-container)   {
+:is(.m3-progress-container, .progress-bar-container)    {
     /* consolidated to w3c rules */
 }
 

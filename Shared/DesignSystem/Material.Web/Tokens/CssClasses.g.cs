@@ -35,6 +35,8 @@ public static class M3
         public const string CardMediaPlaceholder = "m3-card-media-placeholder";
         public const string ColHeaderContent = "col-header-content";
         public const string ColJustifyCenter = "col-justify-center";
+        public const string ColJustifyLeft = "col-justify-left";
+        public const string ColJustifyStart = "col-justify-start";
         public const string ColTitle = "col-title";
         public const string ColumnEmpty = "column-empty";
         public const string Contacts = "contacts";
@@ -151,6 +153,7 @@ public static class M3
         public const string SummaryLeft = "summary-left";
         public const string SummaryRow = "m3-summary-row";
         public const string SummaryRows = "m3-summary-rows";
+        public const string TableActionsBar = "m3-table-actions-bar";
         public const string TableContainer = "table-container";
         public const string TableRowActions = "m3-table-row-actions";
         public const string UploadCard = "upload-card";
@@ -357,6 +360,7 @@ public static class M3
         public const string AnalyticsDatePickerTrigger = "analytics-date-picker-trigger";
         public const string AnalyticsModeBtn = "analytics-mode-btn";
         public const string AnalyticsModePillGroup = "analytics-mode-pill-group";
+        public const string AvatarButton = "avatar-button";
         public const string BackButton = "m3-back-button";
         public const string Badge = "m3-badge";
         public const string BadgeCounter = "badge-counter";
@@ -394,6 +398,7 @@ public static class M3
         public const string Expired = "expired";
         public const string Fieldset = "m3-fieldset";
         public const string FileCard = "file-card";
+        public const string FileInfo = "file-info";
         public const string FilterChip = "m3-filter-chip";
         public const string FilterChipCount = "m3-filter-chip-count";
         public const string GlassCard = "glass-card";
@@ -408,6 +413,7 @@ public static class M3
         public const string LangPillBtn = "lang-pill-btn";
         public const string Made = "made";
         public const string Md3ClosedBadge = "md3-closed-badge";
+        public const string Md3DialogActionsRow = "md3-dialog-actions-row";
         public const string Md3PresetsSection = "md3-presets-section";
         public const string Md3ScheduleDayCard = "md3-schedule-day-card";
         public const string Md3TimeInput = "md3-time-input";
@@ -422,6 +428,7 @@ public static class M3
         public const string OrderStatusBadge = "order-status-badge";
         public const string OrgCard = "org-card";
         public const string OrgMedia = "org-media";
+        public const string Paginator = "paginator";
         public const string PeriodPickerTrigger = "m3-period-picker-trigger";
         public const string PickerBadge = "picker-badge";
         public const string PickerCompactBox = "picker-compact-box";
@@ -430,6 +437,7 @@ public static class M3
         public const string PickerHexWrapper = "picker-hex-wrapper";
         public const string PickerIconBadge = "picker-icon-badge";
         public const string PickerPaletteSwatch = "picker-palette-swatch";
+        public const string PickerPopoverFooter = "picker-popover-footer";
         public const string PickerPopoverPanel = "picker-popover-panel";
         public const string PickerSwatchWrapper = "picker-swatch-wrapper";
         public const string PickerTriggerCard = "picker-trigger-card";
@@ -438,6 +446,7 @@ public static class M3
         public const string Pro = "pro";
         public const string ProgressBarBg = "progress-bar-bg";
         public const string ProgressTrack = "m3-progress-track";
+        public const string Pulse = "pulse";
         public const string Quickgrid = "quickgrid";
         public const string RequiredBadge = "required-badge";
         public const string SegmentedBtn = "m3-segmented-btn";
@@ -454,8 +463,10 @@ public static class M3
         public const string ShapeSmall = "m3-shape-small";
         public const string Skeleton = "m3-skeleton";
         public const string SkeletonCard = "m3-skeleton-card";
+        public const string SkeletonCircle = "m3-skeleton-circle";
         public const string SmartGridContainer = "smart-grid-container";
         public const string StatusBadge = "m3-status-badge";
+        public const string StatusDot = "m3-status-dot";
         public const string StatusMade = "status-made";
         public const string SummaryCard = "m3-summary-card";
         public const string TableContainer = "table-container";
@@ -464,6 +475,7 @@ public static class M3
         public const string Trial = "trial";
         public const string UploadCard = "upload-card";
         public const string Verified = "verified";
+        public const string WishlistCardFooter = "wishlist-card-footer";
         public const string WishlistDetailsThumb = "wishlist-details-thumb";
         public const string WishlistMedia = "wishlist-media";
         public const string WithAds = "with-ads";

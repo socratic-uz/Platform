@@ -259,3 +259,31 @@
 ) {
     border-color: var(--md-sys-color-primary);
 }
+
+/* ─── Universal Consolidated Groupings (Round 4 Deduplication) ───── */
+
+/* Universal Circular Shape (50%) Elements */
+:is(
+    .avatar-button,
+    .avatar-button img,
+    .m3-status-dot,
+    .status-dot,
+    .m3-skeleton-circle,
+    .paginator nav button
+),
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    border-radius: 50%;
+}
+
+/* Universal Top Border Divider (1px Outline Variant) */
+:is(
+    .wishlist-card-footer,
+    .picker-popover-footer,
+    .file-info,
+    .md3-dialog-actions-row,
+    .paginator,
+    .table-container > .paginator
+) {
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}

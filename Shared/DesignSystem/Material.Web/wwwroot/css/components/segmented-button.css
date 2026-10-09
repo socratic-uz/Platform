@@ -15,11 +15,11 @@
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-:is(.analytics-mode-btn, .m3-segmented-btn):hover   {
+:is(.analytics-mode-btn, .m3-segmented-btn):hover    {
     /* consolidated to w3c rules */
 }
 
-:is(.analytics-mode-btn, .m3-segmented-btn).active  {
+:is(.analytics-mode-btn, .m3-segmented-btn).active   {
     /* consolidated to w3c rules */
 }
 

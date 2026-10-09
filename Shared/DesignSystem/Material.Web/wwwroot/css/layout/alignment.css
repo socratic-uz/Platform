@@ -339,3 +339,20 @@
 ) {
     gap: var(--md-sys-spacing-4);
 }
+
+/* ─── Universal Consolidated Groupings (Round 4 Deduplication) ───── */
+
+/* Universal Justify Content Start Elements */
+:is(
+    .picker-title-row,
+    .summary-left,
+    .m3-table-actions-bar,
+    .table-actions-bar,
+    .payment-cell,
+    .date-cell,
+    td.col-justify-start,
+    td.col-justify-left,
+    .col-justify-start .col-title
+) {
+    justify-content: start;
+}

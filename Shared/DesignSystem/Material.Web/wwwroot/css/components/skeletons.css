@@ -1,6 +1,6 @@
 /* Material Design 3 Expressive - Zero-CLS Skeleton Shimmer Engine */
 
-.m3-skeleton   {
+.m3-skeleton    {
     /* consolidated to w3c rules */
 }
 
@@ -35,7 +35,6 @@
 }
 
 .m3-skeleton-circle {
-    border-radius: 50% !important;
     width: var(--md-sys-touch-target-min);
     height: var(--md-sys-touch-target-min);
 }

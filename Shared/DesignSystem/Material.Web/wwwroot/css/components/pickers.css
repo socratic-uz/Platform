@@ -7,13 +7,12 @@
 /* ==========================================================================
    1. Reusable Base Picker Trigger Card & Shared Surfaces
    ========================================================================== */
-:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card)   {
+:is(.picker-trigger-card, .md3-presets-section, .md3-schedule-day-card, .options-list-container, .booking-picker-card)    {
     /* consolidated to w3c rules */
 }
 
 :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title) {
     font-size: 12px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -50,7 +49,7 @@
                 transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
 }
 
-.picker-icon-badge.active  {
+.picker-icon-badge.active   {
     /* consolidated to w3c rules */
 }
 
@@ -58,7 +57,7 @@
     gap: 3px;
 }
 
-.picker-header-row   {
+.picker-header-row    {
     /* consolidated to w3c rules */
 }
 
@@ -144,7 +143,7 @@
     min-width: var(--md-sys-touch-target-min);
 }
 
-.picker-swatch   {
+.picker-swatch    {
     /* consolidated to w3c rules */
 }
 
@@ -162,7 +161,6 @@
     font-family: 'Roboto Mono', monospace;
     font-size: 13px;
     width: 68px;
-    text-transform: uppercase;
 }
 
 /* Popover Panel */
@@ -191,7 +189,6 @@
 
 .picker-popover-title {
     font-size: 12px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -222,7 +219,6 @@
 
 .picker-popover-footer {
     padding-top: 8px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 
@@ -235,7 +231,7 @@
     margin-bottom: 8px;
 }
 
-.file-add-btn-label    {
+.file-add-btn-label     {
     /* consolidated to w3c rules */
 }
 
@@ -262,8 +258,8 @@
     background-color: var(--md-sys-color-surface-container-low);
 }
 
-.image-preview {
-    object-fit: cover;
+.image-preview  {
+    /* consolidated to w3c rules */
 }
 
 .icon-preview {
@@ -287,7 +283,6 @@
 .file-info {
     padding: 6px 8px;
     background: var(--md-sys-color-surface-container-lowest);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .file-name {
@@ -380,7 +375,7 @@
     transition: background-color 0.15s, color 0.15s;
 }
 
-.picker-day-dot.active  {
+.picker-day-dot.active   {
     /* consolidated to w3c rules */
 }
 
@@ -400,7 +395,7 @@
     padding: 12px 14px;
 }
 
-.md3-presets-label   {
+.md3-presets-label    {
     /* consolidated to w3c rules */
 }
 
@@ -409,7 +404,7 @@
     overflow-x: auto;
 }
 
-.md3-schedule-header   {
+.md3-schedule-header    {
     /* consolidated to w3c rules */
 }
 
@@ -417,7 +412,7 @@
     font-size: 13px;
 }
 
-.md3-schedule-days   {
+.md3-schedule-days    {
     /* consolidated to w3c rules */
 }
 
@@ -430,7 +425,7 @@
     background: var(--md-sys-color-surface-container-lowest);
 }
 
-.md3-schedule-day-left   {
+.md3-schedule-day-left    {
     /* consolidated to w3c rules */
 }
 
@@ -463,13 +458,12 @@
 
 .md3-dialog-actions-row {
     padding-top: 12px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 /* ==========================================================================
    4. Language Selector & Localization Chips
    ========================================================================== */
-.lang-select    {
+.lang-select     {
     /* consolidated to w3c rules */
 }
 
@@ -506,7 +500,7 @@
 }
 
 /* Pill Dropdown Mode (ideal for Header) */
-.lang-dropdown-wrapper    {
+.lang-dropdown-wrapper     {
     /* consolidated to w3c rules */
 }
 
@@ -561,7 +555,7 @@
     transition: background 0.15s ease;
 }
 
-.lang-menu-item:hover   {
+.lang-menu-item:hover    {
     /* consolidated to w3c rules */
 }
 
@@ -587,13 +581,12 @@
     margin-top: 8px;
 }
 
-.option-fieldset   {
+.option-fieldset    {
     /* consolidated to w3c rules */
 }
 
 .label-title {
     font-size: 0.82rem;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
 }
@@ -624,7 +617,7 @@
     border-bottom: none;
 }
 
-.option-item-row:hover   {
+.option-item-row:hover    {
     /* consolidated to w3c rules */
 }
 
@@ -632,7 +625,7 @@
     font-size: 0.82rem;
 }
 
-.variant-dialog-actions   {
+.variant-dialog-actions    {
     /* consolidated to w3c rules */
 }
 
@@ -654,8 +647,8 @@
     gap: 14px;
 }
 
-.picker-title-row {
-    justify-content: start;
+.picker-title-row  {
+    /* consolidated to w3c rules */
 }
 
 .headline {
@@ -689,7 +682,7 @@
     height: clamp(180px, 30vh, 240px);
 }
 
-.time-fieldset   {
+.time-fieldset    {
     /* consolidated to w3c rules */
 }
 
@@ -709,7 +702,6 @@
 }
 
 .summary-left {
-    justify-content: start;
     gap: 10px;
 }
 
@@ -729,7 +721,7 @@
     font-size: 0.82rem;
 }
 
-.summary-actions   {
+.summary-actions    {
     /* consolidated to w3c rules */
 }
 

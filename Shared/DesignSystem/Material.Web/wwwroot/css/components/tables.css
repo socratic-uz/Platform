@@ -60,7 +60,7 @@
 }
 
 .m3-amount-cell,
-.amount-cell   {
+.amount-cell    {
     /* consolidated to w3c rules */
 }
 
@@ -71,17 +71,15 @@
 
 .m3-table-actions-bar,
 .table-actions-bar {
-    justify-content: start;
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-.orders-table tr:hover   {
+.orders-table tr:hover    {
     /* consolidated to w3c rules */
 }
 
 .payment-cell,
 .date-cell {
-    justify-content: start;
     gap: 0.4rem;
 }
 
@@ -136,7 +134,7 @@ table.quickgrid td {
 }
 
 .table-container tr:hover td,
-table.quickgrid tr:hover td   {
+table.quickgrid tr:hover td    {
     /* consolidated to w3c rules */
 }
 
@@ -183,7 +181,7 @@ table.quickgrid td.actions-column {
 }
 
 .table-container tr:hover td.actions-column,
-table.quickgrid tr:hover td.actions-column   {
+table.quickgrid tr:hover td.actions-column    {
     /* consolidated to w3c rules */
 }
 
@@ -220,7 +218,7 @@ table.quickgrid tr:hover td.actions-column   {
 }
 
 /* QuickGrid Column Headers & Sorting */
-.col-header-content    {
+.col-header-content     {
     /* consolidated to w3c rules */
 }
 
@@ -288,7 +286,7 @@ button.col-title {
 }
 
 td.col-justify-center,
-.col-justify-center .col-title  {
+.col-justify-center .col-title   {
     /* consolidated to w3c rules */
 }
 
@@ -305,8 +303,8 @@ td.col-justify-right,
 
 td.col-justify-start,
 td.col-justify-left,
-.col-justify-start .col-title {
-    justify-content: start;
+.col-justify-start .col-title  {
+    /* consolidated to w3c rules */
 }
 
 /* QuickGrid & SmartGrid Paginator */
@@ -315,7 +313,6 @@ td.col-justify-left,
     position: sticky;
     grid-column: 1 / -1;
     justify-content: space-between;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 0.5rem 1rem !important;
 }
 
@@ -336,7 +333,6 @@ td.col-justify-left,
     height: 2.25rem;
     min-width: 36px;
     min-height: 36px;
-    border-radius: 50%;
     transition: background-color 0.15s ease;
 }
 
@@ -375,7 +371,7 @@ td.col-justify-left,
     transition: background .2s ease-in-out, border .2s ease-in-out;
 }
 
-.drop-container:hover   {
+.drop-container:hover    {
     /* consolidated to w3c rules */
 }
 
