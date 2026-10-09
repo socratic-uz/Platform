@@ -788,3 +788,39 @@
 ) {
     gap: 20px;
 }
+
+/* Universal Align Items Baseline Master Rule */
+:is(
+    .kpi-value-row,
+    .product-price-section,
+    .trial-counter
+) {
+    align-items: baseline;
+}
+
+/* Universal Gap Zero Reset Master Rule */
+:is(
+    .qrg-layout,
+    main.docs-page,
+    main.showcase-page
+) {
+    gap: 0;
+}
+
+/* Universal Gap 14px Master Rule */
+:is(
+    .qrg-customizer-content,
+    .qrg-select-grid,
+    .qrg-sidebar-header
+) {
+    gap: 14px;
+}
+
+/* Universal Gap 24px Master Rule */
+:is(
+    .qrg-cards,
+    .qrg-preview,
+    .showcase-cards-grid
+) {
+    gap: 24px;
+}

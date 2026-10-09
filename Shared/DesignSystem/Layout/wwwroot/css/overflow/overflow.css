@@ -140,3 +140,15 @@
 ) {
     overflow-x: hidden;
 }
+
+/* Universal Overflow X Clip Master Rule */
+:is(
+    .about-container,
+    .docs-content,
+    .example-container,
+    .help-container,
+    .landing-grid,
+    .landing-subpage-container
+) {
+    overflow-x: clip;
+}

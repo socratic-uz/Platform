@@ -23,7 +23,6 @@
 }
 
 .pos-catalog-header {
-    padding-bottom: 12px;
 }
 
 .pos-header-title-group {
@@ -60,7 +59,6 @@
 }
 
 .pos-grid {
-    padding-right: 4px;
     padding-bottom: 24px;
 }
 
@@ -82,7 +80,6 @@
 
 .pos-card-img,
 .pos-card-img-placeholder {
-    width: 52px;
     aspect-ratio: 1 / 1;
 }
 
@@ -93,7 +90,6 @@
 }
 
 .pos-product-title-text {
-    font-size: 0.88rem;
     line-height: 1.25;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -106,7 +102,6 @@
 }
 
 .pos-price-text {
-    font-size: 0.88rem;
 }
 
 .pos-card-footer-row md-icon-button,
@@ -121,7 +116,6 @@
 }
 
 .pos-sidebar-header {
-    padding-bottom: 12px;
     margin-bottom: 12px;
 }
 
@@ -154,7 +148,6 @@
 
 .pos-quick-bill-btn {
     padding: 10px 4px;
-    font-size: 0.88rem;
     transition: background 0.15s ease, transform 0.1s ease;
 }
 
@@ -245,7 +238,6 @@
 }
 
 .product-price-section {
-    align-items: baseline;
 }
 
 .product-price {
@@ -264,7 +256,6 @@
 }
 
 .product-description-text {
-    line-height: 1.6;
     white-space: pre-line;
 }
 

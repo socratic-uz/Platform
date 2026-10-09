@@ -11,7 +11,6 @@
 .landing-subpage-container {
     gap: 3.5rem;
     padding: 2.5rem 1.5rem 3rem 1.5rem;
-    overflow-x: clip;
 }
 
 .about-hero,
@@ -27,14 +26,12 @@
     font-size: 2.75rem;
     word-break: break-word;
     overflow-wrap: break-word;
-    max-width: 900px;
 }
 
 .about-subtitle,
 .help-subtitle,
 .example-subtitle,
 .landing-subpage-subtitle {
-    line-height: 1.6;
     max-width: 780px;
 }
 
@@ -102,7 +99,6 @@
 }
 
 .pillar-icon-box {
-    width: 52px;
 }
 
 .pillar-features {
@@ -161,7 +157,6 @@
     grid-template-columns: minmax(min(100%, 380px), 380px) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: "sidebar preview";
-    gap: 0;
 }
 
 .qrg-sidebar {
@@ -172,11 +167,9 @@
 
 .qrg-sidebar-scrollable {
     margin: 8px 0;
-    padding-right: 4px;
 }
 
 .qrg-sidebar-header {
-    gap: 14px;
 }
 
 .qrg-logo-badge {
@@ -209,12 +202,10 @@
 }
 
 .qrg-section-title {
-    letter-spacing: 0.8px;
     padding-bottom: 8px;
 }
 
 .qrg-customizer-content {
-    gap: 14px;
 }
 
 .qrg-field-row {
@@ -230,7 +221,6 @@
 }
 
 .qrg-select-grid {
-    gap: 14px;
 }
 
 .qrg-slider-field {
@@ -243,14 +233,12 @@
 }
 
 .qrg-lists {
-    padding-right: 4px;
 }
 
 .qrg-group {
 }
 
 .qrg-group-head {
-    letter-spacing: 0.8px;
     padding: 0 4px 4px;
     margin-bottom: 4px;
 }
@@ -270,7 +258,6 @@
 .qrg-preview {
     grid-area: preview;
     padding: 28px 32px;
-    gap: 24px;
 }
 
 .qrg-preview-header {
@@ -286,12 +273,10 @@
 
 .qrg-cards {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 24px;
 }
 
 .qrg-card {
     box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
-    padding: 32px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -322,7 +307,6 @@
 /* ─── 6. System Documentation Engine ─────────────────────────────────────── */
 main.docs-page {
     grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr) !important;
-    gap: 0 !important;
     align-content: stretch !important;
 }
 
@@ -336,7 +320,6 @@ main.docs-page {
 }
 
 .docs-header-icon {
-    font-size: 24px;
     width: 24px;
     height: 24px;
 }
@@ -357,14 +340,12 @@ main.docs-page {
 
 .docs-group-header {
     padding: 4px 8px;
-    letter-spacing: 0.8px;
 }
 
 .docs-group-items {
 }
 
 .docs-content {
-    overflow-x: clip;
     background-color: var(--md-sys-color-background);
 }
 
@@ -374,15 +355,12 @@ main.docs-page {
 }
 
 .docs-welcome-card {
-    padding: 32px;
     background-color: var(--md-sys-color-surface-container-low);
 }
 
 .docs-article {
-    max-width: 900px;
     padding: 40px 56px;
     color: var(--md-sys-color-on-background);
-    line-height: 1.6;
     word-break: break-word;
     overflow-wrap: break-word;
 }

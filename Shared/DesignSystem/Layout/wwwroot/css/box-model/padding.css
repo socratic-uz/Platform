@@ -144,3 +144,39 @@
 ) {
     padding-bottom: 2px;
 }
+
+/* Universal Padding Compact Button Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .landing-nav-link
+) {
+    padding: 0.4rem 0.85rem;
+}
+
+/* Universal Padding 32px Container Master Rule */
+:is(
+    .docs-welcome-card,
+    .qrg-card,
+    .showcase-main-body
+) {
+    padding: 32px;
+}
+
+/* Universal Padding Right 4px Master Rule */
+:is(
+    .pos-grid,
+    .qrg-lists,
+    .qrg-sidebar-scrollable
+) {
+    padding-right: 4px;
+}
+
+/* Universal Padding Bottom 12px Master Rule */
+:is(
+    .pos-catalog-header,
+    .pos-sidebar-header,
+    .showcase-section-header
+) {
+    padding-bottom: 12px;
+}

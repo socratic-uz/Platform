@@ -591,3 +591,30 @@
 ) {
     font-size: 0.78rem;
 }
+
+/* Universal Font Size 24px Headline Master Rule */
+:is(
+    .docs-header-icon,
+    .m3-page-header-icon,
+    .showcase-section-icon
+) {
+    font-size: 24px;
+}
+
+/* Universal Font Size 16px Body Standard Master Rule */
+:is(
+    .landing-auth-btn md-icon,
+    .landing-nav-link md-icon,
+    .trust-badge md-icon
+) {
+    font-size: 16px;
+}
+
+/* Universal Font Size 0.88rem Label Master Rule */
+:is(
+    .pos-price-text,
+    .pos-product-title-text,
+    .pos-quick-bill-btn
+) {
+    font-size: 0.88rem;
+}

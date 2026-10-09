@@ -227,3 +227,24 @@
 ) {
     -webkit-text-fill-color: transparent;
 }
+
+/* Universal Line Height 1.6 Article Master Rule */
+:is(
+    .about-subtitle,
+    .docs-article,
+    .example-subtitle,
+    .help-subtitle,
+    .landing-subpage-subtitle,
+    .product-description-text
+) {
+    line-height: 1.6;
+}
+
+/* Universal Letter Spacing 0.8px Wide Master Rule */
+:is(
+    .docs-group-header,
+    .qrg-group-head,
+    .qrg-section-title
+) {
+    letter-spacing: 0.8px;
+}

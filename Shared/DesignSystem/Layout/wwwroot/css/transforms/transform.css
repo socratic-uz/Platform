@@ -3,3 +3,13 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Transform Hover Float (-2px) Master Rule */
+:is(
+    .ad-slot-container:hover,
+    .analytics-kpi-card:hover,
+    .plan-card:hover,
+    .tier-box:hover
+) {
+    transform: translateY(-2px);
+}

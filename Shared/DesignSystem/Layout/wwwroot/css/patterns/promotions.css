@@ -1,6 +1,5 @@
 /* ─── 6. Organization Subscription & Promotion Modals ──────────────── */
 .trial-counter {
-    align-items: baseline;
 }
 
 .trial-days-highlight {
@@ -88,7 +87,6 @@
 }
 
 .ad-slot-container:hover {
-    transform: translateY(-2px);
 }
 
 .ad-network-container .google-adsense-wrapper,
@@ -156,7 +154,6 @@
 
 .attract-loop-content {
     z-index: 2;
-    max-width: 900px;
     padding: 3rem 2rem 5rem;
 }
 

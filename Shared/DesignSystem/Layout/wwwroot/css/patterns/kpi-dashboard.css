@@ -10,12 +10,10 @@
 .analytics-kpi-card {
     grid-template-rows: auto auto auto;
     padding: var(--md-sys-spacing-4, 1.25rem);
-    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .analytics-kpi-card:hover {
-    transform: translateY(-2px);
     border-color: var(--md-sys-color-outline, rgba(255, 255, 255, 0.2));
 }
 
@@ -31,7 +29,6 @@
 }
 
 .kpi-value-row {
-    align-items: baseline;
 }
 
 .kpi-number {
@@ -46,7 +43,6 @@
 }
 
 .analytics-panel-card {
-    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
 }
 
 .panel-header {
@@ -89,7 +85,6 @@
 }
 
 .analytics-mode-btn {
-    padding: 0.4rem 0.85rem;
 }
 
 .analytics-mode-btn:hover {
@@ -99,11 +94,9 @@
 }
 
 .analytics-config-btn {
-    padding: 0.4rem 0.85rem;
 }
 
 .analytics-config-btn:hover {
-    border-color: var(--md-sys-color-outline);
 }
 
 .analytics-period-selector {
@@ -114,7 +107,6 @@
 }
 
 .analytics-period-chip:hover {
-    border-color: var(--md-sys-color-outline);
 }
 
 .analytics-period-chip.active {

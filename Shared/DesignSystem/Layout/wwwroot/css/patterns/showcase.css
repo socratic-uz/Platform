@@ -5,7 +5,6 @@
 
 main.showcase-page {
     grid-template-columns: minmax(min(100%, 320px), 320px) minmax(0, 1fr) !important;
-    gap: 0 !important;
     align-content: stretch !important;
 }
 
@@ -166,7 +165,6 @@ main.showcase-page {
 
 /* Sections & Demo Cards */
 .showcase-main-body {
-    padding: 32px;
     max-width: 1300px;
     gap: 48px;
 }
@@ -177,14 +175,12 @@ main.showcase-page {
 
 .showcase-section-header {
     border-bottom: 2px solid var(--md-sys-color-outline-variant);
-    padding-bottom: 12px;
 }
 
 .showcase-section-title-wrap {
 }
 
 .showcase-section-icon {
-    font-size: 24px;
 }
 
 .showcase-section-title {
@@ -199,7 +195,6 @@ main.showcase-page {
 
 .showcase-cards-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-    gap: 24px;
 }
 
 .showcase-card {

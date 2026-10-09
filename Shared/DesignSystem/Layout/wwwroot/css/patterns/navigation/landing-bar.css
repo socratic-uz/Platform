@@ -40,7 +40,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-nav-link {
-    padding: 0.4rem 0.85rem;
     font-size: 0.84rem;
     min-height: 40px;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -48,7 +47,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-nav-link md-icon {
-    font-size: 16px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -65,7 +63,6 @@ header.landing-header .header-brand-text {
 
 .lang-toggle-btn {
     padding: 0.3rem 0.75rem;
-    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
 }
 
@@ -92,7 +89,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-auth-btn md-icon {
-    font-size: 16px;
 }
 
 .landing-auth-btn:hover {
@@ -253,7 +249,6 @@ footer.app-footer {
 }
 
 .trust-badge md-icon {
-    font-size: 16px;
     width: 16px;
     height: 16px;
     color: var(--md-sys-color-secondary);

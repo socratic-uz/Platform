@@ -6,7 +6,6 @@
 .landing-grid {
     grid-template-columns: 100%;
     min-height: 100vh;
-    overflow-x: clip;
 }
 
 .landing-grid > header {

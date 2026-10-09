@@ -502,3 +502,25 @@
 ) {
     width: 8px;
 }
+
+/* Universal Max-Width 900px Content Column Master Rule */
+:is(
+    .about-title,
+    .attract-loop-content,
+    .docs-article,
+    .example-title,
+    .help-title,
+    .landing-subpage-title
+) {
+    max-width: 900px;
+}
+
+/* Universal Width 52px Touch Target Master Rule */
+:is(
+    .item-icon-wrapper,
+    .pillar-icon-box,
+    .pos-card-img,
+    .pos-card-img-placeholder
+) {
+    width: 52px;
+}

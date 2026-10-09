@@ -400,3 +400,22 @@
 ) {
     border-right: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* Universal Border Outline Variant Glass Master Rule */
+:is(
+    .analytics-kpi-card,
+    .analytics-panel-card,
+    .lang-toggle-btn
+) {
+    border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
+}
+
+/* Universal Border Color Outline Master Rule */
+:is(
+    .analytics-config-btn:hover,
+    .analytics-period-chip:hover,
+    .plan-card:hover,
+    .tier-box:hover
+) {
+    border-color: var(--md-sys-color-outline);
+}
