@@ -176,3 +176,9 @@
 .overscroll-contain {
     overscroll-behavior: contain !important;
 }
+
+/* ─── Consolidated Component Rules (overflow/scrollbars.css) ────────────────────────── */
+.resource-tabs {
+    scrollbar-width: none;
+}
+

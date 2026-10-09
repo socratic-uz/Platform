@@ -1,38 +1,6 @@
-.m3-mode-toggle,
-.mode-toggle {
-    width: 46px;
-}
-
-.m3-mode-toggle-figure,
-.mode-toggle-figure {
-    height: 46px;
-    grid-template-columns: repeat(3, 46px);
-    justify-items: center;
-    align-content: center;
-}
-
-.m3-mode-toggle-icon,
-.mode-toggle-icon {
-    width: 30px;
-    height: 30px;
-    transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.m3-mode-toggle-figure > :nth-child(1),
-.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
-    stroke: var(--md-sys-color-on-primary-container);
-    grid-column: -3 / -2;
-}
-
-.m3-mode-toggle-figure > :nth-child(2),
-.mode-toggle-figure > .mode-toggle-icon:nth-child(2) {
-    fill: var(--md-sys-color-on-surface);
-    grid-column: -2 / -1;
-}
-
-#app.dark-mode .m3-mode-toggle-icon,
-#app.dark-mode .mode-toggle-icon {
-    grid-column: initial;
-}
-
-
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Material Design 3 - theme-toggle
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
+   ========================================================================== */

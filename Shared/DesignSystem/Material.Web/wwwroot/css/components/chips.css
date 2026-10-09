@@ -1,42 +1,6 @@
-/* Material Design 3 Expressive - Filter Chips & Segmented Controls */
-
-.m3-filter-chip {
-    grid-auto-columns: max-content auto max-content;
-    gap: 0.5rem;
-    height: 40px;
-    padding: 0 1rem;
-    font-size: 0.875rem;
-    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-                transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
-}
-
-@media (pointer: coarse) {
-    .m3-filter-chip {
-    }
-}
-
-.m3-filter-chip:hover {
-    border-color: var(--md-sys-color-outline);
-    transform: translateY(-1px);
-}
-
-/* active scale consolidated to w3c transitions */
-
-.m3-filter-chip.active,
-.m3-filter-chip[aria-selected="true"] {
-    border-color: var(--md-sys-color-secondary-container);
-}
-
-.m3-filter-chip-icon {
-    font-size: 18px !important;
-    width: 18px !important;
-    height: 18px !important;
-}
-
-.m3-filter-chip-count {
-    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.1);
-    padding: 0.1rem 0.45rem;
-    font-size: 0.75rem;
-}
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Material Design 3 - chips
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
+   ========================================================================== */

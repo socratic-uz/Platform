@@ -297,3 +297,333 @@
 ) {
     object-fit: cover;
 }
+
+/* ─── Consolidated Component Rules (box-model/sizing.css) ────────────────────────── */
+.avatar-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    --md-outlined-button-container-height: 40px;
+    --md-outlined-button-icon-size: 20px;
+    --md-outlined-button-outline-width: 1.5px;
+}
+
+.avatar-button::before {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+md-dialog.contacts,
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+}
+
+.m3-status-dot,
+.status-dot {
+    width: 8px;
+    height: 8px;
+}
+
+.m3-count-badge,
+.count-badge {
+    min-width: 28px;
+    height: 24px;
+}
+
+.kds-qty-badge,
+.item-qty-badge {
+    height: auto;
+}
+
+md-icon-button {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
+    width: var(--md-icon-size, 18px);
+    height: var(--md-icon-size, 18px);
+}
+
+:is(.m3-summary-divider, .summary-divider) {
+    height: 1px;
+}
+
+:is(.m3-card-media, .org-media, .wishlist-media) {
+    aspect-ratio: 16 / 9;
+}
+
+:is(.m3-card-media-placeholder, .org-media-placeholder) :is(md-icon, .material-symbols-outlined) {
+    width: 48px;
+    height: 48px;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    height: 1px;
+}
+
+md-filled-card.product-card,
+.product-card {
+    min-height: 320px;
+}
+
+.wishlist-media {
+    height: 180px;
+}
+
+.wishlist-details-thumb {
+    max-height: 150px;
+}
+
+.m3-filter-chip {
+    height: 40px;
+}
+
+.m3-filter-chip-icon {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    width: min(90vw, 540px);
+    max-height: min(85dvh, 720px);
+}
+
+.m3-dialog-close-btn {
+    width: var(--md-sys-touch-target-compact);
+    height: var(--md-sys-touch-target-compact);
+    min-width: var(--md-sys-touch-target-compact);
+    min-height: var(--md-sys-touch-target-compact);
+}
+
+.m3-dialog-toggle-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+md-dialog {
+    width: auto;
+    max-width: min(92vw, 560px);
+    max-height: min(90vh, 90dvh);
+}
+
+.m3-empty-state-icon {
+    width: 56px !important;
+    height: 56px !important;
+}
+
+.m3-empty-state-desc {
+    max-width: 440px;
+}
+
+.store-not-found {
+    max-width: 500px;
+}
+
+.kiosk-empty-state p {
+    max-width: 380px;
+}
+
+input[type="color"] {
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
+}
+
+::-webkit-color-swatch-wrapper,
+::-webkit-color-swatch {
+    height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
+}
+
+:is(.m3-counter, .material-counter) :is(button, md-filled-button, md-outlined-button) {
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-filled-icon-button-container-width: var(--md-sys-touch-target-min);
+    --md-filled-icon-button-container-height: var(--md-sys-touch-target-min);
+}
+
+.picker-trigger-card {
+    min-height: 64px;
+}
+
+.picker-icon-badge {
+    width: 44px;
+    height: 44px;
+}
+
+.picker-badge md-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.picker-native-input {
+    width: 200%;
+    height: 200%;
+}
+
+.picker-swatch-wrapper {
+    width: 28px;
+    height: 28px;
+}
+
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+.picker-hex-input {
+    width: 68px;
+}
+
+.picker-palette-swatch {
+    width: 32px;
+    height: 32px;
+}
+
+.file-card {
+    aspect-ratio: 1;
+}
+
+.icon-preview md-icon {
+    --md-icon-size: 40px;
+}
+
+.upload-card {
+    aspect-ratio: 1;
+}
+
+.picker-day-dot {
+    width: 20px;
+    height: 20px;
+}
+
+.lang-chip-btn {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+.lang-pill-btn {
+    min-height: var(--md-sys-touch-target-compact);
+}
+
+.lang-globe-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.lang-chevron {
+    width: 16px;
+    height: 16px;
+}
+
+.lang-dropdown-menu {
+    min-width: 130px;
+}
+
+.canvas-wrapper {
+    height: clamp(180px, 30vh, 240px);
+}
+
+:is(.m3-progress-track, .progress-bar-bg) {
+    height: 8px;
+}
+
+:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
+    height: 40px;
+}
+
+:is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"] {
+    width: 20px;
+    height: 20px;
+}
+
+.m3-skeleton-text {
+    height: 1rem;
+    .m3-skeleton-text.m3-short,
+.m3-skeleton-text.short {
+    width: 60%;
+}
+
+.m3-skeleton-circle {
+    width: var(--md-sys-touch-target-min);
+    height: var(--md-sys-touch-target-min);
+}
+
+.m3-skeleton-card {
+    height: 240px;
+}
+
+.orders-table {
+    min-width: min(100%, 680px);
+}
+
+.table-container::-webkit-scrollbar {
+    width: auto;
+    height: 8px;
+}
+
+.col-title {
+    min-width: 0px;
+}
+
+.sort-indicator {
+    width: 1rem;
+    height: 1rem;
+}
+
+.col-options-button {
+    width: 1rem;
+}
+
+.paginator nav button {
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 36px;
+    min-height: 36px;
+}
+
+.card-grid {
+    max-width: 1440px;
+}
+
+.smart-grid-container textarea {
+    min-height: 10rem;
+}
+
+.m3-mode-toggle,
+.mode-toggle {
+    width: 46px;
+}
+
+.m3-mode-toggle-figure,
+.mode-toggle-figure {
+    height: 46px;
+}
+
+.m3-mode-toggle-icon,
+.mode-toggle-icon {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 599.98px) {
+    .wishlist-media {
+        height: 140px;
+    }
+
+}
+
+@container (max-width: 480px) {
+    .picker-trigger-left {
+        min-width: 100%;
+    }
+
+}
+

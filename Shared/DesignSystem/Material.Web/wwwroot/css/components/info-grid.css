@@ -1,22 +1,6 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Material Design 3 Expressive - Key-Value Info Grid Component
-   Used for: Profile summaries, Specifications, Key-Value details
-   Strict CSS Grid, Zero Flexbox Standard
+   Material Design 3 - info-grid
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
    ========================================================================== */
-
-:is(.m3-info-grid, .info-grid) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-}
-
-:is(.m3-info-item, .info-item) {
-    align-content: start;
-}
-
-:is(.m3-info-label, .info-label) {
-    font-size: 0.8125rem;
-    letter-spacing: 0.5px;
-}
-
-:is(.m3-info-value, .info-value) {
-    font-size: 1.05rem;
-}

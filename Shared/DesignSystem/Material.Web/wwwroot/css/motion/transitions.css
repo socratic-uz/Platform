@@ -148,3 +148,189 @@
         scroll-behavior: auto !important;
     }
 }
+
+/* ─── Consolidated Component Rules (motion/transitions.css) ────────────────────────── */
+.back-button,
+.m3-back-button {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+md-filled-button,
+md-outlined-button,
+md-elevated-button,
+md-tonal-button,
+md-text-button {
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+.m3-card,
+[class*="m3-card-"],
+.card-glass,
+.glass-card,
+.card-elevated,
+.card-outlined,
+.card-filled {
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-card-interactive::before,
+.card-interactive::before {
+    transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-card-interactive:active,
+.card-interactive:active {
+    transition: transform var(--md-sys-motion-duration-short1) var(--md-sys-motion-easing-spring);
+}
+
+:is(.m3-media-card, .media-card, .org-card) {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+:is(.m3-card-media, .org-media, .wishlist-media) img {
+    transition: transform var(--md-sys-motion-duration-medium1) ease;
+}
+
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard);
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card):active {
+    transition-duration: var(--md-sys-motion-duration-short2);
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) figure > img {
+    transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-expressive-standard);
+}
+
+.m3-filter-chip {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+.m3-dialog-close-btn {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-dialog-toggle-item {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-dialog-btn-primary {
+    transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.picker-trigger-card {
+    transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.picker-icon-badge {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
+}
+
+.picker-palette-swatch {
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
+                box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+.file-card {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.icon-preview {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.file-overlay {
+    transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.upload-card {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+.upload-icon {
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-bouncy);
+}
+
+.picker-day-dot {
+    transition: background-color var(--md-sys-motion-duration-short3), color var(--md-sys-motion-duration-short3);
+}
+
+.md3-schedule-day-card {
+    transition: background-color var(--md-sys-motion-duration-short3), border-color var(--md-sys-motion-duration-short3);
+}
+
+.lang-chip-btn {
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-pill-btn {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-chevron {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-menu-item {
+    transition: background var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+.option-item-row {
+    transition: background-color var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+:is(.m3-progress-fill, .progress-bar-fill) {
+    transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+:is(.analytics-mode-btn, .m3-segmented-btn) {
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
+}
+
+:is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
+}
+
+.paginator nav button {
+    transition: background-color var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+.drop-container {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), border var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.drop-title {
+    transition: color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-mode-toggle-icon,
+.mode-toggle-icon {
+    transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+

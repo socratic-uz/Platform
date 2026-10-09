@@ -14,3 +14,40 @@
 .m3-object-fill {
     object-fit: fill !important;
 }
+
+/* ─── Consolidated Component Rules (content/replaced.css) ────────────────────────── */
+.avatar-button::before {
+    content: '';
+}
+
+:is(.avatar-container, md-dialog.contacts) details summary {
+    list-style: none;
+}
+
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    content: '';
+}
+
+.m3-card-interactive::before,
+.card-interactive::before {
+    content: '';
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    content: '';
+}
+
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
+    content: '';
+}
+
+.m3-skeleton::after {
+    content: '';
+}
+
+.col-width-draghandle:after {
+    content: ' ';
+}
+

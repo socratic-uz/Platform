@@ -1,45 +1,6 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Material Design 3 - Segmented Button & Mode Selector Primitives
-   Strict CSS Grid Architecture (Zero Flexbox)
+   Material Design 3 - segmented-button
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
    ========================================================================== */
-
-:is(.analytics-mode-pill-group, .m3-segmented-pill-group) {
-    padding: 4px;
-}
-
-:is(.analytics-mode-btn, .m3-segmented-btn) {
-    grid-template-columns: auto auto;
-    gap: 0.4rem;
-    padding: 6px 14px;
-    font-size: 0.85rem;
-    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
-}
-
-:is(.analytics-mode-btn, .m3-segmented-btn):hover    {
-    /* consolidated to w3c rules */
-}
-
-:is(.analytics-mode-btn, .m3-segmented-btn).active   {
-    /* consolidated to w3c rules */
-}
-
-:is(.analytics-mode-btn, .m3-segmented-btn) md-icon {
-    font-size: 1.1rem;
-}
-
-:is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
-    grid-template-columns: auto auto auto;
-    gap: 0.5rem;
-    padding: 8px 16px;
-    font-size: 0.875rem;
-    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
-}
-
-:is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
-    border-color: var(--md-sys-color-outline);
-}
-
-:is(.analytics-header-controls, .m3-header-controls) {
-    grid-template-columns: auto auto;
-    gap: 0.75rem;
-}

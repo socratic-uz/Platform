@@ -50,3 +50,55 @@
 .m3-z-tooltip {
     z-index: var(--md-sys-z-tooltip) !important;
 }
+
+/* ─── Consolidated Component Rules (positioning/stacking.css) ────────────────────────── */
+.avatar-button img {
+    z-index: 1;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    z-index: 1;
+}
+
+.wishlist-wish-btn {
+    z-index: 3;
+}
+
+:is(.m3-modal-backdrop, .m3-dialog-backdrop) {
+    z-index: var(--md-sys-z-dialog-backdrop);
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    z-index: var(--md-sys-z-dialog);
+}
+
+.file-overlay {
+    z-index: 3;
+}
+
+.new-badge {
+    z-index: 4;
+}
+
+.file-input-hidden {
+    z-index: 2;
+}
+
+.lang-dropdown-menu {
+    z-index: 100;
+}
+
+.table-container th.actions-column,
+table.quickgrid th.actions-column {
+    z-index: 2;
+}
+
+.table-container td.actions-column,
+table.quickgrid td.actions-column {
+    z-index: 1;
+}
+
+.col-options {
+    z-index: 10;
+}
+

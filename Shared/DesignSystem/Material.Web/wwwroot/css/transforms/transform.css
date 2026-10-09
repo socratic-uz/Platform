@@ -10,3 +10,97 @@
 .m3-origin-center {
     transform-origin: center !important;
 }
+
+/* ─── Consolidated Component Rules (transforms/transform.css) ────────────────────────── */
+.avatar-button::before {
+    transform: translate(-50%, -50%);
+}
+
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    transform: translate(-50%, -50%) !important;
+}
+
+.m3-card-interactive:hover,
+.card-interactive:hover {
+    transform: translateY(-3px) scale(1.006);
+}
+
+.m3-card-interactive:active,
+.card-interactive:active {
+    transform: scale(0.97);
+}
+
+:is(.m3-media-card, .media-card, .org-card):hover {
+    transform: translateY(-2px);
+}
+
+:is(.m3-media-card:hover .m3-card-media, .org-card:hover .org-media, .product-card:hover .wishlist-media) img {
+    transform: scale(1.04);
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card):hover {
+    transform: translateY(-3px) scale(1.004);
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card):active {
+    transform: translateY(0) scale(0.985);
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card):hover figure > img {
+    transform: scale(1.03);
+}
+
+.m3-filter-chip:hover {
+    transform: translateY(-1px);
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    transform: translate(-50%, -50%);
+}
+
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
+    transform: translate(-50%, -50%);
+}
+
+.picker-palette-swatch:hover {
+    transform: scale(1.15);
+}
+
+.file-card:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.upload-card:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.upload-card:hover .upload-icon {
+    transform: scale(1.2) rotate(6deg);
+}
+
+.lang-chip-btn:hover {
+    transform: translateY(-1px);
+}
+
+.lang-chip-btn:active {
+    transform: scale(0.96);
+}
+
+.lang-chevron.is-open {
+    transform: rotate(180deg);
+}
+
+.m3-skeleton::after {
+    transform: translateX(-100%);
+}
+
+.col-sort-asc .sort-indicator {
+    transform: scaleY(-1);
+}
+
+.go-next, .go-last {
+    transform: scaleX(-1);
+}
+

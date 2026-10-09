@@ -84,3 +84,28 @@
 .m3-outline-none:focus-visible {
     outline: none !important;
 }
+
+/* ─── Consolidated Component Rules (box-model/outline.css) ────────────────────────── */
+.back-button:hover,
+.back-button:focus-visible,
+.m3-back-button:hover,
+.m3-back-button:focus-visible {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--md-sys-color-primary);
+}
+
+.invalid {
+    outline: 1px solid var(--md-sys-color-error);
+}
+
+.picker-hex-input {
+    outline: none;
+}
+
+.md3-time-input {
+    outline: none;
+}
+

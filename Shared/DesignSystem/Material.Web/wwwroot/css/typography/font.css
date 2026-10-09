@@ -290,3 +290,540 @@ md-dialog:not(:defined) {
 ) {
     text-transform: uppercase;
 }
+
+/* ─── Consolidated Component Rules (typography/font.css) ────────────────────────── */
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    font-size: 24px !important;
+    line-height: 24px !important;
+}
+
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline {
+    font-size: 1.25rem;
+}
+
+.badge,
+.m3-badge,
+.status-badge,
+.m3-status-badge,
+.order-status-badge,
+.item-status-pill {
+    font-size: 0.8rem;
+}
+
+.badge-counter {
+    font-size: 0.75rem;
+}
+
+.m3-pill-badge {
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+}
+
+.m3-count-badge,
+.count-badge {
+    font-size: 0.8rem;
+}
+
+.kds-qty-badge,
+.item-qty-badge {
+    font-size: 0.875rem;
+}
+
+.kds-status-tag {
+    font-size: 0.75rem;
+}
+
+.back-button,
+.m3-back-button {
+    font-size: 0.9375rem;
+}
+
+.back-icon,
+.m3-back-icon {
+    font-size: 1.25rem;
+}
+
+.items-count-badge {
+    font-size: 0.875rem;
+}
+
+.badge-icon {
+    font-size: 1.125rem;
+}
+
+:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
+    font-size: var(--md-icon-size, 18px);
+}
+
+:is(.m3-card-title, .card-title) {
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+:is(.m3-card-subtitle, .card-subtitle) {
+    font-size: 0.875rem;
+}
+
+:is(.m3-summary-title, .summary-title) {
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+}
+
+:is(.m3-row-label, .row-label) {
+    font-size: 0.9375rem;
+}
+
+:is(.m3-row-value, .row-value) {
+    font-size: 0.9375rem;
+    text-align: right;
+}
+
+:is(.m3-total-label, .total-label) {
+    font-size: 1.0625rem;
+}
+
+:is(.m3-total-value, .total-value) {
+    font-size: 1.45rem;
+}
+
+:is(.m3-card-media-placeholder, .org-media-placeholder) :is(md-icon, .material-symbols-outlined) {
+    font-size: 48px;
+}
+
+.org-card-name {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.org-card-desc {
+    font-size: 0.85rem;
+}
+
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    font: inherit;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+.product-title {
+    font-size: 1.05rem;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) p {
+    font-size: 0.85rem;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag {
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.wishlist-title-text {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.wishlist-desc-text {
+    font-size: 0.85rem;
+}
+
+.wishlist-price-tag {
+    font-size: 1rem;
+}
+
+.wishlist-details-desc {
+    font-size: 0.95rem;
+}
+
+.wishlist-details-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.m3-filter-chip {
+    font-size: 0.875rem;
+}
+
+.m3-filter-chip-icon {
+    font-size: 18px !important;
+}
+
+.m3-filter-chip-count {
+    font-size: 0.75rem;
+}
+
+.m3-dialog-icon {
+    font-size: 1.35rem;
+}
+
+.m3-dialog-header h3 {
+    font-size: 1.25rem;
+}
+
+.m3-dialog-description {
+    font-size: 0.88rem;
+}
+
+.m3-dialog-toggle-title {
+    font-size: 0.9rem;
+}
+
+.m3-dialog-toggle-desc {
+    font-size: 0.78rem;
+}
+
+.m3-dialog-toggle-icon {
+    font-size: 1.25rem;
+}
+
+.m3-dialog-btn-primary {
+    font-size: 0.95rem;
+}
+
+.m3-empty-state-icon {
+    font-size: 56px !important;
+}
+
+.m3-empty-state-title {
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+}
+
+.m3-empty-state-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.m3-empty-column,
+.column-empty,
+.kds-empty-col {
+    font-size: 0.9rem;
+}
+
+.m3-empty-column p,
+.column-empty p,
+.kds-empty-col p {
+    font-size: 0.9375rem;
+}
+
+.m3-empty-column-icon,
+.empty-mini-icon,
+.kds-empty-icon {
+    font-size: 36px !important;
+}
+
+.store-not-found .not-found-icon {
+    font-size: 4rem;
+}
+
+.pos-empty-icon {
+    font-size: 44px;
+}
+
+.pos-empty-state h5 {
+    font-size: 1.1rem;
+}
+
+.pos-empty-state p {
+    font-size: 0.82rem;
+}
+
+.kiosk-empty-icon {
+    font-size: 56px;
+}
+
+.kiosk-empty-state h3 {
+    font-size: 1.3rem;
+}
+
+.kiosk-empty-state p {
+    font-size: 0.9rem;
+}
+
+.m3-legend {
+    font-size: 0.875rem;
+}
+
+.validation-message {
+    font-size: 0.8125rem;
+}
+
+:is(.m3-banner-error, .error-banner) {
+    font-size: 0.9375rem;
+}
+
+:is(.m3-banner-error, .error-banner) .error-icon {
+    font-size: 1.5rem;
+}
+
+:is(.m3-counter, .material-counter) :is(button, md-filled-button, md-outlined-button) {
+    font-size: 0.85rem;
+}
+
+:is(.m3-info-label, .info-label) {
+    font-size: 0.8125rem;
+    letter-spacing: 0.5px;
+}
+
+:is(.m3-info-value, .info-value) {
+    font-size: 1.05rem;
+}
+
+:is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title) {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.picker-trigger-title {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.picker-badge {
+    font-size: 11px;
+}
+
+.picker-badge md-icon {
+    font-size: 13px;
+}
+
+.picker-preview-text {
+    font-size: 13px;
+}
+
+.picker-hex-prefix {
+    font-size: 13px;
+}
+
+.picker-hex-input {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+}
+
+.picker-popover-title {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.picker-swatch-check {
+    font-size: 16px;
+}
+
+.icon-preview md-icon {
+    font-size: 40px;
+}
+
+.file-name {
+    font-family: var(--md-sys-typescale-body-small-font);
+    font-size: 0.75rem;
+}
+
+.new-badge {
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.upload-icon {
+    font-size: 28px;
+}
+
+.upload-text {
+    font-family: var(--md-sys-typescale-body-small-font);
+    font-size: 0.8rem;
+}
+
+.upload-subtext {
+    font-family: var(--md-sys-typescale-body-small-font);
+    font-size: 0.65rem;
+}
+
+.picker-day-dot {
+    font-size: 10px;
+}
+
+.md3-dialog-headline {
+    font-size: 1.2rem;
+}
+
+.md3-headline-icon {
+    font-size: 24px;
+}
+
+.md3-schedule-subtitle {
+    font-size: 13px;
+}
+
+.md3-time-label {
+    font-size: 11px;
+}
+
+.md3-time-input {
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.md3-time-separator {
+    font-size: 12px;
+}
+
+.md3-closed-badge {
+    font-size: 12px;
+}
+
+.lang-chip-btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.lang-pill-btn {
+    font-size: 0.8rem;
+}
+
+.lang-globe-icon {
+    font-size: 18px;
+}
+
+.lang-current-label {
+    letter-spacing: 0.02em;
+}
+
+.lang-chevron {
+    font-size: 16px;
+}
+
+.lang-menu-item {
+    font-size: 0.825rem;
+}
+
+.variant-dialog-title {
+    font-size: 1.2rem;
+}
+
+.variant-dialog-subtext {
+    font-size: 0.85rem;
+}
+
+.label-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+}
+
+.required-badge {
+    font-size: 0.7rem;
+    text-transform: none;
+}
+
+.option-add-price {
+    font-size: 0.82rem;
+}
+
+.price-label {
+    font-size: 0.82rem;
+}
+
+.price-value {
+    font-size: 1.25rem;
+}
+
+.headline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.body-subtext {
+    font-size: 0.85rem;
+}
+
+.summary-check-icon {
+    font-size: 28px;
+}
+
+.summary-title {
+    font-size: 0.95rem;
+}
+
+.summary-date {
+    font-size: 0.82rem;
+}
+
+:is(.m3-progress-labels, .progress-labels) {
+    font-size: 0.8125rem;
+}
+
+:is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"] {
+    font-size: 20px;
+}
+
+:is(.analytics-mode-btn, .m3-segmented-btn) {
+    font-size: 0.85rem;
+}
+
+:is(.analytics-mode-btn, .m3-segmented-btn) md-icon {
+    font-size: 1.1rem;
+}
+
+:is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
+    font-size: 0.875rem;
+}
+
+.m3-table,
+.order-items-table {
+    font-size: 0.9375rem;
+}
+
+.orders-table th {
+    font-size: 0.85rem;
+}
+
+.orders-table td {
+    font-size: 0.9rem;
+}
+
+.table-icon {
+    font-size: 18px;
+}
+
+.smart-grid-container h4 {
+    font-size: 1.25rem;
+}
+
+.table-container th.actions-column,
+table.quickgrid th.actions-column {
+    text-align: right;
+}
+
+.table-container td.actions-column,
+table.quickgrid td.actions-column {
+    text-align: right;
+}
+
+button.col-title {
+    font: inherit;
+}
+
+td.col-justify-end,
+td.col-justify-right,
+.col-justify-end .col-title {
+    text-align: right;
+}
+
+.pagination-text {
+    font-size: 0.85rem;
+}
+
+.drop-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 599.98px) {
+    .wishlist-title-text {
+        font-size: 0.9rem;
+    }
+
+}
+

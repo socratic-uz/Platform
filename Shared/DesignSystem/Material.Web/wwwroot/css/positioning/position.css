@@ -131,3 +131,106 @@
 .col-width-draghandle::after {
     top: 0;
 }
+
+/* ─── Consolidated Component Rules (positioning/position.css) ────────────────────────── */
+.avatar-button::before {
+    top: 50%;
+    left: 50%;
+}
+
+.avatar-button img {
+    inset: 0;
+}
+
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    top: 50% !important;
+    left: 50% !important;
+}
+
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    inset: -3px;
+}
+
+.m3-card-interactive::before,
+.card-interactive::before {
+    inset: 0;
+}
+
+.wishlist-wish-btn {
+    top: 10px;
+    right: 10px;
+}
+
+:is(.m3-modal-backdrop, .m3-dialog-backdrop) {
+    position: fixed;
+    inset: 0;
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.picker-native-input {
+    top: -10px;
+    left: -10px;
+}
+
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before {
+    top: 50%;
+    left: 50%;
+}
+
+.file-overlay {
+    bottom: 0;
+}
+
+.new-badge {
+    top: 6px;
+    left: 6px;
+}
+
+.lang-dropdown-menu {
+    top: calc(100% + 6px);
+}
+
+.m3-skeleton::after {
+    inset: 0;
+}
+
+.table-container th.actions-column,
+table.quickgrid th.actions-column {
+    position: sticky;
+}
+
+.table-container td.actions-column,
+table.quickgrid td.actions-column {
+    position: sticky;
+}
+
+.col-justify-end .col-options {
+    left: unset;
+}
+
+.col-justify-start .col-options {
+    right: unset;
+}
+
+.col-width-draghandle {
+    bottom: 0;
+    right: 0rem;
+}
+
+.col-width-draghandle:after {
+    bottom: 0;
+}
+
+.paginator,
+.table-container > .paginator {
+    position: sticky;
+}
+

@@ -18,3 +18,13 @@
 .m3-content-auto {
     content-visibility: auto !important;
 }
+
+/* ─── Consolidated Component Rules (containment/contain.css) ────────────────────────── */
+.picker-trigger-card {
+    container-type: inline-size;
+}
+
+.smart-grid-container {
+    container-type: inline-size;
+}
+

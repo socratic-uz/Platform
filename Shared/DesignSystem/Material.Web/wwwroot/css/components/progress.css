@@ -1,23 +1,6 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Material Design 3 - Progress Indicators & Progress Bar Primitives
-   Strict CSS Grid Architecture (Zero Flexbox)
+   Material Design 3 - progress
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
    ========================================================================== */
-
-:is(.m3-progress-container, .progress-bar-container)    {
-    /* consolidated to w3c rules */
-}
-
-:is(.m3-progress-track, .progress-bar-bg) {
-    background-color: var(--md-sys-color-surface-variant);
-    height: 8px;
-}
-
-:is(.m3-progress-fill, .progress-bar-fill) {
-    background-color: var(--md-sys-color-primary);
-    border-radius: inherit;
-    transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
-}
-
-:is(.m3-progress-labels, .progress-labels) {
-    font-size: 0.8125rem;
-}

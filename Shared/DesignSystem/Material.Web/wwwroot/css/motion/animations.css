@@ -75,3 +75,18 @@
 .m3-animate-shimmer {
     animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
 }
+
+/* ─── Consolidated Component Rules (motion/animations.css) ────────────────────────── */
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    animation: m3-pulse 2s var(--md-sys-motion-easing-spring) infinite;
+}
+
+.picker-popover-panel {
+    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
+}
+
+.m3-skeleton::after {
+    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
+}
+

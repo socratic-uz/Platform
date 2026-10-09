@@ -55,3 +55,43 @@
 ) {
     overflow: hidden;
 }
+
+/* ─── Consolidated Component Rules (overflow/overflow.css) ────────────────────────── */
+.avatar-button {
+    overflow: visible;
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    overflow-y: auto;
+}
+
+md-dialog [slot="content"] {
+    overflow-x: hidden;
+}
+
+.picker-swatch-wrapper {
+    overflow: visible;
+}
+
+.md3-presets-row {
+    overflow-x: auto;
+}
+
+.resource-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.m3-table-wrapper,
+.order-items-table-wrapper {
+    overflow-x: auto;
+}
+
+.table-container {
+    overflow: auto;
+}
+
+.smart-grid-container textarea {
+    overflow: auto;
+}
+

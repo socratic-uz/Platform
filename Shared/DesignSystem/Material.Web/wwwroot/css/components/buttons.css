@@ -1,38 +1,6 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Material Design 3 Expressive - Button Primitives & Interactive Enhancements
-   Strict CSS Grid Architecture (Zero Flexbox)
+   Material Design 3 - buttons
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
    ========================================================================== */
-
-md-filled-button,
-md-outlined-button,
-md-elevated-button,
-md-tonal-button,
-md-text-button {
-    --md-filled-button-container-shape: var(--md-sys-shape-corner-full);
-    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
-    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
-    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
-    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
-}
-
-/* active scale consolidated to w3c transitions */
-
-/* Touch-optimized Icon Button (48px Touch Target) */
-md-icon-button {
-    min-width: var(--md-sys-touch-target-min);
-}
-
-/* Icons inside buttons in default slot (unslotted) - fix vertical misalignment */
-:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
-    vertical-align: middle;
-    margin-inline-end: var(--md-sys-spacing-2);
-    font-size: var(--md-icon-size, 18px);
-    width: var(--md-icon-size, 18px);
-    height: var(--md-icon-size, 18px);
-}
-
-/* Trailing unslotted icons in buttons */
-:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) > *:last-child:is(md-icon:not([slot])) {
-    margin-inline-end: 0;
-    margin-inline-start: var(--md-sys-spacing-2);
-}

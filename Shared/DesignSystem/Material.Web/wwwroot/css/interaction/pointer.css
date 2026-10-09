@@ -87,3 +87,45 @@
 ) {
     touch-action: manipulation;
 }
+
+/* ─── Consolidated Component Rules (interaction/pointer.css) ────────────────────────── */
+.m3-card-interactive::before,
+.card-interactive::before {
+    pointer-events: none;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    pointer-events: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.picker-trigger-card.disabled {
+    pointer-events: none;
+}
+
+.grid-chip-readonly {
+    pointer-events: none;
+}
+
+.col-width-draghandle {
+    cursor: ew-resize;
+}
+
+.paginator nav button[disabled] {
+    cursor: not-allowed;
+}
+

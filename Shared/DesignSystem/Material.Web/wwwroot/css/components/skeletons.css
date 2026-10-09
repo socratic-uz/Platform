@@ -1,37 +1,6 @@
-/* Material Design 3 Expressive - Zero-CLS Skeleton Shimmer Engine */
-
-.m3-skeleton    {
-    /* consolidated to w3c rules */
-}
-
-.m3-skeleton::after {
-    content: '';
-    inset: 0;
-    transform: translateX(-100%);
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.45) 50%,
-        transparent 100%
-    );
-    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
-}
-
-.m3-skeleton-text {
-    height: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: var(--md-sys-shape-corner-extra-small);
-
-.m3-skeleton-text.m3-short,
-.m3-skeleton-text.short {
-    width: 60%;
-}
-
-.m3-skeleton-circle {
-    width: var(--md-sys-touch-target-min);
-    height: var(--md-sys-touch-target-min);
-}
-
-.m3-skeleton-card {
-    height: 240px;
-}
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Material Design 3 - skeletons
+   All rules consolidated to W3C CSS Specification Modules.
+   Zero styles remain in components/ per architecture standard.
+   ========================================================================== */

@@ -58,3 +58,154 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     margin: 0;
 }
+
+/* ─── Consolidated Component Rules (box-model/margin.css) ────────────────────────── */
+:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
+    margin-inline-end: var(--md-sys-spacing-2);
+}
+
+:is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) > *:last-child:is(md-icon:not([slot])) {
+    margin-inline-end: 0;
+    margin-inline-start: var(--md-sys-spacing-2);
+}
+
+:is(.m3-summary-divider, .summary-divider) {
+    margin: var(--md-sys-spacing-1) 0;
+}
+
+:is(.m3-summary-actions, .summary-actions) {
+    margin-top: var(--md-sys-spacing-2);
+}
+
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    margin-bottom: 0;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) section {
+    margin: 10px 0;
+}
+
+:is(md-filled-card, md-outlined-card, md-elevated-card) .card-footer {
+    margin-top: 4px;
+}
+
+.wishlist-content {
+    margin-top: 10px;
+}
+
+.wishlist-card-footer {
+    margin-top: 12px;
+}
+
+.wishlist-details-price-row {
+    margin-top: 12px;
+}
+
+.m3-empty-state {
+    margin: var(--md-sys-spacing-6) 0;
+}
+
+.m3-empty-state-icon {
+    margin-bottom: var(--md-sys-spacing-2);
+}
+
+.m3-empty-state-desc {
+    margin-bottom: var(--md-sys-spacing-3);
+}
+
+.m3-empty-state-action {
+    margin-top: var(--md-sys-spacing-2);
+}
+
+.store-not-found {
+    margin: 0 auto;
+}
+
+.store-not-found .not-found-icon {
+    margin-bottom: 0.5rem;
+}
+
+.store-not-found p {
+    margin-bottom: 1.5rem;
+}
+
+.kiosk-empty-state {
+    margin: var(--md-sys-spacing-4) 0;
+}
+
+.validation-message {
+    margin-top: var(--md-sys-spacing-1);
+}
+
+.picker-trigger-card {
+    margin-bottom: var(--md-sys-spacing-2);
+}
+
+.picker-custom-preview {
+    margin-top: 2px;
+}
+
+.picker-trigger-actions {
+    margin-left: auto;
+}
+
+.picker-popover-panel {
+    margin-bottom: 12px;
+}
+
+.file-picker-container {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.picker-week-mini-dots {
+    margin-top: 2px;
+}
+
+.variant-dialog-subtext {
+    margin-top: 2px;
+}
+
+.variant-dialog-body {
+    margin-top: 8px;
+}
+
+.label-title {
+    margin-bottom: 8px;
+}
+
+.canvas-header {
+    margin-bottom: 8px;
+}
+
+.slots-chip-set {
+    margin-top: 8px;
+}
+
+.m3-skeleton-text {
+    margin-bottom: 0.5rem;
+}
+
+.m3-table-actions-bar,
+.table-actions-bar {
+    margin-bottom: var(--md-sys-spacing-2);
+}
+
+.table-container::-webkit-scrollbar-track {
+    margin: 1rem;
+}
+
+.pagination-text {
+    margin: 0 0.5rem;
+}
+
+.paginator nav {
+    margin-left: auto;
+}
+
+.card-grid {
+    margin: 0 auto;
+}
+

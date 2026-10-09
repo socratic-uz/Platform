@@ -287,3 +287,248 @@
 ) {
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* ─── Consolidated Component Rules (box-model/border.css) ────────────────────────── */
+.avatar-button {
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
+}
+
+md-dialog.contacts,
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+:is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list {
+    border-radius: var(--md-sys-shape-expressive-button);
+}
+
+.m3-pill-badge {
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
+}
+
+.m3-pill-badge.tertiary {
+    border-color: rgb(from var(--md-sys-color-tertiary) r g b / 0.35);
+}
+
+.m3-pill-badge.secondary {
+    border-color: rgb(from var(--md-sys-color-secondary) r g b / 0.35);
+}
+
+md-filled-button,
+md-outlined-button,
+md-elevated-button,
+md-tonal-button,
+md-text-button {
+    --md-filled-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-elevated-button-container-shape: var(--md-sys-shape-corner-full);
+    --md-tonal-button-container-shape: var(--md-sys-shape-corner-full);
+}
+
+.m3-card-glass,
+.card-glass,
+.glass-card {
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
+}
+
+.m3-card-elevated,
+.card-elevated {
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
+}
+
+.m3-card-filled,
+.card-filled {
+    border: 1px solid transparent;
+}
+
+.m3-card-interactive::before,
+.card-interactive::before {
+    border-radius: inherit;
+}
+
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    border: var(--md-sys-glass-border-dark);
+}
+
+[data-theme="light"] :is(md-filled-card, md-outlined-card, md-elevated-card) {
+    border: var(--md-sys-glass-border-light);
+}
+
+.m3-filter-chip:hover {
+    border-color: var(--md-sys-color-outline);
+}
+
+.m3-filter-chip.active,
+.m3-filter-chip[aria-selected="true"] {
+    border-color: var(--md-sys-color-secondary-container);
+}
+
+:is(.m3-config-dialog, .m3-dialog-surface) {
+    border-radius: var(--md-sys-shape-expressive-dialog);
+}
+
+md-dialog {
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+.m3-empty-state {
+    border: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+.pos-empty-state {
+    border: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+.kiosk-empty-state {
+    border: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+md-outlined-text-field,
+md-filled-text-field,
+md-outlined-select,
+md-filled-select {
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
+}
+
+input[type="color"] {
+    border: 0;
+}
+
+:is(.m3-banner-error, .error-banner) {
+    border: 1px solid var(--md-sys-color-error);
+}
+
+.picker-trigger-card:hover {
+    border-color: var(--md-sys-color-outline);
+}
+
+.picker-popover-header {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.new-badge {
+    border-radius: var(--md-sys-shape-corner-extra-small);
+}
+
+.upload-card {
+    border: 2px dashed var(--md-sys-color-outline);
+}
+
+.upload-card.dragging {
+    border-style: solid;
+}
+
+.lang-inline-grid {
+    border-radius: var(--md-sys-shape-expressive-button);
+}
+
+.lang-pill-btn {
+    border-radius: var(--md-sys-shape-expressive-button);
+}
+
+.lang-pill-btn:hover {
+    border-color: var(--md-sys-color-outline);
+}
+
+.option-item-row {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.option-item-row:last-child {
+    border-bottom: none;
+}
+
+.booking-summary-banner {
+    border: 1px solid var(--md-sys-color-primary);
+}
+
+:is(.m3-progress-fill, .progress-bar-fill) {
+    border-radius: inherit;
+}
+
+:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
+    border-radius: var(--md-sys-shape-expressive-container);
+}
+
+:is(.analytics-date-picker-trigger, .m3-period-picker-trigger):hover {
+    border-color: var(--md-sys-color-outline);
+}
+
+.m3-skeleton-text {
+    border-radius: var(--md-sys-shape-corner-extra-small);
+}
+
+.m3-table th,
+.order-items-table th,
+.orders-table th {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.m3-table td,
+.order-items-table td,
+.orders-table td {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.m3-table tr:last-child td,
+.order-items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-container {
+    border-radius: 24px;
+}
+
+.table-container thead > :first-child > *,
+table.quickgrid thead > :first-child > * {
+    border-top: none;
+}
+
+.table-container tbody > :last-child > *,
+table.quickgrid tbody > :last-child > * {
+    border-bottom: none;
+}
+
+.table-container thead > * > :first-child,
+.table-container tbody > * > :first-child,
+table.quickgrid thead > * > :first-child,
+table.quickgrid tbody > * > :first-child {
+    border-left: none;
+}
+
+.table-container thead > * > :last-child,
+.table-container tbody > * > :last-child,
+table.quickgrid thead > * > :last-child,
+table.quickgrid tbody > * > :last-child {
+    border-right: none;
+}
+
+.table-container::-webkit-scrollbar-track {
+    border-radius: 24px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    border: 0.15rem solid transparent;
+    border-color: var(--md-sys-color-surface);
+}
+
+.col-width-draghandle:after {
+    border-left: 1px solid var(--md-sys-color-outline);
+}
+
+.paginator nav button {
+    border: 0;
+}
+
+.drop-container {
+    border-radius: 12px;
+    border: 2px dashed var(--md-sys-color-outline);
+}
+

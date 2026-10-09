@@ -246,3 +246,135 @@
 ) {
     color: var(--md-sys-color-on-secondary-container);
 }
+
+/* ─── Consolidated Component Rules (color/color.css) ────────────────────────── */
+.avatar-button {
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button svg * {
+    fill: var(--md-sys-color-on-primary-container);
+}
+
+md-dialog.contacts,
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.m3-status-badge.warning,
+.m3-status-badge.making,
+.m3-status-badge.status-making,
+.order-status-badge.status-making,
+.item-status-pill.status-making,
+.badge-making,
+.badge-paused,
+.badge.paused {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.badge-pro,
+.badge.pro {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.m3-status-badge.error,
+.m3-status-badge.canceled,
+.m3-status-badge.status-canceled,
+.order-status-badge.status-canceled,
+.item-status-pill.status-canceled,
+.badge-none,
+.badge.none,
+.badge-blocked,
+.badge.blocked {
+    color: var(--md-sys-color-on-error-container);
+}
+
+.badge-with-ads,
+.badge.with-ads,
+.badge-expired,
+.badge.expired {
+    color: var(--md-sys-color-error);
+}
+
+.m3-pill-badge.tertiary {
+    color: var(--md-sys-color-tertiary);
+}
+
+.m3-pill-badge.secondary {
+    color: var(--md-sys-color-secondary);
+}
+
+.m3-card-interactive,
+.card-interactive {
+    color: inherit;
+}
+
+.m3-dialog-toggle-item input[type="checkbox"] {
+    accent-color: var(--md-sys-color-primary);
+}
+
+.validation-message {
+    color: var(--md-sys-color-error);
+}
+
+:is(.m3-banner-error, .error-banner) {
+    color: var(--md-sys-color-on-error-container);
+}
+
+:is(.m3-pdf-type, .pdf-type) {
+    color: var(--md-sys-color-on-error-container);
+}
+
+:is(.m3-doc-type, .doc-type) {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+:is(.m3-sheet-type, .sheet-type) {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+:is(.m3-archive-type, .archive-type) {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+:is(.m3-audio-type, .audio-type) {
+    color: var(--md-sys-color-primary);
+}
+
+:is(.m3-video-type, .video-type) {
+    color: var(--md-sys-color-on-surface);
+}
+
+:is(.m3-generic-type, .generic-type) {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.required-badge {
+    color: var(--md-sys-color-on-error-container);
+}
+
+:is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field) {
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+}
+
+button.col-title {
+    color: inherit;
+}
+
+.m3-mode-toggle-figure > :nth-child(1),
+.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
+    stroke: var(--md-sys-color-on-primary-container);
+}
+
+.m3-mode-toggle-figure > :nth-child(2),
+.mode-toggle-figure > .mode-toggle-icon:nth-child(2) {
+    fill: var(--md-sys-color-on-surface);
+}
+
