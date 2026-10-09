@@ -23,7 +23,6 @@
 .analytics-kpi-card:hover {
     transform: translateY(-2px);
     border-color: var(--md-sys-color-outline, rgba(255, 255, 255, 0.2));
-    box-shadow: var(--md-sys-elevation-level2, 0 4px 12px rgba(0,0,0,0.2));
 }
 
 .kpi-header {
@@ -169,7 +168,6 @@
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
     font-weight: 600;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .analytics-mode-btn:hover {
@@ -180,7 +178,6 @@
 .analytics-mode-btn.active {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .analytics-config-btn {
@@ -195,7 +192,6 @@
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
     min-height: 36px;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .analytics-config-btn:hover {
@@ -223,7 +219,6 @@
     font-weight: 500;
     touch-action: manipulation;
     min-height: 36px;
-    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .analytics-period-chip:hover {

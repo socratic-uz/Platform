@@ -112,7 +112,6 @@
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(129, 140, 248, 0.3));
     border-color: rgba(56, 189, 248, 0.6);
     box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
-    transform: translateY(-1px);
 }
 
 @media screen and (max-width: 599.98px) {

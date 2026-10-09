@@ -1,5 +1,52 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C effects/shadow.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Elevation & Box Shadow Master Rules via :is(...)
    ========================================================================== */
+
+/* --- Expressive Elevation Level 1 --- */
+:is(
+    .ad-slot-container,
+    .citation[href]:hover,
+    .pos-complete-btn
+) {
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+/* --- Expressive Elevation Level 2 --- */
+:is(
+    .ad-slot-container:hover,
+    .pay-button,
+    .pos-sidebar
+) {
+    box-shadow: var(--md-sys-elevation-expressive-2);
+}
+
+/* --- Material Elevation Level 1 --- */
+:is(
+    .analytics-mode-btn.active,
+    .citation,
+    .input-box,
+    .user-message
+) {
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+/* --- Material Elevation Level 2 --- */
+:is(
+    .analytics-kpi-card:hover,
+    .video-card
+) {
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* --- Material Elevation Level 3 --- */
+:is(
+    .lang-dropdown-menu,
+    .m3-nav-fab,
+    .pillar-card:hover,
+    .tech-card:hover
+) {
+    box-shadow: var(--md-sys-elevation-level3);
+}
 

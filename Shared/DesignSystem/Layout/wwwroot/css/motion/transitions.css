@@ -1,5 +1,45 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C motion/transitions.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Micro-interactions, Spring Easings & Transitions via :is(...)
    ========================================================================== */
 
+/* Spring Soft Motion Transition Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .citation,
+    .input-box,
+    .landing-auth-btn,
+    .lang-toggle-btn,
+    .plan-card,
+    .preset-btn,
+    .tier-box,
+    nav.glass:not(.nav-mobile) a.nav-item,
+    nav.nav-desktop a.nav-item
+) {
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+}
+
+/* Micro-interaction Hover Lift Master Rule */
+:is(
+    .citation[href]:hover,
+    .landing-auth-btn:hover,
+    .landing-floating-auth-btn:hover,
+    .landing-nav-link:hover,
+    .preset-btn:hover,
+    header.landing-header .header-brand-link:hover
+) {
+    transform: translateY(-1px);
+}
+
+/* Micro-interaction Active Press Scale Master Rule */
+:is(
+    .citation:active,
+    .kds-action-btn:active,
+    .pos-quick-bill-btn:active,
+    .preset-btn:active
+) {
+    transform: scale(0.96);
+}

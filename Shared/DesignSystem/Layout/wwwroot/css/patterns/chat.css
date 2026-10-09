@@ -124,7 +124,6 @@ chat-messages > div:last-of-type {
     padding: 0.5rem 1.25rem;
     border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
     color: var(--md-sys-color-on-primary-container);
-    box-shadow: var(--md-sys-elevation-level1, 0 1px 3px rgba(0, 0, 0, 0.12));
     white-space: pre-wrap;
     box-sizing: border-box;
 }
@@ -267,16 +266,12 @@ assistant-message pre > code,
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level1, 0 1px 3px rgba(0, 0, 0, 0.1));
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
     text-decoration: none;
     box-sizing: border-box;
 }
 
 .citation[href]:hover {
     border-color: var(--md-sys-color-primary);
-    transform: translateY(-1px);
-    box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
 .citation svg {
@@ -285,7 +280,6 @@ assistant-message pre > code,
 }
 
 .citation:active {
-    transform: scale(0.96);
     background-color: var(--md-sys-color-surface-container-high);
 }
 
@@ -347,8 +341,6 @@ assistant-message pre > code,
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
     min-height: 48px;
     width: 100%;
-    box-shadow: var(--md-sys-elevation-level1, 0 4px 20px rgba(0, 0, 0, 0.25));
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
     box-sizing: border-box;
     cursor: text;
 }

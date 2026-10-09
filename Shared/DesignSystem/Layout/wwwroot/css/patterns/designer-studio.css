@@ -89,18 +89,15 @@
     align-items: center;
     box-sizing: border-box;
     touch-action: manipulation;
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
 }
 
 .preset-btn:hover {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     border-color: transparent;
-    transform: translateY(-1px);
 }
 
 .preset-btn:active {
-    transform: scale(0.96);
 }
 
 .header-actions {

@@ -21,8 +21,6 @@
     align-content: space-between;
     gap: var(--md-sys-spacing-4, 1rem);
     box-sizing: border-box;
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short2, 100ms) ease;
 }
 
 .tier-box:hover,

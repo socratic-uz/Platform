@@ -141,14 +141,12 @@
     border: 1px dashed var(--md-sys-color-outline-variant);
     overflow: hidden;
     padding: 0.75rem;
-    box-shadow: var(--md-sys-elevation-expressive-1);
     transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
 }
 
 .ad-slot-container:hover {
     transform: translateY(-2px);
-    box-shadow: var(--md-sys-elevation-expressive-2);
 }
 
 .ad-network-container .google-adsense-wrapper,

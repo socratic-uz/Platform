@@ -123,5 +123,4 @@
     top: -24px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: var(--md-sys-elevation-level3), var(--md-sys-elevation-primary-glow);
 }
