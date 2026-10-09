@@ -1,7 +1,6 @@
 /* ─── 6. Organization Subscription & Promotion Modals ──────────────── */
 .trial-counter {
     align-items: baseline;
-    gap: 0.4rem;
 }
 
 .trial-days-highlight {
@@ -9,7 +8,6 @@
 }
 
 .trial-days-label {
-    font-size: 0.85rem;
 }
 
 .subscription-title {
@@ -33,16 +31,13 @@
 }
 
 .header-rocket-icon {
-    font-size: 1.75rem;
 }
 
 .promotion-modal-title {
-    font-size: 1.25rem;
 }
 
 .promotion-modal-subtitle {
     margin: 0.2rem 0 0;
-    font-size: 0.85rem;
 }
 
 .promotion-modal-body {
@@ -51,7 +46,6 @@
 
 .product-preview-pill {
     padding: 0.6rem 1rem;
-    font-size: 0.9rem;
 }
 
 .preview-label {
@@ -69,7 +63,6 @@
 
 .invoice-summary-box {
     padding: 1.25rem;
-    gap: 0.4rem;
 }
 
 .invoice-amount {
@@ -78,7 +71,6 @@
 
 .qr-instruction {
     max-width: 480px;
-    font-size: 0.9rem;
     line-height: 1.45;
 }
 
@@ -120,7 +112,6 @@
 }
 
 .ad-disclaimer {
-    font-size: 0.75rem;
 }
 
 .ad-upgrade-link {
@@ -211,7 +202,6 @@
 
 .brand-screensaver-title {
     font-size: 3rem;
-    letter-spacing: -0.02em;
     text-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.6);
 }
 
@@ -228,14 +218,12 @@
     margin-top: 1.5rem;
     padding: 1rem 2.5rem;
     background: var(--md-sys-color-primary);
-    font-size: 1.25rem;
     box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
     transition: transform 0.2s ease;
 }
 
 .brand-touch-icon,
 .ad-touch-icon {
-    font-size: 1.75rem;
 }
 
 .pulse-ring {
@@ -252,17 +240,14 @@
 }
 
 .screensaver-pro-badge {
-    gap: 0.4rem;
     padding: 0.4rem 1rem;
     background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
-    font-size: 0.85rem;
     margin-top: 1rem;
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.18);
 }
 
 .pro-badge-icon {
     color: var(--md-sys-color-tertiary-fixed);
-    font-size: 1.1rem;
 }
 
 /* Ad Network Screensaver (Google AdSense / Яндекс РСЯ) */
@@ -284,12 +269,10 @@
 }
 
 .ad-network-badge {
-    font-size: 0.75rem;
     letter-spacing: 0.05em;
 }
 
 .ad-network-partner {
-    font-size: 0.75rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
 }
 
@@ -302,7 +285,6 @@
 }
 
 .ad-org-context {
-    font-size: 0.85rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
 }
 

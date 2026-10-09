@@ -5,13 +5,11 @@
 
 .analytics-kpi-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .analytics-kpi-card {
     grid-template-rows: auto auto auto;
     padding: var(--md-sys-spacing-4, 1.25rem);
-    background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -26,34 +24,24 @@
 
 .kpi-title {
     font-size: 0.825rem;
-    color: var();
     letter-spacing: 0.04em;
 }
 
 .kpi-icon-badge {
     width: 32px;
     height: 32px;
-    background: rgb(from var() r g b / 0.12);
-    color: var();
-    font-size: 18px;
 }
 
 .kpi-value-row {
     align-items: baseline;
-    gap: 0.4rem;
 }
 
 .kpi-number {
-    font-size: 1.75rem;
-    letter-spacing: -0.02em;
     line-height: 1.1;
-    color: var();
 }
 
 .kpi-trend {
-    font-size: 0.75rem;
     gap: 2px;
-    color: var();
 }
 
 .analytics-breakdown-grid {
@@ -64,7 +52,6 @@
 .analytics-panel-card {
     grid-template-rows: auto minmax(0, 1fr);
     padding: var(--md-sys-spacing-5, 1.25rem);
-    background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
 }
 
@@ -75,7 +62,6 @@
 
 .panel-title {
     font-size: 1.05rem;
-    color: var();
 }
 
 .breakdown-bars-stack {
@@ -83,21 +69,16 @@
 }
 
 .breakdown-bar-item {
-    gap: 0.35rem;
 }
 
 .bar-labels {
-    font-size: 0.85rem;
-    color: var();
 }
 
 .bar-track {
     height: 8px;
-    background: var();
 }
 
 .progress-bar-fill {
-    background: var();
     transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -118,7 +99,6 @@
 }
 
 .analytics-mode-btn {
-    gap: 0.35rem;
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
 }
@@ -127,11 +107,9 @@
 }
 
 .analytics-mode-btn.active {
-    color: var(--md-sys-color-on-secondary-container);
 }
 
 .analytics-config-btn {
-    gap: 0.35rem;
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
     min-height: 36px;
@@ -147,8 +125,6 @@
 
 .analytics-period-chip {
     padding: 0.4rem 0.9rem;
-    font-size: 0.8rem;
-    touch-action: manipulation;
     min-height: 36px;
 }
 
@@ -176,13 +152,11 @@
 
 .analytics-status-pill {
     padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
 }
 
 .pulse-indicator {
     width: 8px;
     height: 8px;
-    background: var();
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

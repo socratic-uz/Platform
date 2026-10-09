@@ -31,7 +31,6 @@ header.landing-header .header-brand-icon-box {
     height: 32px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
-    font-size: 18px;
 }
 
 header.landing-header .header-brand-text {
@@ -43,14 +42,12 @@ header.landing-header .header-brand-text {
 }
 
 .landing-header-nav {
-    gap: 0.25rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 0.25rem 0.5rem;
 }
 
 .landing-nav-link {
-    gap: 0.4rem;
     padding: 0.4rem 0.85rem;
     font-size: 0.84rem;
     letter-spacing: -0.01em;
@@ -83,8 +80,6 @@ header.landing-header .header-brand-text {
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
     color: var();
-    font-size: 0.8rem;
-    touch-action: manipulation;
 }
 
 .lang-toggle-btn:hover {
@@ -108,7 +103,6 @@ header.landing-header .header-brand-text {
     border: 1px solid var(--md-sys-color-outline-variant, rgba(56, 189, 248, 0.35));
     color: var();
     font-size: 0.84rem;
-    touch-action: manipulation;
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -126,12 +120,10 @@ header.landing-header .header-brand-text {
 }
 
 .landing-mobile-menu-toggle {
-    display: none;
     width: 48px;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
     color: var();
-    touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4, 200ms) ease, border-color var(--md-sys-motion-duration-short4, 200ms) ease;
 }
 
@@ -170,12 +162,10 @@ header.landing-header .header-brand-text {
 .mobile-nav-item {
     grid-template-columns: 24px minmax(0, 1fr);
     padding: 0.85rem 1.15rem;
-    font-size: 1rem;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
 .mobile-nav-item md-icon {
-    font-size: 20px;
 }
 
 .mobile-nav-item:hover,
@@ -229,19 +219,16 @@ footer.app-footer {
     height: 36px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
-    font-size: 20px;
 }
 
 .footer-brand-title {
     font-size: 1.35rem;
-    letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .footer-brand-tagline {
-    font-size: 0.875rem;
     line-height: 1.55;
 }
 
@@ -266,7 +253,6 @@ footer.app-footer {
 }
 
 .status-text {
-    font-size: 0.75rem;
 }
 
 .footer-nav-col {
@@ -274,12 +260,10 @@ footer.app-footer {
 }
 
 .footer-col-title {
-    font-size: 0.85rem;
     letter-spacing: 0.05em;
 }
 
 .footer-links-list {
-    gap: 0.25rem;
     list-style: none;
 }
 
@@ -289,7 +273,6 @@ footer.app-footer {
 .footer-links-list a {
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
-    font-size: 0.875rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
     min-height: 36px;
@@ -303,7 +286,6 @@ footer.app-footer {
 
 .footer-links-list a md-icon,
 .footer-links-list a .material-symbols-outlined {
-    font-size: 18px;
     width: 18px;
     height: 18px;
     opacity: 0.85;
@@ -314,7 +296,6 @@ footer.app-footer {
 }
 
 .footer-copyright {
-    font-size: 0.8rem;
     opacity: 0.8;
 }
 
@@ -325,8 +306,6 @@ footer.app-footer {
 }
 
 .trust-badge {
-    gap: 0.4rem;
-    font-size: 0.75rem;
     opacity: 0.75;
 }
 

@@ -9,22 +9,18 @@
 .payment-trust-footer {
     max-width: 1100px;
     padding: 0.5rem 0;
-    font-size: 0.875rem;
 }
 
 .trust-badge {
-    font-size: 0.85rem;
 }
 
 .trust-badge md-icon {
-    font-size: 20px;
 }
 
 .payment-methods {
 }
 
 .payment-support a {
-    font-size: 0.85rem;
 }
 
 .payment-support a:hover {
@@ -77,19 +73,16 @@ footer.app-footer {
     height: 36px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
-    font-size: 20px;
 }
 
 .footer-brand-title {
     font-size: 1.35rem;
-    letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .footer-brand-tagline {
-    font-size: 0.875rem;
     line-height: 1.55;
 }
 
@@ -120,7 +113,6 @@ footer.app-footer {
 }
 
 .status-text {
-    font-size: 0.75rem;
 }
 
 /* Nav Columns */
@@ -129,12 +121,10 @@ footer.app-footer {
 }
 
 .footer-col-title {
-    font-size: 0.85rem;
     letter-spacing: 0.05em;
 }
 
 .footer-links-list {
-    gap: 0.25rem;
     list-style: none;
 }
 
@@ -144,7 +134,6 @@ footer.app-footer {
 .footer-links-list a {
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
-    font-size: 0.875rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
     min-height: 36px;
@@ -158,7 +147,6 @@ footer.app-footer {
 
 .footer-links-list a md-icon,
 .footer-links-list a .material-symbols-outlined {
-    font-size: 18px;
     width: 18px;
     height: 18px;
     opacity: 0.85;
@@ -170,7 +158,6 @@ footer.app-footer {
 }
 
 .footer-copyright {
-    font-size: 0.8rem;
     opacity: 0.8;
 }
 

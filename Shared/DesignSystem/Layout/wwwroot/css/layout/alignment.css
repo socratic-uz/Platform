@@ -545,3 +545,125 @@
 ) {
     justify-self: end;
 }
+
+/* Universal Gap 0.4rem Master Rule */
+:is(
+    .advance-prompt,
+    .amount-cell,
+    .control-group,
+    .date-cell,
+    .invoice-summary-box,
+    .kpi-value-row,
+    .landing-nav-link,
+    .payment-cell,
+    .product-price-section,
+    .screensaver-pro-badge,
+    .trial-counter,
+    .trust-badge
+) {
+    gap: 0.4rem;
+}
+
+/* Universal Gap Spacing-3 (0.75rem) Master Rule */
+:is(
+    .error-banner,
+    .item-name-row,
+    .item-pricing-row,
+    .items-cards-grid,
+    .kds-card,
+    .kds-card-main,
+    .m3-filter-grid,
+    .m3-filter-toolbar,
+    .m3-page-header-actions,
+    .summary-rows
+) {
+    gap: var(--md-sys-spacing-3, 0.75rem);
+}
+
+/* Universal Gap 0.35rem Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .breakdown-bar-item,
+    .color-item,
+    .crumb-link,
+    .docs-header-breadcrumb,
+    .m3-page-header-text,
+    .plan-card-header,
+    .tier-header
+) {
+    gap: 0.35rem;
+}
+
+/* Universal Gap Spacing-2 (0.5rem) Master Rule */
+:is(
+    .back-button,
+    .explorer-chipset-wrapper,
+    .explorer-title-group,
+    .item-card-body,
+    .kds-action-btn,
+    .kds-card-top,
+    .order-subtitle,
+    .table-row-actions
+) {
+    gap: var(--md-sys-spacing-2, 0.5rem);
+}
+
+/* Universal Gap Spacing-4 (1rem) Master Rule */
+:is(
+    .analytics-kpi-grid,
+    .item-card,
+    .items-list-section,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .m3-pricing-grid,
+    .order-items-subheader,
+    .plan-card,
+    .plans-grid,
+    .summary-card,
+    .tier-box,
+    .tiers-grid
+) {
+    gap: var(--md-sys-spacing-4, 1rem);
+}
+
+/* Universal Gap 4px Master Rule */
+:is(
+    .docs-group-container,
+    .kiosk-brand-tagline,
+    .pos-header-title-group,
+    .product-details,
+    .qrg-color-picker-wrapper,
+    .qrg-slider-field,
+    .ux-mode-badge-overlay,
+    .ux-widget
+) {
+    gap: 4px;
+}
+
+/* Universal Gap 0.25rem Master Rule */
+:is(
+    .assistant-message,
+    .assistant-search,
+    .footer-links-list,
+    .header-text,
+    .landing-header-nav,
+    .m3-bottom-nav-item,
+    .payment-dashboard .info-item
+) {
+    gap: 0.25rem;
+}
+
+/* Universal Align Content Center Master Rule */
+:is(
+    .assistant-search-content,
+    .inline-card-experience-body,
+    .m3-bottom-nav-item,
+    .pos-card-title-group,
+    .qrg-card,
+    .qrg-empty,
+    .showcase-card-body
+) {
+    align-content: center;
+}

@@ -35,12 +35,9 @@ main.showcase-page {
 }
 
 .showcase-brand-title {
-    font-size: 1.1rem;
-    letter-spacing: -0.02em;
 }
 
 .showcase-brand-badge {
-    font-size: 0.7rem;
     padding: 3px 8px;
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
     letter-spacing: 0.05em;
@@ -64,7 +61,6 @@ main.showcase-page {
 }
 
 .showcase-nav-category-header {
-    font-size: 0.7rem;
     letter-spacing: 0.08em;
     padding: 10px 12px 4px 12px;
     opacity: 0.9;
@@ -72,7 +68,6 @@ main.showcase-page {
 
 .showcase-nav-btn {
     padding: 9px 14px;
-    font-size: 0.85rem;
     transition: all 0.15s ease;
     text-align: left;
 }
@@ -83,7 +78,6 @@ main.showcase-page {
 }
 
 .showcase-nav-btn-left .nav-icon {
-    font-size: 18px;
 }
 
 .showcase-nav-btn-left span {
@@ -98,7 +92,6 @@ main.showcase-page {
 }
 
 .showcase-nav-count {
-    font-size: 0.7rem;
     padding: 2px 7px;
     background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.6);
 }
@@ -133,16 +126,13 @@ main.showcase-page {
 }
 
 .showcase-mobile-toggle {
-    display: none;
     padding: 6px;
 }
 
 .showcase-topbar-title {
-    font-size: 1.25rem;
 }
 
 .showcase-topbar-subtitle {
-    font-size: 0.8rem;
 }
 
 .showcase-topbar-actions {
@@ -185,7 +175,6 @@ main.showcase-page {
 }
 
 .showcase-stat-icon {
-    font-size: 20px;
 }
 
 .showcase-stat-info {
@@ -193,11 +182,9 @@ main.showcase-page {
 }
 
 .showcase-stat-val {
-    font-size: 1.1rem;
 }
 
 .showcase-stat-lbl {
-    font-size: 0.7rem;
     letter-spacing: 0.04em;
 }
 
@@ -230,7 +217,6 @@ main.showcase-page {
 }
 
 .showcase-lib-badge {
-    font-size: 0.75rem;
     padding: 3px 10px;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.25);
@@ -260,7 +246,6 @@ main.showcase-page {
 }
 
 .showcase-card-title {
-    font-size: 1rem;
 }
 
 .showcase-card-desc {
@@ -281,7 +266,6 @@ main.showcase-page {
 
 .showcase-card-body {
     padding: 24px 20px;
-    align-content: center;
     min-height: 120px;
 }
 
@@ -308,7 +292,6 @@ main.showcase-page {
 .showcase-controls-bar {
     padding: 12px 18px;
     gap: 10px;
-    font-size: 0.8rem;
 }
 
 /* Toast trigger styles */

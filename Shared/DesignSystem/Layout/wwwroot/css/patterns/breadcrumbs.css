@@ -1,12 +1,10 @@
 /* ─── Breadcrumbs (Universal Navigation) ─────────────────────────────────── */
 .m3-breadcrumbs,
 .store-breadcrumbs {
-    font-size: 0.875rem;
     margin-bottom: 2rem;
 }
 
 .crumb-link {
-    gap: 0.35rem;
     transition: color 0.2s ease;
     padding: 0 4px;
 }
@@ -19,7 +17,6 @@
 }
 
 .crumb-icon {
-    font-size: 1.1rem;
 }
 
 .crumb-sep {

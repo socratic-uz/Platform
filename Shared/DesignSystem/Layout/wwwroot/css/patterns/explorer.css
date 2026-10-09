@@ -15,23 +15,18 @@
 
 .explorer-title-group {
     grid-template-columns: auto auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .explorer-title-group md-icon {
-    font-size: 1.25rem;
 }
 
 .explorer-title-group h4 {
-    font-size: 1.15rem;
 }
 
 .explorer-subtitle {
-    font-size: 0.85rem;
 }
 
 .explorer-chipset-wrapper {
-    gap: var(--md-sys-spacing-2, 0.5rem);
     padding-bottom: 0.25rem;
 }
 

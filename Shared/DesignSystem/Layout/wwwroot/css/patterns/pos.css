@@ -32,7 +32,6 @@
 }
 
 .pos-header-title-group {
-    gap: 4px;
 }
 
 .pos-catalog-header h4 {
@@ -100,12 +99,9 @@
 
 .pos-card-title-group {
     gap: 2px;
-    align-content: center;
 }
 
 .pos-ux-mode-title {
-    font-size: 0.7rem;
-    display: block;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
@@ -150,7 +146,6 @@
 }
 
 .pos-orders-label {
-    font-size: 0.85rem;
     letter-spacing: 0.5px;
 }
 
@@ -190,7 +185,6 @@
 }
 
 .pos-exact-bill-btn {
-    color: var(--md-sys-color-on-secondary-container);
     border-color: transparent;
 }
 
@@ -200,7 +194,6 @@
 
 .pos-tech-chip {
     padding: 4px 10px;
-    font-size: 0.75rem;
 }
 
 /* ─── 2. Store Product Detail Page ───────────────────────────────────────── */
@@ -228,7 +221,6 @@
 
 .product-main-img {
     object-fit: cover;
-    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -241,7 +233,6 @@
     right: 1rem;
     background: rgb(from var(--md-sys-color-error) r g b / 0.9);
     color: var(--md-sys-color-on-error);
-    font-size: 0.8rem;
     padding: 0.25rem 0.6rem;
     box-shadow: 0 4px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
 }
@@ -280,39 +271,32 @@
 }
 
 .product-tag-chip {
-    font-size: 0.75rem;
     padding: 0.2rem 0.75rem;
     letter-spacing: 0.02em;
 }
 
 .product-price-section {
     align-items: baseline;
-    gap: 0.4rem;
     margin-top: 0.5rem;
 }
 
 .product-price {
     font-size: 2.25rem;
-    letter-spacing: -0.02em;
 }
 
 .product-currency {
-    font-size: 1.25rem;
 }
 
 .product-unit {
-    font-size: 1rem;
     margin-left: 0.25rem;
 }
 
 .product-description-block h3 {
-    font-size: 1rem;
     margin: 0 0 0.5rem 0;
     letter-spacing: 0.05em;
 }
 
 .product-description-text {
-    font-size: 1rem;
     line-height: 1.6;
     white-space: pre-line;
 }
@@ -338,7 +322,6 @@
 }
 
 .spec-label {
-    font-size: 0.75rem;
 }
 
 .spec-value {
@@ -367,7 +350,6 @@
     background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
     border: 1px solid var(--md-sys-color-tertiary);
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
 }
 
 /* Seller / Store Card */
@@ -397,7 +379,6 @@
 }
 
 .seller-name {
-    font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 
@@ -410,11 +391,9 @@
 }
 
 .seller-icon {
-    font-size: 1rem;
 }
 
 .seller-browse-all {
-    font-size: 0.875rem;
     transition: opacity 0.2s ease;
 }
 

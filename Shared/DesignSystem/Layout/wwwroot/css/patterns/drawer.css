@@ -59,12 +59,9 @@
 }
 
 .drawer-header .headline {
-    font-size: 1.25rem;
 }
 
 .drawer-header .badge {
-    color: var(--md-sys-color-on-secondary-container);
-    font-size: 0.75rem;
     padding: 2px 8px;
     margin-left: 8px;
 }
@@ -104,11 +101,9 @@
 }
 
 .item-support {
-    font-size: 0.8rem;
 }
 
 .item-price {
-    display: block;
     margin-top: 2px;
 }
 
@@ -119,7 +114,6 @@
 }
 
 .qty-val {
-    font-size: 0.85rem;
     padding: 0 6px;
 }
 
@@ -134,13 +128,10 @@
 }
 
 .promo-success-text {
-    font-size: 0.75rem;
     margin-top: 4px;
-    display: block;
 }
 
 .shipping-card {
-    font-size: 0.85rem;
     padding: 12px;
     margin-top: 8px;
 }
@@ -154,7 +145,6 @@
 
 .price-breakdown {
     margin-bottom: 16px;
-    font-size: 0.9rem;
 }
 
 .price-row {
@@ -164,7 +154,6 @@
 }
 
 .drawer-footer .total-row {
-    font-size: 1.15rem;
     padding-top: 8px;
     border-top: 1px dashed var(--md-sys-color-outline-variant);
 }

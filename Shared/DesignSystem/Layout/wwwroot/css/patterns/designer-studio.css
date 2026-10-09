@@ -32,7 +32,6 @@
 }
 
 .header-text {
-    gap: 0.25rem;
 }
 
 .page-heading {
@@ -41,7 +40,6 @@
 }
 
 .page-subtitle {
-    font-size: 0.875rem;
 }
 
 /* ─── 3. Header Presets & Actions ───────────────────────────────────────── */
@@ -51,7 +49,6 @@
 }
 
 .preset-label {
-    font-size: 0.875rem;
     margin-right: 0.25rem;
 }
 
@@ -59,8 +56,6 @@
     padding: 0.5rem 1rem;
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
-    font-size: 0.85rem;
-    touch-action: manipulation;
 }
 
 .preset-btn:hover {
@@ -75,7 +70,6 @@
 }
 
 .mode-indicator {
-    font-size: 0.85rem;
     padding: 0.5rem 1rem;
 }
 
@@ -89,13 +83,11 @@
 /* ─── 4. Notification & Banners ─────────────────────────────────────────── */
 .notification-banner {
     padding: 0.75rem 1.25rem;
-    font-size: 0.9rem;
 }
 
 .banner-close-btn {
     background: none;
     color: inherit;
-    font-size: 1.1rem;
 }
 
 /* ─── 5. Designer Workspaces & Panels ───────────────────────────────────── */
@@ -121,11 +113,9 @@
 }
 
 .card-title {
-    font-size: 0.9rem;
 }
 
 .card-meta {
-    font-size: 0.8rem;
 }
 
 /* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
@@ -145,18 +135,15 @@
 }
 
 .control-group {
-    gap: 0.4rem;
 }
 
 .control-label {
-    font-size: 0.85rem;
 }
 
 .text-input, .select-input {
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
-    font-size: 0.9rem;
 }
 
 .text-input:focus, .select-input:focus {
@@ -169,7 +156,6 @@
 }
 
 .color-item {
-    gap: 0.35rem;
 }
 
 .color-picker-row {
@@ -229,11 +215,9 @@
 
 .preview-info {
     gap: 0.6rem;
-    font-size: 0.85rem;
 }
 
 .info-icon {
-    font-size: 1.25rem;
 }
 
 /* ─── 8. Responsive Geometry ────────────────────────────────────────────── */

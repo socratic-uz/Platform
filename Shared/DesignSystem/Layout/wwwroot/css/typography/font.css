@@ -201,3 +201,299 @@
 ) {
     font-weight: 800;
 }
+
+/* Universal Font Size 0.85rem Master Rule */
+:is(
+    .active-orders-label,
+    .ad-org-context,
+    .advance-prompt,
+    .bar-labels,
+    .control-label,
+    .current-plan-indicator,
+    .explorer-subtitle,
+    .footer-col-title,
+    .kiosk-category-label,
+    .m3-pill-badge,
+    .mode-indicator,
+    .order-card-footer,
+    .order-items-table th,
+    .orders-table th,
+    .otp-target-hint,
+    .payment-support a,
+    .plan-currency,
+    .pos-orders-label,
+    .preset-btn,
+    .preview-info,
+    .promotion-modal-subtitle,
+    .qrg-back,
+    .qrg-empty-list,
+    .qrg-section-title,
+    .qty-val,
+    .screensaver-pro-badge,
+    .shipping-card,
+    .showcase-nav-btn,
+    .tier-price small,
+    .trial-days-label,
+    .trust-badge
+) {
+    font-size: 0.85rem;
+}
+
+/* Universal Font Size 0.75rem Master Rule */
+:is(
+    .ad-disclaimer,
+    .ad-network-badge,
+    .ad-network-partner,
+    .analytics-status-pill,
+    .auth-divider,
+    .docs-group-header,
+    .drawer-header .badge,
+    .faceid-notice,
+    .kds-status-tag,
+    .kpi-trend,
+    .m3-bottom-nav-item,
+    .pos-tech-chip,
+    .product-tag-chip,
+    .promo-success-text,
+    .qrg-badge,
+    .qrg-card-hint,
+    .qrg-field-label,
+    .qrg-group-head,
+    .qrg-slider-header,
+    .showcase-lib-badge,
+    .spec-label,
+    .status-text,
+    .trust-badge
+) {
+    font-size: 0.75rem;
+}
+
+/* Universal Font Size 0.875rem Master Rule */
+:is(
+    .assistant-search,
+    .auth-error-banner,
+    .auth-subtitle,
+    .citation,
+    .footer-brand-tagline,
+    .footer-links-list a,
+    .items-count-badge,
+    .loading-label,
+    .m3-breadcrumbs,
+    .m3-trust-footer,
+    .page-subtitle,
+    .payment-trust-footer,
+    .preset-label,
+    .seller-browse-all,
+    .share-toast,
+    .signin-error-banner,
+    .signin-subtitle,
+    .store-breadcrumbs
+) {
+    font-size: 0.875rem;
+}
+
+/* Universal Font Size 0.9rem Master Rule */
+:is(
+    .card-mid-row,
+    .card-title,
+    .cart-count,
+    .column-empty,
+    .detail-item,
+    .docs-header-breadcrumb,
+    .faceid-status-text,
+    .kds-empty-col,
+    .notification-banner,
+    .order-items-table td,
+    .orders-error-banner,
+    .orders-table td,
+    .pillar-features li,
+    .plan-features,
+    .price-breakdown,
+    .product-preview-pill,
+    .qr-instruction,
+    .select-input,
+    .text-input,
+    .tier-features
+) {
+    font-size: 0.9rem;
+}
+
+/* Universal Font Size 1.25rem Master Rule */
+:is(
+    .ad-slide-touch-prompt,
+    .back-icon,
+    .brand-screensaver-cta,
+    .brand-title,
+    .btn-icon,
+    .dialog-headline-wrap,
+    .drawer-header .headline,
+    .empty-plans-title,
+    .explorer-title-group md-icon,
+    .info-icon,
+    .m3-page-header-title,
+    .no-messages,
+    .product-currency,
+    .profile-title,
+    .promotion-modal-title,
+    .section-title,
+    .showcase-topbar-title
+) {
+    font-size: 1.25rem;
+}
+
+/* Universal Font Size 0.8rem Master Rule */
+:is(
+    .analytics-period-chip,
+    .badge-age-restriction,
+    .card-meta,
+    .card-payment,
+    .footer-copyright,
+    .item-support,
+    .lang-toggle-btn,
+    .qrg-org,
+    .resend-countdown,
+    .showcase-controls-bar,
+    .showcase-topbar-subtitle
+) {
+    font-size: 0.8rem;
+}
+
+/* Universal Font Size 0.9375rem Master Rule */
+:is(
+    .back-button,
+    .chat-input-wrapper textarea,
+    .empty-plans-desc,
+    .error-banner,
+    .input-box textarea,
+    .item-unit-price,
+    .kds-action-btn,
+    .kds-qty-badge,
+    .m3-page-header-subtitle,
+    .order-subtitle,
+    .schedule-table
+) {
+    font-size: 0.9375rem;
+}
+
+/* Universal Font Size 20px Master Rule */
+:is(
+    .cart-expand-icon,
+    .column-icon,
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .header-icon,
+    .mobile-nav-item md-icon,
+    .showcase-stat-icon,
+    .trust-badge md-icon
+) {
+    font-size: 20px;
+}
+
+/* Universal Font Size 1.15rem Master Rule */
+:is(
+    .about-subtitle,
+    .drawer-footer .total-row,
+    .example-subtitle,
+    .explorer-title-group h4,
+    .header-brand-link,
+    .header-brand-text,
+    .help-subtitle,
+    .landing-subpage-subtitle,
+    .order-number,
+    .plan-name,
+    .qrg-card-name,
+    .summary-title,
+    .tier-name
+) {
+    font-size: 1.15rem;
+}
+
+/* Universal Font Size 18px Master Rule */
+:is(
+    .advance-icon,
+    .chevron-icon,
+    .detail-icon,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .kpi-icon-badge,
+    .showcase-nav-btn-left .nav-icon,
+    .table-icon,
+    header.landing-header .header-brand-icon-box
+) {
+    font-size: 18px;
+}
+
+/* Universal Font Size 1.75rem Master Rule */
+:is(
+    .ad-touch-icon,
+    .auth-logo-badge,
+    .brand-touch-icon,
+    .header-rocket-icon,
+    .home-title,
+    .item-icon,
+    .kpi-number,
+    .m3-page-header-title,
+    .pillar-icon-box,
+    .plan-price-wrap,
+    .signin-logo-badge,
+    .tier-price
+) {
+    font-size: 1.75rem;
+}
+
+/* Universal Font Size 1.1rem Master Rule */
+:is(
+    .banner-close-btn,
+    .crumb-icon,
+    .docs-sidebar-title,
+    .kiosk-brand-name,
+    .pro-badge-icon,
+    .seller-name,
+    .showcase-brand-title,
+    .showcase-stat-val
+) {
+    font-size: 1.1rem;
+}
+
+/* Universal Font Size 0.7rem Master Rule */
+:is(
+    .popular-badge,
+    .pos-ux-mode-title,
+    .pro-tag,
+    .qrg-color-picker-wrapper,
+    .showcase-brand-badge,
+    .showcase-nav-category-header,
+    .showcase-nav-count,
+    .showcase-stat-lbl,
+    .ux-discount-badge
+) {
+    font-size: 0.7rem;
+}
+
+/* Universal Font Size 1rem Master Rule */
+:is(
+    .docs-article,
+    .kiosk-dialog-text,
+    .mobile-nav-item,
+    .product-description-block h3,
+    .product-description-text,
+    .product-unit,
+    .seller-icon,
+    .showcase-card-title
+) {
+    font-size: 1rem;
+}
+
+/* Universal Font Size 0.8125rem Master Rule */
+:is(
+    .column-badge,
+    .count-badge,
+    .item-qty-badge,
+    .kds-order-ref,
+    .kds-time-ago,
+    .monospace,
+    .payment-dashboard .info-label,
+    .progress-labels
+) {
+    font-size: 0.8125rem;
+}

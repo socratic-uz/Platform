@@ -12,7 +12,6 @@
 .kanban-column,
 .kds-column {
     grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem);
     min-height: 380px;
 }
@@ -27,7 +26,6 @@
 
 .column-icon,
 .header-icon {
-    font-size: 20px;
 }
 
 .column-icon.icon-making,
@@ -77,14 +75,12 @@
 }
 
 .card-mid-row {
-    font-size: 0.9rem;
 }
 
 .card-amount {
 }
 
 .card-payment {
-    font-size: 0.8rem;
 }
 
 .card-bottom-row {
@@ -94,12 +90,9 @@
 }
 
 .advance-prompt {
-    gap: 0.4rem;
-    font-size: 0.85rem;
 }
 
 .advance-icon {
-    font-size: 18px;
     transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
 
@@ -109,7 +102,6 @@
 
 /* KDS Specific Cards & Action Buttons */
 .kds-card {
-    gap: var(--md-sys-spacing-3, 0.75rem);
     padding: var(--md-sys-spacing-4, 1rem);
 }
 
@@ -135,7 +127,6 @@
 .column-badge,
 .count-badge {
     padding: 0.25rem 0.625rem;
-    font-size: 0.8125rem;
     line-height: 1;
 }
 
@@ -149,7 +140,6 @@
 .column-empty,
 .kds-empty-col {
     padding: 2.5rem 1rem;
-    font-size: 0.9rem;
     opacity: 0.8;
 }
 
@@ -162,25 +152,20 @@
 /* ─── KDS Card Internal Structure ───────────────────────────────────── */
 .kds-card-top {
     justify-content: space-between;
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .kds-order-ref {
-    font-size: 0.8125rem;
     letter-spacing: 0.04em;
 }
 
 .kds-time-ago {
-    font-size: 0.8125rem;
 }
 
 .kds-status-tag {
-    font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
 }
 
 .kds-card-main {
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .kds-product-name {
@@ -189,7 +174,6 @@
 }
 
 .kds-qty-badge {
-    font-size: 0.9375rem;
 }
 
 .kds-card-actions {
@@ -198,9 +182,7 @@
 
 .kds-action-btn {
     grid-template-columns: auto auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
-    font-size: 0.9375rem;
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
@@ -219,7 +201,6 @@
 }
 
 .btn-icon {
-    font-size: 1.25rem;
 }
 
 /* ─── Card Status Color Modifiers ───────────────────────────────────── */
@@ -231,7 +212,6 @@
 }
 
 .card-collecting .card-status-chip {
-    color: var(--md-sys-color-on-secondary-container);
 }
 
 .card-shipping .card-status-chip {
@@ -245,12 +225,10 @@
 }
 
 .error-banner {
-    gap: var(--md-sys-spacing-3, 0.75rem);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border: 1px solid var(--md-sys-color-error);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-    font-size: 0.9375rem;
     margin-top: var(--md-sys-spacing-4, 1rem);
 }
 

@@ -12,8 +12,6 @@
 }
 
 .loading-label {
-    font-size: 0.875rem;
-    color: var();
 }
 
 /* Profile Container & Cards */
@@ -26,7 +24,6 @@
 }
 
 .profile-title {
-    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -35,11 +32,9 @@
 }
 
 .payment-dashboard .info-item {
-    gap: 0.25rem;
 }
 
 .payment-dashboard .info-label {
-    font-size: 0.8125rem;
     letter-spacing: 0.5px;
 }
 
@@ -100,7 +95,6 @@
 }
 
 .progress-labels {
-    font-size: 0.8125rem;
 }
 
 .actions-row {
@@ -128,12 +122,10 @@
 }
 
 .empty-plans-title {
-    font-size: 1.25rem;
 }
 
 .empty-plans-desc {
     max-width: 460px;
-    font-size: 0.9375rem;
     line-height: 1.5;
 }
 
@@ -147,7 +139,6 @@
 /* Schedule Table */
 .schedule-table {
     border-collapse: collapse;
-    font-size: 0.9375rem;
 }
 
 .schedule-table th,
@@ -162,24 +153,20 @@
 /* Payment Trust Footer */
 .payment-trust-footer {
     max-width: 1100px;
-    font-size: 0.875rem;
     padding: 0.5rem 0;
 }
 
 .trust-badge {
     gap: 6px;
-    font-size: 0.85rem;
 }
 
 .trust-badge md-icon {
-    font-size: 20px;
 }
 
 .payment-methods {
 }
 
 .payment-support a {
-    font-size: 0.85rem;
 }
 
 .payment-support a:hover {

@@ -5,22 +5,17 @@
 }
 
 .m3-page-header-text {
-    gap: 0.35rem;
 }
 
 .m3-page-header-title,
 .home-title {
-    font-size: 1.75rem;
-    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
 .m3-page-header-subtitle {
-    font-size: 0.9375rem;
 }
 
 .m3-page-header-actions {
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 @media (max-width: 768px) {

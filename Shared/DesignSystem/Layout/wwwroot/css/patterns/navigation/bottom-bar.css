@@ -99,9 +99,6 @@
 
 .m3-bottom-nav-item {
     grid-template-rows: auto auto;
-    align-content: center;
-    gap: 0.25rem;
-    font-size: 0.75rem;
     padding: 0.5rem;
     transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
 }

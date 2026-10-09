@@ -362,3 +362,17 @@
 ) {
     color: var(--md-sys-color-on-tertiary-container);
 }
+
+/* Material Design 3 On-Secondary-Container Text Color Master Rule */
+:is(
+    .analytics-mode-btn.active,
+    .back-button:focus-visible,
+    .back-button:hover,
+    .card-collecting .card-status-chip,
+    .drawer-header .badge,
+    .otp-target-hint,
+    .pos-exact-bill-btn,
+    .ux-widget-group
+) {
+    color: var(--md-sys-color-on-secondary-container);
+}

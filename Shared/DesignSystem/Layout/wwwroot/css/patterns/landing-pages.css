@@ -36,14 +36,12 @@
 .help-subtitle,
 .example-subtitle,
 .landing-subpage-subtitle {
-    font-size: 1.15rem;
     line-height: 1.6;
     max-width: 780px;
 }
 
 .m3-pill-badge {
     padding: 0.4rem 1rem;
-    font-size: 0.85rem;
 }
 
 .m3-pill-badge.tertiary {
@@ -83,7 +81,6 @@
 .video-player-wrapper video {
     max-height: 540px;
     object-fit: cover;
-    display: block;
 }
 
 .video-caption {
@@ -119,7 +116,6 @@
 .pillar-icon-box {
     width: 52px;
     height: 52px;
-    font-size: 1.75rem;
 }
 
 .pillar-features {
@@ -128,7 +124,6 @@
 
 .pillar-features li {
     grid-auto-columns: max-content auto;
-    font-size: 0.9rem;
 }
 
 .cta-card {
@@ -214,12 +209,10 @@
 }
 
 .qrg-org {
-    font-size: 0.8rem;
 }
 
 .qrg-back {
     gap: 6px;
-    font-size: 0.85rem;
     padding: 8px 10px;
     transition: background 0.15s, color 0.15s;
     width: fit-content;
@@ -236,7 +229,6 @@
 }
 
 .qrg-section-title {
-    font-size: 0.85rem;
     letter-spacing: 0.8px;
     padding-bottom: 8px;
 }
@@ -250,15 +242,12 @@
 }
 
 .qrg-field-label {
-    font-size: 0.75rem;
 }
 
 .qrg-color-inputs {
 }
 
 .qrg-color-picker-wrapper {
-    gap: 4px;
-    font-size: 0.7rem;
 }
 
 .qrg-select-grid {
@@ -266,11 +255,9 @@
 }
 
 .qrg-slider-field {
-    gap: 4px;
 }
 
 .qrg-slider-header {
-    font-size: 0.75rem;
 }
 
 .qrg-slider-val {
@@ -284,7 +271,6 @@
 }
 
 .qrg-group-head {
-    font-size: 0.75rem;
     letter-spacing: 0.8px;
     padding: 0 4px 4px;
     margin-bottom: 4px;
@@ -300,7 +286,6 @@
 
 .qrg-empty-list {
     padding: 24px;
-    font-size: 0.85rem;
 }
 
 .qrg-preview {
@@ -320,7 +305,6 @@
 }
 
 .qrg-badge {
-    font-size: 0.75rem;
     padding: 4px 10px;
 }
 
@@ -331,7 +315,6 @@
 
 .qrg-card {
     box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
-    align-content: center;
     padding: 32px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -351,17 +334,14 @@
 }
 
 .qrg-card-name {
-    font-size: 1.15rem;
     letter-spacing: -0.3px;
 }
 
 .qrg-card-hint {
-    font-size: 0.75rem;
     letter-spacing: 0.5px;
 }
 
 .qrg-empty {
-    align-content: center;
     padding: 60px;
 }
 
@@ -394,7 +374,6 @@ main.docs-page {
 }
 
 .docs-sidebar-title {
-    font-size: 1.1rem;
     letter-spacing: 0.15px;
 }
 
@@ -407,12 +386,10 @@ main.docs-page {
 }
 
 .docs-group-container {
-    gap: 4px;
 }
 
 .docs-group-header {
     padding: 4px 8px;
-    font-size: 0.75rem;
     letter-spacing: 0.8px;
     opacity: 0.85;
 }
@@ -441,7 +418,6 @@ main.docs-page {
     max-width: 900px;
     padding: 40px 56px;
     color: var(--md-sys-color-on-background);
-    font-size: 1rem;
     line-height: 1.6;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -451,8 +427,6 @@ main.docs-page {
 }
 
 .docs-header-breadcrumb {
-    gap: 0.35rem;
-    font-size: 0.9rem;
 }
 
 .docs-breadcrumb-link {
@@ -462,7 +436,6 @@ main.docs-page {
 }
 
 .docs-mobile-menu-btn {
-    display: none;
 }
 
 /* ─── 7. Responsive Adaptations ─────────────────────────────────────────── */

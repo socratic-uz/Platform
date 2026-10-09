@@ -43,3 +43,33 @@
 ) {
     display: inline-grid;
 }
+
+/* Universal Block Display Master Rule */
+:is(
+    .assistant-message-text pre > code,
+    .chat-input-wrapper textarea,
+    .current-plan-indicator,
+    .input-box textarea,
+    .item-price,
+    .pos-ux-mode-title,
+    .product-img,
+    .product-main-img,
+    .promo-success-text,
+    .video-player-wrapper video,
+    assistant-message pre > code
+) {
+    display: block;
+}
+
+/* Universal None Display Master Rule */
+:is(
+    .docs-mobile-menu-btn,
+    .inline-card-experience-body:empty,
+    .landing-grid:has(.landing-page-root) > footer,
+    .landing-mobile-menu-toggle,
+    .product-desc:empty,
+    .showcase-mobile-toggle,
+    .suggestions-wrapper::-webkit-scrollbar
+) {
+    display: none;
+}

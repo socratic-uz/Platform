@@ -31,3 +31,16 @@
 ) {
     cursor: pointer;
 }
+
+/* Universal Touch Action Manipulation Master Rule */
+:is(
+    .analytics-period-chip,
+    .header-brand-link,
+    .kiosk-tier-btn,
+    .landing-auth-btn,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .preset-btn
+) {
+    touch-action: manipulation;
+}

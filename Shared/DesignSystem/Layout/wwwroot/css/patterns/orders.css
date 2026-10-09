@@ -19,8 +19,6 @@
 }
 
 .order-number {
-    font-size: 1.15rem;
-    color: var();
     letter-spacing: 0.02em;
 }
 
@@ -28,34 +26,24 @@
 }
 
 .detail-item {
-    font-size: 0.9rem;
-    color: var();
 }
 
 .detail-icon {
-    font-size: 18px;
-    color: var();
 }
 
 .total-amount {
     margin-top: 0.25rem;
     padding-top: 0.5rem;
-    border-top: 1px solid var();
-    color: var();
 }
 
 .amount-value {
     font-size: 1.05rem;
-    color: var();
 }
 
 .order-card-footer {
-    color: var();
-    font-size: 0.85rem;
 }
 
 .chevron-icon {
-    font-size: 18px;
     transition: transform 0.2s ease;
 }
 
@@ -71,64 +59,46 @@
 
 .orders-table-wrapper,
 .order-items-table-wrapper {
-    background: var();
-    border: 1px solid var();
 }
 
 .orders-table,
 .order-items-table {
     border-collapse: collapse;
-    color: var();
     min-width: min(100%, 680px);
 }
 
 .orders-table th,
 .order-items-table th {
-    background: var();
     padding: 0.85rem 1rem;
-    font-size: 0.85rem;
     text-align: left;
-    color: var();
-    border-bottom: 1px solid var();
 }
 
 .orders-table td,
 .order-items-table td {
     padding: 0.85rem 1rem;
-    font-size: 0.9rem;
-    border-bottom: 1px solid var();
     vertical-align: middle;
 }
 
 .orders-table tr:hover,
 .order-items-table tr:hover {
-    background: var();
 }
 
 .payment-cell,
 .date-cell,
 .amount-cell {
-    gap: 0.4rem;
 }
 
 .amount-cell {
-    color: var();
 }
 
 .table-icon {
-    font-size: 18px;
-    color: var();
 }
 
 .table-row-actions {
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .orders-error-banner {
     padding: 1rem 1.25rem;
-    background: var();
-    color: var();
-    font-size: 0.9rem;
 }
 
 /* ─── 3. Order Items Subheader & Meta ────────────────────────────────────── */
@@ -137,28 +107,23 @@
 
 .back-button {
     grid-auto-columns: max-content auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-    font-size: 0.9375rem;
     transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
 
 .back-button:hover,
 .back-button:focus-visible {
-    color: var(--md-sys-color-on-secondary-container);
     outline: none;
 }
 
 .back-icon {
-    font-size: 1.25rem;
 }
 
 .items-count-badge {
     grid-auto-columns: max-content auto;
     gap: var(--md-sys-spacing-2, 0.375rem);
     padding: var(--md-sys-spacing-2, 0.375rem) var(--md-sys-spacing-4, 0.875rem);
-    font-size: 0.875rem;
     white-space: nowrap;
 }
 
@@ -167,12 +132,9 @@
 }
 
 .order-items-subheader {
-    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .order-subtitle {
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    font-size: 0.9375rem;
 }
 
 .meta-dot {
@@ -195,20 +157,16 @@
 }
 
 .items-list-section {
-    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .section-title {
-    font-size: 1.25rem;
     letter-spacing: -0.01em;
 }
 
 .items-cards-grid {
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .item-card {
-    gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
 }
 
@@ -218,15 +176,12 @@
 }
 
 .item-icon {
-    font-size: 1.75rem;
 }
 
 .item-card-body {
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .item-name-row {
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .item-name {
@@ -236,16 +191,13 @@
 
 .item-pricing-row {
     grid-template-columns: auto auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .item-unit-price {
-    font-size: 0.9375rem;
 }
 
 .item-qty-badge {
     padding: 0.2rem 0.6rem;
-    font-size: 0.8125rem;
 }
 
 .item-total-price {
@@ -258,22 +210,18 @@
 }
 
 .summary-card {
-    gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem) var(--md-sys-spacing-6, 1.5rem);
 }
 
 .summary-title {
-    font-size: 1.15rem;
     letter-spacing: -0.01em;
 }
 
 .summary-rows {
-    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .monospace {
     font-family: monospace;
-    font-size: 0.8125rem;
     letter-spacing: 0.05em;
 }
 

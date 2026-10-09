@@ -35,7 +35,6 @@
 }
 
 .landing-grid:has(.landing-page-root) > footer {
-    display: none;
 }
 
 /* Top Bar Wrapper & Floating Glass Controls for Landing Page */

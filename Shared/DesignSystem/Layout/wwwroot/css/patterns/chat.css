@@ -10,7 +10,6 @@
     max-height: 100dvh;
     color-scheme: dark;
     background: radial-gradient(circle at 50% 15%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface) 100%);
-    color: var();
 }
 
 .chat-bottom-section {
@@ -38,8 +37,6 @@
     top: 0;
     padding: 0.75rem 1.5rem;
     padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
-    background: var();
-    border-bottom: 1px solid var();
     z-index: 20;
 }
 
@@ -51,7 +48,6 @@
     height: 40px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    color: var();
     transition: all 0.2s ease;
 }
 
@@ -61,8 +57,6 @@
 }
 
 .brand-title {
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -81,13 +75,10 @@
 }
 
 .no-messages {
-    font-size: 1.25rem;
-    color: var();
     margin-top: calc(35vh - 10rem);
 }
 
 .no-messages .text-muted {
-    color: var() !important;
 }
 
 chat-messages > div:last-of-type {
@@ -107,7 +98,6 @@ chat-messages > div:last-of-type {
 .assistant-search {
     grid-template-rows: min-content;
     grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.25rem;
 }
 
 .assistant-message-header {
@@ -129,7 +119,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search {
-    font-size: 0.875rem;
     line-height: 1.25rem;
 }
 
@@ -144,7 +133,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search-content {
-    align-content: center;
 }
 
 .assistant-search-phrase {
@@ -209,7 +197,6 @@ assistant-message tr:nth-child(even),
 assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
-    display: block;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
 }
@@ -220,7 +207,6 @@ assistant-message pre > code,
     margin-top: 1rem;
     margin-right: 1rem;
     border-bottom: 2px solid var(--md-sys-color-tertiary);
-    font-size: 0.875rem;
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
 }
@@ -252,7 +238,6 @@ assistant-message pre > code,
 }
 
 .suggestions-wrapper::-webkit-scrollbar {
-    display: none;
 }
 
 .suggestions {
@@ -275,14 +260,11 @@ assistant-message pre > code,
 }
 
 .input-box {
-    background: var();
-    border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
     cursor: text;
 }
 
 .input-box:focus-within {
-    border-color: var();
     box-shadow: 0 0 0 1px var(--md-sys-color-primary);
     outline: none;
 }
@@ -292,17 +274,13 @@ assistant-message pre > code,
     resize: none;
     outline: none;
     font-family: inherit;
-    font-size: 0.9375rem;
     line-height: 1.5;
     max-height: 120px;
     padding: 0.4rem 0;
-    color: var();
-    display: block;
 }
 
 .chat-input-wrapper textarea::placeholder,
 .input-box textarea::placeholder {
-    color: var();
 }
 
 .tools {
