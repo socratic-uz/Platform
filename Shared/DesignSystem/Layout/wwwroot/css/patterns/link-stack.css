@@ -7,7 +7,6 @@ section.link-stack {
     background: var(--md-sys-color-surface-container, var(--md-sys-color-surface));
     overflow: auto;
     font-size: .875rem;
-    box-sizing: border-box;
 }
 
 @media screen and (max-width: 839.98px) {

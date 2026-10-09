@@ -17,7 +17,6 @@
     padding: 2.5rem 1.5rem 3rem 1.5rem;
     position: relative;
     overflow-x: clip;
-    box-sizing: border-box;
 }
 
 .about-hero,
@@ -58,9 +57,6 @@
 }
 
 .m3-pill-badge {
-    display: inline-grid !important;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1rem;
@@ -101,7 +97,6 @@
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
-    box-sizing: border-box;
 }
 
 .video-card-header {
@@ -156,7 +151,6 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .pillar-card,
@@ -166,7 +160,6 @@
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    box-sizing: border-box;
 }
 
 .pillar-card:hover,
@@ -179,7 +172,6 @@
     height: 52px;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    place-items: center;
     font-size: 1.75rem;
 }
 
@@ -206,7 +198,6 @@
     padding: 3.5rem 2rem;
     background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .cta-actions {
@@ -218,14 +209,11 @@
 /* ─── 4. Categories, FAQ & Example Grids ─────────────────────────────────── */
 .help-categories,
 .example-categories {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 0.75rem;
     justify-content: start;
     width: 100%;
     max-width: 100%;
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
-    box-sizing: border-box;
     overflow-x: auto;
     scrollbar-width: thin;
 }
@@ -250,7 +238,6 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 1.5rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .faq-card,
@@ -259,7 +246,6 @@
     padding: 1.5rem;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .contact-card {
@@ -267,7 +253,6 @@
     padding: 2.5rem;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -300,7 +285,6 @@
     overflow: hidden;
     background: var(--md-sys-color-surface-container-low);
     height: 100%;
-    box-sizing: border-box;
 }
 
 .qrg-sidebar-scrollable {
@@ -312,8 +296,6 @@
 }
 
 .qrg-sidebar-header {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 14px;
 }
@@ -323,7 +305,6 @@
     height: 44px;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    place-items: center;
 }
 
 .qrg-title {
@@ -341,7 +322,6 @@
 }
 
 .qrg-back {
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 6px;
@@ -369,12 +349,9 @@
     padding: 16px;
     gap: 12px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .qrg-section-title {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 8px;
     font-size: 0.85rem;
@@ -401,8 +378,6 @@
 }
 
 .qrg-color-inputs {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 16px;
 }
 
@@ -468,7 +443,6 @@
 }
 
 .qrg-empty-list {
-    place-items: center;
     gap: 8px;
     padding: 24px;
     color: var(--md-sys-color-outline);
@@ -521,7 +495,6 @@
     padding: 32px;
     gap: 16px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
-    box-sizing: border-box;
     max-width: 100%;
 }
 
@@ -537,7 +510,6 @@
 }
 
 .qrg-card-qr {
-    place-items: center;
     max-width: 100%;
 }
 
@@ -557,7 +529,6 @@
 }
 
 .qrg-empty {
-    place-items: center;
     align-content: center;
     gap: 12px;
     color: var(--md-sys-color-outline);
@@ -614,11 +585,9 @@ main.docs-page {
     width: 48px !important;
     height: 48px !important;
     min-width: 48px !important;
-    min-height: 48px !important;
     background: transparent;
     border: none;
     color: var(--md-sys-color-on-surface-variant);
-    place-items: center;
     padding: 0;
     border-radius: 50%;
 }
@@ -657,7 +626,6 @@ main.docs-page {
 }
 
 .docs-welcome-container {
-    place-items: center;
     height: 100%;
     padding: 32px 16px;
     min-height: 360px;
@@ -669,7 +637,6 @@ main.docs-page {
     padding: 32px;
     background-color: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    place-items: center;
     gap: 8px;
 }
 
@@ -686,14 +653,12 @@ main.docs-page {
 }
 
 .docs-header-bar {
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 0.75rem;
 }
 
 .docs-header-breadcrumb {
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 0.35rem;

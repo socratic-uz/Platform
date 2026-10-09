@@ -25,7 +25,6 @@
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    box-sizing: border-box;
 }
 
 .landing-grid > footer {
@@ -55,7 +54,6 @@
     padding: 1.25rem 1.5rem 0;
     z-index: 100;
     pointer-events: none;
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -82,8 +80,6 @@
     top: 1.25rem;
     right: 1.5rem;
     z-index: 100;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.65rem;
     padding: 0.35rem 0.55rem;
@@ -93,8 +89,6 @@
 }
 
 .landing-floating-auth-btn {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.45rem;
     padding: 0.35rem 0.85rem;

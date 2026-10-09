@@ -9,7 +9,6 @@
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
     gap: 1rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .order-card {
@@ -17,7 +16,6 @@
     gap: 1rem;
     padding: 1.25rem;
     min-height: 140px;
-    box-sizing: border-box;
 }
 
 .order-card-header {
@@ -70,7 +68,6 @@
     color: var();
     font-size: 0.85rem;
     font-weight: 600;
-    min-height: 48px;
 }
 
 .chevron-icon {
@@ -97,7 +94,6 @@
     -webkit-overflow-scrolling: touch;
     background: var();
     border: 1px solid var();
-    box-sizing: border-box;
 }
 
 .orders-table,
@@ -173,12 +169,10 @@
 }
 
 .back-button {
-    display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
     align-items: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
-    min-height: 48px;
     padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
     background: transparent;
     color: var(--md-sys-color-primary);
@@ -187,7 +181,6 @@
     font-weight: 600;
     transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-    box-sizing: border-box;
 }
 
 .back-button:hover,
@@ -202,7 +195,6 @@
 }
 
 .items-count-badge {
-    display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
     align-items: center;
@@ -213,7 +205,6 @@
     font-size: 0.875rem;
     font-weight: 600;
     white-space: nowrap;
-    box-sizing: border-box;
 }
 
 .badge-icon {
@@ -279,11 +270,9 @@
     gap: var(--md-sys-spacing-4, 1rem);
     align-items: center;
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
-    box-sizing: border-box;
 }
 
 .item-icon-wrapper {
-    place-items: center;
     width: 52px;
     height: 52px;
     background: var(--md-sys-color-surface-container-high);
@@ -324,8 +313,6 @@
 }
 
 .item-qty-badge {
-    display: inline-grid !important;
-    place-items: center;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     padding: 0.2rem 0.6rem;
@@ -348,7 +335,6 @@
 .summary-card {
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem) var(--md-sys-spacing-6, 1.5rem);
-    box-sizing: border-box;
 }
 
 .summary-title {

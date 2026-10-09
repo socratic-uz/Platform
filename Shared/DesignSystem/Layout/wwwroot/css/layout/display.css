@@ -1,5 +1,45 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C layout/display.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Display Master Rules via :is(...) (Zero Flexbox)
    ========================================================================== */
 
+/* Universal Inline Grid Master Rule */
+:is(
+    .ad-slide-touch-prompt,
+    .analytics-status-pill,
+    .back-button,
+    .banner-close-btn,
+    .brand-screensaver-cta,
+    .btn-primary-link,
+    .citation,
+    .column-badge,
+    .count-badge,
+    .crumb-link,
+    .docs-header-bar,
+    .docs-header-breadcrumb,
+    .footer-brand-link,
+    .footer-links-list a,
+    .footer-system-status,
+    .item-qty-badge,
+    .items-count-badge,
+    .kiosk-tier-btn,
+    .kpi-trend,
+    .landing-auth-btn,
+    .landing-nav-link,
+    .m3-pill-badge,
+    .mobile-nav-item,
+    .mode-indicator,
+    .payment-support a,
+    .pos-header-link,
+    .pos-tech-chip,
+    .preset-btn,
+    .qrg-back,
+    .screensaver-pro-badge,
+    .seller-address,
+    .seller-browse-all,
+    .share-toast,
+    .trust-badge
+) {
+    display: inline-grid;
+}

@@ -1,5 +1,60 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C layout/alignment.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Alignment & Place-Items Master Rules via :is(...)
    ========================================================================== */
 
+/* Universal Centered Alignment Master Rule */
+:is(
+    .ad-network-container .google-adsense-wrapper,
+    .ad-network-container .yandex-ads-wrapper,
+    .ad-network-render-slot,
+    .analytics-period-chip,
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .auth-container,
+    .auth-logo-badge,
+    .banner-close-btn,
+    .brand-screensaver-logo-wrapper,
+    .chat-back-link,
+    .column-badge,
+    .count-badge,
+    .docs-refresh-btn,
+    .docs-welcome-card,
+    .docs-welcome-container,
+    .empty-plans-icon-wrapper,
+    .faceid-scanner-frame,
+    .footer-brand-badge,
+    .fullscreen-loading,
+    .fullscreen-player,
+    .header-brand-icon-box,
+    .header-icon-wrap,
+    .item-icon-wrapper,
+    .item-qty-badge,
+    .kiosk-brand-logo-fallback,
+    .kpi-icon-badge,
+    .landing-mobile-menu-toggle,
+    .mobile-nav-footer,
+    .pillar-icon-box,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-quick-bill-btn,
+    .pos-tech-chip,
+    .product-img-placeholder,
+    .qr-canvas-box,
+    .qr-stage,
+    .qrg-card-qr,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-logo-badge,
+    .score-box,
+    .score-circle,
+    .seller-logo-placeholder,
+    .showcase-brand-icon,
+    .showcase-card-btn,
+    .signin-container,
+    .signin-logo-badge,
+    .tools
+) {
+    place-items: center;
+}

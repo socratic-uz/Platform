@@ -1,5 +1,49 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C box-model/sizing.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Sizing & Touch Target Master Rules via :is(...)
    ========================================================================== */
 
+/* Universal Box Sizing Reset Rule */
+:is(*, *::before, *::after) {
+    box-sizing: border-box;
+}
+
+/* Universal Minimum Touch Target Standard (>= 48px) */
+:is(
+    .actions-row button,
+    .advance-prompt,
+    .back-button,
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .crumb-link,
+    .cta-link .btn-order-kiosk,
+    .docs-refresh-btn,
+    .empty-plans-actions button,
+    .footer-brand-link,
+    .header-brand-link,
+    .input-box,
+    .kds-action-btn,
+    .kiosk-new-order-btn,
+    .kiosk-tier-btn,
+    .landing-auth-btn,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .m3-bottom-nav-item,
+    .mobile-nav-item,
+    .mode-indicator,
+    .order-card-footer,
+    .payment-support a,
+    .pos-card-footer-row md-icon-button,
+    .pos-sidebar-header-row md-icon-button,
+    .preset-btn,
+    .product-actions-bar md-filled-button,
+    .product-actions-bar md-filled-tonal-button,
+    .product-actions-bar md-outlined-button,
+    .select-input,
+    .seller-browse-all,
+    .text-input,
+    .thumb-btn
+) {
+    min-height: 48px;
+}

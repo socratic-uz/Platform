@@ -1,7 +1,5 @@
 /* ─── 6. Organization Subscription & Promotion Modals ──────────────── */
 .trial-counter {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: baseline;
     gap: 0.4rem;
 }
@@ -42,7 +40,6 @@
     width: 48px;
     height: 48px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
-    place-items: center;
 }
 
 .header-rocket-icon {
@@ -128,7 +125,6 @@
     margin: 1rem auto;
     width: 100%;
     max-width: 1200px;
-    box-sizing: border-box;
 }
 
 .ad-slot.ad-placement-catalog {
@@ -153,7 +149,6 @@
 .ad-network-container .yandex-ads-wrapper {
     width: 100%;
     min-height: 90px;
-    place-items: center;
 }
 
 .ad-network-footer {
@@ -187,7 +182,6 @@
     width: 100%;
     height: 100dvh;
     background-color: var(--md-sys-color-scrim);
-    place-items: center;
     overflow: hidden;
     z-index: 99999;
 }
@@ -202,7 +196,6 @@
 }
 
 .fullscreen-loading {
-    place-items: center;
     gap: 1.2rem;
     color: var(--md-sys-color-on-surface);
 }
@@ -252,7 +245,6 @@
     width: 100%;
     max-width: 900px;
     padding: 3rem 2rem 5rem;
-    box-sizing: border-box;
     justify-items: center;
     text-align: center;
     color: var(--md-sys-color-on-surface);
@@ -272,7 +264,6 @@
     padding: 12px;
     box-shadow: 0 12px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.2);
-    place-items: center;
 }
 
 .brand-screensaver-logo {
@@ -302,7 +293,6 @@
 .ad-slide-touch-prompt {
     position: relative;
     margin-top: 1.5rem;
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 0.75rem;
@@ -335,7 +325,6 @@
 }
 
 .screensaver-pro-badge {
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 0.4rem;
@@ -395,7 +384,6 @@
 
 .ad-network-render-slot {
     min-height: 250px;
-    place-items: center;
 }
 
 .ad-screensaver-footer {

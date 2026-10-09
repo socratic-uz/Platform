@@ -19,7 +19,6 @@
     gap: 20px;
     font-family: inherit;
     width: 100%;
-    box-sizing: border-box;
 }
 
 /* ─── Header Section ────────────────────────────────────────── */
@@ -46,7 +45,6 @@
     width: 36px;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    place-items: center;
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -73,8 +71,6 @@
     border: 1px solid var(--md-sys-color-outline-variant);
     padding: 2px 8px;
     font-weight: 600;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 4px;
     white-space: nowrap;
@@ -97,8 +93,6 @@
     font-weight: 600;
     white-space: nowrap;
     height: 48px !important;
-    min-height: 48px !important;
-    display: inline-grid !important;
     align-items: center !important;
     touch-action: manipulation;
 }
@@ -195,8 +189,6 @@
 
 .kiosk-category-chipset,
 .unified-kiosk-filter-bar md-chip-set {
-    grid-auto-flow: column !important;
-    grid-auto-columns: max-content !important;
     gap: 8px !important;
     align-items: center;
     width: max-content !important;
@@ -220,7 +212,6 @@
     border: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
     min-height: 52px;
-    box-sizing: border-box;
 }
 
 .active-orders-label {
@@ -241,7 +232,6 @@
 
 .kiosk-new-order-btn {
     min-width: max-content;
-    min-height: 48px;
 }
 
 /* ─── Product Card & Media ────────────────────────────────── */
@@ -274,7 +264,6 @@ md-filled-card.product-card,
 .product-img-placeholder {
     width: 100%;
     height: 100%;
-    place-items: center;
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-outline);
 }
@@ -299,8 +288,6 @@ md-filled-card.product-card,
     font-weight: 700;
     color: var(--md-sys-color-primary);
     z-index: var(--m3-z-content, 1);
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 4px;
     pointer-events: none;
@@ -438,8 +425,6 @@ md-filled-card.product-card,
 }
 
 .ux-widget-chips {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 8px;
     overflow-x: auto;
     overscroll-behavior-x: contain;
@@ -456,7 +441,6 @@ md-filled-card.product-card,
     min-height: 52px;
     align-self: end !important;
     margin-top: auto !important;
-    box-sizing: border-box;
 }
 
 .price-tag {
@@ -483,8 +467,6 @@ md-filled-card.product-card,
 }
 
 .cart-summary {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
     min-width: 0;
@@ -523,8 +505,6 @@ md-filled-card.product-card,
 
 /* Dialog & Alert Helpers */
 .dialog-headline-wrap {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
     color: var(--md-sys-color-on-surface);

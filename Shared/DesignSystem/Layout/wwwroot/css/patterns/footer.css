@@ -16,11 +16,9 @@
     padding: 0.5rem 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
-    box-sizing: border-box;
 }
 
 .trust-badge {
-    display: inline-grid !important;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
@@ -36,8 +34,6 @@
 }
 
 .payment-methods {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
@@ -48,9 +44,7 @@
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
-    display: inline-grid !important;
     align-items: center;
-    min-height: 48px;
 }
 
 .payment-support a:hover {
@@ -75,7 +69,6 @@ footer.app-footer {
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
     position: relative;
-    box-sizing: border-box;
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -87,7 +80,6 @@ footer.app-footer {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .footer-custom-slot {
@@ -113,20 +105,17 @@ footer.app-footer {
 }
 
 .footer-brand-link {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
     gap: 0.65rem;
     text-decoration: none;
     color: var(--md-sys-color-on-surface);
-    min-height: 48px;
     min-width: 48px;
     width: max-content;
 }
 
 .footer-brand-badge {
-    place-items: center;
     width: 36px;
     height: 36px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
@@ -152,7 +141,6 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
@@ -219,7 +207,6 @@ footer.app-footer {
 }
 
 .footer-links-list a {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     align-items: center;
@@ -256,7 +243,6 @@ footer.app-footer {
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
-    box-sizing: border-box;
 }
 
 .footer-copyright {

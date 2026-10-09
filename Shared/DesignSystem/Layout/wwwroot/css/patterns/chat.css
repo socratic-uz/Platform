@@ -28,7 +28,6 @@
     padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
     border-top: 1px solid var(--md-sys-color-outline-variant);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    box-sizing: border-box;
 }
 
 @media (max-width: 599.98px) {
@@ -48,7 +47,6 @@
     background: var();
     border-bottom: 1px solid var();
     z-index: 20;
-    box-sizing: border-box;
 }
 
 .header-content {
@@ -58,7 +56,6 @@
 }
 
 .chat-back-link {
-    place-items: center;
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.08);
@@ -91,7 +88,6 @@
     overscroll-behavior-y: contain;
     padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
     color: var(--md-sys-color-on-surface);
-    box-sizing: border-box;
 }
 
 .message-list {
@@ -125,7 +121,6 @@ chat-messages > div:last-of-type {
     border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
     color: var(--md-sys-color-on-primary-container);
     white-space: pre-wrap;
-    box-sizing: border-box;
 }
 
 .assistant-message,
@@ -144,7 +139,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-message-icon {
-    place-items: center;
     width: 1.5rem;
     height: 1.5rem;
     color: var(--md-sys-color-on-primary);
@@ -162,7 +156,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search-icon {
-    place-items: center;
     width: 1.5rem;
     height: 1.5rem;
 }
@@ -252,9 +245,6 @@ assistant-message pre > code,
 
 /* ─── 5. Citations ───────────────────────────────────────────────────────── */
 .citation {
-    display: inline-grid !important;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     padding: 0.5rem 0.75rem;
     margin-top: 1rem;
@@ -267,7 +257,6 @@ assistant-message pre > code,
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 .citation[href]:hover {
@@ -299,7 +288,6 @@ assistant-message pre > code,
     scrollbar-width: none;
     padding: 0 1.5rem;
     margin-bottom: 0.5rem;
-    box-sizing: border-box;
 }
 
 .suggestions-wrapper::-webkit-scrollbar {
@@ -307,8 +295,6 @@ assistant-message pre > code,
 }
 
 .suggestions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 0.5rem;
     align-items: center;
     justify-content: start;
@@ -330,7 +316,6 @@ assistant-message pre > code,
 .chat-input-wrapper,
 .chat-input-form {
     width: 100%;
-    box-sizing: border-box;
 }
 
 .input-box {
@@ -339,9 +324,7 @@ assistant-message pre > code,
     background: var();
     border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
-    min-height: 48px;
     width: 100%;
-    box-sizing: border-box;
     cursor: text;
 }
 
@@ -365,7 +348,6 @@ assistant-message pre > code,
     padding: 0.4rem 0;
     margin: 0;
     color: var();
-    box-sizing: border-box;
     display: block;
 }
 
@@ -375,7 +357,6 @@ assistant-message pre > code,
 }
 
 .tools {
-    place-items: center;
     margin-left: 0.5rem;
 }
 

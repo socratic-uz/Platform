@@ -49,8 +49,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-header-nav {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
@@ -60,9 +58,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-nav-link {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.85rem;
@@ -72,7 +67,6 @@ header.landing-header .header-brand-text {
     font-weight: 500;
     letter-spacing: -0.01em;
     min-height: 40px;
-    box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid transparent;
 }
@@ -104,7 +98,6 @@ header.landing-header .header-brand-text {
 
 .lang-toggle-btn {
     height: 48px;
-    min-height: 48px;
     min-width: 48px;
     padding: 0.3rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
@@ -136,7 +129,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-auth-btn {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
@@ -148,10 +140,8 @@ header.landing-header .header-brand-text {
     font-size: 0.84rem;
     font-weight: 600;
     text-decoration: none;
-    min-height: 48px;
     touch-action: manipulation;
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    box-sizing: border-box;
 }
 
 .landing-auth-btn md-icon {
@@ -172,11 +162,9 @@ header.landing-header .header-brand-text {
 
 .landing-mobile-menu-toggle {
     display: none;
-    place-items: center;
     width: 48px;
     height: 48px;
     min-width: 48px;
-    min-height: 48px;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
     color: var();
@@ -221,7 +209,6 @@ header.landing-header .header-brand-text {
 }
 
 .mobile-nav-item {
-    display: inline-grid;
     grid-template-columns: 24px minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
@@ -230,8 +217,6 @@ header.landing-header .header-brand-text {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    min-height: 48px;
-    box-sizing: border-box;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -253,7 +238,6 @@ header.landing-header .header-brand-text {
 }
 
 .mobile-nav-footer {
-    place-items: center;
     padding-top: 0.25rem;
 }
 
@@ -267,7 +251,6 @@ footer.app-footer {
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
     position: relative;
-    box-sizing: border-box;
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -279,7 +262,6 @@ footer.app-footer {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .footer-custom-slot {
@@ -303,20 +285,17 @@ footer.app-footer {
 }
 
 .footer-brand-link {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
     gap: 0.65rem;
     text-decoration: none;
     color: var(--md-sys-color-on-surface);
-    min-height: 48px;
     min-width: 48px;
     width: max-content;
 }
 
 .footer-brand-badge {
-    place-items: center;
     width: 36px;
     height: 36px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
@@ -342,7 +321,6 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;
@@ -402,7 +380,6 @@ footer.app-footer {
 }
 
 .footer-links-list a {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     align-items: center;
@@ -438,7 +415,6 @@ footer.app-footer {
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
-    box-sizing: border-box;
 }
 
 .footer-copyright {
@@ -458,7 +434,6 @@ footer.app-footer {
 }
 
 .trust-badge {
-    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     align-items: center;

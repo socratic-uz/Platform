@@ -13,7 +13,6 @@ main.showcase-page {
     background-color: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     font-family: inherit;
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -25,7 +24,6 @@ main.showcase-page {
     border-right: 1px solid var(--md-sys-color-outline-variant);
     grid-template-rows: auto auto minmax(0, 1fr);
     z-index: 10;
-    box-sizing: border-box;
 }
 
 .showcase-sidebar-header {
@@ -37,8 +35,6 @@ main.showcase-page {
 }
 
 .showcase-brand {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
 }
@@ -46,7 +42,6 @@ main.showcase-page {
 .showcase-brand-icon {
     font-size: 28px;
     color: var(--md-sys-color-primary);
-    place-items: center;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     padding: 8px;
     border-radius: 12px;
@@ -184,8 +179,6 @@ main.showcase-page {
 }
 
 .showcase-topbar-left {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 16px;
 }
@@ -212,8 +205,6 @@ main.showcase-page {
 }
 
 .showcase-topbar-actions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
 }
@@ -304,8 +295,6 @@ main.showcase-page {
 }
 
 .showcase-section-title-wrap {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
 }
@@ -377,8 +366,6 @@ main.showcase-page {
 }
 
 .showcase-card-actions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 6px;
 }
@@ -388,7 +375,6 @@ main.showcase-page {
     border: none;
     color: var(--md-sys-color-on-surface-variant);
     padding: 6px;
-    place-items: center;
     transition: background-color 0.15s, color 0.15s;
 }
 
@@ -410,8 +396,6 @@ main.showcase-page {
 }
 
 .showcase-demo-row {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 12px;
     overflow-x: auto;
@@ -450,8 +434,6 @@ main.showcase-page {
 
 /* Toast trigger styles */
 .toast-triggers-row {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: 10px;
     overflow-x: auto;
 }

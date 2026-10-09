@@ -17,7 +17,6 @@
     transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
     overscroll-behavior: contain;
     touch-action: pan-y;
-    box-sizing: border-box;
 }
 
 .m3-drawer-backdrop.show,
@@ -42,7 +41,6 @@
     touch-action: pan-y;
     transform: translate3d(0, 0, 0);
     will-change: transform;
-    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
@@ -65,7 +63,6 @@
     align-items: center;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 16px;
-    box-sizing: border-box;
 }
 
 .header-title-box {
@@ -80,8 +77,6 @@
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
     margin: 0;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 8px;
 }
@@ -103,7 +98,6 @@
     align-content: start;
     gap: 16px;
     padding: 16px 0;
-    box-sizing: border-box;
 }
 
 .empty-cart-view {
@@ -112,7 +106,6 @@
     color: var(--md-sys-color-on-surface-variant);
     place-content: center;
     gap: 8px;
-    box-sizing: border-box;
 }
 
 .empty-cart-view .empty-icon {
@@ -128,7 +121,6 @@
     gap: 8px;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .cart-item-row {
@@ -137,7 +129,6 @@
     gap: 12px;
     padding: 12px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
 }
 
 .cart-item-row:last-child {
@@ -167,15 +158,11 @@
 }
 
 .item-actions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 8px;
 }
 
 .qty-stepper {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -190,7 +177,6 @@
 
 .promo-section {
     margin-top: 8px;
-    box-sizing: border-box;
 }
 
 .promo-input-group {
@@ -220,7 +206,6 @@
     padding: 12px;
     border: 1px solid var(--md-sys-color-outline-variant);
     margin-top: 8px;
-    box-sizing: border-box;
 }
 
 .shipping-fee {
@@ -231,14 +216,12 @@
 .drawer-footer {
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding-top: 16px;
-    box-sizing: border-box;
 }
 
 .price-breakdown {
     gap: 8px;
     margin-bottom: 16px;
     font-size: 0.9rem;
-    box-sizing: border-box;
 }
 
 .price-row {

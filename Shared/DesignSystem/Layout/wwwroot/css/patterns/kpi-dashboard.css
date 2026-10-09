@@ -7,7 +7,6 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: var(--md-sys-spacing-4, 1rem);
     width: 100%;
-    box-sizing: border-box;
 }
 
 .analytics-kpi-card {
@@ -17,7 +16,6 @@
     background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
-    box-sizing: border-box;
 }
 
 .analytics-kpi-card:hover {
@@ -43,15 +41,12 @@
 .kpi-icon-badge {
     width: 32px;
     height: 32px;
-    place-items: center;
     background: rgb(from var() r g b / 0.12);
     color: var();
     font-size: 18px;
 }
 
 .kpi-value-row {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: baseline;
     gap: 0.4rem;
 }
@@ -67,7 +62,6 @@
 .kpi-trend {
     font-size: 0.75rem;
     font-weight: 600;
-    display: inline-grid !important;
     grid-auto-flow: column;
     align-items: center;
     gap: 2px;
@@ -78,7 +72,6 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
     gap: var(--md-sys-spacing-5, 1.25rem);
     width: 100%;
-    box-sizing: border-box;
 }
 
 .analytics-panel-card {
@@ -87,7 +80,6 @@
     padding: var(--md-sys-spacing-5, 1.25rem);
     background: var();
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
-    box-sizing: border-box;
 }
 
 .panel-header {
@@ -138,7 +130,6 @@
     align-items: center;
     gap: 0.75rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
 @media (max-width: 960px) {
@@ -149,8 +140,6 @@
 }
 
 .analytics-mode-pill-group {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
     padding: 3px;
@@ -158,8 +147,6 @@
 }
 
 .analytics-mode-btn {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.35rem;
     background: transparent;
@@ -181,8 +168,6 @@
 }
 
 .analytics-config-btn {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.35rem;
     background: var(--md-sys-color-surface-container-high);
@@ -200,8 +185,6 @@
 }
 
 .analytics-period-selector {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.5rem;
     overflow-x: auto;
@@ -210,7 +193,6 @@
 }
 
 .analytics-period-chip {
-    place-items: center;
     padding: 0.4rem 0.9rem;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -235,8 +217,6 @@
 }
 
 .analytics-toolbar-actions {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.75rem;
     justify-content: end;
@@ -255,9 +235,6 @@
 }
 
 .analytics-status-pill {
-    display: inline-grid !important;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     align-items: center;
     gap: 0.5rem;
     padding: 0.25rem 0.75rem;

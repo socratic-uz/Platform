@@ -6,10 +6,8 @@
 
 .signin-container,
 .auth-container {
-    place-items: center;
     min-height: 0;
     padding: 3rem 1.5rem;
-    box-sizing: border-box;
 }
 
 .signin-card,
@@ -22,7 +20,6 @@
     box-shadow: 0 20px 40px var(--md-sys-color-shadow);
     gap: 1.5rem;
     color: var(--md-sys-color-on-surface);
-    box-sizing: border-box;
 }
 
 .signin-header,
@@ -37,7 +34,6 @@
     width: 56px;
     height: 56px;
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-    place-items: center;
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
     box-shadow: 0 8px 16px var(--md-sys-color-shadow);
@@ -131,7 +127,6 @@
     height: 220px;
     border-radius: 50%;
     border: 3px solid var(--md-sys-color-primary);
-    place-items: center;
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
     box-shadow: 0 0 30px var(--md-sys-color-primary-container);

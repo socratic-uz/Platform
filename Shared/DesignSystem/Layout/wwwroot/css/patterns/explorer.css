@@ -9,7 +9,6 @@
     padding: var(--md-sys-spacing-6, 1.5rem);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    box-sizing: border-box;
     width: 100%;
 }
 
@@ -45,11 +44,9 @@
     gap: var(--md-sys-spacing-2, 0.5rem);
     overflow-x: auto;
     padding-bottom: 0.25rem;
-    box-sizing: border-box;
 }
 
 .explorer-grid-container {
     width: 100%;
     min-height: 380px;
-    box-sizing: border-box;
 }
