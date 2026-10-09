@@ -2,7 +2,6 @@
 .m3-kanban-board,
 .orders-kanban-board,
 .kds-board {
-    container-type: inline-size;
 }
 
 .m3-kanban-column,
@@ -77,7 +76,6 @@
 }
 
 .card-bottom-row {
-    margin-top: 0.25rem;
     padding-top: 0.4rem;
     border-top: 1px dashed var(--md-sys-color-outline-variant);
 }
@@ -211,7 +209,6 @@
 }
 
 .error-banner {
-    background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border: 1px solid var(--md-sys-color-error);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);

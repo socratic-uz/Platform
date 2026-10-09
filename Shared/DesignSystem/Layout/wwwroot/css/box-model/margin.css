@@ -101,3 +101,44 @@
 ) {
     margin: 0 auto;
 }
+
+/* Universal Margin Top 0.5rem (8px) Master Rule */
+:is(
+    .actions-row,
+    .ad-network-footer,
+    .empty-plans-actions,
+    .product-actions-bar,
+    .product-price-section
+) {
+    margin-top: 0.5rem;
+}
+
+/* Universal Margin Top 1rem (16px) Master Rule */
+:is(
+    .ad-screensaver-footer,
+    .assistant-message-text p + p,
+    .citation,
+    .screensaver-pro-badge,
+    assistant-message p + p
+) {
+    margin-top: 1rem;
+}
+
+/* Universal Margin Bottom 0.5rem (8px) Master Rule */
+:is(
+    .product-tags,
+    .profile-title,
+    .store-not-found h2,
+    .suggestions-wrapper
+) {
+    margin-bottom: 0.5rem;
+}
+
+/* Universal Margin Top 0.25rem (4px) Master Rule */
+:is(
+    .card-bottom-row,
+    .footer-system-status,
+    .total-amount
+) {
+    margin-top: 0.25rem;
+}

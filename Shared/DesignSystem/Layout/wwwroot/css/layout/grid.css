@@ -790,3 +790,14 @@
 ) {
     grid-auto-columns: max-content minmax(0, 1fr);
 }
+
+/* Universal 3-Row (auto auto 1fr) Grid Master Rule */
+:is(
+    .designer-page-root,
+    .pos-catalog,
+    .qr-designer-page-root,
+    .seat-designer-page-root,
+    .showcase-sidebar
+) {
+    grid-template-rows: auto auto minmax(0, 1fr);
+}

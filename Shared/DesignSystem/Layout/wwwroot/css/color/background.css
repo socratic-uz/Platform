@@ -234,3 +234,39 @@
 ) {
     background: var(--md-sys-color-tertiary);
 }
+
+/* Universal Error Container Background Master Rule */
+:is(
+    .auth-error-banner,
+    .error-banner,
+    .kiosk-wish-icon.wished,
+    .signin-error-banner
+) {
+    background: var(--md-sys-color-error-container);
+}
+
+/* Universal Surface Translucent Background Master Rule */
+:is(
+    .chat-container,
+    .footer-system-status
+) {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+}
+
+/* Universal Subtle Glass Background Master Rule */
+:is(
+    .chat-back-link,
+    .landing-nav-link:hover,
+    .mobile-nav-divider
+) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Universal Background None Master Rule */
+:is(
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .thumb-btn
+) {
+    background: none;
+}

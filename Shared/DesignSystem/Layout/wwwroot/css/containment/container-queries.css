@@ -3,3 +3,15 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Container Type Inline-Size Master Rule */
+:is(
+    .kds-board,
+    .m3-kanban-board,
+    .orders-kanban-board,
+    .preview-card,
+    .product-card,
+    md-filled-card.product-card
+) {
+    container-type: inline-size;
+}

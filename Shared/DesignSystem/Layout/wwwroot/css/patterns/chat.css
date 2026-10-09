@@ -21,7 +21,6 @@
     padding-right: 1.5rem;
     padding-top: 0.75rem;
     padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
 }
 
 @media (max-width: 599.98px) {
@@ -45,7 +44,6 @@
 .chat-back-link {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all 0.2s ease;
 }
@@ -57,13 +55,10 @@
 
 .brand-title {
     background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* ─── 3. Message Stream & List ───────────────────────────────────────────── */
 .message-list-container {
-    overflow-x: hidden;
     padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
 }
 
@@ -105,8 +100,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-message-icon {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .assistant-message-icon svg {
@@ -119,8 +112,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search-icon {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .assistant-search-icon svg {
@@ -163,7 +154,6 @@ assistant-message h3,
 
 assistant-message p + p,
 .assistant-message-text p + p {
-    margin-top: 1rem;
 }
 
 assistant-message table,
@@ -192,14 +182,12 @@ assistant-message tr:nth-child(even),
 assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
-    padding: 0.5rem 1rem;
     margin: 1rem 0;
 }
 
 /* ─── 5. Citations ───────────────────────────────────────────────────────── */
 .citation {
     padding: 0.5rem 0.75rem;
-    margin-top: 1rem;
     margin-right: 1rem;
     border-bottom: 2px solid var(--md-sys-color-tertiary);
     line-height: 1.25rem;
@@ -210,8 +198,6 @@ assistant-message pre > code,
 }
 
 .citation svg {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .citation:active {
@@ -229,7 +215,6 @@ assistant-message pre > code,
     overflow-y: hidden;
     scrollbar-width: none;
     padding: 0 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .suggestions-wrapper::-webkit-scrollbar {

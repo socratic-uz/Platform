@@ -6,7 +6,6 @@
 .payment-dashboard {
     padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
     gap: 2rem;
-    overflow-x: hidden;
 }
 
 .loading-label {
@@ -18,11 +17,9 @@
 }
 
 .payment-dashboard .glass-card {
-    padding: 1.5rem;
 }
 
 .profile-title {
-    margin-bottom: 0.5rem;
 }
 
 .payment-dashboard .info-grid {
@@ -68,7 +65,6 @@
 }
 
 .plan-header {
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
     padding-bottom: 0.875rem;
 }
 
@@ -94,7 +90,6 @@
 .actions-row {
     grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
     gap: 0.625rem;
-    margin-top: 0.5rem;
 }
 
 .actions-row button {
@@ -123,7 +118,6 @@
 }
 
 .empty-plans-actions {
-    margin-top: 0.5rem;
 }
 
 .empty-plans-actions button {

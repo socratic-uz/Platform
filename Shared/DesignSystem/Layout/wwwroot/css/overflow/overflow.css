@@ -131,3 +131,12 @@
 ) {
     overscroll-behavior-y: contain;
 }
+
+/* Universal Overflow X Hidden Master Rule */
+:is(
+    .message-list-container,
+    .payment-dashboard,
+    .pos-main
+) {
+    overflow-x: hidden;
+}

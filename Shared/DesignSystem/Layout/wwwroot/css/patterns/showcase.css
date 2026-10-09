@@ -12,8 +12,6 @@ main.showcase-page {
 /* Sidebar Navigation */
 .showcase-sidebar {
     max-width: 320px;
-    border-right: 1px solid var(--md-sys-color-outline-variant);
-    grid-template-rows: auto auto minmax(0, 1fr);
     z-index: 10;
 }
 
@@ -140,8 +138,6 @@ main.showcase-page {
     font-size: 2rem;
     margin: 0 0 8px 0;
     background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .showcase-hero p {

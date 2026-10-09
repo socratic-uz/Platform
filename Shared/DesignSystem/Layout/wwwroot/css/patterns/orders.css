@@ -10,7 +10,6 @@
 }
 
 .order-card {
-    padding: 1.25rem;
     min-height: 140px;
 }
 
@@ -30,7 +29,6 @@
 }
 
 .total-amount {
-    margin-top: 0.25rem;
     padding-top: 0.5rem;
 }
 

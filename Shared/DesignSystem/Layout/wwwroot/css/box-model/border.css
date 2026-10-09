@@ -381,3 +381,22 @@
 ) {
     border-radius: 50%;
 }
+
+/* Universal Border Bottom Dashed Divider Master Rule */
+:is(
+    .footer-custom-slot,
+    .plan-header,
+    .pos-sidebar-header
+) {
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+/* Universal Border Right Solid Separator Master Rule */
+:is(
+    .docs-sidebar,
+    .m3-nav-rail,
+    .qrg-sidebar,
+    .showcase-sidebar
+) {
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+}

@@ -28,3 +28,37 @@
 ) {
     padding: 0;
 }
+
+/* Universal Padding 1.5rem (24px) Master Rule */
+:is(
+    .example-card,
+    .faq-card,
+    .link-stack a,
+    .link-stack article,
+    .payment-dashboard .glass-card,
+    .preview-card,
+    .qr-controls-panel
+) {
+    padding: 1.5rem;
+}
+
+/* Universal Padding Compact (8px 16px) Master Rule */
+:is(
+    .assistant-message-text pre > code,
+    .mode-indicator,
+    .preset-btn,
+    .share-toast,
+    assistant-message pre > code
+) {
+    padding: 0.5rem 1rem;
+}
+
+/* Universal Padding Medium (20px) Master Rule */
+:is(
+    .ad-network-unit-card,
+    .invoice-summary-box,
+    .order-card,
+    .store-seller-card
+) {
+    padding: 1.25rem;
+}

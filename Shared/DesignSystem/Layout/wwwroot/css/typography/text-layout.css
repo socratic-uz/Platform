@@ -205,3 +205,25 @@
 ) {
     text-decoration: underline;
 }
+
+/* Universal Webkit Background Clip Text Master Rule */
+:is(
+    .brand-title,
+    .footer-brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    -webkit-background-clip: text;
+}
+
+/* Universal Webkit Text Fill Color Transparent Master Rule */
+:is(
+    .brand-title,
+    .footer-brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    -webkit-text-fill-color: transparent;
+}

@@ -448,3 +448,21 @@
 ) {
     height: 52px;
 }
+
+/* Universal Width 1.5rem (24px) Master Rule */
+:is(
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .citation svg
+) {
+    width: 1.5rem;
+}
+
+/* Universal Height 1.5rem (24px) Master Rule */
+:is(
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .citation svg
+) {
+    height: 1.5rem;
+}

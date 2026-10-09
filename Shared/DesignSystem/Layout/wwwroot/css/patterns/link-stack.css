@@ -34,7 +34,6 @@ section.link-stack {
 .link-stack a,
 .link-stack article {
     border-radius: 0;
-    padding: 1.5rem;
     justify-self: stretch;
     font-size: .9rem;
 }

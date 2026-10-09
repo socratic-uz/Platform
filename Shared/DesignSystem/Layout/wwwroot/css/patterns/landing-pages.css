@@ -46,8 +46,6 @@
 }
 
 .m3-text-gradient {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .section-header {
@@ -145,7 +143,6 @@
 
 .faq-card,
 .example-card {
-    padding: 1.5rem;
 }
 
 .contact-card {
@@ -171,7 +168,6 @@
     grid-area: sidebar;
     grid-template-rows: auto auto minmax(0, 1fr) auto;
     padding: 24px 20px;
-    border-right: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .qrg-sidebar-scrollable {
@@ -334,7 +330,6 @@ main.docs-page {
 .docs-sidebar {
     width: 280px;
     background-color: var(--md-sys-color-surface-container-low);
-    border-right: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .docs-sidebar-header {

@@ -136,7 +136,6 @@
 /* ─── Product Card & Media ────────────────────────────────── */
 md-filled-card.product-card,
 .product-card {
-    container-type: inline-size;
     container-name: product-card;
     min-height: 380px;
 }
@@ -186,7 +185,6 @@ md-filled-card.product-card,
 
 .kiosk-wish-icon.wished {
     color: var(--md-sys-color-error) !important;
-    background: var(--md-sys-color-error-container) !important;
     border-color: var(--md-sys-color-error) !important;
 }
 

@@ -48,7 +48,6 @@ footer.app-footer {
 
 .footer-custom-slot {
     padding-bottom: 1.5rem;
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 /* Primary Column Grid */
@@ -70,8 +69,6 @@ footer.app-footer {
 }
 
 .footer-brand-title {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .footer-brand-tagline {
@@ -80,8 +77,6 @@ footer.app-footer {
 
 .footer-system-status {
     padding: 0.35rem 0.85rem;
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    margin-top: 0.25rem;
 }
 
 .status-pulse-dot {
