@@ -111,7 +111,7 @@
 .org-card-desc {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 :is(md-filled-card, md-outlined-card, md-elevated-card) p {
@@ -125,7 +125,7 @@
 }
 
 .picker-preview-text {
-    word-break: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }

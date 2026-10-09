@@ -546,8 +546,9 @@ input[type="color"] {
 
 .m3-skeleton-text {
     height: 1rem;
-    .m3-skeleton-text.m3-short,
-.m3-skeleton-text.short {
+}
+
+:is(.m3-skeleton-text.m3-short, .m3-skeleton-text.short) {
     width: 60%;
 }
 
