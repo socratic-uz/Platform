@@ -44,3 +44,27 @@
 ) {
     touch-action: manipulation;
 }
+
+/* Universal Pointer Events None Master Rule */
+:is(
+    .kiosk-hero::before,
+    .landing-top-bar-wrapper,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .pulse-ring,
+    .ux-mode-badge-overlay
+) {
+    pointer-events: none;
+}
+
+/* Universal Touch Action Pan Y Master Rule */
+:is(
+    .active-orders-scroll,
+    .drawer-body,
+    .drawer-panel,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .md-drawer-backdrop
+) {
+    touch-action: pan-y;
+}

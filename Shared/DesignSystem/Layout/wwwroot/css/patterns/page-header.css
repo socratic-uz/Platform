@@ -1,6 +1,5 @@
 /* ─── 10. Universal Page Header Primitive ──────────────────────────────── */
 .m3-page-header {
-    gap: var(--md-sys-spacing-5, 1.25rem);
     padding-bottom: var(--md-sys-spacing-4, 1rem);
 }
 
@@ -9,7 +8,6 @@
 
 .m3-page-header-title,
 .home-title {
-    line-height: 1.2;
 }
 
 .m3-page-header-subtitle {

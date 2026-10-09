@@ -9,7 +9,6 @@
 
 .pos-main {
     padding: 16px 24px;
-    background-color: var(--md-sys-color-surface);
     min-height: calc(100vh - 100px);
     max-width: 100vw;
     overflow-x: hidden;
@@ -19,7 +18,6 @@
     grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
     gap: 20px;
     height: calc(100vh - 130px);
-    align-items: stretch;
 }
 
 /* Left Catalog Panel */
@@ -65,7 +63,6 @@
 }
 
 .pos-grid {
-    overscroll-behavior-y: contain;
     padding-right: 4px;
     padding-bottom: 24px;
 }
@@ -74,9 +71,7 @@
 .pos-product-card {
     padding: var(--space-3, 12px);
     min-height: 130px;
-    grid-template-rows: auto minmax(0, 1fr);
     gap: var(--space-2, 8px);
-    text-align: left;
 }
 
 .pos-badge-qty {
@@ -92,24 +87,18 @@
 .pos-card-img,
 .pos-card-img-placeholder {
     width: 52px;
-    height: 52px;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
 }
 
 .pos-card-title-group {
-    gap: 2px;
 }
 
 .pos-ux-mode-title {
-    line-height: 1.2;
-    letter-spacing: 0.02em;
 }
 
 .pos-product-title-text {
     font-size: 0.88rem;
     line-height: 1.25;
-    text-align: left;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -133,7 +122,6 @@
     background-color: var(--md-sys-color-surface-container-lowest);
     border-radius: var(--md-sys-shape-expressive-dock, 32px);
     padding: 20px;
-    grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
 .pos-sidebar-header {
@@ -146,14 +134,12 @@
 }
 
 .pos-orders-label {
-    letter-spacing: 0.5px;
 }
 
 .pos-orders-scroll {
 }
 
 .pos-invoice-container {
-    overscroll-behavior-y: contain;
     margin-bottom: 16px;
     min-height: 200px;
 }
@@ -166,7 +152,6 @@
 .pos-action-btn {
     --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button, 20px);
     --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
-    height: 52px;
 }
 
 .pos-complete-btn {
@@ -204,11 +189,9 @@
 }
 
 .store-product-container {
-    max-width: 1200px;
 }
 
 .product-detail-card {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
 }
 
@@ -220,7 +203,6 @@
 }
 
 .product-main-img {
-    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -260,7 +242,6 @@
 }
 
 .thumb-img {
-    object-fit: cover;
 }
 
 .product-info-panel {
@@ -272,7 +253,6 @@
 
 .product-tag-chip {
     padding: 0.2rem 0.75rem;
-    letter-spacing: 0.02em;
 }
 
 .product-price-section {
@@ -293,7 +273,6 @@
 
 .product-description-block h3 {
     margin: 0 0 0.5rem 0;
-    letter-spacing: 0.05em;
 }
 
 .product-description-text {
@@ -307,25 +286,21 @@
 }
 
 .spec-item {
-    grid-auto-columns: max-content minmax(0, 1fr);
 }
 
 .spec-icon {
-    font-size: 1.5rem;
 }
 
 .spec-icon.in-stock {
 }
 
 .spec-details {
-    gap: 2px;
 }
 
 .spec-label {
 }
 
 .spec-value {
-    font-size: 0.95rem;
 }
 
 .in-stock-text {
@@ -333,7 +308,6 @@
 
 .product-actions-bar {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
-    align-items: stretch;
     margin-top: 0.5rem;
 }
 
@@ -359,16 +333,12 @@
 }
 
 .seller-header {
-    grid-auto-columns: max-content minmax(0, 1fr);
 }
 
 .seller-logo {
-    width: 48px;
-    object-fit: cover;
 }
 
 .seller-logo-placeholder {
-    width: 48px;
 }
 
 .seller-info {
@@ -386,7 +356,6 @@
 }
 
 .seller-address {
-    font-size: 0.825rem;
     gap: 0.3rem;
 }
 
@@ -398,7 +367,6 @@
 }
 
 .seller-browse-all:hover {
-    text-decoration: underline;
 }
 
 .store-not-found {

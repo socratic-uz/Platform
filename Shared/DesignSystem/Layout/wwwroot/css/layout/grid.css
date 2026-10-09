@@ -720,3 +720,73 @@
 ) {
     grid-auto-columns: auto auto;
 }
+
+/* Universal 3-Row Holy Grail Grid Master Rule */
+:is(
+    .drawer-panel,
+    .landing-grid,
+    .m3-drawer-panel,
+    .m3-nav-rail,
+    .order-card,
+    .pos-sidebar,
+    .preview-card,
+    .showcase-card
+) {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+/* Universal 2-Row Grid Master Rule */
+:is(
+    .analytics-panel-card,
+    .docs-sidebar,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .pos-product-card,
+    .qr-designer-page-root,
+    .qrg-preview
+) {
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+/* Universal 2-Column Split Grid Master Rule */
+:is(
+    .color-grid,
+    .delivery-actions-grid,
+    .kds-board,
+    .m3-kanban-board,
+    .orders-kanban-board,
+    .product-detail-card
+) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Universal Full Width Grid Column Span Master Rule */
+:is(
+    .landing-grid > .landing-main,
+    .landing-grid > footer,
+    .landing-grid > header,
+    .link-stack dl
+) {
+    grid-column: 1 / -1;
+}
+
+/* Universal Auto-Columns (max-content auto) Master Rule */
+:is(
+    .back-button,
+    .items-count-badge,
+    .pillar-features li,
+    .video-caption
+) {
+    grid-auto-columns: max-content auto;
+}
+
+/* Universal Auto-Columns (max-content 1fr) Master Rule */
+:is(
+    .seller-header,
+    .showcase-nav-btn-left,
+    .showcase-stat-pill,
+    .spec-item
+) {
+    grid-auto-columns: max-content minmax(0, 1fr);
+}

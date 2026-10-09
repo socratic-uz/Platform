@@ -95,10 +95,7 @@
 }
 
 .m3-nav-rail {
-    grid-template-rows: auto minmax(0, 1fr) auto;
     width: calc(80px + env(safe-area-inset-left, 0px));
-    height: 100dvh;
-    background: var(--md-sys-color-surface);
     border-right: 1px solid var(--md-sys-color-outline-variant);
     padding: var(--md-sys-spacing-3) 0;
     padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));

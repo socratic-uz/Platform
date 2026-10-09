@@ -15,27 +15,19 @@
     max-width: 1440px;
     padding: 24px 20px 140px 20px;
     gap: 20px;
-    font-family: inherit;
 }
 
 /* ─── Header Section ────────────────────────────────────────── */
 .kiosk-brand {
     grid-auto-columns: auto;
-    gap: 10px;
 }
 
 .kiosk-brand-logo {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-    background: var(--md-sys-color-surface-container-lowest);
     padding: 2px;
     aspect-ratio: 1 / 1;
 }
 
 .kiosk-brand-logo-fallback {
-    height: 36px;
-    width: 36px;
 }
 
 .kiosk-brand-info {
@@ -47,7 +39,6 @@
 .kiosk-brand-tagline {
     font-size: 0.72rem;
     padding: 2px 8px;
-    white-space: nowrap;
 }
 
 .kiosk-brand-icon {
@@ -55,11 +46,9 @@
 }
 
 .kiosk-search-container {
-    max-width: 480px;
 }
 
 .kiosk-tier-btn {
-    white-space: nowrap;
 }
 
 /* ─── Hero Banner ────────────────────────────────────────── */
@@ -76,7 +65,6 @@
     width: 85%;
     height: 150%;
     background: radial-gradient(circle, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, transparent 70%);
-    pointer-events: none;
 }
 
 .kiosk-hero-content {
@@ -86,13 +74,11 @@
 .kiosk-hero-content h1 {
     font-size: clamp(1.3rem, 2.8vw, 2.25rem);
     letter-spacing: -0.5px;
-    line-height: 1.2;
 }
 
 .kiosk-hero-content p {
     font-size: clamp(0.88rem, 1.5vw, 1.05rem);
     max-width: 700px;
-    line-height: 1.5;
 }
 
 /* ─── Unified Category Filter Bar ──────────────────────────── */
@@ -103,7 +89,6 @@
 }
 
 .kiosk-filter-inner {
-    align-items: start;
 }
 
 .kiosk-filter-inner:has(.kiosk-reset-btn) {
@@ -118,7 +103,6 @@
 }
 
 .kiosk-category-label {
-    white-space: nowrap;
     align-self: center;
 }
 
@@ -140,11 +124,9 @@
 }
 
 .active-orders-label {
-    letter-spacing: 0.5px;
 }
 
 .active-orders-scroll {
-    touch-action: pan-y;
 }
 
 .kiosk-new-order-btn {
@@ -164,7 +146,6 @@ md-filled-card.product-card,
 }
 
 .product-img {
-    object-fit: cover;
     aspect-ratio: 16 / 10;
     transition: transform 0.3s ease;
 }
@@ -188,7 +169,6 @@ md-filled-card.product-card,
     padding: 4px 10px;
     font-size: 0.74rem;
     z-index: var(--m3-z-content, 1);
-    pointer-events: none;
 }
 
 .kiosk-wish-btn-wrapper {
@@ -220,7 +200,6 @@ md-filled-card.product-card,
 }
 
 .kiosk-product-title-link:hover {
-    text-decoration: underline;
 }
 
 .product-desc {
@@ -228,7 +207,6 @@ md-filled-card.product-card,
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    line-height: 1.4;
 }
 
 .product-desc:empty {
@@ -243,7 +221,6 @@ md-filled-card.product-card,
 }
 
 .inline-card-experience-body:empty {
-    min-height: 0 !important;
 }
 
 .ux-widget {
@@ -252,7 +229,6 @@ md-filled-card.product-card,
 }
 
 .ux-widget-auction {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 .ux-widget-group {
@@ -267,7 +243,6 @@ md-filled-card.product-card,
 }
 
 .ux-discount-badge {
-    background: var(--md-sys-color-primary);
     padding: 2px 8px;
 }
 
@@ -298,7 +273,6 @@ md-filled-card.product-card,
 
 /* Cart Bottom Bar */
 .cart-bar {
-    position: fixed;
     inset: auto 0 0 0;
     z-index: var(--m3-z-dialog, 100);
     padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px)) 24px;
@@ -317,12 +291,10 @@ md-filled-card.product-card,
 }
 
 .cart-count {
-    white-space: nowrap;
 }
 
 .cart-total {
     font-size: clamp(1.05rem, 2vw, 1.25rem);
-    white-space: nowrap;
 }
 
 .pay-button {
@@ -337,7 +309,6 @@ md-filled-card.product-card,
 }
 
 .kiosk-dialog-text {
-    line-height: 1.5;
     margin: 8px 0;
 }
 

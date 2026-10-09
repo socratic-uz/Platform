@@ -3,3 +3,26 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Object Fit Cover Master Rule */
+:is(
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .product-img,
+    .product-main-img,
+    .seller-logo,
+    .thumb-img,
+    .video-player-wrapper video
+) {
+    object-fit: cover;
+}
+
+/* Universal Object Fit Contain Master Rule */
+:is(
+    .brand-screensaver-logo,
+    .fullscreen-video,
+    .kiosk-brand-logo,
+    .qrg-card-logo
+) {
+    object-fit: contain;
+}

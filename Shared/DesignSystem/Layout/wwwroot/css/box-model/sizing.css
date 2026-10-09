@@ -333,3 +333,118 @@
 ) {
     height: 48px;
 }
+
+/* Universal Height 100dvh Master Rule */
+:is(
+    .drawer-panel,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .m3-nav-rail,
+    .md-drawer-backdrop,
+    .qrg-layout,
+    main.showcase-page
+) {
+    height: 100dvh;
+}
+
+/* Universal Width 48px Touch Target Master Rule */
+:is(
+    .color-picker-row input[type="color"],
+    .docs-refresh-btn,
+    .header-icon-wrap,
+    .landing-mobile-menu-toggle,
+    .seller-logo,
+    .seller-logo-placeholder
+) {
+    width: 48px;
+}
+
+/* Universal Min-Height 0 Master Rule */
+:is(
+    .auth-container,
+    .docs-sidebar,
+    .inline-card-experience-body:empty,
+    .message-list-container,
+    .signin-container,
+    main.docs-page
+) {
+    min-height: 0;
+}
+
+/* Universal Max-Width 1200px Container Master Rule */
+:is(
+    .about-container,
+    .ad-slot,
+    .example-container,
+    .help-container,
+    .landing-subpage-container,
+    .payment-dashboard,
+    .showcase-hero-content,
+    .store-product-container
+) {
+    max-width: 1200px;
+}
+
+/* Universal Height 8px Track Master Rule */
+:is(
+    .bar-track,
+    .progress-bar-bg,
+    .pulse-indicator,
+    .status-pulse-dot
+) {
+    height: 8px;
+}
+
+/* Universal Width 36px Master Rule */
+:is(
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback
+) {
+    width: 36px;
+}
+
+/* Universal Height 36px Master Rule */
+:is(
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback
+) {
+    height: 36px;
+}
+
+/* Universal Min-Height 36px Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-period-chip,
+    .footer-links-list a,
+    .landing-floating-auth-btn
+) {
+    min-height: 36px;
+}
+
+/* Universal Max-Width 480px Modal Master Rule */
+:is(
+    .auth-card,
+    .docs-welcome-card,
+    .kiosk-search-container,
+    .qr-instruction,
+    .signin-card
+) {
+    max-width: 480px;
+}
+
+/* Universal Height 52px Header/Bar Master Rule */
+:is(
+    .item-icon-wrapper,
+    .pillar-icon-box,
+    .pos-action-btn,
+    .pos-card-img,
+    .pos-card-img-placeholder
+) {
+    height: 52px;
+}

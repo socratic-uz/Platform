@@ -76,3 +76,132 @@
 ) {
     letter-spacing: -0.02em;
 }
+
+/* Universal Letter Spacing 0.05em Master Rule */
+:is(
+    .ad-network-badge,
+    .footer-col-title,
+    .monospace,
+    .product-description-block h3,
+    .section-heading,
+    .showcase-brand-badge
+) {
+    letter-spacing: 0.05em;
+}
+
+/* Universal Letter Spacing 0.5px Master Rule */
+:is(
+    .active-orders-label,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .pos-orders-label,
+    .qrg-card-hint
+) {
+    letter-spacing: 0.5px;
+}
+
+/* Universal Letter Spacing 0.02em Master Rule */
+:is(
+    .card-order-id,
+    .order-number,
+    .pos-ux-mode-title,
+    .product-tag-chip
+) {
+    letter-spacing: 0.02em;
+}
+
+/* Universal Letter Spacing 0.04em Master Rule */
+:is(
+    .kds-order-ref,
+    .kpi-title,
+    .popular-badge,
+    .pro-tag,
+    .showcase-stat-lbl
+) {
+    letter-spacing: 0.04em;
+}
+
+/* Universal Letter Spacing -0.01em Master Rule */
+:is(
+    .header-brand-text,
+    .landing-nav-link,
+    .section-title,
+    .summary-title
+) {
+    letter-spacing: -0.01em;
+}
+
+/* Universal Line Height 1.5 Master Rule */
+:is(
+    .chat-input-wrapper textarea,
+    .empty-plans-desc,
+    .input-box textarea,
+    .kiosk-dialog-text,
+    .kiosk-hero-content p,
+    .showcase-hero p,
+    .subscription-description
+) {
+    line-height: 1.5;
+}
+
+/* Universal Line Height 1.2 Master Rule */
+:is(
+    .about-title,
+    .example-title,
+    .help-title,
+    .home-title,
+    .kiosk-hero-content h1,
+    .landing-subpage-title,
+    .m3-page-header-title,
+    .page-heading,
+    .pos-ux-mode-title
+) {
+    line-height: 1.2;
+}
+
+/* Universal Line Height 1.4 Master Rule */
+:is(
+    .brand-screensaver-tagline,
+    .faceid-notice,
+    .product-desc,
+    .showcase-card-code
+) {
+    line-height: 1.4;
+}
+
+/* Universal White Space Nowrap Master Rule */
+:is(
+    .cart-count,
+    .cart-total,
+    .items-count-badge,
+    .kiosk-brand-tagline,
+    .kiosk-category-label,
+    .kiosk-tier-btn
+) {
+    white-space: nowrap;
+}
+
+/* Universal Text Align Left Master Rule */
+:is(
+    .assistant-message-text th,
+    .order-items-table th,
+    .orders-table th,
+    .pos-product-card,
+    .pos-product-title-text,
+    .schedule-table td,
+    .schedule-table th,
+    .showcase-nav-btn,
+    assistant-message th
+) {
+    text-align: left;
+}
+
+/* Universal Text Decoration Underline Master Rule */
+:is(
+    .ad-upgrade-link,
+    .kiosk-product-title-link:hover,
+    .payment-support a:hover,
+    .seller-browse-all:hover
+) {
+    text-decoration: underline;
+}

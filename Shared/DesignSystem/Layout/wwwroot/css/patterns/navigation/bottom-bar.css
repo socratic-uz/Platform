@@ -84,10 +84,7 @@
 }
 
 .m3-bottom-nav {
-    position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
     z-index: var(--m3-z-bottom-nav, 40);
     grid-auto-columns: 1fr;
     height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));

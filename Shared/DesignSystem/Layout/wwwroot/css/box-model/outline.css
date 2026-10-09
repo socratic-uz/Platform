@@ -3,3 +3,16 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Outline None Master Rule */
+:is(
+    .back-button:focus-visible,
+    .back-button:hover,
+    .chat-input-wrapper textarea,
+    .input-box textarea,
+    .input-box:focus-within,
+    .select-input:focus,
+    .text-input:focus
+) {
+    outline: none;
+}

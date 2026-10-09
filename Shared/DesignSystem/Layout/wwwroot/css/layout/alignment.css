@@ -667,3 +667,99 @@
 ) {
     align-content: center;
 }
+
+/* Universal Align Items Start Master Rule */
+:is(
+    .footer-primary-grid,
+    .kds-board,
+    .kiosk-filter-inner,
+    .m3-kanban-board,
+    .order-details-layout,
+    .orders-kanban-board,
+    .qr-workspace,
+    .video-card-header
+) {
+    align-items: start;
+}
+
+/* Universal Align Items Stretch Master Rule */
+:is(
+    .ad-slot-container,
+    .designer-workspace,
+    .pos-layout,
+    .product-actions-bar
+) {
+    align-items: stretch;
+}
+
+/* Universal Gap 2px Master Rule */
+:is(
+    .analytics-mode-pill-group,
+    .docs-group-items,
+    .kpi-trend,
+    .pos-card-title-group,
+    .showcase-card-title-group,
+    .showcase-stat-info,
+    .spec-details
+) {
+    gap: 2px;
+}
+
+/* Universal Gap 10px Master Rule */
+:is(
+    .delivery-actions-grid,
+    .kiosk-brand,
+    .showcase-controls-bar,
+    .showcase-nav-btn-left,
+    .showcase-stat-pill,
+    .toast-triggers-row
+) {
+    gap: 10px;
+}
+
+/* Universal Gap 0.6rem Master Rule */
+:is(
+    .color-picker-row,
+    .header-presets,
+    .landing-mobile-menu-drawer,
+    .plan-features,
+    .preview-info,
+    .tier-features,
+    .video-caption
+) {
+    gap: 0.6rem;
+}
+
+/* Universal Gap 0.65rem Master Rule */
+:is(
+    .footer-brand-link,
+    .footer-system-status,
+    .landing-floating-controls,
+    header.landing-header .header-brand-link
+) {
+    gap: 0.65rem;
+}
+
+/* Universal Gap 6px Master Rule */
+:is(
+    .qrg-back,
+    .qrg-field-row,
+    .showcase-card-actions,
+    .showcase-sidebar-nav,
+    .trust-badge
+) {
+    gap: 6px;
+}
+
+/* Universal Gap Spacing-5 (1.25rem) Master Rule */
+:is(
+    .analytics-breakdown-grid,
+    .analytics-explorer-section,
+    .kds-board,
+    .m3-explorer-section,
+    .m3-kanban-board,
+    .m3-page-header,
+    .orders-kanban-board
+) {
+    gap: var(--md-sys-spacing-5, 1.25rem);
+}

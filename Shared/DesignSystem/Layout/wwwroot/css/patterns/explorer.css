@@ -5,7 +5,6 @@
 
 .analytics-explorer-section,
 .m3-explorer-section {
-    gap: var(--md-sys-spacing-5, 1.25rem);
     padding: var(--md-sys-spacing-6, 1.5rem);
 }
 

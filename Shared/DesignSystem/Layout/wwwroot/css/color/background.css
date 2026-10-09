@@ -160,3 +160,77 @@
 ) {
     background: var(--md-sys-color-secondary-container);
 }
+
+/* Universal Tertiary Container Background Master Rule */
+:is(
+    .badge-making,
+    .card-making .card-status-chip,
+    .card-shipping .card-status-chip,
+    .current-plan-indicator.pro,
+    .m3-pill-badge.tertiary,
+    .mode-preview,
+    .ux-widget-auction
+) {
+    background: var(--md-sys-color-tertiary-container);
+}
+
+/* Universal Primary-Tertiary Gradient Background Master Rule */
+:is(
+    .footer-brand-badge,
+    .footer-brand-title,
+    .landing-auth-btn:hover,
+    .m3-text-gradient,
+    header.landing-header .header-brand-icon-box
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+}
+
+/* Universal Primary Background Master Rule */
+:is(
+    .ad-slide-touch-prompt,
+    .assistant-message-icon,
+    .brand-screensaver-cta,
+    .btn-ready,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .ux-discount-badge
+) {
+    background: var(--md-sys-color-primary);
+}
+
+/* Universal Surface Background Master Rule */
+:is(
+    .designer-page-root,
+    .m3-nav-rail,
+    .pos-main,
+    .preset-btn,
+    .qr-designer-page-root,
+    .qrg-layout,
+    .qrg-preview,
+    .seat-designer-page-root,
+    .select-input,
+    .text-input,
+    main.docs-page,
+    main.showcase-page
+) {
+    background: var(--md-sys-color-surface);
+}
+
+/* Universal Surface Lowest Background Master Rule */
+:is(
+    .kiosk-brand-logo,
+    .qr-stage,
+    .showcase-card-code,
+    .video-player-wrapper
+) {
+    background: var(--md-sys-color-surface-container-lowest);
+}
+
+/* Universal Tertiary Background Master Rule */
+:is(
+    .btn-complete,
+    .popular-badge,
+    .pro-tag,
+    .status-pulse-dot
+) {
+    background: var(--md-sys-color-tertiary);
+}

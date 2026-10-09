@@ -3,3 +3,14 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal List Style None Master Rule */
+:is(
+    .cart-items-list,
+    .footer-links-list,
+    .pillar-features,
+    .plan-features,
+    .tier-features
+) {
+    list-style: none;
+}

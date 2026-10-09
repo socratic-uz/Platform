@@ -34,7 +34,6 @@
 
 /* ─── 2. Chat Header Toolbar ─────────────────────────────────────────────── */
 .chat-header-container {
-    top: 0;
     padding: 0.75rem 1.5rem;
     padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
     z-index: 20;
@@ -64,9 +63,7 @@
 
 /* ─── 3. Message Stream & List ───────────────────────────────────────────── */
 .message-list-container {
-    min-height: 0;
     overflow-x: hidden;
-    overscroll-behavior-y: contain;
     padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
 }
 
@@ -110,7 +107,6 @@ chat-messages > div:last-of-type {
 .assistant-message-icon {
     width: 1.5rem;
     height: 1.5rem;
-    background: var(--md-sys-color-primary);
 }
 
 .assistant-message-icon svg {
@@ -177,7 +173,6 @@ assistant-message table,
 
 assistant-message th,
 .assistant-message-text th {
-    text-align: left;
 }
 
 assistant-message th,
@@ -266,15 +261,11 @@ assistant-message pre > code,
 
 .input-box:focus-within {
     box-shadow: 0 0 0 1px var(--md-sys-color-primary);
-    outline: none;
 }
 
 .chat-input-wrapper textarea,
 .input-box textarea {
     resize: none;
-    outline: none;
-    font-family: inherit;
-    line-height: 1.5;
     max-height: 120px;
     padding: 0.4rem 0;
 }

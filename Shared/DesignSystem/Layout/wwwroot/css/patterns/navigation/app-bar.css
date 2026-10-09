@@ -12,8 +12,6 @@ header.app-header {
 }
 
 header.app-header.header-sticky {
-    position: sticky;
-    top: 0;
 }
 
 .header-grid-layout {
@@ -50,12 +48,9 @@ header.app-header.header-sticky {
 }
 
 .header-brand-icon-box {
-    width: 36px;
-    height: 36px;
 }
 
 .header-brand-text {
-    letter-spacing: -0.01em;
 }
 
 /* ─── Responsive Breakpoints for Top App Bar ─────────────────────────────── */

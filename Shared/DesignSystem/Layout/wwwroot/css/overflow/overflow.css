@@ -121,3 +121,13 @@
 ) {
     overscroll-behavior-x: contain;
 }
+
+/* Universal Overscroll Behavior Y Contain Master Rule */
+:is(
+    .drawer-body,
+    .message-list-container,
+    .pos-grid,
+    .pos-invoice-container
+) {
+    overscroll-behavior-y: contain;
+}

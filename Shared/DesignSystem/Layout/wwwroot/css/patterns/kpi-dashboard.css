@@ -23,8 +23,6 @@
 }
 
 .kpi-title {
-    font-size: 0.825rem;
-    letter-spacing: 0.04em;
 }
 
 .kpi-icon-badge {
@@ -41,16 +39,13 @@
 }
 
 .kpi-trend {
-    gap: 2px;
 }
 
 .analytics-breakdown-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
-    gap: var(--md-sys-spacing-5, 1.25rem);
 }
 
 .analytics-panel-card {
-    grid-template-rows: auto minmax(0, 1fr);
     padding: var(--md-sys-spacing-5, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
 }
@@ -61,7 +56,6 @@
 }
 
 .panel-title {
-    font-size: 1.05rem;
 }
 
 .breakdown-bars-stack {
@@ -75,7 +69,6 @@
 }
 
 .bar-track {
-    height: 8px;
 }
 
 .progress-bar-fill {
@@ -95,12 +88,10 @@
 
 .analytics-mode-pill-group {
     padding: 3px;
-    gap: 2px;
 }
 
 .analytics-mode-btn {
     padding: 0.4rem 0.85rem;
-    font-size: 0.825rem;
 }
 
 .analytics-mode-btn:hover {
@@ -111,8 +102,6 @@
 
 .analytics-config-btn {
     padding: 0.4rem 0.85rem;
-    font-size: 0.825rem;
-    min-height: 36px;
 }
 
 .analytics-config-btn:hover {
@@ -125,7 +114,6 @@
 
 .analytics-period-chip {
     padding: 0.4rem 0.9rem;
-    min-height: 36px;
 }
 
 .analytics-period-chip:hover {
@@ -156,7 +144,6 @@
 
 .pulse-indicator {
     width: 8px;
-    height: 8px;
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

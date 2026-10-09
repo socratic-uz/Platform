@@ -5,8 +5,6 @@ header.app-header.landing-header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
     min-height: 64px;
     padding: 0.35rem 1.5rem;
-    position: sticky;
-    top: 0;
     z-index: 80;
     transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -17,7 +15,6 @@ header.landing-header .header-grid-layout {
 
 header.landing-header .header-brand-link {
     min-height: 40px;
-    gap: 0.65rem;
     padding: 0.25rem 0.65rem;
     transition: all 0.25s ease;
 }
@@ -29,7 +26,6 @@ header.landing-header .header-brand-link:hover {
 header.landing-header .header-brand-icon-box {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
 }
 
@@ -50,7 +46,6 @@ header.landing-header .header-brand-text {
 .landing-nav-link {
     padding: 0.4rem 0.85rem;
     font-size: 0.84rem;
-    letter-spacing: -0.01em;
     min-height: 40px;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid transparent;
@@ -112,7 +107,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-auth-btn:hover {
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
 }
 
@@ -120,7 +114,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-mobile-menu-toggle {
-    width: 48px;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
     color: var();
@@ -131,24 +124,17 @@ header.landing-header .header-brand-text {
 }
 
 .landing-mobile-menu-backdrop {
-    position: fixed;
     top: 68px;
-    left: 0;
-    right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.65);
     z-index: 80;
 }
 
 .landing-mobile-menu-drawer {
-    position: fixed;
     top: 68px;
-    left: 0;
-    right: 0;
     background: rgba(4, 6, 10, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.25rem 1.5rem 2rem 1.5rem;
-    gap: 0.6rem;
     z-index: 90;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
     animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -203,7 +189,6 @@ footer.app-footer {
 .footer-primary-grid {
     grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
     gap: 3rem 2rem;
-    align-items: start;
 }
 
 .footer-brand-col {
@@ -211,19 +196,13 @@ footer.app-footer {
 }
 
 .footer-brand-link {
-    gap: 0.65rem;
 }
 
 .footer-brand-badge {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
 }
 
 .footer-brand-title {
-    font-size: 1.35rem;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -233,7 +212,6 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    gap: 0.65rem;
     padding: 0.35rem 0.85rem;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     margin-top: 0.25rem;
@@ -241,8 +219,6 @@ footer.app-footer {
 
 .status-pulse-dot {
     width: 8px;
-    height: 8px;
-    background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -260,11 +236,9 @@ footer.app-footer {
 }
 
 .footer-col-title {
-    letter-spacing: 0.05em;
 }
 
 .footer-links-list {
-    list-style: none;
 }
 
 .footer-links-list li {
@@ -275,7 +249,6 @@ footer.app-footer {
     gap: 0.55rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
-    min-height: 36px;
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 

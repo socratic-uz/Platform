@@ -11,11 +11,9 @@
     grid-template-rows: auto auto minmax(0, 1fr);
     min-height: calc(100dvh - 80px);
     padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
-    background-color: var(--md-sys-color-surface);
 }
 
 .qr-designer-page-root {
-    grid-template-rows: auto minmax(0, 1fr);
 }
 
 /* ─── 2. Designer Header Toolbar ─────────────────────────────────────────── */
@@ -35,8 +33,6 @@
 }
 
 .page-heading {
-    font-size: 1.35rem;
-    line-height: 1.2;
 }
 
 .page-subtitle {
@@ -45,7 +41,6 @@
 /* ─── 3. Header Presets & Actions ───────────────────────────────────────── */
 .header-presets {
     grid-template-columns: auto repeat(3, max-content);
-    gap: 0.6rem;
 }
 
 .preset-label {
@@ -55,7 +50,6 @@
 .preset-btn {
     padding: 0.5rem 1rem;
     border: 1px solid var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface);
 }
 
 .preset-btn:hover {
@@ -77,7 +71,6 @@
 }
 
 .mode-preview {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 /* ─── 4. Notification & Banners ─────────────────────────────────────────── */
@@ -92,7 +85,6 @@
 
 /* ─── 5. Designer Workspaces & Panels ───────────────────────────────────── */
 .designer-workspace {
-    align-items: stretch;
 }
 
 .designer-sidebar {
@@ -109,7 +101,6 @@
 }
 
 .card-icon {
-    font-size: 1.5rem;
 }
 
 .card-title {
@@ -121,7 +112,6 @@
 /* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
 .qr-workspace {
     grid-template-columns: min(100%, 420px) minmax(0, 1fr);
-    align-items: start;
 }
 
 .qr-controls-panel {
@@ -130,8 +120,6 @@
 
 .panel-section-title {
     margin: 0.5rem 0 0;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
 }
 
 .control-group {
@@ -143,15 +131,12 @@
 .text-input, .select-input {
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface);
 }
 
 .text-input:focus, .select-input:focus {
-    outline: none;
 }
 
 .color-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.9rem;
 }
 
@@ -160,16 +145,13 @@
 
 .color-picker-row {
     grid-template-columns: 48px minmax(0, 1fr);
-    gap: 0.6rem;
 }
 
 .color-picker-row input[type="color"] {
-    width: 48px;
     background: none;
 }
 
 .color-hex {
-    font-size: 0.825rem;
     font-family: monospace;
 }
 
@@ -182,7 +164,6 @@
 }
 
 .preview-card {
-    grid-template-rows: auto minmax(0, 1fr) auto;
     padding: 1.5rem;
     container-type: inline-size;
 }
@@ -191,7 +172,6 @@
 }
 
 .preview-title {
-    font-size: 1.05rem;
 }
 
 .resolution-badge {
@@ -203,7 +183,6 @@
 
 .qr-stage {
     padding: 2.5rem 1.25rem;
-    background: var(--md-sys-color-surface-container-lowest);
 }
 
 .qr-canvas-box {
@@ -214,7 +193,6 @@
 }
 
 .preview-info {
-    gap: 0.6rem;
 }
 
 .info-icon {

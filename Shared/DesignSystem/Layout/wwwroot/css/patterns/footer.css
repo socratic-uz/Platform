@@ -24,7 +24,6 @@
 }
 
 .payment-support a:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 599.98px) {
@@ -56,7 +55,6 @@ footer.app-footer {
 .footer-primary-grid {
     grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
     gap: 3rem 2rem;
-    align-items: start;
 }
 
 /* Brand Column */
@@ -65,19 +63,13 @@ footer.app-footer {
 }
 
 .footer-brand-link {
-    gap: 0.65rem;
 }
 
 .footer-brand-badge {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
 }
 
 .footer-brand-title {
-    font-size: 1.35rem;
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -87,7 +79,6 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    gap: 0.65rem;
     padding: 0.35rem 0.85rem;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
     margin-top: 0.25rem;
@@ -95,8 +86,6 @@ footer.app-footer {
 
 .status-pulse-dot {
     width: 8px;
-    height: 8px;
-    background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -121,11 +110,9 @@ footer.app-footer {
 }
 
 .footer-col-title {
-    letter-spacing: 0.05em;
 }
 
 .footer-links-list {
-    list-style: none;
 }
 
 .footer-links-list li {
@@ -136,7 +123,6 @@ footer.app-footer {
     gap: 0.55rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
-    min-height: 36px;
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 

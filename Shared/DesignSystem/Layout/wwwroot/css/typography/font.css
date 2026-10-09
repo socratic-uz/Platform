@@ -497,3 +497,79 @@
 ) {
     font-size: 0.8125rem;
 }
+
+/* Universal Font Size 1.05rem Master Rule */
+:is(
+    .amount-value,
+    .card-order-id,
+    .column-title,
+    .panel-title,
+    .payment-dashboard .info-value,
+    .preview-title
+) {
+    font-size: 1.05rem;
+}
+
+/* Universal Font Size 0.95rem Master Rule */
+:is(
+    .panel-section-title,
+    .section-heading,
+    .showcase-hero p,
+    .spec-value,
+    .subscription-description,
+    .video-caption
+) {
+    font-size: 0.95rem;
+}
+
+/* Universal Font Size 0.825rem Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .color-hex,
+    .kpi-title,
+    .seller-address
+) {
+    font-size: 0.825rem;
+}
+
+/* Universal Font Size 1.5rem Master Rule */
+:is(
+    .auth-title,
+    .card-icon,
+    .error-icon,
+    .signin-title,
+    .spec-icon
+) {
+    font-size: 1.5rem;
+}
+
+/* Universal Font Size 1.125rem Master Rule */
+:is(
+    .badge-icon,
+    .item-total-price,
+    .kds-product-name,
+    .plan-title
+) {
+    font-size: 1.125rem;
+}
+
+/* Universal Font Size 1.35rem Master Rule */
+:is(
+    .brand-screensaver-tagline,
+    .footer-brand-title,
+    .page-heading
+) {
+    font-size: 1.35rem;
+}
+
+/* Universal Font Family Inherit Master Rule */
+:is(
+    .chat-input-wrapper textarea,
+    .input-box textarea,
+    .kiosk-main,
+    .payment-dashboard,
+    main.showcase-page
+) {
+    font-family: inherit;
+}

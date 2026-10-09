@@ -6,14 +6,12 @@
 
 .signin-container,
 .auth-container {
-    min-height: 0;
     padding: 3rem 1.5rem;
 }
 
 .signin-card,
 .auth-card {
     padding: 2.5rem 2rem;
-    max-width: 480px;
     box-shadow: 0 20px 40px var(--md-sys-color-shadow);
 }
 
@@ -32,7 +30,6 @@
 
 .signin-title,
 .auth-title {
-    font-size: 1.5rem;
 }
 
 .signin-subtitle,
@@ -50,8 +47,6 @@
 }
 
 .delivery-actions-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
 }
 
 .auth-divider {
@@ -92,8 +87,6 @@
 
 .faceid-scanner-frame.scanning::after {
     content: "";
-    top: 0;
-    left: 0;
     height: 4px;
     background: linear-gradient(90deg, transparent, var(--md-sys-color-tertiary), transparent);
     animation: authScanLine 1.8s infinite ease-in-out;
@@ -114,7 +107,6 @@
 }
 
 .faceid-notice {
-    line-height: 1.4;
 }
 
 @media (max-width: 599.98px) {

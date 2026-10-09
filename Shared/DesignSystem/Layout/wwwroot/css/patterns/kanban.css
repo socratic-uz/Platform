@@ -2,16 +2,12 @@
 .m3-kanban-board,
 .orders-kanban-board,
 .kds-board {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-5, 1.25rem);
-    align-items: start;
     container-type: inline-size;
 }
 
 .m3-kanban-column,
 .kanban-column,
 .kds-column {
-    grid-template-rows: auto minmax(0, 1fr);
     padding: var(--md-sys-spacing-5, 1.25rem);
     min-height: 380px;
 }
@@ -37,7 +33,6 @@
 }
 
 .column-title {
-    font-size: 1.05rem;
 }
 
 .column-content,
@@ -70,8 +65,6 @@
 }
 
 .card-order-id {
-    font-size: 1.05rem;
-    letter-spacing: 0.02em;
 }
 
 .card-mid-row {
@@ -131,7 +124,6 @@
 }
 
 .badge-making {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 .badge-ready {
@@ -155,7 +147,6 @@
 }
 
 .kds-order-ref {
-    letter-spacing: 0.04em;
 }
 
 .kds-time-ago {
@@ -169,7 +160,6 @@
 }
 
 .kds-product-name {
-    font-size: 1.125rem;
     line-height: 1.25;
 }
 
@@ -192,11 +182,9 @@
 }
 
 .btn-ready {
-    background: var(--md-sys-color-primary);
 }
 
 .btn-complete {
-    background: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
 }
 
@@ -208,14 +196,12 @@
 }
 
 .card-making .card-status-chip {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 .card-collecting .card-status-chip {
 }
 
 .card-shipping .card-status-chip {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 .card-completed .card-status-chip {
@@ -233,7 +219,6 @@
 }
 
 .error-icon {
-    font-size: 1.5rem;
 }
 
 

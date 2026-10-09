@@ -9,7 +9,6 @@
 .help-container,
 .example-container,
 .landing-subpage-container {
-    max-width: 1200px;
     gap: 3.5rem;
     padding: 2.5rem 1.5rem 3rem 1.5rem;
     overflow-x: clip;
@@ -26,7 +25,6 @@
 .example-title,
 .landing-subpage-title {
     font-size: 2.75rem;
-    line-height: 1.2;
     word-break: break-word;
     overflow-wrap: break-word;
     max-width: 900px;
@@ -45,11 +43,9 @@
 }
 
 .m3-pill-badge.tertiary {
-    background: var(--md-sys-color-tertiary-container);
 }
 
 .m3-text-gradient {
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -66,7 +62,6 @@
 }
 
 .video-card-header {
-    align-items: start;
     justify-items: start;
 }
 
@@ -75,18 +70,13 @@
 }
 
 .video-player-wrapper {
-    background: var(--md-sys-color-surface-container-lowest);
 }
 
 .video-player-wrapper video {
     max-height: 540px;
-    object-fit: cover;
 }
 
 .video-caption {
-    grid-auto-columns: max-content auto;
-    gap: 0.6rem;
-    font-size: 0.95rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
 }
 
@@ -115,15 +105,12 @@
 
 .pillar-icon-box {
     width: 52px;
-    height: 52px;
 }
 
 .pillar-features {
-    list-style: none;
 }
 
 .pillar-features li {
-    grid-auto-columns: max-content auto;
 }
 
 .cta-card {
@@ -177,9 +164,7 @@
     grid-template-columns: minmax(min(100%, 380px), 380px) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: "sidebar preview";
-    height: 100dvh;
     gap: 0;
-    background: var(--md-sys-color-surface);
 }
 
 .qrg-sidebar {
@@ -212,7 +197,6 @@
 }
 
 .qrg-back {
-    gap: 6px;
     padding: 8px 10px;
     transition: background 0.15s, color 0.15s;
     width: fit-content;
@@ -238,7 +222,6 @@
 }
 
 .qrg-field-row {
-    gap: 6px;
 }
 
 .qrg-field-label {
@@ -290,10 +273,8 @@
 
 .qrg-preview {
     grid-area: preview;
-    grid-template-rows: auto minmax(0, 1fr);
     padding: 28px 32px;
     gap: 24px;
-    background: var(--md-sys-color-surface);
 }
 
 .qrg-preview-header {
@@ -327,7 +308,6 @@
 .qrg-card-logo {
     max-height: 36px;
     max-width: 120px;
-    object-fit: contain;
 }
 
 .qrg-card-qr {
@@ -338,7 +318,6 @@
 }
 
 .qrg-card-hint {
-    letter-spacing: 0.5px;
 }
 
 .qrg-empty {
@@ -350,16 +329,12 @@ main.docs-page {
     grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr) !important;
     gap: 0 !important;
     align-content: stretch !important;
-    min-height: 0;
-    background-color: var(--md-sys-color-surface);
 }
 
 .docs-sidebar {
     width: 280px;
     background-color: var(--md-sys-color-surface-container-low);
     border-right: 1px solid var(--md-sys-color-outline-variant);
-    grid-template-rows: auto minmax(0, 1fr);
-    min-height: 0;
 }
 
 .docs-sidebar-header {
@@ -378,7 +353,6 @@ main.docs-page {
 }
 
 .docs-refresh-btn {
-    width: 48px !important;
 }
 
 .docs-sidebar-menu {
@@ -395,7 +369,6 @@ main.docs-page {
 }
 
 .docs-group-items {
-    gap: 2px;
 }
 
 .docs-content {
@@ -409,7 +382,6 @@ main.docs-page {
 }
 
 .docs-welcome-card {
-    max-width: 480px;
     padding: 32px;
     background-color: var(--md-sys-color-surface-container-low);
 }

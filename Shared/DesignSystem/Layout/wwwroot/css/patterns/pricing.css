@@ -33,9 +33,7 @@
 .popular-badge {
     top: -10px;
     right: 18px;
-    background: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
-    letter-spacing: 0.04em;
     padding: 3px 10px;
 }
 
@@ -57,8 +55,6 @@
 
 .tier-features,
 .plan-features {
-    list-style: none;
-    gap: 0.6rem;
 }
 
 .tier-features li,
@@ -75,5 +71,4 @@
 }
 
 .current-plan-indicator.pro {
-    background: var(--md-sys-color-tertiary-container);
 }

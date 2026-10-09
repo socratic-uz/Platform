@@ -1,18 +1,13 @@
 /* ─── Drawer & Cart Drawer Primitives ───────────────────────────────────── */
 .m3-drawer-backdrop,
 .md-drawer-backdrop {
-    position: fixed;
-    inset: 0;
-    height: 100dvh;
     background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
     z-index: var(--m3-z-drawer, 40);
     grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
     justify-items: end;
     opacity: 0;
-    pointer-events: none;
     transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
     overscroll-behavior: contain;
-    touch-action: pan-y;
 }
 
 .m3-drawer-backdrop.show,
@@ -25,13 +20,10 @@
 .drawer-panel {
     grid-column: 2;
     max-width: 440px;
-    height: 100dvh;
     border-left: 1px solid var(--md-sys-color-outline-variant);
     padding: 24px;
-    grid-template-rows: auto minmax(0, 1fr) auto;
     box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
     overscroll-behavior: contain;
-    touch-action: pan-y;
     transform: translate3d(0, 0, 0);
     will-change: transform;
 }
@@ -67,8 +59,6 @@
 }
 
 .drawer-body {
-    overscroll-behavior-y: contain;
-    touch-action: pan-y;
     padding: 16px 0;
 }
 
@@ -83,7 +73,6 @@
 }
 
 .cart-items-list {
-    list-style: none;
 }
 
 .cart-item-row {
