@@ -34,8 +34,8 @@
           StandardOutputImportance="Low" />
   </Target>
 
-  <!-- Level 3: Produces single-file production CSS bundle on Release / Publish -->
-  <Target Name="BundleCss" AfterTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs')">
+  <!-- Level 3: Produces single-file production CSS bundle with LightningCSS (7ms) -->
+  <Target Name="BundleCss" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs')">
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs&quot;" 
           ContinueOnError="true" 
           StandardOutputImportance="Low" />

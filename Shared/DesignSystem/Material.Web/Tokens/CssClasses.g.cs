@@ -1120,6 +1120,28 @@ public static class M3
         public const string PressScale = "m3-press-scale";
     }
 
+    public static class Outline
+    {
+        public const string AnalyticsModeBtn = "analytics-mode-btn";
+        public const string CardInteractive = "m3-card-interactive";
+        public const string FileCard = "file-card";
+        public const string FilterChip = "m3-filter-chip";
+        public const string FocusRing = "m3-focus-ring";
+        public const string FocusRingInset = "m3-focus-ring-inset";
+        public const string FocusRingTight = "m3-focus-ring-tight";
+        public const string HasError = "has-error";
+        public const string IsInvalid = "is-invalid";
+        public const string LangChipBtn = "lang-chip-btn";
+        public const string LangPillBtn = "lang-pill-btn";
+        public const string None = "m3-outline-none";
+        public const string Paginator = "paginator";
+        public const string PickerPaletteSwatch = "picker-palette-swatch";
+        public const string PickerTriggerCard = "picker-trigger-card";
+        public const string SegmentedBtn = "m3-segmented-btn";
+        public const string UploadCard = "upload-card";
+        public const string Web = "Web";
+    }
+
     public static class Overflow
     {
         public const string Auto = "m3-overflow-auto";

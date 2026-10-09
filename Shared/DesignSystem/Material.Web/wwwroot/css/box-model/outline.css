@@ -1,0 +1,86 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Box Model - Outline Rules Module
+   Material Design 3 Expressive Accessible Focus Ring Architecture
+   WCAG 2.1 AA Compliant Keyboard Navigation & High-Contrast Feedback
+   ========================================================================== */
+
+/* ─── 1. Reset Mouse/Pointer Focus Outlines ───────────────────────────────── */
+:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+/* ─── 2. Universal Keyboard Focus-Visible Rings (Accessible M3X) ─────────── */
+:is(
+    /* Native Interactive Elements */
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+
+    /* Material.Web Components */
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-checkbox,
+    md-switch,
+    md-radio,
+
+    /* Socratic Domain Interactive Controls */
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .card-interactive,
+    .m3-card-interactive,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .paginator nav button:not([disabled])
+):focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary)) !important;
+    outline-offset: var(--md-sys-outline-offset, 2px) !important;
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+/* ─── 3. Error Focus State ────────────────────────────────────────────────── */
+:is(
+    input:invalid,
+    textarea:invalid,
+    .is-invalid,
+    .has-error
+):focus-visible {
+    outline-color: var(--md-sys-color-focus-ring-error, var(--md-sys-color-error)) !important;
+}
+
+/* ─── 4. Utility Classes ─────────────────────────────────────────────────── */
+.m3-focus-ring:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary)) !important;
+    outline-offset: var(--md-sys-outline-offset, 2px) !important;
+}
+
+.m3-focus-ring-tight:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary)) !important;
+    outline-offset: var(--md-sys-outline-offset-tight, 1px) !important;
+}
+
+.m3-focus-ring-inset:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary)) !important;
+    outline-offset: var(--md-sys-outline-offset-inset, -2px) !important;
+}
+
+.m3-outline-none,
+.m3-outline-none:focus,
+.m3-outline-none:focus-visible {
+    outline: none !important;
+}

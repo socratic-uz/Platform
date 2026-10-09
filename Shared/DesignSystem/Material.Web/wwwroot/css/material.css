@@ -15,6 +15,7 @@
 @import "tokens/box-model/sizing.css";
 @import "tokens/box-model/spacing.css";
 @import "tokens/box-model/border.css";
+@import "tokens/box-model/outline.css";
 @import "tokens/positioning/stacking.css";
 @import "tokens/overflow/scrollbars.css";
 @import "tokens/typography/font.css";
@@ -32,6 +33,7 @@
 @import "box-model/padding.css";
 @import "box-model/margin.css";
 @import "box-model/border.css";
+@import "box-model/outline.css";
 @import "layout/display.css";
 @import "layout/grid.css";
 @import "layout/alignment.css";
