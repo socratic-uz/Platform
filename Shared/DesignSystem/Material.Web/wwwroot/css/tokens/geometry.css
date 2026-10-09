@@ -1,7 +1,0 @@
-/* ==========================================================================
-   Material Design 3 Expressive - Spatial Geometry & Breakpoint Scale
-   W3C CSS Box Model & Overflow Modules Re-export Facade (Zero-Flicker & Zero Breaking Changes)
-   ========================================================================== */
-
-@import "box-model/sizing.css";
-@import "overflow/scrollbars.css";

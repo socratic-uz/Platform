@@ -1,7 +1,0 @@
-/* ==========================================================================
-   Material Design 3 & M3 Expressive - Master Typography Engine
-   W3C CSS Typography Modules Re-export Facade (Zero-Flicker & Zero Breaking Changes)
-   ========================================================================== */
-
-@import "typography/font.css";
-@import "typography/text-wrapping.css";
