@@ -79,7 +79,6 @@ input[type="number"] {
 }
 
 input[type="color"] {
-    appearance: none;
     -moz-appearance: none;
 }
 
@@ -112,4 +111,3 @@ input[type="color"] {
 ) {
     -webkit-appearance: none;
 }
-

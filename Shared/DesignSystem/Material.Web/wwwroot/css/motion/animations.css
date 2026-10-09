@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* stylelint-disable */
 /* ==========================================================================
    W3C CSS Motion - Animations Rules Module
@@ -76,3 +77,11 @@
     animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

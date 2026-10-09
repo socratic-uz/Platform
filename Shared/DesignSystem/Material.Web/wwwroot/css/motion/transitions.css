@@ -1,5 +1,5 @@
-/* stylelint-disable */
 /* stylelint-disable selector-class-pattern */
+/* stylelint-disable */
 /* ==========================================================================
    W3C CSS Motion - Transitions Rules Module
    Material Design 3 Expressive (M3X) Spring Motion & Micro-Interactions
@@ -43,7 +43,6 @@
         background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
         border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
         opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    transform: translateZ(0);
 }
 
 /* ─── 2. Universal Hover Lift (Elevation & Translate) ───────────────────── */
@@ -62,17 +61,6 @@
     transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring-soft);
 }
 
-:is(
-    .m3-media-card:hover .m3-card-media,
-    .org-card:hover .org-media,
-    .product-card:hover .wishlist-media,
-    md-filled-card:hover figure,
-    md-outlined-card:hover figure,
-    md-elevated-card:hover figure
-) img {
-    transform: scale(1.04);
-}
-
 /* ─── 5. Utility Classes for Manual Spring Binding ──────────────────────── */
 
 .m3-hover-lift {
@@ -81,19 +69,12 @@
         box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
-.m3-hover-lift:active {
-    transform: scale(0.985);
-}
-
 /* ─── 6. WCAG 2.1 AA Accessible Reduced Motion Standard ─────────────────── */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
     }
 }
 
@@ -247,119 +228,11 @@ md-elevated-card {
 
 /* Consolidated Master Rule: will-change */
 
-:is(
-    .m3-hover-lift,
-    .m3-press-scale,
-    :is(
-    
-    md-filled-button,
-    md-outlined-button,
-    md-elevated-button,
-    md-tonal-button,
-    md-text-button,
-    md-icon-button,
-    .m3-filter-chip,
-    .lang-chip-btn,
-    .lang-pill-btn,
-    .m3-dialog-close-btn,
-    .m3-dialog-btn-primary,
-    .paginator nav button:not([disabled]),
-
-    
-    .m3-card-interactive,
-    .card-interactive,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-media-card,
-    .media-card,
-    .org-card,
-    .file-card,
-    .upload-card,
-    .picker-trigger-card,
-    .picker-palette-swatch,
-    :is(.analytics-mode-btn, .m3-segmented-btn)
-),
-    :is(
-    .m3-media-card,
-    .org-card,
-    .product-card,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card
-) img
-) {
-    will-change: transform;
-}
-
 /* Consolidated Master Rule: transform */
-
-:is(
-    .m3-hover-lift:hover,
-    :is(
-    .m3-card-interactive,
-    .card-interactive,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-media-card,
-    .media-card,
-    .org-card,
-    .file-card,
-    .upload-card,
-    .picker-trigger-card
-):hover
-) {
-    transform: translateY(-2px);
-}
 
 /* Consolidated Master Rule: box-shadow */
 
-:is(
-    .m3-hover-lift:hover,
-    :is(
-    .m3-card-interactive,
-    .card-interactive,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-media-card,
-    .media-card,
-    .org-card,
-    .file-card,
-    .upload-card,
-    .picker-trigger-card
-):hover
-) {
-    box-shadow: var(--md-sys-elevation-level2);
-}
-
 /* Consolidated Master Rule: transform */
-
-:is(
-    .m3-press-scale:active,
-    :is(
-    md-filled-button,
-    md-outlined-button,
-    md-elevated-button,
-    md-tonal-button,
-    md-text-button,
-    md-icon-button,
-    .m3-card-interactive,
-    .card-interactive,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-filter-chip,
-    .lang-chip-btn,
-    .m3-dialog-close-btn,
-    .m3-dialog-btn-primary,
-    .paginator nav button:not([disabled]),
-    :is(.analytics-mode-btn, .m3-segmented-btn)
-):active
-) {
-    transform: scale(0.97);
-}
 
 /* Consolidated Master Rule: transition */
 
@@ -403,3 +276,46 @@ md-elevated-card {
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
+:is(
+    
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+
+    
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-checkbox,
+    md-switch,
+    md-radio,
+
+    
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .card-interactive,
+    .m3-card-interactive,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .paginator nav button:not([disabled])
+):focus-visible {
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+a {
+    transition: color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
+}

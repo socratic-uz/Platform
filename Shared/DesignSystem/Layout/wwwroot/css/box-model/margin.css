@@ -173,3 +173,173 @@
 ) {
     margin-top: auto;
 }
+.signin-logo-badge,
+.auth-logo-badge {
+    margin-bottom: 0.25rem;
+}
+.m3-breadcrumbs,
+.store-breadcrumbs {
+    margin-bottom: 2rem;
+}
+.no-messages {
+    margin-top: calc(35vh - 10rem);
+}
+chat-messages > div:last-of-type {
+    margin-bottom: 1rem;
+}
+assistant-message ul,
+.assistant-message-text ul {
+    margin-left: 1.5rem;
+}
+assistant-message ol,
+.assistant-message-text ol {
+    margin-left: 1.5rem;
+}
+.citation {
+    margin-right: 1rem;
+}
+.tools {
+    margin-left: 0.5rem;
+}
+@media (max-width: 599.98px) {
+    .tools {
+        margin-left: 0.25rem;
+    }
+}
+.preset-label {
+    margin-right: 0.25rem;
+}
+.panel-section-title {
+    margin: 0.5rem 0 0;
+}
+@media (max-width: 839.98px) {
+    .preset-label {
+        margin-bottom: 0.25rem;
+    }
+}
+.drawer-header .badge {
+    margin-left: 8px;
+}
+.empty-cart-view .empty-icon {
+    margin-bottom: 8px;
+}
+.item-price {
+    margin-top: 2px;
+}
+.promo-section {
+    margin-top: 8px;
+}
+.promo-success-text {
+    margin-top: 4px;
+}
+.shipping-card {
+    margin-top: 8px;
+}
+.price-breakdown {
+    margin-bottom: 16px;
+}
+.kds-card-actions {
+    margin-top: var(--md-sys-spacing-2, 0.375rem);
+}
+.error-banner {
+    margin-top: var(--md-sys-spacing-4, 1rem);
+}
+.unified-kiosk-filter-bar {
+    margin: 4px 0 12px;
+}
+.active-orders-tabs {
+    margin-bottom: 8px;
+}
+.inline-card-experience-body {
+    margin-bottom: 4px;
+}
+.cart-expand-icon {
+    margin-left: 4px;
+}
+.kiosk-dialog-text {
+    margin: 8px 0;
+}
+@media screen and (max-width: 839.98px) {
+    .cart-bar {
+        margin: 0;
+    }
+    .header-center-zone .home-search-container,
+    .header-center-zone .kiosk-search-container,
+    .header-center-zone .search-container,
+    .header-center-zone form {
+        margin: 0 !important;
+    }
+}
+.qrg-sidebar-scrollable {
+    margin: 8px 0;
+}
+.qrg-group-head {
+    margin-bottom: 4px;
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        margin: 4px auto;
+    }
+}
+.table-actions-bar {
+    margin-bottom: 0.75rem;
+}
+.pos-org-name {
+    margin-top: 2px;
+}
+.pos-sidebar-header {
+    margin-bottom: 12px;
+}
+.pos-invoice-container {
+    margin-bottom: 16px;
+}
+.product-unit {
+    margin-left: 0.25rem;
+}
+.product-description-block h3 {
+    margin: 0 0 0.5rem;
+}
+.not-found-icon {
+    margin-bottom: 1rem;
+}
+.store-not-found p {
+    margin-bottom: 1.5rem;
+}
+.subscription-title {
+    margin: 0 0 0.4rem;
+}
+.promotion-modal-subtitle {
+    margin: 0.2rem 0 0;
+}
+.section-heading {
+    margin: 0.5rem 0 0;
+}
+.ad-slot {
+    margin: 1rem auto;
+}
+.brand-screensaver-cta,
+.ad-slide-touch-prompt {
+    margin-top: 1.5rem;
+}
+.showcase-hero h1 {
+    margin: 0 0 8px;
+}
+.showcase-hero p {
+    margin: 0 0 20px;
+}
+.m3-page-container {
+    margin: 0 auto;
+}
+.page-width {
+    margin-inline: auto;
+}
+body {
+    margin: 0;
+}
+.edge-swipe-guard-left {
+    margin-left: max(16px, env(safe-area-inset-left, 0px));
+}
+.edge-swipe-guard-right {
+    margin-right: max(16px, env(safe-area-inset-right, 0px));
+}

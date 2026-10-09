@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* Material Design 3 Theme - Light Color Roles */
 :root[data-theme="light"], body.light, [data-theme="light"] {
     --md-sys-color-primary: rgb(1 107 93);

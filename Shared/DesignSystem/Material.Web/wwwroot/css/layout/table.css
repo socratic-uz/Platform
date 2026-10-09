@@ -1,5 +1,4 @@
-/*  stylelint-disable selector-class-pattern  */
-
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Layout - Table Rules Module
    Standard Table Reset & Semantic Properties
@@ -24,4 +23,3 @@ table {
 ) {
     border-collapse: collapse;
 }
-

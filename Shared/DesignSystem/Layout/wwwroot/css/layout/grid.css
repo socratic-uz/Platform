@@ -5,470 +5,6 @@
    ========================================================================== */
 
 /* Master CSS Grid Rules Grouping */
-:is(
-    .about-container,
-    .about-cta-section,
-    .about-hero,
-    .about-pillars-section,
-    .about-tech-stack-section,
-    .about-video-section,
-    .actions-row,
-    .active-orders-tabs,
-    .ad-network-badge-row,
-    .ad-network-container .google-adsense-wrapper,
-    .ad-network-container .yandex-ads-wrapper,
-    .ad-network-footer,
-    .ad-network-render-slot,
-    .ad-network-screensaver-body,
-    .ad-network-unit-card,
-    .ad-screensaver-footer,
-    .ad-slot,
-    .ad-slot-container,
-    .advance-prompt,
-    .amount-cell,
-    .analytics-breakdown-grid,
-    .analytics-config-btn,
-    .analytics-explorer-section,
-    .analytics-kpi-card,
-    .analytics-kpi-grid,
-    .analytics-mode-btn,
-    .analytics-mode-pill-group,
-    .analytics-panel-card,
-    .analytics-period-chip,
-    .analytics-period-selector,
-    .analytics-toolbar-actions,
-    .analytics-toolbar-grid,
-    .app-grid,
-    .app-grid .app-main,
-    .app-grid > main,
-    .app-grid > nav,
-    .app-main > main,
-    .assistant-message,
-    .assistant-message-icon,
-    .assistant-search,
-    .assistant-search-icon,
-    .attract-loop-content,
-    .auth-card,
-    .auth-container,
-    .auth-divider,
-    .auth-error-banner,
-    .auth-header,
-    .auth-logo-badge,
-    .bar-labels,
-    .brand-screensaver-body,
-    .brand-screensaver-logo-wrapper,
-    .breakdown-bar-item,
-    .breakdown-bars-stack,
-    .card-bottom-row,
-    .card-mid-row,
-    .card-top-row,
-    .cart-bar,
-    .cart-item-row,
-    .cart-items-list,
-    .cart-summary,
-    .chat-back-link,
-    .chat-bottom-section,
-    .chat-input-form,
-    .chat-input-wrapper,
-    .chat-view,
-    .citation-content,
-    .color-grid,
-    .color-item,
-    .color-picker-row,
-    .column-content,
-    .column-empty,
-    .column-header,
-    .column-title-group,
-    .contact-card,
-    .contact-grid,
-    .control-group,
-    .cta-actions,
-    .cta-card,
-    .cta-link,
-    .date-cell,
-    .delivery-actions-grid,
-    .designer-canvas-area,
-    .designer-header,
-    .designer-page-root,
-    .designer-workspace,
-    .detail-item,
-    .dialog-headline-wrap,
-    .docs-group-container,
-    .docs-group-items,
-    .docs-header-actions,
-    .docs-mobile-menu-btn,
-    .docs-refresh-btn,
-    .docs-sidebar,
-    .docs-sidebar-header,
-    .docs-sidebar-menu,
-    .docs-welcome-card,
-    .docs-welcome-container,
-    .drawer-body,
-    .drawer-header,
-    .drawer-header .headline,
-    .drawer-panel,
-    .empty-cart-view,
-    .empty-plans-actions,
-    .empty-plans-card,
-    .empty-plans-icon-wrapper,
-    .error-banner,
-    .example-card,
-    .example-categories,
-    .example-container,
-    .example-grid,
-    .example-hero,
-    .explorer-chipset-wrapper,
-    .explorer-grid-container,
-    .explorer-header,
-    .explorer-title-group,
-    .faceid-scanner-frame,
-    .faceid-viewfinder-card,
-    .faq-card,
-    .faq-grid,
-    .faq-section,
-    .footer-bottom-bar,
-    .footer-brand-badge,
-    .footer-brand-col,
-    .footer-container,
-    .footer-lang-container,
-    .footer-links-list,
-    .footer-links-list li,
-    .footer-nav-col,
-    .footer-primary-grid,
-    .footer-trust-info,
-    .form-step,
-    .fullscreen-loading,
-    .fullscreen-player,
-    .grid-2-col,
-    .grid-actions,
-    .grid-catalog,
-    .grid-center,
-    .grid-center-x,
-    .grid-center-y,
-    .grid-flow-col,
-    .grid-split,
-    .grid-stack,
-    .header-actions,
-    .header-brand-icon-box,
-    .header-brand-link,
-    .header-center-zone,
-    .header-content,
-    .header-end-zone,
-    .header-grid-layout,
-    .header-icon-wrap,
-    .header-presets,
-    .header-start-zone,
-    .header-text,
-    .header-title-box,
-    .header-title-group,
-    .help-categories,
-    .help-container,
-    .help-hero,
-    .help-search-section,
-    .inline-card-experience-body,
-    .input-box,
-    .invoice-summary-box,
-    .item-actions,
-    .item-card,
-    .item-card-body,
-    .item-icon-wrapper,
-    .item-name-row,
-    .item-pricing-row,
-    .items-cards-grid,
-    .items-list-section,
-    .kanban-card,
-    .kanban-column,
-    .kds-action-btn,
-    .kds-board,
-    .kds-card,
-    .kds-card-actions,
-    .kds-card-main,
-    .kds-card-top,
-    .kds-cards-container,
-    .kds-column,
-    .kds-empty-col,
-    .kiosk-attract-loop,
-    .kiosk-brand,
-    .kiosk-brand-info,
-    .kiosk-brand-logo-fallback,
-    .kiosk-brand-tagline,
-    .kiosk-category-chipset,
-    .kiosk-filter-inner,
-    .kiosk-filter-row,
-    .kiosk-filter-stack,
-    .kiosk-header-content,
-    .kiosk-hero,
-    .kiosk-hero-content,
-    .kiosk-main,
-    .kiosk-main .card-footer,
-    .kpi-header,
-    .kpi-icon-badge,
-    .kpi-value-row,
-    .landing-floating-auth-btn,
-    .landing-floating-controls,
-    .landing-grid,
-    .landing-header-actions,
-    .landing-header-nav,
-    .landing-mobile-menu-drawer,
-    .landing-mobile-menu-toggle,
-    .landing-subpage-container,
-    .landing-subpage-hero,
-    .landing-top-bar-wrapper,
-    .link-stack,
-    .link-stack a,
-    .link-stack article,
-    .link-stack dl,
-    .m3-bottom-nav,
-    .m3-bottom-nav-item,
-    .m3-breadcrumbs,
-    .m3-drawer-backdrop,
-    .m3-drawer-panel,
-    .m3-explorer-section,
-    .m3-filter-grid,
-    .m3-filter-toolbar,
-    .m3-grid-autofit,
-    .m3-grid-autofit-lg,
-    .m3-grid-autofit-sm,
-    .m3-grid-center,
-    .m3-grid-center-canvas,
-    .m3-grid-center-x,
-    .m3-grid-center-y,
-    .m3-grid-cluster,
-    .m3-grid-main-sidebar,
-    .m3-grid-master-detail,
-    .m3-grid-sidebar,
-    .m3-grid-split,
-    .m3-grid-stack,
-    .m3-grid-triad,
-    .m3-kanban-board,
-    .m3-kanban-column,
-    .m3-nav-rail,
-    .m3-page-container,
-    .m3-page-header,
-    .m3-page-header-actions,
-    .m3-page-header-start,
-    .m3-page-header-text,
-    .m3-pricing-grid,
-    .m3-trust-footer,
-    .md-drawer-backdrop,
-    .message-list,
-    .mobile-nav-footer,
-    .notification-banner,
-    .order-card,
-    .order-card-details,
-    .order-card-footer,
-    .order-card-header,
-    .order-details-layout,
-    .order-items-subheader,
-    .order-items-table-wrapper,
-    .order-subtitle,
-    .orders-error-banner,
-    .orders-kanban-board,
-    .orders-list-grid,
-    .orders-table-wrapper,
-    .otp-target-hint,
-    .panel-header,
-    .payment-cell,
-    .payment-dashboard,
-    .payment-dashboard .glass-card,
-    .payment-dashboard .info-grid,
-    .payment-dashboard .info-item,
-    .payment-methods,
-    .payment-trust-footer,
-    .pillar-card,
-    .pillar-features,
-    .pillar-features li,
-    .pillar-icon-box,
-    .pillars-grid,
-    .plan-card,
-    .plan-card-header,
-    .plan-features,
-    .plan-features li,
-    .plan-header,
-    .plans-grid,
-    .plans-list,
-    .plans-section,
-    .pos-actions,
-    .pos-card-footer-row,
-    .pos-card-header-row,
-    .pos-card-img,
-    .pos-card-img-placeholder,
-    .pos-card-title-group,
-    .pos-catalog,
-    .pos-catalog-header,
-    .pos-chip-set,
-    .pos-filters,
-    .pos-filters md-chip-set,
-    .pos-header-title-group,
-    .pos-layout,
-    .pos-loading,
-    .pos-product-card,
-    .pos-quick-bill-btn,
-    .pos-sidebar,
-    .pos-sidebar-header,
-    .pos-sidebar-header-row,
-    .pos-top-header-actions,
-    .preview-card,
-    .preview-footer,
-    .preview-header,
-    .preview-info,
-    .price-breakdown,
-    .price-row,
-    .product-actions-bar,
-    .product-detail-card,
-    .product-details,
-    .product-gallery,
-    .product-img-placeholder,
-    .product-info-panel,
-    .product-preview-pill,
-    .product-price-section,
-    .product-specs-grid,
-    .product-tags,
-    .product-thumbnails,
-    .profile-container,
-    .profile-title,
-    .progress-bar-container,
-    .progress-labels,
-    .promo-input-group,
-    .promotion-modal-body,
-    .promotion-modal-header,
-    .qr-canvas-box,
-    .qr-controls-panel,
-    .qr-designer-header,
-    .qr-designer-page-root,
-    .qr-preview-area,
-    .qr-stage,
-    .qr-workspace,
-    .qrg-card,
-    .qrg-card-qr,
-    .qrg-cards,
-    .qrg-color-inputs,
-    .qrg-color-picker-wrapper,
-    .qrg-customizer,
-    .qrg-customizer-content,
-    .qrg-empty,
-    .qrg-empty-list,
-    .qrg-field-row,
-    .qrg-group,
-    .qrg-group-head,
-    .qrg-layout,
-    .qrg-lists,
-    .qrg-logo-badge,
-    .qrg-main,
-    .qrg-preview,
-    .qrg-preview-header,
-    .qrg-section-title,
-    .qrg-select-grid,
-    .qrg-sidebar,
-    .qrg-sidebar-header,
-    .qrg-sidebar-scrollable,
-    .qrg-slider-field,
-    .qrg-slider-header,
-    .qty-stepper,
-    .score-box,
-    .score-circle,
-    .seat-designer-page-root,
-    .seat-selection-card,
-    .section-header,
-    .seller-header,
-    .seller-info,
-    .seller-logo-placeholder,
-    .shipping-card,
-    .showcase-brand,
-    .showcase-brand-icon,
-    .showcase-card,
-    .showcase-card-actions,
-    .showcase-card-body,
-    .showcase-card-btn,
-    .showcase-card-header,
-    .showcase-card-title-group,
-    .showcase-cards-grid,
-    .showcase-content,
-    .showcase-controls-bar,
-    .showcase-demo-canvas,
-    .showcase-demo-col,
-    .showcase-demo-row,
-    .showcase-main-body,
-    .showcase-mobile-toggle,
-    .showcase-nav-btn,
-    .showcase-nav-btn-left,
-    .showcase-section,
-    .showcase-section-header,
-    .showcase-section-title-wrap,
-    .showcase-sidebar,
-    .showcase-sidebar-header,
-    .showcase-sidebar-nav,
-    .showcase-stat-info,
-    .showcase-stat-pill,
-    .showcase-stats,
-    .showcase-topbar,
-    .showcase-topbar-actions,
-    .showcase-topbar-left,
-    .signin-card,
-    .signin-container,
-    .signin-error-banner,
-    .signin-header,
-    .signin-logo-badge,
-    .spec-details,
-    .spec-item,
-    .store-breadcrumbs,
-    .store-seller-card,
-    .style-selects-grid,
-    .suggestions,
-    .suggestions-wrapper,
-    .summary-card,
-    .summary-rows,
-    .table-actions-bar,
-    .table-row-actions,
-    .tech-card,
-    .tech-grid,
-    .tier-box,
-    .tier-features,
-    .tier-features li,
-    .tier-header,
-    .tiers-grid,
-    .toast-triggers-row,
-    .tools,
-    .trial-counter,
-    .unified-kiosk-filter-bar md-chip-set,
-    .ux-mode-badge-overlay,
-    .ux-widget,
-    .ux-widget-chips,
-    .ux-widget-hotel,
-    .ux-widget-location,
-    .ux-widget-row,
-    .ux-widget-subrow,
-    .ux-widget-subscription,
-    .ux-widget-ticket,
-    .ux-widget-vehicle,
-    .video-caption,
-    .video-card,
-    .video-card-header,
-    .video-player-wrapper,
-    body,
-    footer.app-footer,
-    header.app-header,
-    header.landing-header .landing-mobile-menu-toggle,
-    main.docs-page,
-    main.showcase-page,
-    nav,
-    nav a.nav-item,
-    nav a.nav-item md-icon,
-    nav.glass,
-    nav.glass a.nav-item,
-    nav.glass a.nav-item md-icon,
-    nav.glass:not(.nav-mobile) a.nav-item,
-    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
-    nav.glass:not(.nav-mobile) a.nav-item md-icon,
-    nav.nav-desktop,
-    nav.nav-desktop a.nav-item,
-    nav.nav-desktop a.nav-item .material-symbols-outlined,
-    nav.nav-desktop a.nav-item md-icon,
-    nav.nav-mobile,
-    section.link-stack
-) {
-    display: grid !important;
-}
 
 /* Universal Horizontal Auto-Cluster Master Rule */
 :is(
@@ -800,4 +336,1056 @@
     .showcase-sidebar
 ) {
     grid-template-rows: auto auto minmax(0, 1fr);
+}
+.auth-divider {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+@media (max-width: 599.98px) {
+    .delivery-actions-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .payment-dashboard .info-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .plan-header {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .actions-row {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .payment-trust-footer {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .header-presets {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .header-actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .color-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-trust-footer,
+    .payment-trust-footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .analytics-toolbar-actions {
+        grid-template-columns: auto auto;
+    }
+    .cta-actions {
+        grid-auto-flow: row;
+    }
+    .orders-list-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .empty-actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .order-subtitle {
+        grid-auto-flow: row;
+    }
+    .item-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .item-pricing-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .m3-grid-triad {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+.assistant-message,
+.assistant-search {
+    grid-template: min-content / 2rem minmax(0, 1fr);
+}
+.assistant-message-text {
+    grid-column-start: 2;
+}
+.profile-container {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+.payment-dashboard .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+}
+.actions-row {
+    grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+}
+@media (max-width: 839.98px) {
+    .profile-container {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .dashboard-header {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .designer-header,
+    .qr-designer-header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .header-presets {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+    }
+    .preset-label {
+        grid-column: 1 / -1;
+    }
+    .header-actions {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    }
+    .designer-workspace,
+    .qr-workspace {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-kanban-board,
+    .orders-kanban-board,
+    .kds-board {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .qrg-layout {
+        grid-template: "sidebar" auto "preview" auto / minmax(0, 1fr) !important;
+    }
+    .orders-list-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    }
+    .order-details-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .order-items-subheader {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .showcase-cards-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    main.showcase-page {
+        grid-template: auto minmax(0, 1fr) / minmax(0, 1fr) !important;
+    }
+    .grid-2-col {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-grid-master-detail {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-grid-main-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-grid-split {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+.header-presets {
+    grid-template-columns: auto repeat(3, max-content);
+}
+.header-actions {
+    grid-template-columns: auto auto auto;
+}
+.designer-canvas-area {
+    grid-template-rows: minmax(0, 1fr) auto;
+}
+.qr-workspace {
+    grid-template-columns: min(100%, 420px) minmax(0, 1fr);
+}
+.color-picker-row {
+    grid-template-columns: 48px minmax(0, 1fr);
+}
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
+}
+.m3-drawer-panel,
+.drawer-panel {
+    grid-column: 2;
+}
+@media (max-width: 600px) {
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .m3-drawer-panel,
+    .drawer-panel {
+        grid-column: 1;
+    }
+}
+.explorer-title-group {
+    grid-template-columns: auto auto;
+}
+.m3-filter-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+}
+.footer-primary-grid {
+    grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
+}
+.footer-links-list a {
+    grid-auto-columns: auto minmax(0, 1fr);
+}
+@media screen and (min-width: 840px) {
+    .footer-primary-grid {
+        grid-template-columns: minmax(0, 1.35fr) repeat(4, minmax(0, 1fr));
+    }
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        display: var(--nav-display, grid);
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        order: 1;
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        grid-template-rows: auto auto;
+    }
+}
+@media screen and (max-width: 839.98px) {
+    .footer-primary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footer-brand-col {
+        grid-column: 1 / -1;
+    }
+    .kiosk-header-content {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand tier"
+            "search actions";
+    }
+    .kiosk-brand {
+        grid-area: brand;
+    }
+    .kiosk-tier-btn {
+        grid-area: tier;
+    }
+    .kiosk-search-wrapper {
+        grid-area: search;
+    }
+    .kiosk-lang-switcher {
+        grid-area: actions;
+    }
+    .link-stack,
+    section.link-stack {
+        grid-column: initial;
+    }
+    .header-grid-layout {
+        grid-template: auto auto / minmax(0, 1fr) auto;
+    }
+    .header-start-zone {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+    .header-end-zone {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+    .header-center-zone {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+    }
+    .pos-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .product-detail-card {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .app-grid {
+        grid-template: auto minmax(0, 1fr) auto / minmax(0, 1fr);
+    }
+    .app-grid > header,
+    .app-grid > main,
+    .app-grid .app-main,
+    .app-grid > footer {
+        grid-column: 1 / -1;
+    }
+    .app-grid > nav {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+}
+@media screen and (max-width: 599.98px) {
+    .footer-primary-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .footer-bottom-bar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .kiosk-header-content {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand tier"
+            "search search"
+            "actions actions";
+    }
+    .kiosk-tier-btn {
+        grid-area: tier;
+    }
+    .kiosk-search-wrapper {
+        grid-area: search;
+    }
+    .kiosk-lang-switcher {
+        grid-area: actions;
+    }
+    .kiosk-main .card-footer {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .m3-page-header-start {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+    .pos-top-header-actions {
+        grid-auto-flow: column !important;
+        grid-auto-columns: max-content !important;
+    }
+    .pos-catalog-header {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .pos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+    }
+    .pos-card-header-row {
+        grid-template-columns: 44px minmax(0, 1fr) !important;
+    }
+    .pos-actions {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .product-actions-bar {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+.kanban-card {
+    grid-template-rows: auto auto auto;
+}
+.kds-action-btn {
+    grid-template-columns: auto auto;
+}
+.kiosk-brand {
+    grid-auto-columns: auto;
+}
+@container product-card (max-width: 320px) {
+    .kiosk-main .card-footer {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+.analytics-kpi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+.analytics-kpi-card {
+    grid-template-rows: auto auto auto;
+}
+.analytics-breakdown-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+}
+@media (max-width: 960px) {
+    .analytics-toolbar-grid {
+        grid-template-columns: 100%;
+    }
+}
+.landing-grid {
+    grid-template-columns: 100%;
+}
+.landing-grid > header {
+    grid-row: 1 / 2;
+}
+.landing-grid > .landing-main {
+    grid-row: 2 / 3;
+}
+.landing-grid > footer {
+    grid-row: 3 / 4;
+}
+.landing-grid:has(.landing-page-root) {
+    grid-template-rows: minmax(0, 1fr);
+}
+.landing-grid:has(.landing-page-root) > .landing-main {
+    grid-row: 1 / -1;
+}
+.pillars-grid,
+.tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.faq-grid,
+.example-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+.contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.qrg-layout {
+    grid-template: minmax(0, 1fr) / minmax(min(100%, 380px), 380px) minmax(0, 1fr);
+    grid-template-areas: "sidebar preview";
+}
+.qrg-sidebar {
+    grid-area: sidebar;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+.qrg-preview {
+    grid-area: preview;
+}
+.qrg-cards {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+main.docs-page {
+    grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr) !important;
+}
+.header-grid-layout {
+    grid-template-columns: minmax(min-content, max-content) minmax(0, 1fr) minmax(min-content, max-content);
+}
+.m3-bottom-nav {
+    grid-auto-columns: 1fr;
+}
+.m3-bottom-nav-item {
+    grid-template-rows: auto auto;
+}
+.mobile-nav-item {
+    grid-template-columns: 24px minmax(0, 1fr);
+}
+.orders-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+.table-actions-bar {
+    grid-template-columns: auto;
+}
+.order-details-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+}
+.item-pricing-row {
+    grid-template-columns: auto auto minmax(0, 1fr);
+}
+@media (max-width: 768px) {
+    .m3-page-header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+.pos-layout {
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
+}
+.pos-card-header-row {
+    grid-template-columns: 52px minmax(0, 1fr);
+}
+.pos-actions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+}
+.product-specs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
+}
+.product-actions-bar {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+}
+.m3-pricing-grid,
+.tiers-grid,
+.plans-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+main.showcase-page {
+    grid-template-columns: minmax(min(100%, 320px), 320px) minmax(0, 1fr) !important;
+}
+.showcase-stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+}
+.showcase-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+}
+.m3-grid-autofit {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+.m3-grid-autofit-sm {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+.m3-grid-autofit-lg {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+.m3-grid-cluster,
+.grid-flow-col {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+.m3-page-container {
+    grid-template-columns: minmax(0, 1fr);
+}
+.chat-view {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+body {
+    grid-template: minmax(0, 1fr) / 100%;
+}
+.app-grid {
+    grid-template: auto minmax(0, 1fr) auto / min-content minmax(0, 1fr);
+}
+.app-grid:not(:has(nav)),
+.app-grid:has(main.no-nav),
+.app-grid.nav-only:not(:has(nav)) {
+    grid-template-columns: minmax(0, 1fr);
+}
+.app-grid > header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.app-grid > nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+.app-grid > main,
+.app-grid .app-main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.app-grid:not(:has(nav)) > main,
+.app-grid:has(main.no-nav) > main,
+.app-grid:not(:has(nav)) .app-main,
+.app-grid:has(main.no-nav) .app-main {
+    grid-column: 1 / -1;
+}
+.app-grid > footer {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.grid-catalog {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+}
+.grid-actions {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+.grid-stack {
+    grid-template-columns: minmax(0, 1fr);
+}
+.grid-2-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.m3-grid-sidebar,
+.m3-grid-master-detail {
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+}
+.m3-grid-main-sidebar {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+}
+.m3-grid-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-split {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+.m3-grid-triad {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1199.98px) {
+    .m3-grid-triad {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+.m3-grid-stack,
+.grid-stack {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+}
+:is(
+    .about-cta-section,
+    .about-hero,
+    .about-pillars-section,
+    .about-tech-stack-section,
+    .about-video-section,
+    .actions-row,
+    .active-orders-tabs,
+    .ad-network-badge-row,
+    .ad-network-container .google-adsense-wrapper,
+    .ad-network-container .yandex-ads-wrapper,
+    .ad-network-footer,
+    .ad-network-render-slot,
+    .ad-network-screensaver-body,
+    .ad-network-unit-card,
+    .ad-screensaver-footer,
+    .ad-slide-touch-prompt,
+    .ad-slot,
+    .ad-slot-container,
+    .advance-prompt,
+    .amount-cell,
+    .analytics-breakdown-grid,
+    .analytics-config-btn,
+    .analytics-explorer-section,
+    .analytics-kpi-card,
+    .analytics-kpi-grid,
+    .analytics-mode-btn,
+    .analytics-mode-pill-group,
+    .analytics-panel-card,
+    .analytics-period-chip,
+    .analytics-period-selector,
+    .analytics-status-pill,
+    .analytics-toolbar-actions,
+    .analytics-toolbar-grid,
+    .app-grid,
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-grid > nav,
+    .app-main > main,
+    .assistant-message,
+    .assistant-message-icon,
+    .assistant-search,
+    .assistant-search-icon,
+    .attract-loop-content,
+    .auth-card,
+    .auth-container,
+    .auth-divider,
+    .auth-error-banner,
+    .auth-header,
+    .auth-logo-badge,
+    .back-button,
+    .banner-close-btn,
+    .bar-labels,
+    .brand-screensaver-body,
+    .brand-screensaver-cta,
+    .brand-screensaver-logo-wrapper,
+    .breakdown-bar-item,
+    .breakdown-bars-stack,
+    .btn-primary-link,
+    .card-bottom-row,
+    .card-mid-row,
+    .card-top-row,
+    .cart-bar,
+    .cart-item-row,
+    .cart-items-list,
+    .cart-summary,
+    .chat-back-link,
+    .chat-bottom-section,
+    .chat-input-form,
+    .chat-input-wrapper,
+    .chat-view,
+    .citation,
+    .citation-content,
+    .color-grid,
+    .color-item,
+    .color-picker-row,
+    .column-badge,
+    .column-content,
+    .column-empty,
+    .column-header,
+    .column-title-group,
+    .contact-card,
+    .contact-grid,
+    .control-group,
+    .count-badge,
+    .crumb-link,
+    .cta-actions,
+    .cta-card,
+    .cta-link,
+    .date-cell,
+    .delivery-actions-grid,
+    .designer-canvas-area,
+    .designer-header,
+    .designer-page-root,
+    .designer-workspace,
+    .detail-item,
+    .dialog-headline-wrap,
+    .docs-group-container,
+    .docs-group-items,
+    .docs-header-actions,
+    .docs-header-bar,
+    .docs-header-breadcrumb,
+    .docs-mobile-menu-btn,
+    .docs-refresh-btn,
+    .docs-sidebar,
+    .docs-sidebar-header,
+    .docs-sidebar-menu,
+    .docs-welcome-card,
+    .docs-welcome-container,
+    .drawer-body,
+    .drawer-header,
+    .drawer-header .headline,
+    .drawer-panel,
+    .empty-cart-view,
+    .empty-plans-actions,
+    .empty-plans-card,
+    .empty-plans-icon-wrapper,
+    .error-banner,
+    .example-card,
+    .example-categories,
+    .example-container,
+    .example-grid,
+    .example-hero,
+    .explorer-chipset-wrapper,
+    .explorer-grid-container,
+    .explorer-header,
+    .explorer-title-group,
+    .faceid-scanner-frame,
+    .faceid-viewfinder-card,
+    .faq-card,
+    .faq-grid,
+    .faq-section,
+    .footer-bottom-bar,
+    .footer-brand-badge,
+    .footer-brand-col,
+    .footer-brand-link,
+    .footer-container,
+    .footer-lang-container,
+    .footer-links-list,
+    .footer-links-list a,
+    .footer-links-list li,
+    .footer-nav-col,
+    .footer-primary-grid,
+    .footer-system-status,
+    .footer-trust-info,
+    .form-step,
+    .fullscreen-loading,
+    .fullscreen-player,
+    .grid-2-col,
+    .grid-actions,
+    .grid-catalog,
+    .grid-center,
+    .grid-center-inline,
+    .grid-center-x,
+    .grid-center-y,
+    .grid-flow-col,
+    .grid-split,
+    .grid-stack,
+    .header-actions,
+    .header-brand-icon-box,
+    .header-brand-link,
+    .header-center-zone,
+    .header-content,
+    .header-end-zone,
+    .header-grid-layout,
+    .header-icon-wrap,
+    .header-presets,
+    .header-start-zone,
+    .header-text,
+    .header-title-box,
+    .header-title-group,
+    .help-categories,
+    .help-container,
+    .help-hero,
+    .help-search-section,
+    .inline-card-experience-body,
+    .input-box,
+    .interactive-chip,
+    .invoice-summary-box,
+    .item-actions,
+    .item-card,
+    .item-card-body,
+    .item-icon-wrapper,
+    .item-name-row,
+    .item-pricing-row,
+    .item-qty-badge,
+    .items-cards-grid,
+    .items-count-badge,
+    .items-list-section,
+    .kanban-card,
+    .kanban-column,
+    .kds-action-btn,
+    .kds-board,
+    .kds-card,
+    .kds-card-actions,
+    .kds-card-main,
+    .kds-card-top,
+    .kds-cards-container,
+    .kds-column,
+    .kds-empty-col,
+    .kiosk-attract-loop,
+    .kiosk-brand,
+    .kiosk-brand-info,
+    .kiosk-brand-logo-fallback,
+    .kiosk-brand-tagline,
+    .kiosk-category-chipset,
+    .kiosk-filter-inner,
+    .kiosk-filter-row,
+    .kiosk-filter-stack,
+    .kiosk-header-content,
+    .kiosk-hero,
+    .kiosk-hero-content,
+    .kiosk-main,
+    .kiosk-main .card-footer,
+    .kiosk-tier-btn,
+    .kpi-header,
+    .kpi-icon-badge,
+    .kpi-trend,
+    .kpi-value-row,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-floating-controls,
+    .landing-grid,
+    .landing-header-actions,
+    .landing-header-nav,
+    .landing-mobile-menu-drawer,
+    .landing-mobile-menu-toggle,
+    .landing-nav-link,
+    .landing-subpage-container,
+    .landing-subpage-hero,
+    .landing-top-bar-wrapper,
+    .link-stack,
+    .link-stack a,
+    .link-stack article,
+    .link-stack dl,
+    .m3-bottom-nav,
+    .m3-bottom-nav-item,
+    .m3-breadcrumbs,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .m3-explorer-section,
+    .m3-filter-grid,
+    .m3-filter-toolbar,
+    .m3-grid-autofit,
+    .m3-grid-autofit-lg,
+    .m3-grid-autofit-sm,
+    .m3-grid-center,
+    .m3-grid-center-canvas,
+    .m3-grid-center-inline,
+    .m3-grid-center-x,
+    .m3-grid-center-y,
+    .m3-grid-cluster,
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail,
+    .m3-grid-sidebar,
+    .m3-grid-split,
+    .m3-grid-stack,
+    .m3-grid-triad,
+    .m3-kanban-board,
+    .m3-kanban-column,
+    .m3-nav-rail,
+    .m3-page-container,
+    .m3-page-header,
+    .m3-page-header-actions,
+    .m3-page-header-start,
+    .m3-page-header-text,
+    .m3-pill-badge,
+    .m3-pricing-grid,
+    .m3-trust-footer,
+    .md-drawer-backdrop,
+    .message-list,
+    .mobile-nav-footer,
+    .mobile-nav-item,
+    .mode-indicator,
+    .notification-banner,
+    .order-card,
+    .order-card-details,
+    .order-card-footer,
+    .order-card-header,
+    .order-details-layout,
+    .order-items-subheader,
+    .order-items-table-wrapper,
+    .order-subtitle,
+    .orders-error-banner,
+    .orders-kanban-board,
+    .orders-list-grid,
+    .orders-table-wrapper,
+    .otp-target-hint,
+    .panel-header,
+    .payment-cell,
+    .payment-dashboard,
+    .payment-dashboard .glass-card,
+    .payment-dashboard .info-grid,
+    .payment-dashboard .info-item,
+    .payment-methods,
+    .payment-support a,
+    .payment-trust-footer,
+    .pillar-card,
+    .pillar-features,
+    .pillar-features li,
+    .pillar-icon-box,
+    .pillars-grid,
+    .plan-card,
+    .plan-card-header,
+    .plan-features,
+    .plan-features li,
+    .plan-header,
+    .plans-grid,
+    .plans-list,
+    .plans-section,
+    .pos-actions,
+    .pos-card-footer-row,
+    .pos-card-header-row,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-card-title-group,
+    .pos-catalog,
+    .pos-catalog-header,
+    .pos-chip-set,
+    .pos-filters,
+    .pos-filters md-chip-set,
+    .pos-header-link,
+    .pos-header-title-group,
+    .pos-layout,
+    .pos-loading,
+    .pos-product-card,
+    .pos-quick-bill-btn,
+    .pos-sidebar,
+    .pos-sidebar-header,
+    .pos-sidebar-header-row,
+    .pos-tech-chip,
+    .pos-top-header-actions,
+    .preset-btn,
+    .preview-card,
+    .preview-footer,
+    .preview-header,
+    .preview-info,
+    .price-breakdown,
+    .price-row,
+    .product-actions-bar,
+    .product-detail-card,
+    .product-details,
+    .product-gallery,
+    .product-img-placeholder,
+    .product-info-panel,
+    .product-preview-pill,
+    .product-price-section,
+    .product-specs-grid,
+    .product-tags,
+    .product-thumbnails,
+    .profile-container,
+    .profile-title,
+    .progress-bar-container,
+    .progress-labels,
+    .promo-input-group,
+    .promotion-modal-body,
+    .promotion-modal-header,
+    .qr-canvas-box,
+    .qr-controls-panel,
+    .qr-designer-header,
+    .qr-designer-page-root,
+    .qr-preview-area,
+    .qr-stage,
+    .qr-workspace,
+    .qrg-back,
+    .qrg-card,
+    .qrg-card-qr,
+    .qrg-cards,
+    .qrg-color-inputs,
+    .qrg-color-picker-wrapper,
+    .qrg-customizer,
+    .qrg-customizer-content,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-field-row,
+    .qrg-group,
+    .qrg-group-head,
+    .qrg-layout,
+    .qrg-lists,
+    .qrg-logo-badge,
+    .qrg-main,
+    .qrg-preview,
+    .qrg-preview-header,
+    .qrg-section-title,
+    .qrg-select-grid,
+    .qrg-sidebar,
+    .qrg-sidebar-header,
+    .qrg-sidebar-scrollable,
+    .qrg-slider-field,
+    .qrg-slider-header,
+    .qty-stepper,
+    .score-box,
+    .score-circle,
+    .screensaver-pro-badge,
+    .seat-designer-page-root,
+    .seat-selection-card,
+    .section-header,
+    .seller-address,
+    .seller-browse-all,
+    .seller-header,
+    .seller-info,
+    .seller-logo-placeholder,
+    .share-toast,
+    .shipping-card,
+    .showcase-brand,
+    .showcase-brand-icon,
+    .showcase-card,
+    .showcase-card-actions,
+    .showcase-card-body,
+    .showcase-card-btn,
+    .showcase-card-header,
+    .showcase-card-title-group,
+    .showcase-cards-grid,
+    .showcase-content,
+    .showcase-controls-bar,
+    .showcase-demo-canvas,
+    .showcase-demo-col,
+    .showcase-demo-row,
+    .showcase-main-body,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .showcase-nav-btn-left,
+    .showcase-section,
+    .showcase-section-header,
+    .showcase-section-title-wrap,
+    .showcase-sidebar,
+    .showcase-sidebar-header,
+    .showcase-sidebar-nav,
+    .showcase-stat-info,
+    .showcase-stat-pill,
+    .showcase-stats,
+    .showcase-topbar,
+    .showcase-topbar-actions,
+    .showcase-topbar-left,
+    .signin-card,
+    .signin-container,
+    .signin-error-banner,
+    .signin-header,
+    .signin-logo-badge,
+    .spec-details,
+    .spec-item,
+    .store-breadcrumbs,
+    .store-seller-card,
+    .style-selects-grid,
+    .suggestions,
+    .suggestions-wrapper,
+    .summary-card,
+    .summary-rows,
+    .table-actions-bar,
+    .table-row-actions,
+    .tech-card,
+    .tech-grid,
+    .tier-box,
+    .tier-features,
+    .tier-features li,
+    .tier-header,
+    .tiers-grid,
+    .toast-triggers-row,
+    .tools,
+    .trial-counter,
+    .trust-badge,
+    .unified-kiosk-filter-bar md-chip-set,
+    .ux-mode-badge-overlay,
+    .ux-widget,
+    .ux-widget-chips,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-row,
+    .ux-widget-subrow,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    .video-caption,
+    .video-card,
+    .video-card-header,
+    .video-player-wrapper,
+    :is(
+    .about-container,
+    body,
+    footer.app-footer,
+    header.app-header,
+    header.landing-header .landing-mobile-menu-toggle,
+    main.docs-page,
+    main.showcase-page,
+    nav,
+    nav a.nav-item,
+    nav a.nav-item md-icon,
+    nav.glass,
+    nav.glass a.nav-item,
+    nav.glass a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.nav-desktop,
+    nav.nav-desktop a.nav-item,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-mobile,
+    section.link-stack
+)
+) {
+    display: inline-grid;
 }

@@ -299,17 +299,12 @@ md-dialog [slot="actions"],
     grid-template-columns: auto minmax(0, 1fr) auto auto;
 }
 
-:is(.avatar-container, md-dialog.contacts) details .content {
-    gap: 0.85rem;
-}
-
 :is(.m3-media-card, .media-card, .org-card) {
     grid-template-rows: auto minmax(0, 1fr);
 }
 
 .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-    gap: 1.25rem;
     grid-auto-rows: minmax(0, 1fr);
 }
 
@@ -326,16 +321,8 @@ md-filled-card.product-card,
     grid-auto-columns: max-content auto max-content;
 }
 
-:is(.m3-config-dialog, .m3-dialog-surface) {
-    gap: var(--md-sys-spacing-5);
-}
-
 .m3-dialog-toggle-item {
     grid-template-columns: auto minmax(0, 1fr) auto;
-}
-
-.m3-dialog-toggle-text {
-    gap: 0.15rem;
 }
 
 .m3-form-grid.two-cols {
@@ -344,14 +331,6 @@ md-filled-card.product-card,
 
 :is(.m3-info-grid, .info-grid) {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-}
-
-.picker-trigger-card {
-    gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-}
-
-.picker-trigger-text {
-    gap: 3px;
 }
 
 .picker-palette-grid {
@@ -374,10 +353,6 @@ md-filled-card.product-card,
     grid-auto-columns: auto auto auto;
 }
 
-.lang-dropdown-menu {
-    gap: 0.2rem;
-}
-
 .variants-chip-set {
     grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
 }
@@ -392,10 +367,6 @@ md-filled-card.product-card,
 
 :is(.analytics-date-picker-trigger, .m3-period-picker-trigger) {
     grid-template-columns: auto auto auto;
-}
-
-.smart-grid-container {
-    gap: 1rem;
 }
 
 .col-justify-end .col-title .sort-indicator {
@@ -432,14 +403,6 @@ md-filled-card.product-card,
 @media screen and (max-width: 599.98px) {
     .card-grid {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
-        gap: 0.75rem;
-    }
-
-}
-
-@container (max-width: 480px) {
-    .picker-trigger-card {
-        gap: 10px;
     }
 
 }
@@ -472,65 +435,13 @@ md-filled-card.product-card,
 
 /* Consolidated Master Rule: gap */
 
-:is(
-    .badge,
-    .date-cell,
-    .item-status-pill,
-    .lang-pill-btn,
-    .m3-badge,
-    .m3-status-badge,
-    .order-status-badge,
-    .payment-cell,
-    .status-badge,
-    :is(.analytics-mode-btn, .m3-segmented-btn)
-) {
-    gap: 0.4rem;
-}
+/* Consolidated Master Rule: gap */
 
 /* Consolidated Master Rule: gap */
 
-:is(
-    .m3-filter-chip,
-    .m3-pill-badge,
-    .paginator nav,
-    .store-not-found,
-    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger)
-) {
-    gap: 0.5rem;
-}
-
 /* Consolidated Master Rule: gap */
 
-:is(
-    :is(.analytics-header-controls, .m3-header-controls),
-    :is(.m3-card-body, .card-body),
-    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
-    :is(.m3-card-header, .card-header)
-) {
-    gap: 0.75rem;
-}
-
 /* Consolidated Master Rule: gap */
-
-:is(
-    .grid-enum-flags,
-    .lang-inline-grid,
-    .org-card-content
-) {
-    gap: 0.35rem;
-}
-
-/* Consolidated Master Rule: gap */
-
-:is(
-    .date-presets-row,
-    .md3-presets-row,
-    .md3-schedule-time-group,
-    :is(.m3-counter, .material-counter),
-    :is(md-filled-card, md-outlined-card, md-elevated-card) section
-) {
-    gap: 6px;
-}
 
 /* Consolidated Master Rule: grid-column */
 
@@ -556,32 +467,9 @@ md-filled-card.product-card,
 
 /* Consolidated Master Rule: gap */
 
-:is(
-    .booking-picker-card,
-    .picker-trigger-left
-) {
-    gap: 14px;
-}
-
 /* Consolidated Master Rule: gap */
 
-:is(
-    .picker-hex-wrapper,
-    .price-box,
-    .summary-text-box
-) {
-    gap: 2px;
-}
-
 /* Consolidated Master Rule: gap */
-
-:is(
-    .drop-container,
-    .file-picker-container,
-    .summary-left
-) {
-    gap: 10px;
-}
 
 /* Consolidated Master Rule: grid-template-columns */
 
@@ -592,3 +480,86 @@ md-filled-card.product-card,
     grid-template-columns: auto auto;
 }
 
+:is(
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .row,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label,
+    .badge,
+    .m3-badge,
+    .status-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .item-status-pill,
+    .m3-pill-badge,
+    .back-button,
+    .m3-back-button,
+    .items-count-badge,
+    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
+    .m3-filter-chip,
+    .m3-dialog-title-group,
+    md-dialog [slot="actions"],
+    :is(.m3-counter, .material-counter),
+    .picker-header-row,
+    .picker-badge,
+    .picker-trigger-actions,
+    .picker-compact-box,
+    .picker-hex-wrapper,
+    .picker-week-mini-dots,
+    .md3-dialog-headline,
+    .md3-presets-row,
+    .md3-schedule-time-group,
+    .md3-time-picker-box,
+    .md3-closed-badge,
+    .lang-inline-grid,
+    .lang-pill-btn,
+    .label-title,
+    .picker-title-row,
+    .summary-left,
+    .summary-actions,
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    .m3-table-row-actions,
+    .table-row-actions,
+    .payment-cell,
+    .date-cell,
+    .grid-enum-flags,
+    .col-header-content,
+    .col-title,
+    .paginator,
+    .table-container > .paginator,
+    .paginator nav,
+    .m3-mode-toggle-figure,
+    .mode-toggle-figure
+) {
+    grid-auto-flow: column;
+}
+
+:is(
+    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
+    .m3-dialog-title-group,
+    md-dialog [slot="actions"],
+    :is(.m3-counter, .material-counter),
+    .picker-header-row,
+    .picker-badge,
+    .picker-trigger-actions,
+    .picker-compact-box,
+    .picker-hex-wrapper,
+    .picker-week-mini-dots,
+    .md3-dialog-headline,
+    .md3-presets-row,
+    .md3-schedule-time-group,
+    .md3-time-picker-box,
+    .md3-closed-badge,
+    .label-title,
+    :is(.analytics-mode-pill-group, .m3-segmented-pill-group),
+    .grid-enum-flags,
+    .col-header-content,
+    .col-title,
+    .paginator,
+    .table-container > .paginator,
+    .paginator nav
+) {
+    grid-auto-columns: max-content;
+}
+
+md-icon:not(:defined) {
+    display: inline-grid;
+}

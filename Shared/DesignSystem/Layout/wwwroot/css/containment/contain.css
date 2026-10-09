@@ -1,5 +1,15 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C containment/contain.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+.m3-drawer-panel,
+.drawer-panel {
+    will-change: transform
+}
+.gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop {
+    will-change: transform, opacity
+}

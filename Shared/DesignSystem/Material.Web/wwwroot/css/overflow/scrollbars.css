@@ -37,7 +37,6 @@
     scrollbar-width: thin !important;
     scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
                      var(--md-sys-scrollbar-color-track, transparent) !important;
-    overscroll-behavior: contain;
 }
 
 :is(
@@ -192,4 +191,3 @@
 ) {
     scrollbar-width: none;
 }
-

@@ -180,3 +180,728 @@
 ) {
     padding-bottom: 12px;
 }
+.signin-container,
+.auth-container {
+    padding: 3rem 1.5rem;
+}
+.signin-card,
+.auth-card {
+    padding: 2.5rem 2rem;
+}
+.signin-error-banner,
+.auth-error-banner {
+    padding: 12px 16px;
+}
+.otp-target-hint {
+    padding: 10px 14px;
+}
+@media (max-width: 599.98px) {
+    .signin-container,
+    .auth-container {
+        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1rem);
+    }
+    .signin-card,
+    .auth-card {
+        padding: clamp(1.25rem, 4vw, 1.75rem) clamp(1rem, 3vw, 1.25rem);
+    }
+    .chat-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .input-box {
+        padding: 0.2rem 0.25rem 0.2rem 0.85rem;
+    }
+    .payment-dashboard {
+        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: clamp(0.75rem, 3vw, 1rem) clamp(0.5rem, 2vw, 0.75rem) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.25rem);
+    }
+    .designer-header,
+    .qr-designer-header {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
+    }
+    .qr-stage {
+        padding: 1.5rem 0.75rem;
+    }
+    .preview-card {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1rem);
+    }
+    .qr-controls-panel {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1.25rem);
+    }
+    .about-container,
+    .help-container,
+    .example-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+    .docs-article {
+        padding: 24px 16px;
+    }
+    .item-card {
+        padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    }
+}
+.crumb-link {
+    padding: 0 4px;
+}
+.chat-container {
+    padding: 0.75rem 1.5rem max(1rem, env(safe-area-inset-bottom, 1rem));
+}
+.chat-header-container {
+    padding: 0.75rem 1.5rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+}
+.message-list-container {
+    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px));
+}
+.user-message {
+    padding: 0.5rem 1.25rem;
+}
+assistant-message th,
+assistant-message td,
+.assistant-message-text th,
+.assistant-message-text td {
+    padding: 0.1rem 0.5rem;
+}
+.citation {
+    padding: 0.5rem 0.75rem;
+}
+.suggestions-wrapper {
+    padding: 0 1.5rem;
+}
+.suggestions {
+    padding: 0.25rem 0;
+}
+.input-box {
+    padding: 0.25rem 0.35rem 0.25rem 1.25rem;
+}
+.chat-input-wrapper textarea,
+.input-box textarea {
+    padding: 0.4rem 0;
+}
+.payment-dashboard {
+    padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+}
+.score-box {
+    padding-left: 1.5rem;
+}
+.plan-card {
+    padding: 1.375rem;
+}
+.plan-header {
+    padding-bottom: 0.875rem;
+}
+.empty-plans-card {
+    padding: 3rem 1.5rem;
+}
+.schedule-table th,
+.schedule-table td {
+    padding: 0.875rem;
+}
+.payment-trust-footer {
+    padding: 0.5rem 0;
+}
+@media (max-width: 839.98px) {
+    .payment-dashboard {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+    .score-box {
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+    }
+    .designer-header,
+    .qr-designer-header {
+        padding: 1.25rem;
+    }
+    .showcase-topbar {
+        padding: 12px 16px;
+    }
+    .showcase-hero {
+        padding: 20px 16px;
+    }
+    .showcase-main-body {
+        padding: 16px;
+    }
+}
+.designer-page-root,
+.seat-designer-page-root,
+.qr-designer-page-root {
+    padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+}
+.designer-header,
+.qr-designer-header {
+    padding: 1.25rem 1.5rem;
+}
+.notification-banner {
+    padding: 0.75rem 1.25rem;
+}
+.seat-selection-card {
+    padding: 0.75rem 1rem;
+}
+.text-input, .select-input {
+    padding: 0.65rem 0.9rem;
+}
+.resolution-badge {
+    padding: 0.3rem 0.75rem;
+}
+.qr-stage {
+    padding: 2.5rem 1.25rem;
+}
+.m3-drawer-panel,
+.drawer-panel {
+    padding: 24px;
+}
+@media (max-width: 600px) {
+    .m3-drawer-panel,
+    .drawer-panel {
+        padding: 16px;
+    }
+}
+.drawer-header {
+    padding-bottom: 16px;
+}
+.drawer-body {
+    padding: 16px 0;
+}
+.empty-cart-view {
+    padding: 40px 20px;
+}
+.qty-val {
+    padding: 0 6px;
+}
+.drawer-footer {
+    padding-top: 16px;
+}
+.drawer-footer .total-row {
+    padding-top: 8px;
+}
+.analytics-explorer-section,
+.m3-explorer-section {
+    padding: var(--md-sys-spacing-6, 1.5rem);
+}
+.explorer-chipset-wrapper {
+    padding-bottom: 0.25rem;
+}
+.m3-filter-toolbar {
+    padding-bottom: 0.25rem;
+}
+.m3-trust-footer,
+.payment-trust-footer {
+    padding: 0.5rem 0;
+}
+footer.app-footer {
+    padding: 3.5rem 2rem 2rem;
+}
+.footer-custom-slot {
+    padding-bottom: 1.5rem;
+}
+.footer-bottom-bar {
+    padding-top: 1.75rem;
+}
+@media screen and (max-width: 839.98px) {
+    footer.app-footer {
+        padding: 2.5rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 16px));
+    }
+    .landing-grid footer.app-footer,
+    .nav-only footer.app-footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom, 16px));
+    }
+    .kiosk-main {
+        padding: 20px 16px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px);
+    }
+    header.app-header {
+        padding: max(0.4rem, env(safe-area-inset-top, 0px)) max(0.75rem, env(safe-area-inset-right, 0px)) 0.4rem max(0.75rem, env(safe-area-inset-left, 0px));
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        padding: 0.25rem 0.2rem;
+    }
+    .pos-main {
+        padding: 12px 16px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 32px);
+    }
+    .store-product-page {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+    .app-grid > main,
+    .app-grid .app-main {
+        padding: var(--md-sys-spacing-3, 0.75rem);
+        padding-left: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-right, 0px));
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+    .app-grid > footer {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+}
+.column-header {
+    padding-bottom: 0.75rem;
+}
+.kanban-card {
+    padding: 1rem 1.15rem;
+}
+.card-bottom-row {
+    padding-top: 0.4rem;
+}
+.kds-card {
+    padding: var(--md-sys-spacing-4, 1rem);
+}
+.column-badge,
+.count-badge {
+    padding: 0.25rem 0.625rem;
+}
+.column-empty,
+.kds-empty-col {
+    padding: 2.5rem 1rem;
+}
+.kds-status-tag {
+    padding: 0.2rem 0.5rem;
+}
+.kds-action-btn {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
+}
+.error-banner {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+}
+.kiosk-main {
+    padding: 24px 20px 140px;
+}
+.kiosk-brand-logo {
+    padding: 2px;
+}
+.kiosk-hero {
+    padding: clamp(20px, 3vw, 36px);
+}
+.product-details {
+    padding: 12px 16px 8px;
+}
+.inline-card-experience-body {
+    padding: 0 16px 8px;
+}
+.ux-widget {
+    padding: 8px 12px;
+}
+.kiosk-main .card-footer {
+    padding: 10px 16px 12px;
+}
+.cart-bar {
+    padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px));
+}
+@media screen and (min-width: 840px) {
+    .kiosk-main {
+        padding: 24px 24px 140px;
+    }
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0);
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        padding: 4px 2px;
+    }
+}
+@media screen and (max-width: 599.98px) {
+    .kiosk-main {
+        padding: 16px 12px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px);
+    }
+    .kiosk-header-content {
+        padding: 0;
+    }
+    .cart-bar {
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+    .landing-top-bar-wrapper {
+        padding: 0.65rem 0.75rem 0;
+    }
+    .landing-floating-controls {
+        padding: 0.25rem 0.35rem;
+    }
+    .landing-floating-auth-btn {
+        padding: 0;
+    }
+    header.app-header {
+        padding: max(0.35rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-right, 0px)) 0.35rem max(0.5rem, env(safe-area-inset-left, 0px));
+    }
+    .header-brand-link {
+        padding: 0.2rem;
+    }
+    a.back-button,
+    a.back-link {
+        padding: 0.25rem !important;
+    }
+    .header-end-zone md-outlined-button,
+    .header-end-zone md-filled-button,
+    .header-end-zone md-filled-tonal-button,
+    .header-end-zone md-elevated-button,
+    .header-end-zone md-text-button {
+        --md-outlined-button-leading-space: 6px;
+        --md-outlined-button-trailing-space: 6px;
+        --md-filled-button-leading-space: 6px;
+        --md-filled-button-trailing-space: 6px;
+    }
+    .header-end-zone md-outlined-button:has([slot="icon"]),
+    .header-end-zone md-filled-button:has([slot="icon"]),
+    .header-end-zone md-elevated-button:has([slot="icon"]),
+    .header-end-zone .orders-refresh-btn {
+        padding: 0 !important;
+        --md-outlined-button-leading-space: 0px !important;
+        --md-outlined-button-trailing-space: 0px !important;
+        --md-filled-button-leading-space: 0px !important;
+        --md-filled-button-trailing-space: 0px !important;
+    }
+    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn {
+        padding: 0 0.5rem !important;
+    }
+    .landing-auth-btn {
+        padding: 0;
+    }
+    .pos-main {
+        padding: 8px 12px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 36px);
+    }
+    .pos-grid {
+        padding-bottom: 24px;
+    }
+}
+.analytics-kpi-card {
+    padding: var(--md-sys-spacing-4, 1.25rem);
+}
+.panel-header {
+    padding-bottom: 0.75rem;
+}
+.analytics-mode-pill-group {
+    padding: 3px;
+}
+.analytics-period-chip {
+    padding: 0.4rem 0.9rem;
+}
+.analytics-status-pill {
+    padding: 0.25rem 0.75rem;
+}
+.landing-top-bar-wrapper {
+    padding: 1.25rem 1.5rem 0;
+}
+@media screen and (max-width: 1024px) {
+    .landing-top-bar-wrapper {
+        padding: 0.85rem 1rem 0;
+    }
+}
+.landing-floating-controls {
+    padding: 0.35rem 0.55rem;
+}
+.about-container,
+.help-container,
+.example-container,
+.landing-subpage-container {
+    padding: 2.5rem 1.5rem 3rem;
+}
+.m3-pill-badge {
+    padding: 0.4rem 1rem;
+}
+.video-card {
+    padding: 2.5rem;
+}
+.pillar-card,
+.tech-card {
+    padding: 1.75rem;
+}
+.cta-card {
+    padding: 3.5rem 2rem;
+}
+.help-categories,
+.example-categories {
+    padding: 0.5rem 0.5rem 0.75rem;
+}
+.contact-card {
+    padding: 2.5rem;
+}
+.qrg-sidebar {
+    padding: 24px 20px;
+}
+.qrg-back {
+    padding: 8px 10px;
+}
+.qrg-customizer {
+    padding: 16px;
+}
+.qrg-section-title {
+    padding-bottom: 8px;
+}
+.qrg-group-head {
+    padding: 0 4px 4px;
+}
+.qrg-logo-field {
+    padding-top: 12px;
+}
+.qrg-print-action {
+    padding-top: 4px;
+}
+.qrg-empty-list {
+    padding: 24px;
+}
+.qrg-preview {
+    padding: 28px 32px;
+}
+.qrg-preview-header {
+    padding-bottom: 16px;
+}
+.qrg-empty {
+    padding: 60px;
+}
+.docs-sidebar-menu {
+    padding: 16px 12px;
+}
+.docs-group-header {
+    padding: 4px 8px;
+}
+.docs-welcome-container {
+    padding: 32px 16px;
+}
+.docs-article {
+    padding: 40px 56px;
+}
+header.app-header {
+    padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+}
+.m3-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.m3-bottom-nav-item {
+    padding: 0.5rem;
+}
+header.app-header.landing-header {
+    padding: 0.35rem 1.5rem;
+}
+header.landing-header .header-brand-link {
+    padding: 0.25rem 0.65rem;
+}
+.lang-toggle-btn {
+    padding: 0.3rem 0.75rem;
+}
+.landing-auth-btn {
+    padding: 0.4rem 1.1rem;
+}
+.landing-mobile-menu-drawer {
+    padding: 1.25rem 1.5rem 2rem;
+}
+.mobile-nav-item {
+    padding: 0.85rem 1.15rem;
+}
+.mobile-nav-footer {
+    padding-top: 0.25rem;
+}
+.m3-nav-rail {
+    padding: var(--md-sys-spacing-3) 0;
+    padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));
+    padding-left: env(safe-area-inset-left, 0);
+    padding-bottom: max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
+}
+.total-amount {
+    padding-top: 0.5rem;
+}
+.orders-table th,
+.order-items-table th {
+    padding: 0.85rem 1rem;
+}
+.orders-table td,
+.order-items-table td {
+    padding: 0.85rem 1rem;
+}
+.orders-error-banner {
+    padding: 1rem 1.25rem;
+}
+.back-button {
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
+}
+.items-count-badge {
+    padding: var(--md-sys-spacing-2, 0.375rem) var(--md-sys-spacing-4, 0.875rem);
+}
+.item-card {
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
+}
+.item-qty-badge {
+    padding: 0.2rem 0.6rem;
+}
+.summary-card {
+    padding: var(--md-sys-spacing-5, 1.25rem) var(--md-sys-spacing-6, 1.5rem);
+}
+.m3-page-header {
+    padding-bottom: var(--md-sys-spacing-4, 1rem);
+}
+.pos-main {
+    padding: 16px 24px;
+}
+.pos-filters {
+    padding-bottom: 4px;
+}
+.pos-grid {
+    padding-bottom: 24px;
+}
+.pos-product-card {
+    padding: var(--space-3, 12px);
+}
+.pos-card-footer-row {
+    padding-top: 8px;
+}
+.pos-sidebar {
+    padding: 20px;
+}
+.pos-actions {
+    padding-top: 16px;
+}
+.pos-quick-bill-btn {
+    padding: 10px 4px;
+}
+.store-product-page {
+    padding: 2rem 1.5rem 5rem;
+}
+.badge-age-restriction {
+    padding: 0.25rem 0.6rem;
+}
+.product-thumbnails {
+    padding-bottom: 0.5rem;
+}
+.product-tag-chip {
+    padding: 0.2rem 0.75rem;
+}
+.store-not-found {
+    padding: 5rem 1rem;
+}
+.pro-tag,
+.popular-badge {
+    padding: 3px 10px;
+}
+.current-plan-indicator {
+    padding: 0.4rem;
+}
+.promotion-modal-header {
+    padding-bottom: 1rem;
+}
+.product-preview-pill {
+    padding: 0.6rem 1rem;
+}
+.ad-slot-container {
+    padding: 0.75rem;
+}
+.ad-network-footer {
+    padding-top: 0.5rem;
+}
+.attract-loop-content {
+    padding: 3rem 2rem 5rem;
+}
+.brand-screensaver-cta,
+.ad-slide-touch-prompt {
+    padding: 1rem 2.5rem;
+}
+.screensaver-pro-badge {
+    padding: 0.4rem 1rem;
+}
+.ad-network-badge-row {
+    padding-bottom: 0.5rem;
+}
+.showcase-sidebar-header {
+    padding: 20px;
+}
+.showcase-brand-icon {
+    padding: 8px;
+}
+.showcase-brand-badge {
+    padding: 3px 8px;
+}
+.showcase-search-box {
+    padding: 14px 16px;
+}
+.showcase-sidebar-nav {
+    padding: 12px 10px;
+}
+.showcase-nav-category-header {
+    padding: 10px 12px 4px;
+}
+.showcase-nav-btn {
+    padding: 9px 14px;
+}
+.showcase-nav-count {
+    padding: 2px 7px;
+}
+.showcase-topbar {
+    padding: 16px 32px;
+}
+.showcase-mobile-toggle {
+    padding: 6px;
+}
+.showcase-hero {
+    padding: 32px 32px 24px;
+}
+.showcase-lib-badge {
+    padding: 3px 10px;
+}
+.showcase-card-header {
+    padding: 16px 20px;
+}
+.showcase-card-btn {
+    padding: 6px;
+}
+.showcase-card-body {
+    padding: 24px 20px;
+}
+.showcase-card-code {
+    padding: 14px 18px;
+}
+.showcase-controls-bar {
+    padding: 12px 18px;
+}
+.m3-grid-center-canvas {
+    padding: max(1rem, env(safe-area-inset-top, 0px)) max(1rem, env(safe-area-inset-right, 0px)) max(1rem, env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
+}
+.m3-page-container {
+    padding: max(1.5rem, env(safe-area-inset-top, 0px)) max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-right, 0px)) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem) max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-left, 0px));
+}
+body {
+    padding: 0;
+}
+.app-grid > header {
+    padding-top: env(safe-area-inset-top, 0);
+}
+.app-grid > nav {
+    padding-left: env(safe-area-inset-left, 0);
+}
+.app-grid > main,
+.app-grid .app-main {
+    padding: var(--md-sys-spacing-4, 1rem);
+    padding-left: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-right, 0px));
+}
+.app-grid > footer {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.safe-area-top {
+    padding-top: env(safe-area-inset-top, 0);
+}
+.safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.safe-area-left {
+    padding-left: env(safe-area-inset-left, 0);
+}
+.safe-area-right {
+    padding-right: env(safe-area-inset-right, 0);
+}
+.safe-area-all {
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+}

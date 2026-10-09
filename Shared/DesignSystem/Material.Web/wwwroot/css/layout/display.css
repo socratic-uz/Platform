@@ -66,3 +66,15 @@ md-dialog [slot="content"] {
     display: -webkit-box;
 }
 
+md-icon:not(:defined) {
+    vertical-align: middle;
+}
+
+md-dialog:not(:defined) {
+    display: none !important;
+}
+
+.m3-line-clamp-2,
+.m3-line-clamp-3 {
+    display: -webkit-box;
+}

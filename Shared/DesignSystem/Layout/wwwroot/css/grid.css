@@ -3,13 +3,8 @@
    Aggregates root viewport engine & responsive layout primitives
    ========================================================================== */
 
-@import "grid/engine.css";
-@import "grid/container.css";
-@import "grid/stack.css";
-@import "grid/cluster.css";
-@import "grid/split.css";
-@import "grid/sidebar.css";
-@import "grid/center.css";
-@import "grid/autofit.css";
-@import "grid/scroll-area.css";
-@import "platform/touch.css";
+@import "layout/grid.css";
+@import "layout/alignment.css";
+@import "layout/display.css";
+@import "interaction/pointer.css";
+@import "overflow/scrolling.css";

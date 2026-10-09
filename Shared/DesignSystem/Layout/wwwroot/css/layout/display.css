@@ -5,44 +5,6 @@
    ========================================================================== */
 
 /* Universal Inline Grid Master Rule */
-:is(
-    .ad-slide-touch-prompt,
-    .analytics-status-pill,
-    .back-button,
-    .banner-close-btn,
-    .brand-screensaver-cta,
-    .btn-primary-link,
-    .citation,
-    .column-badge,
-    .count-badge,
-    .crumb-link,
-    .docs-header-bar,
-    .docs-header-breadcrumb,
-    .footer-brand-link,
-    .footer-links-list a,
-    .footer-system-status,
-    .item-qty-badge,
-    .items-count-badge,
-    .kiosk-tier-btn,
-    .kpi-trend,
-    .landing-auth-btn,
-    .landing-nav-link,
-    .m3-pill-badge,
-    .mobile-nav-item,
-    .mode-indicator,
-    .payment-support a,
-    .pos-header-link,
-    .pos-tech-chip,
-    .preset-btn,
-    .qrg-back,
-    .screensaver-pro-badge,
-    .seller-address,
-    .seller-browse-all,
-    .share-toast,
-    .trust-badge
-) {
-    display: inline-grid;
-}
 
 /* Universal Block Display Master Rule */
 :is(
@@ -71,5 +33,130 @@
     .showcase-mobile-toggle,
     .suggestions-wrapper::-webkit-scrollbar
 ) {
+    display: none;
+}
+@media all and (display-mode: fullscreen) {
+    footer.app-footer {
+        display: none;
+    }
+    header.app-header,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile {
+        display: none;
+    }
+}
+.product-desc {
+    display: -webkit-box;
+}
+@media screen and (max-width: 839.98px) {
+    .kiosk-header-actions {
+        display: contents;
+    }
+    .header-center-zone:empty {
+        display: none !important;
+    }
+    header.landing-header .landing-header-nav,
+    .landing-header-nav {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 599.98px) {
+    .kiosk-brand-tagline {
+        display: none !important;
+    }
+    .landing-floating-controls .auth-btn-label {
+        display: none;
+    }
+    .header-brand-text {
+        display: none !important;
+    }
+    .header-start-zone:has(.m3-page-header-start) .header-brand-zone,
+    .header-start-zone:has(.analytics-header-title-group) .header-brand-zone,
+    .header-start-zone:has(.header-context-divider) .header-brand-zone {
+        display: none !important;
+    }
+    .header-context-divider {
+        display: none !important;
+    }
+    a.back-button span,
+    a.back-link span {
+        display: none !important;
+    }
+    .header-end-zone .btn-text,
+    .header-end-zone .orders-refresh-btn .btn-text,
+    .header-end-zone .analytics-config-btn .btn-text {
+        display: none !important;
+    }
+    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn span {
+        display: none !important;
+    }
+    .landing-auth-btn span {
+        display: none !important;
+    }
+    header.landing-header .header-brand-text {
+        display: none;
+    }
+    .pos-top-header-actions::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+@media (max-width: 599.98px) {
+    .analytics-status-pill .pill-text {
+        display: none;
+    }
+    .orders-refresh-btn .btn-text {
+        display: none !important;
+    }
+    .meta-dot {
+        display: none;
+    }
+    .item-icon-wrapper {
+        display: none;
+    }
+    .item-unit-price {
+        display: none;
+    }
+}
+@media print {
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile {
+        display: none !important;
+    }
+}
+.orders-table td,
+.order-items-table td {
+    vertical-align: middle;
+}
+.pos-product-title-text {
+    display: -webkit-box;
+}
+body:has(main.no-nav) {
+    --nav-display: none;
+}
+.app-grid:has(main.no-footer) > footer,
+.app-grid:has(.no-footer) > footer {
+    display: none !important;
+}
+.app-grid:has(main.no-header) > header,
+.app-grid:has(.no-header) > header {
+    display: none !important;
+}
+.ai-blob-canvas svg,
+svg.ai-blob-svg {
+    display: block;
+}
+.interactive-chip {
+    vertical-align: middle;
+}
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}
+.touch-scroll-x::-webkit-scrollbar {
+    display: none;
+}
+.touch-scroll-y::-webkit-scrollbar {
     display: none;
 }

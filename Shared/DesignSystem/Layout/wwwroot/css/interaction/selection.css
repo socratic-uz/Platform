@@ -1,5 +1,22 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C interaction/selection.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+.kiosk-main,
+.kiosk-hero,
+.product-card {
+    user-select: none;
+    -webkit-user-select: none
+}
+.kiosk-attract-loop {
+    user-select: none
+}
+html, body {
+    user-select: none;
+    -webkit-user-select: none
+}
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
+    user-select: text;
+    -webkit-user-select: text
+}

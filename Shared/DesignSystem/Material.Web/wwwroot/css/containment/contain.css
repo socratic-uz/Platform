@@ -1,5 +1,4 @@
-/*  stylelint-disable selector-class-pattern  */
-
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Containment - Contain Rules Module
    Performance & Content Visibility Optimizations
@@ -10,9 +9,46 @@
 /* Consolidated Master Rule: container-type */
 
 :is(
-    .picker-trigger-card,
-    .smart-grid-container
-) {
-    container-type: inline-size;
-}
+    .m3-hover-lift,
+    .m3-press-scale,
+    :is(
+    
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    .paginator nav button:not([disabled]),
 
+    
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    :is(.analytics-mode-btn, .m3-segmented-btn)
+),
+    :is(
+    .m3-media-card,
+    .org-card,
+    .product-card,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card
+) img
+) {
+    will-change: transform
+}

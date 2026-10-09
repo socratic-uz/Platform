@@ -68,3 +68,77 @@
 ) {
     touch-action: pan-y;
 }
+.input-box {
+    cursor: text;
+}
+.m3-drawer-backdrop.show,
+.md-drawer-backdrop.show {
+    pointer-events: auto;
+}
+.kiosk-filter-row {
+    touch-action: pan-x;
+}
+.landing-top-bar-wrapper > * {
+    pointer-events: auto;
+}
+@media screen and (max-width: 599.98px) {
+    .landing-floating-auth-btn {
+        touch-action: manipulation;
+    }
+}
+.pos-filters {
+    touch-action: pan-x;
+}
+.ai-blob-canvas {
+    pointer-events: none;
+}
+.ai-blob-canvas svg,
+svg.ai-blob-svg {
+    pointer-events: none;
+}
+.glass::before {
+    pointer-events: none;
+}
+.touch-pan-y,
+[data-gesture="swipe-horizontal"],
+.swipe-container-x {
+    touch-action: pan-y !important;
+}
+.touch-pan-x,
+[data-gesture="swipe-vertical"],
+.swipe-container-y {
+    touch-action: pan-x !important;
+}
+.touch-none,
+[data-gesture="interactive-canvas"],
+.drag-handle {
+    touch-action: none !important;
+}
+.touch-manipulation,
+button,
+a,
+md-filled-button,
+md-outlined-button,
+md-text-button,
+md-elevated-button,
+md-icon-button,
+.interactive-action {
+    touch-action: manipulation;
+}
+.touch-scroll-x {
+    touch-action: pan-y;
+}
+.touch-scroll-y {
+    touch-action: pan-x;
+}
+.interactive-chip {
+    touch-action: manipulation;
+    cursor: pointer;
+}
+html, body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
+    -webkit-touch-callout: default;
+}

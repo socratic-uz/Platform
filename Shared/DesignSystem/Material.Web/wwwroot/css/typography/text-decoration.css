@@ -1,5 +1,24 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Material Design 3 - W3C typography/text-decoration.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+a {
+    text-decoration: none
+}
+a:hover {
+    text-decoration: underline
+}
+:is(
+    .back-button,
+    .m3-back-button,
+    .m3-card-interactive,
+    .card-interactive,
+    :is(.m3-summary-actions, .summary-actions) :is(button, .summary-back-link),
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .btn-primary-link
+) {
+    text-decoration: none
+}

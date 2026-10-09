@@ -11,110 +11,59 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
-}
-
 /* Base Semantic Typography Elements (Bridges HTML to M3 Tokens) */
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5rem;
     font-family: var(--md-ref-typeface-brand);
 }
 
 h1, .m3-display-large {
     font-size: var(--md-sys-typescale-display-large-size);
-    line-height: var(--md-sys-typescale-display-large-line-height);
     font-weight: var(--md-sys-typescale-display-large-weight);
-    letter-spacing: var(--md-sys-typescale-display-large-tracking);
 }
 
 h2, .m3-headline-large {
     font-size: var(--md-sys-typescale-headline-large-size);
-    line-height: var(--md-sys-typescale-headline-large-line-height);
     font-weight: var(--md-sys-typescale-headline-large-weight);
-    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
 }
 
 h3, .m3-headline-medium {
     font-size: var(--md-sys-typescale-headline-medium-size);
-    line-height: var(--md-sys-typescale-headline-medium-line-height);
     font-weight: var(--md-sys-typescale-headline-medium-weight);
-    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
 }
 
 h4, .m3-title-large {
     font-size: var(--md-sys-typescale-title-large-size);
-    line-height: var(--md-sys-typescale-title-large-line-height);
     font-weight: var(--md-sys-typescale-title-large-weight);
-    letter-spacing: var(--md-sys-typescale-title-large-tracking);
 }
 
 h5, .m3-title-medium {
     font-size: var(--md-sys-typescale-title-medium-size);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
     font-weight: var(--md-sys-typescale-title-medium-weight);
 }
 
 p, .m3-body-large {
-    line-height: var(--md-sys-typescale-body-large-line-height);
     font-weight: var(--md-sys-typescale-body-large-weight);
-}
-
-p {
-    margin-bottom: 1rem;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-ol, ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 code {
     font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
     font-size: 0.875em;
-    padding: 0.15em 0.35em;
-    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-    background: var(--md-sys-color-surface-container);
-}
-
-a {
-    text-decoration: none;
-    transition: color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Custom Web Components Hydration Guards */
 md-icon:not(:defined) {
-    display: inline-grid;
-    place-items: center;
-    width: var(--md-icon-size, 24px);
-    height: var(--md-icon-size, 24px);
-    overflow: hidden;
     font-family: var(--md-icon-font, 'Material Symbols Outlined') !important;
-    vertical-align: middle;
-}
-
-md-dialog:not(:defined) {
-    display: none !important;
 }
 
 /* Typography Utility Classes */
 .m3-body-medium {
     font-size: var(--md-sys-typescale-body-medium-size);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
     font-weight: var(--md-sys-typescale-body-medium-weight);
 }
 
 .m3-label-small {
     font-size: var(--md-sys-typescale-label-small-size);
-    line-height: var(--md-sys-typescale-label-small-line-height);
     font-weight: var(--md-sys-typescale-label-small-weight);
-    letter-spacing: var(--md-sys-typescale-label-small-tracking);
 }
 
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
@@ -182,22 +131,6 @@ md-dialog:not(:defined) {
 /* ─── Universal Consolidated Groupings (Round 3 Deduplication) ───── */
 
 /* Universal Line Height 1 (Icon & Compact Alignments) */
-:is(
-    .badge,
-    .m3-badge,
-    .status-badge,
-    .m3-status-badge,
-    .order-status-badge,
-    .item-status-pill,
-    .badge-counter,
-    .m3-pill-badge,
-    .m3-count-badge,
-    .count-badge,
-    :is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]),
-    .picker-badge md-icon
-) {
-    line-height: 1;
-}
 
 /* Universal Line Height 1.4 (Standard Typography) */
 
@@ -206,10 +139,6 @@ md-dialog:not(:defined) {
 /* Universal Uppercase Text Transformation */
 
 /* ─── Consolidated Component Rules (typography/font.css) ────────────────────────── */
-.avatar-button md-icon,
-.avatar-button .material-symbols-outlined {
-    line-height: 24px !important;
-}
 
 .badge-icon {
     font-size: 1.125rem;
@@ -231,25 +160,12 @@ md-dialog:not(:defined) {
     font-size: 48px;
 }
 
-:is(md-filled-card, md-outlined-card, md-elevated-card) h5,
-.product-title {
-    letter-spacing: -0.015em;
-}
-
-:is(md-filled-card, md-outlined-card, md-elevated-card) .price-tag {
-    letter-spacing: -0.02em;
-}
-
 .m3-dialog-description {
     font-size: 0.88rem;
 }
 
 .m3-dialog-toggle-desc {
     font-size: 0.78rem;
-}
-
-.m3-empty-state-desc {
-    line-height: 1.55;
 }
 
 .m3-empty-column-icon,
@@ -294,21 +210,12 @@ md-dialog:not(:defined) {
     font-family: inherit;
 }
 
-.lang-chip-btn {
-    letter-spacing: 0.04em;
-}
-
 .lang-menu-item {
     font-size: 0.825rem;
 }
 
-.label-title {
-    letter-spacing: 0.05em;
-}
-
 .required-badge {
     font-size: 0.7rem;
-    text-transform: none;
 }
 
 .headline {
@@ -324,52 +231,9 @@ md-dialog:not(:defined) {
 
 /* Consolidated Master Rule: margin-top */
 
-:is(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p
-) {
-    margin-top: 0;
-}
-
 /* Consolidated Master Rule: color */
 
-:is(
-    code,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
-) {
-    color: var(--md-sys-color-on-surface);
-}
-
 /* Consolidated Master Rule: overflow-wrap */
-
-:is(
-    .m3-body-large,
-    .m3-body-medium,
-    .m3-display-large,
-    .m3-headline-large,
-    .m3-headline-medium,
-    .m3-title-large,
-    .m3-title-medium,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p
-) {
-    overflow-wrap: break-word;
-}
 
 /* Consolidated Master Rule: font-size */
 
@@ -382,19 +246,6 @@ md-dialog:not(:defined) {
 }
 
 /* Consolidated Master Rule: line-height */
-
-:is(
-    :is(
-    :is(.m3-card-subtitle, .card-subtitle),
-    .org-card-desc,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
-    .m3-dialog-description,
-    .picker-preview-text
-),
-    h6
-) {
-    line-height: 1.4;
-}
 
 /* Consolidated Master Rule: font-weight */
 
@@ -450,27 +301,7 @@ md-dialog:not(:defined) {
 
 /* Consolidated Master Rule: color */
 
-:is(
-    a,
-    a:hover
-) {
-    color: var(--md-sys-color-primary);
-}
-
 /* Consolidated Master Rule: text-transform */
-
-:is(
-    .m3-label-small,
-    :is(
-    :is(.m3-info-label, .info-label),
-    :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title),
-    .picker-hex-input,
-    .picker-popover-title,
-    .label-title
-)
-) {
-    text-transform: uppercase;
-}
 
 /* Consolidated Master Rule: font-size */
 
@@ -542,13 +373,6 @@ md-dialog:not(:defined) {
 
 /* Consolidated Master Rule: letter-spacing */
 
-:is(
-    .lang-current-label,
-    .m3-pill-badge
-) {
-    letter-spacing: 0.02em;
-}
-
 /* Consolidated Master Rule: font-size */
 
 :is(
@@ -577,38 +401,9 @@ md-dialog:not(:defined) {
 
 /* Consolidated Master Rule: letter-spacing */
 
-:is(
-    .m3-empty-state-title,
-    :is(.m3-card-title, .card-title),
-    :is(.m3-summary-title, .summary-title)
-) {
-    letter-spacing: -0.01em;
-}
-
 /* Consolidated Master Rule: line-height */
 
-:is(
-    .product-title,
-    :is(.m3-card-title, .card-title),
-    :is(md-filled-card, md-outlined-card, md-elevated-card) h5
-) {
-    line-height: 1.25;
-}
-
 /* Consolidated Master Rule: text-align */
-
-:is(
-    .col-justify-end .col-title,
-    .table-container td.actions-column,
-    .table-container th.actions-column,
-    :is(.m3-row-value, .row-value),
-    table.quickgrid td.actions-column,
-    table.quickgrid th.actions-column,
-    td.col-justify-end,
-    td.col-justify-right
-) {
-    text-align: right;
-}
 
 /* Consolidated Master Rule: font-size */
 
@@ -623,14 +418,6 @@ md-dialog:not(:defined) {
 }
 
 /* Consolidated Master Rule: line-height */
-
-:is(
-    .org-card-name,
-    .picker-trigger-title,
-    .wishlist-title-text
-) {
-    line-height: 1.3;
-}
 
 /* Consolidated Master Rule: font-size */
 
@@ -764,14 +551,6 @@ md-dialog:not(:defined) {
 
 /* Consolidated Master Rule: letter-spacing */
 
-:is(
-    .picker-popover-title,
-    :is(.m3-info-label, .info-label),
-    :is(.md3-presets-label, .md3-schedule-subtitle, .picker-popover-title, .label-title)
-) {
-    letter-spacing: 0.5px;
-}
-
 /* Consolidated Master Rule: font-size */
 
 :is(
@@ -859,4 +638,3 @@ md-dialog:not(:defined) {
 ) {
     font-size: 20px;
 }
-

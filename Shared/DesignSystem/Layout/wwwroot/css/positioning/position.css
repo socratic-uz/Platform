@@ -125,3 +125,131 @@
 ) {
     right: 0;
 }
+.kiosk-hero::before {
+    inset: -30% auto auto -30%;
+}
+.ux-mode-badge-overlay {
+    top: 8px;
+    left: 8px;
+}
+.kiosk-wish-btn-wrapper {
+    top: 8px;
+    right: 8px;
+}
+.cart-bar {
+    inset: auto 0 0;
+}
+@media screen and (max-width: 839.98px) {
+    .cart-bar {
+        inset: auto 0 calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0px));
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        position: fixed !important;
+        inset: auto 0 0 !important;
+    }
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        position: relative;
+    }
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer {
+        top: 56px;
+    }
+    .app-grid > nav {
+        position: fixed !important;
+        inset: auto 0 0 !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .landing-top-bar-wrapper {
+        position: relative;
+    }
+}
+.landing-floating-controls {
+    top: 1.25rem;
+    right: 1.5rem;
+}
+@media screen and (max-width: 599.98px) {
+    .landing-floating-controls {
+        top: 0.85rem;
+        right: 0.85rem;
+    }
+}
+.link-stack a::before,
+.link-stack article::before {
+    top: 50%;
+    left: 50%;
+}
+.m3-bottom-nav {
+    bottom: 0;
+}
+.m3-nav-fab {
+    top: -24px;
+    left: 50%;
+}
+.landing-mobile-menu-backdrop {
+    top: 68px;
+    bottom: 0;
+}
+.landing-mobile-menu-drawer {
+    top: 68px;
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        position: sticky;
+        top: 0;
+    }
+}
+.order-summary-section {
+    top: var(--md-sys-spacing-6, 1.5rem);
+}
+@media (max-width: 839.98px) {
+    .order-summary-section {
+        position: static;
+    }
+    .showcase-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .showcase-sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+    }
+}
+.pos-badge-qty {
+    top: 6px;
+    right: 6px;
+}
+.badge-age-restriction {
+    top: 1rem;
+    right: 1rem;
+}
+.pro-tag,
+.popular-badge {
+    top: -10px;
+    right: 18px;
+}
+.pulse-ring {
+    inset: -6px;
+}
+.ai-blob-canvas {
+    position: fixed;
+    inset: 0;
+}
+.glass {
+    position: relative;
+}
+.glass::before {
+    position: absolute;
+    inset: 0;
+}
+.glass > * {
+    position: relative;
+}

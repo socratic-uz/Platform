@@ -32,3 +32,23 @@
 ) {
     text-decoration: none;
 }
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        text-decoration: none;
+    }
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        text-decoration: none;
+    }
+}
+:is(
+    .ad-upgrade-link,
+    .kiosk-product-title-link:hover,
+    .payment-support a:hover,
+    .seller-browse-all:hover
+) {
+    text-decoration: underline;
+}

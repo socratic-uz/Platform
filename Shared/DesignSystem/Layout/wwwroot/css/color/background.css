@@ -1,3 +1,4 @@
+/* stylelint-disable function-disallowed-list, color-no-hex */
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C color/background.css
@@ -259,7 +260,7 @@
     .landing-nav-link:hover,
     .mobile-nav-divider
 ) {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.08);
 }
 
 /* Universal Background None Master Rule */
@@ -269,4 +270,261 @@
     .thumb-btn
 ) {
     background: none;
+}
+.signin-logo-badge,
+.auth-logo-badge {
+    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+}
+.auth-divider::before,
+.auth-divider::after {
+    background: var(--md-sys-color-outline-variant);
+}
+.faceid-scanner-frame.scanning::after {
+    background: linear-gradient(90deg, transparent, var(--md-sys-color-tertiary), transparent);
+}
+.chat-page-root {
+    background: radial-gradient(circle at 50% 15%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface) 100%);
+}
+.chat-back-link:hover {
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.18);
+}
+.brand-title {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
+}
+assistant-message th,
+assistant-message tr:nth-child(even),
+.assistant-message-text th,
+.assistant-message-text tr:nth-child(even) {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+assistant-message pre > code,
+.assistant-message-text pre > code {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+.citation {
+    background-color: var(--md-sys-color-surface-container);
+}
+.citation:active {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+.progress-bar-bg {
+    background-color: var(--md-sys-color-surface-variant);
+}
+.progress-bar-fill {
+    background-color: var(--md-sys-color-primary);
+}
+.resolution-badge {
+    background: var(--md-sys-color-surface-variant);
+}
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
+}
+.footer-links-list a:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
+}
+.kiosk-hero {
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
+}
+.kiosk-hero::before {
+    background: radial-gradient(circle, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, transparent 70%);
+}
+.ux-mode-badge-overlay {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 85%, transparent);
+}
+.kiosk-wish-icon {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent) !important;
+}
+.landing-floating-controls {
+    background: rgb(10 15 28 / 0.65);
+}
+.landing-floating-auth-btn {
+    background: linear-gradient(135deg, rgb(56 189 248 / 0.15), rgb(129 140 248 / 0.15));
+}
+.landing-floating-auth-btn:hover {
+    background: linear-gradient(135deg, rgb(56 189 248 / 0.3), rgb(129 140 248 / 0.3));
+}
+.cta-card {
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
+}
+.docs-sidebar {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+.docs-content {
+    background-color: var(--md-sys-color-background);
+}
+.docs-welcome-card {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+.link-stack,
+section.link-stack {
+    background: var(--md-sys-color-surface-container, var(--md-sys-color-surface));
+}
+.link-stack a::before,
+.link-stack article::before {
+    background-color: var(--md-sys-color-secondary-container);
+}
+header.app-header {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+}
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        background: var(--md-sys-color-surface-container) !important;
+    }
+    nav.glass a.nav-item.active md-icon,
+    nav a.nav-item.active md-icon {
+        background: var(--md-sys-color-secondary-container);
+    }
+    .app-grid > nav {
+        background: var(--md-sys-color-surface-container) !important;
+    }
+}
+.m3-bottom-nav {
+    background: var(--md-sys-glass-surface);
+}
+header.app-header.landing-header {
+    background: rgb(4 6 10 / 0.6);
+}
+header.landing-header .header-brand-link:hover {
+    background: rgb(56 189 248 / 0.1);
+}
+header.landing-header .header-brand-text {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 60%, var(--md-sys-color-primary) 100%);
+}
+.landing-header-nav {
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.03);
+}
+.lang-toggle-btn {
+    background: var(--md-sys-color-surface-container, rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.04));
+}
+.lang-dropdown-menu {
+    background: var(--md-sys-color-surface-container-high, rgb(13 19 34 / 0.95));
+}
+.landing-auth-btn {
+    background: linear-gradient(135deg, rgb(14 165 233 / 0.18) 0%, rgb(124 58 237 / 0.22) 100%);
+}
+.landing-mobile-menu-toggle {
+    background: var(--md-sys-color-surface-container, rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.05));
+}
+.landing-mobile-menu-backdrop {
+    background: rgb(from var(--md-sys-color-shadow, var(--md-sys-color-shadow, black)) r g b / 0.65);
+}
+.landing-mobile-menu-drawer {
+    background: rgb(4 6 10 / 0.95);
+}
+.mobile-nav-item:hover,
+.mobile-nav-item:active {
+    background: rgb(56 189 248 / 0.12);
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        background: var(--md-sys-color-surface-container-low);
+    }
+    nav.nav-desktop a.nav-item:hover md-icon,
+    nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined {
+        background: var(--md-sys-color-surface-container-highest);
+    }
+    nav.nav-desktop a.nav-item.active md-icon,
+    nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined {
+        background: var(--md-sys-color-secondary-container);
+    }
+}
+.pos-sidebar {
+    background-color: var(--md-sys-color-surface-container-lowest);
+}
+.badge-age-restriction {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.9);
+}
+.share-toast {
+    background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
+}
+.header-icon-wrap {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
+}
+.fullscreen-player {
+    background-color: var(--md-sys-color-scrim);
+}
+.fullscreen-video {
+    background-color: var(--md-sys-color-scrim);
+}
+.attract-loop-background {
+    background-size: cover;
+    background-position: center;
+}
+.attract-loop-overlay {
+    background: linear-gradient(
+        180deg,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.2) 0%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.5) 50%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.92) 100%
+    );
+}
+.brand-screensaver-logo-wrapper {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.1);
+}
+.screensaver-pro-badge {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
+}
+.ad-network-unit-card {
+    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.85);
+}
+.showcase-sidebar-header {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.4);
+}
+.showcase-brand-icon {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+.showcase-brand-badge {
+    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+}
+.showcase-nav-btn:hover {
+    background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.5);
+}
+.showcase-nav-count {
+    background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.6);
+}
+.showcase-content {
+    background: var(--md-sys-color-background);
+}
+.showcase-topbar {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.75);
+}
+.showcase-hero {
+    background: linear-gradient(180deg, rgb(from var(--md-sys-color-surface-container-high) r g b / 0.3) 0%, transparent 100%);
+}
+.showcase-hero h1 {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 100%);
+}
+.showcase-stat-pill {
+    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
+}
+.showcase-lib-badge {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+@media (max-width: 839.98px) {
+    .showcase-sidebar-backdrop {
+        background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    }
+}
+html {
+    background: var(--md-sys-color-background);
+}
+body {
+    background: var(--md-sys-color-background);
+}
+.app-grid > nav {
+    background: var(--md-sys-color-surface-container-low);
+}
+.ai-blob-canvas svg,
+svg.ai-blob-svg {
+    background: transparent;
 }

@@ -1,5 +1,5 @@
-/* stylelint-disable */
 /* stylelint-disable selector-class-pattern */
+/* stylelint-disable */
 /* ==========================================================================
    W3C CSS Positioning - Position & Inset Rules Module
    Position Primitives & Bounding Insets
@@ -220,4 +220,3 @@
 ) {
     position: sticky;
 }
-

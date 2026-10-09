@@ -1,3 +1,4 @@
+/* stylelint-disable function-disallowed-list, color-no-hex */
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C effects/shadow.css
@@ -57,4 +58,191 @@
     .status-pulse-dot
 ) {
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
+}
+.signin-card,
+.auth-card {
+    box-shadow: 0 20px 40px var(--md-sys-color-shadow);
+}
+.signin-logo-badge,
+.auth-logo-badge {
+    box-shadow: 0 8px 16px var(--md-sys-color-shadow);
+}
+.faceid-scanner-frame {
+    box-shadow: 0 0 30px var(--md-sys-color-primary-container);
+}
+.faceid-scanner-frame.scanning {
+    box-shadow: 0 0 40px var(--md-sys-color-tertiary-container);
+}
+.crumb-sep {
+    opacity: 0.5;
+}
+.input-box:focus-within {
+    box-shadow: 0 0 0 1px var(--md-sys-color-primary);
+}
+.qr-canvas-box {
+    box-shadow: 0 12px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
+}
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    opacity: 0;
+}
+.m3-drawer-panel,
+.drawer-panel {
+    box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+}
+.footer-brand-badge {
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
+}
+.kiosk-hero {
+    box-shadow: var(--md-sys-elevation-level-1);
+}
+.product-placeholder-icon {
+    opacity: 0.45;
+}
+.cart-bar {
+    box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+}
+.cart-expand-icon {
+    opacity: 0.7;
+}
+.landing-floating-controls {
+    box-shadow: 0 8px 32px 0 rgb(from var(--md-sys-color-shadow, #000) r g b / 0.37);
+}
+.landing-floating-auth-btn:hover {
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+}
+.qrg-card {
+    box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
+}
+.qrg-card:hover {
+    box-shadow: 0 16px 48px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
+}
+.link-stack a::before,
+.link-stack article::before {
+    opacity: 0;
+}
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    }
+}
+.m3-bottom-nav {
+    box-shadow: 0 -2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
+}
+header.app-header.landing-header {
+    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
+}
+header.landing-header .header-brand-icon-box {
+    box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
+}
+.landing-auth-btn {
+    box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgb(from var(--md-sys-color-surface, #fff) r g b / 0.15);
+}
+.landing-auth-btn:hover {
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.5), 0 0 25px rgba(124, 58, 237, 0.4);
+}
+.landing-mobile-menu-drawer {
+    box-shadow: 0 20px 40px rgb(from var(--md-sys-color-shadow, #000) r g b / 0.7);
+}
+.trust-badge {
+    opacity: 0.75;
+}
+.badge-age-restriction {
+    box-shadow: 0 4px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+}
+.brand-screensaver-logo-wrapper {
+    box-shadow: 0 12px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+}
+.brand-screensaver-cta,
+.ad-slide-touch-prompt {
+    box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
+}
+.ad-network-unit-card {
+    box-shadow: 0 16px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+}
+.showcase-nav-category-header {
+    opacity: 0.9;
+}
+.showcase-card {
+    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+}
+.showcase-card:hover {
+    box-shadow: 0 8px 30px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
+}
+@media (max-width: 839.98px) {
+    .showcase-sidebar {
+        box-shadow: none;
+    }
+    .showcase-sidebar.open {
+        box-shadow: 4px 0 24px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+    }
+}
+*:focus-visible {
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
+}
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
+}
+.l0 {
+    opacity: 1;
+}
+.l1 {
+    opacity: 0.05;
+}
+.l2 {
+    opacity: 0.05;
+}
+.l3 {
+    opacity: 0.05;
+}
+.l4 {
+    opacity: 0.05;
+}
+:is(
+    .column-empty,
+    .faceid-icon-placeholder,
+    .footer-copyright,
+    .kds-empty-col,
+    .landing-nav-link md-icon
+) {
+    opacity: 0.8;
+}
+:is(
+    .landing-nav-link:hover md-icon,
+    .link-stack a:active::before,
+    .link-stack article:active::before,
+    .m3-drawer-backdrop.show,
+    .md-drawer-backdrop.show,
+    .thumb-btn.active,
+    .thumb-btn:hover
+) {
+    opacity: 1;
+}
+:is(
+    .docs-group-header,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .ux-widget-subrow
+) {
+    opacity: 0.85;
+}
+:is(
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .meta-dot,
+    .thumb-btn
+) {
+    opacity: 0.6;
+}
+.brand-screensaver-title {
+    text-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.6);
+}
+.brand-screensaver-tagline {
+    text-shadow: 0 2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
 }

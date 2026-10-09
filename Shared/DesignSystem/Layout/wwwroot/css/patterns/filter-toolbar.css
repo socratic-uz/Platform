@@ -1,9 +1,0 @@
-/* ─── 11. Universal Filter & Tools Toolbar ──────────────────────────────── */
-.m3-filter-toolbar {
-    padding-bottom: 0.25rem;
-}
-
-.m3-filter-grid {
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
-}
-

@@ -83,3 +83,14 @@ md-dialog [slot="content"] {
     overflow: auto;
 }
 
+md-icon:not(:defined) {
+    overflow: hidden;
+}
+
+:is(
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
+    .m3-truncate
+) {
+    overflow: hidden;
+}

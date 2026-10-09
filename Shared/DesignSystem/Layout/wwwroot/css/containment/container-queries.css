@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C containment/container-queries.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
@@ -13,5 +14,12 @@
     .product-card,
     md-filled-card.product-card
 ) {
+    container-type: inline-size;
+}
+md-filled-card.product-card,
+.product-card {
+    container-name: product-card;
+}
+.m3-container-query {
     container-type: inline-size;
 }

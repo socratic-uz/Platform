@@ -56,7 +56,6 @@
 .m3-card-glass,
 .card-glass,
 .glass-card {
-    backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
 }
 
@@ -65,7 +64,6 @@
 }
 
 :is(.m3-modal-backdrop, .m3-dialog-backdrop) {
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
 
@@ -106,10 +104,6 @@
 
 .picker-palette-swatch.selected {
     box-shadow: 0 0 0 2px var(--md-sys-color-primary);
-}
-
-.picker-swatch-check {
-    filter: drop-shadow(0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.8));
 }
 
 .new-badge {
@@ -192,3 +186,21 @@
     box-shadow: var(--md-sys-elevation-level3);
 }
 
+:is(
+    .m3-hover-lift:hover,
+    :is(
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card
+):hover
+) {
+    box-shadow: var(--md-sys-elevation-level2);
+}

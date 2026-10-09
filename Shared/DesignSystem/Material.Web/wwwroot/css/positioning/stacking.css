@@ -1,5 +1,4 @@
-/*  stylelint-disable selector-class-pattern  */
-
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    W3C CSS Positioning - Stacking & Isolation Rules Module
    Z-Index Layer Utilities & Stacking Context Isolation
@@ -60,4 +59,3 @@
 ) {
     z-index: 2;
 }
-

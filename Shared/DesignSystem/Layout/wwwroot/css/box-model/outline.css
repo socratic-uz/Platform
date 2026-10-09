@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C box-model/outline.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
@@ -15,4 +16,24 @@
     .text-input:focus
 ) {
     outline: none;
+}
+.crumb-link:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+}
+.thumb-btn:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+*:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline: 2px solid var(--md-sys-color-tertiary);
+    outline-offset: 3px;
 }

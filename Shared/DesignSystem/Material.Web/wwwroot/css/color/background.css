@@ -432,3 +432,6 @@
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
+code {
+    background: var(--md-sys-color-surface-container);
+}

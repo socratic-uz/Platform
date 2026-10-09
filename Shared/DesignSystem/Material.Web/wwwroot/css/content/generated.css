@@ -1,5 +1,21 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Material Design 3 - W3C content/generated.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+.col-width-draghandle::after {
+    content: ' '
+}
+:is(
+    .avatar-button::before,
+    .card-interactive::before,
+    .m3-card-interactive::before,
+    .m3-skeleton::after,
+    .m3-status-dot.pulse::after,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    .status-dot.pulse::after,
+    :is(md-filled-card, md-outlined-card, md-elevated-card)::before
+) {
+    content: ''
+}

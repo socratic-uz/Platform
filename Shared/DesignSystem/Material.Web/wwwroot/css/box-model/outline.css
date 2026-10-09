@@ -8,45 +8,6 @@
 /* ─── 1. Reset Mouse/Pointer Focus Outlines ───────────────────────────────── */
 
 /* ─── 2. Universal Keyboard Focus-Visible Rings (Accessible M3X) ─────────── */
-:is(
-    /* Native Interactive Elements */
-    button,
-    a,
-    input,
-    select,
-    textarea,
-    summary,
-    [tabindex]:not([tabindex="-1"]),
-
-    /* Material.Web Components */
-    md-filled-button,
-    md-outlined-button,
-    md-elevated-button,
-    md-tonal-button,
-    md-text-button,
-    md-icon-button,
-    md-outlined-text-field,
-    md-filled-text-field,
-    md-checkbox,
-    md-switch,
-    md-radio,
-
-    /* Socratic Domain Interactive Controls */
-    .m3-filter-chip,
-    .lang-chip-btn,
-    .lang-pill-btn,
-    .picker-trigger-card,
-    .picker-palette-swatch,
-    .file-card,
-    .upload-card,
-    .card-interactive,
-    .m3-card-interactive,
-    .analytics-mode-btn,
-    .m3-segmented-btn,
-    .paginator nav button:not([disabled])
-):focus-visible {
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
 
 /* ─── 3. Error Focus State ────────────────────────────────────────────────── */
 :is(
@@ -186,4 +147,3 @@
 ) {
     outline-offset: var(--md-sys-outline-offset, 2px);
 }
-

@@ -1,5 +1,12 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C layout/table.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+.schedule-table {
+    border-collapse: collapse
+}
+.orders-table,
+.order-items-table {
+    border-collapse: collapse
+}

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C content/lists.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
@@ -13,4 +14,12 @@
     .tier-features
 ) {
     list-style: none;
+}
+assistant-message ul,
+.assistant-message-text ul {
+    list-style-type: disc;
+}
+assistant-message ol,
+.assistant-message-text ol {
+    list-style-type: decimal;
 }

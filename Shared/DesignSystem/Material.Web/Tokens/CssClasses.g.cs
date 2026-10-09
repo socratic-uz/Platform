@@ -241,6 +241,12 @@ public static class M3
         public const string ToggleTitle = "m3-dialog-toggle-title";
     }
 
+    public static class Display
+    {
+        public const string LineClamp2 = "m3-line-clamp-2";
+        public const string LineClamp3 = "m3-line-clamp-3";
+    }
+
     public static class EmptyState
     {
         public const string Action = "m3-empty-state-action";
@@ -350,6 +356,11 @@ public static class M3
         public const string HasError = "has-error";
         public const string IsInvalid = "is-invalid";
         public const string None = "m3-outline-none";
+    }
+
+    public static class Overflow
+    {
+        public const string Truncate = "m3-truncate";
     }
 
     public static class Padding
@@ -497,6 +508,15 @@ public static class M3
         public const string Track = "m3-progress-track";
     }
 
+    public static class Replaced
+    {
+        public const string RatioKiosk = "m3-ratio-kiosk";
+        public const string RatioPortrait = "m3-ratio-portrait";
+        public const string RatioSquare = "m3-ratio-square";
+        public const string RatioVideo = "m3-ratio-video";
+        public const string RatioWide = "m3-ratio-wide";
+    }
+
     public static class Scrollbar
     {
         public const string ActiveOrdersScroll = "active-orders-scroll";
@@ -542,13 +562,13 @@ public static class M3
         public const string SegmentedPillGroup = "m3-segmented-pill-group";
     }
 
+    public static class Shadow
+    {
+        public const string HoverLift = "m3-hover-lift";
+    }
+
     public static class Sizing
     {
-        public const string RatioKiosk = "m3-ratio-kiosk";
-        public const string RatioPortrait = "m3-ratio-portrait";
-        public const string RatioSquare = "m3-ratio-square";
-        public const string RatioVideo = "m3-ratio-video";
-        public const string RatioWide = "m3-ratio-wide";
         public const string Short = "short";
         public const string TouchTarget = "m3-touch-target";
         public const string TouchTargetKiosk = "m3-touch-target-kiosk";
@@ -622,13 +642,6 @@ public static class M3
         public const string Wrapper = "m3-table-wrapper";
     }
 
-    public static class TextWrapping
-    {
-        public const string LineClamp2 = "m3-line-clamp-2";
-        public const string LineClamp3 = "m3-line-clamp-3";
-        public const string Truncate = "m3-truncate";
-    }
-
     public static class ThemeToggle
     {
         public const string DarkMode = "dark-mode";
@@ -640,9 +653,8 @@ public static class M3
         public const string ModeToggleIcon_2 = "mode-toggle-icon";
     }
 
-    public static class Transitions
+    public static class Transform
     {
-        public const string HoverLift = "m3-hover-lift";
         public const string PressScale = "m3-press-scale";
     }
 

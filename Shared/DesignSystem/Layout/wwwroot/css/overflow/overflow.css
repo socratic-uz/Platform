@@ -108,29 +108,8 @@
 }
 
 /* Universal Overscroll X Contain Master Rule */
-:is(
-    .active-orders-scroll,
-    .kiosk-filter-row,
-    .m3-breadcrumbs,
-    .pos-filters,
-    .pos-orders-scroll,
-    .pos-top-header-actions,
-    .product-thumbnails,
-    .store-breadcrumbs,
-    .ux-widget-chips
-) {
-    overscroll-behavior-x: contain;
-}
 
 /* Universal Overscroll Behavior Y Contain Master Rule */
-:is(
-    .drawer-body,
-    .message-list-container,
-    .pos-grid,
-    .pos-invoice-container
-) {
-    overscroll-behavior-y: contain;
-}
 
 /* Universal Overflow X Hidden Master Rule */
 :is(
@@ -151,4 +130,83 @@
     .landing-subpage-container
 ) {
     overflow-x: clip;
+}
+.suggestions-wrapper {
+    overflow-y: hidden;
+}
+@media screen and (max-width: 599.98px) {
+    .kiosk-lang-switcher {
+        overflow-x: auto;
+    }
+    .m3-page-header-title {
+        overflow: hidden;
+    }
+    .pos-top-header-actions {
+        overflow-x: auto !important;
+    }
+}
+.link-stack,
+section.link-stack {
+    overflow: auto;
+}
+@media screen and (max-width: 839.98px) {
+    .header-start-zone {
+        overflow: hidden;
+    }
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        overflow: hidden auto;
+    }
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        overflow: hidden;
+    }
+}
+@media (max-width: 839.98px) {
+    main.showcase-page {
+        overflow: hidden;
+    }
+}
+.m3-page-container {
+    overflow-x: clip;
+}
+body {
+    overflow-x: clip;
+}
+.ai-blob-canvas {
+    overflow: hidden;
+}
+.ai-blob-canvas svg,
+svg.ai-blob-svg {
+    overflow: visible;
+}
+.glass {
+    overflow: hidden;
+}
+.touch-scroll-x {
+    overflow: auto hidden;
+}
+.touch-scroll-y {
+    overflow: hidden auto;
+}
+:is(
+    .item-headline,
+    .kiosk-brand-name,
+    .m3-page-header-title,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    overflow: hidden;
 }

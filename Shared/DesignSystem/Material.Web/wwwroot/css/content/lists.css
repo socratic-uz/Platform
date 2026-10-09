@@ -1,5 +1,11 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Material Design 3 - W3C content/lists.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+:is(.avatar-container, md-dialog.contacts) details summary {
+    list-style: none
+}
+ol, ul {
+    list-style: none
+}

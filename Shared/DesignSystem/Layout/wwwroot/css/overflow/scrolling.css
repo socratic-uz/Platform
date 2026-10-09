@@ -1,5 +1,67 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C overflow/scrolling.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    overscroll-behavior: contain
+}
+.m3-drawer-panel,
+.drawer-panel {
+    overscroll-behavior: contain
+}
+.showcase-section {
+    scroll-margin-top: 100px
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important
+    }
+}
+.m3-scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--md-sys-spacing-4, 1rem);
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch
+}
+.m3-scroll-snap-x > * {
+    scroll-snap-align: start
+}
+html, body {
+    overscroll-behavior: none
+}
+.touch-scroll-x {
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch
+}
+.touch-scroll-y {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch
+}
+:is(
+    .active-orders-scroll,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-thumbnails,
+    .store-breadcrumbs,
+    .ux-widget-chips
+) {
+    overscroll-behavior-x: contain
+}
+:is(
+    .drawer-body,
+    .message-list-container,
+    .pos-grid,
+    .pos-invoice-container
+) {
+    overscroll-behavior-y: contain
+}
+@media screen and (max-width: 599.98px) {
+    .pos-top-header-actions {
+        -webkit-overflow-scrolling: touch !important
+    }
+}

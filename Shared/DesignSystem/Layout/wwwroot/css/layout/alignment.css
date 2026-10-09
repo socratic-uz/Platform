@@ -824,3 +824,501 @@
 ) {
     gap: 24px;
 }
+@media (min-width: 600px) {
+    .suggestions-wrapper {
+        justify-content: end;
+    }
+    .suggestions {
+        justify-content: end;
+    }
+}
+.payment-dashboard {
+    gap: 2rem;
+}
+.plan-card {
+    gap: 1.125rem;
+}
+.progress-bar-container {
+    gap: 0.375rem;
+}
+.actions-row {
+    gap: 0.625rem;
+}
+@media (max-width: 839.98px) {
+    .payment-dashboard {
+        gap: 1.5rem;
+    }
+    .dashboard-header {
+        gap: 1rem;
+    }
+    .header-actions-group {
+        justify-content: start;
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        gap: 1.25rem;
+    }
+    .designer-header,
+    .qr-designer-header {
+        gap: 1rem;
+    }
+    .header-presets {
+        gap: 0.6rem;
+    }
+    .header-actions {
+        gap: 0.6rem;
+    }
+    .designer-workspace,
+    .qr-workspace {
+        gap: 1.25rem;
+    }
+    .m3-kanban-board,
+    .orders-kanban-board,
+    .kds-board {
+        gap: 1rem;
+    }
+    .order-details-layout {
+        gap: var(--md-sys-spacing-5, 1.25rem);
+    }
+    .order-items-subheader {
+        gap: var(--md-sys-spacing-3, 0.75rem);
+    }
+    .showcase-mobile-toggle {
+        place-items: center;
+    }
+    .showcase-main-body {
+        gap: 32px;
+    }
+    .m3-grid-master-detail {
+        gap: var(--md-sys-spacing-4, 1rem);
+    }
+    .m3-grid-main-sidebar {
+        gap: var(--md-sys-spacing-5, 1.25rem);
+    }
+    .m3-grid-split {
+        gap: var(--md-sys-spacing-4, 1rem);
+    }
+}
+@media (max-width: 599.98px) {
+    .payment-dashboard {
+        gap: 1.25rem;
+    }
+    .plan-header {
+        align-items: start;
+    }
+    .payment-trust-footer {
+        justify-items: center;
+        gap: 1rem;
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        gap: 1rem;
+    }
+    .header-actions {
+        gap: 0.5rem;
+    }
+    .color-grid {
+        gap: 0.75rem;
+    }
+    .m3-trust-footer,
+    .payment-trust-footer {
+        justify-items: center;
+        gap: 1rem;
+    }
+    .analytics-toolbar-actions {
+        justify-content: space-between;
+    }
+    .about-container,
+    .help-container,
+    .example-container {
+        gap: 2.5rem;
+    }
+    .order-subtitle {
+        gap: var(--md-sys-spacing-1, 0.25rem);
+    }
+    .item-card {
+        gap: var(--md-sys-spacing-3, 0.75rem);
+    }
+    .m3-grid-triad {
+        gap: var(--md-sys-spacing-4, 1rem);
+    }
+}
+.color-grid {
+    gap: 0.9rem;
+}
+.style-selects-grid {
+    gap: 0.9rem;
+}
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    justify-items: end;
+}
+.empty-cart-view {
+    place-content: center;
+}
+.explorer-header {
+    gap: var(--md-sys-spacing-1, 0.25rem);
+}
+.footer-primary-grid {
+    gap: 3rem 2rem;
+}
+.footer-links-list a {
+    gap: 0.55rem;
+}
+@media screen and (min-width: 840px) {
+    .footer-primary-grid {
+        gap: 3rem 2rem;
+    }
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        place-items: center stretch;
+        place-content: start stretch;
+        align-self: start;
+        gap: 0.5rem;
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        justify-items: center;
+        align-content: center;
+        gap: 3px;
+    }
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
+        place-items: center;
+    }
+}
+@media screen and (max-width: 839.98px) {
+    .footer-primary-grid {
+        gap: 2.5rem 2rem;
+    }
+    .kiosk-header-content {
+        gap: 10px 14px;
+        align-items: center;
+    }
+    .kiosk-tier-btn {
+        justify-self: end;
+    }
+    .kiosk-lang-switcher {
+        justify-self: end;
+    }
+    .header-grid-layout {
+        gap: 0.4rem 0.5rem;
+        align-items: center;
+    }
+    .header-start-zone {
+        gap: 0.4rem;
+        align-items: center;
+    }
+    .header-end-zone {
+        justify-self: end;
+        gap: 0.35rem;
+        align-items: center;
+    }
+    .header-center-zone {
+        justify-content: stretch;
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        place-content: stretch space-around;
+        gap: initial;
+        align-items: center;
+    }
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        place-items: center center;
+        gap: 2px;
+    }
+    nav.glass a.nav-item md-icon,
+    nav a.nav-item md-icon {
+        place-items: center;
+    }
+    .pos-layout {
+        gap: 16px;
+    }
+    .product-detail-card {
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 599.98px) {
+    .footer-primary-grid {
+        gap: 2rem;
+    }
+    .footer-bottom-bar {
+        gap: 1.25rem;
+        justify-items: center;
+    }
+    .footer-trust-info {
+        justify-content: center;
+    }
+    .kiosk-main {
+        gap: 16px;
+    }
+    .kiosk-header-content {
+        gap: 8px;
+    }
+    .kiosk-tier-btn {
+        justify-self: end;
+    }
+    .kiosk-lang-switcher {
+        justify-self: start;
+    }
+    .kiosk-main .card-footer {
+        align-items: stretch;
+        gap: 8px;
+    }
+    .kiosk-main .card-footer md-filled-button,
+    .kiosk-main .card-footer md-outlined-button,
+    .kiosk-main .card-footer button,
+    .kiosk-main .card-footer .material-counter {
+        justify-content: center;
+    }
+    .landing-floating-controls {
+        gap: 0.4rem;
+    }
+    .landing-floating-auth-btn {
+        place-items: center;
+    }
+    .m3-page-header-start {
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .header-end-zone {
+        gap: 0.25rem !important;
+    }
+    .pos-top-header-actions {
+        gap: 6px !important;
+    }
+    .landing-header-actions {
+        gap: 0.35rem;
+    }
+    .landing-auth-btn {
+        place-items: center;
+    }
+    .pos-search-wrapper {
+        justify-self: stretch;
+    }
+    .pos-grid {
+        gap: 10px;
+    }
+    .pos-card-header-row {
+        gap: 8px;
+    }
+    .product-actions-bar {
+        gap: 0.625rem;
+    }
+}
+.kds-card-top {
+    justify-content: space-between;
+}
+.kiosk-category-label {
+    align-self: center;
+}
+.kiosk-reset-btn {
+    align-self: start;
+}
+.kiosk-main .card-footer {
+    align-self: end !important;
+}
+@container product-card (max-width: 320px) {
+    .kiosk-main .card-footer {
+        align-items: stretch;
+        gap: 8px;
+    }
+    .kiosk-main .card-footer md-filled-button,
+    .kiosk-main .card-footer md-outlined-button,
+    .kiosk-main .card-footer button,
+    .kiosk-main .card-footer .material-counter {
+        justify-content: center;
+    }
+}
+@media (max-width: 960px) {
+    .analytics-toolbar-grid {
+        gap: 0.75rem;
+    }
+}
+.landing-floating-auth-btn {
+    gap: 0.45rem;
+}
+.about-container,
+.help-container,
+.example-container,
+.landing-subpage-container {
+    gap: 3.5rem;
+}
+.video-card-header {
+    justify-items: start;
+}
+.about-pillars-section,
+.about-tech-stack-section,
+.about-cta-section {
+    gap: 2.5rem;
+}
+main.docs-page {
+    align-content: stretch !important;
+}
+.link-stack,
+section.link-stack {
+    align-self: start;
+}
+.link-stack a,
+.link-stack article {
+    justify-self: stretch;
+}
+.link-stack dl {
+    gap: 0 2rem;
+}
+.header-grid-layout {
+    gap: 0.5rem 1rem;
+}
+.pos-top-header-actions {
+    gap: var(--space-2, 8px);
+}
+.landing-auth-btn {
+    gap: 0.45rem;
+}
+.items-count-badge {
+    gap: var(--md-sys-spacing-2, 0.375rem);
+}
+.order-details-layout {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+}
+@media (max-width: 768px) {
+    .m3-page-header {
+        gap: 1rem;
+    }
+    .m3-page-header-actions {
+        justify-content: start;
+    }
+}
+.pos-loading {
+    place-content: center;
+}
+.pos-product-card {
+    gap: var(--space-2, 8px);
+}
+.pos-card-footer-row {
+    align-self: end;
+}
+.seller-info {
+    gap: 0.2rem;
+}
+.seller-address {
+    gap: 0.3rem;
+}
+.tier-box,
+.plan-card {
+    align-content: space-between;
+}
+.fullscreen-loading {
+    gap: 1.2rem;
+}
+.kiosk-attract-loop {
+    align-content: end;
+}
+main.showcase-page {
+    align-content: stretch !important;
+}
+.showcase-main-body {
+    gap: 48px;
+}
+.m3-grid-autofit {
+    gap: var(--md-sys-spacing-5, 1.25rem);
+}
+.m3-grid-autofit-sm {
+    gap: var(--md-sys-spacing-3, 0.75rem);
+}
+.m3-grid-autofit-lg {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+}
+.m3-grid-center,
+.grid-center {
+    place-items: center;
+    place-content: center;
+}
+.m3-grid-center-inline,
+.grid-center-inline {
+    place-items: center;
+    place-content: center;
+}
+.m3-grid-center-x,
+.grid-center-x {
+    justify-items: center;
+    justify-content: center;
+}
+.m3-grid-center-y,
+.grid-center-y {
+    align-items: center;
+    align-content: center;
+}
+.m3-grid-center-canvas {
+    place-content: center;
+    place-items: center;
+}
+.m3-grid-cluster,
+.grid-flow-col {
+    align-items: center;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+}
+.m3-page-container {
+    gap: var(--md-sys-spacing-6, 24px);
+}
+.app-grid > main,
+.app-grid .app-main {
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+}
+.app-main > main {
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+}
+.grid-catalog {
+    gap: var(--space-4, 1rem);
+    align-content: start;
+}
+.grid-actions {
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+}
+.grid-stack {
+    gap: var(--space-3, 0.75rem);
+    align-content: start;
+}
+.grid-2-col {
+    gap: var(--space-4, 1rem);
+}
+.m3-grid-sidebar,
+.m3-grid-master-detail {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+    align-items: start;
+}
+.m3-grid-main-sidebar {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+    align-items: start;
+}
+.m3-grid-split {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+    align-items: start;
+}
+.grid-split {
+    align-items: center;
+    gap: var(--md-sys-spacing-4, 1rem);
+}
+.m3-grid-triad {
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    align-items: start;
+}
+.m3-grid-stack,
+.grid-stack {
+    gap: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+}
+.interactive-chip {
+    place-items: center;
+}

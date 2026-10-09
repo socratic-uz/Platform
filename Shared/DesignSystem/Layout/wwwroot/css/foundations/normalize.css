@@ -1,3 +1,5 @@
+/* stylelint-disable color-no-hex */
+
 /* ==========================================================================
    Socratic Platform - Base Normalization & A11y Foundations
    Safe Reset for M3 Web Components, Strict CSS Grid & Zero-Flicker Hydration
@@ -27,7 +29,7 @@ body {
     background-color: var(--md-sys-color-surface, #121318);
     color: var(--md-sys-color-on-surface, #e2e2e9);
     font-family: var(--md-ref-typeface-plain, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;

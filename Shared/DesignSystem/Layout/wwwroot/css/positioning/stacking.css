@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C positioning/stacking.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
@@ -11,4 +12,100 @@
     .ux-mode-badge-overlay
 ) {
     z-index: var(--m3-z-content, 1);
+}
+.chat-bottom-section {
+    z-index: 10;
+}
+.chat-header-container {
+    z-index: 20;
+}
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    z-index: var(--m3-z-drawer, 40);
+}
+.kiosk-wish-btn-wrapper {
+    z-index: var(--m3-z-sticky, 10);
+}
+.cart-bar {
+    z-index: var(--m3-z-dialog, 100);
+}
+.landing-grid > header {
+    z-index: 50;
+}
+.landing-top-bar-wrapper {
+    z-index: 100;
+}
+.landing-floating-controls {
+    z-index: 100;
+}
+header.app-header {
+    z-index: 50;
+}
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        z-index: 100 !important;
+    }
+    .app-grid > nav {
+        z-index: 100 !important;
+    }
+}
+.m3-bottom-nav {
+    z-index: var(--m3-z-bottom-nav, 40);
+}
+header.app-header.landing-header {
+    z-index: 80;
+}
+.landing-mobile-menu-backdrop {
+    z-index: 80;
+}
+.landing-mobile-menu-drawer {
+    z-index: 90;
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        z-index: 2;
+    }
+}
+.store-product-page {
+    z-index: 1;
+}
+.fullscreen-player {
+    z-index: 99999;
+}
+.kiosk-attract-loop {
+    z-index: 99999;
+}
+.attract-loop-content {
+    z-index: 2;
+}
+.showcase-sidebar {
+    z-index: 10;
+}
+.showcase-topbar {
+    z-index: 5;
+}
+@media (max-width: 839.98px) {
+    .showcase-sidebar {
+        z-index: 1000;
+    }
+    .showcase-sidebar-backdrop {
+        z-index: 999;
+    }
+}
+.app-grid > header {
+    z-index: 10;
+}
+.ai-blob-canvas {
+    z-index: -1;
+}
+.glass::before {
+    z-index: 0;
+}
+.glass > * {
+    z-index: 1;
 }

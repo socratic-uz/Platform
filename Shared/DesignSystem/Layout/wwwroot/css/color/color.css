@@ -376,3 +376,127 @@
 ) {
     color: var(--md-sys-color-on-secondary-container);
 }
+.signin-error-banner,
+.auth-error-banner {
+    color: var(--md-sys-color-error);
+}
+.chat-page-root {
+    color-scheme: dark;
+}
+.banner-close-btn {
+    color: inherit;
+}
+.btn-complete {
+    color: var(--md-sys-color-on-tertiary);
+}
+.error-banner {
+    color: var(--md-sys-color-on-error-container);
+}
+.kiosk-wish-icon.wished {
+    color: var(--md-sys-color-error) !important;
+}
+.kiosk-product-title-link {
+    color: inherit;
+}
+.video-caption {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
+}
+.docs-article {
+    color: var(--md-sys-color-on-background);
+}
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item md-icon,
+    nav a.nav-item md-icon {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item.active md-icon,
+    nav a.nav-item.active md-icon {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item.active span,
+    nav a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+    }
+}
+.trust-badge md-icon {
+    color: var(--md-sys-color-secondary);
+}
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        color: var(--md-sys-color-on-surface);
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item:hover md-icon,
+    nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined {
+        color: var(--md-sys-color-on-surface);
+    }
+    nav.nav-desktop a.nav-item.active md-icon,
+    nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item.active span,
+    nav.glass:not(.nav-mobile) a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+    }
+}
+.badge-age-restriction {
+    color: var(--md-sys-color-on-error);
+}
+.pro-tag,
+.popular-badge {
+    color: var(--md-sys-color-on-tertiary);
+}
+.feature-icon.star { color: var(--md-sys-color-secondary);
+}
+.ad-upgrade-link:hover {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+.brand-screensaver-tagline {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
+}
+.pro-badge-icon {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+.ad-network-partner {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
+}
+.ad-org-context {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
+}
+body {
+    color: var(--md-sys-color-on-background);
+}
+.link-stack svg {
+    stroke: var(--md-sys-color-on-surface);
+    fill: var(--md-sys-color-on-surface);
+}
+.link-stack svg * {
+    stroke: var(--md-sys-color-on-surface);
+    fill: var(--md-sys-color-on-surface);
+}
