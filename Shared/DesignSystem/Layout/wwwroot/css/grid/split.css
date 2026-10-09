@@ -5,7 +5,6 @@
 
 /* ─── 1. Equal 2-Column Responsive Split ─────────────────────────────────── */
 .m3-grid-split {
-    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-6, 1.5rem);
     align-items: start;
@@ -22,7 +21,6 @@
 
 /* ─── 2. Asymmetric Content + Action Split ───────────────────────────────── */
 .grid-split {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-4, 1rem);
@@ -32,7 +30,6 @@
 
 /* ─── 3. 3-Column Responsive Triad (Desktop 3 -> Tablet 2 -> Mobile 1) ───── */
 .m3-grid-triad {
-    display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--md-sys-spacing-5, 1.25rem);
     align-items: start;

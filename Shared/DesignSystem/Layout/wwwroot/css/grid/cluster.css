@@ -5,7 +5,6 @@
 
 .m3-grid-cluster,
 .grid-flow-col {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;

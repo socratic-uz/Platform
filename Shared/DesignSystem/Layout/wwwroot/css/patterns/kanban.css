@@ -2,7 +2,6 @@
 .m3-kanban-board,
 .orders-kanban-board,
 .kds-board {
-    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-5, 1.25rem);
     width: 100%;
@@ -14,20 +13,17 @@
 .m3-kanban-column,
 .kanban-column,
 .kds-column {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
     min-height: 380px;
     box-sizing: border-box;
 }
 
 .column-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.75rem;
@@ -37,7 +33,6 @@
 
 .column-title-group,
 .header-title-group {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -69,7 +64,6 @@
 
 .column-content,
 .kds-cards-container {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
     align-content: start;
@@ -94,7 +88,6 @@
 
 /* ─── Kanban & KDS Card Primitives ───────────────────────────────────── */
 .kanban-card {
-    display: grid !important;
     grid-template-rows: auto auto auto;
     gap: 0.5rem;
     padding: 1rem 1.15rem;
@@ -103,7 +96,6 @@
 }
 
 .card-top-row {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.5rem;
@@ -117,7 +109,6 @@
 }
 
 .card-mid-row {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.5rem;
@@ -136,7 +127,6 @@
 }
 
 .card-bottom-row {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     margin-top: 0.25rem;
     padding-top: 0.4rem;
@@ -144,7 +134,6 @@
 }
 
 .advance-prompt {
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     justify-content: end;
@@ -167,11 +156,9 @@
 /* KDS Specific Cards & Action Buttons */
 .kds-card {
     position: relative;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-3, 0.75rem);
     padding: var(--md-sys-spacing-4, 1rem);
-    border-radius: var(--md-sys-shape-corner-medium, 14px);
     box-sizing: border-box;
 }
 
@@ -199,7 +186,6 @@
     display: inline-grid;
     place-items: center;
     padding: 0.25rem 0.625rem;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
     font-size: 0.8125rem;
     font-weight: 800;
     line-height: 1;
@@ -219,7 +205,6 @@
 
 .column-empty,
 .kds-empty-col {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     align-items: center;
@@ -240,7 +225,6 @@
 
 /* ─── KDS Card Internal Structure ───────────────────────────────────── */
 .kds-card-top {
-    display: grid !important;
     grid-template-columns: auto minmax(0, 1fr);
     justify-content: space-between;
     align-items: center;
@@ -267,11 +251,9 @@
     color: var(--md-sys-color-on-primary-container);
     background: var(--md-sys-color-primary-container);
     padding: 0.2rem 0.5rem;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
 }
 
 .kds-card-main {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3, 0.75rem);
@@ -290,19 +272,16 @@
 }
 
 .kds-card-actions {
-    display: grid !important;
     margin-top: var(--md-sys-spacing-2, 0.375rem);
 }
 
 .kds-action-btn {
-    display: grid !important;
     grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
     min-height: 48px;
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
     font-size: 0.9375rem;
     font-weight: 600;
     border: none;
@@ -363,14 +342,12 @@
 }
 
 .error-banner {
-    display: grid !important;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3, 0.75rem);
     align-items: center;
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border: 1px solid var(--md-sys-color-error);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     font-size: 0.9375rem;
     margin-top: var(--md-sys-spacing-4, 1rem);

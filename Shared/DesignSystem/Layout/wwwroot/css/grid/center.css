@@ -6,7 +6,6 @@
 /* ─── 1. 2D Full Centering (X & Y) ───────────────────────────────────────── */
 .m3-grid-center,
 .grid-center {
-    display: grid !important;
     place-items: center;
     place-content: center;
     box-sizing: border-box;
@@ -24,7 +23,6 @@
 /* ─── 3. Horizontal Centering Only (X-axis) ──────────────────────────────── */
 .m3-grid-center-x,
 .grid-center-x {
-    display: grid !important;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -33,7 +31,6 @@
 /* ─── 4. Vertical Centering Only (Y-axis) ────────────────────────────────── */
 .m3-grid-center-y,
 .grid-center-y {
-    display: grid !important;
     align-items: center;
     align-content: center;
     box-sizing: border-box;
@@ -41,7 +38,6 @@
 
 /* ─── 5. Fullscreen Kiosk / Auth Centered Canvas ──────────────────────────── */
 .m3-grid-center-canvas {
-    display: grid !important;
     place-content: center;
     place-items: center;
     min-height: 100vh;

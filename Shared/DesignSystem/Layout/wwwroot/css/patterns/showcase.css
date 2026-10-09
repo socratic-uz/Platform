@@ -4,7 +4,6 @@
    ========================================================================== */
 
 main.showcase-page {
-    display: grid !important;
     grid-template-columns: minmax(min(100%, 320px), 320px) minmax(0, 1fr) !important;
     padding: 0 !important;
     gap: 0 !important;
@@ -24,7 +23,6 @@ main.showcase-page {
     max-width: 320px;
     background: var(--md-sys-color-surface-container-low);
     border-right: 1px solid var(--md-sys-color-outline-variant);
-    display: grid !important;
     grid-template-rows: auto auto minmax(0, 1fr);
     z-index: 10;
     box-sizing: border-box;
@@ -32,7 +30,6 @@ main.showcase-page {
 
 .showcase-sidebar-header {
     padding: 20px;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
@@ -42,7 +39,6 @@ main.showcase-page {
 }
 
 .showcase-brand {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -52,7 +48,6 @@ main.showcase-page {
 .showcase-brand-icon {
     font-size: 28px;
     color: var(--md-sys-color-primary);
-    display: grid !important;
     place-items: center;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     padding: 8px;
@@ -85,7 +80,6 @@ main.showcase-page {
 .showcase-sidebar-nav {
     overflow-y: auto;
     padding: 12px 10px;
-    display: grid !important;
     gap: 6px;
     align-content: start;
 }
@@ -96,7 +90,6 @@ main.showcase-page {
 
 .showcase-sidebar-nav::-webkit-scrollbar-thumb {
     background-color: var(--md-sys-color-outline-variant);
-    border-radius: 4px;
 }
 
 .showcase-nav-category-header {
@@ -110,12 +103,10 @@ main.showcase-page {
 }
 
 .showcase-nav-btn {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
     padding: 9px 14px;
-    border-radius: 10px;
     border: none;
     background: transparent;
     color: var(--md-sys-color-on-surface-variant);
@@ -127,7 +118,6 @@ main.showcase-page {
 }
 
 .showcase-nav-btn-left {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content minmax(0, 1fr);
     align-items: center;
@@ -160,7 +150,6 @@ main.showcase-page {
 .showcase-nav-count {
     font-size: 0.7rem;
     padding: 2px 7px;
-    border-radius: 10px;
     background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.6);
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -174,7 +163,6 @@ main.showcase-page {
 /* Main Content Area */
 .showcase-content {
     overflow-y: auto;
-    display: grid !important;
     align-content: start;
     background: var(--md-sys-color-background);
     position: relative;
@@ -186,7 +174,6 @@ main.showcase-page {
 
 .showcase-content::-webkit-scrollbar-thumb {
     background-color: var(--md-sys-color-outline-variant);
-    border-radius: 4px;
 }
 
 /* Top Header Bar */
@@ -194,7 +181,6 @@ main.showcase-page {
     position: sticky;
     top: 0;
     z-index: 5;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 16px 32px;
@@ -205,7 +191,6 @@ main.showcase-page {
 }
 
 .showcase-topbar-left {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -219,7 +204,6 @@ main.showcase-page {
     color: var(--md-sys-color-on-surface);
     cursor: pointer;
     padding: 6px;
-    border-radius: 8px;
 }
 
 .showcase-topbar-title {
@@ -236,7 +220,6 @@ main.showcase-page {
 }
 
 .showcase-topbar-actions {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -272,13 +255,11 @@ main.showcase-page {
 }
 
 .showcase-stats {
-    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
     gap: 16px;
 }
 
 .showcase-stat-pill {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content minmax(0, 1fr);
     align-items: center;
@@ -297,7 +278,6 @@ main.showcase-page {
 }
 
 .showcase-stat-info {
-    display: grid !important;
     gap: 2px;
 }
 
@@ -318,18 +298,15 @@ main.showcase-page {
 .showcase-main-body {
     padding: 32px;
     max-width: 1300px;
-    display: grid !important;
     gap: 48px;
 }
 
 .showcase-section {
-    display: grid !important;
     gap: 20px;
     scroll-margin-top: 100px;
 }
 
 .showcase-section-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     border-bottom: 2px solid var(--md-sys-color-outline-variant);
@@ -337,7 +314,6 @@ main.showcase-page {
 }
 
 .showcase-section-title-wrap {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -360,14 +336,12 @@ main.showcase-page {
     font-size: 0.75rem;
     font-weight: 600;
     padding: 3px 10px;
-    border-radius: 100px;
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.25);
     color: var(--md-sys-color-primary);
 }
 
 .showcase-cards-grid {
-    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
     gap: 24px;
 }
@@ -377,7 +351,6 @@ main.showcase-page {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: 20px;
     overflow: hidden;
-    display: grid !important;
     grid-template-rows: auto minmax(0, 1fr) auto;
     box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -392,13 +365,11 @@ main.showcase-page {
     padding: 16px 20px;
     background: var(--md-sys-color-surface-container);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
 
 .showcase-card-title-group {
-    display: grid !important;
     gap: 2px;
 }
 
@@ -416,7 +387,6 @@ main.showcase-page {
 }
 
 .showcase-card-actions {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -429,8 +399,6 @@ main.showcase-page {
     color: var(--md-sys-color-on-surface-variant);
     cursor: pointer;
     padding: 6px;
-    border-radius: 8px;
-    display: grid !important;
     place-items: center;
     transition: background-color 0.15s, color 0.15s;
 }
@@ -442,20 +410,17 @@ main.showcase-page {
 
 .showcase-card-body {
     padding: 24px 20px;
-    display: grid !important;
     align-content: center;
     background: var(--md-sys-color-surface-container-low);
     min-height: 120px;
 }
 
 .showcase-demo-canvas {
-    display: grid !important;
     gap: 16px;
     width: 100%;
 }
 
 .showcase-demo-row {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -464,7 +429,6 @@ main.showcase-page {
 }
 
 .showcase-demo-col {
-    display: grid !important;
     gap: 12px;
     width: 100%;
 }
@@ -488,7 +452,6 @@ main.showcase-page {
     padding: 12px 18px;
     background: var(--md-sys-color-surface-container);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 10px;
@@ -498,7 +461,6 @@ main.showcase-page {
 
 /* Toast trigger styles */
 .toast-triggers-row {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 10px;
@@ -545,7 +507,6 @@ main.showcase-page {
     }
 
     .showcase-mobile-toggle {
-        display: grid !important;
         place-items: center;
     }
 

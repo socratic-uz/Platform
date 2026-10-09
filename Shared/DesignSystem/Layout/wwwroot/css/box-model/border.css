@@ -1,5 +1,183 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C box-model/border.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Border & Corner Shapes Master Rules via :is(...) (Zero Flexbox)
    ========================================================================== */
+
+/* --- Full / Pill Grouping --- */
+:is(
+    .ad-slide-touch-prompt,
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-mode-pill-group,
+    .analytics-status-pill,
+    .assistant-message-icon,
+    .back-button,
+    .bar-track,
+    .brand-screensaver-cta,
+    .chat-back-link,
+    .column-badge,
+    .count-badge,
+    .item-qty-badge,
+    .items-count-badge,
+    .kds-action-btn,
+    .kds-status-tag,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback,
+    .kiosk-brand-tagline,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-floating-controls,
+    .landing-header-nav,
+    .landing-nav-link,
+    .lang-toggle-btn,
+    .m3-pill-badge,
+    .mode-indicator,
+    .popular-badge,
+    .preset-btn,
+    .pro-tag,
+    .product-tag-chip,
+    .progress-bar-bg,
+    .progress-bar-fill,
+    .pulse-ring,
+    .resolution-badge,
+    .showcase-lib-badge
+) {
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+/* --- Expressive Large (24px) Grouping --- */
+:is(
+    .ad-network-unit-card,
+    .analytics-explorer-section,
+    .auth-card,
+    .designer-header,
+    .designer-sidebar,
+    .docs-welcome-card,
+    .empty-plans-card,
+    .kanban-column,
+    .kds-column,
+    .link-stack,
+    .m3-explorer-section,
+    .m3-kanban-column,
+    .payment-dashboard .glass-card,
+    .pillar-card,
+    .plan-card,
+    .preview-card,
+    .product-detail-card,
+    .qr-controls-panel,
+    .qr-designer-header,
+    .qrg-card,
+    .signin-card,
+    .tech-card,
+    section.link-stack
+) {
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+}
+
+/* --- Extra Large (28px) Grouping --- */
+:is(
+    .active-orders-tabs,
+    .ad-slot-container,
+    .auth-card,
+    .brand-screensaver-logo-wrapper,
+    .cart-bar,
+    .contact-card,
+    .cta-card,
+    .input-box,
+    .plan-card,
+    .signin-card,
+    .tier-box,
+    .video-card
+) {
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+}
+
+/* --- Large (16px - 20px) Grouping --- */
+:is(
+    .analytics-kpi-card,
+    .analytics-panel-card,
+    .brand-screensaver-logo,
+    .example-card,
+    .faq-card,
+    .invoice-summary-box,
+    .mobile-nav-item,
+    .order-items-table-wrapper,
+    .orders-table-wrapper,
+    .product-img-placeholder,
+    .qrg-customizer,
+    .store-seller-card,
+    .video-player-wrapper,
+    nav a.nav-item md-icon,
+    nav.glass a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.nav-desktop a.nav-item,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.nav-desktop a.nav-item md-icon
+) {
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+}
+
+/* --- Medium (10px - 14px) Grouping --- */
+:is(
+    .assistant-message-text pre > code,
+    .auth-logo-badge,
+    .cart-items-list,
+    .citation,
+    .color-picker-row input[type="color"],
+    .error-banner,
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .header-icon-wrap,
+    .item-icon-wrapper,
+    .kds-card,
+    .kpi-icon-badge,
+    .landing-mobile-menu-toggle,
+    .lang-dropdown-menu,
+    .notification-banner,
+    .orders-error-banner,
+    .pillar-icon-box,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-invoice-container,
+    .pos-quick-bill-btn,
+    .qr-canvas-box,
+    .qr-stage,
+    .qrg-logo-badge,
+    .seat-selection-card,
+    .select-input,
+    .shipping-card,
+    .showcase-nav-btn,
+    .showcase-nav-count,
+    .signin-logo-badge,
+    .text-input,
+    .ux-widget,
+    assistant-message pre > code,
+    header.landing-header .header-brand-icon-box
+) {
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+}
+
+/* --- Small (4px - 8px) Grouping --- */
+:is(
+    .analytics-period-chip,
+    .badge-age-restriction,
+    .crumb-link:focus-visible,
+    .current-plan-indicator,
+    .drawer-header .badge,
+    .footer-links-list a,
+    .pos-tech-chip,
+    .qty-stepper,
+    .share-toast,
+    .showcase-card-btn,
+    .showcase-content::-webkit-scrollbar-thumb,
+    .showcase-mobile-toggle,
+    .showcase-sidebar-nav::-webkit-scrollbar-thumb,
+    .ux-discount-badge,
+    .ux-mode-badge-overlay
+) {
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+}
 

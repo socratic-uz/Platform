@@ -1,6 +1,5 @@
 /* ─── 6. Organization Subscription & Promotion Modals ──────────────── */
 .trial-counter {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: baseline;
@@ -33,7 +32,6 @@
 }
 
 .promotion-modal-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding-bottom: 1rem;
@@ -43,9 +41,7 @@
 .header-icon-wrap {
     width: 48px;
     height: 48px;
-    border-radius: 14px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
-    display: grid !important;
     place-items: center;
 }
 
@@ -68,12 +64,10 @@
 
 .promotion-modal-body {
     padding: 1rem 0;
-    display: grid !important;
     gap: 1.25rem;
 }
 
 .product-preview-pill {
-    display: grid !important;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.75rem;
@@ -106,9 +100,7 @@
 .invoice-summary-box {
     padding: 1.25rem;
     background: var(--md-sys-color-surface-container);
-    border-radius: 18px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    display: grid !important;
     gap: 0.4rem;
 }
 
@@ -133,7 +125,6 @@
 
 /* ─── 7. Universal Ad Slot & Ad Network Container ─────────────────────── */
 .ad-slot {
-    display: grid !important;
     margin: 1rem auto;
     width: 100%;
     max-width: 1200px;
@@ -145,11 +136,9 @@
 }
 
 .ad-slot-container {
-    display: grid !important;
     align-items: stretch;
     background: var(--md-sys-color-surface-container);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 16px);
     overflow: hidden;
     padding: 0.75rem;
     box-shadow: var(--md-sys-elevation-expressive-1);
@@ -166,12 +155,10 @@
 .ad-network-container .yandex-ads-wrapper {
     width: 100%;
     min-height: 90px;
-    display: grid !important;
     place-items: center;
 }
 
 .ad-network-footer {
-    display: grid !important;
     grid-auto-flow: column;
     justify-content: end;
     align-items: center;
@@ -203,7 +190,6 @@
     width: 100%;
     height: 100dvh;
     background-color: var(--md-sys-color-scrim);
-    display: grid !important;
     place-items: center;
     overflow: hidden;
     z-index: 99999;
@@ -219,7 +205,6 @@
 }
 
 .fullscreen-loading {
-    display: grid !important;
     place-items: center;
     gap: 1.2rem;
     color: var(--md-sys-color-on-surface);
@@ -232,7 +217,6 @@
     z-index: 99999;
     width: 100%;
     height: 100dvh;
-    display: grid !important;
     align-content: end;
     justify-items: center;
     cursor: pointer;
@@ -273,7 +257,6 @@
     max-width: 900px;
     padding: 3rem 2rem 5rem;
     box-sizing: border-box;
-    display: grid !important;
     justify-items: center;
     text-align: center;
     color: var(--md-sys-color-on-surface);
@@ -281,7 +264,6 @@
 
 /* Brand Screensaver (PRO / Trial) */
 .brand-screensaver-body {
-    display: grid !important;
     justify-items: center;
     gap: 1.25rem;
     animation: kioskSlideUp 0.6s cubic-bezier(0.2, 0, 0, 1);
@@ -290,14 +272,12 @@
 .brand-screensaver-logo-wrapper {
     width: 120px;
     height: 120px;
-    border-radius: 28px;
     background: rgb(from var(--md-sys-color-surface) r g b / 0.1);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 12px;
     box-shadow: 0 12px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.2);
-    display: grid !important;
     place-items: center;
 }
 
@@ -305,7 +285,6 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 16px;
 }
 
 .brand-screensaver-title {
@@ -336,7 +315,6 @@
     padding: 1rem 2.5rem;
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
-    border-radius: 50px;
     font-size: 1.25rem;
     font-weight: 700;
     box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
@@ -351,7 +329,6 @@
 .pulse-ring {
     position: absolute;
     inset: -6px;
-    border-radius: 54px;
     border: 2px solid var(--md-sys-color-primary);
     animation: kioskRingPulse 2s cubic-bezier(0.24, 0, 0, 0.38) infinite;
     pointer-events: none;
@@ -387,7 +364,6 @@
 
 /* Ad Network Screensaver (Google AdSense / Яндекс РСЯ) */
 .ad-network-screensaver-body {
-    display: grid !important;
     justify-items: center;
     gap: 1.25rem;
     width: 100%;
@@ -401,15 +377,12 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.15);
-    border-radius: 24px;
     padding: 1.25rem;
     box-shadow: 0 16px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
-    display: grid !important;
     gap: 0.75rem;
 }
 
 .ad-network-badge-row {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     min-width: 0;
     align-items: center;
@@ -432,12 +405,10 @@
 
 .ad-network-render-slot {
     min-height: 250px;
-    display: grid !important;
     place-items: center;
 }
 
 .ad-screensaver-footer {
-    display: grid !important;
     justify-items: center;
     gap: 0.5rem;
     margin-top: 1rem;

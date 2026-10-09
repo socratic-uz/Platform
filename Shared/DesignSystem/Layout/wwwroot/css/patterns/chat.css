@@ -17,7 +17,6 @@
 
 .chat-bottom-section {
     width: 100%;
-    display: grid !important;
     z-index: 10;
 }
 
@@ -53,18 +52,15 @@
 }
 
 .header-content {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
 }
 
 .chat-back-link {
-    display: grid !important;
     place-items: center;
     width: 40px;
     height: 40px;
-    border-radius: var(--md-sys-shape-corner-full, 50%);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: var();
@@ -99,7 +95,6 @@
 }
 
 .message-list {
-    display: grid !important;
     align-content: start;
     gap: 1.25rem;
     min-height: 100%;
@@ -136,7 +131,6 @@ chat-messages > div:last-of-type {
 
 .assistant-message,
 .assistant-search {
-    display: grid !important;
     grid-template-rows: min-content;
     grid-template-columns: 2rem minmax(0, 1fr);
     gap: 0.25rem;
@@ -151,9 +145,7 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-message-icon {
-    display: grid !important;
     place-items: center;
-    border-radius: 9999px;
     width: 1.5rem;
     height: 1.5rem;
     color: var(--md-sys-color-on-primary);
@@ -171,7 +163,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search-icon {
-    display: grid !important;
     place-items: center;
     width: 1.5rem;
     height: 1.5rem;
@@ -254,7 +245,6 @@ assistant-message pre > code,
     background-color: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
     display: block;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
@@ -273,7 +263,6 @@ assistant-message pre > code,
     border: 1px solid var(--md-sys-color-outline-variant);
     border-bottom: 2px solid var(--md-sys-color-tertiary);
     gap: 0.5rem;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
     font-size: 0.875rem;
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
@@ -301,7 +290,6 @@ assistant-message pre > code,
 }
 
 .citation-content {
-    display: grid !important;
 }
 
 .citation-file {
@@ -317,7 +305,6 @@ assistant-message pre > code,
     scrollbar-width: none;
     padding: 0 1.5rem;
     margin-bottom: 0.5rem;
-    display: grid !important;
     box-sizing: border-box;
 }
 
@@ -326,7 +313,6 @@ assistant-message pre > code,
 }
 
 .suggestions {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
@@ -350,19 +336,16 @@ assistant-message pre > code,
 .chat-input-wrapper,
 .chat-input-form {
     width: 100%;
-    display: grid !important;
     box-sizing: border-box;
 }
 
 .input-box {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     background: var();
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var();
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
     min-height: 48px;
     width: 100%;
@@ -402,7 +385,6 @@ assistant-message pre > code,
 }
 
 .tools {
-    display: grid !important;
     place-items: center;
     margin-left: 0.5rem;
 }

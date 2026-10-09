@@ -8,7 +8,6 @@
 .designer-page-root,
 .seat-designer-page-root,
 .qr-designer-page-root {
-    display: grid !important;
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1.5rem;
     min-height: calc(100dvh - 80px);
@@ -25,18 +24,15 @@
 /* ─── 2. Designer Header Toolbar ─────────────────────────────────────────── */
 .designer-header,
 .qr-designer-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 1.25rem;
     padding: 1.25rem 1.5rem;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
 }
 
 .header-title-group {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
@@ -49,7 +45,6 @@
 }
 
 .header-text {
-    display: grid;
     gap: 0.25rem;
     min-width: 0;
 }
@@ -70,7 +65,6 @@
 
 /* ─── 3. Header Presets & Actions ───────────────────────────────────────── */
 .header-presets {
-    display: grid;
     grid-template-columns: auto repeat(3, max-content);
     align-items: center;
     gap: 0.6rem;
@@ -86,7 +80,6 @@
 .preset-btn {
     min-height: 48px;
     padding: 0.5rem 1rem;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
@@ -112,7 +105,6 @@
 }
 
 .header-actions {
-    display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
     gap: 0.75rem;
@@ -122,7 +114,6 @@
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
     min-height: 48px;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     font-weight: 500;
     display: inline-grid;
     align-items: center;
@@ -142,14 +133,12 @@
 
 /* ─── 4. Notification & Banners ─────────────────────────────────────────── */
 .notification-banner {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1.25rem;
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
     font-size: 0.9rem;
 }
 
@@ -168,7 +157,6 @@
 
 /* ─── 5. Designer Workspaces & Panels ───────────────────────────────────── */
 .designer-workspace {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 1.5rem;
     align-items: stretch;
@@ -176,14 +164,12 @@
 
 .designer-sidebar {
     width: clamp(260px, 30vw, 340px);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     overflow: hidden;
     border: 1px solid var(--md-sys-color-outline-variant);
     box-sizing: border-box;
 }
 
 .designer-canvas-area {
-    display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
     gap: 0.75rem;
     min-height: 540px;
@@ -191,14 +177,12 @@
 }
 
 .seat-selection-card {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
     min-width: 0;
 }
 
@@ -220,7 +204,6 @@
 
 /* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
 .qr-workspace {
-    display: grid;
     grid-template-columns: min(100%, 420px) minmax(0, 1fr);
     gap: 1.5rem;
     align-items: start;
@@ -228,12 +211,10 @@
 }
 
 .qr-controls-panel {
-    display: grid;
     gap: 1.25rem;
     padding: 1.5rem;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
 }
 
 .panel-section-title {
@@ -246,7 +227,6 @@
 }
 
 .control-group {
-    display: grid;
     gap: 0.4rem;
 }
 
@@ -260,7 +240,6 @@
     width: 100%;
     min-height: 48px;
     padding: 0.65rem 0.9rem;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
@@ -274,18 +253,15 @@
 }
 
 .color-grid {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.9rem;
 }
 
 .color-item {
-    display: grid;
     gap: 0.35rem;
 }
 
 .color-picker-row {
-    display: grid;
     grid-template-columns: 48px minmax(0, 1fr);
     align-items: center;
     gap: 0.6rem;
@@ -298,7 +274,6 @@
     min-width: 48px;
     min-height: 48px;
     border: none;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
     cursor: pointer;
     background: none;
     padding: 0;
@@ -313,32 +288,27 @@
 }
 
 .style-selects-grid {
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.9rem;
 }
 
 /* ─── 7. QR & Canvas Preview Area ───────────────────────────────────────── */
 .qr-preview-area {
-    display: grid;
     align-content: start;
     min-width: 0;
 }
 
 .preview-card {
-    display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
     gap: 1.25rem;
     padding: 1.5rem;
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     min-width: 0;
     container-type: inline-size;
 }
 
 .preview-header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     min-width: 0;
@@ -353,7 +323,6 @@
 .resolution-badge {
     font-size: 0.775rem;
     padding: 0.3rem 0.75rem;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: var(--md-sys-color-surface-variant);
     color: var(--md-sys-color-on-surface-variant);
     font-family: monospace;
@@ -361,32 +330,26 @@
 }
 
 .qr-stage {
-    display: grid;
     place-items: center;
     padding: 2.5rem 1.25rem;
     background: var(--md-sys-color-surface-container-lowest);
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .qr-canvas-box {
-    display: grid;
     place-items: center;
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 16px);
     overflow: hidden;
     box-shadow: 0 12px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
     max-width: 100%;
 }
 
 .preview-footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
     min-width: 0;
 }
 
 .preview-info {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.6rem;

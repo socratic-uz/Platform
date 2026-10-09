@@ -6,7 +6,6 @@
 
 .signin-container,
 .auth-container {
-    display: grid !important;
     place-items: center;
     min-height: 0;
     padding: 3rem 1.5rem;
@@ -19,12 +18,10 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     padding: 2.5rem 2rem;
     width: 100%;
     max-width: 480px;
     box-shadow: 0 20px 40px var(--md-sys-color-shadow);
-    display: grid !important;
     gap: 1.5rem;
     color: var(--md-sys-color-on-surface);
     box-sizing: border-box;
@@ -33,7 +30,6 @@
 .signin-header,
 .auth-header {
     text-align: center;
-    display: grid !important;
     justify-items: center;
     gap: 0.5rem;
 }
@@ -42,9 +38,7 @@
 .auth-logo-badge {
     width: 56px;
     height: 56px;
-    border-radius: var(--md-sys-shape-corner-medium, 16px);
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-    display: grid !important;
     place-items: center;
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
@@ -76,7 +70,6 @@
     padding: 12px 16px;
     border-radius: 12px;
     font-size: 0.875rem;
-    display: grid !important;
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
@@ -84,18 +77,15 @@
 }
 
 .form-step {
-    display: grid !important;
     gap: 1.25rem;
 }
 
 .delivery-actions-grid {
-    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 }
 
 .auth-divider {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
     gap: 12px;
@@ -114,7 +104,6 @@
 }
 
 .otp-target-hint {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     background: var(--md-sys-color-secondary-container);
@@ -133,7 +122,6 @@
 
 /* ── Face ID Biometric Viewfinder ────────────────────────────────────────── */
 .faceid-viewfinder-card {
-    display: grid !important;
     justify-items: center;
     gap: 1.25rem;
     padding: 1rem 0;
@@ -145,7 +133,6 @@
     height: 220px;
     border-radius: 50%;
     border: 3px solid var(--md-sys-color-primary);
-    display: grid !important;
     place-items: center;
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
@@ -202,7 +189,6 @@
     .signin-card,
     .auth-card {
         padding: clamp(1.25rem, 4vw, 1.75rem) clamp(1rem, 3vw, 1.25rem);
-        border-radius: var(--md-sys-shape-corner-large, 24px);
     }
 
     .signin-title,

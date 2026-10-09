@@ -5,23 +5,19 @@
 
 .analytics-explorer-section,
 .m3-explorer-section {
-    display: grid !important;
     gap: var(--md-sys-spacing-5, 1.25rem);
     padding: var(--md-sys-spacing-6, 1.5rem);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
     box-sizing: border-box;
     width: 100%;
 }
 
 .explorer-header {
-    display: grid !important;
     gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .explorer-title-group {
-    display: grid !important;
     grid-template-columns: auto auto;
     align-items: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
@@ -46,7 +42,6 @@
 }
 
 .explorer-chipset-wrapper {
-    display: grid !important;
     gap: var(--md-sys-spacing-2, 0.5rem);
     overflow-x: auto;
     padding-bottom: 0.25rem;
@@ -54,7 +49,6 @@
 }
 
 .explorer-grid-container {
-    display: grid !important;
     width: 100%;
     min-height: 380px;
     box-sizing: border-box;

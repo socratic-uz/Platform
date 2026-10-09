@@ -16,7 +16,6 @@ html {
 body {
     background: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(0, 1fr);
     min-height: 100vh;
@@ -37,7 +36,6 @@ body:has(main.no-nav) {
    ========================================================================== */
 
 .app-grid {
-    display: grid;
     grid-template-columns: min-content minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr) auto;
     min-height: 100vh;
@@ -84,7 +82,6 @@ body:has(main.no-nav) {
     padding: var(--md-sys-spacing-4, 1rem);
     padding-left: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-left, 0px));
     padding-right: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-right, 0px));
-    display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     align-content: start;
     min-width: 0;
@@ -93,7 +90,6 @@ body:has(main.no-nav) {
 }
 
 .app-main > main {
-    display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     align-content: start;
     min-width: 0;
@@ -252,7 +248,6 @@ md-filled-button:focus-visible,
 
 /* Universal Catalog / Products Grid */
 .grid-catalog {
-    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
     gap: var(--space-4, 1rem);
     align-content: start;
@@ -261,7 +256,6 @@ md-filled-button:focus-visible,
 
 /* Horizontal Action Bar / Button Rows */
 .grid-actions {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -270,7 +264,6 @@ md-filled-button:focus-visible,
 
 /* Vertical Stacking Layout */
 .grid-stack {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3, 0.75rem);
     align-content: start;
@@ -279,7 +272,6 @@ md-filled-button:focus-visible,
 
 /* Equal 2-Column Split */
 .grid-2-col {
-    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4, 1rem);
     width: 100%;

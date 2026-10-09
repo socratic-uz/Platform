@@ -1,6 +1,5 @@
 /* ─── 10. Universal Page Header Primitive ──────────────────────────────── */
 .m3-page-header {
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-5, 1.25rem);
@@ -11,7 +10,6 @@
 }
 
 .m3-page-header-text {
-    display: grid;
     gap: 0.35rem;
     min-width: 0;
 }
@@ -33,7 +31,6 @@
 }
 
 .m3-page-header-actions {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;

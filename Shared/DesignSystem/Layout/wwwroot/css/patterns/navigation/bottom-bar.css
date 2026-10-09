@@ -21,7 +21,6 @@
         max-width: 100% !important;
         height: auto !important;
         gap: initial;
-        display: grid !important;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
         justify-content: space-around;
@@ -41,7 +40,6 @@
     nav.glass a.nav-item,
     nav a.nav-item {
         position: relative;
-        display: grid;
         align-items: center;
         justify-items: center;
         text-decoration: none;
@@ -55,11 +53,9 @@
 
     nav.glass a.nav-item md-icon,
     nav a.nav-item md-icon {
-        display: grid;
         place-items: center;
         width: 56px;
         height: 32px;
-        border-radius: 16px;
         font-size: 24px;
         color: var(--md-sys-color-on-surface-variant);
         transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -97,7 +93,6 @@
     left: 0;
     right: 0;
     z-index: var(--m3-z-bottom-nav, 40);
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
@@ -111,7 +106,6 @@
 }
 
 .m3-bottom-nav-item {
-    display: grid !important;
     grid-template-rows: auto auto;
     justify-items: center;
     align-content: center;

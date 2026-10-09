@@ -7,7 +7,6 @@
 /* ─── 1. Trust & Security Footer Primitive ──────────────────────────────── */
 .m3-trust-footer,
 .payment-trust-footer {
-    display: grid !important;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 1.5rem;
@@ -37,7 +36,6 @@
 }
 
 .payment-methods {
-    display: grid !important;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
@@ -71,7 +69,6 @@
 
 /* ─── 2. Universal App Footer Structure ──────────────────────────────────── */
 footer.app-footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
@@ -85,7 +82,6 @@ footer.app-footer {
 }
 
 .footer-container {
-    display: grid;
     grid-auto-flow: row;
     gap: 3rem;
     width: 100%;
@@ -102,7 +98,6 @@ footer.app-footer {
 
 /* Primary Column Grid */
 .footer-primary-grid {
-    display: grid;
     grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
     gap: 3rem 2rem;
     align-items: start;
@@ -111,7 +106,6 @@ footer.app-footer {
 
 /* Brand Column */
 .footer-brand-col {
-    display: grid;
     grid-auto-flow: row;
     align-content: start;
     gap: 1rem;
@@ -132,11 +126,9 @@ footer.app-footer {
 }
 
 .footer-brand-badge {
-    display: grid;
     place-items: center;
     width: 36px;
     height: 36px;
-    border-radius: 10px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     color: var(--md-sys-color-on-primary);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
@@ -201,7 +193,6 @@ footer.app-footer {
 
 /* Nav Columns */
 .footer-nav-col {
-    display: grid;
     grid-auto-flow: row;
     align-content: start;
     gap: 0.85rem;
@@ -217,7 +208,6 @@ footer.app-footer {
 }
 
 .footer-links-list {
-    display: grid;
     grid-auto-flow: row;
     gap: 0.25rem;
     list-style: none;
@@ -226,7 +216,6 @@ footer.app-footer {
 }
 
 .footer-links-list li {
-    display: grid;
 }
 
 .footer-links-list a {
@@ -241,7 +230,6 @@ footer.app-footer {
     font-weight: 400;
     padding: 0.25rem 0.5rem;
     min-height: 36px;
-    border-radius: 8px;
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
@@ -262,7 +250,6 @@ footer.app-footer {
 
 /* Sub-Footer Bottom Bar */
 .footer-bottom-bar {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 1.5rem;
@@ -279,13 +266,11 @@ footer.app-footer {
 }
 
 .footer-lang-container {
-    display: grid;
     justify-content: center;
     align-items: center;
 }
 
 .footer-trust-info {
-    display: grid;
     align-items: center;
     justify-content: end;
 }
