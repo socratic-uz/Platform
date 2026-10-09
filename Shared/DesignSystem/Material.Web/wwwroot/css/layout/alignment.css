@@ -6,7 +6,6 @@
 
 /* Grid Gap Utilities */
 .m3-gap-0 { gap: var(--md-sys-spacing-0) !important; }
-.m3-gap-5 { gap: var(--md-sys-spacing-5) !important; }
 .m3-gap-6 { gap: var(--md-sys-spacing-6) !important; }
 .m3-gap-8 { gap: var(--md-sys-spacing-8) !important; }
 
@@ -89,35 +88,6 @@
 }
 
 /* Universal Center Place Items Grouping */
-:is(
-    .avatar-container,
-    .avatar-button,
-    .avatar-button md-icon,
-    .avatar-button .material-symbols-outlined,
-    .badge-counter,
-    .m3-count-badge,
-    .count-badge,
-    :is(.m3-card-media-placeholder, .org-media-placeholder, .wishlist-placeholder),
-    :is(.m3-dialog-close-btn, .m3-dialog-btn-primary),
-    .m3-empty-state-icon,
-    .m3-empty-column-icon,
-    .empty-mini-icon,
-    .kds-empty-icon,
-    .pos-empty-icon,
-    .kiosk-empty-icon,
-    .m3-empty-state-action,
-    .picker-icon-badge,
-    .picker-palette-swatch,
-    .file-preview-area,
-    .icon-preview,
-    .file-overlay,
-    .upload-card,
-    .picker-day-dot,
-    .lang-chip-btn,
-    .lang-dropdown-wrapper
-) {
-    place-items: center;
-}
 
 /* Universal Column Flow Grouping */
 
@@ -408,9 +378,6 @@ md-elevated-card {
 .card-grid {
     gap: 1.25rem; }
 
-:is(.m3-config-dialog, .m3-dialog-surface) {
-    gap: var(--md-sys-spacing-5); }
-
 .m3-dialog-toggle-text {
     gap: 0.15rem; }
 
@@ -493,5 +460,48 @@ md-elevated-card {
 ) {
     gap: 10px; }
 
-md-icon:not(:defined) {
-    place-items: center; }
+/* Consolidated Master Rule: gap */
+
+:is(
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-gap-5
+) {
+    gap: var(--md-sys-spacing-5);
+}
+
+/* Consolidated Master Rule: place-items */
+
+:is(
+    .avatar-button,
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .avatar-container,
+    .badge-counter,
+    .count-badge,
+    .empty-mini-icon,
+    .file-overlay,
+    .file-preview-area,
+    .icon-preview,
+    .kds-empty-icon,
+    .kiosk-empty-icon,
+    .lang-chip-btn,
+    .lang-dropdown-wrapper,
+    .m3-card-media-placeholder,
+    .m3-count-badge,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-empty-column-icon,
+    .m3-empty-state-action,
+    .m3-empty-state-icon,
+    .org-media-placeholder,
+    .picker-day-dot,
+    .picker-icon-badge,
+    .picker-palette-swatch,
+    .pos-empty-icon,
+    .upload-card,
+    .wishlist-placeholder,
+    md-icon:not(:defined)
+) {
+    place-items: center;
+}

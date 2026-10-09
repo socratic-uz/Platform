@@ -6,20 +6,19 @@
 
 
 /* Universal Container Type Inline-Size Master Rule */
+md-filled-card.product-card,
+.product-card {
+    container-name: product-card;
+}
+/* Consolidated Master Rule: container-type */
 :is(
     .kds-board,
+    .m3-container-query,
     .m3-kanban-board,
     .orders-kanban-board,
     .preview-card,
     .product-card,
     md-filled-card.product-card
 ) {
-    container-type: inline-size;
-}
-md-filled-card.product-card,
-.product-card {
-    container-name: product-card;
-}
-.m3-container-query {
     container-type: inline-size;
 }

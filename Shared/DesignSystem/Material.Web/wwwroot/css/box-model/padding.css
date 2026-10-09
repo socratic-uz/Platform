@@ -15,21 +15,6 @@
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
 /* Universal Zero Padding Resets */
-:is(
-    .avatar-button,
-    .avatar-button img,
-    .avatar-button md-icon,
-    .avatar-button .material-symbols-outlined,
-    input[type="color"],
-    .picker-palette-swatch,
-    .option-fieldset,
-    .time-fieldset,
-    .col-title,
-    .col-options-button
-),
-::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
 
 /* ─── Consolidated Component Rules (box-model/padding.css) ────────────────────────── */
 .avatar-button {
@@ -376,10 +361,26 @@
     padding: 0.5rem 1rem;
 }
 
-ol, ul {
-    padding: 0;
-}
-
 code {
     padding: 0.15em 0.35em;
+}
+
+/* Consolidated Master Rule: padding */
+
+:is(
+    .avatar-button,
+    .avatar-button .material-symbols-outlined,
+    .avatar-button img,
+    .avatar-button md-icon,
+    .col-options-button,
+    .col-title,
+    .option-fieldset,
+    .picker-palette-swatch,
+    .time-fieldset,
+    input[type="color"],
+    ol,
+    ul
+),
+::-webkit-color-swatch-wrapper {
+    padding: 0;
 }

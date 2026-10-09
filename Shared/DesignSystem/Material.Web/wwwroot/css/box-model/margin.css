@@ -8,53 +8,6 @@
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
 /* Universal Zero Margin Resets */
-:is(
-    .avatar-button img,
-    .avatar-button md-icon,
-    .avatar-button .material-symbols-outlined,
-    :is(.m3-card-title, .card-title),
-    :is(.m3-card-subtitle, .card-subtitle),
-    :is(.m3-summary-title, .summary-title),
-    :is(.m3-card-media, .org-media, .wishlist-media),
-    .org-card-name,
-    .org-card-desc,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
-    .product-title,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
-    .wishlist-title-text,
-    .wishlist-desc-text,
-    .wishlist-details-dl,
-    .wishlist-details-price-row,
-    .m3-dialog-header h3,
-    .m3-dialog-description,
-    .m3-empty-state-title,
-    .store-not-found h2,
-    .pos-empty-state h5,
-    .kiosk-empty-state h3,
-    .m3-empty-state-desc,
-    .m3-empty-column p,
-    .column-empty p,
-    .kds-empty-col p,
-    .store-not-found p,
-    .pos-empty-state p,
-    .kiosk-empty-state p,
-    .m3-fieldset,
-    .md3-presets-label,
-    .option-fieldset,
-    .headline,
-    .body-subtext,
-    .time-fieldset,
-    .smart-grid-container h4,
-    .paginator,
-    .table-container > .paginator,
-    .m3-mode-toggle-figure,
-    .mode-toggle-figure
-),
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    margin: 0;
-}
 
 /* ─── Consolidated Component Rules (box-model/margin.css) ────────────────────────── */
 :is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]) {
@@ -165,13 +118,6 @@ md-elevated-card {
 
 /* Consolidated Master Rule: margin-bottom */
 
-:is(
-    .m3-skeleton-text,
-    .store-not-found .not-found-icon
-) {
-    margin-bottom: 0.5rem;
-}
-
 /* Consolidated Master Rule: margin-top */
 
 :is(
@@ -210,16 +156,8 @@ md-elevated-card {
     margin-top: 8px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5rem;
-}
-
 p {
     margin-bottom: 1rem;
-}
-
-ol, ul {
-    margin: 0;
 }
 
 :is(
@@ -232,4 +170,76 @@ ol, ul {
     p
 ) {
     margin-top: 0;
+}
+
+/* Consolidated Master Rule: margin */
+
+:is(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button img,
+    .avatar-button md-icon,
+    .body-subtext,
+    .card-subtitle,
+    .card-title,
+    .column-empty p,
+    .headline,
+    .kds-empty-col p,
+    .kiosk-empty-state h3,
+    .kiosk-empty-state p,
+    .m3-card-media,
+    .m3-card-subtitle,
+    .m3-card-title,
+    .m3-dialog-description,
+    .m3-dialog-header h3,
+    .m3-empty-column p,
+    .m3-empty-state-desc,
+    .m3-empty-state-title,
+    .m3-fieldset,
+    .m3-mode-toggle-figure,
+    .m3-summary-title,
+    .md3-presets-label,
+    .mode-toggle-figure,
+    .option-fieldset,
+    .org-card-desc,
+    .org-card-name,
+    .org-media,
+    .paginator,
+    .pos-empty-state h5,
+    .pos-empty-state p,
+    .product-title,
+    .smart-grid-container h4,
+    .store-not-found h2,
+    .store-not-found p,
+    .summary-title,
+    .table-container > .paginator,
+    .time-fieldset,
+    .wishlist-desc-text,
+    .wishlist-details-dl,
+    .wishlist-details-price-row,
+    .wishlist-media,
+    .wishlist-title-text,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    ol,
+    ul
+),
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    margin: 0;
+}
+
+/* Consolidated Master Rule: margin-bottom */
+
+:is(
+    .m3-skeleton-text,
+    .store-not-found .not-found-icon,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+) {
+    margin-bottom: 0.5rem;
 }

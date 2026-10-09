@@ -6,7 +6,15 @@
 
 
 /* Universal Outline None Master Rule */
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline: 2px solid var(--md-sys-color-tertiary);
+    outline-offset: 3px;
+}
+/* Consolidated Master Rule: outline */
 :is(
+    *:focus:not(:focus-visible),
     .back-button:focus-visible,
     .back-button:hover,
     .chat-input-wrapper textarea,
@@ -17,23 +25,18 @@
 ) {
     outline: none;
 }
-.crumb-link:focus-visible {
+/* Consolidated Master Rule: outline */
+:is(
+    *:focus-visible,
+    .crumb-link:focus-visible,
+    .thumb-btn:focus-visible
+) {
     outline: 2px solid var(--md-sys-color-primary);
 }
-.thumb-btn:focus-visible {
-    outline: 2px solid var(--md-sys-color-primary);
+/* Consolidated Master Rule: outline-offset */
+:is(
+    *:focus-visible,
+    .thumb-btn:focus-visible
+) {
     outline-offset: 2px;
-}
-*:focus:not(:focus-visible) {
-    outline: none;
-}
-*:focus-visible {
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: 2px;
-}
-md-filled-button:focus-visible,
-.btn-primary:focus-visible,
-.m3-btn-filled:focus-visible {
-    outline: 2px solid var(--md-sys-color-tertiary);
-    outline-offset: 3px;
 }

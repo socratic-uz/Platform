@@ -17,10 +17,6 @@
 .chat-back-link:hover {
     transform: scale(1.05);
 }
-.m3-drawer-panel,
-.drawer-panel {
-    transform: translate3d(0, 0, 0);
-}
 .footer-links-list a:hover {
     transform: translateX(2px);
 }
@@ -36,14 +32,6 @@
 }
 .qrg-card:hover {
     transform: translateY(-6px);
-}
-.link-stack a::before,
-.link-stack article::before {
-    transform: translate(-50%, -50%);
-}
-.link-stack a:active::before,
-.link-stack article:active::before {
-    transform: translate(-50%, -50%);
 }
 .m3-nav-fab {
     transform: translateX(-50%);
@@ -66,8 +54,6 @@
     }
 }
 #blob1 { transform: translate(0, 0);
-}
-#blob2 { transform: translate(-50%, -50%);
 }
 #blob3 { transform: translate(50%, 50%);
 }
@@ -98,7 +84,6 @@
 .swipe-card,
 .drawer-panel,
 .md-drawer-backdrop {
-    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
     -webkit-backface-visibility: hidden;
@@ -120,4 +105,24 @@
     .preset-btn:active
 ) {
     transform: scale(0.96);
+}
+/* Consolidated Master Rule: transform */
+:is(
+    .drawer-panel,
+    .gpu-layer,
+    .m3-drawer-panel,
+    .md-drawer-backdrop,
+    .swipe-card
+) {
+    transform: translate3d(0, 0, 0);
+}
+/* Consolidated Master Rule: transform */
+:is(
+    #blob2
+),
+.link-stack a::before,
+.link-stack a:active::before,
+.link-stack article::before,
+.link-stack article:active::before {
+    transform: translate(-50%, -50%);
 }

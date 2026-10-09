@@ -162,20 +162,10 @@
     :is(.m3-config-dialog, .m3-dialog-surface)
 ) {
     top: 50%;
+    left: 50%;
 }
 
 /* Consolidated Master Rule: left */
-
-:is(
-    .avatar-button .material-symbols-outlined,
-    .avatar-button md-icon,
-    .avatar-button::before,
-    .picker-palette-swatch::before,
-    .picker-swatch-wrapper::before,
-    :is(.m3-config-dialog, .m3-dialog-surface)
-) {
-    left: 50%;
-}
 
 /* Consolidated Master Rule: inset */
 

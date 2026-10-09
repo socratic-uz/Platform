@@ -44,28 +44,6 @@
 }
 
 /* Universal Surface Container Default Background */
-:is(
-    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
-    .m3-card-filled,
-    .card-filled,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-filter-chip,
-    :is(.m3-config-dialog, .m3-dialog-surface),
-    .pos-empty-state,
-    .kiosk-empty-state,
-    .picker-popover-panel,
-    :is(.analytics-date-picker-trigger, .m3-period-picker-trigger),
-    .m3-skeleton,
-    .m3-table-wrapper,
-    .order-items-table-wrapper,
-    .table-container,
-    .paginator,
-    .table-container > .paginator
-) {
-    background: var(--md-sys-color-surface-container);
-}
 
 /* Universal Surface Container Highest Background */
 :is(
@@ -432,6 +410,30 @@
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
-code {
+/* Consolidated Master Rule: background */
+
+:is(
+    .analytics-date-picker-trigger,
+    .card-filled,
+    .kiosk-empty-state,
+    .m3-card-filled,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-filter-chip,
+    .m3-period-picker-trigger,
+    .m3-skeleton,
+    .m3-table-wrapper,
+    .order-items-table-wrapper,
+    .paginator,
+    .picker-popover-panel,
+    .pos-empty-state,
+    .table-container,
+    .table-container > .paginator,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    code,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card
+) {
     background: var(--md-sys-color-surface-container);
 }

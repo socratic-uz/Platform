@@ -27,19 +27,21 @@
 ) {
     object-fit: contain;
 }
-.kiosk-brand-logo {
-    aspect-ratio: 1 / 1;
-}
-.product-media {
-    aspect-ratio: 16 / 10;
-}
-.product-img {
-    aspect-ratio: 16 / 10;
-}
-.pos-card-img,
-.pos-card-img-placeholder {
-    aspect-ratio: 1 / 1;
-}
 .product-main-image-wrap {
     aspect-ratio: 4 / 3;
+}
+/* Consolidated Master Rule: aspect-ratio */
+:is(
+    .kiosk-brand-logo,
+    .pos-card-img,
+    .pos-card-img-placeholder
+) {
+    aspect-ratio: 1 / 1;
+}
+/* Consolidated Master Rule: aspect-ratio */
+:is(
+    .product-img,
+    .product-media
+) {
+    aspect-ratio: 16 / 10;
 }

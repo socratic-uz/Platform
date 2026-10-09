@@ -86,12 +86,7 @@
 
 /* Consolidated Master Rule: overflow-wrap */
 
-:is(
-    .org-card-desc,
-    .picker-preview-text
-) {
-    overflow-wrap: break-word;
-}
+/* Consolidated Master Rule: overflow-wrap */
 
 :is(
     .m3-body-large,
@@ -101,6 +96,8 @@
     .m3-headline-medium,
     .m3-title-large,
     .m3-title-medium,
+    .org-card-desc,
+    .picker-preview-text,
     h1,
     h2,
     h3,

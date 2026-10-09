@@ -5,6 +5,33 @@
    ========================================================================== */
 
 /* Master Interactive Click Targets Grouping */
+
+/* Universal Touch Action Manipulation Master Rule */
+
+/* Universal Pointer Events None Master Rule */
+
+/* Universal Touch Action Pan Y Master Rule */
+.input-box {
+    cursor: text;
+}
+@media screen and (max-width: 599.98px) {
+    .landing-floating-auth-btn {
+        touch-action: manipulation;
+    }
+}
+.touch-none,
+[data-gesture="interactive-canvas"],
+.drag-handle {
+    touch-action: none !important;
+}
+html, body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
+    -webkit-touch-callout: default;
+}
+/* Consolidated Master Rule: cursor */
 :is(
     .ad-upgrade-link,
     .analytics-config-btn,
@@ -14,6 +41,7 @@
     .cart-summary.interactive,
     .color-picker-row input[type="color"],
     .docs-refresh-btn,
+    .interactive-chip,
     .kds-action-btn,
     .kiosk-attract-loop,
     .kiosk-product-title-link,
@@ -31,114 +59,74 @@
 ) {
     cursor: pointer;
 }
-
-/* Universal Touch Action Manipulation Master Rule */
+/* Consolidated Master Rule: touch-action */
 :is(
     .analytics-period-chip,
     .header-brand-link,
+    .interactive-action,
+    .interactive-chip,
     .kiosk-tier-btn,
     .landing-auth-btn,
     .landing-mobile-menu-toggle,
     .lang-toggle-btn,
-    .preset-btn
+    .preset-btn,
+    .touch-manipulation,
+    a,
+    button,
+    md-elevated-button,
+    md-filled-button,
+    md-icon-button,
+    md-outlined-button,
+    md-text-button
 ) {
     touch-action: manipulation;
 }
-
-/* Universal Pointer Events None Master Rule */
+/* Consolidated Master Rule: pointer-events */
 :is(
-    .kiosk-hero::before,
+    .ai-blob-canvas,
+    .ai-blob-canvas svg,
     .landing-top-bar-wrapper,
     .m3-drawer-backdrop,
     .md-drawer-backdrop,
     .pulse-ring,
-    .ux-mode-badge-overlay
-) {
+    .ux-mode-badge-overlay,
+    svg.ai-blob-svg
+),
+.glass::before,
+.kiosk-hero::before {
     pointer-events: none;
 }
-
-/* Universal Touch Action Pan Y Master Rule */
+/* Consolidated Master Rule: touch-action */
 :is(
     .active-orders-scroll,
     .drawer-body,
     .drawer-panel,
     .m3-drawer-backdrop,
     .m3-drawer-panel,
-    .md-drawer-backdrop
+    .md-drawer-backdrop,
+    .swipe-container-x,
+    .touch-pan-y,
+    .touch-scroll-x,
+    [data-gesture="swipe-horizontal"]
 ) {
     touch-action: pan-y;
 }
-.input-box {
-    cursor: text;
-}
-.m3-drawer-backdrop.show,
-.md-drawer-backdrop.show {
+/* Consolidated Master Rule: pointer-events */
+:is(
+    .landing-top-bar-wrapper > *,
+    .m3-drawer-backdrop.show,
+    .md-drawer-backdrop.show
+) {
     pointer-events: auto;
 }
-.kiosk-filter-row {
+/* Consolidated Master Rule: touch-action */
+:is(
+    .kiosk-filter-row,
+    .pos-filters,
+    .swipe-container-y,
+    .touch-pan-x,
+    .touch-scroll-y,
+    [data-gesture="swipe-vertical"]
+) {
     touch-action: pan-x;
-}
-.landing-top-bar-wrapper > * {
-    pointer-events: auto;
-}
-@media screen and (max-width: 599.98px) {
-    .landing-floating-auth-btn {
-        touch-action: manipulation;
-    }
-}
-.pos-filters {
-    touch-action: pan-x;
-}
-.ai-blob-canvas {
-    pointer-events: none;
-}
-.ai-blob-canvas svg,
-svg.ai-blob-svg {
-    pointer-events: none;
-}
-.glass::before {
-    pointer-events: none;
-}
-.touch-pan-y,
-[data-gesture="swipe-horizontal"],
-.swipe-container-x {
-    touch-action: pan-y !important;
-}
-.touch-pan-x,
-[data-gesture="swipe-vertical"],
-.swipe-container-y {
-    touch-action: pan-x !important;
-}
-.touch-none,
-[data-gesture="interactive-canvas"],
-.drag-handle {
-    touch-action: none !important;
-}
-.touch-manipulation,
-button,
-a,
-md-filled-button,
-md-outlined-button,
-md-text-button,
-md-elevated-button,
-md-icon-button,
-.interactive-action {
-    touch-action: manipulation;
-}
-.touch-scroll-x {
-    touch-action: pan-y;
-}
-.touch-scroll-y {
-    touch-action: pan-x;
-}
-.interactive-chip {
-    touch-action: manipulation;
-    cursor: pointer;
-}
-html, body {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
-input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
-    -webkit-touch-callout: default;
 }

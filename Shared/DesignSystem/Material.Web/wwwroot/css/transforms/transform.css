@@ -11,19 +11,6 @@
     transform: translateY(-3px) scale(1.006);
 }
 
-.m3-card-interactive:active,
-.card-interactive:active {
-    transform: scale(0.97);
-}
-
-:is(.m3-media-card, .media-card, .org-card):hover {
-    transform: translateY(-2px);
-}
-
-:is(.m3-media-card:hover .m3-card-media, .org-card:hover .org-media, .product-card:hover .wishlist-media) img {
-    transform: scale(1.04);
-}
-
 :is(md-filled-card, md-outlined-card, md-elevated-card):hover {
     transform: translateY(-3px) scale(1.004);
 }
@@ -128,41 +115,15 @@
     transform: translateZ(0);
 }
 
-:is(
-    .m3-media-card:hover .m3-card-media,
-    .org-card:hover .org-media,
-    .product-card:hover .wishlist-media,
-    md-filled-card:hover figure,
-    md-outlined-card:hover figure,
-    md-elevated-card:hover figure
-) img {
-    transform: scale(1.04);
-}
-
 .m3-hover-lift:active {
     transform: scale(0.985);
 }
 
-:is(
-    .m3-hover-lift:hover,
-    :is(
-    .m3-card-interactive,
-    .card-interactive,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .m3-media-card,
-    .media-card,
-    .org-card,
-    .file-card,
-    .upload-card,
-    .picker-trigger-card
-):hover
-) {
-    transform: translateY(-2px);
-}
+/* Consolidated Master Rule: transform */
 
 :is(
+    .card-interactive:active,
+    .m3-card-interactive:active,
     .m3-press-scale:active,
     :is(
     md-filled-button,
@@ -185,4 +146,42 @@
 ):active
 ) {
     transform: scale(0.97);
+}
+
+/* Consolidated Master Rule: transform */
+
+:is(
+    .m3-hover-lift:hover,
+    :is(
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card
+):hover,
+    :is(.m3-media-card, .media-card, .org-card):hover
+) {
+    transform: translateY(-2px);
+}
+
+/* Consolidated Master Rule: transform */
+
+:is(
+    :is(
+    .m3-media-card:hover .m3-card-media,
+    .org-card:hover .org-media,
+    .product-card:hover .wishlist-media,
+    md-filled-card:hover figure,
+    md-outlined-card:hover figure,
+    md-elevated-card:hover figure
+) img,
+    :is(.m3-media-card:hover .m3-card-media, .org-card:hover .org-media, .product-card:hover .wishlist-media) img
+) {
+    transform: scale(1.04);
 }

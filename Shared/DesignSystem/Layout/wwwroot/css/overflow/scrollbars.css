@@ -4,13 +4,6 @@
    Socratic Layout Engine - W3C overflow/scrollbars.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-.suggestions-wrapper {
-    scrollbar-width: none
-}
-.help-categories,
-.example-categories {
-    scrollbar-width: thin
-}
 @media screen and (max-width: 599.98px) {
     .pos-top-header-actions {
         scrollbar-width: none !important
@@ -20,79 +13,97 @@
     }
 }
 * {
-    scrollbar-width: thin;
     scrollbar-color: var(--md-sys-color-outline-variant) transparent
-}
-.scrollbar-none,
-.no-scrollbar {
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important
 }
 .m3-scroll-thin,
 .scroll-thin {
-    scrollbar-width: thin;
     scrollbar-color: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3)) transparent
 }
-.touch-scroll-x {
-    scrollbar-width: none;
-    -ms-overflow-style: none
-}
-.touch-scroll-y {
-    scrollbar-width: none;
-    -ms-overflow-style: none
-}
-.showcase-sidebar-nav::-webkit-scrollbar-thumb {
-    background-color: var(--md-sys-color-outline-variant)
-}
-.showcase-content::-webkit-scrollbar-thumb {
-    background-color: var(--md-sys-color-outline-variant)
-}
-::-webkit-scrollbar-track {
-    background: transparent
-}
 ::-webkit-scrollbar-thumb {
-    background: var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    border: 2px solid transparent;
-    background-clip: content-box
+    background: var(--md-sys-color-outline-variant)
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-color-on-surface-variant);
-    border: 2px solid transparent;
-    background-clip: content-box
-}
-.m3-scroll-thin::-webkit-scrollbar-track,
-.scroll-thin::-webkit-scrollbar-track {
-    background: transparent
+    background: var(--md-sys-color-on-surface-variant)
 }
 .m3-scroll-thin::-webkit-scrollbar-thumb,
 .scroll-thin::-webkit-scrollbar-thumb {
     background: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3));
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
     transition: background 0.2s ease
 }
 .showcase-sidebar-nav::-webkit-scrollbar {
     width: 4px
 }
-.showcase-content::-webkit-scrollbar {
-    width: 6px
-}
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px
 }
-.scrollbar-none::-webkit-scrollbar,
-.no-scrollbar::-webkit-scrollbar {
-    display: none !important
-}
 .m3-scroll-thin::-webkit-scrollbar,
 .scroll-thin::-webkit-scrollbar {
-    width: 6px;
     height: 6px
 }
-.touch-scroll-x::-webkit-scrollbar {
-    display: none
+/* Consolidated Master Rule: scrollbar-width */
+:is(
+    .no-scrollbar,
+    .scrollbar-none,
+    .suggestions-wrapper,
+    .touch-scroll-x,
+    .touch-scroll-y
+) {
+    scrollbar-width: none;
 }
+/* Consolidated Master Rule: scrollbar-width */
+:is(
+    *,
+    .example-categories,
+    .help-categories,
+    .m3-scroll-thin,
+    .scroll-thin
+) {
+    scrollbar-width: thin;
+}
+/* Consolidated Master Rule: -ms-overflow-style */
+:is(
+    .no-scrollbar,
+    .scrollbar-none,
+    .touch-scroll-x,
+    .touch-scroll-y
+) {
+    -ms-overflow-style: none;
+}
+/* Consolidated Master Rule: background-color */
+.showcase-content::-webkit-scrollbar-thumb,
+.showcase-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: var(--md-sys-color-outline-variant);
+}
+/* Consolidated Master Rule: background */
+.m3-scroll-thin::-webkit-scrollbar-track,
+.scroll-thin::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Consolidated Master Rule: border-radius */
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+/* Consolidated Master Rule: border */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+/* Consolidated Master Rule: background-clip */
+/* Consolidated Master Rule: width */
+.m3-scroll-thin::-webkit-scrollbar,
+.scroll-thin::-webkit-scrollbar,
+.showcase-content::-webkit-scrollbar {
+    width: 6px;
+}
+/* Consolidated Master Rule: display */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar,
+.touch-scroll-x::-webkit-scrollbar,
 .touch-scroll-y::-webkit-scrollbar {
-    display: none
+    display: none;
 }

@@ -17,11 +17,9 @@ html {
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
     scroll-behavior: smooth;
-    overflow-x: clip;
 }
 
 body {
-    margin: 0;
     padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
@@ -34,7 +32,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
-    overflow-x: clip;
 }
 
 /* ─── 3. Media & Replaced Elements Sizing ─────────────────────────────────── */
@@ -65,7 +62,6 @@ textarea {
     font-size: 100%;
     line-height: inherit;
     color: inherit;
-    margin: 0;
 }
 
 button,
@@ -105,4 +101,22 @@ table {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+/* Consolidated Master Rule: overflow-x */
+:is(
+    body,
+    html
+) {
+    overflow-x: clip;
+}
+/* Consolidated Master Rule: margin */
+:is(
+    body,
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+) {
+    margin: 0;
 }

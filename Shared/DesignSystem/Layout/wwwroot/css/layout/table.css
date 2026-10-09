@@ -3,10 +3,11 @@
    Socratic Layout Engine - W3C layout/table.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-.schedule-table {
-    border-collapse: collapse
-}
-.orders-table,
-.order-items-table {
-    border-collapse: collapse
+/* Consolidated Master Rule: border-collapse */
+:is(
+    .order-items-table,
+    .orders-table,
+    .schedule-table
+) {
+    border-collapse: collapse;
 }

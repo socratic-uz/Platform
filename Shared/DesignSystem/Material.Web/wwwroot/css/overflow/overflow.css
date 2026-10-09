@@ -7,38 +7,6 @@
 /* ─── Universal Consolidated Groupings (Rule-Level Deduplication) ───── */
 
 /* Universal Hidden Overflow Grouping */
-:is(
-    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
-    :is(.m3-media-card, .media-card, .org-card),
-    :is(.m3-card-media, .org-media, .wishlist-media),
-    .org-card-content,
-    .org-card-name,
-    .org-card-desc,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) section,
-    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
-    md-filled-card.product-card,
-    .product-card,
-    .wishlist-desc-text,
-    .picker-icon-badge,
-    .picker-trigger-text,
-    .picker-preview-text,
-    .file-card,
-    .file-preview-area,
-    .file-name,
-    .canvas-wrapper,
-    :is(.m3-progress-track, .progress-bar-bg),
-    .m3-skeleton,
-    .col-title-text,
-    .drop-container,
-    .m3-mode-toggle,
-    .mode-toggle
-) {
-    overflow: hidden;
-}
 
 /* ─── Consolidated Component Rules (overflow/overflow.css) ────────────────────────── */
 
@@ -83,14 +51,46 @@ md-dialog [slot="content"] {
     overflow: auto;
 }
 
-md-icon:not(:defined) {
-    overflow: hidden;
-}
+/* Consolidated Master Rule: overflow */
 
 :is(
+    .canvas-wrapper,
+    .col-title-text,
+    .drop-container,
+    .file-card,
+    .file-name,
+    .file-preview-area,
+    .m3-card-media,
     .m3-line-clamp-2,
     .m3-line-clamp-3,
-    .m3-truncate
+    .m3-media-card,
+    .m3-mode-toggle,
+    .m3-progress-track,
+    .m3-skeleton,
+    .m3-truncate,
+    .media-card,
+    .mode-toggle,
+    .org-card,
+    .org-card-content,
+    .org-card-desc,
+    .org-card-name,
+    .org-media,
+    .picker-icon-badge,
+    .picker-preview-text,
+    .picker-trigger-text,
+    .product-card,
+    .progress-bar-bg,
+    .wishlist-desc-text,
+    .wishlist-media,
+    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) p,
+    :is(md-filled-card, md-outlined-card, md-elevated-card) section,
+    md-elevated-card,
+    md-filled-card,
+    md-filled-card.product-card,
+    md-icon:not(:defined),
+    md-outlined-card
 ) {
     overflow: hidden;
 }

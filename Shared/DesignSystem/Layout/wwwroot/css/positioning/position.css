@@ -5,71 +5,10 @@
    ========================================================================== */
 
 /* Universal Position Relative Master Rule */
-:is(
-    .about-container,
-    .ad-slide-touch-prompt,
-    .attract-loop-content,
-    .brand-screensaver-cta,
-    .chat-page-root,
-    .example-container,
-    .faceid-scanner-frame,
-    .help-container,
-    .item-card,
-    .kds-card,
-    .kiosk-hero,
-    .landing-grid,
-    .landing-subpage-container,
-    .link-stack a,
-    .link-stack article,
-    .payment-dashboard .glass-card,
-    .plan-card,
-    .product-main-image-wrap,
-    .product-media,
-    .showcase-card-code,
-    .showcase-content,
-    .store-product-page,
-    .tier-box,
-    footer.app-footer,
-    header.app-header
-) {
-    position: relative;
-}
 
 /* Universal Position Absolute Master Rule */
-:is(
-    .attract-loop-background,
-    .attract-loop-overlay,
-    .badge-age-restriction,
-    .faceid-scanner-frame.scanning::after,
-    .kiosk-hero::before,
-    .kiosk-wish-btn-wrapper,
-    .landing-floating-controls,
-    .landing-top-bar-wrapper,
-    .link-stack a::before,
-    .link-stack article::before,
-    .m3-nav-fab,
-    .popular-badge,
-    .pos-badge-qty,
-    .pro-tag,
-    .pulse-ring,
-    .ux-mode-badge-overlay
-) {
-    position: absolute;
-}
 
 /* Universal Position Fixed Master Rule */
-:is(
-    .cart-bar,
-    .fullscreen-player,
-    .kiosk-attract-loop,
-    .landing-mobile-menu-backdrop,
-    .landing-mobile-menu-drawer,
-    .m3-bottom-nav,
-    .m3-drawer-backdrop,
-    .md-drawer-backdrop
-) {
-    position: fixed;
-}
 
 /* Universal Position Sticky Master Rule */
 :is(
@@ -82,16 +21,6 @@
 }
 
 /* Universal Inset Zero Master Rule */
-:is(
-    .attract-loop-background,
-    .attract-loop-overlay,
-    .fullscreen-player,
-    .kiosk-attract-loop,
-    .m3-drawer-backdrop,
-    .md-drawer-backdrop
-) {
-    inset: 0;
-}
 
 /* Universal Top Zero Master Rule */
 :is(
@@ -129,11 +58,9 @@
     inset: -30% auto auto -30%;
 }
 .ux-mode-badge-overlay {
-    top: 8px;
     left: 8px;
 }
 .kiosk-wish-btn-wrapper {
-    top: 8px;
     right: 8px;
 }
 .cart-bar {
@@ -182,21 +109,9 @@
 .link-stack a::before,
 .link-stack article::before {
     top: 50%;
-    left: 50%;
-}
-.m3-bottom-nav {
-    bottom: 0;
 }
 .m3-nav-fab {
     top: -24px;
-    left: 50%;
-}
-.landing-mobile-menu-backdrop {
-    top: 68px;
-    bottom: 0;
-}
-.landing-mobile-menu-drawer {
-    top: 68px;
 }
 @media screen and (min-width: 840px) {
     nav.nav-desktop,
@@ -239,17 +154,113 @@
 .pulse-ring {
     inset: -6px;
 }
-.ai-blob-canvas {
-    position: fixed;
-    inset: 0;
-}
-.glass {
+/* Consolidated Master Rule: position */
+:is(
+    .about-container,
+    .ad-slide-touch-prompt,
+    .attract-loop-content,
+    .brand-screensaver-cta,
+    .chat-page-root,
+    .example-container,
+    .faceid-scanner-frame,
+    .glass,
+    .glass > *,
+    .help-container,
+    .item-card,
+    .kds-card,
+    .kiosk-hero,
+    .landing-grid,
+    .landing-subpage-container,
+    .link-stack a,
+    .link-stack article,
+    .payment-dashboard .glass-card,
+    .plan-card,
+    .product-main-image-wrap,
+    .product-media,
+    .showcase-card-code,
+    .showcase-content,
+    .store-product-page,
+    .tier-box,
+    footer.app-footer,
+    header.app-header
+) {
     position: relative;
 }
-.glass::before {
+/* Consolidated Master Rule: position */
+:is(
+    .attract-loop-background,
+    .attract-loop-overlay,
+    .badge-age-restriction,
+    .kiosk-wish-btn-wrapper,
+    .landing-floating-controls,
+    .landing-top-bar-wrapper,
+    .m3-nav-fab,
+    .popular-badge,
+    .pos-badge-qty,
+    .pro-tag,
+    .pulse-ring,
+    .ux-mode-badge-overlay
+),
+.faceid-scanner-frame.scanning::after,
+.glass::before,
+.kiosk-hero::before,
+.link-stack a::before,
+.link-stack article::before {
     position: absolute;
+}
+/* Consolidated Master Rule: position */
+:is(
+    .ai-blob-canvas,
+    .cart-bar,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer,
+    .m3-bottom-nav,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop
+) {
+    position: fixed;
+}
+/* Consolidated Master Rule: inset */
+:is(
+    .ai-blob-canvas,
+    .attract-loop-background,
+    .attract-loop-overlay,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop
+),
+.glass::before {
     inset: 0;
 }
-.glass > * {
-    position: relative;
+/* Consolidated Master Rule: top */
+:is(
+    .kiosk-wish-btn-wrapper,
+    .ux-mode-badge-overlay
+) {
+    top: 8px;
+}
+/* Consolidated Master Rule: left */
+:is(
+    .m3-nav-fab
+),
+.link-stack a::before,
+.link-stack article::before {
+    left: 50%;
+}
+/* Consolidated Master Rule: bottom */
+:is(
+    .landing-mobile-menu-backdrop,
+    .m3-bottom-nav
+) {
+    bottom: 0;
+}
+/* Consolidated Master Rule: top */
+:is(
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer
+) {
+    top: 68px;
 }

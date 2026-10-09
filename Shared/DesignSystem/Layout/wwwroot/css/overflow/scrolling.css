@@ -3,14 +3,6 @@
    Socratic Layout Engine - W3C overflow/scrolling.css
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
-.m3-drawer-backdrop,
-.md-drawer-backdrop {
-    overscroll-behavior: contain
-}
-.m3-drawer-panel,
-.drawer-panel {
-    overscroll-behavior: contain
-}
 .showcase-section {
     scroll-margin-top: 100px
 }
@@ -21,9 +13,7 @@
 }
 .m3-scroll-snap-x {
     scroll-snap-type: x mandatory;
-    scroll-padding: var(--md-sys-spacing-4, 1rem);
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch
+    scroll-padding: var(--md-sys-spacing-4, 1rem)
 }
 .m3-scroll-snap-x > * {
     scroll-snap-align: start
@@ -31,37 +21,51 @@
 html, body {
     overscroll-behavior: none
 }
-.touch-scroll-x {
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch
+@media screen and (max-width: 599.98px) {
+    .pos-top-header-actions {
+        -webkit-overflow-scrolling: touch !important
+    }
 }
-.touch-scroll-y {
-    overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch
+/* Consolidated Master Rule: overscroll-behavior */
+:is(
+    .drawer-panel,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .md-drawer-backdrop
+) {
+    overscroll-behavior: contain;
 }
+/* Consolidated Master Rule: overscroll-behavior-x */
 :is(
     .active-orders-scroll,
     .kiosk-filter-row,
     .m3-breadcrumbs,
+    .m3-scroll-snap-x,
     .pos-filters,
     .pos-orders-scroll,
     .pos-top-header-actions,
     .product-thumbnails,
     .store-breadcrumbs,
+    .touch-scroll-x,
     .ux-widget-chips
 ) {
-    overscroll-behavior-x: contain
+    overscroll-behavior-x: contain;
 }
+/* Consolidated Master Rule: -webkit-overflow-scrolling */
+:is(
+    .m3-scroll-snap-x,
+    .touch-scroll-x,
+    .touch-scroll-y
+) {
+    -webkit-overflow-scrolling: touch;
+}
+/* Consolidated Master Rule: overscroll-behavior-y */
 :is(
     .drawer-body,
     .message-list-container,
     .pos-grid,
-    .pos-invoice-container
+    .pos-invoice-container,
+    .touch-scroll-y
 ) {
-    overscroll-behavior-y: contain
-}
-@media screen and (max-width: 599.98px) {
-    .pos-top-header-actions {
-        -webkit-overflow-scrolling: touch !important
-    }
+    overscroll-behavior-y: contain;
 }

@@ -88,19 +88,16 @@
     --t0: calc((1 - var(--s0)) * 50%);
     --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
 }
-.l1 {
-    filter: url("#blur4");
-}
-.l2 {
-    filter: url("#blur4");
-}
-.l3 {
-    filter: url("#blur4");
-}
-.l4 {
-    filter: url("#blur4");
-}
 .glass::before {
     backdrop-filter: var(--md-sys-glass-blur-standard, blur(14px));
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(14px));
+}
+/* Consolidated Master Rule: filter */
+:is(
+    .l1,
+    .l2,
+    .l3,
+    .l4
+) {
+    filter: url("#blur4");
 }

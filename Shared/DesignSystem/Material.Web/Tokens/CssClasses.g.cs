@@ -358,11 +358,6 @@ public static class M3
         public const string None = "m3-outline-none";
     }
 
-    public static class Overflow
-    {
-        public const string Truncate = "m3-truncate";
-    }
-
     public static class Padding
     {
         public const string PageGutter = "m3-page-gutter";
@@ -572,6 +567,7 @@ public static class M3
         public const string Short = "short";
         public const string TouchTarget = "m3-touch-target";
         public const string TouchTargetKiosk = "m3-touch-target-kiosk";
+        public const string Truncate = "m3-truncate";
     }
 
     public static class Skeleton

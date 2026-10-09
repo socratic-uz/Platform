@@ -31,12 +31,20 @@ md-dialog [slot="content"] {
 
 /* Consolidated Master Rule: display */
 
+/* Consolidated Master Rule: vertical-align */
+
+/* Consolidated Master Rule: display */
+
+/* Consolidated Master Rule: display */
+
 :is(
-    .table-container::-webkit-scrollbar-button,
-    :is(.avatar-container, md-dialog.contacts) details summary::-webkit-details-marker,
-    :is(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-dialog:not(:defined),
+    .avatar-container,
+    md-dialog.contacts,
+    md-dialog.faceid-profile-modal) md-dialog:not(:defined,
     md-dialog:not(:defined)
-) {
+),
+.table-container::-webkit-scrollbar-button,
+:is(.avatar-container, md-dialog.contacts) details summary::-webkit-details-marker {
     display: none;
 }
 
@@ -48,7 +56,13 @@ md-dialog [slot="content"] {
     .orders-table td,
     .table-container td,
     .table-container th,
-    :is(md-filled-button, md-outlined-button, md-elevated-button, md-text-button, md-tonal-button, md-filled-tonal-button) md-icon:not([slot]),
+    md-elevated-button,
+    md-filled-button,
+    md-filled-tonal-button) md-icon:not([slot],
+    md-icon:not(:defined),
+    md-outlined-button,
+    md-text-button,
+    md-tonal-button,
     table.quickgrid td,
     table.quickgrid th
 ) {
@@ -58,23 +72,12 @@ md-dialog [slot="content"] {
 /* Consolidated Master Rule: display */
 
 :is(
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
     .org-card-desc,
     .picker-preview-text,
     .wishlist-desc-text,
     :is(md-filled-card, md-outlined-card, md-elevated-card) p
 ) {
-    display: -webkit-box;
-}
-
-md-icon:not(:defined) {
-    vertical-align: middle;
-}
-
-md-dialog:not(:defined) {
-    display: none !important;
-}
-
-.m3-line-clamp-2,
-.m3-line-clamp-3 {
     display: -webkit-box;
 }

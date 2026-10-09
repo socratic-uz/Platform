@@ -65,28 +65,6 @@
 }
 
 /* Material Design 3 Surface Container Low Background Master Rule */
-:is(
-    .active-orders-tabs,
-    .analytics-explorer-section,
-    .cart-items-list,
-    .example-card,
-    .faceid-scanner-frame,
-    .faq-card,
-    .kanban-column,
-    .kds-column,
-    .m3-explorer-section,
-    .m3-kanban-column,
-    .pillar-card,
-    .qr-controls-panel,
-    .qrg-sidebar,
-    .showcase-card,
-    .showcase-card-body,
-    .showcase-sidebar,
-    .tech-card,
-    footer.app-footer
-) {
-    background: var(--md-sys-color-surface-container-low);
-}
 
 /* Material Design 3 Primary Container Background Master Rule */
 :is(
@@ -131,20 +109,6 @@
 }
 
 /* Universal Transparent Background Master Rule */
-:is(
-    .analytics-mode-btn,
-    .back-button,
-    .chat-input-wrapper textarea,
-    .docs-refresh-btn,
-    .input-box textarea,
-    .product-detail-card,
-    .showcase-card-btn,
-    .showcase-mobile-toggle,
-    .showcase-nav-btn,
-    .unified-kiosk-filter-bar
-) {
-    background: transparent;
-}
 
 /* Material Design 3 Secondary Container Background Master Rule */
 :is(
@@ -271,10 +235,6 @@
 ) {
     background: none;
 }
-.signin-logo-badge,
-.auth-logo-badge {
-    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-}
 .auth-divider::before,
 .auth-divider::after {
     background: var(--md-sys-color-outline-variant);
@@ -291,21 +251,12 @@
 .brand-title {
     background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
 }
-assistant-message th,
-assistant-message tr:nth-child(even),
-.assistant-message-text th,
-.assistant-message-text tr:nth-child(even) {
-    background-color: var(--md-sys-color-surface-container-high);
-}
 assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
 }
 .citation {
     background-color: var(--md-sys-color-surface-container);
-}
-.citation:active {
-    background-color: var(--md-sys-color-surface-container-high);
 }
 .progress-bar-bg {
     background-color: var(--md-sys-color-surface-variant);
@@ -347,14 +298,8 @@ assistant-message pre > code,
 .cta-card {
     background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
 }
-.docs-sidebar {
-    background-color: var(--md-sys-color-surface-container-low);
-}
 .docs-content {
     background-color: var(--md-sys-color-background);
-}
-.docs-welcome-card {
-    background-color: var(--md-sys-color-surface-container-low);
 }
 .link-stack,
 section.link-stack {
@@ -450,12 +395,6 @@ header.landing-header .header-brand-text {
 .header-icon-wrap {
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
 }
-.fullscreen-player {
-    background-color: var(--md-sys-color-scrim);
-}
-.fullscreen-video {
-    background-color: var(--md-sys-color-scrim);
-}
 .attract-loop-background {
     background-size: cover;
     background-position: center;
@@ -480,20 +419,11 @@ header.landing-header .header-brand-text {
 .showcase-sidebar-header {
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.4);
 }
-.showcase-brand-icon {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
-}
-.showcase-brand-badge {
-    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-}
 .showcase-nav-btn:hover {
     background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.5);
 }
 .showcase-nav-count {
     background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.6);
-}
-.showcase-content {
-    background: var(--md-sys-color-background);
 }
 .showcase-topbar {
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.75);
@@ -507,24 +437,96 @@ header.landing-header .header-brand-text {
 .showcase-stat-pill {
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
 }
-.showcase-lib-badge {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
-}
 @media (max-width: 839.98px) {
     .showcase-sidebar-backdrop {
         background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
     }
 }
-html {
-    background: var(--md-sys-color-background);
-}
-body {
-    background: var(--md-sys-color-background);
-}
-.app-grid > nav {
+/* Consolidated Master Rule: background */
+:is(
+    .active-orders-tabs,
+    .analytics-explorer-section,
+    .app-grid > nav,
+    .cart-items-list,
+    .example-card,
+    .faceid-scanner-frame,
+    .faq-card,
+    .kanban-column,
+    .kds-column,
+    .m3-explorer-section,
+    .m3-kanban-column,
+    .pillar-card,
+    .qr-controls-panel,
+    .qrg-sidebar,
+    .showcase-card,
+    .showcase-card-body,
+    .showcase-sidebar,
+    .tech-card,
+    footer.app-footer
+) {
     background: var(--md-sys-color-surface-container-low);
 }
-.ai-blob-canvas svg,
-svg.ai-blob-svg {
+/* Consolidated Master Rule: background */
+:is(
+    .ai-blob-canvas svg,
+    .analytics-mode-btn,
+    .back-button,
+    .chat-input-wrapper textarea,
+    .docs-refresh-btn,
+    .input-box textarea,
+    .product-detail-card,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .unified-kiosk-filter-bar,
+    svg.ai-blob-svg
+) {
     background: transparent;
+}
+/* Consolidated Master Rule: background */
+:is(
+    .auth-logo-badge,
+    .showcase-brand-badge,
+    .signin-logo-badge
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+}
+/* Consolidated Master Rule: background-color */
+:is(
+    .assistant-message-text th,
+    .assistant-message-text tr:nth-child(even),
+    .citation:active,
+    assistant-message th,
+    assistant-message tr:nth-child(even)
+) {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+/* Consolidated Master Rule: background-color */
+:is(
+    .docs-sidebar,
+    .docs-welcome-card
+) {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+/* Consolidated Master Rule: background-color */
+:is(
+    .fullscreen-player,
+    .fullscreen-video
+) {
+    background-color: var(--md-sys-color-scrim);
+}
+/* Consolidated Master Rule: background */
+:is(
+    .showcase-brand-icon,
+    .showcase-lib-badge
+) {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+/* Consolidated Master Rule: background */
+:is(
+    .showcase-content,
+    body,
+    html
+) {
+    background: var(--md-sys-color-background);
 }

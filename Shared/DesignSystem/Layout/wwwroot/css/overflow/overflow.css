@@ -5,42 +5,6 @@
    ========================================================================== */
 
 /* Universal Overflow Hidden Master Rule */
-:is(
-    .ad-slot-container,
-    .bar-track,
-    .chat-page-root,
-    .designer-sidebar,
-    .docs-sidebar,
-    .faceid-scanner-frame,
-    .fullscreen-player,
-    .item-headline,
-    .kiosk-attract-loop,
-    .kiosk-brand-name,
-    .kiosk-hero,
-    .link-stack a,
-    .link-stack article,
-    .pos-catalog,
-    .pos-product-title-text,
-    .pos-sidebar,
-    .pos-ux-mode-title,
-    .price-tag,
-    .product-desc,
-    .product-main-image-wrap,
-    .product-media,
-    .progress-bar-bg,
-    .qr-canvas-box,
-    .qrg-sidebar,
-    .showcase-card,
-    .showcase-nav-btn-left,
-    .showcase-nav-btn-left span,
-    .spec-value,
-    .thumb-btn,
-    .video-player-wrapper,
-    main.docs-page,
-    main.showcase-page
-) {
-    overflow: hidden;
-}
 
 /* Universal Horizontal Overflow Auto Master Rule */
 :is(
@@ -121,16 +85,6 @@
 }
 
 /* Universal Overflow X Clip Master Rule */
-:is(
-    .about-container,
-    .docs-content,
-    .example-container,
-    .help-container,
-    .landing-grid,
-    .landing-subpage-container
-) {
-    overflow-x: clip;
-}
 .suggestions-wrapper {
     overflow-y: hidden;
 }
@@ -173,21 +127,9 @@ section.link-stack {
         overflow: hidden;
     }
 }
-.m3-page-container {
-    overflow-x: clip;
-}
-body {
-    overflow-x: clip;
-}
-.ai-blob-canvas {
-    overflow: hidden;
-}
 .ai-blob-canvas svg,
 svg.ai-blob-svg {
     overflow: visible;
-}
-.glass {
-    overflow: hidden;
 }
 .touch-scroll-x {
     overflow: auto hidden;
@@ -195,18 +137,60 @@ svg.ai-blob-svg {
 .touch-scroll-y {
     overflow: hidden auto;
 }
+/* Consolidated Master Rule: overflow */
 :is(
+    .ad-slot-container,
+    .ai-blob-canvas,
+    .bar-track,
+    .chat-page-root,
+    .designer-sidebar,
+    .docs-sidebar,
+    .faceid-scanner-frame,
+    .fullscreen-player,
+    .glass,
     .item-headline,
+    .kiosk-attract-loop,
     .kiosk-brand-name,
+    .kiosk-hero,
+    .link-stack a,
+    .link-stack article,
     .m3-page-header-title,
+    .pos-catalog,
+    .pos-product-title-text,
+    .pos-sidebar,
     .pos-ux-mode-title,
     .price-tag,
+    .product-desc,
+    .product-main-image-wrap,
+    .product-media,
+    .progress-bar-bg,
+    .qr-canvas-box,
+    .qrg-sidebar,
+    .showcase-card,
+    .showcase-nav-btn-left,
     .showcase-nav-btn-left span,
     .spec-value,
+    .thumb-btn,
+    .video-player-wrapper,
+    main.docs-page,
+    main.showcase-page,
     nav a.nav-item span,
     nav.glass a.nav-item span,
     nav.glass:not(.nav-mobile) a.nav-item span,
     nav.nav-desktop a.nav-item span
 ) {
     overflow: hidden;
+}
+/* Consolidated Master Rule: overflow-x */
+:is(
+    .about-container,
+    .docs-content,
+    .example-container,
+    .help-container,
+    .landing-grid,
+    .landing-subpage-container,
+    .m3-page-container,
+    body
+) {
+    overflow-x: clip;
 }

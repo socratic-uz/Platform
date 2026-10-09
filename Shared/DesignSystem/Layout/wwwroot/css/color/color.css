@@ -376,33 +376,14 @@
 ) {
     color: var(--md-sys-color-on-secondary-container);
 }
-.signin-error-banner,
-.auth-error-banner {
-    color: var(--md-sys-color-error);
-}
 .chat-page-root {
     color-scheme: dark;
-}
-.banner-close-btn {
-    color: inherit;
-}
-.btn-complete {
-    color: var(--md-sys-color-on-tertiary);
 }
 .error-banner {
     color: var(--md-sys-color-on-error-container);
 }
-.kiosk-wish-icon.wished {
-    color: var(--md-sys-color-error) !important;
-}
-.kiosk-product-title-link {
-    color: inherit;
-}
 .video-caption {
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
-}
-.docs-article {
-    color: var(--md-sys-color-on-background);
 }
 @media screen and (max-width: 839.98px) {
     nav.glass a.nav-item,
@@ -425,9 +406,6 @@
     nav a.nav-item.active span {
         color: var(--md-sys-color-on-surface);
     }
-}
-.trust-badge md-icon {
-    color: var(--md-sys-color-secondary);
 }
 @media screen and (min-width: 840px) {
     nav.nav-desktop,
@@ -468,20 +446,8 @@
 .badge-age-restriction {
     color: var(--md-sys-color-on-error);
 }
-.pro-tag,
-.popular-badge {
-    color: var(--md-sys-color-on-tertiary);
-}
-.feature-icon.star { color: var(--md-sys-color-secondary);
-}
-.ad-upgrade-link:hover {
-    color: var(--md-sys-color-tertiary-fixed);
-}
 .brand-screensaver-tagline {
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
-}
-.pro-badge-icon {
-    color: var(--md-sys-color-tertiary-fixed);
 }
 .ad-network-partner {
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
@@ -489,14 +455,56 @@
 .ad-org-context {
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
 }
-body {
+/* Consolidated Master Rule: color */
+:is(
+    .auth-error-banner,
+    .kiosk-wish-icon.wished,
+    .signin-error-banner
+) {
+    color: var(--md-sys-color-error);
+}
+/* Consolidated Master Rule: color */
+:is(
+    .banner-close-btn,
+    .kiosk-product-title-link
+) {
+    color: inherit;
+}
+/* Consolidated Master Rule: color */
+:is(
+    .btn-complete,
+    .popular-badge,
+    .pro-tag
+) {
+    color: var(--md-sys-color-on-tertiary);
+}
+/* Consolidated Master Rule: color */
+:is(
+    .docs-article,
+    body
+) {
     color: var(--md-sys-color-on-background);
 }
-.link-stack svg {
+/* Consolidated Master Rule: color */
+:is(
+    .feature-icon.star,
+    .trust-badge md-icon
+) {
+    color: var(--md-sys-color-secondary);
+}
+/* Consolidated Master Rule: color */
+:is(
+    .ad-upgrade-link:hover,
+    .pro-badge-icon
+) {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+/* Consolidated Master Rule: stroke */
+:is(
+    .link-stack svg,
+    .link-stack svg *
+) {
     stroke: var(--md-sys-color-on-surface);
     fill: var(--md-sys-color-on-surface);
 }
-.link-stack svg * {
-    stroke: var(--md-sys-color-on-surface);
-    fill: var(--md-sys-color-on-surface);
-}
+/* Consolidated Master Rule: fill */

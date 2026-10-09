@@ -96,34 +96,6 @@
 /* Universal Minimum Touch Target (48px) Grouping */
 
 /* Universal Zero Minimum Width (Grid Truncation Protection) Grouping */
-:is(
-    .m3-card,
-    [class*="m3-card-"],
-    .card-glass,
-    .glass-card,
-    .card-elevated,
-    .card-outlined,
-    .card-filled,
-    :is(.m3-card-header, .card-header),
-    :is(.m3-card-body, .card-body),
-    :is(.m3-card-footer, .card-footer, .m3-card-actions, .card-actions),
-    :is(.m3-media-card, .media-card, .org-card),
-    .org-card-content,
-    md-filled-card,
-    md-outlined-card,
-    md-elevated-card,
-    .wishlist-card-footer,
-    md-dialog [slot="content"],
-    .picker-trigger-left,
-    .picker-trigger-text,
-    .variant-dialog-body,
-    :is(.m3-search-container, .material-search-container),
-    :is(.m3-search-container, .material-search-container) :is(md-outlined-text-field, .material-text-field),
-    .smart-grid-container,
-    .card-grid
-) {
-    min-width: 0;
-}
 
 /* ─── Universal Consolidated Groupings (Round 2 Deduplication) ───── */
 
@@ -396,10 +368,6 @@ md-dialog {
     min-width: min(100%, 680px);
 }
 
-.col-title {
-    min-width: 0;
-}
-
 .paginator nav button {
     width: 2.25rem;
     height: 2.25rem;
@@ -537,16 +505,10 @@ md-dialog {
     .m3-filter-chip-icon
 ) {
     width: 18px;
+    height: 18px;
 }
 
 /* Consolidated Master Rule: height */
-
-:is(
-    .lang-globe-icon,
-    .m3-filter-chip-icon
-) {
-    height: 18px;
-}
 
 /* Consolidated Master Rule: min-height */
 
@@ -565,17 +527,10 @@ md-dialog {
     :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"]
 ) {
     width: 20px;
+    height: 20px;
 }
 
 /* Consolidated Master Rule: height */
-
-:is(
-    .m3-dialog-toggle-item input[type="checkbox"],
-    .picker-day-dot,
-    :is(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"]
-) {
-    height: 20px;
-}
 
 /* Consolidated Master Rule: width */
 
@@ -595,18 +550,10 @@ md-dialog {
     input[type="color"]
 ) {
     height: var(--md-sys-touch-target-min);
+    width: var(--md-sys-touch-target-min);
 }
 
 /* Consolidated Master Rule: width */
-
-:is(
-    .m3-skeleton-circle,
-    ::-webkit-color-swatch,
-    ::-webkit-color-swatch-wrapper,
-    input[type="color"]
-) {
-    width: var(--md-sys-touch-target-min);
-}
 
 /* Consolidated Master Rule: aspect-ratio */
 
@@ -631,4 +578,55 @@ md-dialog {
 md-icon:not(:defined) {
     width: var(--md-icon-size, 24px);
     height: var(--md-icon-size, 24px);
+}
+
+/* Consolidated Master Rule: min-width */
+
+:is(
+    .card-actions,
+    .card-body,
+    .card-elevated,
+    .card-filled,
+    .card-footer,
+    .card-glass,
+    .card-grid,
+    .card-header,
+    .card-outlined,
+    .col-title,
+    .glass-card,
+    .m3-card,
+    .m3-card-actions,
+    .m3-card-body,
+    .m3-card-footer,
+    .m3-card-header,
+    .m3-media-card,
+    .m3-search-container,
+    .material-search-container,
+    .material-search-container) :is(md-outlined-text-field,
+    .material-text-field,
+    .media-card,
+    .org-card,
+    .org-card-content,
+    .picker-trigger-left,
+    .picker-trigger-text,
+    .smart-grid-container,
+    .variant-dialog-body,
+    .wishlist-card-footer,
+    [class*="m3-card-"],
+    md-dialog [slot="content"],
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card
+) {
+    min-width: 0;
+}
+
+/* Master Grid Truncation Cell Zero-Min-Width Contract */
+
+:is(
+    .col-title-text,
+    .m3-truncate
+) {
+    min-width: 0;
+    min-inline-size: 0;
 }

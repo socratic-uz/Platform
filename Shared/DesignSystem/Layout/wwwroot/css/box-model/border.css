@@ -6,46 +6,6 @@
    ========================================================================== */
 
 /* --- Full / Pill Grouping --- */
-:is(
-    .ad-slide-touch-prompt,
-    .analytics-config-btn,
-    .analytics-mode-btn,
-    .analytics-mode-pill-group,
-    .analytics-status-pill,
-    .assistant-message-icon,
-    .back-button,
-    .bar-track,
-    .brand-screensaver-cta,
-    .chat-back-link,
-    .column-badge,
-    .count-badge,
-    .item-qty-badge,
-    .items-count-badge,
-    .kds-action-btn,
-    .kds-status-tag,
-    .kiosk-brand-logo,
-    .kiosk-brand-logo-fallback,
-    .kiosk-brand-tagline,
-    .landing-auth-btn,
-    .landing-floating-auth-btn,
-    .landing-floating-controls,
-    .landing-header-nav,
-    .landing-nav-link,
-    .lang-toggle-btn,
-    .m3-pill-badge,
-    .mode-indicator,
-    .popular-badge,
-    .preset-btn,
-    .pro-tag,
-    .product-tag-chip,
-    .progress-bar-bg,
-    .progress-bar-fill,
-    .pulse-ring,
-    .resolution-badge,
-    .showcase-lib-badge
-) {
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-}
 
 /* --- Expressive Large (24px) Grouping --- */
 :is(
@@ -393,14 +353,6 @@
 }
 
 /* Universal Border Right Solid Separator Master Rule */
-:is(
-    .docs-sidebar,
-    .m3-nav-rail,
-    .qrg-sidebar,
-    .showcase-sidebar
-) {
-    border-right: 1px solid var(--md-sys-color-outline-variant);
-}
 
 /* Universal Border Outline Variant Glass Master Rule */
 :is(
@@ -423,9 +375,6 @@
 .faceid-scanner-frame {
     border: 3px solid var(--md-sys-color-primary);
 }
-.faceid-scanner-frame.scanning {
-    border-color: var(--md-sys-color-tertiary);
-}
 .chat-back-link {
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -435,14 +384,8 @@
 .citation {
     border-bottom: 2px solid var(--md-sys-color-tertiary);
 }
-.score-box {
-    border-left: 1px solid var(--md-sys-color-outline-variant);
-}
 .score-circle {
     border: 6px solid var(--md-sys-color-primary);
-}
-.empty-plans-card {
-    border: 1px dashed var(--md-sys-color-outline-variant);
 }
 @media (max-width: 839.98px) {
     .score-box {
@@ -454,27 +397,8 @@
         border-bottom: 1px solid var(--md-sys-color-outline-variant);
     }
 }
-.preset-btn {
-    border: 1px solid var(--md-sys-color-outline);
-}
-.preset-btn:hover {
-    border-color: transparent;
-}
-.text-input, .select-input {
-    border: 1px solid var(--md-sys-color-outline);
-}
-.m3-drawer-panel,
-.drawer-panel {
-    border-left: 1px solid var(--md-sys-color-outline-variant);
-}
 .cart-item-row:last-child {
     border-bottom: none;
-}
-.drawer-footer .total-row {
-    border-top: 1px dashed var(--md-sys-color-outline-variant);
-}
-.card-bottom-row {
-    border-top: 1px dashed var(--md-sys-color-outline-variant);
 }
 .preparing-column,
 .column-making {
@@ -495,9 +419,6 @@
 }
 .kiosk-hero {
     border-radius: clamp(16px, 3vw, 28px);
-}
-.unified-kiosk-filter-bar {
-    border-radius: 0;
 }
 .kiosk-wish-icon.wished {
     border-color: var(--md-sys-color-error) !important;
@@ -527,10 +448,6 @@
     .landing-auth-btn {
         border-radius: 50%;
     }
-}
-.link-stack a,
-.link-stack article {
-    border-radius: 0;
 }
 @media screen and (max-width: 839.98px) {
     nav,
@@ -589,20 +506,8 @@ header.app-header.landing-header {
     --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button, 20px);
     --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
 }
-.pos-exact-bill-btn {
-    border-color: transparent;
-}
-.thumb-btn {
-    border: 2px solid transparent;
-}
 .share-toast {
     border: 1px solid var(--md-sys-color-tertiary);
-}
-.tier-box.pro-tier {
-    border-color: var(--md-sys-color-tertiary);
-}
-.ad-slot-container {
-    border: 1px dashed var(--md-sys-color-outline-variant);
 }
 .brand-screensaver-logo-wrapper {
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.2);
@@ -628,23 +533,124 @@ header.app-header.landing-header {
 .showcase-lib-badge {
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.25);
 }
-.app-grid > nav {
-    border-right: 1px solid var(--md-sys-color-outline-variant);
-}
-*:focus-visible {
-    border-radius: inherit;
-}
-.glass::before {
-    border-radius: inherit;
-}
+/* Consolidated Master Rule: border-radius */
+:is(
+    .ad-slide-touch-prompt,
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-mode-pill-group,
+    .analytics-status-pill,
+    .assistant-message-icon,
+    .back-button,
+    .bar-track,
+    .brand-screensaver-cta,
+    .chat-back-link,
+    .column-badge,
+    .count-badge,
+    .item-qty-badge,
+    .items-count-badge,
+    .kds-action-btn,
+    .kds-status-tag,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback,
+    .kiosk-brand-tagline,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-floating-controls,
+    .landing-header-nav,
+    .landing-nav-link,
+    .lang-toggle-btn,
+    .m3-pill-badge,
+    .mode-indicator,
+    .popular-badge,
+    .preset-btn,
+    .pro-tag,
+    .product-tag-chip,
+    .progress-bar-bg,
+    .progress-bar-fill,
+    .pulse-ring,
+    .resolution-badge,
+    .showcase-lib-badge
+),
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
     border-radius: var(--md-sys-shape-corner-full, 9999px);
-    border: 2px solid transparent;
 }
+/* Consolidated Master Rule: border-right */
+:is(
+    .app-grid > nav,
+    .docs-sidebar,
+    .m3-nav-rail,
+    .qrg-sidebar,
+    .showcase-sidebar
+) {
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+}
+/* Consolidated Master Rule: border-color */
+:is(
+    .faceid-scanner-frame.scanning,
+    .tier-box.pro-tier
+) {
+    border-color: var(--md-sys-color-tertiary);
+}
+/* Consolidated Master Rule: border-left */
+:is(
+    .drawer-panel,
+    .m3-drawer-panel,
+    .score-box
+) {
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+}
+/* Consolidated Master Rule: border */
+:is(
+    .ad-slot-container,
+    .empty-plans-card
+) {
+    border: 1px dashed var(--md-sys-color-outline-variant);
+}
+/* Consolidated Master Rule: border */
+:is(
+    .preset-btn,
+    .select-input,
+    .text-input
+) {
+    border: 1px solid var(--md-sys-color-outline);
+}
+/* Consolidated Master Rule: border-color */
+:is(
+    .pos-exact-bill-btn,
+    .preset-btn:hover
+) {
+    border-color: transparent;
+}
+/* Consolidated Master Rule: border-top */
+:is(
+    .card-bottom-row,
+    .drawer-footer .total-row
+) {
+    border-top: 1px dashed var(--md-sys-color-outline-variant);
+}
+/* Consolidated Master Rule: border-radius */
+:is(
+    .link-stack a,
+    .link-stack article,
+    .unified-kiosk-filter-bar
+) {
+    border-radius: 0;
+}
+/* Consolidated Master Rule: border */
+:is(
+    .thumb-btn
+),
+::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
     border: 2px solid transparent;
 }
-.m3-scroll-thin::-webkit-scrollbar-thumb,
-.scroll-thin::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+/* Consolidated Master Rule: border-radius */
+:is(
+    *:focus-visible
+),
+.glass::before {
+    border-radius: inherit;
 }

@@ -7,34 +7,8 @@
 /* Universal Inline Grid Master Rule */
 
 /* Universal Block Display Master Rule */
-:is(
-    .assistant-message-text pre > code,
-    .chat-input-wrapper textarea,
-    .current-plan-indicator,
-    .input-box textarea,
-    .item-price,
-    .pos-ux-mode-title,
-    .product-img,
-    .product-main-img,
-    .promo-success-text,
-    .video-player-wrapper video,
-    assistant-message pre > code
-) {
-    display: block;
-}
 
 /* Universal None Display Master Rule */
-:is(
-    .docs-mobile-menu-btn,
-    .inline-card-experience-body:empty,
-    .landing-grid:has(.landing-page-root) > footer,
-    .landing-mobile-menu-toggle,
-    .product-desc:empty,
-    .showcase-mobile-toggle,
-    .suggestions-wrapper::-webkit-scrollbar
-) {
-    display: none;
-}
 @media all and (display-mode: fullscreen) {
     footer.app-footer {
         display: none;
@@ -45,9 +19,6 @@
     nav.nav-mobile {
         display: none;
     }
-}
-.product-desc {
-    display: -webkit-box;
 }
 @media screen and (max-width: 839.98px) {
     .kiosk-header-actions {
@@ -125,38 +96,59 @@
         display: none !important;
     }
 }
-.orders-table td,
-.order-items-table td {
-    vertical-align: middle;
-}
-.pos-product-title-text {
-    display: -webkit-box;
-}
 body:has(main.no-nav) {
     --nav-display: none;
 }
-.app-grid:has(main.no-footer) > footer,
-.app-grid:has(.no-footer) > footer {
-    display: none !important;
-}
-.app-grid:has(main.no-header) > header,
-.app-grid:has(.no-header) > header {
-    display: none !important;
-}
-.ai-blob-canvas svg,
-svg.ai-blob-svg {
+/* Consolidated Master Rule: display */
+:is(
+    .ai-blob-canvas svg,
+    .assistant-message-text pre > code,
+    .chat-input-wrapper textarea,
+    .current-plan-indicator,
+    .input-box textarea,
+    .item-price,
+    .pos-ux-mode-title,
+    .product-img,
+    .product-main-img,
+    .promo-success-text,
+    .video-player-wrapper video,
+    assistant-message pre > code,
+    svg.ai-blob-svg
+) {
     display: block;
 }
-.interactive-chip {
-    vertical-align: middle;
-}
+/* Consolidated Master Rule: display */
+:is(
+    .app-grid:has(.no-footer) > footer,
+    .app-grid:has(.no-header) > header,
+    .app-grid:has(main.no-footer) > footer,
+    .app-grid:has(main.no-header) > header,
+    .docs-mobile-menu-btn,
+    .inline-card-experience-body:empty,
+    .landing-grid:has(.landing-page-root) > footer,
+    .landing-mobile-menu-toggle,
+    .product-desc:empty,
+    .showcase-mobile-toggle
+),
+.no-scrollbar::-webkit-scrollbar,
 .scrollbar-none::-webkit-scrollbar,
-.no-scrollbar::-webkit-scrollbar {
-    display: none !important;
-}
-.touch-scroll-x::-webkit-scrollbar {
-    display: none;
-}
+.suggestions-wrapper::-webkit-scrollbar,
+.touch-scroll-x::-webkit-scrollbar,
 .touch-scroll-y::-webkit-scrollbar {
     display: none;
+}
+/* Consolidated Master Rule: display */
+:is(
+    .pos-product-title-text,
+    .product-desc
+) {
+    display: -webkit-box;
+}
+/* Consolidated Master Rule: vertical-align */
+:is(
+    .interactive-chip,
+    .order-items-table td,
+    .orders-table td
+) {
+    vertical-align: middle;
 }

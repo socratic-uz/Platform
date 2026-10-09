@@ -38,7 +38,6 @@
     transition: all 0.2s ease;
 }
 .progress-bar-fill {
-    transition: width 0.3s ease;
     transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 .m3-drawer-backdrop,
@@ -55,9 +54,6 @@
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-}
-.product-img {
-    transition: transform 0.3s ease;
 }
 .kiosk-wish-icon {
     transition: transform 0.2s ease, color 0.2s ease;
@@ -124,18 +120,12 @@ header.landing-header .header-brand-link {
         transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
     }
 }
-.chevron-icon {
-    transition: transform 0.2s ease;
-}
 .back-button {
     transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
                 color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
 .pos-quick-bill-btn {
     transition: background 0.15s ease, transform 0.1s ease;
-}
-.product-main-img {
-    transition: transform 0.3s ease;
 }
 .thumb-btn {
     transition: opacity 0.2s ease, border-color 0.2s ease;
@@ -149,10 +139,6 @@ header.landing-header .header-brand-link {
 }
 .attract-loop-background {
     transition: background-image 0.8s ease-in-out;
-}
-.brand-screensaver-cta,
-.ad-slide-touch-prompt {
-    transition: transform 0.2s ease;
 }
 .showcase-nav-btn {
     transition: all 0.15s ease;
@@ -172,4 +158,19 @@ header.landing-header .header-brand-link {
     *, *::before, *::after {
         transition-duration: 0.01ms !important;
     }
+}
+/* Consolidated Master Rule: transition */
+:is(
+    .product-img,
+    .product-main-img
+) {
+    transition: transform 0.3s ease;
+}
+/* Consolidated Master Rule: transition */
+:is(
+    .ad-slide-touch-prompt,
+    .brand-screensaver-cta,
+    .chevron-icon
+) {
+    transition: transform 0.2s ease;
 }

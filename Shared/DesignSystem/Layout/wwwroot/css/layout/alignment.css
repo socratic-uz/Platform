@@ -5,283 +5,12 @@
    ========================================================================== */
 
 /* Universal Centered Alignment Master Rule */
-:is(
-    .ad-network-container .google-adsense-wrapper,
-    .ad-network-container .yandex-ads-wrapper,
-    .ad-network-render-slot,
-    .analytics-period-chip,
-    .assistant-message-icon,
-    .assistant-search-icon,
-    .auth-container,
-    .auth-logo-badge,
-    .banner-close-btn,
-    .brand-screensaver-logo-wrapper,
-    .chat-back-link,
-    .column-badge,
-    .count-badge,
-    .docs-refresh-btn,
-    .docs-welcome-card,
-    .docs-welcome-container,
-    .empty-plans-icon-wrapper,
-    .faceid-scanner-frame,
-    .footer-brand-badge,
-    .fullscreen-loading,
-    .fullscreen-player,
-    .header-brand-icon-box,
-    .header-icon-wrap,
-    .item-icon-wrapper,
-    .item-qty-badge,
-    .kiosk-brand-logo-fallback,
-    .kpi-icon-badge,
-    .landing-mobile-menu-toggle,
-    .mobile-nav-footer,
-    .pillar-icon-box,
-    .pos-card-img,
-    .pos-card-img-placeholder,
-    .pos-quick-bill-btn,
-    .pos-tech-chip,
-    .product-img-placeholder,
-    .qr-canvas-box,
-    .qr-stage,
-    .qrg-card-qr,
-    .qrg-empty,
-    .qrg-empty-list,
-    .qrg-logo-badge,
-    .score-box,
-    .score-circle,
-    .seller-logo-placeholder,
-    .showcase-brand-icon,
-    .showcase-card-btn,
-    .signin-container,
-    .signin-logo-badge,
-    .tools
-) {
-    place-items: center;
-}
 
 /* Universal Align Items Center Master Rule */
-:is(
-    .active-orders-tabs,
-    .ad-network-badge-row,
-    .ad-network-footer,
-    .ad-slide-touch-prompt,
-    .advance-prompt,
-    .amount-cell,
-    .analytics-config-btn,
-    .analytics-mode-btn,
-    .analytics-period-selector,
-    .analytics-status-pill,
-    .analytics-toolbar-actions,
-    .analytics-toolbar-grid,
-    .auth-divider,
-    .auth-error-banner,
-    .back-button,
-    .brand-screensaver-cta,
-    .card-mid-row,
-    .card-top-row,
-    .cart-bar,
-    .cart-item-row,
-    .cart-summary,
-    .citation,
-    .color-picker-row,
-    .column-empty,
-    .column-header,
-    .column-title-group,
-    .crumb-link,
-    .cta-actions,
-    .date-cell,
-    .designer-header,
-    .detail-item,
-    .dialog-headline-wrap,
-    .docs-header-actions,
-    .docs-header-bar,
-    .docs-header-breadcrumb,
-    .docs-sidebar-header,
-    .drawer-header,
-    .drawer-header .headline,
-    .error-banner,
-    .explorer-title-group,
-    .footer-bottom-bar,
-    .footer-brand-link,
-    .footer-lang-container,
-    .footer-links-list a,
-    .footer-system-status,
-    .footer-trust-info,
-    .header-actions,
-    .header-brand-link,
-    .header-center-zone,
-    .header-content,
-    .header-end-zone,
-    .header-grid-layout,
-    .header-presets,
-    .header-start-zone,
-    .header-title-box,
-    .header-title-group,
-    .input-box,
-    .item-actions,
-    .item-card,
-    .item-name-row,
-    .item-pricing-row,
-    .items-count-badge,
-    .kds-action-btn,
-    .kds-card-main,
-    .kds-card-top,
-    .kds-empty-col,
-    .kiosk-brand,
-    .kiosk-brand-info,
-    .kiosk-brand-tagline,
-    .kiosk-category-chipset,
-    .kiosk-filter-row,
-    .kiosk-main .card-footer,
-    .kiosk-tier-btn,
-    .kpi-header,
-    .kpi-trend,
-    .landing-auth-btn,
-    .landing-floating-auth-btn,
-    .landing-floating-controls,
-    .landing-header-actions,
-    .landing-header-nav,
-    .landing-nav-link,
-    .link-stack a,
-    .link-stack article,
-    .m3-bottom-nav,
-    .m3-breadcrumbs,
-    .m3-filter-toolbar,
-    .m3-nav-rail,
-    .m3-page-header,
-    .m3-page-header-actions,
-    .m3-page-header-start,
-    .m3-pill-badge,
-    .m3-trust-footer,
-    .mobile-nav-item,
-    .mode-indicator,
-    .notification-banner,
-    .order-card-footer,
-    .order-card-header,
-    .order-items-subheader,
-    .order-subtitle,
-    .orders-error-banner,
-    .otp-target-hint,
-    .panel-header,
-    .payment-cell,
-    .payment-methods,
-    .payment-support a,
-    .payment-trust-footer,
-    .pillar-features li,
-    .plan-features li,
-    .plan-header,
-    .pos-card-footer-row,
-    .pos-card-header-row,
-    .pos-catalog-header,
-    .pos-filters,
-    .pos-sidebar-header-row,
-    .pos-top-header-actions,
-    .preset-btn,
-    .preview-footer,
-    .preview-header,
-    .preview-info,
-    .product-preview-pill,
-    .profile-title,
-    .promo-input-group,
-    .promotion-modal-header,
-    .qr-designer-header,
-    .qrg-back,
-    .qrg-group-head,
-    .qrg-preview-header,
-    .qrg-section-title,
-    .qrg-sidebar-header,
-    .qrg-slider-header,
-    .qty-stepper,
-    .screensaver-pro-badge,
-    .seat-selection-card,
-    .seller-address,
-    .seller-browse-all,
-    .seller-header,
-    .share-toast,
-    .shipping-card,
-    .showcase-brand,
-    .showcase-card-actions,
-    .showcase-card-header,
-    .showcase-controls-bar,
-    .showcase-demo-row,
-    .showcase-nav-btn,
-    .showcase-nav-btn-left,
-    .showcase-section-header,
-    .showcase-section-title-wrap,
-    .showcase-sidebar-header,
-    .showcase-stat-pill,
-    .showcase-topbar,
-    .showcase-topbar-actions,
-    .showcase-topbar-left,
-    .signin-error-banner,
-    .spec-item,
-    .store-breadcrumbs,
-    .suggestions,
-    .tier-features li,
-    .trust-badge,
-    .unified-kiosk-filter-bar md-chip-set,
-    .ux-mode-badge-overlay,
-    .ux-widget-hotel,
-    .ux-widget-location,
-    .ux-widget-row,
-    .ux-widget-subscription,
-    .ux-widget-ticket,
-    .ux-widget-vehicle,
-    .video-caption,
-    header.app-header
-) {
-    align-items: center;
-}
 
 /* Universal Justify Items Center Master Rule */
-:is(
-    .about-hero,
-    .ad-network-screensaver-body,
-    .ad-screensaver-footer,
-    .attract-loop-content,
-    .auth-header,
-    .brand-screensaver-body,
-    .column-empty,
-    .cta-card,
-    .empty-plans-actions,
-    .empty-plans-card,
-    .example-hero,
-    .faceid-viewfinder-card,
-    .help-hero,
-    .kds-empty-col,
-    .kiosk-attract-loop,
-    .landing-subpage-hero,
-    .m3-bottom-nav-item,
-    .pos-loading,
-    .qrg-card,
-    .qrg-color-picker-wrapper,
-    .section-header,
-    .signin-header
-) {
-    justify-items: center;
-}
 
 /* Universal Align Content Start Master Rule */
-:is(
-    .breakdown-bars-stack,
-    .column-content,
-    .docs-sidebar-menu,
-    .drawer-body,
-    .footer-brand-col,
-    .footer-nav-col,
-    .kds-cards-container,
-    .message-list,
-    .product-details,
-    .product-gallery,
-    .product-info-panel,
-    .qr-preview-area,
-    .qrg-lists,
-    .qrg-sidebar-scrollable,
-    .showcase-content,
-    .showcase-sidebar-nav
-) {
-    align-content: start;
-}
 
 /* Universal Gap 0.5rem (8px) Master Rule */
 :is(
@@ -488,17 +217,6 @@
 }
 
 /* Universal Justify Content Center Master Rule */
-:is(
-    .btn-primary-link,
-    .footer-lang-container,
-    .header-center-zone,
-    .kds-action-btn,
-    .landing-header-nav,
-    .mode-indicator,
-    .payment-methods
-) {
-    justify-content: center;
-}
 
 /* Universal Justify Content Start Master Rule */
 :is(
@@ -565,20 +283,6 @@
 }
 
 /* Universal Gap Spacing-3 (0.75rem) Master Rule */
-:is(
-    .error-banner,
-    .item-name-row,
-    .item-pricing-row,
-    .items-cards-grid,
-    .kds-card,
-    .kds-card-main,
-    .m3-filter-grid,
-    .m3-filter-toolbar,
-    .m3-page-header-actions,
-    .summary-rows
-) {
-    gap: var(--md-sys-spacing-3, 0.75rem);
-}
 
 /* Universal Gap 0.35rem Master Rule */
 :is(
@@ -596,37 +300,8 @@
 }
 
 /* Universal Gap Spacing-2 (0.5rem) Master Rule */
-:is(
-    .back-button,
-    .explorer-chipset-wrapper,
-    .explorer-title-group,
-    .item-card-body,
-    .kds-action-btn,
-    .kds-card-top,
-    .order-subtitle,
-    .table-row-actions
-) {
-    gap: var(--md-sys-spacing-2, 0.5rem);
-}
 
 /* Universal Gap Spacing-4 (1rem) Master Rule */
-:is(
-    .analytics-kpi-grid,
-    .item-card,
-    .items-list-section,
-    .kanban-column,
-    .kds-column,
-    .m3-kanban-column,
-    .m3-pricing-grid,
-    .order-items-subheader,
-    .plan-card,
-    .plans-grid,
-    .summary-card,
-    .tier-box,
-    .tiers-grid
-) {
-    gap: var(--md-sys-spacing-4, 1rem);
-}
 
 /* Universal Gap 4px Master Rule */
 :is(
@@ -656,31 +331,8 @@
 }
 
 /* Universal Align Content Center Master Rule */
-:is(
-    .assistant-search-content,
-    .inline-card-experience-body,
-    .m3-bottom-nav-item,
-    .pos-card-title-group,
-    .qrg-card,
-    .qrg-empty,
-    .showcase-card-body
-) {
-    align-content: center;
-}
 
 /* Universal Align Items Start Master Rule */
-:is(
-    .footer-primary-grid,
-    .kds-board,
-    .kiosk-filter-inner,
-    .m3-kanban-board,
-    .order-details-layout,
-    .orders-kanban-board,
-    .qr-workspace,
-    .video-card-header
-) {
-    align-items: start;
-}
 
 /* Universal Align Items Stretch Master Rule */
 :is(
@@ -752,17 +404,6 @@
 }
 
 /* Universal Gap Spacing-5 (1.25rem) Master Rule */
-:is(
-    .analytics-breakdown-grid,
-    .analytics-explorer-section,
-    .kds-board,
-    .m3-explorer-section,
-    .m3-kanban-board,
-    .m3-page-header,
-    .orders-kanban-board
-) {
-    gap: var(--md-sys-spacing-5, 1.25rem);
-}
 
 /* Universal Gap 3rem (48px Large) Master Rule */
 :is(
@@ -945,18 +586,9 @@
         gap: var(--md-sys-spacing-4, 1rem);
     }
 }
-.color-grid {
-    gap: 0.9rem;
-}
-.style-selects-grid {
-    gap: 0.9rem;
-}
 .m3-drawer-backdrop,
 .md-drawer-backdrop {
     justify-items: end;
-}
-.empty-cart-view {
-    place-content: center;
 }
 .explorer-header {
     gap: var(--md-sys-spacing-1, 0.25rem);
@@ -1120,12 +752,6 @@
 .kiosk-category-label {
     align-self: center;
 }
-.kiosk-reset-btn {
-    align-self: start;
-}
-.kiosk-main .card-footer {
-    align-self: end !important;
-}
 @container product-card (max-width: 320px) {
     .kiosk-main .card-footer {
         align-items: stretch;
@@ -1143,9 +769,6 @@
         gap: 0.75rem;
     }
 }
-.landing-floating-auth-btn {
-    gap: 0.45rem;
-}
 .about-container,
 .help-container,
 .example-container,
@@ -1160,13 +783,6 @@
 .about-cta-section {
     gap: 2.5rem;
 }
-main.docs-page {
-    align-content: stretch !important;
-}
-.link-stack,
-section.link-stack {
-    align-self: start;
-}
 .link-stack a,
 .link-stack article {
     justify-self: stretch;
@@ -1177,17 +793,8 @@ section.link-stack {
 .header-grid-layout {
     gap: 0.5rem 1rem;
 }
-.pos-top-header-actions {
-    gap: var(--space-2, 8px);
-}
-.landing-auth-btn {
-    gap: 0.45rem;
-}
 .items-count-badge {
     gap: var(--md-sys-spacing-2, 0.375rem);
-}
-.order-details-layout {
-    gap: var(--md-sys-spacing-6, 1.5rem);
 }
 @media (max-width: 768px) {
     .m3-page-header {
@@ -1196,15 +803,6 @@ section.link-stack {
     .m3-page-header-actions {
         justify-content: start;
     }
-}
-.pos-loading {
-    place-content: center;
-}
-.pos-product-card {
-    gap: var(--space-2, 8px);
-}
-.pos-card-footer-row {
-    align-self: end;
 }
 .seller-info {
     gap: 0.2rem;
@@ -1222,103 +820,498 @@ section.link-stack {
 .kiosk-attract-loop {
     align-content: end;
 }
-main.showcase-page {
-    align-content: stretch !important;
-}
 .showcase-main-body {
     gap: 48px;
-}
-.m3-grid-autofit {
-    gap: var(--md-sys-spacing-5, 1.25rem);
-}
-.m3-grid-autofit-sm {
-    gap: var(--md-sys-spacing-3, 0.75rem);
-}
-.m3-grid-autofit-lg {
-    gap: var(--md-sys-spacing-6, 1.5rem);
-}
-.m3-grid-center,
-.grid-center {
-    place-items: center;
-    place-content: center;
-}
-.m3-grid-center-inline,
-.grid-center-inline {
-    place-items: center;
-    place-content: center;
-}
-.m3-grid-center-x,
-.grid-center-x {
-    justify-items: center;
-    justify-content: center;
-}
-.m3-grid-center-y,
-.grid-center-y {
-    align-items: center;
-    align-content: center;
-}
-.m3-grid-center-canvas {
-    place-content: center;
-    place-items: center;
-}
-.m3-grid-cluster,
-.grid-flow-col {
-    align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 .m3-page-container {
     gap: var(--md-sys-spacing-6, 24px);
 }
-.app-grid > main,
-.app-grid .app-main {
-    gap: var(--md-sys-spacing-4, 1rem);
-    align-content: start;
-}
-.app-main > main {
-    gap: var(--md-sys-spacing-4, 1rem);
-    align-content: start;
-}
-.grid-catalog {
-    gap: var(--space-4, 1rem);
-    align-content: start;
-}
 .grid-actions {
-    align-items: center;
     gap: var(--space-2, 0.5rem);
 }
 .grid-stack {
     gap: var(--space-3, 0.75rem);
-    align-content: start;
 }
-.grid-2-col {
-    gap: var(--space-4, 1rem);
-}
-.m3-grid-sidebar,
-.m3-grid-master-detail {
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    align-items: start;
-}
-.m3-grid-main-sidebar {
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    align-items: start;
-}
-.m3-grid-split {
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    align-items: start;
-}
-.grid-split {
-    align-items: center;
-    gap: var(--md-sys-spacing-4, 1rem);
-}
-.m3-grid-triad {
-    gap: var(--md-sys-spacing-5, 1.25rem);
-    align-items: start;
-}
-.m3-grid-stack,
-.grid-stack {
-    gap: var(--md-sys-spacing-4, 1rem);
-    align-content: start;
-}
-.interactive-chip {
+/* Consolidated Master Rule: place-items */
+:is(
+    .ad-network-container .google-adsense-wrapper,
+    .ad-network-container .yandex-ads-wrapper,
+    .ad-network-render-slot,
+    .analytics-period-chip,
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .auth-container,
+    .auth-logo-badge,
+    .banner-close-btn,
+    .brand-screensaver-logo-wrapper,
+    .chat-back-link,
+    .column-badge,
+    .count-badge,
+    .docs-refresh-btn,
+    .docs-welcome-card,
+    .docs-welcome-container,
+    .empty-plans-icon-wrapper,
+    .faceid-scanner-frame,
+    .footer-brand-badge,
+    .fullscreen-loading,
+    .fullscreen-player,
+    .grid-center,
+    .grid-center-inline,
+    .header-brand-icon-box,
+    .header-icon-wrap,
+    .interactive-chip,
+    .item-icon-wrapper,
+    .item-qty-badge,
+    .kiosk-brand-logo-fallback,
+    .kpi-icon-badge,
+    .landing-mobile-menu-toggle,
+    .m3-grid-center,
+    .m3-grid-center-canvas,
+    .m3-grid-center-inline,
+    .mobile-nav-footer,
+    .pillar-icon-box,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-quick-bill-btn,
+    .pos-tech-chip,
+    .product-img-placeholder,
+    .qr-canvas-box,
+    .qr-stage,
+    .qrg-card-qr,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-logo-badge,
+    .score-box,
+    .score-circle,
+    .seller-logo-placeholder,
+    .showcase-brand-icon,
+    .showcase-card-btn,
+    .signin-container,
+    .signin-logo-badge,
+    .tools
+) {
     place-items: center;
+}
+/* Consolidated Master Rule: align-items */
+:is(
+    .active-orders-tabs,
+    .ad-network-badge-row,
+    .ad-network-footer,
+    .ad-slide-touch-prompt,
+    .advance-prompt,
+    .amount-cell,
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-period-selector,
+    .analytics-status-pill,
+    .analytics-toolbar-actions,
+    .analytics-toolbar-grid,
+    .auth-divider,
+    .auth-error-banner,
+    .back-button,
+    .brand-screensaver-cta,
+    .card-mid-row,
+    .card-top-row,
+    .cart-bar,
+    .cart-item-row,
+    .cart-summary,
+    .citation,
+    .color-picker-row,
+    .column-empty,
+    .column-header,
+    .column-title-group,
+    .crumb-link,
+    .cta-actions,
+    .date-cell,
+    .designer-header,
+    .detail-item,
+    .dialog-headline-wrap,
+    .docs-header-actions,
+    .docs-header-bar,
+    .docs-header-breadcrumb,
+    .docs-sidebar-header,
+    .drawer-header,
+    .drawer-header .headline,
+    .error-banner,
+    .explorer-title-group,
+    .footer-bottom-bar,
+    .footer-brand-link,
+    .footer-lang-container,
+    .footer-links-list a,
+    .footer-system-status,
+    .footer-trust-info,
+    .grid-actions,
+    .grid-center-y,
+    .grid-flow-col,
+    .grid-split,
+    .header-actions,
+    .header-brand-link,
+    .header-center-zone,
+    .header-content,
+    .header-end-zone,
+    .header-grid-layout,
+    .header-presets,
+    .header-start-zone,
+    .header-title-box,
+    .header-title-group,
+    .input-box,
+    .item-actions,
+    .item-card,
+    .item-name-row,
+    .item-pricing-row,
+    .items-count-badge,
+    .kds-action-btn,
+    .kds-card-main,
+    .kds-card-top,
+    .kds-empty-col,
+    .kiosk-brand,
+    .kiosk-brand-info,
+    .kiosk-brand-tagline,
+    .kiosk-category-chipset,
+    .kiosk-filter-row,
+    .kiosk-main .card-footer,
+    .kiosk-tier-btn,
+    .kpi-header,
+    .kpi-trend,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-floating-controls,
+    .landing-header-actions,
+    .landing-header-nav,
+    .landing-nav-link,
+    .link-stack a,
+    .link-stack article,
+    .m3-bottom-nav,
+    .m3-breadcrumbs,
+    .m3-filter-toolbar,
+    .m3-grid-center-y,
+    .m3-grid-cluster,
+    .m3-nav-rail,
+    .m3-page-header,
+    .m3-page-header-actions,
+    .m3-page-header-start,
+    .m3-pill-badge,
+    .m3-trust-footer,
+    .mobile-nav-item,
+    .mode-indicator,
+    .notification-banner,
+    .order-card-footer,
+    .order-card-header,
+    .order-items-subheader,
+    .order-subtitle,
+    .orders-error-banner,
+    .otp-target-hint,
+    .panel-header,
+    .payment-cell,
+    .payment-methods,
+    .payment-support a,
+    .payment-trust-footer,
+    .pillar-features li,
+    .plan-features li,
+    .plan-header,
+    .pos-card-footer-row,
+    .pos-card-header-row,
+    .pos-catalog-header,
+    .pos-filters,
+    .pos-sidebar-header-row,
+    .pos-top-header-actions,
+    .preset-btn,
+    .preview-footer,
+    .preview-header,
+    .preview-info,
+    .product-preview-pill,
+    .profile-title,
+    .promo-input-group,
+    .promotion-modal-header,
+    .qr-designer-header,
+    .qrg-back,
+    .qrg-group-head,
+    .qrg-preview-header,
+    .qrg-section-title,
+    .qrg-sidebar-header,
+    .qrg-slider-header,
+    .qty-stepper,
+    .screensaver-pro-badge,
+    .seat-selection-card,
+    .seller-address,
+    .seller-browse-all,
+    .seller-header,
+    .share-toast,
+    .shipping-card,
+    .showcase-brand,
+    .showcase-card-actions,
+    .showcase-card-header,
+    .showcase-controls-bar,
+    .showcase-demo-row,
+    .showcase-nav-btn,
+    .showcase-nav-btn-left,
+    .showcase-section-header,
+    .showcase-section-title-wrap,
+    .showcase-sidebar-header,
+    .showcase-stat-pill,
+    .showcase-topbar,
+    .showcase-topbar-actions,
+    .showcase-topbar-left,
+    .signin-error-banner,
+    .spec-item,
+    .store-breadcrumbs,
+    .suggestions,
+    .tier-features li,
+    .trust-badge,
+    .unified-kiosk-filter-bar md-chip-set,
+    .ux-mode-badge-overlay,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-row,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    .video-caption,
+    header.app-header
+) {
+    align-items: center;
+}
+/* Consolidated Master Rule: justify-items */
+:is(
+    .about-hero,
+    .ad-network-screensaver-body,
+    .ad-screensaver-footer,
+    .attract-loop-content,
+    .auth-header,
+    .brand-screensaver-body,
+    .column-empty,
+    .cta-card,
+    .empty-plans-actions,
+    .empty-plans-card,
+    .example-hero,
+    .faceid-viewfinder-card,
+    .grid-center-x,
+    .help-hero,
+    .kds-empty-col,
+    .kiosk-attract-loop,
+    .landing-subpage-hero,
+    .m3-bottom-nav-item,
+    .m3-grid-center-x,
+    .pos-loading,
+    .qrg-card,
+    .qrg-color-picker-wrapper,
+    .section-header,
+    .signin-header
+) {
+    justify-items: center;
+}
+/* Consolidated Master Rule: align-content */
+:is(
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-main > main,
+    .breakdown-bars-stack,
+    .column-content,
+    .docs-sidebar-menu,
+    .drawer-body,
+    .footer-brand-col,
+    .footer-nav-col,
+    .grid-catalog,
+    .grid-stack,
+    .kds-cards-container,
+    .m3-grid-stack,
+    .message-list,
+    .product-details,
+    .product-gallery,
+    .product-info-panel,
+    .qr-preview-area,
+    .qrg-lists,
+    .qrg-sidebar-scrollable,
+    .showcase-content,
+    .showcase-sidebar-nav
+) {
+    align-content: start;
+}
+/* Consolidated Master Rule: justify-content */
+:is(
+    .btn-primary-link,
+    .footer-lang-container,
+    .grid-center-x,
+    .header-center-zone,
+    .kds-action-btn,
+    .landing-header-nav,
+    .m3-grid-center-x,
+    .mode-indicator,
+    .payment-methods
+) {
+    justify-content: center;
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .error-banner,
+    .item-name-row,
+    .item-pricing-row,
+    .items-cards-grid,
+    .kds-card,
+    .kds-card-main,
+    .m3-filter-grid,
+    .m3-filter-toolbar,
+    .m3-grid-autofit-sm,
+    .m3-page-header-actions,
+    .summary-rows
+) {
+    gap: var(--md-sys-spacing-3, 0.75rem);
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .back-button,
+    .explorer-chipset-wrapper,
+    .explorer-title-group,
+    .grid-flow-col,
+    .item-card-body,
+    .kds-action-btn,
+    .kds-card-top,
+    .m3-grid-cluster,
+    .order-subtitle,
+    .table-row-actions
+) {
+    gap: var(--md-sys-spacing-2, 0.5rem);
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .analytics-kpi-grid,
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-main > main,
+    .grid-split,
+    .grid-stack,
+    .item-card,
+    .items-list-section,
+    .kanban-column,
+    .kds-column,
+    .m3-grid-stack,
+    .m3-kanban-column,
+    .m3-pricing-grid,
+    .order-items-subheader,
+    .plan-card,
+    .plans-grid,
+    .summary-card,
+    .tier-box,
+    .tiers-grid
+) {
+    gap: var(--md-sys-spacing-4, 1rem);
+}
+/* Consolidated Master Rule: align-content */
+:is(
+    .assistant-search-content,
+    .grid-center-y,
+    .inline-card-experience-body,
+    .m3-bottom-nav-item,
+    .m3-grid-center-y,
+    .pos-card-title-group,
+    .qrg-card,
+    .qrg-empty,
+    .showcase-card-body
+) {
+    align-content: center;
+}
+/* Consolidated Master Rule: align-items */
+:is(
+    .footer-primary-grid,
+    .kds-board,
+    .kiosk-filter-inner,
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail,
+    .m3-grid-sidebar,
+    .m3-grid-split,
+    .m3-grid-triad,
+    .m3-kanban-board,
+    .order-details-layout,
+    .orders-kanban-board,
+    .qr-workspace,
+    .video-card-header
+) {
+    align-items: start;
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .analytics-breakdown-grid,
+    .analytics-explorer-section,
+    .kds-board,
+    .m3-explorer-section,
+    .m3-grid-autofit,
+    .m3-grid-triad,
+    .m3-kanban-board,
+    .m3-page-header,
+    .orders-kanban-board
+) {
+    gap: var(--md-sys-spacing-5, 1.25rem);
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .color-grid,
+    .style-selects-grid
+) {
+    gap: 0.9rem;
+}
+/* Consolidated Master Rule: place-content */
+:is(
+    .empty-cart-view,
+    .grid-center,
+    .grid-center-inline,
+    .m3-grid-center,
+    .m3-grid-center-canvas,
+    .m3-grid-center-inline,
+    .pos-loading
+) {
+    place-content: center;
+}
+/* Consolidated Master Rule: align-self */
+:is(
+    .kiosk-reset-btn,
+    .link-stack,
+    section.link-stack
+) {
+    align-self: start;
+}
+/* Consolidated Master Rule: align-self */
+:is(
+    .kiosk-main .card-footer,
+    .pos-card-footer-row
+) {
+    align-self: end;
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .landing-auth-btn,
+    .landing-floating-auth-btn
+) {
+    gap: 0.45rem;
+}
+/* Consolidated Master Rule: align-content */
+:is(
+    main.docs-page,
+    main.showcase-page
+) {
+    align-content: stretch;
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .pos-product-card,
+    .pos-top-header-actions
+) {
+    gap: var(--space-2, 8px);
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .m3-grid-autofit-lg,
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail,
+    .m3-grid-sidebar,
+    .m3-grid-split,
+    .order-details-layout
+) {
+    gap: var(--md-sys-spacing-6, 1.5rem);
+}
+/* Consolidated Master Rule: gap */
+:is(
+    .grid-2-col,
+    .grid-catalog
+) {
+    gap: var(--space-4, 1rem);
 }

@@ -222,12 +222,6 @@
 ) {
     letter-spacing: 0.8px;
 }
-.assistant-search {
-    line-height: 1.25rem;
-}
-.citation {
-    line-height: 1.25rem;
-}
 @media (max-width: 599.98px) {
     .payment-trust-footer {
         text-align: center;
@@ -255,17 +249,11 @@
 .count-badge {
     line-height: 1;
 }
-.kds-product-name {
-    line-height: 1.25;
-}
 .kiosk-hero-content h1 {
     letter-spacing: -0.5px;
 }
 .kpi-number {
     line-height: 1.1;
-}
-.qrg-title {
-    line-height: 1.3;
 }
 .qrg-card-name {
     letter-spacing: -0.3px;
@@ -298,12 +286,6 @@ header.landing-header .header-brand-text {
         line-height: 1.15;
     }
 }
-.item-name {
-    line-height: 1.3;
-}
-.pos-product-title-text {
-    line-height: 1.25;
-}
 .preview-product-price {
     text-align: right;
 }
@@ -312,4 +294,25 @@ header.landing-header .header-brand-text {
 }
 .showcase-nav-category-header {
     letter-spacing: 0.08em;
+}
+/* Consolidated Master Rule: line-height */
+:is(
+    .assistant-search,
+    .citation
+) {
+    line-height: 1.25rem;
+}
+/* Consolidated Master Rule: line-height */
+:is(
+    .kds-product-name,
+    .pos-product-title-text
+) {
+    line-height: 1.25;
+}
+/* Consolidated Master Rule: line-height */
+:is(
+    .item-name,
+    .qrg-title
+) {
+    line-height: 1.3;
 }

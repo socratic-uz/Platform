@@ -647,27 +647,11 @@
 .plans-section h2 {
     font-size: 1.375rem;
 }
-.empty-plans-icon {
-    font-size: 2rem;
-}
-.header-icon {
-    font-size: 2.25rem;
-}
 .resolution-badge {
     font-size: 0.775rem;
 }
-.empty-cart-view .empty-icon {
-    font-size: 3rem;
-}
 .footer-links-list a {
     font-weight: 400;
-}
-.empty-mini-icon,
-.kds-empty-icon {
-    font-size: 36px;
-}
-.kiosk-brand-tagline {
-    font-size: 0.72rem;
 }
 .kiosk-brand-icon {
     font-size: 13px;
@@ -678,17 +662,11 @@
 .kiosk-hero-content p {
     font-size: clamp(0.88rem, 1.5vw, 1.05rem);
 }
-.product-placeholder-icon {
-    font-size: 36px;
-}
 .ux-mode-badge-overlay {
     font-size: 0.74rem;
 }
 .product-desc {
     font-size: clamp(0.8rem, 1vw, 0.88rem);
-}
-.ux-widget-subrow {
-    font-size: 0.72rem;
 }
 .price-tag {
     font-size: clamp(0.9rem, 1.2vw, 1.15rem);
@@ -707,20 +685,11 @@
         font-size: 1rem;
     }
 }
-.landing-floating-auth-btn {
-    font-size: 0.82rem;
-}
 .about-title,
 .help-title,
 .example-title,
 .landing-subpage-title {
     font-size: 2.75rem;
-}
-.video-card-header h3 {
-    font-size: 1.4rem;
-}
-.qrg-title {
-    font-size: 1.2rem;
 }
 .qrg-preview-header h2 {
     font-size: 1.3rem;
@@ -764,15 +733,6 @@ section.link-stack {
         font-weight: 600;
     }
 }
-header.landing-header .header-brand-text {
-    font-size: 1.2rem;
-}
-.landing-nav-link {
-    font-size: 0.84rem;
-}
-.landing-auth-btn {
-    font-size: 0.84rem;
-}
 @media screen and (min-width: 840px) {
     nav.nav-desktop a.nav-item md-icon,
     nav.nav-desktop a.nav-item .material-symbols-outlined,
@@ -801,12 +761,6 @@ header.landing-header .header-brand-text {
 .pos-catalog-header h4 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
-.pos-org-name {
-    font-size: 0.82rem;
-}
-.product-price {
-    font-size: 2.25rem;
-}
 .not-found-icon {
     font-size: 4rem;
 }
@@ -818,9 +772,6 @@ header.landing-header .header-brand-text {
 }
 .invoice-amount {
     font-size: 2.2rem;
-}
-.brand-screensaver-title {
-    font-size: 3rem;
 }
 @media (max-width: 839.98px) {
     .brand-screensaver-title {
@@ -836,12 +787,70 @@ header.landing-header .header-brand-text {
 .showcase-brand-icon {
     font-size: 28px;
 }
-.showcase-hero h1 {
-    font-size: 2rem;
-}
-.showcase-section-title {
-    font-size: 1.4rem;
-}
 .showcase-card-code {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .empty-plans-icon,
+    .showcase-hero h1
+) {
+    font-size: 2rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .header-icon,
+    .product-price
+) {
+    font-size: 2.25rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .brand-screensaver-title,
+    .empty-cart-view .empty-icon
+) {
+    font-size: 3rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .product-placeholder-icon
+) {
+    font-size: 36px;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .kiosk-brand-tagline,
+    .ux-widget-subrow
+) {
+    font-size: 0.72rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .landing-floating-auth-btn,
+    .pos-org-name
+) {
+    font-size: 0.82rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .showcase-section-title,
+    .video-card-header h3
+) {
+    font-size: 1.4rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .qrg-title,
+    header.landing-header .header-brand-text
+) {
+    font-size: 1.2rem;
+}
+/* Consolidated Master Rule: font-size */
+:is(
+    .landing-auth-btn,
+    .landing-nav-link
+) {
+    font-size: 0.84rem;
 }

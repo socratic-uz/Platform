@@ -19,21 +19,9 @@
     nav.nav-desktop a.nav-item span
 ) {
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .user-message {
     white-space: pre-wrap;
-}
-.about-title,
-.help-title,
-.example-title,
-.landing-subpage-title {
-    word-break: normal;
-    overflow-wrap: break-word;
-}
-.docs-article {
-    word-break: normal;
-    overflow-wrap: break-word;
 }
 .product-description-text {
     white-space: pre-line;
@@ -41,21 +29,46 @@
 .showcase-card-code {
     white-space: pre;
 }
+/* Consolidated Master Rule: white-space */
 :is(
     .cart-count,
     .cart-total,
+    .item-headline,
     .items-count-badge,
+    .kiosk-brand-name,
     .kiosk-brand-tagline,
     .kiosk-category-label,
-    .kiosk-tier-btn
+    .kiosk-tier-btn,
+    .m3-page-header-title,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
 ) {
     white-space: nowrap;
 }
-.product-desc {
+/* Consolidated Master Rule: word-break */
+:is(
+    .about-title,
+    .docs-article,
+    .example-title,
+    .help-title,
+    .landing-subpage-title
+) {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+/* Consolidated Master Rule: overflow-wrap */
+/* Consolidated Master Rule: -webkit-line-clamp */
+:is(
+    .pos-product-title-text,
+    .product-desc
+) {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.pos-product-title-text {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
+/* Consolidated Master Rule: -webkit-box-orient */
