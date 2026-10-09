@@ -29,31 +29,68 @@
 @import "themes/expressive.css";
 
 /* 4. W3C Rule Modules (Deduplication & Layout Primitives) */
+/* Box Model */
 @import "box-model/sizing.css";
-@import "box-model/padding.css";
 @import "box-model/margin.css";
+@import "box-model/padding.css";
 @import "box-model/border.css";
 @import "box-model/outline.css";
+
+/* Layout */
 @import "layout/display.css";
 @import "layout/grid.css";
 @import "layout/alignment.css";
+@import "layout/multi-column.css";
 @import "layout/table.css";
+
+/* Positioning */
 @import "positioning/position.css";
 @import "positioning/stacking.css";
+@import "positioning/anchor.css";
+
+/* Overflow */
 @import "overflow/overflow.css";
+@import "overflow/scrolling.css";
 @import "overflow/scrollbars.css";
+
+/* Typography */
 @import "typography/font.css";
+@import "typography/text-layout.css";
 @import "typography/text-wrapping.css";
+@import "typography/text-decoration.css";
+
+/* Color */
 @import "color/color.css";
 @import "color/background.css";
+
+/* Effects */
 @import "effects/shadow.css";
+@import "effects/filters.css";
+@import "effects/masking.css";
+@import "effects/clipping.css";
+
+/* Transforms */
 @import "transforms/transform.css";
+@import "transforms/motion-path.css";
+
+/* Motion */
 @import "motion/transitions.css";
 @import "motion/animations.css";
+
+/* Content */
+@import "content/generated.css";
+@import "content/lists.css";
 @import "content/replaced.css";
+
+/* Interaction */
 @import "interaction/pointer.css";
 @import "interaction/selection.css";
+@import "interaction/form-controls.css";
+
+/* Internationalization (i18n) */
+@import "i18n/direction.css";
+@import "i18n/writing-mode.css";
+
+/* Containment */
 @import "containment/contain.css";
-
-/* 5. Component Primitives (Fully Consolidated to W3C CSS Modules) */
-
+@import "containment/container-queries.css";
