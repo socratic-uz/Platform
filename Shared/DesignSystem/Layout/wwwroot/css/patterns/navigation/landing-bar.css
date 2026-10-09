@@ -49,7 +49,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-header-nav {
-    align-items: center;
     justify-content: center;
     gap: 0.25rem;
     background: rgba(255, 255, 255, 0.03);
@@ -58,11 +57,9 @@ header.landing-header .header-brand-text {
 }
 
 .landing-nav-link {
-    align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.85rem;
     color: var(--md-sys-color-outline);
-    text-decoration: none;
     font-size: 0.84rem;
     font-weight: 500;
     letter-spacing: -0.01em;
@@ -91,7 +88,6 @@ header.landing-header .header-brand-text {
 
 .landing-header-actions {
     grid-auto-flow: column;
-    align-items: center;
     gap: 0.75rem;
     justify-self: end;
 }
@@ -116,7 +112,6 @@ header.landing-header .header-brand-text {
 
 .lang-dropdown-menu {
     background: var(--md-sys-color-surface-container-high, rgba(13, 19, 34, 0.95));
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .lang-menu-item {
@@ -131,7 +126,6 @@ header.landing-header .header-brand-text {
 .landing-auth-btn {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    align-items: center;
     gap: 0.45rem;
     padding: 0.4rem 1.1rem;
     background: linear-gradient(135deg, rgba(14, 165, 233, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
@@ -139,7 +133,6 @@ header.landing-header .header-brand-text {
     color: var();
     font-size: 0.84rem;
     font-weight: 600;
-    text-decoration: none;
     touch-action: manipulation;
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
@@ -210,11 +203,9 @@ header.landing-header .header-brand-text {
 
 .mobile-nav-item {
     grid-template-columns: 24px minmax(0, 1fr);
-    align-items: center;
     gap: 1rem;
     padding: 0.85rem 1.15rem;
     color: var(--md-sys-color-on-surface-variant);
-    text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     transition: background 0.2s ease, color 0.2s ease;
@@ -250,7 +241,6 @@ footer.app-footer {
     color: var(--md-sys-color-on-surface);
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
-    position: relative;
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -287,9 +277,7 @@ footer.app-footer {
 .footer-brand-link {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    align-items: center;
     gap: 0.65rem;
-    text-decoration: none;
     color: var(--md-sys-color-on-surface);
     min-width: 48px;
     width: max-content;
@@ -323,12 +311,10 @@ footer.app-footer {
 .footer-system-status {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    align-items: center;
     gap: 0.65rem;
     padding: 0.35rem 0.85rem;
     border-radius: 20px;
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
-    border: 1px solid var(--md-sys-color-outline-variant);
     width: max-content;
     margin-top: 0.25rem;
 }
@@ -382,10 +368,8 @@ footer.app-footer {
 .footer-links-list a {
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 0.55rem;
     color: var(--md-sys-color-on-surface-variant);
-    text-decoration: none;
     font-size: 0.875rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
@@ -410,7 +394,6 @@ footer.app-footer {
 
 .footer-bottom-bar {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
     gap: 1.5rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -425,18 +408,15 @@ footer.app-footer {
 
 .footer-lang-container {
     justify-content: center;
-    align-items: center;
 }
 
 .footer-trust-info {
-    align-items: center;
     justify-content: end;
 }
 
 .trust-badge {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    align-items: center;
     gap: 0.4rem;
     font-size: 0.75rem;
     color: var(--md-sys-color-on-surface-variant);

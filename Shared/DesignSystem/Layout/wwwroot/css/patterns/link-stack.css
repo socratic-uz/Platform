@@ -39,14 +39,10 @@ section.link-stack {
     grid-auto-flow: column;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1rem;
-    align-items: center;
-    text-decoration: none;
     border-radius: 0;
     padding: 1.5rem;
     justify-self: stretch;
     font-size: .9rem;
-    position: relative;
-    overflow: hidden;
 }
 
 .link-stack a::before,

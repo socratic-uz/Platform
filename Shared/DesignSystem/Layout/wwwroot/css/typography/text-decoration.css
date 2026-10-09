@@ -1,5 +1,34 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C typography/text-decoration.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Text Decoration Master Rules via :is(...)
    ========================================================================== */
 
+/* Universal Text Decoration None Master Rule */
+:is(
+    .back-button,
+    .btn-primary-link,
+    .chat-back-link,
+    .citation,
+    .crumb-link,
+    .cta-link,
+    .docs-breadcrumb-link,
+    .footer-brand-link,
+    .footer-links-list a,
+    .header-brand-link,
+    .kiosk-product-title-link,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-nav-link,
+    .link-stack a,
+    .link-stack article,
+    .m3-bottom-nav-item,
+    .mobile-nav-item,
+    .payment-support a,
+    .pos-header-link,
+    .qrg-back,
+    .seller-browse-all,
+    .seller-name-link
+) {
+    text-decoration: none;
+}

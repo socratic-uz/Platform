@@ -1,5 +1,36 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C positioning/position.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Positioning Master Rules via :is(...)
    ========================================================================== */
 
+/* Universal Position Relative Master Rule */
+:is(
+    .about-container,
+    .ad-slide-touch-prompt,
+    .attract-loop-content,
+    .brand-screensaver-cta,
+    .chat-page-root,
+    .example-container,
+    .faceid-scanner-frame,
+    .help-container,
+    .item-card,
+    .kds-card,
+    .kiosk-hero,
+    .landing-grid,
+    .landing-subpage-container,
+    .link-stack a,
+    .link-stack article,
+    .payment-dashboard .glass-card,
+    .plan-card,
+    .product-main-image-wrap,
+    .product-media,
+    .showcase-card-code,
+    .showcase-content,
+    .store-product-page,
+    .tier-box,
+    footer.app-footer,
+    header.app-header
+) {
+    position: relative;
+}

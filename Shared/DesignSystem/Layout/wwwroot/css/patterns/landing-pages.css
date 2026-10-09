@@ -15,7 +15,6 @@
     margin: 0 auto;
     gap: 3.5rem;
     padding: 2.5rem 1.5rem 3rem 1.5rem;
-    position: relative;
     overflow-x: clip;
 }
 
@@ -57,7 +56,6 @@
 }
 
 .m3-pill-badge {
-    align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 1rem;
     background: var(--md-sys-color-primary-container);
@@ -95,7 +93,6 @@
     gap: 1.5rem;
     padding: 2.5rem;
     background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
 }
 
@@ -115,9 +112,7 @@
 
 .video-player-wrapper {
     width: 100%;
-    overflow: hidden;
     background: var(--md-sys-color-surface-container-lowest);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .video-player-wrapper video {
@@ -131,7 +126,6 @@
 .video-caption {
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: 0.6rem;
     font-size: 0.95rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
@@ -158,7 +152,6 @@
     gap: 1.25rem;
     padding: 1.75rem;
     background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -185,7 +178,6 @@
 .pillar-features li {
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -197,13 +189,11 @@
     gap: 1.5rem;
     padding: 3.5rem 2rem;
     background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .cta-actions {
     grid-auto-flow: column;
     gap: 1rem;
-    align-items: center;
 }
 
 /* ─── 4. Categories, FAQ & Example Grids ─────────────────────────────────── */
@@ -214,7 +204,6 @@
     width: 100%;
     max-width: 100%;
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
-    overflow-x: auto;
     scrollbar-width: thin;
 }
 
@@ -245,14 +234,12 @@
     gap: 1rem;
     padding: 1.5rem;
     background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .contact-card {
     gap: 1.5rem;
     padding: 2.5rem;
     background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     width: 100%;
 }
 
@@ -282,7 +269,6 @@
     gap: 16px;
     padding: 24px 20px;
     border-right: 1px solid var(--md-sys-color-outline-variant);
-    overflow: hidden;
     background: var(--md-sys-color-surface-container-low);
     height: 100%;
 }
@@ -296,7 +282,6 @@
 }
 
 .qrg-sidebar-header {
-    align-items: center;
     gap: 14px;
 }
 
@@ -323,12 +308,10 @@
 
 .qrg-back {
     grid-auto-flow: column;
-    align-items: center;
     gap: 6px;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--md-sys-color-outline);
-    text-decoration: none;
     padding: 8px 10px;
     border-radius: 12px;
     transition: background 0.15s, color 0.15s;
@@ -348,11 +331,9 @@
     background: var(--md-sys-color-surface-container);
     padding: 16px;
     gap: 12px;
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .qrg-section-title {
-    align-items: center;
     gap: 8px;
     font-size: 0.85rem;
     font-weight: 700;
@@ -399,7 +380,6 @@
 
 .qrg-slider-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--md-sys-color-outline);
@@ -422,7 +402,6 @@
 
 .qrg-group-head {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -460,7 +439,6 @@
 
 .qrg-preview-header {
     grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 12px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 16px;
@@ -487,7 +465,6 @@
 }
 
 .qrg-card {
-    border: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
     justify-items: center;
     align-content: center;
@@ -544,7 +521,6 @@ main.docs-page {
     align-content: stretch !important;
     height: 100%;
     min-height: 0;
-    overflow: hidden;
     background-color: var(--md-sys-color-surface);
 }
 
@@ -555,13 +531,11 @@ main.docs-page {
     grid-template-rows: auto minmax(0, 1fr);
     height: 100%;
     min-height: 0;
-    overflow: hidden;
 }
 
 .docs-sidebar-header {
     padding: 8px 16px;
     grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
     gap: 12px;
     min-height: 56px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
@@ -636,7 +610,6 @@ main.docs-page {
     max-width: 480px;
     padding: 32px;
     background-color: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
     gap: 8px;
 }
 
@@ -654,13 +627,11 @@ main.docs-page {
 
 .docs-header-bar {
     grid-auto-flow: column;
-    align-items: center;
     gap: 0.75rem;
 }
 
 .docs-header-breadcrumb {
     grid-auto-flow: column;
-    align-items: center;
     gap: 0.35rem;
     font-size: 0.9rem;
     font-weight: 500;
@@ -669,12 +640,10 @@ main.docs-page {
 
 .docs-breadcrumb-link {
     color: var(--md-sys-color-primary);
-    text-decoration: none;
 }
 
 .docs-header-actions {
     grid-auto-flow: column;
-    align-items: center;
     gap: 0.75rem;
     justify-self: end;
 }

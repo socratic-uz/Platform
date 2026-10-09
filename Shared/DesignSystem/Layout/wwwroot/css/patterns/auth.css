@@ -13,7 +13,6 @@
 .signin-card,
 .auth-card {
     background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: 2.5rem 2rem;
     width: 100%;
     max-width: 480px;
@@ -59,13 +58,11 @@
 .signin-error-banner,
 .auth-error-banner {
     background: var(--md-sys-color-error-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-error);
     padding: 12px 16px;
     border-radius: 12px;
     font-size: 0.875rem;
     grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 8px;
 }
@@ -81,7 +78,6 @@
 
 .auth-divider {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
     gap: 12px;
     margin: 0.5rem 0;
     color: var(--md-sys-color-outline);
@@ -99,9 +95,7 @@
 
 .otp-target-hint {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     background: var(--md-sys-color-secondary-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: 12px;
     padding: 10px 14px;
     font-size: 0.85rem;
@@ -122,13 +116,11 @@
 }
 
 .faceid-scanner-frame {
-    position: relative;
     width: 220px;
     height: 220px;
     border-radius: 50%;
     border: 3px solid var(--md-sys-color-primary);
     background: var(--md-sys-color-surface-container-low);
-    overflow: hidden;
     box-shadow: 0 0 30px var(--md-sys-color-primary-container);
 }
 

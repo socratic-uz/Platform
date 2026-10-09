@@ -29,7 +29,6 @@
 .payment-dashboard .glass-card {
     padding: 1.5rem;
     gap: 1rem;
-    position: relative;
 }
 
 .profile-title {
@@ -37,7 +36,6 @@
     font-weight: 600;
     margin-bottom: 0.5rem;
     grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 0.5rem;
     color: var(--md-sys-color-primary);
@@ -101,7 +99,6 @@
 }
 
 .plan-card {
-    border: 1px solid var(--md-sys-color-outline-variant);
     padding: 1.375rem;
     background: var(--md-sys-color-surface-container);
     gap: 1.125rem;
@@ -109,7 +106,6 @@
 
 .plan-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
     padding-bottom: 0.875rem;
     gap: 1rem;
@@ -128,7 +124,6 @@
 .progress-bar-bg {
     background-color: var(--md-sys-color-surface-variant);
     height: 8px;
-    overflow: hidden;
 }
 
 .progress-bar-fill {
@@ -219,7 +214,6 @@
 /* Payment Trust Footer */
 .payment-trust-footer {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -232,7 +226,6 @@
 .trust-badge {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    align-items: center;
     gap: 6px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -245,17 +238,14 @@
 }
 
 .payment-methods {
-    align-items: center;
     justify-content: center;
     gap: 0.5rem;
 }
 
 .payment-support a {
     color: var(--md-sys-color-primary);
-    text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
-    align-items: center;
 }
 
 .payment-support a:hover {

@@ -60,14 +60,12 @@
 
 .drawer-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 16px;
 }
 
 .header-title-box {
     grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 8px;
 }
@@ -77,7 +75,6 @@
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
     margin: 0;
-    align-items: center;
     gap: 8px;
 }
 
@@ -120,12 +117,10 @@
     margin: 0;
     gap: 8px;
     background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .cart-item-row {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 12px;
     padding: 12px;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
@@ -142,7 +137,6 @@
 .item-headline {
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
-    overflow: hidden;
 }
 
 .item-support {
@@ -158,14 +152,11 @@
 }
 
 .item-actions {
-    align-items: center;
     gap: 8px;
 }
 
 .qty-stepper {
-    align-items: center;
     background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .qty-val {
@@ -182,7 +173,6 @@
 .promo-input-group {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
-    align-items: center;
 }
 
 .promo-field {
@@ -199,12 +189,10 @@
 
 .shipping-card {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
     background: var(--md-sys-color-surface-container);
     padding: 12px;
-    border: 1px solid var(--md-sys-color-outline-variant);
     margin-top: 8px;
 }
 

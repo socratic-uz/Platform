@@ -1,21 +1,17 @@
 /* ─── Breadcrumbs (Universal Navigation) ─────────────────────────────────── */
 .m3-breadcrumbs,
 .store-breadcrumbs {
-    align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
     margin-bottom: 2rem;
-    overflow-x: auto;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
 }
 
 .crumb-link {
     grid-auto-flow: column;
-    align-items: center;
     gap: 0.35rem;
     color: var(--md-sys-color-on-surface-variant);
-    text-decoration: none;
     transition: color 0.2s ease;
     padding: 0 4px;
 }

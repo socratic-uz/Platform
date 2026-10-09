@@ -20,7 +20,6 @@
 
 .order-card-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: 0.5rem;
 }
 
@@ -38,7 +37,6 @@
 
 .detail-item {
     grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
     color: var();
@@ -64,7 +62,6 @@
 
 .order-card-footer {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     color: var();
     font-size: 0.85rem;
     font-weight: 600;
@@ -90,7 +87,6 @@
 .orders-table-wrapper,
 .order-items-table-wrapper {
     width: 100%;
-    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     background: var();
     border: 1px solid var();
@@ -132,7 +128,6 @@
 .date-cell,
 .amount-cell {
     grid-auto-flow: column;
-    align-items: center;
     justify-content: start;
     gap: 0.4rem;
 }
@@ -155,7 +150,6 @@
 
 .orders-error-banner {
     grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
     gap: 0.75rem;
     padding: 1rem 1.25rem;
     background: var();
@@ -171,12 +165,10 @@
 .back-button {
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
     background: transparent;
     color: var(--md-sys-color-primary);
-    text-decoration: none;
     font-size: 0.9375rem;
     font-weight: 600;
     transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
@@ -197,7 +189,6 @@
 .items-count-badge {
     grid-auto-flow: column;
     grid-auto-columns: max-content auto;
-    align-items: center;
     gap: var(--md-sys-spacing-2, 0.375rem);
     padding: var(--md-sys-spacing-2, 0.375rem) var(--md-sys-spacing-4, 0.875rem);
     background: var(--md-sys-color-surface-container-high);
@@ -213,7 +204,6 @@
 
 .order-items-subheader {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: var(--md-sys-spacing-4, 1rem);
 }
 
@@ -221,7 +211,6 @@
     margin: 0;
     grid-auto-flow: column;
     justify-content: start;
-    align-items: center;
     gap: var(--md-sys-spacing-2, 0.5rem);
     font-size: 0.9375rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -265,10 +254,8 @@
 }
 
 .item-card {
-    position: relative;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4, 1rem);
-    align-items: center;
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
 }
 
@@ -289,7 +276,6 @@
 
 .item-name-row {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
@@ -303,7 +289,6 @@
 
 .item-pricing-row {
     grid-template-columns: auto auto minmax(0, 1fr);
-    align-items: center;
     gap: var(--md-sys-spacing-3, 0.75rem);
 }
 

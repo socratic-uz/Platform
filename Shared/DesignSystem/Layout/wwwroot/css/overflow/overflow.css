@@ -1,5 +1,72 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C overflow/overflow.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Overflow Master Rules via :is(...) (Zero Flexbox)
    ========================================================================== */
 
+/* Universal Overflow Hidden Master Rule */
+:is(
+    .ad-slot-container,
+    .bar-track,
+    .chat-page-root,
+    .designer-sidebar,
+    .docs-sidebar,
+    .faceid-scanner-frame,
+    .fullscreen-player,
+    .item-headline,
+    .kiosk-attract-loop,
+    .kiosk-brand-name,
+    .kiosk-hero,
+    .link-stack a,
+    .link-stack article,
+    .pos-catalog,
+    .pos-product-title-text,
+    .pos-sidebar,
+    .pos-ux-mode-title,
+    .price-tag,
+    .product-desc,
+    .product-main-image-wrap,
+    .product-media,
+    .progress-bar-bg,
+    .qr-canvas-box,
+    .qrg-sidebar,
+    .showcase-card,
+    .showcase-nav-btn-left,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    .thumb-btn,
+    .video-player-wrapper,
+    main.docs-page,
+    main.showcase-page
+) {
+    overflow: hidden;
+}
+
+/* Universal Horizontal Overflow Auto Master Rule */
+:is(
+    .active-orders-scroll,
+    .analytics-period-selector,
+    .assistant-message-text pre > code,
+    .example-categories,
+    .explorer-chipset-wrapper,
+    .help-categories,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .m3-filter-toolbar,
+    .order-items-table-wrapper,
+    .orders-table-wrapper,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-tags,
+    .product-thumbnails,
+    .showcase-card-code,
+    .showcase-demo-row,
+    .store-breadcrumbs,
+    .suggestions-wrapper,
+    .toast-triggers-row,
+    .ux-widget-chips,
+    assistant-message pre > code
+) {
+    overflow-x: auto;
+}

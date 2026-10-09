@@ -8,8 +8,6 @@
 .chat-page-root {
     height: var(--tg-viewport-height, 100dvh);
     max-height: 100dvh;
-    overflow: hidden;
-    position: relative;
     color-scheme: dark;
     background: radial-gradient(circle at 50% 15%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface) 100%);
     color: var();
@@ -51,7 +49,6 @@
 
 .header-content {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     width: 100%;
 }
 
@@ -61,7 +58,6 @@
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: var();
-    text-decoration: none;
     transition: all 0.2s ease;
 }
 
@@ -236,27 +232,22 @@ assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
-    border: 1px solid var(--md-sys-color-outline-variant);
     display: block;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
-    overflow-x: auto;
 }
 
 /* ─── 5. Citations ───────────────────────────────────────────────────────── */
 .citation {
-    align-items: center;
     padding: 0.5rem 0.75rem;
     margin-top: 1rem;
     margin-right: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-bottom: 2px solid var(--md-sys-color-tertiary);
     gap: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
-    text-decoration: none;
 }
 
 .citation[href]:hover {
@@ -282,7 +273,6 @@ assistant-message pre > code,
 /* ─── 6. Prompt Suggestions ─────────────────────────────────────────────── */
 .suggestions-wrapper {
     width: 100%;
-    overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -296,7 +286,6 @@ assistant-message pre > code,
 
 .suggestions {
     gap: 0.5rem;
-    align-items: center;
     justify-content: start;
     padding: 0.25rem 0;
     width: max-content;
@@ -320,7 +309,6 @@ assistant-message pre > code,
 
 .input-box {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     background: var();
     border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;

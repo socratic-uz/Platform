@@ -1,9 +1,7 @@
 /* ─── 11. Universal Filter & Tools Toolbar ──────────────────────────────── */
 .m3-filter-toolbar {
-    align-items: center;
     gap: var(--md-sys-spacing-3, 0.75rem);
     width: 100%;
-    overflow-x: auto;
     padding-bottom: 0.25rem;
 }
 
