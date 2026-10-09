@@ -169,7 +169,6 @@
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
     font-weight: 600;
-    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -195,7 +194,6 @@
     font-size: 0.825rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
-    cursor: pointer;
     min-height: 36px;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -223,7 +221,6 @@
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
     font-weight: 500;
-    cursor: pointer;
     touch-action: manipulation;
     min-height: 36px;
     transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -280,7 +277,7 @@
     height: 8px;
     border-radius: 50%;
     background: var();
-    box-shadow: 0 0 8px var();
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 

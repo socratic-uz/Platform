@@ -85,7 +85,6 @@
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
     font-weight: 500;
-    cursor: pointer;
     display: inline-grid;
     align-items: center;
     box-sizing: border-box;
@@ -147,7 +146,6 @@
     border: none;
     color: inherit;
     font-size: 1.1rem;
-    cursor: pointer;
     min-width: 48px;
     min-height: 48px;
     display: inline-grid;
@@ -274,7 +272,6 @@
     min-width: 48px;
     min-height: 48px;
     border: none;
-    cursor: pointer;
     background: none;
     padding: 0;
     box-sizing: border-box;

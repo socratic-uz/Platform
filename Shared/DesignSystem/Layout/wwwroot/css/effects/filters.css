@@ -1,5 +1,49 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C effects/filters.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Glassmorphism & Backdrop Filters Master Rules via :is(...)
    ========================================================================== */
+
+/* Standard Glassmorphism (16px Blur) */
+:is(
+    .ad-network-unit-card,
+    .app-grid > nav,
+    .auth-card,
+    .brand-screensaver-logo-wrapper,
+    .cart-bar,
+    .input-box,
+    .landing-floating-controls,
+    .landing-header-nav,
+    .landing-mobile-menu-drawer,
+    .lang-dropdown-menu,
+    .lang-toggle-btn,
+    .m3-bottom-nav,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .screensaver-pro-badge,
+    .showcase-sidebar-backdrop,
+    .showcase-sidebar-header,
+    .showcase-topbar,
+    .signin-card,
+    header.app-header,
+    header.app-header.landing-header,
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile
+) {
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+/* Subtle Glassmorphism (8px Blur) */
+:is(
+    .kiosk-wish-icon,
+    .landing-mobile-menu-backdrop,
+    .showcase-stat-pill,
+    .ux-mode-badge-overlay
+) {
+    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
 

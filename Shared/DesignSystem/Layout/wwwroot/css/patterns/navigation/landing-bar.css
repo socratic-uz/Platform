@@ -1,8 +1,6 @@
 /* Landing Header (Dark Cyber-Fintech Glassmorphism Theme) */
 header.app-header.landing-header {
     background: rgba(4, 6, 10, 0.6);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
     color: var(--md-sys-color-on-surface);
@@ -60,7 +58,6 @@ header.landing-header .header-brand-text {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 0.25rem 0.5rem;
-    backdrop-filter: blur(12px);
 }
 
 .landing-nav-link {
@@ -114,7 +111,6 @@ header.landing-header .header-brand-text {
     padding: 0.3rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.08));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
-    backdrop-filter: blur(12px);
     color: var();
     font-size: 0.8rem;
     font-weight: 600;
@@ -131,7 +127,6 @@ header.landing-header .header-brand-text {
 .lang-dropdown-menu {
     background: var(--md-sys-color-surface-container-high, rgba(13, 19, 34, 0.95));
     border: 1px solid var(--md-sys-color-outline-variant);
-    backdrop-filter: blur(20px);
     box-shadow: var(--md-sys-elevation-level3, 0 16px 36px rgba(0, 0, 0, 0.6));
 }
 
@@ -191,7 +186,6 @@ header.landing-header .header-brand-text {
     border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.12));
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.05));
     color: var();
-    cursor: pointer;
     touch-action: manipulation;
     transition: background var(--md-sys-motion-duration-short4, 200ms) ease, border-color var(--md-sys-motion-duration-short4, 200ms) ease;
 }
@@ -209,7 +203,6 @@ header.landing-header .header-brand-text {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(8px);
     z-index: 80;
 }
 
@@ -219,8 +212,6 @@ header.landing-header .header-brand-text {
     left: 0;
     right: 0;
     background: rgba(4, 6, 10, 0.95);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.25rem 1.5rem 2rem 1.5rem;
     grid-auto-flow: row;

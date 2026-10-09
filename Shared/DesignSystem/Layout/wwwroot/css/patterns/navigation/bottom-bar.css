@@ -31,10 +31,8 @@
         z-index: 100 !important;
         box-sizing: border-box;
         background: var(--md-sys-color-surface-container) !important;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
         border-top: 1px solid var(--md-sys-color-outline-variant) !important;
-        box-shadow: 0 -4px 16px rgb(from var() r g b / 0.15);
+        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
     }
 
     nav.glass a.nav-item,
@@ -99,8 +97,6 @@
     height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
     background: var(--md-sys-glass-surface);
-    backdrop-filter: var(--md-sys-glass-blur-heavy);
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-heavy);
     border-top: var(--md-sys-glass-border);
     box-shadow: 0 -2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.1);
 }

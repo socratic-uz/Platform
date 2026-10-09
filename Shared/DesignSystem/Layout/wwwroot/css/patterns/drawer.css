@@ -6,8 +6,6 @@
     width: 100%;
     height: 100dvh;
     background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
     z-index: var(--m3-z-drawer, 40);
     grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
     justify-items: end;

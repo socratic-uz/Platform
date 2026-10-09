@@ -285,7 +285,6 @@
     font-size: 0.9375rem;
     font-weight: 600;
     border: none;
-    cursor: pointer;
     box-sizing: border-box;
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),

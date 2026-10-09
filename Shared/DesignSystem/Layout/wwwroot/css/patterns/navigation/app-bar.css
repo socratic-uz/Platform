@@ -11,8 +11,6 @@ header.app-header {
     max-width: 100%;
     color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
     min-height: calc(64px + env(safe-area-inset-top, 0px));

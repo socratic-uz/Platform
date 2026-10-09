@@ -1,5 +1,33 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C interaction/pointer.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Interactive Elements Cursor & Touch Actions via :is(...)
    ========================================================================== */
 
+/* Master Interactive Click Targets Grouping */
+:is(
+    .ad-upgrade-link,
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .banner-close-btn,
+    .cart-summary.interactive,
+    .color-picker-row input[type="color"],
+    .docs-refresh-btn,
+    .kds-action-btn,
+    .kiosk-attract-loop,
+    .kiosk-product-title-link,
+    .landing-mobile-menu-toggle,
+    .plan-card,
+    .pos-quick-bill-btn,
+    .preset-btn,
+    .product-details,
+    .product-media,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .thumb-btn,
+    .tier-box
+) {
+    cursor: pointer;
+}

@@ -15,8 +15,6 @@
 .signin-card,
 .auth-card {
     background: var(--md-sys-color-surface-container-high);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--md-sys-color-outline-variant);
     padding: 2.5rem 2rem;
     width: 100%;

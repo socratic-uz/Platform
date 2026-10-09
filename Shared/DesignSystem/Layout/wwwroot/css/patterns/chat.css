@@ -343,8 +343,6 @@ assistant-message pre > code,
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     background: var();
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
     min-height: 48px;
@@ -357,7 +355,7 @@ assistant-message pre > code,
 
 .input-box:focus-within {
     border-color: var();
-    box-shadow: 0 0 0 1px var();
+    box-shadow: 0 0 0 1px var(--md-sys-color-primary);
     outline: none;
 }
 
