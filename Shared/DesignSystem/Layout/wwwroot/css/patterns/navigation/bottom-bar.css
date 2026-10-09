@@ -89,7 +89,6 @@
     left: 0;
     right: 0;
     z-index: var(--m3-z-bottom-nav, 40);
-    grid-auto-flow: column;
     grid-auto-columns: 1fr;
     height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -103,7 +102,6 @@
     align-content: center;
     gap: 0.25rem;
     font-size: 0.75rem;
-    font-weight: 500;
     padding: 0.5rem;
     transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
 }

@@ -259,3 +259,75 @@
 ) {
     color: var(--md-sys-color-primary);
 }
+
+/* Material Design 3 Outline Text Color Master Rule */
+:is(
+    .ad-disclaimer,
+    .auth-divider,
+    .card-payment,
+    .column-empty,
+    .crumb-sep,
+    .empty-cart-view .empty-icon,
+    .faceid-notice,
+    .kds-empty-col,
+    .kiosk-wish-icon,
+    .landing-nav-link,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-org-name,
+    .product-img-placeholder,
+    .qrg-back,
+    .qrg-color-picker-wrapper,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-field-label,
+    .qrg-group-head,
+    .qrg-slider-header
+) {
+    color: var(--md-sys-color-outline);
+}
+
+/* Material Design 3 On-Primary-Container Text Color Master Rule */
+:is(
+    .analytics-period-chip.active,
+    .badge-ready,
+    .card-completed .card-status-chip,
+    .card-paid .card-status-chip,
+    .header-brand-icon-box,
+    .item-qty-badge,
+    .kds-status-tag,
+    .kiosk-brand-logo-fallback,
+    .m3-pill-badge,
+    .mode-edit,
+    .notification-banner,
+    .pillar-icon-box,
+    .preset-btn:hover,
+    .qrg-badge,
+    .qrg-logo-badge,
+    .showcase-nav-btn.active,
+    .user-message
+) {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* Material Design 3 On-Primary Text Color Master Rule */
+:is(
+    .ad-slide-touch-prompt,
+    .assistant-message-icon,
+    .auth-logo-badge,
+    .brand-screensaver-cta,
+    .btn-ready,
+    .footer-brand-badge,
+    .header-rocket-icon,
+    .landing-auth-btn:hover,
+    .landing-auth-btn:hover md-icon,
+    .mobile-nav-item:active,
+    .mobile-nav-item:hover,
+    .showcase-brand-badge,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .signin-logo-badge,
+    .ux-discount-badge,
+    header.landing-header .header-brand-icon-box
+) {
+    color: var(--md-sys-color-on-primary);
+}

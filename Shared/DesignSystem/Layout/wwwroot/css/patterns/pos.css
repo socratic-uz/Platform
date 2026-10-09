@@ -26,11 +26,9 @@
 .pos-catalog {
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 16px;
-    height: 100%;
 }
 
 .pos-catalog-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 12px;
     gap: 12px;
 }
@@ -45,7 +43,6 @@
 
 .pos-org-name {
     font-size: 0.82rem;
-    color: var(--md-sys-color-outline);
     margin-top: 2px;
 }
 
@@ -61,11 +58,9 @@
 .pos-loading {
     place-content: center;
     gap: 12px;
-    height: 100%;
 }
 
 .pos-filters {
-    grid-auto-flow: column;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     touch-action: pan-x;
@@ -113,7 +108,6 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-outline);
 }
 
 .pos-card-title-group {
@@ -125,7 +119,6 @@
     font-size: 0.7rem;
     display: block;
     line-height: 1.2;
-    text-transform: uppercase;
     letter-spacing: 0.02em;
 }
 
@@ -139,15 +132,12 @@
 }
 
 .pos-card-footer-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     align-self: end;
     padding-top: 8px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .pos-price-text {
     font-size: 0.88rem;
-    font-weight: 800;
 }
 
 .pos-card-footer-row md-icon-button,
@@ -161,7 +151,6 @@
     border-radius: var(--md-sys-shape-expressive-dock, 32px);
     padding: 20px;
     grid-template-rows: auto minmax(0, 1fr) auto;
-    height: 100%;
 }
 
 .pos-sidebar-header {
@@ -172,12 +161,10 @@
 }
 
 .pos-sidebar-header-row {
-    grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .pos-orders-label {
     font-size: 0.85rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -196,7 +183,6 @@
 .pos-actions {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 12px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     padding-top: 16px;
 }
 
@@ -211,7 +197,6 @@
 
 .pos-quick-bill-btn {
     padding: 10px 4px;
-    background: var(--md-sys-color-surface-container-high);
     font-size: 0.88rem;
     transition: background 0.15s ease, transform 0.1s ease;
 }
@@ -236,7 +221,6 @@
 .pos-tech-chip {
     padding: 4px 10px;
     font-size: 0.75rem;
-    background: var(--md-sys-color-surface-container-high);
 }
 
 /* ─── 2. Store Product Detail Page ───────────────────────────────────────── */
@@ -256,22 +240,18 @@
     gap: 3rem;
     background: transparent;
     border: none;
-    padding: 0;
 }
 
 .product-gallery {
     gap: 1rem;
-    align-content: start;
 }
 
 .product-main-image-wrap {
     aspect-ratio: 4 / 3;
     border-radius: 20px;
-    background: var(--md-sys-color-surface-container-high);
 }
 
 .product-main-img {
-    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -305,7 +285,6 @@
     min-width: 48px;
     border-radius: 12px;
     border: 2px solid transparent;
-    padding: 0;
     background: none;
     opacity: 0.6;
     transition: opacity 0.2s ease, border-color 0.2s ease;
@@ -322,13 +301,11 @@
 }
 
 .thumb-img {
-    height: 100%;
     object-fit: cover;
 }
 
 .product-info-panel {
     gap: 1.5rem;
-    align-content: start;
 }
 
 .product-tags {
@@ -340,7 +317,6 @@
     font-size: 0.75rem;
     padding: 0.2rem 0.75rem;
     background: var(--md-sys-color-surface-container-highest);
-    font-weight: 500;
     letter-spacing: 0.02em;
 }
 
@@ -352,7 +328,6 @@
 
 .product-price {
     font-size: 2.25rem;
-    font-weight: 800;
     letter-spacing: -0.02em;
 }
 
@@ -368,7 +343,6 @@
 .product-description-block h3 {
     font-size: 1rem;
     margin: 0 0 0.5rem 0;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
@@ -382,11 +356,9 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
     gap: 1.5rem;
     padding: 1rem 0;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .spec-item {
-    grid-auto-flow: column;
     grid-auto-columns: max-content minmax(0, 1fr);
     gap: 0.75rem;
 }
@@ -432,7 +404,6 @@
 }
 
 .share-toast {
-    grid-auto-flow: column;
     gap: 0.5rem;
     background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
     border: 1px solid var(--md-sys-color-tertiary);
@@ -445,12 +416,10 @@
 .store-seller-card {
     margin-top: auto;
     padding: 1.25rem;
-    background: var(--md-sys-color-surface-container-high);
     gap: 1rem;
 }
 
 .seller-header {
-    grid-auto-flow: column;
     grid-auto-columns: max-content minmax(0, 1fr);
     gap: 1rem;
 }
@@ -486,7 +455,6 @@
 
 .seller-address {
     font-size: 0.825rem;
-    grid-auto-flow: column;
     gap: 0.3rem;
 }
 
@@ -496,7 +464,6 @@
 
 .seller-browse-all {
     font-size: 0.875rem;
-    font-weight: 500;
     transition: opacity 0.2s ease;
 }
 
@@ -505,7 +472,6 @@
 }
 
 .store-not-found {
-    text-align: center;
     padding: 5rem 1rem;
     max-width: 500px;
     margin: 0 auto;

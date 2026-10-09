@@ -6,7 +6,6 @@
 
 .trial-days-highlight {
     font-size: 1.6rem;
-    font-weight: 800;
 }
 
 .trial-days-label {
@@ -25,7 +24,6 @@
 }
 
 .promotion-modal-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 1rem;
 }
 
@@ -37,7 +35,6 @@
 
 .header-rocket-icon {
     font-size: 1.75rem;
-    color: var(--md-sys-color-on-primary);
 }
 
 .promotion-modal-title {
@@ -58,7 +55,6 @@
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
     padding: 0.6rem 1rem;
-    background: var(--md-sys-color-surface-container);
     border-radius: 12px;
     font-size: 0.9rem;
 }
@@ -73,24 +69,20 @@
 .section-heading {
     margin: 0.5rem 0 0;
     font-size: 0.95rem;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .invoice-summary-box {
     padding: 1.25rem;
-    background: var(--md-sys-color-surface-container);
     gap: 0.4rem;
 }
 
 .invoice-amount {
     font-size: 2.2rem;
-    font-weight: 800;
 }
 
 .qr-instruction {
     max-width: 480px;
-    text-align: center;
     font-size: 0.9rem;
     line-height: 1.45;
 }
@@ -112,7 +104,6 @@
 
 .ad-slot-container {
     align-items: stretch;
-    background: var(--md-sys-color-surface-container);
     border: 1px dashed var(--md-sys-color-outline-variant);
     padding: 0.75rem;
     transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring),
@@ -129,16 +120,13 @@
 }
 
 .ad-network-footer {
-    grid-auto-flow: column;
     justify-content: end;
     padding-top: 0.5rem;
     margin-top: 0.5rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .ad-disclaimer {
     font-size: 0.75rem;
-    color: var(--md-sys-color-outline);
 }
 
 .ad-upgrade-link {
@@ -160,8 +148,6 @@
 }
 
 .fullscreen-video {
-    height: 100%;
-    max-width: 100%;
     max-height: 100dvh;
     object-fit: contain;
     background-color: var(--md-sys-color-scrim);
@@ -211,7 +197,6 @@
     z-index: 2;
     max-width: 900px;
     padding: 3rem 2rem 5rem;
-    text-align: center;
 }
 
 /* Brand Screensaver (PRO / Trial) */
@@ -230,14 +215,12 @@
 }
 
 .brand-screensaver-logo {
-    max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
 
 .brand-screensaver-title {
     font-size: 3rem;
-    font-weight: 800;
     letter-spacing: -0.02em;
     text-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.6);
 }
@@ -253,11 +236,9 @@
 .brand-screensaver-cta,
 .ad-slide-touch-prompt {
     margin-top: 1.5rem;
-    grid-auto-flow: column;
     gap: 0.75rem;
     padding: 1rem 2.5rem;
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     font-size: 1.25rem;
     box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
     transition: transform 0.2s ease;
@@ -283,7 +264,6 @@
 }
 
 .screensaver-pro-badge {
-    grid-auto-flow: column;
     gap: 0.4rem;
     padding: 0.4rem 1rem;
     background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
@@ -314,14 +294,12 @@
 }
 
 .ad-network-badge-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.08);
 }
 
 .ad-network-badge {
     font-size: 0.75rem;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 

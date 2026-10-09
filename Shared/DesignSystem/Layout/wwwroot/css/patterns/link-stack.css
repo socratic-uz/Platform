@@ -35,7 +35,6 @@ section.link-stack {
 
 .link-stack a,
 .link-stack article {
-    grid-auto-flow: column;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1rem;
     border-radius: 0;
@@ -48,7 +47,6 @@ section.link-stack {
 .link-stack article::before {
     content: "";
     position: absolute;
-    height: 100%;
     background-color: var(--md-sys-color-secondary-container);
     opacity: 0;
     top: 50%;

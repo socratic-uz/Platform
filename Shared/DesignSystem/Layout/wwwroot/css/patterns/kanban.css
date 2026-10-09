@@ -15,12 +15,10 @@
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-5, 1.25rem);
-    background: var(--md-sys-color-surface-container-low);
     min-height: 380px;
 }
 
 .column-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     padding-bottom: 0.75rem;
 }
@@ -53,7 +51,6 @@
 .kds-cards-container {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
-    align-content: start;
 }
 
 @media (max-width: 839.98px) {
@@ -80,7 +77,6 @@
 }
 
 .card-top-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
 }
 
@@ -90,7 +86,6 @@
 }
 
 .card-mid-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
     font-size: 0.9rem;
 }
@@ -100,7 +95,6 @@
 
 .card-payment {
     font-size: 0.8rem;
-    color: var(--md-sys-color-outline);
 }
 
 .card-bottom-row {
@@ -111,7 +105,6 @@
 }
 
 .advance-prompt {
-    grid-auto-flow: column;
     justify-content: end;
     gap: 0.4rem;
     font-size: 0.85rem;
@@ -156,9 +149,7 @@
 .count-badge {
     padding: 0.25rem 0.625rem;
     font-size: 0.8125rem;
-    font-weight: 800;
     line-height: 1;
-    background: var(--md-sys-color-surface-container-high);
 }
 
 .badge-making {
@@ -167,17 +158,13 @@
 }
 
 .badge-ready {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .column-empty,
 .kds-empty-col {
     grid-template-columns: minmax(0, 1fr);
-    text-align: center;
     gap: 0.5rem;
     padding: 2.5rem 1rem;
-    color: var(--md-sys-color-outline);
     font-size: 0.9rem;
     opacity: 0.8;
 }
@@ -208,13 +195,10 @@
 .kds-status-tag {
     justify-self: end;
     font-size: 0.75rem;
-    color: var(--md-sys-color-on-primary-container);
-    background: var(--md-sys-color-primary-container);
     padding: 0.2rem 0.5rem;
 }
 
 .kds-card-main {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
@@ -248,7 +232,6 @@
 
 .btn-ready {
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
 }
 
 .btn-complete {
@@ -262,8 +245,6 @@
 
 /* ─── Card Status Color Modifiers ───────────────────────────────────── */
 .card-paid .card-status-chip {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .card-making .card-status-chip {
@@ -282,12 +263,9 @@
 }
 
 .card-completed .card-status-chip {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .card-created .card-status-chip {
-    background: var(--md-sys-color-surface-container-high);
 }
 
 .error-banner {

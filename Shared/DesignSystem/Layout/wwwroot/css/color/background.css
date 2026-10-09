@@ -1,5 +1,111 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C color/background.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Surface Background Master Rules via :is(...) (Zero Flexbox)
    ========================================================================== */
 
+/* Material Design 3 Surface Container High Background Master Rule */
+:is(
+    .analytics-config-btn,
+    .analytics-mode-pill-group,
+    .auth-card,
+    .card-created .card-status-chip,
+    .cart-bar,
+    .column-badge,
+    .count-badge,
+    .drawer-panel,
+    .empty-plans-icon-wrapper,
+    .item-icon-wrapper,
+    .items-count-badge,
+    .kiosk-brand-tagline,
+    .landing-mobile-menu-toggle:hover,
+    .lang-toggle-btn:hover,
+    .m3-drawer-panel,
+    .plan-card.selected,
+    .pos-quick-bill-btn,
+    .pos-tech-chip,
+    .product-main-image-wrap,
+    .seat-selection-card,
+    .signin-card,
+    .store-seller-card,
+    .tier-box.active-tier,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-quote,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle
+) {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+/* Material Design 3 Surface Container Background Master Rule */
+:is(
+    .ad-slot-container,
+    .analytics-period-chip,
+    .analytics-status-pill,
+    .contact-card,
+    .designer-header,
+    .invoice-summary-box,
+    .plan-card,
+    .preview-card,
+    .product-preview-pill,
+    .qr-designer-header,
+    .qrg-back:hover,
+    .qrg-customizer,
+    .qty-stepper,
+    .shipping-card,
+    .showcase-card-header,
+    .showcase-controls-bar,
+    .tier-box,
+    .video-card
+) {
+    background: var(--md-sys-color-surface-container);
+}
+
+/* Material Design 3 Surface Container Low Background Master Rule */
+:is(
+    .active-orders-tabs,
+    .analytics-explorer-section,
+    .cart-items-list,
+    .example-card,
+    .faceid-scanner-frame,
+    .faq-card,
+    .kanban-column,
+    .kds-column,
+    .m3-explorer-section,
+    .m3-kanban-column,
+    .pillar-card,
+    .qr-controls-panel,
+    .qrg-sidebar,
+    .showcase-card,
+    .showcase-card-body,
+    .showcase-sidebar,
+    .tech-card,
+    footer.app-footer
+) {
+    background: var(--md-sys-color-surface-container-low);
+}
+
+/* Material Design 3 Primary Container Background Master Rule */
+:is(
+    .analytics-period-chip.active,
+    .badge-ready,
+    .card-completed .card-status-chip,
+    .card-paid .card-status-chip,
+    .header-brand-icon-box,
+    .item-qty-badge,
+    .kds-status-tag,
+    .kiosk-brand-logo-fallback,
+    .m3-pill-badge,
+    .mode-edit,
+    .notification-banner,
+    .pillar-icon-box,
+    .preset-btn:hover,
+    .qrg-badge,
+    .qrg-logo-badge,
+    .showcase-nav-btn.active,
+    .user-message
+) {
+    background: var(--md-sys-color-primary-container);
+}

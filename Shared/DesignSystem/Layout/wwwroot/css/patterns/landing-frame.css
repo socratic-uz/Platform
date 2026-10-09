@@ -7,7 +7,6 @@
     grid-template-columns: 100%;
     grid-template-rows: auto minmax(0, 1fr) auto;
     min-height: 100vh;
-    max-width: 100%;
     overflow-x: clip;
 }
 
@@ -20,7 +19,6 @@
 .landing-grid > .landing-main {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    max-width: 100%;
 }
 
 .landing-grid > footer {

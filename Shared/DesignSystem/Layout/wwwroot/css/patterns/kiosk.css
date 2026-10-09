@@ -22,7 +22,6 @@
 
 /* ─── Header Section ────────────────────────────────────────── */
 .kiosk-brand {
-    grid-auto-flow: column;
     grid-auto-columns: auto;
     gap: 10px;
 }
@@ -39,12 +38,9 @@
 .kiosk-brand-logo-fallback {
     height: 36px;
     width: 36px;
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .kiosk-brand-info {
-    grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 8px;
 }
@@ -55,7 +51,6 @@
 
 .kiosk-brand-tagline {
     font-size: 0.72rem;
-    background: var(--md-sys-color-surface-container-high);
     padding: 2px 8px;
     gap: 4px;
     white-space: nowrap;
@@ -104,7 +99,6 @@
 
 .kiosk-hero-content h1 {
     font-size: clamp(1.3rem, 2.8vw, 2.25rem);
-    font-weight: 800;
     letter-spacing: -0.5px;
     line-height: 1.2;
 }
@@ -119,7 +113,6 @@
 .unified-kiosk-filter-bar {
     margin: 4px 0 12px 0;
     background: transparent;
-    padding: 0;
     border-radius: 0;
     border: none;
     min-height: auto;
@@ -132,7 +125,6 @@
 }
 
 .kiosk-filter-inner:has(.kiosk-reset-btn) {
-    grid-template-columns: minmax(0, 1fr) auto !important;
 }
 
 .kiosk-filter-stack {
@@ -170,14 +162,12 @@
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 12px;
     margin-bottom: 8px;
-    background: var(--md-sys-color-surface-container-low);
     padding: 8px 16px;
     min-height: 52px;
 }
 
 .active-orders-label {
     font-size: 0.85rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -196,7 +186,6 @@ md-filled-card.product-card,
 .product-card {
     container-type: inline-size;
     container-name: product-card;
-    padding: 0;
     min-height: 380px;
 }
 
@@ -206,7 +195,6 @@ md-filled-card.product-card,
 }
 
 .product-img {
-    height: 100%;
     object-fit: cover;
     display: block;
     aspect-ratio: 16 / 10;
@@ -214,9 +202,7 @@ md-filled-card.product-card,
 }
 
 .product-img-placeholder {
-    height: 100%;
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-outline);
 }
 
 .product-placeholder-icon {
@@ -250,7 +236,6 @@ md-filled-card.product-card,
 .kiosk-wish-icon {
     background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent) !important;
     border-radius: 50% !important;
-    color: var(--md-sys-color-outline) !important;
     width: 44px;
     height: 44px;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -265,8 +250,6 @@ md-filled-card.product-card,
 .product-details {
     gap: 4px;
     padding: 12px 16px 8px 16px;
-    align-content: start;
-    height: 100%;
 }
 
 .kiosk-product-title-link {
@@ -301,7 +284,6 @@ md-filled-card.product-card,
 
 .inline-card-experience-body:empty {
     display: none !important;
-    padding: 0 !important;
     min-height: 0 !important;
 }
 
@@ -322,18 +304,15 @@ md-filled-card.product-card,
 }
 
 .ux-widget-row {
-    grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .ux-widget-subrow {
-    grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.72rem;
     opacity: 0.85;
 }
 
 .ux-discount-badge {
     background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     padding: 2px 8px;
     font-size: 0.7rem;
 }
@@ -343,13 +322,9 @@ md-filled-card.product-card,
 .ux-widget-vehicle,
 .ux-widget-location,
 .ux-widget-subscription {
-    grid-template-columns: minmax(0, 1fr) auto;
-    background: var(--md-sys-color-surface-container-high);
 }
 
 .ux-widget-quote {
-    background: var(--md-sys-color-surface-container-high);
-    text-align: center;
 }
 
 .ux-widget-chips {
@@ -359,9 +334,7 @@ md-filled-card.product-card,
 
 /* Card Footer */
 .kiosk-main .card-footer {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: 10px 16px 12px 16px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     gap: 8px;
     min-height: 52px;
     align-self: end !important;
@@ -370,7 +343,6 @@ md-filled-card.product-card,
 
 .price-tag {
     font-size: clamp(0.9rem, 1.2vw, 1.15rem);
-    font-weight: 800;
 }
 
 /* Cart Bottom Bar */
@@ -378,10 +350,7 @@ md-filled-card.product-card,
     position: fixed;
     inset: auto 0 0 0;
     z-index: var(--m3-z-dialog, 100);
-    grid-template-columns: minmax(0, 1fr) auto;
     padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px)) 24px;
-    background: var(--md-sys-color-surface-container-high);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
     gap: 16px;
 }
@@ -405,7 +374,6 @@ md-filled-card.product-card,
 }
 
 .cart-total {
-    font-weight: 800;
     font-size: clamp(1.05rem, 2vw, 1.25rem);
     white-space: nowrap;
 }

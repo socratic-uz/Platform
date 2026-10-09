@@ -9,7 +9,6 @@
     grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
     justify-items: end;
     border: none;
-    padding: 0;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
@@ -28,7 +27,6 @@
     grid-column: 2;
     max-width: 440px;
     height: 100dvh;
-    background: var(--md-sys-color-surface-container-high);
     border-left: 1px solid var(--md-sys-color-outline-variant);
     padding: 24px;
     grid-template-rows: auto minmax(0, 1fr) auto;
@@ -55,12 +53,10 @@
 }
 
 .drawer-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 16px;
 }
 
 .header-title-box {
-    grid-auto-flow: column;
     justify-content: start;
     gap: 8px;
 }
@@ -83,13 +79,11 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
     touch-action: pan-y;
-    align-content: start;
     gap: 16px;
     padding: 16px 0;
 }
 
 .empty-cart-view {
-    text-align: center;
     padding: 40px 20px;
     place-content: center;
     gap: 8px;
@@ -98,18 +92,14 @@
 .empty-cart-view .empty-icon {
     font-size: 3rem;
     margin-bottom: 8px;
-    color: var(--md-sys-color-outline);
 }
 
 .cart-items-list {
     list-style: none;
-    padding: 0;
     gap: 8px;
-    background: var(--md-sys-color-surface-container-low);
 }
 
 .cart-item-row {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
     padding: 12px;
 }
@@ -138,7 +128,6 @@
 }
 
 .qty-stepper {
-    background: var(--md-sys-color-surface-container);
 }
 
 .qty-val {
@@ -151,7 +140,6 @@
 }
 
 .promo-input-group {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
 }
 
@@ -166,9 +154,7 @@
 }
 
 .shipping-card {
-    grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.85rem;
-    background: var(--md-sys-color-surface-container);
     padding: 12px;
     margin-top: 8px;
 }
@@ -177,7 +163,6 @@
 }
 
 .drawer-footer {
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     padding-top: 16px;
 }
 
@@ -188,7 +173,6 @@
 }
 
 .price-row {
-    grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .discount-row {
@@ -197,7 +181,6 @@
 
 .drawer-footer .total-row {
     font-size: 1.15rem;
-    font-weight: 800;
     padding-top: 8px;
     border-top: 1px dashed var(--md-sys-color-outline-variant);
 }

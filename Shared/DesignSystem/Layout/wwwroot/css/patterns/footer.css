@@ -16,7 +16,6 @@
 }
 
 .trust-badge {
-    grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 0.5rem;
     font-size: 0.85rem;
@@ -34,7 +33,6 @@
 
 .payment-support a {
     font-size: 0.85rem;
-    font-weight: 500;
 }
 
 .payment-support a:hover {
@@ -54,10 +52,7 @@
 /* ─── 2. Universal App Footer Structure ──────────────────────────────────── */
 footer.app-footer {
     grid-template-columns: minmax(0, 1fr);
-    background: var(--md-sys-color-surface-container-low);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
-    max-width: 100%;
 }
 
 .footer-container {
@@ -82,13 +77,11 @@ footer.app-footer {
 /* Brand Column */
 .footer-brand-col {
     grid-auto-flow: row;
-    align-content: start;
     gap: 1rem;
     max-width: 320px;
 }
 
 .footer-brand-link {
-    grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 0.65rem;
     min-width: 48px;
@@ -99,14 +92,12 @@ footer.app-footer {
     width: 36px;
     height: 36px;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-primary) r g b / 0.25);
     font-size: 20px;
 }
 
 .footer-brand-title {
     font-size: 1.35rem;
-    font-weight: 800;
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
@@ -119,7 +110,6 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 0.65rem;
     padding: 0.35rem 0.85rem;
@@ -151,19 +141,16 @@ footer.app-footer {
 
 .status-text {
     font-size: 0.75rem;
-    font-weight: 500;
 }
 
 /* Nav Columns */
 .footer-nav-col {
     grid-auto-flow: row;
-    align-content: start;
     gap: 0.85rem;
 }
 
 .footer-col-title {
     font-size: 0.85rem;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
@@ -171,14 +158,12 @@ footer.app-footer {
     grid-auto-flow: row;
     gap: 0.25rem;
     list-style: none;
-    padding: 0;
 }
 
 .footer-links-list li {
 }
 
 .footer-links-list a {
-    grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
     font-size: 0.875rem;
@@ -206,7 +191,6 @@ footer.app-footer {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1.5rem;
     padding-top: 1.75rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .footer-copyright {

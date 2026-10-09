@@ -22,10 +22,8 @@
 /* ─── 2. Designer Header Toolbar ─────────────────────────────────────────── */
 .designer-header,
 .qr-designer-header {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.25rem;
     padding: 1.25rem 1.5rem;
-    background: var(--md-sys-color-surface-container);
 }
 
 .header-title-group {
@@ -59,7 +57,6 @@
 .preset-label {
     font-size: 0.875rem;
     margin-right: 0.25rem;
-    font-weight: 500;
 }
 
 .preset-btn {
@@ -67,13 +64,10 @@
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
     font-size: 0.85rem;
-    font-weight: 500;
     touch-action: manipulation;
 }
 
 .preset-btn:hover {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
     border-color: transparent;
 }
 
@@ -88,13 +82,10 @@
 .mode-indicator {
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
-    font-weight: 500;
     justify-content: center;
 }
 
 .mode-edit {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .mode-preview {
@@ -104,11 +95,8 @@
 
 /* ─── 4. Notification & Banners ─────────────────────────────────────────── */
 .notification-banner {
-    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     padding: 0.75rem 1.25rem;
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
     font-size: 0.9rem;
 }
 
@@ -141,7 +129,6 @@
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-    background: var(--md-sys-color-surface-container-high);
 }
 
 .card-icon {
@@ -151,7 +138,6 @@
 
 .card-title {
     font-size: 0.9rem;
-    font-weight: 500;
 }
 
 .card-meta {
@@ -168,13 +154,11 @@
 .qr-controls-panel {
     gap: 1.25rem;
     padding: 1.5rem;
-    background: var(--md-sys-color-surface-container-low);
 }
 
 .panel-section-title {
     margin: 0.5rem 0 0;
     font-size: 0.95rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -184,7 +168,6 @@
 
 .control-label {
     font-size: 0.85rem;
-    font-weight: 500;
 }
 
 .text-input, .select-input {
@@ -219,7 +202,6 @@
     min-width: 48px;
     border: none;
     background: none;
-    padding: 0;
 }
 
 .color-hex {
@@ -234,19 +216,16 @@
 
 /* ─── 7. QR & Canvas Preview Area ───────────────────────────────────────── */
 .qr-preview-area {
-    align-content: start;
 }
 
 .preview-card {
     grid-template-rows: auto minmax(0, 1fr) auto;
     gap: 1.25rem;
     padding: 1.5rem;
-    background: var(--md-sys-color-surface-container);
     container-type: inline-size;
 }
 
 .preview-header {
-    grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .preview-title {
@@ -267,7 +246,6 @@
 
 .qr-canvas-box {
     box-shadow: 0 12px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
-    max-width: 100%;
 }
 
 .preview-footer {

@@ -280,3 +280,22 @@
 ) {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* Universal Top Border Outline-Variant Master Rule */
+:is(
+    .ad-network-footer,
+    .cart-bar,
+    .chat-container,
+    .drawer-footer,
+    .footer-bottom-bar,
+    .kiosk-main .card-footer,
+    .pos-actions,
+    .pos-card-footer-row,
+    .product-specs-grid,
+    .qrg-logo-field,
+    .showcase-card-code,
+    .showcase-controls-bar,
+    footer.app-footer
+) {
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}

@@ -1,5 +1,62 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C typography/text-layout.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Text Layout & Transform Master Rules via :is(...)
    ========================================================================== */
 
+/* Universal Text Align Center Master Rule */
+:is(
+    .about-hero,
+    .attract-loop-content,
+    .auth-header,
+    .column-empty,
+    .cta-card,
+    .current-plan-indicator,
+    .docs-welcome-card,
+    .empty-cart-view,
+    .empty-plans-card,
+    .example-hero,
+    .faceid-notice,
+    .faceid-status-text,
+    .help-hero,
+    .kds-empty-col,
+    .landing-subpage-hero,
+    .no-messages,
+    .qr-instruction,
+    .qrg-card,
+    .qrg-empty,
+    .resend-countdown,
+    .score-box,
+    .section-header,
+    .signin-header,
+    .store-not-found,
+    .ux-widget-quote
+) {
+    text-align: center;
+}
+
+/* Universal Text Transform Uppercase Master Rule */
+:is(
+    .active-orders-label,
+    .ad-network-badge,
+    .auth-divider,
+    .docs-group-header,
+    .footer-col-title,
+    .kpi-title,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .popular-badge,
+    .pos-orders-label,
+    .pos-ux-mode-title,
+    .pro-tag,
+    .product-description-block h3,
+    .qrg-card-hint,
+    .qrg-group-head,
+    .qrg-section-title,
+    .section-heading,
+    .showcase-brand-badge,
+    .showcase-nav-category-header,
+    .showcase-stat-lbl
+) {
+    text-transform: uppercase;
+}

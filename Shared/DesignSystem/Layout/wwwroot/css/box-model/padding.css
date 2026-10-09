@@ -1,5 +1,30 @@
+/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Layout Engine - W3C box-model/padding.css
-   Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
+   Consolidated Padding Reset Master Rules via :is(...) (Zero Flexbox)
    ========================================================================== */
 
+/* Universal Zero Padding Reset Master Rule */
+:is(
+    .cart-items-list,
+    .color-picker-row input[type="color"],
+    .docs-content,
+    .docs-refresh-btn,
+    .footer-links-list,
+    .inline-card-experience-body:empty,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .pillar-features,
+    .plan-features,
+    .product-card,
+    .product-detail-card,
+    .qrg-main,
+    .thumb-btn,
+    .tier-features,
+    .unified-kiosk-filter-bar,
+    main.docs-page,
+    main.showcase-page,
+    md-filled-card.product-card
+) {
+    padding: 0;
+}

@@ -5,7 +5,6 @@
 
 header.app-header {
     grid-template-columns: minmax(0, 1fr);
-    max-width: 100%;
     background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
     padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
     min-height: calc(64px + env(safe-area-inset-top, 0px));
@@ -42,7 +41,6 @@ header.app-header.header-sticky {
 
 .pos-top-header-actions {
     gap: var(--space-2, 8px);
-    max-width: 100%;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     padding-bottom: 2px;
@@ -66,8 +64,6 @@ header.app-header.header-sticky {
 .header-brand-icon-box {
     width: 36px;
     height: 36px;
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
     font-size: 20px;
 }
 

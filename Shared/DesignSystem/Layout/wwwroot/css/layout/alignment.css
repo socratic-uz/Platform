@@ -260,3 +260,25 @@
 ) {
     justify-items: center;
 }
+
+/* Universal Align Content Start Master Rule */
+:is(
+    .breakdown-bars-stack,
+    .column-content,
+    .docs-sidebar-menu,
+    .drawer-body,
+    .footer-brand-col,
+    .footer-nav-col,
+    .kds-cards-container,
+    .message-list,
+    .product-details,
+    .product-gallery,
+    .product-info-panel,
+    .qr-preview-area,
+    .qrg-lists,
+    .qrg-sidebar-scrollable,
+    .showcase-content,
+    .showcase-sidebar-nav
+) {
+    align-content: start;
+}

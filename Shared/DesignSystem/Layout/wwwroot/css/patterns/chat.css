@@ -22,7 +22,6 @@
     padding-right: 1.5rem;
     padding-top: 0.75rem;
     padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
 }
 
@@ -45,7 +44,6 @@
 }
 
 .header-content {
-    grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .chat-back-link {
@@ -81,13 +79,11 @@
 }
 
 .message-list {
-    align-content: start;
     gap: 1.25rem;
     min-height: 100%;
 }
 
 .no-messages {
-    text-align: center;
     font-size: 1.25rem;
     color: var();
     margin-top: calc(35vh - 10rem);
@@ -103,13 +99,11 @@ chat-messages > div:last-of-type {
 
 /* ─── 4. Message Items (User & Assistant) ────────────────────────────────── */
 .user-message {
-    background: var(--md-sys-color-primary-container);
     justify-self: end;
     min-width: 25%;
     max-width: calc(100% - 5rem);
     padding: 0.5rem 1.25rem;
     border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
-    color: var(--md-sys-color-on-primary-container);
     white-space: pre-wrap;
 }
 
@@ -130,7 +124,6 @@ chat-messages > div:last-of-type {
 .assistant-message-icon {
     width: 1.5rem;
     height: 1.5rem;
-    color: var(--md-sys-color-on-primary);
     background: var(--md-sys-color-primary);
 }
 
@@ -292,7 +285,6 @@ assistant-message pre > code,
 }
 
 .input-box {
-    grid-template-columns: minmax(0, 1fr) auto;
     background: var();
     border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;

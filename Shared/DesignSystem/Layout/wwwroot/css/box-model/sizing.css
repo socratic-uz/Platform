@@ -243,3 +243,50 @@
 ) {
     min-width: 0;
 }
+
+/* Universal Full Height (100%) Master Rule */
+:is(
+    .docs-sidebar,
+    .docs-welcome-container,
+    .fullscreen-video,
+    .link-stack a::before,
+    .link-stack article::before,
+    .pos-catalog,
+    .pos-loading,
+    .pos-sidebar,
+    .product-details,
+    .product-img,
+    .product-img-placeholder,
+    .product-main-img,
+    .progress-bar-fill,
+    .qrg-main,
+    .qrg-sidebar,
+    .thumb-img,
+    main.docs-page
+) {
+    height: 100%;
+}
+
+/* Universal Max-Width (100%) Master Rule */
+:is(
+    .about-hero,
+    .about-video-section,
+    .analytics-period-selector,
+    .brand-screensaver-logo,
+    .example-categories,
+    .example-hero,
+    .fullscreen-video,
+    .help-categories,
+    .help-hero,
+    .landing-grid,
+    .landing-grid > .landing-main,
+    .landing-subpage-hero,
+    .pos-top-header-actions,
+    .qr-canvas-box,
+    .qrg-card,
+    .qrg-card-qr,
+    footer.app-footer,
+    header.app-header
+) {
+    max-width: 100%;
+}

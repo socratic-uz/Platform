@@ -9,7 +9,6 @@
 }
 
 .crumb-link {
-    grid-auto-flow: column;
     gap: 0.35rem;
     transition: color 0.2s ease;
     padding: 0 4px;
@@ -27,11 +26,9 @@
 }
 
 .crumb-sep {
-    color: var(--md-sys-color-outline);
     opacity: 0.5;
 }
 
 .crumb-current {
-    font-weight: 500;
 }
 

@@ -7,7 +7,6 @@
 .m3-explorer-section {
     gap: var(--md-sys-spacing-5, 1.25rem);
     padding: var(--md-sys-spacing-6, 1.5rem);
-    background: var(--md-sys-color-surface-container-low);
 }
 
 .explorer-header {

@@ -140,3 +140,64 @@
 ) {
     font-weight: 600;
 }
+
+/* Medium / Weight 500 Master Rule */
+:is(
+    .analytics-period-chip,
+    .card-title,
+    .control-label,
+    .crumb-current,
+    .docs-header-breadcrumb,
+    .docs-sidebar-title,
+    .kpi-title,
+    .landing-nav-link,
+    .m3-bottom-nav-item,
+    .mode-indicator,
+    .payment-support a,
+    .plan-currency,
+    .preset-btn,
+    .preset-label,
+    .product-tag-chip,
+    .progress-labels,
+    .qrg-back,
+    .qrg-org,
+    .seller-browse-all,
+    .showcase-nav-btn,
+    .status-text,
+    .tier-price small
+) {
+    font-weight: 500;
+}
+
+/* Extra-Bold / Weight 800 Master Rule */
+:is(
+    .about-title,
+    .auth-title,
+    .brand-screensaver-title,
+    .cart-total,
+    .column-badge,
+    .count-badge,
+    .drawer-footer .total-row,
+    .example-title,
+    .footer-brand-title,
+    .help-title,
+    .invoice-amount,
+    .kiosk-hero-content h1,
+    .kpi-number,
+    .landing-subpage-title,
+    .plan-price-wrap,
+    .popular-badge,
+    .pos-price-text,
+    .price-tag,
+    .pro-tag,
+    .product-price,
+    .score-circle,
+    .showcase-hero h1,
+    .showcase-stat-val,
+    .signin-title,
+    .tier-price,
+    .trial-days-highlight,
+    header.landing-header .header-brand-text
+) {
+    font-weight: 800;
+}
