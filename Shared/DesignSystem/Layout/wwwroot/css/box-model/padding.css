@@ -62,3 +62,85 @@
 ) {
     padding: 1.25rem;
 }
+
+/* Universal Padding Vertical 1rem Master Rule */
+:is(
+    .faceid-viewfinder-card,
+    .product-specs-grid,
+    .promotion-modal-body
+) {
+    padding: 1rem 0;
+}
+
+/* Universal Padding 12px Master Rule */
+:is(
+    .brand-screensaver-logo-wrapper,
+    .cart-item-row,
+    .shipping-card
+) {
+    padding: 12px;
+}
+
+/* Universal Padding 2px 8px Master Rule */
+:is(
+    .drawer-header .badge,
+    .kiosk-brand-tagline,
+    .ux-discount-badge
+) {
+    padding: 2px 8px;
+}
+
+/* Universal Padding Compact Pill Master Rule */
+:is(
+    .footer-system-status,
+    .landing-floating-auth-btn
+) {
+    padding: 0.35rem 0.85rem;
+}
+
+/* Universal Padding Badge Micro Master Rule */
+:is(
+    .footer-links-list a,
+    .landing-header-nav
+) {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Universal Padding Regular Pill Master Rule */
+:is(
+    .active-orders-tabs,
+    .docs-sidebar-header,
+    .showcase-stat-pill
+) {
+    padding: 8px 16px;
+}
+
+/* Universal Padding Chip Small Master Rule */
+:is(
+    .pos-tech-chip,
+    .qrg-badge,
+    .ux-mode-badge-overlay
+) {
+    padding: 4px 10px;
+}
+
+/* Universal Padding Spacing-5 (1.25rem) Master Rule */
+:is(
+    .analytics-panel-card,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .plan-card,
+    .tier-box
+) {
+    padding: var(--md-sys-spacing-5, 1.25rem);
+}
+
+/* Universal Padding Bottom 2px Master Rule */
+:is(
+    .analytics-period-selector,
+    .kiosk-filter-row,
+    .pos-top-header-actions
+) {
+    padding-bottom: 2px;
+}

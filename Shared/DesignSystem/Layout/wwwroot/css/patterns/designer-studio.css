@@ -146,7 +146,6 @@
 }
 
 .color-hex {
-    font-family: monospace;
 }
 
 .style-selects-grid {
@@ -170,7 +169,6 @@
     font-size: 0.775rem;
     padding: 0.3rem 0.75rem;
     background: var(--md-sys-color-surface-variant);
-    font-family: monospace;
 }
 
 .qr-stage {

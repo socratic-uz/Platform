@@ -50,3 +50,11 @@
     box-shadow: var(--md-sys-elevation-level3);
 }
 
+
+/* Universal Box Shadow Tertiary Glow Master Rule */
+:is(
+    .pulse-indicator,
+    .status-pulse-dot
+) {
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
+}

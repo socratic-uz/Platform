@@ -38,7 +38,6 @@
 }
 
 .promotion-modal-body {
-    padding: 1rem 0;
 }
 
 .product-preview-pill {
@@ -170,7 +169,6 @@
     width: 120px;
     height: 120px;
     background: rgb(from var(--md-sys-color-surface) r g b / 0.1);
-    padding: 12px;
     box-shadow: 0 12px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.2);
 }

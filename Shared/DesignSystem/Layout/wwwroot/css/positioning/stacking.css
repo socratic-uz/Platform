@@ -3,3 +3,12 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Z-Index Content Tier Master Rule */
+:is(
+    .kiosk-hero-content,
+    .pos-badge-qty,
+    .ux-mode-badge-overlay
+) {
+    z-index: var(--m3-z-content, 1);
+}

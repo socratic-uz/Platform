@@ -40,7 +40,6 @@ section.link-stack {
 
 .link-stack a::before,
 .link-stack article::before {
-    content: "";
     background-color: var(--md-sys-color-secondary-container);
     opacity: 0;
     top: 50%;
@@ -52,7 +51,6 @@ section.link-stack {
 .link-stack a:active::before,
 .link-stack article:active::before {
     transform: translate(-50%, -50%);
-    opacity: 1;
     height: 0;
     width: 0;
     transition: 0s;

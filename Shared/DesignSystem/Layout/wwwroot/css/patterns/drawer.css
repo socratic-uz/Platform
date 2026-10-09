@@ -12,7 +12,6 @@
 
 .m3-drawer-backdrop.show,
 .md-drawer-backdrop.show {
-    opacity: 1;
     pointer-events: auto;
 }
 
@@ -54,7 +53,6 @@
 }
 
 .drawer-header .badge {
-    padding: 2px 8px;
     margin-left: 8px;
 }
 
@@ -76,7 +74,6 @@
 }
 
 .cart-item-row {
-    padding: 12px;
 }
 
 .cart-item-row:last-child {
@@ -121,7 +118,6 @@
 }
 
 .shipping-card {
-    padding: 12px;
     margin-top: 8px;
 }
 

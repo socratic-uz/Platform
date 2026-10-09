@@ -3,3 +3,15 @@
    Consolidated CSS Rule Grouping (Zero Utility Classes / Strict Grid)
    ========================================================================== */
 
+
+/* Universal Generated Empty Content Master Rule */
+:is(
+    .auth-divider::after,
+    .auth-divider::before,
+    .faceid-scanner-frame.scanning::after,
+    .kiosk-hero::before,
+    .link-stack a::before,
+    .link-stack article::before
+) {
+    content: "";
+}

@@ -42,8 +42,6 @@ footer.app-footer {
 }
 
 .footer-container {
-    gap: 3rem;
-    max-width: 1280px;
 }
 
 .footer-custom-slot {
@@ -58,7 +56,6 @@ footer.app-footer {
 
 /* Brand Column */
 .footer-brand-col {
-    max-width: 320px;
 }
 
 .footer-brand-link {
@@ -76,13 +73,9 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    padding: 0.35rem 0.85rem;
 }
 
 .status-pulse-dot {
-    width: 8px;
-    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
-    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes statusPulse {
@@ -101,7 +94,6 @@ footer.app-footer {
 
 /* Nav Columns */
 .footer-nav-col {
-    gap: 0.85rem;
 }
 
 .footer-col-title {
@@ -117,7 +109,6 @@ footer.app-footer {
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
     font-weight: 400;
-    padding: 0.25rem 0.5rem;
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
@@ -130,7 +121,6 @@ footer.app-footer {
 .footer-links-list a .material-symbols-outlined {
     width: 18px;
     height: 18px;
-    opacity: 0.85;
 }
 
 /* Sub-Footer Bottom Bar */
@@ -139,7 +129,6 @@ footer.app-footer {
 }
 
 .footer-copyright {
-    opacity: 0.8;
 }
 
 .footer-lang-container {

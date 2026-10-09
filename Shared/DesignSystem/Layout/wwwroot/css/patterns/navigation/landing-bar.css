@@ -10,7 +10,6 @@ header.app-header.landing-header {
 }
 
 header.landing-header .header-grid-layout {
-    max-width: 1280px;
 }
 
 header.landing-header .header-brand-link {
@@ -38,7 +37,6 @@ header.landing-header .header-brand-text {
 .landing-header-nav {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 0.25rem 0.5rem;
 }
 
 .landing-nav-link {
@@ -51,7 +49,6 @@ header.landing-header .header-brand-text {
 
 .landing-nav-link md-icon {
     font-size: 16px;
-    opacity: 0.8;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -60,7 +57,6 @@ header.landing-header .header-brand-text {
 }
 
 .landing-nav-link:hover md-icon {
-    opacity: 1;
     transform: scale(1.1);
 }
 
@@ -153,7 +149,6 @@ header.landing-header .header-brand-text {
 
 .mobile-nav-divider {
     height: 1px;
-    margin: 0.5rem 0;
 }
 
 .mobile-nav-footer {
@@ -168,8 +163,6 @@ footer.app-footer {
 }
 
 .footer-container {
-    gap: 3rem;
-    max-width: 1280px;
 }
 
 .footer-custom-slot {
@@ -182,7 +175,6 @@ footer.app-footer {
 }
 
 .footer-brand-col {
-    max-width: 320px;
 }
 
 .footer-brand-link {
@@ -200,13 +192,9 @@ footer.app-footer {
 }
 
 .footer-system-status {
-    padding: 0.35rem 0.85rem;
 }
 
 .status-pulse-dot {
-    width: 8px;
-    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
-    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes statusPulse {
@@ -218,7 +206,6 @@ footer.app-footer {
 }
 
 .footer-nav-col {
-    gap: 0.85rem;
 }
 
 .footer-col-title {
@@ -234,7 +221,6 @@ footer.app-footer {
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
     font-weight: 400;
-    padding: 0.25rem 0.5rem;
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
@@ -247,7 +233,6 @@ footer.app-footer {
 .footer-links-list a .material-symbols-outlined {
     width: 18px;
     height: 18px;
-    opacity: 0.85;
 }
 
 .footer-bottom-bar {
@@ -255,7 +240,6 @@ footer.app-footer {
 }
 
 .footer-copyright {
-    opacity: 0.8;
 }
 
 .footer-lang-container {

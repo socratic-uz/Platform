@@ -11,7 +11,6 @@ main.showcase-page {
 
 /* Sidebar Navigation */
 .showcase-sidebar {
-    max-width: 320px;
     z-index: 10;
 }
 
@@ -150,7 +149,6 @@ main.showcase-page {
 }
 
 .showcase-stat-pill {
-    padding: 8px 16px;
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
 }
 
@@ -174,7 +172,6 @@ main.showcase-page {
 }
 
 .showcase-section {
-    gap: 20px;
     scroll-margin-top: 100px;
 }
 
@@ -225,7 +222,6 @@ main.showcase-page {
 }
 
 .showcase-card-desc {
-    font-size: 0.78rem;
 }
 
 .showcase-card-actions {
@@ -257,7 +253,6 @@ main.showcase-page {
 .showcase-card-code {
     padding: 14px 18px;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.78rem;
     white-space: pre;
 }
 

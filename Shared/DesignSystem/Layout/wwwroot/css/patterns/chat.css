@@ -140,7 +140,6 @@ assistant-message ol,
 
 assistant-message li,
 .assistant-message-text li {
-    margin: 0.5rem 0;
 }
 
 assistant-message strong,
@@ -149,7 +148,6 @@ assistant-message strong,
 
 assistant-message h3,
 .assistant-message-text h3 {
-    margin: 1rem 0;
 }
 
 assistant-message p + p,
@@ -158,7 +156,6 @@ assistant-message p + p,
 
 assistant-message table,
 .assistant-message-text table {
-    margin: 1rem 0;
 }
 
 assistant-message th,
@@ -182,7 +179,6 @@ assistant-message tr:nth-child(even),
 assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
-    margin: 1rem 0;
 }
 
 /* ─── 5. Citations ───────────────────────────────────────────────────────── */

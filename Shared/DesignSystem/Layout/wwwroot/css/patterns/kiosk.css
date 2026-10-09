@@ -14,7 +14,6 @@
 .kiosk-main {
     max-width: 1440px;
     padding: 24px 20px 140px 20px;
-    gap: 20px;
 }
 
 /* ─── Header Section ────────────────────────────────────────── */
@@ -38,7 +37,6 @@
 
 .kiosk-brand-tagline {
     font-size: 0.72rem;
-    padding: 2px 8px;
 }
 
 .kiosk-brand-icon {
@@ -60,7 +58,6 @@
 }
 
 .kiosk-hero::before {
-    content: "";
     inset: -30% auto auto -30%;
     width: 85%;
     height: 150%;
@@ -68,7 +65,6 @@
 }
 
 .kiosk-hero-content {
-    z-index: var(--m3-z-content, 1);
 }
 
 .kiosk-hero-content h1 {
@@ -99,7 +95,6 @@
 
 .kiosk-filter-row {
     touch-action: pan-x;
-    padding-bottom: 2px;
 }
 
 .kiosk-category-label {
@@ -119,7 +114,6 @@
 /* ─── Active Orders Tabs ──────────────────────────────────── */
 .active-orders-tabs {
     margin-bottom: 8px;
-    padding: 8px 16px;
     min-height: 52px;
 }
 
@@ -137,7 +131,6 @@
 md-filled-card.product-card,
 .product-card {
     container-name: product-card;
-    min-height: 380px;
 }
 
 .product-media {
@@ -165,9 +158,7 @@ md-filled-card.product-card,
     top: 8px;
     left: 8px;
     background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 85%, transparent);
-    padding: 4px 10px;
     font-size: 0.74rem;
-    z-index: var(--m3-z-content, 1);
 }
 
 .kiosk-wish-btn-wrapper {
@@ -194,7 +185,6 @@ md-filled-card.product-card,
 
 .kiosk-product-title-link {
     color: inherit;
-    transition: color 0.2s ease;
 }
 
 .kiosk-product-title-link:hover {
@@ -213,7 +203,6 @@ md-filled-card.product-card,
 /* Inline Card Experience Body */
 .inline-card-experience-body {
     padding: 0 16px 8px 16px;
-    margin-top: auto;
     margin-bottom: 4px;
     min-height: var(--md-sys-touch-target-min, 48px);
 }
@@ -223,7 +212,6 @@ md-filled-card.product-card,
 
 .ux-widget {
     padding: 8px 12px;
-    font-size: 0.78rem;
 }
 
 .ux-widget-auction {
@@ -237,11 +225,9 @@ md-filled-card.product-card,
 
 .ux-widget-subrow {
     font-size: 0.72rem;
-    opacity: 0.85;
 }
 
 .ux-discount-badge {
-    padding: 2px 8px;
 }
 
 .ux-widget-ticket,
@@ -262,7 +248,6 @@ md-filled-card.product-card,
     padding: 10px 16px 12px 16px;
     min-height: 52px;
     align-self: end !important;
-    margin-top: auto !important;
 }
 
 .price-tag {

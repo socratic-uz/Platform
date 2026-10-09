@@ -466,3 +466,39 @@
 ) {
     height: 1.5rem;
 }
+
+/* Universal Min-Height 380px Card/Frame Master Rule */
+:is(
+    .explorer-grid-container,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .product-card,
+    md-filled-card.product-card
+) {
+    min-height: 380px;
+}
+
+/* Universal Max-Width 1280px Standard Container Master Rule */
+:is(
+    .footer-container,
+    header.landing-header .header-grid-layout
+) {
+    max-width: 1280px;
+}
+
+/* Universal Max-Width 320px Side Panel Master Rule */
+:is(
+    .footer-brand-col,
+    .showcase-sidebar
+) {
+    max-width: 320px;
+}
+
+/* Universal Width 8px Indicator Master Rule */
+:is(
+    .pulse-indicator,
+    .status-pulse-dot
+) {
+    width: 8px;
+}

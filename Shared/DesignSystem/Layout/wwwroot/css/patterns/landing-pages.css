@@ -282,7 +282,6 @@
 }
 
 .qrg-badge {
-    padding: 4px 10px;
 }
 
 .qrg-cards {
@@ -333,7 +332,6 @@ main.docs-page {
 }
 
 .docs-sidebar-header {
-    padding: 8px 16px;
     min-height: 56px;
 }
 
@@ -360,7 +358,6 @@ main.docs-page {
 .docs-group-header {
     padding: 4px 8px;
     letter-spacing: 0.8px;
-    opacity: 0.85;
 }
 
 .docs-group-items {

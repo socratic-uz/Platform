@@ -573,3 +573,21 @@
 ) {
     font-family: inherit;
 }
+
+/* Universal Font Family Monospace Master Rule */
+:is(
+    .color-hex,
+    .monospace,
+    .resolution-badge
+) {
+    font-family: monospace;
+}
+
+/* Universal Font Size 0.78rem Master Rule */
+:is(
+    .showcase-card-code,
+    .showcase-card-desc,
+    .ux-widget
+) {
+    font-size: 0.78rem;
+}

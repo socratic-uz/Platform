@@ -15,7 +15,6 @@
 
 .pos-layout {
     grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
-    gap: 20px;
     height: calc(100vh - 130px);
 }
 
@@ -75,7 +74,6 @@
 .pos-badge-qty {
     top: 6px;
     right: 6px;
-    z-index: var(--m3-z-content, 1);
 }
 
 .pos-card-header-row {
@@ -175,7 +173,6 @@
 }
 
 .pos-tech-chip {
-    padding: 4px 10px;
 }
 
 /* ─── 2. Store Product Detail Page ───────────────────────────────────────── */
@@ -189,7 +186,6 @@
 }
 
 .product-detail-card {
-    gap: 3rem;
 }
 
 .product-gallery {
@@ -224,12 +220,10 @@
     width: 72px;
     height: 72px;
     border: 2px solid transparent;
-    opacity: 0.6;
     transition: opacity 0.2s ease, border-color 0.2s ease;
 }
 
 .thumb-btn.active, .thumb-btn:hover {
-    opacity: 1;
 }
 
 .thumb-btn:focus-visible {
@@ -276,7 +270,6 @@
 
 .product-specs-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
-    padding: 1rem 0;
 }
 
 .spec-item {
@@ -320,7 +313,6 @@
 
 /* Seller / Store Card */
 .store-seller-card {
-    margin-top: auto;
 }
 
 .seller-header {
@@ -340,7 +332,6 @@
 }
 
 .seller-name {
-    transition: color 0.2s ease;
 }
 
 .seller-name:hover {

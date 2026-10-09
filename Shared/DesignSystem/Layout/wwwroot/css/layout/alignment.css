@@ -763,3 +763,28 @@
 ) {
     gap: var(--md-sys-spacing-5, 1.25rem);
 }
+
+/* Universal Gap 3rem (48px Large) Master Rule */
+:is(
+    .footer-container,
+    .product-detail-card
+) {
+    gap: 3rem;
+}
+
+/* Universal Gap 0.85rem Master Rule */
+:is(
+    .breakdown-bars-stack,
+    .footer-nav-col
+) {
+    gap: 0.85rem;
+}
+
+/* Universal Gap 20px Master Rule */
+:is(
+    .kiosk-main,
+    .pos-layout,
+    .showcase-section
+) {
+    gap: 20px;
+}

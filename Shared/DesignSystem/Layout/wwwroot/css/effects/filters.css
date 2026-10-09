@@ -47,3 +47,47 @@
     -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
 }
 
+
+/* Universal Opacity 0.8 (Muted) Master Rule */
+:is(
+    .column-empty,
+    .faceid-icon-placeholder,
+    .footer-copyright,
+    .kds-empty-col,
+    .landing-nav-link md-icon
+) {
+    opacity: 0.8;
+}
+
+/* Universal Opacity 1 (Full) Master Rule */
+:is(
+    .landing-nav-link:hover md-icon,
+    .link-stack a:active::before,
+    .link-stack article:active::before,
+    .m3-drawer-backdrop.show,
+    .md-drawer-backdrop.show,
+    .thumb-btn.active,
+    .thumb-btn:hover
+) {
+    opacity: 1;
+}
+
+/* Universal Opacity 0.85 Master Rule */
+:is(
+    .docs-group-header,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .ux-widget-subrow
+) {
+    opacity: 0.85;
+}
+
+/* Universal Opacity 0.6 (Subtle) Master Rule */
+:is(
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .meta-dot,
+    .thumb-btn
+) {
+    opacity: 0.6;
+}

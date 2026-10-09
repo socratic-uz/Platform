@@ -142,3 +142,34 @@
 ) {
     margin-top: 0.25rem;
 }
+
+/* Universal Margin Vertical 0.5rem Master Rule */
+:is(
+    .assistant-message-text li,
+    .auth-divider,
+    .mobile-nav-divider,
+    assistant-message li
+) {
+    margin: 0.5rem 0;
+}
+
+/* Universal Margin Vertical 1rem Master Rule */
+:is(
+    .assistant-message-text h3,
+    .assistant-message-text pre > code,
+    .assistant-message-text table,
+    assistant-message h3,
+    assistant-message pre > code,
+    assistant-message table
+) {
+    margin: 1rem 0;
+}
+
+/* Universal Margin Top Auto Master Rule */
+:is(
+    .inline-card-experience-body,
+    .kiosk-main .card-footer,
+    .store-seller-card
+) {
+    margin-top: auto;
+}
