@@ -253,3 +253,30 @@
 ) {
     border: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* Universal Bottom Border Outline-Variant Master Rule */
+:is(
+    .assistant-message-text th,
+    .cart-item-row,
+    .column-header,
+    .docs-sidebar-header,
+    .drawer-header,
+    .m3-page-header,
+    .pos-catalog-header,
+    .product-specs-grid,
+    .promotion-modal-header,
+    .qrg-group-head,
+    .qrg-preview-header,
+    .qrg-section-title,
+    .schedule-table td,
+    .schedule-table th,
+    .showcase-card-header,
+    .showcase-hero,
+    .showcase-search-box,
+    .showcase-sidebar-header,
+    .showcase-topbar,
+    assistant-message th,
+    header.app-header
+) {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}

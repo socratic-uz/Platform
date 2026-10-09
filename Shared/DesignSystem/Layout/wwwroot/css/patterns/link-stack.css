@@ -35,7 +35,6 @@ section.link-stack {
 
 .link-stack a,
 .link-stack article {
-    color: var(--md-sys-color-on-surface);
     grid-auto-flow: column;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1rem;
@@ -49,7 +48,6 @@ section.link-stack {
 .link-stack article::before {
     content: "";
     position: absolute;
-    width: 100%;
     height: 100%;
     background-color: var(--md-sys-color-secondary-container);
     opacity: 0;

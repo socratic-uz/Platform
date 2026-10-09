@@ -7,24 +7,19 @@
 .trial-days-highlight {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--md-sys-color-primary);
 }
 
 .trial-days-label {
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .subscription-title {
     margin: 0 0 0.4rem;
     font-size: 1.45rem;
-    font-weight: 700;
 }
 
 .subscription-description {
-    margin: 0;
     font-size: 0.95rem;
-    color: var(--md-sys-color-on-surface-variant);
     line-height: 1.5;
     max-width: 800px;
 }
@@ -32,7 +27,6 @@
 .promotion-modal-header {
     grid-template-columns: minmax(0, 1fr) auto;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .header-icon-wrap {
@@ -47,15 +41,12 @@
 }
 
 .promotion-modal-title {
-    margin: 0;
     font-size: 1.25rem;
-    font-weight: 700;
 }
 
 .promotion-modal-subtitle {
     margin: 0.2rem 0 0;
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .promotion-modal-body {
@@ -73,20 +64,15 @@
 }
 
 .preview-label {
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .preview-product-price {
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
     text-align: right;
 }
 
 .section-heading {
     margin: 0.5rem 0 0;
     font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -100,14 +86,12 @@
 .invoice-amount {
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--md-sys-color-primary);
 }
 
 .qr-instruction {
     max-width: 480px;
     text-align: center;
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
     line-height: 1.45;
 }
 
@@ -119,7 +103,6 @@
 /* ─── 7. Universal Ad Slot & Ad Network Container ─────────────────────── */
 .ad-slot {
     margin: 1rem auto;
-    width: 100%;
     max-width: 1200px;
 }
 
@@ -142,7 +125,6 @@
 
 .ad-network-container .google-adsense-wrapper,
 .ad-network-container .yandex-ads-wrapper {
-    width: 100%;
     min-height: 90px;
 }
 
@@ -162,7 +144,6 @@
 .ad-upgrade-link {
     color: var(--md-sys-color-tertiary);
     text-decoration: underline;
-    font-weight: 600;
 }
 
 .ad-upgrade-link:hover {
@@ -173,14 +154,12 @@
 .fullscreen-player {
     position: fixed;
     inset: 0;
-    width: 100%;
     height: 100dvh;
     background-color: var(--md-sys-color-scrim);
     z-index: 99999;
 }
 
 .fullscreen-video {
-    width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100dvh;
@@ -190,7 +169,6 @@
 
 .fullscreen-loading {
     gap: 1.2rem;
-    color: var(--md-sys-color-on-surface);
 }
 
 /* ─── 9. Kiosk Attract Loop & Screensaver Engine ───────────────────────────────── */
@@ -198,10 +176,8 @@
     position: fixed;
     inset: 0;
     z-index: 99999;
-    width: 100%;
     height: 100dvh;
     align-content: end;
-    justify-items: center;
     user-select: none;
     animation: kioskFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
@@ -233,17 +209,13 @@
 
 .attract-loop-content {
     z-index: 2;
-    width: 100%;
     max-width: 900px;
     padding: 3rem 2rem 5rem;
-    justify-items: center;
     text-align: center;
-    color: var(--md-sys-color-on-surface);
 }
 
 /* Brand Screensaver (PRO / Trial) */
 .brand-screensaver-body {
-    justify-items: center;
     gap: 1.25rem;
     animation: kioskSlideUp 0.6s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -267,7 +239,6 @@
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    margin: 0;
     text-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.6);
 }
 
@@ -275,7 +246,6 @@
     font-size: 1.35rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
     max-width: 600px;
-    margin: 0;
     line-height: 1.4;
     text-shadow: 0 2px 10px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
 }
@@ -289,7 +259,6 @@
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     font-size: 1.25rem;
-    font-weight: 700;
     box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
     transition: transform 0.2s ease;
 }
@@ -320,8 +289,6 @@
     background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
     margin-top: 1rem;
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.18);
 }
@@ -333,14 +300,11 @@
 
 /* Ad Network Screensaver (Google AdSense / Яндекс РСЯ) */
 .ad-network-screensaver-body {
-    justify-items: center;
     gap: 1.25rem;
-    width: 100%;
     animation: kioskSlideUp 0.5s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .ad-network-unit-card {
-    width: 100%;
     max-width: 800px;
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.85);
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.15);
@@ -351,16 +315,13 @@
 
 .ad-network-badge-row {
     grid-template-columns: minmax(0, 1fr) auto;
-    min-width: 0;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.08);
 }
 
 .ad-network-badge {
     font-size: 0.75rem;
-    font-weight: 700;
     text-transform: uppercase;
-    color: var(--md-sys-color-primary);
     letter-spacing: 0.05em;
 }
 
@@ -374,7 +335,6 @@
 }
 
 .ad-screensaver-footer {
-    justify-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
 }

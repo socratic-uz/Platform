@@ -10,7 +10,6 @@
 .example-container,
 .landing-subpage-container {
     grid-auto-flow: row;
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     gap: 3.5rem;
@@ -22,11 +21,8 @@
 .help-hero,
 .example-hero,
 .landing-subpage-hero {
-    justify-items: center;
     text-align: center;
     gap: 1.5rem;
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
 }
 
@@ -37,11 +33,9 @@
     font-size: 2.75rem;
     font-weight: 800;
     line-height: 1.2;
-    color: var(--md-sys-color-on-surface);
     word-break: break-word;
     overflow-wrap: break-word;
     max-width: 900px;
-    margin: 0;
 }
 
 .about-subtitle,
@@ -50,9 +44,7 @@
 .landing-subpage-subtitle {
     font-size: 1.15rem;
     line-height: 1.6;
-    color: var(--md-sys-color-on-surface-variant);
     max-width: 780px;
-    margin: 0;
 }
 
 .m3-pill-badge {
@@ -61,7 +53,6 @@
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     font-size: 0.85rem;
-    font-weight: 600;
 }
 
 .m3-pill-badge.tertiary {
@@ -76,16 +67,12 @@
 }
 
 .section-header {
-    justify-items: center;
     text-align: center;
     gap: 0.75rem;
-    width: 100%;
 }
 
 /* ─── 2. Video Card Showcase ─────────────────────────────────────────────── */
 .about-video-section {
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
 }
 
@@ -93,7 +80,6 @@
     gap: 1.5rem;
     padding: 2.5rem;
     background: var(--md-sys-color-surface-container);
-    width: 100%;
 }
 
 .video-card-header {
@@ -105,18 +91,13 @@
 
 .video-card-header h3 {
     font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-    margin: 0;
 }
 
 .video-player-wrapper {
-    width: 100%;
     background: var(--md-sys-color-surface-container-lowest);
 }
 
 .video-player-wrapper video {
-    width: 100%;
     max-height: 540px;
     object-fit: cover;
     border-radius: 20px;
@@ -129,7 +110,6 @@
     gap: 0.6rem;
     font-size: 0.95rem;
     color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
-    margin: 0;
 }
 
 /* ─── 3. Pillars & Feature Grids ─────────────────────────────────────────── */
@@ -137,14 +117,12 @@
 .about-tech-stack-section,
 .about-cta-section {
     gap: 2.5rem;
-    width: 100%;
 }
 
 .pillars-grid,
 .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    width: 100%;
 }
 
 .pillar-card,
@@ -171,7 +149,6 @@
 .pillar-features {
     gap: 0.5rem;
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -180,11 +157,9 @@
     grid-auto-columns: max-content auto;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .cta-card {
-    justify-items: center;
     text-align: center;
     gap: 1.5rem;
     padding: 3.5rem 2rem;
@@ -201,7 +176,6 @@
 .example-categories {
     gap: 0.75rem;
     justify-content: start;
-    width: 100%;
     max-width: 100%;
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
     scrollbar-width: thin;
@@ -210,23 +184,19 @@
 .help-search-section {
     max-width: 680px;
     margin: 0 auto;
-    width: 100%;
 }
 
 .help-search-bar {
-    width: 100%;
 }
 
 .faq-section {
     gap: 1.5rem;
-    width: 100%;
 }
 
 .faq-grid,
 .example-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 1.5rem;
-    width: 100%;
 }
 
 .faq-card,
@@ -240,7 +210,6 @@
     gap: 1.5rem;
     padding: 2.5rem;
     background: var(--md-sys-color-surface-container);
-    width: 100%;
 }
 
 .contact-grid {
@@ -294,16 +263,12 @@
 
 .qrg-title {
     font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
     line-height: 1.3;
 }
 
 .qrg-org {
     font-size: 0.8rem;
-    color: var(--md-sys-color-primary);
     font-weight: 500;
-    margin: 0;
 }
 
 .qrg-back {
@@ -320,11 +285,9 @@
 
 .qrg-back:hover {
     background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
 }
 
 .qrg-input-wrapper {
-    width: 100%;
 }
 
 .qrg-customizer {
@@ -336,11 +299,8 @@
 .qrg-section-title {
     gap: 8px;
     font-size: 0.85rem;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var(--md-sys-color-primary);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 8px;
 }
 
@@ -354,7 +314,6 @@
 
 .qrg-field-label {
     font-size: 0.75rem;
-    font-weight: 600;
     color: var(--md-sys-color-outline);
 }
 
@@ -363,11 +322,9 @@
 }
 
 .qrg-color-picker-wrapper {
-    justify-items: center;
     gap: 4px;
     font-size: 0.7rem;
     color: var(--md-sys-color-outline);
-    font-weight: 600;
 }
 
 .qrg-select-grid {
@@ -381,12 +338,10 @@
 .qrg-slider-header {
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.75rem;
-    font-weight: 600;
     color: var(--md-sys-color-outline);
 }
 
 .qrg-slider-val {
-    color: var(--md-sys-color-primary);
 }
 
 .qrg-lists {
@@ -403,12 +358,10 @@
 .qrg-group-head {
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.75rem;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     color: var(--md-sys-color-outline);
     padding: 0 4px 4px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     margin-bottom: 4px;
 }
 
@@ -440,21 +393,17 @@
 .qrg-preview-header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 12px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 16px;
 }
 
 .qrg-preview-header h2 {
     font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0;
 }
 
 .qrg-badge {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     font-size: 0.75rem;
-    font-weight: 700;
     padding: 4px 10px;
     border-radius: 20px;
 }
@@ -466,7 +415,6 @@
 
 .qrg-card {
     box-shadow: 0 8px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
-    justify-items: center;
     align-content: center;
     text-align: center;
     padding: 32px;
@@ -492,17 +440,13 @@
 
 .qrg-card-name {
     font-size: 1.15rem;
-    font-weight: 700;
     letter-spacing: -0.3px;
-    margin: 0;
 }
 
 .qrg-card-hint {
     font-size: 0.75rem;
-    font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin: 0;
 }
 
 .qrg-empty {
@@ -538,21 +482,18 @@ main.docs-page {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 12px;
     min-height: 56px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .docs-header-icon {
     font-size: 24px;
     width: 24px;
     height: 24px;
-    color: var(--md-sys-color-primary);
 }
 
 .docs-sidebar-title {
     font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.15px;
-    color: var(--md-sys-color-on-surface);
 }
 
 .docs-refresh-btn {
@@ -561,7 +502,6 @@ main.docs-page {
     min-width: 48px !important;
     background: transparent;
     border: none;
-    color: var(--md-sys-color-on-surface-variant);
     padding: 0;
     border-radius: 50%;
 }
@@ -580,10 +520,8 @@ main.docs-page {
 .docs-group-header {
     padding: 4px 8px;
     font-size: 0.75rem;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var(--md-sys-color-primary);
     opacity: 0.85;
 }
 
@@ -596,7 +534,6 @@ main.docs-page {
     overflow-x: clip;
     padding: 0;
     background-color: var(--md-sys-color-background);
-    min-width: 0;
 }
 
 .docs-welcome-container {
@@ -622,7 +559,6 @@ main.docs-page {
     line-height: 1.6;
     word-break: break-word;
     overflow-wrap: break-word;
-    min-width: 0;
 }
 
 .docs-header-bar {
@@ -635,11 +571,9 @@ main.docs-page {
     gap: 0.35rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--md-sys-color-on-surface);
 }
 
 .docs-breadcrumb-link {
-    color: var(--md-sys-color-primary);
 }
 
 .docs-header-actions {

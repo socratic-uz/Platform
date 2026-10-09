@@ -6,7 +6,6 @@
 .analytics-kpi-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
 }
 
 .analytics-kpi-card {
@@ -34,7 +33,6 @@
     color: var();
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    margin: 0;
 }
 
 .kpi-icon-badge {
@@ -60,7 +58,6 @@
 
 .kpi-trend {
     font-size: 0.75rem;
-    font-weight: 600;
     grid-auto-flow: column;
     gap: 2px;
     color: var();
@@ -69,7 +66,6 @@
 .analytics-breakdown-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
     gap: var(--md-sys-spacing-5, 1.25rem);
-    width: 100%;
 }
 
 .analytics-panel-card {
@@ -88,9 +84,7 @@
 
 .panel-title {
     font-size: 1.05rem;
-    font-weight: 600;
     color: var();
-    margin: 0;
 }
 
 .breakdown-bars-stack {
@@ -109,7 +103,6 @@
 }
 
 .bar-track {
-    width: 100%;
     height: 8px;
     background: var();
 }
@@ -124,7 +117,6 @@
 .analytics-toolbar-grid {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
-    width: 100%;
 }
 
 @media (max-width: 960px) {
@@ -143,16 +135,13 @@
 .analytics-mode-btn {
     gap: 0.35rem;
     background: transparent;
-    color: var(--md-sys-color-on-surface-variant);
     border: none;
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
-    font-weight: 600;
 }
 
 .analytics-mode-btn:hover {
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
 }
 
 .analytics-mode-btn.active {
@@ -165,8 +154,6 @@
     background: var(--md-sys-color-surface-container-high);
     padding: 0.4rem 0.85rem;
     font-size: 0.825rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
     min-height: 36px;
 }
 
@@ -184,7 +171,6 @@
 .analytics-period-chip {
     padding: 0.4rem 0.9rem;
     background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
     font-weight: 500;
     touch-action: manipulation;
@@ -193,7 +179,6 @@
 
 .analytics-period-chip:hover {
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
     border-color: var(--md-sys-color-outline);
 }
 
@@ -201,7 +186,6 @@
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     border-color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 .analytics-toolbar-actions {
@@ -226,7 +210,6 @@
     padding: 0.25rem 0.75rem;
     background: var(--md-sys-color-surface-container);
     font-size: 0.75rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .pulse-indicator {

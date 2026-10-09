@@ -3,7 +3,6 @@ header.app-header.landing-header {
     background: rgba(4, 6, 10, 0.6);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(56, 189, 248, 0.12);
-    color: var(--md-sys-color-on-surface);
     min-height: 64px;
     padding: 0.35rem 1.5rem;
     position: sticky;
@@ -15,7 +14,6 @@ header.app-header.landing-header {
 header.landing-header .header-grid-layout {
     max-width: 1280px;
     margin: 0 auto;
-    width: 100%;
 }
 
 header.landing-header .header-brand-link {
@@ -70,13 +68,11 @@ header.landing-header .header-brand-text {
 
 .landing-nav-link md-icon {
     font-size: 16px;
-    color: var(--md-sys-color-primary);
     opacity: 0.8;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .landing-nav-link:hover {
-    color: var(--md-sys-color-on-surface);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.12);
 }
@@ -100,14 +96,12 @@ header.landing-header .header-brand-text {
     background: var(--md-sys-color-surface-container, rgba(255, 255, 255, 0.04));
     color: var();
     font-size: 0.8rem;
-    font-weight: 600;
     touch-action: manipulation;
 }
 
 .lang-toggle-btn:hover {
     background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-primary);
 }
 
 .lang-dropdown-menu {
@@ -120,7 +114,6 @@ header.landing-header .header-brand-text {
 
 .lang-menu-item:hover {
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
 }
 
 .landing-auth-btn {
@@ -132,7 +125,6 @@ header.landing-header .header-brand-text {
     border: 1px solid var(--md-sys-color-outline-variant, rgba(56, 189, 248, 0.35));
     color: var();
     font-size: 0.84rem;
-    font-weight: 600;
     touch-action: manipulation;
     box-shadow: 0 0 16px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
@@ -168,7 +160,6 @@ header.landing-header .header-brand-text {
 .landing-mobile-menu-toggle:hover {
     background: var(--md-sys-color-surface-container-high);
     border-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-primary);
 }
 
 .landing-mobile-menu-backdrop {
@@ -205,14 +196,11 @@ header.landing-header .header-brand-text {
     grid-template-columns: 24px minmax(0, 1fr);
     gap: 1rem;
     padding: 0.85rem 1.15rem;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
-    font-weight: 600;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
 .mobile-nav-item md-icon {
-    color: var(--md-sys-color-primary);
     font-size: 20px;
 }
 
@@ -238,24 +226,19 @@ header.landing-header .header-brand-text {
 footer.app-footer {
     grid-template-columns: minmax(0, 1fr);
     background: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface);
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
 }
 
 .footer-container {
     grid-auto-flow: row;
     gap: 3rem;
-    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
 }
 
 .footer-custom-slot {
-    width: 100%;
     padding-bottom: 1.5rem;
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
@@ -264,7 +247,6 @@ footer.app-footer {
     grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
     gap: 3rem 2rem;
     align-items: start;
-    width: 100%;
 }
 
 .footer-brand-col {
@@ -278,7 +260,6 @@ footer.app-footer {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 0.65rem;
-    color: var(--md-sys-color-on-surface);
     min-width: 48px;
     width: max-content;
 }
@@ -304,8 +285,6 @@ footer.app-footer {
 .footer-brand-tagline {
     font-size: 0.875rem;
     line-height: 1.55;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
 .footer-system-status {
@@ -336,7 +315,6 @@ footer.app-footer {
 .status-text {
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .footer-nav-col {
@@ -347,11 +325,8 @@ footer.app-footer {
 
 .footer-col-title {
     font-size: 0.85rem;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--md-sys-color-primary);
-    margin: 0;
 }
 
 .footer-links-list {
@@ -359,7 +334,6 @@ footer.app-footer {
     gap: 0.25rem;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-links-list li {
@@ -369,7 +343,6 @@ footer.app-footer {
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
@@ -378,7 +351,6 @@ footer.app-footer {
 }
 
 .footer-links-list a:hover {
-    color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
     transform: translateX(2px);
 }
@@ -388,7 +360,6 @@ footer.app-footer {
     font-size: 18px;
     width: 18px;
     height: 18px;
-    color: var(--md-sys-color-primary);
     opacity: 0.85;
 }
 
@@ -397,12 +368,10 @@ footer.app-footer {
     gap: 1.5rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    width: 100%;
 }
 
 .footer-copyright {
     font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
     opacity: 0.8;
 }
 
@@ -419,7 +388,6 @@ footer.app-footer {
     grid-auto-columns: auto auto;
     gap: 0.4rem;
     font-size: 0.75rem;
-    color: var(--md-sys-color-on-surface-variant);
     opacity: 0.75;
 }
 

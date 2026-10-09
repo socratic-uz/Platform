@@ -13,7 +13,6 @@
     min-height: calc(100dvh - 80px);
     padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
     background-color: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
 }
 
 .qr-designer-page-root {
@@ -32,31 +31,23 @@
 .header-title-group {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 1rem;
-    min-width: 0;
 }
 
 .header-icon {
     font-size: 2.25rem;
-    color: var(--md-sys-color-primary);
 }
 
 .header-text {
     gap: 0.25rem;
-    min-width: 0;
 }
 
 .page-heading {
-    margin: 0;
     font-size: 1.35rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
     line-height: 1.2;
 }
 
 .page-subtitle {
-    margin: 0;
     font-size: 0.875rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 /* ─── 3. Header Presets & Actions ───────────────────────────────────────── */
@@ -67,7 +58,6 @@
 
 .preset-label {
     font-size: 0.875rem;
-    color: var(--md-sys-color-on-surface-variant);
     margin-right: 0.25rem;
     font-weight: 500;
 }
@@ -76,7 +66,6 @@
     padding: 0.5rem 1rem;
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
     font-weight: 500;
     touch-action: manipulation;
@@ -146,7 +135,6 @@
     grid-template-rows: minmax(0, 1fr) auto;
     gap: 0.75rem;
     min-height: 540px;
-    min-width: 0;
 }
 
 .seat-selection-card {
@@ -154,7 +142,6 @@
     gap: 0.75rem;
     padding: 0.75rem 1rem;
     background: var(--md-sys-color-surface-container-high);
-    min-width: 0;
 }
 
 .card-icon {
@@ -165,12 +152,10 @@
 .card-title {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--md-sys-color-on-surface);
 }
 
 .card-meta {
     font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 /* ─── 6. Controls Panel & Forms ─────────────────────────────────────────── */
@@ -178,7 +163,6 @@
     grid-template-columns: min(100%, 420px) minmax(0, 1fr);
     gap: 1.5rem;
     align-items: start;
-    min-width: 0;
 }
 
 .qr-controls-panel {
@@ -190,8 +174,6 @@
 .panel-section-title {
     margin: 0.5rem 0 0;
     font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--md-sys-color-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -202,16 +184,13 @@
 
 .control-label {
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
     font-weight: 500;
 }
 
 .text-input, .select-input {
-    width: 100%;
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--md-sys-color-outline);
     background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
     font-size: 0.9rem;
 }
 
@@ -232,7 +211,6 @@
 .color-picker-row {
     grid-template-columns: 48px minmax(0, 1fr);
     gap: 0.6rem;
-    min-width: 0;
 }
 
 .color-picker-row input[type="color"] {
@@ -247,8 +225,6 @@
 .color-hex {
     font-size: 0.825rem;
     font-family: monospace;
-    color: var(--md-sys-color-on-surface);
-    font-weight: 600;
 }
 
 .style-selects-grid {
@@ -259,7 +235,6 @@
 /* ─── 7. QR & Canvas Preview Area ───────────────────────────────────────── */
 .qr-preview-area {
     align-content: start;
-    min-width: 0;
 }
 
 .preview-card {
@@ -267,28 +242,22 @@
     gap: 1.25rem;
     padding: 1.5rem;
     background: var(--md-sys-color-surface-container);
-    min-width: 0;
     container-type: inline-size;
 }
 
 .preview-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    min-width: 0;
 }
 
 .preview-title {
     font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .resolution-badge {
     font-size: 0.775rem;
     padding: 0.3rem 0.75rem;
     background: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-on-surface-variant);
     font-family: monospace;
-    font-weight: 600;
 }
 
 .qr-stage {
@@ -303,15 +272,12 @@
 
 .preview-footer {
     grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
 }
 
 .preview-info {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.6rem;
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
-    min-width: 0;
 }
 
 .info-icon {

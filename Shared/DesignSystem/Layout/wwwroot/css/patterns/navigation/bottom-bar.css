@@ -100,10 +100,8 @@
 
 .m3-bottom-nav-item {
     grid-template-rows: auto auto;
-    justify-items: center;
     align-content: center;
     gap: 0.25rem;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.5rem;
@@ -111,8 +109,6 @@
 }
 
 .m3-bottom-nav-item.active {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 .m3-nav-fab {

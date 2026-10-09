@@ -4,7 +4,6 @@
 .kds-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-5, 1.25rem);
-    width: 100%;
     align-items: start;
     container-type: inline-size;
 }
@@ -24,7 +23,6 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .column-title-group,
@@ -45,14 +43,10 @@
 
 .column-icon.icon-ready,
 .header-icon.icon-ready {
-    color: var(--md-sys-color-primary);
 }
 
 .column-title {
-    margin: 0;
     font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .column-content,
@@ -60,7 +54,6 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
     align-content: start;
-    width: 100%;
 }
 
 @media (max-width: 839.98px) {
@@ -93,8 +86,6 @@
 
 .card-order-id {
     font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
     letter-spacing: 0.02em;
 }
 
@@ -102,12 +93,9 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .card-amount {
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
 }
 
 .card-payment {
@@ -127,8 +115,6 @@
     justify-content: end;
     gap: 0.4rem;
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-sys-color-primary);
 }
 
 .advance-icon {
@@ -173,7 +159,6 @@
     font-weight: 800;
     line-height: 1;
     background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
 }
 
 .badge-making {
@@ -189,7 +174,6 @@
 .column-empty,
 .kds-empty-col {
     grid-template-columns: minmax(0, 1fr);
-    justify-items: center;
     text-align: center;
     gap: 0.5rem;
     padding: 2.5rem 1rem;
@@ -202,7 +186,6 @@
 .kds-empty-icon {
     font-size: 36px;
     opacity: 0.6;
-    color: var(--md-sys-color-primary);
 }
 
 /* ─── KDS Card Internal Structure ───────────────────────────────────── */
@@ -214,21 +197,17 @@
 
 .kds-order-ref {
     font-size: 0.8125rem;
-    font-weight: 700;
-    color: var(--md-sys-color-primary);
     letter-spacing: 0.04em;
 }
 
 .kds-time-ago {
     justify-self: end;
     font-size: 0.8125rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .kds-status-tag {
     justify-self: end;
     font-size: 0.75rem;
-    font-weight: 700;
     color: var(--md-sys-color-on-primary-container);
     background: var(--md-sys-color-primary-container);
     padding: 0.2rem 0.5rem;
@@ -240,10 +219,7 @@
 }
 
 .kds-product-name {
-    margin: 0;
     font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
     line-height: 1.25;
 }
 
@@ -261,7 +237,6 @@
     gap: var(--md-sys-spacing-2, 0.5rem);
     padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
     font-size: 0.9375rem;
-    font-weight: 600;
     border: none;
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
                 background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
@@ -313,7 +288,6 @@
 
 .card-created .card-status-chip {
     background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .error-banner {

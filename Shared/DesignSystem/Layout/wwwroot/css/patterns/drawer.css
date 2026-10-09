@@ -3,7 +3,6 @@
 .md-drawer-backdrop {
     position: fixed;
     inset: 0;
-    width: 100%;
     height: 100dvh;
     background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
     z-index: var(--m3-z-drawer, 40);
@@ -11,7 +10,6 @@
     justify-items: end;
     border: none;
     padding: 0;
-    margin: 0;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
@@ -28,13 +26,11 @@
 .m3-drawer-panel,
 .drawer-panel {
     grid-column: 2;
-    width: 100%;
     max-width: 440px;
     height: 100dvh;
     background: var(--md-sys-color-surface-container-high);
     border-left: 1px solid var(--md-sys-color-outline-variant);
     padding: 24px;
-    color: var(--md-sys-color-on-surface);
     grid-template-rows: auto minmax(0, 1fr) auto;
     box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
     overscroll-behavior: contain;
@@ -60,7 +56,6 @@
 
 .drawer-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: 16px;
 }
 
@@ -72,9 +67,6 @@
 
 .drawer-header .headline {
     font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-    margin: 0;
     gap: 8px;
 }
 
@@ -84,7 +76,6 @@
     font-size: 0.75rem;
     padding: 2px 8px;
     margin-left: 8px;
-    font-weight: 600;
 }
 
 .drawer-body {
@@ -100,7 +91,6 @@
 .empty-cart-view {
     text-align: center;
     padding: 40px 20px;
-    color: var(--md-sys-color-on-surface-variant);
     place-content: center;
     gap: 8px;
 }
@@ -114,7 +104,6 @@
 .cart-items-list {
     list-style: none;
     padding: 0;
-    margin: 0;
     gap: 8px;
     background: var(--md-sys-color-surface-container-low);
 }
@@ -123,7 +112,6 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
     padding: 12px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .cart-item-row:last-child {
@@ -131,22 +119,16 @@
 }
 
 .item-info {
-    min-width: 0;
 }
 
 .item-headline {
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .item-support {
     font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .item-price {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
     display: block;
     margin-top: 2px;
 }
@@ -161,9 +143,7 @@
 
 .qty-val {
     font-size: 0.85rem;
-    font-weight: 600;
     padding: 0 6px;
-    color: var(--md-sys-color-on-surface);
 }
 
 .promo-section {
@@ -176,7 +156,6 @@
 }
 
 .promo-field {
-    width: 100%;
 }
 
 .promo-success-text {
@@ -184,21 +163,17 @@
     color: var(--md-sys-color-tertiary);
     margin-top: 4px;
     display: block;
-    font-weight: 600;
 }
 
 .shipping-card {
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
     background: var(--md-sys-color-surface-container);
     padding: 12px;
     margin-top: 8px;
 }
 
 .shipping-fee {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 .drawer-footer {
@@ -214,7 +189,6 @@
 
 .price-row {
     grid-template-columns: minmax(0, 1fr) auto;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .discount-row {
@@ -224,17 +198,14 @@
 .drawer-footer .total-row {
     font-size: 1.15rem;
     font-weight: 800;
-    color: var(--md-sys-color-on-surface);
     padding-top: 8px;
     border-top: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 .drawer-footer .total-value {
-    color: var(--md-sys-color-primary);
 }
 
 .checkout-btn {
-    width: 100%;
 }
 
 

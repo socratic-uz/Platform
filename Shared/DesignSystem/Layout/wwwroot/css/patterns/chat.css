@@ -14,12 +14,10 @@
 }
 
 .chat-bottom-section {
-    width: 100%;
     z-index: 10;
 }
 
 .chat-container {
-    width: 100%;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 0.75rem;
@@ -38,7 +36,6 @@
 
 /* ─── 2. Chat Header Toolbar ─────────────────────────────────────────────── */
 .chat-header-container {
-    width: 100%;
     top: 0;
     padding: 0.75rem 1.5rem;
     padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
@@ -49,7 +46,6 @@
 
 .header-content {
     grid-template-columns: minmax(0, 1fr) auto;
-    width: 100%;
 }
 
 .chat-back-link {
@@ -68,7 +64,6 @@
 
 .brand-title {
     font-size: 1.25rem;
-    font-weight: 700;
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
     -webkit-background-clip: text;
@@ -83,7 +78,6 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
     padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px)) 1.5rem;
-    color: var(--md-sys-color-on-surface);
 }
 
 .message-list {
@@ -127,7 +121,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-message-header {
-    font-weight: 600;
 }
 
 .assistant-message-text {
@@ -166,7 +159,6 @@ chat-messages > div:last-of-type {
 }
 
 .assistant-search-phrase {
-    font-weight: 600;
 }
 
 /* Assistant Markdown Formats */
@@ -189,13 +181,11 @@ assistant-message li,
 
 assistant-message strong,
 .assistant-message-text strong {
-    font-weight: 600;
 }
 
 assistant-message h3,
 .assistant-message-text h3 {
     margin: 1rem 0;
-    font-weight: 600;
 }
 
 assistant-message p + p,
@@ -211,7 +201,6 @@ assistant-message table,
 assistant-message th,
 .assistant-message-text th {
     text-align: left;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 assistant-message th,
@@ -231,7 +220,6 @@ assistant-message tr:nth-child(even),
 assistant-message pre > code,
 .assistant-message-text pre > code {
     background-color: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
     display: block;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
@@ -247,7 +235,6 @@ assistant-message pre > code,
     font-size: 0.875rem;
     line-height: 1.25rem;
     background-color: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
 }
 
 .citation[href]:hover {
@@ -267,12 +254,10 @@ assistant-message pre > code,
 }
 
 .citation-file {
-    font-weight: 600;
 }
 
 /* ─── 6. Prompt Suggestions ─────────────────────────────────────────────── */
 .suggestions-wrapper {
-    width: 100%;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -304,7 +289,6 @@ assistant-message pre > code,
 /* ─── 7. Chat Input Field & Controls ─────────────────────────────────────── */
 .chat-input-wrapper,
 .chat-input-form {
-    width: 100%;
 }
 
 .input-box {
@@ -312,7 +296,6 @@ assistant-message pre > code,
     background: var();
     border: 1px solid var();
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
-    width: 100%;
     cursor: text;
 }
 
@@ -327,14 +310,12 @@ assistant-message pre > code,
     resize: none;
     border: none;
     outline: none;
-    width: 100%;
     background: transparent;
     font-family: inherit;
     font-size: 0.9375rem;
     line-height: 1.5;
     max-height: 120px;
     padding: 0.4rem 0;
-    margin: 0;
     color: var();
     display: block;
 }

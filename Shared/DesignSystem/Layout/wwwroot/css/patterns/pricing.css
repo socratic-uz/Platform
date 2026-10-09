@@ -8,7 +8,6 @@
 .plans-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
 }
 
 .tier-box,
@@ -56,31 +55,25 @@
 
 .tier-name,
 .plan-name {
-    margin: 0;
     font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
 }
 
 .tier-price,
 .plan-price-wrap {
     font-size: 1.75rem;
     font-weight: 800;
-    color: var(--md-sys-color-primary);
 }
 
 .tier-price small,
 .plan-currency {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .tier-features,
 .plan-features {
     list-style: none;
     padding: 0;
-    margin: 0;
     gap: 0.6rem;
     font-size: 0.9rem;
 }
@@ -92,7 +85,7 @@
 }
 
 .feature-icon.ok,
-.feat-icon { color: var(--md-sys-color-primary); }
+.feat-icon { }
 .feature-icon.info { color: var(--md-sys-color-tertiary); }
 .feature-icon.star { color: var(--md-sys-color-secondary); }
 
@@ -101,9 +94,7 @@
     text-align: center;
     padding: 0.4rem;
     background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
-    font-weight: 600;
 }
 
 .current-plan-indicator.pro {

@@ -232,3 +232,31 @@
 ) {
     align-items: center;
 }
+
+/* Universal Justify Items Center Master Rule */
+:is(
+    .about-hero,
+    .ad-network-screensaver-body,
+    .ad-screensaver-footer,
+    .attract-loop-content,
+    .auth-header,
+    .brand-screensaver-body,
+    .column-empty,
+    .cta-card,
+    .empty-plans-actions,
+    .empty-plans-card,
+    .example-hero,
+    .faceid-viewfinder-card,
+    .help-hero,
+    .kds-empty-col,
+    .kiosk-attract-loop,
+    .landing-subpage-hero,
+    .m3-bottom-nav-item,
+    .pos-loading,
+    .qrg-card,
+    .qrg-color-picker-wrapper,
+    .section-header,
+    .signin-header
+) {
+    justify-items: center;
+}

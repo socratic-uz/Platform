@@ -1,13 +1,11 @@
 /* ─── 11. Universal Filter & Tools Toolbar ──────────────────────────────── */
 .m3-filter-toolbar {
     gap: var(--md-sys-spacing-3, 0.75rem);
-    width: 100%;
     padding-bottom: 0.25rem;
 }
 
 .m3-filter-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
     gap: var(--md-sys-spacing-3, 0.75rem);
-    width: 100%;
 }
 

@@ -9,11 +9,9 @@
 .payment-trust-footer {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1.5rem;
-    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0.5rem 0;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
 }
 
@@ -22,8 +20,6 @@
     grid-auto-columns: auto auto;
     gap: 0.5rem;
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-sys-color-primary);
 }
 
 .trust-badge md-icon {
@@ -37,7 +33,6 @@
 }
 
 .payment-support a {
-    color: var(--md-sys-color-primary);
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -60,24 +55,19 @@
 footer.app-footer {
     grid-template-columns: minmax(0, 1fr);
     background: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface);
     border-top: 1px solid var(--md-sys-color-outline-variant);
     padding: 3.5rem 2rem 2rem 2rem;
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
 }
 
 .footer-container {
     grid-auto-flow: row;
     gap: 3rem;
-    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
 }
 
 .footer-custom-slot {
-    width: 100%;
     padding-bottom: 1.5rem;
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
@@ -87,7 +77,6 @@ footer.app-footer {
     grid-template-columns: minmax(260px, 1.35fr) repeat(auto-fit, minmax(170px, 1fr));
     gap: 3rem 2rem;
     align-items: start;
-    width: 100%;
 }
 
 /* Brand Column */
@@ -102,7 +91,6 @@ footer.app-footer {
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
     gap: 0.65rem;
-    color: var(--md-sys-color-on-surface);
     min-width: 48px;
     width: max-content;
 }
@@ -128,8 +116,6 @@ footer.app-footer {
 .footer-brand-tagline {
     font-size: 0.875rem;
     line-height: 1.55;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
 .footer-system-status {
@@ -166,7 +152,6 @@ footer.app-footer {
 .status-text {
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 /* Nav Columns */
@@ -178,11 +163,8 @@ footer.app-footer {
 
 .footer-col-title {
     font-size: 0.85rem;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--md-sys-color-primary);
-    margin: 0;
 }
 
 .footer-links-list {
@@ -190,7 +172,6 @@ footer.app-footer {
     gap: 0.25rem;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-links-list li {
@@ -200,7 +181,6 @@ footer.app-footer {
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
-    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
     font-weight: 400;
     padding: 0.25rem 0.5rem;
@@ -209,7 +189,6 @@ footer.app-footer {
 }
 
 .footer-links-list a:hover {
-    color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
     transform: translateX(2px);
 }
@@ -219,7 +198,6 @@ footer.app-footer {
     font-size: 18px;
     width: 18px;
     height: 18px;
-    color: var(--md-sys-color-primary);
     opacity: 0.85;
 }
 
@@ -229,12 +207,10 @@ footer.app-footer {
     gap: 1.5rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    width: 100%;
 }
 
 .footer-copyright {
     font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
     opacity: 0.8;
 }
 

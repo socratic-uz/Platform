@@ -5,12 +5,8 @@
 
 header.app-header {
     grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
-    color: var(--md-sys-color-on-surface);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
     min-height: calc(64px + env(safe-area-inset-top, 0px));
     z-index: 50;
@@ -26,30 +22,22 @@ header.app-header.header-sticky {
     grid-template-columns: minmax(min-content, max-content) minmax(0, 1fr) minmax(min-content, max-content);
     column-gap: 1rem;
     row-gap: 0.5rem;
-    width: 100%;
-    min-width: 0;
 }
 
 .header-start-zone {
     gap: 0.75rem;
-    min-width: 0;
 }
 
 .m3-page-header-start {
     gap: 0.5rem;
-    min-width: 0;
 }
 
 .m3-page-header-icon {
     font-size: 24px;
-    color: var(--md-sys-color-primary);
 }
 
 .m3-page-header-title {
-    margin: 0;
     font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
 }
 
 .pos-top-header-actions {
@@ -62,20 +50,15 @@ header.app-header.header-sticky {
 
 .header-center-zone {
     justify-content: center;
-    width: 100%;
-    min-width: 0;
 }
 
 .header-end-zone {
     gap: 0.5rem;
     justify-self: end;
-    min-width: 0;
 }
 
 .header-brand-link {
     gap: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-weight: 700;
     font-size: 1.15rem;
     touch-action: manipulation;
 }
@@ -90,7 +73,6 @@ header.app-header.header-sticky {
 
 .header-brand-text {
     font-size: 1.15rem;
-    font-weight: 700;
     letter-spacing: -0.01em;
 }
 
