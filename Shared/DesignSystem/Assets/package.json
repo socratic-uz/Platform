@@ -7,6 +7,10 @@
   "scripts": {
     "build:js": "rollup -c rollup.config.js",
     "build:css": "node scripts/bundle-css.mjs",
+    "consolidate": "node scripts/run-consolidator.mjs --build",
+    "consolidate:watch": "node scripts/run-consolidator.mjs --watch",
+    "consolidate:audit": "node scripts/run-consolidator.mjs --audit-current",
+    "consolidate:clean": "node scripts/run-consolidator.mjs --consolidate-current",
     "generate:classes": "node scripts/generate-css-classes.mjs",
     "generate:assets": "node scripts/generate-asset-paths.mjs",
     "generate:loc": "node scripts/generate-localization-keys.mjs",

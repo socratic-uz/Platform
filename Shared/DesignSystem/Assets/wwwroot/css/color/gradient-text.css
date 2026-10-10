@@ -1,0 +1,26 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   color/gradient-text.css
+   Gradient text needs background-clip:text. It MUST NOT live inside :where():
+   the per-element `background: linear-gradient(...)` shorthand has real
+   specificity and resets background-clip, so a zero-specificity group never wins.
+   Keep this file imported AFTER every file that sets `background` on these selectors.
+   ========================================================================== */
+
+.brand-title,
+.m3-text-gradient,
+.showcase-hero h1,
+header.landing-header .header-brand-text,
+.b2b-lead-content h2,
+.download-header h2,
+.evolution-header h2,
+.footer-logo,
+.section-title-box h2,
+.title-gradient,
+.value-cyan,
+.value-emerald,
+.value-purple,
+.value-teal {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
