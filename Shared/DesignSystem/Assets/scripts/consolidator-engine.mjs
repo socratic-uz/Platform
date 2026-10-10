@@ -48,11 +48,43 @@ export class AstConsolidator {
         }
         const atRuleScope = atRuleStack.join(' {\n    ');
 
-        // Extract clean selectors
-        const selectors = node.selectors
-          ? node.selectors.map(s => s.trim().replace(/\s+/g, ' ')).filter(Boolean)
-          : [];
+        // Extract clean, unnested selectors with depth-aware parenthesis balancing
+        function parseSelectors(selectorString) {
+          let s = selectorString.trim();
+          if (s.startsWith(':where(') && s.endsWith(')')) {
+            s = s.slice(7, -1).trim();
+          }
 
+          const results = [];
+          let current = '';
+          let depth = 0;
+
+          for (let i = 0; i < s.length; i++) {
+            const char = s[i];
+            if (char === '(') depth++;
+            else if (char === ')') depth--;
+
+            if (char === ',' && depth === 0) {
+              const trimmed = current.trim().replace(/\s+/g, ' ');
+              if (trimmed) results.push(trimmed);
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+
+          const trimmed = current.trim().replace(/\s+/g, ' ');
+          if (trimmed) results.push(trimmed);
+
+          return results.flatMap(item => {
+            if (item.startsWith(':where(') && item.endsWith(')')) {
+              return parseSelectors(item);
+            }
+            return [item];
+          });
+        }
+
+        const selectors = parseSelectors(node.selector || '');
         if (selectors.length === 0) return;
 
         node.walkDecls(decl => {

@@ -34,7 +34,7 @@ function getAllCssFiles(dirPath, fileList = []) {
     const fullPath = path.join(dirPath, item.name);
     if (item.isDirectory()) {
       // Skip node_modules, foundations, themes, tokens (they are standalone/static)
-      if (['node_modules', 'themes', 'tokens', 'foundations'].includes(item.name)) {
+      if (['node_modules', 'tokens'].includes(item.name)) {
         continue;
       }
       getAllCssFiles(fullPath, fileList);

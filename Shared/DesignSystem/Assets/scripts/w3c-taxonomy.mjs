@@ -152,15 +152,15 @@ export const PROPERTY_TO_W3C_MODULE = new Map([
   ['grid-row-start', 'layout/grid.css'],
   ['grid-row-end', 'layout/grid.css'],
   ['grid-area', 'layout/grid.css'],
-  ['gap', 'layout/grid.css'],
-  ['row-gap', 'layout/grid.css'],
-  ['column-gap', 'layout/grid.css'],
   ['subgrid', 'layout/grid.css'],
   ['masonry-auto-flow', 'layout/grid.css'],
 
   // ──────────────────────────────────────────────────────────────────────────
   // 8. Layout: Alignment (layout/alignment.css)
   // ──────────────────────────────────────────────────────────────────────────
+  ['gap', 'layout/alignment.css'],
+  ['row-gap', 'layout/alignment.css'],
+  ['column-gap', 'layout/alignment.css'],
   ['justify-content', 'layout/alignment.css'],
   ['justify-items', 'layout/alignment.css'],
   ['justify-self', 'layout/alignment.css'],
