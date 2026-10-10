@@ -1,0 +1,62 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: containment/contain.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .analytics-mode-btn,
+    .card-interactive,
+    .drawer-panel,
+    .file-card,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .m3-card-interactive,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-drawer-panel,
+    .m3-filter-chip,
+    .m3-hover-lift,
+    .m3-media-card,
+    .m3-press-scale,
+    .m3-segmented-btn,
+    .media-card,
+    .org-card,
+    .paginator nav button:not([disabled]),
+    .picker-palette-swatch,
+    .picker-trigger-card,
+    .section-ambient-glow,
+    .upload-card,
+    .ux-mode-card,
+    :where(
+    .m3-media-card,
+    .org-card,
+    .product-card,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card
+) img,
+    md-elevated-button,
+    md-elevated-card,
+    md-filled-button,
+    md-filled-card,
+    md-icon-button,
+    md-outlined-button,
+    md-outlined-card,
+    md-text-button,
+    md-tonal-button
+) {
+    will-change: transform;
+}
+
+:where(
+    .bg-spotlight,
+    .cursor-glow-orb,
+    .gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop
+) {
+    will-change: transform, opacity;
+}
+

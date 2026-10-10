@@ -20,6 +20,8 @@
     <ProjectReference Include="$(SmartWeb)" Condition="'$(SmartWeb)' != '' and Exists('$(SmartWeb)')" />
     <ProjectReference Include="..\Smart.Web\Smart.Web.csproj" Condition="('$(SmartWeb)' == '' or !Exists('$(SmartWeb)')) and Exists('..\Smart.Web\Smart.Web.csproj')" />
     <ProjectReference Include="..\..\DesignSystem\Smart.Web\Smart.Web.csproj" Condition="('$(SmartWeb)' == '' or !Exists('$(SmartWeb)')) and Exists('..\..\DesignSystem\Smart.Web\Smart.Web.csproj')" />
+    <ProjectReference Include="$(Assets)" Condition="'$(Assets)' != '' and Exists('$(Assets)')" />
+    <ProjectReference Include="..\Assets\Assets.csproj" Condition="('$(Assets)' == '' or !Exists('$(Assets)')) and Exists('..\Assets\Assets.csproj')" />
     <ProjectReference Include="$(MaterialWeb)" Condition="'$(MaterialWeb)' != '' and Exists('$(MaterialWeb)')" />
     <ProjectReference Include="..\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\Material.Web\Material.Web.csproj')" />
     <ProjectReference Include="..\..\DesignSystem\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\..\DesignSystem\Material.Web\Material.Web.csproj')" />
@@ -33,14 +35,7 @@
     <ProjectReference Include="..\..\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\..\Domain\Domain.csproj')" />
     <ProjectReference Include="..\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\Domain\Domain.csproj')" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\ResourceEn.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\ResourceRu.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
+
   <ItemGroup>
     <Content Update="**\*.razor" Pack="false" />
   </ItemGroup>

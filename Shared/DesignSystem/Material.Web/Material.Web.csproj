@@ -21,25 +21,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Compile Update="Tokens\CssClasses.g.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
   </ItemGroup>
 
-  <!-- Level 2: Generates strongly-typed C# class constants from CSS stylesheets -->
-  <Target Name="GenerateCssClasses" BeforeTargets="BeforeCompile" Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/generate-css-classes.mjs')">
-    <Exec Command="node &quot;$(MSBuildThisFileDirectory)../../../../../scripts/generate-css-classes.mjs&quot;" 
-          ContinueOnError="true" 
-          StandardOutputImportance="Low" />
-  </Target>
-
-  <!-- Level 3: Produces single-file production CSS bundle with LightningCSS (7ms) -->
-  <Target Name="BundleCss" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs')">
-    <Exec Command="node &quot;$(MSBuildThisFileDirectory)../../../../../scripts/bundle-css.mjs&quot;" 
-          ContinueOnError="true" 
-          StandardOutputImportance="Low" />
-  </Target>
+  <ItemGroup>
+    <ProjectReference Include="$(Assets)" Condition="'$(Assets)' != '' and Exists('$(Assets)')" />
+    <ProjectReference Include="..\Assets\Assets.csproj" Condition="('$(Assets)' == '' or !Exists('$(Assets)')) and Exists('..\Assets\Assets.csproj')" />
+  </ItemGroup>
 
   <!-- Level 4: Socratic Quality Gate stop-lever for Release / CI builds -->
   <Target Name="ValidateCssQuality" BeforeTargets="Build" Condition="('$(Configuration)' == 'Release' or '$(ContinuousIntegrationBuild)' == 'true') and Exists('$(MSBuildThisFileDirectory)../../../../../scripts/quality-gate.ps1')">

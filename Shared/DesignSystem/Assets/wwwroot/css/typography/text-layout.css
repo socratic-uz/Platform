@@ -1,0 +1,632 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: typography/text-layout.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+body {
+    line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
+}
+
+h1, .m3-display-large {
+    line-height: var(--md-sys-typescale-display-large-line-height);
+}
+
+h1, .m3-display-large {
+    letter-spacing: var(--md-sys-typescale-display-large-tracking);
+}
+
+h2, .m3-headline-large {
+    line-height: var(--md-sys-typescale-headline-large-line-height);
+}
+
+h2, .m3-headline-large {
+    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
+}
+
+h3, .m3-headline-medium {
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+}
+
+h3, .m3-headline-medium {
+    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+}
+
+h4, .m3-title-large {
+    line-height: var(--md-sys-typescale-title-large-line-height);
+}
+
+h4, .m3-title-large {
+    letter-spacing: var(--md-sys-typescale-title-large-tracking);
+}
+
+h5, .m3-title-medium {
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+p, .m3-body-large {
+    line-height: var(--md-sys-typescale-body-large-line-height);
+}
+
+.m3-body-medium {
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+.m3-label-small {
+    line-height: var(--md-sys-typescale-label-small-line-height);
+}
+
+.m3-label-small {
+    letter-spacing: var(--md-sys-typescale-label-small-tracking);
+}
+
+:where(
+    .badge,
+    .badge-counter,
+    .column-badge,
+    .count-badge,
+    .item-status-pill,
+    .m3-badge,
+    .m3-count-badge,
+    .m3-pill-badge,
+    .m3-status-badge,
+    .maneuver-icon,
+    .map-panel-toggle-icon,
+    .order-status-badge,
+    .picker-badge md-icon,
+    .route-close,
+    .status-badge,
+    md-elevated-button,
+    md-filled-button,
+    md-filled-tonal-button) md-icon:not([slot],
+    md-outlined-button,
+    md-text-button,
+    md-tonal-button
+) {
+    line-height: 1;
+}
+
+.avatar-button md-icon,
+.avatar-button .material-symbols-outlined {
+    line-height: 24px;
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card) h5,
+.product-title {
+    letter-spacing: -0.015em;
+}
+
+:where(
+    .auth-title,
+    .brand-screensaver-title,
+    .brand-title,
+    .click-popup-coords,
+    .download-header h2,
+    .hero-title,
+    .home-title,
+    .kpi-number,
+    .m3-page-header-title,
+    .metric-num,
+    .product-price,
+    .section-title-box h2,
+    .showcase-brand-title,
+    .signin-title,
+    .spec-value,
+    .ux-modal-title,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) .price-tag
+) {
+    letter-spacing: -0.02em;
+}
+
+:where(
+    .footer-brand-tagline,
+    .m3-empty-state-desc,
+    .spatial-wing-header p,
+    .spotlight-info p,
+    .ux-mode-desc
+) {
+    line-height: 1.55;
+}
+
+:where(
+    .kds-order-ref,
+    .kpi-title,
+    .lang-chip-btn,
+    .popular-badge,
+    .pro-tag,
+    .showcase-stat-lbl,
+    .spatial-wing-badge
+) {
+    letter-spacing: 0.04em;
+}
+
+:where(
+    .ad-network-badge,
+    .det-voice-title,
+    .footer-col-title,
+    .label-title,
+    .m3-label,
+    .monospace,
+    .pills-label,
+    .place-details-header-title,
+    .product-description-block h3,
+    .section-heading,
+    .showcase-brand-badge,
+    .sidebar-brand-subtitle,
+    .spotlight-pill,
+    .stat-label
+) {
+    letter-spacing: 0.05em;
+}
+
+.required-badge {
+    text-transform: none;
+}
+
+:where(
+    .brand-screensaver-tagline,
+    .card-subtitle,
+    .faceid-notice,
+    .m3-card-subtitle,
+    .m3-dialog-description,
+    .org-card-desc,
+    .picker-preview-text,
+    .place-info-row .info-value,
+    .product-desc,
+    .qr-caption,
+    .showcase-card-code,
+    .support-log-line,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p,
+    h6
+) {
+    line-height: 1.4;
+}
+
+:where(
+    .active-orders-label,
+    .ad-network-badge,
+    .auth-divider,
+    .docs-group-header,
+    .footer-col-title,
+    .info-label,
+    .kpi-title,
+    .label-title,
+    .m3-info-label,
+    .m3-label,
+    .m3-label-small,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .picker-hex-input,
+    .picker-popover-title,
+    .pills-label,
+    .place-details-badge,
+    .place-details-header-title,
+    .place-info-row .info-label,
+    .popular-badge,
+    .pos-orders-label,
+    .pos-ux-mode-title,
+    .pro-tag,
+    .product-description-block h3,
+    .qrg-card-hint,
+    .qrg-group-head,
+    .qrg-section-title,
+    .section-heading,
+    .showcase-brand-badge,
+    .showcase-nav-category-header,
+    .showcase-stat-lbl,
+    .sidebar-brand-subtitle,
+    .sidebar-nav-category,
+    .spatial-wing-badge,
+    .spotlight-header-badge,
+    .spotlight-pill,
+    .stat-label,
+    .status-badge,
+    .support-label,
+    .ux-mode-category-tag
+) {
+    text-transform: uppercase;
+}
+
+:where(
+    .card-order-id,
+    .lang-current-label,
+    .m3-pill-badge,
+    .order-number,
+    .pos-ux-mode-title,
+    .product-tag-chip,
+    .qr-status-text
+) {
+    letter-spacing: 0.02em;
+}
+
+:where(
+    .card-title,
+    .header-brand-text,
+    .landing-nav-link,
+    .m3-card-title,
+    .m3-empty-state-title,
+    .m3-summary-title,
+    .maneuver-distance,
+    .route-alternative-time,
+    .section-title,
+    .sidebar-brand-title,
+    .summary-title
+) {
+    letter-spacing: -0.01em;
+}
+
+:where(
+    .bento-content h3,
+    .card-title,
+    .kds-product-name,
+    .m3-card-title,
+    .map-action-button,
+    .map-route-suggestion-title,
+    .place-details-name,
+    .pos-product-title-text,
+    .product-title,
+    .section-title-box h2,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) h5
+) {
+    line-height: 1.25;
+}
+
+:where(
+    .col-justify-end .col-title,
+    .m3-row-value,
+    .preview-product-price,
+    .row-value,
+    .spotlight-mode-badge,
+    .table-container td.actions-column,
+    .table-container th.actions-column,
+    table.quickgrid td.actions-column,
+    table.quickgrid th.actions-column,
+    td.col-justify-end,
+    td.col-justify-right
+) {
+    text-align: right;
+}
+
+:where(
+    .det-title,
+    .item-name,
+    .org-card-header h3,
+    .org-card-name,
+    .picker-trigger-title,
+    .qrg-title,
+    .spatial-wing-header h3,
+    .spotlight-info h3,
+    .wishlist-title-text
+) {
+    line-height: 1.3;
+}
+
+:where(
+    .active-orders-label,
+    .info-label,
+    .label-title,
+    .m3-info-label,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .picker-popover-title,
+    .pos-orders-label,
+    .qrg-card-hint,
+    .ux-mode-code
+) {
+    letter-spacing: 0.5px;
+}
+
+:where(
+    .assistant-message-text th,
+    .col-justify-start .col-title,
+    .lang-menu-item,
+    .m3-table th,
+    .map-global-suggestion-button,
+    .map-route-suggestion-button,
+    .order-items-table th,
+    .orders-table th,
+    .pos-product-card,
+    .pos-product-title-text,
+    .product-title,
+    .route-alternative-card,
+    .schedule-table td,
+    .schedule-table th,
+    .showcase-nav-btn,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) .price-tag,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p,
+    assistant-message th,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card,
+    td.col-justify-left,
+    td.col-justify-start
+) {
+    text-align: left;
+}
+
+:where(
+    #components-reconnect-modal p,
+    .about-hero,
+    .analytics-metric-cell,
+    .attract-loop-content,
+    .auth-header,
+    .b2b-lead-section,
+    .col-justify-center .col-title,
+    .column-empty,
+    .cta-btn,
+    .cta-card,
+    .current-plan-indicator,
+    .det-active-sessions-empty,
+    .det-placeholder,
+    .det-placeholder-padded,
+    .docs-welcome-card,
+    .download-header,
+    .drop-title,
+    .empty-cart-view,
+    .empty-plans-card,
+    .example-hero,
+    .faceid-notice,
+    .faceid-status-text,
+    .feat-pill,
+    .file-name,
+    .help-hero,
+    .kds-empty-col,
+    .kiosk-empty-state,
+    .landing-subpage-hero,
+    .loading-progress-text,
+    .m3-empty-column,
+    .m3-empty-state,
+    .map-measure-badge-hint,
+    .no-messages,
+    .org-tag,
+    .pos-empty-state,
+    .qr-instruction,
+    .qrg-card,
+    .qrg-empty,
+    .resend-countdown,
+    .score-box,
+    .section-header,
+    .section-title-box,
+    .signin-header,
+    .sort-indicator,
+    .spec-item,
+    .store-not-found,
+    .upload-zone-label,
+    .ux-empty-state,
+    .ux-spotlight-header,
+    .ux-widget-quote,
+    .venue-chip,
+    td.col-justify-center
+) {
+    text-align: center;
+}
+
+:where(
+    .catalog-title,
+    header.landing-header .header-brand-text
+) {
+    letter-spacing: -0.03em;
+}
+
+:where(
+    .showcase-nav-category-header,
+    .sidebar-nav-category,
+    .support-label
+) {
+    letter-spacing: 0.08em;
+}
+
+:where(
+    .m3-label,
+    .spotlight-header-badge,
+    .ux-mode-category-tag
+) {
+    letter-spacing: 0.06em;
+}
+
+:where(
+    .about-title,
+    .b2b-lead-content h2,
+    .click-popup-btn,
+    .example-title,
+    .help-title,
+    .home-title,
+    .kiosk-hero-content h1,
+    .landing-subpage-title,
+    .m3-page-header-title,
+    .map-route-suggestion-meta,
+    .page-heading,
+    .platform-info h3,
+    .pos-ux-mode-title,
+    .sidebar-brand-title
+) {
+    line-height: 1.2;
+}
+
+:where(
+    .about-subtitle,
+    .bento-content p,
+    .catalog-desc,
+    .docs-article,
+    .download-header p,
+    .evolution-header p,
+    .example-subtitle,
+    .help-subtitle,
+    .landing-subpage-subtitle,
+    .org-card-header p,
+    .product-description-text,
+    .section-title-box p,
+    .ux-empty-state p
+) {
+    line-height: 1.6;
+}
+
+:where(
+    #components-reconnect-modal p,
+    .chat-input-wrapper textarea,
+    .empty-plans-desc,
+    .evolution-card p,
+    .input-box textarea,
+    .kiosk-dialog-text,
+    .kiosk-hero-content p,
+    .platform-desc p,
+    .showcase-hero p,
+    .spatial-subcard p,
+    .spec-card-text p,
+    .subscription-description
+) {
+    line-height: 1.5;
+}
+
+:where(
+    .brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    background-clip: text;
+}
+
+:where(
+    .brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    -webkit-background-clip: text;
+}
+
+:where(
+    .brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    -webkit-text-fill-color: transparent;
+}
+
+:where(
+    .docs-group-header,
+    .qrg-group-head,
+    .qrg-section-title
+) {
+    letter-spacing: 0.8px;
+}
+
+.kiosk-hero-content h1 {
+    letter-spacing: -0.5px;
+}
+
+.kpi-number {
+    line-height: 1.1;
+}
+
+.qrg-card-name {
+    letter-spacing: -0.3px;
+}
+
+.docs-sidebar-title {
+    letter-spacing: 0.15px;
+}
+
+.link-stack,
+section.link-stack {
+    text-align: start;
+}
+
+:where(
+    .org-description,
+    .qr-instruction
+) {
+    line-height: 1.45;
+}
+
+:where(
+    .assistant-search,
+    .citation
+) {
+    line-height: 1.25rem;
+}
+
+.status-badge {
+    letter-spacing: 0.03em;
+}
+
+.click-popup-address {
+    line-height: 1.35;
+}
+
+:where(
+    .footer-header,
+    .hero-badge,
+.feature-badge,
+.section-badge
+) {
+    letter-spacing: 0.3px;
+}
+
+.hero-title {
+    line-height: 1.18;
+}
+
+:where(
+    .b2b-lead-content p,
+    .hero-subtitle,
+    .ux-modal-desc
+) {
+    line-height: 1.65;
+}
+
+.cta-btn span {
+    letter-spacing: 0.2px;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media (max-width: 599.98px) {
+    .payment-trust-footer {
+        text-align: center;
+    }
+    .preset-btn {
+        text-align: center;
+    }
+    .m3-trust-footer,
+    .payment-trust-footer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .footer-bottom-bar {
+        text-align: center;
+    }
+    .price-tag {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        text-align: start;
+    }
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        text-align: center;
+        line-height: 1.15;
+    }
+}
+

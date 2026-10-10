@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socratic Layout Engine • CSS Grid Architecture Showcase</title>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+    <!-- Master Stylesheet (W3C Modules Consolidated Bundle) -->
+    <link rel="stylesheet" href="./css/styles.bundle.min.css" />
+
+    <!-- Material Web Custom Elements -->
+    <script src="./js/material-web.bundle.js"></script>
+</head>
+<body>
+    <main class="showcase-page">
+        <!-- Sidebar Backdrop for Mobile Screens -->
+        <div class="showcase-sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="showcase-sidebar" id="showcaseSidebar">
+            <div class="showcase-sidebar-header">
+                <div class="showcase-brand">
+                    <div class="showcase-brand-icon">
+                        <md-icon>grid_view</md-icon>
+                    </div>
+                    <div>
+                        <div class="showcase-brand-title">Layout Engine</div>
+                        <div class="showcase-brand-badge">Socratic W3C Grid</div>
+                    </div>
+                </div>
+                <md-icon-button id="closeSidebarBtn" aria-label="Закрыть навигацию">
+                    <md-icon>close</md-icon>
+                </md-icon-button>
+            </div>
+
+        <nav class="showcase-sidebar-nav">
+            <div class="showcase-nav-category-header">Инспекция дефектов</div>
+            <a href="#defects-audit" class="showcase-nav-btn active">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">bug_report</md-icon>
+                    <span>Аудит дефектов верстки</span>
+                </span>
+                <span class="showcase-nav-count">5</span>
+            </a>
+
+            <div class="showcase-nav-category-header">Сетки и примитивы</div>
+            <a href="#primitives" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">auto_awesome_mosaic</md-icon>
+                    <span>Базовые Grid-примитивы</span>
+                </span>
+                <span class="showcase-nav-count">7</span>
+            </a>
+            <a href="#split-master" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">splitscreen</md-icon>
+                    <span>Master-Detail & Сплиты</span>
+                </span>
+                <span class="showcase-nav-count">3</span>
+            </a>
+
+            <div class="showcase-nav-category-header">Архитектура страниц</div>
+            <a href="#headers-nav" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">dock</md-icon>
+                    <span>Шапки, крошки и бары</span>
+                </span>
+                <span class="showcase-nav-count">4</span>
+            </a>
+            <a href="#footers" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">call_to_action</md-icon>
+                    <span>Подвалы (Footer Grids)</span>
+                </span>
+                <span class="showcase-nav-count">2</span>
+            </a>
+
+            <div class="showcase-nav-category-header">Коммерческие шаблоны</div>
+            <a href="#kanban" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">view_kanban</md-icon>
+                    <span>Канбан и KDS заказов</span>
+                </span>
+                <span class="showcase-nav-count">2</span>
+            </a>
+            <a href="#pos-kiosk" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">point_of_sale</md-icon>
+                    <span>POS Терминал и Киоск</span>
+                </span>
+                <span class="showcase-nav-count">2</span>
+            </a>
+            <a href="#analytics" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">monitoring</md-icon>
+                    <span>Аналитика и KPI сетки</span>
+                </span>
+                <span class="showcase-nav-count">3</span>
+            </a>
+            <a href="#adaptive-cards" class="showcase-nav-btn">
+                <span class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">grid_guides</md-icon>
+                    <span>Адаптивные коллекции</span>
+                </span>
+                <span class="showcase-nav-count">4</span>
+            </a>
+        </nav>
+
+        <div class="showcase-card-actions">
+            <md-filled-tonal-button id="themeToggleBtn">
+                <md-icon slot="icon">light_mode</md-icon>
+                Переключить тему
+            </md-filled-tonal-button>
+        </div>
+    </aside>
+
+    <!-- Main Showcase Content -->
+    <section class="showcase-content">
+        <!-- Sticky Topbar -->
+        <header class="showcase-topbar">
+            <div class="showcase-topbar-left">
+                <md-icon-button id="openSidebarBtn" aria-label="Открыть навигацию">
+                    <md-icon>menu</md-icon>
+                </md-icon-button>
+                <div>
+                    <h2 class="showcase-topbar-title">Архитектура верстки и сетки</h2>
+                    <div class="showcase-topbar-subtitle">W3C CSS Modules • 100% CSS Grid • Strict Zero Flexbox</div>
+                </div>
+            </div>
+            <div class="showcase-topbar-actions">
+                <span class="showcase-brand-badge" id="layoutVpBadge">Ширина: <span id="layoutVpWidth">1440</span>px</span>
+                <md-filter-chip id="layoutGridDebugBtn" label="📐 Подсветка сеток"></md-filter-chip>
+                <md-filter-chip id="layoutStressTestBtn" label="⚠️ Стресс-тест blowout"></md-filter-chip>
+                <md-filter-chip id="layoutTouchAuditBtn" label="👆 Аудит тач-зон"></md-filter-chip>
+                <a href="./material-web-styles-demo.html" class="showcase-nav-btn-left">
+                    <md-icon class="nav-icon">widgets</md-icon>
+                    <span>Витрина компонентов</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Body Area -->
+        <div class="showcase-main-body">
+
+            <!-- Hero Section -->
+            <section class="showcase-hero">
+                <div class="showcase-hero-content">
+                    <div class="showcase-lib-badge">
+                        <md-icon>verified</md-icon>
+                        <span>Socratic Design Engineering</span>
+                    </div>
+                    <h1>Модульная система верстки CSS Grid</h1>
+                    <p>
+                        Высокопроизводительный движок верстки Socratic исключает flexbox-коллизии, FOUC и переполнение экрана.
+                        Все сетки построены на строгих инвариантах W3C, Container Queries, нулевой специфичности и правиле <code>minmax(0, 1fr)</code>.
+                    </p>
+
+                    <div class="showcase-stats">
+                        <div class="showcase-stat-pill">
+                            <md-icon class="showcase-stat-icon">speed</md-icon>
+                            <div class="showcase-stat-info">
+                                <span class="showcase-stat-val">0 Flexbox</span>
+                                <span class="showcase-stat-lbl">Strict CSS Grid</span>
+                            </div>
+                        </div>
+                        <div class="showcase-stat-pill">
+                            <md-icon class="showcase-stat-icon">devices</md-icon>
+                            <div class="showcase-stat-info">
+                                <span class="showcase-stat-val">320px–4K</span>
+                                <span class="showcase-stat-lbl">Zero Blowout</span>
+                            </div>
+                        </div>
+                        <div class="showcase-stat-pill">
+                            <md-icon class="showcase-stat-icon">touch_app</md-icon>
+                            <div class="showcase-stat-info">
+                                <span class="showcase-stat-val">&gt;= 48px</span>
+                                <span class="showcase-stat-lbl">Touch Target WCAG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 0. Layout Defect & Visual Regression Inspector -->
+            <section id="defects-audit" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>bug_report</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Аудит косяков верстки и граничных случаев (Layout Defect Inspector)</h2>
+                            <p class="showcase-section-desc">Наглядное визуальное сравнение критических дефектов макетов и их канонических исправлений.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">layout/overflow.css</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Defect 1: Grid Blowout 1fr vs minmax(0, 1fr) -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Косяк 1: Grid Track Blowout (голый 1fr)</h3>
+                                <p class="showcase-card-desc">Без minmax(0, 1fr) и min-width: 0 длинное неразрывное слово распирает экран</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-split">
+                                    <div class="showcase-demo-col">
+                                        <strong>Правильная колонка (minmax(0, 1fr))</strong>
+                                        <div class="item-headline stress-target">СверхдлинноеНаименованиеПозицииБезПробеловДляПроверкиEllipsis</div>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Защита blowout</strong>
+                                        <p>min-width: 0 предотвращает распирание ячейки</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">rule: minmax(0, 1fr) + min-width: 0</div>
+                        </div>
+                    </article>
+
+                    <!-- Defect 2: Box-shadow Clipping in overflow: hidden -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Косяк 2: Срезка теней (overflow: hidden)</h3>
+                                <p class="showcase-card-desc">Слепой overflow: hidden обрезает мягкие тени M3 Expressive и меню</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="card-elevated">
+                                    <strong>Карточка с тенью без overflow-ловушки</strong>
+                                    <p>Тени плавно рассеиваются за пределами границ карточки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">rule: overflow: clip / visible</div>
+                        </div>
+                    </article>
+
+                    <!-- Defect 3: Fixed Bottom Bar Overlap Clearance -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Косяк 3: Мобильное перекрытие нижним баром</h3>
+                                <p class="showcase-card-desc">Фиксированная навигация (72px) перекрывает нижний контент без клиренса</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="showcase-demo-col">
+                                    <strong>Нижний клиренс контента (.app-main)</strong>
+                                    <p>padding-bottom: 72px гарантирует видимость последней кнопки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">rule: padding-bottom: calc(72px + env(safe-area-inset-bottom))</div>
+                        </div>
+                    </article>
+
+                    <!-- Defect 4: Touch Targets on Touchscreens -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Косяк 4: Нарушение тач-зон POS и киосков</h3>
+                                <p class="showcase-card-desc">Интерактивные элементы менее 44×44px приводят к ложным кликам гостей</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="showcase-demo-row">
+                                    <md-filled-button>
+                                        <md-icon slot="icon">check_circle</md-icon>
+                                        Стандарт 48×48px
+                                    </md-filled-button>
+                                    <md-filled-icon-button aria-label="Touch 48px">
+                                        <md-icon>touch_app</md-icon>
+                                    </md-filled-icon-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">rule: min-height: 48px; min-width: 48px;</div>
+                        </div>
+                    </article>
+
+                    <!-- Defect 5: 320px Viewport Card Overflow -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Косяк 5: Жесткая минимальная ширина в autofit</h3>
+                                <p class="showcase-card-desc">minmax(320px, 1fr) на экране 320px с отступами вызывает горизонтальный скролл</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-autofit">
+                                    <div class="showcase-demo-col">
+                                        <strong>minmax(min(100%, 300px), 1fr)</strong>
+                                        <p>Безопасно сжимается до 100% ширины мобильного экрана</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">rule: minmax(min(100%, 300px), 1fr)</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 1. Core Grid Primitives -->
+            <section id="primitives" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>auto_awesome_mosaic</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Базовые Grid-примитивы</h2>
+                            <p class="showcase-section-desc">Универсальные классы из <code>grid.css</code> для замены Flexbox-паттернов.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">layout/grid.css</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Card 1: Autofit Standard -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Автозаполнение (.m3-grid-autofit)</h3>
+                                <p class="showcase-card-desc">Адаптивная сетка карточек: repeat(auto-fit, minmax(min(100%, 320px), 1fr))</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-autofit">
+                                    <div class="showcase-demo-col">
+                                        <strong>Колонка 1</strong>
+                                        <p>minmax(min(100%, 320px), 1fr)</p>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Колонка 2</strong>
+                                        <p>Автоматическое заполнение</p>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Колонка 3</strong>
+                                        <p>Плавный перенос без скриптов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-grid-autofit"</div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Split 2 Columns -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Сплит 50% / 50% (.m3-grid-split)</h3>
+                                <p class="showcase-card-desc">Равное деление двух колонок: repeat(2, minmax(0, 1fr))</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-split">
+                                    <div class="showcase-demo-col">
+                                        <strong>Левая зона</strong>
+                                        <p>minmax(0, 1fr) с защитой blowout</p>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Правая зона</strong>
+                                        <p>minmax(0, 1fr) с защитой blowout</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-grid-split"</div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Triad 3 Columns -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Триада (.m3-grid-triad)</h3>
+                                <p class="showcase-card-desc">Тройная сетка колонок с автоматическим брейкпоинтом</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-triad">
+                                    <div class="showcase-demo-col">Колонка 1/3</div>
+                                    <div class="showcase-demo-col">Колонка 2/3</div>
+                                    <div class="showcase-demo-col">Колонка 3/3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-grid-triad"</div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Header Split (1fr auto) -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Разделение заголовок / кнопка (.grid-split)</h3>
+                                <p class="showcase-card-desc">Замена Flexbox space-between: minmax(0, 1fr) auto</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="grid-split">
+                                    <div class="header-text">
+                                        <strong>Длинный заголовок с усечением</strong>
+                                        <p class="m3-truncate">Занимает весь свободный трек minmax(0, 1fr)</p>
+                                    </div>
+                                    <div class="item-actions">
+                                        <md-filled-button>Действие</md-filled-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="grid-split"</div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: Grid Center -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">2D Центрирование (.grid-center)</h3>
+                                <p class="showcase-card-desc">place-items: center вместо связки justify/align-items</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="grid-center">
+                                    <div class="showcase-stat-pill">
+                                        <md-icon>filter_center_focus</md-icon>
+                                        <div class="showcase-stat-info">
+                                            <span class="showcase-stat-val">Идеальный центр</span>
+                                            <span class="showcase-stat-lbl">Обе оси X и Y</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="grid-center"</div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: Horizontal Cluster -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Горизонтальный кластер (.grid-flow-col)</h3>
+                                <p class="showcase-card-desc">grid-auto-flow: column с фиксированной шириной по контенту</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="grid-flow-col">
+                                    <md-chip label="YOLO v11"></md-chip>
+                                    <md-chip label="WebRTC"></md-chip>
+                                    <md-chip label="ScyllaDB"></md-chip>
+                                    <md-chip label="Native AOT"></md-chip>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="grid-flow-col"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 2. Master-Detail & Sidebar Layouts -->
+            <section id="split-master" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>splitscreen</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Master-Detail & Сайдбары</h2>
+                            <p class="showcase-section-desc">Двухколоночные компоновки для рабочих столов и панелей управления.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">layout/grid.css</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Master-Detail Standard -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Сайдбар слева (.m3-grid-sidebar)</h3>
+                                <p class="showcase-card-desc">minmax(280px, 340px) minmax(0, 1fr) с адаптивным схлопыванием</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-sidebar">
+                                    <div class="showcase-demo-col">
+                                        <strong>Навигация / Фильтры</strong>
+                                        <p>Ширина: 280–340px</p>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Основной контент страницы</strong>
+                                        <p>Гибкая зона: minmax(0, 1fr)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-grid-sidebar"</div>
+                        </div>
+                    </article>
+
+                    <!-- Main + Sidebar Right -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Инспектор справа (.m3-grid-main-sidebar)</h3>
+                                <p class="showcase-card-desc">minmax(0, 1fr) minmax(300px, 380px) для карточки заказа или корзины</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-grid-main-sidebar">
+                                    <div class="showcase-demo-col">
+                                        <strong>Рабочая область / Каталог</strong>
+                                        <p>minmax(0, 1fr)</p>
+                                    </div>
+                                    <div class="showcase-demo-col">
+                                        <strong>Чек / Сводка корзины</strong>
+                                        <p>300–380px</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-grid-main-sidebar"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 3. Headers, Breadcrumbs & Navigation Bars -->
+            <section id="headers-nav" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>dock</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Шапки, крошки и навигационные бары</h2>
+                            <p class="showcase-section-desc">Компоненты навигации с детерминированным разделением зон.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">Header.razor &amp; Nav.razor</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Header 3-Zone Layout -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Трехзонная шапка приложения (.header-grid-layout)</h3>
+                                <p class="showcase-card-desc">Start Zone (бренд), Center Zone (поиск), End Zone (действия/аватар)</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="header-grid-layout">
+                                    <div class="header-start-zone">
+                                        <div class="header-brand-zone">
+                                            <a href="#" class="header-brand-link">
+                                                <span class="header-brand-icon-box">
+                                                    <md-icon>auto_awesome</md-icon>
+                                                </span>
+                                                <span class="header-brand-text">Socratic</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="header-center-zone">
+                                        <div class="m3-breadcrumbs">
+                                            <a href="#" class="crumb-link">
+                                                <md-icon>home</md-icon>
+                                                <span>Главная</span>
+                                            </a>
+                                            <span class="crumb-separator">/</span>
+                                            <span class="crumb-current">Каталог</span>
+                                        </div>
+                                    </div>
+                                    <div class="header-end-zone">
+                                        <md-outlined-button>RU</md-outlined-button>
+                                        <div class="avatar-box">
+                                            <md-icon>account_circle</md-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="header-grid-layout"</div>
+                        </div>
+                    </article>
+
+                    <!-- Mobile Bottom Navigation Bar -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Мобильный нижний бар (.m3-bottom-nav)</h3>
+                                <p class="showcase-card-desc">5 равных колонок grid-auto-columns: 1fr с учетом safe-area</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <nav class="m3-bottom-nav glass">
+                                    <a href="#" class="m3-bottom-nav-item active">
+                                        <md-icon>home</md-icon>
+                                        <span>Главная</span>
+                                    </a>
+                                    <a href="#" class="m3-bottom-nav-item">
+                                        <md-icon>storefront</md-icon>
+                                        <span>Товары</span>
+                                    </a>
+                                    <a href="#" class="m3-bottom-nav-item">
+                                        <md-icon>forum</md-icon>
+                                        <span>Чат</span>
+                                    </a>
+                                    <a href="#" class="m3-bottom-nav-item">
+                                        <md-icon>receipt_long</md-icon>
+                                        <span>Заказы</span>
+                                    </a>
+                                    <a href="#" class="m3-bottom-nav-item">
+                                        <md-icon>person</md-icon>
+                                        <span>Профиль</span>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-bottom-nav"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 4. Kanban & KDS Layouts -->
+            <section id="kanban" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>view_kanban</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Канбан и кухонный дисплей (KDS)</h2>
+                            <p class="showcase-section-desc">Многоколоночная доска заказов со связкой колонок и карточек.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">Orders &amp; PointOfSale</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Доска заказов (.m3-kanban-board)</h3>
+                                <p class="showcase-card-desc">Авто-колонки с карточками заказов в структуре auto auto auto</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="m3-kanban-board">
+                                    <!-- Column 1 -->
+                                    <div class="m3-kanban-column glass">
+                                        <div class="column-header">
+                                            <strong>Новые (3)</strong>
+                                            <span class="count-badge">#101</span>
+                                        </div>
+                                        <div class="kanban-card glass">
+                                            <div class="card-top-row">
+                                                <strong>Стол №4</strong>
+                                                <span class="price-tag">45 000 UZS</span>
+                                            </div>
+                                            <p class="card-mid-row m3-truncate">2x Капучино, 1x Круассан</p>
+                                            <div class="card-bottom-row">
+                                                <md-filled-tonal-button>В работу</md-filled-tonal-button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 2 -->
+                                    <div class="m3-kanban-column glass">
+                                        <div class="column-header">
+                                            <strong>Готовятся (1)</strong>
+                                            <span class="count-badge">#98</span>
+                                        </div>
+                                        <div class="kanban-card glass">
+                                            <div class="card-top-row">
+                                                <strong>Барная стойка</strong>
+                                                <span class="price-tag">28 000 UZS</span>
+                                            </div>
+                                            <p class="card-mid-row m3-truncate">1x Чизкейк Нью-Йорк</p>
+                                            <div class="card-bottom-row">
+                                                <md-filled-button>Готово</md-filled-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="m3-kanban-board"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 5. POS & Kiosk Layouts -->
+            <section id="pos-kiosk" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>point_of_sale</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Кассовый терминал (POS) и Киоск</h2>
+                            <p class="showcase-section-desc">Оптимизированные сенсорные макеты для mPOS планшетов и вертикальных киосков.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">POS &amp; Kiosk</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- POS Workspace -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Интерфейс кассира (.pos-layout)</h3>
+                                <p class="showcase-card-desc">Сетка товаров слева + чек заказа справа clamp(340px, 30vw, 440px)</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="pos-layout">
+                                    <div class="pos-catalog">
+                                        <div class="pos-catalog-header">
+                                            <strong>Каталог блюд</strong>
+                                            <div class="pos-filters">
+                                                <md-chip label="Кофе"></md-chip>
+                                                <md-chip label="Десерты"></md-chip>
+                                            </div>
+                                        </div>
+                                        <div class="pos-grid">
+                                            <div class="pos-product-card glass">
+                                                <div class="pos-card-header-row">
+                                                    <div class="pos-card-img-placeholder">
+                                                        <md-icon>coffee</md-icon>
+                                                    </div>
+                                                    <div>
+                                                        <strong class="pos-product-title-text">Американо 300мл</strong>
+                                                        <div class="price-tag">18 000 UZS</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pos-product-card glass">
+                                                <div class="pos-card-header-row">
+                                                    <div class="pos-card-img-placeholder">
+                                                        <md-icon>cake</md-icon>
+                                                    </div>
+                                                    <div>
+                                                        <strong class="pos-product-title-text">Тирамису</strong>
+                                                        <div class="price-tag">32 000 UZS</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pos-sidebar glass">
+                                        <div class="pos-sidebar-header-row">
+                                            <strong>Текущий чек</strong>
+                                            <md-icon-button><md-icon>delete_sweep</md-icon></md-icon-button>
+                                        </div>
+                                        <div class="cart-summary">
+                                            <div class="price-row">
+                                                <span>Итого к оплате:</span>
+                                                <strong>50 000 UZS</strong>
+                                            </div>
+                                        </div>
+                                        <div class="pos-card-footer-row">
+                                            <md-filled-button class="pay-button">Оплатить (F10)</md-filled-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="pos-layout"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 6. Analytics & Dashboard Grids -->
+            <section id="analytics" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>monitoring</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Аналитика и KPI сетки</h2>
+                            <p class="showcase-section-desc">Виджеты метрик с адаптивным автозаполнением карточек.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">Analytics.razor</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Сетка ключевых метрик (.analytics-kpi-grid)</h3>
+                                <p class="showcase-card-desc">repeat(auto-fit, minmax(min(100%, 200px), 1fr)) со статусами трендов</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="analytics-kpi-grid">
+                                    <div class="analytics-kpi-card glass">
+                                        <div class="kpi-header">
+                                            <span>Выручка за смену</span>
+                                            <div class="kpi-icon-badge"><md-icon>attach_money</md-icon></div>
+                                        </div>
+                                        <div class="kpi-value-row">
+                                            <strong>12 450 000 UZS</strong>
+                                        </div>
+                                        <div class="kpi-trend">
+                                            <md-icon>trending_up</md-icon>
+                                            <span>+14.2% к прошлой неделе</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="analytics-kpi-card glass">
+                                        <div class="kpi-header">
+                                            <span>Количество чеков</span>
+                                            <div class="kpi-icon-badge"><md-icon>receipt</md-icon></div>
+                                        </div>
+                                        <div class="kpi-value-row">
+                                            <strong>248</strong>
+                                        </div>
+                                        <div class="kpi-trend">
+                                            <md-icon>trending_up</md-icon>
+                                            <span>+8 новых гостей</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="analytics-kpi-card glass">
+                                        <div class="kpi-header">
+                                            <span>Средний чек</span>
+                                            <div class="kpi-icon-badge"><md-icon>calculate</md-icon></div>
+                                        </div>
+                                        <div class="kpi-value-row">
+                                            <strong>50 200 UZS</strong>
+                                        </div>
+                                        <div class="kpi-trend">
+                                            <md-icon>trending_flat</md-icon>
+                                            <span>В пределах нормы</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="analytics-kpi-grid"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 7. Adaptive Card Frameworks -->
+            <section id="adaptive-cards" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>grid_guides</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Адаптивные коллекции карточек</h2>
+                            <p class="showcase-section-desc">Сетки преимуществ, каналов поддержки и частых вопросов.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">About &amp; Help</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <!-- Pillars Grid -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Столпы архитектуры (.pillars-grid)</h3>
+                                <p class="showcase-card-desc">repeat(auto-fit, minmax(min(100%, 280px), 1fr))</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="pillars-grid">
+                                    <div class="pillar-card glass">
+                                        <div class="pillar-icon-box"><md-icon>visibility</md-icon></div>
+                                        <h3>Компьютерное зрение</h3>
+                                        <p>Детекция очередей и Face ID биометрия.</p>
+                                    </div>
+                                    <div class="pillar-card glass">
+                                        <div class="pillar-icon-box"><md-icon>storefront</md-icon></div>
+                                        <h3>Смарт-киоски</h3>
+                                        <p>Сенсорный заказ и мгновенная печать чека.</p>
+                                    </div>
+                                    <div class="pillar-card glass">
+                                        <div class="pillar-icon-box"><md-icon>widgets</md-icon></div>
+                                        <h3>28 UX-режимов</h3>
+                                        <p>Универсальный каталог под любой бизнес.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="pillars-grid"</div>
+                        </div>
+                    </article>
+
+                    <!-- Support Grid -->
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Каналы поддержки (.support-grid)</h3>
+                                <p class="showcase-card-desc">repeat(auto-fit, minmax(min(100%, 300px), 1fr)) с кнопками действий</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <div class="support-grid">
+                                    <div class="support-card glass">
+                                        <div class="pillar-icon-box"><md-icon>forum</md-icon></div>
+                                        <h3>Онлайн-чат</h3>
+                                        <p>Мгновенный ответ дежурного инженера.</p>
+                                        <div class="support-card-action">
+                                            <md-filled-button>Открыть чат</md-filled-button>
+                                        </div>
+                                    </div>
+                                    <div class="support-card glass">
+                                        <div class="pillar-icon-box"><md-icon>headset_mic</md-icon></div>
+                                        <h3>Линия 24/7</h3>
+                                        <p>Экстренное решение вопросов доступности касс.</p>
+                                        <div class="support-card-action">
+                                            <md-outlined-button>Позвонить</md-outlined-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="support-grid"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 8. Footer Architecture -->
+            <section id="footers" class="showcase-section">
+                <div class="showcase-section-header">
+                    <div class="showcase-section-title-wrap">
+                        <div class="showcase-section-icon">
+                            <md-icon>call_to_action</md-icon>
+                        </div>
+                        <div>
+                            <h2 class="showcase-section-title">Архитектура подвала (Footer)</h2>
+                            <p class="showcase-section-desc">Многоколоночная информационная сетка со статусом системы.</p>
+                        </div>
+                    </div>
+                    <span class="showcase-lib-badge">Footer.razor</span>
+                </div>
+
+                <div class="showcase-cards-grid">
+                    <article class="showcase-card">
+                        <div class="showcase-card-header">
+                            <div class="showcase-card-title-group">
+                                <h3 class="showcase-card-title">Структура подвала (.footer-container)</h3>
+                                <p class="showcase-card-desc">Бренд + 4 навигационные колонки + нижний статус-бар</p>
+                            </div>
+                        </div>
+                        <div class="showcase-card-body">
+                            <div class="showcase-demo-canvas">
+                                <footer class="footer-container glass">
+                                    <div class="footer-primary-grid">
+                                        <div class="footer-brand-col">
+                                            <div class="header-brand-zone">
+                                                <a href="#" class="header-brand-link">
+                                                    <span class="header-brand-icon-box"><md-icon>auto_awesome</md-icon></span>
+                                                    <span class="header-brand-text">Socratic</span>
+                                                </a>
+                                            </div>
+                                            <p class="footer-brand-tagline">Интеллектуальная торговая экосистема</p>
+                                        </div>
+                                        <div class="footer-nav-col">
+                                            <h4>Продукты</h4>
+                                            <ul class="footer-links-list">
+                                                <li><a href="#">POS Терминал</a></li>
+                                                <li><a href="#">Смарт-Киоск</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-nav-col">
+                                            <h4>Компания</h4>
+                                            <ul class="footer-links-list">
+                                                <li><a href="#">О платформе</a></li>
+                                                <li><a href="#">Документация</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-bar">
+                                        <div class="footer-system-status">
+                                            <span class="status-pulse-dot"></span>
+                                            <span>Все сервисы работают в штатном режиме</span>
+                                        </div>
+                                        <span class="footer-copyright">&copy; 2026 Socratic Ecosystem. Все права защищены.</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="showcase-card-actions">
+                            <div class="showcase-card-code">class="footer-container"</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Behavior Scripts -->
+    <script>
+        // Theme Toggle Handler
+        const themeBtn = document.getElementById('themeToggleBtn');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', nextTheme);
+            });
+        }
+
+        // Mobile Sidebar Drawer
+        const showcaseSidebar = document.getElementById('showcaseSidebar');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+        const openSidebarBtn = document.getElementById('openSidebarBtn');
+        const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+        function toggleSidebar(open) {
+            if (!showcaseSidebar || !sidebarBackdrop) return;
+            if (open) {
+                showcaseSidebar.classList.add('open');
+                sidebarBackdrop.hidden = false;
+            } else {
+                showcaseSidebar.classList.remove('open');
+                sidebarBackdrop.hidden = true;
+            }
+        }
+
+        if (openSidebarBtn) openSidebarBtn.addEventListener('click', () => toggleSidebar(true));
+        if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', () => toggleSidebar(false));
+        if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', () => toggleSidebar(false));
+
+        // Viewport Width Tracker
+        const layoutVpWidthEl = document.getElementById('layoutVpWidth');
+        function updateLayoutViewport() {
+            if (layoutVpWidthEl) layoutVpWidthEl.textContent = window.innerWidth;
+        }
+        window.addEventListener('resize', updateLayoutViewport);
+        updateLayoutViewport();
+
+        // Grid Debugger Toggle
+        const layoutGridDebugBtn = document.getElementById('layoutGridDebugBtn');
+        let layoutGridDebugActive = false;
+        if (layoutGridDebugBtn) {
+            layoutGridDebugBtn.addEventListener('click', () => {
+                layoutGridDebugActive = !layoutGridDebugActive;
+                layoutGridDebugBtn.selected = layoutGridDebugActive;
+                document.querySelectorAll('.showcase-content, .showcase-main-body, .showcase-section, .showcase-cards-grid, .showcase-card, .showcase-demo-canvas, .m3-grid-autofit, .m3-grid-split, .m3-grid-triad, .grid-2-col, .grid-3-col, .grid-4-col, .m3-grid-master-detail, .m3-grid-main-sidebar, .kds-screen-grid, .pos-catalog, .analytics-kpi-grid, .footer-primary-grid')
+                    .forEach(el => {
+                        if (layoutGridDebugActive) {
+                            el.style.outline = '1px dashed rgba(112, 220, 188, 0.45)';
+                        } else {
+                            el.style.outline = '';
+                        }
+                    });
+            });
+        }
+
+        // Stress Test (Text Blowout Injection)
+        const layoutStressTestBtn = document.getElementById('layoutStressTestBtn');
+        let layoutStressActive = false;
+        const layoutOrigTexts = new Map();
+        if (layoutStressTestBtn) {
+            layoutStressTestBtn.addEventListener('click', () => {
+                layoutStressActive = !layoutStressActive;
+                layoutStressTestBtn.selected = layoutStressActive;
+                const targets = document.querySelectorAll('.showcase-card-title, .showcase-card-desc, .item-headline, .kds-order-item-name, .kpi-val, .stress-target, .header-brand-text');
+                targets.forEach((el, index) => {
+                    if (layoutStressActive) {
+                        if (!layoutOrigTexts.has(index)) layoutOrigTexts.set(index, el.textContent);
+                        el.textContent = 'СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетку_' + index;
+                    } else {
+                        if (layoutOrigTexts.has(index)) {
+                            el.textContent = layoutOrigTexts.get(index);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Touch Target Ergonomics Audit (< 44px)
+        const layoutTouchAuditBtn = document.getElementById('layoutTouchAuditBtn');
+        let layoutTouchAuditActive = false;
+        if (layoutTouchAuditBtn) {
+            layoutTouchAuditBtn.addEventListener('click', () => {
+                layoutTouchAuditActive = !layoutTouchAuditActive;
+                layoutTouchAuditBtn.selected = layoutTouchAuditActive;
+                const interactives = document.querySelectorAll('.showcase-content md-filled-button, .showcase-content md-outlined-button, .showcase-content md-filled-tonal-button, .showcase-content md-icon-button, .showcase-content md-filled-icon-button, .showcase-content md-filter-chip');
+                let smallCount = 0;
+                interactives.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (layoutTouchAuditActive) {
+                        if (rect.width < 44 || rect.height < 44) {
+                            smallCount++;
+                            el.style.boxShadow = '0 0 0 2px #ffb4ab';
+                        } else {
+                            el.style.boxShadow = '0 0 0 2px #70dcbc';
+                        }
+                    } else {
+                        el.style.boxShadow = '';
+                    }
+                });
+                if (layoutTouchAuditActive) {
+                    alert(`Аудит тач-зон макетов:\nВсего интерактивных элементов: ${interactives.length}\nЭлементов < 44px: ${smallCount} ${smallCount === 0 ? '✅ (Идеально!)' : '⚠️ (Требует внимания)'}`);
+                }
+            });
+        }
+
+        // Active State Navigation Highlighting & Auto-close on Mobile
+        const navLinks = document.querySelectorAll('.showcase-sidebar-nav .showcase-nav-btn');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                if (window.innerWidth <= 840) {
+                    toggleSidebar(false);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

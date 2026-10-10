@@ -1,0 +1,98 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/motion/transitions.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-motion-duration-short1: 50ms;
+}
+
+:root {
+    --md-sys-motion-duration-short2: 100ms;
+}
+
+:root {
+    --md-sys-motion-duration-short3: 150ms;
+}
+
+:root {
+    --md-sys-motion-duration-short4: 200ms;
+}
+
+:root {
+    --md-sys-motion-duration-medium1: 250ms;
+}
+
+:root {
+    --md-sys-motion-duration-medium2: 300ms;
+}
+
+:root {
+    --md-sys-motion-duration-medium3: 350ms;
+}
+
+:root {
+    --md-sys-motion-duration-medium4: 400ms;
+}
+
+:root {
+    --md-sys-motion-duration-long1: 450ms;
+}
+
+:root {
+    --md-sys-motion-duration-long2: 500ms;
+}
+
+:root {
+    --md-sys-motion-duration-long3: 550ms;
+}
+
+:root {
+    --md-sys-motion-duration-long4: 600ms;
+}
+
+:root {
+    --md-sys-motion-easing-linear: cubic-bezier(0, 0, 1, 1);
+}
+
+:root {
+    --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+:root {
+    --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+}
+
+:root {
+    --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+}
+
+:root {
+    --md-sys-motion-easing-spring: cubic-bezier(0.2, 0, 0, 1);
+}
+
+:root {
+    --md-sys-motion-easing-spring-soft: cubic-bezier(0.3, 1.15, 0.5, 1);
+}
+
+:root {
+    --md-sys-motion-easing-spring-snappy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+:root {
+    --md-sys-motion-easing-spring-bouncy: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+:root {
+    --md-sys-motion-easing-expressive-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+:root {
+    --md-sys-motion-easing-expressive-entrance: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+}
+
+:root {
+    --md-sys-motion-easing-expressive-exit: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+}
+

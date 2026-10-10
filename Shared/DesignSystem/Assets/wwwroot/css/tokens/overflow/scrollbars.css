@@ -1,0 +1,30 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/overflow/scrollbars.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-scrollbar-width: 6px;
+}
+
+:root {
+    --md-sys-scrollbar-height: 6px;
+}
+
+:root {
+    --md-sys-scrollbar-thumb-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+:root {
+    --md-sys-scrollbar-color-thumb: rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+}
+
+:root {
+    --md-sys-scrollbar-color-thumb-hover: var(--md-sys-color-outline);
+}
+
+:root {
+    --md-sys-scrollbar-color-track: transparent;
+}
+

@@ -1,0 +1,10 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/typography/text-wrapping.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-typescale-truncate: ellipsis;
+}
+

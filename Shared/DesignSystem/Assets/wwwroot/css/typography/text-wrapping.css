@@ -1,0 +1,225 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: typography/text-wrapping.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-line-clamp-3 {
+    -webkit-line-clamp: 3;
+}
+
+:where(
+    .col-title-text,
+    .file-name,
+    .item-headline,
+    .kiosk-brand-name,
+    .m3-page-header-title,
+    .m3-truncate,
+    .maneuver-text,
+    .map-global-suggestion-title,
+    .org-card-name,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    text-overflow: ellipsis;
+}
+
+:where(
+    .badge,
+    .cart-count,
+    .cart-total,
+    .click-popup-btn,
+    .col-title-text,
+    .det-bbox-label,
+    .file-name,
+    .item-headline,
+    .item-status-pill,
+    .items-count-badge,
+    .kiosk-brand-name,
+    .kiosk-brand-tagline,
+    .kiosk-category-label,
+    .kiosk-tier-btn,
+    .legend-item,
+    .m3-badge,
+    .m3-page-header-title,
+    .m3-status-badge,
+    .m3-truncate,
+    .maneuver-text,
+    .map-action-button,
+    .map-category-chip,
+    .map-global-suggestion-title,
+    .map-topbar,
+    .order-status-badge,
+    .org-card-name,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-nav-btn-left span,
+    .spec-value,
+    .status-badge,
+    .table-container td,
+    .table-container th,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span,
+    table.quickgrid td,
+    table.quickgrid th
+) {
+    white-space: nowrap;
+}
+
+:where(
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
+    .org-card-desc,
+    .picker-preview-text,
+    .pos-product-title-text,
+    .product-desc,
+    .wishlist-desc-text,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p
+) {
+    -webkit-box-orient: vertical;
+}
+
+:where(
+    .m3-line-clamp-2,
+    .org-card-desc,
+    .picker-preview-text,
+    .pos-product-title-text,
+    .product-desc,
+    .wishlist-desc-text,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p
+) {
+    -webkit-line-clamp: 2;
+}
+
+:where(
+    .about-title,
+    .catalog-desc,
+    .catalog-title,
+    .docs-article,
+    .example-title,
+    .help-title,
+    .item-headline,
+    .landing-subpage-title,
+    .m3-body-large,
+    .m3-body-medium,
+    .m3-card,
+    .m3-card-subtitle,
+    .m3-card-title,
+    .m3-display-large,
+    .m3-headline-large,
+    .m3-headline-medium,
+    .m3-label,
+    .m3-title-large,
+    .m3-title-medium,
+    .m3x-card,
+    .org-card-desc,
+    .picker-preview-text,
+    .section-desc,
+    .showcase-card,
+    .showcase-hero,
+    .sidebar-brand-subtitle,
+    .sidebar-brand-title,
+    .stress-target,
+    .table-container td,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    md-dialog [slot="headline"],
+    p,
+    table.quickgrid td
+) {
+    overflow-wrap: anywhere;
+}
+
+:where(
+    .about-title,
+    .catalog-desc,
+    .catalog-title,
+    .docs-article,
+    .example-title,
+    .help-title,
+    .hero-badge span,
+.feature-badge span,
+.section-badge span,
+    .hero-title,
+    .item-headline,
+    .landing-subpage-title,
+    .m3-body-large,
+    .m3-body-medium,
+    .m3-card,
+    .m3-card-subtitle,
+    .m3-card-title,
+    .m3-display-large,
+    .m3-headline-large,
+    .m3-headline-medium,
+    .m3-label,
+    .m3-title-large,
+    .m3-title-medium,
+    .m3x-card,
+    .org-card-desc,
+    .picker-preview-text,
+    .place-info-row .info-value,
+    .section-desc,
+    .showcase-card,
+    .showcase-hero,
+    .sidebar-brand-subtitle,
+    .sidebar-brand-title,
+    .stress-target,
+    .table-container td,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    md-dialog [slot="headline"],
+    p,
+    table.quickgrid td
+) {
+    word-break: break-word;
+}
+
+:where(
+    .det-log-line,
+    .support-log-line,
+    .user-message
+) {
+    white-space: pre-wrap;
+}
+
+.product-description-text {
+    white-space: pre-line;
+}
+
+.showcase-card-code {
+    white-space: pre;
+}
+
+.det-log-line {
+    word-break: break-all;
+}
+
+:where(
+    .hero-badge span,
+.feature-badge span,
+.section-badge span,
+    .hero-title
+) {
+    overflow-wrap: break-word;
+}
+
+.cta-btn {
+    white-space: normal;
+}
+

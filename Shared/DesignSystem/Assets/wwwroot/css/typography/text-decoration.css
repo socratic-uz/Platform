@@ -1,0 +1,81 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: typography/text-decoration.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .ad-upgrade-link,
+    .kiosk-product-title-link:hover,
+    .payment-support a:hover,
+    .route-alternative-action:hover,
+    .seller-browse-all:hover,
+    .surveyContainer a,
+    a:hover
+) {
+    text-decoration: underline;
+}
+
+:where(
+    .back-button,
+    .btn-primary-link,
+    .card-interactive,
+    .chat-back-link,
+    .citation,
+    .crumb-link,
+    .cta-btn,
+    .cta-link,
+    .docs-breadcrumb-link,
+    .footer-brand-link,
+    .footer-columns a,
+    .footer-links-list a,
+    .header-brand-link,
+    .hero-pill-link,
+    .kiosk-product-title-link,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .landing-nav-link,
+    .link-stack a,
+    .link-stack article,
+    .m3-back-button,
+    .m3-bottom-nav-item,
+    .m3-card-interactive,
+    .m3-summary-actions,
+    .mobile-nav-item,
+    .payment-support a,
+    .platform-btn,
+    .pos-header-link,
+    .qrg-back,
+    .route-button,
+    .seller-browse-all,
+    .seller-name-link,
+    .sidebar-link,
+    .spotlight-launch-btn,
+    .summary-actions) :where(button,
+    .summary-back-link,
+    .ux-modal-btn-primary,
+    .ux-mode-launch-btn,
+    a,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card
+) {
+    text-decoration: none;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        text-decoration: none;
+    }
+}
+

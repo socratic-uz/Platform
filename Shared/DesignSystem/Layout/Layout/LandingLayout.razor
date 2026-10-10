@@ -4,10 +4,7 @@
 @using SharedKernel.Extensions
 @inject IStringLocalizer L
 
-<HeadContent>
-	<link rel="stylesheet" href="_content/Layout/css/grid.css" />
-	<link rel="stylesheet" href="_content/Layout/css/patterns/navigation/landing-bar.css" />
-</HeadContent>
+
 <Color />
 @if (!isRootLanding)
 {
@@ -35,10 +32,6 @@
 					<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
 						<Icon Name="storefront" />
 						<span>@T("Showroom", "Витрина")</span>
-					</a>
-					<a href="/commerce" class="landing-nav-link">
-						<Icon Name="rocket_launch" />
-						<span>@T("UXModes", "28 UX-режимов")</span>
 					</a>
 					<a href="/docs" class="landing-nav-link">
 						<Icon Name="menu_book" />
@@ -79,10 +72,6 @@
 				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="storefront" />
 					<span>@T("Showroom", "Витрина")</span>
-				</a>
-				<a href="/commerce" class="mobile-nav-item" @onclick="CloseMobileMenu">
-					<Icon Name="rocket_launch" />
-					<span>@T("UXModes", "28 UX-режимов")</span>
 				</a>
 				<a href="/docs" class="mobile-nav-item" @onclick="CloseMobileMenu">
 					<Icon Name="menu_book" />

@@ -1,0 +1,110 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: overflow/scrolling.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .cart-items-container,
+    .dialog-content,
+    .drawer-panel,
+    .dropdown-menu,
+    .lang-menu-list,
+    .m3-config-dialog,
+    .m3-dialog-body,
+    .m3-dialog-surface,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .map-panel-content,
+    .md-drawer-backdrop,
+    .options-container,
+    .order-summary-list,
+    .orders-table-wrapper,
+    .picker-popover-body,
+    .product-thumbnails,
+    .scrollbar-thin,
+    .select-options,
+    .table-container,
+    .table-scroll-container,
+    table.quickgrid
+) {
+    overscroll-behavior: contain;
+}
+
+.showcase-section {
+    scroll-margin-top: 100px;
+}
+
+.m3-scroll-snap-x {
+    scroll-snap-type: x mandatory;
+}
+
+.m3-scroll-snap-x {
+    scroll-padding: var(--md-sys-spacing-4, 1rem);
+}
+
+.m3-scroll-snap-x > * {
+    scroll-snap-align: start;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+:where(
+    .active-orders-scroll,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .m3-scroll-snap-x,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-thumbnails,
+    .store-breadcrumbs,
+    .touch-scroll-x,
+    .ux-widget-chips
+) {
+    overscroll-behavior-x: contain;
+}
+
+:where(
+    .m3-scroll-snap-x,
+    .touch-scroll-x,
+    .touch-scroll-y,
+    .ux-category-tabs
+) {
+    -webkit-overflow-scrolling: touch;
+}
+
+:where(
+    .drawer-body,
+    .message-list-container,
+    .pos-grid,
+    .pos-invoice-container,
+    .touch-scroll-y
+) {
+    overscroll-behavior-y: contain;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .pos-top-header-actions {
+        -webkit-overflow-scrolling: touch
+    }
+}
+

@@ -1,0 +1,309 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: overflow/overflow.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .catalog-sidebar,
+    .det-logs-console,
+    .det-sidebar-scrollable,
+    .docs-content,
+    .docs-sidebar-menu,
+    .drawer-body,
+    .m3-config-dialog,
+    .m3-dialog-content,
+    .m3-dialog-surface,
+    .map-global-suggestions,
+    .map-panel-content,
+    .map-route-suggestions,
+    .message-list-container,
+    .organizations-route-panel,
+    .place-details-body,
+    .pos-grid,
+    .pos-invoice-container,
+    .qrg-lists,
+    .qrg-preview,
+    .qrg-sidebar-scrollable,
+    .showcase-content,
+    .showcase-sidebar-nav,
+    md-dialog [slot="content"]
+) {
+    overflow-y: auto;
+}
+
+:where(
+    .landing-container,
+    .landing-page-root,
+    .m3-dialog-content,
+    .map-panel-content,
+    .message-list-container,
+    .payment-dashboard,
+    .pos-main,
+    html, body,
+    md-dialog [slot="content"]
+) {
+    overflow-x: hidden;
+}
+
+:where(
+    .m3-dialog-content,
+    md-dialog [slot="content"]
+) {
+    min-height: 0;
+}
+
+:where(
+    .m3-dialog-content,
+    md-dialog [slot="content"]
+) {
+    max-height: min(65dvh, 560px);
+}
+
+:where(
+    .active-orders-scroll,
+    .drawer-body,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .m3-dialog-content,
+    .message-list-container,
+    .order-items-table-wrapper,
+    .orders-table-wrapper,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-thumbnails,
+    .resource-tabs,
+    .store-breadcrumbs,
+    .suggestions-wrapper,
+    md-dialog [slot="content"]
+) {
+    -webkit-overflow-scrolling: touch;
+}
+
+:where(
+    .ai-blob-canvas svg,
+    .avatar-button,
+    .hero-card,
+    .m3-card,
+    .organizations-map-controls,
+    .picker-swatch-wrapper,
+    .product-card,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card,
+    svg.ai-blob-svg
+) {
+    overflow: visible;
+}
+
+:where(
+    .active-orders-scroll,
+    .analytics-period-selector,
+    .assistant-message-text pre > code,
+    .catalog-badge-row,
+    .example-categories,
+    .explorer-chipset-wrapper,
+    .help-categories,
+    .kiosk-filter-row,
+    .m3-breadcrumbs,
+    .m3-filter-toolbar,
+    .m3-grid-chips,
+    .m3-table-wrapper,
+    .map-categories-scroll,
+    .md3-presets-row,
+    .order-items-table-wrapper,
+    .orders-table-wrapper,
+    .pills-row,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .product-tags,
+    .product-thumbnails,
+    .resource-tabs,
+    .showcase-card-code,
+    .showcase-demo-row,
+    .store-breadcrumbs,
+    .suggestions-wrapper,
+    .toast-triggers-row,
+    .ux-category-tabs,
+    .ux-widget-chips,
+    assistant-message pre > code
+) {
+    overflow-x: auto;
+}
+
+:where(
+    .link-stack,
+    .smart-grid-container textarea,
+    .table-container,
+    section.link-stack
+) {
+    overflow: auto;
+}
+
+:where(
+    .ad-slot-container,
+    .ai-blob-canvas,
+    .b2b-lead-section,
+    .bar-track,
+    .bento-card,
+    .canvas-wrapper,
+    .card-instant .qr-preview-box,
+    .chat-page-root,
+    .col-title-text,
+    .designer-sidebar,
+    .det-display-area,
+    .det-preview-card,
+    .det-preview-container,
+    .det-sidebar,
+    .det-webrtc-stage,
+    .docs-sidebar,
+    .drop-container,
+    .evolution-banner,
+    .faceid-scanner-frame,
+    .file-card,
+    .file-name,
+    .file-preview-area,
+    .fullscreen-player,
+    .hero-stage-card,
+    .hero-stage-screen,
+    .item-headline,
+    .kiosk-attract-loop,
+    .kiosk-brand-name,
+    .kiosk-hero,
+    .landing-bg-canvas,
+    .link-stack a,
+    .link-stack article,
+    .m3-card-media,
+    .m3-line-clamp-2,
+    .m3-line-clamp-3,
+    .m3-media-card,
+    .m3-mode-toggle,
+    .m3-page-header-title,
+    .m3-progress-track,
+    .m3-skeleton,
+    .m3-truncate,
+    .maneuver-text,
+    .map-global-suggestion-title,
+    .media-card,
+    .mode-toggle,
+    .nearby-results-panel,
+    .org-card,
+    .org-card-content,
+    .org-card-desc,
+    .org-card-name,
+    .org-media,
+    .org-showcase-section,
+    .picker-icon-badge,
+    .picker-preview-text,
+    .picker-trigger-text,
+    .platform-card,
+    .pos-catalog,
+    .pos-product-title-text,
+    .pos-sidebar,
+    .pos-ux-mode-title,
+    .price-tag,
+    .product-desc,
+    .product-main-image-wrap,
+    .product-media,
+    .progress-bar-bg,
+    .qr-canvas-box,
+    .qrg-sidebar,
+    .showcase-nav-btn-left,
+    .showcase-nav-btn-left span,
+    .spatial-maps-section,
+    .spec-value,
+    .thumb-btn,
+    .ux-mode-card,
+    .ux-spotlight-card,
+    .video-grid,
+    .video-player-wrapper,
+    .wishlist-desc-text,
+    .wishlist-media,
+    .yandex-zoom-card,
+    :where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) md-list,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) section,
+    main.docs-page,
+    main.showcase-page,
+    md-icon:not(:defined),
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    overflow: hidden;
+}
+
+:where(
+    .about-container,
+    .app-grid,
+    .catalog-main,
+    .catalog-shell,
+    .docs-content,
+    .example-container,
+    .help-container,
+    .landing-grid,
+    .landing-subpage-container,
+    .m3-page-container,
+    body,
+    html
+) {
+    overflow-x: clip;
+}
+
+.suggestions-wrapper {
+    overflow-y: hidden;
+}
+
+.touch-scroll-x {
+    overflow: auto hidden;
+}
+
+.touch-scroll-y {
+    overflow: hidden auto;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 599.98px) {
+    .kiosk-lang-switcher {
+        overflow-x: auto;
+    }
+    .m3-page-header-title {
+        overflow: hidden;
+    }
+    .pos-top-header-actions {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    .header-start-zone {
+        overflow: hidden;
+    }
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        overflow: hidden auto;
+    }
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 839.98px) {
+    main.showcase-page {
+        overflow: hidden;
+    }
+}
+

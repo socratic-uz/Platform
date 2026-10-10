@@ -1,0 +1,74 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/box-model/sizing.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-ratio-square: 1 / 1;
+}
+
+:root {
+    --md-sys-ratio-video: 16 / 9;
+}
+
+:root {
+    --md-sys-ratio-card: 4 / 3;
+}
+
+:root {
+    --md-sys-ratio-portrait: 3 / 4;
+}
+
+:root {
+    --md-sys-ratio-kiosk: 16 / 10;
+}
+
+:root {
+    --md-sys-ratio-wide: 21 / 9;
+}
+
+:root {
+    --md-sys-touch-target-min: 48px;
+}
+
+:root {
+    --md-sys-touch-target-kiosk: 56px;
+}
+
+:root {
+    --md-sys-touch-target-compact: 40px;
+}
+
+:root {
+    --md-sys-viewport-height: 100dvh;
+}
+
+:root {
+    --md-sys-viewport-height-small: 100svh;
+}
+
+:root {
+    --md-sys-viewport-height-large: 100lvh;
+}
+
+:root {
+    --md-sys-breakpoint-compact: 599.98px;
+}
+
+:root {
+    --md-sys-breakpoint-medium: 839.98px;
+}
+
+:root {
+    --md-sys-breakpoint-expanded: 1199.98px;
+}
+
+:root {
+    --md-sys-breakpoint-large: 1599.98px;
+}
+
+:root {
+    --catalog-sidebar-width: 280px;
+}
+

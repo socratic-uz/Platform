@@ -1,0 +1,38 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/box-model/outline.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-outline-width: 2px;
+}
+
+:root {
+    --md-sys-outline-width-focus: 3px;
+}
+
+:root {
+    --md-sys-outline-offset: 2px;
+}
+
+:root {
+    --md-sys-outline-offset-tight: 1px;
+}
+
+:root {
+    --md-sys-outline-offset-inset: -2px;
+}
+
+:root {
+    --md-sys-color-focus-ring: var(--md-sys-color-primary);
+}
+
+:root {
+    --md-sys-color-focus-ring-variant: var(--md-sys-color-secondary);
+}
+
+:root {
+    --md-sys-color-focus-ring-error: var(--md-sys-color-error);
+}
+

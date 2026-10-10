@@ -1,0 +1,52 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: content/generated.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.col-width-draghandle::after {
+    content: ' ';
+}
+
+.avatar-button::before,
+.card-interactive::before,
+.glass::before,
+.m3-card-interactive::before,
+.m3-skeleton::after,
+.m3-status-dot.pulse::after,
+.picker-palette-swatch::before,
+.picker-swatch-wrapper::before,
+.status-dot.pulse::after,
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before,
+.glass::before,
+.hero-card::before,
+.ux-mode-card::before,
+.industry-card::before,
+.feature-card::before,
+.evolution-card::before,
+.org-card::before,
+.spatial-wing-card::before,
+.spatial-subcard::before,
+.bento-card::before,
+.platform-card::before,
+.ux-spotlight-card::before {
+    content: '';
+}
+
+.auth-divider::after,
+.auth-divider::before,
+.faceid-scanner-frame.scanning::after,
+.kiosk-hero::before,
+.link-stack a::before,
+.link-stack article::before {
+    content: "";
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}
+
+.loading-progress-text:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+

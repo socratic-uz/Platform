@@ -1,0 +1,858 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: positioning/position.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .about-container,
+    .ad-slide-touch-prompt,
+    .attract-loop-content,
+    .avatar-button,
+    .avatar-container,
+    .b2b-lead-content,
+    .b2b-lead-section,
+    .brand-screensaver-cta,
+    .call-container,
+    .card-elevated,
+    .card-filled,
+    .card-glass,
+    .card-instant .qr-preview-box,
+    .card-outlined,
+    .chat-page-root,
+    .col-header-content,
+    .color-badge-swatch,
+    .components-rejoining-animation,
+    .cta-btn,
+    .det-camera-wrapper,
+    .det-display-area,
+    .det-video-stage-wrapper,
+    .det-webrtc-stage,
+    .drop-container,
+    .evolution-banner,
+    .example-container,
+    .faceid-scanner-frame,
+    .file-card,
+    .glass,
+    .glass > *,
+    .glass > *,
+.hero-card > *,
+.spatial-wing-card > *,
+.spatial-subcard > *,
+.org-card > *,
+.bento-card > *,
+.ux-mode-card > *,
+.industry-card > *,
+.feature-card > *,
+.evolution-card > *,
+.platform-card > *,
+    .glass-card,
+    .help-container,
+    .hero-actions-container,
+    .hero-section,
+    .hero-stage-card,
+    .hero-stage-screen,
+    .item-card,
+    .kds-card,
+    .kiosk-hero,
+    .landing-container,
+    .landing-grid,
+    .landing-page-root,
+    .landing-subpage-container,
+    .lang-dropdown-wrapper,
+    .lang-select,
+    .link-stack a,
+    .link-stack article,
+    .loading-progress,
+    .m3-card,
+    .m3-card-media,
+    .m3-filter-chip,
+    .m3-skeleton,
+    .m3-status-dot.pulse,
+    .main-footer,
+    .map-route-dot,
+    .org-card,
+    .org-media,
+    .org-showcase-section,
+    .organizations-map-page,
+    .payment-dashboard .glass-card,
+    .picker-icon-badge,
+    .picker-palette-swatch,
+    .picker-swatch-wrapper,
+    .plan-card,
+    .platform-card,
+    .product-card,
+    .product-main-image-wrap,
+    .product-media,
+    .search-bar,
+    .search-clear-btn,
+    .showcase-card-code,
+    .showcase-content,
+    .spatial-maps-section,
+    .spec-value-box,
+    .status-dot.pulse,
+    .store-product-page,
+    .superpowers-bento-section,
+    .table-container th,
+    .tier-box,
+    .upload-card,
+    .ux-mode-card,
+    .ux-modes-section,
+    .ux-spotlight-card,
+    .video-grid,
+    .wishlist-media,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) figure,
+    [class*="m3-card-"],
+    button.col-title,
+    footer.app-footer,
+    header.app-header,
+    md-elevated-card,
+    md-filled-card,
+    md-filled-card.product-card,
+    md-outlined-card,
+    table.quickgrid th
+) {
+    position: relative;
+}
+
+:where(
+    #blazor-error-ui .dismiss,
+    .bg-base-gradient,
+    .bg-grid-mesh,
+    .bg-radial-vignette,
+    .bg-spotlight,
+    .bg-top-blender,
+    .card-instant .qr-hud-corner,
+    .card-instant .qr-laser-scanner,
+    .components-rejoining-animation div,
+    .det-bbox,
+    .det-bbox-label,
+    .det-overlays-container,
+    .floating-chip,
+    .loading-progress-text,
+    .local-video-pip,
+    .map-canvas,
+    .map-floating-actions,
+    .map-global-suggestions,
+    .map-measure-badge,
+    .map-panel-toggle-tab,
+    .map-topbar,
+    .navigator-panel,
+    .organizations-map-controls,
+    .organizations-map-viewport,
+    .section-ambient-glow,
+    .yandex-right-controls-container
+),
+.avatar-button img,
+    .avatar-button md-icon,
+    .avatar-button .material-symbols-outlined,
+    .wishlist-wish-btn,
+    .picker-native-input,
+    .file-overlay,
+    .new-badge,
+    .file-input-hidden,
+    .lang-dropdown-menu,
+    .col-options,
+    .col-width-draghandle
+,
+.col-width-draghandle::after,
+.avatar-button::before,
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after,
+.m3-card-interactive::before,
+.card-interactive::before,
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before,
+.picker-swatch-wrapper::before,
+.picker-palette-swatch::before,
+.m3-skeleton::after,
+:is(
+    .attract-loop-background,
+    .attract-loop-overlay,
+    .badge-age-restriction,
+    .kiosk-wish-btn-wrapper,
+    .landing-floating-controls,
+    .landing-top-bar-wrapper,
+    .m3-nav-fab,
+    .popular-badge,
+    .pos-badge-qty,
+    .pro-tag,
+    .pulse-ring,
+    .ux-mode-badge-overlay
+),
+.faceid-scanner-frame.scanning::after,
+.glass::before,
+.kiosk-hero::before,
+.link-stack a::before,
+.link-stack article::before,
+.glass::before,
+.hero-card::before,
+.ux-mode-card::before,
+.industry-card::before,
+.feature-card::before,
+.evolution-card::before,
+.org-card::before,
+.spatial-wing-card::before,
+.spatial-subcard::before,
+.bento-card::before,
+.platform-card::before,
+.ux-spotlight-card::before {
+    position: absolute;
+}
+
+:where(
+    #blazor-error-ui,
+    .bg-top-blender,
+    .cursor-glow-orb,
+    .det-overlays-container,
+    .map-global-suggestions
+),
+.ux-spotlight-card::before,
+:where(
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer,
+    .landing-top-bar-wrapper,
+    .m3-bottom-nav
+),
+.faceid-scanner-frame.scanning::after,
+.file-overlay,
+    .file-input-hidden,
+    .col-options,
+    .col-justify-start .col-options,
+    .paginator,
+    .table-container > .paginator
+,
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    left: 0;
+}
+
+:where(
+    .bg-top-blender,
+    .map-global-suggestions
+),
+.ux-spotlight-card::before,
+:where(
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer,
+    .landing-top-bar-wrapper,
+    .m3-bottom-nav
+),
+.file-overlay,
+    .lang-dropdown-menu,
+    .table-container th.actions-column,
+    table.quickgrid th.actions-column,
+    .table-container td.actions-column,
+    table.quickgrid td.actions-column,
+    .col-justify-end .col-options
+,
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    right: 0;
+}
+
+:where(
+    #blazor-error-ui,
+    .bg-top-blender,
+    .cursor-glow-orb,
+    .det-overlays-container,
+    .map-toolbar
+),
+.ux-spotlight-card::before,
+:where(
+    .chat-header-container,
+    .landing-top-bar-wrapper,
+    .showcase-topbar,
+    header.app-header.header-sticky,
+    header.app-header.landing-header
+),
+.catalog-sidebar,
+    .file-overlay,
+    .file-input-hidden,
+    .col-width-draghandle
+,
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before,
+.col-width-draghandle::after,
+.faceid-scanner-frame.scanning::after {
+    top: 0;
+}
+
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    inset: -3px;
+}
+
+.wishlist-wish-btn {
+    top: 10px;
+}
+
+.wishlist-wish-btn {
+    right: 10px;
+}
+
+:where(
+    .picker-native-input,
+    .popular-badge,
+    .pro-tag
+) {
+    top: -10px;
+}
+
+.picker-native-input {
+    left: -10px;
+}
+
+:where(
+    .card-instant .qr-hud-corner.hud-tl,
+    .card-instant .qr-hud-corner.hud-tr,
+    .new-badge,
+    .pos-badge-qty
+) {
+    top: 6px;
+}
+
+:where(
+    .card-instant .qr-hud-corner.hud-bl,
+    .card-instant .qr-hud-corner.hud-tl,
+    .card-instant .qr-laser-scanner,
+    .new-badge
+) {
+    left: 6px;
+}
+
+:where(
+    .lang-dropdown-menu,
+    .map-global-suggestions
+) {
+    top: calc(100% + 6px);
+}
+
+.col-justify-end .col-options {
+    left: unset;
+}
+
+.col-justify-start .col-options {
+    right: unset;
+}
+
+.col-width-draghandle {
+    right: 0rem;
+}
+
+:where(
+    .map-panel-toggle-tab
+),
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .m3-config-dialog,
+    .m3-dialog-surface
+),
+.avatar-button::before,
+.link-stack a::before,
+.link-stack article::before,
+.picker-palette-swatch::before,
+.picker-swatch-wrapper::before {
+    top: 50%;
+}
+
+:where(
+    .map-measure-badge,
+    .map-topbar,
+    .navigator-panel
+),
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .m3-config-dialog,
+    .m3-dialog-surface
+),
+.avatar-button::before,
+.picker-palette-swatch::before,
+.picker-swatch-wrapper::before,
+:is(
+    .m3-nav-fab
+),
+.link-stack a::before,
+.link-stack article::before {
+    left: 50%;
+}
+
+:where(
+    .bg-base-gradient,
+    .bg-grid-mesh,
+    .bg-radial-vignette,
+    .landing-bg-canvas,
+    .map-canvas,
+    .map-floating-actions,
+    .organizations-map-viewport
+),
+.glass::before,
+.hero-card::before,
+.ux-mode-card::before,
+.industry-card::before,
+.feature-card::before,
+.evolution-card::before,
+.org-card::before,
+.spatial-wing-card::before,
+.spatial-subcard::before,
+.bento-card::before,
+.platform-card::before,
+:where(
+    .avatar-button img,
+    .m3-dialog-backdrop,
+    .m3-modal-backdrop
+),
+.card-interactive::before,
+.m3-card-interactive::before,
+.m3-skeleton::after,
+:is(
+    .ai-blob-canvas,
+    .attract-loop-background,
+    .attract-loop-overlay,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop
+),
+.glass::before {
+    inset: 0;
+}
+
+:where(
+    #blazor-error-ui,
+    .ai-blob-canvas,
+    .cart-bar,
+    .cursor-glow-orb,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .landing-bg-canvas,
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer,
+    .m3-bottom-nav,
+    .m3-config-dialog,
+    .m3-dialog-backdrop,
+    .m3-dialog-surface,
+    .m3-drawer-backdrop,
+    .m3-modal-backdrop,
+    .md-drawer-backdrop
+) {
+    position: fixed;
+}
+
+:where(
+    .col-width-draghandle,
+    .file-overlay,
+    .landing-mobile-menu-backdrop,
+    .m3-bottom-nav
+),
+.col-width-draghandle::after {
+    bottom: 0;
+}
+
+:where(
+    .catalog-sidebar,
+    .map-toolbar,
+    .order-summary-section,
+    .paginator,
+    .showcase-topbar,
+    .table-container > .paginator,
+    .table-container td.actions-column,
+    .table-container th.actions-column,
+    header.app-header.header-sticky,
+    header.app-header.landing-header,
+    table.quickgrid td.actions-column,
+    table.quickgrid th.actions-column
+) {
+    position: sticky;
+}
+
+.kiosk-hero::before {
+    inset: -30% auto auto -30%;
+}
+
+.ux-mode-badge-overlay {
+    left: 8px;
+}
+
+.kiosk-wish-btn-wrapper {
+    right: 8px;
+}
+
+.cart-bar {
+    inset: auto 0 0;
+}
+
+.landing-floating-controls {
+    top: 1.25rem;
+}
+
+.landing-floating-controls {
+    right: 1.5rem;
+}
+
+.m3-nav-fab {
+    top: -24px;
+}
+
+.order-summary-section {
+    top: var(--md-sys-spacing-6, 1.5rem);
+}
+
+:where(
+    .card-instant .qr-hud-corner.hud-br,
+    .card-instant .qr-hud-corner.hud-tr,
+    .card-instant .qr-laser-scanner,
+    .pos-badge-qty
+) {
+    right: 6px;
+}
+
+:where(
+    .badge-age-restriction,
+    .map-measure-badge
+) {
+    top: 1rem;
+}
+
+.badge-age-restriction {
+    right: 1rem;
+}
+
+.pro-tag,
+.popular-badge {
+    right: 18px;
+}
+
+.pulse-ring {
+    inset: -6px;
+}
+
+:where(
+    .kiosk-wish-btn-wrapper,
+    .ux-mode-badge-overlay
+) {
+    top: 8px;
+}
+
+:where(
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer
+) {
+    top: 68px;
+}
+
+.det-bbox-label {
+    top: -22px;
+}
+
+.det-bbox-label {
+    left: -2px;
+}
+
+.local-video-pip {
+    bottom: 16px;
+}
+
+:where(
+    .local-video-pip,
+    .yandex-right-controls-container
+) {
+    right: 16px;
+}
+
+.map-topbar {
+    top: var(--map-fab-offset);
+}
+
+.yandex-right-controls-container {
+    top: 16px;
+}
+
+.yandex-right-controls-container {
+    bottom: 24px;
+}
+
+.organizations-map-controls {
+    top: 0.75rem;
+}
+
+.organizations-map-controls {
+    left: 0.75rem;
+}
+
+.organizations-map-controls {
+    bottom: 0.75rem;
+}
+
+:where(
+    .map-panel-toggle-tab,
+    .organizations-map-controls.collapsed .map-panel-toggle-tab
+) {
+    right: -24px;
+}
+
+.map-panel-toggle-tab:hover {
+    right: -28px;
+}
+
+.organizations-map-controls.collapsed .map-panel-toggle-tab {
+    left: auto;
+}
+
+.navigator-panel {
+    top: calc(1rem + env(safe-area-inset-top, 0px));
+}
+
+.bg-spotlight-hero {
+    top: -160px;
+}
+
+.bg-spotlight-hero {
+    right: 5%;
+}
+
+:where(
+    .bg-spotlight-bento,
+    .chip-3
+) {
+    top: 48%;
+}
+
+.bg-spotlight-bento {
+    left: -100px;
+}
+
+.glow-cyan-purple {
+    top: -60px;
+}
+
+.glow-cyan-purple {
+    left: 15%;
+}
+
+.glow-purple-indigo {
+    top: 5%;
+}
+
+.glow-purple-indigo {
+    right: 10%;
+}
+
+.glow-teal-cyan {
+    top: -40px;
+}
+
+.glow-teal-cyan {
+    left: 20%;
+}
+
+.chip-1 {
+    top: 8%;
+}
+
+.chip-1 {
+    left: 4%;
+}
+
+.chip-2 {
+    bottom: 8%;
+}
+
+.chip-2 {
+    right: 4%;
+}
+
+.chip-3 {
+    right: 2%;
+}
+
+:where(
+    .card-instant .qr-hud-corner.hud-bl,
+    .card-instant .qr-hud-corner.hud-br
+) {
+    bottom: 6px;
+}
+
+#blazor-error-ui .dismiss {
+    right: 0.75rem;
+}
+
+#blazor-error-ui .dismiss {
+    top: 0.5rem;
+}
+
+.loading-progress-text {
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 839.98px) {
+    .cart-bar {
+        inset: auto 0 calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0px));
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        position: fixed;
+        inset: auto 0 0;
+    }
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        position: relative;
+    }
+    .landing-mobile-menu-backdrop,
+    .landing-mobile-menu-drawer {
+        top: 56px;
+    }
+    .app-grid > nav {
+        position: fixed;
+        inset: auto 0 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .landing-top-bar-wrapper {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .landing-floating-controls {
+        top: 0.85rem;
+        right: 0.85rem;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media (max-width: 839.98px) {
+    .order-summary-section {
+        position: static;
+    }
+    .showcase-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .showcase-sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+    }
+}
+
+@media (max-width: 839.98px) {
+    .det-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(360px, 1fr);
+        grid-template-areas: 
+            "preview"
+            "sidebar";
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    .det-sidebar {
+        border-right: none;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        height: auto;
+        padding: 16px;
+        min-height: 0;
+    }
+
+    .det-sidebar-scrollable {
+        max-height: clamp(240px, 35vh, 400px);
+    }
+
+    .det-preview-container {
+        height: auto;
+        min-height: 380px;
+        padding: 12px;
+    }
+
+    .det-preview-card {
+        padding: 12px;
+        border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    }
+
+    .det-preview-header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .det-stats {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
+
+    .local-video-pip {
+        width: 100px;
+        height: 75px;
+        bottom: 8px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 599.98px) {
+    .det-preview-container {
+        padding: 8px;
+        min-height: 280px;
+    }
+
+    .det-sidebar {
+        padding: 12px 8px;
+    }
+
+    .det-stats {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+
+    .local-video-pip {
+        width: 80px;
+        height: 60px;
+        bottom: 6px;
+        right: 6px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 839.98px) {
+    .organizations-map-controls {
+        width: min(24rem, calc(100vw - 4rem));
+        bottom: 0.75rem;
+    }
+
+    .map-toolbar { top: -0.12rem; }
+}
+
+@media (max-width: 599.98px) {
+    .yandex-right-controls-container {
+        right: 12px;
+        top: 12px;
+        transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.search-mode .yandex-right-controls-container {
+        bottom: 154px;
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.yandex-route-mode .yandex-right-controls-container {
+        bottom: 209px;
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.details-mode .yandex-right-controls-container {
+        bottom: 229px;
+    }
+
+    .organizations-map-viewport.controls-panel-expanded .yandex-right-controls-container {
+        bottom: 24px;
+    }
+}
+

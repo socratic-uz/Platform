@@ -1,0 +1,470 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: transforms/transform.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-card-interactive:hover,
+.card-interactive:hover {
+    transform: translateY(-3px) scale(1.006);
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card):hover {
+    transform: translateY(-3px) scale(1.004);
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card):active {
+    transform: translateY(0) scale(0.985);
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card):hover figure > img {
+    transform: scale(1.03);
+}
+
+:where(
+    .picker-palette-swatch:hover,
+    .waypoint-marker:active
+) {
+    transform: scale(1.15);
+}
+
+.upload-card:hover .upload-icon {
+    transform: scale(1.2) rotate(6deg);
+}
+
+:where(
+    .citation:active,
+    .hero-pill-link:active,
+    .kds-action-btn:active,
+    .lang-chip-btn:active,
+    .pos-quick-bill-btn:active,
+    .preset-btn:active,
+    .route-start-btn:active,
+    .stage-tab:active
+) {
+    transform: scale(0.96);
+}
+
+:where(
+    .lang-chevron.is-open,
+    .map-route-swap-btn:hover
+) {
+    transform: rotate(180deg);
+}
+
+.m3-skeleton::after {
+    transform: translateX(-100%);
+}
+
+.col-sort-asc .sort-indicator {
+    transform: scaleY(-1);
+}
+
+.go-next, .go-last {
+    transform: scaleX(-1);
+}
+
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .m3-config-dialog,
+    .m3-dialog-surface
+),
+.avatar-button::before,
+.picker-palette-swatch::before,
+.picker-swatch-wrapper::before,
+:is(
+    #blob2
+),
+.link-stack a::before,
+.link-stack a:active::before,
+.link-stack article::before,
+.link-stack article:active::before {
+    transform: translate(-50%, -50%);
+}
+
+:where(
+    #components-reconnect-modal button:hover,
+    .citation[href]:hover,
+    .hero-pill-link:hover,
+    .landing-auth-btn:hover,
+    .landing-floating-auth-btn:hover,
+    .landing-nav-link:hover,
+    .lang-chip-btn:hover,
+    .m3-filter-chip:hover,
+    .map-action-button:hover:not(:disabled),
+    .preset-btn:hover,
+    .route-alternative-card:hover,
+    header.landing-header .header-brand-link:hover
+) {
+    transform: translateY(-1px);
+}
+
+:where(
+    .file-card:hover,
+    .upload-card:hover
+) {
+    transform: translateY(-3px) scale(1.02);
+}
+
+:where(
+    .analytics-mode-btn,
+    .card-interactive,
+    .file-card,
+    .landing-bg-canvas,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .m3-card-interactive,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-filter-chip,
+    .m3-media-card,
+    .m3-segmented-btn,
+    .media-card,
+    .org-card,
+    .paginator nav button:not([disabled]),
+    .picker-palette-swatch,
+    .picker-trigger-card,
+    .upload-card,
+    md-elevated-button,
+    md-elevated-card,
+    md-filled-button,
+    md-filled-card,
+    md-icon-button,
+    md-outlined-button,
+    md-outlined-card,
+    md-text-button,
+    md-tonal-button
+) {
+    transform: translateZ(0);
+}
+
+.m3-hover-lift:active {
+    transform: scale(0.985);
+}
+
+:where(
+    #components-reconnect-modal button:active,
+    .card-interactive:active,
+    .cta-btn:active,
+    .m3-card-interactive:active,
+    .m3-press-scale:active,
+    .map-action-button:active:not(:disabled),
+    :where(
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .m3-dialog-close-btn,
+    .m3-dialog-btn-primary,
+    .paginator nav button:not([disabled]),
+    :where(.analytics-mode-btn, .m3-segmented-btn)
+):active
+) {
+    transform: scale(0.97);
+}
+
+:where(
+    .ad-slot-container:hover,
+    .analytics-kpi-card:hover,
+    .hero-cta:hover,
+    .m3-hover-lift:hover,
+    .m3-swatch:hover,
+    .map-category-chip:hover,
+    .plan-card:hover,
+    .platform-btn:hover,
+    .primary-cta:hover,
+    .secondary-cta:hover,
+    .spatial-subcard:hover,
+    .spotlight-launch-btn:hover,
+    .tertiary-cta:hover,
+    .tier-box:hover,
+    .ux-expand-btn:hover,
+    .ux-modal-btn-primary:hover,
+    .ux-mode-launch-btn:hover,
+    .ux-mode-quickview-btn:hover,
+    .ux-reset-filter-btn:hover,
+    .ux-tab-btn:hover,
+    :where(
+    .m3-card-interactive,
+    .card-interactive,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card,
+    .m3-media-card,
+    .media-card,
+    .org-card,
+    .file-card,
+    .upload-card,
+    .picker-trigger-card
+):hover,
+    :where(.m3-media-card, .media-card, .org-card):hover
+) {
+    transform: translateY(-2px);
+}
+
+:where(
+    .product-card:hover .product-img,
+    :where(
+    .m3-media-card:hover .m3-card-media,
+    .org-card:hover .org-media,
+    .product-card:hover .wishlist-media,
+    md-filled-card:hover figure,
+    md-outlined-card:hover figure,
+    md-elevated-card:hover figure
+) img,
+    :where(.m3-media-card:hover .m3-card-media, .org-card:hover .org-media, .product-card:hover .wishlist-media) img
+) {
+    transform: scale(1.04);
+}
+
+.chat-back-link:hover {
+    transform: scale(1.05);
+}
+
+.footer-links-list a:hover {
+    transform: translateX(2px);
+}
+
+:where(
+    .footer-columns a:hover,
+    .kanban-card:hover .advance-icon
+) {
+    transform: translateX(3px);
+}
+
+:where(
+    .bento-card:hover,
+    .org-card:hover,
+    .pillar-card:hover,
+.tech-card:hover,
+    .platform-card:hover,
+    .spatial-wing-card:hover
+) {
+    transform: translateY(-4px);
+}
+
+.qrg-card:hover {
+    transform: translateY(-6px);
+}
+
+:where(
+    .m3-nav-fab,
+    .map-measure-badge,
+    .map-topbar,
+    .navigator-panel
+) {
+    transform: translateX(-50%);
+}
+
+.landing-nav-link:hover md-icon {
+    transform: scale(1.1);
+}
+
+:where(
+    .hero-cta:hover .cta-arrow,
+    .order-card:hover .chevron-icon,
+    .primary-cta:hover .cta-arrow
+) {
+    transform: translateX(4px);
+}
+
+:where(
+    .hero-stage-card:hover .hero-stage-img,
+    .product-main-image-wrap:hover .product-main-img
+) {
+    transform: scale(1.02);
+}
+
+#blob1 {
+    transform: translate(0, 0);
+}
+
+#blob3 {
+    transform: translate(50%, 50%);
+}
+
+#blob4 {
+    transform: translate(50%, -80%);
+}
+
+#blob5 {
+    transform: translate(-50%, 80%);
+}
+
+.l0 {
+    transform: var(--tr0);
+}
+
+.l1 {
+    transform: var(--tr1);
+}
+
+.l2 {
+    transform: var(--tr2);
+}
+
+.l3 {
+    transform: var(--tr3);
+}
+
+.l4 {
+    transform: var(--tr4);
+}
+
+#blob {
+    transform: scale(var(--blob-scale, 1));
+}
+
+#blob {
+    transform-origin: center;
+}
+
+:where(
+    .glass,
+    .gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop
+) {
+    backface-visibility: hidden;
+}
+
+.gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop {
+    perspective: 1000px;
+}
+
+.gpu-layer,
+.swipe-card,
+.drawer-panel,
+.md-drawer-backdrop {
+    -webkit-backface-visibility: hidden;
+}
+
+:where(
+    .drawer-panel,
+    .gpu-layer,
+    .m3-drawer-panel,
+    .md-drawer-backdrop,
+    .swipe-card
+) {
+    transform: translate3d(0, 0, 0);
+}
+
+.yandex-ctrl-btn:hover {
+    transform: scale(1.06);
+}
+
+:where(
+    .map-category-chip:active,
+    .search-route-btn:active,
+    .yandex-ctrl-btn:active
+) {
+    transform: scale(0.95);
+}
+
+.organizations-map-controls {
+    transform: translateX(0);
+}
+
+.organizations-map-controls.collapsed {
+    transform: translateX(calc(-100% - 0.75rem));
+}
+
+.map-panel-toggle-tab {
+    transform: translateY(-50%);
+}
+
+.map-route-close-btn:hover {
+    transform: rotate(90deg);
+}
+
+.map-route-add-via-btn:hover {
+    transform: scale(1.08) rotate(90deg);
+}
+
+.route-start-btn:hover {
+    transform: translateY(-1.5px);
+}
+
+.nav-control-btn:active {
+    transform: scale(0.92);
+}
+
+.glass {
+    transform-style: preserve-3d;
+}
+
+.ux-spotlight-card:hover {
+    transform: translateY(-8px);
+}
+
+.ux-mode-card:hover {
+    transform: translateY(-5px);
+}
+
+.loading-progress circle {
+    transform-origin: 50% 50%;
+}
+
+.loading-progress circle {
+    transform: rotate(-90deg);
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media (max-width: 839.98px) {
+    .showcase-sidebar {
+        transform: translateX(-100%);
+    }
+    .showcase-sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-content-wrapper {
+        gap: 2rem;
+    }
+
+    .ux-spotlight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .evolution-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .chip-1 {
+        top: 4%;
+        left: 3%;
+        transform: scale(0.9);
+    }
+
+    .chip-2 {
+        bottom: 4%;
+        right: 3%;
+        transform: scale(0.9);
+    }
+
+    .chip-3 {
+        top: 45%;
+        right: 2%;
+        transform: scale(0.9);
+    }
+}
+

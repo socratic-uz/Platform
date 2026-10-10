@@ -72,6 +72,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="$(Assets)" Condition="'$(Assets)' != '' and Exists('$(Assets)')" />
+    <ProjectReference Include="..\Shared\DesignSystem\Assets\Assets.csproj" Condition="('$(Assets)' == '' or !Exists('$(Assets)')) and Exists('..\Shared\DesignSystem\Assets\Assets.csproj')" />
     <ProjectReference Include="$(Composition)" Condition="'$(Composition)' != '' and Exists('$(Composition)')" />
     <ProjectReference Include="..\Shared\Composition\Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and Exists('..\Shared\Composition\Composition.csproj')" />
     <ProjectReference Include="$(Layout)" Condition="'$(Layout)' != '' and Exists('$(Layout)')" />

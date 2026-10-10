@@ -4,7 +4,7 @@ using Microsoft.JSInterop;
 
 using SharedKernel.ValueObjects;
 
-using Shared.Resources;
+using Assets.Resources;
 using Shared.Services;
 
 namespace Shared.Extensions

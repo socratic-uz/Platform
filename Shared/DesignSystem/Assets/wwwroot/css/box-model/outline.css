@@ -1,0 +1,170 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: box-model/outline.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    input:invalid,
+    textarea:invalid,
+    .is-invalid,
+    .has-error
+):focus-visible {
+    outline-color: var(--md-sys-color-focus-ring-error, var(--md-sys-color-error));
+}
+
+.m3-focus-ring-tight:focus-visible {
+    outline-offset: var(--md-sys-outline-offset-tight, 1px);
+}
+
+.m3-focus-ring-inset:focus-visible {
+    outline-offset: var(--md-sys-outline-offset-inset, -2px);
+}
+
+.valid.modified:not([type="checkbox"]) {
+    outline: 1px solid var(--md-sys-color-primary);
+}
+
+.invalid {
+    outline: 1px solid var(--md-sys-color-error);
+}
+
+:where(
+    *:focus:not(:focus-visible),
+    .back-button:focus-visible,
+    .back-button:hover,
+    .chat-input-wrapper textarea,
+    .input-box textarea,
+    .input-box:focus-within,
+    .m3-back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-outline-none,
+    .m3-outline-none:focus,
+    .m3-outline-none:focus-visible,
+    .md3-time-input,
+    .picker-hex-input,
+    .search-input,
+    .select-input:focus,
+    .text-input:focus,
+    .ux-search-box input,
+    .ux-tab-btn,
+    :focus:not(:focus-visible)
+) {
+    outline: none;
+}
+
+:where(
+    .m3-focus-ring-inset:focus-visible,
+    .m3-focus-ring-tight:focus-visible,
+    .m3-focus-ring:focus-visible,
+    :where(
+    
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+
+    
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-checkbox,
+    md-switch,
+    md-radio,
+
+    
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .card-interactive,
+    .m3-card-interactive,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .paginator nav button:not([disabled])
+):focus-visible
+) {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+}
+
+:where(
+    .m3-focus-ring:focus-visible,
+    :where(
+    
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+
+    
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-checkbox,
+    md-switch,
+    md-radio,
+
+    
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .card-interactive,
+    .m3-card-interactive,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .paginator nav button:not([disabled])
+):focus-visible
+) {
+    outline-offset: var(--md-sys-outline-offset, 2px);
+}
+
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline: 2px solid var(--md-sys-color-tertiary);
+}
+
+md-filled-button:focus-visible,
+.btn-primary:focus-visible,
+.m3-btn-filled:focus-visible {
+    outline-offset: 3px;
+}
+
+:where(
+    *:focus-visible,
+    .crumb-link:focus-visible,
+    .thumb-btn:focus-visible
+) {
+    outline: 2px solid var(--md-sys-color-primary);
+}
+
+:where(
+    *:focus-visible,
+    .thumb-btn:focus-visible
+) {
+    outline-offset: 2px;
+}
+

@@ -1,0 +1,340 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: overflow/scrollbars.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    *,
+    .cart-items-container,
+    .dialog-content,
+    .dropdown-menu,
+    .example-categories,
+    .help-categories,
+    .lang-menu-list,
+    .m3-config-dialog,
+    .m3-dialog-body,
+    .m3-dialog-surface,
+    .m3-scroll-thin,
+    .map-panel-content,
+    .options-container,
+    .order-summary-list,
+    .orders-table-wrapper,
+    .picker-popover-body,
+    .product-thumbnails,
+    .scroll-thin,
+    .scrollbar-thin,
+    .select-options,
+    .table-container,
+    .table-scroll-container,
+    table.quickgrid
+) {
+    scrollbar-width: thin;
+}
+
+:where(
+    .cart-items-container,
+    .dialog-content,
+    .dropdown-menu,
+    .lang-menu-list,
+    .m3-config-dialog,
+    .m3-dialog-body,
+    .m3-dialog-surface,
+    .map-panel-content,
+    .options-container,
+    .order-summary-list,
+    .orders-table-wrapper,
+    .picker-popover-body,
+    .product-thumbnails,
+    .scrollbar-thin,
+    .select-options,
+    .table-container,
+    .table-scroll-container,
+    table.quickgrid
+) {
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar {
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-thumb {
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+}
+
+:where(
+    .scrollbar-thin,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-dialog-body,
+    .dialog-content,
+    .table-container,
+    .table-scroll-container,
+    .orders-table-wrapper,
+    table.quickgrid,
+    .picker-popover-body,
+    .lang-menu-list,
+    .dropdown-menu,
+    .select-options,
+    .options-container,
+    .product-thumbnails,
+    .map-panel-content,
+    .cart-items-container,
+    .order-summary-list
+)::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+:where(
+    .active-orders-scroll,
+    .kiosk-filter-row,
+    .map-categories-scroll,
+    .no-scrollbar,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .scrollbar-none,
+    .store-breadcrumbs,
+    .touch-scroll-x,
+    .touch-scroll-y,
+    .ux-widget-chips
+) {
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar,
+.touch-scroll-x::-webkit-scrollbar,
+.touch-scroll-y::-webkit-scrollbar,
+:where(
+    .scrollbar-none,
+    .no-scrollbar,
+    .kiosk-filter-row,
+    .active-orders-scroll,
+    .ux-widget-chips,
+    .store-breadcrumbs,
+    .pos-top-header-actions,
+    .pos-filters,
+    .pos-orders-scroll,
+    .map-categories-scroll
+)::-webkit-scrollbar {
+    display: none;
+}
+
+:where(
+    .active-orders-scroll,
+    .kiosk-filter-row,
+    .map-categories-scroll,
+    .no-scrollbar,
+    .pos-filters,
+    .pos-orders-scroll,
+    .pos-top-header-actions,
+    .resource-tabs,
+    .scrollbar-none,
+    .store-breadcrumbs,
+    .suggestions-wrapper,
+    .touch-scroll-x,
+    .touch-scroll-y,
+    .ux-category-tabs,
+    .ux-widget-chips
+) {
+    scrollbar-width: none;
+}
+
+* {
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+}
+
+.m3-scroll-thin,
+.scroll-thin {
+    scrollbar-color: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3)) transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-outline-variant);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-on-surface-variant);
+}
+
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-outline-variant, rgba(120, 120, 120, 0.3));
+}
+
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb {
+    transition: background 0.2s ease;
+}
+
+.showcase-sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+.m3-scroll-thin::-webkit-scrollbar,
+.scroll-thin::-webkit-scrollbar {
+    height: 6px;
+}
+
+.showcase-content::-webkit-scrollbar-thumb,
+.showcase-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: var(--md-sys-color-outline-variant);
+}
+
+.m3-scroll-thin::-webkit-scrollbar-track,
+.scroll-thin::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.m3-scroll-thin::-webkit-scrollbar-thumb,
+.scroll-thin::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    background-clip: content-box;
+}
+
+.m3-scroll-thin::-webkit-scrollbar,
+.scroll-thin::-webkit-scrollbar,
+.showcase-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 599.98px) {
+    .pos-top-header-actions {
+        scrollbar-width: none
+    }
+    .pos-top-header-actions::-webkit-scrollbar {
+        display: none
+    }
+}
+

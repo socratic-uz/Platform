@@ -1,0 +1,33 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-property-value-disallowed-list": {
+      "display": ["/^flex$/", "/^inline-flex$/"]
+    },
+    "color-no-hex": [true, {
+      "message": "Direct HEX colors are forbidden. Use Material Design 3 tokens: var(--md-sys-color-*)"
+    }],
+    "function-disallowed-list": [["rgba", "hsl"], {
+      "message": "Raw color functions (rgba, hsl) are disallowed. Use M3 CSS tokens var(--md-sys-color-*) or relative color rgb(from var(...) r g b / alpha)"
+    }],
+    "selector-class-pattern": [
+      "^(m3|l|pos|kiosk|chat|portal|studio|grid|table|order|analytics|detector|store|auth|lang|theme)[a-z0-9_-]*$",
+      {
+        "message": "Class selectors must use an architectural prefix (m3-, l-, pos-, kiosk-, chat-, portal-, studio-)"
+      }
+    ],
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "import-notation": "string",
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "media-feature-range-notation": null,
+    "declaration-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "custom-property-empty-line-before": null
+  }
+}

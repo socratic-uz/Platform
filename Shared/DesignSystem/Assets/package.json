@@ -1,0 +1,31 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Unified Design System static assets, Web Components bundling, and W3C styles pipeline",
+  "scripts": {
+    "build:js": "rollup -c rollup.config.js",
+    "build:css": "node scripts/bundle-css.mjs",
+    "generate:classes": "node scripts/generate-css-classes.mjs",
+    "generate:assets": "node scripts/generate-asset-paths.mjs",
+    "generate:loc": "node scripts/generate-localization-keys.mjs",
+    "generate:icons": "node scripts/generate-icon-constants.mjs",
+    "build": "npm run build:js && npm run build:css && npm run generate:classes && npm run generate:assets && npm run generate:loc && npm run generate:icons",
+    "lint:css": "stylelint \"wwwroot/css/**/*.css\"",
+    "lint:css:fix": "stylelint \"wwwroot/css/**/*.css\" --fix"
+  },
+  "dependencies": {
+    "@material/material-color-utilities": "^0.3.0",
+    "@material/web": "^2.3.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "lightningcss": "^1.33.0",
+    "purgecss": "^8.0.0",
+    "rollup": "^4.34.8",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}

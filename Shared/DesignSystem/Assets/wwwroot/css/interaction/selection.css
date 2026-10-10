@@ -1,0 +1,60 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: interaction/selection.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .avatar-container,
+    .card-interactive,
+    .cta-btn,
+.stage-tab,
+.hero-pill-link,
+.floating-chip,
+.section-badge,
+.hero-badge,
+.feature-badge,
+    .kiosk-attract-loop,
+    .kiosk-hero,
+    .kiosk-main,
+    .m3-card-interactive,
+    .m3-filter-chip,
+    .m3-selection-item,
+    .map-route-input,
+    .md3-schedule-day-left,
+    .picker-day-dot,
+    .picker-hex-prefix,
+    .product-card,
+    body,
+    html,
+    html, body
+) {
+    user-select: none;
+}
+
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
+    user-select: text;
+}
+
+input, textarea, [contenteditable="true"], .selectable-text, article, p, code, pre, .m3-body-large, .m3-body-medium {
+    -webkit-user-select: text;
+}
+
+:where(
+    .cta-btn,
+.stage-tab,
+.hero-pill-link,
+.floating-chip,
+.section-badge,
+.hero-badge,
+.feature-badge,
+    .kiosk-hero,
+    .kiosk-main,
+    .product-card,
+    body,
+    html,
+    html, body
+) {
+    -webkit-user-select: none;
+}
+

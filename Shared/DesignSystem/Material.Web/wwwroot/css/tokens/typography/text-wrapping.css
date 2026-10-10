@@ -1,9 +1,0 @@
-/* stylelint-disable selector-class-pattern */
-/* ==========================================================================
-   W3C CSS Typography - Text Wrapping Tokens Module
-   Text Truncation & Wrapping Custom Properties
-   ========================================================================== */
-
-:root {
-    --md-sys-typescale-truncate: ellipsis;
-}

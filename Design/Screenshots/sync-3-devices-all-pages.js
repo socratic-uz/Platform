@@ -24,7 +24,6 @@ const pages = [
   { path: '/home', slug: 'home', title: 'Director Organization Console' },
   { path: '/chat', slug: 'chat', title: 'AI Assistant & Copilot' },
   { path: '/signin', slug: 'signin', title: 'Authentication & Sign In' },
-  { path: '/commerce', slug: 'commerce', title: 'Customer Marketplace & 28 UX Modes' },
   { path: '/kiosk', slug: 'kiosk', title: 'Customer Self-Service Ordering & Menu' },
   { path: '/terminal', slug: 'terminal', title: 'Cashier POS Terminal Workstation' },
   { path: '/wishlist', slug: 'wishlist', title: 'Wishlist & Saved Items' },
@@ -36,10 +35,12 @@ const pages = [
   { path: '/qr-designer', slug: 'qr-designer', title: 'Dynamic QR Designer Studio' },
   { path: '/map', slug: 'map', title: 'Interactive Map & Delivery Zones' },
   { path: '/detector', slug: 'detector', title: 'Computer Vision & Object Detector' },
-  { path: '/components', slug: 'components', title: 'Material.Web Components Showcase' },
   { path: '/docs', slug: 'docs', title: 'System Interactive Documentation' },
   { path: '/about', slug: 'about', title: 'About Socratic Platform' },
-  { path: '/help', slug: 'help', title: 'Support Center & Knowledge Base' }
+  { path: '/help', slug: 'help', title: 'Support Center & Knowledge Base' },
+  { path: '/player', slug: 'player', title: 'Platform Video & Media Showcase' },
+  { path: '/qr', slug: 'qr', title: 'Fast QR Scanner & Verification' },
+  { path: '/3d', slug: '3d', title: '3D Spatial Store & Scene' }
 ];
 
 const devices = [

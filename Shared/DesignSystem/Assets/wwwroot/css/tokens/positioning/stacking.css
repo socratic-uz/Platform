@@ -1,0 +1,118 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/positioning/stacking.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-z-deep: -1;
+}
+
+:root {
+    --md-sys-z-base: 0;
+}
+
+:root {
+    --md-sys-z-raised: 1;
+}
+
+:root {
+    --md-sys-z-sticky: 10;
+}
+
+:root {
+    --md-sys-z-appbar: 20;
+}
+
+:root {
+    --md-sys-z-drawer: 30;
+}
+
+:root {
+    --md-sys-z-bottom-nav: 40;
+}
+
+:root {
+    --md-sys-z-dropdown: 500;
+}
+
+:root {
+    --md-sys-z-dialog-backdrop: 1000;
+}
+
+:root {
+    --md-sys-z-dialog: 1001;
+}
+
+:root {
+    --md-sys-z-modal-backdrop: 1000;
+}
+
+:root {
+    --md-sys-z-modal: 1001;
+}
+
+:root {
+    --md-sys-z-popover: 1100;
+}
+
+:root {
+    --md-sys-z-toast: 1200;
+}
+
+:root {
+    --md-sys-z-tooltip: 1300;
+}
+
+:root {
+    --m3-z-deep: var(--md-sys-z-deep);
+}
+
+:root {
+    --m3-z-base: var(--md-sys-z-base);
+}
+
+:root {
+    --m3-z-raised: var(--md-sys-z-raised);
+}
+
+:root {
+    --m3-z-sticky: var(--md-sys-z-sticky);
+}
+
+:root {
+    --m3-z-appbar: var(--md-sys-z-appbar);
+}
+
+:root {
+    --m3-z-drawer: var(--md-sys-z-drawer);
+}
+
+:root {
+    --m3-z-bottom-nav: var(--md-sys-z-bottom-nav);
+}
+
+:root {
+    --m3-z-dropdown: var(--md-sys-z-dropdown);
+}
+
+:root {
+    --m3-z-backdrop: var(--md-sys-z-dialog-backdrop);
+}
+
+:root {
+    --m3-z-modal: var(--md-sys-z-dialog);
+}
+
+:root {
+    --m3-z-popover: var(--md-sys-z-popover);
+}
+
+:root {
+    --m3-z-toast: var(--md-sys-z-toast);
+}
+
+:root {
+    --m3-z-tooltip: var(--md-sys-z-tooltip);
+}
+

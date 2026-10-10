@@ -1,0 +1,1957 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: box-model/padding.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-page-gutter {
+    padding-inline: var(--md-sys-gutter-page);
+}
+
+.m3-section-gutter {
+    padding-inline: var(--md-sys-gutter-section);
+}
+
+.avatar-button {
+    --md-outlined-button-leading-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-trailing-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-with-leading-icon-leading-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-with-leading-icon-trailing-space: 0px;
+}
+
+:where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='headline'] {
+    padding: 24px 24px 16px;
+}
+
+:where(
+    .m3-trust-footer,
+    .payment-trust-footer,
+    .place-details-hero,
+    :where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) label
+) {
+    padding: 0.5rem 0;
+}
+
+:where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) [slot='actions'] {
+    padding: 12px 24px 24px;
+}
+
+:where(
+    .orders-error-banner,
+    :where(.avatar-container, md-dialog.contacts) details .content
+) {
+    padding: 1rem 1.25rem;
+}
+
+:where(
+    .analytics-status-pill,
+    .badge,
+    .item-status-pill,
+    .m3-badge,
+    .m3-status-badge,
+    .order-status-badge,
+    .qr-compact-header,
+    .status-badge
+) {
+    padding: 0.25rem 0.75rem;
+}
+
+:where(
+    .landing-auth-btn,
+    .m3-pill-badge
+) {
+    padding: 0.4rem 1.1rem;
+}
+
+:where(
+    .item-qty-badge,
+    .kds-qty-badge
+) {
+    padding: 0.2rem 0.6rem;
+}
+
+.kds-status-tag {
+    padding: 0.2rem 0.5rem;
+}
+
+:where(
+    .card-padding-md,
+    .m3-card-padding-md
+) {
+    padding: var(--md-sys-spacing-4);
+}
+
+:where(
+    .card-padding-lg,
+    .m3-card-padding-lg
+) {
+    padding: var(--md-sys-spacing-6);
+}
+
+:where(
+    .m3-summary-card,
+    .summary-card
+) {
+    padding: var(--md-sys-spacing-5) var(--md-sys-spacing-6);
+}
+
+:where(
+    .m3-total-row,
+    .total-row
+) {
+    padding-top: var(--md-sys-spacing-1);
+}
+
+.org-card-content {
+    padding: 0.75rem 0.25rem 0.5rem;
+}
+
+.m3-filter-chip {
+    padding: 0 1rem;
+}
+
+.m3-filter-chip-count {
+    padding: 0.1rem 0.45rem;
+}
+
+:where(
+    .m3-config-dialog,
+    .m3-dialog-surface
+) {
+    padding: var(--md-sys-gutter-section);
+}
+
+.m3-dialog-actions {
+    padding-top: var(--md-sys-spacing-2);
+}
+
+.m3-dialog-btn-primary {
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-5);
+}
+
+.m3-empty-state {
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
+}
+
+.m3-empty-column,
+.column-empty,
+.kds-empty-col {
+    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
+}
+
+.store-not-found {
+    padding: 5rem 1rem;
+}
+
+.pos-empty-state {
+    padding: 40px 16px;
+}
+
+.kiosk-empty-state {
+    padding: 48px 24px;
+}
+
+.m3-fieldset {
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
+}
+
+.picker-compact-box {
+    padding: 6px 10px;
+}
+
+:where(
+    .picker-popover-header,
+    .qrg-section-title
+) {
+    padding-bottom: 8px;
+}
+
+:where(
+    .drawer-footer .total-row,
+    .picker-popover-footer,
+    .pos-card-footer-row
+) {
+    padding-top: 8px;
+}
+
+:where(
+    .det-bbox-label,
+    .new-badge
+) {
+    padding: 2px 6px;
+}
+
+:where(
+    .card-instant .qr-preview-box,
+    .showcase-brand-icon,
+    .upload-zone-label
+) {
+    padding: 8px;
+}
+
+.md3-schedule-picker {
+    padding: 8px 0;
+}
+
+.md3-presets-section {
+    padding: 12px 14px;
+}
+
+.md3-schedule-day-card {
+    padding: 8px 14px;
+}
+
+:where(
+    .md3-closed-badge,
+    .pos-tech-chip,
+    .qrg-badge,
+    .ux-mode-badge-overlay
+) {
+    padding: 4px 10px;
+}
+
+:where(
+    .lang-inline-grid,
+    .map-route-suggestions
+) {
+    padding: 0.2rem;
+}
+
+.lang-chip-btn {
+    padding: 0.2rem 0.65rem;
+}
+
+:where(
+    .catalog-badge,
+    .lang-pill-btn,
+    .ux-modal-code,
+    header.landing-header .header-brand-link
+) {
+    padding: 0.25rem 0.65rem;
+}
+
+:where(
+    .hero-stage-tabs,
+    .lang-dropdown-menu
+) {
+    padding: 0.35rem;
+}
+
+:where(
+    .citation,
+    .lang-menu-item,
+    .sidebar-link
+) {
+    padding: 0.5rem 0.75rem;
+}
+
+.booking-picker-card {
+    padding: clamp(14px, 2.5vw, 20px);
+}
+
+:where(
+    .auth-error-banner,
+    .booking-summary-banner,
+    .signin-error-banner
+) {
+    padding: 12px 16px;
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-top-space: 2px;
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-bottom-space: 2px;
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-leading-space: 14px;
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+:where(
+    .analytics-mode-pill-group,
+    .m3-segmented-pill-group,
+    .map-global-suggestions
+) {
+    padding: 4px;
+}
+
+:where(
+    .analytics-mode-btn,
+    .m3-segmented-btn
+) {
+    padding: 6px 14px;
+}
+
+:where(
+    .active-orders-tabs,
+    .analytics-date-picker-trigger,
+    .docs-sidebar-header,
+    .m3-period-picker-trigger,
+    .showcase-stat-pill
+) {
+    padding: 8px 16px;
+}
+
+.drop-container {
+    padding: 1.5rem 0;
+}
+
+.smart-grid-container input,
+.smart-grid-container select,
+.smart-grid-container textarea {
+    padding: 0.25rem 1rem;
+}
+
+:where(
+    .bento-media,
+    .col-options,
+    .organizations-map-controls,
+    .table-container th,
+    :where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) form.content,
+    table.quickgrid th
+) {
+    padding: 1rem;
+}
+
+:where(
+    .badge-counter,
+    .drawer-header .badge,
+    .kiosk-brand-tagline,
+    .picker-badge,
+    .required-badge,
+    .ux-discount-badge
+) {
+    padding: 2px 8px;
+}
+
+:where(
+    .count-badge,
+    .m3-count-badge,
+    .m3-legend,
+    .smart-grid-container h4,
+    .ux-filter-meta
+) {
+    padding: 0 0.5rem;
+}
+
+:where(
+    .back-button,
+    .items-count-badge,
+    .m3-back-button
+) {
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+}
+
+:where(
+    .card-padding-sm,
+    .m3-card-padding-sm,
+    .m3-table-wrapper,
+    .order-items-table-wrapper
+) {
+    padding: var(--md-sys-spacing-2);
+}
+
+:where(
+    .brand-screensaver-logo-wrapper,
+    .canvas-card,
+    .cart-item-row,
+    .product-card,
+    .shipping-card,
+    md-filled-card.product-card
+) {
+    padding: 12px;
+}
+
+:where(
+    .md3-dialog-actions-row,
+    .qrg-logo-field,
+    .wishlist-card-footer
+) {
+    padding-top: 12px;
+}
+
+:where(
+    .det-card,
+    .picker-popover-panel,
+    .qrg-customizer,
+    .wishlist-details-dl
+) {
+    padding: 16px;
+}
+
+:where(
+    .error-banner,
+    .m3-banner-error,
+    .m3-dialog-toggle-item,
+    .m3-table td,
+    .m3-table th,
+    .order-items-table td,
+    .order-items-table th,
+    .picker-trigger-card
+) {
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+}
+
+:where(
+    .md3-time-picker-box,
+    .picker-hex-wrapper,
+    .showcase-brand-badge
+) {
+    padding: 3px 8px;
+}
+
+:where(
+    .file-info,
+    .option-item-row,
+    .options-list-container
+) {
+    padding: 6px 8px;
+}
+
+:where(
+    .map-route-inputs,
+    .order-items-table td,
+    .order-items-table th,
+    .orders-table td,
+    .orders-table th
+) {
+    padding: 0.85rem 1rem;
+}
+
+:where(
+    .assistant-message-text pre > code,
+    .mode-indicator,
+    .paginator,
+    .preset-btn,
+    .share-toast,
+    .table-container > .paginator,
+    .table-container td,
+    assistant-message pre > code,
+    table.quickgrid td
+) {
+    padding: 0.5rem 1rem;
+}
+
+code {
+    padding: 0.15em 0.35em;
+}
+
+:where(
+    .det-btn-icon-sm,
+    .det-main,
+    .feature-list,
+    .footer-columns ul,
+    .map-panel-toggle-tab,
+    .nav-control-btn,
+    .route-alternative-action,
+    .search-clear-btn,
+    .search-route-btn,
+    .yandex-ctrl-btn,
+    html, body
+),
+:where(
+    .cart-items-list,
+    .color-picker-row input[type="color"],
+    .docs-content,
+    .docs-refresh-btn,
+    .footer-links-list,
+    .inline-card-experience-body:empty,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .pillar-features,
+    .plan-features,
+    .product-card,
+    .product-detail-card,
+    .qrg-main,
+    .thumb-btn,
+    .tier-features,
+    .unified-kiosk-filter-bar,
+    body,
+    main.docs-page,
+    main.showcase-page,
+    md-filled-card.product-card
+),
+.avatar-button,
+    .avatar-button .material-symbols-outlined,
+    .avatar-button img,
+    .avatar-button md-icon,
+    .col-options-button,
+    .col-title,
+    .option-fieldset,
+    .picker-palette-swatch,
+    .time-fieldset,
+    input[type="color"],
+    ol,
+    ul
+,
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.catalog-sidebar {
+    padding: 1.5rem 1rem;
+}
+
+:where(
+    .footer-links-list a,
+    .landing-header-nav,
+    .sidebar-brand
+) {
+    padding: 0.25rem 0.5rem;
+}
+
+.sidebar-nav-category {
+    padding: 0.75rem 0.75rem 0.25rem;
+}
+
+.sidebar-footer {
+    padding-top: 1rem;
+}
+
+.catalog-header {
+    padding-bottom: 2rem;
+}
+
+:where(
+    #components-reconnect-modal,
+    .det-placeholder-padded,
+    .evolution-card,
+    .m3-card
+) {
+    padding: 2rem;
+}
+
+:where(
+    .ad-network-unit-card,
+    .analytics-metrics-strip,
+    .hero-stage-card,
+    .invoice-summary-box,
+    .m3-center-box,
+    .m3-selection-panel,
+    .order-card,
+    .store-seller-card
+) {
+    padding: 1.25rem;
+}
+
+:where(
+    .example-card,
+    .faq-card,
+    .link-stack a,
+    .link-stack article,
+    .m3-card,
+    .payment-dashboard .glass-card,
+    .preview-card,
+    .qr-controls-panel
+) {
+    padding: 1.5rem;
+}
+
+.m3-swatch {
+    padding: 1.25rem 1rem;
+}
+
+.catalog-main {
+    padding: 3rem 4rem 6rem;
+}
+
+:where(
+    .det-active-sessions-empty,
+    .faceid-viewfinder-card,
+    .product-specs-grid,
+    .promotion-modal-body
+) {
+    padding: 1rem 0;
+}
+
+:where(
+    .footer-system-status,
+    .landing-floating-auth-btn,
+    .place-details-back-btn,
+    .spatial-wing-badge
+) {
+    padding: 0.35rem 0.85rem;
+}
+
+:where(
+    .analytics-panel-card,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .plan-card,
+    .tier-box
+) {
+    padding: var(--md-sys-spacing-5, 1.25rem);
+}
+
+:where(
+    .analytics-period-selector,
+    .kiosk-filter-row,
+    .pills-row,
+    .pos-top-header-actions
+) {
+    padding-bottom: 2px;
+}
+
+:where(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .landing-nav-link
+) {
+    padding: 0.4rem 0.85rem;
+}
+
+:where(
+    .docs-welcome-card,
+    .qrg-card,
+    .showcase-main-body
+) {
+    padding: 32px;
+}
+
+:where(
+    .det-sidebar-scrollable,
+    .pos-grid,
+    .qrg-lists,
+    .qrg-sidebar-scrollable
+) {
+    padding-right: 4px;
+}
+
+:where(
+    .pos-catalog-header,
+    .pos-sidebar-header,
+    .showcase-section-header
+) {
+    padding-bottom: 12px;
+}
+
+:where(
+    .download-header,
+    .signin-card,
+.auth-card
+) {
+    padding: 2.5rem 2rem;
+}
+
+:where(
+    .otp-target-hint,
+    .session-item
+) {
+    padding: 10px 14px;
+}
+
+.crumb-link {
+    padding: 0 4px;
+}
+
+.chat-container {
+    padding: 0.75rem 1.5rem max(1rem, env(safe-area-inset-bottom, 1rem));
+}
+
+:where(
+    .chat-header-container,
+    .ux-modal-btn-primary
+) {
+    padding: 0.75rem 1.5rem;
+}
+
+.chat-header-container {
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+}
+
+.message-list-container {
+    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px));
+}
+
+:where(
+    .hero-badge,
+.feature-badge,
+.section-badge,
+    .user-message
+) {
+    padding: 0.5rem 1.25rem;
+}
+
+assistant-message th,
+assistant-message td,
+.assistant-message-text th,
+.assistant-message-text td {
+    padding: 0.1rem 0.5rem;
+}
+
+.suggestions-wrapper {
+    padding: 0 1.5rem;
+}
+
+.suggestions {
+    padding: 0.25rem 0;
+}
+
+.input-box {
+    padding: 0.25rem 0.35rem 0.25rem 1.25rem;
+}
+
+.chat-input-wrapper textarea,
+.input-box textarea {
+    padding: 0.4rem 0;
+}
+
+.payment-dashboard {
+    padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+}
+
+.score-box {
+    padding-left: 1.5rem;
+}
+
+.plan-card {
+    padding: 1.375rem;
+}
+
+.plan-header {
+    padding-bottom: 0.875rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 0.875rem;
+}
+
+.designer-page-root,
+.seat-designer-page-root,
+.qr-designer-page-root {
+    padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+}
+
+.designer-header,
+.qr-designer-header {
+    padding: 1.25rem 1.5rem;
+}
+
+:where(
+    .notification-banner,
+    .ux-modal-btn-secondary
+) {
+    padding: 0.75rem 1.25rem;
+}
+
+:where(
+    .navigator-maneuver-bar,
+    .seat-selection-card
+) {
+    padding: 0.75rem 1rem;
+}
+
+.text-input, .select-input {
+    padding: 0.65rem 0.9rem;
+}
+
+.qr-stage {
+    padding: 2.5rem 1.25rem;
+}
+
+.drawer-body {
+    padding: 16px 0;
+}
+
+.empty-cart-view {
+    padding: 40px 20px;
+}
+
+:where(
+    .qty-val,
+    .search-bar-inner
+) {
+    padding: 0 6px;
+}
+
+.analytics-explorer-section,
+.m3-explorer-section {
+    padding: var(--md-sys-spacing-6, 1.5rem);
+}
+
+footer.app-footer {
+    padding: 3.5rem 2rem 2rem;
+}
+
+.footer-custom-slot {
+    padding-bottom: 1.5rem;
+}
+
+.footer-bottom-bar {
+    padding-top: 1.75rem;
+}
+
+.kanban-card {
+    padding: 1rem 1.15rem;
+}
+
+.card-bottom-row {
+    padding-top: 0.4rem;
+}
+
+.column-badge,
+.count-badge {
+    padding: 0.25rem 0.625rem;
+}
+
+.column-empty,
+.kds-empty-col {
+    padding: 2.5rem 1rem;
+}
+
+.kds-action-btn {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-5, 1.25rem);
+}
+
+.error-banner {
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+}
+
+.kiosk-main {
+    padding: 24px 20px 140px;
+}
+
+.kiosk-brand-logo {
+    padding: 2px;
+}
+
+.kiosk-hero {
+    padding: clamp(20px, 3vw, 36px);
+}
+
+.product-details {
+    padding: 12px 16px 8px;
+}
+
+.inline-card-experience-body {
+    padding: 0 16px 8px;
+}
+
+:where(
+    .map-global-suggestion-button,
+    .ux-widget
+) {
+    padding: 8px 12px;
+}
+
+.kiosk-main .card-footer {
+    padding: 10px 16px 12px;
+}
+
+.cart-bar {
+    padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+.analytics-kpi-card {
+    padding: var(--md-sys-spacing-4, 1.25rem);
+}
+
+:where(
+    .analytics-mode-pill-group,
+    .search-bar
+) {
+    padding: 3px;
+}
+
+.analytics-period-chip {
+    padding: 0.4rem 0.9rem;
+}
+
+.landing-top-bar-wrapper {
+    padding: 1.25rem 1.5rem 0;
+}
+
+.landing-floating-controls {
+    padding: 0.35rem 0.55rem;
+}
+
+.about-container,
+.help-container,
+.example-container,
+.landing-subpage-container {
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+:where(
+    .pillar-card,
+.tech-card,
+    .platform-card
+) {
+    padding: 1.75rem;
+}
+
+:where(
+    .cta-card,
+    .ux-empty-state
+) {
+    padding: 3.5rem 2rem;
+}
+
+.help-categories,
+.example-categories {
+    padding: 0.5rem 0.5rem 0.75rem;
+}
+
+.qrg-back {
+    padding: 8px 10px;
+}
+
+.qrg-group-head {
+    padding: 0 4px 4px;
+}
+
+.qrg-print-action {
+    padding-top: 4px;
+}
+
+.qrg-preview {
+    padding: 28px 32px;
+}
+
+.qrg-empty {
+    padding: 60px;
+}
+
+.docs-sidebar-menu {
+    padding: 16px 12px;
+}
+
+.docs-group-header {
+    padding: 4px 8px;
+}
+
+.docs-welcome-container {
+    padding: 32px 16px;
+}
+
+.docs-article {
+    padding: 40px 56px;
+}
+
+.m3-bottom-nav-item {
+    padding: 0.5rem;
+}
+
+header.app-header.landing-header {
+    padding: 0.35rem 1.5rem;
+}
+
+.landing-mobile-menu-drawer {
+    padding: 1.25rem 1.5rem 2rem;
+}
+
+.mobile-nav-item {
+    padding: 0.85rem 1.15rem;
+}
+
+.mobile-nav-footer {
+    padding-top: 0.25rem;
+}
+
+.m3-nav-rail {
+    padding: var(--md-sys-spacing-3) 0;
+}
+
+.m3-nav-rail {
+    padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));
+}
+
+.m3-nav-rail {
+    padding-bottom: max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
+}
+
+.back-button {
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
+}
+
+.items-count-badge {
+    padding: var(--md-sys-spacing-2, 0.375rem) var(--md-sys-spacing-4, 0.875rem);
+}
+
+.item-card {
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-5, 1.25rem);
+}
+
+.summary-card {
+    padding: var(--md-sys-spacing-5, 1.25rem) var(--md-sys-spacing-6, 1.5rem);
+}
+
+.m3-page-header {
+    padding-bottom: var(--md-sys-spacing-4, 1rem);
+}
+
+.pos-main {
+    padding: 16px 24px;
+}
+
+.pos-filters {
+    padding-bottom: 4px;
+}
+
+.pos-grid {
+    padding-bottom: 24px;
+}
+
+.pos-product-card {
+    padding: var(--space-3, 12px);
+}
+
+.pos-quick-bill-btn {
+    padding: 10px 4px;
+}
+
+.store-product-page {
+    padding: 2rem 1.5rem 5rem;
+}
+
+.badge-age-restriction {
+    padding: 0.25rem 0.6rem;
+}
+
+.product-tag-chip {
+    padding: 0.2rem 0.75rem;
+}
+
+.current-plan-indicator {
+    padding: 0.4rem;
+}
+
+:where(
+    .promotion-modal-header,
+    .ux-modal-header
+) {
+    padding-bottom: 1rem;
+}
+
+:where(
+    .fiscal-tag-item,
+    .product-preview-pill
+) {
+    padding: 0.6rem 1rem;
+}
+
+:where(
+    .ad-slot-container,
+    .det-diag-box,
+    .det-diag-box-warning,
+    .det-permission-rationale
+) {
+    padding: 0.75rem;
+}
+
+.attract-loop-content {
+    padding: 3rem 2rem 5rem;
+}
+
+.brand-screensaver-cta,
+.ad-slide-touch-prompt {
+    padding: 1rem 2.5rem;
+}
+
+.showcase-search-box {
+    padding: 14px 16px;
+}
+
+.showcase-sidebar-nav {
+    padding: 12px 10px;
+}
+
+.showcase-nav-category-header {
+    padding: 10px 12px 4px;
+}
+
+.showcase-nav-btn {
+    padding: 9px 14px;
+}
+
+.showcase-nav-count {
+    padding: 2px 7px;
+}
+
+.showcase-topbar {
+    padding: 16px 32px;
+}
+
+.showcase-hero {
+    padding: 32px 32px 24px;
+}
+
+.showcase-card-header {
+    padding: 16px 20px;
+}
+
+.showcase-card-code {
+    padding: 14px 18px;
+}
+
+.showcase-controls-bar {
+    padding: 12px 18px;
+}
+
+.m3-grid-center-canvas {
+    padding: max(1rem, env(safe-area-inset-top, 0px)) max(1rem, env(safe-area-inset-right, 0px)) max(1rem, env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
+}
+
+.m3-page-container {
+    padding: max(1.5rem, env(safe-area-inset-top, 0px)) max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-right, 0px)) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem) max(var(--md-sys-gutter-page, 1rem), env(safe-area-inset-left, 0px));
+}
+
+.app-grid > main,
+.app-grid .app-main {
+    padding-left: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-left, 0px));
+}
+
+.app-grid > main,
+.app-grid .app-main {
+    padding-right: max(var(--md-sys-spacing-4, 1rem), env(safe-area-inset-right, 0px));
+}
+
+.safe-area-right {
+    padding-right: env(safe-area-inset-right, 0);
+}
+
+.safe-area-all {
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+}
+
+:where(
+    .auth-container,
+    .empty-plans-card,
+    .signin-container
+) {
+    padding: 3rem 1.5rem;
+}
+
+:where(
+    .lang-toggle-btn,
+    .resolution-badge,
+    .spotlight-pill
+) {
+    padding: 0.3rem 0.75rem;
+}
+
+:where(
+    .det-placeholder,
+    .det-preview-container,
+    .drawer-panel,
+    .m3-drawer-panel,
+    .qrg-empty-list
+) {
+    padding: 24px;
+}
+
+:where(
+    .drawer-header,
+    .qrg-preview-header
+) {
+    padding-bottom: 16px;
+}
+
+:where(
+    .drawer-footer,
+    .pos-actions
+) {
+    padding-top: 16px;
+}
+
+:where(
+    .explorer-chipset-wrapper,
+    .m3-filter-toolbar
+) {
+    padding-bottom: 0.25rem;
+}
+
+:where(
+    .column-header,
+    .panel-header,
+    .place-details-header
+) {
+    padding-bottom: 0.75rem;
+}
+
+:where(
+    .app-grid .app-main,
+    .app-grid > main,
+    .kds-card
+) {
+    padding: var(--md-sys-spacing-4, 1rem);
+}
+
+:where(
+    .m3-pill-badge,
+    .screensaver-pro-badge
+) {
+    padding: 0.4rem 1rem;
+}
+
+:where(
+    .bento-card,
+    .contact-card,
+    .video-card
+) {
+    padding: 2.5rem;
+}
+
+:where(
+    .det-sidebar,
+    .qrg-sidebar,
+    .showcase-card-body
+) {
+    padding: 24px 20px;
+}
+
+:where(
+    .app-grid > footer,
+    .m3-bottom-nav,
+    .safe-area-bottom
+) {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+:where(
+    .app-grid > nav,
+    .m3-nav-rail,
+    .safe-area-left
+) {
+    padding-left: env(safe-area-inset-left, 0);
+}
+
+:where(
+    .ad-network-footer,
+    .place-details-actions,
+    .route-steps,
+    .total-amount
+) {
+    padding-top: 0.5rem;
+}
+
+:where(
+    .det-preview-card,
+    .pos-sidebar,
+    .showcase-sidebar-header
+) {
+    padding: 20px;
+}
+
+:where(
+    .ad-network-badge-row,
+    .product-thumbnails
+) {
+    padding-bottom: 0.5rem;
+}
+
+:where(
+    .popular-badge,
+    .pro-tag,
+    .showcase-lib-badge
+) {
+    padding: 3px 10px;
+}
+
+:where(
+    .showcase-card-btn,
+    .showcase-mobile-toggle
+) {
+    padding: 6px;
+}
+
+:where(
+    .app-grid > header,
+    .safe-area-top
+) {
+    padding-top: env(safe-area-inset-top, 0);
+}
+
+:where(
+    .det-status-badge,
+    .status-badge
+) {
+    padding: 4px 12px;
+}
+
+:where(
+    .det-stat-item,
+    .status-badge
+) {
+    padding: 6px 12px;
+}
+
+.det-logs-console {
+    padding: 10px;
+}
+
+:where(
+    .map-measure-badge,
+    .ux-mode-launch-btn,
+    .ux-mode-quickview-btn
+) {
+    padding: 0.65rem 0.85rem;
+}
+
+.map-topbar {
+    padding: 0.22rem 0.32rem;
+}
+
+.map-panel-toggle {
+    padding: 0.45rem 0.72rem;
+}
+
+.map-toolbar {
+    padding-bottom: 0.45rem;
+}
+
+.search-input {
+    padding: 0 10px;
+}
+
+.map-categories-scroll {
+    padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.map-category-chip {
+    padding: 0.45rem 0.9rem;
+}
+
+.nearby-results-panel {
+    padding: 0.8rem;
+}
+
+.map-route-input {
+    padding: 0.55rem 0.8rem;
+}
+
+.map-route-fields-dots {
+    padding-left: 1.15rem;
+}
+
+.map-route-remove-via-btn {
+    padding: 0.2rem 0.4rem;
+}
+
+.map-route-suggestion-button {
+    padding: 0.44rem 0.52rem;
+}
+
+.map-route-profile-row {
+    padding: 0.25rem;
+}
+
+.map-route-profile-chip {
+    padding: 0.45rem 0.6rem;
+}
+
+.organizations-route-panel {
+    padding: 0.65rem;
+}
+
+.route-options-toolbar-btn {
+    padding: 0.4rem 0.8rem;
+}
+
+:where(
+    .route-alternative-card,
+    .route-error
+) {
+    padding: 0.5rem 0.65rem;
+}
+
+.route-button {
+    padding: 0.4rem 0.75rem;
+}
+
+.route-steps ol {
+    padding-left: 1.1rem;
+}
+
+:where(
+    .navigator-stats-bar,
+    .route-start-btn
+) {
+    padding: 0.65rem 1rem;
+}
+
+.place-details-body {
+    padding-right: 0.25rem;
+}
+
+.place-details-badge {
+    padding: 0.12rem 0.4rem;
+}
+
+.map-click-popup {
+    padding: 0.7rem 0.75rem;
+}
+
+.click-popup-btn {
+    padding: 0.38rem 0.6rem;
+}
+
+.map-action-button {
+    padding: 0.55rem 1rem;
+}
+
+.landing-container {
+    padding: 2.5rem 1.75rem 12rem 1.75rem;
+}
+
+.hero-section {
+    padding-top: 1.5rem;
+}
+
+.hero-card {
+    padding: 3.25rem 2.75rem;
+}
+
+.hero-pill-link {
+    padding: 0.45rem 0.95rem;
+}
+
+.cta-btn {
+    padding: 0.95rem 1.6rem;
+}
+
+.stage-tab {
+    padding: 0.55rem 0.85rem;
+}
+
+.floating-chip {
+    padding: 0.6rem 1.1rem;
+}
+
+.specs-bar {
+    padding: 1.5rem 2rem;
+}
+
+:where(
+    .evolution-banner,
+    .spatial-maps-section
+) {
+    padding: 3.5rem 3rem;
+}
+
+.org-showcase-section {
+    padding: 3.5rem 2.5rem;
+}
+
+:where(
+    .org-card,
+    .spatial-wing-card
+) {
+    padding: 2.25rem 2rem;
+}
+
+:where(
+    .org-card-badge,
+    .ux-reset-filter-btn
+) {
+    padding: 0.45rem 1rem;
+}
+
+.org-tag {
+    padding: 0.45rem 0.75rem;
+}
+
+.spatial-subcard {
+    padding: 1.35rem 1.25rem;
+}
+
+.venue-chip {
+    padding: 0.35rem 0.75rem;
+}
+
+:where(
+    .spatial-wing-footer,
+    .ux-modal-footer
+) {
+    padding-top: 1.25rem;
+}
+
+:where(
+    .platform-btn,
+    .spotlight-launch-btn
+) {
+    padding: 0.8rem 1.25rem;
+}
+
+.b2b-lead-section {
+    padding: 4.5rem 3rem;
+}
+
+.main-footer {
+    padding: 4rem 3rem;
+}
+
+.footer-columns a {
+    padding: 0.35rem 0;
+}
+
+.spotlight-header-badge {
+    padding: 0.35rem 1.15rem;
+}
+
+.ux-spotlight-card {
+    padding: 2rem 1.65rem;
+}
+
+.feat-pill {
+    padding: 0.35rem 0.65rem;
+}
+
+.ux-search-box {
+    padding: 0.35rem 1.25rem;
+}
+
+.ux-category-tabs {
+    padding: 0.5rem 0.25rem 0.75rem 0.25rem;
+}
+
+.ux-tab-btn {
+    padding: 0.65rem 1.35rem;
+}
+
+.ux-mode-card {
+    padding: 1.6rem 1.5rem;
+}
+
+.ux-mode-number-pill {
+    padding: 0.15rem 0.5rem;
+}
+
+.ux-expand-btn {
+    padding: 0.85rem 1.85rem;
+}
+
+.spec-card {
+    padding: 1.15rem;
+}
+
+#blazor-error-ui {
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+}
+
+.blazor-error-boundary {
+    padding: 1rem 1rem 1rem 3.7rem;
+}
+
+#components-reconnect-modal button {
+    padding: 0.5rem 1.5rem;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@container (max-width: 480px) {
+    .picker-trigger-card {
+        padding: 10px 12px;
+    }
+
+}
+
+@media screen and (max-width: 991.98px) {
+    .catalog-main {
+        padding: 2rem 1.5rem 5rem;
+    }
+}
+
+@media (max-width: 599.98px) {
+    .signin-container,
+    .auth-container {
+        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1rem);
+    }
+    .signin-card,
+    .auth-card {
+        padding: clamp(1.25rem, 4vw, 1.75rem) clamp(1rem, 3vw, 1.25rem);
+    }
+    .chat-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .input-box {
+        padding: 0.2rem 0.25rem 0.2rem 0.85rem;
+    }
+    .payment-dashboard {
+        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: clamp(0.75rem, 3vw, 1rem) clamp(0.5rem, 2vw, 0.75rem) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.25rem);
+    }
+    .designer-header,
+    .qr-designer-header {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
+    }
+    .qr-stage {
+        padding: 1.5rem 0.75rem;
+    }
+    .preview-card {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1rem);
+    }
+    .qr-controls-panel {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1.25rem);
+    }
+    .about-container,
+    .help-container,
+    .example-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+    .docs-article {
+        padding: 24px 16px;
+    }
+    .item-card {
+        padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    }
+}
+
+@media (max-width: 839.98px) {
+    .payment-dashboard {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+    .score-box {
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+    .designer-page-root,
+    .seat-designer-page-root,
+    .qr-designer-page-root {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+    }
+    .designer-header,
+    .qr-designer-header {
+        padding: 1.25rem;
+    }
+    .showcase-topbar {
+        padding: 12px 16px;
+    }
+    .showcase-hero {
+        padding: 20px 16px;
+    }
+    .showcase-main-body {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .m3-drawer-panel,
+    .drawer-panel {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    footer.app-footer {
+        padding: 2.5rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 16px));
+    }
+    .landing-grid footer.app-footer,
+    .nav-only footer.app-footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom, 16px));
+    }
+    .kiosk-main {
+        padding: 20px 16px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px);
+    }
+    header.app-header {
+        padding: max(0.4rem, env(safe-area-inset-top, 0px)) max(0.75rem, env(safe-area-inset-right, 0px)) 0.4rem max(0.75rem, env(safe-area-inset-left, 0px));
+    }
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    }
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        padding: 0.25rem 0.2rem;
+    }
+    .pos-main {
+        padding: 12px 16px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 32px);
+    }
+    .store-product-page {
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+    .app-grid > main,
+    .app-grid .app-main {
+        padding: var(--md-sys-spacing-3, 0.75rem);
+        padding-left: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--md-sys-spacing-3, 0.75rem), env(safe-area-inset-right, 0px));
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    }
+    .app-grid > footer {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .kiosk-main {
+        padding: 24px 24px 140px;
+    }
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        padding: max(20px, env(safe-area-inset-top, 0px)) 0 max(20px, env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0);
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        padding: 4px 2px;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .kiosk-main {
+        padding: 16px 12px calc(var(--md-sys-spacing-bottom-nav, 72px) + 90px);
+    }
+    .kiosk-header-content {
+        padding: 0;
+    }
+    .cart-bar {
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+    .landing-top-bar-wrapper {
+        padding: 0.65rem 0.75rem 0;
+    }
+    .landing-floating-controls {
+        padding: 0.25rem 0.35rem;
+    }
+    .landing-floating-auth-btn {
+        padding: 0;
+    }
+    header.app-header {
+        padding: max(0.35rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-right, 0px)) 0.35rem max(0.5rem, env(safe-area-inset-left, 0px));
+    }
+    .header-brand-link {
+        padding: 0.2rem;
+    }
+    a.back-button,
+    a.back-link {
+        padding: 0.25rem;
+    }
+    .header-end-zone md-outlined-button,
+    .header-end-zone md-filled-button,
+    .header-end-zone md-filled-tonal-button,
+    .header-end-zone md-elevated-button,
+    .header-end-zone md-text-button {
+        --md-outlined-button-leading-space: 6px;
+        --md-outlined-button-trailing-space: 6px;
+        --md-filled-button-leading-space: 6px;
+        --md-filled-button-trailing-space: 6px;
+    }
+    .header-end-zone md-outlined-button:has([slot="icon"]),
+    .header-end-zone md-filled-button:has([slot="icon"]),
+    .header-end-zone md-elevated-button:has([slot="icon"]),
+    .header-end-zone .orders-refresh-btn,
+    .header-end-zone .payment-refresh-btn,
+    .header-end-zone .showcase-reset-btn {
+        padding: 0;
+        --md-outlined-button-leading-space: 0px;
+        --md-outlined-button-trailing-space: 0px;
+        --md-filled-button-leading-space: 0px;
+        --md-filled-button-trailing-space: 0px;
+    }
+    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn {
+        padding: 0 0.5rem;
+    }
+    .landing-auth-btn {
+        padding: 0;
+    }
+    .pos-main {
+        padding: 8px 12px;
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 36px);
+    }
+    .pos-grid {
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .landing-top-bar-wrapper {
+        padding: 0.85rem 1rem 0;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    header.app-header {
+        padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    .app-grid > footer,
+    footer.app-footer {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
+    }
+    .app-grid:has(.no-footer) > main,
+    .app-grid:has(main.no-footer) > main,
+    .app-main.no-footer,
+    main.no-footer,
+    .m3-page-container {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
+    }
+    body:has(.cart-bar) .app-grid > footer,
+    body:has(.cart-bar) footer.app-footer,
+    body:has(.cart-bar) .app-main,
+    body:has(.cart-bar) main {
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 88px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media (max-width: 599.98px) {
+    .map-mobile-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+        backdrop-filter: blur(4px);
+        z-index: 25;
+        animation: fadeIn 0.22s ease-out;
+    }
+
+    .organizations-map-controls {
+        top: auto;
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        width: auto;
+        max-height: 90dvh;
+        border-radius: 1.25rem;
+        padding: 0.45rem;
+        padding-top: 1.5rem;
+        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        transform: translateY(0);
+        opacity: 1;
+        overflow-y: auto;
+    }
+
+    .organizations-map-controls.collapsed {
+        overflow: hidden;
+        transform: translateY(0);
+        opacity: 1;
+        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+        border: 1px solid var(--map-border);
+        padding: 0.45rem;
+        padding-top: 1.5rem;
+        pointer-events: auto;
+    }
+
+    .organizations-map-controls.collapsed.details-mode { max-height: 205px; }
+    .organizations-map-controls.collapsed.yandex-route-mode { max-height: 185px; }
+    .organizations-map-controls.collapsed.search-mode { max-height: 130px; }
+
+    .organizations-map-controls.collapsed .nearby-results-panel,
+    .organizations-map-controls.collapsed .map-global-suggestions,
+    .organizations-map-controls.collapsed .map-route-suggestions,
+    .organizations-map-controls.collapsed .map-route-profile-row {
+        display: none;
+    }
+
+    .organizations-map-controls.collapsed .route-alternative-card:not(.active) {
+        display: none;
+    }
+
+    .organizations-map-controls.collapsed .place-info-row:not(:first-child),
+    .organizations-map-controls.collapsed .place-details-divider {
+        display: none;
+    }
+
+    .organizations-map-controls.collapsed .map-panel-toggle-tab,
+    .organizations-map-controls.expanded .map-panel-toggle-tab {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 48px;
+        min-height: 48px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        padding: 0;
+        pointer-events: auto;
+        display: grid;
+        place-items: center;
+        z-index: 40;
+        touch-action: manipulation;
+    }
+
+    .organizations-map-controls.collapsed .map-panel-toggle-tab::after,
+    .organizations-map-controls.expanded .map-panel-toggle-tab::after {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 5px;
+        background: var(--map-border-strong, #cbd5e1);
+        border-radius: 3px;
+    }
+
+    .organizations-map-controls.collapsed .tab-arrow,
+    .organizations-map-controls.collapsed .tab-hamburger,
+    .organizations-map-controls.expanded .tab-arrow,
+    .organizations-map-controls.expanded .tab-hamburger {
+        display: none;
+    }
+
+    .navigator-panel {
+        top: calc(0.5rem + env(safe-area-inset-top, 0px));
+        width: calc(100vw - 1rem);
+    }
+
+    .navigator-maneuver-bar { padding: 0.6rem 0.8rem; }
+    .navigator-stats-bar { padding: 0.5rem 0.8rem; }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .status-bar-safe-area {
+        display: grid;
+        position: sticky;
+        top: 0;
+        height: env(safe-area-inset-top);
+        background-color: var(--md-sys-color-surface);
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar-brand {
+        padding-left: env(safe-area-inset-left);
+    }
+}
+

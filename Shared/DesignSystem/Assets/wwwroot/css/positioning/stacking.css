@@ -1,0 +1,258 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: positioning/stacking.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-z-toast {
+    z-index: var(--md-sys-z-toast);
+}
+
+:where(
+    .m3-dialog-backdrop,
+    .m3-modal-backdrop
+) {
+    z-index: var(--md-sys-z-dialog-backdrop);
+}
+
+:where(
+    .m3-config-dialog,
+    .m3-dialog-surface
+) {
+    z-index: var(--md-sys-z-dialog);
+}
+
+:where(
+    .map-toolbar,
+    .new-badge
+) {
+    z-index: 4;
+}
+
+:where(
+    .landing-floating-controls,
+    .landing-top-bar-wrapper,
+    .lang-dropdown-menu,
+    .map-global-suggestions
+) {
+    z-index: 100;
+}
+
+:where(
+    .app-grid > header,
+    .card-instant .qr-hud-corner,
+    .chat-bottom-section,
+    .col-options,
+    .local-video-pip,
+    .map-panel-toggle-tab,
+    .showcase-sidebar
+) {
+    z-index: 10;
+}
+
+:where(
+    .landing-container,
+    .main-footer
+),
+.glass::before,
+.hero-card::before,
+.ux-mode-card::before,
+.industry-card::before,
+.feature-card::before,
+.evolution-card::before,
+.org-card::before,
+.spatial-wing-card::before,
+.spatial-subcard::before,
+.bento-card::before,
+.platform-card::before,
+:where(
+    .avatar-button img,
+    .glass > *,
+    .store-product-page,
+    .table-container td.actions-column,
+    table.quickgrid td.actions-column
+),
+:where(md-filled-card, md-outlined-card, md-elevated-card)::before {
+    z-index: 1;
+}
+
+:where(
+    .file-overlay,
+    .wishlist-wish-btn
+) {
+    z-index: 3;
+}
+
+:where(
+    .attract-loop-content,
+    .b2b-lead-content,
+    .bg-top-blender,
+    .file-input-hidden,
+    .glass > *,
+.hero-card > *,
+.spatial-wing-card > *,
+.spatial-subcard > *,
+.org-card > *,
+.bento-card > *,
+.ux-mode-card > *,
+.industry-card > *,
+.feature-card > *,
+.evolution-card > *,
+.platform-card > *,
+    .table-container th.actions-column,
+    table.quickgrid th.actions-column
+) {
+    z-index: 2;
+}
+
+.catalog-sidebar {
+    z-index: var(--md-sys-z-appbar, 20);
+}
+
+:where(
+    .kiosk-hero-content,
+    .pos-badge-qty,
+    .ux-mode-badge-overlay
+) {
+    z-index: var(--m3-z-content, 1);
+}
+
+.chat-header-container {
+    z-index: 20;
+}
+
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    z-index: var(--m3-z-drawer, 40);
+}
+
+.kiosk-wish-btn-wrapper {
+    z-index: var(--m3-z-sticky, 10);
+}
+
+.cart-bar {
+    z-index: var(--m3-z-dialog, 100);
+}
+
+.m3-bottom-nav {
+    z-index: var(--m3-z-bottom-nav, 40);
+}
+
+.landing-mobile-menu-drawer {
+    z-index: 90;
+}
+
+:where(
+    .cta-btn,
+    .hero-actions-container,
+    .search-bar,
+    .showcase-topbar
+) {
+    z-index: 5;
+}
+
+:where(
+    .ai-blob-canvas,
+    .landing-bg-canvas
+) {
+    z-index: -1;
+}
+
+:where(
+    .section-ambient-glow
+),
+.glass::before {
+    z-index: 0;
+}
+
+:where(
+    .cursor-glow-orb,
+    .landing-grid > header,
+    header.app-header
+) {
+    z-index: 50;
+}
+
+:where(
+    .landing-mobile-menu-backdrop,
+    header.app-header.landing-header
+) {
+    z-index: 80;
+}
+
+:where(
+    .fullscreen-player,
+    .kiosk-attract-loop
+) {
+    z-index: 99999;
+}
+
+:where(
+    .map-floating-actions,
+    .yandex-right-controls-container
+) {
+    z-index: 25;
+}
+
+:where(
+    .map-measure-badge,
+    .organizations-map-controls
+) {
+    z-index: 30;
+}
+
+.map-topbar {
+    z-index: 28;
+}
+
+.waypoint-marker:active {
+    z-index: 1000;
+}
+
+.navigator-panel {
+    z-index: 40;
+}
+
+.landing-page-root {
+    isolation: isolate;
+}
+
+.card-instant .qr-laser-scanner {
+    z-index: 12;
+}
+
+#blazor-error-ui {
+    z-index: var(--m3-z-toast, 1000);
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 839.98px) {
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    .app-grid > nav {
+        z-index: 100;
+    }
+    .app-grid > nav {
+        z-index: 100;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        z-index: 2;
+    }
+}
+
+@media (max-width: 839.98px) {
+    .showcase-sidebar {
+        z-index: 1000;
+    }
+    .showcase-sidebar-backdrop {
+        z-index: 999;
+    }
+}
+

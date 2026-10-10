@@ -1,0 +1,37 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: content/lists.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .cart-items-list,
+    .feature-list,
+    .footer-columns ul,
+    .footer-links-list,
+    .map-global-suggestions,
+    .map-route-suggestions,
+    .pillar-features,
+    .plan-features,
+    .tier-features,
+    :where(.avatar-container, md-dialog.contacts) details summary,
+    ol,
+    ul
+) {
+    list-style: none;
+}
+
+assistant-message ul,
+.assistant-message-text ul {
+    list-style-type: disc;
+}
+
+assistant-message ol,
+.assistant-message-text ol {
+    list-style-type: decimal;
+}
+
+.route-steps ol {
+    list-style: decimal;
+}
+

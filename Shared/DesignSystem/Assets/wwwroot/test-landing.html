@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"
+    style="color-scheme: dark; --tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+
+<head>
+    <style>
+        body {
+            transition: opacity ease-in 0.2s;
+        }
+
+        body[unresolved] {
+            opacity: 0;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="google-site-verification" content="ZzYX_zi3JaHQXKOG-cpb2L2vaCYo9fY9mKyCLdp7acU">
+    <meta name="google-adsense-account" content="ca-pub-3226044876387611">
+    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js"
+        fetchpriority="high"></script>
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3226044876387611"
+        crossorigin="anonymous" data-checked-head="true"></script>
+
+    <script>window.yaContextCb = window.yaContextCb || [];</script>
+    <script src="https://yandex.ru/ads/system/context.js" async=""></script>
+    <script data-page-id="20027116" src="https://yandex.ru/ads/system/ap-loader.js" async=""></script>
+    <meta name="robots" content="index, follow">
+    <script>
+        (function () {
+            try {
+                var cookieTheme = document.cookie.split('; ').find(function (row) { return row.startsWith('Theme='); });
+                var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) ||
+                    localStorage.getItem('Theme') ||
+                    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
+                var normalized = theme.toLowerCase();
+                document.documentElement.setAttribute('data-theme', normalized);
+                document.documentElement.style.colorScheme = normalized;
+            } catch (e) { }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+
+
+    <link rel="preload" href="fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2"
+        crossorigin="">
+    <script src="js/material-web.bundle.js" defer=""></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+
+    <link rel="stylesheet" href="./css/styles.bundle.min.css">
+
+
+    <link rel="stylesheet" href="Web.UI.tx6wdwj5tw.styles.css">
+    <link href="manifest.webmanifest" rel="manifest">
+    <script type="importmap">{
+  "imports": {
+    "./Components/Layout/ReconnectModal.razor.js": "./Components/Layout/ReconnectModal.13ja33weya.razor.js",
+    "./js/material-color-utilities.bundle.js": "./js/material-color-utilities.bundle.0b2mqfpuub.js",
+    "./js/material-web.bundle.js": "./js/material-web.bundle.lza56xrdgl.js",
+    "./js/oauthPopupHelper.js": "./js/oauthPopupHelper.2m2p0htoik.js",
+    "./js/passkeyHelper.js": "./js/passkeyHelper.232pn0rjnn.js",
+    "./js/remoteSupportWebRtc.js": "./js/remoteSupportWebRtc.hi0p0mielf.js",
+    "./js/telegramHelper.js": "./js/telegramHelper.c59fw253jj.js",
+    "./lib/app.js": "./lib/app.dwg1efc2rc.js",
+    "./lib/dompurify/dist/purify.es.mjs": "./lib/dompurify/dist/purify.es.da1w78usuh.mjs",
+    "./lib/marked/dist/marked.esm.js": "./lib/marked/dist/marked.esm.y1gj4d4yy5.js",
+    "./lib/pdf_viewer/viewer.mjs": "./lib/pdf_viewer/viewer.e7iarkq29p.mjs",
+    "./lib/pdfjs-dist/dist/build/pdf.min.mjs": "./lib/pdfjs-dist/dist/build/pdf.min.sqw4pz8lqb.mjs",
+    "./lib/pdfjs-dist/dist/build/pdf.worker.min.mjs": "./lib/pdfjs-dist/dist/build/pdf.worker.min.e6olilf8l0.mjs",
+    "./lib/pdfjs-dist/dist/web/pdf_viewer.mjs": "./lib/pdfjs-dist/dist/web/pdf_viewer.esv56m2yrl.mjs",
+    "./lib/src-defender.js": "./lib/src-defender.722jio1jio.js",
+    "./maps/map-bootstrap.js": "./maps/map-bootstrap.5ztmnlbd5t.js",
+    "./_content/CameraStreamer.Web/js/CameraStreamer.js": "./_content/CameraStreamer.Web/js/CameraStreamer.jqmq9vf5t2.js",
+    "./_content/CameraStreamer.Web/js/camera-streamer-loader.js": "./_content/CameraStreamer.Web/js/camera-streamer-loader.yb8zlyaeav.js",
+    "./_content/Chat/Widgets/Messaging/ChatInput.razor.js": "./_content/Chat/Widgets/Messaging/ChatInput.j0avs9n3a3.razor.js",
+    "./_content/Chat/Widgets/Messaging/ChatMessageList.razor.js": "./_content/Chat/Widgets/Messaging/ChatMessageList.jb4e9af11b.razor.js",
+    "./_content/Landing/Pages/Landing.razor.js": "./_content/Landing/Pages/Landing.uw4b3rkr5b.razor.js",
+    "./_content/Layout/Layout/Color.razor.js": "./_content/Layout/Layout/Color.prtu3hc50l.razor.js",
+    "./_content/Map/Components/Map/SocraticMap.razor.js": "./_content/Map/Components/Map/SocraticMap.0arl6x826d.razor.js",
+    "./_content/Map/map-libre-core.js": "./_content/Map/map-libre-core.s57ub54dh3.js",
+    "./_content/Map/map-libre-layers.js": "./_content/Map/map-libre-layers.6sebgrs9iq.js",
+    "./_content/Map/map-libre-services.js": "./_content/Map/map-libre-services.vklb4dm12c.js",
+    "./_content/Map/map-libre-state.js": "./_content/Map/map-libre-state.aw587c7j99.js",
+    "./_content/Markdown/Components/MarkdownSection.razor.js": "./_content/Markdown/Components/MarkdownSection.2bbbgg6rpg.razor.js",
+    "./_content/Markdown/lib/highlight-extensions.js": "./_content/Markdown/lib/highlight-extensions.yeg32edko4.js",
+    "./_content/Markdown/lib/mermaid.js": "./_content/Markdown/lib/mermaid.y9gllb0zbm.js",
+    "./_content/Material.Web/Material.Web.lib.module.js": "./_content/Material.Web/Material.Web.t011jz53du.lib.module.js",
+    "./_content/Organization/Pages/Home.razor.js": "./_content/Organization/Pages/Home.7vvg37sdki.razor.js",
+    "./_content/QrDesigner/qr-styling-helper.js": "./_content/QrDesigner/qr-styling-helper.y0i40akz5y.js",
+    "./_content/QuickGrid/QuickGrid.razor.js": "./_content/QuickGrid/QuickGrid.pa3tmmlpmj.razor.js",
+    "./_content/ReceiptPrinter/receipt-printer-helper.js": "./_content/ReceiptPrinter/receipt-printer-helper.rip53pnwms.js",
+    "./_content/SeatDesigner/seat-designer.js": "./_content/SeatDesigner/seat-designer.zwe4m4gl5z.js",
+    "./_framework/blazor.server.js": "./_framework/blazor.server.dwu72t6gfx.js",
+    "./_framework/blazor.web.js": "./_framework/blazor.web.9hsif5t8mt.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.m1sp4s6njp.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.aczpleudd1.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js",
+    "_framework/resource-collection.js": "./_framework/resource-collection.lMX87.js",
+    "_framework/resource-collection.js.gz": "./_framework/resource-collection.lMX87.js.gz"
+  },
+  "integrity": {
+    "./_framework/resource-collection.lMX87.js": "sha256-ANyhLuVG7NLucKrR0qCxMqMdHSbcHD+vsVow8GWOSuQ=",
+    "./_framework/resource-collection.lMX87.js.gz": "sha256-ANyhLuVG7NLucKrR0qCxMqMdHSbcHD+vsVow8GWOSuQ="
+  }
+}</script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="img/icon-512.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="img/icon-192.png">
+    <!--!--><!--!--><!--!-->
+    <title><!--!-->Socratic — Универсальная экосистема для бизнеса</title><!--!--><!--!--><!--!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="_content/Landing/css/landing.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <meta name="title" content="Socratic — Универсальная экосистема для бизнеса">
+    <meta name="description"
+        content="Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.">
+    <meta name="keywords"
+        content="универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic">
+    <meta name="author" content="Sardor Safarov">
+    <link rel="canonical" href="https://socratic.uz/">
+
+
+    <meta property="og:title" content="Socratic — Универсальная экосистема для бизнеса">
+    <meta property="og:description"
+        content="Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.">
+    <meta property="og:image" content="https://socratic.uz/img/icon-512.png">
+    <meta property="og:url" content="https://socratic.uz/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Socratic">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Socratic — Универсальная экосистема для бизнеса">
+    <meta name="twitter:description"
+        content="Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.">
+    <meta name="twitter:image" content="https://socratic.uz/img/icon-512.png">
+
+
+    <link rel="alternate" hreflang="ru" href="https://socratic.uz/?culture=ru">
+    <link rel="alternate" hreflang="uz" href="https://socratic.uz/?culture=uz">
+    <link rel="alternate" hreflang="en" href="https://socratic.uz/?culture=en">
+    <link rel="alternate" hreflang="x-default" href="https://socratic.uz/">
+
+
+    <!--!-->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Socratic",
+        "url": "https://socratic.uz",
+        "logo": "https://socratic.uz/img/icon-512.png",
+        "description": "Socratic — универсальная экосистема для бизнеса: продажа товаров, оказание услуг, бронирование пространств, кассовый учет и фискализация.",
+        "sameAs": [
+            "https://t.me/socratic_uz_bot",
+            "https://www.instagram.com/socratic.uz/"
+        ]
+    }
+    </script>
+    <meta http-equiv="origin-trial"
+        content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <meta http-equiv="origin-trial"
+        content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <meta http-equiv="origin-trial"
+        content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <link rel="preconnect" href="https://yastatic.net">
+    <link rel="preconnect" href="https://avatars.mds.yandex.net">
+    <link rel="preconnect" href="https://mc.yandex.ru">
+    <link rel="preconnect" href="https://ads.adfox.ru">
+    <link rel="preload" href="https://yastatic.net/s3/home/fonts/ys/3/text-variable-full.woff2" type="font/woff2"
+        as="font" crossorigin="anonymous">
+    <style id="ysTextCssRule">
+        @font-face {
+            font-family: "YS Text Variable";
+            src: url("https://yastatic.net/s3/home/fonts/ys/3/text-variable-full.woff2") format("woff2");
+            font-weight: 400 700;
+            font-display: optional;
+        }
+    </style>
+    <script async="" crossorigin="anonymous" src="https://yastatic.net/safeframe-bundles/0.89/host.js"></script>
+    <style class="mb-style-tag">
+        .UZznxc {
+            height: inherit;
+            max-height: inherit;
+            min-height: inherit;
+            width: 100%
+        }
+    </style>
+    <style>
+        .tg-auth-button {
+            width: fit-content;
+            height: 44px;
+            padding: 0 28px;
+            text-transform: none;
+            background: #119AF5;
+            border-radius: 22px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            font-family: -apple-system, system-ui, Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+            border: none
+        }
+
+        .tg-auth-button:hover {
+            background: #1090E5
+        }
+
+        .tg-auth-button:before {
+            content: " ";
+            width: 22px;
+            height: 22px;
+            margin-right: 4px;
+            display: inline-block;
+            vertical-align: top;
+            background: no-repeat 0 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M2.81376 10.5943C7.36914 8.61002 10.406 7.30175 11.9245 6.66971C16.265 4.86489 17.1658 4.55143 17.7542 4.54094C17.8836 4.53874 18.1716 4.57072 18.3596 4.72281C18.5158 4.85097 18.5598 5.0243 18.5818 5.14588C18.6013 5.26745 18.6282 5.54454 18.6062 5.76083C18.3719 8.23138 17.3539 14.2266 16.8363 16.9938C16.619 18.1647 16.1869 18.5572 15.7695 18.5955C14.8613 18.679 14.1728 17.996 13.294 17.42C11.9196 16.5185 11.1433 15.9575 9.80793 15.0779C8.26505 14.0613 9.26594 13.5025 10.1448 12.5895C10.3743 12.3505 14.373 8.71426 14.4487 8.38445C14.4585 8.34319 14.4683 8.18939 14.3755 8.10834C14.2852 8.02705 14.1508 8.05488 14.0532 8.07685C13.914 8.1081 11.7193 9.56015 7.4618 12.4328C6.83928 12.861 6.27536 13.0697 5.76758 13.0587C5.21097 13.0468 4.13689 12.7433 3.3386 12.484C2.3621 12.166 1.5833 11.9977 1.65166 11.4575C1.68583 11.1763 2.07406 10.8884 2.81376 10.5943Z' fill='white'/%3E%3C/svg%3E");
+            background-size: 22px;
+            background-position: center;
+            display: inline-block;
+        }
+
+        .tg-auth-button[data-style~="square"] {
+            border-radius: 5px
+        }
+
+        .tg-auth-button[data-style~="outlined"] {
+            color: black;
+            background: transparent;
+            border: 1px solid var(--border_color, rgba(0, 0, 0, 0.06))
+        }
+
+        .tg-auth-button[data-style~="outlined"]:hover {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(116, 116, 128, 0.06)
+        }
+
+        .tg-auth-button[data-style~="outlined"]:before {
+            content: " ";
+            height: 22px;
+            margin-right: 8px;
+            width: 22px;
+            display: inline-block;
+            vertical-align: top;
+            background-size: 16px;
+            background-position: center;
+            background-color: #119AF5;
+            border-radius: 34px;
+        }
+
+        .tg-auth-button[data-style~="icon"] {
+            width: 44px;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+            font-size: 0
+        }
+
+        .tg-auth-button[data-style~="icon"]::before {
+            margin-right: 0 !important
+        }
+
+        .tg-auth-button[data-style~="shine"]::after {
+            content: " ";
+            position: absolute;
+            top: -2px;
+            left: -75%;
+            width: 70px;
+            max-width: 50%;
+            bottom: -2px;
+            background: linear-gradient(95deg, rgba(255, 255, 255, .0) 0%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .0) 100%);
+            animation: tg-shine 4s infinite;
+            mix-blend-mode: soft-light;
+        }
+
+        .tg-auth-button[data-style~="outlined"][data-style~="shine"]::after {
+            background: linear-gradient(95deg, rgba(255, 255, 255, .0) 0%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, .0) 100%);
+        }
+
+        @keyframes tg-shine {
+            0% {
+                left: -75%
+            }
+
+            100% {
+                left: 125%
+            }
+        }
+
+        .tg-ripple-mask {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: translateZ(0);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .tg-ripple {
+            position: absolute;
+            width: 200%;
+            left: 50%;
+            top: 50%;
+            margin: -100% 0 0 -100%;
+            padding-top: 200%;
+            border-radius: 50%;
+            background-color: #ffffff1f;
+            transition: transform .65s ease-out, opacity .65s ease-out, background-color .65s ease-out;
+            opacity: 0;
+        }
+
+        .tg-auth-button[data-style~="outlined"] .tg-ripple {
+            background-color: #0000000f
+        }
+    </style>
+    <style id="socratic-dynamic-accent">
+        :root,
+        [data-theme],
+        body {
+
+            /* ------------------------------------------------- */
+
+            /*   */
+            --md-sys-color-primary0: #000000;
+            --md-sys-color-primary10: #21005e;
+            --md-sys-color-primary20: #380094;
+            --md-sys-color-primary30: #5100cf;
+            --md-sys-color-primary40: #6b1eff;
+            --md-sys-color-primary50: #8354ff;
+            --md-sys-color-primary60: #9b7aff;
+            --md-sys-color-primary70: #b49cff;
+            --md-sys-color-primary80: #cebdff;
+            --md-sys-color-primary90: #e8ddff;
+            --md-sys-color-primary95: #f5eeff;
+            --md-sys-color-primary99: #fffbff;
+            --md-sys-color-primary100: #ffffff;
+            --md-sys-color-secondary0: #000000;
+            --md-sys-color-secondary10: #1d192b;
+            --md-sys-color-secondary20: #322e41;
+            --md-sys-color-secondary30: #494458;
+            --md-sys-color-secondary40: #615b71;
+            --md-sys-color-secondary50: #7a748a;
+            --md-sys-color-secondary60: #948da5;
+            --md-sys-color-secondary70: #afa7c0;
+            --md-sys-color-secondary80: #cbc3dc;
+            --md-sys-color-secondary90: #e7def8;
+            --md-sys-color-secondary95: #f5eeff;
+            --md-sys-color-secondary99: #fffbff;
+            --md-sys-color-secondary100: #ffffff;
+            --md-sys-color-tertiary0: #000000;
+            --md-sys-color-tertiary10: #31101e;
+            --md-sys-color-tertiary20: #492533;
+            --md-sys-color-tertiary30: #633b49;
+            --md-sys-color-tertiary40: #7d5261;
+            --md-sys-color-tertiary50: #986a7a;
+            --md-sys-color-tertiary60: #b48393;
+            --md-sys-color-tertiary70: #d19dae;
+            --md-sys-color-tertiary80: #efb8c9;
+            --md-sys-color-tertiary90: #ffd9e3;
+            --md-sys-color-tertiary95: #ffecf0;
+            --md-sys-color-tertiary99: #fffbff;
+            --md-sys-color-tertiary100: #ffffff;
+            --md-sys-color-neutral0: #000000;
+            --md-sys-color-neutral10: #1c1b1e;
+            --md-sys-color-neutral20: #313033;
+            --md-sys-color-neutral30: #48464a;
+            --md-sys-color-neutral40: #605d62;
+            --md-sys-color-neutral50: #79767a;
+            --md-sys-color-neutral60: #938f94;
+            --md-sys-color-neutral70: #aeaaae;
+            --md-sys-color-neutral80: #c9c5ca;
+            --md-sys-color-neutral90: #e6e1e6;
+            --md-sys-color-neutral95: #f4eff4;
+            --md-sys-color-neutral99: #fffbff;
+            --md-sys-color-neutral100: #ffffff;
+            --md-sys-color-neutral-variant0: #000000;
+            --md-sys-color-neutral-variant10: #1d1a22;
+            --md-sys-color-neutral-variant20: #322f38;
+            --md-sys-color-neutral-variant30: #48454e;
+            --md-sys-color-neutral-variant40: #605d66;
+            --md-sys-color-neutral-variant50: #79757f;
+            --md-sys-color-neutral-variant60: #938f99;
+            --md-sys-color-neutral-variant70: #aea9b4;
+            --md-sys-color-neutral-variant80: #cac4cf;
+            --md-sys-color-neutral-variant90: #e6e0ec;
+            --md-sys-color-neutral-variant95: #f5eefa;
+            --md-sys-color-neutral-variant99: #fffbff;
+            --md-sys-color-neutral-variant100: #ffffff;
+            --md-sys-color-error0: #000000;
+            --md-sys-color-error10: #410002;
+            --md-sys-color-error20: #690005;
+            --md-sys-color-error30: #93000a;
+            --md-sys-color-error40: #ba1a1a;
+            --md-sys-color-error50: #de3730;
+            --md-sys-color-error60: #ff5449;
+            --md-sys-color-error70: #ff897d;
+            --md-sys-color-error80: #ffb4ab;
+            --md-sys-color-error90: #ffdad6;
+            --md-sys-color-error95: #ffedea;
+            --md-sys-color-error99: #fffbff;
+            --md-sys-color-error100: #ffffff;
+
+            /* ����������� 1�5 (Surface 1�5) */
+            --md-sys-color-surface-1: #1d1c22;
+            --md-sys-color-surface-2: #232129;
+            --md-sys-color-surface-3: #282630;
+            --md-sys-color-surface-4: #2a2732;
+            --md-sys-color-surface-5: #2e2b37;
+
+            /* ���� ��� ������� ������ */
+            --md-sys-elevation-0: none;
+            --md-sys-elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-5: 0px 4px 4px 0px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+
+            /* ------------------------------------------------- */
+
+
+            /* �������� ����� ������ */
+            --md-sys-color-primary-palette-key-color: #6602ff;
+            --md-sys-color-secondary-palette-key-color: #7a748a;
+            --md-sys-color-tertiary-palette-key-color: #986a79;
+            --md-sys-color-neutral-palette-key-color: #79767a;
+            --md-sys-color-neutral-variant-palette-key-color: #79757f;
+
+            --md-sys-color-background: #141316;
+            --md-sys-color-on-background: #e6e1e6;
+
+            /* ����� ����������� (�������� ������������ elevation) */
+            --md-sys-color-surface: #141316;
+            --md-sys-color-surface-dim: #141316;
+            --md-sys-color-surface-bright: #3a383c;
+            --md-sys-color-surface-container-lowest: #0f0e11;
+            --md-sys-color-surface-container-low: #1c1b1e;
+            --md-sys-color-surface-container: #201f23;
+            --md-sys-color-surface-container-high: #2b292d;
+            --md-sys-color-surface-container-highest: #363438;
+
+            --md-sys-color-on-surface: #e6e1e6;
+            --md-sys-color-surface-variant: #48454e;
+            --md-sys-color-on-surface-variant: #cac4cf;
+            --md-sys-color-inverse-surface: #e6e1e6;
+            --md-sys-color-inverse-on-surface: #313033;
+            --md-sys-color-outline: #938f99;
+            --md-sys-color-outline-variant: #48454e;
+            --md-sys-color-shadow: #000000;
+            --md-sys-color-scrim: #000000;
+            --md-sys-color-surface-tint: #cebdff;
+            --md-sys-color-primary: #cebdff;
+            --md-sys-color-on-primary: #380094;
+            --md-sys-color-primary-container: #5100cf;
+            --md-sys-color-on-primary-container: #e8ddff;
+            --md-sys-color-inverse-primary: #6b1eff;
+            --md-sys-color-secondary: #cbc3dc;
+            --md-sys-color-on-secondary: #322e41;
+            --md-sys-color-secondary-container: #494458;
+            --md-sys-color-on-secondary-container: #e7def8;
+            --md-sys-color-tertiary: #efb8c9;
+            --md-sys-color-on-tertiary: #492533;
+            --md-sys-color-tertiary-container: #633b49;
+            --md-sys-color-on-tertiary-container: #ffd9e3;
+            --md-sys-color-error: #ffb4ab;
+            --md-sys-color-on-error: #690005;
+            --md-sys-color-error-container: #93000a;
+            --md-sys-color-on-error-container: #ffdad6;
+            --md-sys-color-primary-fixed: #e8ddff;
+            --md-sys-color-primary-fixed-dim: #cebdff;
+            --md-sys-color-on-primary-fixed: #21005e;
+            --md-sys-color-on-primary-fixed-variant: #5100cf;
+            --md-sys-color-secondary-fixed: #e7def8;
+            --md-sys-color-secondary-fixed-dim: #cbc3dc;
+            --md-sys-color-on-secondary-fixed: #1d192b;
+            --md-sys-color-on-secondary-fixed-variant: #494458;
+            --md-sys-color-tertiary-fixed: #ffd9e3;
+            --md-sys-color-tertiary-fixed-dim: #efb8c9;
+            --md-sys-color-on-tertiary-fixed: #31101e;
+            --md-sys-color-on-tertiary-fixed-variant: #633b49;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;" cz-shortcut-listen="true" style=""><input type="hidden"
+        name="__RequestVerificationToken"
+        value="CfDJ8OaFn2u-JqlKsFxEFMDg8WyQerxJ5VzwJNJXtVu7Leo2WmIVpi8R-eAh2-87vP_jKP1JDEqOdqj_6ZUCxTn_JgeS0QU_Y3YA8UHuIn00wCJU1h9jfVW-gulhmvNk-fGWOdpsXguTaiZ5eFvXtd8P6NUsZx0_7J8hh6NVKv__dt5jC3vbc6IfL24tzWJDYOHKSQ">
+    <!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!-->
+    <color style="display:none;" class="6684927 light-mode"></color>
+    <div class="landing-grid">
+        <div class="landing-top-bar-wrapper">
+            <aside class="landing-floating-controls" aria-label="Quick Actions"><!--!-->
+                <div class="lang-select lang-selector-pill ">
+                    <div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn"
+                            aria-expanded="false" aria-label="Til"><!--!--><md-icon aria-hidden="true"><template
+                                    shadowrootmode="open"><!---->
+                                    <slot></slot>
+                                </template>language</md-icon><!--!-->
+                            <span class="lang-current-label">RU</span><!--!-->
+                            <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                    <slot></slot>
+                                </template>arrow_drop_down</md-icon></button></div>
+                </div><!--!-->
+                <a href="/signin" class="landing-floating-auth-btn" title="Socratic ID"><!--!--><md-icon
+                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                            <slot></slot>
+                        </template>login</md-icon><!--!-->
+                    <span class="auth-btn-label">Socratic ID</span></a>
+            </aside>
+        </div>
+        <main class="landing-main"><!--!--><!--!--><!--!--><!--!--><!--!-->
+
+            <!--!--><!--!--><!--!-->
+
+            <div class="landing-page-root"><!--!-->
+                <div class="landing-bg-canvas" aria-hidden="true">
+                    <div class="bg-base-gradient"></div>
+                    <div class="bg-grid-mesh"></div>
+                    <div class="bg-spotlight bg-spotlight-hero"></div>
+                    <div class="bg-spotlight bg-spotlight-bento"></div>
+                    <div class="bg-radial-vignette"></div>
+                    <div class="bg-top-blender"></div>
+                </div>
+
+
+                <div class="cursor-glow-orb" id="cursorGlowOrb" aria-hidden="true"></div>
+
+                <main class="dark-mode landing-container no-nav">
+                    <section class="hero-section"><!--!-->
+                        <div class="section-ambient-glow glow-cyan-purple" aria-hidden="true"></div>
+                        <div class="hero-content-wrapper">
+                            <article class="glass hero-card m3-card m3-card-glass">
+                                <div class="hero-badge"><span class="live-pulse-dot pulse"
+                                        aria-hidden="true"></span><!--!-->
+                                    <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>hub</md-icon><!--!-->
+                                    <span>Socratic 2.0 • Универсальная экосистема для бизнеса</span>
+                                </div><!--!-->
+
+                                <h1 class="hero-title"><span class="title-gradient">Socraticga xush
+                                        kelibsiz:</span><!--!--><br>
+                                    <span class="title-sub">Biznes va savdoni avtomatlashtirish uchun universal
+                                        ekotizim</span>
+                                </h1><!--!-->
+
+                                <p class="hero-subtitle">Единая платформа для ритейла, HoReCa, сферы услуг и финтеха.
+                                    Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация
+                                    Soliq ОФД с 1% кешбэком.</p><!--!-->
+
+                                <div class="hero-actions-container">
+                                    <div class="hero-actions-primary"><a class="cta-btn primary-cta"
+                                            href="/kiosk/20240824-0000-0000-0000-000000000002"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>storefront</md-icon><!--!-->
+                                            <span>Витрина товаров Demo</span><!--!-->
+                                            <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>arrow_forward</md-icon></a><!--!-->
+                                        <a class="cta-btn secondary-cta" href="/terminal"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>point_of_sale</md-icon><!--!-->
+                                            <span>Касса POS</span></a><!--!-->
+                                        <a class="cta-btn tertiary-cta"
+                                            href="/kiosk/20240824-0000-0000-0000-000000000001"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>auto_awesome</md-icon><!--!-->
+                                            <span>Тарифы Socratic</span></a>
+                                    </div><!--!-->
+                                    <div class="hero-module-pills"><span class="pills-label">Специализированные
+                                            модули:</span><!--!-->
+                                        <div class="pills-row"><a class="hero-pill-link" href="/map"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>explore</md-icon><span>Карта и
+                                                    доставка</span></a><!--!-->
+                                            <a class="hero-pill-link" href="/seat-designer"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>event_seat</md-icon><span>Конструктор
+                                                    залов</span></a><!--!-->
+                                            <a class="hero-pill-link" href="/qr-designer"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>qr_code_2</md-icon><span>QR-фискализация</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article><!--!-->
+
+                            <div class="hero-stage-card glass m3-card m3-card-glass">
+                                <div class="hero-stage-tabs"><button type="button"
+                                        class="stage-tab active"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>point_of_sale</md-icon><!--!-->
+                                        <span>Касса POS</span></button><!--!-->
+                                    <button type="button" class="stage-tab "><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>touch_app</md-icon><!--!-->
+                                        <span>Смарт-киоск</span></button><!--!-->
+                                    <button type="button" class="stage-tab "><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>event_seat</md-icon><!--!-->
+                                        <span>Залы &amp; QR</span></button>
+                                </div><!--!-->
+
+                                <div class="hero-stage-screen"><img src="img/landing_hero_main.png"
+                                        alt="Socratic POS Terminal" class="hero-stage-img">
+                                    <div class="floating-chip chip-1"><!--!--><span class="chip-dot chip-dot-cyan"
+                                            aria-hidden="true"></span>
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>cloud_off</md-icon><!--!-->
+                                        <!--!--><span>Offline-First POS</span>
+                                    </div><!--!-->
+                                    <div class="floating-chip chip-2"><!--!--><span class="chip-dot chip-dot-emerald"
+                                            aria-hidden="true"></span>
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>receipt_long</md-icon><!--!-->
+                                        <!--!--><span>Soliq ОФД • 1% Кешбэк</span>
+                                    </div><!--!-->
+                                    <div class="floating-chip chip-3"><!--!--><span class="chip-dot chip-dot-purple"
+                                            aria-hidden="true"></span>
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>widgets</md-icon><!--!-->
+                                        <!--!--><span>28 UX-Режимов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--!-->
+
+
+                        <div class="specs-bar glass">
+                            <div class="spec-item"><!--!-->
+                                <div class="spec-value-box"><span class="spec-value value-cyan"
+                                        data-counter-target="100" data-counter-suffix="%">100%</span>
+                                    <span class="spec-status-dot dot-cyan" title="Offline-First"></span>
+                                </div>
+                                <span class="spec-label">Offline-First надежность</span>
+                            </div><!--!-->
+                            <div class="spec-divider" aria-hidden="true"></div>
+                            <div class="spec-item"><!--!-->
+                                <div class="spec-value-box"><span class="spec-value value-emerald"
+                                        data-counter-target="1" data-counter-prefix="&lt; "
+                                        data-counter-suffix=" с">&lt; 1 с</span>
+                                    <span class="spec-status-dot dot-emerald" title="Fast POS"></span>
+                                </div>
+                                <span class="spec-label">Скорость кассы</span>
+                            </div><!--!-->
+                            <div class="spec-divider" aria-hidden="true"></div>
+                            <div class="spec-item"><!--!-->
+                                <div class="spec-value-box"><span class="spec-value value-purple"
+                                        data-counter-target="1" data-counter-suffix="%">1%</span></div>
+                                <span class="spec-label">Кешбэк Soliq ОФД</span>
+                            </div><!--!-->
+                            <div class="spec-divider" aria-hidden="true"></div>
+                            <div class="spec-item"><!--!-->
+                                <div class="spec-value-box"><span class="spec-value spec-value-text value-teal">500+
+                                        точек</span></div>
+                                <span class="spec-label">Масштабирование сетей</span>
+                            </div>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="evolution-banner glass"><!--!-->
+                        <div class="section-ambient-glow glow-purple-indigo" aria-hidden="true"></div>
+                        <div class="evolution-header">
+                            <div class="section-badge badge-purple"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>category</md-icon><!--!-->
+                                <span>4 фундаментальных направления</span>
+                            </div><!--!-->
+                            <h2>Единая экосистема для любого формата торговли и услуг</h2><!--!-->
+                            <p>Socratic объединяет физические товары, сферу услуг, аренду пространств и цифровые сервисы
+                                в едином технологическом комплексе без ограничений.</p>
+                        </div><!--!-->
+                        <div class="evolution-grid">
+                            <div class="evolution-card glass">
+                                <div class="evo-icon"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>storefront</md-icon></div><!--!-->
+                                <h3>Розничная торговля и товары</h3><!--!-->
+                                <p>Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый
+                                    сенсорный кассовый терминал.</p>
+                            </div><!--!-->
+                            <div class="evolution-card glass">
+                                <div class="evo-icon"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>schedule</md-icon></div><!--!-->
+                                <h3>Сфера услуг и мастера</h3><!--!-->
+                                <p>Онлайн-запись клиентов к мастерам, управление временными слотами, калькуляция смет и
+                                    абонементы.</p>
+                            </div><!--!-->
+                            <div class="evolution-card glass">
+                                <div class="evo-icon"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>event_seat</md-icon></div><!--!-->
+                                <h3>Пространства, залы и билеты</h3><!--!-->
+                                <p>Интерактивные векторные схемы залов SeatDesigner, бронирование столиков и номеров,
+                                    QR-билеты и валидация на турникетах.</p>
+                            </div><!--!-->
+                            <div class="evolution-card glass active-evo">
+                                <div class="evo-icon"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>credit_card</md-icon></div><!--!-->
+                                <h3>Платежи, QR и финтех</h3><!--!-->
+                                <p>Фискальные чеки Soliq ОФД (1% кешбэк), оплата Click, Payme, Uzum, рассрочка BNPL
+                                    (Uzum Nasiya, Zoodpay) и сплит-чеки.</p>
+                            </div>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="org-showcase-section glass" id="live-showcases"><!--!-->
+                        <div class="section-ambient-glow glow-cyan-purple" aria-hidden="true"></div>
+                        <div class="section-title-box">
+                            <div class="section-badge badge-cyan"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>devices</md-icon><!--!-->
+                                <span>Живые интерактивные витрины</span>
+                            </div><!--!-->
+                            <h2>Испытайте экосистему в реальном действии</h2><!--!-->
+                            <p>Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами
+                                покупателя или проверьте, как Socratic продает саму себя через свой собственный
+                                смарт-киоск.</p>
+                        </div><!--!-->
+
+                        <div class="org-showcase-grid">
+                            <article class="org-card m3-card-glass org-card-demo">
+                                <div class="org-card-badge badge-teal"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>storefront</md-icon><!--!-->
+                                    <span>Организация Demo • Шоурум товаров</span>
+                                </div><!--!-->
+                                <div class="org-card-header">
+                                    <h3>Демо-витрина ритейла, блюд и услуг</h3><!--!-->
+                                    <p>Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд,
+                                        весовые товары, бронирование столиков, доставка курьером и моментальная
+                                        фискализация Soliq ОФД с 1% кешбэком.</p>
+                                </div><!--!-->
+                                <div class="org-tags-row"><span class="org-tag"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>check_circle</md-icon><!--!--> 28 UX-режимов</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>check_circle</md-icon><!--!--> Смарт-киоск</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>check_circle</md-icon><!--!--> Soliq ОФД 1%</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>check_circle</md-icon><!--!--> Заказ и оплата</span>
+                                </div><!--!-->
+                                <div class="org-card-actions"><a href="/kiosk/20240824-0000-0000-0000-000000000002"
+                                        class="cta-btn primary-cta"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>touch_app</md-icon><!--!-->
+                                        <span>Открыть витрину Demo</span><!--!-->
+                                        <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a><!--!-->
+                                    <a href="/terminal" class="cta-btn secondary-cta"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>point_of_sale</md-icon><!--!-->
+                                        <span>Рабочее место POS</span></a>
+                                </div>
+                            </article><!--!-->
+
+
+                            <article class="org-card m3-card-glass org-card-socratic">
+                                <div class="org-card-badge badge-purple"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>auto_awesome</md-icon><!--!-->
+                                    <span>Организация Socratic • Self-Selling</span>
+                                </div><!--!-->
+                                <div class="org-card-header">
+                                    <h3>Socratic продает сама себя</h3><!--!-->
+                                    <p>Архитектурная модель Dogfooding: платформа Socratic использует свой собственный
+                                        интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых
+                                        лицензий, POS-оборудования и модулей.</p>
+                                </div><!--!-->
+                                <div class="org-tags-row"><span class="org-tag"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>verified</md-icon><!--!--> Тарифы экосистемы</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>verified</md-icon><!--!--> Кассы &amp; Киоски</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>verified</md-icon><!--!--> Прямая покупка</span><!--!-->
+                                    <span class="org-tag"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>verified</md-icon><!--!--> Без посредников</span>
+                                </div><!--!-->
+                                <div class="org-card-actions"><a href="/kiosk/20240824-0000-0000-0000-000000000001"
+                                        class="cta-btn hero-cta"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>shopping_bag</md-icon><!--!-->
+                                        <span>Тарифы Socratic в Киоске</span><!--!-->
+                                        <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a><!--!-->
+                                    <a href="/docs" class="cta-btn secondary-cta"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>menu_book</md-icon><!--!-->
+                                        <span>Документация</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="spatial-maps-section glass" id="maps-and-spaces"><!--!-->
+                        <div class="section-ambient-glow glow-teal-cyan" aria-hidden="true"></div>
+                        <div class="section-title-box">
+                            <div class="section-badge badge-teal"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>explore</md-icon><!--!-->
+                                <span>Карты, Зоны Доставки &amp; Навигация</span>
+                            </div><!--!-->
+                            <h2>Гео-карты сети, зоны доставки, навигатор и схемы залов</h2><!--!-->
+                            <p>Единый геопространственный комплекс: от интерактивной карты филиалов, векторных полигонов
+                                доставки и GPS-навигатора курьера до миллиметровых схем залов и бронирования столиков.
+                            </p>
+                        </div><!--!-->
+
+
+                        <div class="spatial-wings-grid">
+                            <article class="spatial-wing-card glass wing-geomap">
+                                <div class="spatial-wing-header">
+                                    <div class="spatial-wing-badge badge-cyan"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>map</md-icon><!--!-->
+                                        <span>Географическая Платформа</span>
+                                    </div><!--!-->
+                                    <h3>Интерактивная карта филиалов, зон и навигатор</h3><!--!-->
+                                    <p>Управление сетью торговых точек, складами, пунктами выдачи (ПВЗ), полигонами
+                                        курьерской доставки и встроенный GPS-навигатор для курьеров.</p>
+                                </div><!--!-->
+
+                                <div class="spatial-cards-subgrid">
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>storefront</md-icon></div><!--!-->
+                                            <h4>Точки и Филиалы (PointPicker)</h4>
+                                        </div><!--!-->
+                                        <p>Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами
+                                            категорий и определением ближайшей точки.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Сеть филиалов</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Рядом со мной</span>
+                                        </div>
+                                    </div><!--!-->
+
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>share_location</md-icon></div><!--!-->
+                                            <h4>Зоны Доставки (ZonePicker)</h4>
+                                        </div><!--!-->
+                                        <p>Рисование векторных полигонов доставки на карте. Дифференцированные тарифы,
+                                            бесплатная доставка от суммы и расчет зон в 1 клик.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Полигоны на карте</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Тарифные зоны</span>
+                                        </div>
+                                    </div><!--!-->
+
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>near_me</md-icon></div><!--!-->
+                                            <h4>GPS-Навигатор и Маршруты</h4>
+                                        </div><!--!-->
+                                        <p>Встроенное ведение по маршруту для курьеров и водителей доставки, расчет
+                                            километража, времени прибытия и живой трекинг заказа.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Маршрут курьера</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Живой GPS-трекинг</span>
+                                        </div>
+                                    </div>
+                                </div><!--!-->
+
+                                <div class="spatial-wing-footer">
+                                    <div class="spatial-meta-note"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>gps_fixed</md-icon><!--!-->
+                                        <span>Автоопределение геопозиции и радиуса обслуживания</span>
+                                    </div><!--!-->
+                                    <a class="cta-btn primary-cta" href="/map"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>explore</md-icon><!--!-->
+                                        <span>Открыть карту и навигатор</span><!--!-->
+                                        <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </article><!--!-->
+
+
+                            <article class="spatial-wing-card glass wing-seatdesigner">
+                                <div class="spatial-wing-header">
+                                    <div class="spatial-wing-badge badge-teal"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>event_seat</md-icon><!--!-->
+                                        <span>Векторный Редактор Залов</span>
+                                    </div><!--!-->
+                                    <h3>Конструктор помещений и бронирование мест</h3><!--!-->
+                                    <p>Векторный редактор SeatDesigner для создания интерактивных схем: столики, ряды
+                                        кресел, переговорные комнаты и номера с живым статусом занятости.</p>
+                                </div><!--!-->
+
+                                <div class="spatial-cards-subgrid">
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>theater_comedy</md-icon></div><!--!-->
+                                            <h4>Театры, Кино &amp; Концерты</h4>
+                                        </div><!--!-->
+                                        <p>Схемы партера, амфитеатра и балконов. Выбор мест с дифференцированными
+                                            ценами, бронь билетов и моментальная оплата.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Ряды и места</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Ценовые зоны</span>
+                                        </div>
+                                    </div><!--!-->
+
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>table_restaurant</md-icon></div><!--!-->
+                                            <h4>Рестораны, Кафе &amp; Лаунджи</h4>
+                                        </div><!--!-->
+                                        <p>План рассадки зала с живыми статусами столиков: Свободно, Занято, Депозитная
+                                            бронь. Интеграция с кассой официанта.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Живой статус</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Депозиты</span>
+                                        </div>
+                                    </div><!--!-->
+
+                                    <div class="spatial-subcard glass">
+                                        <div class="subcard-header">
+                                            <div class="venue-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>apartment</md-icon></div><!--!-->
+                                            <h4>Отели, Коворкинги &amp; Аренда</h4>
+                                        </div><!--!-->
+                                        <p>Схемы этажей, выбор переговорных комнат, рабочих мест, гостиничных номеров
+                                            или беседок с почасовой тарификацией.</p><!--!-->
+                                        <div class="venue-chip-row"><span class="venue-chip"><!--!--><md-icon
+                                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> Слоты времени</span><!--!-->
+                                            <span class="venue-chip"><!--!--><md-icon aria-hidden="true"><template
+                                                        shadowrootmode="open"><!---->
+                                                        <slot></slot>
+                                                    </template>check</md-icon><!--!--> СКУД доступ</span>
+                                        </div>
+                                    </div>
+                                </div><!--!-->
+
+                                <div class="spatial-wing-footer"><!--!-->
+                                    <div class="venue-status-legend"><span class="legend-item"><span
+                                                class="legend-dot status-free"></span> Свободно</span>
+                                        <span class="legend-item"><span class="legend-dot status-busy"></span>
+                                            Занято</span>
+                                        <span class="legend-item"><span class="legend-dot status-reserved"></span>
+                                            Забронировано</span>
+                                    </div>
+                                    <a class="cta-btn secondary-cta" href="/seat-designer"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>brush</md-icon><!--!-->
+                                        <span>Конструктор SeatDesigner</span><!--!-->
+                                        <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </article>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="ux-modes-section" id="ux-modes"><!--!-->
+                        <div class="section-ambient-glow glow-teal-cyan" aria-hidden="true"></div>
+                        <div class="section-title-box">
+                            <div class="section-badge badge-cyan"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>widgets</md-icon><!--!-->
+                                <span>28 Архитектурных UX-Режимов</span>
+                            </div><!--!-->
+                            <h2>28 Универсальных Сценариев Взаимодействия</h2><!--!-->
+                            <p>От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и
+                                рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином
+                                масштабируемом ядре.</p>
+                        </div><!--!-->
+
+
+                        <div class="ux-spotlight-container">
+                            <div class="ux-spotlight-header">
+                                <div class="spotlight-header-badge"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>stars</md-icon><!--!-->
+                                    <span>Флагманские Архетипы</span>
+                                </div><!--!-->
+                                <span class="spotlight-sub">Четыре ключевых столпа коммерческой автоматизации
+                                    Socratic</span>
+                            </div><!--!-->
+
+                            <div class="ux-spotlight-grid">
+                                <div class="ux-spotlight-card glass cat-retail">
+                                    <div class="spotlight-card-top">
+                                        <div class="spotlight-pill"><!--!--><span class="spotlight-dot"></span>
+                                            <span>Флагман Ритейла</span>
+                                        </div><!--!-->
+                                        <!--!--><span class="spotlight-mode-badge">#01 • CatalogItem</span>
+                                    </div><!--!-->
+                                    <div class="spotlight-main"><!--!-->
+                                        <div class="spotlight-icon-box">📦</div>
+                                        <div class="spotlight-info">
+                                            <h3>Каталог товаров &amp; Ритейл</h3><!--!-->
+                                            <p>Матрица модификаторов, вариации остатков SKU, штрихкодирование и
+                                                мгновенный чекаут на кассе.</p>
+                                        </div>
+                                    </div><!--!-->
+                                    <div class="spotlight-features"><span class="feat-pill"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Матрица SKU</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Модификаторы</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Экспресс-чекаут</span>
+                                    </div><!--!-->
+                                    <a class="spotlight-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=1"><span>Запустить в
+                                            Demo Kiosk</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div><!--!-->
+
+
+                                <div class="ux-spotlight-card glass cat-hospitality">
+                                    <div class="spotlight-card-top">
+                                        <div class="spotlight-pill"><!--!--><span class="spotlight-dot"></span>
+                                            <span>Флагман HoReCa</span>
+                                        </div><!--!-->
+                                        <!--!--><span class="spotlight-mode-badge">#03 • BookableResource</span>
+                                    </div><!--!-->
+                                    <div class="spotlight-main"><!--!-->
+                                        <div class="spotlight-icon-box">🗓</div>
+                                        <div class="spotlight-info">
+                                            <h3>Бронирование столов &amp; Времени</h3><!--!-->
+                                            <p>Интерактивная сетка тайм-слотов, план зала ресторана, бронь номеров и
+                                                защита от овербукинга.</p>
+                                        </div>
+                                    </div><!--!-->
+                                    <div class="spotlight-features"><span class="feat-pill"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Тайм-слоты</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> План рассадки</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> SMS &amp; TG Бронь</span>
+                                    </div><!--!-->
+                                    <a class="spotlight-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=3"><span>Запустить в
+                                            Demo Kiosk</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div><!--!-->
+
+
+                                <div class="ux-spotlight-card glass cat-services">
+                                    <div class="spotlight-card-top">
+                                        <div class="spotlight-pill"><!--!--><span class="spotlight-dot"></span>
+                                            <span>Флагман AI &amp; SaaS</span>
+                                        </div><!--!-->
+                                        <!--!--><span class="spotlight-mode-badge">#11 • OnlineService</span>
+                                    </div><!--!-->
+                                    <div class="spotlight-main"><!--!-->
+                                        <div class="spotlight-icon-box">💻</div>
+                                        <div class="spotlight-info">
+                                            <h3>Онлайн-сервис &amp; AI Доступ</h3><!--!-->
+                                            <p>Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и
+                                                подписочный биллинг.</p>
+                                        </div>
+                                    </div><!--!-->
+                                    <div class="spotlight-features"><span class="feat-pill"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Квоты LLM токенов</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> API-ключи</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Webhooks &amp; Автоматизация</span>
+                                    </div><!--!-->
+                                    <a class="spotlight-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=11"><span>Запустить в
+                                            Demo Kiosk</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div><!--!-->
+
+
+                                <div class="ux-spotlight-card glass cat-fintech">
+                                    <div class="spotlight-card-top">
+                                        <div class="spotlight-pill"><!--!--><span class="spotlight-dot"></span>
+                                            <span>Флагман Финтеха</span>
+                                        </div><!--!-->
+                                        <!--!--><span class="spotlight-mode-badge">#09 • Subscription</span>
+                                    </div><!--!-->
+                                    <div class="spotlight-main"><!--!-->
+                                        <div class="spotlight-icon-box">🔄</div>
+                                        <div class="spotlight-info">
+                                            <h3>Регулярные подписки &amp; Биллинг</h3><!--!-->
+                                            <p>Автоматические рекуррентные списания, гибкие тарифные сетки, абонементы и
+                                                фискализация платежей.</p>
+                                        </div>
+                                    </div><!--!-->
+                                    <div class="spotlight-features"><span class="feat-pill"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Авторекурренты</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Тарифные сетки</span><!--!-->
+                                        <span class="feat-pill"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>check_circle</md-icon> Автофискализация</span>
+                                    </div><!--!-->
+                                    <a class="spotlight-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=9"><span>Запустить в
+                                            Demo Kiosk</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                        </div><!--!-->
+
+
+                        <div class="ux-controls-bar">
+                            <div class="ux-search-box glass"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>search</md-icon><!--!-->
+                                <input type="text" placeholder="Поиск по 28 режимам (название, код, описание)..."
+                                    aria-label="Поиск режимов">
+                            </div><!--!-->
+
+
+                            <div class="ux-category-tabs"><button type="button"
+                                    class="ux-tab-btn active"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>apps</md-icon><!--!-->
+                                    <span>Все режимы (28)</span></button><!--!-->
+                                <button type="button" class="ux-tab-btn cat-tab-retail "><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>shopping_bag</md-icon><!--!-->
+                                    <span>Ритейл и Торговля (6)</span></button><!--!-->
+                                <button type="button" class="ux-tab-btn cat-tab-hospitality "><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>restaurant</md-icon><!--!-->
+                                    <span>HoReCa &amp; Бронь (6)</span></button><!--!-->
+                                <button type="button" class="ux-tab-btn cat-tab-services "><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>bolt</md-icon><!--!-->
+                                    <span>Услуги, SaaS &amp; AI (8)</span></button><!--!-->
+                                <button type="button" class="ux-tab-btn cat-tab-fintech "><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>account_balance_wallet</md-icon><!--!-->
+                                    <span>Подписки &amp; Финтех (8)</span></button>
+                            </div>
+                        </div><!--!-->
+
+
+                        <div class="ux-filter-meta"><span class="ux-count-pill"><!--!--><md-icon
+                                    aria-hidden="true"><template shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>tune</md-icon><!--!-->
+                                <span>Показано: <strong>28</strong> из 28</span></span></div>
+                        <div class="ux-modes-grid">
+                            <div class="ux-mode-card glass cat-retail">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">📦</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">Ритейл &amp;
+                                                Каталог</span><!--!-->
+                                            <span class="ux-mode-number-pill">#01</span>
+                                        </div><!--!-->
+                                        <h3>Каталог товаров</h3><!--!-->
+                                        <span class="ux-mode-code">CatalogItem</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Стандартная корзина, вариации, модификаторы и быстрое добавление
+                                    товара.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=1"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-retail">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">⚙</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">Ритейл &amp;
+                                                Каталог</span><!--!-->
+                                            <span class="ux-mode-number-pill">#02</span>
+                                        </div><!--!-->
+                                        <h3>Конфигуратор / Мастер сборки</h3><!--!-->
+                                        <span class="ux-mode-code">Configurator</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Интерактивный мастер сборки (конструктор пиццы, бургеров,
+                                    системных блоков).</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=2"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-hospitality">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">🗓</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">HoReCa &amp;
+                                                Бронь</span><!--!-->
+                                            <span class="ux-mode-number-pill">#03</span>
+                                        </div><!--!-->
+                                        <h3>Бронирование услуги/времени</h3><!--!-->
+                                        <span class="ux-mode-code">BookableResource</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Календарь временных слотов, бронирование столиков, залов и
+                                    ресурсов.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=3"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-hospitality">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">🎫</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">HoReCa &amp;
+                                                Бронь</span><!--!-->
+                                            <span class="ux-mode-number-pill">#04</span>
+                                        </div><!--!-->
+                                        <h3>Электронный билет / Мероприятие</h3><!--!-->
+                                        <span class="ux-mode-code">TicketBooking</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Интерактивный выбор мест в зале, генерация QR-билетов и
+                                    валидация.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=4"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-hospitality">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">🏨</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">HoReCa &amp;
+                                                Бронь</span><!--!-->
+                                            <span class="ux-mode-number-pill">#05</span>
+                                        </div><!--!-->
+                                        <h3>Размещение / Гостиница</h3><!--!-->
+                                        <span class="ux-mode-code">HotelAccommodation</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Выбор дат заезда/выезда, категорий номеров и дополнительных
+                                    опций отеля.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=5"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-hospitality">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">🚗</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">HoReCa &amp;
+                                                Бронь</span><!--!-->
+                                            <span class="ux-mode-number-pill">#06</span>
+                                        </div><!--!-->
+                                        <h3>Аренда транспорта / Оборудования</h3><!--!-->
+                                        <span class="ux-mode-code">VehicleRental</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Почасовая и посуточная аренда транспорта и оборудования с
+                                    залогом.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=6"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-retail">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">🚚</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">Ритейл &amp;
+                                                Каталог</span><!--!-->
+                                            <span class="ux-mode-number-pill">#07</span>
+                                        </div><!--!-->
+                                        <h3>Доставка по адресу</h3><!--!-->
+                                        <span class="ux-mode-code">DeliveryScheduled</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Планирование временных окон доставки товаров и продуктов на дом.
+                                </p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=7"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                            <div class="ux-mode-card glass cat-services">
+                                <div class="ux-mode-card-header">
+                                    <div class="ux-mode-icon-box">📍</div><!--!-->
+                                    <div class="ux-mode-title-box">
+                                        <div class="ux-mode-meta-row"><span class="ux-mode-category-tag">Услуги &amp;
+                                                AI</span><!--!-->
+                                            <span class="ux-mode-number-pill">#08</span>
+                                        </div><!--!-->
+                                        <h3>Гео-сервис / Точка А ➔ Б</h3><!--!-->
+                                        <span class="ux-mode-code">LocationBased</span>
+                                    </div>
+                                </div><!--!-->
+                                <p class="ux-mode-desc">Маршрут из точки А в точку Б, расчет расстояния и интеграция
+                                    такси/курьеров.</p><!--!-->
+                                <div class="ux-mode-card-actions"><button type="button" class="ux-mode-quickview-btn"
+                                        title="Спецификация и фискализация"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>info</md-icon><!--!-->
+                                        <span>Детали</span></button><!--!-->
+                                    <a class="ux-mode-launch-btn"
+                                        href="/kiosk/20240824-0000-0000-0000-000000000002?UxMode=8"><span>Демо</span><!--!-->
+                                        <!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>arrow_forward</md-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ux-expand-container"><button type="button"
+                                class="ux-expand-btn glass"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>expand_more</md-icon><!--!-->
+                                <span>Показать все 28 режимов (+20)</span></button></div>
+                    </section><!--!-->
+
+
+                    <section class="superpowers-bento-section" id="superpowers"><!--!-->
+                        <div class="section-ambient-glow glow-cyan-purple" aria-hidden="true"></div>
+                        <div class="section-title-box">
+                            <div class="section-badge badge-cyan"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>auto_awesome</md-icon><!--!-->
+                                <span>Ключевые возможности Socratic</span>
+                            </div><!--!-->
+                            <h2>Торгово-кассовый комплекс и платежная среда</h2><!--!-->
+                            <p>Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и
+                                учета в едином решении.</p>
+                        </div><!--!-->
+
+                        <div class="superpowers-bento-grid">
+                            <article class="bento-card bento-card-pos glass m3-card m3-card-elevated">
+                                <div class="bento-content">
+                                    <div class="feature-badge badge-cyan"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>point_of_sale</md-icon><!--!-->
+                                        <span>Кассовый терминал</span>
+                                    </div><!--!-->
+                                    <h3>Сенсорная касса для любого формата продаж</h3><!--!-->
+                                    <p>Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов.
+                                        Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата
+                                        (сплит) и моментальный расчет.</p><!--!-->
+                                    <ul class="feature-list">
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>cloud_off</md-icon><span>100% Offline-First: продажи не
+                                                останавливаются при обрыве интернета</span></li><!--!-->
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>print</md-icon><span>Прямое подключение термопринтеров
+                                                ESC/POS, весов CAS и денежных ящиков</span></li><!--!-->
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>payments</md-icon><span>Продажи в рассрочку (BNPL): Uzum
+                                                Nasiya, Zoodpay, Alif Nasiya в 1 клик</span></li>
+                                    </ul><!--!-->
+                                    <div class="feature-cta-box"><a class="cta-btn primary-cta"
+                                            href="/terminal"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>point_of_sale</md-icon><!--!-->
+                                            <span>Открыть кассовый терминал</span><!--!-->
+                                            <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>arrow_forward</md-icon></a></div>
+                                </div><!--!-->
+                                <div class="bento-media"><img src="img/landing_hero_main.png"
+                                        alt="Socratic POS Terminal"></div>
+                            </article><!--!-->
+
+
+                            <article class="bento-card bento-card-fiscal glass m3-card m3-card-elevated">
+                                <div class="bento-content">
+                                    <div class="feature-badge badge-teal"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>qr_code_2</md-icon><!--!-->
+                                        <span>QR-Платежи &amp; Soliq ОФД</span>
+                                    </div><!--!-->
+                                    <h3>QR-Оплата, Фискализация и Маркировка</h3><!--!-->
+                                    <p>Мгновенный прием оплат через банковские приложения, официальная фискализация по
+                                        законам РУз и цифровая маркировка товаров в едином чеке.</p><!--!-->
+                                    <div class="fiscal-highlight-box">
+                                        <div class="fiscal-tag-item"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>receipt_long</md-icon> <!--!--><span>Soliq.uz 1%
+                                                кешбэк</span></div><!--!-->
+                                        <div class="fiscal-tag-item"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>qr_code_scanner</md-icon> <!--!--><span>Click / Payme /
+                                                Uzum</span></div><!--!-->
+                                        <div class="fiscal-tag-item"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>barcode_scanner</md-icon> <!--!--><span>Asl Belgisi
+                                                DataMatrix</span></div>
+                                    </div><!--!-->
+                                    <div class="feature-cta-box"><a class="cta-btn secondary-cta"
+                                            href="/qr-designer"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>qr_code_2</md-icon><!--!-->
+                                            <span>Студия QR-кодов</span><!--!-->
+                                            <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>arrow_forward</md-icon></a></div>
+                                </div><!--!-->
+                                <div class="bento-media"><img src="img/landing_qr_studio.png"
+                                        alt="Socratic QR Studio &amp; Soliq OFD"></div>
+                            </article><!--!-->
+
+
+                            <article class="bento-card bento-card-kiosk glass m3-card m3-card-elevated">
+                                <div class="bento-content">
+                                    <div class="feature-badge badge-purple"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>touch_app</md-icon><!--!-->
+                                        <span>Смарт-Киоски</span>
+                                    </div><!--!-->
+                                    <h3>Автономные терминалы самообслуживания</h3><!--!-->
+                                    <p>Разгрузка очередей в часы пик, интерактивный электронный каталог, умные
+                                        рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.</p><!--!-->
+                                    <ul class="feature-list">
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>contactless</md-icon><span>Бесконтактная оплата картами
+                                                Uzcard, Humo, Visa, Mastercard</span></li><!--!-->
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>sync</md-icon><span>Синхронизация каталога и складских
+                                                остатков в реальном времени</span></li><!--!-->
+                                        <li><!--!--><md-icon aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>face</md-icon><span>Face Pay и распознавание карт постоянного
+                                                клиента</span></li>
+                                    </ul><!--!-->
+                                    <div class="feature-cta-box"><a class="cta-btn secondary-cta"
+                                            href="/kiosk/20240824-0000-0000-0000-000000000002"><!--!--><md-icon
+                                                aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>touch_app</md-icon><!--!-->
+                                            <span>Запустить демо-киоск</span><!--!-->
+                                            <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>arrow_forward</md-icon></a></div>
+                                </div><!--!-->
+                                <div class="bento-media"><img src="img/landing_smart_kiosk.png"
+                                        alt="Socratic Smart Kiosk"></div>
+                            </article><!--!-->
+
+
+                            <article class="bento-card bento-card-analytics glass m3-card m3-card-elevated">
+                                <div class="bento-content">
+                                    <div class="feature-badge badge-indigo"><!--!--><md-icon
+                                            aria-hidden="true"><template shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>analytics</md-icon><!--!-->
+                                        <span>Учет &amp; Аналитика</span>
+                                    </div><!--!-->
+                                    <h3>Контроль бизнеса со смартфона из любой точки мира</h3><!--!-->
+                                    <p>Прозрачный складской учет, списание остатков при каждой продаже, учет сроков
+                                        годности и глубокая финансовая аналитика для руководителя в реальном времени.
+                                    </p><!--!-->
+                                    <!--!-->
+                                    <div class="analytics-metrics-strip">
+                                        <div class="analytics-metric-cell"><span class="metric-num value-emerald">&lt;
+                                                10 мс</span>
+                                            <span class="metric-desc">Синхронизация данных</span>
+                                        </div>
+                                        <div class="analytics-metric-cell"><span
+                                                class="metric-num value-cyan">500+</span>
+                                            <span class="metric-desc">Филиалов в единой сети</span>
+                                        </div>
+                                        <div class="analytics-metric-cell"><span class="metric-num value-purple">24 /
+                                                7</span>
+                                            <span class="metric-desc">Автономная работа</span>
+                                        </div>
+                                    </div>
+                                </div><!--!-->
+                                <div class="bento-media"><img src="img/landing_ai_dashboard.png"
+                                        alt="Socratic Business Analytics"></div>
+                            </article>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="download-section" id="download">
+                        <article class="glass download-header">
+                            <div class="section-badge"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>cloud_download</md-icon><!--!-->
+                                <!--!--><span>Multi-Platform Support</span>
+                            </div><!--!-->
+                            <h2>Socratic UI-ni yuklab olish</h2><!--!-->
+                            <p>Socratic-ga har qanday joyda kiring. Ish stoli, mobil va veb-platformalar uchun
+                                qo'llab-quvvatlash.</p>
+                        </article><!--!-->
+
+                        <div class="platforms-unified-grid">
+                            <div class="platform-card card-windows glass">
+                                <div class="platform-card-header">
+                                    <div class="platform-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>desktop_windows</md-icon></div><!--!-->
+                                    <div class="platform-info"><!--!-->
+                                        <h3>Windows</h3>
+                                        <span>Windows (x64 / ARM64)</span>
+                                    </div>
+                                </div><!--!-->
+                                <div class="platform-desc">
+                                    <p>Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.</p>
+                                </div><!--!-->
+                                <a href="https://static.socratic.uz/releases/windows/socratic-setup.exe" target="_blank"
+                                    class="platform-btn btn-windows"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>download</md-icon><!--!-->
+                                    <span>Скачать для Windows</span></a>
+                            </div><!--!-->
+
+                            <div class="platform-card card-macos glass">
+                                <div class="platform-card-header">
+                                    <div class="platform-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>laptop_mac</md-icon></div><!--!-->
+                                    <div class="platform-info"><!--!-->
+                                        <h3>macOS</h3>
+                                        <span>macOS (Apple Silicon &amp; Intel)</span>
+                                    </div>
+                                </div><!--!-->
+                                <div class="platform-desc">
+                                    <p>Рабочее место управляющего, финансовая аналитика и дизайнер залов.</p>
+                                </div><!--!-->
+                                <a href="https://github.com/socratic-uz/Socratic/releases/latest" target="_blank"
+                                    class="platform-btn btn-macos"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>download</md-icon><!--!-->
+                                    <span>Скачать для macOS</span></a>
+                            </div><!--!-->
+
+                            <div class="platform-card card-web glass">
+                                <div class="platform-card-header">
+                                    <div class="platform-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>language</md-icon></div><!--!-->
+                                    <div class="platform-info"><!--!-->
+                                        <h3>Web / PWA</h3>
+                                        <span>Veb-ilova (PWA)</span>
+                                    </div>
+                                </div><!--!-->
+                                <div class="platform-desc">
+                                    <p>Мгновенный запуск в браузере без установки из любой точки мира.</p>
+                                </div><!--!-->
+                                <a href="home" class="platform-btn btn-web"><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>launch</md-icon><!--!-->
+                                    <span>Veb-ilovani ochish</span></a>
+                            </div><!--!-->
+
+                            <div class="platform-card card-android glass">
+                                <div class="platform-card-header">
+                                    <div class="platform-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>android</md-icon></div><!--!-->
+                                    <div class="platform-info"><!--!-->
+                                        <h3>Android</h3>
+                                        <span>Android (APK / Play Store)</span>
+                                    </div>
+                                </div><!--!-->
+                                <div class="platform-desc">
+                                    <p>Мобильный POS, терминал официанта и складская ревизия на смартфонах.</p>
+                                </div><!--!-->
+                                <a href="https://static.socratic.uz/releases/android/socratic.apk" target="_blank"
+                                    class="platform-btn btn-android"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>download</md-icon><!--!-->
+                                    <span>Скачать для Android</span></a>
+                            </div><!--!-->
+
+                            <div class="platform-card card-ios glass">
+                                <div class="platform-card-header">
+                                    <div class="platform-icon"><!--!--><md-icon aria-hidden="true"><template
+                                                shadowrootmode="open"><!---->
+                                                <slot></slot>
+                                            </template>phone_iphone</md-icon></div><!--!-->
+                                    <div class="platform-info"><!--!-->
+                                        <h3>iOS / iPadOS</h3>
+                                        <span>iOS / iPadOS</span>
+                                    </div>
+                                </div><!--!-->
+                                <div class="platform-desc">
+                                    <p>Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.</p>
+                                </div><!--!-->
+                                <a href="https://github.com/socratic-uz/Socratic/releases/latest" target="_blank"
+                                    class="platform-btn btn-ios"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>download</md-icon><!--!-->
+                                    <span>Скачать для iOS</span></a>
+                            </div><!--!-->
+
+                            <div class="platform-card card-instant glass"><!--!-->
+                                <div class="qr-compact-header"><span class="qr-status-dot"></span>
+                                    <span class="qr-status-text">Socratic Instant Access</span>
+                                </div>
+                                <div class="qr-compact-body"><!--!-->
+                                    <div class="qr-preview-box"><span class="qr-hud-corner hud-tl"
+                                            aria-hidden="true"></span>
+                                        <span class="qr-hud-corner hud-tr" aria-hidden="true"></span>
+                                        <span class="qr-hud-corner hud-bl" aria-hidden="true"></span>
+                                        <span class="qr-hud-corner hud-br" aria-hidden="true"></span>
+                                        <div class="qr-laser-scanner" aria-hidden="true"></div>
+
+                                        <svg class="qr-svg-graphic" viewBox="0 0 256 256" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" role="img"
+                                            aria-label="QR Code to launch Socratic platform">
+                                            <rect width="256" height="256" rx="20" fill="#060913"></rect>
+
+
+                                            <rect x="24" y="24" width="56" height="56" rx="12" stroke="#38bdf8"
+                                                stroke-width="6"></rect>
+                                            <rect x="40" y="40" width="24" height="24" rx="6" fill="#818cf8"></rect>
+
+
+                                            <rect x="176" y="24" width="56" height="56" rx="12" stroke="#38bdf8"
+                                                stroke-width="6"></rect>
+                                            <rect x="192" y="40" width="24" height="24" rx="6" fill="#818cf8"></rect>
+
+
+                                            <rect x="24" y="176" width="56" height="56" rx="12" stroke="#38bdf8"
+                                                stroke-width="6"></rect>
+                                            <rect x="40" y="192" width="24" height="24" rx="6" fill="#818cf8"></rect>
+
+
+                                            <g fill="#38bdf8" opacity="0.9">
+                                                <rect x="92" y="48" width="8" height="8" rx="2"></rect>
+                                                <rect x="108" y="48" width="8" height="8" rx="2"></rect>
+                                                <rect x="124" y="48" width="8" height="8" rx="2"></rect>
+                                                <rect x="140" y="48" width="8" height="8" rx="2"></rect>
+                                                <rect x="156" y="48" width="8" height="8" rx="2"></rect>
+
+                                                <rect x="48" y="92" width="8" height="8" rx="2"></rect>
+                                                <rect x="48" y="108" width="8" height="8" rx="2"></rect>
+                                                <rect x="48" y="124" width="8" height="8" rx="2"></rect>
+                                                <rect x="48" y="140" width="8" height="8" rx="2"></rect>
+                                                <rect x="48" y="156" width="8" height="8" rx="2"></rect>
+
+                                                <rect x="92" y="24" width="10" height="10" rx="3"></rect>
+                                                <rect x="120" y="24" width="10" height="10" rx="3"></rect>
+                                                <rect x="144" y="24" width="10" height="10" rx="3"></rect>
+
+                                                <rect x="24" y="92" width="10" height="10" rx="3"></rect>
+                                                <rect x="38" y="106" width="10" height="10" rx="3"></rect>
+                                                <rect x="24" y="120" width="10" height="10" rx="3"></rect>
+                                                <rect x="38" y="134" width="10" height="10" rx="3"></rect>
+                                                <rect x="24" y="148" width="10" height="10" rx="3"></rect>
+
+                                                <rect x="70" y="92" width="10" height="10" rx="3"></rect>
+                                                <rect x="86" y="106" width="10" height="10" rx="3"></rect>
+                                                <rect x="70" y="120" width="10" height="10" rx="3"></rect>
+                                                <rect x="86" y="134" width="10" height="10" rx="3"></rect>
+
+                                                <rect x="160" y="92" width="10" height="10" rx="3"></rect>
+                                                <rect x="176" y="106" width="10" height="10" rx="3"></rect>
+                                                <rect x="204" y="92" width="10" height="10" rx="3"></rect>
+                                                <rect x="220" y="106" width="10" height="10" rx="3"></rect>
+                                                <rect x="160" y="120" width="10" height="10" rx="3"></rect>
+                                                <rect x="188" y="134" width="10" height="10" rx="3"></rect>
+                                                <rect x="216" y="120" width="10" height="10" rx="3"></rect>
+
+                                                <rect x="92" y="176" width="10" height="10" rx="3"></rect>
+                                                <rect x="106" y="190" width="10" height="10" rx="3"></rect>
+                                                <rect x="120" y="176" width="10" height="10" rx="3"></rect>
+                                                <rect x="134" y="190" width="10" height="10" rx="3"></rect>
+                                                <rect x="148" y="176" width="10" height="10" rx="3"></rect>
+                                                <rect x="92" y="204" width="10" height="10" rx="3"></rect>
+                                                <rect x="120" y="218" width="10" height="10" rx="3"></rect>
+                                                <rect x="148" y="204" width="10" height="10" rx="3"></rect>
+
+                                                <rect x="176" y="176" width="10" height="10" rx="3"></rect>
+                                                <rect x="190" y="190" width="10" height="10" rx="3"></rect>
+                                                <rect x="204" y="176" width="10" height="10" rx="3"></rect>
+                                                <rect x="218" y="190" width="10" height="10" rx="3"></rect>
+                                                <rect x="176" y="204" width="10" height="10" rx="3"></rect>
+                                                <rect x="190" y="218" width="10" height="10" rx="3"></rect>
+                                                <rect x="218" y="218" width="10" height="10" rx="3"></rect>
+                                            </g>
+
+
+                                            <rect x="98" y="98" width="60" height="60" rx="14" fill="#04060a"
+                                                stroke="rgba(56, 189, 248, 0.4)" stroke-width="2"></rect>
+                                            <circle cx="128" cy="128" r="18" fill="url(#qrCenterGrad)"></circle>
+                                            <path
+                                                d="M128 116L131.5 124.5L140 128L131.5 131.5L128 140L124.5 131.5L116 128L124.5 124.5Z"
+                                                fill="#ffffff"></path>
+
+                                            <defs>
+                                                <linearGradient id="qrCenterGrad" x1="110" y1="110" x2="146" y2="146"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#0ea5e9"></stop>
+                                                    <stop offset="1" stop-color="#8b5cf6"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="qr-compact-actions">
+                                        <div class="qr-caption"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>qr_code_scanner</md-icon><!--!-->
+                                            <span>Mobil qurilmada ochish yoki yuklab olish uchun skanerlang</span>
+                                        </div><!--!-->
+                                        <a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"
+                                            class="platform-btn btn-bot"><!--!--><md-icon aria-hidden="true"><template
+                                                    shadowrootmode="open"><!---->
+                                                    <slot></slot>
+                                                </template>send</md-icon><!--!-->
+                                            <span>Telegram-бот</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!--!-->
+
+
+                    <section class="b2b-lead-section glass"><!--!-->
+                        <div class="section-ambient-glow glow-cyan-purple" aria-hidden="true"></div>
+                        <div class="b2b-lead-content">
+                            <div class="section-badge badge-cyan"><!--!--><md-icon aria-hidden="true"><template
+                                        shadowrootmode="open"><!---->
+                                        <slot></slot>
+                                    </template>bolt</md-icon><!--!-->
+                                <span>Быстрый старт за 1 день</span>
+                            </div><!--!-->
+                            <h2>Готовы масштабировать ваш бизнес с Socratic?</h2><!--!-->
+                            <p>Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная
+                                фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая
+                                поддержка под ключ.</p><!--!-->
+                            <div class="b2b-cta-group"><a class="cta-btn hero-cta"
+                                    href="/kiosk/20240824-0000-0000-0000-000000000001"><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>shopping_bag</md-icon><!--!-->
+                                    <span>Оформить тариф в киоске Socratic</span><!--!-->
+                                    <!--!--><md-icon class="cta-arrow" aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>arrow_forward</md-icon></a><!--!-->
+                                <a class="cta-btn primary-cta" href="https://t.me/sardorsafarovv" target="_blank"
+                                    rel="noopener noreferrer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>send</md-icon><!--!-->
+                                    <span>Консультация в Telegram</span></a><!--!-->
+                                <a class="cta-btn secondary-cta" href="https://t.me/socratic_uz_bot" target="_blank"
+                                    rel="noopener noreferrer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>smart_toy</md-icon><!--!-->
+                                    <span>Telegram-бот экосистемы</span></a><!--!-->
+                                <a class="cta-btn secondary-cta" href="/docs"><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>menu_book</md-icon><!--!-->
+                                    <span>Документация</span></a>
+                            </div>
+                        </div>
+                    </section>
+                </main><!--!-->
+
+
+                <footer class="dark-mode glass main-footer">
+                    <div class="footer-brand"><!--!-->
+                        <h3 class="footer-logo">Socratic</h3>
+                        <p>Advanced AI &amp; Multi-Platform Ecosystem</p><!--!-->
+                        <span class="footer-copy">© 2026 Socratic. Все права защищены.</span>
+                    </div><!--!-->
+
+                    <div class="footer-columns">
+                        <ul>
+                            <li class="footer-header">Платформа &amp; Каталог</li><!--!-->
+                            <li><a href="/kiosk/20240824-0000-0000-0000-000000000002"><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>storefront</md-icon> <span>Витрина товаров Demo</span></a></li>
+                            <!--!-->
+                            <li><a href="/kiosk/20240824-0000-0000-0000-000000000001"><!--!--><md-icon
+                                        aria-hidden="true"><template shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>business_center</md-icon> <span>Тарифы и подключение</span></a></li>
+                            <!--!-->
+                            <li><a href="/home"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>domain</md-icon> <span>Каталог заведений</span></a></li><!--!-->
+                            <li><a href="/map"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>map</md-icon> <span>Интерактивная карта</span></a></li><!--!-->
+                            <li><a href="/qr-designer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>qr_code_2</md-icon> <span>QR Designer</span></a></li><!--!-->
+                            <li><a href="/signin"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>login</md-icon> <!--!--><span>Socratic ID</span></a></li>
+                        </ul><!--!-->
+                        <ul>
+                            <li class="footer-header">Ресурсы &amp; Инфо</li><!--!-->
+                            <li><a href="/docs"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>menu_book</md-icon> <span>Hujjatlar</span></a></li><!--!-->
+                            <li><a href="/help"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>help_outline</md-icon> <span>Yordam</span></a></li><!--!-->
+                            <li><a href="/about"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>info</md-icon> <span>Biz haqimizda</span></a></li>
+                        </ul><!--!-->
+                        <ul>
+                            <li class="footer-header">Community &amp; Support</li><!--!-->
+                            <li><a href="https://t.me/sardorsafarovv" target="_blank"
+                                    rel="noopener noreferrer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>support_agent</md-icon> <span>Qo'llab-quvvatlash</span></a></li>
+                            <!--!-->
+                            <li><a href="https://t.me/socratic_uz_bot" target="_blank"
+                                    rel="noopener noreferrer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>send</md-icon> <!--!--><span>Telegram Bot</span></a></li><!--!-->
+                            <li><a href="https://www.instagram.com/socratic.uz/" target="_blank"
+                                    rel="noopener noreferrer"><!--!--><md-icon aria-hidden="true"><template
+                                            shadowrootmode="open"><!---->
+                                            <slot></slot>
+                                        </template>camera_alt</md-icon> <!--!--><span>Instagram</span></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script type="module" src="Components/Layout/ReconnectModal.13ja33weya.razor.js"></script>
+
+    <dialog id="components-reconnect-modal" data-nosnippet="">
+        <div class="components-reconnect-container">
+            <div class="components-rejoining-animation" aria-hidden="true">
+                <div></div>
+                <div></div>
+            </div>
+            <p class="components-reconnect-first-attempt-visible">
+                Rejoining the server...
+            </p>
+            <p class="components-reconnect-repeated-attempt-visible">
+                Rejoin failed... trying again in <span id="components-seconds-to-next-attempt"></span> seconds.
+            </p>
+            <p class="components-reconnect-failed-visible">
+                Failed to rejoin.<br>Please retry or reload the page.
+            </p>
+            <button id="components-reconnect-button" class="components-reconnect-failed-visible">
+                Retry
+            </button>
+            <p class="components-pause-visible">
+                The session has been paused by the server.
+            </p>
+            <button id="components-resume-button" class="components-pause-visible">
+                Resume
+            </button>
+            <p class="components-resume-failed-visible">
+                Failed to resume the session.<br>Please reload the page.
+            </p>
+        </div>
+    </dialog>
+    <script src="https://oauth.telegram.org/js/telegram-login.js?6"></script><ins
+        class="adsbygoogle adsbygoogle-noablate" data-ad-hi="true" data-adsbygoogle-status="done"
+        style="display: none !important;" data-ad-status="unfilled">
+        <div id="aswift_0_host"
+            style="border-width: medium; border-style: none; border-color: currentcolor; border-image: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;">
+            <iframe id="aswift_0" name="aswift_0"
+                style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;min-height:auto;max-height:none;min-width:auto;max-width:none;"
+                sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
+                scrolling="no"
+                src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3226044876387611&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1791630294&amp;plat=3%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&amp;format=0x0&amp;url=https%3A%2F%2Flocalhost%3A6443%2Fkiosk%2F20240824-0000-0000-0000-000000000002&amp;pra=5&amp;aiof=14&amp;asro=0&amp;aimartd=4&amp;aieuf=1&amp;aicrs=1&amp;uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTU0LjAuODAzNy45OCIsbnVsbCwwLG51bGwsIjY0IixbWyJDaHJvbWl1bSIsIjE1NC4wLjgwMzcuOTgiXSxbIkdvb2dsZSBDaHJvbWUiLCIxNTQuMC44MDM3Ljk4Il0sWyJOb3QgQShCcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1791630293913&amp;bpp=1&amp;bdt=16&amp;idt=17&amp;shv=r20261007&amp;mjsv=m202610050101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=1596208121978&amp;frm=20&amp;pv=2&amp;u_tz=300&amp;u_his=2&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=32&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1910&amp;bih=911&amp;scr_x=0&amp;scr_y=0&amp;eid=42531514%2C95404663%2C95404844%2C95405492&amp;oid=2&amp;pvsid=6647770335717755&amp;tmod=641713310&amp;uas=1&amp;nvt=1&amp;fsapi=1&amp;ref=https%3A%2F%2Flocalhost%3A6443%2Fkiosk%2F20240824-0000-0000-0000-000000000002%3F&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1032%2C1920%2C911&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;plas=193x714_r&amp;bz=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=274"
+                data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement"
+                data-load-complete="true"></iframe>
+        </div>
+    </ins>
+    <script src="js/passkeyHelper.js"></script>
+    <script src="js/telegramHelper.js"></script>
+    <script src="js/oauthPopupHelper.js"></script>
+    <script>
+        window.socraticAdNetwork = {
+            pushGoogle: function () {
+                try {
+                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) { }
+            },
+            renderYandex: function (blockId, containerId) {
+                try {
+                    var render = function () {
+                        if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
+                            window.Ya.Context.AdvManager.render({
+                                blockId: blockId,
+                                renderTo: containerId
+                            });
+                        }
+                    };
+                    if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
+                        render();
+                    } else {
+                        window.yaContextCb = window.yaContextCb || [];
+                        window.yaContextCb.push(render);
+                    }
+                } catch (e) { }
+            }
+        };
+        window.socraticAdSense = {
+            push: function () {
+                window.socraticAdNetwork.pushGoogle();
+            }
+        };
+    </script>
+    <script src="_framework/blazor.web.9hsif5t8mt.js"></script>
+    <!-- Visual Studio Browser Link -->
+    <script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData"
+        data-requestid="e96818f20ab2488aaf1034d99e2fe4cb" data-requestmappingfromserver="false"
+        data-connecturl="http://localhost:55284/e6a28ed31491413aaed512c99aad63b0/browserLink"></script>
+    <!-- End Browser Link -->
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+    <script src="js/material-color-utilities.bundle.js" type="module"></script><iframe
+        src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe>
+</body><iframe id="google_esf" name="google_esf"
+    src="https://googleads.g.doubleclick.net/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html"
+    style="display: none;"></iframe>
+
+</html>

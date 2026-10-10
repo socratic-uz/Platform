@@ -1,0 +1,1837 @@
+[
+  {
+    "name": "Layout Styles Showcase",
+    "file": "C:\\Users\\owner\\source\\repos\\Socratic\\src\\Frontend\\Platform\\Shared\\DesignSystem\\Layout\\wwwroot\\layout-styles-demo.html",
+    "viewports": [
+      {
+        "viewport": "Mobile (390px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 390,
+          "docClientWidth": 390,
+          "overflowingElements": [
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 92,
+              "diff": 68,
+              "textSnippet": "ИНСПЕКЦИЯ ДЕФЕКТОВ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "bug_report\nАудит дефектов верстки\n5"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 97,
+              "diff": 73,
+              "textSnippet": "СЕТКИ И ПРИМИТИВЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Grid-примитивы\n7"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "splitscreen\nMaster-Detail & Сплиты\n3"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 100,
+              "diff": 76,
+              "textSnippet": "АРХИТЕКТУРА СТРАНИЦ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "call_to_action\nПодвалы (Footer Grids)\n2"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 116,
+              "diff": 92,
+              "textSnippet": "КОММЕРЧЕСКИЕ ШАБЛОНЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "view_kanban\nКанбан и KDS заказов\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "point_of_sale\nPOS Терминал и Киоск\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "monitoring\nАналитика и KPI сетки\n3"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "grid_guides\nАдаптивные коллекции\n4"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-section-title-wrap",
+              "id": "",
+              "clientWidth": 770,
+              "scrollWidth": 786,
+              "diff": 16,
+              "textSnippet": "bug_report\nАудит косяков верстки и граничных случа"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "id": "",
+              "clientWidth": 416,
+              "scrollWidth": 547,
+              "diff": 131,
+              "textSnippet": "СверхдлинноеНаименованиеПозицииБезПробеловДляПрове"
+            }
+          ],
+          "totalOverflowing": 16,
+          "smallTouchTargets": [
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "bug_report\nАудит дефектов верс"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Gr"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "splitscreen\nMaster-Detail & Сп"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "call_to_action\nПодвалы (Footer"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "view_kanban\nКанбан и KDS заказ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "point_of_sale\nPOS Терминал и К"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "monitoring\nАналитика и KPI сет"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "grid_guides\nАдаптивные коллекц"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn-left",
+              "width": 201,
+              "height": 26,
+              "textSnippet": "widgets\nВитрина компонентов"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 855,
+              "height": 36,
+              "textSnippet": "POS Терминал"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 855,
+              "height": 36,
+              "textSnippet": "Смарт-Киоск"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 855,
+              "height": 36,
+              "textSnippet": "О платформе"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 855,
+              "height": 36,
+              "textSnippet": "Документация"
+            }
+          ],
+          "totalSmallTouchTargets": 14
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 390,
+          "docClientWidth": 390,
+          "blowouts": [
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 68,
+              "clientWidth": 24,
+              "scrollWidth": 92,
+              "textSnippet": "ИНСПЕКЦИЯ ДЕФЕКТОВ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "bug_report\nАудит дефектов верстки\n5"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 73,
+              "clientWidth": 24,
+              "scrollWidth": 97,
+              "textSnippet": "СЕТКИ И ПРИМИТИВЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Grid-примитивы\n7"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "splitscreen\nMaster-Detail & Сплиты\n3"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 76,
+              "clientWidth": 24,
+              "scrollWidth": 100,
+              "textSnippet": "АРХИТЕКТУРА СТРАНИЦ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "call_to_action\nПодвалы (Footer Grids)\n2"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 92,
+              "clientWidth": 24,
+              "scrollWidth": 116,
+              "textSnippet": "КОММЕРЧЕСКИЕ ШАБЛОНЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "view_kanban\nКанбан и KDS заказов\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "point_of_sale\nPOS Терминал и Киоск\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "monitoring\nАналитика и KPI сетки\n3"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "grid_guides\nАдаптивные коллекции\n4"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "diff": 149,
+              "clientWidth": 425,
+              "scrollWidth": 574,
+              "textSnippet": "СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетк"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "touch_app"
+            }
+          ],
+          "totalBlowouts": 15
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      },
+      {
+        "viewport": "Tablet (820px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 820,
+          "docClientWidth": 820,
+          "overflowingElements": [
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 92,
+              "diff": 68,
+              "textSnippet": "ИНСПЕКЦИЯ ДЕФЕКТОВ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "bug_report\nАудит дефектов верстки\n5"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 97,
+              "diff": 73,
+              "textSnippet": "СЕТКИ И ПРИМИТИВЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Grid-примитивы\n7"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "splitscreen\nMaster-Detail & Сплиты\n3"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 100,
+              "diff": 76,
+              "textSnippet": "АРХИТЕКТУРА СТРАНИЦ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "call_to_action\nПодвалы (Footer Grids)\n2"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 116,
+              "diff": 92,
+              "textSnippet": "КОММЕРЧЕСКИЕ ШАБЛОНЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "view_kanban\nКанбан и KDS заказов\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "point_of_sale\nPOS Терминал и Киоск\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "monitoring\nАналитика и KPI сетки\n3"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "id": "",
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "diff": 6,
+              "textSnippet": "grid_guides\nАдаптивные коллекции\n4"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-section-title-wrap",
+              "id": "",
+              "clientWidth": 770,
+              "scrollWidth": 786,
+              "diff": 16,
+              "textSnippet": "bug_report\nАудит косяков верстки и граничных случа"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "id": "",
+              "clientWidth": 416,
+              "scrollWidth": 547,
+              "diff": 131,
+              "textSnippet": "СверхдлинноеНаименованиеПозицииБезПробеловДляПрове"
+            }
+          ],
+          "totalOverflowing": 16,
+          "smallTouchTargets": [
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "bug_report\nАудит дефектов верс"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Gr"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "splitscreen\nMaster-Detail & Сп"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "call_to_action\nПодвалы (Footer"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "view_kanban\nКанбан и KDS заказ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "point_of_sale\nPOS Терминал и К"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "monitoring\nАналитика и KPI сет"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "width": 28,
+              "height": 48,
+              "textSnippet": "grid_guides\nАдаптивные коллекц"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn-left",
+              "width": 201,
+              "height": 26,
+              "textSnippet": "widgets\nВитрина компонентов"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 412,
+              "height": 36,
+              "textSnippet": "POS Терминал"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 412,
+              "height": 36,
+              "textSnippet": "Смарт-Киоск"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 412,
+              "height": 36,
+              "textSnippet": "О платформе"
+            },
+            {
+              "tag": "a",
+              "className": "",
+              "width": 412,
+              "height": 36,
+              "textSnippet": "Документация"
+            }
+          ],
+          "totalSmallTouchTargets": 14
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 820,
+          "docClientWidth": 820,
+          "blowouts": [
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 68,
+              "clientWidth": 24,
+              "scrollWidth": 92,
+              "textSnippet": "ИНСПЕКЦИЯ ДЕФЕКТОВ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn active",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "bug_report\nАудит дефектов верстки\n5"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 73,
+              "clientWidth": 24,
+              "scrollWidth": 97,
+              "textSnippet": "СЕТКИ И ПРИМИТИВЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "auto_awesome_mosaic\nБазовые Grid-примитивы\n7"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "splitscreen\nMaster-Detail & Сплиты\n3"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 76,
+              "clientWidth": 24,
+              "scrollWidth": 100,
+              "textSnippet": "АРХИТЕКТУРА СТРАНИЦ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "dock\nШапки, крошки и бары\n4"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "call_to_action\nПодвалы (Footer Grids)\n2"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-nav-category-header",
+              "diff": 92,
+              "clientWidth": 24,
+              "scrollWidth": 116,
+              "textSnippet": "КОММЕРЧЕСКИЕ ШАБЛОНЫ"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "view_kanban\nКанбан и KDS заказов\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "point_of_sale\nPOS Терминал и Киоск\n2"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "monitoring\nАналитика и KPI сетки\n3"
+            },
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn",
+              "diff": 6,
+              "clientWidth": 28,
+              "scrollWidth": 34,
+              "textSnippet": "grid_guides\nАдаптивные коллекции\n4"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "diff": 149,
+              "clientWidth": 425,
+              "scrollWidth": 574,
+              "textSnippet": "СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетк"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "touch_app"
+            }
+          ],
+          "totalBlowouts": 15
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      },
+      {
+        "viewport": "Desktop (1440px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 1440,
+          "docClientWidth": 1440,
+          "overflowingElements": [
+            {
+              "tag": "div",
+              "className": "showcase-topbar-left",
+              "id": "",
+              "clientWidth": 184,
+              "scrollWidth": 382,
+              "diff": 198,
+              "textSnippet": "menu\nАрхитектура верстки и сетки\nW3C CSS Modules •"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "id": "",
+              "clientWidth": 225,
+              "scrollWidth": 547,
+              "diff": 322,
+              "textSnippet": "СверхдлинноеНаименованиеПозицииБезПробеловДляПрове"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "touch_app"
+            },
+            {
+              "tag": "p",
+              "className": "card-mid-row m3-truncate",
+              "id": "",
+              "clientWidth": 148,
+              "scrollWidth": 172,
+              "diff": 24,
+              "textSnippet": "2x Капучино, 1x Круассан"
+            },
+            {
+              "tag": "strong",
+              "className": "",
+              "id": "",
+              "clientWidth": 10,
+              "scrollWidth": 14,
+              "diff": 4,
+              "textSnippet": "Каталог блюд"
+            },
+            {
+              "tag": "div",
+              "className": "pos-product-card glass",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 76,
+              "diff": 52,
+              "textSnippet": "coffee\nАмерикано 300мл\n18 000 UZS"
+            },
+            {
+              "tag": "div",
+              "className": "pos-product-card glass",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 76,
+              "diff": 52,
+              "textSnippet": "cake\nТирамису\n32 000 UZS"
+            },
+            {
+              "tag": "div",
+              "className": "footer-brand-col",
+              "id": "",
+              "clientWidth": 87,
+              "scrollWidth": 111,
+              "diff": 24,
+              "textSnippet": "auto_awesome\nSocratic\n\nИнтеллектуальная торговая э"
+            }
+          ],
+          "totalOverflowing": 8,
+          "smallTouchTargets": [
+            {
+              "tag": "a",
+              "className": "showcase-nav-btn-left",
+              "width": 201,
+              "height": 26,
+              "textSnippet": "widgets\nВитрина компонентов"
+            }
+          ],
+          "totalSmallTouchTargets": 1
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 1440,
+          "docClientWidth": 1440,
+          "blowouts": [
+            {
+              "tag": "div",
+              "className": "showcase-topbar-left",
+              "diff": 216,
+              "clientWidth": 166,
+              "scrollWidth": 382,
+              "textSnippet": "menu\nАрхитектура верстки и сетки\nW3C CSS Modules • 100% CSS"
+            },
+            {
+              "tag": "div",
+              "className": "item-headline stress-target",
+              "diff": 349,
+              "clientWidth": 225,
+              "scrollWidth": 574,
+              "textSnippet": "СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетк"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "touch_app"
+            },
+            {
+              "tag": "article",
+              "className": "showcase-card",
+              "diff": 234,
+              "clientWidth": 514,
+              "scrollWidth": 748,
+              "textSnippet": "СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетк"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-card-body",
+              "diff": 234,
+              "clientWidth": 514,
+              "scrollWidth": 748,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-demo-canvas",
+              "diff": 254,
+              "clientWidth": 474,
+              "scrollWidth": 728,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            },
+            {
+              "tag": "div",
+              "className": "header-grid-layout",
+              "diff": 254,
+              "clientWidth": 474,
+              "scrollWidth": 728,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            },
+            {
+              "tag": "div",
+              "className": "header-start-zone",
+              "diff": 384,
+              "clientWidth": 344,
+              "scrollWidth": 728,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            },
+            {
+              "tag": "p",
+              "className": "card-mid-row m3-truncate",
+              "diff": 24,
+              "clientWidth": 148,
+              "scrollWidth": 172,
+              "textSnippet": "2x Капучино, 1x Круассан"
+            },
+            {
+              "tag": "strong",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 10,
+              "scrollWidth": 14,
+              "textSnippet": "Каталог блюд"
+            },
+            {
+              "tag": "div",
+              "className": "pos-product-card glass",
+              "diff": 52,
+              "clientWidth": 24,
+              "scrollWidth": 76,
+              "textSnippet": "coffee\nАмерикано 300мл\n18 000 UZS"
+            },
+            {
+              "tag": "div",
+              "className": "pos-product-card glass",
+              "diff": 52,
+              "clientWidth": 24,
+              "scrollWidth": 76,
+              "textSnippet": "cake\nТирамису\n32 000 UZS"
+            },
+            {
+              "tag": "article",
+              "className": "showcase-card",
+              "diff": 234,
+              "clientWidth": 514,
+              "scrollWidth": 748,
+              "textSnippet": "СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетк"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-card-body",
+              "diff": 234,
+              "clientWidth": 514,
+              "scrollWidth": 748,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            },
+            {
+              "tag": "div",
+              "className": "showcase-demo-canvas",
+              "diff": 254,
+              "clientWidth": 474,
+              "scrollWidth": 728,
+              "textSnippet": "auto_awesome\nСверхдлинноеНаименованиеБезПробеловКотороеМожет"
+            }
+          ],
+          "totalBlowouts": 18
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Material.Web Styles Showcase",
+    "file": "C:\\Users\\owner\\source\\repos\\Socratic\\src\\Frontend\\Platform\\Shared\\DesignSystem\\Material.Web\\wwwroot\\material-web-styles-demo.html",
+    "viewports": [
+      {
+        "viewport": "Mobile (390px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 390,
+          "docClientWidth": 390,
+          "overflowingElements": [
+            {
+              "tag": "main",
+              "className": "catalog-main",
+              "id": "",
+              "clientWidth": 390,
+              "scrollWidth": 758,
+              "diff": 368,
+              "textSnippet": "Material.Web Showcase & Style Inspector\nMaterial D"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-fab",
+              "className": "",
+              "id": "",
+              "clientWidth": 94,
+              "scrollWidth": 168,
+              "diff": 74,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "diff": 84,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            }
+          ],
+          "totalOverflowing": 21,
+          "smallTouchTargets": [
+            {
+              "tag": "md-outlined-button",
+              "className": "",
+              "width": 40,
+              "height": 48,
+              "textSnippet": "dashboard_customize\nВитрина La"
+            }
+          ],
+          "totalSmallTouchTargets": 1
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 390,
+          "docClientWidth": 390,
+          "blowouts": [
+            {
+              "tag": "main",
+              "className": "catalog-main",
+              "diff": 1057,
+              "clientWidth": 390,
+              "scrollWidth": 1447,
+              "textSnippet": "Material.Web Showcase & Style Inspector\nMaterial Design 3\nSt"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-fab",
+              "className": "",
+              "diff": 74,
+              "clientWidth": 94,
+              "scrollWidth": 168,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "diff": 84,
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            }
+          ],
+          "totalBlowouts": 21
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      },
+      {
+        "viewport": "Tablet (820px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 820,
+          "docClientWidth": 820,
+          "overflowingElements": [
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "diff": 84,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            }
+          ],
+          "totalOverflowing": 13,
+          "smallTouchTargets": [
+            {
+              "tag": "md-outlined-button",
+              "className": "",
+              "width": 40,
+              "height": 48,
+              "textSnippet": "dashboard_customize\nВитрина La"
+            }
+          ],
+          "totalSmallTouchTargets": 1
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 820,
+          "docClientWidth": 820,
+          "blowouts": [
+            {
+              "tag": "main",
+              "className": "catalog-main",
+              "diff": 627,
+              "clientWidth": 820,
+              "scrollWidth": 1447,
+              "textSnippet": "Material.Web Showcase & Style Inspector\nMaterial Design 3\nSt"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "diff": 84,
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "section",
+              "className": "catalog-section",
+              "diff": 651,
+              "clientWidth": 772,
+              "scrollWidth": 1423,
+              "textSnippet": "view_agenda\nLists & Cards (Списки и карточки сущностей)\n\nСтр"
+            }
+          ],
+          "totalBlowouts": 17
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      },
+      {
+        "viewport": "Desktop (1440px)",
+        "baseline": {
+          "hasHScroll": false,
+          "docScrollWidth": 1440,
+          "docClientWidth": 1440,
+          "overflowingElements": [
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "id": "",
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "diff": 4,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "id": "",
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "diff": 84,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "id": "",
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "diff": 15,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "id": "",
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "diff": 4,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "id": "",
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "diff": 14,
+              "textSnippet": ""
+            }
+          ],
+          "totalOverflowing": 13,
+          "smallTouchTargets": [
+            {
+              "tag": "md-outlined-button",
+              "className": "",
+              "width": 40,
+              "height": 48,
+              "textSnippet": "dashboard_customize\nВитрина La"
+            }
+          ],
+          "totalSmallTouchTargets": 1
+        },
+        "stressResult": {
+          "hasHScroll": false,
+          "docScrollWidth": 1440,
+          "docClientWidth": 1440,
+          "blowouts": [
+            {
+              "tag": "main",
+              "className": "catalog-main",
+              "diff": 327,
+              "clientWidth": 1160,
+              "scrollWidth": 1487,
+              "textSnippet": "Material.Web Showcase & Style Inspector\nMaterial Design 3\nSt"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "verified"
+            },
+            {
+              "tag": "md-filled-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "add"
+            },
+            {
+              "tag": "md-outlined-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "search"
+            },
+            {
+              "tag": "md-filled-tonal-icon-button",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 40,
+              "scrollWidth": 44,
+              "textSnippet": "settings"
+            },
+            {
+              "tag": "md-icon",
+              "className": "",
+              "diff": 84,
+              "clientWidth": 24,
+              "scrollWidth": 108,
+              "textSnippet": "discount"
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-checkbox",
+              "className": "",
+              "diff": 15,
+              "clientWidth": 18,
+              "scrollWidth": 33,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-switch",
+              "className": "",
+              "diff": 4,
+              "clientWidth": 52,
+              "scrollWidth": 56,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "md-radio",
+              "className": "",
+              "diff": 14,
+              "clientWidth": 20,
+              "scrollWidth": 34,
+              "textSnippet": ""
+            },
+            {
+              "tag": "section",
+              "className": "catalog-section",
+              "diff": 391,
+              "clientWidth": 1032,
+              "scrollWidth": 1423,
+              "textSnippet": "view_agenda\nLists & Cards (Списки и карточки сущностей)\n\nСтр"
+            }
+          ],
+          "totalBlowouts": 17
+        },
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+        ]
+      }
+    ]
+  }
+]

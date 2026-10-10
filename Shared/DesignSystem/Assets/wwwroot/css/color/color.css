@@ -1,0 +1,1438 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: color/color.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    #components-reconnect-modal button,
+    .ad-slide-touch-prompt,
+    .assistant-message-icon,
+    .auth-logo-badge,
+    .badge-counter,
+    .brand-screensaver-cta,
+    .btn-ready,
+    .det-bbox-label,
+    .footer-brand-badge,
+    .header-rocket-icon,
+    .landing-auth-btn:hover,
+    .landing-auth-btn:hover md-icon,
+    .lang-chip-btn.lang-chip--active,
+    .m3-dialog-btn-primary,
+    .map-category-chip.active,
+    .mobile-nav-item:active,
+    .mobile-nav-item:hover,
+    .new-badge,
+    .picker-day-dot.active,
+    .picker-swatch-check,
+    .route-start-btn,
+    .showcase-brand-badge,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .sidebar-brand-icon,
+    .signin-logo-badge,
+    .ux-discount-badge,
+    header.landing-header .header-brand-icon-box
+) {
+    color: var(--md-sys-color-on-primary);
+}
+
+:where(
+    .ad-disclaimer,
+    .auth-divider,
+    .card-payment,
+    .column-empty,
+    .crumb-sep,
+    .det-placeholder-icon,
+    .empty-cart-view .empty-icon,
+    .faceid-notice,
+    .kds-empty-col,
+    .kiosk-wish-icon,
+    .landing-nav-link,
+    .m3-dialog-toggle-desc,
+    .md3-closed-badge,
+    .md3-time-label,
+    .md3-time-separator,
+    .picker-day-dot,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-org-name,
+    .product-img-placeholder,
+    .qrg-back,
+    .qrg-color-picker-wrapper,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-field-label,
+    .qrg-group-head,
+    .qrg-slider-header,
+    .sidebar-nav-category,
+    .support-log-empty,
+    .table-icon
+) {
+    color: var(--md-sys-color-outline);
+}
+
+.avatar-button {
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+}
+
+.avatar-button {
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+}
+
+.avatar-button {
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button {
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button svg * {
+    fill: var(--md-sys-color-on-primary-container);
+}
+
+md-dialog.contacts,
+md-dialog.faceid-profile-modal,
+.avatar-container md-dialog {
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+}
+
+:where(
+    .ad-upgrade-link,
+    .card-icon,
+    .column-icon.icon-making,
+    .discount-row,
+    .feature-icon.info,
+    .header-icon.icon-making,
+    .in-stock-text,
+    .info-icon,
+    .m3-pill-badge.tertiary,
+    .promo-success-text,
+    .spec-icon.in-stock,
+    .trust-badge md-icon
+) {
+    color: var(--md-sys-color-tertiary);
+}
+
+:where(
+    .feature-icon.star,
+    .m3-pill-badge.secondary,
+    .trust-badge md-icon
+) {
+    color: var(--md-sys-color-secondary);
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.m3-mode-toggle-figure > :nth-child(1),
+.mode-toggle-figure > .mode-toggle-icon:nth-child(1) {
+    stroke: var(--md-sys-color-on-primary-container);
+}
+
+:where(
+    .link-stack svg,
+    .link-stack svg *,
+    .m3-mode-toggle-figure > :nth-child(2),
+    .mode-toggle-figure > .mode-toggle-icon:nth-child(2)
+) {
+    fill: var(--md-sys-color-on-surface);
+}
+
+:where(
+    #components-reconnect-modal button:hover,
+    .analytics-period-chip.active,
+    .badge-completed,
+    .badge-ready,
+    .badge-trial,
+    .badge-verified,
+    .badge.completed,
+    .badge.trial,
+    .badge.verified,
+    .card-completed .card-status-chip,
+    .card-paid .card-status-chip,
+    .catalog-badge,
+    .det-logo-badge,
+    .det-status-badge.active,
+    .doc-type,
+    .header-brand-icon-box,
+    .item-qty-badge,
+    .item-status-pill.status-completed,
+    .item-status-pill.status-paid,
+    .kds-status-tag,
+    .kiosk-brand-logo-fallback,
+    .m3-avatar,
+    .m3-doc-type,
+    .m3-pill-badge,
+    .m3-status-badge.completed,
+    .m3-status-badge.paid,
+    .m3-status-badge.status-completed,
+    .m3-status-badge.status-paid,
+    .m3-status-badge.success,
+    .mode-edit,
+    .notification-banner,
+    .order-status-badge.status-completed,
+    .order-status-badge.status-paid,
+    .picker-icon-badge.active,
+    .pillar-icon-box,
+    .preset-btn:hover,
+    .qrg-badge,
+    .qrg-logo-badge,
+    .ready-badge,
+    .showcase-nav-btn.active,
+    .status-badge.active,
+    .summary-title,
+    .user-message
+) {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+:where(
+    .analytics-mode-btn.active,
+    .archive-type,
+    .back-button:focus-visible,
+    .back-button:hover,
+    .badge-active,
+    .badge.active,
+    .card-collecting .card-status-chip,
+    .count-badge,
+    .det-permission-rationale,
+    .drawer-header .badge,
+    .item-status-pill.status-collected,
+    .item-status-pill.status-collecting,
+    .item-status-pill.status-shipping,
+    .m3-archive-type,
+    .m3-back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-count-badge,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    .m3-status-badge.collected,
+    .m3-status-badge.collecting,
+    .m3-status-badge.info,
+    .m3-status-badge.shipping,
+    .m3-status-badge.status-collected,
+    .m3-status-badge.status-collecting,
+    .m3-status-badge.status-shipping,
+    .order-status-badge.status-collected,
+    .order-status-badge.status-collecting,
+    .order-status-badge.status-shipping,
+    .otp-target-hint,
+    .pos-exact-bill-btn,
+    .ux-widget-group,
+    :where(.analytics-mode-btn, .m3-segmented-btn).active
+) {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+:where(
+    .badge-making,
+    .badge-paused,
+    .badge-pro,
+    .badge.paused,
+    .badge.pro,
+    .card-making .card-status-chip,
+    .card-shipping .card-status-chip,
+    .current-plan-indicator.pro,
+    .item-status-pill.status-making,
+    .m3-pill-badge.tertiary,
+    .m3-sheet-type,
+    .m3-status-badge.making,
+    .m3-status-badge.status-making,
+    .m3-status-badge.warning,
+    .mode-preview,
+    .order-status-badge.status-making,
+    .place-details-badge.place,
+    .share-toast,
+    .sheet-type,
+    .ux-widget-auction
+) {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+:where(
+    #blazor-error-ui,
+    .badge-blocked,
+    .badge-none,
+    .badge.blocked,
+    .badge.none,
+    .det-diag-box-warning,
+    .det-status-badge:not(.active),
+    .error-banner,
+    .item-status-pill.status-canceled,
+    .m3-banner-error,
+    .m3-pdf-type,
+    .m3-status-badge.canceled,
+    .m3-status-badge.error,
+    .m3-status-badge.status-canceled,
+    .order-status-badge.status-canceled,
+    .pdf-type,
+    .place-details-badge.org,
+    .required-badge,
+    .status-badge.inactive
+) {
+    color: var(--md-sys-color-on-error-container);
+}
+
+:where(
+    .auth-error-banner,
+    .badge-expired,
+    .badge-with-ads,
+    .badge.expired,
+    .badge.with-ads,
+    .kiosk-wish-icon.wished,
+    .map-route-close-btn:hover,
+    .map-route-remove-via-btn:hover,
+    .nav-control-btn.finish,
+    .place-details-avatar.org,
+    .route-error,
+    .signin-error-banner,
+    .validation-message
+) {
+    color: var(--md-sys-color-error);
+}
+
+:where(
+    .banner-close-btn,
+    .card-interactive,
+    .cta-btn md-icon,
+    .cta-btn span,
+    .kiosk-product-title-link,
+    .m3-card-interactive,
+    button.col-title
+) {
+    color: inherit;
+}
+
+:where(
+    #components-reconnect-modal p,
+    .about-subtitle,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .analytics-status-pill,
+    .auth-subtitle,
+    .badge-cancelled,
+    .badge.cancelled,
+    .body-subtext,
+    .card-created .card-status-chip,
+    .card-meta,
+    .card-mid-row,
+    .card-subtitle,
+    .cart-count,
+    .catalog-desc,
+    .column-empty p,
+    .control-label,
+    .crumb-link,
+    .det-active-sessions-empty,
+    .det-btn-icon-sm,
+    .det-card-title-sm,
+    .det-label,
+    .det-placeholder,
+    .det-stat-label,
+    .det-subtitle,
+    .det-voice-room,
+    .docs-refresh-btn,
+    .drop-container,
+    .drop-title,
+    .empty-cart-view,
+    .empty-plans-desc,
+    .empty-plans-icon-wrapper,
+    .example-subtitle,
+    .explorer-subtitle,
+    .footer-brand-tagline,
+    .footer-copyright,
+    .footer-links-list a,
+    .generic-type,
+    .help-subtitle,
+    .info-label,
+    .item-status-pill.status-created,
+    .item-support,
+    .item-unit-price,
+    .items-count-badge,
+    .kds-empty-col p,
+    .kds-time-ago,
+    .kiosk-brand-tagline,
+    .kiosk-category-label,
+    .kiosk-dialog-text,
+    .kiosk-empty-state p,
+    .kiosk-hero-content p,
+    .label-title,
+    .landing-subpage-subtitle,
+    .lang-chevron,
+    .lang-chip-btn,
+    .m3-bottom-nav-item,
+    .m3-card-media-placeholder,
+    .m3-card-subtitle,
+    .m3-dialog-description,
+    .m3-dialog-toggle-icon,
+    .m3-empty-column p,
+    .m3-empty-state-desc,
+    .m3-filter-chip,
+    .m3-generic-type,
+    .m3-info-label,
+    .m3-label-sm,
+    .m3-page-header-subtitle,
+    .m3-progress-labels,
+    .m3-row-label,
+    .m3-segmented-btn,
+    .m3-status-badge.created,
+    .m3-status-badge.status-created,
+    .m3-table th,
+    .m3-trust-footer,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .mobile-nav-item,
+    .not-found-icon,
+    .order-items-table th,
+    .order-status-badge.status-created,
+    .order-subtitle,
+    .orders-table th,
+    .org-card-desc,
+    .org-media-placeholder,
+    .page-subtitle,
+    .pagination-text,
+    .payment-dashboard .info-label,
+    .payment-trust-footer,
+    .picker-hex-prefix,
+    .picker-icon-badge,
+    .picker-popover-title,
+    .picker-preview-text,
+    .pillar-features li,
+    .plan-currency,
+    .pos-empty-state p,
+    .preset-label,
+    .preview-info,
+    .preview-label,
+    .price-label,
+    .price-row,
+    .product-currency,
+    .product-desc,
+    .product-description-block h3,
+    .product-unit,
+    .progress-labels,
+    .promotion-modal-subtitle,
+    .qr-instruction,
+    .resend-countdown,
+    .resolution-badge,
+    .route-alternative-arrival,
+    .route-alternative-distance,
+    .route-alternative-label,
+    .route-options-toolbar-meta,
+    .row-label,
+    .section-desc,
+    .seller-address,
+    .shipping-card,
+    .showcase-card-btn,
+    .showcase-card-desc,
+    .showcase-controls-bar,
+    .showcase-hero p,
+    .showcase-nav-btn,
+    .showcase-nav-count,
+    .showcase-stat-lbl,
+    .showcase-topbar-subtitle,
+    .sidebar-link,
+    .signin-subtitle,
+    .spec-icon,
+    .spec-label,
+    .stat-label,
+    .stat-value .unit,
+    .status-badge.inactive,
+    .status-text,
+    .store-not-found .not-found-icon,
+    .store-not-found p,
+    .subscription-description,
+    .summary-date,
+    .support-label,
+    .surveyContainer,
+    .tier-price small,
+    .trial-days-label,
+    .trust-badge,
+    .upload-subtext,
+    .ux-widget-quote,
+    .variant-dialog-subtext,
+    .wishlist-desc-text,
+    .wishlist-details-desc,
+    .wishlist-placeholder,
+    :where(.m3-search-container, .material-search-container) [slot="trailing-icon"],
+    :where(.m3-search-container, .material-search-container) md-icon[slot="leading-icon"],
+    :where(md-filled-card, md-outlined-card, md-elevated-card) p,
+    p
+),
+.search-input::placeholder {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(
+    #components-reconnect-modal,
+    .about-title,
+    .active-orders-label,
+    .analytics-config-btn,
+    .analytics-date-picker-trigger,
+    .analytics-mode-btn:hover,
+    .analytics-period-chip:hover,
+    .assistant-message-text pre > code,
+    .attract-loop-content,
+    .auth-card,
+    .auth-title,
+    .booking-picker-card,
+    .card-amount,
+    .card-order-id,
+    .card-title,
+    .cart-expand-icon,
+    .cart-total,
+    .catalog-title,
+    .citation,
+    .color-hex,
+    .column-badge,
+    .column-title,
+    .count-badge,
+    .crumb-current,
+    .current-plan-indicator,
+    .designer-page-root,
+    .det-card-title,
+    .det-logs-console,
+    .det-title,
+    .dialog-headline-wrap,
+    .docs-header-breadcrumb,
+    .docs-sidebar-title,
+    .drawer-footer .total-row,
+    .drawer-header .headline,
+    .drawer-panel,
+    .empty-plans-title,
+    .example-title,
+    .explorer-title-group h4,
+    .faceid-status-text,
+    .file-name,
+    .footer-brand-link,
+    .footer-brand-title,
+    .footer-links-list a:hover,
+    .fullscreen-loading,
+    .header-brand-link,
+    .help-title,
+    .home-title,
+    .info-value,
+    .item-headline,
+    .item-name,
+    .item-total-price,
+    .kds-product-name,
+    .kiosk-brand-name,
+    .kiosk-empty-state h3,
+    .kiosk-hero-content h1,
+    .landing-floating-auth-btn,
+    .landing-nav-link:hover,
+    .landing-subpage-title,
+    .lang-chip-btn:hover,
+    .lang-menu-item,
+    .lang-menu-item:hover,
+    .lang-pill-btn,
+    .link-stack a,
+    .link-stack article,
+    .loading-progress-text,
+    .m3-card-title,
+    .m3-dialog-close-btn,
+    .m3-dialog-header h3,
+    .m3-dialog-toggle-title,
+    .m3-drawer-panel,
+    .m3-empty-state-title,
+    .m3-filter-chip:hover,
+    .m3-info-value,
+    .m3-page-header-title,
+    .m3-period-picker-trigger,
+    .m3-row-value,
+    .m3-selection-item,
+    .m3-summary-title,
+    .m3-table td,
+    .m3-total-label,
+    .m3-video-type,
+    .md3-dialog-headline,
+    .md3-time-input,
+    .message-list-container,
+    .navigator-stats-bar,
+    .order-items-table td,
+    .orders-table,
+    .org-card-name,
+    .organizations-map-page,
+    .page-heading,
+    .payment-dashboard,
+    .payment-dashboard .info-value,
+    .picker-hex-input,
+    .picker-trigger-title,
+    .plan-name,
+    .plan-title,
+    .plans-section h2,
+    .pos-catalog-header h4,
+    .pos-empty-state h5,
+    .pos-orders-label,
+    .pos-product-title-text,
+    .pos-quick-bill-btn,
+    .preset-btn,
+    .preview-title,
+    .product-description-text,
+    .product-title,
+    .qr-designer-page-root,
+    .qrg-back:hover,
+    .qty-val,
+    .route-alternative-card,
+    .route-alternative-time,
+    .route-close:hover,
+    .route-options-toolbar-btn,
+    .row-value,
+    .screensaver-pro-badge,
+    .seat-designer-page-root,
+    .section-title,
+    .select-input,
+    .seller-name,
+    .session-item-title,
+    .showcase-brand-title,
+    .showcase-card-title,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn:hover,
+    .showcase-section-title,
+    .showcase-stat-val,
+    .showcase-topbar-title,
+    .sidebar-brand-title,
+    .signin-card,
+    .signin-title,
+    .smart-grid-container h4,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea,
+    .spec-value,
+    .store-not-found h2,
+    .summary-title,
+    .table-container,
+    .table-container td,
+    .table-container th,
+    .text-input,
+    .tier-name,
+    .total-label,
+    .upload-text,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    .variant-dialog-title,
+    .video-card-header h3,
+    .video-type,
+    .wishlist-title-text,
+    :where(.analytics-mode-btn, .m3-segmented-btn):hover,
+    :where(.avatar-container, md-dialog.contacts, md-dialog.faceid-profile-modal) .headline,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) h5,
+    assistant-message pre > code,
+    code,
+    footer.app-footer,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header.app-header,
+    header.app-header.landing-header,
+    main.showcase-page,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card,
+    table.quickgrid td,
+    table.quickgrid th
+) {
+    color: var(--md-sys-color-on-surface);
+}
+
+:where(
+    .ad-network-badge,
+    .advance-prompt,
+    .amount-cell,
+    .audio-type,
+    .avatar-pulse md-icon,
+    .back-button,
+    .column-icon.icon-ready,
+    .crumb-link:hover,
+    .det-logo-badge md-icon,
+    .det-permission-rationale md-icon,
+    .det-stat-value,
+    .det-voice-title,
+    .docs-breadcrumb-link,
+    .docs-group-header,
+    .docs-header-icon,
+    .drawer-footer .total-value,
+    .empty-mini-icon,
+    .explorer-title-group md-icon,
+    .faceid-icon-placeholder,
+    .feat-icon,
+    .feature-icon.ok,
+    .footer-col-title,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .header-icon,
+    .header-icon.icon-ready,
+    .headline,
+    .invoice-amount,
+    .item-icon-wrapper,
+    .item-price,
+    .item-status-pill.status-made,
+    .kds-empty-icon,
+    .kds-order-ref,
+    .kiosk-brand-icon,
+    .kiosk-empty-icon,
+    .kiosk-product-title-link:hover,
+    .label-title,
+    .landing-mobile-menu-toggle:hover,
+    .landing-nav-link md-icon,
+    .lang-globe-icon,
+    .lang-menu-item.is-selected,
+    .lang-toggle-btn:hover,
+    .m3-amount-cell,
+    .m3-audio-type,
+    .m3-back-button,
+    .m3-bottom-nav-item.active,
+    .m3-dialog-icon,
+    .m3-empty-column-icon,
+    .m3-empty-state-icon,
+    .m3-label,
+    .m3-legend,
+    .m3-page-header-icon,
+    .m3-pill-badge,
+    .m3-price-badge,
+    .m3-selection-item:hover,
+    .m3-status-badge.made,
+    .m3-status-badge.status-made,
+    .m3-total-value,
+    .maneuver-icon,
+    .md3-headline-icon,
+    .meta-highlight,
+    .mobile-nav-item md-icon,
+    .nav-control-btn.active,
+    .option-add-price,
+    .order-status-badge.status-made,
+    .panel-section-title,
+    .payment-support a,
+    .picker-badge,
+    .place-details-avatar,
+    .plan-price-wrap,
+    .pos-empty-icon,
+    .pos-price-text,
+    .pos-tech-chip,
+    .pos-ux-mode-title,
+    .preview-product-price,
+    .price-tag,
+    .price-value,
+    .product-price,
+    .product-tag-chip,
+    .profile-title,
+    .qrg-org,
+    .qrg-section-title,
+    .qrg-slider-val,
+    .route-alternative-action,
+    .schedule-table th,
+    .score-circle,
+    .section-heading,
+    .section-title md-icon,
+    .seller-browse-all,
+    .seller-logo-placeholder,
+    .seller-name:hover,
+    .session-item-subtitle,
+    .shipping-fee,
+    .showcase-brand-icon,
+    .showcase-card-btn:hover,
+    .showcase-card-code,
+    .showcase-lib-badge,
+    .showcase-nav-category-header,
+    .showcase-section-icon,
+    .showcase-stat-icon,
+    .sidebar-brand-subtitle,
+    .sidebar-link:hover,
+    .stat-item.eta .stat-value,
+    .summary-check-icon,
+    .support-log-line,
+    .tier-price,
+    .total-value,
+    .trial-days-highlight,
+    .trust-badge,
+    .upload-icon,
+    .ux-mode-badge-overlay,
+    .wishlist-details-price,
+    .wishlist-price-tag,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) .price-tag,
+    a,
+    a:hover
+) {
+    color: var(--md-sys-color-primary);
+}
+
+:where(
+    .chat-page-root,
+    .landing-page-root
+) {
+    color-scheme: dark;
+}
+
+.video-caption {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
+}
+
+:where(
+    .badge-age-restriction,
+    .blazor-error-boundary
+) {
+    color: var(--md-sys-color-on-error);
+}
+
+.brand-screensaver-tagline {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
+}
+
+.ad-network-partner {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
+}
+
+.ad-org-context {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
+}
+
+:where(
+    .btn-complete,
+    .popular-badge,
+    .pro-tag
+) {
+    color: var(--md-sys-color-on-tertiary);
+}
+
+:where(
+    .docs-article,
+    body
+) {
+    color: var(--md-sys-color-on-background);
+}
+
+:where(
+    .ad-upgrade-link:hover,
+    .pro-badge-icon
+) {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+
+:where(
+    .link-stack svg,
+    .link-stack svg *
+) {
+    stroke: var(--md-sys-color-on-surface);
+}
+
+.det-danger-btn {
+    --md-filled-button-container-color: var(--md-sys-color-error);
+}
+
+.det-danger-btn {
+    --md-filled-button-label-text-color: var(--md-sys-color-on-error);
+}
+
+.det-tertiary-btn {
+    --md-filled-button-container-color: var(--md-sys-color-tertiary);
+}
+
+.det-tertiary-btn {
+    --md-filled-button-label-text-color: var(--md-sys-color-on-tertiary);
+}
+
+:root {
+    --map-primary: var(--md-sys-color-primary);
+}
+
+:root {
+    --map-primary-container: var(--md-sys-color-primary-container);
+}
+
+:root {
+    --map-on-primary: var(--md-sys-color-on-primary);
+}
+
+:root {
+    --map-surface: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+}
+
+:root {
+    --map-surface-strong: rgb(from var(--md-sys-color-surface) r g b / 0.95);
+}
+
+:root {
+    --map-surface-soft: var(--md-sys-color-surface-container-low);
+}
+
+:root {
+    --map-surface-muted: var(--md-sys-color-surface-container);
+}
+
+:root {
+    --map-on-surface: var(--md-sys-color-on-surface);
+}
+
+:root {
+    --map-on-surface-variant: var(--md-sys-color-on-surface-variant);
+}
+
+:root {
+    --map-text: var(--md-sys-color-on-surface);
+}
+
+:root {
+    --map-text-muted: var(--md-sys-color-on-surface-variant);
+}
+
+:root {
+    --map-error: var(--md-sys-color-error);
+}
+
+:root {
+    --map-shadow: 0 12px 30px rgb(from var(--md-sys-color-shadow) r g b / 0.08), 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.03);
+}
+
+:where(
+    .map-action-button,
+    .map-category-chip,
+    .map-global-suggestion-button,
+    .map-measure-badge-value,
+    .map-panel-toggle,
+    .map-route-header-title,
+    .map-route-profile-chip:hover,
+    .map-route-suggestion-button,
+    .place-details-back-btn,
+    .place-details-name,
+    .place-info-row .info-value,
+    .route-button,
+    .search-clear-btn:hover,
+    .search-input,
+    .yandex-ctrl-btn
+) {
+    color: var(--map-text);
+}
+
+:where(
+    .map-measure-badge-hint,
+    .map-panel-toggle-tab,
+    .map-route-add-via-btn,
+    .map-route-close-btn,
+    .map-route-profile-chip,
+    .map-route-remove-via-btn,
+    .map-route-suggestion-meta,
+    .map-route-swap-btn,
+    .org-description,
+    .place-coordinates,
+    .place-details-header-title,
+    .place-info-row .info-label,
+    .route-close,
+    .route-loading,
+    .search-clear-btn,
+    .search-icon,
+    .search-route-btn
+) {
+    color: var(--map-text-muted);
+}
+
+:where(
+    .click-popup-btn-secondary:hover,
+    .map-action-button:hover:not(:disabled),
+    .map-category-chip:hover,
+    .map-global-suggestion-item.active .map-global-suggestion-button,
+    .map-panel-toggle-tab:hover,
+    .map-route-add-via-btn:hover,
+    .map-route-profile-chip.active,
+    .map-route-swap-btn:hover,
+    .place-details-back-btn:hover,
+    .search-route-btn:hover,
+    .yandex-ctrl-btn:hover
+) {
+    color: var(--map-primary);
+}
+
+:where(
+    .click-popup-btn,
+    .map-action-button.primary,
+    .map-action-button.primary:hover:not(:disabled),
+    .search-route-btn.active,
+    .yandex-ctrl-btn.active
+) {
+    color: var(--map-on-primary);
+}
+
+:where(
+    .nav-control-btn,
+    .navigator-maneuver-bar
+) {
+    color: var(--md-sys-color-inverse-on-surface);
+}
+
+.maneuver-text {
+    color: rgb(from var(--md-sys-color-inverse-on-surface) r g b / 0.8);
+}
+
+:where(
+    .click-popup-btn-secondary,
+    .click-popup-coords
+) {
+    color: var(--map-on-surface);
+}
+
+.click-popup-address {
+    color: var(--map-on-surface-variant);
+}
+
+.landing-page-root {
+    --landing-bg: #030712;
+}
+
+.landing-page-root {
+    --landing-surface: rgba(13, 19, 34, 0.84);
+}
+
+.landing-page-root {
+    --landing-surface-hover: rgba(20, 29, 52, 0.94);
+}
+
+.landing-page-root {
+    --landing-text-main: #f8fafc;
+}
+
+.landing-page-root {
+    --landing-text-sub: #94a3b8;
+}
+
+.landing-page-root {
+    --landing-text-muted: #64748b;
+}
+
+.landing-page-root {
+    color: var(--landing-text-main);
+}
+
+:where(
+    .badge-cyan,
+    .chip-1 md-icon,
+    .hero-badge,
+.feature-badge,
+.section-badge
+) {
+    color: #38bdf8;
+}
+
+:where(
+    .badge-purple,
+    .chip-3 md-icon
+) {
+    color: #c084fc;
+}
+
+.badge-teal {
+    color: #2dd4bf;
+}
+
+.badge-indigo {
+    color: #818cf8;
+}
+
+:where(
+    .bento-content h3,
+    .evolution-card h3,
+    .footer-header,
+    .hero-pill-link:hover,
+    .hero-title,
+    .org-card-header h3,
+    .platform-btn,
+    .platform-info h3,
+    .spatial-wing-header h3,
+    .spotlight-info h3,
+    .ux-empty-state h3,
+    .ux-modal-title,
+    .ux-search-box input,
+    .ux-tab-btn:hover
+) {
+    color: var(--md-sys-color-on-surface, #f8fafc);
+}
+
+:where(
+    .b2b-lead-content h2,
+    .download-header h2,
+    .evolution-header h2,
+    .footer-logo,
+    .section-title-box h2,
+    .title-gradient,
+    .value-cyan,
+    .value-emerald,
+    .value-purple,
+    .value-teal
+) {
+    -webkit-text-fill-color: transparent;
+}
+
+.title-sub {
+    color: var(--landing-text-main, #f8fafc);
+}
+
+.hero-subtitle {
+    color: var(--landing-text-sub, #94a3b8);
+}
+
+.pills-label {
+    color: var(--md-sys-color-outline, #64748b);
+}
+
+:where(
+    .card-macos .platform-icon,
+    .feat-pill,
+    .feat-pill span,
+    .feature-list li,
+    .hero-pill-link,
+    .org-tag,
+    .platform-desc p,
+    .qr-caption,
+    .ux-modal-btn-secondary,
+    .ux-modal-desc,
+    .ux-mode-number-pill,
+    .ux-mode-quickview-btn,
+    .venue-chip
+) {
+    color: var(--md-sys-color-on-surface-variant, #cbd5e1);
+}
+
+:where(
+    .active-evo .evo-icon,
+    .card-windows .platform-icon,
+    .evolution-arrow,
+    .feature-list li md-icon,
+    .footer-columns a:hover,
+    .footer-columns md-icon,
+    .hero-pill-link md-icon,
+    .org-tag md-icon,
+    .platform-icon,
+    .qr-caption md-icon,
+    .qr-status-text,
+    .spatial-meta-note,
+    .spatial-meta-note md-icon,
+    .spec-card-icon,
+    .ux-expand-btn md-icon,
+    .ux-modal-code,
+    .ux-mode-quickview-btn md-icon,
+    .ux-mode-quickview-btn:hover,
+    .wing-geomap .venue-icon
+) {
+    color: var(--md-sys-color-primary, #38bdf8);
+}
+
+:where(
+    .primary-cta,
+    .qr-bot-btn:hover md-icon,
+    .secondary-cta,
+    .secondary-cta:hover,
+    .spotlight-launch-btn:hover,
+    .stage-tab.active,
+    .tertiary-cta,
+    .tertiary-cta:hover,
+    .ux-expand-btn:hover,
+    .ux-modal-btn-primary,
+    .ux-modal-btn-primary:hover,
+    .ux-modal-btn-secondary:hover,
+    .ux-mode-launch-btn:hover,
+    .ux-reset-filter-btn:hover,
+    .ux-tab-btn.active
+) {
+    color: #ffffff;
+}
+
+:where(
+    .floating-chip,
+    .hero-cta
+) {
+    color: #f8fafc;
+}
+
+:where(
+    .b2b-lead-content p,
+    .bento-content p,
+    .download-header p,
+    .evolution-card p,
+    .evolution-header p,
+    .footer-brand p,
+    .footer-columns a,
+    .legend-item,
+    .metric-desc,
+    .org-card-header p,
+    .platform-info span,
+    .section-title-box p,
+    .spatial-subcard p,
+    .spatial-wing-header p,
+    .spec-card-text p,
+    .spec-label,
+    .spotlight-info p,
+    .spotlight-mode-badge,
+    .spotlight-sub,
+    .stage-tab,
+    .ux-count-pill,
+    .ux-empty-state p,
+    .ux-mode-code,
+    .ux-mode-desc,
+    .ux-search-clear,
+    .ux-tab-btn
+) {
+    color: var(--md-sys-color-on-surface-variant, #94a3b8);
+}
+
+.stage-tab:hover {
+    color: #f1f5f9;
+}
+
+.chip-2 md-icon {
+    color: #10b981;
+}
+
+:where(
+    .platform-btn:hover,
+    .section-title-box h2,
+    .spotlight-launch-btn,
+    .ux-search-clear:hover
+) {
+    color: var(--md-sys-color-on-surface, #ffffff);
+}
+
+:where(
+    .card-ios .platform-icon,
+    .evo-icon
+) {
+    color: var(--md-sys-color-tertiary, #c084fc);
+}
+
+:where(
+    .fiscal-tag-item,
+    .spec-card-text h4,
+    .subcard-header h4,
+    .ux-count-pill strong,
+    .ux-expand-btn,
+    .ux-mode-title-box h3
+) {
+    color: var(--md-sys-color-on-surface, #f1f5f9);
+}
+
+:where(
+    .fiscal-tag-item md-icon,
+    .venue-icon
+) {
+    color: var(--md-sys-color-secondary, #2dd4bf);
+}
+
+.card-web .platform-icon {
+    color: var(--md-sys-color-tertiary, #34d399);
+}
+
+.card-android .platform-icon {
+    color: var(--md-sys-color-secondary, #4ade80);
+}
+
+.footer-copy {
+    color: var(--md-sys-color-on-surface-variant, rgba(255, 255, 255, 0.5));
+}
+
+.spotlight-header-badge {
+    color: #fde047;
+}
+
+:where(
+    .spotlight-pill,
+    .ux-mode-category-tag
+) {
+    color: var(--cat-accent, #38bdf8);
+}
+
+.cat-retail {
+    --cat-accent: #38bdf8;
+}
+
+.cat-retail {
+    --cat-glow: rgba(56, 189, 248, 0.25);
+}
+
+.cat-retail {
+    --cat-pill-bg: rgba(56, 189, 248, 0.12);
+}
+
+.cat-retail {
+    --cat-icon-bg: rgba(56, 189, 248, 0.12);
+}
+
+.cat-hospitality {
+    --cat-accent: #fb923c;
+}
+
+.cat-hospitality {
+    --cat-glow: rgba(251, 146, 60, 0.25);
+}
+
+.cat-hospitality {
+    --cat-pill-bg: rgba(251, 146, 60, 0.12);
+}
+
+.cat-hospitality {
+    --cat-icon-bg: rgba(251, 146, 60, 0.12);
+}
+
+.cat-services {
+    --cat-accent: #c084fc;
+}
+
+.cat-services {
+    --cat-glow: rgba(192, 132, 252, 0.25);
+}
+
+.cat-services {
+    --cat-pill-bg: rgba(192, 132, 252, 0.12);
+}
+
+.cat-services {
+    --cat-icon-bg: rgba(192, 132, 252, 0.12);
+}
+
+.cat-fintech {
+    --cat-accent: #34d399;
+}
+
+.cat-fintech {
+    --cat-glow: rgba(52, 211, 153, 0.25);
+}
+
+.cat-fintech {
+    --cat-pill-bg: rgba(52, 211, 153, 0.12);
+}
+
+.cat-fintech {
+    --cat-icon-bg: rgba(52, 211, 153, 0.12);
+}
+
+:where(
+    .ux-empty-icon-box
+),
+.ux-search-box input::placeholder {
+    color: var(--md-sys-color-on-surface-variant, #64748b);
+}
+
+.ux-reset-filter-btn {
+    color: #fca5a5;
+}
+
+.ux-mode-launch-btn {
+    color: var(--md-sys-color-on-surface, #e2e8f0);
+}
+
+.ux-quickview-dialog {
+    --md-dialog-container-color: rgba(10, 15, 28, 0.96);
+}
+
+.loading-progress circle {
+    fill: none;
+}
+
+.loading-progress circle {
+    stroke: var(--md-sys-color-surface-container-high);
+}
+
+.loading-progress circle {
+    stroke-width: 0.6rem;
+}
+
+.loading-progress circle:last-child {
+    stroke: var(--md-sys-color-primary);
+}
+
+.loading-progress circle:last-child {
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item,
+    nav a.nav-item {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item md-icon,
+    nav a.nav-item md-icon {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item.active md-icon,
+    nav a.nav-item.active md-icon {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+    nav.glass a.nav-item span,
+    nav a.nav-item span {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.glass a.nav-item.active span,
+    nav a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop,
+    nav.glass:not(.nav-mobile) {
+        color: var(--md-sys-color-on-surface);
+    }
+    nav.nav-desktop a.nav-item,
+    nav.glass:not(.nav-mobile) a.nav-item {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item:hover md-icon,
+    nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined {
+        color: var(--md-sys-color-on-surface);
+    }
+    nav.nav-desktop a.nav-item.active md-icon,
+    nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+    nav.nav-desktop a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+    nav.nav-desktop a.nav-item.active span,
+    nav.glass:not(.nav-mobile) a.nav-item.active span {
+        color: var(--md-sys-color-on-surface);
+    }
+}
+

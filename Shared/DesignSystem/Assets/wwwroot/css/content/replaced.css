@@ -1,0 +1,89 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: content/replaced.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .m3-ratio-card,
+    .m3-ratio-kiosk,
+    .m3-ratio-portrait,
+    .m3-ratio-square,
+    .m3-ratio-video,
+    .m3-ratio-wide
+) {
+    aspect-ratio: ;
+}
+
+:where(
+    .m3-card-media,
+    .org-media,
+    .wishlist-media
+) {
+    aspect-ratio: 16 / 9;
+}
+
+:where(
+    .avatar-button img,
+    .bento-media img,
+    .hero-stage-img,
+    .image-preview,
+    .local-video-pip,
+    .m3-ratio-card,
+    .m3-ratio-kiosk,
+    .m3-ratio-portrait,
+    .m3-ratio-square,
+    .m3-ratio-video,
+    .m3-ratio-wide,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .product-img,
+    .product-main-img,
+    .remote-video,
+    .seller-logo,
+    .thumb-img,
+    .video-player-wrapper video,
+    .wishlist-details-thumb,
+    :where(.m3-card-media, .org-media, .wishlist-media) img,
+    :where(md-filled-card, md-outlined-card, md-elevated-card) figure > img
+) {
+    object-fit: cover;
+}
+
+:where(
+    .file-card,
+    .upload-card
+) {
+    aspect-ratio: 1;
+}
+
+:where(
+    .brand-screensaver-logo,
+    .det-frame-video,
+    .det-webrtc-video,
+    .fullscreen-video,
+    .kiosk-brand-logo,
+    .qrg-card-logo
+) {
+    object-fit: contain;
+}
+
+.product-main-image-wrap {
+    aspect-ratio: 4 / 3;
+}
+
+:where(
+    .kiosk-brand-logo,
+    .pos-card-img,
+    .pos-card-img-placeholder
+) {
+    aspect-ratio: 1 / 1;
+}
+
+:where(
+    .product-img,
+    .product-media
+) {
+    aspect-ratio: 16 / 10;
+}
+

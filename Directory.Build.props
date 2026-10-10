@@ -71,6 +71,8 @@
     <Layout>$(PlatformSharedDir)DesignSystem/Layout/Layout.csproj</Layout>
     <Composition>$(PlatformSharedDir)Composition/Composition.csproj</Composition>
 
+    <Assets>$(PlatformSharedDir)DesignSystem/Assets/Assets.csproj</Assets>
+    <Styles Condition="'$(Styles)' == ''">$(Assets)</Styles>
     <MaterialWeb>$(PlatformSharedDir)DesignSystem/Material.Web/Material.Web.csproj</MaterialWeb>
     <SmartWeb>$(PlatformSharedDir)DesignSystem/Smart.Web/Smart.Web.csproj</SmartWeb>
     <QuickGrid>$(PlatformSharedDir)DesignSystem/QuickGrid/QuickGrid.csproj</QuickGrid>

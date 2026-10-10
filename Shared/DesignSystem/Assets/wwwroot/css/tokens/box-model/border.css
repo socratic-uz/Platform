@@ -1,0 +1,90 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: tokens/box-model/border.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --md-sys-shape-corner-none: 0px;
+}
+
+:root {
+    --md-sys-shape-corner-extra-small: 4px;
+}
+
+:root {
+    --md-sys-shape-corner-small: 8px;
+}
+
+:root {
+    --md-sys-shape-corner-medium: 12px;
+}
+
+:root {
+    --md-sys-shape-corner-large: 16px;
+}
+
+:root {
+    --md-sys-shape-corner-extra-large: 28px;
+}
+
+:root {
+    --md-sys-shape-corner-full: 9999px;
+}
+
+:root {
+    --md-sys-shape-expressive-card: 24px;
+}
+
+:root {
+    --md-sys-shape-expressive-pill: 9999px;
+}
+
+:root {
+    --md-sys-shape-expressive-button: 20px;
+}
+
+:root {
+    --md-sys-shape-expressive-dock: 32px;
+}
+
+:root {
+    --md-sys-shape-expressive-dialog: 28px;
+}
+
+:root {
+    --md-sys-shape-expressive-container: 24px;
+}
+
+:root {
+    --md-sys-shape-expressive-asymmetric-1: 28px 8px 28px 8px;
+}
+
+:root {
+    --md-sys-shape-expressive-asymmetric-2: 8px 28px 8px 28px;
+}
+
+:root {
+    --md-sys-shape-expressive-cutout: 24px 24px 8px 24px;
+}
+
+:root {
+    --md-sys-shape-asymmetric-start: var(--md-sys-shape-expressive-asymmetric-1);
+}
+
+:root {
+    --md-sys-shape-asymmetric-end: var(--md-sys-shape-expressive-asymmetric-2);
+}
+
+:root {
+    --md-sys-shape-card-expressive: var(--md-sys-shape-expressive-card);
+}
+
+:root {
+    --md-sys-shape-dialog-expressive: var(--md-sys-shape-expressive-dialog);
+}
+
+:root {
+    --md-sys-shape-chip-expressive: var(--md-sys-shape-expressive-pill);
+}
+

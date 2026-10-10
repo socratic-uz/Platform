@@ -1,5 +1,5 @@
 
-import { Hct, MaterialDynamicColors, DynamicScheme, themeFromSourceColor,/**/  hexFromArgb, argbFromHex } from '/_content/Material.Web/material-color-utilities.bundle.js';
+import { Hct, MaterialDynamicColors, DynamicScheme, themeFromSourceColor, hexFromArgb, argbFromHex } from '/_content/Assets/js/material-color-utilities.bundle.js';
 
 export function getCssVariables(source, customColors = [], isDark, contrastLevel = 0.0) {
     // �������� ���� � ������� ARGB

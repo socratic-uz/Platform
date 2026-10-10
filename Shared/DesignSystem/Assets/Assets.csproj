@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Assets</RootNamespace>
+    <AssemblyName>Assets</AssemblyName>
+    <PackageId>Assets</PackageId>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DisableStaticWebAssetsCompression>true</DisableStaticWebAssetsCompression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\icons\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\audio\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\maps\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <!-- Track all W3C CSS source modules for incremental build -->
+  <ItemGroup>
+    <CssSourceFiles Include="wwwroot\css\**\*.css" 
+                    Exclude="wwwroot\css\*.min.css*;wwwroot\css\*.map" />
+    <ResxSourceFiles Include="Resources\*.resx" />
+  </ItemGroup>
+
+  <!-- Automated LightningCSS compilation & C# token generation pipeline -->
+  <Target Name="BuildAssetsBundle"
+          BeforeTargets="ResolveStaticWebAssetsInputs;BeforeCompile;BeforeBuild"
+          Inputs="@(CssSourceFiles);@(ResxSourceFiles)"
+          Outputs="wwwroot\css\styles.bundle.min.css;Constants\Classes.g.cs;Constants\Assets.g.cs;Constants\Loc.g.cs;Constants\Icons.g.cs"
+          Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)scripts/bundle-css.mjs')">
+    <Message Importance="High" Text="⚡ [MSBuild] Compiling W3C CSS bundle via LightningCSS with Brotli/Gzip pre-compression..." />
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/bundle-css.mjs&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          ContinueOnError="WarnAndContinue"
+          StandardOutputImportance="Normal" />
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-css-classes.mjs&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          ContinueOnError="WarnAndContinue"
+          StandardOutputImportance="Low" />
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-asset-paths.mjs&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          ContinueOnError="WarnAndContinue"
+          StandardOutputImportance="Normal" />
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-localization-keys.mjs&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          ContinueOnError="WarnAndContinue"
+          StandardOutputImportance="Normal" />
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-icon-constants.mjs&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          ContinueOnError="WarnAndContinue"
+          StandardOutputImportance="Normal" />
+  </Target>
+
+</Project>

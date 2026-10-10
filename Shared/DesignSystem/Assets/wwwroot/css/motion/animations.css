@@ -1,0 +1,381 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: motion/animations.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-status-dot.pulse::after,
+.status-dot.pulse::after {
+    animation: m3-pulse 2s var(--md-sys-motion-easing-spring) infinite;
+}
+
+.picker-popover-panel {
+    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
+}
+
+.m3-skeleton::after {
+    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
+}
+
+:where(
+    .pulse-indicator,
+    .status-pulse-dot
+) {
+    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.faceid-scanner-frame.scanning::after {
+    animation: authScanLine 1.8s infinite ease-in-out;
+}
+
+.landing-mobile-menu-drawer {
+    animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.kiosk-attract-loop {
+    animation: kioskFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+.brand-screensaver-body {
+    animation: kioskSlideUp 0.6s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.pulse-ring {
+    animation: kioskRingPulse 2s cubic-bezier(0.24, 0, 0, 0.38) infinite;
+}
+
+.ad-network-screensaver-body {
+    animation: kioskSlideUp 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ai-blob-canvas svg,
+svg.ai-blob-svg {
+    animation: blobSpin 20s linear infinite;
+}
+
+.det-bbox {
+    animation: bboxPulse 1.5s infinite alternate ease-in-out;
+}
+
+.avatar-pulse {
+    animation: avatarPulse 2s infinite ease-in-out;
+}
+
+.selected-org-card {
+    animation: map-card-in 0.18s ease-out;
+}
+
+.place-details-panel {
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bg-spotlight-hero {
+    animation: spotlightPulseHero 12s ease-in-out infinite alternate;
+}
+
+.bg-spotlight-bento {
+    animation: spotlightPulseBento 16s ease-in-out infinite alternate;
+}
+
+:where(
+    .dot-cyan,
+    .live-pulse-dot
+) {
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+.floating-chip {
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+}
+
+.chip-2 {
+    animation-delay: 2s;
+}
+
+.chip-3 {
+    animation-delay: 1s;
+}
+
+.dot-emerald {
+    animation: livePulse 2.4s ease-in-out infinite;
+}
+
+.card-instant .qr-laser-scanner {
+    animation: qrLaserScan 3.2s ease-in-out infinite alternate;
+}
+
+.qr-status-dot {
+    animation: qrPulseDot 2s infinite ease-in-out;
+}
+
+#components-reconnect-modal {
+    animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
+}
+
+#components-reconnect-modal[open] {
+    animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
+}
+
+#components-reconnect-modal[open] {
+    animation-fill-mode: both;
+}
+
+#components-reconnect-modal::backdrop {
+    animation: components-reconnect-modal-fadeInOpacity 0.5s ease-in-out;
+}
+
+.components-rejoining-animation div {
+    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.components-rejoining-animation div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@keyframes m3-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes m3-scale-up {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes m3-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+@keyframes m3-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@keyframes authScanLine {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(216px); opacity: 0; }
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+}
+
+@keyframes slideDownDrawer {
+    from { transform: translateY(-16px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes kioskFadeIn {
+    from { opacity: 0; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes kioskRingPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.08); opacity: 0; }
+    100% { transform: scale(1.08); opacity: 0; }
+}
+
+@keyframes kioskSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blobSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@keyframes bboxPulse {
+    from {
+        box-shadow: 0 0 8px var(--md-sys-color-primary-container);
+        border-color: var(--md-sys-color-primary);
+    }
+    to {
+        box-shadow: 0 0 16px var(--md-sys-color-primary);
+        border-color: var(--md-sys-color-primary);
+    }
+}
+
+@keyframes avatarPulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--md-sys-color-primary-container);
+    }
+    70% {
+        box-shadow: 0 0 0 20px transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}
+
+@keyframes map-card-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spotlightPulseHero {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.85; }
+    50% { transform: scale(1.08) translate(-20px, 30px); opacity: 1; }
+    100% { transform: scale(0.96) translate(15px, -15px); opacity: 0.8; }
+}
+
+@keyframes spotlightPulseBento {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.75; }
+    50% { transform: scale(1.06) translate(30px, -20px); opacity: 0.95; }
+    100% { transform: scale(0.95) translate(-15px, 25px); opacity: 0.7; }
+}
+
+@keyframes livePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.6;
+    }
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes qrPulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes qrLaserScan {
+    0% { top: 10px; opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { top: calc(100% - 12px); opacity: 0.3; }
+}
+
+@keyframes components-reconnect-modal-slideUp {
+    0% {
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes components-reconnect-modal-fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes components-reconnect-modal-fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes components-rejoining-animation {
+    0%, 4.9% {
+        top: 32px;
+        left: 32px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 32px;
+        left: 32px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 64px;
+        height: 64px;
+        opacity: 0;
+    }
+}
+

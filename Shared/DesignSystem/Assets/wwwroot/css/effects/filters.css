@@ -1,0 +1,309 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: effects/filters.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-card-glass,
+.card-glass,
+.glass-card {
+    backdrop-filter: var(--md-sys-glass-blur-standard);
+}
+
+:where(
+    .m3-dialog-backdrop,
+    .m3-modal-backdrop
+) {
+    backdrop-filter: blur(4px);
+}
+
+.picker-swatch-check {
+    filter: drop-shadow(0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.8));
+}
+
+:where(
+    .ad-network-unit-card,
+    .app-grid > nav,
+    .auth-card,
+    .brand-screensaver-logo-wrapper,
+    .cart-bar,
+    .input-box,
+    .landing-floating-controls,
+    .landing-header-nav,
+    .landing-mobile-menu-drawer,
+    .lang-dropdown-menu,
+    .lang-toggle-btn,
+    .m3-bottom-nav,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .screensaver-pro-badge,
+    .showcase-sidebar-backdrop,
+    .showcase-sidebar-header,
+    .showcase-topbar,
+    .signin-card,
+    header.app-header,
+    header.app-header.landing-header,
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile
+) {
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+:where(
+    .ad-network-unit-card,
+    .app-grid > nav,
+    .auth-card,
+    .brand-screensaver-logo-wrapper,
+    .cart-bar,
+    .input-box,
+    .landing-floating-controls,
+    .landing-header-nav,
+    .landing-mobile-menu-drawer,
+    .lang-dropdown-menu,
+    .lang-toggle-btn,
+    .m3-bottom-nav,
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop,
+    .screensaver-pro-badge,
+    .showcase-sidebar-backdrop,
+    .showcase-sidebar-header,
+    .showcase-topbar,
+    .signin-card,
+    header.app-header,
+    header.app-header.landing-header,
+    nav,
+    nav.glass,
+    nav.nav-desktop,
+    nav.nav-mobile
+) {
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+:where(
+    .kiosk-wish-icon,
+    .landing-mobile-menu-backdrop,
+    .showcase-stat-pill,
+    .ux-mode-badge-overlay
+) {
+    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+:where(
+    .kiosk-wish-icon,
+    .landing-mobile-menu-backdrop,
+    .showcase-stat-pill,
+    .ux-mode-badge-overlay
+) {
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+.pos-exact-bill-btn:hover {
+    filter: brightness(0.95);
+}
+
+.attract-loop-background {
+    filter: brightness(0.85);
+}
+
+:root {
+    --s0: 1.0;
+}
+
+:root {
+    --s1: 1.1;
+}
+
+:root {
+    --s2: 1.2;
+}
+
+:root {
+    --s3: 1.3;
+}
+
+:root {
+    --s4: 1.4;
+}
+
+:where(
+    :root,
+    [href="#baseBlob2"].l0,
+    [href="#baseBlob3"].l0
+) {
+    --t0: calc((1 - var(--s0)) * 50%);
+}
+
+:root {
+    --t1: calc((1 - var(--s1)) * 50%);
+}
+
+:root {
+    --t2: calc((1 - var(--s2)) * 50%);
+}
+
+:root {
+    --t3: calc((1 - var(--s3)) * 50%);
+}
+
+:root {
+    --t4: calc((1 - var(--s4)) * 50%);
+}
+
+:where(
+    :root,
+    [href="#baseBlob2"].l0,
+    [href="#baseBlob3"].l0
+) {
+    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
+}
+
+:root {
+    --tr1: translate(var(--t1), var(--t1)) scale(var(--s1));
+}
+
+:root {
+    --tr2: translate(var(--t2), var(--t2)) scale(var(--s2));
+}
+
+:root {
+    --tr3: translate(var(--t3), var(--t3)) scale(var(--s3));
+}
+
+:root {
+    --tr4: translate(var(--t4), var(--t4)) scale(var(--s4));
+}
+
+[href="#baseBlob2"].l0 {
+    --s0: 0.8;
+}
+
+[href="#baseBlob3"].l0 {
+    --s0: 0.6;
+}
+
+.glass::before {
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(14px));
+}
+
+.glass::before {
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(14px));
+}
+
+:where(
+    .l1,
+    .l2,
+    .l3,
+    .l4
+) {
+    filter: url("#blur4");
+}
+
+:where(
+    .floating-chip,
+    .map-route-inputs,
+    .map-topbar,
+    .navigator-maneuver-bar,
+    .secondary-cta,
+    .tertiary-cta
+) {
+    backdrop-filter: blur(12px);
+}
+
+:where(
+    .yandex-ctrl-btn,
+    .yandex-zoom-card
+),
+#components-reconnect-modal::backdrop {
+    backdrop-filter: blur(8px);
+}
+
+.organizations-map-controls {
+    backdrop-filter: blur(20px) saturate(140%);
+}
+
+.map-route-inputs {
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-spotlight-hero {
+    filter: blur(100px);
+}
+
+.bg-spotlight-bento {
+    filter: blur(120px);
+}
+
+.cursor-glow-orb {
+    filter: blur(50px);
+}
+
+.cursor-glow-orb {
+    mix-blend-mode: screen;
+}
+
+.glass {
+    backdrop-filter: blur(24px);
+}
+
+.glass {
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.section-ambient-glow {
+    filter: blur(140px);
+}
+
+.title-gradient {
+    filter: drop-shadow(0 0 24px rgb(from var(--md-sys-color-primary, #38bdf8) r g b / 0.35));
+}
+
+:where(
+    .hero-cta,
+    .main-footer,
+    .ux-search-box
+) {
+    backdrop-filter: blur(16px);
+}
+
+.hero-stage-img {
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.6));
+}
+
+:where(
+    .bento-card,
+    .download-header,
+    .evolution-banner,
+    .org-showcase-section,
+    .platform-card,
+    .spatial-maps-section,
+    .specs-bar
+) {
+    backdrop-filter: blur(20px);
+}
+
+:where(
+    .bento-card,
+    .download-header,
+    .evolution-banner,
+    .org-showcase-section,
+    .platform-card,
+    .spatial-maps-section,
+    .specs-bar
+) {
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.spec-value {
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--md-sys-color-primary, #38bdf8) 35%, transparent));
+}
+
+.bento-media img {
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.5));
+}
+
+#components-reconnect-modal::backdrop {
+    -webkit-backdrop-filter: blur(8px);
+}
+

@@ -1,0 +1,23 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: layout/table.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+table {
+    border-spacing: 0;
+}
+
+:where(
+    .m3-table,
+    .order-items-table,
+    .orders-table,
+    .schedule-table,
+    .table-container *:not(a),
+    .table-container > table,
+    table,
+    table.quickgrid
+) {
+    border-collapse: collapse;
+}
+

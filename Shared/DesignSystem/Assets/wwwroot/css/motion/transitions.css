@@ -1,0 +1,681 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: motion/transitions.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .analytics-mode-btn,
+    .card-interactive,
+    .file-card,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .m3-card-interactive,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-filter-chip,
+    .m3-media-card,
+    .m3-segmented-btn,
+    .media-card,
+    .org-card,
+    .paginator nav button:not([disabled]),
+    .picker-palette-swatch,
+    .picker-trigger-card,
+    .upload-card,
+    md-elevated-button,
+    md-elevated-card,
+    md-filled-button,
+    md-filled-card,
+    md-icon-button,
+    md-outlined-button,
+    md-outlined-card,
+    md-text-button,
+    md-tonal-button
+) {
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+:where(
+    .m3-media-card,
+    .org-card,
+    .product-card,
+    md-filled-card,
+    md-outlined-card,
+    md-elevated-card
+) img {
+    transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring-soft);
+}
+
+.m3-hover-lift {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.back-button,
+.m3-back-button {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-card,
+[class*="m3-card-"],
+.card-glass,
+.glass-card,
+.card-elevated,
+.card-outlined,
+.card-filled {
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-card-interactive:active,
+.card-interactive:active {
+    transition: transform var(--md-sys-motion-duration-short1) var(--md-sys-motion-easing-spring);
+}
+
+:where(
+    .m3-media-card,
+    .media-card,
+    .org-card
+) {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+:where(.m3-card-media, .org-media, .wishlist-media) img {
+    transition: transform var(--md-sys-motion-duration-medium1) ease;
+}
+
+md-filled-card,
+md-outlined-card,
+md-elevated-card {
+    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-expressive-standard);
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card):active {
+    transition-duration: var(--md-sys-motion-duration-short2);
+}
+
+:where(md-filled-card, md-outlined-card, md-elevated-card) figure > img {
+    transition: transform var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-expressive-standard);
+}
+
+.m3-filter-chip {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+.m3-dialog-close-btn {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-dialog-toggle-item {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.picker-trigger-card {
+    transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.picker-icon-badge {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
+}
+
+.picker-palette-swatch {
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-snappy),
+                box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+.file-card {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.icon-preview {
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.upload-card {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+.upload-icon {
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring-bouncy);
+}
+
+.picker-day-dot {
+    transition: background-color var(--md-sys-motion-duration-short3), color var(--md-sys-motion-duration-short3);
+}
+
+.md3-schedule-day-card {
+    transition: background-color var(--md-sys-motion-duration-short3), border-color var(--md-sys-motion-duration-short3);
+}
+
+.lang-chip-btn {
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-pill-btn {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-chevron {
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-menu-item {
+    transition: background var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+:where(
+    .m3-progress-fill,
+    .progress-bar-fill
+) {
+    transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+:where(
+    .m3-search-container,
+    .material-search-container) :where(md-outlined-text-field,
+    .material-text-field
+) {
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+.drop-container {
+    transition: background var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), border var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.drop-title {
+    transition: color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.m3-mode-toggle-icon,
+.mode-toggle-icon {
+    transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+:where(
+    .m3-press-scale,
+    md-elevated-button,
+    md-filled-button,
+    md-outlined-button,
+    md-text-button,
+    md-tonal-button
+) {
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+:where(
+    .file-overlay,
+    .m3-dialog-btn-primary
+),
+.card-interactive::before,
+.m3-card-interactive::before {
+    transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+:where(
+    .option-item-row,
+    .paginator nav button
+) {
+    transition: background-color var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+}
+
+:where(
+    .analytics-date-picker-trigger,
+    .analytics-mode-btn,
+    .m3-period-picker-trigger,
+    .m3-segmented-btn
+) {
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
+}
+
+:where(
+    
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+
+    
+    md-filled-button,
+    md-outlined-button,
+    md-elevated-button,
+    md-tonal-button,
+    md-text-button,
+    md-icon-button,
+    md-outlined-text-field,
+    md-filled-text-field,
+    md-checkbox,
+    md-switch,
+    md-radio,
+
+    
+    .m3-filter-chip,
+    .lang-chip-btn,
+    .lang-pill-btn,
+    .picker-trigger-card,
+    .picker-palette-swatch,
+    .file-card,
+    .upload-card,
+    .card-interactive,
+    .m3-card-interactive,
+    .analytics-mode-btn,
+    .m3-segmented-btn,
+    .paginator nav button:not([disabled])
+):focus-visible {
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+a {
+    transition: color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
+}
+
+.sidebar-link {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.m3-swatch {
+    transition: transform 0.15s ease;
+}
+
+:where(
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .citation,
+    .hero-pill-link,
+    .input-box,
+    .landing-auth-btn,
+    .lang-toggle-btn,
+    .plan-card,
+    .preset-btn,
+    .stage-tab,
+    .tier-box,
+    nav.glass:not(.nav-mobile) a.nav-item,
+    nav.nav-desktop a.nav-item
+) {
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+}
+
+:where(
+    .crumb-link,
+    .kiosk-product-title-link,
+    .seller-name
+) {
+    transition: color 0.2s ease;
+}
+
+:where(
+    .chat-back-link,
+    .place-details-back-btn,
+    .ux-modal-btn-secondary,
+    .ux-mode-quickview-btn,
+    .ux-reset-filter-btn,
+    .ux-search-clear
+) {
+    transition: all 0.2s ease;
+}
+
+.progress-bar-fill {
+    transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-drawer-backdrop,
+.md-drawer-backdrop {
+    transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
+}
+
+.footer-links-list a {
+    transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+.advance-icon {
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.kds-action-btn {
+    transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring),
+                background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.kiosk-wish-icon {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.analytics-kpi-card {
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-floating-auth-btn {
+    transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.pillar-card,
+.tech-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qrg-back {
+    transition: background 0.15s, color 0.15s;
+}
+
+.qrg-card {
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.link-stack a::before,
+.link-stack article::before {
+    transition: 0.5s;
+}
+
+.link-stack a:active::before,
+.link-stack article:active::before {
+    transition: 0s;
+}
+
+header.app-header {
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.m3-bottom-nav-item {
+    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+header.app-header.landing-header {
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:where(
+    .ux-mode-launch-btn,
+    header.landing-header .header-brand-link
+) {
+    transition: all 0.25s ease;
+}
+
+.landing-nav-link {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.landing-nav-link md-icon {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.landing-mobile-menu-toggle {
+    transition: background var(--md-sys-motion-duration-short4, 200ms) ease, border-color var(--md-sys-motion-duration-short4, 200ms) ease;
+}
+
+.mobile-nav-item {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.back-button {
+    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.pos-quick-bill-btn {
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.thumb-btn {
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.seller-browse-all {
+    transition: opacity 0.2s ease;
+}
+
+.ad-slot-container {
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
+}
+
+.attract-loop-background {
+    transition: background-image 0.8s ease-in-out;
+}
+
+.showcase-nav-btn {
+    transition: all 0.15s ease;
+}
+
+.showcase-card {
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.showcase-card-btn {
+    transition: background-color 0.15s, color 0.15s;
+}
+
+:where(
+    .product-img,
+    .product-main-img
+) {
+    transition: transform 0.3s ease;
+}
+
+:where(
+    .ad-slide-touch-prompt,
+    .brand-screensaver-cta,
+    .chevron-icon
+) {
+    transition: transform 0.2s ease;
+}
+
+:where(
+    .map-action-button,
+    .map-category-chip,
+    .map-panel-toggle-tab,
+    .map-route-add-via-btn,
+    .map-route-close-btn,
+    .map-route-input,
+    .map-route-profile-chip,
+    .map-route-swap-btn,
+    .yandex-ctrl-btn,
+    .yandex-zoom-card
+) {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.organizations-map-controls {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.search-bar {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-clear-btn {
+    transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+.search-route-btn {
+    transition: background-color 0.14s ease, color 0.14s ease, transform 0.1s ease;
+}
+
+.map-global-suggestion-button {
+    transition: background-color 0.1s ease;
+}
+
+.map-route-remove-via-btn {
+    transition: all 0.14s ease;
+}
+
+.waypoint-marker {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.route-close {
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+:where(
+    .route-alternative-card,
+    .route-start-btn
+) {
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1));
+}
+
+.nav-control-btn {
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1)), background 0.15s ease, border-color 0.15s ease;
+}
+
+.click-popup-btn {
+    transition: opacity 0.14s;
+}
+
+.cursor-glow-orb {
+    transition: opacity 0.4s ease;
+}
+
+.glass {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass::before,
+.hero-card::before,
+.ux-mode-card::before,
+.industry-card::before,
+.feature-card::before,
+.evolution-card::before,
+.org-card::before,
+.spatial-wing-card::before,
+.spatial-subcard::before,
+.bento-card::before,
+.platform-card::before {
+    transition: opacity 0.35s ease;
+}
+
+.cta-btn {
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                background-color var(--md-sys-motion-duration-short2, 100ms) ease;
+}
+
+.cta-arrow {
+    transition: transform 0.25s ease;
+}
+
+.hero-stage-img {
+    transition: transform 0.4s ease;
+}
+
+.evolution-card {
+    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+:where(
+    .bento-card,
+    .org-card,
+    .platform-card,
+    .spatial-wing-card
+) {
+    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spatial-subcard {
+    transition: transform 0.25s var(--md-sys-motion-easing-spring-soft), border-color 0.25s ease, background 0.25s ease;
+}
+
+.platform-btn {
+    transition: transform 0.25s var(--md-sys-motion-easing-spring-soft), box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.footer-columns a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ux-spotlight-card {
+    transition: transform 0.35s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+}
+
+:where(
+    .spotlight-launch-btn,
+    .ux-expand-btn,
+    .ux-modal-btn-primary,
+    .ux-tab-btn
+) {
+    transition: all 0.25s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.ux-search-box {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ux-mode-card {
+    transition: transform 0.28s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+.loading-progress circle:last-child {
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+#components-reconnect-modal {
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+}
+
+#components-reconnect-modal button {
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    nav.glass a.nav-item md-icon,
+    nav a.nav-item md-icon {
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+}
+
+@media screen and (min-width: 840px) {
+    nav.nav-desktop a.nav-item md-icon,
+    nav.nav-desktop a.nav-item .material-symbols-outlined,
+    nav.glass:not(.nav-mobile) a.nav-item md-icon,
+    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+}
+
+@media (max-width: 839.98px) {
+    .showcase-sidebar {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+

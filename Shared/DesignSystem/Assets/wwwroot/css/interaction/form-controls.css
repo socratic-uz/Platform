@@ -1,0 +1,19 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: interaction/form-controls.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.m3-dialog-toggle-item input[type="checkbox"] {
+    accent-color: var(--md-sys-color-primary);
+}
+
+input[type="color"] {
+    appearance: none;
+}
+
+.chat-input-wrapper textarea,
+.input-box textarea {
+    resize: none;
+}
+

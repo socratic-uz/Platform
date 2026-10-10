@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socratic Material.Web • CSS Style Showcase & Defect Inspector</title>
+    
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+    <!-- Master Design System Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.bundle.min.css" />
+
+    <!-- Material Web Custom Elements -->
+    <script src="./js/material-web.bundle.js"></script>
+</head>
+<body class="catalog-shell">
+
+    <!-- Sidebar Navigation -->
+    <aside class="catalog-sidebar">
+        <div class="sidebar-brand">
+            <div class="sidebar-brand-icon">
+                <md-icon>widgets</md-icon>
+            </div>
+            <div>
+                <div class="sidebar-brand-title">Material.Web</div>
+                <div class="sidebar-brand-subtitle">Socratic Design System</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-category">Инспекция дефектов</div>
+            <a href="#defects-audit" class="sidebar-link active">
+                <md-icon>bug_report</md-icon>
+                <span>Аудит дефектов CSS</span>
+            </a>
+            <a href="#expressive-cards" class="sidebar-link">
+                <md-icon>auto_awesome</md-icon>
+                <span>M3 Expressive Cards</span>
+            </a>
+            <a href="#empty-states" class="sidebar-link">
+                <md-icon>inbox</md-icon>
+                <span>Empty States</span>
+            </a>
+
+            <div class="sidebar-nav-category">Компоненты действий</div>
+            <a href="#buttons" class="sidebar-link">
+                <md-icon>smart_button</md-icon>
+                <span>Buttons</span>
+            </a>
+            <a href="#icon-buttons" class="sidebar-link">
+                <md-icon>touch_app</md-icon>
+                <span>Icon Buttons</span>
+            </a>
+            <a href="#fab" class="sidebar-link">
+                <md-icon>add_circle</md-icon>
+                <span>Floating Action (FAB)</span>
+            </a>
+
+            <div class="sidebar-nav-category">Формы и ввод</div>
+            <a href="#text-fields" class="sidebar-link">
+                <md-icon>edit_note</md-icon>
+                <span>Text Fields & Textarea</span>
+            </a>
+            <a href="#selection" class="sidebar-link">
+                <md-icon>check_box</md-icon>
+                <span>Checkboxes, Switches, Radio</span>
+            </a>
+            <a href="#sliders" class="sidebar-link">
+                <md-icon>tune</md-icon>
+                <span>Range & Discrete Sliders</span>
+            </a>
+
+            <div class="sidebar-nav-category">Навигация и списки</div>
+            <a href="#chips" class="sidebar-link">
+                <md-icon>label</md-icon>
+                <span>Interactive Chips</span>
+            </a>
+            <a href="#tabs" class="sidebar-link">
+                <md-icon>tab</md-icon>
+                <span>Navigation Tabs</span>
+            </a>
+            <a href="#lists-cards" class="sidebar-link">
+                <md-icon>view_agenda</md-icon>
+                <span>Lists & M3 Cards</span>
+            </a>
+
+            <div class="sidebar-nav-category">Оверлеи и статус</div>
+            <a href="#progress" class="sidebar-link">
+                <md-icon>hourglass_top</md-icon>
+                <span>Progress Indicators</span>
+            </a>
+            <a href="#dialogs-menus" class="sidebar-link">
+                <md-icon>open_in_browser</md-icon>
+                <span>Dialogs & Menus</span>
+            </a>
+
+            <div class="sidebar-nav-category">Дизайн-токены</div>
+            <a href="#palette" class="sidebar-link">
+                <md-icon>palette</md-icon>
+                <span>M3 Color Palette</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <md-filled-tonal-button id="themeToggleBtn">
+                <md-icon slot="icon">light_mode</md-icon>
+                Сменить тему
+            </md-filled-tonal-button>
+        </div>
+    </aside>
+
+    <!-- Main Content Catalog -->
+    <main class="catalog-main">
+        
+        <!-- Header & Live Quality Inspection Toolbar -->
+        <header class="catalog-header">
+            <div>
+                <h1 class="catalog-title">Material.Web Showcase & Style Inspector</h1>
+                <div class="catalog-badge-row">
+                    <span class="catalog-badge">Material Design 3</span>
+                    <span class="catalog-badge">Strict CSS Grid</span>
+                    <span class="catalog-badge">Zero Flexbox</span>
+                    <span class="catalog-badge" id="vpBadge">Ширина: <span id="vpWidth">1440</span>px</span>
+                </div>
+                <p class="catalog-desc">
+                    Витрина стилей Material.Web и тестовый полигон для визуального выявления косяков верстки (blowout, оверфлоу, обрезка теней, нарушение тач-зон &lt; 44px).
+                </p>
+                
+                <!-- Live QA & Defect Inspection Toolbar -->
+                <div class="m3-grid-chips">
+                    <md-filter-chip id="gridDebugBtn" label="📐 Подсветка сеток"></md-filter-chip>
+                    <md-filter-chip id="stressTestBtn" label="⚠️ Стресс-тест blowout"></md-filter-chip>
+                    <md-filter-chip id="touchAuditBtn" label="👆 Аудит тач-зон"></md-filter-chip>
+                    <a href="./styles-demo.html">
+                        <md-outlined-button>
+                            <md-icon slot="icon">dashboard_customize</md-icon>
+                            Витрина Layouts
+                        </md-outlined-button>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <md-filled-tonal-button id="headerThemeBtn">
+                    <md-icon slot="icon">light_mode</md-icon>
+                    Переключить тему
+                </md-filled-tonal-button>
+            </div>
+        </header>
+
+        <!-- 0. Defect & Visual Regression Inspector -->
+        <section id="defects-audit" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>bug_report</md-icon>
+                    <span>Аудит косяков верстки и дефектов M3 (CSS Defect Audit)</span>
+                </h2>
+                <p class="section-desc">Наглядное визуальное сравнение типичных косяков верстки и их канонических решений в экосистеме Socratic.</p>
+            </div>
+
+            <div class="m3-grid-cards-split">
+                <!-- Case 1: Grid Track Blowout -->
+                <article class="m3-card m3-card-outlined">
+                    <div class="m3-card-header">
+                        <div class="m3-avatar">
+                            <md-icon>error_outline</md-icon>
+                        </div>
+                        <div>
+                            <div class="m3-card-title">Косяк 1: Grid Track Blowout (голый 1fr)</div>
+                            <div class="m3-card-subtitle">Без minmax(0, 1fr) длинное слово распирает контейнер</div>
+                        </div>
+                    </div>
+                    <div class="m3-stack card-body">
+                        <p class="catalog-desc">В CSS Grid гибкая колонка по умолчанию имеет <code>min-width: auto</code>. При длинном слове колонка расширяется до длины слова, ломая адаптивную сетку:</p>
+                        <div class="m3-card card-outlined">
+                            <div class="m3-label">Тест усечения (КотлетаBlackAngusМраморнаяГовядинаФирменныйСоусБезПробелов):</div>
+                            <div class="m3-card-title stress-target">КотлетаBlackAngusМраморнаяГовядинаФирменныйСоусБезПробелов</div>
+                        </div>
+                    </div>
+                    <div class="m3-card-actions">
+                        <span class="catalog-badge">Решение: minmax(0, 1fr) + min-width: 0</span>
+                    </div>
+                </article>
+
+                <!-- Case 2: Overflow Trap & Shadow Clipping -->
+                <article class="m3-card m3-card-outlined">
+                    <div class="m3-card-header">
+                        <div class="m3-avatar">
+                            <md-icon>layers_clear</md-icon>
+                        </div>
+                        <div>
+                            <div class="m3-card-title">Косяк 2: Обрезка теней и меню (overflow: hidden)</div>
+                            <div class="m3-card-subtitle">Слепой overflow: hidden срезает тень M3 Expressive</div>
+                        </div>
+                    </div>
+                    <div class="m3-stack card-body">
+                        <p class="catalog-desc">Если на карточку с хроматической тенью или меню повесить <code>overflow: hidden</code>, тень будет срезана ровно по границе:</p>
+                        <div class="m3x-card m3x-card-elevated">
+                            <div class="m3-card-header">
+                                <div class="m3-avatar">
+                                    <md-icon>auto_awesome</md-icon>
+                                </div>
+                                <div>
+                                    <div class="m3-card-title">Карточка с хроматической тенью</div>
+                                    <div class="m3-card-subtitle">overflow: visible / clip сохраняет мягкое свечение</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m3-card-actions">
+                        <span class="catalog-badge">Решение: overflow: clip / visible</span>
+                    </div>
+                </article>
+
+                <!-- Case 3: Touch Targets < 44px -->
+                <article class="m3-card m3-card-outlined">
+                    <div class="m3-card-header">
+                        <div class="m3-avatar">
+                            <md-icon>touch_app</md-icon>
+                        </div>
+                        <div>
+                            <div class="m3-card-title">Косяк 3: Мелкие тач-таргеты (WCAG & POS)</div>
+                            <div class="m3-card-subtitle">Кнопки меньше 44×44px приводят к ошибкам нажатий</div>
+                        </div>
+                    </div>
+                    <div class="m3-stack card-body">
+                        <p class="catalog-desc">Стандарт WCAG 2.1 AA требует минимум 44×44px, а стандарт сенсорных киосков Socratic POS — 48×48px:</p>
+                        <div class="m3-grid-buttons">
+                            <md-filled-button class="touch-standard">
+                                <md-icon slot="icon">check_circle</md-icon>
+                                Канонический размер (48px)
+                            </md-filled-button>
+                            <md-filled-icon-button aria-label="Touch 48px">
+                                <md-icon>verified</md-icon>
+                            </md-filled-icon-button>
+                        </div>
+                    </div>
+                    <div class="m3-card-actions">
+                        <span class="catalog-badge">Решение: min-height: 48px; min-width: 48px;</span>
+                    </div>
+                </article>
+
+                <!-- Case 4: Long Form Errors and Input Blowout -->
+                <article class="m3-card m3-card-outlined">
+                    <div class="m3-card-header">
+                        <div class="m3-avatar">
+                            <md-icon>warning</md-icon>
+                        </div>
+                        <div>
+                            <div class="m3-card-title">Косяк 4: Переполнение полей ввода и ошибок</div>
+                            <div class="m3-card-subtitle">Длинное сообщение валидации не должно сдвигать сетку</div>
+                        </div>
+                    </div>
+                    <div class="m3-stack card-body">
+                        <p class="catalog-desc">Проверка поведения поля при экстремальном тексте ошибки:</p>
+                        <md-outlined-text-field
+                            label="Фискальный номер чека"
+                            value="1234567890123456"
+                            error
+                            error-text="Ошибка: Данный фискальный номер не зарегистрирован в реестре оператора ОФД Soliq ГНК РУз за текущую кассовую смену"
+                            supporting-text="Введите 16-значный номер">
+                        </md-outlined-text-field>
+                    </div>
+                    <div class="m3-card-actions">
+                        <span class="catalog-badge">Решение: grid-template-rows: auto auto minmax(0, 1fr)</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- M3 Expressive Cards & Surfaces -->
+        <section id="expressive-cards" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>auto_awesome</md-icon>
+                    <span>M3 Expressive Cards & Surfaces</span>
+                </h2>
+                <p class="section-desc">Канонические поверхности из <code>themes/expressive.css</code> с радиусами 24px, асимметрией и хроматическими тенями.</p>
+            </div>
+
+            <div class="m3-grid-cards-split">
+                <article class="m3x-card">
+                    <div class="m3-card-header">
+                        <div class="m3-card-title">Expressive Standard (.m3x-card)</div>
+                        <div class="m3-card-subtitle">Радиус 24px, spring hover transition</div>
+                    </div>
+                    <p class="catalog-desc">Органический карточный примитив с плавным смещением по вертикали на ховере.</p>
+                    <div class="m3-card-actions">
+                        <md-filled-tonal-button>Действие</md-filled-tonal-button>
+                    </div>
+                </article>
+
+                <article class="m3x-card m3x-card-elevated">
+                    <div class="m3-card-header">
+                        <div class="m3-card-title">Expressive Elevated (.m3x-card-elevated)</div>
+                        <div class="m3-card-subtitle">Хроматическая тень M3X Elevation 2</div>
+                    </div>
+                    <p class="catalog-desc">Плавающая карточка с цветной фоновой тенью первичного оттенка темы.</p>
+                    <div class="m3-card-actions">
+                        <md-filled-button>Действие</md-filled-button>
+                    </div>
+                </article>
+
+                <article class="m3x-card m3x-card-asymmetric-1">
+                    <div class="m3-card-header">
+                        <div class="m3-card-title">Asymmetric Card (.m3x-card-asymmetric-1)</div>
+                        <div class="m3-card-subtitle">Радиус 28px 8px 28px 8px</div>
+                    </div>
+                    <p class="catalog-desc">Выразительная асимметричная геометрия для промо-акций и ключевых экранов.</p>
+                    <div class="m3-card-actions">
+                        <md-outlined-button>Действие</md-outlined-button>
+                    </div>
+                </article>
+
+                <article class="m3x-card m3x-card-tonal">
+                    <div class="m3-card-header">
+                        <div class="m3-card-title">Tonal Card (.m3x-card-tonal)</div>
+                        <div class="m3-card-subtitle">Secondary Container оттенок</div>
+                    </div>
+                    <p class="catalog-desc">Тональная поверхность для вторичных акцентов и информационных сносок.</p>
+                    <div class="m3-card-actions">
+                        <md-text-button>Действие</md-text-button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Empty States & Feedback -->
+        <section id="empty-states" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>inbox</md-icon>
+                    <span>Empty States & System Feedback</span>
+                </h2>
+                <p class="section-desc">Компоненты заглушек и пустых состояний каталогов и списков заказов из <code>grid.css</code>.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-empty-state">
+                    <div class="m3-empty-state-icon">
+                        <md-icon>search_off</md-icon>
+                    </div>
+                    <div class="m3-card-title">В чеке пока нет позиций</div>
+                    <p class="catalog-desc">Выберите товары из каталога или отсканируйте штрихкод камерой сканера.</p>
+                    <div class="m3-empty-state-action">
+                        <md-filled-button>
+                            <md-icon slot="icon">add_shopping_cart</md-icon>
+                            Перейти к каталогу
+                        </md-filled-button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Buttons -->
+        <section id="buttons" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>smart_button</md-icon>
+                    <span>Buttons (Кнопки действий)</span>
+                </h2>
+                <p class="section-desc">Пять канонических иерархических вариантов кнопок Material Design 3 с поддержкой иконок, состояний и темы.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-stack">
+                    <div class="m3-label">Filled • Outlined • Filled Tonal • Elevated • Text</div>
+                    <div class="m3-grid-buttons">
+                        <md-filled-button>
+                            <md-icon slot="icon">shopping_cart</md-icon>
+                            Filled Button
+                        </md-filled-button>
+
+                        <md-outlined-button>
+                            <md-icon slot="icon">filter_alt</md-icon>
+                            Outlined Button
+                        </md-outlined-button>
+
+                        <md-filled-tonal-button>
+                            <md-icon slot="icon">auto_awesome</md-icon>
+                            Filled Tonal
+                        </md-filled-tonal-button>
+
+                        <md-elevated-button>
+                            <md-icon slot="icon">bookmark</md-icon>
+                            Elevated
+                        </md-elevated-button>
+
+                        <md-text-button>
+                            <md-icon slot="icon">close</md-icon>
+                            Text Button
+                        </md-text-button>
+
+                        <md-filled-button disabled>
+                            Disabled
+                        </md-filled-button>
+                    </div>
+                </div>
+
+                <div class="m3-stack">
+                    <div class="m3-label">Без иконок (Text Only)</div>
+                    <div class="m3-grid-buttons">
+                        <md-filled-button>Принять заказ</md-filled-button>
+                        <md-outlined-button>Отмена</md-outlined-button>
+                        <md-filled-tonal-button>Детали чека</md-filled-tonal-button>
+                        <md-text-button>Подробнее</md-text-button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Icon Buttons -->
+        <section id="icon-buttons" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>touch_app</md-icon>
+                    <span>Icon Buttons (Компактные кнопки-иконки)</span>
+                </h2>
+                <p class="section-desc">Квадратные и круглые кнопки действий с тач-таргетом 48×48px для панелей инструментов, таблиц и карточек.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-stack">
+                    <div class="m3-label">Варианты: Standard, Filled, Outlined, Filled Tonal, Disabled</div>
+                    <div class="m3-grid-icon-buttons">
+                        <md-icon-button aria-label="Favorite">
+                            <md-icon>favorite</md-icon>
+                        </md-icon-button>
+
+                        <md-filled-icon-button aria-label="Add">
+                            <md-icon>add</md-icon>
+                        </md-filled-icon-button>
+
+                        <md-outlined-icon-button aria-label="Search">
+                            <md-icon>search</md-icon>
+                        </md-outlined-icon-button>
+
+                        <md-filled-tonal-icon-button aria-label="Settings">
+                            <md-icon>settings</md-icon>
+                        </md-filled-tonal-icon-button>
+
+                        <md-icon-button disabled aria-label="Disabled">
+                            <md-icon>delete</md-icon>
+                        </md-icon-button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Floating Action Buttons (FAB) -->
+        <section id="fab" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>add_circle</md-icon>
+                    <span>Floating Action Buttons (FAB)</span>
+                </h2>
+                <p class="section-desc">Ключевое главное действие на экране. Поддерживает малый, стандартный, крупный и расширенный (Extended) размеры.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-stack">
+                    <div class="m3-label">Размеры: Small, Standard, Large, Extended</div>
+                    <div class="m3-grid-fabs">
+                        <md-fab size="small" aria-label="Small Add">
+                            <md-icon slot="icon">add</md-icon>
+                        </md-fab>
+
+                        <md-fab aria-label="Standard Add">
+                            <md-icon slot="icon">edit</md-icon>
+                        </md-fab>
+
+                        <md-fab size="large" aria-label="Large Add">
+                            <md-icon slot="icon">receipt_long</md-icon>
+                        </md-fab>
+
+                        <md-fab label="Создать заказ">
+                            <md-icon slot="icon">add</md-icon>
+                        </md-fab>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Text Fields -->
+        <section id="text-fields" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>edit_note</md-icon>
+                    <span>Text Fields & Textarea (Поля ввода)</span>
+                </h2>
+                <p class="section-desc">Официальные текстовые поля M3: Outlined и Filled с поддержкой плавающего лейбла, иконок и валидации.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-grid-text-fields">
+                    <md-outlined-text-field label="Имя клиента" value="Тимур Каримов">
+                        <md-icon slot="leading-icon">person</md-icon>
+                    </md-outlined-text-field>
+
+                    <md-outlined-text-field label="Номер телефона" value="+998 90 123-45-67" supporting-text="Для SMS-чека Soliq">
+                        <md-icon slot="leading-icon">call</md-icon>
+                    </md-outlined-text-field>
+
+                    <md-outlined-text-field label="Промокод скидки" error error-text="Недействительный промокод">
+                        <md-icon slot="leading-icon">discount</md-icon>
+                    </md-outlined-text-field>
+
+                    <md-filled-text-field label="Поиск блюд и товаров" placeholder="Начните вводить...">
+                        <md-icon slot="leading-icon">search</md-icon>
+                    </md-filled-text-field>
+
+                    <md-outlined-text-field type="textarea" label="Комментарий к заказу" rows="3" supporting-text="Особые пожелания гостя">
+                        <md-icon slot="leading-icon">comment</md-icon>
+                    </md-outlined-text-field>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Selection Controls -->
+        <section id="selection" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>check_box</md-icon>
+                    <span>Selection Controls (Чекбоксы, переключатели, радио)</span>
+                </h2>
+                <p class="section-desc">Элементы выбора опций, модификаторов блюд и системных настроек.</p>
+            </div>
+
+            <div class="m3-grid-selection">
+                <!-- Checkboxes Panel -->
+                <div class="m3-card m3-card-outlined">
+                    <div class="m3-label">Чекбоксы (Модификаторы)</div>
+                    <div class="m3-selection-panel">
+                        <label class="m3-selection-item">
+                            <md-checkbox checked></md-checkbox>
+                            <span>Двойной сыр Чеддер (+12 000 UZS)</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-checkbox></md-checkbox>
+                            <span>Карамелизированный лук (+8 000 UZS)</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-checkbox indeterminate></md-checkbox>
+                            <span>Острый соус Халапеньо (Частично)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Switches Panel -->
+                <div class="m3-card m3-card-outlined">
+                    <div class="m3-label">Переключатели (Switches)</div>
+                    <div class="m3-selection-panel">
+                        <label class="m3-selection-item">
+                            <md-switch selected icons show-only-selected-icon></md-switch>
+                            <span>Автопечать чека на ESC/POS принтере</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-switch></md-switch>
+                            <span>Фискализация в Soliq ОФД</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-switch selected icons></md-switch>
+                            <span>Звуковое оповещение KDS</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Radio Group -->
+                <div class="m3-card m3-card-outlined">
+                    <div class="m3-label">Радиокнопки (Способ оплаты)</div>
+                    <div class="m3-selection-panel">
+                        <label class="m3-selection-item">
+                            <md-radio name="payment" checked></md-radio>
+                            <span>Терминал Uzum / Humo / Uzcard</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-radio name="payment"></md-radio>
+                            <span>Наличные сумы (Касса)</span>
+                        </label>
+                        <label class="m3-selection-item">
+                            <md-radio name="payment"></md-radio>
+                            <span>Корпоративный счёт</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Sliders -->
+        <section id="sliders" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>tune</md-icon>
+                    <span>Sliders (Слайдеры выбора диапазонов)</span>
+                </h2>
+                <p class="section-desc">Ползунки непрерывного и дискретного выбора значений (скидки, чаевые, радиус доставки).</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-form-grid">
+                    <div class="m3-stack">
+                        <div class="m3-label">Дискретный слайдер: Скидка кассира (0% — 50%)</div>
+                        <md-slider min="0" max="50" value="15" step="5" labeled ticks></md-slider>
+                    </div>
+                    <div class="m3-stack">
+                        <div class="m3-label">Диапазон цен (Range Slider: 10 000 — 250 000 UZS)</div>
+                        <md-slider range min="10000" max="250000" value-start="25000" value-end="120000" labeled></md-slider>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Chips -->
+        <section id="chips" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>label</md-icon>
+                    <span>Chips (Интерактивные чипы и теги)</span>
+                </h2>
+                <p class="section-desc">Компактные элементы фильтрации, ввода данных и вспомогательных действий.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-stack">
+                    <div class="m3-label">Filter & Assist Chips</div>
+                    <md-chip-set>
+                        <md-filter-chip label="Все категории" selected></md-filter-chip>
+                        <md-filter-chip label="Горячие блюда">
+                            <md-icon slot="icon">restaurant</md-icon>
+                        </md-filter-chip>
+                        <md-filter-chip label="Напитки">
+                            <md-icon slot="icon">local_cafe</md-icon>
+                        </md-filter-chip>
+                        <md-filter-chip label="Десерты">
+                            <md-icon slot="icon">cake</md-icon>
+                        </md-filter-chip>
+                        <md-assist-chip label="Повторить чек #1042">
+                            <md-icon slot="icon">replay</md-icon>
+                        </md-assist-chip>
+                    </md-chip-set>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Tabs -->
+        <section id="tabs" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>tab</md-icon>
+                    <span>Tabs (Навигационные вкладки)</span>
+                </h2>
+                <p class="section-desc">Primary и Secondary вкладки переключения режимов экрана кассира и статусов кухни.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-stack">
+                    <div class="m3-label">Primary Tabs (Смена рабочих зон)</div>
+                    <md-tabs aria-label="Режимы кассы">
+                        <md-primary-tab id="tab-pos" selected>
+                            <md-icon slot="icon">point_of_sale</md-icon>
+                            POS Терминал
+                        </md-primary-tab>
+                        <md-primary-tab id="tab-kds">
+                            <md-icon slot="icon">kitchen</md-icon>
+                            Кухонный KDS
+                        </md-primary-tab>
+                        <md-primary-tab id="tab-orders">
+                            <md-icon slot="icon">receipt_long</md-icon>
+                            Журнал чеков
+                        </md-primary-tab>
+                        <md-primary-tab id="tab-reports">
+                            <md-icon slot="icon">bar_chart</md-icon>
+                            Z-Отчёты
+                        </md-primary-tab>
+                    </md-tabs>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Progress Indicators -->
+        <section id="progress" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>hourglass_top</md-icon>
+                    <span>Progress Indicators (Индикаторы загрузки)</span>
+                </h2>
+                <p class="section-desc">Круговые и линейные индикаторы ожидания ответов gRPC, печати чеков и загрузки данных.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-grid-progress">
+                    <div class="m3-card m3-card-outlined m3-center-box">
+                        <md-circular-progress indeterminate></md-circular-progress>
+                        <span class="m3-label-sm">Circular Indeterminate</span>
+                    </div>
+
+                    <div class="m3-card m3-card-outlined m3-center-box">
+                        <md-circular-progress value="0.75"></md-circular-progress>
+                        <span class="m3-label-sm">Circular 75% Complete</span>
+                    </div>
+
+                    <div class="m3-card m3-card-outlined m3-center-box">
+                        <md-linear-progress indeterminate></md-linear-progress>
+                        <span class="m3-label-sm">Linear Indeterminate</span>
+                    </div>
+
+                    <div class="m3-card m3-card-outlined m3-center-box">
+                        <md-linear-progress value="0.6"></md-linear-progress>
+                        <span class="m3-label-sm">Linear 60% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Dialogs & Menus -->
+        <section id="dialogs-menus" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>open_in_browser</md-icon>
+                    <span>Dialogs & Menus (Модальные окна и контекстные меню)</span>
+                </h2>
+                <p class="section-desc">Всплывающие диалоги подтверждения фискализации и выпадающие списки контекстных действий.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-grid-buttons">
+                    <md-filled-button id="openDialogBtn">
+                        <md-icon slot="icon">receipt</md-icon>
+                        Открыть демо-диалог чека
+                    </md-filled-button>
+
+                    <div class="m3-dialog-actions">
+                        <md-outlined-button id="openMenuBtn">
+                            <md-icon slot="icon">more_vert</md-icon>
+                            Действия с заказом
+                        </md-outlined-button>
+
+                        <md-menu id="demoMenu" anchor="openMenuBtn">
+                            <md-menu-item id="menuItemPrint">
+                                <md-icon slot="start">print</md-icon>
+                                <div slot="headline">Печать предчека</div>
+                            </md-menu-item>
+                            <md-menu-item id="menuItemHold">
+                                <md-icon slot="start">bookmark_add</md-icon>
+                                <div slot="headline">Отложить в Hold Bills</div>
+                            </md-menu-item>
+                            <md-menu-item id="menuItemCancel">
+                                <md-icon slot="start">delete</md-icon>
+                                <div slot="headline">Отменить заказ</div>
+                            </md-menu-item>
+                        </md-menu>
+                    </div>
+                </div>
+
+                <!-- Dialog Element -->
+                <md-dialog id="demoDialog" class="m3-config-dialog">
+                    <div slot="headline" class="m3-dialog-header">
+                        <div class="m3-dialog-title-group">
+                            <md-icon class="status-icon">verified</md-icon>
+                            <span>Фискальный чек Soliq ОФД</span>
+                        </div>
+                    </div>
+                    <div slot="content" class="m3-dialog-options-list">
+                        <p class="m3-dialog-toggle-text">
+                            Заказ <strong>#1048</strong> успешно зарегистрирован в Государственном налоговом комитете РУз. Сумма фискализации: <strong>145 000 UZS</strong>.
+                        </p>
+                    </div>
+                    <div slot="actions" class="m3-dialog-actions">
+                        <md-text-button id="closeDialogBtn">Закрыть</md-text-button>
+                        <md-filled-button id="printReceiptBtn" class="m3-dialog-btn-primary">
+                            <md-icon slot="icon">print</md-icon>
+                            Печать чека
+                        </md-filled-button>
+                    </div>
+                </md-dialog>
+            </div>
+        </section>
+
+        <!-- 11. Lists & Cards -->
+        <section id="lists-cards" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>view_agenda</md-icon>
+                    <span>Lists & Cards (Списки и карточки сущностей)</span>
+                </h2>
+                <p class="section-desc">Строчные списки заказов и карточки позиций в адаптивной Grid-сетке.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <!-- Outlined & Elevated Cards Grid -->
+                <div class="m3-grid-cards-split">
+                    <article class="m3-card m3-card-outlined">
+                        <div class="m3-card-header">
+                            <div class="m3-avatar">
+                                <md-icon>lunch_dining</md-icon>
+                            </div>
+                            <div>
+                                <div class="m3-card-title">Бургер «Socratic Deluxe»</div>
+                                <div class="m3-card-subtitle">Котлета Black Angus, чеддер</div>
+                            </div>
+                            <span class="m3-price-badge">96 000 UZS</span>
+                        </div>
+                        <p class="catalog-desc">
+                            Сочная мраморная говядина, фирменный соус трюфельный айоли, маринованный огурец.
+                        </p>
+                        <div class="m3-card-actions">
+                            <md-filled-button>
+                                <md-icon slot="icon">add</md-icon>
+                                В заказ
+                            </md-filled-button>
+                            <md-outlined-button>Модификаторы</md-outlined-button>
+                        </div>
+                    </article>
+
+                    <article class="m3-card m3-card-elevated">
+                        <div class="m3-card-header">
+                            <div class="m3-avatar">
+                                <md-icon>local_cafe</md-icon>
+                            </div>
+                            <div>
+                                <div class="m3-card-title">Капучино на миндальном</div>
+                                <div class="m3-card-subtitle">350 мл • Без сахара</div>
+                            </div>
+                            <span class="m3-price-badge">28 000 UZS</span>
+                        </div>
+                        <p class="catalog-desc">
+                            Свежеобжаренная арабика 100%, нежная пенка растительного молока высокой плотности.
+                        </p>
+                        <div class="m3-card-actions">
+                            <md-filled-tonal-button>
+                                <md-icon slot="icon">add</md-icon>
+                                В заказ
+                            </md-filled-tonal-button>
+                            <md-text-button>Состав</md-text-button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Structured M3 List -->
+                <div class="m3-stack card-footer">
+                    <div class="m3-label">Список позиций чека (M3 List)</div>
+                    <md-list class="card-outlined">
+                        <md-list-item>
+                            <md-icon slot="start">lunch_dining</md-icon>
+                            <div slot="headline">Бургер «Socratic Deluxe»</div>
+                            <div slot="supporting-text">Котлета Black Angus, сыр чеддер • 2 шт.</div>
+                            <span slot="trailing-supporting-text" class="m3-price-badge">96 000 UZS</span>
+                        </md-list-item>
+                        <md-list-item>
+                            <md-icon slot="start">local_cafe</md-icon>
+                            <div slot="headline">Капучино на миндальном молоке</div>
+                            <div slot="supporting-text">350 мл, без сахара • 1 шт.</div>
+                            <span slot="trailing-supporting-text" class="m3-price-badge">28 000 UZS</span>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. M3 Color Palette Tokens -->
+        <section id="palette" class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <md-icon>palette</md-icon>
+                    <span>M3 System Color Tokens (Токены дизайн-системы)</span>
+                </h2>
+                <p class="section-desc">Базовые системные цветовые переменные CSS Material Design 3, автоматически адаптирующиеся под Dark/Light тему.</p>
+            </div>
+
+            <div class="m3-card m3-card-outlined">
+                <div class="m3-palette-grid">
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Primary</span>
+                        <span class="m3-swatch-code">--md-sys-color-primary</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Primary Container</span>
+                        <span class="m3-swatch-code">--md-sys-color-primary-container</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Secondary</span>
+                        <span class="m3-swatch-code">--md-sys-color-secondary</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Secondary Container</span>
+                        <span class="m3-swatch-code">--md-sys-color-secondary-container</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Tertiary</span>
+                        <span class="m3-swatch-code">--md-sys-color-tertiary</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Error</span>
+                        <span class="m3-swatch-code">--md-sys-color-error</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Surface Container</span>
+                        <span class="m3-swatch-code">--md-sys-color-surface-container</span>
+                    </div>
+                    <div class="m3-swatch">
+                        <span class="m3-swatch-name">Surface High</span>
+                        <span class="m3-swatch-code">--md-sys-color-surface-container-high</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Scripts (Theme Toggle, Dialog, Menu, QA Inspector Engine) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle Logic
+            function toggleTheme() {
+                const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                document.documentElement.style.colorScheme = next;
+                document.querySelectorAll('#themeToggleBtn md-icon, #headerThemeBtn md-icon').forEach(icon => {
+                    icon.textContent = next === 'dark' ? 'light_mode' : 'dark_mode';
+                });
+            }
+
+            const themeBtn = document.getElementById('themeToggleBtn');
+            const headerThemeBtn = document.getElementById('headerThemeBtn');
+            if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+            if (headerThemeBtn) headerThemeBtn.addEventListener('click', toggleTheme);
+
+            // Viewport Width Tracker
+            const vpWidthEl = document.getElementById('vpWidth');
+            function updateViewport() {
+                if (vpWidthEl) vpWidthEl.textContent = window.innerWidth;
+            }
+            window.addEventListener('resize', updateViewport);
+            updateViewport();
+
+            // Grid Debugger Toggle
+            const gridDebugBtn = document.getElementById('gridDebugBtn');
+            let gridDebugActive = false;
+            if (gridDebugBtn) {
+                gridDebugBtn.addEventListener('click', () => {
+                    gridDebugActive = !gridDebugActive;
+                    gridDebugBtn.selected = gridDebugActive;
+                    document.querySelectorAll('.catalog-main, .catalog-section, .m3-card, .m3x-card, .m3-grid-buttons, .m3-grid-icon-buttons, .m3-grid-text-fields, .m3-grid-selection, .m3-grid-chips, .m3-grid-progress, .m3-grid-cards-split, .m3-palette-grid, .m3-form-grid, .m3-stack')
+                        .forEach(el => {
+                            if (gridDebugActive) {
+                                el.setAttribute('data-debug-outline', 'true');
+                                el.style.outline = '1px dashed rgba(112, 220, 188, 0.45)';
+                            } else {
+                                el.removeAttribute('data-debug-outline');
+                                el.style.outline = '';
+                            }
+                        });
+                });
+            }
+
+            // Stress Test (Text Blowout Injection)
+            const stressTestBtn = document.getElementById('stressTestBtn');
+            let stressActive = false;
+            const originalTexts = new Map();
+            if (stressTestBtn) {
+                stressTestBtn.addEventListener('click', () => {
+                    stressActive = !stressActive;
+                    stressTestBtn.selected = stressActive;
+                    const targets = document.querySelectorAll('.m3-card-title, .m3-card-subtitle, .m3-label, .stress-target, md-filled-button, md-outlined-button, md-filled-tonal-button, md-list-item [slot="headline"]');
+                    targets.forEach((el, index) => {
+                        if (stressActive) {
+                            if (!originalTexts.has(index)) originalTexts.set(index, el.textContent);
+                            if (el.tagName.toLowerCase().startsWith('md-')) {
+                                el.setAttribute('data-orig-label', el.getAttribute('label') || '');
+                                if (el.hasAttribute('label')) el.setAttribute('label', 'СверхдлинноеНаименованиеПозицииБезПробеловКотороеМожетРазорватьСетку');
+                            } else {
+                                el.textContent = 'СверхдлинноеНаименованиеБезПробеловКотороеМожетРазорватьСетку_' + index;
+                            }
+                        } else {
+                            if (originalTexts.has(index)) {
+                                if (el.tagName.toLowerCase().startsWith('md-')) {
+                                    const orig = el.getAttribute('data-orig-label');
+                                    if (orig) el.setAttribute('label', orig);
+                                } else {
+                                    el.textContent = originalTexts.get(index);
+                                }
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Touch Target Ergonomics Audit (< 44px)
+            const touchAuditBtn = document.getElementById('touchAuditBtn');
+            let touchAuditActive = false;
+            if (touchAuditBtn) {
+                touchAuditBtn.addEventListener('click', () => {
+                    touchAuditActive = !touchAuditActive;
+                    touchAuditBtn.selected = touchAuditActive;
+                    const interactives = document.querySelectorAll('md-filled-button, md-outlined-button, md-filled-tonal-button, md-elevated-button, md-text-button, md-icon-button, md-filled-icon-button, md-outlined-icon-button, md-filled-tonal-icon-button, md-fab, md-filter-chip, md-assist-chip, md-checkbox, md-radio, md-switch');
+                    let smallCount = 0;
+                    interactives.forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (touchAuditActive) {
+                            if (rect.width < 44 || rect.height < 44) {
+                                smallCount++;
+                                el.style.boxShadow = '0 0 0 2px #ffb4ab';
+                            } else {
+                                el.style.boxShadow = '0 0 0 2px #70dcbc';
+                            }
+                        } else {
+                            el.style.boxShadow = '';
+                        }
+                    });
+                    if (touchAuditActive) {
+                        alert(`Аудит тач-зон:\nВсего интерактивных элементов: ${interactives.length}\nЭлементов < 44px: ${smallCount} ${smallCount === 0 ? '✅ (Идеально!)' : '⚠️ (Требует внимания)'}`);
+                    }
+                });
+            }
+
+            // Dialog Logic
+            const demoDialog = document.getElementById('demoDialog');
+            const openDialogBtn = document.getElementById('openDialogBtn');
+            const closeDialogBtn = document.getElementById('closeDialogBtn');
+            const printReceiptBtn = document.getElementById('printReceiptBtn');
+
+            if (openDialogBtn && demoDialog) {
+                openDialogBtn.addEventListener('click', () => {
+                    if (typeof demoDialog.show === 'function') {
+                        demoDialog.show();
+                    } else {
+                        demoDialog.setAttribute('open', '');
+                    }
+                });
+            }
+
+            if (closeDialogBtn && demoDialog) {
+                closeDialogBtn.addEventListener('click', () => {
+                    if (typeof demoDialog.close === 'function') {
+                        demoDialog.close();
+                    } else {
+                        demoDialog.removeAttribute('open');
+                    }
+                });
+            }
+
+            if (printReceiptBtn && demoDialog) {
+                printReceiptBtn.addEventListener('click', () => {
+                    if (typeof demoDialog.close === 'function') {
+                        demoDialog.close();
+                    } else {
+                        demoDialog.removeAttribute('open');
+                    }
+                });
+            }
+
+            // Context Menu Logic
+            const demoMenu = document.getElementById('demoMenu');
+            const openMenuBtn = document.getElementById('openMenuBtn');
+            if (openMenuBtn && demoMenu) {
+                demoMenu.anchorElement = openMenuBtn;
+                openMenuBtn.addEventListener('click', () => {
+                    demoMenu.open = !demoMenu.open;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

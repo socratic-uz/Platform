@@ -1,0 +1,195 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: foundations/normalize.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    tab-size: 4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+body {
+    width: 100%;
+}
+
+body {
+    background-color: var(--md-sys-color-surface, #121318);
+}
+
+body {
+    color: var(--md-sys-color-on-surface, #e2e2e9);
+}
+
+body {
+    font-family: var(--md-ref-typeface-plain, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    touch-action: manipulation;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-size: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    line-height: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary, #a8c7fa);
+}
+
+:focus-visible {
+    outline-offset: 2px;
+}
+
+::selection {
+    background-color: var(--md-sys-color-primary-container, #004a77);
+}
+
+::selection {
+    color: var(--md-sys-color-on-primary-container, #c2e7ff);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table {
+    text-indent: 0;
+}
+
+:where(
+    body,
+    html
+) {
+    overflow-x: clip;
+}
+
+:where(
+    body,
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+) {
+    margin: 0;
+}
+
+
+/* ─── Responsive & Container At-Rules ─── */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
