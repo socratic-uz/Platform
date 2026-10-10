@@ -116,7 +116,7 @@ export class AstConsolidator {
         const sortedDeclKeys = Array.from(topLevelDecls.keys()).sort((a, b) => a.localeCompare(b));
         for (const declString of sortedDeclKeys) {
           const selectorSet = topLevelDecls.get(declString);
-          content += this._formatRule(selectorSet, declString);
+          content += this._formatRule(selectorSet, declString, '', moduleRelPath);
           totalDeclarations++;
         }
       }
@@ -129,7 +129,7 @@ export class AstConsolidator {
         const sortedDeclKeys = Array.from(declMap.keys()).sort((a, b) => a.localeCompare(b));
         for (const declString of sortedDeclKeys) {
           const selectorSet = declMap.get(declString);
-          content += this._formatRule(selectorSet, declString, '    ');
+          content += this._formatRule(selectorSet, declString, '    ', moduleRelPath);
           totalDeclarations++;
         }
         content += `}\n\n`;
@@ -153,8 +153,13 @@ export class AstConsolidator {
     return { totalFiles, totalDeclarations };
   }
 
-  _formatRule(selectorSet, declString, indent = '') {
+  _formatRule(selectorSet, declString, indent = '', moduleRelPath = '') {
     const sortedSelectors = Array.from(selectorSet).sort((a, b) => a.localeCompare(b));
+
+    // Special case: gradient-text.css MUST NOT use :where() to preserve specificity over background shorthand
+    if (moduleRelPath === 'color/gradient-text.css') {
+      return `${indent}${sortedSelectors.join(`,\n${indent}`)} {\n${indent}    ${declString};\n${indent}}\n\n`;
+    }
 
     if (sortedSelectors.length === 1) {
       return `${indent}${sortedSelectors[0]} {\n${indent}    ${declString};\n${indent}}\n\n`;

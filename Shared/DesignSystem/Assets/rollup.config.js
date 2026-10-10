@@ -13,9 +13,9 @@ export default [
     plugins: [resolve(), commonjs()]
   },
 
-  // Material Web Components (@material/web)
+  // Material Web Components (@material/web) with Lit SSR hydration support
   {
-    input: 'node_modules/@material/web/all.js',
+    input: 'src/js/material-web-entry.js',
     output: {
       file: 'wwwroot/js/material-web.bundle.js',
       format: 'iife',

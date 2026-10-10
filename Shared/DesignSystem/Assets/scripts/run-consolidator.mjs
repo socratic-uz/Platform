@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
+import postcss from 'postcss';
 import { AstConsolidator } from './consolidator-engine.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -61,7 +62,7 @@ function runBundleScript() {
  * Audit existing CSS files for accidental duplicate property declarations
  */
 function auditCurrentCss() {
-  console.log('\n🔍 [AST Audit] Scanning existing W3C CSS modules for duplicate declarations...');
+  console.log('\n🔍 [AST Audit] Scanning existing W3C CSS modules for duplicate declarations (scoped)...');
   const files = getAllCssFiles(cssRootDir);
   let totalDuplicates = 0;
   let auditedFiles = 0;
@@ -70,20 +71,46 @@ function auditCurrentCss() {
     const content = fs.readFileSync(file, 'utf8');
     const relPath = path.relative(cssRootDir, file);
 
-    const declMap = new Map();
-    const declRegex = /([a-z-]+)\s*:\s*([^;{}]+);/gi;
-    let match;
-    while ((match = declRegex.exec(content)) !== null) {
-      const decl = `${match[1].toLowerCase().trim()}: ${match[2].trim()}`;
-      declMap.set(decl, (declMap.get(decl) || 0) + 1);
-    }
-
+    const root = postcss.parse(content, { from: file });
+    // Scope -> Map<declKey, count>
+    const scopesMap = new Map();
     let fileDuplicates = 0;
-    for (const [, count] of declMap.entries()) {
-      if (count > 1) {
-        fileDuplicates += (count - 1);
+
+    root.walk(node => {
+      // Ignore keyframes content
+      if (node.type === 'atrule' && (node.name === 'keyframes' || node.name === '-webkit-keyframes')) {
+        return;
       }
-    }
+
+      if (node.type === 'rule') {
+        if (node.parent && node.parent.type === 'atrule' && node.parent.name.includes('keyframes')) {
+          return;
+        }
+
+        const atRuleStack = [];
+        let currentParent = node.parent;
+        while (currentParent && currentParent.type === 'atrule') {
+          atRuleStack.unshift(`@${currentParent.name} ${currentParent.params.trim()}`);
+          currentParent = currentParent.parent;
+        }
+        const atRuleScope = atRuleStack.join(' { ');
+
+        if (!scopesMap.has(atRuleScope)) {
+          scopesMap.set(atRuleScope, new Map());
+        }
+
+        const declMap = scopesMap.get(atRuleScope);
+
+        node.walkDecls(decl => {
+          const declKey = `${decl.prop.trim().toLowerCase()}: ${decl.value.trim()}`;
+          const currentCount = declMap.get(declKey) || 0;
+          if (currentCount >= 1) {
+            fileDuplicates++;
+          }
+          declMap.set(declKey, currentCount + 1);
+        });
+      }
+    });
 
     if (fileDuplicates > 0) {
       console.log(`  ⚠️  ${relPath}: ${fileDuplicates} redundant duplicate declarations detected.`);
@@ -96,7 +123,7 @@ function auditCurrentCss() {
   if (totalDuplicates > 0) {
     console.log(`💡 Run 'node scripts/run-consolidator.mjs --consolidate-current' to mathematically merge them.`);
   } else {
-    console.log(`🎉 100% Pure: Every declaration is unique (Single-Declaration standard satisfied).`);
+    console.log(`🎉 100% Pure: Every declaration is unique per scope (Single-Declaration standard satisfied).`);
   }
 }
 
