@@ -1,0 +1,1897 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/typography/font.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+code {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.showcase-card-code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.det-layout {
+    font-family: 'Outfit', 'Roboto', sans-serif;
+}
+
+.landing-page-root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.picker-hex-input {
+    font-family: 'Roboto Mono', monospace;
+}
+
+:where(
+    .chat-input-wrapper textarea,
+    .input-box textarea,
+    .kiosk-main,
+    .md3-time-input,
+    .navigator-panel,
+    .payment-dashboard,
+    .ux-search-box input,
+    button,
+    input,
+    main.showcase-page,
+    optgroup,
+    select,
+    textarea
+) {
+    font-family: inherit;
+}
+
+:where(
+    .click-popup-coords,
+    .color-hex,
+    .det-logs-console,
+    .m3-swatch-code,
+    .monospace,
+    .resolution-badge,
+    .spotlight-mode-badge,
+    .ux-modal-code,
+    .ux-mode-code,
+    .ux-mode-number-pill
+) {
+    font-family: monospace;
+}
+
+md-icon:not(:defined) {
+    font-family: var(--md-icon-font, 'Material Symbols Outlined');
+}
+
+:where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+) {
+    font-family: var(--md-ref-typeface-brand);
+}
+
+body {
+    font-family: var(--md-ref-typeface-plain, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+html {
+    font-family: var(--md-ref-typeface-plain);
+}
+
+:where(
+    .file-name,
+    .upload-subtext,
+    .upload-text
+) {
+    font-family: var(--md-sys-typescale-body-small-font);
+}
+
+:where(
+    .link-stack,
+    section.link-stack
+) {
+    font-size: .875rem;
+}
+
+:where(
+    .link-stack a,
+    .link-stack article
+) {
+    font-size: .9rem;
+}
+
+.place-details-badge {
+    font-size: 0.62rem;
+}
+
+:where(
+    .new-badge,
+    .upload-subtext
+) {
+    font-size: 0.65rem;
+}
+
+:where(
+    .place-info-row .info-label,
+    .route-alternative-action,
+    .stat-label
+) {
+    font-size: 0.68rem;
+}
+
+:where(
+    .route-alternative-arrival,
+    .route-alternative-label
+) {
+    font-size: 0.69rem;
+}
+
+.route-alternative-distance {
+    font-size: 0.71rem;
+}
+
+.ux-mode-number-pill {
+    font-size: 0.725rem;
+}
+
+:where(
+    .det-bbox-label,
+    .kiosk-brand-tagline,
+    .m3-swatch-code,
+    .map-panel-toggle-tab,
+    .sidebar-brand-subtitle,
+    .spotlight-pill,
+    .stat-value .unit,
+    .ux-widget-subrow
+) {
+    font-size: 0.72rem;
+}
+
+:where(
+    .feat-pill,
+    .route-step-meta,
+    .ux-mode-badge-overlay
+) {
+    font-size: 0.74rem;
+}
+
+:where(
+    .ad-disclaimer,
+    .ad-network-badge,
+    .ad-network-partner,
+    .analytics-status-pill,
+    .auth-divider,
+    .badge-counter,
+    .det-status-badge,
+    .docs-group-header,
+    .drawer-header .badge,
+    .faceid-notice,
+    .file-name,
+    .kds-status-tag,
+    .kpi-trend,
+    .lang-chip-btn,
+    .m3-bottom-nav-item,
+    .m3-filter-chip-count,
+    .pos-tech-chip,
+    .product-tag-chip,
+    .promo-success-text,
+    .qrg-badge,
+    .qrg-card-hint,
+    .qrg-field-label,
+    .qrg-group-head,
+    .qrg-slider-header,
+    .route-options-toolbar-btn,
+    .session-item-subtitle,
+    .showcase-lib-badge,
+    .spotlight-mode-badge,
+    .status-text,
+    .ux-mode-code
+) {
+    font-size: 0.75rem;
+}
+
+:where(
+    .click-popup-btn,
+    .map-measure-badge-hint,
+    .map-panel-toggle,
+    .place-coordinates
+) {
+    font-size: 0.76rem;
+}
+
+:where(
+    .metric-desc,
+    .qr-status-text,
+    .resolution-badge,
+    .spatial-wing-badge
+) {
+    font-size: 0.775rem;
+}
+
+:where(
+    .click-popup-address,
+    .det-logs-console,
+    .det-stat-item,
+    .m3-dialog-toggle-desc,
+    .map-category-chip,
+    .place-details-back-btn,
+    .route-alternative-card,
+    .showcase-card-code,
+    .showcase-card-desc,
+    .ux-widget
+) {
+    font-size: 0.78rem;
+}
+
+:where(
+    .map-route-suggestion-meta,
+    .popular-badge,
+    .pos-ux-mode-title,
+    .pro-tag,
+    .qrg-color-picker-wrapper,
+    .required-badge,
+    .route-options-toolbar-meta,
+    .showcase-brand-badge,
+    .showcase-nav-category-header,
+    .showcase-nav-count,
+    .showcase-stat-lbl,
+    .sidebar-nav-category,
+    .ux-discount-badge,
+    .ux-mode-category-tag
+) {
+    font-size: 0.7rem;
+}
+
+:where(
+    .column-badge,
+    .info-label,
+    .kds-order-ref,
+    .kds-time-ago,
+    .m3-info-label,
+    .m3-progress-labels,
+    .monospace,
+    .payment-dashboard .info-label,
+    .progress-labels,
+    .validation-message
+) {
+    font-size: 0.8125rem;
+}
+
+:where(
+    .analytics-config-btn,
+    .color-hex,
+    .kpi-title,
+    .lang-menu-item,
+    .platform-info span,
+    .qr-caption,
+    .seller-address,
+    .spatial-meta-note,
+    .spotlight-header-badge,
+    .ux-reset-filter-btn
+) {
+    font-size: 0.825rem;
+}
+
+:where(
+    .click-popup-coords,
+    .landing-floating-auth-btn,
+    .map-global-suggestion-button,
+    .option-add-price,
+    .place-details-header-title,
+    .place-info-row .info-value,
+    .pos-empty-state p,
+    .pos-org-name,
+    .price-label,
+    .route-loading,
+    .route-step-text,
+    .route-steps h6,
+    .summary-date
+) {
+    font-size: 0.82rem;
+}
+
+:where(
+    .landing-auth-btn,
+    .landing-nav-link,
+    .ux-mode-launch-btn,
+    .ux-mode-quickview-btn
+) {
+    font-size: 0.84rem;
+}
+
+:where(
+    .active-orders-label,
+    .ad-org-context,
+    .advance-prompt,
+    .analytics-mode-btn,
+    .bar-labels,
+    .body-subtext,
+    .control-label,
+    .current-plan-indicator,
+    .det-active-sessions-empty,
+    .det-permission-rationale,
+    .det-voice-room,
+    .explorer-subtitle,
+    .floating-chip,
+    .footer-col-title,
+    .hero-pill-link,
+    .kiosk-category-label,
+    .legend-item,
+    .m3-counter button,
+    .m3-segmented-btn,
+    .maneuver-text,
+    .map-action-button,
+    .map-route-remove-via-btn,
+    .material-counter button,
+    .mode-indicator,
+    .order-card-footer,
+    .order-items-table th,
+    .orders-table th,
+    .org-card-badge,
+    .org-card-desc,
+    .otp-target-hint,
+    .pagination-text,
+    .payment-support a,
+    .plan-currency,
+    .pos-orders-label,
+    .preset-btn,
+    .preview-info,
+    .promotion-modal-subtitle,
+    .qrg-back,
+    .qrg-empty-list,
+    .qrg-section-title,
+    .qty-val,
+    .route-error,
+    .route-stat,
+    .screensaver-pro-badge,
+    .shipping-card,
+    .showcase-nav-btn,
+    .stage-tab,
+    .tier-price small,
+    .trial-days-label,
+    .trust-badge,
+    .ux-modal-code,
+    .variant-dialog-subtext,
+    .wishlist-desc-text,
+    md-elevated-card p,
+    md-filled-button,
+    md-filled-card p,
+    md-outlined-button,
+    md-outlined-card p
+) {
+    font-size: 0.85rem;
+}
+
+.spotlight-info p {
+    font-size: 0.865rem;
+}
+
+code {
+    font-size: 0.875em;
+}
+
+:where(
+    .analytics-date-picker-trigger,
+    .assistant-search,
+    .auth-error-banner,
+    .auth-subtitle,
+    .card-subtitle,
+    .citation,
+    .feature-badge,
+    .footer-brand-tagline,
+    .footer-links-list a,
+    .hero-badge,
+    .item-qty-badge,
+    .items-count-badge,
+    .loading-label,
+    .m3-breadcrumbs,
+    .m3-card-subtitle,
+    .m3-filter-chip,
+    .m3-legend,
+    .m3-period-picker-trigger,
+    .m3-pill-badge,
+    .m3-trust-footer,
+    .page-subtitle,
+    .payment-trust-footer,
+    .platform-desc p,
+    .preset-label,
+    .section-badge,
+    .seller-browse-all,
+    .share-toast,
+    .signin-error-banner,
+    .signin-subtitle,
+    .spec-card-text h4,
+    .spec-label,
+    .store-breadcrumbs,
+    .ux-count-pill
+) {
+    font-size: 0.875rem;
+}
+
+:where(
+    .spatial-subcard p,
+    .spotlight-launch-btn,
+    .ux-mode-desc
+) {
+    font-size: 0.885rem;
+}
+
+:where(
+    .m3-dialog-description,
+    .pos-price-text,
+    .pos-product-title-text,
+    .pos-quick-bill-btn,
+    .route-header h5,
+    .route-start-btn,
+    .sidebar-link,
+    .stat-value
+) {
+    font-size: 0.88rem;
+}
+
+:where(
+    .analytics-period-chip,
+    .badge,
+    .badge-age-restriction,
+    .card-meta,
+    .card-payment,
+    .count-badge,
+    .det-diag-box,
+    .det-diag-box-warning,
+    .det-label,
+    .det-subtitle,
+    .footer-copy,
+    .footer-copyright,
+    .item-status-pill,
+    .item-support,
+    .lang-pill-btn,
+    .lang-toggle-btn,
+    .m3-badge,
+    .m3-count-badge,
+    .m3-label,
+    .m3-label-sm,
+    .m3-status-badge,
+    .map-route-profile-chip,
+    .map-route-suggestion-title,
+    .order-status-badge,
+    .org-description,
+    .org-tag,
+    .pills-label,
+    .qrg-org,
+    .resend-countdown,
+    .route-button,
+    .showcase-controls-bar,
+    .showcase-topbar-subtitle,
+    .spec-card-text p,
+    .status-badge,
+    .support-label,
+    .upload-text,
+    .venue-chip
+) {
+    font-size: 0.8rem;
+}
+
+:where(
+    .ux-expand-btn,
+    .ux-modal-btn-primary
+) {
+    font-size: 0.925rem;
+}
+
+:where(
+    .m3-selection-item,
+    .section-desc
+) {
+    font-size: 0.92rem;
+}
+
+:where(
+    .back-button,
+    .chat-input-wrapper textarea,
+    .column-empty p,
+    .empty-plans-desc,
+    .error-banner,
+    .input-box textarea,
+    .item-unit-price,
+    .kds-action-btn,
+    .kds-empty-col p,
+    .kds-qty-badge,
+    .m3-back-button,
+    .m3-banner-error,
+    .m3-empty-column p,
+    .m3-page-header-subtitle,
+    .m3-row-label,
+    .m3-row-value,
+    .m3-table,
+    .m3x-btn-pill,
+    .order-items-table,
+    .order-subtitle,
+    .row-label,
+    .row-value,
+    .schedule-table
+) {
+    font-size: 0.9375rem;
+}
+
+:where(
+    .evolution-card p,
+    .fiscal-tag-item,
+    .footer-brand p,
+    .footer-columns a,
+    .m3-dialog-btn-primary,
+    .m3-empty-state-desc,
+    .m3-price-badge,
+    .nav-control-btn,
+    .org-card-header p,
+    .panel-section-title,
+    .section-heading,
+    .showcase-hero p,
+    .spatial-wing-header p,
+    .spotlight-sub,
+    .subscription-description,
+    .ux-empty-state p,
+    .ux-search-box input,
+    .video-caption,
+    .wishlist-details-desc,
+    #components-reconnect-modal p
+) {
+    font-size: 0.95rem;
+}
+
+.surveyContainer {
+    font-size: 0.9em;
+}
+
+:where(
+    .card-mid-row,
+    .cart-count,
+    .chip-icon,
+    .column-empty,
+    .det-card-title-sm,
+    .det-placeholder-text,
+    .detail-item,
+    .docs-header-breadcrumb,
+    .faceid-status-text,
+    .kds-empty-col,
+    .kiosk-empty-state p,
+    .m3-dialog-toggle-title,
+    .m3-empty-column,
+    .m3-swatch-name,
+    .map-panel-toggle-icon,
+    .notification-banner,
+    .order-items-table td,
+    .orders-error-banner,
+    .orders-table td,
+    .pillar-features li,
+    .plan-features,
+    .platform-btn,
+    .price-breakdown,
+    .product-preview-pill,
+    .qr-instruction,
+    .search-input,
+    .select-input,
+    .text-input,
+    .tier-features,
+    .ux-modal-btn-secondary,
+    .ux-tab-btn
+) {
+    font-size: 0.9rem;
+}
+
+:where(
+    .amount-value,
+    .bento-content p,
+    .card-order-id,
+    .catalog-desc,
+    .column-title,
+    .feature-list li,
+    .info-value,
+    .m3-info-value,
+    .map-measure-badge-value,
+    .panel-title,
+    .payment-dashboard .info-value,
+    .place-details-name,
+    .preview-title,
+    .product-title,
+    .subcard-header h4,
+    md-elevated-card h5,
+    md-filled-card h5,
+    md-outlined-card h5
+) {
+    font-size: 1.05rem;
+}
+
+:where(
+    .item-name,
+    .m3-total-label,
+    .total-label
+) {
+    font-size: 1.0625rem;
+}
+
+.ux-mode-title-box h3 {
+    font-size: 1.08rem;
+}
+
+:where(
+    .badge-icon,
+    .hero-subtitle,
+    .item-total-price,
+    .kds-product-name,
+    .plan-title
+) {
+    font-size: 1.125rem;
+}
+
+:where(
+    .about-subtitle,
+    .b2b-lead-content p,
+    .card-title,
+    .download-header p,
+    .drawer-footer .total-row,
+    .example-subtitle,
+    .explorer-title-group h4,
+    .header-brand-link,
+    .header-brand-text,
+    .help-subtitle,
+    .landing-subpage-subtitle,
+    .m3-card-title,
+    .m3-summary-title,
+    .maneuver-distance,
+    .order-number,
+    .plan-name,
+    .qrg-card-name,
+    .sidebar-brand-title,
+    .summary-title,
+    .tier-name
+) {
+    font-size: 1.15rem;
+}
+
+.spotlight-info h3 {
+    font-size: 1.18rem;
+}
+
+:where(
+    .analytics-mode-btn md-icon,
+    .banner-close-btn,
+    .crumb-icon,
+    .det-voice-title,
+    .docs-sidebar-title,
+    .evolution-header p,
+    .kiosk-brand-name,
+    .m3-segmented-btn md-icon,
+    .org-card-name,
+    .place-info-row .info-icon,
+    .pos-empty-state h5,
+    .pro-badge-icon,
+    .route-close,
+    .section-title-box p,
+    .seller-name,
+    .showcase-brand-title,
+    .showcase-stat-val,
+    .wishlist-details-price,
+    md-elevated-card .price-tag,
+    md-filled-card .price-tag,
+    md-outlined-card .price-tag
+) {
+    font-size: 1.1rem;
+}
+
+:where(
+    .ad-slide-touch-prompt,
+    .avatar-container .headline,
+    .back-icon,
+    .brand-screensaver-cta,
+    .brand-title,
+    .btn-icon,
+    .dialog-headline-wrap,
+    .drawer-header .headline,
+    .empty-plans-title,
+    .explorer-title-group md-icon,
+    .info-icon,
+    .m3-back-icon,
+    .m3-dialog-header h3,
+    .m3-dialog-toggle-icon,
+    .map-route-add-via-btn,
+    .no-messages,
+    .platform-info h3,
+    .price-value,
+    .product-currency,
+    .profile-title,
+    .promotion-modal-title,
+    .showcase-topbar-title,
+    .smart-grid-container h4,
+    md-dialog.contacts .headline,
+    md-dialog.faceid-profile-modal .headline
+) {
+    font-size: 1.25rem;
+}
+
+:where(
+    .det-permission-rationale md-icon,
+    .det-title,
+    .md3-dialog-headline,
+    .qrg-title,
+    .variant-dialog-title,
+    header.landing-header .header-brand-text
+) {
+    font-size: 1.2rem;
+}
+
+:where(
+    .brand-screensaver-tagline,
+    .footer-brand-title,
+    .m3-dialog-icon,
+    .m3-empty-state-title,
+    .page-heading
+) {
+    font-size: 1.35rem;
+}
+
+.plans-section h2 {
+    font-size: 1.375rem;
+}
+
+:where(
+    .evolution-card h3,
+    .kiosk-empty-state h3,
+    .qrg-preview-header h2
+) {
+    font-size: 1.3rem;
+}
+
+:where(
+    .m3-total-value,
+    .section-title,
+    .spatial-wing-header h3,
+    .subscription-title,
+    .total-value
+) {
+    font-size: 1.45rem;
+}
+
+:where(
+    .maneuver-icon,
+    .showcase-section-title,
+    .ux-empty-state h3,
+    .video-card-header h3
+) {
+    font-size: 1.4rem;
+}
+
+:where(
+    .auth-title,
+    .card-icon,
+    .error-banner .error-icon,
+    .error-icon,
+    .m3-banner-error .error-icon,
+    .metric-num,
+    .org-card-header h3,
+    .place-details-avatar,
+    .signin-title,
+    .spec-icon
+) {
+    font-size: 1.5rem;
+}
+
+.score-circle {
+    font-size: 1.625rem;
+}
+
+:where(
+    .trial-days-highlight,
+    .ux-modal-title,
+    .ux-mode-icon-box
+) {
+    font-size: 1.6rem;
+}
+
+:where(
+    .ad-touch-icon,
+    .auth-logo-badge,
+    .brand-touch-icon,
+    .footer-logo,
+    .header-rocket-icon,
+    .home-title,
+    .item-icon,
+    .kpi-number,
+    .m3-page-header-title,
+    .pillar-icon-box,
+    .plan-price-wrap,
+    .signin-logo-badge,
+    .spec-value-text,
+    .tier-price
+) {
+    font-size: 1.75rem;
+}
+
+:where(
+    .bento-content h3,
+    .spotlight-icon-box
+) {
+    font-size: 1.85rem;
+}
+
+:where(
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+) {
+    font-size: 100%;
+}
+
+.picker-day-dot {
+    font-size: 10px;
+}
+
+:where(
+    .md3-time-label,
+    .picker-badge
+) {
+    font-size: 11px;
+}
+
+:where(
+    .label-title,
+    .md3-closed-badge,
+    .md3-presets-label,
+    .md3-time-separator,
+    .picker-popover-title
+) {
+    font-size: 12px;
+}
+
+:where(
+    .kiosk-brand-icon,
+    .md3-schedule-subtitle,
+    .md3-time-input,
+    .picker-badge md-icon,
+    .picker-hex-input,
+    .picker-hex-prefix,
+    .picker-preview-text
+) {
+    font-size: 13px;
+}
+
+:where(
+    .org-tag md-icon,
+    .picker-trigger-title
+) {
+    font-size: 14px;
+}
+
+:where(
+    .hero-pill-link md-icon,
+    .landing-auth-btn md-icon,
+    .landing-nav-link md-icon,
+    .lang-chevron,
+    .picker-swatch-check
+) {
+    font-size: 16px;
+}
+
+:where(
+    .advance-icon,
+    .chevron-icon,
+    .cta-arrow,
+    .detail-icon,
+    .footer-columns md-icon,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .kpi-icon-badge,
+    .lang-globe-icon,
+    .m3-filter-chip-icon,
+    .org-card-badge md-icon,
+    .showcase-nav-btn-left .nav-icon,
+    .spatial-meta-note md-icon,
+    .stage-tab md-icon,
+    .table-icon,
+    .ux-mode-quickview-btn md-icon,
+    header.landing-header .header-brand-icon-box
+) {
+    font-size: 18px;
+}
+
+:where(
+    .cta-btn,
+    .det-card-title,
+    .docs-article,
+    .footer-header,
+    .kiosk-dialog-text,
+    .map-route-close-btn,
+    .map-route-header-title,
+    .mobile-nav-item,
+    .product-description-block h3,
+    .product-description-text,
+    .product-unit,
+    .seller-icon,
+    .showcase-card-title,
+    .ux-modal-desc,
+    .wishlist-price-tag,
+    .wishlist-title-text
+) {
+    font-size: 1rem;
+}
+
+:where(
+    .evolution-header h2,
+    .product-price
+) {
+    font-size: 2.25rem;
+}
+
+:where(
+    .invoice-amount,
+    .ux-empty-icon-box,
+    .ux-modal-icon-badge
+) {
+    font-size: 2.2rem;
+}
+
+.catalog-title {
+    font-size: 2.4rem;
+}
+
+.download-header h2 {
+    font-size: 2.5rem;
+}
+
+:where(
+    .about-title,
+    .example-title,
+    .help-title,
+    .landing-subpage-title
+) {
+    font-size: 2.75rem;
+}
+
+:where(
+    .cart-expand-icon,
+    .column-icon,
+    .drop-title,
+    .fiscal-tag-item md-icon,
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .header-icon,
+    .m3-search-container md-icon[slot="leading-icon"],
+    .material-search-container md-icon[slot="leading-icon"],
+    .mobile-nav-item md-icon,
+    .qr-caption md-icon,
+    .showcase-stat-icon,
+    .spec-card-icon md-icon,
+    .trust-badge md-icon,
+    .ux-expand-btn md-icon
+) {
+    font-size: 20px;
+}
+
+:where(
+    .cta-btn md-icon,
+    .feature-list li md-icon
+) {
+    font-size: 22px;
+}
+
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .det-logo-badge md-icon,
+    .docs-header-icon,
+    .m3-page-header-icon,
+    .md3-headline-icon,
+    .showcase-section-icon
+) {
+    font-size: 24px;
+}
+
+.evo-icon md-icon {
+    font-size: 26px;
+}
+
+:where(
+    .evolution-arrow md-icon,
+    .platform-icon md-icon,
+    .showcase-brand-icon,
+    .summary-check-icon,
+    .upload-icon
+) {
+    font-size: 28px;
+}
+
+:where(
+    .empty-plans-icon,
+    .showcase-hero h1,
+    .spec-value
+) {
+    font-size: 2rem;
+}
+
+:where(
+    .avatar-pulse md-icon,
+    .empty-mini-icon,
+    .kds-empty-icon,
+    .m3-empty-column-icon,
+    .product-placeholder-icon
+) {
+    font-size: 36px;
+}
+
+:where(
+    .brand-screensaver-title,
+    .empty-cart-view .empty-icon
+) {
+    font-size: 3rem;
+}
+
+.icon-preview md-icon {
+    font-size: 40px;
+}
+
+.pos-empty-icon {
+    font-size: 44px;
+}
+
+:where(
+    .det-placeholder-icon md-icon,
+    .m3-card-media-placeholder md-icon,
+    .material-symbols-outlined md-icon,
+    .org-media-placeholder md-icon
+) {
+    font-size: 48px;
+}
+
+:where(
+    .not-found-icon,
+    .store-not-found .not-found-icon
+) {
+    font-size: 4rem;
+}
+
+:where(
+    .kiosk-empty-icon,
+    .m3-empty-state-icon
+) {
+    font-size: 56px;
+}
+
+.faceid-icon-placeholder {
+    font-size: 5rem;
+}
+
+.kiosk-hero-content p {
+    font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+}
+
+.product-desc {
+    font-size: clamp(0.8rem, 1vw, 0.88rem);
+}
+
+.price-tag {
+    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+}
+
+.cart-total {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.pos-catalog-header h4 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.kiosk-hero-content h1 {
+    font-size: clamp(1.3rem, 2.8vw, 2.25rem);
+}
+
+.headline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.m3x-fluid-subhead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.hero-title {
+    font-size: clamp(2.1rem, 3.8vw, 3.25rem);
+}
+
+.b2b-lead-content h2 {
+    font-size: clamp(2rem, 3.8vw, 2.85rem);
+}
+
+.section-title-box h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.m3x-fluid-headline {
+    font-size: clamp(2rem, 5.5vw, 3.5rem);
+}
+
+:where(
+    md-elevated-button md-icon:not([slot]),
+    md-filled-button md-icon:not([slot]),
+    md-filled-tonal-button md-icon:not([slot]),
+    md-outlined-button md-icon:not([slot]),
+    md-text-button md-icon:not([slot]),
+    md-tonal-button md-icon:not([slot])
+) {
+    font-size: var(--md-icon-size, 18px);
+}
+
+:where(
+    .m3-body-large,
+    h6,
+    p
+) {
+    font-size: var(--md-sys-typescale-body-large-size);
+}
+
+.m3-body-medium {
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+:where(
+    .m3-display-large,
+    h1
+) {
+    font-size: var(--md-sys-typescale-display-large-size);
+}
+
+:where(
+    .m3-headline-large,
+    h2
+) {
+    font-size: var(--md-sys-typescale-headline-large-size);
+}
+
+:where(
+    .m3-headline-medium,
+    h3
+) {
+    font-size: var(--md-sys-typescale-headline-medium-size);
+}
+
+.m3-label-small {
+    font-size: var(--md-sys-typescale-label-small-size);
+}
+
+:where(
+    .m3-title-large,
+    h4
+) {
+    font-size: var(--md-sys-typescale-title-large-size);
+}
+
+:where(
+    .m3-title-medium,
+    h5
+) {
+    font-size: var(--md-sys-typescale-title-medium-size);
+}
+
+.support-log-empty {
+    font-style: italic;
+}
+
+:where(
+    .footer-links-list a,
+    .map-route-add-via-btn
+) {
+    font-weight: 400;
+}
+
+:where(
+    .analytics-period-chip,
+    .control-label,
+    .crumb-current,
+    .det-label,
+    .det-stat-label,
+    .docs-header-breadcrumb,
+    .docs-sidebar-title,
+    .feat-pill,
+    .file-name,
+    .floating-chip,
+    .hero-pill-link,
+    .kpi-title,
+    .landing-nav-link,
+    .lang-menu-item,
+    .m3-bottom-nav-item,
+    .m3-filter-chip,
+    .m3-label-sm,
+    .m3-progress-labels,
+    .m3-segmented-btn,
+    .metric-desc,
+    .mode-indicator,
+    .org-tag,
+    .payment-support a,
+    .plan-currency,
+    .preset-btn,
+    .preset-label,
+    .product-tag-chip,
+    .progress-labels,
+    .qr-caption,
+    .qrg-back,
+    .qrg-org,
+    .route-error,
+    .search-input,
+    .seller-browse-all,
+    .showcase-nav-btn,
+    .sidebar-link,
+    .spatial-meta-note,
+    .spotlight-sub,
+    .stat-value .unit,
+    .status-text,
+    .tier-price small,
+    .upload-text,
+    .ux-count-pill,
+    .ux-search-box input,
+    .validation-message
+) {
+    font-weight: 500;
+}
+
+:where(
+    .ad-upgrade-link,
+    .advance-prompt,
+    .analytics-config-btn,
+    .analytics-mode-btn,
+    .analytics-mode-btn.active,
+    .assistant-message-header,
+    .assistant-message-text h3,
+    .assistant-message-text strong,
+    .assistant-search-phrase,
+    .avatar-container .headline,
+    .back-button,
+    .badge,
+    .card-title,
+    .citation-file,
+    .click-popup-btn,
+    .click-popup-coords,
+    .color-hex,
+    .column-title,
+    .cta-btn,
+    .cta-btn span,
+    .current-plan-indicator,
+    .det-card-title,
+    .det-card-title-sm,
+    .det-diag-box,
+    .det-diag-box-warning,
+    .det-status-badge,
+    .drawer-header .badge,
+    .feature-badge,
+    .fiscal-tag-item,
+    .hero-badge,
+    .info-label,
+    .info-value,
+    .item-headline,
+    .item-name,
+    .item-status-pill,
+    .items-count-badge,
+    .kds-action-btn,
+    .kiosk-brand-tagline,
+    .kiosk-tier-btn,
+    .kpi-trend,
+    .landing-auth-btn,
+    .landing-floating-auth-btn,
+    .lang-pill-btn,
+    .lang-toggle-btn,
+    .m3-back-button,
+    .m3-badge,
+    .m3-dialog-btn-primary,
+    .m3-dialog-toggle-title,
+    .m3-filter-chip-count,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    .m3-info-label,
+    .m3-info-value,
+    .m3-legend,
+    .m3-pill-badge,
+    .m3-row-value,
+    .m3-segmented-btn.active,
+    .m3-status-badge,
+    .m3-table th,
+    .m3x-btn-pill,
+    .map-action-button,
+    .map-category-chip,
+    .map-panel-toggle,
+    .map-route-profile-chip,
+    .map-route-suggestion-title,
+    .md3-closed-badge,
+    .md3-schedule-day-left,
+    .md3-time-input,
+    .md3-time-label,
+    .mobile-nav-item,
+    .order-card-footer,
+    .order-items-table th,
+    .order-status-badge,
+    .orders-table th,
+    .org-card-badge,
+    .org-card-name,
+    .page-heading,
+    .panel-section-title,
+    .panel-title,
+    .payment-dashboard .info-label,
+    .payment-dashboard .info-value,
+    .picker-badge,
+    .picker-hex-input,
+    .pills-label,
+    .place-details-back-btn,
+    .place-info-row .info-label,
+    .platform-btn,
+    .pos-tech-chip,
+    .preview-title,
+    .product-currency,
+    .product-description-block h3,
+    .profile-title,
+    .promo-success-text,
+    .qr-status-text,
+    .qrg-card-hint,
+    .qrg-color-picker-wrapper,
+    .qrg-field-label,
+    .qrg-slider-header,
+    .qty-val,
+    .required-badge,
+    .resolution-badge,
+    .route-alternative-action,
+    .route-alternative-distance,
+    .route-alternative-label,
+    .route-options-toolbar-btn,
+    .route-options-toolbar-meta,
+    .route-value,
+    .row-value,
+    .schedule-table th,
+    .screensaver-pro-badge,
+    .section-badge,
+    .seller-name,
+    .showcase-lib-badge,
+    .showcase-nav-btn.active,
+    .sidebar-brand-subtitle,
+    .smart-grid-container h4,
+    .spec-label,
+    .spotlight-mode-badge,
+    .stage-tab,
+    .table-container th,
+    .trust-badge,
+    .ux-expand-btn,
+    .ux-modal-btn-secondary,
+    .ux-mode-code,
+    .ux-mode-launch-btn,
+    .ux-mode-quickview-btn,
+    .ux-reset-filter-btn,
+    .ux-tab-btn,
+    .ux-widget,
+    #components-reconnect-modal button,
+    assistant-message h3,
+    assistant-message strong,
+    h6,
+    md-dialog.contacts .headline,
+    md-dialog.faceid-profile-modal .headline,
+    md-elevated-button,
+    md-filled-button,
+    md-outlined-button,
+    md-text-button,
+    md-tonal-button,
+    table.quickgrid th
+) {
+    font-weight: 600;
+}
+
+:where(
+    .active-orders-label,
+    .ad-network-badge,
+    .ad-slide-touch-prompt,
+    .amount-cell,
+    .analytics-period-chip.active,
+    .auth-divider,
+    .badge-age-restriction,
+    .bento-content h3,
+    .brand-screensaver-cta,
+    .brand-title,
+    .card-amount,
+    .card-order-id,
+    .det-bbox-label,
+    .det-stat-value,
+    .det-title,
+    .det-voice-title,
+    .dialog-headline-wrap,
+    .docs-group-header,
+    .drawer-header .headline,
+    .empty-plans-title,
+    .evolution-card h3,
+    .explorer-title-group h4,
+    .footer-col-title,
+    .footer-header,
+    .header-brand-link,
+    .header-brand-text,
+    .headline,
+    .home-title,
+    .item-price,
+    .item-qty-badge,
+    .item-total-price,
+    .kds-order-ref,
+    .kds-product-name,
+    .kds-status-tag,
+    .kiosk-brand-name,
+    .kiosk-category-label,
+    .kiosk-empty-state h3,
+    .label-title,
+    .lang-chip-btn,
+    .lang-menu-item.is-selected,
+    .m3-amount-cell,
+    .m3-bottom-nav-item.active,
+    .m3-card-title,
+    .m3-count-badge,
+    .m3-dialog-header h3,
+    .m3-empty-state-title,
+    .m3-page-header-title,
+    .m3-price-badge,
+    .m3-summary-title,
+    .m3-swatch-name,
+    .m3-total-label,
+    .map-measure-badge-value,
+    .map-route-header-title,
+    .md3-dialog-headline,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .meta-highlight,
+    .option-add-price,
+    .order-number,
+    .org-card-header h3,
+    .pay-button,
+    .picker-day-dot,
+    .picker-hex-prefix,
+    .picker-popover-title,
+    .picker-trigger-title,
+    .place-details-badge,
+    .place-details-header-title,
+    .place-details-name,
+    .plan-name,
+    .plan-title,
+    .plans-section h2,
+    .platform-info h3,
+    .pos-action-btn,
+    .pos-catalog-header h4,
+    .pos-empty-state h5,
+    .pos-orders-label,
+    .pos-product-title-text,
+    .pos-quick-bill-btn,
+    .pos-ux-mode-title,
+    .preview-product-price,
+    .product-title,
+    .promotion-modal-title,
+    .qrg-badge,
+    .qrg-card-name,
+    .qrg-group-head,
+    .qrg-preview-header h2,
+    .qrg-section-title,
+    .qrg-title,
+    .route-alternative-time,
+    .route-start-btn,
+    .section-heading,
+    .section-title,
+    .session-item-title,
+    .shipping-fee,
+    .showcase-brand-badge,
+    .showcase-brand-title,
+    .showcase-card-title,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .showcase-nav-category-header,
+    .showcase-section-title,
+    .showcase-topbar-title,
+    .sidebar-nav-category,
+    .spatial-wing-badge,
+    .spatial-wing-header h3,
+    .spec-card-text h4,
+    .spotlight-header-badge,
+    .spotlight-info h3,
+    .spotlight-launch-btn,
+    .spotlight-pill,
+    .stat-value,
+    .status-badge,
+    .store-not-found h2,
+    .subcard-header h4,
+    .subscription-title,
+    .summary-title,
+    .support-label,
+    .tier-name,
+    .title-sub,
+    .total-amount,
+    .total-label,
+    .ux-discount-badge,
+    .ux-empty-state h3,
+    .ux-modal-btn-primary,
+    .ux-mode-badge-overlay,
+    .ux-mode-category-tag,
+    .ux-mode-number-pill,
+    .ux-mode-title-box h3,
+    .ux-widget-row,
+    .video-card-header h3,
+    .wishlist-title-text,
+    md-elevated-card h5,
+    md-filled-card h5,
+    md-outlined-card h5
+) {
+    font-weight: 700;
+}
+
+:where(
+    .about-title,
+    .auth-title,
+    .b2b-lead-content h2,
+    .badge-counter,
+    .brand-screensaver-title,
+    .cart-total,
+    .catalog-badge,
+    .column-badge,
+    .count-badge,
+    .download-header h2,
+    .drawer-footer .total-row,
+    .evolution-header h2,
+    .example-title,
+    .footer-brand-title,
+    .footer-logo,
+    .help-title,
+    .hero-title,
+    .invoice-amount,
+    .kiosk-hero-content h1,
+    .kpi-number,
+    .landing-subpage-title,
+    .m3-label,
+    .m3-total-value,
+    .m3x-fluid-headline,
+    .maneuver-distance,
+    .metric-num,
+    .plan-price-wrap,
+    .popular-badge,
+    .pos-price-text,
+    .price-tag,
+    .price-value,
+    .pro-tag,
+    .product-price,
+    .score-circle,
+    .section-title-box h2,
+    .showcase-hero h1,
+    .showcase-stat-val,
+    .sidebar-brand-title,
+    .signin-title,
+    .spec-value,
+    .tier-price,
+    .total-value,
+    .trial-days-highlight,
+    .ux-modal-title,
+    .variant-dialog-title,
+    .wishlist-price-tag,
+    header.landing-header .header-brand-text,
+    md-elevated-card .price-tag,
+    md-filled-card .price-tag,
+    md-outlined-card .price-tag
+) {
+    font-weight: 800;
+}
+
+.catalog-title {
+    font-weight: 900;
+}
+
+:where(
+    .drop-title,
+    .loading-progress-text,
+    .maneuver-icon,
+    .nav-control-btn.finish,
+    .new-badge,
+    .wishlist-details-price
+) {
+    font-weight: bold;
+}
+
+:where(
+    .m3-body-large,
+    p
+) {
+    font-weight: var(--md-sys-typescale-body-large-weight);
+}
+
+.m3-body-medium {
+    font-weight: var(--md-sys-typescale-body-medium-weight);
+}
+
+:where(
+    .m3-display-large,
+    h1
+) {
+    font-weight: var(--md-sys-typescale-display-large-weight);
+}
+
+:where(
+    .m3-headline-large,
+    h2
+) {
+    font-weight: var(--md-sys-typescale-headline-large-weight);
+}
+
+:where(
+    .m3-headline-medium,
+    h3
+) {
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
+}
+
+.m3-label-small {
+    font-weight: var(--md-sys-typescale-label-small-weight);
+}
+
+:where(
+    .m3-title-large,
+    h4
+) {
+    font-weight: var(--md-sys-typescale-title-large-weight);
+}
+
+:where(
+    .m3-title-medium,
+    h5
+) {
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+}
+
+:where(
+    .map-action-button,
+    .map-panel-toggle,
+    .route-alternative-card,
+    .route-options-toolbar-btn,
+    button.col-title,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card
+) {
+    font: inherit;
+}
+
+@container (max-width: 360px) {
+    .m3x-btn-pill {
+        font-size: 0.875rem;
+    }
+
+}
+
+@container product-card (max-width: 320px) {
+    .product-title {
+        font-size: 0.88rem;
+    }
+
+    .price-tag {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 599.98px) {
+    .section-badge {
+        font-size: 0.75rem;
+    }
+
+    .stage-tab {
+        font-size: 0.76rem;
+    }
+
+    .cta-btn {
+        font-size: 0.885rem;
+    }
+
+    :where(
+        .page-subtitle,
+        .spec-label
+    ) {
+        font-size: 0.8rem;
+    }
+
+    .spec-value-text {
+        font-size: 1.2rem;
+    }
+
+    :where(
+        .dashboard-header h1,
+        .spec-value
+    ) {
+        font-size: 1.5rem;
+    }
+
+    :where(
+        .about-title,
+        .example-title,
+        .help-title
+    ) {
+        font-size: 1.85rem;
+    }
+
+    .stage-tab md-icon {
+        font-size: 18px;
+    }
+
+    .page-heading {
+        font-size: clamp(1.05rem, 4vw, 1.15rem);
+    }
+
+    :where(
+        .auth-title,
+        .signin-title
+    ) {
+        font-size: clamp(1.25rem, 5vw, 1.35rem);
+    }
+
+    .b2b-lead-content h2 {
+        font-size: clamp(1.45rem, 5vw, 1.85rem);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .section-title-box h2 {
+        font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .m3-page-header-title {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 839.98px) {
+    .ux-tab-btn {
+        font-size: 0.85rem;
+    }
+
+    .stage-tab {
+        font-size: 0.8rem;
+    }
+
+    .cta-btn {
+        font-size: 0.925rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .showcase-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .brand-screensaver-tagline {
+        font-size: 1rem;
+    }
+
+    .brand-screensaver-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.65rem, 6vw, 2.25rem);
+    }
+
+}
+
+@media screen and (max-width: 599.98px) {
+    :where(
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-filled-tonal-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"])
+    ) {
+        font-size: 0;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        font-size: 0.75rem;
+    }
+
+    .wishlist-title-text {
+        font-size: 0.9rem;
+    }
+
+    .m3-page-header-title {
+        font-size: 1.05rem;
+    }
+
+    .catalog-title {
+        font-size: 1.85rem;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button:has([slot="icon"]) .material-symbols-outlined,
+        .header-end-zone md-elevated-button:has([slot="icon"]) [slot="icon"],
+        .header-end-zone md-elevated-button:has([slot="icon"]) md-icon,
+        .header-end-zone md-filled-button:has([slot="icon"]) .material-symbols-outlined,
+        .header-end-zone md-filled-button:has([slot="icon"]) [slot="icon"],
+        .header-end-zone md-filled-button:has([slot="icon"]) md-icon,
+        .header-end-zone md-filled-tonal-button:has([slot="icon"]) .material-symbols-outlined,
+        .header-end-zone md-filled-tonal-button:has([slot="icon"]) [slot="icon"],
+        .header-end-zone md-filled-tonal-button:has([slot="icon"]) md-icon,
+        .header-end-zone md-outlined-button:has([slot="icon"]) .material-symbols-outlined,
+        .header-end-zone md-outlined-button:has([slot="icon"]) [slot="icon"],
+        .header-end-zone md-outlined-button:has([slot="icon"]) md-icon
+    ) {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    :where(
+        nav a.nav-item,
+        nav a.nav-item span,
+        nav.glass a.nav-item,
+        nav.glass a.nav-item span
+    ) {
+        font-size: 0.75rem;
+    }
+
+    :where(
+        nav a.nav-item md-icon,
+        nav.glass a.nav-item md-icon
+    ) {
+        font-size: 24px;
+    }
+
+    :where(
+        nav a.nav-item span,
+        nav.glass a.nav-item span
+    ) {
+        font-weight: 500;
+    }
+
+    :where(
+        nav a.nav-item.active span,
+        nav.glass a.nav-item.active span
+    ) {
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item span
+    ) {
+        font-size: 0.72rem;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item md-icon,
+        nav.nav-desktop a.nav-item .material-symbols-outlined,
+        nav.nav-desktop a.nav-item md-icon
+    ) {
+        font-size: 22px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item span
+    ) {
+        font-weight: 500;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item.active span,
+        nav.nav-desktop a.nav-item.active span
+    ) {
+        font-weight: 700;
+    }
+
+}
+

@@ -8,19 +8,7 @@ const assetsRoot = path.resolve(__dirname, '..');
 
 const cssRoot = path.join(assetsRoot, 'wwwroot', 'css');
 const scanDirs = [
-  path.join(cssRoot, 'box-model'),
-  path.join(cssRoot, 'layout'),
-  path.join(cssRoot, 'positioning'),
-  path.join(cssRoot, 'overflow'),
-  path.join(cssRoot, 'typography'),
-  path.join(cssRoot, 'color'),
-  path.join(cssRoot, 'effects'),
-  path.join(cssRoot, 'transforms'),
-  path.join(cssRoot, 'motion'),
-  path.join(cssRoot, 'content'),
-  path.join(cssRoot, 'interaction'),
-  path.join(cssRoot, 'i18n'),
-  path.join(cssRoot, 'containment'),
+  path.join(cssRoot, 'w3c'),
   path.join(cssRoot, 'tokens'),
 ];
 

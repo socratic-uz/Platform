@@ -52,6 +52,8 @@ namespace Assets.Constants
 
     public static class Styles
     {
+        public const string ComponentsBundleMin = "_content/Assets/css/components/components.bundle.min.css";
+        public const string SocraticBundleMin = "_content/Assets/css/socratic.bundle.min.css";
         public const string StylesFile = "_content/Assets/css/styles.css";
         public const string StylesBundleMin = "_content/Assets/css/styles.bundle.min.css";
     }

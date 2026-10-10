@@ -15,17 +15,19 @@ import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import postcss from 'postcss';
 import { AstConsolidator } from './consolidator-engine.mjs';
+import { validateCssFiles } from './validate-syntax.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const assetsRoot = path.resolve(__dirname, '..');
 const cssRootDir = path.join(assetsRoot, 'wwwroot', 'css');
-const srcStylesDir = path.join(assetsRoot, 'src', 'styles');
+const componentsDir = path.join(cssRootDir, 'components');
 
 const args = process.argv.slice(2);
 const isWatch = args.includes('--watch');
 const isAudit = args.includes('--audit-current');
 const isCleanCurrent = args.includes('--consolidate-current');
+const isFromComponents = args.includes('--from-components') || args.includes('--components');
 
 function getAllCssFiles(dirPath, fileList = []) {
   if (!fs.existsSync(dirPath)) return fileList;
@@ -33,12 +35,12 @@ function getAllCssFiles(dirPath, fileList = []) {
   for (const item of items) {
     const fullPath = path.join(dirPath, item.name);
     if (item.isDirectory()) {
-      // Skip node_modules, foundations, themes, tokens (they are standalone/static)
-      if (['node_modules', 'tokens'].includes(item.name)) {
+      // Skip node_modules, tokens, components (they are standalone/deconsolidated)
+      if (['node_modules', 'tokens', 'components'].includes(item.name)) {
         continue;
       }
       getAllCssFiles(fullPath, fileList);
-    } else if (item.isFile() && item.name.endsWith('.css') && !item.name.includes('bundle.min')) {
+    } else if (item.isFile() && item.name.endsWith('.css') && !item.name.includes('bundle.min') && item.name !== 'styles.css') {
       fileList.push(fullPath);
     }
   }
@@ -102,7 +104,7 @@ function auditCurrentCss() {
         const declMap = scopesMap.get(atRuleScope);
 
         node.walkDecls(decl => {
-          const declKey = `${decl.prop.trim().toLowerCase()}: ${decl.value.trim()}`;
+          const declKey = `${decl.prop.trim().toLowerCase()}: ${decl.value.trim()}${decl.important ? ' !important' : ''}`;
           const currentCount = declMap.get(declKey) || 0;
           if (currentCount >= 1) {
             fileDuplicates++;
@@ -148,60 +150,60 @@ async function consolidateCurrentCss() {
 }
 
 /**
- * Standard build pipeline: Merge existing base W3C modules + new component source files
+ * Ingest component stylesheets from wwwroot/css/components/ and consolidate into W3C architecture
  */
-async function buildFromSource() {
-  console.log('\n⚡ [AST Consolidator] Compiling and consolidating styles into W3C architecture...');
+async function consolidateFromComponents() {
+  console.log('\n⚡ [AST Consolidator] Consolidating styles from wwwroot/css/components/ into W3C architecture...');
+
+  // 1. Strict syntax & value validation check
+  const syntaxIssues = validateCssFiles();
+  if (syntaxIssues.length > 0) {
+    console.error(`\n❌ [AST Consolidator] Consolidation aborted! Found ${syntaxIssues.length} syntax error(s):`);
+    for (const issue of syntaxIssues) {
+      console.error(`  🚩 ${issue.file}:${issue.line}:${issue.column} - ${issue.prop}: ${issue.value} (${issue.message})`);
+    }
+    throw new Error(`Consolidation halted: ${syntaxIssues.length} syntax error(s) must be fixed first.`);
+  }
 
   const consolidator = new AstConsolidator({ outputDir: cssRootDir });
 
-  // 1. Ingest base W3C modules to preserve existing architecture
-  const baseFiles = getAllCssFiles(cssRootDir);
-  console.log(`📥 Loading ${baseFiles.length} base W3C modules...`);
-  for (const file of baseFiles) {
+  if (!fs.existsSync(componentsDir)) {
+    console.error(`❌ Components directory not found: ${componentsDir}`);
+    return;
+  }
+
+  const componentFiles = fs.readdirSync(componentsDir)
+    .filter(f => f.endsWith('.css') && f !== 'components.css' && !f.includes('bundle.min'))
+    .map(f => path.join(componentsDir, f));
+
+  console.log(`📥 Ingesting ${componentFiles.length} component stylesheets from ${path.relative(assetsRoot, componentsDir)}...`);
+  for (const file of componentFiles) {
     const content = fs.readFileSync(file, 'utf8');
     consolidator.processCss(content, file);
   }
 
-  // 2. Ingest and merge new source component styles if present
-  if (fs.existsSync(srcStylesDir)) {
-    const sourceFiles = getAllCssFiles(srcStylesDir);
-    if (sourceFiles.length > 0) {
-      console.log(`📥 Merging ${sourceFiles.length} custom component styles from ${path.relative(assetsRoot, srcStylesDir)}...`);
-      for (const file of sourceFiles) {
-        const content = fs.readFileSync(file, 'utf8');
-        consolidator.processCss(content, file);
-      }
-    }
-  }
-
-  // 3. Emit cleanly merged, deduplicated files
   const { totalFiles, totalDeclarations } = consolidator.emitFiles();
-  console.log(`✅ Emitted ${totalFiles} consolidated W3C files (${totalDeclarations} unique declarations).`);
+  console.log(`✅ Successfully consolidated into ${totalFiles} W3C modules (${totalDeclarations} canonical declarations).`);
 
-  // 4. Bundle with LightningCSS
-  console.log('\n📦 Compiling production bundle via LightningCSS...');
+  console.log('\n📦 Rebuilding production CSS bundles via LightningCSS...');
   await runBundleScript();
 }
 
 /**
- * Watch mode for real-time development
+ * Watch mode for real-time development on wwwroot/css/components/
  */
 function watchMode() {
-  console.log(`\n👀 [AST Consolidator Watch] Watching for CSS changes in: ${srcStylesDir}...`);
-  if (!fs.existsSync(srcStylesDir)) {
-    fs.mkdirSync(srcStylesDir, { recursive: true });
-  }
+  console.log(`\n👀 [AST Consolidator Watch] Watching for component CSS changes in: ${path.relative(assetsRoot, componentsDir)}...`);
 
   let debounceTimer = null;
-  fs.watch(srcStylesDir, { recursive: true }, (eventType, filename) => {
-    if (!filename || !filename.endsWith('.css')) return;
+  fs.watch(componentsDir, { recursive: true }, (eventType, filename) => {
+    if (!filename || !filename.endsWith('.css') || filename === 'components.css' || filename.includes('bundle.min')) return;
 
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(async () => {
-      console.log(`\n🔄 File changed: ${filename}. Re-consolidating...`);
+      console.log(`\n🔄 Component file changed: ${filename}. Consolidating to W3C...`);
       try {
-        await buildFromSource();
+        await consolidateFromComponents();
         console.log(`✨ Re-consolidation complete at ${new Date().toLocaleTimeString()}`);
       } catch (err) {
         console.error(`❌ Compilation error:`, err);
@@ -221,8 +223,9 @@ if (isAudit) {
 } else if (isWatch) {
   watchMode();
 } else {
-  buildFromSource().catch(err => {
-    console.error('Fatal error during build:', err);
+  consolidateFromComponents().catch(err => {
+    console.error('Fatal error during component consolidation:', err);
     process.exit(1);
   });
 }
+

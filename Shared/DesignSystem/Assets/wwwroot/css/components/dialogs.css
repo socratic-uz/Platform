@@ -1,0 +1,1057 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Component Stylesheet: dialogs.css
+   Deconsolidated Component Architecture (All styles per class unified)
+   ========================================================================== */
+
+.avatar-container md-dialog {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+.dialog-content {
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.dialog-content::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.dialog-content::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+.dialog-content::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+.dialog-content::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.dialog-headline-wrap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    align-items: center;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.drawer-body {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    padding: 16px 0;
+    overflow-y: auto;
+    touch-action: pan-y;
+    overscroll-behavior-y: contain;
+}
+
+.drawer-footer {
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.drawer-footer .total-row {
+    padding-top: 8px;
+    border-top: 1px dashed var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.drawer-footer .total-value {
+    color: var(--md-sys-color-primary);
+}
+
+.drawer-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.drawer-header .badge {
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.drawer-header .headline {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.drawer-panel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-column: 2;
+    width: 100%;
+    max-width: 440px;
+    height: 100dvh;
+    padding: 24px;
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    overscroll-behavior: contain;
+    box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    will-change: transform, opacity;
+    touch-action: pan-y;
+    backface-visibility: hidden;
+}
+
+.kiosk-dialog-text {
+    margin: 8px 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.landing-mobile-menu-backdrop {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    background: rgb(from var(--md-sys-color-shadow, var(--md-sys-color-shadow, black)) r g b / 0.65);
+    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+.landing-mobile-menu-drawer {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.6rem;
+    position: fixed;
+    top: 68px;
+    right: 0;
+    left: 0;
+    z-index: 90;
+    padding: 1.25rem 1.5rem 2rem;
+    border-bottom: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.1);
+    background: var(--md-sys-color-surface-container-lowest);
+    box-shadow: 0 20px 40px rgb(from var(--md-sys-color-shadow, black) r g b / 0.7);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.m3-config-dialog {
+    display: grid;
+    gap: var(--md-sys-spacing-5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: var(--md-sys-z-dialog);
+    width: min(90vw, 540px);
+    max-height: min(85dvh, 720px);
+    padding: var(--md-sys-gutter-section);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-dialog);
+    background: var(--md-sys-color-surface-container);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+    box-shadow: var(--md-sys-elevation-level4);
+    transform: translate(-50%, -50%);
+}
+
+.m3-config-dialog::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.m3-config-dialog::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+.m3-config-dialog::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+.m3-config-dialog::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.m3-dialog {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.m3-dialog-actions {
+    display: grid;
+    padding-top: var(--md-sys-spacing-2);
+}
+
+.m3-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--md-sys-z-dialog-backdrop);
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.m3-dialog-body {
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.m3-dialog-body::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.m3-dialog-body::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+.m3-dialog-body::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+.m3-dialog-body::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.m3-dialog-content {
+    min-height: 0;
+    max-height: min(65dvh, 560px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.m3-dialog-description {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.m3-dialog-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-4);
+    align-items: center;
+}
+
+.m3-dialog-header h3 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.m3-dialog-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 1.35rem;
+}
+
+.m3-dialog-options-list {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+}
+
+.m3-dialog-surface {
+    display: grid;
+    gap: var(--md-sys-spacing-5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: var(--md-sys-z-dialog);
+    width: min(90vw, 540px);
+    max-height: min(85dvh, 720px);
+    padding: var(--md-sys-gutter-section);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-dialog);
+    background: var(--md-sys-color-surface-container);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+    box-shadow: var(--md-sys-elevation-level4);
+    transform: translate(-50%, -50%);
+}
+
+.m3-dialog-surface::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.m3-dialog-surface::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+.m3-dialog-surface::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+.m3-dialog-surface::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.m3-dialog-title-group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+.m3-dialog-toggle-desc {
+    color: var(--md-sys-color-outline);
+    font-size: 0.78rem;
+}
+
+.m3-dialog-toggle-icon {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1.25rem;
+}
+
+.m3-dialog-toggle-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-4);
+    align-items: center;
+    box-sizing: border-box;
+    min-height: var(--md-sys-touch-target-min);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large);
+    background: var(--md-sys-color-surface-container-low);
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring), border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    cursor: pointer;
+}
+
+.m3-dialog-toggle-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--md-sys-color-primary);
+}
+
+.m3-dialog-toggle-item:hover {
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+.m3-dialog-toggle-text {
+    display: grid;
+    gap: 0.15rem;
+}
+
+.m3-dialog-toggle-title {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.m3-drawer-backdrop {
+    display: grid;
+    opacity: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
+    justify-items: end;
+    position: fixed;
+    inset: 0;
+    z-index: var(--m3-z-drawer, 40);
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
+    overscroll-behavior: contain;
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
+    pointer-events: none;
+    touch-action: pan-y;
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.m3-drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.m3-drawer-panel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-column: 2;
+    width: 100%;
+    max-width: 440px;
+    height: 100dvh;
+    padding: 24px;
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    overscroll-behavior: contain;
+    box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    touch-action: pan-y;
+}
+
+.m3-modal {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.m3-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--md-sys-z-dialog-backdrop);
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.map-mobile-backdrop {
+    display: none;
+}
+
+.md-drawer-backdrop {
+    display: grid;
+    opacity: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 440px);
+    justify-items: end;
+    position: fixed;
+    inset: 0;
+    z-index: var(--m3-z-drawer, 40);
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
+    overscroll-behavior: contain;
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    will-change: transform, opacity;
+    transition: opacity var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-expressive-standard, ease);
+    pointer-events: none;
+    touch-action: pan-y;
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    backface-visibility: hidden;
+}
+
+.md-drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.md3-dialog-actions-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.md3-dialog-headline {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.picker-popover-body {
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.picker-popover-body::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width, 6px);
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.picker-popover-body::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+.picker-popover-body::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+.picker-popover-body::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.picker-popover-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.picker-popover-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.picker-popover-panel {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    margin-bottom: 12px;
+    padding: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card);
+    background: var(--md-sys-color-surface-container);
+    box-shadow: var(--md-sys-elevation-expressive-2);
+    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
+}
+
+.picker-popover-title {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.promotion-modal-body {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1rem 0;
+}
+
+.promotion-modal-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.promotion-modal-subtitle {
+    margin: 0.2rem 0 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+.promotion-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.showcase-sidebar-backdrop {
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.ux-modal-body {
+    display: grid;
+    gap: 1rem;
+}
+
+.ux-modal-code {
+    width: max-content;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+    color: var(--md-sys-color-primary);
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.ux-modal-desc {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.ux-modal-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 0.85rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.ux-modal-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.ux-modal-icon-badge {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 30%, transparent);
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
+    background: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
+    font-size: 2.2rem;
+    box-shadow: 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
+}
+
+.ux-modal-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.ux-modal-title {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.ux-modal-title-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.65rem;
+    align-items: center;
+}
+
+.ux-quickview-dialog {
+    width: 92%;
+    max-width: 640px;
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
+    border-radius: var(--md-sys-shape-expressive-corner-extra-large, 28px);
+    box-shadow: 0 25px 65px rgb(from var(--md-sys-color-shadow) r g b / 0.85), 0 0 50px color-mix(in srgb, var(--md-sys-color-primary) 18%, transparent);
+    --md-dialog-container-color: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.96);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-corner-extra-large, 28px);
+}
+
+.variant-dialog-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    width: 100%;
+}
+
+.variant-dialog-body {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+    min-width: 0;
+    margin-top: 8px;
+}
+
+.variant-dialog-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: start;
+    width: 100%;
+}
+
+.variant-dialog-subtext {
+    display: block;
+    margin-top: 2px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+.variant-dialog-title {
+    display: block;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#components-reconnect-modal {
+    opacity: 0;
+    width: min(22rem, calc(100vw - 32px));
+    margin: 20vh auto;
+    padding: 2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-expressive-3, 0 16px 36px rgb(from var(--md-sys-color-shadow) r g b / 0.4));
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
+}
+
+#components-reconnect-modal p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#components-reconnect-modal::backdrop {
+    opacity: 1;
+    background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
+    backdrop-filter: blur(8px);
+    animation: components-reconnect-modal-fadeInOpacity 0.5s ease-in-out;
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#components-reconnect-modal.components-reconnect-failed {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-failed .components-reconnect-failed-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-paused .components-pause-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-resume-failed .components-resume-failed-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying .components-reconnect-repeated-attempt-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-reconnect-first-attempt-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation {
+    display: block;
+}
+
+#components-reconnect-modal[open] {
+    animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
+    animation-fill-mode: both;
+}
+
+md-dialog {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: min(92vw, 560px);
+    max-height: min(90vh, 90dvh);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+md-dialog [slot="actions"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    justify-content: end;
+    align-items: center;
+    min-width: 0;
+}
+
+md-dialog [slot="content"] {
+    display: flow-root;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 0;
+    max-height: min(65dvh, 560px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+md-dialog [slot="headline"] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+md-dialog > * {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+md-dialog:not(:defined) {
+    display: none;
+}
+
+md-dialog:not([open]) {
+    display: none;
+}
+
+md-dialog.contacts {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+md-dialog.contacts .headline {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+md-dialog.contacts .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+}
+
+md-dialog.contacts [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 24px 24px;
+}
+
+md-dialog.contacts [slot='headline'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 24px 16px;
+}
+
+md-dialog.contacts details {
+    width: 100%;
+}
+
+md-dialog.contacts details .content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 1.25rem;
+}
+
+md-dialog.contacts form.content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-3);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+}
+
+md-dialog.contacts label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+md-dialog.contacts md-list {
+    width: 100%;
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+}
+
+md-dialog.contacts md-outlined-text-field {
+    width: 100%;
+}
+
+md-dialog.faceid-profile-modal {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+md-dialog.faceid-profile-modal .headline {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+md-dialog.faceid-profile-modal .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+}
+
+md-dialog.faceid-profile-modal [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 24px 24px;
+}
+
+md-dialog.faceid-profile-modal [slot='headline'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 24px 16px;
+}
+
+md-dialog.faceid-profile-modal form.content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-3);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+}
+
+md-dialog.faceid-profile-modal label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+md-dialog.faceid-profile-modal md-list {
+    width: 100%;
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+}
+
+md-dialog.faceid-profile-modal md-outlined-text-field {
+    width: 100%;
+}
+
+@media (max-width: 599.98px) {
+    .map-mobile-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 25;
+        background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+        backdrop-filter: blur(4px);
+        animation: fadeIn 0.22s ease-out;
+    }
+
+    .ux-quickview-dialog {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .drawer-panel {
+        grid-column: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .m3-drawer-backdrop {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .m3-drawer-panel {
+        grid-column: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .md-drawer-backdrop {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ux-modal-footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.65rem;
+    }
+
+    .ux-modal-specs-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+}
+
+@media (max-width: 839.98px) {
+    .showcase-sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    .landing-mobile-menu-backdrop {
+        top: 56px;
+    }
+
+    .landing-mobile-menu-drawer {
+        top: 56px;
+    }
+
+}
+

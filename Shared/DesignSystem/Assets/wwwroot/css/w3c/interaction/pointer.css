@@ -1,0 +1,324 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/interaction/pointer.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.det-webrtc-video {
+    cursor: crosshair;
+}
+
+.col-width-draghandle {
+    cursor: ew-resize;
+}
+
+.map-route-input {
+    cursor: grab;
+}
+
+:where(
+    .map-route-input:active,
+    .waypoint-marker:active
+) {
+    cursor: grabbing;
+}
+
+:where(
+    .map-action-button:disabled,
+    .paginator nav button[disabled]
+) {
+    cursor: not-allowed;
+}
+
+:where(
+    .ad-upgrade-link,
+    .analytics-config-btn,
+    .analytics-date-picker-trigger,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .avatar-button,
+    .avatar-container details summary,
+    .avatar-container details summary md-list-item,
+    .avatar-container label,
+    .banner-close-btn,
+    .card-interactive,
+    .cart-summary.interactive,
+    .click-popup-btn,
+    .col-options-button,
+    .color-badge-swatch,
+    .color-picker-row input[type="color"],
+    .cta-btn,
+    .det-btn-icon-sm,
+    .docs-refresh-btn,
+    .drop-container,
+    .file-add-btn-label,
+    .file-input-hidden,
+    .interactive-chip,
+    .kds-action-btn,
+    .kiosk-attract-loop,
+    .kiosk-product-title-link,
+    .landing-mobile-menu-toggle,
+    .lang-chip-btn,
+    .lang-menu-item,
+    .lang-pill-btn,
+    .m3-card-interactive,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-dialog-toggle-item,
+    .m3-dialog-toggle-item input[type="checkbox"],
+    .m3-filter-chip,
+    .m3-media-card,
+    .m3-mode-toggle,
+    .m3-period-picker-trigger,
+    .m3-segmented-btn,
+    .m3-selection-item,
+    .m3x-btn-pill,
+    .map-action-button,
+    .map-category-chip,
+    .map-global-suggestion-button,
+    .map-panel-toggle,
+    .map-panel-toggle-tab,
+    .map-route-add-via-btn,
+    .map-route-close-btn,
+    .map-route-profile-chip,
+    .map-route-remove-via-btn,
+    .map-route-suggestion-button,
+    .map-route-swap-btn,
+    .md3-schedule-day-left,
+    .md3-time-input,
+    .media-card,
+    .mode-toggle,
+    .nav-control-btn,
+    .option-item-row,
+    .org-card,
+    .paginator nav button,
+    .picker-native-input,
+    .picker-palette-swatch,
+    .picker-swatch-wrapper,
+    .place-details-back-btn,
+    .plan-card,
+    .platform-btn,
+    .pos-quick-bill-btn,
+    .preset-btn,
+    .product-details,
+    .product-media,
+    .route-alternative-action,
+    .route-alternative-card,
+    .route-close,
+    .route-start-btn,
+    .search-clear-btn,
+    .search-route-btn,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .stage-tab,
+    .thumb-btn,
+    .tier-box,
+    .upload-card,
+    .upload-zone-label,
+    .ux-expand-btn,
+    .ux-modal-btn-secondary,
+    .ux-mode-quickview-btn,
+    .ux-reset-filter-btn,
+    .ux-search-clear,
+    .ux-tab-btn,
+    .wishlist-content,
+    .wishlist-media,
+    .yandex-ctrl-btn,
+    #blazor-error-ui .dismiss,
+    #components-reconnect-modal button,
+    button.col-title,
+    input[type="color"],
+    md-dialog.contacts details summary,
+    md-dialog.contacts details summary md-list-item,
+    md-dialog.contacts label,
+    md-dialog.faceid-profile-modal label
+) {
+    cursor: pointer;
+}
+
+.input-box {
+    cursor: text;
+}
+
+:where(
+    .landing-top-bar-wrapper > *,
+    .m3-drawer-backdrop.show,
+    .map-measure-badge,
+    .map-topbar,
+    .md-drawer-backdrop.show,
+    .navigator-panel,
+    .yandex-ctrl-stack-bottom
+) {
+    pointer-events: auto;
+}
+
+:where(
+    .ai-blob-canvas,
+    .ai-blob-canvas svg,
+    .bento-card::before,
+    .bg-grid-mesh,
+    .bg-radial-vignette,
+    .bg-spotlight,
+    .bg-top-blender,
+    .card-instant .qr-hud-corner,
+    .card-instant .qr-laser-scanner,
+    .card-interactive::before,
+    .cursor-glow-orb,
+    .det-bbox,
+    .det-overlays-container,
+    .evolution-card::before,
+    .feature-card::before,
+    .glass::before,
+    .grid-chip-readonly,
+    .hero-card::before,
+    .industry-card::before,
+    .kiosk-hero::before,
+    .landing-bg-canvas,
+    .landing-top-bar-wrapper,
+    .m3-card-interactive::before,
+    .m3-drawer-backdrop,
+    .map-floating-actions,
+    .md-drawer-backdrop,
+    .org-card::before,
+    .picker-trigger-card.disabled,
+    .platform-card::before,
+    .pulse-ring,
+    .section-ambient-glow,
+    .spatial-subcard::before,
+    .spatial-wing-card::before,
+    .ux-mode-badge-overlay,
+    .ux-mode-card::before,
+    .yandex-right-controls-container,
+    md-elevated-card::before,
+    md-filled-card::before,
+    md-outlined-card::before,
+    svg.ai-blob-svg
+) {
+    pointer-events: none;
+}
+
+:where(
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .avatar-button,
+    .cta-btn,
+    .det-btn-icon-sm,
+    .header-brand-link,
+    .hero-pill-link,
+    .interactive-action,
+    .interactive-chip,
+    .kiosk-tier-btn,
+    .landing-auth-btn,
+    .landing-mobile-menu-toggle,
+    .lang-chip-btn,
+    .lang-menu-item,
+    .lang-pill-btn,
+    .lang-toggle-btn,
+    .m3-dialog-btn-primary,
+    .m3-dialog-close-btn,
+    .m3-filter-chip,
+    .m3-segmented-btn,
+    .m3x-btn-pill,
+    .m3x-press-scale,
+    .map-action-button,
+    .map-category-chip,
+    .map-panel-toggle-tab,
+    .map-route-close-btn,
+    .nav-control-btn,
+    .paginator nav button,
+    .picker-palette-swatch,
+    .picker-swatch-wrapper,
+    .preset-btn,
+    .route-options-toolbar-btn,
+    .search-clear-btn,
+    .search-route-btn,
+    .stage-tab,
+    .touch-manipulation,
+    .yandex-ctrl-btn,
+    #components-reconnect-modal button,
+    a,
+    body,
+    button,
+    md-elevated-button,
+    md-filled-button,
+    md-icon-button,
+    md-outlined-button,
+    md-text-button,
+    md-tonal-button
+) {
+    touch-action: manipulation;
+}
+
+:where(
+    .drag-handle,
+    .touch-none,
+    [data-gesture="interactive-canvas"]
+) {
+    touch-action: none;
+}
+
+:where(
+    .kiosk-filter-row,
+    .pos-filters,
+    .swipe-container-y,
+    .touch-pan-x,
+    .touch-scroll-y,
+    [data-gesture="swipe-vertical"]
+) {
+    touch-action: pan-x;
+}
+
+:where(
+    .active-orders-scroll,
+    .drawer-body,
+    .drawer-panel,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .md-drawer-backdrop,
+    .swipe-container-x,
+    .touch-pan-y,
+    .touch-scroll-x,
+    [data-gesture="swipe-horizontal"]
+) {
+    touch-action: pan-y;
+}
+
+@media (max-width: 599.98px) {
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab
+    ) {
+        cursor: pointer;
+    }
+
+    :where(
+        .organizations-map-controls.collapsed,
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab
+    ) {
+        pointer-events: auto;
+    }
+
+    :where(
+        .cta-btn,
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab,
+        .stage-tab
+    ) {
+        touch-action: manipulation;
+    }
+
+}
+
+@media screen and (max-width: 599.98px) {
+    .landing-floating-auth-btn {
+        touch-action: manipulation;
+    }
+
+}
+

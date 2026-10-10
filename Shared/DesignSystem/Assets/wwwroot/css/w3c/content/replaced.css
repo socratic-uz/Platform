@@ -1,0 +1,48 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/content/replaced.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .brand-screensaver-logo,
+    .det-frame-video,
+    .det-webrtc-video,
+    .fullscreen-video,
+    .kiosk-brand-logo,
+    .qrg-card-logo
+) {
+    object-fit: contain;
+}
+
+:where(
+    .avatar-button img,
+    .bento-media img,
+    .hero-stage-img,
+    .image-preview,
+    .local-video-pip,
+    .m3-card-media img,
+    .m3-ratio-card,
+    .m3-ratio-kiosk,
+    .m3-ratio-portrait,
+    .m3-ratio-square,
+    .m3-ratio-video,
+    .m3-ratio-wide,
+    .org-media img,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .product-img,
+    .product-main-img,
+    .remote-video,
+    .seller-logo,
+    .thumb-img,
+    .video-player-wrapper video,
+    .wishlist-details-thumb,
+    .wishlist-media img,
+    md-elevated-card figure > img,
+    md-filled-card figure > img,
+    md-outlined-card figure > img
+) {
+    object-fit: cover;
+}
+

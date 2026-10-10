@@ -2,289 +2,349 @@
   "version": "1.0",
   "assets": [
     {
-      "url": "_content/Assets/css/box-model/border.css",
-      "size": 48336,
-      "hash": "sha256-584a6ce15af6"
+      "url": "_content/Assets/css/components/base.css",
+      "size": 15703,
+      "hash": "sha256-f96cf68894ed"
     },
     {
-      "url": "_content/Assets/css/box-model/margin.css",
-      "size": 13179,
-      "hash": "sha256-e3eb39dfb5f8"
+      "url": "_content/Assets/css/components/buttons.css",
+      "size": 84666,
+      "hash": "sha256-671e209127d8"
     },
     {
-      "url": "_content/Assets/css/box-model/outline.css",
-      "size": 3681,
-      "hash": "sha256-53afc7fa5a54"
+      "url": "_content/Assets/css/components/cards.css",
+      "size": 90230,
+      "hash": "sha256-d101277d5d49"
     },
     {
-      "url": "_content/Assets/css/box-model/padding.css",
-      "size": 36229,
-      "hash": "sha256-f270f39768c2"
+      "url": "_content/Assets/css/components/chips.css",
+      "size": 55349,
+      "hash": "sha256-2a1cece69141"
     },
     {
-      "url": "_content/Assets/css/box-model/sizing.css",
-      "size": 51099,
-      "hash": "sha256-ef4ff8cd1048"
+      "url": "_content/Assets/css/components/common.css",
+      "size": 216998,
+      "hash": "sha256-ffe804382504"
     },
     {
-      "url": "_content/Assets/css/color/background.css",
-      "size": 48979,
-      "hash": "sha256-60c6b968a815"
+      "url": "_content/Assets/css/components/components.bundle.min.css",
+      "size": 493891,
+      "hash": "sha256-72a8fd1da519"
     },
     {
-      "url": "_content/Assets/css/color/color.css",
-      "size": 32273,
-      "hash": "sha256-7bc806e6f62c"
+      "url": "_content/Assets/css/components/components.css",
+      "size": 534,
+      "hash": "sha256-00df4f7cf82d"
     },
     {
-      "url": "_content/Assets/css/containment/contain.css",
-      "size": 1382,
-      "hash": "sha256-bf0cd18c1102"
+      "url": "_content/Assets/css/components/dialogs.css",
+      "size": 28934,
+      "hash": "sha256-3150e1c727b1"
     },
     {
-      "url": "_content/Assets/css/containment/container-queries.css",
-      "size": 727,
-      "hash": "sha256-ce79f588e577"
+      "url": "_content/Assets/css/components/expressive.css",
+      "size": 8333,
+      "hash": "sha256-54b5795e4b5f"
     },
     {
-      "url": "_content/Assets/css/content/generated.css",
-      "size": 1328,
-      "hash": "sha256-43e951fe9abb"
+      "url": "_content/Assets/css/components/forms.css",
+      "size": 30072,
+      "hash": "sha256-6491e548547e"
     },
     {
-      "url": "_content/Assets/css/content/lists.css",
-      "size": 853,
-      "hash": "sha256-f40e88851740"
+      "url": "_content/Assets/css/components/layout.css",
+      "size": 47242,
+      "hash": "sha256-d0008a518e7d"
     },
     {
-      "url": "_content/Assets/css/content/replaced.css",
-      "size": 1687,
-      "hash": "sha256-922f4b46febc"
+      "url": "_content/Assets/css/components/navigation.css",
+      "size": 34639,
+      "hash": "sha256-8609fd91b668"
     },
     {
-      "url": "_content/Assets/css/effects/clipping.css",
+      "url": "_content/Assets/css/components/tables.css",
+      "size": 16492,
+      "hash": "sha256-2b163177f588"
+    },
+    {
+      "url": "_content/Assets/css/socratic.bundle.min.css",
+      "size": 420479,
+      "hash": "sha256-8273cee77fa4"
+    },
+    {
+      "url": "_content/Assets/css/styles.bundle.min.css",
+      "size": 420479,
+      "hash": "sha256-8273cee77fa4"
+    },
+    {
+      "url": "_content/Assets/css/styles.css",
+      "size": 2866,
+      "hash": "sha256-f6c81c3b6398"
+    },
+    {
+      "url": "_content/Assets/css/tokens/box-model/border.css",
+      "size": 1416,
+      "hash": "sha256-70a980518bdf"
+    },
+    {
+      "url": "_content/Assets/css/tokens/box-model/outline.css",
+      "size": 683,
+      "hash": "sha256-a276867dc3ca"
+    },
+    {
+      "url": "_content/Assets/css/tokens/box-model/sizing.css",
+      "size": 956,
+      "hash": "sha256-9fc7d1aefcb7"
+    },
+    {
+      "url": "_content/Assets/css/tokens/box-model/spacing.css",
+      "size": 1086,
+      "hash": "sha256-6a65af408501"
+    },
+    {
+      "url": "_content/Assets/css/tokens/colors.css",
+      "size": 1174,
+      "hash": "sha256-ba7a5ac78e63"
+    },
+    {
+      "url": "_content/Assets/css/tokens/effects/shadow.css",
+      "size": 3754,
+      "hash": "sha256-2729ca614da3"
+    },
+    {
+      "url": "_content/Assets/css/tokens/motion/transitions.css",
+      "size": 1644,
+      "hash": "sha256-1866e3f5125a"
+    },
+    {
+      "url": "_content/Assets/css/tokens/overflow/scrollbars.css",
+      "size": 668,
+      "hash": "sha256-12c3e0caf0a6"
+    },
+    {
+      "url": "_content/Assets/css/tokens/positioning/stacking.css",
+      "size": 1317,
+      "hash": "sha256-9d73cb189844"
+    },
+    {
+      "url": "_content/Assets/css/tokens/themes/dark.css",
+      "size": 3179,
+      "hash": "sha256-68eeab1784ff"
+    },
+    {
+      "url": "_content/Assets/css/tokens/themes/light.css",
+      "size": 2932,
+      "hash": "sha256-56043842b864"
+    },
+    {
+      "url": "_content/Assets/css/tokens/typography/font.css",
+      "size": 2196,
+      "hash": "sha256-123b8d2c701a"
+    },
+    {
+      "url": "_content/Assets/css/tokens/typography/text-wrapping.css",
+      "size": 352,
+      "hash": "sha256-800aed1c9464"
+    },
+    {
+      "url": "_content/Assets/css/w3c/box-model/border.css",
+      "size": 47313,
+      "hash": "sha256-cf8de2f48d51"
+    },
+    {
+      "url": "_content/Assets/css/w3c/box-model/margin.css",
+      "size": 13645,
+      "hash": "sha256-de58f96ba79e"
+    },
+    {
+      "url": "_content/Assets/css/w3c/box-model/outline.css",
+      "size": 4408,
+      "hash": "sha256-e06547ac13bc"
+    },
+    {
+      "url": "_content/Assets/css/w3c/box-model/padding.css",
+      "size": 34145,
+      "hash": "sha256-6944dbcde598"
+    },
+    {
+      "url": "_content/Assets/css/w3c/box-model/sizing.css",
+      "size": 68271,
+      "hash": "sha256-209ec129b25f"
+    },
+    {
+      "url": "_content/Assets/css/w3c/color/background.css",
+      "size": 52007,
+      "hash": "sha256-8892c37e64fb"
+    },
+    {
+      "url": "_content/Assets/css/w3c/color/color.css",
+      "size": 36401,
+      "hash": "sha256-54d7c64ae38c"
+    },
+    {
+      "url": "_content/Assets/css/w3c/containment/contain.css",
+      "size": 1530,
+      "hash": "sha256-aeb52bf122ef"
+    },
+    {
+      "url": "_content/Assets/css/w3c/containment/container-queries.css",
+      "size": 748,
+      "hash": "sha256-b5a62a78bce2"
+    },
+    {
+      "url": "_content/Assets/css/w3c/content/generated.css",
+      "size": 1683,
+      "hash": "sha256-cc94cd16da16"
+    },
+    {
+      "url": "_content/Assets/css/w3c/content/lists.css",
+      "size": 903,
+      "hash": "sha256-570683f7d3b2"
+    },
+    {
+      "url": "_content/Assets/css/w3c/content/replaced.css",
+      "size": 1151,
+      "hash": "sha256-a25a7d5ff4be"
+    },
+    {
+      "url": "_content/Assets/css/w3c/effects/clipping.css",
       "size": 316,
       "hash": "sha256-bfba9128d28e"
     },
     {
-      "url": "_content/Assets/css/effects/filters.css",
-      "size": 5504,
-      "hash": "sha256-13c46ceb90d7"
+      "url": "_content/Assets/css/w3c/effects/filters.css",
+      "size": 5863,
+      "hash": "sha256-cc3fbd07d8d3"
     },
     {
-      "url": "_content/Assets/css/effects/masking.css",
-      "size": 539,
-      "hash": "sha256-1580e7c6122a"
+      "url": "_content/Assets/css/w3c/effects/masking.css",
+      "size": 427,
+      "hash": "sha256-b019ddcf7f8b"
     },
     {
-      "url": "_content/Assets/css/effects/shadow.css",
-      "size": 22423,
-      "hash": "sha256-4050dd369909"
+      "url": "_content/Assets/css/w3c/effects/shadow.css",
+      "size": 25696,
+      "hash": "sha256-d581ea4d9863"
     },
     {
-      "url": "_content/Assets/css/foundations/normalize.css",
-      "size": 2586,
-      "hash": "sha256-7ab1123a41e1"
+      "url": "_content/Assets/css/w3c/i18n/direction.css",
+      "size": 312,
+      "hash": "sha256-6fc964dc0cd1"
     },
     {
-      "url": "_content/Assets/css/i18n/direction.css",
-      "size": 314,
-      "hash": "sha256-0fa3c55301d6"
-    },
-    {
-      "url": "_content/Assets/css/i18n/writing-mode.css",
+      "url": "_content/Assets/css/w3c/i18n/writing-mode.css",
       "size": 317,
       "hash": "sha256-3701af738a80"
     },
     {
-      "url": "_content/Assets/css/interaction/form-controls.css",
-      "size": 543,
-      "hash": "sha256-b63b8fd87b39"
+      "url": "_content/Assets/css/w3c/interaction/form-controls.css",
+      "size": 710,
+      "hash": "sha256-bfc8e1f4acb0"
     },
     {
-      "url": "_content/Assets/css/interaction/pointer.css",
-      "size": 6882,
-      "hash": "sha256-cf0df1a4654a"
+      "url": "_content/Assets/css/w3c/interaction/pointer.css",
+      "size": 7236,
+      "hash": "sha256-041f9221759b"
     },
     {
-      "url": "_content/Assets/css/interaction/selection.css",
-      "size": 1334,
-      "hash": "sha256-fd01ad1c4374"
+      "url": "_content/Assets/css/w3c/interaction/selection.css",
+      "size": 1461,
+      "hash": "sha256-076d6355c0dc"
     },
     {
-      "url": "_content/Assets/css/layout/alignment.css",
-      "size": 47466,
-      "hash": "sha256-d4ab4083dded"
+      "url": "_content/Assets/css/w3c/layout/alignment.css",
+      "size": 47778,
+      "hash": "sha256-f0878c85df91"
     },
     {
-      "url": "_content/Assets/css/layout/display.css",
-      "size": 6456,
-      "hash": "sha256-0fe9911f11f3"
+      "url": "_content/Assets/css/w3c/layout/display.css",
+      "size": 31351,
+      "hash": "sha256-f4414d1b29f2"
     },
     {
-      "url": "_content/Assets/css/layout/grid.css",
-      "size": 58523,
-      "hash": "sha256-537b448080ff"
+      "url": "_content/Assets/css/w3c/layout/grid.css",
+      "size": 36686,
+      "hash": "sha256-828e9da57526"
     },
     {
-      "url": "_content/Assets/css/layout/multi-column.css",
+      "url": "_content/Assets/css/w3c/layout/multi-column.css",
       "size": 319,
       "hash": "sha256-fa0abc274ad1"
     },
     {
-      "url": "_content/Assets/css/layout/table.css",
-      "size": 563,
-      "hash": "sha256-137c2d119c56"
+      "url": "_content/Assets/css/w3c/layout/table.css",
+      "size": 567,
+      "hash": "sha256-b5723743fd55"
     },
     {
-      "url": "_content/Assets/css/motion/animations.css",
-      "size": 8163,
-      "hash": "sha256-c05b22023660"
+      "url": "_content/Assets/css/w3c/motion/animations.css",
+      "size": 8788,
+      "hash": "sha256-69d569c6fe75"
     },
     {
-      "url": "_content/Assets/css/motion/transitions.css",
-      "size": 19733,
-      "hash": "sha256-331f269d306a"
+      "url": "_content/Assets/css/w3c/motion/transitions.css",
+      "size": 20191,
+      "hash": "sha256-32db7650b9f5"
     },
     {
-      "url": "_content/Assets/css/overflow/overflow.css",
-      "size": 6556,
-      "hash": "sha256-4cbd314fdc5c"
+      "url": "_content/Assets/css/w3c/overflow/overflow.css",
+      "size": 6214,
+      "hash": "sha256-33f931b1197e"
     },
     {
-      "url": "_content/Assets/css/overflow/scrollbars.css",
-      "size": 7938,
-      "hash": "sha256-1aae2ecd092e"
+      "url": "_content/Assets/css/w3c/overflow/scrollbars.css",
+      "size": 2133,
+      "hash": "sha256-52775cd5694e"
     },
     {
-      "url": "_content/Assets/css/overflow/scrolling.css",
-      "size": 2201,
-      "hash": "sha256-405745a12765"
+      "url": "_content/Assets/css/w3c/overflow/scrolling.css",
+      "size": 1907,
+      "hash": "sha256-d5135730be63"
     },
     {
-      "url": "_content/Assets/css/positioning/anchor.css",
+      "url": "_content/Assets/css/w3c/positioning/anchor.css",
       "size": 318,
       "hash": "sha256-9df7f7a90c19"
     },
     {
-      "url": "_content/Assets/css/positioning/position.css",
-      "size": 16344,
-      "hash": "sha256-5606b2e6a92e"
+      "url": "_content/Assets/css/w3c/positioning/position.css",
+      "size": 17177,
+      "hash": "sha256-eaba878a756a"
     },
     {
-      "url": "_content/Assets/css/positioning/stacking.css",
-      "size": 4173,
-      "hash": "sha256-479fddd1dc23"
+      "url": "_content/Assets/css/w3c/positioning/stacking.css",
+      "size": 4534,
+      "hash": "sha256-883c6ffd634a"
     },
     {
-      "url": "_content/Assets/css/styles.bundle.min.css",
-      "size": 416352,
-      "hash": "sha256-d6223afcbcc5"
-    },
-    {
-      "url": "_content/Assets/css/styles.css",
-      "size": 2700,
-      "hash": "sha256-4d407a0cd66c"
-    },
-    {
-      "url": "_content/Assets/css/themes/dark.css",
-      "size": 2903,
-      "hash": "sha256-5666630ee2dd"
-    },
-    {
-      "url": "_content/Assets/css/themes/expressive.css",
-      "size": 11114,
-      "hash": "sha256-ac19d3087d4f"
-    },
-    {
-      "url": "_content/Assets/css/themes/light.css",
-      "size": 2742,
-      "hash": "sha256-8120dc2a628c"
-    },
-    {
-      "url": "_content/Assets/css/tokens/box-model/border.css",
-      "size": 1669,
-      "hash": "sha256-385ec5b8df29"
-    },
-    {
-      "url": "_content/Assets/css/tokens/box-model/outline.css",
-      "size": 793,
-      "hash": "sha256-414d41882b0f"
-    },
-    {
-      "url": "_content/Assets/css/tokens/box-model/sizing.css",
-      "size": 1165,
-      "hash": "sha256-7648767ac25a"
-    },
-    {
-      "url": "_content/Assets/css/tokens/box-model/spacing.css",
-      "size": 1317,
-      "hash": "sha256-6a3a969658ee"
-    },
-    {
-      "url": "_content/Assets/css/tokens/colors.css",
-      "size": 1206,
-      "hash": "sha256-96550c93cc08"
-    },
-    {
-      "url": "_content/Assets/css/tokens/effects/shadow.css",
-      "size": 4128,
-      "hash": "sha256-0ce39dc6b3ab"
-    },
-    {
-      "url": "_content/Assets/css/tokens/motion/transitions.css",
-      "size": 1919,
-      "hash": "sha256-232e172e4f03"
-    },
-    {
-      "url": "_content/Assets/css/tokens/overflow/scrollbars.css",
-      "size": 756,
-      "hash": "sha256-4daad6a74b87"
-    },
-    {
-      "url": "_content/Assets/css/tokens/positioning/stacking.css",
-      "size": 1647,
-      "hash": "sha256-03becd07b776"
-    },
-    {
-      "url": "_content/Assets/css/tokens/typography/font.css",
-      "size": 2581,
-      "hash": "sha256-e7565aa26d8b"
-    },
-    {
-      "url": "_content/Assets/css/tokens/typography/text-wrapping.css",
-      "size": 385,
-      "hash": "sha256-91a2bf6c1555"
-    },
-    {
-      "url": "_content/Assets/css/transforms/motion-path.css",
+      "url": "_content/Assets/css/w3c/transforms/motion-path.css",
       "size": 322,
       "hash": "sha256-b39ef8214eb4"
     },
     {
-      "url": "_content/Assets/css/transforms/transform.css",
-      "size": 8906,
-      "hash": "sha256-e97db055146c"
+      "url": "_content/Assets/css/w3c/transforms/transform.css",
+      "size": 9608,
+      "hash": "sha256-b0513d5c7a76"
     },
     {
-      "url": "_content/Assets/css/typography/font.css",
-      "size": 34584,
-      "hash": "sha256-4b1eea98e0a5"
+      "url": "_content/Assets/css/w3c/typography/font.css",
+      "size": 36044,
+      "hash": "sha256-e91855b95c2b"
     },
     {
-      "url": "_content/Assets/css/typography/text-decoration.css",
-      "size": 1898,
-      "hash": "sha256-ce3194570cdf"
+      "url": "_content/Assets/css/w3c/typography/text-decoration.css",
+      "size": 1905,
+      "hash": "sha256-f56803bfe94f"
     },
     {
-      "url": "_content/Assets/css/typography/text-layout.css",
-      "size": 12403,
-      "hash": "sha256-9f2ced4a5039"
+      "url": "_content/Assets/css/w3c/typography/text-layout.css",
+      "size": 13605,
+      "hash": "sha256-8038e1bdbb24"
     },
     {
-      "url": "_content/Assets/css/typography/text-wrapping.css",
-      "size": 4375,
-      "hash": "sha256-585625f710fb"
+      "url": "_content/Assets/css/w3c/typography/text-wrapping.css",
+      "size": 4153,
+      "hash": "sha256-fc01ce84037c"
     },
     {
       "url": "_content/Assets/data/health_nutrition_guide.pdf",
@@ -818,8 +878,8 @@
     },
     {
       "url": "_content/Assets/js/material-web.bundle.js",
-      "size": 809711,
-      "hash": "sha256-e1a0f059194c"
+      "size": 814981,
+      "hash": "sha256-8f5a2d5967a0"
     },
     {
       "url": "_content/Assets/js/oauthPopupHelper.js",

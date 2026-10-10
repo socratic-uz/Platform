@@ -1,0 +1,746 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/typography/text-layout.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    body,
+    html
+) {
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:where(
+    body,
+    html
+) {
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+:where(
+    .product-title,
+    md-elevated-card h5,
+    md-filled-card h5,
+    md-outlined-card h5
+) {
+    letter-spacing: -0.015em;
+}
+
+:where(
+    .card-title,
+    .header-brand-text,
+    .landing-nav-link,
+    .m3-card-title,
+    .m3-empty-state-title,
+    .m3-summary-title,
+    .maneuver-distance,
+    .route-alternative-time,
+    .section-title,
+    .sidebar-brand-title,
+    .summary-title
+) {
+    letter-spacing: -0.01em;
+}
+
+.m3x-fluid-headline {
+    letter-spacing: -0.025em;
+}
+
+:where(
+    .auth-title,
+    .brand-screensaver-title,
+    .brand-title,
+    .click-popup-coords,
+    .download-header h2,
+    .hero-title,
+    .home-title,
+    .kpi-number,
+    .m3-page-header-title,
+    .metric-num,
+    .product-price,
+    .section-title-box h2,
+    .showcase-brand-title,
+    .signin-title,
+    .spec-value,
+    .ux-modal-title,
+    md-elevated-card .price-tag,
+    md-filled-card .price-tag,
+    md-outlined-card .price-tag
+) {
+    letter-spacing: -0.02em;
+}
+
+:where(
+    .catalog-title,
+    header.landing-header .header-brand-text
+) {
+    letter-spacing: -0.03em;
+}
+
+.qrg-card-name {
+    letter-spacing: -0.3px;
+}
+
+.kiosk-hero-content h1 {
+    letter-spacing: -0.5px;
+}
+
+:where(
+    .card-order-id,
+    .lang-current-label,
+    .m3-pill-badge,
+    .order-number,
+    .pos-ux-mode-title,
+    .product-tag-chip,
+    .qr-status-text
+) {
+    letter-spacing: 0.02em;
+}
+
+.status-badge {
+    letter-spacing: 0.03em;
+}
+
+:where(
+    .kds-order-ref,
+    .kpi-title,
+    .lang-chip-btn,
+    .popular-badge,
+    .pro-tag,
+    .showcase-stat-lbl,
+    .spatial-wing-badge
+) {
+    letter-spacing: 0.04em;
+}
+
+:where(
+    .ad-network-badge,
+    .det-voice-title,
+    .footer-col-title,
+    .monospace,
+    .pills-label,
+    .place-details-header-title,
+    .product-description-block h3,
+    .section-heading,
+    .showcase-brand-badge,
+    .sidebar-brand-subtitle,
+    .spotlight-pill,
+    .stat-label
+) {
+    letter-spacing: 0.05em;
+}
+
+:where(
+    .m3-label,
+    .spotlight-header-badge,
+    .ux-mode-category-tag
+) {
+    letter-spacing: 0.06em;
+}
+
+:where(
+    .showcase-nav-category-header,
+    .sidebar-nav-category,
+    .support-label
+) {
+    letter-spacing: 0.08em;
+}
+
+.docs-sidebar-title {
+    letter-spacing: 0.15px;
+}
+
+.cta-btn span {
+    letter-spacing: 0.2px;
+}
+
+:where(
+    .feature-badge,
+    .footer-header,
+    .hero-badge,
+    .section-badge
+) {
+    letter-spacing: 0.3px;
+}
+
+:where(
+    .active-orders-label,
+    .info-label,
+    .label-title,
+    .m3-info-label,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .picker-popover-title,
+    .pos-orders-label,
+    .qrg-card-hint,
+    .ux-mode-code
+) {
+    letter-spacing: 0.5px;
+}
+
+:where(
+    .docs-group-header,
+    .qrg-group-head,
+    .qrg-section-title
+) {
+    letter-spacing: 0.8px;
+}
+
+:where(
+    .m3-display-large,
+    h1
+) {
+    letter-spacing: var(--md-sys-typescale-display-large-tracking);
+}
+
+:where(
+    .m3-headline-large,
+    h2
+) {
+    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
+}
+
+:where(
+    .m3-headline-medium,
+    h3
+) {
+    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+}
+
+.m3-label-small {
+    letter-spacing: var(--md-sys-typescale-label-small-tracking);
+}
+
+:where(
+    .m3-title-large,
+    h4
+) {
+    letter-spacing: var(--md-sys-typescale-title-large-tracking);
+}
+
+:where(
+    .badge md-icon:not([slot]),
+    .badge-counter md-icon:not([slot]),
+    .column-badge md-icon:not([slot]),
+    .count-badge md-icon:not([slot]),
+    .item-status-pill md-icon:not([slot]),
+    .m3-badge md-icon:not([slot]),
+    .m3-count-badge md-icon:not([slot]),
+    .m3-pill-badge md-icon:not([slot]),
+    .m3-status-badge md-icon:not([slot]),
+    .maneuver-icon md-icon:not([slot]),
+    .map-panel-toggle-icon md-icon:not([slot]),
+    .order-status-badge md-icon:not([slot]),
+    .picker-badge md-icon:not([slot]),
+    .route-close md-icon:not([slot]),
+    .status-badge md-icon:not([slot]),
+    md-elevated-button md-icon:not([slot]),
+    md-filled-button md-icon:not([slot]),
+    md-filled-tonal-button md-icon:not([slot]),
+    md-outlined-button md-icon:not([slot]),
+    md-text-button md-icon:not([slot]),
+    md-tonal-button md-icon:not([slot])
+) {
+    line-height: 1;
+}
+
+.kpi-number {
+    line-height: 1.1;
+}
+
+.m3x-fluid-headline {
+    line-height: 1.12;
+}
+
+.hero-title {
+    line-height: 1.18;
+}
+
+:where(
+    .about-title,
+    .b2b-lead-content h2,
+    .click-popup-btn,
+    .example-title,
+    .help-title,
+    .home-title,
+    .kiosk-hero-content h1,
+    .landing-subpage-title,
+    .m3-page-header-title,
+    .map-route-suggestion-meta,
+    .page-heading,
+    .platform-info h3,
+    .pos-ux-mode-title,
+    .sidebar-brand-title
+) {
+    line-height: 1.2;
+}
+
+:where(
+    .bento-content h3,
+    .card-title,
+    .kds-product-name,
+    .m3-card-title,
+    .m3x-btn-pill,
+    .map-action-button,
+    .map-route-suggestion-title,
+    .place-details-name,
+    .pos-product-title-text,
+    .product-title,
+    .section-title-box h2,
+    md-elevated-card h5,
+    md-filled-card h5,
+    md-outlined-card h5
+) {
+    line-height: 1.25;
+}
+
+:where(
+    .assistant-search,
+    .citation
+) {
+    line-height: 1.25rem;
+}
+
+:where(
+    .det-title,
+    .item-name,
+    .org-card-header h3,
+    .org-card-name,
+    .picker-trigger-title,
+    .qrg-title,
+    .spatial-wing-header h3,
+    .spotlight-info h3,
+    .wishlist-title-text
+) {
+    line-height: 1.3;
+}
+
+.click-popup-address {
+    line-height: 1.35;
+}
+
+:where(
+    .brand-screensaver-tagline,
+    .card-subtitle,
+    .faceid-notice,
+    .m3-card-subtitle,
+    .m3-dialog-description,
+    .org-card-desc,
+    .picker-preview-text,
+    .place-info-row .info-value,
+    .product-desc,
+    .qr-caption,
+    .showcase-card-code,
+    .support-log-line,
+    h6,
+    md-elevated-card p,
+    md-filled-card p,
+    md-outlined-card p
+) {
+    line-height: 1.4;
+}
+
+:where(
+    .org-description,
+    .qr-instruction
+) {
+    line-height: 1.45;
+}
+
+:where(
+    .chat-input-wrapper textarea,
+    .empty-plans-desc,
+    .evolution-card p,
+    .input-box textarea,
+    .kiosk-dialog-text,
+    .kiosk-hero-content p,
+    .platform-desc p,
+    .showcase-hero p,
+    .spatial-subcard p,
+    .spec-card-text p,
+    .subscription-description,
+    #components-reconnect-modal p
+) {
+    line-height: 1.5;
+}
+
+:where(
+    .footer-brand-tagline,
+    .m3-empty-state-desc,
+    .spatial-wing-header p,
+    .spotlight-info p,
+    .ux-mode-desc
+) {
+    line-height: 1.55;
+}
+
+:where(
+    .about-subtitle,
+    .bento-content p,
+    .catalog-desc,
+    .docs-article,
+    .download-header p,
+    .evolution-header p,
+    .example-subtitle,
+    .help-subtitle,
+    .landing-subpage-subtitle,
+    .m3x-fluid-subhead,
+    .org-card-header p,
+    .product-description-text,
+    .section-title-box p,
+    .ux-empty-state p
+) {
+    line-height: 1.6;
+}
+
+:where(
+    .b2b-lead-content p,
+    .hero-subtitle,
+    .ux-modal-desc
+) {
+    line-height: 1.65;
+}
+
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon
+) {
+    line-height: 24px;
+}
+
+:where(
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+) {
+    line-height: inherit;
+}
+
+body {
+    line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
+}
+
+:where(
+    .m3-body-large,
+    p
+) {
+    line-height: var(--md-sys-typescale-body-large-line-height);
+}
+
+.m3-body-medium {
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+:where(
+    .m3-display-large,
+    h1
+) {
+    line-height: var(--md-sys-typescale-display-large-line-height);
+}
+
+:where(
+    .m3-headline-large,
+    h2
+) {
+    line-height: var(--md-sys-typescale-headline-large-line-height);
+}
+
+:where(
+    .m3-headline-medium,
+    h3
+) {
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+}
+
+.m3-label-small {
+    line-height: var(--md-sys-typescale-label-small-line-height);
+}
+
+:where(
+    .m3-title-large,
+    h4
+) {
+    line-height: var(--md-sys-typescale-title-large-line-height);
+}
+
+:where(
+    .m3-title-medium,
+    h5
+) {
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+html {
+    tab-size: 4;
+}
+
+:where(
+    .about-hero,
+    .analytics-metric-cell,
+    .attract-loop-content,
+    .auth-header,
+    .b2b-lead-section,
+    .col-justify-center .col-title,
+    .column-empty,
+    .cta-btn,
+    .cta-card,
+    .current-plan-indicator,
+    .det-active-sessions-empty,
+    .det-placeholder,
+    .det-placeholder-padded,
+    .docs-welcome-card,
+    .download-header,
+    .drop-title,
+    .empty-cart-view,
+    .empty-plans-card,
+    .example-hero,
+    .faceid-notice,
+    .faceid-status-text,
+    .feat-pill,
+    .file-name,
+    .help-hero,
+    .kds-empty-col,
+    .kiosk-empty-state,
+    .landing-subpage-hero,
+    .loading-progress-text,
+    .m3-empty-column,
+    .m3-empty-state,
+    .map-measure-badge-hint,
+    .no-messages,
+    .org-tag,
+    .pos-empty-state,
+    .qr-instruction,
+    .qrg-card,
+    .qrg-empty,
+    .resend-countdown,
+    .score-box,
+    .section-header,
+    .section-title-box,
+    .signin-header,
+    .sort-indicator,
+    .spec-item,
+    .store-not-found,
+    .upload-zone-label,
+    .ux-empty-state,
+    .ux-spotlight-header,
+    .ux-widget-quote,
+    .venue-chip,
+    #components-reconnect-modal p,
+    td.col-justify-center
+) {
+    text-align: center;
+}
+
+:where(
+    .assistant-message-text th,
+    .col-justify-start .col-title,
+    .lang-menu-item,
+    .m3-table th,
+    .map-global-suggestion-button,
+    .map-route-suggestion-button,
+    .order-items-table th,
+    .orders-table th,
+    .pos-product-card,
+    .pos-product-title-text,
+    .product-title,
+    .route-alternative-card,
+    .schedule-table td,
+    .schedule-table th,
+    .showcase-nav-btn,
+    assistant-message th,
+    md-elevated-card,
+    md-elevated-card .price-tag,
+    md-elevated-card h5,
+    md-elevated-card p,
+    md-filled-card,
+    md-filled-card .price-tag,
+    md-filled-card h5,
+    md-filled-card p,
+    md-outlined-card,
+    md-outlined-card .price-tag,
+    md-outlined-card h5,
+    md-outlined-card p,
+    td.col-justify-left,
+    td.col-justify-start
+) {
+    text-align: left;
+}
+
+:where(
+    .col-justify-end .col-title,
+    .m3-row-value,
+    .preview-product-price,
+    .row-value,
+    .spotlight-mode-badge,
+    .table-container td.actions-column,
+    .table-container th.actions-column,
+    table.quickgrid td.actions-column,
+    table.quickgrid th.actions-column,
+    td.col-justify-end,
+    td.col-justify-right
+) {
+    text-align: right;
+}
+
+:where(
+    .link-stack,
+    section.link-stack
+) {
+    text-align: start;
+}
+
+table {
+    text-indent: 0;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+:where(
+    .required-badge,
+    button,
+    select
+) {
+    text-transform: none;
+}
+
+:where(
+    .active-orders-label,
+    .ad-network-badge,
+    .auth-divider,
+    .docs-group-header,
+    .footer-col-title,
+    .info-label,
+    .kpi-title,
+    .label-title,
+    .m3-info-label,
+    .m3-label,
+    .m3-label-small,
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .panel-section-title,
+    .payment-dashboard .info-label,
+    .picker-hex-input,
+    .picker-popover-title,
+    .pills-label,
+    .place-details-badge,
+    .place-details-header-title,
+    .place-info-row .info-label,
+    .popular-badge,
+    .pos-orders-label,
+    .pos-ux-mode-title,
+    .pro-tag,
+    .product-description-block h3,
+    .qrg-card-hint,
+    .qrg-group-head,
+    .qrg-section-title,
+    .section-heading,
+    .showcase-brand-badge,
+    .showcase-nav-category-header,
+    .showcase-stat-lbl,
+    .sidebar-brand-subtitle,
+    .sidebar-nav-category,
+    .spatial-wing-badge,
+    .spotlight-header-badge,
+    .spotlight-pill,
+    .stat-label,
+    .status-badge,
+    .support-label,
+    .ux-mode-category-tag
+) {
+    text-transform: uppercase;
+}
+
+@media (max-width: 599.98px) {
+    :where(
+        .m3-trust-footer,
+        .payment-trust-footer,
+        .preset-btn
+    ) {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .qr-compact-body {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 839.98px) {
+    .hero-title {
+        line-height: 1.22;
+    }
+
+    .hero-subtitle {
+        line-height: 1.55;
+    }
+
+}
+
+@media screen and (max-width: 599.98px) {
+    .footer-bottom-bar {
+        text-align: center;
+    }
+
+    .price-tag {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    :where(
+        nav a.nav-item span,
+        nav.glass a.nav-item span
+    ) {
+        line-height: 1.2;
+    }
+
+    :where(
+        .footer-bottom-bar,
+        .footer-copyright,
+        nav a.nav-item span,
+        nav.glass a.nav-item span
+    ) {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item span
+    ) {
+        line-height: 1.15;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item span
+    ) {
+        text-align: center;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.nav-desktop
+    ) {
+        text-align: start;
+    }
+
+}
+

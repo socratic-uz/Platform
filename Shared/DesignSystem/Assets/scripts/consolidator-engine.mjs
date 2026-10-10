@@ -49,39 +49,61 @@ export class AstConsolidator {
         const atRuleScope = atRuleStack.join(' {\n    ');
 
         // Extract clean, unnested selectors with depth-aware parenthesis balancing
-        function parseSelectors(selectorString) {
-          let s = selectorString.trim();
-          if (s.startsWith(':where(') && s.endsWith(')')) {
+        function isFullWhereEnvelope(s) {
+          if (!s.startsWith(':where(') || !s.endsWith(')')) return false;
+          let depth = 0;
+          for (let i = 6; i < s.length; i++) {
+            if (s[i] === '(') depth++;
+            else if (s[i] === ')') {
+              depth--;
+              if (depth === 0) {
+                return i === s.length - 1;
+              }
+            }
+          }
+          return false;
+        }
+
+        function unwrapWhere(str) {
+          let s = str.trim();
+          while (isFullWhereEnvelope(s)) {
             s = s.slice(7, -1).trim();
           }
+          return s;
+        }
 
-          const results = [];
-          let current = '';
+        function splitTopLevelCommas(s) {
+          const list = [];
+          let cur = '';
           let depth = 0;
-
           for (let i = 0; i < s.length; i++) {
-            const char = s[i];
-            if (char === '(') depth++;
-            else if (char === ')') depth--;
-
-            if (char === ',' && depth === 0) {
-              const trimmed = current.trim().replace(/\s+/g, ' ');
-              if (trimmed) results.push(trimmed);
-              current = '';
+            const c = s[i];
+            if (c === '(') depth++;
+            else if (c === ')') depth--;
+            if (c === ',' && depth === 0) {
+              const tr = cur.trim();
+              if (tr) list.push(tr);
+              cur = '';
             } else {
-              current += char;
+              cur += c;
             }
           }
+          const tr = cur.trim();
+          if (tr) list.push(tr);
+          return list;
+        }
 
-          const trimmed = current.trim().replace(/\s+/g, ' ');
-          if (trimmed) results.push(trimmed);
-
-          return results.flatMap(item => {
-            if (item.startsWith(':where(') && item.endsWith(')')) {
-              return parseSelectors(item);
+        function parseSelectors(selectorString) {
+          function extract(s) {
+            const unwrapped = unwrapWhere(s);
+            const parts = splitTopLevelCommas(unwrapped);
+            if (parts.length === 1 && parts[0] === s) {
+              return [parts[0].replace(/\s+/g, ' ')];
             }
-            return [item];
-          });
+            return parts.flatMap(extract);
+          }
+
+          return Array.from(new Set(extract(selectorString)));
         }
 
         const selectors = parseSelectors(node.selector || '');
@@ -148,7 +170,7 @@ export class AstConsolidator {
         const sortedDeclKeys = Array.from(topLevelDecls.keys()).sort((a, b) => a.localeCompare(b));
         for (const declString of sortedDeclKeys) {
           const selectorSet = topLevelDecls.get(declString);
-          content += this._formatRule(selectorSet, declString, '', moduleRelPath);
+          content += this._formatRule(selectorSet, declString, '');
           totalDeclarations++;
         }
       }
@@ -161,14 +183,15 @@ export class AstConsolidator {
         const sortedDeclKeys = Array.from(declMap.keys()).sort((a, b) => a.localeCompare(b));
         for (const declString of sortedDeclKeys) {
           const selectorSet = declMap.get(declString);
-          content += this._formatRule(selectorSet, declString, '    ', moduleRelPath);
+          content += this._formatRule(selectorSet, declString, '    ');
           totalDeclarations++;
         }
-        content += `}\n\n`;
+        const openBraces = (scope.match(/{/g) || []).length + 1;
+        content += `${'}\n'.repeat(openBraces)}\n`;
       }
 
       // Special case: if this is motion/animations.css, append gathered keyframes
-      if (moduleRelPath === 'motion/animations.css' && this.keyframes.size > 0) {
+      if (moduleRelPath.endsWith('motion/animations.css') && this.keyframes.size > 0) {
         content += `/* ==========================================================================\n`;
         content += `   Atomic Keyframes Animations\n`;
         content += `   ========================================================================== */\n\n`;
@@ -185,13 +208,8 @@ export class AstConsolidator {
     return { totalFiles, totalDeclarations };
   }
 
-  _formatRule(selectorSet, declString, indent = '', moduleRelPath = '') {
+  _formatRule(selectorSet, declString, indent = '') {
     const sortedSelectors = Array.from(selectorSet).sort((a, b) => a.localeCompare(b));
-
-    // Special case: gradient-text.css MUST NOT use :where() to preserve specificity over background shorthand
-    if (moduleRelPath === 'color/gradient-text.css') {
-      return `${indent}${sortedSelectors.join(`,\n${indent}`)} {\n${indent}    ${declString};\n${indent}}\n\n`;
-    }
 
     if (sortedSelectors.length === 1) {
       return `${indent}${sortedSelectors[0]} {\n${indent}    ${declString};\n${indent}}\n\n`;

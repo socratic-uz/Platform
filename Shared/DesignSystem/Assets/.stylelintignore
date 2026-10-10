@@ -1,0 +1,6 @@
+**/*.min.css
+wwwroot/css/*.bundle.min.css
+wwwroot/fonts/**
+node_modules/**
+bin/**
+obj/**

@@ -4,9 +4,6 @@
    W3C CSS Working Group Single-Declaration Architecture
    ========================================================================== */
 
-/* 0. Foundations (Normalize / Reset) */
-@import "foundations/normalize.css";
-
 /* 1. Typography Fonts (Icons & Typefaces) */
 @import "../fonts/material-symbols-outlined.css";
 @import "../fonts/roboto.css";
@@ -23,75 +20,73 @@
 @import "tokens/typography/text-wrapping.css";
 @import "tokens/effects/shadow.css";
 @import "tokens/motion/transitions.css";
-
-/* 3. Themes */
-@import "themes/dark.css";
-@import "themes/light.css";
-@import "themes/expressive.css";
+@import "tokens/colors.css";
+@import "tokens/themes/dark.css";
+@import "tokens/themes/light.css";
 
 /* 4. W3C Rule Modules */
 /* Box Model */
-@import "box-model/sizing.css";
-@import "box-model/margin.css";
-@import "box-model/padding.css";
-@import "box-model/border.css";
-@import "box-model/outline.css";
+@import "w3c/box-model/sizing.css";
+@import "w3c/box-model/margin.css";
+@import "w3c/box-model/padding.css";
+@import "w3c/box-model/border.css";
+@import "w3c/box-model/outline.css";
 
 /* Layout */
-@import "layout/display.css";
-@import "layout/grid.css";
-@import "layout/alignment.css";
-@import "layout/multi-column.css";
-@import "layout/table.css";
+@import "w3c/layout/display.css";
+@import "w3c/layout/grid.css";
+@import "w3c/layout/alignment.css";
+@import "w3c/layout/multi-column.css";
+@import "w3c/layout/table.css";
 
 /* Positioning */
-@import "positioning/position.css";
-@import "positioning/stacking.css";
-@import "positioning/anchor.css";
+@import "w3c/positioning/position.css";
+@import "w3c/positioning/stacking.css";
+@import "w3c/positioning/anchor.css";
 
 /* Overflow */
-@import "overflow/overflow.css";
-@import "overflow/scrolling.css";
-@import "overflow/scrollbars.css";
+@import "w3c/overflow/overflow.css";
+@import "w3c/overflow/scrolling.css";
+@import "w3c/overflow/scrollbars.css";
 
 /* Typography */
-@import "typography/font.css";
-@import "typography/text-layout.css";
-@import "typography/text-wrapping.css";
-@import "typography/text-decoration.css";
+@import "w3c/typography/font.css";
+@import "w3c/typography/text-layout.css";
+@import "w3c/typography/text-wrapping.css";
+@import "w3c/typography/text-decoration.css";
 
 /* Color */
-@import "color/color.css";
-@import "color/background.css";
+@import "w3c/color/color.css";
+@import "w3c/color/background.css";
 
 /* Effects */
-@import "effects/shadow.css";
-@import "effects/filters.css";
-@import "effects/masking.css";
-@import "effects/clipping.css";
+@import "w3c/effects/shadow.css";
+@import "w3c/effects/filters.css";
+@import "w3c/effects/masking.css";
+@import "w3c/effects/clipping.css";
 
 /* Transforms */
-@import "transforms/transform.css";
-@import "transforms/motion-path.css";
+@import "w3c/transforms/transform.css";
+@import "w3c/transforms/motion-path.css";
 
 /* Motion */
-@import "motion/transitions.css";
-@import "motion/animations.css";
+@import "w3c/motion/transitions.css";
+@import "w3c/motion/animations.css";
 
 /* Content */
-@import "content/generated.css";
-@import "content/lists.css";
-@import "content/replaced.css";
+@import "w3c/content/generated.css";
+@import "w3c/content/lists.css";
+@import "w3c/content/replaced.css";
 
 /* Interaction */
-@import "interaction/pointer.css";
-@import "interaction/selection.css";
-@import "interaction/form-controls.css";
+@import "w3c/interaction/pointer.css";
+@import "w3c/interaction/selection.css";
+@import "w3c/interaction/form-controls.css";
 
 /* Internationalization (i18n) */
-@import "i18n/direction.css";
-@import "i18n/writing-mode.css";
+@import "w3c/i18n/direction.css";
+@import "w3c/i18n/writing-mode.css";
 
 /* Containment */
-@import "containment/contain.css";
-@import "containment/container-queries.css";
+@import "w3c/containment/contain.css";
+@import "w3c/containment/container-queries.css";

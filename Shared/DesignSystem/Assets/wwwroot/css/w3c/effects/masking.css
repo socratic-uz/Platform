@@ -1,0 +1,10 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/effects/masking.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.bg-grid-mesh {
+    mask-image: radial-gradient(ellipse 90% 85% at 50% 30%, black 40%, transparent 92%);
+}
+

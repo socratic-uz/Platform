@@ -1,0 +1,160 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/box-model/outline.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .has-error:focus-visible,
+    .is-invalid:focus-visible,
+    input:invalid:focus-visible,
+    textarea:invalid:focus-visible
+) {
+    outline-color: var(--md-sys-color-focus-ring-error, var(--md-sys-color-error));
+}
+
+:where(
+    :focus-visible,
+    .thumb-btn:focus-visible,
+    *:focus-visible
+) {
+    outline-offset: 2px;
+}
+
+:where(
+    .btn-primary:focus-visible,
+    .m3-btn-filled:focus-visible
+) {
+    outline-offset: 3px;
+}
+
+.m3-focus-ring-inset:focus-visible {
+    outline-offset: var(--md-sys-outline-offset-inset, -2px);
+}
+
+.m3-focus-ring-tight:focus-visible {
+    outline-offset: var(--md-sys-outline-offset-tight, 1px);
+}
+
+:where(
+    .analytics-mode-btn:focus-visible,
+    .card-interactive:focus-visible,
+    .file-card:focus-visible,
+    .lang-chip-btn:focus-visible,
+    .lang-pill-btn:focus-visible,
+    .m3-card-interactive:focus-visible,
+    .m3-filter-chip:focus-visible,
+    .m3-focus-ring:focus-visible,
+    .m3-segmented-btn:focus-visible,
+    .paginator nav button:not([disabled]):focus-visible,
+    .picker-palette-swatch:focus-visible,
+    .picker-trigger-card:focus-visible,
+    .upload-card:focus-visible,
+    [tabindex]:not([tabindex="-1"]):focus-visible,
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    md-checkbox:focus-visible,
+    md-elevated-button:focus-visible,
+    md-filled-button:focus-visible,
+    md-filled-text-field:focus-visible,
+    md-icon-button:focus-visible,
+    md-outlined-button:focus-visible,
+    md-outlined-text-field:focus-visible,
+    md-radio:focus-visible,
+    md-switch:focus-visible,
+    md-text-button:focus-visible,
+    md-tonal-button:focus-visible,
+    select:focus-visible,
+    summary:focus-visible,
+    textarea:focus-visible
+) {
+    outline-offset: var(--md-sys-outline-offset, 2px);
+}
+
+.invalid {
+    outline: 1px solid var(--md-sys-color-error);
+}
+
+.valid.modified:not([type="checkbox"]) {
+    outline: 1px solid var(--md-sys-color-primary);
+}
+
+:where(
+    :focus-visible,
+    .crumb-link:focus-visible,
+    .thumb-btn:focus-visible,
+    *:focus-visible
+) {
+    outline: 2px solid var(--md-sys-color-primary);
+}
+
+:where(
+    .btn-primary:focus-visible,
+    .m3-btn-filled:focus-visible
+) {
+    outline: 2px solid var(--md-sys-color-tertiary);
+}
+
+:where(
+    :focus:not(:focus-visible),
+    .back-button:focus-visible,
+    .back-button:hover,
+    .chat-input-wrapper textarea,
+    .input-box textarea,
+    .input-box:focus-within,
+    .m3-back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-outline-none,
+    .m3-outline-none:focus,
+    .m3-outline-none:focus-visible,
+    .md3-time-input,
+    .picker-hex-input,
+    .search-input,
+    .select-input:focus,
+    .text-input:focus,
+    .ux-search-box input,
+    .ux-tab-btn,
+    *:focus:not(:focus-visible)
+) {
+    outline: none;
+}
+
+:where(
+    .analytics-mode-btn:focus-visible,
+    .card-interactive:focus-visible,
+    .file-card:focus-visible,
+    .lang-chip-btn:focus-visible,
+    .lang-pill-btn:focus-visible,
+    .m3-card-interactive:focus-visible,
+    .m3-filter-chip:focus-visible,
+    .m3-focus-ring-inset:focus-visible,
+    .m3-focus-ring-tight:focus-visible,
+    .m3-focus-ring:focus-visible,
+    .m3-segmented-btn:focus-visible,
+    .paginator nav button:not([disabled]):focus-visible,
+    .picker-palette-swatch:focus-visible,
+    .picker-trigger-card:focus-visible,
+    .upload-card:focus-visible,
+    [tabindex]:not([tabindex="-1"]):focus-visible,
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    md-checkbox:focus-visible,
+    md-elevated-button:focus-visible,
+    md-filled-button:focus-visible,
+    md-filled-text-field:focus-visible,
+    md-icon-button:focus-visible,
+    md-outlined-button:focus-visible,
+    md-outlined-text-field:focus-visible,
+    md-radio:focus-visible,
+    md-switch:focus-visible,
+    md-text-button:focus-visible,
+    md-tonal-button:focus-visible,
+    select:focus-visible,
+    summary:focus-visible,
+    textarea:focus-visible
+) {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+}
+

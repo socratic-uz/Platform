@@ -18,7 +18,6 @@ namespace Assets.Constants
         {
             public const string AssistantMessage = "assistant-message";
             public const string AuthHeader = "auth-header";
-            public const string BentoContent = "bento-content";
             public const string BrandScreensaverBody = "brand-screensaver-body";
             public const string BreakdownBarItem = "breakdown-bar-item";
             public const string BreakdownBarsStack = "breakdown-bars-stack";
@@ -37,12 +36,9 @@ namespace Assets.Constants
             public const string DocsGroupItems = "docs-group-items";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
-            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string ExplorerHeader = "explorer-header";
-            public const string FooterBrand = "footer-brand";
             public const string FooterLangContainer = "footer-lang-container";
             public const string FooterNavCol = "footer-nav-col";
-            public const string FullscreenLoading = "fullscreen-loading";
             public const string Gap0 = "m3-gap-0";
             public const string Gap1 = "m3-gap-1";
             public const string Gap2 = "m3-gap-2";
@@ -62,14 +58,10 @@ namespace Assets.Constants
             public const string ItemNameRow = "item-name-row";
             public const string ItemPricingRow = "item-pricing-row";
             public const string ItemsListSection = "items-list-section";
-            public const string ItemTotalPrice = "item-total-price";
-            public const string KdsTimeAgo = "kds-time-ago";
-            public const string KioskCategoryLabel = "kiosk-category-label";
             public const string KpiHeader = "kpi-header";
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string LandingHeaderActions = "landing-header-actions";
-            public const string LegendItem = "legend-item";
             public const string NavigatorControls = "navigator-controls";
             public const string OrderDetailsLayout = "order-details-layout";
             public const string OrderItemsSubheader = "order-items-subheader";
@@ -83,17 +75,14 @@ namespace Assets.Constants
             public const string ProductGallery = "product-gallery";
             public const string ProfileContainer = "profile-container";
             public const string PromoInputGroup = "promo-input-group";
-            public const string QrCaption = "qr-caption";
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgCustomizerContent = "qrg-customizer-content";
             public const string QrgGroup = "qrg-group";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
-            public const string QrgSliderHeader = "qrg-slider-header";
             public const string RouteActions = "route-actions";
             public const string RouteStat = "route-stat";
-            public const string SellerAddress = "seller-address";
             public const string SellerHeader = "seller-header";
             public const string ShowcaseBrand = "showcase-brand";
             public const string ShowcaseDemoRow = "showcase-demo-row";
@@ -102,19 +91,13 @@ namespace Assets.Constants
             public const string ShowcaseTopbarActions = "showcase-topbar-actions";
             public const string SidebarNav = "sidebar-nav";
             public const string SigninHeader = "signin-header";
-            public const string SpatialMetaNote = "spatial-meta-note";
-            public const string SpatialWingHeader = "spatial-wing-header";
-            public const string SpecLabel = "spec-label";
             public const string SpecValueBox = "spec-value-box";
-            public const string SpecValueText = "spec-value-text";
             public const string StyleSelectsGrid = "style-selects-grid";
             public const string SummaryRow = "summary-row";
             public const string SummaryRows = "summary-rows";
             public const string TierHeader = "tier-header";
             public const string ToastTriggersRow = "toast-triggers-row";
-            public const string UxCountPill = "ux-count-pill";
             public const string UxSpotlightHeader = "ux-spotlight-header";
-            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Avatar
@@ -138,14 +121,27 @@ namespace Assets.Constants
         public static class Background
         {
             public const string ArchiveType = "archive-type";
+            public const string AttractLoopBackground = "attract-loop-background";
+            public const string AttractLoopOverlay = "attract-loop-overlay";
             public const string AudioType = "audio-type";
+            public const string BgBaseGradient = "bg-base-gradient";
+            public const string BgGridMesh = "bg-grid-mesh";
+            public const string BgRadialVignette = "bg-radial-vignette";
             public const string Blocked = "blocked";
+            public const string BrandTitle = "brand-title";
             public const string Completed = "completed";
             public const string DocType = "doc-type";
             public const string DotCyan = "dot-cyan";
             public const string DotEmerald = "dot-emerald";
+            public const string FooterLogo = "footer-logo";
             public const string GenericType = "generic-type";
+            public const string GlowCyanPurple = "glow-cyan-purple";
+            public const string GlowPurpleIndigo = "glow-purple-indigo";
+            public const string GlowTealCyan = "glow-teal-cyan";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string Making = "making";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
@@ -153,12 +149,15 @@ namespace Assets.Constants
             public const string Paused = "paused";
             public const string PdfType = "pdf-type";
             public const string SheetType = "sheet-type";
+            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
             public const string StatusBusy = "status-busy";
             public const string StatusFree = "status-free";
             public const string StatusReserved = "status-reserved";
+            public const string TextGradient = "m3-text-gradient";
             public const string TitleGradient = "title-gradient";
             public const string UxWidgetAuction = "ux-widget-auction";
             public const string UxWidgetGroup = "ux-widget-group";
+            public const string UxWidgetQuote = "ux-widget-quote";
             public const string ValueCyan = "value-cyan";
             public const string ValueEmerald = "value-emerald";
             public const string ValuePurple = "value-purple";
@@ -284,7 +283,6 @@ namespace Assets.Constants
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
             public const string AuthErrorBanner = "auth-error-banner";
-            public const string B2bCtaGroup = "b2b-cta-group";
             public const string B2bLeadSection = "b2b-lead-section";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BarTrack = "bar-track";
@@ -297,6 +295,7 @@ namespace Assets.Constants
             public const string BrandScreensaverLogoWrapper = "brand-screensaver-logo-wrapper";
             public const string CartBar = "cart-bar";
             public const string CartItemRow = "cart-item-row";
+            public const string CartItemsContainer = "cart-items-container";
             public const string CartItemsList = "cart-items-list";
             public const string CatalogHeader = "catalog-header";
             public const string CatalogSidebar = "catalog-sidebar";
@@ -346,11 +345,12 @@ namespace Assets.Constants
             public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
+            public const string DropdownMenu = "dropdown-menu";
             public const string Elevated = "elevated";
             public const string EvoIcon = "evo-icon";
             public const string EvolutionArrow = "evolution-arrow";
             public const string EvolutionBanner = "evolution-banner";
-            public const string EvolutionGrid = "evolution-grid";
+            public const string Expanded = "expanded";
             public const string Expired = "expired";
             public const string ExplorerSection = "m3-explorer-section";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
@@ -358,7 +358,6 @@ namespace Assets.Constants
             public const string Finish = "finish";
             public const string FiscalTagItem = "fiscal-tag-item";
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string FooterColumns = "footer-columns";
             public const string FooterCustomSlot = "footer-custom-slot";
             public const string FooterLinksList = "footer-links-list";
             public const string FooterSystemStatus = "footer-system-status";
@@ -367,15 +366,11 @@ namespace Assets.Constants
             public const string HeaderBrandIconBox = "header-brand-icon-box";
             public const string HeaderBrandLink = "header-brand-link";
             public const string HeaderIconWrap = "header-icon-wrap";
-            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroCta = "hero-cta";
             public const string HeroPillLink = "hero-pill-link";
-            public const string HeroSection = "hero-section";
             public const string HeroStageImg = "hero-stage-img";
             public const string HeroStageScreen = "hero-stage-screen";
             public const string HeroStageTabs = "hero-stage-tabs";
-            public const string HeroSubtitle = "hero-subtitle";
-            public const string HeroTitle = "hero-title";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -396,21 +391,23 @@ namespace Assets.Constants
             public const string KioskTierBtn = "kiosk-tier-btn";
             public const string KioskWishIcon = "kiosk-wish-icon";
             public const string LandingAuthBtn = "landing-auth-btn";
-            public const string LandingContainer = "landing-container";
             public const string LandingFloatingAuthBtn = "landing-floating-auth-btn";
             public const string LandingFloatingControls = "landing-floating-controls";
             public const string LandingHeader = "landing-header";
             public const string LandingHeaderNav = "landing-header-nav";
             public const string LandingMobileMenuDrawer = "landing-mobile-menu-drawer";
             public const string LandingNavLink = "landing-nav-link";
-            public const string LandingPageRoot = "landing-page-root";
             public const string LegendDot = "legend-dot";
             public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
+            public const string M3xBtnPill = "m3x-btn-pill";
+            public const string M3xPill = "m3x-pill";
+            public const string M3xShapeDock = "m3x-shape-dock";
             public const string MainFooter = "main-footer";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string MapGlobalSuggestions = "map-global-suggestions";
+            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteCloseBtn = "map-route-close-btn";
             public const string MapRouteDot = "map-route-dot";
@@ -433,7 +430,9 @@ namespace Assets.Constants
             public const string NavRail = "m3-nav-rail";
             public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NotificationBanner = "notification-banner";
+            public const string OptionsContainer = "options-container";
             public const string OrdersErrorBanner = "orders-error-banner";
+            public const string OrderSummaryList = "order-summary-list";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsRoutePanel = "organizations-route-panel";
             public const string OrgShowcaseSection = "org-showcase-section";
@@ -464,6 +463,7 @@ namespace Assets.Constants
             public const string ProductMainImageWrap = "product-main-image-wrap";
             public const string ProductPreviewPill = "product-preview-pill";
             public const string ProductSpecsGrid = "product-specs-grid";
+            public const string ProductThumbnails = "product-thumbnails";
             public const string ProTag = "pro-tag";
             public const string ProTier = "pro-tier";
             public const string PulseIndicator = "pulse-indicator";
@@ -498,6 +498,7 @@ namespace Assets.Constants
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SelectInput = "select-input";
             public const string SelectionPanel = "m3-selection-panel";
+            public const string SelectOptions = "select-options";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string SessionItem = "session-item";
@@ -524,7 +525,6 @@ namespace Assets.Constants
             public const string SpecsBar = "specs-bar";
             public const string SpecStatusDot = "spec-status-dot";
             public const string SpotlightDot = "spotlight-dot";
-            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightIconBox = "spotlight-icon-box";
             public const string SpotlightLaunchBtn = "spotlight-launch-btn";
             public const string SpotlightPill = "spotlight-pill";
@@ -540,10 +540,8 @@ namespace Assets.Constants
             public const string Trial = "trial";
             public const string UnifiedKioskFilterBar = "unified-kiosk-filter-bar";
             public const string UserMessage = "user-message";
-            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
-            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxTabBtn = "ux-tab-btn";
             public const string UxWidget = "ux-widget";
             public const string UxWidgetHotel = "ux-widget-hotel";
@@ -607,6 +605,7 @@ namespace Assets.Constants
             public const string BottomRow = "card-bottom-row";
             public const string Card = "m3-card";
             public const string Collecting = "card-collecting";
+            public const string CommerceCard = "commerce-card";
             public const string Completed = "card-completed";
             public const string ContactCard = "contact-card";
             public const string Created = "card-created";
@@ -657,6 +656,11 @@ namespace Assets.Constants
             public const string KdsCardsContainer = "kds-cards-container";
             public const string KdsCardTop = "kds-card-top";
             public const string M3xCard = "m3x-card";
+            public const string M3xCardAsymmetric1 = "m3x-card-asymmetric-1";
+            public const string M3xCardAsymmetric2 = "m3x-card-asymmetric-2";
+            public const string M3xCardElevated = "m3x-card-elevated";
+            public const string M3xCardInteractive = "m3x-card-interactive";
+            public const string M3xCardTonal = "m3x-card-tonal";
             public const string Macos = "card-macos";
             public const string Making = "card-making";
             public const string MapPlaceDetailsCard = "map-place-details-card";
@@ -745,6 +749,11 @@ namespace Assets.Constants
             public const string StatusChip = "card-status-chip";
             public const string StoreSellerCard = "store-seller-card";
             public const string SubcardHeader = "subcard-header";
+            public const string SubgridCard = "subgrid-card";
+            public const string SubgridCardActions = "subgrid-card-actions";
+            public const string SubgridCardBody = "subgrid-card-body";
+            public const string SubgridCardMedia = "subgrid-card-media";
+            public const string SubgridCardTitle = "subgrid-card-title";
             public const string Subtitle = "m3-card-subtitle";
             public const string Subtitle_2 = "card-subtitle";
             public const string SummaryActions = "m3-summary-actions";
@@ -822,22 +831,134 @@ namespace Assets.Constants
 
         public static class Color
         {
+            public const string ActiveOrdersLabel = "active-orders-label";
+            public const string AdDisclaimer = "ad-disclaimer";
+            public const string AdNetworkPartner = "ad-network-partner";
+            public const string AdOrgContext = "ad-org-context";
+            public const string AdUpgradeLink = "ad-upgrade-link";
+            public const string BentoContent = "bento-content";
+            public const string CartCount = "cart-count";
+            public const string CartTotal = "cart-total";
+            public const string ClickPopupAddress = "click-popup-address";
+            public const string ClickPopupCoords = "click-popup-coords";
+            public const string ColumnIcon = "column-icon";
+            public const string ControlLabel = "control-label";
+            public const string CrumbCurrent = "crumb-current";
             public const string CrumbSep = "crumb-sep";
             public const string DetDangerBtn = "det-danger-btn";
+            public const string DetLabel = "det-label";
+            public const string DetPlaceholderIcon = "det-placeholder-icon";
+            public const string DetStatLabel = "det-stat-label";
+            public const string DetStatValue = "det-stat-value";
             public const string DetTertiaryBtn = "det-tertiary-btn";
+            public const string DetVoiceRoom = "det-voice-room";
+            public const string DetVoiceTitle = "det-voice-title";
             public const string DiscountRow = "discount-row";
+            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
+            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
+            public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string Eta = "eta";
+            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
+            public const string FaceidNotice = "faceid-notice";
+            public const string FaceidStatusText = "faceid-status-text";
             public const string FeatIcon = "feat-icon";
             public const string FeatureIcon = "feature-icon";
+            public const string FooterBrand = "footer-brand";
+            public const string FooterBrandTitle = "footer-brand-title";
+            public const string FooterCopyright = "footer-copyright";
+            public const string FullscreenLoading = "fullscreen-loading";
+            public const string HeaderIcon = "header-icon";
+            public const string HeaderRocketIcon = "header-rocket-icon";
+            public const string HeroSubtitle = "hero-subtitle";
+            public const string HeroTitle = "hero-title";
+            public const string Hex = "color-hex";
             public const string IconMaking = "icon-making";
             public const string IconReady = "icon-ready";
             public const string InStock = "in-stock";
             public const string InStockText = "in-stock-text";
+            public const string InvoiceAmount = "invoice-amount";
+            public const string ItemSupport = "item-support";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
+            public const string KdsOrderRef = "kds-order-ref";
+            public const string KdsTimeAgo = "kds-time-ago";
+            public const string KioskBrandIcon = "kiosk-brand-icon";
+            public const string KioskCategoryLabel = "kiosk-category-label";
+            public const string KioskProductTitleLink = "kiosk-product-title-link";
+            public const string LabelSm = "m3-label-sm";
+            public const string LegendItem = "legend-item";
+            public const string M3xFluidHeadline = "m3x-fluid-headline";
+            public const string M3xFluidSubhead = "m3x-fluid-subhead";
+            public const string ManeuverIcon = "maneuver-icon";
+            public const string ManeuverText = "maneuver-text";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
+            public const string MetaHighlight = "meta-highlight";
+            public const string MetricDesc = "metric-desc";
             public const string Ok = "ok";
+            public const string PageHeaderIcon = "m3-page-header-icon";
+            public const string PillsLabel = "pills-label";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
+            public const string PlanCurrency = "plan-currency";
+            public const string PlanPriceWrap = "plan-price-wrap";
+            public const string PlanTitle = "plan-title";
+            public const string PosOrdersLabel = "pos-orders-label";
+            public const string PosPriceText = "pos-price-text";
             public const string PreviewLabel = "preview-label";
+            public const string PreviewProductPrice = "preview-product-price";
+            public const string PreviewTitle = "preview-title";
+            public const string PriceRow = "price-row";
+            public const string ProductCurrency = "product-currency";
+            public const string ProductPrice = "product-price";
             public const string QrBotBtn = "qr-bot-btn";
+            public const string QrCaption = "qr-caption";
+            public const string QrgSliderHeader = "qrg-slider-header";
             public const string QrgSliderVal = "qrg-slider-val";
+            public const string QrStatusText = "qr-status-text";
+            public const string ResendCountdown = "resend-countdown";
+            public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeLabel = "route-alternative-label";
+            public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteLoading = "route-loading";
+            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string SellerAddress = "seller-address";
+            public const string SessionItemSubtitle = "session-item-subtitle";
+            public const string SessionItemTitle = "session-item-title";
+            public const string ShippingFee = "shipping-fee";
+            public const string ShowcaseBrandTitle = "showcase-brand-title";
+            public const string ShowcaseSectionIcon = "showcase-section-icon";
+            public const string ShowcaseStatIcon = "showcase-stat-icon";
+            public const string ShowcaseStatLbl = "showcase-stat-lbl";
+            public const string ShowcaseStatVal = "showcase-stat-val";
+            public const string SpatialMetaNote = "spatial-meta-note";
+            public const string SpatialWingHeader = "spatial-wing-header";
+            public const string SpecIcon = "spec-icon";
+            public const string SpecLabel = "spec-label";
+            public const string SpotlightSub = "spotlight-sub";
             public const string Star = "star";
+            public const string StatusText = "status-text";
+            public const string StatValue = "stat-value";
+            public const string TierPrice = "tier-price";
+            public const string TitleSub = "title-sub";
+            public const string TotalLabel = "total-label";
+            public const string TotalValue = "total-value";
+            public const string TrialDaysHighlight = "trial-days-highlight";
+            public const string TrialDaysLabel = "trial-days-label";
+            public const string Unit = "unit";
+            public const string UxCountPill = "ux-count-pill";
+        }
+
+        public static class Contain
+        {
+            public const string GpuLayer = "gpu-layer";
+            public const string HoverLift = "m3-hover-lift";
+            public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Dark
+        {
+            public const string Root = "dark";
         }
 
         public static class Dialog
@@ -848,13 +969,14 @@ namespace Assets.Constants
             public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
-            public const string Content = "m3-dialog-content";
-            public const string Content_2 = "dialog-content";
+            public const string Content = "dialog-content";
+            public const string Content_2 = "m3-dialog-content";
             public const string Description = "m3-dialog-description";
             public const string Header = "m3-dialog-header";
             public const string HeadlineWrap = "dialog-headline-wrap";
             public const string Icon = "m3-dialog-icon";
             public const string KioskDialogText = "kiosk-dialog-text";
+            public const string M3xShapeDialog = "m3x-shape-dialog";
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
@@ -888,6 +1010,8 @@ namespace Assets.Constants
         {
             public const string AnalyticsHeaderTitleGroup = "analytics-header-title-group";
             public const string AuthBtnLabel = "auth-btn-label";
+            public const string BarLabels = "bar-labels";
+            public const string CitationContent = "citation-content";
             public const string ComponentsPauseVisible = "components-pause-visible";
             public const string ComponentsReconnectFailed = "components-reconnect-failed";
             public const string ComponentsReconnectFailedVisible = "components-reconnect-failed-visible";
@@ -899,18 +1023,22 @@ namespace Assets.Constants
             public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string ComponentsResumeFailedVisible = "components-resume-failed-visible";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
-            public const string HeaderBrandText = "header-brand-text";
+            public const string Grid = "m3-grid";
             public const string HeaderBrandZone = "header-brand-zone";
             public const string HeaderContextDivider = "header-context-divider";
-            public const string ItemUnitPrice = "item-unit-price";
             public const string KioskHeaderActions = "kiosk-header-actions";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
-            public const string MetaDot = "meta-dot";
             public const string NoHeader = "no-header";
             public const string NoNav = "no-nav";
             public const string PillText = "pill-text";
+            public const string PosHeaderLink = "pos-header-link";
+            public const string SubgridDeck = "subgrid-deck";
+            public const string SupportActionGrid = "support-action-grid";
+            public const string SupportGrid = "support-grid";
+            public const string TabArrow = "tab-arrow";
+            public const string ValuesGrid = "values-grid";
         }
 
         public static class EmptyState
@@ -960,116 +1088,33 @@ namespace Assets.Constants
 
         public static class Font
         {
-            public const string ActiveOrdersLabel = "active-orders-label";
-            public const string AdDisclaimer = "ad-disclaimer";
-            public const string AdNetworkPartner = "ad-network-partner";
-            public const string AdOrgContext = "ad-org-context";
             public const string AdTouchIcon = "ad-touch-icon";
-            public const string AdUpgradeLink = "ad-upgrade-link";
-            public const string AdvanceIcon = "advance-icon";
             public const string AmountValue = "amount-value";
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string BackIcon = "back-icon";
-            public const string BodyLarge = "m3-body-large";
-            public const string BodyMedium = "m3-body-medium";
-            public const string BrandTitle = "brand-title";
             public const string BrandTouchIcon = "brand-touch-icon";
-            public const string CartCount = "cart-count";
-            public const string CartTotal = "cart-total";
-            public const string ChevronIcon = "chevron-icon";
             public const string CitationFile = "citation-file";
-            public const string ClickPopupAddress = "click-popup-address";
-            public const string ClickPopupCoords = "click-popup-coords";
-            public const string ColorHex = "color-hex";
-            public const string ColumnIcon = "column-icon";
-            public const string ControlLabel = "control-label";
-            public const string CrumbCurrent = "crumb-current";
             public const string CrumbIcon = "crumb-icon";
-            public const string CtaArrow = "cta-arrow";
             public const string DetailIcon = "detail-icon";
-            public const string DetLabel = "det-label";
-            public const string DetPlaceholderIcon = "det-placeholder-icon";
-            public const string DetStatLabel = "det-stat-label";
-            public const string DetStatValue = "det-stat-value";
-            public const string DetVoiceRoom = "det-voice-room";
-            public const string DetVoiceTitle = "det-voice-title";
             public const string DisplayLarge = "m3-display-large";
-            public const string DocsSidebarTitle = "docs-sidebar-title";
-            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
-            public const string FaceidNotice = "faceid-notice";
-            public const string FaceidStatusText = "faceid-status-text";
-            public const string FooterBrandTitle = "footer-brand-title";
-            public const string FooterLogo = "footer-logo";
-            public const string HeaderIcon = "header-icon";
-            public const string HeaderRocketIcon = "header-rocket-icon";
             public const string HeadlineLarge = "m3-headline-large";
             public const string HeadlineMedium = "m3-headline-medium";
-            public const string InvoiceAmount = "invoice-amount";
             public const string ItemIcon = "item-icon";
-            public const string ItemSupport = "item-support";
-            public const string KdsOrderRef = "kds-order-ref";
-            public const string KioskBrandIcon = "kiosk-brand-icon";
             public const string KpiNumber = "kpi-number";
-            public const string LabelSm = "m3-label-sm";
             public const string LabelSmall = "m3-label-small";
             public const string LoadingLabel = "loading-label";
             public const string ManeuverDistance = "maneuver-distance";
-            public const string ManeuverIcon = "maneuver-icon";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
-            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
-            public const string MetaHighlight = "meta-highlight";
-            public const string MetricDesc = "metric-desc";
             public const string MetricNum = "metric-num";
             public const string Monospace = "monospace";
             public const string NavIcon = "nav-icon";
             public const string OrderNumber = "order-number";
-            public const string PageHeaderIcon = "m3-page-header-icon";
-            public const string PillsLabel = "pills-label";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
-            public const string PlanCurrency = "plan-currency";
-            public const string PlanPriceWrap = "plan-price-wrap";
-            public const string PlanTitle = "plan-title";
-            public const string PosOrdersLabel = "pos-orders-label";
-            public const string PosPriceText = "pos-price-text";
-            public const string PreviewProductPrice = "preview-product-price";
-            public const string PreviewTitle = "preview-title";
-            public const string ProductCurrency = "product-currency";
-            public const string ProductPlaceholderIcon = "product-placeholder-icon";
-            public const string ProductPrice = "product-price";
-            public const string QrStatusText = "qr-status-text";
-            public const string ResendCountdown = "resend-countdown";
-            public const string RouteAlternativeArrival = "route-alternative-arrival";
-            public const string RouteAlternativeDistance = "route-alternative-distance";
-            public const string RouteAlternativeLabel = "route-alternative-label";
-            public const string RouteAlternativeTime = "route-alternative-time";
-            public const string RouteLoading = "route-loading";
-            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
-            public const string RouteStepMeta = "route-step-meta";
             public const string RouteStepText = "route-step-text";
             public const string RouteValue = "route-value";
             public const string SellerIcon = "seller-icon";
-            public const string SessionItemSubtitle = "session-item-subtitle";
-            public const string SessionItemTitle = "session-item-title";
-            public const string ShippingFee = "shipping-fee";
-            public const string ShowcaseBrandTitle = "showcase-brand-title";
-            public const string ShowcaseSectionIcon = "showcase-section-icon";
-            public const string ShowcaseStatIcon = "showcase-stat-icon";
-            public const string ShowcaseStatLbl = "showcase-stat-lbl";
-            public const string ShowcaseStatVal = "showcase-stat-val";
-            public const string SpecIcon = "spec-icon";
-            public const string SpotlightSub = "spotlight-sub";
-            public const string StatusText = "status-text";
-            public const string StatValue = "stat-value";
-            public const string TierPrice = "tier-price";
+            public const string SpecValueText = "spec-value-text";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
-            public const string TitleSub = "title-sub";
-            public const string TotalLabel = "total-label";
-            public const string TotalValue = "total-value";
-            public const string TrialDaysHighlight = "trial-days-highlight";
-            public const string TrialDaysLabel = "trial-days-label";
-            public const string Unit = "unit";
         }
 
         public static class Form
@@ -1126,16 +1171,7 @@ namespace Assets.Constants
 
         public static class Grid
         {
-            public const string BarLabels = "bar-labels";
-            public const string CitationContent = "citation-content";
             public const string ColSpanFull = "m3-col-span-full";
-            public const string FooterCopyright = "footer-copyright";
-            public const string PosHeaderLink = "pos-header-link";
-            public const string PriceRow = "price-row";
-            public const string Root = "m3-grid";
-            public const string SupportActionGrid = "support-action-grid";
-            public const string SupportGrid = "support-grid";
-            public const string ValuesGrid = "values-grid";
         }
 
         public static class InfoGrid
@@ -1165,6 +1201,11 @@ namespace Assets.Constants
             public const string SpotlightInfo = "spotlight-info";
         }
 
+        public static class Light
+        {
+            public const string Root = "light";
+        }
+
         public static class Margin
         {
             public const string AboutContainer = "about-container";
@@ -1176,6 +1217,7 @@ namespace Assets.Constants
             public const string AuthDivider = "auth-divider";
             public const string AuthSubtitle = "auth-subtitle";
             public const string AuthTitle = "auth-title";
+            public const string B2bCtaGroup = "b2b-cta-group";
             public const string BrandScreensaverTagline = "brand-screensaver-tagline";
             public const string BrandScreensaverTitle = "brand-screensaver-title";
             public const string Breadcrumbs = "m3-breadcrumbs";
@@ -1224,6 +1266,7 @@ namespace Assets.Constants
             public const string KioskBrandName = "kiosk-brand-name";
             public const string KioskHeroContent = "kiosk-hero-content";
             public const string KpiTitle = "kpi-title";
+            public const string LandingContainer = "landing-container";
             public const string LandingSubpageContainer = "landing-subpage-container";
             public const string LandingSubpageSubtitle = "landing-subpage-subtitle";
             public const string LandingSubpageTitle = "landing-subpage-title";
@@ -1319,11 +1362,7 @@ namespace Assets.Constants
             public const string HasError = "has-error";
             public const string IsInvalid = "is-invalid";
             public const string None = "m3-outline-none";
-        }
-
-        public static class Overflow
-        {
-            public const string ManeuverText = "maneuver-text";
+            public const string Outlined = "outlined";
         }
 
         public static class Padding
@@ -1336,7 +1375,6 @@ namespace Assets.Constants
             public const string BottomNavItem = "m3-bottom-nav-item";
             public const string ChatHeaderContainer = "chat-header-container";
             public const string DesignerPageRoot = "designer-page-root";
-            public const string DetailsMode = "details-mode";
             public const string DetMain = "det-main";
             public const string DetPlaceholder = "det-placeholder";
             public const string DetPlaceholderPadded = "det-placeholder-padded";
@@ -1348,21 +1386,21 @@ namespace Assets.Constants
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DrawerBody = "drawer-body";
             public const string ExampleCategories = "example-categories";
-            public const string Expanded = "expanded";
             public const string FilterToolbar = "m3-filter-toolbar";
+            public const string FooterColumns = "footer-columns";
             public const string GridCenterCanvas = "m3-grid-center-canvas";
             public const string HeaderEndZone = "header-end-zone";
             public const string HelpCategories = "help-categories";
+            public const string HeroSection = "hero-section";
             public const string KioskFilterRow = "kiosk-filter-row";
             public const string KioskHeaderContent = "kiosk-header-content";
             public const string LandingGrid = "landing-grid";
             public const string LandingTopBarWrapper = "landing-top-bar-wrapper";
+            public const string M3xSection = "m3x-section";
             public const string MapClickPopup = "map-click-popup";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MessageListContainer = "message-list-container";
             public const string MobileNavFooter = "mobile-nav-footer";
             public const string NavbarBrand = "navbar-brand";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavOnly = "nav-only";
             public const string NoFooter = "no-footer";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -1370,14 +1408,12 @@ namespace Assets.Constants
             public const string PaymentRefreshBtn = "payment-refresh-btn";
             public const string PillsRow = "pills-row";
             public const string PlaceDetailsBody = "place-details-body";
-            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHero = "place-details-hero";
             public const string PosFilters = "pos-filters";
             public const string PosGrid = "pos-grid";
             public const string PosMain = "pos-main";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string ProductDetails = "product-details";
-            public const string ProductThumbnails = "product-thumbnails";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
             public const string QrgLists = "qrg-lists";
             public const string QrgMain = "qrg-main";
@@ -1398,13 +1434,10 @@ namespace Assets.Constants
             public const string SidebarBrand = "sidebar-brand";
             public const string SidebarNavCategory = "sidebar-nav-category";
             public const string SigninContainer = "signin-container";
-            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string StoreProductPage = "store-product-page";
             public const string Suggestions = "suggestions";
-            public const string TabArrow = "tab-arrow";
-            public const string TabHamburger = "tab-hamburger";
+            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxFilterMeta = "ux-filter-meta";
-            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Picker
@@ -1541,39 +1574,30 @@ namespace Assets.Constants
 
         public static class Pointer
         {
+            public const string Dismiss = "dismiss";
             public const string DragHandle = "drag-handle";
             public const string Interactive = "interactive";
             public const string InteractiveAction = "interactive-action";
+            public const string LandingBgCanvas = "landing-bg-canvas";
+            public const string M3xPressScale = "m3x-press-scale";
+            public const string MapFloatingActions = "map-floating-actions";
             public const string SwipeContainerX = "swipe-container-x";
             public const string SwipeContainerY = "swipe-container-y";
             public const string TouchManipulation = "touch-manipulation";
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Position
         {
-            public const string AttractLoopBackground = "attract-loop-background";
-            public const string AttractLoopOverlay = "attract-loop-overlay";
-            public const string BgBaseGradient = "bg-base-gradient";
-            public const string BgGridMesh = "bg-grid-mesh";
-            public const string BgRadialVignette = "bg-radial-vignette";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
-            public const string Dismiss = "dismiss";
-            public const string GlowCyanPurple = "glow-cyan-purple";
-            public const string GlowPurpleIndigo = "glow-purple-indigo";
-            public const string GlowTealCyan = "glow-teal-cyan";
             public const string HeaderSticky = "header-sticky";
             public const string KioskWishBtnWrapper = "kiosk-wish-btn-wrapper";
-            public const string LandingBgCanvas = "landing-bg-canvas";
-            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MapCanvas = "map-canvas";
-            public const string MapFloatingActions = "map-floating-actions";
-            public const string NavFab = "m3-nav-fab";
             public const string OrderSummarySection = "order-summary-section";
-            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
 
         public static class Progress
@@ -1615,15 +1639,6 @@ namespace Assets.Constants
             public const string Thin = "scrollbar-thin";
             public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
-        }
-
-        public static class Scrollbars
-        {
-            public const string CartItemsContainer = "cart-items-container";
-            public const string DropdownMenu = "dropdown-menu";
-            public const string OptionsContainer = "options-container";
-            public const string OrderSummaryList = "order-summary-list";
-            public const string SelectOptions = "select-options";
         }
 
         public static class Search
@@ -1672,13 +1687,28 @@ namespace Assets.Constants
             public const string SegmentedPillGroup = "m3-segmented-pill-group";
         }
 
+        public static class Selection
+        {
+            public const string BodyLarge = "m3-body-large";
+            public const string BodyMedium = "m3-body-medium";
+        }
+
         public static class Shadow
         {
-            public const string HoverLift = "m3-hover-lift";
+            public const string M3xGlowError = "m3x-glow-error";
+            public const string M3xGlowPrimary = "m3x-glow-primary";
+            public const string M3xGlowPrimaryStrong = "m3x-glow-primary-strong";
+            public const string M3xGlowTertiary = "m3x-glow-tertiary";
+            public const string M3xHoverLift = "m3x-hover-lift";
+            public const string MetaDot = "meta-dot";
+            public const string NavFab = "m3-nav-fab";
             public const string Open = "open";
             public const string PosCompleteBtn = "pos-complete-btn";
+            public const string ProductPlaceholderIcon = "product-placeholder-icon";
             public const string RouteLabel = "route-label";
+            public const string RouteStepMeta = "route-step-meta";
             public const string Show = "show";
+            public const string WaypointMarker = "waypoint-marker";
         }
 
         public static class Sizing
@@ -1717,6 +1747,7 @@ namespace Assets.Constants
             public const string CtaActions = "cta-actions";
             public const string CtaLink = "cta-link";
             public const string DesignerCanvasArea = "designer-canvas-area";
+            public const string DetailsMode = "details-mode";
             public const string DetBtnRow2col = "det-btn-row-2col";
             public const string DetCameraWrapper = "det-camera-wrapper";
             public const string DetFrameVideo = "det-frame-video";
@@ -1728,6 +1759,7 @@ namespace Assets.Constants
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DownloadSection = "download-section";
             public const string EcoBtn = "eco-btn";
+            public const string EvolutionGrid = "evolution-grid";
             public const string EvolutionHeader = "evolution-header";
             public const string ExampleGrid = "example-grid";
             public const string ExampleHero = "example-hero";
@@ -1770,6 +1802,7 @@ namespace Assets.Constants
             public const string HeaderText = "header-text";
             public const string HeaderTitleGroup = "header-title-group";
             public const string HelpHero = "help-hero";
+            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroContentWrapper = "hero-content-wrapper";
             public const string HeroModulePills = "hero-module-pills";
             public const string ItemHeadline = "item-headline";
@@ -1785,11 +1818,14 @@ namespace Assets.Constants
             public const string KioskResetBtn = "kiosk-reset-btn";
             public const string Label = "m3-label";
             public const string LandingMain = "landing-main";
+            public const string LandingPageRoot = "landing-page-root";
             public const string LandingSubpageHero = "landing-subpage-hero";
+            public const string M3xGridCompact = "m3x-grid-compact";
+            public const string M3xGridDeck = "m3x-grid-deck";
             public const string ManeuverDetails = "maneuver-details";
-            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MessageList = "message-list";
+            public const string NavigatorPanel = "navigator-panel";
             public const string OptionItem = "option-item";
             public const string OrderItemsContainer = "order-items-container";
             public const string OrdersKanbanBoard = "orders-kanban-board";
@@ -1802,6 +1838,7 @@ namespace Assets.Constants
             public const string PageHeaderText = "m3-page-header-text";
             public const string PaymentSupport = "payment-support";
             public const string PillarsGrid = "pillars-grid";
+            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsPanel = "place-details-panel";
             public const string PlansGrid = "plans-grid";
             public const string PosCatalog = "pos-catalog";
@@ -1840,10 +1877,13 @@ namespace Assets.Constants
             public const string SpecDivider = "spec-divider";
             public const string SpecItem = "spec-item";
             public const string SpecValue = "spec-value";
+            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightMain = "spotlight-main";
             public const string Stack = "m3-stack";
+            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
+            public const string TabHamburger = "tab-hamburger";
             public const string TechGrid = "tech-grid";
             public const string ThumbImg = "thumb-img";
             public const string TiersGrid = "tiers-grid";
@@ -1857,12 +1897,14 @@ namespace Assets.Constants
             public const string UxModesGrid = "ux-modes-grid";
             public const string UxModesSection = "ux-modes-section";
             public const string UxSpotlightContainer = "ux-spotlight-container";
+            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxWidgetRow = "ux-widget-row";
             public const string UxWidgetSubrow = "ux-widget-subrow";
             public const string VenueStatusLegend = "venue-status-legend";
             public const string ViewSwitcher = "view-switcher";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
             public const string YandexCtrlIcon = "yandex-ctrl-icon";
+            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Skeleton
@@ -1876,7 +1918,6 @@ namespace Assets.Constants
 
         public static class Stacking
         {
-            public const string WaypointMarker = "waypoint-marker";
             public const string ZToast = "m3-z-toast";
         }
 
@@ -1939,15 +1980,7 @@ namespace Assets.Constants
 
         public static class TextDecoration
         {
-            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
-            public const string KioskProductTitleLink = "kiosk-product-title-link";
             public const string SellerNameLink = "seller-name-link";
-        }
-
-        public static class TextLayout
-        {
-            public const string TextGradient = "m3-text-gradient";
-            public const string UxWidgetQuote = "ux-widget-quote";
         }
 
         public static class TextWrapping
@@ -1984,10 +2017,12 @@ namespace Assets.Constants
             public const string UxModeTitleBox = "ux-mode-title-box";
         }
 
-        public static class Transform
+        public static class Transitions
         {
-            public const string GpuLayer = "gpu-layer";
-            public const string PressScale = "m3-press-scale";
+            public const string AdvanceIcon = "advance-icon";
+            public const string ChevronIcon = "chevron-icon";
+            public const string CtaArrow = "cta-arrow";
+            public const string M3xSpring = "m3x-spring";
         }
 
         public static class Typography
@@ -2018,7 +2053,6 @@ namespace Styles
         {
             public const string AssistantMessage = "assistant-message";
             public const string AuthHeader = "auth-header";
-            public const string BentoContent = "bento-content";
             public const string BrandScreensaverBody = "brand-screensaver-body";
             public const string BreakdownBarItem = "breakdown-bar-item";
             public const string BreakdownBarsStack = "breakdown-bars-stack";
@@ -2037,12 +2071,9 @@ namespace Styles
             public const string DocsGroupItems = "docs-group-items";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
-            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string ExplorerHeader = "explorer-header";
-            public const string FooterBrand = "footer-brand";
             public const string FooterLangContainer = "footer-lang-container";
             public const string FooterNavCol = "footer-nav-col";
-            public const string FullscreenLoading = "fullscreen-loading";
             public const string Gap0 = "m3-gap-0";
             public const string Gap1 = "m3-gap-1";
             public const string Gap2 = "m3-gap-2";
@@ -2062,14 +2093,10 @@ namespace Styles
             public const string ItemNameRow = "item-name-row";
             public const string ItemPricingRow = "item-pricing-row";
             public const string ItemsListSection = "items-list-section";
-            public const string ItemTotalPrice = "item-total-price";
-            public const string KdsTimeAgo = "kds-time-ago";
-            public const string KioskCategoryLabel = "kiosk-category-label";
             public const string KpiHeader = "kpi-header";
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string LandingHeaderActions = "landing-header-actions";
-            public const string LegendItem = "legend-item";
             public const string NavigatorControls = "navigator-controls";
             public const string OrderDetailsLayout = "order-details-layout";
             public const string OrderItemsSubheader = "order-items-subheader";
@@ -2083,17 +2110,14 @@ namespace Styles
             public const string ProductGallery = "product-gallery";
             public const string ProfileContainer = "profile-container";
             public const string PromoInputGroup = "promo-input-group";
-            public const string QrCaption = "qr-caption";
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgCustomizerContent = "qrg-customizer-content";
             public const string QrgGroup = "qrg-group";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
-            public const string QrgSliderHeader = "qrg-slider-header";
             public const string RouteActions = "route-actions";
             public const string RouteStat = "route-stat";
-            public const string SellerAddress = "seller-address";
             public const string SellerHeader = "seller-header";
             public const string ShowcaseBrand = "showcase-brand";
             public const string ShowcaseDemoRow = "showcase-demo-row";
@@ -2102,19 +2126,13 @@ namespace Styles
             public const string ShowcaseTopbarActions = "showcase-topbar-actions";
             public const string SidebarNav = "sidebar-nav";
             public const string SigninHeader = "signin-header";
-            public const string SpatialMetaNote = "spatial-meta-note";
-            public const string SpatialWingHeader = "spatial-wing-header";
-            public const string SpecLabel = "spec-label";
             public const string SpecValueBox = "spec-value-box";
-            public const string SpecValueText = "spec-value-text";
             public const string StyleSelectsGrid = "style-selects-grid";
             public const string SummaryRow = "summary-row";
             public const string SummaryRows = "summary-rows";
             public const string TierHeader = "tier-header";
             public const string ToastTriggersRow = "toast-triggers-row";
-            public const string UxCountPill = "ux-count-pill";
             public const string UxSpotlightHeader = "ux-spotlight-header";
-            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Avatar
@@ -2138,14 +2156,27 @@ namespace Styles
         public static class Background
         {
             public const string ArchiveType = "archive-type";
+            public const string AttractLoopBackground = "attract-loop-background";
+            public const string AttractLoopOverlay = "attract-loop-overlay";
             public const string AudioType = "audio-type";
+            public const string BgBaseGradient = "bg-base-gradient";
+            public const string BgGridMesh = "bg-grid-mesh";
+            public const string BgRadialVignette = "bg-radial-vignette";
             public const string Blocked = "blocked";
+            public const string BrandTitle = "brand-title";
             public const string Completed = "completed";
             public const string DocType = "doc-type";
             public const string DotCyan = "dot-cyan";
             public const string DotEmerald = "dot-emerald";
+            public const string FooterLogo = "footer-logo";
             public const string GenericType = "generic-type";
+            public const string GlowCyanPurple = "glow-cyan-purple";
+            public const string GlowPurpleIndigo = "glow-purple-indigo";
+            public const string GlowTealCyan = "glow-teal-cyan";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string Making = "making";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
@@ -2153,12 +2184,15 @@ namespace Styles
             public const string Paused = "paused";
             public const string PdfType = "pdf-type";
             public const string SheetType = "sheet-type";
+            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
             public const string StatusBusy = "status-busy";
             public const string StatusFree = "status-free";
             public const string StatusReserved = "status-reserved";
+            public const string TextGradient = "m3-text-gradient";
             public const string TitleGradient = "title-gradient";
             public const string UxWidgetAuction = "ux-widget-auction";
             public const string UxWidgetGroup = "ux-widget-group";
+            public const string UxWidgetQuote = "ux-widget-quote";
             public const string ValueCyan = "value-cyan";
             public const string ValueEmerald = "value-emerald";
             public const string ValuePurple = "value-purple";
@@ -2284,7 +2318,6 @@ namespace Styles
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
             public const string AuthErrorBanner = "auth-error-banner";
-            public const string B2bCtaGroup = "b2b-cta-group";
             public const string B2bLeadSection = "b2b-lead-section";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BarTrack = "bar-track";
@@ -2297,6 +2330,7 @@ namespace Styles
             public const string BrandScreensaverLogoWrapper = "brand-screensaver-logo-wrapper";
             public const string CartBar = "cart-bar";
             public const string CartItemRow = "cart-item-row";
+            public const string CartItemsContainer = "cart-items-container";
             public const string CartItemsList = "cart-items-list";
             public const string CatalogHeader = "catalog-header";
             public const string CatalogSidebar = "catalog-sidebar";
@@ -2346,11 +2380,12 @@ namespace Styles
             public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
+            public const string DropdownMenu = "dropdown-menu";
             public const string Elevated = "elevated";
             public const string EvoIcon = "evo-icon";
             public const string EvolutionArrow = "evolution-arrow";
             public const string EvolutionBanner = "evolution-banner";
-            public const string EvolutionGrid = "evolution-grid";
+            public const string Expanded = "expanded";
             public const string Expired = "expired";
             public const string ExplorerSection = "m3-explorer-section";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
@@ -2358,7 +2393,6 @@ namespace Styles
             public const string Finish = "finish";
             public const string FiscalTagItem = "fiscal-tag-item";
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string FooterColumns = "footer-columns";
             public const string FooterCustomSlot = "footer-custom-slot";
             public const string FooterLinksList = "footer-links-list";
             public const string FooterSystemStatus = "footer-system-status";
@@ -2367,15 +2401,11 @@ namespace Styles
             public const string HeaderBrandIconBox = "header-brand-icon-box";
             public const string HeaderBrandLink = "header-brand-link";
             public const string HeaderIconWrap = "header-icon-wrap";
-            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroCta = "hero-cta";
             public const string HeroPillLink = "hero-pill-link";
-            public const string HeroSection = "hero-section";
             public const string HeroStageImg = "hero-stage-img";
             public const string HeroStageScreen = "hero-stage-screen";
             public const string HeroStageTabs = "hero-stage-tabs";
-            public const string HeroSubtitle = "hero-subtitle";
-            public const string HeroTitle = "hero-title";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -2396,21 +2426,23 @@ namespace Styles
             public const string KioskTierBtn = "kiosk-tier-btn";
             public const string KioskWishIcon = "kiosk-wish-icon";
             public const string LandingAuthBtn = "landing-auth-btn";
-            public const string LandingContainer = "landing-container";
             public const string LandingFloatingAuthBtn = "landing-floating-auth-btn";
             public const string LandingFloatingControls = "landing-floating-controls";
             public const string LandingHeader = "landing-header";
             public const string LandingHeaderNav = "landing-header-nav";
             public const string LandingMobileMenuDrawer = "landing-mobile-menu-drawer";
             public const string LandingNavLink = "landing-nav-link";
-            public const string LandingPageRoot = "landing-page-root";
             public const string LegendDot = "legend-dot";
             public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
+            public const string M3xBtnPill = "m3x-btn-pill";
+            public const string M3xPill = "m3x-pill";
+            public const string M3xShapeDock = "m3x-shape-dock";
             public const string MainFooter = "main-footer";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string MapGlobalSuggestions = "map-global-suggestions";
+            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteCloseBtn = "map-route-close-btn";
             public const string MapRouteDot = "map-route-dot";
@@ -2433,7 +2465,9 @@ namespace Styles
             public const string NavRail = "m3-nav-rail";
             public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NotificationBanner = "notification-banner";
+            public const string OptionsContainer = "options-container";
             public const string OrdersErrorBanner = "orders-error-banner";
+            public const string OrderSummaryList = "order-summary-list";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsRoutePanel = "organizations-route-panel";
             public const string OrgShowcaseSection = "org-showcase-section";
@@ -2464,6 +2498,7 @@ namespace Styles
             public const string ProductMainImageWrap = "product-main-image-wrap";
             public const string ProductPreviewPill = "product-preview-pill";
             public const string ProductSpecsGrid = "product-specs-grid";
+            public const string ProductThumbnails = "product-thumbnails";
             public const string ProTag = "pro-tag";
             public const string ProTier = "pro-tier";
             public const string PulseIndicator = "pulse-indicator";
@@ -2498,6 +2533,7 @@ namespace Styles
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SelectInput = "select-input";
             public const string SelectionPanel = "m3-selection-panel";
+            public const string SelectOptions = "select-options";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string SessionItem = "session-item";
@@ -2524,7 +2560,6 @@ namespace Styles
             public const string SpecsBar = "specs-bar";
             public const string SpecStatusDot = "spec-status-dot";
             public const string SpotlightDot = "spotlight-dot";
-            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightIconBox = "spotlight-icon-box";
             public const string SpotlightLaunchBtn = "spotlight-launch-btn";
             public const string SpotlightPill = "spotlight-pill";
@@ -2540,10 +2575,8 @@ namespace Styles
             public const string Trial = "trial";
             public const string UnifiedKioskFilterBar = "unified-kiosk-filter-bar";
             public const string UserMessage = "user-message";
-            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
-            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxTabBtn = "ux-tab-btn";
             public const string UxWidget = "ux-widget";
             public const string UxWidgetHotel = "ux-widget-hotel";
@@ -2607,6 +2640,7 @@ namespace Styles
             public const string BottomRow = "card-bottom-row";
             public const string Card = "m3-card";
             public const string Collecting = "card-collecting";
+            public const string CommerceCard = "commerce-card";
             public const string Completed = "card-completed";
             public const string ContactCard = "contact-card";
             public const string Created = "card-created";
@@ -2657,6 +2691,11 @@ namespace Styles
             public const string KdsCardsContainer = "kds-cards-container";
             public const string KdsCardTop = "kds-card-top";
             public const string M3xCard = "m3x-card";
+            public const string M3xCardAsymmetric1 = "m3x-card-asymmetric-1";
+            public const string M3xCardAsymmetric2 = "m3x-card-asymmetric-2";
+            public const string M3xCardElevated = "m3x-card-elevated";
+            public const string M3xCardInteractive = "m3x-card-interactive";
+            public const string M3xCardTonal = "m3x-card-tonal";
             public const string Macos = "card-macos";
             public const string Making = "card-making";
             public const string MapPlaceDetailsCard = "map-place-details-card";
@@ -2745,6 +2784,11 @@ namespace Styles
             public const string StatusChip = "card-status-chip";
             public const string StoreSellerCard = "store-seller-card";
             public const string SubcardHeader = "subcard-header";
+            public const string SubgridCard = "subgrid-card";
+            public const string SubgridCardActions = "subgrid-card-actions";
+            public const string SubgridCardBody = "subgrid-card-body";
+            public const string SubgridCardMedia = "subgrid-card-media";
+            public const string SubgridCardTitle = "subgrid-card-title";
             public const string Subtitle = "m3-card-subtitle";
             public const string Subtitle_2 = "card-subtitle";
             public const string SummaryActions = "m3-summary-actions";
@@ -2822,22 +2866,134 @@ namespace Styles
 
         public static class Color
         {
+            public const string ActiveOrdersLabel = "active-orders-label";
+            public const string AdDisclaimer = "ad-disclaimer";
+            public const string AdNetworkPartner = "ad-network-partner";
+            public const string AdOrgContext = "ad-org-context";
+            public const string AdUpgradeLink = "ad-upgrade-link";
+            public const string BentoContent = "bento-content";
+            public const string CartCount = "cart-count";
+            public const string CartTotal = "cart-total";
+            public const string ClickPopupAddress = "click-popup-address";
+            public const string ClickPopupCoords = "click-popup-coords";
+            public const string ColumnIcon = "column-icon";
+            public const string ControlLabel = "control-label";
+            public const string CrumbCurrent = "crumb-current";
             public const string CrumbSep = "crumb-sep";
             public const string DetDangerBtn = "det-danger-btn";
+            public const string DetLabel = "det-label";
+            public const string DetPlaceholderIcon = "det-placeholder-icon";
+            public const string DetStatLabel = "det-stat-label";
+            public const string DetStatValue = "det-stat-value";
             public const string DetTertiaryBtn = "det-tertiary-btn";
+            public const string DetVoiceRoom = "det-voice-room";
+            public const string DetVoiceTitle = "det-voice-title";
             public const string DiscountRow = "discount-row";
+            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
+            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
+            public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string Eta = "eta";
+            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
+            public const string FaceidNotice = "faceid-notice";
+            public const string FaceidStatusText = "faceid-status-text";
             public const string FeatIcon = "feat-icon";
             public const string FeatureIcon = "feature-icon";
+            public const string FooterBrand = "footer-brand";
+            public const string FooterBrandTitle = "footer-brand-title";
+            public const string FooterCopyright = "footer-copyright";
+            public const string FullscreenLoading = "fullscreen-loading";
+            public const string HeaderIcon = "header-icon";
+            public const string HeaderRocketIcon = "header-rocket-icon";
+            public const string HeroSubtitle = "hero-subtitle";
+            public const string HeroTitle = "hero-title";
+            public const string Hex = "color-hex";
             public const string IconMaking = "icon-making";
             public const string IconReady = "icon-ready";
             public const string InStock = "in-stock";
             public const string InStockText = "in-stock-text";
+            public const string InvoiceAmount = "invoice-amount";
+            public const string ItemSupport = "item-support";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
+            public const string KdsOrderRef = "kds-order-ref";
+            public const string KdsTimeAgo = "kds-time-ago";
+            public const string KioskBrandIcon = "kiosk-brand-icon";
+            public const string KioskCategoryLabel = "kiosk-category-label";
+            public const string KioskProductTitleLink = "kiosk-product-title-link";
+            public const string LabelSm = "m3-label-sm";
+            public const string LegendItem = "legend-item";
+            public const string M3xFluidHeadline = "m3x-fluid-headline";
+            public const string M3xFluidSubhead = "m3x-fluid-subhead";
+            public const string ManeuverIcon = "maneuver-icon";
+            public const string ManeuverText = "maneuver-text";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
+            public const string MetaHighlight = "meta-highlight";
+            public const string MetricDesc = "metric-desc";
             public const string Ok = "ok";
+            public const string PageHeaderIcon = "m3-page-header-icon";
+            public const string PillsLabel = "pills-label";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
+            public const string PlanCurrency = "plan-currency";
+            public const string PlanPriceWrap = "plan-price-wrap";
+            public const string PlanTitle = "plan-title";
+            public const string PosOrdersLabel = "pos-orders-label";
+            public const string PosPriceText = "pos-price-text";
             public const string PreviewLabel = "preview-label";
+            public const string PreviewProductPrice = "preview-product-price";
+            public const string PreviewTitle = "preview-title";
+            public const string PriceRow = "price-row";
+            public const string ProductCurrency = "product-currency";
+            public const string ProductPrice = "product-price";
             public const string QrBotBtn = "qr-bot-btn";
+            public const string QrCaption = "qr-caption";
+            public const string QrgSliderHeader = "qrg-slider-header";
             public const string QrgSliderVal = "qrg-slider-val";
+            public const string QrStatusText = "qr-status-text";
+            public const string ResendCountdown = "resend-countdown";
+            public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeLabel = "route-alternative-label";
+            public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteLoading = "route-loading";
+            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string SellerAddress = "seller-address";
+            public const string SessionItemSubtitle = "session-item-subtitle";
+            public const string SessionItemTitle = "session-item-title";
+            public const string ShippingFee = "shipping-fee";
+            public const string ShowcaseBrandTitle = "showcase-brand-title";
+            public const string ShowcaseSectionIcon = "showcase-section-icon";
+            public const string ShowcaseStatIcon = "showcase-stat-icon";
+            public const string ShowcaseStatLbl = "showcase-stat-lbl";
+            public const string ShowcaseStatVal = "showcase-stat-val";
+            public const string SpatialMetaNote = "spatial-meta-note";
+            public const string SpatialWingHeader = "spatial-wing-header";
+            public const string SpecIcon = "spec-icon";
+            public const string SpecLabel = "spec-label";
+            public const string SpotlightSub = "spotlight-sub";
             public const string Star = "star";
+            public const string StatusText = "status-text";
+            public const string StatValue = "stat-value";
+            public const string TierPrice = "tier-price";
+            public const string TitleSub = "title-sub";
+            public const string TotalLabel = "total-label";
+            public const string TotalValue = "total-value";
+            public const string TrialDaysHighlight = "trial-days-highlight";
+            public const string TrialDaysLabel = "trial-days-label";
+            public const string Unit = "unit";
+            public const string UxCountPill = "ux-count-pill";
+        }
+
+        public static class Contain
+        {
+            public const string GpuLayer = "gpu-layer";
+            public const string HoverLift = "m3-hover-lift";
+            public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Dark
+        {
+            public const string Root = "dark";
         }
 
         public static class Dialog
@@ -2848,13 +3004,14 @@ namespace Styles
             public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
-            public const string Content = "m3-dialog-content";
-            public const string Content_2 = "dialog-content";
+            public const string Content = "dialog-content";
+            public const string Content_2 = "m3-dialog-content";
             public const string Description = "m3-dialog-description";
             public const string Header = "m3-dialog-header";
             public const string HeadlineWrap = "dialog-headline-wrap";
             public const string Icon = "m3-dialog-icon";
             public const string KioskDialogText = "kiosk-dialog-text";
+            public const string M3xShapeDialog = "m3x-shape-dialog";
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
@@ -2888,6 +3045,8 @@ namespace Styles
         {
             public const string AnalyticsHeaderTitleGroup = "analytics-header-title-group";
             public const string AuthBtnLabel = "auth-btn-label";
+            public const string BarLabels = "bar-labels";
+            public const string CitationContent = "citation-content";
             public const string ComponentsPauseVisible = "components-pause-visible";
             public const string ComponentsReconnectFailed = "components-reconnect-failed";
             public const string ComponentsReconnectFailedVisible = "components-reconnect-failed-visible";
@@ -2899,18 +3058,22 @@ namespace Styles
             public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string ComponentsResumeFailedVisible = "components-resume-failed-visible";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
-            public const string HeaderBrandText = "header-brand-text";
+            public const string Grid = "m3-grid";
             public const string HeaderBrandZone = "header-brand-zone";
             public const string HeaderContextDivider = "header-context-divider";
-            public const string ItemUnitPrice = "item-unit-price";
             public const string KioskHeaderActions = "kiosk-header-actions";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
-            public const string MetaDot = "meta-dot";
             public const string NoHeader = "no-header";
             public const string NoNav = "no-nav";
             public const string PillText = "pill-text";
+            public const string PosHeaderLink = "pos-header-link";
+            public const string SubgridDeck = "subgrid-deck";
+            public const string SupportActionGrid = "support-action-grid";
+            public const string SupportGrid = "support-grid";
+            public const string TabArrow = "tab-arrow";
+            public const string ValuesGrid = "values-grid";
         }
 
         public static class EmptyState
@@ -2960,116 +3123,33 @@ namespace Styles
 
         public static class Font
         {
-            public const string ActiveOrdersLabel = "active-orders-label";
-            public const string AdDisclaimer = "ad-disclaimer";
-            public const string AdNetworkPartner = "ad-network-partner";
-            public const string AdOrgContext = "ad-org-context";
             public const string AdTouchIcon = "ad-touch-icon";
-            public const string AdUpgradeLink = "ad-upgrade-link";
-            public const string AdvanceIcon = "advance-icon";
             public const string AmountValue = "amount-value";
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string BackIcon = "back-icon";
-            public const string BodyLarge = "m3-body-large";
-            public const string BodyMedium = "m3-body-medium";
-            public const string BrandTitle = "brand-title";
             public const string BrandTouchIcon = "brand-touch-icon";
-            public const string CartCount = "cart-count";
-            public const string CartTotal = "cart-total";
-            public const string ChevronIcon = "chevron-icon";
             public const string CitationFile = "citation-file";
-            public const string ClickPopupAddress = "click-popup-address";
-            public const string ClickPopupCoords = "click-popup-coords";
-            public const string ColorHex = "color-hex";
-            public const string ColumnIcon = "column-icon";
-            public const string ControlLabel = "control-label";
-            public const string CrumbCurrent = "crumb-current";
             public const string CrumbIcon = "crumb-icon";
-            public const string CtaArrow = "cta-arrow";
             public const string DetailIcon = "detail-icon";
-            public const string DetLabel = "det-label";
-            public const string DetPlaceholderIcon = "det-placeholder-icon";
-            public const string DetStatLabel = "det-stat-label";
-            public const string DetStatValue = "det-stat-value";
-            public const string DetVoiceRoom = "det-voice-room";
-            public const string DetVoiceTitle = "det-voice-title";
             public const string DisplayLarge = "m3-display-large";
-            public const string DocsSidebarTitle = "docs-sidebar-title";
-            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
-            public const string FaceidNotice = "faceid-notice";
-            public const string FaceidStatusText = "faceid-status-text";
-            public const string FooterBrandTitle = "footer-brand-title";
-            public const string FooterLogo = "footer-logo";
-            public const string HeaderIcon = "header-icon";
-            public const string HeaderRocketIcon = "header-rocket-icon";
             public const string HeadlineLarge = "m3-headline-large";
             public const string HeadlineMedium = "m3-headline-medium";
-            public const string InvoiceAmount = "invoice-amount";
             public const string ItemIcon = "item-icon";
-            public const string ItemSupport = "item-support";
-            public const string KdsOrderRef = "kds-order-ref";
-            public const string KioskBrandIcon = "kiosk-brand-icon";
             public const string KpiNumber = "kpi-number";
-            public const string LabelSm = "m3-label-sm";
             public const string LabelSmall = "m3-label-small";
             public const string LoadingLabel = "loading-label";
             public const string ManeuverDistance = "maneuver-distance";
-            public const string ManeuverIcon = "maneuver-icon";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
-            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
-            public const string MetaHighlight = "meta-highlight";
-            public const string MetricDesc = "metric-desc";
             public const string MetricNum = "metric-num";
             public const string Monospace = "monospace";
             public const string NavIcon = "nav-icon";
             public const string OrderNumber = "order-number";
-            public const string PageHeaderIcon = "m3-page-header-icon";
-            public const string PillsLabel = "pills-label";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
-            public const string PlanCurrency = "plan-currency";
-            public const string PlanPriceWrap = "plan-price-wrap";
-            public const string PlanTitle = "plan-title";
-            public const string PosOrdersLabel = "pos-orders-label";
-            public const string PosPriceText = "pos-price-text";
-            public const string PreviewProductPrice = "preview-product-price";
-            public const string PreviewTitle = "preview-title";
-            public const string ProductCurrency = "product-currency";
-            public const string ProductPlaceholderIcon = "product-placeholder-icon";
-            public const string ProductPrice = "product-price";
-            public const string QrStatusText = "qr-status-text";
-            public const string ResendCountdown = "resend-countdown";
-            public const string RouteAlternativeArrival = "route-alternative-arrival";
-            public const string RouteAlternativeDistance = "route-alternative-distance";
-            public const string RouteAlternativeLabel = "route-alternative-label";
-            public const string RouteAlternativeTime = "route-alternative-time";
-            public const string RouteLoading = "route-loading";
-            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
-            public const string RouteStepMeta = "route-step-meta";
             public const string RouteStepText = "route-step-text";
             public const string RouteValue = "route-value";
             public const string SellerIcon = "seller-icon";
-            public const string SessionItemSubtitle = "session-item-subtitle";
-            public const string SessionItemTitle = "session-item-title";
-            public const string ShippingFee = "shipping-fee";
-            public const string ShowcaseBrandTitle = "showcase-brand-title";
-            public const string ShowcaseSectionIcon = "showcase-section-icon";
-            public const string ShowcaseStatIcon = "showcase-stat-icon";
-            public const string ShowcaseStatLbl = "showcase-stat-lbl";
-            public const string ShowcaseStatVal = "showcase-stat-val";
-            public const string SpecIcon = "spec-icon";
-            public const string SpotlightSub = "spotlight-sub";
-            public const string StatusText = "status-text";
-            public const string StatValue = "stat-value";
-            public const string TierPrice = "tier-price";
+            public const string SpecValueText = "spec-value-text";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
-            public const string TitleSub = "title-sub";
-            public const string TotalLabel = "total-label";
-            public const string TotalValue = "total-value";
-            public const string TrialDaysHighlight = "trial-days-highlight";
-            public const string TrialDaysLabel = "trial-days-label";
-            public const string Unit = "unit";
         }
 
         public static class Form
@@ -3126,16 +3206,7 @@ namespace Styles
 
         public static class Grid
         {
-            public const string BarLabels = "bar-labels";
-            public const string CitationContent = "citation-content";
             public const string ColSpanFull = "m3-col-span-full";
-            public const string FooterCopyright = "footer-copyright";
-            public const string PosHeaderLink = "pos-header-link";
-            public const string PriceRow = "price-row";
-            public const string Root = "m3-grid";
-            public const string SupportActionGrid = "support-action-grid";
-            public const string SupportGrid = "support-grid";
-            public const string ValuesGrid = "values-grid";
         }
 
         public static class InfoGrid
@@ -3165,6 +3236,11 @@ namespace Styles
             public const string SpotlightInfo = "spotlight-info";
         }
 
+        public static class Light
+        {
+            public const string Root = "light";
+        }
+
         public static class Margin
         {
             public const string AboutContainer = "about-container";
@@ -3176,6 +3252,7 @@ namespace Styles
             public const string AuthDivider = "auth-divider";
             public const string AuthSubtitle = "auth-subtitle";
             public const string AuthTitle = "auth-title";
+            public const string B2bCtaGroup = "b2b-cta-group";
             public const string BrandScreensaverTagline = "brand-screensaver-tagline";
             public const string BrandScreensaverTitle = "brand-screensaver-title";
             public const string Breadcrumbs = "m3-breadcrumbs";
@@ -3224,6 +3301,7 @@ namespace Styles
             public const string KioskBrandName = "kiosk-brand-name";
             public const string KioskHeroContent = "kiosk-hero-content";
             public const string KpiTitle = "kpi-title";
+            public const string LandingContainer = "landing-container";
             public const string LandingSubpageContainer = "landing-subpage-container";
             public const string LandingSubpageSubtitle = "landing-subpage-subtitle";
             public const string LandingSubpageTitle = "landing-subpage-title";
@@ -3319,11 +3397,7 @@ namespace Styles
             public const string HasError = "has-error";
             public const string IsInvalid = "is-invalid";
             public const string None = "m3-outline-none";
-        }
-
-        public static class Overflow
-        {
-            public const string ManeuverText = "maneuver-text";
+            public const string Outlined = "outlined";
         }
 
         public static class Padding
@@ -3336,7 +3410,6 @@ namespace Styles
             public const string BottomNavItem = "m3-bottom-nav-item";
             public const string ChatHeaderContainer = "chat-header-container";
             public const string DesignerPageRoot = "designer-page-root";
-            public const string DetailsMode = "details-mode";
             public const string DetMain = "det-main";
             public const string DetPlaceholder = "det-placeholder";
             public const string DetPlaceholderPadded = "det-placeholder-padded";
@@ -3348,21 +3421,21 @@ namespace Styles
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DrawerBody = "drawer-body";
             public const string ExampleCategories = "example-categories";
-            public const string Expanded = "expanded";
             public const string FilterToolbar = "m3-filter-toolbar";
+            public const string FooterColumns = "footer-columns";
             public const string GridCenterCanvas = "m3-grid-center-canvas";
             public const string HeaderEndZone = "header-end-zone";
             public const string HelpCategories = "help-categories";
+            public const string HeroSection = "hero-section";
             public const string KioskFilterRow = "kiosk-filter-row";
             public const string KioskHeaderContent = "kiosk-header-content";
             public const string LandingGrid = "landing-grid";
             public const string LandingTopBarWrapper = "landing-top-bar-wrapper";
+            public const string M3xSection = "m3x-section";
             public const string MapClickPopup = "map-click-popup";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MessageListContainer = "message-list-container";
             public const string MobileNavFooter = "mobile-nav-footer";
             public const string NavbarBrand = "navbar-brand";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavOnly = "nav-only";
             public const string NoFooter = "no-footer";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -3370,14 +3443,12 @@ namespace Styles
             public const string PaymentRefreshBtn = "payment-refresh-btn";
             public const string PillsRow = "pills-row";
             public const string PlaceDetailsBody = "place-details-body";
-            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHero = "place-details-hero";
             public const string PosFilters = "pos-filters";
             public const string PosGrid = "pos-grid";
             public const string PosMain = "pos-main";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string ProductDetails = "product-details";
-            public const string ProductThumbnails = "product-thumbnails";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
             public const string QrgLists = "qrg-lists";
             public const string QrgMain = "qrg-main";
@@ -3398,13 +3469,10 @@ namespace Styles
             public const string SidebarBrand = "sidebar-brand";
             public const string SidebarNavCategory = "sidebar-nav-category";
             public const string SigninContainer = "signin-container";
-            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string StoreProductPage = "store-product-page";
             public const string Suggestions = "suggestions";
-            public const string TabArrow = "tab-arrow";
-            public const string TabHamburger = "tab-hamburger";
+            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxFilterMeta = "ux-filter-meta";
-            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Picker
@@ -3541,39 +3609,30 @@ namespace Styles
 
         public static class Pointer
         {
+            public const string Dismiss = "dismiss";
             public const string DragHandle = "drag-handle";
             public const string Interactive = "interactive";
             public const string InteractiveAction = "interactive-action";
+            public const string LandingBgCanvas = "landing-bg-canvas";
+            public const string M3xPressScale = "m3x-press-scale";
+            public const string MapFloatingActions = "map-floating-actions";
             public const string SwipeContainerX = "swipe-container-x";
             public const string SwipeContainerY = "swipe-container-y";
             public const string TouchManipulation = "touch-manipulation";
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Position
         {
-            public const string AttractLoopBackground = "attract-loop-background";
-            public const string AttractLoopOverlay = "attract-loop-overlay";
-            public const string BgBaseGradient = "bg-base-gradient";
-            public const string BgGridMesh = "bg-grid-mesh";
-            public const string BgRadialVignette = "bg-radial-vignette";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
-            public const string Dismiss = "dismiss";
-            public const string GlowCyanPurple = "glow-cyan-purple";
-            public const string GlowPurpleIndigo = "glow-purple-indigo";
-            public const string GlowTealCyan = "glow-teal-cyan";
             public const string HeaderSticky = "header-sticky";
             public const string KioskWishBtnWrapper = "kiosk-wish-btn-wrapper";
-            public const string LandingBgCanvas = "landing-bg-canvas";
-            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MapCanvas = "map-canvas";
-            public const string MapFloatingActions = "map-floating-actions";
-            public const string NavFab = "m3-nav-fab";
             public const string OrderSummarySection = "order-summary-section";
-            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
 
         public static class Progress
@@ -3615,15 +3674,6 @@ namespace Styles
             public const string Thin = "scrollbar-thin";
             public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
-        }
-
-        public static class Scrollbars
-        {
-            public const string CartItemsContainer = "cart-items-container";
-            public const string DropdownMenu = "dropdown-menu";
-            public const string OptionsContainer = "options-container";
-            public const string OrderSummaryList = "order-summary-list";
-            public const string SelectOptions = "select-options";
         }
 
         public static class Search
@@ -3672,13 +3722,28 @@ namespace Styles
             public const string SegmentedPillGroup = "m3-segmented-pill-group";
         }
 
+        public static class Selection
+        {
+            public const string BodyLarge = "m3-body-large";
+            public const string BodyMedium = "m3-body-medium";
+        }
+
         public static class Shadow
         {
-            public const string HoverLift = "m3-hover-lift";
+            public const string M3xGlowError = "m3x-glow-error";
+            public const string M3xGlowPrimary = "m3x-glow-primary";
+            public const string M3xGlowPrimaryStrong = "m3x-glow-primary-strong";
+            public const string M3xGlowTertiary = "m3x-glow-tertiary";
+            public const string M3xHoverLift = "m3x-hover-lift";
+            public const string MetaDot = "meta-dot";
+            public const string NavFab = "m3-nav-fab";
             public const string Open = "open";
             public const string PosCompleteBtn = "pos-complete-btn";
+            public const string ProductPlaceholderIcon = "product-placeholder-icon";
             public const string RouteLabel = "route-label";
+            public const string RouteStepMeta = "route-step-meta";
             public const string Show = "show";
+            public const string WaypointMarker = "waypoint-marker";
         }
 
         public static class Sizing
@@ -3717,6 +3782,7 @@ namespace Styles
             public const string CtaActions = "cta-actions";
             public const string CtaLink = "cta-link";
             public const string DesignerCanvasArea = "designer-canvas-area";
+            public const string DetailsMode = "details-mode";
             public const string DetBtnRow2col = "det-btn-row-2col";
             public const string DetCameraWrapper = "det-camera-wrapper";
             public const string DetFrameVideo = "det-frame-video";
@@ -3728,6 +3794,7 @@ namespace Styles
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DownloadSection = "download-section";
             public const string EcoBtn = "eco-btn";
+            public const string EvolutionGrid = "evolution-grid";
             public const string EvolutionHeader = "evolution-header";
             public const string ExampleGrid = "example-grid";
             public const string ExampleHero = "example-hero";
@@ -3770,6 +3837,7 @@ namespace Styles
             public const string HeaderText = "header-text";
             public const string HeaderTitleGroup = "header-title-group";
             public const string HelpHero = "help-hero";
+            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroContentWrapper = "hero-content-wrapper";
             public const string HeroModulePills = "hero-module-pills";
             public const string ItemHeadline = "item-headline";
@@ -3785,11 +3853,14 @@ namespace Styles
             public const string KioskResetBtn = "kiosk-reset-btn";
             public const string Label = "m3-label";
             public const string LandingMain = "landing-main";
+            public const string LandingPageRoot = "landing-page-root";
             public const string LandingSubpageHero = "landing-subpage-hero";
+            public const string M3xGridCompact = "m3x-grid-compact";
+            public const string M3xGridDeck = "m3x-grid-deck";
             public const string ManeuverDetails = "maneuver-details";
-            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MessageList = "message-list";
+            public const string NavigatorPanel = "navigator-panel";
             public const string OptionItem = "option-item";
             public const string OrderItemsContainer = "order-items-container";
             public const string OrdersKanbanBoard = "orders-kanban-board";
@@ -3802,6 +3873,7 @@ namespace Styles
             public const string PageHeaderText = "m3-page-header-text";
             public const string PaymentSupport = "payment-support";
             public const string PillarsGrid = "pillars-grid";
+            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsPanel = "place-details-panel";
             public const string PlansGrid = "plans-grid";
             public const string PosCatalog = "pos-catalog";
@@ -3840,10 +3912,13 @@ namespace Styles
             public const string SpecDivider = "spec-divider";
             public const string SpecItem = "spec-item";
             public const string SpecValue = "spec-value";
+            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightMain = "spotlight-main";
             public const string Stack = "m3-stack";
+            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
+            public const string TabHamburger = "tab-hamburger";
             public const string TechGrid = "tech-grid";
             public const string ThumbImg = "thumb-img";
             public const string TiersGrid = "tiers-grid";
@@ -3857,12 +3932,14 @@ namespace Styles
             public const string UxModesGrid = "ux-modes-grid";
             public const string UxModesSection = "ux-modes-section";
             public const string UxSpotlightContainer = "ux-spotlight-container";
+            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxWidgetRow = "ux-widget-row";
             public const string UxWidgetSubrow = "ux-widget-subrow";
             public const string VenueStatusLegend = "venue-status-legend";
             public const string ViewSwitcher = "view-switcher";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
             public const string YandexCtrlIcon = "yandex-ctrl-icon";
+            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Skeleton
@@ -3876,7 +3953,6 @@ namespace Styles
 
         public static class Stacking
         {
-            public const string WaypointMarker = "waypoint-marker";
             public const string ZToast = "m3-z-toast";
         }
 
@@ -3939,15 +4015,7 @@ namespace Styles
 
         public static class TextDecoration
         {
-            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
-            public const string KioskProductTitleLink = "kiosk-product-title-link";
             public const string SellerNameLink = "seller-name-link";
-        }
-
-        public static class TextLayout
-        {
-            public const string TextGradient = "m3-text-gradient";
-            public const string UxWidgetQuote = "ux-widget-quote";
         }
 
         public static class TextWrapping
@@ -3984,10 +4052,12 @@ namespace Styles
             public const string UxModeTitleBox = "ux-mode-title-box";
         }
 
-        public static class Transform
+        public static class Transitions
         {
-            public const string GpuLayer = "gpu-layer";
-            public const string PressScale = "m3-press-scale";
+            public const string AdvanceIcon = "advance-icon";
+            public const string ChevronIcon = "chevron-icon";
+            public const string CtaArrow = "cta-arrow";
+            public const string M3xSpring = "m3x-spring";
         }
 
         public static class Typography
@@ -4019,7 +4089,6 @@ namespace Material.Web
         {
             public const string AssistantMessage = "assistant-message";
             public const string AuthHeader = "auth-header";
-            public const string BentoContent = "bento-content";
             public const string BrandScreensaverBody = "brand-screensaver-body";
             public const string BreakdownBarItem = "breakdown-bar-item";
             public const string BreakdownBarsStack = "breakdown-bars-stack";
@@ -4038,12 +4107,9 @@ namespace Material.Web
             public const string DocsGroupItems = "docs-group-items";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
-            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string ExplorerHeader = "explorer-header";
-            public const string FooterBrand = "footer-brand";
             public const string FooterLangContainer = "footer-lang-container";
             public const string FooterNavCol = "footer-nav-col";
-            public const string FullscreenLoading = "fullscreen-loading";
             public const string Gap0 = "m3-gap-0";
             public const string Gap1 = "m3-gap-1";
             public const string Gap2 = "m3-gap-2";
@@ -4063,14 +4129,10 @@ namespace Material.Web
             public const string ItemNameRow = "item-name-row";
             public const string ItemPricingRow = "item-pricing-row";
             public const string ItemsListSection = "items-list-section";
-            public const string ItemTotalPrice = "item-total-price";
-            public const string KdsTimeAgo = "kds-time-ago";
-            public const string KioskCategoryLabel = "kiosk-category-label";
             public const string KpiHeader = "kpi-header";
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string LandingHeaderActions = "landing-header-actions";
-            public const string LegendItem = "legend-item";
             public const string NavigatorControls = "navigator-controls";
             public const string OrderDetailsLayout = "order-details-layout";
             public const string OrderItemsSubheader = "order-items-subheader";
@@ -4084,17 +4146,14 @@ namespace Material.Web
             public const string ProductGallery = "product-gallery";
             public const string ProfileContainer = "profile-container";
             public const string PromoInputGroup = "promo-input-group";
-            public const string QrCaption = "qr-caption";
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgCustomizerContent = "qrg-customizer-content";
             public const string QrgGroup = "qrg-group";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
-            public const string QrgSliderHeader = "qrg-slider-header";
             public const string RouteActions = "route-actions";
             public const string RouteStat = "route-stat";
-            public const string SellerAddress = "seller-address";
             public const string SellerHeader = "seller-header";
             public const string ShowcaseBrand = "showcase-brand";
             public const string ShowcaseDemoRow = "showcase-demo-row";
@@ -4103,19 +4162,13 @@ namespace Material.Web
             public const string ShowcaseTopbarActions = "showcase-topbar-actions";
             public const string SidebarNav = "sidebar-nav";
             public const string SigninHeader = "signin-header";
-            public const string SpatialMetaNote = "spatial-meta-note";
-            public const string SpatialWingHeader = "spatial-wing-header";
-            public const string SpecLabel = "spec-label";
             public const string SpecValueBox = "spec-value-box";
-            public const string SpecValueText = "spec-value-text";
             public const string StyleSelectsGrid = "style-selects-grid";
             public const string SummaryRow = "summary-row";
             public const string SummaryRows = "summary-rows";
             public const string TierHeader = "tier-header";
             public const string ToastTriggersRow = "toast-triggers-row";
-            public const string UxCountPill = "ux-count-pill";
             public const string UxSpotlightHeader = "ux-spotlight-header";
-            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Avatar
@@ -4139,14 +4192,27 @@ namespace Material.Web
         public static class Background
         {
             public const string ArchiveType = "archive-type";
+            public const string AttractLoopBackground = "attract-loop-background";
+            public const string AttractLoopOverlay = "attract-loop-overlay";
             public const string AudioType = "audio-type";
+            public const string BgBaseGradient = "bg-base-gradient";
+            public const string BgGridMesh = "bg-grid-mesh";
+            public const string BgRadialVignette = "bg-radial-vignette";
             public const string Blocked = "blocked";
+            public const string BrandTitle = "brand-title";
             public const string Completed = "completed";
             public const string DocType = "doc-type";
             public const string DotCyan = "dot-cyan";
             public const string DotEmerald = "dot-emerald";
+            public const string FooterLogo = "footer-logo";
             public const string GenericType = "generic-type";
+            public const string GlowCyanPurple = "glow-cyan-purple";
+            public const string GlowPurpleIndigo = "glow-purple-indigo";
+            public const string GlowTealCyan = "glow-teal-cyan";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string Making = "making";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
@@ -4154,12 +4220,15 @@ namespace Material.Web
             public const string Paused = "paused";
             public const string PdfType = "pdf-type";
             public const string SheetType = "sheet-type";
+            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
             public const string StatusBusy = "status-busy";
             public const string StatusFree = "status-free";
             public const string StatusReserved = "status-reserved";
+            public const string TextGradient = "m3-text-gradient";
             public const string TitleGradient = "title-gradient";
             public const string UxWidgetAuction = "ux-widget-auction";
             public const string UxWidgetGroup = "ux-widget-group";
+            public const string UxWidgetQuote = "ux-widget-quote";
             public const string ValueCyan = "value-cyan";
             public const string ValueEmerald = "value-emerald";
             public const string ValuePurple = "value-purple";
@@ -4285,7 +4354,6 @@ namespace Material.Web
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
             public const string AuthErrorBanner = "auth-error-banner";
-            public const string B2bCtaGroup = "b2b-cta-group";
             public const string B2bLeadSection = "b2b-lead-section";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BarTrack = "bar-track";
@@ -4298,6 +4366,7 @@ namespace Material.Web
             public const string BrandScreensaverLogoWrapper = "brand-screensaver-logo-wrapper";
             public const string CartBar = "cart-bar";
             public const string CartItemRow = "cart-item-row";
+            public const string CartItemsContainer = "cart-items-container";
             public const string CartItemsList = "cart-items-list";
             public const string CatalogHeader = "catalog-header";
             public const string CatalogSidebar = "catalog-sidebar";
@@ -4347,11 +4416,12 @@ namespace Material.Web
             public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
+            public const string DropdownMenu = "dropdown-menu";
             public const string Elevated = "elevated";
             public const string EvoIcon = "evo-icon";
             public const string EvolutionArrow = "evolution-arrow";
             public const string EvolutionBanner = "evolution-banner";
-            public const string EvolutionGrid = "evolution-grid";
+            public const string Expanded = "expanded";
             public const string Expired = "expired";
             public const string ExplorerSection = "m3-explorer-section";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
@@ -4359,7 +4429,6 @@ namespace Material.Web
             public const string Finish = "finish";
             public const string FiscalTagItem = "fiscal-tag-item";
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string FooterColumns = "footer-columns";
             public const string FooterCustomSlot = "footer-custom-slot";
             public const string FooterLinksList = "footer-links-list";
             public const string FooterSystemStatus = "footer-system-status";
@@ -4368,15 +4437,11 @@ namespace Material.Web
             public const string HeaderBrandIconBox = "header-brand-icon-box";
             public const string HeaderBrandLink = "header-brand-link";
             public const string HeaderIconWrap = "header-icon-wrap";
-            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroCta = "hero-cta";
             public const string HeroPillLink = "hero-pill-link";
-            public const string HeroSection = "hero-section";
             public const string HeroStageImg = "hero-stage-img";
             public const string HeroStageScreen = "hero-stage-screen";
             public const string HeroStageTabs = "hero-stage-tabs";
-            public const string HeroSubtitle = "hero-subtitle";
-            public const string HeroTitle = "hero-title";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -4397,21 +4462,23 @@ namespace Material.Web
             public const string KioskTierBtn = "kiosk-tier-btn";
             public const string KioskWishIcon = "kiosk-wish-icon";
             public const string LandingAuthBtn = "landing-auth-btn";
-            public const string LandingContainer = "landing-container";
             public const string LandingFloatingAuthBtn = "landing-floating-auth-btn";
             public const string LandingFloatingControls = "landing-floating-controls";
             public const string LandingHeader = "landing-header";
             public const string LandingHeaderNav = "landing-header-nav";
             public const string LandingMobileMenuDrawer = "landing-mobile-menu-drawer";
             public const string LandingNavLink = "landing-nav-link";
-            public const string LandingPageRoot = "landing-page-root";
             public const string LegendDot = "legend-dot";
             public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
+            public const string M3xBtnPill = "m3x-btn-pill";
+            public const string M3xPill = "m3x-pill";
+            public const string M3xShapeDock = "m3x-shape-dock";
             public const string MainFooter = "main-footer";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string MapGlobalSuggestions = "map-global-suggestions";
+            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteCloseBtn = "map-route-close-btn";
             public const string MapRouteDot = "map-route-dot";
@@ -4434,7 +4501,9 @@ namespace Material.Web
             public const string NavRail = "m3-nav-rail";
             public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NotificationBanner = "notification-banner";
+            public const string OptionsContainer = "options-container";
             public const string OrdersErrorBanner = "orders-error-banner";
+            public const string OrderSummaryList = "order-summary-list";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsRoutePanel = "organizations-route-panel";
             public const string OrgShowcaseSection = "org-showcase-section";
@@ -4465,6 +4534,7 @@ namespace Material.Web
             public const string ProductMainImageWrap = "product-main-image-wrap";
             public const string ProductPreviewPill = "product-preview-pill";
             public const string ProductSpecsGrid = "product-specs-grid";
+            public const string ProductThumbnails = "product-thumbnails";
             public const string ProTag = "pro-tag";
             public const string ProTier = "pro-tier";
             public const string PulseIndicator = "pulse-indicator";
@@ -4499,6 +4569,7 @@ namespace Material.Web
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SelectInput = "select-input";
             public const string SelectionPanel = "m3-selection-panel";
+            public const string SelectOptions = "select-options";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string SessionItem = "session-item";
@@ -4525,7 +4596,6 @@ namespace Material.Web
             public const string SpecsBar = "specs-bar";
             public const string SpecStatusDot = "spec-status-dot";
             public const string SpotlightDot = "spotlight-dot";
-            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightIconBox = "spotlight-icon-box";
             public const string SpotlightLaunchBtn = "spotlight-launch-btn";
             public const string SpotlightPill = "spotlight-pill";
@@ -4541,10 +4611,8 @@ namespace Material.Web
             public const string Trial = "trial";
             public const string UnifiedKioskFilterBar = "unified-kiosk-filter-bar";
             public const string UserMessage = "user-message";
-            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
-            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxTabBtn = "ux-tab-btn";
             public const string UxWidget = "ux-widget";
             public const string UxWidgetHotel = "ux-widget-hotel";
@@ -4608,6 +4676,7 @@ namespace Material.Web
             public const string BottomRow = "card-bottom-row";
             public const string Card = "m3-card";
             public const string Collecting = "card-collecting";
+            public const string CommerceCard = "commerce-card";
             public const string Completed = "card-completed";
             public const string ContactCard = "contact-card";
             public const string Created = "card-created";
@@ -4658,6 +4727,11 @@ namespace Material.Web
             public const string KdsCardsContainer = "kds-cards-container";
             public const string KdsCardTop = "kds-card-top";
             public const string M3xCard = "m3x-card";
+            public const string M3xCardAsymmetric1 = "m3x-card-asymmetric-1";
+            public const string M3xCardAsymmetric2 = "m3x-card-asymmetric-2";
+            public const string M3xCardElevated = "m3x-card-elevated";
+            public const string M3xCardInteractive = "m3x-card-interactive";
+            public const string M3xCardTonal = "m3x-card-tonal";
             public const string Macos = "card-macos";
             public const string Making = "card-making";
             public const string MapPlaceDetailsCard = "map-place-details-card";
@@ -4746,6 +4820,11 @@ namespace Material.Web
             public const string StatusChip = "card-status-chip";
             public const string StoreSellerCard = "store-seller-card";
             public const string SubcardHeader = "subcard-header";
+            public const string SubgridCard = "subgrid-card";
+            public const string SubgridCardActions = "subgrid-card-actions";
+            public const string SubgridCardBody = "subgrid-card-body";
+            public const string SubgridCardMedia = "subgrid-card-media";
+            public const string SubgridCardTitle = "subgrid-card-title";
             public const string Subtitle = "m3-card-subtitle";
             public const string Subtitle_2 = "card-subtitle";
             public const string SummaryActions = "m3-summary-actions";
@@ -4823,22 +4902,134 @@ namespace Material.Web
 
         public static class Color
         {
+            public const string ActiveOrdersLabel = "active-orders-label";
+            public const string AdDisclaimer = "ad-disclaimer";
+            public const string AdNetworkPartner = "ad-network-partner";
+            public const string AdOrgContext = "ad-org-context";
+            public const string AdUpgradeLink = "ad-upgrade-link";
+            public const string BentoContent = "bento-content";
+            public const string CartCount = "cart-count";
+            public const string CartTotal = "cart-total";
+            public const string ClickPopupAddress = "click-popup-address";
+            public const string ClickPopupCoords = "click-popup-coords";
+            public const string ColumnIcon = "column-icon";
+            public const string ControlLabel = "control-label";
+            public const string CrumbCurrent = "crumb-current";
             public const string CrumbSep = "crumb-sep";
             public const string DetDangerBtn = "det-danger-btn";
+            public const string DetLabel = "det-label";
+            public const string DetPlaceholderIcon = "det-placeholder-icon";
+            public const string DetStatLabel = "det-stat-label";
+            public const string DetStatValue = "det-stat-value";
             public const string DetTertiaryBtn = "det-tertiary-btn";
+            public const string DetVoiceRoom = "det-voice-room";
+            public const string DetVoiceTitle = "det-voice-title";
             public const string DiscountRow = "discount-row";
+            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
+            public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
+            public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string Eta = "eta";
+            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
+            public const string FaceidNotice = "faceid-notice";
+            public const string FaceidStatusText = "faceid-status-text";
             public const string FeatIcon = "feat-icon";
             public const string FeatureIcon = "feature-icon";
+            public const string FooterBrand = "footer-brand";
+            public const string FooterBrandTitle = "footer-brand-title";
+            public const string FooterCopyright = "footer-copyright";
+            public const string FullscreenLoading = "fullscreen-loading";
+            public const string HeaderIcon = "header-icon";
+            public const string HeaderRocketIcon = "header-rocket-icon";
+            public const string HeroSubtitle = "hero-subtitle";
+            public const string HeroTitle = "hero-title";
+            public const string Hex = "color-hex";
             public const string IconMaking = "icon-making";
             public const string IconReady = "icon-ready";
             public const string InStock = "in-stock";
             public const string InStockText = "in-stock-text";
+            public const string InvoiceAmount = "invoice-amount";
+            public const string ItemSupport = "item-support";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
+            public const string KdsOrderRef = "kds-order-ref";
+            public const string KdsTimeAgo = "kds-time-ago";
+            public const string KioskBrandIcon = "kiosk-brand-icon";
+            public const string KioskCategoryLabel = "kiosk-category-label";
+            public const string KioskProductTitleLink = "kiosk-product-title-link";
+            public const string LabelSm = "m3-label-sm";
+            public const string LegendItem = "legend-item";
+            public const string M3xFluidHeadline = "m3x-fluid-headline";
+            public const string M3xFluidSubhead = "m3x-fluid-subhead";
+            public const string ManeuverIcon = "maneuver-icon";
+            public const string ManeuverText = "maneuver-text";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
+            public const string MetaHighlight = "meta-highlight";
+            public const string MetricDesc = "metric-desc";
             public const string Ok = "ok";
+            public const string PageHeaderIcon = "m3-page-header-icon";
+            public const string PillsLabel = "pills-label";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
+            public const string PlanCurrency = "plan-currency";
+            public const string PlanPriceWrap = "plan-price-wrap";
+            public const string PlanTitle = "plan-title";
+            public const string PosOrdersLabel = "pos-orders-label";
+            public const string PosPriceText = "pos-price-text";
             public const string PreviewLabel = "preview-label";
+            public const string PreviewProductPrice = "preview-product-price";
+            public const string PreviewTitle = "preview-title";
+            public const string PriceRow = "price-row";
+            public const string ProductCurrency = "product-currency";
+            public const string ProductPrice = "product-price";
             public const string QrBotBtn = "qr-bot-btn";
+            public const string QrCaption = "qr-caption";
+            public const string QrgSliderHeader = "qrg-slider-header";
             public const string QrgSliderVal = "qrg-slider-val";
+            public const string QrStatusText = "qr-status-text";
+            public const string ResendCountdown = "resend-countdown";
+            public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeLabel = "route-alternative-label";
+            public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteLoading = "route-loading";
+            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string SellerAddress = "seller-address";
+            public const string SessionItemSubtitle = "session-item-subtitle";
+            public const string SessionItemTitle = "session-item-title";
+            public const string ShippingFee = "shipping-fee";
+            public const string ShowcaseBrandTitle = "showcase-brand-title";
+            public const string ShowcaseSectionIcon = "showcase-section-icon";
+            public const string ShowcaseStatIcon = "showcase-stat-icon";
+            public const string ShowcaseStatLbl = "showcase-stat-lbl";
+            public const string ShowcaseStatVal = "showcase-stat-val";
+            public const string SpatialMetaNote = "spatial-meta-note";
+            public const string SpatialWingHeader = "spatial-wing-header";
+            public const string SpecIcon = "spec-icon";
+            public const string SpecLabel = "spec-label";
+            public const string SpotlightSub = "spotlight-sub";
             public const string Star = "star";
+            public const string StatusText = "status-text";
+            public const string StatValue = "stat-value";
+            public const string TierPrice = "tier-price";
+            public const string TitleSub = "title-sub";
+            public const string TotalLabel = "total-label";
+            public const string TotalValue = "total-value";
+            public const string TrialDaysHighlight = "trial-days-highlight";
+            public const string TrialDaysLabel = "trial-days-label";
+            public const string Unit = "unit";
+            public const string UxCountPill = "ux-count-pill";
+        }
+
+        public static class Contain
+        {
+            public const string GpuLayer = "gpu-layer";
+            public const string HoverLift = "m3-hover-lift";
+            public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Dark
+        {
+            public const string Root = "dark";
         }
 
         public static class Dialog
@@ -4849,13 +5040,14 @@ namespace Material.Web
             public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
-            public const string Content = "m3-dialog-content";
-            public const string Content_2 = "dialog-content";
+            public const string Content = "dialog-content";
+            public const string Content_2 = "m3-dialog-content";
             public const string Description = "m3-dialog-description";
             public const string Header = "m3-dialog-header";
             public const string HeadlineWrap = "dialog-headline-wrap";
             public const string Icon = "m3-dialog-icon";
             public const string KioskDialogText = "kiosk-dialog-text";
+            public const string M3xShapeDialog = "m3x-shape-dialog";
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
@@ -4889,6 +5081,8 @@ namespace Material.Web
         {
             public const string AnalyticsHeaderTitleGroup = "analytics-header-title-group";
             public const string AuthBtnLabel = "auth-btn-label";
+            public const string BarLabels = "bar-labels";
+            public const string CitationContent = "citation-content";
             public const string ComponentsPauseVisible = "components-pause-visible";
             public const string ComponentsReconnectFailed = "components-reconnect-failed";
             public const string ComponentsReconnectFailedVisible = "components-reconnect-failed-visible";
@@ -4900,18 +5094,22 @@ namespace Material.Web
             public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string ComponentsResumeFailedVisible = "components-resume-failed-visible";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
-            public const string HeaderBrandText = "header-brand-text";
+            public const string Grid = "m3-grid";
             public const string HeaderBrandZone = "header-brand-zone";
             public const string HeaderContextDivider = "header-context-divider";
-            public const string ItemUnitPrice = "item-unit-price";
             public const string KioskHeaderActions = "kiosk-header-actions";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
-            public const string MetaDot = "meta-dot";
             public const string NoHeader = "no-header";
             public const string NoNav = "no-nav";
             public const string PillText = "pill-text";
+            public const string PosHeaderLink = "pos-header-link";
+            public const string SubgridDeck = "subgrid-deck";
+            public const string SupportActionGrid = "support-action-grid";
+            public const string SupportGrid = "support-grid";
+            public const string TabArrow = "tab-arrow";
+            public const string ValuesGrid = "values-grid";
         }
 
         public static class EmptyState
@@ -4961,116 +5159,33 @@ namespace Material.Web
 
         public static class Font
         {
-            public const string ActiveOrdersLabel = "active-orders-label";
-            public const string AdDisclaimer = "ad-disclaimer";
-            public const string AdNetworkPartner = "ad-network-partner";
-            public const string AdOrgContext = "ad-org-context";
             public const string AdTouchIcon = "ad-touch-icon";
-            public const string AdUpgradeLink = "ad-upgrade-link";
-            public const string AdvanceIcon = "advance-icon";
             public const string AmountValue = "amount-value";
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string BackIcon = "back-icon";
-            public const string BodyLarge = "m3-body-large";
-            public const string BodyMedium = "m3-body-medium";
-            public const string BrandTitle = "brand-title";
             public const string BrandTouchIcon = "brand-touch-icon";
-            public const string CartCount = "cart-count";
-            public const string CartTotal = "cart-total";
-            public const string ChevronIcon = "chevron-icon";
             public const string CitationFile = "citation-file";
-            public const string ClickPopupAddress = "click-popup-address";
-            public const string ClickPopupCoords = "click-popup-coords";
-            public const string ColorHex = "color-hex";
-            public const string ColumnIcon = "column-icon";
-            public const string ControlLabel = "control-label";
-            public const string CrumbCurrent = "crumb-current";
             public const string CrumbIcon = "crumb-icon";
-            public const string CtaArrow = "cta-arrow";
             public const string DetailIcon = "detail-icon";
-            public const string DetLabel = "det-label";
-            public const string DetPlaceholderIcon = "det-placeholder-icon";
-            public const string DetStatLabel = "det-stat-label";
-            public const string DetStatValue = "det-stat-value";
-            public const string DetVoiceRoom = "det-voice-room";
-            public const string DetVoiceTitle = "det-voice-title";
             public const string DisplayLarge = "m3-display-large";
-            public const string DocsSidebarTitle = "docs-sidebar-title";
-            public const string FaceidIconPlaceholder = "faceid-icon-placeholder";
-            public const string FaceidNotice = "faceid-notice";
-            public const string FaceidStatusText = "faceid-status-text";
-            public const string FooterBrandTitle = "footer-brand-title";
-            public const string FooterLogo = "footer-logo";
-            public const string HeaderIcon = "header-icon";
-            public const string HeaderRocketIcon = "header-rocket-icon";
             public const string HeadlineLarge = "m3-headline-large";
             public const string HeadlineMedium = "m3-headline-medium";
-            public const string InvoiceAmount = "invoice-amount";
             public const string ItemIcon = "item-icon";
-            public const string ItemSupport = "item-support";
-            public const string KdsOrderRef = "kds-order-ref";
-            public const string KioskBrandIcon = "kiosk-brand-icon";
             public const string KpiNumber = "kpi-number";
-            public const string LabelSm = "m3-label-sm";
             public const string LabelSmall = "m3-label-small";
             public const string LoadingLabel = "loading-label";
             public const string ManeuverDistance = "maneuver-distance";
-            public const string ManeuverIcon = "maneuver-icon";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
-            public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
-            public const string MetaHighlight = "meta-highlight";
-            public const string MetricDesc = "metric-desc";
             public const string MetricNum = "metric-num";
             public const string Monospace = "monospace";
             public const string NavIcon = "nav-icon";
             public const string OrderNumber = "order-number";
-            public const string PageHeaderIcon = "m3-page-header-icon";
-            public const string PillsLabel = "pills-label";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
-            public const string PlanCurrency = "plan-currency";
-            public const string PlanPriceWrap = "plan-price-wrap";
-            public const string PlanTitle = "plan-title";
-            public const string PosOrdersLabel = "pos-orders-label";
-            public const string PosPriceText = "pos-price-text";
-            public const string PreviewProductPrice = "preview-product-price";
-            public const string PreviewTitle = "preview-title";
-            public const string ProductCurrency = "product-currency";
-            public const string ProductPlaceholderIcon = "product-placeholder-icon";
-            public const string ProductPrice = "product-price";
-            public const string QrStatusText = "qr-status-text";
-            public const string ResendCountdown = "resend-countdown";
-            public const string RouteAlternativeArrival = "route-alternative-arrival";
-            public const string RouteAlternativeDistance = "route-alternative-distance";
-            public const string RouteAlternativeLabel = "route-alternative-label";
-            public const string RouteAlternativeTime = "route-alternative-time";
-            public const string RouteLoading = "route-loading";
-            public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
-            public const string RouteStepMeta = "route-step-meta";
             public const string RouteStepText = "route-step-text";
             public const string RouteValue = "route-value";
             public const string SellerIcon = "seller-icon";
-            public const string SessionItemSubtitle = "session-item-subtitle";
-            public const string SessionItemTitle = "session-item-title";
-            public const string ShippingFee = "shipping-fee";
-            public const string ShowcaseBrandTitle = "showcase-brand-title";
-            public const string ShowcaseSectionIcon = "showcase-section-icon";
-            public const string ShowcaseStatIcon = "showcase-stat-icon";
-            public const string ShowcaseStatLbl = "showcase-stat-lbl";
-            public const string ShowcaseStatVal = "showcase-stat-val";
-            public const string SpecIcon = "spec-icon";
-            public const string SpotlightSub = "spotlight-sub";
-            public const string StatusText = "status-text";
-            public const string StatValue = "stat-value";
-            public const string TierPrice = "tier-price";
+            public const string SpecValueText = "spec-value-text";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
-            public const string TitleSub = "title-sub";
-            public const string TotalLabel = "total-label";
-            public const string TotalValue = "total-value";
-            public const string TrialDaysHighlight = "trial-days-highlight";
-            public const string TrialDaysLabel = "trial-days-label";
-            public const string Unit = "unit";
         }
 
         public static class Form
@@ -5127,16 +5242,7 @@ namespace Material.Web
 
         public static class Grid
         {
-            public const string BarLabels = "bar-labels";
-            public const string CitationContent = "citation-content";
             public const string ColSpanFull = "m3-col-span-full";
-            public const string FooterCopyright = "footer-copyright";
-            public const string PosHeaderLink = "pos-header-link";
-            public const string PriceRow = "price-row";
-            public const string Root = "m3-grid";
-            public const string SupportActionGrid = "support-action-grid";
-            public const string SupportGrid = "support-grid";
-            public const string ValuesGrid = "values-grid";
         }
 
         public static class InfoGrid
@@ -5166,6 +5272,11 @@ namespace Material.Web
             public const string SpotlightInfo = "spotlight-info";
         }
 
+        public static class Light
+        {
+            public const string Root = "light";
+        }
+
         public static class Margin
         {
             public const string AboutContainer = "about-container";
@@ -5177,6 +5288,7 @@ namespace Material.Web
             public const string AuthDivider = "auth-divider";
             public const string AuthSubtitle = "auth-subtitle";
             public const string AuthTitle = "auth-title";
+            public const string B2bCtaGroup = "b2b-cta-group";
             public const string BrandScreensaverTagline = "brand-screensaver-tagline";
             public const string BrandScreensaverTitle = "brand-screensaver-title";
             public const string Breadcrumbs = "m3-breadcrumbs";
@@ -5225,6 +5337,7 @@ namespace Material.Web
             public const string KioskBrandName = "kiosk-brand-name";
             public const string KioskHeroContent = "kiosk-hero-content";
             public const string KpiTitle = "kpi-title";
+            public const string LandingContainer = "landing-container";
             public const string LandingSubpageContainer = "landing-subpage-container";
             public const string LandingSubpageSubtitle = "landing-subpage-subtitle";
             public const string LandingSubpageTitle = "landing-subpage-title";
@@ -5320,11 +5433,7 @@ namespace Material.Web
             public const string HasError = "has-error";
             public const string IsInvalid = "is-invalid";
             public const string None = "m3-outline-none";
-        }
-
-        public static class Overflow
-        {
-            public const string ManeuverText = "maneuver-text";
+            public const string Outlined = "outlined";
         }
 
         public static class Padding
@@ -5337,7 +5446,6 @@ namespace Material.Web
             public const string BottomNavItem = "m3-bottom-nav-item";
             public const string ChatHeaderContainer = "chat-header-container";
             public const string DesignerPageRoot = "designer-page-root";
-            public const string DetailsMode = "details-mode";
             public const string DetMain = "det-main";
             public const string DetPlaceholder = "det-placeholder";
             public const string DetPlaceholderPadded = "det-placeholder-padded";
@@ -5349,21 +5457,21 @@ namespace Material.Web
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DrawerBody = "drawer-body";
             public const string ExampleCategories = "example-categories";
-            public const string Expanded = "expanded";
             public const string FilterToolbar = "m3-filter-toolbar";
+            public const string FooterColumns = "footer-columns";
             public const string GridCenterCanvas = "m3-grid-center-canvas";
             public const string HeaderEndZone = "header-end-zone";
             public const string HelpCategories = "help-categories";
+            public const string HeroSection = "hero-section";
             public const string KioskFilterRow = "kiosk-filter-row";
             public const string KioskHeaderContent = "kiosk-header-content";
             public const string LandingGrid = "landing-grid";
             public const string LandingTopBarWrapper = "landing-top-bar-wrapper";
+            public const string M3xSection = "m3x-section";
             public const string MapClickPopup = "map-click-popup";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string MessageListContainer = "message-list-container";
             public const string MobileNavFooter = "mobile-nav-footer";
             public const string NavbarBrand = "navbar-brand";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavOnly = "nav-only";
             public const string NoFooter = "no-footer";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -5371,14 +5479,12 @@ namespace Material.Web
             public const string PaymentRefreshBtn = "payment-refresh-btn";
             public const string PillsRow = "pills-row";
             public const string PlaceDetailsBody = "place-details-body";
-            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHero = "place-details-hero";
             public const string PosFilters = "pos-filters";
             public const string PosGrid = "pos-grid";
             public const string PosMain = "pos-main";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string ProductDetails = "product-details";
-            public const string ProductThumbnails = "product-thumbnails";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
             public const string QrgLists = "qrg-lists";
             public const string QrgMain = "qrg-main";
@@ -5399,13 +5505,10 @@ namespace Material.Web
             public const string SidebarBrand = "sidebar-brand";
             public const string SidebarNavCategory = "sidebar-nav-category";
             public const string SigninContainer = "signin-container";
-            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string StoreProductPage = "store-product-page";
             public const string Suggestions = "suggestions";
-            public const string TabArrow = "tab-arrow";
-            public const string TabHamburger = "tab-hamburger";
+            public const string UxCategoryTabs = "ux-category-tabs";
             public const string UxFilterMeta = "ux-filter-meta";
-            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Picker
@@ -5542,39 +5645,30 @@ namespace Material.Web
 
         public static class Pointer
         {
+            public const string Dismiss = "dismiss";
             public const string DragHandle = "drag-handle";
             public const string Interactive = "interactive";
             public const string InteractiveAction = "interactive-action";
+            public const string LandingBgCanvas = "landing-bg-canvas";
+            public const string M3xPressScale = "m3x-press-scale";
+            public const string MapFloatingActions = "map-floating-actions";
             public const string SwipeContainerX = "swipe-container-x";
             public const string SwipeContainerY = "swipe-container-y";
             public const string TouchManipulation = "touch-manipulation";
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string YandexRightControlsContainer = "yandex-right-controls-container";
         }
 
         public static class Position
         {
-            public const string AttractLoopBackground = "attract-loop-background";
-            public const string AttractLoopOverlay = "attract-loop-overlay";
-            public const string BgBaseGradient = "bg-base-gradient";
-            public const string BgGridMesh = "bg-grid-mesh";
-            public const string BgRadialVignette = "bg-radial-vignette";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
-            public const string Dismiss = "dismiss";
-            public const string GlowCyanPurple = "glow-cyan-purple";
-            public const string GlowPurpleIndigo = "glow-purple-indigo";
-            public const string GlowTealCyan = "glow-teal-cyan";
             public const string HeaderSticky = "header-sticky";
             public const string KioskWishBtnWrapper = "kiosk-wish-btn-wrapper";
-            public const string LandingBgCanvas = "landing-bg-canvas";
-            public const string LandingMobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MapCanvas = "map-canvas";
-            public const string MapFloatingActions = "map-floating-actions";
-            public const string NavFab = "m3-nav-fab";
             public const string OrderSummarySection = "order-summary-section";
-            public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
 
         public static class Progress
@@ -5616,15 +5710,6 @@ namespace Material.Web
             public const string Thin = "scrollbar-thin";
             public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
-        }
-
-        public static class Scrollbars
-        {
-            public const string CartItemsContainer = "cart-items-container";
-            public const string DropdownMenu = "dropdown-menu";
-            public const string OptionsContainer = "options-container";
-            public const string OrderSummaryList = "order-summary-list";
-            public const string SelectOptions = "select-options";
         }
 
         public static class Search
@@ -5673,13 +5758,28 @@ namespace Material.Web
             public const string SegmentedPillGroup = "m3-segmented-pill-group";
         }
 
+        public static class Selection
+        {
+            public const string BodyLarge = "m3-body-large";
+            public const string BodyMedium = "m3-body-medium";
+        }
+
         public static class Shadow
         {
-            public const string HoverLift = "m3-hover-lift";
+            public const string M3xGlowError = "m3x-glow-error";
+            public const string M3xGlowPrimary = "m3x-glow-primary";
+            public const string M3xGlowPrimaryStrong = "m3x-glow-primary-strong";
+            public const string M3xGlowTertiary = "m3x-glow-tertiary";
+            public const string M3xHoverLift = "m3x-hover-lift";
+            public const string MetaDot = "meta-dot";
+            public const string NavFab = "m3-nav-fab";
             public const string Open = "open";
             public const string PosCompleteBtn = "pos-complete-btn";
+            public const string ProductPlaceholderIcon = "product-placeholder-icon";
             public const string RouteLabel = "route-label";
+            public const string RouteStepMeta = "route-step-meta";
             public const string Show = "show";
+            public const string WaypointMarker = "waypoint-marker";
         }
 
         public static class Sizing
@@ -5718,6 +5818,7 @@ namespace Material.Web
             public const string CtaActions = "cta-actions";
             public const string CtaLink = "cta-link";
             public const string DesignerCanvasArea = "designer-canvas-area";
+            public const string DetailsMode = "details-mode";
             public const string DetBtnRow2col = "det-btn-row-2col";
             public const string DetCameraWrapper = "det-camera-wrapper";
             public const string DetFrameVideo = "det-frame-video";
@@ -5729,6 +5830,7 @@ namespace Material.Web
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DownloadSection = "download-section";
             public const string EcoBtn = "eco-btn";
+            public const string EvolutionGrid = "evolution-grid";
             public const string EvolutionHeader = "evolution-header";
             public const string ExampleGrid = "example-grid";
             public const string ExampleHero = "example-hero";
@@ -5771,6 +5873,7 @@ namespace Material.Web
             public const string HeaderText = "header-text";
             public const string HeaderTitleGroup = "header-title-group";
             public const string HelpHero = "help-hero";
+            public const string HeroActionsPrimary = "hero-actions-primary";
             public const string HeroContentWrapper = "hero-content-wrapper";
             public const string HeroModulePills = "hero-module-pills";
             public const string ItemHeadline = "item-headline";
@@ -5786,11 +5889,14 @@ namespace Material.Web
             public const string KioskResetBtn = "kiosk-reset-btn";
             public const string Label = "m3-label";
             public const string LandingMain = "landing-main";
+            public const string LandingPageRoot = "landing-page-root";
             public const string LandingSubpageHero = "landing-subpage-hero";
+            public const string M3xGridCompact = "m3x-grid-compact";
+            public const string M3xGridDeck = "m3x-grid-deck";
             public const string ManeuverDetails = "maneuver-details";
-            public const string MapPanelContent = "map-panel-content";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MessageList = "message-list";
+            public const string NavigatorPanel = "navigator-panel";
             public const string OptionItem = "option-item";
             public const string OrderItemsContainer = "order-items-container";
             public const string OrdersKanbanBoard = "orders-kanban-board";
@@ -5803,6 +5909,7 @@ namespace Material.Web
             public const string PageHeaderText = "m3-page-header-text";
             public const string PaymentSupport = "payment-support";
             public const string PillarsGrid = "pillars-grid";
+            public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsPanel = "place-details-panel";
             public const string PlansGrid = "plans-grid";
             public const string PosCatalog = "pos-catalog";
@@ -5841,10 +5948,13 @@ namespace Material.Web
             public const string SpecDivider = "spec-divider";
             public const string SpecItem = "spec-item";
             public const string SpecValue = "spec-value";
+            public const string SpotlightFeatures = "spotlight-features";
             public const string SpotlightMain = "spotlight-main";
             public const string Stack = "m3-stack";
+            public const string StatusBarSafeArea = "status-bar-safe-area";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
+            public const string TabHamburger = "tab-hamburger";
             public const string TechGrid = "tech-grid";
             public const string ThumbImg = "thumb-img";
             public const string TiersGrid = "tiers-grid";
@@ -5858,12 +5968,14 @@ namespace Material.Web
             public const string UxModesGrid = "ux-modes-grid";
             public const string UxModesSection = "ux-modes-section";
             public const string UxSpotlightContainer = "ux-spotlight-container";
+            public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxWidgetRow = "ux-widget-row";
             public const string UxWidgetSubrow = "ux-widget-subrow";
             public const string VenueStatusLegend = "venue-status-legend";
             public const string ViewSwitcher = "view-switcher";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
             public const string YandexCtrlIcon = "yandex-ctrl-icon";
+            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Skeleton
@@ -5877,7 +5989,6 @@ namespace Material.Web
 
         public static class Stacking
         {
-            public const string WaypointMarker = "waypoint-marker";
             public const string ZToast = "m3-z-toast";
         }
 
@@ -5940,15 +6051,7 @@ namespace Material.Web
 
         public static class TextDecoration
         {
-            public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
-            public const string KioskProductTitleLink = "kiosk-product-title-link";
             public const string SellerNameLink = "seller-name-link";
-        }
-
-        public static class TextLayout
-        {
-            public const string TextGradient = "m3-text-gradient";
-            public const string UxWidgetQuote = "ux-widget-quote";
         }
 
         public static class TextWrapping
@@ -5985,10 +6088,12 @@ namespace Material.Web
             public const string UxModeTitleBox = "ux-mode-title-box";
         }
 
-        public static class Transform
+        public static class Transitions
         {
-            public const string GpuLayer = "gpu-layer";
-            public const string PressScale = "m3-press-scale";
+            public const string AdvanceIcon = "advance-icon";
+            public const string ChevronIcon = "chevron-icon";
+            public const string CtaArrow = "cta-arrow";
+            public const string M3xSpring = "m3x-spring";
         }
 
         public static class Typography

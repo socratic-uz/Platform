@@ -59,6 +59,29 @@ function bundleCss() {
 
     console.log(`✅ Production CSS bundle created in ${duration}ms!`);
     console.log(`   - Raw minified: ${rawKb} KB`);
+
+    // 3. Deconsolidated components bundle: components/components.bundle.min.css
+    const componentsCssPath = path.join(stylesCssDir, 'components', 'components.css');
+    const componentsBundlePath = path.join(stylesCssDir, 'components', 'components.bundle.min.css');
+    if (fs.existsSync(componentsCssPath)) {
+      const compResult = lightningcss.bundle({
+        filename: componentsCssPath,
+        minify: true,
+        sourceMap: true,
+        targets: {
+          chrome: 110 << 16,
+          firefox: 110 << 16,
+          safari: 16 << 16,
+          edge: 110 << 16,
+        },
+      });
+      const compSizes = saveCompressed(componentsBundlePath, compResult.code);
+      if (compResult.map) {
+        fs.writeFileSync(`${componentsBundlePath}.map`, compResult.map);
+      }
+      const compKb = (compSizes.raw / 1024).toFixed(1);
+      console.log(`✅ Production Components CSS bundle created: ${compKb} KB`);
+    }
   } catch (err) {
     console.error(`❌ LightningCSS compilation failed:`, err);
     process.exit(1);

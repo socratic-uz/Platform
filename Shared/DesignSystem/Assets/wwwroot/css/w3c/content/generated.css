@@ -1,0 +1,67 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/content/generated.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.col-width-draghandle::after {
+    content: ' ';
+}
+
+:where(
+    .avatar-button::before,
+    .bento-card::before,
+    .card-interactive::before,
+    .evolution-card::before,
+    .feature-card::before,
+    .glass::before,
+    .hero-card::before,
+    .industry-card::before,
+    .m3-card-interactive::before,
+    .m3-skeleton::after,
+    .m3-status-dot.pulse::after,
+    .org-card::before,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    .platform-card::before,
+    .spatial-subcard::before,
+    .spatial-wing-card::before,
+    .status-dot.pulse::after,
+    .ux-mode-card::before,
+    .ux-spotlight-card::before,
+    md-elevated-card::before,
+    md-filled-card::before,
+    md-outlined-card::before
+) {
+    content: '';
+}
+
+:where(
+    .auth-divider::after,
+    .auth-divider::before,
+    .faceid-scanner-frame.scanning::after,
+    .kiosk-hero::before,
+    .link-stack a::before,
+    .link-stack article::before
+) {
+    content: "";
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}
+
+.loading-progress-text::after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
+@media (max-width: 599.98px) {
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab::after,
+        .organizations-map-controls.expanded .map-panel-toggle-tab::after
+    ) {
+        content: '';
+    }
+
+}
+

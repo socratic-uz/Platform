@@ -1,0 +1,1888 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/color/background.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .b2b-lead-content h2,
+    .brand-title,
+    .download-header h2,
+    .evolution-header h2,
+    .footer-logo,
+    .m3-text-gradient,
+    .section-title-box h2,
+    .showcase-hero h1,
+    .title-gradient,
+    .value-cyan,
+    .value-emerald,
+    .value-purple,
+    .value-teal,
+    header.landing-header .header-brand-text
+) {
+    -webkit-background-clip: text;
+}
+
+:where(
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:hover
+) {
+    background-clip: content-box;
+}
+
+:where(
+    .brand-title,
+    .m3-text-gradient,
+    .showcase-hero h1,
+    header.landing-header .header-brand-text
+) {
+    background-clip: text;
+}
+
+:where(
+    .det-dot,
+    .status-dot
+) {
+    background-color: currentColor;
+}
+
+#components-reconnect-modal::backdrop {
+    background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
+}
+
+.landing-page-root {
+    background-color: var(--landing-bg);
+}
+
+.search-divider {
+    background-color: var(--map-border);
+}
+
+.map-global-suggestion-item.active .map-global-suggestion-button {
+    background-color: var(--map-primary-container);
+}
+
+.map-global-suggestion-button:hover {
+    background-color: var(--map-surface-strong);
+}
+
+.hamburger-line {
+    background-color: var(--map-text);
+}
+
+.docs-content {
+    background-color: var(--md-sys-color-background);
+}
+
+:where(
+    .m3-pdf-type,
+    .pdf-type
+) {
+    background-color: var(--md-sys-color-error-container);
+}
+
+.map-route-dot-to {
+    background-color: var(--md-sys-color-error);
+}
+
+:where(
+    .det-sidebar-scrollable::-webkit-scrollbar-thumb,
+    .showcase-content::-webkit-scrollbar-thumb,
+    .showcase-sidebar-nav::-webkit-scrollbar-thumb
+) {
+    background-color: var(--md-sys-color-outline-variant);
+}
+
+:where(
+    ::selection,
+    .doc-type,
+    .m3-doc-type,
+    .paginator nav button:not([disabled]):active,
+    #components-reconnect-modal button:hover
+) {
+    background-color: var(--md-sys-color-primary-container);
+}
+
+:where(
+    .m3-progress-fill,
+    .map-route-dot-from,
+    .progress-bar-fill,
+    #components-reconnect-modal button
+) {
+    background-color: var(--md-sys-color-primary);
+}
+
+:where(
+    .fullscreen-player,
+    .fullscreen-video
+) {
+    background-color: var(--md-sys-color-scrim);
+}
+
+:where(
+    .archive-type,
+    .link-stack a::before,
+    .link-stack article::before,
+    .m3-archive-type
+) {
+    background-color: var(--md-sys-color-secondary-container);
+}
+
+.map-route-dot-via {
+    background-color: var(--md-sys-color-secondary);
+}
+
+:where(
+    .assistant-message-text th,
+    .assistant-message-text tr:nth-child(even),
+    .audio-type,
+    .citation:active,
+    .m3-audio-type,
+    #components-reconnect-modal,
+    assistant-message th,
+    assistant-message tr:nth-child(even)
+) {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+:where(
+    .assistant-message-text pre > code,
+    .m3-video-type,
+    .paginator nav button:not([disabled]):hover,
+    .video-type,
+    assistant-message pre > code
+) {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+
+:where(
+    .docs-sidebar,
+    .docs-welcome-card,
+    .file-preview-area
+) {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+:where(
+    .file-card,
+    .pos-sidebar
+) {
+    background-color: var(--md-sys-color-surface-container-lowest);
+}
+
+:where(
+    .citation,
+    .generic-type,
+    .m3-generic-type
+) {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+:where(
+    .m3-progress-track,
+    .progress-bar-bg
+) {
+    background-color: var(--md-sys-color-surface-variant);
+}
+
+body {
+    background-color: var(--md-sys-color-surface);
+}
+
+:where(
+    .m3-sheet-type,
+    .sheet-type
+) {
+    background-color: var(--md-sys-color-tertiary-container);
+}
+
+.bg-grid-mesh {
+    background-image: radial-gradient(circle, rgb(from var(--md-sys-color-surface) r g b / 0.08) 1px, transparent 1px);
+}
+
+:where(
+    .go-first,
+    .go-last
+) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z" fill="%236750a4"/><rect height="2" width="20" y="20.5" x="2" fill="%236750a4"/></g></svg>');
+}
+
+:where(
+    .go-next,
+    .go-previous
+) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" fill="%236750a4"/></g></svg>');
+}
+
+:where(
+    .col-sort-asc .sort-indicator,
+    .col-sort-desc .sort-indicator
+) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
+}
+
+.attract-loop-background {
+    background-position: center;
+}
+
+:where(
+    .col-sort-asc .sort-indicator,
+    .col-sort-desc .sort-indicator
+) {
+    background-repeat: no-repeat;
+}
+
+.bg-grid-mesh {
+    background-size: 32px 32px;
+}
+
+:where(
+    .col-sort-asc .sort-indicator,
+    .col-sort-desc .sort-indicator
+) {
+    background-size: contain;
+}
+
+.attract-loop-background {
+    background-size: cover;
+}
+
+.ux-reset-filter-btn {
+    background: color-mix(in srgb, var(--md-sys-color-error) 12%, transparent);
+}
+
+.ux-reset-filter-btn:hover {
+    background: color-mix(in srgb, var(--md-sys-color-error) 22%, transparent);
+}
+
+.card-macos .platform-icon {
+    background: color-mix(in srgb, var(--md-sys-color-on-surface-variant) 12%, transparent);
+}
+
+.platform-icon {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 10%, transparent);
+}
+
+:where(
+    .card-windows .platform-icon,
+    .ux-modal-icon-badge
+) {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
+}
+
+.ux-expand-btn:hover {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 14%, transparent);
+}
+
+:where(
+    .spec-card-icon,
+    .ux-mode-quickview-btn:hover
+) {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 15%, transparent);
+}
+
+.wing-geomap .venue-icon {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 18%, transparent);
+}
+
+.active-evo .evo-icon {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 25%, transparent);
+}
+
+:where(
+    .qr-compact-header,
+    .ux-modal-code
+) {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+}
+
+.active-evo {
+    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, var(--md-sys-color-surface-container-high));
+}
+
+.fiscal-tag-item {
+    background: color-mix(in srgb, var(--md-sys-color-secondary) 10%, transparent);
+}
+
+.card-android .platform-icon {
+    background: color-mix(in srgb, var(--md-sys-color-secondary) 12%, transparent);
+}
+
+.venue-icon {
+    background: color-mix(in srgb, var(--md-sys-color-secondary) 20%, transparent);
+}
+
+.spatial-wing-card {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 55%, transparent);
+}
+
+.evolution-card {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 60%, transparent);
+}
+
+.kiosk-wish-icon {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
+}
+
+:where(
+    .ux-modal-btn-secondary:hover,
+    .ux-tab-btn:hover
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 10%, transparent);
+}
+
+.ux-search-clear:hover {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 16%, transparent);
+}
+
+.spatial-subcard {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 20%, transparent);
+}
+
+.spec-card {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 3%, transparent);
+}
+
+.venue-chip {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 35%, transparent);
+}
+
+:where(
+    .analytics-metrics-strip,
+    .spatial-subcard:hover
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 40%, transparent);
+}
+
+:where(
+    .feat-pill,
+    .platform-btn,
+    .ux-empty-icon-box,
+    .ux-modal-btn-secondary,
+    .ux-mode-quickview-btn,
+    .ux-tab-btn
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 5%, transparent);
+}
+
+:where(
+    .evolution-arrow,
+    .org-tag
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 50%, transparent);
+}
+
+.ux-expand-btn {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 6%, transparent);
+}
+
+:where(
+    .spotlight-launch-btn,
+    .ux-mode-launch-btn
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 7%, transparent);
+}
+
+:where(
+    .ux-mode-number-pill,
+    .ux-search-clear
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 8%, transparent);
+}
+
+.ux-mode-badge-overlay {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 85%, transparent);
+}
+
+.main-footer {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-lowest) 80%, transparent);
+}
+
+:where(
+    .download-header,
+    .ux-search-box
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container) 80%, transparent);
+}
+
+:where(
+    .bento-card,
+    .card-instant,
+    .evolution-banner,
+    .org-showcase-section,
+    .platform-card,
+    .spatial-maps-section,
+    .specs-bar
+) {
+    background: color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent);
+}
+
+:where(
+    .card-ios .platform-icon,
+    .card-web .platform-icon
+) {
+    background: color-mix(in srgb, var(--md-sys-color-tertiary) 12%, transparent);
+}
+
+.evo-icon {
+    background: color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent);
+}
+
+.m3-status-dot {
+    background: currentcolor;
+}
+
+.status-dot {
+    background: currentColor;
+}
+
+:where(
+    .m3-status-dot.pulse::after,
+    .status-dot.pulse::after
+) {
+    background: inherit;
+}
+
+:where(
+    .card-interactive::before,
+    .m3-card-interactive::before
+) {
+    background: linear-gradient(
+        135deg,
+        var(--md-sys-color-surface) 0%,
+        var(--md-sys-color-surface) 40%,
+        transparent 100%
+    );
+}
+
+.attract-loop-overlay {
+    background: linear-gradient(
+        180deg,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.2) 0%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.5) 50%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.92) 100%
+    );
+}
+
+.m3-skeleton::after {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.45) 50%,
+        transparent 100%
+    );
+}
+
+.btn-macos {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-on-surface-variant) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-on-surface-variant) 35%, transparent) 100%);
+}
+
+.btn-windows {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent) 100%);
+}
+
+.btn-bot {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-primary) 25%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-tertiary) 25%, transparent) 100%);
+}
+
+.btn-android {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-secondary) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-secondary) 35%, transparent) 100%);
+}
+
+.btn-web {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent) 100%);
+}
+
+.btn-ios {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-tertiary) 35%, transparent) 100%);
+}
+
+.ux-tab-btn.active {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-tertiary) 50%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-primary) 50%, transparent) 100%);
+}
+
+.stage-tab.active {
+    background: linear-gradient(135deg, rgb(from var(--md-sys-color-primary) r g b / 0.25) 0%, rgb(from var(--md-sys-color-tertiary) r g b / 0.25) 100%);
+}
+
+.organizations-map-controls {
+    background: linear-gradient(135deg, rgb(from var(--md-sys-color-surface) r g b / 0.9), rgb(from var(--md-sys-color-surface) r g b / 0.8));
+}
+
+.hero-cta {
+    background: linear-gradient(135deg, rgb(from var(--md-sys-color-tertiary) r g b / 0.32) 0%, var(--md-sys-color-tertiary) 50%, rgb(from var(--md-sys-color-primary) r g b / 0.3) 100%);
+}
+
+.hero-cta:hover {
+    background: linear-gradient(135deg, rgb(from var(--md-sys-color-tertiary) r g b / 0.46) 0%, var(--md-sys-color-tertiary) 50%, rgb(from var(--md-sys-color-primary) r g b / 0.42) 100%);
+}
+
+.place-details-avatar.org {
+    background: linear-gradient(135deg, var(--md-sys-color-error-container), var(--md-sys-color-surface-container-high));
+}
+
+:where(
+    .section-title-box h2,
+    .showcase-hero h1
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 100%);
+}
+
+.b2b-lead-content h2 {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 50%, var(--md-sys-color-primary) 100%);
+}
+
+header.landing-header .header-brand-text {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 60%, var(--md-sys-color-primary) 100%);
+}
+
+.download-header h2 {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-primary) 50%, var(--md-sys-color-tertiary) 100%);
+}
+
+.evolution-header h2 {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-tertiary) 100%);
+}
+
+.brand-title {
+    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 30%, var(--md-sys-color-primary) 100%);
+}
+
+.btn-macos:hover {
+    background: linear-gradient(135deg, var(--md-sys-color-outline) 0%, var(--md-sys-color-on-surface-variant) 100%);
+}
+
+.place-details-avatar {
+    background: linear-gradient(135deg, var(--md-sys-color-primary-container), var(--md-sys-color-surface-container-high));
+}
+
+.header-icon-wrap {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
+}
+
+:where(
+    .btn-windows:hover,
+    .ux-tab-btn.cat-tab-retail.active
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary) 100%);
+}
+
+:where(
+    .btn-bot:hover,
+    .footer-brand-badge,
+    .landing-auth-btn,
+    .landing-auth-btn:hover,
+    .m3-text-gradient,
+    .ux-modal-btn-primary,
+    .value-cyan,
+    .value-teal,
+    header.landing-header .header-brand-icon-box
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+}
+
+:where(
+    .auth-logo-badge,
+    .landing-floating-auth-btn,
+    .landing-floating-auth-btn:hover,
+    .showcase-brand-badge,
+    .sidebar-brand-icon,
+    .signin-logo-badge
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+}
+
+.value-emerald {
+    background: linear-gradient(135deg, var(--md-sys-color-secondary) 0%, var(--md-sys-color-primary) 100%);
+}
+
+.btn-web:hover {
+    background: linear-gradient(135deg, var(--md-sys-color-success, var(--md-sys-color-primary)) 0%, var(--md-sys-color-primary) 100%);
+}
+
+:where(
+    .btn-android:hover,
+    .ux-tab-btn.cat-tab-fintech.active
+) {
+    background: linear-gradient(135deg, var(--md-sys-color-success, var(--md-sys-color-primary)) 0%, var(--md-sys-color-secondary) 100%);
+}
+
+.kiosk-hero {
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
+}
+
+.cta-card {
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-high) 100%);
+}
+
+.ux-tab-btn.cat-tab-services.active {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, rgb(from var(--md-sys-color-tertiary) r g b / 0.55) 100%);
+}
+
+.footer-logo {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-primary) 100%);
+}
+
+.primary-cta {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-primary) 50%, var(--md-sys-color-primary) 100%);
+}
+
+.title-gradient {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-primary) 50%, var(--md-sys-color-secondary) 100%);
+}
+
+.value-purple {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-secondary) 100%);
+}
+
+.btn-ios:hover {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-tertiary) 100%);
+}
+
+.ux-tab-btn.cat-tab-hospitality.active {
+    background: linear-gradient(135deg, var(--md-sys-color-warning, var(--md-sys-color-tertiary)) 0%, var(--md-sys-color-warning, var(--md-sys-color-tertiary)) 100%);
+}
+
+:where(
+    .bento-card-analytics,
+    .bento-card-pos
+) {
+    background: linear-gradient(145deg, color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent) 70%);
+}
+
+.org-card-demo {
+    background: linear-gradient(145deg, color-mix(in srgb, var(--md-sys-color-secondary) 12%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent) 60%);
+}
+
+.org-card-socratic {
+    background: linear-gradient(145deg, color-mix(in srgb, var(--md-sys-color-tertiary) 12%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent) 40%, color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent) 80%);
+}
+
+.showcase-hero {
+    background: linear-gradient(180deg, rgb(from var(--md-sys-color-surface-container-high) r g b / 0.3) 0%, transparent 100%);
+}
+
+.map-toolbar {
+    background: linear-gradient(180deg, var(--map-surface-strong), rgb(from var(--map-surface) r g b / 0.88));
+}
+
+:where(
+    md-elevated-card::before,
+    md-filled-card::before,
+    md-outlined-card::before
+) {
+    background: linear-gradient(90deg, transparent 0%, var(--md-sys-color-surface-tint) 50%, transparent 100%);
+}
+
+.ux-spotlight-card::before {
+    background: linear-gradient(90deg, transparent, var(--cat-accent, var(--md-sys-color-primary)), transparent);
+}
+
+.card-instant .qr-laser-scanner {
+    background: linear-gradient(90deg, transparent, var(--md-sys-color-primary) 30%, var(--md-sys-color-tertiary) 50%, var(--md-sys-color-primary) 70%, transparent);
+}
+
+.faceid-scanner-frame.scanning::after {
+    background: linear-gradient(90deg, transparent, var(--md-sys-color-tertiary), transparent);
+}
+
+.bg-top-blender {
+    background: linear-gradient(to bottom, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface-container-lowest) 70%, transparent 100%);
+}
+
+:where(
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .route-close,
+    .thumb-btn,
+    button.col-title,
+    input[type="color"]
+) {
+    background: none;
+}
+
+.paginator nav button {
+    background: none center center / 1rem no-repeat;
+}
+
+:where(
+    .bento-card::before,
+    .evolution-card::before,
+    .feature-card::before,
+    .glass::before,
+    .hero-card::before,
+    .industry-card::before,
+    .org-card::before,
+    .platform-card::before,
+    .spatial-subcard::before,
+    .spatial-wing-card::before,
+    .ux-mode-card::before
+) {
+    background: radial-gradient(
+        480px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+        rgb(from var(--md-sys-color-primary) r g b / 0.28) 0%,
+        rgb(from var(--md-sys-color-tertiary) r g b / 0.16) 35%,
+        transparent 65%
+    );
+}
+
+.bg-spotlight-hero {
+    background: radial-gradient(
+        circle,
+        rgb(from var(--md-sys-color-primary) r g b / 0.18) 0%,
+        var(--md-sys-color-tertiary) 45%,
+        transparent 70%
+    );
+}
+
+.cursor-glow-orb {
+    background: radial-gradient(
+        circle,
+        rgb(from var(--md-sys-color-primary) r g b / 0.22) 0%,
+        rgb(from var(--md-sys-color-tertiary) r g b / 0.14) 35%,
+        var(--md-sys-color-tertiary) 55%,
+        transparent 72%
+    );
+}
+
+.bg-spotlight-bento {
+    background: radial-gradient(
+        circle,
+        rgb(from var(--md-sys-color-tertiary) r g b / 0.14) 0%,
+        rgb(from var(--md-sys-color-primary) r g b / 0.06) 50%,
+        transparent 70%
+    );
+}
+
+.bg-base-gradient {
+    background: radial-gradient(120% 90% at 50% 0%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface-container-lowest) 55%, var(--md-sys-color-surface-container-lowest) 100%);
+}
+
+.chat-page-root {
+    background: radial-gradient(circle at 50% 15%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface) 100%);
+}
+
+.bg-radial-vignette {
+    background: radial-gradient(circle at center, transparent 40%, var(--md-sys-color-surface-container-lowest) 96%);
+}
+
+.kiosk-hero::before {
+    background: radial-gradient(circle, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, transparent 70%);
+}
+
+.glow-cyan-purple {
+    background: radial-gradient(circle, rgb(from var(--md-sys-color-primary) r g b / 0.28) 0%, rgb(from var(--md-sys-color-tertiary) r g b / 0.16) 55%, transparent 75%);
+}
+
+.glow-teal-cyan {
+    background: radial-gradient(circle, rgb(from var(--md-sys-color-secondary) r g b / 0.24) 0%, rgb(from var(--md-sys-color-primary) r g b / 0.14) 55%, transparent 75%);
+}
+
+.glow-purple-indigo {
+    background: radial-gradient(circle, rgb(from var(--md-sys-color-tertiary) r g b / 0.26) 0%, var(--md-sys-color-tertiary) 55%, transparent 75%);
+}
+
+.audio-call-visualizer {
+    background: radial-gradient(circle, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface-container-lowest) 70%);
+}
+
+.map-route-dots-line {
+    background: repeating-linear-gradient(to bottom, var(--md-sys-color-outline-variant) 0, var(--md-sys-color-outline-variant) 3px, transparent 3px, transparent 6px);
+}
+
+.place-details-divider {
+    background: rgb(from var(--map-border) r g b / 0.45);
+}
+
+.map-place-details-card {
+    background: rgb(from var(--map-primary-container) r g b / 0.2);
+}
+
+.map-route-suggestion-button:hover {
+    background: rgb(from var(--map-primary-container) r g b / 0.42);
+}
+
+.map-route-suggestion-item.active .map-route-suggestion-button {
+    background: rgb(from var(--map-primary-container) r g b / 0.5);
+}
+
+.route-alternative-card:hover {
+    background: rgb(from var(--map-primary) r g b / 0.02);
+}
+
+.route-alternative-card.active {
+    background: rgb(from var(--map-primary) r g b / 0.05);
+}
+
+.map-action-button.primary:hover:not(:disabled) {
+    background: rgb(from var(--map-primary) r g b / 0.88);
+}
+
+:where(
+    .map-route-close-btn:hover,
+    .map-route-remove-via-btn:hover
+) {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.1);
+}
+
+.route-error {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.12);
+}
+
+.nav-control-btn.finish {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.2);
+}
+
+.nav-control-btn.finish:hover {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.32);
+}
+
+.badge-age-restriction {
+    background: rgb(from var(--md-sys-color-error) r g b / 0.9);
+}
+
+.nav-control-btn {
+    background: rgb(from var(--md-sys-color-inverse-on-surface) r g b / 0.08);
+}
+
+.nav-control-btn:hover {
+    background: rgb(from var(--md-sys-color-inverse-on-surface) r g b / 0.16);
+}
+
+.navigator-maneuver-bar {
+    background: rgb(from var(--md-sys-color-inverse-surface) r g b / 0.94);
+}
+
+.m3-filter-chip-count {
+    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.1);
+}
+
+.map-route-close-btn {
+    background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.6);
+}
+
+.footer-links-list a:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
+}
+
+:where(
+    .lang-chip-btn:hover,
+    .lang-menu-item.is-selected
+) {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+:where(
+    .feature-badge,
+    .hero-badge,
+    .section-badge,
+    .showcase-brand-icon,
+    .showcase-lib-badge
+) {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+
+.badge-cyan {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.15);
+}
+
+.maneuver-icon-container {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.2);
+}
+
+.nav-control-btn.active {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.25);
+}
+
+.route-start-btn:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.85);
+}
+
+.m3x-btn-pill.primary:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.92);
+}
+
+.file-overlay {
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
+}
+
+:where(
+    .m3-dialog-backdrop,
+    .m3-modal-backdrop
+) {
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+}
+
+:where(
+    .badge-teal,
+    .m3-pill-badge.secondary
+) {
+    background: rgb(from var(--md-sys-color-secondary) r g b / 0.15);
+}
+
+.landing-mobile-menu-backdrop {
+    background: rgb(from var(--md-sys-color-shadow, var(--md-sys-color-shadow, black)) r g b / 0.65);
+}
+
+.bento-media {
+    background: rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+}
+
+.hero-stage-screen {
+    background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+}
+
+.showcase-stat-pill {
+    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
+}
+
+.ad-network-unit-card {
+    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.85);
+}
+
+.showcase-nav-btn:hover {
+    background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.5);
+}
+
+.showcase-nav-count {
+    background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.6);
+}
+
+:where(
+    .map-route-input.dragging,
+    .map-route-profile-row
+) {
+    background: rgb(from var(--md-sys-color-surface-container-low) r g b / 0.8);
+}
+
+.nearby-results-panel {
+    background: rgb(from var(--md-sys-color-surface-container-low) r g b / 0.85);
+}
+
+.lang-toggle-btn {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.04);
+}
+
+.landing-mobile-menu-toggle {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.05);
+}
+
+.showcase-sidebar-header {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.4);
+}
+
+:where(
+    .chat-container,
+    .footer-system-status,
+    .lang-pill-btn
+) {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+}
+
+.showcase-topbar {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.75);
+}
+
+.floating-chip {
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.88);
+}
+
+.landing-header-nav {
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.03);
+}
+
+:where(
+    .chat-back-link,
+    .landing-nav-link:hover,
+    .mobile-nav-divider
+) {
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.08);
+}
+
+.chat-back-link:hover {
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.18);
+}
+
+.secondary-cta {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.08);
+}
+
+.brand-screensaver-logo-wrapper {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.1);
+}
+
+.screensaver-pro-badge {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
+}
+
+.secondary-cta:hover {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.16);
+}
+
+.map-route-profile-chip:hover {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.6);
+}
+
+.map-category-chip {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.7);
+}
+
+.route-button {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.72);
+}
+
+header.app-header {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+}
+
+:where(
+    .search-bar,
+    .yandex-ctrl-btn,
+    .yandex-zoom-card
+) {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.9);
+}
+
+:where(
+    .map-panel-toggle-tab,
+    .map-route-inputs,
+    .map-route-suggestions
+) {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.95);
+}
+
+:where(
+    .map-topbar,
+    .navigator-stats-bar
+) {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.96);
+}
+
+.share-toast {
+    background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
+}
+
+.badge-purple {
+    background: rgb(from var(--md-sys-color-tertiary) r g b / 0.15);
+}
+
+.tertiary-cta {
+    background: rgb(from var(--md-sys-color-tertiary) r g b / 0.18);
+}
+
+.tertiary-cta:hover {
+    background: rgb(from var(--md-sys-color-tertiary) r g b / 0.3);
+}
+
+:where(
+    ::-webkit-scrollbar-track,
+    .ai-blob-canvas svg,
+    .analytics-mode-btn,
+    .back-button,
+    .chat-input-wrapper textarea,
+    .det-btn-icon-sm,
+    .docs-refresh-btn,
+    .input-box textarea,
+    .lang-chip-btn,
+    .lang-menu-item,
+    .m3-back-button,
+    .m3-scroll-thin::-webkit-scrollbar-track,
+    .m3-segmented-btn,
+    .m3x-btn-pill.outlined,
+    .map-global-suggestion-button,
+    .map-route-profile-chip,
+    .map-route-remove-via-btn,
+    .map-route-suggestion-button,
+    .md3-time-input,
+    .picker-hex-input,
+    .product-detail-card,
+    .route-alternative-action,
+    .scroll-thin::-webkit-scrollbar-track,
+    .search-clear-btn,
+    .search-input,
+    .search-route-btn,
+    .showcase-card-btn,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn,
+    .stage-tab,
+    .unified-kiosk-filter-bar,
+    .ux-search-box input,
+    svg.ai-blob-svg
+) {
+    background: transparent;
+}
+
+.col-options-button {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 21 24" stroke="%2379747e" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" /></svg>') center center / 1rem no-repeat;
+}
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, var(--md-sys-color-error);
+}
+
+.spotlight-dot {
+    background: var(--cat-accent, var(--md-sys-color-primary));
+}
+
+.ux-mode-launch-btn:hover {
+    background: var(--cat-btn-hover, linear-gradient(135deg, rgb(from var(--md-sys-color-tertiary) r g b / 0.85) 0%, var(--md-sys-color-primary) 100%));
+}
+
+.spotlight-launch-btn:hover {
+    background: var(--cat-btn-hover, linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary) 100%));
+}
+
+:where(
+    .spotlight-icon-box,
+    .ux-mode-icon-box
+) {
+    background: var(--cat-icon-bg, rgb(from var(--md-sys-color-primary) r g b / 0.12));
+}
+
+.spotlight-pill {
+    background: var(--cat-pill-bg, rgb(from var(--md-sys-color-primary) r g b / 0.12));
+}
+
+.ux-mode-card:hover {
+    background: var(--landing-surface-hover, var(--md-sys-color-surface-container-high));
+}
+
+.glass {
+    background: var(--landing-surface, rgb(from var(--md-sys-color-surface-container) r g b / 0.78));
+}
+
+.hero-stage-card {
+    background: var(--landing-surface, rgb(from var(--md-sys-color-surface-container) r g b / 0.84));
+}
+
+.ux-mode-card {
+    background: var(--landing-surface, var(--md-sys-color-surface-container));
+}
+
+:where(
+    .map-route-add-via-btn:hover,
+    .map-route-swap-btn:hover,
+    .place-details-back-btn:hover,
+    .search-route-btn:hover
+) {
+    background: var(--map-primary-container);
+}
+
+:where(
+    .click-popup-btn,
+    .map-action-button.primary,
+    .map-category-chip.active,
+    .search-route-btn.active,
+    .yandex-ctrl-btn.active
+) {
+    background: var(--map-primary);
+}
+
+.click-popup-btn-secondary {
+    background: var(--map-surface-container-low);
+}
+
+:where(
+    .organizations-route-panel,
+    .selected-org-card
+) {
+    background: var(--map-surface-soft);
+}
+
+.place-details-back-btn {
+    background: var(--map-surface-strong, var(--md-sys-color-on-primary));
+}
+
+:where(
+    .map-action-button:hover:not(:disabled),
+    .map-panel-toggle,
+    .search-clear-btn:hover
+) {
+    background: var(--map-surface-strong);
+}
+
+:where(
+    .map-action-button,
+    .map-measure-badge,
+    .yandex-ctrl-btn:hover
+) {
+    background: var(--map-surface);
+}
+
+:where(
+    .showcase-content,
+    body,
+    html
+) {
+    background: var(--md-sys-color-background);
+}
+
+:where(
+    .auth-error-banner,
+    .badge-blocked,
+    .badge-expired,
+    .badge-none,
+    .badge-with-ads,
+    .badge.blocked,
+    .badge.expired,
+    .badge.none,
+    .badge.with-ads,
+    .det-diag-box-warning,
+    .det-status-badge:not(.active),
+    .error-banner,
+    .item-status-pill.status-canceled,
+    .kiosk-wish-icon.wished,
+    .m3-banner-error,
+    .m3-status-badge.canceled,
+    .m3-status-badge.error,
+    .m3-status-badge.status-canceled,
+    .order-status-badge.status-canceled,
+    .place-details-badge.org,
+    .required-badge,
+    .signin-error-banner,
+    #blazor-error-ui
+) {
+    background: var(--md-sys-color-error-container);
+}
+
+.status-busy {
+    background: var(--md-sys-color-error);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-on-surface-variant);
+}
+
+:where(
+    ::-webkit-scrollbar-thumb,
+    .auth-divider::after,
+    .auth-divider::before,
+    .m3-scroll-thin::-webkit-scrollbar-thumb,
+    .m3-summary-divider,
+    .scroll-thin::-webkit-scrollbar-thumb,
+    .spec-divider,
+    .summary-divider
+) {
+    background: var(--md-sys-color-outline-variant);
+}
+
+:where(
+    .analytics-period-chip.active,
+    .badge-completed,
+    .badge-ready,
+    .badge-trial,
+    .badge-verified,
+    .badge.completed,
+    .badge.trial,
+    .badge.verified,
+    .booking-summary-banner,
+    .card-completed .card-status-chip,
+    .card-paid .card-status-chip,
+    .catalog-badge,
+    .click-popup-btn-secondary:hover,
+    .det-logo-badge,
+    .det-status-badge.active,
+    .header-brand-icon-box,
+    .item-qty-badge,
+    .item-status-pill.status-completed,
+    .item-status-pill.status-paid,
+    .kds-status-tag,
+    .kiosk-brand-logo-fallback,
+    .m3-avatar,
+    .m3-mode-toggle-figure,
+    .m3-pill-badge,
+    .m3-status-badge.completed,
+    .m3-status-badge.paid,
+    .m3-status-badge.status-completed,
+    .m3-status-badge.status-paid,
+    .m3-status-badge.success,
+    .mode-edit,
+    .mode-toggle-figure,
+    .notification-banner,
+    .order-status-badge.status-completed,
+    .order-status-badge.status-paid,
+    .picker-icon-badge.active,
+    .pillar-icon-box,
+    .preset-btn:hover,
+    .qrg-badge,
+    .qrg-logo-badge,
+    .ready-badge,
+    .showcase-nav-btn.active,
+    .status-badge.active,
+    .upload-card.dragging,
+    .user-message
+) {
+    background: var(--md-sys-color-primary-container);
+}
+
+:where(
+    .ad-slide-touch-prompt,
+    .assistant-message-icon,
+    .badge-counter,
+    .brand-screensaver-cta,
+    .btn-ready,
+    .chip-dot-cyan,
+    .det-bbox-label,
+    .dot-cyan,
+    .lang-chip-btn.lang-chip--active,
+    .live-pulse-dot,
+    .m3-dialog-btn-primary,
+    .m3x-btn-pill.primary,
+    .mobile-nav-item:active,
+    .mobile-nav-item:hover,
+    .new-badge,
+    .picker-day-dot.active,
+    .route-start-btn,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .ux-discount-badge,
+    header.landing-header .header-brand-link:hover
+) {
+    background: var(--md-sys-color-primary);
+}
+
+:where(
+    .analytics-mode-btn.active,
+    .back-button:focus-visible,
+    .back-button:hover,
+    .badge-active,
+    .badge.active,
+    .card-collecting .card-status-chip,
+    .det-permission-rationale,
+    .drawer-header .badge,
+    .item-status-pill.status-collected,
+    .item-status-pill.status-collecting,
+    .item-status-pill.status-shipping,
+    .link-stack a:hover,
+    .link-stack article:hover,
+    .m3-back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-count-badge,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    .m3-segmented-btn.active,
+    .m3-status-badge.collected,
+    .m3-status-badge.collecting,
+    .m3-status-badge.info,
+    .m3-status-badge.shipping,
+    .m3-status-badge.status-collected,
+    .m3-status-badge.status-collecting,
+    .m3-status-badge.status-shipping,
+    .m3x-card-tonal,
+    .order-status-badge.status-collected,
+    .order-status-badge.status-collecting,
+    .order-status-badge.status-shipping,
+    .otp-target-hint,
+    .pos-exact-bill-btn,
+    .ux-widget-group
+) {
+    background: var(--md-sys-color-secondary-container);
+}
+
+.status-reserved {
+    background: var(--md-sys-color-secondary);
+}
+
+.chip-dot-emerald {
+    background: var(--md-sys-color-success, var(--md-sys-color-primary));
+}
+
+:where(
+    .analytics-config-btn,
+    .analytics-date-picker-trigger:hover,
+    .analytics-mode-pill-group,
+    .auth-card,
+    .avatar-pulse,
+    .badge-cancelled,
+    .badge.cancelled,
+    .canvas-card,
+    .card-created .card-status-chip,
+    .cart-bar,
+    .col-options,
+    .column-badge,
+    .count-badge,
+    .det-btn-icon-sm:hover,
+    .det-stat-item,
+    .drawer-panel,
+    .drop-container:hover,
+    .empty-plans-icon-wrapper,
+    .hero-pill-link:hover,
+    .item-icon-wrapper,
+    .item-status-pill.status-created,
+    .item-status-pill.status-made,
+    .items-count-badge,
+    .kiosk-brand-tagline,
+    .landing-floating-controls,
+    .landing-mobile-menu-toggle:hover,
+    .lang-dropdown-menu,
+    .lang-inline-grid,
+    .lang-pill-btn:hover,
+    .lang-toggle-btn:hover,
+    .m3-center-box,
+    .m3-dialog-close-btn,
+    .m3-dialog-toggle-item:hover,
+    .m3-drawer-panel,
+    .m3-filter-chip:hover,
+    .m3-period-picker-trigger:hover,
+    .m3-segmented-pill-group,
+    .m3-selection-panel,
+    .m3-status-badge.created,
+    .m3-status-badge.made,
+    .m3-status-badge.status-created,
+    .m3-status-badge.status-made,
+    .m3x-btn-pill.outlined:hover,
+    .m3x-card-elevated,
+    .md3-closed-badge,
+    .order-status-badge.status-created,
+    .order-status-badge.status-made,
+    .orders-table th,
+    .picker-badge,
+    .plan-card.selected,
+    .pos-quick-bill-btn,
+    .pos-tech-chip,
+    .product-main-image-wrap,
+    .seat-selection-card,
+    .session-item,
+    .sidebar-link:hover,
+    .signin-card,
+    .store-seller-card,
+    .table-container th,
+    .table-container th.actions-column,
+    .tier-box.active-tier,
+    .upload-card:hover,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-quote,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    md-dialog > *,
+    md-elevated-card:hover,
+    md-filled-card:hover,
+    md-outlined-card:hover,
+    table.quickgrid th,
+    table.quickgrid th.actions-column
+) {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+:where(
+    .analytics-config-btn:hover,
+    .analytics-mode-btn:hover,
+    .analytics-period-chip:hover,
+    .canvas-wrapper,
+    .current-plan-indicator,
+    .det-diag-box,
+    .det-logs-console,
+    .lang-menu-item:hover,
+    .m3-card-media,
+    .m3-dialog-close-btn:hover,
+    .m3-segmented-btn:hover,
+    .option-item-row:hover,
+    .orders-table tr:hover,
+    .org-media,
+    .picker-day-dot,
+    .picker-icon-badge,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-quick-bill-btn:hover,
+    .product-img-placeholder,
+    .product-media,
+    .product-tag-chip,
+    .route-close:hover,
+    .seller-logo-placeholder,
+    .showcase-card-btn:hover,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea,
+    .status-badge.inactive,
+    .table-container tr:hover td,
+    .table-container tr:hover td.actions-column,
+    .wishlist-media,
+    md-elevated-card figure,
+    md-filled-card figure,
+    md-outlined-card figure,
+    table.quickgrid tr:hover td,
+    table.quickgrid tr:hover td.actions-column
+) {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+:where(
+    .active-orders-tabs,
+    .analytics-explorer-section,
+    .app-grid > nav,
+    .booking-picker-card,
+    .card-elevated,
+    .cart-items-list,
+    .catalog-sidebar,
+    .det-sidebar,
+    .example-card,
+    .faceid-scanner-frame,
+    .faq-card,
+    .kanban-column,
+    .kds-column,
+    .m3-card-elevated,
+    .m3-dialog-toggle-item,
+    .m3-empty-state,
+    .m3-explorer-section,
+    .m3-fieldset,
+    .m3-kanban-column,
+    .m3-summary-card,
+    .md3-presets-section,
+    .md3-schedule-day-card,
+    .options-list-container,
+    .picker-compact-box,
+    .picker-trigger-card,
+    .pillar-card,
+    .qr-controls-panel,
+    .qrg-sidebar,
+    .showcase-card,
+    .showcase-card-body,
+    .showcase-sidebar,
+    .summary-card,
+    .tech-card,
+    .upload-card,
+    footer.app-footer
+) {
+    background: var(--md-sys-color-surface-container-low);
+}
+
+:where(
+    .card-instant .qr-preview-box,
+    .det-display-area,
+    .file-info,
+    .hero-stage-tabs,
+    .kiosk-brand-logo,
+    .landing-mobile-menu-drawer,
+    .local-video-pip,
+    .md3-schedule-day-card.active,
+    .qr-stage,
+    .showcase-card-code,
+    .video-grid,
+    .video-player-wrapper,
+    header.app-header.landing-header
+) {
+    background: var(--md-sys-color-surface-container-lowest);
+}
+
+:where(
+    .link-stack,
+    section.link-stack
+) {
+    background: var(--md-sys-color-surface-container, var(--md-sys-color-surface));
+}
+
+:where(
+    .ad-slot-container,
+    .analytics-date-picker-trigger,
+    .analytics-period-chip,
+    .analytics-status-pill,
+    .avatar-container md-list,
+    .card-filled,
+    .contact-card,
+    .designer-header,
+    .det-card,
+    .det-preview-card,
+    .hero-pill-link,
+    .invoice-summary-box,
+    .kiosk-empty-state,
+    .m3-card,
+    .m3-card-filled,
+    .m3-config-dialog,
+    .m3-dialog-surface,
+    .m3-filter-chip,
+    .m3-period-picker-trigger,
+    .m3-skeleton,
+    .m3-table-wrapper,
+    .m3x-card,
+    .order-items-table-wrapper,
+    .paginator,
+    .picker-popover-panel,
+    .plan-card,
+    .pos-empty-state,
+    .preview-card,
+    .product-preview-pill,
+    .qr-designer-header,
+    .qrg-back:hover,
+    .qrg-customizer,
+    .qty-stepper,
+    .shipping-card,
+    .showcase-card-header,
+    .showcase-controls-bar,
+    .table-container,
+    .table-container > .paginator,
+    .tier-box,
+    .video-card,
+    code,
+    md-dialog.contacts md-list,
+    md-dialog.faceid-profile-modal md-list,
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card
+) {
+    background: var(--md-sys-color-surface-container);
+}
+
+.resolution-badge {
+    background: var(--md-sys-color-surface-variant);
+}
+
+:where(
+    .card-outlined,
+    .designer-page-root,
+    .det-layout,
+    .det-main,
+    .det-preview-container,
+    .m3-card-outlined,
+    .m3-nav-rail,
+    .map-category-chip:hover,
+    .map-global-suggestions,
+    .map-panel-toggle-tab:hover,
+    .map-route-add-via-btn,
+    .map-route-input,
+    .map-route-input:focus-within,
+    .map-route-profile-chip.active,
+    .map-route-swap-btn,
+    .md3-time-picker-box,
+    .picker-hex-wrapper,
+    .pos-main,
+    .preset-btn,
+    .qr-designer-page-root,
+    .qrg-layout,
+    .qrg-preview,
+    .route-alternative-card,
+    .route-options-toolbar-btn,
+    .search-bar:focus-within,
+    .seat-designer-page-root,
+    .select-input,
+    .table-container > table,
+    .table-container td,
+    .table-container td.actions-column,
+    .text-input,
+    main.docs-page,
+    main.showcase-page,
+    table.quickgrid,
+    table.quickgrid td,
+    table.quickgrid td.actions-column
+) {
+    background: var(--md-sys-color-surface);
+}
+
+:where(
+    .badge-making,
+    .badge-paused,
+    .badge-pro,
+    .badge.paused,
+    .badge.pro,
+    .card-making .card-status-chip,
+    .card-shipping .card-status-chip,
+    .current-plan-indicator.pro,
+    .item-status-pill.status-making,
+    .m3-pill-badge.tertiary,
+    .m3-status-badge.making,
+    .m3-status-badge.status-making,
+    .m3-status-badge.warning,
+    .mode-preview,
+    .order-status-badge.status-making,
+    .place-details-badge.place,
+    .ux-widget-auction
+) {
+    background: var(--md-sys-color-tertiary-container);
+}
+
+:where(
+    .badge-indigo,
+    .btn-complete,
+    .chip-dot-purple,
+    .dot-emerald,
+    .popular-badge,
+    .pro-tag,
+    .qr-status-dot,
+    .status-free,
+    .status-pulse-dot
+) {
+    background: var(--md-sys-color-tertiary);
+}
+
+.spotlight-header-badge {
+    background: var(--md-sys-color-warning, var(--md-sys-color-tertiary));
+}
+
+:where(
+    .m3-drawer-backdrop,
+    .md-drawer-backdrop
+) {
+    background: var(--md-sys-glass-backdrop, rgb(from var(--md-sys-color-scrim) r g b / 0.32));
+}
+
+:where(
+    .card-glass,
+    .glass-card,
+    .m3-card-glass
+) {
+    background: var(--md-sys-glass-surface-container);
+}
+
+.m3-bottom-nav {
+    background: var(--md-sys-glass-surface);
+}
+
+:where(
+    .cart-items-container::-webkit-scrollbar-thumb:hover,
+    .dialog-content::-webkit-scrollbar-thumb:hover,
+    .dropdown-menu::-webkit-scrollbar-thumb:hover,
+    .lang-menu-list::-webkit-scrollbar-thumb:hover,
+    .m3-config-dialog::-webkit-scrollbar-thumb:hover,
+    .m3-dialog-body::-webkit-scrollbar-thumb:hover,
+    .m3-dialog-surface::-webkit-scrollbar-thumb:hover,
+    .map-panel-content::-webkit-scrollbar-thumb:hover,
+    .options-container::-webkit-scrollbar-thumb:hover,
+    .order-summary-list::-webkit-scrollbar-thumb:hover,
+    .orders-table-wrapper::-webkit-scrollbar-thumb:hover,
+    .picker-popover-body::-webkit-scrollbar-thumb:hover,
+    .product-thumbnails::-webkit-scrollbar-thumb:hover,
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover,
+    .select-options::-webkit-scrollbar-thumb:hover,
+    .table-container::-webkit-scrollbar-thumb:hover,
+    .table-scroll-container::-webkit-scrollbar-thumb:hover,
+    table.quickgrid::-webkit-scrollbar-thumb:hover
+) {
+    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
+}
+
+:where(
+    .cart-items-container::-webkit-scrollbar-thumb,
+    .dialog-content::-webkit-scrollbar-thumb,
+    .dropdown-menu::-webkit-scrollbar-thumb,
+    .lang-menu-list::-webkit-scrollbar-thumb,
+    .m3-config-dialog::-webkit-scrollbar-thumb,
+    .m3-dialog-body::-webkit-scrollbar-thumb,
+    .m3-dialog-surface::-webkit-scrollbar-thumb,
+    .map-panel-content::-webkit-scrollbar-thumb,
+    .options-container::-webkit-scrollbar-thumb,
+    .order-summary-list::-webkit-scrollbar-thumb,
+    .orders-table-wrapper::-webkit-scrollbar-thumb,
+    .picker-popover-body::-webkit-scrollbar-thumb,
+    .product-thumbnails::-webkit-scrollbar-thumb,
+    .scrollbar-thin::-webkit-scrollbar-thumb,
+    .select-options::-webkit-scrollbar-thumb,
+    .table-container::-webkit-scrollbar-thumb,
+    .table-scroll-container::-webkit-scrollbar-thumb,
+    table.quickgrid::-webkit-scrollbar-thumb
+) {
+    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
+}
+
+:where(
+    .cart-items-container::-webkit-scrollbar-track,
+    .dialog-content::-webkit-scrollbar-track,
+    .dropdown-menu::-webkit-scrollbar-track,
+    .lang-menu-list::-webkit-scrollbar-track,
+    .m3-config-dialog::-webkit-scrollbar-track,
+    .m3-dialog-body::-webkit-scrollbar-track,
+    .m3-dialog-surface::-webkit-scrollbar-track,
+    .map-panel-content::-webkit-scrollbar-track,
+    .options-container::-webkit-scrollbar-track,
+    .order-summary-list::-webkit-scrollbar-track,
+    .orders-table-wrapper::-webkit-scrollbar-track,
+    .picker-popover-body::-webkit-scrollbar-track,
+    .product-thumbnails::-webkit-scrollbar-track,
+    .scrollbar-thin::-webkit-scrollbar-track,
+    .select-options::-webkit-scrollbar-track,
+    .table-container::-webkit-scrollbar-track,
+    .table-scroll-container::-webkit-scrollbar-track,
+    table.quickgrid::-webkit-scrollbar-track
+) {
+    background: var(--md-sys-scrollbar-color-track, transparent);
+}
+
+@media (max-width: 599.98px) {
+    :where(
+        .organizations-map-controls,
+        .organizations-map-controls.collapsed
+    ) {
+        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+    }
+
+    .map-mobile-backdrop {
+        background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+    }
+
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab
+    ) {
+        background: transparent;
+    }
+
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab::after,
+        .organizations-map-controls.expanded .map-panel-toggle-tab::after
+    ) {
+        background: var(--map-border-strong, var(--md-sys-color-outline-variant));
+    }
+
+}
+
+@media (max-width: 839.98px) {
+    .showcase-sidebar-backdrop {
+        background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    :where(
+        nav a.nav-item.active md-icon,
+        nav.glass a.nav-item.active md-icon
+    ) {
+        background: var(--md-sys-color-secondary-container);
+    }
+
+    :where(
+        .app-grid > nav,
+        nav,
+        nav.glass,
+        nav.nav-desktop,
+        nav.nav-mobile
+    ) {
+        background: var(--md-sys-color-surface-container);
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+        nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+        nav.nav-desktop a.nav-item.active md-icon
+    ) {
+        background: var(--md-sys-color-secondary-container);
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+        nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+        nav.nav-desktop a.nav-item:hover md-icon
+    ) {
+        background: var(--md-sys-color-surface-container-highest);
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.nav-desktop
+    ) {
+        background: var(--md-sys-color-surface-container-low);
+    }
+
+}
+
+@supports (-webkit-touch-callout: none) {
+    .status-bar-safe-area {
+        background-color: var(--md-sys-color-surface);
+    }
+
+}
+

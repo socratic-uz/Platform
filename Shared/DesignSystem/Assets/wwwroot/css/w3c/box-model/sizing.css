@@ -1,0 +1,3349 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/box-model/sizing.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:root {
+    --map-fab-size: 2.28rem;
+}
+
+.pay-button {
+    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk, 56px);
+}
+
+:where(
+    .m3-counter button,
+    .m3-counter md-filled-button,
+    .m3-counter md-outlined-button,
+    .material-counter button,
+    .material-counter md-filled-button,
+    .material-counter md-outlined-button
+) {
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+}
+
+.pay-button {
+    --md-filled-button-label-text-size: 1.05rem;
+}
+
+:where(
+    .m3-counter button,
+    .m3-counter md-filled-button,
+    .m3-counter md-outlined-button,
+    .material-counter button,
+    .material-counter md-filled-button,
+    .material-counter md-outlined-button
+) {
+    --md-filled-icon-button-container-height: var(--md-sys-touch-target-min);
+}
+
+:where(
+    .m3-counter button,
+    .m3-counter md-filled-button,
+    .m3-counter md-outlined-button,
+    .material-counter button,
+    .material-counter md-filled-button,
+    .material-counter md-outlined-button
+) {
+    --md-filled-icon-button-container-width: var(--md-sys-touch-target-min);
+}
+
+.icon-preview md-icon {
+    --md-icon-size: 40px;
+}
+
+.avatar-button {
+    --md-outlined-button-container-height: 40px;
+}
+
+:where(
+    .m3-counter button,
+    .m3-counter md-filled-button,
+    .m3-counter md-outlined-button,
+    .material-counter button,
+    .material-counter md-filled-button,
+    .material-counter md-outlined-button
+) {
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+}
+
+.avatar-button {
+    --md-outlined-button-icon-size: 20px;
+}
+
+.avatar-button {
+    --md-outlined-button-outline-width: 1.5px;
+}
+
+:root {
+    --md-sys-motion-easing-emphasized-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
+}
+
+:root {
+    --md-sys-motion-easing-emphasized-decel: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+:where(
+    .file-card,
+    .upload-card
+) {
+    aspect-ratio: 1;
+}
+
+:where(
+    .kiosk-brand-logo,
+    .pos-card-img,
+    .pos-card-img-placeholder
+) {
+    aspect-ratio: 1 / 1;
+}
+
+:where(
+    .product-img,
+    .product-media
+) {
+    aspect-ratio: 16 / 10;
+}
+
+:where(
+    .m3-card-media,
+    .org-media,
+    .wishlist-media
+) {
+    aspect-ratio: 16 / 9;
+}
+
+.product-main-image-wrap {
+    aspect-ratio: 4 / 3;
+}
+
+:where(
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-main > main,
+    .avatar-button img,
+    .avatar-container,
+    .avatar-container [slot='actions'],
+    .avatar-container [slot='headline'],
+    .avatar-container details .content,
+    .avatar-container form.content,
+    .back-button,
+    .badge,
+    .booking-picker-card,
+    .card-actions,
+    .card-body,
+    .card-elevated,
+    .card-filled,
+    .card-footer,
+    .card-glass,
+    .card-grid,
+    .card-header,
+    .card-outlined,
+    .column-empty,
+    .count-badge,
+    .cta-btn,
+    .det-bbox,
+    .error-banner,
+    .feat-pill,
+    .feature-badge,
+    .gateway-card,
+    .glass-card,
+    .grid-center,
+    .grid-center-inline,
+    .grid-center-x,
+    .grid-center-y,
+    .grid-flow-col,
+    .grid-split,
+    .grid-stack,
+    .hero-badge,
+    .hero-card,
+    .hero-pill-link,
+    .info-grid,
+    .info-item,
+    .item-status-pill,
+    .items-count-badge,
+    .kds-empty-col,
+    .kiosk-empty-state,
+    .landing-container,
+    .landing-page-root,
+    .lang-inline-grid,
+    .lang-select,
+    .m3-back-button,
+    .m3-badge,
+    .m3-banner-error,
+    .m3-card,
+    .m3-card-actions,
+    .m3-card-body,
+    .m3-card-footer,
+    .m3-card-header,
+    .m3-container-query,
+    .m3-count-badge,
+    .m3-counter,
+    .m3-dialog-btn-primary,
+    .m3-dialog-toggle-item,
+    .m3-empty-column,
+    .m3-empty-state,
+    .m3-filter-chip,
+    .m3-form-grid,
+    .m3-grid-autofit,
+    .m3-grid-autofit-lg,
+    .m3-grid-autofit-sm,
+    .m3-grid-center,
+    .m3-grid-center-canvas,
+    .m3-grid-center-inline,
+    .m3-grid-center-x,
+    .m3-grid-center-y,
+    .m3-grid-cluster,
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail,
+    .m3-grid-sidebar,
+    .m3-grid-split,
+    .m3-grid-stack,
+    .m3-grid-triad,
+    .m3-info-grid,
+    .m3-info-item,
+    .m3-media-card,
+    .m3-mode-toggle,
+    .m3-mode-toggle-figure,
+    .m3-page-container,
+    .m3-pill-badge,
+    .m3-progress-container,
+    .m3-search-container,
+    .m3-status-badge,
+    .m3-summary-card,
+    .m3-table-wrapper,
+    .m3x-btn-pill,
+    .m3x-card,
+    .m3x-grid-compact,
+    .m3x-grid-deck,
+    .m3x-section,
+    .main-footer,
+    .material-counter,
+    .material-search-container,
+    .md3-presets-section,
+    .md3-schedule-day-card,
+    .media-card,
+    .mode-toggle,
+    .mode-toggle-figure,
+    .option-item,
+    .options-list-container,
+    .order-items-table-wrapper,
+    .order-status-badge,
+    .org-card,
+    .org-card-badge,
+    .org-card-content,
+    .org-showcase-grid,
+    .org-showcase-section,
+    .org-tag,
+    .page-width,
+    .paginator,
+    .picker-compact-box,
+    .picker-trigger-card,
+    .platform-btn,
+    .pos-empty-state,
+    .progress-bar-container,
+    .section-badge,
+    .smart-grid-container,
+    .spotlight-launch-btn,
+    .stage-tab,
+    .status-badge,
+    .store-not-found,
+    .summary-card,
+    .table-container,
+    .table-container > .paginator,
+    .touch-target-44,
+    .touch-target-48,
+    .upload-zone-label,
+    .ux-empty-state,
+    .ux-expand-btn,
+    .ux-modal-btn-primary,
+    .ux-mode-launch-btn,
+    .ux-mode-quickview-btn,
+    .ux-reset-filter-btn,
+    .ux-search-box,
+    .ux-tab-btn,
+    .venue-chip,
+    [class*="m3-card-"],
+    *,
+    *::after,
+    *::before,
+    button.eco-btn,
+    md-dialog,
+    md-dialog [slot="content"],
+    md-dialog.contacts [slot='actions'],
+    md-dialog.contacts [slot='headline'],
+    md-dialog.contacts details .content,
+    md-dialog.contacts form.content,
+    md-dialog.faceid-profile-modal [slot='actions'],
+    md-dialog.faceid-profile-modal [slot='headline'],
+    md-dialog.faceid-profile-modal form.content,
+    md-elevated-card,
+    md-elevated-card .card-footer,
+    md-elevated-card section,
+    md-filled-card,
+    md-filled-card .card-footer,
+    md-filled-card section,
+    md-icon-button,
+    md-outlined-card,
+    md-outlined-card .card-footer,
+    md-outlined-card section
+) {
+    box-sizing: border-box;
+}
+
+:where(
+    .link-stack a:active::before,
+    .link-stack article:active::before
+) {
+    height: 0;
+}
+
+.map-route-fields-dots {
+    height: 0.8rem;
+}
+
+.surveyContainer .tool-icon {
+    height: 1.25rem;
+}
+
+:where(
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .citation svg
+) {
+    height: 1.5rem;
+}
+
+:where(
+    .ai-blob-canvas rect,
+    .audio-call-visualizer,
+    .avatar-button img,
+    .call-container,
+    .card-instant .qr-svg-graphic,
+    .color-badge-swatch,
+    .det-camera-wrapper,
+    .det-display-area,
+    .det-main,
+    .det-overlays-container,
+    .det-sidebar,
+    .det-webrtc-stage,
+    .docs-sidebar,
+    .docs-welcome-container,
+    .file-input-hidden,
+    .file-preview-area,
+    .fullscreen-video,
+    .icon-preview,
+    .image-preview,
+    .link-stack a::before,
+    .link-stack article::before,
+    .m3-card-media img,
+    .m3-card-media-placeholder,
+    .m3-media-card,
+    .m3-progress-fill,
+    .map-panel-content,
+    .map-route-dots-line,
+    .media-card,
+    .org-card,
+    .org-media img,
+    .org-media-placeholder,
+    .picker-swatch,
+    .place-details-panel,
+    .pos-catalog,
+    .pos-loading,
+    .pos-sidebar,
+    .product-card,
+    .product-details,
+    .product-img,
+    .product-img-placeholder,
+    .product-main-img,
+    .progress-bar-fill,
+    .qrg-main,
+    .qrg-sidebar,
+    .remote-video,
+    .search-bar-inner,
+    .search-input,
+    .thumb-img,
+    .upload-zone-label,
+    .video-grid,
+    .wishlist-media img,
+    .wishlist-placeholder,
+    body,
+    html,
+    main.docs-page,
+    md-elevated-card,
+    md-elevated-card figure > img,
+    md-filled-card,
+    md-filled-card figure > img,
+    md-filled-card.product-card,
+    md-outlined-card,
+    md-outlined-card figure > img
+) {
+    height: 100%;
+}
+
+:where(
+    .ai-blob-canvas,
+    .det-layout,
+    .det-preview-container,
+    .drawer-panel,
+    .fullscreen-player,
+    .kiosk-attract-loop,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .m3-nav-rail,
+    .md-drawer-backdrop,
+    .organizations-map-page,
+    .qrg-layout,
+    main.showcase-page
+) {
+    height: 100dvh;
+}
+
+:where(
+    .local-video-pip,
+    .score-circle
+) {
+    height: 100px;
+}
+
+.catalog-sidebar {
+    height: 100vh;
+}
+
+.legend-dot {
+    height: 10px;
+}
+
+:where(
+    .bg-top-blender,
+    .brand-screensaver-logo-wrapper,
+    .det-logs-console
+) {
+    height: 120px;
+}
+
+.map-route-dot {
+    height: 12px;
+}
+
+.picker-badge md-icon {
+    height: 13px;
+}
+
+.card-instant .qr-preview-box {
+    height: 140px;
+}
+
+.tab-hamburger {
+    height: 14px;
+}
+
+.kiosk-hero::before {
+    height: 150%;
+}
+
+:where(
+    .card-instant .qr-hud-corner,
+    .lang-chevron,
+    .trust-badge md-icon
+) {
+    height: 16px;
+}
+
+.wishlist-media {
+    height: 180px;
+}
+
+:where(
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .lang-globe-icon,
+    .m3-filter-chip-icon,
+    .search-icon
+) {
+    height: 18px;
+}
+
+:where(
+    .auth-divider::after,
+    .auth-divider::before,
+    .m3-summary-divider,
+    .mobile-nav-divider,
+    .place-details-divider,
+    .summary-divider,
+    md-elevated-card::before,
+    md-filled-card::before,
+    md-outlined-card::before
+) {
+    height: 1px;
+}
+
+:where(
+    .assistant-message-icon svg,
+    .assistant-search-icon svg,
+    .m3-skeleton-text,
+    .sort-indicator
+) {
+    height: 1rem;
+}
+
+.paginator nav button {
+    height: 2.25rem;
+}
+
+.maneuver-icon-container {
+    height: 2.5rem;
+}
+
+.picker-native-input {
+    height: 200%;
+}
+
+:where(
+    .m3-dialog-toggle-item input[type="checkbox"],
+    .m3-search-container md-icon[slot="leading-icon"],
+    .material-search-container md-icon[slot="leading-icon"],
+    .picker-day-dot,
+    .yandex-ctrl-icon,
+    .yandex-search-icon-svg
+) {
+    height: 20px;
+}
+
+.m3-skeleton-card {
+    height: 240px;
+}
+
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .count-badge,
+    .docs-header-icon,
+    .m3-count-badge,
+    .search-divider
+) {
+    height: 24px;
+}
+
+.picker-swatch-wrapper {
+    height: 28px;
+}
+
+:where(
+    .card-instant .qr-laser-scanner,
+    .hamburger-line
+) {
+    height: 2px;
+}
+
+:where(
+    .map-route-add-via-btn,
+    .map-route-swap-btn
+) {
+    height: 2rem;
+}
+
+:where(
+    .link-stack svg,
+    .m3-mode-toggle-icon,
+    .mode-toggle-icon
+) {
+    height: 30px;
+}
+
+:where(
+    .kpi-icon-badge,
+    .picker-palette-swatch,
+    header.landing-header .header-brand-icon-box
+) {
+    height: 32px;
+}
+
+:where(
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback,
+    .spec-card-icon
+) {
+    height: 36px;
+}
+
+.spec-divider {
+    height: 38px;
+}
+
+.ux-spotlight-card::before {
+    height: 3px;
+}
+
+.place-details-avatar {
+    height: 3rem;
+}
+
+:where(
+    .avatar-button .material-text-field,
+    .avatar-button .sidebar-brand-icon,
+    .avatar-button md-outlined-text-field,
+    .chat-back-link .material-text-field,
+    .chat-back-link .sidebar-brand-icon,
+    .chat-back-link md-outlined-text-field,
+    .m3-filter-chip .material-text-field,
+    .m3-filter-chip .sidebar-brand-icon,
+    .m3-filter-chip md-outlined-text-field,
+    .m3-search-container .material-text-field,
+    .m3-search-container .sidebar-brand-icon,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container .sidebar-brand-icon,
+    .material-search-container md-outlined-text-field
+) {
+    height: 40px;
+}
+
+:where(
+    .det-logo-badge,
+    .kiosk-wish-icon,
+    .m3-avatar,
+    .picker-icon-badge,
+    .qrg-logo-badge,
+    .ux-search-clear,
+    .venue-icon
+) {
+    height: 44px;
+}
+
+:where(
+    .m3-mode-toggle-figure,
+    .mode-toggle-figure
+) {
+    height: 46px;
+}
+
+:where(
+    .color-picker-row input[type="color"] .search-bar,
+    .color-picker-row input[type="color"] .search-clear-btn,
+    .color-picker-row input[type="color"] .search-route-btn,
+    .color-picker-row input[type="color"] .seller-logo,
+    .color-picker-row input[type="color"] .seller-logo-placeholder,
+    .color-picker-row input[type="color"] .ux-search-box input,
+    .color-picker-row input[type="color"] .yandex-ctrl-btn,
+    .color-picker-row input[type="color"] md-icon,
+    .det-btn-icon-sm .search-bar,
+    .det-btn-icon-sm .search-clear-btn,
+    .det-btn-icon-sm .search-route-btn,
+    .det-btn-icon-sm .seller-logo,
+    .det-btn-icon-sm .seller-logo-placeholder,
+    .det-btn-icon-sm .ux-search-box input,
+    .det-btn-icon-sm .yandex-ctrl-btn,
+    .det-btn-icon-sm md-icon,
+    .docs-refresh-btn .search-bar,
+    .docs-refresh-btn .search-clear-btn,
+    .docs-refresh-btn .search-route-btn,
+    .docs-refresh-btn .seller-logo,
+    .docs-refresh-btn .seller-logo-placeholder,
+    .docs-refresh-btn .ux-search-box input,
+    .docs-refresh-btn .yandex-ctrl-btn,
+    .docs-refresh-btn md-icon,
+    .evo-icon .search-bar,
+    .evo-icon .search-clear-btn,
+    .evo-icon .search-route-btn,
+    .evo-icon .seller-logo,
+    .evo-icon .seller-logo-placeholder,
+    .evo-icon .ux-search-box input,
+    .evo-icon .yandex-ctrl-btn,
+    .evo-icon md-icon,
+    .evolution-arrow .search-bar,
+    .evolution-arrow .search-clear-btn,
+    .evolution-arrow .search-route-btn,
+    .evolution-arrow .seller-logo,
+    .evolution-arrow .seller-logo-placeholder,
+    .evolution-arrow .ux-search-box input,
+    .evolution-arrow .yandex-ctrl-btn,
+    .evolution-arrow md-icon,
+    .header-icon-wrap .search-bar,
+    .header-icon-wrap .search-clear-btn,
+    .header-icon-wrap .search-route-btn,
+    .header-icon-wrap .seller-logo,
+    .header-icon-wrap .seller-logo-placeholder,
+    .header-icon-wrap .ux-search-box input,
+    .header-icon-wrap .yandex-ctrl-btn,
+    .header-icon-wrap md-icon,
+    .kiosk-tier-btn .search-bar,
+    .kiosk-tier-btn .search-clear-btn,
+    .kiosk-tier-btn .search-route-btn,
+    .kiosk-tier-btn .seller-logo,
+    .kiosk-tier-btn .seller-logo-placeholder,
+    .kiosk-tier-btn .ux-search-box input,
+    .kiosk-tier-btn .yandex-ctrl-btn,
+    .kiosk-tier-btn md-icon,
+    .landing-mobile-menu-toggle .search-bar,
+    .landing-mobile-menu-toggle .search-clear-btn,
+    .landing-mobile-menu-toggle .search-route-btn,
+    .landing-mobile-menu-toggle .seller-logo,
+    .landing-mobile-menu-toggle .seller-logo-placeholder,
+    .landing-mobile-menu-toggle .ux-search-box input,
+    .landing-mobile-menu-toggle .yandex-ctrl-btn,
+    .landing-mobile-menu-toggle md-icon,
+    .lang-toggle-btn .search-bar,
+    .lang-toggle-btn .search-clear-btn,
+    .lang-toggle-btn .search-route-btn,
+    .lang-toggle-btn .seller-logo,
+    .lang-toggle-btn .seller-logo-placeholder,
+    .lang-toggle-btn .ux-search-box input,
+    .lang-toggle-btn .yandex-ctrl-btn,
+    .lang-toggle-btn md-icon,
+    .m3-card-media-placeholder .search-bar,
+    .m3-card-media-placeholder .search-clear-btn,
+    .m3-card-media-placeholder .search-route-btn,
+    .m3-card-media-placeholder .seller-logo,
+    .m3-card-media-placeholder .seller-logo-placeholder,
+    .m3-card-media-placeholder .ux-search-box input,
+    .m3-card-media-placeholder .yandex-ctrl-btn,
+    .m3-card-media-placeholder md-icon,
+    .map-route-close-btn .search-bar,
+    .map-route-close-btn .search-clear-btn,
+    .map-route-close-btn .search-route-btn,
+    .map-route-close-btn .seller-logo,
+    .map-route-close-btn .seller-logo-placeholder,
+    .map-route-close-btn .ux-search-box input,
+    .map-route-close-btn .yandex-ctrl-btn,
+    .map-route-close-btn md-icon,
+    .material-symbols-outlined .search-bar,
+    .material-symbols-outlined .search-clear-btn,
+    .material-symbols-outlined .search-route-btn,
+    .material-symbols-outlined .seller-logo,
+    .material-symbols-outlined .seller-logo-placeholder,
+    .material-symbols-outlined .ux-search-box input,
+    .material-symbols-outlined .yandex-ctrl-btn,
+    .material-symbols-outlined md-icon,
+    .nav-control-btn .search-bar,
+    .nav-control-btn .search-clear-btn,
+    .nav-control-btn .search-route-btn,
+    .nav-control-btn .seller-logo,
+    .nav-control-btn .seller-logo-placeholder,
+    .nav-control-btn .ux-search-box input,
+    .nav-control-btn .yandex-ctrl-btn,
+    .nav-control-btn md-icon,
+    .org-media-placeholder .search-bar,
+    .org-media-placeholder .search-clear-btn,
+    .org-media-placeholder .search-route-btn,
+    .org-media-placeholder .seller-logo,
+    .org-media-placeholder .seller-logo-placeholder,
+    .org-media-placeholder .ux-search-box input,
+    .org-media-placeholder .yandex-ctrl-btn,
+    .org-media-placeholder md-icon
+) {
+    height: 48px;
+}
+
+.faceid-scanner-frame.scanning::after {
+    height: 4px;
+}
+
+:where(
+    .item-icon-wrapper,
+    .pillar-icon-box,
+    .platform-icon,
+    .pos-action-btn,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .ux-mode-icon-box
+) {
+    height: 52px;
+}
+
+:where(
+    .auth-logo-badge,
+    .m3-empty-state-icon,
+    .signin-logo-badge
+) {
+    height: 56px;
+}
+
+.spotlight-icon-box {
+    height: 58px;
+}
+
+:where(
+    .components-rejoining-animation,
+    .empty-plans-icon-wrapper,
+    .map-panel-toggle-tab,
+    .ux-modal-icon-badge
+) {
+    height: 64px;
+}
+
+.ux-empty-icon-box {
+    height: 68px;
+}
+
+:where(
+    .det-dot,
+    .m3-scroll-thin::-webkit-scrollbar,
+    .scroll-thin::-webkit-scrollbar,
+    .spotlight-dot
+) {
+    height: 6px;
+}
+
+.thumb-btn {
+    height: 72px;
+}
+
+.chip-dot {
+    height: 7px;
+}
+
+:where(
+    ::-webkit-scrollbar,
+    .bar-track,
+    .live-pulse-dot,
+    .m3-progress-track,
+    .m3-status-dot,
+    .progress-bar-bg,
+    .pulse-indicator,
+    .qr-status-dot,
+    .spec-status-dot,
+    .status-dot,
+    .status-pulse-dot
+) {
+    height: 8px;
+}
+
+.loading-progress {
+    height: 8rem;
+}
+
+.avatar-pulse {
+    height: 90px;
+}
+
+:where(
+    .ai-blob-canvas svg,
+    .bento-media img,
+    .det-video-fill,
+    .det-video-stage-wrapper,
+    .hero-stage-img,
+    .item-qty-badge,
+    .kds-qty-badge,
+    img,
+    svg.ai-blob-svg,
+    video
+) {
+    height: auto;
+}
+
+.m3-bottom-nav {
+    height: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px));
+}
+
+.canvas-wrapper {
+    height: clamp(180px, 30vh, 240px);
+}
+
+.faceid-scanner-frame {
+    height: clamp(180px, 50vw, 240px);
+}
+
+.section-ambient-glow {
+    height: min(380px, 50vw);
+}
+
+.cursor-glow-orb {
+    height: min(580px, 80vw);
+}
+
+.bg-spotlight-hero {
+    height: min(850px, 90vw);
+}
+
+.bg-spotlight-bento {
+    height: min(900px, 90vw);
+}
+
+:where(
+    md-elevated-button md-icon:not([slot]),
+    md-filled-button md-icon:not([slot]),
+    md-filled-tonal-button md-icon:not([slot]),
+    md-outlined-button md-icon:not([slot]),
+    md-text-button md-icon:not([slot]),
+    md-tonal-button md-icon:not([slot])
+) {
+    height: var(--md-icon-size, 18px);
+}
+
+md-icon:not(:defined) {
+    height: var(--md-icon-size, 24px);
+}
+
+:where(
+    .cart-items-container::-webkit-scrollbar,
+    .dialog-content::-webkit-scrollbar,
+    .dropdown-menu::-webkit-scrollbar,
+    .lang-menu-list::-webkit-scrollbar,
+    .m3-config-dialog::-webkit-scrollbar,
+    .m3-dialog-body::-webkit-scrollbar,
+    .m3-dialog-surface::-webkit-scrollbar,
+    .map-panel-content::-webkit-scrollbar,
+    .options-container::-webkit-scrollbar,
+    .order-summary-list::-webkit-scrollbar,
+    .orders-table-wrapper::-webkit-scrollbar,
+    .picker-popover-body::-webkit-scrollbar,
+    .product-thumbnails::-webkit-scrollbar,
+    .scrollbar-thin::-webkit-scrollbar,
+    .select-options::-webkit-scrollbar,
+    .table-container::-webkit-scrollbar,
+    .table-scroll-container::-webkit-scrollbar,
+    table.quickgrid::-webkit-scrollbar
+) {
+    height: var(--md-sys-scrollbar-height, 6px);
+}
+
+.m3-dialog-close-btn {
+    height: var(--md-sys-touch-target-compact);
+}
+
+:where(
+    ::-webkit-color-swatch,
+    ::-webkit-color-swatch-wrapper,
+    .m3-skeleton-circle,
+    input[type="color"]
+) {
+    height: var(--md-sys-touch-target-min);
+}
+
+.chat-page-root {
+    height: var(--tg-viewport-height, 100dvh);
+}
+
+:where(
+    .brand-screensaver-logo,
+    .det-frame-video,
+    .det-webrtc-video
+) {
+    max-height: 100%;
+}
+
+:where(
+    .chat-page-root,
+    .fullscreen-video
+) {
+    max-height: 100dvh;
+}
+
+:where(
+    .chat-input-wrapper textarea,
+    .input-box textarea
+) {
+    max-height: 120px;
+}
+
+.map-route-suggestions {
+    max-height: 14.5rem;
+}
+
+.organizations-route-panel {
+    max-height: 14rem;
+}
+
+.wishlist-details-thumb {
+    max-height: 150px;
+}
+
+.map-global-suggestions {
+    max-height: 250px;
+}
+
+.qrg-card-logo {
+    max-height: 36px;
+}
+
+.video-player-wrapper video {
+    max-height: 540px;
+}
+
+:where(
+    .m3-dialog-content,
+    md-dialog [slot="content"]
+) {
+    max-height: min(65dvh, 560px);
+}
+
+:where(
+    .m3-config-dialog,
+    .m3-dialog-surface
+) {
+    max-height: min(85dvh, 720px);
+}
+
+:where(
+    .avatar-container md-dialog,
+    md-dialog.contacts,
+    md-dialog.faceid-profile-modal
+) {
+    max-height: min(880px, calc(100dvh - 48px));
+}
+
+md-dialog {
+    max-height: min(90vh, 90dvh);
+}
+
+:where(
+    .about-hero,
+    .about-video-section,
+    .analytics-period-selector,
+    .app-grid,
+    .app-main > main,
+    .brand-screensaver-logo,
+    .catalog-header,
+    .catalog-section,
+    .det-frame-video,
+    .det-webrtc-video,
+    .example-categories,
+    .example-hero,
+    .feature-badge,
+    .fullscreen-video,
+    .grid-flow-col,
+    .help-categories,
+    .help-hero,
+    .hero-badge,
+    .hero-card,
+    .hero-content-wrapper,
+    .hero-section,
+    .landing-grid,
+    .landing-grid > .landing-main,
+    .landing-subpage-hero,
+    .m3-card,
+    .m3-grid-cluster,
+    .m3x-card,
+    .org-card-badge,
+    .picker-trigger-card,
+    .pos-top-header-actions,
+    .qr-canvas-box,
+    .qrg-card,
+    .qrg-card-qr,
+    .section-badge,
+    .smart-grid-container,
+    .table-container,
+    .ux-category-tabs,
+    .wishlist-details-thumb,
+    audio,
+    body,
+    canvas,
+    embed,
+    footer.app-footer,
+    header.app-header,
+    iframe,
+    img,
+    md-dialog [slot="content"],
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card,
+    object,
+    svg,
+    video
+) {
+    max-width: 100%;
+}
+
+:where(
+    .landing-page-root,
+    .pos-main
+) {
+    max-width: 100vw;
+}
+
+:where(
+    .page-width,
+    .surveyContainer
+) {
+    max-width: 1024px;
+}
+
+:where(
+    .m3-trust-footer,
+    .payment-trust-footer
+) {
+    max-width: 1100px;
+}
+
+:where(
+    .about-container,
+    .ad-slot,
+    .example-container,
+    .help-container,
+    .landing-subpage-container,
+    .payment-dashboard,
+    .showcase-hero-content,
+    .store-product-container
+) {
+    max-width: 1200px;
+}
+
+.qrg-card-logo {
+    max-width: 120px;
+}
+
+:where(
+    .catalog-main,
+    .footer-container,
+    header.landing-header .header-grid-layout
+) {
+    max-width: 1280px;
+}
+
+.showcase-main-body {
+    max-width: 1300px;
+}
+
+.landing-container {
+    max-width: 1360px;
+}
+
+:where(
+    .card-grid,
+    .kiosk-main,
+    .m3-page-container
+) {
+    max-width: 1440px;
+}
+
+:where(
+    .det-placeholder-text,
+    .footer-brand-col,
+    .showcase-sidebar
+) {
+    max-width: 320px;
+}
+
+.kiosk-empty-state p {
+    max-width: 380px;
+}
+
+.avatar-button {
+    max-width: 40px;
+}
+
+:where(
+    .drawer-panel,
+    .m3-drawer-panel,
+    .m3-empty-state-desc
+) {
+    max-width: 440px;
+}
+
+.empty-plans-desc {
+    max-width: 460px;
+}
+
+:where(
+    .auth-card,
+    .bento-media img,
+    .docs-welcome-card,
+    .kiosk-search-container,
+    .qr-instruction,
+    .signin-card,
+    .ux-empty-state p
+) {
+    max-width: 480px;
+}
+
+.store-not-found {
+    max-width: 500px;
+}
+
+.hero-stage-img {
+    max-width: 520px;
+}
+
+.brand-screensaver-tagline {
+    max-width: 600px;
+}
+
+.ux-quickview-dialog {
+    max-width: 640px;
+}
+
+:where(
+    .help-search-section,
+    .section-title-box p,
+    .ux-search-box
+) {
+    max-width: 680px;
+}
+
+:where(
+    .download-header p,
+    .kiosk-hero-content p,
+    .showcase-hero p
+) {
+    max-width: 700px;
+}
+
+:where(
+    .about-subtitle,
+    .catalog-desc,
+    .example-subtitle,
+    .help-subtitle,
+    .landing-subpage-subtitle
+) {
+    max-width: 780px;
+}
+
+:where(
+    .ad-network-unit-card,
+    .subscription-description
+) {
+    max-width: 800px;
+}
+
+.b2b-lead-content {
+    max-width: 820px;
+}
+
+.evolution-header p {
+    max-width: 860px;
+}
+
+:where(
+    .about-title,
+    .attract-loop-content,
+    .docs-article,
+    .example-title,
+    .help-title,
+    .landing-subpage-title
+) {
+    max-width: 900px;
+}
+
+.map-measure-badge {
+    max-width: calc(100% - 2rem);
+}
+
+.user-message {
+    max-width: calc(100% - 5rem);
+}
+
+:where(
+    .avatar-container md-dialog,
+    md-dialog.contacts,
+    md-dialog.faceid-profile-modal
+) {
+    max-width: min(620px, calc(100vw - 32px));
+}
+
+md-dialog {
+    max-width: min(92vw, 560px);
+}
+
+:where(
+    .auth-container,
+    .docs-sidebar,
+    .inline-card-experience-body:empty,
+    .m3-dialog-content,
+    .map-panel-content,
+    .message-list-container,
+    .nearby-results-panel,
+    .organizations-map-controls,
+    .organizations-map-page,
+    .place-details-panel,
+    .search-panel,
+    .signin-container,
+    main.docs-page,
+    md-dialog [slot="content"]
+) {
+    min-height: 0;
+}
+
+.map-route-dots-line {
+    min-height: 0.8rem;
+}
+
+:where(
+    .message-list,
+    .organizations-map-viewport > :last-child
+) {
+    min-height: 100%;
+}
+
+:where(
+    .landing-page-root,
+    body
+) {
+    min-height: 100dvh;
+}
+
+.ad-slot.ad-placement-catalog {
+    min-height: 100px;
+}
+
+:where(
+    .app-grid,
+    .catalog-shell,
+    .chat-view,
+    .landing-grid,
+    .m3-grid-center-canvas,
+    .store-product-page,
+    body,
+    body.catalog-shell
+) {
+    min-height: 100vh;
+}
+
+.smart-grid-container textarea {
+    min-height: 10rem;
+}
+
+:where(
+    .m3-center-box,
+    .showcase-card-body
+) {
+    min-height: 120px;
+}
+
+.pos-product-card {
+    min-height: 130px;
+}
+
+.order-card {
+    min-height: 140px;
+}
+
+.organizations-map-viewport {
+    min-height: 18rem;
+}
+
+.pos-invoice-container {
+    min-height: 200px;
+}
+
+.ad-network-render-slot {
+    min-height: 250px;
+}
+
+.feat-pill {
+    min-height: 32px;
+}
+
+.docs-welcome-container {
+    min-height: 360px;
+}
+
+:where(
+    .analytics-config-btn,
+    .analytics-period-chip,
+    .footer-links-list a,
+    .landing-floating-auth-btn,
+    .paginator nav button
+) {
+    min-height: 36px;
+}
+
+:where(
+    .explorer-grid-container,
+    .hero-stage-screen,
+    .kanban-column,
+    .kds-column,
+    .m3-kanban-column,
+    .product-card,
+    md-filled-card.product-card
+) {
+    min-height: 380px;
+}
+
+:where(
+    .landing-nav-link,
+    .venue-chip,
+    header.landing-header .header-brand-link
+) {
+    min-height: 40px;
+}
+
+:where(
+    .hero-pill-link,
+    .org-card-badge,
+    .org-tag,
+    .route-close,
+    .touch-target-44,
+    .ux-search-clear,
+    #components-reconnect-modal button
+) {
+    min-height: 44px;
+}
+
+:where(
+    .actions-row button,
+    .advance-prompt,
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .crumb-link,
+    .cta-link .btn-order-kiosk,
+    .det-btn-icon-sm,
+    .docs-refresh-btn,
+    .empty-plans-actions button,
+    .footer-brand-link,
+    .footer-columns a,
+    .gateway-card,
+    .header-brand-link,
+    .input-box,
+    .kds-action-btn,
+    .kiosk-new-order-btn,
+    .kiosk-tier-btn,
+    .landing-auth-btn,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .m3-bottom-nav-item,
+    .map-action-button,
+    .map-category-chip,
+    .map-route-close-btn,
+    .mobile-nav-item,
+    .mode-indicator,
+    .nav-control-btn,
+    .option-item,
+    .order-card-footer,
+    .payment-support a,
+    .platform-btn,
+    .pos-card-footer-row md-icon-button,
+    .pos-sidebar-header-row md-icon-button,
+    .preset-btn,
+    .product-actions-bar md-filled-button,
+    .product-actions-bar md-filled-tonal-button,
+    .product-actions-bar md-outlined-button,
+    .route-options-toolbar-btn,
+    .route-start-btn,
+    .search-clear-btn,
+    .search-route-btn,
+    .select-input,
+    .seller-browse-all,
+    .spotlight-launch-btn,
+    .stage-tab,
+    .text-input,
+    .thumb-btn,
+    .touch-target-48,
+    .ux-expand-btn,
+    .ux-modal-btn-primary,
+    .ux-modal-btn-secondary,
+    .ux-mode-launch-btn,
+    .ux-mode-quickview-btn,
+    .ux-reset-filter-btn,
+    .ux-search-box input,
+    .ux-tab-btn,
+    .yandex-ctrl-btn,
+    button.eco-btn
+) {
+    min-height: 48px;
+}
+
+:where(
+    .active-orders-tabs,
+    .cta-btn,
+    .kiosk-main .card-footer,
+    .ux-search-box
+) {
+    min-height: 52px;
+}
+
+.docs-sidebar-header {
+    min-height: 56px;
+}
+
+:where(
+    .picker-trigger-card,
+    header.app-header.landing-header
+) {
+    min-height: 64px;
+}
+
+.kanban-card {
+    min-height: 80px;
+}
+
+:where(
+    .ad-network-container .google-adsense-wrapper,
+    .ad-network-container .yandex-ads-wrapper
+) {
+    min-height: 90px;
+}
+
+.unified-kiosk-filter-bar {
+    min-height: auto;
+}
+
+:where(
+    .designer-page-root,
+    .qr-designer-page-root,
+    .seat-designer-page-root
+) {
+    min-height: calc(100dvh - 80px);
+}
+
+.pos-main {
+    min-height: calc(100vh - 100px);
+}
+
+:where(
+    .lang-pill-btn,
+    .m3-dialog-close-btn
+) {
+    min-height: var(--md-sys-touch-target-compact);
+}
+
+.m3-touch-target-kiosk {
+    min-height: var(--md-sys-touch-target-kiosk);
+}
+
+:where(
+    .inline-card-experience-body,
+    .kiosk-reset-btn,
+    .showcase-nav-btn
+) {
+    min-height: var(--md-sys-touch-target-min, 48px);
+}
+
+:where(
+    .analytics-date-picker-trigger,
+    .analytics-mode-btn,
+    .avatar-button::before,
+    .back-button,
+    .lang-chip-btn,
+    .lang-menu-item,
+    .m3-back-button,
+    .m3-dialog-btn-primary,
+    .m3-dialog-toggle-item,
+    .m3-period-picker-trigger,
+    .m3-segmented-btn,
+    .m3-summary-actions button,
+    .m3-touch-target,
+    .m3x-btn-pill,
+    .picker-compact-box,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    .sidebar-link,
+    .summary-actions button,
+    .summary-back-link,
+    md-elevated-button,
+    md-filled-button,
+    md-filled-icon-button,
+    md-filled-tonal-icon-button,
+    md-icon-button,
+    md-outlined-button,
+    md-outlined-icon-button,
+    md-text-button,
+    md-tonal-button
+) {
+    min-height: var(--md-sys-touch-target-min);
+}
+
+:where(
+    .card-body,
+    .card-mid-row,
+    .catalog-header,
+    .catalog-main,
+    .catalog-section,
+    .col-title-text,
+    .header-start-zone,
+    .item-headline,
+    .kiosk-brand-name,
+    .m3-card,
+    .m3-card-actions,
+    .m3-card-header,
+    .m3-page-header-title,
+    .m3-stack,
+    .m3-truncate,
+    .m3x-card,
+    .pos-catalog,
+    .pos-catalog-header,
+    .pos-product-card,
+    .pos-ux-mode-title,
+    .price-tag,
+    .showcase-card,
+    .showcase-card-body,
+    .showcase-demo-canvas,
+    .showcase-nav-btn-left span,
+    .showcase-section-title-wrap,
+    .showcase-topbar-left,
+    .sidebar-brand,
+    .sidebar-link,
+    .spec-value,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    min-inline-size: 0;
+}
+
+:where(
+    .about-hero,
+    .about-video-section,
+    .active-orders-scroll,
+    .active-orders-tabs,
+    .ad-network-badge-row,
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-main > main,
+    .card-actions,
+    .card-body,
+    .card-elevated,
+    .card-filled,
+    .card-footer,
+    .card-glass,
+    .card-grid,
+    .card-header,
+    .card-mid-row,
+    .card-outlined,
+    .cart-bar,
+    .cart-summary,
+    .catalog-desc,
+    .catalog-header,
+    .catalog-main,
+    .catalog-section,
+    .catalog-title,
+    .col-title,
+    .col-title-text,
+    .color-picker-row,
+    .designer-canvas-area,
+    .docs-article,
+    .docs-content,
+    .example-hero,
+    .fiscal-highlight-box,
+    .footer-columns,
+    .glass-card,
+    .header-center-zone,
+    .header-end-zone,
+    .header-grid-layout,
+    .header-start-zone,
+    .header-text,
+    .header-title-group,
+    .help-hero,
+    .hero-card,
+    .hero-content-wrapper,
+    .hero-section,
+    .item-headline,
+    .item-info,
+    .kiosk-brand,
+    .kiosk-brand-info,
+    .kiosk-brand-name,
+    .kiosk-filter-stack,
+    .kiosk-main .card-footer,
+    .landing-grid > .landing-main,
+    .landing-subpage-hero,
+    .m3-card,
+    .m3-card-actions,
+    .m3-card-body,
+    .m3-card-footer,
+    .m3-card-subtitle,
+    .m3-card-title,
+    .m3-container-query,
+    .m3-media-card,
+    .m3-page-container,
+    .m3-page-header-start,
+    .m3-page-header-text,
+    .m3-page-header-title,
+    .m3-price-badge,
+    .m3-search-container,
+    .m3-stack,
+    .m3-truncate,
+    .m3x-card,
+    .main-footer,
+    .maneuver-details,
+    .map-route-header-row,
+    .map-search-inline,
+    .material-search-container,
+    .material-text-field,
+    .media-card,
+    .navigator-maneuver-bar,
+    .order-items-container,
+    .org-card,
+    .org-card-content,
+    .org-tags-row,
+    .payment-dashboard,
+    .picker-trigger-left,
+    .picker-trigger-text,
+    .place-details-hero,
+    .place-info-row,
+    .place-info-row .info-content,
+    .platforms-unified-grid,
+    .pos-card-footer-row,
+    .pos-card-title-group,
+    .pos-catalog,
+    .pos-catalog-header,
+    .pos-product-card,
+    .pos-sidebar,
+    .pos-sidebar-header-row,
+    .pos-ux-mode-title,
+    .preview-card,
+    .preview-footer,
+    .preview-header,
+    .preview-info,
+    .price-tag,
+    .qr-compact-body,
+    .qr-preview-area,
+    .qr-workspace,
+    .route-alternative-card,
+    .route-alternative-main,
+    .route-alternative-secondary,
+    .route-header,
+    .search-bar-inner,
+    .seat-selection-card,
+    .seller-info,
+    .showcase-card,
+    .showcase-card-body,
+    .showcase-demo-canvas,
+    .showcase-nav-btn-left span,
+    .showcase-section-title-wrap,
+    .showcase-section-title-wrap > *,
+    .showcase-topbar-left,
+    .showcase-topbar-left > *,
+    .sidebar-brand-subtitle,
+    .sidebar-brand-title,
+    .smart-grid-container,
+    .spec-details,
+    .spec-item,
+    .spec-value,
+    .spotlight-card-top,
+    .spotlight-features,
+    .spotlight-info,
+    .spotlight-main,
+    .ux-category-tabs,
+    .ux-spotlight-card,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-row,
+    .ux-widget-subrow,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    .variant-dialog-body,
+    .venue-chip-row,
+    .venue-status-legend,
+    .wishlist-card-footer,
+    [class*="m3-card-"],
+    footer.app-footer,
+    header.app-header,
+    md-dialog,
+    md-dialog [slot="actions"],
+    md-dialog [slot="content"],
+    md-dialog [slot="headline"],
+    md-elevated-card,
+    md-filled-card,
+    md-outlined-card,
+    md-outlined-text-field,
+    nav a.nav-item span,
+    nav.glass a.nav-item span,
+    nav.glass:not(.nav-mobile) a.nav-item span,
+    nav.nav-desktop a.nav-item span
+) {
+    min-width: 0;
+}
+
+.lang-dropdown-menu {
+    min-width: 130px;
+}
+
+.map-measure-badge {
+    min-width: 14rem;
+}
+
+.pay-button {
+    min-width: 160px;
+}
+
+.map-click-popup {
+    min-width: 180px;
+}
+
+.user-message {
+    min-width: 25%;
+}
+
+:where(
+    .count-badge,
+    .m3-count-badge
+) {
+    min-width: 28px;
+}
+
+.paginator nav button {
+    min-width: 36px;
+}
+
+.avatar-button {
+    min-width: 40px;
+}
+
+:where(
+    .route-close,
+    .touch-target-44,
+    .ux-search-clear
+) {
+    min-width: 44px;
+}
+
+:where(
+    .banner-close-btn,
+    .color-picker-row input[type="color"],
+    .det-btn-icon-sm,
+    .docs-refresh-btn,
+    .footer-brand-link,
+    .gateway-card,
+    .landing-mobile-menu-toggle,
+    .lang-toggle-btn,
+    .map-route-close-btn,
+    .nav-control-btn,
+    .option-item,
+    .pos-card-footer-row md-icon-button,
+    .pos-sidebar-header-row md-icon-button,
+    .search-clear-btn,
+    .search-route-btn,
+    .thumb-btn,
+    .touch-target-48,
+    .yandex-ctrl-btn,
+    button.eco-btn
+) {
+    min-width: 48px;
+}
+
+:where(
+    .kiosk-new-order-btn,
+    .kiosk-reset-btn
+) {
+    min-width: max-content;
+}
+
+:where(
+    .order-items-table,
+    .orders-table
+) {
+    min-width: min(100%, 680px);
+}
+
+.m3-dialog-close-btn {
+    min-width: var(--md-sys-touch-target-compact);
+}
+
+.m3-touch-target-kiosk {
+    min-width: var(--md-sys-touch-target-kiosk);
+}
+
+:where(
+    .avatar-button::before,
+    .lang-chip-btn,
+    .m3-card-header,
+    .m3-label,
+    .m3-selection-item,
+    .m3-touch-target,
+    .picker-palette-swatch::before,
+    .picker-swatch-wrapper::before,
+    .section-title,
+    .sidebar-brand,
+    .sidebar-link,
+    md-icon-button
+) {
+    min-width: var(--md-sys-touch-target-min);
+}
+
+:where(
+    .link-stack a:active::before,
+    .link-stack article:active::before
+) {
+    width: 0;
+}
+
+.surveyContainer .tool-icon {
+    width: 1.25rem;
+}
+
+:where(
+    .assistant-message-icon,
+    .assistant-search-icon,
+    .citation svg
+) {
+    width: 1.5rem;
+}
+
+:where(
+    .about-container,
+    .about-cta-section,
+    .about-hero,
+    .about-pillars-section,
+    .about-tech-stack-section,
+    .about-video-section,
+    .active-orders-tabs,
+    .ad-network-container .google-adsense-wrapper,
+    .ad-network-container .yandex-ads-wrapper,
+    .ad-network-screensaver-body,
+    .ad-network-unit-card,
+    .ad-slot,
+    .ai-blob-canvas,
+    .ai-blob-canvas rect,
+    .analytics-breakdown-grid,
+    .analytics-explorer-section,
+    .analytics-kpi-grid,
+    .analytics-metrics-strip,
+    .analytics-toolbar-grid,
+    .app-grid,
+    .app-grid .app-main,
+    .app-grid > main,
+    .app-main > main,
+    .attract-loop-content,
+    .audio-call-visualizer,
+    .auth-card,
+    .avatar-button img,
+    .avatar-container [slot='actions'],
+    .avatar-container [slot='headline'],
+    .avatar-container details,
+    .avatar-container details .content,
+    .avatar-container form.content,
+    .avatar-container md-list,
+    .avatar-container md-outlined-text-field,
+    .b2b-cta-group,
+    .b2b-lead-section,
+    .bar-track,
+    .bento-media,
+    .bento-media img,
+    .booking-picker-card,
+    .call-container,
+    .card-grid,
+    .card-instant .qr-svg-graphic,
+    .catalog-main,
+    .chat-bottom-section,
+    .chat-container,
+    .chat-header-container,
+    .chat-input-form,
+    .chat-input-wrapper,
+    .chat-input-wrapper textarea,
+    .chat-view,
+    .checkout-btn,
+    .col-title,
+    .color-badge-swatch,
+    .column-content,
+    .contact-card,
+    .cta-link,
+    .cta-link .btn-order-kiosk,
+    .det-btn-row-2col,
+    .det-camera-wrapper,
+    .det-overlays-container,
+    .det-tabs-container,
+    .det-video-fill,
+    .det-video-stage-wrapper,
+    .det-webrtc-stage,
+    .download-section,
+    .drawer-panel,
+    .evolution-banner,
+    .evolution-grid,
+    .example-categories,
+    .example-container,
+    .example-grid,
+    .example-hero,
+    .explorer-grid-container,
+    .faceid-scanner-frame.scanning::after,
+    .faq-grid,
+    .faq-section,
+    .feature-list,
+    .file-input-hidden,
+    .file-picker-container,
+    .file-preview-area,
+    .fiscal-highlight-box,
+    .footer-bottom-bar,
+    .footer-columns,
+    .footer-container,
+    .footer-custom-slot,
+    .footer-primary-grid,
+    .fullscreen-player,
+    .fullscreen-video,
+    .grid-2-col,
+    .grid-catalog,
+    .grid-split,
+    .grid-stack,
+    .header-center-zone,
+    .header-content,
+    .header-grid-layout,
+    .help-categories,
+    .help-container,
+    .help-hero,
+    .help-search-bar,
+    .help-search-section,
+    .hero-actions-container,
+    .hero-actions-primary,
+    .hero-card,
+    .hero-content-wrapper,
+    .hero-module-pills,
+    .hero-section,
+    .hero-stage-img,
+    .icon-preview,
+    .image-preview,
+    .info-grid,
+    .input-box,
+    .input-box textarea,
+    .kds-board,
+    .kds-cards-container,
+    .kiosk-attract-loop,
+    .kiosk-filter-inner,
+    .kiosk-filter-row,
+    .kiosk-filter-stack,
+    .kiosk-main,
+    .kiosk-search-container,
+    .landing-container,
+    .landing-grid,
+    .landing-grid > .landing-main,
+    .landing-page-root,
+    .landing-subpage-container,
+    .landing-subpage-hero,
+    .landing-top-bar-wrapper,
+    .link-stack a::before,
+    .link-stack article::before,
+    .m3-card-media,
+    .m3-card-media img,
+    .m3-card-media-placeholder,
+    .m3-container-query,
+    .m3-drawer-backdrop,
+    .m3-drawer-panel,
+    .m3-empty-state,
+    .m3-explorer-section,
+    .m3-filter-grid,
+    .m3-filter-toolbar,
+    .m3-form-grid,
+    .m3-grid-autofit,
+    .m3-grid-autofit-lg,
+    .m3-grid-autofit-sm,
+    .m3-grid-center-canvas,
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail,
+    .m3-grid-sidebar,
+    .m3-grid-split,
+    .m3-grid-stack,
+    .m3-grid-triad,
+    .m3-info-grid,
+    .m3-kanban-board,
+    .m3-media-card,
+    .m3-page-container,
+    .m3-page-header,
+    .m3-pricing-grid,
+    .m3-progress-container,
+    .m3-progress-track,
+    .m3-search-container,
+    .m3-search-container md-outlined-text-field,
+    .m3-skeleton-text,
+    .m3-summary-actions button,
+    .m3-table,
+    .m3-table-wrapper,
+    .m3-trust-footer,
+    .m3x-grid-compact,
+    .m3x-grid-deck,
+    .m3x-section,
+    .main-footer,
+    .map-global-suggestion-button,
+    .map-route-suggestion-button,
+    .map-search-inline,
+    .material-search-container,
+    .material-search-container md-outlined-text-field,
+    .material-text-field,
+    .md-drawer-backdrop,
+    .md3-dialog-actions-row,
+    .media-card,
+    .order-items-table,
+    .order-items-table-wrapper,
+    .orders-kanban-board,
+    .orders-list-grid,
+    .orders-table,
+    .orders-table-wrapper,
+    .org-card,
+    .org-card-actions,
+    .org-media,
+    .org-media img,
+    .org-media-placeholder,
+    .org-showcase-grid,
+    .org-showcase-section,
+    .org-tags-row,
+    .page-width,
+    .paginator,
+    .payment-dashboard,
+    .payment-trust-footer,
+    .picker-swatch,
+    .picker-trigger-actions,
+    .picker-trigger-card,
+    .pillars-grid,
+    .place-details-divider,
+    .plans-grid,
+    .platforms-unified-grid,
+    .pos-action-btn,
+    .pos-card-footer-row,
+    .pos-card-header-row,
+    .pos-filters,
+    .pos-main,
+    .pos-orders-scroll,
+    .pos-search-input,
+    .pos-sidebar-header-row,
+    .product-actions-bar md-filled-button,
+    .product-actions-bar md-filled-tonal-button,
+    .product-actions-bar md-outlined-button,
+    .product-img,
+    .product-img-placeholder,
+    .product-main-image-wrap,
+    .product-main-img,
+    .product-media,
+    .progress-bar-bg,
+    .progress-bar-container,
+    .promo-field,
+    .qr-compact-body,
+    .qrg-input-wrapper,
+    .remote-video,
+    .route-alternative-card,
+    .route-start-btn,
+    .schedule-table,
+    .search-bar-inner,
+    .section-header,
+    .section-title-box,
+    .select-input,
+    .showcase-demo-canvas,
+    .showcase-demo-col,
+    .showcase-nav-btn,
+    .showcase-sidebar,
+    .signin-card,
+    .smart-grid-container,
+    .spatial-cards-subgrid,
+    .spatial-maps-section,
+    .spatial-wings-grid,
+    .specs-bar,
+    .spotlight-card-top,
+    .spotlight-features,
+    .spotlight-launch-btn,
+    .spotlight-main,
+    .suggestions-wrapper,
+    .summary-actions button,
+    .summary-back-link,
+    .superpowers-bento-grid,
+    .superpowers-bento-section,
+    .table-container,
+    .table-container > .paginator,
+    .table-container > table,
+    .tech-grid,
+    .text-input,
+    .thumb-img,
+    .tiers-grid,
+    .upload-zone-label,
+    .ux-category-tabs,
+    .ux-controls-bar,
+    .ux-empty-state,
+    .ux-expand-container,
+    .ux-filter-meta,
+    .ux-mode-card-actions,
+    .ux-mode-launch-btn,
+    .ux-mode-meta-row,
+    .ux-modes-grid,
+    .ux-modes-section,
+    .ux-search-box,
+    .ux-search-box input,
+    .ux-spotlight-container,
+    .ux-spotlight-grid,
+    .variant-dialog-actions,
+    .variant-dialog-header,
+    .venue-chip-row,
+    .venue-status-legend,
+    .video-card,
+    .video-grid,
+    .video-player-wrapper,
+    .video-player-wrapper video,
+    .wishlist-media,
+    .wishlist-media img,
+    .wishlist-placeholder,
+    #blazor-error-ui,
+    body,
+    footer.app-footer,
+    header.app-header,
+    header.landing-header .header-grid-layout,
+    html,
+    main.showcase-page,
+    md-dialog.contacts [slot='actions'],
+    md-dialog.contacts [slot='headline'],
+    md-dialog.contacts details,
+    md-dialog.contacts details .content,
+    md-dialog.contacts form.content,
+    md-dialog.contacts md-list,
+    md-dialog.contacts md-outlined-text-field,
+    md-dialog.faceid-profile-modal [slot='actions'],
+    md-dialog.faceid-profile-modal [slot='headline'],
+    md-dialog.faceid-profile-modal form.content,
+    md-dialog.faceid-profile-modal md-list,
+    md-dialog.faceid-profile-modal md-outlined-text-field,
+    md-elevated-card,
+    md-elevated-card figure,
+    md-elevated-card figure > img,
+    md-filled-card,
+    md-filled-card figure,
+    md-filled-card figure > img,
+    md-filled-select,
+    md-filled-text-field,
+    md-outlined-card,
+    md-outlined-card figure,
+    md-outlined-card figure > img,
+    md-outlined-select,
+    md-outlined-text-field,
+    table.quickgrid
+) {
+    width: 100%;
+}
+
+.score-circle {
+    width: 100px;
+}
+
+.legend-dot {
+    width: 10px;
+}
+
+.brand-screensaver-logo-wrapper {
+    width: 120px;
+}
+
+:where(
+    .hamburger-line,
+    .map-route-dot
+) {
+    width: 12px;
+}
+
+.picker-badge md-icon {
+    width: 13px;
+}
+
+:where(
+    .card-instant .qr-preview-box,
+    .local-video-pip
+) {
+    width: 140px;
+}
+
+.tab-hamburger {
+    width: 14px;
+}
+
+:where(
+    .card-instant .qr-hud-corner,
+    .lang-chevron,
+    .trust-badge md-icon
+) {
+    width: 16px;
+}
+
+:where(
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .lang-globe-icon,
+    .m3-filter-chip-icon,
+    .search-icon
+) {
+    width: 18px;
+}
+
+:where(
+    .search-divider,
+    .spec-divider
+) {
+    width: 1px;
+}
+
+:where(
+    .assistant-message-icon svg,
+    .assistant-search-icon svg,
+    .col-options-button,
+    .sort-indicator
+) {
+    width: 1rem;
+}
+
+.paginator nav button {
+    width: 2.25rem;
+}
+
+.maneuver-icon-container {
+    width: 2.5rem;
+}
+
+.picker-native-input {
+    width: 200%;
+}
+
+:where(
+    .m3-dialog-toggle-item input[type="checkbox"],
+    .m3-search-container md-icon[slot="leading-icon"],
+    .material-search-container md-icon[slot="leading-icon"],
+    .picker-day-dot,
+    .yandex-ctrl-icon,
+    .yandex-search-icon-svg
+) {
+    width: 20px;
+}
+
+:where(
+    .avatar-button .material-symbols-outlined,
+    .avatar-button md-icon,
+    .docs-header-icon,
+    .map-panel-toggle-tab
+) {
+    width: 24px;
+}
+
+.docs-sidebar {
+    width: 280px;
+}
+
+:where(
+    .map-panel-toggle-tab:hover,
+    .picker-swatch-wrapper
+) {
+    width: 28px;
+}
+
+.map-route-dots-line {
+    width: 2px;
+}
+
+:where(
+    .map-route-add-via-btn,
+    .map-route-swap-btn
+) {
+    width: 2rem;
+}
+
+:where(
+    .link-stack svg,
+    .m3-mode-toggle-icon,
+    .mode-toggle-icon
+) {
+    width: 30px;
+}
+
+:where(
+    .kpi-icon-badge,
+    .picker-palette-swatch,
+    header.landing-header .header-brand-icon-box
+) {
+    width: 32px;
+}
+
+:where(
+    .footer-brand-badge,
+    .header-brand-icon-box,
+    .kiosk-brand-logo,
+    .kiosk-brand-logo-fallback,
+    .spec-card-icon
+) {
+    width: 36px;
+}
+
+.place-details-avatar {
+    width: 3rem;
+}
+
+:where(
+    .avatar-button,
+    .chat-back-link,
+    .sidebar-brand-icon
+) {
+    width: 40px;
+}
+
+.yandex-zoom-card {
+    width: 42px;
+}
+
+:where(
+    .det-logo-badge,
+    .kiosk-wish-icon,
+    .m3-avatar,
+    .picker-icon-badge,
+    .qrg-logo-badge,
+    .ux-search-clear,
+    .venue-icon
+) {
+    width: 44px;
+}
+
+:where(
+    .m3-mode-toggle,
+    .mode-toggle
+) {
+    width: 46px;
+}
+
+:where(
+    .color-picker-row input[type="color"] .search-clear-btn,
+    .color-picker-row input[type="color"] .search-route-btn,
+    .color-picker-row input[type="color"] .seller-logo,
+    .color-picker-row input[type="color"] .seller-logo-placeholder,
+    .color-picker-row input[type="color"] .yandex-ctrl-btn,
+    .color-picker-row input[type="color"] md-icon,
+    .det-btn-icon-sm .search-clear-btn,
+    .det-btn-icon-sm .search-route-btn,
+    .det-btn-icon-sm .seller-logo,
+    .det-btn-icon-sm .seller-logo-placeholder,
+    .det-btn-icon-sm .yandex-ctrl-btn,
+    .det-btn-icon-sm md-icon,
+    .docs-refresh-btn .search-clear-btn,
+    .docs-refresh-btn .search-route-btn,
+    .docs-refresh-btn .seller-logo,
+    .docs-refresh-btn .seller-logo-placeholder,
+    .docs-refresh-btn .yandex-ctrl-btn,
+    .docs-refresh-btn md-icon,
+    .evo-icon .search-clear-btn,
+    .evo-icon .search-route-btn,
+    .evo-icon .seller-logo,
+    .evo-icon .seller-logo-placeholder,
+    .evo-icon .yandex-ctrl-btn,
+    .evo-icon md-icon,
+    .evolution-arrow .search-clear-btn,
+    .evolution-arrow .search-route-btn,
+    .evolution-arrow .seller-logo,
+    .evolution-arrow .seller-logo-placeholder,
+    .evolution-arrow .yandex-ctrl-btn,
+    .evolution-arrow md-icon,
+    .header-icon-wrap .search-clear-btn,
+    .header-icon-wrap .search-route-btn,
+    .header-icon-wrap .seller-logo,
+    .header-icon-wrap .seller-logo-placeholder,
+    .header-icon-wrap .yandex-ctrl-btn,
+    .header-icon-wrap md-icon,
+    .landing-mobile-menu-toggle .search-clear-btn,
+    .landing-mobile-menu-toggle .search-route-btn,
+    .landing-mobile-menu-toggle .seller-logo,
+    .landing-mobile-menu-toggle .seller-logo-placeholder,
+    .landing-mobile-menu-toggle .yandex-ctrl-btn,
+    .landing-mobile-menu-toggle md-icon,
+    .m3-card-media-placeholder .search-clear-btn,
+    .m3-card-media-placeholder .search-route-btn,
+    .m3-card-media-placeholder .seller-logo,
+    .m3-card-media-placeholder .seller-logo-placeholder,
+    .m3-card-media-placeholder .yandex-ctrl-btn,
+    .m3-card-media-placeholder md-icon,
+    .map-route-close-btn .search-clear-btn,
+    .map-route-close-btn .search-route-btn,
+    .map-route-close-btn .seller-logo,
+    .map-route-close-btn .seller-logo-placeholder,
+    .map-route-close-btn .yandex-ctrl-btn,
+    .map-route-close-btn md-icon,
+    .material-symbols-outlined .search-clear-btn,
+    .material-symbols-outlined .search-route-btn,
+    .material-symbols-outlined .seller-logo,
+    .material-symbols-outlined .seller-logo-placeholder,
+    .material-symbols-outlined .yandex-ctrl-btn,
+    .material-symbols-outlined md-icon,
+    .nav-control-btn .search-clear-btn,
+    .nav-control-btn .search-route-btn,
+    .nav-control-btn .seller-logo,
+    .nav-control-btn .seller-logo-placeholder,
+    .nav-control-btn .yandex-ctrl-btn,
+    .nav-control-btn md-icon,
+    .org-media-placeholder .search-clear-btn,
+    .org-media-placeholder .search-route-btn,
+    .org-media-placeholder .seller-logo,
+    .org-media-placeholder .seller-logo-placeholder,
+    .org-media-placeholder .yandex-ctrl-btn,
+    .org-media-placeholder md-icon
+) {
+    width: 48px;
+}
+
+:where(
+    .det-sidebar-scrollable::-webkit-scrollbar,
+    .showcase-sidebar-nav::-webkit-scrollbar
+) {
+    width: 4px;
+}
+
+:where(
+    .item-icon-wrapper,
+    .pillar-icon-box,
+    .platform-icon,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .ux-mode-icon-box
+) {
+    width: 52px;
+}
+
+:where(
+    .auth-logo-badge,
+    .m3-empty-state-icon,
+    .signin-logo-badge
+) {
+    width: 56px;
+}
+
+.spotlight-icon-box {
+    width: 58px;
+}
+
+:where(
+    .m3-skeleton-text.m3-short,
+    .m3-skeleton-text.short
+) {
+    width: 60%;
+}
+
+:where(
+    .components-rejoining-animation,
+    .empty-plans-icon-wrapper,
+    .ux-modal-icon-badge
+) {
+    width: 64px;
+}
+
+:where(
+    .picker-hex-input,
+    .ux-empty-icon-box
+) {
+    width: 68px;
+}
+
+:where(
+    .det-dot,
+    .m3-scroll-thin::-webkit-scrollbar,
+    .scroll-thin::-webkit-scrollbar,
+    .showcase-content::-webkit-scrollbar,
+    .spotlight-dot
+) {
+    width: 6px;
+}
+
+.thumb-btn {
+    width: 72px;
+}
+
+.chip-dot {
+    width: 7px;
+}
+
+.kiosk-hero::before {
+    width: 85%;
+}
+
+:where(
+    ::-webkit-scrollbar,
+    .live-pulse-dot,
+    .m3-status-dot,
+    .pulse-indicator,
+    .qr-status-dot,
+    .spec-status-dot,
+    .status-dot,
+    .status-pulse-dot
+) {
+    width: 8px;
+}
+
+.loading-progress {
+    width: 8rem;
+}
+
+.avatar-pulse {
+    width: 90px;
+}
+
+.ux-quickview-dialog {
+    width: 92%;
+}
+
+:where(
+    .ai-blob-canvas svg,
+    md-dialog,
+    svg.ai-blob-svg
+) {
+    width: auto;
+}
+
+.m3-nav-rail {
+    width: calc(80px + env(safe-area-inset-left, 0px));
+}
+
+.faceid-scanner-frame {
+    width: clamp(180px, 50vw, 240px);
+}
+
+.designer-sidebar {
+    width: clamp(260px, 30vw, 340px);
+}
+
+:where(
+    .grid-flow-col,
+    .m3-grid-cluster,
+    .map-panel-toggle,
+    .org-card-badge,
+    .place-details-badge,
+    .qrg-back
+) {
+    width: fit-content;
+}
+
+:where(
+    .footer-brand-link,
+    .footer-system-status,
+    .kiosk-brand-tagline,
+    .kiosk-category-chipset,
+    .pos-chip-set,
+    .pos-filters md-chip-set,
+    .suggestions,
+    .unified-kiosk-filter-bar md-chip-set,
+    .ux-modal-code
+) {
+    width: max-content;
+}
+
+#components-reconnect-modal {
+    width: min(22rem, calc(100vw - 32px));
+}
+
+.organizations-map-controls {
+    width: min(29rem, 36vw);
+}
+
+.navigator-panel {
+    width: min(32rem, 90vw);
+}
+
+.cursor-glow-orb {
+    width: min(580px, 80vw);
+}
+
+:where(
+    .avatar-container md-dialog,
+    md-dialog.contacts,
+    md-dialog.faceid-profile-modal
+) {
+    width: min(620px, calc(100vw - 32px));
+}
+
+.section-ambient-glow {
+    width: min(650px, 85vw);
+}
+
+.bg-spotlight-hero {
+    width: min(850px, 90vw);
+}
+
+.bg-spotlight-bento {
+    width: min(900px, 90vw);
+}
+
+:where(
+    .m3-config-dialog,
+    .m3-dialog-surface
+) {
+    width: min(90vw, 540px);
+}
+
+:where(
+    md-elevated-button md-icon:not([slot]),
+    md-filled-button md-icon:not([slot]),
+    md-filled-tonal-button md-icon:not([slot]),
+    md-outlined-button md-icon:not([slot]),
+    md-text-button md-icon:not([slot]),
+    md-tonal-button md-icon:not([slot])
+) {
+    width: var(--md-icon-size, 18px);
+}
+
+md-icon:not(:defined) {
+    width: var(--md-icon-size, 24px);
+}
+
+:where(
+    .cart-items-container::-webkit-scrollbar,
+    .dialog-content::-webkit-scrollbar,
+    .dropdown-menu::-webkit-scrollbar,
+    .lang-menu-list::-webkit-scrollbar,
+    .m3-config-dialog::-webkit-scrollbar,
+    .m3-dialog-body::-webkit-scrollbar,
+    .m3-dialog-surface::-webkit-scrollbar,
+    .map-panel-content::-webkit-scrollbar,
+    .options-container::-webkit-scrollbar,
+    .order-summary-list::-webkit-scrollbar,
+    .orders-table-wrapper::-webkit-scrollbar,
+    .picker-popover-body::-webkit-scrollbar,
+    .product-thumbnails::-webkit-scrollbar,
+    .scrollbar-thin::-webkit-scrollbar,
+    .select-options::-webkit-scrollbar,
+    .table-container::-webkit-scrollbar,
+    .table-scroll-container::-webkit-scrollbar,
+    table.quickgrid::-webkit-scrollbar
+) {
+    width: var(--md-sys-scrollbar-width, 6px);
+}
+
+.m3-dialog-close-btn {
+    width: var(--md-sys-touch-target-compact);
+}
+
+:where(
+    ::-webkit-color-swatch,
+    ::-webkit-color-swatch-wrapper,
+    .m3-skeleton-circle,
+    input[type="color"]
+) {
+    width: var(--md-sys-touch-target-min);
+}
+
+@container (max-width: 340px) {
+    :where(
+        .qr-canvas-box canvas,
+        .qr-canvas-box svg
+    ) {
+        height: auto;
+    }
+
+    :where(
+        .qr-canvas-box canvas,
+        .qr-canvas-box svg
+    ) {
+        max-width: 100%;
+    }
+
+}
+
+@container (max-width: 480px) {
+    .picker-trigger-left {
+        min-width: 100%;
+    }
+
+}
+
+@container product-card (max-width: 320px) {
+    :where(
+        .kiosk-main .card-footer .material-counter,
+        .kiosk-main .card-footer button,
+        .kiosk-main .card-footer md-filled-button,
+        .kiosk-main .card-footer md-outlined-button
+    ) {
+        width: 100%;
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    :where(
+        .kiosk-category-chipset md-chip,
+        .kiosk-new-order-btn,
+        .pay-button
+    ) {
+        min-height: 48px;
+    }
+
+}
+
+@media (max-width: 1199.98px) {
+    .hero-stage-card {
+        max-width: 720px;
+    }
+
+    .hero-card {
+        max-width: 820px;
+    }
+
+    :where(
+        .hero-card,
+        .hero-stage-card
+    ) {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 599.98px) {
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab
+    ) {
+        height: 48px;
+    }
+
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab::after,
+        .organizations-map-controls.expanded .map-panel-toggle-tab::after
+    ) {
+        height: 5px;
+    }
+
+    .local-video-pip {
+        height: 60px;
+    }
+
+    .organizations-map-controls.collapsed.search-mode {
+        max-height: 130px;
+    }
+
+    .organizations-map-controls.collapsed.yandex-route-mode {
+        max-height: 185px;
+    }
+
+    .organizations-map-controls.collapsed.details-mode {
+        max-height: 205px;
+    }
+
+    .organizations-map-controls {
+        max-height: 90dvh;
+    }
+
+    .hero-stage-screen {
+        min-height: 230px;
+    }
+
+    .det-preview-container {
+        min-height: 280px;
+    }
+
+    :where(
+        .cta-btn,
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab,
+        .stage-tab
+    ) {
+        min-height: 48px;
+    }
+
+    .designer-canvas-area {
+        min-height: 540px;
+    }
+
+    :where(
+        .actions-row button,
+        .analytics-toolbar-actions,
+        .cta-actions,
+        .mode-indicator,
+        .organizations-map-controls.collapsed .map-panel-toggle-tab,
+        .organizations-map-controls.expanded .map-panel-toggle-tab,
+        .preset-btn
+    ) {
+        width: 100%;
+    }
+
+    :where(
+        .organizations-map-controls.collapsed .map-panel-toggle-tab::after,
+        .organizations-map-controls.expanded .map-panel-toggle-tab::after
+    ) {
+        width: 48px;
+    }
+
+    .local-video-pip {
+        width: 80px;
+    }
+
+    .ux-quickview-dialog {
+        width: 95%;
+    }
+
+    .organizations-map-controls {
+        width: auto;
+    }
+
+    .navigator-panel {
+        width: calc(100vw - 1rem);
+    }
+
+}
+
+@media (max-width: 600px) {
+    :where(
+        .drawer-panel,
+        .m3-drawer-panel
+    ) {
+        max-width: 100%;
+    }
+
+    :where(
+        .drawer-panel,
+        .m3-drawer-panel
+    ) {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 839.98px) {
+    :where(
+        .showcase-sidebar,
+        main.showcase-page
+    ) {
+        height: 100dvh;
+    }
+
+    .local-video-pip {
+        height: 75px;
+    }
+
+    :where(
+        .det-layout,
+        .det-preview-container,
+        .det-sidebar,
+        .qrg-layout,
+        .qrg-sidebar
+    ) {
+        height: auto;
+    }
+
+    .det-sidebar-scrollable {
+        max-height: clamp(240px, 35vh, 400px);
+    }
+
+    .det-sidebar {
+        min-height: 0;
+    }
+
+    .det-layout {
+        min-height: 100dvh;
+    }
+
+    .det-preview-container {
+        min-height: 380px;
+    }
+
+    :where(
+        .cta-btn,
+        .stage-tab,
+        .ux-tab-btn
+    ) {
+        min-height: 48px;
+    }
+
+    :where(
+        .kanban-column,
+        .kds-column,
+        .m3-kanban-column
+    ) {
+        min-height: auto;
+    }
+
+    .view-switcher {
+        min-width: 280px;
+    }
+
+    :where(
+        .cta-btn,
+        .hero-actions-primary,
+        .spatial-wing-footer .cta-btn
+    ) {
+        width: 100%;
+    }
+
+    .local-video-pip {
+        width: 100px;
+    }
+
+    .view-switcher {
+        width: auto;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .suggestions {
+        width: auto;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 839.98px) {
+    .organizations-map-controls {
+        width: min(24rem, calc(100vw - 4rem));
+    }
+
+}
+
+@media (pointer: coarse) {
+    :where(
+        .kiosk-btn,
+        .touch-action-large,
+        .touch-target-48
+    ) {
+        min-height: 48px;
+    }
+
+    :where(
+        .kiosk-btn,
+        .touch-action-large,
+        .touch-target-48
+    ) {
+        min-width: 48px;
+    }
+
+}
+
+@media screen and (max-width: 599.98px) {
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-elevated-button-container-height: 44px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-filled-button-container-height: 44px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-filled-tonal-button-container-height: 44px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-outlined-button-container-height: 44px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-text-button-container-height: 44px;
+    }
+
+    .wishlist-media {
+        height: 140px;
+    }
+
+    .landing-auth-btn {
+        height: 40px;
+    }
+
+    :where(
+        .header-end-zone .analytics-mode-pill-group .analytics-mode-btn,
+        .header-end-zone .avatar-box,
+        .header-end-zone .avatar-button,
+        .header-end-zone .lang-toggle-btn,
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"]),
+        .pos-card-img,
+        .pos-card-img-placeholder
+    ) {
+        height: 44px;
+    }
+
+    .landing-floating-auth-btn {
+        height: 48px;
+    }
+
+    :where(
+        .m3-page-header-title,
+        .pos-top-header-actions
+    ) {
+        max-width: 100%;
+    }
+
+    .landing-auth-btn {
+        min-height: 40px;
+    }
+
+    :where(
+        .header-brand-link,
+        .header-end-zone .avatar-box,
+        .header-end-zone .avatar-button,
+        .header-end-zone .lang-toggle-btn,
+        a.back-button,
+        a.back-link
+    ) {
+        min-height: 44px;
+    }
+
+    .landing-floating-auth-btn {
+        min-height: 48px;
+    }
+
+    :where(
+        .m3-page-header-start,
+        .m3-page-header-title,
+        .pos-top-header-actions
+    ) {
+        min-width: 0;
+    }
+
+    .landing-auth-btn {
+        min-width: 40px;
+    }
+
+    :where(
+        .header-brand-link,
+        .header-end-zone .analytics-mode-pill-group .analytics-mode-btn,
+        .header-end-zone .avatar-box,
+        .header-end-zone .avatar-button,
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"]),
+        a.back-button,
+        a.back-link
+    ) {
+        min-width: 44px;
+    }
+
+    .landing-floating-auth-btn {
+        min-width: 48px;
+    }
+
+    .kiosk-lang-switcher {
+        width: 100%;
+    }
+
+    .landing-auth-btn {
+        width: 40px;
+    }
+
+    :where(
+        .header-end-zone .avatar-box,
+        .header-end-zone .avatar-button,
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"]),
+        .pos-card-img,
+        .pos-card-img-placeholder
+    ) {
+        width: 44px;
+    }
+
+    .landing-floating-auth-btn {
+        width: 48px;
+    }
+
+    .pos-search-wrapper {
+        width: clamp(200px, 25vw, 320px);
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    :where(
+        .app-grid > nav,
+        nav,
+        nav.glass,
+        nav.nav-desktop,
+        nav.nav-mobile
+    ) {
+        box-sizing: border-box;
+    }
+
+    :where(
+        nav a.nav-item md-icon,
+        nav.glass a.nav-item md-icon
+    ) {
+        height: 32px;
+    }
+
+    .header-center-zone input {
+        height: 42px;
+    }
+
+    :where(
+        .app-grid > nav,
+        .pos-sidebar,
+        nav,
+        nav.glass,
+        nav.nav-desktop,
+        nav.nav-mobile
+    ) {
+        height: auto;
+    }
+
+    .pos-layout {
+        height: calc(100vh - 130px);
+    }
+
+    :where(
+        .app-grid > nav,
+        .footer-brand-col,
+        .header-center-zone .home-search-container,
+        .header-center-zone .kiosk-search-container,
+        .header-center-zone .search-container,
+        .header-center-zone form,
+        .header-grid-layout,
+        .header-start-zone,
+        nav,
+        nav a.nav-item span,
+        nav.glass,
+        nav.glass a.nav-item span,
+        nav.nav-desktop,
+        nav.nav-mobile
+    ) {
+        max-width: 100%;
+    }
+
+    .pos-sidebar {
+        min-height: 440px;
+    }
+
+    :where(
+        nav a.nav-item,
+        nav.glass a.nav-item
+    ) {
+        min-height: 48px;
+    }
+
+    header.app-header {
+        min-height: calc(64px + env(safe-area-inset-top, 0px));
+    }
+
+    :where(
+        .header-center-zone,
+        .header-end-zone,
+        .header-grid-layout,
+        .header-start-zone,
+        .kiosk-brand,
+        .kiosk-header-content,
+        .kiosk-search-wrapper
+    ) {
+        min-width: 0;
+    }
+
+    :where(
+        nav a.nav-item,
+        nav.glass a.nav-item
+    ) {
+        min-width: 48px;
+    }
+
+    :where(
+        .app-grid > nav,
+        .header-center-zone,
+        .header-center-zone .home-search-container,
+        .header-center-zone .kiosk-search-container,
+        .header-center-zone .search-container,
+        .header-center-zone form,
+        .header-center-zone input,
+        .header-grid-layout,
+        .kiosk-header-content,
+        .kiosk-search-wrapper,
+        nav,
+        nav.glass,
+        nav.nav-desktop,
+        nav.nav-mobile
+    ) {
+        width: 100%;
+    }
+
+    :where(
+        nav a.nav-item md-icon,
+        nav.glass a.nav-item md-icon
+    ) {
+        width: 56px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .m3-page-header-title {
+        max-width: min(280px, 35vw);
+    }
+
+    :where(
+        .m3-page-header-start,
+        .m3-page-header-title
+    ) {
+        min-width: 0;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.nav-desktop
+    ) {
+        height: 100dvh;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item md-icon,
+        nav.nav-desktop a.nav-item .material-symbols-outlined,
+        nav.nav-desktop a.nav-item md-icon
+    ) {
+        height: 30px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.nav-desktop
+    ) {
+        max-height: 100dvh;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item span
+    ) {
+        max-width: 64px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item,
+        nav.nav-desktop a.nav-item
+    ) {
+        min-height: 56px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item md-icon,
+        nav.nav-desktop a.nav-item .material-symbols-outlined,
+        nav.nav-desktop a.nav-item md-icon
+    ) {
+        width: 52px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item,
+        nav.nav-desktop a.nav-item
+    ) {
+        width: 64px;
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.nav-desktop
+    ) {
+        width: calc(76px + env(safe-area-inset-left, 0px));
+    }
+
+}
+
+@supports (-webkit-touch-callout: none) {
+    .status-bar-safe-area {
+        height: env(safe-area-inset-top);
+    }
+
+    .status-bar-safe-area {
+        width: 100%;
+    }
+
+}
+

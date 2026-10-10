@@ -1,0 +1,29 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/containment/container-queries.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+:where(
+    .product-card,
+    md-filled-card.product-card
+) {
+    container-name: product-card;
+}
+
+:where(
+    .kds-board,
+    .m3-container-query,
+    .m3-kanban-board,
+    .map-route-inputs,
+    .orders-kanban-board,
+    .organizations-route-panel,
+    .picker-trigger-card,
+    .preview-card,
+    .product-card,
+    .smart-grid-container,
+    md-filled-card.product-card
+) {
+    container-type: inline-size;
+}
+

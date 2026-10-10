@@ -1,0 +1,1501 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   W3C CSS Module: w3c/color/color.css
+   Consolidated Single-Declaration Rules (:where() Zero Specificity)
+   ========================================================================== */
+
+.cat-retail {
+    --cat-accent: var(--md-sys-color-primary);
+}
+
+.cat-fintech {
+    --cat-accent: var(--md-sys-color-secondary);
+}
+
+.cat-services {
+    --cat-accent: var(--md-sys-color-tertiary);
+}
+
+.cat-hospitality {
+    --cat-accent: var(--md-sys-color-warning, var(--md-sys-color-tertiary));
+}
+
+.cat-retail {
+    --cat-icon-bg: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+
+.cat-fintech {
+    --cat-icon-bg: rgb(from var(--md-sys-color-secondary) r g b / 0.12);
+}
+
+.cat-services {
+    --cat-icon-bg: rgb(from var(--md-sys-color-tertiary) r g b / 0.12);
+}
+
+.cat-hospitality {
+    --cat-icon-bg: rgb(from var(--md-sys-color-warning, var(--md-sys-color-tertiary)) r g b / 0.12);
+}
+
+.cat-retail {
+    --cat-icon-border: rgb(from var(--md-sys-color-primary) r g b / 0.3);
+}
+
+.cat-fintech {
+    --cat-icon-border: rgb(from var(--md-sys-color-secondary) r g b / 0.3);
+}
+
+.cat-services {
+    --cat-icon-border: rgb(from var(--md-sys-color-tertiary) r g b / 0.3);
+}
+
+.cat-hospitality {
+    --cat-icon-border: rgb(from var(--md-sys-color-warning, var(--md-sys-color-tertiary)) r g b / 0.3);
+}
+
+.cat-retail {
+    --cat-pill-bg: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+
+.cat-fintech {
+    --cat-pill-bg: rgb(from var(--md-sys-color-secondary) r g b / 0.12);
+}
+
+.cat-services {
+    --cat-pill-bg: rgb(from var(--md-sys-color-tertiary) r g b / 0.12);
+}
+
+.cat-hospitality {
+    --cat-pill-bg: rgb(from var(--md-sys-color-warning, var(--md-sys-color-tertiary)) r g b / 0.12);
+}
+
+.cat-retail {
+    --cat-pill-border: rgb(from var(--md-sys-color-primary) r g b / 0.35);
+}
+
+.cat-fintech {
+    --cat-pill-border: rgb(from var(--md-sys-color-secondary) r g b / 0.35);
+}
+
+.cat-services {
+    --cat-pill-border: rgb(from var(--md-sys-color-tertiary) r g b / 0.35);
+}
+
+.cat-hospitality {
+    --cat-pill-border: rgb(from var(--md-sys-color-warning, var(--md-sys-color-tertiary)) r g b / 0.35);
+}
+
+.landing-page-root {
+    --landing-bg: var(--md-sys-color-surface-container-lowest);
+}
+
+.landing-page-root {
+    --landing-border-hover: rgb(from var(--md-sys-color-primary) r g b / 0.5);
+}
+
+.landing-page-root {
+    --landing-border: rgb(from var(--md-sys-color-surface) r g b / 0.12);
+}
+
+.landing-page-root {
+    --landing-surface-hover: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.94);
+}
+
+.landing-page-root {
+    --landing-surface: rgb(from var(--md-sys-color-surface-container) r g b / 0.84);
+}
+
+.landing-page-root {
+    --landing-text-main: var(--md-sys-color-on-surface);
+}
+
+.landing-page-root {
+    --landing-text-muted: var(--md-sys-color-outline);
+}
+
+.landing-page-root {
+    --landing-text-sub: var(--md-sys-color-outline-variant);
+}
+
+:root {
+    --map-border-strong: var(--md-sys-color-outline);
+}
+
+:root {
+    --map-border: var(--md-sys-color-outline-variant);
+}
+
+:root {
+    --map-error: var(--md-sys-color-error);
+}
+
+:root {
+    --map-fab-gap: 0.36rem;
+}
+
+:root {
+    --map-fab-offset: 0.86rem;
+}
+
+:root {
+    --map-on-primary: var(--md-sys-color-on-primary);
+}
+
+:root {
+    --map-on-surface-variant: var(--md-sys-color-on-surface-variant);
+}
+
+:root {
+    --map-on-surface: var(--md-sys-color-on-surface);
+}
+
+:root {
+    --map-primary-container: var(--md-sys-color-primary-container);
+}
+
+:root {
+    --map-primary: var(--md-sys-color-primary);
+}
+
+:root {
+    --map-surface-muted: var(--md-sys-color-surface-container);
+}
+
+:root {
+    --map-surface-soft: var(--md-sys-color-surface-container-low);
+}
+
+:root {
+    --map-surface-strong: rgb(from var(--md-sys-color-surface) r g b / 0.95);
+}
+
+:root {
+    --map-surface: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+}
+
+:root {
+    --map-text-muted: var(--md-sys-color-on-surface-variant);
+}
+
+:root {
+    --map-text: var(--md-sys-color-on-surface);
+}
+
+.ux-quickview-dialog {
+    --md-dialog-container-color: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.96);
+}
+
+:where(
+    .avatar-container md-dialog,
+    md-dialog.contacts,
+    md-dialog.faceid-profile-modal
+) {
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.det-danger-btn {
+    --md-filled-button-container-color: var(--md-sys-color-error);
+}
+
+.det-tertiary-btn {
+    --md-filled-button-container-color: var(--md-sys-color-tertiary);
+}
+
+.det-danger-btn {
+    --md-filled-button-label-text-color: var(--md-sys-color-on-error);
+}
+
+.det-tertiary-btn {
+    --md-filled-button-label-text-color: var(--md-sys-color-on-tertiary);
+}
+
+.avatar-button {
+    --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
+}
+
+.avatar-button {
+    --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button {
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-secondary-container);
+}
+
+.avatar-button {
+    --md-outlined-button-leading-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-outline-color: var(--md-sys-color-outline);
+}
+
+.avatar-button {
+    --md-outlined-button-trailing-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-with-leading-icon-leading-space: 0px;
+}
+
+.avatar-button {
+    --md-outlined-button-with-leading-icon-trailing-space: 0px;
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-bottom-space: 2px;
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-leading-space: 14px;
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-top-space: 2px;
+}
+
+:where(
+    .m3-search-container .material-text-field,
+    .m3-search-container md-outlined-text-field,
+    .material-search-container .material-text-field,
+    .material-search-container md-outlined-text-field
+) {
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+:where(
+    .b2b-lead-content h2,
+    .brand-title,
+    .download-header h2,
+    .evolution-header h2,
+    .footer-logo,
+    .m3-text-gradient,
+    .section-title-box h2,
+    .showcase-hero h1,
+    .title-gradient,
+    .value-cyan,
+    .value-emerald,
+    .value-purple,
+    .value-teal,
+    header.landing-header .header-brand-text
+) {
+    -webkit-text-fill-color: transparent;
+}
+
+:where(
+    .chat-page-root,
+    .landing-page-root
+) {
+    color-scheme: dark;
+}
+
+:where(
+    .banner-close-btn,
+    .card-interactive,
+    .cta-btn md-icon,
+    .cta-btn span,
+    .kiosk-product-title-link,
+    .m3-card-interactive,
+    button,
+    button.col-title,
+    input,
+    optgroup,
+    select,
+    textarea
+) {
+    color: inherit;
+}
+
+.maneuver-text {
+    color: rgb(from var(--md-sys-color-inverse-on-surface) r g b / 0.8);
+}
+
+.ad-network-partner {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
+}
+
+.ad-org-context {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
+}
+
+.video-caption {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
+}
+
+.brand-screensaver-tagline {
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.85);
+}
+
+:where(
+    .spotlight-pill,
+    .ux-mode-category-tag
+) {
+    color: var(--cat-accent, var(--md-sys-color-primary));
+}
+
+.title-sub {
+    color: var(--landing-text-main, var(--md-sys-color-on-surface));
+}
+
+.landing-page-root {
+    color: var(--landing-text-main);
+}
+
+.hero-subtitle {
+    color: var(--landing-text-sub, var(--md-sys-color-outline-variant));
+}
+
+:where(
+    .click-popup-btn,
+    .map-action-button.primary,
+    .map-action-button.primary:hover:not(:disabled),
+    .search-route-btn.active,
+    .yandex-ctrl-btn.active
+) {
+    color: var(--map-on-primary);
+}
+
+.click-popup-address {
+    color: var(--map-on-surface-variant);
+}
+
+:where(
+    .click-popup-btn-secondary,
+    .click-popup-coords
+) {
+    color: var(--map-on-surface);
+}
+
+:where(
+    .click-popup-btn-secondary:hover,
+    .map-action-button:hover:not(:disabled),
+    .map-category-chip:hover,
+    .map-global-suggestion-item.active .map-global-suggestion-button,
+    .map-panel-toggle-tab:hover,
+    .map-route-add-via-btn:hover,
+    .map-route-profile-chip.active,
+    .map-route-swap-btn:hover,
+    .place-details-back-btn:hover,
+    .search-route-btn:hover,
+    .yandex-ctrl-btn:hover
+) {
+    color: var(--map-primary);
+}
+
+:where(
+    .map-measure-badge-hint,
+    .map-panel-toggle-tab,
+    .map-route-add-via-btn,
+    .map-route-close-btn,
+    .map-route-profile-chip,
+    .map-route-remove-via-btn,
+    .map-route-suggestion-meta,
+    .map-route-swap-btn,
+    .org-description,
+    .place-coordinates,
+    .place-details-header-title,
+    .place-info-row .info-label,
+    .route-close,
+    .route-loading,
+    .search-clear-btn,
+    .search-icon,
+    .search-route-btn
+) {
+    color: var(--map-text-muted);
+}
+
+:where(
+    .map-action-button,
+    .map-category-chip,
+    .map-global-suggestion-button,
+    .map-measure-badge-value,
+    .map-panel-toggle,
+    .map-route-header-title,
+    .map-route-profile-chip:hover,
+    .map-route-suggestion-button,
+    .place-details-back-btn,
+    .place-details-name,
+    .place-info-row .info-value,
+    .route-button,
+    .search-clear-btn:hover,
+    .search-input,
+    .yandex-ctrl-btn
+) {
+    color: var(--map-text);
+}
+
+:where(
+    .auth-error-banner,
+    .badge-expired,
+    .badge-with-ads,
+    .badge.expired,
+    .badge.with-ads,
+    .kiosk-wish-icon.wished,
+    .map-route-close-btn:hover,
+    .map-route-remove-via-btn:hover,
+    .nav-control-btn.finish,
+    .place-details-avatar.org,
+    .route-error,
+    .signin-error-banner,
+    .ux-reset-filter-btn,
+    .validation-message
+) {
+    color: var(--md-sys-color-error);
+}
+
+:where(
+    .nav-control-btn,
+    .navigator-maneuver-bar
+) {
+    color: var(--md-sys-color-inverse-on-surface);
+}
+
+.docs-article {
+    color: var(--md-sys-color-on-background);
+}
+
+:where(
+    .badge-blocked,
+    .badge-none,
+    .badge.blocked,
+    .badge.none,
+    .det-diag-box-warning,
+    .det-status-badge:not(.active),
+    .error-banner,
+    .item-status-pill.status-canceled,
+    .m3-banner-error,
+    .m3-pdf-type,
+    .m3-status-badge.canceled,
+    .m3-status-badge.error,
+    .m3-status-badge.status-canceled,
+    .order-status-badge.status-canceled,
+    .pdf-type,
+    .place-details-badge.org,
+    .required-badge,
+    #blazor-error-ui
+) {
+    color: var(--md-sys-color-on-error-container);
+}
+
+:where(
+    .badge-age-restriction,
+    .blazor-error-boundary
+) {
+    color: var(--md-sys-color-on-error);
+}
+
+:where(
+    ::selection,
+    .analytics-period-chip.active,
+    .badge-completed,
+    .badge-ready,
+    .badge-trial,
+    .badge-verified,
+    .badge.completed,
+    .badge.trial,
+    .badge.verified,
+    .card-completed .card-status-chip,
+    .card-paid .card-status-chip,
+    .catalog-badge,
+    .det-logo-badge,
+    .det-status-badge.active,
+    .doc-type,
+    .header-brand-icon-box,
+    .item-qty-badge,
+    .item-status-pill.status-completed,
+    .item-status-pill.status-paid,
+    .kds-status-tag,
+    .kiosk-brand-logo-fallback,
+    .m3-avatar,
+    .m3-doc-type,
+    .m3-status-badge.completed,
+    .m3-status-badge.paid,
+    .m3-status-badge.status-completed,
+    .m3-status-badge.status-paid,
+    .m3-status-badge.success,
+    .mode-edit,
+    .notification-banner,
+    .order-status-badge.status-completed,
+    .order-status-badge.status-paid,
+    .picker-icon-badge.active,
+    .pillar-icon-box,
+    .preset-btn:hover,
+    .qrg-badge,
+    .qrg-logo-badge,
+    .ready-badge,
+    .showcase-nav-btn.active,
+    .status-badge.active,
+    .user-message,
+    #components-reconnect-modal button:hover
+) {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+:where(
+    .ad-slide-touch-prompt,
+    .assistant-message-icon,
+    .auth-logo-badge,
+    .badge-counter,
+    .brand-screensaver-cta,
+    .btn-ready,
+    .det-bbox-label,
+    .footer-brand-badge,
+    .header-rocket-icon,
+    .landing-auth-btn:hover,
+    .landing-auth-btn:hover md-icon,
+    .lang-chip-btn.lang-chip--active,
+    .m3-dialog-btn-primary,
+    .m3x-btn-pill.primary,
+    .map-category-chip.active,
+    .mobile-nav-item:active,
+    .mobile-nav-item:hover,
+    .new-badge,
+    .picker-day-dot.active,
+    .picker-swatch-check,
+    .primary-cta,
+    .qr-bot-btn:hover md-icon,
+    .route-start-btn,
+    .secondary-cta,
+    .secondary-cta:hover,
+    .showcase-brand-badge,
+    .showcase-nav-btn.active .showcase-nav-count,
+    .sidebar-brand-icon,
+    .signin-logo-badge,
+    .spotlight-launch-btn:hover,
+    .stage-tab.active,
+    .tertiary-cta,
+    .tertiary-cta:hover,
+    .ux-discount-badge,
+    .ux-expand-btn:hover,
+    .ux-modal-btn-primary,
+    .ux-modal-btn-primary:hover,
+    .ux-modal-btn-secondary:hover,
+    .ux-mode-launch-btn:hover,
+    .ux-reset-filter-btn:hover,
+    .ux-tab-btn.active,
+    #components-reconnect-modal button,
+    header.landing-header .header-brand-icon-box
+) {
+    color: var(--md-sys-color-on-primary);
+}
+
+:where(
+    .analytics-mode-btn.active,
+    .archive-type,
+    .back-button:focus-visible,
+    .back-button:hover,
+    .badge-active,
+    .badge.active,
+    .card-collecting .card-status-chip,
+    .det-permission-rationale,
+    .drawer-header .badge,
+    .item-status-pill.status-collected,
+    .item-status-pill.status-collecting,
+    .item-status-pill.status-shipping,
+    .m3-archive-type,
+    .m3-back-button:focus-visible,
+    .m3-back-button:hover,
+    .m3-count-badge,
+    .m3-filter-chip.active,
+    .m3-filter-chip[aria-selected="true"],
+    .m3-segmented-btn.active,
+    .m3-status-badge.collected,
+    .m3-status-badge.collecting,
+    .m3-status-badge.info,
+    .m3-status-badge.shipping,
+    .m3-status-badge.status-collected,
+    .m3-status-badge.status-collecting,
+    .m3-status-badge.status-shipping,
+    .m3x-card-tonal,
+    .order-status-badge.status-collected,
+    .order-status-badge.status-collecting,
+    .order-status-badge.status-shipping,
+    .otp-target-hint,
+    .pos-exact-bill-btn,
+    .ux-widget-group
+) {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+:where(
+    .about-subtitle,
+    .analytics-mode-btn,
+    .analytics-period-chip,
+    .analytics-status-pill,
+    .auth-subtitle,
+    .b2b-lead-content p,
+    .badge-cancelled,
+    .badge.cancelled,
+    .bento-content p,
+    .body-subtext,
+    .card-created .card-status-chip,
+    .card-macos .platform-icon,
+    .card-meta,
+    .card-mid-row,
+    .card-subtitle,
+    .cart-count,
+    .catalog-desc,
+    .column-empty p,
+    .control-label,
+    .crumb-link,
+    .det-active-sessions-empty,
+    .det-btn-icon-sm,
+    .det-card-title-sm,
+    .det-label,
+    .det-placeholder,
+    .det-stat-label,
+    .det-subtitle,
+    .det-voice-room,
+    .docs-refresh-btn,
+    .download-header p,
+    .drop-container,
+    .drop-title,
+    .empty-cart-view,
+    .empty-plans-desc,
+    .empty-plans-icon-wrapper,
+    .evolution-card p,
+    .evolution-header p,
+    .example-subtitle,
+    .explorer-subtitle,
+    .feat-pill,
+    .feat-pill span,
+    .feature-list li,
+    .footer-brand p,
+    .footer-brand-tagline,
+    .footer-columns a,
+    .footer-copy,
+    .footer-copyright,
+    .footer-links-list a,
+    .generic-type,
+    .help-subtitle,
+    .hero-pill-link,
+    .info-label,
+    .item-status-pill.status-created,
+    .item-support,
+    .item-unit-price,
+    .items-count-badge,
+    .kds-empty-col p,
+    .kds-time-ago,
+    .kiosk-brand-tagline,
+    .kiosk-category-label,
+    .kiosk-dialog-text,
+    .kiosk-empty-state p,
+    .kiosk-hero-content p,
+    .landing-subpage-subtitle,
+    .lang-chevron,
+    .lang-chip-btn,
+    .legend-item,
+    .m3-bottom-nav-item,
+    .m3-card-media-placeholder,
+    .m3-card-subtitle,
+    .m3-dialog-description,
+    .m3-dialog-toggle-icon,
+    .m3-empty-column p,
+    .m3-empty-state-desc,
+    .m3-filter-chip,
+    .m3-generic-type,
+    .m3-info-label,
+    .m3-label-sm,
+    .m3-page-header-subtitle,
+    .m3-progress-labels,
+    .m3-row-label,
+    .m3-search-container [slot="trailing-icon"],
+    .m3-search-container md-icon[slot="leading-icon"],
+    .m3-segmented-btn,
+    .m3-status-badge.created,
+    .m3-status-badge.status-created,
+    .m3-table th,
+    .m3-trust-footer,
+    .m3x-fluid-subhead,
+    .material-search-container [slot="trailing-icon"],
+    .material-search-container md-icon[slot="leading-icon"],
+    .md3-presets-label,
+    .md3-schedule-subtitle,
+    .metric-desc,
+    .mobile-nav-item,
+    .not-found-icon,
+    .order-items-table th,
+    .order-status-badge.status-created,
+    .order-subtitle,
+    .orders-table th,
+    .org-card-desc,
+    .org-card-header p,
+    .org-media-placeholder,
+    .org-tag,
+    .page-subtitle,
+    .pagination-text,
+    .payment-dashboard .info-label,
+    .payment-trust-footer,
+    .picker-hex-prefix,
+    .picker-icon-badge,
+    .picker-popover-title,
+    .picker-preview-text,
+    .pillar-features li,
+    .plan-currency,
+    .platform-desc p,
+    .platform-info span,
+    .pos-empty-state p,
+    .preset-label,
+    .preview-info,
+    .preview-label,
+    .price-label,
+    .price-row,
+    .product-currency,
+    .product-desc,
+    .product-description-block h3,
+    .product-unit,
+    .progress-labels,
+    .promotion-modal-subtitle,
+    .qr-caption,
+    .qr-instruction,
+    .resend-countdown,
+    .resolution-badge,
+    .route-alternative-arrival,
+    .route-alternative-distance,
+    .route-alternative-label,
+    .route-options-toolbar-meta,
+    .row-label,
+    .search-input::placeholder,
+    .section-desc,
+    .section-title-box p,
+    .seller-address,
+    .shipping-card,
+    .showcase-card-btn,
+    .showcase-card-desc,
+    .showcase-controls-bar,
+    .showcase-hero p,
+    .showcase-nav-btn,
+    .showcase-nav-count,
+    .showcase-stat-lbl,
+    .showcase-topbar-subtitle,
+    .sidebar-link,
+    .signin-subtitle,
+    .spatial-subcard p,
+    .spatial-wing-header p,
+    .spec-card-text p,
+    .spec-icon,
+    .spec-label,
+    .spotlight-info p,
+    .spotlight-mode-badge,
+    .spotlight-sub,
+    .stage-tab,
+    .stat-label,
+    .stat-value .unit,
+    .status-badge.inactive,
+    .status-text,
+    .store-not-found .not-found-icon,
+    .store-not-found p,
+    .subscription-description,
+    .summary-date,
+    .support-label,
+    .surveyContainer,
+    .tier-price small,
+    .trial-days-label,
+    .upload-subtext,
+    .ux-count-pill,
+    .ux-empty-icon-box,
+    .ux-empty-state p,
+    .ux-modal-btn-secondary,
+    .ux-modal-desc,
+    .ux-mode-code,
+    .ux-mode-desc,
+    .ux-mode-number-pill,
+    .ux-mode-quickview-btn,
+    .ux-search-box input::placeholder,
+    .ux-search-clear,
+    .ux-tab-btn,
+    .ux-widget-quote,
+    .variant-dialog-subtext,
+    .venue-chip,
+    .wishlist-desc-text,
+    .wishlist-details-desc,
+    .wishlist-placeholder,
+    #components-reconnect-modal p,
+    md-elevated-card p,
+    md-filled-card p,
+    md-outlined-card p,
+    p
+) {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(
+    .about-title,
+    .active-orders-label,
+    .analytics-config-btn,
+    .analytics-date-picker-trigger,
+    .analytics-mode-btn:hover,
+    .analytics-period-chip:hover,
+    .assistant-message-text pre > code,
+    .attract-loop-content,
+    .auth-card,
+    .auth-title,
+    .avatar-container .headline,
+    .bento-content h3,
+    .booking-picker-card,
+    .card-amount,
+    .card-order-id,
+    .card-title,
+    .cart-expand-icon,
+    .cart-total,
+    .catalog-title,
+    .citation,
+    .color-hex,
+    .column-badge,
+    .column-title,
+    .count-badge,
+    .crumb-current,
+    .current-plan-indicator,
+    .designer-page-root,
+    .det-card-title,
+    .det-logs-console,
+    .det-title,
+    .dialog-headline-wrap,
+    .docs-header-breadcrumb,
+    .docs-sidebar-title,
+    .drawer-footer .total-row,
+    .drawer-header .headline,
+    .drawer-panel,
+    .empty-plans-title,
+    .evolution-card h3,
+    .example-title,
+    .explorer-title-group h4,
+    .faceid-status-text,
+    .file-name,
+    .fiscal-tag-item,
+    .floating-chip,
+    .footer-brand-link,
+    .footer-brand-title,
+    .footer-header,
+    .footer-links-list a:hover,
+    .fullscreen-loading,
+    .header-brand-link,
+    .help-title,
+    .hero-cta,
+    .hero-pill-link:hover,
+    .hero-title,
+    .home-title,
+    .info-value,
+    .item-headline,
+    .item-name,
+    .item-total-price,
+    .kds-product-name,
+    .kiosk-brand-name,
+    .kiosk-empty-state h3,
+    .kiosk-hero-content h1,
+    .landing-floating-auth-btn,
+    .landing-nav-link:hover,
+    .landing-subpage-title,
+    .lang-chip-btn:hover,
+    .lang-menu-item,
+    .lang-menu-item:hover,
+    .lang-pill-btn,
+    .link-stack a,
+    .link-stack article,
+    .loading-progress-text,
+    .m3-card-title,
+    .m3-dialog-close-btn,
+    .m3-dialog-header h3,
+    .m3-dialog-toggle-title,
+    .m3-drawer-panel,
+    .m3-empty-state-title,
+    .m3-filter-chip:hover,
+    .m3-info-value,
+    .m3-page-header-title,
+    .m3-period-picker-trigger,
+    .m3-row-value,
+    .m3-segmented-btn:hover,
+    .m3-selection-item,
+    .m3-summary-title,
+    .m3-table td,
+    .m3-total-label,
+    .m3-video-type,
+    .m3x-btn-pill.outlined,
+    .m3x-fluid-headline,
+    .md3-dialog-headline,
+    .md3-time-input,
+    .message-list-container,
+    .navigator-stats-bar,
+    .order-items-table td,
+    .orders-table,
+    .org-card-header h3,
+    .org-card-name,
+    .organizations-map-page,
+    .page-heading,
+    .payment-dashboard,
+    .payment-dashboard .info-value,
+    .picker-hex-input,
+    .picker-trigger-title,
+    .plan-name,
+    .plan-title,
+    .plans-section h2,
+    .platform-btn,
+    .platform-btn:hover,
+    .platform-info h3,
+    .pos-catalog-header h4,
+    .pos-empty-state h5,
+    .pos-orders-label,
+    .pos-product-title-text,
+    .pos-quick-bill-btn,
+    .preset-btn,
+    .preview-title,
+    .product-description-text,
+    .product-title,
+    .qr-designer-page-root,
+    .qrg-back:hover,
+    .qty-val,
+    .route-alternative-card,
+    .route-alternative-time,
+    .route-close:hover,
+    .route-options-toolbar-btn,
+    .row-value,
+    .screensaver-pro-badge,
+    .seat-designer-page-root,
+    .section-title,
+    .section-title-box h2,
+    .select-input,
+    .seller-name,
+    .session-item-title,
+    .showcase-brand-title,
+    .showcase-card-title,
+    .showcase-mobile-toggle,
+    .showcase-nav-btn:hover,
+    .showcase-section-title,
+    .showcase-stat-val,
+    .showcase-topbar-title,
+    .sidebar-brand-title,
+    .signin-card,
+    .signin-title,
+    .smart-grid-container h4,
+    .smart-grid-container input,
+    .smart-grid-container select,
+    .smart-grid-container textarea,
+    .spatial-wing-header h3,
+    .spec-card-text h4,
+    .spec-value,
+    .spotlight-info h3,
+    .spotlight-launch-btn,
+    .stage-tab:hover,
+    .store-not-found h2,
+    .subcard-header h4,
+    .summary-title,
+    .table-container,
+    .table-container td,
+    .table-container th,
+    .text-input,
+    .tier-name,
+    .total-label,
+    .upload-text,
+    .ux-count-pill strong,
+    .ux-empty-state h3,
+    .ux-expand-btn,
+    .ux-modal-title,
+    .ux-mode-launch-btn,
+    .ux-mode-title-box h3,
+    .ux-search-box input,
+    .ux-search-clear:hover,
+    .ux-tab-btn:hover,
+    .ux-widget-hotel,
+    .ux-widget-location,
+    .ux-widget-subscription,
+    .ux-widget-ticket,
+    .ux-widget-vehicle,
+    .variant-dialog-title,
+    .video-card-header h3,
+    .video-type,
+    .wishlist-title-text,
+    #components-reconnect-modal,
+    assistant-message pre > code,
+    body,
+    code,
+    footer.app-footer,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header.app-header,
+    header.app-header.landing-header,
+    main.showcase-page,
+    md-dialog.contacts .headline,
+    md-dialog.faceid-profile-modal .headline,
+    md-elevated-card,
+    md-elevated-card h5,
+    md-filled-card,
+    md-filled-card h5,
+    md-outlined-card,
+    md-outlined-card h5,
+    table.quickgrid td,
+    table.quickgrid th
+) {
+    color: var(--md-sys-color-on-surface);
+}
+
+:where(
+    .badge-making,
+    .badge-paused,
+    .badge-pro,
+    .badge.paused,
+    .badge.pro,
+    .card-making .card-status-chip,
+    .card-shipping .card-status-chip,
+    .current-plan-indicator.pro,
+    .item-status-pill.status-making,
+    .m3-sheet-type,
+    .m3-status-badge.making,
+    .m3-status-badge.status-making,
+    .m3-status-badge.warning,
+    .mode-preview,
+    .order-status-badge.status-making,
+    .place-details-badge.place,
+    .share-toast,
+    .sheet-type,
+    .ux-widget-auction
+) {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+:where(
+    .btn-complete,
+    .popular-badge,
+    .pro-tag
+) {
+    color: var(--md-sys-color-on-tertiary);
+}
+
+:where(
+    .ad-disclaimer,
+    .auth-divider,
+    .card-payment,
+    .column-empty,
+    .crumb-sep,
+    .det-placeholder-icon,
+    .empty-cart-view .empty-icon,
+    .faceid-notice,
+    .kds-empty-col,
+    .kiosk-wish-icon,
+    .landing-nav-link,
+    .m3-dialog-toggle-desc,
+    .md3-closed-badge,
+    .md3-time-label,
+    .md3-time-separator,
+    .picker-day-dot,
+    .pills-label,
+    .pos-card-img,
+    .pos-card-img-placeholder,
+    .pos-org-name,
+    .product-img-placeholder,
+    .qrg-back,
+    .qrg-color-picker-wrapper,
+    .qrg-empty,
+    .qrg-empty-list,
+    .qrg-field-label,
+    .qrg-group-head,
+    .qrg-slider-header,
+    .sidebar-nav-category,
+    .support-log-empty,
+    .table-icon
+) {
+    color: var(--md-sys-color-outline);
+}
+
+:where(
+    .active-evo .evo-icon,
+    .ad-network-badge,
+    .advance-prompt,
+    .amount-cell,
+    .audio-type,
+    .avatar-pulse md-icon,
+    .back-button,
+    .badge-cyan,
+    .card-windows .platform-icon,
+    .chip-1 md-icon,
+    .column-icon.icon-ready,
+    .crumb-link:hover,
+    .det-logo-badge md-icon,
+    .det-permission-rationale md-icon,
+    .det-stat-value,
+    .det-voice-title,
+    .docs-breadcrumb-link,
+    .docs-group-header,
+    .docs-header-icon,
+    .drawer-footer .total-value,
+    .empty-mini-icon,
+    .evolution-arrow,
+    .explorer-title-group md-icon,
+    .faceid-icon-placeholder,
+    .feat-icon,
+    .feature-badge,
+    .feature-icon.ok,
+    .feature-list li md-icon,
+    .footer-col-title,
+    .footer-columns a:hover,
+    .footer-columns md-icon,
+    .footer-links-list a .material-symbols-outlined,
+    .footer-links-list a md-icon,
+    .header-icon,
+    .header-icon.icon-ready,
+    .headline,
+    .hero-badge,
+    .hero-pill-link md-icon,
+    .invoice-amount,
+    .item-icon-wrapper,
+    .item-price,
+    .item-status-pill.status-made,
+    .kds-empty-icon,
+    .kds-order-ref,
+    .kiosk-brand-icon,
+    .kiosk-empty-icon,
+    .kiosk-product-title-link:hover,
+    .label-title,
+    .landing-mobile-menu-toggle:hover,
+    .landing-nav-link md-icon,
+    .lang-globe-icon,
+    .lang-menu-item.is-selected,
+    .lang-toggle-btn:hover,
+    .m3-amount-cell,
+    .m3-audio-type,
+    .m3-back-button,
+    .m3-bottom-nav-item.active,
+    .m3-dialog-icon,
+    .m3-empty-column-icon,
+    .m3-empty-state-icon,
+    .m3-label,
+    .m3-legend,
+    .m3-page-header-icon,
+    .m3-pill-badge,
+    .m3-price-badge,
+    .m3-selection-item:hover,
+    .m3-status-badge.made,
+    .m3-status-badge.status-made,
+    .m3-total-value,
+    .m3x-btn-pill.outlined:hover,
+    .maneuver-icon,
+    .md3-headline-icon,
+    .meta-highlight,
+    .mobile-nav-item md-icon,
+    .nav-control-btn.active,
+    .option-add-price,
+    .order-status-badge.status-made,
+    .org-tag md-icon,
+    .panel-section-title,
+    .payment-support a,
+    .picker-badge,
+    .place-details-avatar,
+    .plan-price-wrap,
+    .platform-icon,
+    .pos-empty-icon,
+    .pos-price-text,
+    .pos-tech-chip,
+    .pos-ux-mode-title,
+    .preview-product-price,
+    .price-tag,
+    .price-value,
+    .product-price,
+    .product-tag-chip,
+    .profile-title,
+    .qr-caption md-icon,
+    .qr-status-text,
+    .qrg-org,
+    .qrg-section-title,
+    .qrg-slider-val,
+    .route-alternative-action,
+    .schedule-table th,
+    .score-circle,
+    .section-badge,
+    .section-heading,
+    .section-title md-icon,
+    .seller-browse-all,
+    .seller-logo-placeholder,
+    .seller-name:hover,
+    .session-item-subtitle,
+    .shipping-fee,
+    .showcase-brand-icon,
+    .showcase-card-btn:hover,
+    .showcase-card-code,
+    .showcase-lib-badge,
+    .showcase-nav-category-header,
+    .showcase-section-icon,
+    .showcase-stat-icon,
+    .sidebar-brand-subtitle,
+    .sidebar-link:hover,
+    .spatial-meta-note,
+    .spatial-meta-note md-icon,
+    .spec-card-icon,
+    .stat-item.eta .stat-value,
+    .summary-check-icon,
+    .support-log-line,
+    .tier-price,
+    .total-value,
+    .trial-days-highlight,
+    .trust-badge,
+    .upload-icon,
+    .ux-expand-btn md-icon,
+    .ux-modal-code,
+    .ux-mode-badge-overlay,
+    .ux-mode-quickview-btn md-icon,
+    .ux-mode-quickview-btn:hover,
+    .wing-geomap .venue-icon,
+    .wishlist-details-price,
+    .wishlist-price-tag,
+    a,
+    a:hover,
+    md-elevated-card .price-tag,
+    md-filled-card .price-tag,
+    md-outlined-card .price-tag
+) {
+    color: var(--md-sys-color-primary);
+}
+
+:where(
+    .badge-teal,
+    .card-android .platform-icon,
+    .feature-icon.star,
+    .fiscal-tag-item md-icon,
+    .m3-pill-badge.secondary,
+    .venue-icon
+) {
+    color: var(--md-sys-color-secondary);
+}
+
+.chip-2 md-icon {
+    color: var(--md-sys-color-success, var(--md-sys-color-primary));
+}
+
+:where(
+    .ad-upgrade-link:hover,
+    .pro-badge-icon
+) {
+    color: var(--md-sys-color-tertiary-fixed);
+}
+
+:where(
+    .ad-upgrade-link,
+    .badge-indigo,
+    .badge-purple,
+    .card-icon,
+    .card-ios .platform-icon,
+    .card-web .platform-icon,
+    .chip-3 md-icon,
+    .column-icon.icon-making,
+    .discount-row,
+    .evo-icon,
+    .feature-icon.info,
+    .header-icon.icon-making,
+    .in-stock-text,
+    .info-icon,
+    .m3-pill-badge.tertiary,
+    .promo-success-text,
+    .spec-icon.in-stock,
+    .trust-badge md-icon
+) {
+    color: var(--md-sys-color-tertiary);
+}
+
+.spotlight-header-badge {
+    color: var(--md-sys-color-warning, var(--md-sys-color-tertiary));
+}
+
+@media screen and (max-width: 599.98px) {
+    :where(
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"])
+    ) {
+        --md-filled-button-leading-space: 0px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-filled-button-leading-space: 6px;
+    }
+
+    :where(
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"])
+    ) {
+        --md-filled-button-trailing-space: 0px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-filled-button-trailing-space: 6px;
+    }
+
+    :where(
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"])
+    ) {
+        --md-outlined-button-leading-space: 0px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-outlined-button-leading-space: 6px;
+    }
+
+    :where(
+        .header-end-zone .orders-refresh-btn,
+        .header-end-zone .payment-refresh-btn,
+        .header-end-zone .showcase-reset-btn,
+        .header-end-zone md-elevated-button:has([slot="icon"]),
+        .header-end-zone md-filled-button:has([slot="icon"]),
+        .header-end-zone md-outlined-button:has([slot="icon"])
+    ) {
+        --md-outlined-button-trailing-space: 0px;
+    }
+
+    :where(
+        .header-end-zone md-elevated-button,
+        .header-end-zone md-filled-button,
+        .header-end-zone md-filled-tonal-button,
+        .header-end-zone md-outlined-button,
+        .header-end-zone md-text-button
+    ) {
+        --md-outlined-button-trailing-space: 6px;
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    :where(
+        nav a.nav-item.active md-icon,
+        nav.glass a.nav-item.active md-icon
+    ) {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+
+    :where(
+        nav a.nav-item,
+        nav a.nav-item md-icon,
+        nav a.nav-item span,
+        nav.glass a.nav-item,
+        nav.glass a.nav-item md-icon,
+        nav.glass a.nav-item span
+    ) {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+
+    :where(
+        nav a.nav-item.active span,
+        nav.glass a.nav-item.active span
+    ) {
+        color: var(--md-sys-color-on-surface);
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item.active md-icon,
+        nav.nav-desktop a.nav-item.active .material-symbols-outlined,
+        nav.nav-desktop a.nav-item.active md-icon
+    ) {
+        color: var(--md-sys-color-on-secondary-container);
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile) a.nav-item,
+        nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item md-icon,
+        nav.glass:not(.nav-mobile) a.nav-item span,
+        nav.nav-desktop a.nav-item,
+        nav.nav-desktop a.nav-item .material-symbols-outlined,
+        nav.nav-desktop a.nav-item md-icon,
+        nav.nav-desktop a.nav-item span
+    ) {
+        color: var(--md-sys-color-on-surface-variant);
+    }
+
+    :where(
+        nav.glass:not(.nav-mobile),
+        nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined,
+        nav.glass:not(.nav-mobile) a.nav-item:hover md-icon,
+        nav.glass:not(.nav-mobile) a.nav-item.active span,
+        nav.nav-desktop,
+        nav.nav-desktop a.nav-item:hover .material-symbols-outlined,
+        nav.nav-desktop a.nav-item:hover md-icon,
+        nav.nav-desktop a.nav-item.active span
+    ) {
+        color: var(--md-sys-color-on-surface);
+    }
+
+}
+

@@ -31,6 +31,21 @@ function toPascalCase(str) {
 
 
 
+function readFileWithRetry(filePath, retries = 5, delayMs = 60) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return fs.readFileSync(filePath);
+    } catch (err) {
+      if ((err.code === 'EBUSY' || err.code === 'EPERM') && i < retries - 1) {
+        const start = Date.now();
+        while (Date.now() - start < delayMs) { /* busy wait */ }
+        continue;
+      }
+      throw err;
+    }
+  }
+}
+
 function scanAssets() {
   console.log(`\n📦 [Assets Pipeline] Scanning static assets in: ${assetsWwwroot}`);
   
@@ -67,8 +82,9 @@ function scanAssets() {
       }
 
 
+
       // Compute hash for manifest
-      const content = fs.readFileSync(fullPath);
+      const content = readFileWithRetry(fullPath);
       const hash = crypto.createHash('sha256').update(content).digest('hex').substring(0, 12);
       manifestItems.push({
         url: `_content/Assets/${relPath.replace(/\\/g, '/')}`,
