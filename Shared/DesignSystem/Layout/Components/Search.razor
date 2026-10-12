@@ -1,6 +1,6 @@
 @inject IStringLocalizer L
 
-<div class="@M3.Search.Container">
+<div class="@Classes.Search.Container">
     <TextField TValue="string" 
                Variant="TextField<string>.TextFieldVariant.Outlined" 
                Placeholder="@T("Search_Placeholder", "Поиск товаров...")" 
@@ -8,11 +8,11 @@
                ValueChanged="v => SearchText = v" 
                ValueExpression="() => SearchText" 
                HasLeadingIcon="true"
-               LeadingIcon="search"
+               LeadingIcon="@Icons.Search"
                class="search-input-field">
         @if (!string.IsNullOrEmpty(SearchText))
         {
-            <IconButton Icon="clear" Slot="trailing-icon" OnClick="() => SearchText = string.Empty" />
+            <IconButton Icon="@Icons.Clear" Slot="trailing-icon" OnClick="() => SearchText = string.Empty" />
         }
     </TextField>
 </div>

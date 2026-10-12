@@ -1,0 +1,170 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — WIDGETS / seat-designer.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+:where(.seat-designer-page-root, .designer-page-root) {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 1.5rem;
+    min-height: calc(100dvh - 80px);
+    padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.designer-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container);
+}
+
+.designer-workspace {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.designer-sidebar {
+    width: clamp(260px, 30vw, 340px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    overflow: hidden;
+}
+
+.designer-canvas-area {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.seat-designer-canvas-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background-color: var(--md-sys-color-surface-dim);
+    overflow: hidden;
+}
+
+.seat-selection-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+/* --- Seat Designer Toolbar --- */
+.seat-designer-toolbar {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 1.25rem;
+    background-color: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
+}
+
+.seat-designer-toolbar-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.seat-designer-toolbar-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+.seat-designer-section {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.seat-designer-section-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-outline);
+}
+
+.seat-designer-section-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.seat-designer-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.seat-designer-fields {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.seat-designer-field {
+    width: 100%;
+}
+
+.seat-designer-divider {
+    margin: 0.5rem 0;
+}
+
+.seat-designer-btn-table {
+    --md-filled-button-container-color: var(--md-sys-color-surface-container-highest);
+    --md-filled-button-label-text-color: var(--md-sys-color-on-surface);
+    --md-filled-button-leading-space: 8px;
+    --md-filled-button-trailing-space: 8px;
+    --md-filled-button-label-text-size: 0.8rem;
+    width: 100%;
+}
+
+.seat-designer-btn-add {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+    width: 100%;
+}
+
+.seat-designer-btn-apply {
+    --md-filled-button-container-color: var(--md-sys-color-secondary);
+    width: 100%;
+}
+
+.seat-designer-btn-delete {
+    --md-filled-button-container-color: var(--md-sys-color-error);
+    margin-top: 0.75rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 839.98px) {
+    .designer-header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .designer-workspace {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .designer-sidebar {
+        width: 100%;
+    }
+}

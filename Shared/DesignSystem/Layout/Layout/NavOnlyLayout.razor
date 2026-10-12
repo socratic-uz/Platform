@@ -3,32 +3,25 @@
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
 
-<HeadContent>
-	<link rel="stylesheet" href="_content/Assets/css/styles.bundle.min.css" />
-</HeadContent>
 <Color />
 
-<div class="app-grid nav-only">
-	<Header ShowAvatar="true">
-		<StartContent>
-			<SectionOutlet SectionName="header-start" />
-		</StartContent>
-		<CenterContent>
-			<SectionOutlet SectionName="header-center" />
-		</CenterContent>
-		<EndContent>
-			<SectionOutlet SectionName="header-end" />
-		</EndContent>
-		<ChildContent>
-			<SectionOutlet SectionName="header" />
-		</ChildContent>
-	</Header>
+<Header ShowAvatar="true">
+	<StartContent>
+		<SectionOutlet SectionName="header-start" />
+	</StartContent>
+	<CenterContent>
+		<SectionOutlet SectionName="header-center" />
+	</CenterContent>
+	<EndContent>
+		<SectionOutlet SectionName="header-end" />
+	</EndContent>
+	<ChildContent>
+		<SectionOutlet SectionName="header" />
+	</ChildContent>
+</Header>
 
-	<Nav>
-		<SectionOutlet SectionName="nav" />
-	</Nav>
+<Nav>
+	<SectionOutlet SectionName="nav" />
+</Nav>
 
-	<main class="app-main">
-		@Body
-	</main>
-</div>
+@Body

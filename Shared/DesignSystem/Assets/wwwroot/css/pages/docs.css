@@ -1,0 +1,209 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — PAGES / docs.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.docs-mobile-menu-btn {
+    display: none;
+}
+
+.docs-refresh-btn {
+    display: grid;
+    place-items: center;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    cursor: pointer;
+}
+
+.docs-refresh-btn .search-bar {
+    height: 48px;
+}
+
+.docs-refresh-btn .search-clear-btn {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-refresh-btn .search-route-btn {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-refresh-btn .seller-logo {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-refresh-btn .seller-logo-placeholder {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-refresh-btn .ux-search-box input {
+    height: 48px;
+}
+
+.docs-refresh-btn .yandex-ctrl-btn {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-refresh-btn md-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.docs-welcome-card {
+    display: grid;
+    gap: 0.5rem;
+    place-items: center;
+    max-width: 480px;
+    padding: 32px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background-color: var(--md-sys-color-surface-container-low);
+    text-align: center;
+}
+
+.docs-article {
+    min-width: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 56px;
+    color: var(--md-sys-color-on-background);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.docs-content {
+    min-width: 0;
+    padding: 0;
+    background-color: var(--md-sys-color-background);
+    overflow-x: clip;
+    overflow-y: auto;
+}
+
+.docs-group-header {
+    opacity: 0.85;
+    padding: 4px 8px;
+    color: var(--md-sys-color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.docs-group-items {
+    display: grid;
+    gap: 2px;
+}
+
+.docs-header-actions {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+    justify-self: end;
+    align-items: center;
+}
+
+.docs-header-bar {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.docs-header-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--md-sys-color-primary);
+    font-size: 24px;
+}
+
+.docs-sidebar {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    width: 280px;
+    height: 100%;
+    min-height: 0;
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+}
+
+.docs-sidebar-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    min-height: 56px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.docs-sidebar-title {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+}
+
+main.docs-page {
+    display: grid;
+    grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr);
+    gap: 0;
+    align-content: stretch;
+    height: 100%;
+    min-height: 0;
+    padding: 0;
+    background: var(--md-sys-color-surface);
+    overflow: hidden;
+}
+
+.docs-group-container {
+    display: grid;
+    gap: 4px;
+}
+
+.docs-welcome-container {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    min-height: 360px;
+    padding: 32px 16px;
+}
+
+.docs-breadcrumb-link {
+    display: inline-grid;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 4px;
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+}
+
+.docs-header-breadcrumb {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.35rem;
+    align-items: center;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.docs-sidebar-menu {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    padding: 16px 12px;
+    overflow-y: auto;
+}

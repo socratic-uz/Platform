@@ -1,0 +1,361 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / feedback.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.avatar-container details summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.avatar-container details summary md-list-item {
+    cursor: pointer;
+}
+
+.avatar-container details summary::-webkit-details-marker {
+    display: none;
+}
+
+.avatar-pulse {
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    border: 3px solid var(--md-sys-color-primary);
+    border-radius: 50%;
+    background: var(--md-sys-color-surface-container-high);
+    animation: avatarPulse 2s infinite ease-in-out;
+}
+
+.avatar-pulse md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 36px;
+}
+
+.fullscreen-loading {
+    display: grid;
+    gap: 1.2rem;
+    place-items: center;
+    color: var(--md-sys-color-on-surface);
+}
+
+.loading-label {
+    font-size: 0.875rem;
+}
+
+.loading-progress {
+    display: block;
+    grid-area: 1 / 1 / -1 / -1;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+.loading-progress circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.loading-progress circle:last-child {
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+.loading-progress-text {
+    position: absolute;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+    color: var(--md-sys-color-on-surface);
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading-progress-text::after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
+.m3-avatar {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.m3-empty-state {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
+    justify-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin: var(--md-sys-spacing-6) 0;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container-low);
+    text-align: center;
+}
+
+.m3-empty-state-action {
+    display: grid;
+    place-items: center;
+    margin-top: var(--md-sys-spacing-2);
+}
+
+.m3-empty-state-desc {
+    max-width: 440px;
+    margin: 0;
+    margin-bottom: var(--md-sys-spacing-3);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.m3-empty-state-icon {
+    display: grid;
+    opacity: 0.85;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: var(--md-sys-spacing-2);
+    color: var(--md-sys-color-primary);
+    font-size: 56px;
+}
+
+.m3-empty-state-title {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.m3-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--md-sys-color-primary);
+    transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.m3-progress-labels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.m3-progress-track {
+    width: 100%;
+    height: 8px;
+    border-radius: var(--md-sys-shape-corner-full);
+    background-color: var(--md-sys-color-surface-variant);
+    overflow: hidden;
+}
+
+.m3-skeleton {
+    position: relative;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+}
+
+.m3-skeleton-circle {
+    width: var(--md-sys-touch-target-min);
+    height: var(--md-sys-touch-target-min);
+    border-radius: 50%;
+}
+
+.m3-skeleton-text {
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+}
+
+.m3-skeleton-text.m3-short {
+    width: 60%;
+}
+
+.m3-skeleton-text.short {
+    width: 60%;
+}
+
+.m3-skeleton::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.45) 50%,
+        transparent 100%
+    );
+    transform: translateX(-100%);
+    animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
+    content: '';
+}
+
+.place-details-avatar {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, var(--md-sys-color-primary-container), var(--md-sys-color-surface-container-high));
+    color: var(--md-sys-color-primary);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgb(from var(--md-sys-color-primary) r g b / 0.1);
+}
+
+.place-details-avatar.org {
+    background: linear-gradient(135deg, var(--md-sys-color-error-container), var(--md-sys-color-surface-container-high));
+    color: var(--md-sys-color-error);
+    box-shadow: 0 4px 10px rgb(from var(--md-sys-color-error) r g b / 0.1);
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    border-radius: var(--md-sys-shape-corner-full);
+    background-color: var(--md-sys-color-surface-variant);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background-color: var(--md-sys-color-primary);
+    transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.progress-labels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.route-loading {
+    color: var(--map-text-muted);
+    font-size: 0.82rem;
+}
+
+.ux-empty-state {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3.5rem 2rem;
+    border-radius: var(--md-sys-shape-expressive-corner-extra-large, 28px);
+    text-align: center;
+}
+
+.ux-empty-state h3 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.ux-empty-state p {
+    max-width: 480px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.avatar-container {
+    display: grid;
+    place-items: center;
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.avatar-container .headline {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.avatar-container .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+}
+
+.avatar-container [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 24px 24px;
+}
+
+.avatar-container [slot='headline'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 24px 16px;
+}
+
+.avatar-container details {
+    width: 100%;
+}
+
+.avatar-container details .content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 1.25rem;
+}
+
+.avatar-container label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.avatar-container md-list {
+    width: 100%;
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+}
+
+.m3-grid-progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.m3-progress-container {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.progress-bar-container {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    box-sizing: border-box;
+    width: 100%;
+}

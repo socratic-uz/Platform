@@ -1,0 +1,184 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — PAGES / help.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.faq-card {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+.help-categories {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    justify-content: start;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem 0.5rem 0.75rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.help-hero {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+.help-search-bar {
+    width: 100%;
+}
+
+.help-subtitle {
+    max-width: 780px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.help-title {
+    max-width: 900px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.faq-section {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.faq-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    min-height: 44px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    min-height: 44px;
+}
+
+.faq-summary-left {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.faq-question {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.faq-icon-wrapper {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.faq-arrow-wrapper {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    color: var(--md-sys-color-outline);
+    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+details[open] .faq-arrow-wrapper {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.925rem;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+details:not([open]) .faq-answer {
+    display: none !important;
+}
+
+.help-container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 3.5rem;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+    overflow-x: clip;
+}
+
+.help-search-section {
+    display: grid;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}

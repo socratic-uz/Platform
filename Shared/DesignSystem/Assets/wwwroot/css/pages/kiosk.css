@@ -1,0 +1,485 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — PAGES / kiosk.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.kiosk-filter-inner:has(.kiosk-reset-btn) {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.kiosk-new-order-btn {
+    min-width: max-content;
+    min-height: 48px;
+}
+
+.kiosk-reset-btn {
+    align-self: start;
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-min, 48px);
+}
+
+.kiosk-tier-btn {
+    display: grid;
+    align-items: center;
+    min-height: 48px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.kiosk-tier-btn .search-bar {
+    height: 48px;
+}
+
+.kiosk-tier-btn .search-clear-btn {
+    height: 48px;
+}
+
+.kiosk-tier-btn .search-route-btn {
+    height: 48px;
+}
+
+.kiosk-tier-btn .seller-logo {
+    height: 48px;
+}
+
+.kiosk-tier-btn .seller-logo-placeholder {
+    height: 48px;
+}
+
+.kiosk-tier-btn .ux-search-box input {
+    height: 48px;
+}
+
+.kiosk-tier-btn .yandex-ctrl-btn {
+    height: 48px;
+}
+
+.kiosk-tier-btn md-icon {
+    height: 48px;
+}
+
+.kiosk-wish-btn-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: var(--m3-z-sticky, 10);
+}
+
+@container product-card (max-width: 320px) {
+    .kiosk-main .card-footer button {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .kiosk-main .card-footer md-filled-button {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .kiosk-main .card-footer md-outlined-button {
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .kiosk-new-order-btn {
+        min-height: 48px;
+    }
+
+    .pay-button {
+        min-height: 48px;
+    }
+
+}
+
+@media (pointer: coarse) {
+    .kiosk-btn {
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+}
+
+@media screen and (max-width: 839.98px) {
+    .kiosk-tier-btn {
+        grid-area: tier;
+        justify-self: end;
+    }
+
+}
+
+.kiosk-main .card-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    align-items: center;
+    align-self: end;
+    min-width: 0;
+    min-height: 52px;
+    margin-top: auto;
+    padding: 10px 16px 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+@container product-card (max-width: 320px) {
+    .kiosk-main .card-footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .kiosk-main .card-footer .material-counter {
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+.kiosk-brand-tagline {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 4px;
+    align-items: center;
+    width: max-content;
+    padding: 2px 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.kiosk-category-chipset {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    width: max-content;
+}
+
+.unified-kiosk-filter-bar md-chip-set {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    width: max-content;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .kiosk-category-chipset md-chip {
+        min-height: 48px;
+    }
+
+}
+
+@media screen and (max-width: 599.98px) {
+    .kiosk-brand-tagline {
+        display: none;
+    }
+
+    .price-tag {
+        text-align: left;
+    }
+
+}
+
+.attract-loop-background {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.85);
+    transition: background-image 0.8s ease-in-out;
+}
+
+.attract-loop-content {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding: 3rem 2rem 5rem;
+    color: var(--md-sys-color-on-surface);
+    text-align: center;
+}
+
+.attract-loop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.2) 0%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.5) 50%,
+        rgb(from var(--md-sys-color-scrim) r g b / 0.92) 100%
+    );
+}
+
+.kiosk-attract-loop {
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    animation: kioskFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
+    cursor: pointer;
+    user-select: none;
+}
+
+.kiosk-brand {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 10px;
+    align-items: center;
+    min-width: 0;
+}
+
+.kiosk-brand-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 13px;
+}
+
+.kiosk-brand-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto;
+    gap: 0.5rem;
+    align-items: center;
+    min-width: 0;
+}
+
+.kiosk-brand-logo {
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1 / 1;
+    padding: 2px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-lowest);
+    object-fit: contain;
+}
+
+.kiosk-brand-logo-fallback {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.kiosk-brand-name {
+    min-width: 0;
+    min-inline-size: 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.kiosk-category-label {
+    align-self: center;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.kiosk-empty-icon {
+    display: grid;
+    opacity: 0.8;
+    place-items: center;
+    color: var(--md-sys-color-primary);
+    font-size: 56px;
+}
+
+.kiosk-empty-state {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
+    justify-items: center;
+    place-content: center;
+    box-sizing: border-box;
+    margin: var(--md-sys-spacing-4) 0;
+    padding: 48px 24px;
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container);
+    text-align: center;
+}
+
+.kiosk-empty-state h3 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.kiosk-empty-state p {
+    max-width: 380px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+}
+
+.kiosk-filter-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    width: 100%;
+}
+
+.kiosk-filter-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+}
+
+.kiosk-filter-stack {
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.kiosk-header-content {
+    display: grid;
+}
+
+.kiosk-hero {
+    display: grid;
+    gap: 0.75rem;
+    position: relative;
+    padding: clamp(20px, 3vw, 36px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: clamp(16px, 3vw, 28px);
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
+    overflow: hidden;
+    box-shadow: var(--md-sys-elevation-level-1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.kiosk-hero-content {
+    display: grid;
+    gap: 0.5rem;
+    z-index: var(--m3-z-content, 1);
+}
+
+.kiosk-hero-content h1 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: clamp(1.3rem, 2.8vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.kiosk-hero-content p {
+    max-width: 700px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+    line-height: 1.5;
+}
+
+.kiosk-hero::before {
+    position: absolute;
+    inset: -30% auto auto -30%;
+    width: 85%;
+    height: 150%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+    content: "";
+}
+
+.kiosk-main {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 20px 140px;
+    font-family: inherit;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.kiosk-wish-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
+    color: var(--md-sys-color-outline);
+    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    transition: transform 0.2s ease, color 0.2s ease;
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+.kiosk-wish-icon.wished {
+    border-color: var(--md-sys-color-error);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+}
+
+.unified-kiosk-filter-bar {
+    min-height: auto;
+    margin: 4px 0 12px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+@media screen and (min-width: 840px) {
+    .kiosk-main {
+        padding: 24px 24px 140px;
+    }
+
+    header.app-header {
+        padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+    }
+
+}
+
+.kiosk-dialog-text {
+    margin: 8px 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.kiosk-search-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}

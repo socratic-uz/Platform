@@ -1,17 +1,11 @@
 /* stylelint-disable selector-class-pattern */
-/* ==========================================================================
-   Socratic Master Component Stylesheet
-   Reconstructed Component Architecture
-   ========================================================================== */
-
-@import "base.css";
+/* Socratic Component Primitives */
 @import "buttons.css";
 @import "cards.css";
 @import "chips.css";
 @import "common.css";
 @import "dialogs.css";
 @import "expressive.css";
+@import "feedback.css";
 @import "forms.css";
-@import "layout.css";
-@import "navigation.css";
 @import "tables.css";

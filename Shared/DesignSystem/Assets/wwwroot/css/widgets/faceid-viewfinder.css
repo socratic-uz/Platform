@@ -1,0 +1,126 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — WIDGETS / faceid-viewfinder.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.faceid-viewfinder-card {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: center;
+    padding: 1rem 0;
+}
+
+.faceid-icon-placeholder {
+    opacity: 0.8;
+    color: var(--md-sys-color-primary);
+    font-size: 5rem;
+}
+
+.faceid-notice {
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.faceid-scanner-frame {
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: clamp(180px, 50vw, 240px);
+    height: clamp(180px, 50vw, 240px);
+    border: 3px solid var(--md-sys-color-primary);
+    border-radius: 50%;
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+    box-shadow: 0 0 30px var(--md-sys-color-primary-container);
+}
+
+.faceid-scanner-frame.scanning {
+    border-color: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 40px var(--md-sys-color-tertiary-container);
+}
+
+.faceid-scanner-frame.scanning::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--md-sys-color-tertiary), transparent);
+    animation: authScanLine 1.8s infinite ease-in-out;
+    content: "";
+}
+
+.faceid-status-text {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+md-dialog.faceid-profile-modal {
+    width: min(620px, calc(100vw - 32px));
+    max-width: min(620px, calc(100vw - 32px));
+    max-height: min(880px, calc(100dvh - 48px));
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
+}
+
+md-dialog.faceid-profile-modal .headline {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+md-dialog.faceid-profile-modal .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+}
+
+md-dialog.faceid-profile-modal [slot='actions'] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 24px 24px;
+}
+
+md-dialog.faceid-profile-modal [slot='headline'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 24px 16px;
+}
+
+md-dialog.faceid-profile-modal form.content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-3);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+}
+
+md-dialog.faceid-profile-modal label {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+md-dialog.faceid-profile-modal md-list {
+    width: 100%;
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+}

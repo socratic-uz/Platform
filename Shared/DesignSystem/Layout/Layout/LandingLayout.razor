@@ -11,18 +11,15 @@
 	<Blob />
 }
 
-<div class="landing-grid">
-	@if (isRootLanding)
+@if (isRootLanding)
 	{
-		<div class="landing-top-bar-wrapper">
-			<aside class="landing-floating-controls" aria-label="Quick Actions">
-				<LanguageSelector Variant="pill" />
-				<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
-					<Icon Name="login" />
-					<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
-				</a>
-			</aside>
-		</div>
+		<aside class="landing-floating-controls" aria-label="Quick Actions">
+			<LanguageSelector Variant="pill" />
+			<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
+				<Icon Name="login" />
+				<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
+			</a>
+		</aside>
 	}
 	else
 	{
@@ -93,26 +90,23 @@
 		}
 	}
 
-	<main class="landing-main">
-		<ErrorBoundary @ref="_errorBoundary">
-			<ChildContent>
-				@Body
-			</ChildContent>
-			<ErrorContent Context="ex">
-				<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@T("ErrorLoading", "Произошла ошибка при загрузке")</h3>
-					<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-					<Button Variant="ButtonVariant.Filled" OnClick="Recover">@T("TryAgain", "Попробовать снова")</Button>
-				</div>
-			</ErrorContent>
-		</ErrorBoundary>
-	</main>
+	<ErrorBoundary @ref="_errorBoundary">
+		<ChildContent>
+			@Body
+		</ChildContent>
+		<ErrorContent Context="ex">
+			<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
+				<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@T("ErrorLoading", "Произошла ошибка при загрузке")</h3>
+				<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
+				<Button Variant="ButtonVariant.Filled" OnClick="Recover">@T("TryAgain", "Попробовать снова")</Button>
+			</div>
+		</ErrorContent>
+	</ErrorBoundary>
 
 	@if (Nav != null && !string.IsNullOrEmpty(Nav.ToBaseRelativePath(Nav.Uri).Trim('/')))
 	{
 		<Footer />
 	}
-</div>
 
 @code {
 	[Inject] private NavigationManager? Nav { get; set; }

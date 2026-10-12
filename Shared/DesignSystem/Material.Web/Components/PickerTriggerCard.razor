@@ -1,42 +1,43 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Web
 @using Material.Web
+@using Assets.Constants
 
-<div class="@M3.Picker.TriggerCard @(Disabled ? M3.Picker.Disabled : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
-    <div class="@M3.Picker.TriggerLeft">
+<div class="@Classes.Picker.TriggerCard @(Disabled ? Classes.Picker.Disabled : "") @(HasValue ? "has-value" : "empty") @Class" style="@Style">
+    <div class="@Classes.Picker.TriggerLeft">
         <!-- Icon Badge (44x44px, R12) -->
-        <div class="@M3.Picker.IconBadge @(HasValue ? M3.Picker.Active : "")">
+        <div class="@Classes.Picker.IconBadge @(HasValue ? Classes.Picker.Active : "")">
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge
             }
             else
             {
-                <Icon Name="@(HasValue ? (ActiveIcon ?? Icon) : Icon)" />
+                <md-icon>@(HasValue ? (ActiveIcon ?? Icon) : Icon)</md-icon>
             }
         </div>
 
         <!-- Text & Preview Area -->
-        <div class="@M3.Picker.TriggerText">
-            <div class="@M3.Picker.HeaderRow">
-                <span class="@M3.Picker.TriggerTitle">@Label</span>
+        <div class="@Classes.Picker.TriggerText">
+            <div class="@Classes.Picker.HeaderRow">
+                <span class="@Classes.Picker.TriggerTitle">@Label</span>
                 @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
                 {
-                    <span class="@M3.Picker.Badge">
+                    <span class="@Classes.Picker.Badge">
                         @if (!string.IsNullOrEmpty(BadgeIcon))
                         {
-                            <Icon Name="@BadgeIcon" />
+                            <md-icon>@BadgeIcon</md-icon>
                         }
                         @BadgeText
                     </span>
                 }
             </div>
-            <div class="@M3.Picker.PreviewText" title="@PreviewText">
+            <div class="@Classes.Picker.PreviewText" title="@PreviewText">
                 @PreviewText
             </div>
             @if (CustomPreview != null)
             {
-                <div class="@M3.Picker.CustomPreview">
+                <div class="@Classes.Picker.CustomPreview">
                     @CustomPreview
                 </div>
             }
@@ -44,7 +45,7 @@
     </div>
 
     <!-- Actions Panel -->
-    <div class="@M3.Picker.TriggerActions">
+    <div class="@Classes.Picker.TriggerActions">
         @if (CustomActions != null)
         {
             @CustomActions
@@ -54,7 +55,7 @@
             <Button Variant="ButtonVariant.FilledTonal" OnClick="HandleAction" Disabled="@Disabled">
                 @if (!string.IsNullOrEmpty(ActionIcon))
                 {
-                    <Icon Name="@ActionIcon" Slot="icon" />
+                    <md-icon slot="icon">@ActionIcon</md-icon>
                 }
                 @ActionLabel
             </Button>
@@ -72,7 +73,7 @@
 
 @code {
     [Parameter] public string Label { get; set; } = "Выбор";
-    [Parameter] public string Icon { get; set; } = "tune";
+    [Parameter] public string Icon { get; set; } = Icons.Tune;
     [Parameter] public string? ActiveIcon { get; set; }
     [Parameter] public RenderFragment? CustomIconBadge { get; set; }
 
@@ -83,14 +84,14 @@
     [Parameter] public RenderFragment? CustomPreview { get; set; }
 
     [Parameter] public string? ActionLabel { get; set; } = "Выбрать";
-    [Parameter] public string? ActionIcon { get; set; } = "edit";
+    [Parameter] public string? ActionIcon { get; set; } = Icons.Edit;
     [Parameter] public EventCallback<MouseEventArgs> OnAction { get; set; }
 
     [Parameter] public bool HasValue { get; set; } = false;
     [Parameter] public bool Disabled { get; set; } = false;
 
     [Parameter] public bool ShowResetButton { get; set; } = true;
-    [Parameter] public string ResetIcon { get; set; } = "close";
+    [Parameter] public string ResetIcon { get; set; } = Icons.Close;
     [Parameter] public string ResetAriaLabel { get; set; } = "Сбросить значение";
     [Parameter] public EventCallback OnReset { get; set; }
 

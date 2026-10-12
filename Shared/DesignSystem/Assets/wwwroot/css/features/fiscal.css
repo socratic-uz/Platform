@@ -1,0 +1,33 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — FEATURES / fiscal.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.fiscal-tag-item {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-secondary) 25%, transparent);
+    border-radius: var(--md-sys-shape-corner-medium, 14px);
+    background: color-mix(in srgb, var(--md-sys-color-secondary) 10%, transparent);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.fiscal-tag-item md-icon {
+    color: var(--md-sys-color-secondary);
+    font-size: 20px;
+}
+
+.fiscal-highlight-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+    gap: 0.65rem;
+    width: 100%;
+    min-width: 0;
+}

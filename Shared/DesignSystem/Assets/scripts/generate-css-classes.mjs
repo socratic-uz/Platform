@@ -8,8 +8,13 @@ const assetsRoot = path.resolve(__dirname, '..');
 
 const cssRoot = path.join(assetsRoot, 'wwwroot', 'css');
 const scanDirs = [
-  path.join(cssRoot, 'w3c'),
+  path.join(cssRoot, 'foundations'),
   path.join(cssRoot, 'tokens'),
+  path.join(cssRoot, 'components'),
+  path.join(cssRoot, 'widgets'),
+  path.join(cssRoot, 'layouts'),
+  path.join(cssRoot, 'pages'),
+  path.join(cssRoot, 'features'),
 ];
 
 const constantsDir = path.join(assetsRoot, 'Constants');
@@ -46,6 +51,7 @@ function extractClassesFromCss(cssContent) {
 
 function resolveCanonicalDomainGroup(cls) {
   const c = cls.toLowerCase();
+  if (c.startsWith('seat-designer-')) return 'SeatDesigner';
   if (c.includes('card')) return 'Cards';
   if (c.includes('picker') || c.startsWith('lang-') || c.includes('swatch')) return 'Picker';
   if (c.includes('table') || c.startsWith('col-') || c.startsWith('row-') || c.includes('cell') || c.includes('paginator') || c === 'quickgrid') return 'Table';

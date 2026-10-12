@@ -7,6 +7,7 @@ using Domain.Abstractions;
 using Domain.Entities;
 using Domain.Interfaces;
 using Material.Web;
+using Assets.Constants;
 
 namespace Shared.Components
 {
@@ -24,18 +25,18 @@ namespace Shared.Components
 
         public string GetTierBadgeClass() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? M3.Badge.Trial : M3.Badge.Expired,
-            SubscriptionTier.WithAds => M3.Badge.WithAds,
-            SubscriptionTier.ProAdFree => M3.Badge.Pro,
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? Classes.Badge.Trial : Classes.Badge.Expired,
+            SubscriptionTier.WithAds => Classes.Badge.WithAds,
+            SubscriptionTier.ProAdFree => Classes.Badge.Pro,
             _ => "badge-default"
         };
 
         public string GetTierIcon() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? "hourglass_top" : "warning",
-            SubscriptionTier.WithAds => "campaign",
-            SubscriptionTier.ProAdFree => "verified",
-            _ => "info"
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? Icons.HourglassTop : Icons.Warning,
+            SubscriptionTier.WithAds => Icons.Campaign,
+            SubscriptionTier.ProAdFree => Icons.Verified,
+            _ => Icons.Info
         };
 
         public string GetTierBadgeTitle() => Subscription.Tier switch

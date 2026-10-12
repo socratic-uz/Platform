@@ -1,36 +1,37 @@
 @inherits DataComponentBase
 @using System.Diagnostics.CodeAnalysis
+@using Assets.Constants
 @inject IStringLocalizer l
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<div class="@M3.Avatar.Container">
-	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="@M3.Avatar.Button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
+<div class="@Classes.Avatar.Container">
+	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="@Classes.Avatar.Button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
 		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
 			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
 		}
 		else
 		{
-			<Icon Name="person" />
+			<md-icon>@Icons.Person</md-icon>
 		}
 	</Button>
 
 	@if (IsOpen)
 	{
-	<MaterialDialog class="@M3.Avatar.Contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
+	<MaterialDialog class="@Classes.Avatar.Contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
 		<span slot="headline">
-			<span class="@M3.Avatar.Headline">@l?["Edit profile"]</span>
-			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@(e => IsOpen = false) Icon="close" />
+			<span class="@Classes.Avatar.Headline">@l?["Edit profile"]</span>
+			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@(e => IsOpen = false) Icon="@Icons.Close" />
 		</span>
 		@if (FormModel is null)
 		{
-			<div slot="content" class="@M3.Avatar.Content">
+			<div slot="content" class="@Classes.Avatar.Content">
 				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
 			</div>
 		}
 		else
 		{
-			<EditForm Model="@FormModel" slot="content" method="dialog" class="@M3.Avatar.Content" @onsubmit:preventDefault>
+			<EditForm Model="@FormModel" slot="content" method="dialog" class="@Classes.Avatar.Content" @onsubmit:preventDefault>
 				<AntiforgeryToken />
 				<List>
 					<!--Id-->
@@ -38,11 +39,11 @@
 						<summary>
 							<ListItem type="button">
 								<p>@FormModel?.Name.FirstName @FormModel?.Name?.LastName</p>
-								<Icon Name="person" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.Person</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
-						<div class="@M3.Avatar.Content">
+						<div class="@Classes.Avatar.Content">
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
 							<TextField TValue="Guid?"
 									   Variant="TextField<Guid?>.TextFieldVariant.Outlined"
@@ -78,12 +79,12 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Phone"]</div>
-								<Icon Name="phone" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.Phone</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
 
-						<div class="@M3.Avatar.Content">
+						<div class="@Classes.Avatar.Content">
 							<TextField TValue="string"
 									   Variant="TextField<string>.TextFieldVariant.Outlined"
 									   Label="@l?["Phone"]"
@@ -99,12 +100,12 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Photo"]</div>
-								<Icon Name="add_photo_alternate" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.AddPhotoAlternate</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
 
-						<div class="@M3.Avatar.Content" style="padding: 16px;">
+						<div class="@Classes.Avatar.Content" style="padding: 16px;">
 							<Material.Web.Components.FilePicker 
 								Attachments="@_imageAttachments"
 								Label="@l?["Photo"]"
@@ -123,12 +124,12 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Name"]</div>
-								<Icon Name="id_card" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.IdCard</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
 
-						<div class="@M3.Avatar.Content">
+						<div class="@Classes.Avatar.Content">
 							<TextField TValue="string"
 									   Variant="TextField<string>.TextFieldVariant.Outlined"
 									   Label="@l?["FirstName"]"
@@ -174,11 +175,11 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Address"]</div>
-								<Icon Name="location_on" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.LocationOn</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
-						<div class="@M3.Avatar.Content" style="display: grid; gap: 12px; padding: 16px;">
+						<div class="@Classes.Avatar.Content" style="display: grid; gap: 12px; padding: 16px;">
 							<TextField TValue="string"
 							           Variant="TextField<string>.TextFieldVariant.Outlined"
 							           Label="@(l?["City"] ?? "Город")"
@@ -200,12 +201,12 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Language"]</div>
-								<Icon Name="translate" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.Translate</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
 
-						<div class="@M3.Avatar.Content">
+						<div class="@Classes.Avatar.Content">
 							@foreach (var language in languages)
 							{
 								<label>
@@ -225,12 +226,12 @@
 						<summary>
 							<ListItem type="button">
 								<div>@l?["Accent"]</div>
-								<Icon Name="palette" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.Palette</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
 
-						<div class="@M3.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
+						<div class="@Classes.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;">
 								<Select Label="@l?["Theme"]"
 										Value="@ThemeString"
@@ -251,11 +252,11 @@
 						<summary>
 							<ListItem type="button">
 								<div>@(l?["Security & Quick Access"] ?? "Безопасность и быстрый вход")</div>
-								<Icon Name="security" Slot="start" />
-								<Icon Name="arrow_drop_down" Slot="end" />
+								<md-icon slot="start">@Icons.Security</md-icon>
+								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
 							</ListItem>
 						</summary>
-						<div class="@M3.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
+						<div class="@Classes.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
 							<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); margin: 0;">
 								@(l?["FastLoginSubtitle"] ?? "Настройте методы для входа в 1 клик без ожидания SMS.")
 							</p>
@@ -263,7 +264,7 @@
 							<!-- Face ID -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<Icon Name="@(isFaceIdConfigured ? "check_circle" : "face")" style="@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};")" />
+									<md-icon style="@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};")">@(isFaceIdConfigured ? Icons.CheckCircle : Icons.Face)</md-icon>
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">@(l?["Auth_FaceId_Title"] ?? "Face ID (Биометрия)")</span>
 										<span style="font-size: 0.75rem; color: @(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)");">
@@ -278,7 +279,7 @@
 									@if (isFaceIdConfigured)
 									{
 										<IconButton OnClick="RemoveFaceId" title="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")" AriaLabel="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")">
-											<Icon Name="delete_outline" style="color: var(--md-sys-color-error); font-size: 20px;" />
+											<md-icon style="color: var(--md-sys-color-error); font-size: 20px;">@Icons.DeleteOutline</md-icon>
 										</IconButton>
 									}
 								</div>
@@ -287,7 +288,7 @@
 							<!-- Google SSO -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<Icon Name="account_circle" />
+									<md-icon>@Icons.AccountCircle</md-icon>
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Google SSO</span>
 										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Auth_NotLinked"] ?? "Не привязано") : FormModelEmail)</span>
@@ -301,7 +302,7 @@
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<Icon Name="fingerprint" style="color: var(--md-sys-color-tertiary);" />
+									<md-icon style="color: var(--md-sys-color-tertiary);">@Icons.Fingerprint</md-icon>
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Passkeys (WebAuthn)</span>
 										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@(l?["Auth_Passkeys_Subtitle"] ?? "Вход по Touch ID / Face ID устройства")</span>
@@ -318,8 +319,8 @@
 					<!--Support-->
 					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link">
 						<div>@l?["Support"]</div>
-						<Icon Name="support_agent" Slot="start" />
-						<Icon Name="link" Slot="end" />
+						<md-icon slot="start">@Icons.SupportAgent</md-icon>
+						<md-icon slot="end">@Icons.Link</md-icon>
 					</ListItem>
 
 					@if (permission > Permission.Customer)
@@ -327,15 +328,15 @@
 						<!--Roles-->
 						<ListItem Href="roles" type="button">
 							<div>@l?["Roles"]</div>
-							<Icon Name="group" Slot="start" />
-							<Icon Name="chevron_right" Slot="end" />
+							<md-icon slot="start">@Icons.Group</md-icon>
+							<md-icon slot="end">@Icons.ChevronRight</md-icon>
 						</ListItem>
 					}
 
 					<!--Log out-->
 					<ListItem type="button" OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); })>
 						<div>@l?["Log out"]</div>
-						<Icon Name="logout" Slot="start" />
+						<md-icon slot="start">@Icons.Logout</md-icon>
 					</ListItem>
 				</List>
 			</EditForm>
@@ -351,10 +352,10 @@
 
 	@if (isFaceIdModalOpen)
 	{
-	<MaterialDialog class="@M3.Avatar.FaceidProfileModal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
+	<MaterialDialog class="@Classes.Avatar.FaceidProfileModal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
 		<span slot="headline">
-			<span class="@M3.Avatar.Headline">@l?["Face ID (Биометрия)"]</span>
-			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@CloseFaceIdModal Icon="close" />
+			<span class="@Classes.Avatar.Headline">@l?["Face ID (Биометрия)"]</span>
+			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@CloseFaceIdModal Icon="@Icons.Close" />
 		</span>
 		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
 			<!-- 3-Step Calibration Progress Bar -->
@@ -373,7 +374,7 @@
 				else if (isFaceIdModalOpen)
 				{
 					<div style="display: grid; place-items: center; text-align: center; padding: 1rem; color: var(--md-sys-color-on-surface-variant);">
-						<md-icon style="font-size: 48px; margin-bottom: 8px;">videocam_off</md-icon>
+						<md-icon style="font-size: 48px; margin-bottom: 8px;">@Icons.VideocamOff</md-icon>
 						<span>Камера недоступна</span>
 					</div>
 				}

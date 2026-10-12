@@ -1,0 +1,54 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — LAYOUTS / landing-layout.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.landing-floating-controls {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.65rem;
+    align-items: center;
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    z-index: 100;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.08);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 8px 32px 0 rgb(from var(--md-sys-color-shadow, black) r g b / 0.37);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.landing-header-nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.06);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.03);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+@media screen and (max-width: 1024px) {
+    .landing-floating-controls {
+        top: 0.85rem;
+        right: 1rem;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .landing-floating-controls {
+        top: 0.65rem;
+        right: 0.75rem;
+    }
+}
+

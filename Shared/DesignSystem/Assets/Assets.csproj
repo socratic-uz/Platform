@@ -34,17 +34,12 @@
     <ResxSourceFiles Include="Resources\*.resx" />
   </ItemGroup>
 
-  <!-- Automated LightningCSS compilation & C# token generation pipeline -->
+  <!-- Automated C# token generation pipeline -->
   <Target Name="BuildAssetsBundle"
           BeforeTargets="ResolveStaticWebAssetsInputs;BeforeCompile;BeforeBuild"
           Inputs="@(CssSourceFiles);@(ResxSourceFiles)"
-          Outputs="wwwroot\css\styles.bundle.min.css;Constants\Classes.g.cs;Constants\Assets.g.cs;Constants\Loc.g.cs;Constants\Icons.g.cs"
-          Condition="'$(DesignTimeBuild)' != 'true' and Exists('$(MSBuildThisFileDirectory)scripts/bundle-css.mjs')">
-    <Message Importance="High" Text="⚡ [MSBuild] Compiling W3C CSS bundle via LightningCSS with Brotli/Gzip pre-compression..." />
-    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/bundle-css.mjs&quot;"
-          WorkingDirectory="$(MSBuildThisFileDirectory)"
-          ContinueOnError="WarnAndContinue"
-          StandardOutputImportance="Normal" />
+          Outputs="Constants\Classes.g.cs;Constants\Assets.g.cs;Constants\Loc.g.cs;Constants\Icons.g.cs"
+          Condition="'$(DesignTimeBuild)' != 'true'">
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-css-classes.mjs&quot;"
           WorkingDirectory="$(MSBuildThisFileDirectory)"
           ContinueOnError="WarnAndContinue"

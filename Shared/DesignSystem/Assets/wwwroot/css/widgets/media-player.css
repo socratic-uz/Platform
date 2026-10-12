@@ -1,0 +1,112 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — WIDGETS / media-player.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.video-card {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container);
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+.video-card-header {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.75rem;
+    justify-items: start;
+    align-items: start;
+}
+
+.video-card-header h3 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.audio-call-visualizer {
+    display: grid;
+    gap: 20px;
+    align-content: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface-container-lowest) 70%);
+}
+
+.audio-type {
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+}
+
+.local-video-pip {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 140px;
+    height: 100px;
+    border: 2px solid var(--md-sys-color-outline-variant);
+    border-radius: 12px;
+    background: var(--md-sys-color-surface-container-lowest);
+    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+    object-fit: cover;
+}
+
+.m3-audio-type {
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+}
+
+.m3-video-type {
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+.video-caption {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 0;
+    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.75);
+    font-size: 0.95rem;
+}
+
+.video-type {
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+.video-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: var(--md-sys-color-surface-container-lowest);
+    overflow: hidden;
+}
+
+.video-player-wrapper {
+    display: grid;
+    width: 100%;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-lowest);
+    overflow: hidden;
+}
+
+.video-player-wrapper video {
+    display: block;
+    width: 100%;
+    max-height: 540px;
+    border-radius: 20px;
+    object-fit: cover;
+}

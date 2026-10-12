@@ -52,10 +52,7 @@ namespace Assets.Constants
 
     public static class Styles
     {
-        public const string ComponentsBundleMin = "_content/Assets/css/components/components.bundle.min.css";
-        public const string SocraticBundleMin = "_content/Assets/css/socratic.bundle.min.css";
         public const string StylesFile = "_content/Assets/css/styles.css";
-        public const string StylesBundleMin = "_content/Assets/css/styles.bundle.min.css";
     }
 
     public static class Fonts
@@ -152,9 +149,82 @@ namespace Assets.Constants
 
     public static class AppManifest
     {
+        public const string AboutDesktop = "_content/Assets/preview/geometry/about.desktop.layout";
+        public const string AboutMobile = "_content/Assets/preview/geometry/about.mobile.layout";
+        public const string AboutTablet = "_content/Assets/preview/geometry/about.tablet.layout";
+        public const string AnalyticsDesktop = "_content/Assets/preview/geometry/analytics.desktop.layout";
+        public const string AnalyticsMobile = "_content/Assets/preview/geometry/analytics.mobile.layout";
+        public const string AnalyticsTablet = "_content/Assets/preview/geometry/analytics.tablet.layout";
+        public const string ChatDesktop = "_content/Assets/preview/geometry/chat.desktop.layout";
+        public const string ChatMobile = "_content/Assets/preview/geometry/chat.mobile.layout";
+        public const string ChatTablet = "_content/Assets/preview/geometry/chat.tablet.layout";
+        public const string DetectorDesktop = "_content/Assets/preview/geometry/detector.desktop.layout";
+        public const string DetectorMobile = "_content/Assets/preview/geometry/detector.mobile.layout";
+        public const string DetectorTablet = "_content/Assets/preview/geometry/detector.tablet.layout";
+        public const string DocsDesktop = "_content/Assets/preview/geometry/docs.desktop.layout";
+        public const string DocsMobile = "_content/Assets/preview/geometry/docs.mobile.layout";
+        public const string DocsTablet = "_content/Assets/preview/geometry/docs.tablet.layout";
         public const string HealthNutritionGuide = "_content/Assets/data/health_nutrition_guide.pdf";
-        public const string Manifest = "_content/Assets/manifest.webmanifest";
+        public const string HelpDesktop = "_content/Assets/preview/geometry/help.desktop.layout";
+        public const string HelpMobile = "_content/Assets/preview/geometry/help.mobile.layout";
+        public const string HelpTablet = "_content/Assets/preview/geometry/help.tablet.layout";
+        public const string HomeDesktop = "_content/Assets/preview/geometry/home.desktop.layout";
+        public const string HomeMobile = "_content/Assets/preview/geometry/home.mobile.layout";
+        public const string HomeTablet = "_content/Assets/preview/geometry/home.tablet.layout";
+        public const string KioskDesktop = "_content/Assets/preview/geometry/kiosk.desktop.layout";
+        public const string KioskMobile = "_content/Assets/preview/geometry/kiosk.mobile.layout";
+        public const string KioskTablet = "_content/Assets/preview/geometry/kiosk.tablet.layout";
+        public const string LandingDesktop = "_content/Assets/preview/geometry/landing.desktop.layout";
+        public const string LandingMobile = "_content/Assets/preview/geometry/landing.mobile.layout";
+        public const string LandingTablet = "_content/Assets/preview/geometry/landing.tablet.layout";
+        public const string Manifest = "_content/Assets/preview/manifest.json";
+        public const string MapDesktop = "_content/Assets/preview/geometry/map.desktop.layout";
+        public const string MapMobile = "_content/Assets/preview/geometry/map.mobile.layout";
+        public const string MapTablet = "_content/Assets/preview/geometry/map.tablet.layout";
         public const string MaterialTheme = "_content/Assets/docs/material-theme.json";
+        public const string OrderItemsDesktop = "_content/Assets/preview/geometry/order-items.desktop.layout";
+        public const string OrderItemsMobile = "_content/Assets/preview/geometry/order-items.mobile.layout";
+        public const string OrderItemsTablet = "_content/Assets/preview/geometry/order-items.tablet.layout";
+        public const string OrdersDesktop = "_content/Assets/preview/geometry/orders.desktop.layout";
+        public const string OrdersMobile = "_content/Assets/preview/geometry/orders.mobile.layout";
+        public const string OrdersTablet = "_content/Assets/preview/geometry/orders.tablet.layout";
+        public const string PaymentDesktop = "_content/Assets/preview/geometry/payment.desktop.layout";
+        public const string PaymentMobile = "_content/Assets/preview/geometry/payment.mobile.layout";
+        public const string PaymentTablet = "_content/Assets/preview/geometry/payment.tablet.layout";
+        public const string PlayerDesktop = "_content/Assets/preview/geometry/player.desktop.layout";
+        public const string PlayerMobile = "_content/Assets/preview/geometry/player.mobile.layout";
+        public const string PlayerTablet = "_content/Assets/preview/geometry/player.tablet.layout";
+        public const string PreviewCollector = "_content/Assets/preview/preview-collector.js";
+        public const string ProductDesktop = "_content/Assets/preview/geometry/product.desktop.layout";
+        public const string ProductMobile = "_content/Assets/preview/geometry/product.mobile.layout";
+        public const string ProductTablet = "_content/Assets/preview/geometry/product.tablet.layout";
+        public const string QrDesignerDesktop = "_content/Assets/preview/geometry/qr-designer.desktop.layout";
+        public const string QrDesignerMobile = "_content/Assets/preview/geometry/qr-designer.mobile.layout";
+        public const string QrDesignerTablet = "_content/Assets/preview/geometry/qr-designer.tablet.layout";
+        public const string QrDesktop = "_content/Assets/preview/geometry/qr.desktop.layout";
+        public const string QrMobile = "_content/Assets/preview/geometry/qr.mobile.layout";
+        public const string QrTablet = "_content/Assets/preview/geometry/qr.tablet.layout";
+        public const string SeatDesignerDesktop = "_content/Assets/preview/geometry/seat-designer.desktop.layout";
+        public const string SeatDesignerMobile = "_content/Assets/preview/geometry/seat-designer.mobile.layout";
+        public const string SeatDesignerTablet = "_content/Assets/preview/geometry/seat-designer.tablet.layout";
+        public const string SigninDesktop = "_content/Assets/preview/geometry/signin.desktop.layout";
+        public const string SigninGoogleDesktop = "_content/Assets/preview/geometry/signin-google.desktop.layout";
+        public const string SigninGoogleMobile = "_content/Assets/preview/geometry/signin-google.mobile.layout";
+        public const string SigninGoogleTablet = "_content/Assets/preview/geometry/signin-google.tablet.layout";
+        public const string SigninMobile = "_content/Assets/preview/geometry/signin.mobile.layout";
+        public const string SigninTablet = "_content/Assets/preview/geometry/signin.tablet.layout";
+        public const string SigninTelegramDesktop = "_content/Assets/preview/geometry/signin-telegram.desktop.layout";
+        public const string SigninTelegramMobile = "_content/Assets/preview/geometry/signin-telegram.mobile.layout";
+        public const string SigninTelegramTablet = "_content/Assets/preview/geometry/signin-telegram.tablet.layout";
+        public const string TerminalDesktop = "_content/Assets/preview/geometry/terminal.desktop.layout";
+        public const string TerminalMobile = "_content/Assets/preview/geometry/terminal.mobile.layout";
+        public const string TerminalTablet = "_content/Assets/preview/geometry/terminal.tablet.layout";
+        public const string WishlistDesktop = "_content/Assets/preview/geometry/wishlist.desktop.layout";
+        public const string WishlistMobile = "_content/Assets/preview/geometry/wishlist.mobile.layout";
+        public const string WishlistTablet = "_content/Assets/preview/geometry/wishlist.tablet.layout";
+        public const string _3dDesktop = "_content/Assets/preview/geometry/3d.desktop.layout";
+        public const string _3dMobile = "_content/Assets/preview/geometry/3d.mobile.layout";
+        public const string _3dTablet = "_content/Assets/preview/geometry/3d.tablet.layout";
     }
 
 }

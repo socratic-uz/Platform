@@ -1,0 +1,243 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — WIDGETS / lang-selector.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.lang-chip-btn {
+    display: grid;
+    place-items: center;
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    padding: 0.2rem 0.65rem;
+    border: none;
+    border-radius: var(--md-sys-shape-corner-large);
+    background: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.lang-chip-btn:active {
+    transform: scale(0.97);
+}
+
+.lang-chip-btn:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+.lang-chip-btn:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+    color: var(--md-sys-color-on-surface);
+    transform: translateY(-1px);
+}
+
+.lang-chip-btn.lang-chip--active {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: var(--md-sys-glow-primary-subtle);
+}
+
+.lang-pill-btn {
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto auto;
+    gap: 0.4rem;
+    align-items: center;
+    min-height: var(--md-sys-touch-target-compact);
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.lang-pill-btn:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+.lang-pill-btn:hover {
+    border-color: var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+.lang-toggle-btn {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.04);
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+    touch-action: manipulation;
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.lang-toggle-btn .search-bar {
+    height: 48px;
+}
+
+.lang-toggle-btn .search-clear-btn {
+    height: 48px;
+}
+
+.lang-toggle-btn .search-route-btn {
+    height: 48px;
+}
+
+.lang-toggle-btn .seller-logo {
+    height: 48px;
+}
+
+.lang-toggle-btn .seller-logo-placeholder {
+    height: 48px;
+}
+
+.lang-toggle-btn .ux-search-box input {
+    height: 48px;
+}
+
+.lang-toggle-btn .yandex-ctrl-btn {
+    height: 48px;
+}
+
+.lang-toggle-btn md-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.lang-toggle-btn:hover {
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+}
+
+.lang-chevron {
+    width: 16px;
+    height: 16px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 16px;
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.lang-chevron.is-open {
+    transform: rotate(180deg);
+}
+
+.lang-current-label {
+    letter-spacing: 0.02em;
+}
+
+.lang-globe-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--md-sys-color-primary);
+    font-size: 18px;
+}
+
+.lang-menu-item.is-selected {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.lang-select {
+    display: grid;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.lang-dropdown-wrapper {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.lang-inline-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 4px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-button);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+.lang-dropdown-menu {
+    display: grid;
+    gap: 0.2rem;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 100;
+    min-width: 130px;
+    padding: 0.35rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: var(--md-sys-elevation-level3);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+.lang-menu-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    min-height: var(--md-sys-touch-target-min);
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: var(--md-sys-shape-corner-small);
+    background: transparent;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.825rem;
+    font-weight: 500;
+    text-align: left;
+    transition: background var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.lang-menu-item:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+.lang-menu-list {
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}

@@ -1,8 +1,21 @@
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Socratic Component Stylesheet: dialogs.css
-   Deconsolidated Component Architecture (All styles per class unified)
+   Socratic Design System — COMPONENTS / dialogs.css
+   Component-Driven Architecture
    ========================================================================== */
+
+md-dialog.contacts details summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+md-dialog.contacts details summary md-list-item {
+    cursor: pointer;
+}
+
+md-dialog.contacts details summary::-webkit-details-marker {
+    display: none;
+}
 
 .avatar-container md-dialog {
     width: min(620px, calc(100vw - 32px));
@@ -17,24 +30,6 @@
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
                      var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.dialog-content::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
-}
-
-.dialog-content::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-.dialog-content::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-.dialog-content::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
 }
 
 .dialog-headline-wrap {
@@ -83,16 +78,6 @@
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.drawer-header .badge {
-    margin-left: 8px;
-    padding: 2px 8px;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
 .drawer-header .headline {
     display: grid;
     grid-auto-flow: column;
@@ -125,43 +110,6 @@
     backface-visibility: hidden;
 }
 
-.kiosk-dialog-text {
-    margin: 8px 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.landing-mobile-menu-backdrop {
-    position: fixed;
-    top: 68px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 80;
-    background: rgb(from var(--md-sys-color-shadow, var(--md-sys-color-shadow, black)) r g b / 0.65);
-    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
-}
-
-.landing-mobile-menu-drawer {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 0.6rem;
-    position: fixed;
-    top: 68px;
-    right: 0;
-    left: 0;
-    z-index: 90;
-    padding: 1.25rem 1.5rem 2rem;
-    border-bottom: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.1);
-    background: var(--md-sys-color-surface-container-lowest);
-    box-shadow: 0 20px 40px rgb(from var(--md-sys-color-shadow, black) r g b / 0.7);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    animation: slideDownDrawer 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-}
-
 .m3-config-dialog {
     display: grid;
     gap: var(--md-sys-spacing-5);
@@ -182,24 +130,6 @@
                      var(--md-sys-scrollbar-color-track, transparent);
     box-shadow: var(--md-sys-elevation-level4);
     transform: translate(-50%, -50%);
-}
-
-.m3-config-dialog::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
-}
-
-.m3-config-dialog::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-.m3-config-dialog::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-.m3-config-dialog::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
 }
 
 .m3-dialog {
@@ -225,24 +155,6 @@
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
                      var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.m3-dialog-body::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
-}
-
-.m3-dialog-body::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-.m3-dialog-body::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-.m3-dialog-body::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
 }
 
 .m3-dialog-content {
@@ -303,32 +215,6 @@
                      var(--md-sys-scrollbar-color-track, transparent);
     box-shadow: var(--md-sys-elevation-level4);
     transform: translate(-50%, -50%);
-}
-
-.m3-dialog-surface::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
-}
-
-.m3-dialog-surface::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-.m3-dialog-surface::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-.m3-dialog-surface::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.m3-dialog-title-group {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
 }
 
 .m3-dialog-toggle-desc {
@@ -493,67 +379,6 @@
     font-weight: 700;
 }
 
-.picker-popover-body {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.picker-popover-body::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
-}
-
-.picker-popover-body::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-.picker-popover-body::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-.picker-popover-body::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.picker-popover-footer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding-top: 8px;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.picker-popover-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.picker-popover-panel {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-    margin-bottom: 12px;
-    padding: 16px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
-    background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-expressive-2);
-    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
-}
-
-.picker-popover-title {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
 .promotion-modal-body {
     display: grid;
     gap: 1.25rem;
@@ -624,18 +449,6 @@
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.ux-modal-icon-badge {
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 30%, transparent);
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
-    background: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
-    font-size: 2.2rem;
-    box-shadow: 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
-}
-
 .ux-modal-specs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
@@ -648,14 +461,6 @@
     font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-}
-
-.ux-modal-title-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.65rem;
-    align-items: center;
 }
 
 .ux-quickview-dialog {
@@ -904,80 +709,6 @@ md-dialog.contacts md-list {
     overflow: hidden;
 }
 
-md-dialog.contacts md-outlined-text-field {
-    width: 100%;
-}
-
-md-dialog.faceid-profile-modal {
-    width: min(620px, calc(100vw - 32px));
-    max-width: min(620px, calc(100vw - 32px));
-    max-height: min(880px, calc(100dvh - 48px));
-    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
-    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
-}
-
-md-dialog.faceid-profile-modal .headline {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-md-dialog.faceid-profile-modal .row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-}
-
-md-dialog.faceid-profile-modal [slot='actions'] {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px 24px 24px;
-}
-
-md-dialog.faceid-profile-modal [slot='headline'] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 24px 24px 16px;
-}
-
-md-dialog.faceid-profile-modal form.content {
-    display: grid;
-    grid-auto-flow: row;
-    gap: var(--md-sys-spacing-3);
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
-}
-
-md-dialog.faceid-profile-modal label {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    padding: 0.5rem 0;
-    cursor: pointer;
-}
-
-md-dialog.faceid-profile-modal md-list {
-    width: 100%;
-    border-radius: var(--md-sys-shape-expressive-button);
-    background: var(--md-sys-color-surface-container);
-    overflow: hidden;
-}
-
-md-dialog.faceid-profile-modal md-outlined-text-field {
-    width: 100%;
-}
-
 @media (max-width: 599.98px) {
     .map-mobile-backdrop {
         display: block;
@@ -1044,14 +775,6 @@ md-dialog.faceid-profile-modal md-outlined-text-field {
 
 }
 
-@media screen and (max-width: 839.98px) {
-    .landing-mobile-menu-backdrop {
-        top: 56px;
-    }
-
-    .landing-mobile-menu-drawer {
-        top: 56px;
-    }
-
+.m3x-shape-dialog {
+    border-radius: var(--md-sys-shape-expressive-dialog, 28px);
 }
-

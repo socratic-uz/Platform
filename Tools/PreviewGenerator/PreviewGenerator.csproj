@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Socratic.PreviewGenerator</RootNamespace>
+    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+    <PackageReference Include="Microsoft.Extensions.Localization" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(Domain)" Condition="'$(Domain)' != '' and Exists('$(Domain)')" />
+    <ProjectReference Include="..\..\Shared\Domain\Domain.csproj" Condition="('$(Domain)' == '' or !Exists('$(Domain)')) and Exists('..\..\Shared\Domain\Domain.csproj')" />
+
+    <ProjectReference Include="$(Infrastructure)" Condition="'$(Infrastructure)' != '' and Exists('$(Infrastructure)')" />
+    <ProjectReference Include="..\..\Shared\Infrastructure\Infrastructure.csproj" Condition="('$(Infrastructure)' == '' or !Exists('$(Infrastructure)')) and Exists('..\..\Shared\Infrastructure\Infrastructure.csproj')" />
+
+    <ProjectReference Include="$(Layout)" Condition="'$(Layout)' != '' and Exists('$(Layout)')" />
+    <ProjectReference Include="..\..\Shared\DesignSystem\Layout\Layout.csproj" Condition="('$(Layout)' == '' or !Exists('$(Layout)')) and Exists('..\..\Shared\DesignSystem\Layout\Layout.csproj')" />
+
+    <ProjectReference Include="$(MaterialWeb)" Condition="'$(MaterialWeb)' != '' and Exists('$(MaterialWeb)')" />
+    <ProjectReference Include="..\..\Shared\DesignSystem\Material.Web\Material.Web.csproj" Condition="('$(MaterialWeb)' == '' or !Exists('$(MaterialWeb)')) and Exists('..\..\Shared\DesignSystem\Material.Web\Material.Web.csproj')" />
+
+    <ProjectReference Include="$(PointOfSale)" Condition="'$(PointOfSale)' != '' and Exists('$(PointOfSale)')" />
+    <ProjectReference Include="..\..\..\Retail\PointOfSale\PointOfSale.csproj" Condition="('$(PointOfSale)' == '' or !Exists('$(PointOfSale)')) and Exists('..\..\..\Retail\PointOfSale\PointOfSale.csproj')" />
+
+    <ProjectReference Include="$(Landing)" Condition="'$(Landing)' != '' and Exists('$(Landing)')" />
+    <ProjectReference Include="..\..\..\Portal\Landing\Landing.csproj" Condition="('$(Landing)' == '' or !Exists('$(Landing)')) and Exists('..\..\..\Portal\Landing\Landing.csproj')" />
+
+    <ProjectReference Include="$(Composition)" Condition="'$(Composition)' != '' and Exists('$(Composition)')" />
+    <ProjectReference Include="..\..\Shared\Composition\Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and Exists('..\..\Shared\Composition\Composition.csproj')" />
+  </ItemGroup>
+
+</Project>

@@ -3,50 +3,43 @@
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
 
-<HeadContent>
-	<link rel="stylesheet" href="_content/Assets/css/styles.bundle.min.css" />
-</HeadContent>
 <Color />
 
-<div class="app-grid">
-	<Header ShowAvatar="true">
-		<StartContent>
-			<SectionOutlet SectionName="header-start" />
-		</StartContent>
-		<CenterContent>
-			<SectionOutlet SectionName="header-center" />
-		</CenterContent>
-		<EndContent>
-			<SectionOutlet SectionName="header-end" />
-		</EndContent>
-		<ChildContent>
-			<SectionOutlet SectionName="header" />
-		</ChildContent>
-	</Header>
+<Header ShowAvatar="true">
+	<StartContent>
+		<SectionOutlet SectionName="header-start" />
+	</StartContent>
+	<CenterContent>
+		<SectionOutlet SectionName="header-center" />
+	</CenterContent>
+	<EndContent>
+		<SectionOutlet SectionName="header-end" />
+	</EndContent>
+	<ChildContent>
+		<SectionOutlet SectionName="header" />
+	</ChildContent>
+</Header>
 
-	<Nav>
-		<SectionOutlet SectionName="nav" />
-	</Nav>
+<Nav>
+	<SectionOutlet SectionName="nav" />
+</Nav>
 
-	<main class="app-main">
-		<ErrorBoundary @ref="_errorBoundary">
-			<ChildContent>
-				@Body
-			</ChildContent>
-			<ErrorContent Context="ex">
-				<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-					<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при отображении компонента</h3>
-					<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-					<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
-				</div>
-			</ErrorContent>
-		</ErrorBoundary>
-	</main>
+<ErrorBoundary @ref="_errorBoundary">
+	<ChildContent>
+		@Body
+	</ChildContent>
+	<ErrorContent Context="ex">
+		<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
+			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при отображении компонента</h3>
+			<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
+			<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
+		</div>
+	</ErrorContent>
+</ErrorBoundary>
 
-	<Footer>
-		<SectionOutlet SectionName="footer" />
-	</Footer>
-</div>
+<Footer>
+	<SectionOutlet SectionName="footer" />
+</Footer>
 
 @code {
 	private ErrorBoundary? _errorBoundary;

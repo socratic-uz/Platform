@@ -1,0 +1,89 @@
+@namespace Shared.Components
+
+@if (IncludeBase)
+{
+    <base href="@BaseHref" />
+}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+@if (IncludeMarketingAndAds)
+{
+    <meta name="google-site-verification" content="ZzYX_zi3JaHQXKOG-cpb2L2vaCYo9fY9mKyCLdp7acU" />
+    <meta name="google-adsense-account" content="ca-pub-3226044876387611">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3226044876387611" crossorigin="anonymous"></script>
+    <!-- Yandex Autoplacement 20027116 -->
+    <script>window.yaContextCb = window.yaContextCb || [];</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script data-page-id="20027116" src="https://yandex.ru/ads/system/ap-loader.js" async></script>
+    <meta name="robots" content="index, follow">
+}
+
+@if (IncludeTelegram)
+{
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+}
+
+<script>
+    (function() {
+        try {
+            var cookieTheme = document.cookie.split('; ').find(function(row) { return row.startsWith('Theme='); });
+            var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) || 
+                        localStorage.getItem('Theme') || 
+                        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
+            var normalized = theme.toLowerCase();
+            document.documentElement.setAttribute('data-theme', normalized);
+            document.documentElement.style.colorScheme = normalized;
+        } catch(e) {}
+    })();
+</script>
+
+<!-- Preconnect & Fonts CDN -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+<!-- Local font preload fallback -->
+<link rel="preload" href="@(BasePath)fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- Master Design System Stylesheet (Component Architecture) -->
+<link rel="stylesheet" href="@(BasePath)css/styles.css" />
+
+<!-- Material Web Components Bundle -->
+<script src="@(BasePath)js/material-web.bundle.js" defer></script>
+
+<!-- App Icons & Manifest -->
+<link rel="icon" type="image/png" href="@(BasePath)img/favicon.png" />
+<link rel="apple-touch-icon" sizes="512x512" href="@(BasePath)img/icon-512.png" />
+<link rel="apple-touch-icon" sizes="192x192" href="@(BasePath)img/icon-192.png" />
+<link rel="manifest" href="@(BasePath)manifest.webmanifest" />
+
+@code {
+    /// <summary>
+    /// Базовый префикс для подключения статических ресурсов Assets.
+    /// По умолчанию: "_content/Assets/". Для локальных превью файлов: "../../".
+    /// </summary>
+    [Parameter] public string BasePath { get; set; } = "_content/Assets/";
+
+    /// <summary>
+    /// Включать ли тег &lt;base href&gt;. По умолчанию true. Отключается в статическом превью.
+    /// </summary>
+    [Parameter] public bool IncludeBase { get; set; } = true;
+
+    /// <summary>
+    /// Базовый URL приложения для тега base href. По умолчанию "/".
+    /// </summary>
+    [Parameter] public string BaseHref { get; set; } = "/";
+
+    /// <summary>
+    /// Включать ли внешние рекламные сети (Google AdSense, Yandex) и поисковую индексацию.
+    /// </summary>
+    [Parameter] public bool IncludeMarketingAndAds { get; set; } = true;
+
+    /// <summary>
+    /// Включать ли Telegram WebApp SDK скрипт.
+    /// </summary>
+    [Parameter] public bool IncludeTelegram { get; set; } = true;
+}

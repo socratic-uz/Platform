@@ -1,55 +1,14 @@
 <!DOCTYPE html>
 <html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" data-theme="@InitialTheme" style="color-scheme: @InitialTheme;">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="google-site-verification" content="ZzYX_zi3JaHQXKOG-cpb2L2vaCYo9fY9mKyCLdp7acU" />
-    <meta name="google-adsense-account" content="ca-pub-3226044876387611">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3226044876387611" crossorigin="anonymous"></script>
-    <!-- Yandex Autoplacement 20027116 -->
-    <script>window.yaContextCb = window.yaContextCb || [];</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <script data-page-id="20027116" src="https://yandex.ru/ads/system/ap-loader.js" async></script>
-    <meta name="robots" content="index, follow">
-    <base href="/" />
-    <script>
-        (function() {
-            try {
-                var cookieTheme = document.cookie.split('; ').find(function(row) { return row.startsWith('Theme='); });
-                var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) || 
-                            localStorage.getItem('Theme') || 
-                            (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
-                var normalized = theme.toLowerCase();
-                document.documentElement.setAttribute('data-theme', normalized);
-                document.documentElement.style.colorScheme = normalized;
-            } catch(e) {}
-        })();
-    </script>
-    <!-- Preconnect & Google Fonts CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-
-    <!-- Local font preload fallback -->
-    <link rel="preload" href="_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
-    <script src="_content/Assets/js/material-web.bundle.js" defer></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-    <!-- Master Design System (W3C Single-Declaration Architecture) -->
-    <link rel="stylesheet" href="_content/Assets/css/styles.bundle.min.css" />
-    
+    <HeadAssets />
     <SectionOutlet SectionName="style" />
     <link rel="stylesheet" href="@Assets["Web.UI.styles.css"]" />
-    <link href="_content/Assets/manifest.webmanifest" rel="manifest" />
     <ImportMap />
-    <link rel="icon" type="image/png" href="_content/Assets/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="512x512" href="_content/Assets/img/icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="_content/Assets/img/icon-192.png" />
     <HeadOutlet @rendermode="InteractiveAuto" />
     <AntiforgeryToken />
 </head>
-<body oncontextmenu="return false;">
+<body class="app-grid" oncontextmenu="return false;">
     <Routes @rendermode="InteractiveAuto" />
 
     <SectionOutlet SectionName="script" />

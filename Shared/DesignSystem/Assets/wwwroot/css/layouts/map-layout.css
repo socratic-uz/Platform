@@ -1,0 +1,130 @@
+/* stylelint-disable selector-class-pattern */
+/* ==========================================================================
+   Socratic Design System — LAYOUTS / map-layout.css
+   Component-Driven Architecture
+   ========================================================================== */
+
+.map-panel-content {
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+    height: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.map-panel-toggle {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.32rem;
+    align-items: center;
+    width: fit-content;
+    padding: 0.45rem 0.72rem;
+    border: 1px solid var(--map-border-strong);
+    border-radius: 999px;
+    background: var(--map-surface-strong);
+    color: var(--map-text);
+    font: inherit;
+    font-size: 0.76rem;
+    font-weight: 600;
+    box-shadow: 0 0.25rem 0.75rem rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+    cursor: pointer;
+}
+
+.map-panel-toggle-icon {
+    font-size: 0.9rem;
+}
+
+.map-panel-toggle-icon md-icon:not([slot]) {
+    line-height: 1;
+}
+
+.map-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgb(from var(--map-border) r g b / 0.45);
+    background: linear-gradient(180deg, var(--map-surface-strong), rgb(from var(--map-surface) r g b / 0.88));
+}
+
+.map-topbar {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.18rem;
+    align-items: center;
+    position: absolute;
+    top: var(--map-fab-offset);
+    left: 50%;
+    z-index: 28;
+    padding: 0.22rem 0.32rem;
+    border: 1px solid var(--map-border);
+    border-radius: 999px;
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.96);
+    white-space: nowrap;
+    box-shadow: 0 0.35rem 0.85rem rgb(from var(--md-sys-color-shadow) r g b / 0.13);
+    backdrop-filter: blur(12px);
+    transform: translateX(-50%);
+    pointer-events: auto;
+}
+
+@media (min-width: 600px) and (max-width: 839.98px) {
+    .map-toolbar {
+        top: -0.12rem;
+    }
+
+    .organizations-map-controls {
+        bottom: 0.75rem;
+        width: min(24rem, calc(100vw - 4rem));
+    }
+
+}
+
+.map-panel-toggle-tab {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    right: -44px;
+    z-index: 10;
+    width: 44px;
+    min-width: 44px;
+    height: 64px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid var(--map-border);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.95);
+    color: var(--map-text-muted);
+    font-size: 0.72rem;
+    box-shadow: 6px 0 15px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
+    transform: translateY(-50%);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.map-panel-toggle-tab:hover {
+    right: -48px;
+    width: 48px;
+    background: var(--md-sys-color-surface);
+    color: var(--map-primary);
+}
+
+.organizations-map-controls.collapsed .map-panel-toggle-tab {
+    right: -44px;
+    left: auto;
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    box-shadow: var(--map-shadow);
+}

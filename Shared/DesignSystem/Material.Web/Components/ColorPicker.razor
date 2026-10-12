@@ -1,14 +1,15 @@
 @namespace Material.Web.Components
 @using Microsoft.JSInterop
+@using Assets.Constants
 
 @if (Compact)
 {
-    <div class="@M3.Picker.CompactBox @CssClass @(Disabled ? M3.Picker.Disabled : "")" style="@Style">
+    <div class="@Classes.Picker.CompactBox @CssClass @(Disabled ? Classes.Picker.Disabled : "")" style="@Style">
         <!-- Color Swatch & Native Color Trigger -->
-        <div class="@M3.Picker.SwatchWrapper" title="Нажмите для выбора цвета">
-            <div class="@M3.Picker.Swatch" style="background-color: @NormalizedValue;">
+        <div class="@Classes.Picker.SwatchWrapper" title="Нажмите для выбора цвета">
+            <div class="@Classes.Picker.Swatch" style="background-color: @NormalizedValue;">
                 <input type="color"
-                       class="@M3.Picker.NativeInput"
+                       class="@Classes.Picker.NativeInput"
                        value="@HexValue"
                        disabled="@Disabled"
                        @onchange="OnNativeColorChanged"
@@ -17,24 +18,24 @@
         </div>
 
         <!-- Text Input for HEX -->
-        <div class="@M3.Picker.HexWrapper">
-            <span class="@M3.Picker.HexPrefix">#</span>
+        <div class="@Classes.Picker.HexWrapper">
+            <span class="@Classes.Picker.HexPrefix">#</span>
             <input type="text"
-                   class="@M3.Picker.HexInput"
+                   class="@Classes.Picker.HexInput"
                    placeholder="RRGGBB"
                    value="@RawHexValue"
                    disabled="@Disabled"
                    @onchange="OnTextInputChanged" />
         </div>
 
-        <IconButton Icon="@(isCopied ? "check" : "content_copy")"
+        <IconButton Icon="@(isCopied ? Icons.Check : Icons.ContentCopy)"
                     Disabled="@Disabled"
                     AriaLabel="@(isCopied ? "Скопировано!" : "Скопировать HEX")"
                     OnClick="CopyColorAsync" />
 
         @if (ShowPresets)
         {
-            <IconButton Icon="palette"
+            <IconButton Icon="@Icons.Palette"
                         Disabled="@Disabled"
                         Selected="@isPaletteOpen"
                         Toggle="true"
@@ -44,7 +45,7 @@
 
         @if (HasValue)
         {
-            <IconButton Icon="close"
+            <IconButton Icon="@Icons.Close"
                         Disabled="@Disabled"
                         AriaLabel="Сбросить цвет"
                         OnClick="Clear" />
@@ -57,10 +58,10 @@ else
     <PickerTriggerCard Label="@(Label ?? "Выбор цвета")"
                        HasValue="@HasValue"
                        BadgeText="@NormalizedValue"
-                       BadgeIcon="colorize"
+                       BadgeIcon="@Icons.Colorize"
                        PreviewText="@(HasValue ? $"Выбран цвет: {NormalizedValue}" : "Цвет не выбран (по умолчанию)")"
                        ActionLabel="@(isPaletteOpen ? "Закрыть" : "Палитра")"
-                       ActionIcon="palette"
+                       ActionIcon="@Icons.Palette"
                        OnAction="TogglePalette"
                        ResetAriaLabel="Сбросить цвет"
                        OnReset="Clear"
@@ -68,9 +69,9 @@ else
                        Class="@CssClass"
                        Style="@Style">
         <CustomIconBadge>
-            <div class="@M3.Picker.ColorBadgeSwatch" style="background-color: @NormalizedValue;">
+            <div class="@Classes.Picker.ColorBadgeSwatch" style="background-color: @NormalizedValue;">
                 <input type="color"
-                       class="@M3.Picker.NativeInput"
+                       class="@Classes.Picker.NativeInput"
                        value="@HexValue"
                        disabled="@Disabled"
                        @onchange="OnNativeColorChanged"
@@ -80,18 +81,18 @@ else
 
         <CustomActions>
             <Button Variant="ButtonVariant.FilledTonal" OnClick="TogglePalette" Disabled="@Disabled">
-                <Icon Name="palette" Slot="icon" />
+                <md-icon slot="icon">@Icons.Palette</md-icon>
                 @(isPaletteOpen ? "Закрыть" : "Палитра")
             </Button>
 
-            <IconButton Icon="@(isCopied ? "check" : "content_copy")"
+            <IconButton Icon="@(isCopied ? Icons.Check : Icons.ContentCopy)"
                         Disabled="@Disabled"
                         AriaLabel="Скопировать HEX"
                         OnClick="CopyColorAsync" />
 
             @if (HasValue)
             {
-                <IconButton Icon="close"
+                <IconButton Icon="@Icons.Close"
                             Disabled="@Disabled"
                             AriaLabel="Сбросить цвет"
                             OnClick="Clear" />
@@ -103,32 +104,32 @@ else
 <!-- Presets Popover / Dialog -->
 @if (ShowPresets && isPaletteOpen)
 {
-    <div class="@M3.Picker.PopoverPanel">
-        <div class="@M3.Picker.PopoverHeader">
-            <span class="@M3.Picker.PopoverTitle">Рекомендованные цвета Material 3</span>
-            <IconButton Icon="close" AriaLabel="Закрыть" OnClick="() => isPaletteOpen = false" />
+    <div class="@Classes.Picker.PopoverPanel">
+        <div class="@Classes.Picker.PopoverHeader">
+            <span class="@Classes.Picker.PopoverTitle">Рекомендованные цвета Material 3</span>
+            <IconButton Icon="@Icons.Close" AriaLabel="Закрыть" OnClick="() => isPaletteOpen = false" />
         </div>
-        <div class="@M3.Picker.PaletteGrid">
+        <div class="@Classes.Picker.PaletteGrid">
             @foreach (var color in EffectivePresets)
             {
                 var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
                 <button type="button"
-                        class="@M3.Picker.PaletteSwatch @(isSelected ? "selected" : "")"
+                        class="@Classes.Picker.PaletteSwatch @(isSelected ? "selected" : "")"
                         style="background-color: @color;"
                         title="@color"
                         @onclick="() => SelectPreset(color)">
                     @if (isSelected)
                     {
-                        <Icon Name="check" class="@M3.Picker.SwatchCheck" />
+                        <md-icon class="@Classes.Picker.SwatchCheck">@Icons.Check</md-icon>
                     }
                 </button>
             }
         </div>
-        <div class="@M3.Picker.PopoverFooter">
-            <div class="@M3.Picker.HexWrapper" style="width: auto; max-width: 140px;">
-                <span class="@M3.Picker.HexPrefix">#</span>
+        <div class="@Classes.Picker.PopoverFooter">
+            <div class="@Classes.Picker.HexWrapper" style="width: auto; max-width: 140px;">
+                <span class="@Classes.Picker.HexPrefix">#</span>
                 <input type="text"
-                       class="@M3.Picker.HexInput"
+                       class="@Classes.Picker.HexInput"
                        placeholder="RRGGBB"
                        value="@RawHexValue"
                        disabled="@Disabled"
@@ -137,7 +138,7 @@ else
             @if (HasValue)
             {
                 <Button Variant="ButtonVariant.Text" OnClick="Clear">
-                    <Icon Name="restart_alt" Slot="icon" />
+                    <md-icon slot="icon">@Icons.RestartAlt</md-icon>
                     Сбросить
                 </Button>
             }

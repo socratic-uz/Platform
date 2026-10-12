@@ -1,13 +1,18 @@
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Platform - Master Design System Stylesheet
-   W3C CSS Working Group Single-Declaration Architecture
+   Component-Driven 7-Layer Architecture
    ========================================================================== */
 
-/* 1. Typography Fonts (Icons & Typefaces) */
+/* 0. Typography Fonts */
 @import "../fonts/material-symbols-outlined.css";
 @import "../fonts/roboto.css";
 @import "../fonts/montserrat.css";
+
+/* 1. Foundations & Reset */
+@import "foundations/base.css";
+@import "foundations/typography.css";
+@import "foundations/scrollbars.css";
 
 /* 2. Design Tokens */
 @import "tokens/box-model/sizing.css";
@@ -24,69 +29,41 @@
 @import "tokens/themes/dark.css";
 @import "tokens/themes/light.css";
 
-/* 4. W3C Rule Modules */
-/* Box Model */
-@import "w3c/box-model/sizing.css";
-@import "w3c/box-model/margin.css";
-@import "w3c/box-model/padding.css";
-@import "w3c/box-model/border.css";
-@import "w3c/box-model/outline.css";
+/* 3. Material 3 Component Primitives */
+@import "components/components.css";
 
-/* Layout */
-@import "w3c/layout/display.css";
-@import "w3c/layout/grid.css";
-@import "w3c/layout/alignment.css";
-@import "w3c/layout/multi-column.css";
-@import "w3c/layout/table.css";
+/* 4. Smart Widgets & Tools */
+@import "widgets/ads.css";
+@import "widgets/booking-picker.css";
+@import "widgets/cart.css";
+@import "widgets/color-picker.css";
+@import "widgets/faceid-viewfinder.css";
+@import "widgets/lang-selector.css";
+@import "widgets/media-player.css";
+@import "widgets/qr-designer.css";
+@import "widgets/seat-designer.css";
 
-/* Positioning */
-@import "w3c/positioning/position.css";
-@import "w3c/positioning/stacking.css";
-@import "w3c/positioning/anchor.css";
+/* 5. Blazor Layouts */
+@import "layouts/footer.css";
+@import "layouts/grid-layout.css";
+@import "layouts/header.css";
+@import "layouts/landing-layout.css";
+@import "layouts/map-layout.css";
 
-/* Overflow */
-@import "w3c/overflow/overflow.css";
-@import "w3c/overflow/scrolling.css";
-@import "w3c/overflow/scrollbars.css";
+/* 6. Page-Specific Styles */
+@import "pages/about.css";
+@import "pages/analytics.css";
+@import "pages/auth.css";
+@import "pages/chat.css";
+@import "pages/detector.css";
+@import "pages/docs.css";
+@import "pages/help.css";
+@import "pages/kiosk.css";
+@import "pages/landing.css";
+@import "pages/orders.css";
+@import "pages/payment.css";
+@import "pages/terminal.css";
 
-/* Typography */
-@import "w3c/typography/font.css";
-@import "w3c/typography/text-layout.css";
-@import "w3c/typography/text-wrapping.css";
-@import "w3c/typography/text-decoration.css";
-
-/* Color */
-@import "w3c/color/color.css";
-@import "w3c/color/background.css";
-
-/* Effects */
-@import "w3c/effects/shadow.css";
-@import "w3c/effects/filters.css";
-@import "w3c/effects/masking.css";
-@import "w3c/effects/clipping.css";
-
-/* Transforms */
-@import "w3c/transforms/transform.css";
-@import "w3c/transforms/motion-path.css";
-
-/* Motion */
-@import "w3c/motion/transitions.css";
-@import "w3c/motion/animations.css";
-
-/* Content */
-@import "w3c/content/generated.css";
-@import "w3c/content/lists.css";
-@import "w3c/content/replaced.css";
-
-/* Interaction */
-@import "w3c/interaction/pointer.css";
-@import "w3c/interaction/selection.css";
-@import "w3c/interaction/form-controls.css";
-
-/* Internationalization (i18n) */
-@import "w3c/i18n/direction.css";
-@import "w3c/i18n/writing-mode.css";
-
-/* Containment */
-@import "w3c/containment/contain.css";
-@import "w3c/containment/container-queries.css";
+/* 7. Commercial Features */
+@import "features/commerce-modes.css";
+@import "features/fiscal.css";

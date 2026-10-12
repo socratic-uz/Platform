@@ -1,136 +1,8 @@
 /* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Socratic Component Stylesheet: expressive.css
-   Deconsolidated Component Architecture (All styles per class unified)
+   Socratic Design System — COMPONENTS / expressive.css
+   Component-Driven Architecture
    ========================================================================== */
-
-.m3x-btn-pill {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: var(--md-sys-touch-target-min);
-    padding: 0.5rem 1.5rem;
-    border: 1px solid transparent;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    line-height: 1.25;
-    text-decoration: none;
-    transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1)),
-        box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard, cubic-bezier(0.2, 0, 0, 1)),
-        background-color var(--md-sys-motion-duration-short2, 100ms) ease;
-    cursor: pointer;
-    touch-action: manipulation;
-    user-select: none;
-}
-
-.m3x-btn-pill:active {
-    transform: scale(0.96);
-}
-
-.m3x-btn-pill:active:not([disabled]) {
-    transform: scale(0.965);
-    transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
-}
-
-.m3x-btn-pill.outlined {
-    border-color: var(--md-sys-color-outline);
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-}
-
-.m3x-btn-pill.outlined:hover {
-    border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    transform: translateY(-1px);
-}
-
-.m3x-btn-pill.primary {
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    box-shadow: 0 4px 14px rgb(from var(--md-sys-color-primary) r g b / 0.28);
-}
-
-.m3x-btn-pill.primary:hover {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.92);
-    box-shadow: var(--md-sys-glow-primary-subtle, 0 0 20px rgb(from var(--md-sys-color-primary) r g b / 0.25));
-    transform: translateY(-1px);
-}
-
-.m3x-card {
-    display: grid;
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
-    max-width: 100%;
-    min-inline-size: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
-    background: var(--md-sys-color-surface-container);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    will-change: transform, box-shadow;
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1)),
-        box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard, cubic-bezier(0.2, 0, 0, 1)),
-        border-color var(--md-sys-motion-duration-short2, 100ms) ease;
-}
-
-.m3x-card-asymmetric-1 {
-    border-radius: var(--md-sys-shape-expressive-asymmetric-1, 28px 8px 28px 8px);
-}
-
-.m3x-card-asymmetric-2 {
-    border-radius: var(--md-sys-shape-expressive-asymmetric-2, 8px 28px 8px 28px);
-}
-
-.m3x-card-elevated {
-    background: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-expressive-1, 0 8px 24px -4px rgb(from var(--md-sys-color-primary) r g b / 0.12));
-}
-
-.m3x-card-elevated:hover {
-    box-shadow: var(--md-sys-elevation-expressive-2, 0 14px 34px -6px rgb(from var(--md-sys-color-primary) r g b / 0.20));
-}
-
-.m3x-card-interactive {
-    will-change: transform, box-shadow;
-    transition: transform 260ms var(--md-sys-motion-easing-spring-gentle),
-        box-shadow 260ms var(--md-sys-motion-easing-standard),
-        border-color 150ms ease;
-}
-
-.m3x-card-interactive:active {
-    transform: scale(0.985);
-    transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
-}
-
-.m3x-card-interactive:hover {
-    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
-    box-shadow: 0 16px 36px -6px rgb(from var(--md-sys-color-primary) r g b / 0.18),
-        0 6px 16px -2px rgb(from var(--md-sys-color-shadow) r g b / 0.14);
-    transform: translateY(-4px) scale(1.006);
-}
-
-.m3x-card-tonal {
-    border-color: rgb(from var(--md-sys-color-secondary) r g b / 0.25);
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.m3x-card:active {
-    transform: scale(0.985);
-}
-
-.m3x-card:hover {
-    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.35);
-    box-shadow: var(--md-sys-elevation-expressive-1, 0 8px 24px -4px rgb(from var(--md-sys-color-primary) r g b / 0.12));
-    transform: translateY(-3px);
-}
 
 .m3x-fluid-headline {
     color: var(--md-sys-color-on-surface);
@@ -192,10 +64,6 @@
     transform: translateY(-2px);
 }
 
-.m3x-pill {
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-}
-
 .m3x-press-scale {
     transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1));
     touch-action: manipulation;
@@ -211,10 +79,6 @@
     padding: clamp(2.5rem, 6vw, 6rem) clamp(1rem, 4vw, 3.5rem);
 }
 
-.m3x-shape-dialog {
-    border-radius: var(--md-sys-shape-expressive-dialog, 28px);
-}
-
 .m3x-shape-dock {
     border-radius: var(--md-sys-shape-expressive-dock, 32px);
 }
@@ -223,52 +87,3 @@
     transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.3, 1.15, 0.5, 1)),
         box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard, cubic-bezier(0.2, 0, 0, 1));
 }
-
-@container (max-width: 360px) {
-    .m3x-btn-pill {
-        padding: 0.4rem 1rem;
-        font-size: 0.875rem;
-    }
-
-    .m3x-card {
-        padding: 1rem;
-        border-radius: var(--md-sys-shape-corner-medium, 16px);
-    }
-
-}
-
-@supports (grid-template-rows: subgrid) {
-    .subgrid-card {
-        display: grid;
-        grid-template-rows: subgrid;
-        grid-row: span 4;
-        row-gap: 0.75rem;
-    }
-
-    .subgrid-card-actions {
-        grid-row: 4;
-        align-self: end;
-    }
-
-    .subgrid-card-body {
-        grid-row: 3;
-        align-self: start;
-    }
-
-    .subgrid-card-media {
-        grid-row: 1;
-    }
-
-    .subgrid-card-title {
-        grid-row: 2;
-        align-self: start;
-    }
-
-    .subgrid-deck {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-        grid-auto-rows: auto;
-    }
-
-}
-

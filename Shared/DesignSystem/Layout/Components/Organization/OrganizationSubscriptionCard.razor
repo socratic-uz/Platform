@@ -1,11 +1,12 @@
 @namespace Shared.Components
 @using SharedKernel.ValueObjects
 @using Domain.Entities
+@using Assets.Constants
 
 <div class="card-outlined pricing-card">
     <div class="subscription-header">
-        <div class="@M3.Badge.Root @GetTierBadgeClass()">
-            <Icon Name="@GetTierIcon()" class="@M3.Badge.Icon" />
+        <div class="@Classes.Badge.Root @GetTierBadgeClass()">
+            <md-icon class="@Classes.Badge.Icon">@GetTierIcon()</md-icon>
             <span>@GetTierBadgeTitle()</span>
         </div>
         @if (Subscription.IsTrialActive)
@@ -31,9 +32,9 @@
                 <span class="tier-price">0$ <small>/ 30 дней</small></span>
             </div>
             <ul class="tier-features">
-                <li><Icon Name="check_circle" class="feature-icon ok" /> <strong>Без рекламы</strong></li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Полный доступ ко всем 28 режимам</li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Фирменная заставка заведения</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> <strong>Без рекламы</strong></li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Полный доступ ко всем 28 режимам</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фирменная заставка заведения</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
             {
@@ -48,9 +49,9 @@
                 <span class="tier-price">5$ <small>/ мес</small></span>
             </div>
             <ul class="tier-features">
-                <li><Icon Name="info" class="feature-icon info" /> Реклама партнеров на киосках</li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Все функции облачной кассы</li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Фискализация Soliq.uz</li>
+                <li><md-icon class="feature-icon info">@Icons.Info</md-icon> Реклама партнеров на киосках</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Все функции облачной кассы</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фискализация Soliq.uz</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.WithAds)
             {
@@ -72,10 +73,10 @@
                 <span class="tier-price">25$ <small>/ мес</small></span>
             </div>
             <ul class="tier-features">
-                <li><Icon Name="star" class="feature-icon star" /> <strong>100% Без рекламы</strong></li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Фирменный экранозаставка ресторана</li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Приоритетный саппорт 24/7</li>
-                <li><Icon Name="check_circle" class="feature-icon ok" /> Премиальный White-Label стиль</li>
+                <li><md-icon class="feature-icon star">@Icons.Star</md-icon> <strong>100% Без рекламы</strong></li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фирменный экранозаставка ресторана</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Приоритетный саппорт 24/7</li>
+                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Премиальный White-Label стиль</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.ProAdFree)
             {
@@ -83,7 +84,7 @@
             }
             else
             {
-                <Button Variant="ButtonVariant.Filled" Icon="rocket_launch" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree)">
+                <Button Variant="ButtonVariant.Filled" Icon="@Icons.RocketLaunch" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree)">
                     Подключить PRO (25$/мес)
                 </Button>
             }
