@@ -31,5 +31,6 @@
   </Folder>
   <Folder Name="/Tools/">
     <Project Path="Tools/BlazorUiQuality.Analyzer/BlazorUiQuality.Analyzer.csproj" />
+    <Project Path="Tools/BlazorUiQuality.Analyzer.Tests/BlazorUiQuality.Analyzer.Tests.csproj" />
   </Folder>
 </Solution>
