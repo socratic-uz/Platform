@@ -54,7 +54,11 @@
       return false;
     }
 
-    // Skip hidden elements
+    // Skip hidden elements and closed dialogs
+    if (el.closest('dialog:not([open]), md-dialog:not([open]), [hidden]')) {
+      return false;
+    }
+
     const style = window.getComputedStyle(el);
     if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
       return false;

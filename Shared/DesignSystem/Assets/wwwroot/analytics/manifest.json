@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T02:38:55.494Z",
+  "generatedAt": "2026-10-13T02:43:36.654Z",
   "pagesCount": 24,
   "pages": [
     {
@@ -50,7 +50,7 @@
         "tablet": "analytics/blueprints/detector.tablet.blueprint",
         "mobile": "analytics/blueprints/detector.mobile.blueprint"
       },
-      "totalViolations": 6
+      "totalViolations": 3
     },
     {
       "name": "docs",
@@ -70,7 +70,7 @@
         "tablet": "analytics/blueprints/help.tablet.blueprint",
         "mobile": "analytics/blueprints/help.mobile.blueprint"
       },
-      "totalViolations": 27
+      "totalViolations": 0
     },
     {
       "name": "home",
