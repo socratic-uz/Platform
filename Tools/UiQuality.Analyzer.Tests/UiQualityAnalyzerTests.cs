@@ -1,14 +1,14 @@
-using BlazorUiQuality.Analyzer;
+using UiQuality.Analyzer;
 using Xunit;
 
-namespace BlazorUiQuality.Analyzer.Tests;
+namespace UiQuality.Analyzer.Tests;
 
-public sealed class BlazorSourceAnalyzerTests
+public sealed class UiQualityAnalyzerTests
 {
     [Fact]
     public void Analyze_reads_component_code_behind_css_and_locations()
     {
-        var root = Directory.CreateTempSubdirectory("blazor-ui-quality-");
+        var root = Directory.CreateTempSubdirectory("ui-quality-");
         try
         {
             var razorPath = Path.Combine(root.FullName, "ProductCard.razor");
@@ -16,7 +16,7 @@ public sealed class BlazorSourceAnalyzerTests
             File.WriteAllText(razorPath + ".cs", "using Microsoft.AspNetCore.Components;\npublic partial class ProductCard\n{\n    [Parameter] public required string Title { get; set; }\n}");
             File.WriteAllText(razorPath + ".css", ".card ::deep .title { color: red; }");
 
-            var component = new BlazorSourceAnalyzer().Analyze(root.FullName).Single();
+            var component = new UiQualityAnalyzer().Analyze(root.FullName).Single();
 
             Assert.Equal("ProductCard", component.ComponentName);
             Assert.NotNull(component.CodeBehindPath);
@@ -36,14 +36,14 @@ public sealed class BlazorSourceAnalyzerTests
     [Fact]
     public void Analyze_detects_hardcoded_colors_and_touch_target_risks()
     {
-        var root = Directory.CreateTempSubdirectory("blazor-ui-tokens-");
+        var root = Directory.CreateTempSubdirectory("ui-tokens-");
         try
         {
             var razorPath = Path.Combine(root.FullName, "BadComponent.razor");
             File.WriteAllText(razorPath, "<button style=\"background-color: #1e293b;\">Click</button>");
             File.WriteAllText(razorPath + ".css", ".action-btn { height: 32px; color: #ff0055; background: rgb(255, 255, 255); }");
 
-            var component = new BlazorSourceAnalyzer().Analyze(root.FullName).Single();
+            var component = new UiQualityAnalyzer().Analyze(root.FullName).Single();
 
             Assert.Equal("BadComponent", component.ComponentName);
             Assert.Contains("#1e293b", component.HardcodedColors);
@@ -64,14 +64,14 @@ public sealed class BlazorSourceAnalyzerTests
     [Fact]
     public void Analyze_detects_forbidden_flexbox_usages()
     {
-        var root = Directory.CreateTempSubdirectory("blazor-ui-flexbox-");
+        var root = Directory.CreateTempSubdirectory("ui-flexbox-");
         try
         {
             var razorPath = Path.Combine(root.FullName, "FlexComponent.razor");
             File.WriteAllText(razorPath, "<div style=\"display: inline-flex;\">Inline Flex</div>");
             File.WriteAllText(razorPath + ".css", ".container { display: flex; gap: 8px; }");
 
-            var component = new BlazorSourceAnalyzer().Analyze(root.FullName).Single();
+            var component = new UiQualityAnalyzer().Analyze(root.FullName).Single();
 
             Assert.Equal("FlexComponent", component.ComponentName);
             Assert.True(component.UsesFlexbox);

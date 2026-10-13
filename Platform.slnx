@@ -30,7 +30,7 @@
     <Project Path="Shared/DesignSystem/Markdown/Markdown.csproj" />
   </Folder>
   <Folder Name="/Tools/">
-    <Project Path="Tools/BlazorUiQuality.Analyzer/BlazorUiQuality.Analyzer.csproj" />
-    <Project Path="Tools/BlazorUiQuality.Analyzer.Tests/BlazorUiQuality.Analyzer.Tests.csproj" />
+    <Project Path="Tools/UiQuality.Analyzer/UiQuality.Analyzer.csproj" />
+    <Project Path="Tools/UiQuality.Analyzer.Tests/UiQuality.Analyzer.Tests.csproj" />
   </Folder>
 </Solution>

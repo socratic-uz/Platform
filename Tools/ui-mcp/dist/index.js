@@ -40,19 +40,19 @@ export function resolveAnalyzerDll() {
         return resolve(process.env.UI_ANALYZER_DLL);
     }
     // 1. Check right sibling directory inside Platform/Tools
-    const sibling = resolve(__dirname, "../../BlazorUiQuality.Analyzer/bin/Debug/net10.0/BlazorUiQuality.Analyzer.dll");
+    const sibling = resolve(__dirname, "../../UiQuality.Analyzer/bin/Debug/net10.0/UiQuality.Analyzer.dll");
     if (existsSync(sibling))
         return sibling;
     // 2. Search upwards from cwd
     let cur = process.cwd();
     for (let i = 0; i < 6; i++) {
-        const candidatePlatform = join(cur, "Platform", "Tools", "BlazorUiQuality.Analyzer", "bin", "Debug", "net10.0", "BlazorUiQuality.Analyzer.dll");
+        const candidatePlatform = join(cur, "Platform", "Tools", "UiQuality.Analyzer", "bin", "Debug", "net10.0", "UiQuality.Analyzer.dll");
         if (existsSync(candidatePlatform))
             return candidatePlatform;
-        const candidateSrc = join(cur, "src", "Frontend", "Platform", "Tools", "BlazorUiQuality.Analyzer", "bin", "Debug", "net10.0", "BlazorUiQuality.Analyzer.dll");
+        const candidateSrc = join(cur, "src", "Frontend", "Platform", "Tools", "UiQuality.Analyzer", "bin", "Debug", "net10.0", "UiQuality.Analyzer.dll");
         if (existsSync(candidateSrc))
             return candidateSrc;
-        const candidateRoot = join(cur, "src", "Tools", "BlazorUiQuality.Analyzer", "bin", "Debug", "net10.0", "BlazorUiQuality.Analyzer.dll");
+        const candidateRoot = join(cur, "src", "Tools", "UiQuality.Analyzer", "bin", "Debug", "net10.0", "UiQuality.Analyzer.dll");
         if (existsSync(candidateRoot))
             return candidateRoot;
         const parent = dirname(cur);
@@ -197,7 +197,7 @@ async function getSourceContext(componentName, customSourceRoot) {
     if (!effectiveAnalyzer) {
         return {
             sourceRoot: effectiveRoot,
-            error: "BlazorUiQuality.Analyzer.dll was not found. Build it with: dotnet build Platform/Tools/BlazorUiQuality.Analyzer"
+            error: "UiQuality.Analyzer.dll was not found. Build it with: dotnet build Platform/Tools/UiQuality.Analyzer"
         };
     }
     try {

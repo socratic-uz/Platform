@@ -1,9 +1,9 @@
 using System.Text.Json;
-using BlazorUiQuality.Analyzer;
+using UiQuality.Analyzer;
 
 if (args.Length < 2 || args[0] != "--source-root")
 {
-    Console.Error.WriteLine("Usage: BlazorUiQuality.Analyzer --source-root <path> [--format json|human]");
+    Console.Error.WriteLine("Usage: UiQuality.Analyzer --source-root <path> [--format json|human]");
     return 2;
 }
 
@@ -23,11 +23,11 @@ for (var i = 2; i < args.Length; i++)
 
 try
 {
-    var components = new BlazorSourceAnalyzer().Analyze(sourcePath);
+    var components = new UiQualityAnalyzer().Analyze(sourcePath);
 
     if (format == "human")
     {
-        Console.WriteLine($"=== Blazor UI Quality Audit Report ({components.Count} components) ===");
+        Console.WriteLine($"=== UI Quality Audit Report ({components.Count} components) ===");
         Console.WriteLine($"Source root: {sourcePath}\n");
 
         var totalHardcoded = components.Sum(c => c.HardcodedColors.Count);
@@ -67,7 +67,7 @@ try
 
     else
     {
-        Console.WriteLine(JsonSerializer.Serialize(components, AnalyzerJsonContext.Default.IReadOnlyListBlazorComponentSource));
+        Console.WriteLine(JsonSerializer.Serialize(components, AnalyzerJsonContext.Default.IReadOnlyListUiComponentSource));
     }
     return 0;
 }
@@ -77,7 +77,7 @@ catch (Exception exception)
     return 1;
 }
 
-[System.Text.Json.Serialization.JsonSerializable(typeof(IReadOnlyList<BlazorComponentSource>))]
+[System.Text.Json.Serialization.JsonSerializable(typeof(IReadOnlyList<UiComponentSource>))]
 [System.Text.Json.Serialization.JsonSourceGenerationOptions(WriteIndented = false)]
 internal sealed partial class AnalyzerJsonContext : System.Text.Json.Serialization.JsonSerializerContext
 {

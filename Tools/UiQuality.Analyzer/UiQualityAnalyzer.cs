@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
 
-namespace BlazorUiQuality.Analyzer;
+namespace UiQuality.Analyzer;
 
-public sealed record BlazorSourceLocation(string FilePath, int Line, int Column, string Kind, string Value);
+public sealed record UiSourceLocation(string FilePath, int Line, int Column, string Kind, string Value);
 
-public sealed record BlazorComponentSource(
+public sealed record UiComponentSource(
     string ComponentName,
     string RazorPath,
     string? CodeBehindPath,
@@ -16,10 +16,10 @@ public sealed record BlazorComponentSource(
     IReadOnlyList<string> HardcodedColors,
     IReadOnlyList<string> TouchTargetRisks,
     IReadOnlyList<string> FlexboxUsages,
-    IReadOnlyList<BlazorSourceLocation> Locations);
+    IReadOnlyList<UiSourceLocation> Locations);
 
 
-public sealed class BlazorSourceAnalyzer
+public sealed class UiQualityAnalyzer
 {
     private static readonly Regex RenderModePattern = new(
         "@rendermode(?:\\s*=\\s*|\\s+)[\"']?(?:new\\s+)?([A-Za-z0-9_]+)",
@@ -49,12 +49,12 @@ public sealed class BlazorSourceAnalyzer
         @"display\s*:\s*(?:inline-)?flex\b",
         RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
 
-    public IReadOnlyList<BlazorComponentSource> Analyze(string sourceRoot)
+    public IReadOnlyList<UiComponentSource> Analyze(string sourceRoot)
     {
         if (!Directory.Exists(sourceRoot))
-            throw new DirectoryNotFoundException($"Blazor source root was not found: {sourceRoot}");
+            throw new DirectoryNotFoundException($"UI source root was not found: {sourceRoot}");
 
-        var components = new List<BlazorComponentSource>();
+        var components = new List<UiComponentSource>();
         foreach (var razorPath in Directory.EnumerateFiles(sourceRoot, "*.razor", SearchOption.AllDirectories))
         {
             var content = File.ReadAllText(razorPath);
@@ -66,7 +66,7 @@ public sealed class BlazorSourceAnalyzer
 
             var renderModes = RenderModePattern.Matches(allSource).Select(match => match.Groups[1].Value).Distinct().ToArray();
             var parameters = ParameterPattern.Matches(allSource).Select(match => match.Groups[1].Value).Distinct().ToArray();
-            var locations = new List<BlazorSourceLocation>();
+            var locations = new List<UiSourceLocation>();
 
             AddLocations(locations, razorPath, content, RenderModePattern, "render-mode");
             AddLocations(locations, razorPath, content, ParameterPattern, "parameter");
@@ -91,7 +91,7 @@ public sealed class BlazorSourceAnalyzer
 
             var usesFlexbox = flexboxUsages.Count > 0;
 
-            components.Add(new BlazorComponentSource(
+            components.Add(new UiComponentSource(
                 Path.GetFileNameWithoutExtension(razorPath),
                 Path.GetFullPath(razorPath),
                 File.Exists(codeBehindPath) ? Path.GetFullPath(codeBehindPath) : null,
@@ -110,18 +110,18 @@ public sealed class BlazorSourceAnalyzer
     }
 
 
-    private static void AddLocations(List<BlazorSourceLocation> locations, string filePath, string content, Regex pattern, string kind)
+    private static void AddLocations(List<UiSourceLocation> locations, string filePath, string content, Regex pattern, string kind)
     {
         foreach (Match match in pattern.Matches(content))
         {
             var line = content[..match.Index].Count(character => character == '\n') + 1;
             var lastNewLine = content.LastIndexOf('\n', Math.Max(0, match.Index - 1));
             var column = match.Index - lastNewLine;
-            locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, kind, match.Value.Trim()));
+            locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, kind, match.Value.Trim()));
         }
     }
 
-    private static void AddColorLocations(List<BlazorSourceLocation> locations, string filePath, string cssContent, List<string> colors)
+    private static void AddColorLocations(List<UiSourceLocation> locations, string filePath, string cssContent, List<string> colors)
     {
         foreach (Match match in HexColorPattern.Matches(cssContent))
         {
@@ -130,7 +130,7 @@ public sealed class BlazorSourceAnalyzer
             var line = cssContent[..match.Index].Count(c => c == '\n') + 1;
             var lastNewLine = cssContent.LastIndexOf('\n', Math.Max(0, match.Index - 1));
             var column = match.Index - lastNewLine;
-            locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-color", color));
+            locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-color", color));
         }
 
         foreach (Match match in FunctionalColorPattern.Matches(cssContent))
@@ -142,11 +142,11 @@ public sealed class BlazorSourceAnalyzer
             var line = cssContent[..match.Index].Count(c => c == '\n') + 1;
             var lastNewLine = cssContent.LastIndexOf('\n', Math.Max(0, match.Index - 1));
             var column = match.Index - lastNewLine;
-            locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-color", color));
+            locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-color", color));
         }
     }
 
-    private static void AddTouchTargetLocations(List<BlazorSourceLocation> locations, string filePath, string cssContent, List<string> risks)
+    private static void AddTouchTargetLocations(List<UiSourceLocation> locations, string filePath, string cssContent, List<string> risks)
     {
         foreach (Match match in TouchTargetRiskPattern.Matches(cssContent))
         {
@@ -187,11 +187,11 @@ public sealed class BlazorSourceAnalyzer
             var line = cssContent[..match.Index].Count(c => c == '\n') + 1;
             var lastNewLine = cssContent.LastIndexOf('\n', Math.Max(0, match.Index - 1));
             var column = match.Index - lastNewLine;
-            locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "touch-target-risk", val));
+            locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "touch-target-risk", val));
         }
     }
 
-    private static void AddInlineStyleColorLocations(List<BlazorSourceLocation> locations, string filePath, string razorContent, List<string> colors)
+    private static void AddInlineStyleColorLocations(List<UiSourceLocation> locations, string filePath, string razorContent, List<string> colors)
     {
         var styleRegex = new Regex(@"style=[""']([^""']+)[""']", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         foreach (Match styleMatch in styleRegex.Matches(razorContent))
@@ -205,12 +205,12 @@ public sealed class BlazorSourceAnalyzer
                 var line = razorContent[..absoluteIndex].Count(c => c == '\n') + 1;
                 var lastNewLine = razorContent.LastIndexOf('\n', Math.Max(0, absoluteIndex - 1));
                 var column = absoluteIndex - lastNewLine;
-                locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-inline-color", color));
+                locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "hardcoded-inline-color", color));
             }
         }
     }
 
-    private static void AddFlexboxLocations(List<BlazorSourceLocation> locations, string filePath, string cssContent, List<string> flexUsages)
+    private static void AddFlexboxLocations(List<UiSourceLocation> locations, string filePath, string cssContent, List<string> flexUsages)
     {
         foreach (Match match in FlexboxPattern.Matches(cssContent))
         {
@@ -219,11 +219,11 @@ public sealed class BlazorSourceAnalyzer
             var line = cssContent[..match.Index].Count(c => c == '\n') + 1;
             var lastNewLine = cssContent.LastIndexOf('\n', Math.Max(0, match.Index - 1));
             var column = match.Index - lastNewLine;
-            locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "forbidden-flexbox", val));
+            locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "forbidden-flexbox", val));
         }
     }
 
-    private static void AddInlineStyleFlexboxLocations(List<BlazorSourceLocation> locations, string filePath, string razorContent, List<string> flexUsages)
+    private static void AddInlineStyleFlexboxLocations(List<UiSourceLocation> locations, string filePath, string razorContent, List<string> flexUsages)
     {
         var styleRegex = new Regex(@"style=[""']([^""']+)[""']", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         foreach (Match styleMatch in styleRegex.Matches(razorContent))
@@ -237,7 +237,7 @@ public sealed class BlazorSourceAnalyzer
                 var line = razorContent[..absoluteIndex].Count(c => c == '\n') + 1;
                 var lastNewLine = razorContent.LastIndexOf('\n', Math.Max(0, absoluteIndex - 1));
                 var column = absoluteIndex - lastNewLine;
-                locations.Add(new BlazorSourceLocation(Path.GetFullPath(filePath), line, column, "forbidden-inline-flexbox", val));
+                locations.Add(new UiSourceLocation(Path.GetFullPath(filePath), line, column, "forbidden-inline-flexbox", val));
             }
         }
     }
