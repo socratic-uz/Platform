@@ -37,7 +37,7 @@ public sealed partial class SocraticHtmlPreviewRenderer
         {
             var headParams = ParameterView.FromDictionary(new Dictionary<string, object?>
             {
-                [nameof(Shared.Components.HeadAssets.BasePath)] = "../../",
+                [nameof(Shared.Components.HeadAssets.BasePath)] = "../",
                 [nameof(Shared.Components.HeadAssets.IncludeBase)] = false,
                 [nameof(Shared.Components.HeadAssets.IncludeMarketingAndAds)] = false,
                 [nameof(Shared.Components.HeadAssets.IncludeTelegram)] = false

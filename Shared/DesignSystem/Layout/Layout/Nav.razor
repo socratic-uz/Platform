@@ -3,7 +3,7 @@
 @using Shared.Services
 @inject IFormFactor FormFactor;
 
-<nav class="glass @(FormFactor.IsMobile() ? "nav-mobile" : "nav-desktop")">
+<nav class="@Classes.Common.Glass @(FormFactor.IsMobile() ? "nav-mobile" : "nav-desktop")">
 	<NavLink class="nav-item" href="/home" Match="NavLinkMatch.All">
 		<Icon Name="home" />
 		<span>@L?["Home"]</span>

@@ -1,0 +1,443 @@
+{
+  "generatedAt": "2026-10-13T00:01:28.203Z",
+  "summary": {
+    "totalWebComponentsUsed": 402,
+    "uniqueComponentsCount": 47,
+    "sourceFilesScanned": 539
+  },
+  "webComponents": [
+    {
+      "component": "md-icon",
+      "count": 340,
+      "filesCount": 47,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Counter.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/LanguageSelector.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Platform/Shared/DesignSystem/Layout/Routes.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Fab.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/FilePicker.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Icon.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/IconButton.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/MenuItem.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/PickerTriggerCard.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Select.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/SubMenu.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Tab.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/OrderDrawer.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Identity/Pages/SignIn.razor",
+        "Portal/Identity/Pages/SignInGoogleCallback.razor",
+        "Portal/Identity/Pages/SignInTelegramCallback.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Landing/Pages/Docs.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/QrDesigner/Pages/QrDesignerPage.razor",
+        "Studio/QrDesigner/Widgets/QrRenderer/QrCode.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Studio/SeatDesigner/Widgets/Toolbar/SeatDesignerToolbar.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatCitation.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatMessageItem.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "component": "md-circular-progress",
+      "count": 8,
+      "filesCount": 7,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Progress.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Landing/Pages/Player.razor",
+        "Portal/Landing/Widgets/Player.razor",
+        "Intelligence/Chat/Widgets/Messaging/LoadingSpinner.razor"
+      ]
+    },
+    {
+      "component": "md-icon-button",
+      "count": 3,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/IconButton.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor"
+      ]
+    },
+    {
+      "component": "md-checkbox",
+      "count": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Checkbox.razor"
+      ]
+    },
+    {
+      "component": "md-divider",
+      "count": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Divider.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/MenuDivider.razor"
+      ]
+    },
+    {
+      "component": "md-menu",
+      "count": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Menu.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/SubMenu.razor"
+      ]
+    },
+    {
+      "component": "md-menu-item",
+      "count": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/MenuItem.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/SubMenu.razor"
+      ]
+    },
+    {
+      "component": "md-radio",
+      "count": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Radio.razor"
+      ]
+    },
+    {
+      "component": "md-slider",
+      "count": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/RangeSlider.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/Slider.razor"
+      ]
+    },
+    {
+      "component": "md-select-option",
+      "count": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Select.razor"
+      ]
+    },
+    {
+      "component": "md-elevated-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor"
+      ]
+    },
+    {
+      "component": "md-filled-tonal-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor"
+      ]
+    },
+    {
+      "component": "md-outlined-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor"
+      ]
+    },
+    {
+      "component": "md-text-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor"
+      ]
+    },
+    {
+      "component": "md-filled-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor"
+      ]
+    },
+    {
+      "component": "md-filter-chip",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor"
+      ]
+    },
+    {
+      "component": "md-input-chip",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor"
+      ]
+    },
+    {
+      "component": "md-assist-chip",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor"
+      ]
+    },
+    {
+      "component": "md-suggestion-chip",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor"
+      ]
+    },
+    {
+      "component": "md-chip-set",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ChipSet.razor"
+      ]
+    },
+    {
+      "component": "md-branded-fab",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Fab.razor"
+      ]
+    },
+    {
+      "component": "md-fab",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Fab.razor"
+      ]
+    },
+    {
+      "component": "md-filled-icon-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/IconButton.razor"
+      ]
+    },
+    {
+      "component": "md-filled-tonal-icon-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/IconButton.razor"
+      ]
+    },
+    {
+      "component": "md-outlined-icon-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/IconButton.razor"
+      ]
+    },
+    {
+      "component": "md-badge",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/Badge.razor"
+      ]
+    },
+    {
+      "component": "md-filled-card",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/Card.razor"
+      ]
+    },
+    {
+      "component": "md-outlined-card",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/Card.razor"
+      ]
+    },
+    {
+      "component": "md-elevated-card",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/Card.razor"
+      ]
+    },
+    {
+      "component": "md-navigation-bar",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/NavigationBar.razor"
+      ]
+    },
+    {
+      "component": "md-navigation-drawer",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/NavigationDrawer.razor"
+      ]
+    },
+    {
+      "component": "md-navigation-tab",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/NavigationTab.razor"
+      ]
+    },
+    {
+      "component": "md-segmented-button",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/SegmentedButton.razor"
+      ]
+    },
+    {
+      "component": "md-segmented-button-set",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Labs/SegmentedButtonSet.razor"
+      ]
+    },
+    {
+      "component": "md-list",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/List.razor"
+      ]
+    },
+    {
+      "component": "md-list-item",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ListItem.razor"
+      ]
+    },
+    {
+      "component": "md-dialog",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/MaterialDialog.razor"
+      ]
+    },
+    {
+      "component": "md-linear-progress",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Progress.razor"
+      ]
+    },
+    {
+      "component": "md-filled-select",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Select.razor"
+      ]
+    },
+    {
+      "component": "md-outlined-select",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Select.razor"
+      ]
+    },
+    {
+      "component": "md-sub-menu",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/SubMenu.razor"
+      ]
+    },
+    {
+      "component": "md-switch",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Switch.razor"
+      ]
+    },
+    {
+      "component": "md-secondary-tab",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Tab.razor"
+      ]
+    },
+    {
+      "component": "md-primary-tab",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Tab.razor"
+      ]
+    },
+    {
+      "component": "md-tabs",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Tabs.razor"
+      ]
+    },
+    {
+      "component": "md-filled-text-field",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor"
+      ]
+    },
+    {
+      "component": "md-outlined-text-field",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor"
+      ]
+    }
+  ]
+}

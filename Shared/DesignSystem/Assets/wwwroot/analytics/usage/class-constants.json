@@ -1,0 +1,2394 @@
+{
+  "generatedAt": "2026-10-13T00:01:28.202Z",
+  "summary": {
+    "totalDeclaredConstants": 1883,
+    "usedInRazorCount": 494,
+    "unusedCount": 1389,
+    "adoptionRatePercent": 26,
+    "totalCallSites": 1179,
+    "rawStringViolationsCount": 1387,
+    "classesWithRawLiteralsCount": 843,
+    "sourceFilesScanned": 539
+  },
+  "topUsedConstants": [
+    {
+      "key": "Cards.Card",
+      "category": "Cards",
+      "name": "Card",
+      "cssClass": "m3-card",
+      "usageCountInRazor": 46,
+      "filesCount": 17,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Identity/Pages/SignIn.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Landing/Pages/Docs.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/QrDesigner/Pages/QrDesignerPage.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Common.Glass",
+      "category": "Common",
+      "name": "Glass",
+      "cssClass": "glass",
+      "usageCountInRazor": 42,
+      "filesCount": 4,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Nav.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Cards.Elevated",
+      "category": "Cards",
+      "name": "Elevated",
+      "cssClass": "m3-card-elevated",
+      "usageCountInRazor": 26,
+      "filesCount": 11,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Identity/Pages/SignIn.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/QrDesigner/Pages/QrDesignerPage.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Dialog.Header",
+      "category": "Dialog",
+      "name": "Header",
+      "cssClass": "m3-dialog-header",
+      "usageCountInRazor": 26,
+      "filesCount": 25,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Commerce/Components/BookingMetadataDialog.razor",
+        "Retail/Commerce/Features/Auction/AuctionBiddingFeature.razor",
+        "Retail/Commerce/Features/Booking/BookingCalendarFeature.razor",
+        "Retail/Commerce/Features/Bundle/ProductBundleFeature.razor",
+        "Retail/Commerce/Features/Classified/ClassifiedListingFeature.razor",
+        "Retail/Commerce/Features/Configurator/ConfiguratorFeature.razor",
+        "Retail/Commerce/Features/Delivery/DeliveryScheduledFeature.razor",
+        "Retail/Commerce/Features/Digital/DigitalGoodsFeature.razor",
+        "Retail/Commerce/Features/Donation/DonationWidgetFeature.razor",
+        "Retail/Commerce/Features/Geo/LocationRouteFeature.razor",
+        "Retail/Commerce/Features/Gift/GiftCertificateFeature.razor",
+        "Retail/Commerce/Features/GroupBuy/GroupBuyFeature.razor",
+        "Retail/Commerce/Features/Hotel/HotelBookingFeature.razor",
+        "Retail/Commerce/Features/Quote/PriceQuoteFormFeature.razor",
+        "Retail/Commerce/Features/Rental/VehicleRentalFeature.razor",
+        "Retail/Commerce/Features/Seats/SeatPickerFeature.razor",
+        "Retail/Commerce/Features/Subscription/SubscriptionPlanFeature.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Studio/Map/Components/NearbyResultsPanel.razor",
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/Map/Components/PlaceDetailsCard.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Typography.TitleMedium",
+      "category": "Typography",
+      "name": "TitleMedium",
+      "cssClass": "m3-title-medium",
+      "usageCountInRazor": 21,
+      "filesCount": 9,
+      "files": [
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/Map/Components/ControlsPanel.razor",
+        "Studio/QrDesigner/Pages/QrDesignerPage.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Cards.Glass",
+      "category": "Cards",
+      "name": "Glass",
+      "cssClass": "m3-card-glass",
+      "usageCountInRazor": 20,
+      "filesCount": 7,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Docs.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Intelligence/Chat/Pages/ChatPage.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor"
+      ]
+    },
+    {
+      "key": "Typography.BodyMedium",
+      "category": "Typography",
+      "name": "BodyMedium",
+      "cssClass": "m3-body-medium",
+      "usageCountInRazor": 17,
+      "filesCount": 8,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Portal/Identity/Pages/SignIn.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Chat/Pages/ChatPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Buttons.CtaBtn",
+      "category": "Buttons",
+      "name": "CtaBtn",
+      "cssClass": "cta-btn",
+      "usageCountInRazor": 16,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Badge.Root",
+      "category": "Badge",
+      "name": "Root",
+      "cssClass": "m3-badge",
+      "usageCountInRazor": 15,
+      "filesCount": 5,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor"
+      ]
+    },
+    {
+      "key": "Typography.Truncate",
+      "category": "Typography",
+      "name": "Truncate",
+      "cssClass": "m3-truncate",
+      "usageCountInRazor": 15,
+      "filesCount": 14,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Commerce/Components/BookingMetadataDialog.razor",
+        "Retail/Commerce/Features/Bundle/ProductBundleFeature.razor",
+        "Retail/Commerce/Features/Classified/ClassifiedListingFeature.razor",
+        "Retail/Commerce/Features/Configurator/ConfiguratorFeature.razor",
+        "Retail/Commerce/Features/Digital/DigitalGoodsFeature.razor",
+        "Retail/Commerce/Features/HoReCa/Components/SeatBookingModal.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Studio/Map/Components/ControlsPanel.razor",
+        "Studio/Map/Components/NearbyResultsPanel.razor",
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/Map/Components/PlaceDetailsCard.razor"
+      ]
+    },
+    {
+      "key": "Form.DetFormGroup",
+      "category": "Form",
+      "name": "DetFormGroup",
+      "cssClass": "det-form-group",
+      "usageCountInRazor": 14,
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Badge.PillBadge",
+      "category": "Badge",
+      "name": "PillBadge",
+      "cssClass": "m3-pill-badge",
+      "usageCountInRazor": 13,
+      "filesCount": 6,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Studio/QrDesigner/Pages/QrDesignerPage.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Common.UxWidget",
+      "category": "Common",
+      "name": "UxWidget",
+      "cssClass": "ux-widget",
+      "usageCountInRazor": 13,
+      "filesCount": 1,
+      "files": [
+        "Retail/PointOfSale/Pages/Kiosk.razor"
+      ]
+    },
+    {
+      "key": "InfoGrid.InfoLabel",
+      "category": "InfoGrid",
+      "name": "InfoLabel",
+      "cssClass": "m3-info-label",
+      "usageCountInRazor": 13,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Cards.Interactive",
+      "category": "Cards",
+      "name": "Interactive",
+      "cssClass": "m3-card-interactive",
+      "usageCountInRazor": 12,
+      "filesCount": 5,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Help.razor"
+      ]
+    },
+    {
+      "key": "Chip.VenueChip",
+      "category": "Chip",
+      "name": "VenueChip",
+      "cssClass": "venue-chip",
+      "usageCountInRazor": 12,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Chips.FeatPill",
+      "category": "Chips",
+      "name": "FeatPill",
+      "cssClass": "feat-pill",
+      "usageCountInRazor": 12,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "InfoGrid.InfoItem",
+      "category": "InfoGrid",
+      "name": "InfoItem",
+      "cssClass": "m3-info-item",
+      "usageCountInRazor": 12,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Cards.Outlined",
+      "category": "Cards",
+      "name": "Outlined",
+      "cssClass": "m3-card-outlined",
+      "usageCountInRazor": 11,
+      "filesCount": 8,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor"
+      ]
+    },
+    {
+      "key": "Skeleton.Root",
+      "category": "Skeleton",
+      "name": "Root",
+      "cssClass": "m3-skeleton",
+      "usageCountInRazor": 11,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor"
+      ]
+    },
+    {
+      "key": "Avatar.Content",
+      "category": "Avatar",
+      "name": "Content",
+      "cssClass": "content",
+      "usageCountInRazor": 10,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Cards.Title",
+      "category": "Cards",
+      "name": "Title",
+      "cssClass": "m3-card-title",
+      "usageCountInRazor": 9,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Geometry.ScrollbarNone",
+      "category": "Geometry",
+      "name": "ScrollbarNone",
+      "cssClass": "scrollbar-none",
+      "usageCountInRazor": 9,
+      "filesCount": 4,
+      "files": [
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Studio/Map/Components/SearchCategoryChips.razor"
+      ]
+    },
+    {
+      "key": "Common.SecondaryCta",
+      "category": "Common",
+      "name": "SecondaryCta",
+      "cssClass": "secondary-cta",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Dialog.ToggleDesc",
+      "category": "Dialog",
+      "name": "ToggleDesc",
+      "cssClass": "m3-dialog-toggle-desc",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Dialog.ToggleIcon",
+      "category": "Dialog",
+      "name": "ToggleIcon",
+      "cssClass": "m3-dialog-toggle-icon",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Dialog.ToggleItem",
+      "category": "Dialog",
+      "name": "ToggleItem",
+      "cssClass": "m3-dialog-toggle-item",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Dialog.ToggleText",
+      "category": "Dialog",
+      "name": "ToggleText",
+      "cssClass": "m3-dialog-toggle-text",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Dialog.ToggleTitle",
+      "category": "Dialog",
+      "name": "ToggleTitle",
+      "cssClass": "m3-dialog-toggle-title",
+      "usageCountInRazor": 8,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Dialog.TitleGroup",
+      "category": "Dialog",
+      "name": "TitleGroup",
+      "cssClass": "m3-dialog-title-group",
+      "usageCountInRazor": 7,
+      "filesCount": 5,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Commerce/Components/BookingMetadataDialog.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "InfoGrid.InfoValue",
+      "category": "InfoGrid",
+      "name": "InfoValue",
+      "cssClass": "m3-info-value",
+      "usageCountInRazor": 7,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Picker.Active",
+      "category": "Picker",
+      "name": "Active",
+      "cssClass": "active",
+      "usageCountInRazor": 7,
+      "filesCount": 3,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Platform/Shared/DesignSystem/Material.Web/Components/PickerTriggerCard.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor"
+      ]
+    },
+    {
+      "key": "Badge.Active",
+      "category": "Badge",
+      "name": "Active",
+      "cssClass": "badge-active",
+      "usageCountInRazor": 6,
+      "filesCount": 2,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Badge.CountBadge",
+      "category": "Badge",
+      "name": "CountBadge",
+      "cssClass": "m3-count-badge",
+      "usageCountInRazor": 6,
+      "filesCount": 5,
+      "files": [
+        "Retail/Checkout/Widgets/OrderDrawer.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Portal/Landing/Pages/QR.razor"
+      ]
+    },
+    {
+      "key": "Chip.Active",
+      "category": "Chip",
+      "name": "Active",
+      "cssClass": "active",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Help.razor"
+      ]
+    },
+    {
+      "key": "Chip.FilterChip",
+      "category": "Chip",
+      "name": "FilterChip",
+      "cssClass": "m3-filter-chip",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Help.razor"
+      ]
+    },
+    {
+      "key": "Chip.VenueChipRow",
+      "category": "Chip",
+      "name": "VenueChipRow",
+      "cssClass": "venue-chip-row",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "EmptyState.Desc",
+      "category": "EmptyState",
+      "name": "Desc",
+      "cssClass": "m3-empty-state-desc",
+      "usageCountInRazor": 6,
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/WishList.razor"
+      ]
+    },
+    {
+      "key": "EmptyState.Icon",
+      "category": "EmptyState",
+      "name": "Icon",
+      "cssClass": "m3-empty-state-icon",
+      "usageCountInRazor": 6,
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/WishList.razor"
+      ]
+    },
+    {
+      "key": "EmptyState.Root",
+      "category": "EmptyState",
+      "name": "Root",
+      "cssClass": "m3-empty-state",
+      "usageCountInRazor": 6,
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/WishList.razor"
+      ]
+    },
+    {
+      "key": "EmptyState.Title",
+      "category": "EmptyState",
+      "name": "Title",
+      "cssClass": "m3-empty-state-title",
+      "usageCountInRazor": 6,
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/WishList.razor"
+      ]
+    },
+    {
+      "key": "Skeleton.Text",
+      "category": "Skeleton",
+      "name": "Text",
+      "cssClass": "m3-skeleton-text",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor"
+      ]
+    },
+    {
+      "key": "Typography.HeadlineMedium",
+      "category": "Typography",
+      "name": "HeadlineMedium",
+      "cssClass": "m3-headline-medium",
+      "usageCountInRazor": 6,
+      "filesCount": 3,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Identity/Pages/SignIn.razor",
+        "Portal/Landing/Pages/About.razor"
+      ]
+    },
+    {
+      "key": "Badge.Counter",
+      "category": "Badge",
+      "name": "Counter",
+      "cssClass": "badge-counter",
+      "usageCountInRazor": 5,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor"
+      ]
+    },
+    {
+      "key": "Cards.SummaryRow",
+      "category": "Cards",
+      "name": "SummaryRow",
+      "cssClass": "m3-summary-row",
+      "usageCountInRazor": 5,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor"
+      ]
+    },
+    {
+      "key": "Common.PrimaryCta",
+      "category": "Common",
+      "name": "PrimaryCta",
+      "cssClass": "primary-cta",
+      "usageCountInRazor": 5,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Auth.OauthDesc",
+      "category": "Auth",
+      "name": "OauthDesc",
+      "cssClass": "oauth-desc",
+      "usageCountInRazor": 4,
+      "filesCount": 2,
+      "files": [
+        "Portal/Identity/Pages/SignInGoogleCallback.razor",
+        "Portal/Identity/Pages/SignInTelegramCallback.razor"
+      ]
+    },
+    {
+      "key": "Auth.OauthTitle",
+      "category": "Auth",
+      "name": "OauthTitle",
+      "cssClass": "oauth-title",
+      "usageCountInRazor": 4,
+      "filesCount": 2,
+      "files": [
+        "Portal/Identity/Pages/SignInGoogleCallback.razor",
+        "Portal/Identity/Pages/SignInTelegramCallback.razor"
+      ]
+    },
+    {
+      "key": "Badge.StatusBadge",
+      "category": "Badge",
+      "name": "StatusBadge",
+      "cssClass": "m3-status-badge",
+      "usageCountInRazor": 4,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Badge.Verified",
+      "category": "Badge",
+      "name": "Verified",
+      "cssClass": "badge-verified",
+      "usageCountInRazor": 4,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    }
+  ],
+  "byCategory": {
+    "About": {
+      "total": 23,
+      "used": 11,
+      "totalCalls": 11
+    },
+    "Ads": {
+      "total": 27,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Analytics": {
+      "total": 23,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Auth": {
+      "total": 17,
+      "used": 14,
+      "totalCalls": 27
+    },
+    "Avatar": {
+      "total": 14,
+      "used": 6,
+      "totalCalls": 16
+    },
+    "Badge": {
+      "total": 97,
+      "used": 40,
+      "totalCalls": 104
+    },
+    "Buttons": {
+      "total": 63,
+      "used": 5,
+      "totalCalls": 22
+    },
+    "Cards": {
+      "total": 217,
+      "used": 70,
+      "totalCalls": 223
+    },
+    "Cart": {
+      "total": 25,
+      "used": 2,
+      "totalCalls": 4
+    },
+    "Chat": {
+      "total": 12,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Chip": {
+      "total": 26,
+      "used": 5,
+      "totalCalls": 32
+    },
+    "Chips": {
+      "total": 30,
+      "used": 2,
+      "totalCalls": 13
+    },
+    "ColorPicker": {
+      "total": 1,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Colors": {
+      "total": 5,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "CommerceModes": {
+      "total": 10,
+      "used": 10,
+      "totalCalls": 17
+    },
+    "Common": {
+      "total": 531,
+      "used": 41,
+      "totalCalls": 120
+    },
+    "Dark": {
+      "total": 1,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Detector": {
+      "total": 39,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Dialog": {
+      "total": 41,
+      "used": 17,
+      "totalCalls": 86
+    },
+    "Dialogs": {
+      "total": 13,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Docs": {
+      "total": 17,
+      "used": 17,
+      "totalCalls": 17
+    },
+    "EmptyState": {
+      "total": 32,
+      "used": 18,
+      "totalCalls": 45
+    },
+    "Expressive": {
+      "total": 13,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "FaceidViewfinder": {
+      "total": 5,
+      "used": 4,
+      "totalCalls": 4
+    },
+    "Feedback": {
+      "total": 4,
+      "used": 2,
+      "totalCalls": 4
+    },
+    "Fiscal": {
+      "total": 2,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Footer": {
+      "total": 19,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Form": {
+      "total": 29,
+      "used": 6,
+      "totalCalls": 24
+    },
+    "Forms": {
+      "total": 9,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Geometry": {
+      "total": 15,
+      "used": 4,
+      "totalCalls": 17
+    },
+    "GridLayout": {
+      "total": 15,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Header": {
+      "total": 13,
+      "used": 2,
+      "totalCalls": 4
+    },
+    "Help": {
+      "total": 12,
+      "used": 12,
+      "totalCalls": 12
+    },
+    "InfoGrid": {
+      "total": 23,
+      "used": 6,
+      "totalCalls": 37
+    },
+    "Kiosk": {
+      "total": 20,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Landing": {
+      "total": 24,
+      "used": 1,
+      "totalCalls": 2
+    },
+    "Light": {
+      "total": 1,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "MapLayout": {
+      "total": 2,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "MediaPlayer": {
+      "total": 6,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Motion": {
+      "total": 2,
+      "used": 2,
+      "totalCalls": 7
+    },
+    "Orders": {
+      "total": 8,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Outline": {
+      "total": 5,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Payment": {
+      "total": 4,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Picker": {
+      "total": 128,
+      "used": 115,
+      "totalCalls": 158
+    },
+    "Progress": {
+      "total": 11,
+      "used": 4,
+      "totalCalls": 6
+    },
+    "QrDesigner": {
+      "total": 41,
+      "used": 18,
+      "totalCalls": 20
+    },
+    "Scrollbar": {
+      "total": 13,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Scrollbars": {
+      "total": 15,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Search": {
+      "total": 29,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "SeatDesigner": {
+      "total": 18,
+      "used": 17,
+      "totalCalls": 22
+    },
+    "SegmentedButton": {
+      "total": 9,
+      "used": 3,
+      "totalCalls": 5
+    },
+    "Skeleton": {
+      "total": 5,
+      "used": 4,
+      "totalCalls": 19
+    },
+    "Table": {
+      "total": 53,
+      "used": 13,
+      "totalCalls": 16
+    },
+    "Tables": {
+      "total": 1,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Terminal": {
+      "total": 13,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "ThemeToggle": {
+      "total": 25,
+      "used": 6,
+      "totalCalls": 9
+    },
+    "Typography": {
+      "total": 27,
+      "used": 8,
+      "totalCalls": 67
+    }
+  },
+  "rawStringViolations": [
+    {
+      "cssClass": "feature-icon",
+      "occurrences": 10,
+      "recommendedConstant": "Common.FeatureIcon",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
+      ]
+    },
+    {
+      "cssClass": "cta-arrow",
+      "occurrences": 9,
+      "recommendedConstant": "Common.CtaArrow",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "det-card",
+      "occurrences": 9,
+      "recommendedConstant": "Cards.DetCard",
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "cssClass": "ok",
+      "occurrences": 8,
+      "recommendedConstant": "Common.Ok",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
+      ]
+    },
+    {
+      "cssClass": "org-tag",
+      "occurrences": 8,
+      "recommendedConstant": "Chips.OrgTag",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "headline",
+      "occurrences": 7,
+      "recommendedConstant": "Avatar.Headline",
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Widgets/OrderDrawer.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Commerce/Components/GeoLocationPicker.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
+      ]
+    },
+    {
+      "cssClass": "spec-item",
+      "occurrences": 7,
+      "recommendedConstant": "Common.SpecItem",
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "spec-label",
+      "occurrences": 7,
+      "recommendedConstant": "Common.SpecLabel",
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "spec-value",
+      "occurrences": 7,
+      "recommendedConstant": "Common.SpecValue",
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "section-ambient-glow",
+      "occurrences": 7,
+      "recommendedConstant": "Common.SectionAmbientGlow",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "section-badge",
+      "occurrences": 7,
+      "recommendedConstant": "Badge.SectionBadge",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "det-card-title",
+      "occurrences": 7,
+      "recommendedConstant": "Cards.DetCardTitle",
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "cssClass": "price-row",
+      "occurrences": 6,
+      "recommendedConstant": "Common.PriceRow",
+      "filesCount": 2,
+      "files": [
+        "Retail/Checkout/Widgets/OrderDrawer.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor"
+      ]
+    },
+    {
+      "cssClass": "header-context-divider",
+      "occurrences": 6,
+      "recommendedConstant": "Cart.HeaderContextDivider",
+      "filesCount": 6,
+      "files": [
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Landing/Pages/Docs.razor"
+      ]
+    },
+    {
+      "cssClass": "pos-quick-bill-btn",
+      "occurrences": 6,
+      "recommendedConstant": "Terminal.PosQuickBillBtn",
+      "filesCount": 1,
+      "files": [
+        "Retail/PointOfSale/Pages/Terminal.razor"
+      ]
+    },
+    {
+      "cssClass": "analytics-kpi-card",
+      "occurrences": 6,
+      "recommendedConstant": "Cards.AnalyticsKpiCard",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "kpi-icon-badge",
+      "occurrences": 6,
+      "recommendedConstant": "Badge.KpiIconBadge",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "kpi-value-row",
+      "occurrences": 6,
+      "recommendedConstant": "Analytics.KpiValueRow",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "kpi-number",
+      "occurrences": 6,
+      "recommendedConstant": "Analytics.KpiNumber",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "kpi-trend",
+      "occurrences": 6,
+      "recommendedConstant": "Analytics.KpiTrend",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "badge-cyan",
+      "occurrences": 6,
+      "recommendedConstant": "Badge.Cyan",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "spatial-subcard",
+      "occurrences": 6,
+      "recommendedConstant": "Cards.SpatialSubcard",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "subcard-header",
+      "occurrences": 6,
+      "recommendedConstant": "Cards.SubcardHeader",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "venue-icon",
+      "occurrences": 6,
+      "recommendedConstant": "Common.VenueIcon",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-card",
+      "occurrences": 6,
+      "recommendedConstant": "Cards.PlatformCard",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-btn",
+      "occurrences": 6,
+      "recommendedConstant": "Form.PlatformBtn",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "qrg-color-picker-wrapper",
+      "occurrences": 6,
+      "recommendedConstant": "Picker.QrgColorPickerWrapper",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
+      ]
+    },
+    {
+      "cssClass": "nav-item",
+      "occurrences": 5,
+      "recommendedConstant": "Common.NavItem",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Nav.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-page-header-start",
+      "occurrences": 5,
+      "recommendedConstant": "Cart.PageHeaderStart",
+      "filesCount": 5,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/ProductPage.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-page-container",
+      "occurrences": 5,
+      "recommendedConstant": "Common.PageContainer",
+      "filesCount": 5,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-grid-stack",
+      "occurrences": 5,
+      "recommendedConstant": "Common.GridStack_2",
+      "filesCount": 3,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/PointOfSale/Pages/WishList.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-text-gradient",
+      "occurrences": 5,
+      "recommendedConstant": "Typography.TextGradient",
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Help.razor"
+      ]
+    },
+    {
+      "cssClass": "unit",
+      "occurrences": 5,
+      "recommendedConstant": "Common.Unit",
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor",
+        "Studio/Map/Components/NavigatorPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "ux-tab-btn",
+      "occurrences": 5,
+      "recommendedConstant": "Buttons.UxTabBtn",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-card-header",
+      "occurrences": 5,
+      "recommendedConstant": "Cards.PlatformCardHeader",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-icon",
+      "occurrences": 5,
+      "recommendedConstant": "Form.PlatformIcon",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-info",
+      "occurrences": 5,
+      "recommendedConstant": "InfoGrid.PlatformInfo",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "platform-desc",
+      "occurrences": 5,
+      "recommendedConstant": "Form.PlatformDesc",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "cssClass": "det-btn-row-2col",
+      "occurrences": 5,
+      "recommendedConstant": "Detector.DetBtnRow2col",
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "cssClass": "det-card-top-space",
+      "occurrences": 5,
+      "recommendedConstant": "Cards.DetCardTopSpace",
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "cssClass": "footer-nav-col",
+      "occurrences": 4,
+      "recommendedConstant": "Footer.NavCol",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor"
+      ]
+    },
+    {
+      "cssClass": "footer-col-title",
+      "occurrences": 4,
+      "recommendedConstant": "Footer.ColTitle",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor"
+      ]
+    },
+    {
+      "cssClass": "footer-links-list",
+      "occurrences": 4,
+      "recommendedConstant": "Footer.LinksList",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor"
+      ]
+    },
+    {
+      "cssClass": "landing-nav-link",
+      "occurrences": 4,
+      "recommendedConstant": "Landing.NavLink",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/LandingLayout.razor"
+      ]
+    },
+    {
+      "cssClass": "mobile-nav-item",
+      "occurrences": 4,
+      "recommendedConstant": "Common.MobileNavItem",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/LandingLayout.razor"
+      ]
+    },
+    {
+      "cssClass": "total-row",
+      "occurrences": 4,
+      "recommendedConstant": "Common.TotalRow",
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-page-header-icon",
+      "occurrences": 4,
+      "recommendedConstant": "Header.PageHeaderIcon",
+      "filesCount": 4,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-page-header-title",
+      "occurrences": 4,
+      "recommendedConstant": "Common.PageHeaderTitle",
+      "filesCount": 4,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/PointOfSale/Pages/WishList.razor",
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "cssClass": "panel-header",
+      "occurrences": 4,
+      "recommendedConstant": "Common.PanelHeader",
+      "filesCount": 3,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
+      ]
+    },
+    {
+      "cssClass": "body-subtext",
+      "occurrences": 4,
+      "recommendedConstant": "Picker.BodySubtext",
+      "filesCount": 4,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
+        "Retail/Commerce/Components/GeoLocationPicker.razor",
+        "Retail/Commerce/Features/Rental/VehicleRentalFeature.razor",
+        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
+      ]
+    }
+  ],
+  "unusedConstants": [
+    {
+      "key": "About.AnalyticsToolbarActions",
+      "category": "About",
+      "name": "AnalyticsToolbarActions",
+      "cssClass": "analytics-toolbar-actions",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.AuthContainer",
+      "category": "About",
+      "name": "AuthContainer",
+      "cssClass": "auth-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.AuthTitle",
+      "category": "About",
+      "name": "AuthTitle",
+      "cssClass": "auth-title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.ChatContainer",
+      "category": "About",
+      "name": "ChatContainer",
+      "cssClass": "chat-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.ControlsPanelCollapsed",
+      "category": "About",
+      "name": "ControlsPanelCollapsed",
+      "cssClass": "controls-panel-collapsed",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.ControlsPanelExpanded",
+      "category": "About",
+      "name": "ControlsPanelExpanded",
+      "cssClass": "controls-panel-expanded",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.CtaSection",
+      "category": "About",
+      "name": "CtaSection",
+      "cssClass": "about-cta-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.DetailsMode",
+      "category": "About",
+      "name": "DetailsMode",
+      "cssClass": "details-mode",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.OrderSubtitle",
+      "category": "About",
+      "name": "OrderSubtitle",
+      "cssClass": "order-subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.PaymentTrustFooter",
+      "category": "About",
+      "name": "PaymentTrustFooter",
+      "cssClass": "payment-trust-footer",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.TechStackSection",
+      "category": "About",
+      "name": "TechStackSection",
+      "cssClass": "about-tech-stack-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "About.YandexRouteMode",
+      "category": "About",
+      "name": "YandexRouteMode",
+      "cssClass": "yandex-route-mode",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.B2bLeadContent",
+      "category": "Ads",
+      "name": "B2bLeadContent",
+      "cssClass": "b2b-lead-content",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.B2bLeadSection",
+      "category": "Ads",
+      "name": "B2bLeadSection",
+      "cssClass": "b2b-lead-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.DetLayout",
+      "category": "Ads",
+      "name": "DetLayout",
+      "cssClass": "det-layout",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.DetPreviewContainer",
+      "category": "Ads",
+      "name": "DetPreviewContainer",
+      "cssClass": "det-preview-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.Disclaimer",
+      "category": "Ads",
+      "name": "Disclaimer",
+      "cssClass": "ad-disclaimer",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.DownloadHeader",
+      "category": "Ads",
+      "name": "DownloadHeader",
+      "cssClass": "download-header",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.DownloadSection",
+      "category": "Ads",
+      "name": "DownloadSection",
+      "cssClass": "download-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.EvolutionGrid",
+      "category": "Ads",
+      "name": "EvolutionGrid",
+      "cssClass": "evolution-grid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.GoogleAdsenseWrapper",
+      "category": "Ads",
+      "name": "GoogleAdsenseWrapper",
+      "cssClass": "google-adsense-wrapper",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.HeroSection",
+      "category": "Ads",
+      "name": "HeroSection",
+      "cssClass": "hero-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.LandingContainer",
+      "category": "Ads",
+      "name": "LandingContainer",
+      "cssClass": "landing-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.NetworkContainer",
+      "category": "Ads",
+      "name": "NetworkContainer",
+      "cssClass": "ad-network-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.NetworkFooter",
+      "category": "Ads",
+      "name": "NetworkFooter",
+      "cssClass": "ad-network-footer",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.NetworkPartner",
+      "category": "Ads",
+      "name": "NetworkPartner",
+      "cssClass": "ad-network-partner",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.NetworkRenderSlot",
+      "category": "Ads",
+      "name": "NetworkRenderSlot",
+      "cssClass": "ad-network-render-slot",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.NetworkScreensaverBody",
+      "category": "Ads",
+      "name": "NetworkScreensaverBody",
+      "cssClass": "ad-network-screensaver-body",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.OrderDetailsLayout",
+      "category": "Ads",
+      "name": "OrderDetailsLayout",
+      "cssClass": "order-details-layout",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.OrgContext",
+      "category": "Ads",
+      "name": "OrgContext",
+      "cssClass": "ad-org-context",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.PlacementCatalog",
+      "category": "Ads",
+      "name": "PlacementCatalog",
+      "cssClass": "ad-placement-catalog",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.ScreensaverFooter",
+      "category": "Ads",
+      "name": "ScreensaverFooter",
+      "cssClass": "ad-screensaver-footer",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.SlideTouchPrompt",
+      "category": "Ads",
+      "name": "SlideTouchPrompt",
+      "cssClass": "ad-slide-touch-prompt",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.Slot",
+      "category": "Ads",
+      "name": "Slot",
+      "cssClass": "ad-slot",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.SlotContainer",
+      "category": "Ads",
+      "name": "SlotContainer",
+      "cssClass": "ad-slot-container",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.TouchIcon",
+      "category": "Ads",
+      "name": "TouchIcon",
+      "cssClass": "ad-touch-icon",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.UpgradeLink",
+      "category": "Ads",
+      "name": "UpgradeLink",
+      "cssClass": "ad-upgrade-link",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.YandexAdsWrapper",
+      "category": "Ads",
+      "name": "YandexAdsWrapper",
+      "cssClass": "yandex-ads-wrapper",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsBreakdownGrid",
+      "category": "Analytics",
+      "name": "AnalyticsBreakdownGrid",
+      "cssClass": "analytics-breakdown-grid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsConfigBtn",
+      "category": "Analytics",
+      "name": "AnalyticsConfigBtn",
+      "cssClass": "analytics-config-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsExplorerSection",
+      "category": "Analytics",
+      "name": "AnalyticsExplorerSection",
+      "cssClass": "analytics-explorer-section",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsKpiGrid",
+      "category": "Analytics",
+      "name": "AnalyticsKpiGrid",
+      "cssClass": "analytics-kpi-grid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsMetricsStrip",
+      "category": "Analytics",
+      "name": "AnalyticsMetricsStrip",
+      "cssClass": "analytics-metrics-strip",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsPeriodSelector",
+      "category": "Analytics",
+      "name": "AnalyticsPeriodSelector",
+      "cssClass": "analytics-period-selector",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsStatusPill",
+      "category": "Analytics",
+      "name": "AnalyticsStatusPill",
+      "cssClass": "analytics-status-pill",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsToolbarGrid",
+      "category": "Analytics",
+      "name": "AnalyticsToolbarGrid",
+      "cssClass": "analytics-toolbar-grid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AuthBtnLabel",
+      "category": "Analytics",
+      "name": "AuthBtnLabel",
+      "cssClass": "auth-btn-label",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.BreakdownBarItem",
+      "category": "Analytics",
+      "name": "BreakdownBarItem",
+      "cssClass": "breakdown-bar-item",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.BreakdownBarsStack",
+      "category": "Analytics",
+      "name": "BreakdownBarsStack",
+      "cssClass": "breakdown-bars-stack",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.HeroStageScreen",
+      "category": "Analytics",
+      "name": "HeroStageScreen",
+      "cssClass": "hero-stage-screen",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KioskTierBtn",
+      "category": "Analytics",
+      "name": "KioskTierBtn",
+      "cssClass": "kiosk-tier-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KpiHeader",
+      "category": "Analytics",
+      "name": "KpiHeader",
+      "cssClass": "kpi-header",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KpiNumber",
+      "category": "Analytics",
+      "name": "KpiNumber",
+      "cssClass": "kpi-number",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KpiTitle",
+      "category": "Analytics",
+      "name": "KpiTitle",
+      "cssClass": "kpi-title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KpiTrend",
+      "category": "Analytics",
+      "name": "KpiTrend",
+      "cssClass": "kpi-trend",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.KpiValueRow",
+      "category": "Analytics",
+      "name": "KpiValueRow",
+      "cssClass": "kpi-value-row",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.LandingAuthBtn",
+      "category": "Analytics",
+      "name": "LandingAuthBtn",
+      "cssClass": "landing-auth-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.LandingFloatingAuthBtn",
+      "category": "Analytics",
+      "name": "LandingFloatingAuthBtn",
+      "cssClass": "landing-floating-auth-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.PaymentRefreshBtn",
+      "category": "Analytics",
+      "name": "PaymentRefreshBtn",
+      "cssClass": "payment-refresh-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.PillText",
+      "category": "Analytics",
+      "name": "PillText",
+      "cssClass": "pill-text",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.ShowcaseResetBtn",
+      "category": "Analytics",
+      "name": "ShowcaseResetBtn",
+      "cssClass": "showcase-reset-btn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.ErrorBanner",
+      "category": "Auth",
+      "name": "ErrorBanner",
+      "cssClass": "auth-error-banner",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Header",
+      "category": "Auth",
+      "name": "Header",
+      "cssClass": "auth-header",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Subtitle",
+      "category": "Auth",
+      "name": "Subtitle",
+      "cssClass": "auth-subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.Box",
+      "category": "Avatar",
+      "name": "Box",
+      "cssClass": "avatar-box",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.ContactGrid",
+      "category": "Avatar",
+      "name": "ContactGrid",
+      "cssClass": "contact-grid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.MaterialSymbolsOutlined",
+      "category": "Avatar",
+      "name": "MaterialSymbolsOutlined",
+      "cssClass": "material-symbols-outlined",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.MaterialTextField",
+      "category": "Avatar",
+      "name": "MaterialTextField",
+      "cssClass": "material-text-field",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.PlaceDetailsAvatar",
+      "category": "Avatar",
+      "name": "PlaceDetailsAvatar",
+      "cssClass": "place-details-avatar",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.Pulse",
+      "category": "Avatar",
+      "name": "Pulse",
+      "cssClass": "avatar-pulse",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.Root",
+      "category": "Avatar",
+      "name": "Root",
+      "cssClass": "m3-avatar",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Avatar.Row",
+      "category": "Avatar",
+      "name": "Row",
+      "cssClass": "row",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.AdNetworkBadge",
+      "category": "Badge",
+      "name": "AdNetworkBadge",
+      "cssClass": "ad-network-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.AdNetworkBadgeRow",
+      "category": "Badge",
+      "name": "AdNetworkBadgeRow",
+      "cssClass": "ad-network-badge-row",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.AgeRestriction",
+      "category": "Badge",
+      "name": "AgeRestriction",
+      "cssClass": "badge-age-restriction",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.AuthLogoBadge",
+      "category": "Badge",
+      "name": "AuthLogoBadge",
+      "cssClass": "auth-logo-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.BackButton",
+      "category": "Badge",
+      "name": "BackButton",
+      "cssClass": "m3-back-button",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.BackIcon",
+      "category": "Badge",
+      "name": "BackIcon",
+      "cssClass": "m3-back-icon",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Canceled",
+      "category": "Badge",
+      "name": "Canceled",
+      "cssClass": "canceled",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Cancelled",
+      "category": "Badge",
+      "name": "Cancelled",
+      "cssClass": "badge-cancelled",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.CatalogBadge",
+      "category": "Badge",
+      "name": "CatalogBadge",
+      "cssClass": "catalog-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.CatalogBadgeRow",
+      "category": "Badge",
+      "name": "CatalogBadgeRow",
+      "cssClass": "catalog-badge-row",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Collected",
+      "category": "Badge",
+      "name": "Collected",
+      "cssClass": "collected",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Collecting",
+      "category": "Badge",
+      "name": "Collecting",
+      "cssClass": "collecting",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.ColumnBadge",
+      "category": "Badge",
+      "name": "ColumnBadge",
+      "cssClass": "column-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Completed",
+      "category": "Badge",
+      "name": "Completed",
+      "cssClass": "badge-completed",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.CountBadge_2",
+      "category": "Badge",
+      "name": "CountBadge_2",
+      "cssClass": "count-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Created",
+      "category": "Badge",
+      "name": "Created",
+      "cssClass": "created",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Cyan",
+      "category": "Badge",
+      "name": "Cyan",
+      "cssClass": "badge-cyan",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.DetLogoBadge",
+      "category": "Badge",
+      "name": "DetLogoBadge",
+      "cssClass": "det-logo-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.DetStatusBadge",
+      "category": "Badge",
+      "name": "DetStatusBadge",
+      "cssClass": "det-status-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Error",
+      "category": "Badge",
+      "name": "Error",
+      "cssClass": "error",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.FeatureBadge",
+      "category": "Badge",
+      "name": "FeatureBadge",
+      "cssClass": "feature-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.FooterBrandBadge",
+      "category": "Badge",
+      "name": "FooterBrandBadge",
+      "cssClass": "footer-brand-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.HeroBadge",
+      "category": "Badge",
+      "name": "HeroBadge",
+      "cssClass": "hero-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Indigo",
+      "category": "Badge",
+      "name": "Indigo",
+      "cssClass": "badge-indigo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Info",
+      "category": "Badge",
+      "name": "Info",
+      "cssClass": "info",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.KpiIconBadge",
+      "category": "Badge",
+      "name": "KpiIconBadge",
+      "cssClass": "kpi-icon-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.Made",
+      "category": "Badge",
+      "name": "Made",
+      "cssClass": "made",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Badge.MapMeasureBadge",
+      "category": "Badge",
+      "name": "MapMeasureBadge",
+      "cssClass": "map-measure-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    }
+  ]
+}

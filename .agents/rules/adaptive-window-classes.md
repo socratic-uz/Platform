@@ -45,6 +45,6 @@ For portrait kiosks (1080x1920 or higher):
 
 Run `Audit-AdaptiveLayout.ps1` before committing any UI code:
 ```powershell
-pwsh -File .agents/skills/socratic-adaptive-layout/scripts/Audit-AdaptiveLayout.ps1 -Path src/Frontend
+pwsh -File .agents/skills/adaptive-layout/scripts/Audit-AdaptiveLayout.ps1 -Path src/Frontend
 ```
 Violations will fail CI/CD quality gates.

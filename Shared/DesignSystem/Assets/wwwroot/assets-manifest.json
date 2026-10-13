@@ -8,8 +8,8 @@
     },
     {
       "url": "_content/Assets/css/components/cards.css",
-      "size": 60030,
-      "hash": "sha256-716b0f52a481"
+      "size": 60124,
+      "hash": "sha256-b39e80a6d83f"
     },
     {
       "url": "_content/Assets/css/components/chips.css",
@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
-      "size": 7176,
-      "hash": "sha256-f0daf6219e31"
+      "size": 7858,
+      "hash": "sha256-d4720f289beb"
     },
     {
       "url": "_content/Assets/css/layouts/landing-layout.css",
@@ -138,8 +138,8 @@
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 10613,
-      "hash": "sha256-84ce2a2e59e6"
+      "size": 10672,
+      "hash": "sha256-beeb97226e63"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
@@ -153,8 +153,8 @@
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
-      "size": 2593,
-      "hash": "sha256-25a181e90eca"
+      "size": 2797,
+      "hash": "sha256-decaeca40a2b"
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
@@ -900,376 +900,6 @@
       "url": "_content/Assets/maps/map-bootstrap.js",
       "size": 472,
       "hash": "sha256-bfe33a17cff7"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/3d.desktop.layout",
-      "size": 2281,
-      "hash": "sha256-27bf9e3edf9b"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/3d.mobile.layout",
-      "size": 2149,
-      "hash": "sha256-5c125fbe1735"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/3d.tablet.layout",
-      "size": 2237,
-      "hash": "sha256-3a55ba50553d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/about.desktop.layout",
-      "size": 15418,
-      "hash": "sha256-816f11238287"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/about.mobile.layout",
-      "size": 14280,
-      "hash": "sha256-7314e98f20fe"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/about.tablet.layout",
-      "size": 14468,
-      "hash": "sha256-6d4f6066cf49"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/analytics.desktop.layout",
-      "size": 37316,
-      "hash": "sha256-29da76dbc038"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/analytics.mobile.layout",
-      "size": 36787,
-      "hash": "sha256-249a001eb8ff"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/analytics.tablet.layout",
-      "size": 37271,
-      "hash": "sha256-023123d673a1"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/chat.desktop.layout",
-      "size": 2240,
-      "hash": "sha256-dd906444124c"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/chat.mobile.layout",
-      "size": 2203,
-      "hash": "sha256-038cab5bd9c8"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/chat.tablet.layout",
-      "size": 2214,
-      "hash": "sha256-abbb67dea2a6"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/detector.desktop.layout",
-      "size": 6883,
-      "hash": "sha256-fa4fbd57a63f"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/detector.mobile.layout",
-      "size": 6749,
-      "hash": "sha256-d8b3acceeefa"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/detector.tablet.layout",
-      "size": 6853,
-      "hash": "sha256-dc7fa6ca5f67"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/docs.desktop.layout",
-      "size": 4578,
-      "hash": "sha256-f75eaecc8634"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/docs.mobile.layout",
-      "size": 4052,
-      "hash": "sha256-b63efc3a4d19"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/docs.tablet.layout",
-      "size": 4538,
-      "hash": "sha256-e07c5f665e25"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/help.desktop.layout",
-      "size": 19380,
-      "hash": "sha256-424cd54a56e2"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/help.mobile.layout",
-      "size": 18253,
-      "hash": "sha256-a624cefbcf6d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/help.tablet.layout",
-      "size": 18419,
-      "hash": "sha256-45e8df6e6f0d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/home.desktop.layout",
-      "size": 10215,
-      "hash": "sha256-6adb2ab8b708"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/home.mobile.layout",
-      "size": 10135,
-      "hash": "sha256-bed789d319ae"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/home.tablet.layout",
-      "size": 10237,
-      "hash": "sha256-5aec0d4b4ba1"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/kiosk.desktop.layout",
-      "size": 48832,
-      "hash": "sha256-06949d9c58eb"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/kiosk.mobile.layout",
-      "size": 48187,
-      "hash": "sha256-450c70ae9050"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/kiosk.tablet.layout",
-      "size": 48655,
-      "hash": "sha256-0f8640a99e93"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/landing.desktop.layout",
-      "size": 66425,
-      "hash": "sha256-1332f7efa4c2"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/landing.mobile.layout",
-      "size": 64669,
-      "hash": "sha256-78162ee548a2"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/landing.tablet.layout",
-      "size": 64915,
-      "hash": "sha256-86c5505f606a"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/map.desktop.layout",
-      "size": 4318,
-      "hash": "sha256-b21c0ddb2dda"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/map.mobile.layout",
-      "size": 4299,
-      "hash": "sha256-f930370acb93"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/map.tablet.layout",
-      "size": 4343,
-      "hash": "sha256-52d7fe75e05d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/order-items.desktop.layout",
-      "size": 17880,
-      "hash": "sha256-07b5c601768b"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/order-items.mobile.layout",
-      "size": 16093,
-      "hash": "sha256-26e261becfa9"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/order-items.tablet.layout",
-      "size": 17840,
-      "hash": "sha256-85417036f759"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/orders.desktop.layout",
-      "size": 16599,
-      "hash": "sha256-9320e223a2ea"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/orders.mobile.layout",
-      "size": 16048,
-      "hash": "sha256-52f4384e41c9"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/orders.tablet.layout",
-      "size": 16561,
-      "hash": "sha256-ca8e05847ba4"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/payment.desktop.layout",
-      "size": 19393,
-      "hash": "sha256-a149c01f8f09"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/payment.mobile.layout",
-      "size": 18779,
-      "hash": "sha256-a9640d006381"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/payment.tablet.layout",
-      "size": 19314,
-      "hash": "sha256-bb5bd712f29b"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/player.desktop.layout",
-      "size": 403,
-      "hash": "sha256-52fef0f8abfe"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/player.mobile.layout",
-      "size": 398,
-      "hash": "sha256-15239d0ffad6"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/player.tablet.layout",
-      "size": 403,
-      "hash": "sha256-22cba59606ff"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/product.desktop.layout",
-      "size": 14118,
-      "hash": "sha256-577c7841116d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/product.mobile.layout",
-      "size": 13548,
-      "hash": "sha256-dbf6e3afc482"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/product.tablet.layout",
-      "size": 13978,
-      "hash": "sha256-d9f8b2fa56ae"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr-designer.desktop.layout",
-      "size": 6467,
-      "hash": "sha256-3d88e61a903a"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr-designer.mobile.layout",
-      "size": 6322,
-      "hash": "sha256-16af6b8d9b1d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr-designer.tablet.layout",
-      "size": 6424,
-      "hash": "sha256-99363ba4fda3"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr.desktop.layout",
-      "size": 4651,
-      "hash": "sha256-dd52f8400e83"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr.mobile.layout",
-      "size": 4512,
-      "hash": "sha256-f084383e74d7"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/qr.tablet.layout",
-      "size": 4609,
-      "hash": "sha256-e535cf2ce2ee"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/seat-designer.desktop.layout",
-      "size": 4701,
-      "hash": "sha256-c8d9c17aba97"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/seat-designer.mobile.layout",
-      "size": 4572,
-      "hash": "sha256-520e2eb20d8b"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/seat-designer.tablet.layout",
-      "size": 4667,
-      "hash": "sha256-5144aa3521ec"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-google.desktop.layout",
-      "size": 561,
-      "hash": "sha256-ec2782e300d5"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-google.mobile.layout",
-      "size": 549,
-      "hash": "sha256-dbc1e682ff15"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-google.tablet.layout",
-      "size": 561,
-      "hash": "sha256-b6478291fbde"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-telegram.desktop.layout",
-      "size": 561,
-      "hash": "sha256-d06c3fcdedbb"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-telegram.mobile.layout",
-      "size": 549,
-      "hash": "sha256-7799dc3faaf9"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin-telegram.tablet.layout",
-      "size": 561,
-      "hash": "sha256-d441a61faeef"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin.desktop.layout",
-      "size": 11331,
-      "hash": "sha256-b3d06d217267"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin.mobile.layout",
-      "size": 10254,
-      "hash": "sha256-eb23d1982945"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/signin.tablet.layout",
-      "size": 10419,
-      "hash": "sha256-99938bb6ea4d"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/terminal.desktop.layout",
-      "size": 36727,
-      "hash": "sha256-80528303cfa3"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/terminal.mobile.layout",
-      "size": 36358,
-      "hash": "sha256-509f01ab392e"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/terminal.tablet.layout",
-      "size": 36688,
-      "hash": "sha256-18bd41d9346a"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/wishlist.desktop.layout",
-      "size": 10593,
-      "hash": "sha256-146d64fe1523"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/wishlist.mobile.layout",
-      "size": 10119,
-      "hash": "sha256-dcc9499bda51"
-    },
-    {
-      "url": "_content/Assets/preview/geometry/wishlist.tablet.layout",
-      "size": 10554,
-      "hash": "sha256-817edfde691b"
-    },
-    {
-      "url": "_content/Assets/preview/manifest.json",
-      "size": 7862,
-      "hash": "sha256-8728ad1c4e7d"
-    },
-    {
-      "url": "_content/Assets/preview/preview-collector.js",
-      "size": 7777,
-      "hash": "sha256-e49d480753cb"
     }
   ]
 }

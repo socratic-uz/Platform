@@ -29,7 +29,7 @@ Before marking any Blazor UI change as complete:
 ---
 
 ## 3. Tooling & MCP Execution
-Use the `socratic-ui-quality` MCP server:
+Use the `ui-quality` MCP server:
 - `inspect_responsive`: Deterministic check for horizontal overflow across all viewports.
 - `inspect_component`: Deep inspection combining DOM metrics, touch targets, token usage, and Razor source context.
 - `find_overlaps`: Mathematical bounding box overlap detector.

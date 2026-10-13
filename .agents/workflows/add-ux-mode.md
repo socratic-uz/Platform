@@ -54,7 +54,7 @@ Follow this step-by-step workflow when adding, customizing, or verifying one of 
 1. Add a sample product in `SocraticSeederService.cs` with `CustomAttributes["UxMode"] = "<value>"`.
 2. Run validation scripts:
    ```powershell
-   pwsh -File .agents/skills/socratic-retail-fintech/scripts/Audit-UxModes.ps1
-   pwsh -File .agents/skills/socratic-audits/scripts/Audit-Localization.ps1
+   pwsh -File .agents/skills/retail-fintech/scripts/Audit-UxModes.ps1
+   pwsh -File .agents/skills/code-audits/scripts/Audit-Localization.ps1
    dotnet build Platform/Web.UI/Web.UI/Web.UI.csproj
    ```

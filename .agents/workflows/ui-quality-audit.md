@@ -13,7 +13,7 @@ Follow this step-by-step workflow when diagnosing visual defects, verifying resp
 Before launching browser verification, run the static Razor and design token audit:
 
 ```powershell
-pwsh -File .agents/skills/socratic-ui-quality/scripts/Audit-BlazorUiQuality.ps1
+pwsh -File .agents/skills/ui-quality/scripts/Audit-BlazorUiQuality.ps1
 ```
 
 - Instantly identifies hardcoded HEX/RGB colors, `::deep` CSS usages, and potential small touch targets (<44px).
@@ -110,7 +110,7 @@ Run `analyze_accessibility`:
 
 ## 8. Apply Minimal Architectural Fix & Re-Verify
 
-1. Locate the root cause in the appropriate `.razor` or `.razor.css` file in `src/Frontend/Platform/Shared`.
+1. Locate the root cause in the appropriate `.razor` or `.razor.css` file in `Platform/Shared`.
 2. Replace hardcoded dimensions/colors with responsive CSS Grid (strictly NO Flexbox) and Material 3 CSS tokens.
 3. Re-run steps 3–7 to verify that:
    - Original defect is resolved;

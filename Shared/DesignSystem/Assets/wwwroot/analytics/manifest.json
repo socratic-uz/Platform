@@ -1,0 +1,246 @@
+{
+  "generatedAt": "2026-10-13T00:01:28.914Z",
+  "pagesCount": 24,
+  "pages": [
+    {
+      "name": "3d",
+      "file": "preview/3d.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/3d.desktop.blueprint",
+        "tablet": "analytics/blueprints/3d.tablet.blueprint",
+        "mobile": "analytics/blueprints/3d.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "about",
+      "file": "preview/about.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/about.desktop.blueprint",
+        "tablet": "analytics/blueprints/about.tablet.blueprint",
+        "mobile": "analytics/blueprints/about.mobile.blueprint"
+      },
+      "totalViolations": 12
+    },
+    {
+      "name": "analytics",
+      "file": "preview/analytics.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/analytics.desktop.blueprint",
+        "tablet": "analytics/blueprints/analytics.tablet.blueprint",
+        "mobile": "analytics/blueprints/analytics.mobile.blueprint"
+      },
+      "totalViolations": 101
+    },
+    {
+      "name": "chat",
+      "file": "preview/chat.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/chat.desktop.blueprint",
+        "tablet": "analytics/blueprints/chat.tablet.blueprint",
+        "mobile": "analytics/blueprints/chat.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "detector",
+      "file": "preview/detector.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/detector.desktop.blueprint",
+        "tablet": "analytics/blueprints/detector.tablet.blueprint",
+        "mobile": "analytics/blueprints/detector.mobile.blueprint"
+      },
+      "totalViolations": 6
+    },
+    {
+      "name": "docs",
+      "file": "preview/docs.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/docs.desktop.blueprint",
+        "tablet": "analytics/blueprints/docs.tablet.blueprint",
+        "mobile": "analytics/blueprints/docs.mobile.blueprint"
+      },
+      "totalViolations": 1
+    },
+    {
+      "name": "help",
+      "file": "preview/help.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/help.desktop.blueprint",
+        "tablet": "analytics/blueprints/help.tablet.blueprint",
+        "mobile": "analytics/blueprints/help.mobile.blueprint"
+      },
+      "totalViolations": 123
+    },
+    {
+      "name": "home",
+      "file": "preview/home.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/home.desktop.blueprint",
+        "tablet": "analytics/blueprints/home.tablet.blueprint",
+        "mobile": "analytics/blueprints/home.mobile.blueprint"
+      },
+      "totalViolations": 3
+    },
+    {
+      "name": "kiosk",
+      "file": "preview/kiosk.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/kiosk.desktop.blueprint",
+        "tablet": "analytics/blueprints/kiosk.tablet.blueprint",
+        "mobile": "analytics/blueprints/kiosk.mobile.blueprint"
+      },
+      "totalViolations": 3
+    },
+    {
+      "name": "landing",
+      "file": "preview/landing.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/landing.desktop.blueprint",
+        "tablet": "analytics/blueprints/landing.tablet.blueprint",
+        "mobile": "analytics/blueprints/landing.mobile.blueprint"
+      },
+      "totalViolations": 72
+    },
+    {
+      "name": "map",
+      "file": "preview/map.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/map.desktop.blueprint",
+        "tablet": "analytics/blueprints/map.tablet.blueprint",
+        "mobile": "analytics/blueprints/map.mobile.blueprint"
+      },
+      "totalViolations": 24
+    },
+    {
+      "name": "order-items",
+      "file": "preview/order-items.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/order-items.desktop.blueprint",
+        "tablet": "analytics/blueprints/order-items.tablet.blueprint",
+        "mobile": "analytics/blueprints/order-items.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "orders",
+      "file": "preview/orders.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/orders.desktop.blueprint",
+        "tablet": "analytics/blueprints/orders.tablet.blueprint",
+        "mobile": "analytics/blueprints/orders.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "payment",
+      "file": "preview/payment.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/payment.desktop.blueprint",
+        "tablet": "analytics/blueprints/payment.tablet.blueprint",
+        "mobile": "analytics/blueprints/payment.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "player",
+      "file": "preview/player.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/player.desktop.blueprint",
+        "tablet": "analytics/blueprints/player.tablet.blueprint",
+        "mobile": "analytics/blueprints/player.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "product",
+      "file": "preview/product.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/product.desktop.blueprint",
+        "tablet": "analytics/blueprints/product.tablet.blueprint",
+        "mobile": "analytics/blueprints/product.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "qr",
+      "file": "preview/qr.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/qr.desktop.blueprint",
+        "tablet": "analytics/blueprints/qr.tablet.blueprint",
+        "mobile": "analytics/blueprints/qr.mobile.blueprint"
+      },
+      "totalViolations": 9
+    },
+    {
+      "name": "qr-designer",
+      "file": "preview/qr-designer.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/qr-designer.desktop.blueprint",
+        "tablet": "analytics/blueprints/qr-designer.tablet.blueprint",
+        "mobile": "analytics/blueprints/qr-designer.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "seat-designer",
+      "file": "preview/seat-designer.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/seat-designer.desktop.blueprint",
+        "tablet": "analytics/blueprints/seat-designer.tablet.blueprint",
+        "mobile": "analytics/blueprints/seat-designer.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "signin",
+      "file": "preview/signin.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/signin.desktop.blueprint",
+        "tablet": "analytics/blueprints/signin.tablet.blueprint",
+        "mobile": "analytics/blueprints/signin.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "signin-google",
+      "file": "preview/signin-google.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/signin-google.desktop.blueprint",
+        "tablet": "analytics/blueprints/signin-google.tablet.blueprint",
+        "mobile": "analytics/blueprints/signin-google.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "signin-telegram",
+      "file": "preview/signin-telegram.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/signin-telegram.desktop.blueprint",
+        "tablet": "analytics/blueprints/signin-telegram.tablet.blueprint",
+        "mobile": "analytics/blueprints/signin-telegram.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "terminal",
+      "file": "preview/terminal.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/terminal.desktop.blueprint",
+        "tablet": "analytics/blueprints/terminal.tablet.blueprint",
+        "mobile": "analytics/blueprints/terminal.mobile.blueprint"
+      },
+      "totalViolations": 8
+    },
+    {
+      "name": "wishlist",
+      "file": "preview/wishlist.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/wishlist.desktop.blueprint",
+        "tablet": "analytics/blueprints/wishlist.tablet.blueprint",
+        "mobile": "analytics/blueprints/wishlist.mobile.blueprint"
+      },
+      "totalViolations": 0
+    }
+  ]
+}

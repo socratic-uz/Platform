@@ -31,6 +31,7 @@ public static class PreviewServicesExtensions
         services.AddSingleton<Microsoft.AspNetCore.Components.Web.IErrorBoundaryLogger, NullErrorBoundaryLogger>();
 
         services.AddHttpClient();
+        services.AddSingleton(new HttpClient(new FastPreviewHttpMessageHandler()));
         services.AddAuthorizationCore();
         services.AddLayoutServices();
         services.AddScoped<PersistentComponentState>(sp => CreatePersistentComponentState());
@@ -42,7 +43,10 @@ public static class PreviewServicesExtensions
         services.AddScoped<AuthenticationStateProvider, MockAuthenticationStateProvider>();
         services.AddCascadingAuthenticationState();
 
-        var dummyChannel = Grpc.Net.Client.GrpcChannel.ForAddress("http://localhost:5000");
+        var dummyChannel = Grpc.Net.Client.GrpcChannel.ForAddress("http://localhost:5000", new Grpc.Net.Client.GrpcChannelOptions
+        {
+            HttpHandler = new ImmediateUnavailableHttpMessageHandler()
+        });
         services.AddSingleton(new Shopping.Application.Protos.WishService.WishServiceClient(dummyChannel));
         services.AddSingleton(new Paying.Application.Protos.PaymentService.PaymentServiceClient(dummyChannel));
         services.AddSingleton(new Identifying.Application.Protos.AuthService.AuthServiceClient(dummyChannel));
@@ -101,7 +105,7 @@ public sealed class FakeNavigationManager : NavigationManager
 {
     public FakeNavigationManager()
     {
-        Initialize("https://preview.socratic.uz/", "https://preview.socratic.uz/");
+        Initialize("http://localhost:6080/", "http://localhost:6080/");
     }
 
     public void SetUri(string pageName)
@@ -207,3 +211,31 @@ public sealed class MockFaceBiometricProcessor : Domain.Interfaces.Biometrics.IF
     public float EstimateYawAngle(Domain.Interfaces.Biometrics.FaceDetectionResult face) => 0f;
     public void Dispose() { }
 }
+
+public sealed class ImmediateUnavailableHttpMessageHandler : HttpMessageHandler
+{
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        throw new HttpRequestException("Static preview generator: backend connection disabled.", null, System.Net.HttpStatusCode.ServiceUnavailable);
+    }
+}
+
+public sealed class FastPreviewHttpMessageHandler : HttpMessageHandler
+{
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        var url = request.RequestUri?.ToString() ?? "";
+        if (url.Contains("/docs/") || url.EndsWith(".md"))
+        {
+            return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+            {
+                Content = new StringContent("# Socratic Documentation\n\nPreview documentation content.")
+            });
+        }
+        return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+        {
+            Content = new StringContent("{}")
+        });
+    }
+}
+

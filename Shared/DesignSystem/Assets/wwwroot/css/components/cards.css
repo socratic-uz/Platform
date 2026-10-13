@@ -677,6 +677,8 @@
 
 .m3-card-media {
     position: relative;
+    display: grid;
+    grid-template-areas: "media-stack";
     width: 100%;
     aspect-ratio: 16 / 9;
     margin: 0;
@@ -686,6 +688,7 @@
 }
 
 .m3-card-media img {
+    grid-area: media-stack;
     display: block;
     width: 100%;
     height: 100%;
@@ -694,6 +697,7 @@
 }
 
 .m3-card-media-placeholder {
+    grid-area: media-stack;
     display: grid;
     opacity: 0.6;
     place-items: center;
@@ -1025,7 +1029,6 @@
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     background: var(--md-sys-color-surface-container);
     transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    cursor: pointer;
 }
 
 .plan-card-header {

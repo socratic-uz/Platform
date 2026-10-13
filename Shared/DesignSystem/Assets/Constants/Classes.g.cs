@@ -1587,7 +1587,6 @@ namespace Assets.Constants
             public const string Btn = "kiosk-btn";
             public const string CategoryLabel = "kiosk-category-label";
             public const string FilterInner = "kiosk-filter-inner";
-            public const string FilterStack = "kiosk-filter-stack";
             public const string Hero = "kiosk-hero";
             public const string HeroContent = "kiosk-hero-content";
             public const string NewOrderBtn = "kiosk-new-order-btn";
@@ -3708,7 +3707,6 @@ namespace Styles
             public const string Btn = "kiosk-btn";
             public const string CategoryLabel = "kiosk-category-label";
             public const string FilterInner = "kiosk-filter-inner";
-            public const string FilterStack = "kiosk-filter-stack";
             public const string Hero = "kiosk-hero";
             public const string HeroContent = "kiosk-hero-content";
             public const string NewOrderBtn = "kiosk-new-order-btn";
@@ -5830,7 +5828,6 @@ namespace Material.Web
             public const string Btn = "kiosk-btn";
             public const string CategoryLabel = "kiosk-category-label";
             public const string FilterInner = "kiosk-filter-inner";
-            public const string FilterStack = "kiosk-filter-stack";
             public const string Hero = "kiosk-hero";
             public const string HeroContent = "kiosk-hero-content";
             public const string NewOrderBtn = "kiosk-new-order-btn";

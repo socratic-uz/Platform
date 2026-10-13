@@ -60,8 +60,9 @@ function scanAssets() {
     Root: {}
   };
 
-  const IGNORED_EXTENSIONS = new Set(['.br', '.gz', '.map', '.md', '.html']);
+  const IGNORED_EXTENSIONS = new Set(['.br', '.gz', '.map', '.md', '.html', '.blueprint', '.layout']);
   const IGNORED_FILES = new Set(['assets-manifest.json', 'rollup.config.js']);
+  const IGNORED_DIRS = new Set(['preview', 'analytics']);
 
   function walk(currentDir, relativePrefix = '') {
     if (!fs.existsSync(currentDir)) return;
@@ -72,6 +73,9 @@ function scanAssets() {
       const relPath = relativePrefix ? `${relativePrefix}/${entry.name}` : entry.name;
 
       if (entry.isDirectory()) {
+        if (IGNORED_DIRS.has(entry.name.toLowerCase())) {
+          continue;
+        }
         walk(fullPath, relPath);
         continue;
       }

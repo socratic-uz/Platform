@@ -11,11 +11,17 @@
     "generate:loc": "node scripts/generate-localization-keys.mjs",
     "generate:icons": "node scripts/generate-icon-constants.mjs",
     "validate:syntax": "node scripts/validate-syntax.mjs",
-    "build": "npm run validate:syntax && npm run build:js && npm run generate:classes && npm run generate:assets && npm run generate:loc && npm run generate:icons",
+    "generate:codegen": "node scripts/generate-codegen.mjs",
+    "build": "npm run validate:syntax && npm run build:js && npm run generate:codegen",
     "lint:css": "stylelint \"wwwroot/css/**/*.css\"",
     "lint:css:fix": "stylelint \"wwwroot/css/**/*.css\" --fix",
-    "layout:analyze": "node scripts/analyze-layout.mjs",
-    "layout:watch": "node scripts/analyze-layout.mjs --watch"
+    "generate:preview": "node scripts/generate-preview.mjs",
+    "generate:blueprints": "node scripts/generate-blueprints.mjs",
+    "generate:usage": "node scripts/generate-usage.mjs",
+    "generate:all": "node scripts/generate-analytics.mjs",
+    "generate:analytics": "node scripts/generate-analytics.mjs",
+    "refresh": "npm run generate:codegen && npm run generate:analytics",
+    "watch:blueprints": "node scripts/generate-blueprints.mjs --watch"
   },
   "dependencies": {
     "@lit-labs/ssr-client": "^1.1.8",
