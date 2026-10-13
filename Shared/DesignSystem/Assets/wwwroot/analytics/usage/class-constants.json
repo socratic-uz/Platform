@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-13T02:29:14.507Z",
+  "generatedAt": "2026-10-13T02:38:54.722Z",
   "summary": {
     "totalDeclaredConstants": 1883,
     "usedInRazorCount": 494,
     "unusedCount": 1389,
     "adoptionRatePercent": 26,
     "totalCallSites": 1179,
-    "rawStringViolationsCount": 1387,
+    "rawStringViolationsCount": 1386,
     "classesWithRawLiteralsCount": 843,
     "sourceFilesScanned": 537
   },
@@ -262,21 +262,6 @@
       ]
     },
     {
-      "key": "Cards.Interactive",
-      "category": "Cards",
-      "name": "Interactive",
-      "cssClass": "m3-card-interactive",
-      "usageCountInRazor": 12,
-      "filesCount": 5,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Grid.razor",
-        "Retail/Orders/Pages/Orders/Grid.razor",
-        "Retail/Orders/Pages/Orders/Index.razor",
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Help.razor"
-      ]
-    },
-    {
       "key": "Chip.VenueChip",
       "category": "Chip",
       "name": "VenueChip",
@@ -347,6 +332,20 @@
       "filesCount": 1,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Cards.Interactive",
+      "category": "Cards",
+      "name": "Interactive",
+      "cssClass": "m3-card-interactive",
+      "usageCountInRazor": 9,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Portal/Landing/Pages/About.razor"
       ]
     },
     {
@@ -751,7 +750,7 @@
     "Cards": {
       "total": 217,
       "used": 70,
-      "totalCalls": 223
+      "totalCalls": 220
     },
     "Cart": {
       "total": 25,
@@ -876,7 +875,7 @@
     "Help": {
       "total": 12,
       "used": 12,
-      "totalCalls": 12
+      "totalCalls": 15
     },
     "InfoGrid": {
       "total": 23,
@@ -1304,16 +1303,6 @@
       ]
     },
     {
-      "cssClass": "m3-text-gradient",
-      "occurrences": 5,
-      "recommendedConstant": "Typography.TextGradient",
-      "filesCount": 2,
-      "files": [
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Help.razor"
-      ]
-    },
-    {
       "cssClass": "unit",
       "occurrences": 5,
       "recommendedConstant": "Common.Unit",
@@ -1486,6 +1475,16 @@
         "Retail/Commerce/Components/GeoLocationPicker.razor",
         "Retail/Commerce/Features/Rental/VehicleRentalFeature.razor",
         "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
+      ]
+    },
+    {
+      "cssClass": "column-header",
+      "occurrences": 4,
+      "recommendedConstant": "Common.ColumnHeader",
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor"
       ]
     }
   ],
