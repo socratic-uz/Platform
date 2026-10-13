@@ -46,14 +46,20 @@ function syncSeedPages() {
 
 // Check Playwright availability
 async function getPlaywright() {
-  try {
-    const playwrightPath = path.resolve(__dirname, '../../../../Tools/socratic-ui-mcp/node_modules/playwright/index.mjs');
+  const candidatePaths = [
+    path.resolve(__dirname, '../../../../Tools/ui-mcp/node_modules/playwright/index.mjs'),
+    path.resolve(__dirname, '../node_modules/playwright/index.mjs')
+  ];
+
+  for (const playwrightPath of candidatePaths) {
     if (fs.existsSync(playwrightPath)) {
-      const { chromium } = await import(pathToFileURL(playwrightPath).href);
-      return chromium;
+      try {
+        const { chromium } = await import(pathToFileURL(playwrightPath).href);
+        return chromium;
+      } catch (err) {
+        // Continue checking candidates
+      }
     }
-  } catch (err) {
-    // Playwright not available, fallback to static analysis
   }
   return null;
 }
@@ -122,7 +128,7 @@ async function analyzePageLiveAllViewports(browser, filePath) {
 function analyzePageStatic(htmlContent, vp) {
   const lines = htmlContent.split('\n');
   const violations = [];
-  
+
   lines.forEach((line, idx) => {
     if (line.includes('display: flex') || line.includes('display:flex')) {
       violations.push({
@@ -307,7 +313,7 @@ async function main() {
   if (chromium) {
     browser = await chromium.launch({ headless: true });
   } else if (!staticOnly) {
-    console.warn('⚠️ Playwright not found (Tools/socratic-ui-mcp/node_modules). FALLBACK to STATIC mode: blueprints are a placeholder tree, only regex lint is real.');
+    console.warn('⚠️ Playwright not found (Tools/ui-mcp/node_modules). FALLBACK to STATIC mode: blueprints are a placeholder tree, only regex lint is real.');
   } else {
     console.warn('ℹ️ --static-only: blueprints are a placeholder tree; only regex lint (flex/hex/1fr) is real.');
   }

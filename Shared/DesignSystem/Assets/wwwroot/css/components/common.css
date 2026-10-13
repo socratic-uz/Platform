@@ -6266,11 +6266,13 @@ textarea:invalid:focus-visible {
 .support-action-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 0.75rem;
 }
 
 .support-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.5rem;
 }
 
 .surveyContainer {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:01:28.202Z",
+  "generatedAt": "2026-10-13T02:29:14.507Z",
   "summary": {
     "totalDeclaredConstants": 1883,
     "usedInRazorCount": 494,
@@ -8,7 +8,7 @@
     "totalCallSites": 1179,
     "rawStringViolationsCount": 1387,
     "classesWithRawLiteralsCount": 843,
-    "sourceFilesScanned": 539
+    "sourceFilesScanned": 537
   },
   "topUsedConstants": [
     {

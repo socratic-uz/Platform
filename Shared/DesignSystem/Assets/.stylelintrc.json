@@ -2,14 +2,26 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "declaration-property-value-disallowed-list": {
-      "display": ["/^flex$/", "/^inline-flex$/"]
+      "display": [
+        "/^flex$/",
+        "/^inline-flex$/"
+      ]
     },
-    "color-no-hex": [true, {
-      "message": "Direct HEX colors are forbidden. Use Material Design 3 tokens: var(--md-sys-color-*)"
-    }],
-    "function-disallowed-list": [["rgba", "hsl"], {
-      "message": "Raw color functions (rgba, hsl) are disallowed. Use M3 CSS tokens var(--md-sys-color-*) or relative color rgb(from var(...) r g b / alpha)"
-    }],
+    "color-no-hex": [
+      true,
+      {
+        "message": "Direct HEX colors are forbidden. Use Material Design 3 tokens: var(--md-sys-color-*)"
+      }
+    ],
+    "function-disallowed-list": [
+      [
+        "rgba",
+        "hsl"
+      ],
+      {
+        "message": "Raw color functions (rgba, hsl) are disallowed. Use M3 CSS tokens var(--md-sys-color-*) or relative color rgb(from var(...) r g b / alpha)"
+      }
+    ],
     "selector-class-pattern": [
       "^(m3|l|pos|kiosk|chat|portal|studio|grid|table|order|analytics|detector|store|auth|lang|theme)[a-z0-9_-]*$",
       {

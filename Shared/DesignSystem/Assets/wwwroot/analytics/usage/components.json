@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-13T00:01:28.203Z",
+  "generatedAt": "2026-10-13T02:29:14.508Z",
   "summary": {
     "totalWebComponentsUsed": 402,
     "uniqueComponentsCount": 47,
-    "sourceFilesScanned": 539
+    "sourceFilesScanned": 537
   },
   "webComponents": [
     {

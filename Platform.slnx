@@ -29,8 +29,5 @@
     <Project Path="Shared/DesignSystem/QuickGrid/QuickGrid.csproj" />
     <Project Path="Shared/DesignSystem/Markdown/Markdown.csproj" />
   </Folder>
-  <Folder Name="/Tools/">
-    <Project Path="Tools/UiQuality.Analyzer/UiQuality.Analyzer.csproj" />
-    <Project Path="Tools/UiQuality.Analyzer.Tests/UiQuality.Analyzer.Tests.csproj" />
-  </Folder>
+
 </Solution>
