@@ -501,7 +501,7 @@ server.registerTool("screenshot", {
     }
 });
 server.registerTool("inspect_component", {
-    description: "Return a unified Socratic UI Quality Report combining rendered component evidence, touch targets, Material 3 design tokens, runtime diagnostics, layout issues, and Blazor source metadata. If host is offline, returns static Roslyn source analysis.",
+    description: "Return a unified UI Quality Report combining rendered component evidence, touch targets, Material 3 design tokens, runtime diagnostics, layout issues, and Razor source metadata. If host is offline, returns static Roslyn source analysis.",
     inputSchema: {
         path: z.string().default("/"),
         selector: z.string().default("[data-blazor-component]"),
