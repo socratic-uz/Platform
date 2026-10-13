@@ -3,13 +3,13 @@
   "assets": [
     {
       "url": "_content/Assets/css/components/buttons.css",
-      "size": 58131,
-      "hash": "sha256-b1ca035cc723"
+      "size": 58299,
+      "hash": "sha256-ed465392c592"
     },
     {
       "url": "_content/Assets/css/components/cards.css",
-      "size": 60124,
-      "hash": "sha256-b39e80a6d83f"
+      "size": 60103,
+      "hash": "sha256-e0162c22d389"
     },
     {
       "url": "_content/Assets/css/components/chips.css",
@@ -18,8 +18,8 @@
     },
     {
       "url": "_content/Assets/css/components/common.css",
-      "size": 161616,
-      "hash": "sha256-92c325439ba3"
+      "size": 164459,
+      "hash": "sha256-42bd61d04912"
     },
     {
       "url": "_content/Assets/css/components/components.css",
@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
-      "size": 7858,
-      "hash": "sha256-d4720f289beb"
+      "size": 8098,
+      "hash": "sha256-6bbb1320d0b0"
     },
     {
       "url": "_content/Assets/css/layouts/landing-layout.css",
@@ -108,8 +108,8 @@
     },
     {
       "url": "_content/Assets/css/pages/analytics.css",
-      "size": 18405,
-      "hash": "sha256-855ecf363a59"
+      "size": 18449,
+      "hash": "sha256-9a098b213a04"
     },
     {
       "url": "_content/Assets/css/pages/auth.css",
@@ -138,8 +138,8 @@
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 10672,
-      "hash": "sha256-beeb97226e63"
+      "size": 10691,
+      "hash": "sha256-063e8914c38b"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
@@ -158,8 +158,8 @@
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 9551,
-      "hash": "sha256-49d48aa4b711"
+      "size": 9589,
+      "hash": "sha256-3b1a4c475660"
     },
     {
       "url": "_content/Assets/css/styles.css",
@@ -268,8 +268,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/qr-designer.css",
-      "size": 13320,
-      "hash": "sha256-e6e07e2bc557"
+      "size": 13679,
+      "hash": "sha256-8e8162a1019c"
     },
     {
       "url": "_content/Assets/css/widgets/seat-designer.css",

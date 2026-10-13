@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-13T02:38:54.724Z",
+  "generatedAt": "2026-10-13T08:03:28.160Z",
   "summary": {
-    "totalWebComponentsUsed": 402,
+    "totalWebComponentsUsed": 395,
     "uniqueComponentsCount": 47,
     "sourceFilesScanned": 537
   },
@@ -58,20 +58,6 @@
         "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor",
         "Intelligence/Chat/Widgets/Messaging/ChatMessageItem.razor",
         "Intelligence/Vision/Pages/Detector.razor"
-      ]
-    },
-    {
-      "component": "md-circular-progress",
-      "count": 8,
-      "filesCount": 7,
-      "files": [
-        "Platform/Shared/DesignSystem/Material.Web/Components/Progress.razor",
-        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
-        "Retail/PointOfSale/Pages/Kiosk.razor",
-        "Retail/PointOfSale/Pages/Terminal.razor",
-        "Portal/Landing/Pages/Player.razor",
-        "Portal/Landing/Widgets/Player.razor",
-        "Intelligence/Chat/Widgets/Messaging/LoadingSpinner.razor"
       ]
     },
     {
@@ -357,6 +343,14 @@
       "filesCount": 1,
       "files": [
         "Platform/Shared/DesignSystem/Material.Web/Components/MaterialDialog.razor"
+      ]
+    },
+    {
+      "component": "md-circular-progress",
+      "count": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/Progress.razor"
       ]
     },
     {

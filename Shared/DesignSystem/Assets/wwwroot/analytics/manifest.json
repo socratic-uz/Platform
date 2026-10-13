@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T02:43:36.654Z",
+  "generatedAt": "2026-10-13T08:03:28.878Z",
   "pagesCount": 24,
   "pages": [
     {
@@ -20,7 +20,7 @@
         "tablet": "analytics/blueprints/about.tablet.blueprint",
         "mobile": "analytics/blueprints/about.mobile.blueprint"
       },
-      "totalViolations": 12
+      "totalViolations": 0
     },
     {
       "name": "analytics",
@@ -30,7 +30,7 @@
         "tablet": "analytics/blueprints/analytics.tablet.blueprint",
         "mobile": "analytics/blueprints/analytics.mobile.blueprint"
       },
-      "totalViolations": 101
+      "totalViolations": 0
     },
     {
       "name": "chat",
@@ -50,7 +50,7 @@
         "tablet": "analytics/blueprints/detector.tablet.blueprint",
         "mobile": "analytics/blueprints/detector.mobile.blueprint"
       },
-      "totalViolations": 3
+      "totalViolations": 0
     },
     {
       "name": "docs",
@@ -60,7 +60,7 @@
         "tablet": "analytics/blueprints/docs.tablet.blueprint",
         "mobile": "analytics/blueprints/docs.mobile.blueprint"
       },
-      "totalViolations": 1
+      "totalViolations": 0
     },
     {
       "name": "help",
@@ -80,7 +80,7 @@
         "tablet": "analytics/blueprints/home.tablet.blueprint",
         "mobile": "analytics/blueprints/home.mobile.blueprint"
       },
-      "totalViolations": 3
+      "totalViolations": 0
     },
     {
       "name": "kiosk",
@@ -90,7 +90,7 @@
         "tablet": "analytics/blueprints/kiosk.tablet.blueprint",
         "mobile": "analytics/blueprints/kiosk.mobile.blueprint"
       },
-      "totalViolations": 3
+      "totalViolations": 0
     },
     {
       "name": "landing",
@@ -100,7 +100,7 @@
         "tablet": "analytics/blueprints/landing.tablet.blueprint",
         "mobile": "analytics/blueprints/landing.mobile.blueprint"
       },
-      "totalViolations": 72
+      "totalViolations": 0
     },
     {
       "name": "map",
@@ -110,7 +110,7 @@
         "tablet": "analytics/blueprints/map.tablet.blueprint",
         "mobile": "analytics/blueprints/map.mobile.blueprint"
       },
-      "totalViolations": 24
+      "totalViolations": 0
     },
     {
       "name": "order-items",
@@ -170,7 +170,7 @@
         "tablet": "analytics/blueprints/qr.tablet.blueprint",
         "mobile": "analytics/blueprints/qr.mobile.blueprint"
       },
-      "totalViolations": 9
+      "totalViolations": 0
     },
     {
       "name": "qr-designer",
@@ -230,7 +230,7 @@
         "tablet": "analytics/blueprints/terminal.tablet.blueprint",
         "mobile": "analytics/blueprints/terminal.mobile.blueprint"
       },
-      "totalViolations": 8
+      "totalViolations": 0
     },
     {
       "name": "wishlist",

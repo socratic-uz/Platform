@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-13T02:38:54.722Z",
+  "generatedAt": "2026-10-13T08:03:28.159Z",
   "summary": {
-    "totalDeclaredConstants": 1883,
-    "usedInRazorCount": 494,
-    "unusedCount": 1389,
+    "totalDeclaredConstants": 1897,
+    "usedInRazorCount": 497,
+    "unusedCount": 1400,
     "adoptionRatePercent": 26,
-    "totalCallSites": 1179,
-    "rawStringViolationsCount": 1386,
-    "classesWithRawLiteralsCount": 843,
+    "totalCallSites": 1178,
+    "rawStringViolationsCount": 1397,
+    "classesWithRawLiteralsCount": 853,
     "sourceFilesScanned": 537
   },
   "topUsedConstants": [
@@ -335,20 +335,6 @@
       ]
     },
     {
-      "key": "Cards.Interactive",
-      "category": "Cards",
-      "name": "Interactive",
-      "cssClass": "m3-card-interactive",
-      "usageCountInRazor": 9,
-      "filesCount": 4,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Grid.razor",
-        "Retail/Orders/Pages/Orders/Grid.razor",
-        "Retail/Orders/Pages/Orders/Index.razor",
-        "Portal/Landing/Pages/About.razor"
-      ]
-    },
-    {
       "key": "Cards.Title",
       "category": "Cards",
       "name": "Title",
@@ -642,6 +628,19 @@
       ]
     },
     {
+      "key": "Cards.Interactive",
+      "category": "Cards",
+      "name": "Interactive",
+      "cssClass": "m3-card-interactive",
+      "usageCountInRazor": 5,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
       "key": "Cards.SummaryRow",
       "category": "Cards",
       "name": "SummaryRow",
@@ -750,7 +749,7 @@
     "Cards": {
       "total": 217,
       "used": 70,
-      "totalCalls": 220
+      "totalCalls": 216
     },
     "Cart": {
       "total": 25,
@@ -788,9 +787,9 @@
       "totalCalls": 17
     },
     "Common": {
-      "total": 531,
-      "used": 41,
-      "totalCalls": 120
+      "total": 543,
+      "used": 42,
+      "totalCalls": 121
     },
     "Dark": {
       "total": 1,
@@ -938,7 +937,7 @@
       "totalCalls": 6
     },
     "QrDesigner": {
-      "total": 41,
+      "total": 43,
       "used": 18,
       "totalCalls": 20
     },
@@ -954,8 +953,8 @@
     },
     "Search": {
       "total": 29,
-      "used": 2,
-      "totalCalls": 2
+      "used": 3,
+      "totalCalls": 3
     },
     "SeatDesigner": {
       "total": 18,
@@ -994,8 +993,8 @@
     },
     "Typography": {
       "total": 27,
-      "used": 8,
-      "totalCalls": 67
+      "used": 9,
+      "totalCalls": 68
     }
   },
   "rawStringViolations": [

@@ -45,10 +45,9 @@
 
 
 <main class="organizations-map-page"><div class="map-mobile-backdrop m3-backdrop" aria-hidden="true"></div><section class="organizations-map-controls expanded search-mode "><button type="button" class="map-panel-toggle-tab" title="Свернуть"><span class="tab-arrow">◀</span><span class="tab-handle" aria-hidden="true"></span></button>
-        <div class="map-panel-content scrollbar-thin scrollbar-thin"><div class="map-toolbar"><div class="search-panel"><div class="search-bar-wrapper" style="position: relative; z-index: 10;"><div class="search-bar" role="search" aria-label="Поиск по карте"><div class="search-bar-inner"><md-icon class="search-icon">search</md-icon>
-                <input class="search-input" type="text" id="map-main-search" placeholder="Поиск мест и адресов" autocomplete="off" value="" /><md-divider vertical style="height: 20px; margin: 0 4px;"></md-divider>
-                <md-icon-button aria-label="Маршруты" Title="Маршруты"><md-icon>alt_route</md-icon></md-icon-button></div></div>
-
+        <div class="map-panel-content scrollbar-thin scrollbar-thin"><div class="map-toolbar"><div class="search-panel"><div class="search-bar" role="search" aria-label="Поиск по карте"><div class="search-bar-inner"><md-icon class="search-icon">search</md-icon>
+            <input class="search-input" type="text" id="map-main-search" placeholder="Поиск мест и адресов" autocomplete="off" value="" /><md-divider vertical class="search-divider"></md-divider>
+            <md-icon-button aria-label="Маршруты" Title="Маршруты"><md-icon>alt_route</md-icon></md-icon-button></div>
         </div>
 
     <div class="map-categories-scroll scrollbar-none touch-scroll-x scrollbar-none" style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; padding: 8px 12px;"><md-filter-chip label="Где поесть" class="expressive"><md-icon slot="icon">restaurant</md-icon></md-filter-chip>
@@ -58,22 +57,22 @@
 
 
 
-    </div></div></div></section><section class="organizations-map-viewport controls-panel-expanded search-mode"><div class="map-floating-actions" role="group" __internal_stopPropagation_onclick><div class="yandex-right-controls-container" __internal_stopPropagation_onclick><div class="yandex-ctrl-stack-bottom" style="display: grid; gap: 10px; justify-items: center;"><div style="display: grid; gap: 4px; background-color: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); padding: 4px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);"><md-icon-button aria-label="Приблизить" Title="Приблизить"><md-icon>add</md-icon></md-icon-button>
-                    <md-divider style="margin: 0 4px;"></md-divider>
-                    <md-icon-button aria-label="Отдалить" Title="Отдалить"><md-icon>remove</md-icon></md-icon-button></div>
+    </div></div></div></section><section class="organizations-map-viewport controls-panel-expanded search-mode"><div class="yandex-right-controls-container" role="group" __internal_stopPropagation_onclick><div class="yandex-ctrl-stack-bottom"><div class="map-zoom-stack"><md-icon-button aria-label="Приблизить" Title="Приблизить"><md-icon>add</md-icon></md-icon-button>
+                <md-divider class="map-zoom-divider"></md-divider>
+                <md-icon-button aria-label="Отдалить" Title="Отдалить"><md-icon>remove</md-icon></md-icon-button></div>
 
-                
-                <md-filled-icon-button aria-label="Мое местоположение" Title="Мое местоположение" style="--md-filled-icon-button-container-color: var(--md-sys-color-secondary-container); --md-filled-icon-button-icon-color: var(--md-sys-color-on-secondary-container); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); width: 40px; height: 40px;"><md-icon>my_location</md-icon></md-filled-icon-button>
+            
+            <md-filled-icon-button aria-label="Мое местоположение" Class="map-ctrl-btn map-geo-btn" Title="Мое местоположение"><md-icon>my_location</md-icon></md-filled-icon-button>
 
-                
-                <md-filled-icon-button aria-label="3D вид" Title="3D вид" style="--md-filled-icon-button-container-color: var(--md-sys-color-surface-container-high); --md-filled-icon-button-icon-color: var(--md-sys-color-on-surface); border: 1px solid var(--md-sys-color-outline-variant); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); width: 40px; height: 40px;"><md-icon>3d_rotation</md-icon></md-filled-icon-button>
+            
+            <md-filled-icon-button aria-label="3D вид" Class="map-ctrl-btn map-tilt-btn " Title="3D вид"><md-icon>3d_rotation</md-icon></md-filled-icon-button>
 
-                
-                <div style="display: grid; justify-items: center; gap: 4px; background-color: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); padding: 6px 4px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);"><div style="font-size: 0.65rem; font-weight: 600; text-align: center; width: 100%; color: var(--md-sys-color-outline); padding-bottom: 2px;">Эт.</div>
-                    <md-filled-icon-button style="--md-filled-icon-button-container-color: transparent; --md-filled-icon-button-icon-color: var(--md-sys-color-on-surface); width: 32px; height: 32px; font-weight: bold; font-size: 0.85rem;">3</md-filled-icon-button>
-                    <md-filled-icon-button style="--md-filled-icon-button-container-color: transparent; --md-filled-icon-button-icon-color: var(--md-sys-color-on-surface); width: 32px; height: 32px; font-weight: bold; font-size: 0.85rem;">2</md-filled-icon-button>
-                    <md-filled-icon-button style="--md-filled-icon-button-container-color: var(--md-sys-color-primary); --md-filled-icon-button-icon-color: var(--md-sys-color-on-primary); width: 32px; height: 32px; font-weight: bold; font-size: 0.85rem;">1</md-filled-icon-button></div></div></div></div>
-    <div class="map-canvas"><div id="organization-maplibre" style="height:100%;width:100%;background-color: var(--md-sys-color-surface-dim);"></div></div></section></main>
+            
+            <div class="map-floor-stack"><div class="map-floor-label">Эт.</div>
+                <md-filled-icon-button aria-label="3 этаж" Class="map-floor-btn " Title="3 этаж">3</md-filled-icon-button>
+                <md-filled-icon-button aria-label="2 этаж" Class="map-floor-btn " Title="2 этаж">2</md-filled-icon-button>
+                <md-filled-icon-button aria-label="1 этаж" Class="map-floor-btn active" Title="1 этаж">1</md-filled-icon-button></div></div></div>
+    <div id="organization-maplibre" class="map-canvas"></div></section></main>
 
 <nav class="glass nav-desktop"><a href="/home" class="nav-item"><md-icon>home</md-icon>
 		<span>Home</span></a>

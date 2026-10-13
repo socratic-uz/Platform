@@ -392,7 +392,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-1);
+    gap: var(--md-sys-spacing-2, 8px);
     padding: 4px;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
@@ -637,6 +637,8 @@
     display: grid;
     gap: var(--md-sys-spacing-5, 1.25rem);
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
     padding: var(--md-sys-spacing-6, 1.5rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);

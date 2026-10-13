@@ -83,6 +83,7 @@
 }
 
 .home-search-container {
+    display: grid;
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
@@ -302,6 +303,17 @@ header.app-header.header-sticky {
 }
 
 @media screen and (max-width: 1024px) {
+    .header-grid-layout {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .header-start-zone {
+        min-width: 0;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
     .header-start-zone:has(.m3-page-header-start) .header-brand-zone,
     .header-start-zone:has(.header-context-divider) .header-brand-zone {
         display: none;

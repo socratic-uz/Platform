@@ -377,6 +377,7 @@
 }
 
 .pos-invoice-container {
+    display: grid;
     min-height: 200px;
     margin-bottom: 16px;
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -392,6 +393,7 @@
 }
 
 .pos-search-wrapper {
+    display: grid;
     justify-self: end;
 }
 

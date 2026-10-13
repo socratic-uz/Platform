@@ -539,19 +539,38 @@
     background: var(--md-sys-color-surface);
 }
 
-.qrg-section-title {
+.qrg-section-title,
+.qrg-section-title-btn {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 0;
     padding-bottom: 8px;
+    border: none;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background: transparent;
     color: var(--md-sys-color-primary);
+    font: inherit;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.8px;
     text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+}
+
+.qrg-section-title-inner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+}
+
+.qrg-customizer-content {
+    margin-top: 12px;
 }
 
 @media screen and (max-width: 839.98px) {

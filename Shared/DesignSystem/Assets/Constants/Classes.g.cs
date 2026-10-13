@@ -883,7 +883,12 @@ namespace Assets.Constants
             public const string ManeuverText = "maneuver-text";
             public const string MapCanvas = "map-canvas";
             public const string MapClickPopup = "map-click-popup";
+            public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
+            public const string MapFloorBtn = "map-floor-btn";
+            public const string MapFloorLabel = "map-floor-label";
+            public const string MapFloorStack = "map-floor-stack";
+            public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
@@ -896,6 +901,9 @@ namespace Assets.Constants
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapZoomDivider = "map-zoom-divider";
+            public const string MapZoomStack = "map-zoom-stack";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -947,6 +955,9 @@ namespace Assets.Constants
             public const string PaymentDashboard = "payment-dashboard";
             public const string PdfType = "pdf-type";
             public const string PlaceActionsRow = "place-actions-row";
+            public const string PlaceBtnFull = "place-btn-full";
+            public const string PlaceBtnPrimary = "place-btn-primary";
+            public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
             public const string PlaceDetailsBody = "place-details-body";
@@ -1095,6 +1106,7 @@ namespace Assets.Constants
             public const string SidebarLink = "sidebar-link";
             public const string SidebarNav = "sidebar-nav";
             public const string SidebarNavCategory = "sidebar-nav-category";
+            public const string SingleCol = "single-col";
             public const string SpatialMapsSection = "spatial-maps-section";
             public const string SpatialMetaNote = "spatial-meta-note";
             public const string SpatialWingHeader = "spatial-wing-header";
@@ -1855,6 +1867,8 @@ namespace Assets.Constants
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
             public const string QrgSectionTitle = "qrg-section-title";
+            public const string QrgSectionTitleBtn = "qrg-section-title-btn";
+            public const string QrgSectionTitleInner = "qrg-section-title-inner";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
             public const string QrgSliderHeader = "qrg-slider-header";
@@ -3003,7 +3017,12 @@ namespace Styles
             public const string ManeuverText = "maneuver-text";
             public const string MapCanvas = "map-canvas";
             public const string MapClickPopup = "map-click-popup";
+            public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
+            public const string MapFloorBtn = "map-floor-btn";
+            public const string MapFloorLabel = "map-floor-label";
+            public const string MapFloorStack = "map-floor-stack";
+            public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
@@ -3016,6 +3035,9 @@ namespace Styles
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapZoomDivider = "map-zoom-divider";
+            public const string MapZoomStack = "map-zoom-stack";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -3067,6 +3089,9 @@ namespace Styles
             public const string PaymentDashboard = "payment-dashboard";
             public const string PdfType = "pdf-type";
             public const string PlaceActionsRow = "place-actions-row";
+            public const string PlaceBtnFull = "place-btn-full";
+            public const string PlaceBtnPrimary = "place-btn-primary";
+            public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
             public const string PlaceDetailsBody = "place-details-body";
@@ -3215,6 +3240,7 @@ namespace Styles
             public const string SidebarLink = "sidebar-link";
             public const string SidebarNav = "sidebar-nav";
             public const string SidebarNavCategory = "sidebar-nav-category";
+            public const string SingleCol = "single-col";
             public const string SpatialMapsSection = "spatial-maps-section";
             public const string SpatialMetaNote = "spatial-meta-note";
             public const string SpatialWingHeader = "spatial-wing-header";
@@ -3975,6 +4001,8 @@ namespace Styles
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
             public const string QrgSectionTitle = "qrg-section-title";
+            public const string QrgSectionTitleBtn = "qrg-section-title-btn";
+            public const string QrgSectionTitleInner = "qrg-section-title-inner";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
             public const string QrgSliderHeader = "qrg-slider-header";
@@ -5124,7 +5152,12 @@ namespace Material.Web
             public const string ManeuverText = "maneuver-text";
             public const string MapCanvas = "map-canvas";
             public const string MapClickPopup = "map-click-popup";
+            public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
+            public const string MapFloorBtn = "map-floor-btn";
+            public const string MapFloorLabel = "map-floor-label";
+            public const string MapFloorStack = "map-floor-stack";
+            public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
@@ -5137,6 +5170,9 @@ namespace Material.Web
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapZoomDivider = "map-zoom-divider";
+            public const string MapZoomStack = "map-zoom-stack";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -5188,6 +5224,9 @@ namespace Material.Web
             public const string PaymentDashboard = "payment-dashboard";
             public const string PdfType = "pdf-type";
             public const string PlaceActionsRow = "place-actions-row";
+            public const string PlaceBtnFull = "place-btn-full";
+            public const string PlaceBtnPrimary = "place-btn-primary";
+            public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
             public const string PlaceDetailsBody = "place-details-body";
@@ -5336,6 +5375,7 @@ namespace Material.Web
             public const string SidebarLink = "sidebar-link";
             public const string SidebarNav = "sidebar-nav";
             public const string SidebarNavCategory = "sidebar-nav-category";
+            public const string SingleCol = "single-col";
             public const string SpatialMapsSection = "spatial-maps-section";
             public const string SpatialMetaNote = "spatial-meta-note";
             public const string SpatialWingHeader = "spatial-wing-header";
@@ -6096,6 +6136,8 @@ namespace Material.Web
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
             public const string QrgSectionTitle = "qrg-section-title";
+            public const string QrgSectionTitleBtn = "qrg-section-title-btn";
+            public const string QrgSectionTitleInner = "qrg-section-title-inner";
             public const string QrgSelectGrid = "qrg-select-grid";
             public const string QrgSidebarHeader = "qrg-sidebar-header";
             public const string QrgSliderHeader = "qrg-slider-header";

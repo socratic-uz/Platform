@@ -142,6 +142,21 @@
       return false;
     }
 
+    // Sticky elements (e.g. pinned table columns like actions-column, sticky headers)
+    // intentionally freeze over scrolling siblings
+    const isStickyA = styleA.position === 'sticky';
+    const isStickyB = styleB.position === 'sticky';
+    if (isStickyA || isStickyB) {
+      return false;
+    }
+
+    // Table cells inside the same row (tr) are positioned by the table layout engine
+    const tagA = nodeA.el.tagName.toLowerCase();
+    const tagB = nodeB.el.tagName.toLowerCase();
+    if ((tagA === 'th' || tagA === 'td') && (tagB === 'th' || tagB === 'td')) {
+      return false;
+    }
+
     // If both elements are in-flow (not absolute/fixed), overlap is a collision
     const isPosA = styleA.position === 'absolute' || styleA.position === 'fixed';
     const isPosB = styleB.position === 'absolute' || styleB.position === 'fixed';
@@ -228,7 +243,8 @@
     const hasBg = computed.backgroundColor && computed.backgroundColor !== 'rgba(0, 0, 0, 0)' && computed.backgroundColor !== 'transparent';
     const hasSpecialRole = el.hasAttribute('role') || el.id || el.classList.contains('m3-card') || el.classList.contains('m3-surface');
     const isRedundantWrapper = !isGrid && !hasBorder && !hasBg && !hasSpecialRole && childNodes.length === 1 && childNodes[0].tagName.toLowerCase() === 'div';
-    const isDeepNesting = depth >= 10;
+    const isInsideTable = Boolean(el.closest('table'));
+    const isDeepNesting = depth >= 10 && !isInsideTable;
 
     // Non-semantic button check
     const isFakeButton = ['div', 'span', 'p'].includes(tag) &&
