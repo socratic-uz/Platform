@@ -378,3 +378,263 @@
     background: var(--md-sys-color-surface-container);
     overflow-x: auto;
 }
+
+/* ==========================================================================
+   Order Drawer Component (Socratic Commerce Checkout)
+   ========================================================================== */
+
+.order-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--m3-z-drawer, 9999);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(min(100%, 320px), 480px);
+    justify-items: end;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: rgb(from var(--md-sys-color-scrim, #000) r g b / 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+}
+
+.order-drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.order-drawer-panel {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+    padding: 24px;
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: -12px 0 36px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    animation: slideInRight 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 640px) {
+    .order-drawer-backdrop {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .order-drawer-panel {
+        grid-column: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+}
+
+.order-drawer-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding-bottom: 16px;
+}
+
+.order-header-title-box {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+}
+
+.order-header-title-box .headline,
+.order-header-title-box .m3-title-large {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.order-badge {
+    padding: 3px 10px;
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
+    border-radius: 12px;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.order-drawer-body {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+    padding: 16px 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+}
+
+.empty-order-view {
+    padding: 60px 20px;
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+}
+
+.order-items-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order-item-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 14px;
+    background: var(--md-sys-color-surface-container);
+    transition: background 0.15s ease;
+}
+
+.order-item-row:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+.order-item-media {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+}
+
+.order-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-item-img-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.order-item-info {
+    min-width: 0;
+}
+
+.order-item-name {
+    margin: 0 0 4px 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-item-pricing {
+    font-size: 0.85rem;
+}
+
+.order-item-pricing .item-unit-price {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.order-item-pricing .item-total-price {
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
+}
+
+.order-item-controls {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.order-qty-stepper {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 8px;
+    background: var(--md-sys-color-surface-container-low);
+}
+
+.order-qty-val {
+    min-width: 24px;
+    padding: 0 6px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.order-delete-btn {
+    color: var(--md-sys-color-error);
+}
+
+.order-drawer-footer {
+    display: grid;
+    gap: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    padding-top: 16px;
+}
+
+.order-price-breakdown {
+    display: grid;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.order-footer-actions {
+    display: grid;
+    gap: 8px;
+}
+
+.order-checkout-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.order-continue-btn {
+    width: 100%;
+}
+
+.segmented-filter-set {
+    width: 100%;
+    min-height: 48px;
+}
+
+button.kanban-card {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}

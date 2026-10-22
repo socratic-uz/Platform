@@ -1,37 +1,40 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Forms
-@using System.IO
 @using Assets.Constants
+@using static Assets.Constants.Classes.Picker
+@using static Assets.Constants.Loc.Common
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.ButtonVariant
 
-<div class="@Classes.Picker.FilePickerContainer">
-    <PickerTriggerCard Label="@(Label ?? "Прикрепленные файлы")"
-                       Icon="@Icons.AttachFile"
-                       ActiveIcon="@Icons.FolderOpen"
-                       HasValue="@(TotalFilesCount > 0)"
-                       BadgeText="@(TotalFilesCount > 0 ? $"{TotalFilesCount} {(TotalFilesCount == 1 ? "файл" : (TotalFilesCount < 5 ? "файла" : "файлов"))}" : null)"
-                       BadgeIcon="@Icons.Folder"
-                       PreviewText="@(TotalFilesCount > 0 ? $"Загружено файлов: {TotalFilesCount}. Нажмите или перетащите для добавления." : "Файлы не прикреплены. Поддерживаются изображения, документы и архивы.")"
-                       ResetIcon="@Icons.DeleteSweep"
-                       ResetAriaLabel="Очистить все файлы"
-                       OnReset="ClearAll">
+<div class=@FilePickerContainer>
+    <PickerTriggerCard Label=@EffectiveLabel
+                       Icon=@Icons.AttachFile
+                       ActiveIcon=@Icons.FolderOpen
+                       HasValue=@(TotalFilesCount > 0)
+                       BadgeText=@GetFilesBadgeText()
+                       BadgeIcon=@Icons.Folder
+                       PreviewText=@GetPreviewText()
+                       ResetIcon=@Icons.DeleteSweep
+                       ResetAriaLabel=@L[FilePickerClearAll]
+                       OnReset=@ClearAll>
         <CustomActions>
-            <label for="@inputId" class="@Classes.Picker.FileAddBtnLabel">
-                <Button Variant="ButtonVariant.FilledTonal" Type="button">
+            <label for="@inputId" class=@FileAddBtnLabel>
+                <Button Variant=@FilledTonal Type="button">
                     <md-icon slot="icon">@Icons.AddPhotoAlternate</md-icon>
-                    @UploadLabel
+                    @EffectiveUploadLabel
                 </Button>
             </label>
 
             @if (TotalFilesCount > 0)
             {
-                <IconButton Icon="@Icons.DeleteSweep"
-                            AriaLabel="Очистить все файлы"
-                            OnClick="ClearAll" />
+                <IconButton Icon=@Icons.DeleteSweep
+                            AriaLabel=@L[FilePickerClearAll]
+                            OnClick=@ClearAll />
             }
         </CustomActions>
     </PickerTriggerCard>
 
-    <div class="@Classes.Picker.FileGrid">
+    <div class=@FileGrid>
         <!-- Universal Attachments -->
         @if (Attachments != null)
         {
@@ -40,55 +43,34 @@
                 var index = i;
                 if (index < Attachments.Count)
                 {
-                    var attachment = Attachments[index];
-                    if (attachment != null)
-                    {
-                        var fileName = GetProperty<string>(attachment, "FileName") ?? "";
-                        var contentType = GetProperty<string>(attachment, "ContentType") ?? "";
-                        var url = GetProperty<string>(attachment, "Url") ?? "";
-                        
-                        var contentObj = GetPropertyObject(attachment, "Content");
-                        var isNew = false;
-                        byte[]? bytesData = null;
-                        if (contentObj is Google.Protobuf.ByteString bs)
-                        {
-                            isNew = !bs.IsEmpty;
-                            bytesData = bs.ToByteArray();
-                        }
-                        else if (contentObj is byte[] arr)
-                        {
-                            isNew = arr.Length > 0;
-                            bytesData = arr;
-                        }
-
-                        <div class="@Classes.Picker.FileCard @(isNew ? "new-file" : "")">
-                            <div class="@Classes.Picker.FilePreviewArea">
-                                @if (IsImage(contentType, fileName))
-                                {
-                                    var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
-                                    <img src="@imgUrl" alt="@fileName" class="@Classes.Picker.ImagePreview" />
-                                }
-                                else
-                                {
-                                    <div class="@Classes.Picker.IconPreview @GetIconClass(contentType, fileName)">
-                                        <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
-                                    </div>
-                                }
-                            </div>
-                            <div class="@Classes.Picker.FileInfo">
-                                <span class="@Classes.Picker.FileName" title="@fileName">@fileName</span>
-                            </div>
-                            @if (isNew)
+                    var (fileName, contentType, url, isNew, bytesData) = GetAttachmentData(index);
+                    <div class="@($"{FileCard} {(isNew ? "new-file" : "")}")">
+                        <div class=@FilePreviewArea>
+                            @if (IsImage(contentType, fileName))
                             {
-                                <div class="@Classes.Picker.NewBadge">New</div>
+                                var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
+                                <img src="@imgUrl" alt="@fileName" class=@ImagePreview />
                             }
-                            <div class="@Classes.Picker.FileOverlay">
-                                <IconButton Icon="@Icons.Delete"
-                                            AriaLabel="@RemoveLabel"
-                                            OnClick="() => RemoveAttachment(index)" />
-                            </div>
+                            else
+                            {
+                                <div class="@($"{IconPreview} {GetIconClass(contentType, fileName)}")">
+                                    <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
+                                </div>
+                            }
                         </div>
-                    }
+                        <div class=@FileInfo>
+                            <span class=@FileName title="@fileName">@fileName</span>
+                        </div>
+                        @if (isNew)
+                        {
+                            <div class=@NewBadge>New</div>
+                        }
+                        <div class=@FileOverlay>
+                            <IconButton Icon=@Icons.Delete
+                                        AriaLabel=@EffectiveRemoveLabel
+                                        OnClick=@(() => RemoveAttachment(index)) />
+                        </div>
+                    </div>
                 }
             }
         }
@@ -101,27 +83,20 @@
                 var index = i;
                 if (index < ExistingImages.Count)
                 {
-                    var item = ExistingImages[index];
-                    if (item is string url)
-                    {
-                        var previewUrl = GetPreviewUrl(url);
-                        var fileName = Path.GetFileName(url);
-                        if (string.IsNullOrEmpty(fileName)) fileName = "image";
-                        
-                        <div class="@Classes.Picker.FileCard">
-                            <div class="@Classes.Picker.FilePreviewArea">
-                                <img src="@previewUrl" alt="@fileName" class="@Classes.Picker.ImagePreview" />
-                            </div>
-                            <div class="@Classes.Picker.FileInfo">
-                                <span class="@Classes.Picker.FileName" title="@fileName">@fileName</span>
-                            </div>
-                            <div class="@Classes.Picker.FileOverlay">
-                                <IconButton Icon="@Icons.Delete"
-                                            AriaLabel="@RemoveLabel"
-                                            OnClick="() => RemoveExistingImage(index)" />
-                            </div>
+                    var (previewUrl, fileName) = GetExistingImageData(index);
+                    <div class=@FileCard>
+                        <div class=@FilePreviewArea>
+                            <img src="@previewUrl" alt="@fileName" class=@ImagePreview />
                         </div>
-                    }
+                        <div class=@FileInfo>
+                            <span class=@FileName title="@fileName">@fileName</span>
+                        </div>
+                        <div class=@FileOverlay>
+                            <IconButton Icon=@Icons.Delete
+                                        AriaLabel=@EffectiveRemoveLabel
+                                        OnClick=@(() => RemoveExistingImage(index)) />
+                        </div>
+                    </div>
                 }
             }
         }
@@ -134,60 +109,28 @@
                 var index = i;
                 if (index < NewImagesContent.Count)
                 {
-                    var contentObj = NewImagesContent[index];
-                    byte[] bytes = Array.Empty<byte>();
-                    
-                    if (contentObj is byte[] byteArray)
-                    {
-                        bytes = byteArray;
-                    }
-                    else if (contentObj is Google.Protobuf.ByteString byteString)
-                    {
-                        bytes = byteString.ToByteArray();
-                    }
-                    else if (contentObj != null)
-                    {
-                        var method = contentObj.GetType().GetMethod("ToByteArray");
-                        if (method != null)
-                        {
-                            bytes = (byte[])method.Invoke(contentObj, null)!;
-                        }
-                    }
-
-                    var base64Data = Convert.ToBase64String(bytes);
-                    var contentType = "image/png";
-                    var fileName = "new-file";
-                    if (NewImagesContentType != null && index < NewImagesContentType.Count && NewImagesContentType[index] is string ct)
-                    {
-                        contentType = ct;
-                    }
-                    if (NewImagesFileName != null && index < NewImagesFileName.Count && NewImagesFileName[index] is string fn)
-                    {
-                        fileName = fn;
-                    }
-                    var dataUrl = $"data:{contentType};base64,{base64Data}";
-                    
-                    <div class="@Classes.Picker.FileCard new-file">
-                        <div class="@Classes.Picker.FilePreviewArea">
+                    var (dataUrl, contentType, fileName) = GetNewImageData(index);
+                    <div class="@($"{FileCard} new-file")">
+                        <div class=@FilePreviewArea>
                             @if (IsImage(contentType, fileName))
                             {
-                                <img src="@dataUrl" alt="@fileName" class="@Classes.Picker.ImagePreview" />
+                                <img src="@dataUrl" alt="@fileName" class=@ImagePreview />
                             }
                             else
                             {
-                                <div class="@Classes.Picker.IconPreview @GetIconClass(contentType, fileName)">
+                                <div class="@($"{IconPreview} {GetIconClass(contentType, fileName)}")">
                                     <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
                                 </div>
                             }
                         </div>
-                        <div class="@Classes.Picker.FileInfo">
-                            <span class="@Classes.Picker.FileName" title="@fileName">@fileName</span>
+                        <div class=@FileInfo>
+                            <span class=@FileName title="@fileName">@fileName</span>
                         </div>
-                        <div class="@Classes.Picker.NewBadge">New</div>
-                        <div class="@Classes.Picker.FileOverlay">
-                            <IconButton Icon="@Icons.Delete"
-                                        AriaLabel="@RemoveLabel"
-                                        OnClick="() => RemoveNewImage(index)" />
+                        <div class=@NewBadge>New</div>
+                        <div class=@FileOverlay>
+                            <IconButton Icon=@Icons.Delete
+                                        AriaLabel=@EffectiveRemoveLabel
+                                        OnClick=@(() => RemoveNewImage(index)) />
                         </div>
                     </div>
                 }
@@ -195,309 +138,25 @@
         }
 
         <!-- Upload Card -->
-        <div class="@Classes.Picker.UploadCard @(isDragging ? Classes.Picker.Dragging : "")"
-             @ondragenter="HandleDragEnter"
-             @ondragleave="HandleDragLeave"
-             @ondragover="HandleDragOver"
+        <div class="@($"{UploadCard} {(isDragging ? Dragging : "")}")"
+             @ondragenter=@HandleDragEnter
+             @ondragleave=@HandleDragLeave
+             @ondragover=@HandleDragOver
              @ondragover:preventDefault
-             @ondrop="HandleDrop"
+             @ondrop=@HandleDrop
              @ondrop:preventDefault>
             
-            <div class="@Classes.Picker.UploadZoneLabel">
-                <md-icon class="@Classes.Picker.UploadIcon">@Icons.CloudUpload</md-icon>
-                <span class="@Classes.Picker.UploadText">@UploadLabel</span>
-                <span class="@Classes.Picker.UploadSubtext">Перетащите файлы или нажмите</span>
+            <div class=@UploadZoneLabel>
+                <md-icon class=@UploadIcon>@Icons.CloudUpload</md-icon>
+                <span class=@UploadText>@EffectiveUploadLabel</span>
+                <span class=@UploadSubtext>@L[FilePickerDragFilesOrClick]</span>
             </div>
             
             <InputFile id="@inputId" 
-                       OnChange="HandleFileSelected" 
-                       multiple="@Multiple" 
+                       OnChange=@HandleFileSelected 
+                       multiple=@Multiple 
                        accept="@Accept" 
-                       class="@Classes.Picker.FileInputHidden" />
+                       class=@FileInputHidden />
         </div>
     </div>
 </div>
-
-@code {
-    private string inputId = $"file-picker-{Guid.NewGuid():N}";
-    private bool isDragging = false;
-    private Type? fileType;
-
-    // Universal Mode Parameters
-    [Parameter] public System.Collections.IList? Attachments { get; set; }
-    
-    // Legacy Mode Parameters
-    [Parameter] public System.Collections.IList? ExistingImages { get; set; }
-    [Parameter] public System.Collections.IList? NewImagesContent { get; set; }
-    [Parameter] public System.Collections.IList? NewImagesFileName { get; set; }
-    [Parameter] public System.Collections.IList? NewImagesContentType { get; set; }
-
-    [Parameter] public Func<string, string>? ImageUrlResolver { get; set; }
-
-    [Parameter] public string Label { get; set; } = "Прикрепленные файлы";
-    [Parameter] public string UploadLabel { get; set; } = "Загрузить файлы";
-    [Parameter] public string RemoveLabel { get; set; } = "Удалить";
-    [Parameter] public bool Multiple { get; set; } = true;
-    [Parameter] public string Accept { get; set; } = "*";
-    [Parameter] public int MaxAllowedFiles { get; set; } = 10;
-    [Parameter] public long MaxFileSize { get; set; } = 15 * 1024 * 1024; // 15MB
-
-    [Parameter] public EventCallback OnChanged { get; set; }
-    [Parameter] public EventCallback OnReset { get; set; }
-
-    private int TotalFilesCount => (Attachments?.Count ?? 0) + (ExistingImages?.Count ?? 0) + (NewImagesContent?.Count ?? 0);
-
-    private static readonly System.Collections.Concurrent.ConcurrentDictionary<(Type, string), System.Reflection.PropertyInfo?> PropertyCache = new();
-
-    protected override void OnInitialized()
-    {
-        if (Attachments != null)
-        {
-            var listType = Attachments.GetType();
-            fileType = listType.IsGenericType 
-                ? listType.GetGenericArguments()[0] 
-                : (listType.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ICollection<>))?.GetGenericArguments()[0] ?? typeof(object));
-        }
-    }
-
-    private void HandleDragEnter() => isDragging = true;
-    private void HandleDragLeave() => isDragging = false;
-    private void HandleDragOver() { }
-    private void HandleDrop() => isDragging = false;
-
-    private T? GetProperty<T>(object obj, string propName)
-    {
-        if (obj == null) return default;
-        try
-        {
-            var type = obj.GetType();
-            var prop = PropertyCache.GetOrAdd((type, propName), key => key.Item1.GetProperty(key.Item2));
-            var val = prop?.GetValue(obj);
-            if (val is T typedVal) return typedVal;
-        }
-        catch {}
-        return default;
-    }
-
-    private bool IsImage(string contentType, string fileName)
-    {
-        if (!string.IsNullOrEmpty(contentType) && contentType.StartsWith("image/", StringComparison.OrdinalIgnoreCase))
-            return true;
-
-        var ext = Path.GetExtension(fileName).ToLowerInvariant();
-        return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".webp" || ext == ".gif" || ext == ".bmp";
-    }
-
-    private object? GetPropertyObject(object obj, string propName)
-    {
-        if (obj == null) return null;
-        try
-        {
-            var type = obj.GetType();
-            var prop = PropertyCache.GetOrAdd((type, propName), key => key.Item1.GetProperty(key.Item2));
-            return prop?.GetValue(obj);
-        }
-        catch {}
-        return null;
-    }
-
-    private string GetBase64DataUrl(byte[] bytes, string contentType)
-    {
-        var base64 = Convert.ToBase64String(bytes);
-        var mime = string.IsNullOrWhiteSpace(contentType) ? "application/octet-stream" : contentType;
-        return $"data:{mime};base64,{base64}";
-    }
-
-    private string GetPreviewUrl(string url)
-    {
-        if (ImageUrlResolver != null)
-        {
-            return ImageUrlResolver(url);
-        }
-        return url;
-    }
-
-    private string GetFileIcon(string contentType, string fileName)
-    {
-        var mime = contentType.ToLowerInvariant();
-        var ext = Path.GetExtension(fileName).ToLowerInvariant();
-
-        if (mime == "application/pdf" || ext == ".pdf") return Icons.PictureAsPdf;
-        
-        if (mime.Contains("zip") || mime.Contains("compressed") || mime.Contains("archive") || 
-            ext == ".zip" || ext == ".rar" || ext == ".7z" || ext == ".tar" || ext == ".gz")
-            return Icons.Archive;
-
-        if (mime.Contains("word") || mime.Contains("document") || ext == ".doc" || ext == ".docx" || ext == ".rtf" || ext == ".odt")
-            return Icons.Description;
-
-        if (mime.Contains("excel") || mime.Contains("sheet") || ext == ".xls" || ext == ".xlsx" || ext == ".ods" || ext == ".csv")
-            return Icons.TableView;
-
-        if (mime.Contains("presentation") || mime.Contains("powerpoint") || ext == ".ppt" || ext == ".pptx")
-            return Icons.CoPresent;
-
-        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase) || ext == ".mp3" || ext == ".wav" || ext == ".ogg" || ext == ".m4a")
-            return Icons.Audiotrack;
-
-        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase) || ext == ".mp4" || ext == ".avi" || ext == ".mkv" || ext == ".mov")
-            return Icons.VideoFile;
-
-        if (mime.StartsWith("text/", StringComparison.OrdinalIgnoreCase) || ext == ".txt" || ext == ".html" || ext == ".css" || ext == ".js" || ext == ".json")
-            return Icons.Code;
-
-        return Icons.InsertDriveFile;
-    }
-
-    private string GetIconClass(string contentType, string fileName)
-    {
-        var mime = contentType.ToLowerInvariant();
-        var ext = Path.GetExtension(fileName).ToLowerInvariant();
-
-        if (mime == "application/pdf" || ext == ".pdf") return Classes.Picker.PdfType;
-        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return Classes.Picker.ArchiveType;
-        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return Classes.Picker.DocType;
-        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return Classes.Picker.SheetType;
-        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return Classes.Picker.AudioType;
-        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return Classes.Picker.VideoType;
-
-        return Classes.Picker.GenericType;
-    }
-
-    private async Task HandleFileSelected(InputFileChangeEventArgs e)
-    {
-        var files = Multiple ? e.GetMultipleFiles(MaxAllowedFiles) : new[] { e.File };
-
-        foreach (var file in files)
-        {
-            try
-            {
-                await using var stream = file.OpenReadStream(MaxFileSize);
-                using var ms = new MemoryStream();
-                await stream.CopyToAsync(ms);
-                var bytes = ms.ToArray();
-
-                if (Attachments != null && fileType != null)
-                {
-                    var newAttachment = Activator.CreateInstance(fileType);
-                    if (newAttachment != null)
-                    {
-                        fileType.GetProperty("Url")?.SetValue(newAttachment, "");
-                        
-                        var contentProp = fileType.GetProperty("Content");
-                        if (contentProp != null)
-                        {
-                            if (contentProp.PropertyType == typeof(Google.Protobuf.ByteString))
-                            {
-                                contentProp.SetValue(newAttachment, Google.Protobuf.ByteString.CopyFrom(bytes));
-                            }
-                            else
-                            {
-                                contentProp.SetValue(newAttachment, bytes);
-                            }
-                        }
-                        
-                        fileType.GetProperty("FileName")?.SetValue(newAttachment, file.Name);
-                        fileType.GetProperty("ContentType")?.SetValue(newAttachment, file.ContentType ?? "application/octet-stream");
-
-                        Attachments.Add(newAttachment);
-                    }
-                }
-                
-                if (NewImagesContent != null)
-                {
-                    var listType = NewImagesContent.GetType();
-                    var itemType = listType.IsGenericType 
-                        ? listType.GetGenericArguments()[0] 
-                        : (listType.GetInterfaces().FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ICollection<>))?.GetGenericArguments()[0] ?? typeof(object));
-
-                    if (itemType == typeof(Google.Protobuf.ByteString))
-                    {
-                        NewImagesContent.Add(Google.Protobuf.ByteString.CopyFrom(bytes));
-                    }
-                    else if (itemType == typeof(byte[]))
-                    {
-                        NewImagesContent.Add(bytes);
-                    }
-                    else
-                    {
-                        NewImagesContent.Add(bytes);
-                    }
-                }
-
-                if (NewImagesFileName != null)
-                {
-                    NewImagesFileName.Add(file.Name);
-                }
-
-                if (NewImagesContentType != null)
-                {
-                    NewImagesContentType.Add(string.IsNullOrWhiteSpace(file.ContentType)
-                        ? "application/octet-stream"
-                        : file.ContentType);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error uploading file {file.Name}: {ex.Message}");
-            }
-        }
-
-        await OnChanged.InvokeAsync();
-        StateHasChanged();
-    }
-
-    private async Task RemoveAttachment(int index)
-    {
-        if (Attachments != null && index >= 0 && index < Attachments.Count)
-        {
-            Attachments.RemoveAt(index);
-            await OnChanged.InvokeAsync();
-            StateHasChanged();
-        }
-    }
-
-    private async Task RemoveExistingImage(int index)
-    {
-        if (ExistingImages != null && index >= 0 && index < ExistingImages.Count)
-        {
-            ExistingImages.RemoveAt(index);
-            await OnChanged.InvokeAsync();
-            StateHasChanged();
-        }
-    }
-
-    private async Task RemoveNewImage(int index)
-    {
-        if (NewImagesContent != null && index >= 0 && index < NewImagesContent.Count)
-        {
-            NewImagesContent.RemoveAt(index);
-            
-            if (NewImagesFileName != null && index < NewImagesFileName.Count)
-            {
-                NewImagesFileName.RemoveAt(index);
-            }
-            
-            if (NewImagesContentType != null && index < NewImagesContentType.Count)
-            {
-                NewImagesContentType.RemoveAt(index);
-            }
-
-            await OnChanged.InvokeAsync();
-            StateHasChanged();
-        }
-    }
-
-    public async Task ClearAll()
-    {
-        Attachments?.Clear();
-        ExistingImages?.Clear();
-        NewImagesContent?.Clear();
-        NewImagesFileName?.Clear();
-        NewImagesContentType?.Clear();
-
-        await OnChanged.InvokeAsync();
-        await OnReset.InvokeAsync();
-        StateHasChanged();
-    }
-}

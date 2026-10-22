@@ -5,6 +5,7 @@ namespace Shared.Components
 {
     public partial class SettingsPanel : ComponentBase
     {
+        [Inject] public Microsoft.Extensions.Localization.IStringLocalizer L { get; set; } = default!;
         [Parameter] public string ThemeMode { get; set; } = "system";
         [Parameter] public EventCallback<string> ThemeModeChanged { get; set; }
 

@@ -296,3 +296,1451 @@
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
 }
+
+.geo-picker-card {
+    display: grid;
+    gap: 12px;
+    padding: 20px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 20px;
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+}
+
+.map-picker-wrapper {
+    height: 180px;
+    margin: 8px 0;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.zone-check-banner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 12px;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.85rem;
+}
+
+.route-distance-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    padding: 10px 14px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+.ticket-qr-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px dashed var(--md-sys-color-primary);
+    border-radius: 16px;
+    background: var(--md-sys-color-surface-container);
+}
+
+.ticket-info {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.ticket-badge {
+    display: inline-grid;
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.ticket-code {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.ticket-note {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.subscription-header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.subscription-content {
+    display: grid;
+    gap: 16px;
+    padding: 8px 0;
+    min-width: 0;
+}
+
+.subscription-plan-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.subscription-plan-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.subscription-plan-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-width: 0;
+}
+
+.subscription-plan-badge {
+    padding: 3px 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.subscription-plan-desc {
+    margin: 6px 0 0 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.subscription-section {
+    display: grid;
+    gap: 8px;
+}
+
+.subscription-section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.subscription-duration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.subscription-privileges-list {
+    display: grid;
+    gap: 6px;
+}
+
+.subscription-privilege-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.subscription-privilege-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 16px;
+}
+
+.subscription-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.subscription-total-block {
+    display: grid;
+    gap: 2px;
+}
+
+.subscription-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.subscription-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.auction-header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.auction-banner {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    min-width: 0;
+}
+
+.auction-current-bid-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.auction-meta-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+.auction-bid-field {
+    width: 100%;
+}
+
+/* ==========================================================================
+   CONFIGURATOR & PRICE CALCULATOR FEATURE
+   ========================================================================== */
+
+.configurator-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.configurator-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.configurator-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+}
+
+.configurator-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.configurator-panel-section {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.configurator-panel-label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.configurator-chips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
+    gap: 8px;
+}
+
+.configurator-chips-wide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+    gap: 8px;
+}
+
+.configurator-units-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.configurator-range-slider {
+    width: 100%;
+}
+
+.configurator-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.configurator-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.configurator-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.configurator-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+/* ==========================================================================
+   DELIVERY SCHEDULED FEATURE
+   ========================================================================== */
+
+.delivery-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.delivery-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.delivery-body {
+    display: grid;
+    gap: 20px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.delivery-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.delivery-presets-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+}
+
+.delivery-fieldset {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.delivery-legend {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.delivery-date-input {
+    width: 100%;
+}
+
+.delivery-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.delivery-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.delivery-total-block {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.delivery-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.delivery-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+/* ==========================================================================
+   PRODUCT BUNDLE FEATURE
+   ========================================================================== */
+
+.bundle-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.bundle-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.bundle-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+}
+
+.bundle-banner {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.bundle-banner-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.bundle-banner-title {
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.bundle-banner-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.bundle-savings-pill {
+    padding: 4px 10px;
+    border-radius: var(--md-sys-shape-corner-small, 12px);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.bundle-section {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.bundle-section-label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.bundle-items-list {
+    --md-list-container-color: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    overflow: clip;
+}
+
+.bundle-item-icon {
+    color: var(--md-sys-color-primary);
+}
+
+.bundle-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.bundle-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.bundle-original-price {
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.bundle-discounted-price {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+/* ==========================================================================
+   DIGITAL GOODS & ONLINE SERVICES FEATURE
+   ========================================================================== */
+
+.digital-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.digital-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.digital-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+}
+
+.digital-info-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
+}
+
+.digital-badge-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+.digital-badge-icon {
+    font-size: 20px;
+}
+
+.digital-badge-text {
+    font-size: 0.95rem;
+}
+
+.digital-info-desc {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.digital-nominal-section {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.digital-nominal-label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.digital-nominal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 80px), 1fr));
+    gap: 8px;
+}
+
+.digital-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.digital-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.digital-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.digital-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+/* ==========================================================================
+   GROUP BUY & PRE-ORDER FEATURE
+   ========================================================================== */
+
+.groupbuy-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.groupbuy-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.groupbuy-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.groupbuy-preorder-banner {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.groupbuy-banner-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.groupbuy-banner-badge {
+    padding: 3px 10px;
+    border-radius: var(--md-sys-shape-corner-small, 10px);
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.groupbuy-banner-meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.groupbuy-lock-card {
+    display: grid;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
+}
+
+.groupbuy-lock-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    color: var(--md-sys-color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.groupbuy-lock-desc {
+    font-size: 0.82rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.groupbuy-description {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.groupbuy-progress-banner {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.groupbuy-discount-badge {
+    padding: 2px 10px;
+    border-radius: var(--md-sys-shape-corner-small, 10px);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.groupbuy-progress-bar {
+    margin-top: 10px;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
+}
+
+.groupbuy-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.groupbuy-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.groupbuy-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.groupbuy-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.lottery-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.lottery-lead-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.lottery-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.lottery-jackpot-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.lottery-jackpot-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.lottery-jackpot-amount {
+    padding: 3px 10px;
+    border-radius: var(--md-sys-shape-corner-small, 10px);
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lottery-jackpot-meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.lottery-section {
+    display: grid;
+    gap: 8px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.lottery-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.lottery-chips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.lottery-numbers-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.lottery-numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(64px, max-content));
+    gap: 8px;
+}
+
+.lottery-number-badge {
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 0.95rem;
+    background: var(--md-sys-color-surface-container-high, rgba(0, 0, 0, 0.06));
+    padding: 6px 12px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.lottery-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.lottery-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.lottery-total-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.lottery-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.rental-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.rental-lead-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.rental-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.rental-description {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.rental-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.rental-insurance-card {
+    background: var(--md-sys-color-surface-container-low, rgba(0, 0, 0, 0.03));
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.rental-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.rental-total-block {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.rental-period-label {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.rental-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.donation-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.donation-lead-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.donation-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.donation-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-high, rgba(0, 0, 0, 0.05));
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.donation-card-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.donation-percent {
+    color: var(--md-sys-color-primary);
+    font-weight: 800;
+}
+
+.donation-progress-bar {
+    margin-block: 8px;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
+}
+
+.donation-meta-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.donation-description {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.donation-chips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.donation-amount-field {
+    width: 100%;
+}
+
+.donation-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.donation-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.gift-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.gift-lead-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.gift-body {
+    display: grid;
+    gap: 20px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.gift-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.gift-input-field {
+    width: 100%;
+}
+
+.gift-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.gift-total-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+.classified-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.classified-lead-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.classified-body {
+    display: grid;
+    gap: 16px;
+    padding-block: 8px 0;
+    min-width: 0;
+}
+
+.classified-escrow-card {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-secondary-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.classified-escrow-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    color: var(--md-sys-color-on-secondary-container);
+    font-weight: 700;
+}
+
+.classified-escrow-desc {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.classified-input-field {
+    width: 100%;
+}
+
+.classified-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.classified-total-amount {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+    min-width: 0;
+}
+
+.geo-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    min-width: 0;
+}
+
+.geo-dialog-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.geo-header-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    min-width: 0;
+}
+
+.geo-input-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    min-width: 0;
+}
+
+.geo-input-field {
+    width: 100%;
+}
+
+.geo-offline-banner {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--md-sys-color-surface-container);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 16px;
+}
+
+.geo-offline-content {
+    display: grid;
+    place-items: center;
+    gap: 8px;
+}
+
+.geo-offline-icon {
+    font-size: 32px;
+    color: var(--md-sys-color-primary);
+}
+
+.geo-footer-actions {
+    display: grid;
+    justify-content: end;
+    margin-top: 16px;
+}
+
+.quote-header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.quote-header-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    min-width: 0;
+}
+
+.quote-content-body {
+    display: grid;
+    gap: 14px;
+    padding: 8px 0;
+    min-width: 0;
+}
+
+.quote-prompt-text {
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.quote-input-field {
+    width: 100%;
+}
+
+.quote-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.quote-footer-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.quote-free-note {
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.booking-dialog-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-header-title {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    min-width: 0;
+}
+
+.booking-content-body {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+    min-width: 0;
+}
+
+.booking-input-field {
+    width: 100%;
+}
+
+.booking-grid-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 12px;
+}
+
+.booking-ticket-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    min-width: 0;
+}
+
+.booking-qr-box {
+    display: grid;
+    place-items: center;
+}
+
+.booking-ticket-info {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.booking-ticket-badge {
+    justify-self: start;
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.booking-code-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.booking-ticket-note {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.hotel-header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.hotel-header-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    min-width: 0;
+}
+
+.hotel-content-section {
+    display: grid;
+    gap: 16px;
+    min-width: 0;
+}
+
+.hotel-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+

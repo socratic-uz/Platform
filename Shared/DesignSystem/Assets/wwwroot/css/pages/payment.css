@@ -117,3 +117,691 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
     gap: 1rem;
 }
+.checkout-panel {
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 20px;
+    padding: 24px;
+    color: var(--md-sys-color-on-surface);
+    display: grid;
+    gap: 16px;
+}
+
+.headline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.body-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.workflow-stepper {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr) auto;
+    align-items: center;
+    justify-items: center;
+    max-width: 320px;
+    margin: 4px auto;
+}
+
+.step-item {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.step-item.active {
+    color: var(--md-sys-color-primary);
+    font-weight: 600;
+}
+
+.step-item.completed {
+    color: var(--md-sys-color-tertiary);
+}
+
+.step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--md-sys-color-surface-container-highest);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.step-item.active .step-num {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.step-item.completed .step-num {
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+}
+
+.step-line {
+    height: 2px;
+    width: 100%;
+    max-width: 60px;
+    background: var(--md-sys-color-outline-variant);
+    margin: 0 8px;
+}
+
+.step-line.active {
+    background: var(--md-sys-color-primary);
+}
+
+.type-tabs {
+    margin: 8px 0;
+}
+
+.tab-content-box {
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    gap: 16px;
+}
+
+/* POS Terminal */
+.pos-status-card {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 12px;
+}
+
+.pos-processing-view,
+.pos-idle-view,
+.pos-success-view {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    max-width: 480px;
+}
+
+.large-terminal-icon {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    color: var(--md-sys-color-primary);
+}
+
+.pos-icons-row {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.pos-action-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+.pos-action-desc {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.pos-supported-chips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, max-content));
+    gap: 6px;
+    justify-content: center;
+    margin: 6px 0;
+}
+
+.pay-chip {
+    background: var(--md-sys-color-surface-container-highest);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.pos-start-btn {
+    width: 100%;
+    max-width: 360px;
+    font-weight: 700;
+}
+
+.pos-slip-details {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    font-size: 0.85rem;
+    display: grid;
+    gap: 6px;
+}
+
+.success-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: var(--md-sys-color-primary);
+}
+
+.pos-error-text {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-error);
+}
+
+/* QR Gateways */
+.gateways-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.label-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.gateways-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr));
+    gap: 10px;
+}
+
+.gateway-card {
+    background: var(--md-sys-color-surface-container-highest);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 14px;
+    padding: 12px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+button.gateway-card {
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    text-align: center;
+}
+
+.gateway-card.selected {
+    border-color: var(--md-sys-color-primary);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+
+.gateway-icon {
+    font-size: 1.5rem;
+    margin-top: 4px;
+}
+
+.gateway-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    margin-top: 2px;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--md-sys-color-error);
+    color: var(--md-sys-color-on-error);
+    font-size: 0.65rem;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.qr-payment-section {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 8px 0;
+}
+
+.qr-box {
+    background: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    padding: 10px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+}
+
+.qr-hint {
+    display: grid;
+    gap: 6px;
+}
+
+.qr-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+}
+
+.qr-sub {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.deeplink-btn {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 6px;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-top: 4px;
+    width: fit-content;
+}
+
+.deeplink-btn md-icon {
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+}
+
+.pos-approved-title {
+    color: var(--md-sys-color-primary);
+}
+
+.bank-chips-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(68px, max-content));
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.bank-chip {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.2);
+}
+
+.invoice-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-family: monospace;
+    margin-top: 4px;
+}
+
+.qr-loading-box {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 8px;
+    width: 140px;
+    height: 140px;
+}
+
+.qr-loading-label {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* PAN Input */
+.pan-input-box {
+    display: grid;
+    gap: 14px;
+}
+
+.box-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+.card-form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 12px;
+}
+
+.input-field-group {
+    display: grid;
+    gap: 4px;
+}
+
+.field-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.save-card-toggle {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface);
+}
+
+.otp-verification-box {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px dashed var(--md-sys-color-primary);
+    border-radius: 12px;
+    padding: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.otp-notice {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.otp-row {
+    display: grid;
+    grid-template-columns: minmax(0, 140px) auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.request-otp-btn {
+    justify-self: start;
+}
+
+/* Cash */
+.cash-box {
+    display: grid;
+    gap: 14px;
+}
+
+.cash-container {
+    display: grid;
+    gap: 14px;
+}
+
+.cash-card-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+}
+
+.cash-icon {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: var(--md-sys-color-primary);
+}
+
+.cash-idle-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.cash-session-panel {
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 14px;
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+}
+
+.cash-counter-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cash-inserted-val {
+    font-size: 1.25rem;
+    color: var(--md-sys-color-primary);
+    font-weight: 800;
+}
+
+.cash-progress-bar {
+    height: 10px;
+    background: var(--md-sys-color-surface-container-highest);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cash-progress-fill {
+    height: 100%;
+    background: var(--md-sys-color-primary);
+    transition: width 0.3s ease;
+}
+
+.cash-remaining-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.cash-actions-row {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+/* Split & Footer */
+.split-payment-box {
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.85rem;
+}
+
+.split-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.split-title {
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+}
+
+.split-badge {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.split-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-top: 4px;
+}
+
+.panel-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    padding-top: 16px;
+    margin-top: 8px;
+}
+
+.total-label {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+}
+
+.total-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 500px) {
+    .panel-footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .qr-payment-section {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+    }
+    .card-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+/* ==========================================================================
+   Merchant Payment & Fiscalization Settings Panel
+   ========================================================================== */
+
+.merchant-settings-panel {
+    background: var(--md-sys-color-surface-container-high);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 20px);
+    padding: 24px;
+    color: var(--md-sys-color-on-surface);
+    display: grid;
+    gap: 20px;
+}
+
+.merchant-settings-panel .headline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.merchant-settings-panel .body-subtext {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+.settings-group {
+    background: var(--md-sys-color-surface-container);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 14px);
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+}
+
+.group-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    text-transform: uppercase;
+}
+
+.group-toggle {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+.merchant-settings-panel .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.merchant-settings-panel .form-field {
+    display: grid;
+    gap: 4px;
+}
+
+.uzqr-highlight {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+.group-description {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.field-hint {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+    margin-top: 2px;
+}
+
+.hint-link {
+    color: var(--md-sys-color-primary);
+    text-decoration: underline;
+}
+
+.merchant-settings-panel .panel-footer {
+    display: grid;
+    justify-content: end;
+    padding-top: 12px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.save-btn {
+    min-width: 200px;
+    font-weight: 700;
+    border-radius: 10px;
+}

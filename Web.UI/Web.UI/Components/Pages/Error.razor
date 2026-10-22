@@ -1,4 +1,4 @@
-﻿@using System.Diagnostics
+@using System.Diagnostics
 @page "/Error"
 
 <PageTitle>Error</PageTitle>
@@ -27,13 +27,3 @@
         and restarting the app.
     </p>
 </main>
-
-@code {
-    [CascadingParameter] private HttpContext? HttpContext { get; set; }
-    [Inject] IStringLocalizer L { get; set; } = default!;
-    private string? RequestId { get; set; }
-    private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-
-    protected override void OnInitialized() =>
-    RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
-}

@@ -1,42 +1,29 @@
+@namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
-@using Shared.Services
-@inject IFormFactor FormFactor;
+@using static Classes.Common
+@using static Icons
+@using static Loc.Common
 
-<nav class="@Classes.Common.Glass @(FormFactor.IsMobile() ? "nav-mobile" : "nav-desktop")">
-	<NavLink class="nav-item" href="/home" Match="NavLinkMatch.All">
-		<Icon Name="home" />
-		<span>@L?["Home"]</span>
+<nav class="@($"{Glass} {(FormFactor.IsMobile() ? NavMobile : NavDesktop)}")">
+	<NavLink class="@NavItem" href="/home" Match="NavLinkMatch.All">
+		<Icon Name="@Home" />
+		<span>@(L?[NavHome])</span>
 	</NavLink>
-	<NavLink class="nav-item" href="/wishlist">
-		<Icon Name="favorite" />
-		<span>@L?["Wish list"]</span>
+	<NavLink class="@NavItem" href="/wishlist">
+		<Icon Name="@Favorite" />
+		<span>@(L?[NavWishList])</span>
 	</NavLink>
-	<NavLink class="nav-item" href="/chat">
-		<Icon Name="forum" />
-		<span>@L?["Chat"]</span>
+	<NavLink class="@NavItem" href="/chat">
+		<Icon Name="@Forum" />
+		<span>@(L?[NavChat])</span>
 	</NavLink>
-	<NavLink class="nav-item" href="/orders">
-		<Icon Name="shopping_bag" />
-		<span>@L?["Orders"]</span>
+	<NavLink class="@NavItem" href="/orders">
+		<Icon Name="@ShoppingBag" />
+		<span>@(L?[NavOrders])</span>
 	</NavLink>
-	<NavLink class="nav-item" href="/analytics">
-		<Icon Name="analytics" />
-		<span>@(L?["Analytics"] ?? "Analytics")</span>
+	<NavLink class="@NavItem" href="/analytics">
+		<Icon Name="@Analytics" />
+		<span>@(L?[NavAnalytics])</span>
 	</NavLink>
 </nav>
-@code {
-
-	[Inject] public IStringLocalizerFactory F { get; set; } = default!;
-	[Inject] public ISettingsManager Settings { get; set; } = default!;
-
-	IStringLocalizer? L { get; set; } = default!;
-
-	[Parameter] public RenderFragment? ChildContent { get; set; }
-
-	protected override async Task OnInitializedAsync()
-	{
-		L = await F.Create(Settings);
-		StateHasChanged();
-	}
-}

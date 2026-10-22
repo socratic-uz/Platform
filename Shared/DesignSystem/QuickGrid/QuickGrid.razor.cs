@@ -6,6 +6,7 @@ using QuickGrid.Infrastructure;
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 using Microsoft.JSInterop;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components;
 
 namespace QuickGrid;
@@ -509,6 +510,99 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
         {
             // JS module may already be partially torn down during route changes.
             // Ignore to keep renderer disposal resilient.
+        }
+    }
+
+    protected virtual void RenderNonVirtualizedRows(RenderTreeBuilder builder)
+    {
+        var initialRowIndex = 2; // aria-rowindex is 1-based, plus the first row is the header
+        var rowIndex = initialRowIndex;
+        foreach (var item in _currentNonVirtualizedViewItems)
+        {
+            RenderRow(builder, rowIndex++, item);
+        }
+
+        // When pagination is enabled, by default ensure we render the exact number of expected rows per page,
+        // even if there aren't enough data items. This avoids the layout jumping on the last page.
+        // Consider making this optional.
+        if (Pagination is not null)
+        {
+            while (rowIndex++ < initialRowIndex + Pagination.ItemsPerPage)
+            {
+                builder.OpenElement(0, "tr");
+                foreach (var col in _columns)
+                {
+                    builder.OpenElement(1, "td");
+                    builder.AddAttribute(2, "class", ColumnClass(col));
+                    builder.SetKey(col);
+                    builder.CloseElement();
+                }
+                builder.CloseElement();
+            }
+        }
+    }
+
+    protected virtual void RenderRow(RenderTreeBuilder builder, int rowIndex, TGridItem item)
+    {
+        var rowClass = RowClass?.Invoke(item);
+        builder.OpenElement(0, "tr");
+        builder.SetKey(ItemKey(item));
+        builder.AddAttribute(1, "aria-rowindex", rowIndex);
+        builder.AddAttribute(2, "class", rowClass);
+
+        foreach (var col in _columns)
+        {
+            builder.OpenElement(3, "td");
+            builder.AddAttribute(4, "class", ColumnClass(col));
+            builder.SetKey(col);
+            col.CellContent(builder, item);
+            builder.CloseElement();
+        }
+
+        builder.CloseElement();
+    }
+
+    protected virtual void RenderPlaceholderRow(RenderTreeBuilder builder, PlaceholderContext placeholderContext)
+    {
+        builder.OpenElement(0, "tr");
+        builder.AddAttribute(1, "aria-rowindex", placeholderContext.Index + 1);
+
+        foreach (var col in _columns)
+        {
+            builder.OpenElement(2, "td");
+            builder.AddAttribute(3, "class", $"grid-cell-placeholder {ColumnClass(col)}");
+            builder.SetKey(col);
+            col.RenderPlaceholderContent(builder, placeholderContext);
+            builder.CloseElement();
+        }
+
+        builder.CloseElement();
+    }
+
+    protected virtual void RenderColumnHeaders(RenderTreeBuilder builder)
+    {
+        foreach (var col in _columns)
+        {
+            builder.OpenElement(0, "th");
+            builder.AddAttribute(1, "class", ColumnHeaderClass(col));
+            builder.AddAttribute(2, "aria-sort", AriaSortValue(col));
+            builder.SetKey(col);
+            builder.AddAttribute(3, "scope", "col");
+
+            builder.OpenElement(4, "div");
+            builder.AddAttribute(5, "class", "col-header-content");
+            builder.AddContent(6, col.HeaderContent);
+            builder.CloseElement();
+
+            if (col == _displayOptionsForColumn)
+            {
+                builder.OpenElement(7, "div");
+                builder.AddAttribute(8, "class", "col-options");
+                builder.AddContent(9, col.ColumnOptions);
+                builder.CloseElement();
+            }
+
+            builder.CloseElement();
         }
     }
 }

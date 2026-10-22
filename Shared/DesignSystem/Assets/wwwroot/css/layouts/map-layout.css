@@ -128,3 +128,14 @@
     border-radius: 0 16px 16px 0;
     box-shadow: var(--map-shadow);
 }
+
+.map-popup-backdrop :where(.maplibregl-ctrl-top-right, .mapboxgl-ctrl-top-right, .mapboxgl-ctrl-group, .maplibregl-ctrl-group) {
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.map-popup-backdrop :where(.mapboxgl-ctrl-group, .maplibregl-ctrl-group) button {
+    pointer-events: auto;
+    cursor: pointer;
+}
+

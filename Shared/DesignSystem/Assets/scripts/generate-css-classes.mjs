@@ -51,12 +51,45 @@ function extractClassesFromCss(cssContent) {
 
 function resolveCanonicalDomainGroup(cls) {
   const c = cls.toLowerCase();
-  if (c.startsWith('seat-designer-')) return 'SeatDesigner';
+  if (c.startsWith('seat-designer-') || c.startsWith('seat-booking-') || c.startsWith('seat-') || c.startsWith('designer-')) return 'SeatDesigner';
+  if (c.startsWith('qr-designer-') || c.startsWith('qrg-') || c.startsWith('qr-')) return 'QrDesigner';
+  if (c.startsWith('det-')) return 'Detector';
+  if (c.startsWith('analytics-')) return 'Analytics';
+  if (c.startsWith('explorer-')) return 'Analytics';
+  if (c.startsWith('kpi-')) return 'Analytics';
+  if (c.startsWith('about-')) return 'About';
+  if (c.startsWith('help-')) return 'Help';
+  if (c.startsWith('docs-')) return 'Docs';
+  if (c.startsWith('signin-')) return 'SignIn';
+  if (c.startsWith('auth-')) return 'Auth';
+  if (c.startsWith('chat-')) return 'Chat';
+  if (c.startsWith('landing-')) return 'Landing';
+  if (c.startsWith('kiosk-')) return 'Kiosk';
+  if (c.startsWith('terminal-')) return 'Terminal';
+  if (c.startsWith('cart-')) return 'Cart';
+  if (c.startsWith('payment-')) return 'Payment';
+  if (c.startsWith('booking-')) return 'Booking';
+  if (c.startsWith('subscription-')) return 'Subscription';
+  if (c.startsWith('auction-')) return 'Auction';
+  if (c.startsWith('rental-')) return 'Rental';
+  if (c.startsWith('hotel-')) return 'Hotel';
+  if (c.startsWith('classified-')) return 'Classified';
+  if (c.startsWith('configurator-')) return 'Configurator';
+  if (c.startsWith('delivery-')) return 'Delivery';
+  if (c.startsWith('digital-')) return 'Digital';
+  if (c.startsWith('gift-')) return 'Gift';
+  if (c.startsWith('bundle-')) return 'Bundle';
+  if (c.startsWith('groupbuy-') || c.startsWith('group-buy-')) return 'GroupBuy';
+  if (c.startsWith('donation-')) return 'Donation';
+  if (c.startsWith('seats-') || c.startsWith('seat-picker-')) return 'Seats';
+  if (c.startsWith('lottery-')) return 'Lottery';
+  if (c.startsWith('geo-')) return 'Geo';
+  if (c.startsWith('quote-')) return 'Quote';
   if (c.includes('card')) return 'Cards';
   if (c.includes('picker') || c.startsWith('lang-') || c.includes('swatch')) return 'Picker';
   if (c.includes('table') || c.startsWith('col-') || c.startsWith('row-') || c.includes('cell') || c.includes('paginator') || c === 'quickgrid') return 'Table';
   if (c.includes('dialog') || c.includes('modal')) return 'Dialog';
-  if (c.includes('badge') || c.includes('counter')) return 'Badge';
+  if (c.includes('badge') || c.includes('counter') || c.includes('status-dot')) return 'Badge';
   if (c.includes('chip')) return 'Chip';
   if (c.includes('avatar') || c.includes('contact')) return 'Avatar';
   if (c.includes('skeleton')) return 'Skeleton';
@@ -93,6 +126,31 @@ function generate() {
 
   const groups = new Map();
   const assignedClasses = new Set();
+
+  const codepointsPath = path.join(assetsRoot, 'Resources', 'material-symbols.codepoints');
+  const iconNames = new Set();
+  if (fs.existsSync(codepointsPath)) {
+    const lines = fs.readFileSync(codepointsPath, 'utf8').split('\n');
+    for (const l of lines) {
+      const name = l.trim().split(/\s+/)[0];
+      if (name) iconNames.add(toPascalCase(name));
+    }
+  }
+
+  const PAGE_GROUPS = new Set([
+    'About', 'Help', 'Landing', 'Docs', 'Qr', 'QrDesigner', 
+    'SignIn', 'Auth', 'Detector', 'Chat', 'Analytics', 'Terminal', 'Kiosk'
+  ]);
+
+  const GENERIC_COLLIDING_NAMES = new Set([
+    'Title', 'Subtitle', 'Header', 'Footer', 'Actions', 'Body', 'Grid', 
+    'Glass', 'Card', 'Content', 'Icon', 'Text', 'Badge', 'Chip', 'Label', 
+    'Container', 'Root', 'Divider', 'Item', 'List', 'Wrapper', 'Close', 
+    'Back', 'Search', 'Add', 'Edit', 'Delete', 'Save', 'Cancel', 'Next', 
+    'Previous', 'Caption', 'Overlay', 'Thumb', 'Preview', 'Box', 'Row', 'Col',
+    'Paid', 'Completed', 'Making', 'Created', 'Collecting', 'Ready', 'Shipping',
+    'Blocked', 'Expired', 'Paused', 'Pro', 'Trial', 'WithAds', 'None', 'Active'
+  ]);
 
   // 1. Load canonical component snapshot (preserves 100% backward compatibility for Blazor)
   const snapshotPath = path.join(__dirname, 'component-classes-snapshot.json');
@@ -151,6 +209,7 @@ function generate() {
     const gMap = groups.get(legacyGroup);
     for (const [p, val] of Object.entries(props)) {
       gMap.set(p, val);
+      assignedClasses.add(val);
     }
   }
 
@@ -195,6 +254,15 @@ function generate() {
         }
         let finalProp = toPascalCase(propName);
         if (!finalProp || finalProp === targetGroup) finalProp = 'Root';
+
+        // Disambiguate generic names for non-page groups to prevent cross-group collisions
+        if (!PAGE_GROUPS.has(targetGroup) && GENERIC_COLLIDING_NAMES.has(finalProp)) {
+          finalProp = `${toPascalCase(lowerGrp)}${finalProp}`;
+        }
+        // Disambiguate if colliding with any icon name
+        if (iconNames.has(finalProp)) {
+          finalProp = `${toPascalCase(lowerGrp)}${finalProp}`;
+        }
 
         // Disambiguate if needed
         let uniqueProp = finalProp;
@@ -248,6 +316,12 @@ namespace Assets.Constants
 ${body}
     }
 }
+
+namespace Classes
+{
+${body}
+}
+
 
 namespace Styles
 {

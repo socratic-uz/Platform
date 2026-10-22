@@ -5,7 +5,7 @@ The Socratic ecosystem operates in a multilingual environment supporting **Uzbek
 ---
 
 ## 1. Resource Files Architecture
-- Resources are centralized in `src/Frontend/Platform/Shared/DesignSystem/Layout/Resources/`:
+- Resources are centralized in `src/Frontend/Platform/Shared/DesignSystem/Assets/Resources/`:
   - `ResourceRu.resx` — Russian (Default)
   - `ResourceUz.resx` — Uzbek (Latin)
   - `ResourceEn.resx` — English

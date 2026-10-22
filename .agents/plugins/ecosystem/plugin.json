@@ -1,0 +1,6 @@
+{
+  "name": "ecosystem",
+  "version": "1.0.0",
+  "description": "Core Socratic ecosystem engineering skills, subagents, and domain workflows.",
+  "skills": ["./skills/"]
+}

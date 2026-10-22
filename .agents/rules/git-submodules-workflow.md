@@ -5,8 +5,11 @@
 Socratic uses the **Federated Meta-Repository Pattern** (also known as *Umbrella Repository* with *Stream-Aligned Teams* from Team Topologies and *Self-Contained Systems (SCS)*).
 
 ### Key Architectural Tenet:
-> **Maximum Team Autonomy with Unified Ecosystem Orchestration:**
-> A new engineer joining a stream-aligned team (e.g., Retail/Commerce, Retail/POS, Retail/Kiosk, or Intelligence/Vision) does **NOT** clone the entire umbrella repository. They clone **only their feature repository** (`git clone --recurse-submodules https://github.com/socratic-uz/<Feature>.git`) and immediately get a fully functional, self-contained development environment with its own submodules, host, and launch profiles.
+> A new engineer joining a stream-aligned team (e.g., Retail/Commerce, Retail/POS, Retail/Kiosk, or Intelligence/Vision) does **NOT** clone the entire umbrella repository. They clone **only their feature repository** using high-speed shallow cloning:
+> ```bash
+> git clone --depth 1 --recurse-submodules --shallow-submodules --jobs 8 https://github.com/socratic-uz/<Feature>.git
+> ```
+> and immediately get a fully functional, self-contained development environment with its own submodules, host, and launch profiles.
 > Simultaneously, the root `Socratic` meta-repository orchestrates all microservices, frontend features, and infrastructure as a unified whole.
 
 ---
@@ -84,7 +87,7 @@ All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the 
 Every feature module operates under the **Dual-Mode Discovery Pattern**:
 
 1. **Standalone Mode** (Feature Developer):
-   - Developer clones: `git clone --recurse-submodules https://github.com/socratic-uz/Commerce.git`
+   - Developer clones: `git clone --depth 1 --recurse-submodules --shallow-submodules --jobs 8 https://github.com/socratic-uz/Commerce.git`
    - `Directory.Build.props` in the feature root imports local properties and fallback packages.
    - Solution uses the local standalone host (`Platform/Web.UI`) to run the feature in total isolation.
 

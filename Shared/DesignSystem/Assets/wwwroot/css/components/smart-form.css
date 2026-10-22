@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / smart-form.css
+   Pure CSS Grid, MD3 Expressive tokens
+   ========================================================================== */
+
+.smart-form-dialog,
+md-dialog.smart-form-dialog {
+    --md-dialog-container-min-inline-size: min(550px, 92vw);
+    --md-dialog-container-max-inline-size: min(840px, 96vw);
+    max-width: min(840px, 96vw);
+    width: min(840px, 96vw);
+    max-height: min(92vh, 920px);
+}
+
+.smart-form-dialog [slot="content"] {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 16px 24px;
+}
+
+.smart-form-dialog form,
+.smart-form-dialog .smart-form-content {
+    display: grid;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.smart-form-dialog fieldset,
+.smart-form-dialog .smart-form-fieldset {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 14px;
+    margin: 0 0 10px 0;
+    display: grid;
+    gap: 12px;
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.5);
+}
+
+.smart-form-dialog fieldset legend,
+.smart-form-dialog .smart-form-fieldset legend {
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0 8px;
+    color: var(--md-sys-color-primary);
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.smart-form-dialog .smart-form-field {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    gap: 6px;
+}
+
+.smart-form-dialog md-outlined-text-field,
+.smart-form-dialog md-filled-text-field,
+.smart-form-dialog md-select,
+.smart-form-dialog .material-text-field {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.smart-form-dialog .smart-form-chip-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.smart-form-dialog .smart-form-chip-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 2px;
+}
+
+.smart-form-dialog .smart-form-switch-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 14px;
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    min-width: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.smart-form-dialog .smart-form-switch-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    min-width: 0;
+    word-break: break-word;
+}
+
+.smart-form-dialog .smart-form-checkbox-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    min-width: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.smart-form-dialog [slot="actions"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 16px 24px;
+}
+
+.smart-form-error {
+    color: var(--md-sys-color-error);
+    padding: 8px;
+    border: 1px solid var(--md-sys-color-error);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+}
+
+.smart-form-info {
+    color: var(--md-sys-color-tertiary);
+    padding: 8px;
+    border: 1px solid var(--md-sys-color-tertiary);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+}
+
+.smart-form-field-mb {
+    margin-bottom: 12px;
+}
+
+.smart-grid-headline {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: start;
+}
+
+@media (max-width: 600px) {
+    .smart-form-dialog,
+    md-dialog.smart-form-dialog {
+        max-width: 98vw;
+        width: 98vw;
+        --md-dialog-container-min-inline-size: 92vw;
+        --md-dialog-container-max-inline-size: 96vw;
+    }
+    .smart-form-dialog [slot="content"] {
+        padding: 14px 10px;
+    }
+}

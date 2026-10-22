@@ -42,7 +42,112 @@ const COLLIDING_DOMAIN_TYPES = new Set([
   'Route',
   'Zone',
   'OrderStatus',
-  'ProductType'
+  'ProductType',
+  'Card',
+  'Badge',
+  'Chip',
+  'Button',
+  'Dialog',
+  'Table',
+  'Progress',
+  'Avatar',
+  'Divider',
+  'Tab',
+  'Tabs',
+  'Nav',
+  'Header',
+  'Footer',
+  'Sidebar',
+  'Modal',
+  'Icon',
+  'Container',
+  'Root',
+  'Grid',
+  'Menu',
+  'PageTitle',
+  'Order',
+  'Orders',
+  'Product',
+  'Products',
+  'PaymentType',
+  'PaymentGatewayType',
+  'Payment',
+  'Payments',
+  'New',
+  'Default',
+  'Class',
+  'Event',
+  'Delegate',
+  'Interface',
+  'Void',
+  'Int',
+  'Double',
+  'Float',
+  'Bool',
+  'Long',
+  'Short',
+  'Byte',
+  'Decimal',
+  'Char',
+  'Support',
+  'Reset',
+  'Clear',
+  'Subtitle',
+  'Canceled',
+  'Collected',
+  'Collecting',
+  'Completed',
+  'Created',
+  'Made',
+  'Making',
+  'Ready',
+  'Shipping',
+  'Trial',
+  'TotalLabel',
+  'Total',
+  'Active',
+  'InStock',
+  'Open',
+  'PreviewLabel',
+  'ProTier',
+  'ResendCountdown',
+  'ShippingFee',
+  'SupportLabel',
+  'TotalAmount',
+  'Unit',
+  'PayButton',
+  'VideoCaption',
+  'Number',
+  'GroupTitle',
+  'PreviewText',
+  'QrHint',
+  'Organization',
+  'Organizations',
+  'Kiosk',
+  'Kiosks',
+  'Terminal',
+  'Terminals',
+  'Receipt',
+  'Receipts',
+  'Invoice',
+  'Invoices',
+  'Store',
+  'Stores',
+  'User',
+  'Users',
+  'Account',
+  'Accounts',
+  'Role',
+  'Roles',
+  'Tenant',
+  'Tenants',
+  'Customer',
+  'Customers',
+  'Device',
+  'Devices',
+  'Print',
+  'Item',
+  'Items'
 ]);
 
 function parseResx(filePath) {
@@ -63,6 +168,16 @@ function parseResx(filePath) {
   return map;
 }
 
+function normalizeIdentifier(str) {
+  if (!str) return '_';
+  let res = str.replace(/[^a-zA-Z0-9_]/g, '');
+  if (!res) res = '_';
+  if (/^[0-9]/.test(res)) {
+    res = '_' + res;
+  }
+  return res;
+}
+
 function toPascalIdentifier(key) {
   if (!key) return '_';
   const parts = key.split(/[\s\-./\\]+/);
@@ -73,12 +188,7 @@ function toPascalIdentifier(key) {
     })
     .join('');
 
-  ident = ident.replace(/[^a-zA-Z0-9_]/g, '');
-  if (!ident) ident = '_';
-  if (/^[0-9]/.test(ident)) {
-    ident = '_' + ident;
-  }
-  return ident;
+  return normalizeIdentifier(ident);
 }
 
 function sanitizeXmlDoc(text) {
@@ -95,7 +205,7 @@ const DOMAIN_DEFINITIONS = {
   Auth: ['Auth_', 'SignIn_', 'OAuth_', 'FaceId_'],
   Cart: ['Cart_'],
   Checkout: ['Checkout_', 'Payment_'],
-  Kiosk: ['Kiosk_'],
+  Kiosk: ['Kiosk_', 'AdSlot_'],
   Booking: ['Booking_'],
   UxMode: ['UxMode_', 'UX_'],
   Store: ['Store_'],
@@ -104,13 +214,26 @@ const DOMAIN_DEFINITIONS = {
   Geo: ['Geo_'],
   GroupBuy: ['GroupBuy_'],
   Schedule: ['Schedule_'],
-  Receipt: ['Receipt_'],
+  Receipt: ['Receipt_', 'Invoice_'],
   Lottery: ['Lottery_'],
   Bundle: ['Bundle_'],
   Donation: ['Donation_'],
   Chat: ['Chat_'],
   Settings: ['Settings_'],
-  Orders: ['Order_', 'Orders_']
+  Orders: ['Order_', 'Orders_', 'OrderItems_', 'Kds_', 'OrderStatus_'],
+  Terminal: ['Terminal_'],
+  QrDesigner: ['QrDesigner_'],
+  Subscription: ['Subscription_'],
+  Auction: ['Auction_'],
+  Rental: ['Rental_'],
+  Hotel: ['Hotel_'],
+  Classified: ['Classified_'],
+  Configurator: ['Configurator_'],
+  Delivery: ['Delivery_'],
+  Digital: ['Digital_'],
+  Gift: ['Gift_'],
+  Seats: ['Seats_'],
+  Landing: ['Landing_', 'About_', 'Help_', 'Docs_', 'QR_', 'Analytics_', 'Landing', 'About', 'Help', 'Docs', 'Qr', 'Analytics']
 };
 
 export function generateLocalizationKeys() {
@@ -155,6 +278,44 @@ export function generateLocalizationKeys() {
     'Log out', 'Done', 'Pay', 'Retry', 'Add', 'Remove', 'Confirm', 'Ok', 'Yes', 'No'
   ]);
 
+  const codepointsPath = path.join(assetsRoot, 'Resources', 'material-symbols.codepoints');
+  const iconNames = new Set();
+  if (fs.existsSync(codepointsPath)) {
+    const lines = fs.readFileSync(codepointsPath, 'utf8').split('\n');
+    for (const l of lines) {
+      const name = l.trim().split(/\s+/)[0];
+      if (name) iconNames.add(toPascalIdentifier(name));
+    }
+  }
+
+  const snapshotPath = path.join(__dirname, 'component-classes-snapshot.json');
+  const cssClassNames = new Set();
+  if (fs.existsSync(snapshotPath)) {
+    try {
+      const snap = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+      for (const group of Object.values(snap)) {
+        for (const k of Object.keys(group)) {
+          cssClassNames.add(k);
+        }
+      }
+    } catch {}
+  }
+
+  const classesCsPath = path.join(assetsRoot, 'Constants', 'Classes.g.cs');
+  if (fs.existsSync(classesCsPath)) {
+    try {
+      const content = fs.readFileSync(classesCsPath, 'utf8');
+      const matches = content.matchAll(/public\s+const\s+string\s+([A-Za-z0-9_]+)\s*=/g);
+      for (const m of matches) {
+        cssClassNames.add(m[1]);
+      }
+    } catch {}
+  }
+
+  function isColliding(ident) {
+    return COLLIDING_DOMAIN_TYPES.has(ident) || iconNames.has(ident) || cssClassNames.has(ident);
+  }
+
   for (const rawKey of sortedKeys) {
     const item = keyItems.get(rawKey);
     let assignedDomain = 'Common';
@@ -173,19 +334,21 @@ export function generateLocalizationKeys() {
 
     // Check if it is a pure action
     if (ACTION_KEYWORDS.has(rawKey)) {
+      assignedDomain = 'Actions';
       const actionIdent = toPascalIdentifier(rawKey);
-      if (COLLIDING_DOMAIN_TYPES.has(actionIdent)) {
+      if (isColliding(actionIdent)) {
         domainGroups.Actions.set(`${actionIdent}Action`, item);
+        domainGroups.Actions.set(`${actionIdent}Text`, item);
       } else {
         domainGroups.Actions.set(actionIdent, item);
+        domainGroups.Actions.set(`${actionIdent}Action`, item);
+        domainGroups.Actions.set(`${actionIdent}Text`, item);
       }
-    }
-
-    if (assignedDomain === 'Common') {
+    } else if (assignedDomain === 'Common') {
       const primaryIdent = toPascalIdentifier(rawKey);
 
-      // Protect against collisions with SharedKernel domain types when 'using static' is applied
-      if (COLLIDING_DOMAIN_TYPES.has(primaryIdent)) {
+      // Protect against collisions with SharedKernel domain types and Icons when 'using static' is applied
+      if (isColliding(primaryIdent)) {
         domainGroups.Common.set(`${primaryIdent}Text`, item);
         domainGroups.Common.set(`${primaryIdent}Label`, item);
       } else {
@@ -194,20 +357,48 @@ export function generateLocalizationKeys() {
 
       if (primaryIdent.includes('_')) {
         const altIdent = primaryIdent.split('_').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join('');
-        if (altIdent && !COLLIDING_DOMAIN_TYPES.has(altIdent) && !domainGroups.Common.has(altIdent)) {
+        if (altIdent && !isColliding(altIdent) && !domainGroups.Common.has(altIdent)) {
           domainGroups.Common.set(altIdent, item);
         }
       }
     } else {
-      const strippedRaw = rawKey.substring(matchedPrefix.length);
+      const shouldStrip = Boolean(matchedPrefix && matchedPrefix.endsWith('_'));
+      const strippedRaw = shouldStrip ? rawKey.substring(matchedPrefix.length) : rawKey;
       const strippedIdent = toPascalIdentifier(strippedRaw);
       const fullIdent = toPascalIdentifier(rawKey);
 
-      const safeStripped = strippedIdent === assignedDomain ? `${strippedIdent}Key` : strippedIdent;
+      let safeStripped = isColliding(strippedIdent) || strippedIdent === assignedDomain 
+        ? `${strippedIdent}Text` 
+        : strippedIdent;
+      if (domainGroups.Common.has(safeStripped) || domainGroups.Actions.has(safeStripped) || cssClassNames.has(safeStripped)) {
+        safeStripped = `${assignedDomain}${safeStripped}`;
+      }
       domainGroups[assignedDomain].set(safeStripped, item);
 
+      if (strippedIdent.includes('_')) {
+        const altStripped = normalizeIdentifier(strippedIdent.split('_').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(''));
+        if (altStripped && !isColliding(altStripped) && !domainGroups[assignedDomain].has(altStripped) && altStripped !== assignedDomain && !domainGroups.Common.has(altStripped) && !cssClassNames.has(altStripped)) {
+          domainGroups[assignedDomain].set(altStripped, item);
+        }
+      }
+
       if (fullIdent !== safeStripped && fullIdent !== assignedDomain) {
-        domainGroups[assignedDomain].set(fullIdent, item);
+        let safeFull = isColliding(fullIdent) ? `${fullIdent}Text` : fullIdent;
+        if (domainGroups.Common.has(safeFull) || domainGroups.Actions.has(safeFull) || cssClassNames.has(safeFull)) {
+          safeFull = `${assignedDomain}${safeFull}`;
+        }
+        domainGroups[assignedDomain].set(safeFull, item);
+      }
+
+      if (fullIdent.includes('_')) {
+        const altIdent = normalizeIdentifier(fullIdent.split('_').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(''));
+        if (altIdent && !isColliding(altIdent) && !domainGroups[assignedDomain].has(altIdent) && altIdent !== assignedDomain && !domainGroups.Common.has(altIdent) && !cssClassNames.has(altIdent)) {
+          domainGroups[assignedDomain].set(altIdent, item);
+        }
+      }
+
+      if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(rawKey) && !isColliding(rawKey) && !domainGroups[assignedDomain].has(rawKey) && rawKey !== assignedDomain && !domainGroups.Common.has(rawKey) && !cssClassNames.has(rawKey)) {
+        domainGroups[assignedDomain].set(rawKey, item);
       }
     }
   }
@@ -223,17 +414,17 @@ export function generateLocalizationKeys() {
     let altIdent = null;
     if (primaryIdent.includes('_')) {
       const parts = primaryIdent.split('_');
-      altIdent = parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join('');
+      altIdent = normalizeIdentifier(parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(''));
       if (altIdent === primaryIdent) altIdent = null;
     }
 
-    const safePrimary = domainNames.has(primaryIdent) ? `${primaryIdent}Key` : primaryIdent;
+    const safePrimary = domainNames.has(primaryIdent) || isColliding(primaryIdent) ? `${primaryIdent}Text` : primaryIdent;
     if (!rootFlatConstants.has(safePrimary)) {
       rootFlatConstants.set(safePrimary, item);
     }
 
     if (altIdent) {
-      const safeAlt = domainNames.has(altIdent) ? `${altIdent}Key` : altIdent;
+      const safeAlt = domainNames.has(altIdent) || isColliding(altIdent) ? `${altIdent}Text` : altIdent;
       if (!rootFlatConstants.has(safeAlt)) {
         rootFlatConstants.set(safeAlt, item);
       }
@@ -243,8 +434,9 @@ export function generateLocalizationKeys() {
   function renderConstantsBlock(entriesMap, indent = '        ') {
     let out = '';
     const sorted = Array.from(entriesMap.keys()).sort((a, b) => a.localeCompare(b));
-    for (const ident of sorted) {
-      const item = entriesMap.get(ident);
+    for (const rawIdent of sorted) {
+      const ident = normalizeIdentifier(rawIdent);
+      const item = entriesMap.get(rawIdent);
       const escapedRawKey = item.rawKey.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
       const ruDoc = sanitizeXmlDoc(item.ru);
       const uzDoc = sanitizeXmlDoc(item.uz);
@@ -304,6 +496,20 @@ namespace Assets.Constants
   code += `        #endregion\n`;
 
   code += `    }\n}\n`;
+
+  let locNamespaceBody = '';
+  for (const dom of sortedDomainNames) {
+    const map = domainGroups[dom];
+    if (map.size === 0) continue;
+    locNamespaceBody += `    /// <summary>\n`;
+    locNamespaceBody += `    /// Domain group: ${dom} (${map.size} keys). Use with <c>@using static Loc.${dom};</c>.\n`;
+    locNamespaceBody += `    /// </summary>\n`;
+    locNamespaceBody += `    public static class ${dom}\n    {\n`;
+    locNamespaceBody += renderConstantsBlock(map, '        ');
+    locNamespaceBody += `    }\n\n`;
+  }
+
+  code += `\nnamespace Loc\n{\n${locNamespaceBody}}\n`;
 
   fs.writeFileSync(outputCsPath, code, 'utf8');
   console.log(`✅ [Localization Pipeline] C# localization keys generated at: ${outputCsPath}`);

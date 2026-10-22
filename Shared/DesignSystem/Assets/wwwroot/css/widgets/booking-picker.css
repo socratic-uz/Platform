@@ -566,3 +566,26 @@
     font-weight: 600;
     text-align: left;
 }
+
+.picker-header {
+    display: grid;
+    gap: var(--md-sys-spacing-2, 8px);
+    width: 100%;
+}
+
+.date-field-row {
+    display: grid;
+    width: 100%;
+}
+
+.date-field-input {
+    width: 100%;
+}
+
+.fallback-seat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
+    gap: 12px;
+    padding: 16px;
+}
+

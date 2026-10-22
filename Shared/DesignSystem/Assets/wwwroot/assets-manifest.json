@@ -3,8 +3,8 @@
   "assets": [
     {
       "url": "_content/Assets/css/components/buttons.css",
-      "size": 58299,
-      "hash": "sha256-ed465392c592"
+      "size": 58305,
+      "hash": "sha256-d4cf3dba1884"
     },
     {
       "url": "_content/Assets/css/components/cards.css",
@@ -18,13 +18,13 @@
     },
     {
       "url": "_content/Assets/css/components/common.css",
-      "size": 164459,
-      "hash": "sha256-42bd61d04912"
+      "size": 164624,
+      "hash": "sha256-75401ee2de28"
     },
     {
       "url": "_content/Assets/css/components/components.css",
-      "size": 286,
-      "hash": "sha256-e7ee67764cee"
+      "size": 447,
+      "hash": "sha256-3f609acfbfdc"
     },
     {
       "url": "_content/Assets/css/components/dialogs.css",
@@ -47,14 +47,44 @@
       "hash": "sha256-1b006a07ee5e"
     },
     {
+      "url": "_content/Assets/css/components/invoice.css",
+      "size": 3353,
+      "hash": "sha256-f6aec1de1e1c"
+    },
+    {
+      "url": "_content/Assets/css/components/smart-data-view.css",
+      "size": 717,
+      "hash": "sha256-a76a319fd244"
+    },
+    {
+      "url": "_content/Assets/css/components/smart-enum.css",
+      "size": 625,
+      "hash": "sha256-5f346b592821"
+    },
+    {
+      "url": "_content/Assets/css/components/smart-filter.css",
+      "size": 867,
+      "hash": "sha256-cd3848dd8586"
+    },
+    {
+      "url": "_content/Assets/css/components/smart-form.css",
+      "size": 4376,
+      "hash": "sha256-aa324d27cb7b"
+    },
+    {
+      "url": "_content/Assets/css/components/smart-toast.css",
+      "size": 2361,
+      "hash": "sha256-3d83ca25838f"
+    },
+    {
       "url": "_content/Assets/css/components/tables.css",
       "size": 12032,
       "hash": "sha256-c4aefe7fbaaa"
     },
     {
       "url": "_content/Assets/css/features/commerce-modes.css",
-      "size": 8992,
-      "hash": "sha256-309390fce1ca"
+      "size": 38828,
+      "hash": "sha256-b9935c24fcc1"
     },
     {
       "url": "_content/Assets/css/features/fiscal.css",
@@ -98,8 +128,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/map-layout.css",
-      "size": 3513,
-      "hash": "sha256-651b91885448"
+      "size": 3823,
+      "hash": "sha256-4cc98ab8ffd4"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -123,8 +153,8 @@
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
-      "size": 12431,
-      "hash": "sha256-e973c53dffff"
+      "size": 13467,
+      "hash": "sha256-185cf428f271"
     },
     {
       "url": "_content/Assets/css/pages/docs.css",
@@ -138,8 +168,8 @@
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 10691,
-      "hash": "sha256-063e8914c38b"
+      "size": 11641,
+      "hash": "sha256-334ff7d7637d"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
@@ -148,18 +178,18 @@
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
-      "size": 9542,
-      "hash": "sha256-ed62d47923d2"
+      "size": 15201,
+      "hash": "sha256-81a0bf62cbec"
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
-      "size": 2797,
-      "hash": "sha256-decaeca40a2b"
+      "size": 17263,
+      "hash": "sha256-cd4d56567539"
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 9589,
-      "hash": "sha256-3b1a4c475660"
+      "size": 14977,
+      "hash": "sha256-fff371cea4e4"
     },
     {
       "url": "_content/Assets/css/styles.css",
@@ -238,8 +268,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/booking-picker.css",
-      "size": 15263,
-      "hash": "sha256-ae32a0a544e6"
+      "size": 15611,
+      "hash": "sha256-0ddf8554bc27"
     },
     {
       "url": "_content/Assets/css/widgets/cart.css",
@@ -248,13 +278,13 @@
     },
     {
       "url": "_content/Assets/css/widgets/color-picker.css",
-      "size": 429,
-      "hash": "sha256-0d6410324e33"
+      "size": 490,
+      "hash": "sha256-04b59a522b54"
     },
     {
       "url": "_content/Assets/css/widgets/faceid-viewfinder.css",
-      "size": 3330,
-      "hash": "sha256-3045e7fc9eeb"
+      "size": 3770,
+      "hash": "sha256-eadd13cf5de5"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -273,8 +303,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/seat-designer.css",
-      "size": 4262,
-      "hash": "sha256-5e3105746718"
+      "size": 10105,
+      "hash": "sha256-f0493b569434"
     },
     {
       "url": "_content/Assets/data/health_nutrition_guide.pdf",

@@ -1,7 +1,7 @@
+@namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
-@inject NavigationManager Navigation
-@inject IStringLocalizer L
+@using static Icons
 
 <header class="app-header @(Sticky ? "header-sticky" : "") @Class">
 	<div class="header-grid-layout">
@@ -12,7 +12,7 @@
 				<div class="header-brand-zone">
 					<a href="/" class="header-brand-link" title="Socratic">
 						<span class="header-brand-icon-box">
-							<Icon Name="auto_awesome" />
+							<Icon Name="@AutoAwesome" />
 						</span>
 						<span class="header-brand-text">Socratic</span>
 					</a>
@@ -53,16 +53,3 @@
 		</div>
 	</div>
 </header>
-
-@code {
-	[Parameter] public RenderFragment? StartContent { get; set; }
-	[Parameter] public RenderFragment? CenterContent { get; set; }
-	[Parameter] public RenderFragment? EndContent { get; set; }
-	[Parameter] public RenderFragment? ChildContent { get; set; }
-	[Parameter] public bool ShowBrand { get; set; } = true;
-	[Parameter] public bool ShowDefaultActions { get; set; } = true;
-	[Parameter] public bool ShowAvatar { get; set; } = false;
-	[Parameter] public bool Sticky { get; set; } = true;
-	[Parameter] public string Class { get; set; } = string.Empty;
-}
-

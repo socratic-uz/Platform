@@ -1,3 +1,4 @@
+@namespace Shared.Layout
 @inherits LayoutComponentBase
 
 @using Domain.Enums
@@ -24,7 +25,7 @@
 	<SectionOutlet SectionName="nav" />
 </Nav>
 
-<ErrorBoundary @ref="_errorBoundary">
+<ErrorBoundary @ref="ErrorBoundaryRef">
 	<ChildContent>
 		@Body
 	</ChildContent>
@@ -40,8 +41,3 @@
 <Footer>
 	<SectionOutlet SectionName="footer" />
 </Footer>
-
-@code {
-	private ErrorBoundary? _errorBoundary;
-	private void Recover() => _errorBoundary?.Recover();
-}

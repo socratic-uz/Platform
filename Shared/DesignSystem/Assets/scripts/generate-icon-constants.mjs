@@ -142,6 +142,7 @@ export function generateIconConstants() {
   };
 
   const flatIcons = new Map();
+  const RESERVED_CS_TYPES = new Set(['Task', 'Action', 'Type', 'Environment', 'Range', 'Index', 'Match', 'File', 'Directory']);
   const sortedKeys = Array.from(iconMap.keys()).sort((a, b) => a.localeCompare(b));
 
   for (const rawKey of sortedKeys) {
@@ -151,8 +152,8 @@ export function generateIconConstants() {
 
     const item = { rawKey, ident, codepoint, category };
 
-    // Prevent collision with category name in category group
-    const safeIdent = ident === category ? `${ident}Icon` : ident;
+    // Prevent collision with category name in category group or reserved C# types
+    const safeIdent = (ident === category || RESERVED_CS_TYPES.has(ident)) ? `${ident}Icon` : ident;
     categories[category].set(safeIdent, item);
 
     // Flat collection
@@ -206,23 +207,59 @@ namespace Assets.Constants
     code += `        }\n\n`;
   }
 
+  const snapshotPath = path.join(__dirname, 'component-classes-snapshot.json');
+  const cssClassNames = new Set();
+  if (fs.existsSync(snapshotPath)) {
+    try {
+      const snap = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+      for (const group of Object.values(snap)) {
+        for (const k of Object.keys(group)) {
+          cssClassNames.add(k);
+        }
+      }
+    } catch {}
+  }
+
+  const SHADOWED_ICONS = new Set([
+    'Add', 'Remove', 'Delete', 'Edit', 'Save', 'Cancel', 'Print', 'Search', 'Select',
+    'Refresh', 'Clear', 'Reset', 'Update', 'Open', 'Close', 'Send', 'Payments', 'Payment',
+    'Order', 'Orders', 'Product', 'Products', 'Task', 'Action', 'Error', 'Warning', 'Info', 'Help'
+  ]);
+
   // Render flat root constants
   code += `        #region Flat Icons (Universal Direct Access: @Icons.ShoppingCart)\n\n`;
 
   const sortedFlat = Array.from(flatIcons.keys()).sort((a, b) => a.localeCompare(b));
   for (const ident of sortedFlat) {
     const item = flatIcons.get(ident);
-    // If identifier collides with a category name, suffix with Icon
-    const safeIdent = categoryNames.includes(ident) ? `${ident}Icon` : ident;
+    // If identifier collides with a category name or standard C# type, suffix with Icon
+    const isReserved = RESERVED_CS_TYPES.has(ident);
+    const safeIdent = (categoryNames.includes(ident) || isReserved) ? `${ident}Icon` : ident;
     code += `        /// <summary>\n`;
     code += `        /// Ligature: <c>${item.rawKey}</c> | Category: <see cref="${item.category}"/><br/>\n`;
     code += `        /// Codepoint: <c>\\u${item.codepoint}</c>\n`;
     code += `        /// </summary>\n`;
     code += `        public const string ${safeIdent} = "${item.rawKey}";\n\n`;
+    const shouldEmitSuffixed = (SHADOWED_ICONS.has(ident) || isReserved) && !safeIdent.endsWith('Icon') && !cssClassNames.has(`${safeIdent}Icon`);
+    if (shouldEmitSuffixed) {
+      code += `        public const string ${safeIdent}Icon = "${item.rawKey}";\n\n`;
+    }
   }
 
   code += `        #endregion\n\n`;
-  code += `    }\n}\n`;
+  code += `    }\n}\n\n`;
+  code += `/// <summary>\n/// Global icon constants accessible via @using static Icons.\n/// </summary>\npublic static class Icons\n{\n`;
+  for (const ident of sortedFlat) {
+    const item = flatIcons.get(ident);
+    const isReserved = RESERVED_CS_TYPES.has(ident);
+    const safeIdent = (categoryNames.includes(ident) || isReserved) ? `${ident}Icon` : ident;
+    code += `    public const string ${safeIdent} = "${item.rawKey}";\n`;
+    const shouldEmitSuffixed = (SHADOWED_ICONS.has(ident) || isReserved) && !safeIdent.endsWith('Icon') && !cssClassNames.has(`${safeIdent}Icon`);
+    if (shouldEmitSuffixed) {
+      code += `    public const string ${safeIdent}Icon = "${item.rawKey}";\n`;
+    }
+  }
+  code += `}\n`;
 
   fs.writeFileSync(outputCsPath, code, 'utf8');
   console.log(`✅ [Icon Pipeline] C# icon constants generated at: ${outputCsPath}`);

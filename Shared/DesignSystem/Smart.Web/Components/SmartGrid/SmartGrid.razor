@@ -5,12 +5,16 @@
 
 @using QuickGrid
 @using QuickGrid.Infrastructure
-
+@using static Assets.Constants.Classes.Common
+@using static Assets.Constants.Classes.Table
+@using static Assets.Constants.Icons
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.IconButtonVariant
 
 @inherits QuickGrid<TItem>
 @typeparam TItem where TItem : class, new()
 
-<div class="@M3.Table.SmartGridContainer">
+<div class=@SmartGridContainer>
     @if (!AsCards)
     {
         <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
@@ -71,10 +75,10 @@
 
                                     if (selectedValues.Any())
                                     {
-                                        <div class="@M3.Table.GridEnumFlags">
+                                        <div class=@GridEnumFlags>
                                             @foreach (var value in selectedValues)
                                             {
-                                                <Chip ChipType="ChipType.Input" Label="@value" Disabled="true" CssClass="@M3.Table.GridChipReadonly" />
+                                                <Chip ChipType=@InputChipType Label=@value Disabled=@true CssClass=@GridChipReadonly />
                                             }
                                         </div>
                                     }
@@ -85,7 +89,7 @@
                                 }
                                 else
                                 {
-                                    <Chip ChipType="ChipType.Input" Label="@GetEnumDisplayText(propertyValue, propertyType)" Disabled="true" CssClass="@M3.Table.GridChipReadonly" />
+                                    <Chip ChipType=@InputChipType Label=@GetEnumDisplayText(propertyValue, propertyType) Disabled=@true CssClass=@GridChipReadonly />
                                 }
                             }
                             else
@@ -102,10 +106,10 @@
                             var propertyValue = column.Getter(item) is bool boolValue && boolValue;
                             Expression<Func<bool>> valueExpression = () => propertyValue;
                         }
-                        <Switch Disabled="true"
-                                AriaLabel="@($"{column.DisplayName}: {(propertyValue ? "включено" : "отключено")}")"
-                                Value="@propertyValue"
-                                ValueExpression="@valueExpression" />
+                        <Switch Disabled=@true
+                                AriaLabel=@($"{column.DisplayName}: {(propertyValue ? (string)L[YesAction] : (string)L[NoAction])}")
+                                Value=@propertyValue
+                                ValueExpression=@valueExpression />
                     </TemplateColumn>
                 }
                 else if (CanCreatePropertyColumn(propertyType))
@@ -122,12 +126,12 @@
                 }
             }
 
-            <TemplateColumn Context="item" TGridItem="TItem" Class="@M3.Table.ActionsColumn">
+            <TemplateColumn Context="item" TGridItem="TItem" Class=@ActionsColumn>
                 <HeaderTemplate>
-                    <Fab Variant="primary" Lowered="true" Icon="add" AriaLabel="Create" OnClick=@(e => OpenCreateDialog()) />
+                    <Fab Variant="primary" Lowered=@true Icon=@Add AriaLabel=@L[CreateAction] OnClick=@(e => OpenCreateDialog()) />
                 </HeaderTemplate>
                 <ChildContent>
-                    <IconButton Variant="IconButtonVariant.FilledTonal" class="btn-s" Icon="edit" OnClick=@(e => OpenEditDialog(item)) Title="Редактировать" AriaLabel="Редактировать" />
+                    <IconButton Variant=@FilledTonal class="btn-s" Icon=@Edit OnClick=@(e => OpenEditDialog(item)) Title=@L[EditAction] AriaLabel=@L[EditAction] />
                 </ChildContent>
             </TemplateColumn>
         }
@@ -140,7 +144,7 @@
 
             @if (AsCards)
             {
-                <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="@M3.Table.CardGrid">
+                <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@CardGrid>
                     @if (Virtualize)
                     {
                         <Virtualize @ref="@_virtualizeComponent"
@@ -159,7 +163,7 @@
             }
             else
             {
-                <div class="@M3.Table.Container">
+                <div class=@Container>
                     <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="@GridClass()">
                         <thead>
                             <tr>
@@ -192,22 +196,22 @@
     @if (!AsCards)
     {
         <SmartForm TItem="TItem"
-                   Item="@currentModel"
-                   Open="@isFormOpen"
+                   Item=@currentModel
+                   Open=@isFormOpen
                    OnValidSubmit=@HandleValidSubmit
                    OnInvalidSubmit=@OnInvalidSubmit
-                   OnClose="() => isFormOpen = false"
-                   OnCancel="() => isFormOpen = false"
-                   SubmitText="@submitButtonText"
-                   CancelText="Отмена"
-                   ShowValidationSummary="true"
-                   ExcludeProperties="@ExcludeProperties"
-                   PropertyDisplayNames="@PropertyDisplayNames"
-                   PropertyTypes="@PropertyTypes">
+                   OnClose=@(() => isFormOpen = false)
+                   OnCancel=@(() => isFormOpen = false)
+                   SubmitText=@submitButtonText
+                   CancelText=@L[CancelAction]
+                   ShowValidationSummary=@true
+                   ExcludeProperties=@ExcludeProperties
+                   PropertyDisplayNames=@PropertyDisplayNames
+                   PropertyTypes=@PropertyTypes>
 
             <Headline>
-                <div style="display: grid; grid-auto-flow: column; align-items: center; gap: 0.5rem; justify-content: start;">
-                    <Icon Name="@dialogIcon" />
+                <div class=@SmartGridHeadlineClass>
+                    <Icon Name=@dialogIcon />
                     <span>@dialogTitle</span>
                 </div>
             </Headline>

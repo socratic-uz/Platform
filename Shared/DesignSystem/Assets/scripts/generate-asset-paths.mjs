@@ -163,7 +163,6 @@ ${renderClass('Images', categorized.Images)}${renderClass('Scripts', categorized
     }
     cs += `    }\n\n`;
   }
-
   cs += `}\n`;
 
   fs.writeFileSync(outputCsPath, cs, 'utf8');

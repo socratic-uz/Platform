@@ -1,0 +1,1681 @@
+{
+  "generatedAt": "2026-10-22T13:17:07.674Z",
+  "summary": {
+    "totalDeclaredKeys": 5191,
+    "usedInRazorCount": 342,
+    "unusedCount": 4849,
+    "adoptionRatePercent": 7,
+    "totalTypedCallSites": 418,
+    "rawStringViolationsCount": 0,
+    "keysWithRawLiteralsCount": 0,
+    "sourceFilesScanned": 645
+  },
+  "topUsedKeys": [
+    {
+      "key": "Common.Currency_Uzs",
+      "domain": "Common",
+      "name": "Currency_Uzs",
+      "locKey": "Currency_Uzs",
+      "usageCountInRazor": 9,
+      "filesCount": 3,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor.cs",
+        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs"
+      ]
+    },
+    {
+      "key": "Checkout.PaymentCash",
+      "domain": "Checkout",
+      "name": "PaymentCash",
+      "locKey": "Payment_Cash",
+      "usageCountInRazor": 6,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.CancelAction",
+      "domain": "Actions",
+      "name": "CancelAction",
+      "locKey": "Cancel",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor.cs",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs",
+        "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    },
+    {
+      "key": "UxMode.DetailsText",
+      "domain": "UxMode",
+      "name": "DetailsText",
+      "locKey": "UX_Details",
+      "usageCountInRazor": 4,
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor.cs",
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.CloseAction",
+      "domain": "Actions",
+      "name": "CloseAction",
+      "locKey": "Close",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
+        "Retail/Checkout/Pages/Payment.razor.cs",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
+      ]
+    },
+    {
+      "key": "Actions.CreateAction",
+      "domain": "Actions",
+      "name": "CreateAction",
+      "locKey": "Create",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.EditAction",
+      "domain": "Actions",
+      "name": "EditAction",
+      "locKey": "Edit",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.SaveAction",
+      "domain": "Actions",
+      "name": "SaveAction",
+      "locKey": "Save",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor.cs",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor.cs",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs"
+      ]
+    },
+    {
+      "key": "Common.ColorPickerClosePalette",
+      "domain": "Common",
+      "name": "ColorPickerClosePalette",
+      "locKey": "ColorPicker_ClosePalette",
+      "usageCountInRazor": 3,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor"
+      ]
+    },
+    {
+      "key": "Common.ColorPickerResetColor",
+      "domain": "Common",
+      "name": "ColorPickerResetColor",
+      "locKey": "ColorPicker_ResetColor",
+      "usageCountInRazor": 3,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor"
+      ]
+    },
+    {
+      "key": "Common.CurrencyUzs",
+      "domain": "Common",
+      "name": "CurrencyUzs",
+      "locKey": "Currency_Uzs",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/InvoiceViewer.razor.cs",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor.cs",
+        "Retail/Commerce/Features/HoReCa/Components/SeatBookingModal.razor"
+      ]
+    },
+    {
+      "key": "Checkout.PaymentCard",
+      "domain": "Checkout",
+      "name": "PaymentCard",
+      "locKey": "Payment_Card",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Checkout.PaymentOnline",
+      "domain": "Checkout",
+      "name": "PaymentOnline",
+      "locKey": "Payment_Online",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCanceled",
+      "domain": "Orders",
+      "name": "OrderStatusCanceled",
+      "locKey": "OrderStatus_Canceled",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCollected",
+      "domain": "Orders",
+      "name": "OrderStatusCollected",
+      "locKey": "OrderStatus_Collected",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCollecting",
+      "domain": "Orders",
+      "name": "OrderStatusCollecting",
+      "locKey": "OrderStatus_Collecting",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCompleted",
+      "domain": "Orders",
+      "name": "OrderStatusCompleted",
+      "locKey": "OrderStatus_Completed",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCreated",
+      "domain": "Orders",
+      "name": "OrderStatusCreated",
+      "locKey": "OrderStatus_Created",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusMade",
+      "domain": "Orders",
+      "name": "OrderStatusMade",
+      "locKey": "OrderStatus_Made",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusMaking",
+      "domain": "Orders",
+      "name": "OrderStatusMaking",
+      "locKey": "OrderStatus_Making",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusPaid",
+      "domain": "Orders",
+      "name": "OrderStatusPaid",
+      "locKey": "OrderStatus_Paid",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusShipping",
+      "domain": "Orders",
+      "name": "OrderStatusShipping",
+      "locKey": "OrderStatus_Shipping",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Common.ColorPickerCopyHex",
+      "domain": "Common",
+      "name": "ColorPickerCopyHex",
+      "locKey": "ColorPicker_CopyHex",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor"
+      ]
+    },
+    {
+      "key": "Common.ColorPickerPalette",
+      "domain": "Common",
+      "name": "ColorPickerPalette",
+      "locKey": "ColorPicker_Palette",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor"
+      ]
+    },
+    {
+      "key": "Common.FilePickerClearAll",
+      "domain": "Common",
+      "name": "FilePickerClearAll",
+      "locKey": "FilePicker_ClearAll",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/FilePicker.razor"
+      ]
+    },
+    {
+      "key": "Common.MerchantTestModeLabel",
+      "domain": "Common",
+      "name": "MerchantTestModeLabel",
+      "locKey": "Merchant_TestModeLabel",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
+      ]
+    },
+    {
+      "key": "Common.OrganizationsText",
+      "domain": "Common",
+      "name": "OrganizationsText",
+      "locKey": "Organizations",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Organization/Pages/Home.razor"
+      ]
+    },
+    {
+      "key": "Common.SearchPlaceholder",
+      "domain": "Common",
+      "name": "SearchPlaceholder",
+      "locKey": "Search_Placeholder",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartDataView/SmartDataView.razor.cs",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartFilter/SmartFilterBar.razor.cs"
+      ]
+    },
+    {
+      "key": "Chat.Chat_Back",
+      "domain": "Chat",
+      "name": "Chat_Back",
+      "locKey": "Chat_Back",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor"
+      ]
+    },
+    {
+      "key": "Chat.SendText",
+      "domain": "Chat",
+      "name": "SendText",
+      "locKey": "Chat_Send",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Chat/Widgets/Messaging/ChatInput.razor"
+      ]
+    },
+    {
+      "key": "Chat.WelcomeTitle",
+      "domain": "Chat",
+      "name": "WelcomeTitle",
+      "locKey": "Chat_WelcomeTitle",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Chat/Pages/ChatPage.razor"
+      ]
+    },
+    {
+      "key": "Orders.BackToOrders",
+      "domain": "Orders",
+      "name": "BackToOrders",
+      "locKey": "OrderItems_BackToOrders",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor"
+      ]
+    },
+    {
+      "key": "Orders.KdsJustNow",
+      "domain": "Orders",
+      "name": "KdsJustNow",
+      "locKey": "Kds_JustNow",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Grid.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderByRequirements",
+      "domain": "Orders",
+      "name": "OrderByRequirements",
+      "locKey": "Order_ByRequirements",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/Kiosk.razor",
+        "Retail/PointOfSale/Pages/Terminal.razor"
+      ]
+    },
+    {
+      "key": "Orders.OrderItemsTitle",
+      "domain": "Orders",
+      "name": "OrderItemsTitle",
+      "locKey": "OrderItems_Title",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrdersViewGrid",
+      "domain": "Orders",
+      "name": "OrdersViewGrid",
+      "locKey": "Orders_ViewGrid",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
+      "key": "Orders.OrdersViewList",
+      "domain": "Orders",
+      "name": "OrdersViewList",
+      "locKey": "Orders_ViewList",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
+      "key": "Orders.OrdersViewTable",
+      "domain": "Orders",
+      "name": "OrdersViewTable",
+      "locKey": "Orders_ViewTable",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
+      "key": "Orders.Pcs",
+      "domain": "Orders",
+      "name": "Pcs",
+      "locKey": "OrderItems_Pcs",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor"
+      ]
+    },
+    {
+      "key": "Schedule.DayOff",
+      "domain": "Schedule",
+      "name": "DayOff",
+      "locKey": "Schedule_DayOff",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor"
+      ]
+    },
+    {
+      "key": "Schedule.DaysShort",
+      "domain": "Schedule",
+      "name": "DaysShort",
+      "locKey": "Schedule_DaysShort",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs"
+      ]
+    },
+    {
+      "key": "Schedule.TitleText",
+      "domain": "Schedule",
+      "name": "TitleText",
+      "locKey": "Schedule_Title",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs"
+      ]
+    },
+    {
+      "key": "UxMode.BookText",
+      "domain": "UxMode",
+      "name": "BookText",
+      "locKey": "UX_Book",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Retail/PointOfSale/Pages/ProductPage.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.AddAction",
+      "domain": "Actions",
+      "name": "AddAction",
+      "locKey": "Add",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Studio/SeatDesigner/Widgets/Toolbar/SeatDesignerToolbar.razor"
+      ]
+    },
+    {
+      "key": "Actions.AddText",
+      "domain": "Actions",
+      "name": "AddText",
+      "locKey": "Add",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.ApplyAction",
+      "domain": "Actions",
+      "name": "ApplyAction",
+      "locKey": "Apply",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Studio/SeatDesigner/Widgets/Toolbar/SeatDesignerToolbar.razor"
+      ]
+    },
+    {
+      "key": "Actions.CancelText",
+      "domain": "Actions",
+      "name": "CancelText",
+      "locKey": "Cancel",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.DeleteAction",
+      "domain": "Actions",
+      "name": "DeleteAction",
+      "locKey": "Delete",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/FilePicker.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.DeleteText",
+      "domain": "Actions",
+      "name": "DeleteText",
+      "locKey": "Delete",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.Loading",
+      "domain": "Actions",
+      "name": "Loading",
+      "locKey": "Loading",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    }
+  ],
+  "byDomain": {
+    "Actions": {
+      "total": 55,
+      "used": 18,
+      "totalCalls": 29
+    },
+    "Common": {
+      "total": 374,
+      "used": 79,
+      "totalCalls": 99
+    },
+    "Auction": {
+      "total": 16,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Auth": {
+      "total": 129,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Booking": {
+      "total": 153,
+      "used": 3,
+      "totalCalls": 3
+    },
+    "Bundle": {
+      "total": 39,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Cart": {
+      "total": 42,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Chat": {
+      "total": 35,
+      "used": 12,
+      "totalCalls": 15
+    },
+    "Checkout": {
+      "total": 301,
+      "used": 55,
+      "totalCalls": 64
+    },
+    "Classified": {
+      "total": 72,
+      "used": 22,
+      "totalCalls": 22
+    },
+    "Config": {
+      "total": 72,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Delivery": {
+      "total": 30,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Digital": {
+      "total": 36,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Donation": {
+      "total": 48,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Geo": {
+      "total": 54,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Gift": {
+      "total": 27,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "GroupBuy": {
+      "total": 51,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Hotel": {
+      "total": 9,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Kiosk": {
+      "total": 230,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Landing": {
+      "total": 321,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Lottery": {
+      "total": 42,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Orders": {
+      "total": 218,
+      "used": 63,
+      "totalCalls": 89
+    },
+    "QrDesigner": {
+      "total": 98,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Quote": {
+      "total": 57,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Receipt": {
+      "total": 82,
+      "used": 30,
+      "totalCalls": 30
+    },
+    "Rental": {
+      "total": 21,
+      "used": 1,
+      "totalCalls": 1
+    },
+    "Schedule": {
+      "total": 54,
+      "used": 18,
+      "totalCalls": 21
+    },
+    "Seats": {
+      "total": 6,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Settings": {
+      "total": 15,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Store": {
+      "total": 100,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "Subscription": {
+      "total": 107,
+      "used": 2,
+      "totalCalls": 2
+    },
+    "Terminal": {
+      "total": 78,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "UxMode": {
+      "total": 2219,
+      "used": 27,
+      "totalCalls": 31
+    }
+  },
+  "rawStringViolations": [],
+  "unusedKeys": [
+    {
+      "key": "Actions.Apply",
+      "domain": "Actions",
+      "name": "Apply",
+      "locKey": "Apply",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.ApplyText",
+      "domain": "Actions",
+      "name": "ApplyText",
+      "locKey": "Apply",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.Back",
+      "domain": "Actions",
+      "name": "Back",
+      "locKey": "Back",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.BackAction",
+      "domain": "Actions",
+      "name": "BackAction",
+      "locKey": "Back",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.BackText",
+      "domain": "Actions",
+      "name": "BackText",
+      "locKey": "Back",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.CloseText",
+      "domain": "Actions",
+      "name": "CloseText",
+      "locKey": "Close",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.Confirm",
+      "domain": "Actions",
+      "name": "Confirm",
+      "locKey": "Confirm",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.ConfirmAction",
+      "domain": "Actions",
+      "name": "ConfirmAction",
+      "locKey": "Confirm",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.ConfirmText",
+      "domain": "Actions",
+      "name": "ConfirmText",
+      "locKey": "Confirm",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.CreateText",
+      "domain": "Actions",
+      "name": "CreateText",
+      "locKey": "Create",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.DoneAction",
+      "domain": "Actions",
+      "name": "DoneAction",
+      "locKey": "Done",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.DoneText",
+      "domain": "Actions",
+      "name": "DoneText",
+      "locKey": "Done",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.EditText",
+      "domain": "Actions",
+      "name": "EditText",
+      "locKey": "Edit",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.LoadingAction",
+      "domain": "Actions",
+      "name": "LoadingAction",
+      "locKey": "Loading",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.LoadingText",
+      "domain": "Actions",
+      "name": "LoadingText",
+      "locKey": "Loading",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.LogOut",
+      "domain": "Actions",
+      "name": "LogOut",
+      "locKey": "Log out",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.LogOutAction",
+      "domain": "Actions",
+      "name": "LogOutAction",
+      "locKey": "Log out",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.LogOutText",
+      "domain": "Actions",
+      "name": "LogOutText",
+      "locKey": "Log out",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.NoText",
+      "domain": "Actions",
+      "name": "NoText",
+      "locKey": "No",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.OkAction",
+      "domain": "Actions",
+      "name": "OkAction",
+      "locKey": "Ok",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.OkText",
+      "domain": "Actions",
+      "name": "OkText",
+      "locKey": "Ok",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.RefreshText",
+      "domain": "Actions",
+      "name": "RefreshText",
+      "locKey": "Refresh",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.RemoveAction",
+      "domain": "Actions",
+      "name": "RemoveAction",
+      "locKey": "Remove",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.RemoveText",
+      "domain": "Actions",
+      "name": "RemoveText",
+      "locKey": "Remove",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.ResetText",
+      "domain": "Actions",
+      "name": "ResetText",
+      "locKey": "Reset",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.Retry",
+      "domain": "Actions",
+      "name": "Retry",
+      "locKey": "Retry",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.RetryAction",
+      "domain": "Actions",
+      "name": "RetryAction",
+      "locKey": "Retry",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.RetryText",
+      "domain": "Actions",
+      "name": "RetryText",
+      "locKey": "Retry",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SaveText",
+      "domain": "Actions",
+      "name": "SaveText",
+      "locKey": "Save",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SearchAction",
+      "domain": "Actions",
+      "name": "SearchAction",
+      "locKey": "Search",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SearchText",
+      "domain": "Actions",
+      "name": "SearchText",
+      "locKey": "Search",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SelectAction",
+      "domain": "Actions",
+      "name": "SelectAction",
+      "locKey": "Select",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SelectText",
+      "domain": "Actions",
+      "name": "SelectText",
+      "locKey": "Select",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.Submit",
+      "domain": "Actions",
+      "name": "Submit",
+      "locKey": "Submit",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SubmitAction",
+      "domain": "Actions",
+      "name": "SubmitAction",
+      "locKey": "Submit",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.SubmitText",
+      "domain": "Actions",
+      "name": "SubmitText",
+      "locKey": "Submit",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Actions.YesText",
+      "domain": "Actions",
+      "name": "YesText",
+      "locKey": "Yes",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Auction_CurrentBid",
+      "domain": "Auction",
+      "name": "Auction_CurrentBid",
+      "locKey": "Auction_CurrentBid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Auction_LeaderDemo",
+      "domain": "Auction",
+      "name": "Auction_LeaderDemo",
+      "locKey": "Auction_LeaderDemo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Auction_Slot_Format",
+      "domain": "Auction",
+      "name": "Auction_Slot_Format",
+      "locKey": "Auction_Slot_Format",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Auction_YourBidLabel",
+      "domain": "Auction",
+      "name": "Auction_YourBidLabel",
+      "locKey": "Auction_YourBidLabel",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.AuctionCurrentBid",
+      "domain": "Auction",
+      "name": "AuctionCurrentBid",
+      "locKey": "Auction_CurrentBid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.AuctionLeaderDemo",
+      "domain": "Auction",
+      "name": "AuctionLeaderDemo",
+      "locKey": "Auction_LeaderDemo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.AuctionSlotFormat",
+      "domain": "Auction",
+      "name": "AuctionSlotFormat",
+      "locKey": "Auction_Slot_Format",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.AuctionTimerDemo",
+      "domain": "Auction",
+      "name": "AuctionTimerDemo",
+      "locKey": "Auction_TimerDemo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.AuctionYourBidLabel",
+      "domain": "Auction",
+      "name": "AuctionYourBidLabel",
+      "locKey": "Auction_YourBidLabel",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.CurrentBid",
+      "domain": "Auction",
+      "name": "CurrentBid",
+      "locKey": "Auction_CurrentBid",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.LeaderDemo",
+      "domain": "Auction",
+      "name": "LeaderDemo",
+      "locKey": "Auction_LeaderDemo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Slot_Format",
+      "domain": "Auction",
+      "name": "Slot_Format",
+      "locKey": "Auction_Slot_Format",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.TimerDemo",
+      "domain": "Auction",
+      "name": "TimerDemo",
+      "locKey": "Auction_TimerDemo",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.YourBidLabel",
+      "domain": "Auction",
+      "name": "YourBidLabel",
+      "locKey": "Auction_YourBidLabel",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_FaceId_Bound",
+      "domain": "Auth",
+      "name": "Auth_FaceId_Bound",
+      "locKey": "Auth_FaceId_Bound",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_FaceId_Delete",
+      "domain": "Auth",
+      "name": "Auth_FaceId_Delete",
+      "locKey": "Auth_FaceId_Delete",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_FaceId_Hint",
+      "domain": "Auth",
+      "name": "Auth_FaceId_Hint",
+      "locKey": "Auth_FaceId_Hint",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_FaceId_Title",
+      "domain": "Auth",
+      "name": "Auth_FaceId_Title",
+      "locKey": "Auth_FaceId_Title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_NotLinked",
+      "domain": "Auth",
+      "name": "Auth_NotLinked",
+      "locKey": "Auth_NotLinked",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_Passkeys_Subtitle",
+      "domain": "Auth",
+      "name": "Auth_Passkeys_Subtitle",
+      "locKey": "Auth_Passkeys_Subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.Auth_Telegram_Subtitle",
+      "domain": "Auth",
+      "name": "Auth_Telegram_Subtitle",
+      "locKey": "Auth_Telegram_Subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthCloseText",
+      "domain": "Auth",
+      "name": "AuthCloseText",
+      "locKey": "OAuth_Close",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthError",
+      "domain": "Auth",
+      "name": "AuthError",
+      "locKey": "OAuth_AuthError",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthFaceIdBound",
+      "domain": "Auth",
+      "name": "AuthFaceIdBound",
+      "locKey": "Auth_FaceId_Bound",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthFaceIdDelete",
+      "domain": "Auth",
+      "name": "AuthFaceIdDelete",
+      "locKey": "Auth_FaceId_Delete",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthFaceIdHint",
+      "domain": "Auth",
+      "name": "AuthFaceIdHint",
+      "locKey": "Auth_FaceId_Hint",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthFaceIdTitle",
+      "domain": "Auth",
+      "name": "AuthFaceIdTitle",
+      "locKey": "Auth_FaceId_Title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthNotLinked",
+      "domain": "Auth",
+      "name": "AuthNotLinked",
+      "locKey": "Auth_NotLinked",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthPasskeysSubtitle",
+      "domain": "Auth",
+      "name": "AuthPasskeysSubtitle",
+      "locKey": "Auth_Passkeys_Subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthPhoneLabel",
+      "domain": "Auth",
+      "name": "AuthPhoneLabel",
+      "locKey": "SignIn_PhoneLabel",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.AuthTelegramSubtitle",
+      "domain": "Auth",
+      "name": "AuthTelegramSubtitle",
+      "locKey": "Auth_Telegram_Subtitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.CenterFace",
+      "domain": "Auth",
+      "name": "CenterFace",
+      "locKey": "FaceId_CenterFace",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.ConfirmAndSignIn",
+      "domain": "Auth",
+      "name": "ConfirmAndSignIn",
+      "locKey": "SignIn_ConfirmAndSignIn",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_Bound",
+      "domain": "Auth",
+      "name": "FaceId_Bound",
+      "locKey": "Auth_FaceId_Bound",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_CenterFace",
+      "domain": "Auth",
+      "name": "FaceId_CenterFace",
+      "locKey": "FaceId_CenterFace",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_Delete",
+      "domain": "Auth",
+      "name": "FaceId_Delete",
+      "locKey": "Auth_FaceId_Delete",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_Hint",
+      "domain": "Auth",
+      "name": "FaceId_Hint",
+      "locKey": "Auth_FaceId_Hint",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_LookStraight",
+      "domain": "Auth",
+      "name": "FaceId_LookStraight",
+      "locKey": "FaceId_LookStraight",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_Title",
+      "domain": "Auth",
+      "name": "FaceId_Title",
+      "locKey": "Auth_FaceId_Title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_TurnLeft",
+      "domain": "Auth",
+      "name": "FaceId_TurnLeft",
+      "locKey": "FaceId_TurnLeft",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceId_TurnRight",
+      "domain": "Auth",
+      "name": "FaceId_TurnRight",
+      "locKey": "FaceId_TurnRight",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdBound",
+      "domain": "Auth",
+      "name": "FaceIdBound",
+      "locKey": "Auth_FaceId_Bound",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdCenterFace",
+      "domain": "Auth",
+      "name": "FaceIdCenterFace",
+      "locKey": "FaceId_CenterFace",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdDelete",
+      "domain": "Auth",
+      "name": "FaceIdDelete",
+      "locKey": "Auth_FaceId_Delete",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdHint",
+      "domain": "Auth",
+      "name": "FaceIdHint",
+      "locKey": "Auth_FaceId_Hint",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdLookStraight",
+      "domain": "Auth",
+      "name": "FaceIdLookStraight",
+      "locKey": "FaceId_LookStraight",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdTitle",
+      "domain": "Auth",
+      "name": "FaceIdTitle",
+      "locKey": "Auth_FaceId_Title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdTurnLeft",
+      "domain": "Auth",
+      "name": "FaceIdTurnLeft",
+      "locKey": "FaceId_TurnLeft",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceIdTurnRight",
+      "domain": "Auth",
+      "name": "FaceIdTurnRight",
+      "locKey": "FaceId_TurnRight",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FastAccessNotice",
+      "domain": "Auth",
+      "name": "FastAccessNotice",
+      "locKey": "SignIn_FastAccessNotice",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.GoogleProcessing",
+      "domain": "Auth",
+      "name": "GoogleProcessing",
+      "locKey": "OAuth_GoogleProcessing",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.GoogleTitle",
+      "domain": "Auth",
+      "name": "GoogleTitle",
+      "locKey": "OAuth_GoogleTitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.LookStraight",
+      "domain": "Auth",
+      "name": "LookStraight",
+      "locKey": "FaceId_LookStraight",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.NotLinked",
+      "domain": "Auth",
+      "name": "NotLinked",
+      "locKey": "Auth_NotLinked",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_AuthError",
+      "domain": "Auth",
+      "name": "OAuth_AuthError",
+      "locKey": "OAuth_AuthError",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_Close",
+      "domain": "Auth",
+      "name": "OAuth_Close",
+      "locKey": "OAuth_Close",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_GoogleProcessing",
+      "domain": "Auth",
+      "name": "OAuth_GoogleProcessing",
+      "locKey": "OAuth_GoogleProcessing",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_GoogleTitle",
+      "domain": "Auth",
+      "name": "OAuth_GoogleTitle",
+      "locKey": "OAuth_GoogleTitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_PageTitleGoogle",
+      "domain": "Auth",
+      "name": "OAuth_PageTitleGoogle",
+      "locKey": "OAuth_PageTitleGoogle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_PageTitleTelegram",
+      "domain": "Auth",
+      "name": "OAuth_PageTitleTelegram",
+      "locKey": "OAuth_PageTitleTelegram",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_Retry",
+      "domain": "Auth",
+      "name": "OAuth_Retry",
+      "locKey": "OAuth_Retry",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_TelegramProcessing",
+      "domain": "Auth",
+      "name": "OAuth_TelegramProcessing",
+      "locKey": "OAuth_TelegramProcessing",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuth_TelegramTitle",
+      "domain": "Auth",
+      "name": "OAuth_TelegramTitle",
+      "locKey": "OAuth_TelegramTitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    }
+  ]
+}

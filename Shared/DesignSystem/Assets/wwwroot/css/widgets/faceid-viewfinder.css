@@ -37,6 +37,12 @@
     box-shadow: 0 0 30px var(--md-sys-color-primary-container);
 }
 
+.faceid-scanner-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .faceid-scanner-frame.scanning {
     border-color: var(--md-sys-color-tertiary);
     box-shadow: 0 0 40px var(--md-sys-color-tertiary-container);
@@ -123,4 +129,20 @@ md-dialog.faceid-profile-modal md-list {
     border-radius: var(--md-sys-shape-expressive-button);
     background: var(--md-sys-color-surface-container);
     overflow: hidden;
+}
+
+:where(.faceid-status-text.status-neutral) {
+    color: var(--md-sys-color-primary);
+}
+
+:where(.faceid-status-text.status-warning) {
+    color: var(--md-sys-color-tertiary);
+}
+
+:where(.faceid-status-text.status-success) {
+    color: var(--md-sys-color-primary);
+}
+
+:where(.faceid-status-text.status-error) {
+    color: var(--md-sys-color-error);
 }

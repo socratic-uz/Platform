@@ -1,23 +1,21 @@
 {
-  "generatedAt": "2026-10-13T08:03:28.160Z",
+  "generatedAt": "2026-10-22T13:17:07.675Z",
   "summary": {
-    "totalWebComponentsUsed": 395,
+    "totalWebComponentsUsed": 232,
     "uniqueComponentsCount": 47,
-    "sourceFilesScanned": 537
+    "sourceFilesScanned": 645
   },
   "webComponents": [
     {
       "component": "md-icon",
-      "count": 340,
-      "filesCount": 47,
+      "count": 177,
+      "filesCount": 35,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor",
         "Platform/Shared/DesignSystem/Layout/Components/Counter.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/LanguageSelector.razor",
         "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
         "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Platform/Shared/DesignSystem/Layout/Routes.razor",
-        "Platform/Shared/DesignSystem/Material.Web/Components/Button.razor",
         "Platform/Shared/DesignSystem/Material.Web/Components/Chip.razor",
         "Platform/Shared/DesignSystem/Material.Web/Components/ColorPicker.razor",
         "Platform/Shared/DesignSystem/Material.Web/Components/Fab.razor",
@@ -30,14 +28,6 @@
         "Platform/Shared/DesignSystem/Material.Web/Components/SubMenu.razor",
         "Platform/Shared/DesignSystem/Material.Web/Components/Tab.razor",
         "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor",
-        "Retail/Checkout/Pages/Payment.razor",
-        "Retail/Checkout/Widgets/OrderDrawer.razor",
-        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
-        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor",
-        "Retail/Orders/Pages/OrderItems/Grid.razor",
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Grid.razor",
-        "Retail/Orders/Pages/Orders/Index.razor",
         "Retail/PointOfSale/Pages/Kiosk.razor",
         "Retail/PointOfSale/Pages/ProductPage.razor",
         "Retail/PointOfSale/Pages/Terminal.razor",
@@ -45,8 +35,6 @@
         "Portal/Identity/Pages/SignIn.razor",
         "Portal/Identity/Pages/SignInGoogleCallback.razor",
         "Portal/Identity/Pages/SignInTelegramCallback.razor",
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Analytics.razor",
         "Portal/Landing/Pages/Docs.razor",
         "Portal/Landing/Pages/Help.razor",
         "Portal/Landing/Pages/QR.razor",

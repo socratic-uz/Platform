@@ -12,7 +12,11 @@ All Socratic frontend components (`.razor`, `.razor.css`, `.css`) must strictly 
 - **Extra-Large**: `$\ge 1600px$` (Back-office Desktop, Ultrawide, 4K) -> `@media (min-width: 1600px)`
 
 > [!CAUTION]
-> **Strict Prohibition**: Ad-hoc breakpoints like `768px`, `992px`, `1024px`, or `1366px` are strictly forbidden. Use M3 standard breakpoint queries.
+> **Strict Prohibition**: Ad-hoc breakpoints like `768px`, `992px`, `1024px`, or `1366px` are strictly forbidden for viewport media queries. Use M3 standard breakpoint queries.
+
+### 1.1 Разграничение Macro Layout и Micro Layout:
+* **Macro Layout (Каркас страницы, Shell, Navigation)**: управляется `@media` по каноническим Window Size Classes.
+* **Micro Layout (Компоненты, Карточки, Диалоги, Виджеты)**: управляется через **Container Queries** (`@container (max-width: ...)`). Подробности в [rules/ui-layout-and-geometry.md](file:///c:/Users/owner/source/repos/Socratic/.agents/rules/ui-layout-and-geometry.md).
 
 ---
 
@@ -45,6 +49,6 @@ For portrait kiosks (1080x1920 or higher):
 
 Run `Audit-AdaptiveLayout.ps1` before committing any UI code:
 ```powershell
-pwsh -File .agents/skills/adaptive-layout/scripts/Audit-AdaptiveLayout.ps1 -Path src/Frontend
+pwsh -File .agents/plugins/ecosystem/skills/adaptive-layout/scripts/Audit-AdaptiveLayout.ps1 -Path src/Frontend
 ```
 Violations will fail CI/CD quality gates.

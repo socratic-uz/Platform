@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / smart-data-view.css
+   Pure CSS Grid, MD3 Expressive tokens
+   ========================================================================== */
+
+.smart-data-view {
+    display: grid;
+    gap: 16px;
+}
+
+.smart-data-view-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.smart-view-mode-toggle {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    background: var(--md-sys-color-surface-container-low);
+    padding: 4px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    gap: 8px;
+}

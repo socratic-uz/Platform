@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / smart-filter.css
+   Pure CSS Grid, MD3 Expressive tokens
+   ========================================================================== */
+
+.smart-filter-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    margin-bottom: 16px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.smart-filter-search {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+}
+
+.smart-filter-chips {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+}

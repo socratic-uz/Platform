@@ -12,7 +12,7 @@
     
     Example:
     
-    ... ado.net/XML headers & schema ...
+    ... ado.net/XML headers &amp; schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
@@ -666,7 +666,31 @@
   <data name="Checkout_TabCash" xml:space="preserve">
     <value>Qabul qilishda naqd pul</value>
   </data>
-  <data name="Checkout_TotalLabel" xml:space="preserve">
+    <data name="Checkout_TabPos" xml:space="preserve">
+    <value>Pin-pad (Chip / NFC)</value>
+  </data>
+  <data name="Checkout_TabQr" xml:space="preserve">
+    <value>UzQR / Banklar</value>
+  </data>
+  <data name="Checkout_TabPan" xml:space="preserve">
+    <value>Karta (PAN / OTP)</value>
+  </data>
+  <data name="Checkout_PosWaitingForCard" xml:space="preserve">
+    <value>Karta kutilmoqda...</value>
+  </data>
+  <data name="Checkout_PosWaitingPrompt" xml:space="preserve">
+    <value>Karta chipini o'quvchiga kiriting yoki kontaktsiz karta / smartfonni pin-pad antennasiga yaqinlashtiring</value>
+  </data>
+  <data name="Checkout_PosApproved" xml:space="preserve">
+    <value>To'lov muvaffaqiyatli tasdiqlandi!</value>
+  </data>
+  <data name="Checkout_PosReadyTitle" xml:space="preserve">
+    <value>Pin-pad orqali to'lov</value>
+  </data>
+  <data name="Checkout_PosReadyDesc" xml:space="preserve">
+    <value>Kontaktli chiplar (EMV Chip) va kontaktsiz karta yoki telefon orqali to'lov (NFC) qo'llab-quvvatlanadi</value>
+  </data>
+<data name="Checkout_TotalLabel" xml:space="preserve">
     <value>To'lov uchun:</value>
   </data>
   <data name="Checkout_PayButton" xml:space="preserve">
@@ -1536,7 +1560,7 @@
   <data name="Common_LangEn" xml:space="preserve">
     <value>ING</value>
   </data>
-  <!-- Layout, Header & Global Footer Translations -->
+  <!-- Layout, Header &amp; Global Footer Translations -->
   <data name="Footer_Tagline" xml:space="preserve">
     <value>Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.</value>
   </data>
@@ -1606,7 +1630,7 @@
   <data name="Notice" xml:space="preserve">
     <value>Diqqat</value>
   </data>
-  <!-- Identity & Auth (SignIn) Translations -->
+  <!-- Identity &amp; Auth (SignIn) Translations -->
   <data name="SignIn_Title" xml:space="preserve">
     <value>Socratic ID</value>
   </data>
@@ -1745,4 +1769,1810 @@
   <data name="No" xml:space="preserve">
     <value>Yo'q</value>
   </data>
- </root>
+   <data name="AboutTitleMain" xml:space="preserve">
+    <value>Intellektual ekotizim</value>
+  </data>
+  <data name="AboutTitleSub" xml:space="preserve">
+    <value>omnichannel biznes va savdo uchun</value>
+  </data>
+  <data name="AboutSubtitle" xml:space="preserve">
+    <value>Socratic AI-ko'rish, smart-kiosklar, 3D WebGL va 28 ta universal rejimni yagona muhitda birlashtiradi.</value>
+  </data>
+  <data name="About_VideoBadge" xml:space="preserve">
+    <value>Video taqdimot</value>
+  </data>
+  <data name="About_VideoTitle" xml:space="preserve">
+    <value>Socratic platformasi imkoniyatlari sharhi</value>
+  </data>
+  <data name="About_VideoNotSupported" xml:space="preserve">
+    <value>Brauzeringiz video ijrosini qo'llab-quvvatlamaydi.</value>
+  </data>
+  <data name="About_VideoCaption" xml:space="preserve">
+    <value>Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.</value>
+  </data>
+  <data name="About_PillarsBadge" xml:space="preserve">
+    <value>Asosiy yo'nalishlar</value>
+  </data>
+  <data name="About_PillarsTitle" xml:space="preserve">
+    <value>Socratic arxitekturasining to'rt ustuni</value>
+  </data>
+  <data name="About_PillarsSubtitle" xml:space="preserve">
+    <value>Modulli tuzilma ortiqcha bog'liqliksiz zarur xizmatlarni joylashtirish imkonini beradi.</value>
+  </data>
+  <data name="About_PillarVisionTitle" xml:space="preserve">
+    <value>AI &amp; Kompyuter ko'rishi</value>
+  </data>
+  <data name="About_PillarVisionDesc" xml:space="preserve">
+    <value>Real vaqtda YOLO obyektlarni aniqlash, Face ID biometriyasi va navbatlar tahlili.</value>
+  </data>
+  <data name="About_PillarKioskTitle" xml:space="preserve">
+    <value>Smart-kiosklar va POS</value>
+  </data>
+  <data name="About_PillarKioskDesc" xml:space="preserve">
+    <value>Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.</value>
+  </data>
+  <data name="About_PillarModesTitle" xml:space="preserve">
+    <value>28 ta tijorat UX-rejimi</value>
+  </data>
+  <data name="About_PillarModesDesc" xml:space="preserve">
+    <value>Har qanday ssenariy uchun universal render: restoran, mehmonxona, ijara va auksionlar.</value>
+  </data>
+  <data name="About_PillarStudioTitle" xml:space="preserve">
+    <value>3D &amp; QR Studiya</value>
+  </data>
+  <data name="About_PillarStudioDesc" xml:space="preserve">
+    <value>Interaktiv WebGL xolst, zallarning 3D sxemalari va brendlangan QR-kodlar.</value>
+  </data>
+  <data name="About_ValuesBadge" xml:space="preserve">
+    <value>Muhandislik standartlari</value>
+  </data>
+  <data name="About_ValuesTitle" xml:space="preserve">
+    <value>Murosasiz sifat va unumdorlik</value>
+  </data>
+  <data name="About_ValueFpsTitle" xml:space="preserve">
+    <value>Zero-Flicker &amp; Uskunaviy tezlashtirish</value>
+  </data>
+  <data name="About_ValueFpsDesc" xml:space="preserve">
+    <value>.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.</value>
+  </data>
+  <data name="About_ValuePlatformTitle" xml:space="preserve">
+    <value>Ko'p platformalilik</value>
+  </data>
+  <data name="About_ValuePlatformDesc" xml:space="preserve">
+    <value>Windows, macOS, Android, iOS va veb-mijoz (PWA) uchun yagona kod bazasi.</value>
+  </data>
+  <data name="About_ValueM3Title" xml:space="preserve">
+    <value>Material Design 3 Expressive</value>
+  </data>
+  <data name="About_ValueM3Desc" xml:space="preserve">
+    <value>Asl Material.Web dizayn tizimi, moslashuvchan HSL palitrasi va WCAG 2.1 AA qulayligi.</value>
+  </data>
+  <data name="About_ActionsTitle" xml:space="preserve">
+    <value>Imkoniyatlarni sinab ko'rishga tayyormisiz?</value>
+  </data>
+  <data name="About_ActionsSubtitle" xml:space="preserve">
+    <value>Jonli muhitda interaktiv ssenariylarni hoziroq sinab ko'ring.</value>
+  </data>
+  <data name="About_BtnKiosk" xml:space="preserve">
+    <value>Demo-Kioskni ochish</value>
+  </data>
+  <data name="About_BtnTerminal" xml:space="preserve">
+    <value>POS Terminal</value>
+  </data>
+  <data name="About_BtnDocs" xml:space="preserve">
+    <value>Hujjatlar</value>
+  </data>
+  <data name="Help_CategoriesAria" xml:space="preserve">
+    <value>Savollar toifalari</value>
+  </data>
+  <data name="Help_CatAll" xml:space="preserve">
+    <value>Barcha savollar</value>
+  </data>
+  <data name="Help_CatPos" xml:space="preserve">
+    <value>Kassalar va POS</value>
+  </data>
+  <data name="Help_CatPayments" xml:space="preserve">
+    <value>To'lovlar va QR</value>
+  </data>
+  <data name="Help_CatHardware" xml:space="preserve">
+    <value>Uskunalar</value>
+  </data>
+  <data name="Help_CatAi" xml:space="preserve">
+    <value>AI &amp; Tahlil</value>
+  </data>
+  <data name="Help_CatModes" xml:space="preserve">
+    <value>28 ta UX-rejim</value>
+  </data>
+  <data name="Help_FaqSectionAria" xml:space="preserve">
+    <value>Tez-tez beriladigan savollar</value>
+  </data>
+  <data name="Help_SupportChannelsBadge" xml:space="preserve">
+    <value>To'g'ridan-to'g'ri aloqa</value>
+  </data>
+  <data name="Help_SupportChannelsTitle" xml:space="preserve">
+    <value>Navbatchi muhandis yordami kerakmi?</value>
+  </data>
+  <data name="Help_SupportChannelsSubtitle" xml:space="preserve">
+    <value>Socratic mutaxassislarining tezkor yordami uchun qulay aloqa kanalini tanlang.</value>
+  </data>
+  <data name="Help_CardChatTitle" xml:space="preserve">
+    <value>Onlayn qo'llab-quvvatlash chati</value>
+  </data>
+  <data name="Help_CardChatDesc" xml:space="preserve">
+    <value>O'rnatilgan AI-yordamchisining tezkor maslahatlari va platforma muhandislari.</value>
+  </data>
+  <data name="Help_BtnOpenChat" xml:space="preserve">
+    <value>Chatni ochish</value>
+  </data>
+  <data name="Help_CardPhoneTitle" xml:space="preserve">
+    <value>24/7 navbatchi aloqa liniyasi</value>
+  </data>
+  <data name="Help_CardPhoneDesc" xml:space="preserve">
+    <value>Kassalar mavjudligi, fiskallashtirish va uskunalar ishlashi bo'yicha favqulodda yordam.</value>
+  </data>
+  <data name="Help_CardDocsTitle" xml:space="preserve">
+    <value>Bilimlar bazasi va API</value>
+  </data>
+  <data name="Help_CardDocsDesc" xml:space="preserve">
+    <value>37 ta interaktiv qo'llanma va barcha modullar spetsifikatsiyasi.</value>
+  </data>
+  <data name="Help_FaqKioskLaunchTitle" xml:space="preserve">
+    <value>O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?</value>
+  </data>
+  <data name="Help_FaqKioskLaunchAnswer" xml:space="preserve">
+    <value>Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.</value>
+  </data>
+  <data name="Help_FaqOfflineTitle" xml:space="preserve">
+    <value>Kassa internetsiz oflayn rejimda ishlay oladimi?</value>
+  </data>
+  <data name="Help_FaqOfflineAnswer" xml:space="preserve">
+    <value>Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.</value>
+  </data>
+  <data name="Help_FaqPaymentsTitle" xml:space="preserve">
+    <value>Qaysi to'lov usullari qutidan tashqarida qo'llab-quvvatlanadi?</value>
+  </data>
+  <data name="Help_FaqPaymentsAnswer" xml:space="preserve">
+    <value>Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.</value>
+  </data>
+  <data name="Help_FaqDynamicQrTitle" xml:space="preserve">
+    <value>Xaridor displeyidagi dinamik QR-kod qanday ishlaydi?</value>
+  </data>
+  <data name="Help_FaqDynamicQrAnswer" xml:space="preserve">
+    <value>Buyurtmani hisoblashda kassa moduli noyob QR-kod yaratadi. Xaridor bank ilovasida to'lagandan so'ng chek bir zumda yopiladi.</value>
+  </data>
+  <data name="Help_FaqHardwareTitle" xml:space="preserve">
+    <value>Qanday savdo uskunalari qo'llab-quvvatlanadi?</value>
+  </data>
+  <data name="Help_FaqHardwareAnswer" xml:space="preserve">
+    <value>Hardware.Device moduli ESC/POS chek printerlari, 2D skanerlar, savdo tarozilari va pul qutilarini qo'llab-quvvatlaydi.</value>
+  </data>
+  <data name="Help_FaqHardwareStatusTitle" xml:space="preserve">
+    <value>Uskunaning ulanish holatini qanday tekshirish mumkin?</value>
+  </data>
+  <data name="Help_FaqHardwareStatusAnswer" xml:space="preserve">
+    <value>«Uskunalar» (/hardware) bo'limiga o'ting. Boshqaruv panelida har bir qurilmaning holati va diagnostika jurnali ko'rsatiladi.</value>
+  </data>
+  <data name="Help_FaqAiTitle" xml:space="preserve">
+    <value>Yuzni tanish va navbatlarni aniqlash qanday ishlaydi?</value>
+  </data>
+  <data name="Help_FaqAiAnswer" xml:space="preserve">
+    <value>Intelligence moduli mahalliy YOLO va FaceNet neyrotarmoqlaridan foydalanadi. Kamera video oqimi real vaqtda qayta ishlanadi.</value>
+  </data>
+  <data name="Help_FaqModesTitle" xml:space="preserve">
+    <value>28 ta tijorat UX-rejimi nimani anglatadi?</value>
+  </data>
+  <data name="Help_FaqModesAnswer" xml:space="preserve">
+    <value>Bu universal UniversalProductExperienceRenderer mexanizmi. U har qanday biznes turiga interfeysni moslashtiradi.</value>
+  </data>
+  <data name="Analytics_Dashboard" xml:space="preserve">
+    <value>Boshqaruv paneli</value>
+  </data>
+  <data name="Analytics_Explorer" xml:space="preserve">
+    <value>Reyestrlar</value>
+  </data>
+  <data name="Analytics_Configure" xml:space="preserve">
+    <value>Sozlash</value>
+  </data>
+  <data name="Analytics_ConfigureTooltip" xml:space="preserve">
+    <value>Tahlil vidjetlarini sozlash</value>
+  </data>
+  <data name="Analytics_PeriodLabel" xml:space="preserve">
+    <value>Tahlil davri</value>
+  </data>
+  <data name="Analytics_RealtimeStatus" xml:space="preserve">
+    <value>Haqiqiy vaqtda yangilangan</value>
+  </data>
+  <data name="Analytics_RevenuePeriod" xml:space="preserve">
+    <value>Davr uchun tushum</value>
+  </data>
+  <data name="Analytics_ActualSales" xml:space="preserve">
+    <value>Haqiqiy sotuvlar</value>
+  </data>
+  <data name="Analytics_OrdersCount" xml:space="preserve">
+    <value>Buyurtmalar soni</value>
+  </data>
+  <data name="Analytics_CompletedReceipts" xml:space="preserve">
+    <value>Rasmilashtirilgan cheklar</value>
+  </data>
+  <data name="Analytics_AverageBill" xml:space="preserve">
+    <value>O'rtacha chek</value>
+  </data>
+  <data name="Analytics_PerTransaction" xml:space="preserve">
+    <value>Bitta tranzaksiya uchun</value>
+  </data>
+  <data name="Analytics_FiscalRatio" xml:space="preserve">
+    <value>Fiskallashtirish ulushi</value>
+  </data>
+  <data name="Analytics_OfdReceipts" xml:space="preserve">
+    <value>DSQ OFD cheklari</value>
+  </data>
+  <data name="Analytics_TopProducts" xml:space="preserve">
+    <value>Eng ko'p sotiladigan tovarlar</value>
+  </data>
+  <data name="Analytics_ByRevenue" xml:space="preserve">
+    <value>tanlangan davr uchun tushum bo'yicha</value>
+  </data>
+  <data name="Analytics_PaymentChannels" xml:space="preserve">
+    <value>To'lov kanallari</value>
+  </data>
+  <data name="Analytics_DistributionShare" xml:space="preserve">
+    <value>ulushlar taqsimoti</value>
+  </data>
+  <data name="Analytics_TerminalPerformance" xml:space="preserve">
+    <value>Terminallar va kiosklar samaradorligi</value>
+  </data>
+  <data name="Analytics_ConfigTitle" xml:space="preserve">
+    <value>Tahlil vidjetlarini sozlash</value>
+  </data>
+  <data name="Analytics_ShowRevenue" xml:space="preserve">
+    <value>Tushum kartochkasi</value>
+  </data>
+  <data name="Analytics_ShowOrders" xml:space="preserve">
+    <value>Buyurtmalar kartochkasi</value>
+  </data>
+  <data name="Analytics_ShowAvgCheck" xml:space="preserve">
+    <value>O'rtacha chek kartochkasi</value>
+  </data>
+  <data name="Analytics_ShowFiscal" xml:space="preserve">
+    <value>Fiskallashtirish kartochkasi</value>
+  </data>
+  <data name="Analytics_ShowTopProducts" xml:space="preserve">
+    <value>Eng yaxshi tovarlar jadvali</value>
+  </data>
+  <data name="Analytics_ShowPayments" xml:space="preserve">
+    <value>To'lovlar diagrammasi</value>
+  </data>
+  <data name="Analytics_ShowTerminals" xml:space="preserve">
+    <value>Terminallar jadvali</value>
+  </data>
+  <data name="QR_Title" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="QR_BackToTerminal" xml:space="preserve">
+    <value>Terminalga qaytish</value>
+  </data>
+  <data name="QR_SearchProducts" xml:space="preserve">
+    <value>Mahsulotlarni qidirish</value>
+  </data>
+  <data name="AboutPageTitle" xml:space="preserve">
+    <value>Platforma haqida — Socratic</value>
+  </data>
+  <data name="AboutBadge" xml:space="preserve">
+    <value>Socratic platformasi haqida</value>
+  </data>
+  <data name="QuickActions" xml:space="preserve">
+    <value>Tezkor harakatlar</value>
+  </data>
+  <data name="NavHome" xml:space="preserve">
+    <value>Bosh sahifa</value>
+  </data>
+  <data name="NavWishList" xml:space="preserve">
+    <value>Saralanganlar</value>
+  </data>
+  <data name="NavChat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="NavOrders" xml:space="preserve">
+    <value>Buyurtmalar</value>
+  </data>
+  <data name="NavAnalytics" xml:space="preserve">
+    <value>Tahlil</value>
+  </data>
+  <data name="HelpPageTitle" xml:space="preserve">
+    <value>Qo'llab-quvvatlash markazi va FAQ | Socratic</value>
+  </data>
+  <data name="HelpBadge" xml:space="preserve">
+    <value>Qo'llab-quvvatlash markazi va FAQ</value>
+  </data>
+  <data name="HelpTitleMain" xml:space="preserve">
+    <value>Qo'llab-quvvatlash markazi</value>
+  </data>
+  <data name="HelpTitleSub" xml:space="preserve">
+    <value>va tez-tez beriladigan savollar bazasi (FAQ)</value>
+  </data>
+  <data name="HelpSubtitle" xml:space="preserve">
+    <value>Kassa apparatlari, smart-kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.</value>
+  </data>
+  <data name="Help_BtnDocs" xml:space="preserve">
+    <value>Hujjatlarga o'tish</value>
+  </data>
+  <data name="Help_PhoneLabel" xml:space="preserve">
+    <value>+998 (71) 200-00-00</value>
+  </data>
+  <data name="Help_TelegramLabel" xml:space="preserve">
+    <value>Telegram: @socratic_support</value>
+  </data>
+  <data name="Docs_PageTitle" xml:space="preserve">
+    <value>Tizim hujjatlari | Socratic</value>
+  </data>
+  <data name="Docs_Navigation" xml:space="preserve">
+    <value>Navigatsiya</value>
+  </data>
+  <data name="Docs_RefreshList" xml:space="preserve">
+    <value>Ro'yxatni yangilash</value>
+  </data>
+  <data name="Docs_NoDocsAvailable" xml:space="preserve">
+    <value>Mavjud hujjatlar yo'q</value>
+  </data>
+  <data name="Docs_ShowMenu" xml:space="preserve">
+    <value>Menyuni ko'rsatish</value>
+  </data>
+  <data name="Docs_LoadingDoc" xml:space="preserve">
+    <value>Hujjat yuklanmoqda...</value>
+  </data>
+  <data name="Docs_WelcomeTitle" xml:space="preserve">
+    <value>Socratic tizimi hujjatlari</value>
+  </data>
+  <data name="Docs_WelcomeDesc" xml:space="preserve">
+    <value>Mikroservislarning arxitekturasi, API va ma'lumotlar bazalari bo'yicha batafsil ma'lumot olish uchun yon paneldagi kerakli bo'limni tanlang.</value>
+  </data>
+  <data name="QrDesigner_PageTitle" xml:space="preserve">
+    <value>QrDesigner — Dinamik QR-kodlar generatori</value>
+  </data>
+  <data name="QrDesigner_Title" xml:space="preserve">
+    <value>Dinamik QR-dizayner</value>
+  </data>
+  <data name="QrDesigner_Subtitle" xml:space="preserve">
+    <value>To'lovlar, fiskal cheklar va oldindan buyurtma uchun brendli QR-kodlar yaratish</value>
+  </data>
+  <data name="QrDesigner_QuickPresets" xml:space="preserve">
+    <value>Tezkor presetlar:</value>
+  </data>
+  <data name="QrDesigner_PresetFiscalReceipt" xml:space="preserve">
+    <value>🧾 OFD Chek</value>
+  </data>
+  <data name="QrDesigner_PresetPayment" xml:space="preserve">
+    <value>💳 To'lov (Click/Payme)</value>
+  </data>
+  <data name="QrDesigner_PresetTableOrder" xml:space="preserve">
+    <value>🍽️ Stol menyusi</value>
+  </data>
+  <data name="QrDesigner_SectionDataParams" xml:space="preserve">
+    <value>Ma'lumotlar parametrlari</value>
+  </data>
+  <data name="QrDesigner_PayloadLabel" xml:space="preserve">
+    <value>Foydali yuklama (URL yoki matn)</value>
+  </data>
+  <data name="QrDesigner_LogoLabel" xml:space="preserve">
+    <value>Markazdagi logotip URL manzili (ixtiyoriy)</value>
+  </data>
+  <data name="QrDesigner_SectionColors" xml:space="preserve">
+    <value>Ranglar va brending</value>
+  </data>
+  <data name="QrDesigner_PrimaryColor" xml:space="preserve">
+    <value>Asosiy rang:</value>
+  </data>
+  <data name="QrDesigner_BackgroundColor" xml:space="preserve">
+    <value>Orqa fon rangi:</value>
+  </data>
+  <data name="QrDesigner_CornerColor" xml:space="preserve">
+    <value>Burchaklar rangi:</value>
+  </data>
+  <data name="QrDesigner_CornerDotColor" xml:space="preserve">
+    <value>Burchak nuqtalari rangi:</value>
+  </data>
+  <data name="QrDesigner_SectionGeometry" xml:space="preserve">
+    <value>Geometriya va uslub</value>
+  </data>
+  <data name="QrDesigner_DotTypeLabel" xml:space="preserve">
+    <value>Nuqtalar shakli (Dot Type)</value>
+  </data>
+  <data name="QrDesigner_CornerTypeLabel" xml:space="preserve">
+    <value>Burchak ramkalari shakli (Corner Type)</value>
+  </data>
+  <data name="QrDesigner_PrintHint" xml:space="preserve">
+    <value>ESC/POS termoprinterida chop etishga yoki kiosk ekranida ko'rsatishga tayyor</value>
+  </data>
+  <data name="QrDesigner_BackToTerminal" xml:space="preserve">
+    <value>Terminalga qaytish</value>
+  </data>
+  <data name="QrDesigner_SearchProducts" xml:space="preserve">
+    <value>Mahsulotlarni qidirish</value>
+  </data>
+  <data name="QrDesigner_Places" xml:space="preserve">
+    <value>Joylar</value>
+  </data>
+  <data name="QrDesigner_SelectAll" xml:space="preserve">
+    <value>Barchasini tanlash</value>
+  </data>
+  <data name="QrDesigner_DeselectAll" xml:space="preserve">
+    <value>Tanlovni bekor qilish</value>
+  </data>
+  <data name="QrDesigner_Menu" xml:space="preserve">
+    <value>Menyu</value>
+  </data>
+  <data name="QrDesigner_NoProductsFound" xml:space="preserve">
+    <value>Mahsulotlar topilmadi</value>
+  </data>
+  <data name="QrDesigner_PrintAction" xml:space="preserve">
+    <value>QR-kodlarni chop etish</value>
+  </data>
+  <data name="QrDesigner_PreviewHeading" xml:space="preserve">
+    <value>Oldindan ko'rish</value>
+  </data>
+  <data name="QrDesigner_CardsCount" xml:space="preserve">
+    <value>karta</value>
+  </data>
+  <data name="QrDesigner_ScanToOrder" xml:space="preserve">
+    <value>Buyurtma berish uchun skanerlang</value>
+  </data>
+  <data name="QrDesigner_SelectItemsToPreview" xml:space="preserve">
+    <value>Oldindan ko'rish uchun elementlarni tanlang</value>
+  </data>
+  <data name="QrDesigner_SelectItemsHint" xml:space="preserve">
+    <value>Chap paneldan joylar yoki menyu taomlarini tanlang</value>
+  </data>
+  <data name="QrDesigner_SvgRendererTitle" xml:space="preserve">
+    <value>Interaktiv SVG rendereri</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Ko‘rib chiqish</value>
+  </data>
+  <data name="WishList_EmptyTitle" xml:space="preserve">
+    <value>Sevimlilar ro‘yxati bo‘sh</value>
+  </data>
+  <data name="WishList_EmptyDesc" xml:space="preserve">
+    <value>Katalogdan yoqqan tovarlarni yurakchani bosib qo‘shing</value>
+  </data>
+  <data name="WishList_BrowseCatalog" xml:space="preserve">
+    <value>Katalogga o‘tish</value>
+  </data>
+  <data name="Kiosk_Calculator_Parametric" xml:space="preserve">
+    <value>Parametrlarni interaktiv hisoblash</value>
+  </data>
+  <data name="Kiosk_Service_FastDispatch" xml:space="preserve">
+    <value>Mutaxassis chiqishi</value>
+  </data>
+  <data name="Kiosk_Gift_Digital" xml:space="preserve">
+    <value>Elektron kod</value>
+  </data>
+  <data name="Kiosk_Apply_Online" xml:space="preserve">
+    <value>Validatsiya bilan onlayn-anketa</value>
+  </data>
+  <data name="Kiosk_TapOrInsert" xml:space="preserve">
+    <value>Kartani pin-padga tekkizing yoki chip bilan kiriting</value>
+  </data>
+  <data name="Kiosk_SubscriptionAndPlan" xml:space="preserve">
+    <value>Tarif va reklamani boshqarish</value>
+  </data>
+  <data name="Kiosk_TestScreensaver" xml:space="preserve">
+    <value>Screensaver reklamani tekshirish</value>
+  </data>
+  <data name="Kiosk_ReceiptFiscalSoliq" xml:space="preserve">
+    <value>Soliq.uz elektron fiskal cheki</value>
+  </data>
+  <data name="Kiosk_WaitingForCard" xml:space="preserve">
+    <value>Karta kutilmoqda...</value>
+  </data>
+  <data name="Kiosk_PayByCardPinPad" xml:space="preserve">
+    <value>Karta bilan to'lash (POS Pin-pad)</value>
+  </data>
+  <data name="Kiosk_PayAtCashDesk" xml:space="preserve">
+    <value>Kassada to'lash / QR</value>
+  </data>
+  <data name="Kiosk_OrderCheckout" xml:space="preserve">
+    <value>Buyurtmani rasmiylashtirish</value>
+  </data>
+  <data name="Kiosk_Items" xml:space="preserve">
+    <value>ta element</value>
+  </data>
+  <data name="Terminal_Organization" xml:space="preserve">
+    <value>Tashkilot</value>
+  </data>
+  <data name="Terminal_QrGenerator" xml:space="preserve">
+    <value>QR Generator</value>
+  </data>
+  <data name="Terminal_NothingFound" xml:space="preserve">
+    <value>Hech narsa topilmadi</value>
+  </data>
+  <data name="Terminal_Print" xml:space="preserve">
+    <value>Chop etish</value>
+  </data>
+  <data name="Terminal_EditProduct" xml:space="preserve">
+    <value>Mahsulotni tahrirlash</value>
+  </data>
+  <data name="Terminal_OrderPayment" xml:space="preserve">
+    <value>Buyurtma to'lovi</value>
+  </data>
+  <data name="Terminal_ReceivedCash" xml:space="preserve">
+    <value>Xaridordan qabul qilindi (so'm):</value>
+  </data>
+  <data name="Terminal_Exact" xml:space="preserve">
+    <value>Aniq</value>
+  </data>
+  <data name="Terminal_ChangeToCustomer" xml:space="preserve">
+    <value>Xaridorga qaytim:</value>
+  </data>
+  <data name="Terminal_Shortage" xml:space="preserve">
+    <value>Yetmayapti:</value>
+  </data>
+  <data name="Terminal_ConfirmCashPayment" xml:space="preserve">
+    <value>Naqd pul to'lovini amalga oshirish</value>
+  </data>
+  <data name="Terminal_CancelOperation" xml:space="preserve">
+    <value>Operatsiyani bekor qilish</value>
+  </data>
+  <data name="Terminal_SendAmountToPinPad" xml:space="preserve">
+    <value>POS Pin-pad qabul qilishga tayyor</value>
+  </data>
+  <data name="Terminal_SumToCharge" xml:space="preserve">
+    <value>Yechib olinadigan summa:</value>
+  </data>
+  <data name="Terminal_ActivatePinPad" xml:space="preserve">
+    <value>Summani pin-padga yuborish</value>
+  </data>
+  <data name="Terminal_ScanUzQr" xml:space="preserve">
+    <value>Yagona milliy QR (MB O'zR)</value>
+  </data>
+  <data name="Terminal_ConfirmUzQr" xml:space="preserve">
+    <value>QR orqali to'lovni tasdiqlash</value>
+  </data>
+  <data name="Terminal_CardNumberPan" xml:space="preserve">
+    <value>Karta raqami (16 raqam):</value>
+  </data>
+  <data name="Terminal_ExpiryDate" xml:space="preserve">
+    <value>Amal qilish muddati (OO/YY):</value>
+  </data>
+  <data name="Terminal_SmsOtpCode" xml:space="preserve">
+    <value>SMS tasdiqlash kodi (OTP):</value>
+  </data>
+  <data name="Terminal_ConfirmAndCharge" xml:space="preserve">
+    <value>Tasdiqlash va yechish</value>
+  </data>
+  <data name="Terminal_SendSmsCode" xml:space="preserve">
+    <value>SMS kodni so'rash (OTP)</value>
+  </data>
+  <data name="Terminal_DeleteReceipt" xml:space="preserve">
+    <value>Chekni o'chirish</value>
+  </data>
+  <data name="Terminal_NewReceipt" xml:space="preserve">
+    <value>Yangi chek yaratish</value>
+  </data>
+  <data name="WishListSubtitle" xml:space="preserve">
+    <value>Saqlangan va yoqqan tovarlar</value>
+  </data>
+  <data name="Order_ItemsCount" xml:space="preserve">
+    <value>Buyurtmadagi tovarlar</value>
+  </data>
+  <data name="Order_AddMoreProducts" xml:space="preserve">
+    <value>Yana mahsulot qo'shish</value>
+  </data>
+  <data name="Order_EmptyTitle" xml:space="preserve">
+    <value>Buyurtmada hozircha mahsulot yo'q</value>
+  </data>
+  <data name="Order_EmptySubtitle" xml:space="preserve">
+    <value>Katalogdan tovar yoki xizmatlarni tanlang</value>
+  </data>
+  <data name="Order_ItemsUnit" xml:space="preserve">
+    <value>dona</value>
+  </data>
+  <data name="Geo_InteractiveMapOffline" xml:space="preserve">
+    <value>Interaktiv xarita (yo‘nalish kiritilgan nuqtalar bo‘yicha hisoblanadi)</value>
+  </data>
+  <data name="Subscription_Title_Membership" xml:space="preserve">
+    <value>💳 Klub abonementi / A'zolik</value>
+  </data>
+  <data name="Subscription_Title_Recurring" xml:space="preserve">
+    <value>🔄 Muntazam obuna &amp; Tarif</value>
+  </data>
+  <data name="Subscription_Plan_Membership" xml:space="preserve">
+    <value>All-Inclusive VIP abonementi</value>
+  </data>
+  <data name="Subscription_Plan_Recurring" xml:space="preserve">
+    <value>PRO Cloud tarif rejasi</value>
+  </data>
+  <data name="Subscription_Badge_Membership" xml:space="preserve">
+    <value>Cheksiz kirish</value>
+  </data>
+  <data name="Subscription_Badge_Recurring" xml:space="preserve">
+    <value>Ommabop tanlov</value>
+  </data>
+  <data name="Subscription_Desc_Membership" xml:space="preserve">
+    <value>Barcha zallar va spa-zonalarga to'liq kirish, kirish mashg'ulotlari va shkaf kiritilgan.</value>
+  </data>
+  <data name="Subscription_Desc_Recurring" xml:space="preserve">
+    <value>Har 30 kunda kirishni avtomatik uzaytirish. Obunani istalgan vaqtda 1 bosishda bekor qilish.</value>
+  </data>
+  <data name="Subscription_Period_Membership" xml:space="preserve">
+    <value>Abonementning amal qilish muddati:</value>
+  </data>
+  <data name="Subscription_Period_Recurring" xml:space="preserve">
+    <value>To'lov davri:</value>
+  </data>
+  <data name="Subscription_Duration_1Month" xml:space="preserve">
+    <value>1 oy</value>
+  </data>
+  <data name="Subscription_Duration_Monthly" xml:space="preserve">
+    <value>Oylik</value>
+  </data>
+  <data name="Subscription_Duration_3Months" xml:space="preserve">
+    <value>3 oy (-10%)</value>
+  </data>
+  <data name="Subscription_Duration_Quarterly" xml:space="preserve">
+    <value>Chorak (-10%)</value>
+  </data>
+  <data name="Subscription_Duration_1Year" xml:space="preserve">
+    <value>1 yil (-25%)</value>
+  </data>
+  <data name="Subscription_Duration_Yearly" xml:space="preserve">
+    <value>Yillik (-25%)</value>
+  </data>
+  <data name="Subscription_Privileges_Title" xml:space="preserve">
+    <value>Kiritilgan imtiyozlar:</value>
+  </data>
+  <data name="Subscription_Privilege1_Membership" xml:space="preserve">
+    <value>Do'stlar uchun oyiga 2 ta mehmon tashrifi</value>
+  </data>
+  <data name="Subscription_Privilege1_Recurring" xml:space="preserve">
+    <value>24/7 ustuvor texnik yordam liniyasi</value>
+  </data>
+  <data name="Subscription_Privilege2_Membership" xml:space="preserve">
+    <value>Face ID orqali o'tishli shaxsiy raqamli karta</value>
+  </data>
+  <data name="Subscription_Privilege2_Recurring" xml:space="preserve">
+    <value>Cheksiz bulutli ma'lumotlar ombori</value>
+  </data>
+  <data name="Subscription_Privilege3_Common" xml:space="preserve">
+    <value>Yiliga 30 kungacha bepul muzlatish</value>
+  </data>
+  <data name="Subscription_TotalToCharge" xml:space="preserve">
+    <value>Yechib olinadigan jami summa:</value>
+  </data>
+  <data name="Subscription_Btn_Membership" xml:space="preserve">
+    <value>Abonementni rasmiylashtirish</value>
+  </data>
+  <data name="Subscription_Btn_Recurring" xml:space="preserve">
+    <value>Obunani rasmiylashtirish</value>
+  </data>
+  <data name="Subscription_Slot_Membership_Format" xml:space="preserve">
+    <value>{0} oyga abonement ({1} so'm)</value>
+  </data>
+  <data name="Subscription_Slot_Recurring_Format" xml:space="preserve">
+    <value>{0} oyga obuna (Avtouzaytirish)</value>
+  </data>
+  <data name="Auction_CurrentBid" xml:space="preserve">
+    <value>Joriy taklif:</value>
+  </data>
+  <data name="Auction_TimerDemo" xml:space="preserve">
+    <value>⏳ Taymer: 04s 12d 30s</value>
+  </data>
+  <data name="Auction_LeaderDemo" xml:space="preserve">
+    <value>Yetakchi: user_78*</value>
+  </data>
+  <data name="Auction_YourBidLabel" xml:space="preserve">
+    <value>Sizning taklifingiz (so'm)</value>
+  </data>
+  <data name="Auction_Slot_Format" xml:space="preserve">
+    <value>Taklif: {0} so'm</value>
+  </data>
+  <data name="Booking_HallSchemeEditor" xml:space="preserve">
+    <value>Zal sxemasi muharriri</value>
+  </data>
+  <data name="Booking_SeatBooking" xml:space="preserve">
+    <value>O'rinlarni band qilish</value>
+  </data>
+  <data name="Booking_LoadingScheme" xml:space="preserve">
+    <value>Sxema yuklanmoqda...</value>
+  </data>
+  <data name="Booking_SchemeUnavailable" xml:space="preserve">
+    <value>Zallarning interaktiv sxemasi sxema moduli ulanganda mavjud bo'ladi</value>
+  </data>
+  <data name="Booking_SelectedSeat" xml:space="preserve">
+    <value>Tanlangan o'rin</value>
+  </data>
+  <data name="Booking_SelectSeatHint" xml:space="preserve">
+    <value>Tanlash uchun bo'sh joy ustiga bosing</value>
+  </data>
+  <data name="Booking_SeatNumberLabel" xml:space="preserve">
+    <value>Raqam / Belgisi:</value>
+  </data>
+  <data name="Booking_SeatPrice" xml:space="preserve">
+    <value>Narxi:</value>
+  </data>
+  <data name="Booking_SeatService" xml:space="preserve">
+    <value>Xizmat:</value>
+  </data>
+  <data name="Booking_BookNow" xml:space="preserve">
+    <value>Hozir band qilish</value>
+  </data>
+  <data name="Booking_SelectSeatPrompt" xml:space="preserve">
+    <value>Zal xaritasidan joyni tanlang</value>
+  </data>
+  <data name="Booking_LegendTitle" xml:space="preserve">
+    <value>Shartli belgilar:</value>
+  </data>
+  <data name="Booking_LegendAvailable" xml:space="preserve">
+    <value>Bo'sh</value>
+  </data>
+  <data name="Booking_LegendSelected" xml:space="preserve">
+    <value>Siz tanlagansiz</value>
+  </data>
+  <data name="Booking_LegendOccupied" xml:space="preserve">
+    <value>Band qilingan</value>
+  </data>
+  <data name="Booking_SaveScheme" xml:space="preserve">
+    <value>Sxemani saqlash</value>
+  </data>
+  <data name="Booking_FloorMain" xml:space="preserve">
+    <value>1-qavat (Asosiy)</value>
+  </data>
+  <data name="Booking_FloorSecond" xml:space="preserve">
+    <value>2-qavat</value>
+  </data>
+  <data name="Booking_FloorTerrace" xml:space="preserve">
+    <value>Terrasa / Tom</value>
+  </data>
+  <data name="Common_CurrencyUzs" xml:space="preserve">
+    <value>so'm</value>
+  </data>
+  <data name="Actions_Close" xml:space="preserve">
+    <value>Yopish</value>
+  </data>
+  <data name="Booking_TableNumbered" xml:space="preserve">
+    <value>#{0}-stol</value>
+  </data>
+  <data name="Delivery_ScheduledTitle" xml:space="preserve">
+    <value>🚚 Rejalashtirilgan yetkazib berish</value>
+  </data>
+  <data name="Delivery_SelectDatePrompt" xml:space="preserve">
+    <value>Qulay sana va kuryer yetkazib berishining 2 soatlik oralig'ini tanlang:</value>
+  </data>
+  <data name="Delivery_DayAfterTomorrow" xml:space="preserve">
+    <value>Indinga</value>
+  </data>
+  <data name="Delivery_DateLabel" xml:space="preserve">
+    <value>Yetkazib berish sanasi</value>
+  </data>
+  <data name="Delivery_TimeSlotLabel" xml:space="preserve">
+    <value>Vaqt oralig'i:</value>
+  </data>
+  <data name="Delivery_TotalDue" xml:space="preserve">
+    <value>To'lov uchun jami:</value>
+  </data>
+  <data name="Delivery_ScheduleButton" xml:space="preserve">
+    <value>Rejalashtirish</value>
+  </data>
+  <data name="Delivery_SlotFormat" xml:space="preserve">
+    <value>Yetkazib berish {0} ({1})</value>
+  </data>
+  <data name="Delivery_Tomorrow" xml:space="preserve">
+    <value>Ertaga</value>
+  </data>
+  <data name="Delivery_Weekend" xml:space="preserve">
+    <value>Dam olish kunlari</value>
+  </data>
+  <data name="Digital_OnlineServiceTitle" xml:space="preserve">
+    <value>💻 Onlayn-xizmat &amp; Kirish</value>
+  </data>
+  <data name="Digital_DigitalGoodsTitle" xml:space="preserve">
+    <value>📥 Raqamli mahsulot &amp; Litsenziya</value>
+  </data>
+  <data name="Digital_InstantActivation" xml:space="preserve">
+    <value>Hisobni darhol faollashtirish</value>
+  </data>
+  <data name="Digital_InstantKeyGeneration" xml:space="preserve">
+    <value>Litsenziya kalitini darhol yaratish</value>
+  </data>
+  <data name="Digital_OnlineServiceDesc" xml:space="preserve">
+    <value>To'lovdan so'ng bulutli xizmatga va API kalitlariga kirish shaxsiy kabinetingizda ochiladi.</value>
+  </data>
+  <data name="Digital_DigitalGoodsDesc" xml:space="preserve">
+    <value>Yuklab olish havolasi va noyob faollashtirish kodi Email / Telegramingizga yuboriladi.</value>
+  </data>
+  <data name="Digital_SelectNominalPrompt" xml:space="preserve">
+    <value>Nominal / to'ldirish summasini tanlang:</value>
+  </data>
+  <data name="Digital_PayAmountLabel" xml:space="preserve">
+    <value>To'lov uchun:</value>
+  </data>
+  <data name="Digital_ActivateAccess" xml:space="preserve">
+    <value>Kirishni faollashtirish</value>
+  </data>
+  <data name="Digital_GetFileAndKey" xml:space="preserve">
+    <value>Fayl va kalitni olish</value>
+  </data>
+  <data name="Digital_SlotOnline" xml:space="preserve">
+    <value>Onlayn-xizmat: Hisobni darhol faollashtirish</value>
+  </data>
+  <data name="Digital_SlotDigital" xml:space="preserve">
+    <value>Raqamli berish: Litsenziya va havola</value>
+  </data>
+  <data name="GroupBuy_SlotPreOrder" xml:space="preserve">
+    <value>Oldindan buyurtma: kutilmoqda {0}</value>
+  </data>
+  <data name="GroupBuy_SlotGroupBuy" xml:space="preserve">
+    <value>Birgalikda xarid (Chegirma -25%)</value>
+  </data>
+  <data name="Lottery_SlotFormat" xml:space="preserve">
+    <value>Lotereya ({0} ta chipta): {1}</value>
+  </data>
+  <data name="Seats_SlotPassengerFormat" xml:space="preserve">
+    <value>Yo'lovchi: {0} ({1} kishi)</value>
+  </data>
+  <data name="Seats_SlotDefault" xml:space="preserve">
+    <value>Joy tanlandi</value>
+  </data>
+  <data name="Rental_Title" xml:space="preserve">
+    <value>🚗 Transport va uskunalar ijarasi</value>
+  </data>
+  <data name="Rental_StartDate" xml:space="preserve">
+    <value>Ijara boshlanishi</value>
+  </data>
+  <data name="Rental_EndDate" xml:space="preserve">
+    <value>Transportni qaytarish</value>
+  </data>
+  <data name="Rental_InsuranceLabel" xml:space="preserve">
+    <value>Franshizasiz to'liq sug'urta (+50 000 so'm/kun)</value>
+  </data>
+  <data name="Rental_PeriodDays" xml:space="preserve">
+    <value>Muddat: {0} kun • Jami:</value>
+  </data>
+  <data name="Rental_BookBtn" xml:space="preserve">
+    <value>Avtomobilni bron qilish</value>
+  </data>
+  <data name="Rental_SlotFormat" xml:space="preserve">
+    <value>Ijara: {0} -> {1} ({2} kun, Sug'urta: {3})</value>
+  </data>
+  <data name="Donation_RewardBadge" xml:space="preserve">
+    <value>Nishon</value>
+  </data>
+  <data name="Donation_RewardMerch" xml:space="preserve">
+    <value>Merch</value>
+  </data>
+  <data name="Donation_RewardVip" xml:space="preserve">
+    <value>VIP</value>
+  </data>
+  <data name="Donation_SlotCrowdfundingFormat" xml:space="preserve">
+    <value>Kraudfanding badali: {0:N0} {1}</value>
+  </data>
+  <data name="Donation_SlotCharityFormat" xml:space="preserve">
+    <value>Xayriya ehsoni: {0:N0} {1}</value>
+  </data>
+  <data name="Gift_Title" xml:space="preserve">
+    <value>🎁 Sovg'a sertifikati</value>
+  </data>
+  <data name="Gift_Prompt" xml:space="preserve">
+    <value>Qabul qiluvchi ma'lumotlarini va tabrik matnini to'ldiring. Unikal promokodli sertifikat bir zumda yuboriladi:</value>
+  </data>
+  <data name="Gift_RecipientName" xml:space="preserve">
+    <value>Qabul qiluvchining ismi</value>
+  </data>
+  <data name="Gift_RecipientPlaceholder" xml:space="preserve">
+    <value>Masalan: Sardor</value>
+  </data>
+  <data name="Gift_GreetingLabel" xml:space="preserve">
+    <value>Tabrik / Otkritka matni</value>
+  </data>
+  <data name="Gift_GreetingPlaceholder" xml:space="preserve">
+    <value>Tug'ilgan kuningiz bilan! Baxt va omad tilayman!</value>
+  </data>
+  <data name="Gift_ConfirmBtn" xml:space="preserve">
+    <value>Sovg'ani rasmiylashtirish</value>
+  </data>
+  <data name="Gift_DefaultRecipient" xml:space="preserve">
+    <value>Do'stga</value>
+  </data>
+  <data name="Gift_SlotFormat" xml:space="preserve">
+    <value>{0} uchun sovg'a</value>
+  </data>
+  <data name="Classified_TitleServices" xml:space="preserve">
+    <value>Ustalar va xizmatlar birjasi</value>
+  </data>
+  <data name="Classified_TitleExchange" xml:space="preserve">
+    <value>P2P Ayirboshlash maydoni</value>
+  </data>
+  <data name="Classified_TitleDefault" xml:space="preserve">
+    <value>P2P E'lon</value>
+  </data>
+  <data name="Classified_EscrowTitleServices" xml:space="preserve">
+    <value>Xavfsiz bitim: Xizmat sifati kafolati</value>
+  </data>
+  <data name="Classified_EscrowTitleExchange" xml:space="preserve">
+    <value>Xavfsiz ayirboshlash eskrou-xizmati</value>
+  </data>
+  <data name="Classified_EscrowTitleDefault" xml:space="preserve">
+    <value>Eskrou bilan xavfsiz P2P bitim</value>
+  </data>
+  <data name="Classified_EscrowDescServices" xml:space="preserve">
+    <value>Mablag'lar platformada zaxiralanadi va ijrochiga faqat vazifa bajarilganligi tasdiqlangandan so'ng o'tkaziladi.</value>
+  </data>
+  <data name="Classified_EscrowDescExchange" xml:space="preserve">
+    <value>Platforma har ikki tomon olguncha halol barter yoki qo'shimcha to'lov kafolati sifatida ishlaydi.</value>
+  </data>
+  <data name="Classified_EscrowDescDefault" xml:space="preserve">
+    <value>To'lovingiz tovar/xizmat shaxsan tekshirilib qabul qilinguniga qadar platformaning kafolat hisobida ushlab turiladi.</value>
+  </data>
+  <data name="Classified_ExchangeItemLabel" xml:space="preserve">
+    <value>Taklif etilayotgan tovar / ayirboshlash valyutasi</value>
+  </data>
+  <data name="Classified_ExchangeItemPlaceholder" xml:space="preserve">
+    <value>Masalan: Asus ROG 2023 noutbuki yoki ekvivalent</value>
+  </data>
+  <data name="Classified_InputLabelServices" xml:space="preserve">
+    <value>Texnik topshiriq / Usta uchun vazifa tavsifi:</value>
+  </data>
+  <data name="Classified_InputLabelExchange" xml:space="preserve">
+    <value>Ayirboshlash / uchrashuv shartlari va istaklar:</value>
+  </data>
+  <data name="Classified_InputLabelDefault" xml:space="preserve">
+    <value>Buyurtmaga izoh / Uchrashuv manzili:</value>
+  </data>
+  <data name="Classified_InputPlaceholderServices" xml:space="preserve">
+    <value>Masalan: Shanba kuni soat 14:00 ga diagnostika uchun usta kerak</value>
+  </data>
+  <data name="Classified_InputPlaceholderExchange" xml:space="preserve">
+    <value>Masalan: Markazda uchrashishga tayyorman, qo'shimcha to'lov mumkin</value>
+  </data>
+  <data name="Classified_InputPlaceholderDefault" xml:space="preserve">
+    <value>Masalan: Amir Temur metrosi yonida uchrashish qulay</value>
+  </data>
+  <data name="Classified_BtnServices" xml:space="preserve">
+    <value>Ijrochini yollash</value>
+  </data>
+  <data name="Classified_BtnExchange" xml:space="preserve">
+    <value>Almashishni taklif qilish</value>
+  </data>
+  <data name="Classified_BtnDefault" xml:space="preserve">
+    <value>Bog'lanish va buyurtma berish</value>
+  </data>
+  <data name="Classified_SlotServicesFormat" xml:space="preserve">
+    <value>Xizmat buyurtmasi: {0}</value>
+  </data>
+  <data name="Classified_SlotExchangeFormat" xml:space="preserve">
+    <value>Ayirboshlash: {0} (Ma'lumot: {1})</value>
+  </data>
+  <data name="Classified_SlotDefaultFormat" xml:space="preserve">
+    <value>P2P: {0}</value>
+  </data>
+  <data name="Classified_SlotDefaultFallback" xml:space="preserve">
+    <value>P2P Bitim</value>
+  </data>
+  <data name="Geo_DetectedAddressDefault" xml:space="preserve">
+    <value>Toshkent sh., Chilonzor 5-mavze</value>
+  </data>
+  <data name="Quote_PhoneHint" xml:space="preserve">
+    <value>+998 XX XXX-XX-XX</value>
+  </data>
+  <data name="Hotel_DialogTitle" xml:space="preserve">
+    <value>🏨 Mehmonxonada yashash</value>
+  </data>
+  <data name="Hotel_CheckIn" xml:space="preserve">
+    <value>Kelish sanasi (Check-in)</value>
+  </data>
+  <data name="Hotel_CheckOut" xml:space="preserve">
+    <value>Ketish sanasi (Check-out)</value>
+  </data>
+  <data name="Geo_RouteTitle" xml:space="preserve">
+    <value>📍 Geo-yo'nalish / Taksi</value>
+  </data>
+  <data name="Payment_Dashboard" xml:space="preserve">
+    <value>To'lovchi boshqaruv paneli</value>
+  </data>
+  <data name="Payment_DemoData" xml:space="preserve">
+    <value>Demo ma'lumotlar</value>
+  </data>
+  <data name="Payment_Cabinet" xml:space="preserve">
+    <value>Shaxsiy kabinet:</value>
+  </data>
+  <data name="Payment_UserId" xml:space="preserve">
+    <value>Foydalanuvchi ID</value>
+  </data>
+  <data name="Payment_Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Payment_KycStatus" xml:space="preserve">
+    <value>KYC holati</value>
+  </data>
+  <data name="Payment_Verified" xml:space="preserve">
+    <value>Tasdiqlangan</value>
+  </data>
+  <data name="Payment_NotVerified" xml:space="preserve">
+    <value>Tasdiqlanmagan</value>
+  </data>
+  <data name="Payment_PassKyc" xml:space="preserve">
+    <value>KYC verifikatsiyasidan o'tish</value>
+  </data>
+  <data name="Payment_AvailableLimit" xml:space="preserve">
+    <value>Mavjud muddatli to'lov limiti</value>
+  </data>
+  <data name="Payment_AccountStatus" xml:space="preserve">
+    <value>Hisob holati</value>
+  </data>
+  <data name="Payment_Blocked" xml:space="preserve">
+    <value>Bloklangan</value>
+  </data>
+  <data name="Payment_Active" xml:space="preserve">
+    <value>Faol</value>
+  </data>
+  <data name="Payment_CreditScore" xml:space="preserve">
+    <value>Kredit reytingi</value>
+  </data>
+  <data name="Payment_Risk" xml:space="preserve">
+    <value>Xavf</value>
+  </data>
+  <data name="Payment_SecurityTitle" xml:space="preserve">
+    <value>Xavfsizlik va tezkor kirish usullari</value>
+  </data>
+  <data name="Payment_SecurityDesc" xml:space="preserve">
+    <value>SMS/OTP kutmasdan 1 bosishda tezkor kirish uchun biometriya va xizmatlarni ulang.</value>
+  </data>
+  <data name="Payment_Configured" xml:space="preserve">
+    <value>Sozlangan</value>
+  </data>
+  <data name="Payment_UpdateFaceScan" xml:space="preserve">
+    <value>Yuz rasmini yangilash</value>
+  </data>
+  <data name="Payment_NotLinked" xml:space="preserve">
+    <value>Ulanmagan</value>
+  </data>
+  <data name="Payment_LinkGoogle" xml:space="preserve">
+    <value>Google hisobini ulash</value>
+  </data>
+  <data name="Payment_Linked" xml:space="preserve">
+    <value>Ulangan</value>
+  </data>
+  <data name="Payment_PlansTitle" xml:space="preserve">
+    <value>Mening muddatli to'lovlarim</value>
+  </data>
+  <data name="Payment_NoPlansTitle" xml:space="preserve">
+    <value>Sizda hozircha faol to'lov rejalari yo'q</value>
+  </data>
+  <data name="Payment_EmptyPlansDesc" xml:space="preserve">
+    <value>Kioskdagi yoki kassadagi to'lov usullarini tanlashda muddatli to'lovni rasmiylashtirishingiz mumkin.</value>
+  </data>
+  <data name="Payment_LoadSamplePlans" xml:space="preserve">
+    <value>Namunaviy rejalarni yuklash</value>
+  </data>
+  <data name="Payment_PlanType" xml:space="preserve">
+    <value>Turi</value>
+  </data>
+  <data name="Payment_Order" xml:space="preserve">
+    <value>Buyurtma</value>
+  </data>
+  <data name="Payment_TotalAmount" xml:space="preserve">
+    <value>Umumiy summa</value>
+  </data>
+  <data name="Payment_Fee" xml:space="preserve">
+    <value>Komissiya</value>
+  </data>
+  <data name="Payment_GrandTotal" xml:space="preserve">
+    <value>Jami to'lov</value>
+  </data>
+  <data name="Payment_Paid" xml:space="preserve">
+    <value>To'langan</value>
+  </data>
+  <data name="Payment_Progress" xml:space="preserve">
+    <value>Jarayon</value>
+  </data>
+  <data name="Payment_Remaining" xml:space="preserve">
+    <value>Qolgan</value>
+  </data>
+  <data name="Payment_ViewSchedule" xml:space="preserve">
+    <value>Jadvalni ko'rish</value>
+  </data>
+  <data name="Payment_EarlyPayoff" xml:space="preserve">
+    <value>Muddatidan oldin to'lash (-20% komissiya)</value>
+  </data>
+  <data name="Payment_Pause" xml:space="preserve">
+    <value>To'xtatib turish</value>
+  </data>
+  <data name="Payment_CancelPlan" xml:space="preserve">
+    <value>Rejani bekor qilish</value>
+  </data>
+  <data name="Payment_ResumePayments" xml:space="preserve">
+    <value>To'lovlarni davom ettirish</value>
+  </data>
+  <data name="Payment_ScheduleModalTitle" xml:space="preserve">
+    <value>Reja bo'yicha to'lovlar jadvali</value>
+  </data>
+  <data name="Payment_DueDate" xml:space="preserve">
+    <value>To'lov sanasi</value>
+  </data>
+  <data name="Payment_Amount" xml:space="preserve">
+    <value>Qism summasi</value>
+  </data>
+  <data name="Payment_Status" xml:space="preserve">
+    <value>Holat</value>
+  </data>
+  <data name="Payment_FaceIdKycTitle" xml:space="preserve">
+    <value>FaceID KYC Verifikatsiyasi</value>
+  </data>
+  <data name="Payment_CameraDisconnected" xml:space="preserve">
+    <value>Kamera moduli ulanmagan</value>
+  </data>
+  <data name="Checkout_GeneratingUzQr" xml:space="preserve">
+    <value>QR yuklanmoqda...</value>
+  </data>
+  <data name="Checkout_ScanUzQrTitle" xml:space="preserve">
+    <value>📱 Yagona milliy QR (O'zR MB)</value>
+  </data>
+  <data name="Checkout_ScanUzQrHint" xml:space="preserve">
+    <value>O'zbekistonning istalgan banki ilovasida smartfon kamerasi orqali skanerlang:</value>
+  </data>
+  <data name="Checkout_InvoiceLabel" xml:space="preserve">
+    <value>Hisob:</value>
+  </data>
+  <data name="Checkout_RrnLabel" xml:space="preserve">
+    <value>RRN:</value>
+  </data>
+  <data name="Checkout_CardLabel" xml:space="preserve">
+    <value>Karta:</value>
+  </data>
+  <data name="Checkout_MethodLabel" xml:space="preserve">
+    <value>Usul:</value>
+  </data>
+  <data name="Checkout_AmountLabel" xml:space="preserve">
+    <value>Summa:</value>
+  </data>
+  <data name="Checkout_NfcContactless" xml:space="preserve">
+    <value>Kontaktsiz NFC</value>
+  </data>
+  <data name="Checkout_ChipContact" xml:space="preserve">
+    <value>Kontaktli chip</value>
+  </data>
+  <data name="Checkout_ConfirmAndPay" xml:space="preserve">
+    <value>Tasdiqlash va to'lash</value>
+  </data>
+  <data name="Checkout_Complete" xml:space="preserve">
+    <value>To'lovni yakunlash</value>
+  </data>
+  <data name="Checkout_PanHeader" xml:space="preserve">
+    <value>Onlayn bank kartasi orqali to'lov</value>
+  </data>
+  <data name="Checkout_PanCardNumber" xml:space="preserve">
+    <value>Karta raqami (16 raqam)</value>
+  </data>
+  <data name="Checkout_PanExpire" xml:space="preserve">
+    <value>Amal qilish muddati (OO/YY)</value>
+  </data>
+  <data name="Checkout_PanSaveForFuture" xml:space="preserve">
+    <value>1 bosishda tezkor to'lov uchun kartani eslab qolish</value>
+  </data>
+  <data name="Checkout_PanOtpPrompt" xml:space="preserve">
+    <value>Tasdiqlash kodi karta egasining raqamiga SMS orqali yuborildi</value>
+  </data>
+  <data name="Checkout_PanGetCodeBtn" xml:space="preserve">
+    <value>SMS tasdiqlash kodini olish</value>
+  </data>
+  <data name="Checkout_CashTitle" xml:space="preserve">
+    <value>Naqd pul bilan to'lash</value>
+  </data>
+  <data name="Checkout_CashDesc" xml:space="preserve">
+    <value>Kiosk qabul qilgichiga kupyuralarni kiriting yoki kassada to'lang</value>
+  </data>
+  <data name="Checkout_CashInserted" xml:space="preserve">
+    <value>Kiritildi</value>
+  </data>
+  <data name="Checkout_CashRemaining" xml:space="preserve">
+    <value>Qolgan summa</value>
+  </data>
+  <data name="Checkout_CashStartAcceptor" xml:space="preserve">
+    <value>Kupyura qabul qilgichga kiritish</value>
+  </data>
+  <data name="Checkout_CashPayAtDesk" xml:space="preserve">
+    <value>Kassada to'lash uchun talon olish</value>
+  </data>
+  <data name="Orders_ViewList" xml:space="preserve">
+    <value>Ro'yxat</value>
+  </data>
+  <data name="Orders_ViewGrid" xml:space="preserve">
+    <value>Panjara</value>
+  </data>
+  <data name="Orders_ViewTable" xml:space="preserve">
+    <value>Jadval</value>
+  </data>
+  <data name="Orders_EmptyTitle" xml:space="preserve">
+    <value>Hozircha buyurtmalar yo'q</value>
+  </data>
+  <data name="Orders_EmptySubtitle" xml:space="preserve">
+    <value>Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.</value>
+  </data>
+  <data name="Orders_GoToTerminal" xml:space="preserve">
+    <value>Kassa terminalini ochish</value>
+  </data>
+  <data name="Orders_LoadSample" xml:space="preserve">
+    <value>Sinov buyurtmalarini yuklash</value>
+  </data>
+  <data name="Orders_ViewDetails" xml:space="preserve">
+    <value>Tarkibini ko'rish</value>
+  </data>
+  <data name="Orders_Preparing" xml:space="preserve">
+    <value>Tayyorlanish jarayonida</value>
+  </data>
+  <data name="Orders_NoOrdersPreparing" xml:space="preserve">
+    <value>Ish jarayonida buyurtmalar yo'q</value>
+  </data>
+  <data name="Orders_Ready" xml:space="preserve">
+    <value>Berishga tayyor</value>
+  </data>
+  <data name="Orders_NoOrdersReady" xml:space="preserve">
+    <value>Tayyor buyurtmalar yo'q</value>
+  </data>
+  <data name="OrderItems_BackToOrders" xml:space="preserve">
+    <value>Buyurtmalarga qaytish</value>
+  </data>
+  <data name="OrderItems_Title" xml:space="preserve">
+    <value>Buyurtma tarkibi / KDS</value>
+  </data>
+  <data name="OrderItems_Pcs" xml:space="preserve">
+    <value>dona</value>
+  </data>
+  <data name="OrderItems_Subtitle" xml:space="preserve">
+    <value>Mahsulotlarni boshqarish va tayyorlanishni nazorat qilish</value>
+  </data>
+  <data name="OrderItems_EmptyTitle" xml:space="preserve">
+    <value>Ushbu buyurtmada mahsulotlar yo'q</value>
+  </data>
+  <data name="OrderItems_EmptyDesc" xml:space="preserve">
+    <value>Mahsulotlar hali qo'shilmagan yoki buyurtma tanlanmagan.</value>
+  </data>
+  <data name="OrderItems_LoadSample" xml:space="preserve">
+    <value>Sinov mahsulotlarini yuklash</value>
+  </data>
+  <data name="OrderItems_Composition" xml:space="preserve">
+    <value>Buyurtma tarkibi</value>
+  </data>
+  <data name="OrderItems_SummaryTitle" xml:space="preserve">
+    <value>Buyurtma yakuni</value>
+  </data>
+  <data name="OrderItems_TotalItems" xml:space="preserve">
+    <value>Jami taomlar</value>
+  </data>
+  <data name="OrderItems_Status" xml:space="preserve">
+    <value>Buyurtma holati</value>
+  </data>
+  <data name="OrderItems_Active" xml:space="preserve">
+    <value>Jarayonda</value>
+  </data>
+  <data name="OrderItems_Payment" xml:space="preserve">
+    <value>To'lov usuli</value>
+  </data>
+  <data name="OrderItems_ToPay" xml:space="preserve">
+    <value>To'lovga</value>
+  </data>
+  <data name="OrderItems_OpenKds" xml:space="preserve">
+    <value>Oshxona ekrani (KDS)</value>
+  </data>
+  <data name="OrderItems_AllOrders" xml:space="preserve">
+    <value>Barcha buyurtmalar</value>
+  </data>
+  <data name="Order_FiscalSign" xml:space="preserve">
+    <value>Fiskal chek</value>
+  </data>
+  <data name="Order_UnknownProduct" xml:space="preserve">
+    <value>Taom</value>
+  </data>
+  <data name="Order_PaymentType" xml:space="preserve">
+    <value>To'lov turi</value>
+  </data>
+  <data name="Order_CreatedAt" xml:space="preserve">
+    <value>Yaratilgan vaqti</value>
+  </data>
+  <data name="Order_ChangedAt" xml:space="preserve">
+    <value>O'zgartirilgan vaqti</value>
+  </data>
+  <data name="Order_Items" xml:space="preserve">
+    <value>Tarkib</value>
+  </data>
+  <data name="Kds_MakingTitle" xml:space="preserve">
+    <value>Tayyorlanish jarayonida</value>
+  </data>
+  <data name="Kds_NoMaking" xml:space="preserve">
+    <value>Barcha taomlar tayyorlangan</value>
+  </data>
+  <data name="Kds_MarkReady" xml:space="preserve">
+    <value>«Tayyor» deb belgilash</value>
+  </data>
+  <data name="Kds_ReadyTitle" xml:space="preserve">
+    <value>Berishga tayyor</value>
+  </data>
+  <data name="Kds_NoReady" xml:space="preserve">
+    <value>Taomlar tayyorlanishini kutish</value>
+  </data>
+  <data name="Kds_ReadyTag" xml:space="preserve">
+    <value>Tayyorlandi</value>
+  </data>
+  <data name="Kds_MarkCompleted" xml:space="preserve">
+    <value>Mehmonlarga berish</value>
+  </data>
+  <data name="Payment_Card" xml:space="preserve">
+    <value>Bank kartasi</value>
+  </data>
+  <data name="Payment_Cash" xml:space="preserve">
+    <value>Naqd pul</value>
+  </data>
+  <data name="Payment_Online" xml:space="preserve">
+    <value>Onlayn to'lov</value>
+  </data>
+  <data name="OrderStatus_Completed" xml:space="preserve">
+    <value>Bajarildi</value>
+  </data>
+  <data name="OrderStatus_Shipping" xml:space="preserve">
+    <value>Berishga tayyor</value>
+  </data>
+  <data name="OrderStatus_Collected" xml:space="preserve">
+    <value>Yig'ildi</value>
+  </data>
+  <data name="OrderStatus_Collecting" xml:space="preserve">
+    <value>Yig'ilmoqda</value>
+  </data>
+  <data name="OrderStatus_Made" xml:space="preserve">
+    <value>Tayyorlandi</value>
+  </data>
+  <data name="OrderStatus_Making" xml:space="preserve">
+    <value>Tayyorlanmoqda</value>
+  </data>
+  <data name="OrderStatus_Paid" xml:space="preserve">
+    <value>To'landi</value>
+  </data>
+  <data name="OrderStatus_Canceled" xml:space="preserve">
+    <value>Bekor qilindi</value>
+  </data>
+  <data name="OrderStatus_Created" xml:space="preserve">
+    <value>Yangi</value>
+  </data>
+  <data name="Orders_CreateOrder" xml:space="preserve">
+    <value>Buyurtma yaratish</value>
+  </data>
+  <data name="Orders_Number" xml:space="preserve">
+    <value>Raqam</value>
+  </data>
+  <data name="Orders_Status" xml:space="preserve">
+    <value>Holat</value>
+  </data>
+  <data name="Orders_TotalAmount" xml:space="preserve">
+    <value>Yakuniy summa</value>
+  </data>
+  <data name="Orders_CreatedAt" xml:space="preserve">
+    <value>Yaratilgan vaqti</value>
+  </data>
+  <data name="OrderItems_Quantity" xml:space="preserve">
+    <value>Miqdori</value>
+  </data>
+  <data name="OrderItems_Total" xml:space="preserve">
+    <value>Jami</value>
+  </data>
+  <data name="OrderItems_UnitPrice" xml:space="preserve">
+    <value>Dona narxi</value>
+  </data>
+  <data name="Orders_StartPreparation" xml:space="preserve">
+    <value>Tayyorlashni boshlash</value>
+  </data>
+  <data name="Orders_FinishPreparation" xml:space="preserve">
+    <value>Tayyor</value>
+  </data>
+  <data name="Orders_StartPacking" xml:space="preserve">
+    <value>Buyurtmani yig'ish</value>
+  </data>
+  <data name="Orders_FinishPacking" xml:space="preserve">
+    <value>Yig'ildi</value>
+  </data>
+  <data name="Orders_MoveToReady" xml:space="preserve">
+    <value>Berishga topshirish</value>
+  </data>
+  <data name="Orders_CompleteOrder" xml:space="preserve">
+    <value>Xaridorga berish</value>
+  </data>
+  <data name="Orders_Done" xml:space="preserve">
+    <value>Yakunlandi</value>
+  </data>
+  <data name="Orders_Advance" xml:space="preserve">
+    <value>Oldinga surish</value>
+  </data>
+  <data name="Kds_JustNow" xml:space="preserve">
+    <value>Hozirgina</value>
+  </data>
+  <data name="Kds_MinutesAgo" xml:space="preserve">
+    <value>daq. oldin</value>
+  </data>
+  <data name="Kds_HoursAgo" xml:space="preserve">
+    <value>soat oldin</value>
+  </data>
+  <data name="AdSlot_Label" xml:space="preserve">
+    <value>Reklama</value>
+  </data>
+  <data name="AdSlot_Disclaimer" xml:space="preserve">
+    <value>Reklamali tarif (5$/oy) •</value>
+  </data>
+  <data name="AdSlot_UpgradeLink" xml:space="preserve">
+    <value>Reklamani o‘chirish (Tarif 25$)</value>
+  </data>
+  <data name="Kiosk_TouchToStart" xml:space="preserve">
+    <value>Buyurtmani boshlash uchun istalgan joyga bosing</value>
+  </data>
+  <data name="Kiosk_Welcome" xml:space="preserve">
+    <value>Xush kelibsiz</value>
+  </data>
+  <data name="Kiosk_DefaultTagline" xml:space="preserve">
+    <value>Yangi taomlar, ichimliklar va tezkor xizmat</value>
+  </data>
+  <data name="Kiosk_TouchScreenToOrder" xml:space="preserve">
+    <value>Buyurtma berish uchun ekranga teging</value>
+  </data>
+  <data name="Kiosk_TrialDaysWithoutAds" xml:space="preserve">
+    <value>Reklamasiz sinov davri ({0} kun)</value>
+  </data>
+  <data name="Kiosk_ProTierBrand" xml:space="preserve">
+    <value>PRO tarifi • Brendli kiosk</value>
+  </data>
+  <data name="Kiosk_YandexDirect" xml:space="preserve">
+    <value>Yandex Reklama</value>
+  </data>
+  <data name="Kiosk_GoogleAdSense" xml:space="preserve">
+    <value>Google AdSense</value>
+  </data>
+  <data name="Kiosk_PlatformPartner" xml:space="preserve">
+    <value>Socratic platformasi hamkori</value>
+  </data>
+  <data name="Kiosk_KioskLabel" xml:space="preserve">
+    <value>Kiosk</value>
+  </data>
+  <data name="Kiosk_DefaultVenue" xml:space="preserve">
+    <value>muassasa</value>
+  </data>
+  <data name="Kiosk_DisableAds" xml:space="preserve">
+    <value>Reklamani o‘chirish</value>
+  </data>
+  <data name="Kiosk_SeoPageTitleFormat" xml:space="preserve">
+    <value>{0} — raqamli kiosk, menyu va onlayn-buyurtma | Socratic</value>
+  </data>
+  <data name="Kiosk_SeoMetaDescFormat" xml:space="preserve">
+    <value>{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.</value>
+  </data>
+  <data name="Kiosk_TitleSelfService" xml:space="preserve">
+    <value>O‘z-o‘ziga xizmat ko‘rsatish kioski</value>
+  </data>
+  <data name="Kiosk_DefaultMetaDesc" xml:space="preserve">
+    <value>Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.</value>
+  </data>
+  <data name="Kiosk_CategoryFilters" xml:space="preserve">
+    <value>Kategoriya filtrlari</value>
+  </data>
+  <data name="Kiosk_ProductDetailsAria" xml:space="preserve">
+    <value>{0} mahsulot tafsilotlari</value>
+  </data>
+  <data name="Kiosk_RemoveFromFavoritesAria" xml:space="preserve">
+    <value>{0}ni sevimlilardan o‘chirish</value>
+  </data>
+  <data name="Kiosk_AddToFavoritesAria" xml:space="preserve">
+    <value>{0}ni sevimlilarga qo‘shish</value>
+  </data>
+  <data name="Kiosk_ProductDescAria" xml:space="preserve">
+    <value>{0} tavsifi</value>
+  </data>
+  <data name="Kiosk_ExchangeRateP2P" xml:space="preserve">
+    <value>P2P Kurs:</value>
+  </data>
+  <data name="Kiosk_ViewOrderPrompt" xml:space="preserve">
+    <value>Buyurtmani ko‘rish</value>
+  </data>
+  <data name="Store_ProductPageTitleFormat" xml:space="preserve">
+    <value>{0} — {1}da {2:N0} {3} narxida sotib olish</value>
+  </data>
+  <data name="Store_ProductMetaDescFormat" xml:space="preserve">
+    <value>{0} {1}da. Narxi: {2:N0} {3}. Menyu, xususiyatlar, yetkazib berish va Socratic ekotizimida onlayn-buyurtma.</value>
+  </data>
+  <data name="Store_BackToCatalog" xml:space="preserve">
+    <value>Katalogga</value>
+  </data>
+  <data name="Store_SiteNav" xml:space="preserve">
+    <value>Sayt bo‘ylab harakatlanish</value>
+  </data>
+  <data name="Store_SponsoredTop" xml:space="preserve">
+    <value>Homiylik tovari • Google &amp; Yandex qidiruvida top</value>
+  </data>
+  <data name="Store_PromoteSearch" xml:space="preserve">
+    <value>Qidiruvda targ‘ib qilish</value>
+  </data>
+  <data name="Store_Preview" xml:space="preserve">
+    <value>Ko‘rib chiqish</value>
+  </data>
+  <data name="Terminal_AddToCartPrefix" xml:space="preserve">
+    <value>{0}ni buyurtmaga qo‘shish</value>
+  </data>
+  <data name="Terminal_InOrderQtyPrefix" xml:space="preserve">
+    <value>Buyurtmada {0} dona</value>
+  </data>
+  <data name="SignIn_SecondsShort" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="Chat_NewConversation" xml:space="preserve">
+    <value>Yangi muloqot</value>
+  </data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve">
+    <value>Xabar kiriting...</value>
+  </data>
+  <data name="Chat_Send" xml:space="preserve">
+    <value>Yuborish</value>
+  </data>
+  <data name="Chat_Back" xml:space="preserve">
+    <value>Orqaga</value>
+  </data>
+  <data name="SeatDesigner_HallTools" xml:space="preserve">
+    <value>Zal asboblari</value>
+  </data>
+  <data name="SeatDesigner_FurnitureConstructor" xml:space="preserve">
+    <value>Mebel konstruktori:</value>
+  </data>
+  <data name="SeatDesigner_RectTable" xml:space="preserve">
+    <value>To'g'ri burchakli stol</value>
+  </data>
+  <data name="SeatDesigner_CircleTable" xml:space="preserve">
+    <value>Dumaloq stol</value>
+  </data>
+  <data name="SeatDesigner_SelectedSeatProperties" xml:space="preserve">
+    <value>Tanlangan joy xususiyatlari:</value>
+  </data>
+  <data name="SeatDesigner_SeatLabel" xml:space="preserve">
+    <value>Joy nomi</value>
+  </data>
+  <data name="SeatDesigner_ProductId" xml:space="preserve">
+    <value>Mahsulot (xizmat) ID si</value>
+  </data>
+  <data name="SeatDesigner_PriceUzs" xml:space="preserve">
+    <value>Narx (UZS)</value>
+  </data>
+  <data name="SeatDesigner_DeleteElement" xml:space="preserve">
+    <value>Elementni o'chirish</value>
+  </data>
+  <data name="SeatDesigner_PageTitle" xml:space="preserve">
+    <value>SeatDesigner — Zallar va band qilish muharriri</value>
+  </data>
+  <data name="SeatDesigner_PageSubtitle" xml:space="preserve">
+    <value>Stollarni joylashtirish va band qilish interaktiv konstruktori</value>
+  </data>
+  <data name="SeatDesigner_EditorActions" xml:space="preserve">
+    <value>Muharrir amallari</value>
+  </data>
+  <data name="SeatDesigner_ModePreview" xml:space="preserve">
+    <value>👁️ Ko'rish / band qilish rejimi</value>
+  </data>
+  <data name="SeatDesigner_ModeEdit" xml:space="preserve">
+    <value>✏️ Tahrirlash rejimi</value>
+  </data>
+  <data name="SeatDesigner_SwitchToEdit" xml:space="preserve">
+    <value>Muharrirga o'tish</value>
+  </data>
+  <data name="SeatDesigner_SwitchToPreview" xml:space="preserve">
+    <value>Sxemani ko'rish</value>
+  </data>
+  <data name="SeatDesigner_SaveLayout" xml:space="preserve">
+    <value>Sxemani saqlash</value>
+  </data>
+  <data name="SeatDesigner_SeatSelectedForBooking" xml:space="preserve">
+    <value>Band qilish uchun joy tanlandi</value>
+  </data>
+  <data name="Home_LoadingPlayer" xml:space="preserve">
+    <value>Pleyer yuklanmoqda...</value>
+  </data>
+  <data name="Merchant_SettingsTitle" xml:space="preserve">
+    <value>Ekvayring va fiskallashtirish sozlamalari</value>
+  </data>
+  <data name="Merchant_SettingsSubtext" xml:space="preserve">
+    <value>Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish</value>
+  </data>
+  <data name="Merchant_SoliqTitle" xml:space="preserve">
+    <value>🏛️ Soliq.uz fiskal rekvizitlari</value>
+  </data>
+  <data name="Merchant_TaxIdLabel" xml:space="preserve">
+    <value>Tashkilot STIR / INN si (9 ta raqam)</value>
+  </data>
+  <data name="Merchant_DefaultMxikCodeLabel" xml:space="preserve">
+    <value>Standart MXIK kodi (17 ta belgi)</value>
+  </data>
+  <data name="Merchant_VatPercentLabel" xml:space="preserve">
+    <value>QQS stavkasi (%)</value>
+  </data>
+  <data name="Merchant_ClickTitle" xml:space="preserve">
+    <value>🔹 Click (CLICK_SHOP &amp; Click Pass)</value>
+  </data>
+  <data name="Merchant_ClickEnable" xml:space="preserve">
+    <value>Click orqali to'lovni yoqish</value>
+  </data>
+  <data name="Merchant_SecretKeyHint" xml:space="preserve">
+    <value>Click kabinetidagi maxfiy kalit</value>
+  </data>
+  <data name="Merchant_ExampleServiceId" xml:space="preserve">
+    <value>Masalan: 32001</value>
+  </data>
+  <data name="Merchant_ExampleMerchantId" xml:space="preserve">
+    <value>Masalan: 21001</value>
+  </data>
+  <data name="Merchant_PaymeTitle" xml:space="preserve">
+    <value>💳 Payme (Subscribe &amp; Checkout)</value>
+  </data>
+  <data name="Merchant_PaymeEnable" xml:space="preserve">
+    <value>Payme orqali to'lovni yoqish</value>
+  </data>
+  <data name="Merchant_PaymeMerchantIdLabel" xml:space="preserve">
+    <value>Merchant ID (kassa ID si)</value>
+  </data>
+  <data name="Merchant_PaymeSecretKeyLabel" xml:space="preserve">
+    <value>Payme Secret Key (kassa kaliti)</value>
+  </data>
+  <data name="Merchant_PaymeSecretKeyHint" xml:space="preserve">
+    <value>Payme Merchant kabinetidagi kalit</value>
+  </data>
+  <data name="Merchant_TestModeLabel" xml:space="preserve">
+    <value>Sinov rejimi (Sandbox)</value>
+  </data>
+  <data name="Merchant_UzumTitle" xml:space="preserve">
+    <value>🍇 Uzum Pay / Uzum Nasiya</value>
+  </data>
+  <data name="Merchant_UzumEnable" xml:space="preserve">
+    <value>Uzum Pay orqali to'lovni yoqish</value>
+  </data>
+  <data name="Merchant_UzQrTitle" xml:space="preserve">
+    <value>📱 UzQR (O'zbekiston Respublikasi Markaziy banki Yagona milliy QR kodi)</value>
+  </data>
+  <data name="Merchant_UzQrDesc" xml:space="preserve">
+    <value>O'zbekiston Respublikasi Markaziy bankining rasmiy to'lov infratuzilmasi (MUNIS / QR-Online). Barcha bank ilovalaridan (Click, Payme, Uzum Bank, Anor, TBC, Agrobank, Ipoteka va boshqalar) yagona dinamik QR-kod orqali to'lovlarni qabul qilish imkonini beradi.</value>
+  </data>
+  <data name="Merchant_UzQrEnable" xml:space="preserve">
+    <value>Dinamik UzQR qabul qilishni yoqish</value>
+  </data>
+  <data name="Merchant_UzQrApiKeyLabel" xml:space="preserve">
+    <value>UzQR API kaliti (uzqr.uz kabinetidagi maxfiy kalit)</value>
+  </data>
+  <data name="Merchant_UzQrHintPre" xml:space="preserve">
+    <value>Kalit </value>
+  </data>
+  <data name="Merchant_UzQrHintPost" xml:space="preserve">
+    <value> shaxsiy kabinetida «API boshqaruvi» bo‘limida ERI yordamida yaratiladi.</value>
+  </data>
+  <data name="Merchant_UzQrInnLabel" xml:space="preserve">
+    <value>UzQR tizimidagi tashkilot STIR / INN si</value>
+  </data>
+  <data name="Merchant_UzQrQrIdLabel" xml:space="preserve">
+    <value>Dinamik QR ID si (QrId)</value>
+  </data>
+  <data name="Merchant_UzQrFiscalModuleLabel" xml:space="preserve">
+    <value>Fiskal modul raqami (agar mavjud bo‘lsa)</value>
+  </data>
+  <data name="Merchant_SaveSettings" xml:space="preserve">
+    <value>Ekvayring sozlamalarini saqlash</value>
+  </data>
+  <data name="FilePicker_AttachedFiles" xml:space="preserve">
+    <value>Biriktirilgan fayllar</value>
+  </data>
+  <data name="FilePicker_CountOne" xml:space="preserve">
+    <value>ta fayl</value>
+  </data>
+  <data name="FilePicker_CountFew" xml:space="preserve">
+    <value>ta fayl</value>
+  </data>
+  <data name="FilePicker_CountMany" xml:space="preserve">
+    <value>ta fayl</value>
+  </data>
+  <data name="FilePicker_LoadedFiles" xml:space="preserve">
+    <value>Yuklangan fayllar: {0}. Qo'shish uchun bosing yoki sudrab olib keling.</value>
+  </data>
+  <data name="FilePicker_NoFiles" xml:space="preserve">
+    <value>Fayllar biriktirilmagan. Rasmlar, hujjatlar va arxivlar qo'llab-quvvatlanadi.</value>
+  </data>
+  <data name="FilePicker_ClearAll" xml:space="preserve">
+    <value>Barcha fayllarni tozalash</value>
+  </data>
+  <data name="FilePicker_DragFilesOrClick" xml:space="preserve">
+    <value>Fayllarni sudrab olib keling yoki bosing</value>
+  </data>
+  <data name="ColorPicker_ClickToSelect" xml:space="preserve">
+    <value>Rangni tanlash uchun bosing</value>
+  </data>
+  <data name="ColorPicker_Copied" xml:space="preserve">
+    <value>Nusxalandi!</value>
+  </data>
+  <data name="ColorPicker_CopyHex" xml:space="preserve">
+    <value>HEX nusxalash</value>
+  </data>
+  <data name="ColorPicker_PalettePresets" xml:space="preserve">
+    <value>Oldindan sozlangan palitra</value>
+  </data>
+  <data name="ColorPicker_ResetColor" xml:space="preserve">
+    <value>Rangni tiklash</value>
+  </data>
+  <data name="ColorPicker_ColorSelection" xml:space="preserve">
+    <value>Rang tanlash</value>
+  </data>
+  <data name="ColorPicker_ColorSelected" xml:space="preserve">
+    <value>Tanlangan rang: {0}</value>
+  </data>
+  <data name="ColorPicker_ColorDefault" xml:space="preserve">
+    <value>Rang tanlanmagan (standart)</value>
+  </data>
+  <data name="ColorPicker_ClosePalette" xml:space="preserve">
+    <value>Yopish</value>
+  </data>
+  <data name="ColorPicker_Palette" xml:space="preserve">
+    <value>Palitra</value>
+  </data>
+  <data name="ColorPicker_RecommendedColors" xml:space="preserve">
+    <value>Tavsiya etilgan Material 3 ranglari</value>
+  </data>
+  <data name="Invoice_Number" xml:space="preserve">
+    <value>Chek №</value>
+  </data>
+  <data name="Invoice_Date" xml:space="preserve">
+    <value>Sana</value>
+  </data>
+  <data name="Invoice_Cashier" xml:space="preserve">
+    <value>Kassir</value>
+  </data>
+  <data name="Invoice_Payment" xml:space="preserve">
+    <value>To'lov</value>
+  </data>
+  <data name="Invoice_QuantityShort" xml:space="preserve">
+    <value>Miqdor</value>
+  </data>
+  <data name="Invoice_ItemName" xml:space="preserve">
+    <value>Nomi</value>
+  </data>
+  <data name="Invoice_Price" xml:space="preserve">
+    <value>Narxi</value>
+  </data>
+  <data name="Invoice_Amount" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="Invoice_VatIncluded" xml:space="preserve">
+    <value>Shu jumladan QQS (12%):</value>
+  </data>
+  <data name="Invoice_TotalToPay" xml:space="preserve">
+    <value>JAMI TO'LANADI:</value>
+  </data>
+  <data name="Invoice_ThankYou" xml:space="preserve">
+    <value>Xaridingiz uchun rahmat!</value>
+  </data>
+  <data name="Invoice_FiscalReceiptDemo" xml:space="preserve">
+    <value>Fiskal chek Socratic Demo • www.socratic.uz</value>
+  </data>
+  <data name="Invoice_RemoveItemHint" xml:space="preserve">
+    <value>O'chirish uchun bosing</value>
+  </data>
+  <data name="Invoice_DefaultCashier" xml:space="preserve">
+    <value>Kassa POS-1</value>
+  </data>
+  <data name="Invoice_DefaultSystem" xml:space="preserve">
+    <value>Socratic Universal Savdo Tizimi</value>
+  </data>
+  <data name="SmartDataView_Table" xml:space="preserve">
+    <value>Jadval</value>
+  </data>
+  <data name="SmartDataView_Kanban" xml:space="preserve">
+    <value>Kanban</value>
+  </data>
+  <data name="SmartGrid_Enabled" xml:space="preserve">
+    <value>yoqilgan</value>
+  </data>
+  <data name="SmartGrid_Disabled" xml:space="preserve">
+    <value>o'chirilgan</value>
+  </data>
+  <data name="Schedule_From" xml:space="preserve">
+    <value>Dan</value>
+  </data>
+  <data name="Schedule_To" xml:space="preserve">
+    <value>Gacha</value>
+  </data>
+  <data name="Schedule_ResetScheduleAction" xml:space="preserve">
+    <value>Jadvalni tiklash</value>
+  </data>
+</root>

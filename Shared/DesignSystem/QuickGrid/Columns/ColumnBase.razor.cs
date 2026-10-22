@@ -4,6 +4,7 @@
 using QuickGrid.Infrastructure;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Web.Virtualization;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components;
 
 namespace QuickGrid;
@@ -112,5 +113,74 @@ public abstract partial class ColumnBase<TGridItem>
     public ColumnBase()
     {
         HeaderContent = RenderDefaultHeaderContent;
+    }
+
+    private void RenderDefaultHeaderContent(RenderTreeBuilder builder)
+    {
+        if (HeaderTemplate is not null)
+        {
+            builder.AddContent(0, HeaderTemplate(this));
+        }
+        else
+        {
+            var isOptionsRight = Align == Align.Right || Align == Align.End;
+            var isOptionsLeft = ColumnOptions is not null && !isOptionsRight;
+
+            if (isOptionsLeft)
+            {
+                builder.OpenElement(1, "button");
+                builder.AddAttribute(2, "class", "col-options-button");
+                builder.AddAttribute(3, "type", "button");
+                builder.AddAttribute(4, "title", "Column options");
+                builder.AddAttribute(5, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));
+                builder.CloseElement();
+            }
+
+            var isSortable = Sortable.HasValue ? Sortable.Value : IsSortableByDefault();
+            if (isSortable)
+            {
+                builder.OpenElement(6, "button");
+                builder.AddAttribute(7, "class", "col-title");
+                builder.AddAttribute(8, "type", "button");
+                builder.AddAttribute(9, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.SortByColumnAsync(this)));
+                builder.OpenElement(10, "div");
+                builder.AddAttribute(11, "class", "col-title-text");
+                builder.AddContent(12, Title);
+                builder.CloseElement();
+                builder.OpenElement(13, "div");
+                builder.AddAttribute(14, "class", "sort-indicator");
+                builder.AddAttribute(15, "aria-hidden", "true");
+                builder.CloseElement();
+                builder.CloseElement();
+            }
+            else
+            {
+                builder.OpenElement(16, "div");
+                builder.AddAttribute(17, "class", "col-title");
+                builder.OpenElement(18, "div");
+                builder.AddAttribute(19, "class", "col-title-text");
+                builder.AddContent(20, Title);
+                builder.CloseElement();
+                builder.CloseElement();
+            }
+
+            if (ColumnOptions is not null && isOptionsRight)
+            {
+                builder.OpenElement(21, "button");
+                builder.AddAttribute(22, "class", "col-options-button");
+                builder.AddAttribute(23, "type", "button");
+                builder.AddAttribute(24, "title", "Column options");
+                builder.AddAttribute(25, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));
+                builder.CloseElement();
+            }
+        }
+    }
+
+    public void RenderPlaceholderContent(RenderTreeBuilder builder, PlaceholderContext placeholderContext)
+    {
+        if (PlaceholderTemplate is not null)
+        {
+            builder.AddContent(0, PlaceholderTemplate(placeholderContext));
+        }
     }
 }

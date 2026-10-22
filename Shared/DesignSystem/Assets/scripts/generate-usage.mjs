@@ -10,10 +10,73 @@ const wwwrootDir = path.resolve(assetsDir, 'wwwroot');
 const analyticsDir = path.resolve(wwwrootDir, 'analytics');
 const usageDir = path.resolve(analyticsDir, 'usage');
 const classesCsPath = path.resolve(assetsDir, 'Constants/Classes.g.cs');
+const locCsPath = path.resolve(assetsDir, 'Constants/Loc.g.cs');
 const repoFrontendRoot = path.resolve(assetsDir, '../../../../');
 
 if (!fs.existsSync(usageDir)) {
   fs.mkdirSync(usageDir, { recursive: true });
+}
+
+// -------------------------------------------------------------
+// 1b. Loc.g.cs Parsing
+// -------------------------------------------------------------
+function parseLocFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.warn(`⚠️ Loc.g.cs not found at ${filePath}`);
+    return { locConstantsMap: new Map(), rawKeyToLocMap: new Map(), domainKeysMap: new Map() };
+  }
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  const lines = content.split('\n');
+
+  let currentDomain = null;
+  const locConstantsMap = new Map(); // key: "Domain.Name", value: { domain, name, locKey, count: 0, files: Set }
+  const rawKeyToLocMap = new Map();  // key: locKey, value: ["Domain.Name"]
+  const domainKeysMap = new Map();   // key: domain, value: Set of names
+
+  const domainDefRegex = /public\s+static\s+class\s+([A-Za-z0-9_]+)/;
+  const constDefRegex = /public\s+const\s+string\s+([A-Za-z0-9_]+)\s*=\s*"([^"]+)";/;
+
+  for (const line of lines) {
+    const classMatch = line.match(domainDefRegex);
+    if (classMatch) {
+      if (classMatch[1] === 'Loc') {
+        currentDomain = null;
+      } else {
+        currentDomain = classMatch[1];
+        if (!domainKeysMap.has(currentDomain)) {
+          domainKeysMap.set(currentDomain, new Set());
+        }
+      }
+      continue;
+    }
+
+    if (currentDomain) {
+      const constMatch = line.match(constDefRegex);
+      if (constMatch) {
+        const name = constMatch[1];
+        const locKey = constMatch[2];
+        const key = `${currentDomain}.${name}`;
+
+        const record = {
+          domain: currentDomain,
+          name,
+          locKey,
+          count: 0,
+          files: new Set()
+        };
+        locConstantsMap.set(key, record);
+        domainKeysMap.get(currentDomain).add(name);
+
+        if (!rawKeyToLocMap.has(locKey)) {
+          rawKeyToLocMap.set(locKey, []);
+        }
+        rawKeyToLocMap.get(locKey).push(key);
+      }
+    }
+  }
+
+  return { locConstantsMap, rawKeyToLocMap, domainKeysMap };
 }
 
 // -------------------------------------------------------------
@@ -104,15 +167,23 @@ function findSourceFiles(rootDir) {
 // -------------------------------------------------------------
 // 3. Static Analysis (Razor/C# AST & Text Scanner)
 // -------------------------------------------------------------
-function analyzeSourceFiles(files, constantsMap, cssToConstantMap) {
+function analyzeSourceFiles(files, constantsMap, cssToConstantMap, locConstantsMap, rawKeyToLocMap, domainKeysMap) {
   const directClassesUsage = new Map(); // cssClass -> { count, files: Set, recommendedConstant }
   const webComponentsMap = new Map(); // tagName -> { count, files: Set }
+  const directLocUsage = new Map(); // locKey -> { count, files: Set, recommendedConstant }
 
   const constantRegex = /Classes\.([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)/g;
   const webComponentRegex = /<(md-[a-z0-9-]+)[\s>/]/g;
   const strRegex = /"([^"\r\n\\]*)"|'([^'\r\n\\]*)'/g;
 
+  // Localization regexes
+  const typedLocRegex = /Loc\.([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)/g;
+  const usingStaticLocRegex = /(?:@using|using)\s+static\s+Assets\.Constants\.Loc\.([A-Za-z0-9_]+)/g;
+  const localizerRawRegex = /(?:L|localizer|_localizer|StringLocalizer)\[\s*["']([^"'\r\n]+)["']\s*\]/g;
+  const localizerTypedRegex = /(?:L|localizer|_localizer|StringLocalizer)\[\s*([A-Za-z0-9_]+)\s*\]/g;
+
   let totalConstantMatches = 0;
+  let totalLocMatches = 0;
 
   for (const filePath of files) {
     let content = '';
@@ -135,6 +206,63 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap) {
         record.count++;
         record.files.add(relPath);
         totalConstantMatches++;
+      }
+    }
+
+    // 1b. Match typed localization constants: Loc.<Domain>.<Name>
+    let locMatch;
+    while ((locMatch = typedLocRegex.exec(content)) !== null) {
+      const key = `${locMatch[1]}.${locMatch[2]}`;
+      const record = locConstantsMap.get(key);
+      if (record) {
+        record.count++;
+        record.files.add(relPath);
+        totalLocMatches++;
+      }
+    }
+
+    // Check for @using static Assets.Constants.Loc.<Domain>
+    const importedDomains = [];
+    let domainMatch;
+    while ((domainMatch = usingStaticLocRegex.exec(content)) !== null) {
+      importedDomains.push(domainMatch[1]);
+    }
+
+    if (importedDomains.length > 0) {
+      let tMatch;
+      while ((tMatch = localizerTypedRegex.exec(content)) !== null) {
+        const name = tMatch[1];
+        if (name === 'Loc') continue;
+        for (const d of importedDomains) {
+          if (domainKeysMap.has(d) && domainKeysMap.get(d).has(name)) {
+            const key = `${d}.${name}`;
+            const record = locConstantsMap.get(key);
+            if (record) {
+              record.count++;
+              record.files.add(relPath);
+              totalLocMatches++;
+              break;
+            }
+          }
+        }
+      }
+    }
+
+    // 1c. Match raw string localization calls: L["<key>"]
+    let rawLocMatch;
+    while ((rawLocMatch = localizerRawRegex.exec(content)) !== null) {
+      const rawKey = rawLocMatch[1];
+      if (rawKeyToLocMap.has(rawKey)) {
+        if (!directLocUsage.has(rawKey)) {
+          directLocUsage.set(rawKey, {
+            count: 0,
+            files: new Set(),
+            recommendedConstant: `Loc.${rawKeyToLocMap.get(rawKey)[0]}`
+          });
+        }
+        const entry = directLocUsage.get(rawKey);
+        entry.count++;
+        entry.files.add(relPath);
       }
     }
 
@@ -188,7 +316,7 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap) {
     }
   }
 
-  return { totalConstantMatches, directClassesUsage, webComponentsMap };
+  return { totalConstantMatches, directClassesUsage, webComponentsMap, totalLocMatches, directLocUsage };
 }
 
 // -------------------------------------------------------------
@@ -198,17 +326,21 @@ async function runUsageAnalysis() {
   const startTime = performance.now();
   console.log('📊 [Socratic Static Usage Analyzer] Running pure C# & Razor AST scan...');
 
-  // Step A: Parse Classes.g.cs
-  console.log('🔍 Parsing Classes.g.cs constants...');
+  // Step A: Parse Classes.g.cs and Loc.g.cs
+  console.log('🔍 Parsing Classes.g.cs & Loc.g.cs constants...');
   const { constantsMap, cssToConstantMap } = parseClassesFile(classesCsPath);
+  const { locConstantsMap, rawKeyToLocMap, domainKeysMap } = parseLocFile(locCsPath);
 
   // Step B: Scan source files
   const sourceFiles = findSourceFiles(repoFrontendRoot);
   console.log(`📁 Scanning ${sourceFiles.length} source files (.razor & .cs)...`);
-  const { totalConstantMatches, directClassesUsage, webComponentsMap } = analyzeSourceFiles(
+  const { totalConstantMatches, directClassesUsage, webComponentsMap, totalLocMatches, directLocUsage } = analyzeSourceFiles(
     sourceFiles,
     constantsMap,
-    cssToConstantMap
+    cssToConstantMap,
+    locConstantsMap,
+    rawKeyToLocMap,
+    domainKeysMap
   );
 
   // Step C: Format and write class-constants.json
@@ -274,7 +406,70 @@ async function runUsageAnalysis() {
   const classConstantsFile = path.resolve(usageDir, 'class-constants.json');
   fs.writeFileSync(classConstantsFile, JSON.stringify(classConstantsReport, null, 2), 'utf8');
 
-  // Step D: Format and write components.json (statically extracted from Razor)
+  // Step D: Format and write localization.json
+  const locConstantsList = Array.from(locConstantsMap.values()).map((r) => ({
+    key: `${r.domain}.${r.name}`,
+    domain: r.domain,
+    name: r.name,
+    locKey: r.locKey,
+    usageCountInRazor: r.count,
+    filesCount: r.files.size,
+    files: Array.from(r.files)
+  }));
+
+  const usedLocConstants = locConstantsList
+    .filter((c) => c.usageCountInRazor > 0)
+    .sort((a, b) => b.usageCountInRazor - a.usageCountInRazor);
+  const unusedLocConstants = locConstantsList
+    .filter((c) => c.usageCountInRazor === 0)
+    .sort((a, b) => a.key.localeCompare(b.key));
+
+  const byDomain = {};
+  for (const c of locConstantsList) {
+    if (!byDomain[c.domain]) {
+      byDomain[c.domain] = { total: 0, used: 0, totalCalls: 0 };
+    }
+    byDomain[c.domain].total++;
+    if (c.usageCountInRazor > 0) {
+      byDomain[c.domain].used++;
+      byDomain[c.domain].totalCalls += c.usageCountInRazor;
+    }
+  }
+
+  const rawLocViolations = Array.from(directLocUsage.entries())
+    .map(([locKey, data]) => ({
+      locKey,
+      occurrences: data.count,
+      recommendedConstant: data.recommendedConstant,
+      filesCount: data.files.size,
+      files: Array.from(data.files)
+    }))
+    .sort((a, b) => b.occurrences - a.occurrences);
+
+  const totalRawLocViolations = rawLocViolations.reduce((sum, v) => sum + v.occurrences, 0);
+
+  const localizationReport = {
+    generatedAt: new Date().toISOString(),
+    summary: {
+      totalDeclaredKeys: locConstantsList.length,
+      usedInRazorCount: usedLocConstants.length,
+      unusedCount: unusedLocConstants.length,
+      adoptionRatePercent: locConstantsList.length > 0 ? Math.round((usedLocConstants.length / locConstantsList.length) * 100) : 0,
+      totalTypedCallSites: totalLocMatches,
+      rawStringViolationsCount: totalRawLocViolations,
+      keysWithRawLiteralsCount: rawLocViolations.length,
+      sourceFilesScanned: sourceFiles.length
+    },
+    topUsedKeys: usedLocConstants.slice(0, 50),
+    byDomain,
+    rawStringViolations: rawLocViolations.slice(0, 50),
+    unusedKeys: unusedLocConstants.slice(0, 100)
+  };
+
+  const localizationFile = path.resolve(usageDir, 'localization.json');
+  fs.writeFileSync(localizationFile, JSON.stringify(localizationReport, null, 2), 'utf8');
+
+  // Step E: Format and write components.json (statically extracted from Razor)
   const componentsList = Array.from(webComponentsMap.entries())
     .map(([component, data]) => ({
       component,
@@ -316,9 +511,13 @@ async function runUsageAnalysis() {
   console.log(`   🏷️  Classes.g.cs constants: ${usedConstants.length} / ${constantsList.length} utilized (${classConstantsReport.summary.adoptionRatePercent}%)`);
   console.log(`   ⚡ Total @Classes.* call-sites: ${totalConstantMatches}`);
   console.log(`   ⚠️  Raw string class occurrences: ${totalRawViolations} across ${rawViolations.length} classes`);
+  console.log(`   🌐 Loc.g.cs keys: ${usedLocConstants.length} / ${locConstantsList.length} utilized (${localizationReport.summary.adoptionRatePercent}%)`);
+  console.log(`   ⚡ Total typed localization call-sites: ${totalLocMatches}`);
+  console.log(`   ⚠️  Raw string localization occurrences: ${totalRawLocViolations} across ${rawLocViolations.length} keys`);
   console.log(`   🧩 Material Web Component tags: ${totalWebComponentInstances} calls across ${componentsList.length} components`);
   console.log(`   💾 Artifacts written:`);
   console.log(`      • analytics/usage/class-constants.json`);
+  console.log(`      • analytics/usage/localization.json`);
   console.log(`      • analytics/usage/components.json\n`);
 
   console.log(`🔝 Top 5 Used Classes.g.cs Constants in Razor:`);
@@ -327,6 +526,11 @@ async function runUsageAnalysis() {
   if (rawViolations.length > 0) {
     console.log(`\n⚠️  Top Raw CSS String Classes in Razor (should be migrated to @Classes.*):`);
     rawViolations.slice(0, 5).forEach((v) => console.log(`   - "${v.cssClass}": ${v.occurrences} occurrences (use @Classes.${v.recommendedConstant})`));
+  }
+
+  if (rawLocViolations.length > 0) {
+    console.log(`\n⚠️  Top Raw Localization Keys in Razor (should be migrated to @L[...]):`);
+    rawLocViolations.slice(0, 5).forEach((v) => console.log(`   - L["${v.locKey}"]: ${v.occurrences} occurrences (use @L[${v.recommendedConstant.replace('Loc.', '')}])`));
   }
 
   if (componentsList.length > 0) {

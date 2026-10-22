@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / smart-enum.css
+   Pure CSS Grid, MD3 Expressive tokens
+   ========================================================================== */
+
+.smart-enum-container {
+    display: grid;
+    gap: 8px;
+}
+
+.smart-enum-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.smart-enum-required {
+    color: var(--md-sys-color-error);
+}
+
+.smart-enum-segmented {
+    width: 100%;
+}
+
+.smart-enum-options {
+    display: grid;
+    gap: 8px;
+    padding-left: 4px;
+}

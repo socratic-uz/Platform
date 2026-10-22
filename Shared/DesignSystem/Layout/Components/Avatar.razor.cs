@@ -34,6 +34,7 @@ namespace Shared.Components
     public partial class Avatar : DataComponentBase
     {
         [Inject] private IServiceProvider? ServiceProvider { get; set; }
+        [Inject] public IStringLocalizer l { get; set; } = default!;
         [Inject] public NavigationManager nav { get; set; } = default!;
         [Inject] public AuthServiceClient authClient { get; set; } = default!;
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;

@@ -44,4 +44,4 @@ var json = JsonSerializer.Serialize(product, AotJsonContext.Default.ProductDto);
 ## 3. Microsoft.Extensions.Hosting & Explicit Registration
 - Использовать AOT-compatible подход для хостинга: `WebApplication.CreateSlimBuilder(args)` или `builder.Services.ConfigureHttpJsonOptions(...)`.
 - Все сервисы и зависимости регистрируются явно (`services.AddSingleton<IProductRepository, ScyllaProductRepository>()`), без сканирования сборок в runtime.
-- Использовать compile-time реестры (например, `ProductModuleRegistry`) вместо динамического поиска типов по строковому имени.
+- Использовать compile-time реестры (например, `ProductFeatureRegistry`) вместо динамического поиска типов по строковому имени.

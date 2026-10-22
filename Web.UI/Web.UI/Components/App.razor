@@ -53,14 +53,3 @@
     <script src="@Assets["_framework/blazor.web.js"]"></script>
 </body>
 </html>
-
-@code {
-    [CascadingParameter] private HttpContext? HttpContext { get; set; }
-
-    private string InitialTheme =>
-        HttpContext?.Request.Cookies["Theme"]?.ToLowerInvariant() switch
-        {
-            "light" => "light",
-            _ => "dark"
-        };
-}

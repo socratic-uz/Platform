@@ -1,148 +1,13 @@
 @namespace Smart.Web.Components
 @using System.Reflection
-@inject Microsoft.JSInterop.IJSRuntime JS
+@using System.Linq.Expressions
+@using SystemType = System.Type;
+@using SystemEnum = System.Enum;
 
 @typeparam TItem where TItem : class, new()
 @attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "SmartForm dynamic enum/reflection helpers are preserved for UI rendering")]
 @attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "SmartForm dynamic enum/reflection helpers are preserved for UI rendering")]
 
-
-<style>
-    .smart-form-dialog,
-    md-dialog.smart-form-dialog {
-        --md-dialog-container-min-inline-size: min(550px, 92vw);
-        --md-dialog-container-max-inline-size: min(840px, 96vw);
-        max-width: min(840px, 96vw) !important;
-        width: min(840px, 96vw) !important;
-        max-height: min(92vh, 920px) !important;
-    }
-    .smart-form-dialog [slot="content"] {
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-        padding: 16px 24px !important;
-    }
-    .smart-form-dialog form,
-    .smart-form-dialog .smart-form-content {
-        display: grid;
-        gap: 16px;
-        box-sizing: border-box;
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-    }
-    .smart-form-dialog fieldset,
-    .smart-form-dialog .smart-form-fieldset {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
-        border-radius: 12px;
-        padding: 14px;
-        margin: 0 0 10px 0;
-        display: grid;
-        gap: 12px;
-        background: rgba(255, 255, 255, 0.02);
-    }
-    .smart-form-dialog fieldset legend,
-    .smart-form-dialog .smart-form-fieldset legend {
-        font-weight: 700;
-        font-size: 0.95rem;
-        padding: 0 8px;
-        color: var(--md-sys-color-primary, #6750a4);
-        max-width: 100%;
-        word-break: break-word;
-    }
-    .smart-form-dialog .smart-form-field {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        display: grid;
-        gap: 6px;
-    }
-    .smart-form-dialog md-outlined-text-field,
-    .smart-form-dialog md-filled-text-field,
-    .smart-form-dialog md-select,
-    .smart-form-dialog .material-text-field {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
-    }
-    .smart-form-dialog .smart-form-chip-container {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        gap: 8px;
-        align-items: center;
-        width: 100%;
-        min-width: 0;
-    }
-    .smart-form-dialog .smart-form-chip-label {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--md-sys-color-on-surface-variant, #49454f);
-        margin-bottom: 2px;
-    }
-    .smart-form-dialog .smart-form-switch-container {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 16px;
-        padding: 10px 14px;
-        background: var(--md-sys-color-surface-container-low, rgba(255, 255, 255, 0.03));
-        border-radius: 12px;
-        border: 1px solid var(--md-sys-color-outline-variant, rgba(255, 255, 255, 0.1));
-        min-width: 0;
-        box-sizing: border-box;
-        width: 100%;
-    }
-    .smart-form-dialog .smart-form-switch-label {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--md-sys-color-on-surface, #1d1b20);
-        min-width: 0;
-        word-break: break-word;
-    }
-    .smart-form-dialog .smart-form-checkbox-container {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        align-items: center;
-        gap: 12px;
-        padding: 6px 0;
-        min-width: 0;
-        box-sizing: border-box;
-        width: 100%;
-    }
-    .smart-form-dialog [slot="actions"] {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        align-items: center;
-        justify-content: end;
-        gap: 10px;
-        box-sizing: border-box;
-        padding: 16px 24px;
-    }
-    @@media (max-width: 600px) {
-        .smart-form-dialog,
-        md-dialog.smart-form-dialog {
-            max-width: 98vw !important;
-            width: 98vw !important;
-            --md-dialog-container-min-inline-size: 92vw;
-            --md-dialog-container-max-inline-size: 96vw;
-        }
-        .smart-form-dialog [slot="content"] {
-            padding: 14px 10px !important;
-        }
-    }
-</style>
 
 <MaterialDialog id=@Id
                 class="smart-form-dialog"
@@ -158,7 +23,7 @@
         @Headline
     </Headline>
     <Content>
-        <EditForm EditContext="@editContext" id="@formId" class="smart-form-content" style="display: grid; gap: 16px; box-sizing: border-box; width: 100%; min-width: 0; overflow-x: hidden;">
+        <EditForm EditContext="@editContext" id="@formId" class="smart-form-content">
             <DataAnnotationsValidator />
 
             @if (ShowValidationSummary)
@@ -188,278 +53,17 @@
         }
         else
         {
-            <Button Variant="ButtonVariant.Text" Type="button" OnClick="e => OnCancel.InvokeAsync(e)">
-                @(string.IsNullOrWhiteSpace(CancelText) ? "Отмена" : CancelText)
+            <Button Variant=@ButtonVariant.Text Type="button" OnClick=@(e => OnCancel.InvokeAsync(e))>
+                @EffectiveCancelText
             </Button>
-            <Button Variant="ButtonVariant.Filled" Type="button" OnClick="SubmitFormAsync">
-                @(string.IsNullOrWhiteSpace(SubmitText) ? "Сохранить" : SubmitText)
+            <Button Variant=@ButtonVariant.Filled Type="button" OnClick=@SubmitFormAsync>
+                @EffectiveSubmitText
             </Button>
         }
     </Actions>
 </MaterialDialog>
 
-@code
-{
-
-@using System.Linq.Expressions
-@using System.Linq
-@using System.Reflection
-@using System.ComponentModel
-@using System.ComponentModel.DataAnnotations
-@using Microsoft.JSInterop
-@using Microsoft.AspNetCore.Components.Forms
-
-@using SystemEnum = System.Enum
-@using SystemType = System.Type;
-
- string formId = Guid.NewGuid().ToString();
-PropertyInfo[]? propertyInfos;
-PropertyInfo? imagesProperty;
-PropertyInfo? newImagesContentProperty;
-PropertyInfo? newImagesFileNameProperty;
-PropertyInfo? newImagesContentTypeProperty;
-
-[Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();
-[Parameter] public bool Open { get; set; } = false;
-[Parameter] public bool Quick { get; set; } = false;
-[Parameter] public string Type { get; set; } = "alert";
-[Parameter] public bool NoFocusTrap { get; set; } = false;
-[Parameter] public string AriaLabel { get; set; } = "";
-[Parameter] public EventCallback<EventArgs> OnClose { get; set; }
-[Parameter] public EventCallback<EventArgs> OnCancel { get; set; }
-[Parameter] public EventCallback<EditContext> OnValidSubmit { get; set; }
-[Parameter] public EventCallback<EditContext> OnInvalidSubmit { get; set; }
-
-[Parameter] public RenderFragment? Headline { get; set; }
-[Parameter] public RenderFragment? ChildContent { get; set; }
-[Parameter] public RenderFragment? Actions { get; set; }
-[Parameter] public RenderFragment? AdditionalFields { get; set; }
-
-[Parameter] public TItem Item { get; set; } = new();
-
-// Новые параметры для улучшенной функциональности
-[Parameter] public bool ShowValidationSummary { get; set; } = true;
-[Parameter] public string SubmitText { get; set; } = "Submit";
-[Parameter] public string CancelText { get; set; } = "Cancel";
-[Parameter] public List<string> ExcludeProperties { get; set; } = new();
-[Parameter] public Dictionary<string, string> PropertyDisplayNames { get; set; } = new();
-[Parameter] public Dictionary<string, string> PropertyTypes { get; set; } = new();
-[Parameter] public bool UseCheckboxForBool { get; set; } = false; // Новый параметр
-[Parameter] public bool UseChipsForEnum { get; set; } = true; // Новый параметр
-[Parameter] public bool UseChipSetForEnum { get; set; } = true; // Новый параметр для ChipSet
-[Parameter] public bool UseSmartCheckboxForEnum { get; set; } = false; // Новый параметр для SmartCheckbox
-[Parameter] public Func<string, string>? ImageUrlResolver { get; set; }
-
-[Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
-
-    private EditContext? editContext;
-
-    protected override void OnParametersSet()
-    {
-        if (editContext == null || editContext.Model != Item)
-        {
-            editContext = new EditContext(Item);
-        }
-        base.OnParametersSet();
-    }
-
-    private async Task SubmitFormAsync()
-    {
-        editContext ??= new EditContext(Item);
-        bool isValid = editContext.Validate();
-        if (isValid)
-        {
-            await OnValidSubmit.InvokeAsync(editContext);
-        }
-        else
-        {
-            await OnInvalidSubmit.InvokeAsync(editContext);
-        }
-    }
-
-protected override Task OnInitializedAsync()
-{
-    var allProps = typeof(TItem).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-    
-    imagesProperty = allProps.FirstOrDefault(p => p.Name.Equals("Images", StringComparison.OrdinalIgnoreCase));
-    newImagesContentProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesContent", StringComparison.OrdinalIgnoreCase));
-    newImagesFileNameProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesFileName", StringComparison.OrdinalIgnoreCase));
-    newImagesContentTypeProperty = allProps.FirstOrDefault(p => p.Name.Equals("NewImagesContentType", StringComparison.OrdinalIgnoreCase));
-
-    var imageRelatedNames = new List<string>();
-    if (imagesProperty != null && newImagesContentProperty != null)
-    {
-        imageRelatedNames.Add(newImagesContentProperty.Name);
-        if (newImagesFileNameProperty != null) imageRelatedNames.Add(newImagesFileNameProperty.Name);
-        if (newImagesContentTypeProperty != null) imageRelatedNames.Add(newImagesContentTypeProperty.Name);
-    }
-
-    propertyInfos = allProps
-        .Where(p => 
-            p.GetCustomAttribute<ScaffoldColumnAttribute>()?.Scaffold != false &&
-            ((p.CanRead && p.CanWrite) || 
-             (imagesProperty != null && p.Name.Equals(imagesProperty.Name, StringComparison.OrdinalIgnoreCase)) ||
-             IsFileCollection(p)) && 
-            !ExcludeProperties.Contains(p.Name) && 
-            !imageRelatedNames.Contains(p.Name) &&
-            !(p.Name.StartsWith("Has") && p.PropertyType == typeof(bool) && typeof(TItem).GetProperty(p.Name.Substring(3)) != null))
-        .ToArray();
-
-    return Task.CompletedTask;
-}
-
-private bool IsFileCollection(PropertyInfo prop)
-{
-    var type = prop.PropertyType;
-    if (!type.IsGenericType) return false;
-    
-    var genericArgs = type.GetGenericArguments();
-    if (genericArgs.Length == 1 && (genericArgs[0].FullName == "SharedKernel.Protos.File" || genericArgs[0].FullName == "Core.Domain.Entities.File"))
-    {
-        return true;
-    }
-    
-    var iListInterface = type.GetInterfaces()
-        .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IList<>));
-    if (iListInterface != null)
-    {
-        var ifaceArgs = iListInterface.GetGenericArguments();
-        if (ifaceArgs.Length == 1 && (ifaceArgs[0].FullName == "SharedKernel.Protos.File" || ifaceArgs[0].FullName == "Core.Domain.Entities.File"))
-        {
-            return true;
-        }
-    }
-    
-    return false;
-}
-
-private bool IsSimpleType(SystemType type)
-{
-    return type.IsPrimitive ||
-           type == typeof(string) ||
-           type == typeof(decimal) ||
-           type == typeof(DateTime) ||
-           type == typeof(Guid) ||
-           type.IsEnum;
-}
-
-
-private string GetDisplayName(PropertyInfo property)
-{
-    if (PropertyDisplayNames.TryGetValue(property.Name, out var customName))
-        return customName;
-
-    var displayAttribute = property.GetCustomAttribute<DisplayAttribute>();
-    return displayAttribute?.Name ?? property.Name;
-}
-
-private bool IsRequired(PropertyInfo property)
-{
-    return property.GetCustomAttribute<RequiredAttribute>() != null;
-}
-
-private string GetFieldType(PropertyInfo property)
-{
-    if (PropertyTypes.ContainsKey(property.Name))
-        return PropertyTypes[property.Name];
-
-    var dataTypeAttribute = property.GetCustomAttribute<DataTypeAttribute>();
-    if (dataTypeAttribute != null)
-    {
-        return dataTypeAttribute.DataType switch
-        {
-            DataType.Password => "password",
-            DataType.EmailAddress => "email",
-            DataType.MultilineText => "textarea",
-            DataType.PhoneNumber => "tel",
-            DataType.Url => "url",
-            DataType.Date => "date",
-            DataType.DateTime => "datetime-local",
-            DataType.Time => "time",
-            DataType.Currency => "number",
-            DataType.Text => "text",
-            DataType.ImageUrl => "text",
-            DataType.Upload => "file",
-            _ => "text"
-        };
-    }
-
-    var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
-
-    if (propertyType == typeof(int) || propertyType == typeof(long) ||
-        propertyType == typeof(decimal) || propertyType == typeof(double) ||
-        propertyType == typeof(float))
-    {
-        return "number";
-    }
-
-    if (propertyType == typeof(DateTime))
-    {
-        var propertyName = property.Name.ToLower();
-        if (propertyName.Contains("date") && !propertyName.Contains("time"))
-            return "date";
-        if (propertyName.Contains("time") && !propertyName.Contains("date"))
-            return "time";
-        return "datetime-local";
-    }
-
-    if (propertyType == typeof(bool))
-        return "switch";
-
-    if (property.Name.ToLower().Contains("email"))
-        return "email";
-
-    if (property.Name.ToLower().Contains("password"))
-        return "password";
-
-    if (property.Name.ToLower().Contains("description") ||
-        property.Name.ToLower().Contains("comment") ||
-        property.Name.ToLower().Contains("note"))
-        return "textarea";
-
-    return "text";
-}
-
-private int GetTextAreaRows(PropertyInfo property)
-{
-    var stringLengthAttribute = property.GetCustomAttribute<StringLengthAttribute>();
-    if (stringLengthAttribute != null && stringLengthAttribute.MaximumLength > 100)
-        return 4;
-    return 2;
-}
-
-private string GetEnumDisplayText(object enumValue, SystemType enumType)
-{
-    // Получаем DisplayAttribute если есть
-    var memberInfo = enumType.GetMember(enumValue.ToString() ?? "").FirstOrDefault();
-    if (memberInfo != null)
-    {
-        var displayAttribute = memberInfo.GetCustomAttribute<DisplayAttribute>();
-        if (displayAttribute?.Name != null)
-            return displayAttribute.Name;
-
-        var descriptionAttribute = memberInfo.GetCustomAttribute<DescriptionAttribute>();
-        if (descriptionAttribute?.Description != null)
-            return descriptionAttribute.Description;
-    }
-
-    return enumValue.ToString() ?? "";
-}
-
-private bool IsZoneField(PropertyInfo info, SystemType propertyType)
-{
-    if (propertyType.Name.Contains("Zone", StringComparison.OrdinalIgnoreCase) || propertyType.Name.Contains("Polygon", StringComparison.OrdinalIgnoreCase))
-        return true;
-
-    if (propertyType.IsGenericType)
-    {
-        var genericArgs = propertyType.GetGenericArguments();
-        if (genericArgs.Length == 1 && (genericArgs[0].Name.Contains("Zone", StringComparison.OrdinalIgnoreCase) || genericArgs[0].Name.Contains("Polygon", StringComparison.OrdinalIgnoreCase)))
-            return true;
-    }
-    return false;
-}
-
+@code {
 private RenderFragment RenderField(PropertyInfo info, object? obj)
 {
     if (obj == null || info.GetIndexParameters().Length > 0 || !info.CanRead) return
@@ -501,7 +105,7 @@ private RenderFragment RenderField(PropertyInfo info, object? obj)
     }
     catch (Exception ex)
     {
-        return @<div style="color: red; padding: 5px; border: 1px solid red;">
+        return @<div class="smart-form-error">
             Error rendering field '@info.Name': @ex.Message
         </div>;
     }
@@ -513,7 +117,7 @@ private RenderFragment RenderWorkScheduleField(PropertyInfo info, object obj, ob
     info.SetValue(obj, schedule);
 
     return @<text>
-        <div class="smart-form-field" style="margin-bottom: 12px;">
+        <div class="smart-form-field smart-form-field-mb">
             <SmartSchedulePicker Schedule="@schedule"
                                  ScheduleChanged="@((SharedKernel.ValueObjects.WorkSchedule updated) => { info.SetValue(obj, updated); })" />
         </div>
@@ -555,7 +159,7 @@ private RenderFragment RenderComplexField(PropertyInfo info, object parentObj, o
         }
         catch
         {
-            return @<div style="color: gray; padding: 5px;">Cannot create instance of @propertyType.Name</div>;
+            return @<div class="smart-form-info">Cannot create instance of @propertyType.Name</div>;
         }
     }
 
@@ -828,7 +432,7 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
         }
         else
         {
-            <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+            <div class="smart-form-info">
                 Chip display for '@displayName': Using fallback to Select component due to complex enum structure
             </div>
             @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
@@ -898,8 +502,7 @@ private RenderFragment CreateEnumSelect(PropertyInfo property, object parentObj,
                             }
                         })"
                         ValueExpression="() => currentValStr"
-                        Options="@selectOptions"
-                        style="width: 100%;" />
+                        Options="@selectOptions" />
             </div>
         }
     </text>;
@@ -998,7 +601,7 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
         }
         else
         {
-            <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+            <div class="smart-form-info">
                 Chip display for '@displayName': Using fallback to Select component due to complex enum structure
             </div>
             @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
@@ -1070,7 +673,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             {
                 Console.WriteLine($"Error in CreateEnumSmartCheckbox for {enumType.Name}: {ex.Message}");
 
-                <div class="smart-form-info" style="color: orange; padding: 8px; border: 1px solid orange; border-radius: 4px;">
+                <div class="smart-form-info">
                     SmartCheckbox for '@displayName': Using fallback to Select component due to complex enum structure
                 </div>
 
@@ -1092,7 +695,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             }
             catch
             {
-                return @<div style="color: gray; padding: 5px;">Cannot create instance of @propertyType.Name</div>;
+                return @<div class="smart-form-info">Cannot create instance of @propertyType.Name</div>;
             }
         }
 
@@ -1248,70 +851,6 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
         </text>;
     }
 
-    private string ResolveImageUrl(string image)
-    {
-        if (ImageUrlResolver != null)
-        {
-            return ImageUrlResolver(image);
-        }
-        
-        var typeName = typeof(TItem).Name.ToLower();
-        if (typeName.Contains("organization") || typeName.Contains("org"))
-        {
-            return BuildDefaultImageUrl(image, "org");
-        }
-        else if (typeName.Contains("product"))
-        {
-            return BuildDefaultImageUrl(image, "product");
-        }
-        else if (typeName.Contains("profile") || typeName.Contains("user"))
-        {
-            return BuildDefaultImageUrl(image, "profile");
-        }
-        
-        return BuildDefaultImageUrl(image, "general");
-    }
-
-    [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "Dynamic reflection lookup for FileHelper is preserved for AOT UI fallback")]
-    private string BuildDefaultImageUrl(string image, string category)
-    {
-        var fileHelperType = typeof(TItem).Assembly.GetType("Core.Shared.Helpers.FileHelper") ?? 
-                             AppDomain.CurrentDomain.GetAssemblies()
-                                .SelectMany(a => {
-                                    try { return a.GetTypes(); } catch { return System.Type.EmptyTypes; }
-                                })
-                                .FirstOrDefault(t => t.FullName == "Core.Shared.Helpers.FileHelper");
-
-        if (fileHelperType != null)
-        {
-            var minIoUrlProp = fileHelperType.GetProperty("MinIOUrl", BindingFlags.Public | BindingFlags.Static);
-            var minIoUrl = minIoUrlProp?.GetValue(null)?.ToString();
-            if (!string.IsNullOrEmpty(minIoUrl))
-            {
-                if (string.IsNullOrWhiteSpace(image))
-                {
-                    return $"{minIoUrl}/img/{category}/default.png";
-                }
-                if (Uri.TryCreate(image, UriKind.Absolute, out _))
-                {
-                    return image;
-                }
-                var normalized = image.TrimStart('/');
-                if (normalized.StartsWith("img/", StringComparison.OrdinalIgnoreCase))
-                {
-                    return $"{minIoUrl}/{normalized}";
-                }
-                if (normalized.Contains('/'))
-                {
-                    return $"{minIoUrl}/img/{normalized}";
-                }
-                return $"{minIoUrl}/img/{category}/{normalized}";
-            }
-        }
-        
-        return image;
-    }
-
     private RenderFragment RenderFilePickerField(PropertyInfo info, object parentObj)
     {
         var attachments = info.GetValue(parentObj) as System.Collections.IList;
@@ -1374,28 +913,10 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error in CreateSmartEnum for {enumType.Name}: {ex.Message}");
-                    <div class="smart-form-error" style="color: red; padding: 8px;">Error rendering enum selector for @displayName</div>
+                    <div class="smart-form-error">Error rendering enum selector for @displayName</div>
                 }
             }
         </text>;
     }
 
-    private static class EnumCallbackHelper
-    {
-        public static object CreateCallback<TEnum>(object receiver, PropertyInfo property, object parentObj, Action stateHasChanged) where TEnum : struct, Enum
-        {
-            return EventCallback.Factory.Create<TEnum>(receiver, new Action<TEnum>((TEnum value) =>
-            {
-                property.SetValue(parentObj, value);
-                stateHasChanged();
-            }));
-        }
-
-        public static System.Linq.Expressions.Expression<Func<TEnum>> CreateExpression<TEnum>(PropertyInfo property, object parentObj)
-        {
-            var constantExpr = System.Linq.Expressions.Expression.Constant(parentObj);
-            var memberExpr = System.Linq.Expressions.Expression.Property(constantExpr, property);
-            return System.Linq.Expressions.Expression.Lambda<Func<TEnum>>(memberExpr);
-        }
-    }
 }

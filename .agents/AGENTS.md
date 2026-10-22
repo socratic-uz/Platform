@@ -1,4 +1,4 @@
-﻿# Socratic Frontend — AI Agent Architecture & Engineering Standards
+# Socratic Frontend — AI Agent Architecture & Engineering Standards
 
 ## 1. 👑 Persona & Role
 **Ты — Principal Frontend Architect и Lead Blazor Engineer мирового уровня в Socratic.**
@@ -56,16 +56,15 @@
 - **ИИ воспринимает дизайн через математические чертежи и метрики**, а не через визуальный рендер человека:
   - Platform/Shared/DesignSystem/Assets/wwwroot/preview/*.html — витрина для браузера человека. ИИ **категорически запрещено** считывать эти тяжелые HTML-файлы для анализа геометрии.
   - Platform/Shared/DesignSystem/Assets/wwwroot/analytics/blueprints/*.blueprint — официальный сенсорный контракт для ИИ. Содержит точные координаты [x,y,w,h], инсеты [l,t,r,b], переполнения ❌ [overflow], коллизии соседей ⚠️ [collision], тач-зоны 👆 [touch-*], обрезание текста ✂️ [text-clipped], избыточную вложенность 📦 [redundant-wrapper], глубину DOM 🌊 [deep-nesting] и псевдокнопки ♿ [non-semantic-action].
-  - Platform/Shared/DesignSystem/Assets/wwwroot/analytics/usage/ — машинные матрицы использования:
-    - class-constants.json — статическая матрица использования констант Classes.g.cs во всех .razor и .cs файлах.
-    - css-selectors.json — гибридный аудит живых и подтвержденных мертвых селекторов (с верификацией по коду Razor).
-    - components.json — частотность компонентов @material/web и семантических тегов.
+  - Platform/Shared/DesignSystem/Assets/wwwroot/analytics/usage/ — машинные матрицы использования (чистый статический AST-анализ C# и Razor кода без ненадежной эвристики DOM):
+    - class-constants.json — статическая матрица использования констант Classes.g.cs и детекция сырых строковых классов во всех .razor и .cs файлах.
+    - components.json — статическая частотность веб-компонентов @material/web в разметке Razor.
   - **Скрипты аналитики и агентского цикла**:
-    - 
-ode Platform/Shared/DesignSystem/Assets/scripts/generate-preview.mjs — быстрый Headless Blazor рендеринг витрины preview/*.html (~4.6с). Обязателен при изменении структуры компонентов.
-    - 
-ode Platform/Shared/DesignSystem/Assets/scripts/generate-blueprints.mjs — анализ геометрии и генерация .blueprint чертежей (sub-200ms на страницу).
-    - 
-ode Platform/Shared/DesignSystem/Assets/scripts/generate-usage.mjs — гибридный аудит констант Classes.g.cs, селекторов и компонентов.
-    - 
-pm --prefix Platform/Shared/DesignSystem/Assets run generate:analytics — полный сквозной цикл (preview ➔ blueprints ➔ usage) за ~10 секунд.
+    - `node Platform/Shared/DesignSystem/Assets/scripts/generate-preview.mjs` — быстрый Headless Blazor рендеринг витрины `preview/*.html` (~4.6с). Обязателен в агентском цикле при изменении разметки и структуры компонентов.
+    - `node Platform/Shared/DesignSystem/Assets/scripts/generate-blueprints.mjs` — анализ геометрии и генерация `.blueprint` чертежей (sub-200ms на страницу).
+    - `node Platform/Shared/DesignSystem/Assets/scripts/generate-usage.mjs` — детерминированный статический аудит констант `Classes.g.cs`, компонентов `@material/web` и выявление сырых строк классов без запуска браузера.
+    - `npm --prefix Platform/Shared/DesignSystem/Assets run generate:analytics` — полный сквозной цикл (preview ➔ blueprints ➔ usage) за ~9 секунд.
+- **Обязательный агентский цикл при работе с UI**:
+  1. В `.razor` и `.cs` файлах строго использовать типизированные константы `@Classes.*` из `Classes.g.cs` вместо сырых строк.
+  2. Включать генерацию `preview/*.html` через `generate-preview.mjs` (или `generate:analytics`) для синхронизации витрины и чертежей.
+  3. Генерировать и верифицировать статистику использования констант `Classes.g.cs` в `analytics/usage/class-constants.json` с нулевой терпимостью к регрессиям.

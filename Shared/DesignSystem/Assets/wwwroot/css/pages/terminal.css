@@ -419,3 +419,278 @@
         gap: 8px;
     }
 }
+
+/* POS Payment Modal & Cashier Ergonomics */
+.pos-payment-body {
+    display: grid;
+    gap: 16px;
+    padding: 4px 0;
+}
+
+.pos-payment-title {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 10px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.pos-payment-badge {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: baseline;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.pos-payment-badge-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.pos-payment-badge-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.pos-payment-tab-content {
+    display: grid;
+    min-height: 260px;
+}
+
+.cash-payment-layout {
+    display: grid;
+    gap: 14px;
+}
+
+.pos-form-field {
+    display: grid;
+    gap: 6px;
+}
+
+.pos-form-label {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pos-cash-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 2px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+.pos-quick-bills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.pos-change-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+}
+
+.pos-change-banner-success {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.pos-change-banner-error {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+}
+
+.pos-change-label {
+    font-weight: 600;
+}
+
+.pos-change-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.pos-btn-full {
+    width: 100%;
+    padding: 12px;
+}
+
+.pos-btn-max-360 {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px;
+}
+
+.pos-terminal-layout {
+    display: grid;
+    gap: 14px;
+    justify-items: center;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.pos-waiting-title {
+    margin: 0;
+    color: var(--md-sys-color-primary);
+    font-size: 1.2rem;
+}
+
+.pos-waiting-desc {
+    max-width: 380px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+}
+
+.pos-device-icons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    color: var(--md-sys-color-primary);
+}
+
+.pos-device-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+.pos-pinpad-prompt-title {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+}
+
+.pos-pinpad-prompt-desc {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.88rem;
+}
+
+.pos-error-banner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 0.85rem;
+}
+
+.pos-tech-chips {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.uzqr-layout {
+    display: grid;
+    gap: 14px;
+    justify-items: center;
+    text-align: center;
+}
+
+.pos-qr-box {
+    padding: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-bright);
+}
+
+.pos-qr-info {
+    display: grid;
+    gap: 4px;
+}
+
+.pos-qr-title {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+}
+
+.pos-qr-apps {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.82rem;
+}
+
+.pan-payment-layout {
+    display: grid;
+    gap: 14px;
+}
+
+.pos-pan-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.pos-otp-box {
+    display: grid;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--md-sys-color-primary-container);
+}
+
+.pos-otp-label {
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.pos-otp-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 2px solid var(--md-sys-color-primary);
+    border-radius: 10px;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.pos-details-list {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 12px;
+    margin: 0;
+    padding: 16px;
+}
+
+.pos-details-img {
+    align-self: center;
+    max-height: 200px;
+    border-radius: 8px;
+}
+

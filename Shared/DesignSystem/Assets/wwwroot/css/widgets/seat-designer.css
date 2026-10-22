@@ -167,4 +167,239 @@
     .designer-sidebar {
         width: 100%;
     }
+
+    .seat-booking-body {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .seat-booking-sidebar {
+        width: 100%;
+        max-height: 320px;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-left: none;
+    }
 }
+
+/* ==========================================================================
+   Seat Booking Modal
+   ========================================================================== */
+.seat-booking-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--md-sys-z-modal, 1000);
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    padding: var(--md-sys-spacing-4, 16px);
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.seat-booking-card {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: min(calc(100dvh - 32px), 800px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-dialog, 28px);
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    overflow: hidden;
+    box-shadow: var(--md-sys-elevation-level4, 0 24px 48px rgba(0, 0, 0, 0.4));
+}
+
+.seat-booking-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-4, 16px);
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+.seat-booking-header-title {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.seat-booking-header-actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-4, 16px);
+    align-items: center;
+}
+
+.seat-booking-floor-select {
+    min-width: 200px;
+    --md-outlined-select-container-shape: 16px;
+}
+
+.seat-booking-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(100%, 360px);
+    box-sizing: border-box;
+    background-color: var(--md-sys-color-surface-dim);
+    overflow: hidden;
+}
+
+.seat-booking-canvas-area {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    padding: 1.5rem;
+}
+
+.seat-booking-loading-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.8);
+}
+
+.seat-booking-loading-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--md-sys-color-primary);
+}
+
+.seat-booking-empty-scheme {
+    display: grid;
+    place-items: center;
+    gap: 0.75rem;
+    color: var(--md-sys-color-on-surface);
+    text-align: center;
+}
+
+.seat-booking-empty-icon {
+    font-size: 48px;
+    color: var(--md-sys-color-primary);
+}
+
+.seat-booking-sidebar {
+    box-sizing: border-box;
+    width: 360px;
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface-container-low);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.seat-booking-details-panel {
+    display: grid;
+    align-content: start;
+    gap: 1.25rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    color: var(--md-sys-color-on-surface);
+}
+
+.seat-booking-seat-card {
+    display: grid;
+    gap: 0.75rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background-color: var(--md-sys-color-surface-container);
+}
+
+.seat-booking-seat-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+.seat-booking-service-row {
+    display: grid;
+    gap: 4px;
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.seat-booking-btn-action {
+    width: 100%;
+    margin-top: 8px;
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+}
+
+.seat-booking-placeholder {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    border: 2px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    color: var(--md-sys-color-outline);
+    text-align: center;
+}
+
+.seat-booking-placeholder-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.seat-booking-legend {
+    display: grid;
+    gap: 0.625rem;
+    margin-top: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.seat-booking-legend-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.625rem;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.seat-booking-legend-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.seat-booking-dot-available {
+    border: 2px solid var(--md-sys-color-primary);
+    background-color: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+}
+
+.seat-booking-dot-selected {
+    border: 2px solid var(--md-sys-color-tertiary);
+    background-color: rgb(from var(--md-sys-color-tertiary) r g b / 0.25);
+}
+
+.seat-booking-dot-occupied {
+    border: 2px solid var(--md-sys-color-error);
+    background-color: rgb(from var(--md-sys-color-error) r g b / 0.15);
+}
+
+.seat-booking-footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface-container-high);
+}
+

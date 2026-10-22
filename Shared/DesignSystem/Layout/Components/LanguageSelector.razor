@@ -1,31 +1,29 @@
-@using SharedKernel.ValueObjects
-@using Shared.Services
-@inject ISettingsManager Settings
-@inject NavigationManager Navigation
-@inject IStringLocalizer L
+@namespace Shared.Layout
+@using static Classes.Picker
+@using static Icons
 
-<div class="@Classes.Picker.LangSelect @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
+<div class="@LangSelect @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
 	@if (Variant == "inline")
 	{
-		<div class="@Classes.Picker.LangInlineGrid" role="group" aria-label="@(L?["Language"] ?? "Язык")">
+		<div class="@LangInlineGrid" role="group" aria-label="Language">
 			<button type="button"
-					class="@Classes.Picker.LangChipBtn @(currentLanguage == Language.Uz ? Classes.Picker.LangChipActive : "")"
-					@onclick="() => SelectLanguage(Language.Uz)"
-					aria-pressed="@(currentLanguage == Language.Uz ? "true" : "false")"
+					class="@LangChipBtn @(IsUz ? LangChipActive : "")"
+					@onclick="SelectUz"
+					aria-pressed="@(IsUz ? "true" : "false")"
 					title="O'zbekcha">
 				<span>UZ</span>
 			</button>
 			<button type="button"
-					class="@Classes.Picker.LangChipBtn @(currentLanguage == Language.Ru ? Classes.Picker.LangChipActive : "")"
-					@onclick="() => SelectLanguage(Language.Ru)"
-					aria-pressed="@(currentLanguage == Language.Ru ? "true" : "false")"
+					class="@LangChipBtn @(IsRu ? LangChipActive : "")"
+					@onclick="SelectRu"
+					aria-pressed="@(IsRu ? "true" : "false")"
 					title="Русский">
 				<span>RU</span>
 			</button>
 			<button type="button"
-					class="@Classes.Picker.LangChipBtn @(currentLanguage == Language.En ? Classes.Picker.LangChipActive : "")"
-					@onclick="() => SelectLanguage(Language.En)"
-					aria-pressed="@(currentLanguage == Language.En ? "true" : "false")"
+					class="@LangChipBtn @(IsEn ? LangChipActive : "")"
+					@onclick="SelectEn"
+					aria-pressed="@(IsEn ? "true" : "false")"
 					title="English">
 				<span>EN</span>
 			</button>
@@ -33,52 +31,52 @@
 	}
 	else
 	{
-		<div class="@Classes.Picker.LangDropdownWrapper">
+		<div class="@LangDropdownWrapper">
 			<button type="button"
-					class="lang-toggle-btn"
+					class="@LangToggleBtn"
 					@onclick="ToggleDropdown"
-					aria-expanded="@(isOpen ? "true" : "false")"
-					aria-label="@(L?["Language"] ?? "Выбор языка")">
-				<md-icon>@Icons.Language</md-icon>
-				<span class="@Classes.Picker.LangCurrentLabel">@GetLangShortLabel(currentLanguage)</span>
-				<md-icon>@(isOpen ? Icons.ArrowDropUp : Icons.ArrowDropDown)</md-icon>
+					aria-expanded="@(IsOpen ? "true" : "false")"
+					aria-label="Language">
+				<Icon Name="@Translate" />
+				<span class="@LangCurrentLabel">@GetLangShortLabel(CurrentLanguage)</span>
+				<Icon Name="@(IsOpen ? ArrowDropUp : ArrowDropDown)" />
 			</button>
 
-			@if (isOpen)
+			@if (IsOpen)
 			{
 				<div class="lang-menu-backdrop" @onclick="CloseDropdown"></div>
-				<div class="@Classes.Picker.LangDropdownMenu" role="menu">
+				<div class="@LangDropdownMenu" role="menu">
 					<button type="button"
-							class="@Classes.Picker.LangMenuItem @(currentLanguage == Language.Uz ? "lang-menu-item--active" : "")"
+							class="@LangMenuItem @(IsUz ? "lang-menu-item--active" : "")"
 							role="menuitem"
-							@onclick="() => SelectLanguage(Language.Uz)">
+							@onclick="SelectUz">
 						<span class="lang-flag">🇺🇿</span>
 						<span class="lang-name">O'zbekcha</span>
-						@if (currentLanguage == Language.Uz)
+						@if (IsUz)
 						{
-							<md-icon>@Icons.Check</md-icon>
+							<Icon Name="@Check" />
 						}
 					</button>
 					<button type="button"
-							class="@Classes.Picker.LangMenuItem @(currentLanguage == Language.Ru ? "lang-menu-item--active" : "")"
+							class="@LangMenuItem @(IsRu ? "lang-menu-item--active" : "")"
 							role="menuitem"
-							@onclick="() => SelectLanguage(Language.Ru)">
+							@onclick="SelectRu">
 						<span class="lang-flag">🇷🇺</span>
 						<span class="lang-name">Русский</span>
-						@if (currentLanguage == Language.Ru)
+						@if (IsRu)
 						{
-							<md-icon>@Icons.Check</md-icon>
+							<Icon Name="@Check" />
 						}
 					</button>
 					<button type="button"
-							class="@Classes.Picker.LangMenuItem @(currentLanguage == Language.En ? "lang-menu-item--active" : "")"
+							class="@LangMenuItem @(IsEn ? "lang-menu-item--active" : "")"
 							role="menuitem"
-							@onclick="() => SelectLanguage(Language.En)">
+							@onclick="SelectEn">
 						<span class="lang-flag">🇬🇧</span>
 						<span class="lang-name">English</span>
-						@if (currentLanguage == Language.En)
+						@if (IsEn)
 						{
-							<md-icon>@Icons.Check</md-icon>
+							<Icon Name="@Check" />
 						}
 					</button>
 				</div>
@@ -86,47 +84,3 @@
 		</div>
 	}
 </div>
-
-@code {
-	[Parameter] public string Variant { get; set; } = "pill";
-	[Parameter] public string Class { get; set; } = string.Empty;
-
-	private Language currentLanguage = Language.Ru;
-	private bool isOpen = false;
-
-	protected override async Task OnInitializedAsync()
-	{
-		try
-		{
-			currentLanguage = await Settings.GetLanguageAsync();
-		}
-		catch
-		{
-			currentLanguage = Language.Ru;
-		}
-	}
-
-	private void ToggleDropdown() => isOpen = !isOpen;
-	private void CloseDropdown() => isOpen = false;
-
-	private async Task SelectLanguage(Language lang)
-	{
-		isOpen = false;
-		if (currentLanguage == lang) return;
-		currentLanguage = lang;
-		try
-		{
-			await Settings.SetLanguageAsync(lang);
-		}
-		catch { }
-		Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
-	}
-
-	private static string GetLangShortLabel(Language lang) => lang switch
-	{
-		Language.Uz => "UZ",
-		Language.Ru => "RU",
-		Language.En => "EN",
-		_ => "RU"
-	};
-}

@@ -10,11 +10,15 @@ static string ResolvePreviewPagesDir()
     var current = new DirectoryInfo(AppContext.BaseDirectory);
     while (current != null)
     {
-        var candidate = Path.Combine(current.FullName, "src", "Frontend", "Platform", "Shared", "DesignSystem", "Assets", "wwwroot", "preview");
-        if (Directory.Exists(candidate)) return candidate;
+        var rootCandidate = Path.Combine(current.FullName, "src", "Frontend", "Platform", "Shared", "DesignSystem", "Assets", "wwwroot", "preview");
+        if (Directory.Exists(rootCandidate)) return rootCandidate;
+
+        var platformCandidate = Path.Combine(current.FullName, "Shared", "DesignSystem", "Assets", "wwwroot", "preview");
+        if (Directory.Exists(platformCandidate)) return platformCandidate;
+
         current = current.Parent;
     }
-    return Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../../Shared/DesignSystem/Assets/wwwroot/preview"));
+    return Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../../../Shared/DesignSystem/Assets/wwwroot/preview"));
 }
 
 var defaultOutDir = ResolvePreviewPagesDir();

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
+using Microsoft.Extensions.Localization;
+using Assets.Constants;
+
 namespace Smart.Web.Components;
 
 public class FilterChip
@@ -15,8 +18,15 @@ public class FilterChip
 
 public partial class SmartFilterBar<TItem> : ComponentBase where TItem : class
 {
-    [Parameter] public string Placeholder { get; set; } = "Поиск...";
+    [Inject] public IStringLocalizer L { get; set; } = default!;
+    protected readonly Material.Web.Components.ChipType FilterChipType = Material.Web.Components.ChipType.Filter;
+
+    [Parameter] public string? Placeholder { get; set; }
     [Parameter] public string SearchText { get; set; } = string.Empty;
+
+    protected string EffectivePlaceholder => !string.IsNullOrWhiteSpace(Placeholder) && Placeholder != "Поиск..."
+        ? Placeholder 
+        : (L != null ? L[Loc.Common.SearchPlaceholder] : "Search...");
     [Parameter] public EventCallback<string> SearchTextChanged { get; set; }
     [Parameter] public List<FilterChip>? FilterChips { get; set; }
     [Parameter] public EventCallback<FilterChip> OnChipToggled { get; set; }

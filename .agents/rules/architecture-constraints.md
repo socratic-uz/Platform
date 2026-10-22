@@ -1,4 +1,4 @@
-﻿# Socratic Architectural Constraints: Backend, Storage, Messaging & APIs
+# Socratic Architectural Constraints: Backend, Storage, Messaging & APIs
 
 ## 1. Архитектурный стиль Backend: Clean + DDD + Vertical Slice
 - **Clean Architecture + Domain-Driven Design (DDD)**:
@@ -77,7 +77,7 @@
 ### 8.1 Архитектурный принцип автономности команд
 - Архитектура фронтенда и микросервисов построена по модели **Stream-Aligned Teams (Team Topologies)** и **Self-Contained Systems (SCS)**.
 - Каждая продуктовая фича (`Commerce`, `POS`, `Kiosk`, `Vision`) является полностью **автономным Git-репозиторием** с собственным решением (`.slnx`), тестами, локальным хостом (`Web.UI`) и подмодулями платформы (`Core`, `DesignSystem`, `Hardware`, `SharedKernel`).
-- Разработчик фичи клонирует **только свою фичу** (`git clone --recurse-submodules https://github.com/socratic-uz/<Feature>.git`) и работает без необходимости скачивать монорепозиторий или другие домены.
+- Разработчик фичи клонирует **только свою фичу** (`git clone --depth 1 --recurse-submodules --shallow-submodules --jobs 8 https://github.com/socratic-uz/<Feature>.git`) и работает без необходимости скачивать монорепозиторий или другие домены.
 
 ### 8.2 Разделение зависимостей и Decoupled Web.UI Host
 - **Категорический запрет прямых связей между фичами**: `Commerce` не может ссылаться на `POS`, `Kiosk` не может ссылаться на `Vision`.

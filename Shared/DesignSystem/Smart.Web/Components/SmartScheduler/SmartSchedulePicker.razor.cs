@@ -11,7 +11,7 @@ namespace Smart.Web.Components;
 
 public partial class SmartSchedulePicker : ComponentBase
 {
-    [Inject] private IStringLocalizer? L { get; set; }
+    [Inject] private IStringLocalizer L { get; set; } = default!;
 
     [Parameter] public WorkSchedule Schedule { get; set; } = new();
     [Parameter] public EventCallback<WorkSchedule> ScheduleChanged { get; set; }
@@ -19,7 +19,28 @@ public partial class SmartSchedulePicker : ComponentBase
     [Parameter] public string? Label { get; set; }
     [Parameter] public bool Disabled { get; set; } = false;
 
-    private string EffectiveLabel => Label ?? (L?["Schedule_Title"] ?? "График работы");
+    protected const string ScheduleDialogClass = "md3-schedule-dialog";
+    protected const string TzContainerClass = "md3-schedule-tz-container";
+    protected const string TzFieldClass = "md3-tz-field";
+    protected const string ClosedIconClass = "md3-closed-icon";
+    protected const string GridFlowColClass = global::Assets.Constants.Classes.Common.GridFlowCol;
+
+    protected const string IconSchedule = global::Assets.Constants.Icons.Schedule;
+    protected const string IconEventAvailable = global::Assets.Constants.Icons.EventAvailable;
+    protected const string IconEditCalendar = global::Assets.Constants.Icons.EditCalendar;
+    protected const string IconWork = global::Assets.Constants.Icons.Work;
+    protected const string IconStorefront = global::Assets.Constants.Icons.Storefront;
+    protected const string IconAllInclusive = global::Assets.Constants.Icons.AllInclusive;
+    protected const string IconRestartAlt = global::Assets.Constants.Icons.RestartAlt;
+    protected const string IconPublic = global::Assets.Constants.Icons.Public;
+    protected const string IconBlock = global::Assets.Constants.Icons.Block;
+    protected const string IconCheck = global::Assets.Constants.Icons.Check;
+
+    protected const string LocConfigure = global::Assets.Constants.Loc.Common.CommonConfigure;
+    protected const string LocCancel = global::Assets.Constants.Loc.Actions.CancelAction;
+    protected const string LocSave = global::Assets.Constants.Loc.Actions.SaveAction;
+
+    private string EffectiveLabel => Label ?? L[global::Assets.Constants.Loc.Schedule.TitleText];
 
     private bool _isDialogOpen = false;
 
@@ -48,13 +69,13 @@ public partial class SmartSchedulePicker : ComponentBase
     private string GetSummaryText()
     {
         if (Schedule == null || Schedule.WeeklyItems == null || Schedule.WeeklyItems.Count == 0)
-            return L?["Schedule_NotSet"] ?? "График работы не задан";
+            return L[global::Assets.Constants.Loc.Schedule.NotSet];
 
         var activeItems = Schedule.WeeklyItems.Where(w => !w.IsClosed && w.Intervals != null && w.Intervals.Count > 0).ToList();
-        if (!activeItems.Any()) return L?["Schedule_AllWeekends"] ?? "Выходные дни на всю неделю";
+        if (!activeItems.Any()) return L[global::Assets.Constants.Loc.Schedule.AllWeekends];
 
         var first = activeItems.First().Intervals.First();
-        return $"{L?["Schedule_Active"] ?? "Активен"}: {activeItems.Count} {L?["Schedule_DaysShort"] ?? "дн."} ({FormatTime(first.Start)} — {FormatTime(first.End)})";
+        return $"{L[global::Assets.Constants.Loc.Schedule.ActiveText]}: {activeItems.Count} {L[global::Assets.Constants.Loc.Schedule.DaysShort]} ({FormatTime(first.Start)} — {FormatTime(first.End)})";
     }
 
     private bool IsDayActive(DayOfWeek day)

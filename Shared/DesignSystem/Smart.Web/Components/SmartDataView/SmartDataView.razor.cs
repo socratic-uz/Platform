@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
+using Microsoft.Extensions.Localization;
+using Assets.Constants;
+
 namespace Smart.Web.Components;
 
 public enum ViewMode
@@ -15,15 +18,21 @@ public enum ViewMode
 
 public partial class SmartDataView<TItem> : ComponentBase where TItem : class, new()
 {
+    [Inject] public IStringLocalizer L { get; set; } = default!;
+
     [Parameter] public IQueryable<TItem>? Items { get; set; }
     [Parameter] public int PageSize { get; set; } = 20;
     [Parameter] public ViewMode CurrentMode { get; set; } = ViewMode.Grid;
     [Parameter] public EventCallback<ViewMode> CurrentModeChanged { get; set; }
 
     // Filter Parameters
-    [Parameter] public string FilterPlaceholder { get; set; } = "Поиск элементов...";
+    [Parameter] public string? FilterPlaceholder { get; set; }
     [Parameter] public string SearchText { get; set; } = string.Empty;
     [Parameter] public List<FilterChip>? FilterChips { get; set; }
+
+    protected string EffectivePlaceholder => !string.IsNullOrWhiteSpace(FilterPlaceholder) && FilterPlaceholder != "Поиск элементов..."
+        ? FilterPlaceholder 
+        : (L != null ? L[Loc.Common.SearchPlaceholder] : "Search...");
 
     // Kanban Parameters
     [Parameter] public List<KanbanColumn>? KanbanColumns { get; set; }

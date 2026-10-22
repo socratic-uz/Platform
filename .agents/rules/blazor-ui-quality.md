@@ -25,6 +25,11 @@ Before marking any Blazor UI change as complete:
    - Sibling elements in normal flow must not collide or overlap unintentionally.
 6. **CSS Grid Only (Zero Flexbox)**:
    - `display: flex` is strictly forbidden. All layouts, stacks, rows, toolbars, and card structures must use **CSS Grid (`display: grid`)**.
+7. **Strict Typed Class Constants Enforcement**:
+   - In `.razor` and `.cs` files, raw CSS class string literals (e.g. `class="m3-card"`) are strictly forbidden. All classes must reference `@Classes.*` typed constants from `Classes.g.cs` (`Assets.Constants.Classes`).
+8. **Preview & Usage Analytics in Agent Cycle**:
+   - UI changes must include generating `preview/*.html` via `generate-preview.mjs` (or `npm --prefix Platform/Shared/DesignSystem/Assets run generate:analytics`).
+   - Blueprint contracts (`.blueprint`) and usage metrics (`analytics/usage/class-constants.json`) must be regenerated to verify adoption and prevent raw class string regressions.
 
 ---
 

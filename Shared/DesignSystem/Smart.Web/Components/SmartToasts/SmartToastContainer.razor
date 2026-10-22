@@ -1,10 +1,13 @@
 @namespace Smart.Web.Components
 @using Smart.Web.Services
-@inject SmartToastService ToastService
-@implements IDisposable
+@using Material.Web.Components
+@using Assets.Constants
+@using static Assets.Constants.Icons
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.IconButtonVariant
 
 <div class="smart-toast-container">
-    @foreach (var toast in _toasts)
+    @foreach (var toast in Toasts)
     {
         <div class="smart-toast smart-toast-@toast.Level.ToString().ToLowerInvariant()" key="@toast.Id">
             <div class="smart-toast-header">
@@ -29,7 +32,11 @@
                 {
                     <strong class="smart-toast-title">@toast.Title</strong>
                 }
-                <IconButton Icon="close" Variant="IconButtonVariant.Standard" OnClick="() => DismissToast(toast.Id)" AriaLabel="Close toast" style="--md-icon-button-icon-size: 20px; width: 44px; height: 44px;" />
+                <IconButton Icon=@Icons.Close
+                            Variant=@Standard
+                            OnClick=@(() => DismissToast(toast.Id))
+                            AriaLabel=@L[CloseAction]
+                            Class="smart-toast-close-btn" />
             </div>
             <div class="smart-toast-body">
                 @toast.Message
@@ -37,112 +44,3 @@
         </div>
     }
 </div>
-
-<style>
-    .smart-toast-container {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: var(--m3-z-toast, 9999);
-        display: grid;
-        align-content: end;
-        gap: 12px;
-        max-width: 400px;
-        pointer-events: none;
-    }
-    .smart-toast {
-        pointer-events: auto;
-        background: var(--md-sys-color-surface-container-high);
-        color: var(--md-sys-color-on-surface);
-        border-radius: var(--md-sys-shape-expressive-card, 24px);
-        box-shadow: var(--md-sys-elevation-expressive-3);
-        padding: 14px 18px;
-        border: 1px solid var(--md-sys-color-outline-variant);
-        border-left: 5px solid var(--md-sys-color-primary);
-        backdrop-filter: var(--md-sys-glass-blur);
-        -webkit-backdrop-filter: var(--md-sys-glass-blur);
-        animation: smart-toast-enter var(--md-sys-motion-duration-medium3, 350ms) var(--md-sys-motion-easing-spring, cubic-bezier(0.175, 0.885, 0.32, 1.275));
-        transition: transform var(--md-sys-motion-duration-short4, 200ms) ease, opacity var(--md-sys-motion-duration-short4, 200ms) ease;
-        font-family: inherit;
-    }
-    @@keyframes smart-toast-enter {
-        from {
-            opacity: 0;
-            transform: translateY(20px) scale(0.92);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-    }
-    .smart-toast-success { border-left-color: var(--md-sys-color-tertiary); }
-    .smart-toast-error { border-left-color: var(--md-sys-color-error); }
-    .smart-toast-warning { border-left-color: var(--md-sys-color-error-container); }
-    .smart-toast-info { border-left-color: var(--md-sys-color-primary); }
-    .smart-toast-header {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 6px;
-    }
-    .smart-toast-icon {
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-    .smart-toast-title {
-        font-weight: 700;
-        font-size: 0.95rem;
-        color: var(--md-sys-color-on-surface);
-    }
-    .smart-toast-body {
-        font-size: 0.88rem;
-        color: var(--md-sys-color-on-surface-variant);
-        line-height: 1.4;
-    }
-</style>
-
-@code {
-    private readonly List<ToastMessage> _toasts = new();
-
-    protected override void OnInitialized()
-    {
-        ToastService.OnToastAdded += HandleToastAdded;
-        ToastService.OnToastRemoved += HandleToastRemoved;
-    }
-
-    private void HandleToastAdded(ToastMessage toast)
-    {
-        InvokeAsync(async () =>
-        {
-            _toasts.Add(toast);
-            StateHasChanged();
-
-            if (toast.DurationMs > 0)
-            {
-                await Task.Delay(toast.DurationMs);
-                DismissToast(toast.Id);
-            }
-        });
-    }
-
-    private void HandleToastRemoved(string id)
-    {
-        DismissToast(id);
-    }
-
-    private void DismissToast(string id)
-    {
-        InvokeAsync(() =>
-        {
-            _toasts.RemoveAll(t => t.Id == id);
-            StateHasChanged();
-        });
-    }
-
-    public void Dispose()
-    {
-        ToastService.OnToastAdded -= HandleToastAdded;
-        ToastService.OnToastRemoved -= HandleToastRemoved;
-    }
-}

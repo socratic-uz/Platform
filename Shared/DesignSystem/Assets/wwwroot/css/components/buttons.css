@@ -1707,7 +1707,7 @@ md-outlined-button {
 
 md-outlined-button > md-icon:last-child:not([slot]) {
     margin-inline-end: 0;
-    margin-inline-start: var(--md-sys-spacing-2);
+    /* margin-inline-start: var(--md-sys-spacing-2); */
 }
 
 md-outlined-button md-icon:not([slot]) {

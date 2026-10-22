@@ -196,10 +196,15 @@
 .attract-loop-background {
     position: absolute;
     inset: 0;
-    background-position: center;
-    background-size: cover;
     filter: brightness(0.85);
-    transition: background-image 0.8s ease-in-out;
+}
+
+.attract-loop-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .attract-loop-content {
@@ -482,4 +487,56 @@
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
+}
+
+.kiosk-fallback-checkout {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+}
+
+.kiosk-fallback-total {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.kiosk-fallback-processing {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.kiosk-fallback-processing-title {
+    margin: 0;
+    color: var(--md-sys-color-primary);
+}
+
+.kiosk-fallback-processing-desc {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.kiosk-fallback-error {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 0.85rem;
+}
+
+.kiosk-fallback-actions {
+    display: grid;
+    gap: 10px;
+}
+
+.kiosk-fallback-btn {
+    padding: 12px;
 }

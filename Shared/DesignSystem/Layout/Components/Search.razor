@@ -1,6 +1,8 @@
-@inject IStringLocalizer L
+@namespace Shared.Layout
+@using static Classes.Search
+@using static Icons
 
-<div class="@Classes.Search.Container">
+<div class="@Container">
     <TextField TValue="string" 
                Variant="TextField<string>.TextFieldVariant.Outlined" 
                Placeholder="@T("Search_Placeholder", "Поиск товаров...")" 
@@ -12,29 +14,7 @@
                class="search-input-field">
         @if (!string.IsNullOrEmpty(SearchText))
         {
-            <IconButton Icon="@Icons.Clear" Slot="trailing-icon" OnClick="() => SearchText = string.Empty" />
+            <IconButton Icon="@Clear" Slot="trailing-icon" OnClick="ClearSearch" />
         }
     </TextField>
 </div>
-
-@code {
-    [Parameter] public EventCallback<string> OnSubmit { get; set; }
-
-    string? searchText;
-    string? SearchText
-    {
-        get => searchText;
-        set
-        {
-            searchText = value;
-            OnSubmit.InvokeAsync(value);
-        }
-    }
-
-    private string T(string key, string fallback)
-    {
-        if (L == null) return fallback;
-        var loc = L[key];
-        return (loc == null || loc.ResourceNotFound || string.IsNullOrWhiteSpace(loc.Value) || loc.Value == key) ? fallback : loc.Value;
-    }
-}

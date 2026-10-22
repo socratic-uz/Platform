@@ -17,6 +17,10 @@ using System.Linq;
 using SharedKernel.Abstractions;
 using SortDirection = QuickGrid.SortDirection;
 
+using Assets.Constants;
+using static Assets.Constants.Icons;
+using static Assets.Constants.Loc.Actions;
+
 namespace Smart.Web.Components
 {
     public partial class SmartGrid<TItem> : QuickGrid<TItem>
@@ -33,12 +37,23 @@ namespace Smart.Web.Components
         [Inject] IStringLocalizer L { get; set; } = default!;
         [Inject] IServiceProvider ServiceProvider { get; set; } = default!;
 
+        private readonly Material.Web.Components.ChipType InputChipType = Material.Web.Components.ChipType.Input;
+        private readonly string SmartGridHeadlineClass = Classes.SmartForm.SmartGridHeadline;
+
+        private string GetModelDisplayName()
+        {
+            var rawName = typeof(TItem).Name.EndsWith("Dto")
+                ? typeof(TItem).Name[..^3]
+                : typeof(TItem).Name;
+            return L?[rawName] ?? rawName;
+        }
+
         private void OpenCreateDialog()
         {
             currentModel = new();
-            dialogTitle = "Создание записи";
-            dialogIcon = "add";
-            submitButtonText = "Создать";
+            dialogTitle = $"{L[CreateAction]} {GetModelDisplayName()}";
+            dialogIcon = Add;
+            submitButtonText = L[CreateAction];
             isCreateMode = true;
             isFormOpen = true;
         }
@@ -46,9 +61,9 @@ namespace Smart.Web.Components
         private void OpenEditDialog(TItem item)
         {
             currentModel = item;
-            dialogTitle = "Редактирование записи";
-            dialogIcon = "edit";
-            submitButtonText = "Сохранить";
+            dialogTitle = $"{L[EditAction]} {GetModelDisplayName()}";
+            dialogIcon = Edit;
+            submitButtonText = L[SaveAction];
             isCreateMode = false;
             isFormOpen = true;
         }

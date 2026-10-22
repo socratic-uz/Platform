@@ -8,14 +8,25 @@ Follow this step-by-step workflow when diagnosing visual defects, verifying resp
 
 ---
 
-## 1. Static Pre-flight Audit (CLI)
+## 1. Machine Perception & Agent Analytics Pre-flight (CLI)
 
-Before launching browser verification, run the static Razor and design token audit:
+Before launching browser verification, run the full analytics and preview generation cycle:
 
+```bash
+npm --prefix Platform/Shared/DesignSystem/Assets run generate:analytics
+```
+
+This single command:
+1. Renders Headless Blazor pages into `Platform/Shared/DesignSystem/Assets/wwwroot/preview/*.html`.
+2. Generates sensory geometry blueprints (`.blueprint`).
+3. Computes typed class constant statistics, adoption rate, and detects raw string class violations in `Platform/Shared/DesignSystem/Assets/wwwroot/analytics/usage/class-constants.json`.
+
+**Gate**:
+- In `.razor` and `.cs` files, ensure all CSS classes are referenced through typed `@Classes.*` constants from `Classes.g.cs` (`Assets.Constants.Classes`).
+- Run the static token auditor:
 ```powershell
 pwsh -File .agents/skills/ui-quality/scripts/Audit-BlazorUiQuality.ps1
 ```
-
 - Instantly identifies hardcoded HEX/RGB colors, `::deep` CSS usages, and potential small touch targets (<44px).
 - Resolve identified token issues to ensure full Material 3 compliance.
 
@@ -110,9 +121,12 @@ Run `analyze_accessibility`:
 
 ## 8. Apply Minimal Architectural Fix & Re-Verify
 
-1. Locate the root cause in the appropriate `.razor` or `.razor.css` file in `Platform/Shared`.
-2. Replace hardcoded dimensions/colors with responsive CSS Grid (strictly NO Flexbox) and Material 3 CSS tokens.
-3. Re-run steps 3–7 to verify that:
+1. Locate the root cause in the appropriate `.razor` or `.razor.css` file in `Platform/Shared` or feature slices.
+2. Replace raw CSS class strings with typed `@Classes.*` constants from `Classes.g.cs`.
+3. Replace hardcoded dimensions/colors with responsive CSS Grid (strictly NO Flexbox) and Material 3 CSS tokens.
+4. Re-run `npm --prefix Platform/Shared/DesignSystem/Assets run generate:analytics` to regenerate `preview/*.html`, blueprints, and update `class-constants.json` statistics.
+5. Re-run steps 3–7 to verify that:
    - Original defect is resolved;
-   - No regression was introduced in other viewports or themes.
+   - No regression was introduced in other viewports or themes;
+   - Constant adoption rate did not regress.
 

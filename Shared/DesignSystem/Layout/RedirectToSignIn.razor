@@ -1,9 +1,3 @@
-@inject NavigationManager Nav
+@namespace Shared.Layout
 
-@code {
-	protected override async Task OnInitializedAsync()
-	{
-		Nav.NavigateTo($"/signin?ReturnUrl={Uri.EscapeDataString(Nav.Uri)}");
-		await Task.CompletedTask;
-	}
-}
+@* Logic is separated in RedirectToSignIn.razor.cs *@

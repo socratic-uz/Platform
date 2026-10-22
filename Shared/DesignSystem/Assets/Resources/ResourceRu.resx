@@ -12,7 +12,7 @@
     
     Example:
     
-    ... ado.net/XML headers & schema ...
+    ... ado.net/XML headers &amp; schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
@@ -666,7 +666,31 @@
   <data name="Checkout_TabCash" xml:space="preserve">
     <value>Наличные при получении</value>
   </data>
-  <data name="Checkout_TotalLabel" xml:space="preserve">
+    <data name="Checkout_TabPos" xml:space="preserve">
+    <value>Пин-пад (Чип / NFC)</value>
+  </data>
+  <data name="Checkout_TabQr" xml:space="preserve">
+    <value>UzQR / Банки</value>
+  </data>
+  <data name="Checkout_TabPan" xml:space="preserve">
+    <value>Карта (PAN / OTP)</value>
+  </data>
+  <data name="Checkout_PosWaitingForCard" xml:space="preserve">
+    <value>Ожидание карты...</value>
+  </data>
+  <data name="Checkout_PosWaitingPrompt" xml:space="preserve">
+    <value>Вставьте чип карты в ридер или приложите бесконтактную карту / смартфон к антенне пин-пада</value>
+  </data>
+  <data name="Checkout_PosApproved" xml:space="preserve">
+    <value>Оплата успешно одобрена!</value>
+  </data>
+  <data name="Checkout_PosReadyTitle" xml:space="preserve">
+    <value>Оплата через пин-пад</value>
+  </data>
+  <data name="Checkout_PosReadyDesc" xml:space="preserve">
+    <value>Поддерживаются контактные чипы (EMV Chip) и бесконтактная оплата картой или телефоном (NFC)</value>
+  </data>
+<data name="Checkout_TotalLabel" xml:space="preserve">
     <value>К оплате:</value>
   </data>
   <data name="Checkout_PayButton" xml:space="preserve">
@@ -1536,7 +1560,7 @@
   <data name="Common_LangEn" xml:space="preserve">
     <value>ENG</value>
   </data>
-  <!-- Layout, Header & Global Footer Translations -->
+  <!-- Layout, Header &amp; Global Footer Translations -->
   <data name="Footer_Tagline" xml:space="preserve">
     <value>Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.</value>
   </data>
@@ -1606,7 +1630,7 @@
   <data name="Notice" xml:space="preserve">
     <value>Внимание</value>
   </data>
-  <!-- Identity & Auth (SignIn) Translations -->
+  <!-- Identity &amp; Auth (SignIn) Translations -->
   <data name="SignIn_Title" xml:space="preserve">
     <value>Socratic ID</value>
   </data>
@@ -1744,5 +1768,1811 @@
   </data>
   <data name="No" xml:space="preserve">
     <value>Нет</value>
+  </data>
+  <data name="AboutTitleMain" xml:space="preserve">
+    <value>Интеллектуальная экосистема</value>
+  </data>
+  <data name="AboutTitleSub" xml:space="preserve">
+    <value>для омниканального бизнеса и торговли</value>
+  </data>
+  <data name="AboutSubtitle" xml:space="preserve">
+    <value>Socratic объединяет AI-зрение, смарт-киоски, 3D WebGL и 28 универсальных режимов взаимодействия в единой высокопроизводительной среде для автоматизации ритейла, сферы услуг и HoReCa.</value>
+  </data>
+  <data name="About_VideoBadge" xml:space="preserve">
+    <value>Видео-презентация</value>
+  </data>
+  <data name="About_VideoTitle" xml:space="preserve">
+    <value>Обзор возможностей платформы Socratic</value>
+  </data>
+  <data name="About_VideoNotSupported" xml:space="preserve">
+    <value>Ваш браузер не поддерживает встроенное воспроизведение видео.</value>
+  </data>
+  <data name="About_VideoCaption" xml:space="preserve">
+    <value>Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.</value>
+  </data>
+  <data name="About_PillarsBadge" xml:space="preserve">
+    <value>Ключевые направления</value>
+  </data>
+  <data name="About_PillarsTitle" xml:space="preserve">
+    <value>Четыре столпа архитектуры Socratic</value>
+  </data>
+  <data name="About_PillarsSubtitle" xml:space="preserve">
+    <value>Модульная структура позволяет развертывать необходимые сервисы без избыточной связности.</value>
+  </data>
+  <data name="About_PillarVisionTitle" xml:space="preserve">
+    <value>AI &amp; Компьютерное зрение</value>
+  </data>
+  <data name="About_PillarVisionDesc" xml:space="preserve">
+    <value>Детекция объектов YOLO в реальном времени, биометрия Face ID, аналитика очередей и WebRTC-трансляции.</value>
+  </data>
+  <data name="About_PillarKioskTitle" xml:space="preserve">
+    <value>Смарт-киоски и POS</value>
+  </data>
+  <data name="About_PillarKioskDesc" xml:space="preserve">
+    <value>Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.</value>
+  </data>
+  <data name="About_PillarModesTitle" xml:space="preserve">
+    <value>28 UX-режимов коммерции</value>
+  </data>
+  <data name="About_PillarModesDesc" xml:space="preserve">
+    <value>Универсальный рендерер под любой сценарий: от ресторанов и отелей до аренды, аукционов и абонементов.</value>
+  </data>
+  <data name="About_PillarStudioTitle" xml:space="preserve">
+    <value>3D &amp; QR Студия</value>
+  </data>
+  <data name="About_PillarStudioDesc" xml:space="preserve">
+    <value>Интерактивный WebGL-холст, 3D схемы залов, кастомизация векторных брендированных QR-кодов с логотипом.</value>
+  </data>
+  <data name="About_ValuesBadge" xml:space="preserve">
+    <value>Инженерные стандарты</value>
+  </data>
+  <data name="About_ValuesTitle" xml:space="preserve">
+    <value>Качество и производительность без компромиссов</value>
+  </data>
+  <data name="About_ValueFpsTitle" xml:space="preserve">
+    <value>Zero-Flicker &amp; Аппаратное ускорение</value>
+  </data>
+  <data name="About_ValueFpsDesc" xml:space="preserve">
+    <value>Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.</value>
+  </data>
+  <data name="About_ValuePlatformTitle" xml:space="preserve">
+    <value>Кроссплатформенность</value>
+  </data>
+  <data name="About_ValuePlatformDesc" xml:space="preserve">
+    <value>Единая кодовая база для Windows, macOS, Android, iOS и веб-клиента (PWA).</value>
+  </data>
+  <data name="About_ValueM3Title" xml:space="preserve">
+    <value>Material Design 3 Expressive</value>
+  </data>
+  <data name="About_ValueM3Desc" xml:space="preserve">
+    <value>Оригинальная дизайн-система Material.Web, адаптивная палитра HSL и доступность WCAG 2.1 AA.</value>
+  </data>
+  <data name="About_ActionsTitle" xml:space="preserve">
+    <value>Готовы протестировать возможности?</value>
+  </data>
+  <data name="About_ActionsSubtitle" xml:space="preserve">
+    <value>Попробуйте интерактивные сценарии в живом окружении прямо сейчас.</value>
+  </data>
+  <data name="About_BtnKiosk" xml:space="preserve">
+    <value>Открыть Демо-Киоск</value>
+  </data>
+  <data name="About_BtnTerminal" xml:space="preserve">
+    <value>POS Терминал</value>
+  </data>
+  <data name="About_BtnDocs" xml:space="preserve">
+    <value>Документация</value>
+  </data>
+  <data name="Help_CategoriesAria" xml:space="preserve">
+    <value>Категории вопросов</value>
+  </data>
+  <data name="Help_CatAll" xml:space="preserve">
+    <value>Все вопросы</value>
+  </data>
+  <data name="Help_CatPos" xml:space="preserve">
+    <value>Кассы и POS</value>
+  </data>
+  <data name="Help_CatPayments" xml:space="preserve">
+    <value>Платежи и QR</value>
+  </data>
+  <data name="Help_CatHardware" xml:space="preserve">
+    <value>Оборудование</value>
+  </data>
+  <data name="Help_CatAi" xml:space="preserve">
+    <value>AI &amp; Аналитика</value>
+  </data>
+  <data name="Help_CatModes" xml:space="preserve">
+    <value>28 UX-режимов</value>
+  </data>
+  <data name="Help_FaqSectionAria" xml:space="preserve">
+    <value>Часто задаваемые вопросы</value>
+  </data>
+  <data name="Help_SupportChannelsBadge" xml:space="preserve">
+    <value>Прямая связь</value>
+  </data>
+  <data name="Help_SupportChannelsTitle" xml:space="preserve">
+    <value>Нужна помощь дежурного инженера?</value>
+  </data>
+  <data name="Help_SupportChannelsSubtitle" xml:space="preserve">
+    <value>Выберите удобный канал связи для оперативной помощи специалистов Socratic.</value>
+  </data>
+  <data name="Help_CardChatTitle" xml:space="preserve">
+    <value>Онлайн-чат поддержки</value>
+  </data>
+  <data name="Help_CardChatDesc" xml:space="preserve">
+    <value>Мгновенные консультации встроенного AI-ассистента и подключение инженеров платформы.</value>
+  </data>
+  <data name="Help_BtnOpenChat" xml:space="preserve">
+    <value>Открыть чат</value>
+  </data>
+  <data name="Help_CardPhoneTitle" xml:space="preserve">
+    <value>Дежурная линия 24/7</value>
+  </data>
+  <data name="Help_CardPhoneDesc" xml:space="preserve">
+    <value>Экстренное решение вопросов доступности касс, фискализации и работы оборудования.</value>
+  </data>
+  <data name="Help_CardDocsTitle" xml:space="preserve">
+    <value>База знаний и API</value>
+  </data>
+  <data name="Help_CardDocsDesc" xml:space="preserve">
+    <value>37 интерактивных руководств, архитектурные схемы и спецификация всех модулей.</value>
+  </data>
+  <data name="Help_FaqKioskLaunchTitle" xml:space="preserve">
+    <value>Как запустить режим киоска самообслуживания?</value>
+  </data>
+  <data name="Help_FaqKioskLaunchAnswer" xml:space="preserve">
+    <value>Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.</value>
+  </data>
+  <data name="Help_FaqOfflineTitle" xml:space="preserve">
+    <value>Может ли касса работать в режиме офлайн без интернета?</value>
+  </data>
+  <data name="Help_FaqOfflineAnswer" xml:space="preserve">
+    <value>Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.</value>
+  </data>
+  <data name="Help_FaqPaymentsTitle" xml:space="preserve">
+    <value>Какие платежные методы поддерживаются из коробки?</value>
+  </data>
+  <data name="Help_FaqPaymentsAnswer" xml:space="preserve">
+    <value>Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.</value>
+  </data>
+  <data name="Help_FaqDynamicQrTitle" xml:space="preserve">
+    <value>Как работает динамический QR-код на дисплее покупателя?</value>
+  </data>
+  <data name="Help_FaqDynamicQrAnswer" xml:space="preserve">
+    <value>При расчете заказа кассовый модуль генерирует уникальный QR-код с идентификатором транзакции и точной суммой. Код отображается на дисплее покупателя или экране киоска. После считывания в банковском приложении и подтверждения вебхука чек закрывается моментально.</value>
+  </data>
+  <data name="Help_FaqHardwareTitle" xml:space="preserve">
+    <value>Какое торговое оборудование поддерживается?</value>
+  </data>
+  <data name="Help_FaqHardwareAnswer" xml:space="preserve">
+    <value>Модуль Hardware.Device поддерживает фискальные регистраторы и принтеры чеков ESC/POS (USB, Ethernet, Wi-Fi, Bluetooth), 2D-сканеры штрих-кодов и маркировки DataMatrix, торговые весы (CAS, Масса-К) и электромагнитные денежные ящики.</value>
+  </data>
+  <data name="Help_FaqHardwareStatusTitle" xml:space="preserve">
+    <value>Как проверить статус подключения оборудования?</value>
+  </data>
+  <data name="Help_FaqHardwareStatusAnswer" xml:space="preserve">
+    <value>Перейдите в инженерный раздел «Оборудование» (/hardware). В панели управления отображается статус каждого подключенного устройства, остаток чековой ленты и журнал диагностики с возможностью тестовой печати чека.</value>
+  </data>
+  <data name="Help_FaqAiTitle" xml:space="preserve">
+    <value>Как работает распознавание лиц и детекция очередей?</value>
+  </data>
+  <data name="Help_FaqAiAnswer" xml:space="preserve">
+    <value>Модуль Intelligence использует локальные нейросети YOLO и FaceNet. Видеопоток с камеры обрабатывается в реальном времени: система определяет длину очереди, пол/возраст покупателей и персональные скидки программы лояльности.</value>
+  </data>
+  <data name="Help_FaqModesTitle" xml:space="preserve">
+    <value>Что представляют собой 28 UX-режимов коммерции?</value>
+  </data>
+  <data name="Help_FaqModesAnswer" xml:space="preserve">
+    <value>Это универсальный движок UniversalProductExperienceRenderer. Он адаптирует пользовательский интерфейс каталога и корзины под любой тип бизнеса: ресторанное меню, билеты с местами, аренда по времени, аукционы, бронирование услуг или продажа маркированных товаров.</value>
+  </data>
+  <data name="Analytics_Dashboard" xml:space="preserve">
+    <value>Дашборд</value>
+  </data>
+  <data name="Analytics_Explorer" xml:space="preserve">
+    <value>Реестры</value>
+  </data>
+  <data name="Analytics_Configure" xml:space="preserve">
+    <value>Настроить</value>
+  </data>
+  <data name="Analytics_ConfigureTooltip" xml:space="preserve">
+    <value>Настроить виджеты аналитики</value>
+  </data>
+  <data name="Analytics_PeriodLabel" xml:space="preserve">
+    <value>Период аналитики</value>
+  </data>
+  <data name="Analytics_RealtimeStatus" xml:space="preserve">
+    <value>Обновлено в реальном времени</value>
+  </data>
+  <data name="Analytics_RevenuePeriod" xml:space="preserve">
+    <value>Выручка за период</value>
+  </data>
+  <data name="Analytics_ActualSales" xml:space="preserve">
+    <value>Реальные продажи</value>
+  </data>
+  <data name="Analytics_OrdersCount" xml:space="preserve">
+    <value>Количество заказов</value>
+  </data>
+  <data name="Analytics_CompletedReceipts" xml:space="preserve">
+    <value>Оформленные чеки</value>
+  </data>
+  <data name="Analytics_AverageBill" xml:space="preserve">
+    <value>Средний чек</value>
+  </data>
+  <data name="Analytics_PerTransaction" xml:space="preserve">
+    <value>На одну транзакцию</value>
+  </data>
+  <data name="Analytics_FiscalRatio" xml:space="preserve">
+    <value>Доля фискализации</value>
+  </data>
+  <data name="Analytics_OfdReceipts" xml:space="preserve">
+    <value>Чеки ОФД ГНК</value>
+  </data>
+  <data name="Analytics_TopProducts" xml:space="preserve">
+    <value>Топ продаваемых позиций</value>
+  </data>
+  <data name="Analytics_ByRevenue" xml:space="preserve">
+    <value>по выручке за выбранный период</value>
+  </data>
+  <data name="Analytics_PaymentChannels" xml:space="preserve">
+    <value>Каналы оплаты</value>
+  </data>
+  <data name="Analytics_DistributionShare" xml:space="preserve">
+    <value>распределение долей</value>
+  </data>
+  <data name="Analytics_TerminalPerformance" xml:space="preserve">
+    <value>Эффективность терминалов и киосков</value>
+  </data>
+  <data name="Analytics_ConfigTitle" xml:space="preserve">
+    <value>Настройка виджетов аналитики</value>
+  </data>
+  <data name="Analytics_ShowRevenue" xml:space="preserve">
+    <value>Карточка выручки</value>
+  </data>
+  <data name="Analytics_ShowOrders" xml:space="preserve">
+    <value>Карточка заказов</value>
+  </data>
+  <data name="Analytics_ShowAvgCheck" xml:space="preserve">
+    <value>Карточка среднего чека</value>
+  </data>
+  <data name="Analytics_ShowFiscal" xml:space="preserve">
+    <value>Карточка фискализации</value>
+  </data>
+  <data name="Analytics_ShowTopProducts" xml:space="preserve">
+    <value>Таблица топ-товаров</value>
+  </data>
+  <data name="Analytics_ShowPayments" xml:space="preserve">
+    <value>Диаграмма оплат</value>
+  </data>
+  <data name="Analytics_ShowTerminals" xml:space="preserve">
+    <value>Таблица терминалов</value>
+  </data>
+  <data name="QR_Title" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="QR_BackToTerminal" xml:space="preserve">
+    <value>Назад в терминал</value>
+  </data>
+  <data name="QR_SearchProducts" xml:space="preserve">
+    <value>Поиск товаров</value>
+  </data>
+  <data name="AboutPageTitle" xml:space="preserve">
+    <value>О платформе — Socratic</value>
+  </data>
+  <data name="AboutBadge" xml:space="preserve">
+    <value>О платформе Socratic</value>
+  </data>
+  <data name="QuickActions" xml:space="preserve">
+    <value>Быстрые действия</value>
+  </data>
+  <data name="NavHome" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="NavWishList" xml:space="preserve">
+    <value>Избранное</value>
+  </data>
+  <data name="NavChat" xml:space="preserve">
+    <value>Чат</value>
+  </data>
+  <data name="NavOrders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="NavAnalytics" xml:space="preserve">
+    <value>Аналитика</value>
+  </data>
+  <data name="HelpPageTitle" xml:space="preserve">
+    <value>Центр поддержки и FAQ | Socratic</value>
+  </data>
+  <data name="HelpBadge" xml:space="preserve">
+    <value>Центр поддержки и FAQ</value>
+  </data>
+  <data name="HelpTitleMain" xml:space="preserve">
+    <value>Центр поддержки</value>
+  </data>
+  <data name="HelpTitleSub" xml:space="preserve">
+    <value>и база частых вопросов (FAQ)</value>
+  </data>
+  <data name="HelpSubtitle" xml:space="preserve">
+    <value>Быстрые ответы по настройке кассовых аппаратов, смарт-киосков, AI-модулей, эквайринга и интеграции торгового оборудования.</value>
+  </data>
+  <data name="Help_BtnDocs" xml:space="preserve">
+    <value>Перейти в документацию</value>
+  </data>
+  <data name="Help_PhoneLabel" xml:space="preserve">
+    <value>+998 (71) 200-00-00</value>
+  </data>
+  <data name="Help_TelegramLabel" xml:space="preserve">
+    <value>Telegram: @socratic_support</value>
+  </data>
+  <data name="Docs_PageTitle" xml:space="preserve">
+    <value>Документация системы | Socratic</value>
+  </data>
+  <data name="Docs_Navigation" xml:space="preserve">
+    <value>Навигация</value>
+  </data>
+  <data name="Docs_RefreshList" xml:space="preserve">
+    <value>Обновить список</value>
+  </data>
+  <data name="Docs_NoDocsAvailable" xml:space="preserve">
+    <value>Нет доступной документации</value>
+  </data>
+  <data name="Docs_ShowMenu" xml:space="preserve">
+    <value>Показать меню</value>
+  </data>
+  <data name="Docs_LoadingDoc" xml:space="preserve">
+    <value>Загрузка документа...</value>
+  </data>
+  <data name="Docs_WelcomeTitle" xml:space="preserve">
+    <value>Документация системы Socratic</value>
+  </data>
+  <data name="Docs_WelcomeDesc" xml:space="preserve">
+    <value>Выберите интересующий раздел на боковой панели для просмотра подробных сведений по архитектуре, API и базам данных микросервисов.</value>
+  </data>
+  <data name="QrDesigner_PageTitle" xml:space="preserve">
+    <value>QrDesigner — Генератор динамических QR-кодов</value>
+  </data>
+  <data name="QrDesigner_Title" xml:space="preserve">
+    <value>Динамический QR-дизайнер</value>
+  </data>
+  <data name="QrDesigner_Subtitle" xml:space="preserve">
+    <value>Генерация брендированных QR-кодов для оплат, фискальных чеков и предзаказа</value>
+  </data>
+  <data name="QrDesigner_QuickPresets" xml:space="preserve">
+    <value>Быстрые пресеты:</value>
+  </data>
+  <data name="QrDesigner_PresetFiscalReceipt" xml:space="preserve">
+    <value>🧾 ОФД Чек</value>
+  </data>
+  <data name="QrDesigner_PresetPayment" xml:space="preserve">
+    <value>💳 Оплата (Click/Payme)</value>
+  </data>
+  <data name="QrDesigner_PresetTableOrder" xml:space="preserve">
+    <value>🍽️ Меню столика</value>
+  </data>
+  <data name="QrDesigner_SectionDataParams" xml:space="preserve">
+    <value>Параметры данных</value>
+  </data>
+  <data name="QrDesigner_PayloadLabel" xml:space="preserve">
+    <value>Полезная нагрузка (URL или текст)</value>
+  </data>
+  <data name="QrDesigner_LogoLabel" xml:space="preserve">
+    <value>URL логотипа в центре (опционально)</value>
+  </data>
+  <data name="QrDesigner_SectionColors" xml:space="preserve">
+    <value>Цвета и брендинг</value>
+  </data>
+  <data name="QrDesigner_PrimaryColor" xml:space="preserve">
+    <value>Основной цвет:</value>
+  </data>
+  <data name="QrDesigner_BackgroundColor" xml:space="preserve">
+    <value>Цвет фона:</value>
+  </data>
+  <data name="QrDesigner_CornerColor" xml:space="preserve">
+    <value>Цвет углов:</value>
+  </data>
+  <data name="QrDesigner_CornerDotColor" xml:space="preserve">
+    <value>Цвет точек углов:</value>
+  </data>
+  <data name="QrDesigner_SectionGeometry" xml:space="preserve">
+    <value>Геометрия и стиль</value>
+  </data>
+  <data name="QrDesigner_DotTypeLabel" xml:space="preserve">
+    <value>Форма точек (Dot Type)</value>
+  </data>
+  <data name="QrDesigner_CornerTypeLabel" xml:space="preserve">
+    <value>Форма рамок углов (Corner Type)</value>
+  </data>
+  <data name="QrDesigner_PrintHint" xml:space="preserve">
+    <value>Готов к печати на термопринтере ESC/POS или отображению на экране киоска</value>
+  </data>
+  <data name="QrDesigner_BackToTerminal" xml:space="preserve">
+    <value>Вернуться в терминал</value>
+  </data>
+  <data name="QrDesigner_SearchProducts" xml:space="preserve">
+    <value>Поиск товаров</value>
+  </data>
+  <data name="QrDesigner_Places" xml:space="preserve">
+    <value>Места</value>
+  </data>
+  <data name="QrDesigner_SelectAll" xml:space="preserve">
+    <value>Выбрать все</value>
+  </data>
+  <data name="QrDesigner_DeselectAll" xml:space="preserve">
+    <value>Снять выбор</value>
+  </data>
+  <data name="QrDesigner_Menu" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+  <data name="QrDesigner_NoProductsFound" xml:space="preserve">
+    <value>Товары не найдены</value>
+  </data>
+  <data name="QrDesigner_PrintAction" xml:space="preserve">
+    <value>Печать QR-кодов</value>
+  </data>
+  <data name="QrDesigner_PreviewHeading" xml:space="preserve">
+    <value>Предпросмотр</value>
+  </data>
+  <data name="QrDesigner_CardsCount" xml:space="preserve">
+    <value>карточка(ек)</value>
+  </data>
+  <data name="QrDesigner_ScanToOrder" xml:space="preserve">
+    <value>Отсканируйте для заказа</value>
+  </data>
+  <data name="QrDesigner_SelectItemsToPreview" xml:space="preserve">
+    <value>Выберите элементы для предпросмотра</value>
+  </data>
+  <data name="QrDesigner_SelectItemsHint" xml:space="preserve">
+    <value>Выберите места или блюда меню на панели слева</value>
+  </data>
+  <data name="QrDesigner_SvgRendererTitle" xml:space="preserve">
+    <value>Интерактивный SVG рендерер</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Превью</value>
+  </data>
+  <data name="WishList_EmptyTitle" xml:space="preserve">
+    <value>Список избранного пуст</value>
+  </data>
+  <data name="WishList_EmptyDesc" xml:space="preserve">
+    <value>Добавляйте понравившиеся товары из каталога, нажав на сердечко</value>
+  </data>
+  <data name="WishList_BrowseCatalog" xml:space="preserve">
+    <value>Перейти в каталог</value>
+  </data>
+  <data name="Kiosk_Calculator_Parametric" xml:space="preserve">
+    <value>Интерактивный расчёт параметров</value>
+  </data>
+  <data name="Kiosk_Service_FastDispatch" xml:space="preserve">
+    <value>Выезд мастера</value>
+  </data>
+  <data name="Kiosk_Gift_Digital" xml:space="preserve">
+    <value>Электронный код</value>
+  </data>
+  <data name="Kiosk_Apply_Online" xml:space="preserve">
+    <value>Онлайн-анкета с валидацией</value>
+  </data>
+  <data name="Kiosk_TapOrInsert" xml:space="preserve">
+    <value>Приложите карту к пин-паду или вставьте чипом</value>
+  </data>
+  <data name="Kiosk_SubscriptionAndPlan" xml:space="preserve">
+    <value>Управление тарифом и рекламой</value>
+  </data>
+  <data name="Kiosk_TestScreensaver" xml:space="preserve">
+    <value>Проверить рекламную заставку (Screensaver)</value>
+  </data>
+  <data name="Kiosk_ReceiptFiscalSoliq" xml:space="preserve">
+    <value>Электронный фискальный чек Soliq.uz</value>
+  </data>
+  <data name="Kiosk_WaitingForCard" xml:space="preserve">
+    <value>Ожидание карты...</value>
+  </data>
+  <data name="Kiosk_PayByCardPinPad" xml:space="preserve">
+    <value>Оплатить картой (POS Пин-пад)</value>
+  </data>
+  <data name="Kiosk_PayAtCashDesk" xml:space="preserve">
+    <value>Оплатить на кассе / QR</value>
+  </data>
+  <data name="Kiosk_OrderCheckout" xml:space="preserve">
+    <value>Оформление заказа</value>
+  </data>
+  <data name="Kiosk_Items" xml:space="preserve">
+    <value>позиций</value>
+  </data>
+  <data name="Terminal_Organization" xml:space="preserve">
+    <value>Организация</value>
+  </data>
+  <data name="Terminal_QrGenerator" xml:space="preserve">
+    <value>QR Генератор</value>
+  </data>
+  <data name="Terminal_NothingFound" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="Terminal_Print" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="Terminal_EditProduct" xml:space="preserve">
+    <value>Редактировать товар</value>
+  </data>
+  <data name="Terminal_OrderPayment" xml:space="preserve">
+    <value>Оплата заказа</value>
+  </data>
+  <data name="Terminal_ReceivedCash" xml:space="preserve">
+    <value>Получено от покупателя (сум):</value>
+  </data>
+  <data name="Terminal_Exact" xml:space="preserve">
+    <value>Ровно</value>
+  </data>
+  <data name="Terminal_ChangeToCustomer" xml:space="preserve">
+    <value>Сдача покупателю:</value>
+  </data>
+  <data name="Terminal_Shortage" xml:space="preserve">
+    <value>Не хватает:</value>
+  </data>
+  <data name="Terminal_ConfirmCashPayment" xml:space="preserve">
+    <value>Провести оплату наличными</value>
+  </data>
+  <data name="Terminal_CancelOperation" xml:space="preserve">
+    <value>Отмена операции</value>
+  </data>
+  <data name="Terminal_SendAmountToPinPad" xml:space="preserve">
+    <value>POS Пин-пад готов к приёму</value>
+  </data>
+  <data name="Terminal_SumToCharge" xml:space="preserve">
+    <value>Сумма к списанию:</value>
+  </data>
+  <data name="Terminal_ActivatePinPad" xml:space="preserve">
+    <value>Отправить сумму на пин-пад</value>
+  </data>
+  <data name="Terminal_ScanUzQr" xml:space="preserve">
+    <value>Единый национальный QR (ЦБ РУз)</value>
+  </data>
+  <data name="Terminal_ConfirmUzQr" xml:space="preserve">
+    <value>Подтвердить оплату по QR</value>
+  </data>
+  <data name="Terminal_CardNumberPan" xml:space="preserve">
+    <value>Номер карты (16 цифр):</value>
+  </data>
+  <data name="Terminal_ExpiryDate" xml:space="preserve">
+    <value>Срок действия (ММ/ГГ):</value>
+  </data>
+  <data name="Terminal_SmsOtpCode" xml:space="preserve">
+    <value>Код подтверждения из SMS (OTP):</value>
+  </data>
+  <data name="Terminal_ConfirmAndCharge" xml:space="preserve">
+    <value>Подтвердить и списать</value>
+  </data>
+  <data name="Terminal_SendSmsCode" xml:space="preserve">
+    <value>Запросить SMS код (OTP)</value>
+  </data>
+  <data name="Terminal_DeleteReceipt" xml:space="preserve">
+    <value>Удалить чек</value>
+  </data>
+  <data name="Terminal_NewReceipt" xml:space="preserve">
+    <value>Создать новый чек</value>
+  </data>
+  <data name="WishListSubtitle" xml:space="preserve">
+    <value>Отложенные и понравившиеся товары</value>
+  </data>
+  <data name="Order_ItemsCount" xml:space="preserve">
+    <value>Позиций в заказе</value>
+  </data>
+  <data name="Order_AddMoreProducts" xml:space="preserve">
+    <value>Добавить ещё товары</value>
+  </data>
+  <data name="Order_EmptyTitle" xml:space="preserve">
+    <value>В заказе пока нет позиций</value>
+  </data>
+  <data name="Order_EmptySubtitle" xml:space="preserve">
+    <value>Выберите товары или услуги из каталога</value>
+  </data>
+  <data name="Order_ItemsUnit" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="Geo_InteractiveMapOffline" xml:space="preserve">
+    <value>Интерактивная карта (маршрут рассчитывается по введенным точкам)</value>
+  </data>
+  <data name="Subscription_Title_Membership" xml:space="preserve">
+    <value>💳 Клубный абонемент / Членство</value>
+  </data>
+  <data name="Subscription_Title_Recurring" xml:space="preserve">
+    <value>🔄 Регулярная подписка &amp; Тариф</value>
+  </data>
+  <data name="Subscription_Plan_Membership" xml:space="preserve">
+    <value>Абонемент All-Inclusive VIP</value>
+  </data>
+  <data name="Subscription_Plan_Recurring" xml:space="preserve">
+    <value>Тарифный план PRO Cloud</value>
+  </data>
+  <data name="Subscription_Badge_Membership" xml:space="preserve">
+    <value>Безлимитный доступ</value>
+  </data>
+  <data name="Subscription_Badge_Recurring" xml:space="preserve">
+    <value>Популярный выбор</value>
+  </data>
+  <data name="Subscription_Desc_Membership" xml:space="preserve">
+    <value>Полный доступ во все залы и спа-зоны, включены вводные тренировки и шкафчик.</value>
+  </data>
+  <data name="Subscription_Desc_Recurring" xml:space="preserve">
+    <value>Автоматическое продление доступа каждые 30 дней. Отмена подписки в 1 клик в любое время.</value>
+  </data>
+  <data name="Subscription_Period_Membership" xml:space="preserve">
+    <value>Срок действия абонемента:</value>
+  </data>
+  <data name="Subscription_Period_Recurring" xml:space="preserve">
+    <value>Период оплаты:</value>
+  </data>
+  <data name="Subscription_Duration_1Month" xml:space="preserve">
+    <value>1 месяц</value>
+  </data>
+  <data name="Subscription_Duration_Monthly" xml:space="preserve">
+    <value>Помесячно</value>
+  </data>
+  <data name="Subscription_Duration_3Months" xml:space="preserve">
+    <value>3 месяца (-10%)</value>
+  </data>
+  <data name="Subscription_Duration_Quarterly" xml:space="preserve">
+    <value>Квартал (-10%)</value>
+  </data>
+  <data name="Subscription_Duration_1Year" xml:space="preserve">
+    <value>1 год (-25%)</value>
+  </data>
+  <data name="Subscription_Duration_Yearly" xml:space="preserve">
+    <value>Год (-25%)</value>
+  </data>
+  <data name="Subscription_Privileges_Title" xml:space="preserve">
+    <value>Включенные привилегии:</value>
+  </data>
+  <data name="Subscription_Privilege1_Membership" xml:space="preserve">
+    <value>2 гостевых визита для друзей в месяц</value>
+  </data>
+  <data name="Subscription_Privilege1_Recurring" xml:space="preserve">
+    <value>Приоритетная линия технической поддержки 24/7</value>
+  </data>
+  <data name="Subscription_Privilege2_Membership" xml:space="preserve">
+    <value>Персональная цифровая карта с Face ID проходом</value>
+  </data>
+  <data name="Subscription_Privilege2_Recurring" xml:space="preserve">
+    <value>Неограниченное облачное хранилище данных</value>
+  </data>
+  <data name="Subscription_Privilege3_Common" xml:space="preserve">
+    <value>Бесплатная заморозка до 30 дней в году</value>
+  </data>
+  <data name="Subscription_TotalToCharge" xml:space="preserve">
+    <value>Итого к списанию:</value>
+  </data>
+  <data name="Subscription_Btn_Membership" xml:space="preserve">
+    <value>Оформить абонемент</value>
+  </data>
+  <data name="Subscription_Btn_Recurring" xml:space="preserve">
+    <value>Оформить подписку</value>
+  </data>
+  <data name="Subscription_Slot_Membership_Format" xml:space="preserve">
+    <value>Абонемент на {0} мес. ({1} сум)</value>
+  </data>
+  <data name="Subscription_Slot_Recurring_Format" xml:space="preserve">
+    <value>Подписка на {0} мес. (Автопродление)</value>
+  </data>
+  <data name="Auction_CurrentBid" xml:space="preserve">
+    <value>Текущая ставка:</value>
+  </data>
+  <data name="Auction_TimerDemo" xml:space="preserve">
+    <value>⏳ Таймер: 04ч 12м 30с</value>
+  </data>
+  <data name="Auction_LeaderDemo" xml:space="preserve">
+    <value>Лидер: user_78*</value>
+  </data>
+  <data name="Auction_YourBidLabel" xml:space="preserve">
+    <value>Ваша ставка (сум)</value>
+  </data>
+  <data name="Auction_Slot_Format" xml:space="preserve">
+    <value>Ставка: {0} сум</value>
+  </data>
+  <data name="Booking_HallSchemeEditor" xml:space="preserve">
+    <value>Редактор схемы зала</value>
+  </data>
+  <data name="Booking_SeatBooking" xml:space="preserve">
+    <value>Бронирование мест</value>
+  </data>
+  <data name="Booking_LoadingScheme" xml:space="preserve">
+    <value>Загрузка схемы...</value>
+  </data>
+  <data name="Booking_SchemeUnavailable" xml:space="preserve">
+    <value>Интерактивная схема залов доступна при подключении модуля схемы</value>
+  </data>
+  <data name="Booking_SelectedSeat" xml:space="preserve">
+    <value>Выбранное место</value>
+  </data>
+  <data name="Booking_SelectSeatHint" xml:space="preserve">
+    <value>Кликните на свободное место для выбора</value>
+  </data>
+  <data name="Booking_SeatNumberLabel" xml:space="preserve">
+    <value>Номер / Метка:</value>
+  </data>
+  <data name="Booking_SeatPrice" xml:space="preserve">
+    <value>Стоимость:</value>
+  </data>
+  <data name="Booking_SeatService" xml:space="preserve">
+    <value>Услуга:</value>
+  </data>
+  <data name="Booking_BookNow" xml:space="preserve">
+    <value>Забронировать сейчас</value>
+  </data>
+  <data name="Booking_SelectSeatPrompt" xml:space="preserve">
+    <value>Выберите место на карте зала</value>
+  </data>
+  <data name="Booking_LegendTitle" xml:space="preserve">
+    <value>Условные обозначения:</value>
+  </data>
+  <data name="Booking_LegendAvailable" xml:space="preserve">
+    <value>Свободно</value>
+  </data>
+  <data name="Booking_LegendSelected" xml:space="preserve">
+    <value>Выбрано вами</value>
+  </data>
+  <data name="Booking_LegendOccupied" xml:space="preserve">
+    <value>Занято / Забронировано</value>
+  </data>
+  <data name="Booking_SaveScheme" xml:space="preserve">
+    <value>Сохранить схему</value>
+  </data>
+  <data name="Booking_FloorMain" xml:space="preserve">
+    <value>1 этаж (Основной)</value>
+  </data>
+  <data name="Booking_FloorSecond" xml:space="preserve">
+    <value>2 этаж</value>
+  </data>
+  <data name="Booking_FloorTerrace" xml:space="preserve">
+    <value>Терраса / Крыша</value>
+  </data>
+  <data name="Common_CurrencyUzs" xml:space="preserve">
+    <value>UZS</value>
+  </data>
+  <data name="Actions_Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Booking_TableNumbered" xml:space="preserve">
+    <value>Столик #{0}</value>
+  </data>
+  <data name="Delivery_ScheduledTitle" xml:space="preserve">
+    <value>🚚 Запланированная доставка</value>
+  </data>
+  <data name="Delivery_SelectDatePrompt" xml:space="preserve">
+    <value>Выберите удобную дату и 2-часовой интервал доставки курьером:</value>
+  </data>
+  <data name="Delivery_DayAfterTomorrow" xml:space="preserve">
+    <value>Послезавтра</value>
+  </data>
+  <data name="Delivery_DateLabel" xml:space="preserve">
+    <value>Дата доставки</value>
+  </data>
+  <data name="Delivery_TimeSlotLabel" xml:space="preserve">
+    <value>Интервал времени:</value>
+  </data>
+  <data name="Delivery_TotalDue" xml:space="preserve">
+    <value>Итого к оплате:</value>
+  </data>
+  <data name="Delivery_ScheduleButton" xml:space="preserve">
+    <value>Запланировать</value>
+  </data>
+  <data name="Delivery_SlotFormat" xml:space="preserve">
+    <value>Доставка {0} ({1})</value>
+  </data>
+  <data name="Delivery_Tomorrow" xml:space="preserve">
+    <value>Завтра</value>
+  </data>
+  <data name="Delivery_Weekend" xml:space="preserve">
+    <value>Выходные</value>
+  </data>
+  <data name="Digital_OnlineServiceTitle" xml:space="preserve">
+    <value>💻 Онлайн-сервис &amp; Доступ</value>
+  </data>
+  <data name="Digital_DigitalGoodsTitle" xml:space="preserve">
+    <value>📥 Цифровой товар &amp; Лицензия</value>
+  </data>
+  <data name="Digital_InstantActivation" xml:space="preserve">
+    <value>Мгновенная активация аккаунта</value>
+  </data>
+  <data name="Digital_InstantKeyGeneration" xml:space="preserve">
+    <value>Мгновенная генерация лицензионного ключа</value>
+  </data>
+  <data name="Digital_OnlineServiceDesc" xml:space="preserve">
+    <value>После оплаты доступ к облачному сервису и API ключам будет открыт в вашем личном кабинете.</value>
+  </data>
+  <data name="Digital_DigitalGoodsDesc" xml:space="preserve">
+    <value>Ссылка на скачивание и уникальный код активации будут отправлены на ваш Email / Telegram.</value>
+  </data>
+  <data name="Digital_SelectNominalPrompt" xml:space="preserve">
+    <value>Выберите сумму номинала / пополнения:</value>
+  </data>
+  <data name="Digital_PayAmountLabel" xml:space="preserve">
+    <value>К оплате:</value>
+  </data>
+  <data name="Digital_ActivateAccess" xml:space="preserve">
+    <value>Активировать доступ</value>
+  </data>
+  <data name="Digital_GetFileAndKey" xml:space="preserve">
+    <value>Получить файл и ключ</value>
+  </data>
+  <data name="Digital_SlotOnline" xml:space="preserve">
+    <value>Онлайн-сервис: Мгновенная активация аккаунта</value>
+  </data>
+  <data name="Digital_SlotDigital" xml:space="preserve">
+    <value>Цифровая выдача: Лицензия и ссылка</value>
+  </data>
+  <data name="GroupBuy_SlotPreOrder" xml:space="preserve">
+    <value>Предзаказ: ожидается {0}</value>
+  </data>
+  <data name="GroupBuy_SlotGroupBuy" xml:space="preserve">
+    <value>Совместная покупка (Скидка -25%)</value>
+  </data>
+  <data name="Lottery_SlotFormat" xml:space="preserve">
+    <value>Лотерея ({0} бил.): {1}</value>
+  </data>
+  <data name="Seats_SlotPassengerFormat" xml:space="preserve">
+    <value>Пассажир: {0} ({1} чел.)</value>
+  </data>
+  <data name="Seats_SlotDefault" xml:space="preserve">
+    <value>Место выбрано</value>
+  </data>
+  <data name="Rental_Title" xml:space="preserve">
+    <value>🚗 Аренда транспорта &amp; Оборудования</value>
+  </data>
+  <data name="Rental_StartDate" xml:space="preserve">
+    <value>Начало аренды</value>
+  </data>
+  <data name="Rental_EndDate" xml:space="preserve">
+    <value>Возврат транспорта</value>
+  </data>
+  <data name="Rental_InsuranceLabel" xml:space="preserve">
+    <value>Полная страховка КАСКО без франшизы (+50 000 сум/сут)</value>
+  </data>
+  <data name="Rental_PeriodDays" xml:space="preserve">
+    <value>Срок: {0} сут. • Итого:</value>
+  </data>
+  <data name="Rental_BookBtn" xml:space="preserve">
+    <value>Забронировать авто</value>
+  </data>
+  <data name="Rental_SlotFormat" xml:space="preserve">
+    <value>Аренда: {0} -> {1} ({2} сут., КАСКО: {3})</value>
+  </data>
+  <data name="Donation_RewardBadge" xml:space="preserve">
+    <value>Значок</value>
+  </data>
+  <data name="Donation_RewardMerch" xml:space="preserve">
+    <value>Мерч</value>
+  </data>
+  <data name="Donation_RewardVip" xml:space="preserve">
+    <value>VIP</value>
+  </data>
+  <data name="Donation_SlotCrowdfundingFormat" xml:space="preserve">
+    <value>Краудфандинг взнос: {0:N0} {1}</value>
+  </data>
+  <data name="Donation_SlotCharityFormat" xml:space="preserve">
+    <value>Пожертвование: {0:N0} {1}</value>
+  </data>
+  <data name="Gift_Title" xml:space="preserve">
+    <value>🎁 Подарочный сертификат</value>
+  </data>
+  <data name="Gift_Prompt" xml:space="preserve">
+    <value>Заполните данные получателя и текст открытки. Сертификат с уникальным промокодом будет отправлен мгновенно:</value>
+  </data>
+  <data name="Gift_RecipientName" xml:space="preserve">
+    <value>Имя получателя</value>
+  </data>
+  <data name="Gift_RecipientPlaceholder" xml:space="preserve">
+    <value>Например: Сардор</value>
+  </data>
+  <data name="Gift_GreetingLabel" xml:space="preserve">
+    <value>Поздравление / Текст открытки</value>
+  </data>
+  <data name="Gift_GreetingPlaceholder" xml:space="preserve">
+    <value>С днем рождения! Желаю счастья и удачи!</value>
+  </data>
+  <data name="Gift_ConfirmBtn" xml:space="preserve">
+    <value>Оформить подарок</value>
+  </data>
+  <data name="Gift_DefaultRecipient" xml:space="preserve">
+    <value>Другу</value>
+  </data>
+  <data name="Gift_SlotFormat" xml:space="preserve">
+    <value>Подарок для {0}</value>
+  </data>
+  <data name="Classified_TitleServices" xml:space="preserve">
+    <value>Биржа мастеров и услуг</value>
+  </data>
+  <data name="Classified_TitleExchange" xml:space="preserve">
+    <value>P2P Площадка обмена</value>
+  </data>
+  <data name="Classified_TitleDefault" xml:space="preserve">
+    <value>P2P Объявление</value>
+  </data>
+  <data name="Classified_EscrowTitleServices" xml:space="preserve">
+    <value>Безопасная сделка: Гарантия качества услуги</value>
+  </data>
+  <data name="Classified_EscrowTitleExchange" xml:space="preserve">
+    <value>Эскроу-сервис безопасного обмена</value>
+  </data>
+  <data name="Classified_EscrowTitleDefault" xml:space="preserve">
+    <value>P2P Безопасная Сделка с Эскроу</value>
+  </data>
+  <data name="Classified_EscrowDescServices" xml:space="preserve">
+    <value>Средства резервируются на платформе и перечисляются исполнителю только после подтверждения выполнения задачи.</value>
+  </data>
+  <data name="Classified_EscrowDescExchange" xml:space="preserve">
+    <value>Платформа выступает гарантом честного бартера или доплаты до момента получения обеими сторонами.</value>
+  </data>
+  <data name="Classified_EscrowDescDefault" xml:space="preserve">
+    <value>Ваша оплата удерживается на гарантийном счете платформы до личной проверки и приемки товара/услуги.</value>
+  </data>
+  <data name="Classified_ExchangeItemLabel" xml:space="preserve">
+    <value>Предлагаемый встречный товар / валюта обмена</value>
+  </data>
+  <data name="Classified_ExchangeItemPlaceholder" xml:space="preserve">
+    <value>Например: Ноутбук Asus ROG 2023 или эквивалент</value>
+  </data>
+  <data name="Classified_InputLabelServices" xml:space="preserve">
+    <value>Техническое задание / Описание задачи для мастера:</value>
+  </data>
+  <data name="Classified_InputLabelExchange" xml:space="preserve">
+    <value>Условия и пожелания к обмену / встрече:</value>
+  </data>
+  <data name="Classified_InputLabelDefault" xml:space="preserve">
+    <value>Комментарий к заказу / Адрес встречи:</value>
+  </data>
+  <data name="Classified_InputPlaceholderServices" xml:space="preserve">
+    <value>Например: Требуется выезд мастера для диагностики в субботу к 14:00</value>
+  </data>
+  <data name="Classified_InputPlaceholderExchange" xml:space="preserve">
+    <value>Например: Готов встретиться в центре, возможен обмен с моей доплатой</value>
+  </data>
+  <data name="Classified_InputPlaceholderDefault" xml:space="preserve">
+    <value>Например: Удобно встретиться у метро Амир Темур</value>
+  </data>
+  <data name="Classified_BtnServices" xml:space="preserve">
+    <value>Нанять исполнителя</value>
+  </data>
+  <data name="Classified_BtnExchange" xml:space="preserve">
+    <value>Предложить обмен</value>
+  </data>
+  <data name="Classified_BtnDefault" xml:space="preserve">
+    <value>Связаться &amp; Заказать</value>
+  </data>
+  <data name="Classified_SlotServicesFormat" xml:space="preserve">
+    <value>Заказ услуги: {0}</value>
+  </data>
+  <data name="Classified_SlotExchangeFormat" xml:space="preserve">
+    <value>Обмен: {0} (Инфо: {1})</value>
+  </data>
+  <data name="Classified_SlotDefaultFormat" xml:space="preserve">
+    <value>P2P: {0}</value>
+  </data>
+  <data name="Classified_SlotDefaultFallback" xml:space="preserve">
+    <value>P2P Сделка</value>
+  </data>
+  <data name="Geo_DetectedAddressDefault" xml:space="preserve">
+    <value>г. Ташкент, Чиланзар 5-й квартал</value>
+  </data>
+  <data name="Quote_PhoneHint" xml:space="preserve">
+    <value>+998 XX XXX-XX-XX</value>
+  </data>
+  <data name="Hotel_DialogTitle" xml:space="preserve">
+    <value>🏨 Проживание в отеле</value>
+  </data>
+  <data name="Hotel_CheckIn" xml:space="preserve">
+    <value>Дата заезда (Check-in)</value>
+  </data>
+  <data name="Hotel_CheckOut" xml:space="preserve">
+    <value>Дата выезда (Check-out)</value>
+  </data>
+  <data name="Geo_RouteTitle" xml:space="preserve">
+    <value>📍 Гео-маршрут / Такси</value>
+  </data>
+  <data name="Payment_Dashboard" xml:space="preserve">
+    <value>Панель управления плательщика</value>
+  </data>
+  <data name="Payment_DemoData" xml:space="preserve">
+    <value>Демо-данные</value>
+  </data>
+  <data name="Payment_Cabinet" xml:space="preserve">
+    <value>Личный кабинет:</value>
+  </data>
+  <data name="Payment_UserId" xml:space="preserve">
+    <value>ID Пользователя</value>
+  </data>
+  <data name="Payment_Phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="Payment_KycStatus" xml:space="preserve">
+    <value>Статус KYC</value>
+  </data>
+  <data name="Payment_Verified" xml:space="preserve">
+    <value>Верифицирован</value>
+  </data>
+  <data name="Payment_NotVerified" xml:space="preserve">
+    <value>Не верифицирован</value>
+  </data>
+  <data name="Payment_PassKyc" xml:space="preserve">
+    <value>Пройти KYC верификацию</value>
+  </data>
+  <data name="Payment_AvailableLimit" xml:space="preserve">
+    <value>Доступный лимит рассрочки</value>
+  </data>
+  <data name="Payment_AccountStatus" xml:space="preserve">
+    <value>Статус аккаунта</value>
+  </data>
+  <data name="Payment_Blocked" xml:space="preserve">
+    <value>Заблокирован</value>
+  </data>
+  <data name="Payment_Active" xml:space="preserve">
+    <value>Активен</value>
+  </data>
+  <data name="Payment_CreditScore" xml:space="preserve">
+    <value>Кредитный рейтинг</value>
+  </data>
+  <data name="Payment_Risk" xml:space="preserve">
+    <value>Риск</value>
+  </data>
+  <data name="Payment_SecurityTitle" xml:space="preserve">
+    <value>Безопасность и методы быстрого входа</value>
+  </data>
+  <data name="Payment_SecurityDesc" xml:space="preserve">
+    <value>Привяжите биометрию и сервисы для мгновенного входа в 1 клик без ожидания SMS/OTP кодов.</value>
+  </data>
+  <data name="Payment_Configured" xml:space="preserve">
+    <value>Настроено</value>
+  </data>
+  <data name="Payment_UpdateFaceScan" xml:space="preserve">
+    <value>Обновить снимок</value>
+  </data>
+  <data name="Payment_NotLinked" xml:space="preserve">
+    <value>Не привязано</value>
+  </data>
+  <data name="Payment_LinkGoogle" xml:space="preserve">
+    <value>Привязать Google</value>
+  </data>
+  <data name="Payment_Linked" xml:space="preserve">
+    <value>Привязано</value>
+  </data>
+  <data name="Payment_PlansTitle" xml:space="preserve">
+    <value>Мои рассрочки и платежи</value>
+  </data>
+  <data name="Payment_NoPlansTitle" xml:space="preserve">
+    <value>У вас пока нет активных платежных планов</value>
+  </data>
+  <data name="Payment_EmptyPlansDesc" xml:space="preserve">
+    <value>Вы можете оформить рассрочку при выборе способов оплаты в киоске или на кассе.</value>
+  </data>
+  <data name="Payment_LoadSamplePlans" xml:space="preserve">
+    <value>Загрузить примеры рассрочек</value>
+  </data>
+  <data name="Payment_PlanType" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Payment_Order" xml:space="preserve">
+    <value>Заказ</value>
+  </data>
+  <data name="Payment_TotalAmount" xml:space="preserve">
+    <value>Общая сумма</value>
+  </data>
+  <data name="Payment_Fee" xml:space="preserve">
+    <value>Комиссия</value>
+  </data>
+  <data name="Payment_GrandTotal" xml:space="preserve">
+    <value>Итого к оплате</value>
+  </data>
+  <data name="Payment_Paid" xml:space="preserve">
+    <value>Выплачено</value>
+  </data>
+  <data name="Payment_Progress" xml:space="preserve">
+    <value>Прогресс</value>
+  </data>
+  <data name="Payment_Remaining" xml:space="preserve">
+    <value>Осталось</value>
+  </data>
+  <data name="Payment_ViewSchedule" xml:space="preserve">
+    <value>Посмотреть график</value>
+  </data>
+  <data name="Payment_EarlyPayoff" xml:space="preserve">
+    <value>Досрочное погашение (-20% комиссии)</value>
+  </data>
+  <data name="Payment_Pause" xml:space="preserve">
+    <value>Приостановить</value>
+  </data>
+  <data name="Payment_CancelPlan" xml:space="preserve">
+    <value>Отменить план</value>
+  </data>
+  <data name="Payment_ResumePayments" xml:space="preserve">
+    <value>Возобновить платежи</value>
+  </data>
+  <data name="Payment_ScheduleModalTitle" xml:space="preserve">
+    <value>График платежей по плану</value>
+  </data>
+  <data name="Payment_DueDate" xml:space="preserve">
+    <value>Дата списания</value>
+  </data>
+  <data name="Payment_Amount" xml:space="preserve">
+    <value>Сумма части</value>
+  </data>
+  <data name="Payment_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Payment_FaceIdKycTitle" xml:space="preserve">
+    <value>FaceID KYC Верификация</value>
+  </data>
+  <data name="Payment_CameraDisconnected" xml:space="preserve">
+    <value>Модуль камеры не подключен</value>
+  </data>
+  <data name="Checkout_GeneratingUzQr" xml:space="preserve">
+    <value>Загрузка QR...</value>
+  </data>
+  <data name="Checkout_ScanUzQrTitle" xml:space="preserve">
+    <value>📱 Единый национальный QR (ЦБ РУз)</value>
+  </data>
+  <data name="Checkout_ScanUzQrHint" xml:space="preserve">
+    <value>Отсканируйте камерой смартфона в приложении любого банка Узбекистана:</value>
+  </data>
+  <data name="Checkout_InvoiceLabel" xml:space="preserve">
+    <value>Счёт:</value>
+  </data>
+  <data name="Checkout_RrnLabel" xml:space="preserve">
+    <value>RRN:</value>
+  </data>
+  <data name="Checkout_CardLabel" xml:space="preserve">
+    <value>Карта:</value>
+  </data>
+  <data name="Checkout_MethodLabel" xml:space="preserve">
+    <value>Способ:</value>
+  </data>
+  <data name="Checkout_AmountLabel" xml:space="preserve">
+    <value>Сумма:</value>
+  </data>
+  <data name="Checkout_NfcContactless" xml:space="preserve">
+    <value>Бесконтактный NFC</value>
+  </data>
+  <data name="Checkout_ChipContact" xml:space="preserve">
+    <value>Контактный чип</value>
+  </data>
+  <data name="Checkout_ConfirmAndPay" xml:space="preserve">
+    <value>Подтвердить и оплатить</value>
+  </data>
+  <data name="Checkout_Complete" xml:space="preserve">
+    <value>Завершить оплату</value>
+  </data>
+  <data name="Checkout_PanHeader" xml:space="preserve">
+    <value>Оплата банковской картой онлайн</value>
+  </data>
+  <data name="Checkout_PanCardNumber" xml:space="preserve">
+    <value>Номер карты (16 цифр)</value>
+  </data>
+  <data name="Checkout_PanExpire" xml:space="preserve">
+    <value>Срок действия (ММ/ГГ)</value>
+  </data>
+  <data name="Checkout_PanSaveForFuture" xml:space="preserve">
+    <value>Запомнить карту для быстрой оплаты в 1 клик</value>
+  </data>
+  <data name="Checkout_PanOtpPrompt" xml:space="preserve">
+    <value>Код подтверждения отправлен в SMS на номер владельца карты</value>
+  </data>
+  <data name="Checkout_PanGetCodeBtn" xml:space="preserve">
+    <value>Получить SMS код подтверждения</value>
+  </data>
+  <data name="Checkout_CashTitle" xml:space="preserve">
+    <value>Оплата наличными</value>
+  </data>
+  <data name="Checkout_CashDesc" xml:space="preserve">
+    <value>Внесите купюры в купюроприёмник киоска или оплатите на кассе</value>
+  </data>
+  <data name="Checkout_CashInserted" xml:space="preserve">
+    <value>Внесено</value>
+  </data>
+  <data name="Checkout_CashRemaining" xml:space="preserve">
+    <value>Осталось внести</value>
+  </data>
+  <data name="Checkout_CashStartAcceptor" xml:space="preserve">
+    <value>Внести наличные в купюроприёмник</value>
+  </data>
+  <data name="Checkout_CashPayAtDesk" xml:space="preserve">
+    <value>Получить талон для оплаты на кассе</value>
+  </data>
+  <data name="Orders_ViewList" xml:space="preserve">
+    <value>Список</value>
+  </data>
+  <data name="Orders_ViewGrid" xml:space="preserve">
+    <value>Сетка</value>
+  </data>
+  <data name="Orders_ViewTable" xml:space="preserve">
+    <value>Таблица</value>
+  </data>
+  <data name="Orders_EmptyTitle" xml:space="preserve">
+    <value>Заказов пока нет</value>
+  </data>
+  <data name="Orders_EmptySubtitle" xml:space="preserve">
+    <value>Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.</value>
+  </data>
+  <data name="Orders_GoToTerminal" xml:space="preserve">
+    <value>Открыть кассовый терминал</value>
+  </data>
+  <data name="Orders_LoadSample" xml:space="preserve">
+    <value>Загрузить тестовые заказы</value>
+  </data>
+  <data name="Orders_ViewDetails" xml:space="preserve">
+    <value>Посмотреть состав</value>
+  </data>
+  <data name="Orders_Preparing" xml:space="preserve">
+    <value>В процессе приготовления</value>
+  </data>
+  <data name="Orders_NoOrdersPreparing" xml:space="preserve">
+    <value>Нет заказов в работе</value>
+  </data>
+  <data name="Orders_Ready" xml:space="preserve">
+    <value>Готовы к выдаче</value>
+  </data>
+  <data name="Orders_NoOrdersReady" xml:space="preserve">
+    <value>Нет готовых заказов</value>
+  </data>
+  <data name="OrderItems_BackToOrders" xml:space="preserve">
+    <value>Назад к заказам</value>
+  </data>
+  <data name="OrderItems_Title" xml:space="preserve">
+    <value>Позиции заказа / КДС</value>
+  </data>
+  <data name="OrderItems_Pcs" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="OrderItems_Subtitle" xml:space="preserve">
+    <value>Управление позициями и контроль приготовления</value>
+  </data>
+  <data name="OrderItems_EmptyTitle" xml:space="preserve">
+    <value>В данном заказе нет позиций</value>
+  </data>
+  <data name="OrderItems_EmptyDesc" xml:space="preserve">
+    <value>Позиции еще не добавлены, либо заказ не был выбран.</value>
+  </data>
+  <data name="OrderItems_LoadSample" xml:space="preserve">
+    <value>Загрузить тестовые позиции</value>
+  </data>
+  <data name="OrderItems_Composition" xml:space="preserve">
+    <value>Состав заказа</value>
+  </data>
+  <data name="OrderItems_SummaryTitle" xml:space="preserve">
+    <value>Итог заказа</value>
+  </data>
+  <data name="OrderItems_TotalItems" xml:space="preserve">
+    <value>Всего блюд</value>
+  </data>
+  <data name="OrderItems_Status" xml:space="preserve">
+    <value>Статус заказа</value>
+  </data>
+  <data name="OrderItems_Active" xml:space="preserve">
+    <value>В процессе</value>
+  </data>
+  <data name="OrderItems_Payment" xml:space="preserve">
+    <value>Способ оплаты</value>
+  </data>
+  <data name="OrderItems_ToPay" xml:space="preserve">
+    <value>К оплате</value>
+  </data>
+  <data name="OrderItems_OpenKds" xml:space="preserve">
+    <value>Кухонный экран (КДС)</value>
+  </data>
+  <data name="OrderItems_AllOrders" xml:space="preserve">
+    <value>Все заказы</value>
+  </data>
+  <data name="Order_FiscalSign" xml:space="preserve">
+    <value>Фискальный чек</value>
+  </data>
+  <data name="Order_UnknownProduct" xml:space="preserve">
+    <value>Блюдо</value>
+  </data>
+  <data name="Order_PaymentType" xml:space="preserve">
+    <value>Тип оплаты</value>
+  </data>
+  <data name="Order_CreatedAt" xml:space="preserve">
+    <value>Создан в</value>
+  </data>
+  <data name="Order_ChangedAt" xml:space="preserve">
+    <value>Изменен в</value>
+  </data>
+  <data name="Order_Items" xml:space="preserve">
+    <value>Состав</value>
+  </data>
+  <data name="Kds_MakingTitle" xml:space="preserve">
+    <value>В процессе приготовления</value>
+  </data>
+  <data name="Kds_NoMaking" xml:space="preserve">
+    <value>Все блюда приготовлены</value>
+  </data>
+  <data name="Kds_MarkReady" xml:space="preserve">
+    <value>Отметить «Готово»</value>
+  </data>
+  <data name="Kds_ReadyTitle" xml:space="preserve">
+    <value>Готовы к выдаче</value>
+  </data>
+  <data name="Kds_NoReady" xml:space="preserve">
+    <value>Ожидание готовности блюд</value>
+  </data>
+  <data name="Kds_ReadyTag" xml:space="preserve">
+    <value>Приготовлено</value>
+  </data>
+  <data name="Kds_MarkCompleted" xml:space="preserve">
+    <value>Выдать гостю</value>
+  </data>
+  <data name="Payment_Card" xml:space="preserve">
+    <value>Банковская карта</value>
+  </data>
+  <data name="Payment_Cash" xml:space="preserve">
+    <value>Наличные</value>
+  </data>
+  <data name="Payment_Online" xml:space="preserve">
+    <value>Онлайн-оплата</value>
+  </data>
+  <data name="OrderStatus_Completed" xml:space="preserve">
+    <value>Выполнен</value>
+  </data>
+  <data name="OrderStatus_Shipping" xml:space="preserve">
+    <value>Готов к выдаче</value>
+  </data>
+  <data name="OrderStatus_Collected" xml:space="preserve">
+    <value>Собран</value>
+  </data>
+  <data name="OrderStatus_Collecting" xml:space="preserve">
+    <value>Сборка</value>
+  </data>
+  <data name="OrderStatus_Made" xml:space="preserve">
+    <value>Приготовлен</value>
+  </data>
+  <data name="OrderStatus_Making" xml:space="preserve">
+    <value>Готовится</value>
+  </data>
+  <data name="OrderStatus_Paid" xml:space="preserve">
+    <value>Оплачен</value>
+  </data>
+  <data name="OrderStatus_Canceled" xml:space="preserve">
+    <value>Отменен</value>
+  </data>
+  <data name="OrderStatus_Created" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="Orders_CreateOrder" xml:space="preserve">
+    <value>Создать заказ</value>
+  </data>
+  <data name="Orders_Number" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="Orders_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Orders_TotalAmount" xml:space="preserve">
+    <value>Итоговая сумма</value>
+  </data>
+  <data name="Orders_CreatedAt" xml:space="preserve">
+    <value>Создан в</value>
+  </data>
+  <data name="OrderItems_Quantity" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="OrderItems_Total" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="OrderItems_UnitPrice" xml:space="preserve">
+    <value>Цена за шт.</value>
+  </data>
+  <data name="Orders_StartPreparation" xml:space="preserve">
+    <value>Начать готовку</value>
+  </data>
+  <data name="Orders_FinishPreparation" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Orders_StartPacking" xml:space="preserve">
+    <value>Собрать заказ</value>
+  </data>
+  <data name="Orders_FinishPacking" xml:space="preserve">
+    <value>Собран</value>
+  </data>
+  <data name="Orders_MoveToReady" xml:space="preserve">
+    <value>Передать на выдачу</value>
+  </data>
+  <data name="Orders_CompleteOrder" xml:space="preserve">
+    <value>Выдать покупателю</value>
+  </data>
+  <data name="Orders_Done" xml:space="preserve">
+    <value>Завершён</value>
+  </data>
+  <data name="Orders_Advance" xml:space="preserve">
+    <value>Продвинуть</value>
+  </data>
+  <data name="Kds_JustNow" xml:space="preserve">
+    <value>Только что</value>
+  </data>
+  <data name="Kds_MinutesAgo" xml:space="preserve">
+    <value>мин назад</value>
+  </data>
+  <data name="Kds_HoursAgo" xml:space="preserve">
+    <value>ч назад</value>
+  </data>
+  <data name="AdSlot_Label" xml:space="preserve">
+    <value>Реклама</value>
+  </data>
+  <data name="AdSlot_Disclaimer" xml:space="preserve">
+    <value>Тариф с рекламой (5$/мес) •</value>
+  </data>
+  <data name="AdSlot_UpgradeLink" xml:space="preserve">
+    <value>Отключить рекламу (Тариф 25$)</value>
+  </data>
+  <data name="Kiosk_TouchToStart" xml:space="preserve">
+    <value>Нажмите в любом месте, чтобы начать заказ</value>
+  </data>
+  <data name="Kiosk_Welcome" xml:space="preserve">
+    <value>Добро пожаловать</value>
+  </data>
+  <data name="Kiosk_DefaultTagline" xml:space="preserve">
+    <value>Свежие блюда, напитки и быстрое обслуживание</value>
+  </data>
+  <data name="Kiosk_TouchScreenToOrder" xml:space="preserve">
+    <value>Коснитесь экрана, чтобы сделать заказ</value>
+  </data>
+  <data name="Kiosk_TrialDaysWithoutAds" xml:space="preserve">
+    <value>Пробный период без рекламы ({0} дн.)</value>
+  </data>
+  <data name="Kiosk_ProTierBrand" xml:space="preserve">
+    <value>Тариф PRO • Брендовый киоск</value>
+  </data>
+  <data name="Kiosk_YandexDirect" xml:space="preserve">
+    <value>Яндекс Реклама</value>
+  </data>
+  <data name="Kiosk_GoogleAdSense" xml:space="preserve">
+    <value>Google AdSense</value>
+  </data>
+  <data name="Kiosk_PlatformPartner" xml:space="preserve">
+    <value>Партнер платформы Socratic</value>
+  </data>
+  <data name="Kiosk_KioskLabel" xml:space="preserve">
+    <value>Киоск</value>
+  </data>
+  <data name="Kiosk_DefaultVenue" xml:space="preserve">
+    <value>заведения</value>
+  </data>
+  <data name="Kiosk_DisableAds" xml:space="preserve">
+    <value>Отключить рекламу</value>
+  </data>
+  <data name="Kiosk_SeoPageTitleFormat" xml:space="preserve">
+    <value>{0} — цифровой киоск, меню и онлайн-заказ | Socratic</value>
+  </data>
+  <data name="Kiosk_SeoMetaDescFormat" xml:space="preserve">
+    <value>{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.</value>
+  </data>
+  <data name="Kiosk_TitleSelfService" xml:space="preserve">
+    <value>Киоск самообслуживания</value>
+  </data>
+  <data name="Kiosk_DefaultMetaDesc" xml:space="preserve">
+    <value>Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.</value>
+  </data>
+  <data name="Kiosk_CategoryFilters" xml:space="preserve">
+    <value>Фильтры категорий</value>
+  </data>
+  <data name="Kiosk_ProductDetailsAria" xml:space="preserve">
+    <value>Детали товара {0}</value>
+  </data>
+  <data name="Kiosk_RemoveFromFavoritesAria" xml:space="preserve">
+    <value>Удалить {0} из избранного</value>
+  </data>
+  <data name="Kiosk_AddToFavoritesAria" xml:space="preserve">
+    <value>Добавить {0} в избранное</value>
+  </data>
+  <data name="Kiosk_ProductDescAria" xml:space="preserve">
+    <value>Описание {0}</value>
+  </data>
+  <data name="Kiosk_ExchangeRateP2P" xml:space="preserve">
+    <value>P2P Курс:</value>
+  </data>
+  <data name="Kiosk_ViewOrderPrompt" xml:space="preserve">
+    <value>Просмотреть заказ</value>
+  </data>
+  <data name="Store_ProductPageTitleFormat" xml:space="preserve">
+    <value>{0} — купить в {1} по цене {2:N0} {3}</value>
+  </data>
+  <data name="Store_ProductMetaDescFormat" xml:space="preserve">
+    <value>{0} в {1}. Цена: {2:N0} {3}. Меню, характеристики, доставка и онлайн-заказ в экосистеме Socratic.</value>
+  </data>
+  <data name="Store_BackToCatalog" xml:space="preserve">
+    <value>В каталог</value>
+  </data>
+  <data name="Store_SiteNav" xml:space="preserve">
+    <value>Навигация по сайту</value>
+  </data>
+  <data name="Store_SponsoredTop" xml:space="preserve">
+    <value>Спонсорский товар • Топ в Google &amp; Яндекс</value>
+  </data>
+  <data name="Store_PromoteSearch" xml:space="preserve">
+    <value>Продвигать в поиске</value>
+  </data>
+  <data name="Store_Preview" xml:space="preserve">
+    <value>Превью</value>
+  </data>
+  <data name="Terminal_AddToCartPrefix" xml:space="preserve">
+    <value>Добавить {0} в заказ</value>
+  </data>
+  <data name="Terminal_InOrderQtyPrefix" xml:space="preserve">
+    <value>В заказе {0} шт</value>
+  </data>
+  <data name="SignIn_SecondsShort" xml:space="preserve">
+    <value>с</value>
+  </data>
+  <data name="Chat_NewConversation" xml:space="preserve">
+    <value>Новый диалог</value>
+  </data>
+  <data name="Chat_InputPlaceholder" xml:space="preserve">
+    <value>Введите сообщение...</value>
+  </data>
+  <data name="Chat_Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Chat_Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="SeatDesigner_HallTools" xml:space="preserve">
+    <value>Инструменты зала</value>
+  </data>
+  <data name="SeatDesigner_FurnitureConstructor" xml:space="preserve">
+    <value>Конструктор мебели:</value>
+  </data>
+  <data name="SeatDesigner_RectTable" xml:space="preserve">
+    <value>Прям. стол</value>
+  </data>
+  <data name="SeatDesigner_CircleTable" xml:space="preserve">
+    <value>Кругл. стол</value>
+  </data>
+  <data name="SeatDesigner_SelectedSeatProperties" xml:space="preserve">
+    <value>Свойства выбранного места:</value>
+  </data>
+  <data name="SeatDesigner_SeatLabel" xml:space="preserve">
+    <value>Название места</value>
+  </data>
+  <data name="SeatDesigner_ProductId" xml:space="preserve">
+    <value>ID продукта (услуги)</value>
+  </data>
+  <data name="SeatDesigner_PriceUzs" xml:space="preserve">
+    <value>Цена (UZS)</value>
+  </data>
+  <data name="SeatDesigner_DeleteElement" xml:space="preserve">
+    <value>Удалить элемент</value>
+  </data>
+  <data name="SeatDesigner_PageTitle" xml:space="preserve">
+    <value>SeatDesigner — Редактор залов и бронирования</value>
+  </data>
+  <data name="SeatDesigner_PageSubtitle" xml:space="preserve">
+    <value>Интерактивный конструктор рассадки и бронирования столиков</value>
+  </data>
+  <data name="SeatDesigner_EditorActions" xml:space="preserve">
+    <value>Действия редактора</value>
+  </data>
+  <data name="SeatDesigner_ModePreview" xml:space="preserve">
+    <value>👁️ Режим предпросмотра / бронирования</value>
+  </data>
+  <data name="SeatDesigner_ModeEdit" xml:space="preserve">
+    <value>✏️ Режим редактирования</value>
+  </data>
+  <data name="SeatDesigner_SwitchToEdit" xml:space="preserve">
+    <value>Перейти в редактор</value>
+  </data>
+  <data name="SeatDesigner_SwitchToPreview" xml:space="preserve">
+    <value>Предпросмотр схемы</value>
+  </data>
+  <data name="SeatDesigner_SaveLayout" xml:space="preserve">
+    <value>Сохранить схему</value>
+  </data>
+  <data name="SeatDesigner_SeatSelectedForBooking" xml:space="preserve">
+    <value>Выбрано место для бронирования</value>
+  </data>
+  <data name="Home_LoadingPlayer" xml:space="preserve">
+    <value>Загрузка плеера...</value>
+  </data>
+  <data name="Merchant_SettingsTitle" xml:space="preserve">
+    <value>Настройки эквайринга и фискализации</value>
+  </data>
+  <data name="Merchant_SettingsSubtext" xml:space="preserve">
+    <value>Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации</value>
+  </data>
+  <data name="Merchant_SoliqTitle" xml:space="preserve">
+    <value>🏛️ Фискальные реквизиты Soliq.uz</value>
+  </data>
+  <data name="Merchant_TaxIdLabel" xml:space="preserve">
+    <value>ИНН / STIR организации (9 цифр)</value>
+  </data>
+  <data name="Merchant_DefaultMxikCodeLabel" xml:space="preserve">
+    <value>ИКПУ по умолчанию (17 знаков)</value>
+  </data>
+  <data name="Merchant_VatPercentLabel" xml:space="preserve">
+    <value>Ставка НДС (%)</value>
+  </data>
+  <data name="Merchant_ClickTitle" xml:space="preserve">
+    <value>🔹 Click (CLICK_SHOP &amp; Click Pass)</value>
+  </data>
+  <data name="Merchant_ClickEnable" xml:space="preserve">
+    <value>Включить оплату через Click</value>
+  </data>
+  <data name="Merchant_SecretKeyHint" xml:space="preserve">
+    <value>Секретный ключ из кабинета Click</value>
+  </data>
+  <data name="Merchant_ExampleServiceId" xml:space="preserve">
+    <value>Например: 32001</value>
+  </data>
+  <data name="Merchant_ExampleMerchantId" xml:space="preserve">
+    <value>Например: 21001</value>
+  </data>
+  <data name="Merchant_PaymeTitle" xml:space="preserve">
+    <value>💳 Payme (Subscribe &amp; Checkout)</value>
+  </data>
+  <data name="Merchant_PaymeEnable" xml:space="preserve">
+    <value>Включить оплату через Payme</value>
+  </data>
+  <data name="Merchant_PaymeMerchantIdLabel" xml:space="preserve">
+    <value>Merchant ID (ID кассы)</value>
+  </data>
+  <data name="Merchant_PaymeSecretKeyLabel" xml:space="preserve">
+    <value>Payme Secret Key (Ключ кассы)</value>
+  </data>
+  <data name="Merchant_PaymeSecretKeyHint" xml:space="preserve">
+    <value>Ключ из кабинета Payme Merchant</value>
+  </data>
+  <data name="Merchant_TestModeLabel" xml:space="preserve">
+    <value>Тестовый режим (Sandbox)</value>
+  </data>
+  <data name="Merchant_UzumTitle" xml:space="preserve">
+    <value>🍇 Uzum Pay / Uzum Nasiya</value>
+  </data>
+  <data name="Merchant_UzumEnable" xml:space="preserve">
+    <value>Включить оплату через Uzum Pay</value>
+  </data>
+  <data name="Merchant_UzQrTitle" xml:space="preserve">
+    <value>📱 UzQR (Единый национальный QR ЦБ РУз)</value>
+  </data>
+  <data name="Merchant_UzQrDesc" xml:space="preserve">
+    <value>Официальная платёжная инфраструктура ЦБ РУз (МУНИС / QR-Online). Позволяет принимать платежи по единому динамическому QR-коду из всех банковских приложений (Click, Payme, Uzum Bank, Anor, TBC, Agrobank, Ipoteka и др.).</value>
+  </data>
+  <data name="Merchant_UzQrEnable" xml:space="preserve">
+    <value>Включить приём динамического UzQR</value>
+  </data>
+  <data name="Merchant_UzQrApiKeyLabel" xml:space="preserve">
+    <value>API-ключ UzQR (секретный ключ из кабинета uzqr.uz)</value>
+  </data>
+  <data name="Merchant_UzQrHintPre" xml:space="preserve">
+    <value>Ключ генерируется в личном кабинете на </value>
+  </data>
+  <data name="Merchant_UzQrHintPost" xml:space="preserve">
+    <value> с помощью ЭЦП в разделе «API бошқаруви».</value>
+  </data>
+  <data name="Merchant_UzQrInnLabel" xml:space="preserve">
+    <value>ИНН / STIR организации в UzQR</value>
+  </data>
+  <data name="Merchant_UzQrQrIdLabel" xml:space="preserve">
+    <value>ID динамического QR (QrId)</value>
+  </data>
+  <data name="Merchant_UzQrFiscalModuleLabel" xml:space="preserve">
+    <value>Номер фискального модуля (при наличии)</value>
+  </data>
+  <data name="Merchant_SaveSettings" xml:space="preserve">
+    <value>Сохранить настройки эквайринга</value>
+  </data>
+  <data name="FilePicker_AttachedFiles" xml:space="preserve">
+    <value>Прикрепленные файлы</value>
+  </data>
+  <data name="FilePicker_CountOne" xml:space="preserve">
+    <value>файл</value>
+  </data>
+  <data name="FilePicker_CountFew" xml:space="preserve">
+    <value>файла</value>
+  </data>
+  <data name="FilePicker_CountMany" xml:space="preserve">
+    <value>файлов</value>
+  </data>
+  <data name="FilePicker_LoadedFiles" xml:space="preserve">
+    <value>Загружено файлов: {0}. Нажмите или перетащите для добавления.</value>
+  </data>
+  <data name="FilePicker_NoFiles" xml:space="preserve">
+    <value>Файлы не прикреплены. Поддерживаются изображения, документы и архивы.</value>
+  </data>
+  <data name="FilePicker_ClearAll" xml:space="preserve">
+    <value>Очистить все файлы</value>
+  </data>
+  <data name="FilePicker_DragFilesOrClick" xml:space="preserve">
+    <value>Перетащите файлы или нажмите</value>
+  </data>
+  <data name="ColorPicker_ClickToSelect" xml:space="preserve">
+    <value>Нажмите для выбора цвета</value>
+  </data>
+  <data name="ColorPicker_Copied" xml:space="preserve">
+    <value>Скопировано!</value>
+  </data>
+  <data name="ColorPicker_CopyHex" xml:space="preserve">
+    <value>Скопировать HEX</value>
+  </data>
+  <data name="ColorPicker_PalettePresets" xml:space="preserve">
+    <value>Палитра пресетов</value>
+  </data>
+  <data name="ColorPicker_ResetColor" xml:space="preserve">
+    <value>Сбросить цвет</value>
+  </data>
+  <data name="ColorPicker_ColorSelection" xml:space="preserve">
+    <value>Выбор цвета</value>
+  </data>
+  <data name="ColorPicker_ColorSelected" xml:space="preserve">
+    <value>Выбран цвет: {0}</value>
+  </data>
+  <data name="ColorPicker_ColorDefault" xml:space="preserve">
+    <value>Цвет не выбран (по умолчанию)</value>
+  </data>
+  <data name="ColorPicker_ClosePalette" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="ColorPicker_Palette" xml:space="preserve">
+    <value>Палитра</value>
+  </data>
+  <data name="ColorPicker_RecommendedColors" xml:space="preserve">
+    <value>Рекомендованные цвета Material 3</value>
+  </data>
+  <data name="Invoice_Number" xml:space="preserve">
+    <value>Чек №</value>
+  </data>
+  <data name="Invoice_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Invoice_Cashier" xml:space="preserve">
+    <value>Кассир</value>
+  </data>
+  <data name="Invoice_Payment" xml:space="preserve">
+    <value>Оплата</value>
+  </data>
+  <data name="Invoice_QuantityShort" xml:space="preserve">
+    <value>Кол</value>
+  </data>
+  <data name="Invoice_ItemName" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="Invoice_Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Invoice_Amount" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="Invoice_VatIncluded" xml:space="preserve">
+    <value>В т.ч. НДС (12%):</value>
+  </data>
+  <data name="Invoice_TotalToPay" xml:space="preserve">
+    <value>ИТОГО К ОПЛАТЕ:</value>
+  </data>
+  <data name="Invoice_ThankYou" xml:space="preserve">
+    <value>Спасибо за покупку!</value>
+  </data>
+  <data name="Invoice_FiscalReceiptDemo" xml:space="preserve">
+    <value>Фискальный чек Socratic Demo • www.socratic.uz</value>
+  </data>
+  <data name="Invoice_RemoveItemHint" xml:space="preserve">
+    <value>Нажмите для удаления позиции</value>
+  </data>
+  <data name="Invoice_DefaultCashier" xml:space="preserve">
+    <value>Касса POS-1</value>
+  </data>
+  <data name="Invoice_DefaultSystem" xml:space="preserve">
+    <value>Универсальная Торговая Система Socratic</value>
+  </data>
+  <data name="SmartDataView_Table" xml:space="preserve">
+    <value>Таблица</value>
+  </data>
+  <data name="SmartDataView_Kanban" xml:space="preserve">
+    <value>Канбан</value>
+  </data>
+  <data name="SmartGrid_Enabled" xml:space="preserve">
+    <value>включено</value>
+  </data>
+  <data name="SmartGrid_Disabled" xml:space="preserve">
+    <value>отключено</value>
+  </data>
+  <data name="Schedule_From" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="Schedule_To" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="Schedule_ResetScheduleAction" xml:space="preserve">
+    <value>Сбросить график</value>
   </data>
 </root>
