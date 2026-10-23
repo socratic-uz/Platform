@@ -13,7 +13,22 @@
     "CardGrid": "card-grid",
     "Grid": "card-grid",
     "Elevated": "m3-card-elevated",
-    "Filled": "m3-card-filled",
+    "CardElevated": "m3-card-elevated",
+    "CardFilled": "m3-card-filled",
+    "CardOutlined": "m3-card-outlined",
+    "CardWindows": "card-windows",
+    "CardMacos": "card-macos",
+    "CardWeb": "card-web",
+    "CardAndroid": "card-android",
+    "CardIos": "card-ios",
+    "CardInstant": "card-instant",
+    "PlatformCard": "platform-card",
+    "PlatformCardHeader": "platform-card-header",
+    "PlatformsUnifiedGrid": "platforms-unified-grid",
+    "PlatformIcon": "platform-icon",
+    "PlatformInfo": "platform-info",
+    "PlatformDesc": "platform-desc",
+    "PlatformBtn": "platform-btn",
     "GlassCard": "glass-card",
     "Interactive": "m3-card-interactive",
     "MaterialSymbolsOutlined": "material-symbols-outlined",
@@ -26,7 +41,6 @@
     "OrgCardName": "org-card-name",
     "OrgMedia": "org-media",
     "OrgMediaPlaceholder": "org-media-placeholder",
-    "Outlined": "m3-card-outlined",
     "PaddingLg": "m3-card-padding-lg",
     "PaddingMd": "m3-card-padding-md",
     "PaddingSm": "m3-card-padding-sm",
@@ -240,7 +254,6 @@
   },
   "Dialog": {
     "Backdrop": "m3-dialog-backdrop",
-    "BtnPrimary": "m3-dialog-btn-primary",
     "CloseBtn": "m3-dialog-close-btn",
     "ConfigDialog": "m3-config-dialog",
     "Description": "m3-dialog-description",
@@ -258,7 +271,8 @@
     "ToggleIcon": "m3-dialog-toggle-icon",
     "ToggleItem": "m3-dialog-toggle-item",
     "ToggleText": "m3-dialog-toggle-text",
-    "ToggleTitle": "m3-dialog-toggle-title"
+    "ToggleTitle": "m3-dialog-toggle-title",
+    "DialogBtnPrimary": "m3-dialog-btn-primary"
   },
   "EmptyState": {
     "Action": "m3-empty-state-action",
@@ -297,7 +311,11 @@
     "FilterChipCount": "m3-filter-chip-count",
     "FilterChipIcon": "m3-filter-chip-icon",
     "ChipActive": "active",
-    "ChipFilter": "m3-filter-chip"
+    "ChipFilter": "m3-filter-chip",
+    "ChipDot": "chip-dot",
+    "ChipDotCyan": "chip-dot-cyan",
+    "ChipDotEmerald": "chip-dot-emerald",
+    "ChipDotPurple": "chip-dot-purple"
   },
   "Table": {
     "ActionsBar": "m3-table-actions-bar",
@@ -553,5 +571,8 @@
     "TitleGroup": "pos-card-title-group",
     "ProductTitle": "product-title",
     "BadgeCounter": "badge-counter"
+  },
+  "Buttons": {
+    "UxSearchClear": "ux-search-clear"
   }
 }

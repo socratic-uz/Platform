@@ -345,6 +345,7 @@ namespace Assets.Constants
             public const string ThumbBtn = "thumb-btn";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
+            public const string UxSearchClear = "ux-search-clear";
             public const string UxTabBtn = "ux-tab-btn";
             public const string YandexCtrlBtn = "yandex-ctrl-btn";
         }
@@ -371,6 +372,11 @@ namespace Assets.Constants
             public const string CardCollecting = "card-collecting";
             public const string CardCompleted = "card-completed";
             public const string CardCreated = "card-created";
+            public const string CardElevated = "m3-card-elevated";
+            public const string CardElevated_2 = "card-elevated";
+            public const string CardElevated_3 = "elevated";
+            public const string CardFilled = "m3-card-filled";
+            public const string CardFilled_2 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -378,8 +384,12 @@ namespace Assets.Constants
             public const string CardHeader = "m3-card-header";
             public const string CardHeader_2 = "card-header";
             public const string CardIcon = "card-icon";
+            public const string CardInstant = "card-instant";
             public const string CardIos = "card-ios";
+            public const string CardMacos = "card-macos";
             public const string CardMaking = "card-making";
+            public const string CardOutlined = "m3-card-outlined";
+            public const string CardOutlined_2 = "card-outlined";
             public const string CardPaid = "card-paid";
             public const string CardPayment = "card-payment";
             public const string CardReady = "card-ready";
@@ -389,21 +399,18 @@ namespace Assets.Constants
             public const string CardTitle = "m3-card-title";
             public const string CardTitle_2 = "card-title";
             public const string CardWeb = "card-web";
+            public const string CardWindows = "card-windows";
             public const string CashCardHeader = "cash-card-header";
             public const string CommerceCard = "commerce-card";
             public const string ContactCard = "contact-card";
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
-            public const string Elevated_2 = "card-elevated";
-            public const string Elevated_3 = "elevated";
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
-            public const string Filled = "m3-card-filled";
-            public const string Filled_2 = "card-filled";
             public const string Footer_2 = "m3-card-footer";
             public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
@@ -413,7 +420,6 @@ namespace Assets.Constants
             public const string HeroCard = "hero-card";
             public const string HeroStageCard = "hero-stage-card";
             public const string IndustryCard = "industry-card";
-            public const string Instant = "card-instant";
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
@@ -431,7 +437,6 @@ namespace Assets.Constants
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string Macos = "card-macos";
             public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
@@ -457,8 +462,6 @@ namespace Assets.Constants
             public const string OrgCardSocratic = "org-card-socratic";
             public const string OrgMedia = "org-media";
             public const string OrgMediaPlaceholder = "org-media-placeholder";
-            public const string Outlined = "m3-card-outlined";
-            public const string Outlined_2 = "card-outlined";
             public const string PaddingLg = "m3-card-padding-lg";
             public const string PaddingLg_2 = "card-padding-lg";
             public const string PaddingMd = "m3-card-padding-md";
@@ -468,8 +471,13 @@ namespace Assets.Constants
             public const string PillarCard = "pillar-card";
             public const string PlanCard = "plan-card";
             public const string PlanCardHeader = "plan-card-header";
+            public const string PlatformBtn = "platform-btn";
             public const string PlatformCard = "platform-card";
             public const string PlatformCardHeader = "platform-card-header";
+            public const string PlatformDesc = "platform-desc";
+            public const string PlatformIcon = "platform-icon";
+            public const string PlatformInfo = "platform-info";
+            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosStatusCard = "pos-status-card";
             public const string PreviewCard = "preview-card";
             public const string PriceTag = "price-tag";
@@ -531,7 +539,6 @@ namespace Assets.Constants
             public const string UxSpotlightCard = "ux-spotlight-card";
             public const string VideoCard = "video-card";
             public const string VideoCardHeader = "video-card-header";
-            public const string Windows = "card-windows";
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
@@ -592,12 +599,12 @@ namespace Assets.Constants
             public const string BankChip = "bank-chip";
             public const string BankChipsWrap = "bank-chips-wrap";
             public const string ChipActive = "active";
+            public const string ChipDot = "chip-dot";
+            public const string ChipDotCyan = "chip-dot-cyan";
+            public const string ChipDotEmerald = "chip-dot-emerald";
+            public const string ChipDotPurple = "chip-dot-purple";
             public const string ChipFilter = "m3-filter-chip";
             public const string ChipIcon = "chip-icon";
-            public const string Dot = "chip-dot";
-            public const string DotCyan = "chip-dot-cyan";
-            public const string DotEmerald = "chip-dot-emerald";
-            public const string DotPurple = "chip-dot-purple";
             public const string FilterChipCount = "m3-filter-chip-count";
             public const string FilterChipIcon = "m3-filter-chip-icon";
             public const string FloatingChip = "floating-chip";
@@ -1312,12 +1319,12 @@ namespace Assets.Constants
         public static class Dialog
         {
             public const string Backdrop = "m3-dialog-backdrop";
-            public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
             public const string Description = "m3-dialog-description";
             public const string DialogActions = "m3-dialog-actions";
             public const string DialogBody = "m3-dialog-body";
+            public const string DialogBtnPrimary = "m3-dialog-btn-primary";
             public const string DialogContent = "dialog-content";
             public const string DialogContent_2 = "m3-dialog-content";
             public const string DialogDescription = "m3-dialog-description";
@@ -1561,10 +1568,6 @@ namespace Assets.Constants
             public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
-            public const string PlatformBtn = "platform-btn";
-            public const string PlatformDesc = "platform-desc";
-            public const string PlatformIcon = "platform-icon";
-            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosFormField = "pos-form-field";
             public const string PosFormLabel = "pos-form-label";
             public const string PromoField = "promo-field";
@@ -1734,7 +1737,6 @@ namespace Assets.Constants
             public const string OrderItemInfo = "order-item-info";
             public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceInfoRow = "place-info-row";
-            public const string PlatformInfo = "platform-info";
             public const string PosQrInfo = "pos-qr-info";
             public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
@@ -1985,8 +1987,8 @@ namespace Assets.Constants
             public const string FocusRing = "m3-focus-ring";
             public const string FocusRingInset = "m3-focus-ring-inset";
             public const string FocusRingTight = "m3-focus-ring-tight";
-            public const string Outlined = "outlined";
             public const string OutlineNone = "m3-outline-none";
+            public const string OutlineOutlined = "outlined";
         }
 
         public static class Payment
@@ -2351,7 +2353,6 @@ namespace Assets.Constants
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
             public const string UxSearchBox = "ux-search-box";
-            public const string UxSearchClear = "ux-search-clear";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -3047,6 +3048,7 @@ namespace Classes
             public const string ThumbBtn = "thumb-btn";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
+            public const string UxSearchClear = "ux-search-clear";
             public const string UxTabBtn = "ux-tab-btn";
             public const string YandexCtrlBtn = "yandex-ctrl-btn";
         }
@@ -3073,6 +3075,11 @@ namespace Classes
             public const string CardCollecting = "card-collecting";
             public const string CardCompleted = "card-completed";
             public const string CardCreated = "card-created";
+            public const string CardElevated = "m3-card-elevated";
+            public const string CardElevated_2 = "card-elevated";
+            public const string CardElevated_3 = "elevated";
+            public const string CardFilled = "m3-card-filled";
+            public const string CardFilled_2 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -3080,8 +3087,12 @@ namespace Classes
             public const string CardHeader = "m3-card-header";
             public const string CardHeader_2 = "card-header";
             public const string CardIcon = "card-icon";
+            public const string CardInstant = "card-instant";
             public const string CardIos = "card-ios";
+            public const string CardMacos = "card-macos";
             public const string CardMaking = "card-making";
+            public const string CardOutlined = "m3-card-outlined";
+            public const string CardOutlined_2 = "card-outlined";
             public const string CardPaid = "card-paid";
             public const string CardPayment = "card-payment";
             public const string CardReady = "card-ready";
@@ -3091,21 +3102,18 @@ namespace Classes
             public const string CardTitle = "m3-card-title";
             public const string CardTitle_2 = "card-title";
             public const string CardWeb = "card-web";
+            public const string CardWindows = "card-windows";
             public const string CashCardHeader = "cash-card-header";
             public const string CommerceCard = "commerce-card";
             public const string ContactCard = "contact-card";
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
-            public const string Elevated_2 = "card-elevated";
-            public const string Elevated_3 = "elevated";
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
-            public const string Filled = "m3-card-filled";
-            public const string Filled_2 = "card-filled";
             public const string Footer_2 = "m3-card-footer";
             public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
@@ -3115,7 +3123,6 @@ namespace Classes
             public const string HeroCard = "hero-card";
             public const string HeroStageCard = "hero-stage-card";
             public const string IndustryCard = "industry-card";
-            public const string Instant = "card-instant";
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
@@ -3133,7 +3140,6 @@ namespace Classes
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string Macos = "card-macos";
             public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
@@ -3159,8 +3165,6 @@ namespace Classes
             public const string OrgCardSocratic = "org-card-socratic";
             public const string OrgMedia = "org-media";
             public const string OrgMediaPlaceholder = "org-media-placeholder";
-            public const string Outlined = "m3-card-outlined";
-            public const string Outlined_2 = "card-outlined";
             public const string PaddingLg = "m3-card-padding-lg";
             public const string PaddingLg_2 = "card-padding-lg";
             public const string PaddingMd = "m3-card-padding-md";
@@ -3170,8 +3174,13 @@ namespace Classes
             public const string PillarCard = "pillar-card";
             public const string PlanCard = "plan-card";
             public const string PlanCardHeader = "plan-card-header";
+            public const string PlatformBtn = "platform-btn";
             public const string PlatformCard = "platform-card";
             public const string PlatformCardHeader = "platform-card-header";
+            public const string PlatformDesc = "platform-desc";
+            public const string PlatformIcon = "platform-icon";
+            public const string PlatformInfo = "platform-info";
+            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosStatusCard = "pos-status-card";
             public const string PreviewCard = "preview-card";
             public const string PriceTag = "price-tag";
@@ -3233,7 +3242,6 @@ namespace Classes
             public const string UxSpotlightCard = "ux-spotlight-card";
             public const string VideoCard = "video-card";
             public const string VideoCardHeader = "video-card-header";
-            public const string Windows = "card-windows";
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
@@ -3294,12 +3302,12 @@ namespace Classes
             public const string BankChip = "bank-chip";
             public const string BankChipsWrap = "bank-chips-wrap";
             public const string ChipActive = "active";
+            public const string ChipDot = "chip-dot";
+            public const string ChipDotCyan = "chip-dot-cyan";
+            public const string ChipDotEmerald = "chip-dot-emerald";
+            public const string ChipDotPurple = "chip-dot-purple";
             public const string ChipFilter = "m3-filter-chip";
             public const string ChipIcon = "chip-icon";
-            public const string Dot = "chip-dot";
-            public const string DotCyan = "chip-dot-cyan";
-            public const string DotEmerald = "chip-dot-emerald";
-            public const string DotPurple = "chip-dot-purple";
             public const string FilterChipCount = "m3-filter-chip-count";
             public const string FilterChipIcon = "m3-filter-chip-icon";
             public const string FloatingChip = "floating-chip";
@@ -4014,12 +4022,12 @@ namespace Classes
         public static class Dialog
         {
             public const string Backdrop = "m3-dialog-backdrop";
-            public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
             public const string Description = "m3-dialog-description";
             public const string DialogActions = "m3-dialog-actions";
             public const string DialogBody = "m3-dialog-body";
+            public const string DialogBtnPrimary = "m3-dialog-btn-primary";
             public const string DialogContent = "dialog-content";
             public const string DialogContent_2 = "m3-dialog-content";
             public const string DialogDescription = "m3-dialog-description";
@@ -4263,10 +4271,6 @@ namespace Classes
             public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
-            public const string PlatformBtn = "platform-btn";
-            public const string PlatformDesc = "platform-desc";
-            public const string PlatformIcon = "platform-icon";
-            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosFormField = "pos-form-field";
             public const string PosFormLabel = "pos-form-label";
             public const string PromoField = "promo-field";
@@ -4436,7 +4440,6 @@ namespace Classes
             public const string OrderItemInfo = "order-item-info";
             public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceInfoRow = "place-info-row";
-            public const string PlatformInfo = "platform-info";
             public const string PosQrInfo = "pos-qr-info";
             public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
@@ -4687,8 +4690,8 @@ namespace Classes
             public const string FocusRing = "m3-focus-ring";
             public const string FocusRingInset = "m3-focus-ring-inset";
             public const string FocusRingTight = "m3-focus-ring-tight";
-            public const string Outlined = "outlined";
             public const string OutlineNone = "m3-outline-none";
+            public const string OutlineOutlined = "outlined";
         }
 
         public static class Payment
@@ -5053,7 +5056,6 @@ namespace Classes
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
             public const string UxSearchBox = "ux-search-box";
-            public const string UxSearchClear = "ux-search-clear";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -5754,6 +5756,7 @@ namespace Styles
             public const string ThumbBtn = "thumb-btn";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
+            public const string UxSearchClear = "ux-search-clear";
             public const string UxTabBtn = "ux-tab-btn";
             public const string YandexCtrlBtn = "yandex-ctrl-btn";
         }
@@ -5780,6 +5783,11 @@ namespace Styles
             public const string CardCollecting = "card-collecting";
             public const string CardCompleted = "card-completed";
             public const string CardCreated = "card-created";
+            public const string CardElevated = "m3-card-elevated";
+            public const string CardElevated_2 = "card-elevated";
+            public const string CardElevated_3 = "elevated";
+            public const string CardFilled = "m3-card-filled";
+            public const string CardFilled_2 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -5787,8 +5795,12 @@ namespace Styles
             public const string CardHeader = "m3-card-header";
             public const string CardHeader_2 = "card-header";
             public const string CardIcon = "card-icon";
+            public const string CardInstant = "card-instant";
             public const string CardIos = "card-ios";
+            public const string CardMacos = "card-macos";
             public const string CardMaking = "card-making";
+            public const string CardOutlined = "m3-card-outlined";
+            public const string CardOutlined_2 = "card-outlined";
             public const string CardPaid = "card-paid";
             public const string CardPayment = "card-payment";
             public const string CardReady = "card-ready";
@@ -5798,21 +5810,18 @@ namespace Styles
             public const string CardTitle = "m3-card-title";
             public const string CardTitle_2 = "card-title";
             public const string CardWeb = "card-web";
+            public const string CardWindows = "card-windows";
             public const string CashCardHeader = "cash-card-header";
             public const string CommerceCard = "commerce-card";
             public const string ContactCard = "contact-card";
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
-            public const string Elevated_2 = "card-elevated";
-            public const string Elevated_3 = "elevated";
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
-            public const string Filled = "m3-card-filled";
-            public const string Filled_2 = "card-filled";
             public const string Footer_2 = "m3-card-footer";
             public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
@@ -5822,7 +5831,6 @@ namespace Styles
             public const string HeroCard = "hero-card";
             public const string HeroStageCard = "hero-stage-card";
             public const string IndustryCard = "industry-card";
-            public const string Instant = "card-instant";
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
@@ -5840,7 +5848,6 @@ namespace Styles
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string Macos = "card-macos";
             public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
@@ -5866,8 +5873,6 @@ namespace Styles
             public const string OrgCardSocratic = "org-card-socratic";
             public const string OrgMedia = "org-media";
             public const string OrgMediaPlaceholder = "org-media-placeholder";
-            public const string Outlined = "m3-card-outlined";
-            public const string Outlined_2 = "card-outlined";
             public const string PaddingLg = "m3-card-padding-lg";
             public const string PaddingLg_2 = "card-padding-lg";
             public const string PaddingMd = "m3-card-padding-md";
@@ -5877,8 +5882,13 @@ namespace Styles
             public const string PillarCard = "pillar-card";
             public const string PlanCard = "plan-card";
             public const string PlanCardHeader = "plan-card-header";
+            public const string PlatformBtn = "platform-btn";
             public const string PlatformCard = "platform-card";
             public const string PlatformCardHeader = "platform-card-header";
+            public const string PlatformDesc = "platform-desc";
+            public const string PlatformIcon = "platform-icon";
+            public const string PlatformInfo = "platform-info";
+            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosStatusCard = "pos-status-card";
             public const string PreviewCard = "preview-card";
             public const string PriceTag = "price-tag";
@@ -5940,7 +5950,6 @@ namespace Styles
             public const string UxSpotlightCard = "ux-spotlight-card";
             public const string VideoCard = "video-card";
             public const string VideoCardHeader = "video-card-header";
-            public const string Windows = "card-windows";
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
@@ -6001,12 +6010,12 @@ namespace Styles
             public const string BankChip = "bank-chip";
             public const string BankChipsWrap = "bank-chips-wrap";
             public const string ChipActive = "active";
+            public const string ChipDot = "chip-dot";
+            public const string ChipDotCyan = "chip-dot-cyan";
+            public const string ChipDotEmerald = "chip-dot-emerald";
+            public const string ChipDotPurple = "chip-dot-purple";
             public const string ChipFilter = "m3-filter-chip";
             public const string ChipIcon = "chip-icon";
-            public const string Dot = "chip-dot";
-            public const string DotCyan = "chip-dot-cyan";
-            public const string DotEmerald = "chip-dot-emerald";
-            public const string DotPurple = "chip-dot-purple";
             public const string FilterChipCount = "m3-filter-chip-count";
             public const string FilterChipIcon = "m3-filter-chip-icon";
             public const string FloatingChip = "floating-chip";
@@ -6721,12 +6730,12 @@ namespace Styles
         public static class Dialog
         {
             public const string Backdrop = "m3-dialog-backdrop";
-            public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
             public const string Description = "m3-dialog-description";
             public const string DialogActions = "m3-dialog-actions";
             public const string DialogBody = "m3-dialog-body";
+            public const string DialogBtnPrimary = "m3-dialog-btn-primary";
             public const string DialogContent = "dialog-content";
             public const string DialogContent_2 = "m3-dialog-content";
             public const string DialogDescription = "m3-dialog-description";
@@ -6970,10 +6979,6 @@ namespace Styles
             public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
-            public const string PlatformBtn = "platform-btn";
-            public const string PlatformDesc = "platform-desc";
-            public const string PlatformIcon = "platform-icon";
-            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosFormField = "pos-form-field";
             public const string PosFormLabel = "pos-form-label";
             public const string PromoField = "promo-field";
@@ -7143,7 +7148,6 @@ namespace Styles
             public const string OrderItemInfo = "order-item-info";
             public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceInfoRow = "place-info-row";
-            public const string PlatformInfo = "platform-info";
             public const string PosQrInfo = "pos-qr-info";
             public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
@@ -7394,8 +7398,8 @@ namespace Styles
             public const string FocusRing = "m3-focus-ring";
             public const string FocusRingInset = "m3-focus-ring-inset";
             public const string FocusRingTight = "m3-focus-ring-tight";
-            public const string Outlined = "outlined";
             public const string OutlineNone = "m3-outline-none";
+            public const string OutlineOutlined = "outlined";
         }
 
         public static class Payment
@@ -7760,7 +7764,6 @@ namespace Styles
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
             public const string UxSearchBox = "ux-search-box";
-            public const string UxSearchClear = "ux-search-clear";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -8462,6 +8465,7 @@ namespace Material.Web
             public const string ThumbBtn = "thumb-btn";
             public const string UxExpandBtn = "ux-expand-btn";
             public const string UxResetFilterBtn = "ux-reset-filter-btn";
+            public const string UxSearchClear = "ux-search-clear";
             public const string UxTabBtn = "ux-tab-btn";
             public const string YandexCtrlBtn = "yandex-ctrl-btn";
         }
@@ -8488,6 +8492,11 @@ namespace Material.Web
             public const string CardCollecting = "card-collecting";
             public const string CardCompleted = "card-completed";
             public const string CardCreated = "card-created";
+            public const string CardElevated = "m3-card-elevated";
+            public const string CardElevated_2 = "card-elevated";
+            public const string CardElevated_3 = "elevated";
+            public const string CardFilled = "m3-card-filled";
+            public const string CardFilled_2 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -8495,8 +8504,12 @@ namespace Material.Web
             public const string CardHeader = "m3-card-header";
             public const string CardHeader_2 = "card-header";
             public const string CardIcon = "card-icon";
+            public const string CardInstant = "card-instant";
             public const string CardIos = "card-ios";
+            public const string CardMacos = "card-macos";
             public const string CardMaking = "card-making";
+            public const string CardOutlined = "m3-card-outlined";
+            public const string CardOutlined_2 = "card-outlined";
             public const string CardPaid = "card-paid";
             public const string CardPayment = "card-payment";
             public const string CardReady = "card-ready";
@@ -8506,21 +8519,18 @@ namespace Material.Web
             public const string CardTitle = "m3-card-title";
             public const string CardTitle_2 = "card-title";
             public const string CardWeb = "card-web";
+            public const string CardWindows = "card-windows";
             public const string CashCardHeader = "cash-card-header";
             public const string CommerceCard = "commerce-card";
             public const string ContactCard = "contact-card";
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
-            public const string Elevated_2 = "card-elevated";
-            public const string Elevated_3 = "elevated";
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
-            public const string Filled = "m3-card-filled";
-            public const string Filled_2 = "card-filled";
             public const string Footer_2 = "m3-card-footer";
             public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
@@ -8530,7 +8540,6 @@ namespace Material.Web
             public const string HeroCard = "hero-card";
             public const string HeroStageCard = "hero-stage-card";
             public const string IndustryCard = "industry-card";
-            public const string Instant = "card-instant";
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
@@ -8548,7 +8557,6 @@ namespace Material.Web
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string Macos = "card-macos";
             public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
@@ -8574,8 +8582,6 @@ namespace Material.Web
             public const string OrgCardSocratic = "org-card-socratic";
             public const string OrgMedia = "org-media";
             public const string OrgMediaPlaceholder = "org-media-placeholder";
-            public const string Outlined = "m3-card-outlined";
-            public const string Outlined_2 = "card-outlined";
             public const string PaddingLg = "m3-card-padding-lg";
             public const string PaddingLg_2 = "card-padding-lg";
             public const string PaddingMd = "m3-card-padding-md";
@@ -8585,8 +8591,13 @@ namespace Material.Web
             public const string PillarCard = "pillar-card";
             public const string PlanCard = "plan-card";
             public const string PlanCardHeader = "plan-card-header";
+            public const string PlatformBtn = "platform-btn";
             public const string PlatformCard = "platform-card";
             public const string PlatformCardHeader = "platform-card-header";
+            public const string PlatformDesc = "platform-desc";
+            public const string PlatformIcon = "platform-icon";
+            public const string PlatformInfo = "platform-info";
+            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosStatusCard = "pos-status-card";
             public const string PreviewCard = "preview-card";
             public const string PriceTag = "price-tag";
@@ -8648,7 +8659,6 @@ namespace Material.Web
             public const string UxSpotlightCard = "ux-spotlight-card";
             public const string VideoCard = "video-card";
             public const string VideoCardHeader = "video-card-header";
-            public const string Windows = "card-windows";
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
@@ -8709,12 +8719,12 @@ namespace Material.Web
             public const string BankChip = "bank-chip";
             public const string BankChipsWrap = "bank-chips-wrap";
             public const string ChipActive = "active";
+            public const string ChipDot = "chip-dot";
+            public const string ChipDotCyan = "chip-dot-cyan";
+            public const string ChipDotEmerald = "chip-dot-emerald";
+            public const string ChipDotPurple = "chip-dot-purple";
             public const string ChipFilter = "m3-filter-chip";
             public const string ChipIcon = "chip-icon";
-            public const string Dot = "chip-dot";
-            public const string DotCyan = "chip-dot-cyan";
-            public const string DotEmerald = "chip-dot-emerald";
-            public const string DotPurple = "chip-dot-purple";
             public const string FilterChipCount = "m3-filter-chip-count";
             public const string FilterChipIcon = "m3-filter-chip-icon";
             public const string FloatingChip = "floating-chip";
@@ -9429,12 +9439,12 @@ namespace Material.Web
         public static class Dialog
         {
             public const string Backdrop = "m3-dialog-backdrop";
-            public const string BtnPrimary = "m3-dialog-btn-primary";
             public const string CloseBtn = "m3-dialog-close-btn";
             public const string ConfigDialog = "m3-config-dialog";
             public const string Description = "m3-dialog-description";
             public const string DialogActions = "m3-dialog-actions";
             public const string DialogBody = "m3-dialog-body";
+            public const string DialogBtnPrimary = "m3-dialog-btn-primary";
             public const string DialogContent = "dialog-content";
             public const string DialogContent_2 = "m3-dialog-content";
             public const string DialogDescription = "m3-dialog-description";
@@ -9678,10 +9688,6 @@ namespace Material.Web
             public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
-            public const string PlatformBtn = "platform-btn";
-            public const string PlatformDesc = "platform-desc";
-            public const string PlatformIcon = "platform-icon";
-            public const string PlatformsUnifiedGrid = "platforms-unified-grid";
             public const string PosFormField = "pos-form-field";
             public const string PosFormLabel = "pos-form-label";
             public const string PromoField = "promo-field";
@@ -9851,7 +9857,6 @@ namespace Material.Web
             public const string OrderItemInfo = "order-item-info";
             public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceInfoRow = "place-info-row";
-            public const string PlatformInfo = "platform-info";
             public const string PosQrInfo = "pos-qr-info";
             public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
@@ -10102,8 +10107,8 @@ namespace Material.Web
             public const string FocusRing = "m3-focus-ring";
             public const string FocusRingInset = "m3-focus-ring-inset";
             public const string FocusRingTight = "m3-focus-ring-tight";
-            public const string Outlined = "outlined";
             public const string OutlineNone = "m3-outline-none";
+            public const string OutlineOutlined = "outlined";
         }
 
         public static class Payment
@@ -10468,7 +10473,6 @@ namespace Material.Web
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
             public const string UxSearchBox = "ux-search-box";
-            public const string UxSearchClear = "ux-search-clear";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 

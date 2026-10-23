@@ -26,6 +26,7 @@ const COLLIDING_DOMAIN_TYPES = new Set([
   'Console',
   'App',
   'Application',
+  'About',
   'Component',
   'Material',
   'Select',
@@ -362,7 +363,7 @@ export function generateLocalizationKeys() {
         }
       }
     } else {
-      const shouldStrip = Boolean(matchedPrefix && matchedPrefix.endsWith('_'));
+      const shouldStrip = Boolean(matchedPrefix && matchedPrefix.endsWith('_') && (assignedDomain !== 'Landing' || matchedPrefix === 'Landing_'));
       const strippedRaw = shouldStrip ? rawKey.substring(matchedPrefix.length) : rawKey;
       const strippedIdent = toPascalIdentifier(strippedRaw);
       const fullIdent = toPascalIdentifier(rawKey);

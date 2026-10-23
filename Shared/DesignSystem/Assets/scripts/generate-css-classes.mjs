@@ -149,7 +149,8 @@ function generate() {
     'Back', 'Search', 'Add', 'Edit', 'Delete', 'Save', 'Cancel', 'Next', 
     'Previous', 'Caption', 'Overlay', 'Thumb', 'Preview', 'Box', 'Row', 'Col',
     'Paid', 'Completed', 'Making', 'Created', 'Collecting', 'Ready', 'Shipping',
-    'Blocked', 'Expired', 'Paused', 'Pro', 'Trial', 'WithAds', 'None', 'Active'
+    'Blocked', 'Expired', 'Paused', 'Pro', 'Trial', 'WithAds', 'None', 'Active',
+    'Filled', 'Outlined', 'Elevated'
   ]);
 
   // 1. Load canonical component snapshot (preserves 100% backward compatibility for Blazor)

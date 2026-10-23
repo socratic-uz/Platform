@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-22T13:17:07.674Z",
+  "generatedAt": "2026-10-23T05:12:43.831Z",
   "summary": {
-    "totalDeclaredKeys": 5191,
-    "usedInRazorCount": 342,
-    "unusedCount": 4849,
-    "adoptionRatePercent": 7,
-    "totalTypedCallSites": 418,
+    "totalDeclaredKeys": 5621,
+    "usedInRazorCount": 562,
+    "unusedCount": 5059,
+    "adoptionRatePercent": 10,
+    "totalTypedCallSites": 643,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
-    "sourceFilesScanned": 645
+    "sourceFilesScanned": 644
   },
   "topUsedKeys": [
     {
@@ -49,6 +49,17 @@
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs",
         "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    },
+    {
+      "key": "Landing.LandingLaunchDemoKiosk",
+      "domain": "Landing",
+      "name": "LandingLaunchDemoKiosk",
+      "locKey": "LandingLaunchDemoKiosk",
+      "usageCountInRazor": 4,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -292,6 +303,17 @@
       ]
     },
     {
+      "key": "Actions.CloseText",
+      "domain": "Actions",
+      "name": "CloseText",
+      "locKey": "Close",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
       "key": "Common.ColorPickerCopyHex",
       "domain": "Common",
       "name": "ColorPickerCopyHex",
@@ -389,6 +411,18 @@
       "filesCount": 1,
       "files": [
         "Intelligence/Chat/Pages/ChatPage.razor"
+      ]
+    },
+    {
+      "key": "Landing.LandingUxModesDesc",
+      "domain": "Landing",
+      "name": "LandingUxModesDesc",
+      "locKey": "LandingUxModesDesc",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor",
+        "Portal/Landing/Pages/Landing.razor.cs"
       ]
     },
     {
@@ -573,51 +607,18 @@
       "files": [
         "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs"
       ]
-    },
-    {
-      "key": "Actions.DeleteAction",
-      "domain": "Actions",
-      "name": "DeleteAction",
-      "locKey": "Delete",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Platform/Shared/DesignSystem/Material.Web/Components/FilePicker.razor.cs"
-      ]
-    },
-    {
-      "key": "Actions.DeleteText",
-      "domain": "Actions",
-      "name": "DeleteText",
-      "locKey": "Delete",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Retail/PointOfSale/Pages/WishList.razor.cs"
-      ]
-    },
-    {
-      "key": "Actions.Loading",
-      "domain": "Actions",
-      "name": "Loading",
-      "locKey": "Loading",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Retail/Checkout/Pages/Payment.razor.cs"
-      ]
     }
   ],
   "byDomain": {
     "Actions": {
       "total": 55,
-      "used": 18,
-      "totalCalls": 29
+      "used": 19,
+      "totalCalls": 31
     },
     "Common": {
-      "total": 374,
-      "used": 79,
-      "totalCalls": 99
+      "total": 501,
+      "used": 215,
+      "totalCalls": 235
     },
     "Auction": {
       "total": 16,
@@ -705,9 +706,9 @@
       "totalCalls": 0
     },
     "Landing": {
-      "total": 321,
-      "used": 0,
-      "totalCalls": 0
+      "total": 303,
+      "used": 83,
+      "totalCalls": 87
     },
     "Lottery": {
       "total": 42,
@@ -770,7 +771,7 @@
       "totalCalls": 0
     },
     "UxMode": {
-      "total": 2219,
+      "total": 2540,
       "used": 27,
       "totalCalls": 31
     }
@@ -818,15 +819,6 @@
       "domain": "Actions",
       "name": "BackText",
       "locKey": "Back",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Actions.CloseText",
-      "domain": "Actions",
-      "name": "CloseText",
-      "locKey": "Close",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1673,6 +1665,15 @@
       "domain": "Auth",
       "name": "OAuth_TelegramTitle",
       "locKey": "OAuth_TelegramTitle",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.OAuthAuthError",
+      "domain": "Auth",
+      "name": "OAuthAuthError",
+      "locKey": "OAuth_AuthError",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []

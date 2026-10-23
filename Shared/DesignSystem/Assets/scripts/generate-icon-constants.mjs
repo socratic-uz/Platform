@@ -223,7 +223,8 @@ namespace Assets.Constants
   const SHADOWED_ICONS = new Set([
     'Add', 'Remove', 'Delete', 'Edit', 'Save', 'Cancel', 'Print', 'Search', 'Select',
     'Refresh', 'Clear', 'Reset', 'Update', 'Open', 'Close', 'Send', 'Payments', 'Payment',
-    'Order', 'Orders', 'Product', 'Products', 'Task', 'Action', 'Error', 'Warning', 'Info', 'Help'
+    'Order', 'Orders', 'Product', 'Products', 'Task', 'Action', 'Error', 'Warning', 'Info', 'Help',
+    'Analytics', 'Language', 'DarkMode'
   ]);
 
   // Render flat root constants

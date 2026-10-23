@@ -27168,6 +27168,8 @@ namespace Assets.Constants
         /// </summary>
         public const string Analytics = "analytics";
 
+        public const string AnalyticsIcon = "analytics";
+
         /// <summary>
         /// Ligature: <c>anchor</c> | Category: <see cref="Common"/><br/>
         /// Codepoint: <c>\uf1cd</c>
@@ -32027,6 +32029,8 @@ namespace Assets.Constants
         /// Codepoint: <c>\ue51c</c>
         /// </summary>
         public const string DarkMode = "dark_mode";
+
+        public const string DarkModeIcon = "dark_mode";
 
         /// <summary>
         /// Ligature: <c>dashboard</c> | Category: <see cref="Common"/><br/>
@@ -38515,6 +38519,8 @@ namespace Assets.Constants
         /// Codepoint: <c>\uea07</c>
         /// </summary>
         public const string Language = "language";
+
+        public const string LanguageIcon = "language";
 
         /// <summary>
         /// Ligature: <c>language_chinese_array</c> | Category: <see cref="Common"/><br/>
@@ -51968,6 +51974,7 @@ public static class Icons
     public const string Amend = "amend";
     public const string AmpStories = "amp_stories";
     public const string Analytics = "analytics";
+    public const string AnalyticsIcon = "analytics";
     public const string Anchor = "anchor";
     public const string Android = "android";
     public const string AndroidCell4Bar = "android_cell_4_bar";
@@ -52780,6 +52787,7 @@ public static class Icons
     public const string Cyclone = "cyclone";
     public const string Dangerous = "dangerous";
     public const string DarkMode = "dark_mode";
+    public const string DarkModeIcon = "dark_mode";
     public const string Dashboard = "dashboard";
     public const string Dashboard2 = "dashboard_2";
     public const string Dashboard2Add = "dashboard_2_add";
@@ -53864,6 +53872,7 @@ public static class Icons
     public const string Landscape2Off = "landscape_2_off";
     public const string Landslide = "landslide";
     public const string Language = "language";
+    public const string LanguageIcon = "language";
     public const string LanguageChineseArray = "language_chinese_array";
     public const string LanguageChineseCangjie = "language_chinese_cangjie";
     public const string LanguageChineseDayi = "language_chinese_dayi";

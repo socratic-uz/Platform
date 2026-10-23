@@ -3575,4 +3575,723 @@
   <data name="Schedule_ResetScheduleAction" xml:space="preserve">
     <value>Jadvalni tiklash</value>
   </data>
+
+  <!-- Landing & Universal UX Modes Localization -->
+  <data name="HeroBadge" xml:space="preserve">
+    <value>Socratic 2.0 • Biznes uchun universal ekotizim</value>
+  </data>
+  <data name="HeroSubtitle" xml:space="preserve">
+    <value>Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.</value>
+  </data>
+  <data name="HeroShowroom" xml:space="preserve">
+    <value>Demo Mahsulotlar vitrinasi</value>
+  </data>
+  <data name="HeroTerminal" xml:space="preserve">
+    <value>POS Kassa</value>
+  </data>
+  <data name="HeroSocraticOrg" xml:space="preserve">
+    <value>Socratic tariflari</value>
+  </data>
+  <data name="HeroModulesLabel" xml:space="preserve">
+    <value>Ixtisoslashgan modullar:</value>
+  </data>
+  <data name="HeroMap" xml:space="preserve">
+    <value>Xarita va yetkazib berish</value>
+  </data>
+  <data name="HeroSeatDesigner" xml:space="preserve">
+    <value>Zallar konstruktori</value>
+  </data>
+  <data name="HeroQrDesigner" xml:space="preserve">
+    <value>QR fiskallashtirish</value>
+  </data>
+  <data name="TabPos" xml:space="preserve">
+    <value>POS Kassa</value>
+  </data>
+  <data name="TabKiosk" xml:space="preserve">
+    <value>Smart kiosk</value>
+  </data>
+  <data name="TabSpaces" xml:space="preserve">
+    <value>Zallar &amp; QR</value>
+  </data>
+  <data name="SpecOffline" xml:space="preserve">
+    <value>Offline-First ishonchliligi</value>
+  </data>
+  <data name="SpecSpeed" xml:space="preserve">
+    <value>Kassa tezligi</value>
+  </data>
+  <data name="SpecCashback" xml:space="preserve">
+    <value>Soliq OFD keshbek</value>
+  </data>
+  <data name="SpecBranches" xml:space="preserve">
+    <value>Filiallarni markaziy boshqarish</value>
+  </data>
+  <data name="MacroPillarsBadge" xml:space="preserve">
+    <value>Socratic to'rtta ustuni</value>
+  </data>
+  <data name="MacroPillarsTitle" xml:space="preserve">
+    <value>Har qanday biznes miqyosi uchun universal arxitektura</value>
+  </data>
+  <data name="MacroPillarsDesc" xml:space="preserve">
+    <value>Savdo nuqtasidan boshlab global fiskal hisobotlargacha bo'lgan to'liq tijorat siklini qamrab oluvchi yagona platforma.</value>
+  </data>
+  <data name="PillarRetailTitle" xml:space="preserve">
+    <value>Chakana &amp; Ulgurji savdo</value>
+  </data>
+  <data name="PillarRetailDesc" xml:space="preserve">
+    <value>Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.</value>
+  </data>
+  <data name="PillarServicesTitle" xml:space="preserve">
+    <value>Xizmatlar &amp; Bron qilish</value>
+  </data>
+  <data name="PillarServicesDesc" xml:space="preserve">
+    <value>Joylar band qilish, usta jadvallari, onlayn yozilish va avtomatlashtirilgan SMS eslatmalar.</value>
+  </data>
+  <data name="PillarSpacesTitle" xml:space="preserve">
+    <value>Zallar &amp; Maydonlar</value>
+  </data>
+  <data name="PillarSpacesDesc" xml:space="preserve">
+    <value>Interaktiv o'tirish sxemasi, stol tartibi va mehmonlar uchun QR-buyurtma hisob-kitobi.</value>
+  </data>
+  <data name="PillarFintechTitle" xml:space="preserve">
+    <value>Fintex &amp; Fiskallashtirish</value>
+  </data>
+  <data name="PillarFintechDesc" xml:space="preserve">
+    <value>To'g'ridan-to'g'ri Soliq OFD integratsiyasi, 1% keshbek, fiskal QR cheklar va to'lov kartalari.</value>
+  </data>
+  <data name="ShowcaseBadge" xml:space="preserve">
+    <value>Jonli interaktiv namoyish</value>
+  </data>
+  <data name="ShowcaseHeading" xml:space="preserve">
+    <value>Socratic-ni real biznes ssenariylarida sinab ko'ring</value>
+  </data>
+  <data name="ShowcaseSub" xml:space="preserve">
+    <value>Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.</value>
+  </data>
+  <data name="OrgDemoBadge" xml:space="preserve">
+    <value>Ommaviy namoyish</value>
+  </data>
+  <data name="OrgDemoTitle" xml:space="preserve">
+    <value>&quot;Demo&quot; qahvaxona va novvoyxona tarmog'i</value>
+  </data>
+  <data name="OrgDemoDesc" xml:space="preserve">
+    <value>Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.</value>
+  </data>
+  <data name="OpenDemoShowroom" xml:space="preserve">
+    <value>Demo vitrinani ochish</value>
+  </data>
+  <data name="OpenTerminalDemo" xml:space="preserve">
+    <value>POS kassani ishga tushirish</value>
+  </data>
+  <data name="OrgSocraticBadge" xml:space="preserve">
+    <value>Rasmiy tashkilot</value>
+  </data>
+  <data name="OrgSocraticTitle" xml:space="preserve">
+    <value>Socratic ekotizimi yadrosi</value>
+  </data>
+  <data name="OrgSocraticDesc" xml:space="preserve">
+    <value>Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.</value>
+  </data>
+  <data name="OpenSocraticSelfSelling" xml:space="preserve">
+    <value>Socratic o'zini-o'zi sotish portali</value>
+  </data>
+  <data name="PlatformDocs" xml:space="preserve">
+    <value>Arxitektura hujjatlari</value>
+  </data>
+  <data name="SpatialTechBadge" xml:space="preserve">
+    <value>Fazoiy texnologiyalar &amp; Logistika</value>
+  </data>
+  <data name="SpatialTechHeading" xml:space="preserve">
+    <value>Interaktiv xaritalar &amp; Zal konstruktori</value>
+  </data>
+  <data name="SpatialTechSub" xml:space="preserve">
+    <value>Vektor grafika, real vaqtda geokodlash, ko'p zonali poligonlar va chipta o'rinlarini tezkor render qilish.</value>
+  </data>
+  <data name="GeoMapWingBadge" xml:space="preserve">
+    <value>Interaktiv xarita</value>
+  </data>
+  <data name="GeoMapWingTitle" xml:space="preserve">
+    <value>Geokodlash &amp; Yetkazib berish logistikasi</value>
+  </data>
+  <data name="GeoMapWingDesc" xml:space="preserve">
+    <value>Dinamik manzillar qidiruvi, yetkazib berish poligon zonalari va filiallarga yaqinlik marshrutlash.</value>
+  </data>
+  <data name="PointsPresenceTitle" xml:space="preserve">
+    <value>Mavjudlik nuqtalari</value>
+  </data>
+  <data name="PointsPresenceDesc" xml:space="preserve">
+    <value>Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.</value>
+  </data>
+  <data name="DeliveryZonesTitle" xml:space="preserve">
+    <value>Yetkazib berish zonalari</value>
+  </data>
+  <data name="DeliveryZonesDesc" xml:space="preserve">
+    <value>Har bir zona uchun narx va kelish vaqtini hisoblovchi moslashuvchan poligon chegaralari.</value>
+  </data>
+  <data name="NavigatorTitle" xml:space="preserve">
+    <value>Aqlli marshrutlash</value>
+  </data>
+  <data name="NavigatorDesc" xml:space="preserve">
+    <value>Kuryer va mijozlar uchun optimal yo'nalish hisob-kitobi bilan nuqtadan nuqtaga navigatsiya.</value>
+  </data>
+  <data name="GeoMapLiveSync" xml:space="preserve">
+    <value>ScyllaDB NoSQL orqali geonuqtalar jonli sinxronizatsiyasi</value>
+  </data>
+  <data name="LaunchMapBtn" xml:space="preserve">
+    <value>Interaktiv xaritani ochish</value>
+  </data>
+  <data name="SeatDesignerWingBadge" xml:space="preserve">
+    <value>Vektor zal konstruktori</value>
+  </data>
+  <data name="SeatDesignerWingTitle" xml:space="preserve">
+    <value>Vizual pol va o'tirish sxemalari</value>
+  </data>
+  <data name="SeatDesignerWingDesc" xml:space="preserve">
+    <value>Restoran stollari, kinoteatr qatorlari, stadionlar va konferensiya zallari uchun vizual muharrir.</value>
+  </data>
+  <data name="VenueTheaters" xml:space="preserve">
+    <value>Kinoteatrlar &amp; Teatrlar</value>
+  </data>
+  <data name="VenueTheatersDesc" xml:space="preserve">
+    <value>Parter, amfiteatr, balkonlar, ko'p darajali narxlar va bir marta bosishda bron qilish.</value>
+  </data>
+  <data name="VenueHoreca" xml:space="preserve">
+    <value>Restoranlar &amp; Loungelar</value>
+  </data>
+  <data name="VenueHorecaDesc" xml:space="preserve">
+    <value>Stollar tartibi, VIP xonalar, veranda zonalari va ofitsiantlarni biriktirish.</value>
+  </data>
+  <data name="VenueSpaces" xml:space="preserve">
+    <value>Kovorkinglar &amp; Arenalar</value>
+  </data>
+  <data name="VenueSpacesDesc" xml:space="preserve">
+    <value>Erkin stollar, doimiy o'rinlar, muzokaralar xonalari va tadbirlarga chiptalar.</value>
+  </data>
+  <data name="LaunchSeatDesigner" xml:space="preserve">
+    <value>Zal konstruktorini ochish</value>
+  </data>
+  <data name="LandingUxModesBadge" xml:space="preserve">
+    <value>28 ta arxitektura UX-rejimlari</value>
+  </data>
+  <data name="LandingUxModesTitle" xml:space="preserve">
+    <value>28 ta universal tijorat UX ssenariylari</value>
+  </data>
+  <data name="LandingUxModesDesc" xml:space="preserve">
+    <value>Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.</value>
+  </data>
+  <data name="LandingFlagshipTitle" xml:space="preserve">
+    <value>Yetakchi arxetiplar</value>
+  </data>
+  <data name="LandingFlagshipSubtitle" xml:space="preserve">
+    <value>Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni</value>
+  </data>
+  <data name="LandingRetailFlagshipBadge" xml:space="preserve">
+    <value>Chakana savdo yetakchisi</value>
+  </data>
+  <data name="LandingRetailFlagshipTitle" xml:space="preserve">
+    <value>Katalog &amp; Tezkor kassa</value>
+  </data>
+  <data name="LandingRetailFlagshipDesc" xml:space="preserve">
+    <value>To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.</value>
+  </data>
+  <data name="LandingRetailPillSku" xml:space="preserve">
+    <value>SKU matritsasi</value>
+  </data>
+  <data name="LandingRetailPillModifiers" xml:space="preserve">
+    <value>Modifikatorlar</value>
+  </data>
+  <data name="LandingRetailPillCheckout" xml:space="preserve">
+    <value>Tezkor to'lov</value>
+  </data>
+  <data name="LandingLaunchDemoKiosk" xml:space="preserve">
+    <value>Demo kioskda ochish</value>
+  </data>
+  <data name="LandingHorecaFlagshipBadge" xml:space="preserve">
+    <value>HoReCa yetakchisi</value>
+  </data>
+  <data name="LandingHorecaFlagshipTitle" xml:space="preserve">
+    <value>Stollar &amp; Vaqtni band qilish</value>
+  </data>
+  <data name="LandingHorecaFlagshipDesc" xml:space="preserve">
+    <value>Real vaqtda vaqt oraliqlari to'ri, zallarning interaktiv rejasi va ortiqcha bron qilishdan himoya.</value>
+  </data>
+  <data name="LandingHorecaPillSlots" xml:space="preserve">
+    <value>Vaqt oraliqlari</value>
+  </data>
+  <data name="LandingHorecaPillFloorPlan" xml:space="preserve">
+    <value>O'tirish rejasi</value>
+  </data>
+  <data name="LandingHorecaPillSms" xml:space="preserve">
+    <value>SMS &amp; TG xabarnoma</value>
+  </data>
+  <data name="LandingAiFlagshipBadge" xml:space="preserve">
+    <value>AI &amp; SaaS yetakchisi</value>
+  </data>
+  <data name="LandingAiFlagshipTitle" xml:space="preserve">
+    <value>Onlayn xizmat &amp; AI ruxsat</value>
+  </data>
+  <data name="LandingAiFlagshipDesc" xml:space="preserve">
+    <value>Tezkor API kalitlari berish, LLM token kvotalari, kompyuter ko'rishi va mikroxizmatlar billingi.</value>
+  </data>
+  <data name="LandingAiPillQuotas" xml:space="preserve">
+    <value>LLM token kvotalari</value>
+  </data>
+  <data name="LandingAiPillApiKey" xml:space="preserve">
+    <value>API kalitlar</value>
+  </data>
+  <data name="LandingAiPillWebhooks" xml:space="preserve">
+    <value>Webhooks &amp; Avtomatlashtirish</value>
+  </data>
+  <data name="LandingFintechFlagshipBadge" xml:space="preserve">
+    <value>Fintex yetakchisi</value>
+  </data>
+  <data name="LandingFintechFlagshipTitle" xml:space="preserve">
+    <value>Davriy obunalar &amp; Billing</value>
+  </data>
+  <data name="LandingFintechFlagshipDesc" xml:space="preserve">
+    <value>Avtomatik davriy to'lovlar, moslashuvchan tariflar, abonementlar va tezkor fiskallashtirish.</value>
+  </data>
+  <data name="LandingFintechPillRecurring" xml:space="preserve">
+    <value>Avtotolovlar</value>
+  </data>
+  <data name="LandingFintechPillPricing" xml:space="preserve">
+    <value>Tarif to'rlari</value>
+  </data>
+  <data name="LandingFintechPillFiscal" xml:space="preserve">
+    <value>Avtofiskallashtirish</value>
+  </data>
+  <data name="LandingSearchModesPlaceholder" xml:space="preserve">
+    <value>28 rejim bo'yicha qidiruv (nomi, kodi, tavsifi)...</value>
+  </data>
+  <data name="LandingSearchModesAria" xml:space="preserve">
+    <value>Rejimlarni qidirish</value>
+  </data>
+  <data name="LandingClearSearchAria" xml:space="preserve">
+    <value>Qidiruvni tozalash</value>
+  </data>
+  <data name="LandingCategoryAll" xml:space="preserve">
+    <value>Barcha rejimlar</value>
+  </data>
+  <data name="LandingCategoryRetail" xml:space="preserve">
+    <value>Chakana savdo &amp; Tijorat</value>
+  </data>
+  <data name="LandingCategoryHoreca" xml:space="preserve">
+    <value>HoReCa &amp; Bron qilish</value>
+  </data>
+  <data name="LandingCategoryServices" xml:space="preserve">
+    <value>Xizmatlar, SaaS &amp; AI</value>
+  </data>
+  <data name="LandingCategoryFintech" xml:space="preserve">
+    <value>Obunalar &amp; Fintex</value>
+  </data>
+  <data name="LandingShowingLabel" xml:space="preserve">
+    <value>Ko'rsatildi</value>
+  </data>
+  <data name="LandingOfLabel" xml:space="preserve">
+    <value>dan</value>
+  </data>
+  <data name="LandingResetFilters" xml:space="preserve">
+    <value>Filtrlarni tozalash</value>
+  </data>
+  <data name="LandingNoModesFoundTitle" xml:space="preserve">
+    <value>Rejimlar topilmadi</value>
+  </data>
+  <data name="No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes." xml:space="preserve">
+    <value>По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.</value>
+  </data>
+  <data name="LandingResetSearchBtn" xml:space="preserve">
+    <value>Qidiruvni qayta o'rnatish</value>
+  </data>
+  <data name="LandingQuickViewTitle" xml:space="preserve">
+    <value>Spetsifikatsiya va fiskallashtirish</value>
+  </data>
+  <data name="LandingDetailsBtn" xml:space="preserve">
+    <value>Tafsilotlar</value>
+  </data>
+  <data name="LandingLaunchBtn" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="CoreSuperpowersBadge" xml:space="preserve">
+    <value>Socratic asosiy imkoniyatlari</value>
+  </data>
+  <data name="CoreSuperpowersTitle" xml:space="preserve">
+    <value>Savdo-kassa kompleksi va to'lov muhiti</value>
+  </data>
+  <data name="CoreSuperpowersDesc" xml:space="preserve">
+    <value>Uzluksiz savdo, tezkor mijozlarga xizmat ko'rsatish va to'liq soliq shaffofligi uchun barcha zarur narsalar.</value>
+  </data>
+  <data name="PillarPosBadge" xml:space="preserve">
+    <value>Kassa terminali</value>
+  </data>
+  <data name="PillarPosHeading" xml:space="preserve">
+    <value>Har qanday savdo formati uchun sensorli kassa</value>
+  </data>
+  <data name="PillarPosDesc" xml:space="preserve">
+    <value>Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.</value>
+  </data>
+  <data name="PillarPosFeat1" xml:space="preserve">
+    <value>100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.</value>
+  </data>
+  <data name="PillarPosFeat2" xml:space="preserve">
+    <value>ESC/POS termoprinterlari, CAS tarozilari va 2D skanerlarni to'g'ridan-to'g'ri ulash.</value>
+  </data>
+  <data name="PillarPosFeat3" xml:space="preserve">
+    <value>Muddatli to'lov (BNPL): Uzum Nasiya, Zoodpay va hisobni bo'lib to'lash.</value>
+  </data>
+  <data name="LaunchTerminalBtn" xml:space="preserve">
+    <value>Kassa terminalini ochish</value>
+  </data>
+  <data name="PillarQrBadge" xml:space="preserve">
+    <value>QR to'lovlar &amp; Soliq OFD</value>
+  </data>
+  <data name="PillarQrHeading" xml:space="preserve">
+    <value>QR to'lov, fiskallashtirish va markirovka</value>
+  </data>
+  <data name="PillarQrDesc" xml:space="preserve">
+    <value>Bank ilovalari orqali avtomatik fiskal ro'yxatdan o'tkazish bilan tezkor to'lovlarni qabul qilish.</value>
+  </data>
+  <data name="LaunchQrDesignerBtn" xml:space="preserve">
+    <value>QR-kodlar studiyasi</value>
+  </data>
+  <data name="PillarKioskBadge" xml:space="preserve">
+    <value>Smart-Kiosklar</value>
+  </data>
+  <data name="PillarKioskHeading" xml:space="preserve">
+    <value>Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari</value>
+  </data>
+  <data name="PillarKioskDesc" xml:space="preserve">
+    <value>Tig'iz vaqtlarda navbatlarni qisqartirish, interaktiv elektron menyu va avtomatik takliflar.</value>
+  </data>
+  <data name="PillarKioskFeat1" xml:space="preserve">
+    <value>Uzcard, Humo, Visa, MasterCard kartalari bilan kontaktsiz to'lov.</value>
+  </data>
+  <data name="PillarKioskFeat2" xml:space="preserve">
+    <value>Markaziy ombor bilan katalog va qoldiqlarni real vaqtda sinxronlashtirish.</value>
+  </data>
+  <data name="PillarKioskFeat3" xml:space="preserve">
+    <value>Face Pay, doimiy mijoz kartalarini tanish va shaxsiy chegirmalar.</value>
+  </data>
+  <data name="LaunchKioskBtn" xml:space="preserve">
+    <value>Demo kioskni ishga tushirish</value>
+  </data>
+  <data name="PillarAnalyticsBadge" xml:space="preserve">
+    <value>Hisob &amp; Analitika</value>
+  </data>
+  <data name="PillarAnalyticsHeading" xml:space="preserve">
+    <value>Dunyoning istalgan nuqtasidan smartfon orqali biznesni boshqarish</value>
+  </data>
+  <data name="PillarAnalyticsDesc" xml:space="preserve">
+    <value>Shaffof ombor hisobi, avtomatik hisobdan chiqarish, smena hisobotlari va P&amp;L tahlili.</value>
+  </data>
+  <data name="PlatformWindowsDesc" xml:space="preserve">
+    <value>To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.</value>
+  </data>
+  <data name="DownloadWindows" xml:space="preserve">
+    <value>Windows uchun yuklab olish</value>
+  </data>
+  <data name="PlatformMacOSDesc" xml:space="preserve">
+    <value>Boshqaruvchi ish joyi, moliyaviy tahlil va mahsulotlar boshqaruvi.</value>
+  </data>
+  <data name="DownloadMacOS" xml:space="preserve">
+    <value>macOS uchun yuklab olish</value>
+  </data>
+  <data name="PlatformWebDesc" xml:space="preserve">
+    <value>Har qanday kompyuter, planshet yoki smartfondan o'rnatmasdan brauzerda tezkor ishga tushirish.</value>
+  </data>
+  <data name="PlatformAndroidDesc" xml:space="preserve">
+    <value>Mobil POS, ofitsiant terminali va ombor inventarizatsiyasi.</value>
+  </data>
+  <data name="DownloadAndroid" xml:space="preserve">
+    <value>Android uchun yuklab olish</value>
+  </data>
+  <data name="PlatformIOSDesc" xml:space="preserve">
+    <value>iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.</value>
+  </data>
+  <data name="DownloadIOS" xml:space="preserve">
+    <value>iOS uchun yuklab olish</value>
+  </data>
+  <data name="OpenInBot" xml:space="preserve">
+    <value>Telegram-bot</value>
+  </data>
+  <data name="B2bBadge" xml:space="preserve">
+    <value>1 kunda tezkor start</value>
+  </data>
+  <data name="B2bTitle" xml:space="preserve">
+    <value>Biznesingizni Socratic bilan kengaytirishga tayyormisiz?</value>
+  </data>
+  <data name="B2bDesc" xml:space="preserve">
+    <value>Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.</value>
+  </data>
+  <data name="B2bKioskConnectBtn" xml:space="preserve">
+    <value>Socratic kioskida ulanish</value>
+  </data>
+  <data name="B2bConsultBtn" xml:space="preserve">
+    <value>Telegram orqali maslahat</value>
+  </data>
+  <data name="B2bBotBtn" xml:space="preserve">
+    <value>Ekotizim Telegram-boti</value>
+  </data>
+  <data name="B2bDocsBtn" xml:space="preserve">
+    <value>Hujjatlar</value>
+  </data>
+  <data name="FiscalCompliance" xml:space="preserve">
+    <value>Soliq OFD fiskallashtirish</value>
+  </data>
+  <data name="FiscalDesc" xml:space="preserve">
+    <value>OFD QR kodli fiskal chekni avtomatik yaratish, 1% keshbek va soliq talablariga muvofiqlik.</value>
+  </data>
+  <data name="HardwareSupport" xml:space="preserve">
+    <value>Uskunalarni qo'llab-quvvatlash</value>
+  </data>
+  <data name="HardwareDesc" xml:space="preserve">
+    <value>ESC/POS 58/80mm termoprinterlar, 2D DataMatrix skanerlar va tarozilar.</value>
+  </data>
+  <data name="LaunchInKiosk" xml:space="preserve">
+    <value>Interaktiv Kioskda ochish</value>
+  </data>
+  <data name="FooterTagline" xml:space="preserve">
+    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+  </data>
+  <data name="FooterRights" xml:space="preserve">
+    <value>Barcha huquqlar himoyalangan.</value>
+  </data>
+  <data name="FooterCatalog" xml:space="preserve">
+    <value>Platforma &amp; Katalog</value>
+  </data>
+  <data name="ShowroomDemo" xml:space="preserve">
+    <value>Demo Mahsulotlar vitrinasi</value>
+  </data>
+  <data name="PlansConnect" xml:space="preserve">
+    <value>Tariflar va ulanish</value>
+  </data>
+  <data name="VenuesCatalog" xml:space="preserve">
+    <value>Muassasalar katalogi</value>
+  </data>
+  <data name="InteractiveMap" xml:space="preserve">
+    <value>Interaktiv xarita</value>
+  </data>
+  <data name="QrStudio" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="FooterResources" xml:space="preserve">
+    <value>Resurslar &amp; Ma'lumot</value>
+  </data>
+  <data name="FooterCommunity" xml:space="preserve">
+    <value>Community &amp; Support</value>
+  </data>
+  <data name="CategoryRetailCatalog" xml:space="preserve">
+    <value>Chakana savdo &amp; Katalog</value>
+  </data>
+  <data name="CategoryHorecaBooking" xml:space="preserve">
+    <value>HoReCa &amp; Bron qilish</value>
+  </data>
+  <data name="CategoryServicesAi" xml:space="preserve">
+    <value>Xizmatlar &amp; AI</value>
+  </data>
+  <data name="CategorySubscriptionsFintech" xml:space="preserve">
+    <value>Obunalar &amp; Fintex</value>
+  </data>
+  <data name="UxMode_Desc_1" xml:space="preserve">
+    <value>Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.</value>
+  </data>
+  <data name="UxMode_Desc_2" xml:space="preserve">
+    <value>Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).</value>
+  </data>
+  <data name="UxMode_Desc_3" xml:space="preserve">
+    <value>Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.</value>
+  </data>
+  <data name="UxMode_Desc_4" xml:space="preserve">
+    <value>Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.</value>
+  </data>
+  <data name="UxMode_Desc_5" xml:space="preserve">
+    <value>Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.</value>
+  </data>
+  <data name="UxMode_Desc_6" xml:space="preserve">
+    <value>Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.</value>
+  </data>
+  <data name="UxMode_Desc_7" xml:space="preserve">
+    <value>Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.</value>
+  </data>
+  <data name="UxMode_Desc_8" xml:space="preserve">
+    <value>A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.</value>
+  </data>
+  <data name="UxMode_Desc_9" xml:space="preserve">
+    <value>Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.</value>
+  </data>
+  <data name="UxMode_Desc_10" xml:space="preserve">
+    <value>Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.</value>
+  </data>
+  <data name="UxMode_Desc_11" xml:space="preserve">
+    <value>SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.</value>
+  </data>
+  <data name="UxMode_Desc_12" xml:space="preserve">
+    <value>Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.</value>
+  </data>
+  <data name="UxMode_Desc_13" xml:space="preserve">
+    <value>Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.</value>
+  </data>
+  <data name="UxMode_Desc_14" xml:space="preserve">
+    <value>Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.</value>
+  </data>
+  <data name="UxMode_Desc_15" xml:space="preserve">
+    <value>Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.</value>
+  </data>
+  <data name="UxMode_Desc_16" xml:space="preserve">
+    <value>Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.</value>
+  </data>
+  <data name="UxMode_Desc_17" xml:space="preserve">
+    <value>Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).</value>
+  </data>
+  <data name="UxMode_Desc_18" xml:space="preserve">
+    <value>Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.</value>
+  </data>
+  <data name="UxMode_Desc_19" xml:space="preserve">
+    <value>O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.</value>
+  </data>
+  <data name="UxMode_Desc_20" xml:space="preserve">
+    <value>Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.</value>
+  </data>
+  <data name="UxMode_Desc_21" xml:space="preserve">
+    <value>Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.</value>
+  </data>
+  <data name="UxMode_Desc_22" xml:space="preserve">
+    <value>Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.</value>
+  </data>
+  <data name="UxMode_Desc_23" xml:space="preserve">
+    <value>Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.</value>
+  </data>
+  <data name="UxMode_Desc_24" xml:space="preserve">
+    <value>VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.</value>
+  </data>
+  <data name="UxMode_Desc_25" xml:space="preserve">
+    <value>Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.</value>
+  </data>
+  <data name="UxMode_Desc_26" xml:space="preserve">
+    <value>P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.</value>
+  </data>
+  <data name="UxMode_Desc_27" xml:space="preserve">
+    <value>Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.</value>
+  </data>
+  <data name="UxMode_Desc_28" xml:space="preserve">
+    <value>Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).</value>
+  </data>
+  <data name="LandingHeroBadgeOfd" xml:space="preserve">
+    <value>Soliq OFD • 1% Keshbek</value>
+  </data>
+  <data name="LandingHeroBadgeModes" xml:space="preserve">
+    <value>28 ta UX-Rejim</value>
+  </data>
+  <data name="LandingMetricSec" xml:space="preserve">
+    <value>&lt; 1 s</value>
+  </data>
+  <data name="LandingMetricPoints500" xml:space="preserve">
+    <value>500+ nuqtalar</value>
+  </data>
+  <data name="LandingPillUxModes" xml:space="preserve">
+    <value>28 ta UX-rejim</value>
+  </data>
+  <data name="LandingPillSmartKiosk" xml:space="preserve">
+    <value>Smart kiosk</value>
+  </data>
+  <data name="LandingPillOfdCashback" xml:space="preserve">
+    <value>Soliq OFD 1%</value>
+  </data>
+  <data name="LandingPillOrderPay" xml:space="preserve">
+    <value>Buyurtma va to'lov</value>
+  </data>
+  <data name="LandingPillEcosystemPlans" xml:space="preserve">
+    <value>Ekotizim tariflari</value>
+  </data>
+  <data name="LandingPillPosKiosks" xml:space="preserve">
+    <value>Kassalar &amp; Kiosklar</value>
+  </data>
+  <data name="LandingPillDirectPurchase" xml:space="preserve">
+    <value>To'g'ridan-to'g'ri xarid</value>
+  </data>
+  <data name="LandingPillNoIntermediaries" xml:space="preserve">
+    <value>Vositachilarsiz</value>
+  </data>
+  <data name="LandingPillBranchNetwork" xml:space="preserve">
+    <value>Filiallar tarmog'i</value>
+  </data>
+  <data name="LandingPillNearby" xml:space="preserve">
+    <value>Yaqinimda</value>
+  </data>
+  <data name="LandingPillMapPolygons" xml:space="preserve">
+    <value>Xaritadagi poligonlar</value>
+  </data>
+  <data name="LandingPillTariffZones" xml:space="preserve">
+    <value>Tarif zonalari</value>
+  </data>
+  <data name="LandingPillCourierRoute" xml:space="preserve">
+    <value>Kuryer marshruti</value>
+  </data>
+  <data name="LandingPillLiveGps" xml:space="preserve">
+    <value>Jonli GPS treking</value>
+  </data>
+  <data name="LandingPillRowsSeats" xml:space="preserve">
+    <value>Qatorlar va o'rinlar</value>
+  </data>
+  <data name="LandingPillPriceZones" xml:space="preserve">
+    <value>Narx zonalari</value>
+  </data>
+  <data name="LandingPillLiveStatus" xml:space="preserve">
+    <value>Jonli holat</value>
+  </data>
+  <data name="LandingPillDeposits" xml:space="preserve">
+    <value>Depozitlar</value>
+  </data>
+  <data name="LandingPillTimeSlots" xml:space="preserve">
+    <value>Vaqt oraliqlari</value>
+  </data>
+  <data name="LandingPillAccessControl" xml:space="preserve">
+    <value>SKUD ruxsat</value>
+  </data>
+  <data name="LandingLegendFree" xml:space="preserve">
+    <value>Bo'sh</value>
+  </data>
+  <data name="LandingLegendBusy" xml:space="preserve">
+    <value>Band</value>
+  </data>
+  <data name="LandingLegendReserved" xml:space="preserve">
+    <value>Band qilingan</value>
+  </data>
+  <data name="CollapseModes" xml:space="preserve">
+    <value>Katalogni yig'ish</value>
+  </data>
+  <data name="ExpandModes" xml:space="preserve">
+    <value>Barcha 28 rejimni ko'rsatish</value>
+  </data>
+  <data name="LandingOfdCashbackTag" xml:space="preserve">
+    <value>Soliq.uz 1% keshbek</value>
+  </data>
+  <data name="LandingMetricMs" xml:space="preserve">
+    <value>&lt; 10 ms</value>
+  </data>
+  <data name="LandingMetricSyncDesc" xml:space="preserve">
+    <value>Ma'lumotlar sinxronizatsiyasi</value>
+  </data>
+  <data name="LandingMetricNetworkDesc" xml:space="preserve">
+    <value>Yagona tarmoqdagi filiallar</value>
+  </data>
+  <data name="LandingMetricOfflineDesc" xml:space="preserve">
+    <value>Avtonom ishlash</value>
+  </data>
+  <data name="LandingPageTitle" xml:space="preserve">
+    <value>Socratic — Biznes uchun universal ekotizim</value>
+  </data>
+  <data name="LandingMetaDesc" xml:space="preserve">
+    <value>Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.</value>
+  </data>
+  <data name="LandingHeroTitleSocratic" xml:space="preserve">
+    <value>Socratic</value>
+    <comment>Hero title flagship Socratic</comment>
+  </data>
+  <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
+    <value>Savdo va xizmatlarning universal operatsion tizimi</value>
+    <comment>Hero title operating system subtitle</comment>
+  </data>
+  <data name="LandingNoModesFoundDesc" xml:space="preserve">
+    <value>So'rovingiz bo'yicha hech qanday tijorat ssenariysi topilmadi. Qidiruvni tozalang yoki toifani almashtiring.</value>
+    <comment>Empty state description when no UX modes match query</comment>
+  </data>
 </root>

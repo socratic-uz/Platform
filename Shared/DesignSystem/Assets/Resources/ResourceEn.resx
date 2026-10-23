@@ -3575,4 +3575,723 @@
   <data name="Schedule_ResetScheduleAction" xml:space="preserve">
     <value>Reset schedule</value>
   </data>
+
+  <!-- Landing & Universal UX Modes Localization -->
+  <data name="HeroBadge" xml:space="preserve">
+    <value>Socratic 2.0 • Universal Business Ecosystem</value>
+  </data>
+  <data name="HeroSubtitle" xml:space="preserve">
+    <value>Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.</value>
+  </data>
+  <data name="HeroShowroom" xml:space="preserve">
+    <value>Demo Product Showroom</value>
+  </data>
+  <data name="HeroTerminal" xml:space="preserve">
+    <value>POS Terminal</value>
+  </data>
+  <data name="HeroSocraticOrg" xml:space="preserve">
+    <value>Socratic Plans</value>
+  </data>
+  <data name="HeroModulesLabel" xml:space="preserve">
+    <value>Specialized modules:</value>
+  </data>
+  <data name="HeroMap" xml:space="preserve">
+    <value>Map &amp; Delivery</value>
+  </data>
+  <data name="HeroSeatDesigner" xml:space="preserve">
+    <value>Seat Designer</value>
+  </data>
+  <data name="HeroQrDesigner" xml:space="preserve">
+    <value>QR Fiscalization</value>
+  </data>
+  <data name="TabPos" xml:space="preserve">
+    <value>POS Terminal</value>
+  </data>
+  <data name="TabKiosk" xml:space="preserve">
+    <value>Smart Kiosk</value>
+  </data>
+  <data name="TabSpaces" xml:space="preserve">
+    <value>Spaces &amp; QR</value>
+  </data>
+  <data name="SpecOffline" xml:space="preserve">
+    <value>Offline-First Reliability</value>
+  </data>
+  <data name="SpecSpeed" xml:space="preserve">
+    <value>Terminal Speed</value>
+  </data>
+  <data name="SpecCashback" xml:space="preserve">
+    <value>Soliq OFD Cashback</value>
+  </data>
+  <data name="SpecBranches" xml:space="preserve">
+    <value>Centralized Chain Control</value>
+  </data>
+  <data name="MacroPillarsBadge" xml:space="preserve">
+    <value>Four Foundations of Socratic</value>
+  </data>
+  <data name="MacroPillarsTitle" xml:space="preserve">
+    <value>Universal Architecture for Any Scale of Business</value>
+  </data>
+  <data name="MacroPillarsDesc" xml:space="preserve">
+    <value>Unified platform covering full commerce cycle from point of sale to global fiscal reporting.</value>
+  </data>
+  <data name="PillarRetailTitle" xml:space="preserve">
+    <value>Retail &amp; Wholesale</value>
+  </data>
+  <data name="PillarRetailDesc" xml:space="preserve">
+    <value>Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.</value>
+  </data>
+  <data name="PillarServicesTitle" xml:space="preserve">
+    <value>Services &amp; Booking</value>
+  </data>
+  <data name="PillarServicesDesc" xml:space="preserve">
+    <value>Booking spaces, master scheduling, online records, and automated SMS reminders.</value>
+  </data>
+  <data name="PillarSpacesTitle" xml:space="preserve">
+    <value>Halls &amp; Spaces</value>
+  </data>
+  <data name="PillarSpacesDesc" xml:space="preserve">
+    <value>Interactive seat design, table layouts, and QR-order checkout for guests.</value>
+  </data>
+  <data name="PillarFintechTitle" xml:space="preserve">
+    <value>Fintech &amp; Fiscalization</value>
+  </data>
+  <data name="PillarFintechDesc" xml:space="preserve">
+    <value>Direct Soliq OFD integration, 1% cashback, fiscal QR receipts, and payment cards.</value>
+  </data>
+  <data name="ShowcaseBadge" xml:space="preserve">
+    <value>Live Interactive Demonstration</value>
+  </data>
+  <data name="ShowcaseHeading" xml:space="preserve">
+    <value>Test Socratic in Real Business Scenarios</value>
+  </data>
+  <data name="ShowcaseSub" xml:space="preserve">
+    <value>Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.</value>
+  </data>
+  <data name="OrgDemoBadge" xml:space="preserve">
+    <value>Public Demonstration</value>
+  </data>
+  <data name="OrgDemoTitle" xml:space="preserve">
+    <value>Coffee &amp; Bakery Chain &quot;Demo&quot;</value>
+  </data>
+  <data name="OrgDemoDesc" xml:space="preserve">
+    <value>Interactive showcase of beverages, desserts, modifiers, and instant card checkout.</value>
+  </data>
+  <data name="OpenDemoShowroom" xml:space="preserve">
+    <value>Open Demo Showroom</value>
+  </data>
+  <data name="OpenTerminalDemo" xml:space="preserve">
+    <value>Launch POS Terminal</value>
+  </data>
+  <data name="OrgSocraticBadge" xml:space="preserve">
+    <value>Official Organization</value>
+  </data>
+  <data name="OrgSocraticTitle" xml:space="preserve">
+    <value>Socratic Ecosystem Core</value>
+  </data>
+  <data name="OrgSocraticDesc" xml:space="preserve">
+    <value>Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.</value>
+  </data>
+  <data name="OpenSocraticSelfSelling" xml:space="preserve">
+    <value>Socratic Self-Selling Portal</value>
+  </data>
+  <data name="PlatformDocs" xml:space="preserve">
+    <value>Architecture Documentation</value>
+  </data>
+  <data name="SpatialTechBadge" xml:space="preserve">
+    <value>Spatial Technologies &amp; Logistics</value>
+  </data>
+  <data name="SpatialTechHeading" xml:space="preserve">
+    <value>Interactive Maps &amp; Hall Designer</value>
+  </data>
+  <data name="SpatialTechSub" xml:space="preserve">
+    <value>Vector graphics, real-time geocoding, multi-zone polygons, and instant ticket seat rendering.</value>
+  </data>
+  <data name="GeoMapWingBadge" xml:space="preserve">
+    <value>Interactive Map</value>
+  </data>
+  <data name="GeoMapWingTitle" xml:space="preserve">
+    <value>Geocoding &amp; Delivery Logistics</value>
+  </data>
+  <data name="GeoMapWingDesc" xml:space="preserve">
+    <value>Dynamic address search, delivery polygon zones, and branch proximity routing.</value>
+  </data>
+  <data name="PointsPresenceTitle" xml:space="preserve">
+    <value>Points of Presence</value>
+  </data>
+  <data name="PointsPresenceDesc" xml:space="preserve">
+    <value>Interactive markers of retail branches, coffee shops, and pickup points.</value>
+  </data>
+  <data name="DeliveryZonesTitle" xml:space="preserve">
+    <value>Delivery Zones</value>
+  </data>
+  <data name="DeliveryZonesDesc" xml:space="preserve">
+    <value>Custom polygon borders with per-zone pricing and arrival estimation.</value>
+  </data>
+  <data name="NavigatorTitle" xml:space="preserve">
+    <value>Smart Routing</value>
+  </data>
+  <data name="NavigatorDesc" xml:space="preserve">
+    <value>Point-to-point courier and client navigation with optimal pathing.</value>
+  </data>
+  <data name="GeoMapLiveSync" xml:space="preserve">
+    <value>ScyllaDB NoSQL live sync across geo points</value>
+  </data>
+  <data name="LaunchMapBtn" xml:space="preserve">
+    <value>Launch Interactive Map</value>
+  </data>
+  <data name="SeatDesignerWingBadge" xml:space="preserve">
+    <value>Vector Hall Designer</value>
+  </data>
+  <data name="SeatDesignerWingTitle" xml:space="preserve">
+    <value>Visual Floor &amp; Seat Layouts</value>
+  </data>
+  <data name="SeatDesignerWingDesc" xml:space="preserve">
+    <value>Visual editor for restaurant tables, cinema rows, stadiums, and conference halls.</value>
+  </data>
+  <data name="VenueTheaters" xml:space="preserve">
+    <value>Cinemas &amp; Theaters</value>
+  </data>
+  <data name="VenueTheatersDesc" xml:space="preserve">
+    <value>Parterre, amphiteater, balconies, multi-tier pricing, and single-click booking.</value>
+  </data>
+  <data name="VenueHoreca" xml:space="preserve">
+    <value>Restaurants &amp; Lounges</value>
+  </data>
+  <data name="VenueHorecaDesc" xml:space="preserve">
+    <value>Table layout, VIP rooms, veranda zones, and waiter assignment.</value>
+  </data>
+  <data name="VenueSpaces" xml:space="preserve">
+    <value>Coworking &amp; Arenas</value>
+  </data>
+  <data name="VenueSpacesDesc" xml:space="preserve">
+    <value>Hot desks, fixed stations, conference rooms, and event ticketing.</value>
+  </data>
+  <data name="LaunchSeatDesigner" xml:space="preserve">
+    <value>Open Seat Designer</value>
+  </data>
+  <data name="LandingUxModesBadge" xml:space="preserve">
+    <value>28 Architectural UX Modes</value>
+  </data>
+  <data name="LandingUxModesTitle" xml:space="preserve">
+    <value>28 Universal Commercial UX Scenarios</value>
+  </data>
+  <data name="LandingUxModesDesc" xml:space="preserve">
+    <value>From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.</value>
+  </data>
+  <data name="LandingFlagshipTitle" xml:space="preserve">
+    <value>Flagship Archetypes</value>
+  </data>
+  <data name="LandingFlagshipSubtitle" xml:space="preserve">
+    <value>Top four foundational scenarios powering enterprise automation</value>
+  </data>
+  <data name="LandingRetailFlagshipBadge" xml:space="preserve">
+    <value>Retail Flagship</value>
+  </data>
+  <data name="LandingRetailFlagshipTitle" xml:space="preserve">
+    <value>Catalog &amp; Fast Checkout</value>
+  </data>
+  <data name="LandingRetailFlagshipDesc" xml:space="preserve">
+    <value>Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.</value>
+  </data>
+  <data name="LandingRetailPillSku" xml:space="preserve">
+    <value>SKU Matrix</value>
+  </data>
+  <data name="LandingRetailPillModifiers" xml:space="preserve">
+    <value>Modifiers</value>
+  </data>
+  <data name="LandingRetailPillCheckout" xml:space="preserve">
+    <value>Express Checkout</value>
+  </data>
+  <data name="LandingLaunchDemoKiosk" xml:space="preserve">
+    <value>Launch in Demo Kiosk</value>
+  </data>
+  <data name="LandingHorecaFlagshipBadge" xml:space="preserve">
+    <value>HoReCa Flagship</value>
+  </data>
+  <data name="LandingHorecaFlagshipTitle" xml:space="preserve">
+    <value>Table &amp; Time Booking</value>
+  </data>
+  <data name="LandingHorecaFlagshipDesc" xml:space="preserve">
+    <value>Real-time time slot grid, restaurant floor plan, hall reservations, and zero-overbooking protection.</value>
+  </data>
+  <data name="LandingHorecaPillSlots" xml:space="preserve">
+    <value>Time Slots</value>
+  </data>
+  <data name="LandingHorecaPillFloorPlan" xml:space="preserve">
+    <value>Floor Plan</value>
+  </data>
+  <data name="LandingHorecaPillSms" xml:space="preserve">
+    <value>SMS Notifications</value>
+  </data>
+  <data name="LandingAiFlagshipBadge" xml:space="preserve">
+    <value>AI &amp; Cloud Flagship</value>
+  </data>
+  <data name="LandingAiFlagshipTitle" xml:space="preserve">
+    <value>Online Service &amp; AI Access</value>
+  </data>
+  <data name="LandingAiFlagshipDesc" xml:space="preserve">
+    <value>Instant API keys issuance, LLM token quotas, computer vision access, and microservice billing.</value>
+  </data>
+  <data name="LandingAiPillQuotas" xml:space="preserve">
+    <value>LLM Quotas</value>
+  </data>
+  <data name="LandingAiPillApiKey" xml:space="preserve">
+    <value>API Key Generator</value>
+  </data>
+  <data name="LandingAiPillWebhooks" xml:space="preserve">
+    <value>Webhooks</value>
+  </data>
+  <data name="LandingFintechFlagshipBadge" xml:space="preserve">
+    <value>Fintech Flagship</value>
+  </data>
+  <data name="LandingFintechFlagshipTitle" xml:space="preserve">
+    <value>Recurring Subscriptions</value>
+  </data>
+  <data name="LandingFintechFlagshipDesc" xml:space="preserve">
+    <value>Automated recurring debits, tiered subscription plans, gym passes, and automatic fiscalization.</value>
+  </data>
+  <data name="LandingFintechPillRecurring" xml:space="preserve">
+    <value>Auto Recurring</value>
+  </data>
+  <data name="LandingFintechPillPricing" xml:space="preserve">
+    <value>Multi-tier Pricing</value>
+  </data>
+  <data name="LandingFintechPillFiscal" xml:space="preserve">
+    <value>Fiscal Receipts</value>
+  </data>
+  <data name="LandingSearchModesPlaceholder" xml:space="preserve">
+    <value>Search across 28 modes (title, name, code, description)...</value>
+  </data>
+  <data name="LandingSearchModesAria" xml:space="preserve">
+    <value>Search modes</value>
+  </data>
+  <data name="LandingClearSearchAria" xml:space="preserve">
+    <value>Clear search</value>
+  </data>
+  <data name="LandingCategoryAll" xml:space="preserve">
+    <value>All Modes</value>
+  </data>
+  <data name="LandingCategoryRetail" xml:space="preserve">
+    <value>Retail &amp; Commerce</value>
+  </data>
+  <data name="LandingCategoryHoreca" xml:space="preserve">
+    <value>HoReCa &amp; Booking</value>
+  </data>
+  <data name="LandingCategoryServices" xml:space="preserve">
+    <value>Services, SaaS &amp; AI</value>
+  </data>
+  <data name="LandingCategoryFintech" xml:space="preserve">
+    <value>Subscriptions &amp; Fintech</value>
+  </data>
+  <data name="LandingShowingLabel" xml:space="preserve">
+    <value>Showing</value>
+  </data>
+  <data name="LandingOfLabel" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="LandingResetFilters" xml:space="preserve">
+    <value>Reset filters</value>
+  </data>
+  <data name="LandingNoModesFoundTitle" xml:space="preserve">
+    <value>No UX modes match your query</value>
+  </data>
+  <data name="No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes." xml:space="preserve">
+    <value>По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.</value>
+  </data>
+  <data name="LandingResetSearchBtn" xml:space="preserve">
+    <value>Reset Search</value>
+  </data>
+  <data name="LandingQuickViewTitle" xml:space="preserve">
+    <value>QuickView</value>
+  </data>
+  <data name="LandingDetailsBtn" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="LandingLaunchBtn" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="CoreSuperpowersBadge" xml:space="preserve">
+    <value>Socratic Key Capabilities</value>
+  </data>
+  <data name="CoreSuperpowersTitle" xml:space="preserve">
+    <value>Trade &amp; Payment Infrastructure</value>
+  </data>
+  <data name="CoreSuperpowersDesc" xml:space="preserve">
+    <value>Everything required for non-stop sales, rapid customer service, and full tax transparency.</value>
+  </data>
+  <data name="PillarPosBadge" xml:space="preserve">
+    <value>Cash Register Terminal</value>
+  </data>
+  <data name="PillarPosHeading" xml:space="preserve">
+    <value>Touch POS for any sales format</value>
+  </data>
+  <data name="PillarPosDesc" xml:space="preserve">
+    <value>Ultra-fast touch terminal for sellers, cashiers, and store managers.</value>
+  </data>
+  <data name="PillarPosFeat1" xml:space="preserve">
+    <value>100% Offline-First: uninterrupted checkout without Internet connection.</value>
+  </data>
+  <data name="PillarPosFeat2" xml:space="preserve">
+    <value>Direct connection to ESC/POS thermal printers, CAS scales, and 2D barcode scanners.</value>
+  </data>
+  <data name="PillarPosFeat3" xml:space="preserve">
+    <value>Installment &amp; BNPL sales: Uzum Nasiya, Zoodpay, and split bills.</value>
+  </data>
+  <data name="LaunchTerminalBtn" xml:space="preserve">
+    <value>Open POS Terminal</value>
+  </data>
+  <data name="PillarQrBadge" xml:space="preserve">
+    <value>QR Payments &amp; Soliq OFD</value>
+  </data>
+  <data name="PillarQrHeading" xml:space="preserve">
+    <value>QR Payments, Fiscalization &amp; Marking</value>
+  </data>
+  <data name="PillarQrDesc" xml:space="preserve">
+    <value>Instant payment acceptance via mobile banking apps with automatic fiscal registration.</value>
+  </data>
+  <data name="LaunchQrDesignerBtn" xml:space="preserve">
+    <value>QR Code Studio</value>
+  </data>
+  <data name="PillarKioskBadge" xml:space="preserve">
+    <value>Smart Self-Service Kiosks</value>
+  </data>
+  <data name="PillarKioskHeading" xml:space="preserve">
+    <value>Autonomous Self-Ordering Terminals</value>
+  </data>
+  <data name="PillarKioskDesc" xml:space="preserve">
+    <value>Queue reduction in rush hours, interactive electronic menu, and automated upselling.</value>
+  </data>
+  <data name="PillarKioskFeat1" xml:space="preserve">
+    <value>Contactless card payments: Uzcard, Humo, Visa, MasterCard.</value>
+  </data>
+  <data name="PillarKioskFeat2" xml:space="preserve">
+    <value>Real-time catalog and inventory sync with central store repository.</value>
+  </data>
+  <data name="PillarKioskFeat3" xml:space="preserve">
+    <value>Face Pay, loyalty card scanning, and automated personal discounts.</value>
+  </data>
+  <data name="LaunchKioskBtn" xml:space="preserve">
+    <value>Launch Demo Kiosk</value>
+  </data>
+  <data name="PillarAnalyticsBadge" xml:space="preserve">
+    <value>Inventory &amp; Analytics</value>
+  </data>
+  <data name="PillarAnalyticsHeading" xml:space="preserve">
+    <value>Real-time Business Control from Anywhere</value>
+  </data>
+  <data name="PillarAnalyticsDesc" xml:space="preserve">
+    <value>Transparent warehouse tracking, automatic write-offs, cashier shift reports, and P&amp;L analytics.</value>
+  </data>
+  <data name="PlatformWindowsDesc" xml:space="preserve">
+    <value>Full-screen POS cashier terminal, back-office administration, and offline local cache.</value>
+  </data>
+  <data name="DownloadWindows" xml:space="preserve">
+    <value>Download for Windows</value>
+  </data>
+  <data name="PlatformMacOSDesc" xml:space="preserve">
+    <value>Executive workstation, financial analytics, and product management.</value>
+  </data>
+  <data name="DownloadMacOS" xml:space="preserve">
+    <value>Download for macOS</value>
+  </data>
+  <data name="PlatformWebDesc" xml:space="preserve">
+    <value>Instant browser launch without installation from any PC, tablet, or smartphone.</value>
+  </data>
+  <data name="PlatformAndroidDesc" xml:space="preserve">
+    <value>Mobile POS, waiter handheld terminal, and warehouse stock-taking.</value>
+  </data>
+  <data name="DownloadAndroid" xml:space="preserve">
+    <value>Download for Android</value>
+  </data>
+  <data name="PlatformIOSDesc" xml:space="preserve">
+    <value>Elegant solution for iPad cashier desks and customer-facing displays.</value>
+  </data>
+  <data name="DownloadIOS" xml:space="preserve">
+    <value>Download for iOS</value>
+  </data>
+  <data name="OpenInBot" xml:space="preserve">
+    <value>Telegram Bot</value>
+  </data>
+  <data name="B2bBadge" xml:space="preserve">
+    <value>Quick Launch in 1 Day</value>
+  </data>
+  <data name="B2bTitle" xml:space="preserve">
+    <value>Ready to Scale Your Business with Socratic?</value>
+  </data>
+  <data name="B2bDesc" xml:space="preserve">
+    <value>Connect your retail store, restaurant, service salon, or chain in a single unified system.</value>
+  </data>
+  <data name="B2bKioskConnectBtn" xml:space="preserve">
+    <value>Connect in Socratic Kiosk</value>
+  </data>
+  <data name="B2bConsultBtn" xml:space="preserve">
+    <value>Telegram Consultation</value>
+  </data>
+  <data name="B2bBotBtn" xml:space="preserve">
+    <value>Ecosystem Telegram Bot</value>
+  </data>
+  <data name="B2bDocsBtn" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="FiscalCompliance" xml:space="preserve">
+    <value>Soliq OFD Fiscalization</value>
+  </data>
+  <data name="FiscalDesc" xml:space="preserve">
+    <value>Automatic fiscal receipt generation with OFD QR code, 1% cashback, and tax service compliance.</value>
+  </data>
+  <data name="HardwareSupport" xml:space="preserve">
+    <value>Hardware Support</value>
+  </data>
+  <data name="HardwareDesc" xml:space="preserve">
+    <value>ESC/POS 58/80mm thermal printers, 2D DataMatrix scanners, and weighing scales.</value>
+  </data>
+  <data name="LaunchInKiosk" xml:space="preserve">
+    <value>Launch in Interactive Kiosk</value>
+  </data>
+  <data name="FooterTagline" xml:space="preserve">
+    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+  </data>
+  <data name="FooterRights" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="FooterCatalog" xml:space="preserve">
+    <value>Platform &amp; Catalog</value>
+  </data>
+  <data name="ShowroomDemo" xml:space="preserve">
+    <value>Product Showroom Demo</value>
+  </data>
+  <data name="PlansConnect" xml:space="preserve">
+    <value>Tariffs &amp; Connection</value>
+  </data>
+  <data name="VenuesCatalog" xml:space="preserve">
+    <value>Venues Catalog</value>
+  </data>
+  <data name="InteractiveMap" xml:space="preserve">
+    <value>Interactive Map</value>
+  </data>
+  <data name="QrStudio" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="FooterResources" xml:space="preserve">
+    <value>Resources &amp; Info</value>
+  </data>
+  <data name="FooterCommunity" xml:space="preserve">
+    <value>Community &amp; Support</value>
+  </data>
+  <data name="CategoryRetailCatalog" xml:space="preserve">
+    <value>Retail &amp; Catalog</value>
+  </data>
+  <data name="CategoryHorecaBooking" xml:space="preserve">
+    <value>HoReCa &amp; Booking</value>
+  </data>
+  <data name="CategoryServicesAi" xml:space="preserve">
+    <value>Services &amp; AI</value>
+  </data>
+  <data name="CategorySubscriptionsFintech" xml:space="preserve">
+    <value>Subscriptions &amp; Fintech</value>
+  </data>
+  <data name="UxMode_Desc_1" xml:space="preserve">
+    <value>Standard shopping cart, variations, modifiers, and quick item adding.</value>
+  </data>
+  <data name="UxMode_Desc_2" xml:space="preserve">
+    <value>Interactive configurator wizard (pizza, burgers, custom PC builds).</value>
+  </data>
+  <data name="UxMode_Desc_3" xml:space="preserve">
+    <value>Time slot calendar, table reservations, hall and resource booking.</value>
+  </data>
+  <data name="UxMode_Desc_4" xml:space="preserve">
+    <value>Interactive hall seating plan, QR ticket generation, and validation.</value>
+  </data>
+  <data name="UxMode_Desc_5" xml:space="preserve">
+    <value>Check-in/out dates, room categories, and hotel extra services.</value>
+  </data>
+  <data name="UxMode_Desc_6" xml:space="preserve">
+    <value>Hourly and daily vehicle and equipment rental with deposit.</value>
+  </data>
+  <data name="UxMode_Desc_7" xml:space="preserve">
+    <value>Scheduled home delivery time windows for groceries and retail.</value>
+  </data>
+  <data name="UxMode_Desc_8" xml:space="preserve">
+    <value>Point A to Point B routing, distance calculation, and courier integration.</value>
+  </data>
+  <data name="UxMode_Desc_9" xml:space="preserve">
+    <value>Recurring auto-billing, subscription plans, memberships, and passes.</value>
+  </data>
+  <data name="UxMode_Desc_10" xml:space="preserve">
+    <value>Instant wallet top-up, digital goods, and software licensing.</value>
+  </data>
+  <data name="UxMode_Desc_11" xml:space="preserve">
+    <value>SaaS subscriptions, AI model quotas, and cloud compute access.</value>
+  </data>
+  <data name="UxMode_Desc_12" xml:space="preserve">
+    <value>Voluntary donations and one-time or recurring charity contributions.</value>
+  </data>
+  <data name="UxMode_Desc_13" xml:space="preserve">
+    <value>Personal gift cards with stored value and auto-generated promo codes.</value>
+  </data>
+  <data name="UxMode_Desc_14" xml:space="preserve">
+    <value>Custom RFQ/quotation requests with parameters and attachments.</value>
+  </data>
+  <data name="UxMode_Desc_15" xml:space="preserve">
+    <value>Live real-time auction bidding with dynamic timers.</value>
+  </data>
+  <data name="UxMode_Desc_16" xml:space="preserve">
+    <value>P2P classified listings with direct buyer-seller messaging.</value>
+  </data>
+  <data name="UxMode_Desc_17" xml:space="preserve">
+    <value>Vetted on-demand service marketplace (plumbers, electricians, handymen).</value>
+  </data>
+  <data name="UxMode_Desc_18" xml:space="preserve">
+    <value>Curated travel packages, bundled tours, and multi-item combos.</value>
+  </data>
+  <data name="UxMode_Desc_19" xml:space="preserve">
+    <value>Interactive dimensional and material-based price calculator.</value>
+  </data>
+  <data name="UxMode_Desc_20" xml:space="preserve">
+    <value>Digital multi-step application forms (visas, insurance, permits).</value>
+  </data>
+  <data name="UxMode_Desc_21" xml:space="preserve">
+    <value>Raffle and lottery ticket purchasing with scheduled drawings.</value>
+  </data>
+  <data name="UxMode_Desc_22" xml:space="preserve">
+    <value>Pre-order reservation for upcoming releases before official launch.</value>
+  </data>
+  <data name="UxMode_Desc_23" xml:space="preserve">
+    <value>Group buying deals unlocked upon reaching backer/buyer thresholds.</value>
+  </data>
+  <data name="UxMode_Desc_24" xml:space="preserve">
+    <value>VIP membership tiers, exclusive events, and loyalty privilege cards.</value>
+  </data>
+  <data name="UxMode_Desc_25" xml:space="preserve">
+    <value>Crowdfunding pledges and milestone-based startup investments.</value>
+  </data>
+  <data name="UxMode_Desc_26" xml:space="preserve">
+    <value>P2P token, voucher, and points exchange and trading desk.</value>
+  </data>
+  <data name="UxMode_Desc_27" xml:space="preserve">
+    <value>Coworking desks, studio equipment, and smart key vehicle booking.</value>
+  </data>
+  <data name="UxMode_Desc_28" xml:space="preserve">
+    <value>Hourly rate professional services (personal trainers, tutors, care).</value>
+  </data>
+  <data name="LandingHeroBadgeOfd" xml:space="preserve">
+    <value>Soliq OFD • 1% Cashback</value>
+  </data>
+  <data name="LandingHeroBadgeModes" xml:space="preserve">
+    <value>28 UX Modes</value>
+  </data>
+  <data name="LandingMetricSec" xml:space="preserve">
+    <value>&lt; 1 s</value>
+  </data>
+  <data name="LandingMetricPoints500" xml:space="preserve">
+    <value>500+ branches</value>
+  </data>
+  <data name="LandingPillUxModes" xml:space="preserve">
+    <value>28 UX modes</value>
+  </data>
+  <data name="LandingPillSmartKiosk" xml:space="preserve">
+    <value>Smart kiosk</value>
+  </data>
+  <data name="LandingPillOfdCashback" xml:space="preserve">
+    <value>Soliq OFD 1%</value>
+  </data>
+  <data name="LandingPillOrderPay" xml:space="preserve">
+    <value>Order and payment</value>
+  </data>
+  <data name="LandingPillEcosystemPlans" xml:space="preserve">
+    <value>Ecosystem plans</value>
+  </data>
+  <data name="LandingPillPosKiosks" xml:space="preserve">
+    <value>POS &amp; Kiosks</value>
+  </data>
+  <data name="LandingPillDirectPurchase" xml:space="preserve">
+    <value>Direct purchase</value>
+  </data>
+  <data name="LandingPillNoIntermediaries" xml:space="preserve">
+    <value>No intermediaries</value>
+  </data>
+  <data name="LandingPillBranchNetwork" xml:space="preserve">
+    <value>Branch network</value>
+  </data>
+  <data name="LandingPillNearby" xml:space="preserve">
+    <value>Near me</value>
+  </data>
+  <data name="LandingPillMapPolygons" xml:space="preserve">
+    <value>Map polygons</value>
+  </data>
+  <data name="LandingPillTariffZones" xml:space="preserve">
+    <value>Tariff zones</value>
+  </data>
+  <data name="LandingPillCourierRoute" xml:space="preserve">
+    <value>Courier route</value>
+  </data>
+  <data name="LandingPillLiveGps" xml:space="preserve">
+    <value>Live GPS tracking</value>
+  </data>
+  <data name="LandingPillRowsSeats" xml:space="preserve">
+    <value>Rows &amp; seats</value>
+  </data>
+  <data name="LandingPillPriceZones" xml:space="preserve">
+    <value>Price zones</value>
+  </data>
+  <data name="LandingPillLiveStatus" xml:space="preserve">
+    <value>Live status</value>
+  </data>
+  <data name="LandingPillDeposits" xml:space="preserve">
+    <value>Deposits</value>
+  </data>
+  <data name="LandingPillTimeSlots" xml:space="preserve">
+    <value>Time slots</value>
+  </data>
+  <data name="LandingPillAccessControl" xml:space="preserve">
+    <value>Access control</value>
+  </data>
+  <data name="LandingLegendFree" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="LandingLegendBusy" xml:space="preserve">
+    <value>Occupied</value>
+  </data>
+  <data name="LandingLegendReserved" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="CollapseModes" xml:space="preserve">
+    <value>Collapse catalog</value>
+  </data>
+  <data name="ExpandModes" xml:space="preserve">
+    <value>Show all 28 modes</value>
+  </data>
+  <data name="LandingOfdCashbackTag" xml:space="preserve">
+    <value>Soliq.uz 1% cashback</value>
+  </data>
+  <data name="LandingMetricMs" xml:space="preserve">
+    <value>&lt; 10 ms</value>
+  </data>
+  <data name="LandingMetricSyncDesc" xml:space="preserve">
+    <value>Data synchronization</value>
+  </data>
+  <data name="LandingMetricNetworkDesc" xml:space="preserve">
+    <value>Branches in unified network</value>
+  </data>
+  <data name="LandingMetricOfflineDesc" xml:space="preserve">
+    <value>Autonomous offline work</value>
+  </data>
+  <data name="LandingPageTitle" xml:space="preserve">
+    <value>Socratic — Universal Business Ecosystem</value>
+  </data>
+  <data name="LandingMetaDesc" xml:space="preserve">
+    <value>Socratic — unified platform for retail sales, services, space booking, and payment processing.</value>
+  </data>
+  <data name="LandingHeroTitleSocratic" xml:space="preserve">
+    <value>Socratic</value>
+    <comment>Hero title flagship Socratic</comment>
+  </data>
+  <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
+    <value>Universal operating system for commerce and services</value>
+    <comment>Hero title operating system subtitle</comment>
+  </data>
+  <data name="LandingNoModesFoundDesc" xml:space="preserve">
+    <value>No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.</value>
+    <comment>Empty state description when no UX modes match query</comment>
+  </data>
 </root>

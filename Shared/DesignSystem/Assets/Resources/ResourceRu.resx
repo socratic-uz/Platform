@@ -3575,4 +3575,723 @@
   <data name="Schedule_ResetScheduleAction" xml:space="preserve">
     <value>Сбросить график</value>
   </data>
+
+  <!-- Landing & Universal UX Modes Localization -->
+  <data name="HeroBadge" xml:space="preserve">
+    <value>Socratic 2.0 • Универсальная экосистема для бизнеса</value>
+  </data>
+  <data name="HeroSubtitle" xml:space="preserve">
+    <value>Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.</value>
+  </data>
+  <data name="HeroShowroom" xml:space="preserve">
+    <value>Витрина товаров Demo</value>
+  </data>
+  <data name="HeroTerminal" xml:space="preserve">
+    <value>Касса POS</value>
+  </data>
+  <data name="HeroSocraticOrg" xml:space="preserve">
+    <value>Тарифы Socratic</value>
+  </data>
+  <data name="HeroModulesLabel" xml:space="preserve">
+    <value>Специализированные модули:</value>
+  </data>
+  <data name="HeroMap" xml:space="preserve">
+    <value>Карта и доставка</value>
+  </data>
+  <data name="HeroSeatDesigner" xml:space="preserve">
+    <value>Конструктор залов</value>
+  </data>
+  <data name="HeroQrDesigner" xml:space="preserve">
+    <value>QR-фискализация</value>
+  </data>
+  <data name="TabPos" xml:space="preserve">
+    <value>Касса POS</value>
+  </data>
+  <data name="TabKiosk" xml:space="preserve">
+    <value>Смарт-киоск</value>
+  </data>
+  <data name="TabSpaces" xml:space="preserve">
+    <value>Залы &amp; QR</value>
+  </data>
+  <data name="SpecOffline" xml:space="preserve">
+    <value>Offline-First надежность</value>
+  </data>
+  <data name="SpecSpeed" xml:space="preserve">
+    <value>Скорость кассы</value>
+  </data>
+  <data name="SpecCashback" xml:space="preserve">
+    <value>Кешбэк Soliq ОФД</value>
+  </data>
+  <data name="SpecBranches" xml:space="preserve">
+    <value>Масштабирование сетей</value>
+  </data>
+  <data name="MacroPillarsBadge" xml:space="preserve">
+    <value>4 фундаментальных направления</value>
+  </data>
+  <data name="MacroPillarsTitle" xml:space="preserve">
+    <value>Единая экосистема для любого формата торговли и услуг</value>
+  </data>
+  <data name="MacroPillarsDesc" xml:space="preserve">
+    <value>Socratic объединяет физические товары, сферу услуг, аренду пространств и цифровые сервисы в едином технологическом комплексе без ограничений.</value>
+  </data>
+  <data name="PillarRetailTitle" xml:space="preserve">
+    <value>Розничная торговля и товары</value>
+  </data>
+  <data name="PillarRetailDesc" xml:space="preserve">
+    <value>Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.</value>
+  </data>
+  <data name="PillarServicesTitle" xml:space="preserve">
+    <value>Сфера услуг и мастера</value>
+  </data>
+  <data name="PillarServicesDesc" xml:space="preserve">
+    <value>Онлайн-запись клиентов к мастерам, управление временными слотами, калькуляция смет и абонементы.</value>
+  </data>
+  <data name="PillarSpacesTitle" xml:space="preserve">
+    <value>Пространства, залы и билеты</value>
+  </data>
+  <data name="PillarSpacesDesc" xml:space="preserve">
+    <value>Интерактивные векторные схемы залов SeatDesigner, бронирование столиков и номеров, QR-билеты и валидация на турникетах.</value>
+  </data>
+  <data name="PillarFintechTitle" xml:space="preserve">
+    <value>Платежи, QR и финтех</value>
+  </data>
+  <data name="PillarFintechDesc" xml:space="preserve">
+    <value>Фискальные чеки Soliq ОФД (1% кешбэк), оплата Click, Payme, Uzum, рассрочка BNPL (Uzum Nasiya, Zoodpay) и сплит-чеки.</value>
+  </data>
+  <data name="ShowcaseBadge" xml:space="preserve">
+    <value>Живые интерактивные витрины</value>
+  </data>
+  <data name="ShowcaseHeading" xml:space="preserve">
+    <value>Испытайте экосистему в реальном действии</value>
+  </data>
+  <data name="ShowcaseSub" xml:space="preserve">
+    <value>Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.</value>
+  </data>
+  <data name="OrgDemoBadge" xml:space="preserve">
+    <value>Организация Demo • Шоурум товаров</value>
+  </data>
+  <data name="OrgDemoTitle" xml:space="preserve">
+    <value>Демо-витрина ритейла, блюд и услуг</value>
+  </data>
+  <data name="OrgDemoDesc" xml:space="preserve">
+    <value>Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.</value>
+  </data>
+  <data name="OpenDemoShowroom" xml:space="preserve">
+    <value>Открыть витрину Demo</value>
+  </data>
+  <data name="OpenTerminalDemo" xml:space="preserve">
+    <value>Рабочее место POS</value>
+  </data>
+  <data name="OrgSocraticBadge" xml:space="preserve">
+    <value>Организация Socratic • Self-Selling</value>
+  </data>
+  <data name="OrgSocraticTitle" xml:space="preserve">
+    <value>Socratic продает сама себя</value>
+  </data>
+  <data name="OrgSocraticDesc" xml:space="preserve">
+    <value>Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.</value>
+  </data>
+  <data name="OpenSocraticSelfSelling" xml:space="preserve">
+    <value>Тарифы Socratic в Киоске</value>
+  </data>
+  <data name="PlatformDocs" xml:space="preserve">
+    <value>Документация</value>
+  </data>
+  <data name="SpatialTechBadge" xml:space="preserve">
+    <value>Карты, Зоны Доставки &amp; Навигация</value>
+  </data>
+  <data name="SpatialTechHeading" xml:space="preserve">
+    <value>Гео-карты сети, зоны доставки, навигатор и схемы залов</value>
+  </data>
+  <data name="SpatialTechSub" xml:space="preserve">
+    <value>Единый геопространственный комплекс: от интерактивной карты филиалов, векторных полигонов доставки и GPS-навигатора курьера до миллиметровых схем залов и бронирования столиков.</value>
+  </data>
+  <data name="GeoMapWingBadge" xml:space="preserve">
+    <value>Географическая Платформа</value>
+  </data>
+  <data name="GeoMapWingTitle" xml:space="preserve">
+    <value>Интерактивная карта филиалов, зон и навигатор</value>
+  </data>
+  <data name="GeoMapWingDesc" xml:space="preserve">
+    <value>Управление сетью торговых точек, складами, пунктами выдачи (ПВЗ), полигонами курьерской доставки и встроенный GPS-навигатор для курьеров.</value>
+  </data>
+  <data name="PointsPresenceTitle" xml:space="preserve">
+    <value>Точки и Филиалы (PointPicker)</value>
+  </data>
+  <data name="PointsPresenceDesc" xml:space="preserve">
+    <value>Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.</value>
+  </data>
+  <data name="DeliveryZonesTitle" xml:space="preserve">
+    <value>Зоны Доставки (ZonePicker)</value>
+  </data>
+  <data name="DeliveryZonesDesc" xml:space="preserve">
+    <value>Рисование векторных полигонов доставки на карте. Дифференцированные тарифы, бесплатная доставка от суммы и расчет зон в 1 клик.</value>
+  </data>
+  <data name="NavigatorTitle" xml:space="preserve">
+    <value>GPS-Навигатор и Маршруты</value>
+  </data>
+  <data name="NavigatorDesc" xml:space="preserve">
+    <value>Встроенное ведение по маршруту для курьеров и водителей доставки, расчет километража, времени прибытия и живой трекинг заказа.</value>
+  </data>
+  <data name="GeoMapLiveSync" xml:space="preserve">
+    <value>Автоопределение геопозиции и радиуса обслуживания</value>
+  </data>
+  <data name="LaunchMapBtn" xml:space="preserve">
+    <value>Открыть карту и навигатор</value>
+  </data>
+  <data name="SeatDesignerWingBadge" xml:space="preserve">
+    <value>Векторный Редактор Залов</value>
+  </data>
+  <data name="SeatDesignerWingTitle" xml:space="preserve">
+    <value>Конструктор помещений и бронирование мест</value>
+  </data>
+  <data name="SeatDesignerWingDesc" xml:space="preserve">
+    <value>Векторный редактор SeatDesigner для создания интерактивных схем: столики, ряды кресел, переговорные комнаты и номера с живым статусом занятости.</value>
+  </data>
+  <data name="VenueTheaters" xml:space="preserve">
+    <value>Театры, Кино &amp; Концерты</value>
+  </data>
+  <data name="VenueTheatersDesc" xml:space="preserve">
+    <value>Схемы партера, амфитеатра и балконов. Выбор мест с дифференцированными ценами, бронь билетов и моментальная оплата.</value>
+  </data>
+  <data name="VenueHoreca" xml:space="preserve">
+    <value>Рестораны, Кафе &amp; Лаунджи</value>
+  </data>
+  <data name="VenueHorecaDesc" xml:space="preserve">
+    <value>План рассадки зала с живыми статусами столиков: Свободно, Занято, Депозитная бронь. Интеграция с кассой официанта.</value>
+  </data>
+  <data name="VenueSpaces" xml:space="preserve">
+    <value>Отели, Коворкинги &amp; Аренда</value>
+  </data>
+  <data name="VenueSpacesDesc" xml:space="preserve">
+    <value>Схемы этажей, выбор переговорных комнат, рабочих мест, гостиничных номеров или беседок с почасовой тарификацией.</value>
+  </data>
+  <data name="LaunchSeatDesigner" xml:space="preserve">
+    <value>Конструктор SeatDesigner</value>
+  </data>
+  <data name="LandingUxModesBadge" xml:space="preserve">
+    <value>28 Архитектурных UX-Режимов</value>
+  </data>
+  <data name="LandingUxModesTitle" xml:space="preserve">
+    <value>28 Универсальных Сценариев Взаимодействия</value>
+  </data>
+  <data name="LandingUxModesDesc" xml:space="preserve">
+    <value>От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.</value>
+  </data>
+  <data name="LandingFlagshipTitle" xml:space="preserve">
+    <value>Флагманские Архетипы</value>
+  </data>
+  <data name="LandingFlagshipSubtitle" xml:space="preserve">
+    <value>Четыре ключевых столпа коммерческой автоматизации Socratic</value>
+  </data>
+  <data name="LandingRetailFlagshipBadge" xml:space="preserve">
+    <value>Флагман Ритейла</value>
+  </data>
+  <data name="LandingRetailFlagshipTitle" xml:space="preserve">
+    <value>Каталог &amp; Экспресс-касса</value>
+  </data>
+  <data name="LandingRetailFlagshipDesc" xml:space="preserve">
+    <value>Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.</value>
+  </data>
+  <data name="LandingRetailPillSku" xml:space="preserve">
+    <value>SKU Матрица</value>
+  </data>
+  <data name="LandingRetailPillModifiers" xml:space="preserve">
+    <value>Модификаторы</value>
+  </data>
+  <data name="LandingRetailPillCheckout" xml:space="preserve">
+    <value>Быстрая оплата</value>
+  </data>
+  <data name="LandingLaunchDemoKiosk" xml:space="preserve">
+    <value>Открыть в демо-киоске</value>
+  </data>
+  <data name="LandingHorecaFlagshipBadge" xml:space="preserve">
+    <value>Флагман HoReCa</value>
+  </data>
+  <data name="LandingHorecaFlagshipTitle" xml:space="preserve">
+    <value>Бронирование столов &amp; Времени</value>
+  </data>
+  <data name="LandingHorecaFlagshipDesc" xml:space="preserve">
+    <value>Сетка временных интервалов в реальном времени, интерактивная схема залов и защита от овербукинга.</value>
+  </data>
+  <data name="LandingHorecaPillSlots" xml:space="preserve">
+    <value>Тайм-слоты</value>
+  </data>
+  <data name="LandingHorecaPillFloorPlan" xml:space="preserve">
+    <value>План рассадки</value>
+  </data>
+  <data name="LandingHorecaPillSms" xml:space="preserve">
+    <value>SMS &amp; TG Бронь</value>
+  </data>
+  <data name="LandingAiFlagshipBadge" xml:space="preserve">
+    <value>Флагман AI &amp; SaaS</value>
+  </data>
+  <data name="LandingAiFlagshipTitle" xml:space="preserve">
+    <value>Онлайн-сервис &amp; AI Доступ</value>
+  </data>
+  <data name="LandingAiFlagshipDesc" xml:space="preserve">
+    <value>Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и тарификация микросервисов.</value>
+  </data>
+  <data name="LandingAiPillQuotas" xml:space="preserve">
+    <value>Квоты LLM токенов</value>
+  </data>
+  <data name="LandingAiPillApiKey" xml:space="preserve">
+    <value>API-ключи</value>
+  </data>
+  <data name="LandingAiPillWebhooks" xml:space="preserve">
+    <value>Webhooks &amp; Автоматизация</value>
+  </data>
+  <data name="LandingFintechFlagshipBadge" xml:space="preserve">
+    <value>Флагман Финтеха</value>
+  </data>
+  <data name="LandingFintechFlagshipTitle" xml:space="preserve">
+    <value>Регулярные подписки &amp; Биллинг</value>
+  </data>
+  <data name="LandingFintechFlagshipDesc" xml:space="preserve">
+    <value>Автоматические рекуррентные списания, гибкие тарифные сетки, абонементы и мгновенная фискализация.</value>
+  </data>
+  <data name="LandingFintechPillRecurring" xml:space="preserve">
+    <value>Авторекурренты</value>
+  </data>
+  <data name="LandingFintechPillPricing" xml:space="preserve">
+    <value>Тарифные сетки</value>
+  </data>
+  <data name="LandingFintechPillFiscal" xml:space="preserve">
+    <value>Автофискализация</value>
+  </data>
+  <data name="LandingSearchModesPlaceholder" xml:space="preserve">
+    <value>Поиск по 28 режимам (название, код, описание)...</value>
+  </data>
+  <data name="LandingSearchModesAria" xml:space="preserve">
+    <value>Поиск режимов</value>
+  </data>
+  <data name="LandingClearSearchAria" xml:space="preserve">
+    <value>Очистить поиск</value>
+  </data>
+  <data name="LandingCategoryAll" xml:space="preserve">
+    <value>Все режимы</value>
+  </data>
+  <data name="LandingCategoryRetail" xml:space="preserve">
+    <value>Ритейл и Торговля</value>
+  </data>
+  <data name="LandingCategoryHoreca" xml:space="preserve">
+    <value>HoReCa &amp; Бронь</value>
+  </data>
+  <data name="LandingCategoryServices" xml:space="preserve">
+    <value>Услуги, SaaS &amp; AI</value>
+  </data>
+  <data name="LandingCategoryFintech" xml:space="preserve">
+    <value>Подписки &amp; Финтех</value>
+  </data>
+  <data name="LandingShowingLabel" xml:space="preserve">
+    <value>Показано</value>
+  </data>
+  <data name="LandingOfLabel" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="LandingResetFilters" xml:space="preserve">
+    <value>Сбросить фильтры</value>
+  </data>
+  <data name="LandingNoModesFoundTitle" xml:space="preserve">
+    <value>Режимов не найдено</value>
+  </data>
+  <data name="No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes." xml:space="preserve">
+    <value>По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.</value>
+  </data>
+  <data name="LandingResetSearchBtn" xml:space="preserve">
+    <value>Сбросить поиск</value>
+  </data>
+  <data name="LandingQuickViewTitle" xml:space="preserve">
+    <value>Спецификация и фискализация</value>
+  </data>
+  <data name="LandingDetailsBtn" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="LandingLaunchBtn" xml:space="preserve">
+    <value>Демо</value>
+  </data>
+  <data name="CoreSuperpowersBadge" xml:space="preserve">
+    <value>Ключевые возможности Socratic</value>
+  </data>
+  <data name="CoreSuperpowersTitle" xml:space="preserve">
+    <value>Торгово-кассовый комплекс и платежная среда</value>
+  </data>
+  <data name="CoreSuperpowersDesc" xml:space="preserve">
+    <value>Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и учета в едином решении.</value>
+  </data>
+  <data name="PillarPosBadge" xml:space="preserve">
+    <value>Кассовый терминал</value>
+  </data>
+  <data name="PillarPosHeading" xml:space="preserve">
+    <value>Сенсорная касса для любого формата продаж</value>
+  </data>
+  <data name="PillarPosDesc" xml:space="preserve">
+    <value>Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.</value>
+  </data>
+  <data name="PillarPosFeat1" xml:space="preserve">
+    <value>100% Offline-First: продажи не останавливаются при обрыве интернета</value>
+  </data>
+  <data name="PillarPosFeat2" xml:space="preserve">
+    <value>Прямое подключение термопринтеров ESC/POS, весов CAS и денежных ящиков</value>
+  </data>
+  <data name="PillarPosFeat3" xml:space="preserve">
+    <value>Продажи в рассрочку (BNPL): Uzum Nasiya, Zoodpay, Alif Nasiya в 1 клик</value>
+  </data>
+  <data name="LaunchTerminalBtn" xml:space="preserve">
+    <value>Открыть кассовый терминал</value>
+  </data>
+  <data name="PillarQrBadge" xml:space="preserve">
+    <value>QR-Платежи &amp; Soliq ОФД</value>
+  </data>
+  <data name="PillarQrHeading" xml:space="preserve">
+    <value>QR-Оплата, Фискализация и Маркировка</value>
+  </data>
+  <data name="PillarQrDesc" xml:space="preserve">
+    <value>Мгновенный прием оплат через банковские приложения, официальная фискализация по законам РУз и цифровая маркировка товаров в едином чеке.</value>
+  </data>
+  <data name="LaunchQrDesignerBtn" xml:space="preserve">
+    <value>Студия QR-кодов</value>
+  </data>
+  <data name="PillarKioskBadge" xml:space="preserve">
+    <value>Смарт-Киоски</value>
+  </data>
+  <data name="PillarKioskHeading" xml:space="preserve">
+    <value>Автономные терминалы самообслуживания</value>
+  </data>
+  <data name="PillarKioskDesc" xml:space="preserve">
+    <value>Разгрузка очередей в часы пик, интерактивный электронный каталог, умные рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.</value>
+  </data>
+  <data name="PillarKioskFeat1" xml:space="preserve">
+    <value>Бесконтактная оплата картами Uzcard, Humo, Visa, Mastercard</value>
+  </data>
+  <data name="PillarKioskFeat2" xml:space="preserve">
+    <value>Синхронизация каталога и складских остатков в реальном времени</value>
+  </data>
+  <data name="PillarKioskFeat3" xml:space="preserve">
+    <value>Face Pay и распознавание карт постоянного клиента</value>
+  </data>
+  <data name="LaunchKioskBtn" xml:space="preserve">
+    <value>Запустить демо-киоск</value>
+  </data>
+  <data name="PillarAnalyticsBadge" xml:space="preserve">
+    <value>Учет &amp; Аналитика</value>
+  </data>
+  <data name="PillarAnalyticsHeading" xml:space="preserve">
+    <value>Контроль бизнеса со смартфона из любой точки мира</value>
+  </data>
+  <data name="PillarAnalyticsDesc" xml:space="preserve">
+    <value>Прозрачный складской учет, списание остатков при каждой продаже, учет сроков годности и глубокая финансовая аналитика для руководителя в реальном времени.</value>
+  </data>
+  <data name="PlatformWindowsDesc" xml:space="preserve">
+    <value>Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.</value>
+  </data>
+  <data name="DownloadWindows" xml:space="preserve">
+    <value>Скачать для Windows</value>
+  </data>
+  <data name="PlatformMacOSDesc" xml:space="preserve">
+    <value>Рабочее место управляющего, финансовая аналитика и дизайнер залов.</value>
+  </data>
+  <data name="DownloadMacOS" xml:space="preserve">
+    <value>Скачать для macOS</value>
+  </data>
+  <data name="PlatformWebDesc" xml:space="preserve">
+    <value>Мгновенный запуск в браузере без установки из любой точки мира.</value>
+  </data>
+  <data name="PlatformAndroidDesc" xml:space="preserve">
+    <value>Мобильный POS, терминал официанта и складская ревизия на смартфонах.</value>
+  </data>
+  <data name="DownloadAndroid" xml:space="preserve">
+    <value>Скачать для Android</value>
+  </data>
+  <data name="PlatformIOSDesc" xml:space="preserve">
+    <value>Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.</value>
+  </data>
+  <data name="DownloadIOS" xml:space="preserve">
+    <value>Скачать для iOS</value>
+  </data>
+  <data name="OpenInBot" xml:space="preserve">
+    <value>Telegram-бот</value>
+  </data>
+  <data name="B2bBadge" xml:space="preserve">
+    <value>Быстрый старт за 1 день</value>
+  </data>
+  <data name="B2bTitle" xml:space="preserve">
+    <value>Готовы масштабировать ваш бизнес с Socratic?</value>
+  </data>
+  <data name="B2bDesc" xml:space="preserve">
+    <value>Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.</value>
+  </data>
+  <data name="B2bKioskConnectBtn" xml:space="preserve">
+    <value>Оформить тариф в киоске Socratic</value>
+  </data>
+  <data name="B2bConsultBtn" xml:space="preserve">
+    <value>Консультация в Telegram</value>
+  </data>
+  <data name="B2bBotBtn" xml:space="preserve">
+    <value>Telegram-бот экосистемы</value>
+  </data>
+  <data name="B2bDocsBtn" xml:space="preserve">
+    <value>Документация</value>
+  </data>
+  <data name="FiscalCompliance" xml:space="preserve">
+    <value>Фискализация Soliq ОФД</value>
+  </data>
+  <data name="FiscalDesc" xml:space="preserve">
+    <value>Автогенерация фискального чека с QR-кодом ОФД, 1% кэшбэком и прямой регистрацией в налоговом комитете РУз.</value>
+  </data>
+  <data name="HardwareSupport" xml:space="preserve">
+    <value>Поддержка оборудования</value>
+  </data>
+  <data name="HardwareDesc" xml:space="preserve">
+    <value>ESC/POS термопринтеры 58/80мм, 2D-сканеры DataMatrix/EAN-13, терминалы Humo/Uzcard, весы CAS.</value>
+  </data>
+  <data name="LaunchInKiosk" xml:space="preserve">
+    <value>Запустить в интерактивном Kiosk</value>
+  </data>
+  <data name="FooterTagline" xml:space="preserve">
+    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+  </data>
+  <data name="FooterRights" xml:space="preserve">
+    <value>Все права защищены.</value>
+  </data>
+  <data name="FooterCatalog" xml:space="preserve">
+    <value>Платформа &amp; Каталог</value>
+  </data>
+  <data name="ShowroomDemo" xml:space="preserve">
+    <value>Витрина товаров Demo</value>
+  </data>
+  <data name="PlansConnect" xml:space="preserve">
+    <value>Тарифы и подключение</value>
+  </data>
+  <data name="VenuesCatalog" xml:space="preserve">
+    <value>Каталог заведений</value>
+  </data>
+  <data name="InteractiveMap" xml:space="preserve">
+    <value>Интерактивная карта</value>
+  </data>
+  <data name="QrStudio" xml:space="preserve">
+    <value>QR Designer</value>
+  </data>
+  <data name="FooterResources" xml:space="preserve">
+    <value>Ресурсы &amp; Инфо</value>
+  </data>
+  <data name="FooterCommunity" xml:space="preserve">
+    <value>Community &amp; Support</value>
+  </data>
+  <data name="CategoryRetailCatalog" xml:space="preserve">
+    <value>Ритейл &amp; Каталог</value>
+  </data>
+  <data name="CategoryHorecaBooking" xml:space="preserve">
+    <value>HoReCa &amp; Бронь</value>
+  </data>
+  <data name="CategoryServicesAi" xml:space="preserve">
+    <value>Услуги &amp; AI</value>
+  </data>
+  <data name="CategorySubscriptionsFintech" xml:space="preserve">
+    <value>Подписки &amp; Финтех</value>
+  </data>
+  <data name="UxMode_Desc_1" xml:space="preserve">
+    <value>Стандартная корзина, вариации, модификаторы и быстрое добавление товара.</value>
+  </data>
+  <data name="UxMode_Desc_2" xml:space="preserve">
+    <value>Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).</value>
+  </data>
+  <data name="UxMode_Desc_3" xml:space="preserve">
+    <value>Календарь временных слотов, бронирование столиков, залов и ресурсов.</value>
+  </data>
+  <data name="UxMode_Desc_4" xml:space="preserve">
+    <value>Интерактивный выбор мест в зале, генерация QR-билетов и валидация.</value>
+  </data>
+  <data name="UxMode_Desc_5" xml:space="preserve">
+    <value>Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.</value>
+  </data>
+  <data name="UxMode_Desc_6" xml:space="preserve">
+    <value>Почасовая и посуточная аренда транспорта и оборудования с залогом.</value>
+  </data>
+  <data name="UxMode_Desc_7" xml:space="preserve">
+    <value>Планирование временных окон доставки товаров и продуктов на дом.</value>
+  </data>
+  <data name="UxMode_Desc_8" xml:space="preserve">
+    <value>Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.</value>
+  </data>
+  <data name="UxMode_Desc_9" xml:space="preserve">
+    <value>Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.</value>
+  </data>
+  <data name="UxMode_Desc_10" xml:space="preserve">
+    <value>Мгновенное пополнение внутреннего баланса, покупка софта и файлов.</value>
+  </data>
+  <data name="UxMode_Desc_11" xml:space="preserve">
+    <value>Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.</value>
+  </data>
+  <data name="UxMode_Desc_12" xml:space="preserve">
+    <value>Добровольные пожертвования и разовые/регулярные взносы в фонды.</value>
+  </data>
+  <data name="UxMode_Desc_13" xml:space="preserve">
+    <value>Именные сертификаты с балансом и автоматической генерацией промокодов.</value>
+  </data>
+  <data name="UxMode_Desc_14" xml:space="preserve">
+    <value>Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.</value>
+  </data>
+  <data name="UxMode_Desc_15" xml:space="preserve">
+    <value>Живые аукционные торги со ставками в реальном времени и таймером.</value>
+  </data>
+  <data name="UxMode_Desc_16" xml:space="preserve">
+    <value>Частные объявления P2P-продаж с прямым контактом покупатель-продавец.</value>
+  </data>
+  <data name="UxMode_Desc_17" xml:space="preserve">
+    <value>Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).</value>
+  </data>
+  <data name="UxMode_Desc_18" xml:space="preserve">
+    <value>Готовые туристические сеты, пакетные туры и многокомпонентные наборы.</value>
+  </data>
+  <data name="UxMode_Desc_19" xml:space="preserve">
+    <value>Интерактивный калькулятор цены по габаритам и материалам.</value>
+  </data>
+  <data name="UxMode_Desc_20" xml:space="preserve">
+    <value>Цифровая анкета подачи заявок на визы, страхование и госуслуги.</value>
+  </data>
+  <data name="UxMode_Desc_21" xml:space="preserve">
+    <value>Продажа тиражных лотерейных билетов и участие в розыгрышах.</value>
+  </data>
+  <data name="UxMode_Desc_22" xml:space="preserve">
+    <value>Предварительное бронирование новинок до официального релиза.</value>
+  </data>
+  <data name="UxMode_Desc_23" xml:space="preserve">
+    <value>Совместные закупки со скидкой при достижении порога участников.</value>
+  </data>
+  <data name="UxMode_Desc_24" xml:space="preserve">
+    <value>VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.</value>
+  </data>
+  <data name="UxMode_Desc_25" xml:space="preserve">
+    <value>Инвестиционные взносы и сбор средств на стартапы и эко-проекты.</value>
+  </data>
+  <data name="UxMode_Desc_26" xml:space="preserve">
+    <value>P2P торговля и прямое подразделение обмена токенов и бонусов.</value>
+  </data>
+  <data name="UxMode_Desc_27" xml:space="preserve">
+    <value>Резервирование коворкинг-мест, оборудования и авто с ключом.</value>
+  </data>
+  <data name="UxMode_Desc_28" xml:space="preserve">
+    <value>Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).</value>
+  </data>
+  <data name="LandingHeroBadgeOfd" xml:space="preserve">
+    <value>Soliq ОФД • 1% Кешбэк</value>
+  </data>
+  <data name="LandingHeroBadgeModes" xml:space="preserve">
+    <value>28 UX-Режимов</value>
+  </data>
+  <data name="LandingMetricSec" xml:space="preserve">
+    <value>&lt; 1 с</value>
+  </data>
+  <data name="LandingMetricPoints500" xml:space="preserve">
+    <value>500+ точек</value>
+  </data>
+  <data name="LandingPillUxModes" xml:space="preserve">
+    <value>28 UX-режимов</value>
+  </data>
+  <data name="LandingPillSmartKiosk" xml:space="preserve">
+    <value>Смарт-киоск</value>
+  </data>
+  <data name="LandingPillOfdCashback" xml:space="preserve">
+    <value>Soliq ОФД 1%</value>
+  </data>
+  <data name="LandingPillOrderPay" xml:space="preserve">
+    <value>Заказ и оплата</value>
+  </data>
+  <data name="LandingPillEcosystemPlans" xml:space="preserve">
+    <value>Тарифы экосистемы</value>
+  </data>
+  <data name="LandingPillPosKiosks" xml:space="preserve">
+    <value>Кассы &amp; Киоски</value>
+  </data>
+  <data name="LandingPillDirectPurchase" xml:space="preserve">
+    <value>Прямая покупка</value>
+  </data>
+  <data name="LandingPillNoIntermediaries" xml:space="preserve">
+    <value>Без посредников</value>
+  </data>
+  <data name="LandingPillBranchNetwork" xml:space="preserve">
+    <value>Сеть филиалов</value>
+  </data>
+  <data name="LandingPillNearby" xml:space="preserve">
+    <value>Рядом со мной</value>
+  </data>
+  <data name="LandingPillMapPolygons" xml:space="preserve">
+    <value>Полигоны на карте</value>
+  </data>
+  <data name="LandingPillTariffZones" xml:space="preserve">
+    <value>Тарифные зоны</value>
+  </data>
+  <data name="LandingPillCourierRoute" xml:space="preserve">
+    <value>Маршрут курьера</value>
+  </data>
+  <data name="LandingPillLiveGps" xml:space="preserve">
+    <value>Живой GPS-трекинг</value>
+  </data>
+  <data name="LandingPillRowsSeats" xml:space="preserve">
+    <value>Ряды и места</value>
+  </data>
+  <data name="LandingPillPriceZones" xml:space="preserve">
+    <value>Ценовые зоны</value>
+  </data>
+  <data name="LandingPillLiveStatus" xml:space="preserve">
+    <value>Живой статус</value>
+  </data>
+  <data name="LandingPillDeposits" xml:space="preserve">
+    <value>Депозиты</value>
+  </data>
+  <data name="LandingPillTimeSlots" xml:space="preserve">
+    <value>Слоты времени</value>
+  </data>
+  <data name="LandingPillAccessControl" xml:space="preserve">
+    <value>СКУД доступ</value>
+  </data>
+  <data name="LandingLegendFree" xml:space="preserve">
+    <value>Свободно</value>
+  </data>
+  <data name="LandingLegendBusy" xml:space="preserve">
+    <value>Занято</value>
+  </data>
+  <data name="LandingLegendReserved" xml:space="preserve">
+    <value>Забронировано</value>
+  </data>
+  <data name="CollapseModes" xml:space="preserve">
+    <value>Свернуть каталог</value>
+  </data>
+  <data name="ExpandModes" xml:space="preserve">
+    <value>Показать все 28 режимов</value>
+  </data>
+  <data name="LandingOfdCashbackTag" xml:space="preserve">
+    <value>Soliq.uz 1% кешбэк</value>
+  </data>
+  <data name="LandingMetricMs" xml:space="preserve">
+    <value>&lt; 10 мс</value>
+  </data>
+  <data name="LandingMetricSyncDesc" xml:space="preserve">
+    <value>Синхронизация данных</value>
+  </data>
+  <data name="LandingMetricNetworkDesc" xml:space="preserve">
+    <value>Филиалов в единой сети</value>
+  </data>
+  <data name="LandingMetricOfflineDesc" xml:space="preserve">
+    <value>Автономная работа</value>
+  </data>
+  <data name="LandingPageTitle" xml:space="preserve">
+    <value>Socratic — Универсальная экосистема для бизнеса</value>
+  </data>
+  <data name="LandingMetaDesc" xml:space="preserve">
+    <value>Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.</value>
+  </data>
+  <data name="LandingHeroTitleSocratic" xml:space="preserve">
+    <value>Socratic</value>
+    <comment>Hero title flagship Socratic</comment>
+  </data>
+  <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
+    <value>Универсальная операционная система торговли и услуг</value>
+    <comment>Hero title operating system subtitle</comment>
+  </data>
+  <data name="LandingNoModesFoundDesc" xml:space="preserve">
+    <value>По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.</value>
+    <comment>Empty state description when no UX modes match query</comment>
+  </data>
 </root>

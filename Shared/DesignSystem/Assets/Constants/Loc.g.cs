@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1156.
+    /// Total unique keys: 1394.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (374 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (501 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -514,6 +514,62 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
             /// </summary>
             public const string AllRightsReserved = "AllRightsReserved";
+
+            /// <summary>
+            /// Key: <c>B2bBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый старт за 1 день&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 kunda tezkor start&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Launch in 1 Day&quot;
+            /// </summary>
+            public const string B2bBadge = "B2bBadge";
+
+            /// <summary>
+            /// Key: <c>B2bBotBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот экосистемы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim Telegram-boti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem Telegram Bot&quot;
+            /// </summary>
+            public const string B2bBotBtn = "B2bBotBtn";
+
+            /// <summary>
+            /// Key: <c>B2bConsultBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Консультация в Telegram&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram orqali maslahat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Consultation&quot;
+            /// </summary>
+            public const string B2bConsultBtn = "B2bConsultBtn";
+
+            /// <summary>
+            /// Key: <c>B2bDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, restaurant, service salon, or chain in a single unified system.&quot;
+            /// </summary>
+            public const string B2bDesc = "B2bDesc";
+
+            /// <summary>
+            /// Key: <c>B2bDocsBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Documentation&quot;
+            /// </summary>
+            public const string B2bDocsBtn = "B2bDocsBtn";
+
+            /// <summary>
+            /// Key: <c>B2bKioskConnectBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформить тариф в киоске Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic kioskida ulanish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect in Socratic Kiosk&quot;
+            /// </summary>
+            public const string B2bKioskConnectBtn = "B2bKioskConnectBtn";
+
+            /// <summary>
+            /// Key: <c>B2bTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовы масштабировать ваш бизнес с Socratic?&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznesingizni Socratic bilan kengaytirishga tayyormisiz?&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ready to Scale Your Business with Socratic?&quot;
+            /// </summary>
+            public const string B2bTitle = "B2bTitle";
 
             /// <summary>
             /// Key: <c>Bitmap1</c><br/>
@@ -572,6 +628,38 @@ namespace Assets.Constants
             public const string Cash = "Cash";
 
             /// <summary>
+            /// Key: <c>CategoryHorecaBooking</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
+            /// </summary>
+            public const string CategoryHorecaBooking = "CategoryHorecaBooking";
+
+            /// <summary>
+            /// Key: <c>CategoryRetailCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл &amp;amp; Каталог&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Katalog&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Catalog&quot;
+            /// </summary>
+            public const string CategoryRetailCatalog = "CategoryRetailCatalog";
+
+            /// <summary>
+            /// Key: <c>CategoryServicesAi</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги &amp;amp; AI&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; AI&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; AI&quot;
+            /// </summary>
+            public const string CategoryServicesAi = "CategoryServicesAi";
+
+            /// <summary>
+            /// Key: <c>CategorySubscriptionsFintech</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
+            /// </summary>
+            public const string CategorySubscriptionsFintech = "CategorySubscriptionsFintech";
+
+            /// <summary>
             /// Key: <c>Chat</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Чат&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chat&quot;<br/>
@@ -594,6 +682,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;City&quot;
             /// </summary>
             public const string City = "City";
+
+            /// <summary>
+            /// Key: <c>CollapseModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть каталог&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogni yig'ish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse catalog&quot;
+            /// </summary>
+            public const string CollapseModes = "CollapseModes";
 
             /// <summary>
             /// Key: <c>Collected</c><br/>
@@ -985,6 +1081,30 @@ namespace Assets.Constants
             public const string ControlPanel = "Control panel";
 
             /// <summary>
+            /// Key: <c>CoreSuperpowersBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ключевые возможности Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic asosiy imkoniyatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Key Capabilities&quot;
+            /// </summary>
+            public const string CoreSuperpowersBadge = "CoreSuperpowersBadge";
+
+            /// <summary>
+            /// Key: <c>CoreSuperpowersDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и учета в едином решении.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzluksiz savdo, tezkor mijozlarga xizmat ko'rsatish va to'liq soliq shaffofligi uchun barcha zarur narsalar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Everything required for non-stop sales, rapid customer service, and full tax transparency.&quot;
+            /// </summary>
+            public const string CoreSuperpowersDesc = "CoreSuperpowersDesc";
+
+            /// <summary>
+            /// Key: <c>CoreSuperpowersTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Торгово-кассовый комплекс и платежная среда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo-kassa kompleksi va to'lov muhiti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trade &amp;amp; Payment Infrastructure&quot;
+            /// </summary>
+            public const string CoreSuperpowersTitle = "CoreSuperpowersTitle";
+
+            /// <summary>
             /// Key: <c>Country</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Страна&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mamlakat&quot;<br/>
@@ -1065,6 +1185,22 @@ namespace Assets.Constants
             public const string Data = "Data";
 
             /// <summary>
+            /// Key: <c>DeliveryZonesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рисование векторных полигонов доставки на карте. Дифференцированные тарифы, бесплатная доставка от суммы и расчет зон в 1 клик.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har bir zona uchun narx va kelish vaqtini hisoblovchi moslashuvchan poligon chegaralari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom polygon borders with per-zone pricing and arrival estimation.&quot;
+            /// </summary>
+            public const string DeliveryZonesDesc = "DeliveryZonesDesc";
+
+            /// <summary>
+            /// Key: <c>DeliveryZonesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зоны Доставки (ZonePicker)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish zonalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delivery Zones&quot;
+            /// </summary>
+            public const string DeliveryZonesTitle = "DeliveryZonesTitle";
+
+            /// <summary>
             /// Key: <c>Description</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
@@ -1097,12 +1233,36 @@ namespace Assets.Constants
             public const string Documentation = "Documentation";
 
             /// <summary>
+            /// Key: <c>DownloadAndroid</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Android&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android uchun yuklab olish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Android&quot;
+            /// </summary>
+            public const string DownloadAndroid = "DownloadAndroid";
+
+            /// <summary>
             /// Key: <c>DownloadButton</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuklab olish&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Download&quot;
             /// </summary>
             public const string DownloadButton = "DownloadButton";
+
+            /// <summary>
+            /// Key: <c>DownloadIOS</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для iOS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;iOS uchun yuklab olish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for iOS&quot;
+            /// </summary>
+            public const string DownloadIOS = "DownloadIOS";
+
+            /// <summary>
+            /// Key: <c>DownloadMacOS</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для macOS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS uchun yuklab olish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for macOS&quot;
+            /// </summary>
+            public const string DownloadMacOS = "DownloadMacOS";
 
             /// <summary>
             /// Key: <c>DownloadSubTitle</c><br/>
@@ -1119,6 +1279,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic UI&quot;
             /// </summary>
             public const string DownloadTitle = "DownloadTitle";
+
+            /// <summary>
+            /// Key: <c>DownloadWindows</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Windows&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows uchun yuklab olish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Windows&quot;
+            /// </summary>
+            public const string DownloadWindows = "DownloadWindows";
 
             /// <summary>
             /// Key: <c>Edit organization</c><br/>
@@ -1159,6 +1327,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;An error occurred while rendering component&quot;
             /// </summary>
             public const string ErrorRendering = "ErrorRendering";
+
+            /// <summary>
+            /// Key: <c>ExpandModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Показать все 28 режимов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimni ko'rsatish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Show all 28 modes&quot;
+            /// </summary>
+            public const string ExpandModes = "ExpandModes";
 
             /// <summary>
             /// Key: <c>FilePicker_AttachedFiles</c><br/>
@@ -1297,6 +1473,22 @@ namespace Assets.Constants
             public const string FirstName = "FirstName";
 
             /// <summary>
+            /// Key: <c>FiscalCompliance</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq ОФД&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD fiskallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Fiscalization&quot;
+            /// </summary>
+            public const string FiscalCompliance = "FiscalCompliance";
+
+            /// <summary>
+            /// Key: <c>FiscalDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автогенерация фискального чека с QR-кодом ОФД, 1% кэшбэком и прямой регистрацией в налоговом комитете РУз.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;OFD QR kodli fiskal chekni avtomatik yaratish, 1% keshbek va soliq talablariga muvofiqlik.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Automatic fiscal receipt generation with OFD QR code, 1% cashback, and tax service compliance.&quot;
+            /// </summary>
+            public const string FiscalDesc = "FiscalDesc";
+
+            /// <summary>
             /// Key: <c>Footer_Col_Catalog</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -1345,6 +1537,14 @@ namespace Assets.Constants
             public const string Footer_Tagline = "Footer_Tagline";
 
             /// <summary>
+            /// Key: <c>FooterCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа &amp;amp; Каталог&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma &amp;amp; Katalog&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform &amp;amp; Catalog&quot;
+            /// </summary>
+            public const string FooterCatalog = "FooterCatalog";
+
+            /// <summary>
             /// Key: <c>Footer_Col_Catalog</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -1377,6 +1577,30 @@ namespace Assets.Constants
             public const string FooterColResources = "Footer_Col_Resources";
 
             /// <summary>
+            /// Key: <c>FooterCommunity</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Community &amp;amp; Support&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Community &amp;amp; Support&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Community &amp;amp; Support&quot;
+            /// </summary>
+            public const string FooterCommunity = "FooterCommunity";
+
+            /// <summary>
+            /// Key: <c>FooterResources</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ресурсы &amp;amp; Инфо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Resurslar &amp;amp; Ma'lumot&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Resources &amp;amp; Info&quot;
+            /// </summary>
+            public const string FooterResources = "FooterResources";
+
+            /// <summary>
+            /// Key: <c>FooterRights</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все права защищены.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha huquqlar himoyalangan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
+            /// </summary>
+            public const string FooterRights = "FooterRights";
+
+            /// <summary>
             /// Key: <c>Footer_Status</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Все системы работают стабильно&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha tizimlar barqaror ishlamoqda&quot;<br/>
@@ -1385,12 +1609,44 @@ namespace Assets.Constants
             public const string FooterStatus = "Footer_Status";
 
             /// <summary>
-            /// Key: <c>Footer_Tagline</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.&quot;
+            /// Key: <c>FooterTagline</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;
             /// </summary>
-            public const string FooterTagline = "Footer_Tagline";
+            public const string FooterTagline = "FooterTagline";
+
+            /// <summary>
+            /// Key: <c>GeoMapLiveSync</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоопределение геопозиции и радиуса обслуживания&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ScyllaDB NoSQL orqali geonuqtalar jonli sinxronizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;ScyllaDB NoSQL live sync across geo points&quot;
+            /// </summary>
+            public const string GeoMapLiveSync = "GeoMapLiveSync";
+
+            /// <summary>
+            /// Key: <c>GeoMapWingBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Географическая Платформа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+            /// </summary>
+            public const string GeoMapWingBadge = "GeoMapWingBadge";
+
+            /// <summary>
+            /// Key: <c>GeoMapWingDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление сетью торговых точек, складами, пунктами выдачи (ПВЗ), полигонами курьерской доставки и встроенный GPS-навигатор для курьеров.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dinamik manzillar qidiruvi, yetkazib berish poligon zonalari va filiallarga yaqinlik marshrutlash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dynamic address search, delivery polygon zones, and branch proximity routing.&quot;
+            /// </summary>
+            public const string GeoMapWingDesc = "GeoMapWingDesc";
+
+            /// <summary>
+            /// Key: <c>GeoMapWingTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта филиалов, зон и навигатор&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geokodlash &amp;amp; Yetkazib berish logistikasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Geocoding &amp;amp; Delivery Logistics&quot;
+            /// </summary>
+            public const string GeoMapWingTitle = "GeoMapWingTitle";
 
             /// <summary>
             /// Key: <c>Green</c><br/>
@@ -1399,6 +1655,110 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Green&quot;
             /// </summary>
             public const string Green = "Green";
+
+            /// <summary>
+            /// Key: <c>HardwareDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;ESC/POS термопринтеры 58/80мм, 2D-сканеры DataMatrix/EAN-13, терминалы Humo/Uzcard, весы CAS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS 58/80mm termoprinterlar, 2D DataMatrix skanerlar va tarozilar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;ESC/POS 58/80mm thermal printers, 2D DataMatrix scanners, and weighing scales.&quot;
+            /// </summary>
+            public const string HardwareDesc = "HardwareDesc";
+
+            /// <summary>
+            /// Key: <c>HardwareSupport</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поддержка оборудования&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunalarni qo'llab-quvvatlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware Support&quot;
+            /// </summary>
+            public const string HardwareSupport = "HardwareSupport";
+
+            /// <summary>
+            /// Key: <c>HeroBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+            /// </summary>
+            public const string HeroBadgeLabel = "HeroBadge";
+
+            /// <summary>
+            /// Key: <c>HeroBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+            /// </summary>
+            public const string HeroBadgeText = "HeroBadge";
+
+            /// <summary>
+            /// Key: <c>HeroMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карта и доставка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita va yetkazib berish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Map &amp;amp; Delivery&quot;
+            /// </summary>
+            public const string HeroMap = "HeroMap";
+
+            /// <summary>
+            /// Key: <c>HeroModulesLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Специализированные модули:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtisoslashgan modullar:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Specialized modules:&quot;
+            /// </summary>
+            public const string HeroModulesLabel = "HeroModulesLabel";
+
+            /// <summary>
+            /// Key: <c>HeroQrDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-фискализация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR fiskallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Fiscalization&quot;
+            /// </summary>
+            public const string HeroQrDesigner = "HeroQrDesigner";
+
+            /// <summary>
+            /// Key: <c>HeroSeatDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор залов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar konstruktori&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Seat Designer&quot;
+            /// </summary>
+            public const string HeroSeatDesigner = "HeroSeatDesigner";
+
+            /// <summary>
+            /// Key: <c>HeroShowroom</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Product Showroom&quot;
+            /// </summary>
+            public const string HeroShowroom = "HeroShowroom";
+
+            /// <summary>
+            /// Key: <c>HeroSocraticOrg</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tariflari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Plans&quot;
+            /// </summary>
+            public const string HeroSocraticOrg = "HeroSocraticOrg";
+
+            /// <summary>
+            /// Key: <c>HeroSubtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+            /// </summary>
+            public const string HeroSubtitleLabel = "HeroSubtitle";
+
+            /// <summary>
+            /// Key: <c>HeroSubtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+            /// </summary>
+            public const string HeroSubtitleText = "HeroSubtitle";
+
+            /// <summary>
+            /// Key: <c>HeroTerminal</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// </summary>
+            public const string HeroTerminal = "HeroTerminal";
 
             /// <summary>
             /// Key: <c>Home_LoadingPlayer</c><br/>
@@ -1473,6 +1833,14 @@ namespace Assets.Constants
             public const string ImageText = "Image";
 
             /// <summary>
+            /// Key: <c>InteractiveMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+            /// </summary>
+            public const string InteractiveMap = "InteractiveMap";
+
+            /// <summary>
             /// Key: <c>Kiosk</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
@@ -1521,6 +1889,54 @@ namespace Assets.Constants
             public const string LaunchButton = "LaunchButton";
 
             /// <summary>
+            /// Key: <c>LaunchInKiosk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить в интерактивном Kiosk&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv Kioskda ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Interactive Kiosk&quot;
+            /// </summary>
+            public const string LaunchInKiosk = "LaunchInKiosk";
+
+            /// <summary>
+            /// Key: <c>LaunchKioskBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить демо-киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskni ishga tushirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Demo Kiosk&quot;
+            /// </summary>
+            public const string LaunchKioskBtn = "LaunchKioskBtn";
+
+            /// <summary>
+            /// Key: <c>LaunchMapBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть карту и навигатор&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritani ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Interactive Map&quot;
+            /// </summary>
+            public const string LaunchMapBtn = "LaunchMapBtn";
+
+            /// <summary>
+            /// Key: <c>LaunchQrDesignerBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Студия QR-кодов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kodlar studiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Studio&quot;
+            /// </summary>
+            public const string LaunchQrDesignerBtn = "LaunchQrDesignerBtn";
+
+            /// <summary>
+            /// Key: <c>LaunchSeatDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор SeatDesigner&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal konstruktorini ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Seat Designer&quot;
+            /// </summary>
+            public const string LaunchSeatDesigner = "LaunchSeatDesigner";
+
+            /// <summary>
+            /// Key: <c>LaunchTerminalBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open POS Terminal&quot;
+            /// </summary>
+            public const string LaunchTerminalBtn = "LaunchTerminalBtn";
+
+            /// <summary>
             /// Key: <c>Light</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Светлая&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yorug'&quot;<br/>
@@ -1535,6 +1951,30 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Light&quot;
             /// </summary>
             public const string LightText = "Light";
+
+            /// <summary>
+            /// Key: <c>MacroPillarsBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;4 фундаментальных направления&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic to'rtta ustuni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four Foundations of Socratic&quot;
+            /// </summary>
+            public const string MacroPillarsBadge = "MacroPillarsBadge";
+
+            /// <summary>
+            /// Key: <c>MacroPillarsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic объединяет физические товары, сферу услуг, аренду пространств и цифровые сервисы в едином технологическом комплексе без ограничений.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtasidan boshlab global fiskal hisobotlargacha bo'lgan to'liq tijorat siklini qamrab oluvchi yagona platforma.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform covering full commerce cycle from point of sale to global fiscal reporting.&quot;
+            /// </summary>
+            public const string MacroPillarsDesc = "MacroPillarsDesc";
+
+            /// <summary>
+            /// Key: <c>MacroPillarsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая экосистема для любого формата торговли и услуг&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday biznes miqyosi uchun universal arxitektura&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Architecture for Any Scale of Business&quot;
+            /// </summary>
+            public const string MacroPillarsTitle = "MacroPillarsTitle";
 
             /// <summary>
             /// Key: <c>Made</c><br/>
@@ -2233,6 +2673,22 @@ namespace Assets.Constants
             public const string NavHome = "NavHome";
 
             /// <summary>
+            /// Key: <c>NavigatorDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Встроенное ведение по маршруту для курьеров и водителей доставки, расчет километража, времени прибытия и живой трекинг заказа.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer va mijozlar uchun optimal yo'nalish hisob-kitobi bilan nuqtadan nuqtaga navigatsiya.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point-to-point courier and client navigation with optimal pathing.&quot;
+            /// </summary>
+            public const string NavigatorDesc = "NavigatorDesc";
+
+            /// <summary>
+            /// Key: <c>NavigatorTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;GPS-Навигатор и Маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aqlli marshrutlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Routing&quot;
+            /// </summary>
+            public const string NavigatorTitle = "NavigatorTitle";
+
+            /// <summary>
             /// Key: <c>NavOrders</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar&quot;<br/>
@@ -2281,6 +2737,14 @@ namespace Assets.Constants
             public const string NewText = "New";
 
             /// <summary>
+            /// Key: <c>No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;
+            /// </summary>
+            public const string NoCommercialScenariosMatchYourCurrentSearchOrCategoryFilterTryClearingFiltersToSeeAll28Modes = "No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.";
+
+            /// <summary>
             /// Key: <c>Notice</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Внимание&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Diqqat&quot;<br/>
@@ -2311,6 +2775,38 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Online&quot;
             /// </summary>
             public const string Online = "Online";
+
+            /// <summary>
+            /// Key: <c>OpenDemoShowroom</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть витрину Demo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo vitrinani ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Showroom&quot;
+            /// </summary>
+            public const string OpenDemoShowroom = "OpenDemoShowroom";
+
+            /// <summary>
+            /// Key: <c>OpenInBot</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram-bot&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Bot&quot;
+            /// </summary>
+            public const string OpenInBot = "OpenInBot";
+
+            /// <summary>
+            /// Key: <c>OpenSocraticSelfSelling</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic в Киоске&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic o'zini-o'zi sotish portali&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Self-Selling Portal&quot;
+            /// </summary>
+            public const string OpenSocraticSelfSelling = "OpenSocraticSelfSelling";
+
+            /// <summary>
+            /// Key: <c>OpenTerminalDemo</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS kassani ishga tushirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch POS Terminal&quot;
+            /// </summary>
+            public const string OpenTerminalDemo = "OpenTerminalDemo";
 
             /// <summary>
             /// Key: <c>Order</c><br/>
@@ -2383,6 +2879,54 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations&quot;
             /// </summary>
             public const string OrganizationsText = "Organizations";
+
+            /// <summary>
+            /// Key: <c>OrgDemoBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo • Шоурум товаров&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommaviy namoyish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Public Demonstration&quot;
+            /// </summary>
+            public const string OrgDemoBadge = "OrgDemoBadge";
+
+            /// <summary>
+            /// Key: <c>OrgDemoDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive showcase of beverages, desserts, modifiers, and instant card checkout.&quot;
+            /// </summary>
+            public const string OrgDemoDesc = "OrgDemoDesc";
+
+            /// <summary>
+            /// Key: <c>OrgDemoTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо-витрина ритейла, блюд и услуг&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;quot;Demo&amp;quot; qahvaxona va novvoyxona tarmog'i&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coffee &amp;amp; Bakery Chain &amp;quot;Demo&amp;quot;&quot;
+            /// </summary>
+            public const string OrgDemoTitle = "OrgDemoTitle";
+
+            /// <summary>
+            /// Key: <c>OrgSocraticBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Official Organization&quot;
+            /// </summary>
+            public const string OrgSocraticBadge = "OrgSocraticBadge";
+
+            /// <summary>
+            /// Key: <c>OrgSocraticDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.&quot;
+            /// </summary>
+            public const string OrgSocraticDesc = "OrgSocraticDesc";
+
+            /// <summary>
+            /// Key: <c>OrgSocraticTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic продает сама себя&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ekotizimi yadrosi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
+            /// </summary>
+            public const string OrgSocraticTitle = "OrgSocraticTitle";
 
             /// <summary>
             /// Key: <c>OwnerId</c><br/>
@@ -2497,6 +3041,214 @@ namespace Assets.Constants
             public const string PhoneText = "Phone";
 
             /// <summary>
+            /// Key: <c>PillarAnalyticsBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Inventory &amp;amp; Analytics&quot;
+            /// </summary>
+            public const string PillarAnalyticsBadge = "PillarAnalyticsBadge";
+
+            /// <summary>
+            /// Key: <c>PillarAnalyticsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прозрачный складской учет, списание остатков при каждой продаже, учет сроков годности и глубокая финансовая аналитика для руководителя в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaffof ombor hisobi, avtomatik hisobdan chiqarish, smena hisobotlari va P&amp;amp;L tahlili.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Transparent warehouse tracking, automatic write-offs, cashier shift reports, and P&amp;amp;L analytics.&quot;
+            /// </summary>
+            public const string PillarAnalyticsDesc = "PillarAnalyticsDesc";
+
+            /// <summary>
+            /// Key: <c>PillarAnalyticsHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Контроль бизнеса со смартфона из любой точки мира&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dunyoning istalgan nuqtasidan smartfon orqali biznesni boshqarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time Business Control from Anywhere&quot;
+            /// </summary>
+            public const string PillarAnalyticsHeading = "PillarAnalyticsHeading";
+
+            /// <summary>
+            /// Key: <c>PillarFintechDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискальные чеки Soliq ОФД (1% кешбэк), оплата Click, Payme, Uzum, рассрочка BNPL (Uzum Nasiya, Zoodpay) и сплит-чеки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri Soliq OFD integratsiyasi, 1% keshbek, fiskal QR cheklar va to'lov kartalari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct Soliq OFD integration, 1% cashback, fiscal QR receipts, and payment cards.&quot;
+            /// </summary>
+            public const string PillarFintechDesc = "PillarFintechDesc";
+
+            /// <summary>
+            /// Key: <c>PillarFintechTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи, QR и финтех&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex &amp;amp; Fiskallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech &amp;amp; Fiscalization&quot;
+            /// </summary>
+            public const string PillarFintechTitle = "PillarFintechTitle";
+
+            /// <summary>
+            /// Key: <c>PillarKioskBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-Киоски&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-Kiosklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Self-Service Kiosks&quot;
+            /// </summary>
+            public const string PillarKioskBadge = "PillarKioskBadge";
+
+            /// <summary>
+            /// Key: <c>PillarKioskDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Разгрузка очередей в часы пик, интерактивный электронный каталог, умные рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tig'iz vaqtlarda navbatlarni qisqartirish, interaktiv elektron menyu va avtomatik takliflar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Queue reduction in rush hours, interactive electronic menu, and automated upselling.&quot;
+            /// </summary>
+            public const string PillarKioskDesc = "PillarKioskDesc";
+
+            /// <summary>
+            /// Key: <c>PillarKioskFeat1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Бесконтактная оплата картами Uzcard, Humo, Visa, Mastercard&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzcard, Humo, Visa, MasterCard kartalari bilan kontaktsiz to'lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Contactless card payments: Uzcard, Humo, Visa, MasterCard.&quot;
+            /// </summary>
+            public const string PillarKioskFeat1 = "PillarKioskFeat1";
+
+            /// <summary>
+            /// Key: <c>PillarKioskFeat2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация каталога и складских остатков в реальном времени&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Markaziy ombor bilan katalog va qoldiqlarni real vaqtda sinxronlashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time catalog and inventory sync with central store repository.&quot;
+            /// </summary>
+            public const string PillarKioskFeat2 = "PillarKioskFeat2";
+
+            /// <summary>
+            /// Key: <c>PillarKioskFeat3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Face Pay и распознавание карт постоянного клиента&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face Pay, doimiy mijoz kartalarini tanish va shaxsiy chegirmalar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Face Pay, loyalty card scanning, and automated personal discounts.&quot;
+            /// </summary>
+            public const string PillarKioskFeat3 = "PillarKioskFeat3";
+
+            /// <summary>
+            /// Key: <c>PillarKioskHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономные терминалы самообслуживания&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous Self-Ordering Terminals&quot;
+            /// </summary>
+            public const string PillarKioskHeading = "PillarKioskHeading";
+
+            /// <summary>
+            /// Key: <c>PillarPosBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассовый терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminali&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash Register Terminal&quot;
+            /// </summary>
+            public const string PillarPosBadge = "PillarPosBadge";
+
+            /// <summary>
+            /// Key: <c>PillarPosDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for sellers, cashiers, and store managers.&quot;
+            /// </summary>
+            public const string PillarPosDesc = "PillarPosDesc";
+
+            /// <summary>
+            /// Key: <c>PillarPosFeat1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Offline-First: продажи не останавливаются при обрыве интернета&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Offline-First: uninterrupted checkout without Internet connection.&quot;
+            /// </summary>
+            public const string PillarPosFeat1 = "PillarPosFeat1";
+
+            /// <summary>
+            /// Key: <c>PillarPosFeat2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямое подключение термопринтеров ESC/POS, весов CAS и денежных ящиков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS termoprinterlari, CAS tarozilari va 2D skanerlarni to'g'ridan-to'g'ri ulash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct connection to ESC/POS thermal printers, CAS scales, and 2D barcode scanners.&quot;
+            /// </summary>
+            public const string PillarPosFeat2 = "PillarPosFeat2";
+
+            /// <summary>
+            /// Key: <c>PillarPosFeat3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажи в рассрочку (BNPL): Uzum Nasiya, Zoodpay, Alif Nasiya в 1 клик&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muddatli to'lov (BNPL): Uzum Nasiya, Zoodpay va hisobni bo'lib to'lash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Installment &amp;amp; BNPL sales: Uzum Nasiya, Zoodpay, and split bills.&quot;
+            /// </summary>
+            public const string PillarPosFeat3 = "PillarPosFeat3";
+
+            /// <summary>
+            /// Key: <c>PillarPosHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорная касса для любого формата продаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun sensorli kassa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch POS for any sales format&quot;
+            /// </summary>
+            public const string PillarPosHeading = "PillarPosHeading";
+
+            /// <summary>
+            /// Key: <c>PillarQrBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Платежи &amp;amp; Soliq ОФД&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lovlar &amp;amp; Soliq OFD&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments &amp;amp; Soliq OFD&quot;
+            /// </summary>
+            public const string PillarQrBadge = "PillarQrBadge";
+
+            /// <summary>
+            /// Key: <c>PillarQrDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный прием оплат через банковские приложения, официальная фискализация по законам РУз и цифровая маркировка товаров в едином чеке.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bank ilovalari orqali avtomatik fiskal ro'yxatdan o'tkazish bilan tezkor to'lovlarni qabul qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant payment acceptance via mobile banking apps with automatic fiscal registration.&quot;
+            /// </summary>
+            public const string PillarQrDesc = "PillarQrDesc";
+
+            /// <summary>
+            /// Key: <c>PillarQrHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Оплата, Фискализация и Маркировка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lov, fiskallashtirish va markirovka&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments, Fiscalization &amp;amp; Marking&quot;
+            /// </summary>
+            public const string PillarQrHeading = "PillarQrHeading";
+
+            /// <summary>
+            /// Key: <c>PillarRetailDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.&quot;
+            /// </summary>
+            public const string PillarRetailDesc = "PillarRetailDesc";
+
+            /// <summary>
+            /// Key: <c>PillarRetailTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Розничная торговля и товары&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana &amp;amp; Ulgurji savdo&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Wholesale&quot;
+            /// </summary>
+            public const string PillarRetailTitle = "PillarRetailTitle";
+
+            /// <summary>
+            /// Key: <c>PillarServicesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-запись клиентов к мастерам, управление временными слотами, калькуляция смет и абонементы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar band qilish, usta jadvallari, onlayn yozilish va avtomatlashtirilgan SMS eslatmalar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Booking spaces, master scheduling, online records, and automated SMS reminders.&quot;
+            /// </summary>
+            public const string PillarServicesDesc = "PillarServicesDesc";
+
+            /// <summary>
+            /// Key: <c>PillarServicesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сфера услуг и мастера&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; Bron qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; Booking&quot;
+            /// </summary>
+            public const string PillarServicesTitle = "PillarServicesTitle";
+
+            /// <summary>
+            /// Key: <c>PillarSpacesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивные векторные схемы залов SeatDesigner, бронирование столиков и номеров, QR-билеты и валидация на турникетах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv o'tirish sxemasi, stol tartibi va mehmonlar uchun QR-buyurtma hisob-kitobi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive seat design, table layouts, and QR-order checkout for guests.&quot;
+            /// </summary>
+            public const string PillarSpacesDesc = "PillarSpacesDesc";
+
+            /// <summary>
+            /// Key: <c>PillarSpacesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пространства, залы и билеты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; Maydonlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Halls &amp;amp; Spaces&quot;
+            /// </summary>
+            public const string PillarSpacesTitle = "PillarSpacesTitle";
+
+            /// <summary>
             /// Key: <c>Places</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Места&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar&quot;<br/>
@@ -2513,12 +3265,36 @@ namespace Assets.Constants
             public const string Plans = "Plans";
 
             /// <summary>
+            /// Key: <c>PlansConnect</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы и подключение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflar va ulanish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariffs &amp;amp; Connection&quot;
+            /// </summary>
+            public const string PlansConnect = "PlansConnect";
+
+            /// <summary>
             /// Key: <c>PlatformAndroid</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Android (APK / Play Store)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android (APK / Play Store)&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Android (APK / Play Store)&quot;
             /// </summary>
             public const string PlatformAndroid = "PlatformAndroid";
+
+            /// <summary>
+            /// Key: <c>PlatformAndroidDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мобильный POS, терминал официанта и складская ревизия на смартфонах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mobil POS, ofitsiant terminali va ombor inventarizatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Mobile POS, waiter handheld terminal, and warehouse stock-taking.&quot;
+            /// </summary>
+            public const string PlatformAndroidDesc = "PlatformAndroidDesc";
+
+            /// <summary>
+            /// Key: <c>PlatformDocs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitektura hujjatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Architecture Documentation&quot;
+            /// </summary>
+            public const string PlatformDocs = "PlatformDocs";
 
             /// <summary>
             /// Key: <c>PlatformIOS</c><br/>
@@ -2529,12 +3305,28 @@ namespace Assets.Constants
             public const string PlatformIOS = "PlatformIOS";
 
             /// <summary>
+            /// Key: <c>PlatformIOSDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad cashier desks and customer-facing displays.&quot;
+            /// </summary>
+            public const string PlatformIOSDesc = "PlatformIOSDesc";
+
+            /// <summary>
             /// Key: <c>PlatformMacOS</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;
             /// </summary>
             public const string PlatformMacOS = "PlatformMacOS";
+
+            /// <summary>
+            /// Key: <c>PlatformMacOSDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место управляющего, финансовая аналитика и дизайнер залов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruvchi ish joyi, moliyaviy tahlil va mahsulotlar boshqaruvi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Executive workstation, financial analytics, and product management.&quot;
+            /// </summary>
+            public const string PlatformMacOSDesc = "PlatformMacOSDesc";
 
             /// <summary>
             /// Key: <c>PlatformWeb</c><br/>
@@ -2545,12 +3337,44 @@ namespace Assets.Constants
             public const string PlatformWeb = "PlatformWeb";
 
             /// <summary>
+            /// Key: <c>PlatformWebDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный запуск в браузере без установки из любой точки мира.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday kompyuter, planshet yoki smartfondan o'rnatmasdan brauzerda tezkor ishga tushirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant browser launch without installation from any PC, tablet, or smartphone.&quot;
+            /// </summary>
+            public const string PlatformWebDesc = "PlatformWebDesc";
+
+            /// <summary>
             /// Key: <c>PlatformWindows</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Windows (x64 / ARM64)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows (x64 / ARM64)&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Windows (x64 / ARM64)&quot;
             /// </summary>
             public const string PlatformWindows = "PlatformWindows";
+
+            /// <summary>
+            /// Key: <c>PlatformWindowsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen POS cashier terminal, back-office administration, and offline local cache.&quot;
+            /// </summary>
+            public const string PlatformWindowsDesc = "PlatformWindowsDesc";
+
+            /// <summary>
+            /// Key: <c>PointsPresenceDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive markers of retail branches, coffee shops, and pickup points.&quot;
+            /// </summary>
+            public const string PointsPresenceDesc = "PointsPresenceDesc";
+
+            /// <summary>
+            /// Key: <c>PointsPresenceTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки и Филиалы (PointPicker)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudlik nuqtalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Presence&quot;
+            /// </summary>
+            public const string PointsPresenceTitle = "PointsPresenceTitle";
 
             /// <summary>
             /// Key: <c>Preparing</c><br/>
@@ -3097,6 +3921,30 @@ namespace Assets.Constants
             public const string SeatDesignerSwitchToPreview = "SeatDesigner_SwitchToPreview";
 
             /// <summary>
+            /// Key: <c>SeatDesignerWingBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный Редактор Залов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor zal konstruktori&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector Hall Designer&quot;
+            /// </summary>
+            public const string SeatDesignerWingBadge = "SeatDesignerWingBadge";
+
+            /// <summary>
+            /// Key: <c>SeatDesignerWingDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный редактор SeatDesigner для создания интерактивных схем: столики, ряды кресел, переговорные комнаты и номера с живым статусом занятости.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran stollari, kinoteatr qatorlari, stadionlar va konferensiya zallari uchun vizual muharrir.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual editor for restaurant tables, cinema rows, stadiums, and conference halls.&quot;
+            /// </summary>
+            public const string SeatDesignerWingDesc = "SeatDesignerWingDesc";
+
+            /// <summary>
+            /// Key: <c>SeatDesignerWingTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор помещений и бронирование мест&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vizual pol va o'tirish sxemalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual Floor &amp;amp; Seat Layouts&quot;
+            /// </summary>
+            public const string SeatDesignerWingTitle = "SeatDesignerWingTitle";
+
+            /// <summary>
             /// Key: <c>Shipping</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Доставляется&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazilmoqda&quot;<br/>
@@ -3113,12 +3961,44 @@ namespace Assets.Constants
             public const string ShippingText = "Shipping";
 
             /// <summary>
+            /// Key: <c>ShowcaseBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые интерактивные витрины&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli interaktiv namoyish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live Interactive Demonstration&quot;
+            /// </summary>
+            public const string ShowcaseBadge = "ShowcaseBadge";
+
+            /// <summary>
+            /// Key: <c>ShowcaseHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Испытайте экосистему в реальном действии&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ni real biznes ssenariylarida sinab ko'ring&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Test Socratic in Real Business Scenarios&quot;
+            /// </summary>
+            public const string ShowcaseHeading = "ShowcaseHeading";
+
+            /// <summary>
+            /// Key: <c>ShowcaseSub</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.&quot;
+            /// </summary>
+            public const string ShowcaseSub = "ShowcaseSub";
+
+            /// <summary>
             /// Key: <c>Showroom</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar vitrinasi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom&quot;
             /// </summary>
             public const string Showroom = "Showroom";
+
+            /// <summary>
+            /// Key: <c>ShowroomDemo</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom Demo&quot;
+            /// </summary>
+            public const string ShowroomDemo = "ShowroomDemo";
 
             /// <summary>
             /// Key: <c>SmartDataView_Kanban</c><br/>
@@ -3193,6 +4073,62 @@ namespace Assets.Constants
             public const string SocraticID = "SocraticID";
 
             /// <summary>
+            /// Key: <c>SpatialTechBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карты, Зоны Доставки &amp;amp; Навигация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fazoiy texnologiyalar &amp;amp; Logistika&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Spatial Technologies &amp;amp; Logistics&quot;
+            /// </summary>
+            public const string SpatialTechBadge = "SpatialTechBadge";
+
+            /// <summary>
+            /// Key: <c>SpatialTechHeading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Гео-карты сети, зоны доставки, навигатор и схемы залов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritalar &amp;amp; Zal konstruktori&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Maps &amp;amp; Hall Designer&quot;
+            /// </summary>
+            public const string SpatialTechHeading = "SpatialTechHeading";
+
+            /// <summary>
+            /// Key: <c>SpatialTechSub</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единый геопространственный комплекс: от интерактивной карты филиалов, векторных полигонов доставки и GPS-навигатора курьера до миллиметровых схем залов и бронирования столиков.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor grafika, real vaqtda geokodlash, ko'p zonali poligonlar va chipta o'rinlarini tezkor render qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector graphics, real-time geocoding, multi-zone polygons, and instant ticket seat rendering.&quot;
+            /// </summary>
+            public const string SpatialTechSub = "SpatialTechSub";
+
+            /// <summary>
+            /// Key: <c>SpecBranches</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Масштабирование сетей&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallarni markaziy boshqarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Centralized Chain Control&quot;
+            /// </summary>
+            public const string SpecBranches = "SpecBranches";
+
+            /// <summary>
+            /// Key: <c>SpecCashback</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кешбэк Soliq ОФД&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD keshbek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Cashback&quot;
+            /// </summary>
+            public const string SpecCashback = "SpecCashback";
+
+            /// <summary>
+            /// Key: <c>SpecOffline</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Offline-First надежность&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Offline-First ishonchliligi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Offline-First Reliability&quot;
+            /// </summary>
+            public const string SpecOffline = "SpecOffline";
+
+            /// <summary>
+            /// Key: <c>SpecSpeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость кассы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa tezligi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal Speed&quot;
+            /// </summary>
+            public const string SpecSpeed = "SpecSpeed";
+
+            /// <summary>
             /// Key: <c>Status</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Статус&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Status&quot;<br/>
@@ -3247,6 +4183,30 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;System&quot;
             /// </summary>
             public const string SystemText = "System";
+
+            /// <summary>
+            /// Key: <c>TabKiosk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosk&quot;
+            /// </summary>
+            public const string TabKiosk = "TabKiosk";
+
+            /// <summary>
+            /// Key: <c>TabPos</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// </summary>
+            public const string TabPos = "TabPos";
+
+            /// <summary>
+            /// Key: <c>TabSpaces</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Залы &amp;amp; QR&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; QR&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Spaces &amp;amp; QR&quot;
+            /// </summary>
+            public const string TabSpaces = "TabSpaces";
 
             /// <summary>
             /// Key: <c>Terminal</c><br/>
@@ -3383,6 +4343,62 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Uz&quot;
             /// </summary>
             public const string Uz = "Uz";
+
+            /// <summary>
+            /// Key: <c>VenueHoreca</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рестораны, Кафе &amp;amp; Лаунджи&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoranlar &amp;amp; Loungelar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Restaurants &amp;amp; Lounges&quot;
+            /// </summary>
+            public const string VenueHoreca = "VenueHoreca";
+
+            /// <summary>
+            /// Key: <c>VenueHorecaDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки зала с живыми статусами столиков: Свободно, Занято, Депозитная бронь. Интеграция с кассой официанта.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar tartibi, VIP xonalar, veranda zonalari va ofitsiantlarni biriktirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Table layout, VIP rooms, veranda zones, and waiter assignment.&quot;
+            /// </summary>
+            public const string VenueHorecaDesc = "VenueHorecaDesc";
+
+            /// <summary>
+            /// Key: <c>VenuesCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasalar katalogi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Venues Catalog&quot;
+            /// </summary>
+            public const string VenuesCatalog = "VenuesCatalog";
+
+            /// <summary>
+            /// Key: <c>VenueSpaces</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отели, Коворкинги &amp;amp; Аренда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorkinglar &amp;amp; Arenalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking &amp;amp; Arenas&quot;
+            /// </summary>
+            public const string VenueSpaces = "VenueSpaces";
+
+            /// <summary>
+            /// Key: <c>VenueSpacesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы этажей, выбор переговорных комнат, рабочих мест, гостиничных номеров или беседок с почасовой тарификацией.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Erkin stollar, doimiy o'rinlar, muzokaralar xonalari va tadbirlarga chiptalar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hot desks, fixed stations, conference rooms, and event ticketing.&quot;
+            /// </summary>
+            public const string VenueSpacesDesc = "VenueSpacesDesc";
+
+            /// <summary>
+            /// Key: <c>VenueTheaters</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Театры, Кино &amp;amp; Концерты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kinoteatrlar &amp;amp; Teatrlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cinemas &amp;amp; Theaters&quot;
+            /// </summary>
+            public const string VenueTheaters = "VenueTheaters";
+
+            /// <summary>
+            /// Key: <c>VenueTheatersDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы партера, амфитеатра и балконов. Выбор мест с дифференцированными ценами, бронь билетов и моментальная оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Parter, amfiteatr, balkonlar, ko'p darajali narxlar va bir marta bosishda bron qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Parterre, amphiteater, balconies, multi-tier pricing, and single-click booking.&quot;
+            /// </summary>
+            public const string VenueTheatersDesc = "VenueTheatersDesc";
 
             /// <summary>
             /// Key: <c>Wish list</c><br/>
@@ -14330,18 +15346,10 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Landing (321 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
+        /// Domain group: Landing (303 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
         /// </summary>
         public static class Landing
         {
-            /// <summary>
-            /// Key: <c>About</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
-            /// </summary>
-            public const string About = "About";
-
             /// <summary>
             /// Key: <c>About_ActionsSubtitle</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте интерактивные сценарии в живом окружении прямо сейчас.&quot;<br/>
@@ -14719,6 +15727,14 @@ namespace Assets.Constants
             public const string AboutSubtitle = "AboutSubtitle";
 
             /// <summary>
+            /// Key: <c>About</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
+            /// </summary>
+            public const string AboutText = "About";
+
+            /// <summary>
             /// Key: <c>AboutTitleMain</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Интеллектуальная экосистема&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intellektual ekotizim&quot;<br/>
@@ -14829,30 +15845,6 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
             /// </summary>
             public const string AboutVideoTitle = "About_VideoTitle";
-
-            /// <summary>
-            /// Key: <c>About_ActionsSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте интерактивные сценарии в живом окружении прямо сейчас.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli muhitda interaktiv ssenariylarni hoziroq sinab ko'ring.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Try interactive scenarios in a live environment right now.&quot;
-            /// </summary>
-            public const string ActionsSubtitle = "About_ActionsSubtitle";
-
-            /// <summary>
-            /// Key: <c>About_ActionsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовы протестировать возможности?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Imkoniyatlarni sinab ko'rishga tayyormisiz?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ready to test the capabilities?&quot;
-            /// </summary>
-            public const string ActionsTitle = "About_ActionsTitle";
-
-            /// <summary>
-            /// Key: <c>Analytics_ActualSales</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
-            /// </summary>
-            public const string ActualSales = "Analytics_ActualSales";
 
             /// <summary>
             /// Key: <c>Analytics_ActualSales</c><br/>
@@ -15295,214 +16287,6 @@ namespace Assets.Constants
             public const string AnalyticsTopProducts = "Analytics_TopProducts";
 
             /// <summary>
-            /// Key: <c>Analytics_AverageBill</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average bill&quot;
-            /// </summary>
-            public const string AverageBill = "Analytics_AverageBill";
-
-            /// <summary>
-            /// Key: <c>QR_BackToTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Назад в терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalga qaytish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Back to Terminal&quot;
-            /// </summary>
-            public const string BackToTerminal = "QR_BackToTerminal";
-
-            /// <summary>
-            /// Key: <c>Help_BtnDocs</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейти в документацию&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatlarga o'tish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to Documentation&quot;
-            /// </summary>
-            public const string BtnDocs = "Help_BtnDocs";
-
-            /// <summary>
-            /// Key: <c>About_BtnKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
-            /// </summary>
-            public const string BtnKiosk = "About_BtnKiosk";
-
-            /// <summary>
-            /// Key: <c>Help_BtnOpenChat</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть чат&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chatni ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open chat&quot;
-            /// </summary>
-            public const string BtnOpenChat = "Help_BtnOpenChat";
-
-            /// <summary>
-            /// Key: <c>About_BtnTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
-            /// </summary>
-            public const string BtnTerminal = "About_BtnTerminal";
-
-            /// <summary>
-            /// Key: <c>Analytics_ByRevenue</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;by revenue for selected period&quot;
-            /// </summary>
-            public const string ByRevenue = "Analytics_ByRevenue";
-
-            /// <summary>
-            /// Key: <c>Help_CardChatDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенные консультации встроенного AI-ассистента и подключение инженеров платформы.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rnatilgan AI-yordamchisining tezkor maslahatlari va platforma muhandislari.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant consultations with built-in AI assistant and platform engineer escalations.&quot;
-            /// </summary>
-            public const string CardChatDesc = "Help_CardChatDesc";
-
-            /// <summary>
-            /// Key: <c>Help_CardChatTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-чат поддержки&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn qo'llab-quvvatlash chati&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Online support chat&quot;
-            /// </summary>
-            public const string CardChatTitle = "Help_CardChatTitle";
-
-            /// <summary>
-            /// Key: <c>Help_CardDocsDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;37 интерактивных руководств, архитектурные схемы и спецификация всех модулей.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;37 ta interaktiv qo'llanma va barcha modullar spetsifikatsiyasi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;37 interactive guides, architecture diagrams and module specifications.&quot;
-            /// </summary>
-            public const string CardDocsDesc = "Help_CardDocsDesc";
-
-            /// <summary>
-            /// Key: <c>Help_CardDocsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;База знаний и API&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bilimlar bazasi va API&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Knowledge Base &amp;amp; API&quot;
-            /// </summary>
-            public const string CardDocsTitle = "Help_CardDocsTitle";
-
-            /// <summary>
-            /// Key: <c>Help_CardPhoneDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Экстренное решение вопросов доступности касс, фискализации и работы оборудования.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar mavjudligi, fiskallashtirish va uskunalar ishlashi bo'yicha favqulodda yordam.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Emergency resolution of cashier uptime, fiscalization and hardware issues.&quot;
-            /// </summary>
-            public const string CardPhoneDesc = "Help_CardPhoneDesc";
-
-            /// <summary>
-            /// Key: <c>Help_CardPhoneTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Дежурная линия 24/7&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 navbatchi aloqa liniyasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Hotline&quot;
-            /// </summary>
-            public const string CardPhoneTitle = "Help_CardPhoneTitle";
-
-            /// <summary>
-            /// Key: <c>Help_CatAi</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;AI &amp;amp; Аналитика&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; Tahlil&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Analytics&quot;
-            /// </summary>
-            public const string CatAi = "Help_CatAi";
-
-            /// <summary>
-            /// Key: <c>Help_CatAll</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все вопросы&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha savollar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;All questions&quot;
-            /// </summary>
-            public const string CatAll = "Help_CatAll";
-
-            /// <summary>
-            /// Key: <c>Help_CategoriesAria</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Категории вопросов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savollar toifalari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Question categories&quot;
-            /// </summary>
-            public const string CategoriesAria = "Help_CategoriesAria";
-
-            /// <summary>
-            /// Key: <c>Help_CatHardware</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оборудование&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunalar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware&quot;
-            /// </summary>
-            public const string CatHardware = "Help_CatHardware";
-
-            /// <summary>
-            /// Key: <c>Help_CatModes</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-rejim&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX Modes&quot;
-            /// </summary>
-            public const string CatModes = "Help_CatModes";
-
-            /// <summary>
-            /// Key: <c>Help_CatPayments</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и QR&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovlar va QR&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; QR&quot;
-            /// </summary>
-            public const string CatPayments = "Help_CatPayments";
-
-            /// <summary>
-            /// Key: <c>Help_CatPos</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
-            /// </summary>
-            public const string CatPos = "Help_CatPos";
-
-            /// <summary>
-            /// Key: <c>Analytics_CompletedReceipts</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
-            /// </summary>
-            public const string CompletedReceipts = "Analytics_CompletedReceipts";
-
-            /// <summary>
-            /// Key: <c>Analytics_ConfigTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройка виджетов аналитики&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil vidjetlarini sozlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure analytics widgets&quot;
-            /// </summary>
-            public const string ConfigTitle = "Analytics_ConfigTitle";
-
-            /// <summary>
-            /// Key: <c>Analytics_Configure</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure&quot;
-            /// </summary>
-            public const string Configure = "Analytics_Configure";
-
-            /// <summary>
-            /// Key: <c>Analytics_ConfigureTooltip</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить виджеты аналитики&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil vidjetlarini sozlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure analytics widgets&quot;
-            /// </summary>
-            public const string ConfigureTooltip = "Analytics_ConfigureTooltip";
-
-            /// <summary>
-            /// Key: <c>Analytics_Dashboard</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dashboard&quot;
-            /// </summary>
-            public const string DashboardText = "Analytics_Dashboard";
-
-            /// <summary>
-            /// Key: <c>Analytics_DistributionShare</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;распределение долей&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ulushlar taqsimoti&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
-            /// </summary>
-            public const string DistributionShare = "Analytics_DistributionShare";
-
-            /// <summary>
             /// Key: <c>Docs_LoadingDoc</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка документа...&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjat yuklanmoqda...&quot;<br/>
@@ -15629,158 +16413,6 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
             /// </summary>
             public const string DocsWelcomeTitle = "Docs_WelcomeTitle";
-
-            /// <summary>
-            /// Key: <c>Analytics_Explorer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Реестры&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reyestrlar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Explorer&quot;
-            /// </summary>
-            public const string Explorer = "Analytics_Explorer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqAiAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Модуль Intelligence использует локальные нейросети YOLO и FaceNet. Видеопоток с камеры обрабатывается в реальном времени: система определяет длину очереди, пол/возраст покупателей и персональные скидки программы лояльности.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intelligence moduli mahalliy YOLO va FaceNet neyrotarmoqlaridan foydalanadi. Kamera video oqimi real vaqtda qayta ishlanadi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Intelligence module uses local YOLO and FaceNet networks. Video stream is processed in real time.&quot;
-            /// </summary>
-            public const string FaqAiAnswer = "Help_FaqAiAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqAiTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как работает распознавание лиц и детекция очередей?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuzni tanish va navbatlarni aniqlash qanday ishlaydi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How does face recognition and queue detection work?&quot;
-            /// </summary>
-            public const string FaqAiTitle = "Help_FaqAiTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqDynamicQrAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;При расчете заказа кассовый модуль генерирует уникальный QR-код с идентификатором транзакции и точной суммой. Код отображается на дисплее покупателя или экране киоска. После считывания в банковском приложении и подтверждения вебхука чек закрывается моментально.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmani hisoblashda kassa moduli noyob QR-kod yaratadi. Xaridor bank ilovasida to'lagandan so'ng chek bir zumda yopiladi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;When finalizing an order, a unique QR code is generated. Once scanned and paid in a mobile bank app, the receipt closes instantly.&quot;
-            /// </summary>
-            public const string FaqDynamicQrAnswer = "Help_FaqDynamicQrAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqDynamicQrTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как работает динамический QR-код на дисплее покупателя?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor displeyidagi dinamik QR-kod qanday ishlaydi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How does dynamic QR work on customer display?&quot;
-            /// </summary>
-            public const string FaqDynamicQrTitle = "Help_FaqDynamicQrTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqHardwareAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Модуль Hardware.Device поддерживает фискальные регистраторы и принтеры чеков ESC/POS (USB, Ethernet, Wi-Fi, Bluetooth), 2D-сканеры штрих-кодов и маркировки DataMatrix, торговые весы (CAS, Масса-К) и электромагнитные денежные ящики.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hardware.Device moduli ESC/POS chek printerlari, 2D skanerlar, savdo tarozilari va pul qutilarini qo'llab-quvvatlaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware.Device module supports ESC/POS printers, 2D barcode scanners, scales and cash drawers.&quot;
-            /// </summary>
-            public const string FaqHardwareAnswer = "Help_FaqHardwareAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqHardwareStatusAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейдите в инженерный раздел «Оборудование» (/hardware). В панели управления отображается статус каждого подключенного устройства, остаток чековой ленты и журнал диагностики с возможностью тестовой печати чека.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Uskunalar» (/hardware) bo'limiga o'ting. Boshqaruv panelida har bir qurilmaning holati va diagnostika jurnali ko'rsatiladi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to Hardware section (/hardware). The panel shows connection status of each device and diagnostics log.&quot;
-            /// </summary>
-            public const string FaqHardwareStatusAnswer = "Help_FaqHardwareStatusAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqHardwareStatusTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как проверить статус подключения оборудования?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunaning ulanish holatini qanday tekshirish mumkin?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to check hardware connection status?&quot;
-            /// </summary>
-            public const string FaqHardwareStatusTitle = "Help_FaqHardwareStatusTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqHardwareTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Какое торговое оборудование поддерживается?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qanday savdo uskunalari qo'llab-quvvatlanadi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;What retail hardware is supported?&quot;
-            /// </summary>
-            public const string FaqHardwareTitle = "Help_FaqHardwareTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
-            /// </summary>
-            public const string FaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
-            /// </summary>
-            public const string FaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqModesAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Это универсальный движок UniversalProductExperienceRenderer. Он адаптирует пользовательский интерфейс каталога и корзины под любой тип бизнеса: ресторанное меню, билеты с местами, аренда по времени, аукционы, бронирование услуг или продажа маркированных товаров.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu universal UniversalProductExperienceRenderer mexanizmi. U har qanday biznes turiga interfeysni moslashtiradi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;UniversalProductExperienceRenderer engine adapts catalog and cart UI for any business type.&quot;
-            /// </summary>
-            public const string FaqModesAnswer = "Help_FaqModesAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqModesTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Что представляют собой 28 UX-режимов коммерции?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta tijorat UX-rejimi nimani anglatadi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;What are the 28 Commerce UX Modes?&quot;
-            /// </summary>
-            public const string FaqModesTitle = "Help_FaqModesTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
-            /// </summary>
-            public const string FaqOfflineAnswer = "Help_FaqOfflineAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqOfflineTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
-            /// </summary>
-            public const string FaqOfflineTitle = "Help_FaqOfflineTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
-            /// </summary>
-            public const string FaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
-
-            /// <summary>
-            /// Key: <c>Help_FaqPaymentsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Какие платежные методы поддерживаются из коробки?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qaysi to'lov usullari qutidan tashqarida qo'llab-quvvatlanadi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;What payment methods are supported out of the box?&quot;
-            /// </summary>
-            public const string FaqPaymentsTitle = "Help_FaqPaymentsTitle";
-
-            /// <summary>
-            /// Key: <c>Help_FaqSectionAria</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Часто задаваемые вопросы&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tez-tez beriladigan savollar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Frequently Asked Questions&quot;
-            /// </summary>
-            public const string FaqSectionAria = "Help_FaqSectionAria";
-
-            /// <summary>
-            /// Key: <c>Analytics_FiscalRatio</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля фискализации&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fiskallashtirish ulushi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscalization share&quot;
-            /// </summary>
-            public const string FiscalRatio = "Analytics_FiscalRatio";
 
             /// <summary>
             /// Key: <c>Help_BtnDocs</c><br/>
@@ -16423,172 +17055,668 @@ namespace Assets.Constants
             public const string HelpTitleSub = "HelpTitleSub";
 
             /// <summary>
-            /// Key: <c>Docs_LoadingDoc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка документа...&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjat yuklanmoqda...&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading document...&quot;
+            /// Key: <c>LandingAiFlagshipBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман AI &amp;amp; SaaS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; SaaS yetakchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Cloud Flagship&quot;
             /// </summary>
-            public const string LoadingDoc = "Docs_LoadingDoc";
+            public const string LandingAiFlagshipBadge = "LandingAiFlagshipBadge";
 
             /// <summary>
-            /// Key: <c>Docs_Navigation</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Навигация&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Navigatsiya&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Navigation&quot;
+            /// Key: <c>LandingAiFlagshipDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и тарификация микросервисов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor API kalitlari berish, LLM token kvotalari, kompyuter ko'rishi va mikroxizmatlar billingi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant API keys issuance, LLM token quotas, computer vision access, and microservice billing.&quot;
             /// </summary>
-            public const string NavigationText = "Docs_Navigation";
+            public const string LandingAiFlagshipDesc = "LandingAiFlagshipDesc";
 
             /// <summary>
-            /// Key: <c>Docs_NoDocsAvailable</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет доступной документации&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjud hujjatlar yo'q&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;No documentation available&quot;
+            /// Key: <c>LandingAiFlagshipTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-сервис &amp;amp; AI Доступ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn xizmat &amp;amp; AI ruxsat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Online Service &amp;amp; AI Access&quot;
             /// </summary>
-            public const string NoDocsAvailable = "Docs_NoDocsAvailable";
+            public const string LandingAiFlagshipTitle = "LandingAiFlagshipTitle";
 
             /// <summary>
-            /// Key: <c>Analytics_OfdReceipts</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;GNC OFD receipts&quot;
+            /// Key: <c>LandingAiPillApiKey</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;API-ключи&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;API kalitlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;API Key Generator&quot;
             /// </summary>
-            public const string OfdReceipts = "Analytics_OfdReceipts";
+            public const string LandingAiPillApiKey = "LandingAiPillApiKey";
 
             /// <summary>
-            /// Key: <c>Analytics_OrdersCount</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Orders count&quot;
+            /// Key: <c>LandingAiPillQuotas</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Квоты LLM токенов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;LLM token kvotalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;LLM Quotas&quot;
             /// </summary>
-            public const string OrdersCount = "Analytics_OrdersCount";
+            public const string LandingAiPillQuotas = "LandingAiPillQuotas";
 
             /// <summary>
-            /// Key: <c>Docs_PageTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация системы | Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim hujjatlari | Socratic&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;System Documentation | Socratic&quot;
+            /// Key: <c>LandingAiPillWebhooks</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Webhooks &amp;amp; Автоматизация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Webhooks &amp;amp; Avtomatlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Webhooks&quot;
             /// </summary>
-            public const string PageTitleText = "Docs_PageTitle";
+            public const string LandingAiPillWebhooks = "LandingAiPillWebhooks";
 
             /// <summary>
-            /// Key: <c>Analytics_PaymentChannels</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
+            /// Key: <c>LandingCategoryAll</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все режимы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha rejimlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All Modes&quot;
             /// </summary>
-            public const string PaymentChannels = "Analytics_PaymentChannels";
+            public const string LandingCategoryAll = "LandingCategoryAll";
 
             /// <summary>
-            /// Key: <c>Analytics_PeriodLabel</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Период аналитики&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil davri&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics period&quot;
+            /// Key: <c>LandingCategoryFintech</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
             /// </summary>
-            public const string PeriodLabelText = "Analytics_PeriodLabel";
+            public const string LandingCategoryFintech = "LandingCategoryFintech";
 
             /// <summary>
-            /// Key: <c>Analytics_PerTransaction</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;На одну транзакцию&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta tranzaksiya uchun&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
+            /// Key: <c>LandingCategoryHoreca</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
             /// </summary>
-            public const string PerTransaction = "Analytics_PerTransaction";
+            public const string LandingCategoryHoreca = "LandingCategoryHoreca";
 
             /// <summary>
-            /// Key: <c>Help_PhoneLabel</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;+998 (71) 200-00-00&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;+998 (71) 200-00-00&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;+998 (71) 200-00-00&quot;
+            /// Key: <c>LandingCategoryRetail</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл и Торговля&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Tijorat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Commerce&quot;
             /// </summary>
-            public const string PhoneLabel = "Help_PhoneLabel";
+            public const string LandingCategoryRetail = "LandingCategoryRetail";
 
             /// <summary>
-            /// Key: <c>About_PillarKioskDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+            /// Key: <c>LandingCategoryServices</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги, SaaS &amp;amp; AI&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar, SaaS &amp;amp; AI&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Services, SaaS &amp;amp; AI&quot;
             /// </summary>
-            public const string PillarKioskDesc = "About_PillarKioskDesc";
+            public const string LandingCategoryServices = "LandingCategoryServices";
 
             /// <summary>
-            /// Key: <c>About_PillarKioskTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+            /// Key: <c>LandingClearSearchAria</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить поиск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni tozalash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear search&quot;
             /// </summary>
-            public const string PillarKioskTitle = "About_PillarKioskTitle";
+            public const string LandingClearSearchAria = "LandingClearSearchAria";
 
             /// <summary>
-            /// Key: <c>About_PillarModesDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный рендерер под любой сценарий: от ресторанов и отелей до аренды, аукционов и абонементов.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday ssenariy uchun universal render: restoran, mehmonxona, ijara va auksionlar.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal renderer for any scenario: from restaurants and hotels to rentals and auctions.&quot;
+            /// Key: <c>LandingDetailsBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Детали&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tafsilotlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Details&quot;
             /// </summary>
-            public const string PillarModesDesc = "About_PillarModesDesc";
+            public const string LandingDetailsBtn = "LandingDetailsBtn";
 
             /// <summary>
-            /// Key: <c>About_PillarModesTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов коммерции&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta tijorat UX-rejimi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Commerce UX Modes&quot;
+            /// Key: <c>LandingFintechFlagshipBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Финтеха&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex yetakchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech Flagship&quot;
             /// </summary>
-            public const string PillarModesTitle = "About_PillarModesTitle";
+            public const string LandingFintechFlagshipBadge = "LandingFintechFlagshipBadge";
 
             /// <summary>
-            /// Key: <c>About_PillarsBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ключевые направления&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy yo'nalishlar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Key directions&quot;
+            /// Key: <c>LandingFintechFlagshipDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоматические рекуррентные списания, гибкие тарифные сетки, абонементы и мгновенная фискализация.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomatik davriy to'lovlar, moslashuvchan tariflar, abonementlar va tezkor fiskallashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Automated recurring debits, tiered subscription plans, gym passes, and automatic fiscalization.&quot;
             /// </summary>
-            public const string PillarsBadge = "About_PillarsBadge";
+            public const string LandingFintechFlagshipDesc = "LandingFintechFlagshipDesc";
 
             /// <summary>
-            /// Key: <c>About_PillarsSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Модульная структура позволяет развертывать необходимые сервисы без избыточной связности.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Modulli tuzilma ortiqcha bog'liqliksiz zarur xizmatlarni joylashtirish imkonini beradi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Modular structure allows deploying required services without excessive coupling.&quot;
+            /// Key: <c>LandingFintechFlagshipTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные подписки &amp;amp; Биллинг&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Davriy obunalar &amp;amp; Billing&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring Subscriptions&quot;
             /// </summary>
-            public const string PillarsSubtitle = "About_PillarsSubtitle";
+            public const string LandingFintechFlagshipTitle = "LandingFintechFlagshipTitle";
 
             /// <summary>
-            /// Key: <c>About_PillarsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+            /// Key: <c>LandingFintechPillFiscal</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автофискализация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtofiskallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscal Receipts&quot;
             /// </summary>
-            public const string PillarsTitle = "About_PillarsTitle";
+            public const string LandingFintechPillFiscal = "LandingFintechPillFiscal";
 
             /// <summary>
-            /// Key: <c>About_PillarStudioDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный WebGL-холст, 3D схемы залов, кастомизация векторных брендированных QR-кодов с логотипом.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv WebGL xolst, zallarning 3D sxemalari va brendlangan QR-kodlar.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive WebGL canvas, 3D venue layouts and vector branded QR codes.&quot;
+            /// Key: <c>LandingFintechPillPricing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные сетки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif to'rlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Multi-tier Pricing&quot;
             /// </summary>
-            public const string PillarStudioDesc = "About_PillarStudioDesc";
+            public const string LandingFintechPillPricing = "LandingFintechPillPricing";
 
             /// <summary>
-            /// Key: <c>About_PillarStudioTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D &amp;amp; QR Студия&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D &amp;amp; QR Studiya&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D &amp;amp; QR Studio&quot;
+            /// Key: <c>LandingFintechPillRecurring</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Авторекурренты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtotolovlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Auto Recurring&quot;
             /// </summary>
-            public const string PillarStudioTitle = "About_PillarStudioTitle";
+            public const string LandingFintechPillRecurring = "LandingFintechPillRecurring";
 
             /// <summary>
-            /// Key: <c>About_PillarVisionDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Детекция объектов YOLO в реальном времени, биометрия Face ID, аналитика очередей и WebRTC-трансляции.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda YOLO obyektlarni aniqlash, Face ID biometriyasi va navbatlar tahlili.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time YOLO object detection, Face ID biometrics and queue analytics.&quot;
+            /// Key: <c>LandingFlagshipSubtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых столпа коммерческой автоматизации Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Top four foundational scenarios powering enterprise automation&quot;
             /// </summary>
-            public const string PillarVisionDesc = "About_PillarVisionDesc";
+            public const string LandingFlagshipSubtitle = "LandingFlagshipSubtitle";
 
             /// <summary>
-            /// Key: <c>About_PillarVisionTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;AI &amp;amp; Компьютерное зрение&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; Kompyuter ko'rishi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Computer Vision&quot;
+            /// Key: <c>LandingFlagshipTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагманские Архетипы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetakchi arxetiplar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Flagship Archetypes&quot;
             /// </summary>
-            public const string PillarVisionTitle = "About_PillarVisionTitle";
+            public const string LandingFlagshipTitle = "LandingFlagshipTitle";
+
+            /// <summary>
+            /// Key: <c>LandingHeroBadgeModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-Режимов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-Rejim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX Modes&quot;
+            /// </summary>
+            public const string LandingHeroBadgeModes = "LandingHeroBadgeModes";
+
+            /// <summary>
+            /// Key: <c>LandingHeroBadgeOfd</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+            /// </summary>
+            public const string LandingHeroBadgeOfd = "LandingHeroBadgeOfd";
+
+            /// <summary>
+            /// Key: <c>LandingHeroTitleOperatingSystem</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная операционная система торговли и услуг&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo va xizmatlarning universal operatsion tizimi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal operating system for commerce and services&quot;
+            /// </summary>
+            public const string LandingHeroTitleOperatingSystem = "LandingHeroTitleOperatingSystem";
+
+            /// <summary>
+            /// Key: <c>LandingHeroTitleSocratic</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic&quot;
+            /// </summary>
+            public const string LandingHeroTitleSocratic = "LandingHeroTitleSocratic";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaFlagshipBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман HoReCa&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa yetakchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa Flagship&quot;
+            /// </summary>
+            public const string LandingHorecaFlagshipBadge = "LandingHorecaFlagshipBadge";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaFlagshipDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сетка временных интервалов в реальном времени, интерактивная схема залов и защита от овербукинга.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda vaqt oraliqlari to'ri, zallarning interaktiv rejasi va ortiqcha bron qilishdan himoya.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time time slot grid, restaurant floor plan, hall reservations, and zero-overbooking protection.&quot;
+            /// </summary>
+            public const string LandingHorecaFlagshipDesc = "LandingHorecaFlagshipDesc";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaFlagshipTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронирование столов &amp;amp; Времени&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar &amp;amp; Vaqtni band qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Table &amp;amp; Time Booking&quot;
+            /// </summary>
+            public const string LandingHorecaFlagshipTitle = "LandingHorecaFlagshipTitle";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaPillFloorPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'tirish rejasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor Plan&quot;
+            /// </summary>
+            public const string LandingHorecaPillFloorPlan = "LandingHorecaPillFloorPlan";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaPillSlots</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тайм-слоты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time Slots&quot;
+            /// </summary>
+            public const string LandingHorecaPillSlots = "LandingHorecaPillSlots";
+
+            /// <summary>
+            /// Key: <c>LandingHorecaPillSms</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;SMS &amp;amp; TG Бронь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS &amp;amp; TG xabarnoma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SMS Notifications&quot;
+            /// </summary>
+            public const string LandingHorecaPillSms = "LandingHorecaPillSms";
+
+            /// <summary>
+            /// Key: <c>LandingLaunchBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch&quot;
+            /// </summary>
+            public const string LandingLaunchBtn = "LandingLaunchBtn";
+
+            /// <summary>
+            /// Key: <c>LandingLaunchDemoKiosk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть в демо-киоске&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskda ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Demo Kiosk&quot;
+            /// </summary>
+            public const string LandingLaunchDemoKiosk = "LandingLaunchDemoKiosk";
+
+            /// <summary>
+            /// Key: <c>LandingLegendBusy</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Занято&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Occupied&quot;
+            /// </summary>
+            public const string LandingLegendBusy = "LandingLegendBusy";
+
+            /// <summary>
+            /// Key: <c>LandingLegendFree</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Свободно&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bo'sh&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Available&quot;
+            /// </summary>
+            public const string LandingLegendFree = "LandingLegendFree";
+
+            /// <summary>
+            /// Key: <c>LandingLegendReserved</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Забронировано&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band qilingan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Reserved&quot;
+            /// </summary>
+            public const string LandingLegendReserved = "LandingLegendReserved";
+
+            /// <summary>
+            /// Key: <c>LandingMetaDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — unified platform for retail sales, services, space booking, and payment processing.&quot;
+            /// </summary>
+            public const string LandingMetaDesc = "LandingMetaDesc";
+
+            /// <summary>
+            /// Key: <c>LandingMetricMs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 10 мс&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 10 ms&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 10 ms&quot;
+            /// </summary>
+            public const string LandingMetricMs = "LandingMetricMs";
+
+            /// <summary>
+            /// Key: <c>LandingMetricNetworkDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалов в единой сети&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yagona tarmoqdagi filiallar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches in unified network&quot;
+            /// </summary>
+            public const string LandingMetricNetworkDesc = "LandingMetricNetworkDesc";
+
+            /// <summary>
+            /// Key: <c>LandingMetricOfflineDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономная работа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtonom ishlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous offline work&quot;
+            /// </summary>
+            public const string LandingMetricOfflineDesc = "LandingMetricOfflineDesc";
+
+            /// <summary>
+            /// Key: <c>LandingMetricPoints500</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;500+ точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;500+ nuqtalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;500+ branches&quot;
+            /// </summary>
+            public const string LandingMetricPoints500 = "LandingMetricPoints500";
+
+            /// <summary>
+            /// Key: <c>LandingMetricSec</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 1 с&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 1 s&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 1 s&quot;
+            /// </summary>
+            public const string LandingMetricSec = "LandingMetricSec";
+
+            /// <summary>
+            /// Key: <c>LandingMetricSyncDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация данных&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar sinxronizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Data synchronization&quot;
+            /// </summary>
+            public const string LandingMetricSyncDesc = "LandingMetricSyncDesc";
+
+            /// <summary>
+            /// Key: <c>LandingNoModesFoundDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;So'rovingiz bo'yicha hech qanday tijorat ssenariysi topilmadi. Qidiruvni tozalang yoki toifani almashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.&quot;
+            /// </summary>
+            public const string LandingNoModesFoundDesc = "LandingNoModesFoundDesc";
+
+            /// <summary>
+            /// Key: <c>LandingNoModesFoundTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Режимов не найдено&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlar topilmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No UX modes match your query&quot;
+            /// </summary>
+            public const string LandingNoModesFoundTitle = "LandingNoModesFoundTitle";
+
+            /// <summary>
+            /// Key: <c>LandingOfdCashbackTag</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq.uz 1% кешбэк&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz 1% keshbek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz 1% cashback&quot;
+            /// </summary>
+            public const string LandingOfdCashbackTag = "LandingOfdCashbackTag";
+
+            /// <summary>
+            /// Key: <c>LandingOfLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+            /// </summary>
+            public const string LandingOfLabel = "LandingOfLabel";
+
+            /// <summary>
+            /// Key: <c>LandingPageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — Универсальная экосистема для бизнеса&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — Biznes uchun universal ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Universal Business Ecosystem&quot;
+            /// </summary>
+            public const string LandingPageTitle = "LandingPageTitle";
+
+            /// <summary>
+            /// Key: <c>LandingPillAccessControl</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;СКУД доступ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKUD ruxsat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Access control&quot;
+            /// </summary>
+            public const string LandingPillAccessControl = "LandingPillAccessControl";
+
+            /// <summary>
+            /// Key: <c>LandingPillBranchNetwork</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть филиалов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar tarmog'i&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branch network&quot;
+            /// </summary>
+            public const string LandingPillBranchNetwork = "LandingPillBranchNetwork";
+
+            /// <summary>
+            /// Key: <c>LandingPillCourierRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут курьера&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer marshruti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Courier route&quot;
+            /// </summary>
+            public const string LandingPillCourierRoute = "LandingPillCourierRoute";
+
+            /// <summary>
+            /// Key: <c>LandingPillDeposits</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Депозиты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Depozitlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Deposits&quot;
+            /// </summary>
+            public const string LandingPillDeposits = "LandingPillDeposits";
+
+            /// <summary>
+            /// Key: <c>LandingPillDirectPurchase</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямая покупка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri xarid&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct purchase&quot;
+            /// </summary>
+            public const string LandingPillDirectPurchase = "LandingPillDirectPurchase";
+
+            /// <summary>
+            /// Key: <c>LandingPillEcosystemPlans</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы экосистемы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim tariflari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem plans&quot;
+            /// </summary>
+            public const string LandingPillEcosystemPlans = "LandingPillEcosystemPlans";
+
+            /// <summary>
+            /// Key: <c>LandingPillLiveGps</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой GPS-трекинг&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli GPS treking&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live GPS tracking&quot;
+            /// </summary>
+            public const string LandingPillLiveGps = "LandingPillLiveGps";
+
+            /// <summary>
+            /// Key: <c>LandingPillLiveStatus</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой статус&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli holat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live status&quot;
+            /// </summary>
+            public const string LandingPillLiveStatus = "LandingPillLiveStatus";
+
+            /// <summary>
+            /// Key: <c>LandingPillMapPolygons</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигоны на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritadagi poligonlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Map polygons&quot;
+            /// </summary>
+            public const string LandingPillMapPolygons = "LandingPillMapPolygons";
+
+            /// <summary>
+            /// Key: <c>LandingPillNearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом со мной&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinimda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Near me&quot;
+            /// </summary>
+            public const string LandingPillNearby = "LandingPillNearby";
+
+            /// <summary>
+            /// Key: <c>LandingPillNoIntermediaries</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Без посредников&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vositachilarsiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No intermediaries&quot;
+            /// </summary>
+            public const string LandingPillNoIntermediaries = "LandingPillNoIntermediaries";
+
+            /// <summary>
+            /// Key: <c>LandingPillOfdCashback</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД 1%&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD 1%&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD 1%&quot;
+            /// </summary>
+            public const string LandingPillOfdCashback = "LandingPillOfdCashback";
+
+            /// <summary>
+            /// Key: <c>LandingPillOrderPay</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ и оплата&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma va to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order and payment&quot;
+            /// </summary>
+            public const string LandingPillOrderPay = "LandingPillOrderPay";
+
+            /// <summary>
+            /// Key: <c>LandingPillPosKiosks</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы &amp;amp; Киоски&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar &amp;amp; Kiosklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS &amp;amp; Kiosks&quot;
+            /// </summary>
+            public const string LandingPillPosKiosks = "LandingPillPosKiosks";
+
+            /// <summary>
+            /// Key: <c>LandingPillPriceZones</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ценовые зоны&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Narx zonalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Price zones&quot;
+            /// </summary>
+            public const string LandingPillPriceZones = "LandingPillPriceZones";
+
+            /// <summary>
+            /// Key: <c>LandingPillRowsSeats</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ряды и места&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qatorlar va o'rinlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Rows &amp;amp; seats&quot;
+            /// </summary>
+            public const string LandingPillRowsSeats = "LandingPillRowsSeats";
+
+            /// <summary>
+            /// Key: <c>LandingPillSmartKiosk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart kiosk&quot;
+            /// </summary>
+            public const string LandingPillSmartKiosk = "LandingPillSmartKiosk";
+
+            /// <summary>
+            /// Key: <c>LandingPillTariffZones</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные зоны&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif zonalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff zones&quot;
+            /// </summary>
+            public const string LandingPillTariffZones = "LandingPillTariffZones";
+
+            /// <summary>
+            /// Key: <c>LandingPillTimeSlots</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Слоты времени&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slots&quot;
+            /// </summary>
+            public const string LandingPillTimeSlots = "LandingPillTimeSlots";
+
+            /// <summary>
+            /// Key: <c>LandingPillUxModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-rejim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX modes&quot;
+            /// </summary>
+            public const string LandingPillUxModes = "LandingPillUxModes";
+
+            /// <summary>
+            /// Key: <c>LandingQuickViewTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Спецификация и фискализация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Spetsifikatsiya va fiskallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QuickView&quot;
+            /// </summary>
+            public const string LandingQuickViewTitle = "LandingQuickViewTitle";
+
+            /// <summary>
+            /// Key: <c>LandingResetFilters</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить фильтры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filtrlarni tozalash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset filters&quot;
+            /// </summary>
+            public const string LandingResetFilters = "LandingResetFilters";
+
+            /// <summary>
+            /// Key: <c>LandingResetSearchBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить поиск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni qayta o'rnatish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset Search&quot;
+            /// </summary>
+            public const string LandingResetSearchBtn = "LandingResetSearchBtn";
+
+            /// <summary>
+            /// Key: <c>LandingRetailFlagshipBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Ритейла&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo yetakchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail Flagship&quot;
+            /// </summary>
+            public const string LandingRetailFlagshipBadge = "LandingRetailFlagshipBadge";
+
+            /// <summary>
+            /// Key: <c>LandingRetailFlagshipDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.&quot;
+            /// </summary>
+            public const string LandingRetailFlagshipDesc = "LandingRetailFlagshipDesc";
+
+            /// <summary>
+            /// Key: <c>LandingRetailFlagshipTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Экспресс-касса&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor kassa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Catalog &amp;amp; Fast Checkout&quot;
+            /// </summary>
+            public const string LandingRetailFlagshipTitle = "LandingRetailFlagshipTitle";
+
+            /// <summary>
+            /// Key: <c>LandingRetailPillCheckout</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Express Checkout&quot;
+            /// </summary>
+            public const string LandingRetailPillCheckout = "LandingRetailPillCheckout";
+
+            /// <summary>
+            /// Key: <c>LandingRetailPillModifiers</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Модификаторы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Modifikatorlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Modifiers&quot;
+            /// </summary>
+            public const string LandingRetailPillModifiers = "LandingRetailPillModifiers";
+
+            /// <summary>
+            /// Key: <c>LandingRetailPillSku</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU Матрица&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU matritsasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU Matrix&quot;
+            /// </summary>
+            public const string LandingRetailPillSku = "LandingRetailPillSku";
+
+            /// <summary>
+            /// Key: <c>LandingSearchModesAria</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск режимов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlarni qidirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search modes&quot;
+            /// </summary>
+            public const string LandingSearchModesAria = "LandingSearchModesAria";
+
+            /// <summary>
+            /// Key: <c>LandingSearchModesPlaceholder</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по 28 режимам (название, код, описание)...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 rejim bo'yicha qidiruv (nomi, kodi, tavsifi)...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search across 28 modes (title, name, code, description)...&quot;
+            /// </summary>
+            public const string LandingSearchModesPlaceholder = "LandingSearchModesPlaceholder";
+
+            /// <summary>
+            /// Key: <c>LandingShowingLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Показано&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ko'rsatildi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Showing&quot;
+            /// </summary>
+            public const string LandingShowingLabel = "LandingShowingLabel";
+
+            /// <summary>
+            /// Key: <c>LandingUxModesBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Архитектурных UX-Режимов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta arxitektura UX-rejimlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Architectural UX Modes&quot;
+            /// </summary>
+            public const string LandingUxModesBadge = "LandingUxModesBadge";
+
+            /// <summary>
+            /// Key: <c>LandingUxModesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.&quot;
+            /// </summary>
+            public const string LandingUxModesDesc = "LandingUxModesDesc";
+
+            /// <summary>
+            /// Key: <c>LandingUxModesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Универсальных Сценариев Взаимодействия&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta universal tijorat UX ssenariylari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Universal Commercial UX Scenarios&quot;
+            /// </summary>
+            public const string LandingUxModesTitle = "LandingUxModesTitle";
 
             /// <summary>
             /// Key: <c>QR_BackToTerminal</c><br/>
@@ -16631,148 +17759,12 @@ namespace Assets.Constants
             public const string QRSearchProducts = "QR_SearchProducts";
 
             /// <summary>
-            /// Key: <c>QR_Title</c><br/>
+            /// Key: <c>QrStudio</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;QR Designer&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR Designer&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Designer&quot;
             /// </summary>
-            public const string QRTitle = "QR_Title";
-
-            /// <summary>
-            /// Key: <c>Analytics_RealtimeStatus</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновлено в реальном времени&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy vaqtda yangilangan&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Updated in real-time&quot;
-            /// </summary>
-            public const string RealtimeStatus = "Analytics_RealtimeStatus";
-
-            /// <summary>
-            /// Key: <c>Docs_RefreshList</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновить список&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ro'yxatni yangilash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh list&quot;
-            /// </summary>
-            public const string RefreshList = "Docs_RefreshList";
-
-            /// <summary>
-            /// Key: <c>Analytics_RevenuePeriod</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка за период&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Davr uchun tushum&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue for period&quot;
-            /// </summary>
-            public const string RevenuePeriod = "Analytics_RevenuePeriod";
-
-            /// <summary>
-            /// Key: <c>QR_SearchProducts</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск товаров&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlarni qidirish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search products&quot;
-            /// </summary>
-            public const string SearchProducts = "QR_SearchProducts";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowAvgCheck</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка среднего чека&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek kartochkasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average check card&quot;
-            /// </summary>
-            public const string ShowAvgCheck = "Analytics_ShowAvgCheck";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowFiscal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка фискализации&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fiskallashtirish kartochkasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscalization card&quot;
-            /// </summary>
-            public const string ShowFiscal = "Analytics_ShowFiscal";
-
-            /// <summary>
-            /// Key: <c>Docs_ShowMenu</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Показать меню&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Menyuni ko'rsatish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Show menu&quot;
-            /// </summary>
-            public const string ShowMenu = "Docs_ShowMenu";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowOrders</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка заказов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar kartochkasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Orders card&quot;
-            /// </summary>
-            public const string ShowOrders = "Analytics_ShowOrders";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowPayments</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Диаграмма оплат&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovlar diagrammasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment diagram&quot;
-            /// </summary>
-            public const string ShowPayments = "Analytics_ShowPayments";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowRevenue</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка выручки&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum kartochkasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue card&quot;
-            /// </summary>
-            public const string ShowRevenue = "Analytics_ShowRevenue";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowTerminals</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Таблица терминалов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar jadvali&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminals table&quot;
-            /// </summary>
-            public const string ShowTerminals = "Analytics_ShowTerminals";
-
-            /// <summary>
-            /// Key: <c>Analytics_ShowTopProducts</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Таблица топ-товаров&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng yaxshi tovarlar jadvali&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
-            /// </summary>
-            public const string ShowTopProducts = "Analytics_ShowTopProducts";
-
-            /// <summary>
-            /// Key: <c>Help_SupportChannelsBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямая связь&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri aloqa&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct contact&quot;
-            /// </summary>
-            public const string SupportChannelsBadge = "Help_SupportChannelsBadge";
-
-            /// <summary>
-            /// Key: <c>Help_SupportChannelsSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите удобный канал связи для оперативной помощи специалистов Socratic.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic mutaxassislarining tezkor yordami uchun qulay aloqa kanalini tanlang.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a convenient communication channel for prompt assistance.&quot;
-            /// </summary>
-            public const string SupportChannelsSubtitle = "Help_SupportChannelsSubtitle";
-
-            /// <summary>
-            /// Key: <c>Help_SupportChannelsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нужна помощь дежурного инженера?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Navbatchi muhandis yordami kerakmi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Need help from an on-duty engineer?&quot;
-            /// </summary>
-            public const string SupportChannelsTitle = "Help_SupportChannelsTitle";
-
-            /// <summary>
-            /// Key: <c>Help_TelegramLabel</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram: @socratic_support&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram: @socratic_support&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram: @socratic_support&quot;
-            /// </summary>
-            public const string TelegramLabel = "Help_TelegramLabel";
-
-            /// <summary>
-            /// Key: <c>Analytics_TerminalPerformance</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal &amp;amp; kiosk performance&quot;
-            /// </summary>
-            public const string TerminalPerformance = "Analytics_TerminalPerformance";
+            public const string QrStudio = "QrStudio";
 
             /// <summary>
             /// Key: <c>QR_Title</c><br/>
@@ -16780,127 +17772,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR Designer&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Designer&quot;
             /// </summary>
-            public const string TitleText = "QR_Title";
-
-            /// <summary>
-            /// Key: <c>Analytics_TopProducts</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Топ продаваемых позиций&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng ko'p sotiladigan tovarlar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Top selling items&quot;
-            /// </summary>
-            public const string TopProducts = "Analytics_TopProducts";
-
-            /// <summary>
-            /// Key: <c>About_ValueFpsDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
-            /// </summary>
-            public const string ValueFpsDesc = "About_ValueFpsDesc";
-
-            /// <summary>
-            /// Key: <c>About_ValueFpsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
-            /// </summary>
-            public const string ValueFpsTitle = "About_ValueFpsTitle";
-
-            /// <summary>
-            /// Key: <c>About_ValueM3Desc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оригинальная дизайн-система Material.Web, адаптивная палитра HSL и доступность WCAG 2.1 AA.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asl Material.Web dizayn tizimi, moslashuvchan HSL palitrasi va WCAG 2.1 AA qulayligi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Original Material.Web design system, adaptive HSL palette and WCAG 2.1 AA accessibility.&quot;
-            /// </summary>
-            public const string ValueM3Desc = "About_ValueM3Desc";
-
-            /// <summary>
-            /// Key: <c>About_ValueM3Title</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Material Design 3 Expressive&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Material Design 3 Expressive&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Material Design 3 Expressive&quot;
-            /// </summary>
-            public const string ValueM3Title = "About_ValueM3Title";
-
-            /// <summary>
-            /// Key: <c>About_ValuePlatformDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая кодовая база для Windows, macOS, Android, iOS и веб-клиента (PWA).&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows, macOS, Android, iOS va veb-mijoz (PWA) uchun yagona kod bazasi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified codebase for Windows, macOS, Android, iOS and web client (PWA).&quot;
-            /// </summary>
-            public const string ValuePlatformDesc = "About_ValuePlatformDesc";
-
-            /// <summary>
-            /// Key: <c>About_ValuePlatformTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кроссплатформенность&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ko'p platformalilik&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cross-platform&quot;
-            /// </summary>
-            public const string ValuePlatformTitle = "About_ValuePlatformTitle";
-
-            /// <summary>
-            /// Key: <c>About_ValuesBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инженерные стандарты&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muhandislik standartlari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Engineering standards&quot;
-            /// </summary>
-            public const string ValuesBadge = "About_ValuesBadge";
-
-            /// <summary>
-            /// Key: <c>About_ValuesTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Качество и производительность без компромиссов&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Murosasiz sifat va unumdorlik&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Quality and performance without compromise&quot;
-            /// </summary>
-            public const string ValuesTitle = "About_ValuesTitle";
-
-            /// <summary>
-            /// Key: <c>About_VideoBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Видео-презентация&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video taqdimot&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Video presentation&quot;
-            /// </summary>
-            public const string VideoBadge = "About_VideoBadge";
-
-            /// <summary>
-            /// Key: <c>About_VideoCaption</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
-            /// </summary>
-            public const string VideoCaptionText = "About_VideoCaption";
-
-            /// <summary>
-            /// Key: <c>About_VideoNotSupported</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш браузер не поддерживает встроенное воспроизведение видео.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Brauzeringiz video ijrosini qo'llab-quvvatlamaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Your browser does not support embedded video playback.&quot;
-            /// </summary>
-            public const string VideoNotSupported = "About_VideoNotSupported";
-
-            /// <summary>
-            /// Key: <c>About_VideoTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
-            /// </summary>
-            public const string VideoTitle = "About_VideoTitle";
-
-            /// <summary>
-            /// Key: <c>Docs_WelcomeDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите интересующий раздел на боковой панели для просмотра подробных сведений по архитектуре, API и базам данных микросервисов.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mikroservislarning arxitekturasi, API va ma'lumotlar bazalari bo'yicha batafsil ma'lumot olish uchun yon paneldagi kerakli bo'limni tanlang.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select a section from the sidebar to view architecture details, APIs, and microservice databases.&quot;
-            /// </summary>
-            public const string WelcomeDesc = "Docs_WelcomeDesc";
-
-            /// <summary>
-            /// Key: <c>Docs_WelcomeTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация системы Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tizimi hujjatlari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
-            /// </summary>
-            public const string WelcomeTitle = "Docs_WelcomeTitle";
+            public const string QRTitle = "QR_Title";
 
         }
 
@@ -24013,7 +24885,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: UxMode (191 keys). Use with <c>@using static Assets.Constants.Loc.UxMode;</c>.
+        /// Domain group: UxMode (303 keys). Use with <c>@using static Assets.Constants.Loc.UxMode;</c>.
         /// </summary>
         public static class UxMode
         {
@@ -24216,6 +25088,454 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled Delivery&quot;
             /// </summary>
             public const string DeliveryScheduledTitle = "UxMode_DeliveryScheduled_Title";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+            /// </summary>
+            public const string Desc_1 = "UxMode_Desc_1";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_10</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+            /// </summary>
+            public const string Desc_10 = "UxMode_Desc_10";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_11</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+            /// </summary>
+            public const string Desc_11 = "UxMode_Desc_11";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_12</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+            /// </summary>
+            public const string Desc_12 = "UxMode_Desc_12";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_13</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+            /// </summary>
+            public const string Desc_13 = "UxMode_Desc_13";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_14</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+            /// </summary>
+            public const string Desc_14 = "UxMode_Desc_14";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_15</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+            /// </summary>
+            public const string Desc_15 = "UxMode_Desc_15";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_16</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+            /// </summary>
+            public const string Desc_16 = "UxMode_Desc_16";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_17</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+            /// </summary>
+            public const string Desc_17 = "UxMode_Desc_17";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_18</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+            /// </summary>
+            public const string Desc_18 = "UxMode_Desc_18";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_19</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+            /// </summary>
+            public const string Desc_19 = "UxMode_Desc_19";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+            /// </summary>
+            public const string Desc_2 = "UxMode_Desc_2";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_20</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+            /// </summary>
+            public const string Desc_20 = "UxMode_Desc_20";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_21</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+            /// </summary>
+            public const string Desc_21 = "UxMode_Desc_21";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_22</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+            /// </summary>
+            public const string Desc_22 = "UxMode_Desc_22";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_23</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+            /// </summary>
+            public const string Desc_23 = "UxMode_Desc_23";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_24</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+            /// </summary>
+            public const string Desc_24 = "UxMode_Desc_24";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_25</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+            /// </summary>
+            public const string Desc_25 = "UxMode_Desc_25";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_26</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+            /// </summary>
+            public const string Desc_26 = "UxMode_Desc_26";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_27</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+            /// </summary>
+            public const string Desc_27 = "UxMode_Desc_27";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_28</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+            /// </summary>
+            public const string Desc_28 = "UxMode_Desc_28";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+            /// </summary>
+            public const string Desc_3 = "UxMode_Desc_3";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_4</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+            /// </summary>
+            public const string Desc_4 = "UxMode_Desc_4";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_5</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+            /// </summary>
+            public const string Desc_5 = "UxMode_Desc_5";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_6</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+            /// </summary>
+            public const string Desc_6 = "UxMode_Desc_6";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_7</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+            /// </summary>
+            public const string Desc_7 = "UxMode_Desc_7";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_8</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+            /// </summary>
+            public const string Desc_8 = "UxMode_Desc_8";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_9</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+            /// </summary>
+            public const string Desc_9 = "UxMode_Desc_9";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+            /// </summary>
+            public const string Desc1 = "UxMode_Desc_1";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_10</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+            /// </summary>
+            public const string Desc10 = "UxMode_Desc_10";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_11</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+            /// </summary>
+            public const string Desc11 = "UxMode_Desc_11";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_12</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+            /// </summary>
+            public const string Desc12 = "UxMode_Desc_12";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_13</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+            /// </summary>
+            public const string Desc13 = "UxMode_Desc_13";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_14</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+            /// </summary>
+            public const string Desc14 = "UxMode_Desc_14";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_15</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+            /// </summary>
+            public const string Desc15 = "UxMode_Desc_15";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_16</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+            /// </summary>
+            public const string Desc16 = "UxMode_Desc_16";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_17</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+            /// </summary>
+            public const string Desc17 = "UxMode_Desc_17";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_18</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+            /// </summary>
+            public const string Desc18 = "UxMode_Desc_18";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_19</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+            /// </summary>
+            public const string Desc19 = "UxMode_Desc_19";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+            /// </summary>
+            public const string Desc2 = "UxMode_Desc_2";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_20</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+            /// </summary>
+            public const string Desc20 = "UxMode_Desc_20";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_21</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+            /// </summary>
+            public const string Desc21 = "UxMode_Desc_21";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_22</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+            /// </summary>
+            public const string Desc22 = "UxMode_Desc_22";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_23</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+            /// </summary>
+            public const string Desc23 = "UxMode_Desc_23";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_24</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+            /// </summary>
+            public const string Desc24 = "UxMode_Desc_24";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_25</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+            /// </summary>
+            public const string Desc25 = "UxMode_Desc_25";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_26</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+            /// </summary>
+            public const string Desc26 = "UxMode_Desc_26";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_27</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+            /// </summary>
+            public const string Desc27 = "UxMode_Desc_27";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_28</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+            /// </summary>
+            public const string Desc28 = "UxMode_Desc_28";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+            /// </summary>
+            public const string Desc3 = "UxMode_Desc_3";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_4</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+            /// </summary>
+            public const string Desc4 = "UxMode_Desc_4";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_5</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+            /// </summary>
+            public const string Desc5 = "UxMode_Desc_5";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_6</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+            /// </summary>
+            public const string Desc6 = "UxMode_Desc_6";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_7</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+            /// </summary>
+            public const string Desc7 = "UxMode_Desc_7";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_8</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+            /// </summary>
+            public const string Desc8 = "UxMode_Desc_8";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_9</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+            /// </summary>
+            public const string Desc9 = "UxMode_Desc_9";
 
             /// <summary>
             /// Key: <c>UX_Details</c><br/>
@@ -25050,6 +26370,230 @@ namespace Assets.Constants
             public const string UxMode_DeliveryScheduled_Title = "UxMode_DeliveryScheduled_Title";
 
             /// <summary>
+            /// Key: <c>UxMode_Desc_1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+            /// </summary>
+            public const string UxMode_Desc_1 = "UxMode_Desc_1";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_10</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+            /// </summary>
+            public const string UxMode_Desc_10 = "UxMode_Desc_10";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_11</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+            /// </summary>
+            public const string UxMode_Desc_11 = "UxMode_Desc_11";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_12</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+            /// </summary>
+            public const string UxMode_Desc_12 = "UxMode_Desc_12";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_13</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+            /// </summary>
+            public const string UxMode_Desc_13 = "UxMode_Desc_13";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_14</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+            /// </summary>
+            public const string UxMode_Desc_14 = "UxMode_Desc_14";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_15</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+            /// </summary>
+            public const string UxMode_Desc_15 = "UxMode_Desc_15";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_16</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+            /// </summary>
+            public const string UxMode_Desc_16 = "UxMode_Desc_16";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_17</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+            /// </summary>
+            public const string UxMode_Desc_17 = "UxMode_Desc_17";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_18</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+            /// </summary>
+            public const string UxMode_Desc_18 = "UxMode_Desc_18";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_19</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+            /// </summary>
+            public const string UxMode_Desc_19 = "UxMode_Desc_19";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+            /// </summary>
+            public const string UxMode_Desc_2 = "UxMode_Desc_2";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_20</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+            /// </summary>
+            public const string UxMode_Desc_20 = "UxMode_Desc_20";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_21</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+            /// </summary>
+            public const string UxMode_Desc_21 = "UxMode_Desc_21";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_22</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+            /// </summary>
+            public const string UxMode_Desc_22 = "UxMode_Desc_22";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_23</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+            /// </summary>
+            public const string UxMode_Desc_23 = "UxMode_Desc_23";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_24</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+            /// </summary>
+            public const string UxMode_Desc_24 = "UxMode_Desc_24";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_25</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+            /// </summary>
+            public const string UxMode_Desc_25 = "UxMode_Desc_25";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_26</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+            /// </summary>
+            public const string UxMode_Desc_26 = "UxMode_Desc_26";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_27</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+            /// </summary>
+            public const string UxMode_Desc_27 = "UxMode_Desc_27";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_28</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+            /// </summary>
+            public const string UxMode_Desc_28 = "UxMode_Desc_28";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+            /// </summary>
+            public const string UxMode_Desc_3 = "UxMode_Desc_3";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_4</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+            /// </summary>
+            public const string UxMode_Desc_4 = "UxMode_Desc_4";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_5</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+            /// </summary>
+            public const string UxMode_Desc_5 = "UxMode_Desc_5";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_6</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+            /// </summary>
+            public const string UxMode_Desc_6 = "UxMode_Desc_6";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_7</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+            /// </summary>
+            public const string UxMode_Desc_7 = "UxMode_Desc_7";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_8</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+            /// </summary>
+            public const string UxMode_Desc_8 = "UxMode_Desc_8";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_9</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+            /// </summary>
+            public const string UxMode_Desc_9 = "UxMode_Desc_9";
+
+            /// <summary>
             /// Key: <c>UxMode_DigitalGoods_Title</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровой продукт / Скачивание&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Raqamli mahsulot / Yuklab olish&quot;<br/>
@@ -25272,6 +26816,230 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled Delivery&quot;
             /// </summary>
             public const string UxModeDeliveryScheduledTitle = "UxMode_DeliveryScheduled_Title";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+            /// </summary>
+            public const string UxModeDesc1 = "UxMode_Desc_1";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_10</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+            /// </summary>
+            public const string UxModeDesc10 = "UxMode_Desc_10";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_11</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+            /// </summary>
+            public const string UxModeDesc11 = "UxMode_Desc_11";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_12</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+            /// </summary>
+            public const string UxModeDesc12 = "UxMode_Desc_12";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_13</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+            /// </summary>
+            public const string UxModeDesc13 = "UxMode_Desc_13";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_14</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+            /// </summary>
+            public const string UxModeDesc14 = "UxMode_Desc_14";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_15</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+            /// </summary>
+            public const string UxModeDesc15 = "UxMode_Desc_15";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_16</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+            /// </summary>
+            public const string UxModeDesc16 = "UxMode_Desc_16";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_17</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+            /// </summary>
+            public const string UxModeDesc17 = "UxMode_Desc_17";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_18</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+            /// </summary>
+            public const string UxModeDesc18 = "UxMode_Desc_18";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_19</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+            /// </summary>
+            public const string UxModeDesc19 = "UxMode_Desc_19";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+            /// </summary>
+            public const string UxModeDesc2 = "UxMode_Desc_2";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_20</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+            /// </summary>
+            public const string UxModeDesc20 = "UxMode_Desc_20";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_21</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+            /// </summary>
+            public const string UxModeDesc21 = "UxMode_Desc_21";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_22</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+            /// </summary>
+            public const string UxModeDesc22 = "UxMode_Desc_22";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_23</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+            /// </summary>
+            public const string UxModeDesc23 = "UxMode_Desc_23";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_24</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+            /// </summary>
+            public const string UxModeDesc24 = "UxMode_Desc_24";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_25</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+            /// </summary>
+            public const string UxModeDesc25 = "UxMode_Desc_25";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_26</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+            /// </summary>
+            public const string UxModeDesc26 = "UxMode_Desc_26";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_27</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+            /// </summary>
+            public const string UxModeDesc27 = "UxMode_Desc_27";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_28</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+            /// </summary>
+            public const string UxModeDesc28 = "UxMode_Desc_28";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+            /// </summary>
+            public const string UxModeDesc3 = "UxMode_Desc_3";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_4</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+            /// </summary>
+            public const string UxModeDesc4 = "UxMode_Desc_4";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_5</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+            /// </summary>
+            public const string UxModeDesc5 = "UxMode_Desc_5";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_6</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+            /// </summary>
+            public const string UxModeDesc6 = "UxMode_Desc_6";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_7</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+            /// </summary>
+            public const string UxModeDesc7 = "UxMode_Desc_7";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_8</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+            /// </summary>
+            public const string UxModeDesc8 = "UxMode_Desc_8";
+
+            /// <summary>
+            /// Key: <c>UxMode_Desc_9</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+            /// </summary>
+            public const string UxModeDesc9 = "UxMode_Desc_9";
 
             /// <summary>
             /// Key: <c>UxMode_DigitalGoods_Title</c><br/>
@@ -25548,14 +27316,6 @@ namespace Assets.Constants
         }
 
         #region Flat Constants (Backward Compatibility & Global Access)
-
-        /// <summary>
-        /// Key: <c>About</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
-        /// </summary>
-        public const string About = "About";
 
         /// <summary>
         /// Key: <c>About_ActionsSubtitle</c><br/>
@@ -25932,6 +27692,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic unites AI vision, smart kiosks, 3D WebGL and 28 universal interaction modes in a single high-performance environment.&quot;
         /// </summary>
         public const string AboutSubtitle = "AboutSubtitle";
+
+        /// <summary>
+        /// Key: <c>About</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
+        /// </summary>
+        public const string AboutText = "About";
 
         /// <summary>
         /// Key: <c>AboutTitleMain</c><br/>
@@ -26780,6 +28548,62 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Login via Telegram Widget&quot;
         /// </summary>
         public const string AuthTelegramSubtitle = "Auth_Telegram_Subtitle";
+
+        /// <summary>
+        /// Key: <c>B2bBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый старт за 1 день&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 kunda tezkor start&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Launch in 1 Day&quot;
+        /// </summary>
+        public const string B2bBadge = "B2bBadge";
+
+        /// <summary>
+        /// Key: <c>B2bBotBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот экосистемы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim Telegram-boti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem Telegram Bot&quot;
+        /// </summary>
+        public const string B2bBotBtn = "B2bBotBtn";
+
+        /// <summary>
+        /// Key: <c>B2bConsultBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Консультация в Telegram&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram orqali maslahat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Consultation&quot;
+        /// </summary>
+        public const string B2bConsultBtn = "B2bConsultBtn";
+
+        /// <summary>
+        /// Key: <c>B2bDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, restaurant, service salon, or chain in a single unified system.&quot;
+        /// </summary>
+        public const string B2bDesc = "B2bDesc";
+
+        /// <summary>
+        /// Key: <c>B2bDocsBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Documentation&quot;
+        /// </summary>
+        public const string B2bDocsBtn = "B2bDocsBtn";
+
+        /// <summary>
+        /// Key: <c>B2bKioskConnectBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформить тариф в киоске Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic kioskida ulanish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect in Socratic Kiosk&quot;
+        /// </summary>
+        public const string B2bKioskConnectBtn = "B2bKioskConnectBtn";
+
+        /// <summary>
+        /// Key: <c>B2bTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовы масштабировать ваш бизнес с Socratic?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznesingizni Socratic bilan kengaytirishga tayyormisiz?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ready to Scale Your Business with Socratic?&quot;
+        /// </summary>
+        public const string B2bTitle = "B2bTitle";
 
         /// <summary>
         /// Key: <c>Back</c><br/>
@@ -28084,6 +29908,38 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash&quot;
         /// </summary>
         public const string Cash = "Cash";
+
+        /// <summary>
+        /// Key: <c>CategoryHorecaBooking</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
+        /// </summary>
+        public const string CategoryHorecaBooking = "CategoryHorecaBooking";
+
+        /// <summary>
+        /// Key: <c>CategoryRetailCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл &amp;amp; Каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Katalog&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Catalog&quot;
+        /// </summary>
+        public const string CategoryRetailCatalog = "CategoryRetailCatalog";
+
+        /// <summary>
+        /// Key: <c>CategoryServicesAi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги &amp;amp; AI&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; AI&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; AI&quot;
+        /// </summary>
+        public const string CategoryServicesAi = "CategoryServicesAi";
+
+        /// <summary>
+        /// Key: <c>CategorySubscriptionsFintech</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
+        /// </summary>
+        public const string CategorySubscriptionsFintech = "CategorySubscriptionsFintech";
 
         /// <summary>
         /// Key: <c>Chat_Back</c><br/>
@@ -29486,6 +31342,14 @@ namespace Assets.Constants
         public const string CloseText = "Close";
 
         /// <summary>
+        /// Key: <c>CollapseModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogni yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse catalog&quot;
+        /// </summary>
+        public const string CollapseModes = "CollapseModes";
+
+        /// <summary>
         /// Key: <c>Collected</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Собрано&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ildi&quot;<br/>
@@ -30243,6 +32107,30 @@ namespace Assets.Constants
         public const string ControlPanel = "Control panel";
 
         /// <summary>
+        /// Key: <c>CoreSuperpowersBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ключевые возможности Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic asosiy imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Key Capabilities&quot;
+        /// </summary>
+        public const string CoreSuperpowersBadge = "CoreSuperpowersBadge";
+
+        /// <summary>
+        /// Key: <c>CoreSuperpowersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и учета в едином решении.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzluksiz savdo, tezkor mijozlarga xizmat ko'rsatish va to'liq soliq shaffofligi uchun barcha zarur narsalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Everything required for non-stop sales, rapid customer service, and full tax transparency.&quot;
+        /// </summary>
+        public const string CoreSuperpowersDesc = "CoreSuperpowersDesc";
+
+        /// <summary>
+        /// Key: <c>CoreSuperpowersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Торгово-кассовый комплекс и платежная среда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo-kassa kompleksi va to'lov muhiti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trade &amp;amp; Payment Infrastructure&quot;
+        /// </summary>
+        public const string CoreSuperpowersTitle = "CoreSuperpowersTitle";
+
+        /// <summary>
         /// Key: <c>Country</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Страна&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mamlakat&quot;<br/>
@@ -30489,6 +32377,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Weekend&quot;
         /// </summary>
         public const string DeliveryWeekend = "Delivery_Weekend";
+
+        /// <summary>
+        /// Key: <c>DeliveryZonesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рисование векторных полигонов доставки на карте. Дифференцированные тарифы, бесплатная доставка от суммы и расчет зон в 1 клик.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har bir zona uchun narx va kelish vaqtini hisoblovchi moslashuvchan poligon chegaralari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom polygon borders with per-zone pricing and arrival estimation.&quot;
+        /// </summary>
+        public const string DeliveryZonesDesc = "DeliveryZonesDesc";
+
+        /// <summary>
+        /// Key: <c>DeliveryZonesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зоны Доставки (ZonePicker)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delivery Zones&quot;
+        /// </summary>
+        public const string DeliveryZonesTitle = "DeliveryZonesTitle";
 
         /// <summary>
         /// Key: <c>Description</c><br/>
@@ -31099,12 +33003,36 @@ namespace Assets.Constants
         public const string DoneText = "Done";
 
         /// <summary>
+        /// Key: <c>DownloadAndroid</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Android&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Android&quot;
+        /// </summary>
+        public const string DownloadAndroid = "DownloadAndroid";
+
+        /// <summary>
         /// Key: <c>DownloadButton</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuklab olish&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Download&quot;
         /// </summary>
         public const string DownloadButton = "DownloadButton";
+
+        /// <summary>
+        /// Key: <c>DownloadIOS</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для iOS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iOS uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for iOS&quot;
+        /// </summary>
+        public const string DownloadIOS = "DownloadIOS";
+
+        /// <summary>
+        /// Key: <c>DownloadMacOS</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для macOS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for macOS&quot;
+        /// </summary>
+        public const string DownloadMacOS = "DownloadMacOS";
 
         /// <summary>
         /// Key: <c>DownloadSubTitle</c><br/>
@@ -31121,6 +33049,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic UI&quot;
         /// </summary>
         public const string DownloadTitle = "DownloadTitle";
+
+        /// <summary>
+        /// Key: <c>DownloadWindows</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Windows&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Windows&quot;
+        /// </summary>
+        public const string DownloadWindows = "DownloadWindows";
 
         /// <summary>
         /// Key: <c>Edit organization</c><br/>
@@ -31169,6 +33105,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;An error occurred while rendering component&quot;
         /// </summary>
         public const string ErrorRendering = "ErrorRendering";
+
+        /// <summary>
+        /// Key: <c>ExpandModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показать все 28 режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimni ko'rsatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Show all 28 modes&quot;
+        /// </summary>
+        public const string ExpandModes = "ExpandModes";
 
         /// <summary>
         /// Key: <c>FaceId_CenterFace</c><br/>
@@ -31371,6 +33315,22 @@ namespace Assets.Constants
         public const string FirstName = "FirstName";
 
         /// <summary>
+        /// Key: <c>FiscalCompliance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Fiscalization&quot;
+        /// </summary>
+        public const string FiscalCompliance = "FiscalCompliance";
+
+        /// <summary>
+        /// Key: <c>FiscalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автогенерация фискального чека с QR-кодом ОФД, 1% кэшбэком и прямой регистрацией в налоговом комитете РУз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;OFD QR kodli fiskal chekni avtomatik yaratish, 1% keshbek va soliq talablariga muvofiqlik.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Automatic fiscal receipt generation with OFD QR code, 1% cashback, and tax service compliance.&quot;
+        /// </summary>
+        public const string FiscalDesc = "FiscalDesc";
+
+        /// <summary>
         /// Key: <c>Footer_Col_Catalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -31419,6 +33379,14 @@ namespace Assets.Constants
         public const string Footer_Tagline = "Footer_Tagline";
 
         /// <summary>
+        /// Key: <c>FooterCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа &amp;amp; Каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma &amp;amp; Katalog&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform &amp;amp; Catalog&quot;
+        /// </summary>
+        public const string FooterCatalog = "FooterCatalog";
+
+        /// <summary>
         /// Key: <c>Footer_Col_Catalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -31449,6 +33417,30 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Resources &amp;amp; Info&quot;
         /// </summary>
         public const string FooterColResources = "Footer_Col_Resources";
+
+        /// <summary>
+        /// Key: <c>FooterCommunity</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Community &amp;amp; Support&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Community &amp;amp; Support&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Community &amp;amp; Support&quot;
+        /// </summary>
+        public const string FooterCommunity = "FooterCommunity";
+
+        /// <summary>
+        /// Key: <c>FooterResources</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ресурсы &amp;amp; Инфо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Resurslar &amp;amp; Ma'lumot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Resources &amp;amp; Info&quot;
+        /// </summary>
+        public const string FooterResources = "FooterResources";
+
+        /// <summary>
+        /// Key: <c>FooterRights</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все права защищены.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha huquqlar himoyalangan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
+        /// </summary>
+        public const string FooterRights = "FooterRights";
 
         /// <summary>
         /// Key: <c>Footer_Status</c><br/>
@@ -31681,6 +33673,38 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;km&quot;
         /// </summary>
         public const string GeoKm = "Geo_Km";
+
+        /// <summary>
+        /// Key: <c>GeoMapLiveSync</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоопределение геопозиции и радиуса обслуживания&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ScyllaDB NoSQL orqali geonuqtalar jonli sinxronizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ScyllaDB NoSQL live sync across geo points&quot;
+        /// </summary>
+        public const string GeoMapLiveSync = "GeoMapLiveSync";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Географическая Платформа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+        /// </summary>
+        public const string GeoMapWingBadge = "GeoMapWingBadge";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление сетью торговых точек, складами, пунктами выдачи (ПВЗ), полигонами курьерской доставки и встроенный GPS-навигатор для курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dinamik manzillar qidiruvi, yetkazib berish poligon zonalari va filiallarga yaqinlik marshrutlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dynamic address search, delivery polygon zones, and branch proximity routing.&quot;
+        /// </summary>
+        public const string GeoMapWingDesc = "GeoMapWingDesc";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта филиалов, зон и навигатор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geokodlash &amp;amp; Yetkazib berish logistikasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geocoding &amp;amp; Delivery Logistics&quot;
+        /// </summary>
+        public const string GeoMapWingTitle = "GeoMapWingTitle";
 
         /// <summary>
         /// Key: <c>Geo_Min</c><br/>
@@ -32177,6 +34201,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;To pay:&quot;
         /// </summary>
         public const string GroupBuyToPay = "GroupBuy_ToPay";
+
+        /// <summary>
+        /// Key: <c>HardwareDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;ESC/POS термопринтеры 58/80мм, 2D-сканеры DataMatrix/EAN-13, терминалы Humo/Uzcard, весы CAS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS 58/80mm termoprinterlar, 2D DataMatrix skanerlar va tarozilar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ESC/POS 58/80mm thermal printers, 2D DataMatrix scanners, and weighing scales.&quot;
+        /// </summary>
+        public const string HardwareDesc = "HardwareDesc";
+
+        /// <summary>
+        /// Key: <c>HardwareSupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поддержка оборудования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunalarni qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware Support&quot;
+        /// </summary>
+        public const string HardwareSupport = "HardwareSupport";
 
         /// <summary>
         /// Key: <c>Help_BtnDocs</c><br/>
@@ -32819,6 +34859,78 @@ namespace Assets.Constants
         public const string HelpTitleSub = "HelpTitleSub";
 
         /// <summary>
+        /// Key: <c>HeroBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+        /// </summary>
+        public const string HeroBadgeText = "HeroBadge";
+
+        /// <summary>
+        /// Key: <c>HeroMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карта и доставка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita va yetkazib berish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Map &amp;amp; Delivery&quot;
+        /// </summary>
+        public const string HeroMap = "HeroMap";
+
+        /// <summary>
+        /// Key: <c>HeroModulesLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Специализированные модули:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtisoslashgan modullar:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Specialized modules:&quot;
+        /// </summary>
+        public const string HeroModulesLabel = "HeroModulesLabel";
+
+        /// <summary>
+        /// Key: <c>HeroQrDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-фискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Fiscalization&quot;
+        /// </summary>
+        public const string HeroQrDesigner = "HeroQrDesigner";
+
+        /// <summary>
+        /// Key: <c>HeroSeatDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Seat Designer&quot;
+        /// </summary>
+        public const string HeroSeatDesigner = "HeroSeatDesigner";
+
+        /// <summary>
+        /// Key: <c>HeroShowroom</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Product Showroom&quot;
+        /// </summary>
+        public const string HeroShowroom = "HeroShowroom";
+
+        /// <summary>
+        /// Key: <c>HeroSocraticOrg</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tariflari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Plans&quot;
+        /// </summary>
+        public const string HeroSocraticOrg = "HeroSocraticOrg";
+
+        /// <summary>
+        /// Key: <c>HeroSubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+        /// </summary>
+        public const string HeroSubtitleText = "HeroSubtitle";
+
+        /// <summary>
+        /// Key: <c>HeroTerminal</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// </summary>
+        public const string HeroTerminal = "HeroTerminal";
+
+        /// <summary>
         /// Key: <c>Home_LoadingPlayer</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка плеера...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Pleyer yuklanmoqda...&quot;<br/>
@@ -32913,6 +35025,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Image&quot;
         /// </summary>
         public const string ImageText = "Image";
+
+        /// <summary>
+        /// Key: <c>InteractiveMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+        /// </summary>
+        public const string InteractiveMap = "InteractiveMap";
 
         /// <summary>
         /// Key: <c>Invoice_Amount</c><br/>
@@ -34411,6 +36531,670 @@ namespace Assets.Constants
         public const string KioskYandexDirect = "Kiosk_YandexDirect";
 
         /// <summary>
+        /// Key: <c>LandingAiFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман AI &amp;amp; SaaS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; SaaS yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Cloud Flagship&quot;
+        /// </summary>
+        public const string LandingAiFlagshipBadge = "LandingAiFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingAiFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и тарификация микросервисов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor API kalitlari berish, LLM token kvotalari, kompyuter ko'rishi va mikroxizmatlar billingi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant API keys issuance, LLM token quotas, computer vision access, and microservice billing.&quot;
+        /// </summary>
+        public const string LandingAiFlagshipDesc = "LandingAiFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingAiFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-сервис &amp;amp; AI Доступ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn xizmat &amp;amp; AI ruxsat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Online Service &amp;amp; AI Access&quot;
+        /// </summary>
+        public const string LandingAiFlagshipTitle = "LandingAiFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingAiPillApiKey</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;API-ключи&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;API kalitlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;API Key Generator&quot;
+        /// </summary>
+        public const string LandingAiPillApiKey = "LandingAiPillApiKey";
+
+        /// <summary>
+        /// Key: <c>LandingAiPillQuotas</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Квоты LLM токенов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;LLM token kvotalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;LLM Quotas&quot;
+        /// </summary>
+        public const string LandingAiPillQuotas = "LandingAiPillQuotas";
+
+        /// <summary>
+        /// Key: <c>LandingAiPillWebhooks</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Webhooks &amp;amp; Автоматизация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Webhooks &amp;amp; Avtomatlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Webhooks&quot;
+        /// </summary>
+        public const string LandingAiPillWebhooks = "LandingAiPillWebhooks";
+
+        /// <summary>
+        /// Key: <c>LandingCategoryAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все режимы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha rejimlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All Modes&quot;
+        /// </summary>
+        public const string LandingCategoryAll = "LandingCategoryAll";
+
+        /// <summary>
+        /// Key: <c>LandingCategoryFintech</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
+        /// </summary>
+        public const string LandingCategoryFintech = "LandingCategoryFintech";
+
+        /// <summary>
+        /// Key: <c>LandingCategoryHoreca</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
+        /// </summary>
+        public const string LandingCategoryHoreca = "LandingCategoryHoreca";
+
+        /// <summary>
+        /// Key: <c>LandingCategoryRetail</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл и Торговля&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Tijorat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Commerce&quot;
+        /// </summary>
+        public const string LandingCategoryRetail = "LandingCategoryRetail";
+
+        /// <summary>
+        /// Key: <c>LandingCategoryServices</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги, SaaS &amp;amp; AI&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar, SaaS &amp;amp; AI&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services, SaaS &amp;amp; AI&quot;
+        /// </summary>
+        public const string LandingCategoryServices = "LandingCategoryServices";
+
+        /// <summary>
+        /// Key: <c>LandingClearSearchAria</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить поиск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear search&quot;
+        /// </summary>
+        public const string LandingClearSearchAria = "LandingClearSearchAria";
+
+        /// <summary>
+        /// Key: <c>LandingDetailsBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Детали&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tafsilotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Details&quot;
+        /// </summary>
+        public const string LandingDetailsBtn = "LandingDetailsBtn";
+
+        /// <summary>
+        /// Key: <c>LandingFintechFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Финтеха&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech Flagship&quot;
+        /// </summary>
+        public const string LandingFintechFlagshipBadge = "LandingFintechFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingFintechFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоматические рекуррентные списания, гибкие тарифные сетки, абонементы и мгновенная фискализация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomatik davriy to'lovlar, moslashuvchan tariflar, abonementlar va tezkor fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Automated recurring debits, tiered subscription plans, gym passes, and automatic fiscalization.&quot;
+        /// </summary>
+        public const string LandingFintechFlagshipDesc = "LandingFintechFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingFintechFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные подписки &amp;amp; Биллинг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Davriy obunalar &amp;amp; Billing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring Subscriptions&quot;
+        /// </summary>
+        public const string LandingFintechFlagshipTitle = "LandingFintechFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingFintechPillFiscal</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автофискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtofiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscal Receipts&quot;
+        /// </summary>
+        public const string LandingFintechPillFiscal = "LandingFintechPillFiscal";
+
+        /// <summary>
+        /// Key: <c>LandingFintechPillPricing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные сетки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif to'rlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Multi-tier Pricing&quot;
+        /// </summary>
+        public const string LandingFintechPillPricing = "LandingFintechPillPricing";
+
+        /// <summary>
+        /// Key: <c>LandingFintechPillRecurring</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Авторекурренты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtotolovlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Auto Recurring&quot;
+        /// </summary>
+        public const string LandingFintechPillRecurring = "LandingFintechPillRecurring";
+
+        /// <summary>
+        /// Key: <c>LandingFlagshipSubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых столпа коммерческой автоматизации Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Top four foundational scenarios powering enterprise automation&quot;
+        /// </summary>
+        public const string LandingFlagshipSubtitle = "LandingFlagshipSubtitle";
+
+        /// <summary>
+        /// Key: <c>LandingFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагманские Архетипы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetakchi arxetiplar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Flagship Archetypes&quot;
+        /// </summary>
+        public const string LandingFlagshipTitle = "LandingFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingHeroBadgeModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-Режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-Rejim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX Modes&quot;
+        /// </summary>
+        public const string LandingHeroBadgeModes = "LandingHeroBadgeModes";
+
+        /// <summary>
+        /// Key: <c>LandingHeroBadgeOfd</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+        /// </summary>
+        public const string LandingHeroBadgeOfd = "LandingHeroBadgeOfd";
+
+        /// <summary>
+        /// Key: <c>LandingHeroTitleOperatingSystem</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная операционная система торговли и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo va xizmatlarning universal operatsion tizimi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal operating system for commerce and services&quot;
+        /// </summary>
+        public const string LandingHeroTitleOperatingSystem = "LandingHeroTitleOperatingSystem";
+
+        /// <summary>
+        /// Key: <c>LandingHeroTitleSocratic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic&quot;
+        /// </summary>
+        public const string LandingHeroTitleSocratic = "LandingHeroTitleSocratic";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман HoReCa&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa Flagship&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipBadge = "LandingHorecaFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сетка временных интервалов в реальном времени, интерактивная схема залов и защита от овербукинга.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda vaqt oraliqlari to'ri, zallarning interaktiv rejasi va ortiqcha bron qilishdan himoya.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time time slot grid, restaurant floor plan, hall reservations, and zero-overbooking protection.&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipDesc = "LandingHorecaFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронирование столов &amp;amp; Времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar &amp;amp; Vaqtni band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Table &amp;amp; Time Booking&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipTitle = "LandingHorecaFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillFloorPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'tirish rejasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor Plan&quot;
+        /// </summary>
+        public const string LandingHorecaPillFloorPlan = "LandingHorecaPillFloorPlan";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillSlots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тайм-слоты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time Slots&quot;
+        /// </summary>
+        public const string LandingHorecaPillSlots = "LandingHorecaPillSlots";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillSms</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SMS &amp;amp; TG Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS &amp;amp; TG xabarnoma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SMS Notifications&quot;
+        /// </summary>
+        public const string LandingHorecaPillSms = "LandingHorecaPillSms";
+
+        /// <summary>
+        /// Key: <c>LandingLaunchBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch&quot;
+        /// </summary>
+        public const string LandingLaunchBtn = "LandingLaunchBtn";
+
+        /// <summary>
+        /// Key: <c>LandingLaunchDemoKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть в демо-киоске&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskda ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Demo Kiosk&quot;
+        /// </summary>
+        public const string LandingLaunchDemoKiosk = "LandingLaunchDemoKiosk";
+
+        /// <summary>
+        /// Key: <c>LandingLegendBusy</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Занято&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Occupied&quot;
+        /// </summary>
+        public const string LandingLegendBusy = "LandingLegendBusy";
+
+        /// <summary>
+        /// Key: <c>LandingLegendFree</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свободно&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bo'sh&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Available&quot;
+        /// </summary>
+        public const string LandingLegendFree = "LandingLegendFree";
+
+        /// <summary>
+        /// Key: <c>LandingLegendReserved</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Забронировано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band qilingan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reserved&quot;
+        /// </summary>
+        public const string LandingLegendReserved = "LandingLegendReserved";
+
+        /// <summary>
+        /// Key: <c>LandingMetaDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — unified platform for retail sales, services, space booking, and payment processing.&quot;
+        /// </summary>
+        public const string LandingMetaDesc = "LandingMetaDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricMs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 10 мс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 10 ms&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 10 ms&quot;
+        /// </summary>
+        public const string LandingMetricMs = "LandingMetricMs";
+
+        /// <summary>
+        /// Key: <c>LandingMetricNetworkDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалов в единой сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yagona tarmoqdagi filiallar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches in unified network&quot;
+        /// </summary>
+        public const string LandingMetricNetworkDesc = "LandingMetricNetworkDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricOfflineDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономная работа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtonom ishlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous offline work&quot;
+        /// </summary>
+        public const string LandingMetricOfflineDesc = "LandingMetricOfflineDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricPoints500</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;500+ точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;500+ nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;500+ branches&quot;
+        /// </summary>
+        public const string LandingMetricPoints500 = "LandingMetricPoints500";
+
+        /// <summary>
+        /// Key: <c>LandingMetricSec</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 1 с&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 1 s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 1 s&quot;
+        /// </summary>
+        public const string LandingMetricSec = "LandingMetricSec";
+
+        /// <summary>
+        /// Key: <c>LandingMetricSyncDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация данных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar sinxronizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data synchronization&quot;
+        /// </summary>
+        public const string LandingMetricSyncDesc = "LandingMetricSyncDesc";
+
+        /// <summary>
+        /// Key: <c>LandingNoModesFoundDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;So'rovingiz bo'yicha hech qanday tijorat ssenariysi topilmadi. Qidiruvni tozalang yoki toifani almashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.&quot;
+        /// </summary>
+        public const string LandingNoModesFoundDesc = "LandingNoModesFoundDesc";
+
+        /// <summary>
+        /// Key: <c>LandingNoModesFoundTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Режимов не найдено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No UX modes match your query&quot;
+        /// </summary>
+        public const string LandingNoModesFoundTitle = "LandingNoModesFoundTitle";
+
+        /// <summary>
+        /// Key: <c>LandingOfdCashbackTag</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq.uz 1% кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz 1% keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz 1% cashback&quot;
+        /// </summary>
+        public const string LandingOfdCashbackTag = "LandingOfdCashbackTag";
+
+        /// <summary>
+        /// Key: <c>LandingOfLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+        /// </summary>
+        public const string LandingOfLabel = "LandingOfLabel";
+
+        /// <summary>
+        /// Key: <c>LandingPageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — Универсальная экосистема для бизнеса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — Biznes uchun universal ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Universal Business Ecosystem&quot;
+        /// </summary>
+        public const string LandingPageTitle = "LandingPageTitle";
+
+        /// <summary>
+        /// Key: <c>LandingPillAccessControl</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;СКУД доступ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKUD ruxsat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Access control&quot;
+        /// </summary>
+        public const string LandingPillAccessControl = "LandingPillAccessControl";
+
+        /// <summary>
+        /// Key: <c>LandingPillBranchNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть филиалов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar tarmog'i&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branch network&quot;
+        /// </summary>
+        public const string LandingPillBranchNetwork = "LandingPillBranchNetwork";
+
+        /// <summary>
+        /// Key: <c>LandingPillCourierRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут курьера&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer marshruti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Courier route&quot;
+        /// </summary>
+        public const string LandingPillCourierRoute = "LandingPillCourierRoute";
+
+        /// <summary>
+        /// Key: <c>LandingPillDeposits</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Депозиты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Depozitlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Deposits&quot;
+        /// </summary>
+        public const string LandingPillDeposits = "LandingPillDeposits";
+
+        /// <summary>
+        /// Key: <c>LandingPillDirectPurchase</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямая покупка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri xarid&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct purchase&quot;
+        /// </summary>
+        public const string LandingPillDirectPurchase = "LandingPillDirectPurchase";
+
+        /// <summary>
+        /// Key: <c>LandingPillEcosystemPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы экосистемы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim tariflari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem plans&quot;
+        /// </summary>
+        public const string LandingPillEcosystemPlans = "LandingPillEcosystemPlans";
+
+        /// <summary>
+        /// Key: <c>LandingPillLiveGps</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой GPS-трекинг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli GPS treking&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live GPS tracking&quot;
+        /// </summary>
+        public const string LandingPillLiveGps = "LandingPillLiveGps";
+
+        /// <summary>
+        /// Key: <c>LandingPillLiveStatus</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой статус&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live status&quot;
+        /// </summary>
+        public const string LandingPillLiveStatus = "LandingPillLiveStatus";
+
+        /// <summary>
+        /// Key: <c>LandingPillMapPolygons</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritadagi poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Map polygons&quot;
+        /// </summary>
+        public const string LandingPillMapPolygons = "LandingPillMapPolygons";
+
+        /// <summary>
+        /// Key: <c>LandingPillNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом со мной&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinimda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Near me&quot;
+        /// </summary>
+        public const string LandingPillNearby = "LandingPillNearby";
+
+        /// <summary>
+        /// Key: <c>LandingPillNoIntermediaries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без посредников&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vositachilarsiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No intermediaries&quot;
+        /// </summary>
+        public const string LandingPillNoIntermediaries = "LandingPillNoIntermediaries";
+
+        /// <summary>
+        /// Key: <c>LandingPillOfdCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД 1%&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD 1%&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD 1%&quot;
+        /// </summary>
+        public const string LandingPillOfdCashback = "LandingPillOfdCashback";
+
+        /// <summary>
+        /// Key: <c>LandingPillOrderPay</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ и оплата&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma va to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order and payment&quot;
+        /// </summary>
+        public const string LandingPillOrderPay = "LandingPillOrderPay";
+
+        /// <summary>
+        /// Key: <c>LandingPillPosKiosks</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы &amp;amp; Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar &amp;amp; Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS &amp;amp; Kiosks&quot;
+        /// </summary>
+        public const string LandingPillPosKiosks = "LandingPillPosKiosks";
+
+        /// <summary>
+        /// Key: <c>LandingPillPriceZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ценовые зоны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Narx zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Price zones&quot;
+        /// </summary>
+        public const string LandingPillPriceZones = "LandingPillPriceZones";
+
+        /// <summary>
+        /// Key: <c>LandingPillRowsSeats</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ряды и места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qatorlar va o'rinlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Rows &amp;amp; seats&quot;
+        /// </summary>
+        public const string LandingPillRowsSeats = "LandingPillRowsSeats";
+
+        /// <summary>
+        /// Key: <c>LandingPillSmartKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart kiosk&quot;
+        /// </summary>
+        public const string LandingPillSmartKiosk = "LandingPillSmartKiosk";
+
+        /// <summary>
+        /// Key: <c>LandingPillTariffZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные зоны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff zones&quot;
+        /// </summary>
+        public const string LandingPillTariffZones = "LandingPillTariffZones";
+
+        /// <summary>
+        /// Key: <c>LandingPillTimeSlots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Слоты времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slots&quot;
+        /// </summary>
+        public const string LandingPillTimeSlots = "LandingPillTimeSlots";
+
+        /// <summary>
+        /// Key: <c>LandingPillUxModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-rejim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX modes&quot;
+        /// </summary>
+        public const string LandingPillUxModes = "LandingPillUxModes";
+
+        /// <summary>
+        /// Key: <c>LandingQuickViewTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Спецификация и фискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Spetsifikatsiya va fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QuickView&quot;
+        /// </summary>
+        public const string LandingQuickViewTitle = "LandingQuickViewTitle";
+
+        /// <summary>
+        /// Key: <c>LandingResetFilters</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить фильтры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filtrlarni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset filters&quot;
+        /// </summary>
+        public const string LandingResetFilters = "LandingResetFilters";
+
+        /// <summary>
+        /// Key: <c>LandingResetSearchBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить поиск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni qayta o'rnatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset Search&quot;
+        /// </summary>
+        public const string LandingResetSearchBtn = "LandingResetSearchBtn";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Ритейла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail Flagship&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipBadge = "LandingRetailFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipDesc = "LandingRetailFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Экспресс-касса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Catalog &amp;amp; Fast Checkout&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipTitle = "LandingRetailFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillCheckout</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Express Checkout&quot;
+        /// </summary>
+        public const string LandingRetailPillCheckout = "LandingRetailPillCheckout";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillModifiers</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Модификаторы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Modifikatorlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Modifiers&quot;
+        /// </summary>
+        public const string LandingRetailPillModifiers = "LandingRetailPillModifiers";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillSku</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU Матрица&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU matritsasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU Matrix&quot;
+        /// </summary>
+        public const string LandingRetailPillSku = "LandingRetailPillSku";
+
+        /// <summary>
+        /// Key: <c>LandingSearchModesAria</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search modes&quot;
+        /// </summary>
+        public const string LandingSearchModesAria = "LandingSearchModesAria";
+
+        /// <summary>
+        /// Key: <c>LandingSearchModesPlaceholder</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по 28 режимам (название, код, описание)...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 rejim bo'yicha qidiruv (nomi, kodi, tavsifi)...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search across 28 modes (title, name, code, description)...&quot;
+        /// </summary>
+        public const string LandingSearchModesPlaceholder = "LandingSearchModesPlaceholder";
+
+        /// <summary>
+        /// Key: <c>LandingShowingLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ko'rsatildi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Showing&quot;
+        /// </summary>
+        public const string LandingShowingLabel = "LandingShowingLabel";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Архитектурных UX-Режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta arxitektura UX-rejimlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Architectural UX Modes&quot;
+        /// </summary>
+        public const string LandingUxModesBadge = "LandingUxModesBadge";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.&quot;
+        /// </summary>
+        public const string LandingUxModesDesc = "LandingUxModesDesc";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Универсальных Сценариев Взаимодействия&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta universal tijorat UX ssenariylari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Universal Commercial UX Scenarios&quot;
+        /// </summary>
+        public const string LandingUxModesTitle = "LandingUxModesTitle";
+
+        /// <summary>
         /// Key: <c>Language</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Язык&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Til&quot;<br/>
@@ -34433,6 +37217,54 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Web App&quot;
         /// </summary>
         public const string LaunchButton = "LaunchButton";
+
+        /// <summary>
+        /// Key: <c>LaunchInKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить в интерактивном Kiosk&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv Kioskda ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Interactive Kiosk&quot;
+        /// </summary>
+        public const string LaunchInKiosk = "LaunchInKiosk";
+
+        /// <summary>
+        /// Key: <c>LaunchKioskBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить демо-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskni ishga tushirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Demo Kiosk&quot;
+        /// </summary>
+        public const string LaunchKioskBtn = "LaunchKioskBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchMapBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть карту и навигатор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritani ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Interactive Map&quot;
+        /// </summary>
+        public const string LaunchMapBtn = "LaunchMapBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchQrDesignerBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Студия QR-кодов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kodlar studiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Studio&quot;
+        /// </summary>
+        public const string LaunchQrDesignerBtn = "LaunchQrDesignerBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchSeatDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор SeatDesigner&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal konstruktorini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Seat Designer&quot;
+        /// </summary>
+        public const string LaunchSeatDesigner = "LaunchSeatDesigner";
+
+        /// <summary>
+        /// Key: <c>LaunchTerminalBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open POS Terminal&quot;
+        /// </summary>
+        public const string LaunchTerminalBtn = "LaunchTerminalBtn";
 
         /// <summary>
         /// Key: <c>Light</c><br/>
@@ -34681,6 +37513,30 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Your Lucky Numbers in the Draw:&quot;
         /// </summary>
         public const string LotteryYourNumbers = "Lottery_YourNumbers";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;4 фундаментальных направления&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic to'rtta ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four Foundations of Socratic&quot;
+        /// </summary>
+        public const string MacroPillarsBadge = "MacroPillarsBadge";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic объединяет физические товары, сферу услуг, аренду пространств и цифровые сервисы в едином технологическом комплексе без ограничений.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtasidan boshlab global fiskal hisobotlargacha bo'lgan to'liq tijorat siklini qamrab oluvchi yagona platforma.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform covering full commerce cycle from point of sale to global fiscal reporting.&quot;
+        /// </summary>
+        public const string MacroPillarsDesc = "MacroPillarsDesc";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая экосистема для любого формата торговли и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday biznes miqyosi uchun universal arxitektura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Architecture for Any Scale of Business&quot;
+        /// </summary>
+        public const string MacroPillarsTitle = "MacroPillarsTitle";
 
         /// <summary>
         /// Key: <c>Made</c><br/>
@@ -35347,6 +38203,22 @@ namespace Assets.Constants
         public const string NavHome = "NavHome";
 
         /// <summary>
+        /// Key: <c>NavigatorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Встроенное ведение по маршруту для курьеров и водителей доставки, расчет километража, времени прибытия и живой трекинг заказа.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer va mijozlar uchun optimal yo'nalish hisob-kitobi bilan nuqtadan nuqtaga navigatsiya.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point-to-point courier and client navigation with optimal pathing.&quot;
+        /// </summary>
+        public const string NavigatorDesc = "NavigatorDesc";
+
+        /// <summary>
+        /// Key: <c>NavigatorTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;GPS-Навигатор и Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aqlli marshrutlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Routing&quot;
+        /// </summary>
+        public const string NavigatorTitle = "NavigatorTitle";
+
+        /// <summary>
         /// Key: <c>NavOrders</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar&quot;<br/>
@@ -35393,6 +38265,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;No&quot;
         /// </summary>
         public const string No = "No";
+
+        /// <summary>
+        /// Key: <c>No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;
+        /// </summary>
+        public const string NoCommercialScenariosMatchYourCurrentSearchOrCategoryFilterTryClearingFiltersToSeeAll28Modes = "No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.";
 
         /// <summary>
         /// Key: <c>Notice</c><br/>
@@ -35569,6 +38449,38 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Online&quot;
         /// </summary>
         public const string Online = "Online";
+
+        /// <summary>
+        /// Key: <c>OpenDemoShowroom</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть витрину Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo vitrinani ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Showroom&quot;
+        /// </summary>
+        public const string OpenDemoShowroom = "OpenDemoShowroom";
+
+        /// <summary>
+        /// Key: <c>OpenInBot</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram-bot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Bot&quot;
+        /// </summary>
+        public const string OpenInBot = "OpenInBot";
+
+        /// <summary>
+        /// Key: <c>OpenSocraticSelfSelling</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic в Киоске&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic o'zini-o'zi sotish portali&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Self-Selling Portal&quot;
+        /// </summary>
+        public const string OpenSocraticSelfSelling = "OpenSocraticSelfSelling";
+
+        /// <summary>
+        /// Key: <c>OpenTerminalDemo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS kassani ishga tushirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch POS Terminal&quot;
+        /// </summary>
+        public const string OpenTerminalDemo = "OpenTerminalDemo";
 
         /// <summary>
         /// Key: <c>Order_AddMoreProducts</c><br/>
@@ -36651,6 +39563,54 @@ namespace Assets.Constants
         public const string OrganizationsText = "Organizations";
 
         /// <summary>
+        /// Key: <c>OrgDemoBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo • Шоурум товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommaviy namoyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Public Demonstration&quot;
+        /// </summary>
+        public const string OrgDemoBadge = "OrgDemoBadge";
+
+        /// <summary>
+        /// Key: <c>OrgDemoDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive showcase of beverages, desserts, modifiers, and instant card checkout.&quot;
+        /// </summary>
+        public const string OrgDemoDesc = "OrgDemoDesc";
+
+        /// <summary>
+        /// Key: <c>OrgDemoTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо-витрина ритейла, блюд и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;quot;Demo&amp;quot; qahvaxona va novvoyxona tarmog'i&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coffee &amp;amp; Bakery Chain &amp;quot;Demo&amp;quot;&quot;
+        /// </summary>
+        public const string OrgDemoTitle = "OrgDemoTitle";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Official Organization&quot;
+        /// </summary>
+        public const string OrgSocraticBadge = "OrgSocraticBadge";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.&quot;
+        /// </summary>
+        public const string OrgSocraticDesc = "OrgSocraticDesc";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic продает сама себя&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ekotizimi yadrosi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
+        /// </summary>
+        public const string OrgSocraticTitle = "OrgSocraticTitle";
+
+        /// <summary>
         /// Key: <c>OwnerId</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;ID владелеца&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Egasining ID&quot;<br/>
@@ -37531,6 +40491,214 @@ namespace Assets.Constants
         public const string PhoneText = "Phone";
 
         /// <summary>
+        /// Key: <c>PillarAnalyticsBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Inventory &amp;amp; Analytics&quot;
+        /// </summary>
+        public const string PillarAnalyticsBadge = "PillarAnalyticsBadge";
+
+        /// <summary>
+        /// Key: <c>PillarAnalyticsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прозрачный складской учет, списание остатков при каждой продаже, учет сроков годности и глубокая финансовая аналитика для руководителя в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaffof ombor hisobi, avtomatik hisobdan chiqarish, smena hisobotlari va P&amp;amp;L tahlili.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Transparent warehouse tracking, automatic write-offs, cashier shift reports, and P&amp;amp;L analytics.&quot;
+        /// </summary>
+        public const string PillarAnalyticsDesc = "PillarAnalyticsDesc";
+
+        /// <summary>
+        /// Key: <c>PillarAnalyticsHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Контроль бизнеса со смартфона из любой точки мира&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dunyoning istalgan nuqtasidan smartfon orqali biznesni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time Business Control from Anywhere&quot;
+        /// </summary>
+        public const string PillarAnalyticsHeading = "PillarAnalyticsHeading";
+
+        /// <summary>
+        /// Key: <c>PillarFintechDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискальные чеки Soliq ОФД (1% кешбэк), оплата Click, Payme, Uzum, рассрочка BNPL (Uzum Nasiya, Zoodpay) и сплит-чеки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri Soliq OFD integratsiyasi, 1% keshbek, fiskal QR cheklar va to'lov kartalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct Soliq OFD integration, 1% cashback, fiscal QR receipts, and payment cards.&quot;
+        /// </summary>
+        public const string PillarFintechDesc = "PillarFintechDesc";
+
+        /// <summary>
+        /// Key: <c>PillarFintechTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи, QR и финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex &amp;amp; Fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech &amp;amp; Fiscalization&quot;
+        /// </summary>
+        public const string PillarFintechTitle = "PillarFintechTitle";
+
+        /// <summary>
+        /// Key: <c>PillarKioskBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Self-Service Kiosks&quot;
+        /// </summary>
+        public const string PillarKioskBadge = "PillarKioskBadge";
+
+        /// <summary>
+        /// Key: <c>PillarKioskDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разгрузка очередей в часы пик, интерактивный электронный каталог, умные рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tig'iz vaqtlarda navbatlarni qisqartirish, interaktiv elektron menyu va avtomatik takliflar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Queue reduction in rush hours, interactive electronic menu, and automated upselling.&quot;
+        /// </summary>
+        public const string PillarKioskDesc = "PillarKioskDesc";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бесконтактная оплата картами Uzcard, Humo, Visa, Mastercard&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzcard, Humo, Visa, MasterCard kartalari bilan kontaktsiz to'lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Contactless card payments: Uzcard, Humo, Visa, MasterCard.&quot;
+        /// </summary>
+        public const string PillarKioskFeat1 = "PillarKioskFeat1";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация каталога и складских остатков в реальном времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Markaziy ombor bilan katalog va qoldiqlarni real vaqtda sinxronlashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time catalog and inventory sync with central store repository.&quot;
+        /// </summary>
+        public const string PillarKioskFeat2 = "PillarKioskFeat2";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face Pay и распознавание карт постоянного клиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face Pay, doimiy mijoz kartalarini tanish va shaxsiy chegirmalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face Pay, loyalty card scanning, and automated personal discounts.&quot;
+        /// </summary>
+        public const string PillarKioskFeat3 = "PillarKioskFeat3";
+
+        /// <summary>
+        /// Key: <c>PillarKioskHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономные терминалы самообслуживания&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous Self-Ordering Terminals&quot;
+        /// </summary>
+        public const string PillarKioskHeading = "PillarKioskHeading";
+
+        /// <summary>
+        /// Key: <c>PillarPosBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассовый терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminali&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash Register Terminal&quot;
+        /// </summary>
+        public const string PillarPosBadge = "PillarPosBadge";
+
+        /// <summary>
+        /// Key: <c>PillarPosDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for sellers, cashiers, and store managers.&quot;
+        /// </summary>
+        public const string PillarPosDesc = "PillarPosDesc";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Offline-First: продажи не останавливаются при обрыве интернета&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Offline-First: uninterrupted checkout without Internet connection.&quot;
+        /// </summary>
+        public const string PillarPosFeat1 = "PillarPosFeat1";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямое подключение термопринтеров ESC/POS, весов CAS и денежных ящиков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS termoprinterlari, CAS tarozilari va 2D skanerlarni to'g'ridan-to'g'ri ulash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct connection to ESC/POS thermal printers, CAS scales, and 2D barcode scanners.&quot;
+        /// </summary>
+        public const string PillarPosFeat2 = "PillarPosFeat2";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажи в рассрочку (BNPL): Uzum Nasiya, Zoodpay, Alif Nasiya в 1 клик&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muddatli to'lov (BNPL): Uzum Nasiya, Zoodpay va hisobni bo'lib to'lash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Installment &amp;amp; BNPL sales: Uzum Nasiya, Zoodpay, and split bills.&quot;
+        /// </summary>
+        public const string PillarPosFeat3 = "PillarPosFeat3";
+
+        /// <summary>
+        /// Key: <c>PillarPosHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорная касса для любого формата продаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun sensorli kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch POS for any sales format&quot;
+        /// </summary>
+        public const string PillarPosHeading = "PillarPosHeading";
+
+        /// <summary>
+        /// Key: <c>PillarQrBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Платежи &amp;amp; Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lovlar &amp;amp; Soliq OFD&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments &amp;amp; Soliq OFD&quot;
+        /// </summary>
+        public const string PillarQrBadge = "PillarQrBadge";
+
+        /// <summary>
+        /// Key: <c>PillarQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный прием оплат через банковские приложения, официальная фискализация по законам РУз и цифровая маркировка товаров в едином чеке.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bank ilovalari orqali avtomatik fiskal ro'yxatdan o'tkazish bilan tezkor to'lovlarni qabul qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant payment acceptance via mobile banking apps with automatic fiscal registration.&quot;
+        /// </summary>
+        public const string PillarQrDesc = "PillarQrDesc";
+
+        /// <summary>
+        /// Key: <c>PillarQrHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Оплата, Фискализация и Маркировка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lov, fiskallashtirish va markirovka&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments, Fiscalization &amp;amp; Marking&quot;
+        /// </summary>
+        public const string PillarQrHeading = "PillarQrHeading";
+
+        /// <summary>
+        /// Key: <c>PillarRetailDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.&quot;
+        /// </summary>
+        public const string PillarRetailDesc = "PillarRetailDesc";
+
+        /// <summary>
+        /// Key: <c>PillarRetailTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Розничная торговля и товары&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana &amp;amp; Ulgurji savdo&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Wholesale&quot;
+        /// </summary>
+        public const string PillarRetailTitle = "PillarRetailTitle";
+
+        /// <summary>
+        /// Key: <c>PillarServicesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-запись клиентов к мастерам, управление временными слотами, калькуляция смет и абонементы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar band qilish, usta jadvallari, onlayn yozilish va avtomatlashtirilgan SMS eslatmalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Booking spaces, master scheduling, online records, and automated SMS reminders.&quot;
+        /// </summary>
+        public const string PillarServicesDesc = "PillarServicesDesc";
+
+        /// <summary>
+        /// Key: <c>PillarServicesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сфера услуг и мастера&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; Booking&quot;
+        /// </summary>
+        public const string PillarServicesTitle = "PillarServicesTitle";
+
+        /// <summary>
+        /// Key: <c>PillarSpacesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивные векторные схемы залов SeatDesigner, бронирование столиков и номеров, QR-билеты и валидация на турникетах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv o'tirish sxemasi, stol tartibi va mehmonlar uchun QR-buyurtma hisob-kitobi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive seat design, table layouts, and QR-order checkout for guests.&quot;
+        /// </summary>
+        public const string PillarSpacesDesc = "PillarSpacesDesc";
+
+        /// <summary>
+        /// Key: <c>PillarSpacesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пространства, залы и билеты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; Maydonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Halls &amp;amp; Spaces&quot;
+        /// </summary>
+        public const string PillarSpacesTitle = "PillarSpacesTitle";
+
+        /// <summary>
         /// Key: <c>Places</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Места&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar&quot;<br/>
@@ -37547,12 +40715,36 @@ namespace Assets.Constants
         public const string Plans = "Plans";
 
         /// <summary>
+        /// Key: <c>PlansConnect</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы и подключение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflar va ulanish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariffs &amp;amp; Connection&quot;
+        /// </summary>
+        public const string PlansConnect = "PlansConnect";
+
+        /// <summary>
         /// Key: <c>PlatformAndroid</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Android (APK / Play Store)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android (APK / Play Store)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Android (APK / Play Store)&quot;
         /// </summary>
         public const string PlatformAndroid = "PlatformAndroid";
+
+        /// <summary>
+        /// Key: <c>PlatformAndroidDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мобильный POS, терминал официанта и складская ревизия на смартфонах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mobil POS, ofitsiant terminali va ombor inventarizatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Mobile POS, waiter handheld terminal, and warehouse stock-taking.&quot;
+        /// </summary>
+        public const string PlatformAndroidDesc = "PlatformAndroidDesc";
+
+        /// <summary>
+        /// Key: <c>PlatformDocs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitektura hujjatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Architecture Documentation&quot;
+        /// </summary>
+        public const string PlatformDocs = "PlatformDocs";
 
         /// <summary>
         /// Key: <c>PlatformIOS</c><br/>
@@ -37563,12 +40755,28 @@ namespace Assets.Constants
         public const string PlatformIOS = "PlatformIOS";
 
         /// <summary>
+        /// Key: <c>PlatformIOSDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad cashier desks and customer-facing displays.&quot;
+        /// </summary>
+        public const string PlatformIOSDesc = "PlatformIOSDesc";
+
+        /// <summary>
         /// Key: <c>PlatformMacOS</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;
         /// </summary>
         public const string PlatformMacOS = "PlatformMacOS";
+
+        /// <summary>
+        /// Key: <c>PlatformMacOSDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место управляющего, финансовая аналитика и дизайнер залов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruvchi ish joyi, moliyaviy tahlil va mahsulotlar boshqaruvi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Executive workstation, financial analytics, and product management.&quot;
+        /// </summary>
+        public const string PlatformMacOSDesc = "PlatformMacOSDesc";
 
         /// <summary>
         /// Key: <c>PlatformWeb</c><br/>
@@ -37579,12 +40787,44 @@ namespace Assets.Constants
         public const string PlatformWeb = "PlatformWeb";
 
         /// <summary>
+        /// Key: <c>PlatformWebDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный запуск в браузере без установки из любой точки мира.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday kompyuter, planshet yoki smartfondan o'rnatmasdan brauzerda tezkor ishga tushirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant browser launch without installation from any PC, tablet, or smartphone.&quot;
+        /// </summary>
+        public const string PlatformWebDesc = "PlatformWebDesc";
+
+        /// <summary>
         /// Key: <c>PlatformWindows</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Windows (x64 / ARM64)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows (x64 / ARM64)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Windows (x64 / ARM64)&quot;
         /// </summary>
         public const string PlatformWindows = "PlatformWindows";
+
+        /// <summary>
+        /// Key: <c>PlatformWindowsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen POS cashier terminal, back-office administration, and offline local cache.&quot;
+        /// </summary>
+        public const string PlatformWindowsDesc = "PlatformWindowsDesc";
+
+        /// <summary>
+        /// Key: <c>PointsPresenceDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive markers of retail branches, coffee shops, and pickup points.&quot;
+        /// </summary>
+        public const string PointsPresenceDesc = "PointsPresenceDesc";
+
+        /// <summary>
+        /// Key: <c>PointsPresenceTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки и Филиалы (PointPicker)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudlik nuqtalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Presence&quot;
+        /// </summary>
+        public const string PointsPresenceTitle = "PointsPresenceTitle";
 
         /// <summary>
         /// Key: <c>Preparing</c><br/>
@@ -38281,6 +41521,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Search products&quot;
         /// </summary>
         public const string QRSearchProducts = "QR_SearchProducts";
+
+        /// <summary>
+        /// Key: <c>QrStudio</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR Designer&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR Designer&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Designer&quot;
+        /// </summary>
+        public const string QrStudio = "QrStudio";
 
         /// <summary>
         /// Key: <c>QR_Title</c><br/>
@@ -39627,6 +42875,30 @@ namespace Assets.Constants
         public const string SeatDesignerSwitchToPreview = "SeatDesigner_SwitchToPreview";
 
         /// <summary>
+        /// Key: <c>SeatDesignerWingBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный Редактор Залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor zal konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector Hall Designer&quot;
+        /// </summary>
+        public const string SeatDesignerWingBadge = "SeatDesignerWingBadge";
+
+        /// <summary>
+        /// Key: <c>SeatDesignerWingDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный редактор SeatDesigner для создания интерактивных схем: столики, ряды кресел, переговорные комнаты и номера с живым статусом занятости.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran stollari, kinoteatr qatorlari, stadionlar va konferensiya zallari uchun vizual muharrir.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual editor for restaurant tables, cinema rows, stadiums, and conference halls.&quot;
+        /// </summary>
+        public const string SeatDesignerWingDesc = "SeatDesignerWingDesc";
+
+        /// <summary>
+        /// Key: <c>SeatDesignerWingTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор помещений и бронирование мест&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vizual pol va o'tirish sxemalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual Floor &amp;amp; Seat Layouts&quot;
+        /// </summary>
+        public const string SeatDesignerWingTitle = "SeatDesignerWingTitle";
+
+        /// <summary>
         /// Key: <c>Seats_SlotDefault</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Место выбрано&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy tanlandi&quot;<br/>
@@ -39755,12 +43027,44 @@ namespace Assets.Constants
         public const string ShippingText = "Shipping";
 
         /// <summary>
+        /// Key: <c>ShowcaseBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые интерактивные витрины&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli interaktiv namoyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live Interactive Demonstration&quot;
+        /// </summary>
+        public const string ShowcaseBadge = "ShowcaseBadge";
+
+        /// <summary>
+        /// Key: <c>ShowcaseHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Испытайте экосистему в реальном действии&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ni real biznes ssenariylarida sinab ko'ring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Test Socratic in Real Business Scenarios&quot;
+        /// </summary>
+        public const string ShowcaseHeading = "ShowcaseHeading";
+
+        /// <summary>
+        /// Key: <c>ShowcaseSub</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.&quot;
+        /// </summary>
+        public const string ShowcaseSub = "ShowcaseSub";
+
+        /// <summary>
         /// Key: <c>Showroom</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar vitrinasi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom&quot;
         /// </summary>
         public const string Showroom = "Showroom";
+
+        /// <summary>
+        /// Key: <c>ShowroomDemo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom Demo&quot;
+        /// </summary>
+        public const string ShowroomDemo = "ShowroomDemo";
 
         /// <summary>
         /// Key: <c>SignIn_ConfirmAndSignIn</c><br/>
@@ -40169,6 +43473,62 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic ID&quot;
         /// </summary>
         public const string SocraticID = "SocraticID";
+
+        /// <summary>
+        /// Key: <c>SpatialTechBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карты, Зоны Доставки &amp;amp; Навигация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fazoiy texnologiyalar &amp;amp; Logistika&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Spatial Technologies &amp;amp; Logistics&quot;
+        /// </summary>
+        public const string SpatialTechBadge = "SpatialTechBadge";
+
+        /// <summary>
+        /// Key: <c>SpatialTechHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Гео-карты сети, зоны доставки, навигатор и схемы залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritalar &amp;amp; Zal konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Maps &amp;amp; Hall Designer&quot;
+        /// </summary>
+        public const string SpatialTechHeading = "SpatialTechHeading";
+
+        /// <summary>
+        /// Key: <c>SpatialTechSub</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единый геопространственный комплекс: от интерактивной карты филиалов, векторных полигонов доставки и GPS-навигатора курьера до миллиметровых схем залов и бронирования столиков.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor grafika, real vaqtda geokodlash, ko'p zonali poligonlar va chipta o'rinlarini tezkor render qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector graphics, real-time geocoding, multi-zone polygons, and instant ticket seat rendering.&quot;
+        /// </summary>
+        public const string SpatialTechSub = "SpatialTechSub";
+
+        /// <summary>
+        /// Key: <c>SpecBranches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Масштабирование сетей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallarni markaziy boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Centralized Chain Control&quot;
+        /// </summary>
+        public const string SpecBranches = "SpecBranches";
+
+        /// <summary>
+        /// Key: <c>SpecCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кешбэк Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Cashback&quot;
+        /// </summary>
+        public const string SpecCashback = "SpecCashback";
+
+        /// <summary>
+        /// Key: <c>SpecOffline</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Offline-First надежность&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Offline-First ishonchliligi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Offline-First Reliability&quot;
+        /// </summary>
+        public const string SpecOffline = "SpecOffline";
+
+        /// <summary>
+        /// Key: <c>SpecSpeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa tezligi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal Speed&quot;
+        /// </summary>
+        public const string SpecSpeed = "SpecSpeed";
 
         /// <summary>
         /// Key: <c>Status</c><br/>
@@ -41195,6 +44555,30 @@ namespace Assets.Constants
         public const string SystemText = "System";
 
         /// <summary>
+        /// Key: <c>TabKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosk&quot;
+        /// </summary>
+        public const string TabKiosk = "TabKiosk";
+
+        /// <summary>
+        /// Key: <c>TabPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// </summary>
+        public const string TabPos = "TabPos";
+
+        /// <summary>
+        /// Key: <c>TabSpaces</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Залы &amp;amp; QR&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; QR&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Spaces &amp;amp; QR&quot;
+        /// </summary>
+        public const string TabSpaces = "TabSpaces";
+
+        /// <summary>
         /// Key: <c>Terminal_ActivatePinPad</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправить сумму на пин-пад&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Summani pin-padga yuborish&quot;<br/>
@@ -42099,6 +45483,230 @@ namespace Assets.Constants
         public const string UxMode_DeliveryScheduled_Title = "UxMode_DeliveryScheduled_Title";
 
         /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string UxMode_Desc_1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string UxMode_Desc_10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string UxMode_Desc_11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string UxMode_Desc_12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string UxMode_Desc_13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string UxMode_Desc_14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string UxMode_Desc_15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string UxMode_Desc_16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string UxMode_Desc_17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string UxMode_Desc_18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string UxMode_Desc_19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string UxMode_Desc_2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string UxMode_Desc_20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string UxMode_Desc_21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string UxMode_Desc_22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string UxMode_Desc_23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string UxMode_Desc_24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string UxMode_Desc_25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string UxMode_Desc_26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string UxMode_Desc_27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string UxMode_Desc_28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string UxMode_Desc_3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string UxMode_Desc_4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string UxMode_Desc_5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string UxMode_Desc_6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string UxMode_Desc_7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string UxMode_Desc_8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string UxMode_Desc_9 = "UxMode_Desc_9";
+
+        /// <summary>
         /// Key: <c>UxMode_DigitalGoods_Title</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровой продукт / Скачивание&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Raqamli mahsulot / Yuklab olish&quot;<br/>
@@ -42321,6 +45929,230 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled Delivery&quot;
         /// </summary>
         public const string UxModeDeliveryScheduledTitle = "UxMode_DeliveryScheduled_Title";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string UxModeDesc1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string UxModeDesc10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string UxModeDesc11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string UxModeDesc12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string UxModeDesc13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string UxModeDesc14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string UxModeDesc15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string UxModeDesc16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string UxModeDesc17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string UxModeDesc18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string UxModeDesc19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string UxModeDesc2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string UxModeDesc20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string UxModeDesc21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string UxModeDesc22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string UxModeDesc23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string UxModeDesc24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string UxModeDesc25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string UxModeDesc26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string UxModeDesc27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string UxModeDesc28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string UxModeDesc3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string UxModeDesc4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string UxModeDesc5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string UxModeDesc6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string UxModeDesc7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string UxModeDesc8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string UxModeDesc9 = "UxMode_Desc_9";
 
         /// <summary>
         /// Key: <c>UxMode_DigitalGoods_Title</c><br/>
@@ -42577,6 +46409,62 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Uz&quot;
         /// </summary>
         public const string Uz = "Uz";
+
+        /// <summary>
+        /// Key: <c>VenueHoreca</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рестораны, Кафе &amp;amp; Лаунджи&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoranlar &amp;amp; Loungelar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Restaurants &amp;amp; Lounges&quot;
+        /// </summary>
+        public const string VenueHoreca = "VenueHoreca";
+
+        /// <summary>
+        /// Key: <c>VenueHorecaDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки зала с живыми статусами столиков: Свободно, Занято, Депозитная бронь. Интеграция с кассой официанта.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar tartibi, VIP xonalar, veranda zonalari va ofitsiantlarni biriktirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Table layout, VIP rooms, veranda zones, and waiter assignment.&quot;
+        /// </summary>
+        public const string VenueHorecaDesc = "VenueHorecaDesc";
+
+        /// <summary>
+        /// Key: <c>VenuesCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasalar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Venues Catalog&quot;
+        /// </summary>
+        public const string VenuesCatalog = "VenuesCatalog";
+
+        /// <summary>
+        /// Key: <c>VenueSpaces</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отели, Коворкинги &amp;amp; Аренда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorkinglar &amp;amp; Arenalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking &amp;amp; Arenas&quot;
+        /// </summary>
+        public const string VenueSpaces = "VenueSpaces";
+
+        /// <summary>
+        /// Key: <c>VenueSpacesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы этажей, выбор переговорных комнат, рабочих мест, гостиничных номеров или беседок с почасовой тарификацией.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Erkin stollar, doimiy o'rinlar, muzokaralar xonalari va tadbirlarga chiptalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hot desks, fixed stations, conference rooms, and event ticketing.&quot;
+        /// </summary>
+        public const string VenueSpacesDesc = "VenueSpacesDesc";
+
+        /// <summary>
+        /// Key: <c>VenueTheaters</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Театры, Кино &amp;amp; Концерты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kinoteatrlar &amp;amp; Teatrlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cinemas &amp;amp; Theaters&quot;
+        /// </summary>
+        public const string VenueTheaters = "VenueTheaters";
+
+        /// <summary>
+        /// Key: <c>VenueTheatersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы партера, амфитеатра и балконов. Выбор мест с дифференцированными ценами, бронь билетов и моментальная оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Parter, amfiteatr, balkonlar, ko'p darajali narxlar va bir marta bosishda bron qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Parterre, amphiteater, balconies, multi-tier pricing, and single-click booking.&quot;
+        /// </summary>
+        public const string VenueTheatersDesc = "VenueTheatersDesc";
 
         /// <summary>
         /// Key: <c>Wish list</c><br/>
@@ -43112,7 +47000,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (374 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (501 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -43163,6 +47051,62 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
         /// </summary>
         public const string AllRightsReserved = "AllRightsReserved";
+
+        /// <summary>
+        /// Key: <c>B2bBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый старт за 1 день&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 kunda tezkor start&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Launch in 1 Day&quot;
+        /// </summary>
+        public const string B2bBadge = "B2bBadge";
+
+        /// <summary>
+        /// Key: <c>B2bBotBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот экосистемы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim Telegram-boti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem Telegram Bot&quot;
+        /// </summary>
+        public const string B2bBotBtn = "B2bBotBtn";
+
+        /// <summary>
+        /// Key: <c>B2bConsultBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Консультация в Telegram&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram orqali maslahat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Consultation&quot;
+        /// </summary>
+        public const string B2bConsultBtn = "B2bConsultBtn";
+
+        /// <summary>
+        /// Key: <c>B2bDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, restaurant, service salon, or chain in a single unified system.&quot;
+        /// </summary>
+        public const string B2bDesc = "B2bDesc";
+
+        /// <summary>
+        /// Key: <c>B2bDocsBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Documentation&quot;
+        /// </summary>
+        public const string B2bDocsBtn = "B2bDocsBtn";
+
+        /// <summary>
+        /// Key: <c>B2bKioskConnectBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформить тариф в киоске Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic kioskida ulanish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect in Socratic Kiosk&quot;
+        /// </summary>
+        public const string B2bKioskConnectBtn = "B2bKioskConnectBtn";
+
+        /// <summary>
+        /// Key: <c>B2bTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовы масштабировать ваш бизнес с Socratic?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznesingizni Socratic bilan kengaytirishga tayyormisiz?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ready to Scale Your Business with Socratic?&quot;
+        /// </summary>
+        public const string B2bTitle = "B2bTitle";
 
         /// <summary>
         /// Key: <c>Bitmap1</c><br/>
@@ -43221,6 +47165,38 @@ namespace Loc
         public const string Cash = "Cash";
 
         /// <summary>
+        /// Key: <c>CategoryHorecaBooking</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
+        /// </summary>
+        public const string CategoryHorecaBooking = "CategoryHorecaBooking";
+
+        /// <summary>
+        /// Key: <c>CategoryRetailCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл &amp;amp; Каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Katalog&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Catalog&quot;
+        /// </summary>
+        public const string CategoryRetailCatalog = "CategoryRetailCatalog";
+
+        /// <summary>
+        /// Key: <c>CategoryServicesAi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги &amp;amp; AI&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; AI&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; AI&quot;
+        /// </summary>
+        public const string CategoryServicesAi = "CategoryServicesAi";
+
+        /// <summary>
+        /// Key: <c>CategorySubscriptionsFintech</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
+        /// </summary>
+        public const string CategorySubscriptionsFintech = "CategorySubscriptionsFintech";
+
+        /// <summary>
         /// Key: <c>Chat</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Чат&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chat&quot;<br/>
@@ -43243,6 +47219,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;City&quot;
         /// </summary>
         public const string City = "City";
+
+        /// <summary>
+        /// Key: <c>CollapseModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogni yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse catalog&quot;
+        /// </summary>
+        public const string CollapseModes = "CollapseModes";
 
         /// <summary>
         /// Key: <c>Collected</c><br/>
@@ -43634,6 +47618,30 @@ namespace Loc
         public const string ControlPanel = "Control panel";
 
         /// <summary>
+        /// Key: <c>CoreSuperpowersBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ключевые возможности Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic asosiy imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Key Capabilities&quot;
+        /// </summary>
+        public const string CoreSuperpowersBadge = "CoreSuperpowersBadge";
+
+        /// <summary>
+        /// Key: <c>CoreSuperpowersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и учета в едином решении.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzluksiz savdo, tezkor mijozlarga xizmat ko'rsatish va to'liq soliq shaffofligi uchun barcha zarur narsalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Everything required for non-stop sales, rapid customer service, and full tax transparency.&quot;
+        /// </summary>
+        public const string CoreSuperpowersDesc = "CoreSuperpowersDesc";
+
+        /// <summary>
+        /// Key: <c>CoreSuperpowersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Торгово-кассовый комплекс и платежная среда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo-kassa kompleksi va to'lov muhiti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trade &amp;amp; Payment Infrastructure&quot;
+        /// </summary>
+        public const string CoreSuperpowersTitle = "CoreSuperpowersTitle";
+
+        /// <summary>
         /// Key: <c>Country</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Страна&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mamlakat&quot;<br/>
@@ -43714,6 +47722,22 @@ namespace Loc
         public const string Data = "Data";
 
         /// <summary>
+        /// Key: <c>DeliveryZonesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рисование векторных полигонов доставки на карте. Дифференцированные тарифы, бесплатная доставка от суммы и расчет зон в 1 клик.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har bir zona uchun narx va kelish vaqtini hisoblovchi moslashuvchan poligon chegaralari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom polygon borders with per-zone pricing and arrival estimation.&quot;
+        /// </summary>
+        public const string DeliveryZonesDesc = "DeliveryZonesDesc";
+
+        /// <summary>
+        /// Key: <c>DeliveryZonesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зоны Доставки (ZonePicker)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delivery Zones&quot;
+        /// </summary>
+        public const string DeliveryZonesTitle = "DeliveryZonesTitle";
+
+        /// <summary>
         /// Key: <c>Description</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
@@ -43746,12 +47770,36 @@ namespace Loc
         public const string Documentation = "Documentation";
 
         /// <summary>
+        /// Key: <c>DownloadAndroid</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Android&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Android&quot;
+        /// </summary>
+        public const string DownloadAndroid = "DownloadAndroid";
+
+        /// <summary>
         /// Key: <c>DownloadButton</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuklab olish&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Download&quot;
         /// </summary>
         public const string DownloadButton = "DownloadButton";
+
+        /// <summary>
+        /// Key: <c>DownloadIOS</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для iOS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iOS uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for iOS&quot;
+        /// </summary>
+        public const string DownloadIOS = "DownloadIOS";
+
+        /// <summary>
+        /// Key: <c>DownloadMacOS</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для macOS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for macOS&quot;
+        /// </summary>
+        public const string DownloadMacOS = "DownloadMacOS";
 
         /// <summary>
         /// Key: <c>DownloadSubTitle</c><br/>
@@ -43768,6 +47816,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic UI&quot;
         /// </summary>
         public const string DownloadTitle = "DownloadTitle";
+
+        /// <summary>
+        /// Key: <c>DownloadWindows</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать для Windows&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows uchun yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download for Windows&quot;
+        /// </summary>
+        public const string DownloadWindows = "DownloadWindows";
 
         /// <summary>
         /// Key: <c>Edit organization</c><br/>
@@ -43808,6 +47864,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;An error occurred while rendering component&quot;
         /// </summary>
         public const string ErrorRendering = "ErrorRendering";
+
+        /// <summary>
+        /// Key: <c>ExpandModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показать все 28 режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimni ko'rsatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Show all 28 modes&quot;
+        /// </summary>
+        public const string ExpandModes = "ExpandModes";
 
         /// <summary>
         /// Key: <c>FilePicker_AttachedFiles</c><br/>
@@ -43946,6 +48010,22 @@ namespace Loc
         public const string FirstName = "FirstName";
 
         /// <summary>
+        /// Key: <c>FiscalCompliance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Fiscalization&quot;
+        /// </summary>
+        public const string FiscalCompliance = "FiscalCompliance";
+
+        /// <summary>
+        /// Key: <c>FiscalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автогенерация фискального чека с QR-кодом ОФД, 1% кэшбэком и прямой регистрацией в налоговом комитете РУз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;OFD QR kodli fiskal chekni avtomatik yaratish, 1% keshbek va soliq talablariga muvofiqlik.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Automatic fiscal receipt generation with OFD QR code, 1% cashback, and tax service compliance.&quot;
+        /// </summary>
+        public const string FiscalDesc = "FiscalDesc";
+
+        /// <summary>
         /// Key: <c>Footer_Col_Catalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -43994,6 +48074,14 @@ namespace Loc
         public const string Footer_Tagline = "Footer_Tagline";
 
         /// <summary>
+        /// Key: <c>FooterCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа &amp;amp; Каталог&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma &amp;amp; Katalog&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform &amp;amp; Catalog&quot;
+        /// </summary>
+        public const string FooterCatalog = "FooterCatalog";
+
+        /// <summary>
         /// Key: <c>Footer_Col_Catalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Киоски&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Kiosklar&quot;<br/>
@@ -44026,6 +48114,30 @@ namespace Loc
         public const string FooterColResources = "Footer_Col_Resources";
 
         /// <summary>
+        /// Key: <c>FooterCommunity</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Community &amp;amp; Support&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Community &amp;amp; Support&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Community &amp;amp; Support&quot;
+        /// </summary>
+        public const string FooterCommunity = "FooterCommunity";
+
+        /// <summary>
+        /// Key: <c>FooterResources</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ресурсы &amp;amp; Инфо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Resurslar &amp;amp; Ma'lumot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Resources &amp;amp; Info&quot;
+        /// </summary>
+        public const string FooterResources = "FooterResources";
+
+        /// <summary>
+        /// Key: <c>FooterRights</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все права защищены.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha huquqlar himoyalangan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
+        /// </summary>
+        public const string FooterRights = "FooterRights";
+
+        /// <summary>
         /// Key: <c>Footer_Status</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Все системы работают стабильно&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha tizimlar barqaror ishlamoqda&quot;<br/>
@@ -44034,12 +48146,44 @@ namespace Loc
         public const string FooterStatus = "Footer_Status";
 
         /// <summary>
-        /// Key: <c>Footer_Tagline</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.&quot;
+        /// Key: <c>FooterTagline</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;
         /// </summary>
-        public const string FooterTagline = "Footer_Tagline";
+        public const string FooterTagline = "FooterTagline";
+
+        /// <summary>
+        /// Key: <c>GeoMapLiveSync</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоопределение геопозиции и радиуса обслуживания&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ScyllaDB NoSQL orqali geonuqtalar jonli sinxronizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ScyllaDB NoSQL live sync across geo points&quot;
+        /// </summary>
+        public const string GeoMapLiveSync = "GeoMapLiveSync";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Географическая Платформа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+        /// </summary>
+        public const string GeoMapWingBadge = "GeoMapWingBadge";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление сетью торговых точек, складами, пунктами выдачи (ПВЗ), полигонами курьерской доставки и встроенный GPS-навигатор для курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dinamik manzillar qidiruvi, yetkazib berish poligon zonalari va filiallarga yaqinlik marshrutlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dynamic address search, delivery polygon zones, and branch proximity routing.&quot;
+        /// </summary>
+        public const string GeoMapWingDesc = "GeoMapWingDesc";
+
+        /// <summary>
+        /// Key: <c>GeoMapWingTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта филиалов, зон и навигатор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geokodlash &amp;amp; Yetkazib berish logistikasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geocoding &amp;amp; Delivery Logistics&quot;
+        /// </summary>
+        public const string GeoMapWingTitle = "GeoMapWingTitle";
 
         /// <summary>
         /// Key: <c>Green</c><br/>
@@ -44048,6 +48192,110 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Green&quot;
         /// </summary>
         public const string Green = "Green";
+
+        /// <summary>
+        /// Key: <c>HardwareDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;ESC/POS термопринтеры 58/80мм, 2D-сканеры DataMatrix/EAN-13, терминалы Humo/Uzcard, весы CAS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS 58/80mm termoprinterlar, 2D DataMatrix skanerlar va tarozilar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ESC/POS 58/80mm thermal printers, 2D DataMatrix scanners, and weighing scales.&quot;
+        /// </summary>
+        public const string HardwareDesc = "HardwareDesc";
+
+        /// <summary>
+        /// Key: <c>HardwareSupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поддержка оборудования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunalarni qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware Support&quot;
+        /// </summary>
+        public const string HardwareSupport = "HardwareSupport";
+
+        /// <summary>
+        /// Key: <c>HeroBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+        /// </summary>
+        public const string HeroBadgeLabel = "HeroBadge";
+
+        /// <summary>
+        /// Key: <c>HeroBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+        /// </summary>
+        public const string HeroBadgeText = "HeroBadge";
+
+        /// <summary>
+        /// Key: <c>HeroMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карта и доставка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita va yetkazib berish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Map &amp;amp; Delivery&quot;
+        /// </summary>
+        public const string HeroMap = "HeroMap";
+
+        /// <summary>
+        /// Key: <c>HeroModulesLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Специализированные модули:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtisoslashgan modullar:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Specialized modules:&quot;
+        /// </summary>
+        public const string HeroModulesLabel = "HeroModulesLabel";
+
+        /// <summary>
+        /// Key: <c>HeroQrDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-фискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Fiscalization&quot;
+        /// </summary>
+        public const string HeroQrDesigner = "HeroQrDesigner";
+
+        /// <summary>
+        /// Key: <c>HeroSeatDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Seat Designer&quot;
+        /// </summary>
+        public const string HeroSeatDesigner = "HeroSeatDesigner";
+
+        /// <summary>
+        /// Key: <c>HeroShowroom</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Product Showroom&quot;
+        /// </summary>
+        public const string HeroShowroom = "HeroShowroom";
+
+        /// <summary>
+        /// Key: <c>HeroSocraticOrg</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tariflari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Plans&quot;
+        /// </summary>
+        public const string HeroSocraticOrg = "HeroSocraticOrg";
+
+        /// <summary>
+        /// Key: <c>HeroSubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+        /// </summary>
+        public const string HeroSubtitleLabel = "HeroSubtitle";
+
+        /// <summary>
+        /// Key: <c>HeroSubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+        /// </summary>
+        public const string HeroSubtitleText = "HeroSubtitle";
+
+        /// <summary>
+        /// Key: <c>HeroTerminal</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// </summary>
+        public const string HeroTerminal = "HeroTerminal";
 
         /// <summary>
         /// Key: <c>Home_LoadingPlayer</c><br/>
@@ -44122,6 +48370,14 @@ namespace Loc
         public const string ImageText = "Image";
 
         /// <summary>
+        /// Key: <c>InteractiveMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
+        /// </summary>
+        public const string InteractiveMap = "InteractiveMap";
+
+        /// <summary>
         /// Key: <c>Kiosk</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
@@ -44170,6 +48426,54 @@ namespace Loc
         public const string LaunchButton = "LaunchButton";
 
         /// <summary>
+        /// Key: <c>LaunchInKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить в интерактивном Kiosk&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv Kioskda ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Interactive Kiosk&quot;
+        /// </summary>
+        public const string LaunchInKiosk = "LaunchInKiosk";
+
+        /// <summary>
+        /// Key: <c>LaunchKioskBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Запустить демо-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskni ishga tushirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Demo Kiosk&quot;
+        /// </summary>
+        public const string LaunchKioskBtn = "LaunchKioskBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchMapBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть карту и навигатор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritani ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch Interactive Map&quot;
+        /// </summary>
+        public const string LaunchMapBtn = "LaunchMapBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchQrDesignerBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Студия QR-кодов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kodlar studiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Studio&quot;
+        /// </summary>
+        public const string LaunchQrDesignerBtn = "LaunchQrDesignerBtn";
+
+        /// <summary>
+        /// Key: <c>LaunchSeatDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор SeatDesigner&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal konstruktorini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Seat Designer&quot;
+        /// </summary>
+        public const string LaunchSeatDesigner = "LaunchSeatDesigner";
+
+        /// <summary>
+        /// Key: <c>LaunchTerminalBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open POS Terminal&quot;
+        /// </summary>
+        public const string LaunchTerminalBtn = "LaunchTerminalBtn";
+
+        /// <summary>
         /// Key: <c>Light</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Светлая&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yorug'&quot;<br/>
@@ -44184,6 +48488,30 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Light&quot;
         /// </summary>
         public const string LightText = "Light";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;4 фундаментальных направления&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic to'rtta ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four Foundations of Socratic&quot;
+        /// </summary>
+        public const string MacroPillarsBadge = "MacroPillarsBadge";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic объединяет физические товары, сферу услуг, аренду пространств и цифровые сервисы в едином технологическом комплексе без ограничений.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtasidan boshlab global fiskal hisobotlargacha bo'lgan to'liq tijorat siklini qamrab oluvchi yagona platforma.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform covering full commerce cycle from point of sale to global fiscal reporting.&quot;
+        /// </summary>
+        public const string MacroPillarsDesc = "MacroPillarsDesc";
+
+        /// <summary>
+        /// Key: <c>MacroPillarsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая экосистема для любого формата торговли и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday biznes miqyosi uchun universal arxitektura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Architecture for Any Scale of Business&quot;
+        /// </summary>
+        public const string MacroPillarsTitle = "MacroPillarsTitle";
 
         /// <summary>
         /// Key: <c>Made</c><br/>
@@ -44882,6 +49210,22 @@ namespace Loc
         public const string NavHome = "NavHome";
 
         /// <summary>
+        /// Key: <c>NavigatorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Встроенное ведение по маршруту для курьеров и водителей доставки, расчет километража, времени прибытия и живой трекинг заказа.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer va mijozlar uchun optimal yo'nalish hisob-kitobi bilan nuqtadan nuqtaga navigatsiya.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point-to-point courier and client navigation with optimal pathing.&quot;
+        /// </summary>
+        public const string NavigatorDesc = "NavigatorDesc";
+
+        /// <summary>
+        /// Key: <c>NavigatorTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;GPS-Навигатор и Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aqlli marshrutlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Routing&quot;
+        /// </summary>
+        public const string NavigatorTitle = "NavigatorTitle";
+
+        /// <summary>
         /// Key: <c>NavOrders</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar&quot;<br/>
@@ -44930,6 +49274,14 @@ namespace Loc
         public const string NewText = "New";
 
         /// <summary>
+        /// Key: <c>No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;
+        /// </summary>
+        public const string NoCommercialScenariosMatchYourCurrentSearchOrCategoryFilterTryClearingFiltersToSeeAll28Modes = "No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.";
+
+        /// <summary>
         /// Key: <c>Notice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Внимание&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Diqqat&quot;<br/>
@@ -44960,6 +49312,38 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Online&quot;
         /// </summary>
         public const string Online = "Online";
+
+        /// <summary>
+        /// Key: <c>OpenDemoShowroom</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть витрину Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo vitrinani ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Showroom&quot;
+        /// </summary>
+        public const string OpenDemoShowroom = "OpenDemoShowroom";
+
+        /// <summary>
+        /// Key: <c>OpenInBot</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram-бот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram-bot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Bot&quot;
+        /// </summary>
+        public const string OpenInBot = "OpenInBot";
+
+        /// <summary>
+        /// Key: <c>OpenSocraticSelfSelling</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic в Киоске&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic o'zini-o'zi sotish portali&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Self-Selling Portal&quot;
+        /// </summary>
+        public const string OpenSocraticSelfSelling = "OpenSocraticSelfSelling";
+
+        /// <summary>
+        /// Key: <c>OpenTerminalDemo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS kassani ishga tushirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch POS Terminal&quot;
+        /// </summary>
+        public const string OpenTerminalDemo = "OpenTerminalDemo";
 
         /// <summary>
         /// Key: <c>Order</c><br/>
@@ -45032,6 +49416,54 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations&quot;
         /// </summary>
         public const string OrganizationsText = "Organizations";
+
+        /// <summary>
+        /// Key: <c>OrgDemoBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo • Шоурум товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommaviy namoyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Public Demonstration&quot;
+        /// </summary>
+        public const string OrgDemoBadge = "OrgDemoBadge";
+
+        /// <summary>
+        /// Key: <c>OrgDemoDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive showcase of beverages, desserts, modifiers, and instant card checkout.&quot;
+        /// </summary>
+        public const string OrgDemoDesc = "OrgDemoDesc";
+
+        /// <summary>
+        /// Key: <c>OrgDemoTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо-витрина ритейла, блюд и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;quot;Demo&amp;quot; qahvaxona va novvoyxona tarmog'i&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coffee &amp;amp; Bakery Chain &amp;quot;Demo&amp;quot;&quot;
+        /// </summary>
+        public const string OrgDemoTitle = "OrgDemoTitle";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Official Organization&quot;
+        /// </summary>
+        public const string OrgSocraticBadge = "OrgSocraticBadge";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.&quot;
+        /// </summary>
+        public const string OrgSocraticDesc = "OrgSocraticDesc";
+
+        /// <summary>
+        /// Key: <c>OrgSocraticTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic продает сама себя&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ekotizimi yadrosi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
+        /// </summary>
+        public const string OrgSocraticTitle = "OrgSocraticTitle";
 
         /// <summary>
         /// Key: <c>OwnerId</c><br/>
@@ -45146,6 +49578,214 @@ namespace Loc
         public const string PhoneText = "Phone";
 
         /// <summary>
+        /// Key: <c>PillarAnalyticsBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Inventory &amp;amp; Analytics&quot;
+        /// </summary>
+        public const string PillarAnalyticsBadge = "PillarAnalyticsBadge";
+
+        /// <summary>
+        /// Key: <c>PillarAnalyticsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прозрачный складской учет, списание остатков при каждой продаже, учет сроков годности и глубокая финансовая аналитика для руководителя в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaffof ombor hisobi, avtomatik hisobdan chiqarish, smena hisobotlari va P&amp;amp;L tahlili.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Transparent warehouse tracking, automatic write-offs, cashier shift reports, and P&amp;amp;L analytics.&quot;
+        /// </summary>
+        public const string PillarAnalyticsDesc = "PillarAnalyticsDesc";
+
+        /// <summary>
+        /// Key: <c>PillarAnalyticsHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Контроль бизнеса со смартфона из любой точки мира&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dunyoning istalgan nuqtasidan smartfon orqali biznesni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time Business Control from Anywhere&quot;
+        /// </summary>
+        public const string PillarAnalyticsHeading = "PillarAnalyticsHeading";
+
+        /// <summary>
+        /// Key: <c>PillarFintechDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискальные чеки Soliq ОФД (1% кешбэк), оплата Click, Payme, Uzum, рассрочка BNPL (Uzum Nasiya, Zoodpay) и сплит-чеки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri Soliq OFD integratsiyasi, 1% keshbek, fiskal QR cheklar va to'lov kartalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct Soliq OFD integration, 1% cashback, fiscal QR receipts, and payment cards.&quot;
+        /// </summary>
+        public const string PillarFintechDesc = "PillarFintechDesc";
+
+        /// <summary>
+        /// Key: <c>PillarFintechTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи, QR и финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex &amp;amp; Fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech &amp;amp; Fiscalization&quot;
+        /// </summary>
+        public const string PillarFintechTitle = "PillarFintechTitle";
+
+        /// <summary>
+        /// Key: <c>PillarKioskBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Self-Service Kiosks&quot;
+        /// </summary>
+        public const string PillarKioskBadge = "PillarKioskBadge";
+
+        /// <summary>
+        /// Key: <c>PillarKioskDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разгрузка очередей в часы пик, интерактивный электронный каталог, умные рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tig'iz vaqtlarda navbatlarni qisqartirish, interaktiv elektron menyu va avtomatik takliflar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Queue reduction in rush hours, interactive electronic menu, and automated upselling.&quot;
+        /// </summary>
+        public const string PillarKioskDesc = "PillarKioskDesc";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бесконтактная оплата картами Uzcard, Humo, Visa, Mastercard&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzcard, Humo, Visa, MasterCard kartalari bilan kontaktsiz to'lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Contactless card payments: Uzcard, Humo, Visa, MasterCard.&quot;
+        /// </summary>
+        public const string PillarKioskFeat1 = "PillarKioskFeat1";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация каталога и складских остатков в реальном времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Markaziy ombor bilan katalog va qoldiqlarni real vaqtda sinxronlashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time catalog and inventory sync with central store repository.&quot;
+        /// </summary>
+        public const string PillarKioskFeat2 = "PillarKioskFeat2";
+
+        /// <summary>
+        /// Key: <c>PillarKioskFeat3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face Pay и распознавание карт постоянного клиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face Pay, doimiy mijoz kartalarini tanish va shaxsiy chegirmalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face Pay, loyalty card scanning, and automated personal discounts.&quot;
+        /// </summary>
+        public const string PillarKioskFeat3 = "PillarKioskFeat3";
+
+        /// <summary>
+        /// Key: <c>PillarKioskHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономные терминалы самообслуживания&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous Self-Ordering Terminals&quot;
+        /// </summary>
+        public const string PillarKioskHeading = "PillarKioskHeading";
+
+        /// <summary>
+        /// Key: <c>PillarPosBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассовый терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminali&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash Register Terminal&quot;
+        /// </summary>
+        public const string PillarPosBadge = "PillarPosBadge";
+
+        /// <summary>
+        /// Key: <c>PillarPosDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for sellers, cashiers, and store managers.&quot;
+        /// </summary>
+        public const string PillarPosDesc = "PillarPosDesc";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Offline-First: продажи не останавливаются при обрыве интернета&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Offline-First: uninterrupted checkout without Internet connection.&quot;
+        /// </summary>
+        public const string PillarPosFeat1 = "PillarPosFeat1";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямое подключение термопринтеров ESC/POS, весов CAS и денежных ящиков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ESC/POS termoprinterlari, CAS tarozilari va 2D skanerlarni to'g'ridan-to'g'ri ulash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct connection to ESC/POS thermal printers, CAS scales, and 2D barcode scanners.&quot;
+        /// </summary>
+        public const string PillarPosFeat2 = "PillarPosFeat2";
+
+        /// <summary>
+        /// Key: <c>PillarPosFeat3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажи в рассрочку (BNPL): Uzum Nasiya, Zoodpay, Alif Nasiya в 1 клик&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muddatli to'lov (BNPL): Uzum Nasiya, Zoodpay va hisobni bo'lib to'lash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Installment &amp;amp; BNPL sales: Uzum Nasiya, Zoodpay, and split bills.&quot;
+        /// </summary>
+        public const string PillarPosFeat3 = "PillarPosFeat3";
+
+        /// <summary>
+        /// Key: <c>PillarPosHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорная касса для любого формата продаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun sensorli kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch POS for any sales format&quot;
+        /// </summary>
+        public const string PillarPosHeading = "PillarPosHeading";
+
+        /// <summary>
+        /// Key: <c>PillarQrBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Платежи &amp;amp; Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lovlar &amp;amp; Soliq OFD&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments &amp;amp; Soliq OFD&quot;
+        /// </summary>
+        public const string PillarQrBadge = "PillarQrBadge";
+
+        /// <summary>
+        /// Key: <c>PillarQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный прием оплат через банковские приложения, официальная фискализация по законам РУз и цифровая маркировка товаров в едином чеке.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bank ilovalari orqali avtomatik fiskal ro'yxatdan o'tkazish bilan tezkor to'lovlarni qabul qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant payment acceptance via mobile banking apps with automatic fiscal registration.&quot;
+        /// </summary>
+        public const string PillarQrDesc = "PillarQrDesc";
+
+        /// <summary>
+        /// Key: <c>PillarQrHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR-Оплата, Фискализация и Маркировка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR to'lov, fiskallashtirish va markirovka&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Payments, Fiscalization &amp;amp; Marking&quot;
+        /// </summary>
+        public const string PillarQrHeading = "PillarQrHeading";
+
+        /// <summary>
+        /// Key: <c>PillarRetailDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.&quot;
+        /// </summary>
+        public const string PillarRetailDesc = "PillarRetailDesc";
+
+        /// <summary>
+        /// Key: <c>PillarRetailTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Розничная торговля и товары&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana &amp;amp; Ulgurji savdo&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Wholesale&quot;
+        /// </summary>
+        public const string PillarRetailTitle = "PillarRetailTitle";
+
+        /// <summary>
+        /// Key: <c>PillarServicesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-запись клиентов к мастерам, управление временными слотами, калькуляция смет и абонементы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar band qilish, usta jadvallari, onlayn yozilish va avtomatlashtirilgan SMS eslatmalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Booking spaces, master scheduling, online records, and automated SMS reminders.&quot;
+        /// </summary>
+        public const string PillarServicesDesc = "PillarServicesDesc";
+
+        /// <summary>
+        /// Key: <c>PillarServicesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сфера услуг и мастера&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services &amp;amp; Booking&quot;
+        /// </summary>
+        public const string PillarServicesTitle = "PillarServicesTitle";
+
+        /// <summary>
+        /// Key: <c>PillarSpacesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивные векторные схемы залов SeatDesigner, бронирование столиков и номеров, QR-билеты и валидация на турникетах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv o'tirish sxemasi, stol tartibi va mehmonlar uchun QR-buyurtma hisob-kitobi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive seat design, table layouts, and QR-order checkout for guests.&quot;
+        /// </summary>
+        public const string PillarSpacesDesc = "PillarSpacesDesc";
+
+        /// <summary>
+        /// Key: <c>PillarSpacesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пространства, залы и билеты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; Maydonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Halls &amp;amp; Spaces&quot;
+        /// </summary>
+        public const string PillarSpacesTitle = "PillarSpacesTitle";
+
+        /// <summary>
         /// Key: <c>Places</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Места&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylar&quot;<br/>
@@ -45162,12 +49802,36 @@ namespace Loc
         public const string Plans = "Plans";
 
         /// <summary>
+        /// Key: <c>PlansConnect</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы и подключение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflar va ulanish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariffs &amp;amp; Connection&quot;
+        /// </summary>
+        public const string PlansConnect = "PlansConnect";
+
+        /// <summary>
         /// Key: <c>PlatformAndroid</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Android (APK / Play Store)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Android (APK / Play Store)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Android (APK / Play Store)&quot;
         /// </summary>
         public const string PlatformAndroid = "PlatformAndroid";
+
+        /// <summary>
+        /// Key: <c>PlatformAndroidDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мобильный POS, терминал официанта и складская ревизия на смартфонах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mobil POS, ofitsiant terminali va ombor inventarizatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Mobile POS, waiter handheld terminal, and warehouse stock-taking.&quot;
+        /// </summary>
+        public const string PlatformAndroidDesc = "PlatformAndroidDesc";
+
+        /// <summary>
+        /// Key: <c>PlatformDocs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitektura hujjatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Architecture Documentation&quot;
+        /// </summary>
+        public const string PlatformDocs = "PlatformDocs";
 
         /// <summary>
         /// Key: <c>PlatformIOS</c><br/>
@@ -45178,12 +49842,28 @@ namespace Loc
         public const string PlatformIOS = "PlatformIOS";
 
         /// <summary>
+        /// Key: <c>PlatformIOSDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad cashier desks and customer-facing displays.&quot;
+        /// </summary>
+        public const string PlatformIOSDesc = "PlatformIOSDesc";
+
+        /// <summary>
         /// Key: <c>PlatformMacOS</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;macOS (Apple Silicon &amp;amp; Intel)&quot;
         /// </summary>
         public const string PlatformMacOS = "PlatformMacOS";
+
+        /// <summary>
+        /// Key: <c>PlatformMacOSDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место управляющего, финансовая аналитика и дизайнер залов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruvchi ish joyi, moliyaviy tahlil va mahsulotlar boshqaruvi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Executive workstation, financial analytics, and product management.&quot;
+        /// </summary>
+        public const string PlatformMacOSDesc = "PlatformMacOSDesc";
 
         /// <summary>
         /// Key: <c>PlatformWeb</c><br/>
@@ -45194,12 +49874,44 @@ namespace Loc
         public const string PlatformWeb = "PlatformWeb";
 
         /// <summary>
+        /// Key: <c>PlatformWebDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный запуск в браузере без установки из любой точки мира.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday kompyuter, planshet yoki smartfondan o'rnatmasdan brauzerda tezkor ishga tushirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant browser launch without installation from any PC, tablet, or smartphone.&quot;
+        /// </summary>
+        public const string PlatformWebDesc = "PlatformWebDesc";
+
+        /// <summary>
         /// Key: <c>PlatformWindows</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Windows (x64 / ARM64)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows (x64 / ARM64)&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Windows (x64 / ARM64)&quot;
         /// </summary>
         public const string PlatformWindows = "PlatformWindows";
+
+        /// <summary>
+        /// Key: <c>PlatformWindowsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen POS cashier terminal, back-office administration, and offline local cache.&quot;
+        /// </summary>
+        public const string PlatformWindowsDesc = "PlatformWindowsDesc";
+
+        /// <summary>
+        /// Key: <c>PointsPresenceDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive markers of retail branches, coffee shops, and pickup points.&quot;
+        /// </summary>
+        public const string PointsPresenceDesc = "PointsPresenceDesc";
+
+        /// <summary>
+        /// Key: <c>PointsPresenceTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки и Филиалы (PointPicker)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudlik nuqtalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Presence&quot;
+        /// </summary>
+        public const string PointsPresenceTitle = "PointsPresenceTitle";
 
         /// <summary>
         /// Key: <c>Preparing</c><br/>
@@ -45746,6 +50458,30 @@ namespace Loc
         public const string SeatDesignerSwitchToPreview = "SeatDesigner_SwitchToPreview";
 
         /// <summary>
+        /// Key: <c>SeatDesignerWingBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный Редактор Залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor zal konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector Hall Designer&quot;
+        /// </summary>
+        public const string SeatDesignerWingBadge = "SeatDesignerWingBadge";
+
+        /// <summary>
+        /// Key: <c>SeatDesignerWingDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Векторный редактор SeatDesigner для создания интерактивных схем: столики, ряды кресел, переговорные комнаты и номера с живым статусом занятости.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran stollari, kinoteatr qatorlari, stadionlar va konferensiya zallari uchun vizual muharrir.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual editor for restaurant tables, cinema rows, stadiums, and conference halls.&quot;
+        /// </summary>
+        public const string SeatDesignerWingDesc = "SeatDesignerWingDesc";
+
+        /// <summary>
+        /// Key: <c>SeatDesignerWingTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конструктор помещений и бронирование мест&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vizual pol va o'tirish sxemalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Visual Floor &amp;amp; Seat Layouts&quot;
+        /// </summary>
+        public const string SeatDesignerWingTitle = "SeatDesignerWingTitle";
+
+        /// <summary>
         /// Key: <c>Shipping</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Доставляется&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazilmoqda&quot;<br/>
@@ -45762,12 +50498,44 @@ namespace Loc
         public const string ShippingText = "Shipping";
 
         /// <summary>
+        /// Key: <c>ShowcaseBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые интерактивные витрины&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli interaktiv namoyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live Interactive Demonstration&quot;
+        /// </summary>
+        public const string ShowcaseBadge = "ShowcaseBadge";
+
+        /// <summary>
+        /// Key: <c>ShowcaseHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Испытайте экосистему в реальном действии&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ni real biznes ssenariylarida sinab ko'ring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Test Socratic in Real Business Scenarios&quot;
+        /// </summary>
+        public const string ShowcaseHeading = "ShowcaseHeading";
+
+        /// <summary>
+        /// Key: <c>ShowcaseSub</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.&quot;
+        /// </summary>
+        public const string ShowcaseSub = "ShowcaseSub";
+
+        /// <summary>
         /// Key: <c>Showroom</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar vitrinasi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom&quot;
         /// </summary>
         public const string Showroom = "Showroom";
+
+        /// <summary>
+        /// Key: <c>ShowroomDemo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom Demo&quot;
+        /// </summary>
+        public const string ShowroomDemo = "ShowroomDemo";
 
         /// <summary>
         /// Key: <c>SmartDataView_Kanban</c><br/>
@@ -45842,6 +50610,62 @@ namespace Loc
         public const string SocraticID = "SocraticID";
 
         /// <summary>
+        /// Key: <c>SpatialTechBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карты, Зоны Доставки &amp;amp; Навигация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fazoiy texnologiyalar &amp;amp; Logistika&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Spatial Technologies &amp;amp; Logistics&quot;
+        /// </summary>
+        public const string SpatialTechBadge = "SpatialTechBadge";
+
+        /// <summary>
+        /// Key: <c>SpatialTechHeading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Гео-карты сети, зоны доставки, навигатор и схемы залов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xaritalar &amp;amp; Zal konstruktori&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Maps &amp;amp; Hall Designer&quot;
+        /// </summary>
+        public const string SpatialTechHeading = "SpatialTechHeading";
+
+        /// <summary>
+        /// Key: <c>SpatialTechSub</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единый геопространственный комплекс: от интерактивной карты филиалов, векторных полигонов доставки и GPS-навигатора курьера до миллиметровых схем залов и бронирования столиков.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vektor grafika, real vaqtda geokodlash, ko'p zonali poligonlar va chipta o'rinlarini tezkor render qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vector graphics, real-time geocoding, multi-zone polygons, and instant ticket seat rendering.&quot;
+        /// </summary>
+        public const string SpatialTechSub = "SpatialTechSub";
+
+        /// <summary>
+        /// Key: <c>SpecBranches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Масштабирование сетей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallarni markaziy boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Centralized Chain Control&quot;
+        /// </summary>
+        public const string SpecBranches = "SpecBranches";
+
+        /// <summary>
+        /// Key: <c>SpecCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кешбэк Soliq ОФД&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD Cashback&quot;
+        /// </summary>
+        public const string SpecCashback = "SpecCashback";
+
+        /// <summary>
+        /// Key: <c>SpecOffline</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Offline-First надежность&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Offline-First ishonchliligi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Offline-First Reliability&quot;
+        /// </summary>
+        public const string SpecOffline = "SpecOffline";
+
+        /// <summary>
+        /// Key: <c>SpecSpeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa tezligi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal Speed&quot;
+        /// </summary>
+        public const string SpecSpeed = "SpecSpeed";
+
+        /// <summary>
         /// Key: <c>Status</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Статус&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Status&quot;<br/>
@@ -45896,6 +50720,30 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;System&quot;
         /// </summary>
         public const string SystemText = "System";
+
+        /// <summary>
+        /// Key: <c>TabKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosk&quot;
+        /// </summary>
+        public const string TabKiosk = "TabKiosk";
+
+        /// <summary>
+        /// Key: <c>TabPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// </summary>
+        public const string TabPos = "TabPos";
+
+        /// <summary>
+        /// Key: <c>TabSpaces</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Залы &amp;amp; QR&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zallar &amp;amp; QR&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Spaces &amp;amp; QR&quot;
+        /// </summary>
+        public const string TabSpaces = "TabSpaces";
 
         /// <summary>
         /// Key: <c>Terminal</c><br/>
@@ -46032,6 +50880,62 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Uz&quot;
         /// </summary>
         public const string Uz = "Uz";
+
+        /// <summary>
+        /// Key: <c>VenueHoreca</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рестораны, Кафе &amp;amp; Лаунджи&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoranlar &amp;amp; Loungelar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Restaurants &amp;amp; Lounges&quot;
+        /// </summary>
+        public const string VenueHoreca = "VenueHoreca";
+
+        /// <summary>
+        /// Key: <c>VenueHorecaDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки зала с живыми статусами столиков: Свободно, Занято, Депозитная бронь. Интеграция с кассой официанта.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar tartibi, VIP xonalar, veranda zonalari va ofitsiantlarni biriktirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Table layout, VIP rooms, veranda zones, and waiter assignment.&quot;
+        /// </summary>
+        public const string VenueHorecaDesc = "VenueHorecaDesc";
+
+        /// <summary>
+        /// Key: <c>VenuesCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasalar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Venues Catalog&quot;
+        /// </summary>
+        public const string VenuesCatalog = "VenuesCatalog";
+
+        /// <summary>
+        /// Key: <c>VenueSpaces</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отели, Коворкинги &amp;amp; Аренда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorkinglar &amp;amp; Arenalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking &amp;amp; Arenas&quot;
+        /// </summary>
+        public const string VenueSpaces = "VenueSpaces";
+
+        /// <summary>
+        /// Key: <c>VenueSpacesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы этажей, выбор переговорных комнат, рабочих мест, гостиничных номеров или беседок с почасовой тарификацией.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Erkin stollar, doimiy o'rinlar, muzokaralar xonalari va tadbirlarga chiptalar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hot desks, fixed stations, conference rooms, and event ticketing.&quot;
+        /// </summary>
+        public const string VenueSpacesDesc = "VenueSpacesDesc";
+
+        /// <summary>
+        /// Key: <c>VenueTheaters</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Театры, Кино &amp;amp; Концерты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kinoteatrlar &amp;amp; Teatrlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cinemas &amp;amp; Theaters&quot;
+        /// </summary>
+        public const string VenueTheaters = "VenueTheaters";
+
+        /// <summary>
+        /// Key: <c>VenueTheatersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Схемы партера, амфитеатра и балконов. Выбор мест с дифференцированными ценами, бронь билетов и моментальная оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Parter, amfiteatr, balkonlar, ko'p darajali narxlar va bir marta bosishda bron qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Parterre, amphiteater, balconies, multi-tier pricing, and single-click booking.&quot;
+        /// </summary>
+        public const string VenueTheatersDesc = "VenueTheatersDesc";
 
         /// <summary>
         /// Key: <c>Wish list</c><br/>
@@ -56979,18 +61883,10 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Landing (321 keys). Use with <c>@using static Loc.Landing;</c>.
+    /// Domain group: Landing (303 keys). Use with <c>@using static Loc.Landing;</c>.
     /// </summary>
     public static class Landing
     {
-        /// <summary>
-        /// Key: <c>About</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
-        /// </summary>
-        public const string About = "About";
-
         /// <summary>
         /// Key: <c>About_ActionsSubtitle</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте интерактивные сценарии в живом окружении прямо сейчас.&quot;<br/>
@@ -57368,6 +62264,14 @@ namespace Loc
         public const string AboutSubtitle = "AboutSubtitle";
 
         /// <summary>
+        /// Key: <c>About</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О нас&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz haqimizda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About&quot;
+        /// </summary>
+        public const string AboutText = "About";
+
+        /// <summary>
         /// Key: <c>AboutTitleMain</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Интеллектуальная экосистема&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intellektual ekotizim&quot;<br/>
@@ -57478,30 +62382,6 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
         /// </summary>
         public const string AboutVideoTitle = "About_VideoTitle";
-
-        /// <summary>
-        /// Key: <c>About_ActionsSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте интерактивные сценарии в живом окружении прямо сейчас.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli muhitda interaktiv ssenariylarni hoziroq sinab ko'ring.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Try interactive scenarios in a live environment right now.&quot;
-        /// </summary>
-        public const string ActionsSubtitle = "About_ActionsSubtitle";
-
-        /// <summary>
-        /// Key: <c>About_ActionsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовы протестировать возможности?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Imkoniyatlarni sinab ko'rishga tayyormisiz?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ready to test the capabilities?&quot;
-        /// </summary>
-        public const string ActionsTitle = "About_ActionsTitle";
-
-        /// <summary>
-        /// Key: <c>Analytics_ActualSales</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
-        /// </summary>
-        public const string ActualSales = "Analytics_ActualSales";
 
         /// <summary>
         /// Key: <c>Analytics_ActualSales</c><br/>
@@ -57944,214 +62824,6 @@ namespace Loc
         public const string AnalyticsTopProducts = "Analytics_TopProducts";
 
         /// <summary>
-        /// Key: <c>Analytics_AverageBill</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average bill&quot;
-        /// </summary>
-        public const string AverageBill = "Analytics_AverageBill";
-
-        /// <summary>
-        /// Key: <c>QR_BackToTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Назад в терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalga qaytish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Back to Terminal&quot;
-        /// </summary>
-        public const string BackToTerminal = "QR_BackToTerminal";
-
-        /// <summary>
-        /// Key: <c>Help_BtnDocs</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейти в документацию&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatlarga o'tish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to Documentation&quot;
-        /// </summary>
-        public const string BtnDocs = "Help_BtnDocs";
-
-        /// <summary>
-        /// Key: <c>About_BtnKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
-        /// </summary>
-        public const string BtnKiosk = "About_BtnKiosk";
-
-        /// <summary>
-        /// Key: <c>Help_BtnOpenChat</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть чат&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chatni ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open chat&quot;
-        /// </summary>
-        public const string BtnOpenChat = "Help_BtnOpenChat";
-
-        /// <summary>
-        /// Key: <c>About_BtnTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
-        /// </summary>
-        public const string BtnTerminal = "About_BtnTerminal";
-
-        /// <summary>
-        /// Key: <c>Analytics_ByRevenue</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;by revenue for selected period&quot;
-        /// </summary>
-        public const string ByRevenue = "Analytics_ByRevenue";
-
-        /// <summary>
-        /// Key: <c>Help_CardChatDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенные консультации встроенного AI-ассистента и подключение инженеров платформы.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rnatilgan AI-yordamchisining tezkor maslahatlari va platforma muhandislari.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant consultations with built-in AI assistant and platform engineer escalations.&quot;
-        /// </summary>
-        public const string CardChatDesc = "Help_CardChatDesc";
-
-        /// <summary>
-        /// Key: <c>Help_CardChatTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-чат поддержки&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn qo'llab-quvvatlash chati&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Online support chat&quot;
-        /// </summary>
-        public const string CardChatTitle = "Help_CardChatTitle";
-
-        /// <summary>
-        /// Key: <c>Help_CardDocsDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;37 интерактивных руководств, архитектурные схемы и спецификация всех модулей.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;37 ta interaktiv qo'llanma va barcha modullar spetsifikatsiyasi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;37 interactive guides, architecture diagrams and module specifications.&quot;
-        /// </summary>
-        public const string CardDocsDesc = "Help_CardDocsDesc";
-
-        /// <summary>
-        /// Key: <c>Help_CardDocsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;База знаний и API&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bilimlar bazasi va API&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Knowledge Base &amp;amp; API&quot;
-        /// </summary>
-        public const string CardDocsTitle = "Help_CardDocsTitle";
-
-        /// <summary>
-        /// Key: <c>Help_CardPhoneDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Экстренное решение вопросов доступности касс, фискализации и работы оборудования.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar mavjudligi, fiskallashtirish va uskunalar ishlashi bo'yicha favqulodda yordam.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Emergency resolution of cashier uptime, fiscalization and hardware issues.&quot;
-        /// </summary>
-        public const string CardPhoneDesc = "Help_CardPhoneDesc";
-
-        /// <summary>
-        /// Key: <c>Help_CardPhoneTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дежурная линия 24/7&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 navbatchi aloqa liniyasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Hotline&quot;
-        /// </summary>
-        public const string CardPhoneTitle = "Help_CardPhoneTitle";
-
-        /// <summary>
-        /// Key: <c>Help_CatAi</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;AI &amp;amp; Аналитика&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; Tahlil&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Analytics&quot;
-        /// </summary>
-        public const string CatAi = "Help_CatAi";
-
-        /// <summary>
-        /// Key: <c>Help_CatAll</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все вопросы&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha savollar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;All questions&quot;
-        /// </summary>
-        public const string CatAll = "Help_CatAll";
-
-        /// <summary>
-        /// Key: <c>Help_CategoriesAria</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Категории вопросов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savollar toifalari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Question categories&quot;
-        /// </summary>
-        public const string CategoriesAria = "Help_CategoriesAria";
-
-        /// <summary>
-        /// Key: <c>Help_CatHardware</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оборудование&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunalar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware&quot;
-        /// </summary>
-        public const string CatHardware = "Help_CatHardware";
-
-        /// <summary>
-        /// Key: <c>Help_CatModes</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-rejim&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX Modes&quot;
-        /// </summary>
-        public const string CatModes = "Help_CatModes";
-
-        /// <summary>
-        /// Key: <c>Help_CatPayments</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и QR&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovlar va QR&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; QR&quot;
-        /// </summary>
-        public const string CatPayments = "Help_CatPayments";
-
-        /// <summary>
-        /// Key: <c>Help_CatPos</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
-        /// </summary>
-        public const string CatPos = "Help_CatPos";
-
-        /// <summary>
-        /// Key: <c>Analytics_CompletedReceipts</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
-        /// </summary>
-        public const string CompletedReceipts = "Analytics_CompletedReceipts";
-
-        /// <summary>
-        /// Key: <c>Analytics_ConfigTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройка виджетов аналитики&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil vidjetlarini sozlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure analytics widgets&quot;
-        /// </summary>
-        public const string ConfigTitle = "Analytics_ConfigTitle";
-
-        /// <summary>
-        /// Key: <c>Analytics_Configure</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure&quot;
-        /// </summary>
-        public const string Configure = "Analytics_Configure";
-
-        /// <summary>
-        /// Key: <c>Analytics_ConfigureTooltip</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить виджеты аналитики&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil vidjetlarini sozlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure analytics widgets&quot;
-        /// </summary>
-        public const string ConfigureTooltip = "Analytics_ConfigureTooltip";
-
-        /// <summary>
-        /// Key: <c>Analytics_Dashboard</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dashboard&quot;
-        /// </summary>
-        public const string DashboardText = "Analytics_Dashboard";
-
-        /// <summary>
-        /// Key: <c>Analytics_DistributionShare</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;распределение долей&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ulushlar taqsimoti&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
-        /// </summary>
-        public const string DistributionShare = "Analytics_DistributionShare";
-
-        /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка документа...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjat yuklanmoqda...&quot;<br/>
@@ -58278,158 +62950,6 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
         /// </summary>
         public const string DocsWelcomeTitle = "Docs_WelcomeTitle";
-
-        /// <summary>
-        /// Key: <c>Analytics_Explorer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реестры&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reyestrlar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Explorer&quot;
-        /// </summary>
-        public const string Explorer = "Analytics_Explorer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqAiAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Модуль Intelligence использует локальные нейросети YOLO и FaceNet. Видеопоток с камеры обрабатывается в реальном времени: система определяет длину очереди, пол/возраст покупателей и персональные скидки программы лояльности.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intelligence moduli mahalliy YOLO va FaceNet neyrotarmoqlaridan foydalanadi. Kamera video oqimi real vaqtda qayta ishlanadi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Intelligence module uses local YOLO and FaceNet networks. Video stream is processed in real time.&quot;
-        /// </summary>
-        public const string FaqAiAnswer = "Help_FaqAiAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqAiTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как работает распознавание лиц и детекция очередей?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuzni tanish va navbatlarni aniqlash qanday ishlaydi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How does face recognition and queue detection work?&quot;
-        /// </summary>
-        public const string FaqAiTitle = "Help_FaqAiTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqDynamicQrAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;При расчете заказа кассовый модуль генерирует уникальный QR-код с идентификатором транзакции и точной суммой. Код отображается на дисплее покупателя или экране киоска. После считывания в банковском приложении и подтверждения вебхука чек закрывается моментально.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmani hisoblashda kassa moduli noyob QR-kod yaratadi. Xaridor bank ilovasida to'lagandan so'ng chek bir zumda yopiladi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;When finalizing an order, a unique QR code is generated. Once scanned and paid in a mobile bank app, the receipt closes instantly.&quot;
-        /// </summary>
-        public const string FaqDynamicQrAnswer = "Help_FaqDynamicQrAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqDynamicQrTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как работает динамический QR-код на дисплее покупателя?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor displeyidagi dinamik QR-kod qanday ishlaydi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How does dynamic QR work on customer display?&quot;
-        /// </summary>
-        public const string FaqDynamicQrTitle = "Help_FaqDynamicQrTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqHardwareAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Модуль Hardware.Device поддерживает фискальные регистраторы и принтеры чеков ESC/POS (USB, Ethernet, Wi-Fi, Bluetooth), 2D-сканеры штрих-кодов и маркировки DataMatrix, торговые весы (CAS, Масса-К) и электромагнитные денежные ящики.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hardware.Device moduli ESC/POS chek printerlari, 2D skanerlar, savdo tarozilari va pul qutilarini qo'llab-quvvatlaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hardware.Device module supports ESC/POS printers, 2D barcode scanners, scales and cash drawers.&quot;
-        /// </summary>
-        public const string FaqHardwareAnswer = "Help_FaqHardwareAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqHardwareStatusAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейдите в инженерный раздел «Оборудование» (/hardware). В панели управления отображается статус каждого подключенного устройства, остаток чековой ленты и журнал диагностики с возможностью тестовой печати чека.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Uskunalar» (/hardware) bo'limiga o'ting. Boshqaruv panelida har bir qurilmaning holati va diagnostika jurnali ko'rsatiladi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to Hardware section (/hardware). The panel shows connection status of each device and diagnostics log.&quot;
-        /// </summary>
-        public const string FaqHardwareStatusAnswer = "Help_FaqHardwareStatusAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqHardwareStatusTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как проверить статус подключения оборудования?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uskunaning ulanish holatini qanday tekshirish mumkin?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to check hardware connection status?&quot;
-        /// </summary>
-        public const string FaqHardwareStatusTitle = "Help_FaqHardwareStatusTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqHardwareTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Какое торговое оборудование поддерживается?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qanday savdo uskunalari qo'llab-quvvatlanadi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;What retail hardware is supported?&quot;
-        /// </summary>
-        public const string FaqHardwareTitle = "Help_FaqHardwareTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
-        /// </summary>
-        public const string FaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
-        /// </summary>
-        public const string FaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqModesAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Это универсальный движок UniversalProductExperienceRenderer. Он адаптирует пользовательский интерфейс каталога и корзины под любой тип бизнеса: ресторанное меню, билеты с местами, аренда по времени, аукционы, бронирование услуг или продажа маркированных товаров.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu universal UniversalProductExperienceRenderer mexanizmi. U har qanday biznes turiga interfeysni moslashtiradi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;UniversalProductExperienceRenderer engine adapts catalog and cart UI for any business type.&quot;
-        /// </summary>
-        public const string FaqModesAnswer = "Help_FaqModesAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqModesTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Что представляют собой 28 UX-режимов коммерции?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta tijorat UX-rejimi nimani anglatadi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;What are the 28 Commerce UX Modes?&quot;
-        /// </summary>
-        public const string FaqModesTitle = "Help_FaqModesTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
-        /// </summary>
-        public const string FaqOfflineAnswer = "Help_FaqOfflineAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqOfflineTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
-        /// </summary>
-        public const string FaqOfflineTitle = "Help_FaqOfflineTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
-        /// </summary>
-        public const string FaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
-
-        /// <summary>
-        /// Key: <c>Help_FaqPaymentsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Какие платежные методы поддерживаются из коробки?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qaysi to'lov usullari qutidan tashqarida qo'llab-quvvatlanadi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;What payment methods are supported out of the box?&quot;
-        /// </summary>
-        public const string FaqPaymentsTitle = "Help_FaqPaymentsTitle";
-
-        /// <summary>
-        /// Key: <c>Help_FaqSectionAria</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Часто задаваемые вопросы&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tez-tez beriladigan savollar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Frequently Asked Questions&quot;
-        /// </summary>
-        public const string FaqSectionAria = "Help_FaqSectionAria";
-
-        /// <summary>
-        /// Key: <c>Analytics_FiscalRatio</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля фискализации&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fiskallashtirish ulushi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscalization share&quot;
-        /// </summary>
-        public const string FiscalRatio = "Analytics_FiscalRatio";
 
         /// <summary>
         /// Key: <c>Help_BtnDocs</c><br/>
@@ -59072,172 +63592,668 @@ namespace Loc
         public const string HelpTitleSub = "HelpTitleSub";
 
         /// <summary>
-        /// Key: <c>Docs_LoadingDoc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка документа...&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjat yuklanmoqda...&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading document...&quot;
+        /// Key: <c>LandingAiFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман AI &amp;amp; SaaS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; SaaS yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Cloud Flagship&quot;
         /// </summary>
-        public const string LoadingDoc = "Docs_LoadingDoc";
+        public const string LandingAiFlagshipBadge = "LandingAiFlagshipBadge";
 
         /// <summary>
-        /// Key: <c>Docs_Navigation</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Навигация&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Navigatsiya&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Navigation&quot;
+        /// Key: <c>LandingAiFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и тарификация микросервисов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor API kalitlari berish, LLM token kvotalari, kompyuter ko'rishi va mikroxizmatlar billingi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant API keys issuance, LLM token quotas, computer vision access, and microservice billing.&quot;
         /// </summary>
-        public const string NavigationText = "Docs_Navigation";
+        public const string LandingAiFlagshipDesc = "LandingAiFlagshipDesc";
 
         /// <summary>
-        /// Key: <c>Docs_NoDocsAvailable</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет доступной документации&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjud hujjatlar yo'q&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;No documentation available&quot;
+        /// Key: <c>LandingAiFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-сервис &amp;amp; AI Доступ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn xizmat &amp;amp; AI ruxsat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Online Service &amp;amp; AI Access&quot;
         /// </summary>
-        public const string NoDocsAvailable = "Docs_NoDocsAvailable";
+        public const string LandingAiFlagshipTitle = "LandingAiFlagshipTitle";
 
         /// <summary>
-        /// Key: <c>Analytics_OfdReceipts</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;GNC OFD receipts&quot;
+        /// Key: <c>LandingAiPillApiKey</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;API-ключи&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;API kalitlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;API Key Generator&quot;
         /// </summary>
-        public const string OfdReceipts = "Analytics_OfdReceipts";
+        public const string LandingAiPillApiKey = "LandingAiPillApiKey";
 
         /// <summary>
-        /// Key: <c>Analytics_OrdersCount</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Orders count&quot;
+        /// Key: <c>LandingAiPillQuotas</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Квоты LLM токенов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;LLM token kvotalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;LLM Quotas&quot;
         /// </summary>
-        public const string OrdersCount = "Analytics_OrdersCount";
+        public const string LandingAiPillQuotas = "LandingAiPillQuotas";
 
         /// <summary>
-        /// Key: <c>Docs_PageTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация системы | Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim hujjatlari | Socratic&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;System Documentation | Socratic&quot;
+        /// Key: <c>LandingAiPillWebhooks</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Webhooks &amp;amp; Автоматизация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Webhooks &amp;amp; Avtomatlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Webhooks&quot;
         /// </summary>
-        public const string PageTitleText = "Docs_PageTitle";
+        public const string LandingAiPillWebhooks = "LandingAiPillWebhooks";
 
         /// <summary>
-        /// Key: <c>Analytics_PaymentChannels</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
+        /// Key: <c>LandingCategoryAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все режимы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha rejimlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All Modes&quot;
         /// </summary>
-        public const string PaymentChannels = "Analytics_PaymentChannels";
+        public const string LandingCategoryAll = "LandingCategoryAll";
 
         /// <summary>
-        /// Key: <c>Analytics_PeriodLabel</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Период аналитики&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil davri&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics period&quot;
+        /// Key: <c>LandingCategoryFintech</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подписки &amp;amp; Финтех&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Obunalar &amp;amp; Fintex&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscriptions &amp;amp; Fintech&quot;
         /// </summary>
-        public const string PeriodLabelText = "Analytics_PeriodLabel";
+        public const string LandingCategoryFintech = "LandingCategoryFintech";
 
         /// <summary>
-        /// Key: <c>Analytics_PerTransaction</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;На одну транзакцию&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta tranzaksiya uchun&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
+        /// Key: <c>LandingCategoryHoreca</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;HoReCa &amp;amp; Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa &amp;amp; Bron qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa &amp;amp; Booking&quot;
         /// </summary>
-        public const string PerTransaction = "Analytics_PerTransaction";
+        public const string LandingCategoryHoreca = "LandingCategoryHoreca";
 
         /// <summary>
-        /// Key: <c>Help_PhoneLabel</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;+998 (71) 200-00-00&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;+998 (71) 200-00-00&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;+998 (71) 200-00-00&quot;
+        /// Key: <c>LandingCategoryRetail</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ритейл и Торговля&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo &amp;amp; Tijorat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail &amp;amp; Commerce&quot;
         /// </summary>
-        public const string PhoneLabel = "Help_PhoneLabel";
+        public const string LandingCategoryRetail = "LandingCategoryRetail";
 
         /// <summary>
-        /// Key: <c>About_PillarKioskDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+        /// Key: <c>LandingCategoryServices</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Услуги, SaaS &amp;amp; AI&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmatlar, SaaS &amp;amp; AI&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Services, SaaS &amp;amp; AI&quot;
         /// </summary>
-        public const string PillarKioskDesc = "About_PillarKioskDesc";
+        public const string LandingCategoryServices = "LandingCategoryServices";
 
         /// <summary>
-        /// Key: <c>About_PillarKioskTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+        /// Key: <c>LandingClearSearchAria</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить поиск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear search&quot;
         /// </summary>
-        public const string PillarKioskTitle = "About_PillarKioskTitle";
+        public const string LandingClearSearchAria = "LandingClearSearchAria";
 
         /// <summary>
-        /// Key: <c>About_PillarModesDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный рендерер под любой сценарий: от ресторанов и отелей до аренды, аукционов и абонементов.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday ssenariy uchun universal render: restoran, mehmonxona, ijara va auksionlar.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal renderer for any scenario: from restaurants and hotels to rentals and auctions.&quot;
+        /// Key: <c>LandingDetailsBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Детали&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tafsilotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Details&quot;
         /// </summary>
-        public const string PillarModesDesc = "About_PillarModesDesc";
+        public const string LandingDetailsBtn = "LandingDetailsBtn";
 
         /// <summary>
-        /// Key: <c>About_PillarModesTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов коммерции&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta tijorat UX-rejimi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Commerce UX Modes&quot;
+        /// Key: <c>LandingFintechFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Финтеха&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fintex yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fintech Flagship&quot;
         /// </summary>
-        public const string PillarModesTitle = "About_PillarModesTitle";
+        public const string LandingFintechFlagshipBadge = "LandingFintechFlagshipBadge";
 
         /// <summary>
-        /// Key: <c>About_PillarsBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ключевые направления&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy yo'nalishlar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Key directions&quot;
+        /// Key: <c>LandingFintechFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоматические рекуррентные списания, гибкие тарифные сетки, абонементы и мгновенная фискализация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomatik davriy to'lovlar, moslashuvchan tariflar, abonementlar va tezkor fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Automated recurring debits, tiered subscription plans, gym passes, and automatic fiscalization.&quot;
         /// </summary>
-        public const string PillarsBadge = "About_PillarsBadge";
+        public const string LandingFintechFlagshipDesc = "LandingFintechFlagshipDesc";
 
         /// <summary>
-        /// Key: <c>About_PillarsSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Модульная структура позволяет развертывать необходимые сервисы без избыточной связности.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Modulli tuzilma ortiqcha bog'liqliksiz zarur xizmatlarni joylashtirish imkonini beradi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Modular structure allows deploying required services without excessive coupling.&quot;
+        /// Key: <c>LandingFintechFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные подписки &amp;amp; Биллинг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Davriy obunalar &amp;amp; Billing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring Subscriptions&quot;
         /// </summary>
-        public const string PillarsSubtitle = "About_PillarsSubtitle";
+        public const string LandingFintechFlagshipTitle = "LandingFintechFlagshipTitle";
 
         /// <summary>
-        /// Key: <c>About_PillarsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+        /// Key: <c>LandingFintechPillFiscal</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автофискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtofiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscal Receipts&quot;
         /// </summary>
-        public const string PillarsTitle = "About_PillarsTitle";
+        public const string LandingFintechPillFiscal = "LandingFintechPillFiscal";
 
         /// <summary>
-        /// Key: <c>About_PillarStudioDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный WebGL-холст, 3D схемы залов, кастомизация векторных брендированных QR-кодов с логотипом.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv WebGL xolst, zallarning 3D sxemalari va brendlangan QR-kodlar.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive WebGL canvas, 3D venue layouts and vector branded QR codes.&quot;
+        /// Key: <c>LandingFintechPillPricing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные сетки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif to'rlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Multi-tier Pricing&quot;
         /// </summary>
-        public const string PillarStudioDesc = "About_PillarStudioDesc";
+        public const string LandingFintechPillPricing = "LandingFintechPillPricing";
 
         /// <summary>
-        /// Key: <c>About_PillarStudioTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D &amp;amp; QR Студия&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D &amp;amp; QR Studiya&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D &amp;amp; QR Studio&quot;
+        /// Key: <c>LandingFintechPillRecurring</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Авторекурренты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtotolovlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Auto Recurring&quot;
         /// </summary>
-        public const string PillarStudioTitle = "About_PillarStudioTitle";
+        public const string LandingFintechPillRecurring = "LandingFintechPillRecurring";
 
         /// <summary>
-        /// Key: <c>About_PillarVisionDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Детекция объектов YOLO в реальном времени, биометрия Face ID, аналитика очередей и WebRTC-трансляции.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda YOLO obyektlarni aniqlash, Face ID biometriyasi va navbatlar tahlili.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time YOLO object detection, Face ID biometrics and queue analytics.&quot;
+        /// Key: <c>LandingFlagshipSubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых столпа коммерческой автоматизации Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Top four foundational scenarios powering enterprise automation&quot;
         /// </summary>
-        public const string PillarVisionDesc = "About_PillarVisionDesc";
+        public const string LandingFlagshipSubtitle = "LandingFlagshipSubtitle";
 
         /// <summary>
-        /// Key: <c>About_PillarVisionTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;AI &amp;amp; Компьютерное зрение&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AI &amp;amp; Kompyuter ko'rishi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;AI &amp;amp; Computer Vision&quot;
+        /// Key: <c>LandingFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагманские Архетипы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetakchi arxetiplar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Flagship Archetypes&quot;
         /// </summary>
-        public const string PillarVisionTitle = "About_PillarVisionTitle";
+        public const string LandingFlagshipTitle = "LandingFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingHeroBadgeModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-Режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-Rejim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX Modes&quot;
+        /// </summary>
+        public const string LandingHeroBadgeModes = "LandingHeroBadgeModes";
+
+        /// <summary>
+        /// Key: <c>LandingHeroBadgeOfd</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+        /// </summary>
+        public const string LandingHeroBadgeOfd = "LandingHeroBadgeOfd";
+
+        /// <summary>
+        /// Key: <c>LandingHeroTitleOperatingSystem</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная операционная система торговли и услуг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo va xizmatlarning universal operatsion tizimi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal operating system for commerce and services&quot;
+        /// </summary>
+        public const string LandingHeroTitleOperatingSystem = "LandingHeroTitleOperatingSystem";
+
+        /// <summary>
+        /// Key: <c>LandingHeroTitleSocratic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic&quot;
+        /// </summary>
+        public const string LandingHeroTitleSocratic = "LandingHeroTitleSocratic";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман HoReCa&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;HoReCa yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;HoReCa Flagship&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipBadge = "LandingHorecaFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сетка временных интервалов в реальном времени, интерактивная схема залов и защита от овербукинга.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda vaqt oraliqlari to'ri, zallarning interaktiv rejasi va ortiqcha bron qilishdan himoya.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Real-time time slot grid, restaurant floor plan, hall reservations, and zero-overbooking protection.&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipDesc = "LandingHorecaFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронирование столов &amp;amp; Времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Stollar &amp;amp; Vaqtni band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Table &amp;amp; Time Booking&quot;
+        /// </summary>
+        public const string LandingHorecaFlagshipTitle = "LandingHorecaFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillFloorPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;План рассадки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'tirish rejasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor Plan&quot;
+        /// </summary>
+        public const string LandingHorecaPillFloorPlan = "LandingHorecaPillFloorPlan";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillSlots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тайм-слоты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time Slots&quot;
+        /// </summary>
+        public const string LandingHorecaPillSlots = "LandingHorecaPillSlots";
+
+        /// <summary>
+        /// Key: <c>LandingHorecaPillSms</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SMS &amp;amp; TG Бронь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS &amp;amp; TG xabarnoma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SMS Notifications&quot;
+        /// </summary>
+        public const string LandingHorecaPillSms = "LandingHorecaPillSms";
+
+        /// <summary>
+        /// Key: <c>LandingLaunchBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch&quot;
+        /// </summary>
+        public const string LandingLaunchBtn = "LandingLaunchBtn";
+
+        /// <summary>
+        /// Key: <c>LandingLaunchDemoKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть в демо-киоске&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo kioskda ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch in Demo Kiosk&quot;
+        /// </summary>
+        public const string LandingLaunchDemoKiosk = "LandingLaunchDemoKiosk";
+
+        /// <summary>
+        /// Key: <c>LandingLegendBusy</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Занято&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Occupied&quot;
+        /// </summary>
+        public const string LandingLegendBusy = "LandingLegendBusy";
+
+        /// <summary>
+        /// Key: <c>LandingLegendFree</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свободно&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bo'sh&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Available&quot;
+        /// </summary>
+        public const string LandingLegendFree = "LandingLegendFree";
+
+        /// <summary>
+        /// Key: <c>LandingLegendReserved</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Забронировано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Band qilingan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reserved&quot;
+        /// </summary>
+        public const string LandingLegendReserved = "LandingLegendReserved";
+
+        /// <summary>
+        /// Key: <c>LandingMetaDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — unified platform for retail sales, services, space booking, and payment processing.&quot;
+        /// </summary>
+        public const string LandingMetaDesc = "LandingMetaDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricMs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 10 мс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 10 ms&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 10 ms&quot;
+        /// </summary>
+        public const string LandingMetricMs = "LandingMetricMs";
+
+        /// <summary>
+        /// Key: <c>LandingMetricNetworkDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалов в единой сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yagona tarmoqdagi filiallar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches in unified network&quot;
+        /// </summary>
+        public const string LandingMetricNetworkDesc = "LandingMetricNetworkDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricOfflineDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономная работа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtonom ishlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous offline work&quot;
+        /// </summary>
+        public const string LandingMetricOfflineDesc = "LandingMetricOfflineDesc";
+
+        /// <summary>
+        /// Key: <c>LandingMetricPoints500</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;500+ точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;500+ nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;500+ branches&quot;
+        /// </summary>
+        public const string LandingMetricPoints500 = "LandingMetricPoints500";
+
+        /// <summary>
+        /// Key: <c>LandingMetricSec</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;&amp;lt; 1 с&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;lt; 1 s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;&amp;lt; 1 s&quot;
+        /// </summary>
+        public const string LandingMetricSec = "LandingMetricSec";
+
+        /// <summary>
+        /// Key: <c>LandingMetricSyncDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Синхронизация данных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar sinxronizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data synchronization&quot;
+        /// </summary>
+        public const string LandingMetricSyncDesc = "LandingMetricSyncDesc";
+
+        /// <summary>
+        /// Key: <c>LandingNoModesFoundDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;So'rovingiz bo'yicha hech qanday tijorat ssenariysi topilmadi. Qidiruvni tozalang yoki toifani almashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No commercial scenarios match your current search or category filter. Try clearing filters to see all 28 modes.&quot;
+        /// </summary>
+        public const string LandingNoModesFoundDesc = "LandingNoModesFoundDesc";
+
+        /// <summary>
+        /// Key: <c>LandingNoModesFoundTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Режимов не найдено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No UX modes match your query&quot;
+        /// </summary>
+        public const string LandingNoModesFoundTitle = "LandingNoModesFoundTitle";
+
+        /// <summary>
+        /// Key: <c>LandingOfdCashbackTag</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq.uz 1% кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz 1% keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz 1% cashback&quot;
+        /// </summary>
+        public const string LandingOfdCashbackTag = "LandingOfdCashbackTag";
+
+        /// <summary>
+        /// Key: <c>LandingOfLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+        /// </summary>
+        public const string LandingOfLabel = "LandingOfLabel";
+
+        /// <summary>
+        /// Key: <c>LandingPageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — Универсальная экосистема для бизнеса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — Biznes uchun universal ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Universal Business Ecosystem&quot;
+        /// </summary>
+        public const string LandingPageTitle = "LandingPageTitle";
+
+        /// <summary>
+        /// Key: <c>LandingPillAccessControl</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;СКУД доступ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKUD ruxsat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Access control&quot;
+        /// </summary>
+        public const string LandingPillAccessControl = "LandingPillAccessControl";
+
+        /// <summary>
+        /// Key: <c>LandingPillBranchNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть филиалов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar tarmog'i&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branch network&quot;
+        /// </summary>
+        public const string LandingPillBranchNetwork = "LandingPillBranchNetwork";
+
+        /// <summary>
+        /// Key: <c>LandingPillCourierRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут курьера&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kuryer marshruti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Courier route&quot;
+        /// </summary>
+        public const string LandingPillCourierRoute = "LandingPillCourierRoute";
+
+        /// <summary>
+        /// Key: <c>LandingPillDeposits</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Депозиты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Depozitlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Deposits&quot;
+        /// </summary>
+        public const string LandingPillDeposits = "LandingPillDeposits";
+
+        /// <summary>
+        /// Key: <c>LandingPillDirectPurchase</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямая покупка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri xarid&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct purchase&quot;
+        /// </summary>
+        public const string LandingPillDirectPurchase = "LandingPillDirectPurchase";
+
+        /// <summary>
+        /// Key: <c>LandingPillEcosystemPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы экосистемы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim tariflari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ecosystem plans&quot;
+        /// </summary>
+        public const string LandingPillEcosystemPlans = "LandingPillEcosystemPlans";
+
+        /// <summary>
+        /// Key: <c>LandingPillLiveGps</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой GPS-трекинг&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli GPS treking&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live GPS tracking&quot;
+        /// </summary>
+        public const string LandingPillLiveGps = "LandingPillLiveGps";
+
+        /// <summary>
+        /// Key: <c>LandingPillLiveStatus</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живой статус&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jonli holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live status&quot;
+        /// </summary>
+        public const string LandingPillLiveStatus = "LandingPillLiveStatus";
+
+        /// <summary>
+        /// Key: <c>LandingPillMapPolygons</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritadagi poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Map polygons&quot;
+        /// </summary>
+        public const string LandingPillMapPolygons = "LandingPillMapPolygons";
+
+        /// <summary>
+        /// Key: <c>LandingPillNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом со мной&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinimda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Near me&quot;
+        /// </summary>
+        public const string LandingPillNearby = "LandingPillNearby";
+
+        /// <summary>
+        /// Key: <c>LandingPillNoIntermediaries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без посредников&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vositachilarsiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No intermediaries&quot;
+        /// </summary>
+        public const string LandingPillNoIntermediaries = "LandingPillNoIntermediaries";
+
+        /// <summary>
+        /// Key: <c>LandingPillOfdCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД 1%&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD 1%&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD 1%&quot;
+        /// </summary>
+        public const string LandingPillOfdCashback = "LandingPillOfdCashback";
+
+        /// <summary>
+        /// Key: <c>LandingPillOrderPay</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ и оплата&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma va to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order and payment&quot;
+        /// </summary>
+        public const string LandingPillOrderPay = "LandingPillOrderPay";
+
+        /// <summary>
+        /// Key: <c>LandingPillPosKiosks</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы &amp;amp; Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar &amp;amp; Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS &amp;amp; Kiosks&quot;
+        /// </summary>
+        public const string LandingPillPosKiosks = "LandingPillPosKiosks";
+
+        /// <summary>
+        /// Key: <c>LandingPillPriceZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ценовые зоны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Narx zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Price zones&quot;
+        /// </summary>
+        public const string LandingPillPriceZones = "LandingPillPriceZones";
+
+        /// <summary>
+        /// Key: <c>LandingPillRowsSeats</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ряды и места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qatorlar va o'rinlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Rows &amp;amp; seats&quot;
+        /// </summary>
+        public const string LandingPillRowsSeats = "LandingPillRowsSeats";
+
+        /// <summary>
+        /// Key: <c>LandingPillSmartKiosk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart kiosk&quot;
+        /// </summary>
+        public const string LandingPillSmartKiosk = "LandingPillSmartKiosk";
+
+        /// <summary>
+        /// Key: <c>LandingPillTariffZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифные зоны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif zonalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff zones&quot;
+        /// </summary>
+        public const string LandingPillTariffZones = "LandingPillTariffZones";
+
+        /// <summary>
+        /// Key: <c>LandingPillTimeSlots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Слоты времени&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slots&quot;
+        /// </summary>
+        public const string LandingPillTimeSlots = "LandingPillTimeSlots";
+
+        /// <summary>
+        /// Key: <c>LandingPillUxModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 UX-режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta UX-rejim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 UX modes&quot;
+        /// </summary>
+        public const string LandingPillUxModes = "LandingPillUxModes";
+
+        /// <summary>
+        /// Key: <c>LandingQuickViewTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Спецификация и фискализация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Spetsifikatsiya va fiskallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QuickView&quot;
+        /// </summary>
+        public const string LandingQuickViewTitle = "LandingQuickViewTitle";
+
+        /// <summary>
+        /// Key: <c>LandingResetFilters</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить фильтры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filtrlarni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset filters&quot;
+        /// </summary>
+        public const string LandingResetFilters = "LandingResetFilters";
+
+        /// <summary>
+        /// Key: <c>LandingResetSearchBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сбросить поиск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruvni qayta o'rnatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Reset Search&quot;
+        /// </summary>
+        public const string LandingResetSearchBtn = "LandingResetSearchBtn";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Флагман Ритейла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo yetakchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Retail Flagship&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipBadge = "LandingRetailFlagshipBadge";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipDesc = "LandingRetailFlagshipDesc";
+
+        /// <summary>
+        /// Key: <c>LandingRetailFlagshipTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Экспресс-касса&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor kassa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Catalog &amp;amp; Fast Checkout&quot;
+        /// </summary>
+        public const string LandingRetailFlagshipTitle = "LandingRetailFlagshipTitle";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillCheckout</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Express Checkout&quot;
+        /// </summary>
+        public const string LandingRetailPillCheckout = "LandingRetailPillCheckout";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillModifiers</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Модификаторы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Modifikatorlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Modifiers&quot;
+        /// </summary>
+        public const string LandingRetailPillModifiers = "LandingRetailPillModifiers";
+
+        /// <summary>
+        /// Key: <c>LandingRetailPillSku</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU Матрица&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU matritsasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU Matrix&quot;
+        /// </summary>
+        public const string LandingRetailPillSku = "LandingRetailPillSku";
+
+        /// <summary>
+        /// Key: <c>LandingSearchModesAria</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rejimlarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search modes&quot;
+        /// </summary>
+        public const string LandingSearchModesAria = "LandingSearchModesAria";
+
+        /// <summary>
+        /// Key: <c>LandingSearchModesPlaceholder</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по 28 режимам (название, код, описание)...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 rejim bo'yicha qidiruv (nomi, kodi, tavsifi)...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search across 28 modes (title, name, code, description)...&quot;
+        /// </summary>
+        public const string LandingSearchModesPlaceholder = "LandingSearchModesPlaceholder";
+
+        /// <summary>
+        /// Key: <c>LandingShowingLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ko'rsatildi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Showing&quot;
+        /// </summary>
+        public const string LandingShowingLabel = "LandingShowingLabel";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Архитектурных UX-Режимов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta arxitektura UX-rejimlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Architectural UX Modes&quot;
+        /// </summary>
+        public const string LandingUxModesBadge = "LandingUxModesBadge";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.&quot;
+        /// </summary>
+        public const string LandingUxModesDesc = "LandingUxModesDesc";
+
+        /// <summary>
+        /// Key: <c>LandingUxModesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Универсальных Сценариев Взаимодействия&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta universal tijorat UX ssenariylari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;28 Universal Commercial UX Scenarios&quot;
+        /// </summary>
+        public const string LandingUxModesTitle = "LandingUxModesTitle";
 
         /// <summary>
         /// Key: <c>QR_BackToTerminal</c><br/>
@@ -59280,148 +64296,12 @@ namespace Loc
         public const string QRSearchProducts = "QR_SearchProducts";
 
         /// <summary>
-        /// Key: <c>QR_Title</c><br/>
+        /// Key: <c>QrStudio</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;QR Designer&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR Designer&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Designer&quot;
         /// </summary>
-        public const string QRTitle = "QR_Title";
-
-        /// <summary>
-        /// Key: <c>Analytics_RealtimeStatus</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновлено в реальном времени&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy vaqtda yangilangan&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Updated in real-time&quot;
-        /// </summary>
-        public const string RealtimeStatus = "Analytics_RealtimeStatus";
-
-        /// <summary>
-        /// Key: <c>Docs_RefreshList</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновить список&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ro'yxatni yangilash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh list&quot;
-        /// </summary>
-        public const string RefreshList = "Docs_RefreshList";
-
-        /// <summary>
-        /// Key: <c>Analytics_RevenuePeriod</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка за период&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Davr uchun tushum&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue for period&quot;
-        /// </summary>
-        public const string RevenuePeriod = "Analytics_RevenuePeriod";
-
-        /// <summary>
-        /// Key: <c>QR_SearchProducts</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск товаров&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlarni qidirish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search products&quot;
-        /// </summary>
-        public const string SearchProducts = "QR_SearchProducts";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowAvgCheck</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка среднего чека&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek kartochkasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average check card&quot;
-        /// </summary>
-        public const string ShowAvgCheck = "Analytics_ShowAvgCheck";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowFiscal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка фискализации&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fiskallashtirish kartochkasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fiscalization card&quot;
-        /// </summary>
-        public const string ShowFiscal = "Analytics_ShowFiscal";
-
-        /// <summary>
-        /// Key: <c>Docs_ShowMenu</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показать меню&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Menyuni ko'rsatish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Show menu&quot;
-        /// </summary>
-        public const string ShowMenu = "Docs_ShowMenu";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowOrders</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка заказов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar kartochkasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Orders card&quot;
-        /// </summary>
-        public const string ShowOrders = "Analytics_ShowOrders";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowPayments</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Диаграмма оплат&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovlar diagrammasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment diagram&quot;
-        /// </summary>
-        public const string ShowPayments = "Analytics_ShowPayments";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowRevenue</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточка выручки&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum kartochkasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue card&quot;
-        /// </summary>
-        public const string ShowRevenue = "Analytics_ShowRevenue";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowTerminals</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Таблица терминалов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar jadvali&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminals table&quot;
-        /// </summary>
-        public const string ShowTerminals = "Analytics_ShowTerminals";
-
-        /// <summary>
-        /// Key: <c>Analytics_ShowTopProducts</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Таблица топ-товаров&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng yaxshi tovarlar jadvali&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
-        /// </summary>
-        public const string ShowTopProducts = "Analytics_ShowTopProducts";
-
-        /// <summary>
-        /// Key: <c>Help_SupportChannelsBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прямая связь&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'g'ridan-to'g'ri aloqa&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Direct contact&quot;
-        /// </summary>
-        public const string SupportChannelsBadge = "Help_SupportChannelsBadge";
-
-        /// <summary>
-        /// Key: <c>Help_SupportChannelsSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите удобный канал связи для оперативной помощи специалистов Socratic.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic mutaxassislarining tezkor yordami uchun qulay aloqa kanalini tanlang.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a convenient communication channel for prompt assistance.&quot;
-        /// </summary>
-        public const string SupportChannelsSubtitle = "Help_SupportChannelsSubtitle";
-
-        /// <summary>
-        /// Key: <c>Help_SupportChannelsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нужна помощь дежурного инженера?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Navbatchi muhandis yordami kerakmi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Need help from an on-duty engineer?&quot;
-        /// </summary>
-        public const string SupportChannelsTitle = "Help_SupportChannelsTitle";
-
-        /// <summary>
-        /// Key: <c>Help_TelegramLabel</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram: @socratic_support&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram: @socratic_support&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram: @socratic_support&quot;
-        /// </summary>
-        public const string TelegramLabel = "Help_TelegramLabel";
-
-        /// <summary>
-        /// Key: <c>Analytics_TerminalPerformance</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal &amp;amp; kiosk performance&quot;
-        /// </summary>
-        public const string TerminalPerformance = "Analytics_TerminalPerformance";
+        public const string QrStudio = "QrStudio";
 
         /// <summary>
         /// Key: <c>QR_Title</c><br/>
@@ -59429,127 +64309,7 @@ namespace Loc
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR Designer&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Designer&quot;
         /// </summary>
-        public const string TitleText = "QR_Title";
-
-        /// <summary>
-        /// Key: <c>Analytics_TopProducts</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Топ продаваемых позиций&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng ko'p sotiladigan tovarlar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Top selling items&quot;
-        /// </summary>
-        public const string TopProducts = "Analytics_TopProducts";
-
-        /// <summary>
-        /// Key: <c>About_ValueFpsDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
-        /// </summary>
-        public const string ValueFpsDesc = "About_ValueFpsDesc";
-
-        /// <summary>
-        /// Key: <c>About_ValueFpsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
-        /// </summary>
-        public const string ValueFpsTitle = "About_ValueFpsTitle";
-
-        /// <summary>
-        /// Key: <c>About_ValueM3Desc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оригинальная дизайн-система Material.Web, адаптивная палитра HSL и доступность WCAG 2.1 AA.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asl Material.Web dizayn tizimi, moslashuvchan HSL palitrasi va WCAG 2.1 AA qulayligi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Original Material.Web design system, adaptive HSL palette and WCAG 2.1 AA accessibility.&quot;
-        /// </summary>
-        public const string ValueM3Desc = "About_ValueM3Desc";
-
-        /// <summary>
-        /// Key: <c>About_ValueM3Title</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Material Design 3 Expressive&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Material Design 3 Expressive&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Material Design 3 Expressive&quot;
-        /// </summary>
-        public const string ValueM3Title = "About_ValueM3Title";
-
-        /// <summary>
-        /// Key: <c>About_ValuePlatformDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая кодовая база для Windows, macOS, Android, iOS и веб-клиента (PWA).&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Windows, macOS, Android, iOS va veb-mijoz (PWA) uchun yagona kod bazasi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified codebase for Windows, macOS, Android, iOS and web client (PWA).&quot;
-        /// </summary>
-        public const string ValuePlatformDesc = "About_ValuePlatformDesc";
-
-        /// <summary>
-        /// Key: <c>About_ValuePlatformTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кроссплатформенность&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ko'p platformalilik&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cross-platform&quot;
-        /// </summary>
-        public const string ValuePlatformTitle = "About_ValuePlatformTitle";
-
-        /// <summary>
-        /// Key: <c>About_ValuesBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инженерные стандарты&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muhandislik standartlari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Engineering standards&quot;
-        /// </summary>
-        public const string ValuesBadge = "About_ValuesBadge";
-
-        /// <summary>
-        /// Key: <c>About_ValuesTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Качество и производительность без компромиссов&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Murosasiz sifat va unumdorlik&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Quality and performance without compromise&quot;
-        /// </summary>
-        public const string ValuesTitle = "About_ValuesTitle";
-
-        /// <summary>
-        /// Key: <c>About_VideoBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Видео-презентация&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video taqdimot&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Video presentation&quot;
-        /// </summary>
-        public const string VideoBadge = "About_VideoBadge";
-
-        /// <summary>
-        /// Key: <c>About_VideoCaption</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
-        /// </summary>
-        public const string VideoCaptionText = "About_VideoCaption";
-
-        /// <summary>
-        /// Key: <c>About_VideoNotSupported</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш браузер не поддерживает встроенное воспроизведение видео.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Brauzeringiz video ijrosini qo'llab-quvvatlamaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your browser does not support embedded video playback.&quot;
-        /// </summary>
-        public const string VideoNotSupported = "About_VideoNotSupported";
-
-        /// <summary>
-        /// Key: <c>About_VideoTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
-        /// </summary>
-        public const string VideoTitle = "About_VideoTitle";
-
-        /// <summary>
-        /// Key: <c>Docs_WelcomeDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите интересующий раздел на боковой панели для просмотра подробных сведений по архитектуре, API и базам данных микросервисов.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mikroservislarning arxitekturasi, API va ma'lumotlar bazalari bo'yicha batafsil ma'lumot olish uchun yon paneldagi kerakli bo'limni tanlang.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select a section from the sidebar to view architecture details, APIs, and microservice databases.&quot;
-        /// </summary>
-        public const string WelcomeDesc = "Docs_WelcomeDesc";
-
-        /// <summary>
-        /// Key: <c>Docs_WelcomeTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Документация системы Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tizimi hujjatlari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
-        /// </summary>
-        public const string WelcomeTitle = "Docs_WelcomeTitle";
+        public const string QRTitle = "QR_Title";
 
     }
 
@@ -66662,7 +71422,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: UxMode (191 keys). Use with <c>@using static Loc.UxMode;</c>.
+    /// Domain group: UxMode (303 keys). Use with <c>@using static Loc.UxMode;</c>.
     /// </summary>
     public static class UxMode
     {
@@ -66865,6 +71625,454 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled Delivery&quot;
         /// </summary>
         public const string DeliveryScheduledTitle = "UxMode_DeliveryScheduled_Title";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string Desc_1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string Desc_10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string Desc_11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string Desc_12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string Desc_13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string Desc_14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string Desc_15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string Desc_16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string Desc_17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string Desc_18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string Desc_19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string Desc_2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string Desc_20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string Desc_21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string Desc_22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string Desc_23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string Desc_24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string Desc_25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string Desc_26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string Desc_27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string Desc_28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string Desc_3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string Desc_4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string Desc_5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string Desc_6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string Desc_7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string Desc_8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string Desc_9 = "UxMode_Desc_9";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string Desc1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string Desc10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string Desc11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string Desc12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string Desc13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string Desc14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string Desc15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string Desc16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string Desc17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string Desc18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string Desc19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string Desc2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string Desc20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string Desc21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string Desc22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string Desc23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string Desc24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string Desc25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string Desc26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string Desc27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string Desc28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string Desc3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string Desc4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string Desc5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string Desc6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string Desc7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string Desc8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string Desc9 = "UxMode_Desc_9";
 
         /// <summary>
         /// Key: <c>UX_Details</c><br/>
@@ -67699,6 +72907,230 @@ namespace Loc
         public const string UxMode_DeliveryScheduled_Title = "UxMode_DeliveryScheduled_Title";
 
         /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string UxMode_Desc_1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string UxMode_Desc_10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string UxMode_Desc_11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string UxMode_Desc_12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string UxMode_Desc_13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string UxMode_Desc_14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string UxMode_Desc_15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string UxMode_Desc_16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string UxMode_Desc_17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string UxMode_Desc_18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string UxMode_Desc_19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string UxMode_Desc_2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string UxMode_Desc_20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string UxMode_Desc_21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string UxMode_Desc_22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string UxMode_Desc_23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string UxMode_Desc_24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string UxMode_Desc_25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string UxMode_Desc_26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string UxMode_Desc_27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string UxMode_Desc_28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string UxMode_Desc_3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string UxMode_Desc_4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string UxMode_Desc_5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string UxMode_Desc_6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string UxMode_Desc_7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string UxMode_Desc_8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string UxMode_Desc_9 = "UxMode_Desc_9";
+
+        /// <summary>
         /// Key: <c>UxMode_DigitalGoods_Title</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровой продукт / Скачивание&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Raqamli mahsulot / Yuklab olish&quot;<br/>
@@ -67921,6 +73353,230 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled Delivery&quot;
         /// </summary>
         public const string UxModeDeliveryScheduledTitle = "UxMode_DeliveryScheduled_Title";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стандартная корзина, вариации, модификаторы и быстрое добавление товара.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Standart savat, variantlar, modifikatorlar va tovarlarni tez qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Standard shopping cart, variations, modifiers, and quick item adding.&quot;
+        /// </summary>
+        public const string UxModeDesc1 = "UxMode_Desc_1";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_10</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенное пополнение внутреннего баланса, покупка софта и файлов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichki balansni tezkor to'ldirish, dasturiy ta'minot va fayllarni xarid qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant wallet top-up, digital goods, and software licensing.&quot;
+        /// </summary>
+        public const string UxModeDesc10 = "UxMode_Desc_10";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_11</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предоставление доступа к SaaS-сервисам, ИИ-моделям и облачным функциям.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlariga, AI modellariga va bulut funksiyalariga ruxsat berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS subscriptions, AI model quotas, and cloud compute access.&quot;
+        /// </summary>
+        public const string UxModeDesc11 = "UxMode_Desc_11";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_12</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добровольные пожертвования и разовые/регулярные взносы в фонды.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ixtiyoriy xayriyalar va jamg'armalarga bir martalik/muntazam badallar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voluntary donations and one-time or recurring charity contributions.&quot;
+        /// </summary>
+        public const string UxModeDesc12 = "UxMode_Desc_12";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_13</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Именные сертификаты с балансом и автоматической генерацией промокодов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Balansga ega nomli sertifikatlar va avtomatik promokodlar generatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Personal gift cards with stored value and auto-generated promo codes.&quot;
+        /// </summary>
+        public const string UxModeDesc13 = "UxMode_Desc_13";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_14</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отправка ТЗ и параметров для индивидуального расчета стоимости сметы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shaxsiy smetani hisoblash uchun texnik topshiriq va parametrlarni yuborish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Custom RFQ/quotation requests with parameters and attachments.&quot;
+        /// </summary>
+        public const string UxModeDesc14 = "UxMode_Desc_14";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_15</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Живые аукционные торги со ставками в реальном времени и таймером.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Real vaqtda stavkalar va taymer bilan jonli auksion savdolari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Live real-time auction bidding with dynamic timers.&quot;
+        /// </summary>
+        public const string UxModeDesc15 = "UxMode_Desc_15";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_16</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Частные объявления P2P-продаж с прямым контактом покупатель-продавец.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaridor va sotuvchi o'rtasidagi to'g'ridan-to'g'ri aloqa bilan P2P xususiy e'lonlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P classified listings with direct buyer-seller messaging.&quot;
+        /// </summary>
+        public const string UxModeDesc16 = "UxMode_Desc_16";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_17</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Биржа вызова проверенных исполнителей (сантехники, электрики, мастера).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tekshirilgan ustalarni chaqirish birjasi (santexniklar, elektriklar, ustalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Vetted on-demand service marketplace (plumbers, electricians, handymen).&quot;
+        /// </summary>
+        public const string UxModeDesc17 = "UxMode_Desc_17";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_18</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Готовые туристические сеты, пакетные туры и многокомпонентные наборы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tayyor sayyohlik to'plamlari, paketli turlar va ko'p komponentli majmualar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Curated travel packages, bundled tours, and multi-item combos.&quot;
+        /// </summary>
+        public const string UxModeDesc18 = "UxMode_Desc_18";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_19</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный калькулятор цены по габаритам и материалам.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'lchamlar va materiallar bo'yicha interaktiv narx kalkulyatori.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive dimensional and material-based price calculator.&quot;
+        /// </summary>
+        public const string UxModeDesc19 = "UxMode_Desc_19";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный мастер сборки (конструктор пиццы, бургеров, системных блоков).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv yig'ish ustasi (pitsa, burger, tizim bloklari konstruktori).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive configurator wizard (pizza, burgers, custom PC builds).&quot;
+        /// </summary>
+        public const string UxModeDesc2 = "UxMode_Desc_2";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_20</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цифровая анкета подачи заявок на визы, страхование и госуслуги.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Viza, sug'urta va davlat xizmatlariga ariza topshirish uchun raqamli anketa.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Digital multi-step application forms (visas, insurance, permits).&quot;
+        /// </summary>
+        public const string UxModeDesc20 = "UxMode_Desc_20";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_21</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продажа тиражных лотерейных билетов и участие в розыгрышах.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tirajli lotereya chiptalarini sotish va yutuqli o'yinlarda qatnashish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Raffle and lottery ticket purchasing with scheduled drawings.&quot;
+        /// </summary>
+        public const string UxModeDesc21 = "UxMode_Desc_21";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_22</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Предварительное бронирование новинок до официального релиза.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy relizgacha yangi mahsulotlarni oldindan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pre-order reservation for upcoming releases before official launch.&quot;
+        /// </summary>
+        public const string UxModeDesc22 = "UxMode_Desc_22";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_23</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Совместные закупки со скидкой при достижении порога участников.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ishtirokchilar chegarasiga erishilganda chegirma bilan jamoaviy xaridlar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Group buying deals unlocked upon reaching backer/buyer thresholds.&quot;
+        /// </summary>
+        public const string UxModeDesc23 = "UxMode_Desc_23";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_24</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;VIP-клуб, карты привилегий, закрытые мероприятия и лояльность.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;VIP-klub, imtiyozlar kartalari, yopiq tadbirlar va sodiqlik tizimi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;VIP membership tiers, exclusive events, and loyalty privilege cards.&quot;
+        /// </summary>
+        public const string UxModeDesc24 = "UxMode_Desc_24";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_25</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инвестиционные взносы и сбор средств на стартапы и эко-проекты.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Startaplar va eko-loyihalarga investitsiya badallari va mablag' yig'ish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Crowdfunding pledges and milestone-based startup investments.&quot;
+        /// </summary>
+        public const string UxModeDesc25 = "UxMode_Desc_25";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_26</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;P2P торговля и прямое подразделение обмена токенов и бонусов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;P2P savdo va tokenlar hamda bonuslarni to'g'ridan-to'g'ri ayirboshlash.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;P2P token, voucher, and points exchange and trading desk.&quot;
+        /// </summary>
+        public const string UxModeDesc26 = "UxMode_Desc_26";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_27</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Резервирование коворкинг-мест, оборудования и авто с ключом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kovorking joylari, uskunalar va avtomashinalarni kalit bilan band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coworking desks, studio equipment, and smart key vehicle booking.&quot;
+        /// </summary>
+        public const string UxModeDesc27 = "UxMode_Desc_27";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_28</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказ услуг с почасовой тарификацией (тренеры, репетиторы, сиделки).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soatlik tariflangan xizmatlarga buyurtma berish (murabbiylar, repetitorlar, enagalar).&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly rate professional services (personal trainers, tutors, care).&quot;
+        /// </summary>
+        public const string UxModeDesc28 = "UxMode_Desc_28";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Календарь временных слотов, бронирование столиков, залов и ресурсов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Vaqt oraliqlari taqvimi, stollar, zallar va resurslarni band qilish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Time slot calendar, table reservations, hall and resource booking.&quot;
+        /// </summary>
+        public const string UxModeDesc3 = "UxMode_Desc_3";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_4</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный выбор мест в зале, генерация QR-билетов и валидация.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zalda o'rinlarni interaktiv tanlash, QR-chiptalar yaratish va tekshirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive hall seating plan, QR ticket generation, and validation.&quot;
+        /// </summary>
+        public const string UxModeDesc4 = "UxMode_Desc_4";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_5</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор дат заезда/выезда, категорий номеров и дополнительных опций отеля.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish/chiqish sanalarini tanlash, xonalar toifalari va mehmonxona qo'shimcha xizmatlari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Check-in/out dates, room categories, and hotel extra services.&quot;
+        /// </summary>
+        public const string UxModeDesc5 = "UxMode_Desc_5";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_6</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Почасовая и посуточная аренда транспорта и оборудования с залогом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Transport va uskunalarni garov bilan soatlik hamda kunlik ijaraga berish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hourly and daily vehicle and equipment rental with deposit.&quot;
+        /// </summary>
+        public const string UxModeDesc6 = "UxMode_Desc_6";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_7</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Планирование временных окон доставки товаров и продуктов на дом.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tovarlar va mahsulotlarni uyga yetkazib berish vaqt oynalarini rejalashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scheduled home delivery time windows for groceries and retail.&quot;
+        /// </summary>
+        public const string UxModeDesc7 = "UxMode_Desc_7";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_8</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут из точки А в точку Б, расчет расстояния и интеграция такси/курьеров.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;A nuqtadan B nuqtaga marshrut, masofani hisoblash va taksi/kuryerlar integratsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point A to Point B routing, distance calculation, and courier integration.&quot;
+        /// </summary>
+        public const string UxModeDesc8 = "UxMode_Desc_8";
+
+        /// <summary>
+        /// Key: <c>UxMode_Desc_9</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Регулярные автосписания, тарифные планы, абонементы и фитнес-подписки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muntazam avtomatik to'lovlar, tarif rejalari, abonementlar va fitnes obunalari.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recurring auto-billing, subscription plans, memberships, and passes.&quot;
+        /// </summary>
+        public const string UxModeDesc9 = "UxMode_Desc_9";
 
         /// <summary>
         /// Key: <c>UxMode_DigitalGoods_Title</c><br/>

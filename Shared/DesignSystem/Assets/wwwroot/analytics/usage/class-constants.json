@@ -1,61 +1,16 @@
 {
-  "generatedAt": "2026-10-22T13:17:07.672Z",
+  "generatedAt": "2026-10-23T05:12:43.828Z",
   "summary": {
-    "totalDeclaredConstants": 2374,
-    "usedInRazorCount": 221,
-    "unusedCount": 2153,
+    "totalDeclaredConstants": 2375,
+    "usedInRazorCount": 206,
+    "unusedCount": 2169,
     "adoptionRatePercent": 9,
-    "totalCallSites": 407,
-    "rawStringViolationsCount": 918,
-    "classesWithRawLiteralsCount": 557,
-    "sourceFilesScanned": 645
+    "totalCallSites": 285,
+    "rawStringViolationsCount": 570,
+    "classesWithRawLiteralsCount": 387,
+    "sourceFilesScanned": 644
   },
   "topUsedConstants": [
-    {
-      "key": "Common.Glass",
-      "category": "Common",
-      "name": "Glass",
-      "cssClass": "glass",
-      "usageCountInRazor": 38,
-      "filesCount": 2,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor",
-        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor"
-      ]
-    },
-    {
-      "key": "Buttons.CtaBtn",
-      "category": "Buttons",
-      "name": "CtaBtn",
-      "cssClass": "cta-btn",
-      "usageCountInRazor": 13,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "key": "Chip.VenueChip",
-      "category": "Chip",
-      "name": "VenueChip",
-      "cssClass": "venue-chip",
-      "usageCountInRazor": 12,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "key": "Chips.FeatPill",
-      "category": "Chips",
-      "name": "FeatPill",
-      "cssClass": "feat-pill",
-      "usageCountInRazor": 12,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
     {
       "key": "Avatar.Content",
       "category": "Avatar",
@@ -72,14 +27,13 @@
       "category": "Cards",
       "name": "Elevated",
       "cssClass": "m3-card-elevated",
-      "usageCountInRazor": 10,
-      "filesCount": 7,
+      "usageCountInRazor": 6,
+      "filesCount": 6,
       "files": [
         "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs",
         "Retail/Orders/Pages/OrderItems/Index.razor.cs",
         "Retail/PointOfSale/Pages/ProductPage.razor.cs",
         "Portal/Identity/Pages/SignIn.razor",
-        "Portal/Landing/Pages/Landing.razor",
         "Studio/Map/Components/OrganizationCard.razor",
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
@@ -89,55 +43,14 @@
       "category": "Cards",
       "name": "Card",
       "cssClass": "m3-card",
-      "usageCountInRazor": 9,
-      "filesCount": 6,
+      "usageCountInRazor": 5,
+      "filesCount": 5,
       "files": [
         "Retail/Checkout/Widgets/TransientCartDrawer.razor",
         "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs",
         "Retail/PointOfSale/Pages/Terminal.razor",
-        "Portal/Landing/Pages/Landing.razor",
         "Studio/Map/Components/OrganizationCard.razor",
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
-      ]
-    },
-    {
-      "key": "Cards.Outlined",
-      "category": "Cards",
-      "name": "Outlined",
-      "cssClass": "m3-card-outlined",
-      "usageCountInRazor": 8,
-      "filesCount": 8,
-      "files": [
-        "Retail/Checkout/Pages/Payment.razor.cs",
-        "Retail/Checkout/Widgets/TransientCartDrawer.razor",
-        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs",
-        "Retail/Orders/Pages/OrderItems/Grid.razor.cs",
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs",
-        "Retail/PointOfSale/Pages/ProductPage.razor.cs"
-      ]
-    },
-    {
-      "key": "Common.SecondaryCta",
-      "category": "Common",
-      "name": "SecondaryCta",
-      "cssClass": "secondary-cta",
-      "usageCountInRazor": 7,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "key": "Chip.VenueChipRow",
-      "category": "Chip",
-      "name": "VenueChipRow",
-      "cssClass": "venue-chip-row",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -194,17 +107,6 @@
         "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Retail/Checkout/Pages/Payment.razor.cs",
         "Retail/Orders/Pages/Orders/Grid.razor.cs"
-      ]
-    },
-    {
-      "key": "Common.PrimaryCta",
-      "category": "Common",
-      "name": "PrimaryCta",
-      "cssClass": "primary-cta",
-      "usageCountInRazor": 4,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -299,29 +201,6 @@
         "Retail/Orders/Pages/OrderItems/Grid.razor.cs",
         "Retail/Orders/Pages/Orders/Grid.razor.cs",
         "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Cards.OrgCard",
-      "category": "Cards",
-      "name": "OrgCard",
-      "cssClass": "org-card",
-      "usageCountInRazor": 3,
-      "filesCount": 2,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor",
-        "Studio/Map/Components/OrganizationCard.razor"
-      ]
-    },
-    {
-      "key": "Chip.ChipActive",
-      "category": "Chip",
-      "name": "ChipActive",
-      "cssClass": "active",
-      "usageCountInRazor": 3,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -443,17 +322,6 @@
       "files": [
         "Retail/Orders/Pages/OrderItems/Index.razor.cs",
         "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Cards.CardGlass",
-      "category": "Cards",
-      "name": "CardGlass",
-      "cssClass": "m3-card-glass",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -631,6 +499,129 @@
         "Retail/Checkout/Pages/Payment.razor.cs",
         "Retail/Orders/Pages/Orders/Index.razor.cs"
       ]
+    },
+    {
+      "key": "Table.Root",
+      "category": "Table",
+      "name": "Root",
+      "cssClass": "m3-table",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Typography.BodyMedium",
+      "category": "Typography",
+      "name": "BodyMedium",
+      "cssClass": "m3-body-medium",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs",
+        "Studio/Map/Components/OrganizationCard.razor"
+      ]
+    },
+    {
+      "key": "About.OrderSubtitle",
+      "category": "About",
+      "name": "OrderSubtitle",
+      "cssClass": "order-subtitle",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Avatar.Button",
+      "category": "Avatar",
+      "name": "Button",
+      "cssClass": "avatar-button",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Avatar.Contacts",
+      "category": "Avatar",
+      "name": "Contacts",
+      "cssClass": "contacts",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Avatar.Container",
+      "category": "Avatar",
+      "name": "Container",
+      "cssClass": "avatar-container",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Avatar.FaceidProfileModal",
+      "category": "Avatar",
+      "name": "FaceidProfileModal",
+      "cssClass": "faceid-profile-modal",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor"
+      ]
+    },
+    {
+      "key": "Badge.BadgeActive",
+      "category": "Badge",
+      "name": "BadgeActive",
+      "cssClass": "badge-active",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    },
+    {
+      "key": "Badge.BadgeVerified",
+      "category": "Badge",
+      "name": "BadgeVerified",
+      "cssClass": "badge-verified",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    },
+    {
+      "key": "Badge.Blocked",
+      "category": "Badge",
+      "name": "Blocked",
+      "cssClass": "badge-blocked",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor.cs"
+      ]
+    },
+    {
+      "key": "Badge.CountBadge",
+      "category": "Badge",
+      "name": "CountBadge",
+      "cssClass": "m3-count-badge",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Retail/Orders/Pages/Orders/Grid.razor.cs"
+      ]
     }
   ],
   "byCategory": {
@@ -641,13 +632,13 @@
     },
     "Ads": {
       "total": 23,
-      "used": 1,
-      "totalCalls": 1
+      "used": 0,
+      "totalCalls": 0
     },
     "Analytics": {
       "total": 30,
-      "used": 1,
-      "totalCalls": 1
+      "used": 0,
+      "totalCalls": 0
     },
     "Auction": {
       "total": 5,
@@ -685,14 +676,14 @@
       "totalCalls": 0
     },
     "Buttons": {
-      "total": 62,
-      "used": 3,
-      "totalCalls": 15
+      "total": 63,
+      "used": 2,
+      "totalCalls": 2
     },
     "Cards": {
-      "total": 196,
-      "used": 38,
-      "totalCalls": 69
+      "total": 202,
+      "used": 36,
+      "totalCalls": 49
     },
     "Cart": {
       "total": 11,
@@ -706,13 +697,13 @@
     },
     "Chip": {
       "total": 30,
-      "used": 4,
-      "totalCalls": 22
+      "used": 1,
+      "totalCalls": 1
     },
     "Chips": {
       "total": 30,
-      "used": 1,
-      "totalCalls": 12
+      "used": 0,
+      "totalCalls": 0
     },
     "Classified": {
       "total": 9,
@@ -736,8 +727,8 @@
     },
     "Common": {
       "total": 511,
-      "used": 35,
-      "totalCalls": 84
+      "used": 33,
+      "totalCalls": 36
     },
     "Configurator": {
       "total": 14,
@@ -815,7 +806,7 @@
       "totalCalls": 0
     },
     "Form": {
-      "total": 41,
+      "total": 37,
       "used": 5,
       "totalCalls": 7
     },
@@ -865,7 +856,7 @@
       "totalCalls": 0
     },
     "InfoGrid": {
-      "total": 28,
+      "total": 27,
       "used": 7,
       "totalCalls": 7
     },
@@ -881,8 +872,8 @@
     },
     "Landing": {
       "total": 34,
-      "used": 3,
-      "totalCalls": 4
+      "used": 0,
+      "totalCalls": 0
     },
     "Light": {
       "total": 1,
@@ -960,7 +951,7 @@
       "totalCalls": 0
     },
     "Search": {
-      "total": 25,
+      "total": 24,
       "used": 0,
       "totalCalls": 0
     },
@@ -1031,8 +1022,8 @@
     },
     "ThemeToggle": {
       "total": 26,
-      "used": 1,
-      "totalCalls": 2
+      "used": 0,
+      "totalCalls": 0
     },
     "Typography": {
       "total": 22,
@@ -1060,90 +1051,9 @@
       ]
     },
     {
-      "cssClass": "org-tag",
-      "occurrences": 8,
-      "recommendedConstant": "Chips.OrgTag",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "cta-arrow",
-      "occurrences": 8,
-      "recommendedConstant": "Common.CtaArrow",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "section-badge",
-      "occurrences": 7,
-      "recommendedConstant": "Badge.SectionBadge",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "section-ambient-glow",
-      "occurrences": 6,
-      "recommendedConstant": "Common.SectionAmbientGlow",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "badge-cyan",
-      "occurrences": 6,
-      "recommendedConstant": "Badge.Cyan",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
       "cssClass": "spatial-subcard",
       "occurrences": 6,
       "recommendedConstant": "Cards.SpatialSubcard",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "subcard-header",
-      "occurrences": 6,
-      "recommendedConstant": "Cards.SubcardHeader",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "venue-icon",
-      "occurrences": 6,
-      "recommendedConstant": "Common.VenueIcon",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-card",
-      "occurrences": 6,
-      "recommendedConstant": "Cards.PlatformCard",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-btn",
-      "occurrences": 6,
-      "recommendedConstant": "Form.PlatformBtn",
       "filesCount": 1,
       "files": [
         "Portal/Landing/Pages/Landing.razor"
@@ -1174,51 +1084,6 @@
       "filesCount": 1,
       "files": [
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor"
-      ]
-    },
-    {
-      "cssClass": "ux-tab-btn",
-      "occurrences": 5,
-      "recommendedConstant": "Buttons.UxTabBtn",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-card-header",
-      "occurrences": 5,
-      "recommendedConstant": "Cards.PlatformCardHeader",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-icon",
-      "occurrences": 5,
-      "recommendedConstant": "Form.PlatformIcon",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-info",
-      "occurrences": 5,
-      "recommendedConstant": "InfoGrid.PlatformInfo",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "platform-desc",
-      "occurrences": 5,
-      "recommendedConstant": "Form.PlatformDesc",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
       ]
     },
     {
@@ -1287,72 +1152,9 @@
       ]
     },
     {
-      "cssClass": "spec-item",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpecItem",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "spec-value-box",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpecValueBox",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "spec-value",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpecValue",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "spec-label",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpecLabel",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
       "cssClass": "evolution-card",
       "occurrences": 4,
       "recommendedConstant": "Cards.EvolutionCard",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "evo-icon",
-      "occurrences": 4,
-      "recommendedConstant": "Buttons.EvoIcon",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "section-title-box",
-      "occurrences": 4,
-      "recommendedConstant": "Typography.SectionTitleBox",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "badge-teal",
-      "occurrences": 4,
-      "recommendedConstant": "Badge.Teal",
       "filesCount": 1,
       "files": [
         "Portal/Landing/Pages/Landing.razor"
@@ -1368,129 +1170,324 @@
       ]
     },
     {
-      "cssClass": "spotlight-card-top",
+      "cssClass": "qrg-field-label",
       "occurrences": 4,
-      "recommendedConstant": "Cards.SpotlightCardTop",
+      "recommendedConstant": "QrDesigner.QrgFieldLabel",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
       ]
     },
     {
-      "cssClass": "spotlight-pill",
+      "cssClass": "place-details-divider",
       "occurrences": 4,
-      "recommendedConstant": "Chips.SpotlightPill",
+      "recommendedConstant": "Common.PlaceDetailsDivider",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Studio/Map/Components/ControlsPanel.razor"
       ]
     },
     {
-      "cssClass": "spotlight-dot",
+      "cssClass": "page-width",
       "occurrences": 4,
-      "recommendedConstant": "Chips.SpotlightDot",
-      "filesCount": 1,
+      "recommendedConstant": "Common.PageWidth",
+      "filesCount": 4,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatInput.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatMessageList.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatSuggestions.razor"
       ]
     },
     {
-      "cssClass": "spotlight-mode-badge",
-      "occurrences": 4,
-      "recommendedConstant": "Badge.SpotlightModeBadge",
+      "cssClass": "l4",
+      "occurrences": 3,
+      "recommendedConstant": "Common.L4",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/AI/AIBlob.razor"
       ]
     },
     {
-      "cssClass": "spotlight-main",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpotlightMain",
+      "cssClass": "l3",
+      "occurrences": 3,
+      "recommendedConstant": "Common.L3",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/AI/AIBlob.razor"
       ]
     },
     {
-      "cssClass": "spotlight-icon-box",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpotlightIconBox",
+      "cssClass": "l2",
+      "occurrences": 3,
+      "recommendedConstant": "Common.L2",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/AI/AIBlob.razor"
       ]
     },
     {
-      "cssClass": "spotlight-info",
-      "occurrences": 4,
-      "recommendedConstant": "InfoGrid.SpotlightInfo",
+      "cssClass": "l1",
+      "occurrences": 3,
+      "recommendedConstant": "Common.L1",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/AI/AIBlob.razor"
       ]
     },
     {
-      "cssClass": "spotlight-features",
-      "occurrences": 4,
-      "recommendedConstant": "Common.SpotlightFeatures",
+      "cssClass": "l0",
+      "occurrences": 3,
+      "recommendedConstant": "Common.L0",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/AI/AIBlob.razor"
       ]
     },
     {
-      "cssClass": "spotlight-launch-btn",
-      "occurrences": 4,
-      "recommendedConstant": "Buttons.SpotlightLaunchBtn",
+      "cssClass": "tier-box",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TierBox",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
       ]
     },
     {
-      "cssClass": "bento-card",
-      "occurrences": 4,
-      "recommendedConstant": "Cards.BentoCard",
+      "cssClass": "tier-header",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TierHeader",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
       ]
     },
     {
-      "cssClass": "bento-content",
-      "occurrences": 4,
-      "recommendedConstant": "Landing.BentoContent",
+      "cssClass": "tier-name",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TierName",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
       ]
     },
     {
-      "cssClass": "feature-badge",
-      "occurrences": 4,
-      "recommendedConstant": "Badge.FeatureBadge",
+      "cssClass": "tier-price",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TierPrice",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
       ]
     },
     {
-      "cssClass": "bento-media",
-      "occurrences": 4,
-      "recommendedConstant": "Landing.BentoMedia",
+      "cssClass": "tier-features",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TierFeatures",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
       ]
     },
     {
-      "cssClass": "qr-hud-corner",
-      "occurrences": 4,
-      "recommendedConstant": "QrDesigner.QrHudCorner",
+      "cssClass": "current-plan-indicator",
+      "occurrences": 3,
+      "recommendedConstant": "Common.CurrentPlanIndicator",
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Landing.razor"
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
+      ]
+    },
+    {
+      "cssClass": "promotion-modal-body",
+      "occurrences": 3,
+      "recommendedConstant": "Dialog.PromotionModalBody",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor"
+      ]
+    },
+    {
+      "cssClass": "m3-grid",
+      "occurrences": 3,
+      "recommendedConstant": "Common.CommonGrid",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor"
+      ]
+    },
+    {
+      "cssClass": "total-row",
+      "occurrences": 3,
+      "recommendedConstant": "Common.TotalRow",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor"
+      ]
+    },
+    {
+      "cssClass": "smart-form-field",
+      "occurrences": 3,
+      "recommendedConstant": "Form.SmartFormField",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor"
+      ]
+    },
+    {
+      "cssClass": "qrg-field-row",
+      "occurrences": 3,
+      "recommendedConstant": "QrDesigner.QrgFieldRow",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
+      ]
+    },
+    {
+      "cssClass": "qrg-color-inputs",
+      "occurrences": 3,
+      "recommendedConstant": "QrDesigner.QrgColorInputs",
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
+      ]
+    },
+    {
+      "cssClass": "hamburger-line",
+      "occurrences": 3,
+      "recommendedConstant": "Common.HamburgerLine",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "place-info-row",
+      "occurrences": 3,
+      "recommendedConstant": "InfoGrid.PlaceInfoRow",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "info-icon",
+      "occurrences": 3,
+      "recommendedConstant": "InfoGrid.InfoIcon",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "info-content",
+      "occurrences": 3,
+      "recommendedConstant": "InfoGrid.InfoContent",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "info-label",
+      "occurrences": 3,
+      "recommendedConstant": "InfoGrid.InfoLabel_2",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "info-value",
+      "occurrences": 3,
+      "recommendedConstant": "InfoGrid.InfoValue_2",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/ControlsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "stat-item",
+      "occurrences": 3,
+      "recommendedConstant": "Common.StatItem",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/NavigatorPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "stat-label",
+      "occurrences": 3,
+      "recommendedConstant": "Common.StatLabel",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/NavigatorPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "stat-value",
+      "occurrences": 3,
+      "recommendedConstant": "Common.StatValue",
+      "filesCount": 1,
+      "files": [
+        "Studio/Map/Components/NavigatorPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "route-header",
+      "occurrences": 3,
+      "recommendedConstant": "Common.RouteHeader",
+      "filesCount": 3,
+      "files": [
+        "Studio/Map/Components/OrganizationCard.razor",
+        "Studio/Map/Components/PlaceDetailsCard.razor",
+        "Studio/Map/Components/RouteDetailsPanel.razor"
+      ]
+    },
+    {
+      "cssClass": "section-heading",
+      "occurrences": 2,
+      "recommendedConstant": "Common.SectionHeading",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor"
+      ]
+    },
+    {
+      "cssClass": "landing-auth-btn",
+      "occurrences": 2,
+      "recommendedConstant": "Landing.AuthBtn",
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/LandingLayout.razor",
+        "Portal/Landing/Pages/Docs.razor"
+      ]
+    },
+    {
+      "cssClass": "material-text-field",
+      "occurrences": 2,
+      "recommendedConstant": "Avatar.MaterialTextField",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Material.Web/Components/TextField.razor"
+      ]
+    },
+    {
+      "cssClass": "col-options-button",
+      "occurrences": 2,
+      "recommendedConstant": "Table.ColOptionsButton",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/QuickGrid/Columns/ColumnBase.razor.cs"
+      ]
+    },
+    {
+      "cssClass": "col-title",
+      "occurrences": 2,
+      "recommendedConstant": "Table.ColTitle",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/QuickGrid/Columns/ColumnBase.razor.cs"
       ]
     }
   ],
@@ -1662,6 +1659,15 @@
       "category": "Ads",
       "name": "GoogleAdsenseWrapper",
       "cssClass": "google-adsense-wrapper",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Ads.HeroSection",
+      "category": "Ads",
+      "name": "HeroSection",
+      "cssClass": "hero-section",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1986,6 +1992,15 @@
       "category": "Analytics",
       "name": "ExplorerTitleGroup",
       "cssClass": "explorer-title-group",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.HeroStageScreen",
+      "category": "Analytics",
+      "name": "HeroStageScreen",
+      "cssClass": "hero-stage-screen",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -2373,24 +2388,6 @@
       "category": "Badge",
       "name": "BackIcon",
       "cssClass": "m3-back-icon",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Badge.BadgeIcon",
-      "category": "Badge",
-      "name": "BadgeIcon",
-      "cssClass": "badge-icon",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Badge.BadgeInfo",
-      "category": "Badge",
-      "name": "BadgeInfo",
-      "cssClass": "info",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
