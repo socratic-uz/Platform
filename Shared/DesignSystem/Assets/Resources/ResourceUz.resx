@@ -4294,4 +4294,721 @@
     <value>So'rovingiz bo'yicha hech qanday tijorat ssenariysi topilmadi. Qidiruvni tozalang yoki toifani almashtiring.</value>
     <comment>Empty state description when no UX modes match query</comment>
   </data>
+  <data name="Analytics_Today" xml:space="preserve">
+    <value>Bugun</value>
+  </data>
+  <data name="Analytics_Last7Days" xml:space="preserve">
+    <value>7 kun</value>
+  </data>
+  <data name="Analytics_Last30Days" xml:space="preserve">
+    <value>30 kun</value>
+  </data>
+  <data name="Analytics_AllTime" xml:space="preserve">
+    <value>Barcha vaqt</value>
+  </data>
+  <data name="Analytics_ChecksUnit" xml:space="preserve">
+    <value>chek</value>
+  </data>
+  <data name="Analytics_ItemsUnit" xml:space="preserve">
+    <value>dona</value>
+  </data>
+  <data name="Analytics_ItemsSold" xml:space="preserve">
+    <value>Sotilgan birliklar</value>
+  </data>
+  <data name="Analytics_VolumeItems" xml:space="preserve">
+    <value>Mahsulotlar hajmi</value>
+  </data>
+  <data name="Analytics_ByOrderLines" xml:space="preserve">
+    <value>Chek qatorlari bo'yicha</value>
+  </data>
+  <data name="Analytics_ProductsCatalog" xml:space="preserve">
+    <value>Mahsulotlar katalogi</value>
+  </data>
+  <data name="Analytics_ActiveNomenclature" xml:space="preserve">
+    <value>Faol nomenklatura</value>
+  </data>
+  <data name="Analytics_Branches" xml:space="preserve">
+    <value>Filiallar va maskanlar</value>
+  </data>
+  <data name="Analytics_PointsUnit" xml:space="preserve">
+    <value>nuqta</value>
+  </data>
+  <data name="Analytics_ConnectedNetwork" xml:space="preserve">
+    <value>Ulangan tarmoq</value>
+  </data>
+  <data name="Analytics_PaymentMethods" xml:space="preserve">
+    <value>To'lov usullari</value>
+  </data>
+  <data name="Analytics_OrderStatuses" xml:space="preserve">
+    <value>Buyurtma holatlari</value>
+  </data>
+  <data name="Analytics_NoDataPeriod" xml:space="preserve">
+    <value>Tanlangan davr uchun ma'lumotlar yo'q</value>
+  </data>
+  <data name="Analytics_OrdersShort" xml:space="preserve">
+    <value>ta</value>
+  </data>
+  <data name="Analytics_MethodsUnit" xml:space="preserve">
+    <value>usul</value>
+  </data>
+  <data name="Analytics_StatusesUnit" xml:space="preserve">
+    <value>holat</value>
+  </data>
+  <data name="Analytics_EntitiesRegistry" xml:space="preserve">
+    <value>Mavjudotlarning jadvalli reyestri</value>
+  </data>
+  <data name="Analytics_EntitiesRegistryDesc" xml:space="preserve">
+    <value>Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang</value>
+  </data>
+  <data name="Analytics_ConfigModalDesc" xml:space="preserve">
+    <value>Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.</value>
+  </data>
+  <data name="Analytics_ConfigRevenueTitle" xml:space="preserve">
+    <value>Tushum va aylanma</value>
+  </data>
+  <data name="Analytics_ConfigRevenueDesc" xml:space="preserve">
+    <value>Tanlangan davrdagi savdo hajmini ko'rsatadi</value>
+  </data>
+  <data name="Analytics_ConfigOrdersTitle" xml:space="preserve">
+    <value>Buyurtmalar soni</value>
+  </data>
+  <data name="Analytics_ConfigOrdersDesc" xml:space="preserve">
+    <value>Rasmiylashtirilgan cheklarning umumiy soni</value>
+  </data>
+  <data name="Analytics_ConfigAovTitle" xml:space="preserve">
+    <value>O'rtacha chek (AOV)</value>
+  </data>
+  <data name="Analytics_ConfigAovDesc" xml:space="preserve">
+    <value>Bitta buyurtmaning o'rtacha summasi</value>
+  </data>
+  <data name="Analytics_ConfigItemsTitle" xml:space="preserve">
+    <value>Sotilgan tovar birliklari</value>
+  </data>
+  <data name="Analytics_ConfigItemsDesc" xml:space="preserve">
+    <value>Sotilgan taomlar/tovarlarning umumiy soni</value>
+  </data>
+  <data name="Analytics_ConfigProductsTitle" xml:space="preserve">
+    <value>Nomenklatura katalogi</value>
+  </data>
+  <data name="Analytics_ConfigProductsDesc" xml:space="preserve">
+    <value>Tizimdagi faol tovarlar soni</value>
+  </data>
+  <data name="Analytics_ConfigBranchesTitle" xml:space="preserve">
+    <value>Filiallar va maskanlar</value>
+  </data>
+  <data name="Analytics_ConfigBranchesDesc" xml:space="preserve">
+    <value>Tarmoqqa ulangan obyektlar soni</value>
+  </data>
+  <data name="Analytics_ConfigPaymentsTitle" xml:space="preserve">
+    <value>To'lov usullari</value>
+  </data>
+  <data name="Analytics_ConfigPaymentsDesc" xml:space="preserve">
+    <value>Payme, Click, Soliq QR va naqd pul ulushi</value>
+  </data>
+  <data name="Analytics_ConfigStatusesTitle" xml:space="preserve">
+    <value>Buyurtma holatlari</value>
+  </data>
+  <data name="Analytics_ConfigStatusesDesc" xml:space="preserve">
+    <value>Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti</value>
+  </data>
+  <data name="Analytics_ConfigApplyBtn" xml:space="preserve">
+    <value>Sozlamalarni qo'llash</value>
+  </data>
+  <data name="Analytics_SuccessfullyCompleted" xml:space="preserve">
+    <value>Muvaffaqiyatli rasmiylashtirilgan</value>
+  </data>
+  <data name="Analytics_AovMetric" xml:space="preserve">
+    <value>AOV ko'rsatkichi</value>
+  </data>
+  <data name="PlayerPageTitle" xml:space="preserve">
+    <value>Mediapleyer — Socratic</value>
+  </data>
+  <data name="PlayerLoadingVideo" xml:space="preserve">
+    <value>Video yuklanmoqda...</value>
+  </data>
+  <data name="PlayerVideoNotFound" xml:space="preserve">
+    <value>Video havolasi topilmadi</value>
+  </data>
+  <data name="LandingKeywords" xml:space="preserve">
+    <value>biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic</value>
+  </data>
+  <data name="LandingSoliqCashback" xml:space="preserve">
+    <value>Soliq OFD • 1% Keshbek</value>
+  </data>
+  <data name="QrCustomizerTitle" xml:space="preserve">
+    <value>Dizaynni sozlash</value>
+  </data>
+  <data name="QrCustomizerElements" xml:space="preserve">
+    <value>QR elementlari ranglari</value>
+  </data>
+  <data name="QrCustomizerDotsColor" xml:space="preserve">
+    <value>Nuqtalarning asosiy rangi</value>
+  </data>
+  <data name="QrCustomizerDots" xml:space="preserve">
+    <value>Nuqtalar</value>
+  </data>
+  <data name="QrCustomizerFrameColor" xml:space="preserve">
+    <value>Burchak ramkasi rangi</value>
+  </data>
+  <data name="QrCustomizerFrame" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="QrCustomizerCornerDotColor" xml:space="preserve">
+    <value>Burchakdagi nuqta rangi</value>
+  </data>
+  <data name="QrCustomizerCornerDot" xml:space="preserve">
+    <value>Burchak nuqtasi</value>
+  </data>
+  <data name="QrCustomizerBgFill" xml:space="preserve">
+    <value>Orqa fon to‘ldirishi</value>
+  </data>
+  <data name="QrCustomizerGradientType" xml:space="preserve">
+    <value>Gradient turi</value>
+  </data>
+  <data name="QrCustomizerGradientColors" xml:space="preserve">
+    <value>Gradient ranglari</value>
+  </data>
+  <data name="QrCustomizerStartColor" xml:space="preserve">
+    <value>Boshlang‘ich rang</value>
+  </data>
+  <data name="QrCustomizerStart" xml:space="preserve">
+    <value>Boshi</value>
+  </data>
+  <data name="QrCustomizerEndColor" xml:space="preserve">
+    <value>Yakuniy rang</value>
+  </data>
+  <data name="QrCustomizerEnd" xml:space="preserve">
+    <value>Oxiri</value>
+  </data>
+  <data name="QrCustomizerGradientAngle" xml:space="preserve">
+    <value>Gradient burchagi</value>
+  </data>
+  <data name="QrCustomizerBgColor" xml:space="preserve">
+    <value>Fon rangi</value>
+  </data>
+  <data name="QrCustomizerBgColorShort" xml:space="preserve">
+    <value>Fon</value>
+  </data>
+  <data name="QrCustomizerShapes" xml:space="preserve">
+    <value>Elementlar shakli uslubi</value>
+  </data>
+  <data name="QrCustomizerDotStyle" xml:space="preserve">
+    <value>Nuqtalar uslubi</value>
+  </data>
+  <data name="QrCustomizerCornerStyle" xml:space="preserve">
+    <value>Burchaklar uslubi</value>
+  </data>
+  <data name="QrCustomizerSize" xml:space="preserve">
+    <value>QR-kod o‘lchami</value>
+  </data>
+  <data name="Org_TrialDaysRemaining" xml:space="preserve">
+    <value>kunlik sinov muddati qoldi</value>
+  </data>
+  <data name="Org_TierTrialName" xml:space="preserve">
+    <value>1. Sinov davri</value>
+  </data>
+  <data name="Org_TierTrialPrice" xml:space="preserve">
+    <value>0$ / 30 kun</value>
+  </data>
+  <data name="Org_TierFeatureNoAds" xml:space="preserve">
+    <value>Reklamasiz</value>
+  </data>
+  <data name="Org_TierFeatureAllModes" xml:space="preserve">
+    <value>Barcha 28 rejimga to'liq kirish</value>
+  </data>
+  <data name="Org_TierFeatureBrandScreensaver" xml:space="preserve">
+    <value>Muassasaning maxsus ekran saqlovchisi</value>
+  </data>
+  <data name="Org_CurrentPlan" xml:space="preserve">
+    <value>Joriy tarif</value>
+  </data>
+  <data name="Org_TierWithAdsName" xml:space="preserve">
+    <value>2. Reklama bilan</value>
+  </data>
+  <data name="Org_TierWithAdsPrice" xml:space="preserve">
+    <value>5$ / oy</value>
+  </data>
+  <data name="Org_TierFeaturePartnerAds" xml:space="preserve">
+    <value>Kiosklarda hamkorlar reklamasi</value>
+  </data>
+  <data name="Org_TierFeatureCloudPos" xml:space="preserve">
+    <value>Bulutli kassaning barcha imkoniyatlari</value>
+  </data>
+  <data name="Org_TierFeatureFiscalization" xml:space="preserve">
+    <value>Soliq.uz fiskalizatsiyasi</value>
+  </data>
+  <data name="Org_SelectPlanAds" xml:space="preserve">
+    <value>Tanlash (5$/oy)</value>
+  </data>
+  <data name="Org_Recommended" xml:space="preserve">
+    <value>Tavsiya etiladi</value>
+  </data>
+  <data name="Org_TierProName" xml:space="preserve">
+    <value>3. PRO Reklamasiz</value>
+  </data>
+  <data name="Org_TierProPrice" xml:space="preserve">
+    <value>25$ / oy</value>
+  </data>
+  <data name="Org_TierFeature100NoAds" xml:space="preserve">
+    <value>100% Reklamasiz</value>
+  </data>
+  <data name="Org_TierFeaturePrioritySupport" xml:space="preserve">
+    <value>24/7 ustuvor qo'llab-quvvatlash</value>
+  </data>
+  <data name="Org_TierFeatureWhiteLabel" xml:space="preserve">
+    <value>Premium White-Label uslubi</value>
+  </data>
+  <data name="Org_ActivePro" xml:space="preserve">
+    <value>PRO faol</value>
+  </data>
+  <data name="Org_ConnectPro" xml:space="preserve">
+    <value>PRO ulash (25$/oy)</value>
+  </data>
+  <data name="Org_ConnectingPlan" xml:space="preserve">
+    <value>Tarifni ulash:</value>
+  </data>
+  <data name="Org_PlanProSummary" xml:space="preserve">
+    <value>PRO reklamasiz (25$/oy)</value>
+  </data>
+  <data name="Org_PlanAdsSummary" xml:space="preserve">
+    <value>Reklama bilan (5$/oy)</value>
+  </data>
+  <data name="Org_YouSelectedPlan" xml:space="preserve">
+    <value>Siz tarifni tanladingiz</value>
+  </data>
+  <data name="Org_PaymentClickPayme" xml:space="preserve">
+    <value>Click Business / Payme Merchant</value>
+  </data>
+  <data name="Org_PaymentInvoice" xml:space="preserve">
+    <value>Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)</value>
+  </data>
+  <data name="Org_ConfirmActivation" xml:space="preserve">
+    <value>Faollashtirishni tasdiqlash</value>
+  </data>
+  <data name="Org_BadgeTrialActive" xml:space="preserve">
+    <value>Sinov davri (30 kun)</value>
+  </data>
+  <data name="Org_BadgeTrialExpired" xml:space="preserve">
+    <value>Sinov davri tugadi</value>
+  </data>
+  <data name="Org_BadgeWithAds" xml:space="preserve">
+    <value>«Reklama bilan» tarifi</value>
+  </data>
+  <data name="Org_BadgePro" xml:space="preserve">
+    <value>«PRO reklamasiz» tarifi</value>
+  </data>
+  <data name="Org_BadgeDefault" xml:space="preserve">
+    <value>Tashkilot tarifi</value>
+  </data>
+  <data name="Org_HeadlineTrialActive" xml:space="preserve">
+    <value>Sizning sinov muddatingiz yana {0} kun faol</value>
+  </data>
+  <data name="Org_HeadlineTrialExpired" xml:space="preserve">
+    <value>Sinov muddati tugadi</value>
+  </data>
+  <data name="Org_HeadlineWithAds" xml:space="preserve">
+    <value>«Reklama bilan» tarifi ulangan (5$/oy)</value>
+  </data>
+  <data name="Org_HeadlinePro" xml:space="preserve">
+    <value>«PRO reklamasiz» tarifi ulangan (25$/oy)</value>
+  </data>
+  <data name="Org_HeadlineManage" xml:space="preserve">
+    <value>Tarifni boshqarish</value>
+  </data>
+  <data name="Org_DescTrialActive" xml:space="preserve">
+    <value>Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.</value>
+  </data>
+  <data name="Org_DescTrialExpired" xml:space="preserve">
+    <value>Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.</value>
+  </data>
+  <data name="Org_DescWithAds" xml:space="preserve">
+    <value>Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.</value>
+  </data>
+  <data name="Org_DescPro" xml:space="preserve">
+    <value>Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.</value>
+  </data>
+  <data name="Promo_Title" xml:space="preserve">
+    <value>Mahsulotni Google va Yandex-da targ'ib qilish</value>
+  </data>
+  <data name="Promo_Subtitle" xml:space="preserve">
+    <value>Yandex mahsulot galereyasi, Rich Snippets va Google Shopping</value>
+  </data>
+  <data name="Promo_PromotedProduct" xml:space="preserve">
+    <value>Targ'ib qilinayotgan mahsulot:</value>
+  </data>
+  <data name="Promo_Step1Title" xml:space="preserve">
+    <value>1. Qidiruvda targ'ibot tarifini tanlang</value>
+  </data>
+  <data name="Promo_PopularChoice" xml:space="preserve">
+    <value>Ommabop tanlov</value>
+  </data>
+  <data name="Promo_Step2Title" xml:space="preserve">
+    <value>2. Qulay to'lov usulini tanlang</value>
+  </data>
+  <data name="Promo_UzQrDesc" xml:space="preserve">
+    <value>Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li</value>
+  </data>
+  <data name="Promo_ClickDesc" xml:space="preserve">
+    <value>Click orqali tezkor o'tkazma</value>
+  </data>
+  <data name="Promo_PaymeDesc" xml:space="preserve">
+    <value>UzCard / Humo kartasi orqali 1 marta bosishda to'lov</value>
+  </data>
+  <data name="Promo_UzumDesc" xml:space="preserve">
+    <value>Uzum ekotizimida tezkor to'lov</value>
+  </data>
+  <data name="Promo_InvoiceFor" xml:space="preserve">
+    <value>To'lov hisobi:</value>
+  </data>
+  <data name="Promo_PaymentMethod" xml:space="preserve">
+    <value>To'lov usuli:</value>
+  </data>
+  <data name="Promo_QrCodeAlt" xml:space="preserve">
+    <value>To'lov uchun QR kod</value>
+  </data>
+  <data name="Promo_QrInstruction" xml:space="preserve">
+    <value>Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang</value>
+  </data>
+  <data name="Promo_RedirectMessage" xml:space="preserve">
+    <value>Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz</value>
+  </data>
+  <data name="Promo_OpenPaymentForm" xml:space="preserve">
+    <value>To'lov shaklini ochish</value>
+  </data>
+  <data name="Promo_VerifyingPayment" xml:space="preserve">
+    <value>To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...</value>
+  </data>
+  <data name="Promo_PaidActivate" xml:space="preserve">
+    <value>Men to'ladim — Targ'ibotni faollashtirish</value>
+  </data>
+  <data name="Promo_SuccessTitle" xml:space="preserve">
+    <value>Targ'ibot muvaffaqiyatli faollashtirildi!</value>
+  </data>
+  <data name="Promo_SuccessDesc" xml:space="preserve">
+    <value>Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:</value>
+  </data>
+  <data name="Promo_YandexFeed" xml:space="preserve">
+    <value>Yandex mahsulotlar galereyasi (YML)</value>
+  </data>
+  <data name="Promo_GoogleFeed" xml:space="preserve">
+    <value>Google Shopping &amp; Merchant Center</value>
+  </data>
+  <data name="Promo_SuccessHint" xml:space="preserve">
+    <value>Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.</value>
+  </data>
+  <data name="Promo_PayAmount" xml:space="preserve">
+    <value>To'lash</value>
+  </data>
+  <data name="Promo_BackToPlans" xml:space="preserve">
+    <value>← Tarif tanlashga qaytish</value>
+  </data>
+  <data name="Profile_Title" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile_EditProfile" xml:space="preserve">
+    <value>Profilni tahrirlash</value>
+  </data>
+  <data name="Profile_UploadPhoto" xml:space="preserve">
+    <value>Surat yuklash</value>
+  </data>
+  <data name="Profile_SecurityAndLogin" xml:space="preserve">
+    <value>Xavfsizlik va tezkor kirish</value>
+  </data>
+  <data name="Profile_SecuritySubtext" xml:space="preserve">
+    <value>SMS kutmasdan 1 bosishda kirish usullarini sozlang.</value>
+  </data>
+  <data name="Profile_FaceIdTitle" xml:space="preserve">
+    <value>Face ID (Biometriya)</value>
+  </data>
+  <data name="Profile_LinkedToAccount" xml:space="preserve">
+    <value>Akkauntga biriktirilgan</value>
+  </data>
+  <data name="Profile_FaceLoginSubtext" xml:space="preserve">
+    <value>Kameraga qarash orqali kirish</value>
+  </data>
+  <data name="Profile_DeleteBiometrics" xml:space="preserve">
+    <value>Biometrikani o'chirish</value>
+  </data>
+  <data name="Profile_NotLinked" xml:space="preserve">
+    <value>Biriktirilmagan</value>
+  </data>
+  <data name="Profile_DeviceBiometricsSubtext" xml:space="preserve">
+    <value>Qurilmaning Touch ID / Face ID orqali kirish</value>
+  </data>
+  <data name="Profile_CameraUnavailable" xml:space="preserve">
+    <value>Kamera mavjud emas</value>
+  </data>
+  <data name="Profile_LookStraight" xml:space="preserve">
+    <value>🎯 To'g'riga qarang</value>
+  </data>
+  <data name="Profile_TurnLeft" xml:space="preserve">
+    <value>👈 Chapga buring</value>
+  </data>
+  <data name="Profile_TurnRight" xml:space="preserve">
+    <value>👉 O'ngga buring</value>
+  </data>
+  <data name="Profile_CenterFaceInstruction" xml:space="preserve">
+    <value>Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.</value>
+  </data>
+  <data name="Map_Collapse" xml:space="preserve">
+    <value>Yig'ish</value>
+  </data>
+  <data name="Map_Expand" xml:space="preserve">
+    <value>Kengaytirish</value>
+  </data>
+  <data name="Map_AboutPlace" xml:space="preserve">
+    <value>Joy haqida</value>
+  </data>
+  <data name="Map_Address" xml:space="preserve">
+    <value>Manzil</value>
+  </data>
+  <data name="Map_Description" xml:space="preserve">
+    <value>Tavsif</value>
+  </data>
+  <data name="Map_AddressOrPoint" xml:space="preserve">
+    <value>Manzil / Nuqta</value>
+  </data>
+  <data name="Map_Coordinates" xml:space="preserve">
+    <value>Koordinatalar</value>
+  </data>
+  <data name="Map_ZoomIn" xml:space="preserve">
+    <value>Yaqinlashtirish</value>
+  </data>
+  <data name="Map_ZoomOut" xml:space="preserve">
+    <value>Uzoqlashtirish</value>
+  </data>
+  <data name="Map_MyLocation" xml:space="preserve">
+    <value>Mening joylashuvim</value>
+  </data>
+  <data name="Map_View3D" xml:space="preserve">
+    <value>3D ko'rinish</value>
+  </data>
+  <data name="Map_FloorShort" xml:space="preserve">
+    <value>Qav.</value>
+  </data>
+  <data name="Map_Floor3" xml:space="preserve">
+    <value>3-qavat</value>
+  </data>
+  <data name="Map_Floor2" xml:space="preserve">
+    <value>2-qavat</value>
+  </data>
+  <data name="Map_Floor1" xml:space="preserve">
+    <value>1-qavat</value>
+  </data>
+  <data name="Map_SelectZoneOnMap" xml:space="preserve">
+    <value>Xaritada hududni tanlash</value>
+  </data>
+  <data name="Map_SelectAddressOnMap" xml:space="preserve">
+    <value>Xaritada manzilni tanlash</value>
+  </data>
+  <data name="Map_SelectedZone" xml:space="preserve">
+    <value>Tanlangan hudud:</value>
+  </data>
+  <data name="Map_SelectedAddress" xml:space="preserve">
+    <value>Tanlangan manzil:</value>
+  </data>
+  <data name="Map_Recenter" xml:space="preserve">
+    <value>Xaritani markazga qaytarish</value>
+  </data>
+  <data name="Map_VoiceGuidance" xml:space="preserve">
+    <value>Ovozli yo'naltirish</value>
+  </data>
+  <data name="Map_StopNavigation" xml:space="preserve">
+    <value>Yo'naltirishni to'xtatish</value>
+  </data>
+  <data name="Map_Arrival" xml:space="preserve">
+    <value>Yetib kelish</value>
+  </data>
+  <data name="Map_Remaining" xml:space="preserve">
+    <value>Qoldi</value>
+  </data>
+  <data name="Map_Speed" xml:space="preserve">
+    <value>Tezlik</value>
+  </data>
+  <data name="Map_KmPerHour" xml:space="preserve">
+    <value>km/s</value>
+  </data>
+  <data name="Map_NearbyResults" xml:space="preserve">
+    <value>Yaqin atrofdagi qidiruv natijalari</value>
+  </data>
+  <data name="Map_Nearby" xml:space="preserve">
+    <value>Yaqin atrofda</value>
+  </data>
+  <data name="Map_SearchingNearby" xml:space="preserve">
+    <value>Yaqin atrofda qidirilmoqda...</value>
+  </data>
+  <data name="Map_NothingFound" xml:space="preserve">
+    <value>Hech narsa topilmadi.</value>
+  </data>
+  <data name="Map_AddToRoute" xml:space="preserve">
+    <value>Yo'nalishga qo'shish</value>
+  </data>
+  <data name="Map_AddressNotSelected" xml:space="preserve">
+    <value>Manzil tanlanmagan</value>
+  </data>
+  <data name="Map_LocationOrAddress" xml:space="preserve">
+    <value>Joylashuv / Manzil</value>
+  </data>
+  <data name="Map_ChangeOnMap" xml:space="preserve">
+    <value>Xaritada o'zgartirish</value>
+  </data>
+  <data name="Map_PickOnMap" xml:space="preserve">
+    <value>Xaritada tanlash</value>
+  </data>
+  <data name="Map_ClearAddress" xml:space="preserve">
+    <value>Manzilni tozalash</value>
+  </data>
+  <data name="Map_Routes" xml:space="preserve">
+    <value>Yo'nalishlar</value>
+  </data>
+  <data name="Map_LoadingRoute" xml:space="preserve">
+    <value>Yo'nalish yuklanmoqda...</value>
+  </data>
+  <data name="Map_BuildRoute" xml:space="preserve">
+    <value>Yo'nalish tuzish</value>
+  </data>
+  <data name="Map_CloseRoute" xml:space="preserve">
+    <value>Yo'nalishni yopish</value>
+  </data>
+  <data name="Map_RouteType" xml:space="preserve">
+    <value>Yo'nalish turi</value>
+  </data>
+  <data name="Map_From" xml:space="preserve">
+    <value>Qayerdan</value>
+  </data>
+  <data name="Map_To" xml:space="preserve">
+    <value>Qayerga</value>
+  </data>
+  <data name="Map_Point" xml:space="preserve">
+    <value>Nuqta</value>
+  </data>
+  <data name="Map_DeletePoint" xml:space="preserve">
+    <value>Nuqtani o'chirish</value>
+  </data>
+  <data name="Map_Swap" xml:space="preserve">
+    <value>Almashtirish</value>
+  </data>
+  <data name="Map_AddPoint" xml:space="preserve">
+    <value>Nuqta qo'shish</value>
+  </data>
+  <data name="Map_Optimizing" xml:space="preserve">
+    <value>Optimallashtirilmoqda…</value>
+  </data>
+  <data name="Map_Optimize" xml:space="preserve">
+    <value>Optimallashtirish</value>
+  </data>
+  <data name="Map_WhereToEat" xml:space="preserve">
+    <value>Qayerda ovqatlanish mumkin</value>
+  </data>
+  <data name="Map_Restaurants" xml:space="preserve">
+    <value>restoranlar</value>
+  </data>
+  <data name="Map_Groceries" xml:space="preserve">
+    <value>Oziq-ovqat</value>
+  </data>
+  <data name="Map_Pharmacies" xml:space="preserve">
+    <value>Dorixonalar</value>
+  </data>
+  <data name="Map_GasStations" xml:space="preserve">
+    <value>Yoqilg'i quyish</value>
+  </data>
+  <data name="Map_SearchOnMap" xml:space="preserve">
+    <value>Xarita bo'yicha qidiruv</value>
+  </data>
+  <data name="Map_SearchPlacesAndAddresses" xml:space="preserve">
+    <value>Joy va manzillarni qidirish</value>
+  </data>
+  <data name="Map_ServiceZoneOrPolygon" xml:space="preserve">
+    <value>Xizmat ko'rsatish hududi / Poligon</value>
+  </data>
+  <data name="Map_PointsCount" xml:space="preserve">
+    <value>nuqtalar</value>
+  </data>
+  <data name="Map_PolygonsCount" xml:space="preserve">
+    <value>poligonlar</value>
+  </data>
+  <data name="Map_EditOnMap" xml:space="preserve">
+    <value>Xaritada tahrirlash</value>
+  </data>
+  <data name="Map_SetZone" xml:space="preserve">
+    <value>Hududni belgilash</value>
+  </data>
+  <data name="Map_DeleteZone" xml:space="preserve">
+    <value>Hududni o'chirish</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Rasm</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Manzil</value>
+  </data>
+  <data name="Map_RouteToHere" xml:space="preserve">
+    <value>Bu yerga yo&apos;nalish</value>
+  </data>
+  <data name="Map_BookSeat" xml:space="preserve">
+    <value>Joy band qilish</value>
+  </data>
+  <data name="Map_HallDesigner" xml:space="preserve">
+    <value>Zal muharriri</value>
+  </data>
+  <data name="Map_ClickMapToSetZone" xml:space="preserve">
+    <value>Yetkazib berish hududi poligon nuqtalarini qo&apos;yish uchun xaritani bosing.</value>
+  </data>
+  <data name="Map_ToRoute" xml:space="preserve">
+    <value>Yo&apos;nalishga</value>
+  </data>
+  <data name="Map_StartRoute" xml:space="preserve">
+    <value>Yo&apos;lga chiqish</value>
+  </data>
+  <data name="Map_BuildRouteAction" xml:space="preserve">
+    <value>Yo&apos;nalish tuzish</value>
+  </data>
+  <data name="Map_ModeAll" xml:space="preserve">
+    <value>Barchasi</value>
+  </data>
+  <data name="Map_ModeAllRoutes" xml:space="preserve">
+    <value>Barcha yo&apos;nalishlar</value>
+  </data>
+  <data name="Map_ModeAuto" xml:space="preserve">
+    <value>Avtomobilda</value>
+  </data>
+  <data name="Map_ModePublic" xml:space="preserve">
+    <value>Jamoat transportida</value>
+  </data>
+  <data name="Map_ModeWalk" xml:space="preserve">
+    <value>Piyoda</value>
+  </data>
+  <data name="Map_ModeBike" xml:space="preserve">
+    <value>Velosipedda</value>
+  </data>
+  <data name="Map_ModeScooter" xml:space="preserve">
+    <value>Samokatda</value>
+  </data>
+  <data name="Map_ModeTaxi" xml:space="preserve">
+    <value>Taksida</value>
+  </data>
+  <data name="Map_ZoneNotSet" xml:space="preserve">
+    <value>Hudud belgilanmagan</value>
+  </data>
+  <data name="Map_PolygonNotSet" xml:space="preserve">
+    <value>Poligon belgilanmagan</value>
+  </data>
+  <data name="Map_PolygonUndefined" xml:space="preserve">
+    <value>Geo-hudud poligoni aniqlanmagan</value>
+  </data>
+  <data name="Map_ActiveSingleZone" xml:space="preserve">
+    <value>1 ta geo-hudud faol ({0} ta kontur nuqtasi)</value>
+  </data>
+  <data name="Map_ActiveMultipleZones" xml:space="preserve">
+    <value>Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)</value>
+  </data>
+  <data name="Map_ZonesConfigured" xml:space="preserve">
+    <value>Belgilangan hududlar: {0} ({1} ta nuqta)</value>
+  </data>
+  <data name="Map_PolygonSingle" xml:space="preserve">
+    <value>poligon</value>
+  </data>
 </root>

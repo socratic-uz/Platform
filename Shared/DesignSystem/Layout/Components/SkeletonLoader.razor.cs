@@ -16,8 +16,6 @@ namespace Shared.Layout
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object>? AdditionalAttributes { get; set; }
 
-        public string SkeletonCardClass => Classes.Skeleton.Card;
-
         public string GetCustomStyle() =>
             $"{(!string.IsNullOrEmpty(Height) ? $"height: {Height};" : "")} {(!string.IsNullOrEmpty(Width) ? $"width: {Width};" : "")} {(!string.IsNullOrEmpty(BorderRadius) ? $"border-radius: {BorderRadius};" : "")}";
     }

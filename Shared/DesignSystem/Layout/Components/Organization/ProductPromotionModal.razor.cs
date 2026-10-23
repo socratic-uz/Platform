@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using SharedKernel.ValueObjects;
 using SharedKernel.Abstractions;
 using Domain.Abstractions;
@@ -26,6 +27,7 @@ namespace Shared.Components
         [Parameter] public Guid OrganizationId { get; set; }
         [Parameter] public EventCallback<Product> OnProductPromoted { get; set; }
         [Inject] public IServiceClientFactory ClientFactory { get; set; } = default!;
+        [Inject] public IStringLocalizer L { get; set; } = default!;
 
         public PromotionModalStep CurrentStep { get; private set; } = PromotionModalStep.SelectPlan;
         public ProductPromotionPlanDefinition SelectedPlan { get; private set; } = ProductPromotionPlanDefinition.AllPlans[1]; // Monthly by default
@@ -78,7 +80,7 @@ namespace Shared.Components
             PromotionPaymentGatewayType.Click => "Click / Click Up",
             PromotionPaymentGatewayType.Payme => "Payme Business",
             PromotionPaymentGatewayType.Uzum => "Uzum Bank",
-            _ => "Онлайн-оплата"
+            _ => "Online Payment"
         };
 
         public string GetPaymentGatewayUrl()

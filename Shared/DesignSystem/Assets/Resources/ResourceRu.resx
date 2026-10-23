@@ -4294,4 +4294,721 @@
     <value>По вашему запросу не найдено коммерческих сценариев. Сбросьте поиск или переключите категорию.</value>
     <comment>Empty state description when no UX modes match query</comment>
   </data>
+  <data name="Analytics_Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Analytics_Last7Days" xml:space="preserve">
+    <value>7 дней</value>
+  </data>
+  <data name="Analytics_Last30Days" xml:space="preserve">
+    <value>30 дней</value>
+  </data>
+  <data name="Analytics_AllTime" xml:space="preserve">
+    <value>Все время</value>
+  </data>
+  <data name="Analytics_ChecksUnit" xml:space="preserve">
+    <value>чеков</value>
+  </data>
+  <data name="Analytics_ItemsUnit" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="Analytics_ItemsSold" xml:space="preserve">
+    <value>Продано единиц</value>
+  </data>
+  <data name="Analytics_VolumeItems" xml:space="preserve">
+    <value>Объем позиций</value>
+  </data>
+  <data name="Analytics_ByOrderLines" xml:space="preserve">
+    <value>По строкам чеков</value>
+  </data>
+  <data name="Analytics_ProductsCatalog" xml:space="preserve">
+    <value>Каталог товаров</value>
+  </data>
+  <data name="Analytics_ActiveNomenclature" xml:space="preserve">
+    <value>Активная номенклатура</value>
+  </data>
+  <data name="Analytics_Branches" xml:space="preserve">
+    <value>Филиалы и заведения</value>
+  </data>
+  <data name="Analytics_PointsUnit" xml:space="preserve">
+    <value>точек</value>
+  </data>
+  <data name="Analytics_ConnectedNetwork" xml:space="preserve">
+    <value>Подключенная сеть</value>
+  </data>
+  <data name="Analytics_PaymentMethods" xml:space="preserve">
+    <value>Способы оплаты</value>
+  </data>
+  <data name="Analytics_OrderStatuses" xml:space="preserve">
+    <value>Статусы заказов</value>
+  </data>
+  <data name="Analytics_NoDataPeriod" xml:space="preserve">
+    <value>Нет данных за выбранный период</value>
+  </data>
+  <data name="Analytics_OrdersShort" xml:space="preserve">
+    <value>зак.</value>
+  </data>
+  <data name="Analytics_MethodsUnit" xml:space="preserve">
+    <value>методов</value>
+  </data>
+  <data name="Analytics_StatusesUnit" xml:space="preserve">
+    <value>статусов</value>
+  </data>
+  <data name="Analytics_EntitiesRegistry" xml:space="preserve">
+    <value>Табличный реестр сущностей</value>
+  </data>
+  <data name="Analytics_EntitiesRegistryDesc" xml:space="preserve">
+    <value>Выберите сущность для детального табличного просмотра и работы со строками</value>
+  </data>
+  <data name="Analytics_ConfigModalDesc" xml:space="preserve">
+    <value>Выберите карточки и блоки, которые должны отображаться на вашем дашборде.</value>
+  </data>
+  <data name="Analytics_ConfigRevenueTitle" xml:space="preserve">
+    <value>Выручка и оборот</value>
+  </data>
+  <data name="Analytics_ConfigRevenueDesc" xml:space="preserve">
+    <value>Показывает сумму продаж за выбранный период</value>
+  </data>
+  <data name="Analytics_ConfigOrdersTitle" xml:space="preserve">
+    <value>Количество заказов</value>
+  </data>
+  <data name="Analytics_ConfigOrdersDesc" xml:space="preserve">
+    <value>Общее число оформленных чеков</value>
+  </data>
+  <data name="Analytics_ConfigAovTitle" xml:space="preserve">
+    <value>Средний чек (AOV)</value>
+  </data>
+  <data name="Analytics_ConfigAovDesc" xml:space="preserve">
+    <value>Средняя сумма одного заказа</value>
+  </data>
+  <data name="Analytics_ConfigItemsTitle" xml:space="preserve">
+    <value>Продано единиц товара</value>
+  </data>
+  <data name="Analytics_ConfigItemsDesc" xml:space="preserve">
+    <value>Суммарное количество проданных блюд/позиций</value>
+  </data>
+  <data name="Analytics_ConfigProductsTitle" xml:space="preserve">
+    <value>Каталог номенклатуры</value>
+  </data>
+  <data name="Analytics_ConfigProductsDesc" xml:space="preserve">
+    <value>Число активных товаров в системе</value>
+  </data>
+  <data name="Analytics_ConfigBranchesTitle" xml:space="preserve">
+    <value>Филиалы и заведения</value>
+  </data>
+  <data name="Analytics_ConfigBranchesDesc" xml:space="preserve">
+    <value>Количество подключенных объектов сети</value>
+  </data>
+  <data name="Analytics_ConfigPaymentsTitle" xml:space="preserve">
+    <value>Способы оплаты</value>
+  </data>
+  <data name="Analytics_ConfigPaymentsDesc" xml:space="preserve">
+    <value>Доля Payme, Click, Soliq QR и наличных</value>
+  </data>
+  <data name="Analytics_ConfigStatusesTitle" xml:space="preserve">
+    <value>Статусы заказов</value>
+  </data>
+  <data name="Analytics_ConfigStatusesDesc" xml:space="preserve">
+    <value>Распределение чеков по этапам жизненного цикла</value>
+  </data>
+  <data name="Analytics_ConfigApplyBtn" xml:space="preserve">
+    <value>Применить настройки</value>
+  </data>
+  <data name="Analytics_SuccessfullyCompleted" xml:space="preserve">
+    <value>Успешно оформлено</value>
+  </data>
+  <data name="Analytics_AovMetric" xml:space="preserve">
+    <value>AOV метрика</value>
+  </data>
+  <data name="PlayerPageTitle" xml:space="preserve">
+    <value>Медиаплеер — Socratic</value>
+  </data>
+  <data name="PlayerLoadingVideo" xml:space="preserve">
+    <value>Загрузка видео...</value>
+  </data>
+  <data name="PlayerVideoNotFound" xml:space="preserve">
+    <value>Ссылка на видео не найдена</value>
+  </data>
+  <data name="LandingKeywords" xml:space="preserve">
+    <value>универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic</value>
+  </data>
+  <data name="LandingSoliqCashback" xml:space="preserve">
+    <value>Soliq ОФД • 1% Кешбэк</value>
+  </data>
+  <data name="QrCustomizerTitle" xml:space="preserve">
+    <value>Настроить дизайн</value>
+  </data>
+  <data name="QrCustomizerElements" xml:space="preserve">
+    <value>Цвета элементов QR</value>
+  </data>
+  <data name="QrCustomizerDotsColor" xml:space="preserve">
+    <value>Основной цвет точек</value>
+  </data>
+  <data name="QrCustomizerDots" xml:space="preserve">
+    <value>Точки</value>
+  </data>
+  <data name="QrCustomizerFrameColor" xml:space="preserve">
+    <value>Цвет рамки углов</value>
+  </data>
+  <data name="QrCustomizerFrame" xml:space="preserve">
+    <value>Рамка</value>
+  </data>
+  <data name="QrCustomizerCornerDotColor" xml:space="preserve">
+    <value>Цвет точки в углах</value>
+  </data>
+  <data name="QrCustomizerCornerDot" xml:space="preserve">
+    <value>Угловая точка</value>
+  </data>
+  <data name="QrCustomizerBgFill" xml:space="preserve">
+    <value>Заливка фона</value>
+  </data>
+  <data name="QrCustomizerGradientType" xml:space="preserve">
+    <value>Тип градиента</value>
+  </data>
+  <data name="QrCustomizerGradientColors" xml:space="preserve">
+    <value>Цвета градиента</value>
+  </data>
+  <data name="QrCustomizerStartColor" xml:space="preserve">
+    <value>Начальный цвет</value>
+  </data>
+  <data name="QrCustomizerStart" xml:space="preserve">
+    <value>Начало</value>
+  </data>
+  <data name="QrCustomizerEndColor" xml:space="preserve">
+    <value>Конечный цвет</value>
+  </data>
+  <data name="QrCustomizerEnd" xml:space="preserve">
+    <value>Конец</value>
+  </data>
+  <data name="QrCustomizerGradientAngle" xml:space="preserve">
+    <value>Угол градиента</value>
+  </data>
+  <data name="QrCustomizerBgColor" xml:space="preserve">
+    <value>Цвет фона</value>
+  </data>
+  <data name="QrCustomizerBgColorShort" xml:space="preserve">
+    <value>Фон</value>
+  </data>
+  <data name="QrCustomizerShapes" xml:space="preserve">
+    <value>Стилизация форм элементов</value>
+  </data>
+  <data name="QrCustomizerDotStyle" xml:space="preserve">
+    <value>Стиль точек</value>
+  </data>
+  <data name="QrCustomizerCornerStyle" xml:space="preserve">
+    <value>Стиль углов</value>
+  </data>
+  <data name="QrCustomizerSize" xml:space="preserve">
+    <value>Размер QR-кода</value>
+  </data>
+  <data name="Org_TrialDaysRemaining" xml:space="preserve">
+    <value>дней триала осталось</value>
+  </data>
+  <data name="Org_TierTrialName" xml:space="preserve">
+    <value>1. Пробный период</value>
+  </data>
+  <data name="Org_TierTrialPrice" xml:space="preserve">
+    <value>0$ / 30 дней</value>
+  </data>
+  <data name="Org_TierFeatureNoAds" xml:space="preserve">
+    <value>Без рекламы</value>
+  </data>
+  <data name="Org_TierFeatureAllModes" xml:space="preserve">
+    <value>Полный доступ ко всем 28 режимам</value>
+  </data>
+  <data name="Org_TierFeatureBrandScreensaver" xml:space="preserve">
+    <value>Фирменная заставка заведения</value>
+  </data>
+  <data name="Org_CurrentPlan" xml:space="preserve">
+    <value>Текущий тариф</value>
+  </data>
+  <data name="Org_TierWithAdsName" xml:space="preserve">
+    <value>2. С рекламой</value>
+  </data>
+  <data name="Org_TierWithAdsPrice" xml:space="preserve">
+    <value>5$ / мес</value>
+  </data>
+  <data name="Org_TierFeaturePartnerAds" xml:space="preserve">
+    <value>Реклама партнеров на киосках</value>
+  </data>
+  <data name="Org_TierFeatureCloudPos" xml:space="preserve">
+    <value>Все функции облачной кассы</value>
+  </data>
+  <data name="Org_TierFeatureFiscalization" xml:space="preserve">
+    <value>Фискализация Soliq.uz</value>
+  </data>
+  <data name="Org_SelectPlanAds" xml:space="preserve">
+    <value>Выбрать (5$/мес)</value>
+  </data>
+  <data name="Org_Recommended" xml:space="preserve">
+    <value>Рекомендуется</value>
+  </data>
+  <data name="Org_TierProName" xml:space="preserve">
+    <value>3. PRO Без рекламы</value>
+  </data>
+  <data name="Org_TierProPrice" xml:space="preserve">
+    <value>25$ / мес</value>
+  </data>
+  <data name="Org_TierFeature100NoAds" xml:space="preserve">
+    <value>100% Без рекламы</value>
+  </data>
+  <data name="Org_TierFeaturePrioritySupport" xml:space="preserve">
+    <value>Приоритетный саппорт 24/7</value>
+  </data>
+  <data name="Org_TierFeatureWhiteLabel" xml:space="preserve">
+    <value>Премиальный White-Label стиль</value>
+  </data>
+  <data name="Org_ActivePro" xml:space="preserve">
+    <value>Активен PRO</value>
+  </data>
+  <data name="Org_ConnectPro" xml:space="preserve">
+    <value>Подключить PRO (25$/мес)</value>
+  </data>
+  <data name="Org_ConnectingPlan" xml:space="preserve">
+    <value>Подключение тарифа:</value>
+  </data>
+  <data name="Org_PlanProSummary" xml:space="preserve">
+    <value>PRO без рекламы (25$/мес)</value>
+  </data>
+  <data name="Org_PlanAdsSummary" xml:space="preserve">
+    <value>С рекламой (5$/мес)</value>
+  </data>
+  <data name="Org_YouSelectedPlan" xml:space="preserve">
+    <value>Вы выбрали тариф</value>
+  </data>
+  <data name="Org_PaymentClickPayme" xml:space="preserve">
+    <value>Click Business / Payme Merchant</value>
+  </data>
+  <data name="Org_PaymentInvoice" xml:space="preserve">
+    <value>Безналичный расчет для юр. лиц (Договор и счет)</value>
+  </data>
+  <data name="Org_ConfirmActivation" xml:space="preserve">
+    <value>Подтвердить активацию</value>
+  </data>
+  <data name="Org_BadgeTrialActive" xml:space="preserve">
+    <value>Пробный период (30 дней)</value>
+  </data>
+  <data name="Org_BadgeTrialExpired" xml:space="preserve">
+    <value>Пробный период завершен</value>
+  </data>
+  <data name="Org_BadgeWithAds" xml:space="preserve">
+    <value>Тариф «С рекламой»</value>
+  </data>
+  <data name="Org_BadgePro" xml:space="preserve">
+    <value>Тариф «PRO без рекламы»</value>
+  </data>
+  <data name="Org_BadgeDefault" xml:space="preserve">
+    <value>Тариф организации</value>
+  </data>
+  <data name="Org_HeadlineTrialActive" xml:space="preserve">
+    <value>Ваш пробный период активен еще {0} дней</value>
+  </data>
+  <data name="Org_HeadlineTrialExpired" xml:space="preserve">
+    <value>Пробный период подошел к концу</value>
+  </data>
+  <data name="Org_HeadlineWithAds" xml:space="preserve">
+    <value>Подключен тариф «С рекламой» (5$/мес)</value>
+  </data>
+  <data name="Org_HeadlinePro" xml:space="preserve">
+    <value>Подключен тариф «PRO без рекламы» (25$/мес)</value>
+  </data>
+  <data name="Org_HeadlineManage" xml:space="preserve">
+    <value>Управление тарифом</value>
+  </data>
+  <data name="Org_DescTrialActive" xml:space="preserve">
+    <value>Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.</value>
+  </data>
+  <data name="Org_DescTrialExpired" xml:space="preserve">
+    <value>Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).</value>
+  </data>
+  <data name="Org_DescWithAds" xml:space="preserve">
+    <value>На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.</value>
+  </data>
+  <data name="Org_DescPro" xml:space="preserve">
+    <value>На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.</value>
+  </data>
+  <data name="Promo_Title" xml:space="preserve">
+    <value>Продвижение товара в Google и Яндекс</value>
+  </data>
+  <data name="Promo_Subtitle" xml:space="preserve">
+    <value>Товарная галерея Яндекса, Rich Snippets и Google Shopping</value>
+  </data>
+  <data name="Promo_PromotedProduct" xml:space="preserve">
+    <value>Продвигаемый товар:</value>
+  </data>
+  <data name="Promo_Step1Title" xml:space="preserve">
+    <value>1. Выберите тариф поискового продвижения</value>
+  </data>
+  <data name="Promo_PopularChoice" xml:space="preserve">
+    <value>Популярный выбор</value>
+  </data>
+  <data name="Promo_Step2Title" xml:space="preserve">
+    <value>2. Выберите удобный способ оплаты</value>
+  </data>
+  <data name="Promo_UzQrDesc" xml:space="preserve">
+    <value>Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli</value>
+  </data>
+  <data name="Promo_ClickDesc" xml:space="preserve">
+    <value>Мгновенный перевод через Click</value>
+  </data>
+  <data name="Promo_PaymeDesc" xml:space="preserve">
+    <value>Оплата в 1 клик картой UzCard / Humo</value>
+  </data>
+  <data name="Promo_UzumDesc" xml:space="preserve">
+    <value>Быстрая оплата в экосистеме Uzum</value>
+  </data>
+  <data name="Promo_InvoiceFor" xml:space="preserve">
+    <value>Счёт на оплату:</value>
+  </data>
+  <data name="Promo_PaymentMethod" xml:space="preserve">
+    <value>Способ оплаты:</value>
+  </data>
+  <data name="Promo_QrCodeAlt" xml:space="preserve">
+    <value>QR код для оплаты</value>
+  </data>
+  <data name="Promo_QrInstruction" xml:space="preserve">
+    <value>Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli</value>
+  </data>
+  <data name="Promo_RedirectMessage" xml:space="preserve">
+    <value>Вы перенаправляетесь на защищённый платёжный шлюз</value>
+  </data>
+  <data name="Promo_OpenPaymentForm" xml:space="preserve">
+    <value>Открыть платёжную форму</value>
+  </data>
+  <data name="Promo_VerifyingPayment" xml:space="preserve">
+    <value>Проверяем зачисление платежа в платёжном шлюзе...</value>
+  </data>
+  <data name="Promo_PaidActivate" xml:space="preserve">
+    <value>Я оплатил(а) — Активировать продвижение</value>
+  </data>
+  <data name="Promo_SuccessTitle" xml:space="preserve">
+    <value>Продвижение успешно активировано!</value>
+  </data>
+  <data name="Promo_SuccessDesc" xml:space="preserve">
+    <value>Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:</value>
+  </data>
+  <data name="Promo_YandexFeed" xml:space="preserve">
+    <value>Товарная галерея Яндекса (YML)</value>
+  </data>
+  <data name="Promo_GoogleFeed" xml:space="preserve">
+    <value>Google Shopping &amp; Merchant Center</value>
+  </data>
+  <data name="Promo_SuccessHint" xml:space="preserve">
+    <value>Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).</value>
+  </data>
+  <data name="Promo_PayAmount" xml:space="preserve">
+    <value>Оплатить</value>
+  </data>
+  <data name="Promo_BackToPlans" xml:space="preserve">
+    <value>← Назад к выбору тарифа</value>
+  </data>
+  <data name="Profile_Title" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Profile_EditProfile" xml:space="preserve">
+    <value>Редактировать профиль</value>
+  </data>
+  <data name="Profile_UploadPhoto" xml:space="preserve">
+    <value>Загрузить фото</value>
+  </data>
+  <data name="Profile_SecurityAndLogin" xml:space="preserve">
+    <value>Безопасность и быстрый вход</value>
+  </data>
+  <data name="Profile_SecuritySubtext" xml:space="preserve">
+    <value>Настройте методы для входа в 1 клик без ожидания SMS.</value>
+  </data>
+  <data name="Profile_FaceIdTitle" xml:space="preserve">
+    <value>Face ID (Биометрия)</value>
+  </data>
+  <data name="Profile_LinkedToAccount" xml:space="preserve">
+    <value>Привязано к аккаунту</value>
+  </data>
+  <data name="Profile_FaceLoginSubtext" xml:space="preserve">
+    <value>Вход по взгляду в камеру</value>
+  </data>
+  <data name="Profile_DeleteBiometrics" xml:space="preserve">
+    <value>Удалить биометрию</value>
+  </data>
+  <data name="Profile_NotLinked" xml:space="preserve">
+    <value>Не привязано</value>
+  </data>
+  <data name="Profile_DeviceBiometricsSubtext" xml:space="preserve">
+    <value>Вход по Touch ID / Face ID устройства</value>
+  </data>
+  <data name="Profile_CameraUnavailable" xml:space="preserve">
+    <value>Камера недоступна</value>
+  </data>
+  <data name="Profile_LookStraight" xml:space="preserve">
+    <value>🎯 Смотрите прямо</value>
+  </data>
+  <data name="Profile_TurnLeft" xml:space="preserve">
+    <value>👈 Поверните влево</value>
+  </data>
+  <data name="Profile_TurnRight" xml:space="preserve">
+    <value>👉 Поверните вправо</value>
+  </data>
+  <data name="Profile_CenterFaceInstruction" xml:space="preserve">
+    <value>Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.</value>
+  </data>
+  <data name="Map_Collapse" xml:space="preserve">
+    <value>Свернуть</value>
+  </data>
+  <data name="Map_Expand" xml:space="preserve">
+    <value>Развернуть</value>
+  </data>
+  <data name="Map_AboutPlace" xml:space="preserve">
+    <value>О месте</value>
+  </data>
+  <data name="Map_Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="Map_Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Map_AddressOrPoint" xml:space="preserve">
+    <value>Адрес / Точка</value>
+  </data>
+  <data name="Map_Coordinates" xml:space="preserve">
+    <value>Координаты</value>
+  </data>
+  <data name="Map_ZoomIn" xml:space="preserve">
+    <value>Приблизить</value>
+  </data>
+  <data name="Map_ZoomOut" xml:space="preserve">
+    <value>Отдалить</value>
+  </data>
+  <data name="Map_MyLocation" xml:space="preserve">
+    <value>Мое местоположение</value>
+  </data>
+  <data name="Map_View3D" xml:space="preserve">
+    <value>3D вид</value>
+  </data>
+  <data name="Map_FloorShort" xml:space="preserve">
+    <value>Эт.</value>
+  </data>
+  <data name="Map_Floor3" xml:space="preserve">
+    <value>3 этаж</value>
+  </data>
+  <data name="Map_Floor2" xml:space="preserve">
+    <value>2 этаж</value>
+  </data>
+  <data name="Map_Floor1" xml:space="preserve">
+    <value>1 этаж</value>
+  </data>
+  <data name="Map_SelectZoneOnMap" xml:space="preserve">
+    <value>Выбор зоны на карте</value>
+  </data>
+  <data name="Map_SelectAddressOnMap" xml:space="preserve">
+    <value>Выбор адреса на карте</value>
+  </data>
+  <data name="Map_SelectedZone" xml:space="preserve">
+    <value>Выбранная зона:</value>
+  </data>
+  <data name="Map_SelectedAddress" xml:space="preserve">
+    <value>Выбранный адрес:</value>
+  </data>
+  <data name="Map_Recenter" xml:space="preserve">
+    <value>Вернуть карту в центр</value>
+  </data>
+  <data name="Map_VoiceGuidance" xml:space="preserve">
+    <value>Голосовое сопровождение</value>
+  </data>
+  <data name="Map_StopNavigation" xml:space="preserve">
+    <value>Завершить ведение</value>
+  </data>
+  <data name="Map_Arrival" xml:space="preserve">
+    <value>Прибытие</value>
+  </data>
+  <data name="Map_Remaining" xml:space="preserve">
+    <value>Осталось</value>
+  </data>
+  <data name="Map_Speed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="Map_KmPerHour" xml:space="preserve">
+    <value>км/ч</value>
+  </data>
+  <data name="Map_NearbyResults" xml:space="preserve">
+    <value>Результаты поиска рядом</value>
+  </data>
+  <data name="Map_Nearby" xml:space="preserve">
+    <value>Рядом</value>
+  </data>
+  <data name="Map_SearchingNearby" xml:space="preserve">
+    <value>Ищем рядом...</value>
+  </data>
+  <data name="Map_NothingFound" xml:space="preserve">
+    <value>Ничего не найдено.</value>
+  </data>
+  <data name="Map_AddToRoute" xml:space="preserve">
+    <value>Добавить в маршрут</value>
+  </data>
+  <data name="Map_AddressNotSelected" xml:space="preserve">
+    <value>Адрес не выбран</value>
+  </data>
+  <data name="Map_LocationOrAddress" xml:space="preserve">
+    <value>Местоположение / Адрес</value>
+  </data>
+  <data name="Map_ChangeOnMap" xml:space="preserve">
+    <value>Изменить на карте</value>
+  </data>
+  <data name="Map_PickOnMap" xml:space="preserve">
+    <value>Выбрать на карте</value>
+  </data>
+  <data name="Map_ClearAddress" xml:space="preserve">
+    <value>Очистить адрес</value>
+  </data>
+  <data name="Map_Routes" xml:space="preserve">
+    <value>Маршруты</value>
+  </data>
+  <data name="Map_LoadingRoute" xml:space="preserve">
+    <value>Загрузка маршрута...</value>
+  </data>
+  <data name="Map_BuildRoute" xml:space="preserve">
+    <value>Построение маршрута</value>
+  </data>
+  <data name="Map_CloseRoute" xml:space="preserve">
+    <value>Закрыть маршрут</value>
+  </data>
+  <data name="Map_RouteType" xml:space="preserve">
+    <value>Тип маршрута</value>
+  </data>
+  <data name="Map_From" xml:space="preserve">
+    <value>Откуда</value>
+  </data>
+  <data name="Map_To" xml:space="preserve">
+    <value>Куда</value>
+  </data>
+  <data name="Map_Point" xml:space="preserve">
+    <value>Точка</value>
+  </data>
+  <data name="Map_DeletePoint" xml:space="preserve">
+    <value>Удалить точку</value>
+  </data>
+  <data name="Map_Swap" xml:space="preserve">
+    <value>Обменять</value>
+  </data>
+  <data name="Map_AddPoint" xml:space="preserve">
+    <value>Добавить точку</value>
+  </data>
+  <data name="Map_Optimizing" xml:space="preserve">
+    <value>Оптимизация…</value>
+  </data>
+  <data name="Map_Optimize" xml:space="preserve">
+    <value>Оптимизировать</value>
+  </data>
+  <data name="Map_WhereToEat" xml:space="preserve">
+    <value>Где поесть</value>
+  </data>
+  <data name="Map_Restaurants" xml:space="preserve">
+    <value>рестораны</value>
+  </data>
+  <data name="Map_Groceries" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="Map_Pharmacies" xml:space="preserve">
+    <value>Аптеки</value>
+  </data>
+  <data name="Map_GasStations" xml:space="preserve">
+    <value>АЗС</value>
+  </data>
+  <data name="Map_SearchOnMap" xml:space="preserve">
+    <value>Поиск по карте</value>
+  </data>
+  <data name="Map_SearchPlacesAndAddresses" xml:space="preserve">
+    <value>Поиск мест и адресов</value>
+  </data>
+  <data name="Map_ServiceZoneOrPolygon" xml:space="preserve">
+    <value>Зона обслуживания / Полигон</value>
+  </data>
+  <data name="Map_PointsCount" xml:space="preserve">
+    <value>точек</value>
+  </data>
+  <data name="Map_PolygonsCount" xml:space="preserve">
+    <value>полигона</value>
+  </data>
+  <data name="Map_EditOnMap" xml:space="preserve">
+    <value>Редактировать на карте</value>
+  </data>
+  <data name="Map_SetZone" xml:space="preserve">
+    <value>Задать зону</value>
+  </data>
+  <data name="Map_DeleteZone" xml:space="preserve">
+    <value>Удалить зону</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Фото</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="Map_RouteToHere" xml:space="preserve">
+    <value>Маршрут сюда</value>
+  </data>
+  <data name="Map_BookSeat" xml:space="preserve">
+    <value>Бронь места</value>
+  </data>
+  <data name="Map_HallDesigner" xml:space="preserve">
+    <value>Редактор залы</value>
+  </data>
+  <data name="Map_ClickMapToSetZone" xml:space="preserve">
+    <value>Кликните на карте, чтобы поставить точки полигона зоны доставки.</value>
+  </data>
+  <data name="Map_ToRoute" xml:space="preserve">
+    <value>В маршрут</value>
+  </data>
+  <data name="Map_StartRoute" xml:space="preserve">
+    <value>В путь</value>
+  </data>
+  <data name="Map_BuildRouteAction" xml:space="preserve">
+    <value>Построить маршрут</value>
+  </data>
+  <data name="Map_ModeAll" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Map_ModeAllRoutes" xml:space="preserve">
+    <value>Все маршруты</value>
+  </data>
+  <data name="Map_ModeAuto" xml:space="preserve">
+    <value>На автомобиле</value>
+  </data>
+  <data name="Map_ModePublic" xml:space="preserve">
+    <value>На общественном транспорте</value>
+  </data>
+  <data name="Map_ModeWalk" xml:space="preserve">
+    <value>Пешком</value>
+  </data>
+  <data name="Map_ModeBike" xml:space="preserve">
+    <value>На велосипеде</value>
+  </data>
+  <data name="Map_ModeScooter" xml:space="preserve">
+    <value>На самокате</value>
+  </data>
+  <data name="Map_ModeTaxi" xml:space="preserve">
+    <value>На такси</value>
+  </data>
+  <data name="Map_ZoneNotSet" xml:space="preserve">
+    <value>Зона не задана</value>
+  </data>
+  <data name="Map_PolygonNotSet" xml:space="preserve">
+    <value>Полигон не задан</value>
+  </data>
+  <data name="Map_PolygonUndefined" xml:space="preserve">
+    <value>Полигон гео-зоны не определен</value>
+  </data>
+  <data name="Map_ActiveSingleZone" xml:space="preserve">
+    <value>Активна 1 гео-зона ({0} точек контура)</value>
+  </data>
+  <data name="Map_ActiveMultipleZones" xml:space="preserve">
+    <value>Активно гео-зон: {0} ({1} точек контура)</value>
+  </data>
+  <data name="Map_ZonesConfigured" xml:space="preserve">
+    <value>Задано зон: {0} ({1} точек)</value>
+  </data>
+  <data name="Map_PolygonSingle" xml:space="preserve">
+    <value>полигон</value>
+  </data>
 </root>

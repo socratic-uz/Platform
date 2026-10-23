@@ -7,6 +7,7 @@
 @using Microsoft.JSInterop
 @using static Assets.Constants.Loc.Receipt
 @using static Assets.Constants.Icons
+@using static Material.Web.Components.ButtonVariant
 
 <article id="fiscal-receipt-element" class="fiscal-receipt glass-panel">
     <header class="receipt-header">
@@ -15,13 +16,13 @@
             <span class="soliq-title">@L[OfdTitle]</span>
         </div>
         <h4 class="org-name">@OrganizationName</h4>
-        <p class="org-details">@L[InnLabel] <strong>@TaxId</strong> | @L[ReceiptTerminalLabel] <strong>@TerminalId</strong></p>
+        <p class="org-details">@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
         <p class="receipt-meta">@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
     </header>
 
     <div class="receipt-divider"></div>
 
-    <!-- Список фискализированных позиций -->
+    <!-- Fiscalized Items List -->
     <section class="receipt-items">
         @foreach (var item in Items)
         {
@@ -32,37 +33,37 @@
                 </div>
                 <div class="item-calc">
                     <span class="item-qty">@item.Quantity × @item.Price.ToString("N0")</span>
-                    <span class="item-total">@item.TotalPrice.ToString("N0") @L[CurrencyUzs]</span>
+                    <span class="item-total">@item.TotalPrice.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
                 </div>
             </div>
             <div class="item-vat-row">
                 <span>@L[IncludingVat]</span>
-                <span>@item.VatAmount.ToString("N0") @L[CurrencyUzs]</span>
+                <span>@item.VatAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
             </div>
         }
     </section>
 
     <div class="receipt-divider"></div>
 
-    <!-- Итого и разбивка НДС -->
+    <!-- Total and VAT Breakdown -->
     <section class="receipt-totals">
         <div class="total-row main">
             <span>@L[TotalToPay]</span>
-            <span class="total-val">@TotalAmount.ToString("N0") @L[CurrencyUzs]</span>
+            <span class="total-val">@TotalAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
         </div>
         <div class="total-row vat">
             <span>@L[VatAmount]</span>
-            <span>@TotalVatAmount.ToString("N0") @L[CurrencyUzs]</span>
+            <span>@TotalVatAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
         </div>
         <div class="total-row payment-type">
-            <span>@L[ReceiptPaymentMethod]</span>
+            <span>@L[Receipt_PaymentMethod]</span>
             <span>@PaymentGatewayName (@PaymentTypeName)</span>
         </div>
     </section>
 
     <div class="receipt-divider"></div>
 
-    <!-- Фискальный блок и QR-код Soliq.uz -->
+    <!-- Fiscal Block and Soliq.uz QR Code -->
     <footer class="receipt-fiscal-footer">
         <div class="qr-container">
             @if (!string.IsNullOrWhiteSpace(QrSvg))
@@ -82,15 +83,15 @@
             <p class="fiscal-sign">@L[FiscalSign] <code>@FiscalSign</code></p>
             <p class="ofd-hint">@L[OfdHint]</p>
             <a href="@SoliqQrUrl" target="_blank" class="verify-link">
-                <Icon Name="@Verified" /> @L[VerifySoliq]
+                <Icon Name=@Verified /> @L[VerifySoliq]
             </a>
         </div>
     </footer>
 
-    <!-- Кнопка печати на кассовом термопринтере -->
+    <!-- Thermal Printer Receipt Print Button -->
     <div class="receipt-actions">
-        <Button Variant="ButtonVariant.Filled" class="print-btn" OnClick="PrintReceiptAsync">
-            <Icon Name="@Print" Slot="icon" /> @L[PrintEscPos]
+        <Button Variant=@Filled class="print-btn" OnClick=@PrintReceiptAsync>
+            <Icon Name=@Print Slot="icon" /> @L[PrintEscPos]
         </Button>
     </div>
 </article>

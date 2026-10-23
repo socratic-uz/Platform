@@ -23,22 +23,6 @@ public partial class SmartSchedulePicker : ComponentBase
     protected const string TzContainerClass = "md3-schedule-tz-container";
     protected const string TzFieldClass = "md3-tz-field";
     protected const string ClosedIconClass = "md3-closed-icon";
-    protected const string GridFlowColClass = global::Assets.Constants.Classes.Common.GridFlowCol;
-
-    protected const string IconSchedule = global::Assets.Constants.Icons.Schedule;
-    protected const string IconEventAvailable = global::Assets.Constants.Icons.EventAvailable;
-    protected const string IconEditCalendar = global::Assets.Constants.Icons.EditCalendar;
-    protected const string IconWork = global::Assets.Constants.Icons.Work;
-    protected const string IconStorefront = global::Assets.Constants.Icons.Storefront;
-    protected const string IconAllInclusive = global::Assets.Constants.Icons.AllInclusive;
-    protected const string IconRestartAlt = global::Assets.Constants.Icons.RestartAlt;
-    protected const string IconPublic = global::Assets.Constants.Icons.Public;
-    protected const string IconBlock = global::Assets.Constants.Icons.Block;
-    protected const string IconCheck = global::Assets.Constants.Icons.Check;
-
-    protected const string LocConfigure = global::Assets.Constants.Loc.Common.CommonConfigure;
-    protected const string LocCancel = global::Assets.Constants.Loc.Actions.CancelAction;
-    protected const string LocSave = global::Assets.Constants.Loc.Actions.SaveAction;
 
     private string EffectiveLabel => Label ?? L[global::Assets.Constants.Loc.Schedule.TitleText];
 

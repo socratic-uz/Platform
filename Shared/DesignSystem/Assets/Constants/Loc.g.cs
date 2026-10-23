@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1394.
+    /// Total unique keys: 1633.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (501 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (540 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -498,6 +498,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Close&quot;
             /// </summary>
             public const string ActionsClose = "Actions_Close";
+
+            /// <summary>
+            /// Key: <c>Address</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+            /// </summary>
+            public const string AddressLabel = "Address";
+
+            /// <summary>
+            /// Key: <c>Address</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+            /// </summary>
+            public const string AddressText = "Address";
 
             /// <summary>
             /// Key: <c>All</c><br/>
@@ -1817,6 +1833,14 @@ namespace Assets.Constants
             public const string Icon1 = "Icon1";
 
             /// <summary>
+            /// Key: <c>Id</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;ID&quot;
+            /// </summary>
+            public const string Id = "Id";
+
+            /// <summary>
             /// Key: <c>Image</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Изображение&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
@@ -3041,6 +3065,22 @@ namespace Assets.Constants
             public const string PhoneText = "Phone";
 
             /// <summary>
+            /// Key: <c>Photo</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фото&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Photo&quot;
+            /// </summary>
+            public const string PhotoLabel = "Photo";
+
+            /// <summary>
+            /// Key: <c>Photo</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фото&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Photo&quot;
+            /// </summary>
+            public const string PhotoText = "Photo";
+
+            /// <summary>
             /// Key: <c>PillarAnalyticsBadge</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
@@ -3361,6 +3401,30 @@ namespace Assets.Constants
             public const string PlatformWindowsDesc = "PlatformWindowsDesc";
 
             /// <summary>
+            /// Key: <c>PlayerLoadingVideo</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка видео...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading video...&quot;
+            /// </summary>
+            public const string PlayerLoadingVideo = "PlayerLoadingVideo";
+
+            /// <summary>
+            /// Key: <c>PlayerPageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Медиаплеер — Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mediapleyer — Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Media Player — Socratic&quot;
+            /// </summary>
+            public const string PlayerPageTitle = "PlayerPageTitle";
+
+            /// <summary>
+            /// Key: <c>PlayerVideoNotFound</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ссылка на видео не найдена&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video havolasi topilmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Video link not found&quot;
+            /// </summary>
+            public const string PlayerVideoNotFound = "PlayerVideoNotFound";
+
+            /// <summary>
             /// Key: <c>PointsPresenceDesc</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
@@ -3513,12 +3577,260 @@ namespace Assets.Constants
             public const string Profile = "Profile";
 
             /// <summary>
+            /// Key: <c>Profile_CameraUnavailable</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+            /// </summary>
+            public const string Profile_CameraUnavailable = "Profile_CameraUnavailable";
+
+            /// <summary>
+            /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+            /// </summary>
+            public const string Profile_CenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+            /// <summary>
+            /// Key: <c>Profile_DeleteBiometrics</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+            /// </summary>
+            public const string Profile_DeleteBiometrics = "Profile_DeleteBiometrics";
+
+            /// <summary>
+            /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+            /// </summary>
+            public const string Profile_DeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_EditProfile</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+            /// </summary>
+            public const string Profile_EditProfile = "Profile_EditProfile";
+
+            /// <summary>
+            /// Key: <c>Profile_FaceIdTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+            /// </summary>
+            public const string Profile_FaceIdTitle = "Profile_FaceIdTitle";
+
+            /// <summary>
+            /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+            /// </summary>
+            public const string Profile_FaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_LinkedToAccount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+            /// </summary>
+            public const string Profile_LinkedToAccount = "Profile_LinkedToAccount";
+
+            /// <summary>
+            /// Key: <c>Profile_LookStraight</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+            /// </summary>
+            public const string Profile_LookStraight = "Profile_LookStraight";
+
+            /// <summary>
+            /// Key: <c>Profile_NotLinked</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+            /// </summary>
+            public const string Profile_NotLinked = "Profile_NotLinked";
+
+            /// <summary>
+            /// Key: <c>Profile_SecurityAndLogin</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+            /// </summary>
+            public const string Profile_SecurityAndLogin = "Profile_SecurityAndLogin";
+
+            /// <summary>
+            /// Key: <c>Profile_SecuritySubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+            /// </summary>
+            public const string Profile_SecuritySubtext = "Profile_SecuritySubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Профиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
+            /// </summary>
+            public const string Profile_Title = "Profile_Title";
+
+            /// <summary>
+            /// Key: <c>Profile_TurnLeft</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+            /// </summary>
+            public const string Profile_TurnLeft = "Profile_TurnLeft";
+
+            /// <summary>
+            /// Key: <c>Profile_TurnRight</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+            /// </summary>
+            public const string Profile_TurnRight = "Profile_TurnRight";
+
+            /// <summary>
+            /// Key: <c>Profile_UploadPhoto</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+            /// </summary>
+            public const string Profile_UploadPhoto = "Profile_UploadPhoto";
+
+            /// <summary>
+            /// Key: <c>Profile_CameraUnavailable</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+            /// </summary>
+            public const string ProfileCameraUnavailable = "Profile_CameraUnavailable";
+
+            /// <summary>
+            /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+            /// </summary>
+            public const string ProfileCenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+            /// <summary>
+            /// Key: <c>Profile_DeleteBiometrics</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+            /// </summary>
+            public const string ProfileDeleteBiometrics = "Profile_DeleteBiometrics";
+
+            /// <summary>
+            /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+            /// </summary>
+            public const string ProfileDeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_EditProfile</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+            /// </summary>
+            public const string ProfileEditProfile = "Profile_EditProfile";
+
+            /// <summary>
+            /// Key: <c>Profile_FaceIdTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+            /// </summary>
+            public const string ProfileFaceIdTitle = "Profile_FaceIdTitle";
+
+            /// <summary>
+            /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+            /// </summary>
+            public const string ProfileFaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_LinkedToAccount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+            /// </summary>
+            public const string ProfileLinkedToAccount = "Profile_LinkedToAccount";
+
+            /// <summary>
+            /// Key: <c>Profile_LookStraight</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+            /// </summary>
+            public const string ProfileLookStraight = "Profile_LookStraight";
+
+            /// <summary>
+            /// Key: <c>Profile_NotLinked</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+            /// </summary>
+            public const string ProfileNotLinked = "Profile_NotLinked";
+
+            /// <summary>
             /// Key: <c>Profiles</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Профили&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profillar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Profiles&quot;
             /// </summary>
             public const string Profiles = "Profiles";
+
+            /// <summary>
+            /// Key: <c>Profile_SecurityAndLogin</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+            /// </summary>
+            public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
+
+            /// <summary>
+            /// Key: <c>Profile_SecuritySubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+            /// </summary>
+            public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_TurnLeft</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+            /// </summary>
+            public const string ProfileTurnLeft = "Profile_TurnLeft";
+
+            /// <summary>
+            /// Key: <c>Profile_TurnRight</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+            /// </summary>
+            public const string ProfileTurnRight = "Profile_TurnRight";
+
+            /// <summary>
+            /// Key: <c>Profile_UploadPhoto</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+            /// </summary>
+            public const string ProfileUploadPhoto = "Profile_UploadPhoto";
 
             /// <summary>
             /// Key: <c>QRDesigner</c><br/>
@@ -15346,7 +15658,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Landing (303 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
+        /// Domain group: Landing (411 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
         /// </summary>
         public static class Landing
         {
@@ -15847,12 +16159,36 @@ namespace Assets.Constants
             public const string AboutVideoTitle = "About_VideoTitle";
 
             /// <summary>
+            /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+            /// </summary>
+            public const string Analytics_ActiveNomenclature = "Analytics_ActiveNomenclature";
+
+            /// <summary>
             /// Key: <c>Analytics_ActualSales</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
             /// </summary>
             public const string Analytics_ActualSales = "Analytics_ActualSales";
+
+            /// <summary>
+            /// Key: <c>Analytics_AllTime</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+            /// </summary>
+            public const string Analytics_AllTime = "Analytics_AllTime";
+
+            /// <summary>
+            /// Key: <c>Analytics_AovMetric</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+            /// </summary>
+            public const string Analytics_AovMetric = "Analytics_AovMetric";
 
             /// <summary>
             /// Key: <c>Analytics_AverageBill</c><br/>
@@ -15863,6 +16199,22 @@ namespace Assets.Constants
             public const string Analytics_AverageBill = "Analytics_AverageBill";
 
             /// <summary>
+            /// Key: <c>Analytics_Branches</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+            /// </summary>
+            public const string Analytics_Branches = "Analytics_Branches";
+
+            /// <summary>
+            /// Key: <c>Analytics_ByOrderLines</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+            /// </summary>
+            public const string Analytics_ByOrderLines = "Analytics_ByOrderLines";
+
+            /// <summary>
             /// Key: <c>Analytics_ByRevenue</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -15871,12 +16223,164 @@ namespace Assets.Constants
             public const string Analytics_ByRevenue = "Analytics_ByRevenue";
 
             /// <summary>
+            /// Key: <c>Analytics_ChecksUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+            /// </summary>
+            public const string Analytics_ChecksUnit = "Analytics_ChecksUnit";
+
+            /// <summary>
             /// Key: <c>Analytics_CompletedReceipts</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
             /// </summary>
             public const string Analytics_CompletedReceipts = "Analytics_CompletedReceipts";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+            /// </summary>
+            public const string Analytics_ConfigAovDesc = "Analytics_ConfigAovDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+            /// </summary>
+            public const string Analytics_ConfigAovTitle = "Analytics_ConfigAovTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+            /// </summary>
+            public const string Analytics_ConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+            /// </summary>
+            public const string Analytics_ConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+            /// </summary>
+            public const string Analytics_ConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+            /// </summary>
+            public const string Analytics_ConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+            /// </summary>
+            public const string Analytics_ConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+            /// </summary>
+            public const string Analytics_ConfigModalDesc = "Analytics_ConfigModalDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+            /// </summary>
+            public const string Analytics_ConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+            /// </summary>
+            public const string Analytics_ConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+            /// </summary>
+            public const string Analytics_ConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+            /// </summary>
+            public const string Analytics_ConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+            /// </summary>
+            public const string Analytics_ConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+            /// </summary>
+            public const string Analytics_ConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+            /// </summary>
+            public const string Analytics_ConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+            /// </summary>
+            public const string Analytics_ConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+            /// </summary>
+            public const string Analytics_ConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+            /// </summary>
+            public const string Analytics_ConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
             /// <summary>
             /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -15903,6 +16407,14 @@ namespace Assets.Constants
             public const string Analytics_ConfigureTooltip = "Analytics_ConfigureTooltip";
 
             /// <summary>
+            /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+            /// </summary>
+            public const string Analytics_ConnectedNetwork = "Analytics_ConnectedNetwork";
+
+            /// <summary>
             /// Key: <c>Analytics_Dashboard</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -15917,6 +16429,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
             /// </summary>
             public const string Analytics_DistributionShare = "Analytics_DistributionShare";
+
+            /// <summary>
+            /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+            /// </summary>
+            public const string Analytics_EntitiesRegistry = "Analytics_EntitiesRegistry";
+
+            /// <summary>
+            /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+            /// </summary>
+            public const string Analytics_EntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
             /// <summary>
             /// Key: <c>Analytics_Explorer</c><br/>
@@ -15935,6 +16463,54 @@ namespace Assets.Constants
             public const string Analytics_FiscalRatio = "Analytics_FiscalRatio";
 
             /// <summary>
+            /// Key: <c>Analytics_ItemsSold</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+            /// </summary>
+            public const string Analytics_ItemsSold = "Analytics_ItemsSold";
+
+            /// <summary>
+            /// Key: <c>Analytics_ItemsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+            /// </summary>
+            public const string Analytics_ItemsUnit = "Analytics_ItemsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_Last30Days</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+            /// </summary>
+            public const string Analytics_Last30Days = "Analytics_Last30Days";
+
+            /// <summary>
+            /// Key: <c>Analytics_Last7Days</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+            /// </summary>
+            public const string Analytics_Last7Days = "Analytics_Last7Days";
+
+            /// <summary>
+            /// Key: <c>Analytics_MethodsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+            /// </summary>
+            public const string Analytics_MethodsUnit = "Analytics_MethodsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_NoDataPeriod</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+            /// </summary>
+            public const string Analytics_NoDataPeriod = "Analytics_NoDataPeriod";
+
+            /// <summary>
             /// Key: <c>Analytics_OfdReceipts</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -15951,12 +16527,36 @@ namespace Assets.Constants
             public const string Analytics_OrdersCount = "Analytics_OrdersCount";
 
             /// <summary>
+            /// Key: <c>Analytics_OrdersShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+            /// </summary>
+            public const string Analytics_OrdersShort = "Analytics_OrdersShort";
+
+            /// <summary>
+            /// Key: <c>Analytics_OrderStatuses</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+            /// </summary>
+            public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+            /// <summary>
             /// Key: <c>Analytics_PaymentChannels</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
             /// </summary>
             public const string Analytics_PaymentChannels = "Analytics_PaymentChannels";
+
+            /// <summary>
+            /// Key: <c>Analytics_PaymentMethods</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+            /// </summary>
+            public const string Analytics_PaymentMethods = "Analytics_PaymentMethods";
 
             /// <summary>
             /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -15973,6 +16573,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
             /// </summary>
             public const string Analytics_PerTransaction = "Analytics_PerTransaction";
+
+            /// <summary>
+            /// Key: <c>Analytics_PointsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+            /// </summary>
+            public const string Analytics_PointsUnit = "Analytics_PointsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_ProductsCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+            /// </summary>
+            public const string Analytics_ProductsCatalog = "Analytics_ProductsCatalog";
 
             /// <summary>
             /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -16047,12 +16663,36 @@ namespace Assets.Constants
             public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
 
             /// <summary>
+            /// Key: <c>Analytics_StatusesUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+            /// </summary>
+            public const string Analytics_StatusesUnit = "Analytics_StatusesUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+            /// </summary>
+            public const string Analytics_SuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+            /// <summary>
             /// Key: <c>Analytics_TerminalPerformance</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal &amp;amp; kiosk performance&quot;
             /// </summary>
             public const string Analytics_TerminalPerformance = "Analytics_TerminalPerformance";
+
+            /// <summary>
+            /// Key: <c>Analytics_Today</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+            /// </summary>
+            public const string Analytics_Today = "Analytics_Today";
 
             /// <summary>
             /// Key: <c>Analytics_TopProducts</c><br/>
@@ -16063,12 +16703,44 @@ namespace Assets.Constants
             public const string Analytics_TopProducts = "Analytics_TopProducts";
 
             /// <summary>
+            /// Key: <c>Analytics_VolumeItems</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+            /// </summary>
+            public const string Analytics_VolumeItems = "Analytics_VolumeItems";
+
+            /// <summary>
+            /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+            /// </summary>
+            public const string AnalyticsActiveNomenclature = "Analytics_ActiveNomenclature";
+
+            /// <summary>
             /// Key: <c>Analytics_ActualSales</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
             /// </summary>
             public const string AnalyticsActualSales = "Analytics_ActualSales";
+
+            /// <summary>
+            /// Key: <c>Analytics_AllTime</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+            /// </summary>
+            public const string AnalyticsAllTime = "Analytics_AllTime";
+
+            /// <summary>
+            /// Key: <c>Analytics_AovMetric</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+            /// </summary>
+            public const string AnalyticsAovMetric = "Analytics_AovMetric";
 
             /// <summary>
             /// Key: <c>Analytics_AverageBill</c><br/>
@@ -16079,6 +16751,22 @@ namespace Assets.Constants
             public const string AnalyticsAverageBill = "Analytics_AverageBill";
 
             /// <summary>
+            /// Key: <c>Analytics_Branches</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+            /// </summary>
+            public const string AnalyticsBranches = "Analytics_Branches";
+
+            /// <summary>
+            /// Key: <c>Analytics_ByOrderLines</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+            /// </summary>
+            public const string AnalyticsByOrderLines = "Analytics_ByOrderLines";
+
+            /// <summary>
             /// Key: <c>Analytics_ByRevenue</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -16087,12 +16775,164 @@ namespace Assets.Constants
             public const string AnalyticsByRevenue = "Analytics_ByRevenue";
 
             /// <summary>
+            /// Key: <c>Analytics_ChecksUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+            /// </summary>
+            public const string AnalyticsChecksUnit = "Analytics_ChecksUnit";
+
+            /// <summary>
             /// Key: <c>Analytics_CompletedReceipts</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
             /// </summary>
             public const string AnalyticsCompletedReceipts = "Analytics_CompletedReceipts";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+            /// </summary>
+            public const string AnalyticsConfigAovDesc = "Analytics_ConfigAovDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+            /// </summary>
+            public const string AnalyticsConfigAovTitle = "Analytics_ConfigAovTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+            /// </summary>
+            public const string AnalyticsConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+            /// </summary>
+            public const string AnalyticsConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+            /// </summary>
+            public const string AnalyticsConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+            /// </summary>
+            public const string AnalyticsConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+            /// </summary>
+            public const string AnalyticsConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+            /// </summary>
+            public const string AnalyticsConfigModalDesc = "Analytics_ConfigModalDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+            /// </summary>
+            public const string AnalyticsConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+            /// </summary>
+            public const string AnalyticsConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+            /// </summary>
+            public const string AnalyticsConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+            /// </summary>
+            public const string AnalyticsConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+            /// </summary>
+            public const string AnalyticsConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+            /// </summary>
+            public const string AnalyticsConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+            /// </summary>
+            public const string AnalyticsConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+            /// </summary>
+            public const string AnalyticsConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+            /// </summary>
+            public const string AnalyticsConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+            /// <summary>
+            /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+            /// </summary>
+            public const string AnalyticsConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
             /// <summary>
             /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -16119,6 +16959,14 @@ namespace Assets.Constants
             public const string AnalyticsConfigureTooltip = "Analytics_ConfigureTooltip";
 
             /// <summary>
+            /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+            /// </summary>
+            public const string AnalyticsConnectedNetwork = "Analytics_ConnectedNetwork";
+
+            /// <summary>
             /// Key: <c>Analytics_Dashboard</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -16133,6 +16981,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
             /// </summary>
             public const string AnalyticsDistributionShare = "Analytics_DistributionShare";
+
+            /// <summary>
+            /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+            /// </summary>
+            public const string AnalyticsEntitiesRegistry = "Analytics_EntitiesRegistry";
+
+            /// <summary>
+            /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+            /// </summary>
+            public const string AnalyticsEntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
             /// <summary>
             /// Key: <c>Analytics_Explorer</c><br/>
@@ -16151,6 +17015,54 @@ namespace Assets.Constants
             public const string AnalyticsFiscalRatio = "Analytics_FiscalRatio";
 
             /// <summary>
+            /// Key: <c>Analytics_ItemsSold</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+            /// </summary>
+            public const string AnalyticsItemsSold = "Analytics_ItemsSold";
+
+            /// <summary>
+            /// Key: <c>Analytics_ItemsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+            /// </summary>
+            public const string AnalyticsItemsUnit = "Analytics_ItemsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_Last30Days</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+            /// </summary>
+            public const string AnalyticsLast30Days = "Analytics_Last30Days";
+
+            /// <summary>
+            /// Key: <c>Analytics_Last7Days</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+            /// </summary>
+            public const string AnalyticsLast7Days = "Analytics_Last7Days";
+
+            /// <summary>
+            /// Key: <c>Analytics_MethodsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+            /// </summary>
+            public const string AnalyticsMethodsUnit = "Analytics_MethodsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_NoDataPeriod</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+            /// </summary>
+            public const string AnalyticsNoDataPeriod = "Analytics_NoDataPeriod";
+
+            /// <summary>
             /// Key: <c>Analytics_OfdReceipts</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -16167,12 +17079,36 @@ namespace Assets.Constants
             public const string AnalyticsOrdersCount = "Analytics_OrdersCount";
 
             /// <summary>
+            /// Key: <c>Analytics_OrdersShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+            /// </summary>
+            public const string AnalyticsOrdersShort = "Analytics_OrdersShort";
+
+            /// <summary>
+            /// Key: <c>Analytics_OrderStatuses</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+            /// </summary>
+            public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+            /// <summary>
             /// Key: <c>Analytics_PaymentChannels</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
             /// </summary>
             public const string AnalyticsPaymentChannels = "Analytics_PaymentChannels";
+
+            /// <summary>
+            /// Key: <c>Analytics_PaymentMethods</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+            /// </summary>
+            public const string AnalyticsPaymentMethods = "Analytics_PaymentMethods";
 
             /// <summary>
             /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -16189,6 +17125,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
             /// </summary>
             public const string AnalyticsPerTransaction = "Analytics_PerTransaction";
+
+            /// <summary>
+            /// Key: <c>Analytics_PointsUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+            /// </summary>
+            public const string AnalyticsPointsUnit = "Analytics_PointsUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_ProductsCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+            /// </summary>
+            public const string AnalyticsProductsCatalog = "Analytics_ProductsCatalog";
 
             /// <summary>
             /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -16263,6 +17215,22 @@ namespace Assets.Constants
             public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
 
             /// <summary>
+            /// Key: <c>Analytics_StatusesUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+            /// </summary>
+            public const string AnalyticsStatusesUnit = "Analytics_StatusesUnit";
+
+            /// <summary>
+            /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+            /// </summary>
+            public const string AnalyticsSuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+            /// <summary>
             /// Key: <c>Analytics_TerminalPerformance</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
@@ -16279,12 +17247,28 @@ namespace Assets.Constants
             public const string AnalyticsText = "Analytics";
 
             /// <summary>
+            /// Key: <c>Analytics_Today</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+            /// </summary>
+            public const string AnalyticsToday = "Analytics_Today";
+
+            /// <summary>
             /// Key: <c>Analytics_TopProducts</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Топ продаваемых позиций&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng ko'p sotiladigan tovarlar&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Top selling items&quot;
             /// </summary>
             public const string AnalyticsTopProducts = "Analytics_TopProducts";
+
+            /// <summary>
+            /// Key: <c>Analytics_VolumeItems</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+            /// </summary>
+            public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
 
             /// <summary>
             /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -17303,6 +18287,14 @@ namespace Assets.Constants
             public const string LandingHorecaPillSms = "LandingHorecaPillSms";
 
             /// <summary>
+            /// Key: <c>LandingKeywords</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic&quot;
+            /// </summary>
+            public const string LandingKeywords = "LandingKeywords";
+
+            /// <summary>
             /// Key: <c>LandingLaunchBtn</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
@@ -17695,6 +18687,14 @@ namespace Assets.Constants
             public const string LandingShowingLabel = "LandingShowingLabel";
 
             /// <summary>
+            /// Key: <c>LandingSoliqCashback</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+            /// </summary>
+            public const string LandingSoliqCashback = "LandingSoliqCashback";
+
+            /// <summary>
             /// Key: <c>LandingUxModesBadge</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Архитектурных UX-Режимов&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta arxitektura UX-rejimlari&quot;<br/>
@@ -17749,6 +18749,182 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Back to Terminal&quot;
             /// </summary>
             public const string QRBackToTerminal = "QR_BackToTerminal";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerBgColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет фона&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon rangi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Color&quot;
+            /// </summary>
+            public const string QrCustomizerBgColor = "QrCustomizerBgColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerBgColorShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;BG Color&quot;
+            /// </summary>
+            public const string QrCustomizerBgColorShort = "QrCustomizerBgColorShort";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerBgFill</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заливка фона&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Orqa fon to‘ldirishi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Fill&quot;
+            /// </summary>
+            public const string QrCustomizerBgFill = "QrCustomizerBgFill";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerCornerDot</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Угловая точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak nuqtasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot&quot;
+            /// </summary>
+            public const string QrCustomizerCornerDot = "QrCustomizerCornerDot";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerCornerDotColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет точки в углах&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchakdagi nuqta rangi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot Color&quot;
+            /// </summary>
+            public const string QrCustomizerCornerDotColor = "QrCustomizerCornerDotColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerCornerStyle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль углов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchaklar uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Style&quot;
+            /// </summary>
+            public const string QrCustomizerCornerStyle = "QrCustomizerCornerStyle";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerDots</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots&quot;
+            /// </summary>
+            public const string QrCustomizerDots = "QrCustomizerDots";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerDotsColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Основной цвет точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalarning asosiy rangi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots Primary Color&quot;
+            /// </summary>
+            public const string QrCustomizerDotsColor = "QrCustomizerDotsColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerDotStyle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dot Style&quot;
+            /// </summary>
+            public const string QrCustomizerDotStyle = "QrCustomizerDotStyle";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerElements</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета элементов QR&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR elementlari ranglari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Elements Colors&quot;
+            /// </summary>
+            public const string QrCustomizerElements = "QrCustomizerElements";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerEnd</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конец&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxiri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;End&quot;
+            /// </summary>
+            public const string QrCustomizerEnd = "QrCustomizerEnd";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerEndColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конечный цвет&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yakuniy rang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;End Color&quot;
+            /// </summary>
+            public const string QrCustomizerEndColor = "QrCustomizerEndColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerFrame</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рамка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ramka&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Frame&quot;
+            /// </summary>
+            public const string QrCustomizerFrame = "QrCustomizerFrame";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerFrameColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет рамки углов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak ramkasi rangi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Frame Color&quot;
+            /// </summary>
+            public const string QrCustomizerFrameColor = "QrCustomizerFrameColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerGradientAngle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Угол градиента&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient burchagi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Angle&quot;
+            /// </summary>
+            public const string QrCustomizerGradientAngle = "QrCustomizerGradientAngle";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerGradientColors</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета градиента&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient ranglari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Colors&quot;
+            /// </summary>
+            public const string QrCustomizerGradientColors = "QrCustomizerGradientColors";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerGradientType</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип градиента&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient turi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Type&quot;
+            /// </summary>
+            public const string QrCustomizerGradientType = "QrCustomizerGradientType";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerShapes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Стилизация форм элементов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Elementlar shakli uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Eye &amp;amp; Data Shape Styling&quot;
+            /// </summary>
+            public const string QrCustomizerShapes = "QrCustomizerShapes";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerSize</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Размер QR-кода&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kod o‘lchami&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Size&quot;
+            /// </summary>
+            public const string QrCustomizerSize = "QrCustomizerSize";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerStart</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Начало&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Start&quot;
+            /// </summary>
+            public const string QrCustomizerStart = "QrCustomizerStart";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerStartColor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Начальный цвет&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshlang‘ich rang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Color&quot;
+            /// </summary>
+            public const string QrCustomizerStartColor = "QrCustomizerStartColor";
+
+            /// <summary>
+            /// Key: <c>QrCustomizerTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить дизайн&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizaynni sozlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Customize Design&quot;
+            /// </summary>
+            public const string QrCustomizerTitle = "QrCustomizerTitle";
 
             /// <summary>
             /// Key: <c>QR_SearchProducts</c><br/>
@@ -18116,6 +19292,2029 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Your Lucky Numbers in the Draw:&quot;
             /// </summary>
             public const string YourNumbers = "Lottery_YourNumbers";
+
+        }
+
+        /// <summary>
+        /// Domain group: Map (252 keys). Use with <c>@using static Assets.Constants.Loc.Map;</c>.
+        /// </summary>
+        public static class Map
+        {
+            /// <summary>
+            /// Key: <c>Map_AboutPlace</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+            /// </summary>
+            public const string AboutPlace = "Map_AboutPlace";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveMultipleZones</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+            /// </summary>
+            public const string ActiveMultipleZones = "Map_ActiveMultipleZones";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveSingleZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+            /// </summary>
+            public const string ActiveSingleZone = "Map_ActiveSingleZone";
+
+            /// <summary>
+            /// Key: <c>Map_AddPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+            /// </summary>
+            public const string AddPoint = "Map_AddPoint";
+
+            /// <summary>
+            /// Key: <c>Map_AddressNotSelected</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+            /// </summary>
+            public const string AddressNotSelected = "Map_AddressNotSelected";
+
+            /// <summary>
+            /// Key: <c>Map_AddressOrPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+            /// </summary>
+            public const string AddressOrPoint = "Map_AddressOrPoint";
+
+            /// <summary>
+            /// Key: <c>Map_AddToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+            /// </summary>
+            public const string AddToRoute = "Map_AddToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Arrival</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+            /// </summary>
+            public const string Arrival = "Map_Arrival";
+
+            /// <summary>
+            /// Key: <c>Map_BookSeat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+            /// </summary>
+            public const string BookSeat = "Map_BookSeat";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+            /// </summary>
+            public const string BuildRoute = "Map_BuildRoute";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRouteAction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+            /// </summary>
+            public const string BuildRouteAction = "Map_BuildRouteAction";
+
+            /// <summary>
+            /// Key: <c>Map_ChangeOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+            /// </summary>
+            public const string ChangeOnMap = "Map_ChangeOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ClearAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+            /// </summary>
+            public const string ClearAddress = "Map_ClearAddress";
+
+            /// <summary>
+            /// Key: <c>Map_ClickMapToSetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+            /// </summary>
+            public const string ClickMapToSetZone = "Map_ClickMapToSetZone";
+
+            /// <summary>
+            /// Key: <c>Map_CloseRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+            /// </summary>
+            public const string CloseRoute = "Map_CloseRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Collapse</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+            /// </summary>
+            public const string Collapse = "Map_Collapse";
+
+            /// <summary>
+            /// Key: <c>Map_Coordinates</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+            /// </summary>
+            public const string Coordinates = "Map_Coordinates";
+
+            /// <summary>
+            /// Key: <c>Map_DeletePoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+            /// </summary>
+            public const string DeletePoint = "Map_DeletePoint";
+
+            /// <summary>
+            /// Key: <c>Map_DeleteZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+            /// </summary>
+            public const string DeleteZone = "Map_DeleteZone";
+
+            /// <summary>
+            /// Key: <c>Map_EditOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+            /// </summary>
+            public const string EditOnMap = "Map_EditOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_Expand</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+            /// </summary>
+            public const string ExpandText = "Map_Expand";
+
+            /// <summary>
+            /// Key: <c>Map_Floor1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+            /// </summary>
+            public const string Floor1 = "Map_Floor1";
+
+            /// <summary>
+            /// Key: <c>Map_Floor2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+            /// </summary>
+            public const string Floor2 = "Map_Floor2";
+
+            /// <summary>
+            /// Key: <c>Map_Floor3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+            /// </summary>
+            public const string Floor3 = "Map_Floor3";
+
+            /// <summary>
+            /// Key: <c>Map_FloorShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+            /// </summary>
+            public const string FloorShort = "Map_FloorShort";
+
+            /// <summary>
+            /// Key: <c>Map_From</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+            /// </summary>
+            public const string From = "Map_From";
+
+            /// <summary>
+            /// Key: <c>Map_GasStations</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+            /// </summary>
+            public const string GasStations = "Map_GasStations";
+
+            /// <summary>
+            /// Key: <c>Map_Groceries</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+            /// </summary>
+            public const string Groceries = "Map_Groceries";
+
+            /// <summary>
+            /// Key: <c>Map_HallDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+            /// </summary>
+            public const string HallDesigner = "Map_HallDesigner";
+
+            /// <summary>
+            /// Key: <c>Map_KmPerHour</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+            /// </summary>
+            public const string KmPerHour = "Map_KmPerHour";
+
+            /// <summary>
+            /// Key: <c>Map_LoadingRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+            /// </summary>
+            public const string LoadingRoute = "Map_LoadingRoute";
+
+            /// <summary>
+            /// Key: <c>Map_LocationOrAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+            /// </summary>
+            public const string LocationOrAddress = "Map_LocationOrAddress";
+
+            /// <summary>
+            /// Key: <c>Map_AboutPlace</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+            /// </summary>
+            public const string Map_AboutPlace = "Map_AboutPlace";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveMultipleZones</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+            /// </summary>
+            public const string Map_ActiveMultipleZones = "Map_ActiveMultipleZones";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveSingleZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+            /// </summary>
+            public const string Map_ActiveSingleZone = "Map_ActiveSingleZone";
+
+            /// <summary>
+            /// Key: <c>Map_AddPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+            /// </summary>
+            public const string Map_AddPoint = "Map_AddPoint";
+
+            /// <summary>
+            /// Key: <c>Map_Address</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+            /// </summary>
+            public const string Map_Address = "Map_Address";
+
+            /// <summary>
+            /// Key: <c>Map_AddressNotSelected</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+            /// </summary>
+            public const string Map_AddressNotSelected = "Map_AddressNotSelected";
+
+            /// <summary>
+            /// Key: <c>Map_AddressOrPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+            /// </summary>
+            public const string Map_AddressOrPoint = "Map_AddressOrPoint";
+
+            /// <summary>
+            /// Key: <c>Map_AddToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+            /// </summary>
+            public const string Map_AddToRoute = "Map_AddToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Arrival</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+            /// </summary>
+            public const string Map_Arrival = "Map_Arrival";
+
+            /// <summary>
+            /// Key: <c>Map_BookSeat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+            /// </summary>
+            public const string Map_BookSeat = "Map_BookSeat";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+            /// </summary>
+            public const string Map_BuildRoute = "Map_BuildRoute";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRouteAction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+            /// </summary>
+            public const string Map_BuildRouteAction = "Map_BuildRouteAction";
+
+            /// <summary>
+            /// Key: <c>Map_ChangeOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+            /// </summary>
+            public const string Map_ChangeOnMap = "Map_ChangeOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ClearAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+            /// </summary>
+            public const string Map_ClearAddress = "Map_ClearAddress";
+
+            /// <summary>
+            /// Key: <c>Map_ClickMapToSetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+            /// </summary>
+            public const string Map_ClickMapToSetZone = "Map_ClickMapToSetZone";
+
+            /// <summary>
+            /// Key: <c>Map_CloseRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+            /// </summary>
+            public const string Map_CloseRoute = "Map_CloseRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Collapse</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+            /// </summary>
+            public const string Map_Collapse = "Map_Collapse";
+
+            /// <summary>
+            /// Key: <c>Map_Coordinates</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+            /// </summary>
+            public const string Map_Coordinates = "Map_Coordinates";
+
+            /// <summary>
+            /// Key: <c>Map_DeletePoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+            /// </summary>
+            public const string Map_DeletePoint = "Map_DeletePoint";
+
+            /// <summary>
+            /// Key: <c>Map_DeleteZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+            /// </summary>
+            public const string Map_DeleteZone = "Map_DeleteZone";
+
+            /// <summary>
+            /// Key: <c>Map_Description</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+            /// </summary>
+            public const string Map_Description = "Map_Description";
+
+            /// <summary>
+            /// Key: <c>Map_EditOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+            /// </summary>
+            public const string Map_EditOnMap = "Map_EditOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_Expand</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+            /// </summary>
+            public const string Map_Expand = "Map_Expand";
+
+            /// <summary>
+            /// Key: <c>Map_Floor1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+            /// </summary>
+            public const string Map_Floor1 = "Map_Floor1";
+
+            /// <summary>
+            /// Key: <c>Map_Floor2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+            /// </summary>
+            public const string Map_Floor2 = "Map_Floor2";
+
+            /// <summary>
+            /// Key: <c>Map_Floor3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+            /// </summary>
+            public const string Map_Floor3 = "Map_Floor3";
+
+            /// <summary>
+            /// Key: <c>Map_FloorShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+            /// </summary>
+            public const string Map_FloorShort = "Map_FloorShort";
+
+            /// <summary>
+            /// Key: <c>Map_From</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+            /// </summary>
+            public const string Map_From = "Map_From";
+
+            /// <summary>
+            /// Key: <c>Map_GasStations</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+            /// </summary>
+            public const string Map_GasStations = "Map_GasStations";
+
+            /// <summary>
+            /// Key: <c>Map_Groceries</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+            /// </summary>
+            public const string Map_Groceries = "Map_Groceries";
+
+            /// <summary>
+            /// Key: <c>Map_HallDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+            /// </summary>
+            public const string Map_HallDesigner = "Map_HallDesigner";
+
+            /// <summary>
+            /// Key: <c>Map_KmPerHour</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+            /// </summary>
+            public const string Map_KmPerHour = "Map_KmPerHour";
+
+            /// <summary>
+            /// Key: <c>Map_LoadingRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+            /// </summary>
+            public const string Map_LoadingRoute = "Map_LoadingRoute";
+
+            /// <summary>
+            /// Key: <c>Map_LocationOrAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+            /// </summary>
+            public const string Map_LocationOrAddress = "Map_LocationOrAddress";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAll</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+            /// </summary>
+            public const string Map_ModeAll = "Map_ModeAll";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAllRoutes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+            /// </summary>
+            public const string Map_ModeAllRoutes = "Map_ModeAllRoutes";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAuto</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+            /// </summary>
+            public const string Map_ModeAuto = "Map_ModeAuto";
+
+            /// <summary>
+            /// Key: <c>Map_ModeBike</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+            /// </summary>
+            public const string Map_ModeBike = "Map_ModeBike";
+
+            /// <summary>
+            /// Key: <c>Map_ModePublic</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+            /// </summary>
+            public const string Map_ModePublic = "Map_ModePublic";
+
+            /// <summary>
+            /// Key: <c>Map_ModeScooter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+            /// </summary>
+            public const string Map_ModeScooter = "Map_ModeScooter";
+
+            /// <summary>
+            /// Key: <c>Map_ModeTaxi</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+            /// </summary>
+            public const string Map_ModeTaxi = "Map_ModeTaxi";
+
+            /// <summary>
+            /// Key: <c>Map_ModeWalk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+            /// </summary>
+            public const string Map_ModeWalk = "Map_ModeWalk";
+
+            /// <summary>
+            /// Key: <c>Map_MyLocation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+            /// </summary>
+            public const string Map_MyLocation = "Map_MyLocation";
+
+            /// <summary>
+            /// Key: <c>Map_Nearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+            /// </summary>
+            public const string Map_Nearby = "Map_Nearby";
+
+            /// <summary>
+            /// Key: <c>Map_NearbyResults</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+            /// </summary>
+            public const string Map_NearbyResults = "Map_NearbyResults";
+
+            /// <summary>
+            /// Key: <c>Map_NothingFound</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+            /// </summary>
+            public const string Map_NothingFound = "Map_NothingFound";
+
+            /// <summary>
+            /// Key: <c>Map_Optimize</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+            /// </summary>
+            public const string Map_Optimize = "Map_Optimize";
+
+            /// <summary>
+            /// Key: <c>Map_Optimizing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+            /// </summary>
+            public const string Map_Optimizing = "Map_Optimizing";
+
+            /// <summary>
+            /// Key: <c>Map_Pharmacies</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+            /// </summary>
+            public const string Map_Pharmacies = "Map_Pharmacies";
+
+            /// <summary>
+            /// Key: <c>Map_PickOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+            /// </summary>
+            public const string Map_PickOnMap = "Map_PickOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_Point</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+            /// </summary>
+            public const string Map_Point = "Map_Point";
+
+            /// <summary>
+            /// Key: <c>Map_PointsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+            /// </summary>
+            public const string Map_PointsCount = "Map_PointsCount";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+            /// </summary>
+            public const string Map_PolygonNotSet = "Map_PolygonNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+            /// </summary>
+            public const string Map_PolygonsCount = "Map_PolygonsCount";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonSingle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+            /// </summary>
+            public const string Map_PolygonSingle = "Map_PolygonSingle";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonUndefined</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+            /// </summary>
+            public const string Map_PolygonUndefined = "Map_PolygonUndefined";
+
+            /// <summary>
+            /// Key: <c>Map_Recenter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+            /// </summary>
+            public const string Map_Recenter = "Map_Recenter";
+
+            /// <summary>
+            /// Key: <c>Map_Remaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+            /// </summary>
+            public const string Map_Remaining = "Map_Remaining";
+
+            /// <summary>
+            /// Key: <c>Map_Restaurants</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+            /// </summary>
+            public const string Map_Restaurants = "Map_Restaurants";
+
+            /// <summary>
+            /// Key: <c>Map_Routes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+            /// </summary>
+            public const string Map_Routes = "Map_Routes";
+
+            /// <summary>
+            /// Key: <c>Map_RouteToHere</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+            /// </summary>
+            public const string Map_RouteToHere = "Map_RouteToHere";
+
+            /// <summary>
+            /// Key: <c>Map_RouteType</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+            /// </summary>
+            public const string Map_RouteType = "Map_RouteType";
+
+            /// <summary>
+            /// Key: <c>Map_SearchingNearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+            /// </summary>
+            public const string Map_SearchingNearby = "Map_SearchingNearby";
+
+            /// <summary>
+            /// Key: <c>Map_SearchOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+            /// </summary>
+            public const string Map_SearchOnMap = "Map_SearchOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+            /// </summary>
+            public const string Map_SearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+            /// <summary>
+            /// Key: <c>Map_SelectAddressOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+            /// </summary>
+            public const string Map_SelectAddressOnMap = "Map_SelectAddressOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+            /// </summary>
+            public const string Map_SelectedAddress = "Map_SelectedAddress";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+            /// </summary>
+            public const string Map_SelectedZone = "Map_SelectedZone";
+
+            /// <summary>
+            /// Key: <c>Map_SelectZoneOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+            /// </summary>
+            public const string Map_SelectZoneOnMap = "Map_SelectZoneOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+            /// </summary>
+            public const string Map_ServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+            /// <summary>
+            /// Key: <c>Map_SetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+            /// </summary>
+            public const string Map_SetZone = "Map_SetZone";
+
+            /// <summary>
+            /// Key: <c>Map_Speed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+            /// </summary>
+            public const string Map_Speed = "Map_Speed";
+
+            /// <summary>
+            /// Key: <c>Map_StartRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+            /// </summary>
+            public const string Map_StartRoute = "Map_StartRoute";
+
+            /// <summary>
+            /// Key: <c>Map_StopNavigation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+            /// </summary>
+            public const string Map_StopNavigation = "Map_StopNavigation";
+
+            /// <summary>
+            /// Key: <c>Map_Swap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+            /// </summary>
+            public const string Map_Swap = "Map_Swap";
+
+            /// <summary>
+            /// Key: <c>Map_To</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+            /// </summary>
+            public const string Map_To = "Map_To";
+
+            /// <summary>
+            /// Key: <c>Map_ToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+            /// </summary>
+            public const string Map_ToRoute = "Map_ToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_View3D</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+            /// </summary>
+            public const string Map_View3D = "Map_View3D";
+
+            /// <summary>
+            /// Key: <c>Map_VoiceGuidance</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+            /// </summary>
+            public const string Map_VoiceGuidance = "Map_VoiceGuidance";
+
+            /// <summary>
+            /// Key: <c>Map_WhereToEat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+            /// </summary>
+            public const string Map_WhereToEat = "Map_WhereToEat";
+
+            /// <summary>
+            /// Key: <c>Map_ZoneNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+            /// </summary>
+            public const string Map_ZoneNotSet = "Map_ZoneNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_ZonesConfigured</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+            /// </summary>
+            public const string Map_ZonesConfigured = "Map_ZonesConfigured";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomIn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+            /// </summary>
+            public const string Map_ZoomIn = "Map_ZoomIn";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomOut</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+            /// </summary>
+            public const string Map_ZoomOut = "Map_ZoomOut";
+
+            /// <summary>
+            /// Key: <c>Map_AboutPlace</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+            /// </summary>
+            public const string MapAboutPlace = "Map_AboutPlace";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveMultipleZones</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+            /// </summary>
+            public const string MapActiveMultipleZones = "Map_ActiveMultipleZones";
+
+            /// <summary>
+            /// Key: <c>Map_ActiveSingleZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+            /// </summary>
+            public const string MapActiveSingleZone = "Map_ActiveSingleZone";
+
+            /// <summary>
+            /// Key: <c>Map_AddPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+            /// </summary>
+            public const string MapAddPoint = "Map_AddPoint";
+
+            /// <summary>
+            /// Key: <c>Map_Address</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+            /// </summary>
+            public const string MapAddress = "Map_Address";
+
+            /// <summary>
+            /// Key: <c>Map_AddressNotSelected</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+            /// </summary>
+            public const string MapAddressNotSelected = "Map_AddressNotSelected";
+
+            /// <summary>
+            /// Key: <c>Map_AddressOrPoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+            /// </summary>
+            public const string MapAddressOrPoint = "Map_AddressOrPoint";
+
+            /// <summary>
+            /// Key: <c>Map_Address</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+            /// </summary>
+            public const string MapAddressText = "Map_Address";
+
+            /// <summary>
+            /// Key: <c>Map_AddToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+            /// </summary>
+            public const string MapAddToRoute = "Map_AddToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Arrival</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+            /// </summary>
+            public const string MapArrival = "Map_Arrival";
+
+            /// <summary>
+            /// Key: <c>Map_BookSeat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+            /// </summary>
+            public const string MapBookSeat = "Map_BookSeat";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+            /// </summary>
+            public const string MapBuildRoute = "Map_BuildRoute";
+
+            /// <summary>
+            /// Key: <c>Map_BuildRouteAction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+            /// </summary>
+            public const string MapBuildRouteAction = "Map_BuildRouteAction";
+
+            /// <summary>
+            /// Key: <c>Map_ChangeOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+            /// </summary>
+            public const string MapChangeOnMap = "Map_ChangeOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ClearAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+            /// </summary>
+            public const string MapClearAddress = "Map_ClearAddress";
+
+            /// <summary>
+            /// Key: <c>Map_ClickMapToSetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+            /// </summary>
+            public const string MapClickMapToSetZone = "Map_ClickMapToSetZone";
+
+            /// <summary>
+            /// Key: <c>Map_CloseRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+            /// </summary>
+            public const string MapCloseRoute = "Map_CloseRoute";
+
+            /// <summary>
+            /// Key: <c>Map_Collapse</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+            /// </summary>
+            public const string MapCollapse = "Map_Collapse";
+
+            /// <summary>
+            /// Key: <c>Map_Coordinates</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+            /// </summary>
+            public const string MapCoordinates = "Map_Coordinates";
+
+            /// <summary>
+            /// Key: <c>Map_DeletePoint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+            /// </summary>
+            public const string MapDeletePoint = "Map_DeletePoint";
+
+            /// <summary>
+            /// Key: <c>Map_DeleteZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+            /// </summary>
+            public const string MapDeleteZone = "Map_DeleteZone";
+
+            /// <summary>
+            /// Key: <c>Map_Description</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+            /// </summary>
+            public const string MapDescription = "Map_Description";
+
+            /// <summary>
+            /// Key: <c>Map_Description</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+            /// </summary>
+            public const string MapDescriptionText = "Map_Description";
+
+            /// <summary>
+            /// Key: <c>Map_EditOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+            /// </summary>
+            public const string MapEditOnMap = "Map_EditOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_Expand</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+            /// </summary>
+            public const string MapExpand = "Map_Expand";
+
+            /// <summary>
+            /// Key: <c>Map_Floor1</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+            /// </summary>
+            public const string MapFloor1 = "Map_Floor1";
+
+            /// <summary>
+            /// Key: <c>Map_Floor2</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+            /// </summary>
+            public const string MapFloor2 = "Map_Floor2";
+
+            /// <summary>
+            /// Key: <c>Map_Floor3</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+            /// </summary>
+            public const string MapFloor3 = "Map_Floor3";
+
+            /// <summary>
+            /// Key: <c>Map_FloorShort</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+            /// </summary>
+            public const string MapFloorShort = "Map_FloorShort";
+
+            /// <summary>
+            /// Key: <c>Map_From</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+            /// </summary>
+            public const string MapFrom = "Map_From";
+
+            /// <summary>
+            /// Key: <c>Map_GasStations</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+            /// </summary>
+            public const string MapGasStations = "Map_GasStations";
+
+            /// <summary>
+            /// Key: <c>Map_Groceries</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+            /// </summary>
+            public const string MapGroceries = "Map_Groceries";
+
+            /// <summary>
+            /// Key: <c>Map_HallDesigner</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+            /// </summary>
+            public const string MapHallDesigner = "Map_HallDesigner";
+
+            /// <summary>
+            /// Key: <c>Map_KmPerHour</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+            /// </summary>
+            public const string MapKmPerHour = "Map_KmPerHour";
+
+            /// <summary>
+            /// Key: <c>Map_LoadingRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+            /// </summary>
+            public const string MapLoadingRoute = "Map_LoadingRoute";
+
+            /// <summary>
+            /// Key: <c>Map_LocationOrAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+            /// </summary>
+            public const string MapLocationOrAddress = "Map_LocationOrAddress";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAll</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+            /// </summary>
+            public const string MapModeAll = "Map_ModeAll";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAllRoutes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+            /// </summary>
+            public const string MapModeAllRoutes = "Map_ModeAllRoutes";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAuto</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+            /// </summary>
+            public const string MapModeAuto = "Map_ModeAuto";
+
+            /// <summary>
+            /// Key: <c>Map_ModeBike</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+            /// </summary>
+            public const string MapModeBike = "Map_ModeBike";
+
+            /// <summary>
+            /// Key: <c>Map_ModePublic</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+            /// </summary>
+            public const string MapModePublic = "Map_ModePublic";
+
+            /// <summary>
+            /// Key: <c>Map_ModeScooter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+            /// </summary>
+            public const string MapModeScooter = "Map_ModeScooter";
+
+            /// <summary>
+            /// Key: <c>Map_ModeTaxi</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+            /// </summary>
+            public const string MapModeTaxi = "Map_ModeTaxi";
+
+            /// <summary>
+            /// Key: <c>Map_ModeWalk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+            /// </summary>
+            public const string MapModeWalk = "Map_ModeWalk";
+
+            /// <summary>
+            /// Key: <c>Map_MyLocation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+            /// </summary>
+            public const string MapMyLocation = "Map_MyLocation";
+
+            /// <summary>
+            /// Key: <c>Map_Nearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+            /// </summary>
+            public const string MapNearby = "Map_Nearby";
+
+            /// <summary>
+            /// Key: <c>Map_NearbyResults</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+            /// </summary>
+            public const string MapNearbyResults = "Map_NearbyResults";
+
+            /// <summary>
+            /// Key: <c>Map_NothingFound</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+            /// </summary>
+            public const string MapNothingFound = "Map_NothingFound";
+
+            /// <summary>
+            /// Key: <c>Map_Optimize</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+            /// </summary>
+            public const string MapOptimize = "Map_Optimize";
+
+            /// <summary>
+            /// Key: <c>Map_Optimizing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+            /// </summary>
+            public const string MapOptimizing = "Map_Optimizing";
+
+            /// <summary>
+            /// Key: <c>Map_Pharmacies</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+            /// </summary>
+            public const string MapPharmacies = "Map_Pharmacies";
+
+            /// <summary>
+            /// Key: <c>Map_PickOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+            /// </summary>
+            public const string MapPickOnMap = "Map_PickOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_Point</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+            /// </summary>
+            public const string MapPoint = "Map_Point";
+
+            /// <summary>
+            /// Key: <c>Map_PointsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+            /// </summary>
+            public const string MapPointsCount = "Map_PointsCount";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+            /// </summary>
+            public const string MapPolygonNotSet = "Map_PolygonNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+            /// </summary>
+            public const string MapPolygonsCount = "Map_PolygonsCount";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonSingle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+            /// </summary>
+            public const string MapPolygonSingle = "Map_PolygonSingle";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonUndefined</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+            /// </summary>
+            public const string MapPolygonUndefined = "Map_PolygonUndefined";
+
+            /// <summary>
+            /// Key: <c>Map_Recenter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+            /// </summary>
+            public const string MapRecenter = "Map_Recenter";
+
+            /// <summary>
+            /// Key: <c>Map_Remaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+            /// </summary>
+            public const string MapRemaining = "Map_Remaining";
+
+            /// <summary>
+            /// Key: <c>Map_Restaurants</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+            /// </summary>
+            public const string MapRestaurants = "Map_Restaurants";
+
+            /// <summary>
+            /// Key: <c>Map_Routes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+            /// </summary>
+            public const string MapRoutes = "Map_Routes";
+
+            /// <summary>
+            /// Key: <c>Map_RouteToHere</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+            /// </summary>
+            public const string MapRouteToHere = "Map_RouteToHere";
+
+            /// <summary>
+            /// Key: <c>Map_RouteType</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+            /// </summary>
+            public const string MapRouteType = "Map_RouteType";
+
+            /// <summary>
+            /// Key: <c>Map_SearchingNearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+            /// </summary>
+            public const string MapSearchingNearby = "Map_SearchingNearby";
+
+            /// <summary>
+            /// Key: <c>Map_SearchOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+            /// </summary>
+            public const string MapSearchOnMap = "Map_SearchOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+            /// </summary>
+            public const string MapSearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+            /// <summary>
+            /// Key: <c>Map_SelectAddressOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+            /// </summary>
+            public const string MapSelectAddressOnMap = "Map_SelectAddressOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+            /// </summary>
+            public const string MapSelectedAddress = "Map_SelectedAddress";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+            /// </summary>
+            public const string MapSelectedZone = "Map_SelectedZone";
+
+            /// <summary>
+            /// Key: <c>Map_SelectZoneOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+            /// </summary>
+            public const string MapSelectZoneOnMap = "Map_SelectZoneOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+            /// </summary>
+            public const string MapServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+            /// <summary>
+            /// Key: <c>Map_SetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+            /// </summary>
+            public const string MapSetZone = "Map_SetZone";
+
+            /// <summary>
+            /// Key: <c>Map_Speed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+            /// </summary>
+            public const string MapSpeed = "Map_Speed";
+
+            /// <summary>
+            /// Key: <c>Map_StartRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+            /// </summary>
+            public const string MapStartRoute = "Map_StartRoute";
+
+            /// <summary>
+            /// Key: <c>Map_StopNavigation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+            /// </summary>
+            public const string MapStopNavigation = "Map_StopNavigation";
+
+            /// <summary>
+            /// Key: <c>Map_Swap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+            /// </summary>
+            public const string MapSwap = "Map_Swap";
+
+            /// <summary>
+            /// Key: <c>Map_To</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+            /// </summary>
+            public const string MapTo = "Map_To";
+
+            /// <summary>
+            /// Key: <c>Map_ToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+            /// </summary>
+            public const string MapToRoute = "Map_ToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_View3D</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+            /// </summary>
+            public const string MapView3D = "Map_View3D";
+
+            /// <summary>
+            /// Key: <c>Map_VoiceGuidance</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+            /// </summary>
+            public const string MapVoiceGuidance = "Map_VoiceGuidance";
+
+            /// <summary>
+            /// Key: <c>Map_WhereToEat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+            /// </summary>
+            public const string MapWhereToEat = "Map_WhereToEat";
+
+            /// <summary>
+            /// Key: <c>Map_ZoneNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+            /// </summary>
+            public const string MapZoneNotSet = "Map_ZoneNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_ZonesConfigured</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+            /// </summary>
+            public const string MapZonesConfigured = "Map_ZonesConfigured";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomIn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+            /// </summary>
+            public const string MapZoomIn = "Map_ZoomIn";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomOut</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+            /// </summary>
+            public const string MapZoomOut = "Map_ZoomOut";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAll</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+            /// </summary>
+            public const string ModeAll = "Map_ModeAll";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAllRoutes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+            /// </summary>
+            public const string ModeAllRoutes = "Map_ModeAllRoutes";
+
+            /// <summary>
+            /// Key: <c>Map_ModeAuto</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+            /// </summary>
+            public const string ModeAuto = "Map_ModeAuto";
+
+            /// <summary>
+            /// Key: <c>Map_ModeBike</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+            /// </summary>
+            public const string ModeBike = "Map_ModeBike";
+
+            /// <summary>
+            /// Key: <c>Map_ModePublic</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+            /// </summary>
+            public const string ModePublic = "Map_ModePublic";
+
+            /// <summary>
+            /// Key: <c>Map_ModeScooter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+            /// </summary>
+            public const string ModeScooter = "Map_ModeScooter";
+
+            /// <summary>
+            /// Key: <c>Map_ModeTaxi</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+            /// </summary>
+            public const string ModeTaxi = "Map_ModeTaxi";
+
+            /// <summary>
+            /// Key: <c>Map_ModeWalk</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+            /// </summary>
+            public const string ModeWalk = "Map_ModeWalk";
+
+            /// <summary>
+            /// Key: <c>Map_MyLocation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+            /// </summary>
+            public const string MyLocationText = "Map_MyLocation";
+
+            /// <summary>
+            /// Key: <c>Map_NearbyResults</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+            /// </summary>
+            public const string NearbyResults = "Map_NearbyResults";
+
+            /// <summary>
+            /// Key: <c>Map_Nearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+            /// </summary>
+            public const string NearbyText = "Map_Nearby";
+
+            /// <summary>
+            /// Key: <c>Map_NothingFound</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+            /// </summary>
+            public const string NothingFound = "Map_NothingFound";
+
+            /// <summary>
+            /// Key: <c>Map_Optimize</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+            /// </summary>
+            public const string Optimize = "Map_Optimize";
+
+            /// <summary>
+            /// Key: <c>Map_Optimizing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+            /// </summary>
+            public const string Optimizing = "Map_Optimizing";
+
+            /// <summary>
+            /// Key: <c>Map_Pharmacies</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+            /// </summary>
+            public const string Pharmacies = "Map_Pharmacies";
+
+            /// <summary>
+            /// Key: <c>Map_PickOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+            /// </summary>
+            public const string PickOnMap = "Map_PickOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_PointsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+            /// </summary>
+            public const string PointsCount = "Map_PointsCount";
+
+            /// <summary>
+            /// Key: <c>Map_Point</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+            /// </summary>
+            public const string PointText = "Map_Point";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+            /// </summary>
+            public const string PolygonNotSet = "Map_PolygonNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonsCount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+            /// </summary>
+            public const string PolygonsCount = "Map_PolygonsCount";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonSingle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+            /// </summary>
+            public const string PolygonSingle = "Map_PolygonSingle";
+
+            /// <summary>
+            /// Key: <c>Map_PolygonUndefined</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+            /// </summary>
+            public const string PolygonUndefined = "Map_PolygonUndefined";
+
+            /// <summary>
+            /// Key: <c>Map_Recenter</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+            /// </summary>
+            public const string RecenterText = "Map_Recenter";
+
+            /// <summary>
+            /// Key: <c>Map_Remaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+            /// </summary>
+            public const string Remaining = "Map_Remaining";
+
+            /// <summary>
+            /// Key: <c>Map_Restaurants</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+            /// </summary>
+            public const string Restaurants = "Map_Restaurants";
+
+            /// <summary>
+            /// Key: <c>Map_Routes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+            /// </summary>
+            public const string Routes = "Map_Routes";
+
+            /// <summary>
+            /// Key: <c>Map_RouteToHere</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+            /// </summary>
+            public const string RouteToHere = "Map_RouteToHere";
+
+            /// <summary>
+            /// Key: <c>Map_RouteType</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+            /// </summary>
+            public const string RouteType = "Map_RouteType";
+
+            /// <summary>
+            /// Key: <c>Map_SearchingNearby</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+            /// </summary>
+            public const string SearchingNearby = "Map_SearchingNearby";
+
+            /// <summary>
+            /// Key: <c>Map_SearchOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+            /// </summary>
+            public const string SearchOnMap = "Map_SearchOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+            /// </summary>
+            public const string SearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+            /// <summary>
+            /// Key: <c>Map_SelectAddressOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+            /// </summary>
+            public const string SelectAddressOnMap = "Map_SelectAddressOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedAddress</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+            /// </summary>
+            public const string SelectedAddress = "Map_SelectedAddress";
+
+            /// <summary>
+            /// Key: <c>Map_SelectedZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+            /// </summary>
+            public const string SelectedZone = "Map_SelectedZone";
+
+            /// <summary>
+            /// Key: <c>Map_SelectZoneOnMap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+            /// </summary>
+            public const string SelectZoneOnMap = "Map_SelectZoneOnMap";
+
+            /// <summary>
+            /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+            /// </summary>
+            public const string ServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+            /// <summary>
+            /// Key: <c>Map_SetZone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+            /// </summary>
+            public const string SetZone = "Map_SetZone";
+
+            /// <summary>
+            /// Key: <c>Map_Speed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+            /// </summary>
+            public const string SpeedText = "Map_Speed";
+
+            /// <summary>
+            /// Key: <c>Map_StartRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+            /// </summary>
+            public const string StartRoute = "Map_StartRoute";
+
+            /// <summary>
+            /// Key: <c>Map_StopNavigation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+            /// </summary>
+            public const string StopNavigation = "Map_StopNavigation";
+
+            /// <summary>
+            /// Key: <c>Map_Swap</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+            /// </summary>
+            public const string Swap = "Map_Swap";
+
+            /// <summary>
+            /// Key: <c>Map_To</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+            /// </summary>
+            public const string To = "Map_To";
+
+            /// <summary>
+            /// Key: <c>Map_ToRoute</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+            /// </summary>
+            public const string ToRoute = "Map_ToRoute";
+
+            /// <summary>
+            /// Key: <c>Map_View3D</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+            /// </summary>
+            public const string View3D = "Map_View3D";
+
+            /// <summary>
+            /// Key: <c>Map_VoiceGuidance</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+            /// </summary>
+            public const string VoiceGuidance = "Map_VoiceGuidance";
+
+            /// <summary>
+            /// Key: <c>Map_WhereToEat</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+            /// </summary>
+            public const string WhereToEat = "Map_WhereToEat";
+
+            /// <summary>
+            /// Key: <c>Map_ZoneNotSet</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+            /// </summary>
+            public const string ZoneNotSet = "Map_ZoneNotSet";
+
+            /// <summary>
+            /// Key: <c>Map_ZonesConfigured</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+            /// </summary>
+            public const string ZonesConfigured = "Map_ZonesConfigured";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomIn</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+            /// </summary>
+            public const string ZoomInText = "Map_ZoomIn";
+
+            /// <summary>
+            /// Key: <c>Map_ZoomOut</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+            /// </summary>
+            public const string ZoomOutText = "Map_ZoomOut";
 
         }
 
@@ -19867,6 +23066,613 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Table&quot;
             /// </summary>
             public const string ViewTable = "Orders_ViewTable";
+
+        }
+
+        /// <summary>
+        /// Domain group: Promotion (75 keys). Use with <c>@using static Assets.Constants.Loc.Promotion;</c>.
+        /// </summary>
+        public static class Promotion
+        {
+            /// <summary>
+            /// Key: <c>Promo_BackToPlans</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+            /// </summary>
+            public const string BackToPlans = "Promo_BackToPlans";
+
+            /// <summary>
+            /// Key: <c>Promo_ClickDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+            /// </summary>
+            public const string ClickDesc = "Promo_ClickDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_GoogleFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+            /// </summary>
+            public const string GoogleFeed = "Promo_GoogleFeed";
+
+            /// <summary>
+            /// Key: <c>Promo_InvoiceFor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+            /// </summary>
+            public const string InvoiceFor = "Promo_InvoiceFor";
+
+            /// <summary>
+            /// Key: <c>Promo_OpenPaymentForm</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+            /// </summary>
+            public const string OpenPaymentForm = "Promo_OpenPaymentForm";
+
+            /// <summary>
+            /// Key: <c>Promo_PaidActivate</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+            /// </summary>
+            public const string PaidActivate = "Promo_PaidActivate";
+
+            /// <summary>
+            /// Key: <c>Promo_PayAmount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+            /// </summary>
+            public const string PayAmount = "Promo_PayAmount";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymeDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+            /// </summary>
+            public const string PaymeDesc = "Promo_PaymeDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymentMethod</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+            /// </summary>
+            public const string PaymentMethod = "Promo_PaymentMethod";
+
+            /// <summary>
+            /// Key: <c>Promo_PopularChoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+            /// </summary>
+            public const string PopularChoice = "Promo_PopularChoice";
+
+            /// <summary>
+            /// Key: <c>Promo_BackToPlans</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+            /// </summary>
+            public const string Promo_BackToPlans = "Promo_BackToPlans";
+
+            /// <summary>
+            /// Key: <c>Promo_ClickDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+            /// </summary>
+            public const string Promo_ClickDesc = "Promo_ClickDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_GoogleFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+            /// </summary>
+            public const string Promo_GoogleFeed = "Promo_GoogleFeed";
+
+            /// <summary>
+            /// Key: <c>Promo_InvoiceFor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+            /// </summary>
+            public const string Promo_InvoiceFor = "Promo_InvoiceFor";
+
+            /// <summary>
+            /// Key: <c>Promo_OpenPaymentForm</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+            /// </summary>
+            public const string Promo_OpenPaymentForm = "Promo_OpenPaymentForm";
+
+            /// <summary>
+            /// Key: <c>Promo_PaidActivate</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+            /// </summary>
+            public const string Promo_PaidActivate = "Promo_PaidActivate";
+
+            /// <summary>
+            /// Key: <c>Promo_PayAmount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+            /// </summary>
+            public const string Promo_PayAmount = "Promo_PayAmount";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymeDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+            /// </summary>
+            public const string Promo_PaymeDesc = "Promo_PaymeDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymentMethod</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+            /// </summary>
+            public const string Promo_PaymentMethod = "Promo_PaymentMethod";
+
+            /// <summary>
+            /// Key: <c>Promo_PopularChoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+            /// </summary>
+            public const string Promo_PopularChoice = "Promo_PopularChoice";
+
+            /// <summary>
+            /// Key: <c>Promo_PromotedProduct</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+            /// </summary>
+            public const string Promo_PromotedProduct = "Promo_PromotedProduct";
+
+            /// <summary>
+            /// Key: <c>Promo_QrCodeAlt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+            /// </summary>
+            public const string Promo_QrCodeAlt = "Promo_QrCodeAlt";
+
+            /// <summary>
+            /// Key: <c>Promo_QrInstruction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+            /// </summary>
+            public const string Promo_QrInstruction = "Promo_QrInstruction";
+
+            /// <summary>
+            /// Key: <c>Promo_RedirectMessage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+            /// </summary>
+            public const string Promo_RedirectMessage = "Promo_RedirectMessage";
+
+            /// <summary>
+            /// Key: <c>Promo_Step1Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+            /// </summary>
+            public const string Promo_Step1Title = "Promo_Step1Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Step2Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+            /// </summary>
+            public const string Promo_Step2Title = "Promo_Step2Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Subtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+            /// </summary>
+            public const string Promo_Subtitle = "Promo_Subtitle";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+            /// </summary>
+            public const string Promo_SuccessDesc = "Promo_SuccessDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessHint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+            /// </summary>
+            public const string Promo_SuccessHint = "Promo_SuccessHint";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+            /// </summary>
+            public const string Promo_SuccessTitle = "Promo_SuccessTitle";
+
+            /// <summary>
+            /// Key: <c>Promo_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+            /// </summary>
+            public const string Promo_Title = "Promo_Title";
+
+            /// <summary>
+            /// Key: <c>Promo_UzQrDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+            /// </summary>
+            public const string Promo_UzQrDesc = "Promo_UzQrDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_UzumDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+            /// </summary>
+            public const string Promo_UzumDesc = "Promo_UzumDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_VerifyingPayment</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+            /// </summary>
+            public const string Promo_VerifyingPayment = "Promo_VerifyingPayment";
+
+            /// <summary>
+            /// Key: <c>Promo_YandexFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+            /// </summary>
+            public const string Promo_YandexFeed = "Promo_YandexFeed";
+
+            /// <summary>
+            /// Key: <c>Promo_BackToPlans</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+            /// </summary>
+            public const string PromoBackToPlans = "Promo_BackToPlans";
+
+            /// <summary>
+            /// Key: <c>Promo_ClickDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+            /// </summary>
+            public const string PromoClickDesc = "Promo_ClickDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_GoogleFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+            /// </summary>
+            public const string PromoGoogleFeed = "Promo_GoogleFeed";
+
+            /// <summary>
+            /// Key: <c>Promo_InvoiceFor</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+            /// </summary>
+            public const string PromoInvoiceFor = "Promo_InvoiceFor";
+
+            /// <summary>
+            /// Key: <c>Promo_OpenPaymentForm</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+            /// </summary>
+            public const string PromoOpenPaymentForm = "Promo_OpenPaymentForm";
+
+            /// <summary>
+            /// Key: <c>Promo_PaidActivate</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+            /// </summary>
+            public const string PromoPaidActivate = "Promo_PaidActivate";
+
+            /// <summary>
+            /// Key: <c>Promo_PayAmount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+            /// </summary>
+            public const string PromoPayAmount = "Promo_PayAmount";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymeDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+            /// </summary>
+            public const string PromoPaymeDesc = "Promo_PaymeDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_PaymentMethod</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+            /// </summary>
+            public const string PromoPaymentMethod = "Promo_PaymentMethod";
+
+            /// <summary>
+            /// Key: <c>Promo_PopularChoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+            /// </summary>
+            public const string PromoPopularChoice = "Promo_PopularChoice";
+
+            /// <summary>
+            /// Key: <c>Promo_PromotedProduct</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+            /// </summary>
+            public const string PromoPromotedProduct = "Promo_PromotedProduct";
+
+            /// <summary>
+            /// Key: <c>Promo_QrCodeAlt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+            /// </summary>
+            public const string PromoQrCodeAlt = "Promo_QrCodeAlt";
+
+            /// <summary>
+            /// Key: <c>Promo_QrInstruction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+            /// </summary>
+            public const string PromoQrInstruction = "Promo_QrInstruction";
+
+            /// <summary>
+            /// Key: <c>Promo_RedirectMessage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+            /// </summary>
+            public const string PromoRedirectMessage = "Promo_RedirectMessage";
+
+            /// <summary>
+            /// Key: <c>Promo_Step1Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+            /// </summary>
+            public const string PromoStep1Title = "Promo_Step1Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Step2Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+            /// </summary>
+            public const string PromoStep2Title = "Promo_Step2Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Subtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+            /// </summary>
+            public const string PromoSubtitle = "Promo_Subtitle";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+            /// </summary>
+            public const string PromoSuccessDesc = "Promo_SuccessDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessHint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+            /// </summary>
+            public const string PromoSuccessHint = "Promo_SuccessHint";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+            /// </summary>
+            public const string PromoSuccessTitle = "Promo_SuccessTitle";
+
+            /// <summary>
+            /// Key: <c>Promo_PromotedProduct</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+            /// </summary>
+            public const string PromotedProduct = "Promo_PromotedProduct";
+
+            /// <summary>
+            /// Key: <c>Promo_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+            /// </summary>
+            public const string PromoTitle = "Promo_Title";
+
+            /// <summary>
+            /// Key: <c>Promo_UzQrDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+            /// </summary>
+            public const string PromoUzQrDesc = "Promo_UzQrDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_UzumDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+            /// </summary>
+            public const string PromoUzumDesc = "Promo_UzumDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_VerifyingPayment</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+            /// </summary>
+            public const string PromoVerifyingPayment = "Promo_VerifyingPayment";
+
+            /// <summary>
+            /// Key: <c>Promo_YandexFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+            /// </summary>
+            public const string PromoYandexFeed = "Promo_YandexFeed";
+
+            /// <summary>
+            /// Key: <c>Promo_QrCodeAlt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+            /// </summary>
+            public const string QrCodeAlt = "Promo_QrCodeAlt";
+
+            /// <summary>
+            /// Key: <c>Promo_QrInstruction</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+            /// </summary>
+            public const string QrInstructionText = "Promo_QrInstruction";
+
+            /// <summary>
+            /// Key: <c>Promo_RedirectMessage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+            /// </summary>
+            public const string RedirectMessage = "Promo_RedirectMessage";
+
+            /// <summary>
+            /// Key: <c>Promo_Step1Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+            /// </summary>
+            public const string Step1Title = "Promo_Step1Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Step2Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+            /// </summary>
+            public const string Step2Title = "Promo_Step2Title";
+
+            /// <summary>
+            /// Key: <c>Promo_Subtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+            /// </summary>
+            public const string SubtitleText = "Promo_Subtitle";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+            /// </summary>
+            public const string SuccessDesc = "Promo_SuccessDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessHint</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+            /// </summary>
+            public const string SuccessHint = "Promo_SuccessHint";
+
+            /// <summary>
+            /// Key: <c>Promo_SuccessTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+            /// </summary>
+            public const string SuccessTitle = "Promo_SuccessTitle";
+
+            /// <summary>
+            /// Key: <c>Promo_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+            /// </summary>
+            public const string TitleText = "Promo_Title";
+
+            /// <summary>
+            /// Key: <c>Promo_UzQrDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+            /// </summary>
+            public const string UzQrDesc = "Promo_UzQrDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_UzumDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+            /// </summary>
+            public const string UzumDesc = "Promo_UzumDesc";
+
+            /// <summary>
+            /// Key: <c>Promo_VerifyingPayment</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+            /// </summary>
+            public const string VerifyingPayment = "Promo_VerifyingPayment";
+
+            /// <summary>
+            /// Key: <c>Promo_YandexFeed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+            /// </summary>
+            public const string YandexFeed = "Promo_YandexFeed";
 
         }
 
@@ -23391,10 +27197,18 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Subscription (107 keys). Use with <c>@using static Assets.Constants.Loc.Subscription;</c>.
+        /// Domain group: Subscription (233 keys). Use with <c>@using static Assets.Constants.Loc.Subscription;</c>.
         /// </summary>
         public static class Subscription
         {
+            /// <summary>
+            /// Key: <c>Org_ActivePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+            /// </summary>
+            public const string ActivePro = "Org_ActivePro";
+
             /// <summary>
             /// Key: <c>Subscription_Badge_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Безлимитный доступ&quot;<br/>
@@ -23412,6 +27226,14 @@ namespace Assets.Constants
             public const string Badge_Recurring = "Subscription_Badge_Recurring";
 
             /// <summary>
+            /// Key: <c>Org_BadgeDefault</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+            /// </summary>
+            public const string BadgeDefault = "Org_BadgeDefault";
+
+            /// <summary>
             /// Key: <c>Subscription_Badge_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Безлимитный доступ&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheksiz kirish&quot;<br/>
@@ -23420,12 +27242,44 @@ namespace Assets.Constants
             public const string BadgeMembership = "Subscription_Badge_Membership";
 
             /// <summary>
+            /// Key: <c>Org_BadgePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+            /// </summary>
+            public const string BadgePro = "Org_BadgePro";
+
+            /// <summary>
             /// Key: <c>Subscription_Badge_Recurring</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
             /// </summary>
             public const string BadgeRecurring = "Subscription_Badge_Recurring";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+            /// </summary>
+            public const string BadgeTrialActive = "Org_BadgeTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+            /// </summary>
+            public const string BadgeTrialExpired = "Org_BadgeTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+            /// </summary>
+            public const string BadgeWithAds = "Org_BadgeWithAds";
 
             /// <summary>
             /// Key: <c>Subscription_Btn_Membership</c><br/>
@@ -23460,6 +27314,38 @@ namespace Assets.Constants
             public const string BtnRecurring = "Subscription_Btn_Recurring";
 
             /// <summary>
+            /// Key: <c>Org_ConfirmActivation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+            /// </summary>
+            public const string ConfirmActivation = "Org_ConfirmActivation";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectingPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+            /// </summary>
+            public const string ConnectingPlan = "Org_ConnectingPlan";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+            /// </summary>
+            public const string ConnectPro = "Org_ConnectPro";
+
+            /// <summary>
+            /// Key: <c>Org_CurrentPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+            /// </summary>
+            public const string CurrentPlan = "Org_CurrentPlan";
+
+            /// <summary>
             /// Key: <c>Subscription_Desc_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ во все залы и спа-зоны, включены вводные тренировки и шкафчик.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha zallar va spa-zonalarga to'liq kirish, kirish mashg'ulotlari va shkaf kiritilgan.&quot;<br/>
@@ -23484,12 +27370,44 @@ namespace Assets.Constants
             public const string DescMembership = "Subscription_Desc_Membership";
 
             /// <summary>
+            /// Key: <c>Org_DescPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// </summary>
+            public const string DescPro = "Org_DescPro";
+
+            /// <summary>
             /// Key: <c>Subscription_Desc_Recurring</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоматическое продление доступа каждые 30 дней. Отмена подписки в 1 клик в любое время.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har 30 kunda kirishni avtomatik uzaytirish. Obunani istalgan vaqtda 1 bosishda bekor qilish.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Automatic renewal of access every 30 days. Cancel subscription in 1 click anytime.&quot;
             /// </summary>
             public const string DescRecurring = "Subscription_Desc_Recurring";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+            /// </summary>
+            public const string DescTrialActive = "Org_DescTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+            /// </summary>
+            public const string DescTrialExpired = "Org_DescTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_DescWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+            /// </summary>
+            public const string DescWithAds = "Org_DescWithAds";
 
             /// <summary>
             /// Key: <c>Subscription_Duration_1Month</c><br/>
@@ -23588,6 +27506,734 @@ namespace Assets.Constants
             public const string DurationYearly = "Subscription_Duration_Yearly";
 
             /// <summary>
+            /// Key: <c>Org_HeadlineManage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+            /// </summary>
+            public const string HeadlineManage = "Org_HeadlineManage";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlinePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+            /// </summary>
+            public const string HeadlinePro = "Org_HeadlinePro";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+            /// </summary>
+            public const string HeadlineTrialActive = "Org_HeadlineTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+            /// </summary>
+            public const string HeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+            /// </summary>
+            public const string HeadlineWithAds = "Org_HeadlineWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_ActivePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+            /// </summary>
+            public const string Org_ActivePro = "Org_ActivePro";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeDefault</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+            /// </summary>
+            public const string Org_BadgeDefault = "Org_BadgeDefault";
+
+            /// <summary>
+            /// Key: <c>Org_BadgePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+            /// </summary>
+            public const string Org_BadgePro = "Org_BadgePro";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+            /// </summary>
+            public const string Org_BadgeTrialActive = "Org_BadgeTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+            /// </summary>
+            public const string Org_BadgeTrialExpired = "Org_BadgeTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+            /// </summary>
+            public const string Org_BadgeWithAds = "Org_BadgeWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_ConfirmActivation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+            /// </summary>
+            public const string Org_ConfirmActivation = "Org_ConfirmActivation";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectingPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+            /// </summary>
+            public const string Org_ConnectingPlan = "Org_ConnectingPlan";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+            /// </summary>
+            public const string Org_ConnectPro = "Org_ConnectPro";
+
+            /// <summary>
+            /// Key: <c>Org_CurrentPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+            /// </summary>
+            public const string Org_CurrentPlan = "Org_CurrentPlan";
+
+            /// <summary>
+            /// Key: <c>Org_DescPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// </summary>
+            public const string Org_DescPro = "Org_DescPro";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+            /// </summary>
+            public const string Org_DescTrialActive = "Org_DescTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+            /// </summary>
+            public const string Org_DescTrialExpired = "Org_DescTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_DescWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+            /// </summary>
+            public const string Org_DescWithAds = "Org_DescWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineManage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+            /// </summary>
+            public const string Org_HeadlineManage = "Org_HeadlineManage";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlinePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+            /// </summary>
+            public const string Org_HeadlinePro = "Org_HeadlinePro";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+            /// </summary>
+            public const string Org_HeadlineTrialActive = "Org_HeadlineTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+            /// </summary>
+            public const string Org_HeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+            /// </summary>
+            public const string Org_HeadlineWithAds = "Org_HeadlineWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentClickPayme</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+            /// </summary>
+            public const string Org_PaymentClickPayme = "Org_PaymentClickPayme";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentInvoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+            /// </summary>
+            public const string Org_PaymentInvoice = "Org_PaymentInvoice";
+
+            /// <summary>
+            /// Key: <c>Org_PlanAdsSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+            /// </summary>
+            public const string Org_PlanAdsSummary = "Org_PlanAdsSummary";
+
+            /// <summary>
+            /// Key: <c>Org_PlanProSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+            /// </summary>
+            public const string Org_PlanProSummary = "Org_PlanProSummary";
+
+            /// <summary>
+            /// Key: <c>Org_Recommended</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+            /// </summary>
+            public const string Org_Recommended = "Org_Recommended";
+
+            /// <summary>
+            /// Key: <c>Org_SelectPlanAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+            /// </summary>
+            public const string Org_SelectPlanAds = "Org_SelectPlanAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeature100NoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+            /// </summary>
+            public const string Org_TierFeature100NoAds = "Org_TierFeature100NoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureAllModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+            /// </summary>
+            public const string Org_TierFeatureAllModes = "Org_TierFeatureAllModes";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+            /// </summary>
+            public const string Org_TierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+            /// </summary>
+            public const string Org_TierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+            /// </summary>
+            public const string Org_TierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureNoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+            /// </summary>
+            public const string Org_TierFeatureNoAds = "Org_TierFeatureNoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+            /// </summary>
+            public const string Org_TierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+            /// </summary>
+            public const string Org_TierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+            /// </summary>
+            public const string Org_TierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+            /// <summary>
+            /// Key: <c>Org_TierProName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+            /// </summary>
+            public const string Org_TierProName = "Org_TierProName";
+
+            /// <summary>
+            /// Key: <c>Org_TierProPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+            /// </summary>
+            public const string Org_TierProPrice = "Org_TierProPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+            /// </summary>
+            public const string Org_TierTrialName = "Org_TierTrialName";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+            /// </summary>
+            public const string Org_TierTrialPrice = "Org_TierTrialPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+            /// </summary>
+            public const string Org_TierWithAdsName = "Org_TierWithAdsName";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+            /// </summary>
+            public const string Org_TierWithAdsPrice = "Org_TierWithAdsPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TrialDaysRemaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+            /// </summary>
+            public const string Org_TrialDaysRemaining = "Org_TrialDaysRemaining";
+
+            /// <summary>
+            /// Key: <c>Org_YouSelectedPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+            /// </summary>
+            public const string Org_YouSelectedPlan = "Org_YouSelectedPlan";
+
+            /// <summary>
+            /// Key: <c>Org_ActivePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+            /// </summary>
+            public const string OrgActivePro = "Org_ActivePro";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeDefault</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+            /// </summary>
+            public const string OrgBadgeDefault = "Org_BadgeDefault";
+
+            /// <summary>
+            /// Key: <c>Org_BadgePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+            /// </summary>
+            public const string OrgBadgePro = "Org_BadgePro";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+            /// </summary>
+            public const string OrgBadgeTrialActive = "Org_BadgeTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+            /// </summary>
+            public const string OrgBadgeTrialExpired = "Org_BadgeTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_BadgeWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+            /// </summary>
+            public const string OrgBadgeWithAds = "Org_BadgeWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_ConfirmActivation</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+            /// </summary>
+            public const string OrgConfirmActivation = "Org_ConfirmActivation";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectingPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+            /// </summary>
+            public const string OrgConnectingPlan = "Org_ConnectingPlan";
+
+            /// <summary>
+            /// Key: <c>Org_ConnectPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+            /// </summary>
+            public const string OrgConnectPro = "Org_ConnectPro";
+
+            /// <summary>
+            /// Key: <c>Org_CurrentPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+            /// </summary>
+            public const string OrgCurrentPlan = "Org_CurrentPlan";
+
+            /// <summary>
+            /// Key: <c>Org_DescPro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// </summary>
+            public const string OrgDescPro = "Org_DescPro";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+            /// </summary>
+            public const string OrgDescTrialActive = "Org_DescTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_DescTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+            /// </summary>
+            public const string OrgDescTrialExpired = "Org_DescTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_DescWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+            /// </summary>
+            public const string OrgDescWithAds = "Org_DescWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineManage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+            /// </summary>
+            public const string OrgHeadlineManage = "Org_HeadlineManage";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlinePro</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+            /// </summary>
+            public const string OrgHeadlinePro = "Org_HeadlinePro";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialActive</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+            /// </summary>
+            public const string OrgHeadlineTrialActive = "Org_HeadlineTrialActive";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+            /// </summary>
+            public const string OrgHeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+            /// <summary>
+            /// Key: <c>Org_HeadlineWithAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+            /// </summary>
+            public const string OrgHeadlineWithAds = "Org_HeadlineWithAds";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentClickPayme</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+            /// </summary>
+            public const string OrgPaymentClickPayme = "Org_PaymentClickPayme";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentInvoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+            /// </summary>
+            public const string OrgPaymentInvoice = "Org_PaymentInvoice";
+
+            /// <summary>
+            /// Key: <c>Org_PlanAdsSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+            /// </summary>
+            public const string OrgPlanAdsSummary = "Org_PlanAdsSummary";
+
+            /// <summary>
+            /// Key: <c>Org_PlanProSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+            /// </summary>
+            public const string OrgPlanProSummary = "Org_PlanProSummary";
+
+            /// <summary>
+            /// Key: <c>Org_Recommended</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+            /// </summary>
+            public const string OrgRecommended = "Org_Recommended";
+
+            /// <summary>
+            /// Key: <c>Org_SelectPlanAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+            /// </summary>
+            public const string OrgSelectPlanAds = "Org_SelectPlanAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeature100NoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+            /// </summary>
+            public const string OrgTierFeature100NoAds = "Org_TierFeature100NoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureAllModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+            /// </summary>
+            public const string OrgTierFeatureAllModes = "Org_TierFeatureAllModes";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+            /// </summary>
+            public const string OrgTierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+            /// </summary>
+            public const string OrgTierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+            /// </summary>
+            public const string OrgTierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureNoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+            /// </summary>
+            public const string OrgTierFeatureNoAds = "Org_TierFeatureNoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+            /// </summary>
+            public const string OrgTierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+            /// </summary>
+            public const string OrgTierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+            /// </summary>
+            public const string OrgTierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+            /// <summary>
+            /// Key: <c>Org_TierProName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+            /// </summary>
+            public const string OrgTierProName = "Org_TierProName";
+
+            /// <summary>
+            /// Key: <c>Org_TierProPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+            /// </summary>
+            public const string OrgTierProPrice = "Org_TierProPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+            /// </summary>
+            public const string OrgTierTrialName = "Org_TierTrialName";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+            /// </summary>
+            public const string OrgTierTrialPrice = "Org_TierTrialPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+            /// </summary>
+            public const string OrgTierWithAdsName = "Org_TierWithAdsName";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+            /// </summary>
+            public const string OrgTierWithAdsPrice = "Org_TierWithAdsPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TrialDaysRemaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+            /// </summary>
+            public const string OrgTrialDaysRemaining = "Org_TrialDaysRemaining";
+
+            /// <summary>
+            /// Key: <c>Org_YouSelectedPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+            /// </summary>
+            public const string OrgYouSelectedPlan = "Org_YouSelectedPlan";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentClickPayme</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+            /// </summary>
+            public const string PaymentClickPayme = "Org_PaymentClickPayme";
+
+            /// <summary>
+            /// Key: <c>Org_PaymentInvoice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+            /// </summary>
+            public const string PaymentInvoice = "Org_PaymentInvoice";
+
+            /// <summary>
             /// Key: <c>Subscription_Period_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Срок действия абонемента:&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Abonementning amal qilish muddati:&quot;<br/>
@@ -23636,12 +28282,28 @@ namespace Assets.Constants
             public const string Plan_Recurring = "Subscription_Plan_Recurring";
 
             /// <summary>
+            /// Key: <c>Org_PlanAdsSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+            /// </summary>
+            public const string PlanAdsSummary = "Org_PlanAdsSummary";
+
+            /// <summary>
             /// Key: <c>Subscription_Plan_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Абонемент All-Inclusive VIP&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;All-Inclusive VIP abonementi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;All-Inclusive VIP Membership&quot;
             /// </summary>
             public const string PlanMembership = "Subscription_Plan_Membership";
+
+            /// <summary>
+            /// Key: <c>Org_PlanProSummary</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+            /// </summary>
+            public const string PlanProSummary = "Org_PlanProSummary";
 
             /// <summary>
             /// Key: <c>Subscription_Plan_Recurring</c><br/>
@@ -23746,6 +28408,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Included privileges:&quot;
             /// </summary>
             public const string PrivilegesTitle = "Subscription_Privileges_Title";
+
+            /// <summary>
+            /// Key: <c>Org_Recommended</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+            /// </summary>
+            public const string Recommended = "Org_Recommended";
+
+            /// <summary>
+            /// Key: <c>Org_SelectPlanAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+            /// </summary>
+            public const string SelectPlanAds = "Org_SelectPlanAds";
 
             /// <summary>
             /// Key: <c>Subscription_Slot_Membership_Format</c><br/>
@@ -24212,6 +28890,126 @@ namespace Assets.Constants
             public const string SubscriptionTotalToCharge = "Subscription_TotalToCharge";
 
             /// <summary>
+            /// Key: <c>Org_TierFeature100NoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+            /// </summary>
+            public const string TierFeature100NoAds = "Org_TierFeature100NoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureAllModes</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+            /// </summary>
+            public const string TierFeatureAllModes = "Org_TierFeatureAllModes";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+            /// </summary>
+            public const string TierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+            /// </summary>
+            public const string TierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+            /// </summary>
+            public const string TierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureNoAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+            /// </summary>
+            public const string TierFeatureNoAds = "Org_TierFeatureNoAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+            /// </summary>
+            public const string TierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+            /// </summary>
+            public const string TierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+            /// <summary>
+            /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+            /// </summary>
+            public const string TierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+            /// <summary>
+            /// Key: <c>Org_TierProName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+            /// </summary>
+            public const string TierProName = "Org_TierProName";
+
+            /// <summary>
+            /// Key: <c>Org_TierProPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+            /// </summary>
+            public const string TierProPrice = "Org_TierProPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+            /// </summary>
+            public const string TierTrialName = "Org_TierTrialName";
+
+            /// <summary>
+            /// Key: <c>Org_TierTrialPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+            /// </summary>
+            public const string TierTrialPrice = "Org_TierTrialPrice";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsName</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+            /// </summary>
+            public const string TierWithAdsName = "Org_TierWithAdsName";
+
+            /// <summary>
+            /// Key: <c>Org_TierWithAdsPrice</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+            /// </summary>
+            public const string TierWithAdsPrice = "Org_TierWithAdsPrice";
+
+            /// <summary>
             /// Key: <c>Subscription_Title_Membership</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;💳 Клубный абонемент / Членство&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;💳 Klub abonementi / A'zolik&quot;<br/>
@@ -24250,6 +29048,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Total to charge:&quot;
             /// </summary>
             public const string TotalToCharge = "Subscription_TotalToCharge";
+
+            /// <summary>
+            /// Key: <c>Org_TrialDaysRemaining</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+            /// </summary>
+            public const string TrialDaysRemaining = "Org_TrialDaysRemaining";
+
+            /// <summary>
+            /// Key: <c>Org_YouSelectedPlan</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+            /// </summary>
+            public const string YouSelectedPlan = "Org_YouSelectedPlan";
 
         }
 
@@ -27838,6 +32652,14 @@ namespace Assets.Constants
         public const string ActionsClose = "Actions_Close";
 
         /// <summary>
+        /// Key: <c>Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string AddressText = "Address";
+
+        /// <summary>
         /// Key: <c>Add</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qo'shish&quot;<br/>
@@ -27910,12 +32732,36 @@ namespace Assets.Constants
         public const string AllRightsReserved = "AllRightsReserved";
 
         /// <summary>
+        /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+        /// </summary>
+        public const string Analytics_ActiveNomenclature = "Analytics_ActiveNomenclature";
+
+        /// <summary>
         /// Key: <c>Analytics_ActualSales</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
         /// </summary>
         public const string Analytics_ActualSales = "Analytics_ActualSales";
+
+        /// <summary>
+        /// Key: <c>Analytics_AllTime</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+        /// </summary>
+        public const string Analytics_AllTime = "Analytics_AllTime";
+
+        /// <summary>
+        /// Key: <c>Analytics_AovMetric</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+        /// </summary>
+        public const string Analytics_AovMetric = "Analytics_AovMetric";
 
         /// <summary>
         /// Key: <c>Analytics_AverageBill</c><br/>
@@ -27926,6 +32772,22 @@ namespace Assets.Constants
         public const string Analytics_AverageBill = "Analytics_AverageBill";
 
         /// <summary>
+        /// Key: <c>Analytics_Branches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string Analytics_Branches = "Analytics_Branches";
+
+        /// <summary>
+        /// Key: <c>Analytics_ByOrderLines</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+        /// </summary>
+        public const string Analytics_ByOrderLines = "Analytics_ByOrderLines";
+
+        /// <summary>
         /// Key: <c>Analytics_ByRevenue</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -27934,12 +32796,164 @@ namespace Assets.Constants
         public const string Analytics_ByRevenue = "Analytics_ByRevenue";
 
         /// <summary>
+        /// Key: <c>Analytics_ChecksUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+        /// </summary>
+        public const string Analytics_ChecksUnit = "Analytics_ChecksUnit";
+
+        /// <summary>
         /// Key: <c>Analytics_CompletedReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
         /// </summary>
         public const string Analytics_CompletedReceipts = "Analytics_CompletedReceipts";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+        /// </summary>
+        public const string Analytics_ConfigAovDesc = "Analytics_ConfigAovDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+        /// </summary>
+        public const string Analytics_ConfigAovTitle = "Analytics_ConfigAovTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+        /// </summary>
+        public const string Analytics_ConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+        /// </summary>
+        public const string Analytics_ConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string Analytics_ConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+        /// </summary>
+        public const string Analytics_ConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+        /// </summary>
+        public const string Analytics_ConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+        /// </summary>
+        public const string Analytics_ConfigModalDesc = "Analytics_ConfigModalDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+        /// </summary>
+        public const string Analytics_ConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+        /// </summary>
+        public const string Analytics_ConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+        /// </summary>
+        public const string Analytics_ConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+        /// </summary>
+        public const string Analytics_ConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+        /// </summary>
+        public const string Analytics_ConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+        /// </summary>
+        public const string Analytics_ConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+        /// </summary>
+        public const string Analytics_ConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+        /// </summary>
+        public const string Analytics_ConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+        /// </summary>
+        public const string Analytics_ConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+        /// </summary>
+        public const string Analytics_ConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
         /// <summary>
         /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -27966,6 +32980,14 @@ namespace Assets.Constants
         public const string Analytics_ConfigureTooltip = "Analytics_ConfigureTooltip";
 
         /// <summary>
+        /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+        /// </summary>
+        public const string Analytics_ConnectedNetwork = "Analytics_ConnectedNetwork";
+
+        /// <summary>
         /// Key: <c>Analytics_Dashboard</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -27980,6 +33002,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
         /// </summary>
         public const string Analytics_DistributionShare = "Analytics_DistributionShare";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+        /// </summary>
+        public const string Analytics_EntitiesRegistry = "Analytics_EntitiesRegistry";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+        /// </summary>
+        public const string Analytics_EntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
         /// <summary>
         /// Key: <c>Analytics_Explorer</c><br/>
@@ -27998,6 +33036,54 @@ namespace Assets.Constants
         public const string Analytics_FiscalRatio = "Analytics_FiscalRatio";
 
         /// <summary>
+        /// Key: <c>Analytics_ItemsSold</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+        /// </summary>
+        public const string Analytics_ItemsSold = "Analytics_ItemsSold";
+
+        /// <summary>
+        /// Key: <c>Analytics_ItemsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+        /// </summary>
+        public const string Analytics_ItemsUnit = "Analytics_ItemsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last30Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+        /// </summary>
+        public const string Analytics_Last30Days = "Analytics_Last30Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last7Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+        /// </summary>
+        public const string Analytics_Last7Days = "Analytics_Last7Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_MethodsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+        /// </summary>
+        public const string Analytics_MethodsUnit = "Analytics_MethodsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_NoDataPeriod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+        /// </summary>
+        public const string Analytics_NoDataPeriod = "Analytics_NoDataPeriod";
+
+        /// <summary>
         /// Key: <c>Analytics_OfdReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -28014,12 +33100,36 @@ namespace Assets.Constants
         public const string Analytics_OrdersCount = "Analytics_OrdersCount";
 
         /// <summary>
+        /// Key: <c>Analytics_OrdersShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+        /// </summary>
+        public const string Analytics_OrdersShort = "Analytics_OrdersShort";
+
+        /// <summary>
+        /// Key: <c>Analytics_OrderStatuses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+        /// </summary>
+        public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
         /// </summary>
         public const string Analytics_PaymentChannels = "Analytics_PaymentChannels";
+
+        /// <summary>
+        /// Key: <c>Analytics_PaymentMethods</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+        /// </summary>
+        public const string Analytics_PaymentMethods = "Analytics_PaymentMethods";
 
         /// <summary>
         /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -28036,6 +33146,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
         /// </summary>
         public const string Analytics_PerTransaction = "Analytics_PerTransaction";
+
+        /// <summary>
+        /// Key: <c>Analytics_PointsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string Analytics_PointsUnit = "Analytics_PointsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_ProductsCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+        /// </summary>
+        public const string Analytics_ProductsCatalog = "Analytics_ProductsCatalog";
 
         /// <summary>
         /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -28110,12 +33236,36 @@ namespace Assets.Constants
         public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_StatusesUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+        /// </summary>
+        public const string Analytics_StatusesUnit = "Analytics_StatusesUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+        /// </summary>
+        public const string Analytics_SuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+        /// <summary>
         /// Key: <c>Analytics_TerminalPerformance</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal &amp;amp; kiosk performance&quot;
         /// </summary>
         public const string Analytics_TerminalPerformance = "Analytics_TerminalPerformance";
+
+        /// <summary>
+        /// Key: <c>Analytics_Today</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+        /// </summary>
+        public const string Analytics_Today = "Analytics_Today";
 
         /// <summary>
         /// Key: <c>Analytics_TopProducts</c><br/>
@@ -28126,12 +33276,44 @@ namespace Assets.Constants
         public const string Analytics_TopProducts = "Analytics_TopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_VolumeItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+        /// </summary>
+        public const string Analytics_VolumeItems = "Analytics_VolumeItems";
+
+        /// <summary>
+        /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+        /// </summary>
+        public const string AnalyticsActiveNomenclature = "Analytics_ActiveNomenclature";
+
+        /// <summary>
         /// Key: <c>Analytics_ActualSales</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
         /// </summary>
         public const string AnalyticsActualSales = "Analytics_ActualSales";
+
+        /// <summary>
+        /// Key: <c>Analytics_AllTime</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+        /// </summary>
+        public const string AnalyticsAllTime = "Analytics_AllTime";
+
+        /// <summary>
+        /// Key: <c>Analytics_AovMetric</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+        /// </summary>
+        public const string AnalyticsAovMetric = "Analytics_AovMetric";
 
         /// <summary>
         /// Key: <c>Analytics_AverageBill</c><br/>
@@ -28142,6 +33324,22 @@ namespace Assets.Constants
         public const string AnalyticsAverageBill = "Analytics_AverageBill";
 
         /// <summary>
+        /// Key: <c>Analytics_Branches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string AnalyticsBranches = "Analytics_Branches";
+
+        /// <summary>
+        /// Key: <c>Analytics_ByOrderLines</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+        /// </summary>
+        public const string AnalyticsByOrderLines = "Analytics_ByOrderLines";
+
+        /// <summary>
         /// Key: <c>Analytics_ByRevenue</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -28150,12 +33348,164 @@ namespace Assets.Constants
         public const string AnalyticsByRevenue = "Analytics_ByRevenue";
 
         /// <summary>
+        /// Key: <c>Analytics_ChecksUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+        /// </summary>
+        public const string AnalyticsChecksUnit = "Analytics_ChecksUnit";
+
+        /// <summary>
         /// Key: <c>Analytics_CompletedReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
         /// </summary>
         public const string AnalyticsCompletedReceipts = "Analytics_CompletedReceipts";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+        /// </summary>
+        public const string AnalyticsConfigAovDesc = "Analytics_ConfigAovDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+        /// </summary>
+        public const string AnalyticsConfigAovTitle = "Analytics_ConfigAovTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+        /// </summary>
+        public const string AnalyticsConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+        /// </summary>
+        public const string AnalyticsConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string AnalyticsConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+        /// </summary>
+        public const string AnalyticsConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+        /// </summary>
+        public const string AnalyticsConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+        /// </summary>
+        public const string AnalyticsConfigModalDesc = "Analytics_ConfigModalDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+        /// </summary>
+        public const string AnalyticsConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+        /// </summary>
+        public const string AnalyticsConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+        /// </summary>
+        public const string AnalyticsConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+        /// </summary>
+        public const string AnalyticsConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+        /// </summary>
+        public const string AnalyticsConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+        /// </summary>
+        public const string AnalyticsConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+        /// </summary>
+        public const string AnalyticsConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+        /// </summary>
+        public const string AnalyticsConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+        /// </summary>
+        public const string AnalyticsConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+        /// </summary>
+        public const string AnalyticsConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
         /// <summary>
         /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -28182,6 +33532,14 @@ namespace Assets.Constants
         public const string AnalyticsConfigureTooltip = "Analytics_ConfigureTooltip";
 
         /// <summary>
+        /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+        /// </summary>
+        public const string AnalyticsConnectedNetwork = "Analytics_ConnectedNetwork";
+
+        /// <summary>
         /// Key: <c>Analytics_Dashboard</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -28196,6 +33554,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
         /// </summary>
         public const string AnalyticsDistributionShare = "Analytics_DistributionShare";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+        /// </summary>
+        public const string AnalyticsEntitiesRegistry = "Analytics_EntitiesRegistry";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+        /// </summary>
+        public const string AnalyticsEntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
         /// <summary>
         /// Key: <c>Analytics_Explorer</c><br/>
@@ -28214,6 +33588,54 @@ namespace Assets.Constants
         public const string AnalyticsFiscalRatio = "Analytics_FiscalRatio";
 
         /// <summary>
+        /// Key: <c>Analytics_ItemsSold</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+        /// </summary>
+        public const string AnalyticsItemsSold = "Analytics_ItemsSold";
+
+        /// <summary>
+        /// Key: <c>Analytics_ItemsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+        /// </summary>
+        public const string AnalyticsItemsUnit = "Analytics_ItemsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last30Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+        /// </summary>
+        public const string AnalyticsLast30Days = "Analytics_Last30Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last7Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+        /// </summary>
+        public const string AnalyticsLast7Days = "Analytics_Last7Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_MethodsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+        /// </summary>
+        public const string AnalyticsMethodsUnit = "Analytics_MethodsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_NoDataPeriod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+        /// </summary>
+        public const string AnalyticsNoDataPeriod = "Analytics_NoDataPeriod";
+
+        /// <summary>
         /// Key: <c>Analytics_OfdReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -28230,12 +33652,36 @@ namespace Assets.Constants
         public const string AnalyticsOrdersCount = "Analytics_OrdersCount";
 
         /// <summary>
+        /// Key: <c>Analytics_OrdersShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+        /// </summary>
+        public const string AnalyticsOrdersShort = "Analytics_OrdersShort";
+
+        /// <summary>
+        /// Key: <c>Analytics_OrderStatuses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+        /// </summary>
+        public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
         /// </summary>
         public const string AnalyticsPaymentChannels = "Analytics_PaymentChannels";
+
+        /// <summary>
+        /// Key: <c>Analytics_PaymentMethods</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+        /// </summary>
+        public const string AnalyticsPaymentMethods = "Analytics_PaymentMethods";
 
         /// <summary>
         /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -28252,6 +33698,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
         /// </summary>
         public const string AnalyticsPerTransaction = "Analytics_PerTransaction";
+
+        /// <summary>
+        /// Key: <c>Analytics_PointsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string AnalyticsPointsUnit = "Analytics_PointsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_ProductsCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+        /// </summary>
+        public const string AnalyticsProductsCatalog = "Analytics_ProductsCatalog";
 
         /// <summary>
         /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -28326,6 +33788,22 @@ namespace Assets.Constants
         public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_StatusesUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+        /// </summary>
+        public const string AnalyticsStatusesUnit = "Analytics_StatusesUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+        /// </summary>
+        public const string AnalyticsSuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+        /// <summary>
         /// Key: <c>Analytics_TerminalPerformance</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
@@ -28342,12 +33820,28 @@ namespace Assets.Constants
         public const string AnalyticsText = "Analytics";
 
         /// <summary>
+        /// Key: <c>Analytics_Today</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+        /// </summary>
+        public const string AnalyticsToday = "Analytics_Today";
+
+        /// <summary>
         /// Key: <c>Analytics_TopProducts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Топ продаваемых позиций&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng ko'p sotiladigan tovarlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top selling items&quot;
         /// </summary>
         public const string AnalyticsTopProducts = "Analytics_TopProducts";
+
+        /// <summary>
+        /// Key: <c>Analytics_VolumeItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+        /// </summary>
+        public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
 
         /// <summary>
         /// Key: <c>Apply</c><br/>
@@ -35019,6 +40513,14 @@ namespace Assets.Constants
         public const string Icon1 = "Icon1";
 
         /// <summary>
+        /// Key: <c>Id</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ID&quot;
+        /// </summary>
+        public const string Id = "Id";
+
+        /// <summary>
         /// Key: <c>Image</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Изображение&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
@@ -36779,6 +42281,14 @@ namespace Assets.Constants
         public const string LandingHorecaPillSms = "LandingHorecaPillSms";
 
         /// <summary>
+        /// Key: <c>LandingKeywords</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic&quot;
+        /// </summary>
+        public const string LandingKeywords = "LandingKeywords";
+
+        /// <summary>
         /// Key: <c>LandingLaunchBtn</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
@@ -37169,6 +42679,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Showing&quot;
         /// </summary>
         public const string LandingShowingLabel = "LandingShowingLabel";
+
+        /// <summary>
+        /// Key: <c>LandingSoliqCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+        /// </summary>
+        public const string LandingSoliqCashback = "LandingSoliqCashback";
 
         /// <summary>
         /// Key: <c>LandingUxModesBadge</c><br/>
@@ -37563,12 +43081,1356 @@ namespace Assets.Constants
         public const string MakingText = "Making";
 
         /// <summary>
+        /// Key: <c>Map_AboutPlace</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+        /// </summary>
+        public const string Map_AboutPlace = "Map_AboutPlace";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveMultipleZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+        /// </summary>
+        public const string Map_ActiveMultipleZones = "Map_ActiveMultipleZones";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveSingleZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+        /// </summary>
+        public const string Map_ActiveSingleZone = "Map_ActiveSingleZone";
+
+        /// <summary>
+        /// Key: <c>Map_AddPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+        /// </summary>
+        public const string Map_AddPoint = "Map_AddPoint";
+
+        /// <summary>
+        /// Key: <c>Map_Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string Map_Address = "Map_Address";
+
+        /// <summary>
+        /// Key: <c>Map_AddressNotSelected</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+        /// </summary>
+        public const string Map_AddressNotSelected = "Map_AddressNotSelected";
+
+        /// <summary>
+        /// Key: <c>Map_AddressOrPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+        /// </summary>
+        public const string Map_AddressOrPoint = "Map_AddressOrPoint";
+
+        /// <summary>
+        /// Key: <c>Map_AddToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+        /// </summary>
+        public const string Map_AddToRoute = "Map_AddToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Arrival</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+        /// </summary>
+        public const string Map_Arrival = "Map_Arrival";
+
+        /// <summary>
+        /// Key: <c>Map_BookSeat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+        /// </summary>
+        public const string Map_BookSeat = "Map_BookSeat";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+        /// </summary>
+        public const string Map_BuildRoute = "Map_BuildRoute";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRouteAction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+        /// </summary>
+        public const string Map_BuildRouteAction = "Map_BuildRouteAction";
+
+        /// <summary>
+        /// Key: <c>Map_ChangeOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+        /// </summary>
+        public const string Map_ChangeOnMap = "Map_ChangeOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ClearAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+        /// </summary>
+        public const string Map_ClearAddress = "Map_ClearAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ClickMapToSetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+        /// </summary>
+        public const string Map_ClickMapToSetZone = "Map_ClickMapToSetZone";
+
+        /// <summary>
+        /// Key: <c>Map_CloseRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+        /// </summary>
+        public const string Map_CloseRoute = "Map_CloseRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Collapse</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+        /// </summary>
+        public const string Map_Collapse = "Map_Collapse";
+
+        /// <summary>
+        /// Key: <c>Map_Coordinates</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+        /// </summary>
+        public const string Map_Coordinates = "Map_Coordinates";
+
+        /// <summary>
+        /// Key: <c>Map_DeletePoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+        /// </summary>
+        public const string Map_DeletePoint = "Map_DeletePoint";
+
+        /// <summary>
+        /// Key: <c>Map_DeleteZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+        /// </summary>
+        public const string Map_DeleteZone = "Map_DeleteZone";
+
+        /// <summary>
+        /// Key: <c>Map_Description</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+        /// </summary>
+        public const string Map_Description = "Map_Description";
+
+        /// <summary>
+        /// Key: <c>Map_EditOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+        /// </summary>
+        public const string Map_EditOnMap = "Map_EditOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Expand</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+        /// </summary>
+        public const string Map_Expand = "Map_Expand";
+
+        /// <summary>
+        /// Key: <c>Map_Floor1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+        /// </summary>
+        public const string Map_Floor1 = "Map_Floor1";
+
+        /// <summary>
+        /// Key: <c>Map_Floor2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+        /// </summary>
+        public const string Map_Floor2 = "Map_Floor2";
+
+        /// <summary>
+        /// Key: <c>Map_Floor3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+        /// </summary>
+        public const string Map_Floor3 = "Map_Floor3";
+
+        /// <summary>
+        /// Key: <c>Map_FloorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+        /// </summary>
+        public const string Map_FloorShort = "Map_FloorShort";
+
+        /// <summary>
+        /// Key: <c>Map_From</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+        /// </summary>
+        public const string Map_From = "Map_From";
+
+        /// <summary>
+        /// Key: <c>Map_GasStations</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+        /// </summary>
+        public const string Map_GasStations = "Map_GasStations";
+
+        /// <summary>
+        /// Key: <c>Map_Groceries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+        /// </summary>
+        public const string Map_Groceries = "Map_Groceries";
+
+        /// <summary>
+        /// Key: <c>Map_HallDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+        /// </summary>
+        public const string Map_HallDesigner = "Map_HallDesigner";
+
+        /// <summary>
+        /// Key: <c>Map_KmPerHour</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+        /// </summary>
+        public const string Map_KmPerHour = "Map_KmPerHour";
+
+        /// <summary>
+        /// Key: <c>Map_LoadingRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+        /// </summary>
+        public const string Map_LoadingRoute = "Map_LoadingRoute";
+
+        /// <summary>
+        /// Key: <c>Map_LocationOrAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+        /// </summary>
+        public const string Map_LocationOrAddress = "Map_LocationOrAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+        /// </summary>
+        public const string Map_ModeAll = "Map_ModeAll";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAllRoutes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+        /// </summary>
+        public const string Map_ModeAllRoutes = "Map_ModeAllRoutes";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAuto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+        /// </summary>
+        public const string Map_ModeAuto = "Map_ModeAuto";
+
+        /// <summary>
+        /// Key: <c>Map_ModeBike</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+        /// </summary>
+        public const string Map_ModeBike = "Map_ModeBike";
+
+        /// <summary>
+        /// Key: <c>Map_ModePublic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+        /// </summary>
+        public const string Map_ModePublic = "Map_ModePublic";
+
+        /// <summary>
+        /// Key: <c>Map_ModeScooter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+        /// </summary>
+        public const string Map_ModeScooter = "Map_ModeScooter";
+
+        /// <summary>
+        /// Key: <c>Map_ModeTaxi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+        /// </summary>
+        public const string Map_ModeTaxi = "Map_ModeTaxi";
+
+        /// <summary>
+        /// Key: <c>Map_ModeWalk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+        /// </summary>
+        public const string Map_ModeWalk = "Map_ModeWalk";
+
+        /// <summary>
+        /// Key: <c>Map_MyLocation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+        /// </summary>
+        public const string Map_MyLocation = "Map_MyLocation";
+
+        /// <summary>
+        /// Key: <c>Map_Nearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+        /// </summary>
+        public const string Map_Nearby = "Map_Nearby";
+
+        /// <summary>
+        /// Key: <c>Map_NearbyResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+        /// </summary>
+        public const string Map_NearbyResults = "Map_NearbyResults";
+
+        /// <summary>
+        /// Key: <c>Map_NothingFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+        /// </summary>
+        public const string Map_NothingFound = "Map_NothingFound";
+
+        /// <summary>
+        /// Key: <c>Map_Optimize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+        /// </summary>
+        public const string Map_Optimize = "Map_Optimize";
+
+        /// <summary>
+        /// Key: <c>Map_Optimizing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+        /// </summary>
+        public const string Map_Optimizing = "Map_Optimizing";
+
+        /// <summary>
+        /// Key: <c>Map_Pharmacies</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+        /// </summary>
+        public const string Map_Pharmacies = "Map_Pharmacies";
+
+        /// <summary>
+        /// Key: <c>Map_PickOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+        /// </summary>
+        public const string Map_PickOnMap = "Map_PickOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Point</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+        /// </summary>
+        public const string Map_Point = "Map_Point";
+
+        /// <summary>
+        /// Key: <c>Map_PointsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string Map_PointsCount = "Map_PointsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+        /// </summary>
+        public const string Map_PolygonNotSet = "Map_PolygonNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+        /// </summary>
+        public const string Map_PolygonsCount = "Map_PolygonsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonSingle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+        /// </summary>
+        public const string Map_PolygonSingle = "Map_PolygonSingle";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonUndefined</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+        /// </summary>
+        public const string Map_PolygonUndefined = "Map_PolygonUndefined";
+
+        /// <summary>
+        /// Key: <c>Map_Recenter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+        /// </summary>
+        public const string Map_Recenter = "Map_Recenter";
+
+        /// <summary>
+        /// Key: <c>Map_Remaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+        /// </summary>
+        public const string Map_Remaining = "Map_Remaining";
+
+        /// <summary>
+        /// Key: <c>Map_Restaurants</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+        /// </summary>
+        public const string Map_Restaurants = "Map_Restaurants";
+
+        /// <summary>
+        /// Key: <c>Map_Routes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+        /// </summary>
+        public const string Map_Routes = "Map_Routes";
+
+        /// <summary>
+        /// Key: <c>Map_RouteToHere</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+        /// </summary>
+        public const string Map_RouteToHere = "Map_RouteToHere";
+
+        /// <summary>
+        /// Key: <c>Map_RouteType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+        /// </summary>
+        public const string Map_RouteType = "Map_RouteType";
+
+        /// <summary>
+        /// Key: <c>Map_SearchingNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+        /// </summary>
+        public const string Map_SearchingNearby = "Map_SearchingNearby";
+
+        /// <summary>
+        /// Key: <c>Map_SearchOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+        /// </summary>
+        public const string Map_SearchOnMap = "Map_SearchOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+        /// </summary>
+        public const string Map_SearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+        /// <summary>
+        /// Key: <c>Map_SelectAddressOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+        /// </summary>
+        public const string Map_SelectAddressOnMap = "Map_SelectAddressOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+        /// </summary>
+        public const string Map_SelectedAddress = "Map_SelectedAddress";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+        /// </summary>
+        public const string Map_SelectedZone = "Map_SelectedZone";
+
+        /// <summary>
+        /// Key: <c>Map_SelectZoneOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+        /// </summary>
+        public const string Map_SelectZoneOnMap = "Map_SelectZoneOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+        /// </summary>
+        public const string Map_ServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+        /// <summary>
+        /// Key: <c>Map_SetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+        /// </summary>
+        public const string Map_SetZone = "Map_SetZone";
+
+        /// <summary>
+        /// Key: <c>Map_Speed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+        /// </summary>
+        public const string Map_Speed = "Map_Speed";
+
+        /// <summary>
+        /// Key: <c>Map_StartRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+        /// </summary>
+        public const string Map_StartRoute = "Map_StartRoute";
+
+        /// <summary>
+        /// Key: <c>Map_StopNavigation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+        /// </summary>
+        public const string Map_StopNavigation = "Map_StopNavigation";
+
+        /// <summary>
+        /// Key: <c>Map_Swap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+        /// </summary>
+        public const string Map_Swap = "Map_Swap";
+
+        /// <summary>
+        /// Key: <c>Map_To</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+        /// </summary>
+        public const string Map_To = "Map_To";
+
+        /// <summary>
+        /// Key: <c>Map_ToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+        /// </summary>
+        public const string Map_ToRoute = "Map_ToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_View3D</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+        /// </summary>
+        public const string Map_View3D = "Map_View3D";
+
+        /// <summary>
+        /// Key: <c>Map_VoiceGuidance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+        /// </summary>
+        public const string Map_VoiceGuidance = "Map_VoiceGuidance";
+
+        /// <summary>
+        /// Key: <c>Map_WhereToEat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+        /// </summary>
+        public const string Map_WhereToEat = "Map_WhereToEat";
+
+        /// <summary>
+        /// Key: <c>Map_ZoneNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+        /// </summary>
+        public const string Map_ZoneNotSet = "Map_ZoneNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_ZonesConfigured</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+        /// </summary>
+        public const string Map_ZonesConfigured = "Map_ZonesConfigured";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomIn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+        /// </summary>
+        public const string Map_ZoomIn = "Map_ZoomIn";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomOut</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+        /// </summary>
+        public const string Map_ZoomOut = "Map_ZoomOut";
+
+        /// <summary>
+        /// Key: <c>Map_AboutPlace</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+        /// </summary>
+        public const string MapAboutPlace = "Map_AboutPlace";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveMultipleZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+        /// </summary>
+        public const string MapActiveMultipleZones = "Map_ActiveMultipleZones";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveSingleZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+        /// </summary>
+        public const string MapActiveSingleZone = "Map_ActiveSingleZone";
+
+        /// <summary>
+        /// Key: <c>Map_AddPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+        /// </summary>
+        public const string MapAddPoint = "Map_AddPoint";
+
+        /// <summary>
+        /// Key: <c>Map_Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string MapAddress = "Map_Address";
+
+        /// <summary>
+        /// Key: <c>Map_AddressNotSelected</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+        /// </summary>
+        public const string MapAddressNotSelected = "Map_AddressNotSelected";
+
+        /// <summary>
+        /// Key: <c>Map_AddressOrPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+        /// </summary>
+        public const string MapAddressOrPoint = "Map_AddressOrPoint";
+
+        /// <summary>
+        /// Key: <c>Map_AddToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+        /// </summary>
+        public const string MapAddToRoute = "Map_AddToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Arrival</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+        /// </summary>
+        public const string MapArrival = "Map_Arrival";
+
+        /// <summary>
+        /// Key: <c>Map_BookSeat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+        /// </summary>
+        public const string MapBookSeat = "Map_BookSeat";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+        /// </summary>
+        public const string MapBuildRoute = "Map_BuildRoute";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRouteAction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+        /// </summary>
+        public const string MapBuildRouteAction = "Map_BuildRouteAction";
+
+        /// <summary>
+        /// Key: <c>Map_ChangeOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+        /// </summary>
+        public const string MapChangeOnMap = "Map_ChangeOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ClearAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+        /// </summary>
+        public const string MapClearAddress = "Map_ClearAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ClickMapToSetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+        /// </summary>
+        public const string MapClickMapToSetZone = "Map_ClickMapToSetZone";
+
+        /// <summary>
+        /// Key: <c>Map_CloseRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+        /// </summary>
+        public const string MapCloseRoute = "Map_CloseRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Collapse</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+        /// </summary>
+        public const string MapCollapse = "Map_Collapse";
+
+        /// <summary>
+        /// Key: <c>Map_Coordinates</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+        /// </summary>
+        public const string MapCoordinates = "Map_Coordinates";
+
+        /// <summary>
+        /// Key: <c>Map_DeletePoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+        /// </summary>
+        public const string MapDeletePoint = "Map_DeletePoint";
+
+        /// <summary>
+        /// Key: <c>Map_DeleteZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+        /// </summary>
+        public const string MapDeleteZone = "Map_DeleteZone";
+
+        /// <summary>
+        /// Key: <c>Map_Description</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+        /// </summary>
+        public const string MapDescription = "Map_Description";
+
+        /// <summary>
+        /// Key: <c>Map_EditOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+        /// </summary>
+        public const string MapEditOnMap = "Map_EditOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Expand</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+        /// </summary>
+        public const string MapExpand = "Map_Expand";
+
+        /// <summary>
+        /// Key: <c>Map_Floor1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+        /// </summary>
+        public const string MapFloor1 = "Map_Floor1";
+
+        /// <summary>
+        /// Key: <c>Map_Floor2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+        /// </summary>
+        public const string MapFloor2 = "Map_Floor2";
+
+        /// <summary>
+        /// Key: <c>Map_Floor3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+        /// </summary>
+        public const string MapFloor3 = "Map_Floor3";
+
+        /// <summary>
+        /// Key: <c>Map_FloorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+        /// </summary>
+        public const string MapFloorShort = "Map_FloorShort";
+
+        /// <summary>
+        /// Key: <c>Map_From</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+        /// </summary>
+        public const string MapFrom = "Map_From";
+
+        /// <summary>
+        /// Key: <c>Map_GasStations</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+        /// </summary>
+        public const string MapGasStations = "Map_GasStations";
+
+        /// <summary>
+        /// Key: <c>Map_Groceries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+        /// </summary>
+        public const string MapGroceries = "Map_Groceries";
+
+        /// <summary>
+        /// Key: <c>Map_HallDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+        /// </summary>
+        public const string MapHallDesigner = "Map_HallDesigner";
+
+        /// <summary>
+        /// Key: <c>Map_KmPerHour</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+        /// </summary>
+        public const string MapKmPerHour = "Map_KmPerHour";
+
+        /// <summary>
+        /// Key: <c>Map_LoadingRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+        /// </summary>
+        public const string MapLoadingRoute = "Map_LoadingRoute";
+
+        /// <summary>
+        /// Key: <c>Map_LocationOrAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+        /// </summary>
+        public const string MapLocationOrAddress = "Map_LocationOrAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+        /// </summary>
+        public const string MapModeAll = "Map_ModeAll";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAllRoutes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+        /// </summary>
+        public const string MapModeAllRoutes = "Map_ModeAllRoutes";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAuto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+        /// </summary>
+        public const string MapModeAuto = "Map_ModeAuto";
+
+        /// <summary>
+        /// Key: <c>Map_ModeBike</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+        /// </summary>
+        public const string MapModeBike = "Map_ModeBike";
+
+        /// <summary>
+        /// Key: <c>Map_ModePublic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+        /// </summary>
+        public const string MapModePublic = "Map_ModePublic";
+
+        /// <summary>
+        /// Key: <c>Map_ModeScooter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+        /// </summary>
+        public const string MapModeScooter = "Map_ModeScooter";
+
+        /// <summary>
+        /// Key: <c>Map_ModeTaxi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+        /// </summary>
+        public const string MapModeTaxi = "Map_ModeTaxi";
+
+        /// <summary>
+        /// Key: <c>Map_ModeWalk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+        /// </summary>
+        public const string MapModeWalk = "Map_ModeWalk";
+
+        /// <summary>
+        /// Key: <c>Map_MyLocation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+        /// </summary>
+        public const string MapMyLocation = "Map_MyLocation";
+
+        /// <summary>
+        /// Key: <c>Map_Nearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+        /// </summary>
+        public const string MapNearby = "Map_Nearby";
+
+        /// <summary>
+        /// Key: <c>Map_NearbyResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+        /// </summary>
+        public const string MapNearbyResults = "Map_NearbyResults";
+
+        /// <summary>
+        /// Key: <c>Map_NothingFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+        /// </summary>
+        public const string MapNothingFound = "Map_NothingFound";
+
+        /// <summary>
+        /// Key: <c>Map_Optimize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+        /// </summary>
+        public const string MapOptimize = "Map_Optimize";
+
+        /// <summary>
+        /// Key: <c>Map_Optimizing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+        /// </summary>
+        public const string MapOptimizing = "Map_Optimizing";
+
+        /// <summary>
+        /// Key: <c>Map_Pharmacies</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+        /// </summary>
+        public const string MapPharmacies = "Map_Pharmacies";
+
+        /// <summary>
+        /// Key: <c>Map_PickOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+        /// </summary>
+        public const string MapPickOnMap = "Map_PickOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Point</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+        /// </summary>
+        public const string MapPoint = "Map_Point";
+
+        /// <summary>
+        /// Key: <c>Map_PointsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string MapPointsCount = "Map_PointsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+        /// </summary>
+        public const string MapPolygonNotSet = "Map_PolygonNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+        /// </summary>
+        public const string MapPolygonsCount = "Map_PolygonsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonSingle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+        /// </summary>
+        public const string MapPolygonSingle = "Map_PolygonSingle";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonUndefined</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+        /// </summary>
+        public const string MapPolygonUndefined = "Map_PolygonUndefined";
+
+        /// <summary>
+        /// Key: <c>Map_Recenter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+        /// </summary>
+        public const string MapRecenter = "Map_Recenter";
+
+        /// <summary>
+        /// Key: <c>Map_Remaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+        /// </summary>
+        public const string MapRemaining = "Map_Remaining";
+
+        /// <summary>
+        /// Key: <c>Map_Restaurants</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+        /// </summary>
+        public const string MapRestaurants = "Map_Restaurants";
+
+        /// <summary>
+        /// Key: <c>Map_Routes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+        /// </summary>
+        public const string MapRoutes = "Map_Routes";
+
+        /// <summary>
+        /// Key: <c>Map_RouteToHere</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+        /// </summary>
+        public const string MapRouteToHere = "Map_RouteToHere";
+
+        /// <summary>
+        /// Key: <c>Map_RouteType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+        /// </summary>
+        public const string MapRouteType = "Map_RouteType";
+
+        /// <summary>
+        /// Key: <c>Map_SearchingNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+        /// </summary>
+        public const string MapSearchingNearby = "Map_SearchingNearby";
+
+        /// <summary>
+        /// Key: <c>Map_SearchOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+        /// </summary>
+        public const string MapSearchOnMap = "Map_SearchOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+        /// </summary>
+        public const string MapSearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+        /// <summary>
+        /// Key: <c>Map_SelectAddressOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+        /// </summary>
+        public const string MapSelectAddressOnMap = "Map_SelectAddressOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+        /// </summary>
+        public const string MapSelectedAddress = "Map_SelectedAddress";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+        /// </summary>
+        public const string MapSelectedZone = "Map_SelectedZone";
+
+        /// <summary>
+        /// Key: <c>Map_SelectZoneOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+        /// </summary>
+        public const string MapSelectZoneOnMap = "Map_SelectZoneOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+        /// </summary>
+        public const string MapServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+        /// <summary>
+        /// Key: <c>Map_SetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+        /// </summary>
+        public const string MapSetZone = "Map_SetZone";
+
+        /// <summary>
+        /// Key: <c>Map_Speed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+        /// </summary>
+        public const string MapSpeed = "Map_Speed";
+
+        /// <summary>
+        /// Key: <c>Map_StartRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+        /// </summary>
+        public const string MapStartRoute = "Map_StartRoute";
+
+        /// <summary>
+        /// Key: <c>Map_StopNavigation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+        /// </summary>
+        public const string MapStopNavigation = "Map_StopNavigation";
+
+        /// <summary>
+        /// Key: <c>Map_Swap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+        /// </summary>
+        public const string MapSwap = "Map_Swap";
+
+        /// <summary>
         /// Key: <c>Map</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивная карта&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv xarita&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Map&quot;
         /// </summary>
         public const string MapText = "Map";
+
+        /// <summary>
+        /// Key: <c>Map_To</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+        /// </summary>
+        public const string MapTo = "Map_To";
+
+        /// <summary>
+        /// Key: <c>Map_ToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+        /// </summary>
+        public const string MapToRoute = "Map_ToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_View3D</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+        /// </summary>
+        public const string MapView3D = "Map_View3D";
+
+        /// <summary>
+        /// Key: <c>Map_VoiceGuidance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+        /// </summary>
+        public const string MapVoiceGuidance = "Map_VoiceGuidance";
+
+        /// <summary>
+        /// Key: <c>Map_WhereToEat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+        /// </summary>
+        public const string MapWhereToEat = "Map_WhereToEat";
+
+        /// <summary>
+        /// Key: <c>Map_ZoneNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+        /// </summary>
+        public const string MapZoneNotSet = "Map_ZoneNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_ZonesConfigured</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+        /// </summary>
+        public const string MapZonesConfigured = "Map_ZonesConfigured";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomIn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+        /// </summary>
+        public const string MapZoomIn = "Map_ZoomIn";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomOut</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+        /// </summary>
+        public const string MapZoomOut = "Map_ZoomOut";
 
         /// <summary>
         /// Key: <c>Merchant_ClickEnable</c><br/>
@@ -39555,12 +46417,428 @@ namespace Assets.Constants
         public const string OrderUnknownProduct = "Order_UnknownProduct";
 
         /// <summary>
+        /// Key: <c>Org_ActivePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+        /// </summary>
+        public const string Org_ActivePro = "Org_ActivePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeDefault</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+        /// </summary>
+        public const string Org_BadgeDefault = "Org_BadgeDefault";
+
+        /// <summary>
+        /// Key: <c>Org_BadgePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+        /// </summary>
+        public const string Org_BadgePro = "Org_BadgePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+        /// </summary>
+        public const string Org_BadgeTrialActive = "Org_BadgeTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+        /// </summary>
+        public const string Org_BadgeTrialExpired = "Org_BadgeTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+        /// </summary>
+        public const string Org_BadgeWithAds = "Org_BadgeWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_ConfirmActivation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+        /// </summary>
+        public const string Org_ConfirmActivation = "Org_ConfirmActivation";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectingPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+        /// </summary>
+        public const string Org_ConnectingPlan = "Org_ConnectingPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+        /// </summary>
+        public const string Org_ConnectPro = "Org_ConnectPro";
+
+        /// <summary>
+        /// Key: <c>Org_CurrentPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+        /// </summary>
+        public const string Org_CurrentPlan = "Org_CurrentPlan";
+
+        /// <summary>
+        /// Key: <c>Org_DescPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// </summary>
+        public const string Org_DescPro = "Org_DescPro";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+        /// </summary>
+        public const string Org_DescTrialActive = "Org_DescTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+        /// </summary>
+        public const string Org_DescTrialExpired = "Org_DescTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_DescWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+        /// </summary>
+        public const string Org_DescWithAds = "Org_DescWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineManage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+        /// </summary>
+        public const string Org_HeadlineManage = "Org_HeadlineManage";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlinePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+        /// </summary>
+        public const string Org_HeadlinePro = "Org_HeadlinePro";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+        /// </summary>
+        public const string Org_HeadlineTrialActive = "Org_HeadlineTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+        /// </summary>
+        public const string Org_HeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+        /// </summary>
+        public const string Org_HeadlineWithAds = "Org_HeadlineWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentClickPayme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+        /// </summary>
+        public const string Org_PaymentClickPayme = "Org_PaymentClickPayme";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentInvoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+        /// </summary>
+        public const string Org_PaymentInvoice = "Org_PaymentInvoice";
+
+        /// <summary>
+        /// Key: <c>Org_PlanAdsSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+        /// </summary>
+        public const string Org_PlanAdsSummary = "Org_PlanAdsSummary";
+
+        /// <summary>
+        /// Key: <c>Org_PlanProSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+        /// </summary>
+        public const string Org_PlanProSummary = "Org_PlanProSummary";
+
+        /// <summary>
+        /// Key: <c>Org_Recommended</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+        /// </summary>
+        public const string Org_Recommended = "Org_Recommended";
+
+        /// <summary>
+        /// Key: <c>Org_SelectPlanAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+        /// </summary>
+        public const string Org_SelectPlanAds = "Org_SelectPlanAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeature100NoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+        /// </summary>
+        public const string Org_TierFeature100NoAds = "Org_TierFeature100NoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureAllModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+        /// </summary>
+        public const string Org_TierFeatureAllModes = "Org_TierFeatureAllModes";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+        /// </summary>
+        public const string Org_TierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+        /// </summary>
+        public const string Org_TierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+        /// </summary>
+        public const string Org_TierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureNoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+        /// </summary>
+        public const string Org_TierFeatureNoAds = "Org_TierFeatureNoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+        /// </summary>
+        public const string Org_TierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+        /// </summary>
+        public const string Org_TierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+        /// </summary>
+        public const string Org_TierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+        /// <summary>
+        /// Key: <c>Org_TierProName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+        /// </summary>
+        public const string Org_TierProName = "Org_TierProName";
+
+        /// <summary>
+        /// Key: <c>Org_TierProPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+        /// </summary>
+        public const string Org_TierProPrice = "Org_TierProPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+        /// </summary>
+        public const string Org_TierTrialName = "Org_TierTrialName";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+        /// </summary>
+        public const string Org_TierTrialPrice = "Org_TierTrialPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+        /// </summary>
+        public const string Org_TierWithAdsName = "Org_TierWithAdsName";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+        /// </summary>
+        public const string Org_TierWithAdsPrice = "Org_TierWithAdsPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TrialDaysRemaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+        /// </summary>
+        public const string Org_TrialDaysRemaining = "Org_TrialDaysRemaining";
+
+        /// <summary>
+        /// Key: <c>Org_YouSelectedPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+        /// </summary>
+        public const string Org_YouSelectedPlan = "Org_YouSelectedPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ActivePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+        /// </summary>
+        public const string OrgActivePro = "Org_ActivePro";
+
+        /// <summary>
         /// Key: <c>Organizations</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations&quot;
         /// </summary>
         public const string OrganizationsText = "Organizations";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeDefault</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+        /// </summary>
+        public const string OrgBadgeDefault = "Org_BadgeDefault";
+
+        /// <summary>
+        /// Key: <c>Org_BadgePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+        /// </summary>
+        public const string OrgBadgePro = "Org_BadgePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+        /// </summary>
+        public const string OrgBadgeTrialActive = "Org_BadgeTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+        /// </summary>
+        public const string OrgBadgeTrialExpired = "Org_BadgeTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+        /// </summary>
+        public const string OrgBadgeWithAds = "Org_BadgeWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_ConfirmActivation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+        /// </summary>
+        public const string OrgConfirmActivation = "Org_ConfirmActivation";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectingPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+        /// </summary>
+        public const string OrgConnectingPlan = "Org_ConnectingPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+        /// </summary>
+        public const string OrgConnectPro = "Org_ConnectPro";
+
+        /// <summary>
+        /// Key: <c>Org_CurrentPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+        /// </summary>
+        public const string OrgCurrentPlan = "Org_CurrentPlan";
 
         /// <summary>
         /// Key: <c>OrgDemoBadge</c><br/>
@@ -39587,6 +46865,126 @@ namespace Assets.Constants
         public const string OrgDemoTitle = "OrgDemoTitle";
 
         /// <summary>
+        /// Key: <c>Org_DescPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// </summary>
+        public const string OrgDescPro = "Org_DescPro";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+        /// </summary>
+        public const string OrgDescTrialActive = "Org_DescTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+        /// </summary>
+        public const string OrgDescTrialExpired = "Org_DescTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_DescWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+        /// </summary>
+        public const string OrgDescWithAds = "Org_DescWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineManage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+        /// </summary>
+        public const string OrgHeadlineManage = "Org_HeadlineManage";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlinePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+        /// </summary>
+        public const string OrgHeadlinePro = "Org_HeadlinePro";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+        /// </summary>
+        public const string OrgHeadlineTrialActive = "Org_HeadlineTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+        /// </summary>
+        public const string OrgHeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+        /// </summary>
+        public const string OrgHeadlineWithAds = "Org_HeadlineWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentClickPayme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+        /// </summary>
+        public const string OrgPaymentClickPayme = "Org_PaymentClickPayme";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentInvoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+        /// </summary>
+        public const string OrgPaymentInvoice = "Org_PaymentInvoice";
+
+        /// <summary>
+        /// Key: <c>Org_PlanAdsSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+        /// </summary>
+        public const string OrgPlanAdsSummary = "Org_PlanAdsSummary";
+
+        /// <summary>
+        /// Key: <c>Org_PlanProSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+        /// </summary>
+        public const string OrgPlanProSummary = "Org_PlanProSummary";
+
+        /// <summary>
+        /// Key: <c>Org_Recommended</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+        /// </summary>
+        public const string OrgRecommended = "Org_Recommended";
+
+        /// <summary>
+        /// Key: <c>Org_SelectPlanAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+        /// </summary>
+        public const string OrgSelectPlanAds = "Org_SelectPlanAds";
+
+        /// <summary>
         /// Key: <c>OrgSocraticBadge</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
@@ -39609,6 +47007,142 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
         /// </summary>
         public const string OrgSocraticTitle = "OrgSocraticTitle";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeature100NoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+        /// </summary>
+        public const string OrgTierFeature100NoAds = "Org_TierFeature100NoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureAllModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+        /// </summary>
+        public const string OrgTierFeatureAllModes = "Org_TierFeatureAllModes";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+        /// </summary>
+        public const string OrgTierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+        /// </summary>
+        public const string OrgTierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+        /// </summary>
+        public const string OrgTierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureNoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+        /// </summary>
+        public const string OrgTierFeatureNoAds = "Org_TierFeatureNoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+        /// </summary>
+        public const string OrgTierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+        /// </summary>
+        public const string OrgTierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+        /// </summary>
+        public const string OrgTierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+        /// <summary>
+        /// Key: <c>Org_TierProName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+        /// </summary>
+        public const string OrgTierProName = "Org_TierProName";
+
+        /// <summary>
+        /// Key: <c>Org_TierProPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+        /// </summary>
+        public const string OrgTierProPrice = "Org_TierProPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+        /// </summary>
+        public const string OrgTierTrialName = "Org_TierTrialName";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+        /// </summary>
+        public const string OrgTierTrialPrice = "Org_TierTrialPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+        /// </summary>
+        public const string OrgTierWithAdsName = "Org_TierWithAdsName";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+        /// </summary>
+        public const string OrgTierWithAdsPrice = "Org_TierWithAdsPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TrialDaysRemaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+        /// </summary>
+        public const string OrgTrialDaysRemaining = "Org_TrialDaysRemaining";
+
+        /// <summary>
+        /// Key: <c>Org_YouSelectedPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+        /// </summary>
+        public const string OrgYouSelectedPlan = "Org_YouSelectedPlan";
 
         /// <summary>
         /// Key: <c>OwnerId</c><br/>
@@ -40491,6 +48025,14 @@ namespace Assets.Constants
         public const string PhoneText = "Phone";
 
         /// <summary>
+        /// Key: <c>Photo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Photo&quot;
+        /// </summary>
+        public const string PhotoText = "Photo";
+
+        /// <summary>
         /// Key: <c>PillarAnalyticsBadge</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
@@ -40811,6 +48353,30 @@ namespace Assets.Constants
         public const string PlatformWindowsDesc = "PlatformWindowsDesc";
 
         /// <summary>
+        /// Key: <c>PlayerLoadingVideo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка видео...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading video...&quot;
+        /// </summary>
+        public const string PlayerLoadingVideo = "PlayerLoadingVideo";
+
+        /// <summary>
+        /// Key: <c>PlayerPageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Медиаплеер — Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mediapleyer — Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Media Player — Socratic&quot;
+        /// </summary>
+        public const string PlayerPageTitle = "PlayerPageTitle";
+
+        /// <summary>
+        /// Key: <c>PlayerVideoNotFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ссылка на видео не найдена&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video havolasi topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Video link not found&quot;
+        /// </summary>
+        public const string PlayerVideoNotFound = "PlayerVideoNotFound";
+
+        /// <summary>
         /// Key: <c>PointsPresenceDesc</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
@@ -40939,12 +48505,668 @@ namespace Assets.Constants
         public const string Profile = "Profile";
 
         /// <summary>
+        /// Key: <c>Profile_CameraUnavailable</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+        /// </summary>
+        public const string Profile_CameraUnavailable = "Profile_CameraUnavailable";
+
+        /// <summary>
+        /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+        /// </summary>
+        public const string Profile_CenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+        /// <summary>
+        /// Key: <c>Profile_DeleteBiometrics</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+        /// </summary>
+        public const string Profile_DeleteBiometrics = "Profile_DeleteBiometrics";
+
+        /// <summary>
+        /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+        /// </summary>
+        public const string Profile_DeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_EditProfile</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+        /// </summary>
+        public const string Profile_EditProfile = "Profile_EditProfile";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceIdTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+        /// </summary>
+        public const string Profile_FaceIdTitle = "Profile_FaceIdTitle";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+        /// </summary>
+        public const string Profile_FaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_LinkedToAccount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+        /// </summary>
+        public const string Profile_LinkedToAccount = "Profile_LinkedToAccount";
+
+        /// <summary>
+        /// Key: <c>Profile_LookStraight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+        /// </summary>
+        public const string Profile_LookStraight = "Profile_LookStraight";
+
+        /// <summary>
+        /// Key: <c>Profile_NotLinked</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+        /// </summary>
+        public const string Profile_NotLinked = "Profile_NotLinked";
+
+        /// <summary>
+        /// Key: <c>Profile_SecurityAndLogin</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+        /// </summary>
+        public const string Profile_SecurityAndLogin = "Profile_SecurityAndLogin";
+
+        /// <summary>
+        /// Key: <c>Profile_SecuritySubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+        /// </summary>
+        public const string Profile_SecuritySubtext = "Profile_SecuritySubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
+        /// </summary>
+        public const string Profile_Title = "Profile_Title";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnLeft</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+        /// </summary>
+        public const string Profile_TurnLeft = "Profile_TurnLeft";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnRight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+        /// </summary>
+        public const string Profile_TurnRight = "Profile_TurnRight";
+
+        /// <summary>
+        /// Key: <c>Profile_UploadPhoto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+        /// </summary>
+        public const string Profile_UploadPhoto = "Profile_UploadPhoto";
+
+        /// <summary>
+        /// Key: <c>Profile_CameraUnavailable</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+        /// </summary>
+        public const string ProfileCameraUnavailable = "Profile_CameraUnavailable";
+
+        /// <summary>
+        /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+        /// </summary>
+        public const string ProfileCenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+        /// <summary>
+        /// Key: <c>Profile_DeleteBiometrics</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+        /// </summary>
+        public const string ProfileDeleteBiometrics = "Profile_DeleteBiometrics";
+
+        /// <summary>
+        /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+        /// </summary>
+        public const string ProfileDeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_EditProfile</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+        /// </summary>
+        public const string ProfileEditProfile = "Profile_EditProfile";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceIdTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+        /// </summary>
+        public const string ProfileFaceIdTitle = "Profile_FaceIdTitle";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+        /// </summary>
+        public const string ProfileFaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_LinkedToAccount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+        /// </summary>
+        public const string ProfileLinkedToAccount = "Profile_LinkedToAccount";
+
+        /// <summary>
+        /// Key: <c>Profile_LookStraight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+        /// </summary>
+        public const string ProfileLookStraight = "Profile_LookStraight";
+
+        /// <summary>
+        /// Key: <c>Profile_NotLinked</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+        /// </summary>
+        public const string ProfileNotLinked = "Profile_NotLinked";
+
+        /// <summary>
         /// Key: <c>Profiles</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Профили&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profillar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Profiles&quot;
         /// </summary>
         public const string Profiles = "Profiles";
+
+        /// <summary>
+        /// Key: <c>Profile_SecurityAndLogin</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+        /// </summary>
+        public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
+
+        /// <summary>
+        /// Key: <c>Profile_SecuritySubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+        /// </summary>
+        public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
+        /// </summary>
+        public const string ProfileTitleText = "Profile_Title";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnLeft</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+        /// </summary>
+        public const string ProfileTurnLeft = "Profile_TurnLeft";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnRight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+        /// </summary>
+        public const string ProfileTurnRight = "Profile_TurnRight";
+
+        /// <summary>
+        /// Key: <c>Profile_UploadPhoto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+        /// </summary>
+        public const string ProfileUploadPhoto = "Profile_UploadPhoto";
+
+        /// <summary>
+        /// Key: <c>Promo_BackToPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+        /// </summary>
+        public const string Promo_BackToPlans = "Promo_BackToPlans";
+
+        /// <summary>
+        /// Key: <c>Promo_ClickDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+        /// </summary>
+        public const string Promo_ClickDesc = "Promo_ClickDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_GoogleFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+        /// </summary>
+        public const string Promo_GoogleFeed = "Promo_GoogleFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_InvoiceFor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+        /// </summary>
+        public const string Promo_InvoiceFor = "Promo_InvoiceFor";
+
+        /// <summary>
+        /// Key: <c>Promo_OpenPaymentForm</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+        /// </summary>
+        public const string Promo_OpenPaymentForm = "Promo_OpenPaymentForm";
+
+        /// <summary>
+        /// Key: <c>Promo_PaidActivate</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+        /// </summary>
+        public const string Promo_PaidActivate = "Promo_PaidActivate";
+
+        /// <summary>
+        /// Key: <c>Promo_PayAmount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+        /// </summary>
+        public const string Promo_PayAmount = "Promo_PayAmount";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymeDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+        /// </summary>
+        public const string Promo_PaymeDesc = "Promo_PaymeDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymentMethod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+        /// </summary>
+        public const string Promo_PaymentMethod = "Promo_PaymentMethod";
+
+        /// <summary>
+        /// Key: <c>Promo_PopularChoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+        /// </summary>
+        public const string Promo_PopularChoice = "Promo_PopularChoice";
+
+        /// <summary>
+        /// Key: <c>Promo_PromotedProduct</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+        /// </summary>
+        public const string Promo_PromotedProduct = "Promo_PromotedProduct";
+
+        /// <summary>
+        /// Key: <c>Promo_QrCodeAlt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+        /// </summary>
+        public const string Promo_QrCodeAlt = "Promo_QrCodeAlt";
+
+        /// <summary>
+        /// Key: <c>Promo_QrInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+        /// </summary>
+        public const string Promo_QrInstruction = "Promo_QrInstruction";
+
+        /// <summary>
+        /// Key: <c>Promo_RedirectMessage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+        /// </summary>
+        public const string Promo_RedirectMessage = "Promo_RedirectMessage";
+
+        /// <summary>
+        /// Key: <c>Promo_Step1Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+        /// </summary>
+        public const string Promo_Step1Title = "Promo_Step1Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Step2Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+        /// </summary>
+        public const string Promo_Step2Title = "Promo_Step2Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Subtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+        /// </summary>
+        public const string Promo_Subtitle = "Promo_Subtitle";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+        /// </summary>
+        public const string Promo_SuccessDesc = "Promo_SuccessDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessHint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+        /// </summary>
+        public const string Promo_SuccessHint = "Promo_SuccessHint";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+        /// </summary>
+        public const string Promo_SuccessTitle = "Promo_SuccessTitle";
+
+        /// <summary>
+        /// Key: <c>Promo_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+        /// </summary>
+        public const string Promo_Title = "Promo_Title";
+
+        /// <summary>
+        /// Key: <c>Promo_UzQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+        /// </summary>
+        public const string Promo_UzQrDesc = "Promo_UzQrDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_UzumDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+        /// </summary>
+        public const string Promo_UzumDesc = "Promo_UzumDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_VerifyingPayment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+        /// </summary>
+        public const string Promo_VerifyingPayment = "Promo_VerifyingPayment";
+
+        /// <summary>
+        /// Key: <c>Promo_YandexFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+        /// </summary>
+        public const string Promo_YandexFeed = "Promo_YandexFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_BackToPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+        /// </summary>
+        public const string PromoBackToPlans = "Promo_BackToPlans";
+
+        /// <summary>
+        /// Key: <c>Promo_ClickDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+        /// </summary>
+        public const string PromoClickDesc = "Promo_ClickDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_GoogleFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+        /// </summary>
+        public const string PromoGoogleFeed = "Promo_GoogleFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_InvoiceFor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+        /// </summary>
+        public const string PromoInvoiceFor = "Promo_InvoiceFor";
+
+        /// <summary>
+        /// Key: <c>Promo_OpenPaymentForm</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+        /// </summary>
+        public const string PromoOpenPaymentForm = "Promo_OpenPaymentForm";
+
+        /// <summary>
+        /// Key: <c>Promo_PaidActivate</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+        /// </summary>
+        public const string PromoPaidActivate = "Promo_PaidActivate";
+
+        /// <summary>
+        /// Key: <c>Promo_PayAmount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+        /// </summary>
+        public const string PromoPayAmount = "Promo_PayAmount";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymeDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+        /// </summary>
+        public const string PromoPaymeDesc = "Promo_PaymeDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymentMethod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+        /// </summary>
+        public const string PromoPaymentMethod = "Promo_PaymentMethod";
+
+        /// <summary>
+        /// Key: <c>Promo_PopularChoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+        /// </summary>
+        public const string PromoPopularChoice = "Promo_PopularChoice";
+
+        /// <summary>
+        /// Key: <c>Promo_PromotedProduct</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+        /// </summary>
+        public const string PromoPromotedProduct = "Promo_PromotedProduct";
+
+        /// <summary>
+        /// Key: <c>Promo_QrCodeAlt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+        /// </summary>
+        public const string PromoQrCodeAlt = "Promo_QrCodeAlt";
+
+        /// <summary>
+        /// Key: <c>Promo_QrInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+        /// </summary>
+        public const string PromoQrInstruction = "Promo_QrInstruction";
+
+        /// <summary>
+        /// Key: <c>Promo_RedirectMessage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+        /// </summary>
+        public const string PromoRedirectMessage = "Promo_RedirectMessage";
+
+        /// <summary>
+        /// Key: <c>Promo_Step1Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+        /// </summary>
+        public const string PromoStep1Title = "Promo_Step1Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Step2Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+        /// </summary>
+        public const string PromoStep2Title = "Promo_Step2Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Subtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+        /// </summary>
+        public const string PromoSubtitle = "Promo_Subtitle";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+        /// </summary>
+        public const string PromoSuccessDesc = "Promo_SuccessDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessHint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+        /// </summary>
+        public const string PromoSuccessHint = "Promo_SuccessHint";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+        /// </summary>
+        public const string PromoSuccessTitle = "Promo_SuccessTitle";
+
+        /// <summary>
+        /// Key: <c>Promo_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+        /// </summary>
+        public const string PromoTitle = "Promo_Title";
+
+        /// <summary>
+        /// Key: <c>Promo_UzQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+        /// </summary>
+        public const string PromoUzQrDesc = "Promo_UzQrDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_UzumDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+        /// </summary>
+        public const string PromoUzumDesc = "Promo_UzumDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_VerifyingPayment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+        /// </summary>
+        public const string PromoVerifyingPayment = "Promo_VerifyingPayment";
+
+        /// <summary>
+        /// Key: <c>Promo_YandexFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+        /// </summary>
+        public const string PromoYandexFeed = "Promo_YandexFeed";
 
         /// <summary>
         /// Key: <c>QR_BackToTerminal</c><br/>
@@ -40977,6 +49199,182 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Back to Terminal&quot;
         /// </summary>
         public const string QRBackToTerminal = "QR_BackToTerminal";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет фона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Color&quot;
+        /// </summary>
+        public const string QrCustomizerBgColor = "QrCustomizerBgColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgColorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;BG Color&quot;
+        /// </summary>
+        public const string QrCustomizerBgColorShort = "QrCustomizerBgColorShort";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgFill</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заливка фона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Orqa fon to‘ldirishi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Fill&quot;
+        /// </summary>
+        public const string QrCustomizerBgFill = "QrCustomizerBgFill";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerDot</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Угловая точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak nuqtasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot&quot;
+        /// </summary>
+        public const string QrCustomizerCornerDot = "QrCustomizerCornerDot";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerDotColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет точки в углах&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchakdagi nuqta rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot Color&quot;
+        /// </summary>
+        public const string QrCustomizerCornerDotColor = "QrCustomizerCornerDotColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerStyle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль углов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchaklar uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Style&quot;
+        /// </summary>
+        public const string QrCustomizerCornerStyle = "QrCustomizerCornerStyle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots&quot;
+        /// </summary>
+        public const string QrCustomizerDots = "QrCustomizerDots";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDotsColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основной цвет точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalarning asosiy rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots Primary Color&quot;
+        /// </summary>
+        public const string QrCustomizerDotsColor = "QrCustomizerDotsColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDotStyle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dot Style&quot;
+        /// </summary>
+        public const string QrCustomizerDotStyle = "QrCustomizerDotStyle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerElements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета элементов QR&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR elementlari ranglari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Elements Colors&quot;
+        /// </summary>
+        public const string QrCustomizerElements = "QrCustomizerElements";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerEnd</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конец&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxiri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;End&quot;
+        /// </summary>
+        public const string QrCustomizerEnd = "QrCustomizerEnd";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerEndColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конечный цвет&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yakuniy rang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;End Color&quot;
+        /// </summary>
+        public const string QrCustomizerEndColor = "QrCustomizerEndColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerFrame</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рамка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ramka&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Frame&quot;
+        /// </summary>
+        public const string QrCustomizerFrame = "QrCustomizerFrame";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerFrameColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет рамки углов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak ramkasi rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Frame Color&quot;
+        /// </summary>
+        public const string QrCustomizerFrameColor = "QrCustomizerFrameColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientAngle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Угол градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient burchagi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Angle&quot;
+        /// </summary>
+        public const string QrCustomizerGradientAngle = "QrCustomizerGradientAngle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientColors</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient ranglari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Colors&quot;
+        /// </summary>
+        public const string QrCustomizerGradientColors = "QrCustomizerGradientColors";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Type&quot;
+        /// </summary>
+        public const string QrCustomizerGradientType = "QrCustomizerGradientType";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerShapes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стилизация форм элементов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Elementlar shakli uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Eye &amp;amp; Data Shape Styling&quot;
+        /// </summary>
+        public const string QrCustomizerShapes = "QrCustomizerShapes";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerSize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Размер QR-кода&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kod o‘lchami&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Size&quot;
+        /// </summary>
+        public const string QrCustomizerSize = "QrCustomizerSize";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Начало&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start&quot;
+        /// </summary>
+        public const string QrCustomizerStart = "QrCustomizerStart";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerStartColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Начальный цвет&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshlang‘ich rang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Color&quot;
+        /// </summary>
+        public const string QrCustomizerStartColor = "QrCustomizerStartColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить дизайн&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizaynni sozlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customize Design&quot;
+        /// </summary>
+        public const string QrCustomizerTitle = "QrCustomizerTitle";
 
         /// <summary>
         /// Key: <c>QRDesigner</c><br/>
@@ -47000,7 +55398,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (501 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (540 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -47035,6 +55433,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Close&quot;
         /// </summary>
         public const string ActionsClose = "Actions_Close";
+
+        /// <summary>
+        /// Key: <c>Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string AddressLabel = "Address";
+
+        /// <summary>
+        /// Key: <c>Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string AddressText = "Address";
 
         /// <summary>
         /// Key: <c>All</c><br/>
@@ -48354,6 +56768,14 @@ namespace Loc
         public const string Icon1 = "Icon1";
 
         /// <summary>
+        /// Key: <c>Id</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ID&quot;
+        /// </summary>
+        public const string Id = "Id";
+
+        /// <summary>
         /// Key: <c>Image</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Изображение&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
@@ -49578,6 +58000,22 @@ namespace Loc
         public const string PhoneText = "Phone";
 
         /// <summary>
+        /// Key: <c>Photo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Photo&quot;
+        /// </summary>
+        public const string PhotoLabel = "Photo";
+
+        /// <summary>
+        /// Key: <c>Photo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Photo&quot;
+        /// </summary>
+        public const string PhotoText = "Photo";
+
+        /// <summary>
         /// Key: <c>PillarAnalyticsBadge</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Учет &amp;amp; Аналитика&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob &amp;amp; Analitika&quot;<br/>
@@ -49898,6 +58336,30 @@ namespace Loc
         public const string PlatformWindowsDesc = "PlatformWindowsDesc";
 
         /// <summary>
+        /// Key: <c>PlayerLoadingVideo</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка видео...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading video...&quot;
+        /// </summary>
+        public const string PlayerLoadingVideo = "PlayerLoadingVideo";
+
+        /// <summary>
+        /// Key: <c>PlayerPageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Медиаплеер — Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mediapleyer — Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Media Player — Socratic&quot;
+        /// </summary>
+        public const string PlayerPageTitle = "PlayerPageTitle";
+
+        /// <summary>
+        /// Key: <c>PlayerVideoNotFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ссылка на видео не найдена&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Video havolasi topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Video link not found&quot;
+        /// </summary>
+        public const string PlayerVideoNotFound = "PlayerVideoNotFound";
+
+        /// <summary>
         /// Key: <c>PointsPresenceDesc</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Сеть магазинов, ресторанов, складов и ПВЗ с живым графиком работы, фильтрами категорий и определением ближайшей точки.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo filiallari, kofexona va olib ketish punktlarining interaktiv belgilari.&quot;<br/>
@@ -50050,12 +58512,260 @@ namespace Loc
         public const string Profile = "Profile";
 
         /// <summary>
+        /// Key: <c>Profile_CameraUnavailable</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+        /// </summary>
+        public const string Profile_CameraUnavailable = "Profile_CameraUnavailable";
+
+        /// <summary>
+        /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+        /// </summary>
+        public const string Profile_CenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+        /// <summary>
+        /// Key: <c>Profile_DeleteBiometrics</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+        /// </summary>
+        public const string Profile_DeleteBiometrics = "Profile_DeleteBiometrics";
+
+        /// <summary>
+        /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+        /// </summary>
+        public const string Profile_DeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_EditProfile</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+        /// </summary>
+        public const string Profile_EditProfile = "Profile_EditProfile";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceIdTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+        /// </summary>
+        public const string Profile_FaceIdTitle = "Profile_FaceIdTitle";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+        /// </summary>
+        public const string Profile_FaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_LinkedToAccount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+        /// </summary>
+        public const string Profile_LinkedToAccount = "Profile_LinkedToAccount";
+
+        /// <summary>
+        /// Key: <c>Profile_LookStraight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+        /// </summary>
+        public const string Profile_LookStraight = "Profile_LookStraight";
+
+        /// <summary>
+        /// Key: <c>Profile_NotLinked</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+        /// </summary>
+        public const string Profile_NotLinked = "Profile_NotLinked";
+
+        /// <summary>
+        /// Key: <c>Profile_SecurityAndLogin</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+        /// </summary>
+        public const string Profile_SecurityAndLogin = "Profile_SecurityAndLogin";
+
+        /// <summary>
+        /// Key: <c>Profile_SecuritySubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+        /// </summary>
+        public const string Profile_SecuritySubtext = "Profile_SecuritySubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
+        /// </summary>
+        public const string Profile_Title = "Profile_Title";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnLeft</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+        /// </summary>
+        public const string Profile_TurnLeft = "Profile_TurnLeft";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnRight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+        /// </summary>
+        public const string Profile_TurnRight = "Profile_TurnRight";
+
+        /// <summary>
+        /// Key: <c>Profile_UploadPhoto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+        /// </summary>
+        public const string Profile_UploadPhoto = "Profile_UploadPhoto";
+
+        /// <summary>
+        /// Key: <c>Profile_CameraUnavailable</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Камера недоступна&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera mavjud emas&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera Unavailable&quot;
+        /// </summary>
+        public const string ProfileCameraUnavailable = "Profile_CameraUnavailable";
+
+        /// <summary>
+        /// Key: <c>Profile_CenterFaceInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometriya 3D-shablonini fiksatsiya qilish uchun yuzingizni doira markaziga joylashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center your face in the circle to capture the 3D biometric master template.&quot;
+        /// </summary>
+        public const string ProfileCenterFaceInstruction = "Profile_CenterFaceInstruction";
+
+        /// <summary>
+        /// Key: <c>Profile_DeleteBiometrics</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить биометрию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biometrikani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Biometrics&quot;
+        /// </summary>
+        public const string ProfileDeleteBiometrics = "Profile_DeleteBiometrics";
+
+        /// <summary>
+        /// Key: <c>Profile_DeviceBiometricsSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Device Touch ID / Face ID login&quot;
+        /// </summary>
+        public const string ProfileDeviceBiometricsSubtext = "Profile_DeviceBiometricsSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_EditProfile</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать профиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profilni tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit Profile&quot;
+        /// </summary>
+        public const string ProfileEditProfile = "Profile_EditProfile";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceIdTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Face ID (Биометрия)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Face ID (Biometriya)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Face ID (Biometrics)&quot;
+        /// </summary>
+        public const string ProfileFaceIdTitle = "Profile_FaceIdTitle";
+
+        /// <summary>
+        /// Key: <c>Profile_FaceLoginSubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Camera glance login&quot;
+        /// </summary>
+        public const string ProfileFaceLoginSubtext = "Profile_FaceLoginSubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_LinkedToAccount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Привязано к аккаунту&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Akkauntga biriktirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Linked to Account&quot;
+        /// </summary>
+        public const string ProfileLinkedToAccount = "Profile_LinkedToAccount";
+
+        /// <summary>
+        /// Key: <c>Profile_LookStraight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;🎯 Смотрите прямо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;🎯 To'g'riga qarang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;🎯 Look Straight&quot;
+        /// </summary>
+        public const string ProfileLookStraight = "Profile_LookStraight";
+
+        /// <summary>
+        /// Key: <c>Profile_NotLinked</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не привязано&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biriktirilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Not Linked&quot;
+        /// </summary>
+        public const string ProfileNotLinked = "Profile_NotLinked";
+
+        /// <summary>
         /// Key: <c>Profiles</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Профили&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profillar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Profiles&quot;
         /// </summary>
         public const string Profiles = "Profiles";
+
+        /// <summary>
+        /// Key: <c>Profile_SecurityAndLogin</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безопасность и быстрый вход&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xavfsizlik va tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
+        /// </summary>
+        public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
+
+        /// <summary>
+        /// Key: <c>Profile_SecuritySubtext</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+        /// </summary>
+        public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnLeft</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👈 Поверните влево&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👈 Chapga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👈 Turn Left&quot;
+        /// </summary>
+        public const string ProfileTurnLeft = "Profile_TurnLeft";
+
+        /// <summary>
+        /// Key: <c>Profile_TurnRight</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;👉 Поверните вправо&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;👉 O'ngga buring&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;👉 Turn Right&quot;
+        /// </summary>
+        public const string ProfileTurnRight = "Profile_TurnRight";
+
+        /// <summary>
+        /// Key: <c>Profile_UploadPhoto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузить фото&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Surat yuklash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Upload Photo&quot;
+        /// </summary>
+        public const string ProfileUploadPhoto = "Profile_UploadPhoto";
 
         /// <summary>
         /// Key: <c>QRDesigner</c><br/>
@@ -61883,7 +70593,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Landing (303 keys). Use with <c>@using static Loc.Landing;</c>.
+    /// Domain group: Landing (411 keys). Use with <c>@using static Loc.Landing;</c>.
     /// </summary>
     public static class Landing
     {
@@ -62384,12 +71094,36 @@ namespace Loc
         public const string AboutVideoTitle = "About_VideoTitle";
 
         /// <summary>
+        /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+        /// </summary>
+        public const string Analytics_ActiveNomenclature = "Analytics_ActiveNomenclature";
+
+        /// <summary>
         /// Key: <c>Analytics_ActualSales</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
         /// </summary>
         public const string Analytics_ActualSales = "Analytics_ActualSales";
+
+        /// <summary>
+        /// Key: <c>Analytics_AllTime</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+        /// </summary>
+        public const string Analytics_AllTime = "Analytics_AllTime";
+
+        /// <summary>
+        /// Key: <c>Analytics_AovMetric</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+        /// </summary>
+        public const string Analytics_AovMetric = "Analytics_AovMetric";
 
         /// <summary>
         /// Key: <c>Analytics_AverageBill</c><br/>
@@ -62400,6 +71134,22 @@ namespace Loc
         public const string Analytics_AverageBill = "Analytics_AverageBill";
 
         /// <summary>
+        /// Key: <c>Analytics_Branches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string Analytics_Branches = "Analytics_Branches";
+
+        /// <summary>
+        /// Key: <c>Analytics_ByOrderLines</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+        /// </summary>
+        public const string Analytics_ByOrderLines = "Analytics_ByOrderLines";
+
+        /// <summary>
         /// Key: <c>Analytics_ByRevenue</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -62408,12 +71158,164 @@ namespace Loc
         public const string Analytics_ByRevenue = "Analytics_ByRevenue";
 
         /// <summary>
+        /// Key: <c>Analytics_ChecksUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+        /// </summary>
+        public const string Analytics_ChecksUnit = "Analytics_ChecksUnit";
+
+        /// <summary>
         /// Key: <c>Analytics_CompletedReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
         /// </summary>
         public const string Analytics_CompletedReceipts = "Analytics_CompletedReceipts";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+        /// </summary>
+        public const string Analytics_ConfigAovDesc = "Analytics_ConfigAovDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+        /// </summary>
+        public const string Analytics_ConfigAovTitle = "Analytics_ConfigAovTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+        /// </summary>
+        public const string Analytics_ConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+        /// </summary>
+        public const string Analytics_ConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string Analytics_ConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+        /// </summary>
+        public const string Analytics_ConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+        /// </summary>
+        public const string Analytics_ConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+        /// </summary>
+        public const string Analytics_ConfigModalDesc = "Analytics_ConfigModalDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+        /// </summary>
+        public const string Analytics_ConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+        /// </summary>
+        public const string Analytics_ConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+        /// </summary>
+        public const string Analytics_ConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+        /// </summary>
+        public const string Analytics_ConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+        /// </summary>
+        public const string Analytics_ConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+        /// </summary>
+        public const string Analytics_ConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+        /// </summary>
+        public const string Analytics_ConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+        /// </summary>
+        public const string Analytics_ConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+        /// </summary>
+        public const string Analytics_ConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+        /// </summary>
+        public const string Analytics_ConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
         /// <summary>
         /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -62440,6 +71342,14 @@ namespace Loc
         public const string Analytics_ConfigureTooltip = "Analytics_ConfigureTooltip";
 
         /// <summary>
+        /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+        /// </summary>
+        public const string Analytics_ConnectedNetwork = "Analytics_ConnectedNetwork";
+
+        /// <summary>
         /// Key: <c>Analytics_Dashboard</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -62454,6 +71364,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
         /// </summary>
         public const string Analytics_DistributionShare = "Analytics_DistributionShare";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+        /// </summary>
+        public const string Analytics_EntitiesRegistry = "Analytics_EntitiesRegistry";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+        /// </summary>
+        public const string Analytics_EntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
         /// <summary>
         /// Key: <c>Analytics_Explorer</c><br/>
@@ -62472,6 +71398,54 @@ namespace Loc
         public const string Analytics_FiscalRatio = "Analytics_FiscalRatio";
 
         /// <summary>
+        /// Key: <c>Analytics_ItemsSold</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+        /// </summary>
+        public const string Analytics_ItemsSold = "Analytics_ItemsSold";
+
+        /// <summary>
+        /// Key: <c>Analytics_ItemsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+        /// </summary>
+        public const string Analytics_ItemsUnit = "Analytics_ItemsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last30Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+        /// </summary>
+        public const string Analytics_Last30Days = "Analytics_Last30Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last7Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+        /// </summary>
+        public const string Analytics_Last7Days = "Analytics_Last7Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_MethodsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+        /// </summary>
+        public const string Analytics_MethodsUnit = "Analytics_MethodsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_NoDataPeriod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+        /// </summary>
+        public const string Analytics_NoDataPeriod = "Analytics_NoDataPeriod";
+
+        /// <summary>
         /// Key: <c>Analytics_OfdReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -62488,12 +71462,36 @@ namespace Loc
         public const string Analytics_OrdersCount = "Analytics_OrdersCount";
 
         /// <summary>
+        /// Key: <c>Analytics_OrdersShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+        /// </summary>
+        public const string Analytics_OrdersShort = "Analytics_OrdersShort";
+
+        /// <summary>
+        /// Key: <c>Analytics_OrderStatuses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+        /// </summary>
+        public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
         /// </summary>
         public const string Analytics_PaymentChannels = "Analytics_PaymentChannels";
+
+        /// <summary>
+        /// Key: <c>Analytics_PaymentMethods</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+        /// </summary>
+        public const string Analytics_PaymentMethods = "Analytics_PaymentMethods";
 
         /// <summary>
         /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -62510,6 +71508,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
         /// </summary>
         public const string Analytics_PerTransaction = "Analytics_PerTransaction";
+
+        /// <summary>
+        /// Key: <c>Analytics_PointsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string Analytics_PointsUnit = "Analytics_PointsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_ProductsCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+        /// </summary>
+        public const string Analytics_ProductsCatalog = "Analytics_ProductsCatalog";
 
         /// <summary>
         /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -62584,12 +71598,36 @@ namespace Loc
         public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_StatusesUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+        /// </summary>
+        public const string Analytics_StatusesUnit = "Analytics_StatusesUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+        /// </summary>
+        public const string Analytics_SuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+        /// <summary>
         /// Key: <c>Analytics_TerminalPerformance</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal &amp;amp; kiosk performance&quot;
         /// </summary>
         public const string Analytics_TerminalPerformance = "Analytics_TerminalPerformance";
+
+        /// <summary>
+        /// Key: <c>Analytics_Today</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+        /// </summary>
+        public const string Analytics_Today = "Analytics_Today";
 
         /// <summary>
         /// Key: <c>Analytics_TopProducts</c><br/>
@@ -62600,12 +71638,44 @@ namespace Loc
         public const string Analytics_TopProducts = "Analytics_TopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_VolumeItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+        /// </summary>
+        public const string Analytics_VolumeItems = "Analytics_VolumeItems";
+
+        /// <summary>
+        /// Key: <c>Analytics_ActiveNomenclature</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активная номенклатура&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol nomenklatura&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active catalog items&quot;
+        /// </summary>
+        public const string AnalyticsActiveNomenclature = "Analytics_ActiveNomenclature";
+
+        /// <summary>
         /// Key: <c>Analytics_ActualSales</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Реальные продажи&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Haqiqiy sotuvlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Actual sales&quot;
         /// </summary>
         public const string AnalyticsActualSales = "Analytics_ActualSales";
+
+        /// <summary>
+        /// Key: <c>Analytics_AllTime</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все время&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha vaqt&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All time&quot;
+        /// </summary>
+        public const string AnalyticsAllTime = "Analytics_AllTime";
+
+        /// <summary>
+        /// Key: <c>Analytics_AovMetric</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;AOV метрика&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;AOV ko'rsatkichi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;AOV metric&quot;
+        /// </summary>
+        public const string AnalyticsAovMetric = "Analytics_AovMetric";
 
         /// <summary>
         /// Key: <c>Analytics_AverageBill</c><br/>
@@ -62616,6 +71686,22 @@ namespace Loc
         public const string AnalyticsAverageBill = "Analytics_AverageBill";
 
         /// <summary>
+        /// Key: <c>Analytics_Branches</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string AnalyticsBranches = "Analytics_Branches";
+
+        /// <summary>
+        /// Key: <c>Analytics_ByOrderLines</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По строкам чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chek qatorlari bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By receipt lines&quot;
+        /// </summary>
+        public const string AnalyticsByOrderLines = "Analytics_ByOrderLines";
+
+        /// <summary>
         /// Key: <c>Analytics_ByRevenue</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;по выручке за выбранный период&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;tanlangan davr uchun tushum bo'yicha&quot;<br/>
@@ -62624,12 +71710,164 @@ namespace Loc
         public const string AnalyticsByRevenue = "Analytics_ByRevenue";
 
         /// <summary>
+        /// Key: <c>Analytics_ChecksUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;chek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;receipts&quot;
+        /// </summary>
+        public const string AnalyticsChecksUnit = "Analytics_ChecksUnit";
+
+        /// <summary>
         /// Key: <c>Analytics_CompletedReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Оформленные чеки&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmilashtirilgan cheklar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Completed receipts&quot;
         /// </summary>
         public const string AnalyticsCompletedReceipts = "Analytics_CompletedReceipts";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средняя сумма одного заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bitta buyurtmaning o'rtacha summasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average value per order&quot;
+        /// </summary>
+        public const string AnalyticsConfigAovDesc = "Analytics_ConfigAovDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigAovTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Средний чек (AOV)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'rtacha chek (AOV)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Average Order Value (AOV)&quot;
+        /// </summary>
+        public const string AnalyticsConfigAovTitle = "Analytics_ConfigAovTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigApplyBtn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Применить настройки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sozlamalarni qo'llash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Apply Settings&quot;
+        /// </summary>
+        public const string AnalyticsConfigApplyBtn = "Analytics_ConfigApplyBtn";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество подключенных объектов сети&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarmoqqa ulangan obyektlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of connected network venues&quot;
+        /// </summary>
+        public const string AnalyticsConfigBranchesDesc = "Analytics_ConfigBranchesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigBranchesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Филиалы и заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Filiallar va maskanlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branches &amp;amp; Venues&quot;
+        /// </summary>
+        public const string AnalyticsConfigBranchesTitle = "Analytics_ConfigBranchesTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Суммарное количество проданных блюд/позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan taomlar/tovarlarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total quantity of sold items/dishes&quot;
+        /// </summary>
+        public const string AnalyticsConfigItemsDesc = "Analytics_ConfigItemsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigItemsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц товара&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan tovar birliklari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items Sold&quot;
+        /// </summary>
+        public const string AnalyticsConfigItemsTitle = "Analytics_ConfigItemsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigModalDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите карточки и блоки, которые должны отображаться на вашем дашборде.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv panelida ko'rsatilishi kerak bo'lgan kartalar va bloklarni tanlang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select the cards and sections that should appear on your dashboard.&quot;
+        /// </summary>
+        public const string AnalyticsConfigModalDesc = "Analytics_ConfigModalDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Общее число оформленных чеков&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiylashtirilgan cheklarning umumiy soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Total number of completed receipts&quot;
+        /// </summary>
+        public const string AnalyticsConfigOrdersDesc = "Analytics_ConfigOrdersDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigOrdersTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of Orders&quot;
+        /// </summary>
+        public const string AnalyticsConfigOrdersTitle = "Analytics_ConfigOrdersTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доля Payme, Click, Soliq QR и наличных&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme, Click, Soliq QR va naqd pul ulushi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Share of Payme, Click, Soliq QR and Cash&quot;
+        /// </summary>
+        public const string AnalyticsConfigPaymentsDesc = "Analytics_ConfigPaymentsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigPaymentsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Methods&quot;
+        /// </summary>
+        public const string AnalyticsConfigPaymentsTitle = "Analytics_ConfigPaymentsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Число активных товаров в системе&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizimdagi faol tovarlar soni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Number of active products in system&quot;
+        /// </summary>
+        public const string AnalyticsConfigProductsDesc = "Analytics_ConfigProductsDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigProductsTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог номенклатуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomenklatura katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog&quot;
+        /// </summary>
+        public const string AnalyticsConfigProductsTitle = "Analytics_ConfigProductsTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Показывает сумму продаж за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davrdagi savdo hajmini ko'rsatadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Shows sales volume for the selected period&quot;
+        /// </summary>
+        public const string AnalyticsConfigRevenueDesc = "Analytics_ConfigRevenueDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigRevenueTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выручка и оборот&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tushum va aylanma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Revenue &amp;amp; Turnover&quot;
+        /// </summary>
+        public const string AnalyticsConfigRevenueTitle = "Analytics_ConfigRevenueTitle";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Распределение чеков по этапам жизненного цикла&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheklarning hayot sikli bosqichlari bo'yicha taqsimoti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Distribution of receipts across lifecycle stages&quot;
+        /// </summary>
+        public const string AnalyticsConfigStatusesDesc = "Analytics_ConfigStatusesDesc";
+
+        /// <summary>
+        /// Key: <c>Analytics_ConfigStatusesTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Statuses&quot;
+        /// </summary>
+        public const string AnalyticsConfigStatusesTitle = "Analytics_ConfigStatusesTitle";
 
         /// <summary>
         /// Key: <c>Analytics_ConfigTitle</c><br/>
@@ -62656,6 +71894,14 @@ namespace Loc
         public const string AnalyticsConfigureTooltip = "Analytics_ConfigureTooltip";
 
         /// <summary>
+        /// Key: <c>Analytics_ConnectedNetwork</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключенная сеть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ulangan tarmoq&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connected network&quot;
+        /// </summary>
+        public const string AnalyticsConnectedNetwork = "Analytics_ConnectedNetwork";
+
+        /// <summary>
         /// Key: <c>Analytics_Dashboard</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Дашборд&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqaruv paneli&quot;<br/>
@@ -62670,6 +71916,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;distribution shares&quot;
         /// </summary>
         public const string AnalyticsDistributionShare = "Analytics_DistributionShare";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistry</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Табличный реестр сущностей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjudotlarning jadvalli reyestri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tabular Entity Registry&quot;
+        /// </summary>
+        public const string AnalyticsEntitiesRegistry = "Analytics_EntitiesRegistry";
+
+        /// <summary>
+        /// Key: <c>Analytics_EntitiesRegistryDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите сущность для детального табличного просмотра и работы со строками&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Batafsil jadvalli ko'rish va qatorlar bilan ishlash uchun obyektni tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select an entity for detailed tabular view and row operations&quot;
+        /// </summary>
+        public const string AnalyticsEntitiesRegistryDesc = "Analytics_EntitiesRegistryDesc";
 
         /// <summary>
         /// Key: <c>Analytics_Explorer</c><br/>
@@ -62688,6 +71950,54 @@ namespace Loc
         public const string AnalyticsFiscalRatio = "Analytics_FiscalRatio";
 
         /// <summary>
+        /// Key: <c>Analytics_ItemsSold</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продано единиц&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotilgan birliklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items sold&quot;
+        /// </summary>
+        public const string AnalyticsItemsSold = "Analytics_ItemsSold";
+
+        /// <summary>
+        /// Key: <c>Analytics_ItemsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;шт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dona&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;pcs.&quot;
+        /// </summary>
+        public const string AnalyticsItemsUnit = "Analytics_ItemsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last30Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;30 days&quot;
+        /// </summary>
+        public const string AnalyticsLast30Days = "Analytics_Last30Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_Last7Days</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;7 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;7 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;7 days&quot;
+        /// </summary>
+        public const string AnalyticsLast7Days = "Analytics_Last7Days";
+
+        /// <summary>
+        /// Key: <c>Analytics_MethodsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;методов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;usul&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;methods&quot;
+        /// </summary>
+        public const string AnalyticsMethodsUnit = "Analytics_MethodsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_NoDataPeriod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нет данных за выбранный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan davr uchun ma'lumotlar yo'q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No data for selected period&quot;
+        /// </summary>
+        public const string AnalyticsNoDataPeriod = "Analytics_NoDataPeriod";
+
+        /// <summary>
         /// Key: <c>Analytics_OfdReceipts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Чеки ОФД ГНК&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;DSQ OFD cheklari&quot;<br/>
@@ -62704,12 +72014,36 @@ namespace Loc
         public const string AnalyticsOrdersCount = "Analytics_OrdersCount";
 
         /// <summary>
+        /// Key: <c>Analytics_OrdersShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;зак.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;ord.&quot;
+        /// </summary>
+        public const string AnalyticsOrdersShort = "Analytics_OrdersShort";
+
+        /// <summary>
+        /// Key: <c>Analytics_OrderStatuses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Статусы заказов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma holatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
+        /// </summary>
+        public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Каналы оплаты&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov kanallari&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment channels&quot;
         /// </summary>
         public const string AnalyticsPaymentChannels = "Analytics_PaymentChannels";
+
+        /// <summary>
+        /// Key: <c>Analytics_PaymentMethods</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способы оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usullari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment methods&quot;
+        /// </summary>
+        public const string AnalyticsPaymentMethods = "Analytics_PaymentMethods";
 
         /// <summary>
         /// Key: <c>Analytics_PeriodLabel</c><br/>
@@ -62726,6 +72060,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Per transaction&quot;
         /// </summary>
         public const string AnalyticsPerTransaction = "Analytics_PerTransaction";
+
+        /// <summary>
+        /// Key: <c>Analytics_PointsUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string AnalyticsPointsUnit = "Analytics_PointsUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_ProductsCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product catalog&quot;
+        /// </summary>
+        public const string AnalyticsProductsCatalog = "Analytics_ProductsCatalog";
 
         /// <summary>
         /// Key: <c>Analytics_RealtimeStatus</c><br/>
@@ -62800,6 +72150,22 @@ namespace Loc
         public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_StatusesUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;statuses&quot;
+        /// </summary>
+        public const string AnalyticsStatusesUnit = "Analytics_StatusesUnit";
+
+        /// <summary>
+        /// Key: <c>Analytics_SuccessfullyCompleted</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно оформлено&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli rasmiylashtirilgan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully completed&quot;
+        /// </summary>
+        public const string AnalyticsSuccessfullyCompleted = "Analytics_SuccessfullyCompleted";
+
+        /// <summary>
         /// Key: <c>Analytics_TerminalPerformance</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Эффективность терминалов и киосков&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar va kiosklar samaradorligi&quot;<br/>
@@ -62816,12 +72182,28 @@ namespace Loc
         public const string AnalyticsText = "Analytics";
 
         /// <summary>
+        /// Key: <c>Analytics_Today</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сегодня&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bugun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Today&quot;
+        /// </summary>
+        public const string AnalyticsToday = "Analytics_Today";
+
+        /// <summary>
         /// Key: <c>Analytics_TopProducts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Топ продаваемых позиций&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Eng ko'p sotiladigan tovarlar&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top selling items&quot;
         /// </summary>
         public const string AnalyticsTopProducts = "Analytics_TopProducts";
+
+        /// <summary>
+        /// Key: <c>Analytics_VolumeItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Объем позиций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar hajmi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
+        /// </summary>
+        public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
 
         /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -63840,6 +73222,14 @@ namespace Loc
         public const string LandingHorecaPillSms = "LandingHorecaPillSms";
 
         /// <summary>
+        /// Key: <c>LandingKeywords</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic&quot;
+        /// </summary>
+        public const string LandingKeywords = "LandingKeywords";
+
+        /// <summary>
         /// Key: <c>LandingLaunchBtn</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo&quot;<br/>
@@ -64232,6 +73622,14 @@ namespace Loc
         public const string LandingShowingLabel = "LandingShowingLabel";
 
         /// <summary>
+        /// Key: <c>LandingSoliqCashback</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Soliq ОФД • 1% Кешбэк&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq OFD • 1% Keshbek&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq OFD • 1% Cashback&quot;
+        /// </summary>
+        public const string LandingSoliqCashback = "LandingSoliqCashback";
+
+        /// <summary>
         /// Key: <c>LandingUxModesBadge</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;28 Архитектурных UX-Режимов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta arxitektura UX-rejimlari&quot;<br/>
@@ -64286,6 +73684,182 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Back to Terminal&quot;
         /// </summary>
         public const string QRBackToTerminal = "QR_BackToTerminal";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет фона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Color&quot;
+        /// </summary>
+        public const string QrCustomizerBgColor = "QrCustomizerBgColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgColorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Fon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;BG Color&quot;
+        /// </summary>
+        public const string QrCustomizerBgColorShort = "QrCustomizerBgColorShort";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerBgFill</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заливка фона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Orqa fon to‘ldirishi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Background Fill&quot;
+        /// </summary>
+        public const string QrCustomizerBgFill = "QrCustomizerBgFill";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerDot</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Угловая точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak nuqtasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot&quot;
+        /// </summary>
+        public const string QrCustomizerCornerDot = "QrCustomizerCornerDot";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerDotColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет точки в углах&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchakdagi nuqta rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Dot Color&quot;
+        /// </summary>
+        public const string QrCustomizerCornerDotColor = "QrCustomizerCornerDotColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerCornerStyle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль углов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchaklar uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Style&quot;
+        /// </summary>
+        public const string QrCustomizerCornerStyle = "QrCustomizerCornerStyle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDots</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots&quot;
+        /// </summary>
+        public const string QrCustomizerDots = "QrCustomizerDots";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDotsColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основной цвет точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalarning asosiy rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dots Primary Color&quot;
+        /// </summary>
+        public const string QrCustomizerDotsColor = "QrCustomizerDotsColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerDotStyle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стиль точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtalar uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dot Style&quot;
+        /// </summary>
+        public const string QrCustomizerDotStyle = "QrCustomizerDotStyle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerElements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета элементов QR&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR elementlari ranglari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Elements Colors&quot;
+        /// </summary>
+        public const string QrCustomizerElements = "QrCustomizerElements";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerEnd</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конец&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxiri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;End&quot;
+        /// </summary>
+        public const string QrCustomizerEnd = "QrCustomizerEnd";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerEndColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Конечный цвет&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yakuniy rang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;End Color&quot;
+        /// </summary>
+        public const string QrCustomizerEndColor = "QrCustomizerEndColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerFrame</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рамка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ramka&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Frame&quot;
+        /// </summary>
+        public const string QrCustomizerFrame = "QrCustomizerFrame";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerFrameColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвет рамки углов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Burchak ramkasi rangi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Corner Frame Color&quot;
+        /// </summary>
+        public const string QrCustomizerFrameColor = "QrCustomizerFrameColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientAngle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Угол градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient burchagi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Angle&quot;
+        /// </summary>
+        public const string QrCustomizerGradientAngle = "QrCustomizerGradientAngle";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientColors</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Цвета градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient ranglari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Colors&quot;
+        /// </summary>
+        public const string QrCustomizerGradientColors = "QrCustomizerGradientColors";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerGradientType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип градиента&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Gradient turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gradient Type&quot;
+        /// </summary>
+        public const string QrCustomizerGradientType = "QrCustomizerGradientType";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerShapes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Стилизация форм элементов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Elementlar shakli uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Eye &amp;amp; Data Shape Styling&quot;
+        /// </summary>
+        public const string QrCustomizerShapes = "QrCustomizerShapes";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerSize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Размер QR-кода&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR-kod o‘lchami&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;QR Code Size&quot;
+        /// </summary>
+        public const string QrCustomizerSize = "QrCustomizerSize";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Начало&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start&quot;
+        /// </summary>
+        public const string QrCustomizerStart = "QrCustomizerStart";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerStartColor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Начальный цвет&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshlang‘ich rang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Color&quot;
+        /// </summary>
+        public const string QrCustomizerStartColor = "QrCustomizerStartColor";
+
+        /// <summary>
+        /// Key: <c>QrCustomizerTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настроить дизайн&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizaynni sozlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customize Design&quot;
+        /// </summary>
+        public const string QrCustomizerTitle = "QrCustomizerTitle";
 
         /// <summary>
         /// Key: <c>QR_SearchProducts</c><br/>
@@ -64653,6 +74227,2029 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Your Lucky Numbers in the Draw:&quot;
         /// </summary>
         public const string YourNumbers = "Lottery_YourNumbers";
+
+    }
+
+    /// <summary>
+    /// Domain group: Map (252 keys). Use with <c>@using static Loc.Map;</c>.
+    /// </summary>
+    public static class Map
+    {
+        /// <summary>
+        /// Key: <c>Map_AboutPlace</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+        /// </summary>
+        public const string AboutPlace = "Map_AboutPlace";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveMultipleZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+        /// </summary>
+        public const string ActiveMultipleZones = "Map_ActiveMultipleZones";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveSingleZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+        /// </summary>
+        public const string ActiveSingleZone = "Map_ActiveSingleZone";
+
+        /// <summary>
+        /// Key: <c>Map_AddPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+        /// </summary>
+        public const string AddPoint = "Map_AddPoint";
+
+        /// <summary>
+        /// Key: <c>Map_AddressNotSelected</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+        /// </summary>
+        public const string AddressNotSelected = "Map_AddressNotSelected";
+
+        /// <summary>
+        /// Key: <c>Map_AddressOrPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+        /// </summary>
+        public const string AddressOrPoint = "Map_AddressOrPoint";
+
+        /// <summary>
+        /// Key: <c>Map_AddToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+        /// </summary>
+        public const string AddToRoute = "Map_AddToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Arrival</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+        /// </summary>
+        public const string Arrival = "Map_Arrival";
+
+        /// <summary>
+        /// Key: <c>Map_BookSeat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+        /// </summary>
+        public const string BookSeat = "Map_BookSeat";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+        /// </summary>
+        public const string BuildRoute = "Map_BuildRoute";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRouteAction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+        /// </summary>
+        public const string BuildRouteAction = "Map_BuildRouteAction";
+
+        /// <summary>
+        /// Key: <c>Map_ChangeOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+        /// </summary>
+        public const string ChangeOnMap = "Map_ChangeOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ClearAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+        /// </summary>
+        public const string ClearAddress = "Map_ClearAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ClickMapToSetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+        /// </summary>
+        public const string ClickMapToSetZone = "Map_ClickMapToSetZone";
+
+        /// <summary>
+        /// Key: <c>Map_CloseRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+        /// </summary>
+        public const string CloseRoute = "Map_CloseRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Collapse</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+        /// </summary>
+        public const string Collapse = "Map_Collapse";
+
+        /// <summary>
+        /// Key: <c>Map_Coordinates</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+        /// </summary>
+        public const string Coordinates = "Map_Coordinates";
+
+        /// <summary>
+        /// Key: <c>Map_DeletePoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+        /// </summary>
+        public const string DeletePoint = "Map_DeletePoint";
+
+        /// <summary>
+        /// Key: <c>Map_DeleteZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+        /// </summary>
+        public const string DeleteZone = "Map_DeleteZone";
+
+        /// <summary>
+        /// Key: <c>Map_EditOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+        /// </summary>
+        public const string EditOnMap = "Map_EditOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Expand</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+        /// </summary>
+        public const string ExpandText = "Map_Expand";
+
+        /// <summary>
+        /// Key: <c>Map_Floor1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+        /// </summary>
+        public const string Floor1 = "Map_Floor1";
+
+        /// <summary>
+        /// Key: <c>Map_Floor2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+        /// </summary>
+        public const string Floor2 = "Map_Floor2";
+
+        /// <summary>
+        /// Key: <c>Map_Floor3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+        /// </summary>
+        public const string Floor3 = "Map_Floor3";
+
+        /// <summary>
+        /// Key: <c>Map_FloorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+        /// </summary>
+        public const string FloorShort = "Map_FloorShort";
+
+        /// <summary>
+        /// Key: <c>Map_From</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+        /// </summary>
+        public const string From = "Map_From";
+
+        /// <summary>
+        /// Key: <c>Map_GasStations</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+        /// </summary>
+        public const string GasStations = "Map_GasStations";
+
+        /// <summary>
+        /// Key: <c>Map_Groceries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+        /// </summary>
+        public const string Groceries = "Map_Groceries";
+
+        /// <summary>
+        /// Key: <c>Map_HallDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+        /// </summary>
+        public const string HallDesigner = "Map_HallDesigner";
+
+        /// <summary>
+        /// Key: <c>Map_KmPerHour</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+        /// </summary>
+        public const string KmPerHour = "Map_KmPerHour";
+
+        /// <summary>
+        /// Key: <c>Map_LoadingRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+        /// </summary>
+        public const string LoadingRoute = "Map_LoadingRoute";
+
+        /// <summary>
+        /// Key: <c>Map_LocationOrAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+        /// </summary>
+        public const string LocationOrAddress = "Map_LocationOrAddress";
+
+        /// <summary>
+        /// Key: <c>Map_AboutPlace</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+        /// </summary>
+        public const string Map_AboutPlace = "Map_AboutPlace";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveMultipleZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+        /// </summary>
+        public const string Map_ActiveMultipleZones = "Map_ActiveMultipleZones";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveSingleZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+        /// </summary>
+        public const string Map_ActiveSingleZone = "Map_ActiveSingleZone";
+
+        /// <summary>
+        /// Key: <c>Map_AddPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+        /// </summary>
+        public const string Map_AddPoint = "Map_AddPoint";
+
+        /// <summary>
+        /// Key: <c>Map_Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string Map_Address = "Map_Address";
+
+        /// <summary>
+        /// Key: <c>Map_AddressNotSelected</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+        /// </summary>
+        public const string Map_AddressNotSelected = "Map_AddressNotSelected";
+
+        /// <summary>
+        /// Key: <c>Map_AddressOrPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+        /// </summary>
+        public const string Map_AddressOrPoint = "Map_AddressOrPoint";
+
+        /// <summary>
+        /// Key: <c>Map_AddToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+        /// </summary>
+        public const string Map_AddToRoute = "Map_AddToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Arrival</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+        /// </summary>
+        public const string Map_Arrival = "Map_Arrival";
+
+        /// <summary>
+        /// Key: <c>Map_BookSeat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+        /// </summary>
+        public const string Map_BookSeat = "Map_BookSeat";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+        /// </summary>
+        public const string Map_BuildRoute = "Map_BuildRoute";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRouteAction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+        /// </summary>
+        public const string Map_BuildRouteAction = "Map_BuildRouteAction";
+
+        /// <summary>
+        /// Key: <c>Map_ChangeOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+        /// </summary>
+        public const string Map_ChangeOnMap = "Map_ChangeOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ClearAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+        /// </summary>
+        public const string Map_ClearAddress = "Map_ClearAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ClickMapToSetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+        /// </summary>
+        public const string Map_ClickMapToSetZone = "Map_ClickMapToSetZone";
+
+        /// <summary>
+        /// Key: <c>Map_CloseRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+        /// </summary>
+        public const string Map_CloseRoute = "Map_CloseRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Collapse</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+        /// </summary>
+        public const string Map_Collapse = "Map_Collapse";
+
+        /// <summary>
+        /// Key: <c>Map_Coordinates</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+        /// </summary>
+        public const string Map_Coordinates = "Map_Coordinates";
+
+        /// <summary>
+        /// Key: <c>Map_DeletePoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+        /// </summary>
+        public const string Map_DeletePoint = "Map_DeletePoint";
+
+        /// <summary>
+        /// Key: <c>Map_DeleteZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+        /// </summary>
+        public const string Map_DeleteZone = "Map_DeleteZone";
+
+        /// <summary>
+        /// Key: <c>Map_Description</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+        /// </summary>
+        public const string Map_Description = "Map_Description";
+
+        /// <summary>
+        /// Key: <c>Map_EditOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+        /// </summary>
+        public const string Map_EditOnMap = "Map_EditOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Expand</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+        /// </summary>
+        public const string Map_Expand = "Map_Expand";
+
+        /// <summary>
+        /// Key: <c>Map_Floor1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+        /// </summary>
+        public const string Map_Floor1 = "Map_Floor1";
+
+        /// <summary>
+        /// Key: <c>Map_Floor2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+        /// </summary>
+        public const string Map_Floor2 = "Map_Floor2";
+
+        /// <summary>
+        /// Key: <c>Map_Floor3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+        /// </summary>
+        public const string Map_Floor3 = "Map_Floor3";
+
+        /// <summary>
+        /// Key: <c>Map_FloorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+        /// </summary>
+        public const string Map_FloorShort = "Map_FloorShort";
+
+        /// <summary>
+        /// Key: <c>Map_From</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+        /// </summary>
+        public const string Map_From = "Map_From";
+
+        /// <summary>
+        /// Key: <c>Map_GasStations</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+        /// </summary>
+        public const string Map_GasStations = "Map_GasStations";
+
+        /// <summary>
+        /// Key: <c>Map_Groceries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+        /// </summary>
+        public const string Map_Groceries = "Map_Groceries";
+
+        /// <summary>
+        /// Key: <c>Map_HallDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+        /// </summary>
+        public const string Map_HallDesigner = "Map_HallDesigner";
+
+        /// <summary>
+        /// Key: <c>Map_KmPerHour</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+        /// </summary>
+        public const string Map_KmPerHour = "Map_KmPerHour";
+
+        /// <summary>
+        /// Key: <c>Map_LoadingRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+        /// </summary>
+        public const string Map_LoadingRoute = "Map_LoadingRoute";
+
+        /// <summary>
+        /// Key: <c>Map_LocationOrAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+        /// </summary>
+        public const string Map_LocationOrAddress = "Map_LocationOrAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+        /// </summary>
+        public const string Map_ModeAll = "Map_ModeAll";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAllRoutes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+        /// </summary>
+        public const string Map_ModeAllRoutes = "Map_ModeAllRoutes";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAuto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+        /// </summary>
+        public const string Map_ModeAuto = "Map_ModeAuto";
+
+        /// <summary>
+        /// Key: <c>Map_ModeBike</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+        /// </summary>
+        public const string Map_ModeBike = "Map_ModeBike";
+
+        /// <summary>
+        /// Key: <c>Map_ModePublic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+        /// </summary>
+        public const string Map_ModePublic = "Map_ModePublic";
+
+        /// <summary>
+        /// Key: <c>Map_ModeScooter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+        /// </summary>
+        public const string Map_ModeScooter = "Map_ModeScooter";
+
+        /// <summary>
+        /// Key: <c>Map_ModeTaxi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+        /// </summary>
+        public const string Map_ModeTaxi = "Map_ModeTaxi";
+
+        /// <summary>
+        /// Key: <c>Map_ModeWalk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+        /// </summary>
+        public const string Map_ModeWalk = "Map_ModeWalk";
+
+        /// <summary>
+        /// Key: <c>Map_MyLocation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+        /// </summary>
+        public const string Map_MyLocation = "Map_MyLocation";
+
+        /// <summary>
+        /// Key: <c>Map_Nearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+        /// </summary>
+        public const string Map_Nearby = "Map_Nearby";
+
+        /// <summary>
+        /// Key: <c>Map_NearbyResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+        /// </summary>
+        public const string Map_NearbyResults = "Map_NearbyResults";
+
+        /// <summary>
+        /// Key: <c>Map_NothingFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+        /// </summary>
+        public const string Map_NothingFound = "Map_NothingFound";
+
+        /// <summary>
+        /// Key: <c>Map_Optimize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+        /// </summary>
+        public const string Map_Optimize = "Map_Optimize";
+
+        /// <summary>
+        /// Key: <c>Map_Optimizing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+        /// </summary>
+        public const string Map_Optimizing = "Map_Optimizing";
+
+        /// <summary>
+        /// Key: <c>Map_Pharmacies</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+        /// </summary>
+        public const string Map_Pharmacies = "Map_Pharmacies";
+
+        /// <summary>
+        /// Key: <c>Map_PickOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+        /// </summary>
+        public const string Map_PickOnMap = "Map_PickOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Point</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+        /// </summary>
+        public const string Map_Point = "Map_Point";
+
+        /// <summary>
+        /// Key: <c>Map_PointsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string Map_PointsCount = "Map_PointsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+        /// </summary>
+        public const string Map_PolygonNotSet = "Map_PolygonNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+        /// </summary>
+        public const string Map_PolygonsCount = "Map_PolygonsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonSingle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+        /// </summary>
+        public const string Map_PolygonSingle = "Map_PolygonSingle";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonUndefined</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+        /// </summary>
+        public const string Map_PolygonUndefined = "Map_PolygonUndefined";
+
+        /// <summary>
+        /// Key: <c>Map_Recenter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+        /// </summary>
+        public const string Map_Recenter = "Map_Recenter";
+
+        /// <summary>
+        /// Key: <c>Map_Remaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+        /// </summary>
+        public const string Map_Remaining = "Map_Remaining";
+
+        /// <summary>
+        /// Key: <c>Map_Restaurants</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+        /// </summary>
+        public const string Map_Restaurants = "Map_Restaurants";
+
+        /// <summary>
+        /// Key: <c>Map_Routes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+        /// </summary>
+        public const string Map_Routes = "Map_Routes";
+
+        /// <summary>
+        /// Key: <c>Map_RouteToHere</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+        /// </summary>
+        public const string Map_RouteToHere = "Map_RouteToHere";
+
+        /// <summary>
+        /// Key: <c>Map_RouteType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+        /// </summary>
+        public const string Map_RouteType = "Map_RouteType";
+
+        /// <summary>
+        /// Key: <c>Map_SearchingNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+        /// </summary>
+        public const string Map_SearchingNearby = "Map_SearchingNearby";
+
+        /// <summary>
+        /// Key: <c>Map_SearchOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+        /// </summary>
+        public const string Map_SearchOnMap = "Map_SearchOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+        /// </summary>
+        public const string Map_SearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+        /// <summary>
+        /// Key: <c>Map_SelectAddressOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+        /// </summary>
+        public const string Map_SelectAddressOnMap = "Map_SelectAddressOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+        /// </summary>
+        public const string Map_SelectedAddress = "Map_SelectedAddress";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+        /// </summary>
+        public const string Map_SelectedZone = "Map_SelectedZone";
+
+        /// <summary>
+        /// Key: <c>Map_SelectZoneOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+        /// </summary>
+        public const string Map_SelectZoneOnMap = "Map_SelectZoneOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+        /// </summary>
+        public const string Map_ServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+        /// <summary>
+        /// Key: <c>Map_SetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+        /// </summary>
+        public const string Map_SetZone = "Map_SetZone";
+
+        /// <summary>
+        /// Key: <c>Map_Speed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+        /// </summary>
+        public const string Map_Speed = "Map_Speed";
+
+        /// <summary>
+        /// Key: <c>Map_StartRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+        /// </summary>
+        public const string Map_StartRoute = "Map_StartRoute";
+
+        /// <summary>
+        /// Key: <c>Map_StopNavigation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+        /// </summary>
+        public const string Map_StopNavigation = "Map_StopNavigation";
+
+        /// <summary>
+        /// Key: <c>Map_Swap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+        /// </summary>
+        public const string Map_Swap = "Map_Swap";
+
+        /// <summary>
+        /// Key: <c>Map_To</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+        /// </summary>
+        public const string Map_To = "Map_To";
+
+        /// <summary>
+        /// Key: <c>Map_ToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+        /// </summary>
+        public const string Map_ToRoute = "Map_ToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_View3D</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+        /// </summary>
+        public const string Map_View3D = "Map_View3D";
+
+        /// <summary>
+        /// Key: <c>Map_VoiceGuidance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+        /// </summary>
+        public const string Map_VoiceGuidance = "Map_VoiceGuidance";
+
+        /// <summary>
+        /// Key: <c>Map_WhereToEat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+        /// </summary>
+        public const string Map_WhereToEat = "Map_WhereToEat";
+
+        /// <summary>
+        /// Key: <c>Map_ZoneNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+        /// </summary>
+        public const string Map_ZoneNotSet = "Map_ZoneNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_ZonesConfigured</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+        /// </summary>
+        public const string Map_ZonesConfigured = "Map_ZonesConfigured";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomIn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+        /// </summary>
+        public const string Map_ZoomIn = "Map_ZoomIn";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomOut</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+        /// </summary>
+        public const string Map_ZoomOut = "Map_ZoomOut";
+
+        /// <summary>
+        /// Key: <c>Map_AboutPlace</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;О месте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Place&quot;
+        /// </summary>
+        public const string MapAboutPlace = "Map_AboutPlace";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveMultipleZones</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активно гео-зон: {0} ({1} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faol geo-hududlar: {0} ({1} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Active geo-zones: {0} ({1} contour points)&quot;
+        /// </summary>
+        public const string MapActiveMultipleZones = "Map_ActiveMultipleZones";
+
+        /// <summary>
+        /// Key: <c>Map_ActiveSingleZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активна 1 гео-зона ({0} точек контура)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1 ta geo-hudud faol ({0} ta kontur nuqtasi)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1 geo-zone active ({0} contour points)&quot;
+        /// </summary>
+        public const string MapActiveSingleZone = "Map_ActiveSingleZone";
+
+        /// <summary>
+        /// Key: <c>Map_AddPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add Waypoint&quot;
+        /// </summary>
+        public const string MapAddPoint = "Map_AddPoint";
+
+        /// <summary>
+        /// Key: <c>Map_Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string MapAddress = "Map_Address";
+
+        /// <summary>
+        /// Key: <c>Map_AddressNotSelected</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес не выбран&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil tanlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address Not Selected&quot;
+        /// </summary>
+        public const string MapAddressNotSelected = "Map_AddressNotSelected";
+
+        /// <summary>
+        /// Key: <c>Map_AddressOrPoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес / Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil / Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address / Point&quot;
+        /// </summary>
+        public const string MapAddressOrPoint = "Map_AddressOrPoint";
+
+        /// <summary>
+        /// Key: <c>Map_Address</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Address&quot;
+        /// </summary>
+        public const string MapAddressText = "Map_Address";
+
+        /// <summary>
+        /// Key: <c>Map_AddToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Добавить в маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishga qo'shish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Add to Route&quot;
+        /// </summary>
+        public const string MapAddToRoute = "Map_AddToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Arrival</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Прибытие&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetib kelish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Arrival&quot;
+        /// </summary>
+        public const string MapArrival = "Map_Arrival";
+
+        /// <summary>
+        /// Key: <c>Map_BookSeat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Бронь места&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy band qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Book Seat&quot;
+        /// </summary>
+        public const string MapBookSeat = "Map_BookSeat";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построение маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Building&quot;
+        /// </summary>
+        public const string MapBuildRoute = "Map_BuildRoute";
+
+        /// <summary>
+        /// Key: <c>Map_BuildRouteAction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Построить маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalish tuzish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Build Route&quot;
+        /// </summary>
+        public const string MapBuildRouteAction = "Map_BuildRouteAction";
+
+        /// <summary>
+        /// Key: <c>Map_ChangeOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Изменить на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada o'zgartirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Change on Map&quot;
+        /// </summary>
+        public const string MapChangeOnMap = "Map_ChangeOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ClearAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Очистить адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Manzilni tozalash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Clear Address&quot;
+        /// </summary>
+        public const string MapClearAddress = "Map_ClearAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ClickMapToSetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кликните на карте, чтобы поставить точки полигона зоны доставки.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yetkazib berish hududi poligon nuqtalarini qo&amp;apos;yish uchun xaritani bosing.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click on map to place delivery zone polygon points.&quot;
+        /// </summary>
+        public const string MapClickMapToSetZone = "Map_ClickMapToSetZone";
+
+        /// <summary>
+        /// Key: <c>Map_CloseRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Закрыть маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishni yopish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Close Route&quot;
+        /// </summary>
+        public const string MapCloseRoute = "Map_CloseRoute";
+
+        /// <summary>
+        /// Key: <c>Map_Collapse</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Свернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yig'ish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Collapse&quot;
+        /// </summary>
+        public const string MapCollapse = "Map_Collapse";
+
+        /// <summary>
+        /// Key: <c>Map_Coordinates</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Координаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Koordinatalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coordinates&quot;
+        /// </summary>
+        public const string MapCoordinates = "Map_Coordinates";
+
+        /// <summary>
+        /// Key: <c>Map_DeletePoint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить точку&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqtani o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Waypoint&quot;
+        /// </summary>
+        public const string MapDeletePoint = "Map_DeletePoint";
+
+        /// <summary>
+        /// Key: <c>Map_DeleteZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Удалить зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni o'chirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Delete Zone&quot;
+        /// </summary>
+        public const string MapDeleteZone = "Map_DeleteZone";
+
+        /// <summary>
+        /// Key: <c>Map_Description</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+        /// </summary>
+        public const string MapDescription = "Map_Description";
+
+        /// <summary>
+        /// Key: <c>Map_Description</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Описание&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
+        /// </summary>
+        public const string MapDescriptionText = "Map_Description";
+
+        /// <summary>
+        /// Key: <c>Map_EditOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактировать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tahrirlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Edit on Map&quot;
+        /// </summary>
+        public const string MapEditOnMap = "Map_EditOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Expand</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Развернуть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kengaytirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Expand&quot;
+        /// </summary>
+        public const string MapExpand = "Map_Expand";
+
+        /// <summary>
+        /// Key: <c>Map_Floor1</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 1&quot;
+        /// </summary>
+        public const string MapFloor1 = "Map_Floor1";
+
+        /// <summary>
+        /// Key: <c>Map_Floor2</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 2&quot;
+        /// </summary>
+        public const string MapFloor2 = "Map_Floor2";
+
+        /// <summary>
+        /// Key: <c>Map_Floor3</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3 этаж&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3-qavat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Floor 3&quot;
+        /// </summary>
+        public const string MapFloor3 = "Map_Floor3";
+
+        /// <summary>
+        /// Key: <c>Map_FloorShort</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Эт.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qav.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fl.&quot;
+        /// </summary>
+        public const string MapFloorShort = "Map_FloorShort";
+
+        /// <summary>
+        /// Key: <c>Map_From</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Откуда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerdan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From&quot;
+        /// </summary>
+        public const string MapFrom = "Map_From";
+
+        /// <summary>
+        /// Key: <c>Map_GasStations</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;АЗС&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqilg'i quyish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Gas Stations&quot;
+        /// </summary>
+        public const string MapGasStations = "Map_GasStations";
+
+        /// <summary>
+        /// Key: <c>Map_Groceries</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продукты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oziq-ovqat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Groceries&quot;
+        /// </summary>
+        public const string MapGroceries = "Map_Groceries";
+
+        /// <summary>
+        /// Key: <c>Map_HallDesigner</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Редактор залы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zal muharriri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hall Designer&quot;
+        /// </summary>
+        public const string MapHallDesigner = "Map_HallDesigner";
+
+        /// <summary>
+        /// Key: <c>Map_KmPerHour</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;км/ч&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;km/s&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;km/h&quot;
+        /// </summary>
+        public const string MapKmPerHour = "Map_KmPerHour";
+
+        /// <summary>
+        /// Key: <c>Map_LoadingRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка маршрута...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading Route...&quot;
+        /// </summary>
+        public const string MapLoadingRoute = "Map_LoadingRoute";
+
+        /// <summary>
+        /// Key: <c>Map_LocationOrAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Местоположение / Адрес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joylashuv / Manzil&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Location / Address&quot;
+        /// </summary>
+        public const string MapLocationOrAddress = "Map_LocationOrAddress";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+        /// </summary>
+        public const string MapModeAll = "Map_ModeAll";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAllRoutes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+        /// </summary>
+        public const string MapModeAllRoutes = "Map_ModeAllRoutes";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAuto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+        /// </summary>
+        public const string MapModeAuto = "Map_ModeAuto";
+
+        /// <summary>
+        /// Key: <c>Map_ModeBike</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+        /// </summary>
+        public const string MapModeBike = "Map_ModeBike";
+
+        /// <summary>
+        /// Key: <c>Map_ModePublic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+        /// </summary>
+        public const string MapModePublic = "Map_ModePublic";
+
+        /// <summary>
+        /// Key: <c>Map_ModeScooter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+        /// </summary>
+        public const string MapModeScooter = "Map_ModeScooter";
+
+        /// <summary>
+        /// Key: <c>Map_ModeTaxi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+        /// </summary>
+        public const string MapModeTaxi = "Map_ModeTaxi";
+
+        /// <summary>
+        /// Key: <c>Map_ModeWalk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+        /// </summary>
+        public const string MapModeWalk = "Map_ModeWalk";
+
+        /// <summary>
+        /// Key: <c>Map_MyLocation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+        /// </summary>
+        public const string MapMyLocation = "Map_MyLocation";
+
+        /// <summary>
+        /// Key: <c>Map_Nearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+        /// </summary>
+        public const string MapNearby = "Map_Nearby";
+
+        /// <summary>
+        /// Key: <c>Map_NearbyResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+        /// </summary>
+        public const string MapNearbyResults = "Map_NearbyResults";
+
+        /// <summary>
+        /// Key: <c>Map_NothingFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+        /// </summary>
+        public const string MapNothingFound = "Map_NothingFound";
+
+        /// <summary>
+        /// Key: <c>Map_Optimize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+        /// </summary>
+        public const string MapOptimize = "Map_Optimize";
+
+        /// <summary>
+        /// Key: <c>Map_Optimizing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+        /// </summary>
+        public const string MapOptimizing = "Map_Optimizing";
+
+        /// <summary>
+        /// Key: <c>Map_Pharmacies</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+        /// </summary>
+        public const string MapPharmacies = "Map_Pharmacies";
+
+        /// <summary>
+        /// Key: <c>Map_PickOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+        /// </summary>
+        public const string MapPickOnMap = "Map_PickOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_Point</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+        /// </summary>
+        public const string MapPoint = "Map_Point";
+
+        /// <summary>
+        /// Key: <c>Map_PointsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string MapPointsCount = "Map_PointsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+        /// </summary>
+        public const string MapPolygonNotSet = "Map_PolygonNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+        /// </summary>
+        public const string MapPolygonsCount = "Map_PolygonsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonSingle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+        /// </summary>
+        public const string MapPolygonSingle = "Map_PolygonSingle";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonUndefined</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+        /// </summary>
+        public const string MapPolygonUndefined = "Map_PolygonUndefined";
+
+        /// <summary>
+        /// Key: <c>Map_Recenter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+        /// </summary>
+        public const string MapRecenter = "Map_Recenter";
+
+        /// <summary>
+        /// Key: <c>Map_Remaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+        /// </summary>
+        public const string MapRemaining = "Map_Remaining";
+
+        /// <summary>
+        /// Key: <c>Map_Restaurants</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+        /// </summary>
+        public const string MapRestaurants = "Map_Restaurants";
+
+        /// <summary>
+        /// Key: <c>Map_Routes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+        /// </summary>
+        public const string MapRoutes = "Map_Routes";
+
+        /// <summary>
+        /// Key: <c>Map_RouteToHere</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+        /// </summary>
+        public const string MapRouteToHere = "Map_RouteToHere";
+
+        /// <summary>
+        /// Key: <c>Map_RouteType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+        /// </summary>
+        public const string MapRouteType = "Map_RouteType";
+
+        /// <summary>
+        /// Key: <c>Map_SearchingNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+        /// </summary>
+        public const string MapSearchingNearby = "Map_SearchingNearby";
+
+        /// <summary>
+        /// Key: <c>Map_SearchOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+        /// </summary>
+        public const string MapSearchOnMap = "Map_SearchOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+        /// </summary>
+        public const string MapSearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+        /// <summary>
+        /// Key: <c>Map_SelectAddressOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+        /// </summary>
+        public const string MapSelectAddressOnMap = "Map_SelectAddressOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+        /// </summary>
+        public const string MapSelectedAddress = "Map_SelectedAddress";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+        /// </summary>
+        public const string MapSelectedZone = "Map_SelectedZone";
+
+        /// <summary>
+        /// Key: <c>Map_SelectZoneOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+        /// </summary>
+        public const string MapSelectZoneOnMap = "Map_SelectZoneOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+        /// </summary>
+        public const string MapServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+        /// <summary>
+        /// Key: <c>Map_SetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+        /// </summary>
+        public const string MapSetZone = "Map_SetZone";
+
+        /// <summary>
+        /// Key: <c>Map_Speed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+        /// </summary>
+        public const string MapSpeed = "Map_Speed";
+
+        /// <summary>
+        /// Key: <c>Map_StartRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+        /// </summary>
+        public const string MapStartRoute = "Map_StartRoute";
+
+        /// <summary>
+        /// Key: <c>Map_StopNavigation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+        /// </summary>
+        public const string MapStopNavigation = "Map_StopNavigation";
+
+        /// <summary>
+        /// Key: <c>Map_Swap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+        /// </summary>
+        public const string MapSwap = "Map_Swap";
+
+        /// <summary>
+        /// Key: <c>Map_To</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+        /// </summary>
+        public const string MapTo = "Map_To";
+
+        /// <summary>
+        /// Key: <c>Map_ToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+        /// </summary>
+        public const string MapToRoute = "Map_ToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_View3D</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+        /// </summary>
+        public const string MapView3D = "Map_View3D";
+
+        /// <summary>
+        /// Key: <c>Map_VoiceGuidance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+        /// </summary>
+        public const string MapVoiceGuidance = "Map_VoiceGuidance";
+
+        /// <summary>
+        /// Key: <c>Map_WhereToEat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+        /// </summary>
+        public const string MapWhereToEat = "Map_WhereToEat";
+
+        /// <summary>
+        /// Key: <c>Map_ZoneNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+        /// </summary>
+        public const string MapZoneNotSet = "Map_ZoneNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_ZonesConfigured</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+        /// </summary>
+        public const string MapZonesConfigured = "Map_ZonesConfigured";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomIn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+        /// </summary>
+        public const string MapZoomIn = "Map_ZoomIn";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomOut</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+        /// </summary>
+        public const string MapZoomOut = "Map_ZoomOut";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAll</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barchasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All&quot;
+        /// </summary>
+        public const string ModeAll = "Map_ModeAll";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAllRoutes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha yo&amp;apos;nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All routes&quot;
+        /// </summary>
+        public const string ModeAllRoutes = "Map_ModeAllRoutes";
+
+        /// <summary>
+        /// Key: <c>Map_ModeAuto</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На автомобиле&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtomobilda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By car&quot;
+        /// </summary>
+        public const string ModeAuto = "Map_ModeAuto";
+
+        /// <summary>
+        /// Key: <c>Map_ModeBike</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На велосипеде&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Velosipedda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bicycle&quot;
+        /// </summary>
+        public const string ModeBike = "Map_ModeBike";
+
+        /// <summary>
+        /// Key: <c>Map_ModePublic</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На общественном транспорте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jamoat transportida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By public transport&quot;
+        /// </summary>
+        public const string ModePublic = "Map_ModePublic";
+
+        /// <summary>
+        /// Key: <c>Map_ModeScooter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На самокате&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Samokatda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scooter&quot;
+        /// </summary>
+        public const string ModeScooter = "Map_ModeScooter";
+
+        /// <summary>
+        /// Key: <c>Map_ModeTaxi</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На такси&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Taksida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Taxi&quot;
+        /// </summary>
+        public const string ModeTaxi = "Map_ModeTaxi";
+
+        /// <summary>
+        /// Key: <c>Map_ModeWalk</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пешком&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Piyoda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Walking&quot;
+        /// </summary>
+        public const string ModeWalk = "Map_ModeWalk";
+
+        /// <summary>
+        /// Key: <c>Map_MyLocation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мое местоположение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mening joylashuvim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;My Location&quot;
+        /// </summary>
+        public const string MyLocationText = "Map_MyLocation";
+
+        /// <summary>
+        /// Key: <c>Map_NearbyResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Результаты поиска рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofdagi qidiruv natijalari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby Search Results&quot;
+        /// </summary>
+        public const string NearbyResults = "Map_NearbyResults";
+
+        /// <summary>
+        /// Key: <c>Map_Nearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рядом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nearby&quot;
+        /// </summary>
+        public const string NearbyText = "Map_Nearby";
+
+        /// <summary>
+        /// Key: <c>Map_NothingFound</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ничего не найдено.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hech narsa topilmadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Nothing found.&quot;
+        /// </summary>
+        public const string NothingFound = "Map_NothingFound";
+
+        /// <summary>
+        /// Key: <c>Map_Optimize</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизировать&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimize&quot;
+        /// </summary>
+        public const string Optimize = "Map_Optimize";
+
+        /// <summary>
+        /// Key: <c>Map_Optimizing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оптимизация…&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Optimallashtirilmoqda…&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Optimizing…&quot;
+        /// </summary>
+        public const string Optimizing = "Map_Optimizing";
+
+        /// <summary>
+        /// Key: <c>Map_Pharmacies</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аптеки&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dorixonalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pharmacies&quot;
+        /// </summary>
+        public const string Pharmacies = "Map_Pharmacies";
+
+        /// <summary>
+        /// Key: <c>Map_PickOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pick on Map&quot;
+        /// </summary>
+        public const string PickOnMap = "Map_PickOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_PointsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;точек&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;nuqtalar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;points&quot;
+        /// </summary>
+        public const string PointsCount = "Map_PointsCount";
+
+        /// <summary>
+        /// Key: <c>Map_Point</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nuqta&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Waypoint&quot;
+        /// </summary>
+        public const string PointText = "Map_Point";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон не задан&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Poligon belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Polygon not set&quot;
+        /// </summary>
+        public const string PolygonNotSet = "Map_PolygonNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonsCount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигона&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligonlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygons&quot;
+        /// </summary>
+        public const string PolygonsCount = "Map_PolygonsCount";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonSingle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;polygon&quot;
+        /// </summary>
+        public const string PolygonSingle = "Map_PolygonSingle";
+
+        /// <summary>
+        /// Key: <c>Map_PolygonUndefined</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полигон гео-зоны не определен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Geo-hudud poligoni aniqlanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Geo-zone polygon undefined&quot;
+        /// </summary>
+        public const string PolygonUndefined = "Map_PolygonUndefined";
+
+        /// <summary>
+        /// Key: <c>Map_Recenter</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вернуть карту в центр&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritani markazga qaytarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Center Map&quot;
+        /// </summary>
+        public const string RecenterText = "Map_Recenter";
+
+        /// <summary>
+        /// Key: <c>Map_Remaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Remaining&quot;
+        /// </summary>
+        public const string Remaining = "Map_Remaining";
+
+        /// <summary>
+        /// Key: <c>Map_Restaurants</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;рестораны&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;restoranlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;restaurants&quot;
+        /// </summary>
+        public const string Restaurants = "Map_Restaurants";
+
+        /// <summary>
+        /// Key: <c>Map_Routes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршруты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalishlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Routes&quot;
+        /// </summary>
+        public const string Routes = "Map_Routes";
+
+        /// <summary>
+        /// Key: <c>Map_RouteToHere</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Маршрут сюда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bu yerga yo&amp;apos;nalish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route to here&quot;
+        /// </summary>
+        public const string RouteToHere = "Map_RouteToHere";
+
+        /// <summary>
+        /// Key: <c>Map_RouteType</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тип маршрута&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'nalish turi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Route Type&quot;
+        /// </summary>
+        public const string RouteType = "Map_RouteType";
+
+        /// <summary>
+        /// Key: <c>Map_SearchingNearby</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ищем рядом...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqin atrofda qidirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Searching nearby...&quot;
+        /// </summary>
+        public const string SearchingNearby = "Map_SearchingNearby";
+
+        /// <summary>
+        /// Key: <c>Map_SearchOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск по карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xarita bo'yicha qidiruv&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search on Map&quot;
+        /// </summary>
+        public const string SearchOnMap = "Map_SearchOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SearchPlacesAndAddresses</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск мест и адресов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joy va manzillarni qidirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Search Places &amp;amp; Addresses&quot;
+        /// </summary>
+        public const string SearchPlacesAndAddresses = "Map_SearchPlacesAndAddresses";
+
+        /// <summary>
+        /// Key: <c>Map_SelectAddressOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор адреса на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada manzilni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Address on Map&quot;
+        /// </summary>
+        public const string SelectAddressOnMap = "Map_SelectAddressOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedAddress</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранный адрес:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan manzil:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Address:&quot;
+        /// </summary>
+        public const string SelectedAddress = "Map_SelectedAddress";
+
+        /// <summary>
+        /// Key: <c>Map_SelectedZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбранная зона:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlangan hudud:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Selected Zone:&quot;
+        /// </summary>
+        public const string SelectedZone = "Map_SelectedZone";
+
+        /// <summary>
+        /// Key: <c>Map_SelectZoneOnMap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбор зоны на карте&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xaritada hududni tanlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Zone on Map&quot;
+        /// </summary>
+        public const string SelectZoneOnMap = "Map_SelectZoneOnMap";
+
+        /// <summary>
+        /// Key: <c>Map_ServiceZoneOrPolygon</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона обслуживания / Полигон&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xizmat ko'rsatish hududi / Poligon&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service Zone / Polygon&quot;
+        /// </summary>
+        public const string ServiceZoneOrPolygon = "Map_ServiceZoneOrPolygon";
+
+        /// <summary>
+        /// Key: <c>Map_SetZone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задать зону&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hududni belgilash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Set Zone&quot;
+        /// </summary>
+        public const string SetZone = "Map_SetZone";
+
+        /// <summary>
+        /// Key: <c>Map_Speed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezlik&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Speed&quot;
+        /// </summary>
+        public const string SpeedText = "Map_Speed";
+
+        /// <summary>
+        /// Key: <c>Map_StartRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В путь&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;lga chiqish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Start Navigation&quot;
+        /// </summary>
+        public const string StartRoute = "Map_StartRoute";
+
+        /// <summary>
+        /// Key: <c>Map_StopNavigation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершить ведение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo'naltirishni to'xtatish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Stop Navigation&quot;
+        /// </summary>
+        public const string StopNavigation = "Map_StopNavigation";
+
+        /// <summary>
+        /// Key: <c>Map_Swap</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обменять&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Almashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Swap&quot;
+        /// </summary>
+        public const string Swap = "Map_Swap";
+
+        /// <summary>
+        /// Key: <c>Map_To</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Куда&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To&quot;
+        /// </summary>
+        public const string To = "Map_To";
+
+        /// <summary>
+        /// Key: <c>Map_ToRoute</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;В маршрут&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yo&amp;apos;nalishga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To Route&quot;
+        /// </summary>
+        public const string ToRoute = "Map_ToRoute";
+
+        /// <summary>
+        /// Key: <c>Map_View3D</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D вид&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D ko'rinish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D View&quot;
+        /// </summary>
+        public const string View3D = "Map_View3D";
+
+        /// <summary>
+        /// Key: <c>Map_VoiceGuidance</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Голосовое сопровождение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ovozli yo'naltirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Voice Guidance&quot;
+        /// </summary>
+        public const string VoiceGuidance = "Map_VoiceGuidance";
+
+        /// <summary>
+        /// Key: <c>Map_WhereToEat</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Где поесть&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayerda ovqatlanish mumkin&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Where to Eat&quot;
+        /// </summary>
+        public const string WhereToEat = "Map_WhereToEat";
+
+        /// <summary>
+        /// Key: <c>Map_ZoneNotSet</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Зона не задана&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hudud belgilanmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zone not set&quot;
+        /// </summary>
+        public const string ZoneNotSet = "Map_ZoneNotSet";
+
+        /// <summary>
+        /// Key: <c>Map_ZonesConfigured</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Задано зон: {0} ({1} точек)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Belgilangan hududlar: {0} ({1} ta nuqta)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configured zones: {0} ({1} points)&quot;
+        /// </summary>
+        public const string ZonesConfigured = "Map_ZonesConfigured";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomIn</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приблизить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yaqinlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom In&quot;
+        /// </summary>
+        public const string ZoomInText = "Map_ZoomIn";
+
+        /// <summary>
+        /// Key: <c>Map_ZoomOut</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отдалить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzoqlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zoom Out&quot;
+        /// </summary>
+        public const string ZoomOutText = "Map_ZoomOut";
 
     }
 
@@ -66404,6 +78001,613 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Table&quot;
         /// </summary>
         public const string ViewTable = "Orders_ViewTable";
+
+    }
+
+    /// <summary>
+    /// Domain group: Promotion (75 keys). Use with <c>@using static Loc.Promotion;</c>.
+    /// </summary>
+    public static class Promotion
+    {
+        /// <summary>
+        /// Key: <c>Promo_BackToPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+        /// </summary>
+        public const string BackToPlans = "Promo_BackToPlans";
+
+        /// <summary>
+        /// Key: <c>Promo_ClickDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+        /// </summary>
+        public const string ClickDesc = "Promo_ClickDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_GoogleFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+        /// </summary>
+        public const string GoogleFeed = "Promo_GoogleFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_InvoiceFor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+        /// </summary>
+        public const string InvoiceFor = "Promo_InvoiceFor";
+
+        /// <summary>
+        /// Key: <c>Promo_OpenPaymentForm</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+        /// </summary>
+        public const string OpenPaymentForm = "Promo_OpenPaymentForm";
+
+        /// <summary>
+        /// Key: <c>Promo_PaidActivate</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+        /// </summary>
+        public const string PaidActivate = "Promo_PaidActivate";
+
+        /// <summary>
+        /// Key: <c>Promo_PayAmount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+        /// </summary>
+        public const string PayAmount = "Promo_PayAmount";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymeDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+        /// </summary>
+        public const string PaymeDesc = "Promo_PaymeDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymentMethod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+        /// </summary>
+        public const string PaymentMethod = "Promo_PaymentMethod";
+
+        /// <summary>
+        /// Key: <c>Promo_PopularChoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+        /// </summary>
+        public const string PopularChoice = "Promo_PopularChoice";
+
+        /// <summary>
+        /// Key: <c>Promo_BackToPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+        /// </summary>
+        public const string Promo_BackToPlans = "Promo_BackToPlans";
+
+        /// <summary>
+        /// Key: <c>Promo_ClickDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+        /// </summary>
+        public const string Promo_ClickDesc = "Promo_ClickDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_GoogleFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+        /// </summary>
+        public const string Promo_GoogleFeed = "Promo_GoogleFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_InvoiceFor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+        /// </summary>
+        public const string Promo_InvoiceFor = "Promo_InvoiceFor";
+
+        /// <summary>
+        /// Key: <c>Promo_OpenPaymentForm</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+        /// </summary>
+        public const string Promo_OpenPaymentForm = "Promo_OpenPaymentForm";
+
+        /// <summary>
+        /// Key: <c>Promo_PaidActivate</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+        /// </summary>
+        public const string Promo_PaidActivate = "Promo_PaidActivate";
+
+        /// <summary>
+        /// Key: <c>Promo_PayAmount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+        /// </summary>
+        public const string Promo_PayAmount = "Promo_PayAmount";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymeDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+        /// </summary>
+        public const string Promo_PaymeDesc = "Promo_PaymeDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymentMethod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+        /// </summary>
+        public const string Promo_PaymentMethod = "Promo_PaymentMethod";
+
+        /// <summary>
+        /// Key: <c>Promo_PopularChoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+        /// </summary>
+        public const string Promo_PopularChoice = "Promo_PopularChoice";
+
+        /// <summary>
+        /// Key: <c>Promo_PromotedProduct</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+        /// </summary>
+        public const string Promo_PromotedProduct = "Promo_PromotedProduct";
+
+        /// <summary>
+        /// Key: <c>Promo_QrCodeAlt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+        /// </summary>
+        public const string Promo_QrCodeAlt = "Promo_QrCodeAlt";
+
+        /// <summary>
+        /// Key: <c>Promo_QrInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+        /// </summary>
+        public const string Promo_QrInstruction = "Promo_QrInstruction";
+
+        /// <summary>
+        /// Key: <c>Promo_RedirectMessage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+        /// </summary>
+        public const string Promo_RedirectMessage = "Promo_RedirectMessage";
+
+        /// <summary>
+        /// Key: <c>Promo_Step1Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+        /// </summary>
+        public const string Promo_Step1Title = "Promo_Step1Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Step2Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+        /// </summary>
+        public const string Promo_Step2Title = "Promo_Step2Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Subtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+        /// </summary>
+        public const string Promo_Subtitle = "Promo_Subtitle";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+        /// </summary>
+        public const string Promo_SuccessDesc = "Promo_SuccessDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessHint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+        /// </summary>
+        public const string Promo_SuccessHint = "Promo_SuccessHint";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+        /// </summary>
+        public const string Promo_SuccessTitle = "Promo_SuccessTitle";
+
+        /// <summary>
+        /// Key: <c>Promo_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+        /// </summary>
+        public const string Promo_Title = "Promo_Title";
+
+        /// <summary>
+        /// Key: <c>Promo_UzQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+        /// </summary>
+        public const string Promo_UzQrDesc = "Promo_UzQrDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_UzumDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+        /// </summary>
+        public const string Promo_UzumDesc = "Promo_UzumDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_VerifyingPayment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+        /// </summary>
+        public const string Promo_VerifyingPayment = "Promo_VerifyingPayment";
+
+        /// <summary>
+        /// Key: <c>Promo_YandexFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+        /// </summary>
+        public const string Promo_YandexFeed = "Promo_YandexFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_BackToPlans</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;← Назад к выбору тарифа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;← Tarif tanlashga qaytish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;← Back to Plans&quot;
+        /// </summary>
+        public const string PromoBackToPlans = "Promo_BackToPlans";
+
+        /// <summary>
+        /// Key: <c>Promo_ClickDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный перевод через Click&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click orqali tezkor o'tkazma&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant transfer via Click&quot;
+        /// </summary>
+        public const string PromoClickDesc = "Promo_ClickDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_GoogleFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google Shopping &amp;amp; Merchant Center&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Shopping &amp;amp; Merchant Center&quot;
+        /// </summary>
+        public const string PromoGoogleFeed = "Promo_GoogleFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_InvoiceFor</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Счёт на оплату:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov hisobi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Invoice:&quot;
+        /// </summary>
+        public const string PromoInvoiceFor = "Promo_InvoiceFor";
+
+        /// <summary>
+        /// Key: <c>Promo_OpenPaymentForm</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть платёжную форму&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shaklini ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Payment Form&quot;
+        /// </summary>
+        public const string PromoOpenPaymentForm = "Promo_OpenPaymentForm";
+
+        /// <summary>
+        /// Key: <c>Promo_PaidActivate</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Я оплатил(а) — Активировать продвижение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Men to'ladim — Targ'ibotni faollashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;I Have Paid — Activate Promotion&quot;
+        /// </summary>
+        public const string PromoPaidActivate = "Promo_PaidActivate";
+
+        /// <summary>
+        /// Key: <c>Promo_PayAmount</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплатить&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Pay&quot;
+        /// </summary>
+        public const string PromoPayAmount = "Promo_PayAmount";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymeDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Оплата в 1 клик картой UzCard / Humo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;UzCard / Humo kartasi orqali 1 marta bosishda to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1-Click payment via UzCard / Humo&quot;
+        /// </summary>
+        public const string PromoPaymeDesc = "Promo_PaymeDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_PaymentMethod</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Способ оплаты:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usuli:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment Method:&quot;
+        /// </summary>
+        public const string PromoPaymentMethod = "Promo_PaymentMethod";
+
+        /// <summary>
+        /// Key: <c>Promo_PopularChoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
+        /// </summary>
+        public const string PromoPopularChoice = "Promo_PopularChoice";
+
+        /// <summary>
+        /// Key: <c>Promo_PromotedProduct</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+        /// </summary>
+        public const string PromoPromotedProduct = "Promo_PromotedProduct";
+
+        /// <summary>
+        /// Key: <c>Promo_QrCodeAlt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+        /// </summary>
+        public const string PromoQrCodeAlt = "Promo_QrCodeAlt";
+
+        /// <summary>
+        /// Key: <c>Promo_QrInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+        /// </summary>
+        public const string PromoQrInstruction = "Promo_QrInstruction";
+
+        /// <summary>
+        /// Key: <c>Promo_RedirectMessage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+        /// </summary>
+        public const string PromoRedirectMessage = "Promo_RedirectMessage";
+
+        /// <summary>
+        /// Key: <c>Promo_Step1Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+        /// </summary>
+        public const string PromoStep1Title = "Promo_Step1Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Step2Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+        /// </summary>
+        public const string PromoStep2Title = "Promo_Step2Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Subtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+        /// </summary>
+        public const string PromoSubtitle = "Promo_Subtitle";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+        /// </summary>
+        public const string PromoSuccessDesc = "Promo_SuccessDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessHint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+        /// </summary>
+        public const string PromoSuccessHint = "Promo_SuccessHint";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+        /// </summary>
+        public const string PromoSuccessTitle = "Promo_SuccessTitle";
+
+        /// <summary>
+        /// Key: <c>Promo_PromotedProduct</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвигаемый товар:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ib qilinayotgan mahsulot:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promoted Product:&quot;
+        /// </summary>
+        public const string PromotedProduct = "Promo_PromotedProduct";
+
+        /// <summary>
+        /// Key: <c>Promo_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+        /// </summary>
+        public const string PromoTitle = "Promo_Title";
+
+        /// <summary>
+        /// Key: <c>Promo_UzQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+        /// </summary>
+        public const string PromoUzQrDesc = "Promo_UzQrDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_UzumDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+        /// </summary>
+        public const string PromoUzumDesc = "Promo_UzumDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_VerifyingPayment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+        /// </summary>
+        public const string PromoVerifyingPayment = "Promo_VerifyingPayment";
+
+        /// <summary>
+        /// Key: <c>Promo_YandexFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+        /// </summary>
+        public const string PromoYandexFeed = "Promo_YandexFeed";
+
+        /// <summary>
+        /// Key: <c>Promo_QrCodeAlt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;QR код для оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov uchun QR kod&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment QR code&quot;
+        /// </summary>
+        public const string QrCodeAlt = "Promo_QrCodeAlt";
+
+        /// <summary>
+        /// Key: <c>Promo_QrInstruction</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Отсканируйте этот QR-код камерой телефона или в приложении Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
+        /// </summary>
+        public const string QrInstructionText = "Promo_QrInstruction";
+
+        /// <summary>
+        /// Key: <c>Promo_RedirectMessage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы перенаправляетесь на защищённый платёжный шлюз&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz xavfsiz to'lov shlyuziga yo'naltirilmoqdasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Redirecting to secure payment gateway&quot;
+        /// </summary>
+        public const string RedirectMessage = "Promo_RedirectMessage";
+
+        /// <summary>
+        /// Key: <c>Promo_Step1Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Выберите тариф поискового продвижения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Qidiruvda targ'ibot tarifini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Select Search Promotion Plan&quot;
+        /// </summary>
+        public const string Step1Title = "Promo_Step1Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Step2Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. Выберите удобный способ оплаты&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Qulay to'lov usulini tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. Select Payment Method&quot;
+        /// </summary>
+        public const string Step2Title = "Promo_Step2Title";
+
+        /// <summary>
+        /// Key: <c>Promo_Subtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса, Rich Snippets и Google Shopping&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulot galereyasi, Rich Snippets va Google Shopping&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery, Rich Snippets &amp;amp; Google Shopping&quot;
+        /// </summary>
+        public const string SubtitleText = "Promo_Subtitle";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товар успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulot homiylik sifatida belgilandi va qidiruv tizimlari eksport tasmasiga qo'shildi:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product successfully marked as sponsored and added to search engine export feeds:&quot;
+        /// </summary>
+        public const string SuccessDesc = "Promo_SuccessDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessHint</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kartochkalar qidiruv tizimlari robotlari aylanib chiqqandan so'ng (2 dan 24 soatgacha) qidiruv natijalarida paydo bo'ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cards will appear in Google and Yandex search results after crawler indexing (2 to 24 hours).&quot;
+        /// </summary>
+        public const string SuccessHint = "Promo_SuccessHint";
+
+        /// <summary>
+        /// Key: <c>Promo_SuccessTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение успешно активировано!&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Targ'ibot muvaffaqiyatli faollashtirildi!&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Promotion Successfully Activated!&quot;
+        /// </summary>
+        public const string SuccessTitle = "Promo_SuccessTitle";
+
+        /// <summary>
+        /// Key: <c>Promo_Title</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Продвижение товара в Google и Яндекс&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotni Google va Yandex-da targ'ib qilish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Promotion in Google &amp;amp; Yandex&quot;
+        /// </summary>
+        public const string TitleText = "Promo_Title";
+
+        /// <summary>
+        /// Key: <c>Promo_UzQrDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha banklar: Payme, Click, TBC, Uzum, Ipak Yo'li&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All banks: Payme, Click, TBC, Uzum, Ipak Yuli&quot;
+        /// </summary>
+        public const string UzQrDesc = "Promo_UzQrDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_UzumDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрая оплата в экосистеме Uzum&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzum ekotizimida tezkor to'lov&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast payment in Uzum ecosystem&quot;
+        /// </summary>
+        public const string UzumDesc = "Promo_UzumDesc";
+
+        /// <summary>
+        /// Key: <c>Promo_VerifyingPayment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Проверяем зачисление платежа в платёжном шлюзе...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov shlyuzida to'lov qabul qilinishini tekshirmoqdamiz...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Verifying payment confirmation in payment gateway...&quot;
+        /// </summary>
+        public const string VerifyingPayment = "Promo_VerifyingPayment";
+
+        /// <summary>
+        /// Key: <c>Promo_YandexFeed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Товарная галерея Яндекса (YML)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yandex mahsulotlar galereyasi (YML)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yandex Product Gallery (YML)&quot;
+        /// </summary>
+        public const string YandexFeed = "Promo_YandexFeed";
 
     }
 
@@ -69928,10 +82132,18 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Subscription (107 keys). Use with <c>@using static Loc.Subscription;</c>.
+    /// Domain group: Subscription (233 keys). Use with <c>@using static Loc.Subscription;</c>.
     /// </summary>
     public static class Subscription
     {
+        /// <summary>
+        /// Key: <c>Org_ActivePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+        /// </summary>
+        public const string ActivePro = "Org_ActivePro";
+
         /// <summary>
         /// Key: <c>Subscription_Badge_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Безлимитный доступ&quot;<br/>
@@ -69949,6 +82161,14 @@ namespace Loc
         public const string Badge_Recurring = "Subscription_Badge_Recurring";
 
         /// <summary>
+        /// Key: <c>Org_BadgeDefault</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+        /// </summary>
+        public const string BadgeDefault = "Org_BadgeDefault";
+
+        /// <summary>
         /// Key: <c>Subscription_Badge_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Безлимитный доступ&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Cheksiz kirish&quot;<br/>
@@ -69957,12 +82177,44 @@ namespace Loc
         public const string BadgeMembership = "Subscription_Badge_Membership";
 
         /// <summary>
+        /// Key: <c>Org_BadgePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+        /// </summary>
+        public const string BadgePro = "Org_BadgePro";
+
+        /// <summary>
         /// Key: <c>Subscription_Badge_Recurring</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Популярный выбор&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommabop tanlov&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Popular Choice&quot;
         /// </summary>
         public const string BadgeRecurring = "Subscription_Badge_Recurring";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+        /// </summary>
+        public const string BadgeTrialActive = "Org_BadgeTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+        /// </summary>
+        public const string BadgeTrialExpired = "Org_BadgeTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+        /// </summary>
+        public const string BadgeWithAds = "Org_BadgeWithAds";
 
         /// <summary>
         /// Key: <c>Subscription_Btn_Membership</c><br/>
@@ -69997,6 +82249,38 @@ namespace Loc
         public const string BtnRecurring = "Subscription_Btn_Recurring";
 
         /// <summary>
+        /// Key: <c>Org_ConfirmActivation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+        /// </summary>
+        public const string ConfirmActivation = "Org_ConfirmActivation";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectingPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+        /// </summary>
+        public const string ConnectingPlan = "Org_ConnectingPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+        /// </summary>
+        public const string ConnectPro = "Org_ConnectPro";
+
+        /// <summary>
+        /// Key: <c>Org_CurrentPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+        /// </summary>
+        public const string CurrentPlan = "Org_CurrentPlan";
+
+        /// <summary>
         /// Key: <c>Subscription_Desc_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ во все залы и спа-зоны, включены вводные тренировки и шкафчик.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha zallar va spa-zonalarga to'liq kirish, kirish mashg'ulotlari va shkaf kiritilgan.&quot;<br/>
@@ -70021,12 +82305,44 @@ namespace Loc
         public const string DescMembership = "Subscription_Desc_Membership";
 
         /// <summary>
+        /// Key: <c>Org_DescPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// </summary>
+        public const string DescPro = "Org_DescPro";
+
+        /// <summary>
         /// Key: <c>Subscription_Desc_Recurring</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Автоматическое продление доступа каждые 30 дней. Отмена подписки в 1 клик в любое время.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har 30 kunda kirishni avtomatik uzaytirish. Obunani istalgan vaqtda 1 bosishda bekor qilish.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Automatic renewal of access every 30 days. Cancel subscription in 1 click anytime.&quot;
         /// </summary>
         public const string DescRecurring = "Subscription_Desc_Recurring";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+        /// </summary>
+        public const string DescTrialActive = "Org_DescTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+        /// </summary>
+        public const string DescTrialExpired = "Org_DescTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_DescWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+        /// </summary>
+        public const string DescWithAds = "Org_DescWithAds";
 
         /// <summary>
         /// Key: <c>Subscription_Duration_1Month</c><br/>
@@ -70125,6 +82441,734 @@ namespace Loc
         public const string DurationYearly = "Subscription_Duration_Yearly";
 
         /// <summary>
+        /// Key: <c>Org_HeadlineManage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+        /// </summary>
+        public const string HeadlineManage = "Org_HeadlineManage";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlinePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+        /// </summary>
+        public const string HeadlinePro = "Org_HeadlinePro";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+        /// </summary>
+        public const string HeadlineTrialActive = "Org_HeadlineTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+        /// </summary>
+        public const string HeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+        /// </summary>
+        public const string HeadlineWithAds = "Org_HeadlineWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_ActivePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+        /// </summary>
+        public const string Org_ActivePro = "Org_ActivePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeDefault</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+        /// </summary>
+        public const string Org_BadgeDefault = "Org_BadgeDefault";
+
+        /// <summary>
+        /// Key: <c>Org_BadgePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+        /// </summary>
+        public const string Org_BadgePro = "Org_BadgePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+        /// </summary>
+        public const string Org_BadgeTrialActive = "Org_BadgeTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+        /// </summary>
+        public const string Org_BadgeTrialExpired = "Org_BadgeTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+        /// </summary>
+        public const string Org_BadgeWithAds = "Org_BadgeWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_ConfirmActivation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+        /// </summary>
+        public const string Org_ConfirmActivation = "Org_ConfirmActivation";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectingPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+        /// </summary>
+        public const string Org_ConnectingPlan = "Org_ConnectingPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+        /// </summary>
+        public const string Org_ConnectPro = "Org_ConnectPro";
+
+        /// <summary>
+        /// Key: <c>Org_CurrentPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+        /// </summary>
+        public const string Org_CurrentPlan = "Org_CurrentPlan";
+
+        /// <summary>
+        /// Key: <c>Org_DescPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// </summary>
+        public const string Org_DescPro = "Org_DescPro";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+        /// </summary>
+        public const string Org_DescTrialActive = "Org_DescTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+        /// </summary>
+        public const string Org_DescTrialExpired = "Org_DescTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_DescWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+        /// </summary>
+        public const string Org_DescWithAds = "Org_DescWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineManage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+        /// </summary>
+        public const string Org_HeadlineManage = "Org_HeadlineManage";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlinePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+        /// </summary>
+        public const string Org_HeadlinePro = "Org_HeadlinePro";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+        /// </summary>
+        public const string Org_HeadlineTrialActive = "Org_HeadlineTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+        /// </summary>
+        public const string Org_HeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+        /// </summary>
+        public const string Org_HeadlineWithAds = "Org_HeadlineWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentClickPayme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+        /// </summary>
+        public const string Org_PaymentClickPayme = "Org_PaymentClickPayme";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentInvoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+        /// </summary>
+        public const string Org_PaymentInvoice = "Org_PaymentInvoice";
+
+        /// <summary>
+        /// Key: <c>Org_PlanAdsSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+        /// </summary>
+        public const string Org_PlanAdsSummary = "Org_PlanAdsSummary";
+
+        /// <summary>
+        /// Key: <c>Org_PlanProSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+        /// </summary>
+        public const string Org_PlanProSummary = "Org_PlanProSummary";
+
+        /// <summary>
+        /// Key: <c>Org_Recommended</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+        /// </summary>
+        public const string Org_Recommended = "Org_Recommended";
+
+        /// <summary>
+        /// Key: <c>Org_SelectPlanAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+        /// </summary>
+        public const string Org_SelectPlanAds = "Org_SelectPlanAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeature100NoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+        /// </summary>
+        public const string Org_TierFeature100NoAds = "Org_TierFeature100NoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureAllModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+        /// </summary>
+        public const string Org_TierFeatureAllModes = "Org_TierFeatureAllModes";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+        /// </summary>
+        public const string Org_TierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+        /// </summary>
+        public const string Org_TierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+        /// </summary>
+        public const string Org_TierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureNoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+        /// </summary>
+        public const string Org_TierFeatureNoAds = "Org_TierFeatureNoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+        /// </summary>
+        public const string Org_TierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+        /// </summary>
+        public const string Org_TierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+        /// </summary>
+        public const string Org_TierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+        /// <summary>
+        /// Key: <c>Org_TierProName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+        /// </summary>
+        public const string Org_TierProName = "Org_TierProName";
+
+        /// <summary>
+        /// Key: <c>Org_TierProPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+        /// </summary>
+        public const string Org_TierProPrice = "Org_TierProPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+        /// </summary>
+        public const string Org_TierTrialName = "Org_TierTrialName";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+        /// </summary>
+        public const string Org_TierTrialPrice = "Org_TierTrialPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+        /// </summary>
+        public const string Org_TierWithAdsName = "Org_TierWithAdsName";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+        /// </summary>
+        public const string Org_TierWithAdsPrice = "Org_TierWithAdsPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TrialDaysRemaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+        /// </summary>
+        public const string Org_TrialDaysRemaining = "Org_TrialDaysRemaining";
+
+        /// <summary>
+        /// Key: <c>Org_YouSelectedPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+        /// </summary>
+        public const string Org_YouSelectedPlan = "Org_YouSelectedPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ActivePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Активен PRO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Active&quot;
+        /// </summary>
+        public const string OrgActivePro = "Org_ActivePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeDefault</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Plan&quot;
+        /// </summary>
+        public const string OrgBadgeDefault = "Org_BadgeDefault";
+
+        /// <summary>
+        /// Key: <c>Org_BadgePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «PRO без рекламы»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» Plan&quot;
+        /// </summary>
+        public const string OrgBadgePro = "Org_BadgePro";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период (30 дней)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri (30 kun)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period (30 days)&quot;
+        /// </summary>
+        public const string OrgBadgeTrialActive = "Org_BadgeTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период завершен&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov davri tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial Period Expired&quot;
+        /// </summary>
+        public const string OrgBadgeTrialExpired = "Org_BadgeTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_BadgeWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф «С рекламой»&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» Plan&quot;
+        /// </summary>
+        public const string OrgBadgeWithAds = "Org_BadgeWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_ConfirmActivation</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подтвердить активацию&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Faollashtirishni tasdiqlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm Activation&quot;
+        /// </summary>
+        public const string OrgConfirmActivation = "Org_ConfirmActivation";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectingPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключение тарифа:&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni ulash:&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Activation:&quot;
+        /// </summary>
+        public const string OrgConnectingPlan = "Org_ConnectingPlan";
+
+        /// <summary>
+        /// Key: <c>Org_ConnectPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключить PRO (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO ulash (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Activate PRO (25$/mo)&quot;
+        /// </summary>
+        public const string OrgConnectPro = "Org_ConnectPro";
+
+        /// <summary>
+        /// Key: <c>Org_CurrentPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Текущий тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Joriy tarif&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Current Plan&quot;
+        /// </summary>
+        public const string OrgCurrentPlan = "Org_CurrentPlan";
+
+        /// <summary>
+        /// Key: <c>Org_DescPro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// </summary>
+        public const string OrgDescPro = "Org_DescPro";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz uchinchi tomon reklamasiz to'liq imkoniyatlardan foydalanasiz. 30 kundan so'ng muassasa avtomatik ravishda reklamali tarifga (5$/oy) o'tadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You have full access without third-party ads. After 30 days, the venue will switch to the with-ads plan (5$/mo) unless PRO is activated.&quot;
+        /// </summary>
+        public const string OrgDescTrialActive = "Org_DescTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_DescTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uchinchi tomon reklamasiz brend ekran saqlovchisini qaytarish uchun PRO tarifini (25$/oy) faollashtiring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To restore a custom screensaver without third-party ads, activate PRO (25$/mo).&quot;
+        /// </summary>
+        public const string OrgDescTrialExpired = "Org_DescTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_DescWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.&quot;
+        /// </summary>
+        public const string OrgDescWithAds = "Org_DescWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineManage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление тарифом&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarifni boshqarish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plan Management&quot;
+        /// </summary>
+        public const string OrgHeadlineManage = "Org_HeadlineManage";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlinePro</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «PRO без рекламы» (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«PRO reklamasiz» tarifi ulangan (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«PRO Ad-Free» plan active (25$/mo)&quot;
+        /// </summary>
+        public const string OrgHeadlinePro = "Org_HeadlinePro";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialActive</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Ваш пробный период активен еще {0} дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sizning sinov muddatingiz yana {0} kun faol&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Your trial is active for another {0} days&quot;
+        /// </summary>
+        public const string OrgHeadlineTrialActive = "Org_HeadlineTrialActive";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineTrialExpired</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пробный период подошел к концу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sinov muddati tugadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Trial period has ended&quot;
+        /// </summary>
+        public const string OrgHeadlineTrialExpired = "Org_HeadlineTrialExpired";
+
+        /// <summary>
+        /// Key: <c>Org_HeadlineWithAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключен тариф «С рекламой» (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;«Reklama bilan» tarifi ulangan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;«With Ads» plan active (5$/mo)&quot;
+        /// </summary>
+        public const string OrgHeadlineWithAds = "Org_HeadlineWithAds";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentClickPayme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+        /// </summary>
+        public const string OrgPaymentClickPayme = "Org_PaymentClickPayme";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentInvoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+        /// </summary>
+        public const string OrgPaymentInvoice = "Org_PaymentInvoice";
+
+        /// <summary>
+        /// Key: <c>Org_PlanAdsSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+        /// </summary>
+        public const string OrgPlanAdsSummary = "Org_PlanAdsSummary";
+
+        /// <summary>
+        /// Key: <c>Org_PlanProSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+        /// </summary>
+        public const string OrgPlanProSummary = "Org_PlanProSummary";
+
+        /// <summary>
+        /// Key: <c>Org_Recommended</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+        /// </summary>
+        public const string OrgRecommended = "Org_Recommended";
+
+        /// <summary>
+        /// Key: <c>Org_SelectPlanAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+        /// </summary>
+        public const string OrgSelectPlanAds = "Org_SelectPlanAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeature100NoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+        /// </summary>
+        public const string OrgTierFeature100NoAds = "Org_TierFeature100NoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureAllModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+        /// </summary>
+        public const string OrgTierFeatureAllModes = "Org_TierFeatureAllModes";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+        /// </summary>
+        public const string OrgTierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+        /// </summary>
+        public const string OrgTierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+        /// </summary>
+        public const string OrgTierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureNoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+        /// </summary>
+        public const string OrgTierFeatureNoAds = "Org_TierFeatureNoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+        /// </summary>
+        public const string OrgTierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+        /// </summary>
+        public const string OrgTierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+        /// </summary>
+        public const string OrgTierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+        /// <summary>
+        /// Key: <c>Org_TierProName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+        /// </summary>
+        public const string OrgTierProName = "Org_TierProName";
+
+        /// <summary>
+        /// Key: <c>Org_TierProPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+        /// </summary>
+        public const string OrgTierProPrice = "Org_TierProPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+        /// </summary>
+        public const string OrgTierTrialName = "Org_TierTrialName";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+        /// </summary>
+        public const string OrgTierTrialPrice = "Org_TierTrialPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+        /// </summary>
+        public const string OrgTierWithAdsName = "Org_TierWithAdsName";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+        /// </summary>
+        public const string OrgTierWithAdsPrice = "Org_TierWithAdsPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TrialDaysRemaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+        /// </summary>
+        public const string OrgTrialDaysRemaining = "Org_TrialDaysRemaining";
+
+        /// <summary>
+        /// Key: <c>Org_YouSelectedPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+        /// </summary>
+        public const string OrgYouSelectedPlan = "Org_YouSelectedPlan";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentClickPayme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Click Business / Payme Merchant&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Click Business / Payme Merchant&quot;
+        /// </summary>
+        public const string PaymentClickPayme = "Org_PaymentClickPayme";
+
+        /// <summary>
+        /// Key: <c>Org_PaymentInvoice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Безналичный расчет для юр. лиц (Договор и счет)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuridik shaxslar uchun naqdsiz hisob-kitob (Shartnoma va hisob)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Bank wire for corporate entities (Contract &amp;amp; Invoice)&quot;
+        /// </summary>
+        public const string PaymentInvoice = "Org_PaymentInvoice";
+
+        /// <summary>
         /// Key: <c>Subscription_Period_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Срок действия абонемента:&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Abonementning amal qilish muddati:&quot;<br/>
@@ -70173,12 +83217,28 @@ namespace Loc
         public const string Plan_Recurring = "Subscription_Plan_Recurring";
 
         /// <summary>
+        /// Key: <c>Org_PlanAdsSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;С рекламой (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklama bilan (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;With Ads (5$/mo)&quot;
+        /// </summary>
+        public const string PlanAdsSummary = "Org_PlanAdsSummary";
+
+        /// <summary>
         /// Key: <c>Subscription_Plan_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Абонемент All-Inclusive VIP&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;All-Inclusive VIP abonementi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;All-Inclusive VIP Membership&quot;
         /// </summary>
         public const string PlanMembership = "Subscription_Plan_Membership";
+
+        /// <summary>
+        /// Key: <c>Org_PlanProSummary</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;PRO без рекламы (25$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;PRO reklamasiz (25$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;PRO Ad-Free (25$/mo)&quot;
+        /// </summary>
+        public const string PlanProSummary = "Org_PlanProSummary";
 
         /// <summary>
         /// Key: <c>Subscription_Plan_Recurring</c><br/>
@@ -70283,6 +83343,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Included privileges:&quot;
         /// </summary>
         public const string PrivilegesTitle = "Subscription_Privileges_Title";
+
+        /// <summary>
+        /// Key: <c>Org_Recommended</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рекомендуется&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tavsiya etiladi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Recommended&quot;
+        /// </summary>
+        public const string Recommended = "Org_Recommended";
+
+        /// <summary>
+        /// Key: <c>Org_SelectPlanAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выбрать (5$/мес)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tanlash (5$/oy)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Select (5$/mo)&quot;
+        /// </summary>
+        public const string SelectPlanAds = "Org_SelectPlanAds";
 
         /// <summary>
         /// Key: <c>Subscription_Slot_Membership_Format</c><br/>
@@ -70749,6 +83825,126 @@ namespace Loc
         public const string SubscriptionTotalToCharge = "Subscription_TotalToCharge";
 
         /// <summary>
+        /// Key: <c>Org_TierFeature100NoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Ad-Free&quot;
+        /// </summary>
+        public const string TierFeature100NoAds = "Org_TierFeature100NoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureAllModes</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полный доступ ко всем 28 режимам&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha 28 rejimga to'liq kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full access to all 28 modes&quot;
+        /// </summary>
+        public const string TierFeatureAllModes = "Org_TierFeatureAllModes";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureBrandScreensaver</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фирменная заставка заведения&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muassasaning maxsus ekran saqlovchisi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Branded venue screensaver&quot;
+        /// </summary>
+        public const string TierFeatureBrandScreensaver = "Org_TierFeatureBrandScreensaver";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureCloudPos</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Все функции облачной кассы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bulutli kassaning barcha imkoniyatlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;All cloud POS features&quot;
+        /// </summary>
+        public const string TierFeatureCloudPos = "Org_TierFeatureCloudPos";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureFiscalization</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Фискализация Soliq.uz&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Soliq.uz fiskalizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Soliq.uz fiscalization&quot;
+        /// </summary>
+        public const string TierFeatureFiscalization = "Org_TierFeatureFiscalization";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureNoAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-free&quot;
+        /// </summary>
+        public const string TierFeatureNoAds = "Org_TierFeatureNoAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePartnerAds</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Реклама партнеров на киосках&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklarda hamkorlar reklamasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Partner ads on kiosks&quot;
+        /// </summary>
+        public const string TierFeaturePartnerAds = "Org_TierFeaturePartnerAds";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeaturePrioritySupport</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приоритетный саппорт 24/7&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;24/7 ustuvor qo'llab-quvvatlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;24/7 Priority Support&quot;
+        /// </summary>
+        public const string TierFeaturePrioritySupport = "Org_TierFeaturePrioritySupport";
+
+        /// <summary>
+        /// Key: <c>Org_TierFeatureWhiteLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Премиальный White-Label стиль&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Premium White-Label uslubi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Premium White-Label Style&quot;
+        /// </summary>
+        public const string TierFeatureWhiteLabel = "Org_TierFeatureWhiteLabel";
+
+        /// <summary>
+        /// Key: <c>Org_TierProName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3. PRO Без рекламы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3. PRO Reklamasiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3. PRO Ad-Free&quot;
+        /// </summary>
+        public const string TierProName = "Org_TierProName";
+
+        /// <summary>
+        /// Key: <c>Org_TierProPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;25$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;25$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;25$ / mo&quot;
+        /// </summary>
+        public const string TierProPrice = "Org_TierProPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;1. Пробный период&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;1. Sinov davri&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;1. Trial Period&quot;
+        /// </summary>
+        public const string TierTrialName = "Org_TierTrialName";
+
+        /// <summary>
+        /// Key: <c>Org_TierTrialPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;0$ / 30 дней&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;0$ / 30 kun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;0$ / 30 days&quot;
+        /// </summary>
+        public const string TierTrialPrice = "Org_TierTrialPrice";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsName</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;2. С рекламой&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;2. Reklama bilan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;2. With Ads&quot;
+        /// </summary>
+        public const string TierWithAdsName = "Org_TierWithAdsName";
+
+        /// <summary>
+        /// Key: <c>Org_TierWithAdsPrice</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;5$ / мес&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;5$ / oy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;5$ / mo&quot;
+        /// </summary>
+        public const string TierWithAdsPrice = "Org_TierWithAdsPrice";
+
+        /// <summary>
         /// Key: <c>Subscription_Title_Membership</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;💳 Клубный абонемент / Членство&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;💳 Klub abonementi / A'zolik&quot;<br/>
@@ -70787,6 +83983,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Total to charge:&quot;
         /// </summary>
         public const string TotalToCharge = "Subscription_TotalToCharge";
+
+        /// <summary>
+        /// Key: <c>Org_TrialDaysRemaining</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;дней триала осталось&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kunlik sinov muddati qoldi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;trial days remaining&quot;
+        /// </summary>
+        public const string TrialDaysRemaining = "Org_TrialDaysRemaining";
+
+        /// <summary>
+        /// Key: <c>Org_YouSelectedPlan</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Вы выбрали тариф&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Siz tarifni tanladingiz&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;You selected plan&quot;
+        /// </summary>
+        public const string YouSelectedPlan = "Org_YouSelectedPlan";
 
     }
 

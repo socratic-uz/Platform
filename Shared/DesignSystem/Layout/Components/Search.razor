@@ -1,20 +1,21 @@
 @namespace Shared.Layout
 @using static Classes.Search
+@using static Loc.Common
 @using static Icons
 
-<div class="@Container">
+<div class=@Container>
     <TextField TValue="string" 
-               Variant="TextField<string>.TextFieldVariant.Outlined" 
-               Placeholder="@T("Search_Placeholder", "Поиск товаров...")" 
-               Value="@SearchText" 
-               ValueChanged="v => SearchText = v" 
-               ValueExpression="() => SearchText" 
-               HasLeadingIcon="true"
-               LeadingIcon="@Icons.Search"
-               class="search-input-field">
+               Variant=@(TextField<string>.TextFieldVariant.Outlined) 
+               Placeholder=@L[SearchPlaceholder] 
+               Value=@SearchText 
+               ValueChanged=@(v => SearchText = v) 
+               ValueExpression=@(() => SearchText) 
+               HasLeadingIcon=@true
+               LeadingIcon=@Icons.Search
+               class=@SearchInputFieldClass>
         @if (!string.IsNullOrEmpty(SearchText))
         {
-            <IconButton Icon="@Clear" Slot="trailing-icon" OnClick="ClearSearch" />
+            <IconButton Icon=@Clear Slot="trailing-icon" OnClick=@ClearSearch />
         }
     </TextField>
 </div>

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-23T05:12:43.831Z",
+  "generatedAt": "2026-10-23T06:00:45.216Z",
   "summary": {
-    "totalDeclaredKeys": 5621,
-    "usedInRazorCount": 562,
-    "unusedCount": 5059,
-    "adoptionRatePercent": 10,
-    "totalTypedCallSites": 643,
+    "totalDeclaredKeys": 5843,
+    "usedInRazorCount": 734,
+    "unusedCount": 5109,
+    "adoptionRatePercent": 13,
+    "totalTypedCallSites": 847,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
-    "sourceFilesScanned": 644
+    "sourceFilesScanned": 645
   },
   "topUsedKeys": [
     {
@@ -52,6 +52,20 @@
       ]
     },
     {
+      "key": "Actions.CloseAction",
+      "domain": "Actions",
+      "name": "CloseAction",
+      "locKey": "Close",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
+        "Retail/Checkout/Pages/Payment.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
+      ]
+    },
+    {
       "key": "Landing.LandingLaunchDemoKiosk",
       "domain": "Landing",
       "name": "LandingLaunchDemoKiosk",
@@ -60,6 +74,112 @@
       "filesCount": 1,
       "files": [
         "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Landing.LandingMetaDesc",
+      "domain": "Landing",
+      "name": "LandingMetaDesc",
+      "locKey": "LandingMetaDesc",
+      "usageCountInRazor": 4,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Landing.LandingPageTitle",
+      "domain": "Landing",
+      "name": "LandingPageTitle",
+      "locKey": "LandingPageTitle",
+      "usageCountInRazor": 4,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCanceled",
+      "domain": "Orders",
+      "name": "OrderStatusCanceled",
+      "locKey": "OrderStatus_Canceled",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCompleted",
+      "domain": "Orders",
+      "name": "OrderStatusCompleted",
+      "locKey": "OrderStatus_Completed",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusCreated",
+      "domain": "Orders",
+      "name": "OrderStatusCreated",
+      "locKey": "OrderStatus_Created",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusMade",
+      "domain": "Orders",
+      "name": "OrderStatusMade",
+      "locKey": "OrderStatus_Made",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusMaking",
+      "domain": "Orders",
+      "name": "OrderStatusMaking",
+      "locKey": "OrderStatus_Making",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusPaid",
+      "domain": "Orders",
+      "name": "OrderStatusPaid",
+      "locKey": "OrderStatus_Paid",
+      "usageCountInRazor": 4,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
       ]
     },
     {
@@ -72,19 +192,6 @@
       "files": [
         "Retail/PointOfSale/Pages/ProductPage.razor.cs",
         "Retail/PointOfSale/Pages/WishList.razor.cs"
-      ]
-    },
-    {
-      "key": "Actions.CloseAction",
-      "domain": "Actions",
-      "name": "CloseAction",
-      "locKey": "Close",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
-        "Retail/Checkout/Pages/Payment.razor.cs",
-        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
     },
     {
@@ -160,6 +267,18 @@
       ]
     },
     {
+      "key": "Common.Documentation",
+      "domain": "Common",
+      "name": "Documentation",
+      "locKey": "Documentation",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Docs.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
       "key": "Checkout.PaymentCard",
       "domain": "Checkout",
       "name": "PaymentCard",
@@ -186,16 +305,27 @@
       ]
     },
     {
-      "key": "Orders.OrderStatusCanceled",
-      "domain": "Orders",
-      "name": "OrderStatusCanceled",
-      "locKey": "OrderStatus_Canceled",
+      "key": "Landing.AboutVideoNotSupported",
+      "domain": "Landing",
+      "name": "AboutVideoNotSupported",
+      "locKey": "About_VideoNotSupported",
       "usageCountInRazor": 3,
       "filesCount": 3,
       "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Player.razor",
+        "Portal/Landing/Widgets/Player.razor"
+      ]
+    },
+    {
+      "key": "Landing.DocsNavigation",
+      "domain": "Landing",
+      "name": "DocsNavigation",
+      "locKey": "Docs_Navigation",
+      "usageCountInRazor": 3,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Docs.razor"
       ]
     },
     {
@@ -216,71 +346,6 @@
       "domain": "Orders",
       "name": "OrderStatusCollecting",
       "locKey": "OrderStatus_Collecting",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusCompleted",
-      "domain": "Orders",
-      "name": "OrderStatusCompleted",
-      "locKey": "OrderStatus_Completed",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusCreated",
-      "domain": "Orders",
-      "name": "OrderStatusCreated",
-      "locKey": "OrderStatus_Created",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusMade",
-      "domain": "Orders",
-      "name": "OrderStatusMade",
-      "locKey": "OrderStatus_Made",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusMaking",
-      "domain": "Orders",
-      "name": "OrderStatusMaking",
-      "locKey": "OrderStatus_Making",
-      "usageCountInRazor": 3,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusPaid",
-      "domain": "Orders",
-      "name": "OrderStatusPaid",
-      "locKey": "OrderStatus_Paid",
       "usageCountInRazor": 3,
       "filesCount": 3,
       "files": [
@@ -369,6 +434,42 @@
       ]
     },
     {
+      "key": "Common.PlayerLoadingVideo",
+      "domain": "Common",
+      "name": "PlayerLoadingVideo",
+      "locKey": "PlayerLoadingVideo",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Player.razor",
+        "Portal/Landing/Widgets/Player.razor"
+      ]
+    },
+    {
+      "key": "Common.PlayerPageTitle",
+      "domain": "Common",
+      "name": "PlayerPageTitle",
+      "locKey": "PlayerPageTitle",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Player.razor",
+        "Portal/Landing/Widgets/Player.razor"
+      ]
+    },
+    {
+      "key": "Common.PlayerVideoNotFound",
+      "domain": "Common",
+      "name": "PlayerVideoNotFound",
+      "locKey": "PlayerVideoNotFound",
+      "usageCountInRazor": 2,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/Player.razor",
+        "Portal/Landing/Widgets/Player.razor"
+      ]
+    },
+    {
       "key": "Common.SearchPlaceholder",
       "domain": "Common",
       "name": "SearchPlaceholder",
@@ -378,6 +479,17 @@
       "files": [
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartDataView/SmartDataView.razor.cs",
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartFilter/SmartFilterBar.razor.cs"
+      ]
+    },
+    {
+      "key": "Common.Sum",
+      "domain": "Common",
+      "name": "Sum",
+      "locKey": "Sum",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
       ]
     },
     {
@@ -414,6 +526,61 @@
       ]
     },
     {
+      "key": "Landing.AnalyticsNoDataPeriod",
+      "domain": "Landing",
+      "name": "AnalyticsNoDataPeriod",
+      "locKey": "Analytics_NoDataPeriod",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Landing.AnalyticsOrdersShort",
+      "domain": "Landing",
+      "name": "AnalyticsOrdersShort",
+      "locKey": "Analytics_OrdersShort",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Landing.AnalyticsText",
+      "domain": "Landing",
+      "name": "AnalyticsText",
+      "locKey": "Analytics",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Landing.DocsRefreshList",
+      "domain": "Landing",
+      "name": "DocsRefreshList",
+      "locKey": "Docs_RefreshList",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Docs.razor"
+      ]
+    },
+    {
+      "key": "Landing.DocsShowMenu",
+      "domain": "Landing",
+      "name": "DocsShowMenu",
+      "locKey": "Docs_ShowMenu",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Docs.razor"
+      ]
+    },
+    {
       "key": "Landing.LandingUxModesDesc",
       "domain": "Landing",
       "name": "LandingUxModesDesc",
@@ -426,6 +593,17 @@
       ]
     },
     {
+      "key": "Landing.QrCustomizerBgColor",
+      "domain": "Landing",
+      "name": "QrCustomizerBgColor",
+      "locKey": "QrCustomizerBgColor",
+      "usageCountInRazor": 2,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
+      ]
+    },
+    {
       "key": "Orders.BackToOrders",
       "domain": "Orders",
       "name": "BackToOrders",
@@ -435,190 +613,18 @@
       "files": [
         "Retail/Orders/Pages/OrderItems/Index.razor"
       ]
-    },
-    {
-      "key": "Orders.KdsJustNow",
-      "domain": "Orders",
-      "name": "KdsJustNow",
-      "locKey": "Kds_JustNow",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Grid.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderByRequirements",
-      "domain": "Orders",
-      "name": "OrderByRequirements",
-      "locKey": "Order_ByRequirements",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/PointOfSale/Pages/Kiosk.razor",
-        "Retail/PointOfSale/Pages/Terminal.razor"
-      ]
-    },
-    {
-      "key": "Orders.OrderItemsTitle",
-      "domain": "Orders",
-      "name": "OrderItemsTitle",
-      "locKey": "OrderItems_Title",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrdersViewGrid",
-      "domain": "Orders",
-      "name": "OrdersViewGrid",
-      "locKey": "Orders_ViewGrid",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Index.razor"
-      ]
-    },
-    {
-      "key": "Orders.OrdersViewList",
-      "domain": "Orders",
-      "name": "OrdersViewList",
-      "locKey": "Orders_ViewList",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Index.razor"
-      ]
-    },
-    {
-      "key": "Orders.OrdersViewTable",
-      "domain": "Orders",
-      "name": "OrdersViewTable",
-      "locKey": "Orders_ViewTable",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Index.razor"
-      ]
-    },
-    {
-      "key": "Orders.Pcs",
-      "domain": "Orders",
-      "name": "Pcs",
-      "locKey": "OrderItems_Pcs",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor"
-      ]
-    },
-    {
-      "key": "Schedule.DayOff",
-      "domain": "Schedule",
-      "name": "DayOff",
-      "locKey": "Schedule_DayOff",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor"
-      ]
-    },
-    {
-      "key": "Schedule.DaysShort",
-      "domain": "Schedule",
-      "name": "DaysShort",
-      "locKey": "Schedule_DaysShort",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs"
-      ]
-    },
-    {
-      "key": "Schedule.TitleText",
-      "domain": "Schedule",
-      "name": "TitleText",
-      "locKey": "Schedule_Title",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor.cs"
-      ]
-    },
-    {
-      "key": "UxMode.BookText",
-      "domain": "UxMode",
-      "name": "BookText",
-      "locKey": "UX_Book",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Retail/PointOfSale/Pages/ProductPage.razor.cs"
-      ]
-    },
-    {
-      "key": "Actions.AddAction",
-      "domain": "Actions",
-      "name": "AddAction",
-      "locKey": "Add",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Studio/SeatDesigner/Widgets/Toolbar/SeatDesignerToolbar.razor"
-      ]
-    },
-    {
-      "key": "Actions.AddText",
-      "domain": "Actions",
-      "name": "AddText",
-      "locKey": "Add",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Retail/PointOfSale/Pages/WishList.razor.cs"
-      ]
-    },
-    {
-      "key": "Actions.ApplyAction",
-      "domain": "Actions",
-      "name": "ApplyAction",
-      "locKey": "Apply",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Studio/SeatDesigner/Widgets/Toolbar/SeatDesignerToolbar.razor"
-      ]
-    },
-    {
-      "key": "Actions.CancelText",
-      "domain": "Actions",
-      "name": "CancelText",
-      "locKey": "Cancel",
-      "usageCountInRazor": 1,
-      "filesCount": 1,
-      "files": [
-        "Retail/Checkout/Widgets/UniversalCheckoutPanel.razor.cs"
-      ]
     }
   ],
   "byDomain": {
     "Actions": {
       "total": 55,
       "used": 19,
-      "totalCalls": 31
+      "totalCalls": 32
     },
     "Common": {
-      "total": 501,
-      "used": 215,
-      "totalCalls": 235
+      "total": 504,
+      "used": 224,
+      "totalCalls": 250
     },
     "Auction": {
       "total": 16,
@@ -706,9 +712,9 @@
       "totalCalls": 0
     },
     "Landing": {
-      "total": 303,
-      "used": 83,
-      "totalCalls": 87
+      "total": 411,
+      "used": 230,
+      "totalCalls": 250
     },
     "Lottery": {
       "total": 42,
@@ -718,12 +724,12 @@
     "Orders": {
       "total": 218,
       "used": 63,
-      "totalCalls": 89
+      "totalCalls": 95
     },
     "QrDesigner": {
       "total": 98,
-      "used": 0,
-      "totalCalls": 0
+      "used": 16,
+      "totalCalls": 19
     },
     "Quote": {
       "total": 57,
@@ -771,7 +777,7 @@
       "totalCalls": 0
     },
     "UxMode": {
-      "total": 2540,
+      "total": 2651,
       "used": 27,
       "totalCalls": 31
     }

@@ -30,16 +30,16 @@
 
 				<div class="smart-checkbox-item @checkboxClass">
 					<Checkbox @key="enumValue"
-							  Label="@GetEnumText(enumValue)"
-							  Value="@isChecked"
-							  ValueChanged="@(async (bool val) => await HandleEnumChange(enumValue, val))"
-							  Disabled="@Disabled"
-							  Required="@(IsRequired && !HasAnySelection())"
-							  AriaLabel="@GetEnumAriaLabel(enumValue)" />
+							  Label=@GetEnumText(enumValue)
+							  Value=@isChecked
+							  ValueChanged=@(async (bool val) => await HandleEnumChange(enumValue, val))
+							  Disabled=@Disabled
+							  Required=@(IsRequired && !HasAnySelection())
+							  AriaLabel=@GetEnumAriaLabel(enumValue) />
 
 					@if (HasEnumIcon(enumValue))
 					{
-						<Icon Name="@GetEnumIcon(enumValue)" class="checkbox-icon" />
+						<Icon Name=@GetEnumIcon(enumValue) class="checkbox-icon" />
 					}
 				</div>
 			}
@@ -47,17 +47,17 @@
 	}
 	else
 	{
-		<!-- Single checkbox mode для простых boolean значений -->
+		<!-- Single checkbox mode for simple boolean values -->
 		@if (typeof(TEnum) == typeof(bool))
 		{
 			var value = GetBooleanValue();
 			<div class="smart-checkbox-single">
-				<Checkbox Label="@Label"
-						  Value="@value"
-						  ValueChanged="@(async (bool val) => await HandleBooleanChange(val))"
-						  Disabled="@Disabled"
-						  Required="@IsRequired"
-						  AriaLabel="@(AriaLabel ?? Label)" />
+				<Checkbox Label=@Label
+						  Value=@value
+						  ValueChanged=@(async (bool val) => await HandleBooleanChange(val))
+						  Disabled=@Disabled
+						  Required=@IsRequired
+						  AriaLabel=@(AriaLabel ?? Label) />
 			</div>
 		}
 	}

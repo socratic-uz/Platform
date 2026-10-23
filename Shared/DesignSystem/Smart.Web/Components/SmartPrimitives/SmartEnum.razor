@@ -26,7 +26,7 @@
                     Disabled=@Disabled
                     Variant=@(Select.SelectVariant.Outlined)
                     Options=@GetSelectOptions()
-                    Value="@(CurrentValue.ToString())"
+                    Value=@(CurrentValue.ToString())
                     ValueChanged=@HandleDropdownChange />
             break;
 
@@ -35,7 +35,7 @@
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
-                    <SegmentedButton Label="@GetEnumText(val)"
+                    <SegmentedButton Label=@GetEnumText(val)
                                      Selected=@isSelected
                                      Disabled=@Disabled
                                      OnClick=@(() => HandleSelect(val)) />
@@ -49,7 +49,7 @@
                 {
                     var isSelected = IsSelected(val);
                     <Chip ChipType=@ChipType.Filter
-                          Label="@GetEnumText(val)"
+                          Label=@GetEnumText(val)
                           Selected=@isSelected
                           Disabled=@Disabled
                           OnClick=@(() => ToggleValue(val)) />
@@ -65,7 +65,7 @@
                     <Checkbox Value=@isSelected
                               ValueChanged=@((bool check) => HandleCheckboxToggle(val, check))
                               Disabled=@Disabled
-                              Label="@GetEnumText(val)" />
+                              Label=@GetEnumText(val) />
                 }
             </div>
             break;
@@ -75,9 +75,9 @@
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
-                    <Radio Value="@(val.ToString())"
+                    <Radio Value=@(val.ToString())
                            ValueChanged=@((string selectedVal) => HandleRadioSelect(val, selectedVal))
-                           Label="@GetEnumText(val)"
+                           Label=@GetEnumText(val)
                            Disabled=@Disabled />
                 }
             </div>

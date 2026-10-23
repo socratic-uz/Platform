@@ -1,13 +1,16 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using SharedKernel.ValueObjects;
 using SharedKernel.Abstractions;
 using Domain.Abstractions;
 using Domain.Entities;
 using Domain.Interfaces;
 using Material.Web;
-using Assets.Constants;
+using static Assets.Constants.Classes.Badge;
+using static Assets.Constants.Icons;
+using static Assets.Constants.Loc.Subscription;
 
 namespace Shared.Components
 {
@@ -16,6 +19,7 @@ namespace Shared.Components
         [Parameter] public Organization? Organization { get; set; }
         [Parameter] public EventCallback<OrganizationSubscription> OnSubscriptionChanged { get; set; }
         [Inject] public IServiceClientFactory ClientFactory { get; set; } = default!;
+        [Inject] public IStringLocalizer L { get; set; } = default!;
 
         public OrganizationSubscription Subscription => Organization?.Subscription ?? OrganizationSubscription.CreateDefaultTrial();
 
@@ -25,46 +29,46 @@ namespace Shared.Components
 
         public string GetTierBadgeClass() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? Classes.Badge.Trial : Classes.Badge.Expired,
-            SubscriptionTier.WithAds => Classes.Badge.WithAds,
-            SubscriptionTier.ProAdFree => Classes.Badge.Pro,
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? Trial : Expired,
+            SubscriptionTier.WithAds => WithAds,
+            SubscriptionTier.ProAdFree => Pro,
             _ => "badge-default"
         };
 
         public string GetTierIcon() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? Icons.HourglassTop : Icons.Warning,
-            SubscriptionTier.WithAds => Icons.Campaign,
-            SubscriptionTier.ProAdFree => Icons.Verified,
-            _ => Icons.Info
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? HourglassTop : Icons.Warning,
+            SubscriptionTier.WithAds => Campaign,
+            SubscriptionTier.ProAdFree => Verified,
+            _ => Info
         };
 
         public string GetTierBadgeTitle() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? "Пробный период (30 дней)" : "Пробный период завершен",
-            SubscriptionTier.WithAds => "Тариф «С рекламой»",
-            SubscriptionTier.ProAdFree => "Тариф «PRO без рекламы»",
-            _ => "Тариф организации"
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? L[Org_BadgeTrialActive] : L[Org_BadgeTrialExpired],
+            SubscriptionTier.WithAds => L[Org_BadgeWithAds],
+            SubscriptionTier.ProAdFree => L[Org_BadgePro],
+            _ => L[Org_BadgeDefault]
         };
 
         public string GetTierHeadline() => Subscription.Tier switch
         {
             SubscriptionTier.Trial => Subscription.IsTrialActive
-                ? $"Ваш пробный период активен еще {Subscription.RemainingTrialDays} дней"
-                : "Пробный период подошел к концу",
-            SubscriptionTier.WithAds => "Подключен тариф «С рекламой» (5$/мес)",
-            SubscriptionTier.ProAdFree => "Подключен тариф «PRO без рекламы» (25$/мес)",
-            _ => "Управление тарифом"
+                ? L[Org_HeadlineTrialActive, Subscription.RemainingTrialDays]
+                : L[Org_HeadlineTrialExpired],
+            SubscriptionTier.WithAds => L[Org_HeadlineWithAds],
+            SubscriptionTier.ProAdFree => L[Org_HeadlinePro],
+            _ => L[Org_HeadlineManage]
         };
 
         public string GetTierDescription() => Subscription.Tier switch
         {
             SubscriptionTier.Trial => Subscription.IsTrialActive
-                ? "Вы пользуетесь полным функционалом без сторонней рекламы. По истечении 30 дней заведение автоматически перейдет на тариф с рекламой (5$/мес), если не оформлен PRO."
-                : "Чтобы вернуть брендовый экранозаставка без сторонней рекламы, оформите тариф PRO (25$/мес).",
-            SubscriptionTier.WithAds => "На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.",
-            SubscriptionTier.ProAdFree => "На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.",
-            _ => ""
+                ? L[Org_DescTrialActive]
+                : L[Org_DescTrialExpired],
+            SubscriptionTier.WithAds => L[Org_DescWithAds],
+            SubscriptionTier.ProAdFree => L[Org_DescPro],
+            _ => string.Empty
         };
 
         public void OpenSelectPlanDialog(SubscriptionTier tier)

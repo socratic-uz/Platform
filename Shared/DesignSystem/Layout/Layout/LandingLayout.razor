@@ -4,6 +4,9 @@
 @using Microsoft.AspNetCore.Components
 @using SharedKernel.Extensions
 @using static Icons
+@using static Loc.Common
+@using static Loc.Landing
+@using static Material.Web.Components.ButtonVariant
 
 <Color />
 @if (!IsRootLanding)
@@ -13,50 +16,50 @@
 
 @if (IsRootLanding)
 {
-	<aside class="landing-floating-controls" aria-label="Quick Actions">
+	<aside class=@LandingFloatingControlsClass aria-label="Quick Actions">
 		<LanguageSelector Variant="pill" />
-		<a href="/signin" class="landing-floating-auth-btn" title="Socratic ID">
-			<Icon Name="@Login" />
-			<span class="auth-btn-label">@T("SocraticID", "Socratic ID")</span>
+		<a href="/signin" class=@LandingFloatingAuthBtnClass title=@L[SocraticID]>
+			<Icon Name=@Login />
+			<span class=@AuthBtnLabelClass>@L[SocraticID]</span>
 		</a>
 	</aside>
 }
 else
 {
-	<Header Class="landing-header" ShowDefaultActions="false">
+	<Header Class=@LandingHeaderClass ShowDefaultActions=@false>
 		<CenterContent>
-			<nav class="landing-header-nav" aria-label="@T("MainNavigation", "Главная навигация")">
-				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="landing-nav-link">
-					<Icon Name="@Storefront" />
-					<span>@T("Showroom", "Витрина")</span>
+			<nav class=@LandingHeaderNavClass aria-label=@L[MainNavigation]>
+				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@LandingNavLinkClass>
+					<Icon Name=@Storefront />
+					<span>@L[Showroom]</span>
 				</a>
-				<a href="/docs" class="landing-nav-link">
-					<Icon Name="@MenuBook" />
-					<span>@T("Documentation", "Документация")</span>
+				<a href="/docs" class=@LandingNavLinkClass>
+					<Icon Name=@MenuBook />
+					<span>@L[Documentation]</span>
 				</a>
-				<a href="/help" class="landing-nav-link">
-					<Icon Name="@HelpOutline" />
-					<span>@T("Help", "Справка")</span>
+				<a href="/help" class=@LandingNavLinkClass>
+					<Icon Name=@HelpOutline />
+					<span>@L[HelpText]</span>
 				</a>
-				<a href="/about" class="landing-nav-link">
-					<Icon Name="@Info" />
-					<span>@T("About", "О платформе")</span>
+				<a href="/about" class=@LandingNavLinkClass>
+					<Icon Name=@Info />
+					<span>@L[AboutText]</span>
 				</a>
 			</nav>
 		</CenterContent>
 		<EndContent>
-			<div class="landing-header-actions">
+			<div class=@LandingHeaderActionsClass>
 				<LanguageSelector Variant="pill" />
-				<a href="/signin" class="landing-auth-btn">
-					<Icon Name="@Login" />
-					<span>@T("SocraticID", "Socratic ID")</span>
+				<a href="/signin" class=@LandingAuthBtnClass>
+					<Icon Name=@Login />
+					<span>@L[SocraticID]</span>
 				</a>
 				<button type="button"
-						class="landing-mobile-menu-toggle"
-						@onclick="ToggleMobileMenu"
-						aria-label="@(IsMobileMenuOpen ? "Закрыть меню" : "Открыть меню")"
-						aria-expanded="@(IsMobileMenuOpen ? "true" : "false")">
-					<Icon Name="@MenuIcon" />
+						class=@LandingMobileMenuToggleClass
+						@onclick=@ToggleMobileMenu
+						aria-label=@(IsMobileMenuOpen ? L[CloseAction] : "Menu")
+						aria-expanded=@(IsMobileMenuOpen ? "true" : "false")>
+					<Icon Name=@MenuIcon />
 				</button>
 			</div>
 		</EndContent>
@@ -64,41 +67,41 @@ else
 
 	@if (IsMobileMenuOpen)
 	{
-		<div class="landing-mobile-menu-backdrop" @onclick="CloseMobileMenu"></div>
-		<nav class="landing-mobile-menu-drawer" aria-label="Mobile Navigation">
-			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="@Storefront" />
-				<span>@T("Showroom", "Витрина")</span>
+		<div class=@LandingMobileMenuBackdropClass @onclick=@CloseMobileMenu></div>
+		<nav class=@LandingMobileMenuDrawerClass aria-label="Mobile Navigation">
+			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+				<Icon Name=@Storefront />
+				<span>@L[Showroom]</span>
 			</a>
-			<a href="/docs" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="@MenuBook" />
-				<span>@T("Documentation", "Документация")</span>
+			<a href="/docs" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+				<Icon Name=@MenuBook />
+				<span>@L[Documentation]</span>
 			</a>
-			<a href="/help" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="@HelpOutline" />
-				<span>@T("Help", "Справка")</span>
+			<a href="/help" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+				<Icon Name=@HelpOutline />
+				<span>@L[HelpText]</span>
 			</a>
-			<a href="/about" class="mobile-nav-item" @onclick="CloseMobileMenu">
-				<Icon Name="@Info" />
-				<span>@T("About", "О платформе")</span>
+			<a href="/about" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+				<Icon Name=@Info />
+				<span>@L[AboutText]</span>
 			</a>
-			<div class="mobile-nav-divider"></div>
-			<div class="mobile-nav-footer">
+			<div class=@MobileNavDividerClass></div>
+			<div class=@MobileNavFooterClass>
 				<LanguageSelector Variant="inline" />
 			</div>
 		</nav>
 	}
 }
 
-<ErrorBoundary @ref="ErrorBoundaryRef">
+<ErrorBoundary @ref=@ErrorBoundaryRef>
 	<ChildContent>
 		@Body
 	</ChildContent>
 	<ErrorContent Context="ex">
 		<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@T("ErrorLoading", "Произошла ошибка при загрузке")</h3>
+			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@L[ErrorLoading]</h3>
 			<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-			<Button Variant="ButtonVariant.Filled" OnClick="Recover">@T("TryAgain", "Попробовать снова")</Button>
+			<Button Variant=@Filled OnClick=@Recover>@L[TryAgain]</Button>
 		</div>
 	</ErrorContent>
 </ErrorBoundary>

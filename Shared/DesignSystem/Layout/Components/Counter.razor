@@ -1,16 +1,21 @@
 @using Material.Web
-<div class="@Classes.Form.MaterialCounter">
+@using Material.Web.Components
+@using static Classes.Form
+@using static Icons
+@using static Loc.Common
+@using static Material.Web.Components.IconButtonVariant
+
+<div class=@MaterialCounter>
 	@if (OrderItem != null)
 	{
-		<IconButton Icon="@Icons.Remove" Variant="IconButtonVariant.FilledTonal" OnClick=@(async e => await Remove.InvokeAsync(OrderItem)) />
-		<span class="counter-quantity">@OrderItem.Quantity</span>
-		<IconButton Icon="@Icons.Add" Variant="IconButtonVariant.Filled" OnClick=@(async e => await Add.InvokeAsync(OrderItem)) />
+		<IconButton Icon=@Icons.Remove Variant=@FilledTonal OnClick=@(async e => await Remove.InvokeAsync(OrderItem)) />
+		<span class=@CounterQuantityClass>@OrderItem.Quantity</span>
+		<IconButton Icon=@Icons.Add Variant=@Filled OnClick=@(async e => await Add.InvokeAsync(OrderItem)) />
 	}
 	else
 	{
-		<Button Variant="ButtonVariant.Filled" OnClick=@(async e => await CreateOrderItem.InvokeAsync((Product, OrderItem)))>
-			<md-icon slot="icon">@Icons.AddShoppingCart</md-icon>
-			В корзину
+		<Button Variant=@ButtonVariant.Filled OnClick=@(async e => await CreateOrderItem.InvokeAsync((Product, OrderItem))) Icon=@AddShoppingCart>
+			@L[ProductVariantAddToCart]
 		</Button>
 	}
 </div>

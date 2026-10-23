@@ -1,19 +1,24 @@
 @namespace Shared.Components
 @using SharedKernel.ValueObjects
 @using Domain.Entities
-@using Assets.Constants
+@using static Assets.Constants.Classes.Common
+@using static Assets.Constants.Classes.Badge
+@using static Assets.Constants.Icons
+@using static Assets.Constants.Loc.Subscription
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.ButtonVariant
 
 <div class="card-outlined pricing-card">
     <div class="subscription-header">
-        <div class="@Classes.Badge.Root @GetTierBadgeClass()">
-            <md-icon class="@Classes.Badge.Icon">@GetTierIcon()</md-icon>
+        <div class=@($"{Root} {GetTierBadgeClass()}")>
+            <Icon Name=@GetTierIcon() class=@BadgeIcon />
             <span>@GetTierBadgeTitle()</span>
         </div>
         @if (Subscription.IsTrialActive)
         {
             <div class="trial-counter">
                 <span class="trial-days-highlight">@Subscription.RemainingTrialDays</span>
-                <span class="trial-days-label">дней триала осталось</span>
+                <span class="trial-days-label">@L[Org_TrialDaysRemaining]</span>
             </div>
         }
     </div>
@@ -24,90 +29,90 @@
     </div>
 
     <!-- Сетка сравнения 3-х тарифов -->
-    <div class="tiers-grid">
+    <div class=@TiersGrid>
         <!-- 1. Пробный период -->
-        <div class="tier-box @(Subscription.Tier == SubscriptionTier.Trial ? "active-tier" : "")">
-            <div class="tier-header">
-                <h3 class="tier-name">1. Пробный период</h3>
-                <span class="tier-price">0$ <small>/ 30 дней</small></span>
+        <div class=@($"{TierBox} {(Subscription.Tier == SubscriptionTier.Trial ? "active-tier" : string.Empty)}")>
+            <div class=@TierHeader>
+                <h3 class=@TierName>@L[Org_TierTrialName]</h3>
+                <span class=@TierPrice>@L[Org_TierTrialPrice]</span>
             </div>
-            <ul class="tier-features">
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> <strong>Без рекламы</strong></li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Полный доступ ко всем 28 режимам</li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фирменная заставка заведения</li>
+            <ul class=@TierFeatures>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureAllModes]</li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureBrandScreensaver]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
             {
-                <span class="current-plan-indicator">Текущий тариф</span>
+                <span class="current-plan-indicator">@L[Org_CurrentPlan]</span>
             }
         </div>
 
         <!-- 2. С рекламой -->
-        <div class="tier-box @(Subscription.Tier == SubscriptionTier.WithAds ? "active-tier" : "")">
-            <div class="tier-header">
-                <h3 class="tier-name">2. С рекламой</h3>
-                <span class="tier-price">5$ <small>/ мес</small></span>
+        <div class=@($"{TierBox} {(Subscription.Tier == SubscriptionTier.WithAds ? "active-tier" : string.Empty)}")>
+            <div class=@TierHeader>
+                <h3 class=@TierName>@L[Org_TierWithAdsName]</h3>
+                <span class=@TierPrice>@L[Org_TierWithAdsPrice]</span>
             </div>
-            <ul class="tier-features">
-                <li><md-icon class="feature-icon info">@Icons.Info</md-icon> Реклама партнеров на киосках</li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Все функции облачной кассы</li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фискализация Soliq.uz</li>
+            <ul class=@TierFeatures>
+                <li><Icon Name=@Info class="feature-icon info" /> @L[Org_TierFeaturePartnerAds]</li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureCloudPos]</li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureFiscalization]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.WithAds)
             {
-                <span class="current-plan-indicator">Текущий тариф</span>
+                <span class="current-plan-indicator">@L[Org_CurrentPlan]</span>
             }
             else
             {
-                <Button Variant="ButtonVariant.Outlined" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.WithAds)">
-                    Выбрать (5$/мес)
+                <Button Variant=@ButtonVariant.Outlined style="width: 100%;" OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.WithAds))>
+                    @L[Org_SelectPlanAds]
                 </Button>
             }
         </div>
 
         <!-- 3. Без рекламы (PRO) -->
-        <div class="tier-box pro-tier @(Subscription.Tier == SubscriptionTier.ProAdFree ? "active-tier" : "")">
-            <div class="pro-tag">Рекомендуется</div>
-            <div class="tier-header">
-                <h3 class="tier-name">3. PRO Без рекламы</h3>
-                <span class="tier-price">25$ <small>/ мес</small></span>
+        <div class=@($"{TierBox} pro-tier {(Subscription.Tier == SubscriptionTier.ProAdFree ? "active-tier" : string.Empty)}")>
+            <div class="pro-tag">@L[Org_Recommended]</div>
+            <div class=@TierHeader>
+                <h3 class=@TierName>@L[Org_TierProName]</h3>
+                <span class=@TierPrice>@L[Org_TierProPrice]</span>
             </div>
-            <ul class="tier-features">
-                <li><md-icon class="feature-icon star">@Icons.Star</md-icon> <strong>100% Без рекламы</strong></li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Фирменный экранозаставка ресторана</li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Приоритетный саппорт 24/7</li>
-                <li><md-icon class="feature-icon ok">@Icons.CheckCircle</md-icon> Премиальный White-Label стиль</li>
+            <ul class=@TierFeatures>
+                <li><Icon Name=@Star class="feature-icon star" /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeaturePrioritySupport]</li>
+                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureWhiteLabel]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.ProAdFree)
             {
-                <span class="current-plan-indicator pro">Активен PRO</span>
+                <span class="current-plan-indicator pro">@L[Org_ActivePro]</span>
             }
             else
             {
-                <Button Variant="ButtonVariant.Filled" Icon="@Icons.RocketLaunch" style="width: 100%;" OnClick="() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree)">
-                    Подключить PRO (25$/мес)
+                <Button Variant=@ButtonVariant.Filled Icon=@RocketLaunch style="width: 100%;" OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree))>
+                    @L[Org_ConnectPro]
                 </Button>
             }
         </div>
     </div>
 
-    <MaterialDialog Open="@isChangePlanModalOpen" OpenChanged="@(v => isChangePlanModalOpen = v)">
+    <MaterialDialog Open=@isChangePlanModalOpen OpenChanged=@(v => isChangePlanModalOpen = v)>
         <Headline>
-            <span>Подключение тарифа: @(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы (25$/мес)" : "С рекламой (5$/мес)")</span>
+            <span>@L[Org_ConnectingPlan] @(selectedTierForPayment == SubscriptionTier.ProAdFree ? L[Org_PlanProSummary] : L[Org_PlanAdsSummary])</span>
         </Headline>
         <Content>
             <p class="modal-summary">
-                Вы выбрали тариф <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? "PRO без рекламы — 25$ в месяц" : "С рекламой — 5$ в месяц")</strong>.
+                @L[Org_YouSelectedPlan] <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? L[Org_PlanProSummary] : L[Org_PlanAdsSummary])</strong>.
             </p>
             <div class="payment-methods-selector">
-                <Radio Name="payment_method" Value="click" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Click Business / Payme Merchant" />
-                <Radio Name="payment_method" Value="invoice" OptionValue="@selectedPaymentMethod" ValueChanged="@(v => selectedPaymentMethod = v)" Label="Безналичный расчет для юр. лиц (Договор и счет)" />
+                <Radio Name="payment_method" Value="click" OptionValue=@selectedPaymentMethod ValueChanged=@(v => selectedPaymentMethod = v) Label=@L[Org_PaymentClickPayme] />
+                <Radio Name="payment_method" Value="invoice" OptionValue=@selectedPaymentMethod ValueChanged=@(v => selectedPaymentMethod = v) Label=@L[Org_PaymentInvoice] />
             </div>
         </Content>
         <Actions>
-            <Button Variant="ButtonVariant.Text" OnClick="CloseSelectPlanDialog">Отмена</Button>
-            <Button Variant="ButtonVariant.Filled" OnClick="ConfirmPlanChange">
-                Подтвердить активацию
+            <Button Variant=@ButtonVariant.Text OnClick=@CloseSelectPlanDialog>@L[Cancel]</Button>
+            <Button Variant=@ButtonVariant.Filled OnClick=@ConfirmPlanChange>
+                @L[Org_ConfirmActivation]
             </Button>
         </Actions>
     </MaterialDialog>

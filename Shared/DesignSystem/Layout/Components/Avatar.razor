@@ -1,36 +1,40 @@
 @inherits DataComponentBase
 @using System.Diagnostics.CodeAnalysis
-@using Assets.Constants
+@using static Assets.Constants.Classes.Avatar
+@using static Assets.Constants.Icons
+@using static Assets.Constants.Loc.Common
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.ButtonVariant
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<div class="@Classes.Avatar.Container">
-	<Button Variant="ButtonVariant.Outlined" OnClick="@OpenProfile" class="@Classes.Avatar.Button" AriaLabel="@(l?["Profile"] ?? "Профиль")">
+<div class=@Container>
+	<Button Variant=@ButtonVariant.Outlined OnClick=@OpenProfile class=@Classes.Avatar.Button AriaLabel=@l[Profile]>
 		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
 			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
 		}
 		else
 		{
-			<md-icon>@Icons.Person</md-icon>
+			<Icon Name=@Person />
 		}
 	</Button>
 
 	@if (IsOpen)
 	{
-	<MaterialDialog class="@Classes.Avatar.Contacts" Open=@IsOpen OnClose=@OnClose Type="alert">
+	<MaterialDialog class=@Classes.Avatar.Contacts Open=@IsOpen OnClose=@OnClose Type="alert">
 		<span slot="headline">
-			<span class="@Classes.Avatar.Headline">@l?["Edit profile"]</span>
-			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@(e => IsOpen = false) Icon="@Icons.Close" />
+			<span class=@Headline>@l[EditProfile]</span>
+			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
 		</span>
 		@if (FormModel is null)
 		{
-			<div slot="content" class="@Classes.Avatar.Content">
+			<div slot="content" class=@Content>
 				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
 			</div>
 		}
 		else
 		{
-			<EditForm Model="@FormModel" slot="content" method="dialog" class="@Classes.Avatar.Content" @onsubmit:preventDefault>
+			<EditForm Model=@FormModel slot="content" method="dialog" class=@Content @onsubmit:preventDefault>
 				<AntiforgeryToken />
 				<List>
 					<!--Id-->
@@ -38,16 +42,16 @@
 						<summary>
 							<ListItem type="button">
 								<p>@FormModel?.Name.FirstName @FormModel?.Name?.LastName</p>
-								<md-icon slot="start">@Icons.Person</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<Icon Name=@Person slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class="@Classes.Avatar.Content">
+						<div class=@Content>
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
 							<TextField TValue="Guid?"
-									   Variant="TextField<Guid?>.TextFieldVariant.Outlined"
-									   Label="@l?["Id"]"
-									   Value="@FormModel.Id"
+									   Variant=@(TextField<Guid?>.TextFieldVariant.Outlined)
+									   Label=@l[Id]
+									   Value=@FormModel.Id
 									   ValueExpression="() => FormModel.Id"
 									   Disabled="true" />
 							@if (Roles.Any())
@@ -77,17 +81,17 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Phone"]</div>
-								<md-icon slot="start">@Icons.Phone</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[Phone]</div>
+								<Icon Name=@Phone slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class="@Classes.Avatar.Content">
+						<div class=@Content>
 							<TextField TValue="string"
-									   Variant="TextField<string>.TextFieldVariant.Outlined"
-									   Label="@l?["Phone"]"
-									   Value="@FormModel.Phone"
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[Phone]
+									   Value=@FormModel.Phone
 									   ValueExpression="() => FormModel.Phone"
 									   Disabled="true" />
 						</div>
@@ -98,22 +102,22 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Photo"]</div>
-								<md-icon slot="start">@Icons.AddPhotoAlternate</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[PhotoLabel]</div>
+								<Icon Name=@AddPhotoAlternate slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class="@Classes.Avatar.Content" style="padding: 16px;">
+						<div class=@Content style="padding: 16px;">
 							<Material.Web.Components.FilePicker 
-								Attachments="@_imageAttachments"
-								Label="@l?["Photo"]"
-								UploadLabel="@(l?["Upload photo"] ?? "Загрузить фото")"
-								RemoveLabel="@(l?["Delete"] ?? "Удалить")"
+								Attachments=@_imageAttachments
+								Label=@l[PhotoLabel]
+								UploadLabel=@l[ProfileUploadPhoto]
+								RemoveLabel=@l[Delete]
 								Multiple="false"
 								Accept="image/*"
 								MaxAllowedFiles="1"
-								OnChanged="@HandleImageChanged" />
+								OnChanged=@HandleImageChanged />
 						</div>
 						<Divider />
 					</details>
@@ -122,45 +126,45 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Name"]</div>
-								<md-icon slot="start">@Icons.IdCard</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[NameLabel]</div>
+								<Icon Name=@IdCard slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class="@Classes.Avatar.Content">
+						<div class=@Content>
 							<TextField TValue="string"
-									   Variant="TextField<string>.TextFieldVariant.Outlined"
-									   Label="@l?["FirstName"]"
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[FirstName]
 									   autofocus
-									   Value="@FormModel.Name.FirstName"
-									   ValueChanged="@(val => FormModel.Name.FirstName = val)"
+									   Value=@FormModel.Name.FirstName
+									   ValueChanged=@(val => FormModel.Name.FirstName = val)
 									   ValueExpression="() => FormModel.Name.FirstName"
-									   OnInput="@(e => FormModel.Name.FirstName = e.Value?.ToString() ?? string.Empty)"
+									   OnInput=@(e => FormModel.Name.FirstName = e.Value?.ToString() ?? string.Empty)
 									   MaxLength="10"
 									   Required="true"
 									   SupportingText="*required"
 									   ErrorText="Please fill out this field" />
 
 							<TextField TValue="string"
-									   Variant="TextField<string>.TextFieldVariant.Outlined"
-									   Label="@l?["LastName"]"
-									   Value="@FormModel.Name.LastName"
-									   ValueChanged="@(val => FormModel.Name.LastName = val)"
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[LastName]
+									   Value=@FormModel.Name.LastName
+									   ValueChanged=@(val => FormModel.Name.LastName = val)
 									   ValueExpression="() => FormModel.Name.LastName"
-									   OnInput="@(e => FormModel.Name.LastName = e.Value?.ToString() ?? string.Empty)"
+									   OnInput=@(e => FormModel.Name.LastName = e.Value?.ToString() ?? string.Empty)
 									   MaxLength="10"
 									   Required="true"
 									   SupportingText="*required"
 									   ErrorText="Please fill out this field" />
 
 							<TextField TValue="string"
-									   Variant="TextField<string>.TextFieldVariant.Outlined"
-									   Label="@l?["MiddleName"]"
-									   Value="@FormModel.Name.MiddleName"
-									   ValueChanged="@(val => FormModel.Name.MiddleName = val)"
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[MiddleName]
+									   Value=@FormModel.Name.MiddleName
+									   ValueChanged=@(val => FormModel.Name.MiddleName = val)
 									   ValueExpression="() => FormModel.Name.MiddleName"
-									   OnInput="@(e => FormModel.Name.MiddleName = e.Value?.ToString() ?? string.Empty)"
+									   OnInput=@(e => FormModel.Name.MiddleName = e.Value?.ToString() ?? string.Empty)
 									   MaxLength="10"
 									   Required="true"
 									   SupportingText="*required"
@@ -173,24 +177,24 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Address"]</div>
-								<md-icon slot="start">@Icons.LocationOn</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[AddressLabel]</div>
+								<Icon Name=@LocationOn slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class="@Classes.Avatar.Content" style="display: grid; gap: 12px; padding: 16px;">
+						<div class=@Content style="display: grid; gap: 12px; padding: 16px;">
 							<TextField TValue="string"
-							           Variant="TextField<string>.TextFieldVariant.Outlined"
-							           Label="@(l?["City"] ?? "Город")"
-							           Value="@(GetOrCreateAddress().City)"
-							           ValueChanged="@(c => GetOrCreateAddress().City = c)"
-							           ValueExpression="() => GetOrCreateAddress().City" />
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[City]
+									   Value=@(GetOrCreateAddress().City)
+									   ValueChanged=@(c => GetOrCreateAddress().City = c)
+									   ValueExpression="() => GetOrCreateAddress().City" />
 							<TextField TValue="string"
-							           Variant="TextField<string>.TextFieldVariant.Outlined"
-							           Label="@(l?["Street"] ?? "Улица / Дом")"
-							           Value="@(GetOrCreateAddress().Street)"
-							           ValueChanged="@(s => GetOrCreateAddress().Street = s)"
-							           ValueExpression="() => GetOrCreateAddress().Street" />
+									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+									   Label=@l[Street]
+									   Value=@(GetOrCreateAddress().Street)
+									   ValueChanged=@(s => GetOrCreateAddress().Street = s)
+									   ValueExpression="() => GetOrCreateAddress().Street" />
 						</div>
 						<Divider />
 					</details>
@@ -199,21 +203,21 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Language"]</div>
-								<md-icon slot="start">@Icons.Translate</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[LanguageLabel]</div>
+								<Icon Name=@Translate slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class="@Classes.Avatar.Content">
+						<div class=@Content>
 							@foreach (var language in languages)
 							{
 								<label>
 									<Radio Name="language"
 										   Checked=@(language == (Language)FormModel.Language)
-										   OnChange=@(async () => FormModel.Language = language)
+										   OnChange=@(() => FormModel.Language = language)
 										   touch-target="wrapper" />
-									<span aria-hidden="true">@l?[language.ToString()]</span>
+									<span aria-hidden="true">@l[language.ToString()]</span>
 								</label>
 							}
 						</div>
@@ -224,22 +228,22 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l?["Accent"]</div>
-								<md-icon slot="start">@Icons.Palette</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[AccentLabel]</div>
+								<Icon Name=@Palette slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class="@Classes.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
+						<div class=@Content style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;">
-								<Select Label="@l?["Theme"]"
-										Value="@ThemeString"
-										ValueChanged="OnThemeChanged"
+								<Select Label=@l[ThemeLabel]
+										Value=@ThemeString
+										ValueChanged=@OnThemeChanged
 										ValueExpression="() => ThemeString"
-										Options="@ThemeOptions" />
+										Options=@ThemeOptions />
 								<div style="display: grid; grid-auto-flow: row; justify-items: center; gap: 0.25rem;">
-									<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@l?["Color"]</span>
-									<ColorPicker Value="@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3")" ValueChanged="ChangeTheme" />
+									<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@l[Loc.Common.Color]</span>
+									<ColorPicker Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
 								</div>
 							</div>
 						</div>
@@ -250,35 +254,35 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@(l?["Security & Quick Access"] ?? "Безопасность и быстрый вход")</div>
-								<md-icon slot="start">@Icons.Security</md-icon>
-								<md-icon slot="end">@Icons.ArrowDropDown</md-icon>
+								<div>@l[ProfileSecurityAndLogin]</div>
+								<Icon Name=@Security slot="start" />
+								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class="@Classes.Avatar.Content" style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
+						<div class=@Content style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
 							<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); margin: 0;">
-								@(l?["FastLoginSubtitle"] ?? "Настройте методы для входа в 1 клик без ожидания SMS.")
+								@l[ProfileSecuritySubtext]
 							</p>
 
 							<!-- Face ID -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<md-icon style="@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};")">@(isFaceIdConfigured ? Icons.CheckCircle : Icons.Face)</md-icon>
+									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) style=@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};") />
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
-										<span style="font-size: 0.85rem; font-weight: 600;">@(l?["Auth_FaceId_Title"] ?? "Face ID (Биометрия)")</span>
+										<span style="font-size: 0.85rem; font-weight: 600;">@l[ProfileFaceIdTitle]</span>
 										<span style="font-size: 0.75rem; color: @(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)");">
-											@(isFaceIdConfigured ? (l?["Auth_FaceId_Bound"] ?? "✅ Привязано к аккаунту") : (l?["Auth_FaceId_Hint"] ?? "Вход по взгляду в камеру"))
+											@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
 										</span>
 									</div>
 								</div>
 								<div style="display: grid; grid-auto-flow: column; align-items: center; gap: 6px;">
-									<Button Variant="ButtonVariant.Outlined" OnClick="NavigateToFaceIdSetup">
-										@(isFaceIdConfigured ? (l?["Update"] ?? "Обновить") : (l?["Setup"] ?? "Настроить"))
+									<Button Variant=@ButtonVariant.Outlined OnClick=@NavigateToFaceIdSetup>
+										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
 									</Button>
 									@if (isFaceIdConfigured)
 									{
-										<IconButton OnClick="RemoveFaceId" title="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")" AriaLabel="@(l?["Auth_FaceId_Delete"] ?? "Удалить биометрию")">
-											<md-icon style="color: var(--md-sys-color-error); font-size: 20px;">@Icons.DeleteOutline</md-icon>
+										<IconButton OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics]>
+											<Icon Name=@DeleteOutline style="color: var(--md-sys-color-error); font-size: 20px;" />
 										</IconButton>
 									}
 								</div>
@@ -287,28 +291,28 @@
 							<!-- Google SSO -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<md-icon>@Icons.AccountCircle</md-icon>
+									<Icon Name=@AccountCircle />
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Google SSO</span>
-										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Auth_NotLinked"] ?? "Не привязано") : FormModelEmail)</span>
+										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</span>
 									</div>
 								</div>
-								<Button Variant="ButtonVariant.Outlined" OnClick="LinkGoogleAccount">
-									@(string.IsNullOrEmpty(FormModelEmail) ? (l?["Link"] ?? "Привязать") : (l?["Update"] ?? "Изменить"))
+								<Button Variant=@ButtonVariant.Outlined OnClick=@LinkGoogleAccount>
+									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
 								</Button>
 							</div>
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
 							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
 								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<md-icon style="color: var(--md-sys-color-tertiary);">@Icons.Fingerprint</md-icon>
+									<Icon Name=@Fingerprint style="color: var(--md-sys-color-tertiary);" />
 									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
 										<span style="font-size: 0.85rem; font-weight: 600;">Passkeys (WebAuthn)</span>
-										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@(l?["Auth_Passkeys_Subtitle"] ?? "Вход по Touch ID / Face ID устройства")</span>
+										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@l[ProfileDeviceBiometricsSubtext]</span>
 									</div>
 								</div>
-								<Button Variant="ButtonVariant.Outlined" OnClick="RegisterPasskey">
-									@(isPasskeyConfigured ? (l?["Update"] ?? "Обновить") : (l?["Setup"] ?? "Подключить"))
+								<Button Variant=@ButtonVariant.Outlined OnClick=@RegisterPasskey>
+									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
 								</Button>
 							</div>
 						</div>
@@ -317,44 +321,44 @@
 
 					<!--Support-->
 					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link">
-						<div>@l?["Support"]</div>
-						<md-icon slot="start">@Icons.SupportAgent</md-icon>
-						<md-icon slot="end">@Icons.Link</md-icon>
+						<div>@l[Support]</div>
+						<Icon Name=@SupportAgent slot="start" />
+						<Icon Name=@Link slot="end" />
 					</ListItem>
 
 					@if (permission > Permission.Customer)
 					{
 						<!--Roles-->
 						<ListItem Href="roles" type="button">
-							<div>@l?["Roles"]</div>
-							<md-icon slot="start">@Icons.Group</md-icon>
-							<md-icon slot="end">@Icons.ChevronRight</md-icon>
+							<div>@l[RolesLabel]</div>
+							<Icon Name=@Group slot="start" />
+							<Icon Name=@ChevronRight slot="end" />
 						</ListItem>
 					}
 
 					<!--Log out-->
 					<ListItem type="button" OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); })>
-						<div>@l?["Log out"]</div>
-						<md-icon slot="start">@Icons.Logout</md-icon>
+						<div>@l[LogOut]</div>
+						<Icon Name=@Logout slot="start" />
 					</ListItem>
 				</List>
 			</EditForm>
 		}
 		<div slot="actions">
-			<Button Variant="ButtonVariant.Text" value="reset" Type="reset" OnClick=@(e => FormModel = profile?.Clone())>Reset</Button>
+			<Button Variant=@ButtonVariant.Text value="reset" Type="reset" OnClick=@(e => FormModel = profile?.Clone())>@l[ResetAction]</Button>
 			<div style="display: block;"></div>
-			<Button Variant="ButtonVariant.Text" value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l?["Save"]</Button>
-			<Button Variant="ButtonVariant.Text" value="cancel" OnClick=@(e => IsOpen = false)>@l?["Cancel"]</Button>
+			<Button Variant=@ButtonVariant.Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
+			<Button Variant=@ButtonVariant.Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
 		</div>
 	</MaterialDialog>
 	}
 
 	@if (isFaceIdModalOpen)
 	{
-	<MaterialDialog class="@Classes.Avatar.FaceidProfileModal" Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
+	<MaterialDialog class=@FaceidProfileModal Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
 		<span slot="headline">
-			<span class="@Classes.Avatar.Headline">@l?["Face ID (Биометрия)"]</span>
-			<IconButton form="form" value="close" AriaLabel="Close dialog" OnClick=@CloseFaceIdModal Icon="@Icons.Close" />
+			<span class=@Headline>@l[ProfileFaceIdTitle]</span>
+			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
 		</span>
 		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
 			<!-- 3-Step Calibration Progress Bar -->
@@ -367,29 +371,29 @@
 			<div style="width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid @faceIdStatusColor; box-shadow: 0 0 24px var(--md-sys-color-shadow); position: relative; display: grid; place-items: center;">
 				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
 				{
-					<DynamicComponent Type="@CameraStreamerUiProvider.CameraStreamerComponentType"
-									  Parameters="@CameraStreamerParameters" />
+					<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
+									  Parameters=@CameraStreamerParameters />
 				}
 				else if (isFaceIdModalOpen)
 				{
 					<div style="display: grid; place-items: center; text-align: center; padding: 1rem; color: var(--md-sys-color-on-surface-variant);">
-						<md-icon style="font-size: 48px; margin-bottom: 8px;">@Icons.VideocamOff</md-icon>
-						<span>Камера недоступна</span>
+						<Icon Name=@VideocamOff style="font-size: 48px; margin-bottom: 8px;" />
+						<span>@l[ProfileCameraUnavailable]</span>
 					</div>
 				}
 				<!-- Dynamic Pose Direction Badge -->
 				<div style="position: absolute; bottom: 12px; padding: 4px 12px; background: var(--md-sys-color-surface-container-highest); backdrop-filter: blur(8px); border-radius: 20px; font-size: 0.75rem; color: var(--md-sys-color-on-surface); font-weight: 600; pointer-events: none; border: 1px solid var(--md-sys-color-outline-variant);">
 					@if (currentEnrollmentStage == 1)
 					{
-						<span>@(l?["FaceId_LookStraight"] ?? "🎯 Смотрите прямо")</span>
+						<span>@l[ProfileLookStraight]</span>
 					}
 					else if (currentEnrollmentStage == 2)
 					{
-						<span>@(l?["FaceId_TurnLeft"] ?? "👈 Поверните влево")</span>
+						<span>@l[ProfileTurnLeft]</span>
 					}
 					else
 					{
-						<span>@(l?["FaceId_TurnRight"] ?? "👉 Поверните вправо")</span>
+						<span>@l[ProfileTurnRight]</span>
 					}
 				</div>
 			</div>
@@ -397,11 +401,11 @@
 				@faceIdStatusMessage
 			</div>
 			<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); text-align: center; margin: 0; max-width: 320px;">
-				@(l?["FaceId_CenterFace"] ?? "Расположите лицо по центру круга для фиксации 3D-мастер шаблона биометрии.")
+				@l[ProfileCenterFaceInstruction]
 			</p>
 		</div>
 		<div slot="actions">
-			<Button Variant="ButtonVariant.Text" value="cancel" OnClick=@CloseFaceIdModal>@l?["Cancel"]</Button>
+			<Button Variant=@ButtonVariant.Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
 		</div>
 	</MaterialDialog>
 	}

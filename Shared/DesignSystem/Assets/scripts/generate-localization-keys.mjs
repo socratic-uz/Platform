@@ -148,7 +148,10 @@ const COLLIDING_DOMAIN_TYPES = new Set([
   'Devices',
   'Print',
   'Item',
-  'Items'
+  'Items',
+  'MyLocation',
+  'ZoomIn',
+  'ZoomOut'
 ]);
 
 function parseResx(filePath) {
@@ -224,7 +227,9 @@ const DOMAIN_DEFINITIONS = {
   Orders: ['Order_', 'Orders_', 'OrderItems_', 'Kds_', 'OrderStatus_'],
   Terminal: ['Terminal_'],
   QrDesigner: ['QrDesigner_'],
-  Subscription: ['Subscription_'],
+  Subscription: ['Subscription_', 'Org_'],
+  Promotion: ['Promo_'],
+  Map: ['Map_'],
   Auction: ['Auction_'],
   Rental: ['Rental_'],
   Hotel: ['Hotel_'],

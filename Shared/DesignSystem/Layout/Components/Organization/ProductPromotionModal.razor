@@ -2,23 +2,30 @@
 @using SharedKernel.ValueObjects
 @using Domain.Entities
 @using Material.Web.Components
-@using Assets.Constants
+@using static Assets.Constants.Classes.Dialog
+@using static Assets.Constants.Classes.Picker
+@using static Assets.Constants.Classes.Badge
+@using static Assets.Constants.Icons
+@using static Assets.Constants.Loc.Promotion
+@using static Assets.Constants.Loc.Actions
+@using static Material.Web.Components.ButtonVariant
+@using static Material.Web.Components.IconButtonVariant
 
 @if (IsOpen && Product != null)
 {
-    <MaterialDialog Open="@IsOpen" OpenChanged="@((bool v) => { if (!v) CloseModal(); })" style="max-width: 860px; width: 100%;">
+    <MaterialDialog Open=@IsOpen OpenChanged=@((bool v) => { if (!v) CloseModal(); }) style="max-width: 860px; width: 100%;">
         <Headline>
-            <div class="@($"{Classes.Dialog.Header} promotion-modal-header")">
-                <div class="@($"{Classes.Dialog.TitleGroup} header-title-group")">
+            <div class=@PromotionModalHeader>
+                <div class=@($"{TitleGroup} header-title-group")>
                     <div class="header-icon-wrap">
-                        <md-icon class="header-rocket-icon">@Icons.RocketLaunch</md-icon>
+                        <Icon Name=@RocketLaunch class="header-rocket-icon" />
                     </div>
                     <div>
-                        <h2 class="promotion-modal-title">Продвижение товара в Google и Яндекс</h2>
-                        <p class="promotion-modal-subtitle">Товарная галерея Яндекса, Rich Snippets и Google Shopping</p>
+                        <h2 class="promotion-modal-title">@L[TitleText]</h2>
+                        <p class="promotion-modal-subtitle">@L[SubtitleText]</p>
                     </div>
                 </div>
-                <IconButton Icon="@Icons.Close" Variant="IconButtonVariant.Standard" AriaLabel="Закрыть" OnClick="CloseModal" />
+                <IconButton Icon=@Close Variant=@IconButtonVariant.Standard AriaLabel=@L[Close] OnClick=@CloseModal />
             </div>
         </Headline>
         <Content>
@@ -26,20 +33,20 @@
             {
                 <div class="promotion-modal-body">
                     <div class="product-preview-pill">
-                        <span class="preview-label">Продвигаемый товар:</span>
+                        <span class="preview-label">@L[PromotedProduct]</span>
                         <strong class="preview-product-name">@Product.Name</strong>
                         <span class="preview-product-price">@Product.Price.ToString("N0") UZS</span>
                     </div>
 
-                    <h3 class="section-heading">1. Выберите тариф поискового продвижения</h3>
+                    <h3 class="section-heading">@L[Step1Title]</h3>
                     <div class="plans-grid">
                         @foreach (var plan in ProductPromotionPlanDefinition.AllPlans)
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
-                            <div class="plan-card @(isSelected ? Classes.Picker.Selected : "")" @onclick="() => SelectPlan(plan)">
+                            <div class=@($"plan-card {(isSelected ? Selected : string.Empty)}") @onclick=@(() => SelectPlan(plan))>
                                 @if (plan.PlanType == PromotionPlanType.MonthlyTurbo)
                                 {
-                                    <span class="@Classes.Badge.Root @Classes.Badge.Pro popular-badge">Популярный выбор</span>
+                                    <span class=@($"{Root} {Pro} popular-badge")>@L[PopularChoice]</span>
                                 }
                                 <div class="plan-card-header">
                                     <h4 class="plan-name">@plan.Name</h4>
@@ -53,7 +60,7 @@
                                     @foreach (var feat in plan.Features)
                                     {
                                         <li>
-                                            <md-icon class="feat-icon">@Icons.CheckCircle</md-icon>
+                                            <Icon Name=@CheckCircle class="feat-icon" />
                                             <span>@feat</span>
                                         </li>
                                     }
@@ -62,37 +69,37 @@
                         }
                     </div>
 
-                    <h3 class="section-heading mt-4">2. Выберите удобный способ оплаты</h3>
+                    <h3 class="section-heading mt-4">@L[Step2Title]</h3>
                     <div class="payment-methods-grid">
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.UzQr ? Classes.Picker.Active : "")">
-                            <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.UzQr)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr)" Name="gateway" />
+                        <label class=@($"payment-card {(SelectedGateway == PromotionPaymentGatewayType.UzQr ? Active : string.Empty)}")>
+                            <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.UzQr) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr) Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">📱 UzQR (MUNIS QR-Online)</span>
-                                <span class="method-sub">Любые банки: Payme, Click, TBC, Uzum, Ipak Yuli</span>
+                                <span class="method-sub">@L[UzQrDesc]</span>
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Click ? Classes.Picker.Active : "")">
-                            <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Click)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Click)" Name="gateway" />
+                        <label class=@($"payment-card {(SelectedGateway == PromotionPaymentGatewayType.Click ? Active : string.Empty)}")>
+                            <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Click) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Click) Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟡 Click / Click Up</span>
-                                <span class="method-sub">Мгновенный перевод через Click</span>
+                                <span class="method-sub">@L[ClickDesc]</span>
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Payme ? Classes.Picker.Active : "")">
-                            <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Payme)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Payme)" Name="gateway" />
+                        <label class=@($"payment-card {(SelectedGateway == PromotionPaymentGatewayType.Payme ? Active : string.Empty)}")>
+                            <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Payme) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Payme) Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟢 Payme Business</span>
-                                <span class="method-sub">Оплата в 1 клик картой UzCard / Humo</span>
+                                <span class="method-sub">@L[PaymeDesc]</span>
                             </div>
                         </label>
 
-                        <label class="payment-card @(SelectedGateway == PromotionPaymentGatewayType.Uzum ? Classes.Picker.Active : "")">
-                            <Radio Checked="@(SelectedGateway == PromotionPaymentGatewayType.Uzum)" OnChange="@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum)" Name="gateway" />
+                        <label class=@($"payment-card {(SelectedGateway == PromotionPaymentGatewayType.Uzum ? Active : string.Empty)}")>
+                            <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Uzum) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum) Name="gateway" />
                             <div class="payment-method-body">
                                 <span class="method-title">🟣 Uzum Bank</span>
-                                <span class="method-sub">Быстрая оплата в экосистеме Uzum</span>
+                                <span class="method-sub">@L[UzumDesc]</span>
                             </div>
                         </label>
                     </div>
@@ -102,29 +109,29 @@
             {
                 <div class="promotion-modal-body text-center">
                     <div class="invoice-summary-box">
-                        <span class="invoice-label">Счёт на оплату: @ActiveOrder?.ProductName</span>
+                        <span class="invoice-label">@L[InvoiceFor, ActiveOrder?.ProductName ?? string.Empty]</span>
                         <div class="invoice-amount">@ActiveOrder?.PriceUzs.ToString("N0") UZS</div>
-                        <span class="invoice-method">Способ оплаты: @GetGatewayDisplayName(ActiveOrder?.PaymentGateway ?? SelectedGateway)</span>
+                        <span class="invoice-method">@L[PromoPaymentMethod, GetGatewayDisplayName(ActiveOrder?.PaymentGateway ?? SelectedGateway)]</span>
                     </div>
 
                     @if (SelectedGateway == PromotionPaymentGatewayType.UzQr)
                     {
                         <div class="qr-payment-area">
                             <div class="qr-frame">
-                                <img src="@GetQrCodeImageUrl()" alt="QR код для оплаты" class="qr-image" />
+                                <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] class="qr-image" />
                             </div>
                             <p class="qr-instruction">
-                                Отсканируйте этот QR-код камерой телефона или в приложении <strong>Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli</strong>
+                                @L[QrInstructionText]
                             </p>
                         </div>
                     }
                     else
                     {
                         <div class="online-redirect-area">
-                            <md-icon class="redirect-icon">@Icons.OpenInNew</md-icon>
-                            <p>Вы перенаправляетесь на защищённый платёжный шлюз <strong>@GetGatewayDisplayName(SelectedGateway)</strong>.</p>
-                            <a href="@GetPaymentGatewayUrl()" target="_blank" rel="noopener noreferrer" class="btn-gateway-link">
-                                Открыть платёжную форму
+                            <Icon Name=@OpenInNew class="redirect-icon" />
+                            <p>@L[RedirectMessage] <strong>@GetGatewayDisplayName(SelectedGateway)</strong>.</p>
+                            <a href=@GetPaymentGatewayUrl() target="_blank" rel="noopener noreferrer" class="btn-gateway-link">
+                                @L[OpenPaymentForm]
                             </a>
                         </div>
                     }
@@ -133,12 +140,12 @@
                         @if (isVerifyingPayment)
                         {
                             <div class="spinner-inline"></div>
-                            <span>Проверяем зачисление платежа в платёжном шлюзе...</span>
+                            <span>@L[VerifyingPayment]</span>
                         }
                         else
                         {
-                            <Button Variant="ButtonVariant.Filled" Icon="@Icons.CheckCircle" OnClick="SimulateConfirmPaymentAsync">
-                                Я оплатил(а) — Активировать продвижение
+                            <Button Variant=@ButtonVariant.Filled Icon=@CheckCircle OnClick=@SimulateConfirmPaymentAsync>
+                                @L[PaidActivate]
                             </Button>
                         }
                     </div>
@@ -148,32 +155,32 @@
             {
                 <div class="promotion-modal-body text-center success-step">
                     <div class="success-icon-wrap">
-                        <md-icon class="success-check-icon">@Icons.Verified</md-icon>
+                        <Icon Name=@Verified class="success-check-icon" />
                     </div>
-                    <h3 class="success-title">Продвижение успешно активировано!</h3>
+                    <h3 class="success-title">@L[SuccessTitle]</h3>
                     <p class="success-desc">
-                        Товар <strong>«@Product.Name»</strong> успешно помечен как спонсорский и добавлен в экспортные фиды поисковых систем:
+                        @L[SuccessDesc, Product.Name]
                     </p>
 
                     <div class="feed-links-card">
                         <div class="feed-item">
-                            <md-icon class="feed-icon yandex">@Icons.ViewCarousel</md-icon>
+                            <Icon Name=@ViewCarousel class="feed-icon yandex" />
                             <div class="feed-details">
-                                <span class="feed-name">Товарная галерея Яндекса (YML)</span>
+                                <span class="feed-name">@L[YandexFeed]</span>
                                 <code class="feed-url">/feeds/yandex/@(OrganizationId).xml</code>
                             </div>
                         </div>
                         <div class="feed-item">
-                            <md-icon class="feed-icon google">@Icons.ShoppingBasket</md-icon>
+                            <Icon Name=@ShoppingBasket class="feed-icon google" />
                             <div class="feed-details">
-                                <span class="feed-name">Google Shopping & Merchant Center</span>
+                                <span class="feed-name">@L[GoogleFeed]</span>
                                 <code class="feed-url">/feeds/google/@(OrganizationId).xml</code>
                             </div>
                         </div>
                     </div>
 
                     <p class="success-hint">
-                        Карточки появятся в поисковой выдаче Google и Яндекса после планового обхода роботов (от 2 до 24 часов).
+                        @L[SuccessHint]
                     </p>
                 </div>
             }
@@ -181,20 +188,19 @@
         <Actions>
             @if (CurrentStep == PromotionModalStep.SelectPlan)
             {
-                <Button Variant="ButtonVariant.Text" OnClick="CloseModal">Отмена</Button>
-                <Button Variant="ButtonVariant.Filled" Icon="@Icons.Lock" OnClick="ProceedToPayment">
-                    Оплатить @SelectedPlan.PriceUzs.ToString("N0") UZS
+                <Button Variant=@ButtonVariant.Text OnClick=@CloseModal>@L[Cancel]</Button>
+                <Button Variant=@ButtonVariant.Filled Icon=@Lock OnClick=@ProceedToPayment>
+                    @L[PayAmount, SelectedPlan.PriceUzs.ToString("N0")]
                 </Button>
             }
             else if (CurrentStep == PromotionModalStep.PaymentProcessing)
             {
-                <Button Variant="ButtonVariant.Text" OnClick="() => CurrentStep = PromotionModalStep.SelectPlan">← Назад к выбору тарифа</Button>
+                <Button Variant=@ButtonVariant.Text OnClick=@(() => CurrentStep = PromotionModalStep.SelectPlan)>@L[BackToPlans]</Button>
             }
             else if (CurrentStep == PromotionModalStep.Success)
             {
-                <Button Variant="ButtonVariant.Filled" OnClick="CloseModal">Готово</Button>
+                <Button Variant=@ButtonVariant.Filled OnClick=@CloseModal>@L[Done]</Button>
             }
         </Actions>
     </MaterialDialog>
 }
-

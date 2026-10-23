@@ -17,10 +17,6 @@ public partial class UniversalReceiptView : ComponentBase
     [Inject] public IStringLocalizer L { get; set; } = default!;
     [Inject] public IServiceProvider ServiceProvider { get; set; } = default!;
 
-    public const string ReceiptTerminalLabel = global::Assets.Constants.Loc.Receipt.TerminalLabel;
-    public const string ReceiptPaymentMethod = global::Assets.Constants.Loc.Receipt.PaymentMethod;
-    public const string CurrencyUzs = global::Assets.Constants.Loc.Common.CurrencyUzs;
-
     [Parameter] public string OrganizationName { get; set; } = "Socratic Ecosystem Partner";
     [Parameter] public string TaxId { get; set; } = "309182736";
     [Parameter] public string TerminalId { get; set; } = "SOC_TERM_01";

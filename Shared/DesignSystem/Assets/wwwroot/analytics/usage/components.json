@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-23T05:12:43.831Z",
+  "generatedAt": "2026-10-23T06:00:45.217Z",
   "summary": {
-    "totalWebComponentsUsed": 232,
+    "totalWebComponentsUsed": 207,
     "uniqueComponentsCount": 47,
-    "sourceFilesScanned": 644
+    "sourceFilesScanned": 645
   },
   "webComponents": [
     {
       "component": "md-icon",
-      "count": 177,
-      "filesCount": 35,
+      "count": 152,
+      "filesCount": 32,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Avatar.razor",
         "Platform/Shared/DesignSystem/Layout/Components/Counter.razor",
@@ -35,9 +35,6 @@
         "Portal/Identity/Pages/SignIn.razor",
         "Portal/Identity/Pages/SignInGoogleCallback.razor",
         "Portal/Identity/Pages/SignInTelegramCallback.razor",
-        "Portal/Landing/Pages/Docs.razor",
-        "Portal/Landing/Pages/Help.razor",
-        "Portal/Landing/Pages/QR.razor",
         "Studio/QrDesigner/Pages/QrDesignerPage.razor",
         "Studio/QrDesigner/Widgets/QrRenderer/QrCode.razor",
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",

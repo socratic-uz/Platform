@@ -1,17 +1,18 @@
 @using Domain.Interfaces
 @using System.Diagnostics.CodeAnalysis
+@using static Icons
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(MainLayout)")]
 
-<Router AppAssembly="typeof(Layout.MainLayout).Assembly" AdditionalAssemblies="FeatureRegistry.GetFeatureAssemblies()">
+<Router AppAssembly=@typeof(Layout.MainLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
    <Found Context="routeData">
-	   <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
+	   <AuthorizeRouteView RouteData=@routeData DefaultLayout=@typeof(Layout.MainLayout)>
 		   <NotAuthorized>
 			   <RedirectToSignIn />
 		   </NotAuthorized>
 	   </AuthorizeRouteView>
    </Found>
    <NotFound>
-	   <LayoutView Layout="typeof(Layout.MainLayout)">
+	   <LayoutView Layout=@typeof(Layout.MainLayout)>
 		   @{
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
@@ -20,14 +21,14 @@
 			   <div style="display: grid; gap: 1.5rem; max-width: 600px; width: 100%; padding: 2rem; background: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-color-outline-variant); border-radius: var(--md-sys-shape-corner-extra-large, 24px); box-shadow: var(--md-sys-elevation-level3, 0 8px 32px rgba(0,0,0,0.25));">
 				   <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1rem; min-width: 0;">
 					   <div style="display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
-						   <md-icon>rocket_launch</md-icon>
+						   <Icon Name=@RocketLaunch />
 					   </div>
 					   <div style="display: grid; gap: 0.25rem;">
 						   <h2 style="margin: 0; font-size: 1.35rem; font-weight: 600; color: var(--md-sys-color-on-surface);">
-							   @(isRoot ? "Socratic Standalone Host" : "Страница не найдена")
+							   @(isRoot ? "Socratic Standalone Host" : "Page Not Found")
 						   </h2>
 						   <p style="margin: 0; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">
-							   @(isRoot ? "Автономный режим разработки. Выберите страницу активного модуля:" : "Запрошенный маршрут не найден. Доступные модули в этом решении:")
+							   @(isRoot ? "Standalone development mode. Select an active module:" : "Requested route was not found. Available modules in this solution:")
 						   </p>
 					   </div>
 				   </div>
@@ -37,15 +38,15 @@
 					   <div style="display: grid; gap: 0.75rem;">
 						   @foreach (var mod in modules)
 						   {
-							   <a href="@mod.RoutePrefix" style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
+							   <a href=@mod.RoutePrefix style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
 								   <div style="display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">
-									   <md-icon>@(mod.Icon ?? "widgets")</md-icon>
+									   <Icon Name=@(mod.Icon ?? Widgets) />
 								   </div>
 								   <div style="display: grid; gap: 0.15rem;">
 									   <span style="font-weight: 600; font-size: 1rem; color: var(--md-sys-color-on-surface);">@mod.DisplayTitle</span>
 									   <span style="font-size: 0.8rem; color: var(--md-sys-color-primary); font-family: monospace;">@mod.RoutePrefix</span>
 								   </div>
-								   <md-icon style="color: var(--md-sys-color-outline);">arrow_forward</md-icon>
+								   <Icon Name=@ArrowForward style="color: var(--md-sys-color-outline);" />
 							   </a>
 						   }
 					   </div>
@@ -53,8 +54,8 @@
 				   else
 				   {
 					   <div style="display: grid; gap: 0.5rem; text-align: center; padding: 1.5rem; background: var(--md-sys-color-surface-container-low); border-radius: 16px;">
-						   <p style="margin: 0; color: var(--md-sys-color-error);">Модули не обнаружены в FeatureRegistry</p>
-						   <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Проверьте регистрацию в FeatureRegistry.Register()</span>
+						   <p style="margin: 0; color: var(--md-sys-color-error);">No modules discovered in FeatureRegistry</p>
+						   <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Verify registrations in FeatureRegistry.Register()</span>
 					   </div>
 				   }
 

@@ -3,10 +3,12 @@
 
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
+@using static Loc.Common
+@using static Material.Web.Components.ButtonVariant
 
 <Color />
 
-<Header ShowAvatar="true">
+<Header ShowAvatar=@true>
 	<StartContent>
 		<SectionOutlet SectionName="header-start" />
 	</StartContent>
@@ -25,15 +27,15 @@
 	<SectionOutlet SectionName="nav" />
 </Nav>
 
-<ErrorBoundary @ref="ErrorBoundaryRef">
+<ErrorBoundary @ref=@ErrorBoundaryRef>
 	<ChildContent>
 		@Body
 	</ChildContent>
 	<ErrorContent Context="ex">
 		<div style="padding: 2rem; max-width: 600px; margin: 2rem auto; border-radius: 12px; background: var(--md-sys-color-error-container); border: 1px solid var(--md-sys-color-outline-variant); color: var(--md-sys-color-on-error-container); text-align: center;">
-			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">Произошла ошибка при отображении компонента</h3>
+			<h3 style="color: var(--md-sys-color-error); margin-bottom: 0.5rem;">@L[ErrorLoading]</h3>
 			<p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">@ex.Message</p>
-			<Button Variant="ButtonVariant.Filled" OnClick="Recover">Попробовать снова</Button>
+			<Button Variant=@Filled OnClick=@Recover>@L[TryAgain]</Button>
 		</div>
 	</ErrorContent>
 </ErrorBoundary>

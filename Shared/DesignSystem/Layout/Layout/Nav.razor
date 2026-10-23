@@ -1,29 +1,30 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
+@using Microsoft.AspNetCore.Components.Routing
 @using static Classes.Common
 @using static Icons
 @using static Loc.Common
 
-<nav class="@($"{Glass} {(FormFactor.IsMobile() ? NavMobile : NavDesktop)}")">
-	<NavLink class="@NavItem" href="/home" Match="NavLinkMatch.All">
-		<Icon Name="@Home" />
+<nav class=@($"{Glass} {(FormFactor.IsMobile() ? NavMobile : NavDesktop)}")>
+	<NavLink class=@NavItem href="/home" Match=@NavLinkMatch.All>
+		<Icon Name=@Home />
 		<span>@(L?[NavHome])</span>
 	</NavLink>
-	<NavLink class="@NavItem" href="/wishlist">
-		<Icon Name="@Favorite" />
+	<NavLink class=@NavItem href="/wishlist">
+		<Icon Name=@Favorite />
 		<span>@(L?[NavWishList])</span>
 	</NavLink>
-	<NavLink class="@NavItem" href="/chat">
-		<Icon Name="@Forum" />
+	<NavLink class=@NavItem href="/chat">
+		<Icon Name=@Forum />
 		<span>@(L?[NavChat])</span>
 	</NavLink>
-	<NavLink class="@NavItem" href="/orders">
-		<Icon Name="@ShoppingBag" />
+	<NavLink class=@NavItem href="/orders">
+		<Icon Name=@ShoppingBag />
 		<span>@(L?[NavOrders])</span>
 	</NavLink>
-	<NavLink class="@NavItem" href="/analytics">
-		<Icon Name="@Analytics" />
+	<NavLink class=@NavItem href="/analytics">
+		<Icon Name=@Analytics />
 		<span>@(L?[NavAnalytics])</span>
 	</NavLink>
 </nav>

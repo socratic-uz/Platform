@@ -20,7 +20,7 @@
         <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
     }
 
-    <CascadingValue TValue="InternalGridContext<TItem>" IsFixed="true" Value="@_publicGridContext">
+    <CascadingValue TValue="InternalGridContext<TItem>" IsFixed=@true Value=@_publicGridContext>
         @{
             StartCollectingColumns();
         }
@@ -35,7 +35,7 @@
 
                 if (propertyType.IsEnum)
                 {
-                    <TemplateColumn TGridItem="TItem" Title="@column.DisplayName" Sortable="@column.IsSortable" Context="item">
+                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
                         @{
                             var propertyValue = column.Getter(item);
 
@@ -101,7 +101,7 @@
                 }
                 else if (propertyType == typeof(bool))
                 {
-                    <TemplateColumn TGridItem="TItem" Title="@column.DisplayName" Sortable="@column.IsSortable" Context="item">
+                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
                         @{
                             var propertyValue = column.Getter(item) is bool boolValue && boolValue;
                             Expression<Func<bool>> valueExpression = () => propertyValue;
@@ -114,13 +114,13 @@
                 }
                 else if (CanCreatePropertyColumn(propertyType))
                 {
-                    <TemplateColumn TGridItem="TItem" Title="@column.DisplayName" Sortable="@column.IsSortable" SortBy="@column.SortRule" IsDefaultSortColumn="@column.IsDefaultSort" InitialSortDirection="@(column.IsDefaultSort ? DefaultSortDirection : SortDirection.Ascending)" Context="item">
+                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable SortBy=@column.SortRule IsDefaultSortColumn=@column.IsDefaultSort InitialSortDirection=@(column.IsDefaultSort ? DefaultSortDirection : SortDirection.Ascending) Context="item">
                         @FormatValue(column.Getter(item), column.Format)
                     </TemplateColumn>
                 }
                 else
                 {
-                    <TemplateColumn TGridItem="TItem" Title="@column.DisplayName" Sortable="@column.IsSortable" Context="item">
+                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
                         @FormatValue(column.Getter(item), column.Format)
                     </TemplateColumn>
                 }
@@ -164,7 +164,7 @@
             else
             {
                 <div class=@Container>
-                    <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class="@GridClass()">
+                    <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@GridClass()>
                         <thead>
                             <tr>
                                 @_renderColumnHeaders

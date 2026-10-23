@@ -1,91 +1,95 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
+@using static Classes.Footer
 @using static Icons
+@using static Assets.Constants.Loc.Common
+@using static Assets.Constants.Loc.Landing
+@using static Assets.Constants.Formats
 
-<footer class="app-footer @Class">
-	<div class="footer-container">
+<footer class=@string.Format(Two, Classes.Common.AppFooter, Class)>
+	<div class=@FooterContainer>
 		@if (ChildContent != null)
 		{
-			<div class="footer-custom-slot">
+			<div class=@CustomSlot>
 				@ChildContent
 			</div>
 		}
 
-		<div class="footer-primary-grid">
+		<div class=@PrimaryGrid>
 			<!-- Brand Column -->
-			<div class="footer-brand-col">
-				<a href="/" class="footer-brand-link">
-					<span class="footer-brand-badge">
-						<Icon Name="@AutoAwesome" />
+			<div class=@BrandCol>
+				<a href="/" class=@BrandLink>
+					<span class=@FooterBrandBadgeClass>
+						<Icon Name=@AutoAwesome />
 					</span>
-					<span class="footer-brand-title">Socratic</span>
+					<span class=@BrandTitle>Socratic</span>
 				</a>
-				<p class="footer-brand-tagline">
-					@T("Footer_Tagline", "Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.")
+				<p class=@BrandTagline>
+					@L[Footer_Tagline]
 				</p>
-				<div class="footer-system-status">
-					<span class="status-pulse-dot" aria-hidden="true"></span>
-					<span class="status-text">@T("Footer_Status", "Все системы работают стабильно")</span>
+				<div class=@SystemStatus>
+					<span class=@StatusPulseDotClass aria-hidden="true"></span>
+					<span class=@StatusTextClass>@L[Footer_Status]</span>
 				</div>
 			</div>
 
-			<!-- Nav Column 1: Каталог & Киоски -->
-			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@T("Footer_Col_Catalog", "Каталог & Киоски")</h4>
-				<ul class="footer-links-list">
-					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name="@Storefront" /> <span>@T("Showroom", "Витрина товаров")</span></a></li>
-					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name="@BusinessCenter" /> <span>@T("Plans", "Тарифы и подключение")</span></a></li>
-					<li><a href="/home"><Icon Name="@Domain" /> <span>@T("Places", "Каталог заведений")</span></a></li>
-					<li><a href="/map"><Icon Name="@Map" /> <span>@T("Map", "Интерактивная карта")</span></a></li>
+			<!-- Nav Column 1: Catalog & Kiosks -->
+			<div class=@NavCol>
+				<h4 class=@ColTitle>@L[Footer_Col_Catalog]</h4>
+				<ul class=@LinksList>
+					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name=@Storefront /> <span>@L[Showroom]</span></a></li>
+					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name=@BusinessCenter /> <span>@L[Plans]</span></a></li>
+					<li><a href="/home"><Icon Name=@Domain /> <span>@L[Places]</span></a></li>
+					<li><a href="/map"><Icon Name=@Map /> <span>@L[MapLabel]</span></a></li>
 				</ul>
 			</div>
 
-			<!-- Nav Column 2: Управление & POS -->
-			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@T("Footer_Col_Management", "Управление & POS")</h4>
-				<ul class="footer-links-list">
-					<li><a href="/orders"><Icon Name="@ReceiptLong" /> <span>@T("Orders", "Заказы")</span></a></li>
-					<li><a href="/payment"><Icon Name="@Payments" /> <span>@T("Payment", "Оплата и финансы")</span></a></li>
-					<li><a href="/qr-designer"><Icon Name="@QrCode2" /> <span>@T("QRDesigner", "QR Конструктор")</span></a></li>
-					<li><a href="/seat-designer"><Icon Name="@EventSeat" /> <span>@T("SeatDesigner", "Схема залов")</span></a></li>
-					<li><a href="/terminal"><Icon Name="@PointOfSale" /> <span>@T("Terminal", "POS Терминал")</span></a></li>
+			<!-- Nav Column 2: Management & POS -->
+			<div class=@NavCol>
+				<h4 class=@ColTitle>@L[Footer_Col_Management]</h4>
+				<ul class=@LinksList>
+					<li><a href="/orders"><Icon Name=@ReceiptLong /> <span>@L[OrdersLabel]</span></a></li>
+					<li><a href="/payment"><Icon Name=@Payments /> <span>@L[PaymentLabel]</span></a></li>
+					<li><a href="/qr-designer"><Icon Name=@QrCode2 /> <span>@L[QRDesigner]</span></a></li>
+					<li><a href="/seat-designer"><Icon Name=@EventSeat /> <span>@L[SeatDesigner]</span></a></li>
+					<li><a href="/terminal"><Icon Name=@PointOfSale /> <span>@L[TerminalLabel]</span></a></li>
 				</ul>
 			</div>
 
-			<!-- Nav Column 3: Ресурсы & Инфо -->
-			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@T("Footer_Col_Resources", "Ресурсы & Инфо")</h4>
-				<ul class="footer-links-list">
-					<li><a href="/docs"><Icon Name="@MenuBook" /> <span>@T("Documentation", "Документация")</span></a></li>
-					<li><a href="/help"><Icon Name="@HelpOutline" /> <span>@T("Help", "Справка и FAQ")</span></a></li>
-					<li><a href="/about"><Icon Name="@Info" /> <span>@T("About", "О платформе")</span></a></li>
-					<li><a href="/signin"><Icon Name="@Login" /> <span>@T("SocraticID", "Socratic ID")</span></a></li>
+			<!-- Nav Column 3: Resources & Info -->
+			<div class=@NavCol>
+				<h4 class=@ColTitle>@L[Footer_Col_Resources]</h4>
+				<ul class=@LinksList>
+					<li><a href="/docs"><Icon Name=@MenuBook /> <span>@L[Documentation]</span></a></li>
+					<li><a href="/help"><Icon Name=@HelpOutline /> <span>@L[HelpText]</span></a></li>
+					<li><a href="/about"><Icon Name=@Info /> <span>@L[AboutText]</span></a></li>
+					<li><a href="/signin"><Icon Name=@Login /> <span>@L[SocraticID]</span></a></li>
 				</ul>
 			</div>
 
-			<!-- Nav Column 4: Сообщество & Поддержка -->
-			<div class="footer-nav-col">
-				<h4 class="footer-col-title">@T("Footer_Col_Community", "Поддержка & Связь")</h4>
-				<ul class="footer-links-list">
-					<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name="@SupportAgent" /> <span>@T("Support", "Служба заботы")</span></a></li>
-					<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name="@Send" /> <span>Telegram Bot</span></a></li>
-					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name="@CameraAlt" /> <span>Instagram</span></a></li>
+			<!-- Nav Column 4: Community & Support -->
+			<div class=@NavCol>
+				<h4 class=@ColTitle>@L[Footer_Col_Community]</h4>
+				<ul class=@LinksList>
+					<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name=@SupportAgent /> <span>@L[SupportLabel]</span></a></li>
+					<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name=@Send /> <span>Telegram Bot</span></a></li>
+					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name=@CameraAlt /> <span>Instagram</span></a></li>
 				</ul>
 			</div>
 		</div>
 
 		<!-- Sub-Footer Bottom Bar -->
-		<div class="footer-bottom-bar">
-			<div class="footer-copyright">
-				&copy; @DateTime.Now.Year Socratic. @T("AllRightsReserved", "Все права защищены.")
+		<div class=@FooterBottomBarClass>
+			<div class=@FooterCopyright>
+				&copy; @DateTime.Now.Year Socratic. @L[AllRightsReserved]
 			</div>
-			<div class="footer-lang-container">
+			<div class=@LangContainer>
 				<LanguageSelector Variant="inline" />
 			</div>
-			<div class="footer-trust-info">
-				<span class="trust-badge">
-					<Icon Name="@VerifiedUser" />
+			<div class=@FooterTrustInfoClass>
+				<span class=@TrustBadgeClass>
+					<Icon Name=@VerifiedUser />
 					<span>256-bit SSL • Zero-Trust Cloud</span>
 				</span>
 			</div>

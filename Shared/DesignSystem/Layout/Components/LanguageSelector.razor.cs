@@ -15,6 +15,13 @@ namespace Shared.Layout
         [Parameter] public string Variant { get; set; } = "pill";
         [Parameter] public string Class { get; set; } = string.Empty;
 
+        public const string LangSelectorInlineClass = "lang-selector-inline";
+        public const string LangSelectorPillClass = "lang-selector-pill";
+        public const string LangMenuBackdropClass = "lang-menu-backdrop";
+        public const string LangMenuItemActiveClass = "lang-menu-item--active";
+        public const string LangFlagClass = "lang-flag";
+        public const string LangNameClass = "lang-name";
+
         public Language CurrentLanguage { get; set; } = Language.Ru;
         public bool IsOpen { get; set; }
 

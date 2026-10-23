@@ -1,43 +1,44 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Web
 @using Material.Web
-@using Assets.Constants
+@using static Assets.Constants.Classes.Picker
+@using static Material.Web.Components.ButtonVariant
 
-<div class="@Classes.Picker.TriggerCard @(Disabled ? Classes.Picker.Disabled : "") @(HasValue ? "has-value" : "empty") @Class">
-    <div class="@Classes.Picker.TriggerLeft">
+<div class=@($"{TriggerCard} {(Disabled ? Disabled : "")} {(HasValue ? "has-value" : "empty")} {Class}")>
+    <div class=@TriggerLeft>
         <!-- Icon Badge (44x44px, R12) -->
-        <div class="@Classes.Picker.IconBadge @(HasValue ? Classes.Picker.Active : "")">
+        <div class=@($"{IconBadge} {(HasValue ? Active : "")}")>
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge
             }
             else
             {
-                <md-icon>@(HasValue ? (ActiveIcon ?? Icon) : Icon)</md-icon>
+                <Icon Name=@(HasValue ? (ActiveIcon ?? Icon) : Icon) />
             }
         </div>
 
         <!-- Text & Preview Area -->
-        <div class="@Classes.Picker.TriggerText">
-            <div class="@Classes.Picker.HeaderRow">
-                <span class="@Classes.Picker.TriggerTitle">@Label</span>
+        <div class=@TriggerText>
+            <div class=@HeaderRow>
+                <span class=@TriggerTitle>@Label</span>
                 @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
                 {
-                    <span class="@Classes.Picker.Badge">
+                    <span class=@Badge>
                         @if (!string.IsNullOrEmpty(BadgeIcon))
                         {
-                            <md-icon>@BadgeIcon</md-icon>
+                            <Icon Name=@BadgeIcon />
                         }
                         @BadgeText
                     </span>
                 }
             </div>
-            <div class="@Classes.Picker.PreviewText" title="@PreviewText">
+            <div class=@PreviewText title=@PreviewText>
                 @PreviewText
             </div>
             @if (CustomPreview != null)
             {
-                <div class="@Classes.Picker.CustomPreview">
+                <div class=@CustomPreview>
                     @CustomPreview
                 </div>
             }
@@ -45,28 +46,24 @@
     </div>
 
     <!-- Actions Panel -->
-    <div class="@Classes.Picker.TriggerActions">
+    <div class=@TriggerActions>
         @if (CustomActions != null)
         {
             @CustomActions
         }
         else if (!string.IsNullOrEmpty(ActionLabel))
         {
-            <Button Variant="ButtonVariant.FilledTonal" OnClick="HandleAction" Disabled="@Disabled">
-                @if (!string.IsNullOrEmpty(ActionIcon))
-                {
-                    <md-icon slot="icon">@ActionIcon</md-icon>
-                }
+            <Button Variant=@FilledTonal OnClick=@HandleAction Disabled=@Disabled Icon=@ActionIcon>
                 @ActionLabel
             </Button>
         }
 
         @if (HasValue && ShowResetButton)
         {
-            <IconButton Icon="@ResetIcon"
-                        AriaLabel="@ResetAriaLabel"
-                        Disabled="@Disabled"
-                        OnClick="HandleReset" />
+            <IconButton Icon=@ResetIcon
+                        AriaLabel=@ResetAriaLabel
+                        Disabled=@Disabled
+                        OnClick=@HandleReset />
         }
     </div>
 </div>

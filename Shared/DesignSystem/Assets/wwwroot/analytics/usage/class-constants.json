@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-23T05:12:43.828Z",
+  "generatedAt": "2026-10-23T06:00:45.213Z",
   "summary": {
     "totalDeclaredConstants": 2375,
-    "usedInRazorCount": 206,
-    "unusedCount": 2169,
-    "adoptionRatePercent": 9,
-    "totalCallSites": 285,
-    "rawStringViolationsCount": 570,
-    "classesWithRawLiteralsCount": 387,
-    "sourceFilesScanned": 644
+    "usedInRazorCount": 200,
+    "unusedCount": 2175,
+    "adoptionRatePercent": 8,
+    "totalCallSites": 278,
+    "rawStringViolationsCount": 534,
+    "classesWithRawLiteralsCount": 367,
+    "sourceFilesScanned": 645
   },
   "topUsedConstants": [
     {
@@ -441,18 +441,6 @@
       ]
     },
     {
-      "key": "Feedback.LoadingLabel",
-      "category": "Feedback",
-      "name": "LoadingLabel",
-      "cssClass": "loading-label",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Retail/Checkout/Pages/Payment.razor.cs",
-        "Portal/Landing/Pages/Player.razor"
-      ]
-    },
-    {
       "key": "Form.ErrorBanner",
       "category": "Form",
       "name": "ErrorBanner",
@@ -622,6 +610,17 @@
       "files": [
         "Retail/Orders/Pages/Orders/Grid.razor.cs"
       ]
+    },
+    {
+      "key": "Badge.Expired",
+      "category": "Badge",
+      "name": "Expired",
+      "cssClass": "badge-expired",
+      "usageCountInRazor": 1,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor.cs"
+      ]
     }
   ],
   "byCategory": {
@@ -727,8 +726,8 @@
     },
     "Common": {
       "total": 511,
-      "used": 33,
-      "totalCalls": 36
+      "used": 31,
+      "totalCalls": 34
     },
     "Configurator": {
       "total": 14,
@@ -792,8 +791,8 @@
     },
     "Feedback": {
       "total": 4,
-      "used": 2,
-      "totalCalls": 3
+      "used": 1,
+      "totalCalls": 1
     },
     "Fiscal": {
       "total": 2,
@@ -832,8 +831,8 @@
     },
     "GridLayout": {
       "total": 8,
-      "used": 1,
-      "totalCalls": 1
+      "used": 0,
+      "totalCalls": 0
     },
     "GroupBuy": {
       "total": 18,
@@ -867,8 +866,8 @@
     },
     "Kiosk": {
       "total": 88,
-      "used": 5,
-      "totalCalls": 5
+      "used": 3,
+      "totalCalls": 3
     },
     "Landing": {
       "total": 34,
@@ -1060,15 +1059,6 @@
       ]
     },
     {
-      "cssClass": "qrg-color-picker-wrapper",
-      "occurrences": 6,
-      "recommendedConstant": "QrDesigner.QrgColorPickerWrapper",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
-      ]
-    },
-    {
       "cssClass": "smart-form-error",
       "occurrences": 5,
       "recommendedConstant": "Form.SmartFormError",
@@ -1167,15 +1157,6 @@
       "filesCount": 1,
       "files": [
         "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "cssClass": "qrg-field-label",
-      "occurrences": 4,
-      "recommendedConstant": "QrDesigner.QrgFieldLabel",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
       ]
     },
     {
@@ -1335,24 +1316,6 @@
       ]
     },
     {
-      "cssClass": "qrg-field-row",
-      "occurrences": 3,
-      "recommendedConstant": "QrDesigner.QrgFieldRow",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
-      ]
-    },
-    {
-      "cssClass": "qrg-color-inputs",
-      "occurrences": 3,
-      "recommendedConstant": "QrDesigner.QrgColorInputs",
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Widgets/QrStylingCustomizer.razor"
-      ]
-    },
-    {
       "cssClass": "hamburger-line",
       "occurrences": 3,
       "recommendedConstant": "Common.HamburgerLine",
@@ -1454,16 +1417,6 @@
       ]
     },
     {
-      "cssClass": "landing-auth-btn",
-      "occurrences": 2,
-      "recommendedConstant": "Landing.AuthBtn",
-      "filesCount": 2,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Layout/LandingLayout.razor",
-        "Portal/Landing/Pages/Docs.razor"
-      ]
-    },
-    {
       "cssClass": "material-text-field",
       "occurrences": 2,
       "recommendedConstant": "Avatar.MaterialTextField",
@@ -1488,6 +1441,53 @@
       "filesCount": 1,
       "files": [
         "Platform/Shared/DesignSystem/QuickGrid/Columns/ColumnBase.razor.cs"
+      ]
+    },
+    {
+      "cssClass": "col-title-text",
+      "occurrences": 2,
+      "recommendedConstant": "Table.ColTitleText",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/QuickGrid/Columns/ColumnBase.razor.cs"
+      ]
+    },
+    {
+      "cssClass": "qr-placeholder",
+      "occurrences": 2,
+      "recommendedConstant": "QrDesigner.QrPlaceholder",
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/QrCode/SmartQrCode.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor"
+      ]
+    },
+    {
+      "cssClass": "material-symbols-outlined",
+      "occurrences": 2,
+      "recommendedConstant": "Avatar.MaterialSymbolsOutlined",
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/QrCode/SmartQrCode.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor"
+      ]
+    },
+    {
+      "cssClass": "smart-form-fieldset",
+      "occurrences": 2,
+      "recommendedConstant": "Form.SmartFormFieldset",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor"
+      ]
+    },
+    {
+      "cssClass": "smart-form-chip-label",
+      "occurrences": 2,
+      "recommendedConstant": "Chip.SmartFormChipLabel",
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor"
       ]
     }
   ],

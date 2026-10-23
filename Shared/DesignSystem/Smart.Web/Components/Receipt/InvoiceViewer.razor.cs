@@ -14,7 +14,6 @@ public partial class InvoiceViewer<TItem> : ComponentBase
     protected const string DefaultOrgName = "Socratic Platform";
     protected const string DefaultInvoiceNo = "SOC-001";
     protected const string ReceiptHeaderClass = "receipt-header";
-    protected const string CurrencyUzsKey = global::Assets.Constants.Loc.Common.CurrencyUzs;
 
     [Parameter]
     public IEnumerable<TItem> Items { get; set; } = Array.Empty<TItem>();
@@ -71,7 +70,7 @@ public partial class InvoiceViewer<TItem> : ComponentBase
     public string LogoUrl { get; set; } = "https://app.useanvil.com/img/email-logo-black.png";
 
     [Parameter]
-    public string HeartIconUrl { get; set; } = "/img/heart.png";
+    public string HeartIconUrl { get; set; } = global::Assets.Constants.Images.Heart;
 
     public async Task HandleItemClick(TItem item)
     {

@@ -1,82 +1,83 @@
 @namespace Shared.Layout
 @using static Classes.Picker
 @using static Icons
+@using static Loc.Common
 
-<div class="@LangSelect @(Variant == "inline" ? "lang-selector-inline" : "lang-selector-pill") @Class">
+<div class=@($"{LangSelect} {(Variant == "inline" ? LangSelectorInlineClass : LangSelectorPillClass)} {Class}")>
 	@if (Variant == "inline")
 	{
-		<div class="@LangInlineGrid" role="group" aria-label="Language">
+		<div class=@LangInlineGrid role="group" aria-label=@L[LanguageLabel]>
 			<button type="button"
-					class="@LangChipBtn @(IsUz ? LangChipActive : "")"
-					@onclick="SelectUz"
-					aria-pressed="@(IsUz ? "true" : "false")"
-					title="O'zbekcha">
+					class=@($"{LangChipBtn} {(IsUz ? LangChipActive : "")}")
+					@onclick=@SelectUz
+					aria-pressed=@(IsUz ? "true" : "false")
+					title=@L[CommonLangUz]>
 				<span>UZ</span>
 			</button>
 			<button type="button"
-					class="@LangChipBtn @(IsRu ? LangChipActive : "")"
-					@onclick="SelectRu"
-					aria-pressed="@(IsRu ? "true" : "false")"
-					title="Русский">
+					class=@($"{LangChipBtn} {(IsRu ? LangChipActive : "")}")
+					@onclick=@SelectRu
+					aria-pressed=@(IsRu ? "true" : "false")
+					title=@L[CommonLangRu]>
 				<span>RU</span>
 			</button>
 			<button type="button"
-					class="@LangChipBtn @(IsEn ? LangChipActive : "")"
-					@onclick="SelectEn"
-					aria-pressed="@(IsEn ? "true" : "false")"
-					title="English">
+					class=@($"{LangChipBtn} {(IsEn ? LangChipActive : "")}")
+					@onclick=@SelectEn
+					aria-pressed=@(IsEn ? "true" : "false")
+					title=@L[CommonLangEn]>
 				<span>EN</span>
 			</button>
 		</div>
 	}
 	else
 	{
-		<div class="@LangDropdownWrapper">
+		<div class=@LangDropdownWrapper>
 			<button type="button"
-					class="@LangToggleBtn"
-					@onclick="ToggleDropdown"
-					aria-expanded="@(IsOpen ? "true" : "false")"
-					aria-label="Language">
-				<Icon Name="@Translate" />
-				<span class="@LangCurrentLabel">@GetLangShortLabel(CurrentLanguage)</span>
-				<Icon Name="@(IsOpen ? ArrowDropUp : ArrowDropDown)" />
+					class=@LangToggleBtn
+					@onclick=@ToggleDropdown
+					aria-expanded=@(IsOpen ? "true" : "false")
+					aria-label=@L[LanguageLabel]>
+				<Icon Name=@Translate />
+				<span class=@LangCurrentLabel>@GetLangShortLabel(CurrentLanguage)</span>
+				<Icon Name=@(IsOpen ? ArrowDropUp : ArrowDropDown) />
 			</button>
 
 			@if (IsOpen)
 			{
-				<div class="lang-menu-backdrop" @onclick="CloseDropdown"></div>
-				<div class="@LangDropdownMenu" role="menu">
+				<div class=@LangMenuBackdropClass @onclick=@CloseDropdown></div>
+				<div class=@LangDropdownMenu role="menu">
 					<button type="button"
-							class="@LangMenuItem @(IsUz ? "lang-menu-item--active" : "")"
+							class=@($"{LangMenuItem} {(IsUz ? LangMenuItemActiveClass : "")}")
 							role="menuitem"
-							@onclick="SelectUz">
-						<span class="lang-flag">🇺🇿</span>
-						<span class="lang-name">O'zbekcha</span>
+							@onclick=@SelectUz>
+						<span class=@LangFlagClass>🇺🇿</span>
+						<span class=@LangNameClass>@L[CommonLangUz]</span>
 						@if (IsUz)
 						{
-							<Icon Name="@Check" />
+							<Icon Name=@Check />
 						}
 					</button>
 					<button type="button"
-							class="@LangMenuItem @(IsRu ? "lang-menu-item--active" : "")"
+							class=@($"{LangMenuItem} {(IsRu ? LangMenuItemActiveClass : "")}")
 							role="menuitem"
-							@onclick="SelectRu">
-						<span class="lang-flag">🇷🇺</span>
-						<span class="lang-name">Русский</span>
+							@onclick=@SelectRu>
+						<span class=@LangFlagClass>🇷🇺</span>
+						<span class=@LangNameClass>@L[CommonLangRu]</span>
 						@if (IsRu)
 						{
-							<Icon Name="@Check" />
+							<Icon Name=@Check />
 						}
 					</button>
 					<button type="button"
-							class="@LangMenuItem @(IsEn ? "lang-menu-item--active" : "")"
+							class=@($"{LangMenuItem} {(IsEn ? LangMenuItemActiveClass : "")}")
 							role="menuitem"
-							@onclick="SelectEn">
-						<span class="lang-flag">🇬🇧</span>
-						<span class="lang-name">English</span>
+							@onclick=@SelectEn>
+						<span class=@LangFlagClass>🇬🇧</span>
+						<span class=@LangNameClass>@L[CommonLangEn]</span>
 						@if (IsEn)
 						{
-							<Icon Name="@Check" />
+							<Icon Name=@Check />
 						}
 					</button>
 				</div>
