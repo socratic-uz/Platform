@@ -61,7 +61,7 @@
 }
 
 .det-sidebar-scrollable::-webkit-scrollbar-thumb {
-    border-radius: 4px;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
     background-color: var(--md-sys-color-outline-variant);
 }
 
@@ -456,7 +456,7 @@
 
 .table-container::-webkit-scrollbar-track {
     margin: 1rem;
-    border-radius: 24px;
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
     background: var(--md-sys-scrollbar-color-track, transparent);
 }
 

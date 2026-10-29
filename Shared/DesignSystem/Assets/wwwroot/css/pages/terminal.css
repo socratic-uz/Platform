@@ -691,6 +691,6 @@
 .pos-details-img {
     align-self: center;
     max-height: 200px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
 }
 

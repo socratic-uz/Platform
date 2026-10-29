@@ -404,14 +404,17 @@
 }
 
 @media screen and (max-width: 839.98px) {
-    .app-grid > nav {
+    .app-grid > nav,
+    nav.nav-desktop,
+    nav.nav-mobile,
+    nav.glass {
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
         grid-column: 1 / -1;
         grid-row: auto;
-        gap: initial;
+        gap: 8px;
         align-items: center;
-        place-content: stretch space-around;
+        place-content: stretch center;
         position: fixed;
         inset: auto 0 0;
         z-index: 100;
@@ -419,10 +422,10 @@
         width: 100%;
         max-width: 100%;
         height: auto;
-        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+        padding: 0.35rem 8px calc(0.5rem + env(safe-area-inset-bottom, 0px));
         border-top: 1px solid var(--md-sys-color-outline-variant);
         border-right: none;
-        border-radius: 24px 24px 0 0;
+        border-radius: var(--md-sys-shape-expressive-sheet, 32px 32px 0 0);
         background: var(--md-sys-color-surface-container);
         box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
     }
@@ -439,95 +442,7 @@
         display: none;
     }
 
-    nav.nav-desktop,
-    nav.nav-mobile,
-    nav.glass {
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-column: 1 / -1;
-        grid-row: auto;
-        gap: initial;
-        align-items: center;
-        place-content: stretch space-around;
-        position: fixed;
-        inset: auto 0 0;
-        z-index: 100;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: 24px 24px 0 0;
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    }
-
-    nav a.nav-item {
-        gap: 2px;
-        place-items: center center;
-        position: relative;
-        min-width: 48px;
-        min-height: 48px;
-        padding: 0.25rem 0.2rem;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
-        text-decoration: none;
-    }
-
-    nav a.nav-item md-icon {
-        place-items: center;
-        width: 56px;
-        height: 32px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 24px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav a.nav-item span {
-        max-width: 100%;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
-        font-weight: 500;
-        line-height: 1.2;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    nav a.nav-item.active md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav a.nav-item.active span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 600;
-    }
-
-    nav.glass {
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-column: 1 / -1;
-        grid-row: auto;
-        gap: initial;
-        align-items: center;
-        place-content: stretch space-around;
-        position: fixed;
-        inset: auto 0 0;
-        z-index: 100;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: 24px 24px 0 0;
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    }
-
+    nav a.nav-item,
     nav.glass a.nav-item {
         gap: 2px;
         place-items: center center;
@@ -535,11 +450,13 @@
         min-width: 48px;
         min-height: 48px;
         padding: 0.25rem 0.2rem;
+        border-radius: var(--md-sys-shape-corner-medium, 12px);
         color: var(--md-sys-color-on-surface-variant);
         font-size: 0.75rem;
         text-decoration: none;
     }
 
+    nav a.nav-item md-icon,
     nav.glass a.nav-item md-icon {
         place-items: center;
         width: 56px;
@@ -549,6 +466,7 @@
         transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
     }
 
+    nav a.nav-item span,
     nav.glass a.nav-item span {
         max-width: 100%;
         color: var(--md-sys-color-on-surface-variant);
@@ -559,60 +477,15 @@
         overflow: hidden;
     }
 
+    nav a.nav-item.active md-icon,
     nav.glass a.nav-item.active md-icon {
         background: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
     }
 
+    nav a.nav-item.active span,
     nav.glass a.nav-item.active span {
         color: var(--md-sys-color-on-surface);
         font-weight: 600;
     }
-
-    nav.nav-desktop {
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-column: 1 / -1;
-        grid-row: auto;
-        gap: initial;
-        align-items: center;
-        place-content: stretch space-around;
-        position: fixed;
-        inset: auto 0 0;
-        z-index: 100;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: 24px 24px 0 0;
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    }
-
-    nav.nav-mobile {
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-column: 1 / -1;
-        grid-row: auto;
-        gap: initial;
-        align-items: center;
-        place-content: stretch space-around;
-        position: fixed;
-        inset: auto 0 0;
-        z-index: 100;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 0.35rem 0.25rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: 24px 24px 0 0;
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    }
-
 }

@@ -27,7 +27,7 @@
     width: fit-content;
     padding: 0.45rem 0.72rem;
     border: 1px solid var(--map-border-strong);
-    border-radius: 999px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: var(--map-surface-strong);
     color: var(--map-text);
     font: inherit;
@@ -68,7 +68,7 @@
     z-index: 28;
     padding: 0.22rem 0.32rem;
     border: 1px solid var(--map-border);
-    border-radius: 999px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.96);
     white-space: nowrap;
     box-shadow: 0 0.35rem 0.85rem rgb(from var(--md-sys-color-shadow) r g b / 0.13);
@@ -109,7 +109,7 @@
     font-size: 0.72rem;
     box-shadow: 6px 0 15px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
     transform: translateY(-50%);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
     cursor: pointer;
     touch-action: manipulation;
 }

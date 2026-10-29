@@ -294,6 +294,24 @@
     align-items: center;
 }
 
+@media screen and (max-width: 839.98px) {
+    .order-items-subheader {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-3, 0.75rem);
+    }
+
+    .order-subtitle {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(max-content, auto));
+        gap: 4px 8px;
+    }
+
+    .order-details-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 .order-number {
     font-size: 1.15rem;
     font-weight: 700;
@@ -398,7 +416,7 @@
     -webkit-backdrop-filter: blur(10px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.25s var(--md-sys-motion-easing-spring);
     overscroll-behavior: contain;
     touch-action: pan-y;
 }
@@ -425,7 +443,7 @@
     animation: slideInRight 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 599.98px) {
     .order-drawer-backdrop {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -469,7 +487,7 @@
 .order-badge {
     padding: 3px 10px;
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     font-size: 0.8rem;
@@ -579,7 +597,7 @@
     grid-auto-flow: column;
     align-items: center;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-surface-container-low);
 }
 
@@ -625,9 +643,24 @@
     width: 100%;
 }
 
-.segmented-filter-set {
-    width: 100%;
+.segmented-filter-set,
+md-segmented-button-set {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 0;
+    align-items: center;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
     min-height: 48px;
+}
+
+md-segmented-button {
+    display: grid;
+    place-items: center;
+    min-height: 48px;
+    min-width: 72px;
 }
 
 button.kanban-card {
@@ -680,7 +713,7 @@ button.kanban-card {
 
 .smart-kanban-column-count {
     padding: 2px 8px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     font-size: 12px;

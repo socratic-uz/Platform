@@ -305,7 +305,7 @@
 @media (max-width: 839.98px) {
     .b2b-lead-section {
         padding: 2.5rem 1.5rem;
-        border-radius: 28px;
+        border-radius: var(--md-sys-shape-expressive-dialog, 28px);
     }
 
     .det-layout {
@@ -374,7 +374,7 @@
     .org-showcase-section {
         gap: 1.75rem;
         padding: 2rem 1.25rem;
-        border-radius: 24px;
+        border-radius: var(--md-sys-shape-expressive-card, 24px);
     }
 
     .profile-container {
@@ -389,7 +389,7 @@
     .spatial-maps-section {
         gap: 1.75rem;
         padding: 2rem 1.25rem;
-        border-radius: 24px;
+        border-radius: var(--md-sys-shape-expressive-card, 24px);
     }
 
     .spatial-wings-grid {

@@ -195,10 +195,10 @@
     align-items: center;
     padding: 0.55rem 0.8rem;
     border: 1px solid var(--map-outline-variant);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface);
     box-shadow: 0 2px 4px rgb(from var(--md-sys-color-shadow) r g b / 0.02);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
     cursor: grab;
     user-select: none;
 }

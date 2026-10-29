@@ -316,7 +316,7 @@ header.app-header.header-sticky {
     top: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199.98px) {
     .header-grid-layout {
         grid-template-columns: minmax(0, 1fr) auto;
     }

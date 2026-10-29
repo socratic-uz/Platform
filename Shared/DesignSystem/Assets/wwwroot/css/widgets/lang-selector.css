@@ -7,9 +7,9 @@
 .lang-chip-btn {
     display: grid;
     place-items: center;
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-    padding: 0.2rem 0.65rem;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.35rem 0.75rem;
     border: none;
     border-radius: var(--md-sys-shape-corner-large);
     background: transparent;
@@ -186,10 +186,10 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
-    gap: 4px;
+    gap: 0.5rem;
     align-items: center;
     box-sizing: border-box;
-    padding: 0.2rem;
+    padding: 0.25rem 0.35rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-button);
     background: var(--md-sys-color-surface-container-high);

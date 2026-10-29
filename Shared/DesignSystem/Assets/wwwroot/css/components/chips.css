@@ -333,13 +333,12 @@
 
 .feat-pill {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content auto;
-    gap: 0.35rem;
-    justify-content: center;
-    place-items: center;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.4rem;
+    justify-content: start;
+    align-items: center;
     box-sizing: border-box;
-    min-height: 32px;
+    min-height: 36px;
     padding: 0.35rem 0.65rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small, 8px);
@@ -347,10 +346,14 @@
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.74rem;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
 }
 
 .feat-pill span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     color: var(--md-sys-color-on-surface-variant);
 }
 
@@ -820,7 +823,7 @@
     font-weight: 600;
     white-space: nowrap;
     box-shadow: 0 2px 4px rgb(from var(--md-sys-color-shadow) r g b / 0.02);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
     cursor: pointer;
     touch-action: manipulation;
 }
@@ -895,7 +898,7 @@
     color: var(--map-text-muted);
     font-size: 0.8rem;
     font-weight: 600;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
     cursor: pointer;
 }
 
@@ -945,7 +948,7 @@
     justify-content: center;
     place-items: center;
     box-sizing: border-box;
-    min-height: 44px;
+    min-height: 48px;
     padding: 0.45rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
@@ -997,7 +1000,7 @@
 .place-details-badge {
     width: fit-content;
     padding: 0.12rem 0.4rem;
-    border-radius: 999px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     font-size: 0.62rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1066,7 +1069,7 @@
     align-items: center;
     padding: 0.6rem 1rem;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container);
     font-size: 0.9rem;
 }
@@ -1085,7 +1088,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin-bottom: 0.5rem;
     overflow-x: auto;
 }
@@ -1123,7 +1126,7 @@
     margin-top: 1rem;
     padding: 0.4rem 1rem;
     border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.18);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.12);
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
@@ -1159,7 +1162,7 @@
 
 .showcase-brand-badge {
     padding: 3px 8px;
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
     color: var(--md-sys-color-on-primary);
     font-size: 0.7rem;
@@ -1186,7 +1189,7 @@
     align-items: center;
     padding: 8px 16px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
     backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
     -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
@@ -1381,7 +1384,7 @@
     justify-content: center;
     place-items: center;
     box-sizing: border-box;
-    min-height: 40px;
+    min-height: 48px;
     padding: 0.35rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
@@ -1474,7 +1477,7 @@ md-suggestion-chip:active {
     }
 
     .hero-stage-tabs {
-        gap: 0.35rem;
+        gap: 0.5rem;
         padding: 0.3rem;
     }
 

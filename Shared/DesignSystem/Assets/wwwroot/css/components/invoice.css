@@ -5,14 +5,14 @@
 
 .receipt-container {
     font-family: 'Inter', -apple-system, monospace;
-    color: var(--md-sys-color-on-surface, #1e293b);
-    background: var(--md-sys-color-surface-container-lowest, #ffffff);
+    color: var(--md-sys-color-on-surface);
+    background: var(--md-sys-color-surface-container-lowest);
     max-width: 380px;
     margin: 0 auto;
     padding: 24px 20px;
     border-radius: var(--md-sys-shape-corner-large, 16px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.06);
+    border: 1px dashed var(--md-sys-color-outline-variant);
     position: relative;
 }
 
@@ -20,11 +20,11 @@
     .receipt-container {
         box-shadow: none;
         border: none;
-        background: #ffffff;
+        background: transparent;
         margin: 0;
         padding: 0;
         max-width: 100%;
-        color: #000000;
+        color: var(--md-sys-color-on-surface);
     }
 }
 
@@ -37,25 +37,25 @@
     text-align: center;
     margin-bottom: 16px;
     padding-bottom: 12px;
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 .receipt-header h3 {
     font-size: 1.1rem;
     font-weight: 800;
     margin: 0 0 4px 0;
-    color: var(--md-sys-color-on-surface, #0f172a);
+    color: var(--md-sys-color-on-surface);
 }
 
 .receipt-header p {
     font-size: 0.75rem;
-    color: var(--md-sys-color-on-surface-variant, #64748b);
+    color: var(--md-sys-color-on-surface-variant);
     margin: 0;
 }
 
 .receipt-meta {
     font-size: 0.78rem;
-    color: var(--md-sys-color-on-surface-variant, #475569);
+    color: var(--md-sys-color-on-surface-variant);
     margin-bottom: 14px;
 }
 
@@ -70,27 +70,27 @@
 
 .receipt-table th {
     text-align: left;
-    color: var(--md-sys-color-outline, #64748b);
+    color: var(--md-sys-color-outline);
     font-weight: 700;
     font-size: 0.7rem;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cbd5e1);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding: 6px 0;
 }
 
 .receipt-table td {
     padding: 6px 0;
-    border-bottom: 1px dotted var(--md-sys-color-outline-variant, #e2e8f0);
+    border-bottom: 1px dotted var(--md-sys-color-outline-variant);
 }
 
 .receipt-table tr:hover {
-    background: var(--md-sys-color-surface-container-highest, #f1f5f9);
+    background: var(--md-sys-color-surface-container-highest);
 }
 
 .receipt-totals {
     margin-top: 12px;
     padding-top: 10px;
-    border-top: 2px solid var(--md-sys-color-on-surface, #0f172a);
+    border-top: 2px solid var(--md-sys-color-on-surface);
     font-size: 0.85rem;
 }
 
@@ -101,16 +101,16 @@
 .receipt-totals .grand-total {
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--md-sys-color-primary, #0284c7);
+    color: var(--md-sys-color-primary);
 }
 
 .receipt-footer {
     text-align: center;
     margin-top: 16px;
     padding-top: 12px;
-    border-top: 1px dashed var(--md-sys-color-outline-variant, #cbd5e1);
+    border-top: 1px dashed var(--md-sys-color-outline-variant);
     font-size: 0.72rem;
-    color: var(--md-sys-color-on-surface-variant, #64748b);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 .receipt-text-right {

@@ -38,7 +38,7 @@ md-dialog.smart-form-dialog {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid var(--md-sys-color-outline-variant, #e0e2ec);
+    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     padding: 14px;
     margin: 0 0 10px 0;
@@ -165,6 +165,7 @@ md-dialog.smart-form-dialog {
 }
 
 @media (max-width: 600px) {
+
     .smart-form-dialog,
     md-dialog.smart-form-dialog {
         max-width: 98vw;
@@ -172,6 +173,7 @@ md-dialog.smart-form-dialog {
         --md-dialog-container-min-inline-size: 92vw;
         --md-dialog-container-max-inline-size: 96vw;
     }
+
     .smart-form-dialog [slot="content"] {
         padding: 14px 10px;
     }

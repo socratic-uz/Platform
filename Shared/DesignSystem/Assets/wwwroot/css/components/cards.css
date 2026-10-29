@@ -1056,7 +1056,7 @@
     background: color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent);
     overflow: hidden;
     backdrop-filter: blur(20px);
-    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, var(--md-sys-motion-easing-spring-soft)), border-color 0.3s ease, box-shadow 0.3s ease;
     -webkit-backdrop-filter: blur(20px);
 }
 
@@ -1221,7 +1221,7 @@
     min-width: 0;
     min-inline-size: 0;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: var(--md-sys-color-surface-container-low);
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -1371,7 +1371,7 @@
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-extra-large, 28px);
     background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 55%, transparent);
-    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s var(--md-sys-motion-easing-spring-soft, var(--md-sys-motion-easing-spring-soft)), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .spatial-wing-card > * {
@@ -1528,7 +1528,7 @@
     padding: 2rem 1.65rem;
     border-radius: var(--md-sys-shape-expressive-corner-extra-large, 28px);
     overflow: hidden;
-    transition: transform 0.35s var(--md-sys-motion-easing-spring-soft, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    transition: transform 0.35s var(--md-sys-motion-easing-spring-soft, var(--md-sys-motion-easing-spring-soft)), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
 }
 
 .ux-spotlight-card::before {
@@ -1561,12 +1561,12 @@
     display: grid;
     width: 42px;
     border: 1px solid var(--map-border);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.9);
     overflow: hidden;
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.08);
     backdrop-filter: blur(8px);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
 }
 
 .yandex-zoom-card:hover {

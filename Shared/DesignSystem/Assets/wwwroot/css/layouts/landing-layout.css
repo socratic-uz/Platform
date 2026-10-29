@@ -23,11 +23,41 @@
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
 }
 
+.landing-floating-auth-btn {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.45rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0.45rem 1rem;
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring-soft),
+        background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.landing-floating-auth-btn:hover {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    transform: translateY(-1px);
+}
+
 .landing-header-nav {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.25rem;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     padding: 0.25rem 0.5rem;
@@ -38,7 +68,7 @@
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199.98px) {
     .landing-floating-controls {
         top: 0.85rem;
         right: 1rem;

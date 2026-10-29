@@ -173,7 +173,7 @@
         overflow-y: auto;
         box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
         transform: translateY(0);
-        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        transition: max-height 0.3s var(--md-sys-motion-easing-spring), transform 0.3s var(--md-sys-motion-easing-spring), opacity 0.3s ease;
     }
 
     .organizations-map-controls.collapsed {
@@ -422,7 +422,7 @@
     .yandex-right-controls-container {
         top: 12px;
         right: 12px;
-        transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: bottom 0.3s var(--md-sys-motion-easing-spring);
     }
 
 }

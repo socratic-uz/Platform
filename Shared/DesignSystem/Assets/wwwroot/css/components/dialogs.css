@@ -725,7 +725,7 @@ md-dialog.contacts md-list {
 
     .ux-quickview-dialog {
         width: 95%;
-        border-radius: 20px;
+        border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     }
 
 }

@@ -206,7 +206,7 @@
     margin-top: 0.25rem;
     padding: 0.35rem 0.85rem;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
 }
 

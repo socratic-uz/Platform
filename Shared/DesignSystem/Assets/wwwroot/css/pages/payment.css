@@ -27,8 +27,7 @@
 
 .payment-dashboard .m3-info-item > div {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), max-content));
     gap: 0.5rem;
     align-items: center;
     margin-top: 0.25rem;
@@ -116,7 +115,7 @@
     font-size: 0.875rem;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 839.98px) {
     .payment-trust-footer {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
@@ -133,7 +132,7 @@
 .checkout-panel {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     padding: 24px;
     color: var(--md-sys-color-on-surface);
     display: grid;
@@ -223,7 +222,7 @@
 .tab-content-box {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     padding: 20px;
     display: grid;
     gap: 16px;
@@ -288,7 +287,7 @@
     font-size: 0.72rem;
     font-weight: 600;
     padding: 3px 8px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -300,7 +299,7 @@
 
 .pos-slip-details {
     background: var(--md-sys-color-surface-container-low);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     padding: 12px;
     width: 100%;
     text-align: left;
@@ -387,7 +386,7 @@ button.gateway-card {
     color: var(--md-sys-color-on-error);
     font-size: 0.65rem;
     padding: 1px 6px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     font-weight: 700;
 }
 
@@ -398,7 +397,7 @@ button.gateway-card {
     gap: 20px;
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     padding: 16px;
     margin: 8px 0;
 }
@@ -407,7 +406,7 @@ button.gateway-card {
     background: var(--md-sys-color-surface);
     border: 1px solid var(--md-sys-color-outline-variant);
     padding: 10px;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     display: grid;
     place-items: center;
 }
@@ -441,7 +440,7 @@ button.gateway-card {
     font-size: 0.8rem;
     font-weight: 600;
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     margin-top: 4px;
     width: fit-content;
 }
@@ -538,7 +537,7 @@ button.gateway-card {
 .otp-verification-box {
     background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-primary);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     padding: 14px;
     display: grid;
     gap: 10px;
@@ -643,7 +642,7 @@ button.gateway-card {
 .split-payment-box {
     background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     padding: 12px;
     font-size: 0.85rem;
 }
@@ -698,7 +697,7 @@ button.gateway-card {
     color: var(--md-sys-color-primary);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 599.98px) {
     .panel-footer {
         grid-template-columns: minmax(0, 1fr);
     }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-29T08:11:35.368Z",
+  "generatedAt": "2026-10-29T10:39:10.499Z",
   "summary": {
-    "totalDeclaredConstants": 2414,
-    "usedInRazorCount": 1046,
-    "unusedCount": 1368,
+    "totalDeclaredConstants": 2415,
+    "usedInRazorCount": 1045,
+    "unusedCount": 1370,
     "adoptionRatePercent": 43,
-    "totalCallSites": 2410,
+    "totalCallSites": 2409,
     "rawStringViolationsCount": 0,
     "classesWithRawLiteralsCount": 0,
     "sourceFilesScanned": 639
@@ -746,7 +746,7 @@
       "totalCalls": 0
     },
     "Docs": {
-      "total": 23,
+      "total": 24,
       "used": 23,
       "totalCalls": 23
     },
@@ -852,8 +852,8 @@
     },
     "Landing": {
       "total": 34,
-      "used": 18,
-      "totalCalls": 30
+      "used": 17,
+      "totalCalls": 29
     },
     "Light": {
       "total": 1,

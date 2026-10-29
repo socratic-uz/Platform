@@ -1424,6 +1424,7 @@ namespace Assets.Constants
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
             public const string DocsSidebar = "docs-sidebar";
+            public const string DocsSidebarBackdrop = "docs-sidebar-backdrop";
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
@@ -4166,6 +4167,7 @@ namespace Classes
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
             public const string DocsSidebar = "docs-sidebar";
+            public const string DocsSidebarBackdrop = "docs-sidebar-backdrop";
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
@@ -6913,6 +6915,7 @@ namespace Styles
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
             public const string DocsSidebar = "docs-sidebar";
+            public const string DocsSidebarBackdrop = "docs-sidebar-backdrop";
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
@@ -9661,6 +9664,7 @@ namespace Material.Web
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
             public const string DocsSidebar = "docs-sidebar";
+            public const string DocsSidebarBackdrop = "docs-sidebar-backdrop";
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
