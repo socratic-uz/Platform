@@ -1,16 +1,13 @@
 ---
 name: test-analysis-extensions
 description: >-
-  Provides file paths to language-specific reference files for the test
+  Provides file paths to .NET reference files for the test
   ANALYSIS skills (assertion-quality, test-anti-patterns, test-gap-analysis,
   test-smell-detection, test-tagging). Call this skill to discover available
-  extension files (e.g., dotnet.md for .NET/MSTest/xUnit/NUnit/TUnit,
-  python.md for pytest/unittest, typescript.md for Jest/Vitest/Mocha,
-  java.md for JUnit/TestNG, etc.). Do not use directly — invoked by the
-  test-quality-auditor agent and polyglot analysis skills that need
-  framework-specific lookup tables (test markers, assertion APIs, skip
-  annotations, sleep patterns, mystery guest indicators, integration
-  markers, setup/teardown, tag-support capability).
+  extension files (e.g., dotnet.md for .NET/MSTest/xUnit/NUnit/TUnit).
+  Do not use directly — invoked by the test-quality-auditor agent and analysis
+  skills that need .NET framework-specific lookup tables (test markers, assertion APIs,
+  sleep patterns, mystery guest indicators, integration markers, setup/teardown).
 user-invocable: false
 disable-model-invocation: true
 license: MIT
@@ -25,16 +22,6 @@ This skill provides access to per-language reference files used by the polyglot 
 | File | Languages / Frameworks | Contents |
 |------|------------------------|----------|
 | [extensions/dotnet.md](extensions/dotnet.md) | .NET (C#/F#/VB) — MSTest, xUnit, NUnit, TUnit | Test markers, assertion APIs, sleep/delay patterns, skip annotations, mystery guest, integration markers, setup/teardown, tag support |
-| [extensions/python.md](extensions/python.md) | Python — pytest, unittest | Same categories, with pytest fixtures/markers and unittest TestCase |
-| [extensions/typescript.md](extensions/typescript.md) | TypeScript / JavaScript — Jest, Vitest, Mocha, Jasmine, node:test | Same categories, with async/await pitfalls |
-| [extensions/java.md](extensions/java.md) | Java — JUnit 4, JUnit 5 (Jupiter), TestNG | Same categories, with `@Tag` / `@Category` / groups |
-| [extensions/go.md](extensions/go.md) | Go — `testing` package, testify | Same categories, with table-driven idiom and build tags |
-| [extensions/ruby.md](extensions/ruby.md) | Ruby — RSpec, Minitest | Same categories, with RSpec metadata and Minitest tags |
-| [extensions/rust.md](extensions/rust.md) | Rust — built-in `#[test]`, `cargo test` | Same categories, with `#[ignore]`, `#[should_panic]`, feature flags |
-| [extensions/swift.md](extensions/swift.md) | Swift — XCTest, Swift Testing | Same categories, with `@Test`, `@Tag`, `@Suite` |
-| [extensions/kotlin.md](extensions/kotlin.md) | Kotlin — JUnit 5, Kotest, MockK | Same categories, with `@Tag` and Kotest tags |
-| [extensions/powershell.md](extensions/powershell.md) | PowerShell — Pester v5 | Same categories, with `-Tag` and `Skip` |
-| [extensions/cpp.md](extensions/cpp.md) | C++ — GoogleTest, Catch2, doctest | Same categories, with `[tags]` and `*` filters |
 
 ## Usage
 

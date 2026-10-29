@@ -4,7 +4,7 @@
 @using static Assets.Constants.Classes.Picker
 @using static Material.Web.Components.ButtonVariant
 
-<div class=@($"{TriggerCard} {(Disabled ? Disabled : "")} {(HasValue ? "has-value" : "empty")} {Class}")>
+<div class=@($"{TriggerCard} {(Disabled ? global::Assets.Constants.Classes.Picker.Disabled : "")} {(HasValue ? "has-value" : "empty")} {Class}")>
     <div class=@TriggerLeft>
         <!-- Icon Badge (44x44px, R12) -->
         <div class=@($"{IconBadge} {(HasValue ? Active : "")}")>
@@ -33,12 +33,12 @@
                     </span>
                 }
             </div>
-            <div class=@PreviewText title=@PreviewText>
+            <div class=@(global::Assets.Constants.Classes.Picker.PreviewText) title=@PreviewText>
                 @PreviewText
             </div>
             @if (CustomPreview != null)
             {
-                <div class=@CustomPreview>
+                <div class=@(global::Assets.Constants.Classes.Picker.CustomPreview)>
                     @CustomPreview
                 </div>
             }

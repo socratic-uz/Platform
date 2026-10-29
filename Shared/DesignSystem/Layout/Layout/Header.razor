@@ -3,18 +3,18 @@
 @using Microsoft.AspNetCore.Components.Sections
 @using static Icons
 
-<header class="app-header @(Sticky ? "header-sticky" : "") @Class">
-	<div class="header-grid-layout">
+<header class="@Classes.Common.AppHeader @(Sticky ? Classes.Header.Sticky : string.Empty) @Class">
+	<div class="@Classes.Footer.HeaderGridLayout">
 		<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-		<div class="header-start-zone">
+		<div class="@Classes.Cart.HeaderStartZone">
 			@if (ShowBrand)
 			{
-				<div class="header-brand-zone">
-					<a href="/" class="header-brand-link" title="Socratic">
-						<span class="header-brand-icon-box">
+				<div class="@Classes.Cart.HeaderBrandZone">
+					<a href="/" class="@Classes.Cart.HeaderBrandLink" title="Socratic">
+						<span class="@Classes.Header.BrandIconBox">
 							<Icon Name="@AutoAwesome" />
 						</span>
-						<span class="header-brand-text">Socratic</span>
+						<span class="@Classes.Cart.HeaderBrandText">Socratic</span>
 					</a>
 				</div>
 			}
@@ -25,7 +25,7 @@
 		</div>
 
 		<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-		<div class="header-center-zone">
+		<div class="@Classes.GridLayout.HeaderCenterZone">
 			@if (CenterContent != null)
 			{
 				@CenterContent
@@ -37,7 +37,7 @@
 		</div>
 
 		<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-		<div class="header-end-zone">
+		<div class="@Classes.Cart.HeaderEndZone">
 			@if (EndContent != null)
 			{
 				@EndContent

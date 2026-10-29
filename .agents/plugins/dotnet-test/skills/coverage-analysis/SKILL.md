@@ -111,11 +111,7 @@ adding one missing coverage provider to an SDK-style test project as described i
 `references/test-execution.md`; never add a second provider, and report the
 change plus its revert command.
 
-The automatic collection path is for SDK-style projects. For classic non-SDK or
-`packages.config` projects, use only a repository-owned coverage command. If none
-exists, stop and request Cobertura XML. Never migrate the project, inject an
-SDK-style provider, create a wrapper project, or report substitute coverage from
-another assembly.
+The automatic collection path is for .NET SDK-style projects using `coverlet.collector` or native code coverage. Use the repository-owned coverage command or generate Cobertura XML.
 
 ## Interpretation and arithmetic invariants
 

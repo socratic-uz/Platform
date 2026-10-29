@@ -61,7 +61,7 @@
 
 .docs-welcome-card {
     display: grid;
-    gap: 0.5rem;
+    gap: 0.75rem;
     place-items: center;
     max-width: 480px;
     padding: 32px;
@@ -69,6 +69,46 @@
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     background-color: var(--md-sys-color-surface-container-low);
     text-align: center;
+}
+
+.docs-welcome-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--md-sys-color-primary);
+    font-size: 48px;
+}
+
+.docs-content-header {
+    display: none;
+}
+
+.docs-header-title {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.docs-empty-state {
+    display: grid;
+    gap: 0.5rem;
+    place-items: center;
+    padding: 24px 12px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 839.98px) {
+    .docs-content-header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: center;
+        min-height: 56px;
+        padding: 8px 16px;
+        border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
+    }
 }
 
 .docs-article {

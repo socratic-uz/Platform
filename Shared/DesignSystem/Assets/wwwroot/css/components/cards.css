@@ -588,7 +588,7 @@
     box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
-.m3-card-filled {
+:where(.m3-card-filled, .m3-card.Filled) {
     border: 1px solid transparent;
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container);
@@ -1853,7 +1853,7 @@ md-filled-card:hover figure img {
     transform: scale(1.04);
 }
 
-md-filled-card.product-card {
+md-filled-card.product-card:not(.pos-product-card) {
     grid-template-rows: auto minmax(0, 1fr) auto;
     position: relative;
     height: 100%;
@@ -1861,6 +1861,10 @@ md-filled-card.product-card {
     padding: 12px;
     container-type: inline-size;
     container-name: product-card;
+}
+
+md-filled-card.product-card:not(.pos-product-card):has(> .inline-card-experience-body) {
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
 }
 
 md-outlined-card {
@@ -1998,6 +2002,7 @@ md-outlined-card:hover figure img {
     }
 
     .kiosk-main .card-footer {
+        grid-auto-flow: row;
         grid-template-columns: minmax(0, 1fr);
         gap: 8px;
         align-items: stretch;
@@ -2031,6 +2036,18 @@ md-outlined-card:hover figure img {
 @media screen and (max-width: 839.98px) {
     .card-grid {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    }
+
+    .kiosk-main .card-footer {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .kiosk-main .card-footer .material-counter {
+        justify-content: center;
+        width: 100%;
     }
 
     .product-detail-card {

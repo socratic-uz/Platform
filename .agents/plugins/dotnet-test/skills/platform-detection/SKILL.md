@@ -1,13 +1,12 @@
 ---
 name: platform-detection
 description: >-
-  Identify a .NET project's test platform, framework, command mode, and
-  SDK-style vs classic project system. Use only for "which test
-  platform/framework?", "VSTest or MTP?", or "what runner does this project
+  Identify a .NET project's test platform, framework, and command mode.
+  Use only for "which test platform/framework?", "VSTest or MTP?", or "what runner does this project
   use?", including bridge settings, UseVSTest opt-outs, and incompatible or
   conflicting VSTest/MTP configuration. Resolves global.json, project,
-  packages.config, Directory.Build.props, and Directory.Packages.props
-  precedence for MSTest/xUnit/NUnit/TUnit. For running/filtering tests, exact
+  Directory.Build.props, and Directory.Packages.props
+  precedence for xUnit/MSTest/NUnit/TUnit. For running/filtering tests, exact
   commands or flags, TRX/dumps, and test-command/filter errors, use run-tests.
   Do not use for hot reload or migration.
 license: MIT

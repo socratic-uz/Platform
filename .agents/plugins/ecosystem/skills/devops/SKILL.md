@@ -1,49 +1,21 @@
 ---
 name: devops
-description: Infrastructure, deployment, and git repository orchestration guide for Socratic. USE FOR: managing the 9 Git submodules (UI, SharedKernel, Identifying, Shopping, Ordering, Paying, gitops, docs, IaC), staging/committing changes to child repos and bumping parent pointers; packaging deployments with Aspirate (aspirate generate for Docker Compose / Kubernetes Helm); building Windows POS desktop installers with InnoSetup; and configuring CI/CD workflows (.github/workflows/Socratic.yml). DO NOT USE FOR: writing C# business logic.
+description: >-
+  CI/CD pipelines, container orchestration, Kubernetes/Helm deployment with Aspirate, and Windows POS desktop installer packaging for Socratic.
+  USE FOR: packaging deployments with Aspirate (aspirate generate for Docker Compose / Kubernetes Helm), configuring GitHub Actions CI/CD workflows (.github/workflows/Socratic.yml), Docker runners, and building offline Windows POS installers with InnoSetup.
+  DO NOT USE FOR: multi-tier Git submodule commit sequencing (use gitops-submodules) or C# business logic.
 ---
 
-# Socratic DevOps: Git Submodules, Aspirate, Kubernetes & Installers
+# Socratic DevOps: Aspirate, Kubernetes Helm, CI/CD & POS Installers
 
-The Socratic deployment and version-control ecosystem manages 9 independent Git repositories, automated Aspirate translation to Kubernetes/Helm, and offline POS installers.
-
----
-
-## 1. 🌳 Git 9-Submodule Protocol
-
-> **CRITICAL RULE**: Never make blind root commits without verifying submodule state. Do NOT commit or push automatically unless explicitly instructed by the user.
-
-### Inspect Status Across All Submodules:
-```bash
-git submodule foreach --recursive "git status -s"
-```
-
-### Two-Stage Commit & Push Workflow:
-1. **Commit & push inside the child submodule first**:
-   ```bash
-   git -C src/Frontend status -s
-   git -C src/Frontend add .
-   git -C src/Frontend commit -m "feat(kiosk): add responsive variant picker"
-   git -C src/Frontend push origin HEAD:main
-   ```
-2. **Commit the updated submodule SHA pointer in root**:
-   ```bash
-   git add src/Frontend
-   git commit -m "chore(submodule): bump Frontend to latest commit"
-   git push origin HEAD:main
-   ```
-
-### Resolving Detached HEAD:
-```bash
-git -C <submodule_path> checkout main
-git -C <submodule_path> pull origin main
-```
+This skill covers containerization, Kubernetes/Helm generation via Aspirate, GitHub Actions CI/CD pipelines, and offline Windows POS installer packaging.
+For multi-tier Git submodule commit sequencing, use [gitops-submodules](../gitops-submodules/SKILL.md).
 
 ---
 
-## 2. ☸️ Aspirate & Kubernetes Helm Deployment
+## 1. ☸️ Aspirate & Kubernetes Helm Deployment
 
-Socratic translates `.NET Aspire` AppHost service definitions into production manifests using **Aspirate**:
+Socratic translates `.NET Aspire` AppHost service definitions (`src/Shared/AppHost/AppHost.cs`) into production manifests using **Aspirate**:
 
 ```powershell
 # Generate Docker Compose manifest:
@@ -53,7 +25,15 @@ aspirate generate --output-format compose
 aspirate generate --output-format helm
 ```
 
-The output manifests live in `gitops/` and are version-controlled in the `gitops` submodule.
+The generated manifests and Helm charts are stored in `infrastructure/` and deployed to the cluster.
+
+---
+
+## 2. 🚀 GitHub Actions CI/CD (`.github/workflows/Socratic.yml`)
+
+- Custom self-hosted and container runners are defined in `.github/runners/base/Dockerfile` and `.github/runners/dotnet-aot/Dockerfile`.
+- Standard build configurations across all solutions and projects: `Debug`, `Release`, `LocalDebug`, `Runner`, `Cluster`.
+- Artifact publishing uses `.github/actions/upload-s3/action.yml` (MinIO/S3) and `.github/actions/update-gitops/action.yml`.
 
 ---
 

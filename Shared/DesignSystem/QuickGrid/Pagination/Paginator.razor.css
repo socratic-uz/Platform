@@ -5,12 +5,14 @@
     justify-content: space-between;
     border-top: 1px solid var(--md-sys-color-outline-variant);
     margin-top: 0.5rem;
-    padding: 0.25rem 0;
+    padding: 0.375rem 0;
     align-items: center;
 }
 
 .pagination-text {
     margin: 0 0.5rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size, 0.875rem);
 }
 
 nav {
@@ -22,33 +24,64 @@ nav {
     align-items: center;
 }
 
-    nav button {
-        border: 0;
-        background: none center center / 1rem no-repeat;
-        width: 2rem;
-        height: 2rem;
-    }
-
-    nav button[disabled] {
-        opacity: 0.4;
-    }
-
-    nav button:not([disabled]):hover {
-        background-color: var(--md-sys-color-surface-container);
-    }
-
-    nav button:not([disabled]):active {
-        background-color: var(--md-sys-color-outline);
-    }
-
-.go-first, .go-last {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z"/><rect height="2" width="20" y="20.5" x="2"/></g></svg>');
+nav button {
+    position: relative;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    background-color: var(--md-sys-color-surface-container-low);
+    width: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: transform var(--md-sys-motion-spring-spatial-fast, 220ms cubic-bezier(0.175, 0.885, 0.32, 1.275)),
+        border-radius var(--md-sys-motion-spring-spatial-fast, 220ms cubic-bezier(0.175, 0.885, 0.32, 1.275)),
+        background-color var(--md-sys-motion-spring-effects-fast, 150ms cubic-bezier(0.2, 0, 0, 1)),
+        border-color var(--md-sys-motion-spring-effects-fast, 150ms cubic-bezier(0.2, 0, 0, 1));
 }
 
-.go-previous, .go-next {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" /></g></svg>');
+nav button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--md-sys-color-on-surface);
 }
 
-.go-next, .go-last {
+nav button[disabled] {
+    opacity: 0.38;
+    cursor: not-allowed;
+}
+
+nav button:not([disabled]):hover {
+    background-color: var(--md-sys-color-secondary-container);
+    border-color: var(--md-sys-color-primary);
+}
+
+nav button:not([disabled]):hover::before {
+    background-color: var(--md-sys-color-on-secondary-container);
+}
+
+nav button:not([disabled]):active {
+    border-radius: var(--md-sys-shape-morph-button-press, 12px);
+    transform: scale(0.96);
+    background-color: var(--md-sys-color-primary-container);
+}
+
+.go-first::before,
+.go-last::before {
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z"/><rect height="2" width="20" y="20.5" x="2"/></g></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90) scale(0.8)" transform-origin="12 12"><path d="m 2,1.5 l 10,17.5 l 10,-17.5 l -10,7.75 l -10,-7.75 z"/><rect height="2" width="20" y="20.5" x="2"/></g></svg>') no-repeat center / contain;
+}
+
+.go-previous::before,
+.go-next::before {
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" /></g></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="rotate(90)" transform-origin="12 12"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 11 z" /></g></svg>') no-repeat center / contain;
+}
+
+.go-next::before,
+.go-last::before {
     transform: scaleX(-1);
 }

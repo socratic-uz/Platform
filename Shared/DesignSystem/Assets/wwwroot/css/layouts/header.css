@@ -26,10 +26,10 @@
     gap: 0.5rem;
     align-items: center;
     padding: 0.35rem 1.15rem;
-    border: 1px solid var(--md-sys-color-warning, var(--md-sys-color-tertiary));
+    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.35);
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: var(--md-sys-color-warning, var(--md-sys-color-tertiary));
-    color: var(--md-sys-color-warning, var(--md-sys-color-tertiary));
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
     font-size: 0.825rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -220,10 +220,24 @@
     font-size: 0.9375rem;
 }
 
+.app-header .m3-page-header-subtitle {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+
 .m3-page-header-text {
     display: grid;
     gap: 0.35rem;
     min-width: 0;
+}
+
+h1.m3-page-header-text {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .m3-page-header-title {

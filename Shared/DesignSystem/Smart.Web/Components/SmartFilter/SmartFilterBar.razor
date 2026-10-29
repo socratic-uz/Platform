@@ -6,7 +6,7 @@
 @typeparam TItem where TItem : class
 
 <div class=@SmartFilterBar>
-    <div class="smart-filter-search">
+    <div class="@Classes.Search.SmartFilterSearch">
         <TextField TValue="string"
                    Variant=@(TextField<string>.TextFieldVariant.Outlined)
                    Placeholder=@EffectivePlaceholder
@@ -22,7 +22,7 @@
 
     @if (FilterChips != null && FilterChips.Any())
     {
-        <div class="smart-filter-chips">
+        <div class="@Classes.Chip.SmartFilterChips">
             @foreach (var chip in FilterChips)
             {
                 <Chip ChipType=@FilterChipType

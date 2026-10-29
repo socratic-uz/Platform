@@ -4,11 +4,10 @@ description: >
   Grade specified test methods individually and produce a concise PR-ready
   table with each fully qualified test name, an A-F grade, score band, and
   one-line note. USE FOR per-test feedback on a curated list such as new or
-  modified tests in a pull request, not a suite-wide audit. Polyglot: .NET,
-  Python, TS/JS, Java, Go, Ruby, Rust, Swift, Kotlin, PowerShell, C++. Inputs
-  may be test methods, method bodies, or file-and-line spans. DO NOT USE FOR:
-  full suite audits (use test-quality-auditor agent or test-anti-patterns),
-  writing new tests (use code-testing-generator agent or writing-mstest-tests),
+  modified tests in a pull request, not a suite-wide audit. Covers .NET (xUnit,
+  MSTest, NUnit, TUnit). Inputs may be test methods, method bodies, or file-and-line
+  spans. DO NOT USE FOR: full suite audits (use test-quality-auditor agent or
+  test-anti-patterns), writing new tests (use code-testing-generator agent),
   fixing failures, or measuring code coverage.
 license: MIT
 ---
@@ -21,13 +20,9 @@ one-line note explaining the grade. The skill **does not discover tests on its
 own** — the caller (typically a PR automation workflow or a human reviewer
 holding a specific list) provides the test methods to grade.
 
-> **Language-specific guidance**: Call the `test-analysis-extensions` skill
-> to discover available extension files, then read the file matching the
-> target codebase's language and framework (e.g., `extensions/dotnet.md`,
-> `extensions/python.md`, `extensions/typescript.md`, `extensions/go.md`).
-> You MUST read the relevant extension file before scoring assertions or
-> anti-patterns, because assertion APIs and idiomatic patterns differ
-> significantly across frameworks.
+> **Guidance**: Call the `test-analysis-extensions` skill
+> to inspect `extensions/dotnet.md`. Read it before scoring assertions or
+> anti-patterns to check idiomatic patterns for .NET test frameworks.
 
 ## Why a Per-Test Grade
 

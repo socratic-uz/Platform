@@ -6,12 +6,12 @@
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.IconButtonVariant
 
-<div class="smart-toast-container">
+<div class="@Classes.SmartToast.SmartToastContainer">
     @foreach (var toast in Toasts)
     {
-        <div class="smart-toast smart-toast-@toast.Level.ToString().ToLowerInvariant()" key="@toast.Id">
-            <div class="smart-toast-header">
-                <span class="smart-toast-icon">
+        <div class="@Classes.SmartToast.SmarttoastRoot smart-toast-@toast.Level.ToString().ToLowerInvariant()" key="@toast.Id">
+            <div class="@Classes.SmartToast.SmartToastHeader">
+                <span class="@Classes.SmartToast.SmartToastIcon">
                     @switch (toast.Level)
                     {
                         case ToastLevel.Success:
@@ -30,15 +30,15 @@
                 </span>
                 @if (!string.IsNullOrEmpty(toast.Title))
                 {
-                    <strong class="smart-toast-title">@toast.Title</strong>
+                    <strong class="@Classes.SmartToast.SmartToastTitle">@toast.Title</strong>
                 }
                 <IconButton Icon=@Icons.Close
                             Variant=@Standard
                             OnClick=@(() => DismissToast(toast.Id))
                             AriaLabel=@L[CloseAction]
-                            Class="smart-toast-close-btn" />
+                            Class="@Classes.SmartToast.SmartToastCloseBtn" />
             </div>
-            <div class="smart-toast-body">
+            <div class="@Classes.SmartToast.SmartToastBody">
                 @toast.Message
             </div>
         </div>

@@ -130,7 +130,7 @@
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--space-2, 8px);
     min-width: 0;
-    min-height: 130px;
+    min-height: 146px;
     min-inline-size: 0;
     padding: var(--space-3, 12px);
     text-align: left;
@@ -143,7 +143,7 @@
     z-index: var(--m3-z-content, 1);
 }
 
-.pos-chip-set {
+:where(.pos-chip-set, .pos-chipset) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -346,7 +346,7 @@
     overscroll-behavior-x: contain;
 }
 
-.pos-ux-mode-title {
+:where(.pos-ux-mode-title, .pos-uxmode-title) {
     display: block;
     min-width: 0;
     min-inline-size: 0;

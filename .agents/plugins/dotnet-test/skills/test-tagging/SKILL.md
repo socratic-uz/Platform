@@ -67,35 +67,24 @@ A single test may have **multiple traits** (e.g., both `negative` and `boundary`
 
 ## Workflow
 
-### Step 1: Detect the language, framework, and tagging capability
+### Step 1: Detect the .NET framework and tagging capability
 
-Identify the codebase's language and test framework. Call the `test-analysis-extensions` skill and read the matching extension file. The extension file declares a **tag-support capability** for each framework:
-
-- **`auto-edit`** — framework has canonical tag syntax this skill can safely insert (.NET `[TestCategory]` / `[Trait]` / `[Category]` / `[Property]`, pytest `@pytest.mark.<name>`, JUnit 5 `@Tag("...")`, TestNG `groups = {"..."}`, RSpec metadata `it "..." , :tag => true`, Pester `-Tag '...'`, Kotest `@Tags(...)`, Swift Testing `@Tag(.tagName)`, Catch2 `[tag]`, doctest `* doctest::test_suite("tag")` decorator).
-- **`report-only`** — framework has no canonical, agreed-upon tag attribute; report tags in a Markdown table only and do not edit source (Go standard `testing` without build-tag conventions, Jest/Vitest without consistent describe-prefix convention, Rust without project-specific cfg conventions, XCTest without a test plan, GoogleTest without test-name prefix conventions, Mocha without describe-prefix conventions).
-- **`convention-based`** — framework uses naming or file conventions for tagging (Go `//go:build integration` build tags, file-name suffixes like `*_integration_test.go`, GoogleTest `INTEGRATION_*` filter prefix). Only emit canonical edits when the user has confirmed the project convention; otherwise treat as `report-only`.
-
-Capture the capability before Step 4.
+Identify the test framework (xUnit, MSTest, NUnit, TUnit) from project references. All supported .NET frameworks have canonical trait syntax this skill can insert:
+- xUnit: `[Trait("Category", "...")]`
+- MSTest: `[TestCategory("...")]`
+- NUnit: `[Category("...")]`
+- TUnit: `[Property("Category", "...")]`
 
 ### Step 2: Scan existing traits
 
-Check which tests already have trait attributes. Use the loaded language extension as the source of truth — examples:
+Check which tests already have trait attributes:
 
-| Framework | Existing Attribute | Example |
-|-----------|--------------------|---------|
-| MSTest | `[TestCategory("...")]` | `[TestCategory("positive")]` |
+| Framework | Attribute Syntax | Example |
+|---|---|---|
 | xUnit | `[Trait("Category", "...")]` | `[Trait("Category", "positive")]` |
+| MSTest | `[TestCategory("...")]` | `[TestCategory("positive")]` |
 | NUnit | `[Category("...")]` | `[Category("positive")]` |
 | TUnit | `[Property("Category", "...")]` | `[Property("Category", "positive")]` |
-| JUnit 5 | `@Tag("...")` | `@Tag("positive")` |
-| TestNG | `@Test(groups = {"..."})` | `@Test(groups = {"positive"})` |
-| pytest | `@pytest.mark.<name>` | `@pytest.mark.positive` |
-| RSpec | metadata after `it` | `it "...", :positive do` |
-| Pester | `-Tag '...'` | `It '...' -Tag 'positive'` |
-| Kotest | `@Tags(...)` | `@Tags(Positive)` |
-| Swift Testing | `@Tag(.<name>)` | `@Test(.tags(.positive))` |
-| Catch2 | `[tag]` in name | `TEST_CASE("...", "[positive]")` |
-| doctest | `* doctest::test_suite("...")` decorator | `TEST_CASE("..." *doctest::test_suite("positive"))` |
 
 Record which tests already have tags to avoid duplication.
 

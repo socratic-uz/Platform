@@ -8,7 +8,7 @@
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<div class="card-outlined pricing-card">
+<div class="@Classes.Cards.CardOutlined_2 pricing-card">
     <div class="subscription-header">
         <div class=@($"{Root} {GetTierBadgeClass()}")>
             <Icon Name=@GetTierIcon() class=@BadgeIcon />
@@ -16,16 +16,16 @@
         </div>
         @if (Subscription.IsTrialActive)
         {
-            <div class="trial-counter">
-                <span class="trial-days-highlight">@Subscription.RemainingTrialDays</span>
-                <span class="trial-days-label">@L[Org_TrialDaysRemaining]</span>
+            <div class="@Classes.Badge.TrialCounter">
+                <span class="@Classes.Common.TrialDaysHighlight">@Subscription.RemainingTrialDays</span>
+                <span class="@Classes.Common.TrialDaysLabel">@L[Org_TrialDaysRemaining]</span>
             </div>
         }
     </div>
 
     <div class="subscription-current-info">
-        <h2 class="subscription-title">@GetTierHeadline()</h2>
-        <p class="subscription-description">@GetTierDescription()</p>
+        <h2 class="@Classes.Subscription.SubscriptionTitle">@GetTierHeadline()</h2>
+        <p class="@Classes.Subscription.SubscriptionDescription">@GetTierDescription()</p>
     </div>
 
     <!-- Сетка сравнения 3-х тарифов -->
@@ -37,13 +37,13 @@
                 <span class=@TierPrice>@L[Org_TierTrialPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureAllModes]</li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureAllModes]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureBrandScreensaver]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
             {
-                <span class="current-plan-indicator">@L[Org_CurrentPlan]</span>
+                <span class="@Classes.Common.CurrentPlanIndicator">@L[Org_CurrentPlan]</span>
             }
         </div>
 
@@ -54,13 +54,13 @@
                 <span class=@TierPrice>@L[Org_TierWithAdsPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@Info class="feature-icon info" /> @L[Org_TierFeaturePartnerAds]</li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureCloudPos]</li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureFiscalization]</li>
+                <li><Icon Name=@Info class=@($"{Classes.Common.FeatureIcon} {Classes.Badge.BadgeInfo}") /> @L[Org_TierFeaturePartnerAds]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureCloudPos]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureFiscalization]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.WithAds)
             {
-                <span class="current-plan-indicator">@L[Org_CurrentPlan]</span>
+                <span class="@Classes.Common.CurrentPlanIndicator">@L[Org_CurrentPlan]</span>
             }
             else
             {
@@ -72,20 +72,20 @@
 
         <!-- 3. Без рекламы (PRO) -->
         <div class=@($"{TierBox} pro-tier {(Subscription.Tier == SubscriptionTier.ProAdFree ? "active-tier" : string.Empty)}")>
-            <div class="pro-tag">@L[Org_Recommended]</div>
+            <div class="@Classes.Chips.ProTag">@L[Org_Recommended]</div>
             <div class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierProName]</h3>
                 <span class=@TierPrice>@L[Org_TierProPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@Star class="feature-icon star" /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureBrandScreensaver]</li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeaturePrioritySupport]</li>
-                <li><Icon Name=@CheckCircle class="feature-icon ok" /> @L[Org_TierFeatureWhiteLabel]</li>
+                <li><Icon Name=@Star class=@($"{Classes.Common.FeatureIcon} {Classes.Common.CommonStar}") /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeaturePrioritySupport]</li>
+                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureWhiteLabel]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.ProAdFree)
             {
-                <span class="current-plan-indicator pro">@L[Org_ActivePro]</span>
+                <span class="@Classes.Common.CurrentPlanIndicator @Classes.Chips.ChipPro">@L[Org_ActivePro]</span>
             }
             else
             {

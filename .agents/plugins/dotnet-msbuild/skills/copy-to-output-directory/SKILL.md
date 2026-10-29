@@ -21,7 +21,7 @@ As of **MSBuild 17.13 / .NET SDK 9.0.2xx** there are four values:
 
 ```xml
 <ItemGroup>
-  <None Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  <None Include="aappsettings.json" CopyToOutputDirectory="PreserveNewest" />
   <None Include="testdata\seed.db"  CopyToOutputDirectory="IfDifferent" />
 </ItemGroup>
 ```

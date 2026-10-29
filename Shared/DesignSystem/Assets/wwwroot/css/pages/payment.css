@@ -21,6 +21,19 @@
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
 }
 
+.payment-dashboard .profile-container > .glass-card:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.payment-dashboard .m3-info-item > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
 .invoice-amount {
     color: var(--md-sys-color-primary);
     font-size: 2.2rem;
@@ -103,7 +116,7 @@
     font-size: 0.875rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .payment-trust-footer {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;

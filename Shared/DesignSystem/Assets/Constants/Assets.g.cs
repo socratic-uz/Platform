@@ -34,16 +34,10 @@ namespace Assets.Constants
     public static class Scripts
     {
         public const string App = "_content/Assets/lib/app.js";
-        public const string LoadingIcon = "_content/Assets/lib/pdfjs-dist/dist/web/images/loading-icon.gif";
-        public const string MarkedEsm = "_content/Assets/lib/marked/dist/marked.esm.js";
         public const string MaterialColorUtilitiesBundle = "_content/Assets/js/material-color-utilities.bundle.js";
         public const string MaterialWebBundle = "_content/Assets/js/material-web.bundle.js";
         public const string OauthPopupHelper = "_content/Assets/js/oauthPopupHelper.js";
         public const string PasskeyHelper = "_content/Assets/js/passkeyHelper.js";
-        public const string PdfMin = "_content/Assets/lib/pdfjs-dist/dist/build/pdf.min.mjs";
-        public const string PdfViewer = "_content/Assets/lib/pdfjs-dist/dist/web/pdf_viewer.mjs";
-        public const string PdfWorkerMin = "_content/Assets/lib/pdfjs-dist/dist/build/pdf.worker.min.mjs";
-        public const string PurifyEs = "_content/Assets/lib/dompurify/dist/purify.es.mjs";
         public const string RemoteSupportWebRtc = "_content/Assets/js/remoteSupportWebRtc.js";
         public const string SrcDefender = "_content/Assets/lib/src-defender.js";
         public const string TelegramHelper = "_content/Assets/js/telegramHelper.js";

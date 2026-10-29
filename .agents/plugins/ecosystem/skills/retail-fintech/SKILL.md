@@ -30,7 +30,7 @@ All commercial items are stored as a universal `Product` entity in ScyllaDB and 
 - `ProductVariantSelector.razor`: Matrix of variants (sizes, colors, packages).
 - Run the audit script to check implementation status of all 28 modes:
   ```powershell
-  pwsh .agents/skills/retail-fintech/scripts/Audit-UxModes.ps1
+  pwsh .agents/plugins/ecosystem/skills/retail-fintech/scripts/Audit-UxModes.ps1
   ```
 
 ---

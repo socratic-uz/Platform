@@ -45,27 +45,26 @@
 <header class="app-header header-sticky "><div class="header-grid-layout"><div class="header-start-zone"><div class="header-brand-zone"><a href="/" class="header-brand-link" title="Socratic"><span class="header-brand-icon-box"><md-icon>auto_awesome</md-icon></span>
 						<span class="header-brand-text">Socratic</span></a></div><span class="header-context-divider">/</span>
     <div class="m3-page-header-start"><md-icon class="m3-page-header-icon">account_balance_wallet</md-icon>
-        <h2 class="m3-page-header-title">Payer Dashboard</h2></div></div>
+        <h2 class="m3-page-header-title">dashboard</h2></div></div>
 
 		
 		<div class="header-center-zone"></div>
 
 		
-		<div class="header-end-zone"><md-outlined-button class="expressive  payment-refresh-btn"><md-icon slot="icon">refresh</md-icon>
-            <span class="btn-text">Refresh</span></md-outlined-button><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Language"><md-icon>language</md-icon>
+		<div class="header-end-zone"><md-outlined-button class="expressive"><md-icon slot="icon">refresh</md-icon><span class="btn-text">Обновить</span></md-outlined-button><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
 				<span class="lang-current-label">UZ</span>
-				<md-icon>arrow_drop_down</md-icon></button></div></div><div class="avatar-container"><md-outlined-button class="expressive  avatar-button" aria-label="Profile"><md-icon>person</md-icon></md-outlined-button></div></div></div></header>
+				<md-icon>arrow_drop_down</md-icon></button></div></div><div class="avatar-container"><md-outlined-button class="expressive  avatar-button" aria-label="Профиль"><md-icon>person</md-icon></md-outlined-button></div></div></div></header>
 
 <nav class="glass nav-desktop"><a href="/home" class="nav-item"><md-icon>home</md-icon>
-		<span>Home</span></a>
+		<span>Главная</span></a>
 	<a href="/wishlist" class="nav-item"><md-icon>favorite</md-icon>
-		<span>Wish list</span></a>
+		<span>Избранное</span></a>
 	<a href="/chat" class="nav-item"><md-icon>forum</md-icon>
-		<span>Chat</span></a>
+		<span>Чат</span></a>
 	<a href="/orders" class="nav-item"><md-icon>shopping_bag</md-icon>
-		<span>Orders</span></a>
+		<span>Заказы</span></a>
 	<a href="/analytics" class="nav-item"><md-icon>analytics</md-icon>
-		<span>Analytics</span></a></nav>
+		<span>Аналитика</span></a></nav>
 
 
 
@@ -73,86 +72,86 @@
 
 
 
-<main class="payment-dashboard m3-page-container"><div class="profile-container m3-grid-main-sidebar"><div class="m3-card-glass glass-card"><div class="profile-title"><span>Personal Cabinet: Алишер Навои</span></div>
-                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">User ID</span>
+<main class="payment-dashboard m3-page-container"><section class="profile-container m3-grid-main-sidebar"><article class="glass glass-card"><header class="profile-title"><h3>Личный кабинет: Алишер Навои</h3></header>
+                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">ID Пользователя</span>
                         <span class="m3-info-value">UZ-7729104</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Phone</span>
+                    <div class="m3-info-item"><span class="m3-info-label">Телефон</span>
                         <span class="m3-info-value">+998 90 123 45 67</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">KYC Status</span>
-                        <div><span class="m3-badge badge-verified">Verified</span></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Available Limit</span>
-                        <span class="m3-info-value">15,000,000 UZS</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Account Status</span>
-                        <div><span class="m3-badge badge-verified">Active</span></div></div></div></div>
+                    <div class="m3-info-item"><span class="m3-info-label">Статус KYC</span>
+                        <div><span class="badge badge-verified">Верифицирован</span></div></div>
+                    <div class="m3-info-item"><span class="m3-info-label">Доступный лимит рассрочки</span>
+                        <span class="m3-info-value">15,000,000 сум</span></div>
+                    <div class="m3-info-item"><span class="m3-info-label">Статус аккаунта</span>
+                        <div><span class="badge badge-verified">Активен</span></div></div></div></article>
 
             
-            <div class="glass-card" style="grid-auto-flow: column; justify-content: space-around;"><div class="score-box"><span class="m3-info-label">Credit Score</span>
+            <article class="glass-card"><div class="score-box"><span class="m3-info-label">Кредитный рейтинг</span>
                     <div class="score-circle">785</div>
-                    <span class="m3-badge badge-active" style="margin-top: 0.5rem;">Низкий Risk</span></div></div>
+                    <span class="badge badge-active">Низкий Риск</span></div></article>
 
             
-            <div class="glass-card" style="grid-column: 1 / -1;"><div class="profile-title"><span>🔒 Security &amp; Quick Access Methods</span></div>
-                <p style="font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); margin-bottom: 1rem;">Link biometric and social accounts to sign in instantly without SMS/OTP.</p>
-                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Payment_FaceIdBiometrics</span>
-                        <div style="display: grid; grid-auto-flow: column; align-items: center; justify-content: start; gap: 8px; margin-top: 4px;"><span class="m3-badge badge-verified">Configured</span>
-                            <md-outlined-button class="expressive" style="font-size: 0.8rem;">Update Face Scan</md-outlined-button></div></div>
+            <article class="glass-card"><header class="profile-title"><h3>🔒 Безопасность и методы быстрого входа</h3></header>
+                <p>Привяжите биометрию и сервисы для мгновенного входа в 1 клик без ожидания SMS/OTP кодов.</p>
+                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">👁️ Face ID (Биометрия)</span>
+                        <div><span class="badge badge-verified">Настроено</span>
+                            <md-outlined-button class="expressive">Обновить снимок</md-outlined-button></div></div>
                     <div class="m3-info-item"><span class="m3-info-label">🌐 Google SSO</span>
-                        <div style="display: grid; grid-auto-flow: column; align-items: center; justify-content: start; gap: 8px; margin-top: 4px;"><span class="m3-badge badge-none">Not Linked</span>
-                            <md-outlined-button class="expressive" style="font-size: 0.8rem;">Link Google</md-outlined-button></div></div>
+                        <div><span class="badge badge-none">Не привязано</span>
+                            <md-outlined-button class="expressive">Привязать Google</md-outlined-button></div></div>
                     <div class="m3-info-item"><span class="m3-info-label">✈️ Telegram OIDC</span>
-                        <div style="display: grid; grid-auto-flow: column; align-items: center; justify-content: start; gap: 8px; margin-top: 4px;"><span class="m3-badge badge-verified">Linked</span></div></div></div></div></div><div class="m3-grid-stack plans-section"><h2>My Installments and Payments</h2><div class="m3-grid-stack plans-list"><article class="m3-card-outlined m3-card-padding-lg plan-card"><div class="plan-header"><div><span class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</span>
-                                <div style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant); margin-top: 0.25rem;">Type: BNPL 0-0-4 | Order: #A4F12C</div></div>
-                            <div><span class="badge badge-active">Active</span></div></div>
+                        <div><span class="badge badge-verified">Привязано</span></div></div></div></article></section><section class="m3-grid-stack plans-section"><h2>Мои рассрочки и платежи</h2><div class="m3-grid-stack plans-list"><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</h4>
+                                <p>Тип: BNPL 0-0-4 | Заказ: #A4F12C</p></div>
+                            <div><span class="badge badge-active">Active</span></div></header>
 
-                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Total Amount</span>
-                                <span class="m3-info-value">1,200,000 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Fee</span>
-                                <span class="m3-info-value">0 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Grand Total</span>
-                                <span class="m3-info-value" style="color: var(--md-sys-color-primary);">1,200,000 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Paid</span>
-                                <span class="m3-info-value" style="color: var(--md-sys-color-tertiary);">600,000 UZS</span></div></div>
-
-                        
-                        <div class="progress-bar-container"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 50%"></div></div>
-                            <div class="progress-labels"><span>Progress: 50%</span>
-                                <span>Remaining: 600,000 UZS</span></div></div>
+                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Общая сумма</span>
+                                <span class="m3-info-value">1,200,000 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Комиссия</span>
+                                <span class="m3-info-value">0 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Итого к оплате</span>
+                                <span class="m3-info-value">1,200,000 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Выплачено</span>
+                                <span class="m3-info-value">600,000 сум</span></div></div>
 
                         
-                        <div class="actions-row"><md-outlined-button class="expressive">View Schedule</md-outlined-button><md-filled-button class="expressive">Early Payoff</md-filled-button>
-                                <md-outlined-button class="expressive">Pause</md-outlined-button>
-                                <md-outlined-button class="expressive" style="--md-outlined-button-outline-color: var(--md-sys-color-error); --md-outlined-button-label-text-color: var(--md-sys-color-error);">Cancel Plan</md-outlined-button></div></article><article class="m3-card-outlined m3-card-padding-lg plan-card"><div class="plan-header"><div><span class="plan-title">Рассрочка на заказ #B89201 (Киоск)</span>
-                                <div style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant); margin-top: 0.25rem;">Type: BNPL 0-0-3 | Order: #B89201</div></div>
-                            <div><span class="badge badge-completed">Completed</span></div></div>
-
-                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Total Amount</span>
-                                <span class="m3-info-value">450,000 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Fee</span>
-                                <span class="m3-info-value">0 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Grand Total</span>
-                                <span class="m3-info-value" style="color: var(--md-sys-color-primary);">450,000 UZS</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Paid</span>
-                                <span class="m3-info-value" style="color: var(--md-sys-color-tertiary);">450,000 UZS</span></div></div>
+                        <div class="progress-bar-container"><md-linear-progress value="0.5"></md-linear-progress>
+                            <div class="progress-labels"><span>Прогресс: 50%</span>
+                                <span>Осталось: 600,000 сум</span></div></div>
 
                         
-                        <div class="progress-bar-container"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%"></div></div>
-                            <div class="progress-labels"><span>Progress: 100%</span>
-                                <span>Remaining: 0 UZS</span></div></div>
+                        <footer class="actions-row"><md-outlined-button class="expressive">Посмотреть график</md-outlined-button><md-filled-button class="expressive">Досрочное погашение (-20% комиссии)</md-filled-button>
+                                <md-outlined-button class="expressive">Приостановить</md-outlined-button>
+                                <md-outlined-button class="expressive">Отменить план</md-outlined-button></footer></article><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #B89201 (Киоск)</h4>
+                                <p>Тип: BNPL 0-0-3 | Заказ: #B89201</p></div>
+                            <div><span class="badge badge-completed">Completed</span></div></header>
+
+                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Общая сумма</span>
+                                <span class="m3-info-value">450,000 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Комиссия</span>
+                                <span class="m3-info-value">0 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Итого к оплате</span>
+                                <span class="m3-info-value">450,000 сум</span></div>
+                            <div class="m3-info-item"><span class="m3-info-label">Выплачено</span>
+                                <span class="m3-info-value">450,000 сум</span></div></div>
 
                         
-                        <div class="actions-row"><md-outlined-button class="expressive">View Schedule</md-outlined-button></div></article></div></div></main>
+                        <div class="progress-bar-container"><md-linear-progress value="1"></md-linear-progress>
+                            <div class="progress-labels"><span>Прогресс: 100%</span>
+                                <span>Осталось: 0 сум</span></div></div>
+
+                        
+                        <footer class="actions-row"><md-outlined-button class="expressive">Посмотреть график</md-outlined-button></footer></article></div></section></main>
 
 
 
 
 
-<footer class="app-footer "><div class="footer-container"><div class="footer-custom-slot"><div class="payment-trust-footer"><div class="trust-badge"><md-icon>verified_user</md-icon>
-            <span>Payment_SslSafe</span></div>
+<footer class="app-footer "><div class="footer-container"><div class="footer-custom-slot"><footer class="payment-trust-footer"><div class="trust-badge"><md-icon>verified_user</md-icon>
+            <span>256-bit SSL • Безопасные платежи</span></div>
         <md-chip-set class="payment-methods"><md-suggestion-chip label="Uzcard" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Humo" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Visa" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Mastercard" class="expressive"></md-suggestion-chip></md-chip-set>
-        <div class="payment-support"><a href="/help">Payment_CustomerCare</a></div></div></div><div class="footer-primary-grid"><div class="footer-brand-col"><a href="/" class="footer-brand-link"><span class="footer-brand-badge"><md-icon>auto_awesome</md-icon></span>
+        <div class="payment-support"><a href="/help">Служба заботы о клиентах</a></div></footer></div><div class="footer-primary-grid"><div class="footer-brand-col"><a href="/" class="footer-brand-link"><span class="footer-brand-badge"><md-icon>auto_awesome</md-icon></span>
 					<span class="footer-brand-title">Socratic</span></a>
 				<p class="footer-brand-tagline">Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.</p>
 				<div class="footer-system-status"><span class="status-pulse-dot" aria-hidden="true"></span>
@@ -162,36 +161,36 @@
 			<div class="footer-nav-col"><h4 class="footer-col-title">Каталог &amp; Киоски</h4>
 				<ul class="footer-links-list"><li><a href="/kiosk/20240824-0000-0000-0000-000000000002"><md-icon>storefront</md-icon> <span>Витрина товаров</span></a></li>
 					<li><a href="/kiosk/20240824-0000-0000-0000-000000000001"><md-icon>business_center</md-icon> <span>Тарифы и подключение</span></a></li>
-					<li><a href="/home"><md-icon>domain</md-icon> <span>Каталог заведений</span></a></li>
+					<li><a href="/home"><md-icon>domain</md-icon> <span>Места</span></a></li>
 					<li><a href="/map"><md-icon>map</md-icon> <span>Интерактивная карта</span></a></li></ul></div>
 
 			
 			<div class="footer-nav-col"><h4 class="footer-col-title">Управление &amp; POS</h4>
 				<ul class="footer-links-list"><li><a href="/orders"><md-icon>receipt_long</md-icon> <span>Заказы</span></a></li>
-					<li><a href="/payment"><md-icon>payments</md-icon> <span>Оплата и финансы</span></a></li>
+					<li><a href="/payment"><md-icon>payments</md-icon> <span>Оплата</span></a></li>
 					<li><a href="/qr-designer"><md-icon>qr_code_2</md-icon> <span>QR Конструктор</span></a></li>
 					<li><a href="/seat-designer"><md-icon>event_seat</md-icon> <span>Схема залов</span></a></li>
-					<li><a href="/terminal"><md-icon>point_of_sale</md-icon> <span>POS Терминал</span></a></li></ul></div>
+					<li><a href="/terminal"><md-icon>point_of_sale</md-icon> <span>Терминал</span></a></li></ul></div>
 
 			
 			<div class="footer-nav-col"><h4 class="footer-col-title">Ресурсы &amp; Инфо</h4>
 				<ul class="footer-links-list"><li><a href="/docs"><md-icon>menu_book</md-icon> <span>Документация</span></a></li>
-					<li><a href="/help"><md-icon>help_outline</md-icon> <span>Справка и FAQ</span></a></li>
-					<li><a href="/about"><md-icon>info</md-icon> <span>О платформе</span></a></li>
+					<li><a href="/help"><md-icon>help_outline</md-icon> <span>Помощь</span></a></li>
+					<li><a href="/about"><md-icon>info</md-icon> <span>О нас</span></a></li>
 					<li><a href="/signin"><md-icon>login</md-icon> <span>Socratic ID</span></a></li></ul></div>
 
 			
 			<div class="footer-nav-col"><h4 class="footer-col-title">Поддержка &amp; Связь</h4>
-				<ul class="footer-links-list"><li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><md-icon>support_agent</md-icon> <span>Служба заботы</span></a></li>
+				<ul class="footer-links-list"><li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><md-icon>support_agent</md-icon> <span>Поддержка</span></a></li>
 					<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><md-icon>send</md-icon> <span>Telegram Bot</span></a></li>
 					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><md-icon>camera_alt</md-icon> <span>Instagram</span></a></li></ul></div></div>
 
 		
 		<div class="footer-bottom-bar"><div class="footer-copyright">
 				&copy; 2026 Socratic. Все права защищены.</div>
-			<div class="footer-lang-container"><div class="lang-select lang-selector-inline "><div class="lang-inline-grid" role="group" aria-label="Language"><button type="button" class="lang-chip-btn lang-chip--active" aria-pressed="true" title="O'zbekcha"><span>UZ</span></button>
-			<button type="button" class="lang-chip-btn " aria-pressed="false" title="Русский"><span>RU</span></button>
-			<button type="button" class="lang-chip-btn " aria-pressed="false" title="English"><span>EN</span></button></div></div></div>
+			<div class="footer-lang-container"><div class="lang-select lang-selector-inline "><div class="lang-inline-grid" role="group" aria-label="Язык"><button type="button" class="lang-chip-btn lang-chip--active" aria-pressed="true" title="UZB"><span>UZ</span></button>
+			<button type="button" class="lang-chip-btn " aria-pressed="false" title="РУС"><span>RU</span></button>
+			<button type="button" class="lang-chip-btn " aria-pressed="false" title="ENG"><span>EN</span></button></div></div></div>
 			<div class="footer-trust-info"><span class="trust-badge"><md-icon>verified_user</md-icon>
 					<span>256-bit SSL • Zero-Trust Cloud</span></span></div></div></div></footer>
 </body>

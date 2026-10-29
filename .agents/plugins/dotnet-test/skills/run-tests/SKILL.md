@@ -3,11 +3,11 @@ name: run-tests
 description: >
   Run .NET tests or give the exact repository-compatible command. Use for "run
   the tests", one test/class/category/trait, one target framework, "what dotnet
-  test command?", `--no-build`, `--diag`, diagnostic logs, classic
-  packages.config or MSTest.exe, TRX or coverage collection, crash/hang dumps,
+  test command?", `--no-build`, `--diag`, diagnostic logs,
+  TRX or coverage collection, crash/hang dumps,
   filter mismatch, `--filter-query`, a single combined filter expression, or
   unrecognized options. Handles VSTest and bridged/native
-  Microsoft.Testing.Platform across MSTest/xUnit/NUnit/TUnit, including NUnit
+  Microsoft.Testing.Platform across xUnit/MSTest/NUnit/TUnit, including NUnit
   bridge filters, xUnit v3 class/trait/query filters, multi-TFM, and argument
   order. For identification-only requests, use platform-detection. DO NOT USE
   for writing tests, hot-reload/no-rebuild loops, migration, CI, coverage

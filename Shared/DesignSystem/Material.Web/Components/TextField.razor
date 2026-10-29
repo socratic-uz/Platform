@@ -7,7 +7,7 @@
 @if (Variant == TextFieldVariant.Filled)
 {
     <md-filled-text-field id="@Id"
-                          class="@CssClass material-text-field"
+                          class="@CssClass @Classes.Avatar.MaterialTextField"
                           label="@Label"
                           value="@CurrentValueAsString"
                           type="@Type"
@@ -68,7 +68,7 @@
 else
 {
     <md-outlined-text-field id="@Id"
-                            class="@CssClass material-text-field"
+                            class="@CssClass @Classes.Avatar.MaterialTextField"
                             label="@Label"
                             value="@CurrentValueAsString"
                             type="@Type"

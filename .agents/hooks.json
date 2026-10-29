@@ -1,25 +1,16 @@
 {
-  "hooks": {
-    "post_edit": [
+  "efcore-prohibition-guard": {
+    "enabled": true,
+    "PostToolUse": [
       {
-        "matcher": "**/*.proto",
-        "command": "pwsh -NoProfile -Command \"if (Test-Path ../Shared/SharedKernel/SharedKernel.csproj) { dotnet build ../Shared/SharedKernel/SharedKernel.csproj } elseif (Test-Path src/Shared/SharedKernel/SharedKernel.csproj) { dotnet build src/Shared/SharedKernel/SharedKernel.csproj }\"",
-        "description": "Recompile protobuf contracts when .proto definitions change"
-      },
-      {
-        "matcher": "**/*.csproj",
-        "command": "pwsh -NoProfile -Command \"param([string]$file); if ($file -and (Test-Path $file)) { if (Select-String -Path $file -Pattern 'Microsoft.EntityFrameworkCore') { Write-Error 'CRITICAL: Entity Framework Core is strictly prohibited in Socratic ecosystem. Use ScyllaDB!' } }\"",
-        "description": "Enforce strict NoSQL rule: prevent introducing Entity Framework Core"
-      },
-      {
-        "matcher": "**/Platform/Shared/DesignSystem/Assets/Resources/*.resx",
-        "command": "pwsh -NoProfile -Command \"Write-Host '[Localization Check] Remember to keep ResourceRu.resx, ResourceUz.resx, and ResourceEn.resx synchronized!'\"",
-        "description": "Remind developer about 3-way localization sync across RU, UZ, EN"
-      },
-      {
-        "matcher": "**/Platform/Shared/DesignSystem/Assets/{wwwroot/css/**/*.css,Resources/*.resx}",
-        "command": "pwsh -NoProfile -Command \"$p = (Get-ChildItem -Path . -Filter 'Assets.csproj' -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName; if ($p) { npm --prefix $p run generate:codegen }\"",
-        "description": "Regenerate Classes/Icons/Assets/Loc .g.cs constants so Razor always sees fresh CSS classes and localization keys"
+        "matcher": "edit_file|write_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -Command \"$in = [Console]::In.ReadToEnd(); if ($in) { $p = $in | ConvertFrom-Json -ErrorAction SilentlyContinue; $f = $p.toolCall.args.Path; if ($f -and ($f -like '*.csproj') -and (Test-Path $f) -and (Select-String -Path $f -Pattern 'Microsoft.EntityFrameworkCore' -Quiet)) { [Console]::Error.WriteLine('CRITICAL: Entity Framework Core is strictly prohibited in Socratic ecosystem. Use ScyllaDB!') } }; Write-Output '{}'\"",
+            "timeout": 15
+          }
+        ]
       }
     ]
   }

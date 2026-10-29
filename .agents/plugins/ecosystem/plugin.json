@@ -1,6 +1,11 @@
 {
   "name": "ecosystem",
+  "displayName": "Socratic Ecosystem",
   "version": "1.0.0",
-  "description": "Core Socratic ecosystem engineering skills, subagents, and domain workflows.",
-  "skills": ["./skills/"]
+  "description": "Core Socratic ecosystem engineering skills, specialized subagents, MCP servers, and Material 3 Expressive refactoring workflows.",
+  "suggestedPrompts": [
+    "Run the Material 3 Expressive CSS & geometry refactoring loop",
+    "Run the Razor markup & @Classes/@Loc refactoring loop",
+    "Verify multi-tier git submodule status across the repository"
+  ]
 }

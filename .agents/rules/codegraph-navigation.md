@@ -33,18 +33,22 @@ CodeGraph устраняет медленный и затратный по то�
 
 ---
 
-## 3. 🛠️ Доступные MCP Инструменты CodeGraph
+## 3. 🛠️ Инструменты CodeGraph: MCP и CLI
 
-| Инструмент | Назначение | Пример использования |
+### 1. Доступный MCP инструмент: `codegraph_explore`
+В Antigravity IDE через MCP подключен основной инструмент **`codegraph_explore`**:
+- **Аргументы**: `query` (вопрос по архитектуре или имени символа), `projectPath` (путь к корню проекта или подсистемы с `.codegraph/`).
+- **Результат**: верифицированный код релевантных символов, цепочки вызовов, используемые типы и сводка blast-radius за 1 обращение.
+
+### 2. Точечные CLI-команды CodeGraph (через терминал)
+Если требуется точечный срез конкретного метода или графа, используй CLI-утилиту `codegraph`:
+| CLI-команда | Назначение | Пример запуска в консоли |
 |---|---|---|
-| `codegraph_explore` | **Основной инструмент.** Возвращает верифицированный код релевантных символов, цепочки вызовов и blast-radius | `codegraph_explore(query="How does UniversalProductExperienceRenderer render 28 modes?")` |
-| `codegraph_node` | Исходный код конкретного символа с его входящими/исходящими связями | `codegraph_node(name="ProductUxMode")` |
-| `codegraph_search` | Быстрый поиск символов по имени через FTS5 | `codegraph_search(query="IFaceBiometricProcessor")` |
-| `codegraph_callers` | Все методы/функции, вызывающие указанный символ | `codegraph_callers(symbol="CreateOrderAsync")` |
-| `codegraph_callees` | Все методы/функции, которые вызывает указанный символ | `codegraph_callees(symbol="ProcessPaymentAsync")` |
-| `codegraph_impact` | Оценка полного радиуса влияния изменения символа | `codegraph_impact(symbol="OrderSaga")` |
-| `codegraph_files` | Структура проиндексированных файлов проекта | `codegraph_files()` |
-| `codegraph_status` | Состояние и статистика индекса (количество символов, связей) | `codegraph_status()` |
+| `codegraph callers <symbol>` | Методы/функции, вызывающие указанный символ | `codegraph callers CreateOrderAsync` |
+| `codegraph callees <symbol>` | Методы/функции, которые вызывает символ | `codegraph callees ProcessPaymentAsync` |
+| `codegraph impact <symbol>` | Оценка радиуса влияния изменения символа | `codegraph impact OrderSaga` |
+| `codegraph search <query>` | Поиск символов по имени через FTS5 | `codegraph search IFaceBiometricProcessor` |
+| `codegraph status` | Состояние и статистика индекса | `codegraph status` |
 
 ---
 

@@ -85,7 +85,7 @@ function parseLocFile(filePath) {
 function parseClassesFile(filePath) {
   if (!fs.existsSync(filePath)) {
     console.warn(`⚠️ Classes.g.cs not found at ${filePath}`);
-    return { constantsMap: new Map(), cssToConstantMap: new Map() };
+    return { constantsMap: new Map(), cssToConstantMap: new Map(), categoryKeysMap: new Map() };
   }
 
   const content = fs.readFileSync(filePath, 'utf8');
@@ -94,6 +94,7 @@ function parseClassesFile(filePath) {
   let currentCategory = null;
   const constantsMap = new Map(); // key: "Category.Name", value: { category, name, cssClass, count: 0, files: Set }
   const cssToConstantMap = new Map(); // key: cssClass, value: ["Category.Name"]
+  const categoryKeysMap = new Map(); // key: category, value: Set of names
 
   const classDefRegex = /public\s+static\s+class\s+([A-Za-z0-9_]+)/;
   const constDefRegex = /public\s+const\s+string\s+([A-Za-z0-9_]+)\s*=\s*"([^"]+)";/;
@@ -102,6 +103,9 @@ function parseClassesFile(filePath) {
     const classMatch = line.match(classDefRegex);
     if (classMatch && classMatch[1] !== 'Classes') {
       currentCategory = classMatch[1];
+      if (!categoryKeysMap.has(currentCategory)) {
+        categoryKeysMap.set(currentCategory, new Set());
+      }
       continue;
     }
 
@@ -120,6 +124,7 @@ function parseClassesFile(filePath) {
           files: new Set()
         };
         constantsMap.set(key, record);
+        categoryKeysMap.get(currentCategory).add(name);
 
         if (!cssToConstantMap.has(cssClass)) {
           cssToConstantMap.set(cssClass, []);
@@ -129,7 +134,7 @@ function parseClassesFile(filePath) {
     }
   }
 
-  return { constantsMap, cssToConstantMap };
+  return { constantsMap, cssToConstantMap, categoryKeysMap };
 }
 
 // -------------------------------------------------------------
@@ -140,14 +145,15 @@ function findSourceFiles(rootDir) {
   const results = [];
   const ignorePatterns = ['node_modules', 'bin', 'obj', '.git', 'preview', 'Constants', 'dist'];
 
-  function walk(currentDir) {
+  function walk(currentDir, isPlatformRoot) {
     if (!fs.existsSync(currentDir)) return;
     const entries = fs.readdirSync(currentDir, { withFileTypes: true });
 
     for (const entry of entries) {
       if (entry.isDirectory()) {
         if (ignorePatterns.includes(entry.name)) continue;
-        walk(path.join(currentDir, entry.name));
+        if (!isPlatformRoot && (entry.name === 'Platform' || entry.name === 'Hardware')) continue;
+        walk(path.join(currentDir, entry.name), false);
       } else if (entry.isFile()) {
         const ext = path.extname(entry.name).toLowerCase();
         if (ext === '.razor' || ext === '.cs') {
@@ -158,7 +164,7 @@ function findSourceFiles(rootDir) {
   }
 
   for (const dirName of targetDirs) {
-    walk(path.join(rootDir, dirName));
+    walk(path.join(rootDir, dirName), dirName === 'Platform');
   }
 
   return results;
@@ -167,7 +173,7 @@ function findSourceFiles(rootDir) {
 // -------------------------------------------------------------
 // 3. Static Analysis (Razor/C# AST & Text Scanner)
 // -------------------------------------------------------------
-function analyzeSourceFiles(files, constantsMap, cssToConstantMap, locConstantsMap, rawKeyToLocMap, domainKeysMap) {
+function analyzeSourceFiles(files, constantsMap, cssToConstantMap, categoryKeysMap, locConstantsMap, rawKeyToLocMap, domainKeysMap) {
   const directClassesUsage = new Map(); // cssClass -> { count, files: Set, recommendedConstant }
   const webComponentsMap = new Map(); // tagName -> { count, files: Set }
   const directLocUsage = new Map(); // locKey -> { count, files: Set, recommendedConstant }
@@ -206,6 +212,49 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap, locConstantsM
         record.count++;
         record.files.add(relPath);
         totalConstantMatches++;
+      }
+    }
+
+    // 1a. Check for @using static Assets.Constants.Classes.<Category> or @using static Assets.Constants.Classes
+    const usingStaticClassCategoryRegex = /(?:@using|using)\s+static\s+(?:global::)?Assets\.Constants\.Classes\.([A-Za-z0-9_]+)/g;
+    const importedClassCategories = [];
+    let catMatch;
+    while ((catMatch = usingStaticClassCategoryRegex.exec(content)) !== null) {
+      importedClassCategories.push(catMatch[1]);
+    }
+    const hasUsingStaticClassesRoot = /(?:@using|using)\s+static\s+(?:global::)?Assets\.Constants\.Classes\s*(?:;|$)/m.test(content);
+    if (hasUsingStaticClassesRoot) {
+      const catMemberRegex = /\b([A-Z][A-Za-z0-9_]*)\.([A-Z][A-Za-z0-9_]*)\b/g;
+      let cmMatch;
+      while ((cmMatch = catMemberRegex.exec(content)) !== null) {
+        if (cmMatch[1] === 'Classes' || cmMatch[1] === 'M3') continue;
+        const key = `${cmMatch[1]}.${cmMatch[2]}`;
+        const record = constantsMap.get(key);
+        if (record) {
+          record.count++;
+          record.files.add(relPath);
+          totalConstantMatches++;
+        }
+      }
+    }
+    if (importedClassCategories.length > 0) {
+      const bodyWithoutUsings = content.replace(/(?:@using|using)\s+[^\r\n]+/g, '');
+      const identRegex = /(?:@|\b)([A-Z][A-Za-z0-9_]*)\b/g;
+      let idMatch;
+      while ((idMatch = identRegex.exec(bodyWithoutUsings)) !== null) {
+        const name = idMatch[1];
+        for (const cat of importedClassCategories) {
+          if (categoryKeysMap.has(cat) && categoryKeysMap.get(cat).has(name)) {
+            const key = `${cat}.${name}`;
+            const record = constantsMap.get(key);
+            if (record) {
+              record.count++;
+              record.files.add(relPath);
+              totalConstantMatches++;
+              break;
+            }
+          }
+        }
       }
     }
 
@@ -301,8 +350,8 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap, locConstantsM
       }
     }
 
-    // 3. Detect Material Web Components in Razor markup
-    if (isRazor) {
+    // 3. Detect Material Web Components in Razor markup (excluding Material.Web wrapper definitions themselves)
+    if (isRazor && !relPath.includes('Material.Web/Components/')) {
       let wcMatch;
       while ((wcMatch = webComponentRegex.exec(content)) !== null) {
         const tag = wcMatch[1];
@@ -328,7 +377,7 @@ async function runUsageAnalysis() {
 
   // Step A: Parse Classes.g.cs and Loc.g.cs
   console.log('🔍 Parsing Classes.g.cs & Loc.g.cs constants...');
-  const { constantsMap, cssToConstantMap } = parseClassesFile(classesCsPath);
+  const { constantsMap, cssToConstantMap, categoryKeysMap } = parseClassesFile(classesCsPath);
   const { locConstantsMap, rawKeyToLocMap, domainKeysMap } = parseLocFile(locCsPath);
 
   // Step B: Scan source files
@@ -338,6 +387,7 @@ async function runUsageAnalysis() {
     sourceFiles,
     constantsMap,
     cssToConstantMap,
+    categoryKeysMap,
     locConstantsMap,
     rawKeyToLocMap,
     domainKeysMap

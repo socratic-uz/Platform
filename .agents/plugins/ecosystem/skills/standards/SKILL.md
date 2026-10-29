@@ -11,7 +11,7 @@ This guide unifies the global quality standards required across all Socratic mic
 
 ## 1. 🌈 Material Design 3 Theming & Dynamic Accents
 
-Theme tokens reside in `src/Frontend/Platform/Shared/DesignSystem/Layout/wwwroot/css/material-theme.css/`:
+Theme tokens reside in `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/tokens/`:
 - `dark.css`: Scoped to `:root[data-theme="dark"]`
 - `light.css`: Scoped to `:root[data-theme="light"]`
 - `Color.razor` & `Color.razor.js`: Injects computed M3 tonal palettes when an organization customizes its brand accent color.

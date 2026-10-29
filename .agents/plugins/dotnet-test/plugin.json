@@ -1,7 +1,7 @@
 {
   "name": "dotnet-test",
   "version": "0.2.19",
-  "description": "Skills for running, generating, analyzing, and improving .NET tests: test execution, filtering, platform detection, coverage, testability, and MSTest workflows.",
+  "description": "Skills for running, generating, analyzing, and improving .NET tests: test execution, filtering, platform detection, coverage, and testability.",
   "skills": ["./skills/"],
   "agents": [
     "./agents/code-testing-generator.agent.md",

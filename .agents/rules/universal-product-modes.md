@@ -24,10 +24,10 @@ This document establishes architectural standards for the 28 commercial features
 
 ## 2. Native AOT & Zero-Reflection Feature Registry
 
-- The Blazor experience dialog mapping is located in [ProductFeatureRegistry.cs](src/Frontend/Retail/Commerce/Architecture/ProductFeatureRegistry.cs).
+- The Blazor experience dialog mapping is located in `ProductFeatureRegistry.cs` (`src/Frontend/Retail/Commerce/Architecture/ProductFeatureRegistry.cs`).
 - **Never use dynamic reflection** (`Type.GetType`, `Activator.CreateInstance`) to load UI features.
-- All feature mappings must be statically registered in the compile-time `FrozenDictionary<int, Type> ModuleMap`.
-- Feature 1 (`CatalogItem`) is the standard non-modal catalog product and resolves to `null`. Features 2 through 28 map to their respective Blazor dialog features in `UI.Shared.Modules.*`.
+- All feature mappings are statically resolved at compile-time via `ProductFeatureRegistry.ResolveFeatureType(ProductUxMode? mode)`.
+- Mode 1 (`CatalogItem`) is the standard catalog product and resolves to `null`. Modes 2 through 28 map to their respective Blazor dialog features in `Socratic.Commerce.Features.*`.
 
 ---
 

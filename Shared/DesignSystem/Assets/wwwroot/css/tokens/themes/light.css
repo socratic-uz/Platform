@@ -54,5 +54,13 @@
     --md-sys-color-tertiary-container: rgb(202 230 255);
     --md-sys-color-tertiary-fixed: rgb(202 230 255);
     --md-sys-color-tertiary-fixed-dim: rgb(171 202 229);
+    --md-sys-color-success: rgb(14 122 87);
+    --md-sys-color-on-success: rgb(255 255 255);
+    --md-sys-color-success-container: rgb(166 244 210);
+    --md-sys-color-on-success-container: rgb(0 56 37);
+    --md-sys-color-warning: rgb(180 83 9);
+    --md-sys-color-on-warning: rgb(255 255 255);
+    --md-sys-color-warning-container: rgb(254 243 199);
+    --md-sys-color-on-warning-container: rgb(120 53 15);
 }
 

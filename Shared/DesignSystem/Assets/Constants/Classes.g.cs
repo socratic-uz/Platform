@@ -17,6 +17,7 @@ namespace Assets.Constants
         public static class About
         {
             public const string AboutTitle = "about-title";
+            public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
@@ -232,6 +233,7 @@ namespace Assets.Constants
             public const string StatusPaid = "status-paid";
             public const string StatusShipping = "status-shipping";
             public const string Success = "success";
+            public const string TaxBadge = "tax-badge";
             public const string Teal = "badge-teal";
             public const string Tertiary = "tertiary";
             public const string TicketBadge = "ticket-badge";
@@ -376,7 +378,8 @@ namespace Assets.Constants
             public const string CardElevated_2 = "card-elevated";
             public const string CardElevated_3 = "elevated";
             public const string CardFilled = "m3-card-filled";
-            public const string CardFilled_2 = "card-filled";
+            public const string CardFilled_2 = "Filled";
+            public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -500,6 +503,10 @@ namespace Assets.Constants
             public const string ShowcaseCardsGrid = "showcase-cards-grid";
             public const string ShowcaseCardTitle = "showcase-card-title";
             public const string ShowcaseCardTitleGroup = "showcase-card-title-group";
+            public const string SmartKanbanCard = "smart-kanban-card";
+            public const string SmartKanbanCards = "smart-kanban-cards";
+            public const string SmartKanbanCardSubtitle = "smart-kanban-card-subtitle";
+            public const string SmartKanbanCardTitle = "smart-kanban-card-title";
             public const string SpatialCardsSubgrid = "spatial-cards-subgrid";
             public const string SpatialSubcard = "spatial-subcard";
             public const string SpatialWingCard = "spatial-wing-card";
@@ -1403,6 +1410,8 @@ namespace Assets.Constants
             public const string DocsArticle = "docs-article";
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
+            public const string DocsContentHeader = "docs-content-header";
+            public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
@@ -1410,6 +1419,7 @@ namespace Assets.Constants
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
+            public const string DocsHeaderTitle = "docs-header-title";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -1419,6 +1429,7 @@ namespace Assets.Constants
             public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
+            public const string DocsWelcomeIcon = "docs-welcome-icon";
         }
 
         public static class Donation
@@ -1517,8 +1528,28 @@ namespace Assets.Constants
 
         public static class Fiscal
         {
+            public const string FiscalReceipt = "fiscal-receipt";
             public const string HighlightBox = "fiscal-highlight-box";
+            public const string ItemCalc = "item-calc";
+            public const string ItemMain = "item-main";
+            public const string ItemMxik = "item-mxik";
+            public const string ItemQty = "item-qty";
+            public const string ItemTotal = "item-total";
+            public const string ItemVatRow = "item-vat-row";
+            public const string Main = "main";
+            public const string OfdHint = "ofd-hint";
+            public const string OrgDetails = "org-details";
+            public const string OrgName = "org-name";
+            public const string PrintBtn = "print-btn";
+            public const string ReceiptActions = "receipt-actions";
+            public const string ReceiptDivider = "receipt-divider";
+            public const string ReceiptFiscalFooter = "receipt-fiscal-footer";
+            public const string ReceiptItemRow = "receipt-item-row";
+            public const string ReceiptItems = "receipt-items";
+            public const string Sign = "fiscal-sign";
             public const string TagItem = "fiscal-tag-item";
+            public const string TotalVal = "total-val";
+            public const string VerifyLink = "verify-link";
         }
 
         public static class Footer
@@ -1722,6 +1753,7 @@ namespace Assets.Constants
 
         public static class InfoGrid
         {
+            public const string FiscalInfo = "fiscal-info";
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
@@ -1980,6 +2012,11 @@ namespace Assets.Constants
             public const string PriceBreakdown = "order-price-breakdown";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string SmartKanbanBoard = "smart-kanban-board";
+            public const string SmartKanbanColumn = "smart-kanban-column";
+            public const string SmartKanbanColumnCount = "smart-kanban-column-count";
+            public const string SmartKanbanColumnHeader = "smart-kanban-column-header";
+            public const string SmartKanbanColumnTitle = "smart-kanban-column-title";
         }
 
         public static class Outline
@@ -2215,6 +2252,7 @@ namespace Assets.Constants
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrCompactBody = "qr-compact-body";
             public const string QrCompactHeader = "qr-compact-header";
+            public const string QrContainer = "qr-container";
             public const string QrControlsPanel = "qr-controls-panel";
             public const string QrDesignerHeader = "qr-designer-header";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
@@ -2272,6 +2310,7 @@ namespace Assets.Constants
             public const string QrStatusText = "qr-status-text";
             public const string QrSub = "qr-sub";
             public const string QrSvgGraphic = "qr-svg-graphic";
+            public const string QrSvgWrap = "qr-svg-wrap";
             public const string QrTitle = "qr-title";
             public const string QrWorkspace = "qr-workspace";
             public const string QrWrapper = "qr-wrapper";
@@ -2720,6 +2759,7 @@ namespace Classes
         public static class About
         {
             public const string AboutTitle = "about-title";
+            public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
@@ -2935,6 +2975,7 @@ namespace Classes
             public const string StatusPaid = "status-paid";
             public const string StatusShipping = "status-shipping";
             public const string Success = "success";
+            public const string TaxBadge = "tax-badge";
             public const string Teal = "badge-teal";
             public const string Tertiary = "tertiary";
             public const string TicketBadge = "ticket-badge";
@@ -3079,7 +3120,8 @@ namespace Classes
             public const string CardElevated_2 = "card-elevated";
             public const string CardElevated_3 = "elevated";
             public const string CardFilled = "m3-card-filled";
-            public const string CardFilled_2 = "card-filled";
+            public const string CardFilled_2 = "Filled";
+            public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -3203,6 +3245,10 @@ namespace Classes
             public const string ShowcaseCardsGrid = "showcase-cards-grid";
             public const string ShowcaseCardTitle = "showcase-card-title";
             public const string ShowcaseCardTitleGroup = "showcase-card-title-group";
+            public const string SmartKanbanCard = "smart-kanban-card";
+            public const string SmartKanbanCards = "smart-kanban-cards";
+            public const string SmartKanbanCardSubtitle = "smart-kanban-card-subtitle";
+            public const string SmartKanbanCardTitle = "smart-kanban-card-title";
             public const string SpatialCardsSubgrid = "spatial-cards-subgrid";
             public const string SpatialSubcard = "spatial-subcard";
             public const string SpatialWingCard = "spatial-wing-card";
@@ -4106,6 +4152,8 @@ namespace Classes
             public const string DocsArticle = "docs-article";
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
+            public const string DocsContentHeader = "docs-content-header";
+            public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
@@ -4113,6 +4161,7 @@ namespace Classes
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
+            public const string DocsHeaderTitle = "docs-header-title";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -4122,6 +4171,7 @@ namespace Classes
             public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
+            public const string DocsWelcomeIcon = "docs-welcome-icon";
         }
 
         public static class Donation
@@ -4220,8 +4270,28 @@ namespace Classes
 
         public static class Fiscal
         {
+            public const string FiscalReceipt = "fiscal-receipt";
             public const string HighlightBox = "fiscal-highlight-box";
+            public const string ItemCalc = "item-calc";
+            public const string ItemMain = "item-main";
+            public const string ItemMxik = "item-mxik";
+            public const string ItemQty = "item-qty";
+            public const string ItemTotal = "item-total";
+            public const string ItemVatRow = "item-vat-row";
+            public const string Main = "main";
+            public const string OfdHint = "ofd-hint";
+            public const string OrgDetails = "org-details";
+            public const string OrgName = "org-name";
+            public const string PrintBtn = "print-btn";
+            public const string ReceiptActions = "receipt-actions";
+            public const string ReceiptDivider = "receipt-divider";
+            public const string ReceiptFiscalFooter = "receipt-fiscal-footer";
+            public const string ReceiptItemRow = "receipt-item-row";
+            public const string ReceiptItems = "receipt-items";
+            public const string Sign = "fiscal-sign";
             public const string TagItem = "fiscal-tag-item";
+            public const string TotalVal = "total-val";
+            public const string VerifyLink = "verify-link";
         }
 
         public static class Footer
@@ -4425,6 +4495,7 @@ namespace Classes
 
         public static class InfoGrid
         {
+            public const string FiscalInfo = "fiscal-info";
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
@@ -4683,6 +4754,11 @@ namespace Classes
             public const string PriceBreakdown = "order-price-breakdown";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string SmartKanbanBoard = "smart-kanban-board";
+            public const string SmartKanbanColumn = "smart-kanban-column";
+            public const string SmartKanbanColumnCount = "smart-kanban-column-count";
+            public const string SmartKanbanColumnHeader = "smart-kanban-column-header";
+            public const string SmartKanbanColumnTitle = "smart-kanban-column-title";
         }
 
         public static class Outline
@@ -4918,6 +4994,7 @@ namespace Classes
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrCompactBody = "qr-compact-body";
             public const string QrCompactHeader = "qr-compact-header";
+            public const string QrContainer = "qr-container";
             public const string QrControlsPanel = "qr-controls-panel";
             public const string QrDesignerHeader = "qr-designer-header";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
@@ -4975,6 +5052,7 @@ namespace Classes
             public const string QrStatusText = "qr-status-text";
             public const string QrSub = "qr-sub";
             public const string QrSvgGraphic = "qr-svg-graphic";
+            public const string QrSvgWrap = "qr-svg-wrap";
             public const string QrTitle = "qr-title";
             public const string QrWorkspace = "qr-workspace";
             public const string QrWrapper = "qr-wrapper";
@@ -5428,6 +5506,7 @@ namespace Styles
         public static class About
         {
             public const string AboutTitle = "about-title";
+            public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
@@ -5643,6 +5722,7 @@ namespace Styles
             public const string StatusPaid = "status-paid";
             public const string StatusShipping = "status-shipping";
             public const string Success = "success";
+            public const string TaxBadge = "tax-badge";
             public const string Teal = "badge-teal";
             public const string Tertiary = "tertiary";
             public const string TicketBadge = "ticket-badge";
@@ -5787,7 +5867,8 @@ namespace Styles
             public const string CardElevated_2 = "card-elevated";
             public const string CardElevated_3 = "elevated";
             public const string CardFilled = "m3-card-filled";
-            public const string CardFilled_2 = "card-filled";
+            public const string CardFilled_2 = "Filled";
+            public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -5911,6 +5992,10 @@ namespace Styles
             public const string ShowcaseCardsGrid = "showcase-cards-grid";
             public const string ShowcaseCardTitle = "showcase-card-title";
             public const string ShowcaseCardTitleGroup = "showcase-card-title-group";
+            public const string SmartKanbanCard = "smart-kanban-card";
+            public const string SmartKanbanCards = "smart-kanban-cards";
+            public const string SmartKanbanCardSubtitle = "smart-kanban-card-subtitle";
+            public const string SmartKanbanCardTitle = "smart-kanban-card-title";
             public const string SpatialCardsSubgrid = "spatial-cards-subgrid";
             public const string SpatialSubcard = "spatial-subcard";
             public const string SpatialWingCard = "spatial-wing-card";
@@ -6814,6 +6899,8 @@ namespace Styles
             public const string DocsArticle = "docs-article";
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
+            public const string DocsContentHeader = "docs-content-header";
+            public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
@@ -6821,6 +6908,7 @@ namespace Styles
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
+            public const string DocsHeaderTitle = "docs-header-title";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -6830,6 +6918,7 @@ namespace Styles
             public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
+            public const string DocsWelcomeIcon = "docs-welcome-icon";
         }
 
         public static class Donation
@@ -6928,8 +7017,28 @@ namespace Styles
 
         public static class Fiscal
         {
+            public const string FiscalReceipt = "fiscal-receipt";
             public const string HighlightBox = "fiscal-highlight-box";
+            public const string ItemCalc = "item-calc";
+            public const string ItemMain = "item-main";
+            public const string ItemMxik = "item-mxik";
+            public const string ItemQty = "item-qty";
+            public const string ItemTotal = "item-total";
+            public const string ItemVatRow = "item-vat-row";
+            public const string Main = "main";
+            public const string OfdHint = "ofd-hint";
+            public const string OrgDetails = "org-details";
+            public const string OrgName = "org-name";
+            public const string PrintBtn = "print-btn";
+            public const string ReceiptActions = "receipt-actions";
+            public const string ReceiptDivider = "receipt-divider";
+            public const string ReceiptFiscalFooter = "receipt-fiscal-footer";
+            public const string ReceiptItemRow = "receipt-item-row";
+            public const string ReceiptItems = "receipt-items";
+            public const string Sign = "fiscal-sign";
             public const string TagItem = "fiscal-tag-item";
+            public const string TotalVal = "total-val";
+            public const string VerifyLink = "verify-link";
         }
 
         public static class Footer
@@ -7133,6 +7242,7 @@ namespace Styles
 
         public static class InfoGrid
         {
+            public const string FiscalInfo = "fiscal-info";
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
@@ -7391,6 +7501,11 @@ namespace Styles
             public const string PriceBreakdown = "order-price-breakdown";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string SmartKanbanBoard = "smart-kanban-board";
+            public const string SmartKanbanColumn = "smart-kanban-column";
+            public const string SmartKanbanColumnCount = "smart-kanban-column-count";
+            public const string SmartKanbanColumnHeader = "smart-kanban-column-header";
+            public const string SmartKanbanColumnTitle = "smart-kanban-column-title";
         }
 
         public static class Outline
@@ -7626,6 +7741,7 @@ namespace Styles
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrCompactBody = "qr-compact-body";
             public const string QrCompactHeader = "qr-compact-header";
+            public const string QrContainer = "qr-container";
             public const string QrControlsPanel = "qr-controls-panel";
             public const string QrDesignerHeader = "qr-designer-header";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
@@ -7683,6 +7799,7 @@ namespace Styles
             public const string QrStatusText = "qr-status-text";
             public const string QrSub = "qr-sub";
             public const string QrSvgGraphic = "qr-svg-graphic";
+            public const string QrSvgWrap = "qr-svg-wrap";
             public const string QrTitle = "qr-title";
             public const string QrWorkspace = "qr-workspace";
             public const string QrWrapper = "qr-wrapper";
@@ -8137,6 +8254,7 @@ namespace Material.Web
         public static class About
         {
             public const string AboutTitle = "about-title";
+            public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
@@ -8352,6 +8470,7 @@ namespace Material.Web
             public const string StatusPaid = "status-paid";
             public const string StatusShipping = "status-shipping";
             public const string Success = "success";
+            public const string TaxBadge = "tax-badge";
             public const string Teal = "badge-teal";
             public const string Tertiary = "tertiary";
             public const string TicketBadge = "ticket-badge";
@@ -8496,7 +8615,8 @@ namespace Material.Web
             public const string CardElevated_2 = "card-elevated";
             public const string CardElevated_3 = "elevated";
             public const string CardFilled = "m3-card-filled";
-            public const string CardFilled_2 = "card-filled";
+            public const string CardFilled_2 = "Filled";
+            public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
@@ -8620,6 +8740,10 @@ namespace Material.Web
             public const string ShowcaseCardsGrid = "showcase-cards-grid";
             public const string ShowcaseCardTitle = "showcase-card-title";
             public const string ShowcaseCardTitleGroup = "showcase-card-title-group";
+            public const string SmartKanbanCard = "smart-kanban-card";
+            public const string SmartKanbanCards = "smart-kanban-cards";
+            public const string SmartKanbanCardSubtitle = "smart-kanban-card-subtitle";
+            public const string SmartKanbanCardTitle = "smart-kanban-card-title";
             public const string SpatialCardsSubgrid = "spatial-cards-subgrid";
             public const string SpatialSubcard = "spatial-subcard";
             public const string SpatialWingCard = "spatial-wing-card";
@@ -9523,6 +9647,8 @@ namespace Material.Web
             public const string DocsArticle = "docs-article";
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
+            public const string DocsContentHeader = "docs-content-header";
+            public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
@@ -9530,6 +9656,7 @@ namespace Material.Web
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
+            public const string DocsHeaderTitle = "docs-header-title";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -9539,6 +9666,7 @@ namespace Material.Web
             public const string DocsSidebarTitle = "docs-sidebar-title";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
+            public const string DocsWelcomeIcon = "docs-welcome-icon";
         }
 
         public static class Donation
@@ -9637,8 +9765,28 @@ namespace Material.Web
 
         public static class Fiscal
         {
+            public const string FiscalReceipt = "fiscal-receipt";
             public const string HighlightBox = "fiscal-highlight-box";
+            public const string ItemCalc = "item-calc";
+            public const string ItemMain = "item-main";
+            public const string ItemMxik = "item-mxik";
+            public const string ItemQty = "item-qty";
+            public const string ItemTotal = "item-total";
+            public const string ItemVatRow = "item-vat-row";
+            public const string Main = "main";
+            public const string OfdHint = "ofd-hint";
+            public const string OrgDetails = "org-details";
+            public const string OrgName = "org-name";
+            public const string PrintBtn = "print-btn";
+            public const string ReceiptActions = "receipt-actions";
+            public const string ReceiptDivider = "receipt-divider";
+            public const string ReceiptFiscalFooter = "receipt-fiscal-footer";
+            public const string ReceiptItemRow = "receipt-item-row";
+            public const string ReceiptItems = "receipt-items";
+            public const string Sign = "fiscal-sign";
             public const string TagItem = "fiscal-tag-item";
+            public const string TotalVal = "total-val";
+            public const string VerifyLink = "verify-link";
         }
 
         public static class Footer
@@ -9842,6 +9990,7 @@ namespace Material.Web
 
         public static class InfoGrid
         {
+            public const string FiscalInfo = "fiscal-info";
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
@@ -10100,6 +10249,11 @@ namespace Material.Web
             public const string PriceBreakdown = "order-price-breakdown";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string SmartKanbanBoard = "smart-kanban-board";
+            public const string SmartKanbanColumn = "smart-kanban-column";
+            public const string SmartKanbanColumnCount = "smart-kanban-column-count";
+            public const string SmartKanbanColumnHeader = "smart-kanban-column-header";
+            public const string SmartKanbanColumnTitle = "smart-kanban-column-title";
         }
 
         public static class Outline
@@ -10335,6 +10489,7 @@ namespace Material.Web
             public const string QrCompactActions = "qr-compact-actions";
             public const string QrCompactBody = "qr-compact-body";
             public const string QrCompactHeader = "qr-compact-header";
+            public const string QrContainer = "qr-container";
             public const string QrControlsPanel = "qr-controls-panel";
             public const string QrDesignerHeader = "qr-designer-header";
             public const string QrDesignerPageRoot = "qr-designer-page-root";
@@ -10392,6 +10547,7 @@ namespace Material.Web
             public const string QrStatusText = "qr-status-text";
             public const string QrSub = "qr-sub";
             public const string QrSvgGraphic = "qr-svg-graphic";
+            public const string QrSvgWrap = "qr-svg-wrap";
             public const string QrTitle = "qr-title";
             public const string QrWorkspace = "qr-workspace";
             public const string QrWrapper = "qr-wrapper";

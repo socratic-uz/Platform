@@ -4,12 +4,10 @@ description: >-
   ALWAYS USE whenever asked to write, add, or generate unit tests for existing
   code, including one helper, function, class, or missing regression case as well
   as project-wide suites. Also use for "cover this untested method", scaffolding
-  tests where none exist, sparse workspaces, classic packages.config MSTest, and
-  extending healthy suites. Focused requests use a proportional direct workflow;
-  broad requests use the full pipeline. DO NOT USE for only running/diagnosing
-  tests, coverage/audits, a test blocked on a missing production seam
-  (testability-obstacle), or correcting supplied MSTest assertions, attributes,
-  lifecycle, or configuration without designing new cases (writing-mstest-tests).
+  tests where none exist, sparse workspaces, and extending healthy suites.
+  Covers .NET 10+ C# (xUnit, MSTest, NUnit, TUnit). Focused requests use a proportional
+  direct workflow; broad requests use the full pipeline. DO NOT USE for only running/diagnosing
+  tests, coverage/audits, or a test blocked on a missing production seam (testability-obstacle).
 license: MIT
 ---
 

@@ -1,85 +1,91 @@
 ::deep th {
-    padding: 0 5px 0 5px;
+    padding: 0 5px;
     border-width: 1px;
 }
 
 ::deep td {
-    padding: 0 5px 0 5px;
+    padding: 0 5px;
     border-width: 1px;
 }
 
 ::deep .snippet {
-    margin-bottom: 0.5rem;
-    border: calc(var(--stroke-width) * 1px) solid var(--neutral-stroke-rest);
-    border-radius: calc(var(--control-corner-radius) * 1px);
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background-color: var(--md-sys-color-surface-container);
     overflow-y: auto;
 }
 
 ::deep .hljs {
-    background-color: var(--neutral-layer-2);
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-mono);
     tab-size: 2em;
 }
 
 ::deep .hljs-copy-button {
-    border-color: var(--neutral-fill-strong-rest);
-    color: var(--accent-fill-rest);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
     top: 0.4rem;
     min-width: 44px;
     min-height: 44px;
     touch-action: manipulation;
+    transition: transform var(--md-sys-motion-spring-spatial-fast, 220ms cubic-bezier(0.175, 0.885, 0.32, 1.275)),
+        background-color var(--md-sys-motion-spring-effects-fast, 150ms cubic-bezier(0.2, 0, 0, 1)),
+        border-color var(--md-sys-motion-spring-effects-fast, 150ms cubic-bezier(0.2, 0, 0, 1));
 }
 
-    ::deep .hljs-copy-button:hover {
-        border-color: var(--neutral-fill-strong-hover);
-    }
+::deep .hljs-copy-button:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-color: var(--md-sys-color-primary);
+}
 
-    ::deep .hljs-copy-button:active {
-        border-color: var(--neutral-fill-strong-active);
-    }
-
-::deep .hljs-copy {
-    cursor: pointer;
-    border-color: var(--neutral-stroke-rest);
-    border-radius: calc(var(--control-corner-radius) * 1px);
-    color: var(--accent-fill-rest);
-    background-color: var(--neutral-layer-2);
-    top: 0.4rem;
+::deep .hljs-copy-button:active {
+    transform: scale(0.96);
+    border-color: var(--md-sys-color-primary);
 }
 
 ::deep .hljs-copy {
     position: absolute;
-    transform: translateX(calc(100% + 1.125em));
+    top: 0.4rem;
     right: 1em;
-    transition: background-color 200ms ease, transform 200ms ease-out;
+    cursor: pointer;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-surface-container-high);
+    transform: translateX(calc(100% + 1.125em));
+    transition: background-color var(--md-sys-motion-spring-effects-fast, 150ms cubic-bezier(0.2, 0, 0, 1)),
+        transform var(--md-sys-motion-spring-spatial-fast, 220ms cubic-bezier(0.175, 0.885, 0.32, 1.275));
 }
 
 ::deep .hljs-copy-wrapper {
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
-    ::deep .hljs-copy-wrapper:hover .hljs-copy, .hljs-copy:focus {
-        transform: translateX(0);
-    }
+::deep .hljs-copy-wrapper:hover .hljs-copy,
+.hljs-copy:focus {
+    transform: translateX(0);
+}
 
-
-
-
-/*Table*/
+/* Table */
 
 ::deep table {
-    -ms-grid-column: 1 / -1;
     grid-column: 1 / -1;
 }
 
 ::deep tr:hover {
-    background: var(--md-sys-color-secondary-container);
+    background: var(--md-sys-color-surface-container-high);
 }
 
 ::deep .table-container,
 ::deep th,
 ::deep td {
-    border: 1px solid var(--md-sys-color-outline-variant, var(--md-sys-color-neutral80));
+    border: 1px solid var(--md-sys-color-outline-variant);
     vertical-align: middle;
 }
 
@@ -119,22 +125,19 @@
 ::deep h5,
 ::deep h6 {
     justify-self: initial;
-    -moz-background-clip: initial;
-    -webkit-background-clip: initial;
     background-clip: initial;
-    color: initial;
-    background-image: initial;
+    -webkit-background-clip: initial;
+    color: var(--md-sys-color-on-surface);
+    background-image: none;
 }
 
-
-
-/*Marmaid*/
+/* Mermaid */
 ::deep .edgePaths path {
     stroke: var(--md-sys-color-primary) !important;
     stroke-width: 1.5 !important;
     fill: none;
-    stroke-dasharray: 10 20 !important; /* пунктир */
-    animation: dashmove .5s linear infinite;
+    stroke-dasharray: 10 20 !important;
+    animation: dashmove 0.5s linear infinite;
     paint-order: stroke;
     filter: drop-shadow(0 0 2px var(--md-sys-color-primary));
 }
@@ -160,10 +163,8 @@
     ry: 24px;
 }
 
-
-
 @keyframes dashmove {
     to {
-        stroke-dashoffset: -90; /* сдвигаем штрихи */
+        stroke-dashoffset: -90;
     }
 }

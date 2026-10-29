@@ -365,18 +365,36 @@
 
 .analytics-kpi-card {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     gap: 0.5rem;
+    min-width: 0;
     padding: var(--md-sys-spacing-4, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
     transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.analytics-kpi-card > div {
+    min-width: 0;
 }
 
 .analytics-kpi-card:hover {
     border-color: var(--md-sys-color-outline);
     box-shadow: var(--md-sys-elevation-level2);
     transform: translateY(-2px);
+}
+
+.analytics-kpi-card > div:last-child {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.35rem;
+    align-items: center;
+    min-width: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.775rem;
 }
 
 .analytics-panel-card {
@@ -386,6 +404,22 @@
     padding: var(--md-sys-spacing-5, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+.analytics-panel-card .panel-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.analytics-panel-card .panel-header > div:first-child {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .analytics-mode-pill-group {
@@ -449,6 +483,8 @@
     width: 32px;
     height: 32px;
     border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
     font-size: 18px;
 }
 
@@ -536,7 +572,7 @@
 
 .kpi-header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
 }
@@ -548,19 +584,33 @@
     letter-spacing: -0.02em;
 }
 
+.kpi-number .unit {
+    margin-left: 0.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 .kpi-title {
+    min-width: 0;
     margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.825rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .kpi-trend {
-    display: grid;
+    display: inline-grid;
     grid-auto-flow: column;
+    grid-auto-columns: max-content;
     gap: 2px;
     align-items: center;
+    color: var(--md-sys-color-primary);
     font-size: 0.75rem;
     font-weight: 600;
 }

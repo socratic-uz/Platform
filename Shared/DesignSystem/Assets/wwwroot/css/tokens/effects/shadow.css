@@ -32,6 +32,7 @@
     --md-sys-elevation-surface-tint: 0 0 0 1px rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
     --md-sys-elevation-tertiary-glow: var(--md-sys-glow-tertiary-subtle);
     --md-sys-glass-backdrop: rgb(from var(--md-sys-color-scrim) r g b / 0.45);
+    --md-sys-glass-blur: var(--md-sys-glass-blur-standard);
     --md-sys-glass-blur-heavy: blur(32px) saturate(200%);
     --md-sys-glass-blur-standard: blur(20px) saturate(180%);
     --md-sys-glass-blur-subtle: blur(12px) saturate(160%);

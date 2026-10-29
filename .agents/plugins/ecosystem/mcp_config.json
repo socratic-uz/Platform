@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/mcp-config.json",
+  "mcpServers": {
+    "aspire": {
+      "command": "aspire",
+      "args": [
+        "agent",
+        "mcp"
+      ],
+      "description": "Official .NET Aspire MCP agent server for live resources, health checks, and distributed traces"
+    },
+    "codegraph": {
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp"
+      ],
+      "description": "CodeGraph: Semantic code intelligence, AST knowledge graph, symbol exploration, blast-radius and caller/callee analysis"
+    }
+  }
+}

@@ -24,7 +24,7 @@
     align-items: center;
     position: fixed;
     inset: auto 0 0;
-    z-index: var(--m3-z-dialog, 100);
+    z-index: var(--md-sys-z-bottom-nav, 40);
     min-width: 0;
     padding: 12px 24px calc(12px + env(safe-area-inset-bottom, 0px));
     border-top: 1px solid var(--md-sys-color-outline-variant);

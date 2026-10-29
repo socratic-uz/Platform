@@ -129,7 +129,7 @@ public abstract partial class ColumnBase<TGridItem>
             if (isOptionsLeft)
             {
                 builder.OpenElement(1, "button");
-                builder.AddAttribute(2, "class", "col-options-button");
+                builder.AddAttribute(2, "class", global::Assets.Constants.Classes.Table.ColOptionsButton);
                 builder.AddAttribute(3, "type", "button");
                 builder.AddAttribute(4, "title", "Column options");
                 builder.AddAttribute(5, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));
@@ -140,15 +140,15 @@ public abstract partial class ColumnBase<TGridItem>
             if (isSortable)
             {
                 builder.OpenElement(6, "button");
-                builder.AddAttribute(7, "class", "col-title");
+                builder.AddAttribute(7, "class", global::Assets.Constants.Classes.Table.ColTitle);
                 builder.AddAttribute(8, "type", "button");
                 builder.AddAttribute(9, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.SortByColumnAsync(this)));
                 builder.OpenElement(10, "div");
-                builder.AddAttribute(11, "class", "col-title-text");
+                builder.AddAttribute(11, "class", global::Assets.Constants.Classes.Table.ColTitleText);
                 builder.AddContent(12, Title);
                 builder.CloseElement();
                 builder.OpenElement(13, "div");
-                builder.AddAttribute(14, "class", "sort-indicator");
+                builder.AddAttribute(14, "class", global::Assets.Constants.Classes.Table.SortIndicator);
                 builder.AddAttribute(15, "aria-hidden", "true");
                 builder.CloseElement();
                 builder.CloseElement();
@@ -156,9 +156,9 @@ public abstract partial class ColumnBase<TGridItem>
             else
             {
                 builder.OpenElement(16, "div");
-                builder.AddAttribute(17, "class", "col-title");
+                builder.AddAttribute(17, "class", global::Assets.Constants.Classes.Table.ColTitle);
                 builder.OpenElement(18, "div");
-                builder.AddAttribute(19, "class", "col-title-text");
+                builder.AddAttribute(19, "class", global::Assets.Constants.Classes.Table.ColTitleText);
                 builder.AddContent(20, Title);
                 builder.CloseElement();
                 builder.CloseElement();
@@ -167,7 +167,7 @@ public abstract partial class ColumnBase<TGridItem>
             if (ColumnOptions is not null && isOptionsRight)
             {
                 builder.OpenElement(21, "button");
-                builder.AddAttribute(22, "class", "col-options-button");
+                builder.AddAttribute(22, "class", global::Assets.Constants.Classes.Table.ColOptionsButton);
                 builder.AddAttribute(23, "type", "button");
                 builder.AddAttribute(24, "title", "Column options");
                 builder.AddAttribute(25, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));

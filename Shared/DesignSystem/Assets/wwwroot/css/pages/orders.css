@@ -393,7 +393,7 @@
     border: none;
     padding: 0;
     margin: 0;
-    background: rgb(from var(--md-sys-color-scrim, #000) r g b / 0.65);
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.65);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     opacity: 0;
@@ -637,4 +637,86 @@ button.kanban-card {
     width: 100%;
     text-align: left;
     cursor: pointer;
+}
+
+.smart-kanban-board {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 360px);
+    gap: 16px;
+    min-height: 500px;
+    padding: 16px 0;
+    overflow-x: auto;
+}
+
+.smart-kanban-column {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+.smart-kanban-column-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.smart-kanban-column-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.smart-kanban-column-count {
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 12px;
+}
+
+.smart-kanban-cards {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    min-height: 100px;
+    overflow-y: auto;
+}
+
+.smart-kanban-card {
+    padding: 14px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 10px;
+    background: var(--md-sys-color-surface-container);
+    box-shadow: var(--md-sys-elevation-level1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: grab;
+}
+
+.smart-kanban-card:hover {
+    box-shadow: var(--md-sys-elevation-level2);
+    transform: translateY(-2px);
+}
+
+.smart-kanban-card-title {
+    margin-bottom: 4px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.smart-kanban-card-subtitle {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 12px;
 }

@@ -9,146 +9,89 @@
 @using static Assets.Constants.Icons
 @using static Material.Web.Components.ButtonVariant
 
-<article id="fiscal-receipt-element" class="fiscal-receipt glass-panel">
-    <header class="receipt-header">
-        <div class="tax-badge">
+<article id="fiscal-receipt-element" class="@Classes.Fiscal.FiscalReceipt glass-panel">
+    <header class="@Classes.Terminal.PosReceiptHeader">
+        <div class="@Classes.Badge.TaxBadge">
             <span class="soliq-icon">🏛️</span>
             <span class="soliq-title">@L[OfdTitle]</span>
         </div>
-        <h4 class="org-name">@OrganizationName</h4>
-        <p class="org-details">@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
-        <p class="receipt-meta">@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
+        <h4 class="@Classes.Fiscal.OrgName">@OrganizationName</h4>
+        <p class="@Classes.Fiscal.OrgDetails">@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
+        <p class="@Classes.Invoice.ReceiptMeta">@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
     </header>
 
-    <div class="receipt-divider"></div>
+    <div class="@Classes.Fiscal.ReceiptDivider"></div>
 
     <!-- Fiscalized Items List -->
-    <section class="receipt-items">
+    <section class="@Classes.Fiscal.ReceiptItems">
         @foreach (var item in Items)
         {
-            <div class="receipt-item-row">
-                <div class="item-main">
-                    <span class="item-name">@item.Name</span>
-                    <span class="item-mxik">@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
+            <div class="@Classes.Fiscal.ReceiptItemRow">
+                <div class="@Classes.Fiscal.ItemMain">
+                    <span class="@Classes.Common.ItemName">@item.Name</span>
+                    <span class="@Classes.Fiscal.ItemMxik">@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
                 </div>
-                <div class="item-calc">
-                    <span class="item-qty">@item.Quantity × @item.Price.ToString("N0")</span>
-                    <span class="item-total">@item.TotalPrice.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
+                <div class="@Classes.Fiscal.ItemCalc">
+                    <span class="@Classes.Fiscal.ItemQty">@item.Quantity × @item.Price.ToString("N0")</span>
+                    <span class="@Classes.Fiscal.ItemTotal">@item.TotalPrice.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
                 </div>
             </div>
-            <div class="item-vat-row">
+            <div class="@Classes.Fiscal.ItemVatRow">
                 <span>@L[IncludingVat]</span>
                 <span>@item.VatAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
             </div>
         }
     </section>
 
-    <div class="receipt-divider"></div>
+    <div class="@Classes.Fiscal.ReceiptDivider"></div>
 
     <!-- Total and VAT Breakdown -->
-    <section class="receipt-totals">
-        <div class="total-row main">
+    <section class="@Classes.Invoice.ReceiptTotals">
+        <div class="@Classes.Common.TotalRow @Classes.Fiscal.Main">
             <span>@L[TotalToPay]</span>
-            <span class="total-val">@TotalAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
+            <span class="@Classes.Fiscal.TotalVal">@TotalAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
         </div>
-        <div class="total-row vat">
+        <div class="@Classes.Common.TotalRow vat">
             <span>@L[VatAmount]</span>
             <span>@TotalVatAmount.ToString("N0") @L[Loc.Common.CurrencyUzs]</span>
         </div>
-        <div class="total-row payment-type">
+        <div class="@Classes.Common.TotalRow payment-type">
             <span>@L[Receipt_PaymentMethod]</span>
             <span>@PaymentGatewayName (@PaymentTypeName)</span>
         </div>
     </section>
 
-    <div class="receipt-divider"></div>
+    <div class="@Classes.Fiscal.ReceiptDivider"></div>
 
     <!-- Fiscal Block and Soliq.uz QR Code -->
-    <footer class="receipt-fiscal-footer">
-        <div class="qr-container">
+    <footer class="@Classes.Fiscal.ReceiptFiscalFooter">
+        <div class="@Classes.QrDesigner.QrContainer">
             @if (!string.IsNullOrWhiteSpace(QrSvg))
             {
-                <div class="qr-svg-wrap">
+                <div class="@Classes.QrDesigner.QrSvgWrap">
                     @((MarkupString)QrSvg)
                 </div>
             }
             else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
             {
-                <div class="qr-placeholder">
-                    <span class="material-symbols-outlined">qr_code_2</span>
+                <div class="@Classes.QrDesigner.QrPlaceholder">
+                    <Icon Name=@QrCode2 />
                 </div>
             }
         </div>
-        <div class="fiscal-info">
-            <p class="fiscal-sign">@L[FiscalSign] <code>@FiscalSign</code></p>
-            <p class="ofd-hint">@L[OfdHint]</p>
-            <a href="@SoliqQrUrl" target="_blank" class="verify-link">
+        <div class="@Classes.InfoGrid.FiscalInfo">
+            <p class="@Classes.Fiscal.Sign">@L[FiscalSign] <code>@FiscalSign</code></p>
+            <p class="@Classes.Fiscal.OfdHint">@L[OfdHintText]</p>
+            <a href="@SoliqQrUrl" target="_blank" class="@Classes.Fiscal.VerifyLink">
                 <Icon Name=@Verified /> @L[VerifySoliq]
             </a>
         </div>
     </footer>
 
     <!-- Thermal Printer Receipt Print Button -->
-    <div class="receipt-actions">
-        <Button Variant=@Filled class="print-btn" OnClick=@PrintReceiptAsync>
+    <div class="@Classes.Fiscal.ReceiptActions">
+        <Button Variant=@Filled class="@Classes.Fiscal.PrintBtn" OnClick=@PrintReceiptAsync>
             <Icon Name=@Print Slot="icon" /> @L[PrintEscPos]
         </Button>
     </div>
 </article>
-
-<style id="receipt-styles">
-    .fiscal-receipt {
-        background: var(--md-sys-color-surface-container-high);
-        color: var(--md-sys-color-on-surface);
-        border: 1px solid var(--md-sys-color-outline-variant);
-        border-radius: 16px;
-        padding: 24px;
-        max-width: 420px;
-        margin: 0 auto;
-        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
-        box-shadow: 0 10px 30px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
-    }
-    .receipt-header { text-align: center; }
-    .tax-badge {
-        display: inline-grid; grid-auto-flow: column; align-items: center; gap: 6px;
-        background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font-size: 0.7rem; font-weight: 700;
-        padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;
-    }
-    .org-name { font-size: 1.15rem; font-weight: 800; margin: 10px 0 2px 0; color: var(--md-sys-color-on-surface); }
-    .org-details { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); margin: 0; }
-    .receipt-meta { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); margin: 4px 0 0 0; }
-    .receipt-divider {
-        border-top: 1px dashed var(--md-sys-color-outline-variant);
-        margin: 14px 0;
-    }
-    .receipt-items { display: grid; gap: 10px; }
-    .receipt-item-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 12px; font-size: 0.85rem; min-width: 0; }
-    .item-main { display: grid; gap: 2px; min-width: 0; }
-    .item-name { font-weight: 600; color: var(--md-sys-color-on-surface); }
-    .item-mxik { font-size: 0.7rem; color: var(--md-sys-color-primary); font-family: monospace; font-weight: 600; }
-    .item-calc { text-align: right; display: grid; gap: 2px; justify-items: end; }
-    .item-qty { font-size: 0.75rem; color: var(--md-sys-color-on-surface-variant); }
-    .item-total { font-weight: 700; color: var(--md-sys-color-on-surface); }
-    .item-vat-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.7rem; color: var(--md-sys-color-on-surface-variant); margin-top: -4px; min-width: 0; }
-    .receipt-totals { display: grid; gap: 6px; }
-    .total-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant); min-width: 0; }
-    .total-row.main { font-size: 1.1rem; font-weight: 800; color: var(--md-sys-color-on-surface); }
-    .total-val { color: var(--md-sys-color-primary); }
-    .receipt-fiscal-footer {
-        display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 16px; margin-top: 8px; min-width: 0;
-    }
-    .qr-container { background: #ffffff; padding: 4px; border: 1px solid var(--md-sys-color-outline-variant); border-radius: 10px; width: 110px; height: 110px; display: grid; place-items: center; }
-    .qr-svg-wrap { width: 100%; height: 100%; display: grid; place-items: center; }
-    .qr-svg-wrap svg { width: 100%; height: 100%; }
-    .qr-placeholder { display: grid; place-items: center; color: var(--md-sys-color-outline); font-size: 48px; }
-    .fiscal-info { display: grid; gap: 4px; font-size: 0.75rem; }
-    .fiscal-sign { font-weight: 700; color: var(--md-sys-color-on-surface); margin: 0; }
-    .fiscal-sign code { background: var(--md-sys-color-surface-container); padding: 2px 6px; border-radius: 4px; color: var(--md-sys-color-primary); }
-    .ofd-hint { color: var(--md-sys-color-on-surface-variant); margin: 0; font-size: 0.7rem; line-height: 1.2; }
-    .verify-link {
-        display: inline-grid; grid-auto-flow: column; align-items: center; gap: 4px; color: var(--md-sys-color-primary); font-weight: 700;
-        text-decoration: none; font-size: 0.75rem; margin-top: 2px;
-    }
-    .receipt-actions { margin-top: 16px; display: grid; justify-items: center; }
-    .print-btn { width: 100%; border-radius: 10px; font-weight: 700; }
-</style>

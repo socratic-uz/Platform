@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 @namespace QuickGrid
 
-<div class="paginator">
+<div class="@Classes.Table.Paginator">
     @if (State.TotalItemCount.HasValue)
     {
         <div class="summary">
@@ -15,14 +15,14 @@
             }
         </div>
         <nav role="navigation">
-            <button class="go-first" type="button" @onclick="GoFirstAsync" disabled="@(!CanGoBack)" title="Go to first page" aria-label="Go to first page"></button>
-            <button class="go-previous" type="button" @onclick="GoPreviousAsync" disabled="@(!CanGoBack)" title="Go to previous page" aria-label="Go to previous page"></button>
-            <div class="pagination-text">
+            <button class="@Classes.Table.GoFirst" type="button" @onclick="GoFirstAsync" disabled="@(!CanGoBack)" title="Go to first page" aria-label="Go to first page"></button>
+            <button class="@Classes.Table.GoPrevious" type="button" @onclick="GoPreviousAsync" disabled="@(!CanGoBack)" title="Go to previous page" aria-label="Go to previous page"></button>
+            <div class="@Classes.Table.PaginationText">
                 Page <strong>@(State.CurrentPageIndex + 1)</strong>
                 of <strong>@(State.LastPageIndex + 1)</strong>
             </div>
-            <button class="go-next" type="button" @onclick="GoNextAsync" disabled="@(!CanGoForwards)" title="Go to next page" aria-label="Go to next page"></button>
-            <button class="go-last" type="button" @onclick="GoLastAsync" disabled="@(!CanGoForwards)" title="Go to last page" aria-label="Go to last page"></button>
+            <button class="@Classes.Table.GoNext" type="button" @onclick="GoNextAsync" disabled="@(!CanGoForwards)" title="Go to next page" aria-label="Go to next page"></button>
+            <button class="@Classes.Table.GoLast" type="button" @onclick="GoLastAsync" disabled="@(!CanGoForwards)" title="Go to last page" aria-label="Go to last page"></button>
         </nav>
     }
 </div>

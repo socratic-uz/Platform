@@ -17,12 +17,12 @@
         <Headline>
             <div class=@PromotionModalHeader>
                 <div class=@($"{TitleGroup} header-title-group")>
-                    <div class="header-icon-wrap">
-                        <Icon Name=@RocketLaunch class="header-rocket-icon" />
+                    <div class="@Classes.Header.IconWrap">
+                        <Icon Name=@RocketLaunch class="@Classes.Header.RocketIcon" />
                     </div>
                     <div>
-                        <h2 class="promotion-modal-title">@L[TitleText]</h2>
-                        <p class="promotion-modal-subtitle">@L[SubtitleText]</p>
+                        <h2 class="@Classes.Dialog.PromotionModalTitle">@L[TitleText]</h2>
+                        <p class="@Classes.Dialog.PromotionModalSubtitle">@L[SubtitleText]</p>
                     </div>
                 </div>
                 <IconButton Icon=@Close Variant=@IconButtonVariant.Standard AriaLabel=@L[Close] OnClick=@CloseModal />
@@ -31,15 +31,15 @@
         <Content>
             @if (CurrentStep == PromotionModalStep.SelectPlan)
             {
-                <div class="promotion-modal-body">
-                    <div class="product-preview-pill">
-                        <span class="preview-label">@L[PromotedProduct]</span>
+                <div class="@Classes.Dialog.PromotionModalBody">
+                    <div class="@Classes.Chips.ProductPreviewPill">
+                        <span class="@Classes.Common.PreviewLabel">@L[PromotedProduct]</span>
                         <strong class="preview-product-name">@Product.Name</strong>
-                        <span class="preview-product-price">@Product.Price.ToString("N0") UZS</span>
+                        <span class="@Classes.Common.PreviewProductPrice">@Product.Price.ToString("N0") UZS</span>
                     </div>
 
-                    <h3 class="section-heading">@L[Step1Title]</h3>
-                    <div class="plans-grid">
+                    <h3 class="@Classes.Common.SectionHeading">@L[Step1Title]</h3>
+                    <div class="@Classes.Common.PlansGrid">
                         @foreach (var plan in ProductPromotionPlanDefinition.AllPlans)
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
@@ -48,19 +48,19 @@
                                 {
                                     <span class=@($"{Root} {Pro} popular-badge")>@L[PopularChoice]</span>
                                 }
-                                <div class="plan-card-header">
-                                    <h4 class="plan-name">@plan.Name</h4>
-                                    <div class="plan-price-wrap">
+                                <div class="@Classes.Cards.PlanCardHeader">
+                                    <h4 class="@Classes.Common.PlanName">@plan.Name</h4>
+                                    <div class="@Classes.Common.PlanPriceWrap">
                                         <span class="plan-price">@plan.PriceUzs.ToString("N0")</span>
-                                        <span class="plan-currency">UZS</span>
+                                        <span class="@Classes.Common.PlanCurrency">UZS</span>
                                     </div>
                                 </div>
                                 <p class="plan-desc">@plan.Description</p>
-                                <ul class="plan-features">
+                                <ul class="@Classes.Common.PlanFeatures">
                                     @foreach (var feat in plan.Features)
                                     {
                                         <li>
-                                            <Icon Name=@CheckCircle class="feat-icon" />
+                                            <Icon Name=@CheckCircle class="@Classes.Common.FeatIcon" />
                                             <span>@feat</span>
                                         </li>
                                     }
@@ -69,7 +69,7 @@
                         }
                     </div>
 
-                    <h3 class="section-heading mt-4">@L[Step2Title]</h3>
+                    <h3 class="@Classes.Common.SectionHeading mt-4">@L[Step2Title]</h3>
                     <div class="payment-methods-grid">
                         <label class=@($"payment-card {(SelectedGateway == PromotionPaymentGatewayType.UzQr ? Active : string.Empty)}")>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.UzQr) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr) Name="gateway" />
@@ -107,10 +107,10 @@
             }
             else if (CurrentStep == PromotionModalStep.PaymentProcessing)
             {
-                <div class="promotion-modal-body text-center">
-                    <div class="invoice-summary-box">
+                <div class="@Classes.Dialog.PromotionModalBody text-center">
+                    <div class="@Classes.Payment.InvoiceSummaryBox">
                         <span class="invoice-label">@L[InvoiceFor, ActiveOrder?.ProductName ?? string.Empty]</span>
-                        <div class="invoice-amount">@ActiveOrder?.PriceUzs.ToString("N0") UZS</div>
+                        <div class="@Classes.Payment.InvoiceAmount">@ActiveOrder?.PriceUzs.ToString("N0") UZS</div>
                         <span class="invoice-method">@L[PromoPaymentMethod, GetGatewayDisplayName(ActiveOrder?.PaymentGateway ?? SelectedGateway)]</span>
                     </div>
 
@@ -120,7 +120,7 @@
                             <div class="qr-frame">
                                 <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] class="qr-image" />
                             </div>
-                            <p class="qr-instruction">
+                            <p class="@Classes.QrDesigner.QrInstruction">
                                 @L[QrInstructionText]
                             </p>
                         </div>
@@ -153,7 +153,7 @@
             }
             else if (CurrentStep == PromotionModalStep.Success)
             {
-                <div class="promotion-modal-body text-center success-step">
+                <div class="@Classes.Dialog.PromotionModalBody text-center success-step">
                     <div class="success-icon-wrap">
                         <Icon Name=@Verified class="success-check-icon" />
                     </div>

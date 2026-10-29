@@ -25269,7 +25269,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chekni Soliq ilovasida yoki ofd.soliq.uz portalida tekshirish uchun QR-kodni skanerlang&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan the QR code to verify the receipt in the Soliq app or at ofd.soliq.uz&quot;
             /// </summary>
-            public const string OfdHint = "Receipt_OfdHint";
+            public const string OfdHintText = "Receipt_OfdHint";
 
             /// <summary>
             /// Key: <c>Receipt_OfdTitle</c><br/>
@@ -80204,7 +80204,7 @@ namespace Loc
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chekni Soliq ilovasida yoki ofd.soliq.uz portalida tekshirish uchun QR-kodni skanerlang&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan the QR code to verify the receipt in the Soliq app or at ofd.soliq.uz&quot;
         /// </summary>
-        public const string OfdHint = "Receipt_OfdHint";
+        public const string OfdHintText = "Receipt_OfdHint";
 
         /// <summary>
         /// Key: <c>Receipt_OfdTitle</c><br/>

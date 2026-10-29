@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T06:00:45.868Z",
+  "generatedAt": "2026-10-29T08:11:43.790Z",
   "pagesCount": 24,
   "pages": [
     {
@@ -163,16 +163,6 @@
       "totalViolations": 0
     },
     {
-      "name": "qr",
-      "file": "preview/qr.html",
-      "blueprintFiles": {
-        "desktop": "analytics/blueprints/qr.desktop.blueprint",
-        "tablet": "analytics/blueprints/qr.tablet.blueprint",
-        "mobile": "analytics/blueprints/qr.mobile.blueprint"
-      },
-      "totalViolations": 0
-    },
-    {
       "name": "qr-designer",
       "file": "preview/qr-designer.html",
       "blueprintFiles": {
@@ -183,22 +173,22 @@
       "totalViolations": 0
     },
     {
+      "name": "qr",
+      "file": "preview/qr.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/qr.desktop.blueprint",
+        "tablet": "analytics/blueprints/qr.tablet.blueprint",
+        "mobile": "analytics/blueprints/qr.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
       "name": "seat-designer",
       "file": "preview/seat-designer.html",
       "blueprintFiles": {
         "desktop": "analytics/blueprints/seat-designer.desktop.blueprint",
         "tablet": "analytics/blueprints/seat-designer.tablet.blueprint",
         "mobile": "analytics/blueprints/seat-designer.mobile.blueprint"
-      },
-      "totalViolations": 0
-    },
-    {
-      "name": "signin",
-      "file": "preview/signin.html",
-      "blueprintFiles": {
-        "desktop": "analytics/blueprints/signin.desktop.blueprint",
-        "tablet": "analytics/blueprints/signin.tablet.blueprint",
-        "mobile": "analytics/blueprints/signin.mobile.blueprint"
       },
       "totalViolations": 0
     },
@@ -219,6 +209,16 @@
         "desktop": "analytics/blueprints/signin-telegram.desktop.blueprint",
         "tablet": "analytics/blueprints/signin-telegram.tablet.blueprint",
         "mobile": "analytics/blueprints/signin-telegram.mobile.blueprint"
+      },
+      "totalViolations": 0
+    },
+    {
+      "name": "signin",
+      "file": "preview/signin.html",
+      "blueprintFiles": {
+        "desktop": "analytics/blueprints/signin.desktop.blueprint",
+        "tablet": "analytics/blueprints/signin.tablet.blueprint",
+        "mobile": "analytics/blueprints/signin.mobile.blueprint"
       },
       "totalViolations": 0
     },

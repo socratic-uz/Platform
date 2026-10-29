@@ -8,7 +8,7 @@ This document specifies standards for search engine optimization (Google, Yandex
 
 - Do NOT place static page titles, descriptions, and keywords in `App.razor`.
 - Every routed page component (`@page "/path"`) MUST provide its own title and metadata using `<PageTitle>` and `<HeadContent>`.
-- Alternatively, use the standardized [SeoHead.razor](file:///c:/Users/owner/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Layout/Components/SeoHead.razor) component.
+- Alternatively, use the standardized `SeoHead.razor` (`src/Frontend/Platform/Shared/DesignSystem/Layout/Components/SeoHead.razor`) component.
 
 ---
 

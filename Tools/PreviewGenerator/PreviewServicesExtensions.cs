@@ -136,15 +136,57 @@ public sealed class NullJsRuntime : IJSRuntime
 
 public sealed class FakeStringLocalizer : IStringLocalizer
 {
-    public LocalizedString this[string name] => new(name, name, false);
-    public LocalizedString this[string name, params object[] arguments] => new(name, string.Format(name, arguments), false);
+    private static readonly System.Resources.ResourceManager RuManager = new("Assets.Resources.ResourceRu", typeof(global::Assets.Constants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager UzManager = new("Assets.Resources.ResourceUz", typeof(global::Assets.Constants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager EnManager = new("Assets.Resources.ResourceEn", typeof(global::Assets.Constants.Classes).Assembly);
+
+    internal static string Resolve(string name)
+        => RuManager.GetString(name)
+        ?? UzManager.GetString(name)
+        ?? EnManager.GetString(name)
+        ?? name;
+
+    public LocalizedString this[string name]
+    {
+        get
+        {
+            var val = Resolve(name);
+            return new(name, val, val == name);
+        }
+    }
+
+    public LocalizedString this[string name, params object[] arguments]
+    {
+        get
+        {
+            var val = Resolve(name);
+            return new(name, string.Format(val, arguments), val == name);
+        }
+    }
+
     public IEnumerable<LocalizedString> GetAllStrings(bool includeParentCultures) => [];
 }
 
 public sealed class FakeStringLocalizer<T> : IStringLocalizer<T>
 {
-    public LocalizedString this[string name] => new(name, name, false);
-    public LocalizedString this[string name, params object[] arguments] => new(name, string.Format(name, arguments), false);
+    public LocalizedString this[string name]
+    {
+        get
+        {
+            var val = FakeStringLocalizer.Resolve(name);
+            return new(name, val, val == name);
+        }
+    }
+
+    public LocalizedString this[string name, params object[] arguments]
+    {
+        get
+        {
+            var val = FakeStringLocalizer.Resolve(name);
+            return new(name, string.Format(val, arguments), val == name);
+        }
+    }
+
     public IEnumerable<LocalizedString> GetAllStrings(bool includeParentCultures) => [];
 }
 
@@ -238,4 +280,3 @@ public sealed class FastPreviewHttpMessageHandler : HttpMessageHandler
         });
     }
 }
-

@@ -1,14 +1,14 @@
 ---
 name: assertion-quality
-description: "Report assertion quality in existing tests. ALWAYS USE for weak, shallow, trivial, always-true, self-referential, assertion-free, presence/truthiness-only, or insufficiently diverse assertions. Polyglot. DO NOT USE for direct fixes: writing-mstest-tests owns supplied MSTest assertions; code-testing-agent owns new cases. Use test-gap-analysis for mutation reasoning and test-anti-patterns for general severity-ranked audits."
+description: "Report assertion quality in existing .NET tests. ALWAYS USE for weak, shallow, trivial, always-true, self-referential, assertion-free, presence/truthiness-only, or insufficiently diverse assertions. Covers .NET (xUnit, MSTest, NUnit, TUnit). DO NOT USE for direct fixes: code-testing-agent owns new cases. Use test-gap-analysis for mutation reasoning and test-anti-patterns for general severity-ranked audits."
 license: MIT
 ---
 
 # Assertion Diversity Analysis
 
-Analyze test code in any supported language to measure how varied and meaningful the assertions are. Produce a metrics report that reveals whether tests verify different facets of correctness — not just "output equals X" but also structure, exceptions, state transitions, side effects, and invariants.
+Analyze .NET test code to measure how varied and meaningful the assertions are. Produce a metrics report that reveals whether tests verify different facets of correctness — not just "output equals X" but also structure, exceptions, state transitions, side effects, and invariants.
 
-> **Language-specific guidance**: Call the `test-analysis-extensions` skill to discover available extension files, then read the file matching the target codebase's language and framework (e.g., `dotnet.md` for .NET, `python.md` for pytest, `typescript.md` for Jest, `go.md` for the standard `testing` package). You MUST read the relevant extension file before classifying assertions, because assertion APIs differ significantly across frameworks.
+> **Guidance**: Inspect `extensions/dotnet.md` before classifying assertions to understand framework-specific assertion APIs (`Assert.*`, `Shouldly`, `FluentAssertions`).
 
 ## Why Assertion Diversity Matters
 

@@ -6,8 +6,8 @@
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem where TItem : class, new()
 
-<div class="smart-data-view">
-    <div class="smart-data-view-header">
+<div class="@Classes.SmartDataView.SmartdataviewRoot">
+    <div class="@Classes.SmartDataView.SmartDataViewHeader">
         <SmartFilterBar TItem="TItem"
                         Placeholder="@EffectivePlaceholder"
                         SearchText="@SearchText"
@@ -15,7 +15,7 @@
                         FilterChips="@FilterChips"
                         OnChipToggled=@OnChipToggled />
 
-        <div class="smart-view-mode-toggle">
+        <div class="@Classes.ThemeToggle.SmartViewModeToggle">
             <Button Variant=@(CurrentMode == ViewMode.Grid ? Filled : Outlined)
                     OnClick=@(() => SetViewMode(ViewMode.Grid))>
                 <Icon Name=@Icons.TableChart Slot="icon" />

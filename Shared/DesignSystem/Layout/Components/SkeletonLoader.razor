@@ -18,10 +18,10 @@ else
             {
                 <div class=@string.Format(Two, M3Card, Classes.Skeleton.Card)>
                     <div class=@Root style="height: 140px; border-radius: var(--md-sys-shape-corner-medium);"></div>
-                    <div class="m3-grid" style="gap: 8px; align-content: space-between;">
+                    <div class="@Classes.Common.CommonGrid" style="gap: 8px; align-content: space-between;">
                         <div class=@($"{Root} {Text}") style="width: 70%; height: 18px;"></div>
                         <div class=@($"{Root} {Text}") style="width: 90%;"></div>
-                        <div class="m3-grid" style="grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
+                        <div class="@Classes.Common.CommonGrid" style="grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
                             <div class=@($"{Root} {Text}") style="width: 40%; height: 20px;"></div>
                             <div class=@Root style="width: 80px; height: 36px; border-radius: 18px;"></div>
                         </div>
@@ -32,7 +32,7 @@ else
             {
                 <div class=@M3Card style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px;">
                     <div class=@($"{Root} {Circle}")></div>
-                    <div class="m3-grid" style="gap: 8px;">
+                    <div class="@Classes.Common.CommonGrid" style="gap: 8px;">
                         <div class=@($"{Root} {Text}") style="width: 70%; height: 18px;"></div>
                         <div class=@($"{Root} {Text}") style="width: 90%;"></div>
                     </div>

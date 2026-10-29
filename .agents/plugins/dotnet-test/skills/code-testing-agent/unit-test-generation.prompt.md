@@ -128,52 +128,33 @@ public sealed class CalculatorTests
 }
 ```
 
-### TypeScript (Jest)
+### C# (xUnit)
 
-```typescript
-describe("Calculator", () => {
-  let sut: Calculator;
+```csharp
+public sealed class CalculatorTests
+{
+    private readonly Calculator _sut = new();
 
-  beforeEach(() => {
-    sut = new Calculator();
-  });
+    [Theory]
+    [InlineData(2, 3, 5)]
+    [InlineData(-1, 1, 0)]
+    [InlineData(0, 0, 0)]
+    public void Add_ValidInputs_ReturnsSum(int a, int b, int expected)
+    {
+        // Act
+        var result = _sut.Add(a, b);
 
-  it.each([
-    [2, 3, 5],
-    [-1, 1, 0],
-    [0, 0, 0],
-  ])("add(%i, %i) returns %i", (a, b, expected) => {
-    expect(sut.add(a, b)).toBe(expected);
-  });
+        // Assert
+        Assert.Equal(expected, result);
+    }
 
-  it("divide by zero throws error", () => {
-    expect(() => sut.divide(10, 0)).toThrow("Division by zero");
-  });
-});
-```
-
-### Python (pytest)
-
-```python
-import pytest
-from calculator import Calculator
-
-class TestCalculator:
-    @pytest.fixture
-    def sut(self):
-        return Calculator()
-
-    @pytest.mark.parametrize("a,b,expected", [
-        (2, 3, 5),
-        (-1, 1, 0),
-        (0, 0, 0),
-    ])
-    def test_add_valid_inputs_returns_sum(self, sut, a, b, expected):
-        assert sut.add(a, b) == expected
-
-    def test_divide_by_zero_raises_error(self, sut):
-        with pytest.raises(ZeroDivisionError):
-            sut.divide(10, 0)
+    [Fact]
+    public void Divide_ByZero_ThrowsDivideByZeroException()
+    {
+        // Act & Assert
+        Assert.Throws<DivideByZeroException>(() => _sut.Divide(10, 0));
+    }
+}
 ```
 
 ## Output Requirements

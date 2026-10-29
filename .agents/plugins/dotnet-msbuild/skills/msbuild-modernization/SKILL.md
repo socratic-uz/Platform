@@ -376,7 +376,7 @@ After migration, consider enabling modern C# features:
 
 ```xml
 <ItemGroup>
-  <Content Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  <Content Include="aappsettings.json" CopyToOutputDirectory="PreserveNewest" />
   <None Include="scripts\*.sql" CopyToOutputDirectory="PreserveNewest" />
 </ItemGroup>
 ```
