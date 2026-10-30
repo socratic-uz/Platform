@@ -4,9 +4,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
-using SharedKernel.Fiscalization;
+using FiscalItem = SharedKernel.Fiscalization.FiscalItem;
 using SharedKernel.ValueObjects;
-using Domain.Interfaces.Common;
+using IQrDesignerService = Domain.Interfaces.Common.IQrDesignerService;
+using QrStylingOptions = Domain.Interfaces.Common.QrStylingOptions;
 using Domain.Interfaces.Hardware;
 
 namespace Smart.Web.Components;

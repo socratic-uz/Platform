@@ -1,5 +1,6 @@
 @namespace Material.Web.Components
 @using Assets.Constants
+@using static Assets.Constants.Icons
 @using static Assets.Constants.Classes.Picker
 @using static Assets.Constants.Classes.Common
 @using static Assets.Constants.Loc.Common
@@ -8,13 +9,13 @@
 
 @if (Compact)
 {
-    <div class="@($"{CompactBox} {CssClass} {(Disabled ? Disabled : "")}")">
+    <div class="@CompactBoxClass">
         <!-- Color Swatch & Native Color Trigger -->
         <div class=@SwatchWrapper title=@L[ColorPickerClickToSelect]>
             <div class=@Swatch @attributes=@GetSwatchAttributes(NormalizedValue)>
                 <input type="color"
                        class=@NativeInput
-                       value="@HexValue"
+                       value=@HexValue
                        disabled=@Disabled
                        @onchange=@OnNativeColorChanged
                        @oninput=@OnNativeColorInput />
@@ -27,7 +28,7 @@
             <input type="text"
                    class=@HexInput
                    placeholder="RRGGBB"
-                   value="@RawHexValue"
+                   value=@RawHexValue
                    disabled=@Disabled
                    @onchange=@OnTextInputChanged />
         </div>
@@ -39,7 +40,7 @@
 
         @if (ShowPresets)
         {
-            <IconButton Icon=@Icons.Palette
+            <IconButton Icon=@Palette
                         Disabled=@Disabled
                         Selected=@isPaletteOpen
                         Toggle=@true
@@ -49,7 +50,7 @@
 
         @if (HasValue)
         {
-            <IconButton Icon=@Icons.Close
+            <IconButton Icon=@Close
                         Disabled=@Disabled
                         AriaLabel=@L[ColorPickerResetColor]
                         OnClick=@Clear />
@@ -61,21 +62,21 @@ else
     <!-- Unified Base Picker Trigger Card -->
     <PickerTriggerCard Label=@EffectiveLabel
                        HasValue=@HasValue
-                       BadgeText="@NormalizedValue"
-                       BadgeIcon=@Icons.Colorize
+                       BadgeText=@NormalizedValue
+                       BadgeIcon=@Colorize
                        PreviewText=@GetPreviewText()
                        ActionLabel=@(isPaletteOpen ? L[ColorPickerClosePalette] : L[ColorPickerPalette])
-                       ActionIcon=@Icons.Palette
+                       ActionIcon=@Palette
                        OnAction=@TogglePalette
                        ResetAriaLabel=@L[ColorPickerResetColor]
                        OnReset=@Clear
                        Disabled=@Disabled
-                       Class="@CssClass">
+                       Class=@CssClass>
         <CustomIconBadge>
             <div class=@ColorBadgeSwatch @attributes=@GetSwatchAttributes(NormalizedValue)>
                 <input type="color"
                        class=@NativeInput
-                       value="@HexValue"
+                       value=@HexValue
                        disabled=@Disabled
                        @onchange=@OnNativeColorChanged
                        @oninput=@OnNativeColorInput />
@@ -84,7 +85,7 @@ else
 
         <CustomActions>
             <Button Variant=@FilledTonal OnClick=@TogglePalette Disabled=@Disabled>
-                <md-icon slot="icon">@Icons.Palette</md-icon>
+                <md-icon slot="icon">@Palette</md-icon>
                 @(isPaletteOpen ? L[ColorPickerClosePalette] : L[ColorPickerPalette])
             </Button>
 
@@ -95,7 +96,7 @@ else
 
             @if (HasValue)
             {
-                <IconButton Icon=@Icons.Close
+                <IconButton Icon=@Close
                             Disabled=@Disabled
                             AriaLabel=@L[ColorPickerResetColor]
                             OnClick=@Clear />
@@ -110,38 +111,38 @@ else
     <div class=@PopoverPanel>
         <div class=@PopoverHeader>
             <span class=@PopoverTitle>@L[ColorPickerRecommendedColors]</span>
-            <IconButton Icon=@Icons.Close AriaLabel=@L[ColorPickerClosePalette] OnClick=@ClosePalette />
+            <IconButton Icon=@Close AriaLabel=@L[ColorPickerClosePalette] OnClick=@ClosePalette />
         </div>
         <div class=@PaletteGrid>
             @foreach (var color in EffectivePresets)
             {
                 var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
                 <button type="button"
-                        class="@($"{PaletteSwatch} {(isSelected ? "selected" : "")}")"
+                        class=@GetPaletteSwatchClass(isSelected)
                         @attributes=@GetSwatchAttributes(color)
-                        title="@color"
+                        title=@color
                         @onclick=@(() => SelectPreset(color))>
                     @if (isSelected)
                     {
-                        <md-icon class=@SwatchCheck>@Icons.Check</md-icon>
+                        <md-icon class=@SwatchCheck>@Check</md-icon>
                     }
                 </button>
             }
         </div>
         <div class=@PopoverFooter>
-            <div class="@($"{HexWrapper} {Classes.ColorPicker.HexCompact}")">
+            <div class=@HexCompactClass>
                 <span class=@HexPrefix>#</span>
                 <input type="text"
                        class=@HexInput
                        placeholder="RRGGBB"
-                       value="@RawHexValue"
+                       value=@RawHexValue
                        disabled=@Disabled
                        @onchange=@OnTextInputChanged />
             </div>
             @if (HasValue)
             {
                 <Button Variant=@Text OnClick=@Clear>
-                    <md-icon slot="icon">@Icons.RestartAlt</md-icon>
+                    <md-icon slot="icon">@RestartAlt</md-icon>
                     @L[ResetAction]
                 </Button>
             }

@@ -379,6 +379,11 @@ md-dialog.contacts details summary::-webkit-details-marker {
     font-weight: 700;
 }
 
+.promotion-dialog {
+    max-width: 860px;
+    width: 100%;
+}
+
 .promotion-modal-body {
     display: grid;
     gap: 1.25rem;

@@ -29,8 +29,6 @@ function toPascalCase(str) {
   return result;
 }
 
-
-
 function readFileWithRetry(filePath, retries = 5, delayMs = 60) {
   for (let i = 0; i < retries; i++) {
     try {
@@ -48,11 +46,18 @@ function readFileWithRetry(filePath, retries = 5, delayMs = 60) {
 
 function scanAssets() {
   console.log(`\n📦 [Assets Pipeline] Scanning static assets in: ${assetsWwwroot}`);
-  
+
   const manifestItems = [];
   const categorized = {
     Images: {},
     Scripts: {},
+    ScriptsByDomain: {
+      Pages: {},
+      Widgets: {},
+      Layouts: {},
+      Features: {},
+      Components: {}
+    },
     Styles: {},
     Fonts: {},
     Maps: {},
@@ -85,8 +90,6 @@ function scanAssets() {
         continue;
       }
 
-
-
       // Compute hash for manifest
       const content = readFileWithRetry(fullPath);
       const hash = crypto.createHash('sha256').update(content).digest('hex').substring(0, 12);
@@ -99,74 +102,124 @@ function scanAssets() {
       const webPath = `_content/Assets/${relPath.replace(/\\/g, '/')}`;
       const propName = toPascalCase(entry.name);
 
-      const topDir = relPath.split('/')[0].toLowerCase();
+      const parts = relPath.split('/');
+      const topDir = parts[0].toLowerCase();
       if (topDir === 'img' || topDir === 'icons') {
         categorized.Images[propName] = webPath;
-      } else if (topDir === 'js' || topDir === 'lib') {
-        categorized.Scripts[propName] = webPath;
-      } else if (topDir === 'css') {
-        if (entry.name.includes('bundle') || entry.name === 'styles.css') {
-          categorized.Styles[propName] = webPath;
+      } else if (topDir === 'js') {
+        // Blazor dynamic JS module imports (IJSRuntime.InvokeAsync<IJSObjectReference>("import", ...))
+        // require a relative path prefix ('./') in the browser to avoid being rejected as bare module specifiers.
+        const scriptWebPath = `./${webPath}`;
+        categorized.Scripts[propName] = scriptWebPath;
+
+        if (parts.length > 2) {
+          const subDir = parts[1].toLowerCase();
+          if (subDir === 'pages') {
+            categorized.ScriptsByDomain.Pages[propName] = scriptWebPath;
+          } else if (subDir === 'widgets') {
+            categorized.ScriptsByDomain.Widgets[propName] = scriptWebPath;
+          } else if (subDir === 'layouts') {
+            categorized.ScriptsByDomain.Layouts[propName] = scriptWebPath;
+          } else if (subDir === 'features') {
+            categorized.ScriptsByDomain.Features[propName] = scriptWebPath;
+          } else if (subDir === 'components') {
+            categorized.ScriptsByDomain.Components[propName] = scriptWebPath;
+          }
         }
-      } else if (topDir === 'fonts') {
-        categorized.Fonts[propName] = webPath;
-      } else if (topDir === 'maps') {
-        categorized.Maps[propName] = webPath;
-      } else if (topDir === 'audio') {
-        categorized.Audio[propName] = webPath;
-      } else {
-        categorized.Root[propName] = webPath;
+      } else if (topDir === 'css') {
+          if (entry.name.includes('bundle') || entry.name === 'styles.css') {
+            categorized.Styles[propName] = webPath;
+          }
+        } else if (topDir === 'fonts') {
+          categorized.Fonts[propName] = webPath;
+        } else if (topDir === 'maps') {
+          categorized.Maps[propName] = webPath;
+        } else if (topDir === 'audio') {
+          categorized.Audio[propName] = webPath;
+        } else {
+          categorized.Root[propName] = webPath;
+        }
       }
     }
-  }
 
-  walk(assetsWwwroot);
+    walk(assetsWwwroot);
 
-  // Write manifest.json
-  fs.writeFileSync(manifestJsonPath, JSON.stringify({ version: '1.0', assets: manifestItems }, null, 2), 'utf8');
-  console.log(`✅ [Assets Pipeline] PWA cache manifest generated: ${manifestItems.length} assets indexed.`);
+    // Write manifest.json
+    fs.writeFileSync(manifestJsonPath, JSON.stringify({ version: '1.0', assets: manifestItems }, null, 2), 'utf8');
+    console.log(`✅ [Assets Pipeline] PWA cache manifest generated: ${manifestItems.length} assets indexed.`);
 
-  // Generate C# Code
-  function renderClass(className, items) {
-    const keys = Object.keys(items).sort();
-    if (keys.length === 0) return '';
-    let code = `    public static class ${className}\n    {\n`;
-    for (const key of keys) {
-      let safeKey = key;
-      if (safeKey === className) {
-        safeKey = `${safeKey}File`;
+    // Generate C# Code
+    function renderClass(className, items) {
+      const keys = Object.keys(items).sort();
+      if (keys.length === 0) return '';
+      let code = `    public static class ${className}\n    {\n`;
+      for (const key of keys) {
+        let safeKey = key;
+        if (safeKey === className) {
+          safeKey = `${safeKey}File`;
+          code += `        public const string Master = "${items[key]}";\n`;
+        }
+        code += `        public const string ${safeKey} = "${items[key]}";\n`;
       }
-      code += `        public const string ${safeKey} = "${items[key]}";\n`;
+      code += `    }\n\n`;
+      return code;
     }
-    code += `    }\n\n`;
-    return code;
-  }
 
-  let cs = `// <auto-generated/>
+    function renderScriptsWithDomains() {
+      let code = `    public static class Scripts\n    {\n`;
+
+      // Sub-domain classes mirroring CSS
+      for (const [domainName, items] of Object.entries(categorized.ScriptsByDomain)) {
+        const keys = Object.keys(items).sort();
+        if (keys.length > 0) {
+          code += `        public static class ${domainName}\n        {\n`;
+          for (const key of keys) {
+            code += `            public const string ${key} = "${items[key]}";\n`;
+          }
+          code += `        }\n\n`;
+        }
+      }
+
+      // Flat backward-compatible constants
+      const flatKeys = Object.keys(categorized.Scripts).sort();
+      for (const key of flatKeys) {
+        let safeKey = key;
+        if (safeKey === 'Scripts') {
+          safeKey = 'ScriptsFile';
+          code += `        public const string Master = "${categorized.Scripts[key]}";\n`;
+        }
+        code += `        public const string ${safeKey} = "${categorized.Scripts[key]}";\n`;
+      }
+
+      code += `    }\n\n`;
+      return code;
+    }
+
+    let cs = `// <auto-generated/>
 // This file was automatically generated by generate-asset-paths.mjs.
 // Strongly-typed static asset paths for the unified Assets package.
 // Categories are first-class static classes directly in namespace Assets.Constants.
-// Usage in Razor: @Images.LandingHeroMain, @Scripts.MaterialWebBundle.
+// Usage in Razor: @Images.LandingHeroMain, @Scripts.Pages.Landing, @Scripts.Widgets.ChatInput.
 
 #nullable enable
 #pragma warning disable
 
 namespace Assets.Constants
 {
-${renderClass('Images', categorized.Images)}${renderClass('Scripts', categorized.Scripts)}${renderClass('Styles', categorized.Styles)}${renderClass('Fonts', categorized.Fonts)}${renderClass('Maps', categorized.Maps)}${renderClass('Audio', categorized.Audio)}`;
+${renderClass('Images', categorized.Images)}${renderScriptsWithDomains()}${renderClass('Styles', categorized.Styles)}${renderClass('Fonts', categorized.Fonts)}${renderClass('Maps', categorized.Maps)}${renderClass('Audio', categorized.Audio)}`;
 
-  const rootKeys = Object.keys(categorized.Root).sort();
-  if (rootKeys.length > 0) {
-    cs += `    public static class AppManifest\n    {\n`;
-    for (const key of rootKeys) {
-      cs += `        public const string ${key} = "${categorized.Root[key]}";\n`;
+    const rootKeys = Object.keys(categorized.Root).sort();
+    if (rootKeys.length > 0) {
+      cs += `    public static class AppManifest\n    {\n`;
+      for (const key of rootKeys) {
+        cs += `        public const string ${key} = "${categorized.Root[key]}";\n`;
+      }
+      cs += `    }\n\n`;
     }
-    cs += `    }\n\n`;
+    cs += `}\n`;
+
+    fs.writeFileSync(outputCsPath, cs, 'utf8');
+    console.log(`✅ [Assets Pipeline] C# asset constants generated: ${outputCsPath}`);
   }
-  cs += `}\n`;
 
-  fs.writeFileSync(outputCsPath, cs, 'utf8');
-  console.log(`✅ [Assets Pipeline] C# asset constants generated: ${outputCsPath}`);
-}
-
-scanAssets();
+  scanAssets();

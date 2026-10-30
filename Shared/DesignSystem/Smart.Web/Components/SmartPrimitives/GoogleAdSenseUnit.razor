@@ -1,13 +1,15 @@
 @namespace Smart.Web.Components
 @using Microsoft.JSInterop
+@using static Assets.Constants.Classes.Ads
+@using static Assets.Constants.Formats
 
 @if (Visible)
 {
-    <div class="@Classes.Ads.GoogleAdsenseWrapper @Class">
+    <div class=@(string.IsNullOrEmpty(Class) ? GoogleAdsenseWrapper : string.Format(Two, GoogleAdsenseWrapper, Class))>
         <ins class="adsbygoogle"
-             data-ad-client="@Client"
-             data-ad-slot="@Slot"
-             data-ad-format="@Format"
-             data-full-width-responsive="@(FullWidthResponsive ? "true" : "false")"></ins>
+             data-ad-client=@Client
+             data-ad-slot=@Slot
+             data-ad-format=@Format
+             data-full-width-responsive=@(FullWidthResponsive ? "true" : "false")></ins>
     </div>
 }

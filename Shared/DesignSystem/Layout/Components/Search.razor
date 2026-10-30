@@ -11,7 +11,7 @@
                ValueChanged=@(v => SearchText = v) 
                ValueExpression=@(() => SearchText) 
                HasLeadingIcon=@true
-               LeadingIcon=@Icons.Search
+               LeadingIcon=@SearchIcon
                class=@SearchInputFieldClass>
         @if (!string.IsNullOrEmpty(SearchText))
         {

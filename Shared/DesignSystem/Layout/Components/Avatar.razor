@@ -1,6 +1,8 @@
 @inherits DataComponentBase
 @using System.Diagnostics.CodeAnalysis
 @using static Assets.Constants.Classes.Avatar
+@using static Assets.Constants.Classes.ProfileDialog
+@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
@@ -8,7 +10,7 @@
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
 <div class=@Container>
-	<Button Variant=@ButtonVariant.Outlined OnClick=@OpenProfile class=@Classes.Avatar.Button AriaLabel=@l[Profile]>
+	<Button Variant=@Outlined OnClick=@OpenProfile class=@AvatarButton AriaLabel=@l[Profile]>
 		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
 			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
@@ -21,7 +23,7 @@
 
 	@if (IsOpen)
 	{
-	<MaterialDialog class=@Classes.Avatar.Contacts Open=@IsOpen OnClose=@OnClose Type="alert">
+	<MaterialDialog class=@AvatarContacts Open=@IsOpen OnClose=@OnClose Type="alert">
 		<span slot="headline">
 			<span class=@Headline>@l[EditProfile]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
@@ -38,7 +40,7 @@
 				<AntiforgeryToken />
 				<List>
 					<!--Id-->
-					<details @ontoggle=@(e => GetRoles())>
+					<details @ontoggle=@GetRoles>
 						<summary>
 							<ListItem type="button">
 								<p>@FormModel?.Name.FirstName @FormModel?.Name?.LastName</p>
@@ -108,7 +110,7 @@
 							</ListItem>
 						</summary>
 
-						<div class=@Content style="padding: 16px;">
+						<div class=@ProfileDialogContent>
 							<Material.Web.Components.FilePicker 
 								Attachments=@_imageAttachments
 								Label=@l[PhotoLabel]
@@ -182,7 +184,7 @@
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class=@Content style="display: grid; gap: 12px; padding: 16px;">
+						<div class=@ProfileDialogContent>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[City]
@@ -234,15 +236,15 @@
 							</ListItem>
 						</summary>
 
-						<div class=@Content style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 1rem;">
-							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;">
+						<div class=@ProfileDialogContent>
+							<div class=@ProfileThemeGrid>
 								<Select Label=@l[ThemeLabel]
 										Value=@ThemeString
 										ValueChanged=@OnThemeChanged
 										ValueExpression="() => ThemeString"
 										Options=@ThemeOptions />
-								<div style="display: grid; grid-auto-flow: row; justify-items: center; gap: 0.25rem;">
-									<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@l[Loc.Common.Color]</span>
+								<div class=@ProfileColorPickerBox>
+									<span class=@ProfileColorPickerLabel>@l[PaletteColor]</span>
 									<ColorPicker Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
 								</div>
 							</div>
@@ -259,59 +261,59 @@
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class=@Content style="padding: 1rem; display: grid; grid-auto-flow: row; gap: 0.75rem;">
-							<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); margin: 0;">
-								@l[ProfileSecuritySubtext]
+						<div class=@ProfileDialogContent>
+							<p class=@Classes.ProfileDialog.ProfileSecuritySubtext>
+								@l[Profile_SecuritySubtext]
 							</p>
 
 							<!-- Face ID -->
-							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) style=@($"color: {(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)")};") />
-									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
-										<span style="font-size: 0.85rem; font-weight: 600;">@l[ProfileFaceIdTitle]</span>
-										<span style="font-size: 0.75rem; color: @(isFaceIdConfigured ? "var(--md-sys-color-primary)" : "var(--md-sys-color-secondary)");">
+							<div class=@ProfileAuthCard>
+								<div class=@ProfileAuthInfo>
+									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
+									<div class=@ProfileAuthText>
+										<span class=@ProfileAuthTitle>@l[ProfileFaceIdTitle]</span>
+										<span class=@ProfileAuthDesc>
 											@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
 										</span>
 									</div>
 								</div>
-								<div style="display: grid; grid-auto-flow: column; align-items: center; gap: 6px;">
-									<Button Variant=@ButtonVariant.Outlined OnClick=@NavigateToFaceIdSetup>
+								<div class=@ProfileAuthActions>
+									<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
 										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
 									</Button>
 									@if (isFaceIdConfigured)
 									{
 										<IconButton OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics]>
-											<Icon Name=@DeleteOutline style="color: var(--md-sys-color-error); font-size: 20px;" />
+											<Icon Name=@DeleteOutline class=@ProfileDeleteIcon />
 										</IconButton>
 									}
 								</div>
 							</div>
 
 							<!-- Google SSO -->
-							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
+							<div class=@ProfileAuthCard>
+								<div class=@ProfileAuthInfo>
 									<Icon Name=@AccountCircle />
-									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
-										<span style="font-size: 0.85rem; font-weight: 600;">Google SSO</span>
-										<span style="font-size: 0.75rem; color: var(--md-sys-color-outline);">@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</span>
+									<div class=@ProfileAuthText>
+										<span class=@ProfileAuthTitle>Google SSO</span>
+										<span class=@ProfileAuthDesc>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</span>
 									</div>
 								</div>
-								<Button Variant=@ButtonVariant.Outlined OnClick=@LinkGoogleAccount>
+								<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
 									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
 								</Button>
 							</div>
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
-							<div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0.75rem; background: var(--md-sys-color-surface-container-high); border-radius: 12px; border: 1px solid var(--md-sys-color-outline-variant);">
-								<div style="display: grid; grid-auto-flow: column; grid-auto-columns: auto minmax(0, 1fr); align-items: center; gap: 8px;">
-									<Icon Name=@Fingerprint style="color: var(--md-sys-color-tertiary);" />
-									<div style="display: grid; grid-auto-flow: row; min-width: 0;">
-										<span style="font-size: 0.85rem; font-weight: 600;">Passkeys (WebAuthn)</span>
-										<span style="font-size: 0.75rem; color: var(--md-sys-color-tertiary);">@l[ProfileDeviceBiometricsSubtext]</span>
+							<div class=@ProfileAuthCard>
+								<div class=@ProfileAuthInfo>
+									<Icon Name=@Fingerprint class=@ProfilePasskeyIcon />
+									<div class=@ProfileAuthText>
+										<span class=@ProfileAuthTitle>Passkeys (WebAuthn)</span>
+										<span class=@ProfileAuthDesc>@l[ProfileDeviceBiometricsSubtext]</span>
 									</div>
 								</div>
-								<Button Variant=@ButtonVariant.Outlined OnClick=@RegisterPasskey>
+								<Button Variant=@Outlined OnClick=@RegisterPasskey>
 									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
 								</Button>
 							</div>
@@ -345,10 +347,9 @@
 			</EditForm>
 		}
 		<div slot="actions">
-			<Button Variant=@ButtonVariant.Text value="reset" Type="reset" OnClick=@(e => FormModel = profile?.Clone())>@l[ResetAction]</Button>
-			<div style="display: block;"></div>
-			<Button Variant=@ButtonVariant.Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
-			<Button Variant=@ButtonVariant.Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
+			<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
+			<Button Variant=@Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
+			<Button Variant=@Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
 		</div>
 	</MaterialDialog>
 	}
@@ -360,15 +361,15 @@
 			<span class=@Headline>@l[ProfileFaceIdTitle]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
 		</span>
-		<div slot="content" style="display: grid; grid-auto-flow: row; justify-items: center; gap: 14px; padding: 0.75rem 0;">
+		<div slot="content" class=@FaceidModalContent>
 			<!-- 3-Step Calibration Progress Bar -->
-			<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 240px; justify-items: stretch;">
-				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 1 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
-				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 2 ? "var(--md-sys-color-primary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
-				<div style="height: 5px; border-radius: 3px; background: @(currentEnrollmentStage >= 3 ? "var(--md-sys-color-tertiary)" : "var(--md-sys-color-surface-variant)"); transition: all 0.3s ease;"></div>
+			<div class=@FaceidProgressBar>
+				<div class=@(currentEnrollmentStage >= 1 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></div>
+				<div class=@(currentEnrollmentStage >= 2 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></div>
+				<div class=@(currentEnrollmentStage >= 3 ? string.Format(Two, FaceidStageStep, StepTertiary) : FaceidStageStep)></div>
 			</div>
 
-			<div style="width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid @faceIdStatusColor; box-shadow: 0 0 24px var(--md-sys-color-shadow); position: relative; display: grid; place-items: center;">
+			<div class=@FaceidCameraViewport>
 				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
 				{
 					<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
@@ -376,13 +377,13 @@
 				}
 				else if (isFaceIdModalOpen)
 				{
-					<div style="display: grid; place-items: center; text-align: center; padding: 1rem; color: var(--md-sys-color-on-surface-variant);">
-						<Icon Name=@VideocamOff style="font-size: 48px; margin-bottom: 8px;" />
+					<div class=@FaceidCameraFallback>
+						<Icon Name=@VideocamOff class=@FaceidCameraFallbackIcon />
 						<span>@l[ProfileCameraUnavailable]</span>
 					</div>
 				}
 				<!-- Dynamic Pose Direction Badge -->
-				<div style="position: absolute; bottom: 12px; padding: 4px 12px; background: var(--md-sys-color-surface-container-highest); backdrop-filter: blur(8px); border-radius: 20px; font-size: 0.75rem; color: var(--md-sys-color-on-surface); font-weight: 600; pointer-events: none; border: 1px solid var(--md-sys-color-outline-variant);">
+				<div class=@FaceidDirectionBadge>
 					@if (currentEnrollmentStage == 1)
 					{
 						<span>@l[ProfileLookStraight]</span>
@@ -397,15 +398,15 @@
 					}
 				</div>
 			</div>
-			<div style="font-weight: 600; font-size: 0.95rem; color: @faceIdStatusColor; text-align: center;">
+			<div class=@FaceidStatusMessage>
 				@faceIdStatusMessage
 			</div>
-			<p style="font-size: 0.8rem; color: var(--md-sys-color-outline); text-align: center; margin: 0; max-width: 320px;">
+			<p class=@FaceidInstructionText>
 				@l[ProfileCenterFaceInstruction]
 			</p>
 		</div>
 		<div slot="actions">
-			<Button Variant=@ButtonVariant.Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
+			<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
 		</div>
 	</MaterialDialog>
 	}

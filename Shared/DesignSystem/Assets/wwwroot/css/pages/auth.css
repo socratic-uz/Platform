@@ -175,6 +175,7 @@
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
     box-shadow: 0 8px 16px var(--md-sys-color-shadow);
+    height: 500px;
 }
 
 .auth-divider {
@@ -293,8 +294,10 @@
 .signin-container {
     display: grid;
     place-items: center;
-    min-height: 0;
-    padding: 3rem 1.5rem;
+    min-height: 100dvh;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 50% 20%, rgb(from var(--md-sys-color-primary) r g b / 0.08) 0%, var(--md-sys-color-surface) 100%);
 }
 
 /* ==========================================================================
@@ -404,6 +407,68 @@
     justify-content: center;
     gap: 0.75rem;
     width: 100%;
+}
+
+.signin-page-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 50% 20%, rgb(from var(--md-sys-color-primary) r g b / 0.08) 0%, var(--md-sys-color-surface) 100%);
+}
+
+.signin-top-bar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+    box-sizing: border-box;
+}
+
+.signin-brand-link {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 0.25rem;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+    font-size: 1.125rem;
+    touch-action: manipulation;
+}
+
+.signin-brand-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+.signin-brand-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+.signin-top-bar-actions {
+    grid-column: 3;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.signin-footer {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem 0 0 0;
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 0.75;
 }
 
 @keyframes oauth-spin {

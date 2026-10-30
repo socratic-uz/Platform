@@ -3,34 +3,14 @@
 <head>
     <title>Socratic Preview • Player</title>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script>
-    (function() {
-        try {
-            var cookieTheme = document.cookie.split('; ').find(function(row) { return row.startsWith('Theme='); });
-            var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) || 
-                        localStorage.getItem('Theme') || 
-                        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
-            var normalized = theme.toLowerCase();
-            document.documentElement.setAttribute('data-theme', normalized);
-            document.documentElement.style.colorScheme = normalized;
-        } catch(e) {}
-    })();
-</script>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script src="../js/layouts/theme-init.js"></script>
 
 
 <link rel="preload" href="../fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
 
 
 <link rel="stylesheet" href="../css/styles.css" />
-
-
-<script src="../js/material-web.bundle.js" defer></script>
+<script type="module" src="../js/scripts.js"></script>
 
 
 <link rel="icon" type="image/png" href="../img/favicon.png" />
@@ -47,77 +27,5 @@
 
     <div id="loadingContainer" class="fullscreen-loading"><md-circular-progress indeterminate four-color></md-circular-progress>
         <p id="loadingText" class="loading-label" data-not-found="Ссылка на видео не найдена">Загрузка видео...</p></div></main>
-
-<script>
-    (async function initPlayer() {
-        try {
-            if (window.Telegram && window.Telegram.WebApp) {
-                window.Telegram.WebApp.ready();
-                window.Telegram.WebApp.expand();
-            }
-
-            const urlParams = new URLSearchParams(window.location.search);
-            let videoUrl = urlParams.get('video');
-            let origUrl = urlParams.get('orig');
-
-            if (!videoUrl && !origUrl) {
-                let startParam = '';
-                if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.start_param) {
-                    startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
-                }
-                if (!startParam) {
-                    startParam = urlParams.get('tgWebAppStartParam') || urlParams.get('startapp') || '';
-                }
-                if (!startParam && window.location.hash) {
-                    const hashMatch = window.location.hash.match(/start_param=([A-Za-z0-9_-]+)/);
-                    if (hashMatch) startParam = decodeURIComponent(hashMatch[1]);
-                }
-
-                if (startParam && startParam.startsWith('p_')) {
-                    const shortcode = startParam.substring(2);
-                    origUrl = 'https://www.instagram.com/p/' + shortcode + '/';
-                }
-            }
-
-            if (!videoUrl && origUrl) {
-                try {
-                    let apiUrl = '/api/instagram/video?url=' + encodeURIComponent(origUrl);
-                    let res = await fetch(apiUrl).catch(() => null);
-                    if (!res || !res.ok) {
-                        apiUrl = 'https://identity.socratic.uz/api/instagram/video?url=' + encodeURIComponent(origUrl);
-                        res = await fetch(apiUrl, { mode: 'cors' }).catch(() => null);
-                    }
-                    if (res && res.ok) {
-                        const data = await res.json();
-                        if (data && data.videoUrl) {
-                            videoUrl = data.videoUrl.replace(/\\\//g, '/').replace(/\\u0026/g, '&');
-                        }
-                    }
-                } catch(err) {
-                    console.error('Fetch error:', err);
-                }
-            }
-
-            const player = document.getElementById('mediaPlayer');
-            const source = document.getElementById('videoSource');
-            const loader = document.getElementById('loadingContainer');
-
-            if (videoUrl && player && source) {
-                source.src = videoUrl;
-                player.load();
-                if (loader) loader.style.display = 'none';
-                player.style.display = 'block';
-                player.play().catch(() => {});
-            } else if (loader) {
-                const text = document.getElementById('loadingText');
-                if (text) {
-                    text.innerText = text.getAttribute('data-not-found') || 'Video link not found';
-                }
-            }
-        } catch(e) {
-            console.error('Player init error:', e);
-        }
-    })();
-</script>
 </body>
 </html>

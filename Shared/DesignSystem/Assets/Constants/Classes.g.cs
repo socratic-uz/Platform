@@ -16,6 +16,7 @@ namespace Assets.Constants
     {
         public static class About
         {
+            public const string AboutHero = "about-hero";
             public const string AboutTitle = "about-title";
             public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
@@ -23,8 +24,6 @@ namespace Assets.Constants
             public const string ControlsPanelExpanded = "controls-panel-expanded";
             public const string CtaSection = "about-cta-section";
             public const string DetailsMode = "details-mode";
-            public const string Hero = "about-hero";
-            public const string OrderSubtitle = "order-subtitle";
             public const string PillarsSection = "about-pillars-section";
             public const string Subtitle = "about-subtitle";
             public const string TechStackSection = "about-tech-stack-section";
@@ -57,6 +56,7 @@ namespace Assets.Constants
             public const string TouchIcon = "ad-touch-icon";
             public const string UpgradeLink = "ad-upgrade-link";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
+            public const string YandexRtbContainer = "yandex-rtb-container";
         }
 
         public static class Analytics
@@ -126,6 +126,8 @@ namespace Assets.Constants
         public static class Avatar
         {
             public const string AvatarBox = "avatar-box";
+            public const string AvatarButton = "avatar-button";
+            public const string AvatarContacts = "contacts";
             public const string AvatarRoot = "m3-avatar";
             public const string Button = "avatar-button";
             public const string ContactGrid = "contact-grid";
@@ -136,7 +138,6 @@ namespace Assets.Constants
             public const string Headline = "headline";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string MaterialTextField = "material-text-field";
-            public const string PlaceDetailsAvatar = "place-details-avatar";
             public const string Pulse = "avatar-pulse";
             public const string Row = "row";
         }
@@ -146,12 +147,13 @@ namespace Assets.Constants
             public const string AdNetworkBadge = "ad-network-badge";
             public const string AdNetworkBadgeRow = "ad-network-badge-row";
             public const string AgeRestriction = "badge-age-restriction";
-            public const string BackButton = "m3-back-button";
-            public const string BackIcon = "m3-back-icon";
             public const string BadgeActive = "badge-active";
+            public const string BadgeCounter = "badge-counter";
             public const string BadgeIcon = "badge-icon";
             public const string BadgeInfo = "info";
-            public const string BadgeRoot = "badge";
+            public const string BadgeNone = "badge-none";
+            public const string BadgeRoot = "m3-badge";
+            public const string BadgeRoot_2 = "badge";
             public const string BadgeVerified = "badge-verified";
             public const string Blocked = "badge-blocked";
             public const string Canceled = "canceled";
@@ -183,18 +185,12 @@ namespace Assets.Constants
             public const string KdsStatusTag = "kds-status-tag";
             public const string Made = "made";
             public const string Making = "badge-making";
-            public const string MapMeasureBadge = "map-measure-badge";
-            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
-            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
-            public const string MapMeasureBadgeValue = "map-measure-badge-value";
             public const string None = "badge-none";
-            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OrderBadge = "order-badge";
             public const string OrderStatusBadge = "order-status-badge";
             public const string Paid = "paid";
             public const string Paused = "badge-paused";
             public const string PillBadge = "m3-pill-badge";
-            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PopularBadge = "popular-badge";
             public const string PosPaymentBadge = "pos-payment-badge";
             public const string PosPaymentBadgeLabel = "pos-payment-badge-label";
@@ -289,6 +285,7 @@ namespace Assets.Constants
         {
             public const string ActionsRow = "actions-row";
             public const string BackButton = "back-button";
+            public const string BackButton_2 = "m3-back-button";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BtnAndroid = "btn-android";
             public const string BtnBot = "btn-bot";
@@ -303,6 +300,7 @@ namespace Assets.Constants
             public const string BtnText = "btn-text";
             public const string BtnWeb = "btn-web";
             public const string BtnWindows = "btn-windows";
+            public const string ButtonActive = "active";
             public const string CatTabFintech = "cat-tab-fintech";
             public const string CatTabHospitality = "cat-tab-hospitality";
             public const string CatTabRetail = "cat-tab-retail";
@@ -317,15 +315,6 @@ namespace Assets.Constants
             public const string GridButtons = "m3-grid-buttons";
             public const string GridIconButtons = "m3-grid-icon-buttons";
             public const string M3xBtnPill = "m3x-btn-pill";
-            public const string MapActionButton = "map-action-button";
-            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
-            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
-            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
-            public const string MapRouteCloseBtn = "map-route-close-btn";
-            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
-            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
-            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
-            public const string MapRouteSwapBtn = "map-route-swap-btn";
             public const string NavControlBtn = "nav-control-btn";
             public const string NavIcon = "nav-icon";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -333,9 +322,6 @@ namespace Assets.Constants
             public const string PresetBtn = "preset-btn";
             public const string Primary = "primary";
             public const string ProductActionsBar = "product-actions-bar";
-            public const string RouteButton = "route-button";
-            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
-            public const string RouteStartBtn = "route-start-btn";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string ShowcaseNavBtn = "showcase-nav-btn";
@@ -381,6 +367,7 @@ namespace Assets.Constants
             public const string CardFilled_2 = "Filled";
             public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
+            public const string CardFormGrid = "card-form-grid";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
             public const string CardGrid = "card-grid";
@@ -411,11 +398,9 @@ namespace Assets.Constants
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
-            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
             public const string Footer_2 = "m3-card-footer";
-            public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
             public const string GlassCard = "glass-card";
             public const string Grid = "card-grid";
@@ -440,7 +425,6 @@ namespace Assets.Constants
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
             public const string MediaCard = "m3-media-card";
@@ -487,10 +471,12 @@ namespace Assets.Constants
             public const string ProductCard = "product-card";
             public const string ProductDetailCard = "product-detail-card";
             public const string ProductTitle = "product-title";
-            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RowLabel = "m3-row-label";
+            public const string RowLabel_2 = "row-label";
             public const string RowValue = "m3-row-value";
+            public const string RowValue_2 = "row-value";
             public const string SaveCardToggle = "save-card-toggle";
+            public const string Selected = "selected";
             public const string SelectedOrgCard = "selected-org-card";
             public const string ShippingCard = "shipping-card";
             public const string ShowcaseCard = "showcase-card";
@@ -529,7 +515,9 @@ namespace Assets.Constants
             public const string SummaryCard_2 = "summary-card";
             public const string SummaryDivider = "m3-summary-divider";
             public const string SummaryRow = "m3-summary-row";
+            public const string SummaryRow_2 = "summary-row";
             public const string SummaryRows = "m3-summary-rows";
+            public const string SummaryRows_2 = "summary-rows";
             public const string SummaryTitle = "m3-summary-title";
             public const string SupportCard = "support-card";
             public const string SupportCardAction = "support-card-action";
@@ -537,9 +525,6 @@ namespace Assets.Constants
             public const string TechCard = "tech-card";
             public const string TicketQrCard = "ticket-qr-card";
             public const string TopRow = "card-top-row";
-            public const string TotalLabel = "m3-total-label";
-            public const string TotalRow = "m3-total-row";
-            public const string TotalValue = "m3-total-value";
             public const string UxModeCard = "ux-mode-card";
             public const string UxModeCardActions = "ux-mode-card-actions";
             public const string UxModeCardHeader = "ux-mode-card-header";
@@ -558,6 +543,7 @@ namespace Assets.Constants
             public const string WishlistMedia = "wishlist-media";
             public const string WishlistPlaceholder = "wishlist-placeholder";
             public const string WishlistPriceTag = "wishlist-price-tag";
+            public const string WishlistProductCard = "product-card";
             public const string WishlistTitleText = "wishlist-title-text";
             public const string WishlistWishBtn = "wishlist-wish-btn";
             public const string YandexZoomCard = "yandex-zoom-card";
@@ -566,16 +552,10 @@ namespace Assets.Constants
         public static class Cart
         {
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string HeaderBrandLink = "header-brand-link";
-            public const string HeaderBrandText = "header-brand-text";
-            public const string HeaderBrandZone = "header-brand-zone";
-            public const string HeaderEndZone = "header-end-zone";
-            public const string HeaderStartZone = "header-start-zone";
             public const string Interactive = "interactive";
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
-            public const string PageHeaderStart = "m3-page-header-start";
         }
 
         public static class Chat
@@ -584,17 +564,24 @@ namespace Assets.Constants
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
+            public const string AssistantSearch = "assistant-search";
+            public const string AssistantSearchContent = "assistant-search-content";
+            public const string AssistantSearchIcon = "assistant-search-icon";
+            public const string AssistantSearchPhrase = "assistant-search-phrase";
             public const string BackLink = "chat-back-link";
-            public const string BottomSection = "chat-bottom-section";
+            public const string ChatBackLink = "chat-back-link";
+            public const string ChatBottomSection = "chat-bottom-section";
+            public const string ChatContainer = "chat-container";
+            public const string ChatHeaderContainer = "chat-header-container";
+            public const string ChatPageRoot = "chat-page-root";
+            public const string ChatView = "chat-view";
             public const string Citation = "citation";
             public const string CitationContent = "citation-content";
             public const string CitationFile = "citation-file";
-            public const string Container = "chat-container";
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
-            public const string PageRoot = "chat-page-root";
-            public const string View = "chat-view";
+            public const string UserMessage = "user-message";
         }
 
         public static class Chip
@@ -617,12 +604,9 @@ namespace Assets.Constants
             public const string FloatingChip = "floating-chip";
             public const string GridChips = "m3-grid-chips";
             public const string InteractiveChip = "interactive-chip";
-            public const string MapCategoryChip = "map-category-chip";
-            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string PayChip = "pay-chip";
             public const string PosChipSet = "pos-chip-set";
             public const string PosSupportedChips = "pos-supported-chips";
-            public const string PosTechChips = "pos-tech-chips";
             public const string ProductTagChip = "product-tag-chip";
             public const string SmartFilterChips = "smart-filter-chips";
             public const string SmartFormChipContainer = "smart-form-chip-container";
@@ -694,7 +678,6 @@ namespace Assets.Constants
 
         public static class CommerceModes
         {
-            public const string RouteDistanceBar = "route-distance-bar";
             public const string TicketCode = "ticket-code";
             public const string TicketNote = "ticket-note";
             public const string ZoneCheckBanner = "zone-check-banner";
@@ -709,10 +692,10 @@ namespace Assets.Constants
             public const string AiBlobSvg = "ai-blob-svg";
             public const string AmountValue = "amount-value";
             public const string AppFooter = "app-footer";
-            public const string AppHeader = "app-header";
             public const string ArchiveType = "archive-type";
             public const string B2bCtaGroup = "b2b-cta-group";
             public const string BackIcon = "back-icon";
+            public const string BackIcon_2 = "m3-back-icon";
             public const string BackLink = "back-link";
             public const string BarLabels = "bar-labels";
             public const string BarTrack = "bar-track";
@@ -744,9 +727,11 @@ namespace Assets.Constants
             public const string CatalogTitle = "catalog-title";
             public const string CenterBox = "m3-center-box";
             public const string ChevronIcon = "chevron-icon";
+            public const string ChipPlace = "chip-place";
             public const string ClickPopupActions = "click-popup-actions";
             public const string ClickPopupAddress = "click-popup-address";
             public const string ClickPopupCoords = "click-popup-coords";
+            public const string Closed = "closed";
             public const string Collapsed = "collapsed";
             public const string ColorGrid = "color-grid";
             public const string ColorHex = "color-hex";
@@ -758,6 +743,7 @@ namespace Assets.Constants
             public const string ColumnReady = "column-ready";
             public const string ColumnTitle = "column-title";
             public const string CommonDragHandle = "drag-handle";
+            public const string CommonGlass = "glass";
             public const string CommonGrid = "m3-grid";
             public const string CommonLabel = "m3-label";
             public const string CommonPageHeader = "m3-page-header";
@@ -868,6 +854,7 @@ namespace Assets.Constants
             public const string InStockText = "in-stock-text";
             public const string InteractiveAction = "interactive-action";
             public const string IsInvalid = "is-invalid";
+            public const string IsOpen = "is-open";
             public const string ItemActions = "item-actions";
             public const string ItemHeadline = "item-headline";
             public const string ItemIcon = "item-icon";
@@ -881,8 +868,7 @@ namespace Assets.Constants
             public const string ItemTotalPrice = "item-total-price";
             public const string ItemUnitPrice = "item-unit-price";
             public const string KanbanBoard = "m3-kanban-board";
-            public const string KanbanColumn = "kanban-column";
-            public const string KanbanColumn_2 = "m3-kanban-column";
+            public const string KanbanColumn = "m3-kanban-column";
             public const string KdsBoard = "kds-board";
             public const string KdsColumn = "kds-column";
             public const string L0 = "l0";
@@ -891,9 +877,9 @@ namespace Assets.Constants
             public const string L3 = "l3";
             public const string L4 = "l4";
             public const string LabelSm = "m3-label-sm";
+            public const string LayoutLinkStack = "link-stack";
             public const string LegendDot = "legend-dot";
             public const string LegendItem = "legend-item";
-            public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
             public const string M3Card = "m3-card";
@@ -902,13 +888,20 @@ namespace Assets.Constants
             public const string M3CardMedia = "m3-card-media";
             public const string M3CardMediaPlaceholder = "m3-card-media-placeholder";
             public const string M3CardOutlined = "m3-card-outlined";
+            public const string M3TotalLabel = "m3-total-label";
+            public const string M3TotalRow = "m3-total-row";
+            public const string M3TotalValue = "m3-total-value";
             public const string MainFooter = "main-footer";
             public const string ManeuverDetails = "maneuver-details";
             public const string ManeuverDistance = "maneuver-distance";
             public const string ManeuverIcon = "maneuver-icon";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string ManeuverText = "maneuver-text";
+            public const string MapActionButton = "map-action-button";
+            public const string MapActive = "active";
             public const string MapCanvas = "map-canvas";
+            public const string MapCategoriesScroll = "map-categories-scroll";
+            public const string MapCategoryChip = "map-category-chip";
             public const string MapClickPopup = "map-click-popup";
             public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
@@ -916,21 +909,60 @@ namespace Assets.Constants
             public const string MapFloorLabel = "map-floor-label";
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
+            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
+            public const string MapMeasureBadge = "map-measure-badge";
+            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
+            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
+            public const string MapMeasureBadgeValue = "map-measure-badge-value";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
+            public const string MapNavigatorPanel = "navigator-panel";
+            public const string MapNearbyResultsPanel = "nearby-results-panel";
+            public const string MapPanelContent = "map-panel-content";
+            public const string MapPanelToggle = "map-panel-toggle";
+            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
+            public const string MapPanelToggleTab = "map-panel-toggle-tab";
+            public const string MapPickerWrapper = "map-picker-wrapper";
+            public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
+            public const string MapRouteCloseBtn = "map-route-close-btn";
+            public const string MapRouteDeleteBtn = "map-route-delete-btn";
             public const string MapRouteDot = "map-route-dot";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
+            public const string MapRouteFieldsActions = "map-route-fields-actions";
+            public const string MapRouteFieldsDots = "map-route-fields-dots";
+            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
+            public const string MapRouteFieldsRow = "map-route-fields-row";
+            public const string MapRouteHeaderRow = "map-route-header-row";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteInput = "map-route-input";
+            public const string MapRouteInputs = "map-route-inputs";
+            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string MapRouteProfileRow = "map-route-profile-row";
+            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
+            public const string MapRouteSubmitBtn = "map-route-submit-btn";
+            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
+            public const string MapRouteSuggestionIcon = "map-route-suggestion-icon";
+            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapRouteSwapBtn = "map-route-swap-btn";
+            public const string MapSearchIcon = "search-icon";
+            public const string MapSearchInline = "map-search-inline";
             public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapToolbar = "map-toolbar";
+            public const string MapTopbar = "map-topbar";
             public const string MapZoomDivider = "map-zoom-divider";
             public const string MapZoomStack = "map-zoom-stack";
+            public const string MaterialTextField = "material-text-field";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -946,11 +978,9 @@ namespace Assets.Constants
             public const string NavFab = "m3-nav-fab";
             public const string NavigatorControls = "navigator-controls";
             public const string NavigatorManeuverBar = "navigator-maneuver-bar";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavigatorStatsBar = "navigator-stats-bar";
             public const string NavItem = "nav-item";
             public const string NavMobile = "nav-mobile";
-            public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NoMessages = "no-messages";
             public const string NoNav = "no-nav";
             public const string NotificationBanner = "notification-banner";
@@ -960,6 +990,7 @@ namespace Assets.Constants
             public const string OrderItemsSubheader = "order-items-subheader";
             public const string OrdersErrorBanner = "orders-error-banner";
             public const string OrdersKanbanBoard = "orders-kanban-board";
+            public const string OrdersKanbanColumn = "kanban-column";
             public const string OrdersListGrid = "orders-list-grid";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsMapPage = "organizations-map-page";
@@ -970,6 +1001,7 @@ namespace Assets.Constants
             public const string OrgShowcaseSection = "org-showcase-section";
             public const string PageContainer = "m3-page-container";
             public const string PageHeaderActions = "m3-page-header-actions";
+            public const string PageHeaderStart = "m3-page-header-start";
             public const string PageHeaderTitle = "m3-page-header-title";
             public const string PageHeading = "page-heading";
             public const string PageSubtitle = "page-subtitle";
@@ -984,13 +1016,20 @@ namespace Assets.Constants
             public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
+            public const string PlaceDetailsAvatar = "place-details-avatar";
+            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PlaceDetailsBody = "place-details-body";
             public const string PlaceDetailsContent = "place-details-content";
             public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHeader = "place-details-header";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string PlaceDetailsHero = "place-details-hero";
+            public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceDetailsName = "place-details-name";
             public const string PlaceDetailsPanel = "place-details-panel";
+            public const string PlaceDetailsTitleContainer = "place-details-title-container";
+            public const string PlaceInfoIcon = "info-icon";
+            public const string PlaceInfoRow = "place-info-row";
             public const string PlanCurrency = "plan-currency";
             public const string PlanFeatures = "plan-features";
             public const string PlanHeader = "plan-header";
@@ -1025,8 +1064,6 @@ namespace Assets.Constants
             public const string ProductPriceSection = "product-price-section";
             public const string ProductSpecsGrid = "product-specs-grid";
             public const string ProductUnit = "product-unit";
-            public const string ProfileContainer = "profile-container";
-            public const string ProfileTitle = "profile-title";
             public const string PromoSection = "promo-section";
             public const string PromoSuccessText = "promo-success-text";
             public const string ProTier = "pro-tier";
@@ -1042,18 +1079,27 @@ namespace Assets.Constants
             public const string RouteAlternativeAction = "route-alternative-action";
             public const string RouteAlternativeActions = "route-alternative-actions";
             public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeIcon = "route-alternative-icon";
             public const string RouteAlternativeLabel = "route-alternative-label";
             public const string RouteAlternativeMain = "route-alternative-main";
             public const string RouteAlternativeSecondary = "route-alternative-secondary";
             public const string RouteAlternativesList = "route-alternatives-list";
             public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteButton = "route-button";
             public const string RouteClose = "route-close";
+            public const string RouteDistanceBar = "route-distance-bar";
             public const string RouteError = "route-error";
             public const string RouteHeader = "route-header";
+            public const string RouteInfo = "route-info";
             public const string RouteLabel = "route-label";
+            public const string RouteLoading = "route-loading";
             public const string RouteOptionsToolbar = "route-options-toolbar";
+            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
             public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string RouteStartBtn = "route-start-btn";
+            public const string RouteStartButton = "route-start-button";
             public const string RouteStartContainer = "route-start-container";
             public const string RouteStat = "route-stat";
             public const string RouteStepMeta = "route-step-meta";
@@ -1067,6 +1113,11 @@ namespace Assets.Constants
             public const string SafeAreaTop = "safe-area-top";
             public const string ScoreBox = "score-box";
             public const string ScoreCircle = "score-circle";
+            public const string SearchBarInner = "search-bar-inner";
+            public const string SearchDivider = "search-divider";
+            public const string SearchInput = "search-input";
+            public const string SearchModeBar = "search-bar";
+            public const string SearchPanel = "search-panel";
             public const string SecondaryCta = "secondary-cta";
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SectionDesc = "section-desc";
@@ -1152,8 +1203,6 @@ namespace Assets.Constants
             public const string StressTarget = "stress-target";
             public const string Suggestions = "suggestions";
             public const string SummaryDivider = "summary-divider";
-            public const string SummaryRow = "summary-row";
-            public const string SummaryRows = "summary-rows";
             public const string SupportActionGrid = "support-action-grid";
             public const string SupportGrid = "support-grid";
             public const string SupportLabel = "support-label";
@@ -1184,6 +1233,7 @@ namespace Assets.Constants
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchTarget44 = "touch-target-44";
             public const string TouchTarget48 = "touch-target-48";
             public const string TrialDaysHighlight = "trial-days-highlight";
@@ -1195,6 +1245,7 @@ namespace Assets.Constants
             public const string UxExpandContainer = "ux-expand-container";
             public const string UxFilterMeta = "ux-filter-meta";
             public const string UxModesSection = "ux-modes-section";
+            public const string UxSearchBox = "ux-search-box";
             public const string UxSpotlightContainer = "ux-spotlight-container";
             public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxSpotlightHeader = "ux-spotlight-header";
@@ -1320,7 +1371,6 @@ namespace Assets.Constants
             public const string DiagSpaceTop = "diag-space-top";
             public const string DiagSuccess = "diag-success";
             public const string DiagWarning = "diag-warning";
-            public const string OrderSummarySection = "order-summary-section";
         }
 
         public static class Dialog
@@ -1343,6 +1393,7 @@ namespace Assets.Constants
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
+            public const string PromotionDialog = "promotion-dialog";
             public const string PromotionModalBody = "promotion-modal-body";
             public const string PromotionModalHeader = "promotion-modal-header";
             public const string PromotionModalSubtitle = "promotion-modal-subtitle";
@@ -1379,9 +1430,9 @@ namespace Assets.Constants
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
+            public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string Show = "show";
             public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
@@ -1411,15 +1462,20 @@ namespace Assets.Constants
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
             public const string DocsContentHeader = "docs-content-header";
+            public const string DocsContentLoader = "docs-content-loader";
             public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
+            public const string DocsGroupTitle = "docs-group-title";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DocsHeaderTitle = "docs-header-title";
+            public const string DocsLoaderContainer = "docs-loader-container";
+            public const string DocsLoadingText = "docs-loading-text";
+            public const string DocsMenuIcon = "docs-menu-icon";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -1428,9 +1484,11 @@ namespace Assets.Constants
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
+            public const string DocsSidebarToggleBtn = "docs-sidebar-toggle-btn";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DocsWelcomeIcon = "docs-welcome-icon";
+            public const string SidebarOpen = "sidebar-open";
         }
 
         public static class Donation
@@ -1512,6 +1570,7 @@ namespace Assets.Constants
             public const string FaceidNotice = "faceid-notice";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
             public const string FaceidStatusText = "faceid-status-text";
+            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string Scanning = "scanning";
             public const string StatusError = "status-error";
             public const string StatusNeutral = "status-neutral";
@@ -1523,7 +1582,6 @@ namespace Assets.Constants
         {
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
-            public const string RouteLoading = "route-loading";
             public const string Short = "short";
         }
 
@@ -1566,7 +1624,6 @@ namespace Assets.Constants
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
-            public const string HeaderGridLayout = "header-grid-layout";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -1595,9 +1652,6 @@ namespace Assets.Constants
             public const string InputFieldGroup = "input-field-group";
             public const string Invalid = "invalid";
             public const string Legend = "m3-legend";
-            public const string MapRouteFieldsDots = "map-route-fields-dots";
-            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
-            public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
             public const string PosFormField = "pos-form-field";
@@ -1620,8 +1674,6 @@ namespace Assets.Constants
         {
             public const string GridSelection = "m3-grid-selection";
             public const string InputBox = "input-box";
-            public const string MapRouteInput = "map-route-input";
-            public const string MapRouteInputs = "map-route-inputs";
             public const string PromoInputGroup = "promo-input-group";
             public const string SelectInput = "select-input";
             public const string SelectionItem = "m3-selection-item";
@@ -1677,7 +1729,6 @@ namespace Assets.Constants
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
-            public const string HeaderCenterZone = "header-center-zone";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
@@ -1709,19 +1760,24 @@ namespace Assets.Constants
 
         public static class Header
         {
+            public const string AppHeader = "app-header";
+            public const string AppHeaderSticky = "header-sticky";
             public const string BrandIconBox = "header-brand-icon-box";
+            public const string HeaderBrandLink = "header-brand-link";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string HeaderBrandZone = "header-brand-zone";
+            public const string HeaderCenterZone = "header-center-zone";
             public const string HeaderContent = "header-content";
+            public const string HeaderEndZone = "header-end-zone";
+            public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
+            public const string HeaderStartZone = "header-start-zone";
             public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
-            public const string MapRouteHeaderRow = "map-route-header-row";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
             public const string PageHeaderText = "m3-page-header-text";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string RocketIcon = "header-rocket-icon";
-            public const string Sticky = "header-sticky";
         }
 
         public static class Help
@@ -1758,7 +1814,7 @@ namespace Assets.Constants
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
-            public const string InfoIcon = "info-icon";
+            public const string InfoGridRoot = "m3-info-grid";
             public const string InfoItem = "m3-info-item";
             public const string InfoItem_2 = "info-item";
             public const string InfoLabel = "m3-info-label";
@@ -1768,18 +1824,14 @@ namespace Assets.Constants
             public const string ItemInfo = "item-info";
             public const string KioskBrandInfo = "kiosk-brand-info";
             public const string OrderItemInfo = "order-item-info";
-            public const string PlaceDetailsInfoSection = "place-details-info-section";
-            public const string PlaceInfoRow = "place-info-row";
+            public const string PlaceInfoIcon = "info-icon";
             public const string PosQrInfo = "pos-qr-info";
-            public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
             public const string Root = "m3-info-grid";
-            public const string RouteInfo = "route-info";
             public const string SellerInfo = "seller-info";
             public const string SessionItemInfo = "session-item-info";
             public const string ShowcaseStatInfo = "showcase-stat-info";
             public const string SmartFormInfo = "smart-form-info";
-            public const string SmartToastInfo = "smart-toast-info";
             public const string SpotlightInfo = "spotlight-info";
             public const string TicketInfo = "ticket-info";
         }
@@ -1963,9 +2015,6 @@ namespace Assets.Constants
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
-            public const string MapPopupBackdrop = "map-popup-backdrop";
-            public const string MapToolbar = "map-toolbar";
-            public const string MapTopbar = "map-topbar";
         }
 
         public static class MediaPlayer
@@ -1995,7 +2044,6 @@ namespace Assets.Constants
             public const string DrawerHeader = "order-drawer-header";
             public const string DrawerPanel = "order-drawer-panel";
             public const string FooterActions = "order-footer-actions";
-            public const string HeaderTitleBox = "order-header-title-box";
             public const string ItemControls = "order-item-controls";
             public const string ItemImg = "order-item-img";
             public const string ItemImgPlaceholder = "order-item-img-placeholder";
@@ -2010,9 +2058,16 @@ namespace Assets.Constants
             public const string KdsProductName = "kds-product-name";
             public const string KdsTimeAgo = "kds-time-ago";
             public const string Number = "order-number";
-            public const string PriceBreakdown = "order-price-breakdown";
+            public const string OrderHeaderTitleBox = "order-header-title-box";
+            public const string OrderItemName = "order-item-name";
+            public const string OrderPriceBreakdown = "order-price-breakdown";
+            public const string OrderQtyStepper = "order-qty-stepper";
+            public const string OrderQtyVal = "order-qty-val";
+            public const string OrderSubtitle = "order-subtitle";
+            public const string OrderSummarySection = "order-summary-section";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string Show = "show";
             public const string SmartKanbanBoard = "smart-kanban-board";
             public const string SmartKanbanColumn = "smart-kanban-column";
             public const string SmartKanbanColumnCount = "smart-kanban-column-count";
@@ -2031,7 +2086,10 @@ namespace Assets.Constants
 
         public static class Payment
         {
+            public const string Active = "active";
+            public const string BodySubtext = "body-subtext";
             public const string BoxTitle = "box-title";
+            public const string BtnGatewayLink = "btn-gateway-link";
             public const string CashActionsRow = "cash-actions-row";
             public const string CashBox = "cash-box";
             public const string CashContainer = "cash-container";
@@ -2042,24 +2100,42 @@ namespace Assets.Constants
             public const string CashSessionPanel = "cash-session-panel";
             public const string CheckoutPanel = "checkout-panel";
             public const string DeeplinkBtn = "deeplink-btn";
+            public const string FeedDetails = "feed-details";
+            public const string FeedIcon = "feed-icon";
+            public const string FeedItem = "feed-item";
+            public const string FeedLinksCard = "feed-links-card";
+            public const string FeedName = "feed-name";
+            public const string FeedUrl = "feed-url";
             public const string GatewayIcon = "gateway-icon";
             public const string GatewayName = "gateway-name";
             public const string GatewaysGrid = "gateways-grid";
+            public const string Google = "google";
             public const string GroupDescription = "group-description";
             public const string GroupTitle = "group-title";
+            public const string Headline = "headline";
             public const string HintLink = "hint-link";
             public const string InvoiceAmount = "invoice-amount";
+            public const string InvoiceLabel = "invoice-label";
+            public const string InvoiceMethod = "invoice-method";
             public const string InvoiceSummaryBox = "invoice-summary-box";
+            public const string LabelTitle = "label-title";
             public const string LargeTerminalIcon = "large-terminal-icon";
             public const string MerchantSettingsPanel = "merchant-settings-panel";
             public const string Methods = "payment-methods";
+            public const string MethodSub = "method-sub";
+            public const string MethodTitle = "method-title";
+            public const string OnlineRedirectArea = "online-redirect-area";
             public const string OtpNotice = "otp-notice";
             public const string OtpRow = "otp-row";
             public const string OtpVerificationBox = "otp-verification-box";
             public const string PanelFooter = "panel-footer";
             public const string PanInputBox = "pan-input-box";
             public const string PaymentDashboard = "payment-dashboard";
+            public const string PaymentMethodBody = "payment-method-body";
+            public const string PaymentMethodsGrid = "payment-methods-grid";
+            public const string PaymentStatusChecker = "payment-status-checker";
             public const string PaymentSupport = "payment-support";
+            public const string PaymentTrustFooter = "payment-trust-footer";
             public const string PosActionDesc = "pos-action-desc";
             public const string PosActionTitle = "pos-action-title";
             public const string PosApprovedTitle = "pos-approved-title";
@@ -2070,10 +2146,21 @@ namespace Assets.Constants
             public const string PosSlipDetails = "pos-slip-details";
             public const string PosStartBtn = "pos-start-btn";
             public const string PosSuccessView = "pos-success-view";
+            public const string ProfileContainer = "profile-container";
+            public const string ProfileTitle = "profile-title";
+            public const string PromoPaymentCard = "payment-card";
+            public const string PromoSuccessCheckIcon = "success-check-icon";
+            public const string PromoSuccessIconWrap = "success-icon-wrap";
+            public const string PromoSuccessStep = "success-step";
+            public const string QrFrame = "qr-frame";
+            public const string QrImage = "qr-image";
+            public const string QrPaymentArea = "qr-payment-area";
+            public const string RedirectIcon = "redirect-icon";
             public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
+            public const string SpinnerInline = "spinner-inline";
             public const string SplitHeader = "split-header";
             public const string SplitPaymentBox = "split-payment-box";
             public const string SplitRow = "split-row";
@@ -2081,12 +2168,18 @@ namespace Assets.Constants
             public const string StepItem = "step-item";
             public const string StepLine = "step-line";
             public const string StepNum = "step-num";
+            public const string SuccessCheckIcon = "success-check-icon";
+            public const string SuccessDescClass = "success-desc";
+            public const string SuccessHintClass = "success-hint";
             public const string SuccessIcon = "success-icon";
+            public const string SuccessIconWrap = "success-icon-wrap";
+            public const string SuccessStep = "success-step";
+            public const string SuccessTitleClass = "success-title";
             public const string TabContentBox = "tab-content-box";
-            public const string TrustFooter = "payment-trust-footer";
             public const string TypeTabs = "type-tabs";
             public const string UzqrHighlight = "uzqr-highlight";
             public const string WorkflowStepper = "workflow-stepper";
+            public const string Yandex = "yandex";
         }
 
         public static class Picker
@@ -2137,14 +2230,19 @@ namespace Assets.Constants
             public const string LangCurrentLabel = "lang-current-label";
             public const string LangDropdownMenu = "lang-dropdown-menu";
             public const string LangDropdownWrapper = "lang-dropdown-wrapper";
+            public const string LangFlag = "lang-flag";
             public const string LangGlobeIcon = "lang-globe-icon";
             public const string LangInlineGrid = "lang-inline-grid";
+            public const string LangMenuBackdrop = "lang-menu-backdrop";
             public const string LangMenuItem = "lang-menu-item";
+            public const string LangMenuItemActive = "lang-menu-item--active";
             public const string LangMenuList = "lang-menu-list";
+            public const string LangName = "lang-name";
             public const string LangPillBtn = "lang-pill-btn";
             public const string LangSelect = "lang-select";
+            public const string LangSelectorInline = "lang-selector-inline";
+            public const string LangSelectorPill = "lang-selector-pill";
             public const string LangToggleBtn = "lang-toggle-btn";
-            public const string MapPickerWrapper = "map-picker-wrapper";
             public const string Md3ClosedBadge = "md3-closed-badge";
             public const string Md3DialogActionsRow = "md3-dialog-actions-row";
             public const string Md3DialogHeadline = "md3-dialog-headline";
@@ -2223,6 +2321,34 @@ namespace Assets.Constants
             public const string WeekMiniDots = "picker-week-mini-dots";
         }
 
+        public static class ProfileDialog
+        {
+            public const string FaceidCameraFallback = "faceid-camera-fallback";
+            public const string FaceidCameraFallbackIcon = "faceid-camera-fallback-icon";
+            public const string FaceidCameraViewport = "faceid-camera-viewport";
+            public const string FaceidDirectionBadge = "faceid-direction-badge";
+            public const string FaceidInstructionText = "faceid-instruction-text";
+            public const string FaceidModalContent = "faceid-modal-content";
+            public const string FaceidProgressBar = "faceid-progress-bar";
+            public const string FaceidStageStep = "faceid-stage-step";
+            public const string FaceidStatusMessage = "faceid-status-message";
+            public const string ProfileAuthActions = "profile-auth-actions";
+            public const string ProfileAuthCard = "profile-auth-card";
+            public const string ProfileAuthDesc = "profile-auth-desc";
+            public const string ProfileAuthInfo = "profile-auth-info";
+            public const string ProfileAuthText = "profile-auth-text";
+            public const string ProfileAuthTitle = "profile-auth-title";
+            public const string ProfileColorPickerBox = "profile-color-picker-box";
+            public const string ProfileColorPickerLabel = "profile-color-picker-label";
+            public const string ProfileDeleteIcon = "profile-delete-icon";
+            public const string ProfileDialogContent = "profile-dialog-content";
+            public const string ProfilePasskeyIcon = "profile-passkey-icon";
+            public const string ProfileSecuritySubtext = "profile-security-subtext";
+            public const string ProfileThemeGrid = "profile-theme-grid";
+            public const string StepActive = "step-active";
+            public const string StepTertiary = "step-tertiary";
+        }
+
         public static class Progress
         {
             public const string CashProgressBar = "cash-progress-bar";
@@ -2246,6 +2372,7 @@ namespace Assets.Constants
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
             public const string HudTr = "hud-tr";
+            public const string PreviewInfo = "preview-info";
             public const string QrBotBtn = "qr-bot-btn";
             public const string QrBox = "qr-box";
             public const string QrCanvasBox = "qr-canvas-box";
@@ -2298,6 +2425,7 @@ namespace Assets.Constants
             public const string QrgTitle = "qrg-title";
             public const string QrHint = "qr-hint";
             public const string QrHudCorner = "qr-hud-corner";
+            public const string QrInfoIcon = "info-icon";
             public const string QrInstruction = "qr-instruction";
             public const string QrLaserScanner = "qr-laser-scanner";
             public const string QrLoadingBox = "qr-loading-box";
@@ -2345,17 +2473,14 @@ namespace Assets.Constants
 
         public static class Scrollbar
         {
-            public const string MapCategoriesScroll = "map-categories-scroll";
             public const string ScrollSnapX = "m3-scroll-snap-x";
             public const string ScrollThin = "m3-scroll-thin";
             public const string ScrollThin_2 = "scroll-thin";
-            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
         }
 
         public static class Scrollbars
         {
-            public const string MapPanelContent = "map-panel-content";
             public const string OptionsContainer = "options-container";
             public const string OrderSummaryList = "order-summary-list";
             public const string ProductThumbnails = "product-thumbnails";
@@ -2370,29 +2495,17 @@ namespace Assets.Constants
 
         public static class Search
         {
-            public const string AssistantSearch = "assistant-search";
-            public const string AssistantSearchContent = "assistant-search-content";
-            public const string AssistantSearchIcon = "assistant-search-icon";
-            public const string AssistantSearchPhrase = "assistant-search-phrase";
-            public const string Bar = "search-bar";
-            public const string BarInner = "search-bar-inner";
             public const string ClearBtn = "search-clear-btn";
             public const string Container = "m3-search-container";
             public const string HomeSearchContainer = "home-search-container";
-            public const string MapSearchInline = "map-search-inline";
             public const string MaterialSearchContainer = "material-search-container";
             public const string MaterialTextField = "material-text-field";
-            public const string Panel = "search-panel";
             public const string PosSearchInput = "pos-search-input";
             public const string RouteBtn = "search-route-btn";
             public const string SearchContainer = "search-container";
-            public const string SearchDivider = "search-divider";
-            public const string SearchIcon = "search-icon";
-            public const string SearchInput = "search-input";
             public const string SearchMode = "search-mode";
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
-            public const string UxSearchBox = "ux-search-box";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -2443,10 +2556,10 @@ namespace Assets.Constants
             public const string SeatDesignerSection = "seat-designer-section";
             public const string SeatDesignerSectionLabel = "seat-designer-section-label";
             public const string SeatDesignerSectionTitle = "seat-designer-section-title";
-            public const string SeatDesignerToolbar = "seat-designer-toolbar";
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatToolbar = "seat-designer-toolbar";
         }
 
         public static class SegmentedButton
@@ -2468,14 +2581,22 @@ namespace Assets.Constants
         public static class SignIn
         {
             public const string AuthDivider = "auth-divider";
+            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OtpTargetHint = "otp-target-hint";
+            public const string SigninBrandIcon = "signin-brand-icon";
+            public const string SigninBrandLink = "signin-brand-link";
+            public const string SigninBrandText = "signin-brand-text";
             public const string SigninCard = "signin-card";
             public const string SigninContainer = "signin-container";
             public const string SigninErrorBanner = "signin-error-banner";
+            public const string SigninFooter = "signin-footer";
             public const string SigninHeader = "signin-header";
             public const string SigninLogoBadge = "signin-logo-badge";
+            public const string SigninPageWrapper = "signin-page-wrapper";
             public const string SigninSubtitle = "signin-subtitle";
             public const string SigninTitle = "signin-title";
+            public const string SigninTopBar = "signin-top-bar";
+            public const string SigninTopBarActions = "signin-top-bar-actions";
         }
 
         public static class Skeleton
@@ -2484,11 +2605,16 @@ namespace Assets.Constants
             public const string Circle = "m3-skeleton-circle";
             public const string Root = "m3-skeleton";
             public const string Short = "m3-short";
+            public const string SkeletonCard = "m3-skeleton-card";
+            public const string SkeletonCircle = "m3-skeleton-circle";
+            public const string SkeletonRoot = "m3-skeleton";
+            public const string SkeletonText = "m3-skeleton-text";
             public const string Text = "m3-skeleton-text";
         }
 
         public static class SmartDataView
         {
+            public const string SmartDataViewContent = "smart-data-view-content";
             public const string SmartDataViewHeader = "smart-data-view-header";
             public const string SmartdataviewRoot = "smart-data-view";
         }
@@ -2515,14 +2641,15 @@ namespace Assets.Constants
         {
             public const string SmartToastBody = "smart-toast-body";
             public const string SmartToastCloseBtn = "smart-toast-close-btn";
-            public const string SmartToastContainer = "smart-toast-container";
             public const string SmartToastError = "smart-toast-error";
             public const string SmartToastHeader = "smart-toast-header";
             public const string SmartToastIcon = "smart-toast-icon";
+            public const string SmartToastInfo = "smart-toast-info";
             public const string SmarttoastRoot = "smart-toast";
             public const string SmartToastSuccess = "smart-toast-success";
             public const string SmartToastTitle = "smart-toast-title";
             public const string SmartToastWarning = "smart-toast-warning";
+            public const string ToastContainer = "smart-toast-container";
         }
 
         public static class Subscription
@@ -2588,6 +2715,7 @@ namespace Assets.Constants
             public const string Org = "org";
             public const string PaginationText = "pagination-text";
             public const string Paginator = "paginator";
+            public const string PaginatorSummary = "paginator-summary";
             public const string PaymentCell = "payment-cell";
             public const string Quickgrid = "quickgrid";
             public const string ReceiptCellName = "receipt-cell-name";
@@ -2598,13 +2726,15 @@ namespace Assets.Constants
             public const string Root = "m3-table";
             public const string RowActions = "m3-table-row-actions";
             public const string RowActions_2 = "table-row-actions";
-            public const string RowLabel = "row-label";
-            public const string RowValue = "row-value";
             public const string ScheduleTable = "schedule-table";
             public const string ScrollContainer = "table-scroll-container";
             public const string SelectableText = "selectable-text";
             public const string SmartGridContainer = "smart-grid-container";
             public const string SortIndicator = "sort-indicator";
+            public const string TableIcon = "table-icon";
+            public const string TablePaginator = "paginator";
+            public const string TableRowLabel = "row-label";
+            public const string TableRowValue = "row-value";
             public const string W3 = "w3";
             public const string Wrapper = "m3-table-wrapper";
         }
@@ -2616,7 +2746,6 @@ namespace Assets.Constants
 
         public static class Terminal
         {
-            public const string BadgeCounter = "badge-counter";
             public const string CashPaymentLayout = "cash-payment-layout";
             public const string DialogHeader = "m3-dialog-header";
             public const string DialogTitleGroup = "m3-dialog-title-group";
@@ -2647,6 +2776,7 @@ namespace Assets.Constants
             public const string PosCompleteBtn = "pos-complete-btn";
             public const string PosDetailsImg = "pos-details-img";
             public const string PosDetailsList = "pos-details-list";
+            public const string PosDetailsRow = "row";
             public const string PosDeviceIcon = "pos-device-icon";
             public const string PosDeviceIcons = "pos-device-icons";
             public const string PosEmptyIcon = "pos-empty-icon";
@@ -2686,6 +2816,7 @@ namespace Assets.Constants
             public const string PosSidebar = "pos-sidebar";
             public const string PosSidebarHeader = "pos-sidebar-header";
             public const string PosSidebarHeaderRow = "pos-sidebar-header-row";
+            public const string PosTechChips = "pos-tech-chips";
             public const string PosTerminalLayout = "pos-terminal-layout";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string PosUxModeTitle = "pos-uxmode-title";
@@ -2701,9 +2832,6 @@ namespace Assets.Constants
         {
             public const string DarkMode = "dark-mode";
             public const string GroupToggle = "group-toggle";
-            public const string MapPanelToggle = "map-panel-toggle";
-            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
-            public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string ModeIndicator = "mode-indicator";
             public const string ModePreview = "mode-preview";
             public const string ModeToggle = "m3-mode-toggle";
@@ -2740,7 +2868,6 @@ namespace Assets.Constants
             public const string LabelSmall = "m3-label-small";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
-            public const string PlaceDetailsTitleContainer = "place-details-title-container";
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
@@ -2759,6 +2886,7 @@ namespace Classes
 {
         public static class About
         {
+            public const string AboutHero = "about-hero";
             public const string AboutTitle = "about-title";
             public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
@@ -2766,8 +2894,6 @@ namespace Classes
             public const string ControlsPanelExpanded = "controls-panel-expanded";
             public const string CtaSection = "about-cta-section";
             public const string DetailsMode = "details-mode";
-            public const string Hero = "about-hero";
-            public const string OrderSubtitle = "order-subtitle";
             public const string PillarsSection = "about-pillars-section";
             public const string Subtitle = "about-subtitle";
             public const string TechStackSection = "about-tech-stack-section";
@@ -2800,6 +2926,7 @@ namespace Classes
             public const string TouchIcon = "ad-touch-icon";
             public const string UpgradeLink = "ad-upgrade-link";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
+            public const string YandexRtbContainer = "yandex-rtb-container";
         }
 
         public static class Analytics
@@ -2869,6 +2996,8 @@ namespace Classes
         public static class Avatar
         {
             public const string AvatarBox = "avatar-box";
+            public const string AvatarButton = "avatar-button";
+            public const string AvatarContacts = "contacts";
             public const string AvatarRoot = "m3-avatar";
             public const string Button = "avatar-button";
             public const string ContactGrid = "contact-grid";
@@ -2879,7 +3008,6 @@ namespace Classes
             public const string Headline = "headline";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string MaterialTextField = "material-text-field";
-            public const string PlaceDetailsAvatar = "place-details-avatar";
             public const string Pulse = "avatar-pulse";
             public const string Row = "row";
         }
@@ -2889,12 +3017,13 @@ namespace Classes
             public const string AdNetworkBadge = "ad-network-badge";
             public const string AdNetworkBadgeRow = "ad-network-badge-row";
             public const string AgeRestriction = "badge-age-restriction";
-            public const string BackButton = "m3-back-button";
-            public const string BackIcon = "m3-back-icon";
             public const string BadgeActive = "badge-active";
+            public const string BadgeCounter = "badge-counter";
             public const string BadgeIcon = "badge-icon";
             public const string BadgeInfo = "info";
-            public const string BadgeRoot = "badge";
+            public const string BadgeNone = "badge-none";
+            public const string BadgeRoot = "m3-badge";
+            public const string BadgeRoot_2 = "badge";
             public const string BadgeVerified = "badge-verified";
             public const string Blocked = "badge-blocked";
             public const string Canceled = "canceled";
@@ -2926,18 +3055,12 @@ namespace Classes
             public const string KdsStatusTag = "kds-status-tag";
             public const string Made = "made";
             public const string Making = "badge-making";
-            public const string MapMeasureBadge = "map-measure-badge";
-            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
-            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
-            public const string MapMeasureBadgeValue = "map-measure-badge-value";
             public const string None = "badge-none";
-            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OrderBadge = "order-badge";
             public const string OrderStatusBadge = "order-status-badge";
             public const string Paid = "paid";
             public const string Paused = "badge-paused";
             public const string PillBadge = "m3-pill-badge";
-            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PopularBadge = "popular-badge";
             public const string PosPaymentBadge = "pos-payment-badge";
             public const string PosPaymentBadgeLabel = "pos-payment-badge-label";
@@ -3032,6 +3155,7 @@ namespace Classes
         {
             public const string ActionsRow = "actions-row";
             public const string BackButton = "back-button";
+            public const string BackButton_2 = "m3-back-button";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BtnAndroid = "btn-android";
             public const string BtnBot = "btn-bot";
@@ -3046,6 +3170,7 @@ namespace Classes
             public const string BtnText = "btn-text";
             public const string BtnWeb = "btn-web";
             public const string BtnWindows = "btn-windows";
+            public const string ButtonActive = "active";
             public const string CatTabFintech = "cat-tab-fintech";
             public const string CatTabHospitality = "cat-tab-hospitality";
             public const string CatTabRetail = "cat-tab-retail";
@@ -3060,15 +3185,6 @@ namespace Classes
             public const string GridButtons = "m3-grid-buttons";
             public const string GridIconButtons = "m3-grid-icon-buttons";
             public const string M3xBtnPill = "m3x-btn-pill";
-            public const string MapActionButton = "map-action-button";
-            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
-            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
-            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
-            public const string MapRouteCloseBtn = "map-route-close-btn";
-            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
-            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
-            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
-            public const string MapRouteSwapBtn = "map-route-swap-btn";
             public const string NavControlBtn = "nav-control-btn";
             public const string NavIcon = "nav-icon";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -3076,9 +3192,6 @@ namespace Classes
             public const string PresetBtn = "preset-btn";
             public const string Primary = "primary";
             public const string ProductActionsBar = "product-actions-bar";
-            public const string RouteButton = "route-button";
-            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
-            public const string RouteStartBtn = "route-start-btn";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string ShowcaseNavBtn = "showcase-nav-btn";
@@ -3124,6 +3237,7 @@ namespace Classes
             public const string CardFilled_2 = "Filled";
             public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
+            public const string CardFormGrid = "card-form-grid";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
             public const string CardGrid = "card-grid";
@@ -3154,11 +3268,9 @@ namespace Classes
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
-            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
             public const string Footer_2 = "m3-card-footer";
-            public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
             public const string GlassCard = "glass-card";
             public const string Grid = "card-grid";
@@ -3183,7 +3295,6 @@ namespace Classes
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
             public const string MediaCard = "m3-media-card";
@@ -3230,10 +3341,12 @@ namespace Classes
             public const string ProductCard = "product-card";
             public const string ProductDetailCard = "product-detail-card";
             public const string ProductTitle = "product-title";
-            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RowLabel = "m3-row-label";
+            public const string RowLabel_2 = "row-label";
             public const string RowValue = "m3-row-value";
+            public const string RowValue_2 = "row-value";
             public const string SaveCardToggle = "save-card-toggle";
+            public const string Selected = "selected";
             public const string SelectedOrgCard = "selected-org-card";
             public const string ShippingCard = "shipping-card";
             public const string ShowcaseCard = "showcase-card";
@@ -3272,7 +3385,9 @@ namespace Classes
             public const string SummaryCard_2 = "summary-card";
             public const string SummaryDivider = "m3-summary-divider";
             public const string SummaryRow = "m3-summary-row";
+            public const string SummaryRow_2 = "summary-row";
             public const string SummaryRows = "m3-summary-rows";
+            public const string SummaryRows_2 = "summary-rows";
             public const string SummaryTitle = "m3-summary-title";
             public const string SupportCard = "support-card";
             public const string SupportCardAction = "support-card-action";
@@ -3280,9 +3395,6 @@ namespace Classes
             public const string TechCard = "tech-card";
             public const string TicketQrCard = "ticket-qr-card";
             public const string TopRow = "card-top-row";
-            public const string TotalLabel = "m3-total-label";
-            public const string TotalRow = "m3-total-row";
-            public const string TotalValue = "m3-total-value";
             public const string UxModeCard = "ux-mode-card";
             public const string UxModeCardActions = "ux-mode-card-actions";
             public const string UxModeCardHeader = "ux-mode-card-header";
@@ -3301,6 +3413,7 @@ namespace Classes
             public const string WishlistMedia = "wishlist-media";
             public const string WishlistPlaceholder = "wishlist-placeholder";
             public const string WishlistPriceTag = "wishlist-price-tag";
+            public const string WishlistProductCard = "product-card";
             public const string WishlistTitleText = "wishlist-title-text";
             public const string WishlistWishBtn = "wishlist-wish-btn";
             public const string YandexZoomCard = "yandex-zoom-card";
@@ -3309,16 +3422,10 @@ namespace Classes
         public static class Cart
         {
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string HeaderBrandLink = "header-brand-link";
-            public const string HeaderBrandText = "header-brand-text";
-            public const string HeaderBrandZone = "header-brand-zone";
-            public const string HeaderEndZone = "header-end-zone";
-            public const string HeaderStartZone = "header-start-zone";
             public const string Interactive = "interactive";
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
-            public const string PageHeaderStart = "m3-page-header-start";
         }
 
         public static class Chat
@@ -3327,17 +3434,24 @@ namespace Classes
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
+            public const string AssistantSearch = "assistant-search";
+            public const string AssistantSearchContent = "assistant-search-content";
+            public const string AssistantSearchIcon = "assistant-search-icon";
+            public const string AssistantSearchPhrase = "assistant-search-phrase";
             public const string BackLink = "chat-back-link";
-            public const string BottomSection = "chat-bottom-section";
+            public const string ChatBackLink = "chat-back-link";
+            public const string ChatBottomSection = "chat-bottom-section";
+            public const string ChatContainer = "chat-container";
+            public const string ChatHeaderContainer = "chat-header-container";
+            public const string ChatPageRoot = "chat-page-root";
+            public const string ChatView = "chat-view";
             public const string Citation = "citation";
             public const string CitationContent = "citation-content";
             public const string CitationFile = "citation-file";
-            public const string Container = "chat-container";
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
-            public const string PageRoot = "chat-page-root";
-            public const string View = "chat-view";
+            public const string UserMessage = "user-message";
         }
 
         public static class Chip
@@ -3360,12 +3474,9 @@ namespace Classes
             public const string FloatingChip = "floating-chip";
             public const string GridChips = "m3-grid-chips";
             public const string InteractiveChip = "interactive-chip";
-            public const string MapCategoryChip = "map-category-chip";
-            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string PayChip = "pay-chip";
             public const string PosChipSet = "pos-chip-set";
             public const string PosSupportedChips = "pos-supported-chips";
-            public const string PosTechChips = "pos-tech-chips";
             public const string ProductTagChip = "product-tag-chip";
             public const string SmartFilterChips = "smart-filter-chips";
             public const string SmartFormChipContainer = "smart-form-chip-container";
@@ -3437,7 +3548,6 @@ namespace Classes
 
         public static class CommerceModes
         {
-            public const string RouteDistanceBar = "route-distance-bar";
             public const string TicketCode = "ticket-code";
             public const string TicketNote = "ticket-note";
             public const string ZoneCheckBanner = "zone-check-banner";
@@ -3452,10 +3562,10 @@ namespace Classes
             public const string AiBlobSvg = "ai-blob-svg";
             public const string AmountValue = "amount-value";
             public const string AppFooter = "app-footer";
-            public const string AppHeader = "app-header";
             public const string ArchiveType = "archive-type";
             public const string B2bCtaGroup = "b2b-cta-group";
             public const string BackIcon = "back-icon";
+            public const string BackIcon_2 = "m3-back-icon";
             public const string BackLink = "back-link";
             public const string BarLabels = "bar-labels";
             public const string BarTrack = "bar-track";
@@ -3487,9 +3597,11 @@ namespace Classes
             public const string CatalogTitle = "catalog-title";
             public const string CenterBox = "m3-center-box";
             public const string ChevronIcon = "chevron-icon";
+            public const string ChipPlace = "chip-place";
             public const string ClickPopupActions = "click-popup-actions";
             public const string ClickPopupAddress = "click-popup-address";
             public const string ClickPopupCoords = "click-popup-coords";
+            public const string Closed = "closed";
             public const string Collapsed = "collapsed";
             public const string ColorGrid = "color-grid";
             public const string ColorHex = "color-hex";
@@ -3501,6 +3613,7 @@ namespace Classes
             public const string ColumnReady = "column-ready";
             public const string ColumnTitle = "column-title";
             public const string CommonDragHandle = "drag-handle";
+            public const string CommonGlass = "glass";
             public const string CommonGrid = "m3-grid";
             public const string CommonLabel = "m3-label";
             public const string CommonPageHeader = "m3-page-header";
@@ -3611,6 +3724,7 @@ namespace Classes
             public const string InStockText = "in-stock-text";
             public const string InteractiveAction = "interactive-action";
             public const string IsInvalid = "is-invalid";
+            public const string IsOpen = "is-open";
             public const string ItemActions = "item-actions";
             public const string ItemHeadline = "item-headline";
             public const string ItemIcon = "item-icon";
@@ -3624,8 +3738,7 @@ namespace Classes
             public const string ItemTotalPrice = "item-total-price";
             public const string ItemUnitPrice = "item-unit-price";
             public const string KanbanBoard = "m3-kanban-board";
-            public const string KanbanColumn = "kanban-column";
-            public const string KanbanColumn_2 = "m3-kanban-column";
+            public const string KanbanColumn = "m3-kanban-column";
             public const string KdsBoard = "kds-board";
             public const string KdsColumn = "kds-column";
             public const string L0 = "l0";
@@ -3634,9 +3747,9 @@ namespace Classes
             public const string L3 = "l3";
             public const string L4 = "l4";
             public const string LabelSm = "m3-label-sm";
+            public const string LayoutLinkStack = "link-stack";
             public const string LegendDot = "legend-dot";
             public const string LegendItem = "legend-item";
-            public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
             public const string M3Card = "m3-card";
@@ -3645,13 +3758,20 @@ namespace Classes
             public const string M3CardMedia = "m3-card-media";
             public const string M3CardMediaPlaceholder = "m3-card-media-placeholder";
             public const string M3CardOutlined = "m3-card-outlined";
+            public const string M3TotalLabel = "m3-total-label";
+            public const string M3TotalRow = "m3-total-row";
+            public const string M3TotalValue = "m3-total-value";
             public const string MainFooter = "main-footer";
             public const string ManeuverDetails = "maneuver-details";
             public const string ManeuverDistance = "maneuver-distance";
             public const string ManeuverIcon = "maneuver-icon";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string ManeuverText = "maneuver-text";
+            public const string MapActionButton = "map-action-button";
+            public const string MapActive = "active";
             public const string MapCanvas = "map-canvas";
+            public const string MapCategoriesScroll = "map-categories-scroll";
+            public const string MapCategoryChip = "map-category-chip";
             public const string MapClickPopup = "map-click-popup";
             public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
@@ -3659,21 +3779,60 @@ namespace Classes
             public const string MapFloorLabel = "map-floor-label";
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
+            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
+            public const string MapMeasureBadge = "map-measure-badge";
+            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
+            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
+            public const string MapMeasureBadgeValue = "map-measure-badge-value";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
+            public const string MapNavigatorPanel = "navigator-panel";
+            public const string MapNearbyResultsPanel = "nearby-results-panel";
+            public const string MapPanelContent = "map-panel-content";
+            public const string MapPanelToggle = "map-panel-toggle";
+            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
+            public const string MapPanelToggleTab = "map-panel-toggle-tab";
+            public const string MapPickerWrapper = "map-picker-wrapper";
+            public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
+            public const string MapRouteCloseBtn = "map-route-close-btn";
+            public const string MapRouteDeleteBtn = "map-route-delete-btn";
             public const string MapRouteDot = "map-route-dot";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
+            public const string MapRouteFieldsActions = "map-route-fields-actions";
+            public const string MapRouteFieldsDots = "map-route-fields-dots";
+            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
+            public const string MapRouteFieldsRow = "map-route-fields-row";
+            public const string MapRouteHeaderRow = "map-route-header-row";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteInput = "map-route-input";
+            public const string MapRouteInputs = "map-route-inputs";
+            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string MapRouteProfileRow = "map-route-profile-row";
+            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
+            public const string MapRouteSubmitBtn = "map-route-submit-btn";
+            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
+            public const string MapRouteSuggestionIcon = "map-route-suggestion-icon";
+            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapRouteSwapBtn = "map-route-swap-btn";
+            public const string MapSearchIcon = "search-icon";
+            public const string MapSearchInline = "map-search-inline";
             public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapToolbar = "map-toolbar";
+            public const string MapTopbar = "map-topbar";
             public const string MapZoomDivider = "map-zoom-divider";
             public const string MapZoomStack = "map-zoom-stack";
+            public const string MaterialTextField = "material-text-field";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -3689,11 +3848,9 @@ namespace Classes
             public const string NavFab = "m3-nav-fab";
             public const string NavigatorControls = "navigator-controls";
             public const string NavigatorManeuverBar = "navigator-maneuver-bar";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavigatorStatsBar = "navigator-stats-bar";
             public const string NavItem = "nav-item";
             public const string NavMobile = "nav-mobile";
-            public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NoMessages = "no-messages";
             public const string NoNav = "no-nav";
             public const string NotificationBanner = "notification-banner";
@@ -3703,6 +3860,7 @@ namespace Classes
             public const string OrderItemsSubheader = "order-items-subheader";
             public const string OrdersErrorBanner = "orders-error-banner";
             public const string OrdersKanbanBoard = "orders-kanban-board";
+            public const string OrdersKanbanColumn = "kanban-column";
             public const string OrdersListGrid = "orders-list-grid";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsMapPage = "organizations-map-page";
@@ -3713,6 +3871,7 @@ namespace Classes
             public const string OrgShowcaseSection = "org-showcase-section";
             public const string PageContainer = "m3-page-container";
             public const string PageHeaderActions = "m3-page-header-actions";
+            public const string PageHeaderStart = "m3-page-header-start";
             public const string PageHeaderTitle = "m3-page-header-title";
             public const string PageHeading = "page-heading";
             public const string PageSubtitle = "page-subtitle";
@@ -3727,13 +3886,20 @@ namespace Classes
             public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
+            public const string PlaceDetailsAvatar = "place-details-avatar";
+            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PlaceDetailsBody = "place-details-body";
             public const string PlaceDetailsContent = "place-details-content";
             public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHeader = "place-details-header";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string PlaceDetailsHero = "place-details-hero";
+            public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceDetailsName = "place-details-name";
             public const string PlaceDetailsPanel = "place-details-panel";
+            public const string PlaceDetailsTitleContainer = "place-details-title-container";
+            public const string PlaceInfoIcon = "info-icon";
+            public const string PlaceInfoRow = "place-info-row";
             public const string PlanCurrency = "plan-currency";
             public const string PlanFeatures = "plan-features";
             public const string PlanHeader = "plan-header";
@@ -3768,8 +3934,6 @@ namespace Classes
             public const string ProductPriceSection = "product-price-section";
             public const string ProductSpecsGrid = "product-specs-grid";
             public const string ProductUnit = "product-unit";
-            public const string ProfileContainer = "profile-container";
-            public const string ProfileTitle = "profile-title";
             public const string PromoSection = "promo-section";
             public const string PromoSuccessText = "promo-success-text";
             public const string ProTier = "pro-tier";
@@ -3785,18 +3949,27 @@ namespace Classes
             public const string RouteAlternativeAction = "route-alternative-action";
             public const string RouteAlternativeActions = "route-alternative-actions";
             public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeIcon = "route-alternative-icon";
             public const string RouteAlternativeLabel = "route-alternative-label";
             public const string RouteAlternativeMain = "route-alternative-main";
             public const string RouteAlternativeSecondary = "route-alternative-secondary";
             public const string RouteAlternativesList = "route-alternatives-list";
             public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteButton = "route-button";
             public const string RouteClose = "route-close";
+            public const string RouteDistanceBar = "route-distance-bar";
             public const string RouteError = "route-error";
             public const string RouteHeader = "route-header";
+            public const string RouteInfo = "route-info";
             public const string RouteLabel = "route-label";
+            public const string RouteLoading = "route-loading";
             public const string RouteOptionsToolbar = "route-options-toolbar";
+            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
             public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string RouteStartBtn = "route-start-btn";
+            public const string RouteStartButton = "route-start-button";
             public const string RouteStartContainer = "route-start-container";
             public const string RouteStat = "route-stat";
             public const string RouteStepMeta = "route-step-meta";
@@ -3810,6 +3983,11 @@ namespace Classes
             public const string SafeAreaTop = "safe-area-top";
             public const string ScoreBox = "score-box";
             public const string ScoreCircle = "score-circle";
+            public const string SearchBarInner = "search-bar-inner";
+            public const string SearchDivider = "search-divider";
+            public const string SearchInput = "search-input";
+            public const string SearchModeBar = "search-bar";
+            public const string SearchPanel = "search-panel";
             public const string SecondaryCta = "secondary-cta";
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SectionDesc = "section-desc";
@@ -3895,8 +4073,6 @@ namespace Classes
             public const string StressTarget = "stress-target";
             public const string Suggestions = "suggestions";
             public const string SummaryDivider = "summary-divider";
-            public const string SummaryRow = "summary-row";
-            public const string SummaryRows = "summary-rows";
             public const string SupportActionGrid = "support-action-grid";
             public const string SupportGrid = "support-grid";
             public const string SupportLabel = "support-label";
@@ -3927,6 +4103,7 @@ namespace Classes
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchTarget44 = "touch-target-44";
             public const string TouchTarget48 = "touch-target-48";
             public const string TrialDaysHighlight = "trial-days-highlight";
@@ -3938,6 +4115,7 @@ namespace Classes
             public const string UxExpandContainer = "ux-expand-container";
             public const string UxFilterMeta = "ux-filter-meta";
             public const string UxModesSection = "ux-modes-section";
+            public const string UxSearchBox = "ux-search-box";
             public const string UxSpotlightContainer = "ux-spotlight-container";
             public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxSpotlightHeader = "ux-spotlight-header";
@@ -4063,7 +4241,6 @@ namespace Classes
             public const string DiagSpaceTop = "diag-space-top";
             public const string DiagSuccess = "diag-success";
             public const string DiagWarning = "diag-warning";
-            public const string OrderSummarySection = "order-summary-section";
         }
 
         public static class Dialog
@@ -4086,6 +4263,7 @@ namespace Classes
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
+            public const string PromotionDialog = "promotion-dialog";
             public const string PromotionModalBody = "promotion-modal-body";
             public const string PromotionModalHeader = "promotion-modal-header";
             public const string PromotionModalSubtitle = "promotion-modal-subtitle";
@@ -4122,9 +4300,9 @@ namespace Classes
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
+            public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string Show = "show";
             public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
@@ -4154,15 +4332,20 @@ namespace Classes
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
             public const string DocsContentHeader = "docs-content-header";
+            public const string DocsContentLoader = "docs-content-loader";
             public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
+            public const string DocsGroupTitle = "docs-group-title";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DocsHeaderTitle = "docs-header-title";
+            public const string DocsLoaderContainer = "docs-loader-container";
+            public const string DocsLoadingText = "docs-loading-text";
+            public const string DocsMenuIcon = "docs-menu-icon";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -4171,9 +4354,11 @@ namespace Classes
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
+            public const string DocsSidebarToggleBtn = "docs-sidebar-toggle-btn";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DocsWelcomeIcon = "docs-welcome-icon";
+            public const string SidebarOpen = "sidebar-open";
         }
 
         public static class Donation
@@ -4255,6 +4440,7 @@ namespace Classes
             public const string FaceidNotice = "faceid-notice";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
             public const string FaceidStatusText = "faceid-status-text";
+            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string Scanning = "scanning";
             public const string StatusError = "status-error";
             public const string StatusNeutral = "status-neutral";
@@ -4266,7 +4452,6 @@ namespace Classes
         {
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
-            public const string RouteLoading = "route-loading";
             public const string Short = "short";
         }
 
@@ -4309,7 +4494,6 @@ namespace Classes
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
-            public const string HeaderGridLayout = "header-grid-layout";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -4338,9 +4522,6 @@ namespace Classes
             public const string InputFieldGroup = "input-field-group";
             public const string Invalid = "invalid";
             public const string Legend = "m3-legend";
-            public const string MapRouteFieldsDots = "map-route-fields-dots";
-            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
-            public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
             public const string PosFormField = "pos-form-field";
@@ -4363,8 +4544,6 @@ namespace Classes
         {
             public const string GridSelection = "m3-grid-selection";
             public const string InputBox = "input-box";
-            public const string MapRouteInput = "map-route-input";
-            public const string MapRouteInputs = "map-route-inputs";
             public const string PromoInputGroup = "promo-input-group";
             public const string SelectInput = "select-input";
             public const string SelectionItem = "m3-selection-item";
@@ -4420,7 +4599,6 @@ namespace Classes
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
-            public const string HeaderCenterZone = "header-center-zone";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
@@ -4452,19 +4630,24 @@ namespace Classes
 
         public static class Header
         {
+            public const string AppHeader = "app-header";
+            public const string AppHeaderSticky = "header-sticky";
             public const string BrandIconBox = "header-brand-icon-box";
+            public const string HeaderBrandLink = "header-brand-link";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string HeaderBrandZone = "header-brand-zone";
+            public const string HeaderCenterZone = "header-center-zone";
             public const string HeaderContent = "header-content";
+            public const string HeaderEndZone = "header-end-zone";
+            public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
+            public const string HeaderStartZone = "header-start-zone";
             public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
-            public const string MapRouteHeaderRow = "map-route-header-row";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
             public const string PageHeaderText = "m3-page-header-text";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string RocketIcon = "header-rocket-icon";
-            public const string Sticky = "header-sticky";
         }
 
         public static class Help
@@ -4501,7 +4684,7 @@ namespace Classes
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
-            public const string InfoIcon = "info-icon";
+            public const string InfoGridRoot = "m3-info-grid";
             public const string InfoItem = "m3-info-item";
             public const string InfoItem_2 = "info-item";
             public const string InfoLabel = "m3-info-label";
@@ -4511,18 +4694,14 @@ namespace Classes
             public const string ItemInfo = "item-info";
             public const string KioskBrandInfo = "kiosk-brand-info";
             public const string OrderItemInfo = "order-item-info";
-            public const string PlaceDetailsInfoSection = "place-details-info-section";
-            public const string PlaceInfoRow = "place-info-row";
+            public const string PlaceInfoIcon = "info-icon";
             public const string PosQrInfo = "pos-qr-info";
-            public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
             public const string Root = "m3-info-grid";
-            public const string RouteInfo = "route-info";
             public const string SellerInfo = "seller-info";
             public const string SessionItemInfo = "session-item-info";
             public const string ShowcaseStatInfo = "showcase-stat-info";
             public const string SmartFormInfo = "smart-form-info";
-            public const string SmartToastInfo = "smart-toast-info";
             public const string SpotlightInfo = "spotlight-info";
             public const string TicketInfo = "ticket-info";
         }
@@ -4706,9 +4885,6 @@ namespace Classes
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
-            public const string MapPopupBackdrop = "map-popup-backdrop";
-            public const string MapToolbar = "map-toolbar";
-            public const string MapTopbar = "map-topbar";
         }
 
         public static class MediaPlayer
@@ -4738,7 +4914,6 @@ namespace Classes
             public const string DrawerHeader = "order-drawer-header";
             public const string DrawerPanel = "order-drawer-panel";
             public const string FooterActions = "order-footer-actions";
-            public const string HeaderTitleBox = "order-header-title-box";
             public const string ItemControls = "order-item-controls";
             public const string ItemImg = "order-item-img";
             public const string ItemImgPlaceholder = "order-item-img-placeholder";
@@ -4753,9 +4928,16 @@ namespace Classes
             public const string KdsProductName = "kds-product-name";
             public const string KdsTimeAgo = "kds-time-ago";
             public const string Number = "order-number";
-            public const string PriceBreakdown = "order-price-breakdown";
+            public const string OrderHeaderTitleBox = "order-header-title-box";
+            public const string OrderItemName = "order-item-name";
+            public const string OrderPriceBreakdown = "order-price-breakdown";
+            public const string OrderQtyStepper = "order-qty-stepper";
+            public const string OrderQtyVal = "order-qty-val";
+            public const string OrderSubtitle = "order-subtitle";
+            public const string OrderSummarySection = "order-summary-section";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string Show = "show";
             public const string SmartKanbanBoard = "smart-kanban-board";
             public const string SmartKanbanColumn = "smart-kanban-column";
             public const string SmartKanbanColumnCount = "smart-kanban-column-count";
@@ -4774,7 +4956,10 @@ namespace Classes
 
         public static class Payment
         {
+            public const string Active = "active";
+            public const string BodySubtext = "body-subtext";
             public const string BoxTitle = "box-title";
+            public const string BtnGatewayLink = "btn-gateway-link";
             public const string CashActionsRow = "cash-actions-row";
             public const string CashBox = "cash-box";
             public const string CashContainer = "cash-container";
@@ -4785,24 +4970,42 @@ namespace Classes
             public const string CashSessionPanel = "cash-session-panel";
             public const string CheckoutPanel = "checkout-panel";
             public const string DeeplinkBtn = "deeplink-btn";
+            public const string FeedDetails = "feed-details";
+            public const string FeedIcon = "feed-icon";
+            public const string FeedItem = "feed-item";
+            public const string FeedLinksCard = "feed-links-card";
+            public const string FeedName = "feed-name";
+            public const string FeedUrl = "feed-url";
             public const string GatewayIcon = "gateway-icon";
             public const string GatewayName = "gateway-name";
             public const string GatewaysGrid = "gateways-grid";
+            public const string Google = "google";
             public const string GroupDescription = "group-description";
             public const string GroupTitle = "group-title";
+            public const string Headline = "headline";
             public const string HintLink = "hint-link";
             public const string InvoiceAmount = "invoice-amount";
+            public const string InvoiceLabel = "invoice-label";
+            public const string InvoiceMethod = "invoice-method";
             public const string InvoiceSummaryBox = "invoice-summary-box";
+            public const string LabelTitle = "label-title";
             public const string LargeTerminalIcon = "large-terminal-icon";
             public const string MerchantSettingsPanel = "merchant-settings-panel";
             public const string Methods = "payment-methods";
+            public const string MethodSub = "method-sub";
+            public const string MethodTitle = "method-title";
+            public const string OnlineRedirectArea = "online-redirect-area";
             public const string OtpNotice = "otp-notice";
             public const string OtpRow = "otp-row";
             public const string OtpVerificationBox = "otp-verification-box";
             public const string PanelFooter = "panel-footer";
             public const string PanInputBox = "pan-input-box";
             public const string PaymentDashboard = "payment-dashboard";
+            public const string PaymentMethodBody = "payment-method-body";
+            public const string PaymentMethodsGrid = "payment-methods-grid";
+            public const string PaymentStatusChecker = "payment-status-checker";
             public const string PaymentSupport = "payment-support";
+            public const string PaymentTrustFooter = "payment-trust-footer";
             public const string PosActionDesc = "pos-action-desc";
             public const string PosActionTitle = "pos-action-title";
             public const string PosApprovedTitle = "pos-approved-title";
@@ -4813,10 +5016,21 @@ namespace Classes
             public const string PosSlipDetails = "pos-slip-details";
             public const string PosStartBtn = "pos-start-btn";
             public const string PosSuccessView = "pos-success-view";
+            public const string ProfileContainer = "profile-container";
+            public const string ProfileTitle = "profile-title";
+            public const string PromoPaymentCard = "payment-card";
+            public const string PromoSuccessCheckIcon = "success-check-icon";
+            public const string PromoSuccessIconWrap = "success-icon-wrap";
+            public const string PromoSuccessStep = "success-step";
+            public const string QrFrame = "qr-frame";
+            public const string QrImage = "qr-image";
+            public const string QrPaymentArea = "qr-payment-area";
+            public const string RedirectIcon = "redirect-icon";
             public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
+            public const string SpinnerInline = "spinner-inline";
             public const string SplitHeader = "split-header";
             public const string SplitPaymentBox = "split-payment-box";
             public const string SplitRow = "split-row";
@@ -4824,12 +5038,18 @@ namespace Classes
             public const string StepItem = "step-item";
             public const string StepLine = "step-line";
             public const string StepNum = "step-num";
+            public const string SuccessCheckIcon = "success-check-icon";
+            public const string SuccessDescClass = "success-desc";
+            public const string SuccessHintClass = "success-hint";
             public const string SuccessIcon = "success-icon";
+            public const string SuccessIconWrap = "success-icon-wrap";
+            public const string SuccessStep = "success-step";
+            public const string SuccessTitleClass = "success-title";
             public const string TabContentBox = "tab-content-box";
-            public const string TrustFooter = "payment-trust-footer";
             public const string TypeTabs = "type-tabs";
             public const string UzqrHighlight = "uzqr-highlight";
             public const string WorkflowStepper = "workflow-stepper";
+            public const string Yandex = "yandex";
         }
 
         public static class Picker
@@ -4880,14 +5100,19 @@ namespace Classes
             public const string LangCurrentLabel = "lang-current-label";
             public const string LangDropdownMenu = "lang-dropdown-menu";
             public const string LangDropdownWrapper = "lang-dropdown-wrapper";
+            public const string LangFlag = "lang-flag";
             public const string LangGlobeIcon = "lang-globe-icon";
             public const string LangInlineGrid = "lang-inline-grid";
+            public const string LangMenuBackdrop = "lang-menu-backdrop";
             public const string LangMenuItem = "lang-menu-item";
+            public const string LangMenuItemActive = "lang-menu-item--active";
             public const string LangMenuList = "lang-menu-list";
+            public const string LangName = "lang-name";
             public const string LangPillBtn = "lang-pill-btn";
             public const string LangSelect = "lang-select";
+            public const string LangSelectorInline = "lang-selector-inline";
+            public const string LangSelectorPill = "lang-selector-pill";
             public const string LangToggleBtn = "lang-toggle-btn";
-            public const string MapPickerWrapper = "map-picker-wrapper";
             public const string Md3ClosedBadge = "md3-closed-badge";
             public const string Md3DialogActionsRow = "md3-dialog-actions-row";
             public const string Md3DialogHeadline = "md3-dialog-headline";
@@ -4966,6 +5191,34 @@ namespace Classes
             public const string WeekMiniDots = "picker-week-mini-dots";
         }
 
+        public static class ProfileDialog
+        {
+            public const string FaceidCameraFallback = "faceid-camera-fallback";
+            public const string FaceidCameraFallbackIcon = "faceid-camera-fallback-icon";
+            public const string FaceidCameraViewport = "faceid-camera-viewport";
+            public const string FaceidDirectionBadge = "faceid-direction-badge";
+            public const string FaceidInstructionText = "faceid-instruction-text";
+            public const string FaceidModalContent = "faceid-modal-content";
+            public const string FaceidProgressBar = "faceid-progress-bar";
+            public const string FaceidStageStep = "faceid-stage-step";
+            public const string FaceidStatusMessage = "faceid-status-message";
+            public const string ProfileAuthActions = "profile-auth-actions";
+            public const string ProfileAuthCard = "profile-auth-card";
+            public const string ProfileAuthDesc = "profile-auth-desc";
+            public const string ProfileAuthInfo = "profile-auth-info";
+            public const string ProfileAuthText = "profile-auth-text";
+            public const string ProfileAuthTitle = "profile-auth-title";
+            public const string ProfileColorPickerBox = "profile-color-picker-box";
+            public const string ProfileColorPickerLabel = "profile-color-picker-label";
+            public const string ProfileDeleteIcon = "profile-delete-icon";
+            public const string ProfileDialogContent = "profile-dialog-content";
+            public const string ProfilePasskeyIcon = "profile-passkey-icon";
+            public const string ProfileSecuritySubtext = "profile-security-subtext";
+            public const string ProfileThemeGrid = "profile-theme-grid";
+            public const string StepActive = "step-active";
+            public const string StepTertiary = "step-tertiary";
+        }
+
         public static class Progress
         {
             public const string CashProgressBar = "cash-progress-bar";
@@ -4989,6 +5242,7 @@ namespace Classes
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
             public const string HudTr = "hud-tr";
+            public const string PreviewInfo = "preview-info";
             public const string QrBotBtn = "qr-bot-btn";
             public const string QrBox = "qr-box";
             public const string QrCanvasBox = "qr-canvas-box";
@@ -5041,6 +5295,7 @@ namespace Classes
             public const string QrgTitle = "qrg-title";
             public const string QrHint = "qr-hint";
             public const string QrHudCorner = "qr-hud-corner";
+            public const string QrInfoIcon = "info-icon";
             public const string QrInstruction = "qr-instruction";
             public const string QrLaserScanner = "qr-laser-scanner";
             public const string QrLoadingBox = "qr-loading-box";
@@ -5088,17 +5343,14 @@ namespace Classes
 
         public static class Scrollbar
         {
-            public const string MapCategoriesScroll = "map-categories-scroll";
             public const string ScrollSnapX = "m3-scroll-snap-x";
             public const string ScrollThin = "m3-scroll-thin";
             public const string ScrollThin_2 = "scroll-thin";
-            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
         }
 
         public static class Scrollbars
         {
-            public const string MapPanelContent = "map-panel-content";
             public const string OptionsContainer = "options-container";
             public const string OrderSummaryList = "order-summary-list";
             public const string ProductThumbnails = "product-thumbnails";
@@ -5113,29 +5365,17 @@ namespace Classes
 
         public static class Search
         {
-            public const string AssistantSearch = "assistant-search";
-            public const string AssistantSearchContent = "assistant-search-content";
-            public const string AssistantSearchIcon = "assistant-search-icon";
-            public const string AssistantSearchPhrase = "assistant-search-phrase";
-            public const string Bar = "search-bar";
-            public const string BarInner = "search-bar-inner";
             public const string ClearBtn = "search-clear-btn";
             public const string Container = "m3-search-container";
             public const string HomeSearchContainer = "home-search-container";
-            public const string MapSearchInline = "map-search-inline";
             public const string MaterialSearchContainer = "material-search-container";
             public const string MaterialTextField = "material-text-field";
-            public const string Panel = "search-panel";
             public const string PosSearchInput = "pos-search-input";
             public const string RouteBtn = "search-route-btn";
             public const string SearchContainer = "search-container";
-            public const string SearchDivider = "search-divider";
-            public const string SearchIcon = "search-icon";
-            public const string SearchInput = "search-input";
             public const string SearchMode = "search-mode";
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
-            public const string UxSearchBox = "ux-search-box";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -5186,10 +5426,10 @@ namespace Classes
             public const string SeatDesignerSection = "seat-designer-section";
             public const string SeatDesignerSectionLabel = "seat-designer-section-label";
             public const string SeatDesignerSectionTitle = "seat-designer-section-title";
-            public const string SeatDesignerToolbar = "seat-designer-toolbar";
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatToolbar = "seat-designer-toolbar";
         }
 
         public static class SegmentedButton
@@ -5211,14 +5451,22 @@ namespace Classes
         public static class SignIn
         {
             public const string AuthDivider = "auth-divider";
+            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OtpTargetHint = "otp-target-hint";
+            public const string SigninBrandIcon = "signin-brand-icon";
+            public const string SigninBrandLink = "signin-brand-link";
+            public const string SigninBrandText = "signin-brand-text";
             public const string SigninCard = "signin-card";
             public const string SigninContainer = "signin-container";
             public const string SigninErrorBanner = "signin-error-banner";
+            public const string SigninFooter = "signin-footer";
             public const string SigninHeader = "signin-header";
             public const string SigninLogoBadge = "signin-logo-badge";
+            public const string SigninPageWrapper = "signin-page-wrapper";
             public const string SigninSubtitle = "signin-subtitle";
             public const string SigninTitle = "signin-title";
+            public const string SigninTopBar = "signin-top-bar";
+            public const string SigninTopBarActions = "signin-top-bar-actions";
         }
 
         public static class Skeleton
@@ -5227,11 +5475,16 @@ namespace Classes
             public const string Circle = "m3-skeleton-circle";
             public const string Root = "m3-skeleton";
             public const string Short = "m3-short";
+            public const string SkeletonCard = "m3-skeleton-card";
+            public const string SkeletonCircle = "m3-skeleton-circle";
+            public const string SkeletonRoot = "m3-skeleton";
+            public const string SkeletonText = "m3-skeleton-text";
             public const string Text = "m3-skeleton-text";
         }
 
         public static class SmartDataView
         {
+            public const string SmartDataViewContent = "smart-data-view-content";
             public const string SmartDataViewHeader = "smart-data-view-header";
             public const string SmartdataviewRoot = "smart-data-view";
         }
@@ -5258,14 +5511,15 @@ namespace Classes
         {
             public const string SmartToastBody = "smart-toast-body";
             public const string SmartToastCloseBtn = "smart-toast-close-btn";
-            public const string SmartToastContainer = "smart-toast-container";
             public const string SmartToastError = "smart-toast-error";
             public const string SmartToastHeader = "smart-toast-header";
             public const string SmartToastIcon = "smart-toast-icon";
+            public const string SmartToastInfo = "smart-toast-info";
             public const string SmarttoastRoot = "smart-toast";
             public const string SmartToastSuccess = "smart-toast-success";
             public const string SmartToastTitle = "smart-toast-title";
             public const string SmartToastWarning = "smart-toast-warning";
+            public const string ToastContainer = "smart-toast-container";
         }
 
         public static class Subscription
@@ -5331,6 +5585,7 @@ namespace Classes
             public const string Org = "org";
             public const string PaginationText = "pagination-text";
             public const string Paginator = "paginator";
+            public const string PaginatorSummary = "paginator-summary";
             public const string PaymentCell = "payment-cell";
             public const string Quickgrid = "quickgrid";
             public const string ReceiptCellName = "receipt-cell-name";
@@ -5341,13 +5596,15 @@ namespace Classes
             public const string Root = "m3-table";
             public const string RowActions = "m3-table-row-actions";
             public const string RowActions_2 = "table-row-actions";
-            public const string RowLabel = "row-label";
-            public const string RowValue = "row-value";
             public const string ScheduleTable = "schedule-table";
             public const string ScrollContainer = "table-scroll-container";
             public const string SelectableText = "selectable-text";
             public const string SmartGridContainer = "smart-grid-container";
             public const string SortIndicator = "sort-indicator";
+            public const string TableIcon = "table-icon";
+            public const string TablePaginator = "paginator";
+            public const string TableRowLabel = "row-label";
+            public const string TableRowValue = "row-value";
             public const string W3 = "w3";
             public const string Wrapper = "m3-table-wrapper";
         }
@@ -5359,7 +5616,6 @@ namespace Classes
 
         public static class Terminal
         {
-            public const string BadgeCounter = "badge-counter";
             public const string CashPaymentLayout = "cash-payment-layout";
             public const string DialogHeader = "m3-dialog-header";
             public const string DialogTitleGroup = "m3-dialog-title-group";
@@ -5390,6 +5646,7 @@ namespace Classes
             public const string PosCompleteBtn = "pos-complete-btn";
             public const string PosDetailsImg = "pos-details-img";
             public const string PosDetailsList = "pos-details-list";
+            public const string PosDetailsRow = "row";
             public const string PosDeviceIcon = "pos-device-icon";
             public const string PosDeviceIcons = "pos-device-icons";
             public const string PosEmptyIcon = "pos-empty-icon";
@@ -5429,6 +5686,7 @@ namespace Classes
             public const string PosSidebar = "pos-sidebar";
             public const string PosSidebarHeader = "pos-sidebar-header";
             public const string PosSidebarHeaderRow = "pos-sidebar-header-row";
+            public const string PosTechChips = "pos-tech-chips";
             public const string PosTerminalLayout = "pos-terminal-layout";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string PosUxModeTitle = "pos-uxmode-title";
@@ -5444,9 +5702,6 @@ namespace Classes
         {
             public const string DarkMode = "dark-mode";
             public const string GroupToggle = "group-toggle";
-            public const string MapPanelToggle = "map-panel-toggle";
-            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
-            public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string ModeIndicator = "mode-indicator";
             public const string ModePreview = "mode-preview";
             public const string ModeToggle = "m3-mode-toggle";
@@ -5483,7 +5738,6 @@ namespace Classes
             public const string LabelSmall = "m3-label-small";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
-            public const string PlaceDetailsTitleContainer = "place-details-title-container";
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
@@ -5507,6 +5761,7 @@ namespace Styles
     {
         public static class About
         {
+            public const string AboutHero = "about-hero";
             public const string AboutTitle = "about-title";
             public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
@@ -5514,8 +5769,6 @@ namespace Styles
             public const string ControlsPanelExpanded = "controls-panel-expanded";
             public const string CtaSection = "about-cta-section";
             public const string DetailsMode = "details-mode";
-            public const string Hero = "about-hero";
-            public const string OrderSubtitle = "order-subtitle";
             public const string PillarsSection = "about-pillars-section";
             public const string Subtitle = "about-subtitle";
             public const string TechStackSection = "about-tech-stack-section";
@@ -5548,6 +5801,7 @@ namespace Styles
             public const string TouchIcon = "ad-touch-icon";
             public const string UpgradeLink = "ad-upgrade-link";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
+            public const string YandexRtbContainer = "yandex-rtb-container";
         }
 
         public static class Analytics
@@ -5617,6 +5871,8 @@ namespace Styles
         public static class Avatar
         {
             public const string AvatarBox = "avatar-box";
+            public const string AvatarButton = "avatar-button";
+            public const string AvatarContacts = "contacts";
             public const string AvatarRoot = "m3-avatar";
             public const string Button = "avatar-button";
             public const string ContactGrid = "contact-grid";
@@ -5627,7 +5883,6 @@ namespace Styles
             public const string Headline = "headline";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string MaterialTextField = "material-text-field";
-            public const string PlaceDetailsAvatar = "place-details-avatar";
             public const string Pulse = "avatar-pulse";
             public const string Row = "row";
         }
@@ -5637,12 +5892,13 @@ namespace Styles
             public const string AdNetworkBadge = "ad-network-badge";
             public const string AdNetworkBadgeRow = "ad-network-badge-row";
             public const string AgeRestriction = "badge-age-restriction";
-            public const string BackButton = "m3-back-button";
-            public const string BackIcon = "m3-back-icon";
             public const string BadgeActive = "badge-active";
+            public const string BadgeCounter = "badge-counter";
             public const string BadgeIcon = "badge-icon";
             public const string BadgeInfo = "info";
-            public const string BadgeRoot = "badge";
+            public const string BadgeNone = "badge-none";
+            public const string BadgeRoot = "m3-badge";
+            public const string BadgeRoot_2 = "badge";
             public const string BadgeVerified = "badge-verified";
             public const string Blocked = "badge-blocked";
             public const string Canceled = "canceled";
@@ -5674,18 +5930,12 @@ namespace Styles
             public const string KdsStatusTag = "kds-status-tag";
             public const string Made = "made";
             public const string Making = "badge-making";
-            public const string MapMeasureBadge = "map-measure-badge";
-            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
-            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
-            public const string MapMeasureBadgeValue = "map-measure-badge-value";
             public const string None = "badge-none";
-            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OrderBadge = "order-badge";
             public const string OrderStatusBadge = "order-status-badge";
             public const string Paid = "paid";
             public const string Paused = "badge-paused";
             public const string PillBadge = "m3-pill-badge";
-            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PopularBadge = "popular-badge";
             public const string PosPaymentBadge = "pos-payment-badge";
             public const string PosPaymentBadgeLabel = "pos-payment-badge-label";
@@ -5780,6 +6030,7 @@ namespace Styles
         {
             public const string ActionsRow = "actions-row";
             public const string BackButton = "back-button";
+            public const string BackButton_2 = "m3-back-button";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BtnAndroid = "btn-android";
             public const string BtnBot = "btn-bot";
@@ -5794,6 +6045,7 @@ namespace Styles
             public const string BtnText = "btn-text";
             public const string BtnWeb = "btn-web";
             public const string BtnWindows = "btn-windows";
+            public const string ButtonActive = "active";
             public const string CatTabFintech = "cat-tab-fintech";
             public const string CatTabHospitality = "cat-tab-hospitality";
             public const string CatTabRetail = "cat-tab-retail";
@@ -5808,15 +6060,6 @@ namespace Styles
             public const string GridButtons = "m3-grid-buttons";
             public const string GridIconButtons = "m3-grid-icon-buttons";
             public const string M3xBtnPill = "m3x-btn-pill";
-            public const string MapActionButton = "map-action-button";
-            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
-            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
-            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
-            public const string MapRouteCloseBtn = "map-route-close-btn";
-            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
-            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
-            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
-            public const string MapRouteSwapBtn = "map-route-swap-btn";
             public const string NavControlBtn = "nav-control-btn";
             public const string NavIcon = "nav-icon";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -5824,9 +6067,6 @@ namespace Styles
             public const string PresetBtn = "preset-btn";
             public const string Primary = "primary";
             public const string ProductActionsBar = "product-actions-bar";
-            public const string RouteButton = "route-button";
-            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
-            public const string RouteStartBtn = "route-start-btn";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string ShowcaseNavBtn = "showcase-nav-btn";
@@ -5872,6 +6112,7 @@ namespace Styles
             public const string CardFilled_2 = "Filled";
             public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
+            public const string CardFormGrid = "card-form-grid";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
             public const string CardGrid = "card-grid";
@@ -5902,11 +6143,9 @@ namespace Styles
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
-            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
             public const string Footer_2 = "m3-card-footer";
-            public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
             public const string GlassCard = "glass-card";
             public const string Grid = "card-grid";
@@ -5931,7 +6170,6 @@ namespace Styles
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
             public const string MediaCard = "m3-media-card";
@@ -5978,10 +6216,12 @@ namespace Styles
             public const string ProductCard = "product-card";
             public const string ProductDetailCard = "product-detail-card";
             public const string ProductTitle = "product-title";
-            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RowLabel = "m3-row-label";
+            public const string RowLabel_2 = "row-label";
             public const string RowValue = "m3-row-value";
+            public const string RowValue_2 = "row-value";
             public const string SaveCardToggle = "save-card-toggle";
+            public const string Selected = "selected";
             public const string SelectedOrgCard = "selected-org-card";
             public const string ShippingCard = "shipping-card";
             public const string ShowcaseCard = "showcase-card";
@@ -6020,7 +6260,9 @@ namespace Styles
             public const string SummaryCard_2 = "summary-card";
             public const string SummaryDivider = "m3-summary-divider";
             public const string SummaryRow = "m3-summary-row";
+            public const string SummaryRow_2 = "summary-row";
             public const string SummaryRows = "m3-summary-rows";
+            public const string SummaryRows_2 = "summary-rows";
             public const string SummaryTitle = "m3-summary-title";
             public const string SupportCard = "support-card";
             public const string SupportCardAction = "support-card-action";
@@ -6028,9 +6270,6 @@ namespace Styles
             public const string TechCard = "tech-card";
             public const string TicketQrCard = "ticket-qr-card";
             public const string TopRow = "card-top-row";
-            public const string TotalLabel = "m3-total-label";
-            public const string TotalRow = "m3-total-row";
-            public const string TotalValue = "m3-total-value";
             public const string UxModeCard = "ux-mode-card";
             public const string UxModeCardActions = "ux-mode-card-actions";
             public const string UxModeCardHeader = "ux-mode-card-header";
@@ -6049,6 +6288,7 @@ namespace Styles
             public const string WishlistMedia = "wishlist-media";
             public const string WishlistPlaceholder = "wishlist-placeholder";
             public const string WishlistPriceTag = "wishlist-price-tag";
+            public const string WishlistProductCard = "product-card";
             public const string WishlistTitleText = "wishlist-title-text";
             public const string WishlistWishBtn = "wishlist-wish-btn";
             public const string YandexZoomCard = "yandex-zoom-card";
@@ -6057,16 +6297,10 @@ namespace Styles
         public static class Cart
         {
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string HeaderBrandLink = "header-brand-link";
-            public const string HeaderBrandText = "header-brand-text";
-            public const string HeaderBrandZone = "header-brand-zone";
-            public const string HeaderEndZone = "header-end-zone";
-            public const string HeaderStartZone = "header-start-zone";
             public const string Interactive = "interactive";
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
-            public const string PageHeaderStart = "m3-page-header-start";
         }
 
         public static class Chat
@@ -6075,17 +6309,24 @@ namespace Styles
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
+            public const string AssistantSearch = "assistant-search";
+            public const string AssistantSearchContent = "assistant-search-content";
+            public const string AssistantSearchIcon = "assistant-search-icon";
+            public const string AssistantSearchPhrase = "assistant-search-phrase";
             public const string BackLink = "chat-back-link";
-            public const string BottomSection = "chat-bottom-section";
+            public const string ChatBackLink = "chat-back-link";
+            public const string ChatBottomSection = "chat-bottom-section";
+            public const string ChatContainer = "chat-container";
+            public const string ChatHeaderContainer = "chat-header-container";
+            public const string ChatPageRoot = "chat-page-root";
+            public const string ChatView = "chat-view";
             public const string Citation = "citation";
             public const string CitationContent = "citation-content";
             public const string CitationFile = "citation-file";
-            public const string Container = "chat-container";
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
-            public const string PageRoot = "chat-page-root";
-            public const string View = "chat-view";
+            public const string UserMessage = "user-message";
         }
 
         public static class Chip
@@ -6108,12 +6349,9 @@ namespace Styles
             public const string FloatingChip = "floating-chip";
             public const string GridChips = "m3-grid-chips";
             public const string InteractiveChip = "interactive-chip";
-            public const string MapCategoryChip = "map-category-chip";
-            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string PayChip = "pay-chip";
             public const string PosChipSet = "pos-chip-set";
             public const string PosSupportedChips = "pos-supported-chips";
-            public const string PosTechChips = "pos-tech-chips";
             public const string ProductTagChip = "product-tag-chip";
             public const string SmartFilterChips = "smart-filter-chips";
             public const string SmartFormChipContainer = "smart-form-chip-container";
@@ -6185,7 +6423,6 @@ namespace Styles
 
         public static class CommerceModes
         {
-            public const string RouteDistanceBar = "route-distance-bar";
             public const string TicketCode = "ticket-code";
             public const string TicketNote = "ticket-note";
             public const string ZoneCheckBanner = "zone-check-banner";
@@ -6200,10 +6437,10 @@ namespace Styles
             public const string AiBlobSvg = "ai-blob-svg";
             public const string AmountValue = "amount-value";
             public const string AppFooter = "app-footer";
-            public const string AppHeader = "app-header";
             public const string ArchiveType = "archive-type";
             public const string B2bCtaGroup = "b2b-cta-group";
             public const string BackIcon = "back-icon";
+            public const string BackIcon_2 = "m3-back-icon";
             public const string BackLink = "back-link";
             public const string BarLabels = "bar-labels";
             public const string BarTrack = "bar-track";
@@ -6235,9 +6472,11 @@ namespace Styles
             public const string CatalogTitle = "catalog-title";
             public const string CenterBox = "m3-center-box";
             public const string ChevronIcon = "chevron-icon";
+            public const string ChipPlace = "chip-place";
             public const string ClickPopupActions = "click-popup-actions";
             public const string ClickPopupAddress = "click-popup-address";
             public const string ClickPopupCoords = "click-popup-coords";
+            public const string Closed = "closed";
             public const string Collapsed = "collapsed";
             public const string ColorGrid = "color-grid";
             public const string ColorHex = "color-hex";
@@ -6249,6 +6488,7 @@ namespace Styles
             public const string ColumnReady = "column-ready";
             public const string ColumnTitle = "column-title";
             public const string CommonDragHandle = "drag-handle";
+            public const string CommonGlass = "glass";
             public const string CommonGrid = "m3-grid";
             public const string CommonLabel = "m3-label";
             public const string CommonPageHeader = "m3-page-header";
@@ -6359,6 +6599,7 @@ namespace Styles
             public const string InStockText = "in-stock-text";
             public const string InteractiveAction = "interactive-action";
             public const string IsInvalid = "is-invalid";
+            public const string IsOpen = "is-open";
             public const string ItemActions = "item-actions";
             public const string ItemHeadline = "item-headline";
             public const string ItemIcon = "item-icon";
@@ -6372,8 +6613,7 @@ namespace Styles
             public const string ItemTotalPrice = "item-total-price";
             public const string ItemUnitPrice = "item-unit-price";
             public const string KanbanBoard = "m3-kanban-board";
-            public const string KanbanColumn = "kanban-column";
-            public const string KanbanColumn_2 = "m3-kanban-column";
+            public const string KanbanColumn = "m3-kanban-column";
             public const string KdsBoard = "kds-board";
             public const string KdsColumn = "kds-column";
             public const string L0 = "l0";
@@ -6382,9 +6622,9 @@ namespace Styles
             public const string L3 = "l3";
             public const string L4 = "l4";
             public const string LabelSm = "m3-label-sm";
+            public const string LayoutLinkStack = "link-stack";
             public const string LegendDot = "legend-dot";
             public const string LegendItem = "legend-item";
-            public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
             public const string M3Card = "m3-card";
@@ -6393,13 +6633,20 @@ namespace Styles
             public const string M3CardMedia = "m3-card-media";
             public const string M3CardMediaPlaceholder = "m3-card-media-placeholder";
             public const string M3CardOutlined = "m3-card-outlined";
+            public const string M3TotalLabel = "m3-total-label";
+            public const string M3TotalRow = "m3-total-row";
+            public const string M3TotalValue = "m3-total-value";
             public const string MainFooter = "main-footer";
             public const string ManeuverDetails = "maneuver-details";
             public const string ManeuverDistance = "maneuver-distance";
             public const string ManeuverIcon = "maneuver-icon";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string ManeuverText = "maneuver-text";
+            public const string MapActionButton = "map-action-button";
+            public const string MapActive = "active";
             public const string MapCanvas = "map-canvas";
+            public const string MapCategoriesScroll = "map-categories-scroll";
+            public const string MapCategoryChip = "map-category-chip";
             public const string MapClickPopup = "map-click-popup";
             public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
@@ -6407,21 +6654,60 @@ namespace Styles
             public const string MapFloorLabel = "map-floor-label";
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
+            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
+            public const string MapMeasureBadge = "map-measure-badge";
+            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
+            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
+            public const string MapMeasureBadgeValue = "map-measure-badge-value";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
+            public const string MapNavigatorPanel = "navigator-panel";
+            public const string MapNearbyResultsPanel = "nearby-results-panel";
+            public const string MapPanelContent = "map-panel-content";
+            public const string MapPanelToggle = "map-panel-toggle";
+            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
+            public const string MapPanelToggleTab = "map-panel-toggle-tab";
+            public const string MapPickerWrapper = "map-picker-wrapper";
+            public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
+            public const string MapRouteCloseBtn = "map-route-close-btn";
+            public const string MapRouteDeleteBtn = "map-route-delete-btn";
             public const string MapRouteDot = "map-route-dot";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
+            public const string MapRouteFieldsActions = "map-route-fields-actions";
+            public const string MapRouteFieldsDots = "map-route-fields-dots";
+            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
+            public const string MapRouteFieldsRow = "map-route-fields-row";
+            public const string MapRouteHeaderRow = "map-route-header-row";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteInput = "map-route-input";
+            public const string MapRouteInputs = "map-route-inputs";
+            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string MapRouteProfileRow = "map-route-profile-row";
+            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
+            public const string MapRouteSubmitBtn = "map-route-submit-btn";
+            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
+            public const string MapRouteSuggestionIcon = "map-route-suggestion-icon";
+            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapRouteSwapBtn = "map-route-swap-btn";
+            public const string MapSearchIcon = "search-icon";
+            public const string MapSearchInline = "map-search-inline";
             public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapToolbar = "map-toolbar";
+            public const string MapTopbar = "map-topbar";
             public const string MapZoomDivider = "map-zoom-divider";
             public const string MapZoomStack = "map-zoom-stack";
+            public const string MaterialTextField = "material-text-field";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -6437,11 +6723,9 @@ namespace Styles
             public const string NavFab = "m3-nav-fab";
             public const string NavigatorControls = "navigator-controls";
             public const string NavigatorManeuverBar = "navigator-maneuver-bar";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavigatorStatsBar = "navigator-stats-bar";
             public const string NavItem = "nav-item";
             public const string NavMobile = "nav-mobile";
-            public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NoMessages = "no-messages";
             public const string NoNav = "no-nav";
             public const string NotificationBanner = "notification-banner";
@@ -6451,6 +6735,7 @@ namespace Styles
             public const string OrderItemsSubheader = "order-items-subheader";
             public const string OrdersErrorBanner = "orders-error-banner";
             public const string OrdersKanbanBoard = "orders-kanban-board";
+            public const string OrdersKanbanColumn = "kanban-column";
             public const string OrdersListGrid = "orders-list-grid";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsMapPage = "organizations-map-page";
@@ -6461,6 +6746,7 @@ namespace Styles
             public const string OrgShowcaseSection = "org-showcase-section";
             public const string PageContainer = "m3-page-container";
             public const string PageHeaderActions = "m3-page-header-actions";
+            public const string PageHeaderStart = "m3-page-header-start";
             public const string PageHeaderTitle = "m3-page-header-title";
             public const string PageHeading = "page-heading";
             public const string PageSubtitle = "page-subtitle";
@@ -6475,13 +6761,20 @@ namespace Styles
             public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
+            public const string PlaceDetailsAvatar = "place-details-avatar";
+            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PlaceDetailsBody = "place-details-body";
             public const string PlaceDetailsContent = "place-details-content";
             public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHeader = "place-details-header";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string PlaceDetailsHero = "place-details-hero";
+            public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceDetailsName = "place-details-name";
             public const string PlaceDetailsPanel = "place-details-panel";
+            public const string PlaceDetailsTitleContainer = "place-details-title-container";
+            public const string PlaceInfoIcon = "info-icon";
+            public const string PlaceInfoRow = "place-info-row";
             public const string PlanCurrency = "plan-currency";
             public const string PlanFeatures = "plan-features";
             public const string PlanHeader = "plan-header";
@@ -6516,8 +6809,6 @@ namespace Styles
             public const string ProductPriceSection = "product-price-section";
             public const string ProductSpecsGrid = "product-specs-grid";
             public const string ProductUnit = "product-unit";
-            public const string ProfileContainer = "profile-container";
-            public const string ProfileTitle = "profile-title";
             public const string PromoSection = "promo-section";
             public const string PromoSuccessText = "promo-success-text";
             public const string ProTier = "pro-tier";
@@ -6533,18 +6824,27 @@ namespace Styles
             public const string RouteAlternativeAction = "route-alternative-action";
             public const string RouteAlternativeActions = "route-alternative-actions";
             public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeIcon = "route-alternative-icon";
             public const string RouteAlternativeLabel = "route-alternative-label";
             public const string RouteAlternativeMain = "route-alternative-main";
             public const string RouteAlternativeSecondary = "route-alternative-secondary";
             public const string RouteAlternativesList = "route-alternatives-list";
             public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteButton = "route-button";
             public const string RouteClose = "route-close";
+            public const string RouteDistanceBar = "route-distance-bar";
             public const string RouteError = "route-error";
             public const string RouteHeader = "route-header";
+            public const string RouteInfo = "route-info";
             public const string RouteLabel = "route-label";
+            public const string RouteLoading = "route-loading";
             public const string RouteOptionsToolbar = "route-options-toolbar";
+            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
             public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string RouteStartBtn = "route-start-btn";
+            public const string RouteStartButton = "route-start-button";
             public const string RouteStartContainer = "route-start-container";
             public const string RouteStat = "route-stat";
             public const string RouteStepMeta = "route-step-meta";
@@ -6558,6 +6858,11 @@ namespace Styles
             public const string SafeAreaTop = "safe-area-top";
             public const string ScoreBox = "score-box";
             public const string ScoreCircle = "score-circle";
+            public const string SearchBarInner = "search-bar-inner";
+            public const string SearchDivider = "search-divider";
+            public const string SearchInput = "search-input";
+            public const string SearchModeBar = "search-bar";
+            public const string SearchPanel = "search-panel";
             public const string SecondaryCta = "secondary-cta";
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SectionDesc = "section-desc";
@@ -6643,8 +6948,6 @@ namespace Styles
             public const string StressTarget = "stress-target";
             public const string Suggestions = "suggestions";
             public const string SummaryDivider = "summary-divider";
-            public const string SummaryRow = "summary-row";
-            public const string SummaryRows = "summary-rows";
             public const string SupportActionGrid = "support-action-grid";
             public const string SupportGrid = "support-grid";
             public const string SupportLabel = "support-label";
@@ -6675,6 +6978,7 @@ namespace Styles
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchTarget44 = "touch-target-44";
             public const string TouchTarget48 = "touch-target-48";
             public const string TrialDaysHighlight = "trial-days-highlight";
@@ -6686,6 +6990,7 @@ namespace Styles
             public const string UxExpandContainer = "ux-expand-container";
             public const string UxFilterMeta = "ux-filter-meta";
             public const string UxModesSection = "ux-modes-section";
+            public const string UxSearchBox = "ux-search-box";
             public const string UxSpotlightContainer = "ux-spotlight-container";
             public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxSpotlightHeader = "ux-spotlight-header";
@@ -6811,7 +7116,6 @@ namespace Styles
             public const string DiagSpaceTop = "diag-space-top";
             public const string DiagSuccess = "diag-success";
             public const string DiagWarning = "diag-warning";
-            public const string OrderSummarySection = "order-summary-section";
         }
 
         public static class Dialog
@@ -6834,6 +7138,7 @@ namespace Styles
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
+            public const string PromotionDialog = "promotion-dialog";
             public const string PromotionModalBody = "promotion-modal-body";
             public const string PromotionModalHeader = "promotion-modal-header";
             public const string PromotionModalSubtitle = "promotion-modal-subtitle";
@@ -6870,9 +7175,9 @@ namespace Styles
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
+            public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string Show = "show";
             public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
@@ -6902,15 +7207,20 @@ namespace Styles
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
             public const string DocsContentHeader = "docs-content-header";
+            public const string DocsContentLoader = "docs-content-loader";
             public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
+            public const string DocsGroupTitle = "docs-group-title";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DocsHeaderTitle = "docs-header-title";
+            public const string DocsLoaderContainer = "docs-loader-container";
+            public const string DocsLoadingText = "docs-loading-text";
+            public const string DocsMenuIcon = "docs-menu-icon";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -6919,9 +7229,11 @@ namespace Styles
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
+            public const string DocsSidebarToggleBtn = "docs-sidebar-toggle-btn";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DocsWelcomeIcon = "docs-welcome-icon";
+            public const string SidebarOpen = "sidebar-open";
         }
 
         public static class Donation
@@ -7003,6 +7315,7 @@ namespace Styles
             public const string FaceidNotice = "faceid-notice";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
             public const string FaceidStatusText = "faceid-status-text";
+            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string Scanning = "scanning";
             public const string StatusError = "status-error";
             public const string StatusNeutral = "status-neutral";
@@ -7014,7 +7327,6 @@ namespace Styles
         {
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
-            public const string RouteLoading = "route-loading";
             public const string Short = "short";
         }
 
@@ -7057,7 +7369,6 @@ namespace Styles
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
-            public const string HeaderGridLayout = "header-grid-layout";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -7086,9 +7397,6 @@ namespace Styles
             public const string InputFieldGroup = "input-field-group";
             public const string Invalid = "invalid";
             public const string Legend = "m3-legend";
-            public const string MapRouteFieldsDots = "map-route-fields-dots";
-            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
-            public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
             public const string PosFormField = "pos-form-field";
@@ -7111,8 +7419,6 @@ namespace Styles
         {
             public const string GridSelection = "m3-grid-selection";
             public const string InputBox = "input-box";
-            public const string MapRouteInput = "map-route-input";
-            public const string MapRouteInputs = "map-route-inputs";
             public const string PromoInputGroup = "promo-input-group";
             public const string SelectInput = "select-input";
             public const string SelectionItem = "m3-selection-item";
@@ -7168,7 +7474,6 @@ namespace Styles
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
-            public const string HeaderCenterZone = "header-center-zone";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
@@ -7200,19 +7505,24 @@ namespace Styles
 
         public static class Header
         {
+            public const string AppHeader = "app-header";
+            public const string AppHeaderSticky = "header-sticky";
             public const string BrandIconBox = "header-brand-icon-box";
+            public const string HeaderBrandLink = "header-brand-link";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string HeaderBrandZone = "header-brand-zone";
+            public const string HeaderCenterZone = "header-center-zone";
             public const string HeaderContent = "header-content";
+            public const string HeaderEndZone = "header-end-zone";
+            public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
+            public const string HeaderStartZone = "header-start-zone";
             public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
-            public const string MapRouteHeaderRow = "map-route-header-row";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
             public const string PageHeaderText = "m3-page-header-text";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string RocketIcon = "header-rocket-icon";
-            public const string Sticky = "header-sticky";
         }
 
         public static class Help
@@ -7249,7 +7559,7 @@ namespace Styles
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
-            public const string InfoIcon = "info-icon";
+            public const string InfoGridRoot = "m3-info-grid";
             public const string InfoItem = "m3-info-item";
             public const string InfoItem_2 = "info-item";
             public const string InfoLabel = "m3-info-label";
@@ -7259,18 +7569,14 @@ namespace Styles
             public const string ItemInfo = "item-info";
             public const string KioskBrandInfo = "kiosk-brand-info";
             public const string OrderItemInfo = "order-item-info";
-            public const string PlaceDetailsInfoSection = "place-details-info-section";
-            public const string PlaceInfoRow = "place-info-row";
+            public const string PlaceInfoIcon = "info-icon";
             public const string PosQrInfo = "pos-qr-info";
-            public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
             public const string Root = "m3-info-grid";
-            public const string RouteInfo = "route-info";
             public const string SellerInfo = "seller-info";
             public const string SessionItemInfo = "session-item-info";
             public const string ShowcaseStatInfo = "showcase-stat-info";
             public const string SmartFormInfo = "smart-form-info";
-            public const string SmartToastInfo = "smart-toast-info";
             public const string SpotlightInfo = "spotlight-info";
             public const string TicketInfo = "ticket-info";
         }
@@ -7454,9 +7760,6 @@ namespace Styles
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
-            public const string MapPopupBackdrop = "map-popup-backdrop";
-            public const string MapToolbar = "map-toolbar";
-            public const string MapTopbar = "map-topbar";
         }
 
         public static class MediaPlayer
@@ -7486,7 +7789,6 @@ namespace Styles
             public const string DrawerHeader = "order-drawer-header";
             public const string DrawerPanel = "order-drawer-panel";
             public const string FooterActions = "order-footer-actions";
-            public const string HeaderTitleBox = "order-header-title-box";
             public const string ItemControls = "order-item-controls";
             public const string ItemImg = "order-item-img";
             public const string ItemImgPlaceholder = "order-item-img-placeholder";
@@ -7501,9 +7803,16 @@ namespace Styles
             public const string KdsProductName = "kds-product-name";
             public const string KdsTimeAgo = "kds-time-ago";
             public const string Number = "order-number";
-            public const string PriceBreakdown = "order-price-breakdown";
+            public const string OrderHeaderTitleBox = "order-header-title-box";
+            public const string OrderItemName = "order-item-name";
+            public const string OrderPriceBreakdown = "order-price-breakdown";
+            public const string OrderQtyStepper = "order-qty-stepper";
+            public const string OrderQtyVal = "order-qty-val";
+            public const string OrderSubtitle = "order-subtitle";
+            public const string OrderSummarySection = "order-summary-section";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string Show = "show";
             public const string SmartKanbanBoard = "smart-kanban-board";
             public const string SmartKanbanColumn = "smart-kanban-column";
             public const string SmartKanbanColumnCount = "smart-kanban-column-count";
@@ -7522,7 +7831,10 @@ namespace Styles
 
         public static class Payment
         {
+            public const string Active = "active";
+            public const string BodySubtext = "body-subtext";
             public const string BoxTitle = "box-title";
+            public const string BtnGatewayLink = "btn-gateway-link";
             public const string CashActionsRow = "cash-actions-row";
             public const string CashBox = "cash-box";
             public const string CashContainer = "cash-container";
@@ -7533,24 +7845,42 @@ namespace Styles
             public const string CashSessionPanel = "cash-session-panel";
             public const string CheckoutPanel = "checkout-panel";
             public const string DeeplinkBtn = "deeplink-btn";
+            public const string FeedDetails = "feed-details";
+            public const string FeedIcon = "feed-icon";
+            public const string FeedItem = "feed-item";
+            public const string FeedLinksCard = "feed-links-card";
+            public const string FeedName = "feed-name";
+            public const string FeedUrl = "feed-url";
             public const string GatewayIcon = "gateway-icon";
             public const string GatewayName = "gateway-name";
             public const string GatewaysGrid = "gateways-grid";
+            public const string Google = "google";
             public const string GroupDescription = "group-description";
             public const string GroupTitle = "group-title";
+            public const string Headline = "headline";
             public const string HintLink = "hint-link";
             public const string InvoiceAmount = "invoice-amount";
+            public const string InvoiceLabel = "invoice-label";
+            public const string InvoiceMethod = "invoice-method";
             public const string InvoiceSummaryBox = "invoice-summary-box";
+            public const string LabelTitle = "label-title";
             public const string LargeTerminalIcon = "large-terminal-icon";
             public const string MerchantSettingsPanel = "merchant-settings-panel";
             public const string Methods = "payment-methods";
+            public const string MethodSub = "method-sub";
+            public const string MethodTitle = "method-title";
+            public const string OnlineRedirectArea = "online-redirect-area";
             public const string OtpNotice = "otp-notice";
             public const string OtpRow = "otp-row";
             public const string OtpVerificationBox = "otp-verification-box";
             public const string PanelFooter = "panel-footer";
             public const string PanInputBox = "pan-input-box";
             public const string PaymentDashboard = "payment-dashboard";
+            public const string PaymentMethodBody = "payment-method-body";
+            public const string PaymentMethodsGrid = "payment-methods-grid";
+            public const string PaymentStatusChecker = "payment-status-checker";
             public const string PaymentSupport = "payment-support";
+            public const string PaymentTrustFooter = "payment-trust-footer";
             public const string PosActionDesc = "pos-action-desc";
             public const string PosActionTitle = "pos-action-title";
             public const string PosApprovedTitle = "pos-approved-title";
@@ -7561,10 +7891,21 @@ namespace Styles
             public const string PosSlipDetails = "pos-slip-details";
             public const string PosStartBtn = "pos-start-btn";
             public const string PosSuccessView = "pos-success-view";
+            public const string ProfileContainer = "profile-container";
+            public const string ProfileTitle = "profile-title";
+            public const string PromoPaymentCard = "payment-card";
+            public const string PromoSuccessCheckIcon = "success-check-icon";
+            public const string PromoSuccessIconWrap = "success-icon-wrap";
+            public const string PromoSuccessStep = "success-step";
+            public const string QrFrame = "qr-frame";
+            public const string QrImage = "qr-image";
+            public const string QrPaymentArea = "qr-payment-area";
+            public const string RedirectIcon = "redirect-icon";
             public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
+            public const string SpinnerInline = "spinner-inline";
             public const string SplitHeader = "split-header";
             public const string SplitPaymentBox = "split-payment-box";
             public const string SplitRow = "split-row";
@@ -7572,12 +7913,18 @@ namespace Styles
             public const string StepItem = "step-item";
             public const string StepLine = "step-line";
             public const string StepNum = "step-num";
+            public const string SuccessCheckIcon = "success-check-icon";
+            public const string SuccessDescClass = "success-desc";
+            public const string SuccessHintClass = "success-hint";
             public const string SuccessIcon = "success-icon";
+            public const string SuccessIconWrap = "success-icon-wrap";
+            public const string SuccessStep = "success-step";
+            public const string SuccessTitleClass = "success-title";
             public const string TabContentBox = "tab-content-box";
-            public const string TrustFooter = "payment-trust-footer";
             public const string TypeTabs = "type-tabs";
             public const string UzqrHighlight = "uzqr-highlight";
             public const string WorkflowStepper = "workflow-stepper";
+            public const string Yandex = "yandex";
         }
 
         public static class Picker
@@ -7628,14 +7975,19 @@ namespace Styles
             public const string LangCurrentLabel = "lang-current-label";
             public const string LangDropdownMenu = "lang-dropdown-menu";
             public const string LangDropdownWrapper = "lang-dropdown-wrapper";
+            public const string LangFlag = "lang-flag";
             public const string LangGlobeIcon = "lang-globe-icon";
             public const string LangInlineGrid = "lang-inline-grid";
+            public const string LangMenuBackdrop = "lang-menu-backdrop";
             public const string LangMenuItem = "lang-menu-item";
+            public const string LangMenuItemActive = "lang-menu-item--active";
             public const string LangMenuList = "lang-menu-list";
+            public const string LangName = "lang-name";
             public const string LangPillBtn = "lang-pill-btn";
             public const string LangSelect = "lang-select";
+            public const string LangSelectorInline = "lang-selector-inline";
+            public const string LangSelectorPill = "lang-selector-pill";
             public const string LangToggleBtn = "lang-toggle-btn";
-            public const string MapPickerWrapper = "map-picker-wrapper";
             public const string Md3ClosedBadge = "md3-closed-badge";
             public const string Md3DialogActionsRow = "md3-dialog-actions-row";
             public const string Md3DialogHeadline = "md3-dialog-headline";
@@ -7714,6 +8066,34 @@ namespace Styles
             public const string WeekMiniDots = "picker-week-mini-dots";
         }
 
+        public static class ProfileDialog
+        {
+            public const string FaceidCameraFallback = "faceid-camera-fallback";
+            public const string FaceidCameraFallbackIcon = "faceid-camera-fallback-icon";
+            public const string FaceidCameraViewport = "faceid-camera-viewport";
+            public const string FaceidDirectionBadge = "faceid-direction-badge";
+            public const string FaceidInstructionText = "faceid-instruction-text";
+            public const string FaceidModalContent = "faceid-modal-content";
+            public const string FaceidProgressBar = "faceid-progress-bar";
+            public const string FaceidStageStep = "faceid-stage-step";
+            public const string FaceidStatusMessage = "faceid-status-message";
+            public const string ProfileAuthActions = "profile-auth-actions";
+            public const string ProfileAuthCard = "profile-auth-card";
+            public const string ProfileAuthDesc = "profile-auth-desc";
+            public const string ProfileAuthInfo = "profile-auth-info";
+            public const string ProfileAuthText = "profile-auth-text";
+            public const string ProfileAuthTitle = "profile-auth-title";
+            public const string ProfileColorPickerBox = "profile-color-picker-box";
+            public const string ProfileColorPickerLabel = "profile-color-picker-label";
+            public const string ProfileDeleteIcon = "profile-delete-icon";
+            public const string ProfileDialogContent = "profile-dialog-content";
+            public const string ProfilePasskeyIcon = "profile-passkey-icon";
+            public const string ProfileSecuritySubtext = "profile-security-subtext";
+            public const string ProfileThemeGrid = "profile-theme-grid";
+            public const string StepActive = "step-active";
+            public const string StepTertiary = "step-tertiary";
+        }
+
         public static class Progress
         {
             public const string CashProgressBar = "cash-progress-bar";
@@ -7737,6 +8117,7 @@ namespace Styles
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
             public const string HudTr = "hud-tr";
+            public const string PreviewInfo = "preview-info";
             public const string QrBotBtn = "qr-bot-btn";
             public const string QrBox = "qr-box";
             public const string QrCanvasBox = "qr-canvas-box";
@@ -7789,6 +8170,7 @@ namespace Styles
             public const string QrgTitle = "qrg-title";
             public const string QrHint = "qr-hint";
             public const string QrHudCorner = "qr-hud-corner";
+            public const string QrInfoIcon = "info-icon";
             public const string QrInstruction = "qr-instruction";
             public const string QrLaserScanner = "qr-laser-scanner";
             public const string QrLoadingBox = "qr-loading-box";
@@ -7836,17 +8218,14 @@ namespace Styles
 
         public static class Scrollbar
         {
-            public const string MapCategoriesScroll = "map-categories-scroll";
             public const string ScrollSnapX = "m3-scroll-snap-x";
             public const string ScrollThin = "m3-scroll-thin";
             public const string ScrollThin_2 = "scroll-thin";
-            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
         }
 
         public static class Scrollbars
         {
-            public const string MapPanelContent = "map-panel-content";
             public const string OptionsContainer = "options-container";
             public const string OrderSummaryList = "order-summary-list";
             public const string ProductThumbnails = "product-thumbnails";
@@ -7861,29 +8240,17 @@ namespace Styles
 
         public static class Search
         {
-            public const string AssistantSearch = "assistant-search";
-            public const string AssistantSearchContent = "assistant-search-content";
-            public const string AssistantSearchIcon = "assistant-search-icon";
-            public const string AssistantSearchPhrase = "assistant-search-phrase";
-            public const string Bar = "search-bar";
-            public const string BarInner = "search-bar-inner";
             public const string ClearBtn = "search-clear-btn";
             public const string Container = "m3-search-container";
             public const string HomeSearchContainer = "home-search-container";
-            public const string MapSearchInline = "map-search-inline";
             public const string MaterialSearchContainer = "material-search-container";
             public const string MaterialTextField = "material-text-field";
-            public const string Panel = "search-panel";
             public const string PosSearchInput = "pos-search-input";
             public const string RouteBtn = "search-route-btn";
             public const string SearchContainer = "search-container";
-            public const string SearchDivider = "search-divider";
-            public const string SearchIcon = "search-icon";
-            public const string SearchInput = "search-input";
             public const string SearchMode = "search-mode";
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
-            public const string UxSearchBox = "ux-search-box";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -7934,10 +8301,10 @@ namespace Styles
             public const string SeatDesignerSection = "seat-designer-section";
             public const string SeatDesignerSectionLabel = "seat-designer-section-label";
             public const string SeatDesignerSectionTitle = "seat-designer-section-title";
-            public const string SeatDesignerToolbar = "seat-designer-toolbar";
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatToolbar = "seat-designer-toolbar";
         }
 
         public static class SegmentedButton
@@ -7959,14 +8326,22 @@ namespace Styles
         public static class SignIn
         {
             public const string AuthDivider = "auth-divider";
+            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OtpTargetHint = "otp-target-hint";
+            public const string SigninBrandIcon = "signin-brand-icon";
+            public const string SigninBrandLink = "signin-brand-link";
+            public const string SigninBrandText = "signin-brand-text";
             public const string SigninCard = "signin-card";
             public const string SigninContainer = "signin-container";
             public const string SigninErrorBanner = "signin-error-banner";
+            public const string SigninFooter = "signin-footer";
             public const string SigninHeader = "signin-header";
             public const string SigninLogoBadge = "signin-logo-badge";
+            public const string SigninPageWrapper = "signin-page-wrapper";
             public const string SigninSubtitle = "signin-subtitle";
             public const string SigninTitle = "signin-title";
+            public const string SigninTopBar = "signin-top-bar";
+            public const string SigninTopBarActions = "signin-top-bar-actions";
         }
 
         public static class Skeleton
@@ -7975,11 +8350,16 @@ namespace Styles
             public const string Circle = "m3-skeleton-circle";
             public const string Root = "m3-skeleton";
             public const string Short = "m3-short";
+            public const string SkeletonCard = "m3-skeleton-card";
+            public const string SkeletonCircle = "m3-skeleton-circle";
+            public const string SkeletonRoot = "m3-skeleton";
+            public const string SkeletonText = "m3-skeleton-text";
             public const string Text = "m3-skeleton-text";
         }
 
         public static class SmartDataView
         {
+            public const string SmartDataViewContent = "smart-data-view-content";
             public const string SmartDataViewHeader = "smart-data-view-header";
             public const string SmartdataviewRoot = "smart-data-view";
         }
@@ -8006,14 +8386,15 @@ namespace Styles
         {
             public const string SmartToastBody = "smart-toast-body";
             public const string SmartToastCloseBtn = "smart-toast-close-btn";
-            public const string SmartToastContainer = "smart-toast-container";
             public const string SmartToastError = "smart-toast-error";
             public const string SmartToastHeader = "smart-toast-header";
             public const string SmartToastIcon = "smart-toast-icon";
+            public const string SmartToastInfo = "smart-toast-info";
             public const string SmarttoastRoot = "smart-toast";
             public const string SmartToastSuccess = "smart-toast-success";
             public const string SmartToastTitle = "smart-toast-title";
             public const string SmartToastWarning = "smart-toast-warning";
+            public const string ToastContainer = "smart-toast-container";
         }
 
         public static class Subscription
@@ -8079,6 +8460,7 @@ namespace Styles
             public const string Org = "org";
             public const string PaginationText = "pagination-text";
             public const string Paginator = "paginator";
+            public const string PaginatorSummary = "paginator-summary";
             public const string PaymentCell = "payment-cell";
             public const string Quickgrid = "quickgrid";
             public const string ReceiptCellName = "receipt-cell-name";
@@ -8089,13 +8471,15 @@ namespace Styles
             public const string Root = "m3-table";
             public const string RowActions = "m3-table-row-actions";
             public const string RowActions_2 = "table-row-actions";
-            public const string RowLabel = "row-label";
-            public const string RowValue = "row-value";
             public const string ScheduleTable = "schedule-table";
             public const string ScrollContainer = "table-scroll-container";
             public const string SelectableText = "selectable-text";
             public const string SmartGridContainer = "smart-grid-container";
             public const string SortIndicator = "sort-indicator";
+            public const string TableIcon = "table-icon";
+            public const string TablePaginator = "paginator";
+            public const string TableRowLabel = "row-label";
+            public const string TableRowValue = "row-value";
             public const string W3 = "w3";
             public const string Wrapper = "m3-table-wrapper";
         }
@@ -8107,7 +8491,6 @@ namespace Styles
 
         public static class Terminal
         {
-            public const string BadgeCounter = "badge-counter";
             public const string CashPaymentLayout = "cash-payment-layout";
             public const string DialogHeader = "m3-dialog-header";
             public const string DialogTitleGroup = "m3-dialog-title-group";
@@ -8138,6 +8521,7 @@ namespace Styles
             public const string PosCompleteBtn = "pos-complete-btn";
             public const string PosDetailsImg = "pos-details-img";
             public const string PosDetailsList = "pos-details-list";
+            public const string PosDetailsRow = "row";
             public const string PosDeviceIcon = "pos-device-icon";
             public const string PosDeviceIcons = "pos-device-icons";
             public const string PosEmptyIcon = "pos-empty-icon";
@@ -8177,6 +8561,7 @@ namespace Styles
             public const string PosSidebar = "pos-sidebar";
             public const string PosSidebarHeader = "pos-sidebar-header";
             public const string PosSidebarHeaderRow = "pos-sidebar-header-row";
+            public const string PosTechChips = "pos-tech-chips";
             public const string PosTerminalLayout = "pos-terminal-layout";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string PosUxModeTitle = "pos-uxmode-title";
@@ -8192,9 +8577,6 @@ namespace Styles
         {
             public const string DarkMode = "dark-mode";
             public const string GroupToggle = "group-toggle";
-            public const string MapPanelToggle = "map-panel-toggle";
-            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
-            public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string ModeIndicator = "mode-indicator";
             public const string ModePreview = "mode-preview";
             public const string ModeToggle = "m3-mode-toggle";
@@ -8231,7 +8613,6 @@ namespace Styles
             public const string LabelSmall = "m3-label-small";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
-            public const string PlaceDetailsTitleContainer = "place-details-title-container";
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
@@ -8256,6 +8637,7 @@ namespace Material.Web
     {
         public static class About
         {
+            public const string AboutHero = "about-hero";
             public const string AboutTitle = "about-title";
             public const string AboutTitle_2 = "title";
             public const string Container = "about-container";
@@ -8263,8 +8645,6 @@ namespace Material.Web
             public const string ControlsPanelExpanded = "controls-panel-expanded";
             public const string CtaSection = "about-cta-section";
             public const string DetailsMode = "details-mode";
-            public const string Hero = "about-hero";
-            public const string OrderSubtitle = "order-subtitle";
             public const string PillarsSection = "about-pillars-section";
             public const string Subtitle = "about-subtitle";
             public const string TechStackSection = "about-tech-stack-section";
@@ -8297,6 +8677,7 @@ namespace Material.Web
             public const string TouchIcon = "ad-touch-icon";
             public const string UpgradeLink = "ad-upgrade-link";
             public const string YandexAdsWrapper = "yandex-ads-wrapper";
+            public const string YandexRtbContainer = "yandex-rtb-container";
         }
 
         public static class Analytics
@@ -8366,6 +8747,8 @@ namespace Material.Web
         public static class Avatar
         {
             public const string AvatarBox = "avatar-box";
+            public const string AvatarButton = "avatar-button";
+            public const string AvatarContacts = "contacts";
             public const string AvatarRoot = "m3-avatar";
             public const string Button = "avatar-button";
             public const string ContactGrid = "contact-grid";
@@ -8376,7 +8759,6 @@ namespace Material.Web
             public const string Headline = "headline";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string MaterialTextField = "material-text-field";
-            public const string PlaceDetailsAvatar = "place-details-avatar";
             public const string Pulse = "avatar-pulse";
             public const string Row = "row";
         }
@@ -8386,12 +8768,13 @@ namespace Material.Web
             public const string AdNetworkBadge = "ad-network-badge";
             public const string AdNetworkBadgeRow = "ad-network-badge-row";
             public const string AgeRestriction = "badge-age-restriction";
-            public const string BackButton = "m3-back-button";
-            public const string BackIcon = "m3-back-icon";
             public const string BadgeActive = "badge-active";
+            public const string BadgeCounter = "badge-counter";
             public const string BadgeIcon = "badge-icon";
             public const string BadgeInfo = "info";
-            public const string BadgeRoot = "badge";
+            public const string BadgeNone = "badge-none";
+            public const string BadgeRoot = "m3-badge";
+            public const string BadgeRoot_2 = "badge";
             public const string BadgeVerified = "badge-verified";
             public const string Blocked = "badge-blocked";
             public const string Canceled = "canceled";
@@ -8423,18 +8806,12 @@ namespace Material.Web
             public const string KdsStatusTag = "kds-status-tag";
             public const string Made = "made";
             public const string Making = "badge-making";
-            public const string MapMeasureBadge = "map-measure-badge";
-            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
-            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
-            public const string MapMeasureBadgeValue = "map-measure-badge-value";
             public const string None = "badge-none";
-            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OrderBadge = "order-badge";
             public const string OrderStatusBadge = "order-status-badge";
             public const string Paid = "paid";
             public const string Paused = "badge-paused";
             public const string PillBadge = "m3-pill-badge";
-            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PopularBadge = "popular-badge";
             public const string PosPaymentBadge = "pos-payment-badge";
             public const string PosPaymentBadgeLabel = "pos-payment-badge-label";
@@ -8529,6 +8906,7 @@ namespace Material.Web
         {
             public const string ActionsRow = "actions-row";
             public const string BackButton = "back-button";
+            public const string BackButton_2 = "m3-back-button";
             public const string BannerCloseBtn = "banner-close-btn";
             public const string BtnAndroid = "btn-android";
             public const string BtnBot = "btn-bot";
@@ -8543,6 +8921,7 @@ namespace Material.Web
             public const string BtnText = "btn-text";
             public const string BtnWeb = "btn-web";
             public const string BtnWindows = "btn-windows";
+            public const string ButtonActive = "active";
             public const string CatTabFintech = "cat-tab-fintech";
             public const string CatTabHospitality = "cat-tab-hospitality";
             public const string CatTabRetail = "cat-tab-retail";
@@ -8557,15 +8936,6 @@ namespace Material.Web
             public const string GridButtons = "m3-grid-buttons";
             public const string GridIconButtons = "m3-grid-icon-buttons";
             public const string M3xBtnPill = "m3x-btn-pill";
-            public const string MapActionButton = "map-action-button";
-            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
-            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
-            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
-            public const string MapRouteCloseBtn = "map-route-close-btn";
-            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
-            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
-            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
-            public const string MapRouteSwapBtn = "map-route-swap-btn";
             public const string NavControlBtn = "nav-control-btn";
             public const string NavIcon = "nav-icon";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
@@ -8573,9 +8943,6 @@ namespace Material.Web
             public const string PresetBtn = "preset-btn";
             public const string Primary = "primary";
             public const string ProductActionsBar = "product-actions-bar";
-            public const string RouteButton = "route-button";
-            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
-            public const string RouteStartBtn = "route-start-btn";
             public const string SellerLogo = "seller-logo";
             public const string SellerLogoPlaceholder = "seller-logo-placeholder";
             public const string ShowcaseNavBtn = "showcase-nav-btn";
@@ -8621,6 +8988,7 @@ namespace Material.Web
             public const string CardFilled_2 = "Filled";
             public const string CardFilled_3 = "card-filled";
             public const string CardFooter_2 = "m3-card-footer";
+            public const string CardFormGrid = "card-form-grid";
             public const string CardGlass = "m3-card-glass";
             public const string CardGlass_2 = "card-glass";
             public const string CardGrid = "card-grid";
@@ -8651,11 +9019,9 @@ namespace Material.Web
             public const string EmptyPlansCard = "empty-plans-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
-            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string FaqCard = "faq-card";
             public const string FeatureCard = "feature-card";
             public const string Footer_2 = "m3-card-footer";
-            public const string FormGrid = "card-form-grid";
             public const string GatewayCard = "gateway-card";
             public const string GlassCard = "glass-card";
             public const string Grid = "card-grid";
@@ -8680,7 +9046,6 @@ namespace Material.Web
             public const string M3xCardElevated = "m3x-card-elevated";
             public const string M3xCardInteractive = "m3x-card-interactive";
             public const string M3xCardTonal = "m3x-card-tonal";
-            public const string MapPlaceDetailsCard = "map-place-details-card";
             public const string MaterialSymbolsOutlined = "material-symbols-outlined";
             public const string Media = "m3-card-media";
             public const string MediaCard = "m3-media-card";
@@ -8727,10 +9092,12 @@ namespace Material.Web
             public const string ProductCard = "product-card";
             public const string ProductDetailCard = "product-detail-card";
             public const string ProductTitle = "product-title";
-            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RowLabel = "m3-row-label";
+            public const string RowLabel_2 = "row-label";
             public const string RowValue = "m3-row-value";
+            public const string RowValue_2 = "row-value";
             public const string SaveCardToggle = "save-card-toggle";
+            public const string Selected = "selected";
             public const string SelectedOrgCard = "selected-org-card";
             public const string ShippingCard = "shipping-card";
             public const string ShowcaseCard = "showcase-card";
@@ -8769,7 +9136,9 @@ namespace Material.Web
             public const string SummaryCard_2 = "summary-card";
             public const string SummaryDivider = "m3-summary-divider";
             public const string SummaryRow = "m3-summary-row";
+            public const string SummaryRow_2 = "summary-row";
             public const string SummaryRows = "m3-summary-rows";
+            public const string SummaryRows_2 = "summary-rows";
             public const string SummaryTitle = "m3-summary-title";
             public const string SupportCard = "support-card";
             public const string SupportCardAction = "support-card-action";
@@ -8777,9 +9146,6 @@ namespace Material.Web
             public const string TechCard = "tech-card";
             public const string TicketQrCard = "ticket-qr-card";
             public const string TopRow = "card-top-row";
-            public const string TotalLabel = "m3-total-label";
-            public const string TotalRow = "m3-total-row";
-            public const string TotalValue = "m3-total-value";
             public const string UxModeCard = "ux-mode-card";
             public const string UxModeCardActions = "ux-mode-card-actions";
             public const string UxModeCardHeader = "ux-mode-card-header";
@@ -8798,6 +9164,7 @@ namespace Material.Web
             public const string WishlistMedia = "wishlist-media";
             public const string WishlistPlaceholder = "wishlist-placeholder";
             public const string WishlistPriceTag = "wishlist-price-tag";
+            public const string WishlistProductCard = "product-card";
             public const string WishlistTitleText = "wishlist-title-text";
             public const string WishlistWishBtn = "wishlist-wish-btn";
             public const string YandexZoomCard = "yandex-zoom-card";
@@ -8806,16 +9173,10 @@ namespace Material.Web
         public static class Cart
         {
             public const string FooterBottomBar = "footer-bottom-bar";
-            public const string HeaderBrandLink = "header-brand-link";
-            public const string HeaderBrandText = "header-brand-text";
-            public const string HeaderBrandZone = "header-brand-zone";
-            public const string HeaderEndZone = "header-end-zone";
-            public const string HeaderStartZone = "header-start-zone";
             public const string Interactive = "interactive";
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
-            public const string PageHeaderStart = "m3-page-header-start";
         }
 
         public static class Chat
@@ -8824,17 +9185,24 @@ namespace Material.Web
             public const string AssistantMessageHeader = "assistant-message-header";
             public const string AssistantMessageIcon = "assistant-message-icon";
             public const string AssistantMessageText = "assistant-message-text";
+            public const string AssistantSearch = "assistant-search";
+            public const string AssistantSearchContent = "assistant-search-content";
+            public const string AssistantSearchIcon = "assistant-search-icon";
+            public const string AssistantSearchPhrase = "assistant-search-phrase";
             public const string BackLink = "chat-back-link";
-            public const string BottomSection = "chat-bottom-section";
+            public const string ChatBackLink = "chat-back-link";
+            public const string ChatBottomSection = "chat-bottom-section";
+            public const string ChatContainer = "chat-container";
+            public const string ChatHeaderContainer = "chat-header-container";
+            public const string ChatPageRoot = "chat-page-root";
+            public const string ChatView = "chat-view";
             public const string Citation = "citation";
             public const string CitationContent = "citation-content";
             public const string CitationFile = "citation-file";
-            public const string Container = "chat-container";
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
-            public const string PageRoot = "chat-page-root";
-            public const string View = "chat-view";
+            public const string UserMessage = "user-message";
         }
 
         public static class Chip
@@ -8857,12 +9225,9 @@ namespace Material.Web
             public const string FloatingChip = "floating-chip";
             public const string GridChips = "m3-grid-chips";
             public const string InteractiveChip = "interactive-chip";
-            public const string MapCategoryChip = "map-category-chip";
-            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string PayChip = "pay-chip";
             public const string PosChipSet = "pos-chip-set";
             public const string PosSupportedChips = "pos-supported-chips";
-            public const string PosTechChips = "pos-tech-chips";
             public const string ProductTagChip = "product-tag-chip";
             public const string SmartFilterChips = "smart-filter-chips";
             public const string SmartFormChipContainer = "smart-form-chip-container";
@@ -8934,7 +9299,6 @@ namespace Material.Web
 
         public static class CommerceModes
         {
-            public const string RouteDistanceBar = "route-distance-bar";
             public const string TicketCode = "ticket-code";
             public const string TicketNote = "ticket-note";
             public const string ZoneCheckBanner = "zone-check-banner";
@@ -8949,10 +9313,10 @@ namespace Material.Web
             public const string AiBlobSvg = "ai-blob-svg";
             public const string AmountValue = "amount-value";
             public const string AppFooter = "app-footer";
-            public const string AppHeader = "app-header";
             public const string ArchiveType = "archive-type";
             public const string B2bCtaGroup = "b2b-cta-group";
             public const string BackIcon = "back-icon";
+            public const string BackIcon_2 = "m3-back-icon";
             public const string BackLink = "back-link";
             public const string BarLabels = "bar-labels";
             public const string BarTrack = "bar-track";
@@ -8984,9 +9348,11 @@ namespace Material.Web
             public const string CatalogTitle = "catalog-title";
             public const string CenterBox = "m3-center-box";
             public const string ChevronIcon = "chevron-icon";
+            public const string ChipPlace = "chip-place";
             public const string ClickPopupActions = "click-popup-actions";
             public const string ClickPopupAddress = "click-popup-address";
             public const string ClickPopupCoords = "click-popup-coords";
+            public const string Closed = "closed";
             public const string Collapsed = "collapsed";
             public const string ColorGrid = "color-grid";
             public const string ColorHex = "color-hex";
@@ -8998,6 +9364,7 @@ namespace Material.Web
             public const string ColumnReady = "column-ready";
             public const string ColumnTitle = "column-title";
             public const string CommonDragHandle = "drag-handle";
+            public const string CommonGlass = "glass";
             public const string CommonGrid = "m3-grid";
             public const string CommonLabel = "m3-label";
             public const string CommonPageHeader = "m3-page-header";
@@ -9108,6 +9475,7 @@ namespace Material.Web
             public const string InStockText = "in-stock-text";
             public const string InteractiveAction = "interactive-action";
             public const string IsInvalid = "is-invalid";
+            public const string IsOpen = "is-open";
             public const string ItemActions = "item-actions";
             public const string ItemHeadline = "item-headline";
             public const string ItemIcon = "item-icon";
@@ -9121,8 +9489,7 @@ namespace Material.Web
             public const string ItemTotalPrice = "item-total-price";
             public const string ItemUnitPrice = "item-unit-price";
             public const string KanbanBoard = "m3-kanban-board";
-            public const string KanbanColumn = "kanban-column";
-            public const string KanbanColumn_2 = "m3-kanban-column";
+            public const string KanbanColumn = "m3-kanban-column";
             public const string KdsBoard = "kds-board";
             public const string KdsColumn = "kds-column";
             public const string L0 = "l0";
@@ -9131,9 +9498,9 @@ namespace Material.Web
             public const string L3 = "l3";
             public const string L4 = "l4";
             public const string LabelSm = "m3-label-sm";
+            public const string LayoutLinkStack = "link-stack";
             public const string LegendDot = "legend-dot";
             public const string LegendItem = "legend-item";
-            public const string LinkStack = "link-stack";
             public const string LivePulseDot = "live-pulse-dot";
             public const string LocalVideoPip = "local-video-pip";
             public const string M3Card = "m3-card";
@@ -9142,13 +9509,20 @@ namespace Material.Web
             public const string M3CardMedia = "m3-card-media";
             public const string M3CardMediaPlaceholder = "m3-card-media-placeholder";
             public const string M3CardOutlined = "m3-card-outlined";
+            public const string M3TotalLabel = "m3-total-label";
+            public const string M3TotalRow = "m3-total-row";
+            public const string M3TotalValue = "m3-total-value";
             public const string MainFooter = "main-footer";
             public const string ManeuverDetails = "maneuver-details";
             public const string ManeuverDistance = "maneuver-distance";
             public const string ManeuverIcon = "maneuver-icon";
             public const string ManeuverIconContainer = "maneuver-icon-container";
             public const string ManeuverText = "maneuver-text";
+            public const string MapActionButton = "map-action-button";
+            public const string MapActive = "active";
             public const string MapCanvas = "map-canvas";
+            public const string MapCategoriesScroll = "map-categories-scroll";
+            public const string MapCategoryChip = "map-category-chip";
             public const string MapClickPopup = "map-click-popup";
             public const string MapCtrlBtn = "map-ctrl-btn";
             public const string MapFloatingActions = "map-floating-actions";
@@ -9156,21 +9530,60 @@ namespace Material.Web
             public const string MapFloorLabel = "map-floor-label";
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
+            public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
+            public const string MapMeasureBadge = "map-measure-badge";
+            public const string MapMeasureBadgeActions = "map-measure-badge-actions";
+            public const string MapMeasureBadgeHint = "map-measure-badge-hint";
+            public const string MapMeasureBadgeValue = "map-measure-badge-value";
+            public const string MapMobileBackdrop = "map-mobile-backdrop";
+            public const string MapNavigatorPanel = "navigator-panel";
+            public const string MapNearbyResultsPanel = "nearby-results-panel";
+            public const string MapPanelContent = "map-panel-content";
+            public const string MapPanelToggle = "map-panel-toggle";
+            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
+            public const string MapPanelToggleTab = "map-panel-toggle-tab";
+            public const string MapPickerWrapper = "map-picker-wrapper";
+            public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
+            public const string MapRouteCloseBtn = "map-route-close-btn";
+            public const string MapRouteDeleteBtn = "map-route-delete-btn";
             public const string MapRouteDot = "map-route-dot";
             public const string MapRouteDotFrom = "map-route-dot-from";
             public const string MapRouteDotsLine = "map-route-dots-line";
             public const string MapRouteDotTo = "map-route-dot-to";
             public const string MapRouteDotVia = "map-route-dot-via";
+            public const string MapRouteFieldsActions = "map-route-fields-actions";
+            public const string MapRouteFieldsDots = "map-route-fields-dots";
+            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
+            public const string MapRouteFieldsRow = "map-route-fields-row";
+            public const string MapRouteHeaderRow = "map-route-header-row";
+            public const string MapRouteHeaderTitle = "map-route-header-title";
+            public const string MapRouteInput = "map-route-input";
+            public const string MapRouteInputs = "map-route-inputs";
+            public const string MapRouteProfileChip = "map-route-profile-chip";
             public const string MapRouteProfileRow = "map-route-profile-row";
+            public const string MapRouteRemoveViaBtn = "map-route-remove-via-btn";
+            public const string MapRouteSubmitBtn = "map-route-submit-btn";
+            public const string MapRouteSuggestionButton = "map-route-suggestion-button";
+            public const string MapRouteSuggestionIcon = "map-route-suggestion-icon";
+            public const string MapRouteSuggestionItem = "map-route-suggestion-item";
             public const string MapRouteSuggestionMeta = "map-route-suggestion-meta";
             public const string MapRouteSuggestions = "map-route-suggestions";
             public const string MapRouteSuggestionTitle = "map-route-suggestion-title";
+            public const string MapRouteSwapBtn = "map-route-swap-btn";
+            public const string MapSearchIcon = "search-icon";
+            public const string MapSearchInline = "map-search-inline";
             public const string MapTiltBtn = "map-tilt-btn";
+            public const string MapToolbar = "map-toolbar";
+            public const string MapTopbar = "map-topbar";
             public const string MapZoomDivider = "map-zoom-divider";
             public const string MapZoomStack = "map-zoom-stack";
+            public const string MaterialTextField = "material-text-field";
             public const string MessageList = "message-list";
             public const string MessageListContainer = "message-list-container";
             public const string MetaDot = "meta-dot";
@@ -9186,11 +9599,9 @@ namespace Material.Web
             public const string NavFab = "m3-nav-fab";
             public const string NavigatorControls = "navigator-controls";
             public const string NavigatorManeuverBar = "navigator-maneuver-bar";
-            public const string NavigatorPanel = "navigator-panel";
             public const string NavigatorStatsBar = "navigator-stats-bar";
             public const string NavItem = "nav-item";
             public const string NavMobile = "nav-mobile";
-            public const string NearbyResultsPanel = "nearby-results-panel";
             public const string NoMessages = "no-messages";
             public const string NoNav = "no-nav";
             public const string NotificationBanner = "notification-banner";
@@ -9200,6 +9611,7 @@ namespace Material.Web
             public const string OrderItemsSubheader = "order-items-subheader";
             public const string OrdersErrorBanner = "orders-error-banner";
             public const string OrdersKanbanBoard = "orders-kanban-board";
+            public const string OrdersKanbanColumn = "kanban-column";
             public const string OrdersListGrid = "orders-list-grid";
             public const string OrganizationsMapControls = "organizations-map-controls";
             public const string OrganizationsMapPage = "organizations-map-page";
@@ -9210,6 +9622,7 @@ namespace Material.Web
             public const string OrgShowcaseSection = "org-showcase-section";
             public const string PageContainer = "m3-page-container";
             public const string PageHeaderActions = "m3-page-header-actions";
+            public const string PageHeaderStart = "m3-page-header-start";
             public const string PageHeaderTitle = "m3-page-header-title";
             public const string PageHeading = "page-heading";
             public const string PageSubtitle = "page-subtitle";
@@ -9224,13 +9637,20 @@ namespace Material.Web
             public const string PlaceBtnTertiary = "place-btn-tertiary";
             public const string PlaceCoordinates = "place-coordinates";
             public const string PlaceDetailsActions = "place-details-actions";
+            public const string PlaceDetailsAvatar = "place-details-avatar";
+            public const string PlaceDetailsBadge = "place-details-badge";
             public const string PlaceDetailsBody = "place-details-body";
             public const string PlaceDetailsContent = "place-details-content";
             public const string PlaceDetailsDivider = "place-details-divider";
             public const string PlaceDetailsHeader = "place-details-header";
+            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string PlaceDetailsHero = "place-details-hero";
+            public const string PlaceDetailsInfoSection = "place-details-info-section";
             public const string PlaceDetailsName = "place-details-name";
             public const string PlaceDetailsPanel = "place-details-panel";
+            public const string PlaceDetailsTitleContainer = "place-details-title-container";
+            public const string PlaceInfoIcon = "info-icon";
+            public const string PlaceInfoRow = "place-info-row";
             public const string PlanCurrency = "plan-currency";
             public const string PlanFeatures = "plan-features";
             public const string PlanHeader = "plan-header";
@@ -9265,8 +9685,6 @@ namespace Material.Web
             public const string ProductPriceSection = "product-price-section";
             public const string ProductSpecsGrid = "product-specs-grid";
             public const string ProductUnit = "product-unit";
-            public const string ProfileContainer = "profile-container";
-            public const string ProfileTitle = "profile-title";
             public const string PromoSection = "promo-section";
             public const string PromoSuccessText = "promo-success-text";
             public const string ProTier = "pro-tier";
@@ -9282,18 +9700,27 @@ namespace Material.Web
             public const string RouteAlternativeAction = "route-alternative-action";
             public const string RouteAlternativeActions = "route-alternative-actions";
             public const string RouteAlternativeArrival = "route-alternative-arrival";
+            public const string RouteAlternativeCard = "route-alternative-card";
             public const string RouteAlternativeDistance = "route-alternative-distance";
+            public const string RouteAlternativeIcon = "route-alternative-icon";
             public const string RouteAlternativeLabel = "route-alternative-label";
             public const string RouteAlternativeMain = "route-alternative-main";
             public const string RouteAlternativeSecondary = "route-alternative-secondary";
             public const string RouteAlternativesList = "route-alternatives-list";
             public const string RouteAlternativeTime = "route-alternative-time";
+            public const string RouteButton = "route-button";
             public const string RouteClose = "route-close";
+            public const string RouteDistanceBar = "route-distance-bar";
             public const string RouteError = "route-error";
             public const string RouteHeader = "route-header";
+            public const string RouteInfo = "route-info";
             public const string RouteLabel = "route-label";
+            public const string RouteLoading = "route-loading";
             public const string RouteOptionsToolbar = "route-options-toolbar";
+            public const string RouteOptionsToolbarBtn = "route-options-toolbar-btn";
             public const string RouteOptionsToolbarMeta = "route-options-toolbar-meta";
+            public const string RouteStartBtn = "route-start-btn";
+            public const string RouteStartButton = "route-start-button";
             public const string RouteStartContainer = "route-start-container";
             public const string RouteStat = "route-stat";
             public const string RouteStepMeta = "route-step-meta";
@@ -9307,6 +9734,11 @@ namespace Material.Web
             public const string SafeAreaTop = "safe-area-top";
             public const string ScoreBox = "score-box";
             public const string ScoreCircle = "score-circle";
+            public const string SearchBarInner = "search-bar-inner";
+            public const string SearchDivider = "search-divider";
+            public const string SearchInput = "search-input";
+            public const string SearchModeBar = "search-bar";
+            public const string SearchPanel = "search-panel";
             public const string SecondaryCta = "secondary-cta";
             public const string SectionAmbientGlow = "section-ambient-glow";
             public const string SectionDesc = "section-desc";
@@ -9392,8 +9824,6 @@ namespace Material.Web
             public const string StressTarget = "stress-target";
             public const string Suggestions = "suggestions";
             public const string SummaryDivider = "summary-divider";
-            public const string SummaryRow = "summary-row";
-            public const string SummaryRows = "summary-rows";
             public const string SupportActionGrid = "support-action-grid";
             public const string SupportGrid = "support-grid";
             public const string SupportLabel = "support-label";
@@ -9424,6 +9854,7 @@ namespace Material.Web
             public const string TouchNone = "touch-none";
             public const string TouchPanX = "touch-pan-x";
             public const string TouchPanY = "touch-pan-y";
+            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchTarget44 = "touch-target-44";
             public const string TouchTarget48 = "touch-target-48";
             public const string TrialDaysHighlight = "trial-days-highlight";
@@ -9435,6 +9866,7 @@ namespace Material.Web
             public const string UxExpandContainer = "ux-expand-container";
             public const string UxFilterMeta = "ux-filter-meta";
             public const string UxModesSection = "ux-modes-section";
+            public const string UxSearchBox = "ux-search-box";
             public const string UxSpotlightContainer = "ux-spotlight-container";
             public const string UxSpotlightGrid = "ux-spotlight-grid";
             public const string UxSpotlightHeader = "ux-spotlight-header";
@@ -9560,7 +9992,6 @@ namespace Material.Web
             public const string DiagSpaceTop = "diag-space-top";
             public const string DiagSuccess = "diag-success";
             public const string DiagWarning = "diag-warning";
-            public const string OrderSummarySection = "order-summary-section";
         }
 
         public static class Dialog
@@ -9583,6 +10014,7 @@ namespace Material.Web
             public const string Modal = "m3-modal";
             public const string ModalBackdrop = "m3-modal-backdrop";
             public const string OptionsList = "m3-dialog-options-list";
+            public const string PromotionDialog = "promotion-dialog";
             public const string PromotionModalBody = "promotion-modal-body";
             public const string PromotionModalHeader = "promotion-modal-header";
             public const string PromotionModalSubtitle = "promotion-modal-subtitle";
@@ -9619,9 +10051,9 @@ namespace Material.Web
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
+            public const string DrawerHeader = "drawer-header";
             public const string DrawerPanel = "drawer-panel";
             public const string DrawerPanel_2 = "m3-drawer-panel";
-            public const string MapMobileBackdrop = "map-mobile-backdrop";
             public const string Show = "show";
             public const string ShowcaseSidebarBackdrop = "showcase-sidebar-backdrop";
         }
@@ -9651,15 +10083,20 @@ namespace Material.Web
             public const string DocsBreadcrumbLink = "docs-breadcrumb-link";
             public const string DocsContent = "docs-content";
             public const string DocsContentHeader = "docs-content-header";
+            public const string DocsContentLoader = "docs-content-loader";
             public const string DocsEmptyState = "docs-empty-state";
             public const string DocsGroupContainer = "docs-group-container";
             public const string DocsGroupHeader = "docs-group-header";
             public const string DocsGroupItems = "docs-group-items";
+            public const string DocsGroupTitle = "docs-group-title";
             public const string DocsHeaderActions = "docs-header-actions";
             public const string DocsHeaderBar = "docs-header-bar";
             public const string DocsHeaderBreadcrumb = "docs-header-breadcrumb";
             public const string DocsHeaderIcon = "docs-header-icon";
             public const string DocsHeaderTitle = "docs-header-title";
+            public const string DocsLoaderContainer = "docs-loader-container";
+            public const string DocsLoadingText = "docs-loading-text";
+            public const string DocsMenuIcon = "docs-menu-icon";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
             public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
@@ -9668,9 +10105,11 @@ namespace Material.Web
             public const string DocsSidebarHeader = "docs-sidebar-header";
             public const string DocsSidebarMenu = "docs-sidebar-menu";
             public const string DocsSidebarTitle = "docs-sidebar-title";
+            public const string DocsSidebarToggleBtn = "docs-sidebar-toggle-btn";
             public const string DocsWelcomeCard = "docs-welcome-card";
             public const string DocsWelcomeContainer = "docs-welcome-container";
             public const string DocsWelcomeIcon = "docs-welcome-icon";
+            public const string SidebarOpen = "sidebar-open";
         }
 
         public static class Donation
@@ -9752,6 +10191,7 @@ namespace Material.Web
             public const string FaceidNotice = "faceid-notice";
             public const string FaceidScannerFrame = "faceid-scanner-frame";
             public const string FaceidStatusText = "faceid-status-text";
+            public const string FaceidViewfinderCard = "faceid-viewfinder-card";
             public const string Scanning = "scanning";
             public const string StatusError = "status-error";
             public const string StatusNeutral = "status-neutral";
@@ -9763,7 +10203,6 @@ namespace Material.Web
         {
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
-            public const string RouteLoading = "route-loading";
             public const string Short = "short";
         }
 
@@ -9806,7 +10245,6 @@ namespace Material.Web
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
-            public const string HeaderGridLayout = "header-grid-layout";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -9835,9 +10273,6 @@ namespace Material.Web
             public const string InputFieldGroup = "input-field-group";
             public const string Invalid = "invalid";
             public const string Legend = "m3-legend";
-            public const string MapRouteFieldsDots = "map-route-fields-dots";
-            public const string MapRouteFieldsInputs = "map-route-fields-inputs";
-            public const string MapRouteFieldsRow = "map-route-fields-row";
             public const string MaterialCounter = "material-counter";
             public const string Modified = "modified";
             public const string PosFormField = "pos-form-field";
@@ -9860,8 +10295,6 @@ namespace Material.Web
         {
             public const string GridSelection = "m3-grid-selection";
             public const string InputBox = "input-box";
-            public const string MapRouteInput = "map-route-input";
-            public const string MapRouteInputs = "map-route-inputs";
             public const string PromoInputGroup = "promo-input-group";
             public const string SelectInput = "select-input";
             public const string SelectionItem = "m3-selection-item";
@@ -9917,7 +10350,6 @@ namespace Material.Web
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
-            public const string HeaderCenterZone = "header-center-zone";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
@@ -9949,19 +10381,24 @@ namespace Material.Web
 
         public static class Header
         {
+            public const string AppHeader = "app-header";
+            public const string AppHeaderSticky = "header-sticky";
             public const string BrandIconBox = "header-brand-icon-box";
+            public const string HeaderBrandLink = "header-brand-link";
+            public const string HeaderBrandText = "header-brand-text";
+            public const string HeaderBrandZone = "header-brand-zone";
+            public const string HeaderCenterZone = "header-center-zone";
             public const string HeaderContent = "header-content";
+            public const string HeaderEndZone = "header-end-zone";
+            public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
+            public const string HeaderStartZone = "header-start-zone";
             public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
-            public const string MapRouteHeaderRow = "map-route-header-row";
-            public const string MapRouteHeaderTitle = "map-route-header-title";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
             public const string PageHeaderText = "m3-page-header-text";
-            public const string PlaceDetailsHeaderTitle = "place-details-header-title";
             public const string RocketIcon = "header-rocket-icon";
-            public const string Sticky = "header-sticky";
         }
 
         public static class Help
@@ -9998,7 +10435,7 @@ namespace Material.Web
             public const string FooterTrustInfo = "footer-trust-info";
             public const string InfoContent = "info-content";
             public const string InfogridRoot = "info-grid";
-            public const string InfoIcon = "info-icon";
+            public const string InfoGridRoot = "m3-info-grid";
             public const string InfoItem = "m3-info-item";
             public const string InfoItem_2 = "info-item";
             public const string InfoLabel = "m3-info-label";
@@ -10008,18 +10445,14 @@ namespace Material.Web
             public const string ItemInfo = "item-info";
             public const string KioskBrandInfo = "kiosk-brand-info";
             public const string OrderItemInfo = "order-item-info";
-            public const string PlaceDetailsInfoSection = "place-details-info-section";
-            public const string PlaceInfoRow = "place-info-row";
+            public const string PlaceInfoIcon = "info-icon";
             public const string PosQrInfo = "pos-qr-info";
-            public const string PreviewInfo = "preview-info";
             public const string ProductInfoPanel = "product-info-panel";
             public const string Root = "m3-info-grid";
-            public const string RouteInfo = "route-info";
             public const string SellerInfo = "seller-info";
             public const string SessionItemInfo = "session-item-info";
             public const string ShowcaseStatInfo = "showcase-stat-info";
             public const string SmartFormInfo = "smart-form-info";
-            public const string SmartToastInfo = "smart-toast-info";
             public const string SpotlightInfo = "spotlight-info";
             public const string TicketInfo = "ticket-info";
         }
@@ -10203,9 +10636,6 @@ namespace Material.Web
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
-            public const string MapPopupBackdrop = "map-popup-backdrop";
-            public const string MapToolbar = "map-toolbar";
-            public const string MapTopbar = "map-topbar";
         }
 
         public static class MediaPlayer
@@ -10235,7 +10665,6 @@ namespace Material.Web
             public const string DrawerHeader = "order-drawer-header";
             public const string DrawerPanel = "order-drawer-panel";
             public const string FooterActions = "order-footer-actions";
-            public const string HeaderTitleBox = "order-header-title-box";
             public const string ItemControls = "order-item-controls";
             public const string ItemImg = "order-item-img";
             public const string ItemImgPlaceholder = "order-item-img-placeholder";
@@ -10250,9 +10679,16 @@ namespace Material.Web
             public const string KdsProductName = "kds-product-name";
             public const string KdsTimeAgo = "kds-time-ago";
             public const string Number = "order-number";
-            public const string PriceBreakdown = "order-price-breakdown";
+            public const string OrderHeaderTitleBox = "order-header-title-box";
+            public const string OrderItemName = "order-item-name";
+            public const string OrderPriceBreakdown = "order-price-breakdown";
+            public const string OrderQtyStepper = "order-qty-stepper";
+            public const string OrderQtyVal = "order-qty-val";
+            public const string OrderSubtitle = "order-subtitle";
+            public const string OrderSummarySection = "order-summary-section";
             public const string QtyStepper = "order-qty-stepper";
             public const string QtyVal = "order-qty-val";
+            public const string Show = "show";
             public const string SmartKanbanBoard = "smart-kanban-board";
             public const string SmartKanbanColumn = "smart-kanban-column";
             public const string SmartKanbanColumnCount = "smart-kanban-column-count";
@@ -10271,7 +10707,10 @@ namespace Material.Web
 
         public static class Payment
         {
+            public const string Active = "active";
+            public const string BodySubtext = "body-subtext";
             public const string BoxTitle = "box-title";
+            public const string BtnGatewayLink = "btn-gateway-link";
             public const string CashActionsRow = "cash-actions-row";
             public const string CashBox = "cash-box";
             public const string CashContainer = "cash-container";
@@ -10282,24 +10721,42 @@ namespace Material.Web
             public const string CashSessionPanel = "cash-session-panel";
             public const string CheckoutPanel = "checkout-panel";
             public const string DeeplinkBtn = "deeplink-btn";
+            public const string FeedDetails = "feed-details";
+            public const string FeedIcon = "feed-icon";
+            public const string FeedItem = "feed-item";
+            public const string FeedLinksCard = "feed-links-card";
+            public const string FeedName = "feed-name";
+            public const string FeedUrl = "feed-url";
             public const string GatewayIcon = "gateway-icon";
             public const string GatewayName = "gateway-name";
             public const string GatewaysGrid = "gateways-grid";
+            public const string Google = "google";
             public const string GroupDescription = "group-description";
             public const string GroupTitle = "group-title";
+            public const string Headline = "headline";
             public const string HintLink = "hint-link";
             public const string InvoiceAmount = "invoice-amount";
+            public const string InvoiceLabel = "invoice-label";
+            public const string InvoiceMethod = "invoice-method";
             public const string InvoiceSummaryBox = "invoice-summary-box";
+            public const string LabelTitle = "label-title";
             public const string LargeTerminalIcon = "large-terminal-icon";
             public const string MerchantSettingsPanel = "merchant-settings-panel";
             public const string Methods = "payment-methods";
+            public const string MethodSub = "method-sub";
+            public const string MethodTitle = "method-title";
+            public const string OnlineRedirectArea = "online-redirect-area";
             public const string OtpNotice = "otp-notice";
             public const string OtpRow = "otp-row";
             public const string OtpVerificationBox = "otp-verification-box";
             public const string PanelFooter = "panel-footer";
             public const string PanInputBox = "pan-input-box";
             public const string PaymentDashboard = "payment-dashboard";
+            public const string PaymentMethodBody = "payment-method-body";
+            public const string PaymentMethodsGrid = "payment-methods-grid";
+            public const string PaymentStatusChecker = "payment-status-checker";
             public const string PaymentSupport = "payment-support";
+            public const string PaymentTrustFooter = "payment-trust-footer";
             public const string PosActionDesc = "pos-action-desc";
             public const string PosActionTitle = "pos-action-title";
             public const string PosApprovedTitle = "pos-approved-title";
@@ -10310,10 +10767,21 @@ namespace Material.Web
             public const string PosSlipDetails = "pos-slip-details";
             public const string PosStartBtn = "pos-start-btn";
             public const string PosSuccessView = "pos-success-view";
+            public const string ProfileContainer = "profile-container";
+            public const string ProfileTitle = "profile-title";
+            public const string PromoPaymentCard = "payment-card";
+            public const string PromoSuccessCheckIcon = "success-check-icon";
+            public const string PromoSuccessIconWrap = "success-icon-wrap";
+            public const string PromoSuccessStep = "success-step";
+            public const string QrFrame = "qr-frame";
+            public const string QrImage = "qr-image";
+            public const string QrPaymentArea = "qr-payment-area";
+            public const string RedirectIcon = "redirect-icon";
             public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
+            public const string SpinnerInline = "spinner-inline";
             public const string SplitHeader = "split-header";
             public const string SplitPaymentBox = "split-payment-box";
             public const string SplitRow = "split-row";
@@ -10321,12 +10789,18 @@ namespace Material.Web
             public const string StepItem = "step-item";
             public const string StepLine = "step-line";
             public const string StepNum = "step-num";
+            public const string SuccessCheckIcon = "success-check-icon";
+            public const string SuccessDescClass = "success-desc";
+            public const string SuccessHintClass = "success-hint";
             public const string SuccessIcon = "success-icon";
+            public const string SuccessIconWrap = "success-icon-wrap";
+            public const string SuccessStep = "success-step";
+            public const string SuccessTitleClass = "success-title";
             public const string TabContentBox = "tab-content-box";
-            public const string TrustFooter = "payment-trust-footer";
             public const string TypeTabs = "type-tabs";
             public const string UzqrHighlight = "uzqr-highlight";
             public const string WorkflowStepper = "workflow-stepper";
+            public const string Yandex = "yandex";
         }
 
         public static class Picker
@@ -10377,14 +10851,19 @@ namespace Material.Web
             public const string LangCurrentLabel = "lang-current-label";
             public const string LangDropdownMenu = "lang-dropdown-menu";
             public const string LangDropdownWrapper = "lang-dropdown-wrapper";
+            public const string LangFlag = "lang-flag";
             public const string LangGlobeIcon = "lang-globe-icon";
             public const string LangInlineGrid = "lang-inline-grid";
+            public const string LangMenuBackdrop = "lang-menu-backdrop";
             public const string LangMenuItem = "lang-menu-item";
+            public const string LangMenuItemActive = "lang-menu-item--active";
             public const string LangMenuList = "lang-menu-list";
+            public const string LangName = "lang-name";
             public const string LangPillBtn = "lang-pill-btn";
             public const string LangSelect = "lang-select";
+            public const string LangSelectorInline = "lang-selector-inline";
+            public const string LangSelectorPill = "lang-selector-pill";
             public const string LangToggleBtn = "lang-toggle-btn";
-            public const string MapPickerWrapper = "map-picker-wrapper";
             public const string Md3ClosedBadge = "md3-closed-badge";
             public const string Md3DialogActionsRow = "md3-dialog-actions-row";
             public const string Md3DialogHeadline = "md3-dialog-headline";
@@ -10463,6 +10942,34 @@ namespace Material.Web
             public const string WeekMiniDots = "picker-week-mini-dots";
         }
 
+        public static class ProfileDialog
+        {
+            public const string FaceidCameraFallback = "faceid-camera-fallback";
+            public const string FaceidCameraFallbackIcon = "faceid-camera-fallback-icon";
+            public const string FaceidCameraViewport = "faceid-camera-viewport";
+            public const string FaceidDirectionBadge = "faceid-direction-badge";
+            public const string FaceidInstructionText = "faceid-instruction-text";
+            public const string FaceidModalContent = "faceid-modal-content";
+            public const string FaceidProgressBar = "faceid-progress-bar";
+            public const string FaceidStageStep = "faceid-stage-step";
+            public const string FaceidStatusMessage = "faceid-status-message";
+            public const string ProfileAuthActions = "profile-auth-actions";
+            public const string ProfileAuthCard = "profile-auth-card";
+            public const string ProfileAuthDesc = "profile-auth-desc";
+            public const string ProfileAuthInfo = "profile-auth-info";
+            public const string ProfileAuthText = "profile-auth-text";
+            public const string ProfileAuthTitle = "profile-auth-title";
+            public const string ProfileColorPickerBox = "profile-color-picker-box";
+            public const string ProfileColorPickerLabel = "profile-color-picker-label";
+            public const string ProfileDeleteIcon = "profile-delete-icon";
+            public const string ProfileDialogContent = "profile-dialog-content";
+            public const string ProfilePasskeyIcon = "profile-passkey-icon";
+            public const string ProfileSecuritySubtext = "profile-security-subtext";
+            public const string ProfileThemeGrid = "profile-theme-grid";
+            public const string StepActive = "step-active";
+            public const string StepTertiary = "step-tertiary";
+        }
+
         public static class Progress
         {
             public const string CashProgressBar = "cash-progress-bar";
@@ -10486,6 +10993,7 @@ namespace Material.Web
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
             public const string HudTr = "hud-tr";
+            public const string PreviewInfo = "preview-info";
             public const string QrBotBtn = "qr-bot-btn";
             public const string QrBox = "qr-box";
             public const string QrCanvasBox = "qr-canvas-box";
@@ -10538,6 +11046,7 @@ namespace Material.Web
             public const string QrgTitle = "qrg-title";
             public const string QrHint = "qr-hint";
             public const string QrHudCorner = "qr-hud-corner";
+            public const string QrInfoIcon = "info-icon";
             public const string QrInstruction = "qr-instruction";
             public const string QrLaserScanner = "qr-laser-scanner";
             public const string QrLoadingBox = "qr-loading-box";
@@ -10585,17 +11094,14 @@ namespace Material.Web
 
         public static class Scrollbar
         {
-            public const string MapCategoriesScroll = "map-categories-scroll";
             public const string ScrollSnapX = "m3-scroll-snap-x";
             public const string ScrollThin = "m3-scroll-thin";
             public const string ScrollThin_2 = "scroll-thin";
-            public const string TouchScrollX = "touch-scroll-x";
             public const string TouchScrollY = "touch-scroll-y";
         }
 
         public static class Scrollbars
         {
-            public const string MapPanelContent = "map-panel-content";
             public const string OptionsContainer = "options-container";
             public const string OrderSummaryList = "order-summary-list";
             public const string ProductThumbnails = "product-thumbnails";
@@ -10610,29 +11116,17 @@ namespace Material.Web
 
         public static class Search
         {
-            public const string AssistantSearch = "assistant-search";
-            public const string AssistantSearchContent = "assistant-search-content";
-            public const string AssistantSearchIcon = "assistant-search-icon";
-            public const string AssistantSearchPhrase = "assistant-search-phrase";
-            public const string Bar = "search-bar";
-            public const string BarInner = "search-bar-inner";
             public const string ClearBtn = "search-clear-btn";
             public const string Container = "m3-search-container";
             public const string HomeSearchContainer = "home-search-container";
-            public const string MapSearchInline = "map-search-inline";
             public const string MaterialSearchContainer = "material-search-container";
             public const string MaterialTextField = "material-text-field";
-            public const string Panel = "search-panel";
             public const string PosSearchInput = "pos-search-input";
             public const string RouteBtn = "search-route-btn";
             public const string SearchContainer = "search-container";
-            public const string SearchDivider = "search-divider";
-            public const string SearchIcon = "search-icon";
-            public const string SearchInput = "search-input";
             public const string SearchMode = "search-mode";
             public const string ShowcaseSearchBox = "showcase-search-box";
             public const string SmartFilterSearch = "smart-filter-search";
-            public const string UxSearchBox = "ux-search-box";
             public const string YandexSearchIconSvg = "yandex-search-icon-svg";
         }
 
@@ -10683,10 +11177,10 @@ namespace Material.Web
             public const string SeatDesignerSection = "seat-designer-section";
             public const string SeatDesignerSectionLabel = "seat-designer-section-label";
             public const string SeatDesignerSectionTitle = "seat-designer-section-title";
-            public const string SeatDesignerToolbar = "seat-designer-toolbar";
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatToolbar = "seat-designer-toolbar";
         }
 
         public static class SegmentedButton
@@ -10708,14 +11202,22 @@ namespace Material.Web
         public static class SignIn
         {
             public const string AuthDivider = "auth-divider";
+            public const string OauthErrorBadge = "oauth-error-badge";
             public const string OtpTargetHint = "otp-target-hint";
+            public const string SigninBrandIcon = "signin-brand-icon";
+            public const string SigninBrandLink = "signin-brand-link";
+            public const string SigninBrandText = "signin-brand-text";
             public const string SigninCard = "signin-card";
             public const string SigninContainer = "signin-container";
             public const string SigninErrorBanner = "signin-error-banner";
+            public const string SigninFooter = "signin-footer";
             public const string SigninHeader = "signin-header";
             public const string SigninLogoBadge = "signin-logo-badge";
+            public const string SigninPageWrapper = "signin-page-wrapper";
             public const string SigninSubtitle = "signin-subtitle";
             public const string SigninTitle = "signin-title";
+            public const string SigninTopBar = "signin-top-bar";
+            public const string SigninTopBarActions = "signin-top-bar-actions";
         }
 
         public static class Skeleton
@@ -10724,11 +11226,16 @@ namespace Material.Web
             public const string Circle = "m3-skeleton-circle";
             public const string Root = "m3-skeleton";
             public const string Short = "m3-short";
+            public const string SkeletonCard = "m3-skeleton-card";
+            public const string SkeletonCircle = "m3-skeleton-circle";
+            public const string SkeletonRoot = "m3-skeleton";
+            public const string SkeletonText = "m3-skeleton-text";
             public const string Text = "m3-skeleton-text";
         }
 
         public static class SmartDataView
         {
+            public const string SmartDataViewContent = "smart-data-view-content";
             public const string SmartDataViewHeader = "smart-data-view-header";
             public const string SmartdataviewRoot = "smart-data-view";
         }
@@ -10755,14 +11262,15 @@ namespace Material.Web
         {
             public const string SmartToastBody = "smart-toast-body";
             public const string SmartToastCloseBtn = "smart-toast-close-btn";
-            public const string SmartToastContainer = "smart-toast-container";
             public const string SmartToastError = "smart-toast-error";
             public const string SmartToastHeader = "smart-toast-header";
             public const string SmartToastIcon = "smart-toast-icon";
+            public const string SmartToastInfo = "smart-toast-info";
             public const string SmarttoastRoot = "smart-toast";
             public const string SmartToastSuccess = "smart-toast-success";
             public const string SmartToastTitle = "smart-toast-title";
             public const string SmartToastWarning = "smart-toast-warning";
+            public const string ToastContainer = "smart-toast-container";
         }
 
         public static class Subscription
@@ -10828,6 +11336,7 @@ namespace Material.Web
             public const string Org = "org";
             public const string PaginationText = "pagination-text";
             public const string Paginator = "paginator";
+            public const string PaginatorSummary = "paginator-summary";
             public const string PaymentCell = "payment-cell";
             public const string Quickgrid = "quickgrid";
             public const string ReceiptCellName = "receipt-cell-name";
@@ -10838,13 +11347,15 @@ namespace Material.Web
             public const string Root = "m3-table";
             public const string RowActions = "m3-table-row-actions";
             public const string RowActions_2 = "table-row-actions";
-            public const string RowLabel = "row-label";
-            public const string RowValue = "row-value";
             public const string ScheduleTable = "schedule-table";
             public const string ScrollContainer = "table-scroll-container";
             public const string SelectableText = "selectable-text";
             public const string SmartGridContainer = "smart-grid-container";
             public const string SortIndicator = "sort-indicator";
+            public const string TableIcon = "table-icon";
+            public const string TablePaginator = "paginator";
+            public const string TableRowLabel = "row-label";
+            public const string TableRowValue = "row-value";
             public const string W3 = "w3";
             public const string Wrapper = "m3-table-wrapper";
         }
@@ -10856,7 +11367,6 @@ namespace Material.Web
 
         public static class Terminal
         {
-            public const string BadgeCounter = "badge-counter";
             public const string CashPaymentLayout = "cash-payment-layout";
             public const string DialogHeader = "m3-dialog-header";
             public const string DialogTitleGroup = "m3-dialog-title-group";
@@ -10887,6 +11397,7 @@ namespace Material.Web
             public const string PosCompleteBtn = "pos-complete-btn";
             public const string PosDetailsImg = "pos-details-img";
             public const string PosDetailsList = "pos-details-list";
+            public const string PosDetailsRow = "row";
             public const string PosDeviceIcon = "pos-device-icon";
             public const string PosDeviceIcons = "pos-device-icons";
             public const string PosEmptyIcon = "pos-empty-icon";
@@ -10926,6 +11437,7 @@ namespace Material.Web
             public const string PosSidebar = "pos-sidebar";
             public const string PosSidebarHeader = "pos-sidebar-header";
             public const string PosSidebarHeaderRow = "pos-sidebar-header-row";
+            public const string PosTechChips = "pos-tech-chips";
             public const string PosTerminalLayout = "pos-terminal-layout";
             public const string PosTopHeaderActions = "pos-top-header-actions";
             public const string PosUxModeTitle = "pos-uxmode-title";
@@ -10941,9 +11453,6 @@ namespace Material.Web
         {
             public const string DarkMode = "dark-mode";
             public const string GroupToggle = "group-toggle";
-            public const string MapPanelToggle = "map-panel-toggle";
-            public const string MapPanelToggleIcon = "map-panel-toggle-icon";
-            public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string ModeIndicator = "mode-indicator";
             public const string ModePreview = "mode-preview";
             public const string ModeToggle = "m3-mode-toggle";
@@ -10980,7 +11489,6 @@ namespace Material.Web
             public const string LabelSmall = "m3-label-small";
             public const string LineClamp2 = "m3-line-clamp-2";
             public const string LineClamp3 = "m3-line-clamp-3";
-            public const string PlaceDetailsTitleContainer = "place-details-title-container";
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";

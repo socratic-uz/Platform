@@ -1,3 +1,4 @@
+using Markdown.Web;
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Components;
@@ -34,6 +35,7 @@ public static class PreviewServicesExtensions
         services.AddSingleton(new HttpClient(new FastPreviewHttpMessageHandler()));
         services.AddAuthorizationCore();
         services.AddLayoutServices();
+        services.AddMarkdownServices();
         services.AddScoped<PersistentComponentState>(sp => CreatePersistentComponentState());
 
         services.AddScoped<Domain.Interfaces.Hardware.IPosPinPadService, Infrastructure.Gateways.Hardware.MockPosPinPadService>();
@@ -267,16 +269,23 @@ public sealed class FastPreviewHttpMessageHandler : HttpMessageHandler
     protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
     {
         var url = request.RequestUri?.ToString() ?? "";
-        if (url.Contains("/docs/") || url.EndsWith(".md"))
+        if (url.Contains("/api/docs/content") || url.Contains("/docs/") || url.EndsWith(".md"))
         {
             return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK)
             {
-                Content = new StringContent("# Socratic Documentation\n\nPreview documentation content.")
+                Content = new StringContent("# Socratic Documentation\n\nPreview documentation content.", System.Text.Encoding.UTF8, "text/markdown")
+            });
+        }
+        if (url.Contains("/api/docs"))
+        {
+            return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+            {
+                Content = new StringContent("[\"README.md\", \"docs/architecture.md\"]", System.Text.Encoding.UTF8, "application/json")
             });
         }
         return Task.FromResult(new HttpResponseMessage(System.Net.HttpStatusCode.OK)
         {
-            Content = new StringContent("{}")
+            Content = new StringContent("{}", System.Text.Encoding.UTF8, "application/json")
         });
     }
 }

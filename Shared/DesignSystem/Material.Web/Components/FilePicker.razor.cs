@@ -7,6 +7,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Assets.Constants;
+using static Assets.Constants.Classes.Picker;
+using static Assets.Constants.Formats;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
@@ -16,6 +18,17 @@ namespace Material.Web.Components;
 
 public partial class FilePicker : ComponentBase
 {
+    protected string GetFileCardClass(bool isNew) => FileCard;
+
+    protected string GetIconPreviewClass(string? contentType, string? fileName)
+    {
+        var iconCls = GetIconClass(contentType, fileName);
+        return string.IsNullOrEmpty(iconCls) ? IconPreview : string.Format(Two, IconPreview, iconCls);
+    }
+
+    protected string UploadCardClass => isDragging
+        ? string.Format(Two, UploadCard, Dragging)
+        : UploadCard;
     [Inject] public IStringLocalizer L { get; set; } = default!;
 
     protected string inputId = $"file-picker-{Guid.NewGuid():N}";

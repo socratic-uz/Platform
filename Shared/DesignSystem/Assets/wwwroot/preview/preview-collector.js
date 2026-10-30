@@ -249,7 +249,7 @@
     // Non-semantic button check
     const isFakeButton = ['div', 'span', 'p'].includes(tag) &&
       (computed.cursor === 'pointer' || Array.from(el.classList).some(c => c.endsWith('-btn') || c.endsWith('-button'))) &&
-      !el.closest('button, a, summary, [role="button"], [role="link"], md-filled-card, md-elevated-card, md-outlined-card, md-filled-button, md-outlined-button, md-text-button, md-elevated-button, md-tonal-button, md-filter-chip, md-input-chip, md-assist-chip');
+      !el.closest('button, a, summary, [role="button"], [role="link"], md-filled-card, md-elevated-card, md-outlined-card, md-filled-button, md-outlined-button, md-text-button, md-elevated-button, md-tonal-button, md-filter-chip, md-input-chip, md-assist-chip, md-list-item, md-item, md-menu-item, md-tab, md-primary-tab, md-secondary-tab');
 
     const children = childNodes.map(child => collectNodeGeometry(child, rect, el, depth + 1));
 

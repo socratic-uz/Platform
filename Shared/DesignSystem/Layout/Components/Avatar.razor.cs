@@ -376,7 +376,7 @@ namespace Shared.Components
             var theme = await settings.GetThemeAsync();
 
             bool isDark = false;
-            var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Layout/Layout/Color.razor.js");
+            var module = await js.InvokeAsync<IJSObjectReference>("import", global::Assets.Constants.Scripts.Layouts.ColorTheme);
             if (theme == Theme.System)
             {
                 isDark = await module.InvokeAsync<bool>("isSystemDark");
@@ -420,7 +420,7 @@ namespace Shared.Components
                 await settings.SetThemeAsync(newTheme);
 
                 bool isDark = false;
-                var module = await js.InvokeAsync<IJSObjectReference>("import", "./_content/Layout/Layout/Color.razor.js");
+                var module = await js.InvokeAsync<IJSObjectReference>("import", global::Assets.Constants.Scripts.Layouts.ColorTheme);
                 if (newTheme == Theme.System)
                 {
                     isDark = await module.InvokeAsync<bool>("isSystemDark");
@@ -790,6 +790,12 @@ namespace Shared.Components
                 }
             }
         }
+
+        private const string PaletteColor = "Color";
+
+        private string FaceIdIconStyle => isFaceIdConfigured
+            ? "color: var(--md-sys-color-primary);"
+            : "color: var(--md-sys-color-secondary);";
     }
 }
 

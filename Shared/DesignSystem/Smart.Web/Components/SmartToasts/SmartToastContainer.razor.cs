@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Smart.Web.Services;
-
 using Microsoft.Extensions.Localization;
+using static Assets.Constants.Classes.SmartToast;
 
 namespace Smart.Web.Components;
 
@@ -14,6 +14,14 @@ public partial class SmartToastContainer : ComponentBase, IDisposable
     [Inject] public SmartToastService ToastService { get; set; } = default!;
 
     protected readonly List<ToastMessage> Toasts = new();
+
+    protected static string GetToastLevelClass(ToastLevel level) => level switch
+    {
+        ToastLevel.Success => SmartToastSuccess,
+        ToastLevel.Error => SmartToastError,
+        ToastLevel.Warning => SmartToastWarning,
+        _ => SmartToastInfo
+    };
 
     protected override void OnInitialized()
     {

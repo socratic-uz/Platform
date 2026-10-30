@@ -8,28 +8,28 @@
     },
     {
       "url": "_content/Assets/css/components/cards.css",
-      "size": 60638,
-      "hash": "sha256-7483b73ecc97"
+      "size": 59814,
+      "hash": "sha256-11fab7e8af24"
     },
     {
       "url": "_content/Assets/css/components/chips.css",
-      "size": 40631,
-      "hash": "sha256-f08e470a1fe9"
+      "size": 40634,
+      "hash": "sha256-0e1941c6d467"
     },
     {
       "url": "_content/Assets/css/components/common.css",
-      "size": 164974,
-      "hash": "sha256-56dd9447198e"
+      "size": 165169,
+      "hash": "sha256-e1171a0984c7"
     },
     {
       "url": "_content/Assets/css/components/components.css",
-      "size": 447,
-      "hash": "sha256-3f609acfbfdc"
+      "size": 477,
+      "hash": "sha256-40bd76a85503"
     },
     {
       "url": "_content/Assets/css/components/dialogs.css",
-      "size": 20425,
-      "hash": "sha256-709a18993043"
+      "size": 20492,
+      "hash": "sha256-7b6b39d53153"
     },
     {
       "url": "_content/Assets/css/components/expressive.css",
@@ -48,38 +48,43 @@
     },
     {
       "url": "_content/Assets/css/components/invoice.css",
-      "size": 3275,
-      "hash": "sha256-a348f9b96771"
+      "size": 3322,
+      "hash": "sha256-198b28a4dd52"
+    },
+    {
+      "url": "_content/Assets/css/components/profile-dialog.css",
+      "size": 3895,
+      "hash": "sha256-0502938eabd5"
     },
     {
       "url": "_content/Assets/css/components/smart-data-view.css",
-      "size": 717,
-      "hash": "sha256-a76a319fd244"
+      "size": 812,
+      "hash": "sha256-c12a131349fa"
     },
     {
       "url": "_content/Assets/css/components/smart-enum.css",
-      "size": 625,
-      "hash": "sha256-5f346b592821"
+      "size": 672,
+      "hash": "sha256-20b1ddd0465e"
     },
     {
       "url": "_content/Assets/css/components/smart-filter.css",
-      "size": 867,
-      "hash": "sha256-cd3848dd8586"
+      "size": 914,
+      "hash": "sha256-b4db60b8d5b8"
     },
     {
       "url": "_content/Assets/css/components/smart-form.css",
-      "size": 4368,
-      "hash": "sha256-781226557939"
+      "size": 4415,
+      "hash": "sha256-319249d66393"
     },
     {
       "url": "_content/Assets/css/components/smart-toast.css",
-      "size": 2361,
-      "hash": "sha256-3d83ca25838f"
+      "size": 2408,
+      "hash": "sha256-4472e492578f"
     },
     {
       "url": "_content/Assets/css/components/tables.css",
-      "size": 12065,
-      "hash": "sha256-cadb42dd033c"
+      "size": 12165,
+      "hash": "sha256-ad47de6b89e9"
     },
     {
       "url": "_content/Assets/css/features/commerce-modes.css",
@@ -90,6 +95,21 @@
       "url": "_content/Assets/css/features/fiscal.css",
       "size": 5308,
       "hash": "sha256-f913e235af7c"
+    },
+    {
+      "url": "_content/Assets/css/fonts/material-symbols-outlined.css",
+      "size": 1035,
+      "hash": "sha256-285ea4f578f1"
+    },
+    {
+      "url": "_content/Assets/css/fonts/montserrat.css",
+      "size": 502,
+      "hash": "sha256-1d0cc951e115"
+    },
+    {
+      "url": "_content/Assets/css/fonts/roboto.css",
+      "size": 1161,
+      "hash": "sha256-843db12dd4c5"
     },
     {
       "url": "_content/Assets/css/foundations/base.css",
@@ -128,8 +148,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/map-layout.css",
-      "size": 3904,
-      "hash": "sha256-5b29672b85af"
+      "size": 6906,
+      "hash": "sha256-1c2b38f4bcd8"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -143,8 +163,8 @@
     },
     {
       "url": "_content/Assets/css/pages/auth.css",
-      "size": 11491,
-      "hash": "sha256-fc3997aef7bb"
+      "size": 13063,
+      "hash": "sha256-f256a1bdd536"
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
@@ -158,23 +178,23 @@
     },
     {
       "url": "_content/Assets/css/pages/docs.css",
-      "size": 6127,
-      "hash": "sha256-d34ccf1f1c46"
+      "size": 6172,
+      "hash": "sha256-65068899722c"
     },
     {
       "url": "_content/Assets/css/pages/help.css",
-      "size": 3944,
-      "hash": "sha256-c714bf8ff396"
+      "size": 3933,
+      "hash": "sha256-ee1039de94fd"
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 12281,
-      "hash": "sha256-0a6d1be1e27f"
+      "size": 12102,
+      "hash": "sha256-471a12640c7f"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
-      "size": 27182,
-      "hash": "sha256-343ef1092a7d"
+      "size": 28073,
+      "hash": "sha256-614a0e2a96b3"
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
@@ -193,8 +213,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 2195,
-      "hash": "sha256-43ff90f88c17"
+      "size": 2185,
+      "hash": "sha256-3514e33c8a7d"
     },
     {
       "url": "_content/Assets/css/tokens/box-model/border.css",
@@ -263,8 +283,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/ads.css",
-      "size": 10978,
-      "hash": "sha256-85b37aacfc4c"
+      "size": 11023,
+      "hash": "sha256-0066a1b8590b"
     },
     {
       "url": "_content/Assets/css/widgets/booking-picker.css",
@@ -307,21 +327,6 @@
       "hash": "sha256-4a5207a1eee5"
     },
     {
-      "url": "_content/Assets/data/health_nutrition_guide.pdf",
-      "size": 273812,
-      "hash": "sha256-089afc5eda36"
-    },
-    {
-      "url": "_content/Assets/docs/material-theme.json",
-      "size": 15677,
-      "hash": "sha256-b94d5fd47eb1"
-    },
-    {
-      "url": "_content/Assets/fonts/material-symbols-outlined.css",
-      "size": 1065,
-      "hash": "sha256-c1986aae1de2"
-    },
-    {
       "url": "_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2",
       "size": 695112,
       "hash": "sha256-b2fc6b4b50be"
@@ -337,121 +342,6 @@
       "hash": "sha256-e12288c03e4f"
     },
     {
-      "url": "_content/Assets/fonts/Montserrat/OFL.txt",
-      "size": 4494,
-      "hash": "sha256-77669d97bc1f"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/README.txt",
-      "size": 2986,
-      "hash": "sha256-d8825eef812a"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Black.ttf",
-      "size": 343296,
-      "hash": "sha256-4aa89f05e466"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-BlackItalic.ttf",
-      "size": 348396,
-      "hash": "sha256-777a690080eb"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Bold.ttf",
-      "size": 335788,
-      "hash": "sha256-846d5823e5c9"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-BoldItalic.ttf",
-      "size": 342016,
-      "hash": "sha256-05423811a5fb"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf",
-      "size": 344052,
-      "hash": "sha256-448fe102bfa7"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-ExtraBoldItalic.ttf",
-      "size": 348532,
-      "hash": "sha256-d38bac61eda8"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-ExtraLight.ttf",
-      "size": 330488,
-      "hash": "sha256-bbf03b85958c"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-ExtraLightItalic.ttf",
-      "size": 336808,
-      "hash": "sha256-ade37b26afdd"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Italic.ttf",
-      "size": 337132,
-      "hash": "sha256-906a8446220c"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Light.ttf",
-      "size": 330888,
-      "hash": "sha256-9c286b47af84"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-LightItalic.ttf",
-      "size": 337208,
-      "hash": "sha256-6c26f2b546be"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Medium.ttf",
-      "size": 330872,
-      "hash": "sha256-7d557ed5f56b"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-MediumItalic.ttf",
-      "size": 337092,
-      "hash": "sha256-626999f8823e"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Regular.ttf",
-      "size": 330948,
-      "hash": "sha256-f5a3f02c4a72"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf",
-      "size": 333988,
-      "hash": "sha256-ef7b80ad18d3"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf",
-      "size": 339028,
-      "hash": "sha256-2c180dda0e98"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-Thin.ttf",
-      "size": 329864,
-      "hash": "sha256-12b10552bc9a"
-    },
-    {
-      "url": "_content/Assets/fonts/Montserrat/static/Montserrat-ThinItalic.ttf",
-      "size": 336148,
-      "hash": "sha256-f7f6187f3c78"
-    },
-    {
-      "url": "_content/Assets/fonts/montserrat.css",
-      "size": 514,
-      "hash": "sha256-4d62cbe0999c"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/OFL.txt",
-      "size": 4487,
-      "hash": "sha256-7d96701533d0"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/README.txt",
-      "size": 4607,
-      "hash": "sha256-9eac6c303042"
-    },
-    {
       "url": "_content/Assets/fonts/Roboto/Roboto-Italic-VariableFont.ttf",
       "size": 497124,
       "hash": "sha256-1d3f965ee5c6"
@@ -462,59 +352,9 @@
       "hash": "sha256-b25986d18730"
     },
     {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-Black.ttf",
-      "size": 147424,
-      "hash": "sha256-59cc48c96047"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-BlackItalic.ttf",
-      "size": 153780,
-      "hash": "sha256-54ec9e403016"
-    },
-    {
       "url": "_content/Assets/fonts/Roboto/static/Roboto-Bold.ttf",
       "size": 146768,
       "hash": "sha256-deb990e24195"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-BoldItalic.ttf",
-      "size": 153096,
-      "hash": "sha256-8480274024a0"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-ExtraBold.ttf",
-      "size": 146900,
-      "hash": "sha256-f00b24deffcf"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-ExtraBoldItalic.ttf",
-      "size": 153292,
-      "hash": "sha256-4845408266b0"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-ExtraLight.ttf",
-      "size": 146044,
-      "hash": "sha256-a2d88c093fcf"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-ExtraLightItalic.ttf",
-      "size": 151664,
-      "hash": "sha256-231a6f292ed3"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-Italic.ttf",
-      "size": 152208,
-      "hash": "sha256-5a2f18bddbe3"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-Light.ttf",
-      "size": 146056,
-      "hash": "sha256-4b2e824beab6"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-LightItalic.ttf",
-      "size": 151944,
-      "hash": "sha256-92ee7da87e6b"
     },
     {
       "url": "_content/Assets/fonts/Roboto/static/Roboto-Medium.ttf",
@@ -522,244 +362,14 @@
       "hash": "sha256-616eee3f9b60"
     },
     {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-MediumItalic.ttf",
-      "size": 152416,
-      "hash": "sha256-db79d54441d4"
-    },
-    {
       "url": "_content/Assets/fonts/Roboto/static/Roboto-Regular.ttf",
       "size": 146004,
       "hash": "sha256-dbd285b518e3"
     },
     {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-SemiBold.ttf",
-      "size": 146760,
-      "hash": "sha256-57b40c38d6cc"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-SemiBoldItalic.ttf",
-      "size": 153036,
-      "hash": "sha256-64a7d4c4aff3"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-Thin.ttf",
-      "size": 145936,
-      "hash": "sha256-0655f84356b7"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto-ThinItalic.ttf",
-      "size": 151148,
-      "hash": "sha256-400458c3b955"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Black.ttf",
-      "size": 147148,
-      "hash": "sha256-cd04dbc79435"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-BlackItalic.ttf",
-      "size": 153680,
-      "hash": "sha256-f81c8c439e58"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Bold.ttf",
-      "size": 146580,
-      "hash": "sha256-da69d6f3193e"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-BoldItalic.ttf",
-      "size": 152972,
-      "hash": "sha256-92c2c0923054"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-ExtraBold.ttf",
-      "size": 146812,
-      "hash": "sha256-df00895eed1c"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-ExtraBoldItalic.ttf",
-      "size": 153324,
-      "hash": "sha256-664703908ec0"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-ExtraLight.ttf",
-      "size": 146004,
-      "hash": "sha256-3b29d3aca72f"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-ExtraLightItalic.ttf",
-      "size": 152120,
-      "hash": "sha256-545dd68ecb62"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Italic.ttf",
-      "size": 152248,
-      "hash": "sha256-9fe1c2390bbc"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Light.ttf",
-      "size": 145952,
-      "hash": "sha256-3f1a3f85852f"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-LightItalic.ttf",
-      "size": 152392,
-      "hash": "sha256-95dc4340eb0c"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Medium.ttf",
-      "size": 145916,
-      "hash": "sha256-99e31250ef90"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-MediumItalic.ttf",
-      "size": 152424,
-      "hash": "sha256-701adaa8c2a8"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Regular.ttf",
-      "size": 145908,
-      "hash": "sha256-d8e6f7c5a135"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-SemiBold.ttf",
-      "size": 146516,
-      "hash": "sha256-a3e44e52c6b7"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-SemiBoldItalic.ttf",
-      "size": 152660,
-      "hash": "sha256-c7dc7e6003a0"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-Thin.ttf",
-      "size": 145920,
-      "hash": "sha256-8ac880f31e4b"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_Condensed-ThinItalic.ttf",
-      "size": 151588,
-      "hash": "sha256-c6ce5cab994b"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Black.ttf",
-      "size": 147372,
-      "hash": "sha256-d108eb5133bd"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-BlackItalic.ttf",
-      "size": 153832,
-      "hash": "sha256-531aaa47ff2c"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Bold.ttf",
-      "size": 146756,
-      "hash": "sha256-52bb476c1008"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-BoldItalic.ttf",
-      "size": 153148,
-      "hash": "sha256-8ec4634ba4af"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-ExtraBold.ttf",
-      "size": 146860,
-      "hash": "sha256-ca88620e3e45"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-ExtraBoldItalic.ttf",
-      "size": 153360,
-      "hash": "sha256-983974db0058"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-ExtraLight.ttf",
-      "size": 146100,
-      "hash": "sha256-8c9aaa273761"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-ExtraLightItalic.ttf",
-      "size": 152012,
-      "hash": "sha256-96680331eb52"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Italic.ttf",
-      "size": 152304,
-      "hash": "sha256-a0ef52e30e52"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Light.ttf",
-      "size": 146064,
-      "hash": "sha256-27ee75c1ef1c"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-LightItalic.ttf",
-      "size": 152304,
-      "hash": "sha256-5e8e5fccea6d"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Medium.ttf",
-      "size": 146124,
-      "hash": "sha256-8af0cea735d9"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-MediumItalic.ttf",
-      "size": 152492,
-      "hash": "sha256-0ee23f13eaed"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Regular.ttf",
-      "size": 146048,
-      "hash": "sha256-33eede8cfc71"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-SemiBold.ttf",
-      "size": 146720,
-      "hash": "sha256-013260f6d44a"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-SemiBoldItalic.ttf",
-      "size": 152836,
-      "hash": "sha256-33671e3531f3"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-Thin.ttf",
-      "size": 146068,
-      "hash": "sha256-6b6b1728ee68"
-    },
-    {
-      "url": "_content/Assets/fonts/Roboto/static/Roboto_SemiCondensed-ThinItalic.ttf",
-      "size": 151496,
-      "hash": "sha256-860cfb948163"
-    },
-    {
-      "url": "_content/Assets/fonts/roboto.css",
-      "size": 1190,
-      "hash": "sha256-03a08af09309"
-    },
-    {
-      "url": "_content/Assets/img/background-art.png",
-      "size": 69847,
-      "hash": "sha256-5c7d4bb631ef"
-    },
-    {
       "url": "_content/Assets/img/favicon.png",
       "size": 3218,
       "hash": "sha256-0706f54900ce"
-    },
-    {
-      "url": "_content/Assets/img/game.svg",
-      "size": 46770,
-      "hash": "sha256-72b7cb237ae9"
-    },
-    {
-      "url": "_content/Assets/img/heart.png",
-      "size": 612,
-      "hash": "sha256-a18a93d7e2a4"
-    },
-    {
-      "url": "_content/Assets/img/hero.svg",
-      "size": 172273,
-      "hash": "sha256-0575d6c8f622"
     },
     {
       "url": "_content/Assets/img/icon-192.png",
@@ -797,84 +407,144 @@
       "hash": "sha256-6fe023a5ee2b"
     },
     {
-      "url": "_content/Assets/img/loading.gif",
-      "size": 614132,
-      "hash": "sha256-5f87babc84e9"
-    },
-    {
       "url": "_content/Assets/img/loading.webp",
       "size": 102692,
       "hash": "sha256-fae065faaedd"
     },
     {
-      "url": "_content/Assets/img/party_wumpus.gif",
-      "size": 95306,
-      "hash": "sha256-188a9e6042a3"
-    },
-    {
-      "url": "_content/Assets/img/Smoke.gif",
-      "size": 129478,
-      "hash": "sha256-12b7132b113c"
-    },
-    {
-      "url": "_content/Assets/img/Socratic.svg",
+      "url": "_content/Assets/img/socratic.svg",
       "size": 13563,
       "hash": "sha256-6b0f7d4031c1"
     },
     {
-      "url": "_content/Assets/img/svgviewer-output.svg",
-      "size": 4393,
-      "hash": "sha256-06afd2efffcc"
+      "url": "_content/Assets/js/components/material-color-utilities.bundle.js",
+      "size": 219002,
+      "hash": "sha256-d444d886027d"
     },
     {
-      "url": "_content/Assets/img/tv.svg",
-      "size": 58742,
-      "hash": "sha256-f799e5419ebf"
+      "url": "_content/Assets/js/components/material-web.bundle.js",
+      "size": 814981,
+      "hash": "sha256-8f5a2d5967a0"
     },
     {
-      "url": "_content/Assets/js/material-color-utilities.bundle.js",
-      "size": 224598,
-      "hash": "sha256-50abe816b710"
+      "url": "_content/Assets/js/features/ads/ad-network.js",
+      "size": 947,
+      "hash": "sha256-d16b6b5369a0"
     },
     {
-      "url": "_content/Assets/js/material-web.bundle.js",
-      "size": 829017,
-      "hash": "sha256-28af9549ebb1"
-    },
-    {
-      "url": "_content/Assets/js/oauthPopupHelper.js",
+      "url": "_content/Assets/js/features/auth/oauthPopupHelper.js",
       "size": 5741,
       "hash": "sha256-214d04b8a187"
     },
     {
-      "url": "_content/Assets/js/passkeyHelper.js",
+      "url": "_content/Assets/js/features/auth/passkeyHelper.js",
       "size": 4067,
       "hash": "sha256-57f92725cbb7"
     },
     {
-      "url": "_content/Assets/js/remoteSupportWebRtc.js",
-      "size": 15188,
-      "hash": "sha256-a4891fb04ae2"
-    },
-    {
-      "url": "_content/Assets/js/telegramHelper.js",
+      "url": "_content/Assets/js/features/auth/telegramHelper.js",
       "size": 783,
       "hash": "sha256-ca5bc1abbc6e"
     },
     {
-      "url": "_content/Assets/lib/app.js",
-      "size": 19988,
-      "hash": "sha256-334a5c9019bb"
+      "url": "_content/Assets/js/features/hardware/camera-streamer-loader.js",
+      "size": 444,
+      "hash": "sha256-5736ee327b27"
     },
     {
-      "url": "_content/Assets/lib/pdf_viewer/viewer.mjs",
-      "size": 1775,
-      "hash": "sha256-569a7e8f4f4c"
+      "url": "_content/Assets/js/features/hardware/CameraStreamer.js",
+      "size": 12276,
+      "hash": "sha256-65550e83bc6f"
     },
     {
-      "url": "_content/Assets/lib/src-defender.js",
-      "size": 719,
-      "hash": "sha256-d1ecc505c30d"
+      "url": "_content/Assets/js/features/hardware/receipt-printer-helper.js",
+      "size": 2562,
+      "hash": "sha256-736783994586"
+    },
+    {
+      "url": "_content/Assets/js/features/map/map-libre-core.js",
+      "size": 19363,
+      "hash": "sha256-074d8b3f939d"
+    },
+    {
+      "url": "_content/Assets/js/features/map/map-libre-layers.js",
+      "size": 38367,
+      "hash": "sha256-8e5828c849e1"
+    },
+    {
+      "url": "_content/Assets/js/features/map/map-libre-services.js",
+      "size": 5270,
+      "hash": "sha256-53fd56352c45"
+    },
+    {
+      "url": "_content/Assets/js/features/map/map-libre-state.js",
+      "size": 1296,
+      "hash": "sha256-b4d0ad5bf859"
+    },
+    {
+      "url": "_content/Assets/js/features/map/socratic-map.js",
+      "size": 712,
+      "hash": "sha256-9603fc511365"
+    },
+    {
+      "url": "_content/Assets/js/layouts/color-theme.js",
+      "size": 12592,
+      "hash": "sha256-cc91665e1f9f"
+    },
+    {
+      "url": "_content/Assets/js/layouts/reconnect-modal.js",
+      "size": 2412,
+      "hash": "sha256-909698fee4d6"
+    },
+    {
+      "url": "_content/Assets/js/layouts/theme-init.js",
+      "size": 745,
+      "hash": "sha256-6ab22e53fca1"
+    },
+    {
+      "url": "_content/Assets/js/pages/home.js",
+      "size": 1358,
+      "hash": "sha256-ad9b21655234"
+    },
+    {
+      "url": "_content/Assets/js/pages/landing.js",
+      "size": 19573,
+      "hash": "sha256-62e3fca9ae82"
+    },
+    {
+      "url": "_content/Assets/js/pages/player.js",
+      "size": 2895,
+      "hash": "sha256-3c598086782f"
+    },
+    {
+      "url": "_content/Assets/js/scripts.js",
+      "size": 3014,
+      "hash": "sha256-548f071c666b"
+    },
+    {
+      "url": "_content/Assets/js/widgets/chat-input.js",
+      "size": 19086,
+      "hash": "sha256-73d42e2ad976"
+    },
+    {
+      "url": "_content/Assets/js/widgets/chat-message-list.js",
+      "size": 4695,
+      "hash": "sha256-5d7fabb8037a"
+    },
+    {
+      "url": "_content/Assets/js/widgets/qr-styling-helper.js",
+      "size": 7958,
+      "hash": "sha256-ae1529467ef2"
+    },
+    {
+      "url": "_content/Assets/js/widgets/remoteSupportWebRtc.js",
+      "size": 15188,
+      "hash": "sha256-a4891fb04ae2"
+    },
+    {
+      "url": "_content/Assets/js/widgets/seat-designer.js",
+      "size": 10989,
+      "hash": "sha256-4a8ed4f62a02"
     },
     {
       "url": "_content/Assets/manifest.webmanifest",
@@ -890,11 +560,6 @@
       "url": "_content/Assets/maps/light.json",
       "size": 189055,
       "hash": "sha256-cb89a7a198a2"
-    },
-    {
-      "url": "_content/Assets/maps/map-bootstrap.js",
-      "size": 472,
-      "hash": "sha256-bfe33a17cff7"
     }
   ]
 }

@@ -39,6 +39,7 @@ namespace Smart.Web.Components
 
         private readonly Material.Web.Components.ChipType InputChipType = Material.Web.Components.ChipType.Input;
         private readonly string SmartGridHeadlineClass = Classes.SmartForm.SmartGridHeadline;
+        protected string GetBooleanAriaLabel(string displayName, bool value) => $"{displayName}: {(value ? (string)L[YesAction] : (string)L[NoAction])}";
 
         private string GetModelDisplayName()
         {

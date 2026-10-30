@@ -23,6 +23,7 @@ public partial class SmartSchedulePicker : ComponentBase
     protected const string TzContainerClass = "md3-schedule-tz-container";
     protected const string TzFieldClass = "md3-tz-field";
     protected const string ClosedIconClass = "md3-closed-icon";
+    protected const string ScheduleIcon = global::Assets.Constants.Icons.Schedule;
 
     private string EffectiveLabel => Label ?? L[global::Assets.Constants.Loc.Schedule.TitleText];
 

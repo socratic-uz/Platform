@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-29T10:39:10.502Z",
+  "generatedAt": "2026-10-30T08:38:40.892Z",
   "summary": {
-    "totalDeclaredKeys": 6669,
-    "usedInRazorCount": 853,
-    "unusedCount": 5816,
+    "totalDeclaredKeys": 6695,
+    "usedInRazorCount": 850,
+    "unusedCount": 5845,
     "adoptionRatePercent": 13,
-    "totalTypedCallSites": 1016,
+    "totalTypedCallSites": 1015,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
-    "sourceFilesScanned": 639
+    "sourceFilesScanned": 640
   },
   "topUsedKeys": [
     {
@@ -16,15 +16,25 @@
       "domain": "Common",
       "name": "CurrencyUzs",
       "locKey": "Currency_Uzs",
-      "usageCountInRazor": 17,
-      "filesCount": 6,
+      "usageCountInRazor": 11,
+      "filesCount": 4,
       "files": [
         "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/InvoiceViewer.razor",
-        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor",
         "Retail/Commerce/Features/HoReCa/Components/SeatBookingModal.razor",
         "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Grid.razor",
         "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
+      "key": "Common.CommonCurrencySum",
+      "domain": "Common",
+      "name": "CommonCurrencySum",
+      "locKey": "Common_CurrencySum",
+      "usageCountInRazor": 8,
+      "filesCount": 2,
+      "files": [
+        "Retail/Commerce/Components/ProductVariantSelector.razor.cs",
+        "Retail/Commerce/Features/Donation/DonationWidgetFeature.razor.cs"
       ]
     },
     {
@@ -237,6 +247,17 @@
       ]
     },
     {
+      "key": "Receipt.ReceiptCurrencyUzs",
+      "domain": "Receipt",
+      "name": "ReceiptCurrencyUzs",
+      "locKey": "Receipt_CurrencyUzs",
+      "usageCountInRazor": 4,
+      "filesCount": 1,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor"
+      ]
+    },
+    {
       "key": "UxMode.DetailsText",
       "domain": "UxMode",
       "name": "DetailsText",
@@ -318,6 +339,17 @@
         "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor",
         "Retail/Orders/Pages/Orders/Index.razor",
         "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Chat.SendText",
+      "domain": "Chat",
+      "name": "SendText",
+      "locKey": "Chat_Send",
+      "usageCountInRazor": 3,
+      "filesCount": 1,
+      "files": [
+        "Intelligence/Chat/Widgets/Messaging/ChatInput.razor"
       ]
     },
     {
@@ -594,39 +626,6 @@
       "files": [
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
-    },
-    {
-      "key": "Common.Sum",
-      "domain": "Common",
-      "name": "Sum",
-      "locKey": "Sum",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Cart.ShippingText",
-      "domain": "Cart",
-      "name": "ShippingText",
-      "locKey": "Cart_Shipping",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Retail/Checkout/Widgets/TransientCartDrawer.razor"
-      ]
-    },
-    {
-      "key": "Chat.Chat_Back",
-      "domain": "Chat",
-      "name": "Chat_Back",
-      "locKey": "Chat_Back",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor"
-      ]
     }
   ],
   "byDomain": {
@@ -636,9 +635,9 @@
       "totalCalls": 31
     },
     "Common": {
-      "total": 540,
-      "used": 245,
-      "totalCalls": 285
+      "total": 539,
+      "used": 239,
+      "totalCalls": 280
     },
     "Auction": {
       "total": 16,
@@ -662,18 +661,18 @@
     },
     "Cart": {
       "total": 42,
-      "used": 1,
-      "totalCalls": 2
+      "used": 0,
+      "totalCalls": 0
     },
     "Chat": {
       "total": 35,
       "used": 12,
-      "totalCalls": 15
+      "totalCalls": 16
     },
     "Checkout": {
-      "total": 301,
-      "used": 6,
-      "totalCalls": 16
+      "total": 304,
+      "used": 4,
+      "totalCalls": 13
     },
     "Classified": {
       "total": 72,
@@ -697,8 +696,8 @@
     },
     "Donation": {
       "total": 48,
-      "used": 2,
-      "totalCalls": 2
+      "used": 5,
+      "totalCalls": 5
     },
     "Geo": {
       "total": 54,
@@ -726,9 +725,9 @@
       "totalCalls": 0
     },
     "Landing": {
-      "total": 411,
+      "total": 413,
       "used": 230,
-      "totalCalls": 252
+      "totalCalls": 251
     },
     "Lottery": {
       "total": 42,
@@ -741,9 +740,9 @@
       "totalCalls": 106
     },
     "Orders": {
-      "total": 218,
-      "used": 69,
-      "totalCalls": 104
+      "total": 223,
+      "used": 71,
+      "totalCalls": 106
     },
     "Promotion": {
       "total": 75,
@@ -761,9 +760,9 @@
       "totalCalls": 0
     },
     "Receipt": {
-      "total": 82,
-      "used": 28,
-      "totalCalls": 28
+      "total": 84,
+      "used": 29,
+      "totalCalls": 32
     },
     "Rental": {
       "total": 21,
@@ -796,12 +795,12 @@
       "totalCalls": 47
     },
     "Terminal": {
-      "total": 78,
+      "total": 81,
       "used": 0,
       "totalCalls": 0
     },
     "UxMode": {
-      "total": 2988,
+      "total": 3000,
       "used": 27,
       "totalCalls": 31
     }

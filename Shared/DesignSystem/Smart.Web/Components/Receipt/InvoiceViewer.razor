@@ -5,7 +5,7 @@
 @using static Assets.Constants.Loc.Receipt
 @typeparam TItem
 
-<div id="check" class=@ReceiptContainer>
+<article id="check" class=@ReceiptContainer>
     <header class=@ReceiptHeaderClass>
         <h3>@(OrganizationName ?? DefaultOrgName)</h3>
         <p>@(OrganizationAddress ?? L[DefaultSystem])</p>
@@ -74,4 +74,4 @@
         <div class=@ReceiptFooterTitle>@L[ThankYou]</div>
         <div>@L[FiscalReceiptDemo]</div>
     </footer>
-</div>
+</article>

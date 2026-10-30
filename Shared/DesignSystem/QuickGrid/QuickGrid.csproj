@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Assets\Assets.csproj" />
+    <ProjectReference Include="..\Material.Web\Material.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>

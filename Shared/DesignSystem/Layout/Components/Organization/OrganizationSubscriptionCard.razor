@@ -2,118 +2,122 @@
 @using SharedKernel.ValueObjects
 @using Domain.Entities
 @using static Assets.Constants.Classes.Common
+@using static Assets.Constants.Classes.Cards
 @using static Assets.Constants.Classes.Badge
+@using static Assets.Constants.Classes.Subscription
+@using static Assets.Constants.Classes.Chips
+@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Subscription
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<div class="@Classes.Cards.CardOutlined_2 pricing-card">
-    <div class="subscription-header">
-        <div class=@($"{Root} {GetTierBadgeClass()}")>
+<article class=@CardOutlined>
+    <header class=@HeaderBar>
+        <div class=@string.Format(Two, Root, GetTierBadgeClass())>
             <Icon Name=@GetTierIcon() class=@BadgeIcon />
             <span>@GetTierBadgeTitle()</span>
         </div>
         @if (Subscription.IsTrialActive)
         {
-            <div class="@Classes.Badge.TrialCounter">
-                <span class="@Classes.Common.TrialDaysHighlight">@Subscription.RemainingTrialDays</span>
-                <span class="@Classes.Common.TrialDaysLabel">@L[Org_TrialDaysRemaining]</span>
+            <div class=@TrialCounter>
+                <span class=@TrialDaysHighlight>@Subscription.RemainingTrialDays</span>
+                <span class=@TrialDaysLabel>@L[Org_TrialDaysRemaining]</span>
             </div>
         }
-    </div>
+    </header>
 
-    <div class="subscription-current-info">
-        <h2 class="@Classes.Subscription.SubscriptionTitle">@GetTierHeadline()</h2>
-        <p class="@Classes.Subscription.SubscriptionDescription">@GetTierDescription()</p>
+    <div class=@SubscriptionContent>
+        <h2 class=@SubscriptionTitle>@GetTierHeadline()</h2>
+        <p class=@SubscriptionDescription>@GetTierDescription()</p>
     </div>
 
     <!-- Сетка сравнения 3-х тарифов -->
     <div class=@TiersGrid>
         <!-- 1. Пробный период -->
-        <div class=@($"{TierBox} {(Subscription.Tier == SubscriptionTier.Trial ? "active-tier" : string.Empty)}")>
+        <div class=@(Subscription.Tier == SubscriptionTier.Trial ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
             <div class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierTrialName]</h3>
                 <span class=@TierPrice>@L[Org_TierTrialPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureAllModes]</li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureAllModes]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureBrandScreensaver]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
             {
-                <span class="@Classes.Common.CurrentPlanIndicator">@L[Org_CurrentPlan]</span>
+                <span class=@CurrentPlanIndicator>@L[Org_CurrentPlan]</span>
             }
         </div>
 
         <!-- 2. С рекламой -->
-        <div class=@($"{TierBox} {(Subscription.Tier == SubscriptionTier.WithAds ? "active-tier" : string.Empty)}")>
+        <div class=@(Subscription.Tier == SubscriptionTier.WithAds ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
             <div class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierWithAdsName]</h3>
                 <span class=@TierPrice>@L[Org_TierWithAdsPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@Info class=@($"{Classes.Common.FeatureIcon} {Classes.Badge.BadgeInfo}") /> @L[Org_TierFeaturePartnerAds]</li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureCloudPos]</li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureFiscalization]</li>
+                <li><Icon Name=@Info class=@string.Format(Two, FeatureIcon, BadgeInfo) /> @L[Org_TierFeaturePartnerAds]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureCloudPos]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureFiscalization]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.WithAds)
             {
-                <span class="@Classes.Common.CurrentPlanIndicator">@L[Org_CurrentPlan]</span>
+                <span class=@CurrentPlanIndicator>@L[Org_CurrentPlan]</span>
             }
             else
             {
-                <Button Variant=@ButtonVariant.Outlined style="width: 100%;" OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.WithAds))>
+                <Button Variant=@Outlined OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.WithAds))>
                     @L[Org_SelectPlanAds]
                 </Button>
             }
         </div>
 
         <!-- 3. Без рекламы (PRO) -->
-        <div class=@($"{TierBox} pro-tier {(Subscription.Tier == SubscriptionTier.ProAdFree ? "active-tier" : string.Empty)}")>
-            <div class="@Classes.Chips.ProTag">@L[Org_Recommended]</div>
+        <div class=@(Subscription.Tier == SubscriptionTier.ProAdFree ? string.Format(Three, TierBox, ProTier, ActiveTier) : string.Format(Two, TierBox, ProTier))>
+            <div class=@ProTag>@L[Org_Recommended]</div>
             <div class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierProName]</h3>
                 <span class=@TierPrice>@L[Org_TierProPrice]</span>
             </div>
             <ul class=@TierFeatures>
-                <li><Icon Name=@Star class=@($"{Classes.Common.FeatureIcon} {Classes.Common.CommonStar}") /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureBrandScreensaver]</li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeaturePrioritySupport]</li>
-                <li><Icon Name=@CheckCircle class=@($"{Classes.Common.FeatureIcon} {Classes.Common.Ok}") /> @L[Org_TierFeatureWhiteLabel]</li>
+                <li><Icon Name=@Star class=@string.Format(Two, FeatureIcon, CommonStar) /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeaturePrioritySupport]</li>
+                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureWhiteLabel]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.ProAdFree)
             {
-                <span class="@Classes.Common.CurrentPlanIndicator @Classes.Chips.ChipPro">@L[Org_ActivePro]</span>
+                <span class=@string.Format(Two, CurrentPlanIndicator, ChipPro)>@L[Org_ActivePro]</span>
             }
             else
             {
-                <Button Variant=@ButtonVariant.Filled Icon=@RocketLaunch style="width: 100%;" OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree))>
+                <Button Variant=@Filled Icon=@RocketLaunch OnClick=@(() => OpenSelectPlanDialog(SubscriptionTier.ProAdFree))>
                     @L[Org_ConnectPro]
                 </Button>
             }
         </div>
     </div>
 
-    <MaterialDialog Open=@isChangePlanModalOpen OpenChanged=@(v => isChangePlanModalOpen = v)>
+    <MaterialDialog Open=@isChangePlanModalOpen OpenChanged=@((bool v) => isChangePlanModalOpen = v)>
         <Headline>
             <span>@L[Org_ConnectingPlan] @(selectedTierForPayment == SubscriptionTier.ProAdFree ? L[Org_PlanProSummary] : L[Org_PlanAdsSummary])</span>
         </Headline>
         <Content>
-            <p class="modal-summary">
+            <p>
                 @L[Org_YouSelectedPlan] <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? L[Org_PlanProSummary] : L[Org_PlanAdsSummary])</strong>.
             </p>
-            <div class="payment-methods-selector">
-                <Radio Name="payment_method" Value="click" OptionValue=@selectedPaymentMethod ValueChanged=@(v => selectedPaymentMethod = v) Label=@L[Org_PaymentClickPayme] />
-                <Radio Name="payment_method" Value="invoice" OptionValue=@selectedPaymentMethod ValueChanged=@(v => selectedPaymentMethod = v) Label=@L[Org_PaymentInvoice] />
+            <div>
+                <Radio Name="payment_method" Value="click" OptionValue=@selectedPaymentMethod ValueChanged=@((string v) => selectedPaymentMethod = v) Label=@L[Org_PaymentClickPayme] />
+                <Radio Name="payment_method" Value="invoice" OptionValue=@selectedPaymentMethod ValueChanged=@((string v) => selectedPaymentMethod = v) Label=@L[Org_PaymentInvoice] />
             </div>
         </Content>
         <Actions>
-            <Button Variant=@ButtonVariant.Text OnClick=@CloseSelectPlanDialog>@L[Cancel]</Button>
-            <Button Variant=@ButtonVariant.Filled OnClick=@ConfirmPlanChange>
+            <Button Variant=@Text OnClick=@CloseSelectPlanDialog>@L[Cancel]</Button>
+            <Button Variant=@Filled OnClick=@ConfirmPlanChange>
                 @L[Org_ConfirmActivation]
             </Button>
         </Actions>
     </MaterialDialog>
-</div>
+</article>

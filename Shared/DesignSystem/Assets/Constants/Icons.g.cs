@@ -39968,6 +39968,8 @@ namespace Assets.Constants
         /// </summary>
         public const string Menu = "menu";
 
+        public const string MenuIcon = "menu";
+
         /// <summary>
         /// Ligature: <c>menu_book</c> | Category: <see cref="Navigation"/><br/>
         /// Codepoint: <c>\uea19</c>
@@ -54114,6 +54116,7 @@ public static class Icons
     public const string MemoryAlt = "memory_alt";
     public const string MenstrualHealth = "menstrual_health";
     public const string Menu = "menu";
+    public const string MenuIcon = "menu";
     public const string MenuBook = "menu_book";
     public const string MenuBook2 = "menu_book_2";
     public const string MenuOpen = "menu_open";

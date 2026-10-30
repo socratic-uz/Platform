@@ -1,13 +1,15 @@
 @namespace Smart.Web.Components
 @using Material.Web.Components
 @using Assets.Constants
+@using static Assets.Constants.Classes.SmartDataView
+@using static Assets.Constants.Classes.ThemeToggle
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem where TItem : class, new()
 
-<div class="@Classes.SmartDataView.SmartdataviewRoot">
-    <div class="@Classes.SmartDataView.SmartDataViewHeader">
+<div class=@SmartdataviewRoot>
+    <div class=@SmartDataViewHeader>
         <SmartFilterBar TItem="TItem"
                         Placeholder="@EffectivePlaceholder"
                         SearchText="@SearchText"
@@ -15,21 +17,21 @@
                         FilterChips="@FilterChips"
                         OnChipToggled=@OnChipToggled />
 
-        <div class="@Classes.ThemeToggle.SmartViewModeToggle">
+        <div class=@SmartViewModeToggle>
             <Button Variant=@(CurrentMode == ViewMode.Grid ? Filled : Outlined)
                     OnClick=@(() => SetViewMode(ViewMode.Grid))>
-                <Icon Name=@Icons.TableChart Slot="icon" />
+                <Icon Name=@TableChart Slot="icon" />
                 @L[SmartDataViewTable]
             </Button>
             <Button Variant=@(CurrentMode == ViewMode.Kanban ? Filled : Outlined)
                     OnClick=@(() => SetViewMode(ViewMode.Kanban))>
-                <Icon Name=@Icons.ViewKanban Slot="icon" />
+                <Icon Name=@ViewKanban Slot="icon" />
                 @L[SmartDataViewKanban]
             </Button>
         </div>
     </div>
 
-    <div class="smart-data-view-content">
+    <section class=@SmartDataViewContent>
         @if (CurrentMode == ViewMode.Grid)
         {
             <SmartGrid TItem="TItem"
@@ -48,5 +50,5 @@
                          OnCardClicked=@OnCardClicked
                          OnCardMoved=@OnCardMoved />
         }
-    </div>
+    </section>
 </div>

@@ -5,9 +5,9 @@
    ========================================================================== */
 
 /* 0. Typography Fonts */
-@import "../fonts/material-symbols-outlined.css";
-@import "../fonts/roboto.css";
-@import "../fonts/montserrat.css";
+@import "fonts/material-symbols-outlined.css";
+@import "fonts/roboto.css";
+@import "fonts/montserrat.css";
 
 /* 1. Foundations & Reset */
 @import "foundations/base.css";

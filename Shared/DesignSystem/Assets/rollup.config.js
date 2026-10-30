@@ -6,7 +6,7 @@ export default [
   {
     input: 'node_modules/@material/material-color-utilities/index.js',
     output: {
-      file: 'wwwroot/js/material-color-utilities.bundle.js',
+      file: 'wwwroot/js/components/material-color-utilities.bundle.js',
       format: 'esm',
       name: 'MaterialColorUtils'
     },
@@ -17,7 +17,7 @@ export default [
   {
     input: 'src/js/material-web-entry.js',
     output: {
-      file: 'wwwroot/js/material-web.bundle.js',
+      file: 'wwwroot/js/components/material-web.bundle.js',
       format: 'iife',
       name: 'MaterialWeb'
     },

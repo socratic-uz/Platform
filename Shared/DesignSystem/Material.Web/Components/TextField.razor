@@ -6,39 +6,39 @@
 
 @if (Variant == TextFieldVariant.Filled)
 {
-    <md-filled-text-field id="@Id"
-                          class="@CssClass @Classes.Avatar.MaterialTextField"
-                          label="@Label"
-                          value="@CurrentValueAsString"
-                          type="@Type"
-                          placeholder="@Placeholder"
-                          prefix-text="@PrefixText"
-                          suffix-text="@SuffixText"
-                          supporting-text="@GetSupportingText()"
-                          error-text="@GetErrorText()"
-                          rows="@Rows"
-                          cols="@Cols"
-                          max="@Max"
-                          maxlength="@MaxLength"
-                          min="@Min"
-                          minlength="@MinLength"
-                          pattern="@Pattern"
-                          step="@Step"
-                          inputmode="@InputMode"
-                          autocomplete="@Autocomplete"
-                          text-direction="@TextDirection"
-                          count="@(ShowCharacterCount ? CurrentValueAsString?.Length : null)"
-                          @attributes="AdditionalAttributes"
-                          disabled="@Disabled"
-                          readonly="@ReadOnly"
-                          required="@Required"
-                          no-asterisk="@NoAsterisk"
-                          no-spinner="@NoSpinner"
-                          multiple="@Multiple"
-                          error="@HasValidationErrors"
-                          has-leading-icon="@HasLeadingIcon"
-                          has-trailing-icon="@HasTrailingIcon"
-                          @ref="textFieldElement"
+    <md-filled-text-field id=@Id
+                          class=@ComputedTextFieldClass
+                          label=@Label
+                          value=@CurrentValueAsString
+                          type=@Type
+                          placeholder=@Placeholder
+                          prefix-text=@PrefixText
+                          suffix-text=@SuffixText
+                          supporting-text=@GetSupportingText()
+                          error-text=@GetErrorText()
+                          rows=@Rows
+                          cols=@Cols
+                          max=@Max
+                          maxlength=@MaxLength
+                          min=@Min
+                          minlength=@MinLength
+                          pattern=@Pattern
+                          step=@Step
+                          inputmode=@InputMode
+                          autocomplete=@Autocomplete
+                          text-direction=@TextDirection
+                          count=@(ShowCharacterCount ? CurrentValueAsString?.Length : null)
+                          @attributes=@AdditionalAttributes
+                          disabled=@Disabled
+                          readonly=@ReadOnly
+                          required=@Required
+                          no-asterisk=@NoAsterisk
+                          no-spinner=@NoSpinner
+                          multiple=@Multiple
+                          error=@HasValidationErrors
+                          has-leading-icon=@HasLeadingIcon
+                          has-trailing-icon=@HasTrailingIcon
+                          @ref=@textFieldElement
                           @oninput=@HandleInput
                           @onchange=@HandleChange
                           @onselect=@OnSelect
@@ -52,14 +52,14 @@
         {
             @if (TrailingIconToggle)
             {
-                <md-icon-button toggle slot="trailing-icon" @onclick="HandleTrailingIconClick">
+                <md-icon-button toggle slot="trailing-icon" @onclick=@HandleTrailingIconClick>
                     <md-icon>@TrailingIcon</md-icon>
                     <md-icon slot="selected">@TrailingIconSelected</md-icon>
                 </md-icon-button>
             }
             else
             {
-                <md-icon slot="trailing-icon" @onclick="HandleTrailingIconClick">@TrailingIcon</md-icon>
+                <md-icon slot="trailing-icon" @onclick=@HandleTrailingIconClick>@TrailingIcon</md-icon>
             }
         }
         @ChildContent
@@ -67,39 +67,39 @@
 }
 else
 {
-    <md-outlined-text-field id="@Id"
-                            class="@CssClass @Classes.Avatar.MaterialTextField"
-                            label="@Label"
-                            value="@CurrentValueAsString"
-                            type="@Type"
-                            placeholder="@Placeholder"
-                            prefix-text="@PrefixText"
-                            suffix-text="@SuffixText"
-                            supporting-text="@GetSupportingText()"
-                            error-text="@GetErrorText()"
-                            rows="@Rows"
-                            cols="@Cols"
-                            max="@Max"
-                            maxlength="@MaxLength"
-                            min="@Min"
-                            minlength="@MinLength"
-                            pattern="@Pattern"
-                            step="@Step"
-                            inputmode="@InputMode"
-                            autocomplete="@Autocomplete"
-                            text-direction="@TextDirection"
-                            count="@(ShowCharacterCount ? CurrentValueAsString?.Length : null)"
-                            @attributes="AdditionalAttributes"
-                            disabled="@Disabled"
-                            readonly="@ReadOnly"
-                            required="@Required"
-                            no-asterisk="@NoAsterisk"
-                            no-spinner="@NoSpinner"
-                            multiple="@Multiple"
-                            error="@HasValidationErrors"
-                            has-leading-icon="@HasLeadingIcon"
-                            has-trailing-icon="@HasTrailingIcon"
-                            @ref="textFieldElement"
+    <md-outlined-text-field id=@Id
+                            class=@ComputedTextFieldClass
+                            label=@Label
+                            value=@CurrentValueAsString
+                            type=@Type
+                            placeholder=@Placeholder
+                            prefix-text=@PrefixText
+                            suffix-text=@SuffixText
+                            supporting-text=@GetSupportingText()
+                            error-text=@GetErrorText()
+                            rows=@Rows
+                            cols=@Cols
+                            max=@Max
+                            maxlength=@MaxLength
+                            min=@Min
+                            minlength=@MinLength
+                            pattern=@Pattern
+                            step=@Step
+                            inputmode=@InputMode
+                            autocomplete=@Autocomplete
+                            text-direction=@TextDirection
+                            count=@(ShowCharacterCount ? CurrentValueAsString?.Length : null)
+                            @attributes=@AdditionalAttributes
+                            disabled=@Disabled
+                            readonly=@ReadOnly
+                            required=@Required
+                            no-asterisk=@NoAsterisk
+                            no-spinner=@NoSpinner
+                            multiple=@Multiple
+                            error=@HasValidationErrors
+                            has-leading-icon=@HasLeadingIcon
+                            has-trailing-icon=@HasTrailingIcon
+                            @ref=@textFieldElement
                             @oninput=@HandleInput
                             @onchange=@HandleChange
                             @onselect=@OnSelect
@@ -113,14 +113,14 @@ else
         {
             @if (TrailingIconToggle)
             {
-                <md-icon-button toggle slot="trailing-icon" @onclick="HandleTrailingIconClick">
+                <md-icon-button toggle slot="trailing-icon" @onclick=@HandleTrailingIconClick>
                     <md-icon>@TrailingIcon</md-icon>
                     <md-icon slot="selected">@TrailingIconSelected</md-icon>
                 </md-icon-button>
             }
             else
             {
-                <md-icon slot="trailing-icon" @onclick="HandleTrailingIconClick">@TrailingIcon</md-icon>
+                <md-icon slot="trailing-icon" @onclick=@HandleTrailingIconClick>@TrailingIcon</md-icon>
             }
         }
         @ChildContent

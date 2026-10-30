@@ -1,17 +1,18 @@
 @namespace Smart.Web.Components
 @using Smart.Web.Services
 @using Material.Web.Components
-@using Assets.Constants
+@using static Assets.Constants.Classes.SmartToast
+@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.IconButtonVariant
 
-<div class="@Classes.SmartToast.SmartToastContainer">
+<div class=@ToastContainer>
     @foreach (var toast in Toasts)
     {
-        <div class="@Classes.SmartToast.SmarttoastRoot smart-toast-@toast.Level.ToString().ToLowerInvariant()" key="@toast.Id">
-            <div class="@Classes.SmartToast.SmartToastHeader">
-                <span class="@Classes.SmartToast.SmartToastIcon">
+        <div class=@string.Format(Two, SmarttoastRoot, GetToastLevelClass(toast.Level)) key="@toast.Id">
+            <div class=@SmartToastHeader>
+                <span class=@SmartToastIcon>
                     @switch (toast.Level)
                     {
                         case ToastLevel.Success:
@@ -30,15 +31,15 @@
                 </span>
                 @if (!string.IsNullOrEmpty(toast.Title))
                 {
-                    <strong class="@Classes.SmartToast.SmartToastTitle">@toast.Title</strong>
+                    <strong class=@SmartToastTitle>@toast.Title</strong>
                 }
-                <IconButton Icon=@Icons.Close
+                <IconButton Icon=@Close
                             Variant=@Standard
                             OnClick=@(() => DismissToast(toast.Id))
                             AriaLabel=@L[CloseAction]
-                            Class="@Classes.SmartToast.SmartToastCloseBtn" />
+                            Class=@SmartToastCloseBtn />
             </div>
-            <div class="@Classes.SmartToast.SmartToastBody">
+            <div class=@SmartToastBody>
                 @toast.Message
             </div>
         </div>

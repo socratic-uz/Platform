@@ -161,7 +161,7 @@ details[open] .faq-arrow-wrapper {
 }
 
 details:not([open]) .faq-answer {
-    display: none !important;
+    display: none;
 }
 
 .help-container {

@@ -67,34 +67,37 @@
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.card-elevated {
+:where(.card-elevated, .card-filled, .card-outlined, .card-glass, .m3-card-elevated, .m3-card-filled, .m3-card-outlined, .m3-card-glass) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     position: relative;
     box-sizing: border-box;
     min-width: 0;
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
-    border-radius: var(--md-sys-shape-expressive-card);
-    background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-expressive-1);
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    transition: transform var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                box-shadow var(--md-sys-motion-duration-medium1, 250ms) var(--md-sys-motion-easing-spring-soft),
+                border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
 
-.card-filled {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
+:where(.card-elevated, .card-filled, .card-outlined, .card-glass, .m3-card-elevated, .m3-card-filled, .m3-card-outlined, .m3-card-glass):hover {
+    box-shadow: var(--md-sys-elevation-expressive-2);
+    transform: translateY(-2px);
+}
+
+:where(.card-elevated, .card-filled, .card-outlined, .card-glass, .m3-card-elevated, .m3-card-filled, .m3-card-outlined, .m3-card-glass):active {
+    transform: scale(0.985);
+}
+
+:where(.card-elevated, .m3-card-elevated) {
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.2);
+    background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+}
+
+:where(.card-filled, .m3-card-filled) {
     border: 1px solid transparent;
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container);
     box-shadow: none;
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .card-footer {
@@ -107,20 +110,11 @@
     min-width: 0;
 }
 
-.card-glass {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
+:where(.card-glass, .m3-card-glass) {
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.35);
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-glass-surface-container);
     box-shadow: var(--md-sys-elevation-expressive-1);
     backdrop-filter: var(--md-sys-glass-blur-standard);
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
 }
 
@@ -245,19 +239,10 @@
     font-size: 0.9rem;
 }
 
-.card-outlined {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
+:where(.card-outlined, .m3-card-outlined) {
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface);
     box-shadow: none;
-    transition: transform var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                box-shadow var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-spring-soft),
-                border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 .card-padding-lg {

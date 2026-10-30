@@ -107,7 +107,7 @@
                             Expression<Func<bool>> valueExpression = () => propertyValue;
                         }
                         <Switch Disabled=@true
-                                AriaLabel=@($"{column.DisplayName}: {(propertyValue ? (string)L[YesAction] : (string)L[NoAction])}")
+                                AriaLabel=@GetBooleanAriaLabel(column.DisplayName, propertyValue)
                                 Value=@propertyValue
                                 ValueExpression=@valueExpression />
                     </TemplateColumn>

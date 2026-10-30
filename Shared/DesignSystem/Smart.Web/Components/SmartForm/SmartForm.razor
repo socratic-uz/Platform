@@ -1,4 +1,10 @@
+@using static Material.Web.Components.ButtonVariant
 @namespace Smart.Web.Components
+@using static Assets.Constants.Classes.Form
+@using static Assets.Constants.Classes.Dialog
+@using static Assets.Constants.Classes.InfoGrid
+@using static Assets.Constants.Classes.Chip
+@using static Assets.Constants.Formats
 @using System.Reflection
 @using System.Linq.Expressions
 @using SystemType = System.Type;
@@ -10,7 +16,7 @@
 
 
 <MaterialDialog id=@Id
-                class="@Classes.Dialog.SmartFormDialog"
+                class=@SmartFormDialog
                 Open=@Open
                 Type=@Type
                 NoFocusTrap=@NoFocusTrap
@@ -23,7 +29,7 @@
         @Headline
     </Headline>
     <Content>
-        <EditForm EditContext="@editContext" id="@formId" class="@Classes.Form.SmartFormContent">
+        <EditForm EditContext="@editContext" id="@formId" class=@SmartFormContent>
             <DataAnnotationsValidator />
 
             @if (ShowValidationSummary)
@@ -53,10 +59,10 @@
         }
         else
         {
-            <Button Variant=@ButtonVariant.Text Type="button" OnClick=@(e => OnCancel.InvokeAsync(e))>
+            <Button Variant=@Text Type="button" OnClick=@(e => OnCancel.InvokeAsync(e))>
                 @EffectiveCancelText
             </Button>
-            <Button Variant=@ButtonVariant.Filled Type="button" OnClick=@SubmitFormAsync>
+            <Button Variant=@Filled Type="button" OnClick=@SubmitFormAsync>
                 @EffectiveSubmitText
             </Button>
         }
@@ -105,7 +111,7 @@ private RenderFragment RenderField(PropertyInfo info, object? obj)
     }
     catch (Exception ex)
     {
-        return @<div class="@Classes.Form.SmartFormError">
+        return @<div class=@SmartFormError>
             Error rendering field '@info.Name': @ex.Message
         </div>;
     }
@@ -117,7 +123,7 @@ private RenderFragment RenderWorkScheduleField(PropertyInfo info, object obj, ob
     info.SetValue(obj, schedule);
 
     return @<text>
-        <div class="@Classes.Form.SmartFormField @Classes.Form.SmartFormFieldMb">
+        <div class=@string.Format(Two, SmartFormField, SmartFormFieldMb)>
             <SmartSchedulePicker Schedule="@schedule"
                                  ScheduleChanged="@((SharedKernel.ValueObjects.WorkSchedule updated) => { info.SetValue(obj, updated); })" />
         </div>
@@ -159,7 +165,7 @@ private RenderFragment RenderComplexField(PropertyInfo info, object parentObj, o
         }
         catch
         {
-            return @<div class="@Classes.InfoGrid.SmartFormInfo">Cannot create instance of @propertyType.Name</div>;
+            return @<div class=@SmartFormInfo>Cannot create instance of @propertyType.Name</div>;
         }
     }
 
@@ -168,7 +174,7 @@ private RenderFragment RenderComplexField(PropertyInfo info, object parentObj, o
         .ToArray();
 
     return @<text>
-        <fieldset class="@Classes.Form.SmartFormFieldset">
+        <fieldset class=@SmartFormFieldset>
             <legend>@displayName</legend>
             @foreach (var childProp in childProperties)
             {
@@ -261,8 +267,8 @@ private RenderFragment CreateSwitch(PropertyInfo property, object parentObj)
     return @<text>
         @if (canUseSwitch)
         {
-            <div class="@Classes.Form.SmartFormSwitchContainer">
-                <div class="@Classes.Form.SmartFormSwitchLabel">
+            <div class=@SmartFormSwitchContainer>
+                <div class=@SmartFormSwitchLabel>
                     @displayName
                     @if (isRequired)
                     {
@@ -282,7 +288,7 @@ private RenderFragment CreateSwitch(PropertyInfo property, object parentObj)
         }
         else
         {
-            <div class="@Classes.Form.SmartFormField">
+            <div class=@SmartFormField>
                 @{
                     Expression<Func<bool>> fallbackCheckboxExpression = () => boolValue;
                 }
@@ -318,7 +324,7 @@ private RenderFragment CreateCheckbox(PropertyInfo property, object parentObj)
     return @<text>
         @if (canUseCheckbox)
         {
-            <div class="@Classes.Form.SmartFormCheckboxContainer">
+            <div class=@SmartFormCheckboxContainer>
                 @{
                     Expression<Func<bool>> fallbackExpression = () => boolValue;
                 }
@@ -332,7 +338,7 @@ private RenderFragment CreateCheckbox(PropertyInfo property, object parentObj)
         }
         else
         {
-            <div class="@Classes.Form.SmartFormError">
+            <div class=@SmartFormError>
                 Error in checkbox '@displayName': Cannot read property value
             </div>
         }
@@ -365,7 +371,7 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
     return @<text>
         @if (canRender)
         {
-            <div class="@Classes.Chip.SmartFormChipLabel">
+            <div class=@SmartFormChipLabel>
                 @displayName
                 @if (isRequired)
                 {
@@ -373,7 +379,7 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
                 }
             </div>
 
-            <div class="@Classes.Chip.SmartFormChipContainer">
+            <div class=@SmartFormChipContainer>
                 @if (isFlagsEnum)
                 {
                     @foreach (var enumValue in enumValues)
@@ -432,7 +438,7 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
         }
         else
         {
-            <div class="@Classes.InfoGrid.SmartFormInfo">
+            <div class=@SmartFormInfo>
                 Chip display for '@displayName': Using fallback to Select component due to complex enum structure
             </div>
             @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
@@ -489,7 +495,7 @@ private RenderFragment CreateEnumSelect(PropertyInfo property, object parentObj,
                 .ToList();
             var currentValStr = currentValue?.ToString() ?? "";
 
-            <div class="@Classes.Form.SmartFormField">
+            <div class=@SmartFormField>
                 <Select Variant="Select.SelectVariant.Outlined"
                         Label="@(isRequired ? $"{displayName} *" : displayName)"
                         Value="@currentValStr"
@@ -534,7 +540,7 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
     return @<text>
         @if (canRender)
         {
-            <div class="@Classes.Chip.SmartFormChipLabel">
+            <div class=@SmartFormChipLabel>
                 @displayName
                 @if (isRequired)
                 {
@@ -601,7 +607,7 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
         }
         else
         {
-            <div class="@Classes.InfoGrid.SmartFormInfo">
+            <div class=@SmartFormInfo>
                 Chip display for '@displayName': Using fallback to Select component due to complex enum structure
             </div>
             @CreateEnumSelect(property, parentObj, displayName, isRequired, enumType)
@@ -614,7 +620,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
     // Проверяем, что тип действительно enum
     if (!enumType.IsEnum)
     {
-        return @<div class="@Classes.Form.SmartFormError">Error: @displayName is not an enum type</div>;
+        return @<div class=@SmartFormError>Error: @displayName is not an enum type</div>;
     }
 
     return @<text>
@@ -673,7 +679,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             {
                 Console.WriteLine($"Error in CreateEnumSmartCheckbox for {enumType.Name}: {ex.Message}");
 
-                <div class="@Classes.InfoGrid.SmartFormInfo">
+                <div class=@SmartFormInfo>
                     SmartCheckbox for '@displayName': Using fallback to Select component due to complex enum structure
                 </div>
 
@@ -695,7 +701,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             }
             catch
             {
-                return @<div class="@Classes.InfoGrid.SmartFormInfo">Cannot create instance of @propertyType.Name</div>;
+                return @<div class=@SmartFormInfo>Cannot create instance of @propertyType.Name</div>;
             }
         }
 
@@ -713,7 +719,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
                 { "AddressChanged", EventCallback.Factory.Create<object?>(this, (object? val) => { info.SetValue(parentObj, val); StateHasChanged(); }) }
             };
             return @<text>
-                <fieldset class="@Classes.Form.SmartFormFieldset">
+                <fieldset class=@SmartFormFieldset>
                     <legend>@displayName</legend>
                     <DynamicComponent Type="@pointPickerType" Parameters="@parameters" />
                 </fieldset>
@@ -867,7 +873,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
     {
         if (!enumType.IsEnum)
         {
-            return @<div class="@Classes.Form.SmartFormError">Error: @displayName is not an enum type</div>;
+            return @<div class=@SmartFormError>Error: @displayName is not an enum type</div>;
         }
 
         return @<text>
@@ -913,7 +919,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error in CreateSmartEnum for {enumType.Name}: {ex.Message}");
-                    <div class="@Classes.Form.SmartFormError">Error rendering enum selector for @displayName</div>
+                    <div class=@SmartFormError>Error rendering enum selector for @displayName</div>
                 }
             }
         </text>;

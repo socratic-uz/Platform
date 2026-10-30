@@ -6,11 +6,23 @@ using Microsoft.JSInterop;
 
 using Microsoft.Extensions.Localization;
 using Assets.Constants;
+using static Assets.Constants.Classes.Picker;
+using static Assets.Constants.Classes.ColorPicker;
+using static Assets.Constants.Formats;
 
 namespace Material.Web.Components;
 
 public partial class ColorPicker : ComponentBase
 {
+    protected string CompactBoxClass => Disabled
+        ? (string.IsNullOrEmpty(CssClass) ? string.Format(Two, CompactBox, Classes.Picker.Disabled) : string.Format(Three, CompactBox, CssClass, Classes.Picker.Disabled))
+        : (string.IsNullOrEmpty(CssClass) ? CompactBox : string.Format(Two, CompactBox, CssClass));
+
+    protected string GetPaletteSwatchClass(bool isSelected) => isSelected
+        ? string.Format(Two, PaletteSwatch, Classes.Picker.Selected)
+        : PaletteSwatch;
+
+    protected string HexCompactClass => string.Format(Two, HexWrapper, HexCompact);
     [Inject] public IStringLocalizer L { get; set; } = default!;
 
     [Parameter] public string? Value { get; set; } = "#6750A4";

@@ -7,14 +7,14 @@ export function beforeWebAssemblyStart(options, extensions) {
 }
 
 function loadAssets() {
-    if (!document.querySelector('script[src*="material-web.bundle.js"]')) {
+    if (!document.querySelector('script[src*="material-web.bundle.js"]') && !document.querySelector('script[src*="scripts.js"]')) {
         const script = document.createElement('script');
-        script.src = '_content/Assets/js/material-web.bundle.js';
+        script.src = '_content/Assets/js/components/material-web.bundle.js';
         document.body.appendChild(script);
     }
-    if (!document.querySelector('script[src*="material-color-utilities.bundle.js"]')) {
+    if (!document.querySelector('script[src*="material-color-utilities.bundle.js"]') && !document.querySelector('script[src*="scripts.js"]')) {
         const colorScript = document.createElement('script');
-        colorScript.src = '_content/Assets/js/material-color-utilities.bundle.js';
+        colorScript.src = '_content/Assets/js/components/material-color-utilities.bundle.js';
         colorScript.type = 'module';
         document.body.appendChild(colorScript);
     }

@@ -224,7 +224,7 @@ namespace Assets.Constants
     'Add', 'Remove', 'Delete', 'Edit', 'Save', 'Cancel', 'Print', 'Search', 'Select',
     'Refresh', 'Clear', 'Reset', 'Update', 'Open', 'Close', 'Send', 'Payments', 'Payment',
     'Order', 'Orders', 'Product', 'Products', 'Task', 'Action', 'Error', 'Warning', 'Info', 'Help',
-    'Analytics', 'Language', 'DarkMode'
+    'Analytics', 'Language', 'DarkMode', 'Menu'
   ]);
 
   // Render flat root constants

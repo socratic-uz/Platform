@@ -152,6 +152,8 @@
 }
 
 .docs-article {
+    display: grid;
+    align-content: start;
     min-width: 0;
     max-width: 900px;
     margin: 0 auto;

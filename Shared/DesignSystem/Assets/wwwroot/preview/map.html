@@ -3,34 +3,14 @@
 <head>
     <title>Socratic Preview • MapPage</title>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script>
-    (function() {
-        try {
-            var cookieTheme = document.cookie.split('; ').find(function(row) { return row.startsWith('Theme='); });
-            var theme = (cookieTheme ? decodeURIComponent(cookieTheme.split('=')[1]) : null) || 
-                        localStorage.getItem('Theme') || 
-                        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'Light' : 'Dark');
-            var normalized = theme.toLowerCase();
-            document.documentElement.setAttribute('data-theme', normalized);
-            document.documentElement.style.colorScheme = normalized;
-        } catch(e) {}
-    })();
-</script>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script src="../js/layouts/theme-init.js"></script>
 
 
 <link rel="preload" href="../fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
 
 
 <link rel="stylesheet" href="../css/styles.css" />
-
-
-<script src="../js/material-web.bundle.js" defer></script>
+<script type="module" src="../js/scripts.js"></script>
 
 
 <link rel="icon" type="image/png" href="../img/favicon.png" />
@@ -44,13 +24,13 @@
 
 
 
-<main class="organizations-map-page"><div class="map-mobile-backdrop m3-backdrop" aria-hidden="true"></div><section class="organizations-map-controls expanded search-mode "><button type="button" class="map-panel-toggle-tab" title="Свернуть"><span class="tab-arrow">◀</span><span class="tab-handle" aria-hidden="true"></span></button>
-        <div class="map-panel-content scrollbar-thin scrollbar-thin"><div class="map-toolbar"><div class="search-panel"><div class="search-bar" role="search" aria-label="Поиск по карте"><div class="search-bar-inner"><md-icon class="search-icon">search</md-icon>
+<main class="organizations-map-page"><div class="map-mobile-backdrop" aria-hidden="true"></div><section class="organizations-map-controls expanded search-mode "><button type="button" class="map-panel-toggle-tab" title="Свернуть"><span class="tab-arrow">◀</span><span class="tab-handle" aria-hidden="true"></span></button>
+        <div class="map-panel-content scrollbar-thin"><div class="map-toolbar"><div class="search-panel"><div class="search-bar" role="search" aria-label="Поиск по карте"><div class="search-bar-inner"><md-icon class="search-icon">search</md-icon>
             <input class="search-input" type="text" id="map-main-search" placeholder="Поиск мест и адресов" autocomplete="off" value="" /><md-divider vertical class="search-divider"></md-divider>
             <md-icon-button aria-label="Маршруты" Title="Маршруты"><md-icon>alt_route</md-icon></md-icon-button></div>
         </div>
 
-    <div class="map-categories-scroll scrollbar-none touch-scroll-x scrollbar-none" style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; padding: 8px 12px;"><md-filter-chip label="Где поесть" class="expressive"><md-icon slot="icon">restaurant</md-icon></md-filter-chip>
+    <div class="map-categories-scroll scrollbar-none touch-scroll-x" style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; padding: 8px 12px;"><md-filter-chip label="Где поесть" class="expressive"><md-icon slot="icon">restaurant</md-icon></md-filter-chip>
     <md-filter-chip label="Продукты" class="expressive"><md-icon slot="icon">shopping_cart</md-icon></md-filter-chip>
     <md-filter-chip label="Аптеки" class="expressive"><md-icon slot="icon">local_pharmacy</md-icon></md-filter-chip>
     <md-filter-chip label="АЗС" class="expressive"><md-icon slot="icon">local_gas_station</md-icon></md-filter-chip></div>
@@ -63,12 +43,12 @@
             <md-filled-icon-button aria-label="Мое местоположение" Class="map-ctrl-btn map-geo-btn" Title="Мое местоположение"><md-icon>my_location</md-icon></md-filled-icon-button>
 
             
-            <md-filled-icon-button aria-label="3D вид" Class="map-ctrl-btn map-tilt-btn " Title="3D вид"><md-icon>3d_rotation</md-icon></md-filled-icon-button>
+            <md-filled-icon-button aria-label="3D вид" Class="map-ctrl-btn map-tilt-btn" Title="3D вид"><md-icon>3d_rotation</md-icon></md-filled-icon-button>
 
             
             <div class="map-floor-stack"><div class="map-floor-label">Эт.</div>
-                <md-filled-icon-button aria-label="3 этаж" Class="map-floor-btn " Title="3 этаж">3</md-filled-icon-button>
-                <md-filled-icon-button aria-label="2 этаж" Class="map-floor-btn " Title="2 этаж">2</md-filled-icon-button>
+                <md-filled-icon-button aria-label="3 этаж" Class="map-floor-btn" Title="3 этаж">3</md-filled-icon-button>
+                <md-filled-icon-button aria-label="2 этаж" Class="map-floor-btn" Title="2 этаж">2</md-filled-icon-button>
                 <md-filled-icon-button aria-label="1 этаж" Class="map-floor-btn active" Title="1 этаж">1</md-filled-icon-button></div></div></div>
     <div id="organization-maplibre" class="map-canvas"></div></section></main>
 

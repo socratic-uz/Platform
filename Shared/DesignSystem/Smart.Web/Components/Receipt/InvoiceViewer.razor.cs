@@ -70,7 +70,7 @@ public partial class InvoiceViewer<TItem> : ComponentBase
     public string LogoUrl { get; set; } = "https://app.useanvil.com/img/email-logo-black.png";
 
     [Parameter]
-    public string HeartIconUrl { get; set; } = global::Assets.Constants.Images.Heart;
+    public string HeartIconUrl { get; set; } = string.Empty;
 
     public async Task HandleItemClick(TItem item)
     {

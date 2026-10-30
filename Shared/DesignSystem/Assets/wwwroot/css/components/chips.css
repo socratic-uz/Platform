@@ -1450,7 +1450,7 @@ md-suggestion-chip:active {
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
     .chip-1 {
         top: 4%;
         left: 3%;

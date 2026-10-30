@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 using Assets.Constants;
+using static Assets.Constants.Classes.Common;
+using static Assets.Constants.Classes.Skeleton;
+using static Assets.Constants.Classes.Cards;
+using static Assets.Constants.Formats;
 
 namespace Shared.Layout
 {
@@ -18,5 +22,19 @@ namespace Shared.Layout
 
         public string GetCustomStyle() =>
             $"{(!string.IsNullOrEmpty(Height) ? $"height: {Height};" : "")} {(!string.IsNullOrEmpty(Width) ? $"width: {Width};" : "")} {(!string.IsNullOrEmpty(BorderRadius) ? $"border-radius: {BorderRadius};" : "")}";
+
+        private string CustomLoaderClass => string.IsNullOrEmpty(Class)
+            ? Root
+            : string.Format(Two, Root, Class);
+
+        private string ContainerClass => string.IsNullOrEmpty(Class)
+            ? string.Format(Three, CardGrid, Root, Type)
+            : string.Format(Four, CardGrid, Root, Type, Class);
+
+        private string TextSkeletonClass => string.Format(Two, Root, SkeletonText);
+
+        private string CircleSkeletonClass => string.Format(Two, Root, SkeletonCircle);
+
+        private string CardSkeletonClass => string.Format(Two, M3Card, SkeletonCard);
     }
 }

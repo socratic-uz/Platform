@@ -1,5 +1,6 @@
 @namespace Shared.Components
-<svg class="@Classes.Common.AiBlobCanvas" viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+@using static Assets.Constants.Classes.Common
+<svg class=@AiBlobCanvas viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
 		<filter id="blur4">
 			<feGaussianBlur stdDeviation="4" />
@@ -55,4 +56,3 @@
 
 	<rect x="0" y="0" fill="url(#svg-pattern)"></rect>
 </svg>
-

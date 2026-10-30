@@ -7,6 +7,11 @@ namespace Shared.Components
 {
     public partial class Counter
     {
+        protected const Material.Web.Components.ButtonVariant BtnFilled = Material.Web.Components.ButtonVariant.Filled;
+        protected const Material.Web.Components.IconButtonVariant IconFilled = Material.Web.Components.IconButtonVariant.Filled;
+        protected const Material.Web.Components.IconButtonVariant IconFilledTonal = Material.Web.Components.IconButtonVariant.FilledTonal;
+        protected const string RemoveIcon = global::Assets.Constants.Icons.Remove;
+        protected const string AddIcon = global::Assets.Constants.Icons.Add;
         [Inject] public IStringLocalizer L { get; set; } = default!;
 
         public const string CounterQuantityClass = "counter-quantity";

@@ -54,13 +54,7 @@ else
 					<Icon Name=@Login />
 					<span>@L[SocraticID]</span>
 				</a>
-				<button type="button"
-						class=@LandingMobileMenuToggleClass
-						@onclick=@ToggleMobileMenu
-						aria-label=@(IsMobileMenuOpen ? L[CloseAction] : "Menu")
-						aria-expanded=@(IsMobileMenuOpen ? "true" : "false")>
-					<Icon Name=@MenuIcon />
-				</button>
+				<IconButton Icon=@MenuIcon Class=@LandingMobileMenuToggleClass OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : "Menu") />
 			</div>
 		</EndContent>
 	</Header>

@@ -35,6 +35,9 @@ public partial class PickerTriggerCard : ComponentBase
     [Parameter] public string? Class { get; set; }
     [Parameter] public string? Style { get; set; }
 
+    protected string CardClasses => $"{Classes.Picker.TriggerCard} {(Disabled ? Classes.Picker.Disabled : "")} {(HasValue ? "has-value" : "empty")} {Class}".Trim();
+    protected string BadgeClasses => HasValue ? $"{Classes.Picker.IconBadge} {Classes.Picker.Active}" : Classes.Picker.IconBadge;
+
     protected async Task HandleAction(MouseEventArgs e)
     {
         if (Disabled) return;

@@ -139,3 +139,140 @@
     cursor: pointer;
 }
 
+/* Route Navigation & Itinerary Panels */
+.map-route-header-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.map-route-header-title {
+    font-weight: 500;
+}
+
+.map-route-profile-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    padding: 6px 0;
+    width: 100%;
+}
+
+.map-route-fields-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.map-route-fields-inputs {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+.map-route-input {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+.map-route-input input.map-search-inline {
+    width: 100%;
+    padding: 6px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+.map-route-fields-dots {
+    margin-left: 20px;
+}
+
+.map-route-fields-actions {
+    display: grid;
+    gap: 4px;
+    justify-items: center;
+}
+
+.map-route-bottom-actions {
+    display: grid;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+}
+
+.map-route-suggestions {
+    margin-top: 8px;
+    padding: 4px 0;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    overflow: hidden;
+    --md-list-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.map-route-suggestions md-list-item[selected] {
+    --md-list-item-container-color: var(--md-sys-color-secondary-container);
+}
+
+.map-route-suggestion-icon {
+    color: var(--md-sys-color-primary);
+}
+
+.map-route-delete-btn {
+    width: 32px;
+    height: 32px;
+    --md-icon-button-icon-color: var(--md-sys-color-error);
+}
+
+.map-route-submit-btn {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+}
+
+.route-alternatives-list {
+    display: grid;
+    gap: 4px;
+}
+
+.route-alternatives-list md-list-item {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    margin-bottom: 4px;
+}
+
+.route-alternatives-list md-list-item[selected] {
+    --md-list-item-container-color: var(--md-sys-color-secondary-container);
+}
+
+.route-alternative-icon {
+    color: var(--md-sys-color-primary);
+}
+
+.route-start-container {
+    display: grid;
+    box-sizing: border-box;
+    padding: 12px 16px;
+}
+
+.route-start-button {
+    width: 100%;
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+    --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
+}
+
+

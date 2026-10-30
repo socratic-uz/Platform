@@ -1,20 +1,21 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
-@using static Icons
+@using static Assets.Constants.Classes.Header
+@using static Assets.Constants.Icons
 
-<header class="@Classes.Common.AppHeader @(Sticky ? Classes.Header.Sticky : string.Empty) @Class">
-	<div class="@Classes.Footer.HeaderGridLayout">
+<header class=@ComputedHeaderClass>
+	<div class=@HeaderGridLayout>
 		<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-		<div class="@Classes.Cart.HeaderStartZone">
+		<div class=@HeaderStartZone>
 			@if (ShowBrand)
 			{
-				<div class="@Classes.Cart.HeaderBrandZone">
-					<a href="/" class="@Classes.Cart.HeaderBrandLink" title="Socratic">
-						<span class="@Classes.Header.BrandIconBox">
-							<Icon Name="@AutoAwesome" />
+				<div class=@HeaderBrandZone>
+					<a href="/" class=@HeaderBrandLink title="Socratic">
+						<span class=@BrandIconBox>
+							<Icon Name=@AutoAwesome />
 						</span>
-						<span class="@Classes.Cart.HeaderBrandText">Socratic</span>
+						<span class=@HeaderBrandText>Socratic</span>
 					</a>
 				</div>
 			}
@@ -25,7 +26,7 @@
 		</div>
 
 		<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-		<div class="@Classes.GridLayout.HeaderCenterZone">
+		<div class=@HeaderCenterZone>
 			@if (CenterContent != null)
 			{
 				@CenterContent
@@ -37,7 +38,7 @@
 		</div>
 
 		<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-		<div class="@Classes.Cart.HeaderEndZone">
+		<div class=@HeaderEndZone>
 			@if (EndContent != null)
 			{
 				@EndContent

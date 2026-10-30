@@ -1,3 +1,4 @@
+@using static Assets.Constants.Classes.GridLayout
 <!DOCTYPE html>
 <html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" data-theme="@InitialTheme" style="color-scheme: @InitialTheme;">
 <head>
@@ -8,48 +9,13 @@
     <HeadOutlet @rendermode="InteractiveAuto" />
     <AntiforgeryToken />
 </head>
-<body class="@Classes.GridLayout.AppGrid" oncontextmenu="return false;">
+<body class=@AppGrid oncontextmenu="return false;">
     <Routes @rendermode="InteractiveAuto" />
 
     <SectionOutlet SectionName="script" />
 
     <ReconnectModal />
     <script src="https://oauth.telegram.org/js/telegram-login.js?6"></script>
-    <script src=@Scripts.PasskeyHelper></script>
-    <script src=@Scripts.TelegramHelper></script>
-    <script src=@Scripts.OauthPopupHelper></script>
-    <script>
-        window.socraticAdNetwork = {
-            pushGoogle: function() {
-                try {
-                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                } catch(e) {}
-            },
-            renderYandex: function(blockId, containerId) {
-                try {
-                    var render = function() {
-                        if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
-                            window.Ya.Context.AdvManager.render({
-                                blockId: blockId,
-                                renderTo: containerId
-                            });
-                        }
-                    };
-                    if (window.Ya && window.Ya.Context && window.Ya.Context.AdvManager) {
-                        render();
-                    } else {
-                        window.yaContextCb = window.yaContextCb || [];
-                        window.yaContextCb.push(render);
-                    }
-                } catch(e) {}
-            }
-        };
-        window.socraticAdSense = {
-            push: function() {
-                window.socraticAdNetwork.pushGoogle();
-            }
-        };
-    </script>
     <script src="@Assets["_framework/blazor.web.js"]"></script>
 </body>
 </html>

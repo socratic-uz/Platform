@@ -11,10 +11,10 @@
 @using static Material.Web.Components.ButtonVariant
 
 <PickerTriggerCard Label=@EffectiveLabel
-                   Icon=@Icons.Schedule
-                   ActiveIcon=@Icons.Schedule
+                   Icon=@ScheduleIcon
+                   ActiveIcon=@ScheduleIcon
                    HasValue=@HasActiveDays
-                   BadgeText=@($"{ActiveDaysCount} {L[DaysShort]}")
+                   BadgeText=@string.Format(Two, ActiveDaysCount, L[DaysShort])
                    BadgeIcon=@EventAvailable
                    PreviewText=@GetSummaryText()
                    ActionLabel=@L[CommonConfigure]
@@ -28,7 +28,7 @@
             @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
             {
                 var active = IsDayActive(day);
-                <span class=@(active ? string.Format(Two, DayDot, Active) : DayDot) title=@($"{GetDayName(day)}: {(active ? L[WorkingDay] : L[DayOff])}")>
+                <span class=@(active ? string.Format(Two, DayDot, Active) : DayDot) title=@string.Format(Two, GetDayName(day), active ? L[WorkingDay] : L[DayOff])>
                     @GetDayShort(day)
                 </span>
             }

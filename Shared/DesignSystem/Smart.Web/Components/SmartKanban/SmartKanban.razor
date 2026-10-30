@@ -1,34 +1,36 @@
 @namespace Smart.Web.Components
 @typeparam TItem where TItem : class
+@using static Assets.Constants.Classes.Orders
+@using static Assets.Constants.Classes.Cards
 
-<div class="@Classes.Orders.SmartKanbanBoard">
+<div class=@SmartKanbanBoard>
     @if (Columns != null)
     {
         @foreach (var col in Columns)
         {
             var columnItems = GetItemsForColumn(col);
-            <div class="@Classes.Orders.SmartKanbanColumn"
+            <div class=@SmartKanbanColumn
                  @ondragover:preventDefault="true"
-                 @ondrop="() => HandleDrop(col)">
-                <div class="@Classes.Orders.SmartKanbanColumnHeader">
-                    <span class="@Classes.Orders.SmartKanbanColumnTitle">@col.Title</span>
-                    <span class="@Classes.Orders.SmartKanbanColumnCount">@columnItems.Count</span>
+                 @ondrop=@(() => HandleDrop(col))>
+                <div class=@SmartKanbanColumnHeader>
+                    <span class=@SmartKanbanColumnTitle>@col.Title</span>
+                    <span class=@SmartKanbanColumnCount>@columnItems.Count</span>
                 </div>
-                <div class="@Classes.Cards.SmartKanbanCards">
+                <div class=@SmartKanbanCards>
                     @foreach (var item in columnItems)
                     {
-                        <div class="@Classes.Cards.SmartKanbanCard"
+                        <div class=@SmartKanbanCard
                              draggable="true"
-                             @ondragstart="() => HandleDragStart(item)"
-                             @onclick="() => HandleCardClick(item)">
+                             @ondragstart=@(() => HandleDragStart(item))
+                             @onclick=@(() => HandleCardClick(item))>
                             @if (CardTemplate != null)
                             {
                                 @CardTemplate(item)
                             }
                             else
                             {
-                                <div class="@Classes.Cards.SmartKanbanCardTitle">@GetItemTitle(item)</div>
-                                <div class="@Classes.Cards.SmartKanbanCardSubtitle">@GetItemSubtitle(item)</div>
+                                <div class=@SmartKanbanCardTitle>@GetItemTitle(item)</div>
+                                <div class=@SmartKanbanCardSubtitle>@GetItemSubtitle(item)</div>
                             }
                         </div>
                     }

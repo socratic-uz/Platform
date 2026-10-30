@@ -93,7 +93,15 @@ async function analyzePageLiveAllViewports(browser, filePath) {
   const fileUrl = pathToFileURL(filePath).href;
 
   try {
-    await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
+    await page.goto(fileUrl, { waitUntil: 'load' });
+    await page.evaluate(async () => {
+      if (window.customElements && window.customElements.whenDefined) {
+        await Promise.race([
+          window.customElements.whenDefined('md-filled-button'),
+          new Promise(r => setTimeout(r, 200))
+        ]);
+      }
+    });
 
     // Inject preview-collector.js (cached in memory)
     const collectorCode = getCollectorCode();
@@ -311,7 +319,7 @@ async function main() {
   const chromium = staticOnly ? null : await getPlaywright();
   let browser = null;
   if (chromium) {
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({ headless: true, args: ["--allow-file-access-from-files"] });
   } else if (!staticOnly) {
     console.warn('⚠️ Playwright not found (Tools/ui-mcp/node_modules). FALLBACK to STATIC mode: blueprints are a placeholder tree, only regex lint is real.');
   } else {

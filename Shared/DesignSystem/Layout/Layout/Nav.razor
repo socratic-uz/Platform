@@ -1,3 +1,4 @@
+@using static Assets.Constants.Formats
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
@@ -6,7 +7,7 @@
 @using static Icons
 @using static Loc.Common
 
-<nav class=@($"{Glass} {(FormFactor.IsMobile() ? NavMobile : NavDesktop)}")>
+<nav class=@string.Format(Two, Glass, FormFactor.IsMobile() ? NavMobile : NavDesktop)>
 	<NavLink class=@NavItem href="/home" Match=@NavLinkMatch.All>
 		<Icon Name=@Home />
 		<span>@(L?[NavHome])</span>

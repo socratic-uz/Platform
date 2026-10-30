@@ -1,28 +1,27 @@
 @namespace Shared.Layout
 @using Material.Web
-@using static Classes.Common
-@using static Classes.Skeleton
-@using static Classes.Cards
-@using static Assets.Constants.Formats
+@using static Assets.Constants.Classes.Common
+@using static Assets.Constants.Classes.Skeleton
+@using static Assets.Constants.Classes.Cards
 
 @if (!string.IsNullOrEmpty(Height) || !string.IsNullOrEmpty(Width))
 {
-    <div class=@($"{Root} {Class}") style=@GetCustomStyle() @attributes=@AdditionalAttributes></div>
+    <div class=@CustomLoaderClass style=@GetCustomStyle() @attributes=@AdditionalAttributes></div>
 }
 else
 {
-    <div class=@($"{CardGrid} {Root} {Type} {Class}") @attributes=@AdditionalAttributes>
+    <div class=@ContainerClass @attributes=@AdditionalAttributes>
         @for (int i = 0; i < Count; i++)
         {
             @if (Type == "card")
             {
-                <div class=@string.Format(Two, M3Card, Classes.Skeleton.Card)>
+                <div class=@CardSkeletonClass>
                     <div class=@Root style="height: 140px; border-radius: var(--md-sys-shape-corner-medium);"></div>
-                    <div class="@Classes.Common.CommonGrid" style="gap: 8px; align-content: space-between;">
-                        <div class=@($"{Root} {Text}") style="width: 70%; height: 18px;"></div>
-                        <div class=@($"{Root} {Text}") style="width: 90%;"></div>
-                        <div class="@Classes.Common.CommonGrid" style="grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
-                            <div class=@($"{Root} {Text}") style="width: 40%; height: 20px;"></div>
+                    <div class=@CommonGrid style="gap: 8px; align-content: space-between;">
+                        <div class=@TextSkeletonClass style="width: 70%; height: 18px;"></div>
+                        <div class=@TextSkeletonClass style="width: 90%;"></div>
+                        <div class=@CommonGrid style="grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
+                            <div class=@TextSkeletonClass style="width: 40%; height: 20px;"></div>
                             <div class=@Root style="width: 80px; height: 36px; border-radius: 18px;"></div>
                         </div>
                     </div>
@@ -31,16 +30,16 @@ else
             else if (Type == "list")
             {
                 <div class=@M3Card style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px;">
-                    <div class=@($"{Root} {Circle}")></div>
-                    <div class="@Classes.Common.CommonGrid" style="gap: 8px;">
-                        <div class=@($"{Root} {Text}") style="width: 70%; height: 18px;"></div>
-                        <div class=@($"{Root} {Text}") style="width: 90%;"></div>
+                    <div class=@CircleSkeletonClass></div>
+                    <div class=@CommonGrid style="gap: 8px;">
+                        <div class=@TextSkeletonClass style="width: 70%; height: 18px;"></div>
+                        <div class=@TextSkeletonClass style="width: 90%;"></div>
                     </div>
                 </div>
             }
             else
             {
-                <div class=@($"{Root} {Text}")></div>
+                <div class=@TextSkeletonClass></div>
             }
         }
     </div>

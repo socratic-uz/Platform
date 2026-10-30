@@ -1,30 +1,32 @@
-<script type="module" src="@Assets["Components/Layout/ReconnectModal.razor.js"]"></script>
+@using static Assets.Constants.Classes.Common
+
+<script type="module" src=@Scripts.Layouts.ReconnectModal></script>
 
 <dialog id="components-reconnect-modal" data-nosnippet>
-    <div class="@Classes.Common.ComponentsReconnectContainer">
-        <div class="@Classes.Common.ComponentsRejoiningAnimation" aria-hidden="true">
+    <div class=@ComponentsReconnectContainer>
+        <div class=@ComponentsRejoiningAnimation aria-hidden="true">
             <div></div>
             <div></div>
         </div>
-        <p class="@Classes.Common.ComponentsReconnectFirstAttemptVisible">
+        <p class=@ComponentsReconnectFirstAttemptVisible>
             Rejoining the server...
         </p>
-        <p class="@Classes.Common.ComponentsReconnectRepeatedAttemptVisible">
+        <p class=@ComponentsReconnectRepeatedAttemptVisible>
             Rejoin failed... trying again in <span id="components-seconds-to-next-attempt"></span> seconds.
         </p>
-        <p class="@Classes.Common.ComponentsReconnectFailedVisible">
+        <p class=@ComponentsReconnectFailedVisible>
             Failed to rejoin.<br />Please retry or reload the page.
         </p>
-        <button id="components-reconnect-button" class="@Classes.Common.ComponentsReconnectFailedVisible">
+        <button id="components-reconnect-button" class=@ComponentsReconnectFailedVisible>
             Retry
         </button>
-        <p class="@Classes.Common.ComponentsPauseVisible">
+        <p class=@ComponentsPauseVisible>
             The session has been paused by the server.
         </p>
-        <button id="components-resume-button" class="@Classes.Common.ComponentsPauseVisible">
+        <button id="components-resume-button" class=@ComponentsPauseVisible>
             Resume
         </button>
-        <p class="@Classes.Common.ComponentsResumeFailedVisible">
+        <p class=@ComponentsResumeFailedVisible>
             Failed to resume the session.<br />Please reload the page.
         </p>
     </div>

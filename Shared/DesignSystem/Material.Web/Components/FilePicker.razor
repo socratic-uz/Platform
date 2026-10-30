@@ -1,6 +1,7 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Forms
 @using Assets.Constants
+@using static Assets.Constants.Icons
 @using static Assets.Constants.Classes.Picker
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
@@ -8,26 +9,26 @@
 
 <div class=@FilePickerContainer>
     <PickerTriggerCard Label=@EffectiveLabel
-                       Icon=@Icons.AttachFile
-                       ActiveIcon=@Icons.FolderOpen
+                       Icon=@AttachFile
+                       ActiveIcon=@FolderOpen
                        HasValue=@(TotalFilesCount > 0)
                        BadgeText=@GetFilesBadgeText()
-                       BadgeIcon=@Icons.Folder
+                       BadgeIcon=@Folder
                        PreviewText=@GetPreviewText()
-                       ResetIcon=@Icons.DeleteSweep
+                       ResetIcon=@DeleteSweep
                        ResetAriaLabel=@L[FilePickerClearAll]
                        OnReset=@ClearAll>
         <CustomActions>
-            <label for="@inputId" class=@FileAddBtnLabel>
+            <label for=@inputId class=@FileAddBtnLabel>
                 <Button Variant=@FilledTonal Type="button">
-                    <md-icon slot="icon">@Icons.AddPhotoAlternate</md-icon>
+                    <md-icon slot="icon">@AddPhotoAlternate</md-icon>
                     @EffectiveUploadLabel
                 </Button>
             </label>
 
             @if (TotalFilesCount > 0)
             {
-                <IconButton Icon=@Icons.DeleteSweep
+                <IconButton Icon=@DeleteSweep
                             AriaLabel=@L[FilePickerClearAll]
                             OnClick=@ClearAll />
             }
@@ -44,29 +45,29 @@
                 if (index < Attachments.Count)
                 {
                     var (fileName, contentType, url, isNew, bytesData) = GetAttachmentData(index);
-                    <div class="@($"{FileCard} {(isNew ? "new-file" : "")}")">
+                    <div class=@GetFileCardClass(isNew)>
                         <div class=@FilePreviewArea>
                             @if (IsImage(contentType, fileName))
                             {
                                 var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
-                                <img src="@imgUrl" alt="@fileName" class=@ImagePreview />
+                                <img src=@imgUrl alt=@fileName class=@ImagePreview />
                             }
                             else
                             {
-                                <div class="@($"{IconPreview} {GetIconClass(contentType, fileName)}")">
+                                <div class=@GetIconPreviewClass(contentType, fileName)>
                                     <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
                                 </div>
                             }
                         </div>
                         <div class=@FileInfo>
-                            <span class=@FileName title="@fileName">@fileName</span>
+                            <span class=@FileName title=@fileName>@fileName</span>
                         </div>
                         @if (isNew)
                         {
                             <div class=@NewBadge>New</div>
                         }
                         <div class=@FileOverlay>
-                            <IconButton Icon=@Icons.Delete
+                            <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveAttachment(index)) />
                         </div>
@@ -86,13 +87,13 @@
                     var (previewUrl, fileName) = GetExistingImageData(index);
                     <div class=@FileCard>
                         <div class=@FilePreviewArea>
-                            <img src="@previewUrl" alt="@fileName" class=@ImagePreview />
+                            <img src=@previewUrl alt=@fileName class=@ImagePreview />
                         </div>
                         <div class=@FileInfo>
-                            <span class=@FileName title="@fileName">@fileName</span>
+                            <span class=@FileName title=@fileName>@fileName</span>
                         </div>
                         <div class=@FileOverlay>
-                            <IconButton Icon=@Icons.Delete
+                            <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveExistingImage(index)) />
                         </div>
@@ -110,25 +111,25 @@
                 if (index < NewImagesContent.Count)
                 {
                     var (dataUrl, contentType, fileName) = GetNewImageData(index);
-                    <div class="@($"{FileCard} new-file")">
+                    <div class=@FileCard>
                         <div class=@FilePreviewArea>
                             @if (IsImage(contentType, fileName))
                             {
-                                <img src="@dataUrl" alt="@fileName" class=@ImagePreview />
+                                <img src=@dataUrl alt=@fileName class=@ImagePreview />
                             }
                             else
                             {
-                                <div class="@($"{IconPreview} {GetIconClass(contentType, fileName)}")">
+                                <div class=@GetIconPreviewClass(contentType, fileName)>
                                     <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
                                 </div>
                             }
                         </div>
                         <div class=@FileInfo>
-                            <span class=@FileName title="@fileName">@fileName</span>
+                            <span class=@FileName title=@fileName>@fileName</span>
                         </div>
                         <div class=@NewBadge>New</div>
                         <div class=@FileOverlay>
-                            <IconButton Icon=@Icons.Delete
+                            <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveNewImage(index)) />
                         </div>
@@ -138,7 +139,7 @@
         }
 
         <!-- Upload Card -->
-        <div class="@($"{UploadCard} {(isDragging ? Dragging : "")}")"
+        <div class=@UploadCardClass
              @ondragenter=@HandleDragEnter
              @ondragleave=@HandleDragLeave
              @ondragover=@HandleDragOver
@@ -147,15 +148,15 @@
              @ondrop:preventDefault>
             
             <div class=@UploadZoneLabel>
-                <md-icon class=@UploadIcon>@Icons.CloudUpload</md-icon>
+                <md-icon class=@UploadIcon>@CloudUpload</md-icon>
                 <span class=@UploadText>@EffectiveUploadLabel</span>
                 <span class=@UploadSubtext>@L[FilePickerDragFilesOrClick]</span>
             </div>
             
-            <InputFile id="@inputId" 
+            <InputFile id=@inputId 
                        OnChange=@HandleFileSelected 
                        multiple=@Multiple 
-                       accept="@Accept" 
+                       accept=@Accept 
                        class=@FileInputHidden />
         </div>
     </div>

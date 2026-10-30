@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1633.
+    /// Total unique keys: 1639.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (540 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (539 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -3799,14 +3799,6 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
             /// </summary>
             public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
-
-            /// <summary>
-            /// Key: <c>Profile_SecuritySubtext</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
-            /// </summary>
-            public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
 
             /// <summary>
             /// Key: <c>Profile_TurnLeft</c><br/>
@@ -8141,7 +8133,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Checkout (301 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
+        /// Domain group: Checkout (304 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
         /// </summary>
         public static class Checkout
         {
@@ -8368,6 +8360,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm &amp;amp; Pay&quot;
             /// </summary>
             public const string Checkout_ConfirmAndPay = "Checkout_ConfirmAndPay";
+
+            /// <summary>
+            /// Key: <c>Checkout_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string Checkout_CurrencyUzs = "Checkout_CurrencyUzs";
 
             /// <summary>
             /// Key: <c>Checkout_GeneratingUzQr</c><br/>
@@ -8786,6 +8786,14 @@ namespace Assets.Constants
             public const string CheckoutConfirmAndPay = "Checkout_ConfirmAndPay";
 
             /// <summary>
+            /// Key: <c>Checkout_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string CheckoutCurrencyUzs = "Checkout_CurrencyUzs";
+
+            /// <summary>
             /// Key: <c>Checkout_GeneratingUzQr</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка QR...&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR yuklanmoqda...&quot;<br/>
@@ -9154,6 +9162,14 @@ namespace Assets.Constants
             public const string CreditScore = "Payment_CreditScore";
 
             /// <summary>
+            /// Key: <c>Checkout_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string CurrencyUzs = "Checkout_CurrencyUzs";
+
+            /// <summary>
             /// Key: <c>Payment_CustomerCare</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Служба заботы о клиентах&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlarni qo'llab-quvvatlash xizmati&quot;<br/>
@@ -9263,7 +9279,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob:&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Invoice:&quot;
             /// </summary>
-            public const string InvoiceLabel = "Checkout_InvoiceLabel";
+            public const string InvoiceLabelText = "Checkout_InvoiceLabel";
 
             /// <summary>
             /// Key: <c>Payment_KycStatus</c><br/>
@@ -15658,7 +15674,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Landing (411 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
+        /// Domain group: Landing (413 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
         /// </summary>
         public static class Landing
         {
@@ -16423,6 +16439,14 @@ namespace Assets.Constants
             public const string Analytics_Dashboard = "Analytics_Dashboard";
 
             /// <summary>
+            /// Key: <c>Analytics_Data</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+            /// </summary>
+            public const string Analytics_Data = "Analytics_Data";
+
+            /// <summary>
             /// Key: <c>Analytics_DistributionShare</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;распределение долей&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;ulushlar taqsimoti&quot;<br/>
@@ -16973,6 +16997,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Dashboard&quot;
             /// </summary>
             public const string AnalyticsDashboard = "Analytics_Dashboard";
+
+            /// <summary>
+            /// Key: <c>Analytics_Data</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+            /// </summary>
+            public const string AnalyticsData = "Analytics_Data";
 
             /// <summary>
             /// Key: <c>Analytics_DistributionShare</c><br/>
@@ -21319,7 +21351,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Orders (218 keys). Use with <c>@using static Assets.Constants.Loc.Orders;</c>.
+        /// Domain group: Orders (223 keys). Use with <c>@using static Assets.Constants.Loc.Orders;</c>.
         /// </summary>
         public static class Orders
         {
@@ -21964,6 +21996,14 @@ namespace Assets.Constants
             public const string OrderItems_LoadSample = "OrderItems_LoadSample";
 
             /// <summary>
+            /// Key: <c>OrderItems_Name</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+            /// </summary>
+            public const string OrderItems_Name = "OrderItems_Name";
+
+            /// <summary>
             /// Key: <c>OrderItems_OpenKds</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -22124,6 +22164,14 @@ namespace Assets.Constants
             public const string OrderItemsLoadSample = "OrderItems_LoadSample";
 
             /// <summary>
+            /// Key: <c>OrderItems_Name</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+            /// </summary>
+            public const string OrderItemsName = "OrderItems_Name";
+
+            /// <summary>
             /// Key: <c>OrderItems_OpenKds</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -22266,6 +22314,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Create order&quot;
             /// </summary>
             public const string Orders_CreateOrder = "Orders_CreateOrder";
+
+            /// <summary>
+            /// Key: <c>Orders_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string Orders_CurrencyUzs = "Orders_CurrencyUzs";
 
             /// <summary>
             /// Key: <c>Orders_Done</c><br/>
@@ -22508,6 +22564,14 @@ namespace Assets.Constants
             public const string OrdersCreateOrder = "Orders_CreateOrder";
 
             /// <summary>
+            /// Key: <c>Orders_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string OrdersCurrencyUzs = "Orders_CurrencyUzs";
+
+            /// <summary>
             /// Key: <c>Orders_Done</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершён&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yakunlandi&quot;<br/>
@@ -22594,6 +22658,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Move to ready&quot;
             /// </summary>
             public const string OrdersMoveToReady = "Orders_MoveToReady";
+
+            /// <summary>
+            /// Key: <c>OrderItems_Name</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+            /// </summary>
+            public const string OrdersNameText = "OrderItems_Name";
 
             /// <summary>
             /// Key: <c>Orders_NoOrdersPreparing</c><br/>
@@ -24931,7 +25003,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Receipt (82 keys). Use with <c>@using static Assets.Constants.Loc.Receipt;</c>.
+        /// Domain group: Receipt (84 keys). Use with <c>@using static Assets.Constants.Loc.Receipt;</c>.
         /// </summary>
         public static class Receipt
         {
@@ -25320,6 +25392,14 @@ namespace Assets.Constants
             public const string QuantityShort = "Invoice_QuantityShort";
 
             /// <summary>
+            /// Key: <c>Receipt_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string Receipt_CurrencyUzs = "Receipt_CurrencyUzs";
+
+            /// <summary>
             /// Key: <c>Receipt_FiscalSign</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;ФП:&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;FB:&quot;<br/>
@@ -25422,6 +25502,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Verify on Soliq.uz&quot;
             /// </summary>
             public const string Receipt_VerifySoliq = "Receipt_VerifySoliq";
+
+            /// <summary>
+            /// Key: <c>Receipt_CurrencyUzs</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+            /// </summary>
+            public const string ReceiptCurrencyUzs = "Receipt_CurrencyUzs";
 
             /// <summary>
             /// Key: <c>Receipt_FiscalSign</c><br/>
@@ -29068,7 +29156,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Terminal (78 keys). Use with <c>@using static Assets.Constants.Loc.Terminal;</c>.
+        /// Domain group: Terminal (81 keys). Use with <c>@using static Assets.Constants.Loc.Terminal;</c>.
         /// </summary>
         public static class Terminal
         {
@@ -29087,6 +29175,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Add {0} to order&quot;
             /// </summary>
             public const string AddToCartPrefix = "Terminal_AddToCartPrefix";
+
+            /// <summary>
+            /// Key: <c>Terminal_ByRequirements</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+            /// </summary>
+            public const string ByRequirements = "Terminal_ByRequirements";
 
             /// <summary>
             /// Key: <c>Terminal_CancelOperation</c><br/>
@@ -29297,6 +29393,14 @@ namespace Assets.Constants
             public const string Terminal_AddToCartPrefix = "Terminal_AddToCartPrefix";
 
             /// <summary>
+            /// Key: <c>Terminal_ByRequirements</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+            /// </summary>
+            public const string Terminal_ByRequirements = "Terminal_ByRequirements";
+
+            /// <summary>
             /// Key: <c>Terminal_CancelOperation</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Отмена операции&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Operatsiyani bekor qilish&quot;<br/>
@@ -29503,6 +29607,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Add {0} to order&quot;
             /// </summary>
             public const string TerminalAddToCartPrefix = "Terminal_AddToCartPrefix";
+
+            /// <summary>
+            /// Key: <c>Terminal_ByRequirements</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+            /// </summary>
+            public const string TerminalByRequirements = "Terminal_ByRequirements";
 
             /// <summary>
             /// Key: <c>Terminal_CancelOperation</c><br/>
@@ -32996,6 +33108,14 @@ namespace Assets.Constants
         public const string Analytics_Dashboard = "Analytics_Dashboard";
 
         /// <summary>
+        /// Key: <c>Analytics_Data</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+        /// </summary>
+        public const string Analytics_Data = "Analytics_Data";
+
+        /// <summary>
         /// Key: <c>Analytics_DistributionShare</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;распределение долей&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;ulushlar taqsimoti&quot;<br/>
@@ -33546,6 +33666,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Dashboard&quot;
         /// </summary>
         public const string AnalyticsDashboard = "Analytics_Dashboard";
+
+        /// <summary>
+        /// Key: <c>Analytics_Data</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+        /// </summary>
+        public const string AnalyticsData = "Analytics_Data";
 
         /// <summary>
         /// Key: <c>Analytics_DistributionShare</c><br/>
@@ -35732,6 +35860,14 @@ namespace Assets.Constants
         public const string Checkout_ConfirmAndPay = "Checkout_ConfirmAndPay";
 
         /// <summary>
+        /// Key: <c>Checkout_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Checkout_CurrencyUzs = "Checkout_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Checkout_GeneratingUzQr</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка QR...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR yuklanmoqda...&quot;<br/>
@@ -36130,6 +36266,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm &amp;amp; Pay&quot;
         /// </summary>
         public const string CheckoutConfirmAndPay = "Checkout_ConfirmAndPay";
+
+        /// <summary>
+        /// Key: <c>Checkout_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string CheckoutCurrencyUzs = "Checkout_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Checkout_GeneratingUzQr</c><br/>
@@ -45561,6 +45705,14 @@ namespace Assets.Constants
         public const string OrderItems_LoadSample = "OrderItems_LoadSample";
 
         /// <summary>
+        /// Key: <c>OrderItems_Name</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+        /// </summary>
+        public const string OrderItems_Name = "OrderItems_Name";
+
+        /// <summary>
         /// Key: <c>OrderItems_OpenKds</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -45721,6 +45873,14 @@ namespace Assets.Constants
         public const string OrderItemsLoadSample = "OrderItems_LoadSample";
 
         /// <summary>
+        /// Key: <c>OrderItems_Name</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+        /// </summary>
+        public const string OrderItemsName = "OrderItems_Name";
+
+        /// <summary>
         /// Key: <c>OrderItems_OpenKds</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -45871,6 +46031,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Create order&quot;
         /// </summary>
         public const string Orders_CreateOrder = "Orders_CreateOrder";
+
+        /// <summary>
+        /// Key: <c>Orders_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Orders_CurrencyUzs = "Orders_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Orders_Done</c><br/>
@@ -46071,6 +46239,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Create order&quot;
         /// </summary>
         public const string OrdersCreateOrder = "Orders_CreateOrder";
+
+        /// <summary>
+        /// Key: <c>Orders_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string OrdersCurrencyUzs = "Orders_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Orders_Done</c><br/>
@@ -48734,7 +48910,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
         /// </summary>
-        public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
+        public const string ProfileSecuritySubtextText = "Profile_SecuritySubtext";
 
         /// <summary>
         /// Key: <c>Profile_Title</c><br/>
@@ -50257,6 +50433,14 @@ namespace Assets.Constants
         public const string ReadyText = "Ready";
 
         /// <summary>
+        /// Key: <c>Receipt_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Receipt_CurrencyUzs = "Receipt_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Receipt_FiscalSign</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;ФП:&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;FB:&quot;<br/>
@@ -50359,6 +50543,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Verify on Soliq.uz&quot;
         /// </summary>
         public const string Receipt_VerifySoliq = "Receipt_VerifySoliq";
+
+        /// <summary>
+        /// Key: <c>Receipt_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string ReceiptCurrencyUzs = "Receipt_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Receipt_FiscalSign</c><br/>
@@ -52993,6 +53185,14 @@ namespace Assets.Constants
         public const string Terminal_AddToCartPrefix = "Terminal_AddToCartPrefix";
 
         /// <summary>
+        /// Key: <c>Terminal_ByRequirements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+        /// </summary>
+        public const string Terminal_ByRequirements = "Terminal_ByRequirements";
+
+        /// <summary>
         /// Key: <c>Terminal_CancelOperation</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Отмена операции&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Operatsiyani bekor qilish&quot;<br/>
@@ -53199,6 +53399,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Add {0} to order&quot;
         /// </summary>
         public const string TerminalAddToCartPrefix = "Terminal_AddToCartPrefix";
+
+        /// <summary>
+        /// Key: <c>Terminal_ByRequirements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+        /// </summary>
+        public const string TerminalByRequirements = "Terminal_ByRequirements";
 
         /// <summary>
         /// Key: <c>Terminal_CancelOperation</c><br/>
@@ -55398,7 +55606,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (540 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (539 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -58734,14 +58942,6 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
         /// </summary>
         public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
-
-        /// <summary>
-        /// Key: <c>Profile_SecuritySubtext</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
-        /// </summary>
-        public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
 
         /// <summary>
         /// Key: <c>Profile_TurnLeft</c><br/>
@@ -63076,7 +63276,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Checkout (301 keys). Use with <c>@using static Loc.Checkout;</c>.
+    /// Domain group: Checkout (304 keys). Use with <c>@using static Loc.Checkout;</c>.
     /// </summary>
     public static class Checkout
     {
@@ -63303,6 +63503,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Confirm &amp;amp; Pay&quot;
         /// </summary>
         public const string Checkout_ConfirmAndPay = "Checkout_ConfirmAndPay";
+
+        /// <summary>
+        /// Key: <c>Checkout_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Checkout_CurrencyUzs = "Checkout_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Checkout_GeneratingUzQr</c><br/>
@@ -63721,6 +63929,14 @@ namespace Loc
         public const string CheckoutConfirmAndPay = "Checkout_ConfirmAndPay";
 
         /// <summary>
+        /// Key: <c>Checkout_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string CheckoutCurrencyUzs = "Checkout_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Checkout_GeneratingUzQr</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка QR...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;QR yuklanmoqda...&quot;<br/>
@@ -64089,6 +64305,14 @@ namespace Loc
         public const string CreditScore = "Payment_CreditScore";
 
         /// <summary>
+        /// Key: <c>Checkout_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string CurrencyUzs = "Checkout_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Payment_CustomerCare</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Служба заботы о клиентах&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlarni qo'llab-quvvatlash xizmati&quot;<br/>
@@ -64198,7 +64422,7 @@ namespace Loc
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob:&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Invoice:&quot;
         /// </summary>
-        public const string InvoiceLabel = "Checkout_InvoiceLabel";
+        public const string InvoiceLabelText = "Checkout_InvoiceLabel";
 
         /// <summary>
         /// Key: <c>Payment_KycStatus</c><br/>
@@ -70593,7 +70817,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Landing (411 keys). Use with <c>@using static Loc.Landing;</c>.
+    /// Domain group: Landing (413 keys). Use with <c>@using static Loc.Landing;</c>.
     /// </summary>
     public static class Landing
     {
@@ -71358,6 +71582,14 @@ namespace Loc
         public const string Analytics_Dashboard = "Analytics_Dashboard";
 
         /// <summary>
+        /// Key: <c>Analytics_Data</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+        /// </summary>
+        public const string Analytics_Data = "Analytics_Data";
+
+        /// <summary>
         /// Key: <c>Analytics_DistributionShare</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;распределение долей&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;ulushlar taqsimoti&quot;<br/>
@@ -71908,6 +72140,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Dashboard&quot;
         /// </summary>
         public const string AnalyticsDashboard = "Analytics_Dashboard";
+
+        /// <summary>
+        /// Key: <c>Analytics_Data</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Данные&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ma'lumotlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Data&quot;
+        /// </summary>
+        public const string AnalyticsData = "Analytics_Data";
 
         /// <summary>
         /// Key: <c>Analytics_DistributionShare</c><br/>
@@ -76254,7 +76494,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Orders (218 keys). Use with <c>@using static Loc.Orders;</c>.
+    /// Domain group: Orders (223 keys). Use with <c>@using static Loc.Orders;</c>.
     /// </summary>
     public static class Orders
     {
@@ -76899,6 +77139,14 @@ namespace Loc
         public const string OrderItems_LoadSample = "OrderItems_LoadSample";
 
         /// <summary>
+        /// Key: <c>OrderItems_Name</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+        /// </summary>
+        public const string OrderItems_Name = "OrderItems_Name";
+
+        /// <summary>
         /// Key: <c>OrderItems_OpenKds</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -77059,6 +77307,14 @@ namespace Loc
         public const string OrderItemsLoadSample = "OrderItems_LoadSample";
 
         /// <summary>
+        /// Key: <c>OrderItems_Name</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+        /// </summary>
+        public const string OrderItemsName = "OrderItems_Name";
+
+        /// <summary>
         /// Key: <c>OrderItems_OpenKds</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Кухонный экран (КДС)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oshxona ekrani (KDS)&quot;<br/>
@@ -77201,6 +77457,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Create order&quot;
         /// </summary>
         public const string Orders_CreateOrder = "Orders_CreateOrder";
+
+        /// <summary>
+        /// Key: <c>Orders_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Orders_CurrencyUzs = "Orders_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Orders_Done</c><br/>
@@ -77443,6 +77707,14 @@ namespace Loc
         public const string OrdersCreateOrder = "Orders_CreateOrder";
 
         /// <summary>
+        /// Key: <c>Orders_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string OrdersCurrencyUzs = "Orders_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Orders_Done</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Завершён&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yakunlandi&quot;<br/>
@@ -77529,6 +77801,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Move to ready&quot;
         /// </summary>
         public const string OrdersMoveToReady = "Orders_MoveToReady";
+
+        /// <summary>
+        /// Key: <c>OrderItems_Name</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Наименование&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Name&quot;
+        /// </summary>
+        public const string OrdersNameText = "OrderItems_Name";
 
         /// <summary>
         /// Key: <c>Orders_NoOrdersPreparing</c><br/>
@@ -79866,7 +80146,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Receipt (82 keys). Use with <c>@using static Loc.Receipt;</c>.
+    /// Domain group: Receipt (84 keys). Use with <c>@using static Loc.Receipt;</c>.
     /// </summary>
     public static class Receipt
     {
@@ -80255,6 +80535,14 @@ namespace Loc
         public const string QuantityShort = "Invoice_QuantityShort";
 
         /// <summary>
+        /// Key: <c>Receipt_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string Receipt_CurrencyUzs = "Receipt_CurrencyUzs";
+
+        /// <summary>
         /// Key: <c>Receipt_FiscalSign</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;ФП:&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;FB:&quot;<br/>
@@ -80357,6 +80645,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Verify on Soliq.uz&quot;
         /// </summary>
         public const string Receipt_VerifySoliq = "Receipt_VerifySoliq";
+
+        /// <summary>
+        /// Key: <c>Receipt_CurrencyUzs</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;сум&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;so'm&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;UZS&quot;
+        /// </summary>
+        public const string ReceiptCurrencyUzs = "Receipt_CurrencyUzs";
 
         /// <summary>
         /// Key: <c>Receipt_FiscalSign</c><br/>
@@ -84003,7 +84299,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Terminal (78 keys). Use with <c>@using static Loc.Terminal;</c>.
+    /// Domain group: Terminal (81 keys). Use with <c>@using static Loc.Terminal;</c>.
     /// </summary>
     public static class Terminal
     {
@@ -84022,6 +84318,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Add {0} to order&quot;
         /// </summary>
         public const string AddToCartPrefix = "Terminal_AddToCartPrefix";
+
+        /// <summary>
+        /// Key: <c>Terminal_ByRequirements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+        /// </summary>
+        public const string ByRequirements = "Terminal_ByRequirements";
 
         /// <summary>
         /// Key: <c>Terminal_CancelOperation</c><br/>
@@ -84232,6 +84536,14 @@ namespace Loc
         public const string Terminal_AddToCartPrefix = "Terminal_AddToCartPrefix";
 
         /// <summary>
+        /// Key: <c>Terminal_ByRequirements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+        /// </summary>
+        public const string Terminal_ByRequirements = "Terminal_ByRequirements";
+
+        /// <summary>
         /// Key: <c>Terminal_CancelOperation</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Отмена операции&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Operatsiyani bekor qilish&quot;<br/>
@@ -84438,6 +84750,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Add {0} to order&quot;
         /// </summary>
         public const string TerminalAddToCartPrefix = "Terminal_AddToCartPrefix";
+
+        /// <summary>
+        /// Key: <c>Terminal_ByRequirements</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;По ТЗ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;TZ bo'yicha&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;By Spec&quot;
+        /// </summary>
+        public const string TerminalByRequirements = "Terminal_ByRequirements";
 
         /// <summary>
         /// Key: <c>Terminal_CancelOperation</c><br/>

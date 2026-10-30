@@ -51,6 +51,10 @@ function extractClassesFromCss(cssContent) {
 
 function resolveCanonicalDomainGroup(cls) {
   const c = cls.toLowerCase();
+  if (c.startsWith('map-') || c.startsWith('route-')) return 'Common';
+  if (c.startsWith('faceid-viewfinder') || c.startsWith('faceid-scanner') || c.startsWith('faceid-status-text') || c.startsWith('faceid-icon-placeholder') || c.startsWith('faceid-notice')) return 'FaceidViewfinder';
+  if (c === 'profile-container' || c === 'profile-title') return 'Payment';
+  if (c.startsWith('profile-') || c.startsWith('faceid-') || c === 'step-active' || c === 'step-tertiary') return 'ProfileDialog';
   if (c.startsWith('seat-designer-') || c.startsWith('seat-booking-') || c.startsWith('seat-') || c.startsWith('designer-')) return 'SeatDesigner';
   if (c.startsWith('qr-designer-') || c.startsWith('qrg-') || c.startsWith('qr-')) return 'QrDesigner';
   if (c.startsWith('det-')) return 'Detector';
@@ -142,6 +146,14 @@ function generate() {
     'SignIn', 'Auth', 'Detector', 'Chat', 'Analytics', 'Terminal', 'Kiosk'
   ]);
 
+  const SHARED_CLASSES = new Set([
+    'show', 'price-row', 'total-row', 'total-value', 'drawer-header',
+    'user-message', 'title-large', 'm3-title-large', 'item-unit-price',
+    'item-total-price', 'header-title-box', 'brand-title', 'glass',
+    'page-width', 'm3-grid-cluster', 'header-content', 'drawer-backdrop',
+    'drawer-panel', 'drawer-body', 'drawer-footer', 'selected', 'active'
+  ]);
+
   const GENERIC_COLLIDING_NAMES = new Set([
     'Title', 'Subtitle', 'Header', 'Footer', 'Actions', 'Body', 'Grid', 
     'Glass', 'Card', 'Content', 'Icon', 'Text', 'Badge', 'Chip', 'Label', 
@@ -162,7 +174,7 @@ function generate() {
       const gMap = groups.get(grp);
       for (const [p, val] of Object.entries(pMap)) {
         gMap.set(p, val);
-        assignedClasses.add(val);
+        if (!SHARED_CLASSES.has(val)) assignedClasses.add(val);
       }
     }
   }

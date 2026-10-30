@@ -4,10 +4,10 @@
 @using static Assets.Constants.Classes.Picker
 @using static Material.Web.Components.ButtonVariant
 
-<div class=@($"{TriggerCard} {(Disabled ? global::Assets.Constants.Classes.Picker.Disabled : "")} {(HasValue ? "has-value" : "empty")} {Class}")>
+<div class=@CardClasses>
     <div class=@TriggerLeft>
         <!-- Icon Badge (44x44px, R12) -->
-        <div class=@($"{IconBadge} {(HasValue ? Active : "")}")>
+        <div class=@BadgeClasses>
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge

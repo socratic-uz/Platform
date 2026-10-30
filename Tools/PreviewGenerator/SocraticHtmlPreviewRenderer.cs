@@ -89,8 +89,10 @@ public sealed partial class SocraticHtmlPreviewRenderer
             return m.Value;
         });
 
-        // Rewrite RCL static web asset prefix (_content/Assets/) to relative ../ path for standalone preview HTML
-        html = html.Replace("\"_content/Assets/", "\"../", StringComparison.Ordinal)
+        // Rewrite RCL static web asset prefix (_content/Assets/ or ./_content/Assets/) to relative ../ path for standalone preview HTML
+        html = html.Replace("\"./_content/Assets/", "\"../", StringComparison.Ordinal)
+                   .Replace("'./_content/Assets/", "'../", StringComparison.Ordinal)
+                   .Replace("\"_content/Assets/", "\"../", StringComparison.Ordinal)
                    .Replace("'_content/Assets/", "'../", StringComparison.Ordinal);
 
         return html;
