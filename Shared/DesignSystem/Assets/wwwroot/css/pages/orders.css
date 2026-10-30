@@ -300,13 +300,6 @@
         gap: var(--md-sys-spacing-3, 0.75rem);
     }
 
-    .order-subtitle {
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fit, minmax(max-content, auto));
-        gap: 4px 8px;
-    }
-
     .order-details-layout {
         grid-template-columns: minmax(0, 1fr);
     }

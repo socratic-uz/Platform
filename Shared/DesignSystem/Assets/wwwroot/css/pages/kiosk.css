@@ -4,84 +4,58 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.kiosk-filter-inner:has(.kiosk-reset-btn) {
+:where(.kiosk-filter-inner):has(.kiosk-reset-btn) {
     grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .kiosk-new-order-btn {
     min-width: max-content;
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
 }
 
 .kiosk-reset-btn {
     align-self: start;
     min-width: max-content;
-    min-height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
 }
 
 .kiosk-tier-btn {
     display: grid;
     align-items: center;
-    min-height: 48px;
-    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
-    font-weight: 600;
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
+    border-radius: var(--md-sys-shape-expressive-button, 20px);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
     white-space: nowrap;
     touch-action: manipulation;
 }
 
-.kiosk-tier-btn .search-bar {
-    height: 48px;
-}
-
-.kiosk-tier-btn .search-clear-btn {
-    height: 48px;
-}
-
-.kiosk-tier-btn .search-route-btn {
-    height: 48px;
-}
-
-.kiosk-tier-btn .seller-logo {
-    height: 48px;
-}
-
-.kiosk-tier-btn .seller-logo-placeholder {
-    height: 48px;
-}
-
-.kiosk-tier-btn .ux-search-box input {
-    height: 48px;
-}
-
-.kiosk-tier-btn .yandex-ctrl-btn {
-    height: 48px;
-}
-
 .kiosk-tier-btn md-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 24px;
+    width: var(--md-icon-size, 24px);
+    height: var(--md-icon-size, 24px);
+    font-size: var(--md-icon-size, 24px);
 }
 
 .kiosk-wish-btn-wrapper {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: var(--md-sys-spacing-2);
+    right: var(--md-sys-spacing-2);
     z-index: var(--m3-z-sticky, 10);
 }
 
 @container product-card (max-width: 320px) {
-    .kiosk-main .card-footer button {
+    :where(.kiosk-main .card-footer button, .kiosk-main .card-footer md-filled-button, .kiosk-main .card-footer md-outlined-button) {
         justify-content: center;
         width: 100%;
     }
 
-    .kiosk-main .card-footer md-filled-button {
-        justify-content: center;
-        width: 100%;
+    :where(.kiosk-main .card-footer) {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-2);
+        align-items: stretch;
     }
 
-    .kiosk-main .card-footer md-outlined-button {
+    :where(.kiosk-main .card-footer .material-counter) {
         justify-content: center;
         width: 100%;
     }
@@ -89,20 +63,15 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .kiosk-new-order-btn {
-        min-height: 48px;
-    }
-
     .pay-button {
         min-height: 64px;
     }
-
 }
 
 @media (pointer: coarse) {
     .kiosk-btn {
-        min-width: 48px;
-        min-height: 48px;
+        min-width: var(--md-sys-touch-target-kiosk, 56px);
+        min-height: var(--md-sys-touch-target-kiosk, 56px);
     }
 
 }
@@ -118,90 +87,49 @@
 .kiosk-main .card-footer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     align-self: end;
     min-width: 0;
     min-height: 52px;
     margin-top: auto;
-    padding: 10px 16px 12px;
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-@container product-card (max-width: 320px) {
-    .kiosk-main .card-footer {
-        grid-auto-flow: row;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 8px;
-        align-items: stretch;
-    }
-
-    .kiosk-main .card-footer .material-counter {
-        justify-content: center;
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 839.98px) {
-    .kiosk-main .card-footer {
-        grid-auto-flow: row;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 8px;
-        align-items: stretch;
-    }
-
-    .kiosk-main .card-footer .material-counter {
-        justify-content: center;
-        width: 100%;
-    }
 }
 
 .kiosk-brand-tagline {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1);
     align-items: center;
     width: max-content;
-    padding: 2px 8px;
+    padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.72rem;
-    font-weight: 600;
+    font-size: var(--md-sys-typescale-label-small-size);
+    line-height: var(--md-sys-typescale-label-small-line-height);
+    font-weight: var(--md-sys-typescale-label-small-weight);
     white-space: nowrap;
 }
 
-.kiosk-category-chipset {
+:where(.kiosk-category-chipset) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-3, 12px);
     align-items: center;
-    width: max-content;
-}
-
-.kiosk-category-chipset md-filter-chip {
-    --md-filter-chip-container-height: var(--md-sys-touch-target-kiosk, 56px);
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
-}
-
-.unified-kiosk-filter-bar md-chip-set {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.75rem;
-    align-items: center;
-    width: max-content;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .kiosk-category-chipset md-chip {
-        min-height: var(--md-sys-touch-target-kiosk, 56px);
-    }
-
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding-bottom: var(--md-sys-spacing-1);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
 }
 
 @media screen and (max-width: 599.98px) {
@@ -233,10 +161,10 @@
     display: grid;
     justify-items: center;
     position: relative;
-    z-index: 2;
+    z-index: var(--m3-z-content, 1);
     width: 100%;
     max-width: 900px;
-    padding: 3rem 2rem 5rem;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-8) var(--md-sys-spacing-16);
     color: var(--md-sys-color-on-surface);
     text-align: center;
 }
@@ -258,11 +186,11 @@
     align-content: end;
     position: fixed;
     inset: 0;
-    z-index: 99999;
+    z-index: var(--m3-z-modal, 1000);
     width: 100%;
     height: 100dvh;
     overflow: hidden;
-    animation: kioskFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
+    animation: kioskFadeIn var(--md-sys-motion-duration-medium4, 400ms) var(--md-sys-motion-easing-spring) forwards;
     cursor: pointer;
     user-select: none;
 }
@@ -271,7 +199,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto;
-    gap: 10px;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     min-width: 0;
 }
@@ -285,18 +213,21 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto auto;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     min-width: 0;
 }
 
-.kiosk-brand-logo {
+:where(.kiosk-brand-logo, .kiosk-brand-logo-fallback) {
     width: 36px;
     height: 36px;
-    aspect-ratio: 1 / 1;
-    padding: 2px;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
+}
+
+.kiosk-brand-logo {
+    aspect-ratio: 1 / 1;
+    padding: var(--md-sys-spacing-1);
     background: var(--md-sys-color-surface-container-lowest);
     object-fit: contain;
 }
@@ -304,10 +235,6 @@
 .kiosk-brand-logo-fallback {
     display: grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
@@ -317,8 +244,9 @@
     min-inline-size: 0;
     margin: 0;
     color: var(--md-sys-color-on-surface);
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -327,8 +255,9 @@
 .kiosk-category-label {
     align-self: center;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+    font-weight: var(--md-sys-typescale-label-small-weight);
     white-space: nowrap;
 }
 
@@ -348,7 +277,7 @@
     place-content: center;
     box-sizing: border-box;
     margin: var(--md-sys-spacing-4) 0;
-    padding: 48px 24px;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
     border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container);
@@ -358,43 +287,26 @@
 .kiosk-empty-state h3 {
     margin: 0;
     color: var(--md-sys-color-on-surface);
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+    line-height: var(--md-sys-typescale-title-large-line-height);
 }
 
 .kiosk-empty-state p {
     max-width: 380px;
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9rem;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
 }
 
-.kiosk-filter-inner {
+:where(.kiosk-filter-inner) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
     align-items: center;
     width: 100%;
-    overflow-x: visible;
-}
-
-.kiosk-category-chipset {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3, 12px);
-    align-items: center;
-    width: 100%;
-    padding-bottom: 2px;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
-    touch-action: pan-x;
-    overscroll-behavior-x: contain;
-}
-
-.kiosk-category-chipset md-filter-chip {
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
+    min-width: 0;
 }
 
 .kiosk-category-chipset::-webkit-scrollbar {
@@ -412,11 +324,11 @@
 
 .kiosk-hero {
     display: grid;
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     position: relative;
-    padding: clamp(20px, 3vw, 36px);
+    padding: clamp(var(--md-sys-spacing-5), 3vw, var(--md-sys-spacing-8));
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: clamp(16px, 3vw, 28px);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
     background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
     overflow: hidden;
     box-shadow: var(--md-sys-elevation-level-1);
@@ -426,25 +338,25 @@
 
 .kiosk-hero-content {
     display: grid;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     z-index: var(--m3-z-content, 1);
 }
 
 .kiosk-hero-content h1 {
     margin: 0;
     color: var(--md-sys-color-on-surface);
-    font-size: clamp(1.3rem, 2.8vw, 2.25rem);
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
 }
 
 .kiosk-hero-content p {
     max-width: 700px;
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: clamp(0.88rem, 1.5vw, 1.05rem);
-    line-height: 1.5;
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
 }
 
 .kiosk-hero::before {
@@ -460,11 +372,11 @@
 .kiosk-main {
     display: grid;
     grid-auto-flow: row;
-    gap: 20px;
+    gap: var(--md-sys-spacing-5);
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 24px 20px 140px;
+    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) calc(var(--md-sys-spacing-bottom-nav) + var(--md-sys-spacing-16) + var(--md-sys-spacing-2));
     font-family: inherit;
     user-select: none;
     -webkit-user-select: none;
@@ -480,8 +392,12 @@
     background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
     color: var(--md-sys-color-outline);
     backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-snappy), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+.kiosk-wish-icon:active {
+    transform: scale(0.96);
 }
 
 .kiosk-wish-icon.wished {
@@ -492,7 +408,7 @@
 
 .unified-kiosk-filter-bar {
     min-height: auto;
-    margin: 4px 0 12px;
+    margin: var(--md-sys-spacing-1) 0 var(--md-sys-spacing-3);
     padding: 0;
     border: none;
     border-radius: 0;
@@ -501,20 +417,20 @@
 
 @media screen and (min-width: 840px) {
     .kiosk-main {
-        padding: 24px 24px 140px;
+        padding: var(--md-sys-spacing-6) var(--md-sys-spacing-6) calc(var(--md-sys-spacing-bottom-nav) + var(--md-sys-spacing-16) + var(--md-sys-spacing-2));
     }
 
     header.app-header {
-        padding: max(0.5rem, env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 0.5rem max(1.5rem, env(safe-area-inset-left, 0px));
+        padding: max(var(--md-sys-spacing-2), var(--md-sys-safe-area-top)) max(var(--md-sys-spacing-6), var(--md-sys-safe-area-right)) var(--md-sys-spacing-2) max(var(--md-sys-spacing-6), var(--md-sys-safe-area-left));
     }
 
 }
 
 .kiosk-dialog-text {
-    margin: 8px 0;
+    margin: var(--md-sys-spacing-2) 0;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
 }
 
 .kiosk-search-container {
@@ -526,20 +442,22 @@
 
 .kiosk-fallback-checkout {
     display: grid;
-    gap: 16px;
-    padding: 16px;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-4);
 }
 
 .kiosk-fallback-total {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
 }
 
 .kiosk-fallback-processing {
     display: grid;
     justify-items: center;
-    gap: 12px;
-    padding: 20px 0;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-5) 0;
     text-align: center;
 }
 
@@ -550,8 +468,9 @@
 
 .kiosk-fallback-processing-desc {
     margin: 0;
-    font-size: 0.88rem;
+    font-size: var(--md-sys-typescale-body-medium-size);
     color: var(--md-sys-color-on-surface-variant);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
 }
 
 .kiosk-fallback-error {
@@ -559,19 +478,30 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
+    gap: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
-    font-size: 0.85rem;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
 }
 
 .kiosk-fallback-actions {
     display: grid;
-    gap: 10px;
+    gap: var(--md-sys-spacing-3);
 }
 
 .kiosk-fallback-btn {
-    padding: 12px;
+    padding: var(--md-sys-spacing-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kiosk-attract-loop {
+        animation: none;
+    }
+
+    .kiosk-wish-icon {
+        transition: none;
+    }
 }

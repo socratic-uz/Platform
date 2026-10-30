@@ -5,6 +5,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><script src="../js/layouts/theme-init.js"></script>
 
+
 <link rel="preload" href="../fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
 
 
@@ -23,26 +24,24 @@
 
 
 
-
-
-<main class="signin-container"><article class="signin-card m3-card-elevated"><header class="signin-header"><div class="signin-top-bar"><a href="/" class="signin-brand-link" title="Главная"><md-icon class="signin-brand-icon">hexagon</md-icon>
+<main class="signin-container"><article class="signin-card m3-card-elevated"><header class="signin-header"><nav class="signin-top-bar" aria-label="Главная"><a href="/" class="signin-brand-link" title="Главная"><md-icon class="signin-brand-icon">hexagon</md-icon>
                     <span class="signin-brand-text">Socratic</span></a>
-                <div class="signin-top-bar-actions"><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
+                <aside class="signin-top-bar-actions"><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
 				<span class="lang-current-label">UZ</span>
-				<md-icon>arrow_drop_down</md-icon></button></div></div></div></div>
-                <div class="signin-logo-badge"><md-icon>lock</md-icon></div>
-                <h1 class="signin-title m3-headline-medium">Socratic ID</h1>
-                <p class="signin-subtitle m3-body-medium">Единая система входа и биометрии</p></header>
+				<md-icon>arrow_drop_down</md-icon></button></div></div></aside></nav>
+            <figure class="signin-logo-badge" aria-hidden="true"><md-icon>lock</md-icon></figure>
+            <h1 class="signin-title m3-headline-medium">Socratic ID</h1>
+            <p class="signin-subtitle m3-body-medium">Единая система входа и биометрии</p></header>
 
         
         <md-tabs active-tab-index="0"><md-primary-tab active><md-icon slot="icon">how_to_reg</md-icon>Первичный вход</md-primary-tab>
-            <md-primary-tab><md-icon slot="icon">bolt</md-icon>Быстрый вход</md-primary-tab></md-tabs><div class="form-step"><md-outlined-text-field id="38cbf9e2-5189-4f9f-aa7a-15b5f1b37e2e" class="material-text-field material-text-field" label="Номер телефона" value="" type="tel" placeholder="+998 90 123 45 67" prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
+            <md-primary-tab><md-icon slot="icon">bolt</md-icon>Быстрый вход</md-primary-tab></md-tabs><fieldset class="form-step"><md-outlined-text-field id="5819c7c9-0b61-4271-88f3-52b05d185c13" class="material-text-field material-text-field" label="Номер телефона" value="" type="tel" placeholder="+998 90 123 45 67" prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
 
-                    <div class="delivery-actions-grid"><md-filled-button class="expressive"><md-icon slot="icon">send</md-icon>В Telegram</md-filled-button>
-                        <md-outlined-button class="expressive"><md-icon slot="icon">sms</md-icon>По SMS</md-outlined-button></div>
+                    <menu class="delivery-actions-grid"><md-filled-button class="expressive"><md-icon slot="icon">send</md-icon>В Telegram</md-filled-button>
+                        <md-outlined-button class="expressive"><md-icon slot="icon">sms</md-icon>По SMS</md-outlined-button></menu>
 
-                    <div class="auth-divider">или через подтверждённый номер</div>
+                    <p class="auth-divider" role="separator">или через подтверждённый номер</p>
 
-                    <md-filled-button class="expressive"><md-icon slot="icon">send</md-icon>Войти через Telegram</md-filled-button></div><footer class="signin-footer"><span>© 2026 Socratic. Все права защищены.</span></footer></article></main>
+                    <md-filled-button class="expressive"><md-icon slot="icon">send</md-icon>Войти через Telegram</md-filled-button></fieldset><footer class="signin-footer"><span>© 2026 Socratic. Все права защищены.</span></footer></article></main>
 </body>
 </html>

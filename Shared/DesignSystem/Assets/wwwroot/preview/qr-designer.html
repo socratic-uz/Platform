@@ -46,9 +46,9 @@
 
 
 
-<main class="qr-designer-page-root"><header class="qr-designer-header"><div class="header-title-group"><md-icon class="header-icon">qr_code_2</md-icon>
-            <div class="header-text"><h1 class="page-heading">Динамический QR-дизайнер</h1>
-                <p class="page-subtitle">Генерация брендированных QR-кодов для оплат, фискальных чеков и предзаказа</p></div></div>
+<main class="qr-designer-page-root"><header class="qr-designer-header"><section class="header-title-group"><md-icon class="header-icon">qr_code_2</md-icon>
+            <hgroup class="header-text"><h1 class="page-heading">Динамический QR-дизайнер</h1>
+                <p class="page-subtitle">Генерация брендированных QR-кодов для оплат, фискальных чеков и предзаказа</p></hgroup></section>
 
         <nav class="header-presets" aria-label="Быстрые пресеты:"><span class="preset-label">Быстрые пресеты:</span>
             <md-outlined-button class="expressive  preset-btn">🧾 ОФД Чек</md-outlined-button>
@@ -56,15 +56,15 @@
             <md-outlined-button class="expressive  preset-btn">🍽️ Меню столика</md-outlined-button></nav></header>
 
     
-    <div class="qr-workspace"><aside class="qr-controls-panel"><h2 class="panel-section-title">Параметры данных</h2>
+    <section class="qr-workspace"><aside class="qr-controls-panel"><h2 class="panel-section-title">Параметры данных</h2>
 
-            <md-outlined-text-field id="11e315fb-0064-4c78-a2ea-76208700fbaf" class="material-text-field material-text-field" label="Полезная нагрузка (URL или текст)" value="https://socratic.uz/order/demo-order-78921" type="text" placeholder="https://socratic.uz/order/..." prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
+            <md-outlined-text-field id="37c3b5f0-53a0-4bac-a7fd-54785b5cd196" class="material-text-field material-text-field" label="Полезная нагрузка (URL или текст)" value="https://socratic.uz/order/demo-order-78921" type="text" placeholder="https://socratic.uz/order/..." prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
 
-            <md-outlined-text-field id="0effc492-f634-427d-aebf-64eeaf65e267" class="material-text-field material-text-field" label="URL логотипа в центре (опционально)" type="text" placeholder="https://.../logo.png" prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
+            <md-outlined-text-field id="22193150-9860-4b34-a9bb-cdb565f81ae0" class="material-text-field material-text-field" label="URL логотипа в центре (опционально)" type="text" placeholder="https://.../logo.png" prefix-text="" suffix-text="" supporting-text="" error-text="" rows="2" cols="20" max="" min="" pattern="" step="" inputmode="" autocomplete="" text-direction=""></md-outlined-text-field>
 
-            <h2 class="panel-section-title">Цвета и брендинг</h2>
+            <fieldset class="color-grid"><legend class="panel-section-title">Цвета и брендинг</legend>
 
-            <div class="color-grid"><div class="color-item"><label class="control-label">Основной цвет:</label>
+                <div class="color-item"><label class="control-label">Основной цвет:</label>
                     <div class="color-picker-row"><input type="color" value="#6750a4" />
                         <span class="color-hex">#6750a4</span></div></div>
 
@@ -78,21 +78,21 @@
 
                 <div class="color-item"><label class="control-label">Цвет точек углов:</label>
                     <div class="color-picker-row"><input type="color" value="#6750a4" />
-                        <span class="color-hex">#6750a4</span></div></div></div>
+                        <span class="color-hex">#6750a4</span></div></div></fieldset>
 
-            <h2 class="panel-section-title">Геометрия и стиль</h2>
+            <fieldset class="style-selects-grid"><legend class="panel-section-title">Геометрия и стиль</legend>
 
-            <div class="style-selects-grid"><md-outlined-select id="fe92b79e-2c04-412c-8fc4-4b1deb3ecdfb" class=" material-select" label="Форма точек (Dot Type)" value="rounded" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="rounded" headline="Rounded" selected></md-select-option><md-select-option value="dots" headline="Dots"></md-select-option><md-select-option value="square" headline="Square"></md-select-option><md-select-option value="classy" headline="Classy"></md-select-option><md-select-option value="classy-rounded" headline="Classy Rounded"></md-select-option><md-select-option value="extra-rounded" headline="Extra Rounded"></md-select-option></md-outlined-select>
+                <md-outlined-select id="fc4d2dec-ec7b-4af3-a9f7-3a9e2f2cfe3a" class=" material-select" label="Форма точек (Dot Type)" value="rounded" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="rounded" headline="Rounded" selected></md-select-option><md-select-option value="dots" headline="Dots"></md-select-option><md-select-option value="square" headline="Square"></md-select-option><md-select-option value="classy" headline="Classy"></md-select-option><md-select-option value="classy-rounded" headline="Classy Rounded"></md-select-option><md-select-option value="extra-rounded" headline="Extra Rounded"></md-select-option></md-outlined-select>
 
-                <md-outlined-select id="810a46e0-d247-44ee-93cc-9ff5e6e0a934" class=" material-select" label="Форма рамок углов (Corner Type)" value="extra-rounded" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="extra-rounded" headline="Extra Rounded" selected></md-select-option><md-select-option value="rounded" headline="Rounded"></md-select-option><md-select-option value="dot" headline="Dot"></md-select-option><md-select-option value="square" headline="Square"></md-select-option></md-outlined-select></div></aside>
+                <md-outlined-select id="d3b0065b-a1c1-49a9-b9de-128a1dc5d942" class=" material-select" label="Форма рамок углов (Corner Type)" value="extra-rounded" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="extra-rounded" headline="Extra Rounded" selected></md-select-option><md-select-option value="rounded" headline="Rounded"></md-select-option><md-select-option value="dot" headline="Dot"></md-select-option><md-select-option value="square" headline="Square"></md-select-option></md-outlined-select></fieldset></aside>
 
         
-        <section class="qr-preview-area"><div class="preview-card m3-card m3-card-elevated"><header class="preview-header"><span class="preview-title m3-title-medium">Интерактивный SVG рендерер</span>
+        <section class="qr-preview-area"><article class="preview-card m3-card m3-card-elevated"><header class="preview-header"><span class="preview-title m3-title-medium">Интерактивный SVG рендерер</span>
                     <span class="resolution-badge m3-pill-badge">300x300 px</span></header>
 
-                <div class="qr-stage"><div class="qr-canvas-box m3-ratio-square"><div class="qr-placeholder"><md-icon>qr_code_2</md-icon></div></div></div>
+                <figure class="qr-stage"><div class="qr-canvas-box m3-ratio-square"><figure class="qr-placeholder"><md-icon>qr_code_2</md-icon></figure></div></figure>
 
                 <footer class="preview-footer"><div class="preview-info"><md-icon class="info-icon">verified</md-icon>
-                        <span>Готов к печати на термопринтере ESC/POS или отображению на экране киоска</span></div></footer></div></section></div></main>
+                        <span>Готов к печати на термопринтере ESC/POS или отображению на экране киоска</span></div></footer></article></section></section></main>
 </body>
 </html>

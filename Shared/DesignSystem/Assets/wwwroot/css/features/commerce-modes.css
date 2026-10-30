@@ -87,7 +87,7 @@
 .ux-mode-card-actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-4, 1rem);
     align-items: center;
     width: 100%;
 }
@@ -178,6 +178,10 @@
     overflow-x: auto;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
+}
+
+.ux-widget-chips md-suggestion-chip {
+    margin-inline-end: 1px;
 }
 
 .ux-mode-code {

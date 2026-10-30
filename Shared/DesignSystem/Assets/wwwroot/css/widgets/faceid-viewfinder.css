@@ -30,6 +30,7 @@
     position: relative;
     width: clamp(180px, 50vw, 240px);
     height: clamp(180px, 50vw, 240px);
+    margin: 0;
     border: 3px solid var(--md-sys-color-primary);
     border-radius: 50%;
     background: var(--md-sys-color-surface-container-low);

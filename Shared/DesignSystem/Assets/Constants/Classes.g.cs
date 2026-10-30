@@ -82,7 +82,6 @@ namespace Assets.Constants
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
-            public const string HeroStageScreen = "hero-stage-screen";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -90,7 +89,6 @@ namespace Assets.Constants
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string PillText = "pill-text";
-            public const string ShowcaseResetBtn = "showcase-reset-btn";
         }
 
         public static class Auction
@@ -105,7 +103,6 @@ namespace Assets.Constants
         public static class Auth
         {
             public const string AuthTitle = "auth-title";
-            public const string BtnLabel = "auth-btn-label";
             public const string Card = "auth-card";
             public const string Container = "auth-container";
             public const string ErrorBanner = "auth-error-banner";
@@ -910,6 +907,7 @@ namespace Assets.Constants
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionIcon = "map-global-suggestion-icon";
             public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
@@ -926,7 +924,15 @@ namespace Assets.Constants
             public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string MapPickerWrapper = "map-picker-wrapper";
             public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupActions = "map-popup-actions";
+            public const string MapPopupAddress = "map-popup-address";
             public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapPopupBody = "map-popup-body";
+            public const string MapPopupDialog = "map-popup-dialog";
+            public const string MapPopupFooter = "map-popup-footer";
+            public const string MapPopupHeader = "map-popup-header";
+            public const string MapPopupHint = "map-popup-hint";
+            public const string MapPopupInfo = "map-popup-info";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
             public const string MapRouteCloseBtn = "map-route-close-btn";
@@ -1536,6 +1542,7 @@ namespace Assets.Constants
             public const string KdsEmptyIcon = "kds-empty-icon";
             public const string KioskEmptyIcon = "kiosk-empty-icon";
             public const string KioskEmptyState = "kiosk-empty-state";
+            public const string NearbyResultsEmpty = "nearby-results-empty";
             public const string NotFoundIcon = "not-found-icon";
             public const string PosEmptyIcon = "pos-empty-icon";
             public const string PosEmptyState = "pos-empty-state";
@@ -1772,7 +1779,6 @@ namespace Assets.Constants
             public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
             public const string HeaderStartZone = "header-start-zone";
-            public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
@@ -1966,6 +1972,7 @@ namespace Assets.Constants
             public const string HeroModulePills = "hero-module-pills";
             public const string HeroPillLink = "hero-pill-link";
             public const string HeroStageImg = "hero-stage-img";
+            public const string HeroStageScreen = "hero-stage-screen";
             public const string Main = "landing-main";
             public const string MobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
@@ -2015,6 +2022,11 @@ namespace Assets.Constants
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
+            public const string NavBtnRecenter = "nav-btn-recenter";
+            public const string NavBtnStop = "nav-btn-stop";
+            public const string NavBtnVoice = "nav-btn-voice";
+            public const string NearbyResultsList = "nearby-results-list";
+            public const string PlaceBtnRoute = "place-btn-route";
         }
 
         public static class MediaPlayer
@@ -2156,7 +2168,6 @@ namespace Assets.Constants
             public const string QrImage = "qr-image";
             public const string QrPaymentArea = "qr-payment-area";
             public const string RedirectIcon = "redirect-icon";
-            public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
@@ -2368,6 +2379,7 @@ namespace Assets.Constants
 
         public static class QrDesigner
         {
+            public const string HeaderText = "header-text";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -2392,6 +2404,7 @@ namespace Assets.Constants
             public const string QrgCardName = "qrg-card-name";
             public const string QrgCardQr = "qrg-card-qr";
             public const string QrgCards = "qrg-cards";
+            public const string QrgCheckboxPassive = "qrg-checkbox-passive";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgColorPickerWrapper = "qrg-color-picker-wrapper";
             public const string QrgCustomizer = "qrg-customizer";
@@ -2412,6 +2425,8 @@ namespace Assets.Constants
             public const string QrgPreview = "qrg-preview";
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
+            public const string QrgPrintCard = "qrg-print-card";
+            public const string QrgPrintsheet = "qrg-printsheet";
             public const string QrgSectionTitle = "qrg-section-title";
             public const string QrgSectionTitleBtn = "qrg-section-title-btn";
             public const string QrgSectionTitleInner = "qrg-section-title-inner";
@@ -2952,7 +2967,6 @@ namespace Classes
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
-            public const string HeroStageScreen = "hero-stage-screen";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -2960,7 +2974,6 @@ namespace Classes
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string PillText = "pill-text";
-            public const string ShowcaseResetBtn = "showcase-reset-btn";
         }
 
         public static class Auction
@@ -2975,7 +2988,6 @@ namespace Classes
         public static class Auth
         {
             public const string AuthTitle = "auth-title";
-            public const string BtnLabel = "auth-btn-label";
             public const string Card = "auth-card";
             public const string Container = "auth-container";
             public const string ErrorBanner = "auth-error-banner";
@@ -3780,6 +3792,7 @@ namespace Classes
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionIcon = "map-global-suggestion-icon";
             public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
@@ -3796,7 +3809,15 @@ namespace Classes
             public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string MapPickerWrapper = "map-picker-wrapper";
             public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupActions = "map-popup-actions";
+            public const string MapPopupAddress = "map-popup-address";
             public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapPopupBody = "map-popup-body";
+            public const string MapPopupDialog = "map-popup-dialog";
+            public const string MapPopupFooter = "map-popup-footer";
+            public const string MapPopupHeader = "map-popup-header";
+            public const string MapPopupHint = "map-popup-hint";
+            public const string MapPopupInfo = "map-popup-info";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
             public const string MapRouteCloseBtn = "map-route-close-btn";
@@ -4406,6 +4427,7 @@ namespace Classes
             public const string KdsEmptyIcon = "kds-empty-icon";
             public const string KioskEmptyIcon = "kiosk-empty-icon";
             public const string KioskEmptyState = "kiosk-empty-state";
+            public const string NearbyResultsEmpty = "nearby-results-empty";
             public const string NotFoundIcon = "not-found-icon";
             public const string PosEmptyIcon = "pos-empty-icon";
             public const string PosEmptyState = "pos-empty-state";
@@ -4642,7 +4664,6 @@ namespace Classes
             public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
             public const string HeaderStartZone = "header-start-zone";
-            public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
@@ -4836,6 +4857,7 @@ namespace Classes
             public const string HeroModulePills = "hero-module-pills";
             public const string HeroPillLink = "hero-pill-link";
             public const string HeroStageImg = "hero-stage-img";
+            public const string HeroStageScreen = "hero-stage-screen";
             public const string Main = "landing-main";
             public const string MobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
@@ -4885,6 +4907,11 @@ namespace Classes
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
+            public const string NavBtnRecenter = "nav-btn-recenter";
+            public const string NavBtnStop = "nav-btn-stop";
+            public const string NavBtnVoice = "nav-btn-voice";
+            public const string NearbyResultsList = "nearby-results-list";
+            public const string PlaceBtnRoute = "place-btn-route";
         }
 
         public static class MediaPlayer
@@ -5026,7 +5053,6 @@ namespace Classes
             public const string QrImage = "qr-image";
             public const string QrPaymentArea = "qr-payment-area";
             public const string RedirectIcon = "redirect-icon";
-            public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
@@ -5238,6 +5264,7 @@ namespace Classes
 
         public static class QrDesigner
         {
+            public const string HeaderText = "header-text";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -5262,6 +5289,7 @@ namespace Classes
             public const string QrgCardName = "qrg-card-name";
             public const string QrgCardQr = "qrg-card-qr";
             public const string QrgCards = "qrg-cards";
+            public const string QrgCheckboxPassive = "qrg-checkbox-passive";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgColorPickerWrapper = "qrg-color-picker-wrapper";
             public const string QrgCustomizer = "qrg-customizer";
@@ -5282,6 +5310,8 @@ namespace Classes
             public const string QrgPreview = "qrg-preview";
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
+            public const string QrgPrintCard = "qrg-print-card";
+            public const string QrgPrintsheet = "qrg-printsheet";
             public const string QrgSectionTitle = "qrg-section-title";
             public const string QrgSectionTitleBtn = "qrg-section-title-btn";
             public const string QrgSectionTitleInner = "qrg-section-title-inner";
@@ -5827,7 +5857,6 @@ namespace Styles
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
-            public const string HeroStageScreen = "hero-stage-screen";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -5835,7 +5864,6 @@ namespace Styles
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string PillText = "pill-text";
-            public const string ShowcaseResetBtn = "showcase-reset-btn";
         }
 
         public static class Auction
@@ -5850,7 +5878,6 @@ namespace Styles
         public static class Auth
         {
             public const string AuthTitle = "auth-title";
-            public const string BtnLabel = "auth-btn-label";
             public const string Card = "auth-card";
             public const string Container = "auth-container";
             public const string ErrorBanner = "auth-error-banner";
@@ -6655,6 +6682,7 @@ namespace Styles
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionIcon = "map-global-suggestion-icon";
             public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
@@ -6671,7 +6699,15 @@ namespace Styles
             public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string MapPickerWrapper = "map-picker-wrapper";
             public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupActions = "map-popup-actions";
+            public const string MapPopupAddress = "map-popup-address";
             public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapPopupBody = "map-popup-body";
+            public const string MapPopupDialog = "map-popup-dialog";
+            public const string MapPopupFooter = "map-popup-footer";
+            public const string MapPopupHeader = "map-popup-header";
+            public const string MapPopupHint = "map-popup-hint";
+            public const string MapPopupInfo = "map-popup-info";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
             public const string MapRouteCloseBtn = "map-route-close-btn";
@@ -7281,6 +7317,7 @@ namespace Styles
             public const string KdsEmptyIcon = "kds-empty-icon";
             public const string KioskEmptyIcon = "kiosk-empty-icon";
             public const string KioskEmptyState = "kiosk-empty-state";
+            public const string NearbyResultsEmpty = "nearby-results-empty";
             public const string NotFoundIcon = "not-found-icon";
             public const string PosEmptyIcon = "pos-empty-icon";
             public const string PosEmptyState = "pos-empty-state";
@@ -7517,7 +7554,6 @@ namespace Styles
             public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
             public const string HeaderStartZone = "header-start-zone";
-            public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
@@ -7711,6 +7747,7 @@ namespace Styles
             public const string HeroModulePills = "hero-module-pills";
             public const string HeroPillLink = "hero-pill-link";
             public const string HeroStageImg = "hero-stage-img";
+            public const string HeroStageScreen = "hero-stage-screen";
             public const string Main = "landing-main";
             public const string MobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
@@ -7760,6 +7797,11 @@ namespace Styles
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
+            public const string NavBtnRecenter = "nav-btn-recenter";
+            public const string NavBtnStop = "nav-btn-stop";
+            public const string NavBtnVoice = "nav-btn-voice";
+            public const string NearbyResultsList = "nearby-results-list";
+            public const string PlaceBtnRoute = "place-btn-route";
         }
 
         public static class MediaPlayer
@@ -7901,7 +7943,6 @@ namespace Styles
             public const string QrImage = "qr-image";
             public const string QrPaymentArea = "qr-payment-area";
             public const string RedirectIcon = "redirect-icon";
-            public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
@@ -8113,6 +8154,7 @@ namespace Styles
 
         public static class QrDesigner
         {
+            public const string HeaderText = "header-text";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -8137,6 +8179,7 @@ namespace Styles
             public const string QrgCardName = "qrg-card-name";
             public const string QrgCardQr = "qrg-card-qr";
             public const string QrgCards = "qrg-cards";
+            public const string QrgCheckboxPassive = "qrg-checkbox-passive";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgColorPickerWrapper = "qrg-color-picker-wrapper";
             public const string QrgCustomizer = "qrg-customizer";
@@ -8157,6 +8200,8 @@ namespace Styles
             public const string QrgPreview = "qrg-preview";
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
+            public const string QrgPrintCard = "qrg-print-card";
+            public const string QrgPrintsheet = "qrg-printsheet";
             public const string QrgSectionTitle = "qrg-section-title";
             public const string QrgSectionTitleBtn = "qrg-section-title-btn";
             public const string QrgSectionTitleInner = "qrg-section-title-inner";
@@ -8703,7 +8748,6 @@ namespace Material.Web
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
-            public const string HeroStageScreen = "hero-stage-screen";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -8711,7 +8755,6 @@ namespace Material.Web
             public const string KpiTrend = "kpi-trend";
             public const string KpiValueRow = "kpi-value-row";
             public const string PillText = "pill-text";
-            public const string ShowcaseResetBtn = "showcase-reset-btn";
         }
 
         public static class Auction
@@ -8726,7 +8769,6 @@ namespace Material.Web
         public static class Auth
         {
             public const string AuthTitle = "auth-title";
-            public const string BtnLabel = "auth-btn-label";
             public const string Card = "auth-card";
             public const string Container = "auth-container";
             public const string ErrorBanner = "auth-error-banner";
@@ -9531,6 +9573,7 @@ namespace Material.Web
             public const string MapFloorStack = "map-floor-stack";
             public const string MapGeoBtn = "map-geo-btn";
             public const string MapGlobalSuggestionButton = "map-global-suggestion-button";
+            public const string MapGlobalSuggestionIcon = "map-global-suggestion-icon";
             public const string MapGlobalSuggestionItem = "map-global-suggestion-item";
             public const string MapGlobalSuggestions = "map-global-suggestions";
             public const string MapGlobalSuggestionTitle = "map-global-suggestion-title";
@@ -9547,7 +9590,15 @@ namespace Material.Web
             public const string MapPanelToggleTab = "map-panel-toggle-tab";
             public const string MapPickerWrapper = "map-picker-wrapper";
             public const string MapPlaceDetailsCard = "map-place-details-card";
+            public const string MapPopupActions = "map-popup-actions";
+            public const string MapPopupAddress = "map-popup-address";
             public const string MapPopupBackdrop = "map-popup-backdrop";
+            public const string MapPopupBody = "map-popup-body";
+            public const string MapPopupDialog = "map-popup-dialog";
+            public const string MapPopupFooter = "map-popup-footer";
+            public const string MapPopupHeader = "map-popup-header";
+            public const string MapPopupHint = "map-popup-hint";
+            public const string MapPopupInfo = "map-popup-info";
             public const string MapRouteAddViaBtn = "map-route-add-via-btn";
             public const string MapRouteBottomActions = "map-route-bottom-actions";
             public const string MapRouteCloseBtn = "map-route-close-btn";
@@ -10157,6 +10208,7 @@ namespace Material.Web
             public const string KdsEmptyIcon = "kds-empty-icon";
             public const string KioskEmptyIcon = "kiosk-empty-icon";
             public const string KioskEmptyState = "kiosk-empty-state";
+            public const string NearbyResultsEmpty = "nearby-results-empty";
             public const string NotFoundIcon = "not-found-icon";
             public const string PosEmptyIcon = "pos-empty-icon";
             public const string PosEmptyState = "pos-empty-state";
@@ -10393,7 +10445,6 @@ namespace Material.Web
             public const string HeaderGridLayout = "header-grid-layout";
             public const string HeaderIcon = "header-icon";
             public const string HeaderStartZone = "header-start-zone";
-            public const string HeaderText = "header-text";
             public const string IconWrap = "header-icon-wrap";
             public const string PageHeaderIcon = "m3-page-header-icon";
             public const string PageHeaderSubtitle = "m3-page-header-subtitle";
@@ -10587,6 +10638,7 @@ namespace Material.Web
             public const string HeroModulePills = "hero-module-pills";
             public const string HeroPillLink = "hero-pill-link";
             public const string HeroStageImg = "hero-stage-img";
+            public const string HeroStageScreen = "hero-stage-screen";
             public const string Main = "landing-main";
             public const string MobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
@@ -10636,6 +10688,11 @@ namespace Material.Web
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
             public const string MaplibreglCtrlTopRight = "maplibregl-ctrl-top-right";
+            public const string NavBtnRecenter = "nav-btn-recenter";
+            public const string NavBtnStop = "nav-btn-stop";
+            public const string NavBtnVoice = "nav-btn-voice";
+            public const string NearbyResultsList = "nearby-results-list";
+            public const string PlaceBtnRoute = "place-btn-route";
         }
 
         public static class MediaPlayer
@@ -10777,7 +10834,6 @@ namespace Material.Web
             public const string QrImage = "qr-image";
             public const string QrPaymentArea = "qr-payment-area";
             public const string RedirectIcon = "redirect-icon";
-            public const string RefreshBtn = "payment-refresh-btn";
             public const string RequestOtpBtn = "request-otp-btn";
             public const string SaveBtn = "save-btn";
             public const string SettingsGroup = "settings-group";
@@ -10989,6 +11045,7 @@ namespace Material.Web
 
         public static class QrDesigner
         {
+            public const string HeaderText = "header-text";
             public const string HudBl = "hud-bl";
             public const string HudBr = "hud-br";
             public const string HudTl = "hud-tl";
@@ -11013,6 +11070,7 @@ namespace Material.Web
             public const string QrgCardName = "qrg-card-name";
             public const string QrgCardQr = "qrg-card-qr";
             public const string QrgCards = "qrg-cards";
+            public const string QrgCheckboxPassive = "qrg-checkbox-passive";
             public const string QrgColorInputs = "qrg-color-inputs";
             public const string QrgColorPickerWrapper = "qrg-color-picker-wrapper";
             public const string QrgCustomizer = "qrg-customizer";
@@ -11033,6 +11091,8 @@ namespace Material.Web
             public const string QrgPreview = "qrg-preview";
             public const string QrgPreviewHeader = "qrg-preview-header";
             public const string QrgPrintAction = "qrg-print-action";
+            public const string QrgPrintCard = "qrg-print-card";
+            public const string QrgPrintsheet = "qrg-printsheet";
             public const string QrgSectionTitle = "qrg-section-title";
             public const string QrgSectionTitleBtn = "qrg-section-title-btn";
             public const string QrgSectionTitleInner = "qrg-section-title-inner";

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-30T08:38:40.885Z",
+  "generatedAt": "2026-10-30T17:45:10.052Z",
   "summary": {
-    "totalDeclaredConstants": 2538,
-    "usedInRazorCount": 1038,
-    "unusedCount": 1500,
+    "totalDeclaredConstants": 2553,
+    "usedInRazorCount": 1058,
+    "unusedCount": 1495,
     "adoptionRatePercent": 41,
-    "totalCallSites": 2401,
+    "totalCallSites": 2550,
     "rawStringViolationsCount": 0,
     "classesWithRawLiteralsCount": 0,
     "sourceFilesScanned": 640
@@ -36,9 +36,10 @@
       "category": "Common",
       "name": "Glass",
       "cssClass": "glass",
-      "usageCountInRazor": 46,
-      "filesCount": 5,
+      "usageCountInRazor": 47,
+      "filesCount": 6,
       "files": [
+        "Retail/Checkout/Pages/Payment.razor",
         "Portal/Landing/Pages/Help.razor",
         "Portal/Landing/Pages/Landing.razor",
         "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor",
@@ -51,10 +52,28 @@
       "category": "EmptyState",
       "name": "Icon",
       "cssClass": "m3-empty-state-icon",
-      "usageCountInRazor": 31,
-      "filesCount": 1,
+      "usageCountInRazor": 36,
+      "filesCount": 3,
       "files": [
+        "Portal/Organization/Pages/Home.razor",
+        "Studio/Map/Components/NearbyResultsPanel.razor",
         "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Cards.Card",
+      "category": "Cards",
+      "name": "Card",
+      "cssClass": "m3-card",
+      "usageCountInRazor": 29,
+      "filesCount": 6,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Help.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
     },
     {
@@ -72,34 +91,32 @@
       ]
     },
     {
-      "key": "Cards.Card",
-      "category": "Cards",
-      "name": "Card",
-      "cssClass": "m3-card",
-      "usageCountInRazor": 27,
-      "filesCount": 6,
-      "files": [
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Docs.razor",
-        "Portal/Landing/Pages/Help.razor",
-        "Portal/Landing/Pages/Landing.razor",
-        "Portal/Landing/Pages/QR.razor",
-        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
-      ]
-    },
-    {
       "key": "Cards.Selected",
       "category": "Cards",
       "name": "Selected",
       "cssClass": "selected",
-      "usageCountInRazor": 25,
-      "filesCount": 5,
+      "usageCountInRazor": 24,
+      "filesCount": 4,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Retail/Orders/Pages/Orders/Index.razor",
-        "Portal/Landing/Pages/Docs.razor",
         "Portal/Landing/Pages/Help.razor",
         "Portal/Landing/Pages/QR.razor"
+      ]
+    },
+    {
+      "key": "Typography.TitleMedium",
+      "category": "Typography",
+      "name": "TitleMedium",
+      "cssClass": "m3-title-medium",
+      "usageCountInRazor": 17,
+      "filesCount": 5,
+      "files": [
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/QR.razor",
+        "Studio/Map/Components/ControlsPanel.razor.cs",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
+        "Intelligence/Vision/Pages/Detector.razor"
       ]
     },
     {
@@ -147,20 +164,6 @@
       ]
     },
     {
-      "key": "Typography.TitleMedium",
-      "category": "Typography",
-      "name": "TitleMedium",
-      "cssClass": "m3-title-medium",
-      "usageCountInRazor": 16,
-      "filesCount": 4,
-      "files": [
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/QR.razor",
-        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
-        "Intelligence/Vision/Pages/Detector.razor"
-      ]
-    },
-    {
       "key": "Badge.PillBadge",
       "category": "Badge",
       "name": "PillBadge",
@@ -175,6 +178,18 @@
       ]
     },
     {
+      "key": "Table.Icon",
+      "category": "Table",
+      "name": "Icon",
+      "cssClass": "table-icon",
+      "usageCountInRazor": 15,
+      "filesCount": 2,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
       "key": "Detector.DetFormGroup",
       "category": "Detector",
       "name": "DetFormGroup",
@@ -186,16 +201,14 @@
       ]
     },
     {
-      "key": "Cards.CardGlass",
-      "category": "Cards",
-      "name": "CardGlass",
-      "cssClass": "m3-card-glass",
-      "usageCountInRazor": 12,
-      "filesCount": 3,
+      "key": "InfoGrid.InfoLabel",
+      "category": "InfoGrid",
+      "name": "InfoLabel",
+      "cssClass": "m3-info-label",
+      "usageCountInRazor": 13,
+      "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Docs.razor",
-        "Portal/Landing/Pages/Landing.razor"
+        "Retail/Checkout/Pages/Payment.razor"
       ]
     },
     {
@@ -221,6 +234,44 @@
       ]
     },
     {
+      "key": "InfoGrid.InfoItem",
+      "category": "InfoGrid",
+      "name": "InfoItem",
+      "cssClass": "m3-info-item",
+      "usageCountInRazor": 12,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Cards.Actions",
+      "category": "Cards",
+      "name": "Actions",
+      "cssClass": "m3-card-actions",
+      "usageCountInRazor": 11,
+      "filesCount": 5,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
+      "key": "Cards.CardGlass",
+      "category": "Cards",
+      "name": "CardGlass",
+      "cssClass": "m3-card-glass",
+      "usageCountInRazor": 11,
+      "filesCount": 2,
+      "files": [
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
       "key": "Typography.BodyMedium",
       "category": "Typography",
       "name": "BodyMedium",
@@ -231,6 +282,30 @@
         "Portal/Landing/Pages/About.razor",
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor",
         "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Badge.BadgeActive",
+      "category": "Badge",
+      "name": "BadgeActive",
+      "cssClass": "badge-active",
+      "usageCountInRazor": 10,
+      "filesCount": 3,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor",
+        "Retail/Checkout/Pages/Payment.razor.cs",
+        "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "Badge.BadgeRoot",
+      "category": "Badge",
+      "name": "BadgeRoot",
+      "cssClass": "m3-badge",
+      "usageCountInRazor": 10,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
       ]
     },
     {
@@ -268,15 +343,34 @@
       ]
     },
     {
-      "key": "Badge.BadgeActive",
-      "category": "Badge",
-      "name": "BadgeActive",
-      "cssClass": "badge-active",
-      "usageCountInRazor": 9,
-      "filesCount": 2,
+      "key": "Common.Open",
+      "category": "Common",
+      "name": "Open",
+      "cssClass": "open",
+      "usageCountInRazor": 10,
+      "filesCount": 8,
       "files": [
-        "Retail/Checkout/Pages/Payment.razor.cs",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Studio/Map/Components/MapPopup.razor",
         "Intelligence/Vision/Pages/Detector.razor"
+      ]
+    },
+    {
+      "key": "EmptyState.Title",
+      "category": "EmptyState",
+      "name": "Title",
+      "cssClass": "m3-empty-state-title",
+      "usageCountInRazor": 9,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Portal/Landing/Pages/Landing.razor",
+        "Studio/Map/Components/NearbyResultsPanel.razor"
       ]
     },
     {
@@ -333,23 +427,6 @@
       "filesCount": 1,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor"
-      ]
-    },
-    {
-      "key": "Common.Open",
-      "category": "Common",
-      "name": "Open",
-      "cssClass": "open",
-      "usageCountInRazor": 8,
-      "filesCount": 7,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
-        "Portal/Landing/Pages/Analytics.razor",
-        "Portal/Landing/Pages/Landing.razor",
-        "Studio/Map/Components/MapPopup.razor",
-        "Intelligence/Vision/Pages/Detector.razor"
       ]
     },
     {
@@ -453,20 +530,6 @@
       ]
     },
     {
-      "key": "Cards.Actions",
-      "category": "Cards",
-      "name": "Actions",
-      "cssClass": "m3-card-actions",
-      "usageCountInRazor": 7,
-      "filesCount": 4,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
       "key": "Common.SectionAmbientGlow",
       "category": "Common",
       "name": "SectionAmbientGlow",
@@ -512,15 +575,27 @@
       ]
     },
     {
-      "key": "EmptyState.Title",
-      "category": "EmptyState",
-      "name": "Title",
-      "cssClass": "m3-empty-state-title",
+      "key": "InfoGrid.InfoValue",
+      "category": "InfoGrid",
+      "name": "InfoValue",
+      "cssClass": "m3-info-value",
       "usageCountInRazor": 7,
-      "filesCount": 2,
+      "filesCount": 1,
       "files": [
-        "Retail/Orders/Pages/Orders/Index.razor",
-        "Portal/Landing/Pages/Landing.razor"
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Payment.Headline",
+      "category": "Payment",
+      "name": "Headline",
+      "cssClass": "headline",
+      "usageCountInRazor": 7,
+      "filesCount": 3,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
       ]
     },
     {
@@ -544,72 +619,6 @@
       "files": [
         "Portal/Landing/Pages/Analytics.razor"
       ]
-    },
-    {
-      "key": "Analytics.KpiIconBadge",
-      "category": "Analytics",
-      "name": "KpiIconBadge",
-      "cssClass": "kpi-icon-badge",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Analytics.KpiNumber",
-      "category": "Analytics",
-      "name": "KpiNumber",
-      "cssClass": "kpi-number",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Analytics.KpiTitle",
-      "category": "Analytics",
-      "name": "KpiTitle",
-      "cssClass": "kpi-title",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Analytics.KpiTrend",
-      "category": "Analytics",
-      "name": "KpiTrend",
-      "cssClass": "kpi-trend",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Analytics.KpiValueRow",
-      "category": "Analytics",
-      "name": "KpiValueRow",
-      "cssClass": "kpi-value-row",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Analytics.razor"
-      ]
-    },
-    {
-      "key": "Badge.Cyan",
-      "category": "Badge",
-      "name": "Cyan",
-      "cssClass": "badge-cyan",
-      "usageCountInRazor": 6,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
     }
   ],
   "byCategory": {
@@ -624,9 +633,9 @@
       "totalCalls": 21
     },
     "Analytics": {
-      "total": 30,
-      "used": 27,
-      "totalCalls": 68
+      "total": 28,
+      "used": 26,
+      "totalCalls": 67
     },
     "Auction": {
       "total": 5,
@@ -634,7 +643,7 @@
       "totalCalls": 0
     },
     "Auth": {
-      "total": 17,
+      "total": 16,
       "used": 0,
       "totalCalls": 0
     },
@@ -645,8 +654,8 @@
     },
     "Badge": {
       "total": 95,
-      "used": 44,
-      "totalCalls": 387
+      "used": 49,
+      "totalCalls": 407
     },
     "Booking": {
       "total": 11,
@@ -665,13 +674,13 @@
     },
     "Buttons": {
       "total": 53,
-      "used": 24,
+      "used": 23,
       "totalCalls": 61
     },
     "Cards": {
       "total": 207,
-      "used": 75,
-      "totalCalls": 217
+      "used": 79,
+      "totalCalls": 229
     },
     "Cart": {
       "total": 5,
@@ -714,9 +723,9 @@
       "totalCalls": 0
     },
     "Common": {
-      "total": 579,
-      "used": 252,
-      "totalCalls": 497
+      "total": 588,
+      "used": 273,
+      "totalCalls": 530
     },
     "Configurator": {
       "total": 14,
@@ -741,7 +750,7 @@
     "Dialog": {
       "total": 43,
       "used": 31,
-      "totalCalls": 68
+      "totalCalls": 76
     },
     "Dialogs": {
       "total": 13,
@@ -755,8 +764,8 @@
     },
     "Docs": {
       "total": 31,
-      "used": 29,
-      "totalCalls": 30
+      "used": 0,
+      "totalCalls": 0
     },
     "Donation": {
       "total": 13,
@@ -764,9 +773,9 @@
       "totalCalls": 0
     },
     "EmptyState": {
-      "total": 35,
-      "used": 10,
-      "totalCalls": 46
+      "total": 36,
+      "used": 11,
+      "totalCalls": 71
     },
     "Expressive": {
       "total": 13,
@@ -781,7 +790,7 @@
     "Feedback": {
       "total": 3,
       "used": 2,
-      "totalCalls": 6
+      "totalCalls": 9
     },
     "Fiscal": {
       "total": 22,
@@ -810,8 +819,8 @@
     },
     "Geometry": {
       "total": 15,
-      "used": 2,
-      "totalCalls": 3
+      "used": 3,
+      "totalCalls": 6
     },
     "Gift": {
       "total": 7,
@@ -829,8 +838,8 @@
       "totalCalls": 0
     },
     "Header": {
-      "total": 18,
-      "used": 16,
+      "total": 17,
+      "used": 15,
       "totalCalls": 21
     },
     "Help": {
@@ -845,8 +854,8 @@
     },
     "InfoGrid": {
       "total": 24,
-      "used": 7,
-      "totalCalls": 20
+      "used": 11,
+      "totalCalls": 55
     },
     "Invoice": {
       "total": 13,
@@ -859,9 +868,9 @@
       "totalCalls": 6
     },
     "Landing": {
-      "total": 34,
-      "used": 17,
-      "totalCalls": 29
+      "total": 35,
+      "used": 16,
+      "totalCalls": 28
     },
     "Light": {
       "total": 1,
@@ -874,9 +883,9 @@
       "totalCalls": 0
     },
     "MapLayout": {
-      "total": 4,
-      "used": 0,
-      "totalCalls": 0
+      "total": 9,
+      "used": 5,
+      "totalCalls": 6
     },
     "MediaPlayer": {
       "total": 6,
@@ -899,9 +908,9 @@
       "totalCalls": 0
     },
     "Payment": {
-      "total": 94,
-      "used": 41,
-      "totalCalls": 75
+      "total": 93,
+      "used": 47,
+      "totalCalls": 88
     },
     "Picker": {
       "total": 135,
@@ -915,13 +924,13 @@
     },
     "Progress": {
       "total": 13,
-      "used": 1,
-      "totalCalls": 2
+      "used": 3,
+      "totalCalls": 4
     },
     "QrDesigner": {
-      "total": 75,
-      "used": 56,
-      "totalCalls": 81
+      "total": 79,
+      "used": 59,
+      "totalCalls": 85
     },
     "Quote": {
       "total": 8,
@@ -1000,8 +1009,8 @@
     },
     "Table": {
       "total": 60,
-      "used": 30,
-      "totalCalls": 36
+      "used": 31,
+      "totalCalls": 49
     },
     "Tables": {
       "total": 1,
@@ -1021,7 +1030,7 @@
     "Typography": {
       "total": 21,
       "used": 12,
-      "totalCalls": 50
+      "totalCalls": 54
     }
   },
   "rawStringViolations": [],
@@ -1198,15 +1207,6 @@
       "files": []
     },
     {
-      "key": "Analytics.ShowcaseResetBtn",
-      "category": "Analytics",
-      "name": "ShowcaseResetBtn",
-      "cssClass": "showcase-reset-btn",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
       "key": "Auction.Banner",
       "category": "Auction",
       "name": "Banner",
@@ -1256,15 +1256,6 @@
       "category": "Auth",
       "name": "AuthTitle",
       "cssClass": "auth-title",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.BtnLabel",
-      "category": "Auth",
-      "name": "BtnLabel",
-      "cssClass": "auth-btn-label",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1513,46 +1504,10 @@
       "files": []
     },
     {
-      "key": "Badge.BadgeNone",
-      "category": "Badge",
-      "name": "BadgeNone",
-      "cssClass": "badge-none",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Badge.BadgeRoot",
-      "category": "Badge",
-      "name": "BadgeRoot",
-      "cssClass": "m3-badge",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
       "key": "Badge.BadgeRoot_2",
       "category": "Badge",
       "name": "BadgeRoot_2",
       "cssClass": "badge",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Badge.BadgeVerified",
-      "category": "Badge",
-      "name": "BadgeVerified",
-      "cssClass": "badge-verified",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Badge.Blocked",
-      "category": "Badge",
-      "name": "Blocked",
-      "cssClass": "badge-blocked",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1918,10 +1873,64 @@
       "files": []
     },
     {
-      "key": "Badge.TrustBadge",
+      "key": "Badge.UxModeBadgeOverlay",
       "category": "Badge",
-      "name": "TrustBadge",
-      "cssClass": "trust-badge",
+      "name": "UxModeBadgeOverlay",
+      "cssClass": "ux-mode-badge-overlay",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.CodeLabel",
+      "category": "Booking",
+      "name": "CodeLabel",
+      "cssClass": "booking-code-label",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.ContentBody",
+      "category": "Booking",
+      "name": "ContentBody",
+      "cssClass": "booking-content-body",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.DialogHeader",
+      "category": "Booking",
+      "name": "DialogHeader",
+      "cssClass": "booking-dialog-header",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.GridTwo",
+      "category": "Booking",
+      "name": "GridTwo",
+      "cssClass": "booking-grid-two",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.HeaderTitle",
+      "category": "Booking",
+      "name": "HeaderTitle",
+      "cssClass": "booking-header-title",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Booking.InputField",
+      "category": "Booking",
+      "name": "InputField",
+      "cssClass": "booking-input-field",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []

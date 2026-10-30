@@ -415,10 +415,6 @@
     touch-action: manipulation;
 }
 
-:where(md-filter-chip) {
-    --md-filter-chip-container-height: var(--md-sys-touch-target-min, 48px);
-}
-
 .interactive-chip md-icon:not([slot]) {
     vertical-align: middle;
 }
@@ -997,6 +993,9 @@
     grid-auto-columns: max-content;
     gap: 0.65rem;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
     padding-bottom: 2px;
     overflow-x: auto;
 }
@@ -1141,8 +1140,7 @@
 
 .section-badge {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 0.55rem;
     align-items: center;
     box-sizing: border-box;

@@ -128,6 +128,38 @@
     transform: translateY(-6px);
 }
 
+.qrg-checkbox-passive {
+    pointer-events: none;
+}
+
+.qrg-printsheet {
+    display: none;
+}
+
+.qrg-print-card {
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    text-align: center;
+}
+
+@media print {
+    .qrg-layout {
+        display: none !important;
+    }
+
+    .qrg-printsheet {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(60mm, 1fr));
+        gap: 10mm;
+        padding: 10mm;
+    }
+
+    .qrg-print-card {
+        page-break-inside: avoid;
+    }
+}
+
 .qrg-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
@@ -175,10 +207,13 @@
 
 .qr-caption {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content auto;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.825rem;
     font-weight: 500;
@@ -574,6 +609,40 @@
 }
 
 @media screen and (max-width: 839.98px) {
+    .qr-designer-header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .qr-designer-header .header-title-group {
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-auto-columns: auto;
+        width: 100%;
+    }
+
+    .qr-designer-header .header-text {
+        min-width: 0;
+    }
+
+    .qr-designer-header .header-presets {
+        overflow-x: auto;
+        max-width: 100%;
+        padding-bottom: 4px;
+    }
+
+    .qr-compact-body {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .qr-compact-actions {
+        width: 100%;
+        justify-items: center;
+    }
+
     .qr-workspace {
         grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
@@ -589,7 +658,7 @@
         min-width: 0;
     }
 
-    .preview-card > div {
+    .preview-card>div {
         max-width: 100%;
         min-width: 0;
     }
@@ -611,4 +680,3 @@
         height: auto;
     }
 }
-

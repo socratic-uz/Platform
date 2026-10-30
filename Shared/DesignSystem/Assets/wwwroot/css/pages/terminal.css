@@ -20,8 +20,8 @@
 
 .pos-card-footer-row md-icon-button,
 .pos-card-footer-row md-filled-tonal-icon-button {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .pos-complete-btn {
@@ -62,8 +62,8 @@
 
 .pos-sidebar-header-row md-icon-button,
 .pos-sidebar-header-row md-filled-tonal-icon-button {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .pos-card-footer-row {
@@ -134,7 +134,7 @@
 .pos-product-card {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--space-2, 8px);
+    gap: var(--md-sys-spacing-2, 8px);
     min-width: 0;
     min-height: 146px;
     min-inline-size: 0;
@@ -222,7 +222,7 @@
     opacity: 0.8;
     place-items: center;
     color: var(--md-sys-color-primary);
-    font-size: 44px;
+    font-size: 48px;
 }
 
 .pos-empty-state {
@@ -357,7 +357,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--space-2, 8px);
+    gap: var(--md-sys-spacing-2, 8px);
     align-items: center;
     max-width: 100%;
     padding-bottom: 2px;
@@ -713,4 +713,3 @@
     max-height: 200px;
     border-radius: var(--md-sys-shape-corner-small, 8px);
 }
-

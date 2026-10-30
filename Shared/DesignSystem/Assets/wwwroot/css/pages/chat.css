@@ -251,8 +251,28 @@ assistant-message ul {
     list-style-type: disc;
 }
 
-chat-messages > div:last-of-type {
+chat-messages > :where(div, article, section):last-of-type {
     margin-bottom: 1rem;
+}
+
+.no-messages ul {
+    display: grid;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    padding: 0;
+    text-align: left;
+}
+
+.no-messages li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: baseline;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
 }
 
 .chat-input-form {

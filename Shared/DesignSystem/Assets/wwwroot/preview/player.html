@@ -25,7 +25,7 @@
 <main class="fullscreen-player"><video id="mediaPlayer" controls autoplay playsinline preload="auto" class="fullscreen-video" hidden><source id="videoSource" src type="video/mp4" />
         Ваш браузер не поддерживает встроенное воспроизведение видео.</video>
 
-    <div id="loadingContainer" class="fullscreen-loading"><md-circular-progress indeterminate four-color></md-circular-progress>
-        <p id="loadingText" class="loading-label" data-not-found="Ссылка на видео не найдена">Загрузка видео...</p></div></main>
+    <aside id="loadingContainer" class="fullscreen-loading" role="status" aria-live="polite"><md-circular-progress indeterminate four-color></md-circular-progress>
+        <p id="loadingText" class="loading-label" data-not-found="Ссылка на видео не найдена">Загрузка видео...</p></aside></main>
 </body>
 </html>

@@ -1,40 +1,69 @@
 {
-  "generatedAt": "2026-10-30T08:38:40.892Z",
+  "generatedAt": "2026-10-30T17:45:10.055Z",
   "summary": {
-    "totalDeclaredKeys": 6695,
-    "usedInRazorCount": 850,
-    "unusedCount": 5845,
-    "adoptionRatePercent": 13,
-    "totalTypedCallSites": 1015,
+    "totalDeclaredKeys": 6857,
+    "usedInRazorCount": 939,
+    "unusedCount": 5918,
+    "adoptionRatePercent": 14,
+    "totalTypedCallSites": 1155,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
     "sourceFilesScanned": 640
   },
   "topUsedKeys": [
     {
-      "key": "Common.CurrencyUzs",
-      "domain": "Common",
-      "name": "CurrencyUzs",
-      "locKey": "Currency_Uzs",
-      "usageCountInRazor": 11,
-      "filesCount": 4,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/InvoiceViewer.razor",
-        "Retail/Commerce/Features/HoReCa/Components/SeatBookingModal.razor",
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/Orders/Index.razor"
-      ]
-    },
-    {
       "key": "Common.CommonCurrencySum",
       "domain": "Common",
       "name": "CommonCurrencySum",
       "locKey": "Common_CurrencySum",
-      "usageCountInRazor": 8,
-      "filesCount": 2,
+      "usageCountInRazor": 14,
+      "filesCount": 5,
       "files": [
         "Retail/Commerce/Components/ProductVariantSelector.razor.cs",
-        "Retail/Commerce/Features/Donation/DonationWidgetFeature.razor.cs"
+        "Retail/Commerce/Features/Donation/DonationWidgetFeature.razor.cs",
+        "Retail/PointOfSale/Pages/Kiosk.razor.cs",
+        "Retail/PointOfSale/Pages/Terminal.razor.cs",
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
+      ]
+    },
+    {
+      "key": "Actions.CloseAction",
+      "domain": "Actions",
+      "name": "CloseAction",
+      "locKey": "Close",
+      "usageCountInRazor": 7,
+      "filesCount": 5,
+      "files": [
+        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/Analytics.razor",
+        "Studio/Map/Components/MapPopup.razor",
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
+      ]
+    },
+    {
+      "key": "Checkout.CurrencyUzs",
+      "domain": "Checkout",
+      "name": "CurrencyUzs",
+      "locKey": "Checkout_CurrencyUzs",
+      "usageCountInRazor": 7,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "Common.OrdersLabel",
+      "domain": "Common",
+      "name": "OrdersLabel",
+      "locKey": "Orders",
+      "usageCountInRazor": 6,
+      "filesCount": 4,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor",
+        "Retail/Orders/Pages/Orders/Index.razor",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
       ]
     },
     {
@@ -51,57 +80,43 @@
       ]
     },
     {
-      "key": "Common.OrderLabel",
-      "domain": "Common",
-      "name": "OrderLabel",
-      "locKey": "Order",
-      "usageCountInRazor": 5,
-      "filesCount": 3,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Grid.razor",
-        "Retail/Orders/Pages/OrderItems/Index.razor",
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
-      ]
-    },
-    {
       "key": "Actions.CancelAction",
       "domain": "Actions",
       "name": "CancelAction",
       "locKey": "Cancel",
-      "usageCountInRazor": 4,
-      "filesCount": 4,
+      "usageCountInRazor": 5,
+      "filesCount": 5,
       "files": [
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartForm/SmartForm.razor.cs",
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
+        "Retail/Checkout/Pages/Payment.razor",
         "Studio/Map/Components/MapPopup.razor"
       ]
     },
     {
-      "key": "Actions.CloseAction",
-      "domain": "Actions",
-      "name": "CloseAction",
-      "locKey": "Close",
-      "usageCountInRazor": 4,
-      "filesCount": 4,
+      "key": "UxMode.DetailsText",
+      "domain": "UxMode",
+      "name": "DetailsText",
+      "locKey": "UX_Details",
+      "usageCountInRazor": 5,
+      "filesCount": 3,
       "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
-        "Portal/Landing/Pages/Analytics.razor",
-        "Studio/Map/Components/MapPopup.razor",
-        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
+        "Retail/PointOfSale/Pages/Kiosk.razor.cs",
+        "Retail/PointOfSale/Pages/ProductPage.razor.cs",
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
       ]
     },
     {
-      "key": "Common.Documentation",
+      "key": "Common.OrderLabel",
       "domain": "Common",
-      "name": "Documentation",
-      "locKey": "Documentation",
+      "name": "OrderLabel",
+      "locKey": "Order",
       "usageCountInRazor": 4,
-      "filesCount": 3,
+      "filesCount": 2,
       "files": [
-        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor",
-        "Portal/Landing/Pages/Docs.razor",
-        "Portal/Landing/Pages/Landing.razor"
+        "Retail/Orders/Pages/OrderItems/Grid.razor.cs",
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
       ]
     },
     {
@@ -258,18 +273,6 @@
       ]
     },
     {
-      "key": "UxMode.DetailsText",
-      "domain": "UxMode",
-      "name": "DetailsText",
-      "locKey": "UX_Details",
-      "usageCountInRazor": 4,
-      "filesCount": 2,
-      "files": [
-        "Retail/PointOfSale/Pages/ProductPage.razor.cs",
-        "Retail/PointOfSale/Pages/WishList.razor.cs"
-      ]
-    },
-    {
       "key": "Actions.CreateAction",
       "domain": "Actions",
       "name": "CreateAction",
@@ -329,16 +332,26 @@
       ]
     },
     {
-      "key": "Common.OrdersLabel",
+      "key": "Common.CurrencyUzs",
       "domain": "Common",
-      "name": "OrdersLabel",
-      "locKey": "Orders",
+      "name": "CurrencyUzs",
+      "locKey": "Currency_Uzs",
       "usageCountInRazor": 3,
-      "filesCount": 3,
+      "filesCount": 2,
       "files": [
-        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor",
-        "Retail/Orders/Pages/Orders/Index.razor",
-        "Retail/Orders/Pages/Orders/Index.razor.cs"
+        "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/InvoiceViewer.razor",
+        "Retail/Commerce/Features/HoReCa/Components/SeatBookingModal.razor"
+      ]
+    },
+    {
+      "key": "Common.SeatDesignerPageTitle",
+      "domain": "Common",
+      "name": "SeatDesignerPageTitle",
+      "locKey": "SeatDesigner_PageTitle",
+      "usageCountInRazor": 3,
+      "filesCount": 1,
+      "files": [
+        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
     },
     {
@@ -350,6 +363,18 @@
       "filesCount": 1,
       "files": [
         "Intelligence/Chat/Widgets/Messaging/ChatInput.razor"
+      ]
+    },
+    {
+      "key": "Chat.WelcomeTitle",
+      "domain": "Chat",
+      "name": "WelcomeTitle",
+      "locKey": "Chat_WelcomeTitle",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Intelligence/Chat/Pages/ChatPage.razor",
+        "Intelligence/Chat/Widgets/Messaging/ChatHeader.razor"
       ]
     },
     {
@@ -392,14 +417,14 @@
       ]
     },
     {
-      "key": "Landing.DocsNavigation",
+      "key": "Landing.AnalyticsEntitiesRegistry",
       "domain": "Landing",
-      "name": "DocsNavigation",
-      "locKey": "Docs_Navigation",
+      "name": "AnalyticsEntitiesRegistry",
+      "locKey": "Analytics_EntitiesRegistry",
       "usageCountInRazor": 3,
       "filesCount": 1,
       "files": [
-        "Portal/Landing/Pages/Docs.razor"
+        "Portal/Landing/Pages/Analytics.razor"
       ]
     },
     {
@@ -452,6 +477,44 @@
       ]
     },
     {
+      "key": "Orders.ByRequirements",
+      "domain": "Orders",
+      "name": "ByRequirements",
+      "locKey": "Order_ByRequirements",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/PointOfSale/Pages/Kiosk.razor.cs",
+        "Retail/PointOfSale/Pages/Terminal.razor.cs",
+        "Retail/PointOfSale/Pages/WishList.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrderItemsTitle",
+      "domain": "Orders",
+      "name": "OrderItemsTitle",
+      "locKey": "OrderItems_Title",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs"
+      ]
+    },
+    {
+      "key": "Orders.OrdersCurrencyUzs",
+      "domain": "Orders",
+      "name": "OrdersCurrencyUzs",
+      "locKey": "Orders_CurrencyUzs",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs"
+      ]
+    },
+    {
       "key": "Orders.OrderStatusCollected",
       "domain": "Orders",
       "name": "OrderStatusCollected",
@@ -491,6 +554,19 @@
       ]
     },
     {
+      "key": "Orders.OrdersViewGrid",
+      "domain": "Orders",
+      "name": "OrdersViewGrid",
+      "locKey": "Orders_ViewGrid",
+      "usageCountInRazor": 3,
+      "filesCount": 3,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor",
+        "Retail/Orders/Pages/Orders/Grid.razor",
+        "Retail/Orders/Pages/Orders/Index.razor"
+      ]
+    },
+    {
       "key": "Orders.UnknownProduct",
       "domain": "Orders",
       "name": "UnknownProduct",
@@ -500,6 +576,18 @@
       "files": [
         "Retail/Orders/Pages/OrderItems/Grid.razor",
         "Retail/Orders/Pages/OrderItems/Index.razor"
+      ]
+    },
+    {
+      "key": "UxMode.BookText",
+      "domain": "UxMode",
+      "name": "BookText",
+      "locKey": "UX_Book",
+      "usageCountInRazor": 3,
+      "filesCount": 2,
+      "files": [
+        "Retail/PointOfSale/Pages/Kiosk.razor.cs",
+        "Retail/PointOfSale/Pages/ProductPage.razor.cs"
       ]
     },
     {
@@ -536,108 +624,28 @@
       ]
     },
     {
-      "key": "Common.FilePickerClearAll",
+      "key": "Common.Documentation",
       "domain": "Common",
-      "name": "FilePickerClearAll",
-      "locKey": "FilePicker_ClearAll",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Platform/Shared/DesignSystem/Material.Web/Components/FilePicker.razor"
-      ]
-    },
-    {
-      "key": "Common.MerchantTestModeLabel",
-      "domain": "Common",
-      "name": "MerchantTestModeLabel",
-      "locKey": "Merchant_TestModeLabel",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
-      ]
-    },
-    {
-      "key": "Common.OrganizationsText",
-      "domain": "Common",
-      "name": "OrganizationsText",
-      "locKey": "Organizations",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Portal/Organization/Pages/Home.razor"
-      ]
-    },
-    {
-      "key": "Common.PlayerLoadingVideo",
-      "domain": "Common",
-      "name": "PlayerLoadingVideo",
-      "locKey": "PlayerLoadingVideo",
+      "name": "Documentation",
+      "locKey": "Documentation",
       "usageCountInRazor": 2,
       "filesCount": 2,
       "files": [
-        "Portal/Landing/Pages/Player.razor",
-        "Portal/Landing/Widgets/Player.razor"
-      ]
-    },
-    {
-      "key": "Common.PlayerPageTitle",
-      "domain": "Common",
-      "name": "PlayerPageTitle",
-      "locKey": "PlayerPageTitle",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Portal/Landing/Pages/Player.razor",
-        "Portal/Landing/Widgets/Player.razor"
-      ]
-    },
-    {
-      "key": "Common.PlayerVideoNotFound",
-      "domain": "Common",
-      "name": "PlayerVideoNotFound",
-      "locKey": "PlayerVideoNotFound",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Portal/Landing/Pages/Player.razor",
-        "Portal/Landing/Widgets/Player.razor"
-      ]
-    },
-    {
-      "key": "Common.SearchPlaceholder",
-      "domain": "Common",
-      "name": "SearchPlaceholder",
-      "locKey": "Search_Placeholder",
-      "usageCountInRazor": 2,
-      "filesCount": 2,
-      "files": [
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartDataView/SmartDataView.razor.cs",
-        "Platform/Shared/DesignSystem/Smart.Web/Components/SmartFilter/SmartFilterBar.razor.cs"
-      ]
-    },
-    {
-      "key": "Common.SeatDesignerPageTitle",
-      "domain": "Common",
-      "name": "SeatDesignerPageTitle",
-      "locKey": "SeatDesigner_PageTitle",
-      "usageCountInRazor": 2,
-      "filesCount": 1,
-      "files": [
-        "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
+        "Platform/Shared/DesignSystem/Layout/Layout/Footer.razor",
+        "Portal/Landing/Pages/Landing.razor"
       ]
     }
   ],
   "byDomain": {
     "Actions": {
       "total": 55,
-      "used": 18,
-      "totalCalls": 31
+      "used": 20,
+      "totalCalls": 37
     },
     "Common": {
-      "total": 539,
-      "used": 239,
-      "totalCalls": 280
+      "total": 559,
+      "used": 251,
+      "totalCalls": 293
     },
     "Auction": {
       "total": 16,
@@ -645,9 +653,9 @@
       "totalCalls": 2
     },
     "Auth": {
-      "total": 129,
-      "used": 0,
-      "totalCalls": 0
+      "total": 162,
+      "used": 11,
+      "totalCalls": 12
     },
     "Booking": {
       "total": 153,
@@ -666,13 +674,13 @@
     },
     "Chat": {
       "total": 35,
-      "used": 12,
-      "totalCalls": 16
+      "used": 13,
+      "totalCalls": 18
     },
     "Checkout": {
-      "total": 304,
-      "used": 4,
-      "totalCalls": 13
+      "total": 313,
+      "used": 56,
+      "totalCalls": 74
     },
     "Classified": {
       "total": 72,
@@ -721,13 +729,13 @@
     },
     "Kiosk": {
       "total": 230,
-      "used": 0,
-      "totalCalls": 0
+      "used": 5,
+      "totalCalls": 5
     },
     "Landing": {
-      "total": 413,
-      "used": 230,
-      "totalCalls": 251
+      "total": 439,
+      "used": 234,
+      "totalCalls": 255
     },
     "Lottery": {
       "total": 42,
@@ -737,12 +745,12 @@
     "Map": {
       "total": 252,
       "used": 81,
-      "totalCalls": 106
+      "totalCalls": 108
     },
     "Orders": {
       "total": 223,
       "used": 71,
-      "totalCalls": 106
+      "totalCalls": 112
     },
     "Promotion": {
       "total": 75,
@@ -796,13 +804,13 @@
     },
     "Terminal": {
       "total": 81,
-      "used": 0,
-      "totalCalls": 0
+      "used": 2,
+      "totalCalls": 2
     },
     "UxMode": {
-      "total": 3000,
+      "total": 3074,
       "used": 27,
-      "totalCalls": 31
+      "totalCalls": 58
     }
   },
   "rawStringViolations": [],
@@ -907,15 +915,6 @@
       "files": []
     },
     {
-      "key": "Actions.Loading",
-      "domain": "Actions",
-      "name": "Loading",
-      "locKey": "Loading",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
       "key": "Actions.LoadingAction",
       "domain": "Actions",
       "name": "LoadingAction",
@@ -983,15 +982,6 @@
       "domain": "Actions",
       "name": "OkText",
       "locKey": "Ok",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Actions.RefreshAction",
-      "domain": "Actions",
-      "name": "RefreshAction",
-      "locKey": "Refresh",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1438,6 +1428,24 @@
       "files": []
     },
     {
+      "key": "Auth.EnterValidPhone",
+      "domain": "Auth",
+      "name": "EnterValidPhone",
+      "locKey": "SignIn_EnterValidPhone",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.EnterVerificationCode",
+      "domain": "Auth",
+      "name": "EnterVerificationCode",
+      "locKey": "SignIn_EnterVerificationCode",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
       "key": "Auth.FaceId_Bound",
       "domain": "Auth",
       "name": "FaceId_Bound",
@@ -1537,6 +1545,15 @@
       "files": []
     },
     {
+      "key": "Auth.FaceIdentifying",
+      "domain": "Auth",
+      "name": "FaceIdentifying",
+      "locKey": "SignIn_FaceIdentifying",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
       "key": "Auth.FaceIdHint",
       "domain": "Auth",
       "name": "FaceIdHint",
@@ -1582,10 +1599,46 @@
       "files": []
     },
     {
+      "key": "Auth.FaceInitializing",
+      "domain": "Auth",
+      "name": "FaceInitializing",
+      "locKey": "SignIn_FaceInitializing",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FacePromptStart",
+      "domain": "Auth",
+      "name": "FacePromptStart",
+      "locKey": "SignIn_FacePromptStart",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.FaceSuccess",
+      "domain": "Auth",
+      "name": "FaceSuccess",
+      "locKey": "SignIn_FaceSuccess",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
       "key": "Auth.FastAccessNotice",
       "domain": "Auth",
       "name": "FastAccessNotice",
       "locKey": "SignIn_FastAccessNotice",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auth.GoogleClientMissing",
+      "domain": "Auth",
+      "name": "GoogleClientMissing",
+      "locKey": "SignIn_GoogleClientMissing",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1658,51 +1711,6 @@
       "domain": "Auth",
       "name": "OAuth_GoogleTitle",
       "locKey": "OAuth_GoogleTitle",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_PageTitleGoogle",
-      "domain": "Auth",
-      "name": "OAuth_PageTitleGoogle",
-      "locKey": "OAuth_PageTitleGoogle",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_PageTitleTelegram",
-      "domain": "Auth",
-      "name": "OAuth_PageTitleTelegram",
-      "locKey": "OAuth_PageTitleTelegram",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_Retry",
-      "domain": "Auth",
-      "name": "OAuth_Retry",
-      "locKey": "OAuth_Retry",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_TelegramProcessing",
-      "domain": "Auth",
-      "name": "OAuth_TelegramProcessing",
-      "locKey": "OAuth_TelegramProcessing",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_TelegramTitle",
-      "domain": "Auth",
-      "name": "OAuth_TelegramTitle",
-      "locKey": "OAuth_TelegramTitle",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []

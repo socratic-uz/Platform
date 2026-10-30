@@ -12,7 +12,7 @@
     "generate:icons": "node scripts/generate-icon-constants.mjs",
     "validate:syntax": "node scripts/validate-syntax.mjs",
     "generate:codegen": "node scripts/generate-codegen.mjs",
-    "build": "npm run validate:syntax && npm run build:js && npm run build:css && npm run generate:codegen",
+    "build": "npm run validate:syntax && npm run build:js && npm run generate:codegen",
     "lint:css": "stylelint \"wwwroot/css/**/*.css\"",
     "lint:css:fix": "stylelint \"wwwroot/css/**/*.css\" --fix",
     "generate:preview": "node scripts/generate-preview.mjs",

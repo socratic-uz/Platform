@@ -1694,6 +1694,39 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.</value>
   </data>
+  <data name="SignIn_FacePromptStart" xml:space="preserve">
+    <value>Нажмите кнопку для включения камеры</value>
+  </data>
+  <data name="SignIn_FaceInitializing" xml:space="preserve">
+    <value>Инициализация камеры...</value>
+  </data>
+  <data name="SignIn_FaceIdentifying" xml:space="preserve">
+    <value>Идентификация...</value>
+  </data>
+  <data name="SignIn_FaceSuccess" xml:space="preserve">
+    <value>Успешно распознано! Выполняется вход...</value>
+  </data>
+  <data name="SignIn_PasskeyPrompt" xml:space="preserve">
+    <value>Приложите палец или посмотрите в камеру устройства...</value>
+  </data>
+  <data name="SignIn_PasskeySuccess" xml:space="preserve">
+    <value>Passkey подтвержден! Выполняется вход...</value>
+  </data>
+  <data name="SignIn_PasskeyCanceled" xml:space="preserve">
+    <value>Passkey отменен или не настроен на устройстве.</value>
+  </data>
+  <data name="SignIn_EnterValidPhone" xml:space="preserve">
+    <value>Пожалуйста, введите корректный номер телефона (+998...)</value>
+  </data>
+  <data name="SignIn_EnterVerificationCode" xml:space="preserve">
+    <value>Пожалуйста, введите 6-значный код</value>
+  </data>
+  <data name="SignIn_GoogleClientMissing" xml:space="preserve">
+    <value>Google Client ID не задан в конфигурации</value>
+  </data>
+  <data name="SignIn_TelegramClientMissing" xml:space="preserve">
+    <value>Telegram Client ID не настроен в конфигурации системы.</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>Все</value>
   </data>
@@ -2128,6 +2161,39 @@
   </data>
   <data name="Docs_WelcomeDesc" xml:space="preserve">
     <value>Выберите интересующий раздел на боковой панели для просмотра подробных сведений по архитектуре, API и базам данных микросервисов.</value>
+  </data>
+  <data name="Viewer3d_PageTitle" xml:space="preserve">
+    <value>3D Просмотр моделей • Socratic</value>
+  </data>
+  <data name="Docs_CategoryGeneral" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="Docs_CategoryPlatform" xml:space="preserve">
+    <value>Платформа и архитектура (docs)</value>
+  </data>
+  <data name="Docs_CategoryAuth" xml:space="preserve">
+    <value>Аутентификация (Identifying)</value>
+  </data>
+  <data name="Docs_CategoryCatalog" xml:space="preserve">
+    <value>Каталог товаров (Shopping)</value>
+  </data>
+  <data name="Docs_CategoryOrders" xml:space="preserve">
+    <value>Заказы клиентов (Ordering)</value>
+  </data>
+  <data name="Docs_CategoryPayments" xml:space="preserve">
+    <value>Платежная система (Paying)</value>
+  </data>
+  <data name="Docs_CategoryDesign" xml:space="preserve">
+    <value>Дизайн-система (Design)</value>
+  </data>
+  <data name="Docs_CategoryMisc" xml:space="preserve">
+    <value>Разное</value>
+  </data>
+  <data name="Docs_IntroReadme" xml:space="preserve">
+    <value>Введение (Root README)</value>
+  </data>
+  <data name="Docs_ErrorLoadFailed" xml:space="preserve">
+    <value>Не удалось загрузить документ</value>
   </data>
   <data name="QrDesigner_PageTitle" xml:space="preserve">
     <value>QrDesigner — Генератор динамических QR-кодов</value>
@@ -5049,5 +5115,29 @@
   </data>
   <data name="Analytics_Data" xml:space="preserve">
     <value>Данные</value>
+  </data>
+  <data name="Analytics_OrderItems" xml:space="preserve">
+    <value>Позиции заказа</value>
+  </data>
+  <data name="Analytics_PageTitle" xml:space="preserve">
+    <value>Аналитика и реестры • Socratic</value>
+  </data>
+  <data name="Analytics_SkuUnit" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Home_PageTitle" xml:space="preserve">
+    <value>Каталог заведений и организаций • Socratic</value>
+  </data>
+  <data name="Payment_PageTitle" xml:space="preserve">
+    <value>Платежи и управление рассрочками • Socratic</value>
+  </data>
+  <data name="Payment_AuthGoogleSso" xml:space="preserve">
+    <value>Google SSO</value>
+  </data>
+  <data name="Payment_AuthTelegramOidc" xml:space="preserve">
+    <value>Telegram OIDC</value>
+  </data>
+  <data name="WishList_PageTitle" xml:space="preserve">
+    <value>Избранное • Socratic</value>
   </data>
 </root>

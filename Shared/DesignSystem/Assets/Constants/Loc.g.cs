@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1646.
+    /// Total unique keys: 1676.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (553 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (559 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1825,6 +1825,14 @@ namespace Assets.Constants
             public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
 
             /// <summary>
+            /// Key: <c>Home_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+            /// </summary>
+            public const string Home_PageTitle = "Home_PageTitle";
+
+            /// <summary>
             /// Key: <c>Home_SearchNoResults</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
@@ -1895,6 +1903,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
             /// </summary>
             public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+            /// <summary>
+            /// Key: <c>Home_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+            /// </summary>
+            public const string HomePageTitle = "Home_PageTitle";
 
             /// <summary>
             /// Key: <c>Home_SearchNoResults</c><br/>
@@ -4817,6 +4833,22 @@ namespace Assets.Constants
             public const string VenueTheatersDesc = "VenueTheatersDesc";
 
             /// <summary>
+            /// Key: <c>Viewer3d_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+            /// </summary>
+            public const string Viewer3d_PageTitle = "Viewer3d_PageTitle";
+
+            /// <summary>
+            /// Key: <c>Viewer3d_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+            /// </summary>
+            public const string Viewer3dPageTitle = "Viewer3d_PageTitle";
+
+            /// <summary>
             /// Key: <c>Wish list</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqimli&quot;<br/>
@@ -4849,6 +4881,14 @@ namespace Assets.Constants
             public const string WishList_EmptyTitle = "WishList_EmptyTitle";
 
             /// <summary>
+            /// Key: <c>WishList_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+            /// </summary>
+            public const string WishList_PageTitle = "WishList_PageTitle";
+
+            /// <summary>
             /// Key: <c>WishList_BrowseCatalog</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейти в каталог&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogga o‘tish&quot;<br/>
@@ -4871,6 +4911,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Your wish list is empty&quot;
             /// </summary>
             public const string WishListEmptyTitle = "WishList_EmptyTitle";
+
+            /// <summary>
+            /// Key: <c>WishList_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+            /// </summary>
+            public const string WishListPageTitle = "WishList_PageTitle";
 
             /// <summary>
             /// Key: <c>WishListSubtitle</c><br/>
@@ -5026,7 +5074,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Auth (129 keys). Use with <c>@using static Assets.Constants.Loc.Auth;</c>.
+        /// Domain group: Auth (162 keys). Use with <c>@using static Assets.Constants.Loc.Auth;</c>.
         /// </summary>
         public static class Auth
         {
@@ -5183,6 +5231,22 @@ namespace Assets.Constants
             public const string ConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
             /// <summary>
+            /// Key: <c>SignIn_EnterValidPhone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+            /// </summary>
+            public const string EnterValidPhone = "SignIn_EnterValidPhone";
+
+            /// <summary>
+            /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+            /// </summary>
+            public const string EnterVerificationCode = "SignIn_EnterVerificationCode";
+
+            /// <summary>
             /// Key: <c>Auth_FaceId_Bound</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;✅ Привязано к аккаунту&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;✅ Hisobga ulangan&quot;<br/>
@@ -5271,6 +5335,14 @@ namespace Assets.Constants
             public const string FaceIdDelete = "Auth_FaceId_Delete";
 
             /// <summary>
+            /// Key: <c>SignIn_FaceIdentifying</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+            /// </summary>
+            public const string FaceIdentifying = "SignIn_FaceIdentifying";
+
+            /// <summary>
             /// Key: <c>Auth_FaceId_Hint</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
@@ -5311,12 +5383,44 @@ namespace Assets.Constants
             public const string FaceIdTurnRight = "FaceId_TurnRight";
 
             /// <summary>
+            /// Key: <c>SignIn_FaceInitializing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+            /// </summary>
+            public const string FaceInitializing = "SignIn_FaceInitializing";
+
+            /// <summary>
+            /// Key: <c>SignIn_FacePromptStart</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+            /// </summary>
+            public const string FacePromptStart = "SignIn_FacePromptStart";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceSuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+            /// </summary>
+            public const string FaceSuccess = "SignIn_FaceSuccess";
+
+            /// <summary>
             /// Key: <c>SignIn_FastAccessNotice</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
             /// </summary>
             public const string FastAccessNotice = "SignIn_FastAccessNotice";
+
+            /// <summary>
+            /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+            /// </summary>
+            public const string GoogleClientMissing = "SignIn_GoogleClientMissing";
 
             /// <summary>
             /// Key: <c>OAuth_GoogleProcessing</c><br/>
@@ -5535,6 +5639,22 @@ namespace Assets.Constants
             public const string PageTitleTelegram = "OAuth_PageTitleTelegram";
 
             /// <summary>
+            /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+            /// </summary>
+            public const string PasskeyCanceled = "SignIn_PasskeyCanceled";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+            /// </summary>
+            public const string PasskeyPrompt = "SignIn_PasskeyPrompt";
+
+            /// <summary>
             /// Key: <c>Auth_Passkeys_Subtitle</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
@@ -5549,6 +5669,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Login with device Touch ID / Face ID&quot;
             /// </summary>
             public const string PasskeysSubtitle = "Auth_Passkeys_Subtitle";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeySuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+            /// </summary>
+            public const string PasskeySuccess = "SignIn_PasskeySuccess";
 
             /// <summary>
             /// Key: <c>SignIn_PrimaryAuth</c><br/>
@@ -5607,12 +5735,68 @@ namespace Assets.Constants
             public const string SignIn_ConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
             /// <summary>
+            /// Key: <c>SignIn_EnterValidPhone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+            /// </summary>
+            public const string SignIn_EnterValidPhone = "SignIn_EnterValidPhone";
+
+            /// <summary>
+            /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+            /// </summary>
+            public const string SignIn_EnterVerificationCode = "SignIn_EnterVerificationCode";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceIdentifying</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+            /// </summary>
+            public const string SignIn_FaceIdentifying = "SignIn_FaceIdentifying";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceInitializing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+            /// </summary>
+            public const string SignIn_FaceInitializing = "SignIn_FaceInitializing";
+
+            /// <summary>
+            /// Key: <c>SignIn_FacePromptStart</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+            /// </summary>
+            public const string SignIn_FacePromptStart = "SignIn_FacePromptStart";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceSuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+            /// </summary>
+            public const string SignIn_FaceSuccess = "SignIn_FaceSuccess";
+
+            /// <summary>
             /// Key: <c>SignIn_FastAccessNotice</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
             /// </summary>
             public const string SignIn_FastAccessNotice = "SignIn_FastAccessNotice";
+
+            /// <summary>
+            /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+            /// </summary>
+            public const string SignIn_GoogleClientMissing = "SignIn_GoogleClientMissing";
 
             /// <summary>
             /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -5637,6 +5821,30 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
             /// </summary>
             public const string SignIn_OtpLabel = "SignIn_OtpLabel";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+            /// </summary>
+            public const string SignIn_PasskeyCanceled = "SignIn_PasskeyCanceled";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+            /// </summary>
+            public const string SignIn_PasskeyPrompt = "SignIn_PasskeyPrompt";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeySuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+            /// </summary>
+            public const string SignIn_PasskeySuccess = "SignIn_PasskeySuccess";
 
             /// <summary>
             /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -5719,6 +5927,14 @@ namespace Assets.Constants
             public const string SignIn_Subtitle = "SignIn_Subtitle";
 
             /// <summary>
+            /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+            /// </summary>
+            public const string SignIn_TelegramClientMissing = "SignIn_TelegramClientMissing";
+
+            /// <summary>
             /// Key: <c>SignIn_Title</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic ID&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ID&quot;<br/>
@@ -5775,6 +5991,54 @@ namespace Assets.Constants
             public const string SignInConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
             /// <summary>
+            /// Key: <c>SignIn_EnterValidPhone</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+            /// </summary>
+            public const string SignInEnterValidPhone = "SignIn_EnterValidPhone";
+
+            /// <summary>
+            /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+            /// </summary>
+            public const string SignInEnterVerificationCode = "SignIn_EnterVerificationCode";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceIdentifying</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+            /// </summary>
+            public const string SignInFaceIdentifying = "SignIn_FaceIdentifying";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceInitializing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+            /// </summary>
+            public const string SignInFaceInitializing = "SignIn_FaceInitializing";
+
+            /// <summary>
+            /// Key: <c>SignIn_FacePromptStart</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+            /// </summary>
+            public const string SignInFacePromptStart = "SignIn_FacePromptStart";
+
+            /// <summary>
+            /// Key: <c>SignIn_FaceSuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+            /// </summary>
+            public const string SignInFaceSuccess = "SignIn_FaceSuccess";
+
+            /// <summary>
             /// Key: <c>SignIn_FastAccessNotice</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
@@ -5789,6 +6053,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Signing In...&quot;
             /// </summary>
             public const string SigningIn = "SignIn_SigningIn";
+
+            /// <summary>
+            /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+            /// </summary>
+            public const string SignInGoogleClientMissing = "SignIn_GoogleClientMissing";
 
             /// <summary>
             /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -5813,6 +6085,30 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
             /// </summary>
             public const string SignInOtpLabel = "SignIn_OtpLabel";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+            /// </summary>
+            public const string SignInPasskeyCanceled = "SignIn_PasskeyCanceled";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+            /// </summary>
+            public const string SignInPasskeyPrompt = "SignIn_PasskeyPrompt";
+
+            /// <summary>
+            /// Key: <c>SignIn_PasskeySuccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+            /// </summary>
+            public const string SignInPasskeySuccess = "SignIn_PasskeySuccess";
 
             /// <summary>
             /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -5895,6 +6191,14 @@ namespace Assets.Constants
             public const string SignInSubtitle = "SignIn_Subtitle";
 
             /// <summary>
+            /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+            /// </summary>
+            public const string SignInTelegramClientMissing = "SignIn_TelegramClientMissing";
+
+            /// <summary>
             /// Key: <c>SignIn_Title</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic ID&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ID&quot;<br/>
@@ -5973,6 +6277,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Login via Telegram Widget&quot;
             /// </summary>
             public const string Telegram_Subtitle = "Auth_Telegram_Subtitle";
+
+            /// <summary>
+            /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+            /// </summary>
+            public const string TelegramClientMissing = "SignIn_TelegramClientMissing";
 
             /// <summary>
             /// Key: <c>OAuth_TelegramProcessing</c><br/>
@@ -8245,7 +8557,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Checkout (304 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
+        /// Domain group: Checkout (313 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
         /// </summary>
         public static class Checkout
         {
@@ -8280,6 +8592,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
             /// </summary>
             public const string AmountText = "Payment_Amount";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthGoogleSso</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+            /// </summary>
+            public const string AuthGoogleSso = "Payment_AuthGoogleSso";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+            /// </summary>
+            public const string AuthTelegramOidc = "Payment_AuthTelegramOidc";
 
             /// <summary>
             /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -9474,6 +9802,14 @@ namespace Assets.Constants
             public const string OpenInApp = "Checkout_OpenInApp";
 
             /// <summary>
+            /// Key: <c>Payment_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+            /// </summary>
+            public const string PageTitleText = "Payment_PageTitle";
+
+            /// <summary>
             /// Key: <c>Checkout_PanCardNumber</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Номер карты (16 цифр)&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Karta raqami (16 raqam)&quot;<br/>
@@ -9568,6 +9904,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
             /// </summary>
             public const string Payment_Amount = "Payment_Amount";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthGoogleSso</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+            /// </summary>
+            public const string Payment_AuthGoogleSso = "Payment_AuthGoogleSso";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+            /// </summary>
+            public const string Payment_AuthTelegramOidc = "Payment_AuthTelegramOidc";
 
             /// <summary>
             /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -9794,6 +10146,14 @@ namespace Assets.Constants
             public const string Payment_Order = "Payment_Order";
 
             /// <summary>
+            /// Key: <c>Payment_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+            /// </summary>
+            public const string Payment_PageTitle = "Payment_PageTitle";
+
+            /// <summary>
             /// Key: <c>Payment_Paid</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Выплачено&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'langan&quot;<br/>
@@ -9976,6 +10336,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
             /// </summary>
             public const string PaymentAmount = "Payment_Amount";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthGoogleSso</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+            /// </summary>
+            public const string PaymentAuthGoogleSso = "Payment_AuthGoogleSso";
+
+            /// <summary>
+            /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+            /// </summary>
+            public const string PaymentAuthTelegramOidc = "Payment_AuthTelegramOidc";
 
             /// <summary>
             /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -10192,6 +10568,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Order&quot;
             /// </summary>
             public const string PaymentOrder = "Payment_Order";
+
+            /// <summary>
+            /// Key: <c>Payment_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+            /// </summary>
+            public const string PaymentPageTitle = "Payment_PageTitle";
 
             /// <summary>
             /// Key: <c>Payment_Paid</c><br/>
@@ -15786,7 +16170,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Landing (413 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
+        /// Domain group: Landing (439 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
         /// </summary>
         public static class Landing
         {
@@ -16655,6 +17039,14 @@ namespace Assets.Constants
             public const string Analytics_OfdReceipts = "Analytics_OfdReceipts";
 
             /// <summary>
+            /// Key: <c>Analytics_OrderItems</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+            /// </summary>
+            public const string Analytics_OrderItems = "Analytics_OrderItems";
+
+            /// <summary>
             /// Key: <c>Analytics_OrdersCount</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -16677,6 +17069,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
             /// </summary>
             public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+            /// <summary>
+            /// Key: <c>Analytics_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+            /// </summary>
+            public const string Analytics_PageTitle = "Analytics_PageTitle";
 
             /// <summary>
             /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -16797,6 +17197,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
             /// </summary>
             public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
+
+            /// <summary>
+            /// Key: <c>Analytics_SkuUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+            /// </summary>
+            public const string Analytics_SkuUnit = "Analytics_SkuUnit";
 
             /// <summary>
             /// Key: <c>Analytics_StatusesUnit</c><br/>
@@ -17215,6 +17623,14 @@ namespace Assets.Constants
             public const string AnalyticsOfdReceipts = "Analytics_OfdReceipts";
 
             /// <summary>
+            /// Key: <c>Analytics_OrderItems</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+            /// </summary>
+            public const string AnalyticsOrderItems = "Analytics_OrderItems";
+
+            /// <summary>
             /// Key: <c>Analytics_OrdersCount</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -17237,6 +17653,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
             /// </summary>
             public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+            /// <summary>
+            /// Key: <c>Analytics_PageTitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+            /// </summary>
+            public const string AnalyticsPageTitle = "Analytics_PageTitle";
 
             /// <summary>
             /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -17359,6 +17783,14 @@ namespace Assets.Constants
             public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
 
             /// <summary>
+            /// Key: <c>Analytics_SkuUnit</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+            /// </summary>
+            public const string AnalyticsSkuUnit = "Analytics_SkuUnit";
+
+            /// <summary>
             /// Key: <c>Analytics_StatusesUnit</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
@@ -17413,6 +17845,86 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
             /// </summary>
             public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryAuth</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+            /// </summary>
+            public const string Docs_CategoryAuth = "Docs_CategoryAuth";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+            /// </summary>
+            public const string Docs_CategoryCatalog = "Docs_CategoryCatalog";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryDesign</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+            /// </summary>
+            public const string Docs_CategoryDesign = "Docs_CategoryDesign";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryGeneral</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+            /// </summary>
+            public const string Docs_CategoryGeneral = "Docs_CategoryGeneral";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryMisc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+            /// </summary>
+            public const string Docs_CategoryMisc = "Docs_CategoryMisc";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryOrders</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+            /// </summary>
+            public const string Docs_CategoryOrders = "Docs_CategoryOrders";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryPayments</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+            /// </summary>
+            public const string Docs_CategoryPayments = "Docs_CategoryPayments";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryPlatform</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+            /// </summary>
+            public const string Docs_CategoryPlatform = "Docs_CategoryPlatform";
+
+            /// <summary>
+            /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+            /// </summary>
+            public const string Docs_ErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+            /// <summary>
+            /// Key: <c>Docs_IntroReadme</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+            /// </summary>
+            public const string Docs_IntroReadme = "Docs_IntroReadme";
 
             /// <summary>
             /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -17477,6 +17989,86 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
             /// </summary>
             public const string Docs_WelcomeTitle = "Docs_WelcomeTitle";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryAuth</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+            /// </summary>
+            public const string DocsCategoryAuth = "Docs_CategoryAuth";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryCatalog</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+            /// </summary>
+            public const string DocsCategoryCatalog = "Docs_CategoryCatalog";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryDesign</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+            /// </summary>
+            public const string DocsCategoryDesign = "Docs_CategoryDesign";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryGeneral</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+            /// </summary>
+            public const string DocsCategoryGeneral = "Docs_CategoryGeneral";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryMisc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+            /// </summary>
+            public const string DocsCategoryMisc = "Docs_CategoryMisc";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryOrders</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+            /// </summary>
+            public const string DocsCategoryOrders = "Docs_CategoryOrders";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryPayments</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+            /// </summary>
+            public const string DocsCategoryPayments = "Docs_CategoryPayments";
+
+            /// <summary>
+            /// Key: <c>Docs_CategoryPlatform</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+            /// </summary>
+            public const string DocsCategoryPlatform = "Docs_CategoryPlatform";
+
+            /// <summary>
+            /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+            /// </summary>
+            public const string DocsErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+            /// <summary>
+            /// Key: <c>Docs_IntroReadme</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+            /// </summary>
+            public const string DocsIntroReadme = "Docs_IntroReadme";
 
             /// <summary>
             /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -33324,6 +33916,14 @@ namespace Assets.Constants
         public const string Analytics_OfdReceipts = "Analytics_OfdReceipts";
 
         /// <summary>
+        /// Key: <c>Analytics_OrderItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+        /// </summary>
+        public const string Analytics_OrderItems = "Analytics_OrderItems";
+
+        /// <summary>
         /// Key: <c>Analytics_OrdersCount</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -33346,6 +33946,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
         /// </summary>
         public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
+        /// Key: <c>Analytics_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+        /// </summary>
+        public const string Analytics_PageTitle = "Analytics_PageTitle";
 
         /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -33466,6 +34074,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
         /// </summary>
         public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
+
+        /// <summary>
+        /// Key: <c>Analytics_SkuUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+        /// </summary>
+        public const string Analytics_SkuUnit = "Analytics_SkuUnit";
 
         /// <summary>
         /// Key: <c>Analytics_StatusesUnit</c><br/>
@@ -33884,6 +34500,14 @@ namespace Assets.Constants
         public const string AnalyticsOfdReceipts = "Analytics_OfdReceipts";
 
         /// <summary>
+        /// Key: <c>Analytics_OrderItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+        /// </summary>
+        public const string AnalyticsOrderItems = "Analytics_OrderItems";
+
+        /// <summary>
         /// Key: <c>Analytics_OrdersCount</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -33906,6 +34530,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
         /// </summary>
         public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
+        /// Key: <c>Analytics_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+        /// </summary>
+        public const string AnalyticsPageTitle = "Analytics_PageTitle";
 
         /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -34026,6 +34658,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
         /// </summary>
         public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
+
+        /// <summary>
+        /// Key: <c>Analytics_SkuUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+        /// </summary>
+        public const string AnalyticsSkuUnit = "Analytics_SkuUnit";
 
         /// <summary>
         /// Key: <c>Analytics_StatusesUnit</c><br/>
@@ -38353,6 +38993,86 @@ namespace Assets.Constants
         public const string District = "District";
 
         /// <summary>
+        /// Key: <c>Docs_CategoryAuth</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+        /// </summary>
+        public const string Docs_CategoryAuth = "Docs_CategoryAuth";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+        /// </summary>
+        public const string Docs_CategoryCatalog = "Docs_CategoryCatalog";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryDesign</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+        /// </summary>
+        public const string Docs_CategoryDesign = "Docs_CategoryDesign";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryGeneral</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+        /// </summary>
+        public const string Docs_CategoryGeneral = "Docs_CategoryGeneral";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryMisc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+        /// </summary>
+        public const string Docs_CategoryMisc = "Docs_CategoryMisc";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryOrders</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+        /// </summary>
+        public const string Docs_CategoryOrders = "Docs_CategoryOrders";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPayments</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+        /// </summary>
+        public const string Docs_CategoryPayments = "Docs_CategoryPayments";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPlatform</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+        /// </summary>
+        public const string Docs_CategoryPlatform = "Docs_CategoryPlatform";
+
+        /// <summary>
+        /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+        /// </summary>
+        public const string Docs_ErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+        /// <summary>
+        /// Key: <c>Docs_IntroReadme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+        /// </summary>
+        public const string Docs_IntroReadme = "Docs_IntroReadme";
+
+        /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка документа...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjat yuklanmoqda...&quot;<br/>
@@ -38415,6 +39135,86 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
         /// </summary>
         public const string Docs_WelcomeTitle = "Docs_WelcomeTitle";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryAuth</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+        /// </summary>
+        public const string DocsCategoryAuth = "Docs_CategoryAuth";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+        /// </summary>
+        public const string DocsCategoryCatalog = "Docs_CategoryCatalog";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryDesign</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+        /// </summary>
+        public const string DocsCategoryDesign = "Docs_CategoryDesign";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryGeneral</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+        /// </summary>
+        public const string DocsCategoryGeneral = "Docs_CategoryGeneral";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryMisc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+        /// </summary>
+        public const string DocsCategoryMisc = "Docs_CategoryMisc";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryOrders</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+        /// </summary>
+        public const string DocsCategoryOrders = "Docs_CategoryOrders";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPayments</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+        /// </summary>
+        public const string DocsCategoryPayments = "Docs_CategoryPayments";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPlatform</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+        /// </summary>
+        public const string DocsCategoryPlatform = "Docs_CategoryPlatform";
+
+        /// <summary>
+        /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+        /// </summary>
+        public const string DocsErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+        /// <summary>
+        /// Key: <c>Docs_IntroReadme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+        /// </summary>
+        public const string DocsIntroReadme = "Docs_IntroReadme";
 
         /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -40729,6 +41529,14 @@ namespace Assets.Constants
         public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
 
         /// <summary>
+        /// Key: <c>Home_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+        /// </summary>
+        public const string Home_PageTitle = "Home_PageTitle";
+
+        /// <summary>
         /// Key: <c>Home_SearchNoResults</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
@@ -40791,6 +41599,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
         /// </summary>
         public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+        /// </summary>
+        public const string HomePageTitle = "Home_PageTitle";
 
         /// <summary>
         /// Key: <c>Home_SearchNoResults</c><br/>
@@ -47601,6 +48417,22 @@ namespace Assets.Constants
         public const string Payment_Amount = "Payment_Amount";
 
         /// <summary>
+        /// Key: <c>Payment_AuthGoogleSso</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+        /// </summary>
+        public const string Payment_AuthGoogleSso = "Payment_AuthGoogleSso";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+        /// </summary>
+        public const string Payment_AuthTelegramOidc = "Payment_AuthTelegramOidc";
+
+        /// <summary>
         /// Key: <c>Payment_AvailableLimit</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Доступный лимит рассрочки&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjud muddatli to'lov limiti&quot;<br/>
@@ -47825,6 +48657,14 @@ namespace Assets.Constants
         public const string Payment_Order = "Payment_Order";
 
         /// <summary>
+        /// Key: <c>Payment_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+        /// </summary>
+        public const string Payment_PageTitle = "Payment_PageTitle";
+
+        /// <summary>
         /// Key: <c>Payment_Paid</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Выплачено&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'langan&quot;<br/>
@@ -48007,6 +48847,22 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
         /// </summary>
         public const string PaymentAmount = "Payment_Amount";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthGoogleSso</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+        /// </summary>
+        public const string PaymentAuthGoogleSso = "Payment_AuthGoogleSso";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+        /// </summary>
+        public const string PaymentAuthTelegramOidc = "Payment_AuthTelegramOidc";
 
         /// <summary>
         /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -48231,6 +49087,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order&quot;
         /// </summary>
         public const string PaymentOrder = "Payment_Order";
+
+        /// <summary>
+        /// Key: <c>Payment_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+        /// </summary>
+        public const string PaymentPageTitle = "Payment_PageTitle";
 
         /// <summary>
         /// Key: <c>Payment_Paid</c><br/>
@@ -51889,12 +52753,68 @@ namespace Assets.Constants
         public const string SignIn_ConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
         /// <summary>
+        /// Key: <c>SignIn_EnterValidPhone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+        /// </summary>
+        public const string SignIn_EnterValidPhone = "SignIn_EnterValidPhone";
+
+        /// <summary>
+        /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+        /// </summary>
+        public const string SignIn_EnterVerificationCode = "SignIn_EnterVerificationCode";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceIdentifying</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+        /// </summary>
+        public const string SignIn_FaceIdentifying = "SignIn_FaceIdentifying";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceInitializing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+        /// </summary>
+        public const string SignIn_FaceInitializing = "SignIn_FaceInitializing";
+
+        /// <summary>
+        /// Key: <c>SignIn_FacePromptStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+        /// </summary>
+        public const string SignIn_FacePromptStart = "SignIn_FacePromptStart";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceSuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+        /// </summary>
+        public const string SignIn_FaceSuccess = "SignIn_FaceSuccess";
+
+        /// <summary>
         /// Key: <c>SignIn_FastAccessNotice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
         /// </summary>
         public const string SignIn_FastAccessNotice = "SignIn_FastAccessNotice";
+
+        /// <summary>
+        /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+        /// </summary>
+        public const string SignIn_GoogleClientMissing = "SignIn_GoogleClientMissing";
 
         /// <summary>
         /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -51919,6 +52839,30 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
         /// </summary>
         public const string SignIn_OtpLabel = "SignIn_OtpLabel";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+        /// </summary>
+        public const string SignIn_PasskeyCanceled = "SignIn_PasskeyCanceled";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+        /// </summary>
+        public const string SignIn_PasskeyPrompt = "SignIn_PasskeyPrompt";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeySuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+        /// </summary>
+        public const string SignIn_PasskeySuccess = "SignIn_PasskeySuccess";
 
         /// <summary>
         /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -52001,6 +52945,14 @@ namespace Assets.Constants
         public const string SignIn_Subtitle = "SignIn_Subtitle";
 
         /// <summary>
+        /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+        /// </summary>
+        public const string SignIn_TelegramClientMissing = "SignIn_TelegramClientMissing";
+
+        /// <summary>
         /// Key: <c>SignIn_Title</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic ID&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ID&quot;<br/>
@@ -52057,12 +53009,68 @@ namespace Assets.Constants
         public const string SignInConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
         /// <summary>
+        /// Key: <c>SignIn_EnterValidPhone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+        /// </summary>
+        public const string SignInEnterValidPhone = "SignIn_EnterValidPhone";
+
+        /// <summary>
+        /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+        /// </summary>
+        public const string SignInEnterVerificationCode = "SignIn_EnterVerificationCode";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceIdentifying</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+        /// </summary>
+        public const string SignInFaceIdentifying = "SignIn_FaceIdentifying";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceInitializing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+        /// </summary>
+        public const string SignInFaceInitializing = "SignIn_FaceInitializing";
+
+        /// <summary>
+        /// Key: <c>SignIn_FacePromptStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+        /// </summary>
+        public const string SignInFacePromptStart = "SignIn_FacePromptStart";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceSuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+        /// </summary>
+        public const string SignInFaceSuccess = "SignIn_FaceSuccess";
+
+        /// <summary>
         /// Key: <c>SignIn_FastAccessNotice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
         /// </summary>
         public const string SignInFastAccessNotice = "SignIn_FastAccessNotice";
+
+        /// <summary>
+        /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+        /// </summary>
+        public const string SignInGoogleClientMissing = "SignIn_GoogleClientMissing";
 
         /// <summary>
         /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -52087,6 +53095,30 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
         /// </summary>
         public const string SignInOtpLabel = "SignIn_OtpLabel";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+        /// </summary>
+        public const string SignInPasskeyCanceled = "SignIn_PasskeyCanceled";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+        /// </summary>
+        public const string SignInPasskeyPrompt = "SignIn_PasskeyPrompt";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeySuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+        /// </summary>
+        public const string SignInPasskeySuccess = "SignIn_PasskeySuccess";
 
         /// <summary>
         /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -52167,6 +53199,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified Authentication &amp;amp; Biometrics&quot;
         /// </summary>
         public const string SignInSubtitle = "SignIn_Subtitle";
+
+        /// <summary>
+        /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+        /// </summary>
+        public const string SignInTelegramClientMissing = "SignIn_TelegramClientMissing";
 
         /// <summary>
         /// Key: <c>SignIn_Title</c><br/>
@@ -55297,6 +56337,22 @@ namespace Assets.Constants
         public const string VenueTheatersDesc = "VenueTheatersDesc";
 
         /// <summary>
+        /// Key: <c>Viewer3d_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+        /// </summary>
+        public const string Viewer3d_PageTitle = "Viewer3d_PageTitle";
+
+        /// <summary>
+        /// Key: <c>Viewer3d_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+        /// </summary>
+        public const string Viewer3dPageTitle = "Viewer3d_PageTitle";
+
+        /// <summary>
         /// Key: <c>Wish list</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqimli&quot;<br/>
@@ -55329,6 +56385,14 @@ namespace Assets.Constants
         public const string WishList_EmptyTitle = "WishList_EmptyTitle";
 
         /// <summary>
+        /// Key: <c>WishList_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+        /// </summary>
+        public const string WishList_PageTitle = "WishList_PageTitle";
+
+        /// <summary>
         /// Key: <c>WishList_BrowseCatalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейти в каталог&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogga o‘tish&quot;<br/>
@@ -55351,6 +56415,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Your wish list is empty&quot;
         /// </summary>
         public const string WishListEmptyTitle = "WishList_EmptyTitle";
+
+        /// <summary>
+        /// Key: <c>WishList_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+        /// </summary>
+        public const string WishListPageTitle = "WishList_PageTitle";
 
         /// <summary>
         /// Key: <c>WishListSubtitle</c><br/>
@@ -55830,7 +56902,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (553 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (559 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -57192,6 +58264,14 @@ namespace Loc
         public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
 
         /// <summary>
+        /// Key: <c>Home_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+        /// </summary>
+        public const string Home_PageTitle = "Home_PageTitle";
+
+        /// <summary>
         /// Key: <c>Home_SearchNoResults</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
@@ -57262,6 +58342,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
         /// </summary>
         public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог заведений и организаций • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar va muassasalar katalogi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations &amp;amp; Locations Catalog • Socratic&quot;
+        /// </summary>
+        public const string HomePageTitle = "Home_PageTitle";
 
         /// <summary>
         /// Key: <c>Home_SearchNoResults</c><br/>
@@ -60184,6 +61272,22 @@ namespace Loc
         public const string VenueTheatersDesc = "VenueTheatersDesc";
 
         /// <summary>
+        /// Key: <c>Viewer3d_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+        /// </summary>
+        public const string Viewer3d_PageTitle = "Viewer3d_PageTitle";
+
+        /// <summary>
+        /// Key: <c>Viewer3d_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;3D Просмотр моделей • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;3D Modellar ko'rish • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;3D Model Viewer • Socratic&quot;
+        /// </summary>
+        public const string Viewer3dPageTitle = "Viewer3d_PageTitle";
+
+        /// <summary>
         /// Key: <c>Wish list</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yoqimli&quot;<br/>
@@ -60216,6 +61320,14 @@ namespace Loc
         public const string WishList_EmptyTitle = "WishList_EmptyTitle";
 
         /// <summary>
+        /// Key: <c>WishList_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+        /// </summary>
+        public const string WishList_PageTitle = "WishList_PageTitle";
+
+        /// <summary>
         /// Key: <c>WishList_BrowseCatalog</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Перейти в каталог&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalogga o‘tish&quot;<br/>
@@ -60238,6 +61350,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Your wish list is empty&quot;
         /// </summary>
         public const string WishListEmptyTitle = "WishList_EmptyTitle";
+
+        /// <summary>
+        /// Key: <c>WishList_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Избранное • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Saralanganlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Wish List • Socratic&quot;
+        /// </summary>
+        public const string WishListPageTitle = "WishList_PageTitle";
 
         /// <summary>
         /// Key: <c>WishListSubtitle</c><br/>
@@ -60393,7 +61513,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Auth (129 keys). Use with <c>@using static Loc.Auth;</c>.
+    /// Domain group: Auth (162 keys). Use with <c>@using static Loc.Auth;</c>.
     /// </summary>
     public static class Auth
     {
@@ -60550,6 +61670,22 @@ namespace Loc
         public const string ConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
         /// <summary>
+        /// Key: <c>SignIn_EnterValidPhone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+        /// </summary>
+        public const string EnterValidPhone = "SignIn_EnterValidPhone";
+
+        /// <summary>
+        /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+        /// </summary>
+        public const string EnterVerificationCode = "SignIn_EnterVerificationCode";
+
+        /// <summary>
         /// Key: <c>Auth_FaceId_Bound</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;✅ Привязано к аккаунту&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;✅ Hisobga ulangan&quot;<br/>
@@ -60638,6 +61774,14 @@ namespace Loc
         public const string FaceIdDelete = "Auth_FaceId_Delete";
 
         /// <summary>
+        /// Key: <c>SignIn_FaceIdentifying</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+        /// </summary>
+        public const string FaceIdentifying = "SignIn_FaceIdentifying";
+
+        /// <summary>
         /// Key: <c>Auth_FaceId_Hint</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по взгляду в камеру&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kameraga qarash orqali kirish&quot;<br/>
@@ -60678,12 +61822,44 @@ namespace Loc
         public const string FaceIdTurnRight = "FaceId_TurnRight";
 
         /// <summary>
+        /// Key: <c>SignIn_FaceInitializing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+        /// </summary>
+        public const string FaceInitializing = "SignIn_FaceInitializing";
+
+        /// <summary>
+        /// Key: <c>SignIn_FacePromptStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+        /// </summary>
+        public const string FacePromptStart = "SignIn_FacePromptStart";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceSuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+        /// </summary>
+        public const string FaceSuccess = "SignIn_FaceSuccess";
+
+        /// <summary>
         /// Key: <c>SignIn_FastAccessNotice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
         /// </summary>
         public const string FastAccessNotice = "SignIn_FastAccessNotice";
+
+        /// <summary>
+        /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+        /// </summary>
+        public const string GoogleClientMissing = "SignIn_GoogleClientMissing";
 
         /// <summary>
         /// Key: <c>OAuth_GoogleProcessing</c><br/>
@@ -60902,6 +62078,22 @@ namespace Loc
         public const string PageTitleTelegram = "OAuth_PageTitleTelegram";
 
         /// <summary>
+        /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+        /// </summary>
+        public const string PasskeyCanceled = "SignIn_PasskeyCanceled";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+        /// </summary>
+        public const string PasskeyPrompt = "SignIn_PasskeyPrompt";
+
+        /// <summary>
         /// Key: <c>Auth_Passkeys_Subtitle</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Вход по Touch ID / Face ID устройства&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qurilmaning Touch ID / Face ID orqali kirish&quot;<br/>
@@ -60916,6 +62108,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Login with device Touch ID / Face ID&quot;
         /// </summary>
         public const string PasskeysSubtitle = "Auth_Passkeys_Subtitle";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeySuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+        /// </summary>
+        public const string PasskeySuccess = "SignIn_PasskeySuccess";
 
         /// <summary>
         /// Key: <c>SignIn_PrimaryAuth</c><br/>
@@ -60974,12 +62174,68 @@ namespace Loc
         public const string SignIn_ConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
         /// <summary>
+        /// Key: <c>SignIn_EnterValidPhone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+        /// </summary>
+        public const string SignIn_EnterValidPhone = "SignIn_EnterValidPhone";
+
+        /// <summary>
+        /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+        /// </summary>
+        public const string SignIn_EnterVerificationCode = "SignIn_EnterVerificationCode";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceIdentifying</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+        /// </summary>
+        public const string SignIn_FaceIdentifying = "SignIn_FaceIdentifying";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceInitializing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+        /// </summary>
+        public const string SignIn_FaceInitializing = "SignIn_FaceInitializing";
+
+        /// <summary>
+        /// Key: <c>SignIn_FacePromptStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+        /// </summary>
+        public const string SignIn_FacePromptStart = "SignIn_FacePromptStart";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceSuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+        /// </summary>
+        public const string SignIn_FaceSuccess = "SignIn_FaceSuccess";
+
+        /// <summary>
         /// Key: <c>SignIn_FastAccessNotice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.&quot;
         /// </summary>
         public const string SignIn_FastAccessNotice = "SignIn_FastAccessNotice";
+
+        /// <summary>
+        /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+        /// </summary>
+        public const string SignIn_GoogleClientMissing = "SignIn_GoogleClientMissing";
 
         /// <summary>
         /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -61004,6 +62260,30 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
         /// </summary>
         public const string SignIn_OtpLabel = "SignIn_OtpLabel";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+        /// </summary>
+        public const string SignIn_PasskeyCanceled = "SignIn_PasskeyCanceled";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+        /// </summary>
+        public const string SignIn_PasskeyPrompt = "SignIn_PasskeyPrompt";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeySuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+        /// </summary>
+        public const string SignIn_PasskeySuccess = "SignIn_PasskeySuccess";
 
         /// <summary>
         /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -61086,6 +62366,14 @@ namespace Loc
         public const string SignIn_Subtitle = "SignIn_Subtitle";
 
         /// <summary>
+        /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+        /// </summary>
+        public const string SignIn_TelegramClientMissing = "SignIn_TelegramClientMissing";
+
+        /// <summary>
         /// Key: <c>SignIn_Title</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic ID&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ID&quot;<br/>
@@ -61142,6 +62430,54 @@ namespace Loc
         public const string SignInConfirmAndSignIn = "SignIn_ConfirmAndSignIn";
 
         /// <summary>
+        /// Key: <c>SignIn_EnterValidPhone</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите корректный номер телефона (+998...)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, to'g'ri telefon raqamini kiriting (+998...)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter a valid phone number (+998...)&quot;
+        /// </summary>
+        public const string SignInEnterValidPhone = "SignIn_EnterValidPhone";
+
+        /// <summary>
+        /// Key: <c>SignIn_EnterVerificationCode</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пожалуйста, введите 6-значный код&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Iltimos, 6 xonali kodni kiriting&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Please enter the 6-digit code&quot;
+        /// </summary>
+        public const string SignInEnterVerificationCode = "SignIn_EnterVerificationCode";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceIdentifying</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Идентификация...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Identifikatsiya qilinmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Identifying...&quot;
+        /// </summary>
+        public const string SignInFaceIdentifying = "SignIn_FaceIdentifying";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceInitializing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Инициализация камеры...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamera ishga tushirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Initializing camera...&quot;
+        /// </summary>
+        public const string SignInFaceInitializing = "SignIn_FaceInitializing";
+
+        /// <summary>
+        /// Key: <c>SignIn_FacePromptStart</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Нажмите кнопку для включения камеры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kamerani yoqish uchun tugmani bosing&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Press button to enable camera&quot;
+        /// </summary>
+        public const string SignInFacePromptStart = "SignIn_FacePromptStart";
+
+        /// <summary>
+        /// Key: <c>SignIn_FaceSuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Успешно распознано! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Successfully recognized! Signing in...&quot;
+        /// </summary>
+        public const string SignInFaceSuccess = "SignIn_FaceSuccess";
+
+        /// <summary>
         /// Key: <c>SignIn_FastAccessNotice</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрый вход (Face ID, Passkey, Google) включается в настройках профиля после первого входа по номеру телефона или через Telegram.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.&quot;<br/>
@@ -61156,6 +62492,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Signing In...&quot;
         /// </summary>
         public const string SigningIn = "SignIn_SigningIn";
+
+        /// <summary>
+        /// Key: <c>SignIn_GoogleClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google Client ID не задан в конфигурации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfiguratsiyada Google Client ID ko'rsatilmagan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google Client ID is not configured&quot;
+        /// </summary>
+        public const string SignInGoogleClientMissing = "SignIn_GoogleClientMissing";
 
         /// <summary>
         /// Key: <c>SignIn_OrConnectedAccounts</c><br/>
@@ -61180,6 +62524,30 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;6-Digit Verification Code&quot;
         /// </summary>
         public const string SignInOtpLabel = "SignIn_OtpLabel";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyCanceled</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey отменен или не настроен на устройстве.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey bekor qilindi yoki qurilmada sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey cancelled or not configured on device.&quot;
+        /// </summary>
+        public const string SignInPasskeyCanceled = "SignIn_PasskeyCanceled";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeyPrompt</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Приложите палец или посмотрите в камеру устройства...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barmog'ingizni bosing yoki qurilma kamerasiga qarang...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch fingerprint or look into camera...&quot;
+        /// </summary>
+        public const string SignInPasskeyPrompt = "SignIn_PasskeyPrompt";
+
+        /// <summary>
+        /// Key: <c>SignIn_PasskeySuccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Passkey подтвержден! Выполняется вход...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Passkey tasdiqlandi! Tizimga kirilmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Passkey verified! Signing in...&quot;
+        /// </summary>
+        public const string SignInPasskeySuccess = "SignIn_PasskeySuccess";
 
         /// <summary>
         /// Key: <c>SignIn_PhoneLabel</c><br/>
@@ -61262,6 +62630,14 @@ namespace Loc
         public const string SignInSubtitle = "SignIn_Subtitle";
 
         /// <summary>
+        /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+        /// </summary>
+        public const string SignInTelegramClientMissing = "SignIn_TelegramClientMissing";
+
+        /// <summary>
         /// Key: <c>SignIn_Title</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic ID&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ID&quot;<br/>
@@ -61340,6 +62716,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Login via Telegram Widget&quot;
         /// </summary>
         public const string Telegram_Subtitle = "Auth_Telegram_Subtitle";
+
+        /// <summary>
+        /// Key: <c>SignIn_TelegramClientMissing</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram Client ID не настроен в конфигурации системы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram Client ID is not configured.&quot;
+        /// </summary>
+        public const string TelegramClientMissing = "SignIn_TelegramClientMissing";
 
         /// <summary>
         /// Key: <c>OAuth_TelegramProcessing</c><br/>
@@ -63612,7 +64996,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Checkout (304 keys). Use with <c>@using static Loc.Checkout;</c>.
+    /// Domain group: Checkout (313 keys). Use with <c>@using static Loc.Checkout;</c>.
     /// </summary>
     public static class Checkout
     {
@@ -63647,6 +65031,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
         /// </summary>
         public const string AmountText = "Payment_Amount";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthGoogleSso</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+        /// </summary>
+        public const string AuthGoogleSso = "Payment_AuthGoogleSso";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+        /// </summary>
+        public const string AuthTelegramOidc = "Payment_AuthTelegramOidc";
 
         /// <summary>
         /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -64841,6 +66241,14 @@ namespace Loc
         public const string OpenInApp = "Checkout_OpenInApp";
 
         /// <summary>
+        /// Key: <c>Payment_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+        /// </summary>
+        public const string PageTitleText = "Payment_PageTitle";
+
+        /// <summary>
         /// Key: <c>Checkout_PanCardNumber</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Номер карты (16 цифр)&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Karta raqami (16 raqam)&quot;<br/>
@@ -64935,6 +66343,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
         /// </summary>
         public const string Payment_Amount = "Payment_Amount";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthGoogleSso</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+        /// </summary>
+        public const string Payment_AuthGoogleSso = "Payment_AuthGoogleSso";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+        /// </summary>
+        public const string Payment_AuthTelegramOidc = "Payment_AuthTelegramOidc";
 
         /// <summary>
         /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -65161,6 +66585,14 @@ namespace Loc
         public const string Payment_Order = "Payment_Order";
 
         /// <summary>
+        /// Key: <c>Payment_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+        /// </summary>
+        public const string Payment_PageTitle = "Payment_PageTitle";
+
+        /// <summary>
         /// Key: <c>Payment_Paid</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Выплачено&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'langan&quot;<br/>
@@ -65343,6 +66775,22 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
         /// </summary>
         public const string PaymentAmount = "Payment_Amount";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthGoogleSso</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Google SSO&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Google SSO&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Google SSO&quot;
+        /// </summary>
+        public const string PaymentAuthGoogleSso = "Payment_AuthGoogleSso";
+
+        /// <summary>
+        /// Key: <c>Payment_AuthTelegramOidc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Telegram OIDC&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Telegram OIDC&quot;
+        /// </summary>
+        public const string PaymentAuthTelegramOidc = "Payment_AuthTelegramOidc";
 
         /// <summary>
         /// Key: <c>Payment_AvailableLimit</c><br/>
@@ -65559,6 +67007,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order&quot;
         /// </summary>
         public const string PaymentOrder = "Payment_Order";
+
+        /// <summary>
+        /// Key: <c>Payment_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежи и управление рассрочками • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payments &amp;amp; Installments Dashboard • Socratic&quot;
+        /// </summary>
+        public const string PaymentPageTitle = "Payment_PageTitle";
 
         /// <summary>
         /// Key: <c>Payment_Paid</c><br/>
@@ -71153,7 +72609,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Landing (413 keys). Use with <c>@using static Loc.Landing;</c>.
+    /// Domain group: Landing (439 keys). Use with <c>@using static Loc.Landing;</c>.
     /// </summary>
     public static class Landing
     {
@@ -72022,6 +73478,14 @@ namespace Loc
         public const string Analytics_OfdReceipts = "Analytics_OfdReceipts";
 
         /// <summary>
+        /// Key: <c>Analytics_OrderItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+        /// </summary>
+        public const string Analytics_OrderItems = "Analytics_OrderItems";
+
+        /// <summary>
         /// Key: <c>Analytics_OrdersCount</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -72044,6 +73508,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
         /// </summary>
         public const string Analytics_OrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
+        /// Key: <c>Analytics_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+        /// </summary>
+        public const string Analytics_PageTitle = "Analytics_PageTitle";
 
         /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -72164,6 +73636,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top products table&quot;
         /// </summary>
         public const string Analytics_ShowTopProducts = "Analytics_ShowTopProducts";
+
+        /// <summary>
+        /// Key: <c>Analytics_SkuUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+        /// </summary>
+        public const string Analytics_SkuUnit = "Analytics_SkuUnit";
 
         /// <summary>
         /// Key: <c>Analytics_StatusesUnit</c><br/>
@@ -72582,6 +74062,14 @@ namespace Loc
         public const string AnalyticsOfdReceipts = "Analytics_OfdReceipts";
 
         /// <summary>
+        /// Key: <c>Analytics_OrderItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Позиции заказа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma elementlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Items&quot;
+        /// </summary>
+        public const string AnalyticsOrderItems = "Analytics_OrderItems";
+
+        /// <summary>
         /// Key: <c>Analytics_OrdersCount</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Количество заказов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmalar soni&quot;<br/>
@@ -72604,6 +74092,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Order statuses&quot;
         /// </summary>
         public const string AnalyticsOrderStatuses = "Analytics_OrderStatuses";
+
+        /// <summary>
+        /// Key: <c>Analytics_PageTitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аналитика и реестры • Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tahlil va registrlar • Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Analytics &amp;amp; Registries • Socratic&quot;
+        /// </summary>
+        public const string AnalyticsPageTitle = "Analytics_PageTitle";
 
         /// <summary>
         /// Key: <c>Analytics_PaymentChannels</c><br/>
@@ -72726,6 +74222,14 @@ namespace Loc
         public const string AnalyticsShowTopProducts = "Analytics_ShowTopProducts";
 
         /// <summary>
+        /// Key: <c>Analytics_SkuUnit</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SKU&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SKU&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SKU&quot;
+        /// </summary>
+        public const string AnalyticsSkuUnit = "Analytics_SkuUnit";
+
+        /// <summary>
         /// Key: <c>Analytics_StatusesUnit</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;статусов&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;holat&quot;<br/>
@@ -72780,6 +74284,86 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
         /// </summary>
         public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryAuth</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+        /// </summary>
+        public const string Docs_CategoryAuth = "Docs_CategoryAuth";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+        /// </summary>
+        public const string Docs_CategoryCatalog = "Docs_CategoryCatalog";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryDesign</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+        /// </summary>
+        public const string Docs_CategoryDesign = "Docs_CategoryDesign";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryGeneral</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+        /// </summary>
+        public const string Docs_CategoryGeneral = "Docs_CategoryGeneral";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryMisc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+        /// </summary>
+        public const string Docs_CategoryMisc = "Docs_CategoryMisc";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryOrders</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+        /// </summary>
+        public const string Docs_CategoryOrders = "Docs_CategoryOrders";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPayments</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+        /// </summary>
+        public const string Docs_CategoryPayments = "Docs_CategoryPayments";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPlatform</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+        /// </summary>
+        public const string Docs_CategoryPlatform = "Docs_CategoryPlatform";
+
+        /// <summary>
+        /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+        /// </summary>
+        public const string Docs_ErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+        /// <summary>
+        /// Key: <c>Docs_IntroReadme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+        /// </summary>
+        public const string Docs_IntroReadme = "Docs_IntroReadme";
 
         /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>
@@ -72844,6 +74428,86 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic System Documentation&quot;
         /// </summary>
         public const string Docs_WelcomeTitle = "Docs_WelcomeTitle";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryAuth</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Аутентификация (Identifying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Autentifikatsiya (Identifying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Authentication (Identifying)&quot;
+        /// </summary>
+        public const string DocsCategoryAuth = "Docs_CategoryAuth";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryCatalog</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог товаров (Shopping)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlar katalogi (Shopping)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Catalog (Shopping)&quot;
+        /// </summary>
+        public const string DocsCategoryCatalog = "Docs_CategoryCatalog";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryDesign</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Дизайн-система (Design)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Dizayn tizimi (Design)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Design System (Design)&quot;
+        /// </summary>
+        public const string DocsCategoryDesign = "Docs_CategoryDesign";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryGeneral</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Основное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Asosiy&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;General&quot;
+        /// </summary>
+        public const string DocsCategoryGeneral = "Docs_CategoryGeneral";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryMisc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Разное&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Boshqa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Miscellaneous&quot;
+        /// </summary>
+        public const string DocsCategoryMisc = "Docs_CategoryMisc";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryOrders</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Заказы клиентов (Ordering)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mijozlar buyurtmalari (Ordering)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Orders (Ordering)&quot;
+        /// </summary>
+        public const string DocsCategoryOrders = "Docs_CategoryOrders";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPayments</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платежная система (Paying)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov tizimi (Paying)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Payment System (Paying)&quot;
+        /// </summary>
+        public const string DocsCategoryPayments = "Docs_CategoryPayments";
+
+        /// <summary>
+        /// Key: <c>Docs_CategoryPlatform</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа и архитектура (docs)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma va arxitektura (docs)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Platform and Architecture (docs)&quot;
+        /// </summary>
+        public const string DocsCategoryPlatform = "Docs_CategoryPlatform";
+
+        /// <summary>
+        /// Key: <c>Docs_ErrorLoadFailed</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить документ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hujjatni yuklab bo'lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Failed to load document&quot;
+        /// </summary>
+        public const string DocsErrorLoadFailed = "Docs_ErrorLoadFailed";
+
+        /// <summary>
+        /// Key: <c>Docs_IntroReadme</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Введение (Root README)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kirish (Root README)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Introduction (Root README)&quot;
+        /// </summary>
+        public const string DocsIntroReadme = "Docs_IntroReadme";
 
         /// <summary>
         /// Key: <c>Docs_LoadingDoc</c><br/>

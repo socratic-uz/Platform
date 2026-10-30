@@ -456,7 +456,7 @@
 .actions-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: 0.625rem;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     margin-top: 0.5rem;
 }
 
@@ -5287,6 +5287,10 @@ textarea:invalid:focus-visible {
 
     .evolution-banner {
         gap: 1.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
         padding: 2rem 1.25rem;
         border-radius: var(--md-sys-shape-expressive-card, 24px);
     }
@@ -5655,7 +5659,9 @@ textarea:invalid:focus-visible {
 .delivery-actions-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    margin: 0;
+    padding: 0;
 }
 
 .drop-container {
@@ -6332,7 +6338,10 @@ textarea:invalid:focus-visible {
     display: grid;
     gap: 3rem;
     position: relative;
+    box-sizing: border-box;
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
     padding: 3.5rem 3rem;
     border: 1px solid color-mix(in srgb, var(--md-sys-color-secondary) 25%, transparent);
     border-radius: var(--md-sys-shape-expressive-corner-extra-large, 32px);
@@ -6463,6 +6472,8 @@ textarea:invalid:focus-visible {
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .yandex-right-controls-container {

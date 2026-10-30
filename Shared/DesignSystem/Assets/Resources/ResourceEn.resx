@@ -1694,6 +1694,39 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Quick Access methods (Face ID, Passkey, Google) are activated after your first login in Profile Settings. If you haven't linked them yet, please sign in with Phone or Telegram.</value>
   </data>
+  <data name="SignIn_FacePromptStart" xml:space="preserve">
+    <value>Press button to enable camera</value>
+  </data>
+  <data name="SignIn_FaceInitializing" xml:space="preserve">
+    <value>Initializing camera...</value>
+  </data>
+  <data name="SignIn_FaceIdentifying" xml:space="preserve">
+    <value>Identifying...</value>
+  </data>
+  <data name="SignIn_FaceSuccess" xml:space="preserve">
+    <value>Successfully recognized! Signing in...</value>
+  </data>
+  <data name="SignIn_PasskeyPrompt" xml:space="preserve">
+    <value>Touch fingerprint or look into camera...</value>
+  </data>
+  <data name="SignIn_PasskeySuccess" xml:space="preserve">
+    <value>Passkey verified! Signing in...</value>
+  </data>
+  <data name="SignIn_PasskeyCanceled" xml:space="preserve">
+    <value>Passkey cancelled or not configured on device.</value>
+  </data>
+  <data name="SignIn_EnterValidPhone" xml:space="preserve">
+    <value>Please enter a valid phone number (+998...)</value>
+  </data>
+  <data name="SignIn_EnterVerificationCode" xml:space="preserve">
+    <value>Please enter the 6-digit code</value>
+  </data>
+  <data name="SignIn_GoogleClientMissing" xml:space="preserve">
+    <value>Google Client ID is not configured</value>
+  </data>
+  <data name="SignIn_TelegramClientMissing" xml:space="preserve">
+    <value>Telegram Client ID is not configured.</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
@@ -2128,6 +2161,39 @@
   </data>
   <data name="Docs_WelcomeDesc" xml:space="preserve">
     <value>Select a section from the sidebar to view architecture details, APIs, and microservice databases.</value>
+  </data>
+  <data name="Viewer3d_PageTitle" xml:space="preserve">
+    <value>3D Model Viewer • Socratic</value>
+  </data>
+  <data name="Docs_CategoryGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Docs_CategoryPlatform" xml:space="preserve">
+    <value>Platform and Architecture (docs)</value>
+  </data>
+  <data name="Docs_CategoryAuth" xml:space="preserve">
+    <value>Authentication (Identifying)</value>
+  </data>
+  <data name="Docs_CategoryCatalog" xml:space="preserve">
+    <value>Product Catalog (Shopping)</value>
+  </data>
+  <data name="Docs_CategoryOrders" xml:space="preserve">
+    <value>Customer Orders (Ordering)</value>
+  </data>
+  <data name="Docs_CategoryPayments" xml:space="preserve">
+    <value>Payment System (Paying)</value>
+  </data>
+  <data name="Docs_CategoryDesign" xml:space="preserve">
+    <value>Design System (Design)</value>
+  </data>
+  <data name="Docs_CategoryMisc" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="Docs_IntroReadme" xml:space="preserve">
+    <value>Introduction (Root README)</value>
+  </data>
+  <data name="Docs_ErrorLoadFailed" xml:space="preserve">
+    <value>Failed to load document</value>
   </data>
   <data name="QrDesigner_PageTitle" xml:space="preserve">
     <value>QrDesigner — Dynamic QR Code Designer</value>
@@ -5049,5 +5115,29 @@
   </data>
   <data name="Analytics_Data" xml:space="preserve">
     <value>Data</value>
+  </data>
+  <data name="Analytics_OrderItems" xml:space="preserve">
+    <value>Order Items</value>
+  </data>
+  <data name="Analytics_PageTitle" xml:space="preserve">
+    <value>Analytics &amp; Registries • Socratic</value>
+  </data>
+  <data name="Analytics_SkuUnit" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Home_PageTitle" xml:space="preserve">
+    <value>Organizations &amp; Locations Catalog • Socratic</value>
+  </data>
+  <data name="Payment_PageTitle" xml:space="preserve">
+    <value>Payments &amp; Installments Dashboard • Socratic</value>
+  </data>
+  <data name="Payment_AuthGoogleSso" xml:space="preserve">
+    <value>Google SSO</value>
+  </data>
+  <data name="Payment_AuthTelegramOidc" xml:space="preserve">
+    <value>Telegram OIDC</value>
+  </data>
+  <data name="WishList_PageTitle" xml:space="preserve">
+    <value>Wish List • Socratic</value>
   </data>
 </root>

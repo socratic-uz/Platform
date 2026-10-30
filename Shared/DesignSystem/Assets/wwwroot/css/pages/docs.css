@@ -15,48 +15,10 @@
     min-height: 48px;
     padding: 0;
     border: none;
-    border-radius: 50%;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: transparent;
     color: var(--md-sys-color-on-surface-variant);
     cursor: pointer;
-}
-
-.docs-refresh-btn .search-bar {
-    height: 48px;
-}
-
-.docs-refresh-btn .search-clear-btn {
-    width: 48px;
-    height: 48px;
-}
-
-.docs-refresh-btn .search-route-btn {
-    width: 48px;
-    height: 48px;
-}
-
-.docs-refresh-btn .seller-logo {
-    width: 48px;
-    height: 48px;
-}
-
-.docs-refresh-btn .seller-logo-placeholder {
-    width: 48px;
-    height: 48px;
-}
-
-.docs-refresh-btn .ux-search-box input {
-    height: 48px;
-}
-
-.docs-refresh-btn .yandex-ctrl-btn {
-    width: 48px;
-    height: 48px;
-}
-
-.docs-refresh-btn md-icon {
-    width: 48px;
-    height: 48px;
 }
 
 .docs-welcome-card {
@@ -66,7 +28,7 @@
     max-width: 480px;
     padding: 32px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
     background-color: var(--md-sys-color-surface-container-low);
     text-align: center;
 }
@@ -139,8 +101,11 @@
         position: fixed;
         inset: 0;
         z-index: 110;
+        padding: 0;
+        border: 0;
         background: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
         backdrop-filter: blur(4px);
+        cursor: pointer;
     }
 
     .docs-mobile-menu-btn {

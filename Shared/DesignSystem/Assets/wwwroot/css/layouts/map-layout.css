@@ -276,3 +276,152 @@
 }
 
 
+
+/* Navigator Controls Buttons */
+.navigator-controls .nav-btn-recenter,
+.navigator-controls .nav-btn-voice {
+    --md-icon-button-icon-color: var(--md-sys-color-inverse-on-surface);
+}
+
+.navigator-controls .nav-btn-voice.active {
+    --md-icon-button-icon-color: var(--md-sys-color-tertiary);
+}
+
+.navigator-controls .nav-btn-stop {
+    --md-filled-icon-button-container-color: var(--md-sys-color-error);
+    --md-filled-icon-button-icon-color: var(--md-sys-color-on-error);
+}
+
+/* Map Popup Dialog */
+.map-popup-backdrop {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.map-popup-dialog {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    position: relative;
+    width: 90vw;
+    max-width: 960px;
+    height: 80vh;
+    max-height: 720px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface);
+    box-shadow: var(--md-sys-elevation-level4, 0 12px 32px rgb(0 0 0 / 0.4));
+    overflow: hidden;
+}
+
+.map-popup-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container);
+    min-width: 0;
+}
+
+.map-popup-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.map-popup-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.map-popup-footer {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container);
+}
+
+.map-popup-info {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.map-popup-address {
+    color: var(--md-sys-color-primary);
+}
+
+.map-popup-hint {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-outline);
+}
+
+.map-popup-actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global suggestions list */
+.map-global-suggestions {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    padding: 4px 0;
+    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    overflow: hidden;
+    --md-list-container-color: var(--md-sys-color-surface-container-high);
+}
+
+.map-global-suggestions md-list-item[selected] {
+    --md-list-item-container-color: var(--md-sys-color-secondary-container);
+}
+
+.map-global-suggestion-icon {
+    color: var(--md-sys-color-primary);
+}
+
+/* Place Details Card */
+.map-place-details-card .place-actions-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    --md-filled-button-leading-space: 12px;
+    --md-filled-button-trailing-space: 12px;
+    --md-outlined-button-leading-space: 12px;
+    --md-outlined-button-trailing-space: 12px;
+}
+
+.map-place-details-card .place-btn-route {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+}
+
+/* Nearby Results */
+.nearby-results-empty {
+    margin: 0.5rem 0;
+    color: var(--md-sys-color-outline);
+    font-size: 0.875rem;
+}
+
+.nearby-results-list {
+    display: grid;
+    gap: 4px;
+}

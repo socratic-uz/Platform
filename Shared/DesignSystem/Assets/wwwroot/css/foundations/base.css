@@ -247,77 +247,38 @@ input:focus-visible {
     transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
 }
 
-ol {
+figure {
+    margin: 0;
+}
+
+hgroup {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: var(--md-sys-typescale-body-large-size);
-    font-weight: var(--md-sys-typescale-body-large-weight);
-    line-height: var(--md-sys-typescale-body-large-line-height);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-select {
+menu,
+figure {
     margin: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    text-transform: none;
 }
 
-select:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-summary:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-indent: 0;
-}
-
-textarea {
+hgroup {
     margin: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    user-select: text;
-    -webkit-user-select: text;
+    padding: 0;
 }
 
-textarea:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
+menu,
+ol,
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-width: 0;
 }
 
 video {

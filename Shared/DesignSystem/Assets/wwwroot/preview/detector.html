@@ -46,48 +46,48 @@
 
 
 
-<main class="det-main"><div class="det-layout"><div class="det-sidebar"><header class="det-sidebar-header"><div class="det-logo-badge"><md-icon>videocam</md-icon></div>
-                <div><h1 class="det-title m3-headline-large">AI Detector</h1>
-                    <p class="det-subtitle m3-body-medium">Stream capture & WebRTC</p></div></header>
+<main class="det-main"><section class="det-layout"><aside class="det-sidebar" aria-label="Detection Controls"><header class="det-sidebar-header"><figure class="det-logo-badge"><md-icon>videocam</md-icon></figure>
+                <hgroup><h1 class="det-title m3-headline-large">AI Detector</h1>
+                    <p class="det-subtitle m3-body-medium">Stream capture & WebRTC</p></hgroup></header>
 
-            <div class="det-tabs-container"><md-tabs active-tab-index="0"><md-primary-tab active><md-icon slot="icon">photo_camera</md-icon>Webcam</md-primary-tab>
+            <nav class="det-tabs-container" aria-label="Stream Modes"><md-tabs active-tab-index="0"><md-primary-tab active><md-icon slot="icon">photo_camera</md-icon>Webcam</md-primary-tab>
                     <md-primary-tab><md-icon slot="icon">fingerprint</md-icon>FaceID</md-primary-tab>
                     <md-primary-tab><md-icon slot="icon">settings_input_hdmi</md-icon>FFmpeg</md-primary-tab>
                     <md-primary-tab><md-icon slot="icon">desktop_windows</md-icon>Support</md-primary-tab>
-                    <md-primary-tab><md-icon slot="icon">call</md-icon>Call</md-primary-tab></md-tabs></div>
+                    <md-primary-tab><md-icon slot="icon">call</md-icon>Call</md-primary-tab></md-tabs></nav>
 
-            <form class="det-sidebar-scrollable" action="/detector"><div class="det-card"><h2 class="det-card-title m3-title-medium">Webcam Controls</h2>
-                            
-                            <div class="det-permission-rationale glass"><md-icon>security</md-icon>
-                                <span>CameraRationale</span></div>
+            <form class="det-sidebar-scrollable" action="/detector"><section class="det-card"><h2 class="det-card-title m3-title-medium">Webcam Controls</h2>
+                        
+                        <aside class="det-permission-rationale glass" role="note"><md-icon>security</md-icon>
+                            <span>CameraRationale</span></aside>
 
-                            <div class="det-status-badge m3-pill-badge"><span class="det-dot"></span>
-                                <span>Stopped</span></div>
+                        <span class="det-status-badge m3-pill-badge"><span class="det-dot"></span>
+                            <span>Stopped</span></span>
 
-                            <div class="det-form-group"><md-filled-select id="bac213df-ac24-4935-972d-77be26094577" class="valid material-select" label="Camera Device" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="" headline="Default Camera"></md-select-option></md-filled-select></div>
+                        <div class="det-form-group"><md-filled-select id="c461f076-e9ff-4fa8-a5a0-b91ff163ff77" class="valid material-select" label="Camera Device" supporting-text="" error-text="" menu-positioning="popover" typeahead-delay="200" menu-align="start"><md-select-option value="" headline="Default Camera"></md-select-option></md-filled-select></div>
 
-                            <div class="det-btn-row-2col"><md-filled-button class="expressive"><md-icon slot="icon">play_arrow</md-icon>
-                                    Start Webcam
-                                </md-filled-button>
-                                <md-outlined-button class="expressive" disabled><md-icon slot="icon">stop</md-icon>
-                                    Stop
-                                </md-outlined-button></div>
+                        <menu class="det-btn-row-2col"><md-filled-button class="expressive"><md-icon slot="icon">play_arrow</md-icon>
+                                Start Webcam
+                            </md-filled-button>
+                            <md-outlined-button class="expressive" disabled><md-icon slot="icon">stop</md-icon>
+                                Stop
+                            </md-outlined-button></menu>
 
-                            <md-text-button class="expressive  det-card-top-space"><md-icon slot="icon">camera_alt</md-icon>
-                                Capture Frame
-                            </md-text-button></div></form></div>
+                        <md-text-button class="expressive  det-card-top-space"><md-icon slot="icon">camera_alt</md-icon>
+                            Capture Frame
+                        </md-text-button></section></form></aside>
 
         
-        <div class="det-preview-container"><div class="det-preview-card"><div class="det-preview-header"><h2 class="det-card-title m3-title-medium">Live Detection Preview</h2>
-                    <div class="det-stats"><div class="det-stat-item"><span class="det-stat-label">Frames:</span>
-                            <span class="det-stat-value">0</span></div>
-                        <div class="det-stat-item"><span class="det-stat-label">FPS:</span>
-                            <span class="det-stat-value">0.0</span></div>
-                        <div class="det-stat-item"><span class="det-stat-label">Inference:</span>
-                            <span class="det-stat-value">0 ms</span></div></div></div>
+        <section class="det-preview-container" aria-label="Live Detection Preview"><article class="det-preview-card"><header class="det-preview-header"><h2 class="det-card-title m3-title-medium">Live Detection Preview</h2>
+                    <div class="det-stats"><span class="det-stat-item"><span class="det-stat-label">Frames:</span>
+                            <span class="det-stat-value">0</span></span>
+                        <span class="det-stat-item"><span class="det-stat-label">FPS:</span>
+                            <span class="det-stat-value">0.0</span></span>
+                        <span class="det-stat-item"><span class="det-stat-label">Inference:</span>
+                            <span class="det-stat-value">0 ms</span></span></div></header>
 
-                <div class="det-display-area"><div class="det-camera-wrapper"><div class="det-video-fill" hidden><div class="det-video-stage-wrapper m3-ratio-video"><video style="" class="det-video-fill" id="" muted playsinline></video></div></div><div class="det-placeholder"><md-icon class="det-placeholder-icon">videocam_off</md-icon>
-                                <p class="det-placeholder-text">Stream not started. Configure settings and click Start.</p></div></div></div></div></div></div></main>
+                <section class="det-display-area"><figure class="det-camera-wrapper"><div class="det-video-fill" hidden><div class="det-video-stage-wrapper m3-ratio-video"><video style="" class="det-video-fill" id="" muted playsinline></video></div></div><aside class="det-placeholder" role="status"><md-icon class="det-placeholder-icon">videocam_off</md-icon>
+                                <p class="det-placeholder-text">Stream not started. Configure settings and click Start.</p></aside></figure></section></article></section></section></main>
 
 
 </body>

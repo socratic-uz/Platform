@@ -24,14 +24,14 @@
 
 <header class="app-header header-sticky"><div class="header-grid-layout"><div class="header-start-zone"><div class="header-brand-zone"><a href="/" class="header-brand-link" title="Socratic"><span class="header-brand-icon-box"><md-icon>auto_awesome</md-icon></span>
 						<span class="header-brand-text">Socratic</span></a></div><span class="header-context-divider">/</span>
-    <div class="m3-page-header-start"><md-icon class="m3-page-header-icon">account_balance_wallet</md-icon>
-        <h2 class="m3-page-header-title">dashboard</h2></div></div>
+    <header class="m3-page-header-start"><md-icon class="m3-page-header-icon">account_balance_wallet</md-icon>
+        <h2 class="m3-page-header-title">Панель управления плательщика</h2></header></div>
 
 		
 		<div class="header-center-zone"></div>
 
 		
-		<div class="header-end-zone"><md-outlined-button class="expressive"><md-icon slot="icon">refresh</md-icon><span class="btn-text">Обновить</span></md-outlined-button><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
+		<div class="header-end-zone"><menu class="actions-row"><md-outlined-button class="expressive"><md-icon slot="icon">refresh</md-icon><span class="btn-text">Обновить</span></md-outlined-button></menu><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
 				<span class="lang-current-label">UZ</span>
 				<md-icon>arrow_drop_down</md-icon></button></div></div><div class="avatar-container"><md-outlined-button class="expressive  avatar-button" aria-label="Профиль"><md-icon>person</md-icon></md-outlined-button></div></div></div></header>
 
@@ -52,7 +52,7 @@
 
 
 
-<main class="payment-dashboard m3-page-container"><section class="profile-container m3-grid-main-sidebar"><article class="glass glass-card"><header class="profile-title"><h3>Личный кабинет: Алишер Навои</h3></header>
+<main class="payment-dashboard m3-page-container"><section class="profile-container m3-grid-main-sidebar" aria-label="Панель управления плательщика"><article class="glass glass-card"><header class="profile-title"><h3>Личный кабинет: Алишер Навои</h3></header>
                 <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">ID Пользователя</span>
                         <span class="m3-info-value">UZ-7729104</span></div>
                     <div class="m3-info-item"><span class="m3-info-label">Телефон</span>
@@ -70,16 +70,16 @@
                     <span class="m3-badge badge-active">Низкий Риск</span></div></article>
 
             
-            <article class="glass-card"><header class="profile-title"><h3>🔒 Безопасность и методы быстрого входа</h3></header>
+            <article class="glass-card"><header class="profile-title"><h3><md-icon>lock</md-icon> Безопасность и методы быстрого входа</h3></header>
                 <p>Привяжите биометрию и сервисы для мгновенного входа в 1 клик без ожидания SMS/OTP кодов.</p>
                 <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">👁️ Face ID (Биометрия)</span>
                         <div><span class="m3-badge badge-verified">Настроено</span>
                             <md-outlined-button class="expressive">Обновить снимок</md-outlined-button></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">🌐 Google SSO</span>
+                    <div class="m3-info-item"><span class="m3-info-label">Google SSO</span>
                         <div><span class="m3-badge badge-none">Не привязано</span>
                             <md-outlined-button class="expressive">Привязать Google</md-outlined-button></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">✈️ Telegram OIDC</span>
-                        <div><span class="m3-badge badge-verified">Привязано</span></div></div></div></article></section><section class="m3-grid-stack plans-section"><h2>Мои рассрочки и платежи</h2><div class="m3-grid-stack plans-list"><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</h4>
+                    <div class="m3-info-item"><span class="m3-info-label">Telegram OIDC</span>
+                        <div><span class="m3-badge badge-verified">Привязано</span></div></div></div></article></section><section class="m3-grid-stack plans-section" aria-label="Мои рассрочки и платежи"><h2>Мои рассрочки и платежи</h2><div class="m3-grid-stack plans-list"><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</h4>
                                 <p>Тип: BNPL 0-0-4 | Заказ: #A4F12C</p></div>
                             <div><span class="m3-badge badge-active">Active</span></div></header>
 
@@ -125,13 +125,13 @@
 
 
 
-<footer class="app-footer "><div class="footer-container"><div class="footer-custom-slot"><div class="payment-trust-footer"><div class="trust-badge"><md-icon>verified_user</md-icon>
-            <span>256-bit SSL • Безопасные платежи</span></div>
+<footer class="app-footer "><div class="footer-container"><div class="footer-custom-slot"><footer class="payment-trust-footer"><span class="trust-badge"><md-icon>verified_user</md-icon>
+            <span>256-bit SSL • Безопасные платежи</span></span>
         <md-chip-set class="payment-methods"><md-suggestion-chip label="Uzcard" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Humo" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Visa" class="expressive"></md-suggestion-chip>
             <md-suggestion-chip label="Mastercard" class="expressive"></md-suggestion-chip></md-chip-set>
-        <div class="payment-support"><a href="/help">Служба заботы о клиентах</a></div></div></div><div class="footer-primary-grid"><div class="footer-brand-col"><a href="/" class="footer-brand-link"><span class="footer-brand-badge"><md-icon>auto_awesome</md-icon></span>
+        <nav class="payment-support" aria-label="Служба заботы о клиентах"><a href="/help">Служба заботы о клиентах</a></nav></footer></div><div class="footer-primary-grid"><div class="footer-brand-col"><a href="/" class="footer-brand-link"><span class="footer-brand-badge"><md-icon>auto_awesome</md-icon></span>
 					<span class="footer-brand-title">Socratic</span></a>
 				<p class="footer-brand-tagline">Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.</p>
 				<div class="footer-system-status"><span class="status-pulse-dot" aria-hidden="true"></span>

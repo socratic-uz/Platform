@@ -1694,6 +1694,39 @@
   <data name="SignIn_FastAccessNotice" xml:space="preserve">
     <value>Tezkor kirish (Face ID, Passkey, Google) telefon yoki Telegram orqali birinchi kirishdan keyin profil sozlamalarida yoqiladi.</value>
   </data>
+  <data name="SignIn_FacePromptStart" xml:space="preserve">
+    <value>Kamerani yoqish uchun tugmani bosing</value>
+  </data>
+  <data name="SignIn_FaceInitializing" xml:space="preserve">
+    <value>Kamera ishga tushirilmoqda...</value>
+  </data>
+  <data name="SignIn_FaceIdentifying" xml:space="preserve">
+    <value>Identifikatsiya qilinmoqda...</value>
+  </data>
+  <data name="SignIn_FaceSuccess" xml:space="preserve">
+    <value>Muvaffaqiyatli aniqlandi! Tizimga kirilmoqda...</value>
+  </data>
+  <data name="SignIn_PasskeyPrompt" xml:space="preserve">
+    <value>Barmog'ingizni bosing yoki qurilma kamerasiga qarang...</value>
+  </data>
+  <data name="SignIn_PasskeySuccess" xml:space="preserve">
+    <value>Passkey tasdiqlandi! Tizimga kirilmoqda...</value>
+  </data>
+  <data name="SignIn_PasskeyCanceled" xml:space="preserve">
+    <value>Passkey bekor qilindi yoki qurilmada sozlanmagan.</value>
+  </data>
+  <data name="SignIn_EnterValidPhone" xml:space="preserve">
+    <value>Iltimos, to'g'ri telefon raqamini kiriting (+998...)</value>
+  </data>
+  <data name="SignIn_EnterVerificationCode" xml:space="preserve">
+    <value>Iltimos, 6 xonali kodni kiriting</value>
+  </data>
+  <data name="SignIn_GoogleClientMissing" xml:space="preserve">
+    <value>Konfiguratsiyada Google Client ID ko'rsatilmagan</value>
+  </data>
+  <data name="SignIn_TelegramClientMissing" xml:space="preserve">
+    <value>Tizim konfiguratsiyasida Telegram Client ID sozlanmagan.</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>Barchasi</value>
   </data>
@@ -2128,6 +2161,39 @@
   </data>
   <data name="Docs_WelcomeDesc" xml:space="preserve">
     <value>Mikroservislarning arxitekturasi, API va ma'lumotlar bazalari bo'yicha batafsil ma'lumot olish uchun yon paneldagi kerakli bo'limni tanlang.</value>
+  </data>
+  <data name="Viewer3d_PageTitle" xml:space="preserve">
+    <value>3D Modellar ko'rish • Socratic</value>
+  </data>
+  <data name="Docs_CategoryGeneral" xml:space="preserve">
+    <value>Asosiy</value>
+  </data>
+  <data name="Docs_CategoryPlatform" xml:space="preserve">
+    <value>Platforma va arxitektura (docs)</value>
+  </data>
+  <data name="Docs_CategoryAuth" xml:space="preserve">
+    <value>Autentifikatsiya (Identifying)</value>
+  </data>
+  <data name="Docs_CategoryCatalog" xml:space="preserve">
+    <value>Mahsulotlar katalogi (Shopping)</value>
+  </data>
+  <data name="Docs_CategoryOrders" xml:space="preserve">
+    <value>Mijozlar buyurtmalari (Ordering)</value>
+  </data>
+  <data name="Docs_CategoryPayments" xml:space="preserve">
+    <value>To'lov tizimi (Paying)</value>
+  </data>
+  <data name="Docs_CategoryDesign" xml:space="preserve">
+    <value>Dizayn tizimi (Design)</value>
+  </data>
+  <data name="Docs_CategoryMisc" xml:space="preserve">
+    <value>Boshqa</value>
+  </data>
+  <data name="Docs_IntroReadme" xml:space="preserve">
+    <value>Kirish (Root README)</value>
+  </data>
+  <data name="Docs_ErrorLoadFailed" xml:space="preserve">
+    <value>Hujjatni yuklab bo'lmadi</value>
   </data>
   <data name="QrDesigner_PageTitle" xml:space="preserve">
     <value>QrDesigner — Dinamik QR-kodlar generatori</value>
@@ -5049,5 +5115,29 @@
   </data>
   <data name="Analytics_Data" xml:space="preserve">
     <value>Ma'lumotlar</value>
+  </data>
+  <data name="Analytics_OrderItems" xml:space="preserve">
+    <value>Buyurtma elementlari</value>
+  </data>
+  <data name="Analytics_PageTitle" xml:space="preserve">
+    <value>Tahlil va registrlar • Socratic</value>
+  </data>
+  <data name="Analytics_SkuUnit" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Home_PageTitle" xml:space="preserve">
+    <value>Tashkilotlar va muassasalar katalogi • Socratic</value>
+  </data>
+  <data name="Payment_PageTitle" xml:space="preserve">
+    <value>To‘lovlar va muddatli to‘lovlar boshqaruvi • Socratic</value>
+  </data>
+  <data name="Payment_AuthGoogleSso" xml:space="preserve">
+    <value>Google SSO</value>
+  </data>
+  <data name="Payment_AuthTelegramOidc" xml:space="preserve">
+    <value>Telegram OIDC</value>
+  </data>
+  <data name="WishList_PageTitle" xml:space="preserve">
+    <value>Saralanganlar • Socratic</value>
   </data>
 </root>

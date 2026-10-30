@@ -10,8 +10,8 @@
     grid-auto-columns: max-content;
     gap: 0.35rem;
     align-items: center;
-    min-height: 44px;
-    min-width: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
     padding: 0.45rem 0.85rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
@@ -79,290 +79,6 @@
     font-weight: 600;
     box-shadow: var(--md-sys-elevation-level1);
 }
-
-@media screen and (max-width: 599.98px) {
-    .header-end-zone .analytics-config-btn .btn-text {
-        display: none;
-    }
-
-    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn {
-        min-width: 44px;
-        height: 44px;
-        padding: 0 0.5rem;
-    }
-
-    .header-end-zone .analytics-mode-pill-group .analytics-mode-btn span {
-        display: none;
-    }
-
-    .header-end-zone .avatar-button {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        min-height: 44px;
-    }
-
-    .header-end-zone .btn-text {
-        display: none;
-    }
-
-    .header-end-zone .lang-toggle-btn {
-        height: 44px;
-        min-height: 44px;
-    }
-
-    .header-end-zone .orders-refresh-btn {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone .orders-refresh-btn .btn-text {
-        display: none;
-    }
-
-    .header-end-zone .payment-refresh-btn {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone .payment-refresh-btn .btn-text {
-        display: none;
-    }
-
-    .header-end-zone .showcase-reset-btn {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone .showcase-reset-btn .btn-text {
-        display: none;
-    }
-
-    .header-end-zone md-elevated-button {
-        font-size: 0.75rem;
-        --md-elevated-button-container-height: 44px;
-        --md-filled-button-container-height: 44px;
-        --md-filled-button-leading-space: 6px;
-        --md-filled-button-trailing-space: 6px;
-        --md-filled-tonal-button-container-height: 44px;
-        --md-outlined-button-container-height: 44px;
-        --md-outlined-button-leading-space: 6px;
-        --md-outlined-button-trailing-space: 6px;
-        --md-text-button-container-height: 44px;
-    }
-
-    .header-end-zone md-elevated-button:has([slot="icon"]) {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        font-size: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone md-elevated-button:has([slot="icon"]) .material-symbols-outlined {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-elevated-button:has([slot="icon"]) [slot="icon"] {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-elevated-button:has([slot="icon"]) md-icon {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-button {
-        font-size: 0.75rem;
-        --md-elevated-button-container-height: 44px;
-        --md-filled-button-container-height: 44px;
-        --md-filled-button-leading-space: 6px;
-        --md-filled-button-trailing-space: 6px;
-        --md-filled-tonal-button-container-height: 44px;
-        --md-outlined-button-container-height: 44px;
-        --md-outlined-button-leading-space: 6px;
-        --md-outlined-button-trailing-space: 6px;
-        --md-text-button-container-height: 44px;
-    }
-
-    .header-end-zone md-filled-button:has([slot="icon"]) {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        font-size: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone md-filled-button:has([slot="icon"]) .material-symbols-outlined {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-button:has([slot="icon"]) [slot="icon"] {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-button:has([slot="icon"]) md-icon {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-tonal-button {
-        font-size: 0.75rem;
-        --md-elevated-button-container-height: 44px;
-        --md-filled-button-container-height: 44px;
-        --md-filled-button-leading-space: 6px;
-        --md-filled-button-trailing-space: 6px;
-        --md-filled-tonal-button-container-height: 44px;
-        --md-outlined-button-container-height: 44px;
-        --md-outlined-button-leading-space: 6px;
-        --md-outlined-button-trailing-space: 6px;
-        --md-text-button-container-height: 44px;
-    }
-
-    .header-end-zone md-filled-tonal-button:has([slot="icon"]) {
-        font-size: 0;
-    }
-
-    .header-end-zone md-filled-tonal-button:has([slot="icon"]) .material-symbols-outlined {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-tonal-button:has([slot="icon"]) [slot="icon"] {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-filled-tonal-button:has([slot="icon"]) md-icon {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-outlined-button {
-        font-size: 0.75rem;
-        --md-elevated-button-container-height: 44px;
-        --md-filled-button-container-height: 44px;
-        --md-filled-button-leading-space: 6px;
-        --md-filled-button-trailing-space: 6px;
-        --md-filled-tonal-button-container-height: 44px;
-        --md-outlined-button-container-height: 44px;
-        --md-outlined-button-leading-space: 6px;
-        --md-outlined-button-trailing-space: 6px;
-        --md-text-button-container-height: 44px;
-    }
-
-    .header-end-zone md-outlined-button:has([slot="icon"]) {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        font-size: 0;
-        --md-filled-button-leading-space: 0px;
-        --md-filled-button-trailing-space: 0px;
-        --md-outlined-button-leading-space: 0px;
-        --md-outlined-button-trailing-space: 0px;
-    }
-
-    .header-end-zone md-outlined-button:has([slot="icon"]) .material-symbols-outlined {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-outlined-button:has([slot="icon"]) [slot="icon"] {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-outlined-button:has([slot="icon"]) md-icon {
-        font-size: 20px;
-    }
-
-    .header-end-zone md-text-button {
-        font-size: 0.75rem;
-        --md-elevated-button-container-height: 44px;
-        --md-filled-button-container-height: 44px;
-        --md-filled-button-leading-space: 6px;
-        --md-filled-button-trailing-space: 6px;
-        --md-filled-tonal-button-container-height: 44px;
-        --md-outlined-button-container-height: 44px;
-        --md-outlined-button-leading-space: 6px;
-        --md-outlined-button-trailing-space: 6px;
-        --md-text-button-container-height: 44px;
-    }
-
-    .kiosk-main .card-footer button {
-        justify-content: center;
-    }
-
-    .kiosk-main .card-footer md-filled-button {
-        justify-content: center;
-    }
-
-    .kiosk-main .card-footer md-outlined-button {
-        justify-content: center;
-    }
-
-    .kiosk-tier-btn {
-        grid-area: tier;
-        justify-self: end;
-    }
-
-    .landing-auth-btn {
-        place-items: center;
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        min-height: 44px;
-        padding: 0;
-        border-radius: 50%;
-    }
-
-    .landing-auth-btn span {
-        display: none;
-    }
-
-    .landing-floating-auth-btn {
-        place-items: center;
-        width: 48px;
-        min-width: 48px;
-        height: 48px;
-        min-height: 48px;
-        padding: 0;
-        border-radius: 50%;
-        touch-action: manipulation;
-    }
-
-    .landing-floating-controls .auth-btn-label {
-        display: none;
-    }
-
-    a.back-button {
-        min-width: 44px;
-        min-height: 44px;
-        padding: 0.25rem;
-    }
-
-}
-
 .analytics-kpi-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -371,7 +87,7 @@
     min-width: 0;
     padding: var(--md-sys-spacing-4, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
     transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
@@ -403,7 +119,7 @@
     gap: 1rem;
     padding: var(--md-sys-spacing-5, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
     background: var(--md-sys-color-surface-container-low);
 }
 
@@ -436,8 +152,8 @@
 .analytics-period-chip {
     display: grid;
     place-items: center;
-    min-height: 44px;
-    min-width: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
     padding: 0.45rem 0.9rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small, 8px);
@@ -454,6 +170,10 @@
     border-color: var(--md-sys-color-outline);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
+}
+
+.analytics-period-chip:active {
+    transform: scale(0.96);
 }
 
 .analytics-period-chip.active {
@@ -492,40 +212,7 @@
     .analytics-status-pill .pill-text {
         display: none;
     }
-
-    .hero-stage-screen {
-        min-height: 230px;
-        border-radius: 14px;
-    }
-
-    .hero-stage-tabs {
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
-        gap: 0.35rem;
-    }
-
-    .qr-stage {
-        padding: 1.5rem 0.75rem;
-    }
-
-    .section-badge {
-        padding: 0.35rem 0.75rem;
-        font-size: 0.75rem;
-    }
-
-    .stage-tab {
-        gap: 0.25rem;
-        min-height: 48px;
-        padding: 0.5rem 0.5rem;
-        font-size: 0.76rem;
-        touch-action: manipulation;
-    }
-
-    .stage-tab md-icon {
-        font-size: 18px;
-    }
-
 }
-
 .analytics-header-controls {
     display: grid;
     grid-template-columns: auto auto;
@@ -629,21 +316,7 @@
         gap: 0.75rem;
         padding: 1rem;
     }
-
-    .qr-compact-body {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1rem;
-        justify-items: center;
-        text-align: center;
-    }
-
-    .ux-filter-meta {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.75rem;
-    }
-
 }
-
 .analytics-date-picker-trigger {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -671,9 +344,15 @@
     grid-auto-columns: max-content;
     gap: 0.5rem;
     align-items: center;
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
-    padding-bottom: 2px;
+    margin: 0;
+    padding: 0 0 2px;
+    border: none;
+    box-sizing: border-box;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .analytics-breakdown-grid {
