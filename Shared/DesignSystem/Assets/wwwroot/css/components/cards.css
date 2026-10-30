@@ -995,6 +995,16 @@
     transform: translateY(-4px);
 }
 
+:where(a.org-card) {
+    color: inherit;
+    text-decoration: none;
+}
+
+:where(a.org-card:focus-visible) {
+    outline: 3px solid var(--md-sys-color-primary);
+    outline-offset: 3px;
+}
+
 .org-card:hover .org-media img {
     transform: scale(1.04);
 }

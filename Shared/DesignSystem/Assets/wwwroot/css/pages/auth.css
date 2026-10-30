@@ -175,7 +175,6 @@
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
     box-shadow: 0 8px 16px var(--md-sys-color-shadow);
-    height: 500px;
 }
 
 .auth-divider {

@@ -3371,6 +3371,27 @@
   <data name="Home_LoadingPlayer" xml:space="preserve">
     <value>Pleyer yuklanmoqda...</value>
   </data>
+  <data name="Home_OrganizationsLoading" xml:space="preserve">
+    <value>Tashkilotlar yuklanmoqda...</value>
+  </data>
+  <data name="Home_OrganizationsLoadError" xml:space="preserve">
+    <value>Tashkilotlarni yuklab bo‘lmadi</value>
+  </data>
+  <data name="Home_OrganizationsLoadErrorDesc" xml:space="preserve">
+    <value>Qayta urinib ko‘rish uchun sahifani yangilang.</value>
+  </data>
+  <data name="Home_OrganizationsEmpty" xml:space="preserve">
+    <value>Hozircha tashkilotlar yo‘q</value>
+  </data>
+  <data name="Home_OrganizationsEmptyDesc" xml:space="preserve">
+    <value>Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.</value>
+  </data>
+  <data name="Home_SearchNoResults" xml:space="preserve">
+    <value>Mos tashkilotlar topilmadi</value>
+  </data>
+  <data name="Home_SearchNoResultsDesc" xml:space="preserve">
+    <value>Qidiruv so‘zlarini o‘zgartirib ko‘ring.</value>
+  </data>
   <data name="Merchant_SettingsTitle" xml:space="preserve">
     <value>Ekvayring va fiskallashtirish sozlamalari</value>
   </data>

@@ -1,6 +1,6 @@
 ---
 name: retail-fintech
-description: Business logic guide for Socratic retail, commerce, and FinTech systems. USE FOR: implementing or extending the 28 Universal Product UX Modes in UniversalProductExperienceRenderer; integrating payment gateways (Uzcard, Humo, Visa/Mastercard), installments (Nasiya), and fiscal receipts (OFD / Soliq ГНК РУз); managing customer service live chat with real-time gRPC streaming; and integrating Leaflet/OpenStreetMap geospatial branches and places. DO NOT USE FOR: low-level ESC/POS byte commands or raw CSS styling.
+description: "Business logic guide for Socratic retail, commerce, and FinTech systems. USE FOR: implementing or extending the 28 Universal Product UX Modes in UniversalProductExperienceRenderer; integrating payment gateways (Uzcard, Humo, Visa/Mastercard), installments (Nasiya), and fiscal receipts (OFD / Soliq ГНК РУз); managing customer service live chat with real-time gRPC streaming; and integrating Leaflet/OpenStreetMap geospatial branches and places. DO NOT USE FOR: low-level ESC/POS byte commands or raw CSS styling."
 ---
 
 # Socratic Retail & FinTech: 28 UX Modes, Payments, Fiscalization & Maps

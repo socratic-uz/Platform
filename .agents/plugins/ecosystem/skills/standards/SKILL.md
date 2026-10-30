@@ -1,6 +1,6 @@
 ---
 name: standards
-description: Cross-cutting architectural standards for Socratic. USE FOR: managing Material Design 3 themes (dark/light/system) and dynamic brand accent palettes; implementing multi-language localization (ru, uz, en) and 3-way .resx resource synchronization; optimizing SEO, OpenGraph metadata, and JSON-LD structured data; authoring unit and integration tests using xUnit, mocking Cassandra.ISession, gRPC clients, and ScyllaFixture. DO NOT USE FOR: writing ScyllaDB production migrations.
+description: "Cross-cutting architectural standards for Socratic. USE FOR: managing Material Design 3 themes (dark/light/system) and dynamic brand accent palettes; implementing multi-language localization (ru, uz, en) and 3-way .resx resource synchronization; optimizing SEO, OpenGraph metadata, and JSON-LD structured data; authoring unit and integration tests using xUnit, mocking Cassandra.ISession, gRPC clients, and ScyllaFixture. DO NOT USE FOR: writing ScyllaDB production migrations."
 ---
 
 # Socratic Cross-Cutting Standards: Theming, i18n, SEO & Testing

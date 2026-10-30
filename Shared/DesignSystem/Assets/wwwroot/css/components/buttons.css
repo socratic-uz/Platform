@@ -14,18 +14,18 @@
     align-content: center;
     place-items: center;
     position: relative;
-    width: 44px;
-    min-width: 44px;
-    max-width: 44px;
-    height: 44px;
-    min-height: 44px;
+    width: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
+    max-width: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
     padding: 0;
     border-radius: 50%;
     overflow: visible;
     cursor: pointer;
     touch-action: manipulation;
     --md-outlined-button-container-color: var(--md-sys-color-secondary-container);
-    --md-outlined-button-container-height: 44px;
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min, 48px);
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full);
     --md-outlined-button-icon-color: var(--md-sys-color-on-secondary-container);
     --md-outlined-button-icon-size: 20px;
@@ -908,9 +908,9 @@
 
 .paginator nav button {
     width: 2.75rem;
-    min-width: 44px;
+    min-width: var(--md-sys-touch-target-min, 48px);
     height: 2.75rem;
-    min-height: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
     border: 0;
     border-radius: 50%;
     background: none center center / 1rem no-repeat;
@@ -1506,7 +1506,7 @@
 }
 
 #components-reconnect-modal button {
-    min-height: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
     padding: 0.5rem 1.5rem;
     border: 0;
     border-radius: var(--md-sys-shape-corner-full, 9999px);
@@ -1537,7 +1537,7 @@ button.col-title {
     cursor: pointer;
     display: inline-grid;
     align-items: center;
-    min-height: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
 }
 
 button.eco-btn {

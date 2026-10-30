@@ -3,23 +3,23 @@
   "assets": [
     {
       "url": "_content/Assets/css/components/buttons.css",
-      "size": 58644,
-      "hash": "sha256-38be8d246941"
+      "size": 58964,
+      "hash": "sha256-17cf5207f98c"
     },
     {
       "url": "_content/Assets/css/components/cards.css",
-      "size": 59814,
-      "hash": "sha256-11fab7e8af24"
+      "size": 60000,
+      "hash": "sha256-11936ec31b2c"
     },
     {
       "url": "_content/Assets/css/components/chips.css",
-      "size": 40634,
-      "hash": "sha256-0e1941c6d467"
+      "size": 40803,
+      "hash": "sha256-19943964cbed"
     },
     {
       "url": "_content/Assets/css/components/common.css",
-      "size": 165169,
-      "hash": "sha256-e1171a0984c7"
+      "size": 165110,
+      "hash": "sha256-1c00bec2f9e3"
     },
     {
       "url": "_content/Assets/css/components/components.css",
@@ -43,8 +43,8 @@
     },
     {
       "url": "_content/Assets/css/components/forms.css",
-      "size": 10988,
-      "hash": "sha256-b99a49fce48f"
+      "size": 11020,
+      "hash": "sha256-469632df375b"
     },
     {
       "url": "_content/Assets/css/components/invoice.css",
@@ -163,13 +163,13 @@
     },
     {
       "url": "_content/Assets/css/pages/auth.css",
-      "size": 13063,
-      "hash": "sha256-f256a1bdd536"
+      "size": 13044,
+      "hash": "sha256-644b492892a6"
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
-      "size": 6966,
-      "hash": "sha256-e518ccfaa9b8"
+      "size": 7271,
+      "hash": "sha256-f9c174f8a94d"
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
@@ -188,8 +188,8 @@
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 12102,
-      "hash": "sha256-471a12640c7f"
+      "size": 12855,
+      "hash": "sha256-0072cb1b4c65"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
@@ -208,8 +208,8 @@
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 15060,
-      "hash": "sha256-451e25adc649"
+      "size": 15596,
+      "hash": "sha256-8e22c3fc6dcf"
     },
     {
       "url": "_content/Assets/css/styles.css",

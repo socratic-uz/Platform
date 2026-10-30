@@ -3371,6 +3371,27 @@
   <data name="Home_LoadingPlayer" xml:space="preserve">
     <value>Загрузка плеера...</value>
   </data>
+  <data name="Home_OrganizationsLoading" xml:space="preserve">
+    <value>Загрузка организаций...</value>
+  </data>
+  <data name="Home_OrganizationsLoadError" xml:space="preserve">
+    <value>Не удалось загрузить организации</value>
+  </data>
+  <data name="Home_OrganizationsLoadErrorDesc" xml:space="preserve">
+    <value>Обновите страницу, чтобы попробовать ещё раз.</value>
+  </data>
+  <data name="Home_OrganizationsEmpty" xml:space="preserve">
+    <value>Пока нет организаций</value>
+  </data>
+  <data name="Home_OrganizationsEmptyDesc" xml:space="preserve">
+    <value>Здесь появятся организации, когда станут доступны.</value>
+  </data>
+  <data name="Home_SearchNoResults" xml:space="preserve">
+    <value>Организации не найдены</value>
+  </data>
+  <data name="Home_SearchNoResultsDesc" xml:space="preserve">
+    <value>Попробуйте изменить поисковый запрос.</value>
+  </data>
   <data name="Merchant_SettingsTitle" xml:space="preserve">
     <value>Настройки эквайринга и фискализации</value>
   </data>

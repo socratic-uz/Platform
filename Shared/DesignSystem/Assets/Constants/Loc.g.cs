@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1639.
+    /// Total unique keys: 1646.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (539 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (553 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1785,6 +1785,62 @@ namespace Assets.Constants
             public const string Home_LoadingPlayer = "Home_LoadingPlayer";
 
             /// <summary>
+            /// Key: <c>Home_OrganizationsEmpty</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+            /// </summary>
+            public const string Home_OrganizationsEmpty = "Home_OrganizationsEmpty";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+            /// </summary>
+            public const string Home_OrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoadError</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+            /// </summary>
+            public const string Home_OrganizationsLoadError = "Home_OrganizationsLoadError";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+            /// </summary>
+            public const string Home_OrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+            /// </summary>
+            public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
+
+            /// <summary>
+            /// Key: <c>Home_SearchNoResults</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+            /// </summary>
+            public const string Home_SearchNoResults = "Home_SearchNoResults";
+
+            /// <summary>
+            /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+            /// </summary>
+            public const string Home_SearchNoResultsDesc = "Home_SearchNoResultsDesc";
+
+            /// <summary>
             /// Key: <c>Home</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Главная&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bosh sahifa&quot;<br/>
@@ -1799,6 +1855,62 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading player...&quot;
             /// </summary>
             public const string HomeLoadingPlayer = "Home_LoadingPlayer";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsEmpty</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+            /// </summary>
+            public const string HomeOrganizationsEmpty = "Home_OrganizationsEmpty";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+            /// </summary>
+            public const string HomeOrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoadError</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+            /// </summary>
+            public const string HomeOrganizationsLoadError = "Home_OrganizationsLoadError";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+            /// </summary>
+            public const string HomeOrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+            /// <summary>
+            /// Key: <c>Home_OrganizationsLoading</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+            /// </summary>
+            public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+            /// <summary>
+            /// Key: <c>Home_SearchNoResults</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+            /// </summary>
+            public const string HomeSearchNoResults = "Home_SearchNoResults";
+
+            /// <summary>
+            /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+            /// </summary>
+            public const string HomeSearchNoResultsDesc = "Home_SearchNoResultsDesc";
 
             /// <summary>
             /// Key: <c>Home</c><br/>
@@ -40577,12 +40689,124 @@ namespace Assets.Constants
         public const string Home_LoadingPlayer = "Home_LoadingPlayer";
 
         /// <summary>
+        /// Key: <c>Home_OrganizationsEmpty</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+        /// </summary>
+        public const string Home_OrganizationsEmpty = "Home_OrganizationsEmpty";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+        /// </summary>
+        public const string Home_OrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadError</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoadError = "Home_OrganizationsLoadError";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+        /// </summary>
+        public const string Home_SearchNoResults = "Home_SearchNoResults";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+        /// </summary>
+        public const string Home_SearchNoResultsDesc = "Home_SearchNoResultsDesc";
+
+        /// <summary>
         /// Key: <c>Home_LoadingPlayer</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка плеера...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Pleyer yuklanmoqda...&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading player...&quot;
         /// </summary>
         public const string HomeLoadingPlayer = "Home_LoadingPlayer";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmpty</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+        /// </summary>
+        public const string HomeOrganizationsEmpty = "Home_OrganizationsEmpty";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+        /// </summary>
+        public const string HomeOrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadError</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoadError = "Home_OrganizationsLoadError";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+        /// </summary>
+        public const string HomeSearchNoResults = "Home_SearchNoResults";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+        /// </summary>
+        public const string HomeSearchNoResultsDesc = "Home_SearchNoResultsDesc";
 
         /// <summary>
         /// Key: <c>Home</c><br/>
@@ -55606,7 +55830,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (539 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (553 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -56928,6 +57152,62 @@ namespace Loc
         public const string Home_LoadingPlayer = "Home_LoadingPlayer";
 
         /// <summary>
+        /// Key: <c>Home_OrganizationsEmpty</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+        /// </summary>
+        public const string Home_OrganizationsEmpty = "Home_OrganizationsEmpty";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+        /// </summary>
+        public const string Home_OrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadError</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoadError = "Home_OrganizationsLoadError";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+        /// </summary>
+        public const string Home_OrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+        /// </summary>
+        public const string Home_SearchNoResults = "Home_SearchNoResults";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+        /// </summary>
+        public const string Home_SearchNoResultsDesc = "Home_SearchNoResultsDesc";
+
+        /// <summary>
         /// Key: <c>Home</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Главная&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bosh sahifa&quot;<br/>
@@ -56942,6 +57222,62 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading player...&quot;
         /// </summary>
         public const string HomeLoadingPlayer = "Home_LoadingPlayer";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmpty</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Пока нет организаций&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hozircha tashkilotlar yo‘q&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No organizations yet&quot;
+        /// </summary>
+        public const string HomeOrganizationsEmpty = "Home_OrganizationsEmpty";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsEmptyDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Здесь появятся организации, когда станут доступны.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar mavjud bo‘lganda shu yerda ko‘rinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations will appear here when they become available.&quot;
+        /// </summary>
+        public const string HomeOrganizationsEmptyDesc = "Home_OrganizationsEmptyDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadError</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Не удалось загрузить организации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlarni yuklab bo‘lmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Organizations could not be loaded&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoadError = "Home_OrganizationsLoadError";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoadErrorDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обновите страницу, чтобы попробовать ещё раз.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qayta urinib ko‘rish uchun sahifani yangilang.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Refresh the page to try again.&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoadErrorDesc = "Home_OrganizationsLoadErrorDesc";
+
+        /// <summary>
+        /// Key: <c>Home_OrganizationsLoading</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка организаций...&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotlar yuklanmoqda...&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Loading organizations...&quot;
+        /// </summary>
+        public const string HomeOrganizationsLoading = "Home_OrganizationsLoading";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResults</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организации не найдены&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mos tashkilotlar topilmadi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;No matching organizations&quot;
+        /// </summary>
+        public const string HomeSearchNoResults = "Home_SearchNoResults";
+
+        /// <summary>
+        /// Key: <c>Home_SearchNoResultsDesc</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Попробуйте изменить поисковый запрос.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qidiruv so‘zlarini o‘zgartirib ko‘ring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
+        /// </summary>
+        public const string HomeSearchNoResultsDesc = "Home_SearchNoResultsDesc";
 
         /// <summary>
         /// Key: <c>Home</c><br/>

@@ -1,25 +1,13 @@
 ---
 name: test-quality-auditor
-description: >-
-  Runs multi-skill audit pipelines for comprehensive .NET test suite assessment
-  across a workspace or project, combining assertion quality, test smell
-  detection, mock usage analysis, test gap analysis, coverage risk, and
-  test tagging into unified reports. Covers .NET 10+ (xUnit, MSTest, NUnit,
-  TUnit, Microsoft.Testing.Platform). Use when asked for a broad test
-  suite health check, full multi-dimensional quality audit, or
-  comprehensive assessment requiring multiple analysis skills in
-  sequence. Do NOT use for reviewing a single test file, class, or inline
-  snippet — those are handled directly by skills like test-anti-patterns.
-user-invokable: true
-disable-model-invocation: false
-handoffs:
-  - label: Generate Missing Tests
-    agent: code-testing-generator
-    prompt: >-
-      Based on the audit findings above, generate tests to fill the identified
-      coverage gaps and address the weak test areas.
-    send: false
-license: MIT
+description: Runs multi-skill audit pipelines for comprehensive .NET test suite assessment across a workspace or project, combining assertion quality, test smell detection, mock usage analysis, test gap analysis, coverage risk, and test tagging into unified reports. Covers .NET 10+ (xUnit, MSTest, NUnit, TUnit, Microsoft.Testing.Platform). Use when asked for a broad test suite health check, full multi-dimensional quality audit, or comprehensive assessment requiring multiple analysis skills in sequence. Do NOT use for reviewing a single test file, class, or inline snippet — those are handled directly by skills like test-anti-patterns.
+tools:
+    - send_message
+    - view_file
+    - read_url_content
+    - search_web
+    - schedule
+    - generate_image
 ---
 
 # Test Quality Auditor Agent

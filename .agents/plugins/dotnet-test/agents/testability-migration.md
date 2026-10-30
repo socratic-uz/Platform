@@ -1,21 +1,13 @@
 ---
-description: >-
-  Orchestrates end-to-end testability migration for .NET codebases: detects
-  untestable static dependencies, generates wrapper abstractions or guides
-  built-in adoption, performs mechanical migration of call sites, and writes
-  deterministic tests when the request includes testing the migrated behavior.
-  Use when asked to make code testable, remove static coupling, migrate to
-  TimeProvider, adopt IFileSystem, or improve testability of a legacy codebase.
 name: testability-migration
-handoffs:
-  - label: Generate Tests for Migrated Code
-    agent: code-testing-generator
-    prompt: >-
-      The code has been migrated to use injectable abstractions. Please
-      generate unit tests for the migrated classes, using test doubles for
-      the new wrapper interfaces.
-    send: false
-license: MIT
+description: 'Orchestrates end-to-end testability migration for .NET codebases: detects untestable static dependencies, generates wrapper abstractions or guides built-in adoption, performs mechanical migration of call sites, and writes deterministic tests when the request includes testing the migrated behavior. Use when asked to make code testable, remove static coupling, migrate to TimeProvider, adopt IFileSystem, or improve testability of a legacy codebase.'
+tools:
+    - send_message
+    - view_file
+    - read_url_content
+    - search_web
+    - schedule
+    - generate_image
 ---
 
 # Testability Migration Agent

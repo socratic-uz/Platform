@@ -4,7 +4,8 @@
     <!-- Full platform set for CI or when explicitly requested via /p:BuildAllPlatforms=true -->
     <TargetFrameworks Condition="'$(BuildAllPlatforms)' == 'true' or '$(ContinuousIntegrationBuild)' == 'true'">net10.0-windows10.0.19041.0;net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
     <!-- Windows and Android targets on Windows workstation for Visual Studio IDE -->
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net10.0-windows10.0.19041.0;net10.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows')) and '$(TargetAndroid)' == 'true'">net10.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net10.0-windows10.0.19041.0</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('osx'))">net10.0-maccatalyst;net10.0-ios;net10.0-android</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">net10.0-android</TargetFrameworks>
 
@@ -24,10 +25,10 @@
 
     <!-- .NET 11 Mobile CoreCLR & Native AOT Settings for Android -->
     <UseMonoRuntime Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">false</UseMonoRuntime>
-    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">android-arm64;android-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android' and '$(Configuration)' != 'Debug' and '$(Configuration)' != 'LocalDebug'">android-arm64;android-x64</RuntimeIdentifiers>
     <PublishAot Condition="'$(PublishAot)' == 'true' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">true</PublishAot>
     <AndroidEnableMultiDex Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">true</AndroidEnableMultiDex>
-    <PublishReadyToRun Condition="'$(PublishReadyToRun)' == '' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">true</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(PublishReadyToRun)' == '' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' != 'Debug' and '$(Configuration)' != 'LocalDebug'">true</PublishReadyToRun>
 
     <WindowsPackageType>None</WindowsPackageType>
 

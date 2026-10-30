@@ -1,6 +1,6 @@
 ---
 name: frontend-razor-markup
-description: Architectural standard and workflow for Blazor Razor template markup (*.razor) in Socratic. USE FOR: pure HTML5 template authoring, Material.Web component priority, mandatory using static for ALL constants (Classes, Icons, Loc, Assets, Enums) with ultra-short names, unquoted syntax, 3-way .resx parity, and accessibility. DO NOT USE FOR: C# business logic (use frontend-csharp-interactive) or CSS styling (use frontend-css-styles).
+description: "Architectural standard and workflow for Blazor Razor template markup (*.razor) in Socratic. USE FOR: pure HTML5 template authoring, Material.Web component priority, mandatory using static for ALL constants (Classes, Icons, Loc, Assets, Enums) with ultra-short names, unquoted syntax, 3-way .resx parity, and accessibility. DO NOT USE FOR: C# business logic (use frontend-csharp-interactive) or CSS styling (use frontend-css-styles)."
 license: MIT
 ---
 

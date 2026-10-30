@@ -1,6 +1,6 @@
 ---
 name: hardware-pos
-description: Hardware, IoT, and POS integration guide for Socratic cashier terminals, kiosks, and venue designers. USE FOR: generating ESC/POS thermal printing bytes, cash drawer kick pulses, WebHID/WebSerial barcode scanner integrations, Face ID camera biometrics streaming, WebRTC remote screen control, interactive seat/hall layout designers, and thermal receipt template generation. DO NOT USE FOR: standard browser CSS printing or pure database operations.
+description: "Hardware, IoT, and POS integration guide for Socratic cashier terminals, kiosks, and venue designers. USE FOR: generating ESC/POS thermal printing bytes, cash drawer kick pulses, WebHID/WebSerial barcode scanner integrations, Face ID camera biometrics streaming, WebRTC remote screen control, interactive seat/hall layout designers, and thermal receipt template generation. DO NOT USE FOR: standard browser CSS printing or pure database operations."
 ---
 
 # Socratic Hardware & POS: Peripherals, Biometrics, WebRTC & Seat Designer

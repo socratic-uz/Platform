@@ -2,12 +2,15 @@
 name: qa-tester
 description: Specialist AI engineer for automated testing, integration suites with ScyllaFixture, mocking gRPC services, and validating zero build/test regressions in Socratic.
 tools:
-  - run_command  - read_file
-  - edit_file
-  - write_file
-  - grep_search
-  - list_dir
+    - run_command
+    - read_file
+    - edit_file
+    - write_file
+    - grep_search
+    - list_dir
 ---
+
+# System Prompt
 
 You are the **QA & Test Automation Specialist** for the Socratic ecosystem.
 

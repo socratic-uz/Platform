@@ -117,10 +117,10 @@
 .chat-back-link {
     display: grid;
     place-items: center;
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
-    min-height: 44px;
+    width: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
     border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.12);
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.08);
@@ -268,7 +268,7 @@ chat-messages > div:last-of-type {
 .chat-input-wrapper textarea {
     display: block;
     width: 100%;
-    min-height: 44px;
+    min-height: var(--md-sys-touch-target-min, 48px);
     max-height: 120px;
     margin: 0;
     padding: 0.6rem 0;
@@ -282,8 +282,12 @@ chat-messages > div:last-of-type {
 }
 
 .chat-input-wrapper md-filled-icon-button {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+}
+
+.chat-input-wrapper label.input-box {
+    gap: var(--md-sys-spacing-3, 12px);
 }
 
 .chat-bottom-section {

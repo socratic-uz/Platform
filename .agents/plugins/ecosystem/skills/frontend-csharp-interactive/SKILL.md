@@ -1,6 +1,6 @@
 ---
 name: frontend-csharp-interactive
-description: Architectural standard and workflow for Blazor C# interactive code-behind (*.razor.cs) in Socratic. USE FOR: pure C# code-behind authoring, partial class component structure, separated typed constants, Dependency Injection, component parameters, lifecycle hooks, Global Auto Rendering state persistence, and async resource disposal. DO NOT USE FOR: Razor template markup (use frontend-razor-markup) or CSS styling (use frontend-css-styles).
+description: "Architectural standard and workflow for Blazor C# interactive code-behind (*.razor.cs) in Socratic. USE FOR: pure C# code-behind authoring, partial class component structure, separated typed constants, Dependency Injection, component parameters, lifecycle hooks, Global Auto Rendering state persistence, and async resource disposal. DO NOT USE FOR: Razor template markup (use frontend-razor-markup) or CSS styling (use frontend-css-styles)."
 license: MIT
 ---
 

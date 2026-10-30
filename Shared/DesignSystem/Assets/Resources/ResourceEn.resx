@@ -3371,6 +3371,27 @@
   <data name="Home_LoadingPlayer" xml:space="preserve">
     <value>Loading player...</value>
   </data>
+  <data name="Home_OrganizationsLoading" xml:space="preserve">
+    <value>Loading organizations...</value>
+  </data>
+  <data name="Home_OrganizationsLoadError" xml:space="preserve">
+    <value>Organizations could not be loaded</value>
+  </data>
+  <data name="Home_OrganizationsLoadErrorDesc" xml:space="preserve">
+    <value>Refresh the page to try again.</value>
+  </data>
+  <data name="Home_OrganizationsEmpty" xml:space="preserve">
+    <value>No organizations yet</value>
+  </data>
+  <data name="Home_OrganizationsEmptyDesc" xml:space="preserve">
+    <value>Organizations will appear here when they become available.</value>
+  </data>
+  <data name="Home_SearchNoResults" xml:space="preserve">
+    <value>No matching organizations</value>
+  </data>
+  <data name="Home_SearchNoResultsDesc" xml:space="preserve">
+    <value>Try changing your search terms.</value>
+  </data>
   <data name="Merchant_SettingsTitle" xml:space="preserve">
     <value>Acquiring &amp; Fiscalization Settings</value>
   </data>

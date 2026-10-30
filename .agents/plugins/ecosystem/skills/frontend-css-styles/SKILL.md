@@ -1,6 +1,6 @@
 ---
 name: frontend-css-styles
-description: Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, Selector Consolidation (:where(...) master selectors), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-razor-markup) or C# code-behind (use frontend-csharp-interactive).
+description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, Selector Consolidation (:where(...) master selectors), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-razor-markup) or C# code-behind (use frontend-csharp-interactive)."
 license: MIT
 ---
 

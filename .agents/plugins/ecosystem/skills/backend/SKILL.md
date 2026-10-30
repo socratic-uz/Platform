@@ -1,6 +1,6 @@
 ---
 name: backend
-description: Comprehensive backend architecture guide for Socratic microservices (Identifying, Shopping, Ordering, Paying, Map). USE FOR: authoring ScyllaDB NoSQL models, CQL queries, prepared statements, and repositories using Cassandra.ISession; authoring/modifying gRPC Protobuf (.proto) contracts, streaming RPCs, and gRPC-Web clients; configuring .NET Aspire orchestration, AppHost.cs, ServiceDefaults, OpenTelemetry, and container bindings; managing MinIO S3 media buckets and Qdrant vector biometrics/embeddings. DO NOT USE FOR: Entity Framework Core, SQL relational joins, or client-side Blazor UI styling.
+description: "Comprehensive backend architecture guide for Socratic microservices (Identifying, Shopping, Ordering, Paying, Map). USE FOR: authoring ScyllaDB NoSQL models, CQL queries, prepared statements, and repositories using Cassandra.ISession; authoring/modifying gRPC Protobuf (.proto) contracts, streaming RPCs, and gRPC-Web clients; configuring .NET Aspire orchestration, AppHost.cs, ServiceDefaults, OpenTelemetry, and container bindings; managing MinIO S3 media buckets and Qdrant vector biometrics/embeddings. DO NOT USE FOR: Entity Framework Core, SQL relational joins, or client-side Blazor UI styling."
 ---
 
 # Socratic Backend Architecture: ScyllaDB, gRPC, Aspire, MinIO & Qdrant
