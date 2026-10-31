@@ -43,8 +43,8 @@
     },
     {
       "url": "_content/Assets/css/components/info-grid.css",
-      "size": 6010,
-      "hash": "sha256-9b24b532e0ae"
+      "size": 6392,
+      "hash": "sha256-62c12f18294b"
     },
     {
       "url": "_content/Assets/css/components/invoice.css",
@@ -148,8 +148,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/grid-layout.css",
-      "size": 23681,
-      "hash": "sha256-97ac1272f988"
+      "size": 23791,
+      "hash": "sha256-0cbfa4f705a9"
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
@@ -218,8 +218,8 @@
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
-      "size": 28863,
-      "hash": "sha256-076ce72763fd"
+      "size": 28944,
+      "hash": "sha256-8145e3fa92fb"
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
@@ -228,8 +228,8 @@
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 15565,
-      "hash": "sha256-62f27dec3230"
+      "size": 15768,
+      "hash": "sha256-b96335deeff7"
     },
     {
       "url": "_content/Assets/css/styles.css",
@@ -333,8 +333,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/map.css",
-      "size": 20235,
-      "hash": "sha256-059522faa383"
+      "size": 20385,
+      "hash": "sha256-841567cba691"
     },
     {
       "url": "_content/Assets/css/widgets/media-player.css",

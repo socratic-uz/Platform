@@ -419,18 +419,27 @@
 @media screen and (max-width: 839.98px) {
     .pos-layout {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto auto;
         gap: 16px;
+        align-items: start;
+        height: auto;
     }
 
     .pos-main {
         padding: 8px 12px;
+        height: auto;
+        min-height: 0;
     }
 
     .pos-catalog {
         grid-template-rows: auto auto auto;
         height: auto;
         min-height: max-content;
+        overflow: visible;
+    }
+
+    .pos-sidebar {
+        height: auto;
+        min-height: 0;
         overflow: visible;
     }
 
