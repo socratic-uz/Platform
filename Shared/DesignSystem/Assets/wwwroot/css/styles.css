@@ -1,8 +1,10 @@
-/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
    Socratic Platform - Master Design System Stylesheet
-   Component-Driven 7-Layer Architecture
+   Component-Driven 7-Layer Architecture (W3C Cascade Layers + DTCG Tokens)
    ========================================================================== */
+
+/* Layer Precedence (Lower to Higher Priority) */
+@layer foundations, tokens, components, widgets, layouts, pages, features;
 
 /* 0. Typography Fonts */
 @import "fonts/material-symbols-outlined.css";
@@ -10,60 +12,72 @@
 @import "fonts/montserrat.css";
 
 /* 1. Foundations & Reset */
-@import "foundations/base.css";
-@import "foundations/typography.css";
-@import "foundations/scrollbars.css";
+@import "foundations/base.css" layer(foundations);
+@import "foundations/typography.css" layer(foundations);
+@import "foundations/scrollbars.css" layer(foundations);
 
-/* 2. Design Tokens */
-@import "tokens/box-model/sizing.css";
-@import "tokens/box-model/spacing.css";
-@import "tokens/box-model/border.css";
-@import "tokens/box-model/outline.css";
-@import "tokens/positioning/stacking.css";
-@import "tokens/overflow/scrollbars.css";
-@import "tokens/typography/font.css";
-@import "tokens/typography/text-wrapping.css";
-@import "tokens/effects/shadow.css";
-@import "tokens/motion/transitions.css";
-@import "tokens/colors.css";
-@import "tokens/themes/dark.css";
-@import "tokens/themes/light.css";
+/* 2. Design Tokens (W3C DTCG Standard Types) */
+@import "tokens/sizing.css" layer(tokens);
+@import "tokens/spacing.css" layer(tokens);
+@import "tokens/border.css" layer(tokens);
+@import "tokens/outline.css" layer(tokens);
+@import "tokens/positioning.css" layer(tokens);
+@import "tokens/overflow.css" layer(tokens);
+@import "tokens/typography.css" layer(tokens);
+@import "tokens/shadow.css" layer(tokens);
+@import "tokens/motion.css" layer(tokens);
+@import "tokens/colors.css" layer(tokens);
 
 /* 3. Material 3 Component Primitives */
-@import "components/components.css";
+@import "components/buttons.css" layer(components);
+@import "components/cards.css" layer(components);
+@import "components/chips.css" layer(components);
+@import "components/common.css" layer(components);
+@import "components/dialogs.css" layer(components);
+@import "components/expressive.css" layer(components);
+@import "components/feedback.css" layer(components);
+@import "components/forms.css" layer(components);
+@import "components/invoice.css" layer(components);
+@import "components/profile-dialog.css" layer(components);
+@import "components/smart-data-view.css" layer(components);
+@import "components/smart-enum.css" layer(components);
+@import "components/smart-filter.css" layer(components);
+@import "components/smart-form.css" layer(components);
+@import "components/smart-toast.css" layer(components);
+@import "components/tables.css" layer(components);
 
 /* 4. Smart Widgets & Tools */
-@import "widgets/ads.css";
-@import "widgets/booking-picker.css";
-@import "widgets/cart.css";
-@import "widgets/color-picker.css";
-@import "widgets/faceid-viewfinder.css";
-@import "widgets/lang-selector.css";
-@import "widgets/media-player.css";
-@import "widgets/qr-designer.css";
-@import "widgets/seat-designer.css";
+@import "widgets/ads.css" layer(widgets);
+@import "widgets/booking-picker.css" layer(widgets);
+@import "widgets/cart.css" layer(widgets);
+@import "widgets/color-picker.css" layer(widgets);
+@import "widgets/faceid-viewfinder.css" layer(widgets);
+@import "widgets/lang-selector.css" layer(widgets);
+@import "widgets/media-player.css" layer(widgets);
+@import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/seat-designer.css" layer(widgets);
 
 /* 5. Blazor Layouts */
-@import "layouts/footer.css";
-@import "layouts/grid-layout.css";
-@import "layouts/header.css";
-@import "layouts/landing-layout.css";
-@import "layouts/map-layout.css";
+@import "layouts/footer.css" layer(layouts);
+@import "layouts/grid-layout.css" layer(layouts);
+@import "layouts/header.css" layer(layouts);
+@import "layouts/landing-layout.css" layer(layouts);
+@import "layouts/map-layout.css" layer(layouts);
 
 /* 6. Page-Specific Styles */
-@import "pages/about.css";
-@import "pages/analytics.css";
-@import "pages/auth.css";
-@import "pages/chat.css";
-@import "pages/detector.css";
-@import "pages/docs.css";
-@import "pages/help.css";
-@import "pages/kiosk.css";
-@import "pages/landing.css";
-@import "pages/orders.css";
-@import "pages/payment.css";
-@import "pages/terminal.css";
+@import "pages/about.css" layer(pages);
+@import "pages/analytics.css" layer(pages);
+@import "pages/auth.css" layer(pages);
+@import "pages/chat.css" layer(pages);
+@import "pages/detector.css" layer(pages);
+@import "pages/docs.css" layer(pages);
+@import "pages/help.css" layer(pages);
+@import "pages/kiosk.css" layer(pages);
+@import "pages/landing.css" layer(pages);
+@import "pages/orders.css" layer(pages);
+@import "pages/payment.css" layer(pages);
+@import "pages/terminal.css" layer(pages);
 
 /* 7. Commercial Features */
-@import "features/commerce-modes.css";
-@import "features/fiscal.css";
+@import "features/commerce-modes.css" layer(features);
+@import "features/fiscal.css" layer(features);

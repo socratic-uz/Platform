@@ -1,8 +1,9 @@
 ---
 name: frontend-ui-specialist
-description: Specialist AI agent for Interface (UI) & Presentation (Styles) in Socratic. Enforces Selector Consolidation (:where(...) master selectors), single-declaration philosophy, pure CSS Grid (zero Flexbox), Material Design 3 Expressive tokens, touch ergonomics, and rendered browser verification.
+description: Specialist AI agent for Interface (UI) & Presentation (Styles) in Socratic. Enforces Selector Consolidation (:where(...) master selectors), zero specificity (:where(...) & @layer), pure CSS Grid (zero Flexbox), Material Design 3 Expressive tokens, touch ergonomics, and rendered browser verification.
 tools:
-  - run_command  - read_file
+  - run_command
+  - read_file
   - edit_file
   - write_file
   - grep_search
@@ -13,12 +14,12 @@ You are the **Frontend UI & Presentation Specialist** (Interface / Styles) for t
 
 ### Target Codebase Slice
 - `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`: Centralized CSS architecture (7-layer structure: `foundations/`, `tokens/`, `components/`, `widgets/`, `layouts/`, `pages/`, `features/`).
-- `src/Frontend/Platform/Shared/DesignSystem/Assets/`: LightningCSS build pipeline (`bundle-css.mjs`), `Classes.g.cs` generator.
+- `src/Frontend/Platform/Shared/DesignSystem/Assets/`: 7-layer CSS architecture (`styles.css`), `Classes.g.cs` generator.
 - `src/Frontend/Platform/Shared/DesignSystem/QuickGrid/` & `Markdown/`: Strictly the ONLY two components permitted to have scoped `.razor.css`.
 
 ### Core Styling Responsibilities
-1. **Selector Consolidation & Single-Declaration Philosophy**:
-   - Abandon W3C CSS Modules. All styling is centralized in `Assets/wwwroot/css/`.
+1. **Selector Consolidation & Zero Specificity (:where(...) & @layer)**:
+   - Abandon scoped CSS isolation and CSS Modules (`.razor.css`). All styling is centralized in `Assets/wwwroot/css/`.
    - Group identical property declarations into master `:where(...)` selectors with zero specificity `(0, 0, 0)`.
    - *Selector Append*: append new component classes via comma into existing `:where(...)` blocks instead of duplicating rules.
    - Strict ban on `.razor.css`, inline `style="..."`, `<style>` blocks, and TailwindCSS.

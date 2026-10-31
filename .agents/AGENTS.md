@@ -126,7 +126,7 @@ Interaction (IX)
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
-- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) и компилируются через LightningCSS.
+- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 7-слойной архитектуре Socratic (ITCSS) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, без монолитных CSS-бандлов).
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
 - **Консолидация по селекторам**: одинаковые свойства объединяются через мастер-селекторы `:where(...)` с нулевой специфичностью (0, 0, 0).

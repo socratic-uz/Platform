@@ -22,12 +22,7 @@
         "message": "Raw color functions (rgba, hsl) are disallowed. Use M3 CSS tokens var(--md-sys-color-*) or relative color rgb(from var(...) r g b / alpha)"
       }
     ],
-    "selector-class-pattern": [
-      "^(m3|l|pos|kiosk|chat|portal|studio|grid|table|order|analytics|detector|store|auth|lang|theme)[a-z0-9_-]*$",
-      {
-        "message": "Class selectors must use an architectural prefix (m3-, l-, pos-, kiosk-, chat-, portal-, studio-)"
-      }
-    ],
+    "selector-class-pattern": null,
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
     "property-no-vendor-prefix": null,

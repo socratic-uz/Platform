@@ -673,6 +673,8 @@ namespace Assets.Constants
             public const string CatHospitality = "cat-hospitality";
             public const string CatRetail = "cat-retail";
             public const string CatServices = "cat-services";
+            public const string ColorLight = "light";
+            public const string Dark = "dark";
         }
 
         public static class CommerceModes
@@ -1290,11 +1292,6 @@ namespace Assets.Constants
             public const string TotalBlock = "configurator-total-block";
             public const string TotalLabel = "configurator-total-label";
             public const string UnitsRow = "configurator-units-row";
-        }
-
-        public static class Dark
-        {
-            public const string DarkRoot = "dark";
         }
 
         public static class Delivery
@@ -1990,11 +1987,6 @@ namespace Assets.Constants
             public const string SubpageTitle = "landing-subpage-title";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
-        }
-
-        public static class Light
-        {
-            public const string LightRoot = "light";
         }
 
         public static class Lottery
@@ -3560,6 +3552,8 @@ namespace Classes
             public const string CatHospitality = "cat-hospitality";
             public const string CatRetail = "cat-retail";
             public const string CatServices = "cat-services";
+            public const string ColorLight = "light";
+            public const string Dark = "dark";
         }
 
         public static class CommerceModes
@@ -4177,11 +4171,6 @@ namespace Classes
             public const string TotalBlock = "configurator-total-block";
             public const string TotalLabel = "configurator-total-label";
             public const string UnitsRow = "configurator-units-row";
-        }
-
-        public static class Dark
-        {
-            public const string DarkRoot = "dark";
         }
 
         public static class Delivery
@@ -4877,11 +4866,6 @@ namespace Classes
             public const string SubpageTitle = "landing-subpage-title";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
-        }
-
-        public static class Light
-        {
-            public const string LightRoot = "light";
         }
 
         public static class Lottery
@@ -6452,6 +6436,8 @@ namespace Styles
             public const string CatHospitality = "cat-hospitality";
             public const string CatRetail = "cat-retail";
             public const string CatServices = "cat-services";
+            public const string ColorLight = "light";
+            public const string Dark = "dark";
         }
 
         public static class CommerceModes
@@ -7069,11 +7055,6 @@ namespace Styles
             public const string TotalBlock = "configurator-total-block";
             public const string TotalLabel = "configurator-total-label";
             public const string UnitsRow = "configurator-units-row";
-        }
-
-        public static class Dark
-        {
-            public const string DarkRoot = "dark";
         }
 
         public static class Delivery
@@ -7769,11 +7750,6 @@ namespace Styles
             public const string SubpageTitle = "landing-subpage-title";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
-        }
-
-        public static class Light
-        {
-            public const string LightRoot = "light";
         }
 
         public static class Lottery
@@ -9345,6 +9321,8 @@ namespace Material.Web
             public const string CatHospitality = "cat-hospitality";
             public const string CatRetail = "cat-retail";
             public const string CatServices = "cat-services";
+            public const string ColorLight = "light";
+            public const string Dark = "dark";
         }
 
         public static class CommerceModes
@@ -9962,11 +9940,6 @@ namespace Material.Web
             public const string TotalBlock = "configurator-total-block";
             public const string TotalLabel = "configurator-total-label";
             public const string UnitsRow = "configurator-units-row";
-        }
-
-        public static class Dark
-        {
-            public const string DarkRoot = "dark";
         }
 
         public static class Delivery
@@ -10662,11 +10635,6 @@ namespace Material.Web
             public const string SubpageTitle = "landing-subpage-title";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
-        }
-
-        public static class Light
-        {
-            public const string LightRoot = "light";
         }
 
         public static class Lottery

@@ -1,6 +1,5 @@
-/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Socratic Design Tokens: tokens/motion/transitions.css
+   Socratic Design Tokens: tokens/motion.css (W3C DTCG transition / duration)
    Optimized Unified Scopes
    ========================================================================== */
 
@@ -17,6 +16,10 @@
     --md-sys-motion-duration-short2: 100ms;
     --md-sys-motion-duration-short3: 150ms;
     --md-sys-motion-duration-short4: 200ms;
+    --md-sys-motion-easing-emphasized-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
+    --md-sys-motion-easing-emphasized-decel: cubic-bezier(0.05, 0.7, 0.1, 1);
+    --md-sys-motion-easing-spring-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --md-sys-motion-easing-spring-gentle: cubic-bezier(0.25, 1, 0.5, 1);
     --md-sys-motion-easing-expressive-entrance: cubic-bezier(0.05, 0.7, 0.1, 1.0);
     --md-sys-motion-easing-expressive-exit: cubic-bezier(0.3, 0.0, 0.8, 0.15);
     --md-sys-motion-easing-expressive-standard: cubic-bezier(0.4, 0.0, 0.2, 1);

@@ -35,7 +35,7 @@
 			</div>
 
 			<!-- Nav Column 1: Catalog & Kiosks -->
-			<div class=@NavCol>
+			<nav class=@NavCol aria-label=@L[Footer_Col_Catalog]>
 				<h4 class=@ColTitle>@L[Footer_Col_Catalog]</h4>
 				<ul class=@LinksList>
 					<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name=@Storefront /> <span>@L[Showroom]</span></a></li>
@@ -43,10 +43,10 @@
 					<li><a href="/home"><Icon Name=@Domain /> <span>@L[Places]</span></a></li>
 					<li><a href="/map"><Icon Name=@Map /> <span>@L[MapLabel]</span></a></li>
 				</ul>
-			</div>
+			</nav>
 
 			<!-- Nav Column 2: Management & POS -->
-			<div class=@NavCol>
+			<nav class=@NavCol aria-label=@L[Footer_Col_Management]>
 				<h4 class=@ColTitle>@L[Footer_Col_Management]</h4>
 				<ul class=@LinksList>
 					<li><a href="/orders"><Icon Name=@ReceiptLong /> <span>@L[OrdersLabel]</span></a></li>
@@ -55,10 +55,10 @@
 					<li><a href="/seat-designer"><Icon Name=@EventSeat /> <span>@L[SeatDesigner]</span></a></li>
 					<li><a href="/terminal"><Icon Name=@PointOfSale /> <span>@L[TerminalLabel]</span></a></li>
 				</ul>
-			</div>
+			</nav>
 
 			<!-- Nav Column 3: Resources & Info -->
-			<div class=@NavCol>
+			<nav class=@NavCol aria-label=@L[Footer_Col_Resources]>
 				<h4 class=@ColTitle>@L[Footer_Col_Resources]</h4>
 				<ul class=@LinksList>
 					<li><a href="/docs"><Icon Name=@MenuBook /> <span>@L[Documentation]</span></a></li>
@@ -66,24 +66,24 @@
 					<li><a href="/about"><Icon Name=@Info /> <span>@L[AboutText]</span></a></li>
 					<li><a href="/signin"><Icon Name=@Login /> <span>@L[SocraticID]</span></a></li>
 				</ul>
-			</div>
+			</nav>
 
 			<!-- Nav Column 4: Community & Support -->
-			<div class=@NavCol>
+			<nav class=@NavCol aria-label=@L[Footer_Col_Community]>
 				<h4 class=@ColTitle>@L[Footer_Col_Community]</h4>
 				<ul class=@LinksList>
 					<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name=@SupportAgent /> <span>@L[SupportLabel]</span></a></li>
 					<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name=@Send /> <span>Telegram Bot</span></a></li>
 					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name=@CameraAlt /> <span>Instagram</span></a></li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 
 		<!-- Sub-Footer Bottom Bar -->
-		<div class=@FooterBottomBarClass>
-			<div class=@FooterCopyright>
+		<section class=@FooterBottomBarClass>
+			<p class=@FooterCopyright>
 				&copy; @DateTime.Now.Year Socratic. @L[AllRightsReserved]
-			</div>
+			</p>
 			<div class=@LangContainer>
 				<LanguageSelector Variant="inline" />
 			</div>
@@ -93,6 +93,6 @@
 					<span>256-bit SSL • Zero-Trust Cloud</span>
 				</span>
 			</div>
-		</div>
+		</section>
 	</div>
 </footer>

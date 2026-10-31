@@ -2,37 +2,37 @@
 @using SharedKernel.ValueObjects
 @using Domain.Entities
 @using Material.Web.Components
-@using static Assets.Constants.Classes.Dialog
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.Badge
-@using static Assets.Constants.Classes.Header
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Payment
-@using static Assets.Constants.Classes.Chips
-@using static Assets.Constants.Classes.QrDesigner
-@using static Assets.Constants.Classes.Typography
+@using static Classes.Dialog
+@using static Classes.Cards
+@using static Classes.Badge
+@using static Classes.Header
+@using static Classes.Common
+@using static Classes.Payment
+@using static Classes.Chips
+@using static Classes.QrDesigner
+@using static Classes.Typography
 @using static Assets.Constants.Formats
-@using static Assets.Constants.Icons
-@using static Assets.Constants.Loc.Promotion
-@using static Assets.Constants.Loc.Actions
+@using static Icons
+@using static Loc.Promotion
+@using static Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
 @if (IsOpen && Product != null)
 {
     <MaterialDialog Open=@IsOpen OpenChanged=@((bool v) => { if (!v) CloseModal(); }) class=@PromotionDialog>
         <Headline>
-            <div class=@PromotionModalHeader>
+            <header class=@PromotionModalHeader>
                 <div class=@string.Format(Two, TitleGroup, HeaderTitleGroup)>
                     <div class=@IconWrap>
                         <Icon Name=@RocketLaunch class=@RocketIcon />
                     </div>
-                    <div>
+                    <hgroup>
                         <h2 class=@PromotionModalTitle>@L[TitleText]</h2>
                         <p class=@PromotionModalSubtitle>@L[SubtitleText]</p>
-                    </div>
+                    </hgroup>
                 </div>
                 <IconButton Icon=@Close AriaLabel=@L[Close] OnClick=@CloseModal />
-            </div>
+            </header>
         </Headline>
         <Content>
             @if (CurrentStep == PromotionModalStep.SelectPlan)
@@ -49,18 +49,18 @@
                         @foreach (var plan in ProductPromotionPlanDefinition.AllPlans)
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
-                            <div class=@(isSelected ? string.Format(Two, PlanCard, Selected) : PlanCard) @onclick=@(() => SelectPlan(plan))>
+                            <article class=@(isSelected ? string.Format(Two, PlanCard, Selected) : PlanCard) role="button" tabindex="0" @onclick=@(() => SelectPlan(plan)) @onkeydown=@(e => { if (e.Key == "Enter" || e.Key == " ") SelectPlan(plan); })>
                                 @if (plan.PlanType == PromotionPlanType.MonthlyTurbo)
                                 {
                                     <span class=@string.Format(Three, Root, Pro, PopularBadge)>@L[PopularChoice]</span>
                                 }
-                                <div class=@PlanCardHeader>
+                                <header class=@PlanCardHeader>
                                     <h4 class=@PlanName>@plan.Name</h4>
                                     <div class=@PlanPriceWrap>
                                         <span>@plan.PriceUzs.ToString("N0")</span>
                                         <span class=@PlanCurrency>UZS</span>
                                     </div>
-                                </div>
+                                </header>
                                 <p>@plan.Description</p>
                                 <ul class=@PlanFeatures>
                                     @foreach (var feat in plan.Features)
@@ -71,7 +71,7 @@
                                         </li>
                                     }
                                 </ul>
-                            </div>
+                            </article>
                         }
                     </div>
 
@@ -136,16 +136,16 @@
                         <div class=@OnlineRedirectArea>
                             <Icon Name=@OpenInNew class=@RedirectIcon />
                             <p>@L[RedirectMessage] <strong>@GetGatewayDisplayName(SelectedGateway)</strong>.</p>
-                            <a href=@GetPaymentGatewayUrl() target="_blank" rel="noopener noreferrer" class=@BtnGatewayLink>
+                            <Button Variant=@Filled Href=@GetPaymentGatewayUrl() Target="_blank" class=@BtnGatewayLink TrailingIcon=@OpenInNew>
                                 @L[OpenPaymentForm]
-                            </a>
+                            </Button>
                         </div>
                     }
 
                     <div class=@PaymentStatusChecker>
                         @if (isVerifyingPayment)
                         {
-                            <div class=@SpinnerInline></div>
+                            <Progress IsCircular=@true Indeterminate=@true FourColor=@true class=@SpinnerInline />
                             <span>@L[VerifyingPayment]</span>
                         }
                         else

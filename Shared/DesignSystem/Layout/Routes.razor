@@ -2,6 +2,10 @@
 @using System.Diagnostics.CodeAnalysis
 @using static Icons
 @using static Classes.Common
+@using static Classes.Cards
+@using static Classes.EmptyState
+@using static Classes.Typography
+@using static Assets.Constants.Formats
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(MainLayout)")]
 
 <Router AppAssembly=@typeof(Layout.MainLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
@@ -18,55 +22,55 @@
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
 		   }
-		   <div class=@GridCenter style="min-height: 80vh; padding: 2rem; display: grid; place-items: center; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface);">
-			   <div style="display: grid; gap: 1.5rem; max-width: 600px; width: 100%; padding: 2rem; background: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-color-outline-variant); border-radius: var(--md-sys-shape-corner-extra-large, 24px); box-shadow: var(--md-sys-elevation-level3, 0 8px 32px rgba(0,0,0,0.25));">
-				   <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1rem; min-width: 0;">
-					   <div style="display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+		   <main class=@string.Format(Two, EmptyStateRoot, GridCenter)>
+			   <article class=@CardElevated>
+				   <header>
+					   <span class=@EmptyStateIcon>
 						   <Icon Name=@RocketLaunch />
-					   </div>
-					   <div style="display: grid; gap: 0.25rem;">
-						   <h2 style="margin: 0; font-size: 1.35rem; font-weight: 600; color: var(--md-sys-color-on-surface);">
+					   </span>
+					   <hgroup>
+						   <h2 class=@EmptyStateTitle>
 							   @(isRoot ? "Socratic Standalone Host" : "Page Not Found")
 						   </h2>
-						   <p style="margin: 0; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">
+						   <p class=@EmptyStateDesc>
 							   @(isRoot ? "Standalone development mode. Select an active module:" : "Requested route was not found. Available modules in this solution:")
 						   </p>
-					   </div>
-				   </div>
+					   </hgroup>
+				   </header>
 
 				   @if (modules.Count > 0)
 				   {
-					   <div style="display: grid; gap: 0.75rem;">
-						   @foreach (var mod in modules)
-						   {
-							   <a href=@mod.RoutePrefix style="display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--md-sys-color-surface-container-high); border: 1px solid var(--md-sys-color-outline-variant); border-radius: 16px; text-decoration: none; color: inherit; min-width: 0;">
-								   <div style="display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);">
-									   <Icon Name=@(mod.Icon ?? Widgets) />
-								   </div>
-								   <div style="display: grid; gap: 0.15rem;">
-									   <span style="font-weight: 600; font-size: 1rem; color: var(--md-sys-color-on-surface);">@mod.DisplayTitle</span>
-									   <span style="font-size: 0.8rem; color: var(--md-sys-color-primary); font-family: monospace;">@mod.RoutePrefix</span>
-								   </div>
-								   <Icon Name=@ArrowForward style="color: var(--md-sys-color-outline);" />
-							   </a>
-						   }
-					   </div>
+					   <nav aria-label="Available modules">
+						   <ul>
+							   @foreach (var mod in modules)
+							   {
+								   <li>
+									   <a href=@mod.RoutePrefix>
+										   <Icon Name=@(mod.Icon ?? Widgets) />
+										   <span class=@TitleMedium>@mod.DisplayTitle</span>
+										   <span class=@LabelSmall>@mod.RoutePrefix</span>
+										   <Icon Name=@ArrowForward />
+									   </a>
+								   </li>
+							   }
+						   </ul>
+					   </nav>
 				   }
 				   else
 				   {
-					   <div style="display: grid; gap: 0.5rem; text-align: center; padding: 1.5rem; background: var(--md-sys-color-surface-container-low); border-radius: 16px;">
-						   <p style="margin: 0; color: var(--md-sys-color-error);">No modules discovered in FeatureRegistry</p>
-						   <span style="font-size: 0.8rem; color: var(--md-sys-color-on-surface-variant);">Verify registrations in FeatureRegistry.Register()</span>
-					   </div>
+					   <section class=@EmptyStateAction>
+						   <p class=@EmptyStateDesc>No modules discovered in FeatureRegistry</p>
+						   <span class=@LabelSmall>Verify registrations in FeatureRegistry.Register()</span>
+					   </section>
 				   }
 
-				   <div style="display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--md-sys-color-outline-variant); padding-top: 1rem;">
-					   <span style="font-size: 0.75rem; color: var(--md-sys-color-outline); text-align: center;">
+				   <footer>
+					   <span class=@LabelSmall>
 						   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
 					   </span>
-				   </div>
-			   </div>
-		   </div>
+				   </footer>
+			   </article>
+		   </main>
 	   </LayoutView>
    </NotFound>
 </Router>

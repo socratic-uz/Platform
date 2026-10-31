@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (559 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (560 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1190,7 +1190,15 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
             /// </summary>
-            public const string Dark = "Dark";
+            public const string DarkLabel = "Dark";
+
+            /// <summary>
+            /// Key: <c>Dark</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Темная&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
+            /// </summary>
+            public const string DarkText = "Dark";
 
             /// <summary>
             /// Key: <c>Data</c><br/>
@@ -38590,7 +38598,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
         /// </summary>
-        public const string Dark = "Dark";
+        public const string DarkText = "Dark";
 
         /// <summary>
         /// Key: <c>Data</c><br/>
@@ -56902,7 +56910,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (559 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (560 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -57629,7 +57637,15 @@ namespace Loc
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
         /// </summary>
-        public const string Dark = "Dark";
+        public const string DarkLabel = "Dark";
+
+        /// <summary>
+        /// Key: <c>Dark</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Темная&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
+        /// </summary>
+        public const string DarkText = "Dark";
 
         /// <summary>
         /// Key: <c>Data</c><br/>

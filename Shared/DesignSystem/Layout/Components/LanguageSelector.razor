@@ -46,8 +46,8 @@
 
 			@if (IsOpen)
 			{
-				<div class=@LangMenuBackdrop @onclick=@CloseDropdown></div>
-				<div class=@LangDropdownMenu role="menu">
+				<button type="button" class=@LangMenuBackdrop @onclick=@CloseDropdown aria-label=@L[CloseAction]></button>
+				<menu class=@LangDropdownMenu>
 					<button type="button"
 							class=@(IsUz ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
 							role="menuitem"
@@ -81,7 +81,7 @@
 							<Icon Name=@Check />
 						}
 					</button>
-				</div>
+				</menu>
 			}
 		</div>
 	}

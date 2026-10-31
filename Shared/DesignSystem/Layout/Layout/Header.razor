@@ -1,8 +1,8 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
-@using static Assets.Constants.Classes.Header
-@using static Assets.Constants.Icons
+@using static Classes.Header
+@using static Icons
 
 <header class=@ComputedHeaderClass>
 	<div class=@HeaderGridLayout>
@@ -26,7 +26,7 @@
 		</div>
 
 		<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-		<div class=@HeaderCenterZone>
+		<nav class=@HeaderCenterZone aria-label="Main Navigation">
 			@if (CenterContent != null)
 			{
 				@CenterContent
@@ -35,10 +35,10 @@
 			{
 				@ChildContent
 			}
-		</div>
+		</nav>
 
 		<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-		<div class=@HeaderEndZone>
+		<section class=@HeaderEndZone aria-label="User Actions">
 			@if (EndContent != null)
 			{
 				@EndContent
@@ -51,6 +51,6 @@
 			{
 				<Avatar />
 			}
-		</div>
+		</section>
 	</div>
 </header>

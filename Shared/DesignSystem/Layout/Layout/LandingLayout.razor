@@ -18,10 +18,9 @@
 {
 	<aside class=@LandingFloatingControlsClass aria-label="Quick Actions">
 		<LanguageSelector Variant="pill" />
-		<a href="/signin" class=@LandingFloatingAuthBtnClass title=@L[SocraticID]>
-			<Icon Name=@Login />
-			<span class=@AuthBtnLabelClass>@L[SocraticID]</span>
-		</a>
+		<Button Variant=@Filled Href="/signin" Icon=@Login class=@LandingFloatingAuthBtnClass title=@L[SocraticID]>
+			@L[SocraticID]
+		</Button>
 	</aside>
 }
 else
@@ -50,10 +49,9 @@ else
 		<EndContent>
 			<div class=@LandingHeaderActionsClass>
 				<LanguageSelector Variant="pill" />
-				<a href="/signin" class=@LandingAuthBtnClass>
-					<Icon Name=@Login />
-					<span>@L[SocraticID]</span>
-				</a>
+				<Button Variant=@Outlined Href="/signin" Icon=@Login class=@LandingAuthBtnClass>
+					@L[SocraticID]
+				</Button>
 				<IconButton Icon=@MenuIcon Class=@LandingMobileMenuToggleClass OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : "Menu") />
 			</div>
 		</EndContent>
@@ -61,7 +59,7 @@ else
 
 	@if (IsMobileMenuOpen)
 	{
-		<div class=@LandingMobileMenuBackdropClass @onclick=@CloseMobileMenu></div>
+		<button type="button" class=@LandingMobileMenuBackdropClass @onclick=@CloseMobileMenu aria-label=@L[CloseAction]></button>
 		<nav class=@LandingMobileMenuDrawerClass aria-label="Mobile Navigation">
 			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
 				<Icon Name=@Storefront />
@@ -79,10 +77,10 @@ else
 				<Icon Name=@Info />
 				<span>@L[AboutText]</span>
 			</a>
-			<div class=@MobileNavDividerClass></div>
-			<div class=@MobileNavFooterClass>
+			<Divider Class=@MobileNavDividerClass />
+			<footer class=@MobileNavFooterClass>
 				<LanguageSelector Variant="inline" />
-			</div>
+			</footer>
 		</nav>
 	}
 }

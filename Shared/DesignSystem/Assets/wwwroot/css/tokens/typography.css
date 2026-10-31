@@ -1,6 +1,5 @@
-/* stylelint-disable selector-class-pattern */
 /* ==========================================================================
-   Socratic Design Tokens: tokens/typography/font.css
+   Socratic Design Tokens: tokens/typography.css (W3C DTCG typography / font)
    Optimized Unified Scopes
    ========================================================================== */
 
@@ -38,5 +37,6 @@
     --md-sys-typescale-title-medium-line-height: 1.4;
     --md-sys-typescale-title-medium-size: 1.125rem;
     --md-sys-typescale-title-medium-weight: 600;
+    --md-sys-typescale-truncate: ellipsis;
 }
 

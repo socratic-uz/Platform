@@ -13,7 +13,7 @@ license: MIT
 
 ## 1. Консолидация по селекторам в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) и компилируются через LightningCSS.
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 7-слойной архитектуре Socratic (ITCSS) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, без монолитных CSS-бандлов). Браузер подключает `styles.css` напрямую через HTTP/2 / HTTP/3.
 Одинаковые CSS-свойства группируются в мастер-селекторы `:where(...)` с нулевой специфичностью (0, 0, 0):
 
 ```css

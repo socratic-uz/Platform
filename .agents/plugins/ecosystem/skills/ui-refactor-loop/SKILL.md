@@ -1,7 +1,7 @@
 ---
 name: ui-refactor-loop
 description: >-
-  Data-driven Material 3 Expressive (M3X) CSS styles refactoring loop for stylesheets and layout geometry, driven by Assets tools (LightningCSS, linting, preview, blueprints).
+  Data-driven Material 3 Expressive (M3X) CSS styles refactoring loop for stylesheets and layout geometry, driven by Assets tools (stylelint, syntax validator, preview, blueprints).
 ---
 
 # Workflow: Material 3 Expressive (M3X) CSS Styles Refactoring Loop
@@ -66,7 +66,7 @@ Skip pages already marked done in the Ledger below.
 ```powershell
 npm run validate:syntax
 npm run lint:css
-npm run build                        # компиляция LightningCSS в material.bundle.min.css
+npm run build                        # валидация синтаксиса CSS, сборка Web Components JS и генерация C#-констант
 npm run generate:codegen ; npm run generate:analytics
 dotnet build src/Frontend/Platform/Web.UI/Web.UI/Web.UI.csproj -c Debug
 ```

@@ -81,15 +81,15 @@
             </div>
 
             <!-- Days List -->
-            <div class=@Md3ScheduleDays>
+            <ul class=@Md3ScheduleDays>
                 @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
                 {
                     var item = GetOrCreateItem(day);
                     var isOpen = !item.IsClosed && item.Intervals != null && item.Intervals.Count > 0;
                     var firstInterval = isOpen ? item.Intervals.First() : null;
 
-                    <div class=@(isOpen ? string.Format(Two, Md3ScheduleDayCard, Active) : string.Format(Two, Md3ScheduleDayCard, "closed"))>
-                        <div class=@Md3ScheduleDayLeft @onclick=@(() => ToggleDay(day, !isOpen))>
+                    <li class=@(isOpen ? string.Format(Two, Md3ScheduleDayCard, Active) : string.Format(Two, Md3ScheduleDayCard, "closed"))>
+                        <div class=@Md3ScheduleDayLeft>
                             <Checkbox Value=@isOpen
                                       ValueChanged=@(active => ToggleDay(day, active))
                                       ValueExpression=@(() => isOpen)
@@ -123,14 +123,14 @@
                                 <span>@L[DayOff]</span>
                             </div>
                         }
-                    </div>
+                    </li>
                 }
-            </div>
+            </ul>
         </div>
     </Content>
 
     <Actions>
-        <div class=@Md3DialogActionsRow>
+        <menu class=@Md3DialogActionsRow>
             <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
                 @L[ResetScheduleAction]
             </Button>
@@ -140,6 +140,6 @@
                     @L[SaveAction]
                 </Button>
             </div>
-        </div>
+        </menu>
     </Actions>
 </MaterialDialog>
