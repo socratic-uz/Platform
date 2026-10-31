@@ -3,13 +3,13 @@ name: devops
 description: >-
   CI/CD pipelines, container orchestration, Kubernetes/Helm deployment with Aspirate, and Windows POS desktop installer packaging for Socratic.
   USE FOR: packaging deployments with Aspirate (aspirate generate for Docker Compose / Kubernetes Helm), configuring GitHub Actions CI/CD workflows (.github/workflows/Socratic.yml), Docker runners, and building offline Windows POS installers with InnoSetup.
-  DO NOT USE FOR: multi-tier Git submodule commit sequencing (use gitops-submodules) or C# business logic.
+  DO NOT USE FOR: multi-tier Git submodule commit sequencing (use git-submodules) or C# business logic.
 ---
 
 # Socratic DevOps: Aspirate, Kubernetes Helm, CI/CD & POS Installers
 
 This skill covers containerization, Kubernetes/Helm generation via Aspirate, GitHub Actions CI/CD pipelines, and offline Windows POS installer packaging.
-For multi-tier Git submodule commit sequencing, use [gitops-submodules](../gitops-submodules/SKILL.md).
+For multi-tier Git submodule commit sequencing, use [git-submodules](../git-submodules/SKILL.md).
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: gitops-submodules
+name: git-submodules
 description: >-
   Multi-tier Federated Meta-Repository and Git submodule orchestration guide for Socratic.
   USE FOR: inspecting status across nested Git submodules, bottom-up multi-tier commits and pushes (Tier 1 Platform/Hardware -> Tier 2 Feature Repos -> Tier 3 Frontend Umbrella -> Tier 4 Root Umbrella), resolving detached HEAD in submodules, and running scripts/Sync-Agents.ps1.
