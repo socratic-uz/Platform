@@ -138,8 +138,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
-      "size": 10399,
-      "hash": "sha256-722a5c7f21c0"
+      "size": 10890,
+      "hash": "sha256-71c2c54c258f"
     },
     {
       "url": "_content/Assets/css/layouts/landing-layout.css",
@@ -188,8 +188,8 @@
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
-      "size": 14398,
-      "hash": "sha256-9ca044c7f239"
+      "size": 14430,
+      "hash": "sha256-f1c74f47c95d"
     },
     {
       "url": "_content/Assets/css/pages/landing.css",

@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 839.98px) {
     .kiosk-tier-btn {
-        min-height: 40px;
+        min-height: var(--md-sys-touch-target-pos, 48px);
         padding: 0 var(--md-sys-spacing-3, 12px);
         font-size: var(--md-sys-typescale-label-medium-size);
     }

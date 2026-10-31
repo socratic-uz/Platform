@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-31T03:22:08.922Z",
+  "generatedAt": "2026-10-31T06:05:09.429Z",
   "summary": {
     "totalDeclaredKeys": 6857,
-    "usedInRazorCount": 939,
-    "unusedCount": 5918,
+    "usedInRazorCount": 938,
+    "unusedCount": 5919,
     "adoptionRatePercent": 14,
-    "totalTypedCallSites": 1157,
+    "totalTypedCallSites": 1156,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
-    "sourceFilesScanned": 640
+    "sourceFilesScanned": 627
   },
   "topUsedKeys": [
     {
@@ -649,8 +649,8 @@
     },
     "Auction": {
       "total": 16,
-      "used": 2,
-      "totalCalls": 2
+      "used": 1,
+      "totalCalls": 1
     },
     "Auth": {
       "total": 162,
@@ -1153,6 +1153,15 @@
       "domain": "Auction",
       "name": "Auction_Slot_Format",
       "locKey": "Auction_Slot_Format",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Auction.Auction_TimerDemo",
+      "domain": "Auction",
+      "name": "Auction_TimerDemo",
+      "locKey": "Auction_TimerDemo",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1702,15 +1711,6 @@
       "domain": "Auth",
       "name": "OAuth_GoogleProcessing",
       "locKey": "OAuth_GoogleProcessing",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Auth.OAuth_GoogleTitle",
-      "domain": "Auth",
-      "name": "OAuth_GoogleTitle",
-      "locKey": "OAuth_GoogleTitle",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
