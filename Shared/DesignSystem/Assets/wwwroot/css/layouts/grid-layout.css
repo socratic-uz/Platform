@@ -270,6 +270,11 @@
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
     }
 
+    .m3-grid-main-sidebar,
+    .m3-grid-master-detail {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .app-grid:has(main.no-footer) > main {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
     }

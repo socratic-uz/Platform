@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T17:04:11.784Z",
+  "generatedAt": "2026-10-31T17:07:24.886Z",
   "pagesCount": 24,
   "pages": [
     {
@@ -120,7 +120,7 @@
         "tablet": "analytics/blueprints/order-items.tablet.blueprint",
         "mobile": "analytics/blueprints/order-items.mobile.blueprint"
       },
-      "totalViolations": 2
+      "totalViolations": 0
     },
     {
       "name": "orders",

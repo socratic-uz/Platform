@@ -309,6 +309,11 @@
     .order-details-layout {
         grid-template-columns: minmax(0, 1fr);
     }
+
+    .order-summary-section {
+        position: static;
+        top: auto;
+    }
 }
 
 .order-number {
