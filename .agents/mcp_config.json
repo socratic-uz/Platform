@@ -7,6 +7,15 @@
         "serve",
         "--mcp"
       ]
+    },
+    "puppeteer": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "--yes",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
     }
   }
 }
