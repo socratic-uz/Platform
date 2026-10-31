@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / reconnect-modal.css
+   Blazor Web App SignalR Circuit Reconnection Dialog
+   ========================================================================== */
+
+#components-reconnect-modal {
+    opacity: 0;
+    width: min(22rem, calc(100vw - 32px));
+    margin: 20vh auto;
+    padding: 2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-expressive-3, 0 16px 36px rgb(from var(--md-sys-color-shadow) r g b / 0.4));
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
+}
+
+#components-reconnect-modal p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#components-reconnect-modal::backdrop {
+    opacity: 1;
+    background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
+    backdrop-filter: blur(8px);
+    animation: components-reconnect-modal-fadeInOpacity 0.5s ease-in-out;
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#components-reconnect-modal.components-reconnect-failed {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-failed .components-reconnect-failed-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-paused .components-pause-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-resume-failed .components-resume-failed-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying .components-reconnect-repeated-attempt-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-reconnect-first-attempt-visible {
+    display: block;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation {
+    display: block;
+}
+
+#components-reconnect-modal[open] {
+    animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
+    animation-fill-mode: both;
+}
+
+
+#components-reconnect-modal button {
+    min-height: var(--md-sys-touch-target-min, 48px);
+    padding: 0.5rem 1.5rem;
+    border: 0;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-weight: 600;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+#components-reconnect-modal button:active {
+    transform: scale(0.97);
+}
+
+#components-reconnect-modal button:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    transform: translateY(-1px);
+}
+
+.components-pause-visible {
+    display: none;
+}
+
+.components-reconnect-failed-visible {
+    display: none;
+}
+
+.components-reconnect-first-attempt-visible {
+    display: none;
+}
+
+.components-reconnect-repeated-attempt-visible {
+    display: none;
+}
+
+.components-rejoining-animation {
+    display: none;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.components-rejoining-animation div {
+    opacity: 1;
+    position: absolute;
+    border: 3px solid var(--md-sys-color-primary);
+    border-radius: 50%;
+    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.components-rejoining-animation div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+.components-resume-failed-visible {
+    display: none;
+}
+
+
+.components-reconnect-container {
+    display: grid;
+    gap: 1.25rem;
+    place-items: center;
+}

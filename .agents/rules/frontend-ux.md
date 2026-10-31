@@ -86,7 +86,7 @@
 | `@Classes.Cards.Card` или `@Classes.Common.Header` | `@Card`, `@Header` через `@using static Classes.<Group>` | Лаконичная разметка без длинных префиксов |
 | `L["HeaderTitle"]` (сырые строки ключей) | `@L[HeaderTitle]` через `@using static Loc.<Domain>` | Проверка ключей компилятором при рефакторинге |
 | `@(L[Title] ?? "Заголовок")` (fallback `??`) | `@L[Title]` без заглушек | Чистый вызов локализации, гарантированный parity в `.resx` |
-| `<style>...</style>` и инлайн `style="..."` | Стили в `Assets/wwwroot/css/` через `:where(...)` | Консолидация стилей и эффективное Brotli-сжатие бандла |
+| `<style>...</style>` и инлайн `style="..."` | Стили в `Assets/wwwroot/css/` по 7-слойной архитектуре (`@layer`) | Чистая разметка и предсказуемый каскад стилей |
 | Блоки `@code { ... }` с логикой (> 5 строк) | C#-код в парном файле `*.razor.cs` | Разделение ответственности и поддержка Native AOT |
 
 ---

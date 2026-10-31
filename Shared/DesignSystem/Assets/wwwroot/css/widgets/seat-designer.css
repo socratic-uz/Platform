@@ -426,3 +426,70 @@
     background-color: var(--md-sys-color-surface-container-high);
 }
 
+
+
+
+
+
+
+
+.status-busy {
+    background: var(--md-sys-color-error);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-error) 60%, transparent);
+}
+
+
+
+
+
+
+
+
+.status-free {
+    background: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-tertiary) 60%, transparent);
+}
+
+
+
+
+
+
+
+
+.status-reserved {
+    background: var(--md-sys-color-secondary);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-secondary) 60%, transparent);
+}
+
+
+
+
+
+
+
+
+.venue-status-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 95px), 1fr));
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+/* --- Canvas Wrappers --- */
+.canvas-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-1);
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.canvas-wrapper {
+    height: clamp(180px, 30vh, 240px);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-highest);
+    overflow: hidden;
+}

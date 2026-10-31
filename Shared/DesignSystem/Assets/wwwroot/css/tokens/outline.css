@@ -14,3 +14,77 @@
     --md-sys-outline-width-focus: 3px;
 }
 
+
+
+
+
+
+
+
+
+.m3-focus-ring-inset:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset-inset, -2px);
+}
+
+
+
+
+
+
+
+
+
+.m3-focus-ring-tight:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset-tight, 1px);
+}
+
+
+
+
+
+
+
+
+
+.m3-focus-ring:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+}
+
+
+
+
+
+
+
+
+
+.m3-outline-none {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+.m3-outline-none:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+.m3-outline-none:focus-visible {
+    outline: none;
+}

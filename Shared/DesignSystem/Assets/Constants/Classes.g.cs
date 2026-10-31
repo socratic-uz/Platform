@@ -555,6 +555,8 @@ namespace Assets.Constants
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
         }
 
         public static class Chat
@@ -1427,11 +1429,6 @@ namespace Assets.Constants
 
         public static class Dialogs
         {
-            public const string ComponentsReconnectFailed = "components-reconnect-failed";
-            public const string ComponentsReconnectPaused = "components-reconnect-paused";
-            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
-            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
-            public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
@@ -1736,9 +1733,12 @@ namespace Assets.Constants
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
+            public const string GridCluster = "m3-grid-cluster";
+            public const string GridlayoutGlass = "glass";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
+            public const string PageWidth = "page-width";
             public const string Viewer3dContainer = "viewer3dContainer";
             public const string Viewer3dWrapper = "viewer-3d-wrapper";
         }
@@ -2038,6 +2038,11 @@ namespace Assets.Constants
         {
             public const string HoverLift = "m3-hover-lift";
             public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Navigation
+        {
+            public const string BrandTitle = "brand-title";
         }
 
         public static class Orders
@@ -2465,6 +2470,15 @@ namespace Assets.Constants
             public const string HeaderTitle = "quote-header-title";
             public const string InputField = "quote-input-field";
             public const string PromptText = "quote-prompt-text";
+        }
+
+        public static class ReconnectModal
+        {
+            public const string ComponentsReconnectFailed = "components-reconnect-failed";
+            public const string ComponentsReconnectPaused = "components-reconnect-paused";
+            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
+            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
+            public const string ComponentsReconnectShow = "components-reconnect-show";
         }
 
         public static class Rental
@@ -3434,6 +3448,8 @@ namespace Classes
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
         }
 
         public static class Chat
@@ -4306,11 +4322,6 @@ namespace Classes
 
         public static class Dialogs
         {
-            public const string ComponentsReconnectFailed = "components-reconnect-failed";
-            public const string ComponentsReconnectPaused = "components-reconnect-paused";
-            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
-            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
-            public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
@@ -4615,9 +4626,12 @@ namespace Classes
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
+            public const string GridCluster = "m3-grid-cluster";
+            public const string GridlayoutGlass = "glass";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
+            public const string PageWidth = "page-width";
             public const string Viewer3dContainer = "viewer3dContainer";
             public const string Viewer3dWrapper = "viewer-3d-wrapper";
         }
@@ -4917,6 +4931,11 @@ namespace Classes
         {
             public const string HoverLift = "m3-hover-lift";
             public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Navigation
+        {
+            public const string BrandTitle = "brand-title";
         }
 
         public static class Orders
@@ -5344,6 +5363,15 @@ namespace Classes
             public const string HeaderTitle = "quote-header-title";
             public const string InputField = "quote-input-field";
             public const string PromptText = "quote-prompt-text";
+        }
+
+        public static class ReconnectModal
+        {
+            public const string ComponentsReconnectFailed = "components-reconnect-failed";
+            public const string ComponentsReconnectPaused = "components-reconnect-paused";
+            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
+            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
+            public const string ComponentsReconnectShow = "components-reconnect-show";
         }
 
         public static class Rental
@@ -6318,6 +6346,8 @@ namespace Styles
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
         }
 
         public static class Chat
@@ -7190,11 +7220,6 @@ namespace Styles
 
         public static class Dialogs
         {
-            public const string ComponentsReconnectFailed = "components-reconnect-failed";
-            public const string ComponentsReconnectPaused = "components-reconnect-paused";
-            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
-            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
-            public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
@@ -7499,9 +7524,12 @@ namespace Styles
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
+            public const string GridCluster = "m3-grid-cluster";
+            public const string GridlayoutGlass = "glass";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
+            public const string PageWidth = "page-width";
             public const string Viewer3dContainer = "viewer3dContainer";
             public const string Viewer3dWrapper = "viewer-3d-wrapper";
         }
@@ -7801,6 +7829,11 @@ namespace Styles
         {
             public const string HoverLift = "m3-hover-lift";
             public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Navigation
+        {
+            public const string BrandTitle = "brand-title";
         }
 
         public static class Orders
@@ -8228,6 +8261,15 @@ namespace Styles
             public const string HeaderTitle = "quote-header-title";
             public const string InputField = "quote-input-field";
             public const string PromptText = "quote-prompt-text";
+        }
+
+        public static class ReconnectModal
+        {
+            public const string ComponentsReconnectFailed = "components-reconnect-failed";
+            public const string ComponentsReconnectPaused = "components-reconnect-paused";
+            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
+            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
+            public const string ComponentsReconnectShow = "components-reconnect-show";
         }
 
         public static class Rental
@@ -9203,6 +9245,8 @@ namespace Material.Web
             public const string ItemRow = "cart-item-row";
             public const string ItemsContainer = "cart-items-container";
             public const string ItemsList = "cart-items-list";
+            public const string ItemTotalPrice = "item-total-price";
+            public const string ItemUnitPrice = "item-unit-price";
         }
 
         public static class Chat
@@ -10075,11 +10119,6 @@ namespace Material.Web
 
         public static class Dialogs
         {
-            public const string ComponentsReconnectFailed = "components-reconnect-failed";
-            public const string ComponentsReconnectPaused = "components-reconnect-paused";
-            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
-            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
-            public const string ComponentsReconnectShow = "components-reconnect-show";
             public const string DrawerBackdrop = "m3-drawer-backdrop";
             public const string DrawerBody = "drawer-body";
             public const string DrawerFooter = "drawer-footer";
@@ -10384,9 +10423,12 @@ namespace Material.Web
         {
             public const string AppGrid = "app-grid";
             public const string AppMain = "app-main";
+            public const string GridCluster = "m3-grid-cluster";
+            public const string GridlayoutGlass = "glass";
             public const string NavOnly = "nav-only";
             public const string NavRail = "m3-nav-rail";
             public const string NoHeader = "no-header";
+            public const string PageWidth = "page-width";
             public const string Viewer3dContainer = "viewer3dContainer";
             public const string Viewer3dWrapper = "viewer-3d-wrapper";
         }
@@ -10686,6 +10728,11 @@ namespace Material.Web
         {
             public const string HoverLift = "m3-hover-lift";
             public const string PressScale = "m3-press-scale";
+        }
+
+        public static class Navigation
+        {
+            public const string BrandTitle = "brand-title";
         }
 
         public static class Orders
@@ -11113,6 +11160,15 @@ namespace Material.Web
             public const string HeaderTitle = "quote-header-title";
             public const string InputField = "quote-input-field";
             public const string PromptText = "quote-prompt-text";
+        }
+
+        public static class ReconnectModal
+        {
+            public const string ComponentsReconnectFailed = "components-reconnect-failed";
+            public const string ComponentsReconnectPaused = "components-reconnect-paused";
+            public const string ComponentsReconnectResumeFailed = "components-reconnect-resume-failed";
+            public const string ComponentsReconnectRetrying = "components-reconnect-retrying";
+            public const string ComponentsReconnectShow = "components-reconnect-show";
         }
 
         public static class Rental

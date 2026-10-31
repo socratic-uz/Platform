@@ -344,3 +344,62 @@ chat-messages > :where(div, article, section):last-of-type {
 assistant-message table {
     margin: 1rem 0;
 }
+
+
+
+
+
+.message-list {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+    min-height: 100%;
+}
+
+
+
+
+
+.no-messages {
+    margin-top: calc(35vh - 10rem);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+
+
+
+
+.user-message {
+    justify-self: end;
+    min-width: 25%;
+    max-width: calc(100% - 5rem);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    white-space: pre-wrap;
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+
+
+
+
+.message-list-container {
+    min-height: 0;
+    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0px));
+    color: var(--md-sys-color-on-surface);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+}
+
+/* --- Call Container --- */
+.call-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

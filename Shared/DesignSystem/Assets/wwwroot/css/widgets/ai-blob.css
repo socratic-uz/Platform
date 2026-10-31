@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Socratic Design System — WIDGETS / ai-blob.css
+   AI Neural Visualizer, Spatial Blob & Face Detection Canvas
+   ========================================================================== */
+
+
+
+
+.ai-blob-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+
+
+.ai-blob-canvas rect {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.ai-blob-canvas svg {
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+    overflow: visible;
+    animation: blobSpin 20s linear infinite;
+    pointer-events: none;
+}
+
+
+
+
+#blob {
+    transform: scale(var(--blob-scale, 1));
+    transform-origin: center;
+}
+
+
+
+
+#blob1 {
+    transform: translate(0, 0);
+}
+
+
+
+
+#blob2 {
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+#blob3 {
+    transform: translate(50%, 50%);
+}
+
+
+
+
+#blob4 {
+    transform: translate(50%, -80%);
+}
+
+
+
+
+#blob5 {
+    transform: translate(-50%, 80%);
+}
+
+
+
+
+svg.ai-blob-svg {
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+    overflow: visible;
+    animation: blobSpin 20s linear infinite;
+    pointer-events: none;
+}
+
+/* --- Blob SVG Layers --- */
+.l0 {
+    opacity: 1;
+    transform: var(--tr0);
+}
+
+.l1 {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr1);
+}
+
+.l2 {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr2);
+}
+
+.l3 {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr3);
+}
+
+.l4 {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr4);
+}
+
+[href="#baseBlob2"].l0 {
+    --s0: 0.8;
+    --t0: calc((1 - var(--s0)) * 50%);
+    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
+}
+
+[href="#baseBlob3"].l0 {
+    --s0: 0.6;
+    --t0: calc((1 - var(--s0)) * 50%);
+    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
+}

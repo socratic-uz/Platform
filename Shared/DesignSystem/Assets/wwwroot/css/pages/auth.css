@@ -407,3 +407,34 @@
     100% { transform: rotate(360deg); }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.session-item-subtitle {
+    color: var(--md-sys-color-primary);
+    font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.session-item-title {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+}

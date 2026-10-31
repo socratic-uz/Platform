@@ -14,7 +14,6 @@ const scanDirs = [
   path.join(cssRoot, 'widgets'),
   path.join(cssRoot, 'layouts'),
   path.join(cssRoot, 'pages'),
-  path.join(cssRoot, 'features'),
 ];
 
 const constantsDir = path.join(assetsRoot, 'Constants');
@@ -148,7 +147,7 @@ function generate() {
   ]);
 
   const SHARED_CLASSES = new Set([
-    'show', 'price-row', 'total-row', 'total-value', 'drawer-header',
+    'show', 'drawer-header',
     'user-message', 'title-large', 'm3-title-large', 'item-unit-price',
     'item-total-price', 'header-title-box', 'brand-title', 'glass',
     'page-width', 'm3-grid-cluster', 'header-content', 'drawer-backdrop',

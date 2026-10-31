@@ -41,3 +41,164 @@
     --md-sys-viewport-height-small: 100svh;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.m3-touch-target {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.m3-touch-target-kiosk {
+    min-width: var(--md-sys-touch-target-kiosk);
+    min-height: var(--md-sys-touch-target-kiosk);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-manipulation {
+    touch-action: manipulation;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-none {
+    touch-action: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-pan-x {
+    touch-action: pan-x;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-pan-y {
+    touch-action: pan-y;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-scroll-x {
+    overflow: auto hidden;
+    scrollbar-width: none;
+    touch-action: pan-y;
+    overscroll-behavior-x: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-scroll-y {
+    overflow: hidden auto;
+    scrollbar-width: none;
+    touch-action: pan-x;
+    overscroll-behavior-y: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-target-44 {
+    box-sizing: border-box;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.touch-target-48 {
+    box-sizing: border-box;
+    min-width: 48px;
+    min-height: 48px;
+}

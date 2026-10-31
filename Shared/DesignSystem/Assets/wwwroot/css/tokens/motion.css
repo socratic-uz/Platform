@@ -33,3 +33,66 @@
     --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
 }
 
+
+
+
+
+
+
+
+
+.m3-hover-lift {
+    will-change: transform;
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+
+
+
+
+
+
+
+
+.m3-hover-lift:active {
+    transform: scale(0.985);
+}
+
+
+
+
+
+
+
+
+
+.m3-hover-lift:hover {
+    box-shadow: var(--md-sys-elevation-level2);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+.m3-press-scale {
+    will-change: transform;
+    transition: transform var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+
+
+
+
+
+
+
+
+.m3-press-scale:active {
+    transform: scale(0.97);
+}

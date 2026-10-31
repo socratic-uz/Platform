@@ -516,3 +516,61 @@ td.col-justify-start {
         overflow-x: auto;
     }
 }
+
+
+
+
+
+
+
+.amount-cell {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.4rem;
+    justify-content: start;
+    align-items: center;
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+.date-cell {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.4rem;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.m3-amount-cell {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+.pagination-text {
+    margin: 0 0.5rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+/* --- Amount Value Cell --- */
+.amount-value {
+    font-size: 1.05rem;
+}

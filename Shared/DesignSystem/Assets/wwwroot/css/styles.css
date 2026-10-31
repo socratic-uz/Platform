@@ -1,22 +1,17 @@
 /* ==========================================================================
    Socratic Platform - Master Design System Stylesheet
-   Component-Driven 7-Layer Architecture (W3C Cascade Layers + DTCG Tokens)
+   Component-Driven 6-Layer Architecture (W3C Cascade Layers + DTCG Tokens)
    ========================================================================== */
 
 /* Layer Precedence (Lower to Higher Priority) */
-@layer foundations, tokens, components, widgets, layouts, pages, features;
+@layer tokens, foundations, layouts, pages, widgets, components;
 
 /* 0. Typography Fonts */
 @import "fonts/material-symbols-outlined.css";
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
 
-/* 1. Foundations & Reset */
-@import "foundations/base.css" layer(foundations);
-@import "foundations/typography.css" layer(foundations);
-@import "foundations/scrollbars.css" layer(foundations);
-
-/* 2. Design Tokens (W3C DTCG Standard Types) */
+/* 1. Design Tokens (W3C DTCG Standard Types) */
 @import "tokens/sizing.css" layer(tokens);
 @import "tokens/spacing.css" layer(tokens);
 @import "tokens/border.css" layer(tokens);
@@ -28,43 +23,21 @@
 @import "tokens/motion.css" layer(tokens);
 @import "tokens/colors.css" layer(tokens);
 
-/* 3. Material 3 Component Primitives */
-@import "components/buttons.css" layer(components);
-@import "components/cards.css" layer(components);
-@import "components/chips.css" layer(components);
-@import "components/common.css" layer(components);
-@import "components/dialogs.css" layer(components);
-@import "components/expressive.css" layer(components);
-@import "components/feedback.css" layer(components);
-@import "components/forms.css" layer(components);
-@import "components/invoice.css" layer(components);
-@import "components/profile-dialog.css" layer(components);
-@import "components/smart-data-view.css" layer(components);
-@import "components/smart-enum.css" layer(components);
-@import "components/smart-filter.css" layer(components);
-@import "components/smart-form.css" layer(components);
-@import "components/smart-toast.css" layer(components);
-@import "components/tables.css" layer(components);
+/* 2. Foundations & Reset */
+@import "foundations/base.css" layer(foundations);
+@import "foundations/typography.css" layer(foundations);
+@import "foundations/scrollbars.css" layer(foundations);
+@import "foundations/animations.css" layer(foundations);
 
-/* 4. Smart Widgets & Tools */
-@import "widgets/ads.css" layer(widgets);
-@import "widgets/booking-picker.css" layer(widgets);
-@import "widgets/cart.css" layer(widgets);
-@import "widgets/color-picker.css" layer(widgets);
-@import "widgets/faceid-viewfinder.css" layer(widgets);
-@import "widgets/lang-selector.css" layer(widgets);
-@import "widgets/media-player.css" layer(widgets);
-@import "widgets/qr-designer.css" layer(widgets);
-@import "widgets/seat-designer.css" layer(widgets);
-
-/* 5. Blazor Layouts */
+/* 3. Blazor Layouts (Page Skeletons & Shells) */
 @import "layouts/footer.css" layer(layouts);
 @import "layouts/grid-layout.css" layer(layouts);
 @import "layouts/header.css" layer(layouts);
+@import "layouts/navigation.css" layer(layouts);
 @import "layouts/landing-layout.css" layer(layouts);
 @import "layouts/map-layout.css" layer(layouts);
 
-/* 6. Page-Specific Styles */
+/* 4. Page-Specific Styles (Macro Screen Contexts) */
 @import "pages/about.css" layer(pages);
 @import "pages/analytics.css" layer(pages);
 @import "pages/auth.css" layer(pages);
@@ -78,6 +51,41 @@
 @import "pages/payment.css" layer(pages);
 @import "pages/terminal.css" layer(pages);
 
-/* 7. Commercial Features */
-@import "features/commerce-modes.css" layer(features);
-@import "features/fiscal.css" layer(features);
+/* 5. Smart Widgets & Composite Tools (Domain Organisms) */
+@import "widgets/ads.css" layer(widgets);
+@import "widgets/ai-blob.css" layer(widgets);
+@import "widgets/booking-picker.css" layer(widgets);
+@import "widgets/cart.css" layer(widgets);
+@import "widgets/color-picker.css" layer(widgets);
+@import "widgets/commerce-modes.css" layer(widgets);
+@import "widgets/faceid-viewfinder.css" layer(widgets);
+@import "widgets/fiscal.css" layer(widgets);
+@import "widgets/lang-selector.css" layer(widgets);
+@import "widgets/map.css" layer(widgets);
+@import "widgets/media-player.css" layer(widgets);
+@import "widgets/pricing-tiers.css" layer(widgets);
+@import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/seat-designer.css" layer(widgets);
+
+/* 6. Material 3 Component Primitives (Protected UI Units) */
+@import "components/buttons.css" layer(components);
+@import "components/cards.css" layer(components);
+@import "components/chips.css" layer(components);
+@import "components/common.css" layer(components);
+@import "components/dialogs.css" layer(components);
+@import "components/reconnect-modal.css" layer(components);
+@import "components/search.css" layer(components);
+@import "components/expressive.css" layer(components);
+@import "components/feedback.css" layer(components);
+@import "components/forms.css" layer(components);
+@import "components/info-grid.css" layer(components);
+@import "components/invoice.css" layer(components);
+@import "components/link-stack.css" layer(components);
+@import "components/profile-dialog.css" layer(components);
+@import "components/smart-data-view.css" layer(components);
+@import "components/smart-enum.css" layer(components);
+@import "components/smart-filter.css" layer(components);
+@import "components/smart-form.css" layer(components);
+@import "components/smart-toast.css" layer(components);
+@import "components/tables.css" layer(components);
+@import "components/theme-toggle.css" layer(components);

@@ -1,6 +1,6 @@
 ---
 name: frontend-ui
-description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, Selector Consolidation (:where(...) master selectors), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
+description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, 6-layer cascade architecture (@layer), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
 license: MIT
 ---
 
@@ -11,13 +11,13 @@ license: MIT
 
 ---
 
-## 1. Консолидация по селекторам в Assets
+## 1. 6-слойная модульная архитектура в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 7-слойной архитектуре Socratic (ITCSS) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, без монолитных CSS-бандлов). Браузер подключает `styles.css` напрямую через HTTP/2 / HTTP/3.
-Одинаковые CSS-свойства группируются в мастер-селекторы `:where(...)` с нулевой специфичностью (0, 0, 0):
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 6-слойной архитектуре (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
+Компоненты независимы и инкапсулируют свои стили в целевых файлах, а повторно используемые сетки оформляются как примитивы с нулевой специфичностью `:where(...)` (0, 0, 0):
 
 ```css
-:where(.panel-header, .card-header, .dialog-header) {
+:where(.grid-split) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
@@ -51,7 +51,7 @@ license: MIT
 
 ## 4. Чеклист проверки (DoD)
 
-- [ ] Все стили добавлены в `Assets/wwwroot/css/` через консолидацию селекторов `:where(...)`.
+- [ ] Стили добавлены в соответствующий слой `Assets/wwwroot/css/` по 6-слойной архитектуре (`@layer`).
 - [ ] Раскладка построена на CSS Grid с соблюдением `minmax(0, 1fr)` и `min-width: 0`.
 - [ ] Все цвета и формы используют токены Material Design 3 (полная поддержка темной и светлой тем).
 - [ ] Интерактивные элементы имеют touch target не менее 48x48px.

@@ -9,15 +9,32 @@
 - **Zero Build-Step для CSS**: чистый нативный W3C CSS без препроцессоров, утилитных генераторов и монолитных бандлов. Браузер напрямую парсит валидные спецификации W3C через параллельные мультиплексированные потоки HTTP/2 и HTTP/3.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей и тегов `<style>`. Стилизация детерминирована на уровне платформенных классов дизайн-системы.
 
-### 1.2. 7-слойный детерминированный каскад W3C Cascade Layers (`@layer`)
+### 1.2. 6-слойный детерминированный каскад W3C Cascade Layers (`@layer`)
 Иерархия каскада зафиксирована декларацией `@layer` в начале `styles.css`:
 ```css
-@layer foundations, tokens, components, widgets, layouts, pages, features;
+@layer tokens, foundations, layouts, pages, widgets, components;
 ```
-- **Приоритет слоев**: нарастает слева направо. Правила из слоев `pages` и `features` естественным образом переопределяют стили `components`, `tokens` и `foundations`.
-- **Предсказуемость каскада**: порядок импортов не создает конфликтов специфичности. Директива `!important` не требуется.
+- **Приоритет слоев**: нарастает слева направо (от фундамента к защищенному UI-элементу):
+  `tokens` (1) ➔ `foundations` (2) ➔ `layouts` (3) ➔ `pages` (4) ➔ `widgets` (5) ➔ `components` (6).
+- **Логика приоритетов каскада**:
+  1. `tokens`: переменные и дизайн-токены W3C DTCG.
+  2. `foundations`: сброс стилей браузера и базовые теги HTML5.
+  3. `layouts`: макро-каркас и сетки экрана (`header`, `footer`, `grid-layout`).
+  4. `pages`: контекст и секции конкретного экрана (`kiosk`, `terminal`, `landing`).
+  5. `widgets`: сложные отраслевые бизнес-организмы (`cart`, `fiscal`, `faceid-viewfinder`), побеждающие общие правила страницы.
+  6. `components`: атомарные примитивы Material 3 (`buttons`, `cards`, `forms`), обладающие **наивысшим приоритетом**. Это гарантирует, что кнопка или инпут сохранят свои строгие размеры, padding и сенсорную эргономику и не будут случайно сломаны внешними стилями страницы или виджета.
 
-### 1.3. Онтология токенов W3C DTCG & Material Design 3 Expressive
+### 1.3. Регламент разграничения: Components vs Widgets
+Чтобы исключить смешение понятий, действует строгое правило классификации:
+
+| Критерий | `components/` (Компоненты) | `widgets/` (Виджеты) |
+|---|---|---|
+| **Определение** | Атомарные и базовые молекулярные примитивы дизайн-системы | Составные отраслевые организмы бизнеса (HoReCa / POS / Retail) |
+| **Доменная привязка** | **Нейтральны**: универсальны для любого приложения в мире без привязки к Socratic | **Специфичны**: решают конкретную задачу торговли, платежей или зала |
+| **Состав** | Неделимый примитив (кнопка, чип, инпут, модалка, таблица) | Композиция нескольких компонентов (в корзине есть кнопки, чипы, карточки) |
+| **Примеры в кодовой базе** | `buttons.css`, `cards.css`, `chips.css`, `forms.css`, `dialogs.css`, `tables.css`, `feedback.css`, `smart-data-view.css` | `cart.css`, `fiscal.css`, `faceid-viewfinder.css`, `booking-picker.css`, `seat-designer.css`, `qr-designer.css`, `commerce-modes.css` |
+
+### 1.4. Онтология токенов W3C DTCG & Material Design 3 Expressive
 - Слой `tokens/` организован строго по 10 каноническим типам спецификации W3C Design Tokens Community Group:
   1. `border.css` — радиусы скруглений и толщины рамок ($type: border)
   2. `colors.css` — системная палитра M3X и режимы тем Dark/Light ($type: color)
@@ -31,7 +48,7 @@
   10. `typography.css` — шрифтовая шкала Material Typescale ($type: typography)
 - **Сквозная типизация в C#**: все CSS-классы, токены, иконки и ресурсы компилируются Roslyn генераторами в строго типизированные структуры (`Classes.g.cs`, `Icons.g.cs`, `Assets.g.cs`), обеспечивая 100% проверку компилятором без строковой магии.
 
-### 1.4. Детерминированная геометрия: Pure CSS Grid & Container Queries
+### 1.5. Детерминированная геометрия: Pure CSS Grid & Container Queries
 - **Двумерная математическая модель**: все сетки, колонки, ряды и стеки строятся исключительно на `display: grid`.
 - **UI Geometry Contract**:
   - Каждая гибкая колонка защищена `minmax(0, 1fr)` (исключает переполнение контейнера).
@@ -39,11 +56,12 @@
 - **CSS Container Queries (`@container`)**: Micro Layout (карточки, модальные окна, виджеты) адаптируется к ширине своего непосредственного родителя, а не экрана.
 - **M3 Window Size Classes**: Macro Layout (каркас приложения, навигация, рабочие зоны) управляется адаптивной матрицей вьюпортов M3 (`Compact`, `Medium`, `Expanded`, `Large`, `ExtraLarge`).
 
-### 1.5. Консолидация по селекторам и нулевая специфичность (`:where(...)`)
-- Общие базовые примитивы группируются в мастер-селекторы `:where(...)` с весом `(0, 0, 0)`.
-- Специфичные правила компонентов размещаются в их целевых файлах, сохраняя модульность и изолированность.
+### 1.6. Модульность компонентов и нулевая специфичность примитивов (`:where(...)`)
+- **Модульная изоляция**: каждый компонент (`buttons.css`, `cards.css`, `dialogs.css`, `forms.css`) независим и инкапсулирует собственные правила. Компоненты слабо связаны (Loose Coupling).
+- **Сетки-примитивы (Layout Primitives)**: переиспользуемая геометрия выносится в семантические Grid-примитивы (`.grid-split`, `.grid-center`, `.m3-stack`) в слое `layouts/`.
+- **Роль `:where(...)`**: псевдокласс `:where(...)` применяется исключительно для обнуления специфичности `(0, 0, 0)` базовых сбросов (CSS Reset в `foundations/`) и UI-примитивов, чтобы компоненты верхних слоев могли легко переопределять их без хаков специфичности и без `!important`. Склеивание разнородных селекторов через запятую запрещено как антипаттерн.
 
-### 1.6. Сенсорная эргономика (Touch-First & High-Throughput POS/Kiosk)
+### 1.7. Сенсорная эргономика (Touch-First & High-Throughput POS/Kiosk)
 - Габариты интерактивных зон: POS $\ge 48\times 48\text{px}$, Kiosk $\ge 56\times 56\text{px}$, Fast Checkout $\ge 64\text{px}$, отступы между кнопками $\ge 12\text{px}$.
 - `touch-action: manipulation` для устранения браузерных задержек сенсорного ввода.
 
@@ -181,19 +199,14 @@
 Корневой файл [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css) подключает модули системы по 7 архитектурным слоям:
 
 ```css
-@layer foundations, tokens, components, widgets, layouts, pages, features;
+@layer tokens, foundations, layouts, components, widgets, pages, features;
 
 /* 0. Шрифты */
 @import "fonts/material-symbols-outlined.css";
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
 
-/* 1. Foundations & Reset */
-@import "foundations/base.css" layer(foundations);
-@import "foundations/typography.css" layer(foundations);
-@import "foundations/scrollbars.css" layer(foundations);
-
-/* 2. Design Tokens (W3C DTCG Standard Types) */
+/* 1. Design Tokens (W3C DTCG Standard Types) */
 @import "tokens/sizing.css" layer(tokens);
 @import "tokens/spacing.css" layer(tokens);
 @import "tokens/border.css" layer(tokens);
@@ -205,7 +218,19 @@
 @import "tokens/motion.css" layer(tokens);
 @import "tokens/colors.css" layer(tokens);
 
-/* 3. Material 3 Component Primitives */
+/* 2. Foundations & Reset */
+@import "foundations/base.css" layer(foundations);
+@import "foundations/typography.css" layer(foundations);
+@import "foundations/scrollbars.css" layer(foundations);
+
+/* 3. Blazor Layouts (Page Skeletons & Shells) */
+@import "layouts/footer.css" layer(layouts);
+@import "layouts/grid-layout.css" layer(layouts);
+@import "layouts/header.css" layer(layouts);
+@import "layouts/landing-layout.css" layer(layouts);
+@import "layouts/map-layout.css" layer(layouts);
+
+/* 4. Material 3 Component Primitives */
 @import "components/buttons.css" layer(components);
 @import "components/cards.css" layer(components);
 @import "components/chips.css" layer(components);
@@ -223,23 +248,18 @@
 @import "components/smart-toast.css" layer(components);
 @import "components/tables.css" layer(components);
 
-/* 4. Smart Widgets & Tools */
+/* 5. Smart Widgets & Tools */
 @import "widgets/ads.css" layer(widgets);
 @import "widgets/booking-picker.css" layer(widgets);
 @import "widgets/cart.css" layer(widgets);
 @import "widgets/color-picker.css" layer(widgets);
+@import "widgets/commerce-modes.css" layer(widgets);
 @import "widgets/faceid-viewfinder.css" layer(widgets);
+@import "widgets/fiscal.css" layer(widgets);
 @import "widgets/lang-selector.css" layer(widgets);
 @import "widgets/media-player.css" layer(widgets);
 @import "widgets/qr-designer.css" layer(widgets);
 @import "widgets/seat-designer.css" layer(widgets);
-
-/* 5. Blazor Layouts */
-@import "layouts/footer.css" layer(layouts);
-@import "layouts/grid-layout.css" layer(layouts);
-@import "layouts/header.css" layer(layouts);
-@import "layouts/landing-layout.css" layer(layouts);
-@import "layouts/map-layout.css" layer(layouts);
 
 /* 6. Page-Specific Styles */
 @import "pages/about.css" layer(pages);
@@ -254,10 +274,6 @@
 @import "pages/orders.css" layer(pages);
 @import "pages/payment.css" layer(pages);
 @import "pages/terminal.css" layer(pages);
-
-/* 7. Commercial Features */
-@import "features/commerce-modes.css" layer(features);
-@import "features/fiscal.css" layer(features);
 ```
 
 ---

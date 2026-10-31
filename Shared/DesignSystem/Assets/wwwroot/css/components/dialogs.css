@@ -514,77 +514,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     font-weight: 800;
 }
 
-#components-reconnect-modal {
-    opacity: 0;
-    width: min(22rem, calc(100vw - 32px));
-    margin: 20vh auto;
-    padding: 2rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
-    background-color: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-expressive-3, 0 16px 36px rgb(from var(--md-sys-color-shadow) r g b / 0.4));
-    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
-    animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
-}
-
-#components-reconnect-modal p {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-#components-reconnect-modal::backdrop {
-    opacity: 1;
-    background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
-    backdrop-filter: blur(8px);
-    animation: components-reconnect-modal-fadeInOpacity 0.5s ease-in-out;
-    -webkit-backdrop-filter: blur(8px);
-}
-
-#components-reconnect-modal.components-reconnect-failed {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-failed .components-reconnect-failed-visible {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-paused .components-pause-visible {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-resume-failed .components-resume-failed-visible {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-retrying {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-retrying .components-reconnect-repeated-attempt-visible {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-show .components-reconnect-first-attempt-visible {
-    display: block;
-}
-
-#components-reconnect-modal.components-reconnect-show .components-rejoining-animation {
-    display: block;
-}
-
-#components-reconnect-modal[open] {
-    animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
-    animation-fill-mode: both;
-}
-
 md-dialog {
     grid-template-rows: auto minmax(0, 1fr) auto;
     box-sizing: border-box;
@@ -781,4 +710,20 @@ md-dialog.contacts md-list {
 
 .m3x-shape-dialog {
     border-radius: var(--md-sys-shape-expressive-dialog, 28px);
+}
+
+/* --- Dropdowns & Menus --- */
+.dropdown-menu {
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+md-menu:not(:defined) {
+    display: none;
+}
+
+md-menu:not([open]) {
+    display: none;
 }

@@ -1532,3 +1532,203 @@ md-suggestion-chip:active {
     color: var(--md-sys-color-on-secondary-container);
     font-weight: 600;
 }
+
+
+
+
+
+
+
+
+.dot-cyan {
+    background: var(--md-sys-color-primary);
+    box-shadow: 0 0 10px var(--md-sys-color-primary);
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+.dot-emerald {
+    background: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 10px var(--md-sys-color-tertiary);
+    animation: livePulse 2.4s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+.m3-status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentcolor;
+}
+
+
+
+
+
+
+
+
+.m3-status-dot.pulse {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+.m3-status-dot.pulse::after {
+    opacity: 0.4;
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: inherit;
+    animation: m3-pulse 2s var(--md-sys-motion-easing-spring) infinite;
+    content: '';
+}
+
+
+
+
+
+
+
+
+.spec-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+}
+
+
+
+
+
+
+
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    background-color: currentColor;
+}
+
+
+
+
+
+
+
+
+.status-dot.pulse {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+.status-dot.pulse::after {
+    opacity: 0.4;
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: inherit;
+    animation: m3-pulse 2s var(--md-sys-motion-easing-spring) infinite;
+    content: '';
+}
+
+
+
+
+
+
+
+
+.status-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-tertiary);
+    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
+    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+
+
+
+
+
+
+.status-text {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* --- Counters & Status Legends --- */
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+}
+
+.legend-item {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content auto;
+    gap: 0.45rem;
+    align-items: center;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.m3-counter {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.material-counter {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.meta-dot {
+    opacity: 0.6;
+}
+
+.meta-highlight {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}

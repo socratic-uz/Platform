@@ -126,10 +126,10 @@ Interaction (IX)
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
-- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 7-слойной архитектуре (`@layer foundations, tokens, components, widgets, layouts, pages, features`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
+- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 6-слойной архитектуре (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
-- **Консолидация по селекторам**: одинаковые свойства объединяются через мастер-селекторы `:where(...)` с нулевой специфичностью (0, 0, 0).
+- **Модульность и нулевая специфичность**: независимые компоненты в соответствующих слоях `@layer`, примитивы обнуляют вес через `:where(...)` (0, 0, 0).
 - Подробности: [rules/frontend-ui.md](rules/frontend-ui.md).
 
 #### 3. Interaction (IX) ➔ Behavior (Logic) — строго в `*.razor.cs` (Code-Behind)

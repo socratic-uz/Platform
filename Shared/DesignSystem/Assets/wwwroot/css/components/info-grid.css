@@ -1,0 +1,452 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / info-grid.css
+   Key-Value Specification Grids, Item Pairs & Info Panels
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+.info-icon {
+    color: var(--md-sys-color-tertiary);
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+.info-item {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    align-content: start;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+.info-label {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+.info-value {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+.m3-info-item {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    align-content: start;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+
+
+
+
+
+
+
+
+.m3-info-item > div {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+
+
+
+
+
+
+
+
+.m3-info-label {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    min-width: 0;
+}
+
+
+
+
+
+
+
+
+
+.m3-info-value {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+.product-info-panel {
+    display: grid;
+    gap: 1.5rem;
+    align-content: start;
+}
+
+
+
+
+
+
+
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: var(--md-sys-spacing-4);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.m3-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: var(--md-sys-spacing-4);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-details {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-divider {
+    width: 1px;
+    height: 38px;
+    background: var(--md-sys-color-outline-variant);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-icon {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-icon.in-stock {
+    color: var(--md-sys-color-tertiary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content minmax(0, 1fr);
+    gap: 0.75rem;
+    justify-items: center;
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-label {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-value {
+    min-width: 0;
+    min-inline-size: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-value-box {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.spec-value-text {
+    font-size: 1.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.specs-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.15fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: color-mix(in srgb, var(--md-sys-color-surface-container) 85%, transparent);
+    box-shadow: var(--md-sys-elevation-level2, 0 16px 40px -8px rgb(from var(--md-sys-color-shadow) r g b / 0.5));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* --- Statistics & Details --- */
+.detail-icon {
+    font-size: 18px;
+}
+
+.detail-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.metric-desc {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.775rem;
+    font-weight: 500;
+}
+
+.metric-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.stat-item {
+    display: grid;
+    align-content: center;
+    place-items: center;
+}
+
+.stat-item:not(:last-child) {
+    border-right: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+}
+
+.stat-item.eta .stat-value {
+    color: var(--md-sys-color-primary);
+}
+
+.stat-label {
+    margin-bottom: 0.15rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.stat-value .unit {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.value-cyan {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-emerald {
+    background: linear-gradient(135deg, var(--md-sys-color-secondary) 0%, var(--md-sys-color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-purple {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-teal {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}

@@ -401,3 +401,81 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.explorer-header {
+    display: grid;
+    gap: var(--md-sys-spacing-1, 0.25rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.explorer-subtitle {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.explorer-grid-container {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    min-height: 380px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.m3-explorer-section {
+    display: grid;
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    width: 100%;
+    padding: var(--md-sys-spacing-6, 1.5rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container-low);
+}
