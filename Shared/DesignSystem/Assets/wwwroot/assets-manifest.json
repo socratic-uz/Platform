@@ -3,8 +3,8 @@
   "assets": [
     {
       "url": "_content/Assets/css/components/buttons.css",
-      "size": 59918,
-      "hash": "sha256-0e848daceb83"
+      "size": 61781,
+      "hash": "sha256-f9b6d4241249"
     },
     {
       "url": "_content/Assets/css/components/cards.css",
@@ -38,8 +38,8 @@
     },
     {
       "url": "_content/Assets/css/components/forms.css",
-      "size": 11037,
-      "hash": "sha256-a9397bfe0995"
+      "size": 17021,
+      "hash": "sha256-b9a2f8e7cf39"
     },
     {
       "url": "_content/Assets/css/components/invoice.css",
@@ -118,8 +118,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/typography.css",
-      "size": 12957,
-      "hash": "sha256-1298b2d48059"
+      "size": 5848,
+      "hash": "sha256-af27092aa141"
     },
     {
       "url": "_content/Assets/css/layouts/footer.css",

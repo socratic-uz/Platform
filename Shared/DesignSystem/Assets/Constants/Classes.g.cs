@@ -1685,6 +1685,7 @@ namespace Assets.Constants
             public const string SelectionItem = "m3-selection-item";
             public const string SelectionPanel = "m3-selection-panel";
             public const string StyleSelectsGrid = "style-selects-grid";
+            public const string TextInput = "text-input";
         }
 
         public static class Geo
@@ -2880,7 +2881,6 @@ namespace Assets.Constants
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
-            public const string TextInput = "text-input";
             public const string TitleGradient = "title-gradient";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
@@ -4564,6 +4564,7 @@ namespace Classes
             public const string SelectionItem = "m3-selection-item";
             public const string SelectionPanel = "m3-selection-panel";
             public const string StyleSelectsGrid = "style-selects-grid";
+            public const string TextInput = "text-input";
         }
 
         public static class Geo
@@ -5759,7 +5760,6 @@ namespace Classes
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
-            public const string TextInput = "text-input";
             public const string TitleGradient = "title-gradient";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
@@ -7448,6 +7448,7 @@ namespace Styles
             public const string SelectionItem = "m3-selection-item";
             public const string SelectionPanel = "m3-selection-panel";
             public const string StyleSelectsGrid = "style-selects-grid";
+            public const string TextInput = "text-input";
         }
 
         public static class Geo
@@ -8643,7 +8644,6 @@ namespace Styles
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
-            public const string TextInput = "text-input";
             public const string TitleGradient = "title-gradient";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";
@@ -10333,6 +10333,7 @@ namespace Material.Web
             public const string SelectionItem = "m3-selection-item";
             public const string SelectionPanel = "m3-selection-panel";
             public const string StyleSelectsGrid = "style-selects-grid";
+            public const string TextInput = "text-input";
         }
 
         public static class Geo
@@ -11528,7 +11529,6 @@ namespace Material.Web
             public const string SectionTitleBox = "section-title-box";
             public const string ShowcaseSectionTitleWrap = "showcase-section-title-wrap";
             public const string TextGradient = "m3-text-gradient";
-            public const string TextInput = "text-input";
             public const string TitleGradient = "title-gradient";
             public const string TitleLarge = "m3-title-large";
             public const string TitleMedium = "m3-title-medium";

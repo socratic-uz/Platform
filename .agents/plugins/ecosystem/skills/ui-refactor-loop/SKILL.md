@@ -39,7 +39,7 @@ Skip pages already marked done in the Ledger below.
 
 ## 2. Refactor Styles (CSS Architecture & M3X)
 
-1. **Централизация и Selector Consolidation (Философия единой декларации)**:
+1. **Централизация и детерминированный каскад (@layer & :where(...))**:
    - Вся стилизация строго в `Assets/wwwroot/css/` (7-слойная структура: `foundations/`, `tokens/`, `components/`, `widgets/`, `layouts/`, `pages/`, `features/`).
    - Идентичные CSS-свойства объединяются через мастер-селекторы `:where(...)` с нулевой специфичностью `(0, 0, 0)`.
    - *Selector Append*: при добавлении новых классов селектор дописывается через запятую в существующий блок `:where(...)` вместо создания дублирующих свойств.

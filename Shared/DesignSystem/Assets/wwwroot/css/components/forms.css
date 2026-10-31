@@ -458,3 +458,156 @@ md-outlined-select {
     }
 
 }
+
+/* Web Component: md-filled-text-field & md-outlined-text-field */
+md-dialog.contacts md-outlined-text-field {
+    width: 100%;
+}
+
+md-dialog.faceid-profile-modal md-outlined-text-field {
+    width: 100%;
+}
+
+.avatar-container md-outlined-text-field {
+    width: 100%;
+}
+
+.chat-back-link .material-text-field {
+    height: 40px;
+}
+
+.chat-back-link md-outlined-text-field {
+    height: 40px;
+}
+
+.m3-filter-chip .material-text-field {
+    height: 40px;
+}
+
+.m3-filter-chip md-outlined-text-field {
+    height: 40px;
+}
+
+.m3-grid-text-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.25rem;
+}
+
+.m3-search-container .material-text-field {
+    height: 40px;
+    border-radius: var(--md-sys-shape-expressive-container);
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+    --md-outlined-text-field-bottom-space: 2px;
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-leading-space: 14px;
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-top-space: 2px;
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+.m3-search-container md-outlined-text-field {
+    width: 100%;
+    height: 44px;
+    border-radius: var(--md-sys-shape-expressive-container);
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+    --md-outlined-text-field-bottom-space: 2px;
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-leading-space: 14px;
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-top-space: 2px;
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+.m3-search-container md-outlined-text-field:focus-within {
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+.material-search-container .material-text-field {
+    height: 44px;
+    border-radius: var(--md-sys-shape-expressive-container);
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+    --md-outlined-text-field-bottom-space: 2px;
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-leading-space: 14px;
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-top-space: 2px;
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+.material-search-container md-outlined-text-field {
+    width: 100%;
+    height: 40px;
+    border-radius: var(--md-sys-shape-expressive-container);
+    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+    --md-outlined-text-field-bottom-space: 2px;
+    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
+    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
+    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
+    --md-outlined-text-field-leading-space: 14px;
+    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-text-field-top-space: 2px;
+    --md-outlined-text-field-trailing-space: 12px;
+}
+
+.material-search-container md-outlined-text-field:focus-within {
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+.material-text-field {
+    width: 100%;
+    min-width: 0;
+}
+
+.text-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9rem;
+}
+
+.text-input:focus {
+    border-color: var(--md-sys-color-primary);
+    outline: none;
+}
+
+md-filled-text-field {
+    width: 100%;
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
+}
+
+md-filled-text-field:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+md-outlined-text-field {
+    width: 100%;
+    min-width: 0;
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
+}
+
+md-outlined-text-field:focus-visible {
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
