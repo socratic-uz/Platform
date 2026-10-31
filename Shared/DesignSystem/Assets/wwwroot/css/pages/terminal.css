@@ -429,7 +429,7 @@
     .pos-catalog {
         grid-template-rows: auto auto auto;
         height: auto;
-        min-height: 0;
+        min-height: max-content;
         overflow: visible;
     }
 
