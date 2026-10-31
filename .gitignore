@@ -11,3 +11,7 @@ Design/Screenshots/*.png
 !Design/Screenshots/sync-3-devices-all-pages.js
 !Design/Screenshots/Update-Screenshots.ps1
 !Design/Screenshots/screenshots-manifest.json
+
+# Regenerated web assets
+**/wwwroot/preview/
+**/wwwroot/analytics/
