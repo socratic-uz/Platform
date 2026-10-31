@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-31T06:25:57.164Z",
+  "generatedAt": "2026-10-31T17:02:46.177Z",
   "summary": {
-    "totalDeclaredKeys": 6857,
-    "usedInRazorCount": 938,
-    "unusedCount": 5919,
-    "adoptionRatePercent": 14,
-    "totalTypedCallSites": 1156,
+    "totalDeclaredKeys": 6858,
+    "usedInRazorCount": 917,
+    "unusedCount": 5941,
+    "adoptionRatePercent": 13,
+    "totalTypedCallSites": 1142,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
     "sourceFilesScanned": 627
@@ -31,12 +31,13 @@
       "domain": "Actions",
       "name": "CloseAction",
       "locKey": "Close",
-      "usageCountInRazor": 7,
-      "filesCount": 5,
+      "usageCountInRazor": 8,
+      "filesCount": 6,
       "files": [
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartToasts/SmartToastContainer.razor",
         "Retail/Checkout/Pages/Payment.razor",
         "Portal/Landing/Pages/Analytics.razor",
+        "Studio/Map/Components/ControlsPanel.razor",
         "Studio/Map/Components/MapPopup.razor",
         "Studio/SeatDesigner/Pages/SeatDesignerPage.razor"
       ]
@@ -640,12 +641,12 @@
     "Actions": {
       "total": 55,
       "used": 20,
-      "totalCalls": 37
+      "totalCalls": 38
     },
     "Common": {
-      "total": 559,
+      "total": 560,
       "used": 251,
-      "totalCalls": 293
+      "totalCalls": 298
     },
     "Auction": {
       "total": 16,
@@ -735,7 +736,7 @@
     "Landing": {
       "total": 439,
       "used": 234,
-      "totalCalls": 255
+      "totalCalls": 256
     },
     "Lottery": {
       "total": 42,
@@ -754,8 +755,8 @@
     },
     "Promotion": {
       "total": 75,
-      "used": 21,
-      "totalCalls": 21
+      "used": 0,
+      "totalCalls": 0
     },
     "QrDesigner": {
       "total": 98,

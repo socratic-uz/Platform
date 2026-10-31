@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-31T06:25:57.161Z",
+  "generatedAt": "2026-10-31T17:02:46.174Z",
   "summary": {
-    "totalDeclaredConstants": 2555,
-    "usedInRazorCount": 1062,
-    "unusedCount": 1493,
-    "adoptionRatePercent": 42,
-    "totalCallSites": 2571,
+    "totalDeclaredConstants": 2561,
+    "usedInRazorCount": 1000,
+    "unusedCount": 1561,
+    "adoptionRatePercent": 39,
+    "totalCallSites": 2435,
     "rawStringViolationsCount": 0,
     "classesWithRawLiteralsCount": 0,
     "sourceFilesScanned": 627
@@ -16,11 +16,10 @@
       "category": "Badge",
       "name": "Icon",
       "cssClass": "badge-icon",
-      "usageCountInRazor": 259,
-      "filesCount": 10,
+      "usageCountInRazor": 241,
+      "filesCount": 9,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Platform/Shared/DesignSystem/Smart.Web/Components/Receipt/UniversalReceiptView.razor",
         "Retail/Orders/Pages/Orders/Index.razor",
         "Portal/Landing/Pages/About.razor",
@@ -95,10 +94,9 @@
       "category": "Cards",
       "name": "Selected",
       "cssClass": "selected",
-      "usageCountInRazor": 24,
-      "filesCount": 4,
+      "usageCountInRazor": 23,
+      "filesCount": 3,
       "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Retail/Orders/Pages/Orders/Index.razor",
         "Portal/Landing/Pages/Help.razor",
         "Portal/Landing/Pages/QR.razor"
@@ -256,21 +254,6 @@
       ]
     },
     {
-      "key": "Cards.Actions",
-      "category": "Cards",
-      "name": "Actions",
-      "cssClass": "m3-card-actions",
-      "usageCountInRazor": 11,
-      "filesCount": 5,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
-        "Retail/Checkout/Pages/Payment.razor",
-        "Portal/Landing/Pages/About.razor",
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
       "key": "Cards.CardGlass",
       "category": "Cards",
       "name": "CardGlass",
@@ -354,15 +337,28 @@
       ]
     },
     {
+      "key": "Cards.Actions",
+      "category": "Cards",
+      "name": "Actions",
+      "cssClass": "m3-card-actions",
+      "usageCountInRazor": 9,
+      "filesCount": 4,
+      "files": [
+        "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
+        "Retail/Checkout/Pages/Payment.razor",
+        "Portal/Landing/Pages/About.razor",
+        "Portal/Landing/Pages/Landing.razor"
+      ]
+    },
+    {
       "key": "Common.Open",
       "category": "Common",
       "name": "Open",
       "cssClass": "open",
-      "usageCountInRazor": 10,
-      "filesCount": 8,
+      "usageCountInRazor": 9,
+      "filesCount": 7,
       "files": [
         "Platform/Shared/DesignSystem/Layout/Components/Organization/OrganizationSubscriptionCard.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartGrid/SmartGrid.razor",
         "Retail/Checkout/Pages/Payment.razor",
         "Portal/Landing/Pages/Analytics.razor",
@@ -412,17 +408,6 @@
       "category": "Chips",
       "name": "OrgTag",
       "cssClass": "org-tag",
-      "usageCountInRazor": 8,
-      "filesCount": 1,
-      "files": [
-        "Portal/Landing/Pages/Landing.razor"
-      ]
-    },
-    {
-      "key": "Common.CtaArrow",
-      "category": "Common",
-      "name": "CtaArrow",
-      "cssClass": "cta-arrow",
       "usageCountInRazor": 8,
       "filesCount": 1,
       "files": [
@@ -507,29 +492,6 @@
       ]
     },
     {
-      "key": "Payment.PromoPaymentCard",
-      "category": "Payment",
-      "name": "PromoPaymentCard",
-      "cssClass": "payment-card",
-      "usageCountInRazor": 8,
-      "filesCount": 1,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor"
-      ]
-    },
-    {
-      "key": "Skeleton.Root",
-      "category": "Skeleton",
-      "name": "Root",
-      "cssClass": "m3-skeleton",
-      "usageCountInRazor": 8,
-      "filesCount": 2,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor",
-        "Platform/Shared/DesignSystem/Layout/Components/SkeletonLoader.razor.cs"
-      ]
-    },
-    {
       "key": "Badge.SectionBadge",
       "category": "Badge",
       "name": "SectionBadge",
@@ -586,19 +548,6 @@
       ]
     },
     {
-      "key": "Payment.Headline",
-      "category": "Payment",
-      "name": "Headline",
-      "cssClass": "headline",
-      "usageCountInRazor": 7,
-      "filesCount": 3,
-      "files": [
-        "Platform/Shared/DesignSystem/Layout/Components/Organization/ProductPromotionModal.razor",
-        "Retail/Checkout/Pages/Payment.razor",
-        "Portal/Organization/Widgets/Settings/MerchantPaymentSettings.razor"
-      ]
-    },
-    {
       "key": "Analytics.AnalyticsKpiCard",
       "category": "Analytics",
       "name": "AnalyticsKpiCard",
@@ -619,6 +568,50 @@
       "files": [
         "Portal/Landing/Pages/Analytics.razor"
       ]
+    },
+    {
+      "key": "Analytics.KpiHeader",
+      "category": "Analytics",
+      "name": "KpiHeader",
+      "cssClass": "kpi-header",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Analytics.KpiIconBadge",
+      "category": "Analytics",
+      "name": "KpiIconBadge",
+      "cssClass": "kpi-icon-badge",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Analytics.KpiNumber",
+      "category": "Analytics",
+      "name": "KpiNumber",
+      "cssClass": "kpi-number",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
+    },
+    {
+      "key": "Analytics.KpiTitle",
+      "category": "Analytics",
+      "name": "KpiTitle",
+      "cssClass": "kpi-title",
+      "usageCountInRazor": 6,
+      "filesCount": 1,
+      "files": [
+        "Portal/Landing/Pages/Analytics.razor"
+      ]
     }
   ],
   "byCategory": {
@@ -634,8 +627,8 @@
     },
     "Analytics": {
       "total": 29,
-      "used": 27,
-      "totalCalls": 73
+      "used": 26,
+      "totalCalls": 71
     },
     "Auction": {
       "total": 5,
@@ -654,8 +647,8 @@
     },
     "Badge": {
       "total": 95,
-      "used": 49,
-      "totalCalls": 408
+      "used": 47,
+      "totalCalls": 385
     },
     "Booking": {
       "total": 11,
@@ -679,11 +672,11 @@
     },
     "Cards": {
       "total": 208,
-      "used": 79,
-      "totalCalls": 229
+      "used": 78,
+      "totalCalls": 223
     },
     "Cart": {
-      "total": 5,
+      "total": 7,
       "used": 0,
       "totalCalls": 0
     },
@@ -699,8 +692,8 @@
     },
     "Chips": {
       "total": 30,
-      "used": 14,
-      "totalCalls": 44
+      "used": 13,
+      "totalCalls": 43
     },
     "Classified": {
       "total": 9,
@@ -713,9 +706,9 @@
       "totalCalls": 1
     },
     "Colors": {
-      "total": 4,
-      "used": 4,
-      "totalCalls": 8
+      "total": 6,
+      "used": 5,
+      "totalCalls": 10
     },
     "CommerceModes": {
       "total": 3,
@@ -724,16 +717,11 @@
     },
     "Common": {
       "total": 588,
-      "used": 273,
-      "totalCalls": 529
+      "used": 261,
+      "totalCalls": 504
     },
     "Configurator": {
       "total": 14,
-      "used": 0,
-      "totalCalls": 0
-    },
-    "Dark": {
-      "total": 1,
       "used": 0,
       "totalCalls": 0
     },
@@ -749,11 +737,11 @@
     },
     "Dialog": {
       "total": 43,
-      "used": 31,
-      "totalCalls": 76
+      "used": 26,
+      "totalCalls": 67
     },
     "Dialogs": {
-      "total": 13,
+      "total": 8,
       "used": 0,
       "totalCalls": 0
     },
@@ -808,7 +796,7 @@
       "totalCalls": 48
     },
     "Forms": {
-      "total": 7,
+      "total": 8,
       "used": 1,
       "totalCalls": 1
     },
@@ -828,7 +816,7 @@
       "totalCalls": 0
     },
     "GridLayout": {
-      "total": 7,
+      "total": 10,
       "used": 2,
       "totalCalls": 3
     },
@@ -839,8 +827,8 @@
     },
     "Header": {
       "total": 17,
-      "used": 16,
-      "totalCalls": 24
+      "used": 6,
+      "totalCalls": 14
     },
     "Help": {
       "total": 16,
@@ -872,11 +860,6 @@
       "used": 16,
       "totalCalls": 28
     },
-    "Light": {
-      "total": 1,
-      "used": 0,
-      "totalCalls": 0
-    },
     "Lottery": {
       "total": 17,
       "used": 0,
@@ -897,6 +880,11 @@
       "used": 1,
       "totalCalls": 1
     },
+    "Navigation": {
+      "total": 1,
+      "used": 0,
+      "totalCalls": 0
+    },
     "Orders": {
       "total": 38,
       "used": 5,
@@ -909,8 +897,8 @@
     },
     "Payment": {
       "total": 93,
-      "used": 47,
-      "totalCalls": 88
+      "used": 17,
+      "totalCalls": 31
     },
     "Picker": {
       "total": 135,
@@ -929,11 +917,16 @@
     },
     "QrDesigner": {
       "total": 79,
-      "used": 59,
-      "totalCalls": 85
+      "used": 58,
+      "totalCalls": 84
     },
     "Quote": {
       "total": 8,
+      "used": 0,
+      "totalCalls": 0
+    },
+    "ReconnectModal": {
+      "total": 5,
       "used": 0,
       "totalCalls": 0
     },
@@ -965,7 +958,7 @@
     "SegmentedButton": {
       "total": 12,
       "used": 5,
-      "totalCalls": 10
+      "totalCalls": 9
     },
     "SignIn": {
       "total": 17,
@@ -975,7 +968,7 @@
     "Skeleton": {
       "total": 9,
       "used": 4,
-      "totalCalls": 11
+      "totalCalls": 9
     },
     "SmartDataView": {
       "total": 3,
@@ -1028,9 +1021,9 @@
       "totalCalls": 18
     },
     "Typography": {
-      "total": 21,
+      "total": 20,
       "used": 12,
-      "totalCalls": 54
+      "totalCalls": 53
     }
   },
   "rawStringViolations": [],
@@ -1202,6 +1195,15 @@
       "category": "Analytics",
       "name": "AnalyticsHeaderTitleGroup",
       "cssClass": "analytics-header-title-group",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
+      "key": "Analytics.AnalyticsPeriodChip",
+      "category": "Analytics",
+      "name": "AnalyticsPeriodChip",
+      "cssClass": "analytics-period-chip",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []
@@ -1729,6 +1731,15 @@
       "files": []
     },
     {
+      "key": "Badge.PopularBadge",
+      "category": "Badge",
+      "name": "PopularBadge",
+      "cssClass": "popular-badge",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
       "key": "Badge.PosPaymentBadge",
       "category": "Badge",
       "name": "PosPaymentBadge",
@@ -1864,6 +1875,15 @@
       "files": []
     },
     {
+      "key": "Badge.Success",
+      "category": "Badge",
+      "name": "Success",
+      "cssClass": "success",
+      "usageCountInRazor": 0,
+      "filesCount": 0,
+      "files": []
+    },
+    {
       "key": "Badge.TicketBadge",
       "category": "Badge",
       "name": "TicketBadge",
@@ -1904,33 +1924,6 @@
       "category": "Booking",
       "name": "DialogHeader",
       "cssClass": "booking-dialog-header",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Booking.GridTwo",
-      "category": "Booking",
-      "name": "GridTwo",
-      "cssClass": "booking-grid-two",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Booking.HeaderTitle",
-      "category": "Booking",
-      "name": "HeaderTitle",
-      "cssClass": "booking-header-title",
-      "usageCountInRazor": 0,
-      "filesCount": 0,
-      "files": []
-    },
-    {
-      "key": "Booking.InputField",
-      "category": "Booking",
-      "name": "InputField",
-      "cssClass": "booking-input-field",
       "usageCountInRazor": 0,
       "filesCount": 0,
       "files": []

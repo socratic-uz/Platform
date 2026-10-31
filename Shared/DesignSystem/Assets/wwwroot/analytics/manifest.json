@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T06:25:57.955Z",
+  "generatedAt": "2026-10-31T17:04:11.784Z",
   "pagesCount": 24,
   "pages": [
     {
@@ -100,7 +100,7 @@
         "tablet": "analytics/blueprints/landing.tablet.blueprint",
         "mobile": "analytics/blueprints/landing.mobile.blueprint"
       },
-      "totalViolations": 0
+      "totalViolations": 17
     },
     {
       "name": "map",
@@ -110,7 +110,7 @@
         "tablet": "analytics/blueprints/map.tablet.blueprint",
         "mobile": "analytics/blueprints/map.mobile.blueprint"
       },
-      "totalViolations": 0
+      "totalViolations": 4
     },
     {
       "name": "order-items",
@@ -120,7 +120,7 @@
         "tablet": "analytics/blueprints/order-items.tablet.blueprint",
         "mobile": "analytics/blueprints/order-items.mobile.blueprint"
       },
-      "totalViolations": 0
+      "totalViolations": 2
     },
     {
       "name": "orders",
@@ -230,7 +230,7 @@
         "tablet": "analytics/blueprints/terminal.tablet.blueprint",
         "mobile": "analytics/blueprints/terminal.mobile.blueprint"
       },
-      "totalViolations": 0
+      "totalViolations": 2
     },
     {
       "name": "wishlist",
