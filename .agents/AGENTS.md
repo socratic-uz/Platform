@@ -56,6 +56,8 @@
 - **Infrastructure**: репозитории ScyllaDB, Kafka продюсеры/консьюмеры, Redis кэш, клиенты MinIO, внешние сервисы.
 - **Presentation**: gRPC сервисы (Protobuf), вебхуки (REST только для внешних PSP).
 - **CQRS**: разделение потоков Command и Query для обеспечения максимальной пропускной способности.
+- **Ubiquitous Language & Онтология перспектив**: строгое разделение терминологии по трем перспективам взаимодействия: Покупатель (`Customer`), Продавец (`Seller`), Наблюдатель/Сделка (`Interaction`).
+- Подробности: [rules/commerce-ontology.md](rules/commerce-ontology.md).
 
 ---
 
@@ -87,7 +89,21 @@
 
 ### 8.2 Архитектурная триада фронтенда (Разделение ответственности)
 
-#### 1. Разметка — строго в `*.razor`
+```text
+Experience (UX)
+    └── Structure (Markup)
+            HTML / Razor
+
+Interface (UI)
+    └── Presentation (Styles)
+            CSS
+
+Interaction (IX)
+    └── Behavior (Logic)
+            JavaScript / C#
+```
+
+#### 1. Experience (UX) ➔ Structure (Markup) — строго в `*.razor`
 - **Компоненты `Material.Web` First**: при наличии готового Blazor-компонента в `Material.Web` используй его:
   `<Button>` / `<IconButton>`, `<TextField>`, `<Select>`, `<Divider>`, `<Checkbox>`, `<Radio>`, `<MaterialDialog>`, `<Progress>`, `<Tabs>` / `<Tab>`, `<Chip>` / `<ChipSet>`, `<Badge>`.
 - **Семантический HTML5**: при отсутствии готового аналога в `Material.Web` используй правильные семантические теги: `<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<fieldset>`, `<legend>`, `<ul>`/`<li>`.
@@ -107,25 +123,25 @@
     `@using static <EnumName>` ➔ `@Outlined`, `@Filled`, `@Filter`
   - Разрешение коллизий: если в двух группах есть одноименные константы, импортируется профильная группа в заголовке файла, а в теле разметки имя остаётся ультра-коротким (`class=@HeaderTitleBox`).
 - **Локализация (3-way Parity)**: весь пользовательский текст выносится в словари `.resx` (`ResourceRu.resx`, `ResourceUz.resx`, `ResourceEn.resx`) и вызывается через `@L[Key]`.
-- Подробности: [rules/frontend-razor-markup.md](rules/frontend-razor-markup.md).
+- Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
-#### 2. Интерактив и логика — строго в `*.razor.cs` (Code-Behind)
-- Вся C#-логика, внедрение зависимостей (`[Inject]`), параметры (`[Parameter]`, `EventCallback`), состояние и хуки жизненного цикла (`OnInitializedAsync`, `DisposeAsync`) выносятся в парный класс `public partial class ComponentName : ComponentBase`.
-- **Zero Aliases**: в `*.razor.cs` категорически запрещено создавать поля-алиасы или свойства-геттеры констант дизайн-системы (`public const string ConstName = global::Assets.*.*.***` или `public string PropName => Classes.*.*`). Константы подключаются напрямую через `@using static` в `.razor` и `using static` в `.razor.cs`.
-- В классе объявляются только уникальные внутренние технические константы компонента (DOM ID, ключи хранилища).
-- Обработчики событий именуются с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`) во избежание коллизий с иконками.
-- Подробности: [rules/frontend-csharp-interactive.md](rules/frontend-csharp-interactive.md).
-
-#### 3. Стили — строго в `*.css` (Assets)
+#### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
 - Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) и компилируются через LightningCSS.
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
 - **Консолидация по селекторам**: одинаковые свойства объединяются через мастер-селекторы `:where(...)` с нулевой специфичностью (0, 0, 0).
-- Подробности: [rules/frontend-css-styles.md](rules/frontend-css-styles.md).
+- Подробности: [rules/frontend-ui.md](rules/frontend-ui.md).
+
+#### 3. Interaction (IX) ➔ Behavior (Logic) — строго в `*.razor.cs` (Code-Behind)
+- Вся C#-логика, внедрение зависимостей (`[Inject]`), параметры (`[Parameter]`, `EventCallback`), состояние и хуки жизненного цикла (`OnInitializedAsync`, `DisposeAsync`) выносятся в парный класс `public partial class ComponentName : ComponentBase`.
+- **Zero Aliases**: в `*.razor.cs` категорически запрещено создавать поля-алиасы или свойства-геттеры констант дизайн-системы (`public const string ConstName = global::Assets.*.*.***` или `public string PropName => Classes.*.*`). Константы подключаются напрямую через `@using static` в `.razor` и `using static` в `.razor.cs`.
+- В классе объявляются только уникальные внутренние технические константы компонента (DOM ID, ключи хранилища).
+- Обработчики событий именуются с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`) во избежание коллизий с иконками.
+- Подробности: [rules/frontend-ix.md](rules/frontend-ix.md).
 
 ### 8.3 Дата-дривен рефакторинг UI
-- **Рефакторинг стилей (CSS & Geometry)**: воркфлоу [plugins/ecosystem/skills/m3x-refactor-loop/SKILL.md](plugins/ecosystem/skills/m3x-refactor-loop/SKILL.md).
-- **Рефакторинг разметки (Razor & Code-Behind)**: воркфлоу [plugins/ecosystem/skills/markup-refactor-loop/SKILL.md](plugins/ecosystem/skills/markup-refactor-loop/SKILL.md).
+- **Рефакторинг интерфейса и стилей (UI & Presentation)**: воркфлоу [plugins/ecosystem/skills/ui-refactor-loop/SKILL.md](plugins/ecosystem/skills/ui-refactor-loop/SKILL.md).
+- **Рефакторинг опыта и структуры (UX & Structure)**: воркфлоу [plugins/ecosystem/skills/ux-refactor-loop/SKILL.md](plugins/ecosystem/skills/ux-refactor-loop/SKILL.md).
 
 ---
 
@@ -163,11 +179,6 @@
 | Роль агента | Идентификатор | Срез файловой структуры (`src/`) | Ключевая зона ответственности |
 | :--- | :--- | :--- | :--- |
 | **Backend Architect** | `backend-architect` | `src/Backend/`, `src/Shared/SharedKernel/` | ScyllaDB NoSQL (zero EF Core), gRPC Protobuf, Kafka, Redis, Native AOT. |
-| **Frontend Markup Specialist** | `frontend-razor-markup` | Разметка `*.razor` в `src/Frontend/`, `Material.Web/` | Чистая разметка, `Material.Web` first, `@using static` для всех констант (ультра-короткий синтаксис `что-то=@*`), 3-way .resx parity, доступность. |
-| **Frontend Interactive Specialist** | `frontend-csharp-interactive` | Код `*.razor.cs` в `src/Frontend/` | Чистый C# code-behind, partial class, `using static` для констант (0 алиасов), DI, `PersistentComponentState`, жизненный цикл. |
-| **Frontend Styles Specialist** | `frontend-css-styles` | `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/` | Стили в `Assets`, консолидация по селекторам `:where(...)`, pure CSS Grid, токены M3, адаптивность, touch targets $\ge 48\text{px}$. |
-| **Commerce & UX Modes** | `ux-modes-specialist` | `src/Frontend/Retail/Commerce/` | 28 коммерческих UX-режимов каталога `Product`, `ProductFeatureRegistry` (AOT), Checkout. |
-| **POS, Kiosk & Hardware** | `pos-kiosk-specialist` | `src/Frontend/Retail/` (`PointOfSale`, `Kiosk`), `src/Frontend/Hardware/` | Терминалы кассира (`Terminal.razor`), киоски (`Kiosk.razor`), ESC/POS термопечать, Soliq ОФД. |
-| **AI & Computer Vision** | `ai-vision-agent` | `src/Frontend/Intelligence/` (`Vision`, `Chat`) | YOLO детекция блюд (`Detector.razor`), биометрия (RetinaFace, ArcFace, Liveness), WebRTC. |
-| **Security & Aspire** | `security-auditor` | `src/Shared/AppHost/`, `appsettings.json` | .NET Aspire 10 оркестрация, защита конфигураций и секретов, Service Discovery. |
-| **QA & Test Automation** | `qa-tester` | `src/Backend/*/*.Test/`, `src/Frontend/*/*.Tests/` | Автотесты xUnit, ScyllaFixture, моки gRPC, валидация отсутствия регрессий. |
+| **Frontend UX Specialist** | `frontend-ux-specialist` | Разметка `*.razor` в `src/Frontend/`, `Material.Web/` | Experience & Structure: чистая разметка, HTML5 семантика, Material.Web first, unquoted синтаксис `что-то=@*`, 3-way .resx parity. |
+| **Frontend UI Specialist** | `frontend-ui-specialist` | `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/` | Interface & Presentation: стили в `Assets`, токены M3X, селекторы `:where(...)`, pure CSS Grid, touch targets $\ge 48\text{px}$. |
+| **Frontend IX Specialist** | `frontend-ix-specialist` | Код `*.razor.cs` в `src/Frontend/` | Interaction & Behavior: чистый C# code-behind, partial class, `using static` (0 алиасов), DI, `PersistentComponentState`, жизненный цикл. |

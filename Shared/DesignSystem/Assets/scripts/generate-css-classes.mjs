@@ -57,6 +57,7 @@ function resolveCanonicalDomainGroup(cls) {
   if (c.startsWith('profile-') || c.startsWith('faceid-') || c === 'step-active' || c === 'step-tertiary') return 'ProfileDialog';
   if (c.startsWith('seat-designer-') || c.startsWith('seat-booking-') || c.startsWith('seat-') || c.startsWith('designer-')) return 'SeatDesigner';
   if (c.startsWith('qr-designer-') || c.startsWith('qrg-') || c.startsWith('qr-')) return 'QrDesigner';
+  if (c.startsWith('wishlist-')) return 'Cards';
   if (c.startsWith('det-')) return 'Detector';
   if (c.startsWith('analytics-')) return 'Analytics';
   if (c.startsWith('explorer-')) return 'Analytics';

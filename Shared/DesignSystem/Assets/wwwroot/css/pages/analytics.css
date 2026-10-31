@@ -103,7 +103,9 @@
     transform: translateY(-2px);
 }
 
-.analytics-kpi-card>div:last-child {
+.kpi-footer,
+.analytics-kpi-card>div:last-child,
+.analytics-kpi-card>footer {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.35rem;
@@ -111,6 +113,10 @@
     min-width: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.775rem;
+}
+
+.breakdown-bar-item md-linear-progress {
+    width: 100%;
 }
 
 .analytics-panel-card {
@@ -391,7 +397,7 @@
 
 @media (max-width: 839.98px) {
     .analytics-toolbar-grid {
-        grid-template-columns: 100%;
+        grid-template-columns: minmax(0, 1fr);
         gap: 0.75rem;
     }
 

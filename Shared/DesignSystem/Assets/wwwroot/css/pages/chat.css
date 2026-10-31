@@ -331,6 +331,13 @@ chat-messages > :where(div, article, section):last-of-type {
     padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
 }
 
+@media screen and (max-width: 599.98px) {
+    .chat-header-container {
+        padding: 0.5rem 0.75rem;
+        padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
+    }
+}
+
 .assistant-message-text table {
     margin: 1rem 0;
 }

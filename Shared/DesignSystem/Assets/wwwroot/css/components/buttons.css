@@ -1467,6 +1467,29 @@
     top: 10px;
     right: 10px;
     z-index: 3;
+    display: inline-grid;
+    place-items: center;
+    width: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.85);
+    color: var(--md-sys-color-on-surface-variant);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+                transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+.wishlist-wish-btn:hover {
+    background: var(--md-sys-color-surface);
+    transform: scale(1.08);
+}
+
+.wishlist-wish-btn.wished {
+    color: var(--md-sys-color-error);
 }
 
 .yandex-ctrl-btn {

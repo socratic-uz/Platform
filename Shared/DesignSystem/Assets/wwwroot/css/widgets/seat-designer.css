@@ -158,6 +158,20 @@
 @media screen and (max-width: 839.98px) {
     .designer-header {
         grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .designer-header .header-actions {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 0.5rem;
+        max-width: 100%;
+        padding-bottom: 2px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        overscroll-behavior-x: contain;
     }
 
     .designer-workspace {
@@ -177,6 +191,16 @@
         max-height: 320px;
         border-top: 1px solid var(--md-sys-color-outline-variant);
         border-left: none;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    .designer-header .page-heading {
+        font-size: var(--md-sys-typescale-title-large-size, 1.25rem);
+    }
+
+    .designer-header .page-subtitle {
+        font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
     }
 }
 

@@ -82,6 +82,7 @@ namespace Assets.Constants
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
+            public const string KpiFooter = "kpi-footer";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -531,6 +532,7 @@ namespace Assets.Constants
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
+            public const string WishlistDetailsArticle = "wishlist-details-article";
             public const string WishlistDetailsDesc = "wishlist-details-desc";
             public const string WishlistDetailsDl = "wishlist-details-dl";
             public const string WishlistDetailsImages = "wishlist-details-images";
@@ -2967,6 +2969,7 @@ namespace Classes
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
+            public const string KpiFooter = "kpi-footer";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -3416,6 +3419,7 @@ namespace Classes
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
+            public const string WishlistDetailsArticle = "wishlist-details-article";
             public const string WishlistDetailsDesc = "wishlist-details-desc";
             public const string WishlistDetailsDl = "wishlist-details-dl";
             public const string WishlistDetailsImages = "wishlist-details-images";
@@ -5857,6 +5861,7 @@ namespace Styles
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
+            public const string KpiFooter = "kpi-footer";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -6306,6 +6311,7 @@ namespace Styles
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
+            public const string WishlistDetailsArticle = "wishlist-details-article";
             public const string WishlistDetailsDesc = "wishlist-details-desc";
             public const string WishlistDetailsDl = "wishlist-details-dl";
             public const string WishlistDetailsImages = "wishlist-details-images";
@@ -8748,6 +8754,7 @@ namespace Material.Web
             public const string ExplorerHeader = "explorer-header";
             public const string ExplorerSubtitle = "explorer-subtitle";
             public const string ExplorerTitleGroup = "explorer-title-group";
+            public const string KpiFooter = "kpi-footer";
             public const string KpiHeader = "kpi-header";
             public const string KpiIconBadge = "kpi-icon-badge";
             public const string KpiNumber = "kpi-number";
@@ -9197,6 +9204,7 @@ namespace Material.Web
             public const string WishlistCardFooter = "wishlist-card-footer";
             public const string WishlistContent = "wishlist-content";
             public const string WishlistDescText = "wishlist-desc-text";
+            public const string WishlistDetailsArticle = "wishlist-details-article";
             public const string WishlistDetailsDesc = "wishlist-details-desc";
             public const string WishlistDetailsDl = "wishlist-details-dl";
             public const string WishlistDetailsImages = "wishlist-details-images";

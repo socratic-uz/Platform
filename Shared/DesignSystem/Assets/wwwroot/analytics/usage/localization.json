@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-30T17:45:10.055Z",
+  "generatedAt": "2026-10-31T03:22:08.922Z",
   "summary": {
     "totalDeclaredKeys": 6857,
     "usedInRazorCount": 939,
     "unusedCount": 5918,
     "adoptionRatePercent": 14,
-    "totalTypedCallSites": 1155,
+    "totalTypedCallSites": 1157,
     "rawStringViolationsCount": 0,
     "keysWithRawLiteralsCount": 0,
     "sourceFilesScanned": 640
@@ -92,6 +92,20 @@
         "Platform/Shared/DesignSystem/Smart.Web/Components/SmartScheduler/SmartSchedulePicker.razor",
         "Retail/Checkout/Pages/Payment.razor",
         "Studio/Map/Components/MapPopup.razor"
+      ]
+    },
+    {
+      "key": "Orders.OrderStatusMaking",
+      "domain": "Orders",
+      "name": "OrderStatusMaking",
+      "locKey": "OrderStatus_Making",
+      "usageCountInRazor": 5,
+      "filesCount": 4,
+      "files": [
+        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
+        "Retail/Orders/Pages/Orders/Grid.razor.cs",
+        "Retail/Orders/Pages/Orders/Index.razor.cs",
+        "Portal/Landing/Pages/Analytics.razor.cs"
       ]
     },
     {
@@ -224,20 +238,6 @@
       "domain": "Orders",
       "name": "OrderStatusMade",
       "locKey": "OrderStatus_Made",
-      "usageCountInRazor": 4,
-      "filesCount": 4,
-      "files": [
-        "Retail/Orders/Pages/OrderItems/Index.razor.cs",
-        "Retail/Orders/Pages/Orders/Grid.razor.cs",
-        "Retail/Orders/Pages/Orders/Index.razor.cs",
-        "Portal/Landing/Pages/Analytics.razor.cs"
-      ]
-    },
-    {
-      "key": "Orders.OrderStatusMaking",
-      "domain": "Orders",
-      "name": "OrderStatusMaking",
-      "locKey": "OrderStatus_Making",
       "usageCountInRazor": 4,
       "filesCount": 4,
       "files": [
@@ -680,7 +680,7 @@
     "Checkout": {
       "total": 313,
       "used": 56,
-      "totalCalls": 74
+      "totalCalls": 75
     },
     "Classified": {
       "total": 72,
@@ -750,7 +750,7 @@
     "Orders": {
       "total": 223,
       "used": 71,
-      "totalCalls": 112
+      "totalCalls": 113
     },
     "Promotion": {
       "total": 75,

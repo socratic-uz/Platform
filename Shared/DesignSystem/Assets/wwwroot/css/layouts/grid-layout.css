@@ -142,11 +142,6 @@
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
     }
 
-    header.app-header {
-        min-height: calc(64px + env(safe-area-inset-top, 0px));
-        padding: max(0.4rem, env(safe-area-inset-top, 0px)) max(0.75rem, env(safe-area-inset-right, 0px)) 0.4rem max(0.75rem, env(safe-area-inset-left, 0px));
-    }
-
     main.no-footer {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0px));
     }

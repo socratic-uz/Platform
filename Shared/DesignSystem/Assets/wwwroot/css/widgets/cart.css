@@ -251,10 +251,6 @@
         padding: 0.25rem;
     }
 
-    header.app-header {
-        padding: max(0.35rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-right, 0px)) 0.35rem max(0.5rem, env(safe-area-inset-left, 0px));
-    }
-
     header.landing-header .header-brand-text {
         display: none;
     }

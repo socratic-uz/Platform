@@ -25,13 +25,13 @@
 <header class="app-header header-sticky"><div class="header-grid-layout"><div class="header-start-zone"><div class="header-brand-zone"><a href="/" class="header-brand-link" title="Socratic"><span class="header-brand-icon-box"><md-icon>auto_awesome</md-icon></span>
 						<span class="header-brand-text">Socratic</span></a></div><span class="header-context-divider">/</span>
     <header class="m3-page-header-start"><md-icon class="m3-page-header-icon">account_balance_wallet</md-icon>
-        <h2 class="m3-page-header-title">Панель управления плательщика</h2></header></div>
+        <h1 class="m3-page-header-title">Панель управления плательщика</h1></header></div>
 
 		
 		<div class="header-center-zone"></div>
 
 		
-		<div class="header-end-zone"><menu class="actions-row"><md-outlined-button class="expressive"><md-icon slot="icon">refresh</md-icon><span class="btn-text">Обновить</span></md-outlined-button></menu><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
+		<div class="header-end-zone"><menu class="actions-row"><md-outlined-button class="expressive  orders-refresh-btn"><md-icon slot="icon">refresh</md-icon><span class="btn-text">Обновить</span></md-outlined-button></menu><div class="lang-select lang-selector-pill "><div class="lang-dropdown-wrapper"><button type="button" class="lang-toggle-btn" aria-expanded="false" aria-label="Язык"><md-icon>translate</md-icon>
 				<span class="lang-current-label">UZ</span>
 				<md-icon>arrow_drop_down</md-icon></button></div></div><div class="avatar-container"><md-outlined-button class="expressive  avatar-button" aria-label="Профиль"><md-icon>person</md-icon></md-outlined-button></div></div></div></header>
 
@@ -53,73 +53,73 @@
 
 
 <main class="payment-dashboard m3-page-container"><section class="profile-container m3-grid-main-sidebar" aria-label="Панель управления плательщика"><article class="glass glass-card"><header class="profile-title"><h3>Личный кабинет: Алишер Навои</h3></header>
-                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">ID Пользователя</span>
-                        <span class="m3-info-value">UZ-7729104</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Телефон</span>
-                        <span class="m3-info-value">+998 90 123 45 67</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Статус KYC</span>
-                        <div><span class="m3-badge badge-verified">Верифицирован</span></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Доступный лимит рассрочки</span>
-                        <span class="m3-info-value">15,000,000 сум</span></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Статус аккаунта</span>
-                        <div><span class="m3-badge badge-verified">Активен</span></div></div></div></article>
+                <dl class="m3-info-grid"><div class="m3-info-item"><dt class="m3-info-label">ID Пользователя</dt>
+                        <dd class="m3-info-value">UZ-7729104</dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Телефон</dt>
+                        <dd class="m3-info-value">+998 90 123 45 67</dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Статус KYC</dt>
+                        <dd class="m3-info-value"><span class="m3-badge badge-verified">Верифицирован</span></dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Доступный лимит рассрочки</dt>
+                        <dd class="m3-info-value">15,000,000 сум</dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Статус аккаунта</dt>
+                        <dd class="m3-info-value"><span class="m3-badge badge-verified">Активен</span></dd></div></dl></article>
 
             
-            <article class="glass-card"><div class="score-box"><span class="m3-info-label">Кредитный рейтинг</span>
-                    <div class="score-circle">785</div>
-                    <span class="m3-badge badge-active">Низкий Риск</span></div></article>
+            <article class="glass-card score-box"><span class="m3-info-label">Кредитный рейтинг</span>
+                <div class="score-circle">785</div>
+                <span class="m3-badge badge-active">Низкий Риск</span></article>
 
             
             <article class="glass-card"><header class="profile-title"><h3><md-icon>lock</md-icon> Безопасность и методы быстрого входа</h3></header>
                 <p>Привяжите биометрию и сервисы для мгновенного входа в 1 клик без ожидания SMS/OTP кодов.</p>
-                <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">👁️ Face ID (Биометрия)</span>
-                        <div><span class="m3-badge badge-verified">Настроено</span>
-                            <md-outlined-button class="expressive">Обновить снимок</md-outlined-button></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Google SSO</span>
-                        <div><span class="m3-badge badge-none">Не привязано</span>
-                            <md-outlined-button class="expressive">Привязать Google</md-outlined-button></div></div>
-                    <div class="m3-info-item"><span class="m3-info-label">Telegram OIDC</span>
-                        <div><span class="m3-badge badge-verified">Привязано</span></div></div></div></article></section><section class="m3-grid-stack plans-section" aria-label="Мои рассрочки и платежи"><h2>Мои рассрочки и платежи</h2><div class="m3-grid-stack plans-list"><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</h4>
-                                <p>Тип: BNPL 0-0-4 | Заказ: #A4F12C</p></div>
-                            <div><span class="m3-badge badge-active">Active</span></div></header>
+                <dl class="m3-info-grid"><div class="m3-info-item"><dt class="m3-info-label">👁️ Face ID (Биометрия)</dt>
+                        <dd class="m3-info-value"><span class="m3-badge badge-verified">Настроено</span>
+                            <md-outlined-button class="expressive">Обновить снимок</md-outlined-button></dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Google SSO</dt>
+                        <dd class="m3-info-value"><span class="m3-badge badge-none">Не привязано</span>
+                            <md-outlined-button class="expressive">Привязать Google</md-outlined-button></dd></div>
+                    <div class="m3-info-item"><dt class="m3-info-label">Telegram OIDC</dt>
+                        <dd class="m3-info-value"><span class="m3-badge badge-verified">Привязано</span></dd></div></dl></article></section><section class="plans-section" aria-label="Мои рассрочки и платежи"><h2>Мои рассрочки и платежи</h2><section class="plans-list"><article class="m3-card-outlined plan-card"><header class="plan-header"><hgroup><h4 class="plan-title">Рассрочка на заказ #A4F12C (POS Терминал)</h4>
+                                <p>Тип: BNPL 0-0-4 | Заказ: #A4F12C</p></hgroup>
+                            <span class="m3-badge badge-active">Active</span></header>
 
-                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Общая сумма</span>
-                                <span class="m3-info-value">1,200,000 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Комиссия</span>
-                                <span class="m3-info-value">0 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Итого к оплате</span>
-                                <span class="m3-info-value">1,200,000 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Выплачено</span>
-                                <span class="m3-info-value">600,000 сум</span></div></div>
+                        <dl class="m3-info-grid"><div class="m3-info-item"><dt class="m3-info-label">Общая сумма</dt>
+                                <dd class="m3-info-value">1,200,000 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Комиссия</dt>
+                                <dd class="m3-info-value">0 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Итого к оплате</dt>
+                                <dd class="m3-info-value">1,200,000 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Выплачено</dt>
+                                <dd class="m3-info-value">600,000 сум</dd></div></dl>
 
                         
-                        <div class="progress-bar-container"><md-linear-progress value="0.5"></md-linear-progress>
+                        <section class="progress-bar-container" aria-label="Прогресс"><md-linear-progress value="0.5"></md-linear-progress>
                             <div class="progress-labels"><span>Прогресс: 50%</span>
-                                <span>Осталось: 600,000 сум</span></div></div>
+                                <span>Осталось: 600,000 сум</span></div></section>
 
                         
                         <footer class="actions-row"><md-outlined-button class="expressive">Посмотреть график</md-outlined-button><md-filled-button class="expressive">Досрочное погашение (-20% комиссии)</md-filled-button>
                                 <md-outlined-button class="expressive">Приостановить</md-outlined-button>
-                                <md-outlined-button class="expressive">Отменить план</md-outlined-button></footer></article><article class="m3-card-outlined plan-card"><header class="plan-header"><div><h4 class="plan-title">Рассрочка на заказ #B89201 (Киоск)</h4>
-                                <p>Тип: BNPL 0-0-3 | Заказ: #B89201</p></div>
-                            <div><span class="m3-badge badge-completed">Completed</span></div></header>
+                                <md-outlined-button class="expressive">Отменить план</md-outlined-button></footer></article><article class="m3-card-outlined plan-card"><header class="plan-header"><hgroup><h4 class="plan-title">Рассрочка на заказ #B89201 (Киоск)</h4>
+                                <p>Тип: BNPL 0-0-3 | Заказ: #B89201</p></hgroup>
+                            <span class="m3-badge badge-completed">Completed</span></header>
 
-                        <div class="m3-info-grid"><div class="m3-info-item"><span class="m3-info-label">Общая сумма</span>
-                                <span class="m3-info-value">450,000 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Комиссия</span>
-                                <span class="m3-info-value">0 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Итого к оплате</span>
-                                <span class="m3-info-value">450,000 сум</span></div>
-                            <div class="m3-info-item"><span class="m3-info-label">Выплачено</span>
-                                <span class="m3-info-value">450,000 сум</span></div></div>
+                        <dl class="m3-info-grid"><div class="m3-info-item"><dt class="m3-info-label">Общая сумма</dt>
+                                <dd class="m3-info-value">450,000 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Комиссия</dt>
+                                <dd class="m3-info-value">0 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Итого к оплате</dt>
+                                <dd class="m3-info-value">450,000 сум</dd></div>
+                            <div class="m3-info-item"><dt class="m3-info-label">Выплачено</dt>
+                                <dd class="m3-info-value">450,000 сум</dd></div></dl>
 
                         
-                        <div class="progress-bar-container"><md-linear-progress value="1"></md-linear-progress>
+                        <section class="progress-bar-container" aria-label="Прогресс"><md-linear-progress value="1"></md-linear-progress>
                             <div class="progress-labels"><span>Прогресс: 100%</span>
-                                <span>Осталось: 0 сум</span></div></div>
+                                <span>Осталось: 0 сум</span></div></section>
 
                         
-                        <footer class="actions-row"><md-outlined-button class="expressive">Посмотреть график</md-outlined-button></footer></article></div></section></main>
+                        <footer class="actions-row"><md-outlined-button class="expressive">Посмотреть график</md-outlined-button></footer></article></section></section></main>
 
 
 

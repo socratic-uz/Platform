@@ -680,3 +680,13 @@
         height: auto;
     }
 }
+
+@media screen and (max-width: 599.98px) {
+    .qr-designer-header .page-heading {
+        font-size: var(--md-sys-typescale-title-large-size, 1.25rem);
+    }
+
+    .qr-designer-header .page-subtitle {
+        font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    }
+}

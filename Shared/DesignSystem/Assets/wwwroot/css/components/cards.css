@@ -2027,6 +2027,8 @@ md-outlined-card:hover figure img {
     }
 
     .wishlist-card-footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
         align-items: stretch;
     }
 

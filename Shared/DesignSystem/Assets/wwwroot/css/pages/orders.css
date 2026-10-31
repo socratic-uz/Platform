@@ -75,18 +75,25 @@
     width: 100%;
 }
 
-.order-card {
+:where(.order-card, a.order-card) {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
     gap: 1rem;
     min-height: 140px;
     padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.order-card .chevron-icon {
+    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard, ease);
 }
 
 .order-card-details {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
+    margin: 0;
 }
 
 .order-card-footer {

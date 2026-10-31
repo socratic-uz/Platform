@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-30T17:45:10.052Z",
+  "generatedAt": "2026-10-31T03:22:08.919Z",
   "summary": {
-    "totalDeclaredConstants": 2553,
-    "usedInRazorCount": 1058,
-    "unusedCount": 1495,
-    "adoptionRatePercent": 41,
-    "totalCallSites": 2550,
+    "totalDeclaredConstants": 2555,
+    "usedInRazorCount": 1062,
+    "unusedCount": 1493,
+    "adoptionRatePercent": 42,
+    "totalCallSites": 2571,
     "rawStringViolationsCount": 0,
     "classesWithRawLiteralsCount": 0,
     "sourceFilesScanned": 640
@@ -238,6 +238,17 @@
       "category": "InfoGrid",
       "name": "InfoItem",
       "cssClass": "m3-info-item",
+      "usageCountInRazor": 12,
+      "filesCount": 1,
+      "files": [
+        "Retail/Checkout/Pages/Payment.razor"
+      ]
+    },
+    {
+      "key": "InfoGrid.InfoValue",
+      "category": "InfoGrid",
+      "name": "InfoValue",
+      "cssClass": "m3-info-value",
       "usageCountInRazor": 12,
       "filesCount": 1,
       "files": [
@@ -575,17 +586,6 @@
       ]
     },
     {
-      "key": "InfoGrid.InfoValue",
-      "category": "InfoGrid",
-      "name": "InfoValue",
-      "cssClass": "m3-info-value",
-      "usageCountInRazor": 7,
-      "filesCount": 1,
-      "files": [
-        "Retail/Checkout/Pages/Payment.razor"
-      ]
-    },
-    {
       "key": "Payment.Headline",
       "category": "Payment",
       "name": "Headline",
@@ -610,10 +610,10 @@
       ]
     },
     {
-      "key": "Analytics.KpiHeader",
+      "key": "Analytics.KpiFooter",
       "category": "Analytics",
-      "name": "KpiHeader",
-      "cssClass": "kpi-header",
+      "name": "KpiFooter",
+      "cssClass": "kpi-footer",
       "usageCountInRazor": 6,
       "filesCount": 1,
       "files": [
@@ -633,9 +633,9 @@
       "totalCalls": 21
     },
     "Analytics": {
-      "total": 28,
-      "used": 26,
-      "totalCalls": 67
+      "total": 29,
+      "used": 27,
+      "totalCalls": 73
     },
     "Auction": {
       "total": 5,
@@ -655,7 +655,7 @@
     "Badge": {
       "total": 95,
       "used": 49,
-      "totalCalls": 407
+      "totalCalls": 408
     },
     "Booking": {
       "total": 11,
@@ -675,10 +675,10 @@
     "Buttons": {
       "total": 53,
       "used": 23,
-      "totalCalls": 61
+      "totalCalls": 62
     },
     "Cards": {
-      "total": 207,
+      "total": 208,
       "used": 79,
       "totalCalls": 229
     },
@@ -725,7 +725,7 @@
     "Common": {
       "total": 588,
       "used": 273,
-      "totalCalls": 530
+      "totalCalls": 529
     },
     "Configurator": {
       "total": 14,
@@ -784,8 +784,8 @@
     },
     "FaceidViewfinder": {
       "total": 10,
-      "used": 0,
-      "totalCalls": 0
+      "used": 1,
+      "totalCalls": 1
     },
     "Feedback": {
       "total": 3,
@@ -839,8 +839,8 @@
     },
     "Header": {
       "total": 17,
-      "used": 15,
-      "totalCalls": 21
+      "used": 16,
+      "totalCalls": 24
     },
     "Help": {
       "total": 16,
@@ -855,7 +855,7 @@
     "InfoGrid": {
       "total": 24,
       "used": 11,
-      "totalCalls": 55
+      "totalCalls": 60
     },
     "Invoice": {
       "total": 13,
@@ -925,7 +925,7 @@
     "Progress": {
       "total": 13,
       "used": 3,
-      "totalCalls": 4
+      "totalCalls": 5
     },
     "QrDesigner": {
       "total": 79,
@@ -1009,8 +1009,8 @@
     },
     "Table": {
       "total": 60,
-      "used": 31,
-      "totalCalls": 49
+      "used": 32,
+      "totalCalls": 53
     },
     "Tables": {
       "total": 1,
