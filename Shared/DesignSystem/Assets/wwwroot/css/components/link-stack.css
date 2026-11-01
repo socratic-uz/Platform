@@ -3,23 +3,14 @@
    Breadcrumb Trails, Hierarchical Navigation Links & Crumb Stacks
    ========================================================================== */
 
-
-
-
 .crumb-current {
     color: var(--md-sys-color-on-surface);
     font-weight: 500;
 }
 
-
-
-
 .crumb-icon {
     font-size: 1.1rem;
 }
-
-
-
 
 .crumb-link {
     display: grid;
@@ -33,31 +24,19 @@
     transition: color 0.2s ease;
 }
 
-
-
-
 .crumb-link:focus-visible {
     border-radius: var(--md-sys-shape-corner-small, 8px);
     outline: 2px solid var(--md-sys-color-primary);
 }
 
-
-
-
 .crumb-link:hover {
     color: var(--md-sys-color-primary);
 }
-
-
-
 
 .crumb-sep {
     opacity: 0.5;
     color: var(--md-sys-color-outline);
 }
-
-
-
 
 .link-stack {
     display: grid;
@@ -69,9 +48,6 @@
     text-align: start;
     overflow: auto;
 }
-
-
-
 
 .link-stack a {
     display: grid;
@@ -89,9 +65,6 @@
     overflow: hidden;
 }
 
-
-
-
 .link-stack a::before {
     opacity: 0;
     position: absolute;
@@ -105,9 +78,6 @@
     content: "";
 }
 
-
-
-
 .link-stack a:active::before {
     opacity: 1;
     width: 0;
@@ -116,15 +86,9 @@
     transition: 0s;
 }
 
-
-
-
 .link-stack a:hover {
     background: var(--md-sys-color-secondary-container);
 }
-
-
-
 
 .link-stack article {
     display: grid;
@@ -142,9 +106,6 @@
     overflow: hidden;
 }
 
-
-
-
 .link-stack article::before {
     opacity: 0;
     position: absolute;
@@ -158,9 +119,6 @@
     content: "";
 }
 
-
-
-
 .link-stack article:active::before {
     opacity: 1;
     width: 0;
@@ -169,15 +127,9 @@
     transition: 0s;
 }
 
-
-
-
 .link-stack article:hover {
     background: var(--md-sys-color-secondary-container);
 }
-
-
-
 
 .link-stack dl {
     display: grid;
@@ -186,16 +138,10 @@
     gap: 0 2rem;
 }
 
-
-
-
 .link-stack svg {
     width: 30px;
     height: 30px;
 }
-
-
-
 
 section.link-stack {
     display: grid;

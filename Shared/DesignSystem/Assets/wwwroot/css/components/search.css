@@ -3,22 +3,6 @@
    Search Bars, Universal Search Containers, Filters & Affordances
    ========================================================================== */
 
-
-
-
-
-
-
-.evo-icon .search-bar {
-    height: 48px;
-}
-
-
-
-
-
-
-
 .m3-filter-toolbar {
     display: grid;
     grid-auto-flow: column;
@@ -30,46 +14,14 @@
     overflow-x: auto;
 }
 
-
-
-
-
-
-
 .map-search-inline {
     width: 100%;
     min-width: 0;
 }
 
-
-
-
-
-
-
-.material-symbols-outlined .search-bar {
-    height: 48px;
-}
-
-
-
-
-
-
-
-.org-media-placeholder .search-bar {
-    height: 48px;
-}
-
-
-
-
-
-
-
 .search-bar {
     position: relative;
-    z-index: 5;
+    z-index: var(--md-sys-z-surface, 2);
     padding: 3px;
     border: 1px solid var(--map-border);
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
@@ -78,16 +30,10 @@
     transition: all 0.25s var(--md-sys-motion-easing-spring);
 }
 
-
-
-
-
-
-
 .search-bar-inner {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto auto auto;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     align-items: center;
     width: 100%;
     min-width: 0;
@@ -95,23 +41,11 @@
     padding: 0 6px;
 }
 
-
-
-
-
-
-
 .search-bar:focus-within {
     border-color: var(--map-primary);
     background: var(--md-sys-color-surface);
     box-shadow: 0 0 0 4px rgb(from var(--map-primary) r g b / 0.12), 0 4px 20px rgb(from var(--map-primary) r g b / 0.08);
 }
-
-
-
-
-
-
 
 .search-divider {
     width: 1px;
@@ -122,24 +56,12 @@
     background-color: var(--map-border);
 }
 
-
-
-
-
-
-
 .search-icon {
     width: 18px;
     height: 18px;
-    margin-left: 8px;
+    margin-left: var(--md-sys-spacing-2, 0.5rem);
     color: var(--map-text-muted);
 }
-
-
-
-
-
-
 
 .search-panel {
     display: grid;
@@ -147,22 +69,10 @@
     min-height: 0;
 }
 
-
-
-
-
-
-
 .showcase-search-box {
-    padding: 14px 16px;
+    padding: 14px var(--md-sys-spacing-4, 1rem);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
-
-
-
-
-
-
 
 .ux-filter-meta {
     display: grid;
@@ -174,12 +84,6 @@
     width: 100%;
     padding: 0 0.5rem;
 }
-
-
-
-
-
-
 
 .ux-search-box {
     display: grid;
@@ -199,22 +103,10 @@
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-
-
-
-
-
-
 .ux-search-box:focus-within {
     border-color: var(--md-sys-color-primary);
     box-shadow: 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
 }
-
-
-
-
-
-
 
 .ux-search-clear {
     display: grid;
@@ -231,33 +123,15 @@
     cursor: pointer;
 }
 
-
-
-
-
-
-
 .ux-search-clear:hover {
     background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 16%, transparent);
     color: var(--md-sys-color-on-surface);
 }
 
-
-
-
-
-
-
 .yandex-search-icon-svg {
     width: 20px;
     height: 20px;
 }
-
-
-
-
-
-
 
 .m3-filter-grid {
     display: grid;
@@ -265,12 +139,6 @@
     gap: var(--md-sys-spacing-3, 0.75rem);
     width: 100%;
 }
-
-
-
-
-
-
 
 .m3-search-container {
     display: grid;
@@ -280,21 +148,9 @@
     min-width: 0;
 }
 
-
-
-
-
-
-
 .m3-search-container [slot="trailing-icon"] {
     color: var(--md-sys-color-on-surface-variant);
 }
-
-
-
-
-
-
 
 .m3-search-container md-icon[slot="leading-icon"] {
     width: 20px;
@@ -302,12 +158,6 @@
     color: var(--md-sys-color-on-surface-variant);
     font-size: 20px;
 }
-
-
-
-
-
-
 
 .material-search-container {
     display: grid;
@@ -317,21 +167,9 @@
     min-width: 0;
 }
 
-
-
-
-
-
-
 .material-search-container [slot="trailing-icon"] {
     color: var(--md-sys-color-on-surface-variant);
 }
-
-
-
-
-
-
 
 .material-search-container md-icon[slot="leading-icon"] {
     width: 20px;

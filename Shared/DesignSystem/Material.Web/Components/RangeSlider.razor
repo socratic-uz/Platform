@@ -2,24 +2,24 @@
 @using Microsoft.AspNetCore.Components.Forms
 @typeparam TValue where TValue : struct, IComparable<TValue>
 
-<md-slider id="@Id"
-           class="@CssClass"
-           min="@GetStringValue(Min)"
-           max="@GetStringValue(Max)"
-           value-start="@GetStringValue(ValueStart)"
-           value-end="@GetStringValue(ValueEnd)"
-           step="@GetStringValue(Step)"
+<md-slider id=@Id
+           class=@CssClass
+           min=@GetStringValue(Min)
+           max=@GetStringValue(Max)
+           value-start=@GetStringValue(ValueStart)
+           value-end=@GetStringValue(ValueEnd)
+           step=@GetStringValue(Step)
            @attributes="AdditionalAttributes"
-           disabled="@Disabled"
-           ticks="@ShowTicks"
-           labeled="@ShowLabel"
-           range="@true"
-           value-label-start="@GetValueLabelStart()"
-           value-label-end="@GetValueLabelEnd()"
-           aria-label-start="@AriaLabelStart"
-           aria-label-end="@AriaLabelEnd"
-           aria-valuetext-start="@GetAriaValueTextStart()"
-           aria-valuetext-end="@GetAriaValueTextEnd()"
+           disabled=@Disabled
+           ticks=@ShowTicks
+           labeled=@ShowLabel
+           range=@true
+           value-label-start=@GetValueLabelStart()
+           value-label-end=@GetValueLabelEnd()
+           aria-label-start=@AriaLabelStart
+           aria-label-end=@AriaLabelEnd
+           aria-valuetext-start=@GetAriaValueTextStart()
+           aria-valuetext-end=@GetAriaValueTextEnd()
            @ref="sliderElement"
            @oninput=@HandleInput
            @onchange=@HandleChange>

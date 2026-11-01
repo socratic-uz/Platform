@@ -3,9 +3,6 @@
    AI Neural Visualizer, Spatial Blob & Face Detection Canvas
    ========================================================================== */
 
-
-
-
 .ai-blob-canvas {
     position: fixed;
     inset: 0;
@@ -16,16 +13,10 @@
     pointer-events: none;
 }
 
-
-
-
 .ai-blob-canvas rect {
     width: 100%;
     height: 100%;
 }
-
-
-
 
 .ai-blob-canvas svg {
     display: block;
@@ -37,51 +28,30 @@
     pointer-events: none;
 }
 
-
-
-
 #blob {
     transform: scale(var(--blob-scale, 1));
     transform-origin: center;
 }
 
-
-
-
 #blob1 {
     transform: translate(0, 0);
 }
-
-
-
 
 #blob2 {
     transform: translate(-50%, -50%);
 }
 
-
-
-
 #blob3 {
     transform: translate(50%, 50%);
 }
-
-
-
 
 #blob4 {
     transform: translate(50%, -80%);
 }
 
-
-
-
 #blob5 {
     transform: translate(-50%, 80%);
 }
-
-
-
 
 svg.ai-blob-svg {
     display: block;

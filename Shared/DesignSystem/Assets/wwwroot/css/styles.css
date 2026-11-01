@@ -81,6 +81,7 @@
 @import "components/info-grid.css" layer(components);
 @import "components/invoice.css" layer(components);
 @import "components/link-stack.css" layer(components);
+@import "components/markdown.css" layer(components);
 @import "components/profile-dialog.css" layer(components);
 @import "components/smart-data-view.css" layer(components);
 @import "components/smart-enum.css" layer(components);

@@ -3,15 +3,15 @@
 
 @if (ChipType == ChipType.Filter)
 {
-    <md-filter-chip label="@Label"
-                   selected="@Selected"
-                   disabled="@Disabled"
-                   removable="@Removable"
-                   elevated="@Elevated"
-                   class="@ComputedCssClass"
-                   aria-label="@AriaLabel"
-                   @onclick="@HandleClick"
-                   @onremove="@OnRemove"
+    <md-filter-chip label=@Label
+                   selected=@Selected
+                   disabled=@Disabled
+                   removable=@Removable
+                   elevated=@Elevated
+                   class=@ComputedCssClass
+                   aria-label=@AriaLabel
+                   @onclick=@HandleClick
+                   @onremove=@OnRemove
                    @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {
@@ -26,23 +26,23 @@
 }
 else if (ChipType == ChipType.Input)
 {
-    <md-input-chip label="@Label"
-                  selected="@Selected"
-                  disabled="@Disabled"
-                  remove-only="@RemoveOnly"
-                  avatar="@Avatar"
-                  class="@ComputedCssClass"
-                  href="@Href"
-                  target="@Target"
-                  aria-label="@AriaLabel"
-                  @onclick="@HandleClick"
-                  @onremove="@OnRemove"
+    <md-input-chip label=@Label
+                  selected=@Selected
+                  disabled=@Disabled
+                  remove-only=@RemoveOnly
+                  avatar=@Avatar
+                  class=@ComputedCssClass
+                  href=@Href
+                  target=@Target
+                  aria-label=@AriaLabel
+                  @onclick=@HandleClick
+                  @onremove=@OnRemove
                   @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {
             @if (Avatar)
             {
-                <img slot="icon" src="@Icon" alt="@Label" />
+                <img slot="icon" src=@Icon alt=@Label />
             }
             else
             {
@@ -54,14 +54,14 @@ else if (ChipType == ChipType.Input)
 }
 else if (ChipType == ChipType.Assist)
 {
-    <md-assist-chip label="@Label"
-                   disabled="@Disabled"
-                   elevated="@Elevated"
-                   href="@Href"
-                   target="@Target"
-                   class="@ComputedCssClass"
-                   aria-label="@AriaLabel"
-                   @onclick="@HandleClick"
+    <md-assist-chip label=@Label
+                   disabled=@Disabled
+                   elevated=@Elevated
+                   href=@Href
+                   target=@Target
+                   class=@ComputedCssClass
+                   aria-label=@AriaLabel
+                   @onclick=@HandleClick
                    @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {
@@ -72,14 +72,14 @@ else if (ChipType == ChipType.Assist)
 }
 else // Suggestion
 {
-    <md-suggestion-chip label="@Label"
-                       disabled="@Disabled"
-                       elevated="@Elevated"
-                       href="@Href"
-                       target="@Target"
-                       class="@ComputedCssClass"
-                       aria-label="@AriaLabel"
-                       @onclick="@HandleClick"
+    <md-suggestion-chip label=@Label
+                       disabled=@Disabled
+                       elevated=@Elevated
+                       href=@Href
+                       target=@Target
+                       class=@ComputedCssClass
+                       aria-label=@AriaLabel
+                       @onclick=@HandleClick
                        @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {

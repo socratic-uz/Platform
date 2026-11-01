@@ -73,9 +73,8 @@ public static class PreviewServicesExtensions
         services.AddScoped<Domain.Interfaces.Biometrics.IFaceBiometricProcessor, MockFaceBiometricProcessor>();
         services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
         services.AddSingleton<Domain.Interfaces.Commerce.IProductExperienceUiProvider, Socratic.Commerce.ProductExperienceUiProvider>();
-        services.AddScoped<Chat.Abstractions.IChatService, MockChatService>();
+        services.AddScoped<global::Chat.Abstractions.IChatService, MockChatService>();
         services.AddScoped<Domain.Interfaces.Pages.IDetectorService, MockDetectorService>();
-        services.AddScoped<Shared.Services.IPasskeyService, MockPasskeyService>();
         services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, MockInfrastructurePasskeyService>();
 
         return services;
@@ -209,15 +208,15 @@ public sealed class MockAuthenticationStateProvider : AuthenticationStateProvide
         => Task.FromResult(new AuthenticationState(new System.Security.Claims.ClaimsPrincipal(new System.Security.Claims.ClaimsIdentity())));
 }
 
-public sealed class MockChatService : Chat.Abstractions.IChatService
+public sealed class MockChatService : global::Chat.Abstractions.IChatService
 {
-    public async IAsyncEnumerable<string> StreamResponseAsync(IEnumerable<Chat.Abstractions.ChatMessageDto> messages, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
+    public async IAsyncEnumerable<string> StreamResponseAsync(IEnumerable<global::Chat.Abstractions.ChatMessageDto> messages, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
         yield return "Здравствуйте! Чем я могу помочь вам сегодня?";
         await Task.CompletedTask;
     }
 
-    public Task<IReadOnlyList<string>> GetSuggestionsAsync(IEnumerable<Chat.Abstractions.ChatMessageDto> messages, CancellationToken cancellationToken = default)
+    public Task<IReadOnlyList<string>> GetSuggestionsAsync(IEnumerable<global::Chat.Abstractions.ChatMessageDto> messages, CancellationToken cancellationToken = default)
     {
         return Task.FromResult<IReadOnlyList<string>>(new[] { "Как открыть киоск?", "Подключение терминала", "28 режимов коммерции" });
     }
@@ -239,12 +238,6 @@ public sealed class MockInfrastructurePasskeyService : Infrastructure.Gateways.I
     public ValueTask<string?> AuthenticateAsync(string challengeBase64) => ValueTask.FromResult<string?>(null);
 }
 
-public sealed class MockPasskeyService : Shared.Services.IPasskeyService
-{
-    public ValueTask<bool> IsSupportedAsync() => ValueTask.FromResult(false);
-    public ValueTask<string?> RegisterAsync(string userId, string userName, string challengeBase64) => ValueTask.FromResult<string?>(null);
-    public ValueTask<string?> AuthenticateAsync(string challengeBase64) => ValueTask.FromResult<string?>(null);
-}
 
 public sealed class MockFaceBiometricProcessor : Domain.Interfaces.Biometrics.IFaceBiometricProcessor
 {

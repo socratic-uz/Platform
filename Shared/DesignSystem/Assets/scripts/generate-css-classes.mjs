@@ -215,6 +215,11 @@ function generate() {
       HoverLift: 'm3-hover-lift',
       PressScale: 'm3-press-scale',
     },
+    Common: {
+      KdsBoardClass: 'kds-board',
+      OrdersKanbanBoardClass: 'orders-kanban-board',
+      DrawerScrimDismiss: 'm3-drawer-scrim-dismiss',
+    },
   };
 
   for (const [legacyGroup, props] of Object.entries(legacyAliases)) {

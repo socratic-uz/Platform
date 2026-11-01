@@ -15,10 +15,10 @@
 
 <article id="fiscal-receipt-element" class=@FiscalReceipt>
     <header class=@PosReceiptHeader>
-        <div class=@TaxBadge>
+        <span class=@TaxBadge>
             <Icon Name=@AccountBalance />
             <span>@L[OfdTitle]</span>
-        </div>
+        </span>
         <h4 class=@OrgName>@OrganizationName</h4>
         <p class=@OrgDetails>@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
         <p class=@ReceiptMeta>@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
@@ -69,33 +69,33 @@
 
     <!-- Fiscal Block and Soliq.uz QR Code -->
     <footer class=@ReceiptFiscalFooter>
-        <div class=@QrContainer>
+        <figure class=@QrContainer>
             @if (!string.IsNullOrWhiteSpace(QrSvg))
             {
-                <div class=@QrSvgWrap>
+                <span class=@QrSvgWrap>
                     @((MarkupString)QrSvg)
-                </div>
+                </span>
             }
             else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
             {
-                <div class=@QrPlaceholder>
+                <span class=@QrPlaceholder>
                     <Icon Name=@QrCode2 />
-                </div>
+                </span>
             }
-        </div>
-        <div class=@FiscalInfo>
+        </figure>
+        <aside class=@FiscalInfo>
             <p class=@Sign>@L[FiscalSign] <code>@FiscalSign</code></p>
             <p class=@OfdHint>@L[OfdHintText]</p>
             <a href="@SoliqQrUrl" target="_blank" class=@VerifyLink>
                 <Icon Name=@Verified /> @L[VerifySoliq]
             </a>
-        </div>
+        </aside>
     </footer>
 
     <!-- Thermal Printer Receipt Print Button -->
-    <div class=@ReceiptActions>
+    <menu class=@ReceiptActions>
         <Button Variant=@Filled class=@PrintBtn OnClick=@PrintReceiptAsync>
             <Icon Name=@Print Slot="icon" /> @L[PrintEscPos]
         </Button>
-    </div>
+    </menu>
 </article>

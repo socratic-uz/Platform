@@ -5,52 +5,48 @@
 @using static Icons
 
 <header class=@ComputedHeaderClass>
-	<div class=@HeaderGridLayout>
-		<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-		<div class=@HeaderStartZone>
-			@if (ShowBrand)
-			{
-				<div class=@HeaderBrandZone>
-					<a href="/" class=@HeaderBrandLink title="Socratic">
-						<span class=@BrandIconBox>
-							<Icon Name=@AutoAwesome />
-						</span>
-						<span class=@HeaderBrandText>Socratic</span>
-					</a>
-				</div>
-			}
-			@if (StartContent != null)
-			{
-				@StartContent
-			}
-		</div>
+	<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
+	<section class=@HeaderStartZone>
+		@if (ShowBrand)
+		{
+			<a href="/" class=@HeaderBrandLink title="Socratic">
+				<span class=@BrandIconBox>
+					<Icon Name=@AutoAwesome />
+				</span>
+				<span class=@HeaderBrandText>Socratic</span>
+			</a>
+		}
+		@if (StartContent != null)
+		{
+			@StartContent
+		}
+	</section>
 
-		<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-		<nav class=@HeaderCenterZone aria-label="Main Navigation">
-			@if (CenterContent != null)
-			{
-				@CenterContent
-			}
-			@if (ChildContent != null)
-			{
-				@ChildContent
-			}
-		</nav>
+	<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
+	<nav class=@HeaderCenterZone aria-label="Main Navigation">
+		@if (CenterContent != null)
+		{
+			@CenterContent
+		}
+		@if (ChildContent != null)
+		{
+			@ChildContent
+		}
+	</nav>
 
-		<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-		<section class=@HeaderEndZone aria-label="User Actions">
-			@if (EndContent != null)
-			{
-				@EndContent
-			}
-			@if (ShowDefaultActions)
-			{
-				<LanguageSelector Variant="pill" />
-			}
-			@if (ShowAvatar)
-			{
-				<Avatar />
-			}
-		</section>
-	</div>
+	<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
+	<section class=@HeaderEndZone aria-label="User Actions">
+		@if (EndContent != null)
+		{
+			@EndContent
+		}
+		@if (ShowDefaultActions)
+		{
+			<LanguageSelector Variant="pill" />
+		}
+		@if (ShowAvatar)
+		{
+			<Avatar />
+		}
+	</section>
 </header>

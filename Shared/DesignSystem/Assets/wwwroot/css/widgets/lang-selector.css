@@ -99,34 +99,6 @@
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
 }
 
-.lang-toggle-btn .search-bar {
-    height: 48px;
-}
-
-.lang-toggle-btn .search-clear-btn {
-    height: 48px;
-}
-
-.lang-toggle-btn .search-route-btn {
-    height: 48px;
-}
-
-.lang-toggle-btn .seller-logo {
-    height: 48px;
-}
-
-.lang-toggle-btn .seller-logo-placeholder {
-    height: 48px;
-}
-
-.lang-toggle-btn .ux-search-box input {
-    height: 48px;
-}
-
-.lang-toggle-btn .yandex-ctrl-btn {
-    height: 48px;
-}
-
 .lang-toggle-btn md-icon {
     width: 20px;
     height: 20px;
@@ -200,7 +172,7 @@
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
-    z-index: 100;
+    z-index: var(--md-sys-z-dropdown, 500);
     min-width: 130px;
     padding: 0.35rem;
     border: 1px solid var(--md-sys-color-outline-variant);

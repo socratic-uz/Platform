@@ -9,7 +9,7 @@
     background: var(--md-sys-color-surface-container-lowest);
     max-width: 380px;
     margin: 0 auto;
-    padding: 24px 20px;
+    padding: var(--md-sys-spacing-6, 1.5rem) var(--md-sys-spacing-5, 1.25rem);
     border-radius: var(--md-sys-shape-corner-large, 16px);
     box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.06);
     border: 1px dashed var(--md-sys-color-outline-variant);
@@ -35,8 +35,8 @@
 
 .receipt-header {
     text-align: center;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    margin-bottom: var(--md-sys-spacing-4, 1rem);
+    padding-bottom: var(--md-sys-spacing-3, 0.75rem);
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
@@ -88,7 +88,7 @@
 }
 
 .receipt-totals {
-    margin-top: 12px;
+    margin-top: var(--md-sys-spacing-3, 0.75rem);
     padding-top: 10px;
     border-top: 2px solid var(--md-sys-color-on-surface);
     font-size: 0.85rem;
@@ -106,8 +106,8 @@
 
 .receipt-footer {
     text-align: center;
-    margin-top: 16px;
-    padding-top: 12px;
+    margin-top: var(--md-sys-spacing-4, 1rem);
+    padding-top: var(--md-sys-spacing-3, 0.75rem);
     border-top: 1px dashed var(--md-sys-color-outline-variant);
     font-size: 0.72rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -159,5 +159,5 @@
 
 .receipt-footer-title {
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
 }

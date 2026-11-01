@@ -32,31 +32,11 @@ md-icon,
     vertical-align: middle;
 }
 
-
-
-
-
-
-
-
-
-
-
 .material-symbols-outlined md-icon {
     width: 48px;
     height: 48px;
     font-size: 48px;
 }
-
-
-
-
-
-
-
-
-
-
 
 md-icon:not(:defined) {
     display: inline-grid;

@@ -3,86 +3,68 @@
 @using static Classes.Picker
 @using static Icons
 @using static Loc.Common
+@using static Material.Web.Components.ButtonVariant
 
 <div class=@string.Format(Three, LangSelect, IsInline ? LangSelectorInline : LangSelectorPill, Class)>
 	@if (IsInline)
 	{
-		<div class=@LangInlineGrid role="group" aria-label=@L[LanguageLabel]>
-			<button type="button"
+		<nav class=@LangInlineGrid role="group" aria-label=@L[LanguageLabel]>
+			<Button Variant=@(IsUz ? Filled : Text)
 					class=@(IsUz ? string.Format(Two, LangChipBtn, LangChipActive) : LangChipBtn)
-					@onclick=@SelectUz
-					aria-pressed=@(IsUz ? "true" : "false")
-					title=@L[CommonLangUz]>
-				<span>UZ</span>
-			</button>
-			<button type="button"
+					OnClick=@SelectUz
+					Title=@L[CommonLangUz]>
+				UZ
+			</Button>
+			<Button Variant=@(IsRu ? Filled : Text)
 					class=@(IsRu ? string.Format(Two, LangChipBtn, LangChipActive) : LangChipBtn)
-					@onclick=@SelectRu
-					aria-pressed=@(IsRu ? "true" : "false")
-					title=@L[CommonLangRu]>
-				<span>RU</span>
-			</button>
-			<button type="button"
+					OnClick=@SelectRu
+					Title=@L[CommonLangRu]>
+				RU
+			</Button>
+			<Button Variant=@(IsEn ? Filled : Text)
 					class=@(IsEn ? string.Format(Two, LangChipBtn, LangChipActive) : LangChipBtn)
-					@onclick=@SelectEn
-					aria-pressed=@(IsEn ? "true" : "false")
-					title=@L[CommonLangEn]>
-				<span>EN</span>
-			</button>
-		</div>
+					OnClick=@SelectEn
+					Title=@L[CommonLangEn]>
+				EN
+			</Button>
+		</nav>
 	}
 	else
 	{
 		<div class=@LangDropdownWrapper>
-			<button type="button"
+			<Button id="lang-menu-anchor"
+					Variant=@Text
 					class=@LangToggleBtn
-					@onclick=@ToggleDropdown
-					aria-expanded=@(IsOpen ? "true" : "false")
-					aria-label=@L[LanguageLabel]>
-				<Icon Name=@Translate />
+					OnClick=@ToggleDropdown
+					LeadingIcon=@Translate
+					TrailingIcon=@(IsOpen ? ArrowDropUp : ArrowDropDown)
+					AriaLabel=@L[LanguageLabel]>
 				<span class=@LangCurrentLabel>@GetLangShortLabel(CurrentLanguage)</span>
-				<Icon Name=@(IsOpen ? ArrowDropUp : ArrowDropDown) />
-			</button>
+			</Button>
 
-			@if (IsOpen)
-			{
-				<button type="button" class=@LangMenuBackdrop @onclick=@CloseDropdown aria-label=@L[CloseAction]></button>
-				<menu class=@LangDropdownMenu>
-					<button type="button"
-							class=@(IsUz ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
-							role="menuitem"
-							@onclick=@SelectUz>
-						<span class=@LangFlag>🇺🇿</span>
-						<span class=@LangName>@L[CommonLangUz]</span>
-						@if (IsUz)
-						{
-							<Icon Name=@Check />
-						}
-					</button>
-					<button type="button"
-							class=@(IsRu ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
-							role="menuitem"
-							@onclick=@SelectRu>
-						<span class=@LangFlag>🇷🇺</span>
-						<span class=@LangName>@L[CommonLangRu]</span>
-						@if (IsRu)
-						{
-							<Icon Name=@Check />
-						}
-					</button>
-					<button type="button"
-							class=@(IsEn ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
-							role="menuitem"
-							@onclick=@SelectEn>
-						<span class=@LangFlag>🇬🇧</span>
-						<span class=@LangName>@L[CommonLangEn]</span>
-						@if (IsEn)
-						{
-							<Icon Name=@Check />
-						}
-					</button>
-				</menu>
-			}
+			<Menu Anchor="lang-menu-anchor" Open=@IsOpen OnClosed=@CloseDropdown class=@LangDropdownMenu>
+				<MenuItem class=@(IsUz ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
+						  Selected=@IsUz
+						  EndIcon=@(IsUz ? Check : null)
+						  OnClick=@SelectUz>
+					<span slot="start" class=@LangFlag>🇺🇿</span>
+					<span slot="headline" class=@LangName>@L[CommonLangUz]</span>
+				</MenuItem>
+				<MenuItem class=@(IsRu ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
+						  Selected=@IsRu
+						  EndIcon=@(IsRu ? Check : null)
+						  OnClick=@SelectRu>
+					<span slot="start" class=@LangFlag>🇷🇺</span>
+					<span slot="headline" class=@LangName>@L[CommonLangRu]</span>
+				</MenuItem>
+				<MenuItem class=@(IsEn ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
+						  Selected=@IsEn
+						  EndIcon=@(IsEn ? Check : null)
+						  OnClick=@SelectEn>
+					<span slot="start" class=@LangFlag>🇬🇧</span>
+					<span slot="headline" class=@LangName>@L[CommonLangEn]</span>
+				</MenuItem>
+			</Menu>
 		</div>
 	}
 </div>

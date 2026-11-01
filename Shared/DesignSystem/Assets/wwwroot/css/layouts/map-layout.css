@@ -50,7 +50,7 @@
     gap: 0.45rem;
     position: sticky;
     top: 0;
-    z-index: 4;
+    z-index: var(--md-sys-z-surface, 2);
     padding-bottom: 0.45rem;
     border-bottom: 1px solid rgb(from var(--map-border) r g b / 0.45);
     background: linear-gradient(180deg, var(--map-surface-strong), rgb(from var(--map-surface) r g b / 0.88));
@@ -64,7 +64,7 @@
     position: absolute;
     top: var(--map-fab-offset);
     left: 50%;
-    z-index: 28;
+    z-index: var(--md-sys-z-appbar, 20);
     padding: 0.22rem 0.32rem;
     border: 1px solid var(--map-border);
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
@@ -94,7 +94,7 @@
     position: absolute;
     top: 50%;
     right: -44px;
-    z-index: 10;
+    z-index: var(--md-sys-z-sticky, 10);
     width: 44px;
     min-width: 44px;
     height: 64px;
@@ -129,7 +129,7 @@
 }
 
 .map-popup-backdrop :where(.maplibregl-ctrl-top-right, .mapboxgl-ctrl-top-right, .mapboxgl-ctrl-group, .maplibregl-ctrl-group) {
-    z-index: 1000;
+    z-index: var(--md-sys-z-dialog-backdrop, 1000);
     pointer-events: auto;
 }
 
@@ -164,13 +164,13 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     min-width: 0;
 }
 
 .map-route-fields-inputs {
     display: grid;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     min-width: 0;
 }
 
@@ -178,11 +178,11 @@
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    padding: 4px 12px;
+    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-3, 0.75rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background-color: var(--md-sys-color-surface-container-low);
@@ -199,24 +199,24 @@
 }
 
 .map-route-fields-dots {
-    margin-left: 20px;
+    margin-left: var(--md-sys-spacing-5, 1.25rem);
 }
 
 .map-route-fields-actions {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     justify-items: center;
 }
 
 .map-route-bottom-actions {
     display: grid;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     box-sizing: border-box;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
 }
 
 .map-route-suggestions {
-    margin-top: 8px;
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
     padding: 4px 0;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -245,13 +245,13 @@
 
 .route-alternatives-list {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .route-alternatives-list md-list-item {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
-    margin-bottom: 4px;
+    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .route-alternatives-list md-list-item[selected] {
@@ -265,7 +265,7 @@
 .route-start-container {
     display: grid;
     box-sizing: border-box;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
 }
 
 .route-start-button {
@@ -273,8 +273,6 @@
     --md-filled-button-container-color: var(--md-sys-color-primary);
     --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
 }
-
-
 
 /* Navigator Controls Buttons */
 .navigator-controls .nav-btn-recenter,
@@ -297,7 +295,7 @@
     place-items: center;
     position: fixed;
     inset: 0;
-    z-index: 10000;
+    z-index: var(--md-sys-z-dialog, 1001);
     width: 100%;
     height: 100%;
     margin: 0;
@@ -422,5 +420,5 @@
 
 .nearby-results-list {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }

@@ -12,8 +12,6 @@
     color: var(--md-sys-color-on-primary-container);
 }
 
-
-
 * {
     box-sizing: border-box;
     scrollbar-width: thin;
@@ -295,127 +293,43 @@ video {
 
 }
 
-
-
-
-
-
 :focus-visible {
     outline: 2px solid var(--md-sys-color-primary);
     outline-offset: 2px;
 }
 
-
-
-
-
-
 :focus:not(:focus-visible) {
     outline: none;
 }
-
-
-
-
-
-
-
-
-
 
 [data-gesture="interactive-canvas"] {
     touch-action: none;
 }
 
-
-
-
-
-
-
-
-
-
 [data-gesture="swipe-horizontal"] {
     touch-action: pan-y;
 }
-
-
-
-
-
-
-
-
-
 
 [data-gesture="swipe-vertical"] {
     touch-action: pan-x;
 }
 
-
-
-
-
-
-
-
-
-
 *::after {
     box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
 
 *::before {
     box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
-
-
 *:focus:not(:focus-visible) {
     outline: none;
 }
-
-
-
-
-
-
-
-
-
 
 article {
     user-select: text;
     -webkit-user-select: text;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 code {
     padding: 0.15em 0.35em;
@@ -428,56 +342,20 @@ code {
     -webkit-user-select: text;
 }
 
-
-
-
-
-
-
-
-
-
 embed {
     display: block;
     max-width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 iframe {
     display: block;
     max-width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
 object {
     display: block;
     max-width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 optgroup {
     margin: 0;
@@ -487,31 +365,10 @@ optgroup {
     line-height: inherit;
 }
 
-
-
-
-
-
-
-
-
-
 pre {
     user-select: text;
     -webkit-user-select: text;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .status-bar-safe-area {
     display: none;

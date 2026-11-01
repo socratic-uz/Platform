@@ -11,8 +11,8 @@
 @using static Material.Web.Components.ButtonVariant
 
 <PickerTriggerCard Label=@EffectiveLabel
-                   Icon=@ScheduleIcon
-                   ActiveIcon=@ScheduleIcon
+                   Icon=@CalendarToday
+                   ActiveIcon=@CalendarToday
                    HasValue=@HasActiveDays
                    BadgeText=@string.Format(Two, ActiveDaysCount, L[DaysShort])
                    BadgeIcon=@EventAvailable
@@ -24,7 +24,7 @@
                    OnReset=@ClearSchedule
                    Disabled=@Disabled>
     <CustomPreview>
-        <div class=@WeekMiniDots>
+        <span class=@WeekMiniDots>
             @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
             {
                 var active = IsDayActive(day);
@@ -32,24 +32,24 @@
                     @GetDayShort(day)
                 </span>
             }
-        </div>
+        </span>
     </CustomPreview>
 </PickerTriggerCard>
 
 <MaterialDialog Open=@_isDialogOpen OpenChanged=@(open => _isDialogOpen = open) class=@ScheduleDialogClass>
     <Headline>
-        <div class=@Md3DialogHeadline>
+        <header class=@Md3DialogHeadline>
             <Icon Name=@EditCalendar class=@Md3HeadlineIcon />
             <span>@L[TitleText]</span>
-        </div>
+        </header>
     </Headline>
 
     <Content>
-        <div class=@Md3SchedulePicker>
+        <section class=@Md3SchedulePicker>
             <!-- Quick Presets Bar -->
-            <div class=@Md3PresetsSection>
+            <section class=@Md3PresetsSection>
                 <span class=@Md3PresetsLabel>@L[QuickPresets]</span>
-                <div class=@Md3PresetsRow>
+                <menu class=@Md3PresetsRow>
                     <Button Variant=@Outlined OnClick=@ApplyWeekdaysPreset Icon=@Work>
                         @L[Weekdays]
                     </Button>
@@ -62,12 +62,12 @@
                     <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
                         @L[ResetAll]
                     </Button>
-                </div>
-            </div>
+                </menu>
+            </section>
 
-            <div class=@Md3ScheduleHeader>
+            <header class=@Md3ScheduleHeader>
                 <span class=@Md3ScheduleSubtitle>@L[WorkingDays]</span>
-                <div class=@TzContainerClass>
+                <fieldset class=@TzContainerClass>
                     <TextField TValue="string"
                                Variant=@(TextField<string>.TextFieldVariant.Outlined)
                                Label=@L[Timezone]
@@ -77,8 +77,8 @@
                                Class=@TzFieldClass
                                HasLeadingIcon=@true
                                LeadingIcon=@Public />
-                </div>
-            </div>
+                </fieldset>
+            </header>
 
             <!-- Days List -->
             <ul class=@Md3ScheduleDays>
@@ -89,44 +89,40 @@
                     var firstInterval = isOpen ? item.Intervals.First() : null;
 
                     <li class=@(isOpen ? string.Format(Two, Md3ScheduleDayCard, Active) : string.Format(Two, Md3ScheduleDayCard, "closed"))>
-                        <div class=@Md3ScheduleDayLeft>
+                        <hgroup class=@Md3ScheduleDayLeft>
                             <Checkbox Value=@isOpen
                                       ValueChanged=@(active => ToggleDay(day, active))
                                       ValueExpression=@(() => isOpen)
                                       Label=@GetDayName(day) />
-                        </div>
+                        </hgroup>
 
                         @if (isOpen && firstInterval != null)
                         {
-                            <div class=@Md3ScheduleTimeGroup>
-                                <div class=@Md3TimePickerBox>
-                                    <span class=@Md3TimeLabel>@L[From]</span>
-                                    <input type="time"
+                                                        <menu class=@Md3ScheduleTimeGroup>
+                                <TextField Type="time"
+                                           Label=@L[From]
                                            class=@Md3TimeInput
-                                           value=@FormatTime(firstInterval.Start)
-                                           @onchange=@((ChangeEventArgs e) => UpdateOpenTime(day, e.Value?.ToString())) />
-                                </div>
+                                           Value=@FormatTime(firstInterval.Start)
+                                           OnChange=@((ChangeEventArgs e) => UpdateOpenTime(day, e.Value?.ToString())) />
                                 <span class=@Md3TimeSeparator>─</span>
-                                <div class=@Md3TimePickerBox>
-                                    <span class=@Md3TimeLabel>@L[To]</span>
-                                    <input type="time"
+                                <TextField Type="time"
+                                           Label=@L[To]
                                            class=@Md3TimeInput
-                                           value=@FormatTime(firstInterval.End)
-                                           @onchange=@((ChangeEventArgs e) => UpdateCloseTime(day, e.Value?.ToString())) />
-                                </div>
-                            </div>
+                                           Value=@FormatTime(firstInterval.End)
+                                           OnChange=@((ChangeEventArgs e) => UpdateCloseTime(day, e.Value?.ToString())) />
+                            </menu>
                         }
                         else
                         {
-                            <div class=@Md3ClosedBadge>
+                            <span class=@Md3ClosedBadge>
                                 <Icon Name=@Block class=@ClosedIconClass />
                                 <span>@L[DayOff]</span>
-                            </div>
+                            </span>
                         }
                     </li>
                 }
             </ul>
-        </div>
+        </section>
     </Content>
 
     <Actions>
@@ -134,12 +130,12 @@
             <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
                 @L[ResetScheduleAction]
             </Button>
-            <div class=@GridFlowCol>
+            <menu class=@GridFlowCol>
                 <Button Variant=@Text OnClick=@CloseDialog>@L[CancelAction]</Button>
                 <Button Variant=@Filled OnClick=@SaveAndClose Icon=@Check>
                     @L[SaveAction]
                 </Button>
-            </div>
+            </menu>
         </menu>
     </Actions>
 </MaterialDialog>

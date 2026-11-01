@@ -68,6 +68,7 @@ namespace Assets.Constants
         {
             public const string MaterialColorUtilitiesBundle = "./_content/Assets/js/components/material-color-utilities.bundle.js";
             public const string MaterialWebBundle = "./_content/Assets/js/components/material-web.bundle.js";
+            public const string SliderPatch = "./_content/Assets/js/components/slider-patch.js";
         }
 
         public const string AdNetwork = "./_content/Assets/js/features/ads/ad-network.js";
@@ -94,6 +95,7 @@ namespace Assets.Constants
         public const string Master = "./_content/Assets/js/scripts.js";
         public const string ScriptsFile = "./_content/Assets/js/scripts.js";
         public const string SeatDesigner = "./_content/Assets/js/widgets/seat-designer.js";
+        public const string SliderPatch = "./_content/Assets/js/components/slider-patch.js";
         public const string SocraticMap = "./_content/Assets/js/features/map/socratic-map.js";
         public const string TelegramHelper = "./_content/Assets/js/features/auth/telegramHelper.js";
         public const string ThemeInit = "./_content/Assets/js/layouts/theme-init.js";

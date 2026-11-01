@@ -24,7 +24,7 @@
     grid-column: 1 / -1;
 }
 
-.payment-dashboard :where(.info-item, .m3-info-item) > :where(div, dd) {
+.payment-dashboard :where(.info-item, .m3-info-item) > :where(div, dd, .info-value, .m3-info-value) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), max-content));
     gap: var(--md-sys-spacing-4, 1rem);
@@ -32,7 +32,7 @@
     margin: 0.25rem 0 0;
 }
 
-.payment-dashboard .info-item dd {
+.payment-dashboard .info-item :where(dd, .info-value) {
     margin: 0;
 }
 
@@ -146,10 +146,10 @@
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card, 24px);
-    padding: 24px;
+    padding: var(--md-sys-spacing-6, 1.5rem);
     color: var(--md-sys-color-on-surface);
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .headline {
@@ -161,7 +161,7 @@
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .body-subtext {
@@ -182,7 +182,7 @@
 .step-item {
     display: grid;
     justify-items: center;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     font-size: 0.8rem;
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -236,9 +236,9 @@
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card, 24px);
-    padding: 20px;
+    padding: var(--md-sys-spacing-5, 1.25rem);
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 /* POS Terminal */
@@ -246,8 +246,8 @@
     display: grid;
     place-items: center;
     text-align: center;
-    gap: 12px;
-    padding: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    padding: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .pos-processing-view,
@@ -269,7 +269,7 @@
 .pos-icons-row {
     display: grid;
     grid-auto-flow: column;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     justify-content: center;
 }
 
@@ -299,7 +299,7 @@
     background: var(--md-sys-color-surface-container-highest);
     font-size: 0.72rem;
     font-weight: 600;
-    padding: 3px 8px;
+    padding: 3px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
@@ -313,7 +313,7 @@
 .pos-slip-details {
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
     width: 100%;
     text-align: left;
     font-size: 0.85rem;
@@ -345,7 +345,7 @@
     font-weight: 600;
     color: var(--md-sys-color-primary);
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .gateways-grid {
@@ -357,8 +357,8 @@
 .gateway-card {
     background: var(--md-sys-color-surface-container-highest);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 14px;
-    padding: 12px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    padding: var(--md-sys-spacing-3, 0.75rem);
     display: grid;
     justify-items: center;
     align-content: center;
@@ -381,7 +381,7 @@ button.gateway-card {
 
 .gateway-icon {
     font-size: 1.5rem;
-    margin-top: 4px;
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .gateway-name {
@@ -407,11 +407,11 @@ button.gateway-card {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: 20px;
+    gap: var(--md-sys-spacing-5, 1.25rem);
     background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card, 24px);
-    padding: 16px;
+    padding: var(--md-sys-spacing-4, 1rem);
     margin: 8px 0;
 }
 
@@ -452,9 +452,9 @@ button.gateway-card {
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 6px var(--md-sys-spacing-3, 0.75rem);
     border-radius: var(--md-sys-shape-corner-small, 8px);
-    margin-top: 4px;
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
     width: fit-content;
 }
 
@@ -471,7 +471,7 @@ button.gateway-card {
 .bank-chips-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(68px, max-content));
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     margin-top: 6px;
 }
 
@@ -481,7 +481,7 @@ button.gateway-card {
     font-size: 0.7rem;
     font-weight: 600;
     padding: 2px 7px;
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.2);
 }
 
@@ -490,14 +490,14 @@ button.gateway-card {
     font-size: 0.72rem;
     color: var(--md-sys-color-on-surface-variant);
     font-family: monospace;
-    margin-top: 4px;
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .qr-loading-box {
     display: grid;
     place-items: center;
     align-content: center;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     width: 140px;
     height: 140px;
 }
@@ -523,12 +523,12 @@ button.gateway-card {
 .card-form-grid {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .input-field-group {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .field-label {
@@ -542,7 +542,7 @@ button.gateway-card {
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface);
 }
@@ -606,8 +606,8 @@ button.gateway-card {
 
 .cash-session-panel {
     background: var(--md-sys-color-surface-container-low);
-    border-radius: 14px;
-    padding: 16px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    padding: var(--md-sys-spacing-4, 1rem);
     display: grid;
     gap: 10px;
 }
@@ -628,7 +628,7 @@ button.gateway-card {
 .cash-progress-bar {
     height: 10px;
     background: var(--md-sys-color-surface-container-highest);
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     overflow: hidden;
 }
 
@@ -656,7 +656,7 @@ button.gateway-card {
     background: var(--md-sys-color-surface-container-low);
     border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
     font-size: 0.85rem;
 }
 
@@ -664,7 +664,7 @@ button.gateway-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .split-title {
@@ -677,7 +677,7 @@ button.gateway-card {
     color: var(--md-sys-color-on-primary-container);
     font-size: 0.7rem;
     padding: 2px 6px;
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
 }
 
 .split-row {
@@ -685,17 +685,17 @@ button.gateway-card {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     color: var(--md-sys-color-on-surface-variant);
-    margin-top: 4px;
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .panel-footer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    padding-top: 16px;
-    margin-top: 8px;
+    padding-top: var(--md-sys-spacing-4, 1rem);
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .total-label {
@@ -722,6 +722,16 @@ button.gateway-card {
     .card-form-grid {
         grid-template-columns: minmax(0, 1fr);
     }
+    .payment-dashboard {
+        gap: 1.25rem;
+        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
+    }
+    .payment-dashboard .info-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .payment-trust-footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 
@@ -733,10 +743,10 @@ button.gateway-card {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large, 20px);
-    padding: 24px;
+    padding: var(--md-sys-spacing-6, 1.5rem);
     color: var(--md-sys-color-on-surface);
     display: grid;
-    gap: 20px;
+    gap: var(--md-sys-spacing-5, 1.25rem);
 }
 
 .merchant-settings-panel .headline {
@@ -748,7 +758,7 @@ button.gateway-card {
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .merchant-settings-panel .body-subtext {
@@ -761,9 +771,17 @@ button.gateway-card {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 14px);
-    padding: 16px;
+    padding: var(--md-sys-spacing-4, 1rem);
     display: grid;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+}
+
+.settings-group.grid-2-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:where(.settings-group > legend, .settings-group > .group-toggle, .settings-group > .group-description) {
+    grid-column: 1 / -1;
 }
 
 .group-title {
@@ -792,7 +810,7 @@ button.gateway-card {
 
 .merchant-settings-panel .form-field {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .uzqr-highlight {
@@ -821,12 +839,12 @@ button.gateway-card {
 .merchant-settings-panel .panel-footer {
     display: grid;
     justify-content: end;
-    padding-top: 12px;
+    padding-top: var(--md-sys-spacing-3, 0.75rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .save-btn {
     min-width: 200px;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
 }

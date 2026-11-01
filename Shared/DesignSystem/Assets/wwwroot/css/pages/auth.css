@@ -3,67 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.landing-auth-btn {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto auto;
-    gap: 0.45rem;
-    align-items: center;
-    min-height: 48px;
-    padding: 0.4rem 1.1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.84rem;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 0 16px rgb(from var(--md-sys-color-primary) r g b / 0.2), inset 0 1px 0 rgb(from var(--md-sys-color-surface) r g b / 0.15);
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    touch-action: manipulation;
-}
-
-.landing-auth-btn md-icon {
-    font-size: 16px;
-}
-
-.landing-auth-btn:hover {
-    border-color: var(--md-sys-color-primary);
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
-    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-primary) r g b / 0.5), 0 0 25px rgb(from var(--md-sys-color-tertiary) r g b / 0.4);
-    transform: translateY(-1px);
-}
-
-.landing-auth-btn:hover md-icon {
-    color: var(--md-sys-color-on-primary);
-}
-
-.landing-floating-auth-btn {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.45rem;
-    align-items: center;
-    min-height: 44px;
-    padding: 0.45rem 1rem;
-    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.landing-floating-auth-btn:hover {
-    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.6);
-    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
-    box-shadow: 0 0 16px rgb(from var(--md-sys-color-primary) r g b / 0.3);
-    transform: translateY(-1px);
-}
-
 :where(.auth-card, .signin-card) {
     display: grid;
     gap: 1.5rem;
@@ -84,51 +23,13 @@
         padding: clamp(1.25rem, 4vw, 1.75rem) clamp(1rem, 3vw, 1.25rem);
     }
 
-    .hero-card {
-        padding: clamp(1.15rem, 3vw, 1.5rem) clamp(0.75rem, 2vw, 1.25rem);
-        border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    :where(.auth-title, .signin-title) {
+        font-size: clamp(1.25rem, 5vw, 1.35rem);
     }
 
-    .hero-stage-card {
-        padding: clamp(0.65rem, 2vw, 0.85rem);
-        border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    :where(.auth-container, .signin-container) {
+        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1rem);
     }
-
-    .item-card {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--md-sys-spacing-3, 0.75rem);
-        padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-    }
-
-    .org-card-actions {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.5rem;
-    }
-
-    .organizations-map-controls.collapsed .route-alternative-card:not(.active) {
-        display: none;
-    }
-
-    .preview-card {
-        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2.5vw, 1rem);
-    }
-
-    .spotlight-card-top {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.35rem;
-        justify-items: start;
-    }
-
-    .ux-mode-card {
-        padding: 1.35rem 1.15rem;
-        border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
-    }
-
-    .ux-mode-card-actions {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.4rem;
-    }
-
 }
 
 :where(.auth-logo-badge, .signin-logo-badge) {
@@ -174,7 +75,7 @@
     gap: 0.5rem;
     justify-content: start;
     align-items: center;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-error-container);
@@ -407,32 +308,10 @@
     100% { transform: rotate(360deg); }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .session-item-subtitle {
     color: var(--md-sys-color-primary);
     font-size: 0.75rem;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .session-item-title {
     color: var(--md-sys-color-on-surface);

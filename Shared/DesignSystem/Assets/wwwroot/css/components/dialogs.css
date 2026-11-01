@@ -53,12 +53,12 @@ md-dialog.contacts details summary::-webkit-details-marker {
 }
 
 .drawer-footer {
-    padding-top: 16px;
+    padding-top: var(--md-sys-spacing-4, 1rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .drawer-footer .total-row {
-    padding-top: 8px;
+    padding-top: var(--md-sys-spacing-2, 0.5rem);
     border-top: 1px dashed var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface);
     font-size: 1.15rem;
@@ -73,7 +73,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding-bottom: 16px;
+    padding-bottom: var(--md-sys-spacing-4, 1rem);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -96,7 +96,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     width: 100%;
     max-width: 440px;
     height: 100dvh;
-    padding: 24px;
+    padding: var(--md-sys-spacing-6, 1.5rem);
     border-left: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
@@ -291,6 +291,15 @@ md-dialog.contacts details summary::-webkit-details-marker {
     pointer-events: auto;
 }
 
+.m3-drawer-scrim-dismiss {
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
 .m3-drawer-panel {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
@@ -298,7 +307,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     width: 100%;
     max-width: 440px;
     height: 100dvh;
-    padding: 24px;
+    padding: var(--md-sys-spacing-6, 1.5rem);
     border-left: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
@@ -363,7 +372,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     gap: var(--md-sys-spacing-3);
     align-items: center;
     width: 100%;
-    padding-top: 12px;
+    padding-top: var(--md-sys-spacing-3, 0.75rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -489,7 +498,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     display: grid;
     gap: var(--md-sys-spacing-4);
     min-width: 0;
-    margin-top: 8px;
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .variant-dialog-header {
@@ -650,7 +659,7 @@ md-dialog.contacts md-list {
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 25;
+        z-index: var(--md-sys-z-appbar, 20);
         background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
         backdrop-filter: blur(4px);
         animation: fadeIn 0.22s ease-out;
@@ -668,7 +677,7 @@ md-dialog.contacts md-list {
         grid-column: 1;
         width: 100%;
         max-width: 100%;
-        padding: 16px;
+        padding: var(--md-sys-spacing-4, 1rem);
     }
 
     .m3-drawer-backdrop {
@@ -679,7 +688,7 @@ md-dialog.contacts md-list {
         grid-column: 1;
         width: 100%;
         max-width: 100%;
-        padding: 16px;
+        padding: var(--md-sys-spacing-4, 1rem);
     }
 
     .md-drawer-backdrop {
@@ -702,7 +711,7 @@ md-dialog.contacts md-list {
     .showcase-sidebar-backdrop {
         position: fixed;
         inset: 0;
-        z-index: 999;
+        z-index: var(--md-sys-z-dialog-backdrop, 1000);
         background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
     }
 

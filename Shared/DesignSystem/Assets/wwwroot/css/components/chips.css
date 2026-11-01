@@ -57,7 +57,7 @@
 .badge-counter {
     display: inline-grid;
     place-items: center;
-    padding: 2px 8px;
+    padding: 2px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
@@ -220,7 +220,7 @@
 .catalog-badge {
     padding: 0.25rem 0.65rem;
     border: 1px solid var(--md-sys-color-primary);
-    border-radius: 6px;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     font-weight: 800;
@@ -366,7 +366,7 @@
     max-width: 100%;
     padding: 0.5rem 1.25rem;
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.35);
-    border-radius: 50px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     color: var(--md-sys-color-primary);
     font-size: 0.875rem;
@@ -390,7 +390,7 @@
     position: absolute;
     padding: 0.6rem 1.1rem;
     border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.15);
-    border-radius: 50px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.88);
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
@@ -575,10 +575,6 @@
     user-select: none;
 }
 
-.m3-filter-chip .sidebar-brand-icon {
-    height: 40px;
-}
-
 .m3-filter-chip-count {
     padding: 0.1rem 0.45rem;
     border-radius: var(--md-sys-shape-corner-full);
@@ -670,7 +666,7 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-1);
-    padding: 4px;
+    padding: var(--md-sys-spacing-1, 0.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
@@ -853,7 +849,7 @@
     position: absolute;
     top: 1rem;
     left: 50%;
-    z-index: 30;
+    z-index: var(--md-sys-z-appbar, 20);
     min-width: 14rem;
     max-width: calc(100% - 2rem);
     padding: 0.65rem 0.85rem;
@@ -892,7 +888,7 @@
     place-content: center;
     padding: 0.45rem 0.6rem;
     border: none;
-    border-radius: 9px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: transparent;
     color: var(--map-text-muted);
     font-size: 0.8rem;
@@ -917,7 +913,7 @@
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-1);
     align-items: center;
-    padding: 4px 10px;
+    padding: var(--md-sys-spacing-1, 0.25rem) 10px;
     border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-outline);
@@ -929,7 +925,7 @@
     position: absolute;
     top: 6px;
     left: 6px;
-    z-index: 4;
+    z-index: var(--md-sys-z-surface, 2);
     padding: 2px 6px;
     border-radius: var(--md-sys-shape-corner-extra-small);
     background: var(--md-sys-color-primary);
@@ -1101,7 +1097,7 @@
 }
 
 .required-badge {
-    padding: 2px 8px;
+    padding: 2px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
@@ -1146,7 +1142,7 @@
     max-width: 100%;
     padding: 0.5rem 1.25rem;
     border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.35);
-    border-radius: 50px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     color: var(--md-sys-color-primary);
     font-size: 0.875rem;
@@ -1162,7 +1158,7 @@
 }
 
 .showcase-brand-badge {
-    padding: 3px 8px;
+    padding: 3px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
     color: var(--md-sys-color-on-primary);
@@ -1188,7 +1184,7 @@
     grid-auto-columns: max-content minmax(0, 1fr);
     gap: 10px;
     align-items: center;
-    padding: 8px 16px;
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.6);
@@ -1200,7 +1196,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 70px), 1fr));
     gap: var(--md-sys-spacing-2);
-    margin-top: 8px;
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .spatial-wing-badge {
@@ -1302,7 +1298,7 @@
     gap: 6px;
     align-items: center;
     box-sizing: border-box;
-    padding: 6px 12px;
+    padding: 6px var(--md-sys-spacing-3, 0.75rem);
     border: 1px solid transparent;
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     font-size: 0.8rem;
@@ -1363,7 +1359,7 @@
 }
 
 .ux-discount-badge {
-    padding: 2px 8px;
+    padding: 2px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
@@ -1492,8 +1488,8 @@ md-suggestion-chip:active {
 }
 
 .drawer-header .badge {
-    margin-left: 8px;
-    padding: 2px 8px;
+    margin-left: var(--md-sys-spacing-2, 0.5rem);
+    padding: 2px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
@@ -1533,38 +1529,17 @@ md-suggestion-chip:active {
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
 .dot-cyan {
     background: var(--md-sys-color-primary);
     box-shadow: 0 0 10px var(--md-sys-color-primary);
     animation: livePulse 2s ease-in-out infinite;
 }
 
-
-
-
-
-
-
-
 .dot-emerald {
     background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 10px var(--md-sys-color-tertiary);
     animation: livePulse 2.4s ease-in-out infinite;
 }
-
-
-
-
-
-
-
 
 .m3-status-dot {
     display: inline-block;
@@ -1574,23 +1549,9 @@ md-suggestion-chip:active {
     background: currentcolor;
 }
 
-
-
-
-
-
-
-
 .m3-status-dot.pulse {
     position: relative;
 }
-
-
-
-
-
-
-
 
 .m3-status-dot.pulse::after {
     opacity: 0.4;
@@ -1602,25 +1563,11 @@ md-suggestion-chip:active {
     content: '';
 }
 
-
-
-
-
-
-
-
 .spec-status-dot {
     width: 8px;
     height: 8px;
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
 }
-
-
-
-
-
-
-
 
 .status-dot {
     display: inline-block;
@@ -1631,23 +1578,9 @@ md-suggestion-chip:active {
     background-color: currentColor;
 }
 
-
-
-
-
-
-
-
 .status-dot.pulse {
     position: relative;
 }
-
-
-
-
-
-
-
 
 .status-dot.pulse::after {
     opacity: 0.4;
@@ -1659,13 +1592,6 @@ md-suggestion-chip:active {
     content: '';
 }
 
-
-
-
-
-
-
-
 .status-pulse-dot {
     width: 8px;
     height: 8px;
@@ -1674,13 +1600,6 @@ md-suggestion-chip:active {
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
     animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
-
-
-
-
-
-
 
 .status-text {
     color: var(--md-sys-color-on-surface-variant);

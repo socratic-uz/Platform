@@ -40,7 +40,7 @@
 .pos-quick-bill-btn {
     display: grid;
     place-items: center;
-    padding: 10px 4px;
+    padding: 10px var(--md-sys-spacing-1, 0.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container-high);
@@ -72,7 +72,7 @@
     align-self: end;
     width: 100%;
     min-width: 0;
-    padding-top: 8px;
+    padding-top: var(--md-sys-spacing-2, 0.5rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -171,7 +171,7 @@
 .pos-tech-chip {
     display: grid;
     place-items: center;
-    padding: 4px 10px;
+    padding: var(--md-sys-spacing-1, 0.25rem) 10px;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-surface-container-high);
@@ -184,7 +184,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 0.75rem;
-    padding-top: 16px;
+    padding-top: var(--md-sys-spacing-4, 1rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -205,7 +205,7 @@
     align-items: center;
     min-width: 0;
     min-inline-size: 0;
-    padding-bottom: 12px;
+    padding-bottom: var(--md-sys-spacing-3, 0.75rem);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -232,7 +232,7 @@
     justify-items: center;
     place-content: center;
     box-sizing: border-box;
-    padding: 40px 16px;
+    padding: 40px var(--md-sys-spacing-4, 1rem);
     border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container);
@@ -257,7 +257,7 @@
     grid-auto-flow: column;
     align-items: center;
     width: 100%;
-    padding-bottom: 4px;
+    padding-bottom: var(--md-sys-spacing-1, 0.25rem);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-color-outline-variant) transparent;
@@ -291,7 +291,7 @@
     width: 100%;
     max-width: 100vw;
     min-height: calc(100vh - 100px);
-    padding: 16px 24px;
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
     background: var(--md-sys-color-surface);
     overflow-x: hidden;
 }
@@ -328,7 +328,7 @@
     grid-template-rows: auto minmax(0, 1fr) auto;
     min-width: 0;
     height: 100%;
-    padding: 20px;
+    padding: var(--md-sys-spacing-5, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-dock, 32px);
     background-color: var(--md-sys-color-surface-container-lowest);
@@ -339,8 +339,8 @@
 .pos-sidebar-header {
     display: grid;
     gap: 0.5rem;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
+    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
+    padding-bottom: var(--md-sys-spacing-3, 0.75rem);
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
@@ -388,9 +388,9 @@
 .pos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
-    gap: 12px;
-    padding-right: 4px;
-    padding-bottom: 24px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    padding-right: var(--md-sys-spacing-1, 0.25rem);
+    padding-bottom: var(--md-sys-spacing-6, 1.5rem);
     overflow-y: auto;
     overscroll-behavior-y: contain;
 }
@@ -398,7 +398,7 @@
 .pos-invoice-container {
     display: grid;
     min-height: 200px;
-    margin-bottom: 16px;
+    margin-bottom: var(--md-sys-spacing-4, 1rem);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     overflow-y: auto;
     overscroll-behavior-y: contain;
@@ -407,7 +407,7 @@
 .pos-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
-    gap: 20px;
+    gap: var(--md-sys-spacing-5, 1.25rem);
     align-items: stretch;
 }
 
@@ -419,13 +419,13 @@
 @media screen and (max-width: 839.98px) {
     .pos-layout {
         grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
+        gap: var(--md-sys-spacing-4, 1rem);
         align-items: start;
         height: auto;
     }
 
     .pos-main {
-        padding: 8px 12px;
+        padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-3, 0.75rem);
         height: auto;
         min-height: 0;
     }
@@ -445,14 +445,59 @@
 
     .pos-grid {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
-        gap: 8px;
+        gap: var(--md-sys-spacing-2, 0.5rem);
+    }
+}
+
+@media (max-width: 599.98px) {
+    .pos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+        gap: 10px;
+        padding-bottom: var(--md-sys-spacing-6, 1.5rem);
+    }
+
+    .pos-search-wrapper {
+        justify-self: stretch;
+        width: clamp(200px, 25vw, 320px);
+    }
+
+    .pos-actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pos-catalog-header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pos-main {
+        padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-3, 0.75rem);
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 36px);
+    }
+
+    .pos-top-header-actions {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 6px;
+        min-width: 0;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .pos-top-header-actions::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-actions-bar {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.625rem;
     }
 }
 
 /* POS Payment Modal & Cashier Ergonomics */
 .pos-payment-body {
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     padding: 4px 0;
 }
 
@@ -473,7 +518,7 @@
     grid-auto-columns: max-content;
     align-items: baseline;
     gap: 6px;
-    padding: 4px 12px;
+    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-3, 0.75rem);
     border-radius: var(--md-sys-shape-expressive-pill, 9999px);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
@@ -513,7 +558,7 @@
 .pos-cash-input {
     width: 100%;
     box-sizing: border-box;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     border: 2px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container-high);
@@ -526,14 +571,14 @@
 .pos-quick-bills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .pos-change-banner {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
 }
 
@@ -558,13 +603,13 @@
 
 .pos-btn-full {
     width: 100%;
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .pos-btn-max-360 {
     width: 100%;
     max-width: 360px;
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .pos-terminal-layout {
@@ -591,7 +636,7 @@
 .pos-device-icons {
     display: grid;
     grid-auto-flow: column;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     color: var(--md-sys-color-primary);
 }
 
@@ -618,7 +663,7 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     padding: 10px 14px;
     border-radius: var(--md-sys-shape-corner-small, 8px);
     background: var(--md-sys-color-error-container);
@@ -629,7 +674,7 @@
 .pos-tech-chips {
     display: grid;
     grid-auto-flow: column;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     margin: 4px 0;
 }
 
@@ -641,7 +686,7 @@
 }
 
 .pos-qr-box {
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large, 16px);
     background: var(--md-sys-color-surface-bright);
@@ -649,7 +694,7 @@
 
 .pos-qr-info {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .pos-qr-title {
@@ -674,7 +719,7 @@
     box-sizing: border-box;
     padding: 10px 14px;
     border: 1px solid var(--md-sys-color-outline);
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     font-size: 1.2rem;
@@ -684,8 +729,8 @@
 .pos-otp-box {
     display: grid;
     gap: 6px;
-    padding: 12px;
-    border-radius: 10px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-primary-container);
 }
 
@@ -700,7 +745,7 @@
     box-sizing: border-box;
     padding: 10px 14px;
     border: 2px solid var(--md-sys-color-primary);
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     font-size: 1.5rem;
@@ -712,9 +757,9 @@
 .pos-details-list {
     display: grid;
     grid-auto-flow: row;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     margin: 0;
-    padding: 16px;
+    padding: var(--md-sys-spacing-4, 1rem);
 }
 
 .pos-details-img {

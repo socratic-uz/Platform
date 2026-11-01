@@ -5,7 +5,6 @@ namespace Shared.Layout
 {
     public partial class Search : ComponentBase
     {
-        protected const string SearchIcon = global::Assets.Constants.Icons.Search;
         [Inject] public IStringLocalizer L { get; set; } = default!;
 
         public const string SearchInputFieldClass = "search-input-field";

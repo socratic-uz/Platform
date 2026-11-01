@@ -9,21 +9,21 @@
 
 @if (Compact)
 {
-    <div class="@CompactBoxClass">
+    <section class=@CompactBoxClass>
         <!-- Color Swatch & Native Color Trigger -->
-        <div class=@SwatchWrapper title=@L[ColorPickerClickToSelect]>
-            <div class=@Swatch @attributes=@GetSwatchAttributes(NormalizedValue)>
+        <span class=@SwatchWrapper title=@L[ColorPickerClickToSelect]>
+            <span class=@Swatch @attributes=@GetSwatchAttributes(NormalizedValue)>
                 <input type="color"
                        class=@NativeInput
                        value=@HexValue
                        disabled=@Disabled
                        @onchange=@OnNativeColorChanged
                        @oninput=@OnNativeColorInput />
-            </div>
-        </div>
+            </span>
+        </span>
 
         <!-- Text Input for HEX -->
-        <div class=@HexWrapper>
+        <span class=@HexWrapper>
             <span class=@HexPrefix>#</span>
             <input type="text"
                    class=@HexInput
@@ -31,9 +31,9 @@
                    value=@RawHexValue
                    disabled=@Disabled
                    @onchange=@OnTextInputChanged />
-        </div>
+        </span>
 
-        <IconButton Icon=@(isCopied ? Icons.Check : Icons.ContentCopy)
+        <IconButton Icon=@(isCopied ? Check : ContentCopy)
                     Disabled=@Disabled
                     AriaLabel=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
                     OnClick=@CopyColorAsync />
@@ -55,7 +55,7 @@
                         AriaLabel=@L[ColorPickerResetColor]
                         OnClick=@Clear />
         }
-    </div>
+    </section>
 }
 else
 {
@@ -73,14 +73,14 @@ else
                        Disabled=@Disabled
                        Class=@CssClass>
         <CustomIconBadge>
-            <div class=@ColorBadgeSwatch @attributes=@GetSwatchAttributes(NormalizedValue)>
+            <span class=@ColorBadgeSwatch @attributes=@GetSwatchAttributes(NormalizedValue)>
                 <input type="color"
                        class=@NativeInput
                        value=@HexValue
                        disabled=@Disabled
                        @onchange=@OnNativeColorChanged
                        @oninput=@OnNativeColorInput />
-            </div>
+            </span>
         </CustomIconBadge>
 
         <CustomActions>
@@ -89,7 +89,7 @@ else
                 @(isPaletteOpen ? L[ColorPickerClosePalette] : L[ColorPickerPalette])
             </Button>
 
-            <IconButton Icon=@(isCopied ? Icons.Check : Icons.ContentCopy)
+            <IconButton Icon=@(isCopied ? Check : ContentCopy)
                         Disabled=@Disabled
                         AriaLabel=@L[ColorPickerCopyHex]
                         OnClick=@CopyColorAsync />
@@ -108,29 +108,28 @@ else
 <!-- Presets Popover / Dialog -->
 @if (ShowPresets && isPaletteOpen)
 {
-    <div class=@PopoverPanel>
-        <div class=@PopoverHeader>
+    <dialog class=@PopoverPanel open>
+        <header class=@PopoverHeader>
             <span class=@PopoverTitle>@L[ColorPickerRecommendedColors]</span>
             <IconButton Icon=@Close AriaLabel=@L[ColorPickerClosePalette] OnClick=@ClosePalette />
-        </div>
-        <div class=@PaletteGrid>
+        </header>
+        <menu class=@PaletteGrid>
             @foreach (var color in EffectivePresets)
             {
                 var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
-                <button type="button"
-                        class=@GetPaletteSwatchClass(isSelected)
+                <IconButton class=@GetPaletteSwatchClass(isSelected)
                         @attributes=@GetSwatchAttributes(color)
-                        title=@color
-                        @onclick=@(() => SelectPreset(color))>
+                        AriaLabel=@color
+                        OnClick=@(() => SelectPreset(color))>
                     @if (isSelected)
                     {
                         <md-icon class=@SwatchCheck>@Check</md-icon>
                     }
-                </button>
+                </IconButton>
             }
-        </div>
-        <div class=@PopoverFooter>
-            <div class=@HexCompactClass>
+        </menu>
+        <footer class=@PopoverFooter>
+            <span class=@HexCompactClass>
                 <span class=@HexPrefix>#</span>
                 <input type="text"
                        class=@HexInput
@@ -138,7 +137,7 @@ else
                        value=@RawHexValue
                        disabled=@Disabled
                        @onchange=@OnTextInputChanged />
-            </div>
+            </span>
             @if (HasValue)
             {
                 <Button Variant=@Text OnClick=@Clear>
@@ -146,6 +145,6 @@ else
                     @L[ResetAction]
                 </Button>
             }
-        </div>
-    </div>
+        </footer>
+    </dialog>
 }

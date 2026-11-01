@@ -3,9 +3,6 @@
    Subscription Plans, Pricing Tiers, Feature Lists & Plan Indicators
    ========================================================================== */
 
-
-
-
 .tier-box {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
@@ -19,38 +16,23 @@
     cursor: pointer;
 }
 
-
-
-
 .tier-box :where(md-filled-button, md-outlined-button, button) {
     width: 100%;
 }
-
-
-
 
 .tier-box:hover {
     border-color: var(--md-sys-color-outline);
     transform: translateY(-2px);
 }
 
-
-
-
 .tier-box.active-tier {
     border-color: var(--md-sys-color-primary);
     background: var(--md-sys-color-surface-container-high);
 }
 
-
-
-
 .tier-box.pro-tier {
     border-color: var(--md-sys-color-tertiary);
 }
-
-
-
 
 .current-plan-indicator {
     display: block;
@@ -63,25 +45,16 @@
     text-align: center;
 }
 
-
-
-
 .current-plan-indicator.pro {
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
-
-
-
 
 .empty-plans-actions {
     display: grid;
     justify-items: center;
     margin-top: 0.5rem;
 }
-
-
-
 
 .empty-plans-desc {
     max-width: 460px;
@@ -91,15 +64,9 @@
     line-height: 1.5;
 }
 
-
-
-
 .empty-plans-icon {
     font-size: 2rem;
 }
-
-
-
 
 .empty-plans-title {
     margin: 0;
@@ -108,17 +75,11 @@
     font-weight: 700;
 }
 
-
-
-
 .plan-currency {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
     font-weight: 500;
 }
-
-
-
 
 .plan-features {
     display: grid;
@@ -129,18 +90,12 @@
     list-style: none;
 }
 
-
-
-
 .plan-features li {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
 }
-
-
-
 
 .plan-header {
     display: grid;
@@ -151,9 +106,6 @@
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
-
-
-
 .plan-name {
     margin: 0;
     color: var(--md-sys-color-on-surface);
@@ -161,26 +113,17 @@
     font-weight: 700;
 }
 
-
-
-
 .plan-price-wrap {
     color: var(--md-sys-color-primary);
     font-size: 1.75rem;
     font-weight: 800;
 }
 
-
-
-
 .plan-title {
     color: var(--md-sys-color-on-surface);
     font-size: 1.125rem;
     font-weight: 700;
 }
-
-
-
 
 .empty-plans-icon-wrapper {
     display: grid;
@@ -191,9 +134,6 @@
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface-variant);
 }
-
-
-
 
 .m3-pricing-grid {
     display: grid;

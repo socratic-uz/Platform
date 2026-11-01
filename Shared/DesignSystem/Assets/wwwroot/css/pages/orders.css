@@ -300,22 +300,6 @@
     align-items: center;
 }
 
-@media screen and (max-width: 839.98px) {
-    .order-items-subheader {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--md-sys-spacing-3, 0.75rem);
-    }
-
-    .order-details-layout {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .order-summary-section {
-        position: static;
-        top: auto;
-    }
-}
-
 .order-number {
     font-size: 1.15rem;
     font-weight: 700;
@@ -352,8 +336,8 @@
     width: 100%;
     min-width: 0;
     min-height: 52px;
-    margin-bottom: 8px;
-    padding: 8px 16px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     background: var(--md-sys-color-surface-container-low);
@@ -430,6 +414,15 @@
     pointer-events: auto;
 }
 
+.m3-drawer-scrim-dismiss {
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
 .order-drawer-panel {
     grid-column: 2;
     display: grid;
@@ -437,7 +430,7 @@
     width: 100%;
     max-width: 480px;
     height: 100vh;
-    padding: 24px;
+    padding: var(--md-sys-spacing-6, 1.5rem);
     border-left: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
@@ -447,31 +440,18 @@
     animation: slideInRight 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-@media (max-width: 599.98px) {
-    .order-drawer-backdrop {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .order-drawer-panel {
-        grid-column: 1;
-        width: 100%;
-        max-width: 100%;
-        padding: 16px;
-    }
-}
-
 .order-drawer-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    padding-bottom: 16px;
+    padding-bottom: var(--md-sys-spacing-4, 1rem);
 }
 
 .order-header-title-box {
     display: grid;
     grid-auto-flow: column;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     justify-content: start;
     align-items: center;
 }
@@ -480,7 +460,7 @@
 .order-header-title-box .m3-title-large {
     display: grid;
     grid-auto-flow: column;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     align-items: center;
     margin: 0;
     color: var(--md-sys-color-on-surface);
@@ -500,7 +480,7 @@
 
 .order-drawer-body {
     display: grid;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     align-content: start;
     padding: 16px 0;
     overflow-y: auto;
@@ -510,7 +490,7 @@
 }
 
 .empty-order-view {
-    padding: 60px 20px;
+    padding: 60px var(--md-sys-spacing-5, 1.25rem);
     color: var(--md-sys-color-on-surface-variant);
     text-align: center;
 }
@@ -526,11 +506,11 @@
 .order-item-row {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     align-items: center;
-    padding: 12px 14px;
+    padding: var(--md-sys-spacing-3, 0.75rem) 14px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 14px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
     background: var(--md-sys-color-surface-container);
     transition: background 0.15s ease;
 }
@@ -542,7 +522,7 @@
 .order-item-media {
     width: 52px;
     height: 52px;
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
 }
@@ -566,6 +546,7 @@
 }
 
 .order-item-name {
+    min-width: 0;
     margin: 0 0 4px 0;
     color: var(--md-sys-color-on-surface);
     font-size: 0.95rem;
@@ -592,7 +573,7 @@
 .order-item-controls {
     display: grid;
     grid-auto-flow: column;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     align-items: center;
 }
 
@@ -620,25 +601,25 @@
 
 .order-drawer-footer {
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    padding-top: 16px;
+    padding-top: var(--md-sys-spacing-4, 1rem);
 }
 
 .order-price-breakdown {
     display: grid;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     font-size: 0.95rem;
 }
 
 .order-footer-actions {
     display: grid;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .order-checkout-btn {
     width: 100%;
-    padding: 12px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
     font-size: 1rem;
     font-weight: 700;
 }
@@ -680,7 +661,7 @@ button.kanban-card {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(280px, 360px);
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     min-height: 500px;
     padding: 16px 0;
     overflow-x: auto;
@@ -689,7 +670,7 @@ button.kanban-card {
 .smart-kanban-column {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     width: 100%;
     padding: 14px;
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -701,7 +682,7 @@ button.kanban-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    padding-bottom: 8px;
+    padding-bottom: var(--md-sys-spacing-2, 0.5rem);
     border-bottom: 2px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface);
     font-size: 14px;
@@ -716,7 +697,7 @@ button.kanban-card {
 }
 
 .smart-kanban-column-count {
-    padding: 2px 8px;
+    padding: 2px var(--md-sys-spacing-2, 0.5rem);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
@@ -734,7 +715,7 @@ button.kanban-card {
 .smart-kanban-card {
     padding: 14px;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 10px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container);
     box-shadow: var(--md-sys-elevation-level1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -747,7 +728,7 @@ button.kanban-card {
 }
 
 .smart-kanban-card-title {
-    margin-bottom: 4px;
+    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
     color: var(--md-sys-color-on-surface);
     font-size: 14px;
     font-weight: 600;
@@ -758,11 +739,6 @@ button.kanban-card {
     font-size: 12px;
 }
 
-
-
-
-
-
 .column-content {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -770,11 +746,6 @@ button.kanban-card {
     align-content: start;
     width: 100%;
 }
-
-
-
-
-
 
 .column-empty {
     display: grid;
@@ -790,21 +761,11 @@ button.kanban-card {
     text-align: center;
 }
 
-
-
-
-
-
 .column-empty p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9375rem;
 }
-
-
-
-
-
 
 .column-header {
     display: grid;
@@ -815,55 +776,25 @@ button.kanban-card {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-
-
-
-
-
 .column-icon {
     font-size: 20px;
 }
-
-
-
-
-
 
 .column-icon.icon-making {
     color: var(--md-sys-color-tertiary);
 }
 
-
-
-
-
-
 .column-icon.icon-ready {
     color: var(--md-sys-color-primary);
 }
-
-
-
-
-
 
 .column-making {
     border-top: 4px solid var(--md-sys-color-tertiary);
 }
 
-
-
-
-
-
 .column-ready {
     border-top: 4px solid var(--md-sys-color-primary);
 }
-
-
-
-
-
 
 .column-title {
     margin: 0;
@@ -871,11 +802,6 @@ button.kanban-card {
     font-size: 1.05rem;
     font-weight: 600;
 }
-
-
-
-
-
 
 .kanban-column {
     display: grid;
@@ -889,11 +815,6 @@ button.kanban-card {
     background: var(--md-sys-color-surface-container-low);
 }
 
-
-
-
-
-
 .m3-empty-column-icon {
     display: grid;
     opacity: 0.8;
@@ -901,11 +822,6 @@ button.kanban-card {
     color: var(--md-sys-color-primary);
     font-size: 36px;
 }
-
-
-
-
-
 
 .m3-kanban-board {
     display: grid;
@@ -915,11 +831,6 @@ button.kanban-card {
     width: 100%;
     container-type: inline-size;
 }
-
-
-
-
-
 
 .m3-kanban-column {
     display: grid;
@@ -933,11 +844,6 @@ button.kanban-card {
     background: var(--md-sys-color-surface-container-low);
 }
 
-
-
-
-
-
 .orders-kanban-board {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -947,26 +853,10 @@ button.kanban-card {
     container-type: inline-size;
 }
 
-
-
-
-
-
-
-
-
 .advance-icon {
     font-size: 18px;
     transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
 }
-
-
-
-
-
-
-
-
 
 .advance-prompt {
     display: grid;
@@ -980,16 +870,6 @@ button.kanban-card {
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-actions-bar {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
@@ -998,31 +878,11 @@ button.kanban-card {
     margin-top: 0.5rem;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-currency {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1.25rem;
     font-weight: 600;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-desc {
     display: -webkit-box;
@@ -1034,30 +894,10 @@ button.kanban-card {
     -webkit-line-clamp: 2;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-desc:empty {
     display: none;
     margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-description-block h3 {
     margin: 0 0 0.5rem;
@@ -1068,16 +908,6 @@ button.kanban-card {
     text-transform: uppercase;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-description-text {
     margin: 0;
     color: var(--md-sys-color-on-surface);
@@ -1086,50 +916,20 @@ button.kanban-card {
     white-space: pre-line;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-details {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     align-content: start;
     height: 100%;
     padding: 12px 16px 8px;
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-gallery {
     display: grid;
     gap: 1rem;
     align-content: start;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-img {
     display: block;
@@ -1139,16 +939,6 @@ button.kanban-card {
     transition: transform 0.3s ease;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-img-placeholder {
     display: grid;
@@ -1160,16 +950,6 @@ button.kanban-card {
     color: var(--md-sys-color-outline);
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-main-image-wrap {
     position: relative;
     width: 100%;
@@ -1180,29 +960,9 @@ button.kanban-card {
     overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-main-image-wrap:hover .product-main-img {
     transform: scale(1.02);
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-main-img {
     display: block;
@@ -1211,16 +971,6 @@ button.kanban-card {
     transition: transform 0.3s ease;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-media {
     position: relative;
@@ -1232,30 +982,10 @@ button.kanban-card {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-placeholder-icon {
     opacity: 0.45;
     font-size: 36px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-price {
     color: var(--md-sys-color-primary);
@@ -1263,16 +993,6 @@ button.kanban-card {
     font-weight: 800;
     letter-spacing: -0.02em;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-thumbnails {
     display: grid;
@@ -1288,16 +1008,6 @@ button.kanban-card {
     overscroll-behavior-x: contain;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-title {
     margin: 0;
     color: var(--md-sys-color-on-surface);
@@ -1308,48 +1018,18 @@ button.kanban-card {
     text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-unit {
     margin-left: 0.25rem;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
 .store-product-page {
     position: relative;
-    z-index: 1;
+    z-index: var(--md-sys-z-raised, 1);
     min-height: 100vh;
     padding: 2rem 1.5rem 5rem;
 }
-
-
-
-
-
-
-
-
-
-
 
 @container product-card (max-width: 320px) {
     .product-title {
@@ -1357,16 +1037,6 @@ button.kanban-card {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-price-section {
     display: grid;
@@ -1377,16 +1047,6 @@ button.kanban-card {
     margin-top: 0.5rem;
 }
 
-
-
-
-
-
-
-
-
-
-
 .product-specs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
@@ -1396,16 +1056,6 @@ button.kanban-card {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-
-
-
-
-
-
-
-
-
-
 .store-product-container {
     box-sizing: border-box;
     width: 100%;
@@ -1413,18 +1063,6 @@ button.kanban-card {
     min-width: 0;
     margin: 0 auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .catalog-desc {
     min-width: 0;
@@ -1436,18 +1074,6 @@ button.kanban-card {
     overflow-wrap: anywhere;
     word-break: break-word;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .catalog-header {
     display: grid;
@@ -1461,18 +1087,6 @@ button.kanban-card {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .catalog-main {
     display: grid;
     gap: 3.5rem;
@@ -1485,36 +1099,12 @@ button.kanban-card {
     overflow-x: clip;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .catalog-shell {
     display: grid;
     grid-template-columns: var(--catalog-sidebar-width, 280px) minmax(0, 1fr);
     min-height: 100vh;
     overflow-x: clip;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .catalog-sidebar {
     display: grid;
@@ -1530,18 +1120,6 @@ button.kanban-card {
     overflow-y: auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .catalog-title {
     min-width: 0;
     margin: 0 auto;
@@ -1552,18 +1130,6 @@ button.kanban-card {
     overflow-wrap: anywhere;
     word-break: break-word;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .catalog-section {
     display: grid;
@@ -1612,13 +1178,13 @@ button.kanban-card {
     display: grid;
     gap: var(--md-sys-spacing-1);
     box-sizing: border-box;
-    padding: 6px 8px;
+    padding: 6px var(--md-sys-spacing-2, 0.5rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
 }
 
-/* --- Responsive Catalog Media Overrides --- */
+/* --- Responsive Orders Media Overrides (< 840px) --- */
 @media screen and (max-width: 839.98px) {
     .catalog-header {
         grid-template-columns: minmax(0, 1fr);
@@ -1638,6 +1204,73 @@ button.kanban-card {
         display: none;
     }
 
+    .order-items-subheader {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-3, 0.75rem);
+    }
 
+    .order-details-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
 
+    .order-summary-section {
+        position: static;
+        top: auto;
+    }
+}
+
+/* --- Mobile Compact Media Overrides (< 600px) --- */
+@media (max-width: 599.98px) {
+    .order-drawer-backdrop {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .order-drawer-panel {
+        grid-column: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: var(--md-sys-spacing-4, 1rem);
+    }
+
+    .kds-board {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .kds-column {
+        min-height: auto;
+    }
+
+    .m3-kanban-board {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .m3-kanban-column {
+        min-height: auto;
+    }
+
+    .order-items-subheader {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-3, 0.75rem);
+    }
+
+    .orders-kanban-board {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .order-details-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-5, 1.25rem);
+    }
+
+    .orders-list-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .order-subtitle {
+        grid-auto-flow: row;
+        gap: var(--md-sys-spacing-1, 0.25rem);
+    }
 }

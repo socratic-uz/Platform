@@ -47,20 +47,20 @@ else
 			</nav>
 		</CenterContent>
 		<EndContent>
-			<div class=@LandingHeaderActionsClass>
+			<menu class=@LandingHeaderActionsClass>
 				<LanguageSelector Variant="pill" />
 				<Button Variant=@Outlined Href="/signin" Icon=@Login class=@LandingAuthBtnClass>
 					@L[SocraticID]
 				</Button>
-				<IconButton Icon=@MenuIcon Class=@LandingMobileMenuToggleClass OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : "Menu") />
-			</div>
+				<IconButton Icon=@MenuIcon Class=@LandingMobileMenuToggleClass OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : L[Docs_ShowMenu]) />
+			</menu>
 		</EndContent>
 	</Header>
 
 	@if (IsMobileMenuOpen)
 	{
-		<button type="button" class=@LandingMobileMenuBackdropClass @onclick=@CloseMobileMenu aria-label=@L[CloseAction]></button>
-		<nav class=@LandingMobileMenuDrawerClass aria-label="Mobile Navigation">
+		<IconButton class=@LandingMobileMenuBackdropClass OnClick=@CloseMobileMenu AriaLabel=@L[CloseAction] />
+		<nav class=@LandingMobileMenuDrawerClass aria-label=@L[MainNavigation]>
 			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
 				<Icon Name=@Storefront />
 				<span>@L[Showroom]</span>

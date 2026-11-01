@@ -94,7 +94,7 @@
 
 .pos-header-title-group {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
 .pos-product-title-text {
@@ -245,14 +245,6 @@ md-outlined-text-field:focus-visible {
     overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
 .m3-body-large {
     font-size: var(--md-sys-typescale-body-large-size);
     font-weight: var(--md-sys-typescale-body-large-weight);
@@ -262,14 +254,6 @@ md-outlined-text-field:focus-visible {
     user-select: text;
     -webkit-user-select: text;
 }
-
-
-
-
-
-
-
-
 
 .m3-body-medium {
     font-size: var(--md-sys-typescale-body-medium-size);
@@ -281,14 +265,6 @@ md-outlined-text-field:focus-visible {
     -webkit-user-select: text;
 }
 
-
-
-
-
-
-
-
-
 .m3-display-large {
     font-size: var(--md-sys-typescale-display-large-size);
     font-weight: var(--md-sys-typescale-display-large-weight);
@@ -297,14 +273,6 @@ md-outlined-text-field:focus-visible {
     overflow-wrap: anywhere;
     word-break: break-word;
 }
-
-
-
-
-
-
-
-
 
 .m3-headline-large {
     font-size: var(--md-sys-typescale-headline-large-size);
@@ -315,14 +283,6 @@ md-outlined-text-field:focus-visible {
     word-break: break-word;
 }
 
-
-
-
-
-
-
-
-
 .m3-headline-medium {
     font-size: var(--md-sys-typescale-headline-medium-size);
     font-weight: var(--md-sys-typescale-headline-medium-weight);
@@ -331,14 +291,6 @@ md-outlined-text-field:focus-visible {
     overflow-wrap: anywhere;
     word-break: break-word;
 }
-
-
-
-
-
-
-
-
 
 .m3-label {
     display: grid;
@@ -355,27 +307,11 @@ md-outlined-text-field:focus-visible {
     word-break: break-word;
 }
 
-
-
-
-
-
-
-
-
 .m3-label-sm {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
     font-weight: 500;
 }
-
-
-
-
-
-
-
-
 
 .m3-label-small {
     font-size: var(--md-sys-typescale-label-small-size);
@@ -385,14 +321,6 @@ md-outlined-text-field:focus-visible {
     text-transform: uppercase;
 }
 
-
-
-
-
-
-
-
-
 .m3-legend {
     padding: 0 0.5rem;
     color: var(--md-sys-color-primary);
@@ -400,41 +328,17 @@ md-outlined-text-field:focus-visible {
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
 .m3-line-clamp-2 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 2;
 }
 
-
-
-
-
-
-
-
-
 .m3-line-clamp-3 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 3;
 }
-
-
-
-
-
-
-
-
 
 .m3-truncate {
     min-width: 0;
@@ -464,7 +368,7 @@ md-outlined-text-field:focus-visible {
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
     color: var(--md-sys-color-primary);
     font-size: 12px;
     font-weight: 700;

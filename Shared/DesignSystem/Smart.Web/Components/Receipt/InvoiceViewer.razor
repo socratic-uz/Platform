@@ -3,6 +3,8 @@
 @using static Assets.Constants.Classes.Invoice
 @using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Loc.Receipt
+@using Material.Web.Components
+@using static Material.Web.Components.ButtonVariant
 @typeparam TItem
 
 <article id="check" class=@ReceiptContainer>
@@ -39,11 +41,18 @@
                     var qty = QuantitySelector(op);
                     var name = NameSelector(op);
                     var price = PriceSelector(op);
-                    <tr class=@(OnItemClick.HasDelegate ? ReceiptClickableRow : null) @onclick=@(() => HandleItemClick(op)) title=@L[RemoveItemHint]>
-                        <td class=@ReceiptCellQty>
-                            @qty
+                    <tr>
+                        <td class=@ReceiptCellQty>@qty</td>
+                        <td class=@ReceiptCellName>
+                            @if (OnItemClick.HasDelegate)
+                            {
+                                <Button Variant=@Text class=@ReceiptClickableRow OnClick=@(() => HandleItemClick(op)) Title=@L[RemoveItemHint]>@name</Button>
+                            }
+                            else
+                            {
+                                @name
+                            }
                         </td>
-                        <td class=@ReceiptCellName>@name</td>
                         <td class=@ReceiptCellPrice>@price.ToString("N0")</td>
                         <td class=@ReceiptCellSum>@((qty * price).ToString("N0"))</td>
                     </tr>

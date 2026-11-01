@@ -1,6 +1,9 @@
 @using Microsoft.AspNetCore.Components.Web
 @namespace QuickGrid
+@using Material.Web.Components
 @using static Assets.Constants.Classes.Table
+@using static Assets.Constants.Icons
+@using static Loc.Common
 
 <div class=@TablePaginator>
     @if (State.TotalItemCount.HasValue)
@@ -12,18 +15,18 @@
             }
             else
             {
-                <text><strong>@State.TotalItemCount</strong> items</text>
+                <text><strong>@State.TotalItemCount</strong> @L[PaginationItems]</text>
             }
         </div>
-        <nav role="navigation">
-            <button class=@GoFirst type="button" @onclick=@GoFirstAsync disabled=@(!CanGoBack) title="Go to first page" aria-label="Go to first page"></button>
-            <button class=@GoPrevious type="button" @onclick=@GoPreviousAsync disabled=@(!CanGoBack) title="Go to previous page" aria-label="Go to previous page"></button>
+        <nav>
+            <IconButton class=@GoFirst Icon=@FirstPage OnClick=@GoFirstAsync Disabled=@(!CanGoBack) Title=@L[PaginationFirstPage] AriaLabel=@L[PaginationFirstPage] />
+            <IconButton class=@GoPrevious Icon=@NavigateBefore OnClick=@GoPreviousAsync Disabled=@(!CanGoBack) Title=@L[PaginationPrevPage] AriaLabel=@L[PaginationPrevPage] />
             <div class=@PaginationText>
-                Page <strong>@(State.CurrentPageIndex + 1)</strong>
-                of <strong>@(State.LastPageIndex + 1)</strong>
+                @L[PaginationPage] <strong>@(State.CurrentPageIndex + 1)</strong>
+                @L[PaginationOf] <strong>@(State.LastPageIndex + 1)</strong>
             </div>
-            <button class=@GoNext type="button" @onclick=@GoNextAsync disabled=@(!CanGoForwards) title="Go to next page" aria-label="Go to next page"></button>
-            <button class=@GoLast type="button" @onclick=@GoLastAsync disabled=@(!CanGoForwards) title="Go to last page" aria-label="Go to last page"></button>
+            <IconButton class=@GoNext Icon=@NavigateNext OnClick=@GoNextAsync Disabled=@(!CanGoForwards) Title=@L[PaginationNextPage] AriaLabel=@L[PaginationNextPage] />
+            <IconButton class=@GoLast Icon=@LastPage OnClick=@GoLastAsync Disabled=@(!CanGoForwards) Title=@L[PaginationLastPage] AriaLabel=@L[PaginationLastPage] />
         </nav>
     }
 </div>

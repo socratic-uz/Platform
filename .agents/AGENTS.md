@@ -107,7 +107,7 @@ Interaction (IX)
 - **Компоненты `Material.Web` First**: при наличии готового Blazor-компонента в `Material.Web` используй его:
   `<Button>` / `<IconButton>`, `<TextField>`, `<Select>`, `<Divider>`, `<Checkbox>`, `<Radio>`, `<MaterialDialog>`, `<Progress>`, `<Tabs>` / `<Tab>`, `<Chip>` / `<ChipSet>`, `<Badge>`.
 - **Семантический HTML5**: при отсутствии готового аналога в `Material.Web` используй правильные семантические теги: `<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<fieldset>`, `<legend>`, `<ul>`/`<li>`.
-- **Плоская структура (Zero Wrapper Bloat)**: разметка строится без лишних промежуточных `<div>`; отступы и раскладка задаются CSS Grid родительского контейнера.
+- **Плоская структура и Контракт глубины (DOM Depth Contract)**: разметка строится без лишних промежуточных `<div>`; отступы и раскладка задаются CSS Grid родительского контейнера. **Строгие метрики**: сквозная целевая глубина от `<body>` — **ровно 6 уровней**, абсолютный потолок для листовых атомов (`<Icon>`, `<span>`) — **7 уровней**, глубина внутри одного `.razor` файла — **не более 4 уровней**. Глубина 8+ запрещена как дефект. Виджеты в сетке страницы располагаются параллельно как независимые братья (виджеты-матрёшки запрещены).
 - **Ультра-короткий синтаксис атрибутов `что-то=@*` или `*=@*` (Zero Quotes)**:
   - Все C#-выражения в параметрах компонентов записываются без кавычек: `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`, `Open=@IsOpen`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`, `Label=@L[StepCart]`.
   - Все атрибуты оформляются строго ультра-коротко: `что-то=@*` (например: `class=@ItemUnitPrice`, `class=@HeaderTitleBox`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`).

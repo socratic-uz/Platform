@@ -292,7 +292,7 @@ namespace Shared.Components
                 {
                     isFaceIdConfigured = await FaceIdService.HasFaceRegisteredAsync(currentUserId);
                     Logger.LogInformation("[Profile] Checked Face ID status for user '{UserId}': Configured={Configured}", currentUserId, isFaceIdConfigured);
-                    StateHasChanged();
+                    await InvokeAsync(StateHasChanged);
                 }
             }
             catch (Exception ex)
@@ -664,7 +664,7 @@ namespace Shared.Components
                                 currentEnrollmentStage = 3;
                                 isFaceIdConfigured = true;
                                 faceIdStatusColor = "var(--md-sys-color-primary)";
-                                StateHasChanged();
+                                await InvokeAsync(StateHasChanged);
 
                                 await Task.Delay(1500);
                                 await CloseFaceIdModal();
@@ -692,7 +692,7 @@ namespace Shared.Components
             finally
             {
                 _isFaceProcessingFrame = false;
-                StateHasChanged();
+                await InvokeAsync(StateHasChanged);
             }
         }
 
@@ -714,7 +714,7 @@ namespace Shared.Components
                 await FaceIdService.DeleteFaceAsync(currentUserId);
                 isFaceIdConfigured = false;
                 Logger.LogInformation("[Profile.FaceID] Biometrics removed for user {UserId}", currentUserId);
-                StateHasChanged();
+                await InvokeAsync(StateHasChanged);
             }
         }
 
@@ -786,7 +786,7 @@ namespace Shared.Components
 
                     isPasskeyConfigured = true;
                     Logger.LogInformation("[Profile.Passkey] Passkey successfully registered on server for User {UserId}", currentUserId);
-                    StateHasChanged();
+                    await InvokeAsync(StateHasChanged);
                 }
             }
         }

@@ -11,10 +11,8 @@ public partial class MarkdownSection : ComponentBase
     [Parameter] public string? Style { get; set; }
     [Parameter(CaptureUnmatchedValues = true)] public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
     private IJSObjectReference _jsModule = default!;
-    private IJSObjectReference mermaidModule = default!;
+    private string ComputeClass() => string.IsNullOrWhiteSpace(Class) ? "markdown-body" : $"markdown-body {Class}";
     private bool _markdownChanged = false;
-    private string? _content;
-    private string? _fromAsset;
 
     [Inject]
     protected IJSRuntime JSRuntime { get; set; } = default!;
@@ -25,34 +23,23 @@ public partial class MarkdownSection : ComponentBase
     /// <summary>
     /// Gets or sets the Markdown content
     /// </summary>
-    [Parameter]
-    public string? Content
-    {
-        get => _content;
-        set
-        {
-            if (_content is not null && !_content.Equals(value))
-            {
-                _markdownChanged = true;
-            }
-            _content = value;
-        }
-    }
+    [Parameter] public string? Content { get; set; }
 
     /// <summary>
     /// Gets or sets asset to read the Markdown from
     /// </summary>
-    [Parameter]
-    public string? FromAsset
+    [Parameter] public string? FromAsset { get; set; }
+
+    private string? _previousContent;
+    private string? _previousFromAsset;
+
+    protected override void OnParametersSet()
     {
-        get => _fromAsset;
-        set
+        if (Content != _previousContent || FromAsset != _previousFromAsset)
         {
-            if (_fromAsset is not null && !_fromAsset.Equals(value))
-            {
-                _markdownChanged = true;
-            }
-            _fromAsset = value;
+            _previousContent = Content;
+            _previousFromAsset = FromAsset;
+            _markdownChanged = true;
         }
     }
 

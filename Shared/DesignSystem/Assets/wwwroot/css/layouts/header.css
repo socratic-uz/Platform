@@ -3,21 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.header-icon-wrap .search-clear-btn {
-    width: 48px;
-    height: 48px;
-}
-
-.header-icon-wrap .search-route-btn {
-    width: 48px;
-    height: 48px;
-}
-
-.header-icon-wrap .yandex-ctrl-btn {
-    width: 48px;
-    height: 48px;
-}
-
 .spotlight-header-badge {
     display: inline-grid;
     grid-auto-flow: column;
@@ -113,27 +98,10 @@
 .header-icon-wrap {
     display: grid;
     place-items: center;
+    width: 48px;
+    height: 48px;
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
-}
-
-.header-icon-wrap .search-bar {
-    height: 48px;
-}
-
-.header-icon-wrap .seller-logo {
-    width: 48px;
-    height: 48px;
-}
-
-.header-icon-wrap .seller-logo-placeholder {
-    width: 48px;
-    height: 48px;
-}
-
-.header-icon-wrap md-icon {
-    width: 48px;
-    height: 48px;
 }
 
 .header-icon.icon-making {
@@ -220,6 +188,7 @@
 }
 
 .m3-page-header-subtitle {
+    min-width: 0;
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
@@ -312,7 +281,7 @@ header.app-header {
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
     position: relative;
-    z-index: 50;
+    z-index: var(--md-sys-z-overlay, 50);
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -346,8 +315,11 @@ header.app-header.header-sticky {
     }
 
     .header-start-zone:has(.m3-page-header-start) .header-brand-zone,
+    .header-start-zone:has(.m3-page-header-start) .header-brand-link,
     .header-start-zone:has(.kiosk-brand) .header-brand-zone,
+    .header-start-zone:has(.kiosk-brand) .header-brand-link,
     .header-start-zone:has(.header-context-divider) .header-brand-zone,
+    .header-start-zone:has(.header-context-divider) .header-brand-link,
     .header-context-divider {
         display: none;
     }

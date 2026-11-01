@@ -5,7 +5,7 @@
 
 .smart-enum-container {
     display: grid;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .smart-enum-label {
@@ -24,6 +24,6 @@
 
 .smart-enum-options {
     display: grid;
-    gap: 8px;
-    padding-left: 4px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    padding-left: var(--md-sys-spacing-1, 0.25rem);
 }

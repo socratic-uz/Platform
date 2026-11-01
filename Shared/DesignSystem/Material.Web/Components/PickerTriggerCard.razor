@@ -4,10 +4,10 @@
 @using static Assets.Constants.Classes.Picker
 @using static Material.Web.Components.ButtonVariant
 
-<div class=@CardClasses>
-    <div class=@TriggerLeft>
+<article class=@CardClasses>
+    <section class=@TriggerLeft>
         <!-- Icon Badge (44x44px, R12) -->
-        <div class=@BadgeClasses>
+        <span class=@BadgeClasses>
             @if (CustomIconBadge != null)
             {
                 @CustomIconBadge
@@ -16,11 +16,11 @@
             {
                 <Icon Name=@(HasValue ? (ActiveIcon ?? Icon) : Icon) />
             }
-        </div>
+        </span>
 
         <!-- Text & Preview Area -->
-        <div class=@TriggerText>
-            <div class=@HeaderRow>
+        <section class=@TriggerText>
+            <header class=@HeaderRow>
                 <span class=@TriggerTitle>@Label</span>
                 @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
                 {
@@ -32,21 +32,21 @@
                         @BadgeText
                     </span>
                 }
-            </div>
-            <div class=@(global::Assets.Constants.Classes.Picker.PreviewText) title=@PreviewText>
+            </header>
+            <p class=@PreviewText title=@PreviewText>
                 @PreviewText
-            </div>
+            </p>
             @if (CustomPreview != null)
             {
-                <div class=@(global::Assets.Constants.Classes.Picker.CustomPreview)>
+                <section class=@CustomPreview>
                     @CustomPreview
-                </div>
+                </section>
             }
-        </div>
-    </div>
+        </section>
+    </section>
 
     <!-- Actions Panel -->
-    <div class=@TriggerActions>
+    <footer class=@TriggerActions>
         @if (CustomActions != null)
         {
             @CustomActions
@@ -65,5 +65,5 @@
                         Disabled=@Disabled
                         OnClick=@HandleReset />
         }
-    </div>
-</div>
+    </footer>
+</article>

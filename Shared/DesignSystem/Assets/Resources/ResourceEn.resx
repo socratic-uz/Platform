@@ -3542,6 +3542,18 @@
   <data name="Merchant_UzQrFiscalModuleLabel" xml:space="preserve">
     <value>Fiscal Module Number (if applicable)</value>
   </data>
+  <data name="Merchant_ServiceIdLabel" xml:space="preserve">
+    <value>Service ID</value>
+  </data>
+  <data name="Merchant_MerchantIdLabel" xml:space="preserve">
+    <value>Merchant ID</value>
+  </data>
+  <data name="Merchant_SecretKeyLabel" xml:space="preserve">
+    <value>Secret Key</value>
+  </data>
+  <data name="Merchant_TerminalIdLabel" xml:space="preserve">
+    <value>Terminal ID</value>
+  </data>
   <data name="Merchant_SaveSettings" xml:space="preserve">
     <value>Save Acquiring Settings</value>
   </data>
@@ -3696,6 +3708,30 @@
   </data>
   <data name="HeroQrDesigner" xml:space="preserve">
     <value>QR Fiscalization</value>
+  </data>
+    <data name="PaginationFirstPage" xml:space="preserve">
+    <value>Go to first page</value>
+  </data>
+  <data name="PaginationPrevPage" xml:space="preserve">
+    <value>Go to previous page</value>
+  </data>
+  <data name="PaginationNextPage" xml:space="preserve">
+    <value>Go to next page</value>
+  </data>
+  <data name="PaginationLastPage" xml:space="preserve">
+    <value>Go to last page</value>
+  </data>
+  <data name="PaginationItems" xml:space="preserve">
+    <value>items</value>
+  </data>
+  <data name="PaginationPage" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PaginationOf" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="HeroStageTabsLabel" xml:space="preserve">
+    <value>Hero interface stages</value>
   </data>
   <data name="TabPos" xml:space="preserve">
     <value>POS Terminal</value>

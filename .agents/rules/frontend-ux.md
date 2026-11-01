@@ -1,4 +1,4 @@
-# Архитектура фронтенда: 1. Разметка в *.razor файлах
+﻿# Архитектура фронтенда: 1. Разметка в *.razor файлах
 
 ## 1. 🏛️ Золотой стандарт: Чистая разметка и типизированные константы
 
@@ -142,6 +142,37 @@
 ## 6. 📐 Плоское семантическое дерево (Zero Excessive Nesting & Zero Wrapper Bloat)
 
 В разметке компонентов **категорически запрещена избыточная вложенность контейнеров**:
+
+### 6.1. Метрики глубины вложенности (Exact Target Metrics)
+- **Целевой стандарт сквозной глубины (Target Depth):** строго **`6` уровней** от `<body>` до целевого элемента интерфейса.
+- **Абсолютный потолок (Hard Ceiling):** строго **`7` уровней** (только для конечных листовых атомов: `<Icon>`, `<span>`, `<strong>`, `@L[...]` внутри кнопок и полей ввода).
+- **Архитектурный дефект (Violation):** **`8+` уровней** — категорически запрещено. Наличие 8+ уровней в DOM-дереве блокируется при ревью как «Div Soup» либо нарушение компонентной декомпозиции.
+- **Локальный лимит файла (`*.razor` Scope):** **$\le 4$ уровней** от корневого тега файла до самого глубокого дочернего элемента.
+
+### 6.2. Иерархия уровней: от Layout до Атома
+
+| Уровень | Слой в CSS (`@layer`) | Архитектурная роль | Допустимые семантические теги / Компоненты |
+| :--- | :--- | :--- | :--- |
+| **Уровень 1** | `@layer layouts;` | **Макро-каркас приложения** (App Shell) | `<body>`, `<header>`, `<nav>`, `<main>`, `<footer>` |
+| **Уровень 2** | `@layer pages;` | **Сетка страницы / экрана** (Page Macro-Grid) | `<main>`, `<section>`, `<header>`, `<nav>`, `<aside>` |
+| **Уровень 3** | `@layer widgets;` | **Отраслевой бизнес-организм** (Smart Widget) | `<section>`, `<aside>`, `<fieldset>` + `<legend>`, `<article>`, `<MaterialDialog>` |
+| **Уровень 4** | `@layer widgets;` / `@layer components;` | **Внутренняя группировка виджета** (Sub-Grid) | `<ul>` / `<ol>`, `<div class=@Grid2Col>`, `<div class=@ActionRow>` |
+| **Уровень 5** | `@layer components;` | **UI-примитивы и молекулы** (Dumb Components) | `<Button>`, `<IconButton>`, `<TextField>`, `<Select>`, `<Card>`, `<li>`, `<Tabs>` |
+| **Уровень 6** | `@layer components;` | **Внутренний слот / контейнер компонента** | `<span>`, `<div slot="...">`, `<strong>` |
+| **Уровень 7** | — | **Листовой неделимый атом** (Leaf Atom) | `<Icon Name=@...>`, `<time>`, текст `@L[...]` |
+
+### 6.3. Сквозной эталон 7 уровней (Worst-Case DOM Trace)
+```text
+Уровень 1 (Root):       <body>                           [Layout: App.razor]
+   └── Уровень 2 (Shell):      <main>                    [Layout: GridLayout.razor / @Body]
+          └── Уровень 3 (Page):       <section>          [Page: макро-зона PosPage.razor]
+                 └── Уровень 4 (Widget):     <aside>     [Widget: корень CartWidget.razor]
+                        └── Уровень 5 (Group):      <ul> [Widget Sub-Grid: список позиций]
+                               └── Уровень 6 (Comp):    <li> / <Button> [Component: строка / кнопка]
+                                      └── Уровень 7 (Atom): <Icon> / @L[...] [Leaf Atom: иконка или текст]
+```
+
+### 6.4. Правила ликвидации паразитных обёрток
 1. **Устранение "Div Soup"**:
    - Запрещены промежуточные контейнеры-обертки (`<div class="wrapper"><div class="container"><div class="inner">...</div></div></div>`).
    - Благодаря **CSS Grid**, родительский семантический элемент (`<section>`, `<article>`, `<header>`, `<footer>`) напрямую управляет раскладкой, отступами и позиционированием своих дочерних элементов через `display: grid`, `gap`, `grid-template-columns: minmax(0, 1fr)`.
@@ -149,6 +180,18 @@
    - Нельзя создавать `<div>` исключительно ради `padding`, `margin`, рамки или фона. Классы оформления навешиваются на сам семантический тег или его непосредственных потомков.
 3. **Прямое связывание компонентов**:
    - Размещайте компоненты `Material.Web` (`<Button>`, `<TextField>`) и семантические элементы непосредственно в сетке без промежуточных контейнеров-пустышек.
+4. **Матрица ликвидации обёрток (Zero Wrapper Alternatives)**:
+
+| Зачем разработчик ставил <div> | Антипаттерн (<div>) | Канонический стандарт Socratic |
+| :--- | :--- | :--- |
+| **2–3 колонки полей ввода** | <fieldset> <div class="grid-2col"> <input/> </div> </fieldset> | <fieldset class="grid-2-col"> <legend>...</legend> <TextField/> </fieldset> (сетка на самом <fieldset>) |
+| **Ряд кнопок действий** | <div class="action-buttons"> <Button/> </div> | <menu class=@ActionMenu> или <footer class=@DialogFooter> |
+| **Группа заголовка и иконки** | <div class="title-box"> <Icon/> <h3>...</h3> </div> | <header> с grid-auto-flow или <hgroup> |
+| **Скроллируемый список** | <div class="scroll-box"> <ul>...</ul> </div> | <ul class="scrollable"> (прямой overflow-y: auto; на <ul>) |
+| **Фон/тень/стекло (Glass/Card)** | <div class="glass-card"> <section>...</section> </div> | <section class=@string.Format(Two, SectionRoot, Glass)> (класс прямо на теге) |
+| **Боковая панель / сайдбар** | <div class="sidebar">...</div> | <aside class=@SidebarLayout>... |
+5. **Виджеты — плоские соседи, а не матрёшки**:
+   - Бизнес-виджеты размещаются в сетке страницы параллельно, как независимые братья, а не вкладываются один в другой. Любая матрёшечная вложенность виджета в виджет запрещена.
 
 ---
 

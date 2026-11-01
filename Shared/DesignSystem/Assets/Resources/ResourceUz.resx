@@ -3542,6 +3542,18 @@
   <data name="Merchant_UzQrFiscalModuleLabel" xml:space="preserve">
     <value>Fiskal modul raqami (agar mavjud bo‘lsa)</value>
   </data>
+  <data name="Merchant_ServiceIdLabel" xml:space="preserve">
+    <value>Service ID</value>
+  </data>
+  <data name="Merchant_MerchantIdLabel" xml:space="preserve">
+    <value>Merchant ID</value>
+  </data>
+  <data name="Merchant_SecretKeyLabel" xml:space="preserve">
+    <value>Secret Key</value>
+  </data>
+  <data name="Merchant_TerminalIdLabel" xml:space="preserve">
+    <value>Terminal ID</value>
+  </data>
   <data name="Merchant_SaveSettings" xml:space="preserve">
     <value>Ekvayring sozlamalarini saqlash</value>
   </data>
@@ -3696,6 +3708,30 @@
   </data>
   <data name="HeroQrDesigner" xml:space="preserve">
     <value>QR fiskallashtirish</value>
+  </data>
+    <data name="PaginationFirstPage" xml:space="preserve">
+    <value>Birinchi sahifaga</value>
+  </data>
+  <data name="PaginationPrevPage" xml:space="preserve">
+    <value>Oldingi sahifaga</value>
+  </data>
+  <data name="PaginationNextPage" xml:space="preserve">
+    <value>Keyingi sahifaga</value>
+  </data>
+  <data name="PaginationLastPage" xml:space="preserve">
+    <value>Oxirgi sahifaga</value>
+  </data>
+  <data name="PaginationItems" xml:space="preserve">
+    <value>ta element</value>
+  </data>
+  <data name="PaginationPage" xml:space="preserve">
+    <value>Sahifa</value>
+  </data>
+  <data name="PaginationOf" xml:space="preserve">
+    <value>dan</value>
+  </data>
+  <data name="HeroStageTabsLabel" xml:space="preserve">
+    <value>Interfeys bosqichlari</value>
   </data>
   <data name="TabPos" xml:space="preserve">
     <value>POS Kassa</value>

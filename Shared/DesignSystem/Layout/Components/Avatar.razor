@@ -9,7 +9,7 @@
 @using static Material.Web.Components.ButtonVariant
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<div class=@Container>
+<section class=@Container>
 	<Button Variant=@Outlined OnClick=@OpenProfile class=@AvatarButton AriaLabel=@l[Profile]>
 		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
@@ -30,9 +30,9 @@
 		</span>
 		@if (FormModel is null)
 		{
-			<div slot="content" class=@Content>
+			<figure slot="content" class=@Content>
 				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
-			</div>
+			</figure>
 		}
 		else
 		{
@@ -48,7 +48,7 @@
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class=@Content>
+						<fieldset class=@Content>
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
 							<TextField TValue="Guid?"
 									   Variant=@(TextField<Guid?>.TextFieldVariant.Outlined)
@@ -73,7 +73,7 @@
 							{
 								<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
 							}
-						</div>
+						</fieldset>
 						<Divider />
 					</details>
 
@@ -83,20 +83,20 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[Phone]</div>
+								<span slot="headline">@l[Phone]</span>
 								<Icon Name=@Phone slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class=@Content>
+						<fieldset class=@Content>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[Phone]
 									   Value=@FormModel.Phone
 									   ValueExpression="() => FormModel.Phone"
 									   Disabled="true" />
-						</div>
+						</fieldset>
 						<Divider />
 					</details>
 
@@ -104,13 +104,13 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[PhotoLabel]</div>
+								<span slot="headline">@l[PhotoLabel]</span>
 								<Icon Name=@AddPhotoAlternate slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class=@ProfileDialogContent>
+						<section class=@ProfileDialogContent>
 							<Material.Web.Components.FilePicker 
 								Attachments=@_imageAttachments
 								Label=@l[PhotoLabel]
@@ -120,7 +120,7 @@
 								Accept="image/*"
 								MaxAllowedFiles="1"
 								OnChanged=@HandleImageChanged />
-						</div>
+						</section>
 						<Divider />
 					</details>
 
@@ -128,13 +128,13 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[NameLabel]</div>
+								<span slot="headline">@l[NameLabel]</span>
 								<Icon Name=@IdCard slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class=@Content>
+						<fieldset class=@Content>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[FirstName]
@@ -171,7 +171,7 @@
 									   Required="true"
 									   SupportingText="*required"
 									   ErrorText="Please fill out this field" />
-						</div>
+						</fieldset>
 						<Divider />
 					</details>
 
@@ -179,12 +179,12 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[AddressLabel]</div>
+								<span slot="headline">@l[AddressLabel]</span>
 								<Icon Name=@LocationOn slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class=@ProfileDialogContent>
+						<section class=@ProfileDialogContent>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[City]
@@ -197,7 +197,7 @@
 									   Value=@(GetOrCreateAddress().Street)
 									   ValueChanged=@(s => GetOrCreateAddress().Street = s)
 									   ValueExpression="() => GetOrCreateAddress().Street" />
-						</div>
+						</section>
 						<Divider />
 					</details>
 
@@ -205,13 +205,13 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[LanguageLabel]</div>
+								<span slot="headline">@l[LanguageLabel]</span>
 								<Icon Name=@Translate slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class=@Content>
+						<fieldset class=@Content>
 							@foreach (var language in languages)
 							{
 								<label>
@@ -222,7 +222,7 @@
 									<span aria-hidden="true">@l[language.ToString()]</span>
 								</label>
 							}
-						</div>
+						</fieldset>
 						<Divider />
 					</details>
 
@@ -230,25 +230,25 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[AccentLabel]</div>
+								<span slot="headline">@l[AccentLabel]</span>
 								<Icon Name=@Palette slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
 
-						<div class=@ProfileDialogContent>
-							<div class=@ProfileThemeGrid>
+						<section class=@ProfileDialogContent>
+							<fieldset class=@ProfileThemeGrid>
 								<Select Label=@l[ThemeLabel]
 										Value=@ThemeString
 										ValueChanged=@OnThemeChanged
 										ValueExpression="() => ThemeString"
 										Options=@ThemeOptions />
-								<div class=@ProfileColorPickerBox>
+								<span class=@ProfileColorPickerBox>
 									<span class=@ProfileColorPickerLabel>@l[PaletteColor]</span>
 									<ColorPicker Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
-								</div>
-							</div>
-						</div>
+								</span>
+							</fieldset>
+						</section>
 						<Divider />
 					</details>
 
@@ -256,28 +256,28 @@
 					<details>
 						<summary>
 							<ListItem type="button">
-								<div>@l[ProfileSecurityAndLogin]</div>
+								<span slot="headline">@l[ProfileSecurityAndLogin]</span>
 								<Icon Name=@Security slot="start" />
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<div class=@ProfileDialogContent>
-							<p class=@Classes.ProfileDialog.ProfileSecuritySubtext>
+						<section class=@ProfileDialogContent>
+							<p class=@ProfileSecuritySubtext>
 								@l[Profile_SecuritySubtext]
 							</p>
 
 							<!-- Face ID -->
-							<div class=@ProfileAuthCard>
-								<div class=@ProfileAuthInfo>
+							<article class=@ProfileAuthCard>
+								<section class=@ProfileAuthInfo>
 									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
-									<div class=@ProfileAuthText>
+									<span class=@ProfileAuthText>
 										<span class=@ProfileAuthTitle>@l[ProfileFaceIdTitle]</span>
 										<span class=@ProfileAuthDesc>
 											@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
 										</span>
-									</div>
-								</div>
-								<div class=@ProfileAuthActions>
+									</span>
+								</section>
+								<menu class=@ProfileAuthActions>
 									<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
 										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
 									</Button>
@@ -287,43 +287,43 @@
 											<Icon Name=@DeleteOutline class=@ProfileDeleteIcon />
 										</IconButton>
 									}
-								</div>
-							</div>
+								</menu>
+							</article>
 
 							<!-- Google SSO -->
-							<div class=@ProfileAuthCard>
-								<div class=@ProfileAuthInfo>
+							<article class=@ProfileAuthCard>
+								<section class=@ProfileAuthInfo>
 									<Icon Name=@AccountCircle />
-									<div class=@ProfileAuthText>
+									<span class=@ProfileAuthText>
 										<span class=@ProfileAuthTitle>Google SSO</span>
 										<span class=@ProfileAuthDesc>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</span>
-									</div>
-								</div>
+									</span>
+								</section>
 								<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
 									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
 								</Button>
-							</div>
+							</article>
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
-							<div class=@ProfileAuthCard>
-								<div class=@ProfileAuthInfo>
+							<article class=@ProfileAuthCard>
+								<section class=@ProfileAuthInfo>
 									<Icon Name=@Fingerprint class=@ProfilePasskeyIcon />
-									<div class=@ProfileAuthText>
+									<span class=@ProfileAuthText>
 										<span class=@ProfileAuthTitle>Passkeys (WebAuthn)</span>
 										<span class=@ProfileAuthDesc>@l[ProfileDeviceBiometricsSubtext]</span>
-									</div>
-								</div>
+									</span>
+								</section>
 								<Button Variant=@Outlined OnClick=@RegisterPasskey>
 									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
 								</Button>
-							</div>
-						</div>
+							</article>
+						</section>
 						<Divider />
 					</details>
 
 					<!--Support-->
 					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link">
-						<div>@l[Support]</div>
+						<span slot="headline">@l[Support]</span>
 						<Icon Name=@SupportAgent slot="start" />
 						<Icon Name=@Link slot="end" />
 					</ListItem>
@@ -332,7 +332,7 @@
 					{
 						<!--Roles-->
 						<ListItem Href="roles" type="button">
-							<div>@l[RolesLabel]</div>
+							<span slot="headline">@l[RolesLabel]</span>
 							<Icon Name=@Group slot="start" />
 							<Icon Name=@ChevronRight slot="end" />
 						</ListItem>
@@ -340,17 +340,17 @@
 
 					<!--Log out-->
 					<ListItem type="button" OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); })>
-						<div>@l[LogOut]</div>
+						<span slot="headline">@l[LogOut]</span>
 						<Icon Name=@Logout slot="start" />
 					</ListItem>
 				</List>
 			</EditForm>
 		}
-		<div slot="actions">
+		<footer slot="actions">
 			<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
 			<Button Variant=@Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
 			<Button Variant=@Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
-		</div>
+		</footer>
 	</MaterialDialog>
 	}
 
@@ -361,15 +361,15 @@
 			<span class=@Headline>@l[ProfileFaceIdTitle]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
 		</span>
-		<div slot="content" class=@FaceidModalContent>
+		<section slot="content" class=@FaceidModalContent>
 			<!-- 3-Step Calibration Progress Bar -->
-			<div class=@FaceidProgressBar>
-				<div class=@(currentEnrollmentStage >= 1 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></div>
-				<div class=@(currentEnrollmentStage >= 2 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></div>
-				<div class=@(currentEnrollmentStage >= 3 ? string.Format(Two, FaceidStageStep, StepTertiary) : FaceidStageStep)></div>
-			</div>
+			<ol class=@FaceidProgressBar>
+				<li class=@(currentEnrollmentStage >= 1 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></li>
+				<li class=@(currentEnrollmentStage >= 2 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></li>
+				<li class=@(currentEnrollmentStage >= 3 ? string.Format(Two, FaceidStageStep, StepTertiary) : FaceidStageStep)></li>
+			</ol>
 
-			<div class=@FaceidCameraViewport>
+			<figure class=@FaceidCameraViewport>
 				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
 				{
 					<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
@@ -377,13 +377,13 @@
 				}
 				else if (isFaceIdModalOpen)
 				{
-					<div class=@FaceidCameraFallback>
+					<figure class=@FaceidCameraFallback>
 						<Icon Name=@VideocamOff class=@FaceidCameraFallbackIcon />
 						<span>@l[ProfileCameraUnavailable]</span>
-					</div>
+					</figure>
 				}
 				<!-- Dynamic Pose Direction Badge -->
-				<div class=@FaceidDirectionBadge>
+				<span class=@FaceidDirectionBadge>
 					@if (currentEnrollmentStage == 1)
 					{
 						<span>@l[ProfileLookStraight]</span>
@@ -396,18 +396,18 @@
 					{
 						<span>@l[ProfileTurnRight]</span>
 					}
-				</div>
-			</div>
-			<div class=@FaceidStatusMessage>
+				</span>
+			</figure>
+			<p class=@FaceidStatusMessage>
 				@faceIdStatusMessage
-			</div>
+			</p>
 			<p class=@FaceidInstructionText>
 				@l[ProfileCenterFaceInstruction]
 			</p>
-		</div>
-		<div slot="actions">
+		</section>
+		<footer slot="actions">
 			<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
-		</div>
+		</footer>
 	</MaterialDialog>
 	}
-</div>
+</section>

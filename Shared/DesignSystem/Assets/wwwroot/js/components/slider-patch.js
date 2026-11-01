@@ -1,27 +1,13 @@
-export function beforeStart(options, extensions) {
-    loadAssets();
-}
+/* ==========================================================================
+   Material Web Components - Slider Blazor Interop Patch
+   Normalizes md-slider value property to string for Blazor two-way binding.
+   ========================================================================== */
 
-export function beforeWebAssemblyStart(options, extensions) {
-    loadAssets();
-}
-
-function loadAssets() {
-    if (!document.querySelector('script[src*="material-web.bundle.js"]') && !document.querySelector('script[src*="scripts.js"]')) {
-        const script = document.createElement('script');
-        script.src = '_content/Assets/js/components/material-web.bundle.js';
-        document.body.appendChild(script);
+export function patchSlider() {
+    if (typeof window === 'undefined' || typeof customElements === 'undefined') {
+        return;
     }
-    if (!document.querySelector('script[src*="material-color-utilities.bundle.js"]') && !document.querySelector('script[src*="scripts.js"]')) {
-        const colorScript = document.createElement('script');
-        colorScript.src = '_content/Assets/js/components/material-color-utilities.bundle.js';
-        colorScript.type = 'module';
-        document.body.appendChild(colorScript);
-    }
-    patchSlider();
-}
 
-function patchSlider() {
     customElements.whenDefined('md-slider').then(() => {
         const sliderClass = customElements.get('md-slider');
         if (sliderClass) {
@@ -57,3 +43,6 @@ function getPropertyDescriptor(obj, prop) {
     }
     return undefined;
 }
+
+patchSlider();
+

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / markdown.css
+   Rendered Markdown, Syntax Highlighting & Mermaid Diagrams
+   ========================================================================== */
+
+:where(.markdown-body, .docs-article) {
+    color: var(--md-sys-color-on-background);
+    line-height: 1.6;
+}
+
+:where(.markdown-body, .docs-article) :where(h1, h2, h3, h4, h5, h6) {
+    justify-self: initial;
+    color: var(--md-sys-color-on-surface);
+    background-image: none;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+}
+
+:where(.markdown-body, .docs-article) :where(table) {
+    grid-column: 1 / -1;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+:where(.markdown-body, .docs-article) :where(tr):hover {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+:where(.markdown-body, .docs-article) :where(.table-container, th, td) {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    vertical-align: middle;
+}
+
+:where(.markdown-body, .docs-article) :where(th) {
+    padding: var(--md-sys-spacing-4, 1rem);
+    align-content: start;
+    white-space: nowrap;
+}
+
+:where(.markdown-body, .docs-article) :where(td) {
+    padding: 0 var(--md-sys-spacing-4, 1rem);
+    white-space: nowrap;
+}
+
+:where(.markdown-body, .docs-article) :where(thead > :first-child > *) {
+    border-top: none;
+}
+
+:where(.markdown-body, .docs-article) :where(tbody > :last-child > *) {
+    border-bottom: none;
+}
+
+:where(.markdown-body, .docs-article) :where(thead > * > :first-child, tbody > * > :first-child) {
+    border-left: none;
+}
+
+:where(.markdown-body, .docs-article) :where(thead > * > :last-child, tbody > * > :last-child) {
+    border-right: none;
+}
+
+:where(.markdown-body, .docs-article) :where(.snippet) {
+    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background-color: var(--md-sys-color-surface-container);
+    overflow-y: auto;
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs) {
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-mono, monospace);
+    tab-size: 2em;
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper) {
+    position: relative;
+    overflow: hidden;
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy-button) {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    min-width: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+    touch-action: manipulation;
+    transition: transform var(--md-sys-motion-duration-short3, 200ms) var(--md-sys-motion-easing-spring),
+        background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy-button):hover {
+    border-color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy-button):active {
+    border-color: var(--md-sys-color-primary);
+    transform: scale(0.96);
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy) {
+    position: absolute;
+    top: 0.4rem;
+    right: 1em;
+    min-width: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-primary);
+    transform: translateX(calc(100% + 1.125em));
+    transition: background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
+        transform var(--md-sys-motion-duration-short3, 200ms) var(--md-sys-motion-easing-spring);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper):hover :where(.hljs-copy),
+:where(.markdown-body, .docs-article) :where(.hljs-copy):focus {
+    transform: translateX(0);
+}
+
+/* Mermaid Diagrams */
+:where(.markdown-body, .docs-article) :where(.edgePaths path) {
+    stroke: var(--md-sys-color-primary) !important;
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 10 20 !important;
+    fill: none;
+    filter: drop-shadow(0 0 2px var(--md-sys-color-primary));
+    animation: dashmove 0.5s linear infinite;
+    paint-order: stroke;
+}
+
+:where(.markdown-body, .docs-article) :where(.clusters rect) {
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+    fill: var(--md-sys-color-surface-variant) !important;
+    stroke: var(--md-sys-color-outline) !important;
+    rx: 24px;
+    ry: 24px;
+}
+
+:where(.markdown-body, .docs-article) :where(.nodes rect) {
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+    fill: var(--md-sys-color-tertiary-container) !important;
+    stroke: var(--md-sys-color-outline) !important;
+    rx: 24px;
+    ry: 24px;
+}
+
+:where(.markdown-body, .docs-article) :where(rect.actor) {
+    border-radius: var(--md-sys-shape-corner-large, 24px);
+    fill: var(--md-sys-color-secondary-container) !important;
+    stroke: var(--md-sys-color-outline) !important;
+    rx: 24px;
+    ry: 24px;
+}
+
+@keyframes dashmove {
+    to {
+        stroke-dashoffset: -90;
+    }
+}

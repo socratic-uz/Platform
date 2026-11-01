@@ -244,7 +244,7 @@
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-.table-container {
+:where(.table-container, .schedule-table-container) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     box-sizing: border-box;
@@ -261,11 +261,11 @@
                      var(--md-sys-scrollbar-color-track, transparent);
 }
 
-.table-container *:not(a) {
+:where(.table-container, .schedule-table-container) *:not(a) {
     border-collapse: collapse;
 }
 
-.table-container > .paginator {
+:where(.table-container, .schedule-table-container) > .paginator {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -282,7 +282,7 @@
     background: var(--md-sys-color-surface-container);
 }
 
-.table-container > table {
+:where(.table-container, .schedule-table-container) > table {
     grid-column: 1 / -1;
     width: 100%;
     border-collapse: collapse;
@@ -517,12 +517,6 @@ td.col-justify-start {
     }
 }
 
-
-
-
-
-
-
 .amount-cell {
     display: grid;
     grid-auto-flow: column;
@@ -533,12 +527,6 @@ td.col-justify-start {
     font-weight: 700;
 }
 
-
-
-
-
-
-
 .date-cell {
     display: grid;
     grid-auto-flow: column;
@@ -547,22 +535,10 @@ td.col-justify-start {
     align-items: center;
 }
 
-
-
-
-
-
-
 .m3-amount-cell {
     color: var(--md-sys-color-primary);
     font-weight: 700;
 }
-
-
-
-
-
-
 
 .pagination-text {
     margin: 0 0.5rem;

@@ -3,7 +3,7 @@
 @using static Loc.Common
 @using static Icons
 
-<div class=@Container>
+<search class=@Container role="search">
     <TextField TValue="string" 
                Variant=@(TextField<string>.TextFieldVariant.Outlined) 
                Placeholder=@L[SearchPlaceholder] 
@@ -18,4 +18,4 @@
             <IconButton Icon=@Clear Slot="trailing-icon" OnClick=@ClearSearch />
         }
     </TextField>
-</div>
+</search>

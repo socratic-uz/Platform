@@ -6,6 +6,7 @@
 // 1. Components (Material Web Components & Dynamic Color Utilities)
 import './components/material-web.bundle.js';
 import * as MaterialColorUtilities from './components/material-color-utilities.bundle.js';
+import * as SliderPatch from './components/slider-patch.js';
 
 // 2. Layouts (Color Theme & Reconnect Modal)
 import * as ColorTheme from './layouts/color-theme.js';
@@ -39,6 +40,7 @@ window.Socratic = window.Socratic || {};
 window.Socratic.ColorTheme = ColorTheme;
 window.Socratic.ReconnectModal = ReconnectModal;
 window.Socratic.MaterialColorUtilities = MaterialColorUtilities;
+window.Socratic.SliderPatch = SliderPatch;
 window.Socratic.ReceiptPrinter = ReceiptPrinterHelper;
 window.Socratic.CameraStreamer = CameraStreamerLoader;
 window.Socratic.Map = SocraticMap;
@@ -63,6 +65,7 @@ export {
     ColorTheme,
     ReconnectModal,
     MaterialColorUtilities,
+    SliderPatch,
     ReceiptPrinterHelper,
     CameraStreamerLoader,
     SocraticMap,

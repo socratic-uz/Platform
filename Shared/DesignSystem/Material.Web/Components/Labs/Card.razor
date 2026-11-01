@@ -2,19 +2,19 @@
 
 @if (Type == "filled")
 {
-    <md-filled-card class="@ComputedCssClass" disabled="@Disabled" @attributes="FilteredAttributes">
+    <md-filled-card class=@ComputedCssClass disabled=@Disabled @attributes="FilteredAttributes">
         @ChildContent
     </md-filled-card>
 }
 else if (Type == "outlined")
 {
-    <md-outlined-card class="@ComputedCssClass" disabled="@Disabled" @attributes="FilteredAttributes">
+    <md-outlined-card class=@ComputedCssClass disabled=@Disabled @attributes="FilteredAttributes">
         @ChildContent
     </md-outlined-card>
 }
 else
 {
-    <md-elevated-card class="@ComputedCssClass" disabled="@Disabled" @attributes="FilteredAttributes">
+    <md-elevated-card class=@ComputedCssClass disabled=@Disabled @attributes="FilteredAttributes">
         @ChildContent
     </md-elevated-card>
 }

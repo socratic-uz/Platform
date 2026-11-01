@@ -14,32 +14,32 @@
 
 <article class=@CardOutlined>
     <header class=@HeaderBar>
-        <div class=@string.Format(Two, Root, GetTierBadgeClass())>
+        <span class=@string.Format(Two, Root, GetTierBadgeClass())>
             <Icon Name=@GetTierIcon() class=@BadgeIcon />
             <span>@GetTierBadgeTitle()</span>
-        </div>
+        </span>
         @if (Subscription.IsTrialActive)
         {
-            <div class=@TrialCounter>
+            <p class=@TrialCounter>
                 <span class=@TrialDaysHighlight>@Subscription.RemainingTrialDays</span>
                 <span class=@TrialDaysLabel>@L[Org_TrialDaysRemaining]</span>
-            </div>
+            </p>
         }
     </header>
 
-    <div class=@SubscriptionContent>
+    <section class=@SubscriptionContent>
         <h2 class=@SubscriptionTitle>@GetTierHeadline()</h2>
         <p class=@SubscriptionDescription>@GetTierDescription()</p>
-    </div>
+    </section>
 
     <!-- Сетка сравнения 3-х тарифов -->
-    <div class=@TiersGrid>
+    <section class=@TiersGrid>
         <!-- 1. Пробный период -->
-        <div class=@(Subscription.Tier == SubscriptionTier.Trial ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
-            <div class=@TierHeader>
+        <article class=@(Subscription.Tier == SubscriptionTier.Trial ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
+            <header class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierTrialName]</h3>
                 <span class=@TierPrice>@L[Org_TierTrialPrice]</span>
-            </div>
+            </header>
             <ul class=@TierFeatures>
                 <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
                 <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureAllModes]</li>
@@ -49,14 +49,14 @@
             {
                 <span class=@CurrentPlanIndicator>@L[Org_CurrentPlan]</span>
             }
-        </div>
+        </article>
 
         <!-- 2. С рекламой -->
-        <div class=@(Subscription.Tier == SubscriptionTier.WithAds ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
-            <div class=@TierHeader>
+        <article class=@(Subscription.Tier == SubscriptionTier.WithAds ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
+            <header class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierWithAdsName]</h3>
                 <span class=@TierPrice>@L[Org_TierWithAdsPrice]</span>
-            </div>
+            </header>
             <ul class=@TierFeatures>
                 <li><Icon Name=@Info class=@string.Format(Two, FeatureIcon, BadgeInfo) /> @L[Org_TierFeaturePartnerAds]</li>
                 <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureCloudPos]</li>
@@ -72,15 +72,15 @@
                     @L[Org_SelectPlanAds]
                 </Button>
             }
-        </div>
+        </article>
 
         <!-- 3. Без рекламы (PRO) -->
-        <div class=@(Subscription.Tier == SubscriptionTier.ProAdFree ? string.Format(Three, TierBox, ProTier, ActiveTier) : string.Format(Two, TierBox, ProTier))>
-            <div class=@ProTag>@L[Org_Recommended]</div>
-            <div class=@TierHeader>
+        <article class=@(Subscription.Tier == SubscriptionTier.ProAdFree ? string.Format(Three, TierBox, ProTier, ActiveTier) : string.Format(Two, TierBox, ProTier))>
+            <span class=@ProTag>@L[Org_Recommended]</span>
+            <header class=@TierHeader>
                 <h3 class=@TierName>@L[Org_TierProName]</h3>
                 <span class=@TierPrice>@L[Org_TierProPrice]</span>
-            </div>
+            </header>
             <ul class=@TierFeatures>
                 <li><Icon Name=@Star class=@string.Format(Two, FeatureIcon, CommonStar) /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
                 <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureBrandScreensaver]</li>
@@ -97,8 +97,8 @@
                     @L[Org_ConnectPro]
                 </Button>
             }
-        </div>
-    </div>
+        </article>
+    </section>
 
     <MaterialDialog Open=@isChangePlanModalOpen OpenChanged=@((bool v) => isChangePlanModalOpen = v)>
         <Headline>
@@ -108,10 +108,10 @@
             <p>
                 @L[Org_YouSelectedPlan] <strong>@(selectedTierForPayment == SubscriptionTier.ProAdFree ? L[Org_PlanProSummary] : L[Org_PlanAdsSummary])</strong>.
             </p>
-            <div>
+            <fieldset>
                 <Radio Name="payment_method" Value="click" OptionValue=@selectedPaymentMethod ValueChanged=@((string v) => selectedPaymentMethod = v) Label=@L[Org_PaymentClickPayme] />
                 <Radio Name="payment_method" Value="invoice" OptionValue=@selectedPaymentMethod ValueChanged=@((string v) => selectedPaymentMethod = v) Label=@L[Org_PaymentInvoice] />
-            </div>
+            </fieldset>
         </Content>
         <Actions>
             <Button Variant=@Text OnClick=@CloseSelectPlanDialog>@L[Cancel]</Button>

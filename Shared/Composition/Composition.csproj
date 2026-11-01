@@ -7,6 +7,7 @@
     <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+		<StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
     <DefaultItemExcludes>$(DefaultItemExcludes);bin/**;obj/**</DefaultItemExcludes>
   </PropertyGroup>

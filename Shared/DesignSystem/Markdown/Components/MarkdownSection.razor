@@ -2,6 +2,6 @@
 @using Markdig
 @inherits ComponentBase
 
-<div id=@Id class=@Class style=@Style @attributes=@AdditionalAttributes>
+<article id=@Id class=@ComputeClass() style=@Style @attributes=@AdditionalAttributes>
     @HtmlContent
-</div>
+</article>

@@ -359,10 +359,6 @@
     width: 100%;
 }
 
-
-
-
-
 .blazor-error-boundary {
     padding: 1rem 1rem 1rem 3.7rem;
     border-radius: var(--md-sys-shape-corner-medium, 16px);
@@ -370,18 +366,9 @@
     color: var(--md-sys-color-on-error);
 }
 
-
-
-
-
 .blazor-error-boundary::after {
     content: "An error has occurred.";
 }
-
-
-
-
-
 
 .empty-mini-icon {
     display: grid;
@@ -390,11 +377,6 @@
     color: var(--md-sys-color-primary);
     font-size: 36px;
 }
-
-
-
-
-
 
 .m3-empty-column {
     display: grid;
@@ -408,21 +390,11 @@
     text-align: center;
 }
 
-
-
-
-
-
 .m3-empty-column p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9375rem;
 }
-
-
-
-
-
 
 .store-not-found {
     display: grid;
@@ -436,21 +408,11 @@
     text-align: center;
 }
 
-
-
-
-
-
 .store-not-found .not-found-icon {
     margin-bottom: 0.5rem;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 4rem;
 }
-
-
-
-
-
 
 .store-not-found h2 {
     margin: 0;
@@ -459,21 +421,11 @@
     font-weight: 700;
 }
 
-
-
-
-
-
 .store-not-found p {
     margin: 0;
     margin-bottom: 1.5rem;
     color: var(--md-sys-color-on-surface-variant);
 }
-
-
-
-
-
 
 .ux-empty-icon-box {
     display: grid;
@@ -486,15 +438,6 @@
     color: var(--md-sys-color-on-surface-variant);
     font-size: 2.2rem;
 }
-
-
-
-
-
-
-
-
-
 
 .error-banner {
     display: grid;
@@ -511,27 +454,9 @@
     font-size: 0.9375rem;
 }
 
-
-
-
-
-
-
-
-
-
 .error-banner .error-icon {
     font-size: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
 
 .m3-banner-error {
     display: grid;
@@ -547,27 +472,9 @@
     font-size: 0.9375rem;
 }
 
-
-
-
-
-
-
-
-
-
 .m3-banner-error .error-icon {
     font-size: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
 
 .orders-error-banner {
     display: grid;
@@ -578,15 +485,6 @@
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     font-size: 0.9rem;
 }
-
-
-
-
-
-
-
-
-
 
 #blazor-error-ui {
     display: none;
@@ -602,15 +500,6 @@
     box-shadow: var(--md-sys-elevation-level3);
 }
 
-
-
-
-
-
-
-
-
-
 #blazor-error-ui .dismiss {
     position: absolute;
     top: 0.5rem;
@@ -618,35 +507,11 @@
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .bar-labels {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     font-size: 0.85rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .bar-track {
     width: 100%;

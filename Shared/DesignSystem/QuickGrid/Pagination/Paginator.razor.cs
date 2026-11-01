@@ -1,7 +1,10 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using QuickGrid.Infrastructure;
 
 namespace QuickGrid;
@@ -9,9 +12,11 @@ namespace QuickGrid;
 /// <summary>
 /// A component that provides a user interface for <see cref="PaginationState"/>.
 /// </summary>
-public partial class Paginator : IDisposable
+public partial class Paginator : ComponentBase, IDisposable
 {
     private readonly EventCallbackSubscriber<PaginationState> _totalItemCountChanged;
+
+    [Inject] public IStringLocalizer L { get; set; } = default!;
 
     /// <summary>
     /// Specifies the associated <see cref="PaginationState"/>. This parameter is required.

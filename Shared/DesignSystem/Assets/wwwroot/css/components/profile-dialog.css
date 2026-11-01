@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     padding: 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -50,7 +50,7 @@
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .profile-auth-text {
@@ -97,7 +97,7 @@
 .faceid-progress-bar {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     justify-items: stretch;
     width: 100%;
     max-width: 240px;
@@ -105,7 +105,7 @@
 
 .faceid-stage-step {
     height: 5px;
-    border-radius: 3px;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
     background: var(--md-sys-color-surface-variant);
     transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
 }
@@ -139,16 +139,16 @@
 }
 
 .faceid-camera-fallback-icon {
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
     font-size: 48px;
 }
 
 .faceid-direction-badge {
     position: absolute;
     bottom: 12px;
-    padding: 4px 12px;
+    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-3, 0.75rem);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 20px;
+    border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
     font-size: 0.75rem;

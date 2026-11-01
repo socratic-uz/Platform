@@ -23,10 +23,10 @@ namespace Shared.Layout
         protected string ComputedHeaderClass =>
             Sticky
                 ? (string.IsNullOrEmpty(Class)
-                    ? string.Format(Two, AppHeader, AppHeaderSticky)
-                    : string.Format(Three, AppHeader, AppHeaderSticky, Class))
+                    ? string.Format(Three, AppHeader, AppHeaderSticky, HeaderGridLayout)
+                    : string.Format(Four, AppHeader, AppHeaderSticky, HeaderGridLayout, Class))
                 : (string.IsNullOrEmpty(Class)
-                    ? AppHeader
-                    : string.Format(Two, AppHeader, Class));
+                    ? string.Format(Two, AppHeader, HeaderGridLayout)
+                    : string.Format(Three, AppHeader, HeaderGridLayout, Class));
     }
 }

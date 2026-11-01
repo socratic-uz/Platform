@@ -3,8 +3,6 @@
    Map Studio Spatial Organisms, Navigator, Waypoints & GIS Controls
    ========================================================================== */
 
-
-
 .click-popup-actions {
     display: grid;
     grid-auto-flow: column;
@@ -13,15 +11,11 @@
     margin-top: 0.15rem;
 }
 
-
-
 .click-popup-address {
     color: var(--map-on-surface-variant);
     font-size: 0.78rem;
     line-height: 1.35;
 }
-
-
 
 .click-popup-coords {
     color: var(--map-on-surface);
@@ -31,17 +25,13 @@
     letter-spacing: -0.02em;
 }
 
-
-
 .hamburger-line {
     display: block;
     width: 12px;
     height: 2px;
-    border-radius: 1px;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
     background-color: var(--map-text);
 }
-
-
 
 .maneuver-icon {
     color: var(--md-sys-color-primary);
@@ -49,13 +39,9 @@
     font-weight: bold;
 }
 
-
-
 .maneuver-icon md-icon:not([slot]) {
     line-height: 1;
 }
-
-
 
 .map-canvas {
     position: absolute;
@@ -65,8 +51,6 @@
     background-color: var(--md-sys-color-surface-dim);
 }
 
-
-
 .map-zoom-stack {
     display: grid;
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -75,13 +59,9 @@
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
 }
 
-
-
 .map-zoom-divider {
     /* margin: 0 4px; */
 }
-
-
 
 .map-ctrl-btn {
     min-width: 44px;
@@ -89,28 +69,20 @@
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
 }
 
-
-
 .map-geo-btn {
     --md-filled-icon-button-container-color: var(--md-sys-color-secondary-container);
     --md-filled-icon-button-icon-color: var(--md-sys-color-on-secondary-container);
 }
-
-
 
 .map-tilt-btn {
     --md-filled-icon-button-container-color: var(--md-sys-color-surface-container-high);
     --md-filled-icon-button-icon-color: var(--md-sys-color-on-surface);
 }
 
-
-
 .map-tilt-btn.active {
     --md-filled-icon-button-container-color: var(--md-sys-color-primary);
     --md-filled-icon-button-icon-color: var(--md-sys-color-on-primary);
 }
-
-
 
 .map-floor-stack {
     display: grid;
@@ -121,8 +93,6 @@
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
 }
 
-
-
 .map-floor-label {
     width: 100%;
     padding-bottom: 2px;
@@ -131,8 +101,6 @@
     text-align: center;
     color: var(--md-sys-color-outline);
 }
-
-
 
 .map-floor-btn {
     --md-filled-icon-button-container-color: transparent;
@@ -143,14 +111,10 @@
     font-weight: 700;
 }
 
-
-
 .map-floor-btn.active {
     --md-filled-icon-button-container-color: var(--md-sys-color-primary);
     --md-filled-icon-button-icon-color: var(--md-sys-color-on-primary);
 }
-
-
 
 .map-categories-scroll {
     display: grid;
@@ -162,8 +126,6 @@
     scrollbar-width: none;
 }
 
-
-
 .map-click-popup {
     display: grid;
     gap: 0.5rem;
@@ -171,41 +133,34 @@
     padding: 0.7rem 0.75rem;
 }
 
-
-
 .map-floating-actions {
     position: absolute;
     inset: 0;
-    z-index: 25;
+    z-index: var(--md-sys-z-appbar, 20);
     pointer-events: none;
 }
-
-
 
 .map-global-suggestion-item {
     margin: 0;
 }
 
-
-
 .map-global-suggestion-title {
     display: block;
+    min-width: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
-
 
 .map-global-suggestions {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
     left: 0;
-    z-index: 100;
+    z-index: var(--md-sys-z-drawer, 200);
     max-height: 250px;
     margin: 0;
-    padding: 4px;
+    padding: var(--md-sys-spacing-1, 0.25rem);
     border: 1px solid var(--map-border);
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     background: var(--md-sys-color-surface);
@@ -214,16 +169,12 @@
     list-style: none;
 }
 
-
-
 .map-route-bottom-actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
     gap: 0.4rem;
     margin-top: 0.6rem;
 }
-
-
 
 .map-route-dot {
     position: relative;
@@ -233,25 +184,17 @@
     box-shadow: 0 0 0 2px var(--md-sys-color-surface), 0 0 0 4px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
 }
 
-
-
 .map-route-dot-from {
     background-color: var(--md-sys-color-primary);
 }
-
-
 
 .map-route-dot-to {
     background-color: var(--md-sys-color-error);
 }
 
-
-
 .map-route-dot-via {
     background-color: var(--md-sys-color-secondary);
 }
-
-
 
 .map-route-dots-line {
     display: block;
@@ -260,8 +203,6 @@
     min-height: 0.8rem;
     background: repeating-linear-gradient(to bottom, var(--md-sys-color-outline-variant) 0, var(--md-sys-color-outline-variant) 3px, transparent 3px, transparent 6px);
 }
-
-
 
 .map-route-profile-row {
     display: grid;
@@ -275,13 +216,9 @@
     background: rgb(from var(--md-sys-color-surface-container-low) r g b / 0.8);
 }
 
-
-
 .map-route-suggestion-item {
     margin: 0;
 }
-
-
 
 .map-route-suggestion-meta {
     color: var(--map-text-muted);
@@ -289,15 +226,11 @@
     line-height: 1.2;
 }
 
-
-
 .map-route-suggestion-title {
     font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.25;
 }
-
-
 
 .map-route-suggestions {
     max-height: 14.5rem;
@@ -310,8 +243,6 @@
     box-shadow: 0 0.35rem 0.9rem rgb(from var(--md-sys-color-shadow) r g b / 0.12);
     list-style: none;
 }
-
-
 
 .nearby-results-panel {
     display: grid;
@@ -326,8 +257,6 @@
     box-shadow: inset 0 2px 4px rgb(from var(--md-sys-color-shadow) r g b / 0.01);
 }
 
-
-
 .organizations-map-controls {
     display: grid;
     grid-template-rows: minmax(0, 1fr);
@@ -336,7 +265,7 @@
     top: 0.75rem;
     bottom: 0.75rem;
     left: 0.75rem;
-    z-index: 30;
+    z-index: var(--md-sys-z-appbar, 20);
     width: min(29rem, 36vw);
     min-height: 0;
     padding: 1rem;
@@ -350,14 +279,10 @@
     transition: transform 0.4s var(--md-sys-motion-easing-spring-soft), box-shadow 0.4s ease;
 }
 
-
-
 .organizations-map-controls.collapsed {
     box-shadow: none;
     transform: translateX(calc(-100% - 0.75rem));
 }
-
-
 
 .organizations-map-page {
     position: relative;
@@ -366,21 +291,15 @@
     color: var(--md-sys-color-on-surface);
 }
 
-
-
 .organizations-map-viewport {
     position: absolute;
     inset: 0;
     min-height: 18rem;
 }
 
-
-
 .organizations-map-viewport > :last-child {
     min-height: 100%;
 }
-
-
 
 .organizations-route-panel {
     display: grid;
@@ -394,14 +313,12 @@
     container-type: inline-size;
 }
 
-
-
 .place-details-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     margin-top: auto;
-    padding: 12px 16px;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
     box-sizing: border-box;
     --md-filled-button-leading-space: 10px;
     --md-filled-button-trailing-space: 10px;
@@ -411,32 +328,22 @@
     --md-outlined-button-label-text-size: 0.82rem;
 }
 
-
-
 .place-details-actions.single-col {
     grid-template-columns: minmax(0, 1fr);
 }
-
-
 
 .place-btn-primary {
     grid-column: 1 / -1;
     --md-filled-button-container-color: var(--md-sys-color-primary);
 }
 
-
-
 .place-btn-tertiary {
     --md-filled-button-container-color: var(--md-sys-color-tertiary);
 }
 
-
-
 .place-btn-full {
     grid-column: 1 / -1;
 }
-
-
 
 .place-details-body {
     display: grid;
@@ -446,22 +353,16 @@
     overflow-y: auto;
 }
 
-
-
 .place-details-content {
     display: grid;
     gap: 0.4rem;
 }
-
-
 
 .place-details-divider {
     width: 100%;
     height: 1px;
     background: rgb(from var(--map-border) r g b / 0.45);
 }
-
-
 
 .place-details-header {
     display: grid;
@@ -474,8 +375,6 @@
     border-bottom: 1px solid var(--map-border);
 }
 
-
-
 .place-details-hero {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -485,8 +384,6 @@
     padding: 0.5rem 0;
 }
 
-
-
 .place-details-name {
     margin: 0;
     color: var(--map-text);
@@ -494,8 +391,6 @@
     font-weight: 700;
     line-height: 1.25;
 }
-
-
 
 .place-details-panel {
     display: grid;
@@ -505,8 +400,6 @@
     animation: slideUp 0.3s var(--md-sys-motion-easing-spring-soft);
 }
 
-
-
 .place-info-row {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -515,23 +408,17 @@
     min-width: 0;
 }
 
-
-
 .place-info-row .info-content {
     display: grid;
     gap: 0.15rem;
     min-width: 0;
 }
 
-
-
 .place-info-row .info-icon {
     opacity: 0.85;
     margin-top: 0.1rem;
     font-size: 1.1rem;
 }
-
-
 
 .place-info-row .info-label {
     color: var(--map-text-muted);
@@ -540,8 +427,6 @@
     text-transform: uppercase;
 }
 
-
-
 .place-info-row .info-value {
     color: var(--map-text);
     font-size: 0.82rem;
@@ -549,15 +434,11 @@
     word-break: break-word;
 }
 
-
-
 .route-alternatives-list {
     display: grid;
     gap: 0.34rem;
     margin-bottom: 0.1rem;
 }
-
-
 
 .route-error {
     padding: 0.5rem 0.65rem;
@@ -568,8 +449,6 @@
     font-weight: 500;
 }
 
-
-
 .route-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -577,14 +456,10 @@
     min-width: 0;
 }
 
-
-
 .route-header h5 {
     margin: 0;
     font-size: 0.88rem;
 }
-
-
 
 .maneuver-icon-container {
     display: grid;
@@ -596,21 +471,15 @@
     background: rgb(from var(--md-sys-color-primary) r g b / 0.2);
 }
 
-
-
 .place-details-info-section {
     display: grid;
     gap: 0.85rem;
 }
 
-
-
 .route-start-container {
     display: grid;
     margin-top: 0.5rem;
 }
-
-
 
 .navigator-maneuver-bar {
     display: grid;
@@ -627,22 +496,18 @@
     backdrop-filter: blur(12px);
 }
 
-
-
 .navigator-panel {
     display: grid;
     gap: 0.5rem;
     position: absolute;
     top: calc(1rem + env(safe-area-inset-top, 0px));
     left: 50%;
-    z-index: 40;
+    z-index: var(--md-sys-z-bottom-nav, 40);
     width: min(32rem, 90vw);
     font-family: inherit;
     transform: translateX(-50%);
     pointer-events: auto;
 }
-
-
 
 .navigator-stats-bar {
     display: grid;
@@ -656,8 +521,6 @@
     box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
-
-
 .tab-hamburger {
     display: grid;
     gap: 3px;
@@ -667,14 +530,24 @@
     height: 14px;
 }
 
-
-
 @media (max-width: 599.98px) {
     .organizations-map-controls {
-        right: 0.75rem;
-        left: 0.75rem;
+        opacity: 1;
+        top: auto;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
         width: auto;
-        max-width: calc(100vw - 1.5rem);
+        max-width: calc(100vw - 1rem);
+        max-height: 90dvh;
+        padding: 0.45rem;
+        padding-top: 1.5rem;
+        border-radius: 1.25rem;
+        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        overflow-y: auto;
+        box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+        transform: translateY(0);
+        transition: max-height 0.3s var(--md-sys-motion-easing-spring), transform 0.3s var(--md-sys-motion-easing-spring), opacity 0.3s ease;
     }
 
     .navigator-maneuver-bar {
@@ -697,7 +570,7 @@
         top: 0;
         right: auto;
         left: 50%;
-        z-index: 40;
+        z-index: var(--md-sys-z-bottom-nav, 40);
         width: 100%;
         height: 48px;
         min-height: 48px;
@@ -715,7 +588,7 @@
         display: block;
         width: 48px;
         height: 5px;
-        border-radius: 3px;
+        border-radius: var(--md-sys-shape-corner-extra-small, 4px);
         background: var(--map-border-strong, var(--md-sys-color-outline-variant));
         content: '';
     }
@@ -735,7 +608,7 @@
         top: 0;
         right: auto;
         left: 50%;
-        z-index: 40;
+        z-index: var(--md-sys-z-bottom-nav, 40);
         width: 100%;
         height: 48px;
         min-height: 48px;
@@ -753,7 +626,7 @@
         display: block;
         width: 48px;
         height: 5px;
-        border-radius: 3px;
+        border-radius: var(--md-sys-shape-corner-extra-small, 4px);
         background: var(--map-border-strong, var(--md-sys-color-outline-variant));
         content: '';
     }
@@ -766,17 +639,63 @@
         display: none;
     }
 
+    .organizations-map-controls.collapsed {
+        opacity: 1;
+        padding: 0.45rem;
+        padding-top: 1.5rem;
+        border: 1px solid var(--map-border);
+        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        overflow: hidden;
+        box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .organizations-map-controls.collapsed .map-global-suggestions,
+    .organizations-map-controls.collapsed .map-route-profile-row,
+    .organizations-map-controls.collapsed .map-route-suggestions,
+    .organizations-map-controls.collapsed .nearby-results-panel,
+    .organizations-map-controls.collapsed .place-details-divider,
+    .organizations-map-controls.collapsed .place-info-row:not(:first-child),
+    .organizations-map-controls.collapsed .route-alternative-card:not(.active) {
+        display: none;
+    }
+
+    .organizations-map-controls.collapsed.details-mode {
+        max-height: 205px;
+    }
+
+    .organizations-map-controls.collapsed.search-mode {
+        max-height: 130px;
+    }
+
+    .organizations-map-controls.collapsed.yandex-route-mode {
+        max-height: 185px;
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.details-mode .yandex-right-controls-container {
+        bottom: 229px;
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.search-mode .yandex-right-controls-container {
+        bottom: 154px;
+    }
+
+    .organizations-map-viewport.controls-panel-collapsed.yandex-route-mode .yandex-right-controls-container {
+        bottom: 209px;
+    }
+
+    .organizations-map-viewport.controls-panel-expanded .yandex-right-controls-container {
+        bottom: 24px;
+    }
+
+    .yandex-right-controls-container {
+        top: 12px;
+        right: 12px;
+        transition: bottom 0.3s var(--md-sys-motion-easing-spring);
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
 
 .venue-icon {
     display: inline-grid;
@@ -788,60 +707,20 @@
     color: var(--md-sys-color-secondary);
 }
 
-
-
-
-
-
-
-
-
-
-
 .wing-geomap {
     border-color: color-mix(in srgb, var(--md-sys-color-primary) 25%, transparent);
     box-shadow: 0 16px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.4), 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
 }
-
-
-
-
-
-
-
-
-
-
 
 .wing-geomap .venue-icon {
     background: color-mix(in srgb, var(--md-sys-color-primary) 18%, transparent);
     color: var(--md-sys-color-primary);
 }
 
-
-
-
-
-
-
-
-
-
-
 .wing-geomap:hover {
     border-color: var(--md-sys-color-primary);
     box-shadow: 0 20px 48px rgb(from var(--md-sys-color-shadow) r g b / 0.5), 0 0 32px color-mix(in srgb, var(--md-sys-color-primary) 18%, transparent);
 }
-
-
-
-
-
-
-
-
-
-
 
 .yandex-ctrl-icon {
     width: 20px;
@@ -862,6 +741,7 @@
 }
 
 .maneuver-text {
+    min-width: 0;
     color: rgb(from var(--md-sys-color-inverse-on-surface) r g b / 0.8);
     font-size: 0.85rem;
     white-space: nowrap;
@@ -1034,7 +914,7 @@
 }
 
 .waypoint-marker:active {
-    z-index: 1000;
+    z-index: var(--md-sys-z-dialog-backdrop, 1000);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.4);
     transform: scale(1.15);
     cursor: grabbing;
@@ -1042,7 +922,7 @@
 
 .yandex-ctrl-stack-bottom {
     display: grid;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     justify-items: center;
     margin-top: auto;
     pointer-events: auto;
@@ -1055,6 +935,6 @@
     top: 16px;
     right: 16px;
     bottom: 24px;
-    z-index: 25;
+    z-index: var(--md-sys-z-appbar, 20);
     pointer-events: none;
 }

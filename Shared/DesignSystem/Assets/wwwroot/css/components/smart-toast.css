@@ -10,7 +10,7 @@
     z-index: var(--m3-z-toast, 9999);
     display: grid;
     align-content: end;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     max-width: 400px;
     pointer-events: none;
 }

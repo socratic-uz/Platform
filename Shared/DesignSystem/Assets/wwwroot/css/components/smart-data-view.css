@@ -5,7 +5,7 @@
 
 .smart-data-view {
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
 }
 
 .smart-data-view-content {
@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .smart-view-mode-toggle {
@@ -24,7 +24,7 @@
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     background: var(--md-sys-color-surface-container-low);
-    padding: 4px;
+    padding: var(--md-sys-spacing-1, 0.25rem);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
 }

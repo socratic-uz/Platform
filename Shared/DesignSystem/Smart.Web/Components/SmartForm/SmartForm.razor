@@ -1,3 +1,4 @@
+@using static Material.Web.Components.ChipType
 @using static Material.Web.Components.ButtonVariant
 @namespace Smart.Web.Components
 @using static Assets.Constants.Classes.Form
@@ -397,11 +398,11 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
                             var currentInt = Convert.ToInt32(currentValue ?? 0);
                             isSelected = (currentInt & enumInt) == enumInt && enumInt != 0;
                         }
-                        <Chip ChipType="ChipType.Filter"
-                              Label="@GetEnumDisplayText(enumValue, enumType)"
-                              Selected="@isSelected"
-                              Removable="@isSelected"
-                              OnClick="@(async (e) =>
+                        <Chip ChipType=@Filter
+                              Label=@GetEnumDisplayText(enumValue, enumType)
+                              Selected=@isSelected
+                              Removable=@isSelected
+                              OnClick=@(async (e) =>
                                                                                                                                                                                                                                                                                                                                                                                                                                         {
                                                                                                                                                                                                                                                                                                                                                                                                                                             if (isLongEnum)
                                                                                                                                                                                                                                                                                                                                                                                                                                             {
@@ -416,7 +417,7 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
                                                                                                                                                                                                                                                                                                                                                                                                                                                 property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentInt ^ enumInt));
                                                                                                                                                                                                                                                                                                                                                                                                                                             }
                                                                                                                                                                                                                                                                                                                                                                                                                                             StateHasChanged();
-                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                        }) />
                     }
                 }
                 else
@@ -424,14 +425,14 @@ private RenderFragment CreateEnumChip(PropertyInfo property, object parentObj, s
                     @foreach (var enumValue in enumValues)
                     {
                         var isSelected = currentValue?.Equals(enumValue) == true;
-                        <Chip ChipType="ChipType.Filter"
-                              Label="@GetEnumDisplayText(enumValue, enumType)"
-                              Selected="@isSelected"
-                              OnClick="@(async (e) =>
+                        <Chip ChipType=@Filter
+                              Label=@GetEnumDisplayText(enumValue, enumType)
+                              Selected=@isSelected
+                              OnClick=@(async (e) =>
                                                                                                                                                                                                                                                                                                                                                                                                                                         {
                                                                                                                                                                                                                                                                                                                                                                                                                                             property.SetValue(parentObj, enumValue);
                                                                                                                                                                                                                                                                                                                                                                                                                                             StateHasChanged();
-                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                        }) />
                     }
                 }
             </div>
@@ -566,11 +567,11 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
                             var currentInt = Convert.ToInt32(currentValue ?? 0);
                             isSelected = (currentInt & enumInt) == enumInt && enumInt != 0;
                         }
-                        <Chip ChipType="ChipType.Filter"
-                              Label="@GetEnumDisplayText(enumValue, enumType)"
-                              Selected="@isSelected"
-                              Removable="@isSelected"
-                              OnClick="@(async (e) =>
+                        <Chip ChipType=@Filter
+                              Label=@GetEnumDisplayText(enumValue, enumType)
+                              Selected=@isSelected
+                              Removable=@isSelected
+                              OnClick=@(async (e) =>
                                                                                                                         {
                                                                                                                             if (isLongEnum)
                                                                                                                             {
@@ -585,7 +586,7 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
                                                                                                                                 property.SetValue(parentObj, SystemEnum.ToObject(enumType, currentInt ^ enumInt));
                                                                                                                             }
                                                                                                                             StateHasChanged();
-                                                                                                                        })" />
+                                                                                                                        }) />
                     }
                 }
                 else
@@ -593,14 +594,14 @@ private RenderFragment CreateEnumChipSet(PropertyInfo property, object parentObj
                     @foreach (var enumValue in enumValues)
                     {
                         var isSelected = currentValue?.Equals(enumValue) == true;
-                        <Chip ChipType="ChipType.Filter"
-                              Label="@GetEnumDisplayText(enumValue, enumType)"
-                              Selected="@isSelected"
-                              OnClick="@(async (e) =>
+                        <Chip ChipType=@Filter
+                              Label=@GetEnumDisplayText(enumValue, enumType)
+                              Selected=@isSelected
+                              OnClick=@(async (e) =>
                                                                                                                                                                                                                                                                                                                                                                                                                                         {
                                                                                                                                                                                                                                                                                                                                                                                                                                             property.SetValue(parentObj, enumValue);
                                                                                                                                                                                                                                                                                                                                                                                                                                             StateHasChanged();
-                                                                                                                                                                                                                                                                                                                                                                                                                                        })" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                        }) />
                     }
                 }
             </ChipSet>

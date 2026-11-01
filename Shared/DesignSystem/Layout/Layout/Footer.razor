@@ -1,24 +1,25 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
+@using static Classes.Common
 @using static Classes.Footer
 @using static Icons
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Landing
 @using static Assets.Constants.Formats
 
-<footer class=@string.Format(Two, Classes.Common.AppFooter, Class)>
-	<div class=@FooterContainer>
+<footer class=@string.Format(Two, AppFooter, Class)>
+	<section class=@FooterContainer>
 		@if (ChildContent != null)
 		{
-			<div class=@CustomSlot>
+			<aside class=@CustomSlot>
 				@ChildContent
-			</div>
+			</aside>
 		}
 
-		<div class=@PrimaryGrid>
+		<section class=@PrimaryGrid>
 			<!-- Brand Column -->
-			<div class=@BrandCol>
+			<article class=@BrandCol>
 				<a href="/" class=@BrandLink>
 					<span class=@FooterBrandBadgeClass>
 						<Icon Name=@AutoAwesome />
@@ -28,11 +29,11 @@
 				<p class=@BrandTagline>
 					@L[Footer_Tagline]
 				</p>
-				<div class=@SystemStatus>
+				<aside class=@SystemStatus>
 					<span class=@StatusPulseDotClass aria-hidden="true"></span>
 					<span class=@StatusTextClass>@L[Footer_Status]</span>
-				</div>
-			</div>
+				</aside>
+			</article>
 
 			<!-- Nav Column 1: Catalog & Kiosks -->
 			<nav class=@NavCol aria-label=@L[Footer_Col_Catalog]>
@@ -77,22 +78,22 @@
 					<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name=@CameraAlt /> <span>Instagram</span></a></li>
 				</ul>
 			</nav>
-		</div>
+		</section>
 
 		<!-- Sub-Footer Bottom Bar -->
 		<section class=@FooterBottomBarClass>
 			<p class=@FooterCopyright>
 				&copy; @DateTime.Now.Year Socratic. @L[AllRightsReserved]
 			</p>
-			<div class=@LangContainer>
+			<aside class=@LangContainer>
 				<LanguageSelector Variant="inline" />
-			</div>
-			<div class=@FooterTrustInfoClass>
+			</aside>
+			<aside class=@FooterTrustInfoClass>
 				<span class=@TrustBadgeClass>
 					<Icon Name=@VerifiedUser />
 					<span>256-bit SSL • Zero-Trust Cloud</span>
 				</span>
-			</div>
+			</aside>
 		</section>
-	</div>
+	</section>
 </footer>

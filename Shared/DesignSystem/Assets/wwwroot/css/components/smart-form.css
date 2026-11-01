@@ -19,13 +19,13 @@ md-dialog.smart-form-dialog {
     min-width: 0;
     max-width: 100%;
     width: 100%;
-    padding: 16px 24px;
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
 }
 
 .smart-form-dialog form,
 .smart-form-dialog .smart-form-content {
     display: grid;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
@@ -43,7 +43,7 @@ md-dialog.smart-form-dialog {
     padding: 14px;
     margin: 0 0 10px 0;
     display: grid;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.5);
 }
 
@@ -80,7 +80,7 @@ md-dialog.smart-form-dialog {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 8px;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     align-items: center;
     width: 100%;
     min-width: 0;
@@ -97,7 +97,7 @@ md-dialog.smart-form-dialog {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 16px;
+    gap: var(--md-sys-spacing-4, 1rem);
     padding: 10px 14px;
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -120,7 +120,7 @@ md-dialog.smart-form-dialog {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
-    gap: 12px;
+    gap: var(--md-sys-spacing-3, 0.75rem);
     padding: 6px 0;
     min-width: 0;
     box-sizing: border-box;
@@ -135,25 +135,25 @@ md-dialog.smart-form-dialog {
     justify-content: end;
     gap: 10px;
     box-sizing: border-box;
-    padding: 16px 24px;
+    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
 }
 
 .smart-form-error {
     color: var(--md-sys-color-error);
-    padding: 8px;
+    padding: var(--md-sys-spacing-2, 0.5rem);
     border: 1px solid var(--md-sys-color-error);
     border-radius: var(--md-sys-shape-corner-small, 8px);
 }
 
 .smart-form-info {
     color: var(--md-sys-color-tertiary);
-    padding: 8px;
+    padding: var(--md-sys-spacing-2, 0.5rem);
     border: 1px solid var(--md-sys-color-tertiary);
     border-radius: var(--md-sys-shape-corner-small, 8px);
 }
 
 .smart-form-field-mb {
-    margin-bottom: 12px;
+    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
 }
 
 .smart-grid-headline {

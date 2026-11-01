@@ -201,6 +201,29 @@
     .designer-header .page-subtitle {
         font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
     }
+
+    .designer-canvas-area {
+        min-height: 540px;
+    }
+
+    .designer-header {
+        padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
+    }
+
+    .designer-page-root {
+        gap: 1.25rem;
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+    }
+
+    .designer-workspace {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+
+    .seat-designer-page-root {
+        gap: 1.25rem;
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+    }
 }
 
 /* ==========================================================================
@@ -248,7 +271,7 @@
 
 .seat-booking-header-title {
     display: grid;
-    gap: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
     min-width: 0;
 }
 
@@ -284,7 +307,7 @@
 .seat-booking-loading-overlay {
     position: absolute;
     inset: 0;
-    z-index: 5;
+    z-index: var(--md-sys-z-surface, 2);
     display: grid;
     place-items: center;
     background-color: rgb(from var(--md-sys-color-scrim) r g b / 0.8);
@@ -345,15 +368,15 @@
 
 .seat-booking-service-row {
     display: grid;
-    gap: 4px;
-    margin-top: 4px;
+    gap: var(--md-sys-spacing-1, 0.25rem);
+    margin-top: var(--md-sys-spacing-1, 0.25rem);
     padding-top: 10px;
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .seat-booking-btn-action {
     width: 100%;
-    margin-top: 8px;
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
     --md-filled-button-container-color: var(--md-sys-color-primary);
 }
 
@@ -373,7 +396,7 @@
     place-items: center;
     width: 32px;
     height: 32px;
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
     font-size: 32px;
 }
 
@@ -426,48 +449,20 @@
     background-color: var(--md-sys-color-surface-container-high);
 }
 
-
-
-
-
-
-
-
 .status-busy {
     background: var(--md-sys-color-error);
     box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-error) 60%, transparent);
 }
-
-
-
-
-
-
-
 
 .status-free {
     background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-tertiary) 60%, transparent);
 }
 
-
-
-
-
-
-
-
 .status-reserved {
     background: var(--md-sys-color-secondary);
     box-shadow: 0 0 8px color-mix(in srgb, var(--md-sys-color-secondary) 60%, transparent);
 }
-
-
-
-
-
-
-
 
 .venue-status-legend {
     display: grid;
@@ -484,7 +479,7 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-1);
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .canvas-wrapper {

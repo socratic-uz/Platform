@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1676.
+    /// Total unique keys: 1688.
     /// </summary>
     public static class Loc
     {
@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (560 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (576 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1761,6 +1761,14 @@ namespace Assets.Constants
             public const string HeroSocraticOrg = "HeroSocraticOrg";
 
             /// <summary>
+            /// Key: <c>HeroStageTabsLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерфейсные сценарии&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interfeys bosqichlari&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Hero interface stages&quot;
+            /// </summary>
+            public const string HeroStageTabsLabel = "HeroStageTabsLabel";
+
+            /// <summary>
             /// Key: <c>HeroSubtitle</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
@@ -2233,6 +2241,14 @@ namespace Assets.Constants
             public const string Merchant_ExampleServiceId = "Merchant_ExampleServiceId";
 
             /// <summary>
+            /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+            /// </summary>
+            public const string Merchant_MerchantIdLabel = "Merchant_MerchantIdLabel";
+
+            /// <summary>
             /// Key: <c>Merchant_PaymeEnable</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -2289,6 +2305,22 @@ namespace Assets.Constants
             public const string Merchant_SecretKeyHint = "Merchant_SecretKeyHint";
 
             /// <summary>
+            /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+            /// </summary>
+            public const string Merchant_SecretKeyLabel = "Merchant_SecretKeyLabel";
+
+            /// <summary>
+            /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+            /// </summary>
+            public const string Merchant_ServiceIdLabel = "Merchant_ServiceIdLabel";
+
+            /// <summary>
             /// Key: <c>Merchant_SettingsSubtext</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -2319,6 +2351,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
             /// </summary>
             public const string Merchant_TaxIdLabel = "Merchant_TaxIdLabel";
+
+            /// <summary>
+            /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+            /// </summary>
+            public const string Merchant_TerminalIdLabel = "Merchant_TerminalIdLabel";
 
             /// <summary>
             /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -2465,6 +2505,14 @@ namespace Assets.Constants
             public const string MerchantExampleServiceId = "Merchant_ExampleServiceId";
 
             /// <summary>
+            /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+            /// </summary>
+            public const string MerchantMerchantIdLabel = "Merchant_MerchantIdLabel";
+
+            /// <summary>
             /// Key: <c>Merchant_PaymeEnable</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -2521,6 +2569,22 @@ namespace Assets.Constants
             public const string MerchantSecretKeyHint = "Merchant_SecretKeyHint";
 
             /// <summary>
+            /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+            /// </summary>
+            public const string MerchantSecretKeyLabel = "Merchant_SecretKeyLabel";
+
+            /// <summary>
+            /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+            /// </summary>
+            public const string MerchantServiceIdLabel = "Merchant_ServiceIdLabel";
+
+            /// <summary>
             /// Key: <c>Merchant_SettingsSubtext</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -2551,6 +2615,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
             /// </summary>
             public const string MerchantTaxIdLabel = "Merchant_TaxIdLabel";
+
+            /// <summary>
+            /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+            /// </summary>
+            public const string MerchantTerminalIdLabel = "Merchant_TerminalIdLabel";
 
             /// <summary>
             /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -3095,6 +3167,62 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Owner ID&quot;
             /// </summary>
             public const string OwnerId = "OwnerId";
+
+            /// <summary>
+            /// Key: <c>PaginationFirstPage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На первую страницу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Birinchi sahifaga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to first page&quot;
+            /// </summary>
+            public const string PaginationFirstPage = "PaginationFirstPage";
+
+            /// <summary>
+            /// Key: <c>PaginationItems</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;элементов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta element&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;items&quot;
+            /// </summary>
+            public const string PaginationItems = "PaginationItems";
+
+            /// <summary>
+            /// Key: <c>PaginationLastPage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На последнюю страницу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxirgi sahifaga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to last page&quot;
+            /// </summary>
+            public const string PaginationLastPage = "PaginationLastPage";
+
+            /// <summary>
+            /// Key: <c>PaginationNextPage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На следующую страницу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Keyingi sahifaga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to next page&quot;
+            /// </summary>
+            public const string PaginationNextPage = "PaginationNextPage";
+
+            /// <summary>
+            /// Key: <c>PaginationOf</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+            /// </summary>
+            public const string PaginationOf = "PaginationOf";
+
+            /// <summary>
+            /// Key: <c>PaginationPage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Страница&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sahifa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Page&quot;
+            /// </summary>
+            public const string PaginationPage = "PaginationPage";
+
+            /// <summary>
+            /// Key: <c>PaginationPrevPage</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На предыдущую страницу&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oldingi sahifaga&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to previous page&quot;
+            /// </summary>
+            public const string PaginationPrevPage = "PaginationPrevPage";
 
             /// <summary>
             /// Key: <c>Paid</c><br/>
@@ -41473,6 +41601,14 @@ namespace Assets.Constants
         public const string HeroSocraticOrg = "HeroSocraticOrg";
 
         /// <summary>
+        /// Key: <c>HeroStageTabsLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерфейсные сценарии&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interfeys bosqichlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hero interface stages&quot;
+        /// </summary>
+        public const string HeroStageTabsLabel = "HeroStageTabsLabel";
+
+        /// <summary>
         /// Key: <c>HeroSubtitle</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
@@ -45665,6 +45801,14 @@ namespace Assets.Constants
         public const string Merchant_ExampleServiceId = "Merchant_ExampleServiceId";
 
         /// <summary>
+        /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+        /// </summary>
+        public const string Merchant_MerchantIdLabel = "Merchant_MerchantIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_PaymeEnable</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -45721,6 +45865,22 @@ namespace Assets.Constants
         public const string Merchant_SecretKeyHint = "Merchant_SecretKeyHint";
 
         /// <summary>
+        /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+        /// </summary>
+        public const string Merchant_SecretKeyLabel = "Merchant_SecretKeyLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+        /// </summary>
+        public const string Merchant_ServiceIdLabel = "Merchant_ServiceIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_SettingsSubtext</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -45751,6 +45911,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
         /// </summary>
         public const string Merchant_TaxIdLabel = "Merchant_TaxIdLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+        /// </summary>
+        public const string Merchant_TerminalIdLabel = "Merchant_TerminalIdLabel";
 
         /// <summary>
         /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -45897,6 +46065,14 @@ namespace Assets.Constants
         public const string MerchantExampleServiceId = "Merchant_ExampleServiceId";
 
         /// <summary>
+        /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+        /// </summary>
+        public const string MerchantMerchantIdLabel = "Merchant_MerchantIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_PaymeEnable</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -45953,6 +46129,22 @@ namespace Assets.Constants
         public const string MerchantSecretKeyHint = "Merchant_SecretKeyHint";
 
         /// <summary>
+        /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+        /// </summary>
+        public const string MerchantSecretKeyLabel = "Merchant_SecretKeyLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+        /// </summary>
+        public const string MerchantServiceIdLabel = "Merchant_ServiceIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_SettingsSubtext</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -45983,6 +46175,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
         /// </summary>
         public const string MerchantTaxIdLabel = "Merchant_TaxIdLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+        /// </summary>
+        public const string MerchantTerminalIdLabel = "Merchant_TerminalIdLabel";
 
         /// <summary>
         /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -48375,6 +48575,62 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Owner ID&quot;
         /// </summary>
         public const string OwnerId = "OwnerId";
+
+        /// <summary>
+        /// Key: <c>PaginationFirstPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На первую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Birinchi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to first page&quot;
+        /// </summary>
+        public const string PaginationFirstPage = "PaginationFirstPage";
+
+        /// <summary>
+        /// Key: <c>PaginationItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;элементов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta element&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;items&quot;
+        /// </summary>
+        public const string PaginationItems = "PaginationItems";
+
+        /// <summary>
+        /// Key: <c>PaginationLastPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На последнюю страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxirgi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to last page&quot;
+        /// </summary>
+        public const string PaginationLastPage = "PaginationLastPage";
+
+        /// <summary>
+        /// Key: <c>PaginationNextPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На следующую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Keyingi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to next page&quot;
+        /// </summary>
+        public const string PaginationNextPage = "PaginationNextPage";
+
+        /// <summary>
+        /// Key: <c>PaginationOf</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+        /// </summary>
+        public const string PaginationOf = "PaginationOf";
+
+        /// <summary>
+        /// Key: <c>PaginationPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Страница&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sahifa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Page&quot;
+        /// </summary>
+        public const string PaginationPage = "PaginationPage";
+
+        /// <summary>
+        /// Key: <c>PaginationPrevPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На предыдущую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oldingi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to previous page&quot;
+        /// </summary>
+        public const string PaginationPrevPage = "PaginationPrevPage";
 
         /// <summary>
         /// Key: <c>Paid</c><br/>
@@ -56910,7 +57166,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Common (560 keys). Use with <c>@using static Loc.Common;</c>.
+    /// Domain group: Common (576 keys). Use with <c>@using static Loc.Common;</c>.
     /// </summary>
     public static class Common
     {
@@ -58208,6 +58464,14 @@ namespace Loc
         public const string HeroSocraticOrg = "HeroSocraticOrg";
 
         /// <summary>
+        /// Key: <c>HeroStageTabsLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерфейсные сценарии&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interfeys bosqichlari&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Hero interface stages&quot;
+        /// </summary>
+        public const string HeroStageTabsLabel = "HeroStageTabsLabel";
+
+        /// <summary>
         /// Key: <c>HeroSubtitle</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
@@ -58680,6 +58944,14 @@ namespace Loc
         public const string Merchant_ExampleServiceId = "Merchant_ExampleServiceId";
 
         /// <summary>
+        /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+        /// </summary>
+        public const string Merchant_MerchantIdLabel = "Merchant_MerchantIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_PaymeEnable</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -58736,6 +59008,22 @@ namespace Loc
         public const string Merchant_SecretKeyHint = "Merchant_SecretKeyHint";
 
         /// <summary>
+        /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+        /// </summary>
+        public const string Merchant_SecretKeyLabel = "Merchant_SecretKeyLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+        /// </summary>
+        public const string Merchant_ServiceIdLabel = "Merchant_ServiceIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_SettingsSubtext</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -58766,6 +59054,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
         /// </summary>
         public const string Merchant_TaxIdLabel = "Merchant_TaxIdLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+        /// </summary>
+        public const string Merchant_TerminalIdLabel = "Merchant_TerminalIdLabel";
 
         /// <summary>
         /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -58912,6 +59208,14 @@ namespace Loc
         public const string MerchantExampleServiceId = "Merchant_ExampleServiceId";
 
         /// <summary>
+        /// Key: <c>Merchant_MerchantIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Merchant ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Merchant ID&quot;
+        /// </summary>
+        public const string MerchantMerchantIdLabel = "Merchant_MerchantIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_PaymeEnable</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Включить оплату через Payme&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Payme orqali to'lovni yoqish&quot;<br/>
@@ -58968,6 +59272,22 @@ namespace Loc
         public const string MerchantSecretKeyHint = "Merchant_SecretKeyHint";
 
         /// <summary>
+        /// Key: <c>Merchant_SecretKeyLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Secret Key&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Secret Key&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Secret Key&quot;
+        /// </summary>
+        public const string MerchantSecretKeyLabel = "Merchant_SecretKeyLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_ServiceIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Service ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Service ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Service ID&quot;
+        /// </summary>
+        public const string MerchantServiceIdLabel = "Merchant_ServiceIdLabel";
+
+        /// <summary>
         /// Key: <c>Merchant_SettingsSubtext</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Управление платёжными шлюзами (Click, Payme, Uzum) и реквизитами Soliq.uz для организации&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilot uchun to'lov shlyuzlari (Click, Payme, Uzum) va Soliq.uz rekvizitlarini boshqarish&quot;<br/>
@@ -58998,6 +59318,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Organization Tax ID / TIN (9 digits)&quot;
         /// </summary>
         public const string MerchantTaxIdLabel = "Merchant_TaxIdLabel";
+
+        /// <summary>
+        /// Key: <c>Merchant_TerminalIdLabel</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal ID&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal ID&quot;
+        /// </summary>
+        public const string MerchantTerminalIdLabel = "Merchant_TerminalIdLabel";
 
         /// <summary>
         /// Key: <c>Merchant_TestModeLabel</c><br/>
@@ -59542,6 +59870,62 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Owner ID&quot;
         /// </summary>
         public const string OwnerId = "OwnerId";
+
+        /// <summary>
+        /// Key: <c>PaginationFirstPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На первую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Birinchi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to first page&quot;
+        /// </summary>
+        public const string PaginationFirstPage = "PaginationFirstPage";
+
+        /// <summary>
+        /// Key: <c>PaginationItems</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;элементов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;ta element&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;items&quot;
+        /// </summary>
+        public const string PaginationItems = "PaginationItems";
+
+        /// <summary>
+        /// Key: <c>PaginationLastPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На последнюю страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oxirgi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to last page&quot;
+        /// </summary>
+        public const string PaginationLastPage = "PaginationLastPage";
+
+        /// <summary>
+        /// Key: <c>PaginationNextPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На следующую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Keyingi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to next page&quot;
+        /// </summary>
+        public const string PaginationNextPage = "PaginationNextPage";
+
+        /// <summary>
+        /// Key: <c>PaginationOf</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;из&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;dan&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;of&quot;
+        /// </summary>
+        public const string PaginationOf = "PaginationOf";
+
+        /// <summary>
+        /// Key: <c>PaginationPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Страница&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sahifa&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Page&quot;
+        /// </summary>
+        public const string PaginationPage = "PaginationPage";
+
+        /// <summary>
+        /// Key: <c>PaginationPrevPage</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На предыдущую страницу&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Oldingi sahifaga&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Go to previous page&quot;
+        /// </summary>
+        public const string PaginationPrevPage = "PaginationPrevPage";
 
         /// <summary>
         /// Key: <c>Paid</c><br/>

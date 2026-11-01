@@ -5,17 +5,17 @@
 @using static Loc.Common
 @using static Material.Web.Components.IconButtonVariant
 
-<div class=@MaterialCounter>
+<fieldset class=@MaterialCounter>
 	@if (OrderItem != null)
 	{
-		<IconButton Icon=@RemoveIcon Variant=@IconFilledTonal OnClick=@(async e => await Remove.InvokeAsync(OrderItem)) />
+		<IconButton Icon=@Remove Variant=@FilledTonal OnClick=@(async e => await OnRemove.InvokeAsync(OrderItem)) />
 		<span class=@CounterQuantityClass>@OrderItem.Quantity</span>
-		<IconButton Icon=@AddIcon Variant=@IconFilled OnClick=@(async e => await Add.InvokeAsync(OrderItem)) />
+		<IconButton Icon=@Add Variant=@Filled OnClick=@(async e => await OnAdd.InvokeAsync(OrderItem)) />
 	}
 	else
 	{
-		<Button Variant=@BtnFilled OnClick=@(async e => await CreateOrderItem.InvokeAsync((Product, OrderItem))) Icon=@AddShoppingCart>
+		<Button OnClick=@(async e => await CreateOrderItem.InvokeAsync((Product, OrderItem))) Icon=@AddShoppingCart>
 			@L[ProductVariantAddToCart]
 		</Button>
 	}
-</div>
+</fieldset>

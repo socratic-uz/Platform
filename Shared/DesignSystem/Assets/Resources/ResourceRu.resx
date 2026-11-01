@@ -3542,6 +3542,18 @@
   <data name="Merchant_UzQrFiscalModuleLabel" xml:space="preserve">
     <value>Номер фискального модуля (при наличии)</value>
   </data>
+  <data name="Merchant_ServiceIdLabel" xml:space="preserve">
+    <value>Service ID</value>
+  </data>
+  <data name="Merchant_MerchantIdLabel" xml:space="preserve">
+    <value>Merchant ID</value>
+  </data>
+  <data name="Merchant_SecretKeyLabel" xml:space="preserve">
+    <value>Secret Key</value>
+  </data>
+  <data name="Merchant_TerminalIdLabel" xml:space="preserve">
+    <value>Terminal ID</value>
+  </data>
   <data name="Merchant_SaveSettings" xml:space="preserve">
     <value>Сохранить настройки эквайринга</value>
   </data>
@@ -3696,6 +3708,30 @@
   </data>
   <data name="HeroQrDesigner" xml:space="preserve">
     <value>QR-фискализация</value>
+  </data>
+    <data name="PaginationFirstPage" xml:space="preserve">
+    <value>На первую страницу</value>
+  </data>
+  <data name="PaginationPrevPage" xml:space="preserve">
+    <value>На предыдущую страницу</value>
+  </data>
+  <data name="PaginationNextPage" xml:space="preserve">
+    <value>На следующую страницу</value>
+  </data>
+  <data name="PaginationLastPage" xml:space="preserve">
+    <value>На последнюю страницу</value>
+  </data>
+  <data name="PaginationItems" xml:space="preserve">
+    <value>элементов</value>
+  </data>
+  <data name="PaginationPage" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="PaginationOf" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="HeroStageTabsLabel" xml:space="preserve">
+    <value>Интерфейсные сценарии</value>
   </data>
   <data name="TabPos" xml:space="preserve">
     <value>Касса POS</value>

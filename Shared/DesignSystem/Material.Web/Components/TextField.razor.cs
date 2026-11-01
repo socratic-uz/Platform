@@ -27,6 +27,7 @@ public partial class TextField<TValue> : InputBase<TValue>
     }
 
     protected ElementReference textFieldElement;
+    public ElementReference Element => textFieldElement;
     protected bool isTrailingIconToggled = false;
 
     [Parameter] public string Id { get; set; } = Guid.NewGuid().ToString();

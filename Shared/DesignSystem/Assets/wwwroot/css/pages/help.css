@@ -181,3 +181,14 @@ details:not([open]) .faq-answer {
     max-width: 680px;
     margin: 0 auto;
 }
+
+@media (max-width: 599.98px) {
+    .help-title {
+        font-size: 1.85rem;
+    }
+
+    .help-container {
+        gap: 2.5rem;
+        padding: 1.5rem 1rem 2rem;
+    }
+}

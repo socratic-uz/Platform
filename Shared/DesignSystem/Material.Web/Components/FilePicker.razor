@@ -7,7 +7,7 @@
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<div class=@FilePickerContainer>
+<section class=@FilePickerContainer>
     <PickerTriggerCard Label=@EffectiveLabel
                        Icon=@AttachFile
                        ActiveIcon=@FolderOpen
@@ -35,7 +35,7 @@
         </CustomActions>
     </PickerTriggerCard>
 
-    <div class=@FileGrid>
+    <menu class=@FileGrid>
         <!-- Universal Attachments -->
         @if (Attachments != null)
         {
@@ -45,8 +45,8 @@
                 if (index < Attachments.Count)
                 {
                     var (fileName, contentType, url, isNew, bytesData) = GetAttachmentData(index);
-                    <div class=@GetFileCardClass(isNew)>
-                        <div class=@FilePreviewArea>
+                    <article class=@GetFileCardClass(isNew)>
+                        <figure class=@FilePreviewArea>
                             @if (IsImage(contentType, fileName))
                             {
                                 var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
@@ -54,24 +54,24 @@
                             }
                             else
                             {
-                                <div class=@GetIconPreviewClass(contentType, fileName)>
+                                <figure class=@GetIconPreviewClass(contentType, fileName)>
                                     <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
-                                </div>
+                                </figure>
                             }
-                        </div>
-                        <div class=@FileInfo>
+                        </figure>
+                        <footer class=@FileInfo>
                             <span class=@FileName title=@fileName>@fileName</span>
-                        </div>
+                        </footer>
                         @if (isNew)
                         {
-                            <div class=@NewBadge>New</div>
+                            <span class=@NewBadge>New</span>
                         }
-                        <div class=@FileOverlay>
+                        <menu class=@FileOverlay>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveAttachment(index)) />
-                        </div>
-                    </div>
+                        </menu>
+                    </article>
                 }
             }
         }
@@ -85,19 +85,19 @@
                 if (index < ExistingImages.Count)
                 {
                     var (previewUrl, fileName) = GetExistingImageData(index);
-                    <div class=@FileCard>
-                        <div class=@FilePreviewArea>
+                    <article class=@FileCard>
+                        <figure class=@FilePreviewArea>
                             <img src=@previewUrl alt=@fileName class=@ImagePreview />
-                        </div>
-                        <div class=@FileInfo>
+                        </figure>
+                        <footer class=@FileInfo>
                             <span class=@FileName title=@fileName>@fileName</span>
-                        </div>
-                        <div class=@FileOverlay>
+                        </footer>
+                        <menu class=@FileOverlay>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveExistingImage(index)) />
-                        </div>
-                    </div>
+                        </menu>
+                    </article>
                 }
             }
         }
@@ -111,35 +111,35 @@
                 if (index < NewImagesContent.Count)
                 {
                     var (dataUrl, contentType, fileName) = GetNewImageData(index);
-                    <div class=@FileCard>
-                        <div class=@FilePreviewArea>
+                    <article class=@FileCard>
+                        <figure class=@FilePreviewArea>
                             @if (IsImage(contentType, fileName))
                             {
                                 <img src=@dataUrl alt=@fileName class=@ImagePreview />
                             }
                             else
                             {
-                                <div class=@GetIconPreviewClass(contentType, fileName)>
+                                <figure class=@GetIconPreviewClass(contentType, fileName)>
                                     <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
-                                </div>
+                                </figure>
                             }
-                        </div>
-                        <div class=@FileInfo>
+                        </figure>
+                        <footer class=@FileInfo>
                             <span class=@FileName title=@fileName>@fileName</span>
-                        </div>
-                        <div class=@NewBadge>New</div>
-                        <div class=@FileOverlay>
+                        </footer>
+                        <span class=@NewBadge>New</span>
+                        <menu class=@FileOverlay>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveNewImage(index)) />
-                        </div>
-                    </div>
+                        </menu>
+                    </article>
                 }
             }
         }
 
         <!-- Upload Card -->
-        <div class=@UploadCardClass
+        <label for=@inputId class=@UploadCardClass
              @ondragenter=@HandleDragEnter
              @ondragleave=@HandleDragLeave
              @ondragover=@HandleDragOver
@@ -147,17 +147,17 @@
              @ondrop=@HandleDrop
              @ondrop:preventDefault>
             
-            <div class=@UploadZoneLabel>
+            <span class=@UploadZoneLabel>
                 <md-icon class=@UploadIcon>@CloudUpload</md-icon>
                 <span class=@UploadText>@EffectiveUploadLabel</span>
                 <span class=@UploadSubtext>@L[FilePickerDragFilesOrClick]</span>
-            </div>
+            </span>
             
             <InputFile id=@inputId 
                        OnChange=@HandleFileSelected 
                        multiple=@Multiple 
                        accept=@Accept 
                        class=@FileInputHidden />
-        </div>
-    </div>
-</div>
+        </label>
+    </menu>
+</section>

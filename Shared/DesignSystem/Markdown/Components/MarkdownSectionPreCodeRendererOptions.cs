@@ -12,9 +12,9 @@ internal class MarkdownSectionPreCodeRendererOptions
     /// <summary>
     /// html attributes for Tag element in markdig generic attributes format
     /// </summary>
-    public string? PreTagAttributes;
+    public string? PreTagAttributes { get; set; }
     /// <summary>
     /// html attributes for Code element in markdig generic attributes format
     /// </summary>
-    public string? CodeTagAttributes;
+    public string? CodeTagAttributes { get; set; }
 }
