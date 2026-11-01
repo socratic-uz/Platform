@@ -9,20 +9,20 @@
 - **Zero Build-Step для CSS**: чистый нативный W3C CSS без препроцессоров, утилитных генераторов и монолитных бандлов. Браузер напрямую парсит валидные спецификации W3C через параллельные мультиплексированные потоки HTTP/2 и HTTP/3.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей и тегов `<style>`. Стилизация детерминирована на уровне платформенных классов дизайн-системы.
 
-### 1.2. 6-слойный детерминированный каскад W3C Cascade Layers (`@layer`)
-Иерархия каскада зафиксирована декларацией `@layer` в начале `styles.css`:
+### 1.2. Слоёная архитектура — Cascade Layers (`@layer`)
+Иерархия каскада построена на нативных каскадных слоях **Cascade Layers (`@layer`)** в начале `styles.css`:
 ```css
 @layer tokens, foundations, layouts, pages, widgets, components;
 ```
 - **Приоритет слоев**: нарастает слева направо (от фундамента к защищенному UI-элементу):
   `tokens` (1) ➔ `foundations` (2) ➔ `layouts` (3) ➔ `pages` (4) ➔ `widgets` (5) ➔ `components` (6).
 - **Логика приоритетов каскада**:
-  1. `tokens`: переменные и дизайн-токены W3C DTCG.
-  2. `foundations`: сброс стилей браузера и базовые теги HTML5.
-  3. `layouts`: макро-каркас и сетки экрана (`header`, `footer`, `grid-layout`).
+  1. `tokens`: дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
+  2. `foundations`: сброс стилей браузера, нормализация базовых тегов HTML5 и анимации.
+  3. `layouts`: структурные макро-каркасы и сетки экрана (`header`, `footer`, `grid-layout`).
   4. `pages`: контекст и секции конкретного экрана (`kiosk`, `terminal`, `landing`).
-  5. `widgets`: сложные отраслевые бизнес-организмы (`cart`, `fiscal`, `faceid-viewfinder`), побеждающие общие правила страницы.
-  6. `components`: атомарные примитивы Material 3 (`buttons`, `cards`, `forms`), обладающие **наивысшим приоритетом**. Это гарантирует, что кнопка или инпут сохранят свои строгие размеры, padding и сенсорную эргономику и не будут случайно сломаны внешними стилями страницы или виджета.
+  5. `widgets`: сложные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `commerce-modes`), переопределяющие контекст страницы.
+  6. `components`: атомарные примитивы Material 3 (`buttons`, `cards`, `forms`), обладающие **наивысшим приоритетом**. Это гарантирует, что кнопка или инпут сохранят свои строгие размеры, padding и сенсорную эргономику ($\ge 48\text{px}$) и не будут случайно сломаны внешними стилями страницы или виджета.
 
 ### 1.3. Регламент разграничения: Components vs Widgets
 Чтобы исключить смешение понятий, действует строгое правило классификации:
@@ -196,12 +196,13 @@
 
 ## 6. 🏛️ Структура слоев `styles.css`
 
-Корневой файл [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css) подключает модули системы по 7 архитектурным слоям:
+Корневой файл [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css) подключает модули системы по 6 слоям каскада **Cascade Layers (`@layer`)**:
 
 ```css
-@layer tokens, foundations, layouts, components, widgets, pages, features;
+/* Layer Precedence (Lower to Higher Priority) */
+@layer tokens, foundations, layouts, pages, widgets, components;
 
-/* 0. Шрифты */
+/* 0. Typography Fonts */
 @import "fonts/material-symbols-outlined.css";
 @import "fonts/roboto.css";
 @import "fonts/montserrat.css";
@@ -222,46 +223,17 @@
 @import "foundations/base.css" layer(foundations);
 @import "foundations/typography.css" layer(foundations);
 @import "foundations/scrollbars.css" layer(foundations);
+@import "foundations/animations.css" layer(foundations);
 
 /* 3. Blazor Layouts (Page Skeletons & Shells) */
 @import "layouts/footer.css" layer(layouts);
 @import "layouts/grid-layout.css" layer(layouts);
 @import "layouts/header.css" layer(layouts);
+@import "layouts/navigation.css" layer(layouts);
 @import "layouts/landing-layout.css" layer(layouts);
 @import "layouts/map-layout.css" layer(layouts);
 
-/* 4. Material 3 Component Primitives */
-@import "components/buttons.css" layer(components);
-@import "components/cards.css" layer(components);
-@import "components/chips.css" layer(components);
-@import "components/common.css" layer(components);
-@import "components/dialogs.css" layer(components);
-@import "components/expressive.css" layer(components);
-@import "components/feedback.css" layer(components);
-@import "components/forms.css" layer(components);
-@import "components/invoice.css" layer(components);
-@import "components/profile-dialog.css" layer(components);
-@import "components/smart-data-view.css" layer(components);
-@import "components/smart-enum.css" layer(components);
-@import "components/smart-filter.css" layer(components);
-@import "components/smart-form.css" layer(components);
-@import "components/smart-toast.css" layer(components);
-@import "components/tables.css" layer(components);
-
-/* 5. Smart Widgets & Tools */
-@import "widgets/ads.css" layer(widgets);
-@import "widgets/booking-picker.css" layer(widgets);
-@import "widgets/cart.css" layer(widgets);
-@import "widgets/color-picker.css" layer(widgets);
-@import "widgets/commerce-modes.css" layer(widgets);
-@import "widgets/faceid-viewfinder.css" layer(widgets);
-@import "widgets/fiscal.css" layer(widgets);
-@import "widgets/lang-selector.css" layer(widgets);
-@import "widgets/media-player.css" layer(widgets);
-@import "widgets/qr-designer.css" layer(widgets);
-@import "widgets/seat-designer.css" layer(widgets);
-
-/* 6. Page-Specific Styles */
+/* 4. Page-Specific Styles (Macro Screen Contexts) */
 @import "pages/about.css" layer(pages);
 @import "pages/analytics.css" layer(pages);
 @import "pages/auth.css" layer(pages);
@@ -274,6 +246,45 @@
 @import "pages/orders.css" layer(pages);
 @import "pages/payment.css" layer(pages);
 @import "pages/terminal.css" layer(pages);
+
+/* 5. Smart Widgets & Composite Tools (Domain Organisms) */
+@import "widgets/ads.css" layer(widgets);
+@import "widgets/ai-blob.css" layer(widgets);
+@import "widgets/booking-picker.css" layer(widgets);
+@import "widgets/cart.css" layer(widgets);
+@import "widgets/color-picker.css" layer(widgets);
+@import "widgets/commerce-modes.css" layer(widgets);
+@import "widgets/faceid-viewfinder.css" layer(widgets);
+@import "widgets/fiscal.css" layer(widgets);
+@import "widgets/lang-selector.css" layer(widgets);
+@import "widgets/map.css" layer(widgets);
+@import "widgets/media-player.css" layer(widgets);
+@import "widgets/pricing-tiers.css" layer(widgets);
+@import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/seat-designer.css" layer(widgets);
+
+/* 6. Material 3 Component Primitives (Protected UI Units) */
+@import "components/buttons.css" layer(components);
+@import "components/cards.css" layer(components);
+@import "components/chips.css" layer(components);
+@import "components/common.css" layer(components);
+@import "components/dialogs.css" layer(components);
+@import "components/reconnect-modal.css" layer(components);
+@import "components/search.css" layer(components);
+@import "components/expressive.css" layer(components);
+@import "components/feedback.css" layer(components);
+@import "components/forms.css" layer(components);
+@import "components/info-grid.css" layer(components);
+@import "components/invoice.css" layer(components);
+@import "components/link-stack.css" layer(components);
+@import "components/profile-dialog.css" layer(components);
+@import "components/smart-data-view.css" layer(components);
+@import "components/smart-enum.css" layer(components);
+@import "components/smart-filter.css" layer(components);
+@import "components/smart-form.css" layer(components);
+@import "components/smart-toast.css" layer(components);
+@import "components/tables.css" layer(components);
+@import "components/theme-toggle.css" layer(components);
 ```
 
 ---

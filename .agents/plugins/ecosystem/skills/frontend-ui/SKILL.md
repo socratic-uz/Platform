@@ -1,6 +1,6 @@
 ---
 name: frontend-ui
-description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, 6-layer cascade architecture (@layer), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
+description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, layered architecture — Cascade Layers (@layer tokens, foundations, layouts, pages, widgets, components), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
 license: MIT
 ---
 
@@ -11,9 +11,9 @@ license: MIT
 
 ---
 
-## 1. 6-слойная модульная архитектура в Assets
+## 1. Слоёная архитектура — Cascade Layers в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 6-слойной архитектуре (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
 Компоненты независимы и инкапсулируют свои стили в целевых файлах, а повторно используемые сетки оформляются как примитивы с нулевой специфичностью `:where(...)` (0, 0, 0):
 
 ```css
@@ -51,7 +51,7 @@ license: MIT
 
 ## 4. Чеклист проверки (DoD)
 
-- [ ] Стили добавлены в соответствующий слой `Assets/wwwroot/css/` по 6-слойной архитектуре (`@layer`).
+- [ ] Стили добавлены в соответствующий слой `Assets/wwwroot/css/` по слоёной архитектуре Cascade Layers (`@layer`).
 - [ ] Раскладка построена на CSS Grid с соблюдением `minmax(0, 1fr)` и `min-width: 0`.
 - [ ] Все цвета и формы используют токены Material Design 3 (полная поддержка темной и светлой тем).
 - [ ] Интерактивные элементы имеют touch target не менее 48x48px.

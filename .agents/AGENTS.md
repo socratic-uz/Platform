@@ -126,7 +126,7 @@ Interaction (IX)
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
-- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по 6-слойной архитектуре (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
+- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
 - **Модульность и нулевая специфичность**: независимые компоненты в соответствующих слоях `@layer`, примитивы обнуляют вес через `:where(...)` (0, 0, 0).
@@ -139,9 +139,19 @@ Interaction (IX)
 - Обработчики событий именуются с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`) во избежание коллизий с иконками.
 - Подробности: [rules/frontend-ix.md](rules/frontend-ix.md).
 
-### 8.3 Дата-дривен рефакторинг UI
+### 8.3 Дата-дривен рефакторинг UI/UX/IX
 - **Рефакторинг интерфейса и стилей (UI & Presentation)**: воркфлоу [plugins/ecosystem/skills/ui-refactor-loop/SKILL.md](plugins/ecosystem/skills/ui-refactor-loop/SKILL.md).
 - **Рефакторинг опыта и структуры (UX & Structure)**: воркфлоу [plugins/ecosystem/skills/ux-refactor-loop/SKILL.md](plugins/ecosystem/skills/ux-refactor-loop/SKILL.md).
+- **Рефакторинг интерактива и логики (IX & Architecture)**: воркфлоу [plugins/ecosystem/skills/ix-refactor-loop/SKILL.md](plugins/ecosystem/skills/ix-refactor-loop/SKILL.md).
+
+### 8.4 Архитектура фронтенд-модулей (Clean Architecture + Vertical Slice)
+Каждый фронтенд-модуль (`Retail/PointOfSale`, `Commerce/Checkout`, `Kiosk`) организуется по схеме Clean Architecture + Vertical Slice:
+- **`Features/`**: бизнес-сценарии (UseCases, команды, DTO, правила валидации). Чистый C# (POCO) без Blazor-зависимостей, 100% Native AOT, вызовы через `ValueTask<Result<T>>`.
+- **`Pages/`**: каркас экрана и маршрутизация (`@page "/pos"`), привязка к макро-сетке layout. Зеркально соответствует CSS-слою `pages/`.
+- **`Widgets/`**: умные отраслевые составные организмы (Smart Components: Корзина, Фискальная панель). Внедряют UseCases из `Features/` и связывают компоненты. Зеркально соответствует CSS-слою `widgets/`.
+- **`Components/`**: презентационные примитивы (Dumb Components). Общаются с миром только через `[Parameter]` и `EventCallback`, ничего не знают о `Features/` и UseCases. Зеркально соответствует CSS-слою `components/`.
+- **Общий проект `Domain`**: контракты межмодульного взаимодействия (Value Objects: `Money`, `OrderId`; интерфейсы стейта: `ICartStore`; доменные события). Исключает прямую связанность между модулями.
+- **Общий проект `Infrastructure`**: реализация внешних портов (gRPC-клиенты, аппаратные службы PinPad/Scanner/Fiscal, локальный офлайн-кэш/SQLite, MinIO).
 
 ---
 
@@ -181,4 +191,4 @@ Interaction (IX)
 | **Backend Architect** | `backend-architect` | `src/Backend/`, `src/Shared/SharedKernel/` | ScyllaDB NoSQL (zero EF Core), gRPC Protobuf, Kafka, Redis, Native AOT. |
 | **Frontend UX Specialist** | `frontend-ux-specialist` | Разметка `*.razor` в `src/Frontend/`, `Material.Web/` | Experience & Structure: чистая разметка, HTML5 семантика, Material.Web first, unquoted синтаксис `что-то=@*`, 3-way .resx parity. |
 | **Frontend UI Specialist** | `frontend-ui-specialist` | `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/` | Interface & Presentation: стили в `Assets`, токены M3X, селекторы `:where(...)`, pure CSS Grid, touch targets $\ge 48\text{px}$. |
-| **Frontend IX Specialist** | `frontend-ix-specialist` | Код `*.razor.cs` в `src/Frontend/` | Interaction & Behavior: чистый C# code-behind, partial class, `using static` (0 алиасов), DI, `PersistentComponentState`, жизненный цикл. |
+| **Frontend IX Specialist** | `frontend-ix-specialist` | Код `*.razor.cs` и `Features/` в `src/Frontend/` | Interaction & Behavior: Clean Architecture + Vertical Slice (`Features/UseCases`), слои `Pages/Widgets/Components`, чистый C# code-behind, `using static` (0 алиасов), `PersistentComponentState`, жизненный цикл. |

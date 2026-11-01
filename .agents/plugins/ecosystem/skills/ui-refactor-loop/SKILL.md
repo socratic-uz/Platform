@@ -40,8 +40,8 @@ Skip pages already marked done in the Ledger below.
 ## 2. Refactor Styles (CSS Architecture & M3X)
 
 1. **Централизация и детерминированный каскад (@layer & :where(...))**:
-   - Вся стилизация строго в `Assets/wwwroot/css/` (7-слойная структура: `tokens/`, `foundations/`, `layouts/`, `components/`, `widgets/`, `pages/`, `features/`).
-   - Стили компонентов инкапсулируются в целевых модулях (uttons.css, cards.css, dialogs.css), сохраняя слабую связанность.
+   - Вся стилизация строго в `Assets/wwwroot/css/` (структура Cascade Layers: `tokens/`, `foundations/`, `layouts/`, `pages/`, `widgets/`, `components/`).
+   - Стили компонентов инкапсулируются в целевых модулях (`buttons.css`, `cards.css`, `dialogs.css`), сохраняя слабую связанность.
    - Базовые примитивы обнуляют специфичность через :where(...) (0, 0, 0), устраняя конфликты селекторов без использования !important.
    - Полный запрет на `.razor.css` (за исключением QuickGrid и Markdown), инлайн `style="..."`, блоки `<style>` и TailwindCSS.
    - Полный запрет `!important` (за исключением 3 легитимных случаев: `prefers-reduced-motion`, `[hidden]`, изоляция иконок).
