@@ -80,10 +80,10 @@ var componentRegistry = new (string Name, Func<Task<string>> RenderAction)[]
     ("about", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.About>()),
     ("docs", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.Docs>()),
     ("help", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.Help>()),
-    ("qr", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.QR>()),
+    ("qr", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.Qr>()),
     ("analytics", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.Analytics>()),
     ("player", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.Player>()),
-    ("3d", () => renderer.RenderComponentAsync<Socratic.Landing.Pages._3d>()),
+    ("3d", () => renderer.RenderComponentAsync<Socratic.Landing.Pages.ModelViewer>()),
 
     // Portal / Identity
     ("signin", () => renderer.RenderComponentAsync<Socratic.Identity.Pages.SignIn>()),
@@ -95,16 +95,16 @@ var componentRegistry = new (string Name, Func<Task<string>> RenderAction)[]
 
     // Retail / Checkout & Orders
     ("payment", () => renderer.RenderComponentAsync<Socratic.Checkout.Pages.Payment>()),
-    ("orders", () => renderer.RenderComponentAsync<Socratic.Orders.Pages.Orders.Index>()),
-    ("order-items", () => renderer.RenderComponentAsync<Socratic.Orders.Pages.OrderItems.Index>(orderItemsParams)),
+    ("orders", () => renderer.RenderComponentAsync<Socratic.Orders.Pages.OrdersPage>()),
+    ("order-items", () => renderer.RenderComponentAsync<Socratic.Orders.Pages.OrderItemsPage>(orderItemsParams)),
 
     // Intelligence
     ("detector", () => renderer.RenderComponentAsync<Socratic.Vision.Pages.Detector>()),
     ("chat", () => renderer.RenderComponentAsync<Chat.Web.Pages.ChatPage>()),
 
     // Studio
-    ("seat-designer", () => renderer.RenderComponentAsync<SeatDesigner.Pages.SeatDesignerPage>()),
-    ("qr-designer", () => renderer.RenderComponentAsync<QrDesigner.Pages.QrDesignerPage>()),
+    ("seat-designer", () => renderer.RenderComponentAsync<Socratic.SeatDesigner.Pages.SeatDesignerPage>()),
+    ("qr-designer", () => renderer.RenderComponentAsync<Socratic.QrDesigner.Pages.QrDesignerPage>()),
     ("map", () => renderer.RenderComponentAsync<Map.Pages.MapPage>())
 };
 

@@ -53,7 +53,7 @@ namespace Socratic.Platform.Composition.Extensions
                 FeatureRegistry.Register(new Socratic.Vision.VisionFeatureModule());
 #endif
 #if FEATURE_CHAT
-                FeatureRegistry.Register(new Chat.ChatFeatureModule());
+                FeatureRegistry.Register(new Socratic.Chat.ChatFeatureModule());
 #endif
 #if FEATURE_LANDING
                 FeatureRegistry.Register(new Socratic.Landing.LandingFeatureModule());
@@ -71,13 +71,13 @@ namespace Socratic.Platform.Composition.Extensions
                 FeatureRegistry.Register(new Socratic.Identity.IdentityFeatureModule());
 #endif
 #if FEATURE_MAP
-                FeatureRegistry.Register(new global::Map.MapFeatureModule());
+                FeatureRegistry.Register(new Socratic.Map.MapFeatureModule());
 #endif
 #if FEATURE_QRDESIGNER
-                FeatureRegistry.Register(new global::QrDesigner.QrDesignerFeatureModule());
+                FeatureRegistry.Register(new Socratic.QrDesigner.QrDesignerFeatureModule());
 #endif
 #if FEATURE_SEATDESIGNER
-                FeatureRegistry.Register(new global::SeatDesigner.SeatDesignerFeatureModule());
+                FeatureRegistry.Register(new Socratic.SeatDesigner.SeatDesignerFeatureModule());
 #endif
 
                 _featuresRegistered = true;
@@ -110,7 +110,7 @@ namespace Socratic.Platform.Composition.Extensions
             // 3. Register Platform & Layout services
             services.AddLayoutServices();
 #if FEATURE_CHAT
-            services.AddScoped<Chat.Abstractions.IChatService, Chat.Services.SignalRChatService>();
+            services.AddScoped<global::Chat.Abstractions.IChatService, global::Chat.Services.SignalRChatService>();
 #endif
             services.AddScoped<IDetectorService, Infrastructure.Gateways.Vision.RemoteDetectorService>();
             services.AddScoped<ISettingsManager, SettingsManager>();

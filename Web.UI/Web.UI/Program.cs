@@ -93,7 +93,7 @@ foreach (var module in new Domain.Interfaces.IFeatureModule[] {
     new Socratic.Commerce.CommerceFeatureModule(),
 #endif
 #if FEATURE_CHAT
-    new Chat.ChatFeatureModule(),
+    new Socratic.Chat.ChatFeatureModule(),
 #endif
 #if FEATURE_VISION
     new Socratic.Vision.VisionFeatureModule(),
@@ -111,13 +111,13 @@ foreach (var module in new Domain.Interfaces.IFeatureModule[] {
     new Socratic.Identity.IdentityFeatureModule(),
 #endif
 #if FEATURE_MAP
-    new Map.MapFeatureModule(),
+    new Socratic.Map.MapFeatureModule(),
 #endif
 #if FEATURE_QRDESIGNER
-    new QrDesigner.QrDesignerFeatureModule(),
+    new Socratic.QrDesigner.QrDesignerFeatureModule(),
 #endif
 #if FEATURE_SEATDESIGNER
-    new SeatDesigner.SeatDesignerFeatureModule(),
+    new Socratic.SeatDesigner.SeatDesignerFeatureModule(),
 #endif
 })
 {
