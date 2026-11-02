@@ -5,11 +5,11 @@
 
 @if (Visible)
 {
-    <div class=@(string.IsNullOrEmpty(Class) ? GoogleAdsenseWrapper : string.Format(Two, GoogleAdsenseWrapper, Class))>
+    <aside class=@(string.IsNullOrEmpty(Class) ? GoogleAdsenseWrapper : string.Format(Two, GoogleAdsenseWrapper, Class)) aria-label="Advertisement">
         <ins class="adsbygoogle"
              data-ad-client=@Client
              data-ad-slot=@Slot
              data-ad-format=@Format
              data-full-width-responsive=@(FullWidthResponsive ? "true" : "false")></ins>
-    </div>
+    </aside>
 }

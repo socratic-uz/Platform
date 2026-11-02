@@ -2,47 +2,46 @@
 @using Microsoft.AspNetCore.Components.Web
 @using Material.Web
 @using static Assets.Constants.Classes.Picker
+@using static Assets.Constants.Icons
 @using static Material.Web.Components.ButtonVariant
 
 <article class=@CardClasses>
-    <section class=@TriggerLeft>
-        <!-- Icon Badge (44x44px, R12) -->
-        <span class=@BadgeClasses>
-            @if (CustomIconBadge != null)
-            {
-                @CustomIconBadge
-            }
-            else
-            {
-                <Icon Name=@(HasValue ? (ActiveIcon ?? Icon) : Icon) />
-            }
-        </span>
+    <!-- Icon Badge (44x44px, R12) -->
+    <span class=@BadgeClasses>
+        @if (CustomIconBadge != null)
+        {
+            @CustomIconBadge
+        }
+        else
+        {
+            <Icon Name=@(HasValue ? (ActiveIcon ?? Icon) : Icon) />
+        }
+    </span>
 
-        <!-- Text & Preview Area -->
-        <section class=@TriggerText>
-            <header class=@HeaderRow>
-                <span class=@TriggerTitle>@Label</span>
-                @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
-                {
-                    <span class=@Badge>
-                        @if (!string.IsNullOrEmpty(BadgeIcon))
-                        {
-                            <Icon Name=@BadgeIcon />
-                        }
-                        @BadgeText
-                    </span>
-                }
-            </header>
-            <p class=@PreviewText title=@PreviewText>
-                @PreviewText
-            </p>
-            @if (CustomPreview != null)
+    <!-- Text & Preview Area -->
+    <section class=@TriggerText>
+        <header class=@HeaderRow>
+            <span class=@TriggerTitle>@Label</span>
+            @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
             {
-                <section class=@CustomPreview>
-                    @CustomPreview
-                </section>
+                <span class=@TagBadge>
+                    @if (!string.IsNullOrEmpty(BadgeIcon))
+                    {
+                        <Icon Name=@BadgeIcon />
+                    }
+                    @BadgeText
+                </span>
             }
-        </section>
+        </header>
+        <p class=@PreviewText title=@PreviewText>
+            @PreviewText
+        </p>
+        @if (CustomPreview != null)
+        {
+            <section class=@CustomPreview>
+                @CustomPreview
+            </section>
+        }
     </section>
 
     <!-- Actions Panel -->
@@ -51,19 +50,19 @@
         {
             @CustomActions
         }
-        else if (!string.IsNullOrEmpty(ActionLabel))
+        else
         {
-            <Button Variant=@FilledTonal OnClick=@HandleAction Disabled=@Disabled Icon=@ActionIcon>
+            <Button Variant=@FilledTonal OnClick=@OnAction Disabled=@Disabled>
+                <md-icon slot="icon">@ActionIcon</md-icon>
                 @ActionLabel
             </Button>
-        }
-
-        @if (HasValue && ShowResetButton)
-        {
-            <IconButton Icon=@ResetIcon
-                        AriaLabel=@ResetAriaLabel
-                        Disabled=@Disabled
-                        OnClick=@HandleReset />
+            @if (HasValue && OnReset.HasDelegate)
+            {
+                <IconButton Icon=@Close
+                            Disabled=@Disabled
+                            AriaLabel=@ResetAriaLabel
+                            OnClick=@OnReset />
+            }
         }
     </footer>
 </article>

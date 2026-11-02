@@ -14,6 +14,9 @@ public partial class MaterialDialog : ComponentBase
     [Parameter] public RenderFragment? Content { get; set; }
     [Parameter] public RenderFragment? Actions { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string HeadlineClass { get; set; } = "dialog-headline-wrap";
+    [Parameter] public string? ContentClass { get; set; }
+    [Parameter] public string? ActionsClass { get; set; }
     [Parameter] public EventCallback<EventArgs> OnClose { get; set; }
     [Parameter] public EventCallback<EventArgs> OnCancel { get; set; }
     [Parameter] public EventCallback<bool> OpenChanged { get; set; }

@@ -10,16 +10,16 @@
 @inherits InputBase<TEnum>
 @attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "SmartEnum generic instantiations use preserved enum types")]
 
-<div class=@SmartEnumContainer>
+<fieldset class=@SmartEnumContainer>
     @if (!string.IsNullOrEmpty(Label))
     {
-        <div class=@SmartEnumLabel>
+        <legend class=@SmartEnumLabel>
             @Label
             @if (Required)
             {
                 <span class=@SmartEnumRequired> *</span>
             }
-        </div>
+        </legend>
     }
 
     @switch (ResolvedDisplayType)
@@ -61,7 +61,7 @@
             break;
 
         case SmartEnumDisplayType.Checkboxes:
-            <div class=@SmartEnumOptions>
+            <menu class=@SmartEnumOptions>
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
@@ -70,11 +70,11 @@
                               Disabled=@Disabled
                               Label=@GetEnumText(val) />
                 }
-            </div>
+            </menu>
             break;
 
         case SmartEnumDisplayType.Radio:
-            <div class=@SmartEnumOptions>
+            <menu class=@SmartEnumOptions>
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
@@ -83,7 +83,7 @@
                            Label=@GetEnumText(val)
                            Disabled=@Disabled />
                 }
-            </div>
+            </menu>
             break;
     }
-</div>
+</fieldset>

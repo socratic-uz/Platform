@@ -3,7 +3,7 @@
    Pure CSS Grid, Material 3 Tokens & Responsive Ergonomics
    ========================================================================== */
 
-.profile-dialog-content {
+:where(details.profile-dialog-content, .profile-dialog-content) {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-4, 1rem);
@@ -34,9 +34,9 @@
     font-size: 0.8rem;
 }
 
-.profile-auth-card {
+:where(.profile-auth-card) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3, 0.75rem);
     padding: 0.75rem;
@@ -45,7 +45,7 @@
     background: var(--md-sys-color-surface-container-high);
 }
 
-.profile-auth-info {
+:where(.profile-auth-info) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);

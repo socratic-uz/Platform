@@ -44,9 +44,9 @@
     background: var(--md-sys-color-surface-container-lowest);
 }
 
-.picker-trigger-card {
+:where(.picker-trigger-card) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     align-items: center;
     box-sizing: border-box;
@@ -235,7 +235,7 @@
     background: var(--md-sys-color-surface);
 }
 
-.picker-badge {
+:where(.picker-badge, .picker-tag-badge) {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-1);
@@ -295,6 +295,7 @@
 
 .picker-hex-input {
     width: 68px;
+    min-height: var(--md-sys-touch-target-min, 48px);
     border: none;
     outline: none;
     background: transparent;

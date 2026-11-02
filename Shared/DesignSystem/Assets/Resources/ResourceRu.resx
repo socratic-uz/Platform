@@ -429,6 +429,9 @@
   <data name="DownloadSubTitle" xml:space="preserve">
     <value>Доступ к Socratic в любом месте. Поддержка десктопных, мобильных и веб-платформ.</value>
   </data>
+  <data name="QrInstantAccess" xml:space="preserve">
+    <value>Мгновенный доступ Socratic</value>
+  </data>
   <data name="ScanQrText" xml:space="preserve">
     <value>Отсканируйте QR-код для мобильных устройств</value>
   </data>

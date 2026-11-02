@@ -9,212 +9,203 @@
 @using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Actions
+@using static Assets.Constants.Formats
 @using static Material.Web.Components.IconButtonVariant
 
 @inherits QuickGrid<TItem>
 @typeparam TItem where TItem : class, new()
 
-<div class=@SmartGridContainer>
+<CascadingValue TValue="InternalGridContext<TItem>" IsFixed=@true Value=@_publicGridContext>
+    @{
+        StartCollectingColumns();
+    }
+    @ChildContent
+
     @if (!AsCards)
     {
-        <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
-    }
-
-    <CascadingValue TValue="InternalGridContext<TItem>" IsFixed=@true Value=@_publicGridContext>
-        @{
-            StartCollectingColumns();
-        }
-        @ChildContent
-
-        @if (!AsCards)
+        @foreach (var column in displayColumns)
         {
-            @foreach (var column in displayColumns)
+            var property = column.Property;
+            var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+
+            if (propertyType.IsEnum)
             {
-                var property = column.Property;
-                var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
+                    @{
+                        var propertyValue = column.Getter(item);
 
-                if (propertyType.IsEnum)
-                {
-                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
-                        @{
-                            var propertyValue = column.Getter(item);
+                        if (propertyValue != null)
+                        {
+                            var isFlagsEnum = propertyType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
 
-                            if (propertyValue != null)
+                            if (isFlagsEnum)
                             {
-                                var isFlagsEnum = propertyType.GetCustomAttributes(typeof(FlagsAttribute), false).Any();
+                                var enumValues = Enum.GetValuesAsUnderlyingType(propertyType);
+                                var selectedValues = new List<string>();
 
-                                if (isFlagsEnum)
+                                var underlyingType = Enum.GetUnderlyingType(propertyType);
+                                var isLongEnum = underlyingType == typeof(long) || underlyingType == typeof(ulong);
+
+                                foreach (var enumValue in enumValues)
                                 {
-                                    var enumValues = Enum.GetValuesAsUnderlyingType(propertyType);
-                                    var selectedValues = new List<string>();
-
-                                    var underlyingType = Enum.GetUnderlyingType(propertyType);
-                                    var isLongEnum = underlyingType == typeof(long) || underlyingType == typeof(ulong);
-
-                                    foreach (var enumValue in enumValues)
+                                    if (isLongEnum)
                                     {
-                                        if (isLongEnum)
+                                        var enumLong = Convert.ToInt64(enumValue);
+                                        var currentLong = Convert.ToInt64(propertyValue);
+                                        if ((currentLong & enumLong) == enumLong && enumLong != 0)
                                         {
-                                            var enumLong = Convert.ToInt64(enumValue);
-                                            var currentLong = Convert.ToInt64(propertyValue);
-                                            if ((currentLong & enumLong) == enumLong && enumLong != 0)
-                                            {
-                                                selectedValues.Add(GetEnumDisplayText(enumValue, propertyType));
-                                            }
+                                            selectedValues.Add(GetEnumDisplayText(enumValue, propertyType));
                                         }
-                                        else
-                                        {
-                                            var enumInt = Convert.ToInt32(enumValue);
-                                            var currentInt = Convert.ToInt32(propertyValue);
-                                            if ((currentInt & enumInt) == enumInt && enumInt != 0)
-                                            {
-                                                selectedValues.Add(GetEnumDisplayText(enumValue, propertyType));
-                                            }
-                                        }
-                                    }
-
-                                    if (selectedValues.Any())
-                                    {
-                                        <div class=@GridEnumFlags>
-                                            @foreach (var value in selectedValues)
-                                            {
-                                                <Chip ChipType=@InputChipType Label=@value Disabled=@true CssClass=@GridChipReadonly />
-                                            }
-                                        </div>
                                     }
                                     else
                                     {
-                                        <text>-</text>
+                                        var enumInt = Convert.ToInt32(enumValue);
+                                        var currentInt = Convert.ToInt32(propertyValue);
+                                        if ((currentInt & enumInt) == enumInt && enumInt != 0)
+                                        {
+                                            selectedValues.Add(GetEnumDisplayText(enumValue, propertyType));
+                                        }
                                     }
+                                }
+
+                                if (selectedValues.Any())
+                                {
+                                    <span class=@GridEnumFlags>
+                                        @foreach (var value in selectedValues)
+                                        {
+                                            <Chip ChipType=@InputChipType Label=@value Disabled=@true CssClass=@GridChipReadonly />
+                                        }
+                                    </span>
                                 }
                                 else
                                 {
-                                    <Chip ChipType=@InputChipType Label=@GetEnumDisplayText(propertyValue, propertyType) Disabled=@true CssClass=@GridChipReadonly />
+                                    <text>-</text>
                                 }
                             }
                             else
                             {
-                                <text>-</text>
+                                <Chip ChipType=@InputChipType Label=@GetEnumDisplayText(propertyValue, propertyType) Disabled=@true CssClass=@GridChipReadonly />
                             }
                         }
-                    </TemplateColumn>
-                }
-                else if (propertyType == typeof(bool))
-                {
-                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
-                        @{
-                            var propertyValue = column.Getter(item) is bool boolValue && boolValue;
-                            Expression<Func<bool>> valueExpression = () => propertyValue;
+                        else
+                        {
+                            <text>-</text>
                         }
-                        <Switch Disabled=@true
-                                AriaLabel=@GetBooleanAriaLabel(column.DisplayName, propertyValue)
-                                Value=@propertyValue
-                                ValueExpression=@valueExpression />
-                    </TemplateColumn>
-                }
-                else if (CanCreatePropertyColumn(propertyType))
-                {
-                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable SortBy=@column.SortRule IsDefaultSortColumn=@column.IsDefaultSort InitialSortDirection=@(column.IsDefaultSort ? DefaultSortDirection : SortDirection.Ascending) Context="item">
-                        @FormatValue(column.Getter(item), column.Format)
-                    </TemplateColumn>
-                }
-                else
-                {
-                    <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
-                        @FormatValue(column.Getter(item), column.Format)
-                    </TemplateColumn>
-                }
+                    }
+                </TemplateColumn>
             }
-
-            <TemplateColumn Context="item" TGridItem="TItem" Class=@ActionsColumn>
-                <HeaderTemplate>
-                    <Fab Variant="primary" Lowered=@true Icon=@Add AriaLabel=@L[CreateAction] OnClick=@(e => OpenCreateDialog()) />
-                </HeaderTemplate>
-                <ChildContent>
-                    <IconButton Variant=@FilledTonal class="btn-s" Icon=@Edit OnClick=@(e => OpenEditDialog(item)) Title=@L[EditAction] AriaLabel=@L[EditAction] />
-                </ChildContent>
-            </TemplateColumn>
-        }
-
-        <Defer>
-            @{
-                FinishCollectingColumns();
-            }
-            <ColumnsCollectedNotifier TGridItem="TItem" />
-
-            @if (AsCards)
+            else if (propertyType == typeof(bool))
             {
-                <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@CardGrid>
-                    @if (Virtualize)
-                    {
-                        <Virtualize @ref="@_virtualizeComponent"
-                                    TItem="(int RowIndex, TItem Data)"
-                                    ItemSize="@ItemSize"
-                                    OverscanCount="@OverscanCount"
-                                    ItemsProvider="@ProvideVirtualizedItems"
-                                    ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
-                                    Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
+                    @{
+                        var propertyValue = column.Getter(item) is bool boolValue && boolValue;
+                        Expression<Func<bool>> valueExpression = () => propertyValue;
                     }
-                    else
-                    {
-                        @_renderNonVirtualizedRows
-                    }
-                </section>
+                    <Switch Disabled=@true
+                            AriaLabel=@GetBooleanAriaLabel(column.DisplayName, propertyValue)
+                            Value=@propertyValue
+                            ValueExpression=@valueExpression />
+                </TemplateColumn>
+            }
+            else if (CanCreatePropertyColumn(propertyType))
+            {
+                <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable SortBy=@column.SortRule IsDefaultSortColumn=@column.IsDefaultSort InitialSortDirection=@(column.IsDefaultSort ? DefaultSortDirection : SortDirection.Ascending) Context="item">
+                    @FormatValue(column.Getter(item), column.Format)
+                </TemplateColumn>
             }
             else
             {
-                <div class=@Container>
-                    <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@GridClass()>
-                        <thead>
-                            <tr>
-                                @_renderColumnHeaders
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if (Virtualize)
-                            {
-                                <Virtualize @ref="@_virtualizeComponent"
-                                            TItem="(int RowIndex, TItem Data)"
-                                            ItemSize="@ItemSize"
-                                            OverscanCount="@OverscanCount"
-                                            ItemsProvider="@ProvideVirtualizedItems"
-                                            ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
-                                            Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
-                            }
-                            else
-                            {
-                                @_renderNonVirtualizedRows
-                            }
-                        </tbody>
-                    </table>
-                    <Paginator State="@Pagination" />
-                </div>
+                <TemplateColumn TGridItem="TItem" Title=@column.DisplayName Sortable=@column.IsSortable Context="item">
+                    @FormatValue(column.Getter(item), column.Format)
+                </TemplateColumn>
             }
-        </Defer>
-    </CascadingValue>
+        }
 
-    @if (!AsCards)
-    {
-        <SmartForm TItem="TItem"
-                   Item=@currentModel
-                   Open=@isFormOpen
-                   OnValidSubmit=@HandleValidSubmit
-                   OnInvalidSubmit=@OnInvalidSubmit
-                   OnClose=@(() => isFormOpen = false)
-                   OnCancel=@(() => isFormOpen = false)
-                   SubmitText=@submitButtonText
-                   CancelText=@L[CancelAction]
-                   ShowValidationSummary=@true
-                   ExcludeProperties=@ExcludeProperties
-                   PropertyDisplayNames=@PropertyDisplayNames
-                   PropertyTypes=@PropertyTypes>
-
-            <Headline>
-                <div class=@SmartGridHeadlineClass>
-                    <Icon Name=@dialogIcon />
-                    <span>@dialogTitle</span>
-                </div>
-            </Headline>
-        </SmartForm>
+        <TemplateColumn Context="item" TGridItem="TItem" Class=@ActionsColumn>
+            <HeaderTemplate>
+                <md-fab variant="primary" lowered aria-label=@L[CreateAction] @onclick=@(e => OpenCreateDialog())>@Add</md-fab>
+            </HeaderTemplate>
+            <ChildContent>
+                <md-filled-tonal-icon-button class="btn-s" title=@L[EditAction] aria-label=@L[EditAction] @onclick=@(e => OpenEditDialog(item))>@Edit</md-filled-tonal-icon-button>
+            </ChildContent>
+        </TemplateColumn>
     }
-</div>
+
+    <Defer>
+        @{
+            FinishCollectingColumns();
+        }
+        <ColumnsCollectedNotifier TGridItem="TItem" />
+
+        @if (AsCards)
+        {
+            <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@CardGrid>
+                @if (Virtualize)
+                {
+                    <Virtualize @ref="@_virtualizeComponent"
+                                TItem="(int RowIndex, TItem Data)"
+                                ItemSize="@ItemSize"
+                                OverscanCount="@OverscanCount"
+                                ItemsProvider="@ProvideVirtualizedItems"
+                                ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
+                                Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                }
+                else
+                {
+                    @_renderNonVirtualizedRows
+                }
+            </section>
+        }
+        else
+        {
+            <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
+            <table theme=@Theme aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions=@HideColumnOptionsAsync @attributes=AdditionalAttributes class=@string.Format(Three, SmartGridContainer, Container, GridClass())>
+                    <thead>
+                        <tr>
+                            @_renderColumnHeaders
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Virtualize)
+                        {
+                            <Virtualize @ref="_virtualizeComponent"
+                                        TItem="(int RowIndex, TItem Data)"
+                                        ItemSize=@ItemSize
+                                        OverscanCount=@OverscanCount
+                                        ItemsProvider=@ProvideVirtualizedItems
+                                        ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
+                                        Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                        }
+                        else
+                        {
+                            @_renderNonVirtualizedRows
+                        }
+                    </tbody>
+            </table>
+            <Paginator State=@Pagination />
+        }
+    </Defer>
+</CascadingValue>
+
+@if (!AsCards && isFormOpen)
+{
+    <SmartForm TItem="TItem"
+               Item=@currentModel
+               Open=@isFormOpen
+               OnValidSubmit=@HandleValidSubmit
+               OnInvalidSubmit=@OnInvalidSubmit
+               OnClose=@(() => isFormOpen = false)
+               OnCancel=@(() => isFormOpen = false)
+               SubmitText=@submitButtonText
+               CancelText=@L[CancelAction]
+               ShowValidationSummary=@true
+               ExcludeProperties=@ExcludeProperties
+               PropertyDisplayNames=@PropertyDisplayNames
+               PropertyTypes=@PropertyTypes>
+
+        <Headline>
+            <Icon Name=@dialogIcon />
+            <span>@dialogTitle</span>
+        </Headline>
+    </SmartForm>
+}

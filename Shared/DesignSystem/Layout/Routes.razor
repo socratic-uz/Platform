@@ -22,54 +22,48 @@
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
 		   }
-		   <main class=@string.Format(Two, EmptyStateRoot, GridCenter)>
-			   <article class=@CardElevated>
-				   <header>
-					   <span class=@EmptyStateIcon>
-						   <Icon Name=@RocketLaunch />
-					   </span>
-					   <hgroup>
-						   <h2 class=@EmptyStateTitle>
-							   @(isRoot ? "Socratic Standalone Host" : "Page Not Found")
-						   </h2>
-						   <p class=@EmptyStateDesc>
-							   @(isRoot ? "Standalone development mode. Select an active module:" : "Requested route was not found. Available modules in this solution:")
-						   </p>
-					   </hgroup>
-				   </header>
+		   <main class=@string.Format(Three, EmptyStateRoot, GridCenter, CardElevated)>
+			   <header>
+				   <Icon Name=@RocketLaunch class=@EmptyStateIcon />
+				   <hgroup>
+					   <h2 class=@EmptyStateTitle>
+						   @(isRoot ? "Socratic Standalone Host" : "Page Not Found")
+					   </h2>
+					   <p class=@EmptyStateDesc>
+						   @(isRoot ? "Standalone development mode. Select an active module:" : "Requested route was not found. Available modules in this solution:")
+					   </p>
+				   </hgroup>
+			   </header>
 
-				   @if (modules.Count > 0)
-				   {
-					   <nav aria-label="Available modules">
-						   <ul>
-							   @foreach (var mod in modules)
-							   {
-								   <li>
-									   <a href=@mod.RoutePrefix>
-										   <Icon Name=@(mod.Icon ?? Widgets) />
-										   <span class=@TitleMedium>@mod.DisplayTitle</span>
-										   <span class=@LabelSmall>@mod.RoutePrefix</span>
-										   <Icon Name=@ArrowForward />
-									   </a>
-								   </li>
-							   }
-						   </ul>
-					   </nav>
-				   }
-				   else
-				   {
-					   <section class=@EmptyStateAction>
-						   <p class=@EmptyStateDesc>No modules discovered in FeatureRegistry</p>
-						   <span class=@LabelSmall>Verify registrations in FeatureRegistry.Register()</span>
-					   </section>
-				   }
+			   @if (modules.Count > 0)
+			   {
+				   <menu aria-label="Available modules">
+					   @foreach (var mod in modules)
+					   {
+						   <li>
+							   <a href=@mod.RoutePrefix>
+								   <Icon Name=@(mod.Icon ?? Widgets) />
+								   <span class=@TitleMedium>@mod.DisplayTitle</span>
+								   <span class=@LabelSmall>@mod.RoutePrefix</span>
+								   <Icon Name=@ArrowForward />
+							   </a>
+						   </li>
+					   }
+				   </menu>
+			   }
+			   else
+			   {
+				   <section class=@EmptyStateAction>
+					   <p class=@EmptyStateDesc>No modules discovered in FeatureRegistry</p>
+					   <span class=@LabelSmall>Verify registrations in FeatureRegistry.Register()</span>
+				   </section>
+			   }
 
-				   <footer>
-					   <span class=@LabelSmall>
-						   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
-					   </span>
-				   </footer>
-			   </article>
+			   <footer>
+				   <span class=@LabelSmall>
+					   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
+				   </span>
+			   </footer>
 		   </main>
 	   </LayoutView>
    </NotFound>

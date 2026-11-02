@@ -7,11 +7,11 @@
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.IconButtonVariant
 
-<div class=@ToastContainer>
+<aside class=@ToastContainer aria-live="polite">
     @foreach (var toast in Toasts)
     {
-        <div class=@string.Format(Two, SmarttoastRoot, GetToastLevelClass(toast.Level)) key="@toast.Id">
-            <div class=@SmartToastHeader>
+        <article class=@string.Format(Two, SmarttoastRoot, GetToastLevelClass(toast.Level)) @key=@toast.Id role="status">
+            <header class=@SmartToastHeader>
                 <span class=@SmartToastIcon>
                     @switch (toast.Level)
                     {
@@ -37,11 +37,11 @@
                             Variant=@Standard
                             OnClick=@(() => DismissToast(toast.Id))
                             AriaLabel=@L[CloseAction]
-                            Class=@SmartToastCloseBtn />
-            </div>
-            <div class=@SmartToastBody>
+                            class=@SmartToastCloseBtn />
+            </header>
+            <p class=@SmartToastBody>
                 @toast.Message
-            </div>
-        </div>
+            </p>
+        </article>
     }
-</div>
+</aside>

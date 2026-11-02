@@ -1,13 +1,14 @@
 @namespace Shared.Components
 @using Material.Web.Components
+@using static Assets.Constants.Classes.ThemeToggle
 @using static Icons
 @using static Loc.Settings
 @using static Material.Web.Components.ButtonVariant
 
-<div class=@SettingsPanelContainerClass>
-    <div class=@SettingsSectionClass>
-        <h4 style="margin-bottom: 8px; color: var(--md-sys-color-on-surface);">@L[SettingsThemeTitle]</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); gap: 8px;">
+<aside class=@SettingsPanelContainer>
+    <fieldset class=@SettingsSection>
+        <legend class=@SettingsSectionTitle>@L[SettingsThemeTitle]</legend>
+        <menu class=@SettingsThemeOptions>
             <Button Variant=@(ThemeMode == "light" ? Filled : Outlined)
                     OnClick=@(() => SetThemeAsync("light"))
                     Icon=@LightMode>
@@ -15,7 +16,7 @@
             </Button>
             <Button Variant=@(ThemeMode == "dark" ? Filled : Outlined)
                     OnClick=@(() => SetThemeAsync("dark"))
-                    Icon=@DarkMode>
+                    Icon=@DarkModeIcon>
                 @L[SettingsThemeDark]
             </Button>
             <Button Variant=@(ThemeMode == "system" ? Filled : Outlined)
@@ -23,14 +24,13 @@
                     Icon=@BrightnessAuto>
                 @L[SettingsThemeAuto]
             </Button>
-        </div>
-    </div>
+        </menu>
+    </fieldset>
 
-    <Divider style="margin: 16px 0;" />
+    <Divider />
 
-    <div class=@SettingsSectionClass>
-        <h4 style="margin-bottom: 8px; color: var(--md-sys-color-on-surface);">@L[AccentColor]</h4>
+    <fieldset class=@SettingsSection>
+        <legend class=@SettingsSectionTitle>@L[AccentColor]</legend>
         <ColorPicker @bind-Value=@AccentColor Compact=@true />
-    </div>
-</div>
-
+    </fieldset>
+</aside>

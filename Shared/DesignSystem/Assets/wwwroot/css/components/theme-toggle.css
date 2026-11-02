@@ -84,3 +84,33 @@
 #app.dark-mode .mode-toggle-icon {
     grid-column: initial;
 }
+
+.settings-panel-container {
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-2, 0.5rem);
+}
+
+.settings-section {
+    display: grid;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.settings-section-title {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-title-small-size, 0.875rem);
+    font-weight: 600;
+}
+
+.settings-theme-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, max-content));
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

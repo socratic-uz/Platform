@@ -140,27 +140,17 @@ public abstract partial class ColumnBase<TGridItem>
             if (isSortable)
             {
                 builder.OpenElement(6, "button");
-                builder.AddAttribute(7, "class", global::Assets.Constants.Classes.Table.ColTitle);
+                builder.AddAttribute(7, "class", global::Assets.Constants.Classes.Table.ColTitle + " " + global::Assets.Constants.Classes.Table.ColTitleText);
                 builder.AddAttribute(8, "type", "button");
                 builder.AddAttribute(9, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.SortByColumnAsync(this)));
-                builder.OpenElement(10, "div");
-                builder.AddAttribute(11, "class", global::Assets.Constants.Classes.Table.ColTitleText);
                 builder.AddContent(12, Title);
-                builder.CloseElement();
-                builder.OpenElement(13, "div");
-                builder.AddAttribute(14, "class", global::Assets.Constants.Classes.Table.SortIndicator);
-                builder.AddAttribute(15, "aria-hidden", "true");
-                builder.CloseElement();
                 builder.CloseElement();
             }
             else
             {
-                builder.OpenElement(16, "div");
-                builder.AddAttribute(17, "class", global::Assets.Constants.Classes.Table.ColTitle);
-                builder.OpenElement(18, "div");
-                builder.AddAttribute(19, "class", global::Assets.Constants.Classes.Table.ColTitleText);
+                builder.OpenElement(16, "span");
+                builder.AddAttribute(17, "class", global::Assets.Constants.Classes.Table.ColTitle + " " + global::Assets.Constants.Classes.Table.ColTitleText);
                 builder.AddContent(20, Title);
-                builder.CloseElement();
                 builder.CloseElement();
             }
 

@@ -5,10 +5,10 @@
 @using static Assets.Constants.Icons
 @using static Loc.Common
 
-<div class=@TablePaginator>
+<footer class=@TablePaginator>
     @if (State.TotalItemCount.HasValue)
     {
-        <div class=@PaginatorSummary>
+        <span class=@PaginatorSummary>
             @if (SummaryTemplate is not null)
             {
                 @SummaryTemplate
@@ -17,16 +17,16 @@
             {
                 <text><strong>@State.TotalItemCount</strong> @L[PaginationItems]</text>
             }
-        </div>
+        </span>
         <nav>
             <IconButton class=@GoFirst Icon=@FirstPage OnClick=@GoFirstAsync Disabled=@(!CanGoBack) Title=@L[PaginationFirstPage] AriaLabel=@L[PaginationFirstPage] />
             <IconButton class=@GoPrevious Icon=@NavigateBefore OnClick=@GoPreviousAsync Disabled=@(!CanGoBack) Title=@L[PaginationPrevPage] AriaLabel=@L[PaginationPrevPage] />
-            <div class=@PaginationText>
+            <span class=@PaginationText>
                 @L[PaginationPage] <strong>@(State.CurrentPageIndex + 1)</strong>
                 @L[PaginationOf] <strong>@(State.LastPageIndex + 1)</strong>
-            </div>
+            </span>
             <IconButton class=@GoNext Icon=@NavigateNext OnClick=@GoNextAsync Disabled=@(!CanGoForwards) Title=@L[PaginationNextPage] AriaLabel=@L[PaginationNextPage] />
             <IconButton class=@GoLast Icon=@LastPage OnClick=@GoLastAsync Disabled=@(!CanGoForwards) Title=@L[PaginationLastPage] AriaLabel=@L[PaginationLastPage] />
         </nav>
     }
-</div>
+</footer>

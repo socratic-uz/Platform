@@ -1,52 +1,57 @@
 @namespace Shared.Layout
-@using Microsoft.AspNetCore.Components.Rendering
 @using Microsoft.AspNetCore.Components.Sections
 @using static Classes.Header
 @using static Icons
 
-<header class=@ComputedHeaderClass>
-	<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-	<section class=@HeaderStartZone>
-		@if (ShowBrand)
-		{
-			<a href="/" class=@HeaderBrandLink title="Socratic">
-				<span class=@BrandIconBox>
-					<Icon Name=@AutoAwesome />
-				</span>
-				<span class=@HeaderBrandText>Socratic</span>
-			</a>
-		}
-		@if (StartContent != null)
-		{
-			@StartContent
-		}
-	</section>
-
-	<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-	<nav class=@HeaderCenterZone aria-label="Main Navigation">
-		@if (CenterContent != null)
-		{
-			@CenterContent
-		}
-		@if (ChildContent != null)
+@if (Visible && !Empty)
+{
+	<SectionContent SectionName=@Name>
+		@if (ShouldRenderCustom)
 		{
 			@ChildContent
 		}
-	</nav>
+		else
+		{
+			<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
+			<nav class=@HeaderStartZone aria-label="Breadcrumb">
+				@if (ShowBrand)
+				{
+					<a href="/" class=@HeaderBrandLink title="Socratic">
+						<Icon Name=@AutoAwesome class=@BrandIconBox />
+						<span class=@HeaderBrandText>Socratic</span>
+					</a>
+				}
+				@if (StartContent != null)
+				{
+					@StartContent
+				}
+				<HeaderStartOutlet />
+			</nav>
 
-	<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-	<section class=@HeaderEndZone aria-label="User Actions">
-		@if (EndContent != null)
-		{
-			@EndContent
+			<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
+			@if (CenterContent != null)
+			{
+				@CenterContent
+			}
+			<HeaderCenterOutlet />
+
+			<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
+			<menu class=@HeaderEndZone aria-label="User Actions">
+				@if (EndContent != null)
+				{
+					@EndContent
+				}
+				<HeaderEndOutlet />
+				@if (ShowDefaultActions)
+				{
+					<LanguageSelector Variant="pill" />
+				}
+				@if (ShowAvatar)
+				{
+					<Avatar />
+				}
+			</menu>
 		}
-		@if (ShowDefaultActions)
-		{
-			<LanguageSelector Variant="pill" />
-		}
-		@if (ShowAvatar)
-		{
-			<Avatar />
-		}
-	</section>
-</header>
+	</SectionContent>
+}
+

@@ -589,10 +589,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
             builder.SetKey(col);
             builder.AddAttribute(3, "scope", "col");
 
-            builder.OpenElement(4, "div");
-            builder.AddAttribute(5, "class", global::Assets.Constants.Classes.Table.ColHeaderContent);
-            builder.AddContent(6, col.HeaderContent);
-            builder.CloseElement();
+            builder.AddContent(4, col.HeaderContent);
 
             if (col == _displayOptionsForColumn)
             {

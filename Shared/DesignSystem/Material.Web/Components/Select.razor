@@ -4,24 +4,24 @@
 
 @if (Variant == SelectVariant.Filled)
 {
-    <md-filled-select id="@Id"
-                      class="@CssClass material-select"
-                      label="@Label"
-                      value="@CurrentValueAsString"
-                      supporting-text="@GetSupportingText()"
-                      error-text="@GetErrorText()"
-                      @attributes="AdditionalAttributes"
-                      disabled="@Disabled"
-                      required="@Required"
-                      error="@HasValidationErrors"
-                      quick="@Quick"
-                      no-asterisk="@NoAsterisk"
-                      menu-positioning="@MenuPositioning"
-                      clamp-menu-width="@ClampMenuWidth"
-                      typeahead-delay="@TypeaheadDelay"
-                      has-leading-icon="@HasLeadingIcon"
-                      menu-align="@MenuAlign"
-                      @ref="selectElement"
+    <md-filled-select id=@Id
+                      class=@CssClass
+                      label=@Label
+                      value=@CurrentValueAsString
+                      supporting-text=@GetSupportingText()
+                      error-text=@GetErrorText()
+                      @attributes=AdditionalAttributes
+                      disabled=@Disabled
+                      required=@Required
+                      error=@HasValidationErrors
+                      quick=@Quick
+                      no-asterisk=@NoAsterisk
+                      menu-positioning=@MenuPositioning
+                      clamp-menu-width=@ClampMenuWidth
+                      typeahead-delay=@TypeaheadDelay
+                      has-leading-icon=@HasLeadingIcon
+                      menu-align=@MenuAlign
+                      @ref=selectElement
                       @oninput=@HandleInput
                       @onchange=@HandleChange
                       @opening=@OnOpening
@@ -36,16 +36,16 @@
         {
             @foreach (var option in Options)
             {
-                <md-select-option value="@option.Value" 
-                                  headline="@option.Text"
-                                  selected="@(option.Value == CurrentValueAsString)">
+                <md-select-option value=@option.Value 
+                                  headline=@option.Text
+                                  selected=@(option.Value == CurrentValueAsString)>
                     @if (!string.IsNullOrEmpty(option.SupportingText))
                     {
-                        <div slot="supporting-text">@option.SupportingText</div>
+                        <span slot="supporting-text">@option.SupportingText</span>
                     }
                     @if (!string.IsNullOrEmpty(option.TrailingText))
                     {
-                        <div slot="trailing-supporting-text">@option.TrailingText</div>
+                        <span slot="trailing-supporting-text">@option.TrailingText</span>
                     }
                     @if (!string.IsNullOrEmpty(option.LeadingIcon))
                     {
@@ -66,24 +66,24 @@
 }
 else
 {
-    <md-outlined-select id="@Id"
-                        class="@CssClass material-select"
-                        label="@Label"
-                        value="@CurrentValueAsString"
-                        supporting-text="@GetSupportingText()"
-                        error-text="@GetErrorText()"
-                        @attributes="AdditionalAttributes"
-                        disabled="@Disabled"
-                        required="@Required"
-                        error="@HasValidationErrors"
-                        quick="@Quick"
-                        no-asterisk="@NoAsterisk"
-                        menu-positioning="@MenuPositioning"
-                        clamp-menu-width="@ClampMenuWidth"
-                        typeahead-delay="@TypeaheadDelay"
-                        has-leading-icon="@HasLeadingIcon"
-                        menu-align="@MenuAlign"
-                        @ref="selectElement"
+    <md-outlined-select id=@Id
+                        class=@CssClass
+                        label=@Label
+                        value=@CurrentValueAsString
+                        supporting-text=@GetSupportingText()
+                        error-text=@GetErrorText()
+                        @attributes=AdditionalAttributes
+                        disabled=@Disabled
+                        required=@Required
+                        error=@HasValidationErrors
+                        quick=@Quick
+                        no-asterisk=@NoAsterisk
+                        menu-positioning=@MenuPositioning
+                        clamp-menu-width=@ClampMenuWidth
+                        typeahead-delay=@TypeaheadDelay
+                        has-leading-icon=@HasLeadingIcon
+                        menu-align=@MenuAlign
+                        @ref=selectElement
                         @oninput=@HandleInput
                         @onchange=@HandleChange
                         @opening=@OnOpening
@@ -98,16 +98,16 @@ else
         {
             @foreach (var option in Options)
             {
-                <md-select-option value="@option.Value" 
-                                  headline="@option.Text"
-                                  selected="@(option.Value == CurrentValueAsString)">
+                <md-select-option value=@option.Value 
+                                  headline=@option.Text
+                                  selected=@(option.Value == CurrentValueAsString)>
                     @if (!string.IsNullOrEmpty(option.SupportingText))
                     {
-                        <div slot="supporting-text">@option.SupportingText</div>
+                        <span slot="supporting-text">@option.SupportingText</span>
                     }
                     @if (!string.IsNullOrEmpty(option.TrailingText))
                     {
-                        <div slot="trailing-supporting-text">@option.TrailingText</div>
+                        <span slot="trailing-supporting-text">@option.TrailingText</span>
                     }
                     @if (!string.IsNullOrEmpty(option.LeadingIcon))
                     {

@@ -4,11 +4,11 @@
 <script type="module" src=@Scripts.Layouts.ReconnectModal></script>
 
 <dialog id="components-reconnect-modal" data-nosnippet>
-    <div class=@ComponentsReconnectContainer>
-        <div class=@ComponentsRejoiningAnimation aria-hidden="true">
-            <div></div>
-            <div></div>
-        </div>
+    <section class=@ComponentsReconnectContainer>
+        <figure class=@ComponentsRejoiningAnimation aria-hidden="true">
+            <span></span>
+            <span></span>
+        </figure>
         <p class=@ComponentsReconnectFirstAttemptVisible>
             Rejoining the server...
         </p>
@@ -30,5 +30,5 @@
         <p class=@ComponentsResumeFailedVisible>
             Failed to resume the session.<br />Please reload the page.
         </p>
-    </div>
+    </section>
 </dialog>

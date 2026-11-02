@@ -127,9 +127,14 @@
 }
 
 .ux-mode-title-box h3 {
+    grid-column: 1 / -1;
     color: var(--md-sys-color-on-surface);
     font-size: 1.08rem;
     font-weight: 700;
+}
+
+.ux-mode-title-box .ux-mode-code {
+    grid-column: 1 / -1;
 }
 
 .wishlist-title-text {

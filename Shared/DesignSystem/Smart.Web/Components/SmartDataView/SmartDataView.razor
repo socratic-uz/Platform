@@ -8,16 +8,16 @@
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem where TItem : class, new()
 
-<div class=@SmartdataviewRoot>
-    <div class=@SmartDataViewHeader>
+<article class=@SmartdataviewRoot>
+    <header class=@SmartDataViewHeader>
         <SmartFilterBar TItem="TItem"
-                        Placeholder="@EffectivePlaceholder"
-                        SearchText="@SearchText"
+                        Placeholder=@EffectivePlaceholder
+                        SearchText=@SearchText
                         SearchTextChanged=@OnSearchTextChanged
-                        FilterChips="@FilterChips"
+                        FilterChips=@FilterChips
                         OnChipToggled=@OnChipToggled />
 
-        <div class=@SmartViewModeToggle>
+        <menu class=@SmartViewModeToggle>
             <Button Variant=@(CurrentMode == ViewMode.Grid ? Filled : Outlined)
                     OnClick=@(() => SetViewMode(ViewMode.Grid))>
                 <Icon Name=@TableChart Slot="icon" />
@@ -28,27 +28,27 @@
                 <Icon Name=@ViewKanban Slot="icon" />
                 @L[SmartDataViewKanban]
             </Button>
-        </div>
-    </div>
+        </menu>
+    </header>
 
     <section class=@SmartDataViewContent>
         @if (CurrentMode == ViewMode.Grid)
         {
             <SmartGrid TItem="TItem"
-                       Items="@FilteredItems"
-                       PageSize="@PageSize"
+                       Items=@FilteredItems
+                       PageSize=@PageSize
                        OnValidSubmit=@OnValidSubmit />
         }
         else if (CurrentMode == ViewMode.Kanban)
         {
             <SmartKanban TItem="TItem"
-                         Items="@FilteredItems"
-                         Columns="@KanbanColumns"
-                         StatusSelector="@StatusSelector"
-                         TitleSelector="@TitleSelector"
-                         SubtitleSelector="@SubtitleSelector"
+                         Items=@FilteredItems
+                         Columns=@KanbanColumns
+                         StatusSelector=@StatusSelector
+                         TitleSelector=@TitleSelector
+                         SubtitleSelector=@SubtitleSelector
                          OnCardClicked=@OnCardClicked
                          OnCardMoved=@OnCardMoved />
         }
     </section>
-</div>
+</article>

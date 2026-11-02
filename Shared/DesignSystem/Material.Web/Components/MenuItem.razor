@@ -1,14 +1,14 @@
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Web
 
-<md-menu-item disabled="@Disabled"
-              type="@Type"
-              href="@Href"
-              target="@Target"
-              keep-open="@KeepOpen"
-              selected="@Selected"
-              @attributes="AdditionalAttributes"
-              @onclick="HandleClick">
+<md-menu-item disabled=@Disabled
+              type=@Type
+              href=@Href
+              target=@Target
+              keep-open=@KeepOpen
+              selected=@Selected
+              @attributes=AdditionalAttributes
+              @onclick=@HandleClick>
     
     @if (!string.IsNullOrEmpty(StartIcon))
     {
@@ -17,12 +17,12 @@
     
     @if (!string.IsNullOrEmpty(Headline))
     {
-        <div slot="headline">@Headline</div>
+        <span slot="headline">@Headline</span>
     }
     
     @if (!string.IsNullOrEmpty(SupportingText))
     {
-        <div slot="supporting-text">@SupportingText</div>
+        <span slot="supporting-text">@SupportingText</span>
     }
     
     @if (!string.IsNullOrEmpty(EndIcon))

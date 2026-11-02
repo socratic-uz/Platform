@@ -39,17 +39,25 @@
     box-shadow: var(--md-sys-elevation-level3);
 }
 
-.col-sort-asc .sort-indicator {
+.col-sort-asc .col-title::after {
+    align-self: center;
+    width: 1rem;
+    height: 1rem;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
     background-size: contain;
     background-repeat: no-repeat;
     transform: scaleY(-1);
+    content: "";
 }
 
-.col-sort-desc .sort-indicator {
+.col-sort-desc .col-title::after {
+    align-self: center;
+    width: 1rem;
+    height: 1rem;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
     background-size: contain;
     background-repeat: no-repeat;
+    content: "";
 }
 
 .col-title {
@@ -244,7 +252,7 @@
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-:where(.table-container, .schedule-table-container) {
+:where(.table-container, .schedule-table-container):not(table) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     box-sizing: border-box;
@@ -255,6 +263,22 @@
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+:where(table.table-container, table.schedule-table-container) {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    overflow-x: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))

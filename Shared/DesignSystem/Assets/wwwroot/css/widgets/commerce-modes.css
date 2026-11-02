@@ -258,15 +258,24 @@
 .ux-widget-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     align-items: center;
     min-width: 0;
     font-weight: 700;
+}
+
+.ux-widget-row > span:first-child,
+.ux-widget-subrow > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .ux-widget-subrow {
     display: grid;
     opacity: 0.85;
     grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2, 0.5rem);
     min-width: 0;
     font-size: 0.72rem;
 }
@@ -1998,9 +2007,7 @@
 }
 
 .ux-expand-container {
-    display: grid;
-    place-items: center;
-    width: 100%;
+    justify-self: center;
     margin-top: 1.5rem;
 }
 

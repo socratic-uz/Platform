@@ -7,8 +7,8 @@
 @using static Assets.Constants.Icons
 @typeparam TItem where TItem : class
 
-<div class=@SmartFilterBar>
-    <div class=@SmartFilterSearch>
+<search class=@SmartFilterBar>
+    <fieldset class=@SmartFilterSearch>
         <TextField TValue="string"
                    Variant=@(TextField<string>.TextFieldVariant.Outlined)
                    Placeholder=@EffectivePlaceholder
@@ -20,11 +20,11 @@
                    HasTrailingIcon=@(!string.IsNullOrEmpty(SearchText))
                    TrailingIcon=@Close
                    OnTrailingIconClick=@ClearSearch />
-    </div>
+    </fieldset>
 
     @if (FilterChips != null && FilterChips.Any())
     {
-        <div class=@SmartFilterChips>
+        <menu class=@SmartFilterChips>
             @foreach (var chip in FilterChips)
             {
                 <Chip ChipType=@FilterChipType
@@ -32,6 +32,6 @@
                       Selected=@chip.IsSelected
                       OnClick=@(() => ToggleChip(chip)) />
             }
-        </div>
+        </menu>
     }
-</div>
+</search>

@@ -68,9 +68,14 @@
     margin-top: var(--md-sys-spacing-4, 1rem);
 }
 
-.det-preview-card {
+:where(.det-preview-container, .det-preview-card) {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
+    grid-area: preview;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    margin: var(--md-sys-spacing-6, 1.5rem);
     padding: var(--md-sys-spacing-5, 1.25rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
@@ -79,7 +84,8 @@
 }
 
 @media (max-width: 839.98px) {
-    .det-preview-card {
+    :where(.det-preview-container, .det-preview-card) {
+        margin: var(--md-sys-spacing-3, 0.75rem);
         padding: var(--md-sys-spacing-3, 0.75rem);
         border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     }
@@ -210,10 +216,11 @@
     font-weight: 600;
 }
 
-.det-display-area {
+:where(.det-display-area, .det-camera-wrapper) {
     display: grid;
     place-items: center;
     position: relative;
+    width: 100%;
     height: 100%;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -442,7 +449,7 @@
     height: 100%;
 }
 
-.det-layout {
+:where(main.det-main, .det-layout) {
     display: grid;
     grid-template-columns: minmax(min(100%, 420px), 420px) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
@@ -460,17 +467,6 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-}
-
-.det-preview-container {
-    display: grid;
-    grid-template-rows: minmax(0, 1fr);
-    grid-area: preview;
-    height: 100dvh;
-    min-width: 0;
-    padding: var(--md-sys-spacing-6, 1.5rem);
-    background: var(--md-sys-color-surface);
-    overflow: hidden;
 }
 
 .det-tabs-container {
@@ -502,9 +498,10 @@
         min-height: 100dvh;
     }
 
-    .det-preview-container {
+    :where(.det-preview-container, .det-preview-card) {
         height: auto;
         min-height: 380px;
+        margin: var(--md-sys-spacing-3, 0.75rem);
         padding: var(--md-sys-spacing-3, 0.75rem);
     }
 
@@ -577,9 +574,10 @@
         min-height: 100dvh;
     }
 
-    .det-preview-container {
+    :where(.det-preview-container, .det-preview-card) {
         height: auto;
         min-height: 280px;
+        margin: var(--md-sys-spacing-2, 0.5rem);
         padding: var(--md-sys-spacing-2, 0.5rem);
     }
 

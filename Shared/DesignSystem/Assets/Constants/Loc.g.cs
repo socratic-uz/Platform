@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1688.
+    /// Total unique keys: 1689.
     /// </summary>
     public static class Loc
     {
@@ -16306,7 +16306,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Landing (439 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
+        /// Domain group: Landing (440 keys). Use with <c>@using static Assets.Constants.Loc.Landing;</c>.
         /// </summary>
         public static class Landing
         {
@@ -19797,6 +19797,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Customize Design&quot;
             /// </summary>
             public const string QrCustomizerTitle = "QrCustomizerTitle";
+
+            /// <summary>
+            /// Key: <c>QrInstantAccess</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный доступ Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tezkor kirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Instant Access&quot;
+            /// </summary>
+            public const string QrInstantAccess = "QrInstantAccess";
 
             /// <summary>
             /// Key: <c>QR_SearchProducts</c><br/>
@@ -51441,6 +51449,14 @@ namespace Assets.Constants
         public const string QrDesignerTitle = "QrDesigner_Title";
 
         /// <summary>
+        /// Key: <c>QrInstantAccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный доступ Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Instant Access&quot;
+        /// </summary>
+        public const string QrInstantAccess = "QrInstantAccess";
+
+        /// <summary>
         /// Key: <c>QR_SearchProducts</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Поиск товаров&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mahsulotlarni qidirish&quot;<br/>
@@ -73009,7 +73025,7 @@ namespace Loc
     }
 
     /// <summary>
-    /// Domain group: Landing (439 keys). Use with <c>@using static Loc.Landing;</c>.
+    /// Domain group: Landing (440 keys). Use with <c>@using static Loc.Landing;</c>.
     /// </summary>
     public static class Landing
     {
@@ -76500,6 +76516,14 @@ namespace Loc
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Customize Design&quot;
         /// </summary>
         public const string QrCustomizerTitle = "QrCustomizerTitle";
+
+        /// <summary>
+        /// Key: <c>QrInstantAccess</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный доступ Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tezkor kirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Instant Access&quot;
+        /// </summary>
+        public const string QrInstantAccess = "QrInstantAccess";
 
         /// <summary>
         /// Key: <c>QR_SearchProducts</c><br/>

@@ -31,14 +31,14 @@
         @foreach (var item in Items)
         {
             <li class=@ReceiptItemRow>
-                <div class=@ItemMain>
+                <hgroup class=@ItemMain>
                     <span class=@ItemName>@item.Name</span>
                     <span class=@ItemMxik>@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
-                </div>
-                <div class=@ItemCalc>
+                </hgroup>
+                <hgroup class=@ItemCalc>
                     <span class=@ItemQty>@item.Quantity × @item.Price.ToString("N0")</span>
                     <span class=@ItemTotal>@item.TotalPrice.ToString("N0") @L[ReceiptCurrencyUzs]</span>
-                </div>
+                </hgroup>
             </li>
             <li class=@ItemVatRow>
                 <span>@L[IncludingVat]</span>
@@ -51,18 +51,18 @@
 
     <!-- Total and VAT Breakdown -->
     <section class=@ReceiptTotals>
-        <div class=@string.Format(Two, TotalRow, Main)>
+        <p class=@string.Format(Two, TotalRow, Main)>
             <span>@L[TotalToPay]</span>
             <span class=@TotalVal>@TotalAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
-        </div>
-        <div class=@TotalRow>
+        </p>
+        <p class=@TotalRow>
             <span>@L[VatAmount]</span>
             <span>@TotalVatAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
-        </div>
-        <div class=@TotalRow>
+        </p>
+        <p class=@TotalRow>
             <span>@L[ReceiptPaymentMethod]</span>
             <span>@PaymentGatewayName (@PaymentTypeName)</span>
-        </div>
+        </p>
     </section>
 
     <Divider class=@ReceiptDivider />
@@ -86,7 +86,7 @@
         <aside class=@FiscalInfo>
             <p class=@Sign>@L[FiscalSign] <code>@FiscalSign</code></p>
             <p class=@OfdHint>@L[OfdHintText]</p>
-            <a href="@SoliqQrUrl" target="_blank" class=@VerifyLink>
+            <a href=@SoliqQrUrl target="_blank" class=@VerifyLink>
                 <Icon Name=@Verified /> @L[VerifySoliq]
             </a>
         </aside>

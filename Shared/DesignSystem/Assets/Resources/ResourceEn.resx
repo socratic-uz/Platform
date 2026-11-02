@@ -429,6 +429,9 @@
   <data name="DownloadSubTitle" xml:space="preserve">
     <value>Access Socratic anywhere. Multi-platform support for Desktop, Mobile, and Web.</value>
   </data>
+  <data name="QrInstantAccess" xml:space="preserve">
+    <value>Socratic Instant Access</value>
+  </data>
   <data name="ScanQrText" xml:space="preserve">
     <value>Scan to open or download on Mobile</value>
   </data>

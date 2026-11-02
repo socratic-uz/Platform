@@ -1,16 +1,16 @@
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Web
 
-<md-sub-menu anchor-corner="@AnchorCorner"
-             menu-corner="@MenuCorner"
-             hover-open-delay="@HoverOpenDelay"
-             hover-close-delay="@HoverCloseDelay"
-             @attributes="AdditionalAttributes">
+<md-sub-menu anchor-corner=@AnchorCorner
+             menu-corner=@MenuCorner
+             hover-open-delay=@HoverOpenDelay
+             hover-close-delay=@HoverCloseDelay
+             @attributes=AdditionalAttributes>
     
     <md-menu-item slot="item"
-                  disabled="@ItemDisabled"
-                  selected="@ItemSelected"
-                  @onclick="OnItemClick">
+                  disabled=@ItemDisabled
+                  selected=@ItemSelected
+                  @onclick=@OnItemClick>
         
         @if (!string.IsNullOrEmpty(ItemStartIcon))
         {
@@ -19,12 +19,12 @@
         
         @if (!string.IsNullOrEmpty(ItemHeadline))
         {
-            <div slot="headline">@ItemHeadline</div>
+            <span slot="headline">@ItemHeadline</span>
         }
         
         @if (!string.IsNullOrEmpty(ItemSupportingText))
         {
-            <div slot="supporting-text">@ItemSupportingText</div>
+            <span slot="supporting-text">@ItemSupportingText</span>
         }
         
         @if (!string.IsNullOrEmpty(ItemEndIcon))
@@ -35,7 +35,7 @@
         @ItemContent
     </md-menu-item>
     
-    <md-menu slot="menu" @attributes="MenuAttributes">
+    <md-menu slot="menu" @attributes=MenuAttributes>
         @ChildContent
     </md-menu>
     

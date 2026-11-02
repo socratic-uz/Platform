@@ -1,64 +1,65 @@
 @namespace Smart.Web.Components
 @using Microsoft.AspNetCore.Components.Forms
 @using System.Linq.Expressions
+@using static Assets.Constants.Classes.SmartEnum
+@using static Assets.Constants.Formats
 @typeparam TEnum where TEnum : struct, Enum
 
-<div class="smart-checkbox-container @ContainerClass"
-	 @attributes="AdditionalAttributes">
+<fieldset class=@(string.IsNullOrWhiteSpace(ContainerClass) ? SmartCheckboxContainer : string.Format(Two, SmartCheckboxContainer, ContainerClass))
+          @attributes=AdditionalAttributes>
 
-	@if (!string.IsNullOrEmpty(GroupTitle))
-	{
-		<div class="smart-checkbox-group-title">
-			@GroupTitle
-			@if (IsRequired)
-			{
-				<span class="required">*</span>
-			}
-		</div>
-	}
+    @if (!string.IsNullOrEmpty(GroupTitle))
+    {
+        <legend class=@SmartCheckboxGroupTitle>
+            @GroupTitle
+            @if (IsRequired)
+            {
+                <span class=@SmartEnumRequired>*</span>
+            }
+        </legend>
+    }
 
-	@if (ShowAsGroup)
-	{
-		<div class="smart-checkbox-group @(UseVerticalLayout ? "vertical" : "horizontal")"
-			 role="group"
-			 aria-label="@(GroupAriaLabel ?? GroupTitle)">
-			@foreach (var enumValue in GetEnumValues())
-			{
-				var isChecked = IsEnumValueChecked(enumValue);
-				var checkboxId = $"{Id}_{enumValue}";
-				var checkboxClass = GetCheckboxClass(enumValue, isChecked);
+    @if (ShowAsGroup)
+    {
+        <ul class=@(UseVerticalLayout ? string.Format(Two, SmartCheckboxGroup, Vertical) : string.Format(Two, SmartCheckboxGroup, Horizontal))
+            role="group"
+            aria-label=@(GroupAriaLabel ?? GroupTitle)>
+            @foreach (var enumValue in GetEnumValues())
+            {
+                var isChecked = IsEnumValueChecked(enumValue);
+                var checkboxClass = GetCheckboxClass(enumValue, isChecked);
 
-				<div class="smart-checkbox-item @checkboxClass">
-					<Checkbox @key="enumValue"
-							  Label=@GetEnumText(enumValue)
-							  Value=@isChecked
-							  ValueChanged=@(async (bool val) => await HandleEnumChange(enumValue, val))
-							  Disabled=@Disabled
-							  Required=@(IsRequired && !HasAnySelection())
-							  AriaLabel=@GetEnumAriaLabel(enumValue) />
+                <li class=@(string.IsNullOrWhiteSpace(checkboxClass) ? SmartCheckboxItem : string.Format(Two, SmartCheckboxItem, checkboxClass))>
+                    <Checkbox @key=enumValue
+                              Label=@GetEnumText(enumValue)
+                              Value=@isChecked
+                              ValueChanged=@(async (bool val) => await HandleEnumChange(enumValue, val))
+                              Disabled=@Disabled
+                              Required=@(IsRequired && !HasAnySelection())
+                              AriaLabel=@GetEnumAriaLabel(enumValue) />
 
-					@if (HasEnumIcon(enumValue))
-					{
-						<Icon Name=@GetEnumIcon(enumValue) class="checkbox-icon" />
-					}
-				</div>
-			}
-		</div>
-	}
-	else
-	{
-		<!-- Single checkbox mode for simple boolean values -->
-		@if (typeof(TEnum) == typeof(bool))
-		{
-			var value = GetBooleanValue();
-			<div class="smart-checkbox-single">
-				<Checkbox Label=@Label
-						  Value=@value
-						  ValueChanged=@(async (bool val) => await HandleBooleanChange(val))
-						  Disabled=@Disabled
-						  Required=@IsRequired
-						  AriaLabel=@(AriaLabel ?? Label) />
-			</div>
-		}
-	}
-</div>
+                    @if (HasEnumIcon(enumValue))
+                    {
+                        <Icon Name=@GetEnumIcon(enumValue) class=@CheckboxIcon />
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <!-- Single checkbox mode for simple boolean values -->
+        @if (typeof(TEnum) == typeof(bool))
+        {
+            var value = GetBooleanValue();
+            <section class=@SmartCheckboxSingle>
+                <Checkbox Label=@Label
+                          Value=@value
+                          ValueChanged=@(async (bool val) => await HandleBooleanChange(val))
+                          Disabled=@Disabled
+                          Required=@IsRequired
+                          AriaLabel=@(AriaLabel ?? Label) />
+            </section>
+        }
+    }
+</fieldset>

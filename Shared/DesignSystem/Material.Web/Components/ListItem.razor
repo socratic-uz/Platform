@@ -1,30 +1,38 @@
 @using Microsoft.AspNetCore.Components.Web
 
-<md-list-item disabled="@Disabled"
-              type="@EffectiveType"
-              href="@Href"
-              target="@Target"
-              @attributes="AdditionalAttributes"
-              @onclick="HandleClick">
+<md-list-item disabled=@Disabled
+              type=@EffectiveType
+              href=@Href
+              target=@Target
+              @attributes=AdditionalAttributes
+              @onclick=@HandleClick>
+    @if (!string.IsNullOrEmpty(StartIcon))
+    {
+        <Icon Name=@StartIcon slot="start" />
+    }
     @if (StartContent != null)
     {
-        <div slot="start">@StartContent</div>
+        <span slot="start">@StartContent</span>
     }
     @if (!string.IsNullOrEmpty(Headline))
     {
-        <div slot="headline">@Headline</div>
+        <span slot="headline">@Headline</span>
     }
     @if (!string.IsNullOrEmpty(SupportingText))
     {
-        <div slot="supporting-text">@SupportingText</div>
+        <span slot="supporting-text">@SupportingText</span>
     }
     @if (!string.IsNullOrEmpty(TrailingSupportingText))
     {
-        <div slot="trailing-supporting-text">@TrailingSupportingText</div>
+        <span slot="trailing-supporting-text">@TrailingSupportingText</span>
+    }
+    @if (!string.IsNullOrEmpty(EndIcon))
+    {
+        <Icon Name=@EndIcon slot="end" />
     }
     @if (EndContent != null)
     {
-        <div slot="end">@EndContent</div>
+        <span slot="end">@EndContent</span>
     }
     @ChildContent
 </md-list-item>

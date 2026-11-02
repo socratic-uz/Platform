@@ -382,6 +382,7 @@ namespace Assets.Constants
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
             public const string EmptyPlansCard = "empty-plans-card";
+            public const string ErrorBoundaryCard = "error-boundary-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaqCard = "faq-card";
@@ -397,7 +398,6 @@ namespace Assets.Constants
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
-            public const string ItemCardBody = "item-card-body";
             public const string ItemsCardsGrid = "items-cards-grid";
             public const string KanbanCard = "kanban-card";
             public const string KdsCard = "kds-card";
@@ -569,6 +569,7 @@ namespace Assets.Constants
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
+            public const string Topbar = "chat-topbar";
             public const string UserMessage = "user-message";
         }
 
@@ -1574,6 +1575,8 @@ namespace Assets.Constants
 
         public static class Feedback
         {
+            public const string ErrorBoundaryDesc = "error-boundary-desc";
+            public const string ErrorBoundaryTitle = "error-boundary-title";
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
             public const string Short = "short";
@@ -1619,6 +1622,7 @@ namespace Assets.Constants
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
+            public const string FooterRoot = "footer-root";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -1978,6 +1982,8 @@ namespace Assets.Constants
             public const string PillarFeatures = "pillar-features";
             public const string PillarIconBox = "pillar-icon-box";
             public const string ShowcaseHeroContent = "showcase-hero-content";
+            public const string SpatialHeader = "spatial-header";
+            public const string SpatialSection = "spatial-section";
             public const string SubpageContainer = "landing-subpage-container";
             public const string SubpageHero = "landing-subpage-hero";
             public const string SubpageSubtitle = "landing-subpage-subtitle";
@@ -2328,6 +2334,7 @@ namespace Assets.Constants
             public const string SwatchCode = "m3-swatch-code";
             public const string SwatchName = "m3-swatch-name";
             public const string SwatchWrapper = "picker-swatch-wrapper";
+            public const string TagBadge = "picker-tag-badge";
             public const string TimeFieldset = "time-fieldset";
             public const string TitleRow = "picker-title-row";
             public const string TriggerActions = "picker-trigger-actions";
@@ -2602,6 +2609,7 @@ namespace Assets.Constants
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatSelectionPanel = "seat-selection-panel";
             public const string SeatToolbar = "seat-designer-toolbar";
         }
 
@@ -2664,10 +2672,18 @@ namespace Assets.Constants
 
         public static class SmartEnum
         {
+            public const string CheckboxIcon = "checkbox-icon";
+            public const string Horizontal = "horizontal";
+            public const string SmartCheckboxContainer = "smart-checkbox-container";
+            public const string SmartCheckboxGroup = "smart-checkbox-group";
+            public const string SmartCheckboxGroupTitle = "smart-checkbox-group-title";
+            public const string SmartCheckboxItem = "smart-checkbox-item";
+            public const string SmartCheckboxSingle = "smart-checkbox-single";
             public const string SmartEnumContainer = "smart-enum-container";
             public const string SmartEnumLabel = "smart-enum-label";
             public const string SmartEnumOptions = "smart-enum-options";
             public const string SmartEnumRequired = "smart-enum-required";
+            public const string Vertical = "vertical";
         }
 
         public static class SmartFilter
@@ -2885,6 +2901,10 @@ namespace Assets.Constants
             public const string ModeToggleIcon = "m3-mode-toggle-icon";
             public const string ModeToggleIcon_2 = "mode-toggle-icon";
             public const string PosUxModeTitle = "pos-ux-mode-title";
+            public const string SettingsPanelContainer = "settings-panel-container";
+            public const string SettingsSection = "settings-section";
+            public const string SettingsSectionTitle = "settings-section-title";
+            public const string SettingsThemeOptions = "settings-theme-options";
             public const string ShowcaseMobileToggle = "showcase-mobile-toggle";
             public const string SmartViewModeToggle = "smart-view-mode-toggle";
             public const string ThemetoggleModeEdit = "mode-edit";
@@ -3295,6 +3315,7 @@ namespace Classes
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
             public const string EmptyPlansCard = "empty-plans-card";
+            public const string ErrorBoundaryCard = "error-boundary-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaqCard = "faq-card";
@@ -3310,7 +3331,6 @@ namespace Classes
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
-            public const string ItemCardBody = "item-card-body";
             public const string ItemsCardsGrid = "items-cards-grid";
             public const string KanbanCard = "kanban-card";
             public const string KdsCard = "kds-card";
@@ -3482,6 +3502,7 @@ namespace Classes
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
+            public const string Topbar = "chat-topbar";
             public const string UserMessage = "user-message";
         }
 
@@ -4487,6 +4508,8 @@ namespace Classes
 
         public static class Feedback
         {
+            public const string ErrorBoundaryDesc = "error-boundary-desc";
+            public const string ErrorBoundaryTitle = "error-boundary-title";
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
             public const string Short = "short";
@@ -4532,6 +4555,7 @@ namespace Classes
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
+            public const string FooterRoot = "footer-root";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -4891,6 +4915,8 @@ namespace Classes
             public const string PillarFeatures = "pillar-features";
             public const string PillarIconBox = "pillar-icon-box";
             public const string ShowcaseHeroContent = "showcase-hero-content";
+            public const string SpatialHeader = "spatial-header";
+            public const string SpatialSection = "spatial-section";
             public const string SubpageContainer = "landing-subpage-container";
             public const string SubpageHero = "landing-subpage-hero";
             public const string SubpageSubtitle = "landing-subpage-subtitle";
@@ -5241,6 +5267,7 @@ namespace Classes
             public const string SwatchCode = "m3-swatch-code";
             public const string SwatchName = "m3-swatch-name";
             public const string SwatchWrapper = "picker-swatch-wrapper";
+            public const string TagBadge = "picker-tag-badge";
             public const string TimeFieldset = "time-fieldset";
             public const string TitleRow = "picker-title-row";
             public const string TriggerActions = "picker-trigger-actions";
@@ -5515,6 +5542,7 @@ namespace Classes
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatSelectionPanel = "seat-selection-panel";
             public const string SeatToolbar = "seat-designer-toolbar";
         }
 
@@ -5577,10 +5605,18 @@ namespace Classes
 
         public static class SmartEnum
         {
+            public const string CheckboxIcon = "checkbox-icon";
+            public const string Horizontal = "horizontal";
+            public const string SmartCheckboxContainer = "smart-checkbox-container";
+            public const string SmartCheckboxGroup = "smart-checkbox-group";
+            public const string SmartCheckboxGroupTitle = "smart-checkbox-group-title";
+            public const string SmartCheckboxItem = "smart-checkbox-item";
+            public const string SmartCheckboxSingle = "smart-checkbox-single";
             public const string SmartEnumContainer = "smart-enum-container";
             public const string SmartEnumLabel = "smart-enum-label";
             public const string SmartEnumOptions = "smart-enum-options";
             public const string SmartEnumRequired = "smart-enum-required";
+            public const string Vertical = "vertical";
         }
 
         public static class SmartFilter
@@ -5798,6 +5834,10 @@ namespace Classes
             public const string ModeToggleIcon = "m3-mode-toggle-icon";
             public const string ModeToggleIcon_2 = "mode-toggle-icon";
             public const string PosUxModeTitle = "pos-ux-mode-title";
+            public const string SettingsPanelContainer = "settings-panel-container";
+            public const string SettingsSection = "settings-section";
+            public const string SettingsSectionTitle = "settings-section-title";
+            public const string SettingsThemeOptions = "settings-theme-options";
             public const string ShowcaseMobileToggle = "showcase-mobile-toggle";
             public const string SmartViewModeToggle = "smart-view-mode-toggle";
             public const string ThemetoggleModeEdit = "mode-edit";
@@ -6213,6 +6253,7 @@ namespace Styles
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
             public const string EmptyPlansCard = "empty-plans-card";
+            public const string ErrorBoundaryCard = "error-boundary-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaqCard = "faq-card";
@@ -6228,7 +6269,6 @@ namespace Styles
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
-            public const string ItemCardBody = "item-card-body";
             public const string ItemsCardsGrid = "items-cards-grid";
             public const string KanbanCard = "kanban-card";
             public const string KdsCard = "kds-card";
@@ -6400,6 +6440,7 @@ namespace Styles
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
+            public const string Topbar = "chat-topbar";
             public const string UserMessage = "user-message";
         }
 
@@ -7405,6 +7446,8 @@ namespace Styles
 
         public static class Feedback
         {
+            public const string ErrorBoundaryDesc = "error-boundary-desc";
+            public const string ErrorBoundaryTitle = "error-boundary-title";
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
             public const string Short = "short";
@@ -7450,6 +7493,7 @@ namespace Styles
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
+            public const string FooterRoot = "footer-root";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -7809,6 +7853,8 @@ namespace Styles
             public const string PillarFeatures = "pillar-features";
             public const string PillarIconBox = "pillar-icon-box";
             public const string ShowcaseHeroContent = "showcase-hero-content";
+            public const string SpatialHeader = "spatial-header";
+            public const string SpatialSection = "spatial-section";
             public const string SubpageContainer = "landing-subpage-container";
             public const string SubpageHero = "landing-subpage-hero";
             public const string SubpageSubtitle = "landing-subpage-subtitle";
@@ -8159,6 +8205,7 @@ namespace Styles
             public const string SwatchCode = "m3-swatch-code";
             public const string SwatchName = "m3-swatch-name";
             public const string SwatchWrapper = "picker-swatch-wrapper";
+            public const string TagBadge = "picker-tag-badge";
             public const string TimeFieldset = "time-fieldset";
             public const string TitleRow = "picker-title-row";
             public const string TriggerActions = "picker-trigger-actions";
@@ -8433,6 +8480,7 @@ namespace Styles
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatSelectionPanel = "seat-selection-panel";
             public const string SeatToolbar = "seat-designer-toolbar";
         }
 
@@ -8495,10 +8543,18 @@ namespace Styles
 
         public static class SmartEnum
         {
+            public const string CheckboxIcon = "checkbox-icon";
+            public const string Horizontal = "horizontal";
+            public const string SmartCheckboxContainer = "smart-checkbox-container";
+            public const string SmartCheckboxGroup = "smart-checkbox-group";
+            public const string SmartCheckboxGroupTitle = "smart-checkbox-group-title";
+            public const string SmartCheckboxItem = "smart-checkbox-item";
+            public const string SmartCheckboxSingle = "smart-checkbox-single";
             public const string SmartEnumContainer = "smart-enum-container";
             public const string SmartEnumLabel = "smart-enum-label";
             public const string SmartEnumOptions = "smart-enum-options";
             public const string SmartEnumRequired = "smart-enum-required";
+            public const string Vertical = "vertical";
         }
 
         public static class SmartFilter
@@ -8716,6 +8772,10 @@ namespace Styles
             public const string ModeToggleIcon = "m3-mode-toggle-icon";
             public const string ModeToggleIcon_2 = "mode-toggle-icon";
             public const string PosUxModeTitle = "pos-ux-mode-title";
+            public const string SettingsPanelContainer = "settings-panel-container";
+            public const string SettingsSection = "settings-section";
+            public const string SettingsSectionTitle = "settings-section-title";
+            public const string SettingsThemeOptions = "settings-theme-options";
             public const string ShowcaseMobileToggle = "showcase-mobile-toggle";
             public const string SmartViewModeToggle = "smart-view-mode-toggle";
             public const string ThemetoggleModeEdit = "mode-edit";
@@ -9132,6 +9192,7 @@ namespace Material.Web
             public const string CtaCard = "cta-card";
             public const string Elevated = "m3-card-elevated";
             public const string EmptyPlansCard = "empty-plans-card";
+            public const string ErrorBoundaryCard = "error-boundary-card";
             public const string EvolutionCard = "evolution-card";
             public const string ExampleCard = "example-card";
             public const string FaqCard = "faq-card";
@@ -9147,7 +9208,6 @@ namespace Material.Web
             public const string Interactive = "m3-card-interactive";
             public const string Interactive_2 = "card-interactive";
             public const string ItemCard = "item-card";
-            public const string ItemCardBody = "item-card-body";
             public const string ItemsCardsGrid = "items-cards-grid";
             public const string KanbanCard = "kanban-card";
             public const string KdsCard = "kds-card";
@@ -9319,6 +9379,7 @@ namespace Material.Web
             public const string HeaderContainer = "chat-header-container";
             public const string InputForm = "chat-input-form";
             public const string InputWrapper = "chat-input-wrapper";
+            public const string Topbar = "chat-topbar";
             public const string UserMessage = "user-message";
         }
 
@@ -10324,6 +10385,8 @@ namespace Material.Web
 
         public static class Feedback
         {
+            public const string ErrorBoundaryDesc = "error-boundary-desc";
+            public const string ErrorBoundaryTitle = "error-boundary-title";
             public const string FullscreenLoading = "fullscreen-loading";
             public const string LoadingLabel = "loading-label";
             public const string Short = "short";
@@ -10369,6 +10432,7 @@ namespace Material.Web
             public const string FooterContainer = "footer-container";
             public const string FooterCopyright = "footer-copyright";
             public const string FooterHeader = "footer-header";
+            public const string FooterRoot = "footer-root";
             public const string LangContainer = "footer-lang-container";
             public const string LinksList = "footer-links-list";
             public const string Logo = "footer-logo";
@@ -10728,6 +10792,8 @@ namespace Material.Web
             public const string PillarFeatures = "pillar-features";
             public const string PillarIconBox = "pillar-icon-box";
             public const string ShowcaseHeroContent = "showcase-hero-content";
+            public const string SpatialHeader = "spatial-header";
+            public const string SpatialSection = "spatial-section";
             public const string SubpageContainer = "landing-subpage-container";
             public const string SubpageHero = "landing-subpage-hero";
             public const string SubpageSubtitle = "landing-subpage-subtitle";
@@ -11078,6 +11144,7 @@ namespace Material.Web
             public const string SwatchCode = "m3-swatch-code";
             public const string SwatchName = "m3-swatch-name";
             public const string SwatchWrapper = "picker-swatch-wrapper";
+            public const string TagBadge = "picker-tag-badge";
             public const string TimeFieldset = "time-fieldset";
             public const string TitleRow = "picker-title-row";
             public const string TriggerActions = "picker-trigger-actions";
@@ -11352,6 +11419,7 @@ namespace Material.Web
             public const string SeatDesignerToolbarHeader = "seat-designer-toolbar-header";
             public const string SeatDesignerToolbarIcon = "seat-designer-toolbar-icon";
             public const string SeatSelectionCard = "seat-selection-card";
+            public const string SeatSelectionPanel = "seat-selection-panel";
             public const string SeatToolbar = "seat-designer-toolbar";
         }
 
@@ -11414,10 +11482,18 @@ namespace Material.Web
 
         public static class SmartEnum
         {
+            public const string CheckboxIcon = "checkbox-icon";
+            public const string Horizontal = "horizontal";
+            public const string SmartCheckboxContainer = "smart-checkbox-container";
+            public const string SmartCheckboxGroup = "smart-checkbox-group";
+            public const string SmartCheckboxGroupTitle = "smart-checkbox-group-title";
+            public const string SmartCheckboxItem = "smart-checkbox-item";
+            public const string SmartCheckboxSingle = "smart-checkbox-single";
             public const string SmartEnumContainer = "smart-enum-container";
             public const string SmartEnumLabel = "smart-enum-label";
             public const string SmartEnumOptions = "smart-enum-options";
             public const string SmartEnumRequired = "smart-enum-required";
+            public const string Vertical = "vertical";
         }
 
         public static class SmartFilter
@@ -11635,6 +11711,10 @@ namespace Material.Web
             public const string ModeToggleIcon = "m3-mode-toggle-icon";
             public const string ModeToggleIcon_2 = "mode-toggle-icon";
             public const string PosUxModeTitle = "pos-ux-mode-title";
+            public const string SettingsPanelContainer = "settings-panel-container";
+            public const string SettingsSection = "settings-section";
+            public const string SettingsSectionTitle = "settings-section-title";
+            public const string SettingsThemeOptions = "settings-theme-options";
             public const string ShowcaseMobileToggle = "showcase-mobile-toggle";
             public const string SmartViewModeToggle = "smart-view-mode-toggle";
             public const string ThemetoggleModeEdit = "mode-edit";

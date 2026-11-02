@@ -95,6 +95,7 @@
     align-items: center;
 }
 
+a.payment-support,
 .payment-support a {
     display: grid;
     align-items: center;
@@ -105,10 +106,12 @@
     text-decoration: none;
 }
 
+a.payment-support:hover,
 .payment-support a:hover {
     text-decoration: underline;
 }
 
+footer.app-footer:has(.payment-support),
 .payment-trust-footer {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -123,6 +126,7 @@
 }
 
 @media screen and (max-width: 839.98px) {
+    footer.app-footer:has(.payment-support),
     .payment-trust-footer {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;

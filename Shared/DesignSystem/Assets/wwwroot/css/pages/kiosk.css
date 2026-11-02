@@ -362,7 +362,7 @@
     line-height: var(--md-sys-typescale-body-medium-line-height);
 }
 
-:where(.unified-kiosk-filter-bar, .kiosk-filter-inner) {
+:where(.unified-kiosk-filter-bar:not(md-chip-set), .kiosk-filter-inner) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);

@@ -1,22 +1,25 @@
 @using Microsoft.AspNetCore.Components.Web
 
-<md-dialog open="@Open"
-           type="@Type"
-           no-focus-trap="@NoFocusTrap"
-           @onclose="HandleClose"
-           @oncancel="HandleCancel"
-           @attributes="AdditionalAttributes">
-    @if (Headline != null)
-    {
-        <div slot="headline">@Headline</div>
-    }
-    @if (Content != null)
-    {
-        <div slot="content">@Content</div>
-    }
-    @if (Actions != null)
-    {
-        <div slot="actions">@Actions</div>
-    }
-    @ChildContent
-</md-dialog>
+@if (Open)
+{
+    <md-dialog open=@Open
+               type=@Type
+               no-focus-trap=@NoFocusTrap
+               @onclose=@HandleClose
+               @oncancel=@HandleCancel
+               @attributes=AdditionalAttributes>
+        @if (Headline != null)
+        {
+            <header slot="headline" class=@HeadlineClass>@Headline</header>
+        }
+        @if (Content != null)
+        {
+            <section slot="content" class=@ContentClass>@Content</section>
+        }
+        @if (Actions != null)
+        {
+            <footer slot="actions" class=@ActionsClass>@Actions</footer>
+        }
+        @ChildContent
+    </md-dialog>
+}

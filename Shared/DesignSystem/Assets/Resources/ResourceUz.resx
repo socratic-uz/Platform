@@ -429,6 +429,9 @@
   <data name="DownloadSubTitle" xml:space="preserve">
     <value>Socratic-ga har qanday joyda kiring. Ish stoli, mobil va veb-platformalar uchun qo'llab-quvvatlash.</value>
   </data>
+  <data name="QrInstantAccess" xml:space="preserve">
+    <value>Socratic tezkor kirish</value>
+  </data>
   <data name="ScanQrText" xml:space="preserve">
     <value>Mobil qurilmada ochish yoki yuklab olish uchun skanerlang</value>
   </data>

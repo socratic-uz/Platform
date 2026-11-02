@@ -244,6 +244,10 @@
     width: 100%;
 }
 
+.superpowers-bento-section > header {
+    grid-column: 1 / -1;
+}
+
 @media (max-width: 1199.98px) {
     .bento-card-analytics {
         grid-template-columns: minmax(0, 1fr);
@@ -299,10 +303,16 @@
     word-break: break-word;
 }
 
-.hero-module-pills {
+:where(.hero-module-pills) {
     display: grid;
-    gap: 0.6rem;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.65rem;
+    align-items: center;
+    box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .hero-pill-link {
@@ -1182,7 +1192,19 @@ header.landing-header .landing-mobile-menu-toggle {
     -webkit-backdrop-filter: blur(20px);
 }
 
-.spatial-wings-grid {
+:where(.spatial-section) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 2.25rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+:where(.spatial-section) > header.spatial-header {
+    grid-column: 1 / -1;
+}
+
+:where(.spatial-wings-grid) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 2.25rem;

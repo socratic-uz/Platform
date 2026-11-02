@@ -72,6 +72,12 @@ public partial class InvoiceViewer<TItem> : ComponentBase
     [Parameter]
     public string HeartIconUrl { get; set; } = string.Empty;
 
+    [Parameter]
+    public string? Class { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
     public async Task HandleItemClick(TItem item)
     {
         if (OnItemClick.HasDelegate)

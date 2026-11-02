@@ -7,7 +7,7 @@
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem
 
-<article id="check" class=@ReceiptContainer>
+<article id="check" class=@(string.IsNullOrEmpty(Class) ? ReceiptContainer : $"{ReceiptContainer} {Class}") @attributes=AdditionalAttributes>
     <header class=@ReceiptHeaderClass>
         <h3>@(OrganizationName ?? DefaultOrgName)</h3>
         <p>@(OrganizationAddress ?? L[DefaultSystem])</p>
@@ -80,7 +80,7 @@
     </table>
 
     <footer class=@ReceiptFooter>
-        <div class=@ReceiptFooterTitle>@L[ThankYou]</div>
-        <div>@L[FiscalReceiptDemo]</div>
+        <h4 class=@ReceiptFooterTitle>@L[ThankYou]</h4>
+        <p>@L[FiscalReceiptDemo]</p>
     </footer>
 </article>

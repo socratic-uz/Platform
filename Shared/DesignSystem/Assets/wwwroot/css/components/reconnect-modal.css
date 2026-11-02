@@ -121,7 +121,7 @@
     height: 64px;
 }
 
-.components-rejoining-animation div {
+.components-rejoining-animation > :where(div, span) {
     opacity: 1;
     position: absolute;
     border: 3px solid var(--md-sys-color-primary);
@@ -129,7 +129,7 @@
     animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
-.components-rejoining-animation div:nth-child(2) {
+.components-rejoining-animation > :where(div, span):nth-child(2) {
     animation-delay: -0.5s;
 }
 

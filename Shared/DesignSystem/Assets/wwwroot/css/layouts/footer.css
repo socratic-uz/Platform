@@ -266,7 +266,7 @@
 }
 
 .footer-lang-container {
-    display: grid;
+    justify-self: center;
     justify-content: center;
     align-items: center;
 }
@@ -287,7 +287,7 @@
 }
 
 @media screen and (max-width: 599.98px) {
-    footer.app-footer {
+    :where(footer.app-footer, .footer-root) {
         padding: 2.5rem 1rem 1.5rem;
     }
 
@@ -357,7 +357,7 @@
     font-size: 0.875rem;
 }
 
-footer.app-footer {
+:where(footer.app-footer, .footer-root) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     position: relative;

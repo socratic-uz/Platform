@@ -5,55 +5,48 @@
 @using static Assets.Constants.Classes.Common
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
+@using static Assets.Constants.Formats
 @using static Material.Web.Components.ButtonVariant
 
 @if (Compact)
 {
     <section class=@CompactBoxClass>
         <!-- Color Swatch & Native Color Trigger -->
-        <span class=@SwatchWrapper title=@L[ColorPickerClickToSelect]>
-            <span class=@Swatch @attributes=@GetSwatchAttributes(NormalizedValue)>
-                <input type="color"
-                       class=@NativeInput
-                       value=@HexValue
-                       disabled=@Disabled
-                       @onchange=@OnNativeColorChanged
-                       @oninput=@OnNativeColorInput />
-            </span>
-        </span>
+        <input type="color"
+               class=@string.Format(Two, SwatchWrapper, Swatch)
+               title=@L[ColorPickerClickToSelect]
+               value=@HexValue
+               disabled=@Disabled
+               @onchange=@OnNativeColorChanged
+               @oninput=@OnNativeColorInput />
 
         <!-- Text Input for HEX -->
-        <span class=@HexWrapper>
-            <span class=@HexPrefix>#</span>
-            <input type="text"
-                   class=@HexInput
-                   placeholder="RRGGBB"
-                   value=@RawHexValue
-                   disabled=@Disabled
-                   @onchange=@OnTextInputChanged />
-        </span>
+        <span class=@HexPrefix>#</span>
+        <input type="text"
+               class=@string.Format(Two, HexWrapper, HexInput)
+               placeholder="RRGGBB"
+               value=@RawHexValue
+               disabled=@Disabled
+               @onchange=@OnTextInputChanged />
 
-        <IconButton Icon=@(isCopied ? Check : ContentCopy)
-                    Disabled=@Disabled
-                    AriaLabel=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
-                    OnClick=@CopyColorAsync />
+        <md-icon-button disabled=@Disabled
+                        aria-label=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
+                        @onclick=@CopyColorAsync>@(isCopied ? Check : ContentCopy)</md-icon-button>
 
         @if (ShowPresets)
         {
-            <IconButton Icon=@Palette
-                        Disabled=@Disabled
-                        Selected=@isPaletteOpen
-                        Toggle=@true
-                        AriaLabel=@L[ColorPickerPalettePresets]
-                        OnClick=@TogglePalette />
+            <md-icon-button disabled=@Disabled
+                            selected=@isPaletteOpen
+                            toggle
+                            aria-label=@L[ColorPickerPalettePresets]
+                            @onclick=@TogglePalette>@Palette</md-icon-button>
         }
 
         @if (HasValue)
         {
-            <IconButton Icon=@Close
-                        Disabled=@Disabled
-                        AriaLabel=@L[ColorPickerResetColor]
-                        OnClick=@Clear />
+            <md-icon-button disabled=@Disabled
+                            aria-label=@L[ColorPickerResetColor]
+                            @onclick=@Clear>@Close</md-icon-button>
         }
     </section>
 }

@@ -9,17 +9,16 @@
 @using static Material.Web.Components.ButtonVariant
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<section class=@Container>
-	<Button Variant=@Outlined OnClick=@OpenProfile class=@AvatarButton AriaLabel=@l[Profile]>
-		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
-		{
-			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
-		}
-		else
-		{
-			<Icon Name=@Person />
-		}
-	</Button>
+<Button Variant=@Outlined OnClick=@OpenProfile class=@string.Format(Two, Container, AvatarButton) AriaLabel=@l[Profile]>
+	@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
+	{
+		<img src=@profile.Image.ToProfileImage() alt="Avatar" />
+	}
+	else
+	{
+		<Icon Name=@Person />
+	}
+</Button>
 
 	@if (IsOpen)
 	{
@@ -253,7 +252,7 @@
 					</details>
 
 					<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
-					<details>
+					<details class=@ProfileDialogContent>
 						<summary>
 							<ListItem type="button">
 								<span slot="headline">@l[ProfileSecurityAndLogin]</span>
@@ -261,22 +260,19 @@
 								<Icon Name=@ArrowDropDown slot="end" />
 							</ListItem>
 						</summary>
-						<section class=@ProfileDialogContent>
 							<p class=@ProfileSecuritySubtext>
 								@l[Profile_SecuritySubtext]
 							</p>
 
 							<!-- Face ID -->
 							<article class=@ProfileAuthCard>
-								<section class=@ProfileAuthInfo>
-									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
-									<span class=@ProfileAuthText>
-										<span class=@ProfileAuthTitle>@l[ProfileFaceIdTitle]</span>
-										<span class=@ProfileAuthDesc>
-											@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
-										</span>
-									</span>
-								</section>
+								<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
+								<hgroup class=@ProfileAuthText>
+									<strong class=@ProfileAuthTitle>@l[ProfileFaceIdTitle]</strong>
+									<small class=@ProfileAuthDesc>
+										@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
+									</small>
+								</hgroup>
 								<menu class=@ProfileAuthActions>
 									<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
 										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
@@ -292,13 +288,11 @@
 
 							<!-- Google SSO -->
 							<article class=@ProfileAuthCard>
-								<section class=@ProfileAuthInfo>
-									<Icon Name=@AccountCircle />
-									<span class=@ProfileAuthText>
-										<span class=@ProfileAuthTitle>Google SSO</span>
-										<span class=@ProfileAuthDesc>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</span>
-									</span>
-								</section>
+								<Icon Name=@AccountCircle />
+								<hgroup class=@ProfileAuthText>
+									<strong class=@ProfileAuthTitle>Google SSO</strong>
+									<small class=@ProfileAuthDesc>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
+								</hgroup>
 								<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
 									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
 								</Button>
@@ -306,18 +300,15 @@
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
 							<article class=@ProfileAuthCard>
-								<section class=@ProfileAuthInfo>
-									<Icon Name=@Fingerprint class=@ProfilePasskeyIcon />
-									<span class=@ProfileAuthText>
-										<span class=@ProfileAuthTitle>Passkeys (WebAuthn)</span>
-										<span class=@ProfileAuthDesc>@l[ProfileDeviceBiometricsSubtext]</span>
-									</span>
-								</section>
+								<Icon Name=@Fingerprint class=@ProfilePasskeyIcon />
+								<hgroup class=@ProfileAuthText>
+									<strong class=@ProfileAuthTitle>Passkeys (WebAuthn)</strong>
+									<small class=@ProfileAuthDesc>@l[ProfileDeviceBiometricsSubtext]</small>
+								</hgroup>
 								<Button Variant=@Outlined OnClick=@RegisterPasskey>
 									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
 								</Button>
 							</article>
-						</section>
 						<Divider />
 					</details>
 
@@ -410,4 +401,3 @@
 		</footer>
 	</MaterialDialog>
 	}
-</section>

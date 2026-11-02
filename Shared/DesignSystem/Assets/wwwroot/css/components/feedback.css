@@ -633,3 +633,30 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 1.5rem;
 }
+
+.error-boundary-card {
+    display: grid;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    justify-items: center;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: var(--md-sys-spacing-6, 2rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    text-align: center;
+}
+
+.error-boundary-title {
+    margin: 0;
+    color: var(--md-sys-color-error);
+    font-size: var(--md-sys-typescale-title-medium-size, 1.125rem);
+    font-weight: 700;
+}
+
+.error-boundary-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}

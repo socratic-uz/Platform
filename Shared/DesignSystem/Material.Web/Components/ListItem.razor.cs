@@ -16,6 +16,8 @@ public partial class ListItem : ComponentBase
     [Parameter] public EventCallback<bool> SelectedChanged { get; set; }
     [Parameter] public string? Href { get; set; }
     [Parameter] public string? Target { get; set; }
+    [Parameter] public string? StartIcon { get; set; }
+    [Parameter] public string? EndIcon { get; set; }
     [Parameter] public RenderFragment? StartContent { get; set; }
     [Parameter] public RenderFragment? EndContent { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }

@@ -64,9 +64,8 @@
 }
 
 .map-ctrl-btn {
-    min-width: 44px;
-    min-height: 44px;
-    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
 }
 
 .map-geo-btn {

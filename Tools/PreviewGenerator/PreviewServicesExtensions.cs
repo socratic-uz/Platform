@@ -1,3 +1,4 @@
+using Domain.Interfaces;
 using Markdown.Web;
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;
@@ -63,7 +64,10 @@ public static class PreviewServicesExtensions
 
         Infrastructure.Core.GrpcExtension.AddGrpcClientWrappers(services);
         services.AddScoped<SharedKernel.Abstractions.IServiceClientFactory, Infrastructure.Services.ServiceClientFactory>();
-        services.AddSingleton<Microsoft.Extensions.Configuration.IConfiguration>(new Microsoft.Extensions.Configuration.ConfigurationManager());
+        var config = new Microsoft.Extensions.Configuration.ConfigurationManager();
+        services.AddSingleton<Microsoft.Extensions.Configuration.IConfiguration>(config);
+        Domain.Interfaces.FeatureRegistry.DiscoverAndRegisterModules();
+        services.AddRegisteredFeatureServices(config);
 
         global::Map.MapServiceCollectionExtensions.AddMapServices(services);
         Socratic.QrDesigner.QrDesignerServiceCollectionExtensions.AddQrDesignerServices(services);

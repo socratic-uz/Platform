@@ -5,13 +5,13 @@
 
 @if (!string.IsNullOrEmpty(_svg))
 {
-    <div class=@QrWrapper @attributes=@AdditionalAttributes>
+    <figure class=@QrWrapper @attributes=@AdditionalAttributes>
         @((MarkupString)_svg)
-    </div>
+    </figure>
 }
 else
 {
-    <div class=@QrPlaceholder @attributes=@AdditionalAttributes>
+    <figure class=@QrPlaceholder @attributes=@AdditionalAttributes>
         <Icon Name=@QrCode2 />
-    </div>
+    </figure>
 }

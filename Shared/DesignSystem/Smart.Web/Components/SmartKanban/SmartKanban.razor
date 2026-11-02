@@ -3,23 +3,25 @@
 @using static Assets.Constants.Classes.Orders
 @using static Assets.Constants.Classes.Cards
 
-<div class=@SmartKanbanBoard>
+<section class=@SmartKanbanBoard>
     @if (Columns != null)
     {
         @foreach (var col in Columns)
         {
             var columnItems = GetItemsForColumn(col);
-            <div class=@SmartKanbanColumn
+            <section class=@SmartKanbanColumn
                  @ondragover:preventDefault="true"
                  @ondrop=@(() => HandleDrop(col))>
-                <div class=@SmartKanbanColumnHeader>
+                <header class=@SmartKanbanColumnHeader>
                     <span class=@SmartKanbanColumnTitle>@col.Title</span>
                     <span class=@SmartKanbanColumnCount>@columnItems.Count</span>
-                </div>
-                <div class=@SmartKanbanCards>
+                </header>
+                <ul class=@SmartKanbanCards>
                     @foreach (var item in columnItems)
                     {
-                        <div class=@SmartKanbanCard
+                        <li class=@SmartKanbanCard
+                             role="button"
+                             tabindex="0"
                              draggable="true"
                              @ondragstart=@(() => HandleDragStart(item))
                              @onclick=@(() => HandleCardClick(item))>
@@ -29,13 +31,13 @@
                             }
                             else
                             {
-                                <div class=@SmartKanbanCardTitle>@GetItemTitle(item)</div>
-                                <div class=@SmartKanbanCardSubtitle>@GetItemSubtitle(item)</div>
+                                <h4 class=@SmartKanbanCardTitle>@GetItemTitle(item)</h4>
+                                <p class=@SmartKanbanCardSubtitle>@GetItemSubtitle(item)</p>
                             }
-                        </div>
+                        </li>
                     }
-                </div>
-            </div>
+                </ul>
+            </section>
         }
     }
-</div>
+</section>

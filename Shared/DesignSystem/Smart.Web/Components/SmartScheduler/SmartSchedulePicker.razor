@@ -36,106 +36,101 @@
     </CustomPreview>
 </PickerTriggerCard>
 
-<MaterialDialog Open=@_isDialogOpen OpenChanged=@(open => _isDialogOpen = open) class=@ScheduleDialogClass>
+<MaterialDialog Open=@_isDialogOpen
+                OpenChanged=@(open => _isDialogOpen = open)
+                class=@ScheduleDialogClass
+                HeadlineClass=@Md3DialogHeadline
+                ContentClass=@Md3SchedulePicker
+                ActionsClass=@Md3DialogActionsRow>
     <Headline>
-        <header class=@Md3DialogHeadline>
-            <Icon Name=@EditCalendar class=@Md3HeadlineIcon />
-            <span>@L[TitleText]</span>
-        </header>
+        <Icon Name=@EditCalendar class=@Md3HeadlineIcon />
+        <span>@L[TitleText]</span>
     </Headline>
 
     <Content>
-        <section class=@Md3SchedulePicker>
-            <!-- Quick Presets Bar -->
-            <section class=@Md3PresetsSection>
-                <span class=@Md3PresetsLabel>@L[QuickPresets]</span>
-                <menu class=@Md3PresetsRow>
-                    <Button Variant=@Outlined OnClick=@ApplyWeekdaysPreset Icon=@Work>
-                        @L[Weekdays]
-                    </Button>
-                    <Button Variant=@Outlined OnClick=@ApplyRetailPreset Icon=@Storefront>
-                        @L[Retail]
-                    </Button>
-                    <Button Variant=@Outlined OnClick=@Apply247Preset Icon=@AllInclusive>
-                        @L[_247]
-                    </Button>
-                    <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
-                        @L[ResetAll]
-                    </Button>
-                </menu>
-            </section>
-
-            <header class=@Md3ScheduleHeader>
-                <span class=@Md3ScheduleSubtitle>@L[WorkingDays]</span>
-                <fieldset class=@TzContainerClass>
-                    <TextField TValue="string"
-                               Variant=@(TextField<string>.TextFieldVariant.Outlined)
-                               Label=@L[Timezone]
-                               Value=@Schedule.TimeZoneId
-                               ValueChanged=@OnTimeZoneSelected
-                               ValueExpression=@(() => Schedule.TimeZoneId)
-                               Class=@TzFieldClass
-                               HasLeadingIcon=@true
-                               LeadingIcon=@Public />
-                </fieldset>
-            </header>
-
-            <!-- Days List -->
-            <ul class=@Md3ScheduleDays>
-                @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
-                {
-                    var item = GetOrCreateItem(day);
-                    var isOpen = !item.IsClosed && item.Intervals != null && item.Intervals.Count > 0;
-                    var firstInterval = isOpen ? item.Intervals.First() : null;
-
-                    <li class=@(isOpen ? string.Format(Two, Md3ScheduleDayCard, Active) : string.Format(Two, Md3ScheduleDayCard, "closed"))>
-                        <hgroup class=@Md3ScheduleDayLeft>
-                            <Checkbox Value=@isOpen
-                                      ValueChanged=@(active => ToggleDay(day, active))
-                                      ValueExpression=@(() => isOpen)
-                                      Label=@GetDayName(day) />
-                        </hgroup>
-
-                        @if (isOpen && firstInterval != null)
-                        {
-                                                        <menu class=@Md3ScheduleTimeGroup>
-                                <TextField Type="time"
-                                           Label=@L[From]
-                                           class=@Md3TimeInput
-                                           Value=@FormatTime(firstInterval.Start)
-                                           OnChange=@((ChangeEventArgs e) => UpdateOpenTime(day, e.Value?.ToString())) />
-                                <span class=@Md3TimeSeparator>─</span>
-                                <TextField Type="time"
-                                           Label=@L[To]
-                                           class=@Md3TimeInput
-                                           Value=@FormatTime(firstInterval.End)
-                                           OnChange=@((ChangeEventArgs e) => UpdateCloseTime(day, e.Value?.ToString())) />
-                            </menu>
-                        }
-                        else
-                        {
-                            <span class=@Md3ClosedBadge>
-                                <Icon Name=@Block class=@ClosedIconClass />
-                                <span>@L[DayOff]</span>
-                            </span>
-                        }
-                    </li>
-                }
-            </ul>
+        <!-- Quick Presets Bar -->
+        <section class=@Md3PresetsSection>
+            <span class=@Md3PresetsLabel>@L[QuickPresets]</span>
+            <menu class=@Md3PresetsRow>
+                <Button Variant=@Outlined OnClick=@ApplyWeekdaysPreset Icon=@Work>
+                    @L[Weekdays]
+                </Button>
+                <Button Variant=@Outlined OnClick=@ApplyRetailPreset Icon=@Storefront>
+                    @L[Retail]
+                </Button>
+                <Button Variant=@Outlined OnClick=@Apply247Preset Icon=@AllInclusive>
+                    @L[_247]
+                </Button>
+                <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
+                    @L[ResetAll]
+                </Button>
+            </menu>
         </section>
+
+        <header class=@Md3ScheduleHeader>
+            <span class=@Md3ScheduleSubtitle>@L[WorkingDays]</span>
+            <TextField TValue="string"
+                       Variant=@(TextField<string>.TextFieldVariant.Outlined)
+                       Label=@L[Timezone]
+                       Value=@Schedule.TimeZoneId
+                       ValueChanged=@OnTimeZoneSelected
+                       ValueExpression=@(() => Schedule.TimeZoneId)
+                       Class=@TzFieldClass
+                       HasLeadingIcon=@true
+                       LeadingIcon=@Public />
+        </header>
+
+        <!-- Days List -->
+        <ul class=@Md3ScheduleDays>
+            @foreach (DayOfWeek day in new[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday })
+            {
+                var item = GetOrCreateItem(day);
+                var isOpen = !item.IsClosed && item.Intervals != null && item.Intervals.Count > 0;
+                var firstInterval = isOpen ? item.Intervals.First() : null;
+
+                <li class=@(isOpen ? string.Format(Two, Md3ScheduleDayCard, Active) : string.Format(Two, Md3ScheduleDayCard, "closed"))>
+                    <Checkbox Value=@isOpen
+                              ValueChanged=@(active => ToggleDay(day, active))
+                              ValueExpression=@(() => isOpen)
+                              Label=@GetDayName(day) />
+
+                    @if (isOpen && firstInterval != null)
+                    {
+                        <menu class=@Md3ScheduleTimeGroup>
+                            <TextField Type="time"
+                                       Label=@L[From]
+                                       class=@Md3TimeInput
+                                       Value=@FormatTime(firstInterval.Start)
+                                       OnChange=@((ChangeEventArgs e) => UpdateOpenTime(day, e.Value?.ToString())) />
+                            <span class=@Md3TimeSeparator>─</span>
+                            <TextField Type="time"
+                                       Label=@L[To]
+                                       class=@Md3TimeInput
+                                       Value=@FormatTime(firstInterval.End)
+                                       OnChange=@((ChangeEventArgs e) => UpdateCloseTime(day, e.Value?.ToString())) />
+                        </menu>
+                    }
+                    else
+                    {
+                        <span class=@Md3ClosedBadge>
+                            <Icon Name=@Block class=@ClosedIconClass />
+                            <span>@L[DayOff]</span>
+                        </span>
+                    }
+                </li>
+            }
+        </ul>
     </Content>
 
     <Actions>
-        <menu class=@Md3DialogActionsRow>
-            <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
-                @L[ResetScheduleAction]
+        <Button Variant=@Text OnClick=@ClearSchedule Icon=@RestartAlt>
+            @L[ResetScheduleAction]
+        </Button>
+        <menu class=@GridFlowCol>
+            <Button Variant=@Text OnClick=@CloseDialog>@L[CancelAction]</Button>
+            <Button Variant=@Filled OnClick=@SaveAndClose Icon=@Check>
+                @L[SaveAction]
             </Button>
-            <menu class=@GridFlowCol>
-                <Button Variant=@Text OnClick=@CloseDialog>@L[CancelAction]</Button>
-                <Button Variant=@Filled OnClick=@SaveAndClose Icon=@Check>
-                    @L[SaveAction]
-                </Button>
-            </menu>
         </menu>
     </Actions>
 </MaterialDialog>

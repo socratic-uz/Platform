@@ -76,10 +76,8 @@
 
 .ux-filter-meta {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 1rem;
-    justify-content: space-between;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.5rem;
     align-items: center;
     width: 100%;
     padding: 0 0.5rem;
