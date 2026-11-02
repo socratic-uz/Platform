@@ -3,30 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.analytics-config-btn {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.35rem;
-    align-items: center;
-    min-height: var(--md-sys-touch-target-min, 48px);
-    min-width: var(--md-sys-touch-target-min, 48px);
-    padding: 0.45rem 0.85rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.825rem;
-    font-weight: 600;
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    cursor: pointer;
-}
-
-.analytics-config-btn:hover {
-    border-color: var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-container-highest);
-}
-
 .analytics-mode-btn {
     display: grid;
     grid-template-columns: auto auto;
@@ -154,40 +130,6 @@
     background: var(--md-sys-color-surface-container-high);
 }
 
-.analytics-period-chip {
-    display: grid;
-    place-items: center;
-    min-height: var(--md-sys-touch-target-min, 48px);
-    min-width: var(--md-sys-touch-target-min, 48px);
-    padding: 0.45rem 0.9rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.analytics-period-chip:hover {
-    border-color: var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-
-.analytics-period-chip:active {
-    transform: scale(0.96);
-}
-
-.analytics-period-chip.active {
-    border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-weight: 700;
-}
-
 .analytics-status-pill {
     display: grid;
     grid-auto-flow: column;
@@ -224,15 +166,8 @@
         width: 100%;
     }
 }
-.analytics-header-controls {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0.75rem;
-    align-items: center;
-}
 
 .analytics-metric-cell {
-    display: grid;
     gap: 0.3rem;
     text-align: center;
 }
@@ -328,26 +263,6 @@
         padding: 1rem;
     }
 }
-.analytics-date-picker-trigger {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 0.5rem;
-    align-items: center;
-    min-height: var(--md-sys-touch-target-min);
-    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.875rem;
-    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
-    cursor: pointer;
-}
-
-.analytics-date-picker-trigger:hover {
-    border-color: var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-container-high);
-}
 
 .analytics-period-selector {
     display: grid;
@@ -417,23 +332,4 @@
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
-}
-
-.explorer-grid-container {
-    display: grid;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    overflow-x: auto;
-    min-height: 380px;
-}
-
-.m3-explorer-section {
-    display: grid;
-    gap: var(--md-sys-spacing-5, 1.25rem);
-    width: 100%;
-    padding: var(--md-sys-spacing-6, 1.5rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
-    background: var(--md-sys-color-surface-container-low);
 }

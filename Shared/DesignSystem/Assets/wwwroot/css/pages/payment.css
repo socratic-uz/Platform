@@ -24,16 +24,12 @@
     grid-column: 1 / -1;
 }
 
-.payment-dashboard :where(.info-item, .m3-info-item) > :where(div, dd, .info-value, .m3-info-value) {
+.payment-dashboard :where( .m3-info-item) > :where(div, dd, .info-value, .m3-info-value) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), max-content));
     gap: var(--md-sys-spacing-4, 1rem);
     align-items: center;
     margin: 0.25rem 0 0;
-}
-
-.payment-dashboard .info-item :where(dd, .info-value) {
-    margin: 0;
 }
 
 .invoice-amount {
@@ -65,11 +61,6 @@
     color: var(--md-sys-color-on-surface);
     font-family: inherit;
     overflow-x: hidden;
-}
-
-.payment-dashboard .info-item {
-    display: grid;
-    gap: 0.25rem;
 }
 
 .payment-dashboard .info-label {
@@ -111,8 +102,7 @@ a.payment-support:hover,
     text-decoration: underline;
 }
 
-footer.app-footer:has(.payment-support),
-.payment-trust-footer {
+footer.app-footer:has(.payment-support) {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1.5rem;
@@ -126,8 +116,7 @@ footer.app-footer:has(.payment-support),
 }
 
 @media screen and (max-width: 839.98px) {
-    footer.app-footer:has(.payment-support),
-    .payment-trust-footer {
+    footer.app-footer:has(.payment-support) {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
         text-align: center;
@@ -140,12 +129,6 @@ footer.app-footer:has(.payment-support),
         gap: 0.5rem;
     }
 }
-
-.payment-dashboard .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: 1rem;
-}
 .checkout-panel {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -154,24 +137,6 @@ footer.app-footer:has(.payment-support),
     color: var(--md-sys-color-on-surface);
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
-}
-
-.headline {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-    margin: 0;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: start;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-}
-
-.body-subtext {
-    font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
 .workflow-stepper {
@@ -299,15 +264,6 @@ footer.app-footer:has(.payment-support),
     margin: 6px 0;
 }
 
-.pay-chip {
-    background: var(--md-sys-color-surface-container-highest);
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 3px var(--md-sys-spacing-2, 0.5rem);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    border: 1px solid var(--md-sys-color-outline-variant);
-}
-
 .pos-start-btn {
     width: 100%;
     max-width: 360px;
@@ -344,7 +300,7 @@ footer.app-footer:has(.payment-support),
     margin: 0;
 }
 
-.label-title {
+.gateways-fieldset .label-title {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--md-sys-color-primary);
@@ -395,7 +351,7 @@ button.gateway-card {
     margin-top: 2px;
 }
 
-.popular-badge {
+.gateway-card .popular-badge {
     position: absolute;
     top: -6px;
     right: -6px;
@@ -524,21 +480,9 @@ button.gateway-card {
     color: var(--md-sys-color-on-surface);
 }
 
-.card-form-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
-}
-
 .input-field-group {
     display: grid;
     gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.field-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 .save-card-toggle {
@@ -636,12 +580,6 @@ button.gateway-card {
     overflow: hidden;
 }
 
-.cash-progress-fill {
-    height: 100%;
-    background: var(--md-sys-color-primary);
-    transition: width 0.3s ease;
-}
-
 .cash-remaining-label {
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -702,13 +640,13 @@ button.gateway-card {
     margin-top: var(--md-sys-spacing-2, 0.5rem);
 }
 
-.total-label {
+.panel-footer .total-label {
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
     display: block;
 }
 
-.total-value {
+.panel-footer .total-value {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
@@ -723,18 +661,9 @@ button.gateway-card {
         justify-items: center;
         text-align: center;
     }
-    .card-form-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
     .payment-dashboard {
         gap: 1.25rem;
         padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2.5rem);
-    }
-    .payment-dashboard .info-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-    .payment-trust-footer {
-        grid-template-columns: minmax(0, 1fr);
     }
 }
 
@@ -812,11 +741,6 @@ button.gateway-card {
     gap: 14px;
 }
 
-.merchant-settings-panel .form-field {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
 .uzqr-highlight {
     border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
@@ -827,17 +751,6 @@ button.gateway-card {
     color: var(--md-sys-color-on-surface-variant);
     margin: 0 0 8px 0;
     line-height: 1.4;
-}
-
-.field-hint {
-    font-size: 0.75rem;
-    color: var(--md-sys-color-outline);
-    margin-top: 2px;
-}
-
-.hint-link {
-    color: var(--md-sys-color-primary);
-    text-decoration: underline;
 }
 
 .merchant-settings-panel .panel-footer {

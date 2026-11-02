@@ -3,24 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.det-btn-icon-sm {
-    display: grid;
-    place-items: center;
-    min-width: 48px;
-    min-height: 48px;
-    padding: 0;
-    border: none;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: transparent;
-    color: var(--md-sys-color-on-surface-variant);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.det-btn-icon-sm:hover {
-    background: var(--md-sys-color-surface-container-high);
-}
-
 .det-btn-row-2col {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -169,10 +151,14 @@
 }
 
 .det-bbox {
-    left: var(--x, 0%);
-    top: var(--y, 0%);
-    width: var(--w, 0%);
-    height: var(--h, 0%);
+    --x: 0%;
+    --y: 0%;
+    --w: 0%;
+    --h: 0%;
+    left: var(--x);
+    top: var(--y);
+    width: var(--w);
+    height: var(--h);
     position: absolute;
     box-sizing: border-box;
     border: 2px solid var(--md-sys-color-primary);

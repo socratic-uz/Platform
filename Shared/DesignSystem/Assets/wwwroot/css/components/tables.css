@@ -71,26 +71,6 @@
     padding: 0;
 }
 
-.col-width-draghandle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    cursor: ew-resize;
-}
-
-.col-width-draghandle::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    border-left: 1px solid var(--md-sys-color-outline);
-    content: ' ';
-}
-
-.m3-col-span-full {
-    grid-column: 1 / -1;
-}
-
 .m3-row-label {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9375rem;
@@ -101,34 +81,6 @@
     font-size: 0.9375rem;
     font-weight: 600;
     text-align: right;
-}
-
-.m3-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9375rem;
-}
-
-.m3-table td {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface);
-}
-
-.m3-table td md-icon:not([slot]) {
-    vertical-align: middle;
-}
-
-.m3-table th {
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface-variant);
-    font-weight: 600;
-    text-align: left;
-}
-
-.m3-table tr:last-child td {
-    border-bottom: none;
 }
 
 .m3-table-actions-bar {
@@ -142,16 +94,6 @@
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
     justify-content: end;
-}
-
-.m3-table-wrapper {
-    box-sizing: border-box;
-    width: 100%;
-    padding: var(--md-sys-spacing-2);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container);
-    overflow-x: auto;
 }
 
 .orders-table {
@@ -185,17 +127,6 @@
     background: var(--md-sys-color-surface-container-highest);
 }
 
-.orders-table-wrapper {
-    display: grid;
-    width: 100%;
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    overflow-x: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
 .paginator {
     display: grid;
     grid-auto-flow: column;
@@ -225,31 +156,6 @@
     gap: 0.5rem;
     align-items: center;
     margin-left: auto;
-}
-
-.row-label {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9375rem;
-}
-
-.row-value {
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    text-align: right;
-}
-
-.selectable-text {
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-.table-actions-bar {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 0.5rem;
-    justify-content: start;
-    margin-bottom: var(--md-sys-spacing-2);
 }
 
 :where(.table-container, .schedule-table-container):not(table) {
@@ -396,20 +302,6 @@
     font-size: 18px;
 }
 
-.table-row-actions {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2);
-    justify-content: end;
-}
-
-.table-scroll-container {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
 [contenteditable="true"] {
     user-select: text;
     -webkit-user-select: text;
@@ -541,16 +433,6 @@ td.col-justify-start {
     }
 }
 
-.amount-cell {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.4rem;
-    justify-content: start;
-    align-items: center;
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
-}
-
 .date-cell {
     display: grid;
     grid-auto-flow: column;
@@ -571,6 +453,3 @@ td.col-justify-start {
 }
 
 /* --- Amount Value Cell --- */
-.amount-value {
-    font-size: 1.05rem;
-}

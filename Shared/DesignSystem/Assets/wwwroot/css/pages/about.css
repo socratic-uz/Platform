@@ -27,7 +27,7 @@
     line-height: 1.6;
 }
 
-:where(.about-title, .about-hero .title) {
+:where( .about-hero .title) {
     display: grid;
     gap: 0.25rem;
     max-width: 900px;
@@ -40,7 +40,7 @@
     word-break: break-word;
 }
 
-:where(.about-title, .about-hero .title) > br {
+:where( .about-hero .title) > br {
     display: none;
 }
 
@@ -56,18 +56,6 @@
     overflow-x: clip;
 }
 
-.about-cta-section {
-    display: grid;
-    gap: 2.5rem;
-    width: 100%;
-}
-
-.about-tech-stack-section {
-    display: grid;
-    gap: 2.5rem;
-    width: 100%;
-}
-
 .about-video-section {
     display: grid;
     width: 100%;
@@ -76,7 +64,7 @@
 }
 
 @media (max-width: 599.98px) {
-    :where(.about-title, .about-hero .title) {
+    :where( .about-hero .title) {
         font-size: 1.85rem;
     }
 

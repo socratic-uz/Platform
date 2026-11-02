@@ -95,12 +95,6 @@
     font-size: 0.75rem;
 }
 
-.ad-network-render-slot {
-    display: grid;
-    place-items: center;
-    min-height: 250px;
-}
-
 .ad-network-screensaver-body {
     display: grid;
     gap: 1.25rem;

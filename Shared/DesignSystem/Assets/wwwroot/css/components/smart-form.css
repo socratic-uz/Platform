@@ -152,10 +152,6 @@ md-dialog.smart-form-dialog {
     border-radius: var(--md-sys-shape-corner-small, 8px);
 }
 
-.smart-form-field-mb {
-    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
-}
-
 .smart-grid-headline {
     display: grid;
     grid-auto-flow: column;

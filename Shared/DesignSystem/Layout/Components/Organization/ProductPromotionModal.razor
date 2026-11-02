@@ -77,37 +77,37 @@
                         }
                     </fieldset>
 
-                    <fieldset class=@PaymentMethodsGrid>
+                    <fieldset>
                         <legend class=@SectionHeading>@L[Step2Title]</legend>
                         <label class=@(SelectedGateway == PromotionPaymentGatewayType.UzQr ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.UzQr) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr) Name="gateway" />
-                            <span class=@PaymentMethodBody>
-                                <span class=@MethodTitle>📱 UzQR (MUNIS QR-Online)</span>
-                                <span class=@MethodSub>@L[UzQrDesc]</span>
+                            <span>
+                                <span>📱 UzQR (MUNIS QR-Online)</span>
+                                <span>@L[UzQrDesc]</span>
                             </span>
                         </label>
 
                         <label class=@(SelectedGateway == PromotionPaymentGatewayType.Click ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Click) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Click) Name="gateway" />
-                            <span class=@PaymentMethodBody>
-                                <span class=@MethodTitle>🟡 Click / Click Up</span>
-                                <span class=@MethodSub>@L[ClickDesc]</span>
+                            <span>
+                                <span>🟡 Click / Click Up</span>
+                                <span>@L[ClickDesc]</span>
                             </span>
                         </label>
 
                         <label class=@(SelectedGateway == PromotionPaymentGatewayType.Payme ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Payme) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Payme) Name="gateway" />
-                            <span class=@PaymentMethodBody>
-                                <span class=@MethodTitle>🟢 Payme Business</span>
-                                <span class=@MethodSub>@L[PaymeDesc]</span>
+                            <span>
+                                <span>🟢 Payme Business</span>
+                                <span>@L[PaymeDesc]</span>
                             </span>
                         </label>
 
                         <label class=@(SelectedGateway == PromotionPaymentGatewayType.Uzum ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Uzum) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum) Name="gateway" />
-                            <span class=@PaymentMethodBody>
-                                <span class=@MethodTitle>🟣 Uzum Bank</span>
-                                <span class=@MethodSub>@L[UzumDesc]</span>
+                            <span>
+                                <span>🟣 Uzum Bank</span>
+                                <span>@L[UzumDesc]</span>
                             </span>
                         </label>
                     </fieldset>
@@ -117,17 +117,15 @@
             {
                 <section class=@PromotionModalBody>
                     <fieldset class=@InvoiceSummaryBox>
-                        <span class=@InvoiceLabel>@L[InvoiceFor, ActiveOrder?.ProductName ?? string.Empty]</span>
+                        <span>@L[InvoiceFor, ActiveOrder?.ProductName ?? string.Empty]</span>
                         <data class=@InvoiceAmount value=@ActiveOrder?.PriceUzs>@ActiveOrder?.PriceUzs.ToString("N0") UZS</data>
                         <span>@L[PromoPaymentMethod, GetGatewayDisplayName(ActiveOrder?.PaymentGateway ?? SelectedGateway)]</span>
                     </fieldset>
 
                     @if (SelectedGateway == PromotionPaymentGatewayType.UzQr)
                     {
-                        <section class=@QrPaymentArea>
-                            <figure class=@QrFrame>
-                                <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] class=@QrImage />
-                            </figure>
+                        <section>
+                            <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] class=@string.Format(Two, QrFrame, QrImage) />
                             <p class=@QrInstruction>
                                 @L[QrInstructionText]
                             </p>
@@ -135,7 +133,7 @@
                     }
                     else
                     {
-                        <section class=@OnlineRedirectArea>
+                        <section>
                             <Icon Name=@OpenInNew class=@RedirectIcon />
                             <p>@L[RedirectMessage] <strong>@GetGatewayDisplayName(SelectedGateway)</strong>.</p>
                             <Button Variant=@Filled Href=@GetPaymentGatewayUrl() Target="_blank" class=@BtnGatewayLink TrailingIcon=@OpenInNew>
@@ -144,7 +142,7 @@
                         </section>
                     }
 
-                    <aside class=@PaymentStatusChecker>
+                    <aside>
                         @if (isVerifyingPayment)
                         {
                             <Progress IsCircular=@true Indeterminate=@true FourColor=@true class=@SpinnerInline />
@@ -162,32 +160,30 @@
             else if (CurrentStep == PromotionModalStep.Success)
             {
                 <section class=@string.Format(Two, PromotionModalBody, PromoSuccessStep)>
-                    <figure class=@PromoSuccessIconWrap>
-                        <Icon Name=@Verified class=@PromoSuccessCheckIcon />
-                    </figure>
-                    <h3 class=@SuccessTitleClass>@L[SuccessTitle]</h3>
-                    <p class=@SuccessDescClass>
+                    <Icon Name=@Verified class=@string.Format(Two, PromoSuccessIconWrap, PromoSuccessCheckIcon) />
+                    <h3>@L[SuccessTitle]</h3>
+                    <p>
                         @L[SuccessDesc, Product.Name]
                     </p>
 
-                    <ul class=@FeedLinksCard>
-                        <li class=@FeedItem>
+                    <ul>
+                        <li>
                             <Icon Name=@ViewCarousel class=@string.Format(Two, FeedIcon, Yandex) />
-                            <span class=@FeedDetails>
-                                <span class=@FeedName>@L[YandexFeed]</span>
-                                <code class=@FeedUrl>/feeds/yandex/@(OrganizationId).xml</code>
+                            <span>
+                                <span>@L[YandexFeed]</span>
+                                <code>/feeds/yandex/@(OrganizationId).xml</code>
                             </span>
                         </li>
-                        <li class=@FeedItem>
+                        <li>
                             <Icon Name=@ShoppingBasket class=@string.Format(Two, FeedIcon, Google) />
-                            <span class=@FeedDetails>
-                                <span class=@FeedName>@L[GoogleFeed]</span>
-                                <code class=@FeedUrl>/feeds/google/@(OrganizationId).xml</code>
+                            <span>
+                                <span>@L[GoogleFeed]</span>
+                                <code>/feeds/google/@(OrganizationId).xml</code>
                             </span>
                         </li>
                     </ul>
 
-                    <p class=@SuccessHintClass>
+                    <p>
                         @L[SuccessHint]
                     </p>
                 </section>

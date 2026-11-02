@@ -9791,7 +9791,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskdagi yoki kassadagi to'lov usullarini tanlashda muddatli to'lovni rasmiylashtirishingiz mumkin.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;You can arrange installments when choosing payment methods at the kiosk or checkout.&quot;
             /// </summary>
-            public const string EmptyPlansDescText = "Payment_EmptyPlansDesc";
+            public const string EmptyPlansDesc = "Payment_EmptyPlansDesc";
 
             /// <summary>
             /// Key: <c>Payment_FaceIdBiometrics</c><br/>
@@ -66510,7 +66510,7 @@ namespace Loc
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskdagi yoki kassadagi to'lov usullarini tanlashda muddatli to'lovni rasmiylashtirishingiz mumkin.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;You can arrange installments when choosing payment methods at the kiosk or checkout.&quot;
         /// </summary>
-        public const string EmptyPlansDescText = "Payment_EmptyPlansDesc";
+        public const string EmptyPlansDesc = "Payment_EmptyPlansDesc";
 
         /// <summary>
         /// Key: <c>Payment_FaceIdBiometrics</c><br/>

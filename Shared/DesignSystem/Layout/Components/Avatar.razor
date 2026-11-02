@@ -23,15 +23,14 @@
 	@if (IsOpen)
 	{
 	<MaterialDialog class=@AvatarContacts Open=@IsOpen OnClose=@OnClose Type="alert">
-		<span slot="headline">
+		<Headline>
 			<span class=@Headline>@l[EditProfile]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
-		</span>
+		</Headline>
+		<ChildContent>
 		@if (FormModel is null)
 		{
-			<figure slot="content" class=@Content>
-				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
-			</figure>
+			<Progress slot="content" class=@Content IsCircular="true" FourColor="true" Indeterminate="true" />
 		}
 		else
 		{
@@ -41,11 +40,7 @@
 					<!--Id-->
 					<details @ontoggle=@GetRoles>
 						<summary>
-							<ListItem type="button">
-								<p>@FormModel?.Name.FirstName @FormModel?.Name?.LastName</p>
-								<Icon Name=@Person slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@($"{FormModel?.Name.FirstName} {FormModel?.Name?.LastName}") StartIcon=@Person EndIcon=@ArrowDropDown />
 						</summary>
 						<fieldset class=@Content>
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
@@ -81,56 +76,42 @@
 					<!--Phone-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[Phone]</span>
-								<Icon Name=@Phone slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[Phone] StartIcon=@Phone EndIcon=@ArrowDropDown />
 						</summary>
 
-						<fieldset class=@Content>
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[Phone]
-									   Value=@FormModel.Phone
-									   ValueExpression="() => FormModel.Phone"
-									   Disabled="true" />
-						</fieldset>
+						<TextField TValue="string"
+								   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+								   Label=@l[Phone]
+								   Value=@FormModel.Phone
+								   ValueExpression="() => FormModel.Phone"
+								   Disabled="true"
+								   Class=@Content />
 						<Divider />
 					</details>
 
 					<!--Photo-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[PhotoLabel]</span>
-								<Icon Name=@AddPhotoAlternate slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[PhotoLabel] StartIcon=@AddPhotoAlternate EndIcon=@ArrowDropDown />
 						</summary>
 
-						<section class=@ProfileDialogContent>
-							<Material.Web.Components.FilePicker 
-								Attachments=@_imageAttachments
-								Label=@l[PhotoLabel]
-								UploadLabel=@l[ProfileUploadPhoto]
-								RemoveLabel=@l[Delete]
-								Multiple="false"
-								Accept="image/*"
-								MaxAllowedFiles="1"
-								OnChanged=@HandleImageChanged />
-						</section>
+						<Material.Web.Components.FilePicker
+							Attachments=@_imageAttachments
+							Label=@l[PhotoLabel]
+							UploadLabel=@l[ProfileUploadPhoto]
+							RemoveLabel=@l[Delete]
+							Multiple="false"
+							Accept="image/*"
+							MaxAllowedFiles="1"
+							OnChanged=@HandleImageChanged
+							Class=@ProfileDialogContent />
 						<Divider />
 					</details>
 
 					<!--Name-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[NameLabel]</span>
-								<Icon Name=@IdCard slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[NameLabel] StartIcon=@IdCard EndIcon=@ArrowDropDown />
 						</summary>
 
 						<fieldset class=@Content>
@@ -177,11 +158,7 @@
 					<!--Address-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[AddressLabel]</span>
-								<Icon Name=@LocationOn slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[AddressLabel] StartIcon=@LocationOn EndIcon=@ArrowDropDown />
 						</summary>
 						<section class=@ProfileDialogContent>
 							<TextField TValue="string"
@@ -203,11 +180,7 @@
 					<!--Language-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[LanguageLabel]</span>
-								<Icon Name=@Translate slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[LanguageLabel] StartIcon=@Translate EndIcon=@ArrowDropDown />
 						</summary>
 
 						<fieldset class=@Content>
@@ -228,37 +201,24 @@
 					<!--Accent-->
 					<details>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[AccentLabel]</span>
-								<Icon Name=@Palette slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[AccentLabel] StartIcon=@Palette EndIcon=@ArrowDropDown />
 						</summary>
 
-						<section class=@ProfileDialogContent>
-							<fieldset class=@ProfileThemeGrid>
-								<Select Label=@l[ThemeLabel]
-										Value=@ThemeString
-										ValueChanged=@OnThemeChanged
-										ValueExpression="() => ThemeString"
-										Options=@ThemeOptions />
-								<span class=@ProfileColorPickerBox>
-									<span class=@ProfileColorPickerLabel>@l[PaletteColor]</span>
-									<ColorPicker Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
-								</span>
-							</fieldset>
-						</section>
+						<fieldset class=@string.Format(Two, ProfileDialogContent, ProfileThemeGrid)>
+							<Select Label=@l[ThemeLabel]
+									Value=@ThemeString
+									ValueChanged=@OnThemeChanged
+									ValueExpression="() => ThemeString"
+									Options=@ThemeOptions />
+							<ColorPicker Label=@l[PaletteColor] Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
+						</fieldset>
 						<Divider />
 					</details>
 
 					<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
 					<details class=@ProfileDialogContent>
 						<summary>
-							<ListItem type="button">
-								<span slot="headline">@l[ProfileSecurityAndLogin]</span>
-								<Icon Name=@Security slot="start" />
-								<Icon Name=@ArrowDropDown slot="end" />
-							</ListItem>
+							<ListItem type="button" Headline=@l[ProfileSecurityAndLogin] StartIcon=@Security EndIcon=@ArrowDropDown />
 						</summary>
 							<p class=@ProfileSecuritySubtext>
 								@l[Profile_SecuritySubtext]
@@ -279,9 +239,7 @@
 									</Button>
 									@if (isFaceIdConfigured)
 									{
-										<IconButton OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics]>
-											<Icon Name=@DeleteOutline class=@ProfileDeleteIcon />
-										</IconButton>
+										<IconButton Icon=@DeleteOutline class=@ProfileDeleteIcon OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
 									}
 								</menu>
 							</article>
@@ -313,46 +271,36 @@
 					</details>
 
 					<!--Support-->
-					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link">
-						<span slot="headline">@l[Support]</span>
-						<Icon Name=@SupportAgent slot="start" />
-						<Icon Name=@Link slot="end" />
-					</ListItem>
+					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link" Headline=@l[Support] StartIcon=@SupportAgent EndIcon=@Link />
 
 					@if (permission > Permission.Customer)
 					{
 						<!--Roles-->
-						<ListItem Href="roles" type="button">
-							<span slot="headline">@l[RolesLabel]</span>
-							<Icon Name=@Group slot="start" />
-							<Icon Name=@ChevronRight slot="end" />
-						</ListItem>
+						<ListItem Href="roles" type="button" Headline=@l[RolesLabel] StartIcon=@Group EndIcon=@ChevronRight />
 					}
 
 					<!--Log out-->
-					<ListItem type="button" OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); })>
-						<span slot="headline">@l[LogOut]</span>
-						<Icon Name=@Logout slot="start" />
-					</ListItem>
+					<ListItem type="button" Headline=@l[LogOut] StartIcon=@Logout OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); }) />
 				</List>
 			</EditForm>
 		}
-		<footer slot="actions">
+		</ChildContent>
+		<Actions>
 			<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
 			<Button Variant=@Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
 			<Button Variant=@Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
-		</footer>
+		</Actions>
 	</MaterialDialog>
 	}
 
 	@if (isFaceIdModalOpen)
 	{
-	<MaterialDialog class=@FaceidProfileModal Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
-		<span slot="headline">
+	<MaterialDialog class=@FaceidProfileModal Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert" ContentClass=@FaceidModalContent>
+		<Headline>
 			<span class=@Headline>@l[ProfileFaceIdTitle]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
-		</span>
-		<section slot="content" class=@FaceidModalContent>
+		</Headline>
+		<Content>
 			<!-- 3-Step Calibration Progress Bar -->
 			<ol class=@FaceidProgressBar>
 				<li class=@(currentEnrollmentStage >= 1 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></li>
@@ -375,18 +323,7 @@
 				}
 				<!-- Dynamic Pose Direction Badge -->
 				<span class=@FaceidDirectionBadge>
-					@if (currentEnrollmentStage == 1)
-					{
-						<span>@l[ProfileLookStraight]</span>
-					}
-					else if (currentEnrollmentStage == 2)
-					{
-						<span>@l[ProfileTurnLeft]</span>
-					}
-					else
-					{
-						<span>@l[ProfileTurnRight]</span>
-					}
+					@(currentEnrollmentStage == 1 ? l[ProfileLookStraight] : currentEnrollmentStage == 2 ? l[ProfileTurnLeft] : l[ProfileTurnRight])
 				</span>
 			</figure>
 			<p class=@FaceidStatusMessage>
@@ -395,9 +332,9 @@
 			<p class=@FaceidInstructionText>
 				@l[ProfileCenterFaceInstruction]
 			</p>
-		</section>
-		<footer slot="actions">
+		</Content>
+		<Actions>
 			<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
-		</footer>
+		</Actions>
 	</MaterialDialog>
 	}

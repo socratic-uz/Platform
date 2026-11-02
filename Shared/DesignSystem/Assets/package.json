@@ -21,6 +21,8 @@
     "generate:all": "node scripts/generate-analytics.mjs",
     "generate:analytics": "node scripts/generate-analytics.mjs",
     "refresh": "npm run generate:codegen && npm run generate:analytics",
+    "cleanup:unused-css": "node scripts/cleanup-unused-css.mjs",
+    "analyze:classless": "node scripts/analyze-classless.mjs --verbose",
     "watch:blueprints": "node scripts/generate-blueprints.mjs --watch"
   },
   "dependencies": {
@@ -33,6 +35,8 @@
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "playwright": "^1.52.0",
+    "postcss": "^8.5.29",
+    "postcss-selector-parser": "^6.1.4",
     "rollup": "^4.34.8",
     "stylelint": "^16.14.0",
     "stylelint-config-standard": "^37.0.0"

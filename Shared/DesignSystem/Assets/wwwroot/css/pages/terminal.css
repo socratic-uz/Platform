@@ -137,7 +137,7 @@
     min-width: 0;
     min-height: 146px;
     min-inline-size: 0;
-    padding: var(--space-3, 12px);
+    padding: var(--md-sys-spacing-3, 0.75rem);
     text-align: left;
 }
 
@@ -145,10 +145,10 @@
     position: absolute;
     top: 6px;
     right: 6px;
-    z-index: var(--m3-z-content, 1);
+    z-index: var(--md-sys-z-raised, 1);
 }
 
-:where(.pos-chip-set, .pos-chipset) {
+:where( .pos-chipset) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -279,14 +279,6 @@
     text-decoration: none;
 }
 
-.pos-loading {
-    display: grid;
-    gap: 0.75rem;
-    justify-items: center;
-    place-content: center;
-    height: 100%;
-}
-
 .pos-main {
     width: 100%;
     max-width: 100vw;
@@ -365,7 +357,7 @@
     overscroll-behavior-x: contain;
 }
 
-:where(.pos-ux-mode-title, .pos-uxmode-title) {
+:where( .pos-uxmode-title) {
     display: block;
     min-width: 0;
     min-inline-size: 0;
@@ -378,11 +370,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.pos-search-input {
-    width: 100%;
-    --md-outlined-text-field-container-shape: 12px;
 }
 
 .pos-grid {
@@ -409,11 +396,6 @@
     grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 440px);
     gap: var(--md-sys-spacing-5, 1.25rem);
     align-items: stretch;
-}
-
-.pos-search-wrapper {
-    display: grid;
-    justify-self: end;
 }
 
 @media screen and (max-width: 839.98px) {
@@ -454,11 +436,6 @@
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
         gap: 10px;
         padding-bottom: var(--md-sys-spacing-6, 1.5rem);
-    }
-
-    .pos-search-wrapper {
-        justify-self: stretch;
-        width: clamp(200px, 25vw, 320px);
     }
 
     .pos-actions {
@@ -549,12 +526,6 @@
     gap: 6px;
 }
 
-.pos-form-label {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
 .pos-cash-input {
     width: 100%;
     box-sizing: border-box;
@@ -634,7 +605,6 @@
 }
 
 .pos-device-icons {
-    display: grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-4, 1rem);
     color: var(--md-sys-color-primary);
@@ -723,20 +693,6 @@
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.pos-otp-box {
-    display: grid;
-    gap: 6px;
-    padding: var(--md-sys-spacing-3, 0.75rem);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-primary-container);
-}
-
-.pos-otp-label {
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.85rem;
     font-weight: 700;
 }
 

@@ -52,8 +52,7 @@
         }
         else
         {
-            <Button Variant=@FilledTonal OnClick=@OnAction Disabled=@Disabled>
-                <md-icon slot="icon">@ActionIcon</md-icon>
+            <Button Variant=@FilledTonal Icon=@ActionIcon OnClick=@OnAction Disabled=@Disabled>
                 @ActionLabel
             </Button>
             @if (HasValue && OnReset.HasDelegate)

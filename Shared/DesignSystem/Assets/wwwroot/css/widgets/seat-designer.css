@@ -3,7 +3,7 @@
    Component-Driven Architecture
    ========================================================================== */
 
-:where(.seat-designer-page-root, .designer-page-root) {
+:where(.seat-designer-page-root) {
     display: grid;
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1.5rem;
@@ -116,11 +116,6 @@
     gap: 0.5rem;
 }
 
-.seat-designer-fields {
-    display: grid;
-    gap: 0.75rem;
-}
-
 .seat-designer-field {
     width: 100%;
 }
@@ -208,11 +203,6 @@
 
     .designer-header {
         padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
-    }
-
-    .designer-page-root {
-        gap: 1.25rem;
-        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
     }
 
     .designer-workspace {
@@ -320,7 +310,6 @@
 }
 
 .seat-booking-empty-scheme {
-    display: grid;
     place-items: center;
     gap: 0.75rem;
     color: var(--md-sys-color-on-surface);
@@ -339,15 +328,6 @@
     background-color: var(--md-sys-color-surface-container-low);
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.seat-booking-details-panel {
-    display: grid;
-    align-content: start;
-    gap: 1.25rem;
-    box-sizing: border-box;
-    padding: 1.5rem;
-    color: var(--md-sys-color-on-surface);
 }
 
 .seat-booking-seat-card {
@@ -381,7 +361,6 @@
 }
 
 .seat-booking-placeholder {
-    display: grid;
     place-items: center;
     box-sizing: border-box;
     padding: 2rem 1rem;

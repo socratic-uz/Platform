@@ -46,22 +46,22 @@ else
 					  Selected=@IsUz
 					  EndIcon=@(IsUz ? Check : null)
 					  OnClick=@SelectUz>
-				<span slot="start" class=@LangFlag>🇺🇿</span>
-				<span slot="headline" class=@LangName>@L[CommonLangUz]</span>
+				<span slot="start">🇺🇿</span>
+				<span slot="headline">@L[CommonLangUz]</span>
 			</MenuItem>
 			<MenuItem class=@(IsRu ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
 					  Selected=@IsRu
 					  EndIcon=@(IsRu ? Check : null)
 					  OnClick=@SelectRu>
-				<span slot="start" class=@LangFlag>🇷🇺</span>
-				<span slot="headline" class=@LangName>@L[CommonLangRu]</span>
+				<span slot="start">🇷🇺</span>
+				<span slot="headline">@L[CommonLangRu]</span>
 			</MenuItem>
 			<MenuItem class=@(IsEn ? string.Format(Two, LangMenuItem, LangMenuItemActive) : LangMenuItem)
 					  Selected=@IsEn
 					  EndIcon=@(IsEn ? Check : null)
 					  OnClick=@SelectEn>
-				<span slot="start" class=@LangFlag>🇬🇧</span>
-				<span slot="headline" class=@LangName>@L[CommonLangEn]</span>
+				<span slot="start">🇬🇧</span>
+				<span slot="headline">@L[CommonLangEn]</span>
 			</MenuItem>
 		</Menu>
 	</menu>

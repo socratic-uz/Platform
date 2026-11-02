@@ -1,6 +1,7 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Forms
 @using Assets.Constants
+@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Classes.Picker
 @using static Assets.Constants.Loc.Common
@@ -20,8 +21,7 @@
                        OnReset=@ClearAll>
         <CustomActions>
             <label for=@inputId class=@FileAddBtnLabel>
-                <Button Variant=@FilledTonal Type="button">
-                    <md-icon slot="icon">@AddPhotoAlternate</md-icon>
+                <Button Variant=@FilledTonal Type="button" Icon=@AddPhotoAlternate>
                     @EffectiveUploadLabel
                 </Button>
             </label>
@@ -54,14 +54,10 @@
                             }
                             else
                             {
-                                <figure class=@GetIconPreviewClass(contentType, fileName)>
-                                    <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
-                                </figure>
+                                <Icon Name=@GetFileIcon(contentType, fileName) class=@GetIconPreviewClass(contentType, fileName) />
                             }
                         </figure>
-                        <footer class=@FileInfo>
-                            <span class=@FileName title=@fileName>@fileName</span>
-                        </footer>
+                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
                         @if (isNew)
                         {
                             <span class=@NewBadge>New</span>
@@ -89,9 +85,7 @@
                         <figure class=@FilePreviewArea>
                             <img src=@previewUrl alt=@fileName class=@ImagePreview />
                         </figure>
-                        <footer class=@FileInfo>
-                            <span class=@FileName title=@fileName>@fileName</span>
-                        </footer>
+                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
                         <menu class=@FileOverlay>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
@@ -119,14 +113,10 @@
                             }
                             else
                             {
-                                <figure class=@GetIconPreviewClass(contentType, fileName)>
-                                    <md-icon>@GetFileIcon(contentType, fileName)</md-icon>
-                                </figure>
+                                <Icon Name=@GetFileIcon(contentType, fileName) class=@GetIconPreviewClass(contentType, fileName) />
                             }
                         </figure>
-                        <footer class=@FileInfo>
-                            <span class=@FileName title=@fileName>@fileName</span>
-                        </footer>
+                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
                         <span class=@NewBadge>New</span>
                         <menu class=@FileOverlay>
                             <IconButton Icon=@Delete
@@ -148,7 +138,7 @@
              @ondrop:preventDefault>
             
             <span class=@UploadZoneLabel>
-                <md-icon class=@UploadIcon>@CloudUpload</md-icon>
+                <Icon Name=@CloudUpload class=@UploadIcon />
                 <span class=@UploadText>@EffectiveUploadLabel</span>
                 <span class=@UploadSubtext>@L[FilePickerDragFilesOrClick]</span>
             </span>

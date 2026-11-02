@@ -8,19 +8,18 @@
 @typeparam TItem where TItem : class
 
 <search class=@SmartFilterBar>
-    <fieldset class=@SmartFilterSearch>
-        <TextField TValue="string"
-                   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-                   Placeholder=@EffectivePlaceholder
-                   Value=@SearchText
-                   ValueChanged=@OnSearchValueChanged
-                   ValueExpression=@(() => SearchText)
-                   HasLeadingIcon=@true
-                   LeadingIcon=@Search
-                   HasTrailingIcon=@(!string.IsNullOrEmpty(SearchText))
-                   TrailingIcon=@Close
-                   OnTrailingIconClick=@ClearSearch />
-    </fieldset>
+    <TextField TValue="string"
+               Variant=@(TextField<string>.TextFieldVariant.Outlined)
+               class=@SmartFilterSearch
+               Placeholder=@EffectivePlaceholder
+               Value=@SearchText
+               ValueChanged=@OnSearchValueChanged
+               ValueExpression=@(() => SearchText)
+               HasLeadingIcon=@true
+               LeadingIcon=@Search
+               HasTrailingIcon=@(!string.IsNullOrEmpty(SearchText))
+               TrailingIcon=@Close
+               OnTrailingIconClick=@ClearSearch />
 
     @if (FilterChips != null && FilterChips.Any())
     {

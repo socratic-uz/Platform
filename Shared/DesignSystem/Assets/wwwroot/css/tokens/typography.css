@@ -4,16 +4,23 @@
    ========================================================================== */
 
 :root {
+    --blazor-load-percentage-text: "Loading";
     --md-icon-font: 'Material Symbols Outlined';
     --md-icon-size: 24px;
     --md-ref-typeface-brand: 'Roboto', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', system-ui, sans-serif;
+    --md-ref-typeface-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     --md-ref-typeface-plain: 'Roboto', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', system-ui, sans-serif;
+    --md-sys-typescale-body-font: var(--md-ref-typeface-plain);
     --md-sys-typescale-body-large-line-height: 1.6;
     --md-sys-typescale-body-large-size: 1rem;
     --md-sys-typescale-body-large-weight: 400;
     --md-sys-typescale-body-medium-line-height: 1.5;
     --md-sys-typescale-body-medium-size: 0.875rem;
     --md-sys-typescale-body-medium-weight: 400;
+    --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
+    --md-sys-typescale-body-small-line-height: 1.4;
+    --md-sys-typescale-body-small-size: 0.75rem;
+    --md-sys-typescale-body-small-weight: 400;
     --md-sys-typescale-display-large-line-height: 1.15;
     --md-sys-typescale-display-large-size: clamp(2.75rem, 5vw + 1rem, 4rem);
     --md-sys-typescale-display-large-tracking: -0.03em;
@@ -26,6 +33,12 @@
     --md-sys-typescale-headline-medium-size: clamp(1.5rem, 2vw + 0.5rem, 1.85rem);
     --md-sys-typescale-headline-medium-tracking: -0.015em;
     --md-sys-typescale-headline-medium-weight: 700;
+    --md-sys-typescale-headline-small-line-height: 1.3;
+    --md-sys-typescale-headline-small-size: 1.5rem;
+    --md-sys-typescale-headline-small-weight: 600;
+    --md-sys-typescale-label-medium-line-height: 1rem;
+    --md-sys-typescale-label-medium-size: 0.75rem;
+    --md-sys-typescale-label-medium-weight: 500;
     --md-sys-typescale-label-small-line-height: 1rem;
     --md-sys-typescale-label-small-size: 0.6875rem;
     --md-sys-typescale-label-small-tracking: 0.05em;
@@ -37,6 +50,9 @@
     --md-sys-typescale-title-medium-line-height: 1.4;
     --md-sys-typescale-title-medium-size: 1.125rem;
     --md-sys-typescale-title-medium-weight: 600;
+    --md-sys-typescale-title-small-line-height: 1.4;
+    --md-sys-typescale-title-small-size: 0.875rem;
+    --md-sys-typescale-title-small-weight: 500;
     --md-sys-typescale-truncate: ellipsis;
 }
 

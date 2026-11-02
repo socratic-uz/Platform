@@ -3,15 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.faq-card {
-    display: grid;
-    gap: 1rem;
-    padding: 1.5rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    background: var(--md-sys-color-surface-container-low);
-}
-
 .help-categories {
     display: grid;
     grid-auto-flow: column;
@@ -33,10 +24,6 @@
     min-width: 0;
     max-width: 100%;
     text-align: center;
-}
-
-.help-search-bar {
-    width: 100%;
 }
 
 .help-subtitle {
@@ -61,12 +48,6 @@
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.faq-section {
-    display: grid;
     gap: 1.5rem;
     width: 100%;
 }
@@ -173,13 +154,6 @@ details:not([open]) .faq-answer {
     margin: 0 auto;
     padding: 2.5rem 1.5rem 3rem;
     overflow-x: clip;
-}
-
-.help-search-section {
-    display: grid;
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
 }
 
 @media (max-width: 599.98px) {

@@ -78,9 +78,7 @@
             }
             else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
             {
-                <span class=@QrPlaceholder>
-                    <Icon Name=@QrCode2 />
-                </span>
+                <Icon Name=@QrCode2 class=@QrPlaceholder />
             }
         </figure>
         <aside class=@FiscalInfo>
@@ -93,9 +91,7 @@
     </footer>
 
     <!-- Thermal Printer Receipt Print Button -->
-    <menu class=@ReceiptActions>
-        <Button Variant=@Filled class=@PrintBtn OnClick=@PrintReceiptAsync>
-            <Icon Name=@Print Slot="icon" /> @L[PrintEscPos]
-        </Button>
-    </menu>
+    <Button Variant=@Filled Icon=@Print class=@string.Format(Two, ReceiptActions, PrintBtn) OnClick=@PrintReceiptAsync>
+        @L[PrintEscPos]
+    </Button>
 </article>

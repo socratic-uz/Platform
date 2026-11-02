@@ -9,7 +9,6 @@
 }
 
 md-icon,
-.material-symbols-outlined,
 [class*="material-symbols"] {
     font-family: 'Material Symbols Outlined' !important;
     font-weight: normal;
@@ -30,12 +29,6 @@ md-icon,
     width: var(--md-icon-size, 24px);
     height: var(--md-icon-size, 24px);
     vertical-align: middle;
-}
-
-.material-symbols-outlined md-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
 }
 
 md-icon:not(:defined) {

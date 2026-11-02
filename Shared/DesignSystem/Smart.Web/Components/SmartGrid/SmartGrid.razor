@@ -123,10 +123,10 @@
 
         <TemplateColumn Context="item" TGridItem="TItem" Class=@ActionsColumn>
             <HeaderTemplate>
-                <md-fab variant="primary" lowered aria-label=@L[CreateAction] @onclick=@(e => OpenCreateDialog())>@Add</md-fab>
+                <Fab Variant="primary" Lowered=@true aria-label=@L[CreateAction] OnClick=@(e => OpenCreateDialog())>@Add</Fab>
             </HeaderTemplate>
             <ChildContent>
-                <md-filled-tonal-icon-button class="btn-s" title=@L[EditAction] aria-label=@L[EditAction] @onclick=@(e => OpenEditDialog(item))>@Edit</md-filled-tonal-icon-button>
+                <IconButton Variant=@FilledTonal title=@L[EditAction] AriaLabel=@L[EditAction] OnClick=@(e => OpenEditDialog(item))>@Edit</IconButton>
             </ChildContent>
         </TemplateColumn>
     }

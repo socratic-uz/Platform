@@ -158,21 +158,6 @@
     gap: 2px;
 }
 
-.docs-header-actions {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.75rem;
-    justify-self: end;
-    align-items: center;
-}
-
-.docs-header-bar {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.75rem;
-    align-items: center;
-}
-
 .docs-header-icon {
     width: 24px;
     height: 24px;
@@ -220,26 +205,12 @@ main.docs-page {
     overflow: hidden;
 }
 
-.docs-group-container {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
 .docs-welcome-container {
     display: grid;
     place-items: center;
     height: 100%;
     min-height: 360px;
     padding: var(--md-sys-spacing-8, 2rem) var(--md-sys-spacing-4, 1rem);
-}
-
-.docs-breadcrumb-link {
-    display: inline-grid;
-    align-items: center;
-    min-height: 48px;
-    padding-inline: 4px;
-    color: var(--md-sys-color-primary);
-    text-decoration: none;
 }
 
 .docs-header-breadcrumb {

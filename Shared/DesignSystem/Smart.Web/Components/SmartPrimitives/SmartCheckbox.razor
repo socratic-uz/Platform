@@ -52,14 +52,13 @@
         @if (typeof(TEnum) == typeof(bool))
         {
             var value = GetBooleanValue();
-            <section class=@SmartCheckboxSingle>
-                <Checkbox Label=@Label
-                          Value=@value
-                          ValueChanged=@(async (bool val) => await HandleBooleanChange(val))
-                          Disabled=@Disabled
-                          Required=@IsRequired
-                          AriaLabel=@(AriaLabel ?? Label) />
-            </section>
+            <Checkbox Class=@SmartCheckboxSingle
+                      Label=@Label
+                      Value=@value
+                      ValueChanged=@(async (bool val) => await HandleBooleanChange(val))
+                      Disabled=@Disabled
+                      Required=@IsRequired
+                      AriaLabel=@(AriaLabel ?? Label) />
         }
     }
 </fieldset>

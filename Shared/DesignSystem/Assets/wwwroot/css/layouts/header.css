@@ -66,13 +66,6 @@
     min-width: 0;
 }
 
-.home-search-container {
-    display: grid;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-}
-
 .header-content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -93,15 +86,6 @@
 .header-icon {
     color: var(--md-sys-color-primary);
     font-size: 20px;
-}
-
-.header-icon-wrap {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
 }
 
 .header-icon.icon-making {
@@ -136,19 +120,6 @@
     overflow-x: auto;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
-}
-
-.header-text {
-    display: grid;
-    gap: 0.25rem;
-    min-width: 0;
-}
-
-.m3-header-controls {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0.75rem;
-    align-items: center;
 }
 
 .m3-page-header-actions {
@@ -204,15 +175,7 @@
     line-height: 1.2;
 }
 
-.m3-page-header-text {
-    display: grid;
-    gap: 0.125rem;
-    min-width: 0;
-    max-width: 100%;
-}
-
-.m3-page-header-title,
-h1.m3-page-header-text {
+.m3-page-header-title {
     min-width: 0;
     min-inline-size: 0;
     max-width: 100%;
@@ -234,20 +197,6 @@ h1.m3-page-header-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.map-route-header-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    margin-bottom: 0.1rem;
-}
-
-.map-route-header-title {
-    color: var(--map-text);
-    font-size: 1rem;
-    font-weight: 700;
 }
 
 .place-details-header-title {
@@ -318,11 +267,9 @@ header.app-header.header-sticky {
         scrollbar-width: none;
     }
 
-    .header-start-zone:has(.m3-page-header-start) .header-brand-zone,
+
     .header-start-zone:has(.m3-page-header-start) .header-brand-link,
-    .header-start-zone:has(.kiosk-brand) .header-brand-zone,
     .header-start-zone:has(.kiosk-brand) .header-brand-link,
-    .header-start-zone:has(.header-context-divider) .header-brand-zone,
     .header-start-zone:has(.header-context-divider) .header-brand-link,
     .header-context-divider {
         display: none;
@@ -374,8 +321,7 @@ header.app-header.header-sticky {
         min-width: 0;
     }
 
-    .m3-page-header-title,
-    h1.m3-page-header-text {
+    .m3-page-header-title {
         font-size: var(--md-sys-typescale-title-large-size, 1.25rem);
     }
 }
@@ -400,8 +346,7 @@ header.app-header.header-sticky {
         display: none;
     }
 
-    .m3-page-header-title,
-    h1.m3-page-header-text {
+    .m3-page-header-title {
         font-size: var(--md-sys-typescale-title-medium-size, 1.125rem);
     }
 
@@ -412,10 +357,6 @@ header.app-header.header-sticky {
     .header-end-zone .items-count-badge {
         display: none;
     }
-}
-
-.header-icon-wrap .ux-search-box input {
-    height: 48px;
 }
 
 .picker-header-row {
@@ -438,12 +379,4 @@ header.app-header.header-sticky {
         height: 42px;
     }
 
-}
-
-.col-header-content {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    position: relative;
 }

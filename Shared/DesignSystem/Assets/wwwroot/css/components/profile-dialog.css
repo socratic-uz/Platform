@@ -16,18 +16,6 @@
     gap: var(--md-sys-spacing-4, 1rem);
 }
 
-.profile-color-picker-box {
-    display: grid;
-    grid-auto-flow: row;
-    justify-items: center;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.profile-color-picker-label {
-    color: var(--md-sys-color-outline);
-    font-size: 0.75rem;
-}
-
 .profile-security-subtext {
     margin: 0;
     color: var(--md-sys-color-outline);
@@ -43,14 +31,6 @@
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container-high);
-}
-
-:where(.profile-auth-info) {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto minmax(0, 1fr);
-    align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
 }
 
 .profile-auth-text {
@@ -119,7 +99,6 @@
 }
 
 .faceid-camera-viewport {
-    display: grid;
     place-items: center;
     position: relative;
     width: 280px;
@@ -131,7 +110,6 @@
 }
 
 .faceid-camera-fallback {
-    display: grid;
     place-items: center;
     padding: 1rem;
     color: var(--md-sys-color-on-surface-variant);

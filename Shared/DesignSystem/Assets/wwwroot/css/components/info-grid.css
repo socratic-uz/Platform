@@ -8,13 +8,6 @@
     font-size: 1.25rem;
 }
 
-.info-item {
-    display: grid;
-    gap: var(--md-sys-spacing-1);
-    align-content: start;
-    box-sizing: border-box;
-}
-
 .info-label {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8125rem;
@@ -67,14 +60,6 @@
     display: grid;
     gap: 1.5rem;
     align-content: start;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: var(--md-sys-spacing-4);
-    box-sizing: border-box;
-    width: 100%;
 }
 
 .m3-info-grid {
@@ -185,9 +170,6 @@
 }
 
 /* --- Statistics & Details --- */
-.detail-icon {
-    font-size: 18px;
-}
 
 .detail-item {
     display: grid;

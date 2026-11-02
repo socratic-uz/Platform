@@ -29,7 +29,8 @@
 }
 
 #blob {
-    transform: scale(var(--blob-scale, 1));
+    --blob-scale: 1;
+    transform: scale(var(--blob-scale));
     transform-origin: center;
 }
 

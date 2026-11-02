@@ -270,11 +270,6 @@ chat-messages > :where(div, article, section):last-of-type {
     color: var(--md-sys-color-on-surface);
 }
 
-.chat-input-form {
-    display: grid;
-    width: 100%;
-}
-
 .chat-input-wrapper {
     display: grid;
     width: 100%;

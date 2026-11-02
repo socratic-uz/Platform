@@ -339,30 +339,6 @@ namespace Classes
 {
 ${body}
 }
-
-
-namespace Styles
-{
-    /// <summary>
-    /// Backward-compatibility surface for Styles.CssClasses.
-    /// </summary>
-    public static class CssClasses
-    {
-${body}
-    }
-}
-
-namespace Material.Web
-{
-    /// <summary>
-    /// Strongly-typed CSS class selectors for Material Design 3 Blazor components.
-    /// Backward-compatibility surface.
-    /// </summary>
-    public static class M3
-    {
-${body}
-    }
-}
 `;
 
   fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });

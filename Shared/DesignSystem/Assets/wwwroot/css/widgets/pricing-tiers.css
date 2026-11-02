@@ -50,31 +50,6 @@
     color: var(--md-sys-color-on-tertiary-container);
 }
 
-.empty-plans-actions {
-    display: grid;
-    justify-items: center;
-    margin-top: 0.5rem;
-}
-
-.empty-plans-desc {
-    max-width: 460px;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9375rem;
-    line-height: 1.5;
-}
-
-.empty-plans-icon {
-    font-size: 2rem;
-}
-
-.empty-plans-title {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
 .plan-currency {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
@@ -123,23 +98,6 @@
     color: var(--md-sys-color-on-surface);
     font-size: 1.125rem;
     font-weight: 700;
-}
-
-.empty-plans-icon-wrapper {
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.m3-pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
 }
 
 /* --- Plans & Subscriptions --- */

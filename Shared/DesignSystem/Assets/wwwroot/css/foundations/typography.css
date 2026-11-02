@@ -48,12 +48,20 @@
 .header-title-group {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 0.15rem;
     justify-content: start;
     align-items: center;
     min-width: 0;
+}
+
+.header-title-group> :where(.header-icon, md-icon) {
+    grid-row: 1 / span 2;
+}
+
+.header-title-group> :where(h1, h2, h5, p) {
+    grid-column: 2;
+    margin: 0;
 }
 
 .kiosk-product-title-link {
@@ -170,21 +178,6 @@
     align-items: center;
 }
 
-
-md-outlined-text-field {
-    width: 100%;
-    min-width: 0;
-    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-medium);
-    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-medium);
-    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-medium);
-}
-
-md-outlined-text-field:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
 .place-details-title-container {
     display: grid;
     gap: 0.25rem;
@@ -217,19 +210,6 @@ md-outlined-text-field:focus-visible {
     line-height: 1.6;
 }
 
-.showcase-section-title-wrap {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
-    align-items: center;
-    min-width: 0;
-    min-inline-size: 0;
-}
-
-.showcase-section-title-wrap > * {
-    min-width: 0;
-}
-
 @media (max-width: 600px) {
     .section-title-box h2 {
         font-size: clamp(1.6rem, 5.5vw, 2.1rem);
@@ -242,13 +222,6 @@ md-outlined-text-field:focus-visible {
 
 }
 
-.col-title-text {
-    min-width: 0;
-    min-inline-size: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
 
 .m3-body-large {
     font-size: var(--md-sys-typescale-body-large-size);
@@ -312,25 +285,12 @@ md-outlined-text-field:focus-visible {
     word-break: break-word;
 }
 
-.m3-label-sm {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
 .m3-label-small {
     font-size: var(--md-sys-typescale-label-small-size);
     font-weight: var(--md-sys-typescale-label-small-weight);
     line-height: var(--md-sys-typescale-label-small-line-height);
     letter-spacing: var(--md-sys-typescale-label-small-tracking);
     text-transform: uppercase;
-}
-
-.m3-legend {
-    padding: 0 0.5rem;
-    color: var(--md-sys-color-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
 }
 
 .m3-line-clamp-2 {
@@ -345,7 +305,7 @@ md-outlined-text-field:focus-visible {
     -webkit-line-clamp: 3;
 }
 
-.m3-truncate {
+:where(.m3-truncate, .col-title-text) {
     min-width: 0;
     min-inline-size: 0;
     white-space: nowrap;
@@ -395,16 +355,9 @@ md-outlined-text-field:focus-visible {
     font-size: 0.875rem;
 }
 
-.section-desc {
-    margin: 0 auto;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.92rem;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
 .section-header {
     display: grid;
+    grid-column: 1 / -1;
     gap: 0.75rem;
     justify-items: center;
     width: 100%;

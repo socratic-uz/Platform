@@ -24,13 +24,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
 }
 
-.dialog-content {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
 .dialog-headline-wrap {
     display: grid;
     grid-auto-flow: column;
@@ -131,36 +124,11 @@ md-dialog.contacts details summary::-webkit-details-marker {
     transform: translate(-50%, -50%);
 }
 
-.m3-dialog {
-    grid-template-rows: auto minmax(0, 1fr) auto;
-}
-
-.m3-dialog-actions {
-    display: grid;
-    padding-top: var(--md-sys-spacing-2);
-}
-
-.m3-dialog-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: var(--md-sys-z-dialog-backdrop);
-    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
 .m3-dialog-body {
     overscroll-behavior: contain;
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
                      var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.m3-dialog-content {
-    min-height: 0;
-    max-height: min(65dvh, 560px);
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .m3-dialog-description {
@@ -187,11 +155,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
 .m3-dialog-icon {
     color: var(--md-sys-color-primary);
     font-size: 1.35rem;
-}
-
-.m3-dialog-options-list {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
 }
 
 .m3-dialog-surface {
@@ -300,35 +263,8 @@ md-dialog.contacts details summary::-webkit-details-marker {
     cursor: default;
 }
 
-.m3-drawer-panel {
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    grid-column: 2;
-    width: 100%;
-    max-width: 440px;
-    height: 100dvh;
-    padding: var(--md-sys-spacing-6, 1.5rem);
-    border-left: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    overscroll-behavior: contain;
-    box-shadow: -10px 0 30px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-    touch-action: pan-y;
-}
-
 .m3-modal {
     grid-template-rows: auto minmax(0, 1fr) auto;
-}
-
-.m3-modal-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: var(--md-sys-z-dialog-backdrop);
-    background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 }
 
 .map-mobile-backdrop {
@@ -416,11 +352,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
-}
-
-.showcase-sidebar-backdrop {
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
 }
 
 .ux-modal-body {
@@ -684,13 +615,6 @@ md-dialog.contacts md-list {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .m3-drawer-panel {
-        grid-column: 1;
-        width: 100%;
-        max-width: 100%;
-        padding: var(--md-sys-spacing-4, 1rem);
-    }
-
     .md-drawer-backdrop {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -707,27 +631,7 @@ md-dialog.contacts md-list {
 
 }
 
-@media (max-width: 839.98px) {
-    .showcase-sidebar-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: var(--md-sys-z-dialog-backdrop, 1000);
-        background: rgb(from var(--md-sys-color-scrim) r g b / 0.6);
-    }
-
-}
-
-.m3x-shape-dialog {
-    border-radius: var(--md-sys-shape-expressive-dialog, 28px);
-}
-
 /* --- Dropdowns & Menus --- */
-.dropdown-menu {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
 
 md-menu:not(:defined) {
     display: none;

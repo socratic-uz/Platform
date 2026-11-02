@@ -33,42 +33,42 @@
     border-collapse: collapse;
 }
 
-.receipt-header {
+.receipt-container .receipt-header {
     text-align: center;
     margin-bottom: var(--md-sys-spacing-4, 1rem);
     padding-bottom: var(--md-sys-spacing-3, 0.75rem);
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
-.receipt-header h3 {
+.receipt-container .receipt-header h3 {
     font-size: 1.1rem;
     font-weight: 800;
     margin: 0 0 4px 0;
     color: var(--md-sys-color-on-surface);
 }
 
-.receipt-header p {
+.receipt-container .receipt-header p {
     font-size: 0.75rem;
     color: var(--md-sys-color-on-surface-variant);
     margin: 0;
 }
 
-.receipt-meta {
+.receipt-container .receipt-meta {
     font-size: 0.78rem;
     color: var(--md-sys-color-on-surface-variant);
     margin-bottom: 14px;
 }
 
-.receipt-meta td {
+.receipt-container .receipt-meta td {
     padding: 2px 0;
 }
 
-.receipt-table {
+.receipt-container .receipt-table {
     font-size: 0.82rem;
     margin: 12px 0;
 }
 
-.receipt-table th {
+.receipt-container .receipt-table th {
     text-align: left;
     color: var(--md-sys-color-outline);
     font-weight: 700;
@@ -78,27 +78,27 @@
     padding: 6px 0;
 }
 
-.receipt-table td {
+.receipt-container .receipt-table td {
     padding: 6px 0;
     border-bottom: 1px dotted var(--md-sys-color-outline-variant);
 }
 
-.receipt-table tr:hover {
+.receipt-container .receipt-table tr:hover {
     background: var(--md-sys-color-surface-container-highest);
 }
 
-.receipt-totals {
+.receipt-container .receipt-totals {
     margin-top: var(--md-sys-spacing-3, 0.75rem);
     padding-top: 10px;
     border-top: 2px solid var(--md-sys-color-on-surface);
     font-size: 0.85rem;
 }
 
-.receipt-totals td {
+.receipt-container .receipt-totals td {
     padding: 3px 0;
 }
 
-.receipt-totals .grand-total {
+.receipt-container .receipt-totals .grand-total {
     font-size: 1.1rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
@@ -115,10 +115,6 @@
 
 .receipt-text-right {
     text-align: right;
-}
-
-.receipt-text-center {
-    text-align: center;
 }
 
 .receipt-col-qty {

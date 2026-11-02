@@ -78,33 +78,6 @@
     overflow: hidden;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs-copy-button) {
-    position: absolute;
-    top: 0.4rem;
-    right: 0.4rem;
-    min-width: var(--md-sys-touch-target-min, 48px);
-    min-height: var(--md-sys-touch-target-min, 48px);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background-color: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    touch-action: manipulation;
-    transition: transform var(--md-sys-motion-duration-short3, 200ms) var(--md-sys-motion-easing-spring),
-        background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-        border-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-}
-
-:where(.markdown-body, .docs-article) :where(.hljs-copy-button):hover {
-    border-color: var(--md-sys-color-primary);
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-:where(.markdown-body, .docs-article) :where(.hljs-copy-button):active {
-    border-color: var(--md-sys-color-primary);
-    transform: scale(0.96);
-}
-
 :where(.markdown-body, .docs-article) :where(.hljs-copy) {
     position: absolute;
     top: 0.4rem;

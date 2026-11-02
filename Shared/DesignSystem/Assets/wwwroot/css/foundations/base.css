@@ -1,283 +1,40 @@
 /* ==========================================================================
-
    Socratic Design System — FOUNDATIONS / base.css
+   Classless-First Foundation (Semantic HTML5 + Material Design 3 Expressive)
+   Cascade Layer: @layer foundations
 
-   Component-Driven Architecture
-
+   Contract:
+   1. Zero Specificity — every tag-level rule is wrapped in :where(...) → (0, 0, 0),
+      so layouts / pages / widgets / components override it without !important.
+   2. Classless-when-classless — rich M3 defaults for structural & interactive tags
+      (button, article, aside, nav, ul, fieldset, table, details, dialog, inputs)
+      apply only to elements WITHOUT a class attribute: :where(tag:not([class])).
+      Elements carrying a design-system class receive a neutral reset instead,
+      so existing components keep full control of their geometry.
+   3. Typography (h1–h6, p, a, code, kbd, mark, small, hr) is styled globally.
+   4. Pure CSS Grid, M3 tokens only, touch targets ≥ 48px.
    ========================================================================== */
 
+
+/* 1. Box Model & Selection ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 ::selection {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
-* {
-    box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+[hidden] {
+    display: none !important;
 }
 
 
-*:focus-visible {
-    border-radius: inherit;
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px var(--md-sys-color-surface);
-}
-
-
-a {
-    color: var(--md-sys-color-primary);
-    text-decoration: none;
-    transition: color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
-    touch-action: manipulation;
-}
-
-
-a:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-
-a:hover {
-    color: var(--md-sys-color-primary);
-    text-decoration: underline;
-}
-
-
-audio {
-    display: block;
-    max-width: 100%;
-}
-
-
-body {
-    display: grid;
-    width: 100%;
-    max-width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    margin: 0;
-    padding: 0;
-    background: var(--md-sys-color-background);
-    background-color: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-plain, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
-    line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
-    overflow-x: clip;
-    overscroll-behavior: none;
-    touch-action: manipulation;
-    user-select: none;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    text-rendering: optimizeLegibility;
-}
-
-
-button {
-    margin: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    text-transform: none;
-    touch-action: manipulation;
-}
-
-
-button:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-
-canvas {
-    display: block;
-    max-width: 100%;
-}
-
-
-h1 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-display-large-size);
-    font-weight: var(--md-sys-typescale-display-large-weight);
-    line-height: var(--md-sys-typescale-display-large-line-height);
-    letter-spacing: var(--md-sys-typescale-display-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-h2 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-headline-large-size);
-    font-weight: var(--md-sys-typescale-headline-large-weight);
-    line-height: var(--md-sys-typescale-headline-large-line-height);
-    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-headline-medium-size);
-    font-weight: var(--md-sys-typescale-headline-medium-weight);
-    line-height: var(--md-sys-typescale-headline-medium-line-height);
-    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-h4 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-title-large-size);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    line-height: var(--md-sys-typescale-title-large-line-height);
-    letter-spacing: var(--md-sys-typescale-title-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-h5 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-brand);
-    font-size: var(--md-sys-typescale-body-large-size);
-    font-weight: 600;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: var(--md-sys-color-background);
-    font-family: var(--md-ref-typeface-plain);
-    overflow-x: clip;
-    scroll-behavior: smooth;
-    overscroll-behavior: none;
-    user-select: none;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -webkit-user-select: none;
-    tab-size: 4;
-}
-
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-
-input {
-    margin: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-
-input:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-
-figure {
-    margin: 0;
-}
-
-
-hgroup {
-    margin: 0;
-    padding: 0;
-}
-
-
-menu,
-
-figure {
-    margin: 0;
-}
-
-
-hgroup {
-    margin: 0;
-    padding: 0;
-}
-
-
-menu,
-
-ol,
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-
-fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-    min-width: 0;
-}
-
-
-video {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
+/* 2. Reduced Motion ------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -290,17 +47,652 @@ video {
     html {
         scroll-behavior: auto;
     }
-
 }
 
+
+/* 3. Focus ---------------------------------------------------------------- */
+
 :focus-visible {
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: 2px;
+    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
+    outline-offset: var(--md-sys-outline-offset, 2px);
+    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
 }
 
 :focus:not(:focus-visible) {
     outline: none;
 }
+
+
+/* 4. Root (html, body) ---------------------------------------------------- */
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-plain);
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    user-select: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    tab-size: 4;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    min-height: var(--md-sys-viewport-height, 100dvh);
+    margin: 0;
+    padding: 0;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-plain);
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
+    overflow-x: clip;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* 5. Typography (global) -------------------------------------------------- */
+
+:where(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-brand);
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+:where(h1) {
+    font-size: var(--md-sys-typescale-display-large-size);
+    font-weight: var(--md-sys-typescale-display-large-weight);
+    line-height: var(--md-sys-typescale-display-large-line-height);
+    letter-spacing: var(--md-sys-typescale-display-large-tracking);
+}
+
+:where(h2) {
+    font-size: var(--md-sys-typescale-headline-large-size);
+    font-weight: var(--md-sys-typescale-headline-large-weight);
+    line-height: var(--md-sys-typescale-headline-large-line-height);
+    letter-spacing: var(--md-sys-typescale-headline-large-tracking);
+}
+
+:where(h3) {
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+}
+
+:where(h4) {
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+    line-height: var(--md-sys-typescale-title-large-line-height);
+    letter-spacing: var(--md-sys-typescale-title-large-tracking);
+}
+
+:where(h5) {
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+:where(h6) {
+    font-size: var(--md-sys-typescale-body-large-size);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+:where(p) {
+    margin: 0;
+    text-wrap: pretty;
+}
+
+:where(p, li, dd, td, blockquote, article, pre, code) {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+:where(a) {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+    transition: color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
+    touch-action: manipulation;
+}
+
+:where(a:hover) {
+    text-decoration: underline;
+}
+
+:where(small) {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(strong, b) {
+    font-weight: 600;
+}
+
+:where(abbr[title]) {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+:where(mark) {
+    padding: 0.1em 0.3em;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+:where(code, kbd, samp, pre) {
+    font-family: var(--md-ref-typeface-mono);
+    font-size: 0.875em;
+}
+
+:where(code) {
+    padding: 0.15em 0.35em;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+}
+
+:where(kbd) {
+    padding: 0.15em 0.45em;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom-width: 2px;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+:where(pre) {
+    margin: 0;
+    padding: var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+:where(pre) > :where(code) {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+}
+
+:where(blockquote) {
+    margin: 0;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border-inline-start: 4px solid var(--md-sys-color-primary);
+    border-radius: 0 var(--md-sys-shape-corner-small) var(--md-sys-shape-corner-small) 0;
+    background-color: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(hr) {
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: var(--md-sys-color-outline-variant);
+}
+
+
+/* 6. Media ---------------------------------------------------------------- */
+
+:where(audio, canvas, embed, iframe, img, object, video) {
+    display: block;
+    max-width: 100%;
+}
+
+:where(img, video) {
+    height: auto;
+}
+
+:where(figure) {
+    display: grid;
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+}
+
+:where(figcaption) {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+
+/* 7. Landmarks & Sectioning ----------------------------------------------- */
+
+/* Neutral reset for every sectioning element */
+:where(hgroup, menu) {
+    margin: 0;
+    padding: 0;
+}
+
+/* Classless page skeleton: body > header / main / footer */
+:where(body > header:not([class]), body > main:not([class]), body > footer:not([class])) {
+    width: min(100% - 2 * var(--md-sys-gutter-page), var(--md-sys-breakpoint-expanded));
+    margin-inline: auto;
+}
+
+:where(body > main:not([class])) {
+    display: grid;
+    align-content: start;
+    gap: var(--md-sys-gutter-section);
+    padding-block: var(--md-sys-spacing-6) var(--md-sys-spacing-8);
+}
+
+:where(body > footer:not([class])) {
+    padding-block: var(--md-sys-spacing-6);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+:where(section:not([class]), hgroup:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+}
+
+/* Classless card: <article> */
+:where(article:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-5);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large);
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+:where(article:not([class])) > :where(header, footer) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+}
+
+/* Classless side panel: <aside> */
+:where(aside:not([class])) {
+    display: grid;
+    align-content: start;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background-color: var(--md-sys-color-surface-container);
+}
+
+/* Classless navigation: <nav> with plain list */
+:where(nav:not([class])) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-4);
+}
+
+:where(nav:not([class])) > :where(ul, ol) {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 8. Lists ---------------------------------------------------------------- */
+
+/* Classed lists → neutral reset (components own their layout) */
+:where(ul[class], ol[class], menu) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Classless lists → readable content lists */
+:where(ul:not([class]), ol:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    margin: 0;
+    padding-inline-start: var(--md-sys-spacing-6);
+}
+
+:where(li::marker) {
+    color: var(--md-sys-color-primary);
+}
+
+/* Description list → two-column key/value grid */
+:where(dl) {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+    margin: 0;
+}
+
+:where(dt) {
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(dd) {
+    min-width: 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+
+/* 9. Tables --------------------------------------------------------------- */
+
+:where(table) {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+:where(table:not([class])) {
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+:where(table:not([class])) :where(caption) {
+    padding-block-end: var(--md-sys-spacing-2);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: start;
+}
+
+:where(table:not([class])) :where(th, td) {
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    text-align: start;
+    vertical-align: middle;
+}
+
+:where(table:not([class])) :where(thead th) {
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 600;
+}
+
+:where(table:not([class])) :where(tbody tr:hover) {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+:where(table:not([class])) :where(tfoot :is(th, td)) {
+    border-top: 2px solid var(--md-sys-color-outline);
+    border-bottom: 0;
+    font-weight: 600;
+}
+
+
+/* 10. Forms --------------------------------------------------------------- */
+
+/* Font inheritance for all controls (no class gating) */
+:where(button, input, optgroup, select, textarea) {
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    text-transform: none;
+    touch-action: manipulation;
+}
+
+:where(input, textarea) {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+:where(::placeholder) {
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 1;
+}
+
+/* Classed fieldsets → neutral reset */
+:where(fieldset) {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Classless fieldset → outlined group */
+:where(fieldset:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+}
+
+:where(fieldset:not([class])) > :where(legend) {
+    padding-inline: var(--md-sys-spacing-2);
+    color: var(--md-sys-color-primary);
+    font-weight: 600;
+}
+
+:where(form:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+}
+
+/* Classless field label → stacked caption above control */
+:where(label:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-label-medium-size);
+    font-weight: var(--md-sys-typescale-label-medium-weight);
+}
+
+/* Classless choice label (wraps checkbox / radio / switch) → inline row, touch ≥ 48px */
+:where(label:not([class]):has(md-checkbox, md-radio, md-switch, input[type="checkbox"], input[type="radio"])) {
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    min-height: var(--md-sys-touch-target-min);
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-body-large-size);
+    font-weight: inherit;
+    cursor: pointer;
+}
+
+/* Classless text-like controls → M3 outlined field, touch ≥ 48px */
+:where(select:not([class]), textarea:not([class]), input:not([class], [type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"], [type="hidden"])) {
+    width: 100%;
+    min-height: var(--md-sys-touch-target-min);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-body-large-size);
+    transition: border-color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard);
+}
+
+:where(select:not([class]), textarea:not([class]), input:not([class])):hover {
+    border-color: var(--md-sys-color-on-surface);
+}
+
+:where(select:not([class]), textarea:not([class]), input:not([class])):focus-visible {
+    border-color: var(--md-sys-color-primary);
+    outline: 1px solid var(--md-sys-color-primary);
+    outline-offset: 0;
+}
+
+:where(select:not([class]), textarea:not([class]), input:not([class])):user-invalid {
+    border-color: var(--md-sys-color-error);
+}
+
+:where(textarea:not([class])) {
+    min-height: calc(var(--md-sys-touch-target-min) * 2);
+    resize: vertical;
+}
+
+:where(input[type="checkbox"], input[type="radio"], input[type="range"], progress, meter) {
+    accent-color: var(--md-sys-color-primary);
+}
+
+:where(input[type="checkbox"]:not([class]), input[type="radio"]:not([class])) {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+:where(input[type="range"]:not([class])) {
+    width: 100%;
+    min-height: var(--md-sys-touch-target-min);
+}
+
+:where(progress:not([class])) {
+    width: 100%;
+    height: 4px;
+}
+
+
+/* 11. Buttons ------------------------------------------------------------- */
+
+:where(button, [role="button"]) {
+    cursor: pointer;
+}
+
+:where(button:disabled, [aria-disabled="true"]) {
+    cursor: not-allowed;
+}
+
+/* Classless <button> → M3 Filled Button, touch ≥ 48px */
+:where(button:not([class]), input:not([class]):is([type="button"], [type="submit"], [type="reset"])) {
+    display: inline-grid;
+    grid-auto-flow: column;
+    place-content: center;
+    place-items: center;
+    gap: var(--md-sys-spacing-2);
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    padding: 0 var(--md-sys-spacing-6);
+    border: none;
+    border-radius: var(--md-sys-shape-corner-full);
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: var(--md-sys-typescale-label-large-size, 0.875rem);
+    font-weight: 600;
+    user-select: none;
+    transition:
+        background-color var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard),
+        box-shadow var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-standard),
+        scale var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+}
+
+:where(button:not([class]), input:not([class]):is([type="button"], [type="submit"], [type="reset"])):hover {
+    background-color: color-mix(in srgb, var(--md-sys-color-primary) 92%, var(--md-sys-color-on-primary));
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+:where(button:not([class]), input:not([class]):is([type="button"], [type="submit"], [type="reset"])):active {
+    scale: 0.97;
+}
+
+:where(button:not([class]), input:not([class]):is([type="button"], [type="submit"], [type="reset"])):disabled {
+    background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+    color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+    box-shadow: none;
+}
+
+/* Secondary action convention: <button type="reset"> → M3 Outlined */
+:where(button:not([class])[type="reset"]) {
+    border: 1px solid var(--md-sys-color-outline);
+    background-color: transparent;
+    color: var(--md-sys-color-primary);
+}
+
+
+/* 12. Disclosure & Modals ------------------------------------------------- */
+
+:where(summary) {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* Classless <details> → M3 accordion */
+:where(details:not([class], :has(> summary > md-list-item))) {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background-color: var(--md-sys-color-surface-container-low);
+    overflow: clip;
+}
+
+:where(details:not([class], :has(> summary > md-list-item))[open]) {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+:where(details:not([class], :has(> summary > md-list-item))) > :where(summary) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    min-height: var(--md-sys-touch-target-min);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    font-weight: 600;
+    list-style: none;
+    user-select: none;
+}
+
+:where(details:not([class], :has(> summary > md-list-item))) > :where(summary)::-webkit-details-marker {
+    display: none;
+}
+
+:where(details:not([class], :has(> summary > md-list-item))) > :where(summary)::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid currentcolor;
+    border-bottom: 2px solid currentcolor;
+    rotate: 45deg;
+    transition: rotate var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
+}
+
+:where(details:not([class], :has(> summary > md-list-item))[open]) > :where(summary)::after {
+    rotate: -135deg;
+}
+
+:where(details:not([class], :has(> summary > md-list-item))) > :where(:not(summary)) {
+    padding: 0 var(--md-sys-spacing-4) var(--md-sys-spacing-4);
+}
+
+/* Classless <dialog> → M3 Basic Dialog */
+:where(dialog:not([class])) {
+    width: min(100% - 2 * var(--md-sys-spacing-4), 35rem);
+    max-height: calc(var(--md-sys-viewport-height) - 2 * var(--md-sys-spacing-8));
+    padding: var(--md-sys-spacing-6);
+    border: none;
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level3);
+    overflow: auto;
+}
+
+:where(dialog:not([class]))::backdrop {
+    background: color-mix(in srgb, var(--md-sys-color-scrim) 40%, transparent);
+    backdrop-filter: blur(4px);
+}
+
+
+/* 13. Gesture Hints ------------------------------------------------------- */
 
 [data-gesture="interactive-canvas"] {
     touch-action: none;
@@ -312,90 +704,4 @@ video {
 
 [data-gesture="swipe-vertical"] {
     touch-action: pan-x;
-}
-
-*::after {
-    box-sizing: border-box;
-}
-
-*::before {
-    box-sizing: border-box;
-}
-
-*:focus:not(:focus-visible) {
-    outline: none;
-}
-
-article {
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-code {
-    padding: 0.15em 0.35em;
-    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 0.875em;
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-embed {
-    display: block;
-    max-width: 100%;
-}
-
-iframe {
-    display: block;
-    max-width: 100%;
-}
-
-object {
-    display: block;
-    max-width: 100%;
-}
-
-optgroup {
-    margin: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-}
-
-pre {
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-.status-bar-safe-area {
-    display: none;
-}
-
-/* --- Focus-Visible Accessibility & Stress Targets --- */
-.stress-target {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-[tabindex]:not([tabindex="-1"]):focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-/* --- Pointer Coarse Touch Ergonomics --- */
-@media (pointer: coarse) {
-    .touch-action-large {
-        min-width: 48px;
-        min-height: 48px;
-    }
-
-    .touch-target-48 {
-        min-width: 48px;
-        min-height: 48px;
-    }
-
 }

@@ -7,8 +7,6 @@ namespace Shared.Layout
     {
         [Inject] public IStringLocalizer L { get; set; } = default!;
 
-        public const string SearchInputFieldClass = "search-input-field";
-
         [Parameter] public EventCallback<string> OnSubmit { get; set; }
 
         private string? _searchText;

@@ -3,11 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.cta-link .btn-order-kiosk {
-    width: 100%;
-    min-height: 48px;
-}
-
 .kds-action-btn {
     display: grid;
     grid-template-columns: auto auto;
@@ -115,13 +110,6 @@
     transform: translateX(4px);
 }
 
-.order-summary-list {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
 .order-summary-section {
     position: sticky;
     top: var(--md-sys-spacing-6, 1.5rem);
@@ -161,35 +149,20 @@
     line-height: 1;
 }
 
-.order-status-badge.status-canceled {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-}
-
-.order-status-badge.status-collected {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.order-status-badge.status-collecting {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.order-status-badge.status-completed {
+:where(
+    .order-status-badge.status-completed,
+    .order-status-badge.status-paid
+) {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
-.order-status-badge.status-created {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.order-status-badge.status-made {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
+:where(
+    .order-status-badge.status-collecting,
+    .order-status-badge.status-shipping
+) {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
 }
 
 .order-status-badge.status-making {
@@ -197,14 +170,14 @@
     color: var(--md-sys-color-on-tertiary-container);
 }
 
-.order-status-badge.status-paid {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
+.order-status-badge.status-canceled {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
 }
 
-.order-status-badge.status-shipping {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+.order-status-badge.status-created {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 .active-orders-label {
@@ -300,12 +273,6 @@
     align-items: center;
 }
 
-.order-number {
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
 .order-subtitle {
     display: grid;
     grid-auto-flow: column;
@@ -315,13 +282,6 @@
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9375rem;
-}
-
-.order-details-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    align-items: start;
 }
 
 .order-items-container {
@@ -374,17 +334,6 @@
     border-bottom: none;
 }
 
-.order-items-table-wrapper {
-    display: grid;
-    box-sizing: border-box;
-    width: 100%;
-    padding: var(--md-sys-spacing-2);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container);
-    overflow-x: auto;
-}
-
 /* ==========================================================================
    Order Drawer Component (Socratic Commerce Checkout)
    ========================================================================== */
@@ -412,15 +361,6 @@
 .order-drawer-backdrop.show {
     opacity: 1;
     pointer-events: auto;
-}
-
-.m3-drawer-scrim-dismiss {
-    grid-column: 1;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    cursor: default;
 }
 
 .order-drawer-panel {
@@ -815,35 +755,6 @@ button.kanban-card {
     background: var(--md-sys-color-surface-container-low);
 }
 
-.m3-empty-column-icon {
-    display: grid;
-    opacity: 0.8;
-    place-items: center;
-    color: var(--md-sys-color-primary);
-    font-size: 36px;
-}
-
-.m3-kanban-board {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-5, 1.25rem);
-    align-items: start;
-    width: 100%;
-    container-type: inline-size;
-}
-
-.m3-kanban-column {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4, 1rem);
-    min-height: 380px;
-    padding: var(--md-sys-spacing-5, 1.25rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
-    background: var(--md-sys-color-surface-container-low);
-}
-
 .orders-kanban-board {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -899,7 +810,7 @@ button.kanban-card {
     margin: 0;
 }
 
-.product-description-block h3 {
+:where(.product-description-block, .product-description-block h3) {
     margin: 0 0 0.5rem;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
@@ -1064,41 +975,6 @@ button.kanban-card {
     margin: 0 auto;
 }
 
-.catalog-desc {
-    min-width: 0;
-    max-width: 780px;
-    margin-top: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.catalog-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 2rem;
-    align-items: center;
-    min-width: 0;
-    max-width: 100%;
-    min-inline-size: 0;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.catalog-main {
-    display: grid;
-    gap: 3.5rem;
-    width: 100%;
-    min-width: 0;
-    max-width: 1280px;
-    min-inline-size: 0;
-    margin-inline: auto;
-    padding: 3rem 4rem 6rem;
-    overflow-x: clip;
-}
-
 .catalog-shell {
     display: grid;
     grid-template-columns: var(--catalog-sidebar-width, 280px) minmax(0, 1fr);
@@ -1120,25 +996,6 @@ button.kanban-card {
     overflow-y: auto;
 }
 
-.catalog-title {
-    min-width: 0;
-    margin: 0 auto;
-    color: var(--md-sys-color-on-surface);
-    font-size: 2.4rem;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.catalog-section {
-    display: grid;
-    gap: 1.5rem;
-    min-width: 0;
-    max-width: 100%;
-    min-inline-size: 0;
-}
-
 /* --- Kitchen / KDS Columns --- */
 .preparing-column {
     border-top: 4px solid var(--md-sys-color-tertiary);
@@ -1148,30 +1005,11 @@ button.kanban-card {
     border-top: 4px solid var(--md-sys-color-primary);
 }
 
-.orders-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: 1rem;
-    width: 100%;
-}
-
 /* --- Catalog Options & Item Sections --- */
 .thumb-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.items-list-section {
-    display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
-}
-
-.options-container {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
 }
 
 .options-list-container {
@@ -1186,15 +1024,6 @@ button.kanban-card {
 
 /* --- Responsive Orders Media Overrides (< 840px) --- */
 @media screen and (max-width: 839.98px) {
-    .catalog-header {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.25rem;
-    }
-
-    .catalog-main {
-        gap: 2.5rem;
-        padding: 2rem 1.5rem 5rem;
-    }
 
     .catalog-shell {
         grid-template-columns: minmax(0, 1fr);
@@ -1207,10 +1036,6 @@ button.kanban-card {
     .order-items-subheader {
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-3, 0.75rem);
-    }
-
-    .order-details-layout {
-        grid-template-columns: minmax(0, 1fr);
     }
 
     .order-summary-section {
@@ -1241,15 +1066,6 @@ button.kanban-card {
         min-height: auto;
     }
 
-    .m3-kanban-board {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1rem;
-    }
-
-    .m3-kanban-column {
-        min-height: auto;
-    }
-
     .order-items-subheader {
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-3, 0.75rem);
@@ -1258,15 +1074,6 @@ button.kanban-card {
     .orders-kanban-board {
         grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
-    }
-
-    .order-details-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--md-sys-spacing-5, 1.25rem);
-    }
-
-    .orders-list-grid {
-        grid-template-columns: minmax(0, 1fr);
     }
 
     .order-subtitle {

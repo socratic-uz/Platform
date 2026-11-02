@@ -29,24 +29,24 @@
                disabled=@Disabled
                @onchange=@OnTextInputChanged />
 
-        <md-icon-button disabled=@Disabled
-                        aria-label=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
-                        @onclick=@CopyColorAsync>@(isCopied ? Check : ContentCopy)</md-icon-button>
+        <IconButton Disabled=@Disabled
+                    AriaLabel=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
+                    OnClick=@CopyColorAsync>@(isCopied ? Check : ContentCopy)</IconButton>
 
         @if (ShowPresets)
         {
-            <md-icon-button disabled=@Disabled
-                            selected=@isPaletteOpen
-                            toggle
-                            aria-label=@L[ColorPickerPalettePresets]
-                            @onclick=@TogglePalette>@Palette</md-icon-button>
+            <IconButton Disabled=@Disabled
+                        Selected=@isPaletteOpen
+                        Toggle=@true
+                        AriaLabel=@L[ColorPickerPalettePresets]
+                        OnClick=@TogglePalette>@Palette</IconButton>
         }
 
         @if (HasValue)
         {
-            <md-icon-button disabled=@Disabled
-                            aria-label=@L[ColorPickerResetColor]
-                            @onclick=@Clear>@Close</md-icon-button>
+            <IconButton Disabled=@Disabled
+                        AriaLabel=@L[ColorPickerResetColor]
+                        OnClick=@Clear>@Close</IconButton>
         }
     </section>
 }
@@ -77,8 +77,7 @@ else
         </CustomIconBadge>
 
         <CustomActions>
-            <Button Variant=@FilledTonal OnClick=@TogglePalette Disabled=@Disabled>
-                <md-icon slot="icon">@Palette</md-icon>
+            <Button Variant=@FilledTonal Icon=@Palette OnClick=@TogglePalette Disabled=@Disabled>
                 @(isPaletteOpen ? L[ColorPickerClosePalette] : L[ColorPickerPalette])
             </Button>
 
@@ -116,7 +115,7 @@ else
                         OnClick=@(() => SelectPreset(color))>
                     @if (isSelected)
                     {
-                        <md-icon class=@SwatchCheck>@Check</md-icon>
+                        <Icon Name=@Check Class=@SwatchCheck />
                     }
                 </IconButton>
             }
@@ -133,8 +132,7 @@ else
             </span>
             @if (HasValue)
             {
-                <Button Variant=@Text OnClick=@Clear>
-                    <md-icon slot="icon">@RestartAlt</md-icon>
+                <Button Variant=@Text Icon=@RestartAlt OnClick=@Clear>
                     @L[ResetAction]
                 </Button>
             }

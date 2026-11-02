@@ -19,36 +19,34 @@
 
         <menu class=@SmartViewModeToggle>
             <Button Variant=@(CurrentMode == ViewMode.Grid ? Filled : Outlined)
+                    Icon=@TableChart
                     OnClick=@(() => SetViewMode(ViewMode.Grid))>
-                <Icon Name=@TableChart Slot="icon" />
                 @L[SmartDataViewTable]
             </Button>
             <Button Variant=@(CurrentMode == ViewMode.Kanban ? Filled : Outlined)
+                    Icon=@ViewKanban
                     OnClick=@(() => SetViewMode(ViewMode.Kanban))>
-                <Icon Name=@ViewKanban Slot="icon" />
                 @L[SmartDataViewKanban]
             </Button>
         </menu>
     </header>
 
-    <section class=@SmartDataViewContent>
-        @if (CurrentMode == ViewMode.Grid)
-        {
-            <SmartGrid TItem="TItem"
-                       Items=@FilteredItems
-                       PageSize=@PageSize
-                       OnValidSubmit=@OnValidSubmit />
-        }
-        else if (CurrentMode == ViewMode.Kanban)
-        {
-            <SmartKanban TItem="TItem"
-                         Items=@FilteredItems
-                         Columns=@KanbanColumns
-                         StatusSelector=@StatusSelector
-                         TitleSelector=@TitleSelector
-                         SubtitleSelector=@SubtitleSelector
-                         OnCardClicked=@OnCardClicked
-                         OnCardMoved=@OnCardMoved />
-        }
-    </section>
+    @if (CurrentMode == ViewMode.Grid)
+    {
+        <SmartGrid TItem="TItem"
+                   Items=@FilteredItems
+                   PageSize=@PageSize
+                   OnValidSubmit=@OnValidSubmit />
+    }
+    else if (CurrentMode == ViewMode.Kanban)
+    {
+        <SmartKanban TItem="TItem"
+                     Items=@FilteredItems
+                     Columns=@KanbanColumns
+                     StatusSelector=@StatusSelector
+                     TitleSelector=@TitleSelector
+                     SubtitleSelector=@SubtitleSelector
+                     OnCardClicked=@OnCardClicked
+                     OnCardMoved=@OnCardMoved />
+    }
 </article>

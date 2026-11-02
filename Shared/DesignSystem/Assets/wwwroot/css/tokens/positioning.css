@@ -8,6 +8,7 @@
     --m3-z-backdrop: var(--md-sys-z-dialog-backdrop);
     --m3-z-base: var(--md-sys-z-base);
     --m3-z-bottom-nav: var(--md-sys-z-bottom-nav);
+    --m3-z-content: var(--md-sys-z-raised);
     --m3-z-deep: var(--md-sys-z-deep);
     --m3-z-drawer: var(--md-sys-z-drawer);
     --m3-z-dropdown: var(--md-sys-z-dropdown);
@@ -19,6 +20,8 @@
     --m3-z-surface: var(--md-sys-z-surface);
     --m3-z-toast: var(--md-sys-z-toast);
     --m3-z-tooltip: var(--md-sys-z-tooltip);
+    --mouse-x: -999px;
+    --mouse-y: -999px;
     --md-sys-z-appbar: 20;
     --md-sys-z-base: 0;
     --md-sys-z-bottom-nav: 40;

@@ -17,33 +17,6 @@
                      var(--md-sys-scrollbar-color-track, transparent);
 }
 
-.map-panel-toggle {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.32rem;
-    align-items: center;
-    width: fit-content;
-    padding: 0.45rem 0.72rem;
-    border: 1px solid var(--map-border-strong);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: var(--map-surface-strong);
-    color: var(--map-text);
-    font: inherit;
-    font-size: 0.76rem;
-    font-weight: 600;
-    box-shadow: 0 0.25rem 0.75rem rgb(from var(--md-sys-color-shadow) r g b / 0.12);
-    cursor: pointer;
-}
-
-.map-panel-toggle-icon {
-    font-size: 0.9rem;
-}
-
-.map-panel-toggle-icon md-icon:not([slot]) {
-    line-height: 1;
-}
-
 .map-toolbar {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -54,26 +27,6 @@
     padding-bottom: 0.45rem;
     border-bottom: 1px solid rgb(from var(--map-border) r g b / 0.45);
     background: linear-gradient(180deg, var(--map-surface-strong), rgb(from var(--map-surface) r g b / 0.88));
-}
-
-.map-topbar {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.18rem;
-    align-items: center;
-    position: absolute;
-    top: var(--map-fab-offset);
-    left: 50%;
-    z-index: var(--md-sys-z-appbar, 20);
-    padding: 0.22rem 0.32rem;
-    border: 1px solid var(--map-border);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.96);
-    white-space: nowrap;
-    box-shadow: 0 0.35rem 0.85rem rgb(from var(--md-sys-color-shadow) r g b / 0.13);
-    backdrop-filter: blur(12px);
-    transform: translateX(-50%);
-    pointer-events: auto;
 }
 
 @media (min-width: 600px) and (max-width: 839.98px) {
@@ -136,142 +89,6 @@
 .map-popup-backdrop :where(.mapboxgl-ctrl-group, .maplibregl-ctrl-group) button {
     pointer-events: auto;
     cursor: pointer;
-}
-
-/* Route Navigation & Itinerary Panels */
-.map-route-header-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-}
-
-.map-route-header-title {
-    font-weight: 500;
-}
-
-.map-route-profile-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 6px;
-    padding: 6px 0;
-    width: 100%;
-}
-
-.map-route-fields-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    min-width: 0;
-}
-
-.map-route-fields-inputs {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    min-width: 0;
-}
-
-.map-route-input {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-3, 0.75rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background-color: var(--md-sys-color-surface-container-low);
-}
-
-.map-route-input input.map-search-inline {
-    width: 100%;
-    padding: 6px 0;
-    border: 0;
-    outline: none;
-    background: transparent;
-    color: inherit;
-    font-size: 0.9rem;
-}
-
-.map-route-fields-dots {
-    margin-left: var(--md-sys-spacing-5, 1.25rem);
-}
-
-.map-route-fields-actions {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-    justify-items: center;
-}
-
-.map-route-bottom-actions {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-}
-
-.map-route-suggestions {
-    margin-top: var(--md-sys-spacing-2, 0.5rem);
-    padding: 4px 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    overflow: hidden;
-    --md-list-container-color: var(--md-sys-color-surface-container-high);
-}
-
-.map-route-suggestions md-list-item[selected] {
-    --md-list-item-container-color: var(--md-sys-color-secondary-container);
-}
-
-.map-route-suggestion-icon {
-    color: var(--md-sys-color-primary);
-}
-
-.map-route-delete-btn {
-    width: 32px;
-    height: 32px;
-    --md-icon-button-icon-color: var(--md-sys-color-error);
-}
-
-.map-route-submit-btn {
-    --md-filled-button-container-color: var(--md-sys-color-primary);
-}
-
-.route-alternatives-list {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.route-alternatives-list md-list-item {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.route-alternatives-list md-list-item[selected] {
-    --md-list-item-container-color: var(--md-sys-color-secondary-container);
-}
-
-.route-alternative-icon {
-    color: var(--md-sys-color-primary);
-}
-
-.route-start-container {
-    display: grid;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-}
-
-.route-start-button {
-    width: 100%;
-    --md-filled-button-container-color: var(--md-sys-color-primary);
-    --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
 }
 
 /* Navigator Controls Buttons */
@@ -374,24 +191,6 @@
     gap: 0.75rem;
     margin: 0;
     padding: 0;
-}
-
-/* Global suggestions list */
-.map-global-suggestions {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    padding: 4px 0;
-    box-shadow: 0 8px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-    overflow: hidden;
-    --md-list-container-color: var(--md-sys-color-surface-container-high);
-}
-
-.map-global-suggestions md-list-item[selected] {
-    --md-list-item-container-color: var(--md-sys-color-secondary-container);
-}
-
-.map-global-suggestion-icon {
-    color: var(--md-sys-color-primary);
 }
 
 /* Place Details Card */

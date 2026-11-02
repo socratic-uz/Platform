@@ -56,22 +56,10 @@
     background-color: var(--map-border);
 }
 
-.search-icon {
-    width: 18px;
-    height: 18px;
-    margin-left: var(--md-sys-spacing-2, 0.5rem);
-    color: var(--map-text-muted);
-}
-
 .search-panel {
     display: grid;
     gap: 0.5rem;
     min-height: 0;
-}
-
-.showcase-search-box {
-    padding: 14px var(--md-sys-spacing-4, 1rem);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .ux-filter-meta {
@@ -106,38 +94,6 @@
     box-shadow: 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
 }
 
-.ux-search-clear {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
-    min-height: 44px;
-    border: none;
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 8%, transparent);
-    color: var(--md-sys-color-on-surface-variant);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.ux-search-clear:hover {
-    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 16%, transparent);
-    color: var(--md-sys-color-on-surface);
-}
-
-.yandex-search-icon-svg {
-    width: 20px;
-    height: 20px;
-}
-
-.m3-filter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    width: 100%;
-}
-
 .m3-search-container {
     display: grid;
     align-items: center;
@@ -151,25 +107,6 @@
 }
 
 .m3-search-container md-icon[slot="leading-icon"] {
-    width: 20px;
-    height: 20px;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 20px;
-}
-
-.material-search-container {
-    display: grid;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-}
-
-.material-search-container [slot="trailing-icon"] {
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.material-search-container md-icon[slot="leading-icon"] {
     width: 20px;
     height: 20px;
     color: var(--md-sys-color-on-surface-variant);

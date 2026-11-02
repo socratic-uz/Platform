@@ -8,10 +8,6 @@
     gap: var(--md-sys-spacing-4, 1rem);
 }
 
-.smart-data-view-content {
-    min-width: 0;
-}
-
 .smart-data-view-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
