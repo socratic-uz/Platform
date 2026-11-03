@@ -3,6 +3,8 @@
 @using static Assets.Constants.Classes.Invoice
 @using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Loc.Receipt
+@using static Assets.Constants.Loc.Common
+@using static Assets.Constants.Loc
 @using Material.Web.Components
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem
@@ -15,12 +17,12 @@
 
     <table class=@ReceiptMeta>
         <tr>
-            <td>@L[NumberText]: <strong>#@(InvoiceNumber ?? DefaultInvoiceNo)</strong></td>
+            <td>@L[Receipt.NumberText]: <strong>#@(InvoiceNumber ?? DefaultInvoiceNo)</strong></td>
             <td class=@ReceiptTextRight>@L[Date]: <strong>@(InvoiceDate?.ToString("dd.MM.yyyy HH:mm") ?? DateTime.Now.ToString("dd.MM.yyyy HH:mm"))</strong></td>
         </tr>
         <tr>
             <td>@L[Cashier]: <strong>@L[DefaultCashier]</strong></td>
-            <td class=@ReceiptTextRight>@L[PaymentText]: <strong>@PaymentMethod</strong></td>
+            <td class=@ReceiptTextRight>@L[Receipt.PaymentText]: <strong>@PaymentMethod</strong></td>
         </tr>
     </table>
 
@@ -29,7 +31,7 @@
             <tr>
                 <th class=@ReceiptColQty>@L[QuantityShort]</th>
                 <th class=@ReceiptColName>@L[ItemNameText]</th>
-                <th class=@ReceiptColPrice>@L[Price]</th>
+                <th class=@ReceiptColPrice>@L[Receipt.Price]</th>
                 <th class=@ReceiptColSum>@L[AmountText]</th>
             </tr>
         </thead>
@@ -71,11 +73,11 @@
     <table class=@ReceiptTotals>
         <tr>
             <td>@L[VatIncluded]:</td>
-            <td class=@ReceiptTextRight>@vat.ToString("N0") @L[Loc.Common.CurrencyUzs]</td>
+            <td class=@ReceiptTextRight>@vat.ToString("N0") @L[Common.CurrencyUzs]</td>
         </tr>
         <tr class=@GrandTotal>
-            <td>@L[InvoiceTotalToPay]:</td>
-            <td class=@ReceiptTextRight>@total.ToString("N0") @L[Loc.Common.CurrencyUzs]</td>
+            <td>@L[Receipt.InvoiceTotalToPay]:</td>
+            <td class=@ReceiptTextRight>@total.ToString("N0") @L[Common.CurrencyUzs]</td>
         </tr>
     </table>
 

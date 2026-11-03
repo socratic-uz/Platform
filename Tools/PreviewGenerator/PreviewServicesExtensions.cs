@@ -15,6 +15,8 @@ using Socratic.Platform.Layout.Extensions;
 using Shared.Services;
 using SharedKernel.Abstractions;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Socratic.PreviewGenerator;
 
 public static class PreviewServicesExtensions
@@ -141,9 +143,9 @@ public sealed class NullJsRuntime : IJSRuntime
 
 public sealed class FakeStringLocalizer : IStringLocalizer
 {
-    private static readonly System.Resources.ResourceManager RuManager = new("Assets.Resources.ResourceRu", typeof(global::Assets.Constants.Classes).Assembly);
-    private static readonly System.Resources.ResourceManager UzManager = new("Assets.Resources.ResourceUz", typeof(global::Assets.Constants.Classes).Assembly);
-    private static readonly System.Resources.ResourceManager EnManager = new("Assets.Resources.ResourceEn", typeof(global::Assets.Constants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager RuManager = new("Assets.Resources.ResourceRu", typeof(AssetConstants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager UzManager = new("Assets.Resources.ResourceUz", typeof(AssetConstants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager EnManager = new("Assets.Resources.ResourceEn", typeof(AssetConstants.Classes).Assembly);
 
     internal static string Resolve(string name)
         => RuManager.GetString(name)

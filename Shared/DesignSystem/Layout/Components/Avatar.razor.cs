@@ -29,6 +29,8 @@ using R = Domain.Entities.Role;
 using T = Domain.Entities.User;
 using Theme = SharedKernel.ValueObjects.Theme;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Shared.Components
 {
     public partial class Avatar : DataComponentBase
@@ -376,7 +378,7 @@ namespace Shared.Components
             var theme = await settings.GetThemeAsync();
 
             bool isDark = false;
-            var module = await js.InvokeAsync<IJSObjectReference>("import", global::Assets.Constants.Scripts.Layouts.ColorTheme);
+            var module = await js.InvokeAsync<IJSObjectReference>("import", AssetConstants.Scripts.Layouts.ColorTheme);
             if (theme == Theme.System)
             {
                 isDark = await module.InvokeAsync<bool>("isSystemDark");
@@ -420,7 +422,7 @@ namespace Shared.Components
                 await settings.SetThemeAsync(newTheme);
 
                 bool isDark = false;
-                var module = await js.InvokeAsync<IJSObjectReference>("import", global::Assets.Constants.Scripts.Layouts.ColorTheme);
+                var module = await js.InvokeAsync<IJSObjectReference>("import", AssetConstants.Scripts.Layouts.ColorTheme);
                 if (newTheme == Theme.System)
                 {
                     isDark = await module.InvokeAsync<bool>("isSystemDark");

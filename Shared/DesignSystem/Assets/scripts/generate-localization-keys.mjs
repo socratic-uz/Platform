@@ -503,20 +503,6 @@ namespace Assets.Constants
 
   code += `    }\n}\n`;
 
-  let locNamespaceBody = '';
-  for (const dom of sortedDomainNames) {
-    const map = domainGroups[dom];
-    if (map.size === 0) continue;
-    locNamespaceBody += `    /// <summary>\n`;
-    locNamespaceBody += `    /// Domain group: ${dom} (${map.size} keys). Use with <c>@using static Loc.${dom};</c>.\n`;
-    locNamespaceBody += `    /// </summary>\n`;
-    locNamespaceBody += `    public static class ${dom}\n    {\n`;
-    locNamespaceBody += renderConstantsBlock(map, '        ');
-    locNamespaceBody += `    }\n\n`;
-  }
-
-  code += `\nnamespace Loc\n{\n${locNamespaceBody}}\n`;
-
   fs.writeFileSync(outputCsPath, code, 'utf8');
   console.log(`✅ [Localization Pipeline] C# localization keys generated at: ${outputCsPath}`);
   console.log(`   Generated ${sortedDomainNames.length} domain groups and ${rootFlatConstants.size} flat constants.`);

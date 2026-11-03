@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.Localization;
 using Assets.Constants;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Smart.Web.Components;
 
 public enum ViewMode
@@ -32,7 +34,7 @@ public partial class SmartDataView<TItem> : ComponentBase where TItem : class, n
 
     protected string EffectivePlaceholder => !string.IsNullOrWhiteSpace(FilterPlaceholder) && FilterPlaceholder != "Поиск элементов..."
         ? FilterPlaceholder 
-        : (L != null ? L[Loc.Common.SearchPlaceholder] : "Search...");
+        : (L != null ? L[AssetConstants.Loc.Common.SearchPlaceholder] : "Search...");
 
     // Kanban Parameters
     [Parameter] public List<KanbanColumn>? KanbanColumns { get; set; }

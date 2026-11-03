@@ -1,10 +1,21 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
-@using static Classes.Footer
-@using static Icons
+@using static Assets.Constants.Classes.Footer
+@using static Assets.Constants.Icons.Actions
+@using static Assets.Constants.Icons.Commerce
+@using static Assets.Constants.Icons.Design
+@using static Assets.Constants.Icons.Maps
+@using static Assets.Constants.Icons.Navigation
+@using static Assets.Constants.Icons.Places
+@using static Assets.Constants.Icons.Social
+@using static Assets.Constants.Icons.Devices
+@using static Assets.Constants.Loc
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Landing
 @using static Assets.Constants.Formats
+@using Common = Assets.Constants.Loc.Common
+@using Landing = Assets.Constants.Loc.Landing
+@using IconConstants = Assets.Constants.Icons
 
 @if (Visible && !Empty)
 {
@@ -30,54 +41,54 @@
 						<span class=@BrandTitle>Socratic</span>
 					</a>
 					<p class=@BrandTagline>
-						@L[Footer_Tagline]
+						@L[Common.Footer_Tagline]
 					</p>
 					<aside class=@SystemStatus>
 						<span class=@StatusPulseDotClass aria-hidden="true"></span>
-						<span class=@StatusTextClass>@L[Footer_Status]</span>
+						<span class=@StatusTextClass>@L[Common.Footer_Status]</span>
 					</aside>
 				</article>
 
 				<!-- Nav Column 1: Catalog & Kiosks -->
-				<nav class=@NavCol aria-label=@L[Footer_Col_Catalog]>
-					<h4 class=@ColTitle>@L[Footer_Col_Catalog]</h4>
+				<nav class=@NavCol aria-label=@L[Common.Footer_Col_Catalog]>
+					<h4 class=@ColTitle>@L[Common.Footer_Col_Catalog]</h4>
 					<ul class=@LinksList>
-						<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name=@Storefront /> <span>@L[Showroom]</span></a></li>
-						<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name=@BusinessCenter /> <span>@L[Plans]</span></a></li>
-						<li><a href="/home"><Icon Name=@Domain /> <span>@L[Places]</span></a></li>
-						<li><a href="/map"><Icon Name=@Map /> <span>@L[MapLabel]</span></a></li>
+						<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.DemoId)"><Icon Name=@Storefront /> <span>@L[Common.Showroom]</span></a></li>
+						<li><a href="/kiosk/@(SharedKernel.Extensions.ObjectIdExtension.SocraticId)"><Icon Name=@BusinessCenter /> <span>@L[Common.Plans]</span></a></li>
+						<li><a href="/home"><Icon Name=@Domain /> <span>@L[Common.Places]</span></a></li>
+						<li><a href="/map"><Icon Name=@IconConstants.Maps.Map /> <span>@L[MapLabel]</span></a></li>
 					</ul>
 				</nav>
 
 				<!-- Nav Column 2: Management & POS -->
-				<nav class=@NavCol aria-label=@L[Footer_Col_Management]>
-					<h4 class=@ColTitle>@L[Footer_Col_Management]</h4>
+				<nav class=@NavCol aria-label=@L[Common.Footer_Col_Management]>
+					<h4 class=@ColTitle>@L[Common.Footer_Col_Management]</h4>
 					<ul class=@LinksList>
-						<li><a href="/orders"><Icon Name=@ReceiptLong /> <span>@L[OrdersLabel]</span></a></li>
-						<li><a href="/payment"><Icon Name=@Payments /> <span>@L[PaymentLabel]</span></a></li>
-						<li><a href="/qr-designer"><Icon Name=@QrCode2 /> <span>@L[QRDesigner]</span></a></li>
-						<li><a href="/seat-designer"><Icon Name=@EventSeat /> <span>@L[SeatDesigner]</span></a></li>
-						<li><a href="/terminal"><Icon Name=@PointOfSale /> <span>@L[TerminalLabel]</span></a></li>
+						<li><a href="/orders"><Icon Name=@ReceiptLong /> <span>@L[Common.OrdersLabel]</span></a></li>
+						<li><a href="/payment"><Icon Name=@Payments /> <span>@L[Common.PaymentLabel]</span></a></li>
+						<li><a href="/qr-designer"><Icon Name=@QrCode2 /> <span>@L[Common.QRDesigner]</span></a></li>
+						<li><a href="/seat-designer"><Icon Name=@EventSeat /> <span>@L[Common.SeatDesigner]</span></a></li>
+						<li><a href="/terminal"><Icon Name=@PointOfSale /> <span>@L[Common.TerminalLabel]</span></a></li>
 					</ul>
 				</nav>
 
 				<!-- Nav Column 3: Resources & Info -->
-				<nav class=@NavCol aria-label=@L[Footer_Col_Resources]>
-					<h4 class=@ColTitle>@L[Footer_Col_Resources]</h4>
+				<nav class=@NavCol aria-label=@L[Common.Footer_Col_Resources]>
+					<h4 class=@ColTitle>@L[Common.Footer_Col_Resources]</h4>
 					<ul class=@LinksList>
-						<li><a href="/docs"><Icon Name=@MenuBook /> <span>@L[Documentation]</span></a></li>
-						<li><a href="/help"><Icon Name=@HelpOutline /> <span>@L[HelpText]</span></a></li>
-						<li><a href="/about"><Icon Name=@Info /> <span>@L[AboutText]</span></a></li>
-						<li><a href="/signin"><Icon Name=@Login /> <span>@L[SocraticID]</span></a></li>
+						<li><a href="/docs"><Icon Name=@MenuBook /> <span>@L[Common.Documentation]</span></a></li>
+						<li><a href="/help"><Icon Name=@HelpOutline /> <span>@L[Landing.HelpText]</span></a></li>
+						<li><a href="/about"><Icon Name=@Info /> <span>@L[Landing.AboutText]</span></a></li>
+						<li><a href="/signin"><Icon Name=@Login /> <span>@L[Common.SocraticID]</span></a></li>
 					</ul>
 				</nav>
 
 				<!-- Nav Column 4: Community & Support -->
-				<nav class=@NavCol aria-label=@L[Footer_Col_Community]>
-					<h4 class=@ColTitle>@L[Footer_Col_Community]</h4>
+				<nav class=@NavCol aria-label=@L[Common.Footer_Col_Community]>
+					<h4 class=@ColTitle>@L[Common.Footer_Col_Community]</h4>
 					<ul class=@LinksList>
-						<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name=@SupportAgent /> <span>@L[SupportLabel]</span></a></li>
-						<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name=@Send /> <span>Telegram Bot</span></a></li>
+						<li><a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer"><Icon Name=@SupportAgent /> <span>@L[Common.SupportLabel]</span></a></li>
+						<li><a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer"><Icon Name=@IconConstants.Common.Send /> <span>Telegram Bot</span></a></li>
 						<li><a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer"><Icon Name=@CameraAlt /> <span>Instagram</span></a></li>
 					</ul>
 				</nav>
@@ -86,7 +97,7 @@
 			<!-- Sub-Footer Bottom Bar -->
 			<section class=@FooterBottomBarClass>
 				<p class=@FooterCopyright>
-					&copy; @DateTime.Now.Year Socratic. @L[AllRightsReserved]
+					&copy; @DateTime.Now.Year Socratic. @L[Common.AllRightsReserved]
 				</p>
 				<LanguageSelector Variant="inline" Class=@LangContainer />
 				<span class=@TrustBadgeClass>

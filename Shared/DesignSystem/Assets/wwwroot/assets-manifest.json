@@ -148,8 +148,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/footer.css",
-      "size": 8120,
-      "hash": "sha256-6062da0a083f"
+      "size": 8150,
+      "hash": "sha256-bef37b59753d"
     },
     {
       "url": "_content/Assets/css/layouts/grid-layout.css",
@@ -238,8 +238,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 4166,
-      "hash": "sha256-0a1c1f903c2c"
+      "size": 4165,
+      "hash": "sha256-cf33f566ff39"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",

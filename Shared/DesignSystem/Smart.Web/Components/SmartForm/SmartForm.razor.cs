@@ -15,6 +15,8 @@ using Assets.Constants;
 using SystemEnum = System.Enum;
 using SystemType = System.Type;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Smart.Web.Components;
 
 public partial class SmartForm<TItem> : ComponentBase where TItem : class, new()
@@ -24,11 +26,11 @@ public partial class SmartForm<TItem> : ComponentBase where TItem : class, new()
 
     protected string EffectiveCancelText => !string.IsNullOrWhiteSpace(CancelText) && CancelText != "Cancel" && CancelText != "Отмена"
         ? CancelText 
-        : (L != null ? L[Loc.Actions.CancelAction] : "Cancel");
+        : (L != null ? L[AssetConstants.Loc.Actions.CancelAction] : "Cancel");
 
     protected string EffectiveSubmitText => !string.IsNullOrWhiteSpace(SubmitText) && SubmitText != "Submit" && SubmitText != "Сохранить"
         ? SubmitText 
-        : (L != null ? L[Loc.Actions.SaveAction] : "Save");
+        : (L != null ? L[AssetConstants.Loc.Actions.SaveAction] : "Save");
 
     protected string formId = Guid.NewGuid().ToString();
     protected PropertyInfo[]? propertyInfos;

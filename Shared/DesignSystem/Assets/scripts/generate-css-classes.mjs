@@ -334,11 +334,6 @@ namespace Assets.Constants
 ${body}
     }
 }
-
-namespace Classes
-{
-${body}
-}
 `;
 
   fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });

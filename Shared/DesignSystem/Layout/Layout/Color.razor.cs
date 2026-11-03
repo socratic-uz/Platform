@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Shared.Services;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Shared.Layout
 {
     public partial class Color : ComponentBase
@@ -17,7 +19,7 @@ namespace Shared.Layout
         private bool _isDark;
 
         public string ModeClass => _isDark ? "dark-mode" : "light-mode";
-        public string ColorClass => string.Format(global::Assets.Constants.Formats.Two, Accent?.ToString().ToLower(), ModeClass);
+        public string ColorClass => string.Format(AssetConstants.Formats.Two, Accent?.ToString().ToLower(), ModeClass);
 
         public static string ToHex(int val)
         {
@@ -68,7 +70,7 @@ namespace Shared.Layout
                     Theme ??= await Settings.GetThemeAsync();
 
                     var hexAccent = ToHex(Accent.Value);
-                    var module = await Js.InvokeAsync<IJSObjectReference>("import", global::Assets.Constants.Scripts.Layouts.ColorTheme);
+                    var module = await Js.InvokeAsync<IJSObjectReference>("import", AssetConstants.Scripts.Layouts.ColorTheme);
 
                     if (Theme == SharedKernel.ValueObjects.Theme.System)
                     {

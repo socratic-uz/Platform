@@ -12,6 +12,8 @@ using static Assets.Constants.Classes.Badge;
 using static Assets.Constants.Icons;
 using static Assets.Constants.Loc.Subscription;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Shared.Components
 {
     public partial class OrganizationSubscriptionCard : ComponentBase
@@ -37,7 +39,7 @@ namespace Shared.Components
 
         public string GetTierIcon() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? HourglassTop : Icons.Warning,
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? HourglassTop : AssetConstants.Icons.Warning,
             SubscriptionTier.WithAds => Campaign,
             SubscriptionTier.ProAdFree => Verified,
             _ => Info

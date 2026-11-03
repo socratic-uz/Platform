@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Components.Forms;
 
 using Microsoft.Extensions.Localization;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Material.Web.Components;
 
 public partial class FilePicker : ComponentBase
@@ -59,22 +61,22 @@ public partial class FilePicker : ComponentBase
 
     protected int TotalFilesCount => (Attachments?.Count ?? 0) + (ExistingImages?.Count ?? 0) + (NewImagesContent?.Count ?? 0);
 
-    protected string EffectiveLabel => Label ?? (L != null ? L[Loc.Common.FilePickerAttachedFiles] : "Attached files");
-    protected string EffectiveUploadLabel => UploadLabel ?? (L != null ? L[Loc.Common.UploadImage] : "Upload");
-    protected string EffectiveRemoveLabel => RemoveLabel ?? (L != null ? L[Loc.Actions.DeleteAction] : "Delete");
+    protected string EffectiveLabel => Label ?? (L != null ? L[AssetConstants.Loc.Common.FilePickerAttachedFiles] : "Attached files");
+    protected string EffectiveUploadLabel => UploadLabel ?? (L != null ? L[AssetConstants.Loc.Common.UploadImage] : "Upload");
+    protected string EffectiveRemoveLabel => RemoveLabel ?? (L != null ? L[AssetConstants.Loc.Actions.DeleteAction] : "Delete");
 
     protected string? GetFilesBadgeText()
     {
         if (TotalFilesCount <= 0) return null;
-        var unit = TotalFilesCount == 1 ? L[Loc.Common.FilePickerCountOne] : (TotalFilesCount < 5 ? L[Loc.Common.FilePickerCountFew] : L[Loc.Common.FilePickerCountMany]);
+        var unit = TotalFilesCount == 1 ? L[AssetConstants.Loc.Common.FilePickerCountOne] : (TotalFilesCount < 5 ? L[AssetConstants.Loc.Common.FilePickerCountFew] : L[AssetConstants.Loc.Common.FilePickerCountMany]);
         return $"{TotalFilesCount} {unit}";
     }
 
     protected string GetPreviewText()
     {
         return TotalFilesCount > 0
-            ? string.Format(L[Loc.Common.FilePickerLoadedFiles], TotalFilesCount)
-            : L[Loc.Common.FilePickerNoFiles];
+            ? string.Format(L[AssetConstants.Loc.Common.FilePickerLoadedFiles], TotalFilesCount)
+            : L[AssetConstants.Loc.Common.FilePickerNoFiles];
     }
 
     private static readonly ConcurrentDictionary<(Type, string), PropertyInfo?> PropertyCache = new();
@@ -152,31 +154,31 @@ public partial class FilePicker : ComponentBase
         var mime = contentType.ToLowerInvariant();
         var ext = Path.GetExtension(fileName).ToLowerInvariant();
 
-        if (mime == "application/pdf" || ext == ".pdf") return Icons.PictureAsPdf;
+        if (mime == "application/pdf" || ext == ".pdf") return AssetConstants.Icons.PictureAsPdf;
         
         if (mime.Contains("zip") || mime.Contains("compressed") || mime.Contains("archive") || 
             ext == ".zip" || ext == ".rar" || ext == ".7z" || ext == ".tar" || ext == ".gz")
-            return Icons.Archive;
+            return AssetConstants.Icons.Archive;
 
         if (mime.Contains("word") || mime.Contains("document") || ext == ".doc" || ext == ".docx" || ext == ".rtf" || ext == ".odt")
-            return Icons.Description;
+            return AssetConstants.Icons.Description;
 
         if (mime.Contains("excel") || mime.Contains("sheet") || ext == ".xls" || ext == ".xlsx" || ext == ".ods" || ext == ".csv")
-            return Icons.TableView;
+            return AssetConstants.Icons.TableView;
 
         if (mime.Contains("presentation") || mime.Contains("powerpoint") || ext == ".ppt" || ext == ".pptx")
-            return Icons.CoPresent;
+            return AssetConstants.Icons.CoPresent;
 
         if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase) || ext == ".mp3" || ext == ".wav" || ext == ".ogg" || ext == ".m4a")
-            return Icons.Audiotrack;
+            return AssetConstants.Icons.Audiotrack;
 
         if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase) || ext == ".mp4" || ext == ".avi" || ext == ".mkv" || ext == ".mov")
-            return Icons.VideoFile;
+            return AssetConstants.Icons.VideoFile;
 
         if (mime.StartsWith("text/", StringComparison.OrdinalIgnoreCase) || ext == ".txt" || ext == ".html" || ext == ".css" || ext == ".js" || ext == ".json")
-            return Icons.Code;
+            return AssetConstants.Icons.Code;
 
-        return Icons.InsertDriveFile;
+        return AssetConstants.Icons.InsertDriveFile;
     }
 
     protected string GetIconClass(string contentType, string fileName)
@@ -184,14 +186,14 @@ public partial class FilePicker : ComponentBase
         var mime = contentType.ToLowerInvariant();
         var ext = Path.GetExtension(fileName).ToLowerInvariant();
 
-        if (mime == "application/pdf" || ext == ".pdf") return Classes.Picker.PdfType;
-        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return Classes.Picker.ArchiveType;
-        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return Classes.Picker.DocType;
-        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return Classes.Picker.SheetType;
-        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return Classes.Picker.AudioType;
-        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return Classes.Picker.VideoType;
+        if (mime == "application/pdf" || ext == ".pdf") return AssetConstants.Classes.Picker.PdfType;
+        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return AssetConstants.Classes.Picker.ArchiveType;
+        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return AssetConstants.Classes.Picker.DocType;
+        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return AssetConstants.Classes.Picker.SheetType;
+        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return AssetConstants.Classes.Picker.AudioType;
+        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return AssetConstants.Classes.Picker.VideoType;
 
-        return Classes.Picker.GenericType;
+        return AssetConstants.Classes.Picker.GenericType;
     }
 
     protected (string fileName, string contentType, string url, bool isNew, byte[]? bytesData) GetAttachmentData(int index)

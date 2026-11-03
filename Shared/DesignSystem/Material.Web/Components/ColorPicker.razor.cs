@@ -10,16 +10,18 @@ using static Assets.Constants.Classes.Picker;
 using static Assets.Constants.Classes.ColorPicker;
 using static Assets.Constants.Formats;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Material.Web.Components;
 
 public partial class ColorPicker : ComponentBase
 {
     protected string CompactBoxClass => Disabled
-        ? (string.IsNullOrEmpty(CssClass) ? string.Format(Two, CompactBox, Classes.Picker.Disabled) : string.Format(Three, CompactBox, CssClass, Classes.Picker.Disabled))
+        ? (string.IsNullOrEmpty(CssClass) ? string.Format(Two, CompactBox, AssetConstants.Classes.Picker.Disabled) : string.Format(Three, CompactBox, CssClass, AssetConstants.Classes.Picker.Disabled))
         : (string.IsNullOrEmpty(CssClass) ? CompactBox : string.Format(Two, CompactBox, CssClass));
 
     protected string GetPaletteSwatchClass(bool isSelected) => isSelected
-        ? string.Format(Two, PaletteSwatch, Classes.Picker.Selected)
+        ? string.Format(Two, PaletteSwatch, AssetConstants.Classes.Picker.Selected)
         : PaletteSwatch;
 
     protected string HexCompactClass => string.Format(Two, HexWrapper, HexCompact);
@@ -44,11 +46,11 @@ public partial class ColorPicker : ComponentBase
 
     protected bool HasValue => !string.IsNullOrWhiteSpace(Value);
 
-    protected string EffectiveLabel => Label ?? (L != null ? L[Loc.Common.ColorPickerColorSelection] : "Color selection");
+    protected string EffectiveLabel => Label ?? (L != null ? L[AssetConstants.Loc.Common.ColorPickerColorSelection] : "Color selection");
 
-    protected string GetPreviewText() => HasValue 
-        ? string.Format(L != null ? L[Loc.Common.ColorPickerColorSelected] : "Selected: {0}", NormalizedValue) 
-        : (L != null ? L[Loc.Common.ColorPickerColorDefault] : "Color not selected");
+    protected string GetPreviewText() => HasValue
+        ? string.Format(L != null ? L[AssetConstants.Loc.Common.ColorPickerColorSelected] : "Selected: {0}", NormalizedValue)
+        : (L != null ? L[AssetConstants.Loc.Common.ColorPickerColorDefault] : "Color not selected");
 
     public static Dictionary<string, object> GetSwatchAttributes(string color) => new() { ["style"] = $"background-color: {color};" };
 

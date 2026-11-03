@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Localization;
 using Assets.Constants;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Shared.Layout
 {
     public partial class LandingLayout : LayoutComponentBase
@@ -29,7 +31,7 @@ namespace Shared.Layout
         public bool IsMobileMenuOpen { get; set; }
         public bool IsRootLanding => Nav == null || string.IsNullOrEmpty(Nav.ToBaseRelativePath(Nav.Uri).Trim('/'));
 
-        public string MenuIcon => IsMobileMenuOpen ? Icons.Close : Icons.Menu;
+        public string MenuIcon => IsMobileMenuOpen ? AssetConstants.Icons.Close : AssetConstants.Icons.Menu;
 
         public void ToggleMobileMenu() => IsMobileMenuOpen = !IsMobileMenuOpen;
         public void CloseMobileMenu() => IsMobileMenuOpen = false;

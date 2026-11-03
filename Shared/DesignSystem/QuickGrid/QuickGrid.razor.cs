@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace QuickGrid;
 
 /// <summary>
@@ -594,7 +596,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
             if (col == _displayOptionsForColumn)
             {
                 builder.OpenElement(7, "div");
-                builder.AddAttribute(8, "class", global::Assets.Constants.Classes.Table.ColOptions);
+                builder.AddAttribute(8, "class", AssetConstants.Classes.Table.ColOptions);
                 builder.AddContent(9, col.ColumnOptions);
                 builder.CloseElement();
             }

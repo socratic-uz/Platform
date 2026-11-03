@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using SharedKernel.ValueObjects;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Smart.Web.Components;
 
 public partial class SmartSchedulePicker : ComponentBase
@@ -24,7 +26,7 @@ public partial class SmartSchedulePicker : ComponentBase
     protected const string TzFieldClass = "md3-tz-field";
     protected const string ClosedIconClass = "md3-closed-icon";
 
-    private string EffectiveLabel => Label ?? L[global::Assets.Constants.Loc.Schedule.TitleText];
+    private string EffectiveLabel => Label ?? L[AssetConstants.Loc.Schedule.TitleText];
 
     private bool _isDialogOpen = false;
 
@@ -53,13 +55,13 @@ public partial class SmartSchedulePicker : ComponentBase
     private string GetSummaryText()
     {
         if (Schedule == null || Schedule.WeeklyItems == null || Schedule.WeeklyItems.Count == 0)
-            return L[global::Assets.Constants.Loc.Schedule.NotSet];
+            return L[AssetConstants.Loc.Schedule.NotSet];
 
         var activeItems = Schedule.WeeklyItems.Where(w => !w.IsClosed && w.Intervals != null && w.Intervals.Count > 0).ToList();
-        if (!activeItems.Any()) return L[global::Assets.Constants.Loc.Schedule.AllWeekends];
+        if (!activeItems.Any()) return L[AssetConstants.Loc.Schedule.AllWeekends];
 
         var first = activeItems.First().Intervals.First();
-        return $"{L[global::Assets.Constants.Loc.Schedule.ActiveText]}: {activeItems.Count} {L[global::Assets.Constants.Loc.Schedule.DaysShort]} ({FormatTime(first.Start)} — {FormatTime(first.End)})";
+        return $"{L[AssetConstants.Loc.Schedule.ActiveText]}: {activeItems.Count} {L[AssetConstants.Loc.Schedule.DaysShort]} ({FormatTime(first.Start)} — {FormatTime(first.End)})";
     }
 
     private bool IsDayActive(DayOfWeek day)

@@ -21,6 +21,8 @@ using Assets.Constants;
 using static Assets.Constants.Icons;
 using static Assets.Constants.Loc.Actions;
 
+using AssetConstants = global::Assets.Constants;
+
 namespace Smart.Web.Components
 {
     public partial class SmartGrid<TItem> : QuickGrid<TItem>
@@ -38,7 +40,7 @@ namespace Smart.Web.Components
         [Inject] IServiceProvider ServiceProvider { get; set; } = default!;
 
         private readonly Material.Web.Components.ChipType InputChipType = Material.Web.Components.ChipType.Input;
-        private readonly string SmartGridHeadlineClass = Classes.SmartForm.SmartGridHeadline;
+        private readonly string SmartGridHeadlineClass = AssetConstants.Classes.SmartForm.SmartGridHeadline;
         protected string GetBooleanAriaLabel(string displayName, bool value) => $"{displayName}: {(value ? (string)L[YesAction] : (string)L[NoAction])}";
 
         private string GetModelDisplayName()

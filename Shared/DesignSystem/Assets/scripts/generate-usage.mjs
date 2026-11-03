@@ -67,6 +67,11 @@ function parseLocFile(filePath) {
       continue;
     }
 
+    if (currentDomain && /^        }\s*$/.test(line)) {
+      currentDomain = null;
+      continue;
+    }
+
     if (currentDomain) {
       const constMatch = line.match(constDefRegex);
       if (constMatch) {
@@ -310,6 +315,7 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap, categoryKeysM
   const usingStaticLocRegex = /(?:@using|using)\s+static\s+(?:global::)?(?:Assets\.Constants\.)?Loc\.([A-Za-z0-9_]+)/g;
   const localizerRawRegex = /(?:L|localizer|_localizer|StringLocalizer)\[\s*["']([^"'\r\n]+)["']\s*\]/g;
   const localizerTypedRegex = /(?:L|localizer|_localizer|StringLocalizer)\[\s*([A-Za-z0-9_]+)\s*\]/g;
+  const localizerDomainTypedRegex = /(?:L|localizer|_localizer|StringLocalizer)\[\s*([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)\s*\]/g;
 
   let totalConstantMatches = 0;
   let totalLocMatches = 0;
@@ -404,6 +410,21 @@ function analyzeSourceFiles(files, constantsMap, cssToConstantMap, categoryKeysM
     let domainMatch;
     while ((domainMatch = usingStaticLocRegex.exec(content)) !== null) {
       importedDomains.push(domainMatch[1]);
+    }
+
+    // Match domain-qualified keys when the parent Loc type is statically imported,
+    // for example: @L[Common.Currency_Uzs] or L[Landing.AboutText].
+    let domainLocMatch;
+    while ((domainLocMatch = localizerDomainTypedRegex.exec(content)) !== null) {
+      const domain = domainLocMatch[1];
+      if (!domainKeysMap.has(domain)) continue;
+
+      const record = locConstantsMap.get(`${domain}.${domainLocMatch[2]}`);
+      if (record) {
+        record.count++;
+        record.files.add(relPath);
+        totalLocMatches++;
+      }
     }
 
     if (importedDomains.length > 0) {
