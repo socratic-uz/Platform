@@ -136,8 +136,7 @@
     position: relative;
     height: var(--tg-viewport-height, 100dvh);
     max-height: 100dvh;
-    background: radial-gradient(circle at 50% 15%, var(--md-sys-color-surface-container-lowest) 0%, var(--md-sys-color-surface) 100%);
-    color-scheme: dark;
+    background: var(--md-sys-color-background);
     overflow: hidden;
 }
 

@@ -293,10 +293,25 @@
     box-shadow: var(--md-sys-elevation-level3, 0 24px 60px rgb(from var(--md-sys-color-shadow) r g b / 0.6)), 0 0 40px color-mix(in srgb, var(--md-sys-color-primary) 15%, transparent);
 }
 
+.landing-page-root .b2b-lead-section {
+    box-sizing: border-box;
+    padding: var(--landing-section-padding);
+    border-color: var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card);
+    background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
 .download-section {
     display: grid;
     gap: 2.5rem;
     width: 100%;
+}
+
+@media (max-width: 599.98px) {
+    .landing-page-root .b2b-lead-section {
+        padding: var(--md-sys-spacing-5) var(--md-sys-spacing-4);
+    }
 }
 
 @media (max-width: 839.98px) {

@@ -78,7 +78,7 @@
     overflow: hidden;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs-copy) {
+:where(.markdown-body, .docs-article) :where([data-action="copy"]) {
     position: absolute;
     top: 0.4rem;
     right: 1em;
@@ -95,8 +95,8 @@
     touch-action: manipulation;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper):hover :where(.hljs-copy),
-:where(.markdown-body, .docs-article) :where(.hljs-copy):focus {
+:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper):hover :where([data-action="copy"]),
+:where(.markdown-body, .docs-article) :where([data-action="copy"]):focus {
     transform: translateX(0);
 }
 

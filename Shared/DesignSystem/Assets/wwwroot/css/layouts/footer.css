@@ -219,18 +219,19 @@
 .main-footer {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
-    gap: 4rem;
+    gap: var(--md-sys-spacing-12);
     align-items: start;
     position: relative;
     z-index: var(--md-sys-z-raised, 1);
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    padding: 4rem 3rem;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-8);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-extra-large, 32px) var(--md-sys-shape-expressive-corner-extra-large, 32px) 0 0;
-    background: color-mix(in srgb, var(--md-sys-color-surface-container-lowest) 80%, transparent);
-    backdrop-filter: blur(16px);
+    border-radius: var(--md-sys-shape-expressive-card) var(--md-sys-shape-expressive-card) 0 0;
+    background: var(--md-sys-color-surface-container-low);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 @media (max-width: 1199.98px) {

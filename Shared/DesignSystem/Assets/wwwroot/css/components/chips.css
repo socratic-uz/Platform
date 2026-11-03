@@ -552,14 +552,6 @@
     width: 100%;
 }
 
-.pills-label {
-    color: var(--md-sys-color-outline);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
 .place-details-badge {
     width: fit-content;
     padding: 0.12rem 0.4rem;
@@ -961,6 +953,23 @@ md-suggestion-chip:active {
         min-height: 48px;
         padding: 0.5rem 0.45rem;
         font-size: 0.8rem;
+    }
+
+    .hero-stage-tabs > .stage-tab {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        gap: 0.25rem;
+        min-width: 0;
+        min-height: 64px;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .hero-stage-tabs > .stage-tab > span {
+        display: block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        text-align: center;
     }
 
 }

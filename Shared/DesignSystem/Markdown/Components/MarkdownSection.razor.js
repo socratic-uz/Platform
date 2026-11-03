@@ -52,24 +52,24 @@ export async function highlight() {
 }
 
 export function addCopyButton() {
-    var snippets = document.querySelectorAll('.snippet');
-    var numberOfSnippets = snippets.length;
-    for (var i = 0; i < numberOfSnippets; i++) {
-        let copyButton = snippets[i].getElementsByClassName("hljs-copy")
-        if (copyButton.length === 0) {
-            let code = snippets[i].getElementsByTagName('code')[0].innerText;
-            snippets[i].innerHTML = snippets[i].innerHTML + '<button class="hljs-copy">Copy</button>'; // append copy button
+    const snippets = document.querySelectorAll('.snippet');
+    for (const snippet of snippets) {
+        const code = snippet.querySelector('code');
+        if (!code || snippet.querySelector('[data-action="copy"]')) continue;
 
-            copyButton[0].addEventListener("click", function () {
-                navigator.clipboard.writeText(code);
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.action = 'copy';
+        button.textContent = 'Copy';
+        button.addEventListener('click', () => {
+            navigator.clipboard.writeText(code.innerText);
+            button.textContent = 'Copied!';
+            setTimeout(() => {
+                button.textContent = 'Copy';
+            }, 1000);
+        });
 
-                this.innerText = 'Copied!';
-                let button = this;
-                setTimeout(function () {
-                    button.innerText = 'Copy';
-                }, 1000)
-            });
-        }
+        snippet.append(button);
     }
 }
 

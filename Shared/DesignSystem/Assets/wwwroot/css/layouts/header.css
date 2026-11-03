@@ -185,18 +185,8 @@
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.02em;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.m3-page-header-title>span {
-    display: inline-block;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
+    white-space: normal;
 }
 
 .place-details-header-title {
@@ -226,14 +216,15 @@ header.app-header {
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    min-height: 64px;
-    padding: 0.5rem 1.5rem;
+    min-height: 72px;
+    padding: 0.75rem 1.5rem;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
+    background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    transition: background 0.3s ease, border-color 0.3s ease;
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    box-shadow: var(--md-sys-elevation-level1);
+    backdrop-filter: none;
+    transition: background-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard), border-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+    -webkit-backdrop-filter: none;
 }
 
 .header-grid-layout:has(> :nth-child(3)),

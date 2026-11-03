@@ -492,10 +492,10 @@ namespace Assets.Constants
             public const string ChipWithAds = "with-ads";
             public const string DrawerHeader = "drawer-header";
             public const string FeatPill = "feat-pill";
+            public const string HeroStageTabs = "hero-stage-tabs";
             public const string OrgTag = "org-tag";
             public const string OrgTagsRow = "org-tags-row";
             public const string PillarsGrid = "pillars-grid";
-            public const string PillsLabel = "pills-label";
             public const string ProductPreviewPill = "product-preview-pill";
             public const string ProductTags = "product-tags";
             public const string ProTag = "pro-tag";
@@ -1560,7 +1560,6 @@ namespace Assets.Constants
             public const string HeroSection = "hero-section";
             public const string HeroStageImg = "hero-stage-img";
             public const string HeroStageScreen = "hero-stage-screen";
-            public const string HeroStageTabs = "hero-stage-tabs";
             public const string Main = "landing-main";
             public const string MobileMenuBackdrop = "landing-mobile-menu-backdrop";
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
@@ -1619,7 +1618,6 @@ namespace Assets.Constants
             public const string Clusters = "clusters";
             public const string EdgePaths = "edgePaths";
             public const string Hljs = "hljs";
-            public const string HljsCopy = "hljs-copy";
             public const string HljsCopyWrapper = "hljs-copy-wrapper";
             public const string MarkdownBody = "markdown-body";
             public const string Nodes = "nodes";

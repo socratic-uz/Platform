@@ -59,12 +59,11 @@
     width: 100%;
     min-height: 48px;
     padding: 0.25rem 0.35rem 0.25rem 1.25rem;
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
-    box-shadow: var(--md-sys-elevation-level1);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-highest);
+    transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
     cursor: text;
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
 }
 
 .input-box textarea {
@@ -84,8 +83,9 @@
 }
 
 .input-box:focus-within {
-    outline: none;
-    box-shadow: 0 0 0 1px var(--md-sys-color-primary);
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: -2px;
+    box-shadow: none;
 }
 
 .m3-form-grid {

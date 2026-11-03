@@ -73,14 +73,11 @@ html {
     background: var(--md-sys-color-background);
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-plain);
-    overflow-x: clip;
     scroll-behavior: smooth;
     overscroll-behavior: none;
-    user-select: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    -webkit-user-select: none;
     tab-size: 4;
 }
 
@@ -91,17 +88,14 @@ body {
     min-height: var(--md-sys-viewport-height, 100dvh);
     margin: 0;
     padding: 0;
-    background-color: var(--md-sys-color-surface);
+    background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-plain);
     font-size: var(--md-sys-typescale-body-large-size);
     line-height: var(--md-sys-typescale-body-large-line-height, 1.6);
-    overflow-x: clip;
     overscroll-behavior: none;
     touch-action: manipulation;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
     text-rendering: optimizeLegibility;
 }
 
@@ -159,11 +153,6 @@ body {
 :where(p) {
     margin: 0;
     text-wrap: pretty;
-}
-
-:where(p, li, dd, td, blockquote, article, pre, code) {
-    user-select: text;
-    -webkit-user-select: text;
 }
 
 :where(a) {
@@ -287,7 +276,9 @@ body {
 /* Classless page skeleton: body > header / main / footer */
 :where(body > header:not([class]), body > main:not([class]), body > footer:not([class])) {
     width: min(100% - 2 * var(--md-sys-gutter-page), var(--md-sys-breakpoint-expanded));
+    min-width: 0;
     margin-inline: auto;
+    color: var(--md-sys-color-on-surface);
 }
 
 :where(body > main:not([class])) {
@@ -297,6 +288,27 @@ body {
     padding-block: var(--md-sys-spacing-6) var(--md-sys-spacing-8);
 }
 
+:where(body > main:not([class]) > header:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-2);
+    max-width: 68ch;
+    margin-block-end: var(--md-sys-spacing-2);
+}
+
+:where(body > main:not([class]) > header:not([class]) > h1) {
+    max-width: 18ch;
+}
+
+:where(body > main:not([class]) > header:not([class]) > p) {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+}
+
+:where(body > main:not([class]) > :is(p, ul, ol, dl):not([class])) {
+    max-width: 68ch;
+}
+
 :where(body > footer:not([class])) {
     padding-block: var(--md-sys-spacing-6);
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -304,14 +316,24 @@ body {
     font-size: var(--md-sys-typescale-body-medium-size);
 }
 
-:where(section:not([class]), hgroup:not([class])) {
+:where(section:not([class]), article:not([class]), aside:not([class])) {
     display: grid;
+    align-content: start;
+    min-width: 0;
+}
+
+:where(section:not([class])) {
     gap: var(--md-sys-spacing-4);
+}
+
+:where(hgroup:not([class])) {
+    display: grid;
+    min-width: 0;
+    gap: var(--md-sys-spacing-2);
 }
 
 /* Classless card: <article> */
 :where(article:not([class])) {
-    display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-5);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -328,8 +350,6 @@ body {
 
 /* Classless side panel: <aside> */
 :where(aside:not([class])) {
-    display: grid;
-    align-content: start;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);
     border-radius: var(--md-sys-shape-corner-medium);
