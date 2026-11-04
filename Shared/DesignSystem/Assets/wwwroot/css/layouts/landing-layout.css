@@ -1,125 +1,35 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / landing-layout.css
-   Component-Driven Architecture
+   Classless Landing Layout: body:has(layout[landing])
    ========================================================================== */
 
-.landing-floating-controls {
+body:has(layout[landing]) {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.65rem;
-    align-items: center;
-    position: fixed;
-    top: 1.25rem;
-    right: 1.5rem;
-    z-index: var(--md-sys-z-drawer, 200);
-    padding: 0.35rem 0.55rem;
-    border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.08);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-surface-container-high);
-    box-shadow: 0 8px 32px 0 rgb(from var(--md-sys-color-shadow, black) r g b / 0.37);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-height: 100dvh;
+    overflow-x: clip;
 }
 
-.landing-floating-auth-btn {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.45rem;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    min-height: 48px;
-    min-width: 48px;
-    padding: 0.45rem 1rem;
-    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.3);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring-soft),
-        background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-    cursor: pointer;
-    touch-action: manipulation;
+body:has(layout[landing]) > header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: var(--md-sys-z-sticky, 10);
+    padding-top: env(safe-area-inset-top, 0);
 }
 
-.landing-floating-auth-btn:hover {
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    transform: translateY(-1px);
-}
-
-.landing-auth-btn {
+body:has(layout[landing]) > main {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto auto;
-    gap: 0.45rem;
-    align-items: center;
-    min-height: 48px;
-    padding: 0.4rem 1.1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.84rem;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 0 16px rgb(from var(--md-sys-color-primary) r g b / 0.2), inset 0 1px 0 rgb(from var(--md-sys-color-surface) r g b / 0.15);
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    touch-action: manipulation;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    min-width: 0;
+    width: 100%;
 }
 
-.landing-auth-btn md-icon {
-    font-size: 16px;
+body:has(layout[landing]) > footer {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    padding-bottom: env(safe-area-inset-bottom, 0);
 }
-
-.landing-auth-btn:hover {
-    border-color: var(--md-sys-color-primary);
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    color: var(--md-sys-color-on-primary);
-    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-primary) r g b / 0.5), 0 0 25px rgb(from var(--md-sys-color-tertiary) r g b / 0.4);
-    transform: translateY(-1px);
-}
-
-.landing-auth-btn:hover md-icon {
-    color: var(--md-sys-color-on-primary);
-}
-
-.landing-header-nav {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.06);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: rgb(from var(--md-sys-color-surface, var(--md-sys-color-surface, white)) r g b / 0.03);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-}
-
-@media screen and (max-width: 1199.98px) {
-    .landing-floating-controls {
-        top: 0.85rem;
-        right: 1rem;
-    }
-}
-
-@media screen and (max-width: 839.98px) {
-    .landing-header-nav {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 599.98px) {
-    .landing-floating-controls {
-        top: 0.65rem;
-        right: 0.75rem;
-    }
-}
-

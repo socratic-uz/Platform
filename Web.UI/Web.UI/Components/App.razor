@@ -1,4 +1,3 @@
-@using static Assets.Constants.Classes.GridLayout
 <!DOCTYPE html>
 <html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" data-theme="@InitialTheme" style="color-scheme: @InitialTheme;">
 <head>
@@ -9,7 +8,7 @@
     <HeadOutlet @rendermode="InteractiveAuto" />
     <AntiforgeryToken />
 </head>
-<body class=@AppGrid oncontextmenu="return false;">
+<body oncontextmenu="return false;">
     <Routes @rendermode="InteractiveAuto" />
 
     <SectionOutlet SectionName="script" />

@@ -1,223 +1,53 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / map-layout.css
-   Component-Driven Architecture
+   Classless Map Layout: body:has(layout[map])
    ========================================================================== */
 
-.map-panel-content {
+body:has(layout[map]) {
     display: grid;
-    gap: 0.6rem;
-    align-content: start;
-    height: 100%;
-    min-height: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
-.map-toolbar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.45rem;
-    position: sticky;
-    top: 0;
-    z-index: var(--md-sys-z-surface, 2);
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid rgb(from var(--map-border) r g b / 0.45);
-    background: linear-gradient(180deg, var(--map-surface-strong), rgb(from var(--map-surface) r g b / 0.88));
-}
-
-@media (min-width: 600px) and (max-width: 839.98px) {
-    .map-toolbar {
-        top: -0.12rem;
-    }
-
-    .organizations-map-controls {
-        bottom: 0.75rem;
-        width: min(24rem, calc(100vw - 4rem));
-    }
-
-}
-
-.map-panel-toggle-tab {
-    display: grid;
-    place-items: center;
-    position: absolute;
-    top: 50%;
-    right: -44px;
-    z-index: var(--md-sys-z-sticky, 10);
-    width: 44px;
-    min-width: 44px;
-    height: 64px;
-    min-height: 44px;
-    padding: 0;
-    border: 1px solid var(--map-border);
-    border-left: none;
-    border-radius: 0 16px 16px 0;
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.95);
-    color: var(--map-text-muted);
-    font-size: 0.72rem;
-    box-shadow: 6px 0 15px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
-    transform: translateY(-50%);
-    transition: all 0.2s var(--md-sys-motion-easing-spring);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.map-panel-toggle-tab:hover {
-    right: -48px;
-    width: 48px;
-    background: var(--md-sys-color-surface);
-    color: var(--map-primary);
-}
-
-.organizations-map-controls.collapsed .map-panel-toggle-tab {
-    right: -44px;
-    left: auto;
-    border-left: none;
-    border-radius: 0 16px 16px 0;
-    box-shadow: var(--map-shadow);
-}
-
-.map-popup-backdrop :where(.maplibregl-ctrl-top-right, .mapboxgl-ctrl-top-right, .mapboxgl-ctrl-group, .maplibregl-ctrl-group) {
-    z-index: var(--md-sys-z-dialog-backdrop, 1000);
-    pointer-events: auto;
-}
-
-.map-popup-backdrop :where(.mapboxgl-ctrl-group, .maplibregl-ctrl-group) button {
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-/* Navigator Controls Buttons */
-.navigator-controls .nav-btn-recenter,
-.navigator-controls .nav-btn-voice {
-    --md-icon-button-icon-color: var(--md-sys-color-inverse-on-surface);
-}
-
-.navigator-controls .nav-btn-voice.active {
-    --md-icon-button-icon-color: var(--md-sys-color-tertiary);
-}
-
-.navigator-controls .nav-btn-stop {
-    --md-filled-icon-button-container-color: var(--md-sys-color-error);
-    --md-filled-icon-button-icon-color: var(--md-sys-color-on-error);
-}
-
-/* Map Popup Dialog */
-.map-popup-backdrop {
-    display: grid;
-    place-items: center;
-    position: fixed;
-    inset: 0;
-    z-index: var(--md-sys-z-dialog, 1001);
+    grid-template-columns: calc(76px + env(safe-area-inset-left, 0px)) minmax(0, 1fr);
+    grid-template-rows: 1fr;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
     margin: 0;
-    padding: 1rem;
-    border: none;
-    background: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
-    backdrop-filter: blur(8px);
-}
-
-.map-popup-dialog {
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    position: relative;
-    width: 90vw;
-    max-width: 960px;
-    height: 80vh;
-    max-height: 720px;
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    background: var(--md-sys-color-surface);
-    box-shadow: var(--md-sys-elevation-level4, 0 12px 32px rgb(0 0 0 / 0.4));
+    padding: 0;
     overflow: hidden;
 }
 
-.map-popup-header {
+body:has(layout[map]) > nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 100%;
+    z-index: var(--md-sys-z-sticky, 10);
+}
+
+body:has(layout[map]) > main {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container);
-    min-width: 0;
-}
-
-.map-popup-header h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.map-popup-body {
-    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     min-height: 0;
+    min-width: 0;
+    overflow: hidden;
 }
 
-.map-popup-footer {
-    display: grid;
-    gap: 0.75rem;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container);
+@media screen and (max-width: 839.98px) {
+    body:has(layout[map]) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    body:has(layout[map]) > main {
+        grid-column: 1 / -1;
+    }
+
+    body:has(layout[map]) > nav {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
 }
 
-.map-popup-info {
-    display: grid;
-    gap: 0.25rem;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.map-popup-address {
-    color: var(--md-sys-color-primary);
-}
-
-.map-popup-hint {
-    font-size: 0.85rem;
-    color: var(--md-sys-color-outline);
-}
-
-.map-popup-actions {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    justify-content: end;
-    gap: 0.75rem;
-    margin: 0;
-    padding: 0;
-}
-
-/* Place Details Card */
-.map-place-details-card .place-actions-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-    --md-filled-button-leading-space: 12px;
-    --md-filled-button-trailing-space: 12px;
-    --md-outlined-button-leading-space: 12px;
-    --md-outlined-button-trailing-space: 12px;
-}
-
-.map-place-details-card .place-btn-route {
-    --md-filled-button-container-color: var(--md-sys-color-primary);
-}
-
-/* Nearby Results */
-.nearby-results-empty {
-    margin: 0.5rem 0;
-    color: var(--md-sys-color-outline);
-    font-size: 0.875rem;
-}
-
-.nearby-results-list {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}

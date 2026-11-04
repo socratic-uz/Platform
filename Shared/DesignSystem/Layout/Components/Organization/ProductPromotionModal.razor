@@ -47,7 +47,7 @@
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
                             <Card Type="outlined"
-                                  class=@(isSelected ? string.Format(Two, PlanCard, Selected) : PlanCard)
+                                  class=@(isSelected ? string.Format(Two, PlanCard, Classes.Cards.Selected) : PlanCard)
                                   @onclick=@(() => SelectPlan(plan))
                                   tabindex="0"
                                   role="radio"

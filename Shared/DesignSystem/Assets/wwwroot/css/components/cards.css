@@ -113,8 +113,6 @@
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 .card-icon {
@@ -558,11 +556,6 @@
     background: var(--md-sys-color-surface-container-low);
 }
 
-.map-place-details-card {
-    border-color: rgb(from var(--map-primary) r g b / 0.28);
-    background: rgb(from var(--map-primary-container) r g b / 0.2);
-}
-
 .org-card {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
@@ -581,42 +574,6 @@
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
-
-.landing-page-root .org-card,
-.landing-page-root .bento-card,
-.landing-page-root .evolution-card,
-.landing-page-root .hero-card,
-.landing-page-root .hero-stage-card,
-.landing-page-root .spatial-wing-card,
-.landing-page-root .ux-spotlight-card,
-.landing-page-root .ux-mode-card {
-    padding: var(--landing-card-padding);
-    border-color: var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
-    background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-level1);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-}
-
-.landing-page-root .org-card:hover,
-.landing-page-root .bento-card:hover,
-.landing-page-root .evolution-card:hover,
-.landing-page-root .hero-card:hover,
-.landing-page-root .hero-stage-card:hover,
-.landing-page-root .spatial-wing-card:hover,
-.landing-page-root .ux-spotlight-card:hover,
-.landing-page-root .ux-mode-card:hover {
-    border-color: var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-level2);
-}
-
-.landing-page-root .bento-card:hover::before,
-.landing-page-root .evolution-card:hover::before {
-    opacity: 0;
-}
-
-
 
 .org-card-actions {
     display: grid;
@@ -864,12 +821,6 @@
     border: none;
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     background: transparent;
-}
-
-.selected-org-card {
-    border-color: rgb(from var(--map-primary) r g b / 0.28);
-    background: var(--map-surface-soft);
-    animation: map-card-in 0.18s ease-out;
 }
 
 .shipping-card {
@@ -1344,6 +1295,38 @@ md-filled-card.product-card:not(.pos-product-card):has(> .inline-card-experience
     grid-template-rows: auto minmax(0, 1fr) auto auto;
 }
 
+.product-card section,
+md-filled-card.product-card section,
+.product-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.product-card section md-text-button,
+md-filled-card.product-card section md-text-button,
+.product-details md-text-button {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.product-card section p,
+md-filled-card.product-card section p,
+.product-details p {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 md-outlined-card {
     display: grid;
     align-content: stretch;
@@ -1474,14 +1457,14 @@ md-outlined-card:hover figure img {
         gap: 0.75rem;
     }
 
-    .kiosk-main .card-footer {
+    :where(main[kiosk]) .card-footer {
         grid-auto-flow: row;
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-2, 0.5rem);
         align-items: stretch;
     }
 
-    .kiosk-main .card-footer .material-counter {
+    :where(main[kiosk]) .card-footer .material-counter {
         justify-content: center;
     }
 
@@ -1554,14 +1537,14 @@ md-outlined-card:hover figure img {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
     }
 
-    .kiosk-main .card-footer {
+    :where(main[kiosk]) .card-footer {
         grid-auto-flow: row;
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-2, 0.5rem);
         align-items: stretch;
     }
 
-    .kiosk-main .card-footer .material-counter {
+    :where(main[kiosk]) .card-footer .material-counter {
         justify-content: center;
         width: 100%;
     }

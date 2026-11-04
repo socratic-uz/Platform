@@ -1,4 +1,4 @@
----
+﻿---
 name: ux-refactor-loop
 description: >-
   Data-driven Razor markup refactoring loop for Blazor templates (*.razor) and code-behind (*.razor.cs), enforcing unquoted syntax, Material.Web first, short @using static constants, 3-way .resx parity, and zero magic strings.
@@ -16,44 +16,44 @@ Target components reside across `src/Frontend/` (`Platform/`, `Retail/`, `Portal
 Run the analytics and code generators to get updated metrics:
 
 ```powershell
-# В папке src/Frontend/Platform/Shared/DesignSystem/Assets
+# Ð’ Ð¿Ð°Ð¿ÐºÐµ src/Frontend/Platform/Shared/DesignSystem/Assets
 npm run refresh
 ```
 
-Для анализа нарушений по модулям проверяй сгенерированный манифест:
+Ð”Ð»Ñ Ð°Ð½Ð°Ð»Ð¸Ð·Ð° Ð½Ð°Ñ€ÑƒÑˆÐµÐ½Ð¸Ð¹ Ð¿Ð¾ Ð¼Ð¾Ð´ÑƒÐ»ÑÐ¼ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ¹ ÑÐ³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¼Ð°Ð½Ð¸Ñ„ÐµÑÑ‚:
 ```powershell
-# В папке src/Frontend/Platform/Shared/DesignSystem/Assets
+# Ð’ Ð¿Ð°Ð¿ÐºÐµ src/Frontend/Platform/Shared/DesignSystem/Assets
 Get-Content wwwroot/analytics/manifest.json | ConvertFrom-Json
 ```
 
-Источники истины (JSON-аналитика):
-- `wwwroot/analytics/usage/class-constants.json` → сырые классы, требующие типизированных констант.
-- `wwwroot/analytics/usage/localization.json` → сырые строковые ключи `L["..."]` и незарегистрированные строки.
-- `wwwroot/analytics/usage/components.json` → сырые компоненты `md-*`, где доступен компонент `Material.Web`.
-- `wwwroot/analytics/manifest.json` → страницы с `totalViolations > 0`.
+Ð˜ÑÑ‚Ð¾Ñ‡Ð½Ð¸ÐºÐ¸ Ð¸ÑÑ‚Ð¸Ð½Ñ‹ (JSON-Ð°Ð½Ð°Ð»Ð¸Ñ‚Ð¸ÐºÐ°):
+- `wwwroot/analytics/usage/class-constants.json` â†’ ÑÑ‹Ñ€Ñ‹Ðµ ÐºÐ»Ð°ÑÑÑ‹, Ñ‚Ñ€ÐµÐ±ÑƒÑŽÑ‰Ð¸Ðµ Ñ‚Ð¸Ð¿Ð¸Ð·Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚.
+- `wwwroot/analytics/usage/localization.json` â†’ ÑÑ‹Ñ€Ñ‹Ðµ ÑÑ‚Ñ€Ð¾ÐºÐ¾Ð²Ñ‹Ðµ ÐºÐ»ÑŽÑ‡Ð¸ `L["..."]` Ð¸ Ð½ÐµÐ·Ð°Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÑÑ‚Ñ€Ð¾ÐºÐ¸.
+- `wwwroot/analytics/usage/components.json` â†’ ÑÑ‹Ñ€Ñ‹Ðµ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ `md-*`, Ð³Ð´Ðµ Ð´Ð¾ÑÑ‚ÑƒÐ¿ÐµÐ½ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚ `Material.Web`.
+- `wwwroot/analytics/manifest.json` â†’ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ñ `totalViolations > 0`.
 
 ---
 
-## 1. Выбор цели (Pick Target from Data)
+## 1. Ð’Ñ‹Ð±Ð¾Ñ€ Ñ†ÐµÐ»Ð¸ (Pick Target from Data)
 
-Выбирай компоненты строго по количеству нарушений (от худшего к лучшему):
-1. **Приоритет нарушений**:
-   - Захардкоженный текст (сырые русские/английские строки в разметке) ➔ перенос в 3 словаря `.resx` (`@L[Key]`).
-   - Кавычки вокруг C#-выражений в атрибутах (`Icon="@Close"`, `OnClick="Close"`, `class="@Header"`) ➔ синтаксис без кавычек `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`.
-   - Длинные выражения с точками в атрибутах (`что-то=@*.*.*`) ➔ ультра-короткий синтаксис `что-то=@*` строго через `@using static` (без создания алиасов в code-behind).
-   - Сырые строки классов `class="..."` и длинные префиксы `@Classes.*` ➔ `@using static Classes.<Group>` + `@ClassName`.
-   - Сырые иконки `Icon="close"` или `<md-icon>close</md-icon>` ➔ `@using static Icons` + `Icon=@Close`.
-   - Сырые компоненты `<md-filled-button>` ➔ готовые Razor-компоненты `Material.Web` (`<Button Variant=@Filled>`).
-   - Длинные квалификаторы перечислений (`@ButtonVariant.*`, `@ChipType.*`) ➔ ультра-короткий синтаксис через `@using static <Enum>` (`Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`).
-   - Fallback-заглушки вида `?? "..."` ➔ чистые `@L[Key]`.
-   - Тяжелые блоки `@code` (> 5 строк) ➔ вынос в `*.razor.cs` code-behind.
+Ð’Ñ‹Ð±Ð¸Ñ€Ð°Ð¹ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ ÑÑ‚Ñ€Ð¾Ð³Ð¾ Ð¿Ð¾ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ñƒ Ð½Ð°Ñ€ÑƒÑˆÐµÐ½Ð¸Ð¹ (Ð¾Ñ‚ Ñ…ÑƒÐ´ÑˆÐµÐ³Ð¾ Ðº Ð»ÑƒÑ‡ÑˆÐµÐ¼Ñƒ):
+1. **ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ Ð½Ð°Ñ€ÑƒÑˆÐµÐ½Ð¸Ð¹**:
+   - Ð—Ð°Ñ…Ð°Ñ€Ð´ÐºÐ¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ñ‚ÐµÐºÑÑ‚ (ÑÑ‹Ñ€Ñ‹Ðµ Ñ€ÑƒÑÑÐºÐ¸Ðµ/Ð°Ð½Ð³Ð»Ð¸Ð¹ÑÐºÐ¸Ðµ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐµ) âž” Ð¿ÐµÑ€ÐµÐ½Ð¾Ñ Ð² 3 ÑÐ»Ð¾Ð²Ð°Ñ€Ñ `.resx` (`@L[Key]`).
+   - ÐšÐ°Ð²Ñ‹Ñ‡ÐºÐ¸ Ð²Ð¾ÐºÑ€ÑƒÐ³ C#-Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¹ Ð² Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð°Ñ… (`Icon="@Close"`, `OnClick="Close"`, `class="@Header"`) âž” ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ Ð±ÐµÐ· ÐºÐ°Ð²Ñ‹Ñ‡ÐµÐº `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`.
+   - Ð”Ð»Ð¸Ð½Ð½Ñ‹Ðµ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ñ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ Ð² Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð°Ñ… (`Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*.*.*`) âž” ÑƒÐ»ÑŒÑ‚Ñ€Ð°-ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¹ ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*` ÑÑ‚Ñ€Ð¾Ð³Ð¾ Ñ‡ÐµÑ€ÐµÐ· `@using static` (Ð±ÐµÐ· ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð°Ð»Ð¸Ð°ÑÐ¾Ð² Ð² code-behind).
+   - Ð¡Ñ‹Ñ€Ñ‹Ðµ ÑÑ‚Ñ€Ð¾ÐºÐ¸ ÐºÐ»Ð°ÑÑÐ¾Ð² `class="..."` Ð¸ Ð´Ð»Ð¸Ð½Ð½Ñ‹Ðµ Ð¿Ñ€ÐµÑ„Ð¸ÐºÑÑ‹ `@Classes.*` âž” `@using static Classes.<Group>` + `@ClassName`.
+   - Ð¡Ñ‹Ñ€Ñ‹Ðµ Ð¸ÐºÐ¾Ð½ÐºÐ¸ `Icon="close"` Ð¸Ð»Ð¸ `<md-icon>close</md-icon>` âž” `@using static Icons` + `Icon=@Close`.
+   - Ð¡Ñ‹Ñ€Ñ‹Ðµ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ `<md-filled-button>` âž” Ð³Ð¾Ñ‚Ð¾Ð²Ñ‹Ðµ Razor-ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ `Material.Web` (`<Button Variant=@Filled>`).
+   - Ð”Ð»Ð¸Ð½Ð½Ñ‹Ðµ ÐºÐ²Ð°Ð»Ð¸Ñ„Ð¸ÐºÐ°Ñ‚Ð¾Ñ€Ñ‹ Ð¿ÐµÑ€ÐµÑ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ð¹ (`@ButtonVariant.*`, `@ChipType.*`) âž” ÑƒÐ»ÑŒÑ‚Ñ€Ð°-ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¹ ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ Ñ‡ÐµÑ€ÐµÐ· `@using static <Enum>` (`Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`).
+   - Fallback-Ð·Ð°Ð³Ð»ÑƒÑˆÐºÐ¸ Ð²Ð¸Ð´Ð° `?? "..."` âž” Ñ‡Ð¸ÑÑ‚Ñ‹Ðµ `@L[Key]`.
+   - Ð¢ÑÐ¶ÐµÐ»Ñ‹Ðµ Ð±Ð»Ð¾ÐºÐ¸ `@code` (> 5 ÑÑ‚Ñ€Ð¾Ðº) âž” Ð²Ñ‹Ð½Ð¾Ñ Ð² `*.razor.cs` code-behind.
 
 ---
 
-## 2. Пошаговый рефакторинг компонента (Refactor)
+## 2. ÐŸÐ¾ÑˆÐ°Ð³Ð¾Ð²Ñ‹Ð¹ Ñ€ÐµÑ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð½Ð³ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð° (Refactor)
 
-### 2.1 Разметка (`*.razor`)
-1. **Директивы `@using static` в начале файла**:
+### 2.1 Ð Ð°Ð·Ð¼ÐµÑ‚ÐºÐ° (`*.razor`)
+1. **Ð”Ð¸Ñ€ÐµÐºÑ‚Ð¸Ð²Ñ‹ `@using static` Ð² Ð½Ð°Ñ‡Ð°Ð»Ðµ Ñ„Ð°Ð¹Ð»Ð°**:
    ```razor
    @using static Classes.<Group>
    @using static Icons
@@ -61,112 +61,113 @@ Get-Content wwwroot/analytics/manifest.json | ConvertFrom-Json
    @using static Assets.<Group>
    @inject IStringLocalizer L
    ```
-2. **Чистый синтаксис атрибутов без кавычек (Unquoted Razor Syntax)**:
-   - `Icon=@Close` (вместо `Icon="@Close"`)
-   - `OnClick=@CloseDialogAsync` (вместо `OnClick="CloseDialogAsync"`)
-   - `Open=@IsOpen` (вместо `Open="@IsOpen"`)
-   - `class=@HeaderBar` (вместо `class="@HeaderBar"`)
-   - `Variant=@Filled` / `Variant=@Outlined` (вместо `Variant="Filled"` или `Variant=@ButtonVariant.Filled`) через `@using static ButtonVariant`
-   - `Type=@Filter` (вместо `Type=@ChipType.Filter`) через `@using static ChipType`
+2. **Ð§Ð¸ÑÑ‚Ñ‹Ð¹ ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð¾Ð² Ð±ÐµÐ· ÐºÐ°Ð²Ñ‹Ñ‡ÐµÐº (Unquoted Razor Syntax)**:
+   - `Icon=@Close` (Ð²Ð¼ÐµÑÑ‚Ð¾ `Icon="@Close"`)
+   - `OnClick=@CloseDialogAsync` (Ð²Ð¼ÐµÑÑ‚Ð¾ `OnClick="CloseDialogAsync"`)
+   - `Open=@IsOpen` (Ð²Ð¼ÐµÑÑ‚Ð¾ `Open="@IsOpen"`)
+   - `class=@HeaderBar` (Ð²Ð¼ÐµÑÑ‚Ð¾ `class="@HeaderBar"`)
+   - `Variant=@Filled` / `Variant=@Outlined` (Ð²Ð¼ÐµÑÑ‚Ð¾ `Variant="Filled"` Ð¸Ð»Ð¸ `Variant=@ButtonVariant.Filled`) Ñ‡ÐµÑ€ÐµÐ· `@using static ButtonVariant`
+   - `Type=@Filter` (Ð²Ð¼ÐµÑÑ‚Ð¾ `Type=@ChipType.Filter`) Ñ‡ÐµÑ€ÐµÐ· `@using static ChipType`
    - `Selected=@(durationMonths == 1)`
    - `Disabled=@(!CanSubmit)`
    - `LeadingIcon=@Payment`
    - `Label=@L[LabelName]`
    - `Value=@Val`
 
-3. **☢️ ТОТАЛЬНЫЙ ЗАКОН: ультра-короткий синтаксис `что-то=@*` — категорический запрет длинных путей с точками `что-то=@*.*.*`**:
-   - В разметке `*.razor` **НЕ ДОЛЖНО БЫТЬ** длинных составных выражений с точками вида `что-то=@*.*.*`. Все атрибуты — строго ультра-коротко: `что-то=@*` (или `*=@*`).
-   - ❌ **Категорически запрещено**: `class=@Classes.Common.ItemUnitPrice`, `class=@Classes.Orders.HeaderTitleBox`, `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined`, `Label=@Loc.Checkout.StepCart`.
-   - ✅ **Обязательно**: `class=@ItemUnitPrice`, `class=@HeaderTitleBox`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`.
-   - ❌ **Категорически запрещено создавать алиасы констант в code-behind** (`public const string Alias = global::Assets.***`) ради сокращения имён.
-   - ✅ **Исключительно через `using static`**: короткие имена достигаются директивами `@using static Classes.<Group>`, `@using static Icons`, `@using static Loc.<Domain>`, `@using static <EnumName>` в `.razor`; и `using static` в `.razor.cs`.
-   - **Разрешение коллизий без точек в разметке**: если две статические группы содержат одноимённые константы — импортировать профильную группу для данного компонента, либо изолировать импорт в заголовке файла. В теле разметки атрибут **всегда** остаётся ультра-коротким: `class=@HeaderTitleBox`.
+3. **â˜¢ï¸ Ð¢ÐžÐ¢ÐÐ›Ð¬ÐÐ«Ð™ Ð—ÐÐšÐžÐ: ÑƒÐ»ÑŒÑ‚Ñ€Ð°-ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¹ ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*` â€” ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð·Ð°Ð¿Ñ€ÐµÑ‚ Ð´Ð»Ð¸Ð½Ð½Ñ‹Ñ… Ð¿ÑƒÑ‚ÐµÐ¹ Ñ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*.*.*`**:
+   - Ð’ Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐµ `*.razor` **ÐÐ• Ð”ÐžÐ›Ð–ÐÐž Ð‘Ð«Ð¢Ð¬** Ð´Ð»Ð¸Ð½Ð½Ñ‹Ñ… ÑÐ¾ÑÑ‚Ð°Ð²Ð½Ñ‹Ñ… Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¹ Ñ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ Ð²Ð¸Ð´Ð° `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*.*.*`. Ð’ÑÐµ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ñ‹ â€” ÑÑ‚Ñ€Ð¾Ð³Ð¾ ÑƒÐ»ÑŒÑ‚Ñ€Ð°-ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¾: `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*` (Ð¸Ð»Ð¸ `*=@*`).
+   - âŒ **ÐšÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ñ‡ÐµÑÐºÐ¸ Ð·Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½Ð¾**: `class=@Classes.Common.ItemUnitPrice`, `class=@Classes.Orders.HeaderTitleBox`, `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined`, `Label=@Loc.Checkout.StepCart`.
+   - âœ… **ÐžÐ±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾**: `class=@ItemUnitPrice`, `class=@HeaderTitleBox`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`.
+   - âŒ **ÐšÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ñ‡ÐµÑÐºÐ¸ Ð·Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð²Ð°Ñ‚ÑŒ Ð°Ð»Ð¸Ð°ÑÑ‹ ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚ Ð² code-behind** (`public const string Alias = global::Assets.***`) Ñ€Ð°Ð´Ð¸ ÑÐ¾ÐºÑ€Ð°Ñ‰ÐµÐ½Ð¸Ñ Ð¸Ð¼Ñ‘Ð½.
+   - âœ… **Ð˜ÑÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ Ñ‡ÐµÑ€ÐµÐ· `using static`**: ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ðµ Ð¸Ð¼ÐµÐ½Ð° Ð´Ð¾ÑÑ‚Ð¸Ð³Ð°ÑŽÑ‚ÑÑ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¸Ð²Ð°Ð¼Ð¸ `@using static Classes.<Group>`, `@using static Icons`, `@using static Loc.<Domain>`, `@using static <EnumName>` Ð² `.razor`; Ð¸ `using static` Ð² `.razor.cs`.
+   - **Ð Ð°Ð·Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ ÐºÐ¾Ð»Ð»Ð¸Ð·Ð¸Ð¹ Ð±ÐµÐ· Ñ‚Ð¾Ñ‡ÐµÐº Ð² Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐµ**: ÐµÑÐ»Ð¸ Ð´Ð²Ðµ ÑÑ‚Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‚ Ð¾Ð´Ð½Ð¾Ð¸Ð¼Ñ‘Ð½Ð½Ñ‹Ðµ ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚Ñ‹ â€” Ð¸Ð¼Ð¿Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»ÑŒÐ½ÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ Ð´Ð»Ñ Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð°, Ð»Ð¸Ð±Ð¾ Ð¸Ð·Ð¾Ð»Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð¸Ð¼Ð¿Ð¾Ñ€Ñ‚ Ð² Ð·Ð°Ð³Ð¾Ð»Ð¾Ð²ÐºÐµ Ñ„Ð°Ð¹Ð»Ð°. Ð’ Ñ‚ÐµÐ»Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐ¸ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚ **Ð²ÑÐµÐ³Ð´Ð°** Ð¾ÑÑ‚Ð°Ñ‘Ñ‚ÑÑ ÑƒÐ»ÑŒÑ‚Ñ€Ð°-ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¼: `class=@HeaderTitleBox`.
 
-4. **Особые случаи парсера Razor**:
-   - Составные классы без кавычек: вместо интерполяции `class=@($"{Card} {Elevated}")` (содержащей кавычки) строго используется `class=@string.Format(Two, Card, Elevated)` через `@using static Formats` или `class=@string.Format(Temp, ...)` с константой шаблона `const string Temp = "{0} {1} {2}";`. В разметке достигается 100% отсутствие кавычек!
-5. **Компоненты `Material.Web` First (Обязательная замена HTML-тегов)**:
-   - Если для семантического тега есть Blazor-компонент — **ОБЯЗАТЕЛЬНО использовать его**:
-     - Строго `<Button>` (или `<IconButton>`) вместо `<button>`
-     - Строго `<TextField>` вместо `<input type="text/email/password">` / `<textarea>`
-     - Строго `<Select>` + `<SelectOption>` вместо `<select>` + `<option>`
-     - Строго `<Divider>` вместо `<hr>`
-     - Строго `<Checkbox>` вместо `<input type="checkbox">`
-     - Строго `<Radio>` вместо `<input type="radio">`
-     - Строго `<MaterialDialog>` или `<Dialog>` вместо `<dialog>`
-     - Строго `<Progress>` вместо `<progress>`
-     - Строго `<Tabs>` + `<Tab>` вместо кнопок переключения табов
-     - Строго `<Chip>` + `<ChipSet>` вместо самодельных чипов
-     - Строго `<Badge>` вместо значков
-     - `<Card>` вместо `<div class="card">`
-6. **Правильные семантические HTML5 теги (Строго если в `Material.Web` нет готового аналога)**:
-   - `<header>`: шапка страницы, карточки или диалога (запрещен `<div class="header">`).
-   - `<footer>`: подвал, панель кнопок действий, подтверждение (запрещен `<div class="actions">`).
-   - `<main>`: основная рабочая область.
-   - `<section>`: логический раздел формы или этап визарда.
-   - `<article>`: карточка сущности (товар, бронь, лот, коммент, тарифный план).
-   - `<aside>`: сайдбар корзины, фильтры каталога, панель итогов.
-   - `<nav>`: навигация, переключатели табов, шаги оформления (`stepper`).
-   - `<fieldset>` + `<legend>`: логически связанные группы полей ввода.
-   - `<ul>` / `<ol>` + `<li>`: семантические списки опций, фич, позиций заказа.
-   - `<time datetime="...">`: даты, временные слоты, таймеры.
-7. **Плоское семантическое дерево (Zero Wrapper Bloat)**:
-   - Схлопывать лишние промежуточные обертки (`div > div > div`); разметка должна быть максимально плоской.
-   - Запрещены `<div>` исключительно ради отступов (`padding`/`margin`) — раскладкой и отступами управляет CSS Grid родительского семантического элемента.
-   - Запрещены кликабельные `<div>`, `<span>` или тег `<button>` (строго `<Button>` или `<IconButton>`).
+4. **ÐžÑÐ¾Ð±Ñ‹Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¸ Ð¿Ð°Ñ€ÑÐµÑ€Ð° Razor**:
+   - Ð¡Ð¾ÑÑ‚Ð°Ð²Ð½Ñ‹Ðµ ÐºÐ»Ð°ÑÑÑ‹ Ð±ÐµÐ· ÐºÐ°Ð²Ñ‹Ñ‡ÐµÐº: Ð²Ð¼ÐµÑÑ‚Ð¾ Ð¸Ð½Ñ‚ÐµÑ€Ð¿Ð¾Ð»ÑÑ†Ð¸Ð¸ `class=@($"{Card} {Elevated}")` (ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‰ÐµÐ¹ ÐºÐ°Ð²Ñ‹Ñ‡ÐºÐ¸) ÑÑ‚Ñ€Ð¾Ð³Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ÑÑ `class=@string.Format(Two, Card, Elevated)` Ñ‡ÐµÑ€ÐµÐ· `@using static Formats` Ð¸Ð»Ð¸ `class=@string.Format(Temp, ...)` Ñ ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚Ð¾Ð¹ ÑˆÐ°Ð±Ð»Ð¾Ð½Ð° `const string Temp = "{0} {1} {2}";`. Ð’ Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐµ Ð´Ð¾ÑÑ‚Ð¸Ð³Ð°ÐµÑ‚ÑÑ 100% Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²Ð¸Ðµ ÐºÐ°Ð²Ñ‹Ñ‡ÐµÐº!
+5. **ÐšÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ `Material.Web` First (ÐžÐ±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð·Ð°Ð¼ÐµÐ½Ð° HTML-Ñ‚ÐµÐ³Ð¾Ð²)**:
+   - Ð•ÑÐ»Ð¸ Ð´Ð»Ñ ÑÐµÐ¼Ð°Ð½Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ñ‚ÐµÐ³Ð° ÐµÑÑ‚ÑŒ Blazor-ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚ â€” **ÐžÐ‘Ð¯Ð—ÐÐ¢Ð•Ð›Ð¬ÐÐž Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ ÐµÐ³Ð¾**:
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Button>` (Ð¸Ð»Ð¸ `<IconButton>`) Ð²Ð¼ÐµÑÑ‚Ð¾ `<button>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<TextField>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<input type="text/email/password">` / `<textarea>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Select>` + `<SelectOption>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<select>` + `<option>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Divider>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<hr>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Checkbox>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<input type="checkbox">`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Radio>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<input type="radio">`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<MaterialDialog>` Ð¸Ð»Ð¸ `<Dialog>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<dialog>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Progress>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<progress>`
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Tabs>` + `<Tab>` Ð²Ð¼ÐµÑÑ‚Ð¾ ÐºÐ½Ð¾Ð¿Ð¾Ðº Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ñ‚Ð°Ð±Ð¾Ð²
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Chip>` + `<ChipSet>` Ð²Ð¼ÐµÑÑ‚Ð¾ ÑÐ°Ð¼Ð¾Ð´ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ñ‡Ð¸Ð¿Ð¾Ð²
+     - Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ `<Badge>` Ð²Ð¼ÐµÑÑ‚Ð¾ Ð·Ð½Ð°Ñ‡ÐºÐ¾Ð²
+     - `<Card>` Ð²Ð¼ÐµÑÑ‚Ð¾ `<div class="card">`
+6. **ÐŸÑ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ðµ ÑÐµÐ¼Ð°Ð½Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ HTML5 Ñ‚ÐµÐ³Ð¸ (Ð¡Ñ‚Ñ€Ð¾Ð³Ð¾ ÐµÑÐ»Ð¸ Ð² `Material.Web` Ð½ÐµÑ‚ Ð³Ð¾Ñ‚Ð¾Ð²Ð¾Ð³Ð¾ Ð°Ð½Ð°Ð»Ð¾Ð³Ð°)**:
+   - `<header>`: ÑˆÐ°Ð¿ÐºÐ° ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹, ÐºÐ°Ñ€Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð¸Ð»Ð¸ Ð´Ð¸Ð°Ð»Ð¾Ð³Ð° (Ð·Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½ `<div class="header">`).
+   - `<footer>`: Ð¿Ð¾Ð´Ð²Ð°Ð», Ð¿Ð°Ð½ÐµÐ»ÑŒ ÐºÐ½Ð¾Ð¿Ð¾Ðº Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ð¹, Ð¿Ð¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¸Ðµ (Ð·Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½ `<div class="actions">`).
+   - `<main>`: Ð¾ÑÐ½Ð¾Ð²Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‡Ð°Ñ Ð¾Ð±Ð»Ð°ÑÑ‚ÑŒ.
+   - `<section>`: Ð»Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ñ€Ð°Ð·Ð´ÐµÐ» Ñ„Ð¾Ñ€Ð¼Ñ‹ Ð¸Ð»Ð¸ ÑÑ‚Ð°Ð¿ Ð²Ð¸Ð·Ð°Ñ€Ð´Ð°.
+   - `<article>`: ÐºÐ°Ñ€Ñ‚Ð¾Ñ‡ÐºÐ° ÑÑƒÑ‰Ð½Ð¾ÑÑ‚Ð¸ (Ñ‚Ð¾Ð²Ð°Ñ€, Ð±Ñ€Ð¾Ð½ÑŒ, Ð»Ð¾Ñ‚, ÐºÐ¾Ð¼Ð¼ÐµÐ½Ñ‚, Ñ‚Ð°Ñ€Ð¸Ñ„Ð½Ñ‹Ð¹ Ð¿Ð»Ð°Ð½).
+   - `<aside>`: ÑÐ°Ð¹Ð´Ð±Ð°Ñ€ ÐºÐ¾Ñ€Ð·Ð¸Ð½Ñ‹, Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ñ‹ ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ð°, Ð¿Ð°Ð½ÐµÐ»ÑŒ Ð¸Ñ‚Ð¾Ð³Ð¾Ð².
+   - `<nav>`: Ð½Ð°Ð²Ð¸Ð³Ð°Ñ†Ð¸Ñ, Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡Ð°Ñ‚ÐµÐ»Ð¸ Ñ‚Ð°Ð±Ð¾Ð², ÑˆÐ°Ð³Ð¸ Ð¾Ñ„Ð¾Ñ€Ð¼Ð»ÐµÐ½Ð¸Ñ (`stepper`).
+   - `<fieldset>` + `<legend>`: Ð»Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¸ ÑÐ²ÑÐ·Ð°Ð½Ð½Ñ‹Ðµ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ Ð¿Ð¾Ð»ÐµÐ¹ Ð²Ð²Ð¾Ð´Ð°.
+   - `<ul>` / `<ol>` + `<li>`: ÑÐµÐ¼Ð°Ð½Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ¿Ð¸ÑÐºÐ¸ Ð¾Ð¿Ñ†Ð¸Ð¹, Ñ„Ð¸Ñ‡, Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¹ Ð·Ð°ÐºÐ°Ð·Ð°.
+   - `<time datetime="...">`: Ð´Ð°Ñ‚Ñ‹, Ð²Ñ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ðµ ÑÐ»Ð¾Ñ‚Ñ‹, Ñ‚Ð°Ð¹Ð¼ÐµÑ€Ñ‹.
+7. **ÐŸÐ»Ð¾ÑÐºÐ¾Ðµ ÑÐµÐ¼Ð°Ð½Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ (Zero Wrapper Bloat)**:
+   - Ð¡Ñ…Ð»Ð¾Ð¿Ñ‹Ð²Ð°Ñ‚ÑŒ Ð»Ð¸ÑˆÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚Ð¾Ñ‡Ð½Ñ‹Ðµ Ð¾Ð±ÐµÑ€Ñ‚ÐºÐ¸ (`div > div > div`); Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐ° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð¿Ð»Ð¾ÑÐºÐ¾Ð¹.
+   - Ð—Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½Ñ‹ `<div>` Ð¸ÑÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ Ñ€Ð°Ð´Ð¸ Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ð¾Ð² (`padding`/`margin`) â€” Ñ€Ð°ÑÐºÐ»Ð°Ð´ÐºÐ¾Ð¹ Ð¸ Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ð°Ð¼Ð¸ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÑÐµÑ‚ CSS Grid Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÑÐºÐ¾Ð³Ð¾ ÑÐµÐ¼Ð°Ð½Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°.
+   - Ð—Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½Ñ‹ ÐºÐ»Ð¸ÐºÐ°Ð±ÐµÐ»ÑŒÐ½Ñ‹Ðµ `<div>`, `<span>` Ð¸Ð»Ð¸ Ñ‚ÐµÐ³ `<button>` (ÑÑ‚Ñ€Ð¾Ð³Ð¾ `<Button>` Ð¸Ð»Ð¸ `<IconButton>`).
 
-### 2.2 Интерактив и логика (`*.razor.cs`)
+### 2.2 Ð˜Ð½Ñ‚ÐµÑ€Ð°ÐºÑ‚Ð¸Ð² Ð¸ Ð»Ð¾Ð³Ð¸ÐºÐ° (`*.razor.cs`)
 1. `public partial class ComponentName : ComponentBase, IAsyncDisposable`
-2. Все параметры (`[Parameter]`, `EventCallback`), внедрение зависимостей (`[Inject]`), состояние (`private bool _isOpen`) и хуки жизненного цикла (`OnInitializedAsync`, `DisposeAsync`) выносятся строго в code-behind.
-3. **Именование методов-обработчиков (Zero Collisions)**:
-   - Именовать с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`), чтобы исключить коллизии с одноименными иконками `Icons.Close`.
-4. **Запрет на создание алиасов констант (`public const string Alias = global::Assets.***`)**:
-   - Категорически запрещено плодить в code-behind дублирующие поля-алиасы для классов, иконок, локализации или вариантов (`public const string TitleLarge = global::Assets.Constants.Classes.Typography.TitleLarge;`).
-   - Все константы подключаются напрямую через `@using static` в `*.razor` или обычный `using static` в `*.razor.cs`.
+2. Ð’ÑÐµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ñ‹ (`[Parameter]`, `EventCallback`), Ð²Ð½ÐµÐ´Ñ€ÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑ‚ÐµÐ¹ (`[Inject]`), ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ (`private bool _isOpen`) Ð¸ Ñ…ÑƒÐºÐ¸ Ð¶Ð¸Ð·Ð½ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ†Ð¸ÐºÐ»Ð° (`OnInitializedAsync`, `DisposeAsync`) Ð²Ñ‹Ð½Ð¾ÑÑÑ‚ÑÑ ÑÑ‚Ñ€Ð¾Ð³Ð¾ Ð² code-behind.
+3. **Ð˜Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð²-Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸ÐºÐ¾Ð² (Zero Collisions)**:
+   - Ð˜Ð¼ÐµÐ½Ð¾Ð²Ð°Ñ‚ÑŒ Ñ ÑÑƒÑ„Ñ„Ð¸ÐºÑÐ¾Ð¼ `Async` Ð¸ Ð³Ð»Ð°Ð³Ð¾Ð»Ð¾Ð¼ (`CloseDialogAsync`, `SubmitOrderAsync`), Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¸ÑÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÑŒ ÐºÐ¾Ð»Ð»Ð¸Ð·Ð¸Ð¸ Ñ Ð¾Ð´Ð½Ð¾Ð¸Ð¼ÐµÐ½Ð½Ñ‹Ð¼Ð¸ Ð¸ÐºÐ¾Ð½ÐºÐ°Ð¼Ð¸ `Icons.Close`.
+4. **Ð—Ð°Ð¿Ñ€ÐµÑ‚ Ð½Ð° ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð°Ð»Ð¸Ð°ÑÐ¾Ð² ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚ (`public const string Alias = global::Assets.***`)**:
+   - ÐšÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ñ‡ÐµÑÐºÐ¸ Ð·Ð°Ð¿Ñ€ÐµÑ‰ÐµÐ½Ð¾ Ð¿Ð»Ð¾Ð´Ð¸Ñ‚ÑŒ Ð² code-behind Ð´ÑƒÐ±Ð»Ð¸Ñ€ÑƒÑŽÑ‰Ð¸Ðµ Ð¿Ð¾Ð»Ñ-Ð°Ð»Ð¸Ð°ÑÑ‹ Ð´Ð»Ñ ÐºÐ»Ð°ÑÑÐ¾Ð², Ð¸ÐºÐ¾Ð½Ð¾Ðº, Ð»Ð¾ÐºÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸ Ð¸Ð»Ð¸ Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ð¾Ð² (`public const string TitleLarge = global::Assets.Constants.Classes.Typography.TitleLarge;`).
+   - Ð’ÑÐµ ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚Ñ‹ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð°ÑŽÑ‚ÑÑ Ð½Ð°Ð¿Ñ€ÑÐ¼ÑƒÑŽ Ñ‡ÐµÑ€ÐµÐ· `@using static` Ð² `*.razor` Ð¸Ð»Ð¸ Ð¾Ð±Ñ‹Ñ‡Ð½Ñ‹Ð¹ `using static` Ð² `*.razor.cs`.
 
-### 2.3 3-сторонняя синхронизация локализации (i18n)
-Если добавлены новые ключи интерфейса:
-1. Добавить ключ симметрично во все 3 файла в `Assets/Resources/`:
-   - `ResourceRu.resx` — Русский
-   - `ResourceUz.resx` — Узбекский (латиница)
-   - `ResourceEn.resx` — Английский
-   *(Все символы `&` экранируются как `&amp;`)*.
-2. Запустить генератор ключей:
+### 2.3 3-ÑÑ‚Ð¾Ñ€Ð¾Ð½Ð½ÑÑ ÑÐ¸Ð½Ñ…Ñ€Ð¾Ð½Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð»Ð¾ÐºÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸ (i18n)
+Ð•ÑÐ»Ð¸ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹ Ð½Ð¾Ð²Ñ‹Ðµ ÐºÐ»ÑŽÑ‡Ð¸ Ð¸Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹ÑÐ°:
+1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÐºÐ»ÑŽÑ‡ ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð¾ Ð²Ð¾ Ð²ÑÐµ 3 Ñ„Ð°Ð¹Ð»Ð° Ð² `Assets/Resources/`:
+   - `ResourceRu.resx` â€” Ð ÑƒÑÑÐºÐ¸Ð¹
+   - `ResourceUz.resx` â€” Ð£Ð·Ð±ÐµÐºÑÐºÐ¸Ð¹ (Ð»Ð°Ñ‚Ð¸Ð½Ð¸Ñ†Ð°)
+   - `ResourceEn.resx` â€” ÐÐ½Ð³Ð»Ð¸Ð¹ÑÐºÐ¸Ð¹
+   *(Ð’ÑÐµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ `&` ÑÐºÑ€Ð°Ð½Ð¸Ñ€ÑƒÑŽÑ‚ÑÑ ÐºÐ°Ðº `&amp;`)*.
+2. Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€ ÐºÐ»ÑŽÑ‡ÐµÐ¹:
    ```powershell
    npm --prefix src/Frontend/Platform/Shared/DesignSystem/Assets run generate:loc
    ```
 
 ---
 
-## 3. Машинная верификация (Machine Gates)
+## 3. ÐœÐ°ÑˆÐ¸Ð½Ð½Ð°Ñ Ð²ÐµÑ€Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ (Machine Gates)
 
-Все гейты обязаны пройти успешно:
+Ð’ÑÐµ Ð³ÐµÐ¹Ñ‚Ñ‹ Ð¾Ð±ÑÐ·Ð°Ð½Ñ‹ Ð¿Ñ€Ð¾Ð¹Ñ‚Ð¸ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾:
 ```powershell
-# 1. Генерация типизированных ключей локализации и классов
+# 1. Ð“ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ñ‚Ð¸Ð¿Ð¸Ð·Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… ÐºÐ»ÑŽÑ‡ÐµÐ¹ Ð»Ð¾ÐºÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸ Ð¸ ÐºÐ»Ð°ÑÑÐ¾Ð²
 npm --prefix src/Frontend/Platform/Shared/DesignSystem/Assets run generate:loc
 npm --prefix src/Frontend/Platform/Shared/DesignSystem/Assets run generate:classes
 
-# 2. Чистая сборка проекта
+# 2. Ð§Ð¸ÑÑ‚Ð°Ñ ÑÐ±Ð¾Ñ€ÐºÐ° Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°
 dotnet build <affected csproj> -c Debug
 ```
 
-**Критерии приемки (DoD)**:
-- `dotnet build`: 0 ошибок, 0 новых предупреждений.
-- `Flat Semantic Tree`: использованы правильные HTML5 теги (`<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`), 0 паразитных `<div>`-оберток ради отступов, 0 кликабельных `div`/`span`.
-- `0 Raw HTML Tags with Blazor Equivalents`: 0 `<button>` (строго `<Button>` / `<IconButton>`), 0 `<select>`, 0 `<hr>`, 0 `<input>`.
-- `0 Hardcoded Strings`: ни одной строковой константы в разметке.
-- `0 Quoted C# Attributes`: ни одного `Icon="@Close"` или `OnClick="Close"`.
-- `0 Long Dot Expressions in Attributes`: ни одного `что-то=@*.*.*` (строго короткий синтаксис `что-то=@*` через `@using static`, 0 алиасов констант в code-behind).
-- `Ultra-Short Enums`: `@using static <Enum>` ➔ `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter` (0 длинных `@ButtonVariant.*`).
-- `0 Magic Strings`: ни одного `class="..."` или `L["..."]`.
-- `0 Prefixes`: ни одного `@Classes.*` или `@L[Loc.*]`.
-- `0 Fallbacks`: ни одного `?? "..."`.
-- `3-Way Parity`: ключи есть в RU, UZ, EN словарях.
+**ÐšÑ€Ð¸Ñ‚ÐµÑ€Ð¸Ð¸ Ð¿Ñ€Ð¸ÐµÐ¼ÐºÐ¸ (DoD)**:
+- `dotnet build`: 0 Ð¾ÑˆÐ¸Ð±Ð¾Ðº, 0 Ð½Ð¾Ð²Ñ‹Ñ… Ð¿Ñ€ÐµÐ´ÑƒÐ¿Ñ€ÐµÐ¶Ð´ÐµÐ½Ð¸Ð¹.
+- `Flat Semantic Tree`: Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ñ‹ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ðµ HTML5 Ñ‚ÐµÐ³Ð¸ (`<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`), 0 Ð¿Ð°Ñ€Ð°Ð·Ð¸Ñ‚Ð½Ñ‹Ñ… `<div>`-Ð¾Ð±ÐµÑ€Ñ‚Ð¾Ðº Ñ€Ð°Ð´Ð¸ Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ð¾Ð², 0 ÐºÐ»Ð¸ÐºÐ°Ð±ÐµÐ»ÑŒÐ½Ñ‹Ñ… `div`/`span`.
+- `0 Raw HTML Tags with Blazor Equivalents`: 0 `<button>` (ÑÑ‚Ñ€Ð¾Ð³Ð¾ `<Button>` / `<IconButton>`), 0 `<select>`, 0 `<hr>`, 0 `<input>`.
+- `0 Hardcoded Strings`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐ¾Ð²Ð¾Ð¹ ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚Ñ‹ Ð² Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐµ.
+- `0 Quoted C# Attributes`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð³Ð¾ `Icon="@Close"` Ð¸Ð»Ð¸ `OnClick="Close"`.
+- `0 Long Dot Expressions in Attributes`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð³Ð¾ `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*.*.*` (ÑÑ‚Ñ€Ð¾Ð³Ð¾ ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¹ ÑÐ¸Ð½Ñ‚Ð°ÐºÑÐ¸Ñ `Ñ‡Ñ‚Ð¾-Ñ‚Ð¾=@*` Ñ‡ÐµÑ€ÐµÐ· `@using static`, 0 Ð°Ð»Ð¸Ð°ÑÐ¾Ð² ÐºÐ¾Ð½ÑÑ‚Ð°Ð½Ñ‚ Ð² code-behind).
+- `Ultra-Short Enums`: `@using static <Enum>` âž” `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter` (0 Ð´Ð»Ð¸Ð½Ð½Ñ‹Ñ… `@ButtonVariant.*`).
+- `0 Magic Strings`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð³Ð¾ `class="..."` Ð¸Ð»Ð¸ `L["..."]`.
+- `0 Prefixes`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð³Ð¾ `@Classes.*` Ð¸Ð»Ð¸ `@L[Loc.*]`.
+- `0 Fallbacks`: Ð½Ð¸ Ð¾Ð´Ð½Ð¾Ð³Ð¾ `?? "..."`.
+- `3-Way Parity`: ÐºÐ»ÑŽÑ‡Ð¸ ÐµÑÑ‚ÑŒ Ð² RU, UZ, EN ÑÐ»Ð¾Ð²Ð°Ñ€ÑÑ….
 
 ---
 
-## 4. Завершение рефакторинга компонента
+## 4. Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ðµ Ñ€ÐµÑ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð½Ð³Ð° ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð°
 
-После успешного прохождения проверок зафиксировать компонент в истории изменений.
-Коммит и пуш выполняются только по прямому указанию пользователя.
+ÐŸÐ¾ÑÐ»Ðµ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾Ð³Ð¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¾Ðº Ð·Ð°Ñ„Ð¸ÐºÑÐ¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚ Ð² Ð¸ÑÑ‚Ð¾Ñ€Ð¸Ð¸ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ð¹.
+ÐšÐ¾Ð¼Ð¼Ð¸Ñ‚ Ð¸ Ð¿ÑƒÑˆ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÑÑŽÑ‚ÑÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾ Ð¿Ñ€ÑÐ¼Ð¾Ð¼Ñƒ ÑƒÐºÐ°Ð·Ð°Ð½Ð¸ÑŽ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ.
+
 
 

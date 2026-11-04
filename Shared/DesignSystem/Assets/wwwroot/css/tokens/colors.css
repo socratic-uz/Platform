@@ -5,24 +5,7 @@
 
 /* 1. Base Semantic Roles & Utilities */
 :root {
-    --map-border: var(--md-sys-color-outline-variant);
-    --map-border-strong: var(--md-sys-color-outline);
     --faceid-status-color: var(--md-sys-color-primary);
-    --map-error: var(--md-sys-color-error);
-    --map-on-primary: var(--md-sys-color-on-primary);
-    --map-on-surface: var(--md-sys-color-on-surface);
-    --map-on-surface-variant: var(--md-sys-color-on-surface-variant);
-    --map-outline: var(--md-sys-color-outline);
-    --map-outline-variant: var(--md-sys-color-outline-variant);
-    --map-primary: var(--md-sys-color-primary);
-    --map-primary-container: var(--md-sys-color-primary-container);
-    --map-surface: rgb(from var(--md-sys-color-surface) r g b / 0.88);
-    --map-surface-muted: var(--md-sys-color-surface-container);
-    --map-surface-container-low: var(--map-surface-soft);
-    --map-surface-soft: var(--md-sys-color-surface-container-low);
-    --map-surface-strong: rgb(from var(--md-sys-color-surface) r g b / 0.95);
-    --map-text: var(--md-sys-color-on-surface);
-    --map-text-muted: var(--md-sys-color-on-surface-variant);
 }
 
 /* 2. Color Mode: Dark Theme (Default) */

@@ -16,21 +16,14 @@ namespace Assets.Constants
     {
         public static class About
         {
-            public const string AboutHero = "about-hero";
             public const string AboutTitle = "title";
-            public const string Container = "about-container";
             public const string PillarsSection = "about-pillars-section";
-            public const string Subtitle = "about-subtitle";
             public const string VideoSection = "about-video-section";
         }
 
         public static class Ads
         {
-            public const string B2bLeadContent = "b2b-lead-content";
-            public const string B2bLeadSection = "b2b-lead-section";
             public const string Disclaimer = "ad-disclaimer";
-            public const string DownloadHeader = "download-header";
-            public const string DownloadSection = "download-section";
             public const string GoogleAdsenseWrapper = "google-adsense-wrapper";
             public const string NetworkContainer = "ad-network-container";
             public const string NetworkFooter = "ad-network-footer";
@@ -258,8 +251,6 @@ namespace Assets.Constants
             public const string CatTabRetail = "cat-tab-retail";
             public const string CatTabServices = "cat-tab-services";
             public const string CheckoutBtn = "checkout-btn";
-            public const string ClickPopupBtn = "click-popup-btn";
-            public const string ClickPopupBtnSecondary = "click-popup-btn-secondary";
             public const string CtaBtn = "cta-btn";
             public const string OrdersRefreshBtn = "orders-refresh-btn";
             public const string PresetBtn = "preset-btn";
@@ -629,7 +620,6 @@ namespace Assets.Constants
             public const string GridFlowCol = "grid-flow-col";
             public const string GridMainSidebar = "m3-grid-main-sidebar";
             public const string GridStack = "grid-stack";
-            public const string HamburgerLine = "hamburger-line";
             public const string HasError = "has-error";
             public const string HeaderActions = "header-actions";
             public const string HeaderContextDivider = "header-context-divider";
@@ -746,7 +736,6 @@ namespace Assets.Constants
             public const string NavItem = "nav-item";
             public const string NavMobile = "nav-mobile";
             public const string NoMessages = "no-messages";
-            public const string NoNav = "no-nav";
             public const string NotificationBanner = "notification-banner";
             public const string Ok = "ok";
             public const string Open = "open";
@@ -756,13 +745,11 @@ namespace Assets.Constants
             public const string OrdersKanbanBoardClass = "orders-kanban-board";
             public const string OrdersKanbanColumn = "kanban-column";
             public const string OrganizationsMapControls = "organizations-map-controls";
-            public const string OrganizationsMapPage = "organizations-map-page";
             public const string OrganizationsMapViewport = "organizations-map-viewport";
             public const string OrganizationsRoutePanel = "organizations-route-panel";
             public const string OrgDescription = "org-description";
             public const string OrgShowcaseGrid = "org-showcase-grid";
             public const string OrgShowcaseSection = "org-showcase-section";
-            public const string PageContainer = "m3-page-container";
             public const string PageHeaderActions = "m3-page-header-actions";
             public const string PageHeaderStart = "m3-page-header-start";
             public const string PageHeaderTitle = "m3-page-header-title";
@@ -890,16 +877,12 @@ namespace Assets.Constants
             public const string StatusReserved = "status-reserved";
             public const string StatusText = "status-text";
             public const string StatValue = "stat-value";
-            public const string StoreProductContainer = "store-product-container";
-            public const string StoreProductPage = "store-product-page";
             public const string Suggestions = "suggestions";
             public const string SupportActionGrid = "support-action-grid";
             public const string SupportGrid = "support-grid";
             public const string SupportLabel = "support-label";
             public const string SupportLogLine = "support-log-line";
             public const string SurveyContainer = "surveyContainer";
-            public const string TabArrow = "tab-arrow";
-            public const string TabHamburger = "tab-hamburger";
             public const string TertiaryCta = "tertiary-cta";
             public const string ThumbImg = "thumb-img";
             public const string TierBox = "tier-box";
@@ -998,13 +981,11 @@ namespace Assets.Constants
             public const string DetFormGroup = "det-form-group";
             public const string DetFrameVideo = "det-frame-video";
             public const string DetLabel = "det-label";
-            public const string DetLayout = "det-layout";
             public const string DetLogLine = "det-log-line";
             public const string DetLogoBadge = "det-logo-badge";
             public const string DetLogsCard = "det-logs-card";
             public const string DetLogsConsole = "det-logs-console";
             public const string DetLogsHeader = "det-logs-header";
-            public const string DetMain = "det-main";
             public const string DetOverlaysContainer = "det-overlays-container";
             public const string DetPermissionRationale = "det-permission-rationale";
             public const string DetPlaceholder = "det-placeholder";
@@ -1126,7 +1107,6 @@ namespace Assets.Constants
             public const string DocsLoadingText = "docs-loading-text";
             public const string DocsMenuIcon = "docs-menu-icon";
             public const string DocsMobileMenuBtn = "docs-mobile-menu-btn";
-            public const string DocsPage = "docs-page";
             public const string DocsRefreshBtn = "docs-refresh-btn";
             public const string DocsSidebar = "docs-sidebar";
             public const string DocsSidebarBackdrop = "docs-sidebar-backdrop";
@@ -1231,6 +1211,8 @@ namespace Assets.Constants
             public const string ReceiptFiscalFooter = "receipt-fiscal-footer";
             public const string ReceiptItemRow = "receipt-item-row";
             public const string ReceiptItems = "receipt-items";
+            public const string ReceiptMeta = "receipt-meta";
+            public const string ReceiptTotals = "receipt-totals";
             public const string Sign = "fiscal-sign";
             public const string TagItem = "fiscal-tag-item";
             public const string TotalVal = "total-val";
@@ -1336,15 +1318,6 @@ namespace Assets.Constants
             public const string TotalAmount = "gift-total-amount";
         }
 
-        public static class GridLayout
-        {
-            public const string AppGrid = "app-grid";
-            public const string GridCluster = "m3-grid-cluster";
-            public const string GridlayoutGlass = "glass";
-            public const string PageWidth = "page-width";
-            public const string Viewer3dWrapper = "viewer-3d-wrapper";
-        }
-
         public static class GroupBuy
         {
             public const string BannerBadge = "groupbuy-banner-badge";
@@ -1387,7 +1360,6 @@ namespace Assets.Constants
         public static class Help
         {
             public const string Categories = "help-categories";
-            public const string Container = "help-container";
             public const string FaqAnswer = "faq-answer";
             public const string FaqArrowWrapper = "faq-arrow-wrapper";
             public const string FaqGrid = "faq-grid";
@@ -1397,7 +1369,6 @@ namespace Assets.Constants
             public const string FaqSummary = "faq-summary";
             public const string FaqSummaryLeft = "faq-summary-left";
             public const string HelpTitle = "help-title";
-            public const string Hero = "help-hero";
             public const string Subtitle = "help-subtitle";
         }
 
@@ -1444,9 +1415,7 @@ namespace Assets.Constants
             public const string ReceiptContainer = "receipt-container";
             public const string ReceiptFooter = "receipt-footer";
             public const string ReceiptFooterTitle = "receipt-footer-title";
-            public const string ReceiptMeta = "receipt-meta";
             public const string ReceiptTextRight = "receipt-text-right";
-            public const string ReceiptTotals = "receipt-totals";
         }
 
         public static class Kiosk
@@ -1492,11 +1461,9 @@ namespace Assets.Constants
             public const string KioskDialogText = "kiosk-dialog-text";
             public const string KioskEmptyIcon = "kiosk-empty-icon";
             public const string KioskEmptyState = "kiosk-empty-state";
-            public const string KioskMain = "kiosk-main";
             public const string KioskProductTitleLink = "kiosk-product-title-link";
             public const string KioskSearchContainer = "kiosk-search-container";
             public const string KioskTierBtn = "kiosk-tier-btn";
-            public const string Main = "kiosk-main";
             public const string MediaPlaceholder = "m3-card-media-placeholder";
             public const string NewOrderBtn = "kiosk-new-order-btn";
             public const string NoFooter = "no-footer";
@@ -1534,7 +1501,10 @@ namespace Assets.Constants
 
         public static class Landing
         {
+            public const string AppGrid = "app-grid";
             public const string AuthBtn = "landing-auth-btn";
+            public const string B2bLeadContent = "b2b-lead-content";
+            public const string B2bLeadSection = "b2b-lead-section";
             public const string BentoContent = "bento-content";
             public const string BentoMedia = "bento-media";
             public const string BgCanvas = "landing-bg-canvas";
@@ -1543,6 +1513,8 @@ namespace Assets.Constants
             public const string CatRetail = "cat-retail";
             public const string CatServices = "cat-services";
             public const string Container = "landing-container";
+            public const string DownloadHeader = "download-header";
+            public const string DownloadSection = "download-section";
             public const string EvoIcon = "evo-icon";
             public const string EvolutionArrow = "evolution-arrow";
             public const string EvolutionGrid = "evolution-grid";
@@ -1565,9 +1537,9 @@ namespace Assets.Constants
             public const string MobileMenuDrawer = "landing-mobile-menu-drawer";
             public const string MobileMenuToggle = "landing-mobile-menu-toggle";
             public const string NavLink = "landing-nav-link";
-            public const string PageRoot = "landing-page-root";
             public const string SuperpowersBentoGrid = "superpowers-bento-grid";
             public const string SuperpowersBentoSection = "superpowers-bento-section";
+            public const string Viewer3dWrapper = "viewer-3d-wrapper";
         }
 
         public static class Lottery
@@ -1593,14 +1565,11 @@ namespace Assets.Constants
 
         public static class Map
         {
+            public const string ClickPopupBtn = "click-popup-btn";
+            public const string ClickPopupBtnSecondary = "click-popup-btn-secondary";
             public const string ControlsPanelCollapsed = "controls-panel-collapsed";
             public const string ControlsPanelExpanded = "controls-panel-expanded";
             public const string DetailsMode = "details-mode";
-            public const string YandexRouteMode = "yandex-route-mode";
-        }
-
-        public static class MapLayout
-        {
             public const string MapboxglCtrlGroup = "mapboxgl-ctrl-group";
             public const string MapboxglCtrlTopRight = "mapboxgl-ctrl-top-right";
             public const string MaplibreglCtrlGroup = "maplibregl-ctrl-group";
@@ -1610,6 +1579,7 @@ namespace Assets.Constants
             public const string NavBtnVoice = "nav-btn-voice";
             public const string NearbyResultsList = "nearby-results-list";
             public const string PlaceBtnRoute = "place-btn-route";
+            public const string YandexRouteMode = "yandex-route-mode";
         }
 
         public static class Markdown
@@ -1661,7 +1631,6 @@ namespace Assets.Constants
             public const string ItemName = "order-item-name";
             public const string ItemPricing = "order-item-pricing";
             public const string ItemRow = "order-item-row";
-            public const string ItemsContainer = "order-items-container";
             public const string ItemsList = "order-items-list";
             public const string KdsActionBtn = "kds-action-btn";
             public const string KdsOrderRef = "kds-order-ref";
@@ -1729,7 +1698,6 @@ namespace Assets.Constants
             public const string OtpVerificationBox = "otp-verification-box";
             public const string PanelFooter = "panel-footer";
             public const string PanInputBox = "pan-input-box";
-            public const string PaymentDashboard = "payment-dashboard";
             public const string PaymentMethodBody = "payment-method-body";
             public const string PaymentMethodsGrid = "payment-methods-grid";
             public const string PaymentStatusChecker = "payment-status-checker";
@@ -1951,7 +1919,6 @@ namespace Assets.Constants
             public const string QrContainer = "qr-container";
             public const string QrControlsPanel = "qr-controls-panel";
             public const string QrDesignerHeader = "qr-designer-header";
-            public const string QrDesignerPageRoot = "qr-designer-page-root";
             public const string QrgBack = "qrg-back";
             public const string QrgBadge = "qrg-badge";
             public const string QrgCard = "qrg-card";
@@ -2103,7 +2070,6 @@ namespace Assets.Constants
             public const string SeatDesignerDivider = "seat-designer-divider";
             public const string SeatDesignerField = "seat-designer-field";
             public const string SeatDesignerGrid2 = "seat-designer-grid-2";
-            public const string SeatDesignerPageRoot = "seat-designer-page-root";
             public const string SeatDesignerSection = "seat-designer-section";
             public const string SeatDesignerSectionLabel = "seat-designer-section-label";
             public const string SeatDesignerSectionTitle = "seat-designer-section-title";

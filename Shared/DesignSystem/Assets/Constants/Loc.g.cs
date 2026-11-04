@@ -8693,7 +8693,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Checkout (313 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
+        /// Domain group: Checkout (314 keys). Use with <c>@using static Assets.Constants.Loc.Checkout;</c>.
         /// </summary>
         public static class Checkout
         {
@@ -10568,6 +10568,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Customer Care Service&quot;
             /// </summary>
             public const string PaymentCustomerCare = "Payment_CustomerCare";
+
+            /// <summary>
+            /// Key: <c>Payment_Dashboard</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Панель управления плательщика&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovchi boshqaruv paneli&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Payer Dashboard&quot;
+            /// </summary>
+            public const string PaymentDashboard = "Payment_Dashboard";
 
             /// <summary>
             /// Key: <c>Payment_DemoData</c><br/>
@@ -49222,7 +49230,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lovchi boshqaruv paneli&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Payer Dashboard&quot;
         /// </summary>
-        public const string PaymentDashboardText = "Payment_Dashboard";
+        public const string PaymentDashboard = "Payment_Dashboard";
 
         /// <summary>
         /// Key: <c>Payment_DemoData</c><br/>

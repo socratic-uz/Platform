@@ -80,6 +80,8 @@
     letter-spacing: 0.02em;
 }
 
+menu[lang-selector],
+section[lang-selector],
 .lang-select {
     display: grid;
     align-items: center;

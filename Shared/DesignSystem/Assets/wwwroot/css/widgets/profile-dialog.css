@@ -177,3 +177,9 @@
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     gap: 1.5rem;
 }
+
+@media screen and (max-width: 839.98px) {
+    .profile-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -3,6 +3,8 @@
    Component-Driven Architecture
    ========================================================================== */
 
+article[faceid],
+section[faceid],
 .faceid-viewfinder-card {
     display: grid;
     gap: 1.25rem;

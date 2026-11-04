@@ -106,3 +106,7 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 - [ ] Состояние кэшируется через `PersistentComponentState` для исключения дублирования запросов в `InteractiveAuto`.
 - [ ] Все асинхронные подписки, таймеры и ресурсы освобождаются в `DisposeAsync` / `Dispose`.
 - [ ] Вызовы `StateHasChanged()` из внешних потоков обёрнуты в `await InvokeAsync(StateHasChanged)`.
+
+
+## Universal DOM Lifecycle Dispatcher
+All JavaScript modules must register via `registerComponent(selector, { mount, unmount })` in `scripts.js`.

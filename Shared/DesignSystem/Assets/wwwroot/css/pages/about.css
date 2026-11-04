@@ -1,36 +1,36 @@
 /* ==========================================================================
    Socratic Design System — PAGES / about.css
-   Component-Driven Architecture
+   Direct Body Landmarks for About Page: <main about>, <header about>
    ========================================================================== */
 
-.about-pillars-section {
+main[about] {
     display: grid;
-    gap: 2.5rem;
+    grid-auto-flow: row;
+    gap: 3.5rem;
+    position: relative;
+    box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 2.5rem 1.5rem 3rem;
+    padding-right: max(1.5rem, env(safe-area-inset-right, 0));
+    padding-left: max(1.5rem, env(safe-area-inset-left, 0));
+    overflow-x: clip;
 }
 
-.about-hero {
+header[about] {
     display: grid;
     gap: 1.5rem;
-    justify-items: center;
     width: 100%;
-    min-width: 0;
     max-width: 100%;
-    text-align: center;
+    min-width: 0;
 }
 
-.about-subtitle {
-    max-width: 780px;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1.15rem;
-    line-height: 1.6;
-}
-
-:where( .about-hero .title) {
+header[about] :where(h1, .title) {
     display: grid;
     gap: 0.25rem;
-    max-width: 900px;
+    width: 100%;
+    min-width: 0;
     margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 2.75rem;
@@ -40,36 +40,26 @@
     word-break: break-word;
 }
 
-:where( .about-hero .title) > br {
+header[about] :where(h1, .title) > br {
     display: none;
 }
 
-.about-container {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 3.5rem;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 3rem;
-    overflow-x: clip;
+header[about] > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 
-.about-video-section {
-    display: grid;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-}
-
-@media (max-width: 599.98px) {
-    :where( .about-hero .title) {
-        font-size: 1.85rem;
+@media (max-width: 839.98px) {
+    main[about] {
+        gap: 2.5rem;
+        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 2rem);
+        padding-right: max(1rem, env(safe-area-inset-right, 0));
+        padding-left: max(1rem, env(safe-area-inset-left, 0));
     }
 
-    .about-container {
-        gap: 2.5rem;
-        padding: 1.5rem 1rem 2rem;
+    header[about] .title {
+        font-size: 1.85rem;
     }
 }

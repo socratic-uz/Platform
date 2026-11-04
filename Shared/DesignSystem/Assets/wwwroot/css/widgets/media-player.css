@@ -3,6 +3,7 @@
    Component-Driven Architecture
    ========================================================================== */
 
+article[media-player],
 .video-card {
     display: grid;
     gap: 1.5rem;
@@ -82,6 +83,7 @@
     overflow: hidden;
 }
 
+figure[media-player],
 .video-player-wrapper {
     display: grid;
     width: 100%;

@@ -195,3 +195,20 @@ export function applyTheme(source, isDark) {
         return '';
     }
 }
+
+
+export function autoMountTheme() {
+    if (typeof document === 'undefined') return;
+    const colorTag = document.querySelector('color');
+    if (colorTag && !colorTag._themeMounted) {
+        colorTag._themeMounted = true;
+        const classNames = (colorTag.className || '').split(/\s+/);
+        const seedStr = classNames.find(c => /^\d+$/.test(c));
+        const isDark = classNames.includes('dark-mode') || document.documentElement.getAttribute('data-theme') === 'dark';
+        if (seedStr) {
+            const val = parseInt(seedStr, 10) & 0xFFFFFF;
+            const hex = '#' + val.toString(16).padStart(6, '0');
+            applyTheme(hex, isDark);
+        }
+    }
+}

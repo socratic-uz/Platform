@@ -3,6 +3,8 @@
    Component-Driven 7-Layer Architecture (Mirroring styles.css)
    ========================================================================== */
 
+import { registerComponent } from './lifecycle.js';
+
 // 1. Components (Material Web Components & Dynamic Color Utilities)
 import './components/material-web.bundle.js';
 import * as MaterialColorUtilities from './components/material-color-utilities.bundle.js';
@@ -27,6 +29,7 @@ import * as ChatMessageList from './widgets/chat-message-list.js';
 import * as QrStylingHelper from './widgets/qr-styling-helper.js';
 import * as SeatDesigner from './widgets/seat-designer.js';
 import * as RemoteSupport from './widgets/remoteSupportWebRtc.js';
+import * as Markdown from './widgets/markdown.js';
 
 // 5. Page-Specific Scripts (Landing Orchestration, Home Feed & Media Player)
 import * as Home from './pages/home.js';
@@ -50,13 +53,52 @@ window.Socratic.Widgets = {
     ChatMessageList,
     QrStyling: QrStylingHelper,
     SeatDesigner,
-    RemoteSupport
+    RemoteSupport,
+    Markdown
 };
 window.Socratic.Pages = {
     Home,
     Landing,
-    Player
+    Player,
+    registerComponent
 };
+window.Socratic.Lifecycle = {
+    registerComponent
+};
+
+// ==========================================================================
+// Centralized Component Lifecycle Registrations (Single Observer)
+// ==========================================================================
+registerComponent('color', {
+    mount: () => ColorTheme.autoMountTheme()
+});
+
+registerComponent('figure[map]', {
+    mount: (el) => SocraticMap.autoMountMap(el),
+    unmount: () => SocraticMap.destroyMap()
+});
+
+registerComponent('main[player]', {
+    mount: () => Player.autoMountPlayer()
+});
+
+registerComponent('main[landing]', {
+    mount: () => Landing.autoMountLanding(),
+    unmount: () => Landing.disposeLandingAnimations()
+});
+
+registerComponent('figure[seat-designer], .seat-designer-canvas-container', {
+    mount: (el) => SeatDesigner.autoMountSeatDesigner(el),
+    unmount: (el) => el.id && SeatDesigner.dispose(el.id)
+});
+
+registerComponent('textarea[chat-input], .chat-input textarea, main[chat] textarea', {
+    mount: (el) => ChatInput.init(el)
+});
+
+registerComponent('pre.snippet, .snippet, pre code, pre.mermaid, .mermaid', {
+    mount: () => Markdown.autoMountMarkdown()
+});
 
 // ==========================================================================
 // ES Module Named Exports
@@ -75,7 +117,43 @@ export {
     QrStylingHelper,
     SeatDesigner,
     RemoteSupport,
+    Markdown,
     Home,
     Landing,
-    Player
+    Player,
+    registerComponent
 };
+
+// ==========================================================================
+// Centralized Component Lifecycle Registrations (Single Observer)
+// ==========================================================================
+registerComponent('color', {
+    mount: () => ColorTheme.autoMountTheme()
+});
+
+registerComponent('figure[map]', {
+    mount: (el) => SocraticMap.autoMountMap(el),
+    unmount: () => SocraticMap.destroyMap()
+});
+
+registerComponent('main[player]', {
+    mount: () => Player.autoMountPlayer()
+});
+
+registerComponent('main[landing]', {
+    mount: () => Landing.autoMountLanding(),
+    unmount: () => Landing.disposeLandingAnimations()
+});
+
+registerComponent('figure[seat-designer], .seat-designer-canvas-container', {
+    mount: (el) => SeatDesigner.autoMountSeatDesigner(el),
+    unmount: (el) => el.id && SeatDesigner.dispose(el.id)
+});
+
+registerComponent('textarea[chat-input], .chat-input textarea, main[chat] textarea', {
+    mount: (el) => ChatInput.init(el)
+});
+
+registerComponent('pre.snippet, .snippet, pre code, pre.mermaid, .mermaid', {
+    mount: () => Markdown.autoMountMarkdown()
+});

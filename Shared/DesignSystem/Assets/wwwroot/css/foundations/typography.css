@@ -389,3 +389,10 @@
 .section-title md-icon {
     color: var(--md-sys-color-primary);
 }
+
+
+.monospace {
+    font-family: monospace;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+}

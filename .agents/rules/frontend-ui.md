@@ -9,22 +9,34 @@
 - **Zero Build-Step для CSS**: чистый нативный W3C CSS без препроцессоров, утилитных генераторов и монолитных бандлов. Браузер напрямую парсит валидные спецификации W3C через параллельные мультиплексированные потоки HTTP/2 и HTTP/3.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей и тегов `<style>`. Стилизация детерминирована на уровне платформенных классов дизайн-системы.
 
-### 1.2. Слоёная архитектура — Cascade Layers (`@layer`)
+### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
 Иерархия каскада построена на нативных каскадных слоях **Cascade Layers (`@layer`)** в начале `styles.css`:
 ```css
-@layer tokens, foundations, layouts, pages, widgets, components;
+@layer tokens, foundations, components, widgets, pages, layouts;
 ```
-- **Приоритет слоев**: нарастает слева направо (от фундамента к защищенному UI-элементу):
-  `tokens` (1) ➔ `foundations` (2) ➔ `layouts` (3) ➔ `pages` (4) ➔ `widgets` (5) ➔ `components` (6).
-- **Логика приоритетов каскада**:
-  1. `tokens`: дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
-  2. `foundations`: сброс стилей браузера, нормализация базовых тегов HTML5 и анимации.
-  3. `layouts`: структурные макро-каркасы и сетки экрана (`header`, `footer`, `grid-layout`).
-  4. `pages`: контекст и секции конкретного экрана (`kiosk`, `terminal`, `landing`).
-  5. `widgets`: сложные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `commerce-modes`), переопределяющие контекст страницы.
-  6. `components`: атомарные примитивы Material 3 (`buttons`, `cards`, `forms`), обладающие **наивысшим приоритетом**. Это гарантирует, что кнопка или инпут сохранят свои строгие размеры, padding и сенсорную эргономику ($\ge 48\text{px}$) и не будут случайно сломаны внешними стилями страницы или виджета.
+- **Приоритет слоев**: нарастает слева направо (от абстрактного/базового к конкретному контексту экрана):
+  `tokens` (1) ➔ `foundations` (2) ➔ `components` (3) ➔ `widgets` (4) ➔ `pages` (5) ➔ `layouts` (6).
+- **Строгое соответствие слоев и структуры каталогов (Clean Layer Isolation)**:
+  1. `tokens` (`tokens/`): дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
+  2. `foundations` (`foundations/`): сброс стилей браузера, семантические дефолты HTML5, типографика, анимации и контракт центрирования по требованию (`[center*]`).
+  3. `components` (`components/`) — **Уровни 4–6 DOM**: атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
+  4. `widgets` (`widgets/`) — **Уровень 3 DOM**: составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`). Виджеты могут переопределять и адаптировать компоненты под специфику бизнес-процесса.
+  5. `pages` (`pages/`) — **Уровень 2 DOM**: стили **строго для прямых ориентиров `body`**, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
+  6. `layouts` (`layouts/`) — **Уровень 1 DOM**: структурные макро-каркасы и сетки экрана. Стили применяются **строго к `body`** через активатор `<layout [variant]>` (`body:has(layout[grid])`, `body:has(layout[landing])`, `body:has(layout[map])`) и его прямым ориентирам (`> header`, `> nav`, `> main`, `> footer`). Обладают наивысшим приоритетом компоновки всего экрана.
 
-### 1.3. Регламент разграничения: Components vs Widgets
+### 1.3. Контракт растягивания на всю область (Full Width by Default) и центрирования (Opt-in Centering)
+- **Растягивание по умолчанию (Stretch by Default)**:
+  - Все макро-контейнеры, ориентиры (`body > header`, `body > main`, `body > footer`), страницы, сетки и секции по умолчанию стремятся занять **100% доступной области**: `width: 100%; min-width: 0; min-height: 100%; margin: 0;`.
+  - Запрещены искусственные глобальные ограничения `max-width: 1200px` и авто-центрирование `margin: 0 auto` на уровне базовых страниц и ориентиров. Интерфейс естественно масштабируется от смартфонов до широкоформатных экранов, POS и 4K киосков.
+- **Явное центрирование по требованию (Opt-in Centering via Semantic Attributes)**:
+  Центрирование применяется осознанно только там, где это функционально необходимо (модальные карточки входа, сплэш-экраны, пустые состояния), с помощью семантических атрибутов первого класса:
+  - `[center]` ➔ `place-content: center; place-items: center;`
+  - `[center-h]` ➔ `justify-content: center; justify-items: center;`
+  - `[center-v]` ➔ `align-content: center; align-items: center;`
+  - `[center-self]` ➔ `justify-self: center; margin-inline: auto;`
+  - `[center-text]` ➔ `text-align: center;`
+
+### 1.4. Регламент разграничения: Components vs Widgets
 Чтобы исключить смешение понятий, действует строгое правило классификации:
 
 | Критерий | `components/` (Компоненты) | `widgets/` (Виджеты) |
@@ -61,7 +73,19 @@
 - **Сетки-примитивы (Layout Primitives)**: переиспользуемая геометрия выносится в семантические Grid-примитивы (`.grid-split`, `.grid-center`, `.m3-stack`) в слое `layouts/`.
 - **Роль `:where(...)`**: псевдокласс `:where(...)` применяется исключительно для обнуления специфичности `(0, 0, 0)` базовых сбросов (CSS Reset в `foundations/`) и UI-примитивов, чтобы компоненты верхних слоев могли легко переопределять их без хаков специфичности и без `!important`. Склеивание разнородных селекторов через запятую запрещено как антипаттерн.
 
-### 1.7. Сенсорная эргономика (Touch-First & High-Throughput POS/Kiosk)
+### 1.7. Classless-First Foundation (`foundations/base.css`)
+- **Цель**: минимум CSS и классов. Нативные теги HTML5 стилизуются глобально токенами M3 в `@layer foundations`, всё через `:where(...)` → специфичность `(0, 0, 0)`.
+- **Типографика глобально**: `h1–h6`, `p`, `a`, `small`, `strong`, `mark`, `code`, `kbd`, `pre`, `blockquote`, `hr`, `figure/figcaption`, `dl/dt/dd` — без классов.
+- **Classless-when-classless**: богатые M3-дефолты для структурных и интерактивных тегов применяются только к элементам **без атрибута `class`** — `:where(tag:not([class]))`:
+  - `<button>` ➔ M3 Filled (≥ 48px), `<button type="reset">` ➔ Outlined;
+  - `<article>` ➔ карточка, `<aside>` ➔ панель, `<nav>` ➔ горизонтальный ряд, `<section>` ➔ grid-стек;
+  - `<ul>/<ol>` ➔ контентный список; `<table>` ➔ M3 таблица; `<fieldset>/<legend>` ➔ outlined-группа;
+  - `<label>` ➔ подпись над полем; `<label>` с checkbox/radio/switch ➔ inline-ряд ≥ 48px;
+  - `<input>/<select>/<textarea>` ➔ M3 outlined field ≥ 48px; `<details>/<summary>` ➔ аккордеон; `<dialog>` ➔ M3 Basic Dialog.
+- **С классом** — элемент получает только нейтральный сброс (списки без маркеров, fieldset без рамки), геометрией полностью владеет компонент.
+- **Правило для новой разметки**: сначала семантический тег без класса; класс добавляется только для варианта M3 или специфичной Grid-раскладки.
+
+### 1.8. Сенсорная эргономика (Touch-First & High-Throughput POS/Kiosk)
 - Габариты интерактивных зон: POS $\ge 48\times 48\text{px}$, Kiosk $\ge 56\times 56\text{px}$, Fast Checkout $\ge 64\text{px}$, отступы между кнопками $\ge 12\text{px}$.
 - `touch-action: manipulation` для устранения браузерных задержек сенсорного ввода.
 
@@ -199,8 +223,8 @@
 Корневой файл [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css) подключает модули системы по 6 слоям каскада **Cascade Layers (`@layer`)**:
 
 ```css
-/* Layer Precedence (Lower to Higher Priority) */
-@layer tokens, foundations, layouts, pages, widgets, components;
+/* Layer Precedence (Lower to Higher Priority: от абстрактного/базового к конкретному контексту) */
+@layer tokens, foundations, components, widgets, pages, layouts;
 
 /* 0. Typography Fonts */
 @import "fonts/material-symbols-outlined.css";

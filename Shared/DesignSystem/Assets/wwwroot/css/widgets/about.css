@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Socratic Design System — WIDGETS / about.css
+   About Widgets, Pillars Section, Video Showcase & Hero Typography
+   ========================================================================== */
+
+.about-pillars-section {
+    display: grid;
+    gap: 2.5rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.about-video-section {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}

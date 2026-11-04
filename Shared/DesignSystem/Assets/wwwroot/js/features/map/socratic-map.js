@@ -1,5 +1,6 @@
 export {
     initializeMap,
+    autoMountMap,
     setBaseMapStyle,
     setMapTiltEnabled,
     toggleMapTilt,

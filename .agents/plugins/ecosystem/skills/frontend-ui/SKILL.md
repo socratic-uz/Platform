@@ -1,6 +1,6 @@
 ---
 name: frontend-ui
-description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, layered architecture — Cascade Layers (@layer tokens, foundations, layouts, pages, widgets, components), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
+description: "Architectural standard and workflow for CSS styles (*.css) in Socratic. USE FOR: centralized styles in Assets/wwwroot/css/, layered architecture — Cascade Layers (@layer tokens, foundations, components, widgets, pages, layouts), pure CSS Grid, M3 Window Size Classes, Container Queries (@container), M3X design tokens, Light/Dark themes, touch ergonomics, and rendered browser verification. DO NOT USE FOR: Razor template markup (use frontend-ux) or C# code-behind (use frontend-ix)."
 license: MIT
 ---
 
@@ -13,7 +13,13 @@ license: MIT
 
 ## 1. Слоёная архитектура — Cascade Layers в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, layouts, pages, widgets, components`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
+Слои строго соответствуют файловой структуре:
+- `layouts/` (**Уровень 1 DOM**): Стили строго для `body` через `<layout [variant]>` (`body:has(layout[grid])`) и прямых макро-ориентиров (`> header`, `> nav`, `> main`, `> footer`).
+- `pages/` (**Уровень 2 DOM**): Стили строго для прямых ориентиров `body`, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Внутренние стили виджетов здесь строго запрещены.
+- `widgets/` (**Уровень 3 DOM**): Составные смарт-организмы бизнеса (корзина, KDS, карточки, фискальная панель, бенто-сетки).
+- `components/` (**Уровни 4–6 DOM**): Атомы и защищенные примитивы UI (кнопки, чипы, инпуты, диалоги) и общие утилиты.
+
 Компоненты независимы и инкапсулируют свои стили в целевых файлах, а повторно используемые сетки оформляются как примитивы с нулевой специфичностью `:where(...)` (0, 0, 0):
 
 ```css
@@ -24,6 +30,20 @@ license: MIT
   gap: var(--md-sys-spacing-3);
 }
 ```
+
+---
+
+## 2. Контракт растягивания (Full Width) и явного центрирования (Opt-in Centering)
+
+- **Растягивание по умолчанию (Stretch by Default)**:
+  Все страницы, секции, сетки и ориентиры по умолчанию занимают **100% доступной области**: `width: 100%; min-width: 0; min-height: 100%; margin: 0;`. Искусственные глобальные `max-width: 1200px` и `margin: 0 auto` запрещены.
+- **Явное центрирование (Opt-in via Semantic Attributes)**:
+  Центрирование подключается только при необходимости через семантические атрибуты первого класса:
+  - `[center]` ➔ `place-content: center; place-items: center;`
+  - `[center-h]` ➔ `justify-content: center; justify-items: center;`
+  - `[center-v]` ➔ `align-content: center; align-items: center;`
+  - `[center-self]` ➔ `justify-self: center; margin-inline: auto;`
+  - `[center-text]` ➔ `text-align: center;`
 
 ---
 

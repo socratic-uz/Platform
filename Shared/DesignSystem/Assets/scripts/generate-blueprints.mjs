@@ -208,7 +208,7 @@ async function processSinglePage(pageName, browser) {
       if (result.violations.length > 0) {
         for (const v of result.violations) {
           const icon = v.type === 'SiblingCollision' ? '⚠️' : (v.type === 'BoundaryOverflow' ? '❌' : 'ℹ️');
-          console.log(`  ${icon} [${vp.name}] ${v.type}: ${v.path || v.target} - ${v.message}`);
+          console.log(`  ${icon} [${pageName}][${vp.name}] ${v.type}: ${v.path || v.target} - ${v.message}`);
         }
       }
     }

@@ -4,7 +4,6 @@
 @using static Assets.Constants.Classes.Fiscal
 @using static Assets.Constants.Classes.Terminal
 @using static Assets.Constants.Classes.Badge
-@using static Assets.Constants.Classes.Invoice
 @using static Assets.Constants.Classes.QrDesigner
 @using static Assets.Constants.Classes.InfoGrid
 @using static Assets.Constants.Classes.Common
@@ -13,7 +12,7 @@
 @using static Assets.Constants.Icons
 @using static Material.Web.Components.ButtonVariant
 
-<article id="fiscal-receipt-element" class=@FiscalReceipt>
+<article fiscal id="fiscal-receipt-element" class=@FiscalReceipt>
     <header class=@PosReceiptHeader>
         <span class=@TaxBadge>
             <Icon Name=@AccountBalance />

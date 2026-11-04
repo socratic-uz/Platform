@@ -31,14 +31,54 @@ export async function toggleMapTilt() {
 
 
 export function getFallbackStyle() {
+    const isDark = typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "dark";
+    if (isDark) {
+        return {
+            version: 8,
+            sources: {
+                "dark-base": {
+                    type: "raster",
+                    tiles: [
+                        "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+                    ],
+                    tileSize: 256,
+                    attribution: '&copy; <a href="https://www.esri.com">Esri</a>, HERE, Garmin, &copy; OpenStreetMap contributors'
+                },
+                "dark-ref": {
+                    type: "raster",
+                    tiles: [
+                        "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+                    ],
+                    tileSize: 256
+                }
+            },
+            layers: [
+                {
+                    id: "dark-base",
+                    type: "raster",
+                    source: "dark-base"
+                },
+                {
+                    id: "dark-ref",
+                    type: "raster",
+                    source: "dark-ref"
+                }
+            ]
+        };
+    }
     return {
         version: 8,
         sources: {
             osm: {
                 type: "raster",
-                tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+                tiles: [
+                    "https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+                    "https://b.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+                    "https://c.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
+                ],
+
                 tileSize: 256,
-                attribution: "&copy; OpenStreetMap contributors"
+                attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }
         },
         layers: [
@@ -88,7 +128,8 @@ export function loadMapLibre() {
 }
 
 export async function ensureMap(styleUrl) {
-    const container = document.getElementById(MAP_CONTAINER_ID);
+    const container = document.getElementById(MAP_CONTAINER_ID)
+        || document.querySelector("figure[map], .map-canvas");
     if (!container) {
         return null;
     }
@@ -100,7 +141,7 @@ export async function ensureMap(styleUrl) {
             console.log("Map container changed or unmounted. Resetting map instance...");
             try {
                 state.map.remove();
-            } catch (e) {}
+            } catch (e) { }
             state.map = null;
             state.mapReady = false;
             state.mapReadyPromise = null;
@@ -128,7 +169,8 @@ export async function ensureMap(styleUrl) {
         }
     }
 
-    const containerAfterLoad = document.getElementById(MAP_CONTAINER_ID);
+    const containerAfterLoad = document.getElementById(MAP_CONTAINER_ID)
+        || document.querySelector("figure[map], .map-canvas");
     if (!containerAfterLoad) {
         return null;
     }
@@ -193,7 +235,7 @@ export async function ensureMap(styleUrl) {
 
         try {
             state.map = new window.maplibregl.Map({
-                container: MAP_CONTAINER_ID,
+                container: containerAfterLoad,
                 style,
                 center: [69.2401, 41.2995],
                 zoom: 11,
@@ -349,7 +391,7 @@ export function loadMapboxDraw() {
 
 function geojsonFeaturesToWkt(features) {
     if (!features || features.length === 0) return "";
-    
+
     const polygons = [];
     for (const feature of features) {
         if (!feature || !feature.geometry) continue;
@@ -554,11 +596,20 @@ export function resizeMap() {
     if (state.map) {
         try {
             state.map.resize();
-        } catch (e) {}
+        } catch (e) { }
     }
 }
 
+export function autoMountMap() {
+    if (typeof document === "undefined") return;
+    const container = document.getElementById(MAP_CONTAINER_ID)
+        || document.querySelector("figure[map], .map-canvas");
+    if (!container) return;
 
-
-
-
+    if (!container._mapMounted) {
+        if (!state.map || state.map.getContainer() !== container) {
+            container._mapMounted = true;
+            initializeMap().catch(err => console.error("Map auto-mount failed:", err));
+        }
+    }
+}

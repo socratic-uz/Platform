@@ -1,232 +1,33 @@
 /* ==========================================================================
    Socratic Design System — PAGES / docs.css
-   Component-Driven Architecture
+   Classless Page Landmark Architecture
    ========================================================================== */
 
-.docs-mobile-menu-btn {
-    display: none;
-}
-
-.docs-refresh-btn {
+main[docs] {
     display: grid;
-    place-items: center;
-    min-width: 48px;
-    min-height: 48px;
-    padding: 0;
-    border: none;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: transparent;
-    color: var(--md-sys-color-on-surface-variant);
-    cursor: pointer;
-}
-
-.docs-welcome-card {
-    display: grid;
-    gap: 0.75rem;
-    place-items: center;
-    max-width: 480px;
-    padding: var(--md-sys-spacing-8, 2rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
-    background-color: var(--md-sys-color-surface-container-low);
-    text-align: center;
-}
-
-.docs-welcome-icon {
-    width: 48px;
-    height: 48px;
-    color: var(--md-sys-color-primary);
-    font-size: 48px;
-}
-
-.docs-content-header {
-    display: none;
-}
-
-.docs-header-title {
+    grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr);
+    gap: var(--md-sys-spacing-6, 1.5rem);
+    align-items: start;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: calc(100dvh - var(--md-sys-spacing-header, 64px));
+    padding: clamp(1.25rem, 3vw, 2rem);
+    padding-right: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-right, 0));
+    padding-left: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-left, 0));
+    background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.docs-empty-state {
-    display: grid;
-    gap: 0.5rem;
-    place-items: center;
-    padding: var(--md-sys-spacing-6, 1.5rem) var(--md-sys-spacing-3, 0.75rem);
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-    text-align: center;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 839.98px) {
-    .docs-content-header {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        gap: 0.75rem;
-        align-items: center;
-        min-height: 56px;
-        padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-        border-bottom: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-low);
-    }
-
-    main.docs-page {
+    main[docs] {
         grid-template-columns: minmax(0, 1fr);
         height: auto;
         min-height: 100%;
+        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 1.5rem);
+        padding-right: max(0.75rem, env(safe-area-inset-right, 0));
+        padding-left: max(0.75rem, env(safe-area-inset-left, 0));
     }
-
-    .docs-sidebar {
-        position: fixed;
-        inset: 0 auto 0 0;
-        z-index: var(--md-sys-z-drawer, 200);
-        width: min(320px, 85vw);
-        height: 100dvh;
-        box-shadow: var(--md-sys-elevation-level4, 0 16px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.35));
-        transform: translateX(-100%);
-        transition: transform var(--md-sys-motion-duration-medium2, 300ms) var(--md-sys-motion-easing-spring-soft);
-    }
-
-    .docs-sidebar.is-open {
-        transform: translateX(0);
-    }
-
-    .docs-sidebar:not(.is-open) {
-        display: none;
-    }
-
-    .docs-sidebar-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: var(--md-sys-z-drawer, 200);
-        padding: 0;
-        border: 0;
-        background: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
-        backdrop-filter: blur(4px);
-        cursor: pointer;
-    }
-
-    .docs-mobile-menu-btn {
-        display: grid;
-        place-items: center;
-        min-width: 48px;
-        min-height: 48px;
-    }
-}
-
-.docs-article {
-    display: grid;
-    align-content: start;
-    min-width: 0;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 56px;
-    color: var(--md-sys-color-on-background);
-    font-size: 1rem;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-@media (max-width: 599.98px) {
-    .docs-article {
-        padding: var(--md-sys-spacing-6, 1.5rem) var(--md-sys-spacing-4, 1rem);
-    }
-}
-
-.docs-content {
-    min-width: 0;
-    padding: 0;
-    background-color: var(--md-sys-color-background);
-    overflow-x: clip;
-    overflow-y: auto;
-}
-
-.docs-group-header {
-    opacity: 0.85;
-    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-2, 0.5rem);
-    color: var(--md-sys-color-primary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-}
-
-.docs-group-items {
-    display: grid;
-    gap: 2px;
-}
-
-.docs-header-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--md-sys-color-primary);
-    font-size: 24px;
-}
-
-.docs-sidebar {
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
-    width: 280px;
-    height: 100%;
-    min-height: 0;
-    border-right: 1px solid var(--md-sys-color-outline-variant);
-    background-color: var(--md-sys-color-surface-container-low);
-    overflow: hidden;
-}
-
-.docs-sidebar-header {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
-    align-items: center;
-    min-height: 56px;
-    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.docs-sidebar-title {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 0.15px;
-}
-
-main.docs-page {
-    display: grid;
-    grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr);
-    gap: 0;
-    align-content: stretch;
-    height: 100%;
-    min-height: 0;
-    padding: 0;
-    background: var(--md-sys-color-surface);
-    overflow: hidden;
-}
-
-.docs-welcome-container {
-    display: grid;
-    place-items: center;
-    height: 100%;
-    min-height: 360px;
-    padding: var(--md-sys-spacing-8, 2rem) var(--md-sys-spacing-4, 1rem);
-}
-
-.docs-header-breadcrumb {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.35rem;
-    align-items: center;
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.docs-sidebar-menu {
-    display: grid;
-    gap: 1rem;
-    align-content: start;
-    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-3, 0.75rem);
-    overflow-y: auto;
 }

@@ -14,6 +14,12 @@ export async function loadKonva() {
 }
 
 export async function initDesigner(containerId, dotNetHelper, isReadOnly, layoutJson) {
+    if (stages.has(containerId)) {
+        const existing = stages.get(containerId);
+        if (dotNetHelper) existing.dotNetHelper = dotNetHelper;
+        if (isReadOnly !== undefined) existing.isReadOnly = isReadOnly;
+        return;
+    }
     await loadKonva();
 
     const container = document.getElementById(containerId);
@@ -348,4 +354,17 @@ export function dispose(containerId) {
         state.stage.destroy();
         stages.delete(containerId);
     }
+}
+
+
+export function autoMountSeatDesigner() {
+    if (typeof document === 'undefined') return;
+    const containers = document.querySelectorAll('figure[seat-designer], .seat-designer-canvas-container, [id*="seat-designer"]');
+    containers.forEach(container => {
+        if (!container.id) return;
+        if (!container._seatMounted && !stages.has(container.id)) {
+            container._seatMounted = true;
+            initDesigner(container.id, null, false, null).catch(err => console.error('[SeatDesigner auto-mount failed]:', err));
+        }
+    });
 }

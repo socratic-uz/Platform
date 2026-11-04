@@ -244,16 +244,6 @@
     background: var(--md-sys-color-surface-container);
 }
 
-.qr-designer-page-root {
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 1.5rem;
-    min-height: calc(100dvh - 80px);
-    padding: 1.5rem 1.5rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
-    background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
-}
-
 .qr-instruction {
     max-width: 480px;
     color: var(--md-sys-color-on-surface-variant);
@@ -633,11 +623,6 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
         padding: clamp(1rem, 3vw, 1.25rem) clamp(0.75rem, 2vw, 1rem);
-    }
-
-    .qr-designer-page-root {
-        gap: 1.25rem;
-        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
     }
 
     .qr-workspace {

@@ -12,25 +12,46 @@
 }
 
 .click-popup-address {
-    color: var(--map-on-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.78rem;
     line-height: 1.35;
 }
 
 .click-popup-coords {
-    color: var(--map-on-surface);
+    color: var(--md-sys-color-on-surface);
     font-family: monospace;
     font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
 
-.hamburger-line {
-    display: block;
-    width: 12px;
-    height: 2px;
-    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-    background-color: var(--map-text);
+.click-popup-btn {
+    padding: 0.38rem 0.6rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: opacity 0.14s;
+    cursor: pointer;
+}
+
+.click-popup-btn-secondary {
+    border-color: var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
+}
+
+.click-popup-btn-secondary:hover {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-primary);
+}
+
+.click-popup-btn:hover {
+    opacity: 0.88;
 }
 
 .maneuver-icon {
@@ -243,7 +264,7 @@
     margin-bottom: 0.25rem;
     padding: 6px 0;
     width: 100%;
-    border: 1px solid var(--map-border);
+    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: rgb(from var(--md-sys-color-surface-container-low) r g b / 0.8);
 }
@@ -285,7 +306,7 @@
     gap: 0.5rem;
     min-height: 0;
     padding: 0.8rem;
-    border: 1px solid var(--map-border);
+    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
     background: rgb(from var(--md-sys-color-surface-container-low) r g b / 0.85);
     overflow: hidden;
@@ -304,11 +325,11 @@
     width: min(29rem, 36vw);
     min-height: 0;
     padding: 1rem;
-    border: 1px solid var(--map-border);
+    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: 1.5rem;
     background: linear-gradient(135deg, rgb(from var(--md-sys-color-surface) r g b / 0.9), rgb(from var(--md-sys-color-surface) r g b / 0.8));
     overflow: visible;
-    box-shadow: var(--map-shadow);
+    box-shadow: var(--md-sys-elevation-level2);
     backdrop-filter: blur(20px) saturate(140%);
     transform: translateX(0);
     transition: transform 0.4s var(--md-sys-motion-easing-spring-soft), box-shadow 0.4s ease;
@@ -319,20 +340,13 @@
     transform: translateX(calc(-100% - 0.75rem));
 }
 
-.organizations-map-page {
-    position: relative;
-    height: 100dvh;
-    min-height: 0;
-    color: var(--md-sys-color-on-surface);
-}
-
 .organizations-map-viewport {
     position: absolute;
     inset: 0;
     min-height: 18rem;
 }
 
-.organizations-map-viewport > :last-child {
+.organizations-map-viewport> :last-child {
     min-height: 100%;
 }
 
@@ -341,9 +355,9 @@
     gap: 0.4rem;
     max-height: 14rem;
     padding: 0.65rem;
-    border: 1px solid var(--map-border);
+    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card, 24px);
-    background: var(--map-surface-soft);
+    background: var(--md-sys-color-surface-container-low);
     overflow-y: auto;
     container-type: inline-size;
 }
@@ -396,7 +410,7 @@
 .place-details-divider {
     width: 100%;
     height: 1px;
-    background: rgb(from var(--map-border) r g b / 0.45);
+    background: rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
 }
 
 .place-details-header {
@@ -407,7 +421,7 @@
     align-items: center;
     margin-bottom: 0.75rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--map-border);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .place-details-hero {
@@ -421,7 +435,7 @@
 
 .place-details-name {
     margin: 0;
-    color: var(--map-text);
+    color: var(--md-sys-color-on-surface);
     font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.25;
@@ -456,14 +470,14 @@
 }
 
 .place-info-row .info-label {
-    color: var(--map-text-muted);
+    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .place-info-row .info-value {
-    color: var(--map-text);
+    color: var(--md-sys-color-on-surface);
     font-size: 0.82rem;
     line-height: 1.4;
     word-break: break-word;
@@ -553,7 +567,7 @@
     display: grid;
     gap: 0.5rem;
     position: absolute;
-    top: calc(1rem + env(safe-area-inset-top, 0px));
+    top: calc(1rem + env(safe-area-inset-top, 0));
     left: 50%;
     z-index: var(--md-sys-z-bottom-nav, 40);
     width: min(32rem, 90vw);
@@ -574,15 +588,6 @@
     box-shadow: var(--md-sys-elevation-expressive-1);
 }
 
-.tab-hamburger {
-    display: grid;
-    gap: 3px;
-    align-content: center;
-    place-items: center;
-    width: 14px;
-    height: 14px;
-}
-
 @media (max-width: 599.98px) {
     .organizations-map-controls {
         opacity: 1;
@@ -596,7 +601,7 @@
         padding: 0.45rem;
         padding-top: 1.5rem;
         border-radius: 1.25rem;
-        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        background: linear-gradient(180deg, rgb(from var(--md-sys-color-surface) r g b / 0.95), rgb(from var(--md-sys-color-surface) r g b / 0.88));
         overflow-y: auto;
         box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
         transform: translateY(0);
@@ -608,7 +613,7 @@
     }
 
     .navigator-panel {
-        top: calc(0.5rem + env(safe-area-inset-top, 0px));
+        top: calc(0.5rem + env(safe-area-inset-top, 0));
         width: calc(100vw - 1rem);
     }
 
@@ -642,15 +647,11 @@
         width: 48px;
         height: 5px;
         border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-        background: var(--map-border-strong, var(--md-sys-color-outline-variant));
+        background: var(--md-sys-color-outline);
         content: '';
     }
 
-    .organizations-map-controls.collapsed .tab-arrow {
-        display: none;
-    }
-
-    .organizations-map-controls.collapsed .tab-hamburger {
+    .organizations-map-controls.collapsed .map-panel-toggle-tab md-icon {
         display: none;
     }
 
@@ -680,15 +681,11 @@
         width: 48px;
         height: 5px;
         border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-        background: var(--map-border-strong, var(--md-sys-color-outline-variant));
+        background: var(--md-sys-color-outline);
         content: '';
     }
 
-    .organizations-map-controls.expanded .tab-arrow {
-        display: none;
-    }
-
-    .organizations-map-controls.expanded .tab-hamburger {
+    .organizations-map-controls.expanded .map-panel-toggle-tab md-icon {
         display: none;
     }
 
@@ -696,8 +693,8 @@
         opacity: 1;
         padding: 0.45rem;
         padding-top: 1.5rem;
-        border: 1px solid var(--map-border);
-        background: linear-gradient(180deg, var(--map-surface-strong), var(--map-surface));
+        border: 1px solid var(--md-sys-color-outline-variant);
+        background: linear-gradient(180deg, rgb(from var(--md-sys-color-surface) r g b / 0.95), rgb(from var(--md-sys-color-surface) r g b / 0.88));
         overflow: hidden;
         box-shadow: 0 -4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
         transform: translateY(0);
@@ -803,7 +800,7 @@
 
 .place-coordinates {
     margin: 0;
-    color: var(--map-text-muted);
+    color: var(--md-sys-color-on-surface-variant);
     font-size: 0.76rem;
 }
 
@@ -817,11 +814,242 @@
 
 .yandex-right-controls-container {
     display: grid;
-    align-content: space-between;
+    align-content: end;
     position: absolute;
     top: 16px;
     right: 16px;
     bottom: 24px;
     z-index: var(--md-sys-z-appbar, 20);
     pointer-events: none;
+}
+
+
+.map-panel-content {
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+    height: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
+                     var(--md-sys-scrollbar-color-track, transparent);
+}
+
+.map-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+    position: sticky;
+    top: 0;
+    z-index: var(--md-sys-z-surface, 2);
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, rgb(from var(--md-sys-color-surface) r g b / 0.95), rgb(from var(--md-sys-color-surface) r g b / 0.88));
+}
+
+@media (min-width: 600px) and (max-width: 839.98px) {
+    .map-toolbar {
+        top: -0.12rem;
+    }
+
+    .organizations-map-controls {
+        bottom: 0.75rem;
+        width: min(24rem, calc(100vw - 4rem));
+    }
+}
+
+.map-panel-toggle-tab {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    right: -44px;
+    z-index: var(--md-sys-z-sticky, 10);
+    width: 44px;
+    min-width: 44px;
+    height: 64px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.95);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.72rem;
+    box-shadow: 6px 0 15px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
+    transform: translateY(-50%);
+    transition: all 0.2s var(--md-sys-motion-easing-spring);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.map-panel-toggle-tab:hover {
+    right: -48px;
+    width: 48px;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-primary);
+}
+
+.organizations-map-controls.collapsed .map-panel-toggle-tab {
+    right: -44px;
+    left: auto;
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    box-shadow: var(--md-sys-elevation-level2);
+}
+
+.map-popup-backdrop :where(.maplibregl-ctrl-top-right, .mapboxgl-ctrl-top-right, .mapboxgl-ctrl-group, .maplibregl-ctrl-group) {
+    z-index: var(--md-sys-z-dialog-backdrop, 1000);
+    pointer-events: auto;
+}
+
+.map-popup-backdrop :where(.mapboxgl-ctrl-group, .maplibregl-ctrl-group) button {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Navigator Controls Buttons */
+.navigator-controls .nav-btn-recenter,
+.navigator-controls .nav-btn-voice {
+    --md-icon-button-icon-color: var(--md-sys-color-inverse-on-surface);
+}
+
+.navigator-controls .nav-btn-voice.active {
+    --md-icon-button-icon-color: var(--md-sys-color-tertiary);
+}
+
+.navigator-controls .nav-btn-stop {
+    --md-filled-icon-button-container-color: var(--md-sys-color-error);
+    --md-filled-icon-button-icon-color: var(--md-sys-color-on-error);
+}
+
+/* Map Popup Dialog */
+.map-popup-backdrop {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: var(--md-sys-z-dialog, 1001);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.map-popup-dialog {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    position: relative;
+    width: 90vw;
+    max-width: 960px;
+    height: 80vh;
+    max-height: 720px;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface);
+    box-shadow: var(--md-sys-elevation-level4, 0 12px 32px rgb(0 0 0 / 0.4));
+    overflow: hidden;
+}
+
+.map-popup-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container);
+    min-width: 0;
+}
+
+.map-popup-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.map-popup-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.map-popup-footer {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container);
+}
+
+.map-popup-info {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.map-popup-address {
+    color: var(--md-sys-color-primary);
+}
+
+.map-popup-hint {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-outline);
+}
+
+.map-popup-actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Place Details Card */
+.map-place-details-card {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.28);
+    background: rgb(from var(--md-sys-color-primary-container) r g b / 0.2);
+}
+
+.selected-org-card {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.28);
+    background: var(--md-sys-color-surface-container-low);
+    animation: map-card-in 0.18s ease-out;
+}
+
+.map-place-details-card .place-actions-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    --md-filled-button-leading-space: 12px;
+    --md-filled-button-trailing-space: 12px;
+    --md-outlined-button-leading-space: 12px;
+    --md-outlined-button-trailing-space: 12px;
+}
+
+.map-place-details-card .place-btn-route {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+}
+
+/* Nearby Results */
+.nearby-results-empty {
+    margin: 0.5rem 0;
+    color: var(--md-sys-color-outline);
+    font-size: 0.875rem;
+}
+
+.nearby-results-list {
+    display: grid;
+    gap: var(--md-sys-spacing-1, 0.25rem);
 }

@@ -54,6 +54,7 @@ export async function initPlayer(playerId = 'mediaPlayer', sourceId = 'videoSour
 
         if (videoUrl && player && source) {
             source.src = videoUrl;
+            player.removeAttribute('hidden');
             player.load();
             if (loader) loader.style.display = 'none';
             player.style.display = 'block';
@@ -69,3 +70,11 @@ export async function initPlayer(playerId = 'mediaPlayer', sourceId = 'videoSour
     }
 }
 
+export function autoMountPlayer() {
+    if (typeof document === 'undefined') return;
+    const player = document.getElementById('mediaPlayer') || document.querySelector('main[player] video');
+    if (player && !player._playerMounted) {
+        player._playerMounted = true;
+        initPlayer('mediaPlayer', 'videoSource', 'loadingContainer', 'loadingText');
+    }
+}

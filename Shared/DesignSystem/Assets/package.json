@@ -23,7 +23,8 @@
     "refresh": "npm run generate:codegen && npm run generate:analytics",
     "cleanup:unused-css": "node scripts/cleanup-unused-css.mjs",
     "analyze:classless": "node scripts/analyze-classless.mjs --verbose",
-    "watch:blueprints": "node scripts/generate-blueprints.mjs --watch"
+    "watch:blueprints": "node scripts/generate-blueprints.mjs --watch",
+    "preview:serve": "http-server wwwroot -p 8080 -c-1 -o /preview/map.html"
   },
   "dependencies": {
     "@lit-labs/ssr-client": "^1.1.8",

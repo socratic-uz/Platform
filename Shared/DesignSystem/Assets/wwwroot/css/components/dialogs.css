@@ -70,7 +70,7 @@ md-dialog.contacts details summary::-webkit-details-marker {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.drawer-header .headline {
+.drawer-header :where(h1, h2, h3, .headline) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;

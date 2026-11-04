@@ -3,8 +3,8 @@
    Слоёная архитектура — Cascade Layers (@layer)
    ========================================================================== */
 
-/* Layer Precedence (Lower to Higher Priority) */
-@layer tokens, foundations, layouts, pages, widgets, components;
+/* Layer Precedence (Lower to Higher Priority: от абстрактного/базового к конкретному контексту) */
+@layer tokens, foundations, components, widgets, pages, layouts;
 
 /* 0. Typography Fonts */
 @import "fonts/material-symbols-outlined.css";
@@ -29,45 +29,7 @@
 @import "foundations/scrollbars.css" layer(foundations);
 @import "foundations/animations.css" layer(foundations);
 
-/* 3. Blazor Layouts (Page Skeletons & Shells) */
-@import "layouts/footer.css" layer(layouts);
-@import "layouts/grid-layout.css" layer(layouts);
-@import "layouts/header.css" layer(layouts);
-@import "layouts/navigation.css" layer(layouts);
-@import "layouts/landing-layout.css" layer(layouts);
-@import "layouts/map-layout.css" layer(layouts);
-
-/* 4. Page-Specific Styles (Macro Screen Contexts) */
-@import "pages/about.css" layer(pages);
-@import "pages/analytics.css" layer(pages);
-@import "pages/auth.css" layer(pages);
-@import "pages/chat.css" layer(pages);
-@import "pages/detector.css" layer(pages);
-@import "pages/docs.css" layer(pages);
-@import "pages/help.css" layer(pages);
-@import "pages/kiosk.css" layer(pages);
-@import "pages/landing.css" layer(pages);
-@import "pages/orders.css" layer(pages);
-@import "pages/payment.css" layer(pages);
-@import "pages/terminal.css" layer(pages);
-
-/* 5. Smart Widgets & Composite Tools (Domain Organisms) */
-@import "widgets/ads.css" layer(widgets);
-@import "widgets/ai-blob.css" layer(widgets);
-@import "widgets/booking-picker.css" layer(widgets);
-@import "widgets/cart.css" layer(widgets);
-@import "widgets/color-picker.css" layer(widgets);
-@import "widgets/commerce-modes.css" layer(widgets);
-@import "widgets/faceid-viewfinder.css" layer(widgets);
-@import "widgets/fiscal.css" layer(widgets);
-@import "widgets/lang-selector.css" layer(widgets);
-@import "widgets/map.css" layer(widgets);
-@import "widgets/media-player.css" layer(widgets);
-@import "widgets/pricing-tiers.css" layer(widgets);
-@import "widgets/qr-designer.css" layer(widgets);
-@import "widgets/seat-designer.css" layer(widgets);
-
-/* 6. Material 3 Component Primitives (Protected UI Units) */
+/* 3. Material 3 Component Primitives (Protected UI Units) */
 @import "components/buttons.css" layer(components);
 @import "components/cards.css" layer(components);
 @import "components/chips.css" layer(components);
@@ -79,10 +41,8 @@
 @import "components/feedback.css" layer(components);
 @import "components/forms.css" layer(components);
 @import "components/info-grid.css" layer(components);
-@import "components/invoice.css" layer(components);
 @import "components/link-stack.css" layer(components);
 @import "components/markdown.css" layer(components);
-@import "components/profile-dialog.css" layer(components);
 @import "components/smart-data-view.css" layer(components);
 @import "components/smart-enum.css" layer(components);
 @import "components/smart-filter.css" layer(components);
@@ -90,3 +50,68 @@
 @import "components/smart-toast.css" layer(components);
 @import "components/tables.css" layer(components);
 @import "components/theme-toggle.css" layer(components);
+
+/* 4. Smart Widgets & Composite Tools (Domain Organisms) */
+/* --- Primary First-Screen Widgets --- */
+@import "widgets/landing.css" layer(widgets);
+@import "widgets/kiosk.css" layer(widgets);
+@import "widgets/terminal.css" layer(widgets);
+@import "widgets/chat.css" layer(widgets);
+@import "widgets/analytics.css" layer(widgets);
+@import "widgets/ads.css" layer(widgets);
+@import "widgets/commerce-modes.css" layer(widgets);
+@import "widgets/cart.css" layer(widgets);
+
+/* --- Secondary & Domain Organisms --- */
+@import "widgets/about.css" layer(widgets);
+@import "widgets/ai-blob.css" layer(widgets);
+@import "widgets/auth.css" layer(widgets);
+@import "widgets/booking-picker.css" layer(widgets);
+@import "widgets/color-picker.css" layer(widgets);
+@import "widgets/detector.css" layer(widgets);
+@import "widgets/docs.css" layer(widgets);
+@import "widgets/faceid-viewfinder.css" layer(widgets);
+@import "widgets/fiscal.css" layer(widgets);
+@import "widgets/help.css" layer(widgets);
+@import "widgets/invoice.css" layer(widgets);
+@import "widgets/lang-selector.css" layer(widgets);
+@import "widgets/map.css" layer(widgets);
+@import "widgets/media-player.css" layer(widgets);
+@import "widgets/orders.css" layer(widgets);
+@import "widgets/payment.css" layer(widgets);
+@import "widgets/pricing-tiers.css" layer(widgets);
+@import "widgets/profile-dialog.css" layer(widgets);
+@import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/seat-designer.css" layer(widgets);
+
+/* 5. Page-Specific Styles (Macro Screen Contexts) */
+/* --- Primary First-Screen Pages (High Priority Entrypoints) --- */
+@import "pages/landing.css" layer(pages);
+@import "pages/kiosk.css" layer(pages);
+@import "pages/terminal.css" layer(pages);
+@import "pages/chat.css" layer(pages);
+@import "pages/analytics.css" layer(pages);
+
+/* --- Secondary & Specialized Workflow Pages --- */
+@import "pages/orders.css" layer(pages);
+@import "pages/payment.css" layer(pages);
+@import "pages/map.css" layer(pages);
+@import "pages/qr-designer.css" layer(pages);
+@import "pages/seat-designer.css" layer(pages);
+@import "pages/detector.css" layer(pages);
+@import "pages/player.css" layer(pages);
+@import "pages/docs.css" layer(pages);
+@import "pages/help.css" layer(pages);
+@import "pages/about.css" layer(pages);
+@import "pages/auth.css" layer(pages);
+
+/* 6. Blazor Layouts (Page Skeletons, Shells & Chrome) */
+@import "layouts/landing-layout.css" layer(layouts);
+@import "layouts/grid-layout.css" layer(layouts);
+@import "layouts/chat-layout.css" layer(layouts);
+@import "layouts/main-layout.css" layer(layouts);
+@import "layouts/map-layout.css" layer(layouts);
+@import "layouts/nav-only-layout.css" layer(layouts);
+@import "layouts/header.css" layer(layouts);
+@import "layouts/footer.css" layer(layouts);
+@import "layouts/navigation.css" layer(layouts);

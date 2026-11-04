@@ -3,6 +3,7 @@
    Subscription Plans, Pricing Tiers, Feature Lists & Plan Indicators
    ========================================================================== */
 
+article[pricing-tier],
 .tier-box {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
@@ -107,7 +108,9 @@
 }
 
 .subscription-description {
-    max-width: 800px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.95rem;
@@ -198,6 +201,7 @@
     font-weight: 700;
 }
 
+section[pricing],
 .tiers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));

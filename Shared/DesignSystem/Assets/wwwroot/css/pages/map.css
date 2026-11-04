@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Socratic Design System — PAGES / map.css
+   Classless Page Landmark Architecture
+   ========================================================================== */
+
+main[map] {
+    position: relative;
+    height: 100dvh;
+    min-height: 0;
+    color: var(--md-sys-color-on-surface);
+}
+

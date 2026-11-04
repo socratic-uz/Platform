@@ -279,6 +279,34 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 
 ---
 
+## 7. 🌐 Архитектура клиентского JavaScript и Универсальный жизненный цикл (Universal Lifecycle Dispatcher)
+
+### 1. Централизация в проекте `Assets`
+Все клиентские JavaScript-модули хранятся централизованно в проекте `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/js/`) в строгой 7-слойной структуре, зеркальной CSS-архитектуре:
+- `components/`: Material Web, слайдеры, утилиты цвета.
+- `layouts/`: темы, модалки реконнекта.
+- `features/`: биометрия, авторизация, карты.
+- `widgets/`: чат, схемы залов, QR, markdown.
+- `pages/`: скрипты экранов (лендинг, плеер, лента).
+
+> **СТРОГИЙ ЗАПРЕТ**: Запрещено создавать колоцированные файлы `*.razor.js` в библиотеках компонентов. Все скрипты объявляются в `Assets` и регистрируются в мастер-манифесте `scripts.js`.
+
+### 2. Единый диспетчер жизненного цикла (`lifecycle.js`)
+Для обеспечения автономного монтирования компонентов как в статических снимках (`preview/*.html`), так и при первом кадре SSR Prerender и в интерактивном Blazor (WASM/SignalR), используется единый системный диспетчер `lifecycle.js`:
+- **Ровно 1 `MutationObserver` на всё приложение**: категорически запрещено создавать отдельные `MutationObserver` и слушатели `DOMContentLoaded` внутри файлов отдельных виджетов.
+- **Декларативная регистрация в `scripts.js`**:
+  ```javascript
+  registerComponent('figure[map]', {
+      mount: (el) => SocraticMap.autoMountMap(el),
+      unmount: () => SocraticMap.destroyMap()
+  });
+  ```
+- **Чистая семантика**: селекторы монтирования строятся на стандартных HTML5-тегах и булевых атрибутах (`figure[map]`, `main[player]`, `main[landing]`, `figure[seat-designer]`, `textarea[chat-input]`) без искусственных префиксов и суффиксов.
+- **Принцип листового контейнера (Leaf Container)**: контейнеры, управляемые внешними JS-библиотеками (MapLibre, Konva, плеер), объявляются пустыми листьями в разметке Razor. Blazor не рендерит внутрь них свои дочерние узлы во избежание конфликтов дерева (DOM diffing conflicts).
+- **Гарантированный Unmount**: при переходе между страницами (Blazor navigation) диспетчер автоматически вызывает хук `unmount`, освобождая WebGL-контексты, таймлайны анимаций и слушатели событий без утечек памяти.
+
+---
+
 ## 8. ✅ Definition of Done (DoD) для интерактива (*.razor.cs)
 
 Перед сдачей любого компонента с кодом агент обязан проверить:
@@ -289,3 +317,4 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 5. **Безопасное освобождение (Dispose/DisposeAsync)**: Все подписки на события сервисов, таймеры и стримы корректно отписываются в `IDisposable` или `IAsyncDisposable`.
 6. **Потокобезопасность UI**: Вызовы `StateHasChanged()` из фоновых потоков или аппаратных событий обернуты в `await InvokeAsync(StateHasChanged)`.
 7. **Zero Reflection & Native AOT**: Отсутствуют вызовы `dynamic`, reflection, runtime emit; все DTO сериализуются через source-generated JSON-контексты.
+8. **Universal Lifecycle Integration**: Для клиентских JS-компонентов обеспечена автономная регистрация через `registerComponent` в `scripts.js` без создания изолированных `*.razor.js` или собственных разрозненных `MutationObserver`.

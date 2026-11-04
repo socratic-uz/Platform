@@ -29,7 +29,9 @@
     color: var(--md-sys-color-on-primary-container);
 }
 
-[hidden] {
+[hidden],
+layout,
+color {
     display: none !important;
 }
 
@@ -275,9 +277,10 @@ body {
 
 /* Classless page skeleton: body > header / main / footer */
 :where(body > header:not([class]), body > main:not([class]), body > footer:not([class])) {
-    width: min(100% - 2 * var(--md-sys-gutter-page), var(--md-sys-breakpoint-expanded));
+    width: 100%;
     min-width: 0;
-    margin-inline: auto;
+    max-width: 100%;
+    margin: 0;
     color: var(--md-sys-color-on-surface);
 }
 
@@ -285,18 +288,17 @@ body {
     display: grid;
     align-content: start;
     gap: var(--md-sys-gutter-section);
+    width: 100%;
+    min-width: 0;
     padding-block: var(--md-sys-spacing-6) var(--md-sys-spacing-8);
 }
 
 :where(body > main:not([class]) > header:not([class])) {
     display: grid;
     gap: var(--md-sys-spacing-2);
-    max-width: 68ch;
+    width: 100%;
+    min-width: 0;
     margin-block-end: var(--md-sys-spacing-2);
-}
-
-:where(body > main:not([class]) > header:not([class]) > h1) {
-    max-width: 18ch;
 }
 
 :where(body > main:not([class]) > header:not([class]) > p) {
@@ -305,15 +307,38 @@ body {
     line-height: var(--md-sys-typescale-body-large-line-height);
 }
 
-:where(body > main:not([class]) > :is(p, ul, ol, dl):not([class])) {
-    max-width: 68ch;
-}
-
 :where(body > footer:not([class])) {
+    width: 100%;
+    min-width: 0;
     padding-block: var(--md-sys-spacing-6);
     border-top: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface-variant);
     font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+/* Centering on Demand (opt-in via [center*] attributes) ------------------- */
+:where([center]) {
+    place-content: center;
+    place-items: center;
+}
+
+:where([center-h]) {
+    justify-content: center;
+    justify-items: center;
+}
+
+:where([center-v]) {
+    align-content: center;
+    align-items: center;
+}
+
+:where([center-self]) {
+    justify-self: center;
+    margin-inline: auto;
+}
+
+:where([center-text]) {
+    text-align: center;
 }
 
 :where(section:not([class]), article:not([class]), aside:not([class])) {
@@ -330,6 +355,17 @@ body {
     display: grid;
     min-width: 0;
     gap: var(--md-sys-spacing-2);
+}
+
+:where(hgroup:not([class]) > p) {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+:where(section:not([class]) > header:not([class])) {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    min-width: 0;
 }
 
 /* Classless card: <article> */
@@ -378,6 +414,18 @@ body {
 
 /* Classed lists → neutral reset (components own their layout) */
 :where(ul[class], ol[class], menu) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Classless menu / toolbar → horizontal action row */
+:where(menu:not([class])) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
     margin: 0;
     padding: 0;
     list-style: none;

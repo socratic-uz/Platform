@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Socratic Design System — LAYOUTS / main-layout.css
+   Classless Main Layout (Bare Skeleton): body:has(layout[main])
+   ========================================================================== */
+
+body:has(layout[main]) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-height: 100dvh;
+}
+
+body:has(layout[main]) > main {
+    display: grid;
+    min-width: 0;
+    width: 100%;
+}
+

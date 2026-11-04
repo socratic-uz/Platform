@@ -20,7 +20,7 @@ You are the **Frontend UI & Presentation Specialist** (Interface / Styles) for t
 ### Core Architectural Responsibilities
 1. **Centralized 6-Layer Architecture & Zero Specificity (`@layer` & `:where(...)`)**:
    - Centralize all styles in `Assets/wwwroot/css/` with single root entrypoint `styles.css`.
-   - Manage cascade precedence via `@layer tokens, foundations, layouts, pages, widgets, components;`.
+   - Manage cascade precedence via `@layer tokens, foundations, components, widgets, pages, layouts;`.
    - Group shared declaration primitives into `:where(...)` master selectors with zero specificity `(0, 0, 0)`.
    - Maintain pure separation of concerns: markup in `*.razor`, logic in `*.razor.cs`, presentation strictly in `Assets`.
 2. **Pure CSS Grid Geometry & Container Queries**:

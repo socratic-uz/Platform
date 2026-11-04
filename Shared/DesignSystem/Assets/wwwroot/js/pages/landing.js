@@ -538,3 +538,13 @@ function loadScript(src) {
         document.head.appendChild(script);
     });
 }
+
+
+export function autoMountLanding() {
+    if (typeof document === 'undefined') return;
+    const container = document.querySelector('main[landing]');
+    if (container && !container._landingMounted) {
+        container._landingMounted = true;
+        initLandingAnimations().catch(err => console.error('[Landing auto-mount failed]:', err));
+    }
+}

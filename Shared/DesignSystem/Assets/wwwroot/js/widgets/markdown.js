@@ -5,7 +5,7 @@ export function ensureHighlight() {
     if (highlightPromise) return highlightPromise;
 
     highlightPromise = new Promise((resolve, reject) => {
-        if (!document.querySelector('script[src*="highlight-extensions.js"]')) {
+        if (!document.querySelector('script[src*="highlight"]')) {
             const script = document.createElement('script');
             script.src = '_content/Markdown/lib/highlight-extensions.js';
             script.onload = () => {
@@ -18,7 +18,13 @@ export function ensureHighlight() {
                 };
                 checkHljs();
             };
-            script.onerror = (err) => reject(err);
+            script.onerror = () => {
+                const cdnScript = document.createElement('script');
+                cdnScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js';
+                cdnScript.onload = () => resolve();
+                cdnScript.onerror = (err) => reject(err);
+                document.body.appendChild(cdnScript);
+            };
             document.body.appendChild(script);
         } else {
             const checkHljs = () => {
@@ -38,12 +44,13 @@ export function ensureHighlight() {
 export async function highlight() {
     try {
         await ensureHighlight();
-        var preTagList = document.querySelectorAll('pre.snippet');
-        var numberOfPreTags = preTagList.length;
-        for (var i = 0; i < numberOfPreTags; i++) {
-            var codeTag = preTagList[i].getElementsByTagName('code');
-            if (window.hljs) {
-                window.hljs.highlightElement(codeTag[0]);
+        const preTagList = document.querySelectorAll('pre.snippet, pre code');
+        for (let i = 0; i < preTagList.length; i++) {
+            const pre = preTagList[i];
+            const codeTag = pre.tagName.toLowerCase() === 'code' ? pre : pre.querySelector('code');
+            if (codeTag && window.hljs && !codeTag._hljsDone) {
+                codeTag._hljsDone = true;
+                window.hljs.highlightElement(codeTag);
             }
         }
     } catch (e) {
@@ -52,7 +59,7 @@ export async function highlight() {
 }
 
 export function addCopyButton() {
-    const snippets = document.querySelectorAll('.snippet');
+    const snippets = document.querySelectorAll('.snippet, pre:has(> code)');
     for (const snippet of snippets) {
         const code = snippet.querySelector('code');
         if (!code || snippet.querySelector('[data-action="copy"]')) continue;
@@ -90,7 +97,20 @@ export function ensureMermaid() {
                 reject(new Error("Mermaid was not loaded."));
             }
         };
-        script.onerror = (err) => reject(err);
+        script.onerror = () => {
+            const cdnScript = document.createElement('script');
+            cdnScript.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+            cdnScript.onload = () => {
+                if (window.mermaid) {
+                    window.mermaid.initialize({ startOnLoad: false });
+                    resolve();
+                } else {
+                    reject(new Error("Mermaid CDN failed."));
+                }
+            };
+            cdnScript.onerror = (err) => reject(err);
+            document.body.appendChild(cdnScript);
+        };
         document.body.appendChild(script);
     });
 
@@ -108,6 +128,13 @@ export async function runMermaid() {
     }
 }
 
-
-
-
+export function autoMountMarkdown() {
+    if (typeof document === 'undefined') return;
+    if (document.querySelector('pre.snippet, .snippet, pre code')) {
+        highlight().catch(() => {});
+        addCopyButton();
+    }
+    if (document.querySelector('pre.mermaid, .mermaid')) {
+        runMermaid().catch(() => {});
+    }
+}

@@ -61,7 +61,7 @@ public partial class MarkdownSection : ComponentBase
         if (firstRender)
         {
             // import code for highlighting code blocks
-            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Markdown/Components/MarkdownSection.razor.js");
+            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Assets/js/widgets/markdown.js");
             await _jsModule.InvokeVoidAsync("runMermaid");
         }
 

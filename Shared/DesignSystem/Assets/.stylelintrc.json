@@ -7,6 +7,18 @@
         "/^inline-flex$/"
       ]
     },
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "layout",
+          "color",
+          "assistant-message",
+          "chat-messages",
+          "/^md-/"
+        ]
+      }
+    ],
     "color-no-hex": [
       true,
       {

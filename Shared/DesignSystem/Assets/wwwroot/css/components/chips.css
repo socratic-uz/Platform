@@ -1096,3 +1096,15 @@ md-suggestion-chip:active {
     color: var(--md-sys-color-primary);
     font-weight: 700;
 }
+
+:where(md-chip-set) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}

@@ -7,7 +7,7 @@
 
 @if (IsInline)
 {
-	<menu class=@string.Format(Four, LangSelect, LangSelectorInline, LangInlineGrid, Class) role="group" aria-label=@L[LanguageLabel]>
+	<menu lang-selector class=@string.Format(Four, LangSelect, LangSelectorInline, LangInlineGrid, Class) role="group" aria-label=@L[LanguageLabel]>
 		<Button Variant=@(IsUz ? Filled : Text)
 				class=@(IsUz ? string.Format(Two, LangChipBtn, LangChipActive) : LangChipBtn)
 				OnClick=@SelectUz
@@ -30,7 +30,7 @@
 }
 else
 {
-	<menu class=@string.Format(Four, LangSelect, LangSelectorPill, LangDropdownWrapper, Class)>
+	<menu lang-selector class=@string.Format(Four, LangSelect, LangSelectorPill, LangDropdownWrapper, Class)>
 		<Button id="lang-menu-anchor"
 				Variant=@Text
 				class=@LangToggleBtn
