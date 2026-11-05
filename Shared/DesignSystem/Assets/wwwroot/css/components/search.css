@@ -3,87 +3,8 @@
    Search Bars, Universal Search Containers, Filters & Affordances
    ========================================================================== */
 
-.map-search-inline {
-    width: 100%;
-    min-width: 0;
-}
-
-.search-bar {
-    position: relative;
-    z-index: var(--md-sys-z-surface, 2);
-    padding: 3px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.9);
-    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.04);
-    transition: all 0.25s var(--md-sys-motion-easing-spring);
-}
-
-.search-bar-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto auto auto;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    padding: 0 6px;
-}
-
-.search-bar:focus-within {
-    border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-surface);
-    box-shadow: 0 0 0 4px rgb(from var(--md-sys-color-primary) r g b / 0.12), 0 4px 20px rgb(from var(--md-sys-color-primary) r g b / 0.08);
-}
-
-.search-divider {
-    width: 1px;
-    height: 20px;
-    margin: 0;
-    justify-self: center;
-    align-self: center;
-    background-color: var(--md-sys-color-outline-variant);
-}
-
-.search-panel {
-    display: grid;
-    gap: 0.5rem;
-    min-height: 0;
-}
-
-.ux-filter-meta {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.5rem;
-    align-items: center;
-    width: 100%;
-    padding: 0 0.5rem;
-}
-
-.ux-search-box {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr) max-content;
-    gap: 0.85rem;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 680px;
-    min-height: 52px;
-    margin: 0 auto;
-    padding: 0.35rem 1.25rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: color-mix(in srgb, var(--md-sys-color-surface-container) 80%, transparent);
-    backdrop-filter: blur(16px);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ux-search-box:focus-within {
-    border-color: var(--md-sys-color-primary);
-    box-shadow: 0 0 24px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
-}
-
-.m3-search-container {
+search,
+:where([search]) {
     display: grid;
     align-items: center;
     box-sizing: border-box;
@@ -91,11 +12,13 @@
     min-width: 0;
 }
 
-.m3-search-container [slot="trailing-icon"] {
+search [slot="trailing-icon"],
+:where([search]) [slot="trailing-icon"] {
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.m3-search-container md-icon[slot="leading-icon"] {
+search md-icon[slot="leading-icon"],
+:where([search]) md-icon[slot="leading-icon"] {
     width: 20px;
     height: 20px;
     color: var(--md-sys-color-on-surface-variant);
@@ -120,7 +43,4 @@
         justify-content: end;
         width: auto;
     }
-
 }
-
-/* --- Responsive Search Suggestions --- */

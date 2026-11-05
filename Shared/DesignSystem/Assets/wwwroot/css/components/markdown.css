@@ -3,7 +3,7 @@
    Rendered Markdown, Syntax Highlighting & Mermaid Diagrams
    ========================================================================== */
 
-:where(.markdown-body) {
+:where(.markdown-body, article[markdown]) {
     color: var(--md-sys-color-on-background);
     line-height: 1.6;
 }
@@ -26,7 +26,7 @@
     background: var(--md-sys-color-surface-container-high);
 }
 
-:where(.markdown-body) :where(.table-container, th, td) {
+:where(.markdown-body) :where( th, td) {
     border: 1px solid var(--md-sys-color-outline-variant);
     vertical-align: middle;
 }

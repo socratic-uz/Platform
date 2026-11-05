@@ -3,8 +3,6 @@
 
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.Feedback
 @using static Assets.Constants.Loc.Common
 @using static Material.Web.Components.ButtonVariant
 
@@ -21,9 +19,9 @@
 		@Body
 	</ChildContent>
 	<ErrorContent Context="ex">
-		<article class=@ErrorBoundaryCard>
-			<h3 class=@ErrorBoundaryTitle>@L[ErrorLoading]</h3>
-			<p class=@ErrorBoundaryDesc>@ex.Message</p>
+		<article error role="alert">
+			<h3>@L[ErrorLoading]</h3>
+			<p>@ex.Message</p>
 			<Button Variant=@Filled OnClick=@Recover>@L[TryAgain]</Button>
 		</article>
 	</ErrorContent>

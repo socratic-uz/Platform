@@ -3,8 +3,7 @@
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
-.smart-form-dialog,
-md-dialog.smart-form-dialog {
+md-dialog[smart-form] {
     --md-dialog-container-min-inline-size: min(550px, 92vw);
     --md-dialog-container-max-inline-size: min(840px, 96vw);
     max-width: min(840px, 96vw);
@@ -12,7 +11,7 @@ md-dialog.smart-form-dialog {
     max-height: min(92vh, 920px);
 }
 
-.smart-form-dialog [slot="content"] {
+md-dialog[smart-form] [slot="content"] {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
@@ -22,8 +21,7 @@ md-dialog.smart-form-dialog {
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
 }
 
-.smart-form-dialog form,
-.smart-form-dialog .smart-form-content {
+md-dialog[smart-form] form {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     box-sizing: border-box;
@@ -32,8 +30,7 @@ md-dialog.smart-form-dialog {
     max-width: 100%;
 }
 
-.smart-form-dialog fieldset,
-.smart-form-dialog .smart-form-fieldset {
+md-dialog[smart-form] fieldset {
     min-width: 0;
     max-width: 100%;
     width: 100%;
@@ -47,8 +44,7 @@ md-dialog.smart-form-dialog {
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.5);
 }
 
-.smart-form-dialog fieldset legend,
-.smart-form-dialog .smart-form-fieldset legend {
+md-dialog[smart-form] fieldset legend {
     font-weight: 700;
     font-size: 0.95rem;
     padding: 0 8px;
@@ -57,26 +53,16 @@ md-dialog.smart-form-dialog {
     word-break: break-word;
 }
 
-.smart-form-dialog .smart-form-field {
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    display: grid;
-    gap: 6px;
-}
-
-.smart-form-dialog md-outlined-text-field,
-.smart-form-dialog md-filled-text-field,
-.smart-form-dialog md-select,
-.smart-form-dialog .material-text-field {
+md-dialog[smart-form] md-outlined-text-field,
+md-dialog[smart-form] md-filled-text-field,
+md-dialog[smart-form] md-select {
     width: 100%;
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
 }
 
-.smart-form-dialog .smart-form-chip-container {
+md-dialog[smart-form] menu {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -84,16 +70,12 @@ md-dialog.smart-form-dialog {
     align-items: center;
     width: 100%;
     min-width: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.smart-form-dialog .smart-form-chip-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface-variant);
-    margin-bottom: 2px;
-}
-
-.smart-form-dialog .smart-form-switch-container {
+md-dialog[smart-form] label[switch] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -107,7 +89,7 @@ md-dialog.smart-form-dialog {
     width: 100%;
 }
 
-.smart-form-dialog .smart-form-switch-label {
+md-dialog[smart-form] label[switch] > span {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
@@ -115,19 +97,7 @@ md-dialog.smart-form-dialog {
     word-break: break-word;
 }
 
-.smart-form-dialog .smart-form-checkbox-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    padding: 6px 0;
-    min-width: 0;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.smart-form-dialog [slot="actions"] {
+md-dialog[smart-form] [slot="actions"] {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -138,39 +108,15 @@ md-dialog.smart-form-dialog {
     padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
 }
 
-.smart-form-error {
-    color: var(--md-sys-color-error);
-    padding: var(--md-sys-spacing-2, 0.5rem);
-    border: 1px solid var(--md-sys-color-error);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-}
-
-.smart-form-info {
-    color: var(--md-sys-color-tertiary);
-    padding: var(--md-sys-spacing-2, 0.5rem);
-    border: 1px solid var(--md-sys-color-tertiary);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-}
-
-.smart-grid-headline {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: start;
-}
-
 @media (max-width: 600px) {
-
-    .smart-form-dialog,
-    md-dialog.smart-form-dialog {
+    md-dialog[smart-form] {
         max-width: 98vw;
         width: 98vw;
         --md-dialog-container-min-inline-size: 92vw;
         --md-dialog-container-max-inline-size: 96vw;
     }
 
-    .smart-form-dialog [slot="content"] {
+    md-dialog[smart-form] [slot="content"] {
         padding: 14px 10px;
     }
 }

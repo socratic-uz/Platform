@@ -1,70 +1,64 @@
 @namespace Shared.Components
 @using SharedKernel.ValueObjects
 @using Domain.Entities
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.Badge
-@using static Assets.Constants.Classes.Subscription
-@using static Assets.Constants.Classes.Chips
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Subscription
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<article class=@CardOutlined>
-    <header class=@HeaderBar>
-        <span class=@string.Format(Two, Root, GetTierBadgeClass())>
-            <Icon Name=@GetTierIcon() class=@BadgeIcon />
+<article organization-subscription>
+    <header>
+        <span badge tier=@GetTierBadgeType()>
+            <Icon Name=@GetTierIcon() />
             <span>@GetTierBadgeTitle()</span>
         </span>
         @if (Subscription.IsTrialActive)
         {
-            <p class=@TrialCounter>
-                <span class=@TrialDaysHighlight>@Subscription.RemainingTrialDays</span>
-                <span class=@TrialDaysLabel>@L[Org_TrialDaysRemaining]</span>
+            <p trial-counter>
+                <strong>@Subscription.RemainingTrialDays</strong>
+                <span>@L[Org_TrialDaysRemaining]</span>
             </p>
         }
     </header>
 
-    <section class=@SubscriptionContent>
-        <h2 class=@SubscriptionTitle>@GetTierHeadline()</h2>
-        <p class=@SubscriptionDescription>@GetTierDescription()</p>
+    <section>
+        <h2>@GetTierHeadline()</h2>
+        <p>@GetTierDescription()</p>
     </section>
 
     <!-- Сетка сравнения 3-х тарифов -->
-    <section class=@TiersGrid>
+    <section pricing>
         <!-- 1. Пробный период -->
-        <article class=@(Subscription.Tier == SubscriptionTier.Trial ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
-            <header class=@TierHeader>
-                <h3 class=@TierName>@L[Org_TierTrialName]</h3>
-                <span class=@TierPrice>@L[Org_TierTrialPrice]</span>
+        <article pricing-tier active=@(Subscription.Tier == SubscriptionTier.Trial)>
+            <header>
+                <h3>@L[Org_TierTrialName]</h3>
+                <span>@L[Org_TierTrialPrice]</span>
             </header>
-            <ul class=@TierFeatures>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureAllModes]</li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureBrandScreensaver]</li>
+            <ul>
+                <li><Icon Name=@CheckCircle /> <strong>@L[Org_TierFeatureNoAds]</strong></li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureAllModes]</li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureBrandScreensaver]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.Trial && Subscription.IsTrialActive)
             {
-                <span class=@CurrentPlanIndicator>@L[Org_CurrentPlan]</span>
+                <span current-plan>@L[Org_CurrentPlan]</span>
             }
         </article>
 
         <!-- 2. С рекламой -->
-        <article class=@(Subscription.Tier == SubscriptionTier.WithAds ? string.Format(Two, TierBox, ActiveTier) : TierBox)>
-            <header class=@TierHeader>
-                <h3 class=@TierName>@L[Org_TierWithAdsName]</h3>
-                <span class=@TierPrice>@L[Org_TierWithAdsPrice]</span>
+        <article pricing-tier active=@(Subscription.Tier == SubscriptionTier.WithAds)>
+            <header>
+                <h3>@L[Org_TierWithAdsName]</h3>
+                <span>@L[Org_TierWithAdsPrice]</span>
             </header>
-            <ul class=@TierFeatures>
-                <li><Icon Name=@Info class=@string.Format(Two, FeatureIcon, BadgeInfo) /> @L[Org_TierFeaturePartnerAds]</li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureCloudPos]</li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureFiscalization]</li>
+            <ul>
+                <li><Icon Name=@Info /> @L[Org_TierFeaturePartnerAds]</li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureCloudPos]</li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureFiscalization]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.WithAds)
             {
-                <span class=@CurrentPlanIndicator>@L[Org_CurrentPlan]</span>
+                <span current-plan>@L[Org_CurrentPlan]</span>
             }
             else
             {
@@ -75,21 +69,21 @@
         </article>
 
         <!-- 3. Без рекламы (PRO) -->
-        <article class=@(Subscription.Tier == SubscriptionTier.ProAdFree ? string.Format(Three, TierBox, ProTier, ActiveTier) : string.Format(Two, TierBox, ProTier))>
-            <span class=@ProTag>@L[Org_Recommended]</span>
-            <header class=@TierHeader>
-                <h3 class=@TierName>@L[Org_TierProName]</h3>
-                <span class=@TierPrice>@L[Org_TierProPrice]</span>
+        <article pricing-tier pro active=@(Subscription.Tier == SubscriptionTier.ProAdFree)>
+            <span tag-pro>@L[Org_Recommended]</span>
+            <header>
+                <h3>@L[Org_TierProName]</h3>
+                <span>@L[Org_TierProPrice]</span>
             </header>
-            <ul class=@TierFeatures>
-                <li><Icon Name=@Star class=@string.Format(Two, FeatureIcon, CommonStar) /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureBrandScreensaver]</li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeaturePrioritySupport]</li>
-                <li><Icon Name=@CheckCircle class=@string.Format(Two, FeatureIcon, Ok) /> @L[Org_TierFeatureWhiteLabel]</li>
+            <ul>
+                <li><Icon Name=@Star /> <strong>@L[Org_TierFeature100NoAds]</strong></li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureBrandScreensaver]</li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeaturePrioritySupport]</li>
+                <li><Icon Name=@CheckCircle /> @L[Org_TierFeatureWhiteLabel]</li>
             </ul>
             @if (Subscription.Tier == SubscriptionTier.ProAdFree)
             {
-                <span class=@string.Format(Two, CurrentPlanIndicator, ChipPro)>@L[Org_ActivePro]</span>
+                <span current-plan pro>@L[Org_ActivePro]</span>
             }
             else
             {

@@ -3,27 +3,3 @@
    Analytics Widgets, KPI Cards, Breakdown Bars & Metric Grids
    ========================================================================== */
 
-.analytics-metric-cell {
-    gap: 0.3rem;
-    text-align: center;
-}
-
-.analytics-metrics-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    width: 100%;
-    padding: 1.25rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 18px);
-    background: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 40%, transparent);
-}
-
-@media (max-width: 600px) {
-    .analytics-metrics-strip {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.75rem;
-        padding: 1rem;
-    }
-}
-

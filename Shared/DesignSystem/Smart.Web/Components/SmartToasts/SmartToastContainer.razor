@@ -1,18 +1,16 @@
 @namespace Smart.Web.Components
 @using Smart.Web.Services
 @using Material.Web.Components
-@using static Assets.Constants.Classes.SmartToast
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.IconButtonVariant
 
-<aside class=@ToastContainer aria-live="polite">
+<aside smart-toasts aria-live="polite">
     @foreach (var toast in Toasts)
     {
-        <article class=@string.Format(Two, SmarttoastRoot, GetToastLevelClass(toast.Level)) @key=@toast.Id role="status">
-            <header class=@SmartToastHeader>
-                <span class=@SmartToastIcon>
+        <article level=@GetToastLevelName(toast.Level) @key=@toast.Id role="status">
+            <header>
+                <span>
                     @(toast.Level switch
                     {
                         ToastLevel.Success => "✓",
@@ -23,15 +21,14 @@
                 </span>
                 @if (!string.IsNullOrEmpty(toast.Title))
                 {
-                    <strong class=@SmartToastTitle>@toast.Title</strong>
+                    <strong>@toast.Title</strong>
                 }
                 <IconButton Icon=@Close
                             Variant=@Standard
                             OnClick=@(() => DismissToast(toast.Id))
-                            AriaLabel=@L[CloseAction]
-                            class=@SmartToastCloseBtn />
+                            AriaLabel=@L[CloseAction] />
             </header>
-            <p class=@SmartToastBody>
+            <p>
                 @toast.Message
             </p>
         </article>

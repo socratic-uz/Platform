@@ -1,8 +1,5 @@
 @namespace Smart.Web.Components
 @using Microsoft.Extensions.Localization
-@using static Assets.Constants.Classes.Fiscal
-@using static Assets.Constants.Classes.Invoice
-@using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Loc.Receipt
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc
@@ -10,30 +7,30 @@
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem
 
-<article id="check" class=@(string.IsNullOrEmpty(Class) ? ReceiptContainer : $"{ReceiptContainer} {Class}") @attributes=AdditionalAttributes>
-    <header class=@ReceiptHeaderClass>
+<article id="check" invoice @attributes=AdditionalAttributes>
+    <header>
         <h3>@(OrganizationName ?? DefaultOrgName)</h3>
         <p>@(OrganizationAddress ?? L[DefaultSystem])</p>
     </header>
 
-    <table class=@ReceiptMeta>
+    <table meta>
         <tr>
             <td>@L[Receipt.NumberText]: <strong>#@(InvoiceNumber ?? DefaultInvoiceNo)</strong></td>
-            <td class=@ReceiptTextRight>@L[Date]: <strong>@(InvoiceDate?.ToString("dd.MM.yyyy HH:mm") ?? DateTime.Now.ToString("dd.MM.yyyy HH:mm"))</strong></td>
+            <td>@L[Date]: <strong>@(InvoiceDate?.ToString("dd.MM.yyyy HH:mm") ?? DateTime.Now.ToString("dd.MM.yyyy HH:mm"))</strong></td>
         </tr>
         <tr>
             <td>@L[Cashier]: <strong>@L[DefaultCashier]</strong></td>
-            <td class=@ReceiptTextRight>@L[Receipt.PaymentText]: <strong>@PaymentMethod</strong></td>
+            <td>@L[Receipt.PaymentText]: <strong>@PaymentMethod</strong></td>
         </tr>
     </table>
 
-    <table class=@ReceiptTable>
+    <table>
         <thead>
             <tr>
-                <th class=@ReceiptColQty>@L[QuantityShort]</th>
-                <th class=@ReceiptColName>@L[ItemNameText]</th>
-                <th class=@ReceiptColPrice>@L[Receipt.Price]</th>
-                <th class=@ReceiptColSum>@L[Amount]</th>
+                <th>@L[QuantityShort]</th>
+                <th>@L[ItemNameText]</th>
+                <th>@L[Receipt.Price]</th>
+                <th>@L[Amount]</th>
             </tr>
         </thead>
         <tbody>
@@ -45,19 +42,19 @@
                     var name = NameSelector(op);
                     var price = PriceSelector(op);
                     <tr>
-                        <td class=@ReceiptCellQty>@qty</td>
-                        <td class=@ReceiptCellName>
+                        <td>@qty</td>
+                        <td>
                             @if (OnItemClick.HasDelegate)
                             {
-                                <Button Variant=@Text class=@ReceiptClickableRow OnClick=@(() => HandleItemClick(op)) Title=@L[RemoveItemHint]>@name</Button>
+                                <Button Variant=@Text OnClick=@(() => HandleItemClick(op)) Title=@L[RemoveItemHint]>@name</Button>
                             }
                             else
                             {
                                 @name
                             }
                         </td>
-                        <td class=@ReceiptCellPrice>@price.ToString("N0")</td>
-                        <td class=@ReceiptCellSum>@((qty * price).ToString("N0"))</td>
+                        <td>@price.ToString("N0")</td>
+                        <td>@((qty * price).ToString("N0"))</td>
                     </tr>
                 }
             }
@@ -71,19 +68,19 @@
         var vat = total * 0.12m;
     }
 
-    <table class=@ReceiptTotals>
+    <table totals>
         <tr>
             <td>@L[VatIncluded]:</td>
-            <td class=@ReceiptTextRight>@vat.ToString("N0") @L[Common.CurrencyUzs]</td>
+            <td>@vat.ToString("N0") @L[Common.CurrencyUzs]</td>
         </tr>
-        <tr class=@GrandTotal>
+        <tr>
             <td>@L[Receipt.InvoiceTotalToPay]:</td>
-            <td class=@ReceiptTextRight>@total.ToString("N0") @L[Common.CurrencyUzs]</td>
+            <td>@total.ToString("N0") @L[Common.CurrencyUzs]</td>
         </tr>
     </table>
 
-    <footer class=@ReceiptFooter>
-        <h4 class=@ReceiptFooterTitle>@L[ThankYou]</h4>
+    <footer>
+        <h4>@L[ThankYou]</h4>
         <p>@L[FiscalReceiptDemo]</p>
     </footer>
 </article>

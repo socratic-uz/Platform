@@ -1,7 +1,6 @@
 @namespace Shared.Components
-@using static Assets.Constants.Classes.Common
 
-<svg class=@AiBlobSvg @onclick=@OnClick style=@Style viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg ai-blob @onclick=@OnClick style=@Style viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
 		<!-- Reusable filters -->
 		<filter id="blur1">
@@ -36,20 +35,20 @@
 	</defs>
 
 	<g id="blob">
-		<use href="#baseBlob1" class=@L4 />
-		<use href="#baseBlob1" class=@L3 />
-		<use href="#baseBlob1" class=@L2 />
-		<use href="#baseBlob1" class=@L1 />
-		<use href="#baseBlob1" class=@L0 />
-		<use href="#baseBlob2" class=@L4 />
-		<use href="#baseBlob2" class=@L3 />
-		<use href="#baseBlob2" class=@L2 />
-		<use href="#baseBlob2" class=@L1 />
-		<use href="#baseBlob2" class=@L0 />
-		<use href="#baseBlob3" class=@L4 />
-		<use href="#baseBlob3" class=@L3 />
-		<use href="#baseBlob3" class=@L2 />
-		<use href="#baseBlob3" class=@L1 />
-		<use href="#baseBlob3" class=@L0 />
+		<use href="#baseBlob1" level="4" />
+		<use href="#baseBlob1" level="3" />
+		<use href="#baseBlob1" level="2" />
+		<use href="#baseBlob1" level="1" />
+		<use href="#baseBlob1" level="0" />
+		<use href="#baseBlob2" level="4" />
+		<use href="#baseBlob2" level="3" />
+		<use href="#baseBlob2" level="2" />
+		<use href="#baseBlob2" level="1" />
+		<use href="#baseBlob2" level="0" />
+		<use href="#baseBlob3" level="4" />
+		<use href="#baseBlob3" level="3" />
+		<use href="#baseBlob3" level="2" />
+		<use href="#baseBlob3" level="1" />
+		<use href="#baseBlob3" level="0" />
 	</g>
 </svg>

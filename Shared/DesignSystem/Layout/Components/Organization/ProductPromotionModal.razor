@@ -3,16 +3,6 @@
 @using Domain.Entities
 @using Material.Web.Components
 @using Material.Web.Components.Labs
-@using static Assets.Constants.Classes.Dialog
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.Badge
-@using static Assets.Constants.Classes.Header
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Payment
-@using static Assets.Constants.Classes.Chips
-@using static Assets.Constants.Classes.QrDesigner
-@using static Assets.Constants.Classes.Typography
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Promotion
 @using static Assets.Constants.Loc.Actions
@@ -20,13 +10,13 @@
 
 @if (IsOpen && Product != null)
 {
-    <MaterialDialog Open=@IsOpen OpenChanged=@((bool v) => { if (!v) CloseModal(); }) class=@PromotionDialog>
+    <MaterialDialog Open=@IsOpen OpenChanged=@((bool v) => { if (!v) CloseModal(); }) promotion>
         <Headline>
-            <header class=@PromotionModalHeader>
-                <hgroup class=@string.Format(Two, TitleGroup, HeaderTitleGroup)>
-                    <Icon Name=@RocketLaunch class=@RocketIcon />
-                    <h2 class=@PromotionModalTitle>@L[TitleText]</h2>
-                    <p class=@PromotionModalSubtitle>@L[SubtitleText]</p>
+            <header>
+                <hgroup>
+                    <Icon Name=@RocketLaunch />
+                    <h2>@L[TitleText]</h2>
+                    <p>@L[SubtitleText]</p>
                 </hgroup>
                 <IconButton Icon=@Close AriaLabel=@L[Close] OnClick=@CloseModal />
             </header>
@@ -34,41 +24,41 @@
         <Content>
             @if (CurrentStep == PromotionModalStep.SelectPlan)
             {
-                <section class=@PromotionModalBody>
-                    <figure class=@ProductPreviewPill>
-                        <span class=@PreviewLabel>@L[PromotedProduct]</span>
+                <section modal-body>
+                    <figure preview-pill>
+                        <span>@L[PromotedProduct]</span>
                         <strong>@Product.Name</strong>
-                        <span class=@PreviewProductPrice>@Product.Price.ToString("N0") UZS</span>
+                        <span>@Product.Price.ToString("N0") UZS</span>
                     </figure>
 
-                    <fieldset class=@PlansGrid>
-                        <legend class=@SectionHeading>@L[Step1Title]</legend>
+                    <fieldset plans>
+                        <legend>@L[Step1Title]</legend>
                         @foreach (var plan in ProductPromotionPlanDefinition.AllPlans)
                         {
                             var isSelected = SelectedPlan.PlanType == plan.PlanType;
                             <Card Type="outlined"
-                                  class=@(isSelected ? string.Format(Two, PlanCard, Classes.Cards.Selected) : PlanCard)
+                                  selected=@isSelected
                                   @onclick=@(() => SelectPlan(plan))
                                   tabindex="0"
                                   role="radio"
                                   aria-checked=@(isSelected ? "true" : "false")>
                                 @if (plan.PlanType == PromotionPlanType.MonthlyTurbo)
                                 {
-                                    <Badge class=@string.Format(Three, Root, Pro, PopularBadge) Value=@L[PopularChoice] />
+                                    <Badge Value=@L[PopularChoice] />
                                 }
-                                <header class=@PlanCardHeader>
-                                    <h4 class=@PlanName>@plan.Name</h4>
-                                    <data class=@PlanPriceWrap value=@plan.PriceUzs>
+                                <header>
+                                    <h4>@plan.Name</h4>
+                                    <data value=@plan.PriceUzs>
                                         <span>@plan.PriceUzs.ToString("N0")</span>
-                                        <span class=@PlanCurrency>UZS</span>
+                                        <span>UZS</span>
                                     </data>
                                 </header>
                                 <p>@plan.Description</p>
-                                <ul class=@PlanFeatures>
+                                <ul>
                                     @foreach (var feat in plan.Features)
                                     {
                                         <li>
-                                            <Icon Name=@CheckCircle class=@FeatIcon />
+                                            <Icon Name=@CheckCircle />
                                             <span>@feat</span>
                                         </li>
                                     }
@@ -77,9 +67,9 @@
                         }
                     </fieldset>
 
-                    <fieldset>
-                        <legend class=@SectionHeading>@L[Step2Title]</legend>
-                        <label class=@(SelectedGateway == PromotionPaymentGatewayType.UzQr ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
+                    <fieldset gateways>
+                        <legend>@L[Step2Title]</legend>
+                        <label active=@(SelectedGateway == PromotionPaymentGatewayType.UzQr)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.UzQr) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr) Name="gateway" />
                             <span>
                                 <span>📱 UzQR (MUNIS QR-Online)</span>
@@ -87,7 +77,7 @@
                             </span>
                         </label>
 
-                        <label class=@(SelectedGateway == PromotionPaymentGatewayType.Click ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
+                        <label active=@(SelectedGateway == PromotionPaymentGatewayType.Click)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Click) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Click) Name="gateway" />
                             <span>
                                 <span>🟡 Click / Click Up</span>
@@ -95,7 +85,7 @@
                             </span>
                         </label>
 
-                        <label class=@(SelectedGateway == PromotionPaymentGatewayType.Payme ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
+                        <label active=@(SelectedGateway == PromotionPaymentGatewayType.Payme)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Payme) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Payme) Name="gateway" />
                             <span>
                                 <span>🟢 Payme Business</span>
@@ -103,7 +93,7 @@
                             </span>
                         </label>
 
-                        <label class=@(SelectedGateway == PromotionPaymentGatewayType.Uzum ? string.Format(Two, PromoPaymentCard, Active) : PromoPaymentCard)>
+                        <label active=@(SelectedGateway == PromotionPaymentGatewayType.Uzum)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Uzum) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum) Name="gateway" />
                             <span>
                                 <span>🟣 Uzum Bank</span>
@@ -115,37 +105,37 @@
             }
             else if (CurrentStep == PromotionModalStep.PaymentProcessing)
             {
-                <section class=@PromotionModalBody>
-                    <fieldset class=@InvoiceSummaryBox>
+                <section modal-body>
+                    <fieldset invoice-summary>
                         <span>@L[InvoiceFor, ActiveOrder?.ProductName ?? string.Empty]</span>
-                        <data class=@InvoiceAmount value=@ActiveOrder?.PriceUzs>@ActiveOrder?.PriceUzs.ToString("N0") UZS</data>
+                        <data value=@ActiveOrder?.PriceUzs>@ActiveOrder?.PriceUzs.ToString("N0") UZS</data>
                         <span>@L[PromoPaymentMethod, GetGatewayDisplayName(ActiveOrder?.PaymentGateway ?? SelectedGateway)]</span>
                     </fieldset>
 
                     @if (SelectedGateway == PromotionPaymentGatewayType.UzQr)
                     {
-                        <section>
-                            <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] class=@string.Format(Two, QrFrame, QrImage) />
-                            <p class=@QrInstruction>
-                                @L[QrInstructionText]
+                        <section style="display: grid; justify-items: center; gap: 1rem; text-align: center;">
+                            <img src=@GetQrCodeImageUrl() alt=@L[QrCodeAlt] style="width: 220px; height: 220px; border-radius: var(--md-sys-shape-corner-medium);" />
+                            <p>
+                                @L[QrInstruction]
                             </p>
                         </section>
                     }
                     else
                     {
-                        <section>
-                            <Icon Name=@OpenInNew class=@RedirectIcon />
+                        <section style="display: grid; justify-items: center; gap: 1rem; text-align: center;">
+                            <Icon Name=@OpenInNew />
                             <p>@L[RedirectMessage] <strong>@GetGatewayDisplayName(SelectedGateway)</strong>.</p>
-                            <Button Variant=@Filled Href=@GetPaymentGatewayUrl() Target="_blank" class=@BtnGatewayLink TrailingIcon=@OpenInNew>
+                            <Button Variant=@Filled Href=@GetPaymentGatewayUrl() Target="_blank" TrailingIcon=@OpenInNew>
                                 @L[OpenPaymentForm]
                             </Button>
                         </section>
                     }
 
-                    <aside>
+                    <aside style="display: grid; justify-items: center; gap: 0.5rem;">
                         @if (isVerifyingPayment)
                         {
-                            <Progress IsCircular=@true Indeterminate=@true FourColor=@true class=@SpinnerInline />
+                            <Progress IsCircular=@true Indeterminate=@true FourColor=@true />
                             <span>@L[VerifyingPayment]</span>
                         }
                         else
@@ -159,23 +149,23 @@
             }
             else if (CurrentStep == PromotionModalStep.Success)
             {
-                <section class=@string.Format(Two, PromotionModalBody, PromoSuccessStep)>
-                    <Icon Name=@Verified class=@string.Format(Two, PromoSuccessIconWrap, PromoSuccessCheckIcon) />
+                <section modal-body style="text-align: center; justify-items: center;">
+                    <Icon Name=@Verified style="color: var(--md-sys-color-primary); font-size: 48px; width: 48px; height: 48px;" />
                     <h3>@L[SuccessTitle]</h3>
                     <p>
                         @L[SuccessDesc, Product.Name]
                     </p>
 
-                    <ul>
-                        <li>
-                            <Icon Name=@ViewCarousel class=@string.Format(Two, FeedIcon, Yandex) />
+                    <ul style="list-style: none; padding: 0; display: grid; gap: 0.5rem; text-align: left;">
+                        <li style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.5rem; align-items: center;">
+                            <Icon Name=@ViewCarousel />
                             <span>
                                 <span>@L[YandexFeed]</span>
                                 <code>/feeds/yandex/@(OrganizationId).xml</code>
                             </span>
                         </li>
-                        <li>
-                            <Icon Name=@ShoppingBasket class=@string.Format(Two, FeedIcon, Google) />
+                        <li style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.5rem; align-items: center;">
+                            <Icon Name=@ShoppingBasket />
                             <span>
                                 <span>@L[GoogleFeed]</span>
                                 <code>/feeds/google/@(OrganizationId).xml</code>

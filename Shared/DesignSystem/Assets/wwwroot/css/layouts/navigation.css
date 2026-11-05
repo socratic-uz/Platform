@@ -51,18 +51,17 @@
     color: var(--md-sys-color-on-primary);
 }
 
+nav a {
+    display: grid;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 
-nav a.nav-item {
+nav a md-icon {
     display: grid;
 }
 
-
-nav a.nav-item md-icon {
-    display: grid;
-}
-
-
-nav a.nav-item span {
+nav a span {
     min-width: 0;
     min-inline-size: 0;
     white-space: nowrap;
@@ -70,16 +69,14 @@ nav a.nav-item span {
     overflow: hidden;
 }
 
-
-nav.glass:not(.nav-mobile) a.nav-item,
-nav.nav-desktop a.nav-item {
+nav.glass a,
+nav.nav-desktop a {
     border-radius: var(--md-sys-shape-corner-large, 16px);
     transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
 }
 
-
-nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined,
-nav.nav-desktop a.nav-item .material-symbols-outlined {
+nav.glass a md-icon,
+nav.nav-desktop a md-icon {
     display: grid;
     border-radius: var(--md-sys-shape-corner-large, 16px);
 }
@@ -142,72 +139,6 @@ nav.nav-desktop a.nav-item .material-symbols-outlined {
         overflow: hidden auto;
     }
 
-    nav.glass:not(.nav-mobile) a.nav-item {
-        grid-template-rows: auto auto;
-        gap: 3px;
-        justify-items: center;
-        align-content: center;
-        width: 64px;
-        min-height: 56px;
-        margin: 4px auto;
-        padding: var(--md-sys-spacing-1, 0.25rem) 2px;
-        color: var(--md-sys-color-on-surface-variant);
-        text-decoration: none;
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item .material-symbols-outlined {
-        place-items: center;
-        width: 52px;
-        height: 30px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 22px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item md-icon {
-        place-items: center;
-        width: 52px;
-        height: 30px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 22px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item span {
-        max-width: 64px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.72rem;
-        font-weight: 500;
-        line-height: 1.15;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item:hover .material-symbols-outlined {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item:hover md-icon {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item.active .material-symbols-outlined {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item.active md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav.glass:not(.nav-mobile) a.nav-item.active span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 700;
-    }
-
     nav.nav-desktop {
         display: var(--nav-display, grid);
         grid-template-columns: 100%;
@@ -233,99 +164,6 @@ nav.nav-desktop a.nav-item .material-symbols-outlined {
         overflow: hidden auto;
     }
 
-    nav.nav-desktop a.nav-item {
-        grid-template-rows: auto auto;
-        gap: 3px;
-        justify-items: center;
-        align-content: center;
-        width: 64px;
-        min-height: 56px;
-        margin: 4px auto;
-        padding: var(--md-sys-spacing-1, 0.25rem) 2px;
-        color: var(--md-sys-color-on-surface-variant);
-        text-decoration: none;
-    }
-
-    nav.nav-desktop a.nav-item .material-symbols-outlined {
-        place-items: center;
-        width: 52px;
-        height: 30px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 22px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav.nav-desktop a.nav-item md-icon {
-        place-items: center;
-        width: 52px;
-        height: 30px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 22px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav.nav-desktop a.nav-item span {
-        max-width: 64px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: var(--md-sys-typescale-label-medium-size);
-        font-weight: 500;
-        line-height: 1.15;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    nav.nav-desktop a.nav-item:hover .material-symbols-outlined {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    nav.nav-desktop a.nav-item:hover md-icon {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    nav.nav-desktop a.nav-item.active .material-symbols-outlined {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav.nav-desktop a.nav-item.active md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav.nav-desktop a.nav-item.active span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 700;
-    }
-
-}
-
-.navigator-controls {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.45rem;
-    align-items: center;
-}
-
-.resource-tabs {
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-
-.ux-category-tabs {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.75rem;
-    justify-content: center;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    padding: 0.5rem 0.25rem 0.75rem 0.25rem;
-    overflow-x: auto;
-    scrollbar-width: none;
 }
 
 
@@ -341,12 +179,37 @@ nav.nav-desktop a.nav-item .material-symbols-outlined {
     -webkit-text-fill-color: transparent;
 }
 
-.md3-headline-icon {
-    color: var(--md-sys-color-primary);
-    font-size: 24px;
+/* --- Fullscreen Display App Nav --- */
+nav a {
+    display: grid;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-/* --- Fullscreen Display App Nav --- */
+nav a md-icon {
+    display: grid;
+}
+
+nav a span {
+    min-width: 0;
+    min-inline-size: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+nav.glass a,
+nav.nav-desktop a {
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+}
+
+nav.glass a md-icon,
+nav.nav-desktop a md-icon {
+    display: grid;
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+}
+
 @media all and (display-mode: fullscreen) {
     footer.app-footer {
         display: none;
@@ -393,52 +256,5 @@ nav.nav-desktop a.nav-item .material-symbols-outlined {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
         transform: none;
-    }
-
-    nav a.nav-item,
-    nav.glass a.nav-item {
-        gap: 2px;
-        place-items: center center;
-        position: relative;
-        min-width: 48px;
-        min-height: 48px;
-        padding: 0.25rem 0.2rem;
-        border-radius: var(--md-sys-shape-corner-medium, 12px);
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
-        text-decoration: none;
-    }
-
-    nav a.nav-item md-icon,
-    nav.glass a.nav-item md-icon {
-        place-items: center;
-        width: 56px;
-        height: 32px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 24px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-    nav a.nav-item span,
-    nav.glass a.nav-item span {
-        max-width: 100%;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
-        font-weight: 500;
-        line-height: 1.2;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    nav a.nav-item.active md-icon,
-    nav.glass a.nav-item.active md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
-
-    nav a.nav-item.active span,
-    nav.glass a.nav-item.active span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 600;
     }
 }

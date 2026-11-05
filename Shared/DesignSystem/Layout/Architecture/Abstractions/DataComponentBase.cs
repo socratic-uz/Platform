@@ -6,6 +6,7 @@ namespace Domain.Abstractions
     //  MultiDataComponentBase: несколько клиентов, разные DTO, ключ — Type.
     // ──────────────────────────────────────────────────────────────────────────
 
+    [System.Obsolete("DataComponentBase is deprecated. Use Clean Architecture Features/UseCases with ValueTask<Result<T>> instead.", false)]
     public class DataComponentBase : ComponentBase, IDisposable
     {
         [Inject]

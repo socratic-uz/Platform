@@ -1,14 +1,13 @@
 @using Microsoft.AspNetCore.Components.Web
 @namespace QuickGrid
 @using Material.Web.Components
-@using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 
-<footer class=@TablePaginator>
+<footer paginator>
     @if (State.TotalItemCount.HasValue)
     {
-        <span class=@PaginatorSummary>
+        <span>
             @if (SummaryTemplate is not null)
             {
                 @SummaryTemplate
@@ -19,14 +18,14 @@
             }
         </span>
         <nav>
-            <IconButton class=@GoFirst Icon=@FirstPage OnClick=@GoFirstAsync Disabled=@(!CanGoBack) Title=@L[PaginationFirstPage] AriaLabel=@L[PaginationFirstPage] />
-            <IconButton class=@GoPrevious Icon=@NavigateBefore OnClick=@GoPreviousAsync Disabled=@(!CanGoBack) Title=@L[PaginationPrevPage] AriaLabel=@L[PaginationPrevPage] />
-            <span class=@PaginationText>
+            <IconButton Icon=@FirstPage OnClick=@GoFirstAsync Disabled=@(!CanGoBack) Title=@L[PaginationFirstPage] AriaLabel=@L[PaginationFirstPage] />
+            <IconButton Icon=@NavigateBefore OnClick=@GoPreviousAsync Disabled=@(!CanGoBack) Title=@L[PaginationPrevPage] AriaLabel=@L[PaginationPrevPage] />
+            <span>
                 @L[PaginationPage] <strong>@(State.CurrentPageIndex + 1)</strong>
                 @L[PaginationOf] <strong>@(State.LastPageIndex + 1)</strong>
             </span>
-            <IconButton class=@GoNext Icon=@NavigateNext OnClick=@GoNextAsync Disabled=@(!CanGoForwards) Title=@L[PaginationNextPage] AriaLabel=@L[PaginationNextPage] />
-            <IconButton class=@GoLast Icon=@LastPage OnClick=@GoLastAsync Disabled=@(!CanGoForwards) Title=@L[PaginationLastPage] AriaLabel=@L[PaginationLastPage] />
+            <IconButton Icon=@NavigateNext OnClick=@GoNextAsync Disabled=@(!CanGoForwards) Title=@L[PaginationNextPage] AriaLabel=@L[PaginationNextPage] />
+            <IconButton Icon=@LastPage OnClick=@GoLastAsync Disabled=@(!CanGoForwards) Title=@L[PaginationLastPage] AriaLabel=@L[PaginationLastPage] />
         </nav>
     }
 </footer>

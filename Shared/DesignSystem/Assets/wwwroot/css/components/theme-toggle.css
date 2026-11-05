@@ -3,34 +3,13 @@
    Light/Dark Mode Theme Switch Controls & Visual Affordances
    ========================================================================== */
 
-.m3-mode-toggle {
-    display: grid;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 46px;
-    border-radius: var(--md-sys-shape-corner-full);
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.m3-mode-toggle-icon {
-    display: grid;
-    width: 30px;
-    height: 30px;
-    transition: grid-column 0.5s cubic-bezier(0.2, 0, 0, 1);
-}
-
-#app.dark-mode .m3-mode-toggle-icon {
-    grid-column: initial;
-}
-
-.settings-panel-container {
+aside[settings] {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     padding: var(--md-sys-spacing-2, 0.5rem);
 }
 
-.settings-section {
+aside[settings] > fieldset {
     display: grid;
     gap: var(--md-sys-spacing-2, 0.5rem);
     border: none;
@@ -38,14 +17,14 @@
     margin: 0;
 }
 
-.settings-section-title {
+aside[settings] > fieldset > legend {
     margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: var(--md-sys-typescale-title-small-size, 0.875rem);
     font-weight: 600;
 }
 
-.settings-theme-options {
+aside[settings] menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, max-content));
     gap: var(--md-sys-spacing-2, 0.5rem);

@@ -44,13 +44,13 @@ export async function initLandingAnimations() {
         });
 
         landingTimeline
-            .fromTo('.hero-badge', { opacity: 0, y: -20, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, delay: 0.05, clearProps: 'transform,opacity' })
-            .fromTo('.hero-title', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9, clearProps: 'transform,opacity' }, '-=0.45')
-            .fromTo('.hero-subtitle', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, clearProps: 'transform,opacity' }, '-=0.6')
-            .fromTo('.hero-actions-primary .cta-btn, .hero-module-pills', { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.7, clearProps: 'all' }, '-=0.55')
-            .fromTo('.hero-stage-card', { opacity: 0, scale: 0.93 }, { opacity: 1, scale: 1, duration: 1.05, ease: 'back.out(1.15)', clearProps: 'transform,opacity' }, '-=0.8')
-            .fromTo('.specs-bar', { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.85, clearProps: 'transform,opacity' }, '-=0.55')
-            .fromTo('.specs-bar .spec-item', { opacity: 0, y: 15 }, { opacity: 1, y: 0, stagger: 0.08, duration: 0.6, clearProps: 'transform,opacity' }, '-=0.5');
+            .fromTo('main[landing] > section[aria-label="Hero"] mark, .hero-badge', { opacity: 0, y: -20, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, delay: 0.05, clearProps: 'transform,opacity' })
+            .fromTo('main[landing] > section[aria-label="Hero"] h1, .hero-title', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9, clearProps: 'transform,opacity' }, '-=0.45')
+            .fromTo('main[landing] > section[aria-label="Hero"] p, .hero-subtitle', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, clearProps: 'transform,opacity' }, '-=0.6')
+            .fromTo('main[landing] > section[aria-label="Hero"] menu > *, .hero-actions-primary .cta-btn, .hero-module-pills', { opacity: 0, y: 20, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.7, clearProps: 'all' }, '-=0.55')
+            .fromTo('main[landing] > section[aria-label="Hero"] figure, .hero-stage-card', { opacity: 0, scale: 0.93 }, { opacity: 1, scale: 1, duration: 1.05, ease: 'back.out(1.15)', clearProps: 'transform,opacity' }, '-=0.8')
+            .fromTo('main[landing] > section[aria-label="Specifications"], .specs-bar', { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.85, clearProps: 'transform,opacity' }, '-=0.55')
+            .fromTo('main[landing] > section[aria-label="Specifications"] > article, .specs-bar .spec-item', { opacity: 0, y: 15 }, { opacity: 1, y: 0, stagger: 0.08, duration: 0.6, clearProps: 'transform,opacity' }, '-=0.5');
 
         // 3. Number Counter Animation for Specs Bar
         initSpecCounters(gsap);
@@ -145,7 +145,7 @@ function initParallaxDepth(gsap) {
 // ScrollTrigger Reveals for Core Sections
 function initScrollReveals(gsap) {
     // Section Title Boxes reveal
-    document.querySelectorAll('.section-title-box').forEach(titleBox => {
+    document.querySelectorAll('main[landing] > section > header, .section-title-box').forEach(titleBox => {
         const st = ScrollTrigger.create({
             trigger: titleBox,
             start: 'top 88%',
@@ -165,7 +165,7 @@ function initScrollReveals(gsap) {
     });
 
     // Evolution Banner
-    const evoSection = document.querySelector('.evolution-banner');
+    const evoSection = document.querySelector('main[landing] > section[aria-label="Pillars"], .evolution-banner');
     if (evoSection) {
         const st = ScrollTrigger.create({
             trigger: evoSection,
@@ -186,7 +186,7 @@ function initScrollReveals(gsap) {
     }
 
     // Dual Org Live Showcases Reveal
-    const orgGrid = document.querySelector('.org-showcase-grid');
+    const orgGrid = document.querySelector('main[landing] > section[aria-label="Showcases"] > section, .org-showcase-grid');
     if (orgGrid) {
         const st = ScrollTrigger.create({
             trigger: orgGrid,
@@ -208,7 +208,7 @@ function initScrollReveals(gsap) {
     }
 
     // Spatial Technology Wings
-    const spatialWings = document.querySelector('.spatial-wings-grid');
+    const spatialWings = document.querySelector('main[landing] > section[aria-label="Spatial"], .spatial-wings-grid');
     if (spatialWings) {
         const st = ScrollTrigger.create({
             trigger: spatialWings,
@@ -229,7 +229,7 @@ function initScrollReveals(gsap) {
     }
 
     // UX Modes Spotlight Showcase (The 4 Flagship Archetypes)
-    const spotlightGrid = document.querySelector('.ux-spotlight-grid');
+    const spotlightGrid = document.querySelector('main[landing] > section[aria-label="Modes"] > section:first-of-type, .ux-spotlight-grid');
     if (spotlightGrid) {
         const st = ScrollTrigger.create({
             trigger: spotlightGrid,
@@ -251,7 +251,7 @@ function initScrollReveals(gsap) {
     }
 
     // UX Modes Explorer Grid batch reveal
-    const modesGrid = document.querySelector('.ux-modes-grid');
+    const modesGrid = document.querySelector('main[landing] > section[aria-label="Modes"] > section:last-of-type, .ux-modes-grid');
     if (modesGrid) {
         const st = ScrollTrigger.create({
             trigger: modesGrid,
@@ -272,7 +272,7 @@ function initScrollReveals(gsap) {
     }
 
     // Bento Superpowers reveals
-    const bentoGrid = document.querySelector('.superpowers-bento-grid');
+    const bentoGrid = document.querySelector('main[landing] > section[aria-label="Bento"], .superpowers-bento-grid');
     if (bentoGrid) {
         const st = ScrollTrigger.create({
             trigger: bentoGrid,
@@ -293,7 +293,7 @@ function initScrollReveals(gsap) {
     }
 
     // B2B Lead Generation Banner
-    const b2bSection = document.querySelector('.b2b-lead-section');
+    const b2bSection = document.querySelector('main[landing] > section[aria-label="Enterprise"], .b2b-lead-section');
     if (b2bSection) {
         const st = ScrollTrigger.create({
             trigger: b2bSection,
@@ -314,7 +314,7 @@ function initScrollReveals(gsap) {
     }
 
     // Platform Grid
-    const platformGrid = document.querySelector('.platforms-unified-grid');
+    const platformGrid = document.querySelector('main[landing] > section[aria-label="Download"] > section, .platforms-unified-grid');
     if (platformGrid) {
         const st = ScrollTrigger.create({
             trigger: platformGrid,
@@ -340,7 +340,7 @@ function initCursorGlowFollower(gsap) {
     const isFinePointer = window.matchMedia('(pointer: fine)').matches;
     if (!isFinePointer) return;
 
-    const orb = document.getElementById('cursorGlowOrb');
+    const orb = document.getElementById('cursor-glow-orb') || document.getElementById('cursorGlowOrb');
     if (!orb) return;
 
     // High performance 60-120fps hardware-accelerated transforms
@@ -359,7 +359,7 @@ function initCursorGlowFollower(gsap) {
 
         // Instant spotlight tracking on any hovered glass or interactive card
         const card = e.target && e.target.closest && e.target.closest(
-            '.glass, .hero-card, .ux-mode-card, .org-card, .bento-card, .spatial-wing-card, .spatial-subcard, .industry-card, .evolution-card, .platform-card, .feature-card'
+            '.glass, .hero-card, .ux-mode-card, .org-card, .bento-card, .spatial-wing-card, .spatial-subcard, .industry-card, .evolution-card, .platform-card, .feature-card, main[landing] article'
         );
         if (card) {
             const rect = card.getBoundingClientRect();
@@ -387,7 +387,7 @@ function initInteractive3DTilt(gsap) {
     if (!isFinePointer) return;
 
     // Only apply 3D physics to large hero and showcase cards to avoid DOM thrashing
-    const cards = document.querySelectorAll('.hero-card, .hero-stage-card, .ux-spotlight-card, .bento-card, .org-card');
+    const cards = document.querySelectorAll('.hero-card, .hero-stage-card, .ux-spotlight-card, .bento-card, .org-card, main[landing] article');
 
     cards.forEach(card => {
         // QuickTo setters for high-performance 60-120fps hardware-accelerated transforms
@@ -437,7 +437,7 @@ function initInteractive3DTilt(gsap) {
 // Switch Hero device tab mockup smoothly with GSAP
 export function switchHeroDeviceTab(tab) {
     const gsap = window.gsap;
-    const stageImg = document.querySelector('.hero-stage-img');
+    const stageImg = document.querySelector('main[landing] > section[aria-label="Hero"] figure img, .hero-stage-img');
     if (!gsap || !stageImg) return;
 
     gsap.fromTo(stageImg,
@@ -455,9 +455,9 @@ export function refreshUxModeCards() {
         ScrollTrigger.refresh();
     }
 
-    const cards = document.querySelectorAll('.ux-mode-card');
+    const cards = document.querySelectorAll('main[landing] > section[aria-label="Modes"] article, .ux-mode-card');
     if (cards.length > 0) {
-        gsap.fromTo(cards, 
+        gsap.fromTo(cards,
             { opacity: 0, y: 16, scale: 0.98 },
             { opacity: 1, y: 0, scale: 1, duration: 0.3, stagger: 0.02, ease: 'power2.out', clearProps: 'transform,opacity' }
         );

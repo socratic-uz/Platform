@@ -3,32 +3,7 @@
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
-.smart-enum-container {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-}
-
-.smart-enum-label {
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.smart-enum-required {
-    color: var(--md-sys-color-error);
-}
-
-.smart-enum-segmented {
-    width: 100%;
-}
-
-.smart-enum-options {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding-left: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.smart-checkbox-container {
+fieldset[smart-enum] {
     display: grid;
     gap: var(--md-sys-spacing-2, 0.5rem);
     border: none;
@@ -36,7 +11,7 @@
     margin: 0;
 }
 
-.smart-checkbox-group-title {
+fieldset[smart-enum] > legend {
     font-weight: 500;
     font-size: 0.9rem;
     color: var(--md-sys-color-on-surface-variant);
@@ -44,7 +19,39 @@
     margin: 0;
 }
 
-.smart-checkbox-group {
+:where([required]) {
+    color: var(--md-sys-color-error);
+}
+
+fieldset[smart-enum] md-segmented-button-set {
+    width: 100%;
+}
+
+fieldset[smart-enum] > menu {
+    display: grid;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    padding: 0 0 0 var(--md-sys-spacing-1, 0.25rem);
+    margin: 0;
+    list-style: none;
+}
+
+fieldset[smart-checkbox] {
+    display: grid;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset[smart-checkbox] > legend {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0;
+    margin: 0;
+}
+
+fieldset[smart-checkbox] > ul {
     display: grid;
     gap: var(--md-sys-spacing-2, 0.5rem);
     padding: 0;
@@ -52,26 +59,21 @@
     list-style: none;
 }
 
-.smart-checkbox-group.vertical {
+fieldset[smart-checkbox][layout="vertical"] > ul {
     grid-auto-flow: row;
 }
 
-.smart-checkbox-group.horizontal {
+fieldset[smart-checkbox][layout="horizontal"] > ul {
     grid-auto-flow: column;
 }
 
-.smart-checkbox-item {
+fieldset[smart-checkbox] > ul > li {
     display: grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2, 0.5rem);
     align-items: center;
 }
 
-.smart-checkbox-single {
-    display: grid;
-    align-items: center;
-}
-
-.checkbox-icon {
+fieldset[smart-checkbox] md-icon {
     font-size: 1.25rem;
 }

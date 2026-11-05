@@ -1,6 +1,9 @@
 /* ==========================================================================
    Socratic Design System — PAGES / seat-designer.css
-   Classless Page Landmark Architecture
+   Direct Body Landmark for Seat Designer: <main seat-designer>
+   Level 1: body:has(layout[...])
+   Level 2: <main seat-designer>
+   Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    ========================================================================== */
 
 main[seat-designer] {
@@ -8,10 +11,222 @@ main[seat-designer] {
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1.5rem;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
     min-height: calc(100dvh - var(--md-sys-spacing-header, 64px));
     padding: clamp(1.25rem, 4vw, 2.5rem);
     background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
 }
+
+/* ==========================================================================
+   1. Seat Designer Header Bar
+   ========================================================================== */
+
+main[seat-designer] > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[seat-designer] > header > hgroup {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.25rem 1rem;
+    align-items: center;
+}
+
+main[seat-designer] > header > hgroup > [icon] {
+    grid-row: 1 / 3;
+    font-size: 2.5rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[seat-designer] > header > hgroup > h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[seat-designer] > header > hgroup > p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[seat-designer] > header > nav[aria-label] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+main[seat-designer] > header > nav[aria-label] > span {
+    display: inline-grid;
+    place-items: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    background: color-mix(in srgb, var(--md-sys-color-primary) 15%, transparent);
+    color: var(--md-sys-color-primary);
+}
+
+/* ==========================================================================
+   2. Notification Banner
+   ========================================================================== */
+
+main[seat-designer] > aside[banner] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+/* ==========================================================================
+   3. Workspace: Toolbar & Canvas Area
+   ========================================================================== */
+
+main[seat-designer] > section[aria-label] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+}
+
+/* Sidebar Toolbar */
+main[seat-designer] > section[aria-label] > aside[toolbar] {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    box-sizing: border-box;
+    width: clamp(260px, 30vw, 340px);
+    min-height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background-color: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[seat-designer] > section[aria-label] > aside[toolbar] > header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+main[seat-designer] > section[aria-label] > aside[toolbar] > header > [icon] {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+main[seat-designer] > section[aria-label] > aside[toolbar] > fieldset {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+main[seat-designer] > section[aria-label] > aside[toolbar] > fieldset > legend {
+    padding: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-outline);
+}
+
+main[seat-designer] > section[aria-label] > aside[toolbar] > fieldset > menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Canvas Area */
+main[seat-designer] > section[aria-label] > section {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    min-width: 0;
+    min-height: 500px;
+}
+
+main[seat-designer] > section[aria-label] figure[seat-designer] {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    margin: 0;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background-color: var(--md-sys-color-surface-dim);
+    overflow: hidden;
+}
+
+/* Selected Seat Info Card */
+main[seat-designer] > section[aria-label] aside[card] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[seat-designer] > section[aria-label] aside[card] > [icon] {
+    font-size: 1.5rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[seat-designer] > section[aria-label] aside[card] > hgroup > h6 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[seat-designer] > section[aria-label] aside[card] > hgroup > p {
+    margin: 0;
+    font-size: 0.825rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
     main[seat-designer] {
@@ -20,5 +235,16 @@ main[seat-designer] {
         padding-right: max(1rem, env(safe-area-inset-right, 0px));
         padding-left: max(1rem, env(safe-area-inset-left, 0px));
     }
-}
 
+    main[seat-designer] > header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    main[seat-designer] > section[aria-label] {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    main[seat-designer] > section[aria-label] > aside[toolbar] {
+        width: 100%;
+    }
+}

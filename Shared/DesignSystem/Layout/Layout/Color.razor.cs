@@ -18,6 +18,7 @@ namespace Shared.Layout
 
         private bool _isDark;
 
+        public string ModeValue => _isDark ? "dark" : "light";
         public string ModeClass => _isDark ? "dark-mode" : "light-mode";
         public string ColorClass => string.Format(AssetConstants.Formats.Two, Accent?.ToString().ToLower(), ModeClass);
 

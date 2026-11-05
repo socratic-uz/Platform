@@ -3,44 +3,22 @@
    Ad Network, Digital Signage & Kiosk Screensaver Ad Units
    ========================================================================== */
 
-.ad-network-unit-card {
+aside[ads][google] {
     display: grid;
-    gap: 0.75rem;
+    place-items: center;
     width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    padding: 1.25rem;
-    border: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.15);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
-    background: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.85);
-    box-shadow: 0 16px 40px rgb(from var(--md-sys-color-shadow) r g b / 0.5);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    min-height: 90px;
 }
 
-.ad-network-badge {
-    color: var(--md-sys-color-primary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.ad-network-badge-row {
+aside[ads] > section[yandex-ads],
+section[yandex-ads] {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgb(from var(--md-sys-color-outline) r g b / 0.08);
+    place-items: center;
+    width: 100%;
+    min-height: 90px;
 }
 
-.ad-disclaimer {
-    color: var(--md-sys-color-outline);
-    font-size: 0.75rem;
-}
-
-.ad-network-footer {
+aside[ads] > footer {
     display: grid;
     grid-auto-flow: column;
     justify-content: end;
@@ -48,97 +26,22 @@
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.ad-network-partner {
-    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.5);
     font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
 }
 
-.ad-network-screensaver-body {
-    display: grid;
-    gap: 1.25rem;
-    justify-items: center;
-    width: 100%;
-    animation: kioskSlideUp 0.5s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.ad-org-context {
-    color: rgb(from var(--md-sys-color-on-surface) r g b / 0.6);
-    font-size: 0.85rem;
-}
-
-.ad-screensaver-footer {
-    display: grid;
-    gap: 0.5rem;
-    justify-items: center;
-    margin-top: 1rem;
-}
-
-.ad-slide-touch-prompt {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.75rem;
-    align-items: center;
-    position: relative;
-    margin-top: 1.5rem;
-    padding: 1rem 2.5rem;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    font-size: 1.25rem;
-    font-weight: 700;
-    box-shadow: 0 8px 30px rgb(from var(--md-sys-color-primary) r g b / 0.4);
-    transition: transform 0.2s ease;
-}
-
-.ad-slot {
-    display: grid;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    margin: var(--md-sys-spacing-4) 0;
-}
-
-.ad-slot.ad-placement-catalog {
-    min-height: 100px;
-}
-
-.ad-touch-icon {
-    font-size: 1.75rem;
-}
-
-.ad-upgrade-link {
+aside[ads] > footer > a {
     color: var(--md-sys-color-tertiary);
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.ad-upgrade-link:hover {
+aside[ads] > footer > a:hover {
     color: var(--md-sys-color-tertiary-fixed);
 }
 
-.ad-network-container .google-adsense-wrapper {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    min-height: 90px;
-}
-
-.ad-network-container .yandex-ads-wrapper {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    min-height: 90px;
-}
-
-.yandex-rtb-container {
-    min-width: 0;
-}
-
-aside[ads],
-.ad-slot-container {
+aside[ads] {
     display: grid;
     align-items: stretch;
     padding: 0.75rem;
@@ -151,8 +54,7 @@ aside[ads],
                 box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
 }
 
-aside[ads]:hover,
-.ad-slot-container:hover {
+aside[ads]:hover {
     box-shadow: var(--md-sys-elevation-expressive-2);
     transform: translateY(-2px);
 }

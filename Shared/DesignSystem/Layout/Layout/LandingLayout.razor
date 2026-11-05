@@ -3,8 +3,6 @@
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
 @using SharedKernel.Extensions
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.Feedback
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Landing
@@ -19,31 +17,31 @@
 
 @if (IsRootLanding)
 {
-	<aside class=@LandingFloatingControlsClass aria-label="Quick Actions">
+	<aside floating aria-label="Quick Actions">
 		<LanguageSelector Variant="pill" />
-		<Button Variant=@Filled Href="/signin" Icon=@Login class=@LandingFloatingAuthBtnClass title=@L[SocraticID]>
+		<Button Variant=@Filled Href="/signin" Icon=@Login title=@L[SocraticID]>
 			@L[SocraticID]
 		</Button>
 	</aside>
 }
 else
 {
-	<Header Class=@LandingHeaderClass ShowDefaultActions=@false>
+	<Header ShowDefaultActions=@false>
 		<CenterContent>
-			<nav class=@LandingHeaderNavClass aria-label=@L[MainNavigation]>
-				<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@LandingNavLinkClass>
+			<nav aria-label=@L[MainNavigation]>
+				<a href="/kiosk/@(ObjectIdExtension.DemoId)">
 					<Icon Name=@Storefront />
 					<span>@L[Showroom]</span>
 				</a>
-				<a href="/docs" class=@LandingNavLinkClass>
+				<a href="/docs">
 					<Icon Name=@MenuBook />
 					<span>@L[Documentation]</span>
 				</a>
-				<a href="/help" class=@LandingNavLinkClass>
+				<a href="/help">
 					<Icon Name=@HelpOutline />
 					<span>@L[HelpText]</span>
 				</a>
-				<a href="/about" class=@LandingNavLinkClass>
+				<a href="/about">
 					<Icon Name=@Info />
 					<span>@L[AboutText]</span>
 				</a>
@@ -51,10 +49,10 @@ else
 		</CenterContent>
 		<EndContent>
 			<LanguageSelector Variant="pill" />
-			<Button Variant=@Outlined Href="/signin" Icon=@Login class=@LandingAuthBtnClass>
+			<Button Variant=@Outlined Href="/signin" Icon=@Login>
 				@L[SocraticID]
 			</Button>
-			<IconButton Icon=@MenuIcon Class=@LandingMobileMenuToggleClass OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : L[Docs_ShowMenu]) />
+			<IconButton Icon=@MenuIcon OnClick=@ToggleMobileMenu AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : L[Docs_ShowMenu]) />
 		</EndContent>
 	</Header>
 
@@ -62,26 +60,26 @@ else
 
 	@if (IsMobileMenuOpen)
 	{
-		<IconButton class=@LandingMobileMenuBackdropClass OnClick=@CloseMobileMenu AriaLabel=@L[CloseAction] />
-		<nav class=@LandingMobileMenuDrawerClass aria-label=@L[MainNavigation]>
-			<a href="/kiosk/@(ObjectIdExtension.DemoId)" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+		<IconButton backdrop OnClick=@CloseMobileMenu AriaLabel=@L[CloseAction] />
+		<nav drawer aria-label=@L[MainNavigation]>
+			<a href="/kiosk/@(ObjectIdExtension.DemoId)" @onclick=@CloseMobileMenu>
 				<Icon Name=@Storefront />
 				<span>@L[Showroom]</span>
 			</a>
-			<a href="/docs" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+			<a href="/docs" @onclick=@CloseMobileMenu>
 				<Icon Name=@MenuBook />
 				<span>@L[Documentation]</span>
 			</a>
-			<a href="/help" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+			<a href="/help" @onclick=@CloseMobileMenu>
 				<Icon Name=@HelpOutline />
 				<span>@L[HelpText]</span>
 			</a>
-			<a href="/about" class=@MobileNavItemClass @onclick=@CloseMobileMenu>
+			<a href="/about" @onclick=@CloseMobileMenu>
 				<Icon Name=@Info />
 				<span>@L[AboutText]</span>
 			</a>
-			<Divider Class=@MobileNavDividerClass />
-			<footer class=@MobileNavFooterClass>
+			<Divider />
+			<footer>
 				<LanguageSelector Variant="inline" />
 			</footer>
 		</nav>
@@ -93,9 +91,9 @@ else
 		@Body
 	</ChildContent>
 	<ErrorContent Context="ex">
-		<article class=@ErrorBoundaryCard>
-			<h3 class=@ErrorBoundaryTitle>@L[ErrorLoading]</h3>
-			<p class=@ErrorBoundaryDesc>@ex.Message</p>
+		<article error role="alert">
+			<h3>@L[ErrorLoading]</h3>
+			<p>@ex.Message</p>
 			<Button Variant=@Filled OnClick=@Recover>@L[TryAgain]</Button>
 		</article>
 	</ErrorContent>

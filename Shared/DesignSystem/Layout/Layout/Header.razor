@@ -1,6 +1,5 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
-@using static Assets.Constants.Classes.Header
 @using static Assets.Constants.Icons
 
 @if (Visible && !Empty)
@@ -13,12 +12,12 @@
 		else
 		{
 			<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-			<nav class=@HeaderStartZone aria-label="Breadcrumb">
+			<nav aria-label="Breadcrumb">
 				@if (ShowBrand)
 				{
-					<a href="/" class=@HeaderBrandLink title="Socratic">
-						<Icon Name=@AutoAwesome class=@BrandIconBox />
-						<span class=@HeaderBrandText>Socratic</span>
+					<a href="/" title="Socratic">
+						<Icon Name=@AutoAwesome />
+						<span>Socratic</span>
 					</a>
 				}
 				@if (StartContent != null)
@@ -36,7 +35,7 @@
 			<HeaderCenterOutlet />
 
 			<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-			<menu class=@HeaderEndZone aria-label="User Actions">
+			<menu aria-label="User Actions">
 				@if (EndContent != null)
 				{
 					@EndContent
@@ -54,4 +53,3 @@
 		}
 	</SectionContent>
 }
-

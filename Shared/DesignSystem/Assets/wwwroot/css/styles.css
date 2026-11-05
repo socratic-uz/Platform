@@ -93,6 +93,7 @@
 @import "pages/analytics.css" layer(pages);
 
 /* --- Secondary & Specialized Workflow Pages --- */
+@import "pages/product.css" layer(pages);
 @import "pages/orders.css" layer(pages);
 @import "pages/payment.css" layer(pages);
 @import "pages/map.css" layer(pages);

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
-using FiscalItem = SharedKernel.Fiscalization.FiscalItem;
+using SharedKernel.Fiscalization;
 using SharedKernel.ValueObjects;
-using IQrDesignerService = Domain.Interfaces.Common.IQrDesignerService;
+using Domain.Interfaces.Common;
 using QrStylingOptions = Domain.Interfaces.Common.QrStylingOptions;
 using Domain.Interfaces.Hardware;
 
@@ -85,3 +85,4 @@ public partial class UniversalReceiptView : ComponentBase
         }
     }
 }
+

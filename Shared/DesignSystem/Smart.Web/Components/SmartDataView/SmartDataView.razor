@@ -1,15 +1,12 @@
 @namespace Smart.Web.Components
 @using Material.Web.Components
-@using Assets.Constants
-@using static Assets.Constants.Classes.SmartDataView
-@using static Assets.Constants.Classes.ThemeToggle
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Material.Web.Components.ButtonVariant
 @typeparam TItem where TItem : class, new()
 
-<article class=@SmartdataviewRoot>
-    <header class=@SmartDataViewHeader>
+<article smart-dataview>
+    <header>
         <SmartFilterBar TItem="TItem"
                         Placeholder=@EffectivePlaceholder
                         SearchText=@SearchText
@@ -17,7 +14,7 @@
                         FilterChips=@FilterChips
                         OnChipToggled=@OnChipToggled />
 
-        <menu class=@SmartViewModeToggle>
+        <menu>
             <Button Variant=@(CurrentMode == ViewMode.Grid ? Filled : Outlined)
                     Icon=@TableChart
                     OnClick=@(() => SetViewMode(ViewMode.Grid))>

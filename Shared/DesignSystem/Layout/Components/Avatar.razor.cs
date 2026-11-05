@@ -25,20 +25,19 @@ using Domain.Interfaces.Biometrics;
 
 using Domain.Abstractions;
 
-using R = Domain.Entities.Role;
-using T = Domain.Entities.User;
-using Theme = SharedKernel.ValueObjects.Theme;
+using Domain.Entities;
 
 using AssetConstants = global::Assets.Constants;
 
 namespace Shared.Components
 {
-    public partial class Avatar : DataComponentBase
+    public partial class Avatar : ComponentBase
     {
+        [Inject] public IServiceClientFactory ClientFactory { get; set; } = default!;
         [Inject] private IServiceProvider? ServiceProvider { get; set; }
         [Inject] public IStringLocalizer l { get; set; } = default!;
         [Inject] public NavigationManager nav { get; set; } = default!;
-        [Inject] public AuthServiceClient authClient { get; set; } = default!;
+        [Inject] public Domain.Interfaces.Identity.IUserAccountGateway UserAccountGateway { get; set; } = default!;
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;
         [Inject] public ISettingsManager settings { get; set; } = default!;
         [Inject] public IJSRuntime js { get; set; } = default!;
@@ -48,7 +47,7 @@ namespace Shared.Components
         string? mode;
         Language[] languages = [Language.Uz, Language.Ru, Language.En];
         string? language;
-        List<R> Roles { get; set; } = new();
+        List<Role> Roles { get; set; } = new();
         string roleId;
         Permission permission;
         int ProgressPercent = 0;
@@ -186,7 +185,7 @@ namespace Shared.Components
 
         [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
         [Parameter] public EventCallback OnStateHasChanged { get; set; }
-        [SupplyParameterFromForm] public T? FormModel { get; set; } = default!;
+        [SupplyParameterFromForm] public User? FormModel { get; set; } = default!;
         [Parameter] public bool IsOpen { get; set; }
         [Parameter] public EventCallback<EventArgs> OnClose { get; set; }
 
@@ -227,7 +226,7 @@ namespace Shared.Components
             {
                 userIdStr = await Settings.GetUserIdAsync();
                 Logger.LogInformation("[Profile] Current user ID from settings: {UserId}", userIdStr ?? "(empty)");
-                profile ??= await ClientFactory.GetClient<T>().Read(new() { Id = Guid.TryParse(userIdStr, out var uG) ? uG : null });
+                profile ??= await ClientFactory.GetClient<User>().Read(new() { Id = Guid.TryParse(userIdStr, out var uG) ? uG : null });
 
                 if (profile == null)
                 {
@@ -314,7 +313,7 @@ namespace Shared.Components
                 {
                     profile.Theme = newTheme;
                 }
-                await ClientFactory.GetClient<T>().Update(profile);
+                await ClientFactory.GetClient<User>().Update(profile);
             }
             catch (Exception)
             {
@@ -445,7 +444,7 @@ namespace Shared.Components
 
             if (Roles.Any()) return;
 
-            Roles = await ClientFactory.GetClient<R>().Read(new());
+            Roles = await ClientFactory.GetClient<Role>().Read(new());
         }
 
 
@@ -456,10 +455,10 @@ namespace Shared.Components
         {
             var oldRole = roleId;
             roleId = id;
-            var access = await authClient.SwitchAsync(new() { RoleId = id });
-            if (access != null)
+            var token = await UserAccountGateway.SwitchRoleAsync(id);
+            if (token != null)
             {
-                await settings.SetAccessTokenAsync(access.Token);
+                await settings.SetAccessTokenAsync(token);
                 permission = await settings.GetPermissionAsync();
             }
             else
@@ -480,7 +479,7 @@ namespace Shared.Components
             }
             try
             {
-                var update = await ClientFactory.GetClient<T>().Update(FormModel);
+                var update = await ClientFactory.GetClient<User>().Update(FormModel);
 
                 if (update is not null)
                 {
@@ -770,21 +769,18 @@ namespace Shared.Components
                 if (regDto != null)
                 {
                     regDto.UserId = currentUserId;
-                    var token = await Settings.GetAccessTokenAsync();
-                    var headers = new Grpc.Core.Metadata();
-                    if (!string.IsNullOrWhiteSpace(token))
-                    {
-                        headers.Add("Authorization", $"Bearer {token}");
-                    }
+                    var success = await UserAccountGateway.RegisterPasskeyAsync(
+                        currentUserId ?? string.Empty,
+                        regDto.Id,
+                        regDto.RawId,
+                        regDto.ClientDataJSON,
+                        regDto.AttestationObject);
 
-                    await authClient.RegisterPasskeyAsync(new Identifying.Application.Protos.PasskeyRegisterCredentials
+                    if (!success)
                     {
-                        UserId = currentUserId ?? string.Empty,
-                        Id = regDto.Id,
-                        RawId = regDto.RawId,
-                        ClientDataJson = regDto.ClientDataJSON,
-                        AttestationObject = regDto.AttestationObject
-                    }, headers);
+                        Logger.LogWarning("[Profile.Passkey] Server rejected passkey registration for User {UserId}", currentUserId);
+                        return;
+                    }
 
                     isPasskeyConfigured = true;
                     Logger.LogInformation("[Profile.Passkey] Passkey successfully registered on server for User {UserId}", currentUserId);
@@ -800,5 +796,9 @@ namespace Shared.Components
             : "color: var(--md-sys-color-secondary);";
     }
 }
+
+
+
+
 
 

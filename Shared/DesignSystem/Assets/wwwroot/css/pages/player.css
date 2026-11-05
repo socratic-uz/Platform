@@ -1,6 +1,6 @@
 /* ==========================================================================
    Socratic Design System — PAGES / player.css
-   Direct Body Landmarks for Fullscreen Video Player: <main player>
+   Direct Body Landmarks for Fullscreen Video Player: main[player]
    ========================================================================== */
 
 main[player],
@@ -19,3 +19,22 @@ main[fullscreen-player] {
     overflow: hidden;
 }
 
+main[player] > video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main[player] > aside[role="status"] {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+    place-items: center;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[player] > aside[role="status"] > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 1rem;
+}

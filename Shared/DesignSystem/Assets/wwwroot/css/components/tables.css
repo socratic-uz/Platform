@@ -80,6 +80,7 @@
     padding: 0;
 }
 
+footer[paginator],
 .paginator {
     display: grid;
     grid-auto-flow: column;
@@ -97,11 +98,12 @@
     background: var(--md-sys-color-surface-container);
 }
 
-.paginator-summary {
+footer[paginator] > span {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
 }
 
+footer[paginator] > nav,
 .paginator nav {
     display: grid;
     grid-auto-flow: column;
@@ -109,150 +111,6 @@
     gap: 0.5rem;
     align-items: center;
     margin-left: auto;
-}
-
-:where(.table-container):not(table) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    overflow: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
-:where(table.table-container) {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    overflow-x: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
-:where(.table-container) *:not(a) {
-    border-collapse: collapse;
-}
-
-:where(.table-container) > .paginator {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    grid-column: 1 / -1;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container);
-}
-
-:where(.table-container) > table {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--md-sys-color-surface);
-}
-
-.table-container tbody > :last-child > * {
-    border-bottom: none;
-}
-
-.table-container tbody > * > :first-child {
-    border-left: none;
-}
-
-.table-container tbody > * > :last-child {
-    border-right: none;
-}
-
-.table-container td {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
-    white-space: nowrap;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.table-container td md-icon:not([slot]) {
-    vertical-align: middle;
-}
-
-.table-container td.actions-column {
-    justify-items: end;
-    position: sticky;
-    right: 0;
-    z-index: 1;
-    background: var(--md-sys-color-surface);
-    text-align: right;
-}
-
-.table-container th {
-    position: relative;
-    padding: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.table-container th md-icon:not([slot]) {
-    vertical-align: middle;
-}
-
-.table-container th.actions-column {
-    justify-items: end;
-    position: sticky;
-    right: 0;
-    z-index: 2;
-    background: var(--md-sys-color-surface-container-high);
-    text-align: right;
-}
-
-.table-container thead > :first-child > * {
-    border-top: none;
-}
-
-.table-container thead > * > :first-child {
-    border-left: none;
-}
-
-.table-container thead > * > :last-child {
-    border-right: none;
-}
-
-.table-container tr:hover td {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-.table-container tr:hover td.actions-column {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-.table-icon {
-    color: var(--md-sys-color-outline);
-    font-size: 18px;
 }
 
 [contenteditable="true"] {
@@ -294,15 +152,6 @@ table.quickgrid td {
     vertical-align: middle;
 }
 
-table.quickgrid td.actions-column {
-    justify-items: end;
-    position: sticky;
-    right: 0;
-    z-index: 1;
-    background: var(--md-sys-color-surface);
-    text-align: right;
-}
-
 table.quickgrid th {
     position: relative;
     padding: 1rem;
@@ -312,15 +161,6 @@ table.quickgrid th {
     font-weight: 600;
     white-space: nowrap;
     vertical-align: middle;
-}
-
-table.quickgrid th.actions-column {
-    justify-items: end;
-    position: sticky;
-    right: 0;
-    z-index: 2;
-    background: var(--md-sys-color-surface-container-high);
-    text-align: right;
 }
 
 table.quickgrid thead > :first-child > * {
@@ -336,10 +176,6 @@ table.quickgrid thead > * > :last-child {
 }
 
 table.quickgrid tr:hover td {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-table.quickgrid tr:hover td.actions-column {
     background: var(--md-sys-color-surface-container-highest);
 }
 
@@ -369,8 +205,7 @@ td.col-justify-start {
 }
 
 @media (max-width: 599.98px) {
-    .paginator,
-    .table-container > .paginator {
+    .paginator {
         grid-auto-flow: row;
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
@@ -384,12 +219,6 @@ td.col-justify-start {
         max-width: 100%;
         overflow-x: auto;
     }
-}
-
-.pagination-text {
-    margin: 0 0.5rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
 }
 
 /* --- Amount Value Cell --- */

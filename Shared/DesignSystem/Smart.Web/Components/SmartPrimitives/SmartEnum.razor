@@ -3,21 +3,19 @@
 @using System.ComponentModel
 @using System.ComponentModel.DataAnnotations
 @using Microsoft.AspNetCore.Components.Forms
-@using static Assets.Constants.Classes.SmartEnum
-@using static Assets.Constants.Classes.SegmentedButton
 @using static Material.Web.Components.ChipType
 @typeparam TEnum where TEnum : struct, Enum
 @inherits InputBase<TEnum>
 @attribute [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "SmartEnum generic instantiations use preserved enum types")]
 
-<fieldset class=@SmartEnumContainer>
+<fieldset smart-enum>
     @if (!string.IsNullOrEmpty(Label))
     {
-        <legend class=@SmartEnumLabel>
+        <legend>
             @Label
             @if (Required)
             {
-                <span class=@SmartEnumRequired> *</span>
+                <span required> *</span>
             }
         </legend>
     }
@@ -34,7 +32,7 @@
             break;
 
         case SmartEnumDisplayType.Segmented:
-            <SegmentedButtonSet class=@SmartEnumSegmented>
+            <SegmentedButtonSet>
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
@@ -61,7 +59,7 @@
             break;
 
         case SmartEnumDisplayType.Checkboxes:
-            <menu class=@SmartEnumOptions>
+            <menu>
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);
@@ -74,7 +72,7 @@
             break;
 
         case SmartEnumDisplayType.Radio:
-            <menu class=@SmartEnumOptions>
+            <menu>
                 @foreach (var val in EnumValues)
                 {
                     var isSelected = IsSelected(val);

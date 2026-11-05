@@ -3,8 +3,38 @@
    Subscription Plans, Pricing Tiers, Feature Lists & Plan Indicators
    ========================================================================== */
 
-article[pricing-tier],
-.tier-box {
+article[organization-subscription] {
+    display: grid;
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    padding: var(--md-sys-spacing-6, 1.5rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface);
+}
+
+article[organization-subscription] > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+article[organization-subscription] > section > h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+article[organization-subscription] > section > p {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+article[pricing-tier] {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     align-content: space-between;
@@ -17,25 +47,25 @@ article[pricing-tier],
     cursor: pointer;
 }
 
-.tier-box :where(md-filled-button, md-outlined-button, button) {
+article[pricing-tier] :where(md-filled-button, md-outlined-button, button) {
     width: 100%;
 }
 
-.tier-box:hover {
+article[pricing-tier]:hover {
     border-color: var(--md-sys-color-outline);
     transform: translateY(-2px);
 }
 
-.tier-box.active-tier {
+article[pricing-tier][active] {
     border-color: var(--md-sys-color-primary);
     background: var(--md-sys-color-surface-container-high);
 }
 
-.tier-box.pro-tier {
+article[pricing-tier][pro] {
     border-color: var(--md-sys-color-tertiary);
 }
 
-.current-plan-indicator {
+span[current-plan] {
     display: block;
     padding: 0.4rem;
     border-radius: var(--md-sys-shape-corner-small, 8px);
@@ -46,65 +76,27 @@ article[pricing-tier],
     text-align: center;
 }
 
-.current-plan-indicator.pro {
+span[current-plan][pro] {
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
 
-.plan-currency {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.plan-features {
-    display: grid;
-    gap: 0.6rem;
-    margin: 0;
-    padding: 0;
-    font-size: 0.9rem;
-    list-style: none;
-}
-
-.plan-features li {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.plan-name {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
+span[tag-pro] {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    padding: 2px 10px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    font-size: 0.75rem;
     font-weight: 700;
-}
-
-.plan-price-wrap {
-    color: var(--md-sys-color-primary);
-    font-size: 1.75rem;
-    font-weight: 800;
+    text-transform: uppercase;
 }
 
 /* --- Plans & Subscriptions --- */
 
-.subscription-description {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.subscription-title {
-    margin: 0 0 0.4rem;
-    font-size: 1.45rem;
-    font-weight: 700;
-}
-
-.tier-features {
+article[pricing-tier] > ul {
     display: grid;
     gap: 0.6rem;
     margin: 0;
@@ -113,65 +105,53 @@ article[pricing-tier],
     list-style: none;
 }
 
-.tier-features li {
+article[pricing-tier] > ul > li {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
 }
 
-.tier-header {
+article[pricing-tier] > header {
     display: grid;
     gap: 0.35rem;
 }
 
-.tier-name {
+article[pricing-tier] > header > h3 {
     margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1.15rem;
     font-weight: 700;
 }
 
-.tier-price {
+article[pricing-tier] > header > span {
     color: var(--md-sys-color-primary);
     font-size: 1.75rem;
     font-weight: 800;
 }
 
-.tier-price small {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
+p[trial-counter],
 .trial-counter {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.4rem;
     align-items: baseline;
+    margin: 0;
 }
 
-.trial-days-highlight {
+p[trial-counter] > strong {
     color: var(--md-sys-color-primary);
     font-size: 1.6rem;
     font-weight: 800;
 }
 
-.trial-days-label {
+p[trial-counter] > span {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
 }
 
-.plans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
-}
-
-section[pricing],
-.tiers-grid {
+section[pricing] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: var(--md-sys-spacing-4, 1rem);

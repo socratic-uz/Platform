@@ -1,96 +1,89 @@
 @namespace Smart.Web.Components
 @using Microsoft.Extensions.Localization
 @using Microsoft.JSInterop
-@using static Assets.Constants.Classes.Fiscal
-@using static Assets.Constants.Classes.Terminal
-@using static Assets.Constants.Classes.Badge
-@using static Assets.Constants.Classes.QrDesigner
-@using static Assets.Constants.Classes.InfoGrid
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Loc.Receipt
 @using static Assets.Constants.Icons
 @using static Material.Web.Components.ButtonVariant
 
-<article fiscal id="fiscal-receipt-element" class=@FiscalReceipt>
-    <header class=@PosReceiptHeader>
-        <span class=@TaxBadge>
+<article fiscal id="fiscal-receipt-element">
+    <header>
+        <span>
             <Icon Name=@AccountBalance />
             <span>@L[OfdTitle]</span>
         </span>
-        <h4 class=@OrgName>@OrganizationName</h4>
-        <p class=@OrgDetails>@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
-        <p class=@ReceiptMeta>@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
+        <h4>@OrganizationName</h4>
+        <p>@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
+        <p>@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
     </header>
 
-    <Divider class=@ReceiptDivider />
+    <Divider />
 
     <!-- Fiscalized Items List -->
-    <ul class=@ReceiptItems>
+    <ul>
         @foreach (var item in Items)
         {
-            <li class=@ReceiptItemRow>
-                <hgroup class=@ItemMain>
-                    <span class=@ItemName>@item.Name</span>
-                    <span class=@ItemMxik>@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
+            <li>
+                <hgroup>
+                    <span>@item.Name</span>
+                    <span>@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
                 </hgroup>
-                <hgroup class=@ItemCalc>
-                    <span class=@ItemQty>@item.Quantity × @item.Price.ToString("N0")</span>
-                    <span class=@ItemTotal>@item.TotalPrice.ToString("N0") @L[ReceiptCurrencyUzs]</span>
+                <hgroup>
+                    <span>@item.Quantity × @item.Price.ToString("N0")</span>
+                    <span>@item.TotalPrice.ToString("N0") @L[ReceiptCurrencyUzs]</span>
                 </hgroup>
             </li>
-            <li class=@ItemVatRow>
+            <li>
                 <span>@L[IncludingVat]</span>
                 <span>@item.VatAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
             </li>
         }
     </ul>
 
-    <Divider class=@ReceiptDivider />
+    <Divider />
 
     <!-- Total and VAT Breakdown -->
-    <section class=@ReceiptTotals>
-        <p class=@string.Format(Two, TotalRow, Main)>
+    <section>
+        <p>
             <span>@L[TotalToPay]</span>
-            <span class=@TotalVal>@TotalAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
+            <span>@TotalAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
         </p>
-        <p class=@TotalRow>
+        <p>
             <span>@L[VatAmount]</span>
             <span>@TotalVatAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
         </p>
-        <p class=@TotalRow>
+        <p>
             <span>@L[ReceiptPaymentMethod]</span>
             <span>@PaymentGatewayName (@PaymentTypeName)</span>
         </p>
     </section>
 
-    <Divider class=@ReceiptDivider />
+    <Divider />
 
     <!-- Fiscal Block and Soliq.uz QR Code -->
-    <footer class=@ReceiptFiscalFooter>
-        <figure class=@QrContainer>
+    <footer>
+        <figure>
             @if (!string.IsNullOrWhiteSpace(QrSvg))
             {
-                <span class=@QrSvgWrap>
+                <span>
                     @((MarkupString)QrSvg)
                 </span>
             }
             else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
             {
-                <Icon Name=@QrCode2 class=@QrPlaceholder />
+                <Icon Name=@QrCode2 />
             }
         </figure>
-        <aside class=@FiscalInfo>
-            <p class=@Sign>@L[FiscalSign] <code>@FiscalSign</code></p>
-            <p class=@OfdHint>@L[OfdHintText]</p>
-            <a href=@SoliqQrUrl target="_blank" class=@VerifyLink>
+        <aside>
+            <p>@L[FiscalSign] <code>@FiscalSign</code></p>
+            <p>@L[OfdHint]</p>
+            <a href=@SoliqQrUrl target="_blank">
                 <Icon Name=@Verified /> @L[VerifySoliq]
             </a>
         </aside>
     </footer>
 
     <!-- Thermal Printer Receipt Print Button -->
-    <Button Variant=@Filled Icon=@Print class=@string.Format(Two, ReceiptActions, PrintBtn) OnClick=@PrintReceiptAsync>
+    <Button Variant=@Filled Icon=@Print OnClick=@PrintReceiptAsync>
         @L[PrintEscPos]
     </Button>
 </article>

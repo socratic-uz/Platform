@@ -16,14 +16,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     display: none;
 }
 
-.avatar-container md-dialog {
-    width: min(620px, calc(100vw - 32px));
-    max-width: min(620px, calc(100vw - 32px));
-    max-height: min(880px, calc(100dvh - 48px));
-    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
-    --md-dialog-container-shape: var(--md-sys-shape-expressive-dialog);
-}
-
 .dialog-headline-wrap {
     display: grid;
     grid-auto-flow: column;
@@ -48,18 +40,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
 .drawer-footer {
     padding-top: var(--md-sys-spacing-4, 1rem);
     border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.drawer-footer .total-row {
-    padding-top: var(--md-sys-spacing-2, 0.5rem);
-    border-top: 1px dashed var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 800;
-}
-
-.drawer-footer .total-value {
-    color: var(--md-sys-color-primary);
 }
 
 .drawer-header {
@@ -133,27 +113,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     transform: translate(-50%, -50%);
 }
 
-.m3-dialog-description {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.88rem;
-    line-height: 1.4;
-}
-
-.m3-dialog-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-4);
-    align-items: center;
-}
-
-.m3-dialog-header h3 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
 .m3-dialog-surface {
     display: grid;
     gap: var(--md-sys-spacing-5);
@@ -214,14 +173,6 @@ md-dialog.contacts details summary::-webkit-details-marker {
     cursor: default;
 }
 
-.m3-modal {
-    grid-template-rows: auto minmax(0, 1fr) auto;
-}
-
-.map-mobile-backdrop {
-    display: none;
-}
-
 .md-drawer-backdrop {
     display: grid;
     opacity: 0;
@@ -253,39 +204,18 @@ md-dialog.contacts details summary::-webkit-details-marker {
     pointer-events: auto;
 }
 
-.md3-dialog-actions-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    width: 100%;
-    padding-top: var(--md-sys-spacing-3, 0.75rem);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.md3-dialog-headline {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.promotion-dialog {
+md-dialog[promotion] {
     max-width: 860px;
     width: 100%;
 }
 
-.promotion-modal-body {
+md-dialog[promotion] section[modal-body] {
     display: grid;
     gap: 1.25rem;
     padding: 1rem 0;
 }
 
-.promotion-modal-header {
+md-dialog[promotion] [slot="headline"] header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -293,116 +223,78 @@ md-dialog.contacts details summary::-webkit-details-marker {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.promotion-modal-subtitle {
+md-dialog[promotion] [slot="headline"] p {
     margin: 0.2rem 0 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
 }
 
-.promotion-modal-title {
+md-dialog[promotion] [slot="headline"] h2 {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.ux-modal-body {
+md-dialog[promotion] fieldset[plans] {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
 }
 
-.ux-modal-code {
-    width: max-content;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+md-dialog[promotion] figure[preview-pill] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+md-dialog[promotion] fieldset[gateways] {
+    display: grid;
+    gap: 0.75rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+md-dialog[promotion] fieldset[gateways] > label {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+md-dialog[promotion] fieldset[gateways] > label[active] {
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+md-dialog[promotion] fieldset[invoice-summary] {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container);
+    text-align: center;
+    margin: 0;
+}
+
+md-dialog[promotion] fieldset[invoice-summary] > data {
+    font-size: 1.8rem;
+    font-weight: 800;
     color: var(--md-sys-color-primary);
-    font-family: monospace;
-    font-size: 0.85rem;
-}
-
-.ux-modal-desc {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1rem;
-    line-height: 1.65;
-}
-
-.ux-modal-footer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    gap: 0.85rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.ux-modal-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) max-content;
-    gap: 1rem;
-    align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.ux-modal-specs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: 1rem;
-    margin-top: 0.75rem;
-}
-
-.ux-modal-title {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-.ux-quickview-dialog {
-    width: 92%;
-    max-width: 640px;
-    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
-    border-radius: var(--md-sys-shape-expressive-corner-extra-large, 28px);
-    box-shadow: 0 25px 65px rgb(from var(--md-sys-color-shadow) r g b / 0.85), 0 0 50px color-mix(in srgb, var(--md-sys-color-primary) 18%, transparent);
-    --md-dialog-container-color: rgb(from var(--md-sys-color-surface-container-high) r g b / 0.96);
-    --md-dialog-container-shape: var(--md-sys-shape-expressive-corner-extra-large, 28px);
-}
-
-.variant-dialog-actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    width: 100%;
-}
-
-.variant-dialog-body {
-    display: grid;
-    gap: var(--md-sys-spacing-4);
-    min-width: 0;
-    margin-top: var(--md-sys-spacing-2, 0.5rem);
-}
-
-.variant-dialog-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
-    align-items: start;
-    width: 100%;
-}
-
-.variant-dialog-subtext {
-    display: block;
-    margin-top: 2px;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-}
-
-.variant-dialog-title {
-    display: block;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.2rem;
-    font-weight: 800;
 }
 
 md-dialog {
@@ -533,27 +425,6 @@ md-dialog.contacts md-list {
     overflow: hidden;
 }
 
-@media (max-width: 599.98px) {
-    .map-mobile-backdrop {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: var(--md-sys-z-appbar, 20);
-        background: rgb(from var(--md-sys-color-shadow) r g b / 0.4);
-        backdrop-filter: blur(4px);
-        animation: fadeIn 0.22s ease-out;
-    }
-
-    .ux-quickview-dialog {
-        width: 95%;
-        border-radius: var(--md-sys-shape-expressive-corner-medium, 20px);
-    }
-
-}
-
 @media (max-width: 600px) {
     .drawer-panel {
         grid-column: 1;
@@ -564,16 +435,6 @@ md-dialog.contacts md-list {
 
     .md-drawer-backdrop {
         grid-template-columns: minmax(0, 1fr);
-    }
-
-    .ux-modal-footer {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.65rem;
-    }
-
-    .ux-modal-specs-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.75rem;
     }
 
 }

@@ -3,37 +3,12 @@
    Component-Driven Architecture
    ========================================================================== */
 
-
-.summary-text-box {
-    display: grid;
-    gap: 2px;
-}
-
 .header-title-box {
     display: grid;
     grid-auto-flow: column;
     gap: 0.5rem;
     justify-content: start;
     align-items: center;
-}
-
-.header-title-group {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    column-gap: 1rem;
-    row-gap: 0.15rem;
-    justify-content: start;
-    align-items: center;
-    min-width: 0;
-}
-
-.header-title-group> :where(.header-icon, md-icon) {
-    grid-row: 1 / span 2;
-}
-
-.header-title-group> :where(h1, h2, h5, p) {
-    grid-column: 2;
-    margin: 0;
 }
 
 .m3-title-large {
@@ -51,64 +26,6 @@
     line-height: var(--md-sys-typescale-title-medium-line-height);
     overflow-wrap: anywhere;
     word-break: break-word;
-}
-
-.title-gradient {
-    background: linear-gradient(135deg, var(--md-sys-color-tertiary) 0%, var(--md-sys-color-primary) 50%, var(--md-sys-color-secondary) 100%);
-    filter: drop-shadow(0 0 24px rgb(from var(--md-sys-color-primary) r g b / 0.35));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.title-sub {
-    color: var(--landing-text-main, var(--md-sys-color-on-surface));
-    font-weight: 700;
-}
-
-.ux-mode-title-box {
-    display: grid;
-    gap: 0.25rem;
-}
-
-.ux-mode-title-box h3 {
-    grid-column: 1 / -1;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.08rem;
-    font-weight: 700;
-}
-
-.ux-mode-title-box .ux-mode-code {
-    grid-column: 1 / -1;
-}
-
-.m3-dialog-title-group {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-}
-
-.ux-modal-title-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.65rem;
-    align-items: center;
-}
-
-
-.picker-title-row {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-3);
-    justify-content: start;
-    align-items: center;
-}
-
-.place-details-title-container {
-    display: grid;
-    gap: 0.25rem;
 }
 
 .section-title-box {
@@ -198,21 +115,6 @@
     word-break: break-word;
 }
 
-.m3-label {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-    min-width: var(--md-sys-touch-target-min);
-    color: var(--md-sys-color-primary);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
 .m3-label-small {
     font-size: var(--md-sys-typescale-label-small-size);
     font-weight: var(--md-sys-typescale-label-small-weight);
@@ -242,54 +144,12 @@
 }
 
 /* --- Headings & Section Titles --- */
-.body-subtext {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-}
 
 .headline {
     margin: 0;
     color: var(--md-sys-color-primary);
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-weight: 700;
-}
-
-.label-title {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
-    color: var(--md-sys-color-primary);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.page-heading {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.35rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.page-subtitle {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-}
-
-.section-heading {
-    margin: 0.5rem 0 0;
-    color: var(--md-sys-color-primary);
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
 }
 
 

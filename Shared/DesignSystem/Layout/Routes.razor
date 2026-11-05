@@ -1,11 +1,6 @@
 @using Domain.Interfaces
 @using System.Diagnostics.CodeAnalysis
 @using static Assets.Constants.Icons
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Cards
-@using static Assets.Constants.Classes.EmptyState
-@using static Assets.Constants.Classes.Typography
-@using static Assets.Constants.Formats
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(MainLayout)")]
 
 <Router AppAssembly=@typeof(Layout.MainLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
@@ -22,14 +17,14 @@
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
 		   }
-		   <main class=@string.Format(Three, EmptyStateRoot, GridCenter, CardElevated)>
+		   <main not-found>
 			   <header>
-				   <Icon Name=@RocketLaunch class=@EmptyStateIcon />
+				   <Icon Name=@RocketLaunch />
 				   <hgroup>
-					   <h2 class=@EmptyStateTitle>
+					   <h2>
 						   @(isRoot ? "Socratic Standalone Host" : "Page Not Found")
 					   </h2>
-					   <p class=@EmptyStateDesc>
+					   <p>
 						   @(isRoot ? "Standalone development mode. Select an active module:" : "Requested route was not found. Available modules in this solution:")
 					   </p>
 				   </hgroup>
@@ -43,8 +38,8 @@
 						   <li>
 							   <a href=@mod.RoutePrefix>
 								   <Icon Name=@(mod.Icon ?? Widgets) />
-								   <span class=@TitleMedium>@mod.DisplayTitle</span>
-								   <span class=@LabelSmall>@mod.RoutePrefix</span>
+								   <span>@mod.DisplayTitle</span>
+								   <small>@mod.RoutePrefix</small>
 								   <Icon Name=@ArrowForward />
 							   </a>
 						   </li>
@@ -53,17 +48,11 @@
 			   }
 			   else
 			   {
-				   <section class=@EmptyStateAction>
-					   <p class=@EmptyStateDesc>No modules discovered in FeatureRegistry</p>
-					   <span class=@LabelSmall>Verify registrations in FeatureRegistry.Register()</span>
+				   <section>
+					   <p>No modules discovered in FeatureRegistry</p>
+					   <small>Verify registrations in FeatureRegistry.Register()</small>
 				   </section>
 			   }
-
-			   <footer>
-				   <span class=@LabelSmall>
-					   Socratic Architecture &bull; Feature-Sliced Design &bull; Blazor .NET 10
-				   </span>
-			   </footer>
 		   </main>
 	   </LayoutView>
    </NotFound>

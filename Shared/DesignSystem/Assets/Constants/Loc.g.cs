@@ -463,7 +463,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (576 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (577 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -4063,6 +4063,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Security &amp;amp; Quick Login&quot;
             /// </summary>
             public const string ProfileSecurityAndLogin = "Profile_SecurityAndLogin";
+
+            /// <summary>
+            /// Key: <c>Profile_SecuritySubtext</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Настройте методы для входа в 1 клик без ожидания SMS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
+            /// </summary>
+            public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
 
             /// <summary>
             /// Key: <c>Profile_TurnLeft</c><br/>
@@ -9831,7 +9839,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Jami to'lov&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Grand Total&quot;
             /// </summary>
-            public const string GrandTotalText = "Payment_GrandTotal";
+            public const string GrandTotal = "Payment_GrandTotal";
 
             /// <summary>
             /// Key: <c>Checkout_HeaderSubtitle</c><br/>
@@ -9847,7 +9855,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'lov usulini tanlash va rasmiylashtirish&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Select Payment Method &amp;amp; Checkout&quot;
             /// </summary>
-            public const string HeaderTitleText = "Checkout_HeaderTitle";
+            public const string HeaderTitle = "Checkout_HeaderTitle";
 
             /// <summary>
             /// Key: <c>Checkout_InvoiceLabel</c><br/>
@@ -13991,7 +13999,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chegirma -25%&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Discount -25%&quot;
             /// </summary>
-            public const string DiscountBadgeText = "GroupBuy_DiscountBadge";
+            public const string DiscountBadge = "GroupBuy_DiscountBadge";
 
             /// <summary>
             /// Key: <c>GroupBuy_ExpectedDate</c><br/>
@@ -14661,7 +14669,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamali tarif (5$/oy) •&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Ad-supported plan ($5/mo) •&quot;
             /// </summary>
-            public const string DisclaimerText = "AdSlot_Disclaimer";
+            public const string Disclaimer = "AdSlot_Disclaimer";
 
             /// <summary>
             /// Key: <c>Kiosk_EmptyDesc</c><br/>
@@ -16237,7 +16245,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Reklamani o‘chirish (Tarif 25$)&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Disable ads (Plan $25)&quot;
             /// </summary>
-            public const string UpgradeLinkText = "AdSlot_UpgradeLink";
+            public const string UpgradeLink = "AdSlot_UpgradeLink";
 
             /// <summary>
             /// Key: <c>Kiosk_UxModeLabel</c><br/>
@@ -23905,7 +23913,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtma yakuni&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Order Summary&quot;
             /// </summary>
-            public const string SummaryTitleText = "OrderItems_SummaryTitle";
+            public const string SummaryTitle = "OrderItems_SummaryTitle";
 
             /// <summary>
             /// Key: <c>OrderItems_Title</c><br/>
@@ -24504,7 +24512,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ushbu QR kodni telefon kamerasi yoki Payme, Click, Uzum, TBC, Anorbank, Ipak Yo'li ilovasida skanerlang&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan this QR code with phone camera or Payme, Click, Uzum, TBC, Anorbank, Ipak Yuli apps&quot;
             /// </summary>
-            public const string QrInstructionText = "Promo_QrInstruction";
+            public const string QrInstruction = "Promo_QrInstruction";
 
             /// <summary>
             /// Key: <c>Promo_RedirectMessage</c><br/>
@@ -25859,7 +25867,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Receipt (84 keys). Use with <c>@using static Assets.Constants.Loc.Receipt;</c>.
+        /// Domain group: Receipt (85 keys). Use with <c>@using static Assets.Constants.Loc.Receipt;</c>.
         /// </summary>
         public static class Receipt
         {
@@ -26056,6 +26064,14 @@ namespace Assets.Constants
             public const string Invoice_VatIncluded = "Invoice_VatIncluded";
 
             /// <summary>
+            /// Key: <c>Invoice_Amount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сумма&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Summa&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
+            /// </summary>
+            public const string InvoiceAmount = "Invoice_Amount";
+
+            /// <summary>
             /// Key: <c>Invoice_Cashier</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассир&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassir&quot;<br/>
@@ -26197,7 +26213,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chekni Soliq ilovasida yoki ofd.soliq.uz portalida tekshirish uchun QR-kodni skanerlang&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Scan the QR code to verify the receipt in the Soliq app or at ofd.soliq.uz&quot;
             /// </summary>
-            public const string OfdHintText = "Receipt_OfdHint";
+            public const string OfdHint = "Receipt_OfdHint";
 
             /// <summary>
             /// Key: <c>Receipt_OfdTitle</c><br/>
@@ -27387,6 +27403,14 @@ namespace Assets.Constants
             public const string DetailsArrow = "Store_DetailsArrow";
 
             /// <summary>
+            /// Key: <c>Store_InStock</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;В наличии&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjud&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;In Stock&quot;
+            /// </summary>
+            public const string InStockText = "Store_InStock";
+
+            /// <summary>
             /// Key: <c>Store_Kg</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;кг&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;kg&quot;<br/>
@@ -27905,14 +27929,6 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;In Stock&quot;
             /// </summary>
             public const string StoreInStock = "Store_InStock";
-
-            /// <summary>
-            /// Key: <c>Store_InStock</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;В наличии&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mavjud&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;In Stock&quot;
-            /// </summary>
-            public const string StoreInStockText = "Store_InStock";
 
             /// <summary>
             /// Key: <c>Store_Kg</c><br/>
@@ -30667,7 +30683,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: UxMode (303 keys). Use with <c>@using static Assets.Constants.Loc.UxMode;</c>.
+        /// Domain group: UxMode (305 keys). Use with <c>@using static Assets.Constants.Loc.UxMode;</c>.
         /// </summary>
         public static class UxMode
         {
@@ -30822,6 +30838,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Configurator / Customizer&quot;
             /// </summary>
             public const string Configurator_Title = "UxMode_Configurator_Title";
+
+            /// <summary>
+            /// Key: <c>UxMode_Configurator_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Конфигуратор / Мастер сборки&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Konfigurator / Yig'ish ustasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Configurator / Customizer&quot;
+            /// </summary>
+            public const string ConfiguratorTitle = "UxMode_Configurator_Title";
 
             /// <summary>
             /// Key: <c>UX_Configure</c><br/>
@@ -31718,6 +31742,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscription Plan&quot;
             /// </summary>
             public const string Subscription_Title = "UxMode_Subscription_Title";
+
+            /// <summary>
+            /// Key: <c>UxMode_Subscription_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тариф / Регулярная подписка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif / Muntazam obuna&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Subscription Plan&quot;
+            /// </summary>
+            public const string SubscriptionTitle = "UxMode_Subscription_Title";
 
             /// <summary>
             /// Key: <c>UxMode_TicketBooking_Title</c><br/>
@@ -42006,7 +42038,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Summa&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
         /// </summary>
-        public const string InvoiceAmountText = "Invoice_Amount";
+        public const string InvoiceAmount = "Invoice_Amount";
 
         /// <summary>
         /// Key: <c>Invoice_Cashier</c><br/>
@@ -50278,7 +50310,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;SMS kutmasdan 1 bosishda kirish usullarini sozlang.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
         /// </summary>
-        public const string ProfileSecuritySubtextText = "Profile_SecuritySubtext";
+        public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
 
         /// <summary>
         /// Key: <c>Profile_Title</c><br/>

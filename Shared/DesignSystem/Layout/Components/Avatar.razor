@@ -1,15 +1,10 @@
-@inherits DataComponentBase
 @using System.Diagnostics.CodeAnalysis
-@using static Assets.Constants.Classes.Avatar
-@using static Assets.Constants.Classes.ProfileDialog
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
-@attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "CameraStreamerComponentType is statically resolved from ICameraStreamerUiProvider annotated with DynamicallyAccessedMemberTypes.All")]
 
-<Button Variant=@Outlined OnClick=@OpenProfile class=@string.Format(Two, Container, AvatarButton) AriaLabel=@l[Profile]>
+<Button Variant=@Outlined OnClick=@OpenProfile avatar AriaLabel=@l[Profile]>
 	@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 	{
 		<img src=@profile.Image.ToProfileImage() alt="Avatar" />
@@ -20,21 +15,21 @@
 	}
 </Button>
 
-	@if (IsOpen)
-	{
-	<MaterialDialog class=@AvatarContacts Open=@IsOpen OnClose=@OnClose Type="alert">
+@if (IsOpen)
+{
+	<MaterialDialog profile Open=@IsOpen OnClose=@OnClose Type="alert">
 		<Headline>
-			<span class=@Headline>@l[EditProfile]</span>
+			<span>@l[EditProfile]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
 		</Headline>
 		<ChildContent>
 		@if (FormModel is null)
 		{
-			<Progress slot="content" class=@Content IsCircular="true" FourColor="true" Indeterminate="true" />
+			<Progress slot="content" IsCircular="true" FourColor="true" Indeterminate="true" />
 		}
 		else
 		{
-			<EditForm Model=@FormModel slot="content" method="dialog" class=@Content @onsubmit:preventDefault>
+			<EditForm Model=@FormModel slot="content" method="dialog" @onsubmit:preventDefault>
 				<AntiforgeryToken />
 				<List>
 					<!--Id-->
@@ -42,7 +37,7 @@
 						<summary>
 							<ListItem type="button" Headline=@($"{FormModel?.Name.FirstName} {FormModel?.Name?.LastName}") StartIcon=@Person EndIcon=@ArrowDropDown />
 						</summary>
-						<fieldset class=@Content>
+						<fieldset>
 							<input type="hidden" name=@profile.Id value=@FormModel.Id />
 							<TextField TValue="Guid?"
 									   Variant=@(TextField<Guid?>.TextFieldVariant.Outlined)
@@ -84,8 +79,7 @@
 								   Label=@l[Phone]
 								   Value=@FormModel.Phone
 								   ValueExpression="() => FormModel.Phone"
-								   Disabled="true"
-								   Class=@Content />
+								   Disabled="true" />
 						<Divider />
 					</details>
 
@@ -103,8 +97,7 @@
 							Multiple="false"
 							Accept="image/*"
 							MaxAllowedFiles="1"
-							OnChanged=@HandleImageChanged
-							Class=@ProfileDialogContent />
+							OnChanged=@HandleImageChanged />
 						<Divider />
 					</details>
 
@@ -114,7 +107,7 @@
 							<ListItem type="button" Headline=@l[NameLabel] StartIcon=@IdCard EndIcon=@ArrowDropDown />
 						</summary>
 
-						<fieldset class=@Content>
+						<fieldset>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[FirstName]
@@ -160,7 +153,7 @@
 						<summary>
 							<ListItem type="button" Headline=@l[AddressLabel] StartIcon=@LocationOn EndIcon=@ArrowDropDown />
 						</summary>
-						<section class=@ProfileDialogContent>
+						<section>
 							<TextField TValue="string"
 									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
 									   Label=@l[City]
@@ -183,7 +176,7 @@
 							<ListItem type="button" Headline=@l[LanguageLabel] StartIcon=@Translate EndIcon=@ArrowDropDown />
 						</summary>
 
-						<fieldset class=@Content>
+						<fieldset>
 							@foreach (var language in languages)
 							{
 								<label>
@@ -204,7 +197,7 @@
 							<ListItem type="button" Headline=@l[AccentLabel] StartIcon=@Palette EndIcon=@ArrowDropDown />
 						</summary>
 
-						<fieldset class=@string.Format(Two, ProfileDialogContent, ProfileThemeGrid)>
+						<fieldset>
 							<Select Label=@l[ThemeLabel]
 									Value=@ThemeString
 									ValueChanged=@OnThemeChanged
@@ -216,40 +209,40 @@
 					</details>
 
 					<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
-					<details class=@ProfileDialogContent>
+					<details>
 						<summary>
 							<ListItem type="button" Headline=@l[ProfileSecurityAndLogin] StartIcon=@Security EndIcon=@ArrowDropDown />
 						</summary>
-							<p class=@ProfileSecuritySubtext>
+							<p>
 								@l[Profile_SecuritySubtext]
 							</p>
 
 							<!-- Face ID -->
-							<article class=@ProfileAuthCard>
+							<article>
 								<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
-								<hgroup class=@ProfileAuthText>
-									<strong class=@ProfileAuthTitle>@l[ProfileFaceIdTitle]</strong>
-									<small class=@ProfileAuthDesc>
+								<hgroup>
+									<strong>@l[ProfileFaceIdTitle]</strong>
+									<small>
 										@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
 									</small>
 								</hgroup>
-								<menu class=@ProfileAuthActions>
+								<menu>
 									<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
 										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
 									</Button>
 									@if (isFaceIdConfigured)
 									{
-										<IconButton Icon=@DeleteOutline class=@ProfileDeleteIcon OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
+										<IconButton Icon=@DeleteOutline OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
 									}
 								</menu>
 							</article>
 
 							<!-- Google SSO -->
-							<article class=@ProfileAuthCard>
+							<article>
 								<Icon Name=@AccountCircle />
-								<hgroup class=@ProfileAuthText>
-									<strong class=@ProfileAuthTitle>Google SSO</strong>
-									<small class=@ProfileAuthDesc>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
+								<hgroup>
+									<strong>Google SSO</strong>
+									<small>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
 								</hgroup>
 								<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
 									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
@@ -257,11 +250,11 @@
 							</article>
 
 							<!-- Passkeys (FIDO2 / WebAuthn) -->
-							<article class=@ProfileAuthCard>
-								<Icon Name=@Fingerprint class=@ProfilePasskeyIcon />
-								<hgroup class=@ProfileAuthText>
-									<strong class=@ProfileAuthTitle>Passkeys (WebAuthn)</strong>
-									<small class=@ProfileAuthDesc>@l[ProfileDeviceBiometricsSubtext]</small>
+							<article>
+								<Icon Name=@Fingerprint />
+								<hgroup>
+									<strong>Passkeys (WebAuthn)</strong>
+									<small>@l[ProfileDeviceBiometricsSubtext]</small>
 								</hgroup>
 								<Button Variant=@Outlined OnClick=@RegisterPasskey>
 									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
@@ -291,24 +284,24 @@
 			<Button Variant=@Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
 		</Actions>
 	</MaterialDialog>
-	}
+}
 
-	@if (isFaceIdModalOpen)
-	{
-	<MaterialDialog class=@FaceidProfileModal Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert" ContentClass=@FaceidModalContent>
+@if (isFaceIdModalOpen)
+{
+	<MaterialDialog faceid-enrollment Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
 		<Headline>
-			<span class=@Headline>@l[ProfileFaceIdTitle]</span>
+			<span>@l[ProfileFaceIdTitle]</span>
 			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
 		</Headline>
 		<Content>
 			<!-- 3-Step Calibration Progress Bar -->
-			<ol class=@FaceidProgressBar>
-				<li class=@(currentEnrollmentStage >= 1 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></li>
-				<li class=@(currentEnrollmentStage >= 2 ? string.Format(Two, FaceidStageStep, StepActive) : FaceidStageStep)></li>
-				<li class=@(currentEnrollmentStage >= 3 ? string.Format(Two, FaceidStageStep, StepTertiary) : FaceidStageStep)></li>
+			<ol>
+				<li data-active=@(currentEnrollmentStage >= 1)></li>
+				<li data-active=@(currentEnrollmentStage >= 2)></li>
+				<li data-active=@(currentEnrollmentStage >= 3)></li>
 			</ol>
 
-			<figure class=@FaceidCameraViewport>
+			<figure>
 				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
 				{
 					<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
@@ -316,20 +309,20 @@
 				}
 				else if (isFaceIdModalOpen)
 				{
-					<figure class=@FaceidCameraFallback>
-						<Icon Name=@VideocamOff class=@FaceidCameraFallbackIcon />
+					<figure>
+						<Icon Name=@VideocamOff />
 						<span>@l[ProfileCameraUnavailable]</span>
 					</figure>
 				}
 				<!-- Dynamic Pose Direction Badge -->
-				<span class=@FaceidDirectionBadge>
+				<span>
 					@(currentEnrollmentStage == 1 ? l[ProfileLookStraight] : currentEnrollmentStage == 2 ? l[ProfileTurnLeft] : l[ProfileTurnRight])
 				</span>
 			</figure>
-			<p class=@FaceidStatusMessage>
+			<p>
 				@faceIdStatusMessage
 			</p>
-			<p class=@FaceidInstructionText>
+			<p>
 				@l[ProfileCenterFaceInstruction]
 			</p>
 		</Content>
@@ -337,4 +330,4 @@
 			<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
 		</Actions>
 	</MaterialDialog>
-	}
+}

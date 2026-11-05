@@ -49,10 +49,3 @@
     min-width: var(--md-sys-touch-target-kiosk);
     min-height: var(--md-sys-touch-target-kiosk);
 }
-
-.touch-scroll-x {
-    overflow: auto hidden;
-    scrollbar-width: none;
-    touch-action: pan-y;
-    overscroll-behavior-x: contain;
-}

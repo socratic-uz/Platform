@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Smart.Web.Services;
 using Microsoft.Extensions.Localization;
-using static Assets.Constants.Classes.SmartToast;
 
 namespace Smart.Web.Components;
 
@@ -15,12 +14,12 @@ public partial class SmartToastContainer : ComponentBase, IDisposable
 
     protected readonly List<ToastMessage> Toasts = new();
 
-    protected static string GetToastLevelClass(ToastLevel level) => level switch
+    protected static string GetToastLevelName(ToastLevel level) => level switch
     {
-        ToastLevel.Success => SmartToastSuccess,
-        ToastLevel.Error => SmartToastError,
-        ToastLevel.Warning => SmartToastWarning,
-        _ => SmartToastInfo
+        ToastLevel.Success => "success",
+        ToastLevel.Error => "error",
+        ToastLevel.Warning => "warning",
+        _ => "info"
     };
 
     protected override void OnInitialized()
@@ -53,8 +52,12 @@ public partial class SmartToastContainer : ComponentBase, IDisposable
     {
         InvokeAsync(() =>
         {
-            Toasts.RemoveAll(t => t.Id == id);
-            StateHasChanged();
+            var toast = Toasts.Find(t => t.Id == id);
+            if (toast != null)
+            {
+                Toasts.Remove(toast);
+                StateHasChanged();
+            }
         });
     }
 

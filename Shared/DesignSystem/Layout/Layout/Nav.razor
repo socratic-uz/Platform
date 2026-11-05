@@ -1,7 +1,6 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
 @using Microsoft.AspNetCore.Components.Routing
-@using static Assets.Constants.Classes.Common
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 
@@ -14,27 +13,26 @@
 		}
 		else
 		{
-			<NavLink class=@NavItem href="/home" Match=@NavLinkMatch.All>
+			<NavLink href="/home" Match=@NavLinkMatch.All>
 				<Icon Name=@Home />
 				<span>@(L?[NavHome])</span>
 			</NavLink>
-			<NavLink class=@NavItem href="/wishlist">
+			<NavLink href="/wishlist">
 				<Icon Name=@Favorite />
 				<span>@(L?[NavWishList])</span>
 			</NavLink>
-			<NavLink class=@NavItem href="/chat">
+			<NavLink href="/chat">
 				<Icon Name=@Forum />
 				<span>@(L?[NavChat])</span>
 			</NavLink>
-			<NavLink class=@NavItem href="/orders">
+			<NavLink href="/orders">
 				<Icon Name=@ShoppingBag />
 				<span>@(L?[NavOrders])</span>
 			</NavLink>
-			<NavLink class=@NavItem href="/analytics">
+			<NavLink href="/analytics">
 				<Icon Name=@Analytics />
 				<span>@(L?[NavAnalytics])</span>
 			</NavLink>
 		}
 	</SectionContent>
 }
-

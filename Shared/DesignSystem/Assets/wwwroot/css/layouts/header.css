@@ -3,61 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.spotlight-header-badge {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    padding: 0.35rem 1.15rem;
-    border: 1px solid rgb(from var(--md-sys-color-primary) r g b / 0.35);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.825rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.header-actions {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.header-brand-icon-box {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 20px;
-}
-
-.header-brand-link {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    min-height: 48px;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 700;
-    text-decoration: none;
-    touch-action: manipulation;
-}
-
-.header-brand-text {
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-}
-
 .header-center-zone {
     display: grid;
     justify-content: center;
@@ -83,23 +28,6 @@
     min-width: 0;
 }
 
-.header-icon {
-    color: var(--md-sys-color-primary);
-    font-size: 20px;
-}
-
-.header-presets {
-    display: grid;
-    grid-template-columns: auto repeat(3, max-content);
-    gap: 0.6rem;
-    align-items: center;
-}
-
-.header-rocket-icon {
-    color: var(--md-sys-color-on-primary);
-    font-size: 1.75rem;
-}
-
 .header-start-zone {
     display: grid;
     grid-auto-flow: column;
@@ -112,47 +40,6 @@
     overflow-x: auto;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
-}
-
-.m3-page-header-start {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    min-width: 0;
-    max-width: 100%;
-}
-
-.m3-page-header-start a {
-    display: inline-grid;
-    place-items: center;
-    min-width: 48px;
-    min-height: 48px;
-    padding-inline: 4px;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-}
-
-.m3-page-header-title {
-    min-width: 0;
-    min-inline-size: 0;
-    max-width: 100%;
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: var(--md-sys-typescale-headline-small-size, 1.5rem);
-    font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
-    overflow-wrap: anywhere;
-    white-space: normal;
-}
-
-.place-details-header-title {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
 }
 
 .header-grid-layout {
@@ -217,15 +104,7 @@ header.app-header.header-sticky {
     }
 
 
-    .header-start-zone:has(.m3-page-header-start) .header-brand-link,
-    .header-start-zone:has(.kiosk-brand) .header-brand-link,
-    .header-start-zone:has(.header-context-divider) .header-brand-link,
-    .header-context-divider {
-        display: none;
-    }
-
-
-    .m3-page-header-start,
+    
     .kiosk-brand {
         min-width: 0;
     }
@@ -269,10 +148,6 @@ header.app-header.header-sticky {
         width: 100%;
         min-width: 0;
     }
-
-    .m3-page-header-title {
-        font-size: var(--md-sys-typescale-title-large-size, 1.25rem);
-    }
 }
 
 @media screen and (max-width: 599.98px) {
@@ -287,15 +162,6 @@ header.app-header.header-sticky {
 
     .header-start-zone {
         gap: 0.375rem;
-    }
-
-    .header-start-zone:has(.m3-page-header-start) .header-context-divider,
-    .header-start-zone:has(.kiosk-brand) .header-context-divider {
-        display: none;
-    }
-
-    .m3-page-header-title {
-        font-size: var(--md-sys-typescale-title-medium-size, 1.125rem);
     }
 }
 

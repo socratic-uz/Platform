@@ -21,11 +21,6 @@ public partial class SmartSchedulePicker : ComponentBase
     [Parameter] public string? Label { get; set; }
     [Parameter] public bool Disabled { get; set; } = false;
 
-    protected const string ScheduleDialogClass = "md3-schedule-dialog";
-    protected const string TzContainerClass = "md3-schedule-tz-container";
-    protected const string TzFieldClass = "md3-tz-field";
-    protected const string ClosedIconClass = "md3-closed-icon";
-
     private string EffectiveLabel => Label ?? L[AssetConstants.Loc.Schedule.TitleText];
 
     private bool _isDialogOpen = false;

@@ -1,18 +1,17 @@
 @namespace Shared.Layout
-@using static Assets.Constants.Classes.Search
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Icons
 
-<TextField TValue="string"
-           Variant=@(TextField<string>.TextFieldVariant.Outlined)
-           Placeholder=@L[SearchPlaceholder]
-           Value=@SearchText
-           ValueChanged=@(v => SearchText = v)
-           ValueExpression=@(() => SearchText)
-           HasLeadingIcon=@true
-           LeadingIcon=@SearchIcon
-           HasTrailingIcon=@(!string.IsNullOrEmpty(SearchText))
-           TrailingIcon=@Clear
-           OnTrailingIconClick=@ClearSearch
-           role="search"
-           Class=@Container />
+<search>
+    <TextField TValue="string"
+               Variant=@(TextField<string>.TextFieldVariant.Outlined)
+               Placeholder=@L[SearchPlaceholder]
+               Value=@SearchText
+               ValueChanged=@(v => SearchText = v)
+               ValueExpression=@(() => SearchText)
+               HasLeadingIcon=@true
+               LeadingIcon=@SearchIcon
+               HasTrailingIcon=@(!string.IsNullOrEmpty(SearchText))
+               TrailingIcon=@Clear
+               OnTrailingIconClick=@ClearSearch />
+</search>

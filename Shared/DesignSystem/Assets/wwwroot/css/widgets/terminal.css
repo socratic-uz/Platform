@@ -356,66 +356,22 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     }
 }
 
-.pos-exact-bill-btn {
-    border-color: transparent;
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.pos-exact-bill-btn:hover {
-    filter: brightness(0.95);
-}
-
-.pos-quick-bill-btn {
-    display: grid;
-    place-items: center;
-    padding: 10px var(--md-sys-spacing-1, 0.25rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.88rem;
-    font-weight: 700;
-    transition: background 0.15s ease, transform 0.1s ease;
-    cursor: pointer;
-}
-
-.pos-quick-bill-btn:active {
-    transform: scale(0.96);
-}
-
-.pos-quick-bill-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-.pos-tech-chip {
-    display: grid;
-    place-items: center;
-    padding: var(--md-sys-spacing-1, 0.25rem) 10px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-@media (max-width: 599.98px) {
-
-    .product-actions-bar {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.625rem;
-    }
-}
-
 /* POS Payment Modal & Cashier Ergonomics */
-.pos-payment-body {
+:where(md-dialog[payment], dialog[payment]) {
     display: grid;
     gap: var(--md-sys-spacing-4, 1rem);
     padding: 4px 0;
 }
 
-.pos-payment-title {
+:where(md-dialog[payment], dialog[payment]) [slot="headline"],
+:where(md-dialog[payment], dialog[payment]) header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-4, 1rem);
+}
+
+:where(md-dialog[payment], dialog[payment]) hgroup {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -426,7 +382,7 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     font-weight: 700;
 }
 
-.pos-payment-badge {
+:where(md-dialog[payment], dialog[payment]) aside:not([role]) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -438,51 +394,38 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     color: var(--md-sys-color-on-primary-container);
 }
 
-.pos-payment-badge-label {
+:where(md-dialog[payment], dialog[payment]) aside:not([role]) > span {
     font-size: 0.85rem;
     opacity: 0.8;
 }
 
-.pos-payment-badge-value {
+:where(md-dialog[payment], dialog[payment]) aside:not([role]) > strong {
     font-size: 1.15rem;
     font-weight: 800;
 }
 
-.pos-payment-tab-content {
+:where(md-dialog[payment], dialog[payment]) [slot="content"] > section {
     display: grid;
     min-height: 260px;
 }
 
-.cash-payment-layout {
+:where(fieldset[cash-calc]) {
     display: grid;
     gap: 14px;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.pos-form-field {
-    display: grid;
-    gap: 6px;
-}
-
-.pos-cash-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-    border: 2px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-align: right;
-}
-
-.pos-quick-bills-grid {
+:where(fieldset[cash-calc]) > menu {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--md-sys-spacing-2, 0.5rem);
+    margin: 0;
+    padding: 0;
 }
 
-.pos-change-banner {
+:where(fieldset[cash-calc]) > aside {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -490,37 +433,26 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     border-radius: var(--md-sys-shape-corner-medium, 12px);
 }
 
-.pos-change-banner-success {
+:where(fieldset[cash-calc]) > aside[data-status="success"] {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
-.pos-change-banner-error {
+:where(fieldset[cash-calc]) > aside[data-status="error"] {
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
 }
 
-.pos-change-label {
+:where(fieldset[cash-calc]) > aside > span {
     font-weight: 600;
 }
 
-.pos-change-value {
+:where(fieldset[cash-calc]) > aside > strong {
     font-size: 1.3rem;
     font-weight: 800;
 }
 
-.pos-btn-full {
-    width: 100%;
-    padding: var(--md-sys-spacing-3, 0.75rem);
-}
-
-.pos-btn-max-360 {
-    width: 100%;
-    max-width: 360px;
-    padding: var(--md-sys-spacing-3, 0.75rem);
-}
-
-.pos-terminal-layout {
+:where(section[pinpad]) {
     display: grid;
     gap: 14px;
     justify-items: center;
@@ -528,44 +460,34 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     text-align: center;
 }
 
-.pos-waiting-title {
+:where(section[pinpad]) > h4 {
     margin: 0;
     color: var(--md-sys-color-primary);
     font-size: 1.2rem;
 }
 
-.pos-waiting-desc {
+:where(section[pinpad]) > p {
     max-width: 380px;
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
 }
 
-.pos-device-icons {
+:where(section[pinpad]) > figure {
+    display: grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-4, 1rem);
+    margin: 0;
     color: var(--md-sys-color-primary);
 }
 
-.pos-device-icon {
+:where(section[pinpad]) > figure > md-icon {
     width: 48px;
     height: 48px;
     font-size: 48px;
 }
 
-.pos-pinpad-prompt-title {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-}
-
-.pos-pinpad-prompt-desc {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.88rem;
-}
-
-.pos-error-banner {
+:where(section[pinpad]) > aside[role="alert"] {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -578,72 +500,42 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     font-size: 0.85rem;
 }
 
-.pos-tech-chips {
+:where(section[pinpad]) > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2, 0.5rem);
     margin: 4px 0;
 }
 
-.uzqr-layout {
+:where(section[uzqr]) {
     display: grid;
     gap: 14px;
     justify-items: center;
     text-align: center;
 }
 
-.pos-qr-box {
-    padding: var(--md-sys-spacing-3, 0.75rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    background: var(--md-sys-color-surface-bright);
-}
-
-.pos-qr-info {
+:where(section[uzqr]) > section {
     display: grid;
     gap: var(--md-sys-spacing-1, 0.25rem);
 }
 
-.pos-qr-title {
+:where(section[uzqr]) > section > h4 {
     margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1.1rem;
 }
 
-.pos-qr-apps {
+:where(section[uzqr]) > section > p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.82rem;
 }
 
-.pan-payment-layout {
+:where(fieldset[pan]) {
     display: grid;
     gap: 14px;
-}
-
-.pos-pan-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 14px;
-    border: 1px solid var(--md-sys-color-outline);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.pos-otp-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 14px;
-    border: 2px solid var(--md-sys-color-primary);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 4px;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 

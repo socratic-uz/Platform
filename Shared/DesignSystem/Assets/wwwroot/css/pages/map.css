@@ -1,12 +1,308 @@
 /* ==========================================================================
    Socratic Design System — PAGES / map.css
-   Classless Page Landmark Architecture
+   Direct Body Landmark for Interactive Map Studio: <main map>
+   Level 1: body:has(layout[map])
+   Level 2: <main map>
+   Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    ========================================================================== */
 
 main[map] {
     position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
     height: 100dvh;
     min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: var(--md-sys-color-surface-dim);
     color: var(--md-sys-color-on-surface);
+    overflow: hidden;
 }
 
+/* ==========================================================================
+   1. Map Viewport & Fullscreen Canvas
+   ========================================================================== */
+
+main[map] > section[map-viewport] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main[map] figure[map] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--md-sys-color-surface-dim);
+}
+
+/* Floating Map Controls (Zoom, Geolocation, 3D, Floor Stack) */
+main[map] section[map-viewport] > aside[map-controls] {
+    position: absolute;
+    right: 16px;
+    bottom: max(24px, env(safe-area-inset-bottom, 24px));
+    z-index: var(--md-sys-z-sticky, 10);
+    display: grid;
+    gap: 0.75rem;
+    justify-items: end;
+    pointer-events: auto;
+}
+
+main[map] section[map-viewport] > aside[map-controls] > nav[zoom] {
+    display: grid;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background-color: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+}
+
+main[map] section[map-viewport] > aside[map-controls] > nav[floor] {
+    display: grid;
+    gap: 0.25rem;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5rem 0.25rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background-color: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   2. Main Controls Overlay Panel (Search, Routes, POI Details)
+   ========================================================================== */
+
+main[map] > aside[map-controls] {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    bottom: 16px;
+    z-index: var(--md-sys-z-sticky, 10);
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    box-sizing: border-box;
+    width: clamp(340px, 32vw, 440px);
+    max-height: calc(100% - 32px);
+    padding: 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: color-mix(in srgb, var(--md-sys-color-surface-container) 92%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--md-sys-elevation-level3);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+main[map] > aside[map-controls] > search {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+main[map] > aside[map-controls] nav[categories] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+}
+
+/* Place Details Inside Controls Panel */
+main[map] > aside[map-controls] article[place-details] {
+    display: grid;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+main[map] > aside[map-controls] article[place-details] > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+main[map] > aside[map-controls] article[place-details] > section {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+}
+
+main[map] > aside[map-controls] article[place-details] > menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Route Mode Panel */
+main[map] section[route-mode] {
+    display: grid;
+    gap: 1rem;
+}
+
+main[map] section[route-mode] > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+main[map] section[route-mode] > nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+main[map] section[route-mode] > fieldset {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+main[map] section[route-mode] > fieldset > ol {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[map] section[route-mode] > menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ==========================================================================
+   3. Route Navigator HUD Overlay
+   ========================================================================== */
+
+main[map] > aside[navigator] {
+    position: absolute;
+    inset: 0;
+    z-index: var(--md-sys-z-modal, 20);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    pointer-events: none;
+}
+
+main[map] > aside[navigator] > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+    margin: 16px;
+    padding: 1rem 1.25rem;
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level3);
+    pointer-events: auto;
+}
+
+main[map] > aside[navigator] > header > hgroup {
+    display: grid;
+    gap: 2px;
+}
+
+main[map] > aside[navigator] > header > hgroup > span:first-child {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+main[map] > aside[navigator] > header > hgroup > span:last-child {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[map] > aside[navigator] > header > menu {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[map] > aside[navigator] > footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: center;
+    margin: 16px;
+    padding: 1rem 1.25rem;
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level3);
+    pointer-events: auto;
+    text-align: center;
+}
+
+main[map] > aside[navigator] > footer > p {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+}
+
+main[map] > aside[navigator] > footer > p > span:first-child {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+    text-transform: uppercase;
+}
+
+main[map] > aside[navigator] > footer > p > span:last-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media screen and (max-width: 839.98px) {
+    main[map] > aside[map-controls] {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-height: 60dvh;
+        border-radius: 24px 24px 0 0;
+    }
+
+    main[map] section[map-viewport] > aside[map-controls] {
+        bottom: calc(60dvh + 16px);
+    }
+}

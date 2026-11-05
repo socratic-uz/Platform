@@ -1,14 +1,13 @@
 @namespace Shared.Components
 @using Material.Web.Components
-@using static Assets.Constants.Classes.ThemeToggle
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Settings
 @using static Material.Web.Components.ButtonVariant
 
-<aside class=@SettingsPanelContainer>
-    <fieldset class=@SettingsSection>
-        <legend class=@SettingsSectionTitle>@L[SettingsThemeTitle]</legend>
-        <menu class=@SettingsThemeOptions>
+<aside settings>
+    <fieldset>
+        <legend>@L[SettingsThemeTitle]</legend>
+        <menu>
             <Button Variant=@(ThemeMode == "light" ? Filled : Outlined)
                     OnClick=@(() => SetThemeAsync("light"))
                     Icon=@LightMode>
@@ -29,8 +28,8 @@
 
     <Divider />
 
-    <fieldset class=@SettingsSection>
-        <legend class=@SettingsSectionTitle>@L[AccentColor]</legend>
+    <fieldset>
+        <legend>@L[AccentColor]</legend>
         <ColorPicker @bind-Value=@AccentColor Compact=@true />
     </fieldset>
 </aside>

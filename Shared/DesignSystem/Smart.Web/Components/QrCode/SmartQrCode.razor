@@ -1,17 +1,16 @@
 @namespace Smart.Web.Components
 @using Domain.Interfaces.Common
 @using static Assets.Constants.Icons
-@using static Assets.Constants.Classes.QrDesigner
 
 @if (!string.IsNullOrEmpty(_svg))
 {
-    <figure class=@QrWrapper @attributes=@AdditionalAttributes>
+    <figure qr @attributes=@AdditionalAttributes>
         @((MarkupString)_svg)
     </figure>
 }
 else
 {
-    <figure class=@QrPlaceholder @attributes=@AdditionalAttributes>
+    <figure qr placeholder @attributes=@AdditionalAttributes>
         <Icon Name=@QrCode2 />
     </figure>
 }

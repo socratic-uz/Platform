@@ -8,7 +8,6 @@ using Domain.Abstractions;
 using Domain.Entities;
 using Domain.Interfaces;
 using Material.Web;
-using static Assets.Constants.Classes.Badge;
 using static Assets.Constants.Icons;
 using static Assets.Constants.Loc.Subscription;
 
@@ -29,12 +28,12 @@ namespace Shared.Components
         public SubscriptionTier selectedTierForPayment = SubscriptionTier.ProAdFree;
         public string selectedPaymentMethod = "click";
 
-        public string GetTierBadgeClass() => Subscription.Tier switch
+        public string GetTierBadgeType() => Subscription.Tier switch
         {
-            SubscriptionTier.Trial => Subscription.IsTrialActive ? Trial : Expired,
-            SubscriptionTier.WithAds => WithAds,
-            SubscriptionTier.ProAdFree => Pro,
-            _ => "badge-default"
+            SubscriptionTier.Trial => Subscription.IsTrialActive ? "trial" : "expired",
+            SubscriptionTier.WithAds => "ads",
+            SubscriptionTier.ProAdFree => "pro",
+            _ => "default"
         };
 
         public string GetTierIcon() => Subscription.Tier switch
@@ -99,27 +98,9 @@ namespace Shared.Components
                     Organization.Subscription.TrialEndsAt = DateTime.UtcNow.AddMinutes(-1);
                 }
 
-                try
-                {
-                    var client = ClientFactory.GetClient<Organization>();
-                    if (client != null)
-                    {
-                        await client.Update(Organization);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"[Subscription] Error updating plan: {ex.Message}");
-                }
-
-                if (OnSubscriptionChanged.HasDelegate)
-                {
-                    await OnSubscriptionChanged.InvokeAsync(Organization.Subscription);
-                }
+                await OnSubscriptionChanged.InvokeAsync(Organization.Subscription);
             }
-
             isChangePlanModalOpen = false;
-            StateHasChanged();
         }
     }
 }

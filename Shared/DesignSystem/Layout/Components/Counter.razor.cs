@@ -9,8 +9,6 @@ namespace Shared.Components
     {
         [Inject] public IStringLocalizer L { get; set; } = default!;
 
-        public const string CounterQuantityClass = "counter-quantity";
-
         [Parameter] public EventCallback<(Product?, OrderItem?)> CreateOrderItem { get; set; }
         [Parameter] public EventCallback<OrderItem> OnAdd { get; set; }
         [Parameter] public EventCallback<OrderItem> OnRemove { get; set; }

@@ -1,45 +1,42 @@
 @namespace Shared.Layout
 @using Material.Web
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Skeleton
-@using static Assets.Constants.Classes.Cards
 
 @if (!string.IsNullOrEmpty(Height) || !string.IsNullOrEmpty(Width))
 {
-    <span class=@CustomLoaderClass style=@GetCustomStyle() @attributes=@AdditionalAttributes></span>
+    <span skeleton style=@GetCustomStyle() @attributes=@AdditionalAttributes></span>
 }
 else
 {
-    <section class=@ContainerClass @attributes=@AdditionalAttributes>
+    <section skeleton type=@Type @attributes=@AdditionalAttributes>
         @for (int i = 0; i < Count; i++)
         {
             @if (Type == "card")
             {
-                <article class=@CardSkeletonClass>
-                    <figure class=@Root style="height: 140px; border-radius: var(--md-sys-shape-corner-medium);"></figure>
-                    <section class=@CommonGrid style="gap: 8px; align-content: space-between;">
-                        <span class=@TextSkeletonClass style="width: 70%; height: 18px;"></span>
-                        <span class=@TextSkeletonClass style="width: 90%;"></span>
-                        <section class=@CommonGrid style="grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
-                            <span class=@TextSkeletonClass style="width: 40%; height: 20px;"></span>
-                            <span class=@Root style="width: 80px; height: 36px; border-radius: 18px;"></span>
+                <article>
+                    <figure style="height: 140px; border-radius: var(--md-sys-shape-corner-medium);"></figure>
+                    <section style="display: grid; gap: 8px; align-content: space-between;">
+                        <span style="width: 70%; height: 18px;"></span>
+                        <span style="width: 90%;"></span>
+                        <section style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center;">
+                            <span style="width: 40%; height: 20px;"></span>
+                            <span style="width: 80px; height: 36px; border-radius: 18px;"></span>
                         </section>
                     </section>
                 </article>
             }
             else if (Type == "list")
             {
-                <article class=@M3Card style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px;">
-                    <figure class=@CircleSkeletonClass></figure>
-                    <section class=@CommonGrid style="gap: 8px;">
-                        <span class=@TextSkeletonClass style="width: 70%; height: 18px;"></span>
-                        <span class=@TextSkeletonClass style="width: 90%;"></span>
+                <article style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px;">
+                    <figure circle></figure>
+                    <section style="display: grid; gap: 8px;">
+                        <span style="width: 70%; height: 18px;"></span>
+                        <span style="width: 90%;"></span>
                     </section>
                 </article>
             }
             else
             {
-                <span class=@TextSkeletonClass></span>
+                <span></span>
             }
         }
     </section>

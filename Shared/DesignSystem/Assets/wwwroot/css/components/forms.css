@@ -23,15 +23,6 @@
     border-radius: var(--md-sys-shape-corner-large);
 }
 
-.avatar-container form.content {
-    display: grid;
-    grid-auto-flow: row;
-    gap: var(--md-sys-spacing-3);
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
-}
-
 .file-input-hidden {
     opacity: 0;
     position: absolute;
@@ -43,134 +34,12 @@
     cursor: pointer;
 }
 
-.m3-form-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4);
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.md3-time-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.option-fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.platform-desc p {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-    line-height: 1.5;
-}
-
-.platform-icon {
-    display: grid;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 25%, transparent);
-    border-radius: var(--md-sys-shape-corner-medium, 16px);
-    background: color-mix(in srgb, var(--md-sys-color-primary) 10%, transparent);
-    color: var(--md-sys-color-primary);
-    box-shadow: 0 4px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
-}
-
-.platform-icon md-icon {
-    font-size: 28px;
-}
-
-.platform-info h3 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.platform-info span {
-    display: block;
-    margin-top: 0.25rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.825rem;
-}
-
 .platforms-unified-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     width: 100%;
     min-width: 0;
-}
-
-.search-input {
-    height: 100%;
-    padding: 0 10px;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.search-input::placeholder {
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.smart-grid-container input {
-    padding: 0.25rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-
-.smart-grid-container select {
-    padding: 0.25rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-
-.style-selects-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.9rem;
-}
-
-.time-fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.ux-search-box input {
-    width: 100%;
-    min-height: 48px;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-    font-family: inherit;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-.ux-search-box input::placeholder {
-    color: var(--md-sys-color-on-surface-variant);
 }
 
 input:invalid:focus-visible {
@@ -223,51 +92,6 @@ md-outlined-select {
 /* Web Component: md-filled-text-field & md-outlined-text-field */
 md-dialog.contacts md-outlined-text-field {
     width: 100%;
-}
-
-md-dialog.faceid-profile-modal md-outlined-text-field {
-    width: 100%;
-}
-
-.avatar-container md-outlined-text-field {
-    width: 100%;
-}
-
-.m3-search-container .material-text-field {
-    height: 40px;
-    border-radius: var(--md-sys-shape-expressive-container);
-    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
-    --md-outlined-text-field-bottom-space: 2px;
-    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
-    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
-    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
-    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
-    --md-outlined-text-field-leading-space: 14px;
-    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
-    --md-outlined-text-field-top-space: 2px;
-    --md-outlined-text-field-trailing-space: 12px;
-}
-
-md-outlined-text-field.m3-search-container,
-.m3-search-container md-outlined-text-field {
-    width: 100%;
-    height: 44px;
-    border-radius: var(--md-sys-shape-expressive-container);
-    transition: box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
-    --md-outlined-text-field-bottom-space: 2px;
-    --md-outlined-text-field-container-color: var(--md-sys-color-surface-container-high);
-    --md-outlined-text-field-container-shape: var(--md-sys-shape-expressive-container);
-    --md-outlined-text-field-focus-outline-color: var(--md-sys-color-primary);
-    --md-outlined-text-field-hover-outline-color: var(--md-sys-color-outline);
-    --md-outlined-text-field-leading-space: 14px;
-    --md-outlined-text-field-outline-color: var(--md-sys-color-outline-variant);
-    --md-outlined-text-field-top-space: 2px;
-    --md-outlined-text-field-trailing-space: 12px;
-}
-
-md-outlined-text-field.m3-search-container:focus-within,
-.m3-search-container md-outlined-text-field:focus-within {
-    box-shadow: var(--md-sys-elevation-level1);
 }
 
 .material-text-field {
@@ -333,12 +157,6 @@ md-outlined-text-field {
 
 /* --- Form Validation, File Dropping & Document Types --- */
 
-.control-label {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
 .file-info {
     display: grid;
     padding: 6px var(--md-sys-spacing-2, 0.5rem);
@@ -370,10 +188,6 @@ md-outlined-text-field {
     z-index: var(--md-sys-z-surface, 2);
     background: rgb(from var(--md-sys-color-scrim) r g b / 0.4);
     transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-}
-
-.has-error:focus-visible {
-    outline-color: var(--md-sys-color-focus-ring-error, var(--md-sys-color-error));
 }
 
 .invalid {
@@ -516,50 +330,6 @@ textarea:invalid:focus-visible {
 }
 
 /* --- Picker Presets & Form Labels --- */
-.date-presets-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
-    gap: 6px;
-}
-
-.md3-presets-label {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.md3-presets-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 6px;
-    overflow-x: auto;
-}
-
-.md3-time-separator {
-    color: var(--md-sys-color-outline);
-    font-size: 12px;
-}
-
-.preset-label {
-    margin-right: 0.25rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.md3-presets-section {
-    display: grid;
-    gap: var(--md-sys-spacing-2);
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-3, 0.75rem) 14px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-}
 
 .m3-radio-label {
     display: grid;

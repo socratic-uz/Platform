@@ -203,8 +203,9 @@ export function autoMountTheme() {
     if (colorTag && !colorTag._themeMounted) {
         colorTag._themeMounted = true;
         const classNames = (colorTag.className || '').split(/\s+/);
-        const seedStr = classNames.find(c => /^\d+$/.test(c));
-        const isDark = classNames.includes('dark-mode') || document.documentElement.getAttribute('data-theme') === 'dark';
+        const seedStr = colorTag.getAttribute('accent') || classNames.find(c => /^\d+$/.test(c));
+        const modeAttr = colorTag.getAttribute('mode');
+        const isDark = modeAttr ? modeAttr === 'dark' : (classNames.includes('dark-mode') || document.documentElement.getAttribute('data-theme') === 'dark');
         if (seedStr) {
             const val = parseInt(seedStr, 10) & 0xFFFFFF;
             const hex = '#' + val.toString(16).padStart(6, '0');

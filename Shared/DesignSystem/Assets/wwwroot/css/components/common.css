@@ -7,13 +7,6 @@
     display: grid;
 }
 
-.m3-grid-center {
-    display: grid;
-    place-content: center;
-    place-items: center;
-    box-sizing: border-box;
-}
-
 .m3-grid-cluster {
     display: grid;
     grid-auto-flow: column;
@@ -23,11 +16,6 @@
     box-sizing: border-box;
     width: fit-content;
     max-width: 100%;
-}
-
-.color-item {
-    display: grid;
-    gap: 0.35rem;
 }
 
 .glass {
@@ -65,24 +53,6 @@
     opacity: 1;
 }
 
-.glow-cyan-purple {
-    top: -60px;
-    left: 15%;
-    background: radial-gradient(circle, rgb(from var(--md-sys-color-primary) r g b / 0.28) 0%, rgb(from var(--md-sys-color-tertiary) r g b / 0.16) 55%, transparent 75%);
-}
-
-.glow-purple-indigo {
-    top: 5%;
-    right: 10%;
-    background: radial-gradient(circle, rgb(from var(--md-sys-color-tertiary) r g b / 0.26) 0%, var(--md-sys-color-tertiary) 55%, transparent 75%);
-}
-
-.glow-teal-cyan {
-    top: -40px;
-    left: 20%;
-    background: radial-gradient(circle, rgb(from var(--md-sys-color-secondary) r g b / 0.24) 0%, rgb(from var(--md-sys-color-primary) r g b / 0.14) 55%, transparent 75%);
-}
-
 .m3-ratio-kiosk {
     object-fit: cover;
 }
@@ -97,57 +67,6 @@
 
 .m3-ratio-wide {
     object-fit: cover;
-}
-
-.m3-stack {
-    display: grid;
-    gap: 0.85rem;
-    min-width: 0;
-    min-inline-size: 0;
-}
-
-.color-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
-}
-
-.grid-2-col {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
-}
-
-:where(fieldset.grid-2-col > legend),
-:where(fieldset.grid-2-col > .group-toggle) {
-    grid-column: 1 / -1;
-    width: 100%;
-}
-
-.grid-center {
-    display: grid;
-    place-content: center;
-    place-items: center;
-    box-sizing: border-box;
-}
-
-.grid-enum-flags {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.35rem;
-    align-items: center;
-}
-
-.grid-flow-col {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    align-items: center;
-    box-sizing: border-box;
-    width: fit-content;
-    max-width: 100%;
 }
 
 /* --- Page Containers & Section Gutters --- */

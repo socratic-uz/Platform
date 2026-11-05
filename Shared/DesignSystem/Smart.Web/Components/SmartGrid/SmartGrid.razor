@@ -5,11 +5,8 @@
 
 @using QuickGrid
 @using QuickGrid.Infrastructure
-@using static Assets.Constants.Classes.Common
-@using static Assets.Constants.Classes.Table
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Actions
-@using static Assets.Constants.Formats
 @using static Material.Web.Components.IconButtonVariant
 
 @inherits QuickGrid<TItem>
@@ -70,10 +67,10 @@
 
                                 if (selectedValues.Any())
                                 {
-                                    <span class=@GridEnumFlags>
+                                    <span style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 4px;">
                                         @foreach (var value in selectedValues)
                                         {
-                                            <Chip ChipType=@InputChipType Label=@value Disabled=@true CssClass=@GridChipReadonly />
+                                            <Chip ChipType=@InputChipType Label=@value Disabled=@true />
                                         }
                                     </span>
                                 }
@@ -84,7 +81,7 @@
                             }
                             else
                             {
-                                <Chip ChipType=@InputChipType Label=@GetEnumDisplayText(propertyValue, propertyType) Disabled=@true CssClass=@GridChipReadonly />
+                                <Chip ChipType=@InputChipType Label=@GetEnumDisplayText(propertyValue, propertyType) Disabled=@true />
                             }
                         }
                         else
@@ -121,7 +118,7 @@
             }
         }
 
-        <TemplateColumn Context="item" TGridItem="TItem" Class=@ActionsColumn>
+        <TemplateColumn Context="item" TGridItem="TItem">
             <HeaderTemplate>
                 <Fab Variant="primary" Lowered=@true aria-label=@L[CreateAction] OnClick=@(e => OpenCreateDialog())>@Add</Fab>
             </HeaderTemplate>
@@ -139,7 +136,7 @@
 
         @if (AsCards)
         {
-            <section aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@CardGrid>
+            <section card-grid aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
                 @if (Virtualize)
                 {
                     <Virtualize @ref="@_virtualizeComponent"
@@ -159,7 +156,7 @@
         else
         {
             <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
-            <table theme=@Theme aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions=@HideColumnOptionsAsync @attributes=AdditionalAttributes class=@string.Format(Three, SmartGridContainer, Container, GridClass())>
+            <table smart-grid theme=@Theme aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions=@HideColumnOptionsAsync @attributes=AdditionalAttributes>
                     <thead>
                         <tr>
                             @_renderColumnHeaders

@@ -3,7 +3,7 @@
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
-.smart-filter-bar {
+search[smart-filter] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -15,7 +15,7 @@
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.smart-filter-search {
+search[smart-filter] > :where(md-outlined-text-field) {
     position: relative;
     display: grid;
     align-items: center;
@@ -23,9 +23,12 @@
     width: 100%;
 }
 
-.smart-filter-chips {
+search[smart-filter] > menu {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2, 0.5rem);
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }

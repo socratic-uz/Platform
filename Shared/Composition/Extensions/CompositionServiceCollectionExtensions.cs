@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
@@ -115,6 +115,8 @@ namespace Socratic.Platform.Composition.Extensions
             services.AddScoped<IDetectorService, Infrastructure.Gateways.Vision.RemoteDetectorService>();
             services.AddScoped<ISettingsManager, SettingsManager>();
             services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
+            services.AddScoped<Domain.Interfaces.Identity.IUserAccountGateway, Infrastructure.Gateways.Identity.UserAccountGateway>();
+            services.AddScoped<Infrastructure.Gateways.Identity.UserAccountGateway>();
             services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
             services.AddScoped<Domain.Interfaces.Hardware.IPosPinPadService, Infrastructure.Gateways.Hardware.MockPosPinPadService>();
             services.AddScoped<Domain.Interfaces.Hardware.ICashAcceptorService, Infrastructure.Gateways.Hardware.MockCashAcceptorService>();

@@ -31,17 +31,9 @@
     scrollbar-width: none;
 }
 
-.table-container::-webkit-scrollbar-button {
-    display: none;
-}
-
 :where(
-    .map-categories-scroll,
     .no-scrollbar,
-    .scrollbar-none,
-    .store-breadcrumbs,
-    .touch-scroll-x,
-    .ux-category-tabs)::-webkit-scrollbar {
+    .scrollbar-none)::-webkit-scrollbar {
     display: none;
 }
 
@@ -58,10 +50,7 @@
 :where(
     .m3-config-dialog,
     .m3-dialog-surface,
-    .map-panel-content,
-    .product-thumbnails,
     .scrollbar-thin,
-    .table-container,
     table.quickgrid
 )::-webkit-scrollbar {
     width: var(--md-sys-scrollbar-width, 6px);
@@ -71,10 +60,7 @@
 :where(
     .m3-config-dialog,
     .m3-dialog-surface,
-    .map-panel-content,
-    .product-thumbnails,
     .scrollbar-thin,
-    .table-container,
     table.quickgrid
 )::-webkit-scrollbar-thumb {
     border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
@@ -84,10 +70,7 @@
 :where(
     .m3-config-dialog,
     .m3-dialog-surface,
-    .map-panel-content,
-    .product-thumbnails,
     .scrollbar-thin,
-    .table-container,
     table.quickgrid
 )::-webkit-scrollbar-thumb:hover {
     background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
@@ -96,23 +79,10 @@
 :where(
     .m3-config-dialog,
     .m3-dialog-surface,
-    .map-panel-content,
-    .product-thumbnails,
     .scrollbar-thin,
-    .table-container,
     table.quickgrid
 )::-webkit-scrollbar-track {
     background: var(--md-sys-scrollbar-color-track, transparent);
 }
 
 /* 5. Custom Unique Scrollbar Modifiers */
-
-.table-container::-webkit-scrollbar-thumb {
-    border: 0.15rem solid transparent;
-    border-color: var(--md-sys-color-surface);
-}
-
-.table-container::-webkit-scrollbar-track {
-    margin: 1rem;
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
-}
