@@ -1,6 +1,6 @@
 /* ==========================================================================
    Socratic Design System — PAGES / analytics.css
-   Direct Body Landmarks for Analytics Page: <main analytics>
+   Classless Page Landmark Architecture — Analytics Dashboard & Data Explorer
    ========================================================================== */
 
 main[analytics] {
@@ -16,10 +16,401 @@ main[analytics] {
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
 }
 
+/* ==========================================================================
+   LANDMARK: HEADER (Start Section & Title)
+   ========================================================================== */
+
+header[analytics] > span {
+    color: var(--md-sys-color-outline-variant);
+    margin: 0 0.5rem;
+}
+
+header[analytics] > hgroup {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+header[analytics] > hgroup > md-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-primary);
+}
+
+header[analytics] > hgroup > h1 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* ==========================================================================
+   LANDMARK: CONTROLS & PERIOD FILTERING TOOLBAR
+   ========================================================================== */
+
+main[analytics] > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+}
+
+main[analytics] > header > nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2, 8px);
+    padding: var(--md-sys-spacing-1, 0.25rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+main[analytics] > header > md-chip-set {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0 2px;
+    border: none;
+    box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+main[analytics] > header > menu {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    justify-content: end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[analytics] > header > menu > data {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+}
+
+main[analytics] > header > menu > data > span:first-child {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-primary);
+    animation: bboxPulse 1.5s infinite alternate ease-in-out;
+}
+
+/* ==========================================================================
+   LANDMARK: KPI CARDS GRID
+   ========================================================================== */
+
+main[analytics] > section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
+}
+
+main[analytics] > section:first-of-type > article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: var(--md-sys-spacing-2);
+    min-width: 0;
+    padding: var(--md-sys-spacing-4, 1.25rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+main[analytics] > section:first-of-type > article:hover {
+    border-color: var(--md-sys-color-outline);
+    box-shadow: var(--md-sys-elevation-level2);
+    transform: translateY(-2px);
+}
+
+main[analytics] > section:first-of-type > article > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+}
+
+main[analytics] > section:first-of-type > article > header > md-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 18px;
+}
+
+main[analytics] > section:first-of-type > article > header > span {
+    min-width: 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.825rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main[analytics] > section:first-of-type > article > h3 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.4rem;
+    align-items: baseline;
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[analytics] > section:first-of-type > article > h3 > span {
+    margin-left: 0.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+main[analytics] > section:first-of-type > article > footer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.35rem;
+    align-items: center;
+    min-width: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.775rem;
+}
+
+main[analytics] > section:first-of-type > article > footer > span:first-child {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2px;
+    align-items: center;
+    color: var(--md-sys-color-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   LANDMARK: BREAKDOWN PANELS (Payments & Statuses)
+   ========================================================================== */
+
+main[analytics] > section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    width: 100%;
+}
+
+main[analytics] > section:nth-of-type(2) > article {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-5, 1.25rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+main[analytics] > section:nth-of-type(2) > article > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+}
+
+main[analytics] > section:nth-of-type(2) > article > header > span:first-child {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+main[analytics] > section:nth-of-type(2) > article > header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main[analytics] > section:nth-of-type(2) > article > ul {
+    display: grid;
+    gap: 0.85rem;
+    align-content: start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[analytics] > section:nth-of-type(2) > article > ul > li {
+    display: grid;
+    gap: 0.35rem;
+}
+
+main[analytics] > section:nth-of-type(2) > article > ul > li > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[analytics] > section:nth-of-type(2) > article > ul > li md-linear-progress {
+    width: 100%;
+}
+
+/* ==========================================================================
+   LANDMARK: REGISTERS MODE (Tabular Data Explorer)
+   ========================================================================== */
+
+main[analytics] > section:last-of-type {
+    display: grid;
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: var(--md-sys-spacing-6, 1.5rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+main[analytics] > section:last-of-type > header {
+    display: grid;
+    gap: var(--md-sys-spacing-1, 0.25rem);
+}
+
+main[analytics] > section:last-of-type > header > hgroup {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+main[analytics] > section:last-of-type > header > hgroup > h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+main[analytics] > section:last-of-type > header > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   WIDGET: CONFIGURATION MODAL DIALOG
+   ========================================================================== */
+
+md-dialog:has(h3#modal-title) [slot="headline"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+md-dialog:has(h3#modal-title) [slot="headline"] hgroup {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+md-dialog:has(h3#modal-title) [slot="headline"] h3 {
+    margin: 0;
+}
+
+md-dialog:has(h3#modal-title) [slot="content"] fieldset {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    border: none;
+}
+
+md-dialog:has(h3#modal-title) [slot="content"] label {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-high);
+    cursor: pointer;
+}
+
+md-dialog:has(h3#modal-title) [slot="content"] label > span {
+    display: grid;
+    gap: 2px;
+}
+
+md-dialog:has(h3#modal-title) [slot="content"] label > span > span:first-child {
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+md-dialog:has(h3#modal-title) [slot="content"] label > span > span:last-child {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
 @media screen and (max-width: 839.98px) {
     main[analytics] {
         padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+    }
+
+    main[analytics] > header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 599.98px) {
+    main[analytics] > header > menu {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        width: 100%;
     }
 }

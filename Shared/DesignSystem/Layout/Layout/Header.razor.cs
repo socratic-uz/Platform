@@ -1,11 +1,16 @@
 namespace Shared.Layout;
 
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 
-public partial class Header : ComponentBase
+public partial class Header : ComponentBase, IDisposable
 {
     public const string Name = "header";
+
+    internal static event Action? OnHeaderChanged;
+    internal static IReadOnlyDictionary<string, object>? CurrentAttributes { get; private set; }
 
     [Inject] public NavigationManager Navigation { get; set; } = default!;
     [Inject] public IStringLocalizer L { get; set; } = default!;
@@ -23,6 +28,20 @@ public partial class Header : ComponentBase
     [Parameter] public bool Empty { get; set; }
     [Parameter] public bool Visible { get; set; } = true;
 
-    protected bool ShouldRenderCustom => ChildContent != null && !Default;
-}
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
 
+    protected bool ShouldRenderCustom => ChildContent != null && !Default;
+
+    protected override void OnParametersSet()
+    {
+        CurrentAttributes = AdditionalAttributes;
+        OnHeaderChanged?.Invoke();
+    }
+
+    public void Dispose()
+    {
+        CurrentAttributes = null;
+        OnHeaderChanged?.Invoke();
+    }
+}

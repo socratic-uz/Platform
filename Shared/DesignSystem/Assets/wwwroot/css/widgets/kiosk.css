@@ -1,53 +1,51 @@
 /* ==========================================================================
    Socratic Design System — WIDGETS / kiosk.css
    Kiosk Widgets, Product Grids, Attract Loops, Filter Bars & Wishlist Badges
+   Classless Architecture: root landmark main[kiosk]
    ========================================================================== */
 
-:where(.unified-kiosk-filter-bar):has(.kiosk-reset-btn) {
-    grid-template-columns: minmax(0, 1fr) auto;
+/* --- Kiosk Header Context Branding --- */
+header[kiosk] > nav > img {
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1 / 1;
+    padding: var(--md-sys-spacing-1);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-surface-container-lowest);
+    object-fit: contain;
 }
 
-.kiosk-new-order-btn {
-    min-width: max-content;
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
+header[kiosk] > nav > md-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
 }
 
-.kiosk-reset-btn {
-    align-self: start;
-    min-width: max-content;
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
+header[kiosk] > nav > hgroup {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    min-width: 0;
 }
 
-.kiosk-wish-btn-wrapper {
-    position: absolute;
-    top: var(--md-sys-spacing-2);
-    right: var(--md-sys-spacing-2);
-    z-index: var(--m3-z-sticky, 10);
+header[kiosk] > nav > hgroup > h1 {
+    margin: 0;
+    min-width: 0;
+    min-inline-size: 0;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.pay-button {
-    min-width: 160px;
-    font-weight: 700;
-    box-shadow: var(--md-sys-elevation-expressive-2);
-    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk, 56px);
-    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
-    --md-filled-button-label-text-size: 1.05rem;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .pay-button {
-        min-height: 64px;
-    }
-}
-
-@media screen and (max-width: 839.98px) {
-    .kiosk-brand {
-        grid-area: brand;
-        min-width: 0;
-    }
-}
-
-.kiosk-brand-tagline {
+header[kiosk] > nav > hgroup > p {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -66,7 +64,36 @@
     white-space: nowrap;
 }
 
-:where(.kiosk-category-chipset) {
+header[kiosk] > nav > hgroup > p > md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 13px;
+}
+
+@media screen and (max-width: 599.98px) {
+    header[kiosk] > nav > hgroup > p {
+        display: none;
+    }
+}
+
+/* --- Kiosk Category Filter Bar --- */
+main[kiosk] > :where(nav) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-4);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    margin: var(--md-sys-spacing-1) 0 var(--md-sys-spacing-3);
+    padding: 0;
+}
+
+main[kiosk] > :where(nav) > :where(md-text-button, button) {
+    align-self: start;
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
+}
+
+main[kiosk] :where(md-chip-set) {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -84,16 +111,419 @@
     overflow-y: clip;
 }
 
-@media screen and (max-width: 599.98px) {
-    .kiosk-brand-tagline {
-        display: none;
-    }
+/* --- Kiosk Empty State --- */
+main[kiosk] > :where(article) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
+    justify-items: center;
+    place-content: center;
+    box-sizing: border-box;
+    margin: var(--md-sys-spacing-4) 0;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container);
+    text-align: center;
+}
 
-    .price-tag {
-        text-align: left;
+main[kiosk] > :where(article) > :where(md-icon) {
+    display: grid;
+    opacity: 0.8;
+    place-items: center;
+    color: var(--md-sys-color-primary);
+    font-size: 56px;
+}
+
+main[kiosk] > :where(article) > :where(h3) {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+    line-height: var(--md-sys-typescale-title-large-line-height);
+}
+
+main[kiosk] > :where(article) > :where(p) {
+    max-width: 380px;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+/* --- Kiosk Active Orders Tabs --- */
+main[kiosk] > :where(section:has(nav)) {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+main[kiosk] > :where(section:has(nav)) > :where(span) {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+main[kiosk] > :where(section:has(nav)) > :where(nav) {
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    touch-action: pan-y;
+    overscroll-behavior-x: contain;
+}
+
+main[kiosk] > :where(section:has(nav)) > :where(md-filled-button, button) {
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
+}
+
+/* --- Kiosk Product Cards --- */
+main[kiosk] :where(md-filled-card) {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    position: relative;
+    height: 100%;
+    min-height: 380px;
+    padding: var(--md-sys-spacing-3, 0.75rem);
+    overflow: visible;
+    will-change: transform, box-shadow;
+    transition: transform 260ms var(--md-sys-motion-easing-spring-gentle),
+        box-shadow 260ms var(--md-sys-motion-easing-standard),
+        border-color 150ms ease;
+    user-select: none;
+    container-type: inline-size;
+    container-name: product-card;
+    -webkit-user-select: none;
+}
+
+main[kiosk] :where(md-filled-card):has(> aside) {
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+}
+
+main[kiosk] :where(md-filled-card):active {
+    transform: scale(0.985);
+    transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
+}
+
+main[kiosk] :where(md-filled-card):hover {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
+    box-shadow: 0 16px 36px -6px rgb(from var(--md-sys-color-primary) r g b / 0.18),
+        0 6px 16px -2px rgb(from var(--md-sys-color-shadow) r g b / 0.14);
+    transform: translateY(-4px) scale(1.006);
+}
+
+main[kiosk] :where(md-filled-card):hover figure img {
+    transform: scale(1.04);
+}
+
+/* --- Card Figure & Media --- */
+main[kiosk] :where(figure) {
+    position: relative;
+    display: grid;
+    grid-template-areas: "media-stack";
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-highest);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+main[kiosk] :where(figure) > :where(img) {
+    grid-area: media-stack;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform var(--md-sys-motion-duration-medium1) ease;
+    object-fit: cover;
+}
+
+main[kiosk] :where(figure) > :where(span) {
+    grid-area: media-stack;
+    display: grid;
+    opacity: 0.6;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[kiosk] :where(figure) > :where(span) > :where(md-icon) {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+main[kiosk] :where(figure) > :where(md-icon-button, button) {
+    position: absolute;
+    top: var(--md-sys-spacing-2);
+    right: var(--md-sys-spacing-2);
+    z-index: var(--md-sys-z-sticky, 10);
+    width: var(--md-sys-touch-target-kiosk, 56px);
+    min-width: var(--md-sys-touch-target-kiosk, 56px);
+    height: var(--md-sys-touch-target-kiosk, 56px);
+    min-height: var(--md-sys-touch-target-kiosk, 56px);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
+    color: var(--md-sys-color-outline);
+    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-snappy), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+}
+
+main[kiosk] :where(figure) > :where(md-icon-button, button):active {
+    transform: scale(0.96);
+}
+
+main[kiosk] :where(figure) > :where(md-icon-button[selected], button[selected]) {
+    border-color: var(--md-sys-color-error);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+}
+
+/* --- Card Details --- */
+main[kiosk] :where(md-filled-card) > :where(section) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+main[kiosk] :where(md-filled-card) > :where(section) > :where(md-text-button, button) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    justify-content: start;
+    text-align: left;
+}
+
+main[kiosk] :where(md-filled-card) > :where(section) > :where(p) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+/* --- Card Inline Aside UX Widgets --- */
+main[kiosk] :where(md-filled-card) > :where(aside) {
+    display: grid;
+    gap: var(--md-sys-spacing-1, 0.25rem);
+    align-content: center;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    margin-top: auto;
+    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
+    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-3, 0.75rem);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+main[kiosk] :where(md-filled-card) > :where(aside:empty) {
+    display: none;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+main[kiosk] :where(md-filled-card) > :where(aside) > :where(p) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+main[kiosk] :where(md-filled-card) > :where(aside) > :where(p) > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main[kiosk] :where(md-filled-card) > :where(aside) > :where(p:nth-child(2)) {
+    opacity: 0.85;
+    font-size: 0.72rem;
+}
+
+/* --- Card Footer --- */
+main[kiosk] :where(md-filled-card) > :where(footer) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    margin-top: auto;
+    padding-top: var(--md-sys-spacing-2, 0.5rem);
+}
+
+main[kiosk] :where(md-filled-card) > :where(footer) > :where(span) {
+    min-width: 0;
+    min-inline-size: 0;
+    color: var(--md-sys-color-primary);
+    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+    font-weight: 800;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* --- Floating Bottom Cart Bar --- */
+footer[kiosk] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+    position: fixed;
+    inset: auto 0 0;
+    z-index: var(--md-sys-z-bottom-nav, 40);
+    min-width: 0;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-6) calc(var(--md-sys-spacing-3) + env(safe-area-inset-bottom, 0));
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+}
+
+footer[kiosk] > :where(md-text-button, button:first-child) {
+    cursor: pointer;
+}
+
+footer[kiosk] > :where(md-text-button, button:first-child) span {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+footer[kiosk] > :where(md-text-button, button:first-child) strong {
+    color: var(--md-sys-color-on-surface);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+footer[kiosk] > :where(md-text-button, button:first-child) md-icon {
+    opacity: 0.7;
+    margin-left: var(--md-sys-spacing-1, 0.25rem);
+    color: var(--md-sys-color-on-surface);
+    font-size: 20px;
+}
+
+footer[kiosk] > :where(md-filled-button, button:last-child) {
+    min-width: 160px;
+    font-weight: 700;
+    box-shadow: var(--md-sys-elevation-expressive-2);
+    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk, 56px);
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
+    --md-filled-button-label-text-size: 1.05rem;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    footer[kiosk] > :where(md-filled-button, button:last-child) {
+        min-height: 64px;
     }
 }
 
+@media screen and (max-width: 599.98px) {
+    footer[kiosk] {
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+    }
+}
+
+/* --- Kiosk Checkout Dialog Fallback --- */
+md-dialog fieldset {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-4);
+    border: none;
+    margin: 0;
+}
+
+md-dialog fieldset > p {
+    margin: 0;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+md-dialog fieldset > section {
+    display: grid;
+    justify-items: center;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-5) 0;
+    text-align: center;
+}
+
+md-dialog fieldset > section > h4 {
+    margin: 0;
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog fieldset > section > p {
+    margin: 0;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+md-dialog fieldset > aside {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+md-dialog fieldset > menu {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+md-dialog fieldset > menu > :where(md-filled-button, md-outlined-button, button) {
+    padding: var(--md-sys-spacing-3);
+}
+
+/* --- Attract Loop Screensaver (Widget) --- */
 .attract-loop-background {
     position: absolute;
     inset: 0;
@@ -138,7 +568,7 @@
     align-content: end;
     position: fixed;
     inset: 0;
-    z-index: var(--m3-z-modal, 1000);
+    z-index: var(--md-sys-z-dialog, 1001);
     width: 100%;
     height: 100dvh;
     overflow: hidden;
@@ -147,196 +577,12 @@
     user-select: none;
 }
 
-.kiosk-brand {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    min-width: 0;
-}
-
-.kiosk-brand-icon {
-    color: var(--md-sys-color-primary);
-    font-size: 13px;
-}
-
-:where(.kiosk-brand-logo, .kiosk-brand-logo-fallback) {
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-}
-
-.kiosk-brand-logo {
-    aspect-ratio: 1 / 1;
-    padding: var(--md-sys-spacing-1);
-    background: var(--md-sys-color-surface-container-lowest);
-    object-fit: contain;
-}
-
-.kiosk-brand-logo-fallback {
-    display: grid;
-    place-items: center;
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-.kiosk-brand-name {
-    min-width: 0;
-    min-inline-size: 0;
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.kiosk-empty-icon {
-    display: grid;
-    opacity: 0.8;
-    place-items: center;
-    color: var(--md-sys-color-primary);
-    font-size: 56px;
-}
-
-.kiosk-empty-state {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3);
-    justify-items: center;
-    place-content: center;
-    box-sizing: border-box;
-    margin: var(--md-sys-spacing-4) 0;
-    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
-    border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large);
-    background: var(--md-sys-color-surface-container);
-    text-align: center;
-}
-
-.kiosk-empty-state h3 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: var(--md-sys-typescale-title-large-size);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    line-height: var(--md-sys-typescale-title-large-line-height);
-}
-
-.kiosk-empty-state p {
-    max-width: 380px;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: var(--md-sys-typescale-body-medium-size);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-:where(.unified-kiosk-filter-bar:not(md-chip-set)) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4);
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-}
-
-.kiosk-wish-icon {
-    width: var(--md-sys-touch-target-kiosk, 56px);
-    min-width: var(--md-sys-touch-target-kiosk, 56px);
-    height: var(--md-sys-touch-target-kiosk, 56px);
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
-    color: var(--md-sys-color-outline);
-    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
-    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-snappy), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
-}
-
-.kiosk-wish-icon:active {
-    transform: scale(0.96);
-}
-
-.kiosk-wish-icon.wished {
-    border-color: var(--md-sys-color-error);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-error);
-}
-
-.unified-kiosk-filter-bar {
-    min-height: auto;
-    margin: var(--md-sys-spacing-1) 0 var(--md-sys-spacing-3);
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    background: transparent;
-}
-
-.kiosk-fallback-checkout {
-    display: grid;
-    gap: var(--md-sys-spacing-4);
-    padding: var(--md-sys-spacing-4);
-}
-
-.kiosk-fallback-total {
-    margin: 0;
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-}
-
-.kiosk-fallback-processing {
-    display: grid;
-    justify-items: center;
-    gap: var(--md-sys-spacing-3);
-    padding: var(--md-sys-spacing-5) 0;
-    text-align: center;
-}
-
-.kiosk-fallback-processing-title {
-    margin: 0;
-    color: var(--md-sys-color-primary);
-}
-
-.kiosk-fallback-processing-desc {
-    margin: 0;
-    font-size: var(--md-sys-typescale-body-medium-size);
-    color: var(--md-sys-color-on-surface-variant);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-.kiosk-fallback-error {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--md-sys-spacing-2);
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    font-size: var(--md-sys-typescale-body-medium-size);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-.kiosk-fallback-actions {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-}
-
-.kiosk-fallback-btn {
-    padding: var(--md-sys-spacing-3);
-}
-
 @media (prefers-reduced-motion: reduce) {
     .kiosk-attract-loop {
         animation: none;
     }
 
-    .kiosk-wish-icon {
+    main[kiosk] :where(figure) > :where(md-icon-button, button) {
         transition: none;
     }
 }
-

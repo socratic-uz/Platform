@@ -1,4 +1,4 @@
----
+﻿---
 name: frontend-ux
 description: "Architectural standard and workflow for Blazor Razor template markup (*.razor) in Socratic. USE FOR: pure HTML5 template authoring, Material.Web component priority, mandatory using static for ALL constants (Classes, Icons, Loc, Assets, Enums) with ultra-short names, unquoted syntax, 3-way .resx parity, and accessibility. DO NOT USE FOR: C# business logic (use frontend-ix) or CSS styling (use frontend-ui)."
 license: MIT
@@ -87,3 +87,4 @@ license: MIT
 - [ ] Весь UI-текст вынесен в `.resx` словари (`@L[Key]`), синхронизирован в RU, UZ, EN.
 - [ ] Для всех элементов с Blazor-эквивалентом использован компонент `Material.Web`.
 - [ ] Нет блоков `<style>`, инлайн-стилей `style="..."` и тяжелых блоков `@code` (логика в `*.razor.cs`).
+- [ ] Отсутствуют директивы `@page` и `@attribute [Authorize]` в `*.razor` (маршрутизация `[Route]` и безопасность `[Authorize]` вынесены в `*.razor.cs`).

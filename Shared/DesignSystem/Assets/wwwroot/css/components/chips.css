@@ -27,7 +27,7 @@
 }
 
 
-:where(.badge-blocked, .badge.blocked, .badge-none, .badge.none) {
+:where( .badge.blocked, .badge.none) {
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
 }
@@ -40,22 +40,6 @@
 :where(.badge-completed, .badge.completed, .badge-ready) {
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-}
-
-.badge-counter {
-    display: inline-grid;
-    place-items: center;
-    padding: 2px var(--md-sys-spacing-2, 0.5rem);
-    border-radius: var(--md-sys-shape-corner-full);
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.75rem;
-    font-weight: 800;
-    box-shadow: 0 2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
-}
-
-.badge-counter md-icon:not([slot]) {
-    line-height: 1;
 }
 
 .badge-cyan {
@@ -80,7 +64,7 @@
     color: var(--md-sys-color-on-tertiary-container);
 }
 
-:where(.badge-making, .badge-paused, .badge.paused) {
+:where( .badge-paused, .badge.paused) {
     background: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
 }
@@ -103,7 +87,7 @@
     color: var(--md-sys-color-secondary);
 }
 
-:where(.badge-trial, .badge.trial, .badge-verified, .badge.verified) {
+:where(.badge-trial, .badge.trial, .badge.verified) {
     border: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
@@ -174,29 +158,6 @@
 .chip-dot-purple {
     background: var(--md-sys-color-tertiary);
     box-shadow: 0 0 8px var(--md-sys-color-tertiary);
-}
-
-.column-badge {
-    display: grid;
-    place-items: center;
-    padding: 0.25rem 0.625rem;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.8125rem;
-    font-weight: 800;
-}
-
-.column-badge md-icon:not([slot]) {
-    line-height: 1;
-}
-
-
-.explorer-chipset-wrapper {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding-bottom: 0.25rem;
-    overflow-x: auto;
 }
 
 .feat-pill {
@@ -276,80 +237,6 @@
     pointer-events: none;
 }
 
-.item-qty-badge {
-    display: grid;
-    place-items: center;
-    height: auto;
-    padding: 0.2rem 0.6rem;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.875rem;
-    font-weight: 700;
-}
-
-.item-status-pill {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content auto;
-    gap: 0.4rem;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--md-sys-shape-corner-full);
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.item-status-pill md-icon:not([slot]) {
-    line-height: 1;
-}
-
-:where(.item-status-pill.status-completed,
-    .item-status-pill.status-paid) {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-:where(
-    .item-status-pill.status-collecting,
-    .item-status-pill.status-shipping) {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.item-status-pill.status-making {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
-.item-status-pill.status-canceled {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-}
-
-.item-status-pill.status-created {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-.items-count-badge {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content auto;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    border-radius: var(--md-sys-shape-corner-full);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
 .m3-badge {
     display: inline-grid;
     grid-auto-flow: column;
@@ -419,73 +306,6 @@
     color: var(--md-sys-color-tertiary);
 }
 
-.m3-status-badge {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content auto;
-    gap: 0.4rem;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--md-sys-shape-corner-full);
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.m3-status-badge md-icon:not([slot]) {
-    line-height: 1;
-}
-
-.m3-status-badge.canceled {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-}
-
-:where(.m3-status-badge.completed,
-    .m3-status-badge.status-completed,
-    .m3-status-badge.paid,
-    .m3-status-badge.status-paid,
-    .m3-status-badge.success) {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-:where(.m3-status-badge.collected,
-    .m3-status-badge.collecting,
-    .m3-status-badge.status-collecting,
-    .m3-status-badge.info,
-    .m3-status-badge.shipping,
-    .m3-status-badge.status-shipping) {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-:where(.m3-status-badge.making,
-    .m3-status-badge.status-making,
-    .m3-status-badge.warning) {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
-:where(.m3-status-badge.error,
-    .m3-status-badge.status-canceled) {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-}
-
-:where(.m3-status-badge.created,
-    .m3-status-badge.status-created) {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-:where(.m3-status-badge.made) {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-}
-
 .md3-closed-badge {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -545,13 +365,6 @@
     min-width: 0;
 }
 
-.pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-    gap: 1.5rem;
-    width: 100%;
-}
-
 .place-details-badge {
     width: fit-content;
     padding: 0.12rem 0.4rem;
@@ -587,17 +400,6 @@
     text-transform: uppercase;
 }
 
-.price-tag {
-    min-width: 0;
-    min-inline-size: 0;
-    color: var(--md-sys-color-primary);
-    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
-    font-weight: 800;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 
 .pro-tag {
     position: absolute;
@@ -631,11 +433,6 @@
     gap: 0.75rem;
     margin-bottom: 0.5rem;
     overflow-x: auto;
-}
-
-.ready-badge {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 .required-badge {
@@ -833,15 +630,6 @@
     color: var(--md-sys-color-on-surface);
 }
 
-.ux-discount-badge {
-    padding: 2px var(--md-sys-spacing-2, 0.5rem);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    font-size: 0.7rem;
-    font-weight: 700;
-}
-
 .variants-chip-set {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
@@ -875,12 +663,6 @@
     margin-top: 0.35rem;
 }
 
-.wishlist-price-tag {
-    color: var(--md-sys-color-primary);
-    font-size: 1rem;
-    font-weight: 800;
-}
-
 md-assist-chip:active {
     transform: scale(0.965);
     transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
@@ -894,13 +676,6 @@ md-filter-chip:active {
 md-suggestion-chip:active {
     transform: scale(0.965);
     transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
-}
-
-@container product-card (max-width: 320px) {
-    .price-tag {
-        font-size: 1rem;
-    }
-
 }
 
 @media (max-width: 1199.98px) {
@@ -1017,28 +792,6 @@ md-suggestion-chip:active {
     animation: livePulse 2.4s ease-in-out infinite;
 }
 
-.m3-status-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: currentcolor;
-}
-
-.m3-status-dot.pulse {
-    position: relative;
-}
-
-.m3-status-dot.pulse::after {
-    opacity: 0.4;
-    position: absolute;
-    inset: -3px;
-    border-radius: 50%;
-    background: inherit;
-    animation: m3-pulse 2s var(--md-sys-motion-easing-spring) infinite;
-    content: '';
-}
-
 .spec-status-dot {
     width: 8px;
     height: 8px;
@@ -1086,15 +839,6 @@ md-suggestion-chip:active {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-}
-
-.meta-dot {
-    opacity: 0.6;
-}
-
-.meta-highlight {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 :where(md-chip-set) {

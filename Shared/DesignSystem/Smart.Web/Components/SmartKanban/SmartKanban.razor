@@ -1,25 +1,23 @@
 @namespace Smart.Web.Components
 @typeparam TItem where TItem : class
-@using static Assets.Constants.Classes.Orders
-@using static Assets.Constants.Classes.Cards
 
-<section class=@SmartKanbanBoard>
+<section kanban>
     @if (Columns != null)
     {
         @foreach (var col in Columns)
         {
             var columnItems = GetItemsForColumn(col);
-            <section class=@SmartKanbanColumn
+            <section
                  @ondragover:preventDefault="true"
                  @ondrop=@(() => HandleDrop(col))>
-                <header class=@SmartKanbanColumnHeader>
-                    <span class=@SmartKanbanColumnTitle>@col.Title</span>
-                    <span class=@SmartKanbanColumnCount>@columnItems.Count</span>
+                <header>
+                    <span>@col.Title</span>
+                    <mark>@columnItems.Count</mark>
                 </header>
-                <ul class=@SmartKanbanCards>
+                <section>
                     @foreach (var item in columnItems)
                     {
-                        <li class=@SmartKanbanCard
+                        <article
                              role="button"
                              tabindex="0"
                              draggable="true"
@@ -31,12 +29,12 @@
                             }
                             else
                             {
-                                <h4 class=@SmartKanbanCardTitle>@GetItemTitle(item)</h4>
-                                <p class=@SmartKanbanCardSubtitle>@GetItemSubtitle(item)</p>
+                                <h4>@GetItemTitle(item)</h4>
+                                <p>@GetItemSubtitle(item)</p>
                             }
-                        </li>
+                        </article>
                     }
-                </ul>
+                </section>
             </section>
         }
     }

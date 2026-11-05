@@ -1,4 +1,4 @@
----
+﻿---
 name: frontend-ix
 description: "Architectural standard and workflow for Blazor C# interactive code-behind (*.razor.cs) and Clean + Vertical Slice architecture in Socratic. USE FOR: pure C# code-behind authoring, partial class component structure, layer classification (Pages/Widgets/Components), UseCase isolation in Features/, separated typed constants, Dependency Injection, component parameters, lifecycle hooks, Global Auto Rendering state persistence, and async resource disposal. DO NOT USE FOR: Razor template markup (use frontend-ux) or CSS styling (use frontend-ui)."
 license: MIT
@@ -16,7 +16,7 @@ license: MIT
 
 Каждый функциональный модуль организуется по 4-слойной структуре:
 - **`Features/`**: чистая C# бизнес-логика (UseCases, команды, DTO). Без Blazor-зависимостей, 100% Native AOT, вызовы через `ValueTask<Result<T>>`.
-- **`Pages/`**: каркас экрана и роутинг (`@page "/pos"`), привязка к макро-сетке.
+- **`Pages/`**: каркас экрана и роутинг (`[Route("/pos")]` в `*.razor.cs`), привязка к макро-сетке.
 - **`Widgets/`**: умные отраслевые составные организмы (Smart Components: Корзина, Оплата). Внедряют UseCases из `Features/`.
 - **`Components/`**: презентационные примитивы (Dumb Components). Общаются с миром только через `[Parameter]` и `EventCallback`, ничего не знают о `Features/` и UseCases.
 - **Общий `Domain` & `Infrastructure`**: межмодульные контракты (Value Objects, события, интерфейсы) и порты (gRPC, устройства).
@@ -98,8 +98,9 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 
 ## 4. Чеклист проверки (DoD)
 
-- [ ] Бизнес-сценарии вынесены в чистые UseCases в `Features/<Feature>/Application/` (`ValueTask<Result<T>>`).
+- [ ] Бизнес-сценарии вынесены в чистые UseCases в `Features/<Feature>/` (`ValueTask<Result<T>>`).
 - [ ] UI разделён на `Pages/` (каркас/роутинг), `Widgets/` (инжектируют UseCases) и `Components/` (чистые примитивы).
+- [ ] Все страницы объявляют `[Route("/path")]` и `[Authorize]` над `partial class` в `*.razor.cs` (zero `@page` и `@attribute` в `.razor`).
 - [ ] Примитивы в `Components/` слепы к `Features/` (только `[Parameter]` и `EventCallback`).
 - [ ] В `*.razor.cs` нет полей-алиасов констант дизайн-системы (только `using static`).
 - [ ] Методы-обработчики именуются с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`).

@@ -469,20 +469,6 @@
     font-size: 1.1rem;
 }
 
-.place-info-row .info-label {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.68rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.place-info-row .info-value {
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.82rem;
-    line-height: 1.4;
-    word-break: break-word;
-}
-
 .route-alternatives-list {
     display: grid;
     gap: var(--md-sys-spacing-1, 0.25rem);

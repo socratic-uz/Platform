@@ -9,34 +9,6 @@
     gap: 2px;
 }
 
-.column-title-group {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    justify-content: start;
-    align-items: center;
-}
-
-.explorer-title-group {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    align-items: center;
-}
-
-.explorer-title-group h4 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 700;
-}
-
-.explorer-title-group md-icon {
-    color: var(--md-sys-color-primary);
-    font-size: 1.25rem;
-}
-
 .header-title-box {
     display: grid;
     grid-auto-flow: column;
@@ -64,25 +36,6 @@
     margin: 0;
 }
 
-.kiosk-product-title-link {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    cursor: pointer;
-}
-
-.kiosk-product-title-link:hover {
-    color: var(--md-sys-color-primary);
-    text-decoration: underline;
-}
-
-.m3-text-gradient {
-    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .m3-title-large {
     font-size: var(--md-sys-typescale-title-large-size);
     font-weight: var(--md-sys-typescale-title-large-weight);
@@ -98,23 +51,6 @@
     line-height: var(--md-sys-typescale-title-medium-line-height);
     overflow-wrap: anywhere;
     word-break: break-word;
-}
-
-.pos-header-title-group {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
-.pos-product-title-text {
-    display: -webkit-box;
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.88rem;
-    font-weight: 700;
-    line-height: 1.25;
-    text-align: left;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
 }
 
 .title-gradient {
@@ -143,14 +79,6 @@
 
 .ux-mode-title-box .ux-mode-code {
     grid-column: 1 / -1;
-}
-
-.wishlist-title-text {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
 }
 
 .m3-dialog-title-group {
@@ -355,15 +283,6 @@
     font-size: 0.875rem;
 }
 
-.section-header {
-    display: grid;
-    grid-column: 1 / -1;
-    gap: 0.75rem;
-    justify-items: center;
-    width: 100%;
-    text-align: center;
-}
-
 .section-heading {
     margin: 0.5rem 0 0;
     color: var(--md-sys-color-primary);
@@ -371,23 +290,6 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
-
-.section-title {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.65rem;
-    align-items: center;
-    min-width: var(--md-sys-touch-target-min);
-    margin: 0 auto;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.45rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-}
-
-.section-title md-icon {
-    color: var(--md-sys-color-primary);
 }
 
 

@@ -3,12 +3,12 @@
    Rendered Markdown, Syntax Highlighting & Mermaid Diagrams
    ========================================================================== */
 
-:where(.markdown-body, .docs-article) {
+:where(.markdown-body) {
     color: var(--md-sys-color-on-background);
     line-height: 1.6;
 }
 
-:where(.markdown-body, .docs-article) :where(h1, h2, h3, h4, h5, h6) {
+:where(.markdown-body) :where(h1, h2, h3, h4, h5, h6) {
     justify-self: initial;
     color: var(--md-sys-color-on-surface);
     background-image: none;
@@ -16,49 +16,49 @@
     -webkit-background-clip: initial;
 }
 
-:where(.markdown-body, .docs-article) :where(table) {
+:where(.markdown-body) :where(table) {
     grid-column: 1 / -1;
     width: 100%;
     border-collapse: collapse;
 }
 
-:where(.markdown-body, .docs-article) :where(tr):hover {
+:where(.markdown-body) :where(tr):hover {
     background: var(--md-sys-color-surface-container-high);
 }
 
-:where(.markdown-body, .docs-article) :where(.table-container, th, td) {
+:where(.markdown-body) :where(.table-container, th, td) {
     border: 1px solid var(--md-sys-color-outline-variant);
     vertical-align: middle;
 }
 
-:where(.markdown-body, .docs-article) :where(th) {
+:where(.markdown-body) :where(th) {
     padding: var(--md-sys-spacing-4, 1rem);
     align-content: start;
     white-space: nowrap;
 }
 
-:where(.markdown-body, .docs-article) :where(td) {
+:where(.markdown-body) :where(td) {
     padding: 0 var(--md-sys-spacing-4, 1rem);
     white-space: nowrap;
 }
 
-:where(.markdown-body, .docs-article) :where(thead > :first-child > *) {
+:where(.markdown-body) :where(thead > :first-child > *) {
     border-top: none;
 }
 
-:where(.markdown-body, .docs-article) :where(tbody > :last-child > *) {
+:where(.markdown-body) :where(tbody > :last-child > *) {
     border-bottom: none;
 }
 
-:where(.markdown-body, .docs-article) :where(thead > * > :first-child, tbody > * > :first-child) {
+:where(.markdown-body) :where(thead > * > :first-child, tbody > * > :first-child) {
     border-left: none;
 }
 
-:where(.markdown-body, .docs-article) :where(thead > * > :last-child, tbody > * > :last-child) {
+:where(.markdown-body) :where(thead > * > :last-child, tbody > * > :last-child) {
     border-right: none;
 }
 
-:where(.markdown-body, .docs-article) :where(.snippet) {
+:where(.markdown-body) :where(.snippet) {
     margin-bottom: var(--md-sys-spacing-3, 0.75rem);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
@@ -66,19 +66,19 @@
     overflow-y: auto;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs) {
+:where(.markdown-body) :where(.hljs) {
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-mono, monospace);
     tab-size: 2em;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper) {
+:where(.markdown-body) :where(.hljs-copy-wrapper) {
     position: relative;
     overflow: hidden;
 }
 
-:where(.markdown-body, .docs-article) :where([data-action="copy"]) {
+:where(.markdown-body) :where([data-action="copy"]) {
     position: absolute;
     top: 0.4rem;
     right: 1em;
@@ -95,13 +95,13 @@
     touch-action: manipulation;
 }
 
-:where(.markdown-body, .docs-article) :where(.hljs-copy-wrapper):hover :where([data-action="copy"]),
-:where(.markdown-body, .docs-article) :where([data-action="copy"]):focus {
+:where(.markdown-body) :where(.hljs-copy-wrapper):hover :where([data-action="copy"]),
+:where(.markdown-body) :where([data-action="copy"]):focus {
     transform: translateX(0);
 }
 
 /* Mermaid Diagrams */
-:where(.markdown-body, .docs-article) :where(.edgePaths path) {
+:where(.markdown-body) :where(.edgePaths path) {
     stroke: var(--md-sys-color-primary) !important;
     stroke-width: 1.5 !important;
     stroke-dasharray: 10 20 !important;
@@ -111,7 +111,7 @@
     paint-order: stroke;
 }
 
-:where(.markdown-body, .docs-article) :where(.clusters rect) {
+:where(.markdown-body) :where(.clusters rect) {
     border-radius: var(--md-sys-shape-corner-large, 24px);
     fill: var(--md-sys-color-surface-variant) !important;
     stroke: var(--md-sys-color-outline) !important;
@@ -119,7 +119,7 @@
     ry: 24px;
 }
 
-:where(.markdown-body, .docs-article) :where(.nodes rect) {
+:where(.markdown-body) :where(.nodes rect) {
     border-radius: var(--md-sys-shape-corner-large, 24px);
     fill: var(--md-sys-color-tertiary-container) !important;
     stroke: var(--md-sys-color-outline) !important;
@@ -127,7 +127,7 @@
     ry: 24px;
 }
 
-:where(.markdown-body, .docs-article) :where(rect.actor) {
+:where(.markdown-body) :where(rect.actor) {
     border-radius: var(--md-sys-shape-corner-large, 24px);
     fill: var(--md-sys-color-secondary-container) !important;
     stroke: var(--md-sys-color-outline) !important;

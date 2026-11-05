@@ -134,8 +134,7 @@ body:has(layout[grid]:not(:has(> nav))) > footer,
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 24px + env(safe-area-inset-bottom, 0));
     }
 
-    body:has(layout[grid]:has(footer[cart])) > main,
-    body:has(layout[grid]:has(.cart-bar)) > main {
+    body:has(layout[grid]:has(footer[cart])) > main {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 88px + env(safe-area-inset-bottom, 0));
     }
 
@@ -145,8 +144,7 @@ body:has(layout[grid]:not(:has(> nav))) > footer,
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 2.5rem);
     }
 
-    body:has(layout[grid]:has(footer[cart])) > footer,
-    body:has(layout[grid]:has(.cart-bar)) > footer {
+    body:has(layout[grid]:has(footer[cart])) > footer {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + 88px + env(safe-area-inset-bottom, 0));
     }
 

@@ -3,26 +3,8 @@
    Universal Component Primitives, Shared Grid Utilities & Glass Surfaces
    ========================================================================== */
 
-.grid-stack {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    align-content: start;
-    box-sizing: border-box;
-    width: 100%;
-}
-
 .m3-grid {
     display: grid;
-}
-
-.m3-grid-autofit {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-    gap: var(--md-sys-spacing-6);
-    box-sizing: border-box;
-    width: 100%;
 }
 
 .m3-grid-center {
@@ -41,15 +23,6 @@
     box-sizing: border-box;
     width: fit-content;
     max-width: 100%;
-}
-
-.m3-grid-main-sidebar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    align-items: start;
-    box-sizing: border-box;
-    width: 100%;
 }
 
 .color-item {
@@ -139,11 +112,6 @@
     gap: 0.9rem;
 }
 
-.controls-grid {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-}
-
 .grid-2-col {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -154,14 +122,6 @@
 :where(fieldset.grid-2-col > legend),
 :where(fieldset.grid-2-col > .group-toggle) {
     grid-column: 1 / -1;
-    width: 100%;
-}
-
-.grid-catalog {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
-    align-content: start;
     width: 100%;
 }
 
@@ -204,10 +164,4 @@
 
 .m3-section-gutter {
     padding-inline: var(--md-sys-gutter-section);
-}
-
-@media screen and (max-width: 839.98px) {
-    .m3-grid-main-sidebar {
-        grid-template-columns: minmax(0, 1fr);
-    }
 }

@@ -132,14 +132,6 @@
     box-shadow: 0 4px 10px rgb(from var(--md-sys-color-error) r g b / 0.1);
 }
 
-.progress-labels {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8125rem;
-    font-weight: 500;
-}
-
 .route-loading {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.82rem;
@@ -240,21 +232,6 @@
     overflow: hidden;
 }
 
-.progress-bar-container {
-    display: grid;
-    gap: var(--md-sys-spacing-1);
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.empty-mini-icon {
-    display: grid;
-    opacity: 0.8;
-    place-items: center;
-    color: var(--md-sys-color-primary);
-    font-size: 36px;
-}
-
 .store-not-found {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -298,41 +275,12 @@
     font-size: 2.2rem;
 }
 
-.error-banner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    box-sizing: border-box;
-    margin-top: var(--md-sys-spacing-4, 1rem);
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-error);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    font-size: 0.9375rem;
-}
-
-.error-banner .error-icon {
-    font-size: 1.5rem;
-}
-
-.orders-error-banner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
-    align-items: center;
-    padding: 1rem 1.25rem;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    font-size: 0.9rem;
-}
-
 #blazor-error-ui {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--m3-z-toast, 1000);
+    z-index: var(--md-sys-z-toast, 1200);
     width: 100%;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
     border-radius: var(--md-sys-shape-corner-large, 24px);
@@ -342,9 +290,6 @@
 }
 
 /* --- Toasts, Pulses & Support Telemetry --- */
-.error-icon {
-    font-size: 1.5rem;
-}
 
 .live-pulse-dot {
     width: 8px;
@@ -373,14 +318,6 @@
     font-size: 0.9rem;
 }
 
-.pulse-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    box-shadow: 0 0 8px var(--md-sys-color-tertiary);
-    animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 .pulse-ring {
     position: absolute;
     inset: -6px;
@@ -388,12 +325,6 @@
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     animation: kioskRingPulse 2s cubic-bezier(0.24, 0, 0, 0.38) infinite;
     pointer-events: none;
-}
-
-.resend-countdown {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8rem;
-    text-align: center;
 }
 
 .share-toast {
@@ -407,40 +338,6 @@
     background: rgb(from var(--md-sys-color-tertiary-container) r g b / 0.8);
     color: var(--md-sys-color-on-tertiary-container);
     font-size: 0.875rem;
-}
-
-.support-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.support-log-empty {
-    color: var(--md-sys-color-outline);
-    font-style: italic;
-}
-
-.support-log-line {
-    margin-bottom: 6px;
-    color: var(--md-sys-color-primary);
-    line-height: 1.4;
-    white-space: pre-wrap;
-}
-
-.support-action-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: 0.75rem;
-}
-
-.support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: 1.5rem;
 }
 
 .error-boundary-card {

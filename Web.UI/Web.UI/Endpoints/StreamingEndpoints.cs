@@ -1,17 +1,34 @@
 #if FEATURE_FFMPEG
+using System;
 using System.Runtime.InteropServices;
 using FFmpegProcessor.Models;
 using FFmpegProcessor.Services;
 using Web.UI.Hubs;
 using SkiaSharp;
 #if FEATURE_VISION
-using Socratic.Vision.Pages;
+using Socratic.Vision.Features.Detection;
 #endif
 
 namespace Web.UI.Endpoints;
 
 public static class StreamingEndpoints
 {
+    private static readonly SKPaint PaintRect = new()
+    {
+        Style = SKPaintStyle.Stroke,
+        StrokeWidth = 4,
+        IsAntialias = true,
+        Color = SKColors.Red
+    };
+
+    private static readonly SKPaint PaintText = new()
+    {
+        TextSize = 24,
+        IsAntialias = true,
+        Color = SKColors.Red,
+        IsStroke = false
+    };
+
     public static void MapStreamingEndpoints(this IEndpointRouteBuilder app)
     {
         app.MapGet("/api/streams/remotedesktop", async (
@@ -88,6 +105,9 @@ public static class StreamingEndpoints
             string? ffmpegPath,
             string? ffprobePath,
             IMediaStreamProcessor mediaProcessor,
+#if FEATURE_VISION
+            IYoloDetectorService? yoloService,
+#endif
             CancellationToken cancellationToken) =>
         {
             context.Response.ContentType = "multipart/x-mixed-replace; boundary=--frame";
@@ -135,10 +155,9 @@ public static class StreamingEndpoints
                     if (frameBitmap == null) continue;
 
 #if FEATURE_VISION
-                    if (Detector.yolo != null)
+                    if (yoloService != null && yoloService.IsAvailable)
                     {
-                        Detector.yolo.SetupYoloDefaultLabels();
-                        var preds = await Detector.yolo.Predict(frameBitmap);
+                        var preds = await yoloService.DetectAsync(frameBitmap, cancellationToken);
 
                         if (preds != null && preds.Count > 0)
                         {
@@ -146,20 +165,14 @@ public static class StreamingEndpoints
                             using var font = new SKFont(SKTypeface.Default, 16);
                             for (int i = 0; i < preds.Count; i++)
                             {
-                                if (Detector.paintRect != null)
-                                {
-                                    canvas.DrawRect(preds[i].Rectangle, Detector.paintRect);
-                                }
+                                canvas.DrawRect(preds[i].Rectangle, PaintRect);
 
-                                if (Detector.paintText != null)
-                                {
-                                    var labelName = preds[i].Label?.Name ?? "Object";
-                                    canvas.DrawText($"{labelName} ({Math.Round(preds[i].Score, 2)})",
-                                        preds[i].Rectangle.Left + 8,
-                                        preds[i].Rectangle.Top + 26,
-                                        font,
-                                        Detector.paintText);
-                                }
+                                var labelName = preds[i].Label?.Name ?? "Object";
+                                canvas.DrawText($"{labelName} ({Math.Round(preds[i].Score, 2)})",
+                                    preds[i].Rectangle.Left + 8,
+                                    preds[i].Rectangle.Top + 26,
+                                    font,
+                                    PaintText);
                             }
                             canvas.Flush();
                         }
@@ -187,4 +200,3 @@ public static class StreamingEndpoints
     }
 }
 #endif
-

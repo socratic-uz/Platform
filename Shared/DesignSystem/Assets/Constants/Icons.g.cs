@@ -33968,6 +33968,8 @@ namespace Assets.Constants
         /// </summary>
         public const string Error = "error";
 
+        public const string ErrorIcon = "error";
+
         /// <summary>
         /// Ligature: <c>error_circle_rounded</c> | Category: <see cref="Common"/><br/>
         /// Codepoint: <c>\uf8b6</c>

@@ -3,17 +3,6 @@
    Search Bars, Universal Search Containers, Filters & Affordances
    ========================================================================== */
 
-.m3-filter-toolbar {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    align-items: center;
-    width: 100%;
-    padding-bottom: 0.25rem;
-    overflow-x: auto;
-}
-
 .map-search-inline {
     width: 100%;
     min-width: 0;
@@ -125,16 +114,6 @@
     padding: 0.25rem 0;
 }
 
-.suggestions-wrapper {
-    display: grid;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    padding: 0 1.5rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-}
-
 /* --- Responsive Search Suggestions --- */
 @media (min-width: 600px) {
     .suggestions {
@@ -145,9 +124,3 @@
 }
 
 /* --- Responsive Search Suggestions --- */
-@media (min-width: 600px) {
-    .suggestions-wrapper {
-        justify-content: end;
-    }
-
-}

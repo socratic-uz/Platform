@@ -43,51 +43,6 @@
     cursor: pointer;
 }
 
-.form-step {
-    display: grid;
-    gap: 1.25rem;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-.input-box {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    width: 100%;
-    min-height: 48px;
-    padding: 0.25rem 0.35rem 0.25rem 1.25rem;
-    border: 1px solid var(--md-sys-color-outline);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    background: var(--md-sys-color-surface-container-highest);
-    transition: border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    cursor: text;
-}
-
-.input-box textarea {
-    display: block;
-    width: 100%;
-    min-height: var(--md-sys-touch-target-min, 48px);
-    max-height: 120px;
-    margin: 0;
-    padding: 0.6rem 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-family: inherit;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    resize: none;
-}
-
-.input-box:focus-within {
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: -2px;
-    box-shadow: none;
-}
-
 .m3-form-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -157,17 +112,6 @@
     gap: 1.5rem;
     width: 100%;
     min-width: 0;
-}
-
-.promo-field {
-    width: 100%;
-}
-
-.promo-input-group {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.5rem;
-    align-items: center;
 }
 
 .search-input {
@@ -264,13 +208,6 @@ md-outlined-select {
     .platforms-unified-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.25rem;
-    }
-
-}
-
-@media (max-width: 599.98px) {
-    .input-box {
-        padding: 0.2rem 0.25rem 0.2rem 0.85rem;
     }
 
 }

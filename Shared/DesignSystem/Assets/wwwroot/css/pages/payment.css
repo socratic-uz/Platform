@@ -1,6 +1,6 @@
 /* ==========================================================================
    Socratic Design System — PAGES / payment.css
-   Direct Body Landmarks for Payment Checkout: <main payment>
+   Classless Page Landmark Architecture — Payment Dashboard & Plans
    ========================================================================== */
 
 main[payment] {
@@ -18,11 +18,321 @@ main[payment] {
     overflow-x: hidden;
 }
 
+/* ==========================================================================
+   LANDMARK: HEADER (Start Section & Actions)
+   ========================================================================== */
+
+header[payment]>span {
+    color: var(--md-sys-color-outline-variant);
+    margin: 0 0.5rem;
+}
+
+header[payment]>hgroup {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+header[payment]>hgroup>md-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-primary);
+}
+
+header[payment]>hgroup>h1 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* ==========================================================================
+   LANDMARK: USER PROFILE & SCORING SECTION (First Section)
+   ========================================================================== */
+
+main[payment]>section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: var(--md-sys-spacing-5, 1.25rem);
+    width: 100%;
+}
+
+main[payment]>section:first-of-type>article {
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-5, 1.25rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[payment]>section:first-of-type>article>h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[payment]>section:first-of-type>article>ul {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[payment]>section:first-of-type>article>ul>li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+main[payment]>section:first-of-type>article>ul>li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+main[payment]>section:first-of-type>article>ul>li>span:first-child {
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
+}
+
+main[payment]>section:first-of-type>article>ul>li>span:last-child {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* Credit Scoring Box */
+main[payment]>section:first-of-type>article:nth-of-type(2) {
+    place-items: center;
+    text-align: center;
+}
+
+main[payment]>section:first-of-type>article:nth-of-type(2)>figure {
+    display: grid;
+    place-items: center;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    border: 6px solid var(--md-sys-color-primary);
+    border-radius: 50%;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container);
+}
+
+/* ==========================================================================
+   LANDMARK: PLANS SECTION (Second Section)
+   ========================================================================== */
+
+main[payment]>section:last-of-type {
+    display: grid;
+    gap: var(--md-sys-spacing-4, 1rem);
+    width: 100%;
+}
+
+main[payment]>section:last-of-type>h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Empty Plans State */
+main[payment]>section:last-of-type>section[role="status"] {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container-lowest);
+    text-align: center;
+}
+
+main[payment]>section:last-of-type>section[role="status"]>md-icon {
+    font-size: 48px;
+    color: var(--md-sys-color-outline);
+}
+
+main[payment]>section:last-of-type>section[role="status"]>h3 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[payment]>section:last-of-type>section[role="status"]>p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+}
+
+/* Plans List & Card */
+main[payment]>section:last-of-type>section:not([role="status"]) {
+    display: grid;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>header p {
+    margin: 2px 0 0 0;
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>ul>li {
+    display: grid;
+    gap: 2px;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>ul>li>span:first-child {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>ul>li>span:last-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>section {
+    display: grid;
+    gap: 0.35rem;
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>section>header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[payment]>section:last-of-type>section:not([role="status"])>article>footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), max-content));
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 599.98px) {
+    main[payment]>section:last-of-type>section:not([role="status"])>article>footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* ==========================================================================
+   LANDMARK: FOOTER (payment)
+   ========================================================================== */
+
+footer[payment] {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5rem var(--md-sys-gutter-page);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+}
+
+footer[payment]>span:first-child {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.4rem;
+    align-items: center;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+}
+
+footer[payment]>md-chip-set {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+footer[payment] a {
+    display: inline-grid;
+    place-items: center;
+    min-width: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    padding: 0 0.75rem;
+    color: var(--md-sys-color-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+footer[payment] a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
 @media screen and (max-width: 839.98px) {
     main[payment] {
         gap: 1.25rem;
         padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 2.5rem);
         padding-right: max(0.75rem, env(safe-area-inset-right, 0));
         padding-left: max(0.75rem, env(safe-area-inset-left, 0));
+    }
+
+    footer[payment] {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+        gap: 0.75rem;
     }
 }

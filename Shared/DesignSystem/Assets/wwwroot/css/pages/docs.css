@@ -1,8 +1,35 @@
 /* ==========================================================================
    Socratic Design System — PAGES / docs.css
-   Classless Page Landmark Architecture
+   Direct Body Landmarks for Documentation: header[docs], main[docs]
    ========================================================================== */
 
+/* Header Landmark */
+header[docs] {
+    display: grid;
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 64px;
+    padding: 0 var(--md-sys-gutter-page);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container);
+}
+
+header[docs] > span:first-child {
+    color: var(--md-sys-color-outline-variant);
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+header[docs] > span:last-of-type {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Main Landmark */
 main[docs] {
     display: grid;
     grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr);
@@ -14,8 +41,8 @@ main[docs] {
     min-width: 0;
     min-height: calc(100dvh - var(--md-sys-spacing-header, 64px));
     padding: clamp(1.25rem, 3vw, 2rem);
-    padding-right: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-right, 0));
-    padding-left: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-left, 0));
+    padding-right: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-right, 0px));
+    padding-left: max(clamp(1.25rem, 3vw, 2rem), env(safe-area-inset-left, 0px));
     background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     overflow: hidden;
@@ -26,8 +53,116 @@ main[docs] {
         grid-template-columns: minmax(0, 1fr);
         height: auto;
         min-height: 100%;
-        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 1.5rem);
-        padding-right: max(0.75rem, env(safe-area-inset-right, 0));
-        padding-left: max(0.75rem, env(safe-area-inset-left, 0));
+        padding: 1rem 0.75rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+        padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+        padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
     }
+}
+
+/* Sidebar Navigation Aside */
+main[docs] > aside {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 1rem;
+    position: sticky;
+    top: var(--md-sys-spacing-6);
+    height: calc(100dvh - var(--md-sys-spacing-header, 64px) - 3rem);
+    padding: 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-low);
+    overflow-y: auto;
+}
+
+main[docs] > aside > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+main[docs] > aside > header > span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[docs] > aside > nav {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+}
+
+main[docs] > aside > nav > header {
+    padding: 0.5rem 0.75rem 0.25rem;
+    color: var(--md-sys-color-primary);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Content Section */
+main[docs] > section {
+    display: grid;
+    gap: 1.5rem;
+    align-content: start;
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large, 16px);
+    background: var(--md-sys-color-surface-container-lowest);
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+main[docs] > section > header {
+    display: none;
+}
+
+@media screen and (max-width: 839.98px) {
+    main[docs] > section > header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: center;
+        min-height: 56px;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
+    }
+}
+
+/* Welcome Card in Section */
+main[docs] > section > article {
+    display: grid;
+    gap: 0.75rem;
+    place-items: center;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background-color: var(--md-sys-color-surface-container-low);
+    text-align: center;
+}
+
+main[docs] > section > article > md-icon:not([slot]) {
+    color: var(--md-sys-color-primary);
+    font-size: 48px;
+}
+
+main[docs] > section > article > h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[docs] > section > article > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9375rem;
+    line-height: 1.5;
 }

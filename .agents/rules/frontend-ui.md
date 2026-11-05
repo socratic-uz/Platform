@@ -7,7 +7,7 @@
 ### 1.1. Централизованная нативная платформа (Native W3C Platform)
 - **Единый центр стилизации**: все стили живут в `Assets/wwwroot/css/` с точкой входа [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css).
 - **Zero Build-Step для CSS**: чистый нативный W3C CSS без препроцессоров, утилитных генераторов и монолитных бандлов. Браузер напрямую парсит валидные спецификации W3C через параллельные мультиплексированные потоки HTTP/2 и HTTP/3.
-- **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей и тегов `<style>`. Стилизация детерминирована на уровне платформенных классов дизайн-системы.
+- **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей, тегов `<style>` и классов `class=@...`. Стилизация детерминирована на уровне атрибутов первого уровня (`[card]`, `main[kiosk]`, `aside[cart]`) и семантической иерархии тегов HTML5.
 
 ### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
 Иерархия каскада построена на нативных каскадных слоях **Cascade Layers (`@layer`)** в начале `styles.css`:
@@ -22,7 +22,7 @@
   3. `components` (`components/`) — **Уровни 4–6 DOM**: атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
   4. `widgets` (`widgets/`) — **Уровень 3 DOM**: составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`). Виджеты могут переопределять и адаптировать компоненты под специфику бизнес-процесса.
   5. `pages` (`pages/`) — **Уровень 2 DOM**: стили **строго для прямых ориентиров `body`**, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
-  6. `layouts` (`layouts/`) — **Уровень 1 DOM**: структурные макро-каркасы и сетки экрана. Стили применяются **строго к `body`** через активатор `<layout [variant]>` (`body:has(layout[grid])`, `body:has(layout[landing])`, `body:has(layout[map])`) и его прямым ориентирам (`> header`, `> nav`, `> main`, `> footer`). Обладают наивысшим приоритетом компоновки всего экрана.
+  6. `layouts` (`layouts/`) — **Уровень 1 DOM**: Макросеткой экрана является сам тег `<body>`. Тег `<layout [variant]>` является исключительно механизмом переключения стилей макросетки через селектор `body:has(layout[variant])`, управляющий сеткой прямых ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`).
 
 ### 1.3. Контракт растягивания на всю область (Full Width by Default) и центрирования (Opt-in Centering)
 - **Растягивание по умолчанию (Stretch by Default)**:
@@ -67,6 +67,41 @@
   - Ячейки с усечением текста (`text-overflow: ellipsis`) снабжаются `min-width: 0;`.
 - **CSS Container Queries (`@container`)**: Micro Layout (карточки, модальные окна, виджеты) адаптируется к ширине своего непосредственного родителя, а не экрана.
 - **M3 Window Size Classes**: Macro Layout (каркас приложения, навигация, рабочие зоны) управляется адаптивной матрицей вьюпортов M3 (`Compact`, `Medium`, `Expanded`, `Large`, `ExtraLarge`).
+
+### 1.6. Pure Attribute-Driven Classless — Трёхуровневая семантическая навигация и селекторы
+Все стили компонентов, виджетов и страниц строятся строго по трёхуровневой модели без классов:
+
+```text
+1. Уровень документа (Body)
+   └── body:has(layout[grid]) { ... }
+   └── body:has(layout[landing]) { ... }
+
+2. Уровень страницы (Landmarks первого уровня)
+   ├── header[page] > tag1 > tag2 { ... }
+   ├── nav[page] > tag1 > tag2 { ... }
+   ├── main[page] > tag1 > tag2 { ... }
+   └── footer[page] > tag1 > tag2 { ... }
+
+3. Уровень виджетов (Root-tag первого уровня внутри виджета)
+   └── root-tag[widget] > child-tag > child-child-tag { ... }
+```
+
+- **1. Уровень документа (`body`)**:
+  - `body:has(...)` применяется **исключительно** для макросетки через тег `<layout [variant]>` (`body:has(layout[grid])`, `body:has(layout[landing])`, `body:has(layout[chat])`, `body:has(layout[map])`).
+- **2. Уровень страницы (`landmarks`)**:
+  - На первом уровне DOM страницы находятся её семантические ориентиры: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`.
+  - Стили каждого ориентира пишутся **строго от самого landmark'а**:
+    - `header[kiosk] > nav > hgroup > p` (категорически запрещено писать `body:has(main[kiosk]) header...` — `header[kiosk]` сам является ориентиром 1-го уровня).
+    - `main[kiosk] > nav`, `main[kiosk] > article`, `main[kiosk] :where(md-filled-card)`.
+    - `footer[kiosk] > :where(md-text-button, button)`.
+- **3. Уровень виджетов (`widgets`)**:
+  - Корневой тег первого уровня виджета несёт атрибут виджета:
+    - `aside[cart] > section > ul > li`
+    - `aside[order] > section > article`
+    - `dialog[modal] > fieldset > menu`
+- **Атрибут строго на первом уровне DOM-дерева в Razor-разметке**:
+  - Дочерние элементы внутри контейнеров не несут атрибутов и являются чистыми HTML5-тегами (`tag1`, `tag2`, `child-tag`).
+- **Нулевая специфичность**: использование `:where(...)` сохраняет вес `(0, 0, 0)`, позволяя слоям каскада (`@layer`) и токенам управлять оформлением без специфических конфликтов.
 
 ### 1.6. Модульность компонентов и нулевая специфичность примитивов (`:where(...)`)
 - **Модульная изоляция**: каждый компонент (`buttons.css`, `cards.css`, `dialogs.css`, `forms.css`) независим и инкапсулирует собственные правила. Компоненты слабо связаны (Loose Coupling).

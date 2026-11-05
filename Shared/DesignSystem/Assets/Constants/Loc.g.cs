@@ -8714,20 +8714,20 @@ namespace Assets.Constants
             public const string ActiveText = "Payment_Active";
 
             /// <summary>
+            /// Key: <c>Payment_Amount</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сумма части&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qism summasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
+            /// </summary>
+            public const string Amount = "Payment_Amount";
+
+            /// <summary>
             /// Key: <c>Checkout_AmountLabel</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Сумма:&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Summa:&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount:&quot;
             /// </summary>
             public const string AmountLabel = "Checkout_AmountLabel";
-
-            /// <summary>
-            /// Key: <c>Payment_Amount</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сумма части&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qism summasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
-            /// </summary>
-            public const string AmountText = "Payment_Amount";
 
             /// <summary>
             /// Key: <c>Payment_AuthGoogleSso</c><br/>
@@ -8759,7 +8759,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Bloklangan&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Blocked&quot;
             /// </summary>
-            public const string BlockedText = "Payment_Blocked";
+            public const string Blocked = "Payment_Blocked";
 
             /// <summary>
             /// Key: <c>Payment_Cabinet</c><br/>
@@ -25869,7 +25869,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Summa&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Amount&quot;
             /// </summary>
-            public const string AmountText = "Invoice_Amount";
+            public const string Amount = "Invoice_Amount";
 
             /// <summary>
             /// Key: <c>Invoice_Cashier</c><br/>

@@ -4,8 +4,7 @@
    ========================================================================== */
 
 article[faceid],
-section[faceid],
-.faceid-viewfinder-card {
+section[faceid] {
     display: grid;
     gap: 1.25rem;
     justify-items: center;
@@ -23,42 +22,6 @@ section[faceid],
     font-size: 0.75rem;
     line-height: 1.4;
     text-align: center;
-}
-
-.faceid-scanner-frame {
-    display: grid;
-    place-items: center;
-    position: relative;
-    width: clamp(180px, 50vw, 240px);
-    height: clamp(180px, 50vw, 240px);
-    margin: 0;
-    border: 3px solid var(--md-sys-color-primary);
-    border-radius: 50%;
-    background: var(--md-sys-color-surface-container-low);
-    overflow: hidden;
-    box-shadow: 0 0 30px var(--md-sys-color-primary-container);
-}
-
-.faceid-scanner-frame video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.faceid-scanner-frame.scanning {
-    border-color: var(--md-sys-color-tertiary);
-    box-shadow: 0 0 40px var(--md-sys-color-tertiary-container);
-}
-
-.faceid-scanner-frame.scanning::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--md-sys-color-tertiary), transparent);
-    animation: authScanLine 1.8s infinite ease-in-out;
-    content: "";
 }
 
 .faceid-status-text {

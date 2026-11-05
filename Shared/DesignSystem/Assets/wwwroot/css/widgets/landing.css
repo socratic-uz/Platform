@@ -219,25 +219,6 @@
     transform: scale(1.02);
 }
 
-.pillar-card {
-    display: grid;
-    gap: 1.25rem;
-    padding: 1.75rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
-    background: var(--md-sys-color-surface-container-low);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.pillar-card:hover {
-    box-shadow: var(--md-sys-elevation-level3);
-    transform: translateY(-4px);
-}
-
-.pillar-card:active {
-    transform: scale(0.98);
-}
-
 .superpowers-bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
@@ -830,14 +811,6 @@ header.landing-header .header-brand-text {
     overflow-x: clip;
 }
 
-.landing-grid>.landing-main {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-}
-
 .landing-grid>footer {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
@@ -851,10 +824,6 @@ header.landing-header .header-brand-text {
 
 .landing-grid:has(:where(main[landing])) {
     grid-template-rows: minmax(0, 1fr);
-}
-
-.landing-grid:has(:where(main[landing]))>.landing-main {
-    grid-row: 1 / -1;
 }
 
 .landing-grid:has(:where(main[landing]))>footer {
@@ -1549,13 +1518,6 @@ header.landing-header .landing-mobile-menu-toggle {
         line-height: 1.22;
     }
 
-    .local-video-pip {
-        right: 8px;
-        bottom: 8px;
-        width: 100px;
-        height: 75px;
-    }
-
     .main-footer {
         padding: var(--md-sys-spacing-6) var(--md-sys-spacing-5);
         border-radius: var(--md-sys-shape-expressive-card) var(--md-sys-shape-expressive-card) 0 0;
@@ -1574,13 +1536,6 @@ header.landing-header .landing-mobile-menu-toggle {
         margin-bottom: 0.25rem;
     }
 
-    .score-box {
-        padding-top: 1.5rem;
-        padding-left: 0;
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-left: none;
-    }
-
     .spatial-wing-footer {
         grid-template-columns: minmax(0, 1fr);
         gap: 1rem;
@@ -1590,11 +1545,6 @@ header.landing-header .landing-mobile-menu-toggle {
     .spotlight-features {
         grid-template-columns: minmax(0, 1fr);
         gap: 0.35rem;
-    }
-
-    .view-switcher {
-        width: auto;
-        min-width: 280px;
     }
 
 }

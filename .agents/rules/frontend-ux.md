@@ -8,6 +8,34 @@
 > **ГЛАВНЫЙ ЗАКОН РАЗМЕТКИ**:
 > В `.razor` файлах разметки не должно быть сырых строковых литералов, длинных путей к константам, fallback-заглушек и тяжелых блоков бизнес-логики `@code`. Вся C#-логика, параметры и обработчики выносятся в парный файл `*.razor.cs`.
 
+### 1.1. ⚡ Тотальный отказ от CSS-классов (Pure Attribute-Driven Classless)
+В файлах `*.razor` **строго запрещено** использовать CSS-классы (`class=@...`) на семантических HTML5-элементах.
+- **Трёхуровневая модель навигации и селекторов**:
+  1. **Уровень документа (`body`)**: `body:has(layout[grid]) { ... }`, `body:has(layout[landing]) { ... }` — макросетка на самом теге `body`, переключаемая тегом `<layout [variant]>`.
+  2. **Уровень страницы (`landmarks первого уровня DOM`)**: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`. Например: `<header kiosk>`, `<main kiosk>`, `<footer kiosk>`. Их стили пишутся напрямую: `header[kiosk] > tag1 > tag2`, `main[kiosk] > tag1 > tag2`, `footer[kiosk] > tag1 > tag2`. Запрещено писать `body:has(main[kiosk]) header...` — `header[kiosk]` сам является ориентиром 1-го уровня.
+  3. **Уровень виджетов (`root-tag первого уровня внутри виджета`)**: `root-tag[widget] > child-tag > child-child-tag` (например: `<aside cart>`, `<aside order>`, `<dialog modal>`).
+- **Атрибут ТОЛЬКО на первом уровне DOM дерева**: Атрибут указывается строго на корневом теге компонента/виджета/ориентира страницы (`header[kiosk]`, `main[kiosk]`, `footer[kiosk]`, `aside[cart]`, `aside[order]`, `dialog[modal]`). Дочерние узлы внутри контейнера НЕ несут вспомогательных атрибутов.
+- Дочерние элементы являются чистыми семантическими HTML5-тегами и стилизуются по прямому дереву:
+  `[card] > figure > img`
+  `main[kiosk] > section > article`
+  `aside[cart] > header > hgroup > h3`
+  `aside[cart] > ul > li`
+  `aside[cart] > footer > dl > p`
+- Директивы `@using static Classes.*` и класс-константы выводятся из эксплуатации.
+
+### 1.2. 🚫 Запрет `@page` и `@attribute` в разметке (*.razor)
+
+В файлах `*.razor` **категорически запрещено** использовать директивы маршрутизации и безопасности:
+- ❌ `@page "/..."`
+- ❌ `@attribute [Authorize]`
+- ❌ `@attribute [Authorize(Policy = "...")]`
+- ❌ `@attribute [AllowAnonymous]`
+
+**Правило**: Разметка должна оставаться чистой декларативной структурой DOM без инфраструктурных метаданных.
+Вся конфигурация маршрутизации и авторизации страниц выносится строго в парный файл `*.razor.cs` через стандартные C#-атрибуты над частичным классом:
+- `[Route("/...")]` (из неймспейса `Microsoft.AspNetCore.Components`)
+- `[Authorize]` / `[AllowAnonymous]` (из неймспейса `Microsoft.AspNetCore.Authorization`)
+
 ---
 
 ## 2. 🔤 Обязательный `@using static` для ВСЕХ констант (Только короткие имена)
@@ -93,9 +121,11 @@
 
 ## 5. 🏛️ Архитектура ориентиров страниц (Page Landmarks) и Контракт растягивания/центрирования
 
-### 5.1. Активация лейаутов и бесклассовые ориентиры страниц (Classless Page Landmarks)
-- **Активация макро-лейаута через `<layout [variant]>`**:
-  Каждый экран активирует свой макро-каркас через кастомный бесклассовый тег `<layout>` (например, `<layout grid>`, `<layout landing>`, `<layout map>`, `<layout chat>`). В CSS это селектирует `body:has(layout[grid])` без мутации классов на `<body>`.
+### 5.1. Макросетка body и переключатель лейаутов <layout [variant]>
+- **Макросеткой приложения является сам тег `<body>`**:
+  Каркас раскладки ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`) задается исключительно CSS Grid на теге `body`.
+- **Тег `<layout [variant]>` — исключительно механизм переключения**:
+  Тег `<layout [variant]>` (`<layout grid>`, `<layout landing>`, `<layout map>`, `<layout chat>`) не создает элементов макросетки, а служит декларативным триггером для селектора `body:has(layout[variant])`, переключающего CSS Grid стили на `body`.
 - **Булевы атрибуты ориентиров страниц (Boolean Page Flags)**:
   Прямые семантические ориентиры экрана (`<header>`, `<nav>`, `<main>`, `<footer>`) помечаются **строго булевым атрибутом страницы**:
   `<main kiosk>`, `<main terminal>`, `<main orders>`, `<main payment>`, `<main about>`, `<header about>`.

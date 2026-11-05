@@ -36,18 +36,12 @@
 }
 
 :where(
-    .active-orders-scroll,
     .map-categories-scroll,
     .no-scrollbar,
-    .pos-orders-scroll,
-    .pos-top-header-actions,
     .scrollbar-none,
     .store-breadcrumbs,
-    .suggestions-wrapper,
     .touch-scroll-x,
-    .ux-category-tabs,
-    .ux-widget-chips
-)::-webkit-scrollbar {
+    .ux-category-tabs)::-webkit-scrollbar {
     display: none;
 }
 
@@ -63,7 +57,6 @@
 /* 4. Thin Custom Scrollbars (Consolidated Master Group) */
 :where(
     .m3-config-dialog,
-    .m3-dialog-body,
     .m3-dialog-surface,
     .map-panel-content,
     .product-thumbnails,
@@ -77,7 +70,6 @@
 
 :where(
     .m3-config-dialog,
-    .m3-dialog-body,
     .m3-dialog-surface,
     .map-panel-content,
     .product-thumbnails,
@@ -91,7 +83,6 @@
 
 :where(
     .m3-config-dialog,
-    .m3-dialog-body,
     .m3-dialog-surface,
     .map-panel-content,
     .product-thumbnails,
@@ -104,7 +95,6 @@
 
 :where(
     .m3-config-dialog,
-    .m3-dialog-body,
     .m3-dialog-surface,
     .map-panel-content,
     .product-thumbnails,
@@ -116,14 +106,6 @@
 }
 
 /* 5. Custom Unique Scrollbar Modifiers */
-.det-sidebar-scrollable::-webkit-scrollbar {
-    width: 4px;
-}
-
-.det-sidebar-scrollable::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
-    background-color: var(--md-sys-color-outline-variant);
-}
 
 .table-container::-webkit-scrollbar-thumb {
     border: 0.15rem solid transparent;

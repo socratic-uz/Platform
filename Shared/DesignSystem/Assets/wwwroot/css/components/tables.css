@@ -80,62 +80,6 @@
     padding: 0;
 }
 
-.m3-row-label {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9375rem;
-}
-
-.m3-row-value {
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    text-align: right;
-}
-
-.m3-table-actions-bar {
-    display: grid;
-    justify-content: start;
-    margin-bottom: var(--md-sys-spacing-2);
-}
-
-.m3-table-row-actions {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2);
-    justify-content: end;
-}
-
-.orders-table {
-    width: 100%;
-    min-width: min(100%, 680px);
-    border-collapse: collapse;
-    color: var(--md-sys-color-on-surface);
-}
-
-.orders-table td {
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    font-size: 0.9rem;
-}
-
-.orders-table td md-icon:not([slot]) {
-    vertical-align: middle;
-}
-
-.orders-table th {
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-align: left;
-}
-
-.orders-table tr:hover {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
 .paginator {
     display: grid;
     grid-auto-flow: column;
@@ -167,7 +111,7 @@
     margin-left: auto;
 }
 
-:where(.table-container, .schedule-table-container):not(table) {
+:where(.table-container):not(table) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     box-sizing: border-box;
@@ -184,7 +128,7 @@
                      var(--md-sys-scrollbar-color-track, transparent);
 }
 
-:where(table.table-container, table.schedule-table-container) {
+:where(table.table-container) {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -200,11 +144,11 @@
                      var(--md-sys-scrollbar-color-track, transparent);
 }
 
-:where(.table-container, .schedule-table-container) *:not(a) {
+:where(.table-container) *:not(a) {
     border-collapse: collapse;
 }
 
-:where(.table-container, .schedule-table-container) > .paginator {
+:where(.table-container) > .paginator {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -221,7 +165,7 @@
     background: var(--md-sys-color-surface-container);
 }
 
-:where(.table-container, .schedule-table-container) > table {
+:where(.table-container) > table {
     grid-column: 1 / -1;
     width: 100%;
     border-collapse: collapse;
@@ -440,19 +384,6 @@ td.col-justify-start {
         max-width: 100%;
         overflow-x: auto;
     }
-}
-
-.date-cell {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.4rem;
-    justify-content: start;
-    align-items: center;
-}
-
-.m3-amount-cell {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 .pagination-text {

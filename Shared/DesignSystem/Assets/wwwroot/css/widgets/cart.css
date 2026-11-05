@@ -16,8 +16,7 @@
     cursor: pointer;
 }
 
-footer[cart],
-.cart-bar {
+footer[cart] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
@@ -41,102 +40,14 @@ footer[cart],
     white-space: nowrap;
 }
 
-.cart-expand-icon {
-    opacity: 0.7;
-    margin-left: var(--md-sys-spacing-1, 0.25rem);
-    color: var(--md-sys-color-on-surface);
-    font-size: 20px;
-}
-
-.cart-item-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.75rem;
-    align-items: center;
-    padding: var(--md-sys-spacing-3, 0.75rem);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.cart-item-row:last-child {
-    border-bottom: none;
-}
-
-.cart-items-list {
-    display: grid;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container-low);
-    list-style: none;
-}
-
-.cart-total {
-    color: var(--md-sys-color-on-surface);
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
-    font-weight: 800;
-    white-space: nowrap;
-}
-
-.empty-cart-view {
-    display: grid;
-    gap: 0.5rem;
-    place-content: center;
-    padding: 40px var(--md-sys-spacing-5, 1.25rem);
-    color: var(--md-sys-color-on-surface-variant);
-    text-align: center;
-}
-
-.empty-cart-view .empty-icon {
-    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
-    color: var(--md-sys-color-outline);
-    font-size: 3rem;
-}
-
 @media screen and (max-width: 599.98px) {
-    footer[cart],
-.cart-bar {
+    footer[cart] {
         padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
-    }
-
-    .item-pricing-row {
-        grid-template-columns: minmax(0, 1fr) auto;
     }
 
     .item-unit-price {
         display: none;
     }
-
-    .delivery-actions-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-}
-
-.m3-summary-actions {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-    margin-top: var(--md-sys-spacing-2);
-}
-
-.m3-summary-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-}
-
-.m3-summary-rows {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-}
-
-.m3-summary-title {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
 }
 
 .summary-actions {
@@ -145,12 +56,6 @@ footer[cart],
     gap: var(--md-sys-spacing-3);
     align-items: center;
     margin-top: var(--md-sys-spacing-2);
-}
-
-.summary-back-link {
-    width: 100%;
-    min-height: var(--md-sys-touch-target-min);
-    text-decoration: none;
 }
 
 .summary-check-icon {
@@ -179,62 +84,12 @@ footer[cart],
     letter-spacing: -0.01em;
 }
 
-.item-actions {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.item-headline {
-    min-width: 0;
-    min-inline-size: 0;
-    color: var(--md-sys-color-on-surface);
-    font-weight: 600;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    overflow: hidden;
-}
-
-.item-info {
-    min-width: 0;
-}
-
 .item-name {
     margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1.0625rem;
     font-weight: 600;
     line-height: 1.3;
-}
-
-.item-name-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    align-items: center;
-}
-
-.item-price {
-    display: block;
-    margin-top: 2px;
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
-}
-
-.item-pricing-row {
-    display: grid;
-    grid-template-columns: auto auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    align-items: center;
-}
-
-.item-support {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8rem;
 }
 
 .item-total-price {
@@ -268,14 +123,7 @@ footer[cart],
     border-bottom: none;
 }
 
-.session-item-info {
-    display: grid;
-}
-
 /* --- Cart Breakdown & Totals --- */
-.discount-row {
-    color: var(--md-sys-color-tertiary);
-}
 
 .in-stock-text {
     color: var(--md-sys-color-tertiary);
@@ -292,59 +140,16 @@ footer[cart],
     gap: 2px;
 }
 
-.price-breakdown {
-    display: grid;
-    gap: 0.5rem;
-    margin-bottom: var(--md-sys-spacing-4, 1rem);
-    font-size: 0.9rem;
-}
-
 .price-label {
     display: block;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.82rem;
 }
 
-.price-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
 .price-value {
     color: var(--md-sys-color-primary);
     font-size: 1.25rem;
     font-weight: 800;
-}
-
-.promo-success-text {
-    display: block;
-    margin-top: var(--md-sys-spacing-1, 0.25rem);
-    color: var(--md-sys-color-tertiary);
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.qty-stepper {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-surface-container);
-}
-
-.qty-val {
-    padding: 0 6px;
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.shipping-fee {
-    color: var(--md-sys-color-primary);
-    font-weight: 700;
 }
 
 .total-amount {
@@ -370,23 +175,253 @@ footer[cart],
     font-weight: 800;
 }
 
-.promo-section {
-    margin-top: var(--md-sys-spacing-2, 0.5rem);
+/* --- Delivery Actions Grid --- */
+
+
+/* ==========================================================================
+   Pure Attribute-Driven Classless Cart & Order Drawers (1st-Level Attribute Only)
+   ========================================================================== */
+
+:where(aside[cart], aside[order]) > :where(section) > :where(header) :where(hgroup > span) {
+    display: inline-grid;
+    place-items: center;
+    padding: 3px 10px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
-/* --- Delivery Actions Grid --- */
-.delivery-actions-grid {
+:where(aside[cart], aside[order]) > :where(section) > :where(article):has(h4) {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: 0.5rem;
+    place-content: center;
+    padding: 40px var(--md-sys-spacing-5, 1.25rem);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+}
+
+:where(aside[cart], aside[order]) > :where(section) > :where(article):has(h4) > :where(md-icon, svg, [icon]) {
+    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
+    color: var(--md-sys-color-outline);
+    font-size: 3rem;
+}
+
+:where(aside[cart], aside[order]) > :where(section) > :where(article):has(h4) > :where(h4) {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+:where(aside[cart], aside[order]) > :where(section) > :where(article):has(h4) > :where(p) {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+:where(aside[cart], aside[order]) > :where(section) > :where(ul) {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: var(--md-sys-spacing-3, 0.75rem) 0;
+    list-style: none;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+:where(aside[cart]) > :where(section) > :where(ul) > :where(li) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: var(--md-sys-spacing-3, 0.75rem);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+:where(aside[order]) > :where(section) > :where(ul) > :where(li) {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: var(--md-sys-spacing-3, 0.75rem);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+:where(aside[order]) :where(figure) {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-surface-container-high);
+    overflow: hidden;
+}
+
+:where(aside[order]) :where(figure) > :where(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(hgroup) {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(hgroup) > :where(h5) {
+    min-width: 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-title-medium-size, 1rem);
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(hgroup) > :where(p) {
+    min-width: 0;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8rem;
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(hgroup) :where(data, strong, p > span) {
+    color: var(--md-sys-color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(menu) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
+:where(aside[cart], aside[order]) :where(li) > :where(menu) > :where(fieldset) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    background: var(--md-sys-color-surface-container);
+}
+
+:where(aside[cart], aside[order]) :where(li) > :where(menu) > :where(fieldset) > :where(span) {
+    padding: 0 6px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+:where(aside[cart]) > :where(section) > :where(fieldset) {
+    display: grid;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    margin: var(--md-sys-spacing-2, 0.5rem) 0 0;
+    padding: 0;
+    border: none;
+}
+
+:where(aside[cart]) > :where(section) > :where(fieldset) > :where(form) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2, 0.5rem);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+:where(aside[cart]) > :where(section) > :where(fieldset) :where(small) {
+    color: var(--md-sys-color-tertiary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+:where(aside[cart]) > :where(section) > :where(article):has(strong) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    margin-top: var(--md-sys-spacing-2, 0.5rem);
+    padding: var(--md-sys-spacing-3, 0.75rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+    font-size: 0.9rem;
+}
+
+:where(aside[cart]) > :where(section) > :where(article):has(strong) > :where(strong) {
+    color: var(--md-sys-color-primary);
+    font-weight: 700;
+}
+
+:where(aside[cart], aside[order]) > :where(section) > :where(footer) {
+    display: grid;
+    gap: var(--md-sys-spacing-3, 0.75rem);
+    padding-top: var(--md-sys-spacing-4, 1rem);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+:where(aside[cart], aside[order]) :where(footer dl) {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+:where(aside[cart], aside[order]) :where(footer dl > p) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+:where(aside[cart], aside[order]) :where(footer dl > p:nth-child(2):not(:last-child)) {
+    color: var(--md-sys-color-tertiary);
+}
+
+:where(aside[cart], aside[order]) :where(footer dl > p:last-child) {
+    align-items: baseline;
+    padding-top: var(--md-sys-spacing-1, 0.25rem);
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+:where(aside[cart], aside[order]) :where(footer dl > p:last-child) > :where(strong, span:last-child) {
+    color: var(--md-sys-color-primary);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+:where(aside[cart], aside[order]) :where(footer menu) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+:where(aside[cart], aside[order]) :where(footer) :where(button, md-filled-button, md-outlined-button) {
+    width: 100%;
+}
 
 @media screen and (max-width: 839.98px) {
-    footer[cart],
-    .cart-bar {
+    footer[cart] {
         inset: auto 0 calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0));
         margin: 0;
     }

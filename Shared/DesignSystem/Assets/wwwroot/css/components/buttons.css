@@ -3,10 +3,6 @@
    Component-Driven Architecture
    ========================================================================== */
 
-.actions-row button {
-    min-height: 48px;
-}
-
 .avatar-button {
     display: grid;
     justify-content: center;
@@ -156,11 +152,6 @@
     box-shadow: 0 8px 25px var(--md-sys-color-primary);
 }
 
-.btn-complete {
-    background: var(--md-sys-color-tertiary);
-    color: var(--md-sys-color-on-tertiary);
-}
-
 
 .btn-ios {
     border-color: color-mix(in srgb, var(--md-sys-color-tertiary) 40%, transparent);
@@ -190,11 +181,6 @@
     box-shadow: 0 0 0 2px var(--md-sys-color-surface);
 }
 
-.btn-ready {
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-}
-
 .btn-web {
     border-color: color-mix(in srgb, var(--md-sys-color-tertiary) 40%, transparent);
     background: linear-gradient(135deg, color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent) 0%, color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent) 100%);
@@ -215,10 +201,6 @@
     border-color: var(--md-sys-color-primary);
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary) 100%);
     box-shadow: 0 8px 25px var(--md-sys-color-primary);
-}
-
-.checkout-btn {
-    width: 100%;
 }
 
 .cta-btn {
@@ -289,36 +271,6 @@
     cursor: pointer;
 }
 
-.m3-dialog-close-btn {
-    display: grid;
-    place-items: center;
-    width: var(--md-sys-touch-target-compact);
-    min-width: var(--md-sys-touch-target-compact);
-    height: var(--md-sys-touch-target-compact);
-    min-height: var(--md-sys-touch-target-compact);
-    border: none;
-    border-radius: var(--md-sys-shape-corner-full);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    transform: translateZ(0);
-    will-change: transform;
-    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
-        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.m3-dialog-close-btn:active {
-    transform: scale(0.97);
-}
-
-.m3-dialog-close-btn:hover {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
 :where(
     md-elevated-button,
     md-icon-button,
@@ -330,12 +282,6 @@
     outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
     outline-offset: var(--md-sys-outline-offset, 2px);
     transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-.m3-summary-actions button {
-    width: 100%;
-    min-height: var(--md-sys-touch-target-min);
-    text-decoration: none;
 }
 
 .material-counter button {
@@ -708,36 +654,6 @@
     box-shadow: 0 4px 20px rgb(from var(--md-sys-color-tertiary) r g b / 0.35);
 }
 
-.wishlist-wish-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: var(--md-sys-z-surface, 2);
-    display: inline-grid;
-    place-items: center;
-    width: var(--md-sys-touch-target-min, 48px);
-    min-width: var(--md-sys-touch-target-min, 48px);
-    height: var(--md-sys-touch-target-min, 48px);
-    min-height: var(--md-sys-touch-target-min, 48px);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.85);
-    color: var(--md-sys-color-on-surface-variant);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: background var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-                color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-                transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-}
-
-.wishlist-wish-btn:hover {
-    background: var(--md-sys-color-surface);
-    transform: scale(1.08);
-}
-
-.wishlist-wish-btn.wished {
-    color: var(--md-sys-color-error);
-}
-
 
 
 button.col-title {
@@ -908,9 +824,6 @@ md-tonal-button md-icon:not([slot]) {
 }
 
 @media (max-width: 599.98px) {
-    .actions-row button {
-        width: 100%;
-    }
 
     .cta-btn {
         width: 100%;
@@ -918,10 +831,6 @@ md-tonal-button md-icon:not([slot]) {
         padding: 0.8rem 1rem;
         font-size: 0.885rem;
         touch-action: manipulation;
-    }
-
-    .orders-refresh-btn .btn-text {
-        display: none;
     }
 
     .preset-btn {
@@ -972,13 +881,6 @@ md-text-button md-icon:not([slot]) {
     margin-inline-end: var(--md-sys-spacing-2);
 }
 
-.actions-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    margin-top: 0.5rem;
-}
-
 .b2b-cta-group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
@@ -1018,26 +920,7 @@ md-text-button md-icon:not([slot]) {
     font-size: 1.25rem;
 }
 
-.chevron-icon {
-    font-size: 18px;
-    transition: transform 0.2s ease;
-}
-
 .feat-icon {
-    color: var(--md-sys-color-primary);
-}
-
-.item-icon {
-    font-size: 1.75rem;
-}
-
-.item-icon-wrapper {
-    display: grid;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-primary);
 }
 

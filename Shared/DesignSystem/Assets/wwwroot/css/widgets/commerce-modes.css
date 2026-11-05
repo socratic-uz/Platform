@@ -146,21 +146,6 @@
     font-weight: 700;
 }
 
-.ux-widget-chips {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-    overflow-y: clip;
-}
-
-.ux-widget-chips md-suggestion-chip {
-    margin-inline-end: 1px;
-}
-
 .ux-mode-code {
     color: var(--md-sys-color-on-surface-variant);
     font-family: monospace;
@@ -193,97 +178,6 @@
     gap: 0.5rem;
     align-items: center;
     width: 100%;
-}
-
-.ux-widget-auction {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
-.ux-widget-group {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-}
-
-.ux-widget-hotel {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-}
-
-.ux-widget-location {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-}
-
-.ux-widget-quote {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface-variant);
-    text-align: center;
-}
-
-.ux-widget-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    align-items: center;
-    min-width: 0;
-    font-weight: 700;
-}
-
-.ux-widget-row>span:first-child,
-.ux-widget-subrow>span:first-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.ux-widget-subrow {
-    display: grid;
-    opacity: 0.85;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    min-width: 0;
-    font-size: 0.72rem;
-}
-
-.ux-widget-subscription {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-}
-
-.ux-widget-ticket {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-}
-
-.ux-widget-vehicle {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    min-width: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
 }
 
 .geo-picker-card {
@@ -1876,15 +1770,6 @@
     display: grid;
     gap: 1.25rem;
     width: 100%;
-}
-
-.ux-widget {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-3, 0.75rem);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    font-size: 0.78rem;
-    font-weight: 600;
 }
 
 .ux-expand-container {

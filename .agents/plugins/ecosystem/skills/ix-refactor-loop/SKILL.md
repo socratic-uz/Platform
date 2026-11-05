@@ -1,4 +1,4 @@
----
+﻿---
 name: ix-refactor-loop
 description: >-
   Data-driven Blazor C# Code-Behind (*.razor.cs) and architecture refactoring loop, enforcing Clean Architecture + Vertical Slice (Features/UseCases), layer classification (Pages/Widgets/Components), Zero Aliases via using static, PersistentComponentState hydration, IAsyncDisposable lifecycle, and 100% Native AOT compliance.
@@ -37,15 +37,15 @@ description: >-
 ```
 [Исходный God Component] 
            │
-           ├─ 1. Бизнес-сценарий  ──> Features/<Feature>/Application/<UseCase>.cs
-           ├─ 2. DTO и Команды    ──> Features/<Feature>/Application/<Command/Result>.cs
+           ├─ 1. Бизнес-сценарий  ──> Features/<Feature>/<UseCase>.cs
+           ├─ 2. DTO и Команды    ──> Features/<Feature>/<Feature>Contracts.cs
            ├─ 3. Роутинг / Сетка  ──> Pages/<Screen>Page.razor (.cs)
            ├─ 4. Умный организм   ──> Widgets/<Domain>Widget.razor (.cs)
            ├─ 5. UI-примитивы     ──> Components/<Atomic>Component.razor (.cs)
            └─ 6. Общие контракты  ──> Shared Domain / Infrastructure
 ```
 
-### Шаг 1. Извлечение бизнес-логики в UseCase (`Features/<Feature>/Application/`)
+### Шаг 1. Извлечение бизнес-логики в UseCase (`Features/<Feature>/`)
 1. Создай чистый C# POCO-класс сценария:
    ```csharp
    namespace Socratic.PointOfSale.Features.Checkout.Application;
@@ -87,7 +87,7 @@ description: >-
 
 ### Шаг 2. Классификация и размещение UI по 3 слоям
 1. **`Pages/` (Каркас экрана)**:
-   - Содержит директиву `@page "/path"`.
+   - Содержит атрибуты маршрутизации `[Route("/path")]` и авторизации `[Authorize]` над `partial class` в `*.razor.cs` (директивы `@page` и `@attribute` в `*.razor` строго запрещены).
    - Задает разметку сетки CSS Grid (макро-лейаут).
    - Читает URL query-параметры.
 2. **`Widgets/` (Умный организм / Smart Component)**:
@@ -173,7 +173,7 @@ private Task PersistState()
 
 ## 2. Чеклист проверки (Definition of Done)
 
-- [ ] Вся бизнес-логика вынесена из `*.razor.cs` в UseCase внутри `Features/<Feature>/Application/`.
+- [ ] Вся бизнес-логика вынесена из `*.razor.cs` в UseCase внутри `Features/<Feature>/`.
 - [ ] UseCase возвращает `ValueTask<Result<T>>` и не содержит зависимостей от Blazor.
 - [ ] UI-слой четко разделён: `Pages/` (роутинг), `Widgets/` (инжектируют UseCases), `Components/` (чистые примитивы).
 - [ ] Примитивы в `Components/` не знают про UseCases (только `[Parameter]` и `EventCallback`).

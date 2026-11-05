@@ -10,13 +10,28 @@ using static Assets.Constants.Formats;
 /// Renders the semantic &lt;header&gt; element with standard design system classes
 /// and content provided by <see cref="Header"/> components, analogous to <see cref="Microsoft.AspNetCore.Components.Web.HeadOutlet"/>.
 /// </summary>
-public sealed class HeaderOutlet : ComponentBase
+public sealed class HeaderOutlet : ComponentBase, System.IDisposable
 {
     [Parameter]
     public bool Sticky { get; set; } = true;
 
     [Parameter]
     public string Class { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        Header.OnHeaderChanged += HandleHeaderChanged;
+    }
+
+    private void HandleHeaderChanged()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Header.OnHeaderChanged -= HandleHeaderChanged;
+    }
 
     private string ComputedClass =>
         Sticky
@@ -31,8 +46,16 @@ public sealed class HeaderOutlet : ComponentBase
     {
         builder.OpenElement(0, "header");
         builder.AddAttribute(1, "class", ComputedClass);
-        builder.OpenComponent<SectionOutlet>(2);
-        builder.AddAttribute(3, nameof(SectionOutlet.SectionName), Header.Name);
+        if (Header.CurrentAttributes != null)
+        {
+            var seq = 2;
+            foreach (var kvp in Header.CurrentAttributes)
+            {
+                builder.AddAttribute(seq++, kvp.Key, kvp.Value);
+            }
+        }
+        builder.OpenComponent<SectionOutlet>(10);
+        builder.AddAttribute(11, nameof(SectionOutlet.SectionName), Header.Name);
         builder.CloseComponent();
         builder.CloseElement();
     }

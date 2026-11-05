@@ -104,7 +104,17 @@ Interaction (IX)
 ```
 
 #### 1. Experience (UX) ➔ Structure (Markup) — строго в `*.razor`
-- **Компоненты `Material.Web` First**: при наличии готового Blazor-компонента в `Material.Web` используй его:
+- **Тотальный Classless-подход и атрибуты первого уровня (Pure Attribute-Driven Classless)**:
+  - Полный отказ от CSS-классов (`class=@...`) на семантических HTML5-тегах.
+  - **Трехуровневая семантическая навигация селекторов (3-Level Landmark Model)**:
+    1. **Уровень документа (`body`)**: `body:has(layout[grid]) { ... }`, `body:has(layout[landing]) { ... }` — макросетка определяется самим тегом `body`, а переключателем макросетки является исключительно тег `<layout [variant]>` (`<layout grid />`, `<layout landing />`, `<layout chat />`, `<layout map />`).
+    2. **Уровень страницы (`landmarks`)**: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`. Стили пишутся напрямую от ориентира: `header[kiosk] > tag1 > tag2`, `main[kiosk] > tag1 > tag2`, `footer[kiosk] > tag1 > tag2`. Запрещено адресовать `header` через `body:has(main[page]) header` — `header` сам является ориентиром первого уровня страницы (`header[page]`).
+    3. **Уровень виджетов (`widgets`)**: `root-tag[widget] > child-tag > child-child-tag` (например, `aside[cart] > section > ...`, `dialog[modal] > fieldset`).
+  - **Атрибут строго ТОЛЬКО на первом уровне DOM-дерева**: Атрибут задается исключительно на корневом контейнере компонента/виджета/страницы (`header[kiosk]`, `main[kiosk]`, `footer[kiosk]`, `aside[cart]`, `aside[order]`, `dialog[modal]`). Внутри контейнера дочерние элементы не несут атрибутов и являются чистыми HTML5-тегами.
+  - Внутренняя стилизация строится по **прямой семантической иерархии HTML5-тегов**: `[card] > figure > img`, `main[kiosk] > section > article`, `aside[cart] > header > hgroup > h3`, `aside[cart] > ul > li`, `aside[cart] > footer > dl > p:last-child`.
+  - **Макросетка `body` и переключатель `<layout>`**: Макросеткой приложения является сам тег `<body>` (`body { display: grid; ... }`). Тег `<layout [variant]>` служит исключительно механизмом-переключателем стилей макросетки через селектор `body:has(layout[variant])`.
+  - Директивы `@using static Classes.*` ликвидируются в пользу чистого HTML5 дерева.
+- **Компоненты `Material.Web` First`: при наличии готового Blazor-компонента в `Material.Web` используй его:
   `<Button>` / `<IconButton>`, `<TextField>`, `<Select>`, `<Divider>`, `<Checkbox>`, `<Radio>`, `<MaterialDialog>`, `<Progress>`, `<Tabs>` / `<Tab>`, `<Chip>` / `<ChipSet>`, `<Badge>`.
 - **Семантический HTML5**: при отсутствии готового аналога в `Material.Web` используй правильные семантические теги: `<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<fieldset>`, `<legend>`, `<ul>`/`<li>`.
 - **Плоская структура и Контракт глубины (DOM Depth Contract)**: разметка строится без лишних промежуточных `<div>`; отступы и раскладка задаются CSS Grid родительского контейнера. **Строгие метрики**: сквозная целевая глубина от `<body>` — **ровно 6 уровней**, абсолютный потолок для листовых атомов (`<Icon>`, `<span>`) — **7 уровней**, глубина внутри одного `.razor` файла — **не более 4 уровней**. Глубина 8+ запрещена как дефект. Виджеты в сетке страницы располагаются параллельно как независимые братья (виджеты-матрёшки запрещены).
@@ -123,6 +133,7 @@ Interaction (IX)
     `@using static <EnumName>` ➔ `@Outlined`, `@Filled`, `@Filter`
   - Разрешение коллизий: если в двух группах есть одноименные константы, импортируется профильная группа в заголовке файла, а в теле разметки имя остаётся ультра-коротким (`class=@HeaderTitleBox`).
 - **Локализация (3-way Parity)**: весь пользовательский текст выносится в словари `.resx` (`ResourceRu.resx`, `ResourceUz.resx`, `ResourceEn.resx`) и вызывается через `@L[Key]`.
+- **Zero `@page` и `@attribute` в `*.razor`**: директивы `@page "/route"` и `@attribute [Authorize]` в `*.razor` строго запрещены. Маршрутизация и права доступа выносятся в C# code-behind `*.razor.cs` через `[Route("/route")]` и `[Authorize]` над `partial class`.
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
@@ -153,7 +164,7 @@ Interaction (IX)
 ### 8.4 Архитектура фронтенд-модулей (Clean Architecture + Vertical Slice)
 Каждый фронтенд-модуль (`Retail/PointOfSale`, `Commerce/Checkout`, `Kiosk`) организуется по схеме Clean Architecture + Vertical Slice:
 - **`Features/`**: бизнес-сценарии (UseCases, команды, DTO, правила валидации). Чистый C# (POCO) без Blazor-зависимостей, 100% Native AOT, вызовы через `ValueTask<Result<T>>`.
-- **`Pages/`**: каркас экрана и маршрутизация (`@page "/pos"`), привязка к макро-сетке layout. Зеркально соответствует CSS-слою `pages/`.
+- **`Pages/`**: каркас экрана и маршрутизация (`[Route("/pos")]` в `*.razor.cs`), привязка к макро-сетке layout. Зеркально соответствует CSS-слою `pages/`.
 - **`Widgets/`**: умные отраслевые составные организмы (Smart Components: Корзина, Фискальная панель). Внедряют UseCases из `Features/` и связывают компоненты. Зеркально соответствует CSS-слою `widgets/`.
 - **`Components/`**: презентационные примитивы (Dumb Components). Общаются с миром только через `[Parameter]` и `EventCallback`, ничего не знают о `Features/` и UseCases. Зеркально соответствует CSS-слою `components/`.
 - **Общий проект `Domain`**: контракты межмодульного взаимодействия (Value Objects: `Money`, `OrderId`; интерфейсы стейта: `ICartStore`; доменные события). Исключает прямую связанность между модулями.

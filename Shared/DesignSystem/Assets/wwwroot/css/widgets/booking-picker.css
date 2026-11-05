@@ -427,26 +427,6 @@ article[booking],
 
 }
 
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9375rem;
-}
-
-.schedule-table td {
-    padding: 0.875rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    text-align: left;
-}
-
-.schedule-table th {
-    padding: 0.875rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    color: var(--md-sys-color-primary);
-    font-weight: 600;
-    text-align: left;
-}
-
 .picker-header {
     display: grid;
     gap: var(--md-sys-spacing-2, 8px);

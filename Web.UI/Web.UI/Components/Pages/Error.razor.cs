@@ -1,10 +1,11 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Localization;
 
 namespace Web.UI.Components.Pages;
 
+[Route("/Error")]
 public partial class Error : ComponentBase
 {
     [CascadingParameter]

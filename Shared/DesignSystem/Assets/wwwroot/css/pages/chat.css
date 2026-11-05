@@ -1,6 +1,6 @@
 /* ==========================================================================
    Socratic Design System — PAGES / chat.css
-   Classless Page Landmark Architecture
+   Classless Page Landmark Architecture — AI Chat Page
    ========================================================================== */
 
 main[chat] {
@@ -13,4 +13,332 @@ main[chat] {
     max-height: 100dvh;
     background: var(--md-sys-color-background);
     overflow: hidden;
+}
+
+/* ==========================================================================
+   LANDMARK: HEADER (Topbar Navigation & Action)
+   ========================================================================== */
+
+main[chat] > header {
+    position: sticky;
+    top: 0;
+    z-index: var(--md-sys-z-appbar, 20);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+main[chat] > header > hgroup {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+main[chat] > header > hgroup > a {
+    display: grid;
+    place-items: center;
+    width: var(--md-sys-touch-target-min, 48px);
+    min-width: var(--md-sys-touch-target-min, 48px);
+    height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    border: 1px solid rgb(from var(--md-sys-color-surface) r g b / 0.12);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.08);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+main[chat] > header > hgroup > a:hover {
+    background: rgb(from var(--md-sys-color-surface) r g b / 0.18);
+    transform: scale(1.05);
+}
+
+main[chat] > header > hgroup > span {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* ==========================================================================
+   LANDMARK: CHAT MESSAGES STREAM
+   ========================================================================== */
+
+main[chat] > chat-messages {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+    min-height: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0));
+    color: var(--md-sys-color-on-surface);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+}
+
+main[chat] > chat-messages > :where(div, article, section):last-of-type {
+    margin-bottom: 1rem;
+}
+
+/* Empty State / Welcome Screen */
+main[chat] > chat-messages > article:only-child {
+    margin-top: calc(35vh - 10rem);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+main[chat] > chat-messages > article:only-child ul {
+    display: grid;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+main[chat] > chat-messages > article:only-child li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: baseline;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
+}
+
+/* User Message Bubble */
+main[chat] > chat-messages > article:not(:has(header), :only-child) {
+    justify-self: end;
+    min-width: 25%;
+    max-width: calc(100% - 5rem);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    white-space: pre-wrap;
+    box-shadow: var(--md-sys-elevation-level1);
+}
+
+/* Assistant Message Bubble */
+main[chat] > chat-messages > article:has(header) {
+    display: grid;
+    grid-template: min-content / 2rem minmax(0, 1fr);
+    gap: 0.25rem;
+}
+
+main[chat] > chat-messages > article:has(header) > md-icon {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+main[chat] > chat-messages > article:has(header) > md-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+main[chat] > chat-messages > article:has(header) > header {
+    font-weight: 600;
+}
+
+main[chat] > chat-messages > article:has(header) > section {
+    grid-column-start: 2;
+}
+
+/* Assistant Tool / Search call */
+main[chat] > chat-messages > aside {
+    display: grid;
+    grid-template: min-content / 2rem minmax(0, 1fr);
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+main[chat] > chat-messages > aside > md-icon {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+main[chat] > chat-messages > aside > md-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+main[chat] > chat-messages > aside > section {
+    align-content: center;
+}
+
+main[chat] > chat-messages > aside > section > strong {
+    font-weight: 600;
+}
+
+/* Citation card */
+main[chat] > chat-messages a[target="_blank"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom: 2px solid var(--md-sys-color-tertiary);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    box-shadow: var(--md-sys-elevation-level1);
+    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
+}
+
+main[chat] > chat-messages a[target="_blank"]:hover {
+    border-color: var(--md-sys-color-primary);
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    transform: translateY(-1px);
+}
+
+main[chat] > chat-messages a[target="_blank"]:active {
+    background-color: var(--md-sys-color-surface-container-high);
+    transform: scale(0.96);
+}
+
+main[chat] > chat-messages a[target="_blank"] > md-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+main[chat] > chat-messages a[target="_blank"] > span {
+    display: grid;
+}
+
+main[chat] > chat-messages a[target="_blank"] > span > strong {
+    font-weight: 600;
+}
+
+/* Assistant Markdown Rendering inside message */
+assistant-message h3 {
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+assistant-message li {
+    margin: 0.5rem 0;
+}
+
+assistant-message ol {
+    margin-left: 1.5rem;
+    list-style-type: decimal;
+}
+
+assistant-message p + p {
+    margin-top: 1rem;
+}
+
+assistant-message pre > code {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    overflow-x: auto;
+}
+
+assistant-message strong {
+    font-weight: 600;
+}
+
+assistant-message td {
+    padding: 0.1rem 0.5rem;
+}
+
+assistant-message th {
+    padding: 0.1rem 0.5rem;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background-color: var(--md-sys-color-surface-container-high);
+    text-align: left;
+}
+
+assistant-message tr:nth-child(even) {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+assistant-message ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+assistant-message table {
+    margin: 1rem 0;
+}
+
+/* ==========================================================================
+   LANDMARK: FOOTER (Input Area & Suggestions)
+   ========================================================================== */
+
+main[chat] > footer {
+    display: grid;
+    z-index: var(--md-sys-z-sticky, 10);
+    width: 100%;
+    padding: 0.75rem 1.5rem max(1rem, env(safe-area-inset-bottom, 1rem));
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+main[chat] > footer > :where(md-chip-set, form) {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+main[chat] > footer form {
+    display: grid;
+    width: 100%;
+}
+
+main[chat] > footer form :where(md-outlined-text-field, md-filled-text-field) {
+    width: 100%;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE ADJUSTMENTS
+   ========================================================================== */
+
+@media screen and (max-width: 599.98px) {
+    main[chat] > header {
+        padding: 0.5rem 0.75rem;
+        padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
+    }
+
+    main[chat] > chat-messages {
+        padding: 1rem 0.75rem;
+    }
+
+    main[chat] > footer {
+        padding: 0.5rem 0.75rem max(0.75rem, env(safe-area-inset-bottom, 0.75rem));
+    }
 }

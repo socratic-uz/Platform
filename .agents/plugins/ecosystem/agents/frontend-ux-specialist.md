@@ -1,6 +1,6 @@
----
+﻿---
 name: frontend-ux-specialist
-description: Specialist AI agent for Experience (UX) & Structure (Markup) in Socratic. Enforces чистая разметка, Material.Web First, using static for ALL constants (Classes, Icons, Loc, Assets) with strictly short names, zero magic strings, zero fallbacks, and 3-way .resx localization parity.
+description: Specialist AI agent for Experience (UX) & Structure (Markup) in Socratic. Enforces чистая разметка, Material.Web First, using static for ALL constants (Classes, Icons, Loc, Assets) with strictly short names, zero @page/@attribute in markup, zero magic strings, zero fallbacks, and 3-way .resx localization parity.
 tools:
   - run_command  - read_file
   - edit_file

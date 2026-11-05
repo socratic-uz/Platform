@@ -119,6 +119,7 @@ namespace Socratic.Platform.Composition.Extensions
             services.AddScoped<Domain.Interfaces.Hardware.IPosPinPadService, Infrastructure.Gateways.Hardware.MockPosPinPadService>();
             services.AddScoped<Domain.Interfaces.Hardware.ICashAcceptorService, Infrastructure.Gateways.Hardware.MockCashAcceptorService>();
             services.AddSingleton<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
+            services.AddScoped<Domain.State.ICartStore, Infrastructure.State.CartStore>();
             services.AddLocalization().AddScoped<IStringLocalizer, StringLocalizer>();
 
             // 4. gRPC Clients & Auth

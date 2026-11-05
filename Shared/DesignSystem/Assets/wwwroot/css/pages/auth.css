@@ -1,7 +1,12 @@
 /* ==========================================================================
    Socratic Design System — PAGES / auth.css
-   Direct Body Landmarks for Auth Pages: <main auth>
+   Classless Page Landmark Architecture — Authentication & OAuth Callbacks
    ========================================================================== */
+
+@keyframes oauth-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 main[auth] {
     display: grid;
@@ -12,10 +17,328 @@ main[auth] {
     background: radial-gradient(circle at 50% 20%, rgb(from var(--md-sys-color-primary) r g b / 0.08) 0%, var(--md-sys-color-surface) 100%);
 }
 
+/* ==========================================================================
+   LANDMARK: SIGN-IN CARD (main[auth] > article:has(nav))
+   ========================================================================== */
+
+main[auth] > article:has(nav) {
+    display: grid;
+    gap: var(--md-sys-spacing-6);
+    width: 100%;
+    max-width: 480px;
+    padding: var(--md-sys-spacing-10) var(--md-sys-spacing-8);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* Top Navigation Bar: Brand & Language */
+main[auth] > article:has(nav) > nav {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+    box-sizing: border-box;
+}
+
+main[auth] > article:has(nav) > nav > a {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 0.25rem;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+    font-size: 1.125rem;
+    touch-action: manipulation;
+}
+
+main[auth] > article:has(nav) > nav > a > md-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+main[auth] > article:has(nav) > nav > :last-child {
+    grid-column: 3;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Header: Logo, Title, Subtitle */
+main[auth] > article:has(nav) > header {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+    text-align: center;
+}
+
+main[auth] > article:has(nav) > header > md-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 0 0.25rem 0;
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+    color: var(--md-sys-color-on-primary);
+    font-size: 1.75rem;
+    box-shadow: 0 8px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
+}
+
+main[auth] > article:has(nav) > header > h1 {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+main[auth] > article:has(nav) > header > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+}
+
+/* Tabs: Navigation between Primary and Quick Access */
+main[auth] > article:has(nav) > md-tabs {
+    width: 100%;
+}
+
+/* Error Banner */
+main[auth] > article:has(nav) > aside[role="alert"] {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    justify-content: start;
+    align-items: center;
+    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    font-size: 0.875rem;
+}
+
+/* Form Steps: Fieldset */
+main[auth] > article:has(nav) fieldset {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+main[auth] > article:has(nav) fieldset > :where(md-outlined-text-field, md-filled-text-field) {
+    width: 100%;
+}
+
+main[auth] > article:has(nav) fieldset > menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[auth] > article:has(nav) fieldset > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 0.85rem;
+}
+
+main[auth] > article:has(nav) p[role="separator"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    margin: 0.5rem 0;
+    color: var(--md-sys-color-outline);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+main[auth] > article:has(nav) p[role="separator"]::after,
+main[auth] > article:has(nav) p[role="separator"]::before {
+    height: 1px;
+    background: var(--md-sys-color-outline-variant);
+    content: "";
+}
+
+/* FaceID & Passkey Section */
+main[auth] > article:has(nav) > section {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    text-align: center;
+}
+
+main[auth] > article:has(nav) > section > figure {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border: 2px dashed var(--md-sys-color-outline-variant);
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container);
+}
+
+main[auth] > article:has(nav) > section > figure md-icon {
+    font-size: 64px;
+    color: var(--md-sys-color-outline);
+}
+
+main[auth] > article:has(nav) > section > strong {
+    font-size: 0.9rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[auth] > article:has(nav) > section > p:last-child {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Footer: Copyright */
+main[auth] > article:has(nav) > footer {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem 0 0 0;
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 0.75;
+}
+
+/* ==========================================================================
+   LANDMARK: OAUTH CALLBACK CARDS (main[auth] > article:not(:has(nav)))
+   ========================================================================== */
+
+main[auth] > article:not(:has(nav)) {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    max-width: 440px;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background: var(--md-sys-color-surface-container);
+    box-shadow: 0 20px 40px -15px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
+    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    text-align: center;
+}
+
+main[auth] > article:not(:has(nav)) > figure {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 0 1.5rem 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+main[auth] > article:not(:has(nav)) > figure > span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 3px solid rgb(from var(--md-sys-color-primary) r g b / 0.2);
+    border-top-color: var(--md-sys-color-primary);
+    border-right-color: var(--md-sys-color-tertiary);
+    border-radius: 50%;
+    animation: oauth-spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+main[auth] > article:not(:has(nav)) > figure > md-icon {
+    display: grid;
+    place-items: center;
+    color: var(--md-sys-color-primary);
+}
+
+main[auth] > article:not(:has(nav)) > md-icon {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+    border: 1px solid var(--md-sys-color-error);
+    border-radius: 50%;
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+}
+
+main[auth] > article:not(:has(nav)) > h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+main[auth] > article:not(:has(nav)) > p {
+    margin: 0 0 1.75rem 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+main[auth] > article:not(:has(nav)) > menu {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
 @media (max-width: 839.98px) {
     main[auth] {
         padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-4));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+    }
+}
+
+@media (max-width: 599.98px) {
+    main[auth] > article:has(nav) {
+        padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+    }
+
+    main[auth] > article:has(nav) > header > h1 {
+        font-size: clamp(1.25rem, 5vw, 1.35rem);
     }
 }
