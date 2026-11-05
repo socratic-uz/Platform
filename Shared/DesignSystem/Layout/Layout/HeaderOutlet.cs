@@ -3,20 +3,15 @@ namespace Shared.Layout;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Sections;
-using static Assets.Constants.Classes.Header;
-using static Assets.Constants.Formats;
 
 /// <summary>
-/// Renders the semantic &lt;header&gt; element with standard design system classes
+/// Renders the semantic &lt;header&gt; element with landmark attributes
 /// and content provided by <see cref="Header"/> components, analogous to <see cref="Microsoft.AspNetCore.Components.Web.HeadOutlet"/>.
 /// </summary>
 public sealed class HeaderOutlet : ComponentBase, System.IDisposable
 {
     [Parameter]
     public bool Sticky { get; set; } = true;
-
-    [Parameter]
-    public string Class { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
@@ -33,19 +28,13 @@ public sealed class HeaderOutlet : ComponentBase, System.IDisposable
         Header.OnHeaderChanged -= HandleHeaderChanged;
     }
 
-    private string ComputedClass =>
-        Sticky
-            ? (string.IsNullOrEmpty(Class)
-                ? string.Format(Three, AppHeader, AppHeaderSticky, HeaderGridLayout)
-                : string.Format(Four, AppHeader, AppHeaderSticky, HeaderGridLayout, Class))
-            : (string.IsNullOrEmpty(Class)
-                ? string.Format(Two, AppHeader, HeaderGridLayout)
-                : string.Format(Three, AppHeader, HeaderGridLayout, Class));
-
     protected override void BuildRenderTree(RenderTreeBuilder builder)
     {
         builder.OpenElement(0, "header");
-        builder.AddAttribute(1, "class", ComputedClass);
+        if (!Sticky)
+        {
+            builder.AddAttribute(1, "data-sticky", "false");
+        }
         if (Header.CurrentAttributes != null)
         {
             var seq = 2;

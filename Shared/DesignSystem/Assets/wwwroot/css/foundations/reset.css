@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / reset.css
+   Box Model, Universal CSS Grid Defaults, Root, Focus & Motion
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+[hidden],
+layout,
+color {
+    display: none !important;
+}
+
+body,
+main,
+header,
+footer,
+section,
+article,
+aside,
+nav,
+menu,
+hgroup,
+figure,
+figcaption,
+form,
+fieldset,
+details,
+summary,
+div,
+ul,
+ol,
+dl,
+li,
+dd,
+label,
+blockquote,
+pre,
+search,
+md-elevated-card,
+md-filled-card,
+md-outlined-card,
+md-segmented-button-set,
+chat-messages {
+    display: grid;
+}
+
+chat-messages {
+    padding: var(--md-sys-spacing-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+:focus-visible {
+    outline: var(--md-sys-outline-width) solid var(--md-sys-color-focus-ring);
+    outline-offset: var(--md-sys-outline-offset);
+    transition: outline-offset var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-spring);
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    background: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-plain);
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+}
+
+body {
+    min-height: var(--md-sys-viewport-height);
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-plain);
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+}
+
+[data-gesture="interactive-canvas"] {
+    touch-action: none;
+}
+
+[data-gesture="swipe-horizontal"] {
+    touch-action: pan-y;
+}
+
+[data-gesture="swipe-vertical"] {
+    touch-action: pan-x;
+}
+

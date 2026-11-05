@@ -16,7 +16,7 @@ namespace Assets.Constants
     public static class Loc
     {
         /// <summary>
-        /// Domain group: Actions (55 keys). Use with <c>@using static Assets.Constants.Loc.Actions;</c>.
+        /// Domain group: Actions (56 keys). Use with <c>@using static Assets.Constants.Loc.Actions;</c>.
         /// </summary>
         public static class Actions
         {
@@ -282,6 +282,14 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;OK&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;OK&quot;
             /// </summary>
+            public const string Ok = "Ok";
+
+            /// <summary>
+            /// Key: <c>Ok</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;ОК&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;OK&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;OK&quot;
+            /// </summary>
             public const string OkAction = "Ok";
 
             /// <summary>
@@ -463,7 +471,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (577 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (575 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1190,15 +1198,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
             /// </summary>
-            public const string DarkLabel = "Dark";
-
-            /// <summary>
-            /// Key: <c>Dark</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Темная&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
-            /// </summary>
-            public const string DarkText = "Dark";
+            public const string Dark = "Dark";
 
             /// <summary>
             /// Key: <c>Data</c><br/>
@@ -1702,15 +1702,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
             /// </summary>
-            public const string HeroBadgeLabel = "HeroBadge";
-
-            /// <summary>
-            /// Key: <c>HeroBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
-            /// </summary>
-            public const string HeroBadgeText = "HeroBadge";
+            public const string HeroBadge = "HeroBadge";
 
             /// <summary>
             /// Key: <c>HeroMap</c><br/>
@@ -1774,15 +1766,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
             /// </summary>
-            public const string HeroSubtitleLabel = "HeroSubtitle";
-
-            /// <summary>
-            /// Key: <c>HeroSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
-            /// </summary>
-            public const string HeroSubtitleText = "HeroSubtitle";
+            public const string HeroSubtitle = "HeroSubtitle";
 
             /// <summary>
             /// Key: <c>HeroTerminal</c><br/>
@@ -4071,6 +4055,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Configure 1-click login methods without waiting for SMS.&quot;
             /// </summary>
             public const string ProfileSecuritySubtext = "Profile_SecuritySubtext";
+
+            /// <summary>
+            /// Key: <c>Profile_Title</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Профиль&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
+            /// </summary>
+            public const string ProfileTitle = "Profile_Title";
 
             /// <summary>
             /// Key: <c>Profile_TurnLeft</c><br/>
@@ -9863,7 +9855,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hisob:&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Invoice:&quot;
             /// </summary>
-            public const string InvoiceLabelText = "Checkout_InvoiceLabel";
+            public const string InvoiceLabel = "Checkout_InvoiceLabel";
 
             /// <summary>
             /// Key: <c>Payment_KycStatus</c><br/>
@@ -26189,7 +26181,7 @@ namespace Assets.Constants
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Nomi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Description&quot;
             /// </summary>
-            public const string ItemNameText = "Invoice_ItemName";
+            public const string ItemName = "Invoice_ItemName";
 
             /// <summary>
             /// Key: <c>Receipt_MxikCode</c><br/>
@@ -38774,7 +38766,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Qorong'i&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Dark&quot;
         /// </summary>
-        public const string DarkText = "Dark";
+        public const string Dark = "Dark";
 
         /// <summary>
         /// Key: <c>Data</c><br/>
@@ -41598,7 +41590,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
         /// </summary>
-        public const string HeroBadgeText = "HeroBadge";
+        public const string HeroBadge = "HeroBadge";
 
         /// <summary>
         /// Key: <c>HeroMap</c><br/>
@@ -41662,7 +41654,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
         /// </summary>
-        public const string HeroSubtitleText = "HeroSubtitle";
+        public const string HeroSubtitle = "HeroSubtitle";
 
         /// <summary>
         /// Key: <c>HeroTerminal</c><br/>
@@ -46742,7 +46734,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;OK&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;OK&quot;
         /// </summary>
-        public const string OkText = "Ok";
+        public const string Ok = "Ok";
 
         /// <summary>
         /// Key: <c>Online</c><br/>
@@ -50318,7 +50310,7 @@ namespace Assets.Constants
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Profil&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Profile&quot;
         /// </summary>
-        public const string ProfileTitleText = "Profile_Title";
+        public const string ProfileTitle = "Profile_Title";
 
         /// <summary>
         /// Key: <c>Profile_TurnLeft</c><br/>

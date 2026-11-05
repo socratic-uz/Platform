@@ -1,4 +1,144 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / invoice.css
-   Pure CSS Grid, MD3 Expressive tokens
+   Socratic Design System — WIDGETS / invoice.css
+   Pure Attribute-Driven Classless Invoice & Receipt Viewer
+   Root Landmarks: article[invoice], article[receipt]
    ========================================================================== */
+
+article[invoice],
+article[receipt] {
+    font-family: var(--md-ref-typeface-brand);
+    color: var(--md-sys-color-on-surface);
+    background: var(--md-sys-color-surface-container-lowest);
+    max-width: 380px;
+    margin: 0 auto;
+    padding: var(--md-sys-spacing-6) var(--md-sys-spacing-5);
+    border-radius: var(--md-sys-shape-corner-large);
+    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.06);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    position: relative;
+    overflow-x: auto;
+}
+
+article[invoice] > header,
+article[receipt] > header {
+    justify-items: center;
+    text-align: center;
+    margin-bottom: var(--md-sys-spacing-4);
+    padding-bottom: var(--md-sys-spacing-3);
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+article[invoice] > header > h3,
+article[receipt] > header > h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+article[invoice] > header > p,
+article[receipt] > header > p {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[invoice] > table,
+article[receipt] > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+article[invoice] > table:first-of-type,
+article[receipt] > table:first-of-type {
+    font-size: 0.78rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 14px;
+}
+
+article[invoice] > table:first-of-type > tbody > tr > td,
+article[invoice] > table:first-of-type > tr > td,
+article[receipt] > table:first-of-type > tbody > tr > td,
+article[receipt] > table:first-of-type > tr > td {
+    padding: 2px 0;
+}
+
+article[invoice] > table:last-of-type,
+article[receipt] > table:last-of-type {
+    margin-top: var(--md-sys-spacing-3);
+    padding-top: 10px;
+    border-top: 2px solid var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+}
+
+article[invoice] > table:last-of-type > tbody > tr > td,
+article[invoice] > table:last-of-type > tr > td,
+article[receipt] > table:last-of-type > tbody > tr > td,
+article[receipt] > table:last-of-type > tr > td {
+    padding: 3px 0;
+}
+
+article[invoice] > table:last-of-type > tbody > tr:last-child > td,
+article[invoice] > table:last-of-type > tr:last-child > td,
+article[receipt] > table:last-of-type > tbody > tr:last-child > td,
+article[receipt] > table:last-of-type > tr:last-child > td {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+article[invoice] > table:nth-of-type(2),
+article[receipt] > table:nth-of-type(2) {
+    font-size: 0.82rem;
+    margin: 12px 0;
+}
+
+article[invoice] > table:nth-of-type(2) > thead > tr > th,
+article[receipt] > table:nth-of-type(2) > thead > tr > th {
+    text-align: left;
+    color: var(--md-sys-color-outline);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: 6px 0;
+}
+
+article[invoice] > table:nth-of-type(2) > tbody > tr > td,
+article[receipt] > table:nth-of-type(2) > tbody > tr > td {
+    padding: 6px 0;
+    border-bottom: 1px dotted var(--md-sys-color-outline-variant);
+}
+
+article[invoice] > table:nth-of-type(2) > tbody > tr:hover,
+article[receipt] > table:nth-of-type(2) > tbody > tr:hover {
+    background: var(--md-sys-color-surface-container-highest);
+}
+
+article[invoice] > footer,
+article[receipt] > footer {
+    justify-items: center;
+    text-align: center;
+    margin-top: var(--md-sys-spacing-4);
+    padding-top: var(--md-sys-spacing-3);
+    border-top: 1px dashed var(--md-sys-color-outline-variant);
+    font-size: 0.72rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[invoice] > footer > h4,
+article[receipt] > footer > h4 {
+    margin: 0 0 var(--md-sys-spacing-1) 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+@media print {
+article[invoice],
+    article[receipt] {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding: 0;
+        color: var(--md-sys-color-on-surface);
+    }
+}

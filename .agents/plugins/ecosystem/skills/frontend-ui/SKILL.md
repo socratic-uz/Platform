@@ -13,9 +13,10 @@ license: MIT
 
 ## 1. Слоёная архитектура — Cascade Layers в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css`.
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через автоматически генерируемый мастер-манифест `styles.css` (`npm run generate:styles` / `scripts/generate-styles-manifest.mjs`).
+Шрифты подключаются вне слоев на самом верху `styles.css` и используют исключительно вариативные шрифты (`Roboto` и `Montserrat` `100 900`, `Material Symbols Outlined`). Порядок селекторов внутри таблиц строго упорядочен по обходу DOM-дерева в глубину (`npm run sort:css`).
 Слои строго соответствуют файловой структуре:
-- `layouts/` (**Уровень 1 DOM**): Стили строго для `body` через `<layout [variant]>` (`body:has(layout[grid])`) и прямых макро-ориентиров (`> header`, `> nav`, `> main`, `> footer`).
+- `layouts/` (**Уровень 1 DOM**): Стили **строго** для `body` через `<layout [variant]>` (`body:has(layout[grid])`) и прямых макро-ориентиров (`> header`, `> nav`, `> main`, `> footer`, `> aside`). Нулевая стилизация внутренних элементов в `layouts/`; общие стили ориентиров изолированы в `foundations/landmarks.css`.
 - `pages/` (**Уровень 2 DOM**): Стили строго для прямых ориентиров `body`, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Внутренние стили виджетов здесь строго запрещены.
 - `widgets/` (**Уровень 3 DOM**): Составные смарт-организмы бизнеса (корзина, KDS, карточки, фискальная панель, бенто-сетки).
 - `components/` (**Уровни 4–6 DOM**): Атомы и защищенные примитивы UI (кнопки, чипы, инпуты, диалоги) и общие утилиты.
@@ -75,4 +76,6 @@ license: MIT
 - [ ] Раскладка построена на CSS Grid с соблюдением `minmax(0, 1fr)` и `min-width: 0`.
 - [ ] Все цвета и формы используют токены Material Design 3 (полная поддержка темной и светлой тем).
 - [ ] Интерактивные элементы имеют touch target не менее 48x48px.
+- [ ] Пройдена валидация порядка DOM: `npm run sort:css:check`.
+- [ ] Манифест актуален: `npm run generate:styles`.
 - [ ] Запуск `npm run refresh` в `Assets` проходит без ошибок.

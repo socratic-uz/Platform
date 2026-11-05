@@ -6,23 +6,27 @@
    Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    ========================================================================== */
 
+/* ==========================================================================
+   Other Page Landmarks in landing.css (<main home>, <main model-viewer>)
+   ========================================================================== */
+main[home] {
+    gap: var(--md-sys-gutter-section);
+    align-content: start;
+    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
+    padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
+    padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
+}
+
 main[landing] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
     gap: clamp(var(--md-sys-spacing-10), 6vw, var(--md-sys-spacing-16));
     position: relative;
     isolation: isolate;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
     min-height: 100dvh;
-    margin: 0;
     padding: var(--md-sys-spacing-10) var(--md-sys-gutter-page) var(--md-sys-spacing-16);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
     background-color: var(--landing-bg);
     color: var(--landing-text-main);
-    font-family: var(--md-ref-typeface-brand);
     overflow-x: clip;
 
     --landing-bg: var(--md-sys-color-background);
@@ -43,29 +47,18 @@ main[landing] {
     --landing-text-sub: var(--md-sys-color-on-surface-variant);
 }
 
-main[landing] > section {
-    display: grid;
-    gap: var(--landing-section-gap);
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-}
-
 /* ==========================================================================
    0. Atmospheric Canvas & Cursor Follower
    ========================================================================== */
-
-main[landing] > figure[aria-hidden="true"] {
+main[landing] > figure {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
     overflow: clip;
-    margin: 0;
 }
 
-main[landing] > figure[aria-hidden="true"] > span {
+main[landing] > figure > span {
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
@@ -73,49 +66,48 @@ main[landing] > figure[aria-hidden="true"] > span {
     pointer-events: none;
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(1) {
-    top: -10%;
-    left: 20%;
-    width: 600px;
-    height: 600px;
+main[landing] > figure > span:nth-child(1) {
+    top: 2%;
+    left: 5%;
+    width: min(60vw, 480px);
+    height: min(60vw, 480px);
     background: radial-gradient(circle, var(--landing-emerald) 0%, transparent 70%);
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(2) {
-    top: 25%;
-    right: -5%;
-    width: 500px;
-    height: 500px;
+main[landing] > figure > span:nth-child(2) {
+    top: 20%;
+    right: 5%;
+    width: min(55vw, 440px);
+    height: min(55vw, 440px);
     background: radial-gradient(circle, var(--landing-cyan) 0%, transparent 70%);
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(3) {
-    top: 50%;
-    left: -10%;
-    width: 700px;
-    height: 700px;
+main[landing] > figure > span:nth-child(3) {
+    top: 42%;
+    left: 5%;
+    width: min(60vw, 500px);
+    height: min(60vw, 500px);
     background: radial-gradient(circle, var(--landing-indigo) 0%, transparent 70%);
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(4) {
-    top: 75%;
-    right: 15%;
-    width: 550px;
-    height: 550px;
+main[landing] > figure > span:nth-child(4) {
+    top: 60%;
+    right: 5%;
+    width: min(55vw, 450px);
+    height: min(30%, 450px);
     background: radial-gradient(circle, var(--landing-purple) 0%, transparent 70%);
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(5) {
-    bottom: -5%;
-    left: 30%;
-    width: 650px;
-    height: 650px;
+main[landing] > figure > span:nth-child(5) {
+    bottom: 2%;
+    left: 10%;
+    width: min(60vw, 480px);
+    height: min(30%, 480px);
     background: radial-gradient(circle, var(--landing-teal) 0%, transparent 70%);
 }
 
-main[landing] > figure[aria-hidden="true"] > span:nth-child(6) {
+main[landing] > figure > span:nth-child(6) {
     inset: 0;
-    width: 100%;
     height: 100%;
     border-radius: 0;
     filter: none;
@@ -124,7 +116,7 @@ main[landing] > figure[aria-hidden="true"] > span:nth-child(6) {
     background-size: 32px 32px;
 }
 
-#cursor-glow-orb {
+main[landing] > span#cursor-glow-orb {
     position: fixed;
     top: 0;
     left: 0;
@@ -141,17 +133,26 @@ main[landing] > figure[aria-hidden="true"] > span:nth-child(6) {
     will-change: transform;
 }
 
+main[landing] > section {
+    gap: var(--landing-section-gap);
+    position: relative;
+}
+
 /* ==========================================================================
    Shared Badges, Headlines, & Card Foundations
    ========================================================================== */
-
-main[landing] mark {
+main[landing] > section > header > mark,
+main[landing] > section > mark,
+main[landing] > section > section > article > mark,
+main[landing] > section > article > header > mark,
+main[landing] > section > section > article > header > mark,
+main[landing] > section > article > section > mark {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
     width: fit-content;
+    max-width: 100%;
     padding: 0.35rem 0.85rem;
     border: 1px solid var(--landing-border);
     border-radius: 9999px;
@@ -163,21 +164,16 @@ main[landing] mark {
     text-transform: uppercase;
 }
 
-main[landing] mark > [icon] {
-    font-size: 1.1rem;
-}
-
-main[landing] > section > header {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-    justify-items: center;
-    text-align: center;
-    max-width: 820px;
-    margin-inline: auto;
+main[landing] > section > header > mark:has(> :nth-child(3)),
+main[landing] > section > mark:has(> :nth-child(3)),
+main[landing] > section > section > article > mark:has(> :nth-child(3)),
+main[landing] > section > article > header > mark:has(> :nth-child(3)),
+main[landing] > section > section > article > header > mark:has(> :nth-child(3)),
+main[landing] > section > article > section > mark:has(> :nth-child(3)) {
+    grid-template-columns: max-content max-content minmax(0, 1fr);
 }
 
 main[landing] > section > header > hgroup > h2 {
-    margin: 0;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     line-height: 1.2;
@@ -192,8 +188,22 @@ main[landing] > section > header > hgroup > p {
     color: var(--landing-text-sub);
 }
 
+main[landing] > section > header:first-of-type {
+    gap: var(--md-sys-spacing-3);
+    justify-items: center;
+    text-align: center;
+    max-width: 820px;
+    margin-inline: auto;
+}
+
+main[landing] > section > span:first-child {
+    position: absolute;
+    pointer-events: none;
+}
+
 /* Shared Interactive Card Surface */
-main[landing] article {
+main[landing] > section > section > article,
+main[landing] > section > article {
     position: relative;
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
@@ -202,7 +212,8 @@ main[landing] article {
     transition: transform 0.3s var(--md-sys-motion-easing-spring-soft), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-main[landing] article:hover {
+main[landing] > section > section > article:hover,
+main[landing] > section > article:hover {
     border-color: var(--landing-border-hover);
     box-shadow: var(--md-sys-elevation-level2);
     transform: translateY(-2px);
@@ -211,19 +222,15 @@ main[landing] article:hover {
 /* ==========================================================================
    1. Hero Section
    ========================================================================== */
-
-main[landing] > section[aria-label="Hero"] {
+main[landing] > section:nth-of-type(1) {
     gap: var(--md-sys-spacing-8);
     padding-top: var(--md-sys-spacing-4);
 }
 
-main[landing] > section[aria-label="Hero"] > section:first-of-type {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:first-of-type {
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
     gap: var(--md-sys-spacing-8);
     align-items: center;
-    box-sizing: border-box;
-    width: 100%;
     padding: var(--landing-card-padding);
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
@@ -232,8 +239,9 @@ main[landing] > section[aria-label="Hero"] > section:first-of-type {
 }
 
 /* Hero Content */
-main[landing] > section[aria-label="Hero"] > section:first-of-type > article:first-child {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child {
+    min-width: 0;
+    max-width: 100%;
     gap: var(--md-sys-spacing-5);
     justify-items: start;
     align-content: start;
@@ -243,51 +251,47 @@ main[landing] > section[aria-label="Hero"] > section:first-of-type > article:fir
     padding: 0;
 }
 
-main[landing] > section[aria-label="Hero"] h1 {
-    margin: 0;
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > h1 {
+    display: grid;
+    gap: 0.35rem;
     font-size: clamp(2.5rem, 5vw, 4.25rem);
     font-weight: 800;
-    line-height: 1.08;
+    line-height: 1.15;
     letter-spacing: -0.03em;
 }
 
-main[landing] > section[aria-label="Hero"] h1 > span:first-child {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > h1 > span:first-child {
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-main[landing] > section[aria-label="Hero"] p {
-    margin: 0;
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > h1 > br {
+    display: none;
+}
+
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > p {
     font-size: clamp(1.05rem, 1.8vw, 1.25rem);
     line-height: 1.6;
     color: var(--landing-text-sub);
     max-width: 580px;
 }
 
-main[landing] > section[aria-label="Hero"] menu {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-main[landing] > section[aria-label="Hero"] nav[aria-label] {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
 }
 
-main[landing] > section[aria-label="Hero"] nav[aria-label] > a {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav > a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0.4rem 0.85rem;
     border: 1px solid var(--landing-border);
     border-radius: 9999px;
@@ -295,19 +299,23 @@ main[landing] > section[aria-label="Hero"] nav[aria-label] > a {
     color: var(--landing-text-main);
     font-size: 0.85rem;
     font-weight: 500;
-    text-decoration: none;
     transition: all 0.25s ease;
 }
 
-main[landing] > section[aria-label="Hero"] nav[aria-label] > a:hover {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav > a:hover {
     border-color: var(--landing-border-hover);
     background: var(--landing-surface-hover);
     color: var(--md-sys-color-primary);
 }
 
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > menu {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-3);
+}
+
 /* Hero Stage Card */
-main[landing] > section[aria-label="Hero"] > section:first-of-type > article:last-child {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child {
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
     position: relative;
@@ -318,32 +326,23 @@ main[landing] > section[aria-label="Hero"] > section:first-of-type > article:las
     overflow: hidden;
 }
 
-main[landing] > section[aria-label="Hero"] nav[aria-label="Hero stages"] {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2);
-    justify-content: center;
-}
-
-main[landing] > section[aria-label="Hero"] figure {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure {
     position: relative;
-    display: grid;
     place-items: center;
-    margin: 0;
     min-height: 340px;
     border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container-lowest, var(--md-sys-color-scrim, black));
+    background: var(--md-sys-color-surface-container-lowest);
     overflow: hidden;
 }
 
-main[landing] > section[aria-label="Hero"] figure > img {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > img {
     width: 100%;
     max-height: 420px;
     object-fit: contain;
     transition: transform 0.4s ease;
 }
 
-main[landing] > section[aria-label="Hero"] figure > span {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span {
     position: absolute;
     display: inline-grid;
     grid-auto-flow: column;
@@ -362,29 +361,32 @@ main[landing] > section[aria-label="Hero"] figure > span {
     box-shadow: var(--md-sys-elevation-level2);
 }
 
-main[landing] > section[aria-label="Hero"] figure > span:nth-of-type(1) {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span:nth-of-type(1) {
     top: 16px;
     left: 16px;
 }
 
-main[landing] > section[aria-label="Hero"] figure > span:nth-of-type(2) {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span:nth-of-type(2) {
     bottom: 16px;
     left: 16px;
 }
 
-main[landing] > section[aria-label="Hero"] figure > span:nth-of-type(3) {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span:nth-of-type(3) {
     top: 16px;
     right: 16px;
 }
 
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > nav {
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+    justify-content: center;
+}
+
 /* Specifications Bar */
-main[landing] > section[aria-label="Specifications"] {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:last-of-type {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
     gap: var(--md-sys-spacing-4);
-    box-sizing: border-box;
-    width: 100%;
     padding: var(--md-sys-spacing-6) var(--md-sys-spacing-8);
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
@@ -394,8 +396,13 @@ main[landing] > section[aria-label="Specifications"] {
     -webkit-backdrop-filter: blur(20px);
 }
 
-main[landing] > section[aria-label="Specifications"] > article {
-    display: grid;
+main[landing] > section:nth-of-type(1) > section:last-of-type > span {
+    width: 1px;
+    height: 48px;
+    background: var(--landing-border);
+}
+
+main[landing] > section:nth-of-type(1) > section:last-of-type > article {
     gap: var(--md-sys-spacing-1);
     justify-items: center;
     text-align: center;
@@ -405,12 +412,7 @@ main[landing] > section[aria-label="Specifications"] > article {
     padding: 0;
 }
 
-main[landing] > section[aria-label="Specifications"] > article:hover {
-    transform: none;
-}
-
-main[landing] > section[aria-label="Specifications"] [data-counter-target],
-main[landing] > section[aria-label="Specifications"] > article > span:first-child {
+main[landing] > section:nth-of-type(1) > section:last-of-type > article > span:first-child {
     font-size: clamp(2rem, 3.5vw, 2.75rem);
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -419,109 +421,94 @@ main[landing] > section[aria-label="Specifications"] > article > span:first-chil
     -webkit-text-fill-color: transparent;
 }
 
-main[landing] > section[aria-label="Specifications"] > article > span:last-child {
+main[landing] > section:nth-of-type(1) > section:last-of-type > article > span:last-child {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Specifications"] > span[aria-hidden="true"] {
-    width: 1px;
-    height: 48px;
-    background: var(--landing-border);
+main[landing] > section:nth-of-type(1) > section:last-of-type > article:hover {
+    transform: none;
 }
 
 /* ==========================================================================
    2. Foundational Pillars
    ========================================================================== */
-
-main[landing] > section[aria-label="Pillars"] > section {
-    display: grid;
+main[landing] > section:nth-of-type(2) > section {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--md-sys-spacing-4);
-    width: 100%;
 }
 
-main[landing] > section[aria-label="Pillars"] article {
-    display: grid;
+main[landing] > section:nth-of-type(2) > section > article {
     gap: var(--md-sys-spacing-3);
     align-content: start;
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Pillars"] article > [icon] {
-    font-size: 2.25rem;
-    color: var(--md-sys-color-primary);
-}
-
-main[landing] > section[aria-label="Pillars"] article > h3 {
-    margin: 0;
+main[landing] > section:nth-of-type(2) > section > article > h3 {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Pillars"] article > p {
-    margin: 0;
+main[landing] > section:nth-of-type(2) > section > article > p {
     font-size: 0.95rem;
     line-height: 1.55;
     color: var(--landing-text-sub);
 }
 
+main[landing] > section:nth-of-type(2) > section > article > md-icon {
+    font-size: 2.25rem;
+    color: var(--md-sys-color-primary);
+}
+
 /* ==========================================================================
    3. Dual Showcases (Demo & Socratic Self-Selling)
    ========================================================================== */
-
-main[landing] > section[aria-label="Showcases"] > section {
-    display: grid;
+main[landing] > section:nth-of-type(3) > section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-6);
-    width: 100%;
 }
 
-main[landing] > section[aria-label="Showcases"] article {
-    display: grid;
+main[landing] > section:nth-of-type(3) > section > article {
     gap: var(--md-sys-spacing-5);
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Showcases"] article > hgroup > h3 {
+main[landing] > section:nth-of-type(3) > section > article > hgroup > h3 {
     margin: 0 0 var(--md-sys-spacing-2);
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Showcases"] article > hgroup > p {
-    margin: 0;
+main[landing] > section:nth-of-type(3) > section > article > hgroup > p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Showcases"] article > nav {
-    display: grid;
+main[landing] > section:nth-of-type(3) > section > article > nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
     gap: var(--md-sys-spacing-2);
 }
 
-main[landing] > section[aria-label="Showcases"] article > nav > span {
+main[landing] > section:nth-of-type(3) > section > article > nav > span {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
     font-size: 0.9rem;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Showcases"] article > nav > span > [icon] {
+main[landing] > section:nth-of-type(3) > section > article > nav > span > md-icon {
     font-size: 1.15rem;
     color: var(--md-sys-color-primary);
 }
 
-main[landing] > section[aria-label="Showcases"] article > footer {
-    display: grid;
+main[landing] > section:nth-of-type(3) > section > article > footer {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-3);
@@ -531,38 +518,36 @@ main[landing] > section[aria-label="Showcases"] article > footer {
 /* ==========================================================================
    4. Spatial Tech Wings (GeoMap & SeatDesigner)
    ========================================================================== */
-
-main[landing] > section[aria-label="Spatial"] {
-    display: grid;
+main[landing] > section:nth-of-type(4) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-6);
 }
 
-main[landing] > section[aria-label="Spatial"] > article {
-    display: grid;
+main[landing] > section:nth-of-type(4) > header {
+    grid-column: 1 / -1;
+}
+
+main[landing] > section:nth-of-type(4) > article {
     gap: var(--md-sys-spacing-5);
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > header {
-    display: grid;
+main[landing] > section:nth-of-type(4) > article > header {
     gap: var(--md-sys-spacing-2);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > header > hgroup > h3 {
-    margin: 0;
+main[landing] > section:nth-of-type(4) > article > header > hgroup > h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > header > hgroup > p {
-    margin: 0;
+main[landing] > section:nth-of-type(4) > article > header > hgroup > p {
     font-size: 0.95rem;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article {
-    display: grid;
+main[landing] > section:nth-of-type(4) > article > article {
     gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-4);
     border: 1px solid var(--landing-border);
@@ -570,46 +555,38 @@ main[landing] > section[aria-label="Spatial"] > article > article {
     background: var(--md-sys-color-surface-container);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > header {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+main[landing] > section:nth-of-type(4) > article > article > header {
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > header > [icon] {
-    font-size: 1.35rem;
-    color: var(--md-sys-color-primary);
-}
-
-main[landing] > section[aria-label="Spatial"] > article > article > header > h4 {
-    margin: 0;
+main[landing] > section:nth-of-type(4) > article > article > header > h4 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > p {
-    margin: 0;
+main[landing] > section:nth-of-type(4) > article > article > header > md-icon {
+    font-size: 1.35rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[landing] > section:nth-of-type(4) > article > article > p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > menu {
-    display: grid;
+main[landing] > section:nth-of-type(4) > article > article > menu {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-3);
-    margin: 0;
-    padding: 0;
-    list-style: none;
     font-size: 0.85rem;
     color: var(--landing-text-muted);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > menu > span {
+main[landing] > section:nth-of-type(4) > article > article > menu > span {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -617,20 +594,19 @@ main[landing] > section[aria-label="Spatial"] > article > article > menu > span 
     align-items: center;
 }
 
-main[landing] > section[aria-label="Spatial"] > article > article > menu > span > [icon] {
+main[landing] > section:nth-of-type(4) > article > article > menu > span > md-icon {
     font-size: 1rem;
     color: var(--md-sys-color-tertiary);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > footer {
-    display: grid;
+main[landing] > section:nth-of-type(4) > article > footer {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-4);
     margin-top: auto;
 }
 
-main[landing] > section[aria-label="Spatial"] > article > footer > aside {
+main[landing] > section:nth-of-type(4) > article > footer > aside {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -640,7 +616,7 @@ main[landing] > section[aria-label="Spatial"] > article > footer > aside {
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Spatial"] > article > footer > aside span > span[aria-hidden="true"] {
+main[landing] > section:nth-of-type(4) > article > footer > aside > span > span:first-child {
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -649,20 +625,21 @@ main[landing] > section[aria-label="Spatial"] > article > footer > aside span > 
     background: var(--md-sys-color-primary);
 }
 
+main[landing] > section:nth-of-type(4) > article > footer > aside:has(> md-icon) {
+    grid-template-columns: max-content minmax(0, 1fr);
+}
+
 /* ==========================================================================
    5. Modes Section (Spotlight Flagships & 28 Modes Explorer)
    ========================================================================== */
-
-main[landing] > section[aria-label="Modes"] {
-    display: grid;
+main[landing] > section:nth-of-type(5) {
     gap: var(--md-sys-spacing-6);
 }
 
 /* Spotlight Header */
-main[landing] > section[aria-label="Modes"] > header:nth-of-type(2) {
+main[landing] > section:nth-of-type(5) > header:nth-of-type(2) {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
     justify-content: start;
@@ -671,78 +648,85 @@ main[landing] > section[aria-label="Modes"] > header:nth-of-type(2) {
     color: var(--landing-text-sub);
 }
 
-/* Spotlight 4 Flagships Grid */
-main[landing] > section[aria-label="Modes"] > section:first-of-type {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+/* Filter & Search Toolbar */
+main[landing] > section:nth-of-type(5) > header:nth-of-type(3) {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
-    width: 100%;
+    align-items: center;
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article {
-    display: grid;
+main[landing] > section:nth-of-type(5) > header:nth-of-type(3) > nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+/* Spotlight 4 Flagships Grid */
+main[landing] > section:nth-of-type(5) > section:first-of-type {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-4);
+}
+
+main[landing] > section:nth-of-type(5) > section:first-of-type > article {
     gap: var(--md-sys-spacing-3);
     align-content: start;
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > figure {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > figure {
     place-items: center;
     width: 48px;
     height: 48px;
-    margin: 0;
     border-radius: var(--md-sys-shape-corner-medium);
     background: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
     color: var(--md-sys-color-primary);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > figure > [icon] {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > figure > md-icon {
     font-size: 1.75rem;
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > header > h3 {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > header > h3 {
     margin: var(--md-sys-spacing-1) 0 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > p {
-    margin: 0;
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > menu {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > menu {
     gap: var(--md-sys-spacing-1);
-    margin: 0;
-    padding: 0;
-    list-style: none;
     font-size: 0.825rem;
     color: var(--landing-text-muted);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > menu > span {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > menu > span {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-1);
     align-items: center;
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > menu > span > [icon] {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > menu > span > md-icon {
     font-size: 0.95rem;
     color: var(--md-sys-color-primary);
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > a {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr) max-content;
     align-items: center;
+    min-width: 44px;
+    min-height: 44px;
     margin-top: auto;
     padding: 0.5rem 0.85rem;
     border: 1px solid var(--landing-border);
@@ -751,104 +735,85 @@ main[landing] > section[aria-label="Modes"] > section:first-of-type > article > 
     color: var(--landing-text-main);
     font-size: 0.85rem;
     font-weight: 600;
-    text-decoration: none;
     transition: all 0.25s ease;
 }
 
-main[landing] > section[aria-label="Modes"] > section:first-of-type > article > a:hover {
+main[landing] > section:nth-of-type(5) > section:first-of-type > article > a:hover {
     border-color: var(--landing-border-hover);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
-/* Filter & Search Toolbar */
-main[landing] > section[aria-label="Modes"] > header:nth-of-type(3) {
-    display: grid;
-    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4);
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-}
-
 /* 28 UX Modes Cards Grid */
-main[landing] > section[aria-label="Modes"] > section:last-of-type {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--md-sys-spacing-4);
-    width: 100%;
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article {
     grid-template-rows: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header > figure {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header > figure {
     place-items: center;
     width: 42px;
     height: 42px;
-    margin: 0;
     border-radius: var(--md-sys-shape-corner-medium);
     background: color-mix(in srgb, var(--md-sys-color-tertiary) 12%, transparent);
     color: var(--md-sys-color-tertiary);
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header > hgroup {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header > hgroup {
     gap: 2px;
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header > hgroup > span {
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header > hgroup > h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--landing-text-main);
+}
+
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header > hgroup > span {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--md-sys-color-primary);
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header > hgroup > h3 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--landing-text-main);
-}
-
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > header > hgroup > code {
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > header > hgroup > code {
     font-size: 0.75rem;
     color: var(--landing-text-muted);
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > p {
-    margin: 0;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > p {
     font-size: 0.85rem;
     line-height: 1.5;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > footer {
-    display: grid;
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer {
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
     margin-top: auto;
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > footer > a {
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer > a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(0, 1fr) max-content;
     align-items: center;
     justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0.45rem 0.85rem;
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
@@ -856,158 +821,173 @@ main[landing] > section[aria-label="Modes"] > section:last-of-type > article > f
     color: var(--landing-text-main);
     font-size: 0.85rem;
     font-weight: 600;
-    text-decoration: none;
     transition: all 0.25s ease;
 }
 
-main[landing] > section[aria-label="Modes"] > section:last-of-type > article > footer > a:hover {
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer > a:hover {
     border-color: var(--landing-border-hover);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
+main[landing] > section:nth-of-type(5) > md-outlined-button {
+    justify-self: center;
+}
+
 /* ==========================================================================
    6. Superpowers Bento Grid
    ========================================================================== */
-
-main[landing] > section[aria-label="Bento"] {
-    display: grid;
+main[landing] > section:nth-of-type(6) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-6);
 }
 
-main[landing] > section[aria-label="Bento"] > header {
+main[landing] > section:nth-of-type(6) > header {
     grid-column: 1 / -1;
 }
 
-main[landing] > section[aria-label="Bento"] > article {
-    display: grid;
+main[landing] > section:nth-of-type(6) > article {
     gap: var(--md-sys-spacing-5);
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Bento"] > article:nth-of-type(1),
-main[landing] > section[aria-label="Bento"] > article:nth-of-type(4) {
-    grid-column: 1 / -1;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-    align-items: center;
-}
-
-main[landing] > section[aria-label="Bento"] > article > section {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-    align-content: start;
-}
-
-main[landing] > section[aria-label="Bento"] > article > section > h3 {
-    margin: 0;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--landing-text-main);
-}
-
-main[landing] > section[aria-label="Bento"] > article > section > p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--landing-text-sub);
-}
-
-main[landing] > section[aria-label="Bento"] > article > section > ul,
-main[landing] > section[aria-label="Bento"] > article > section > menu {
-    display: grid;
-    gap: var(--md-sys-spacing-2);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0.9rem;
-    color: var(--landing-text-sub);
-}
-
-main[landing] > section[aria-label="Bento"] > article > section > ul > li,
-main[landing] > section[aria-label="Bento"] > article > section > menu > li {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-}
-
-main[landing] > section[aria-label="Bento"] > article > section > ul > li > [icon],
-main[landing] > section[aria-label="Bento"] > article > section > menu > li > [icon] {
-    font-size: 1.15rem;
-    color: var(--md-sys-color-primary);
-}
-
-main[landing] > section[aria-label="Bento"] > article > figure {
-    display: grid;
+main[landing] > section:nth-of-type(6) > article > figure {
     place-items: center;
-    margin: 0;
     border-radius: var(--md-sys-shape-corner-large);
     overflow: hidden;
 }
 
-main[landing] > section[aria-label="Bento"] > article > figure > img {
+main[landing] > section:nth-of-type(6) > article > figure > img {
     width: 100%;
     max-height: 320px;
     object-fit: contain;
 }
 
+main[landing] > section:nth-of-type(6) > article > section {
+    gap: var(--md-sys-spacing-3);
+    align-content: start;
+}
+
+main[landing] > section:nth-of-type(6) > article > section > h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--landing-text-main);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--landing-text-sub);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > ul,
+main[landing] > section:nth-of-type(6) > article > section > menu {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-2);
+    font-size: 0.9rem;
+    color: var(--landing-text-sub);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > ul > li,
+main[landing] > section:nth-of-type(6) > article > section > menu > li {
+    display: inline-grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+main[landing] > section:nth-of-type(6) > article > section > ul > li > md-icon,
+main[landing] > section:nth-of-type(6) > article > section > menu > li > md-icon {
+    font-size: 1.15rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-3);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > section > figure {
+    gap: var(--md-sys-spacing-1);
+    padding: var(--md-sys-spacing-3);
+    border: 1px solid var(--landing-border);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > section > figure > span:first-child {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > section > figure > span:last-child {
+    font-size: 0.8rem;
+    color: var(--landing-text-sub);
+}
+
+main[landing] > section:nth-of-type(6) > article > section > :is(md-filled-button, md-outlined-button) {
+    justify-self: start;
+}
+
+main[landing] > section:nth-of-type(6) > article:nth-of-type(1),
+main[landing] > section:nth-of-type(6) > article:nth-of-type(4) {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    align-items: center;
+}
+
 /* ==========================================================================
    7. Cross-Platform Download Section
    ========================================================================== */
-
-main[landing] > section[aria-label="Download"] > section {
-    display: grid;
+main[landing] > section:nth-of-type(7) > section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--md-sys-spacing-5);
-    width: 100%;
 }
 
-main[landing] > section[aria-label="Download"] article {
-    display: grid;
+main[landing] > section:nth-of-type(7) > section > article {
     gap: var(--md-sys-spacing-4);
     padding: var(--landing-card-padding);
 }
 
-main[landing] > section[aria-label="Download"] article > header {
-    display: grid;
+main[landing] > section:nth-of-type(7) > section > article > header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-main[landing] > section[aria-label="Download"] article > header > [icon] {
-    font-size: 2.25rem;
-    color: var(--md-sys-color-primary);
-}
-
-main[landing] > section[aria-label="Download"] article > header > hgroup > h3 {
-    margin: 0;
+main[landing] > section:nth-of-type(7) > section > article > header > hgroup > h3 {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Download"] article > header > hgroup > span {
+main[landing] > section:nth-of-type(7) > section > article > header > hgroup > span {
     font-size: 0.8rem;
     color: var(--landing-text-muted);
 }
 
-main[landing] > section[aria-label="Download"] article > p {
-    margin: 0;
+main[landing] > section:nth-of-type(7) > section > article > header > md-icon {
+    font-size: 2.25rem;
+    color: var(--md-sys-color-primary);
+}
+
+main[landing] > section:nth-of-type(7) > section > article > p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Download"] article > a {
+main[landing] > section:nth-of-type(7) > section > article > a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
     justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     margin-top: auto;
     padding: 0.65rem 1.25rem;
     border: 1px solid var(--landing-border);
@@ -1016,48 +996,73 @@ main[landing] > section[aria-label="Download"] article > a {
     color: var(--landing-text-main);
     font-size: 0.9rem;
     font-weight: 600;
-    text-decoration: none;
     transition: all 0.25s ease;
 }
 
-main[landing] > section[aria-label="Download"] article > a:hover {
+main[landing] > section:nth-of-type(7) > section > article > a:hover {
     border-color: var(--landing-border-hover);
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
 /* Instant QR Card in Download */
-main[landing] > section[aria-label="Download"] article:last-child {
-    display: grid;
+main[landing] > section:nth-of-type(7) > section > article:last-child {
     grid-template-rows: auto minmax(0, 1fr) auto;
     justify-items: center;
     text-align: center;
 }
 
-main[landing] > section[aria-label="Download"] article:last-child > figure {
-    margin: 0;
-    display: grid;
+main[landing] > section:nth-of-type(7) > section > article:last-child > figure {
     place-items: center;
 }
 
-main[landing] > section[aria-label="Download"] article:last-child > figure > svg {
+main[landing] > section:nth-of-type(7) > section > article:last-child > figure > svg {
     width: 180px;
     height: 180px;
 }
 
-main[landing] > section[aria-label="Download"] article:last-child > footer {
-    display: grid;
+main[landing] > section:nth-of-type(7) > section > article:last-child > footer {
     gap: var(--md-sys-spacing-2);
     justify-items: center;
-    width: 100%;
+}
+
+main[landing] > section:nth-of-type(7) > section > article:last-child > footer > p {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+}
+
+main[landing] > section:nth-of-type(7) > section > article:last-child > footer > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--landing-border);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--landing-surface);
+    color: var(--landing-text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main[landing] > section:nth-of-type(7) > section > article:last-child > footer > a:hover {
+    border-color: var(--landing-border-hover);
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
 }
 
 /* ==========================================================================
    8. Enterprise B2B Banner
    ========================================================================== */
-
-main[landing] > section[aria-label="Enterprise"] {
-    display: grid;
+main[landing] > section:nth-of-type(8) {
     gap: var(--md-sys-spacing-4);
     justify-items: center;
     text-align: center;
@@ -1068,57 +1073,53 @@ main[landing] > section[aria-label="Enterprise"] {
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[landing] > section[aria-label="Enterprise"] > h2 {
-    margin: 0;
+main[landing] > section:nth-of-type(8) > h2 {
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 800;
     color: var(--landing-text-main);
 }
 
-main[landing] > section[aria-label="Enterprise"] > p {
-    margin: 0;
+main[landing] > section:nth-of-type(8) > p {
     max-width: 680px;
     font-size: 1.05rem;
     line-height: 1.6;
     color: var(--landing-text-sub);
 }
 
-main[landing] > section[aria-label="Enterprise"] > footer {
-    display: grid;
+main[landing] > section:nth-of-type(8) > footer {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-3);
     margin-top: var(--md-sys-spacing-2);
 }
 
+main[model-viewer] {
+    grid-column: 1 / -1;
+    height: calc(100dvh - 64px);
+    padding: 0;
+    overflow: clip;
+}
+
 /* ==========================================================================
    Level 2: <footer landing> (Ecosystem Directory)
    ========================================================================== */
-
 footer[landing] {
-    display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr);
     gap: clamp(var(--md-sys-spacing-8), 4vw, var(--md-sys-spacing-16));
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
     padding: var(--md-sys-spacing-12) var(--md-sys-gutter-page) var(--md-sys-spacing-16);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
-    border-top: 1px solid var(--landing-border, rgb(from var(--md-sys-color-outline-variant) r g b / 0.4));
+    border-top: 1px solid var(--landing-border);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
 }
 
 footer[landing] > hgroup {
-    display: grid;
     gap: var(--md-sys-spacing-2);
     align-content: start;
 }
 
 footer[landing] > hgroup > h3 {
-    margin: 0;
     font-size: 1.75rem;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -1128,7 +1129,6 @@ footer[landing] > hgroup > h3 {
 }
 
 footer[landing] > hgroup > p {
-    margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
     color: var(--md-sys-color-on-surface-variant);
@@ -1141,22 +1141,47 @@ footer[landing] > hgroup > span {
     color: var(--md-sys-color-outline);
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] {
-    display: grid;
+footer[landing] > nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
     gap: var(--md-sys-spacing-6);
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul {
-    display: grid;
+footer[landing] > nav > ul {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
     gap: var(--md-sys-spacing-2);
     align-content: start;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li:first-child {
+footer[landing] > nav > ul > li > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer[landing] > nav > ul > li > a > md-icon {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-outline);
+}
+
+footer[landing] > nav > ul > li > a:hover {
+    color: var(--md-sys-color-primary);
+    transform: translateX(2px);
+}
+
+footer[landing] > nav > ul > li > a:hover > md-icon {
+    color: var(--md-sys-color-primary);
+}
+
+footer[landing] > nav > ul > li:first-child {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1165,58 +1190,22 @@ footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li:first-child {
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li > a {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+mark > span:first-child {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li > a:hover {
-    color: var(--md-sys-color-primary);
-    transform: translateX(2px);
+mark > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li > a > [icon] {
+mark > md-icon {
     font-size: 1.1rem;
-    color: var(--md-sys-color-outline);
-}
-
-footer[landing] > nav[aria-label="Ecosystem Directory"] > ul > li > a:hover > [icon] {
-    color: var(--md-sys-color-primary);
-}
-
-/* ==========================================================================
-   Other Page Landmarks in landing.css (<main home>, <main model-viewer>)
-   ========================================================================== */
-
-main[home] {
-    display: grid;
-    gap: var(--md-sys-gutter-section);
-    align-content: start;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
-    padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
-    padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
-}
-
-main[model-viewer] {
-    display: grid;
-    grid-column: 1 / -1;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    height: calc(100dvh - 64px);
-    padding: 0;
-    overflow: clip;
 }
 
 /* ==========================================================================
@@ -1224,87 +1213,130 @@ main[model-viewer] {
    ========================================================================== */
 
 @media screen and (max-width: 1023.98px) {
-    main[landing] > section[aria-label="Hero"] > section:first-of-type {
+main[landing] > section:nth-of-type(1) > section:first-of-type {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    main[landing] > section[aria-label="Pillars"] > section {
+main[landing] > section:nth-of-type(2) > section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    main[landing] > section[aria-label="Modes"] > section:first-of-type {
+main[landing] > section:nth-of-type(4) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(5) > header:nth-of-type(3) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(5) > section:first-of-type {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    main[landing] > section[aria-label="Modes"] > header:nth-of-type(3) {
+main[landing] > section:nth-of-type(6) > article:nth-of-type(1),
+    main[landing] > section:nth-of-type(6) > article:nth-of-type(4) {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    main[landing] > section[aria-label="Bento"] > article:nth-of-type(1),
-    main[landing] > section[aria-label="Bento"] > article:nth-of-type(4) {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    footer[landing] {
+footer[landing] {
         grid-template-columns: minmax(0, 1fr);
     }
 }
 
 @media screen and (max-width: 839.98px) {
-    main[landing] {
-        padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-8));
+main[home] {
+        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
     }
 
-    main[home] {
-        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
+main[landing] {
+        padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-8));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
     }
 
-    main[landing] > section[aria-label="Specifications"] {
+main[landing] > section:nth-of-type(1) > section:last-of-type {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--md-sys-spacing-6) var(--md-sys-spacing-4);
     }
 
-    main[landing] > section[aria-label="Specifications"] > span[aria-hidden="true"] {
+main[landing] > section:nth-of-type(1) > section:last-of-type > span {
         display: none;
     }
 
-    main[landing] > section[aria-label="Showcases"] > section {
+main[landing] > section:nth-of-type(3) > section {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    main[landing] > section[aria-label="Bento"] {
+main[landing] > section:nth-of-type(6) {
         grid-template-columns: minmax(0, 1fr);
     }
 }
 
 @media screen and (max-width: 599.98px) {
-    main[landing] > section[aria-label="Hero"] menu {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav,
+    main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > nav {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
         grid-auto-flow: row;
-        width: 100%;
     }
 
-    main[landing] > section[aria-label="Pillars"] > section {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    main[landing] > section[aria-label="Specifications"] {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    main[landing] > section[aria-label="Modes"] > section:first-of-type {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    main[landing] > section[aria-label="Enterprise"] > footer {
+main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > menu {
         grid-auto-flow: row;
-        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    footer[landing] > nav[aria-label="Ecosystem Directory"] {
+main[landing] > section:nth-of-type(1) > section:last-of-type {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(2) > section {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(3) > section > article > nav {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(3) > section > article > footer {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(4) > article > article > menu {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(4) > article > footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(4) > article > footer > aside {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(5) > header:nth-of-type(2) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+    }
+
+main[landing] > section:nth-of-type(5) > section:first-of-type {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(6) > article > section > section {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+main[landing] > section:nth-of-type(8) > footer {
+        grid-auto-flow: row;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+footer[landing] > nav {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
     }
 }

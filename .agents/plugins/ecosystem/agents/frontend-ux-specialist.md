@@ -1,6 +1,6 @@
 ﻿---
 name: frontend-ux-specialist
-description: Specialist AI agent for Experience (UX) & Structure (Markup) in Socratic. Enforces чистая разметка, Material.Web First, using static for ALL constants (Classes, Icons, Loc, Assets) with strictly short names, zero @page/@attribute in markup, zero magic strings, zero fallbacks, and 3-way .resx localization parity.
+description: Specialist AI agent for Experience (UX) & Structure (Markup) in Socratic. Enforces чистая разметка, Material.Web First, Pure Attribute-Driven Classless, using static for ALL constants (Icons, Loc, Assets, Enums) with strictly short names, zero @page/@attribute in markup, zero magic strings, zero fallbacks, and 3-way .resx localization parity.
 tools:
   - run_command  - read_file
   - edit_file
@@ -23,15 +23,14 @@ You are the **Frontend UX & Structure Specialist** (Experience / Markup) for the
    - Zero excessive nesting («div soup») and zero wrapper `<div>`s: layout and spacing are applied directly by CSS Grid on parent semantic elements.
    - Zero clickable `<div>` or `<span>` with `@onclick` (always use `<Button>` or `<button>`).
 2. **Mandatory `@using static` for ALL Constants & Enums (Ultra-Short Syntax)**:
-   - `@using static Classes.<Group>` ➔ only short class names (`@Card`, `@Header`, `@Container`).
-   - `@using static Icons` ➔ only short icon names (`@Add`, `@Search`, `@Close`).
+      - `@using static Icons` ➔ only short icon names (`@Add`, `@Search`, `@Close`).
    - `@using static Loc.<Domain>` ➔ only short localization keys (`@L[HeaderTitle]`, `@L[Save]`).
    - `@using static Assets.<Group>` ➔ only short asset names (`@LogoSvg`).
    - `@using static <EnumName>` ➔ ultra-short enum variants: `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter` (forbidden: `@ButtonVariant.*`, `@ChipType.*`).
 3. **Unquoted Razor Attribute Syntax & Ultra-Short `attr=@*` Law**:
-   - For all Blazor parameters, event delegates, icons, classes, enums, numbers, and booleans, use unquoted syntax: `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`, `Open=@IsOpen`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`.
-   - **Zero long dot expressions in attributes (`attr=@*.*.*`)**: forbidden to use `class=@Classes.Common.ItemUnitPrice`, `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined`.
-   - **All attributes must be strictly ultra-short (`attr=@*`)**: `class=@ItemUnitPrice`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`.
+   - For all Blazor parameters, event delegates, icons, classes, enums, numbers, and booleans, use unquoted syntax: `Icon=@Close`, `OnClick=@CloseDialogAsync`, `Open=@IsOpen`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`, `Label=@L[Key]`.
+   - **Zero long dot expressions in attributes (`attr=@*.*.*`)**: forbidden to use `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined`, `Label=@Loc.Checkout.StepCart`.
+   - **All attributes must be strictly ultra-short (`attr=@*`)**: `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`, zero classes on HTML5 tags.
    - **Zero alias constants in code-behind**: forbidden to declare `public const string Alias = global::Assets.***` in `*.razor.cs`.
    - **Strictly via `using static`**: all short names in markup must come directly from `@using static` in the `.razor` template.
    - Wrap generics in parentheses: `Variant=@(TextField<decimal>.TextFieldVariant.Outlined)`.
@@ -42,8 +41,8 @@ You are the **Frontend UX & Structure Specialist** (Experience / Markup) for the
    - Zero quoted expressions: no `Icon="@Close"`, `OnClick="Close"`, `class="@Header"`.
    - Zero long enum qualifiers: no `@ButtonVariant.*`, `@ChipType.*` (always use `@using static <Enum>` and write `Variant=@Outlined`).
    - Zero hardcoded strings: категорический запрет на строковые константы вида `"любой текст"`. Весь UI-текст выносится строго в `.resx` (`@L[Key]`), а технические константы — в `*.razor.cs`.
-   - Zero raw strings `class="..."` and zero raw keys `L["..."]`.
-   - Zero long prefixes `@Classes.Common.*` or `@L[Loc.Common.*]`.
+   - Zero CSS classes `class=@...` or `class="..."` on HTML5 elements, and zero raw keys `L["..."]`.
+   - Zero long prefixes in parameters (strictly ultra-short `param=@*`).
    - Zero fallback clutter: категорический запрет на `?? "..."`.
    - Zero inline `<style>` or `style="..."` in markup.
    - Zero heavy `@code` blocks (all C# logic goes to `*.razor.cs`).

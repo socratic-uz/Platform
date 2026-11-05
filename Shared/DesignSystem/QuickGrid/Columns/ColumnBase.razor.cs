@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Components.Web.Virtualization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components;
 
-using AssetConstants = global::Assets.Constants;
 
 namespace QuickGrid;
 
@@ -131,7 +130,7 @@ public abstract partial class ColumnBase<TGridItem>
             if (isOptionsLeft)
             {
                 builder.OpenElement(1, "button");
-                builder.AddAttribute(2, "class", AssetConstants.Classes.Table.ColOptionsButton);
+                builder.AddAttribute(2, "data-col-options", "");
                 builder.AddAttribute(3, "type", "button");
                 builder.AddAttribute(4, "title", "Column options");
                 builder.AddAttribute(5, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));
@@ -142,7 +141,6 @@ public abstract partial class ColumnBase<TGridItem>
             if (isSortable)
             {
                 builder.OpenElement(6, "button");
-                builder.AddAttribute(7, "class", AssetConstants.Classes.Table.ColTitle + " " + AssetConstants.Classes.Table.ColTitleText);
                 builder.AddAttribute(8, "type", "button");
                 builder.AddAttribute(9, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.SortByColumnAsync(this)));
                 builder.AddContent(12, Title);
@@ -151,7 +149,6 @@ public abstract partial class ColumnBase<TGridItem>
             else
             {
                 builder.OpenElement(16, "span");
-                builder.AddAttribute(17, "class", AssetConstants.Classes.Table.ColTitle + " " + AssetConstants.Classes.Table.ColTitleText);
                 builder.AddContent(20, Title);
                 builder.CloseElement();
             }
@@ -159,7 +156,7 @@ public abstract partial class ColumnBase<TGridItem>
             if (ColumnOptions is not null && isOptionsRight)
             {
                 builder.OpenElement(21, "button");
-                builder.AddAttribute(22, "class", AssetConstants.Classes.Table.ColOptionsButton);
+                builder.AddAttribute(22, "data-col-options", "");
                 builder.AddAttribute(23, "type", "button");
                 builder.AddAttribute(24, "title", "Column options");
                 builder.AddAttribute(25, "onclick", EventCallback.Factory.Create<MouseEventArgs>(this, () => Grid.ShowColumnOptionsAsync(this)));

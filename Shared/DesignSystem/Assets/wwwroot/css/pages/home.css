@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Socratic Design System — PAGES / home.css
+   Direct Body Landmarks for Organization Home: <main home>
+   ========================================================================== */
+
+main[home] {
+    gap: var(--md-sys-gutter-section);
+    align-content: start;
+    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
+    padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
+    padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media screen and (max-width: 839.98px) {
+main[home] {
+        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
+        padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
+        padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+    }
+}

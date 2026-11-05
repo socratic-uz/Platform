@@ -10,15 +10,15 @@
                @attributes=AdditionalAttributes>
         @if (Headline != null)
         {
-            <header slot="headline" class=@HeadlineClass>@Headline</header>
+            <header slot="headline">@Headline</header>
         }
         @if (Content != null)
         {
-            <section slot="content" class=@ContentClass>@Content</section>
+            <section slot="content">@Content</section>
         }
         @if (Actions != null)
         {
-            <footer slot="actions" class=@ActionsClass>@Actions</footer>
+            <footer slot="actions">@Actions</footer>
         }
         @ChildContent
     </md-dialog>

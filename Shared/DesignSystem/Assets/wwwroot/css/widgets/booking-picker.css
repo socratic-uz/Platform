@@ -1,357 +1,101 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / booking-picker.css
-   Component-Driven Architecture
+   Layer: widgets — Picker Trigger Cards, File/Date/Time Pickers (Pure Classless)
    ========================================================================== */
 
-section[booking],
-article[booking] {
-    display: grid;
-    gap: var(--md-sys-spacing-4);
-    box-sizing: border-box;
-    width: 100%;
-    padding: var(--md-sys-spacing-5);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface);
+/* 2. File Picker (<section file-picker>) */
+section[file-picker] {
+    position: relative;
+    align-content: start;
+    gap: var(--space-sm);
 }
 
-md-dialog[schedule] ul[days] > li {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
+section[file-picker] > input {
+    display: none;
+}
+
+section[file-picker] > footer {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
     align-items: center;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-    transition: background-color var(--md-sys-motion-duration-short3), border-color var(--md-sys-motion-duration-short3);
+    gap: var(--space-xs);
+    padding: 0 var(--space-xs);
+    font-size: var(--type-label-md-size);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
-md-dialog[schedule] ul[days] > li[active] {
-    border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-surface-container-lowest);
-}
-
-:where(.picker-trigger-card) {
-    display: grid;
+/* 1. Picker Trigger Card (<article picker-trigger>) */
+article[picker-trigger] {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-height: 64px;
-    margin-bottom: var(--md-sys-spacing-2);
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    gap: var(--space-md);
+    padding: var(--space-md);
+    min-height: 68px;
+    border-radius: var(--shape-lg);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    transform: translateZ(0);
-    will-change: transform;
-    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
-        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    container-type: inline-size;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        border-color var(--md-sys-motion-duration-short2) ease,
+        background-color var(--md-sys-motion-duration-short2) ease,
+        box-shadow var(--md-sys-motion-duration-short2) ease;
 }
 
-.picker-trigger-card:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+article[picker-trigger] > hgroup {
+    align-content: center;
+    gap: 2px;
 }
 
-.picker-trigger-card:hover {
-    border-color: var(--md-sys-color-outline);
-    box-shadow: var(--md-sys-elevation-level2);
-    transform: translateY(-2px);
+article[picker-trigger] > hgroup > strong {
+    font-size: var(--type-body-lg-size);
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.picker-trigger-card.disabled {
-    opacity: 0.5;
+article[picker-trigger] > hgroup > small {
+    font-size: var(--type-label-sm-size);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[picker-trigger] > span:first-child {
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--shape-md);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+article[picker-trigger][data-filled] {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.5);
+    background: rgb(from var(--md-sys-color-primary-container) r g b / 0.18);
+}
+
+article[picker-trigger][disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
     pointer-events: none;
 }
 
-@container (max-width: 480px) {
-    .picker-trigger-card {
-        gap: var(--md-sys-spacing-2);
-        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    }
-
+article[picker-trigger]:not([data-filled]) > hgroup > strong {
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 400;
 }
 
-.picker-popover-footer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding-top: var(--md-sys-spacing-2, 0.5rem);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.picker-popover-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding-bottom: var(--md-sys-spacing-2, 0.5rem);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-.picker-popover-panel {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
-    padding: var(--md-sys-spacing-4, 1rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
+article[picker-trigger]:hover:not([disabled]) {
+    border-color: var(--md-sys-color-primary);
     background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-expressive-2);
-    animation: fadeInScale var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-expressive-entrance);
 }
 
-.picker-popover-title {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+/* 3. Date & Time Picker Dialogs */
+dialog[date-picker],
+dialog[time-picker] {
+    width: min(380px, calc(100vw - 2 * var(--space-md)));
+    gap: var(--space-md);
 }
-
-.file-picker-container {
-    display: grid;
-    gap: 10px;
-    width: 100%;
-    margin-top: var(--md-sys-spacing-1, 0.25rem);
-    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
-}
-
-:where(.picker-badge, .picker-tag-badge) {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-1);
-    align-items: center;
-    padding: 2px var(--md-sys-spacing-2, 0.5rem);
-    border-radius: var(--md-sys-shape-corner-small);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.picker-badge md-icon {
-    width: 13px;
-    height: 13px;
-    font-size: 13px;
-}
-
-.picker-badge md-icon:not([slot]) {
-    line-height: 1;
-}
-
-.picker-compact-box {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    box-sizing: border-box;
-    min-height: var(--md-sys-touch-target-min);
-    padding: 6px 10px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-}
-
-.picker-custom-preview {
-    margin-top: 2px;
-}
-
-.picker-hex-input {
-    width: 68px;
-    min-height: var(--md-sys-touch-target-min, 48px);
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--md-sys-color-on-surface);
-    font-family: 'Roboto Mono', monospace;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.picker-hex-prefix {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 13px;
-    font-weight: 700;
-    user-select: none;
-}
-
-.picker-hex-wrapper {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 2px;
-    align-items: center;
-    padding: 3px var(--md-sys-spacing-2, 0.5rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small);
-    background: var(--md-sys-color-surface);
-}
-
-.picker-icon-badge {
-    display: grid;
-    place-items: center;
-    position: relative;
-    width: 44px;
-    height: 44px;
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface-variant);
-    overflow: hidden;
-    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-                color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-                transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring);
-}
-
-.picker-icon-badge.active {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-.picker-native-input {
-    opacity: 0;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 200%;
-    height: 200%;
-    cursor: pointer;
-}
-
-.picker-palette-grid {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-2);
-}
-
-.picker-palette-swatch {
-    display: grid;
-    place-items: center;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small);
-    transform: translateZ(0);
-    will-change: transform;
-    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-spring),
-        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        border-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.picker-palette-swatch::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-    transform: translate(-50%, -50%);
-    content: '';
-}
-
-.picker-palette-swatch:focus-visible {
-    outline: var(--md-sys-outline-width, 2px) solid var(--md-sys-color-focus-ring, var(--md-sys-color-primary));
-    outline-offset: var(--md-sys-outline-offset, 2px);
-    transition: outline-offset var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
-}
-
-.picker-palette-swatch:hover {
-    box-shadow: var(--md-sys-elevation-level-2), var(--md-sys-glow-primary-subtle);
-    transform: scale(1.15);
-}
-
-.picker-palette-swatch.selected {
-    box-shadow: 0 0 0 2px var(--md-sys-color-primary);
-}
-
-.picker-preview-text {
-    display: -webkit-box;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 13px;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-}
-
-.picker-swatch {
-    width: 100%;
-    height: 100%;
-}
-
-.picker-swatch-check {
-    color: var(--md-sys-color-on-primary);
-    font-size: 16px;
-    filter: drop-shadow(0 1px 2px rgb(from var(--md-sys-color-shadow) r g b / 0.8));
-}
-
-.picker-swatch-wrapper {
-    position: relative;
-    width: var(--md-sys-touch-target-min, 44px);
-    height: var(--md-sys-touch-target-min, 44px);
-    border-radius: var(--md-sys-shape-corner-small);
-    overflow: visible;
-    box-shadow: inset 0 0 0 1px rgb(from var(--md-sys-color-outline) r g b / 0.25);
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-.picker-swatch-wrapper::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-    transform: translate(-50%, -50%);
-    content: '';
-}
-
-.picker-trigger-actions {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    width: 100%;
-    margin-left: auto;
-}
-
-.picker-trigger-text {
-    display: grid;
-    gap: 3px;
-    min-width: 0;
-    overflow: hidden;
-}
-
-.picker-trigger-title {
-    color: var(--md-sys-color-on-surface);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-
-@container (max-width: 480px) {
-    .picker-trigger-actions {
-        justify-content: end;
-    }
-
-}
-

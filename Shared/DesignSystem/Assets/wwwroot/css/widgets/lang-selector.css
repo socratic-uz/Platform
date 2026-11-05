@@ -5,8 +5,6 @@
 
 menu[lang-selector],
 section[lang-selector] {
-    display: grid;
     align-items: center;
     position: relative;
-    box-sizing: border-box;
 }

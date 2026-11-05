@@ -3,28 +3,28 @@
 @switch (Variant)
 {
     case ButtonVariant.Elevated:
-        <md-elevated-button class=@ComputedCssClass disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
+        <md-elevated-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
             @RenderButtonContent()
         </md-elevated-button>
         break;
     case ButtonVariant.FilledTonal:
-        <md-filled-tonal-button class=@ComputedCssClass disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
+        <md-filled-tonal-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
             @RenderButtonContent()
         </md-filled-tonal-button>
         break;
     case ButtonVariant.Outlined:
-        <md-outlined-button class=@ComputedCssClass disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
+        <md-outlined-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
             @RenderButtonContent()
         </md-outlined-button>
         break;
     case ButtonVariant.Text:
-        <md-text-button class=@ComputedCssClass disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
+        <md-text-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
             @RenderButtonContent()
         </md-text-button>
         break;
     case ButtonVariant.Filled:
     default:
-        <md-filled-button class=@ComputedCssClass disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
+        <md-filled-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel @attributes="FilteredAttributes" @onclick=@OnClick>
             @RenderButtonContent()
         </md-filled-button>
         break;

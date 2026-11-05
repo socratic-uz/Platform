@@ -3,27 +3,26 @@
    Component-Driven Architecture
    ========================================================================== */
 
-:where([skeleton]) {
+[skeleton] {
     position: relative;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
     overflow: hidden;
 }
 
-:where([skeleton]) figure[circle] {
-    width: var(--md-sys-touch-target-min);
-    height: var(--md-sys-touch-target-min);
-    border-radius: 50%;
-}
-
-:where([skeleton]) span {
-    width: 100%;
+[skeleton] > span {
     height: 1rem;
     margin-bottom: 0.5rem;
     border-radius: var(--md-sys-shape-corner-extra-small);
 }
 
-:where([skeleton])::after {
+[skeleton] > article > figure {
+    width: var(--md-sys-touch-target-min);
+    height: var(--md-sys-touch-target-min);
+    border-radius: 50%;
+}
+
+[skeleton]::after {
     position: absolute;
     inset: 0;
     background: linear-gradient(
@@ -42,10 +41,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--md-sys-z-toast, 1200);
+    z-index: var(--md-sys-z-toast);
     width: 100%;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    border-radius: var(--md-sys-shape-corner-large, 24px);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     box-shadow: var(--md-sys-elevation-level3);

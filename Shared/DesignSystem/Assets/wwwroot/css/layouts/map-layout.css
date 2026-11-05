@@ -4,14 +4,10 @@
    ========================================================================== */
 
 body:has(layout[map]) {
-    display: grid;
     grid-template-columns: calc(76px + env(safe-area-inset-left, 0px)) minmax(0, 1fr);
     grid-template-rows: 1fr;
-    width: 100%;
-    max-width: 100%;
     height: 100dvh;
     max-height: 100dvh;
-    margin: 0;
     padding: 0;
     overflow: hidden;
 }
@@ -20,34 +16,30 @@ body:has(layout[map]) > nav {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     height: 100%;
-    z-index: var(--md-sys-z-sticky, 10);
+    z-index: var(--md-sys-z-sticky);
 }
 
 body:has(layout[map]) > main {
-    display: grid;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    box-sizing: border-box;
-    width: 100%;
     height: 100%;
     min-height: 0;
-    min-width: 0;
     overflow: hidden;
 }
 
 @media screen and (max-width: 839.98px) {
-    body:has(layout[map]) {
+body:has(layout[map]) {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: 1fr;
     }
 
-    body:has(layout[map]) > main {
-        grid-column: 1 / -1;
-    }
-
-    body:has(layout[map]) > nav {
+body:has(layout[map]) > nav {
         grid-column: 1 / -1;
         grid-row: auto;
+        height: auto;
+    }
+
+body:has(layout[map]) > main {
+        grid-column: 1 / -1;
     }
 }
-

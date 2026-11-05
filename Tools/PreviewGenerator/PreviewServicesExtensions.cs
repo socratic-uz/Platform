@@ -82,6 +82,7 @@ public static class PreviewServicesExtensions
         services.AddScoped<global::Chat.Abstractions.IChatService, MockChatService>();
         services.AddScoped<Domain.Interfaces.Pages.IDetectorService, MockDetectorService>();
         services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, MockInfrastructurePasskeyService>();
+        services.AddScoped<Domain.Interfaces.Identity.IUserAccountGateway, Infrastructure.Gateways.Identity.UserAccountGateway>();
 
         return services;
     }

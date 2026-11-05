@@ -5,61 +5,54 @@
    ========================================================================== */
 
 /* --- POS Top Header Actions --- */
+header[terminal] > nav {
+    grid-template-columns: auto auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+
 header[terminal] > nav > menu {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2, 8px);
+    gap: var(--md-sys-spacing-2);
     align-items: center;
-    max-width: 100%;
     padding-bottom: 2px;
     overflow-x: auto;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
 }
 
-header[terminal] > nav > menu > :where(md-filled-button, md-outlined-button, md-filled-tonal-button, button) {
+header[terminal] > nav > menu > md-filled-button,
+header[terminal] > nav > menu > md-outlined-button,
+header[terminal] > nav > menu > md-filled-tonal-button,
+header[terminal] > nav > menu > button {
     display: grid;
     text-decoration: none;
 }
 
-@media (max-width: 599.98px) {
-    header[terminal] > nav > menu {
-        gap: 6px;
-        scrollbar-width: none;
-    }
-}
-
 /* --- POS Left Catalog Panel --- */
 main[terminal] > section {
-    display: grid;
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1rem;
-    min-width: 0;
     height: 100%;
     min-inline-size: 0;
     overflow: hidden;
 }
 
 main[terminal] > section > header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
-    min-width: 0;
     min-inline-size: 0;
-    padding-bottom: var(--md-sys-spacing-3, 0.75rem);
+    padding-bottom: var(--md-sys-spacing-3);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 main[terminal] > section > header > hgroup {
-    display: grid;
     gap: 2px;
-    min-width: 0;
 }
 
 main[terminal] > section > header > hgroup > h4 {
-    margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     font-weight: 700;
@@ -71,46 +64,36 @@ main[terminal] > section > header > hgroup > span {
     font-size: 0.82rem;
 }
 
-main[terminal] > section > md-chip-set {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    width: 100%;
-    padding-bottom: var(--md-sys-spacing-1, 0.25rem);
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
-    touch-action: pan-x;
-    overscroll-behavior-x: contain;
-}
-
-main[terminal] > section > md-chip-set md-filter-chip {
-    --md-filter-chip-container-height: var(--md-sys-touch-target-min, 48px);
-}
-
 main[terminal] > section > section {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    padding-right: var(--md-sys-spacing-1, 0.25rem);
-    padding-bottom: var(--md-sys-spacing-6, 1.5rem);
+    gap: var(--md-sys-spacing-3);
+    padding-right: var(--md-sys-spacing-1);
+    padding-bottom: var(--md-sys-spacing-6);
     overflow-y: auto;
     overscroll-behavior-y: contain;
 }
 
 main[terminal] > section > section > article {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
     grid-column: 1 / -1;
     gap: var(--md-sys-spacing-2);
     justify-items: center;
     place-content: center;
-    box-sizing: border-box;
-    padding: 40px var(--md-sys-spacing-4, 1rem);
+    padding: 40px var(--md-sys-spacing-4);
     border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container);
     text-align: center;
+}
+
+main[terminal] > section > section > article > h5 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+main[terminal] > section > section > article > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.82rem;
 }
 
 main[terminal] > section > section > article > md-icon {
@@ -121,74 +104,62 @@ main[terminal] > section > section > article > md-icon {
     font-size: 48px;
 }
 
-main[terminal] > section > section > article > h5 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-main[terminal] > section > section > article > p {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.82rem;
-}
-
 /* --- POS Product Card (Dumb Component in Terminal) --- */
-main[terminal] md-filled-card {
-    display: grid;
+main[terminal] > section > section > md-filled-card {
     grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2, 8px);
+    gap: var(--md-sys-spacing-2);
     position: relative;
-    min-width: 0;
     min-height: 146px;
     min-inline-size: 0;
-    padding: var(--md-sys-spacing-3, 0.75rem);
+    padding: var(--md-sys-spacing-3);
     text-align: left;
 }
 
-main[terminal] md-filled-card > span:first-child {
+main[terminal] > section > section > md-filled-card > span:first-child {
     position: absolute;
     top: 6px;
     right: 6px;
-    z-index: var(--md-sys-z-raised, 1);
+    z-index: var(--md-sys-z-raised);
 }
 
-main[terminal] md-filled-card > section {
-    display: grid;
+main[terminal] > section > section > md-filled-card > section {
     grid-template-columns: 52px minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
-    width: 100%;
 }
 
-main[terminal] md-filled-card > section > :where(img, md-icon) {
+main[terminal] > section > section > md-filled-card > section > img,
+main[terminal] > section > section > md-filled-card > section > md-icon {
     display: grid;
     place-items: center;
     width: 52px;
     height: 52px;
     aspect-ratio: 1 / 1;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-outline);
     object-fit: cover;
 }
 
-main[terminal] md-filled-card > section > hgroup {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: minmax(0, 1fr);
+main[terminal] > section > section > md-filled-card > section > hgroup {
     gap: 2px;
     align-content: center;
-    min-width: 0;
     overflow: hidden;
 }
 
-main[terminal] md-filled-card > section > hgroup > span {
+main[terminal] > section > section > md-filled-card > section > hgroup > h5 {
     display: block;
-    min-width: 0;
-    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+main[terminal] > section > section > md-filled-card > section > hgroup > span {
+    display: block;
     color: var(--md-sys-color-primary);
     font-size: 0.7rem;
     font-weight: 700;
@@ -200,60 +171,43 @@ main[terminal] md-filled-card > section > hgroup > span {
     overflow: hidden;
 }
 
-main[terminal] md-filled-card > section > hgroup > h5 {
-    display: block;
-    margin: 0;
-    min-width: 0;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-}
-
-main[terminal] md-filled-card > footer {
-    display: grid;
+main[terminal] > section > section > md-filled-card > footer {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     align-self: end;
-    width: 100%;
-    min-width: 0;
-    padding-top: var(--md-sys-spacing-2, 0.5rem);
+    padding-top: var(--md-sys-spacing-2);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
-main[terminal] md-filled-card > footer > span {
+main[terminal] > section > section > md-filled-card > footer > span {
     color: var(--md-sys-color-primary);
     font-size: 0.88rem;
     font-weight: 800;
 }
 
-main[terminal] md-filled-card > footer > :where(md-icon-button, md-filled-tonal-icon-button, button) {
+main[terminal] > section > section > md-filled-card > footer > md-icon-button,
+main[terminal] > section > section > md-filled-card > footer > md-filled-tonal-icon-button,
+main[terminal] > section > section > md-filled-card > footer > button {
     min-width: 48px;
     min-height: 48px;
 }
 
 /* --- POS Right Invoice Sidebar Panel --- */
 main[terminal] > aside {
-    display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
-    min-width: 0;
     height: 100%;
-    padding: var(--md-sys-spacing-5, 1.25rem);
+    padding: var(--md-sys-spacing-5);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-dock, 32px);
+    border-radius: var(--md-sys-shape-expressive-dock);
     background-color: var(--md-sys-color-surface-container-lowest);
     overflow: hidden;
     box-shadow: var(--md-sys-elevation-expressive-2);
 }
 
 main[terminal] > aside > header {
-    display: grid;
     gap: 0.5rem;
-    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
-    padding-bottom: var(--md-sys-spacing-3, 0.75rem);
+    margin-bottom: var(--md-sys-spacing-3);
+    padding-bottom: var(--md-sys-spacing-3);
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
@@ -261,8 +215,6 @@ main[terminal] > aside > header > span:first-child {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    width: 100%;
-    min-width: 0;
 }
 
 main[terminal] > aside > header > span:first-child > span {
@@ -274,105 +226,178 @@ main[terminal] > aside > header > span:first-child > span {
 }
 
 main[terminal] > aside > header > span:first-child > menu {
-    display: grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
     align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
-main[terminal] > aside > header > span:first-child > menu > :where(md-icon-button, md-filled-tonal-icon-button, button) {
+main[terminal] > aside > header > span:first-child > menu > md-icon-button, main[terminal] > aside > header > span:first-child > menu > md-filled-tonal-icon-button, main[terminal] > aside > header > span:first-child > menu > button {
     min-width: 48px;
     min-height: 48px;
 }
 
 main[terminal] > aside > header > md-tabs {
-    width: 100%;
     overflow-x: auto;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
 }
 
 main[terminal] > aside > footer {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 0.75rem;
-    padding-top: var(--md-sys-spacing-4, 1rem);
+    padding-top: var(--md-sys-spacing-4);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
-main[terminal] > aside > footer > :where(md-outlined-button, button:first-child) {
-    width: 100%;
-    height: 52px;
-    font-weight: 700;
-    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button, 20px);
-}
-
-main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
-    width: 100%;
+main[terminal] > aside > footer > md-filled-button, main[terminal] > aside > footer > button:last-child {
     height: 64px;
     min-height: 64px;
     font-weight: 700;
     box-shadow: var(--md-sys-elevation-expressive-1);
     --md-filled-button-container-height: 64px;
-    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
 }
 
-@media screen and (max-width: 839.98px) {
-    main[terminal] > section {
-        grid-template-rows: auto auto auto;
-        height: auto;
-        min-height: max-content;
-        overflow: visible;
-    }
-
-    main[terminal] > aside {
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-    }
-
-    main[terminal] > section > section {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
-        gap: var(--md-sys-spacing-2, 0.5rem);
-    }
+main[terminal] > aside > footer > md-outlined-button, main[terminal] > aside > footer > button:first-child {
+    height: 52px;
+    font-weight: 700;
+    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button);
 }
 
-@media (max-width: 599.98px) {
-    main[terminal] > section > section {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
-        gap: 10px;
-        padding-bottom: var(--md-sys-spacing-6, 1.5rem);
-    }
+section[pinpad] {
+    gap: 14px;
+    justify-items: center;
+    padding: 16px 0;
+    text-align: center;
+}
 
-    main[terminal] > aside > footer {
-        grid-template-columns: minmax(0, 1fr);
-    }
+section[pinpad] > figure {
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-4);
+    color: var(--md-sys-color-primary);
+}
 
-    main[terminal] > section > header {
-        grid-template-columns: minmax(0, 1fr);
-    }
+section[pinpad] > figure > md-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+section[pinpad] > h4 {
+    color: var(--md-sys-color-primary);
+    font-size: 1.2rem;
+}
+
+section[pinpad] > p {
+    max-width: 380px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
+}
+
+section[pinpad] > md-chip-set {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+    margin: 4px 0;
+}
+
+section[pinpad] > aside {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    padding: 10px 14px;
+    border-radius: var(--md-sys-shape-corner-small);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: 0.85rem;
+}
+
+section[uzqr] {
+    gap: 14px;
+    justify-items: center;
+    text-align: center;
+}
+
+section[uzqr] > section {
+    gap: var(--md-sys-spacing-1);
+}
+
+section[uzqr] > section > h4 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+}
+
+section[uzqr] > section > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.82rem;
+}
+
+aside[data-status="error"] {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+}
+
+aside[data-status="success"] {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+fieldset[cash-calc] {
+    gap: 14px;
+    padding: 0;
+    border: none;
+}
+
+fieldset[cash-calc] > aside {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
+}
+
+fieldset[cash-calc] > aside > span {
+    font-weight: 600;
+}
+
+fieldset[cash-calc] > aside > strong {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+fieldset[cash-calc] > menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-2);
+}
+
+fieldset[pan] {
+    gap: 14px;
+    padding: 0;
+    border: none;
 }
 
 /* POS Payment Modal & Cashier Ergonomics */
-:where(md-dialog[payment], dialog[payment]) {
+md-dialog[payment],
+dialog[payment] {
     display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     padding: 4px 0;
 }
 
-:where(md-dialog[payment], dialog[payment]) [slot="headline"],
-:where(md-dialog[payment], dialog[payment]) header {
+md-dialog[payment] > div:first-child,
+dialog[payment] > div:first-child,
+md-dialog[payment] > header,
+dialog[payment] > header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
 }
 
-:where(md-dialog[payment], dialog[payment]) hgroup {
-    display: grid;
+md-dialog[payment] > div:first-child > hgroup,
+dialog[payment] > div:first-child > hgroup,
+md-dialog[payment] > header > hgroup,
+dialog[payment] > header > hgroup {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -382,160 +407,81 @@ main[terminal] > aside > footer > :where(md-filled-button, button:last-child) {
     font-weight: 700;
 }
 
-:where(md-dialog[payment], dialog[payment]) aside:not([role]) {
+md-dialog[payment] > div:first-child > aside,
+dialog[payment] > div:first-child > aside,
+md-dialog[payment] > header > aside,
+dialog[payment] > header > aside {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: baseline;
     gap: 6px;
-    padding: var(--md-sys-spacing-1, 0.25rem) var(--md-sys-spacing-3, 0.75rem);
-    border-radius: var(--md-sys-shape-expressive-pill, 9999px);
+    padding: var(--md-sys-spacing-1) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-expressive-pill);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
 }
 
-:where(md-dialog[payment], dialog[payment]) aside:not([role]) > span {
+md-dialog[payment] > div:first-child > aside > span,
+dialog[payment] > div:first-child > aside > span,
+md-dialog[payment] > header > aside > span,
+dialog[payment] > header > aside > span {
     font-size: 0.85rem;
     opacity: 0.8;
 }
 
-:where(md-dialog[payment], dialog[payment]) aside:not([role]) > strong {
+md-dialog[payment] > div:first-child > aside > strong,
+dialog[payment] > div:first-child > aside > strong,
+md-dialog[payment] > header > aside > strong,
+dialog[payment] > header > aside > strong {
     font-size: 1.15rem;
     font-weight: 800;
 }
 
-:where(md-dialog[payment], dialog[payment]) [slot="content"] > section {
-    display: grid;
+md-dialog[payment] > div:nth-child(2) > section,
+dialog[payment] > div:nth-child(2) > section {
     min-height: 260px;
 }
 
-:where(fieldset[cash-calc]) {
-    display: grid;
-    gap: 14px;
-    margin: 0;
-    padding: 0;
-    border: none;
+@media screen and (max-width: 839.98px) {
+main[terminal] > section {
+        grid-template-rows: auto auto auto;
+        height: auto;
+        min-height: max-content;
+        overflow: visible;
+    }
+
+main[terminal] > section > section {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
+        gap: var(--md-sys-spacing-2);
+    }
+
+main[terminal] > aside {
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+    }
 }
 
-:where(fieldset[cash-calc]) > menu {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    margin: 0;
-    padding: 0;
+@media (max-width: 599.98px) {
+header[terminal] > nav > menu {
+        gap: 6px;
+        scrollbar-width: none;
+    }
 }
 
-:where(fieldset[cash-calc]) > aside {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-}
+@media (max-width: 599.98px) {
+main[terminal] > section > header {
+        grid-template-columns: minmax(0, 1fr);
+    }
 
-:where(fieldset[cash-calc]) > aside[data-status="success"] {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
+main[terminal] > section > section {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+        gap: 10px;
+        padding-bottom: var(--md-sys-spacing-6);
+    }
 
-:where(fieldset[cash-calc]) > aside[data-status="error"] {
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
+main[terminal] > aside > footer {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
-
-:where(fieldset[cash-calc]) > aside > span {
-    font-weight: 600;
-}
-
-:where(fieldset[cash-calc]) > aside > strong {
-    font-size: 1.3rem;
-    font-weight: 800;
-}
-
-:where(section[pinpad]) {
-    display: grid;
-    gap: 14px;
-    justify-items: center;
-    padding: 16px 0;
-    text-align: center;
-}
-
-:where(section[pinpad]) > h4 {
-    margin: 0;
-    color: var(--md-sys-color-primary);
-    font-size: 1.2rem;
-}
-
-:where(section[pinpad]) > p {
-    max-width: 380px;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9rem;
-}
-
-:where(section[pinpad]) > figure {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-4, 1rem);
-    margin: 0;
-    color: var(--md-sys-color-primary);
-}
-
-:where(section[pinpad]) > figure > md-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
-}
-
-:where(section[pinpad]) > aside[role="alert"] {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding: 10px 14px;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    font-size: 0.85rem;
-}
-
-:where(section[pinpad]) > md-chip-set {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    margin: 4px 0;
-}
-
-:where(section[uzqr]) {
-    display: grid;
-    gap: 14px;
-    justify-items: center;
-    text-align: center;
-}
-
-:where(section[uzqr]) > section {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
-}
-
-:where(section[uzqr]) > section > h4 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.1rem;
-}
-
-:where(section[uzqr]) > section > p {
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.82rem;
-}
-
-:where(fieldset[pan]) {
-    display: grid;
-    gap: 14px;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-

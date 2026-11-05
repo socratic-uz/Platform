@@ -3,23 +3,25 @@
    Ad Network, Digital Signage & Kiosk Screensaver Ad Units
    ========================================================================== */
 
-aside[ads][google] {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    min-height: 90px;
+aside[ads] {
+    align-items: stretch;
+    padding: 0.75rem;
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container);
+    overflow: hidden;
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
-aside[ads] > section[yandex-ads],
+aside[ads] > section,
 section[yandex-ads] {
-    display: grid;
     place-items: center;
-    width: 100%;
     min-height: 90px;
 }
 
 aside[ads] > footer {
-    display: grid;
     grid-auto-flow: column;
     justify-content: end;
     align-items: center;
@@ -41,17 +43,9 @@ aside[ads] > footer > a:hover {
     color: var(--md-sys-color-tertiary-fixed);
 }
 
-aside[ads] {
-    display: grid;
-    align-items: stretch;
-    padding: 0.75rem;
-    border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
-    background: var(--md-sys-color-surface-container);
-    overflow: hidden;
-    box-shadow: var(--md-sys-elevation-expressive-1);
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring),
-                box-shadow var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
+aside[ads][google] {
+    place-items: center;
+    min-height: 90px;
 }
 
 aside[ads]:hover {

@@ -1,19 +1,14 @@
 @namespace Material.Web.Components
-@using Assets.Constants
 @using static Assets.Constants.Icons
-@using static Assets.Constants.Classes.Picker
-@using static Assets.Constants.Classes.Common
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
-@using static Assets.Constants.Formats
 @using static Material.Web.Components.ButtonVariant
 
 @if (Compact)
 {
-    <section class=@CompactBoxClass>
+    <section color-picker-compact disabled=@Disabled>
         <!-- Color Swatch & Native Color Trigger -->
         <input type="color"
-               class=@string.Format(Two, SwatchWrapper, Swatch)
                title=@L[ColorPickerClickToSelect]
                value=@HexValue
                disabled=@Disabled
@@ -21,13 +16,13 @@
                @oninput=@OnNativeColorInput />
 
         <!-- Text Input for HEX -->
-        <span class=@HexPrefix>#</span>
-        <input type="text"
-               class=@string.Format(Two, HexWrapper, HexInput)
-               placeholder="RRGGBB"
-               value=@RawHexValue
-               disabled=@Disabled
-               @onchange=@OnTextInputChanged />
+        <TextField TValue=string
+                   Placeholder="RRGGBB"
+                   PrefixText="#"
+                   Value=@RawHexValue
+                   Disabled=@Disabled
+                   ValueChanged=@OnHexTextChangedAsync
+                   ValueExpression=@(() => RawHexValue) />
 
         <IconButton Disabled=@Disabled
                     AriaLabel=@(isCopied ? L[ColorPickerCopied] : L[ColorPickerCopyHex])
@@ -63,12 +58,10 @@ else
                        OnAction=@TogglePalette
                        ResetAriaLabel=@L[ColorPickerResetColor]
                        OnReset=@Clear
-                       Disabled=@Disabled
-                       Class=@CssClass>
+                       Disabled=@Disabled>
         <CustomIconBadge>
-            <span class=@ColorBadgeSwatch @attributes=@GetSwatchAttributes(NormalizedValue)>
+            <span @attributes=@GetSwatchAttributes(NormalizedValue)>
                 <input type="color"
-                       class=@NativeInput
                        value=@HexValue
                        disabled=@Disabled
                        @onchange=@OnNativeColorChanged
@@ -100,42 +93,42 @@ else
 <!-- Presets Popover / Dialog -->
 @if (ShowPresets && isPaletteOpen)
 {
-    <dialog class=@PopoverPanel open>
-        <header class=@PopoverHeader>
-            <span class=@PopoverTitle>@L[ColorPickerRecommendedColors]</span>
+    <MaterialDialog Open=@isPaletteOpen OnClose=@ClosePalette color-picker-popover>
+        <Headline>
+            <span>@L[ColorPickerRecommendedColors]</span>
             <IconButton Icon=@Close AriaLabel=@L[ColorPickerClosePalette] OnClick=@ClosePalette />
-        </header>
-        <menu class=@PaletteGrid>
-            @foreach (var color in EffectivePresets)
-            {
-                var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
-                <IconButton class=@GetPaletteSwatchClass(isSelected)
-                        @attributes=@GetSwatchAttributes(color)
-                        AriaLabel=@color
-                        OnClick=@(() => SelectPreset(color))>
-                    @if (isSelected)
-                    {
-                        <Icon Name=@Check Class=@SwatchCheck />
-                    }
-                </IconButton>
-            }
-        </menu>
-        <footer class=@PopoverFooter>
-            <span class=@HexCompactClass>
-                <span class=@HexPrefix>#</span>
-                <input type="text"
-                       class=@HexInput
-                       placeholder="RRGGBB"
-                       value=@RawHexValue
-                       disabled=@Disabled
-                       @onchange=@OnTextInputChanged />
-            </span>
+        </Headline>
+        <Content>
+            <menu>
+                @foreach (var color in EffectivePresets)
+                {
+                    var isSelected = string.Equals(NormalizedValue, color, StringComparison.OrdinalIgnoreCase);
+                    <IconButton Selected=@isSelected
+                            @attributes=@GetSwatchAttributes(color)
+                            AriaLabel=@color
+                            OnClick=@(() => SelectPreset(color))>
+                        @if (isSelected)
+                        {
+                            <Icon Name=@Check />
+                        }
+                    </IconButton>
+                }
+            </menu>
+        </Content>
+        <Actions>
+            <TextField TValue=string
+                       Placeholder="RRGGBB"
+                       PrefixText="#"
+                       Value=@RawHexValue
+                       Disabled=@Disabled
+                       ValueChanged=@OnHexTextChangedAsync
+                       ValueExpression=@(() => RawHexValue) />
             @if (HasValue)
             {
                 <Button Variant=@Text Icon=@RestartAlt OnClick=@Clear>
                     @L[ResetAction]
                 </Button>
             }
-        </footer>
-    </dialog>
+        </Actions>
+    </MaterialDialog>
 }

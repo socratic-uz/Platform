@@ -122,27 +122,19 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 В проектах Socratic **КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО создавать прокси- или алиас-константы и свойства-геттеры в `*.razor.cs`** вида:
 ```csharp
 // ❌ СТРОГО ЗАПРЕЩЕНО: создание констант-алиасов или свойств-геттеров в code-behind
-public const string TitleLarge = global::Assets.Constants.Classes.Typography.TitleLarge;
-public const string OrderItemInfo = global::Assets.Constants.Classes.InfoGrid.OrderItemInfo;
 public const string StepCartLoc = global::Assets.Constants.Loc.Checkout.StepCart;
 public const string CloseIcon = global::Assets.Constants.Icons.Close;
 public const ButtonVariant Filled = ButtonVariant.Filled;
-public string ItemCardClass => Classes.Cards.ItemCard; // ❌ ЗАПРЕЩЕНО: свойства-алиасы классов
-public string OutlinedCard => Classes.Cards.CardOutlined; // ❌ ЗАПРЕЩЕНО: свойства-алиасы классов
 ```
 
 Вместо дублирования и засорения классов компонентов алиасами, **ОБЯЗАТЕЛЬНО использовать директивы `using static`**:
 - В `*.razor` разметке напрямую подключаются статические группы:
-  - `@using static Classes.<Group>`
-  - `@using static Icons`
+    - `@using static Icons`
   - `@using static Loc.<Domain>`
   - `@using static Assets.<Group>`
   - `@using static <EnumName>`
 
 ```razor
-@using static Classes.Cards
-@using static Classes.Buttons
-@using static Classes.Typography
 @using static Icons
 @using static Loc.Checkout
 @using static ButtonVariant
@@ -150,7 +142,6 @@ public string OutlinedCard => Classes.Cards.CardOutlined; // ❌ ЗАПРЕЩЕ�
 
 - Если константа классов или локализации требуется в логике C# (`*.razor.cs`), она импортируется через обычный `using static` в заголовке C#-файла:
 ```csharp
-using static Assets.Constants.Classes.Orders;
 using static Assets.Constants.Loc.Checkout;
 ```
 но **никогда не объявляется повторно как константное поле компонента** (`public const string ... = ...`).
@@ -338,7 +329,7 @@ public partial class UniversalCheckoutPanel : ComponentBase, IAsyncDisposable
 Перед сдачей любого компонента с кодом агент обязан проверить:
 1. **0 Build Errors & Warnings**: `dotnet build <affected csproj> -c Debug` проходит с нулевым количеством ошибок и предупреждений компилятора.
 2. **Чистый Code-Behind**: Вся логика, внедрение зависимостей (`[Inject]`), параметры (`[Parameter]`, `EventCallback`) и состояние вынесены в `*.razor.cs`.
-3. **Zero Aliases — только `using static`**: В `*.razor.cs` категорически запрещены поля-алиасы констант дизайн-системы (`public const string Alias = global::Assets.***`). Все константы классов, иконок, локализации и перечислений подключаются через `using static Classes.<Group>`, `using static Icons`, `using static Loc.<Domain>`, `using static <EnumName>`. Объявляются только уникальные технические константы компонента (DOM ID, storage key и т.п.).
+3. **Zero Aliases — только `using static`**: В `*.razor.cs` категорически запрещены поля-алиасы констант дизайн-системы (`public const string Alias = global::Assets.***`). Все константы иконок, локализации, ассетов и перечислений подключаются через `using static Icons`, `using static Loc.<Domain>`, `using static Assets.<Group>`, `using static <EnumName>`. Кодогенераторы классов ликвидированы. Объявляются только уникальные технические константы компонента (DOM ID, storage key и т.п.).
 4. **PersistentComponentState**: Для страниц и виджетов в режиме Auto Rendering реализована защита от двойной загрузки данных при гидратации.
 5. **Безопасное освобождение (Dispose/DisposeAsync)**: Все подписки на события сервисов, таймеры и стримы корректно отписываются в `IDisposable` или `IAsyncDisposable`.
 6. **Потокобезопасность UI**: Вызовы `StateHasChanged()` из фоновых потоков или аппаратных событий обернуты в `await InvokeAsync(StateHasChanged)`.

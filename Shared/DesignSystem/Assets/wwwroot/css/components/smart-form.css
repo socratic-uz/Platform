@@ -11,112 +11,78 @@ md-dialog[smart-form] {
     max-height: min(92vh, 920px);
 }
 
-md-dialog[smart-form] [slot="content"] {
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
-    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
-}
-
-md-dialog[smart-form] form {
-    display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-}
-
-md-dialog[smart-form] fieldset {
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    padding: 14px;
-    margin: 0 0 10px 0;
-    display: grid;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.5);
-}
-
-md-dialog[smart-form] fieldset legend {
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 0 8px;
-    color: var(--md-sys-color-primary);
-    max-width: 100%;
-    word-break: break-word;
-}
-
-md-dialog[smart-form] md-outlined-text-field,
-md-dialog[smart-form] md-filled-text-field,
-md-dialog[smart-form] md-select {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-md-dialog[smart-form] menu {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-md-dialog[smart-form] label[switch] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-4, 1rem);
-    padding: 10px 14px;
-    background: var(--md-sys-color-surface-container-low);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    min-width: 0;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-md-dialog[smart-form] label[switch] > span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--md-sys-color-on-surface);
-    min-width: 0;
-    word-break: break-word;
-}
-
-md-dialog[smart-form] [slot="actions"] {
+md-dialog[smart-form] > div:last-child {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
     justify-content: end;
     gap: 10px;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem);
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6);
+}
+
+md-dialog[smart-form] > div:nth-child(2) {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6);
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form {
+    gap: var(--md-sys-spacing-4);
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form > fieldset {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: 14px;
+    margin: 0 0 10px 0;
+    gap: var(--md-sys-spacing-3);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.5);
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form > fieldset > legend {
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0 8px;
+    color: var(--md-sys-color-primary);
+    word-break: break-word;
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form > label,
+md-dialog[smart-form] > div:nth-child(2) > form > fieldset > label {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-4);
+    padding: 10px 14px;
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: var(--md-sys-shape-corner-medium);
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form > label > span,
+md-dialog[smart-form] > div:nth-child(2) > form > fieldset > label > span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    word-break: break-word;
+}
+
+md-dialog[smart-form] > div:nth-child(2) > form > menu {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
 }
 
 @media (max-width: 600px) {
-    md-dialog[smart-form] {
+md-dialog[smart-form] {
         max-width: 98vw;
         width: 98vw;
         --md-dialog-container-min-inline-size: 92vw;
         --md-dialog-container-max-inline-size: 96vw;
     }
 
-    md-dialog[smart-form] [slot="content"] {
+md-dialog[smart-form] > div:nth-child(2) {
         padding: 14px 10px;
     }
 }

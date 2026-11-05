@@ -9,7 +9,7 @@
 }
 
 /* 2. Color Mode: Dark Theme (Default) */
-:root, :root[data-theme="dark"], body.dark, [data-theme="dark"] {
+:root, :root[data-theme="dark"], [data-theme="dark"] {
     color-scheme: dark;
     --md-sys-color-background: rgb(16 19 29);
     --md-sys-color-error: rgb(255 180 171);
@@ -71,7 +71,7 @@
 }
 
 /* 3. Color Mode: Light Theme */
-:root[data-theme="light"], body.light, [data-theme="light"] {
+:root[data-theme="light"], [data-theme="light"] {
     color-scheme: light;
     --md-sys-color-background: rgb(249 248 255);
     --md-sys-color-error: rgb(186 26 26);

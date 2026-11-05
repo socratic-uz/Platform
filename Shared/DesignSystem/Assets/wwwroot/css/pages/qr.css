@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Socratic Design System — PAGES / qr.css
+   Direct Body Landmarks for QR Page: main[qr], aside[qr-print]
+   ========================================================================== */
+
+main[qr] {
+    grid-template-columns: minmax(min(100%, 380px), 380px) minmax(0, 1fr);
+    gap: 0;
+    height: calc(100dvh - var(--md-sys-spacing-header));
+    background: var(--md-sys-color-surface);
+    overflow: hidden;
+}
+
+main[qr] > section {
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 1.5rem;
+    height: 100%;
+    padding: 2rem;
+    background: var(--md-sys-color-surface);
+    overflow-y: auto;
+}
+
+main[qr] > section > header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+main[qr] > section > header > mark {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+main[qr] > section > header > h2 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+main[qr] > section > section:has(> article) {
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: start;
+}
+
+main[qr] > section > section:has(> article) > article {
+    gap: 1rem;
+    justify-items: center;
+    align-content: center;
+    padding: 2rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large);
+    background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
+    text-align: center;
+}
+
+main[qr] > section > section:has(> article) > article > figure {
+    place-items: center;
+}
+
+main[qr] > section > section:has(> article) > article > h3 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main[qr] > section > section:has(> article) > article > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+}
+
+main[qr] > section > section:not(:has(> article)) {
+    gap: 1rem;
+    place-content: center;
+    place-items: center;
+    height: 100%;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+main[qr] > section > section:not(:has(> article)) > h3 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main[qr] > section > section:not(:has(> article)) > p {
+    max-width: 360px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9375rem;
+}
+
+main[qr] > section > section:not(:has(> article)) > md-icon {
+    color: var(--md-sys-color-outline);
+    font-size: 48px;
+}
+
+main[qr] > form {
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.5rem;
+    border-right: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+}
+
+main[qr] > form > header {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+}
+
+main[qr] > form > header > hgroup > h1 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main[qr] > form > header > hgroup > p {
+    color: var(--md-sys-color-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+main[qr] > form > header > md-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 24px;
+}
+
+main[qr] > form > section {
+    gap: 1rem;
+    align-content: start;
+    padding-right: 0.25rem;
+    overflow-y: auto;
+}
+
+main[qr] > form > section > section > header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 0.5rem 0.25rem;
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+main[qr] > form > section > section:not(:has(> header)) {
+    gap: 0.5rem;
+    justify-items: center;
+    align-content: center;
+    padding: 1.5rem;
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    color: var(--md-sys-color-outline);
+    text-align: center;
+}
+
+main[qr] > form > md-filled-button {
+    min-height: 48px;
+}
+
+main[qr] > form > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    min-height: 48px;
+    color: var(--md-sys-color-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+aside[qr-print] {
+    display: none;
+}
+
+@media screen and (max-width: 839.98px) {
+main[qr] {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr);
+        height: auto;
+        min-height: 100dvh;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+main[qr] > form {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        overflow: visible;
+    }
+}
+
+@media print {
+main[qr] {
+        display: none !important;
+    }
+
+aside[qr-print] {
+        grid-template-columns: repeat(auto-fill, minmax(60mm, 1fr));
+        gap: 10mm;
+        padding: 10mm;
+    }
+
+aside[qr-print] > article {
+        page-break-inside: avoid;
+    }
+}

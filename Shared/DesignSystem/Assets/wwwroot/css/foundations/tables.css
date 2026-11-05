@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / tables.css
+   Semantic Data Tables (<table>, <thead>, <tbody>, <tfoot>)
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    font-variant-numeric: tabular-nums;
+}
+
+table caption {
+    padding: var(--md-sys-spacing-2);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: start;
+}
+
+table th,
+table td {
+    padding: var(--md-sys-spacing-3);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    text-align: start;
+    vertical-align: middle;
+}
+
+table thead th {
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+table tfoot :is(th, td) {
+    border-top: 2px solid var(--md-sys-color-outline);
+    border-bottom: 0;
+    font-weight: 600;
+}
+

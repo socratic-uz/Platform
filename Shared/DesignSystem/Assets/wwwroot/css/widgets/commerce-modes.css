@@ -1,90 +1,12 @@
 /* ==========================================================================
-   Socratic Design System — FEATURES / commerce-modes.css
-   Component-Driven Architecture
+   Layer: widgets — Commerce Mode Switcher (Pure Attribute Classless)
    ========================================================================== */
 
-.ux-mode-card {
-    --cat-border: rgb(from var(--md-sys-color-surface) r g b / 0.08);
-    display: grid;
-    gap: 1.15rem;
-    align-content: space-between;
-    position: relative;
-    padding: 1.6rem 1.5rem;
-    border: 1px solid var(--cat-border);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 22px);
-    background: var(--landing-surface, var(--md-sys-color-surface-container));
-    overflow: hidden;
-    will-change: transform;
-    transition: transform 0.28s var(--md-sys-motion-easing-spring-soft, var(--md-sys-motion-easing-spring-soft)), box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+nav[commerce-modes], menu[commerce-modes] {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: var(--space-xs);
+    padding: var(--md-sys-spacing-1);
+    border-radius: var(--shape-full);
+    background: var(--md-sys-color-surface-container);
 }
-
-.ux-mode-card>* {
-    position: relative;
-    z-index: var(--md-sys-z-surface, 2);
-}
-
-.ux-mode-card::before {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
-    z-index: var(--md-sys-z-raised, 1);
-    border-radius: inherit;
-    background: radial-gradient(480px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
-            rgb(from var(--md-sys-color-primary) r g b / 0.28) 0%,
-            rgb(from var(--md-sys-color-tertiary) r g b / 0.16) 35%,
-            transparent 65%);
-    transition: opacity 0.35s ease;
-    pointer-events: none;
-    content: '';
-}
-
-.ux-mode-card:hover {
-    border-color: var(--cat-accent, rgb(from var(--md-sys-color-primary) r g b / 0.5));
-    background: var(--landing-surface-hover, var(--md-sys-color-surface-container-high));
-    box-shadow: 0 16px 36px -8px rgb(from var(--md-sys-color-shadow) r g b / 0.6), 0 0 24px -4px var(--cat-glow, rgb(from var(--md-sys-color-primary) r g b / 0.15));
-    transform: translateY(-5px);
-}
-
-.ux-mode-card:hover::before {
-    opacity: 1;
-}
-
-/* ==========================================================================
-   CONFIGURATOR & PRICE CALCULATOR FEATURE
-   ========================================================================== */
-
-/* ==========================================================================
-   DELIVERY SCHEDULED FEATURE
-   ========================================================================== */
-
-/* ==========================================================================
-   PRODUCT BUNDLE FEATURE
-   ========================================================================== */
-
-/* ==========================================================================
-   DIGITAL GOODS & ONLINE SERVICES FEATURE
-   ========================================================================== */
-
-/* ==========================================================================
-   GROUP BUY & PRE-ORDER FEATURE
-   ========================================================================== */
-
-.org-showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
-    gap: 2rem;
-    align-items: stretch;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-/* --- Commerce Modes Controls --- */
-
-.ux-modes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
-    gap: 1.5rem;
-    width: 100%;
-}
-
-/* --- Responsive UX Category Tabs --- */

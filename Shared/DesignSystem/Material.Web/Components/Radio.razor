@@ -1,9 +1,8 @@
 @inherits ComponentBase
-@using static Assets.Constants.Classes.Common
 
 @if (!string.IsNullOrEmpty(Label))
 {
-    <label class=@RadioLabel>
+    <label>
         <md-radio checked=@ComputedChecked
                   value=@(OptionValue ?? Value)
                   name=@Name

@@ -4,45 +4,34 @@
    ========================================================================== */
 
 body:has(layout[nav-only]) {
-    display: grid;
     grid-template: auto minmax(0, 1fr) / calc(76px + env(safe-area-inset-left, 0px)) minmax(0, 1fr);
-    width: 100%;
-    max-width: 100%;
     min-height: 100dvh;
     overflow-x: clip;
 }
 
-:where(body:has(layout[nav-only]) > header, body:has(layout[nav-only]) > nav, body:has(layout[nav-only]) > main) {
-    box-sizing: border-box;
-    min-width: 0;
+body:has(layout[nav-only]) > header, body:has(layout[nav-only]) > nav, body:has(layout[nav-only]) > main {
     color: var(--md-sys-color-on-surface);
-}
-
-body:has(layout[nav-only]) > nav {
-    display: grid;
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    padding-left: env(safe-area-inset-left, 0);
-    background: var(--md-sys-color-surface-container);
-    box-shadow: inset -1px 0 var(--md-sys-color-outline-variant);
 }
 
 body:has(layout[nav-only]) > header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    z-index: var(--md-sys-z-sticky, 10);
+    z-index: var(--md-sys-z-sticky);
     padding-top: env(safe-area-inset-top, 0);
 }
 
+body:has(layout[nav-only]) > nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    padding-left: env(safe-area-inset-left, 0);
+    background: var(--md-sys-color-surface-container);
+}
+
 body:has(layout[nav-only]) > main {
-    display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     gap: var(--md-sys-gutter-section);
     align-content: start;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
     padding: var(--md-sys-gutter-page);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
@@ -50,26 +39,24 @@ body:has(layout[nav-only]) > main {
 }
 
 @media screen and (max-width: 839.98px) {
-    body:has(layout[nav-only]) {
+body:has(layout[nav-only]) {
         grid-template: auto minmax(0, 1fr) / minmax(0, 1fr);
     }
 
-    body:has(layout[nav-only]) > header {
+body:has(layout[nav-only]) > header {
         grid-column: 1 / -1;
     }
 
-    body:has(layout[nav-only]) > main {
-        grid-column: 1 / -1;
-        padding: var(--md-sys-gutter-page);
-        padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0));
-        padding-bottom: calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0) + 1.5rem);
-        padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0));
-    }
-
-    body:has(layout[nav-only]) > nav {
+body:has(layout[nav-only]) > nav {
         grid-column: 1 / -1;
         grid-row: auto;
     }
+
+body:has(layout[nav-only]) > main {
+        grid-column: 1 / -1;
+        padding: var(--md-sys-gutter-page);
+        padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0));
+        padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0) + 1.5rem);
+        padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0));
+    }
 }
-
-

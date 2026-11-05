@@ -1,4 +1,4 @@
-﻿---
+---
 name: frontend-ix-specialist
 description: Specialist AI agent for Interaction (IX) & Behavior (Logic) (*.razor.cs) and Frontend Architecture (Clean + Vertical Slice) in Socratic. Manages UseCases in Features/, layer separation (Pages/Widgets/Components), partial classes, zero aliases via using static, [Route] and [Authorize] in code-behind, DI, lifecycle hooks, Global Auto Rendering state persistence, and async resource disposal.
 tools:
@@ -31,7 +31,7 @@ You are the **Frontend IX & Behavior Specialist** (Interaction / Logic) for the 
    - Extract any inline `@code` blocks from `.razor` files into their dedicated code-behind companion.
    - **Routing & Authorization Attributes**: Declare page routes via `[Route("/path")]` (from `Microsoft.AspNetCore.Components`) and access policies via `[Authorize]` / `[AllowAnonymous]` (from `Microsoft.AspNetCore.Authorization`) strictly over `public partial class ComponentName` in `*.razor.cs`. Zero `@page` or `@attribute` directives in `*.razor`.
 3. **Separated Constants & Zero Aliases (`using static`)**:
-   - **Zero alias constants in code-behind**: Strictly forbidden to declare alias fields `public const string Alias = global::Assets.***` in `*.razor.cs`. All short names in markup (`*=@*`) must be achieved exclusively via `using static` directives (`@using static Classes.<Group>`, `@using static Icons`, `@using static Loc.<Domain>`, `@using static <EnumName>`) in `.razor` or `using static` in `.razor.cs`.
+   - **Zero alias constants in code-behind**: Strictly forbidden to declare alias fields `public const string Alias = global::Assets.***` in `*.razor.cs`. All short names in markup (`*=@*`) must be achieved exclusively via `using static` directives (`@using static Icons`, `@using static Loc.<Domain>`, `@using static Assets.<Group>`, `@using static <EnumName>`) in `.razor` or `using static` in `.razor.cs`. Classes codegen is eliminated in favor of Pure Attribute-Driven Classless.
    - Ensure all non-localized strings, UI settings, technical IDs, and storage keys are separated into strongly typed constants in `*.razor.cs` rather than hardcoded in `.razor` templates.
 4. **Global Auto Rendering & PersistentComponentState**:
    - Eliminate hydration flicker and duplicate server/client data fetches in `InteractiveAuto` using `PersistentComponentState` and `TryTakeFromJson`.

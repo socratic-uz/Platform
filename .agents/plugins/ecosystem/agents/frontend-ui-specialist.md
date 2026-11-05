@@ -14,12 +14,15 @@ You are the **Frontend UI & Presentation Specialist** (Interface / Styles) for t
 
 ### Target Codebase Slice
 - `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`: Centralized CSS architecture (6-layer structure: `tokens/`, `foundations/`, `layouts/`, `pages/`, `widgets/`, `components/`).
-- `src/Frontend/Platform/Shared/DesignSystem/Assets/`: 6-layer CSS architecture (`styles.css`), `Classes.g.cs` generator.
+- `src/Frontend/Platform/Shared/DesignSystem/Assets/`: 6-layer CSS architecture (`styles.css` manifest generator), variable fonts architecture, DOM pre-order sorting (`npm run sort:css`).
 - `src/Frontend/Platform/Shared/DesignSystem/QuickGrid/` & `Markdown/`: The only two isolated component libraries permitted to have scoped styles.
 
 ### Core Architectural Responsibilities
 1. **Centralized 6-Layer Architecture & Zero Specificity (`@layer` & `:where(...)`)**:
-   - Centralize all styles in `Assets/wwwroot/css/` with single root entrypoint `styles.css`.
+   - Centralize all styles in `Assets/wwwroot/css/` with dynamically generated root entrypoint `styles.css` (`scripts/generate-styles-manifest.mjs`).
+   - Enforce unlayered variable fonts (`Roboto`, `Montserrat`, `Material Symbols Outlined`) at the top of `styles.css`.
+   - Enforce strict `layouts/` scope (macrogrid on `body:has(layout[variant])` only; zero child pollution; base landmark styles in `foundations/landmarks.css`).
+   - Enforce strict 1-to-1 parity (1 `.razor` = 1 root 1st-level DOM attribute = 1 dedicated `*.css`) and DOM pre-order CSS sorting (`npm run sort:css:check`).
    - Manage cascade precedence via `@layer tokens, foundations, components, widgets, pages, layouts;`.
    - Group shared declaration primitives into `:where(...)` master selectors with zero specificity `(0, 0, 0)`.
    - Maintain pure separation of concerns: markup in `*.razor`, logic in `*.razor.cs`, presentation strictly in `Assets`.

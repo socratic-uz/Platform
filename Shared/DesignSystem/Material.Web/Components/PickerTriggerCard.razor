@@ -1,13 +1,12 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Web
 @using Material.Web
-@using static Assets.Constants.Classes.Picker
 @using static Assets.Constants.Icons
 @using static Material.Web.Components.ButtonVariant
 
-<article class=@CardClasses>
+<article picker-trigger data-filled=@(HasValue ? "true" : null) disabled=@Disabled>
     <!-- Icon Badge (44x44px, R12) -->
-    <span class=@BadgeClasses>
+    <span data-active=@(HasValue ? "true" : null)>
         @if (CustomIconBadge != null)
         {
             @CustomIconBadge
@@ -19,12 +18,12 @@
     </span>
 
     <!-- Text & Preview Area -->
-    <section class=@TriggerText>
-        <header class=@HeaderRow>
-            <span class=@TriggerTitle>@Label</span>
+    <section>
+        <header>
+            <span>@Label</span>
             @if (HasValue && !string.IsNullOrWhiteSpace(BadgeText))
             {
-                <span class=@TagBadge>
+                <span>
                     @if (!string.IsNullOrEmpty(BadgeIcon))
                     {
                         <Icon Name=@BadgeIcon />
@@ -33,19 +32,19 @@
                 </span>
             }
         </header>
-        <p class=@PreviewText title=@PreviewText>
+        <p title=@PreviewText>
             @PreviewText
         </p>
         @if (CustomPreview != null)
         {
-            <section class=@CustomPreview>
+            <section>
                 @CustomPreview
             </section>
         }
     </section>
 
     <!-- Actions Panel -->
-    <footer class=@TriggerActions>
+    <footer>
         @if (CustomActions != null)
         {
             @CustomActions

@@ -11,31 +11,16 @@ header[kiosk] > nav > img {
     aspect-ratio: 1 / 1;
     padding: var(--md-sys-spacing-1);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-lowest);
     object-fit: contain;
 }
 
-header[kiosk] > nav > md-icon {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
 header[kiosk] > nav > hgroup {
-    display: grid;
     gap: var(--md-sys-spacing-1);
-    min-width: 0;
 }
 
 header[kiosk] > nav > hgroup > h1 {
-    margin: 0;
-    min-width: 0;
     min-inline-size: 0;
     font-size: var(--md-sys-typescale-title-medium-size);
     font-weight: var(--md-sys-typescale-title-medium-weight);
@@ -52,10 +37,9 @@ header[kiosk] > nav > hgroup > p {
     gap: var(--md-sys-spacing-1);
     align-items: center;
     width: max-content;
-    margin: 0;
     padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface-variant);
     font-size: var(--md-sys-typescale-label-small-size);
@@ -69,39 +53,30 @@ header[kiosk] > nav > hgroup > p > md-icon {
     font-size: 13px;
 }
 
-@media screen and (max-width: 599.98px) {
-    header[kiosk] > nav > hgroup > p {
-        display: none;
-    }
+header[kiosk] > nav > md-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
 }
 
 /* --- Kiosk Category Filter Bar --- */
-main[kiosk] > :where(nav) {
-    display: grid;
+main[kiosk] > nav {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-4);
     align-items: center;
-    width: 100%;
-    min-width: 0;
     margin: var(--md-sys-spacing-1) 0 var(--md-sys-spacing-3);
-    padding: 0;
 }
 
-main[kiosk] > :where(nav) > :where(md-text-button, button) {
-    align-self: start;
-    min-width: max-content;
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
-}
-
-main[kiosk] :where(md-chip-set) {
+main[kiosk] > nav > md-chip-set,
+main[kiosk] > section > md-filled-card > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3, 12px);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
     padding-bottom: var(--md-sys-spacing-1);
     overflow-x: auto;
     scrollbar-width: thin;
@@ -111,91 +86,19 @@ main[kiosk] :where(md-chip-set) {
     overflow-y: clip;
 }
 
-/* --- Kiosk Empty State --- */
-main[kiosk] > :where(article) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3);
-    justify-items: center;
-    place-content: center;
-    box-sizing: border-box;
-    margin: var(--md-sys-spacing-4) 0;
-    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
-    border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large);
-    background: var(--md-sys-color-surface-container);
-    text-align: center;
-}
-
-main[kiosk] > :where(article) > :where(md-icon) {
-    display: grid;
-    opacity: 0.8;
-    place-items: center;
-    color: var(--md-sys-color-primary);
-    font-size: 56px;
-}
-
-main[kiosk] > :where(article) > :where(h3) {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: var(--md-sys-typescale-title-large-size);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    line-height: var(--md-sys-typescale-title-large-line-height);
-}
-
-main[kiosk] > :where(article) > :where(p) {
-    max-width: 380px;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: var(--md-sys-typescale-body-medium-size);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-/* --- Kiosk Active Orders Tabs --- */
-main[kiosk] > :where(section:has(nav)) {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    min-height: 52px;
-    margin-bottom: var(--md-sys-spacing-2, 0.5rem);
-    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-4, 1rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
-    background: var(--md-sys-color-surface-container-low);
-}
-
-main[kiosk] > :where(section:has(nav)) > :where(span) {
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-main[kiosk] > :where(section:has(nav)) > :where(nav) {
-    min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    touch-action: pan-y;
-    overscroll-behavior-x: contain;
-}
-
-main[kiosk] > :where(section:has(nav)) > :where(md-filled-button, button) {
+main[kiosk] > nav > md-text-button, main[kiosk] > nav > button {
+    align-self: start;
     min-width: max-content;
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
+    min-height: var(--md-sys-touch-target-kiosk);
 }
 
 /* --- Kiosk Product Cards --- */
-main[kiosk] :where(md-filled-card) {
-    display: grid;
+main[kiosk] > section > md-filled-card {
     grid-template-rows: auto minmax(0, 1fr) auto;
     position: relative;
     height: 100%;
     min-height: 380px;
-    padding: var(--md-sys-spacing-3, 0.75rem);
+    padding: var(--md-sys-spacing-3);
     overflow: visible;
     will-change: transform, box-shadow;
     transition: transform 260ms var(--md-sys-motion-easing-spring-gentle),
@@ -207,41 +110,18 @@ main[kiosk] :where(md-filled-card) {
     -webkit-user-select: none;
 }
 
-main[kiosk] :where(md-filled-card):has(> aside) {
-    grid-template-rows: auto minmax(0, 1fr) auto auto;
-}
-
-main[kiosk] :where(md-filled-card):active {
-    transform: scale(0.985);
-    transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
-}
-
-main[kiosk] :where(md-filled-card):hover {
-    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
-    box-shadow: 0 16px 36px -6px rgb(from var(--md-sys-color-primary) r g b / 0.18),
-        0 6px 16px -2px rgb(from var(--md-sys-color-shadow) r g b / 0.14);
-    transform: translateY(-4px) scale(1.006);
-}
-
-main[kiosk] :where(md-filled-card):hover figure img {
-    transform: scale(1.04);
-}
-
 /* --- Card Figure & Media --- */
-main[kiosk] :where(figure) {
+main[kiosk] > section > md-filled-card > figure {
     position: relative;
-    display: grid;
     grid-template-areas: "media-stack";
-    width: 100%;
     aspect-ratio: 16 / 9;
-    margin: 0;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-highest);
     overflow: hidden;
     cursor: pointer;
 }
 
-main[kiosk] :where(figure) > :where(img) {
+main[kiosk] > section > md-filled-card > figure > img {
     grid-area: media-stack;
     display: block;
     width: 100%;
@@ -250,76 +130,44 @@ main[kiosk] :where(figure) > :where(img) {
     object-fit: cover;
 }
 
-main[kiosk] :where(figure) > :where(span) {
+main[kiosk] > section > md-filled-card > figure > span {
     grid-area: media-stack;
     display: grid;
     opacity: 0.6;
     place-items: center;
-    width: 100%;
     height: 100%;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-main[kiosk] :where(figure) > :where(span) > :where(md-icon) {
-    width: 48px;
-    height: 48px;
+main[kiosk] > section > md-filled-card > figure > span > md-icon {
     font-size: 48px;
 }
 
-main[kiosk] :where(figure) > :where(md-icon-button, button) {
+main[kiosk] > section > md-filled-card > figure > md-icon-button,
+main[kiosk] > section > md-filled-card > figure > button {
     position: absolute;
     top: var(--md-sys-spacing-2);
     right: var(--md-sys-spacing-2);
-    z-index: var(--md-sys-z-sticky, 10);
-    width: var(--md-sys-touch-target-kiosk, 56px);
-    min-width: var(--md-sys-touch-target-kiosk, 56px);
-    height: var(--md-sys-touch-target-kiosk, 56px);
-    min-height: var(--md-sys-touch-target-kiosk, 56px);
+    z-index: var(--md-sys-z-sticky);
+    width: var(--md-sys-touch-target-kiosk);
+    min-width: var(--md-sys-touch-target-kiosk);
+    height: var(--md-sys-touch-target-kiosk);
+    min-height: var(--md-sys-touch-target-kiosk);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: 50%;
     background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 80%, transparent);
     color: var(--md-sys-color-outline);
-    backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    backdrop-filter: var(--md-sys-glass-blur-subtle);
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-snappy), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle, blur(8px));
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle);
 }
 
-main[kiosk] :where(figure) > :where(md-icon-button, button):active {
+main[kiosk] > section > md-filled-card > figure > md-icon-button:active,
+main[kiosk] > section > md-filled-card > figure > button:active {
     transform: scale(0.96);
 }
 
-main[kiosk] :where(figure) > :where(md-icon-button[selected], button[selected]) {
-    border-color: var(--md-sys-color-error);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-error);
-}
-
-/* --- Card Details --- */
-main[kiosk] :where(md-filled-card) > :where(section) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-}
-
-main[kiosk] :where(md-filled-card) > :where(section) > :where(md-text-button, button) {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    justify-content: start;
-    text-align: left;
-}
-
-main[kiosk] :where(md-filled-card) > :where(section) > :where(p) {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    margin: 0;
+main[kiosk] > section > md-filled-card > section > p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -330,64 +178,71 @@ main[kiosk] :where(md-filled-card) > :where(section) > :where(p) {
     line-height: var(--md-sys-typescale-body-medium-line-height);
 }
 
+/* --- Card Details --- */
+main[kiosk] > section > md-filled-card > section > md-text-button,
+main[kiosk] > section > md-filled-card > section > button {
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: start;
+    text-align: left;
+}
+
 /* --- Card Inline Aside UX Widgets --- */
-main[kiosk] :where(md-filled-card) > :where(aside) {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
+main[kiosk] > section > md-filled-card > aside {
+    gap: var(--md-sys-spacing-1);
     align-content: center;
-    min-height: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min);
     margin-top: auto;
-    margin-bottom: var(--md-sys-spacing-1, 0.25rem);
-    padding: var(--md-sys-spacing-2, 0.5rem) var(--md-sys-spacing-3, 0.75rem);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    margin-bottom: var(--md-sys-spacing-1);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
     font-size: 0.78rem;
     font-weight: 600;
 }
 
-main[kiosk] :where(md-filled-card) > :where(aside:empty) {
-    display: none;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-}
-
-main[kiosk] :where(md-filled-card) > :where(aside) > :where(p) {
+main[kiosk] > section > md-filled-card > aside > p {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-2);
     align-items: center;
-    min-width: 0;
-    margin: 0;
     font-weight: 700;
 }
 
-main[kiosk] :where(md-filled-card) > :where(aside) > :where(p) > span:first-child {
+main[kiosk] > section > md-filled-card > aside > p > span:first-child {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-main[kiosk] :where(md-filled-card) > :where(aside) > :where(p:nth-child(2)) {
+main[kiosk] > section > md-filled-card > aside > p:nth-child(2) {
     opacity: 0.85;
     font-size: 0.72rem;
 }
 
-/* --- Card Footer --- */
-main[kiosk] :where(md-filled-card) > :where(footer) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    margin-top: auto;
-    padding-top: var(--md-sys-spacing-2, 0.5rem);
+main[kiosk] > section > md-filled-card > aside:empty {
+    display: none;
+    min-height: 0;
+    padding: 0;
 }
 
-main[kiosk] :where(md-filled-card) > :where(footer) > :where(span) {
-    min-width: 0;
+main[kiosk] > section > md-filled-card > aside:not(:has(> p)) {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Card Footer --- */
+main[kiosk] > section > md-filled-card > footer {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--md-sys-spacing-2);
+}
+
+main[kiosk] > section > md-filled-card > footer > span {
     min-inline-size: 0;
     color: var(--md-sys-color-primary);
     font-size: clamp(0.9rem, 1.2vw, 1.15rem);
@@ -397,143 +252,164 @@ main[kiosk] :where(md-filled-card) > :where(footer) > :where(span) {
     overflow: hidden;
 }
 
+main[kiosk] > section > md-filled-card:has(> aside, > md-chip-set) {
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+}
+
+main[kiosk] > section > md-filled-card:active {
+    transform: scale(0.985);
+    transition: transform 70ms var(--md-sys-motion-easing-spring-snappy);
+}
+
+main[kiosk] > section > md-filled-card:hover {
+    border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
+    box-shadow: 0 16px 36px -6px rgb(from var(--md-sys-color-primary) r g b / 0.18),
+        0 6px 16px -2px rgb(from var(--md-sys-color-shadow) r g b / 0.14);
+    transform: translateY(-4px) scale(1.006);
+}
+
+main[kiosk] > section > md-filled-card:hover > figure > img {
+    transform: scale(1.04);
+}
+
+/* --- Kiosk Active Orders Tabs --- */
+main[kiosk] > section:has(nav) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    min-height: 52px;
+    margin-bottom: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+main[kiosk] > section:has(nav) > span {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+main[kiosk] > section:has(nav) > nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+    touch-action: pan-y;
+    overscroll-behavior-x: contain;
+}
+
+main[kiosk] > section:has(nav) > md-filled-button, main[kiosk] > section:has(nav) > button {
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-kiosk);
+}
+
+/* --- Kiosk Empty State --- */
+main[kiosk] > article {
+    gap: var(--md-sys-spacing-3);
+    justify-items: center;
+    place-content: center;
+    margin: var(--md-sys-spacing-4) 0;
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-6);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background: var(--md-sys-color-surface-container);
+    text-align: center;
+}
+
+main[kiosk] > article > h3 {
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+    line-height: var(--md-sys-typescale-title-large-line-height);
+}
+
+main[kiosk] > article > p {
+    max-width: 380px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+main[kiosk] > article > md-icon {
+    opacity: 0.8;
+    color: var(--md-sys-color-primary);
+    font-size: 56px;
+}
+
 /* --- Floating Bottom Cart Bar --- */
 footer[kiosk] {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
     align-items: center;
     position: fixed;
     inset: auto 0 0;
-    z-index: var(--md-sys-z-bottom-nav, 40);
-    min-width: 0;
+    z-index: var(--md-sys-z-bottom-nav);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-6) calc(var(--md-sys-spacing-3) + env(safe-area-inset-bottom, 0));
     border-top: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
     box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
-    backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
-    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard, blur(16px));
+    backdrop-filter: var(--md-sys-glass-blur-standard);
+    -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
 }
 
-footer[kiosk] > :where(md-text-button, button:first-child) {
-    cursor: pointer;
+footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
+    min-width: 160px;
+    font-weight: 700;
+    box-shadow: var(--md-sys-elevation-expressive-2);
+    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk);
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
+    --md-filled-button-label-text-size: 1.05rem;
 }
 
-footer[kiosk] > :where(md-text-button, button:first-child) span {
+footer[kiosk] > md-text-button > span, footer[kiosk] > button:first-child > span {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
     white-space: nowrap;
 }
 
-footer[kiosk] > :where(md-text-button, button:first-child) strong {
+footer[kiosk] > md-text-button > strong, footer[kiosk] > button:first-child > strong {
     color: var(--md-sys-color-on-surface);
     font-size: clamp(1.05rem, 2vw, 1.25rem);
     font-weight: 800;
     white-space: nowrap;
 }
 
-footer[kiosk] > :where(md-text-button, button:first-child) md-icon {
+footer[kiosk] > md-text-button > md-icon, footer[kiosk] > button:first-child > md-icon {
     opacity: 0.7;
-    margin-left: var(--md-sys-spacing-1, 0.25rem);
+    margin-left: var(--md-sys-spacing-1);
     color: var(--md-sys-color-on-surface);
     font-size: 20px;
 }
 
-footer[kiosk] > :where(md-filled-button, button:last-child) {
-    min-width: 160px;
-    font-weight: 700;
-    box-shadow: var(--md-sys-elevation-expressive-2);
-    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk, 56px);
-    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill, 9999px);
-    --md-filled-button-label-text-size: 1.05rem;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    footer[kiosk] > :where(md-filled-button, button:last-child) {
-        min-height: 64px;
-    }
-}
-
-@media screen and (max-width: 599.98px) {
-    footer[kiosk] {
-        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
-    }
-}
-
-/* --- Kiosk Checkout Dialog Fallback --- */
-md-dialog fieldset {
-    display: grid;
-    gap: var(--md-sys-spacing-4);
-    padding: var(--md-sys-spacing-4);
-    border: none;
-    margin: 0;
-}
-
-md-dialog fieldset > p {
-    margin: 0;
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-}
-
-md-dialog fieldset > section {
+[attract-loop] {
     display: grid;
     justify-items: center;
-    gap: var(--md-sys-spacing-3);
-    padding: var(--md-sys-spacing-5) 0;
-    text-align: center;
-}
-
-md-dialog fieldset > section > h4 {
-    margin: 0;
-    color: var(--md-sys-color-primary);
-}
-
-md-dialog fieldset > section > p {
-    margin: 0;
-    font-size: var(--md-sys-typescale-body-medium-size);
-    color: var(--md-sys-color-on-surface-variant);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-md-dialog fieldset > aside {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--md-sys-spacing-2);
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    font-size: var(--md-sys-typescale-body-medium-size);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-}
-
-md-dialog fieldset > menu {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
+    align-content: end;
+    position: fixed;
+    inset: 0;
+    z-index: var(--md-sys-z-dialog);
+    width: 100%;
+    height: 100dvh;
     padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-md-dialog fieldset > menu > :where(md-filled-button, md-outlined-button, button) {
-    padding: var(--md-sys-spacing-3);
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    animation: kioskFadeIn var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-spring) forwards;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* --- Attract Loop Screensaver (Widget) --- */
-:where(button[attract-loop]) > figure,
-:where(button[attract-loop]) > figure {
+[attract-loop] > figure {
     position: absolute;
     inset: 0;
-    margin: 0;
     filter: brightness(0.85);
 }
 
-:where(button[attract-loop]) > figure > img,
-:where(button[attract-loop]) > figure > img {
+[attract-loop] > figure > img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -541,22 +417,7 @@ md-dialog fieldset > menu > :where(md-filled-button, md-outlined-button, button)
     object-fit: cover;
 }
 
-:where(button[attract-loop]) > section,
-:where(button[attract-loop]) > section {
-    display: grid;
-    justify-items: center;
-    position: relative;
-    z-index: var(--md-sys-z-raised, 1);
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-8) var(--md-sys-spacing-16);
-    color: var(--md-sys-color-on-surface);
-    text-align: center;
-}
-
-:where(button[attract-loop]) > figure > span,
-:where(button[attract-loop]) > figure > span {
+[attract-loop] > figure > span {
     position: absolute;
     inset: 0;
     background: linear-gradient(
@@ -567,28 +428,87 @@ md-dialog fieldset > menu > :where(md-filled-button, md-outlined-button, button)
     );
 }
 
-:where(button[attract-loop]),
-:where(button[attract-loop]) {
-    display: grid;
+[attract-loop] > section {
     justify-items: center;
-    align-content: end;
-    position: fixed;
-    inset: 0;
-    z-index: var(--md-sys-z-dialog, 1001);
-    width: 100%;
-    height: 100dvh;
-    padding: 0;
+    position: relative;
+    z-index: var(--md-sys-z-raised);
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-8) var(--md-sys-spacing-16);
+    color: var(--md-sys-color-on-surface);
+    text-align: center;
+}
+
+/* --- Kiosk Checkout Dialog Fallback --- */
+md-dialog > div > fieldset {
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-4);
     border: none;
-    background: transparent;
-    overflow: hidden;
-    animation: kioskFadeIn var(--md-sys-motion-duration-medium4, 400ms) var(--md-sys-motion-easing-spring) forwards;
-    cursor: pointer;
-    user-select: none;
+}
+
+md-dialog > div > fieldset > p {
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+}
+
+md-dialog > div > fieldset > section {
+    justify-items: center;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-5) 0;
+    text-align: center;
+}
+
+md-dialog > div > fieldset > section > h4 {
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog > div > fieldset > section > p {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+md-dialog > div > fieldset > aside {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-small);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+}
+
+md-dialog > div > fieldset > menu {
+    gap: var(--md-sys-spacing-3);
+}
+
+md-dialog > div > fieldset > menu > md-filled-button, md-dialog > div > fieldset > menu > md-outlined-button, md-dialog > div > fieldset > menu > button {
+    padding: var(--md-sys-spacing-3);
+}
+
+@media screen and (max-width: 599.98px) {
+header[kiosk] > nav > hgroup > p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+footer[kiosk] {
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
+        min-height: 64px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-    main[kiosk] :where(figure) > :where(md-icon-button, button) {
+main[kiosk] > section > md-filled-card > figure > md-icon-button,
+    main[kiosk] > section > md-filled-card > figure > button {
         transition: none;
     }
 }

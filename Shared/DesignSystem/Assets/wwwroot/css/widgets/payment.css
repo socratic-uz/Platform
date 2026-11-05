@@ -6,42 +6,45 @@
 section[merchant-settings] {
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 20px);
-    padding: var(--md-sys-spacing-6, 1.5rem);
+    border-radius: var(--md-sys-shape-corner-large);
+    padding: var(--md-sys-spacing-6);
     color: var(--md-sys-color-on-surface);
-    display: grid;
-    gap: var(--md-sys-spacing-5, 1.25rem);
+    gap: var(--md-sys-spacing-5);
 }
 
 section[merchant-settings] > header > h3 {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
-    margin: 0;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
-    gap: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-2);
 }
 
 section[merchant-settings] > header > p {
     font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
 }
 
 section[merchant-settings] > fieldset {
     background: var(--md-sys-color-surface-container);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 14px);
-    padding: var(--md-sys-spacing-4, 1rem);
-    display: grid;
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: var(--md-sys-spacing-4);
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
 }
 
-:where(section[merchant-settings] > fieldset > legend, section[merchant-settings] > fieldset > label[toggle], section[merchant-settings] > fieldset > p) {
+section[merchant-settings] > fieldset > p {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+section[merchant-settings] > fieldset > legend, section[merchant-settings] > fieldset > label, section[merchant-settings] > fieldset > p {
     grid-column: 1 / -1;
 }
 
@@ -52,8 +55,7 @@ section[merchant-settings] > fieldset > legend {
     text-transform: uppercase;
 }
 
-section[merchant-settings] > fieldset > label[toggle] {
-    display: grid;
+section[merchant-settings] > fieldset > label {
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
@@ -63,21 +65,13 @@ section[merchant-settings] > fieldset > label[toggle] {
     color: var(--md-sys-color-on-surface);
 }
 
-section[merchant-settings] > fieldset[highlight="uzqr"] {
+section[merchant-settings] > fieldset:last-of-type {
     border-color: rgb(from var(--md-sys-color-primary) r g b / 0.4);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
-section[merchant-settings] > fieldset > p {
-    font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0 0 8px 0;
-    line-height: 1.4;
-}
-
 section[merchant-settings] > footer {
-    display: grid;
     justify-content: end;
-    padding-top: var(--md-sys-spacing-3, 0.75rem);
+    padding-top: var(--md-sys-spacing-3);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }

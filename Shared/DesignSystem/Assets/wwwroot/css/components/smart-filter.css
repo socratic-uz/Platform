@@ -4,31 +4,24 @@
    ========================================================================== */
 
 search[smart-filter] {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    padding: var(--md-sys-spacing-3, 0.75rem) var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     background: var(--md-sys-color-surface-container-low);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    margin-bottom: var(--md-sys-spacing-4, 1rem);
+    border-radius: var(--md-sys-shape-corner-medium);
+    margin-bottom: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
-search[smart-filter] > :where(md-outlined-text-field) {
+search[smart-filter] > md-outlined-text-field {
     position: relative;
     display: grid;
     align-items: center;
-    min-width: 0;
-    width: 100%;
 }
 
 search[smart-filter] > menu {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    gap: var(--md-sys-spacing-2);
 }

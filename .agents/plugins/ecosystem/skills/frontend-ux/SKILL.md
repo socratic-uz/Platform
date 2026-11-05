@@ -1,6 +1,6 @@
 ﻿---
 name: frontend-ux
-description: "Architectural standard and workflow for Blazor Razor template markup (*.razor) in Socratic. USE FOR: pure HTML5 template authoring, Material.Web component priority, mandatory using static for ALL constants (Classes, Icons, Loc, Assets, Enums) with ultra-short names, unquoted syntax, 3-way .resx parity, and accessibility. DO NOT USE FOR: C# business logic (use frontend-ix) or CSS styling (use frontend-ui)."
+description: "Architectural standard and workflow for Blazor Razor template markup (*.razor) in Socratic. USE FOR: pure HTML5 template authoring, Material.Web component priority, mandatory using static for ALL constants (Icons, Loc, Assets, Enums) and Pure Attribute-Driven Classless with ultra-short names, unquoted syntax, 3-way .resx parity, and accessibility. DO NOT USE FOR: C# business logic (use frontend-ix) or CSS styling (use frontend-ui)."
 license: MIT
 ---
 
@@ -16,9 +16,6 @@ license: MIT
 Все константы классов, иконок, локализации и перечислений подключаются в начале `.razor` файла через директивы `@using static`:
 
 ```razor
-@using static Classes.Cards
-@using static Classes.Buttons
-@using static Classes.Typography
 @using static Icons
 @using static Loc.Checkout
 @using static ButtonVariant
@@ -36,7 +33,7 @@ license: MIT
 
 ## 2. Синтаксис атрибутов: ультра-короткий и без кавычек
 
-Все параметры компонентов, обработчики событий, иконки, классы и перечисления оформляются в синтаксисе без кавычек в ультра-коротком формате `что-то=@*` (или `*=@*`):
+Все параметры компонентов, обработчики событий, иконки и перечисления оформляются в синтаксисе без кавычек в ультра-коротком формате `что-то=@*` (или `*=@*`):
 
 ```razor
 <Button Variant=@Filled LeadingIcon=@Add OnClick=@SaveAsync>@L[Save]</Button>

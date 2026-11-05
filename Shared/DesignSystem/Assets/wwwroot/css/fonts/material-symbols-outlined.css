@@ -13,7 +13,7 @@ md-icon,
     font-family: 'Material Symbols Outlined' !important;
     font-weight: normal;
     font-style: normal;
-    font-size: var(--md-icon-size, 24px);
+    font-size: var(--md-icon-size);
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -26,17 +26,17 @@ md-icon,
     font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    width: var(--md-icon-size, 24px);
-    height: var(--md-icon-size, 24px);
+    width: var(--md-icon-size);
+    height: var(--md-icon-size);
     vertical-align: middle;
 }
 
 md-icon:not(:defined) {
     display: inline-grid;
     place-items: center;
-    width: var(--md-icon-size, 24px);
-    height: var(--md-icon-size, 24px);
-    font-family: var(--md-icon-font, 'Material Symbols Outlined');
+    width: var(--md-icon-size);
+    height: var(--md-icon-size);
+    font-family: var(--md-icon-font);
     overflow: hidden;
     vertical-align: middle;
 }

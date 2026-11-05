@@ -1,8 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Assets.Constants;
-using static Assets.Constants.Classes.Picker;
 
 using AssetConstants = global::Assets.Constants;
 
@@ -35,13 +33,7 @@ public partial class PickerTriggerCard : ComponentBase
 
     [Parameter] public RenderFragment? CustomActions { get; set; }
 
-    [Parameter] public string? Class { get; set; }
     [Parameter] public string? Style { get; set; }
-
-    protected string CardClasses => string.Format("{0} {1} {2} {3}", AssetConstants.Classes.Picker.TriggerCard, Disabled ? AssetConstants.Classes.Picker.Disabled : string.Empty, HasValue ? "has-value" : "empty", Class).Trim();
-    protected string BadgeClasses => HasValue
-        ? string.Format("{0} {1}", AssetConstants.Classes.Picker.IconBadge, AssetConstants.Classes.Picker.Active)
-        : AssetConstants.Classes.Picker.IconBadge;
 
     protected async Task HandleAction(MouseEventArgs e)
     {

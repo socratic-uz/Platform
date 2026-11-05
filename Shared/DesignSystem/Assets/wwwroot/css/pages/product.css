@@ -5,27 +5,28 @@
    ========================================================================== */
 
 main[product] {
-    display: grid;
-    gap: var(--md-sys-spacing-6, 1.5rem);
-    width: 100%;
+    gap: var(--md-sys-spacing-6);
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--md-sys-spacing-4, 1rem) var(--md-sys-spacing-6, 1.5rem) var(--md-sys-spacing-8, 2rem);
-    box-sizing: border-box;
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-8);
 }
 
 /* --- Breadcrumbs --- */
 main[product] > nav {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding: var(--md-sys-spacing-2, 0.5rem) 0;
+    gap: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-2) 0;
     font-size: 0.875rem;
     color: var(--md-sys-color-on-surface-variant);
     overflow-x: auto;
     scrollbar-width: none;
+}
+
+main[product] > nav > span:last-child {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
 }
 
 main[product] > nav > a {
@@ -33,8 +34,9 @@ main[product] > nav > a {
     grid-auto-flow: column;
     align-items: center;
     gap: 4px;
+    min-width: 44px;
+    min-height: 44px;
     color: var(--md-sys-color-primary);
-    text-decoration: none;
     font-weight: 500;
     transition: color 0.15s ease;
 }
@@ -44,95 +46,69 @@ main[product] > nav > a:hover {
     text-decoration: underline;
 }
 
-main[product] > nav > span[aria-current="page"] {
-    color: var(--md-sys-color-on-surface);
-    font-weight: 600;
-}
-
 /* --- Empty / Not Found State --- */
-main[product] > section[role="status"] {
-    display: grid;
+main[product] > section {
     justify-items: center;
     align-content: center;
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     min-height: 400px;
-    padding: var(--md-sys-spacing-8, 2rem);
+    padding: var(--md-sys-spacing-8);
     text-align: center;
     border: 1px dashed var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-low);
 }
 
-main[product] > section[role="status"] > md-icon {
-    font-size: 4rem;
-    width: 4rem;
-    height: 4rem;
-    color: var(--md-sys-color-outline);
-}
-
-main[product] > section[role="status"] > h2 {
-    margin: 0;
+main[product] > section > h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
-main[product] > section[role="status"] > p {
+main[product] > section > p {
     max-width: 420px;
-    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.95rem;
 }
 
+main[product] > section > md-icon {
+    font-size: 4rem;
+    color: var(--md-sys-color-outline);
+}
+
 /* --- Product Article Grid (Gallery + Details) --- */
 main[product] > article {
-    display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: var(--md-sys-spacing-8, 2.5rem);
+    gap: var(--md-sys-spacing-8);
     align-items: start;
 }
 
-@media (max-width: 839.98px) {
-    main[product] > article {
-        grid-template-columns: minmax(0, 1fr);
-        gap: var(--md-sys-spacing-6, 1.5rem);
-    }
-}
-
-/* --- Gallery Section / Figure --- */
-main[product] > article > section:first-of-type,
-main[product] > article > figure:first-of-type {
-    display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
-    position: sticky;
-    top: var(--md-sys-spacing-6, 1.5rem);
-}
-
-main[product] > article figure {
+main[product] > article > figure,
+main[product] > article > section:first-of-type > figure {
     position: relative;
-    display: grid;
     place-items: center;
-    margin: 0;
     aspect-ratio: 1 / 1;
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
     border: 1px solid var(--md-sys-color-outline-variant);
     overflow: hidden;
 }
 
-main[product] > article figure > img {
+main[product] > article > figure > img,
+main[product] > article > section:first-of-type > figure > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-main[product] > article figure > span {
+main[product] > article > figure > span,
+main[product] > article > section:first-of-type > figure > span {
     position: absolute;
     top: 1rem;
     left: 1rem;
     padding: 4px 10px;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-error);
     color: var(--md-sys-color-on-error);
     font-weight: 800;
@@ -140,55 +116,56 @@ main[product] > article figure > span {
     letter-spacing: 0.05em;
 }
 
+/* --- Gallery Section / Figure --- */
+main[product] > article > figure:first-of-type {
+    gap: var(--md-sys-spacing-4);
+    position: sticky;
+    top: var(--md-sys-spacing-6);
+}
+
 /* --- Thumbnail Navigation --- */
 main[product] > article > section:first-of-type > nav {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 72px;
-    gap: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-2);
     overflow-x: auto;
     scrollbar-width: thin;
     padding-bottom: 4px;
 }
 
 main[product] > article > section:first-of-type > nav > md-text-button {
-    --md-text-button-container-shape: var(--md-sys-shape-corner-medium, 12px);
+    --md-text-button-container-shape: var(--md-sys-shape-corner-medium);
     padding: 0;
     overflow: hidden;
     border: 2px solid transparent;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
 }
 
-main[product] > article > section:first-of-type > nav > md-text-button[data-active] {
-    border-color: var(--md-sys-color-primary);
-}
-
-main[product] > article > section:first-of-type > nav img {
+main[product] > article > section:first-of-type > nav > md-text-button > img {
     width: 68px;
     height: 68px;
     object-fit: cover;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 /* --- Product Content & Details --- */
 main[product] > article > section:last-of-type {
-    display: grid;
-    gap: var(--md-sys-spacing-5, 1.25rem);
+    gap: var(--md-sys-spacing-5);
     align-content: start;
 }
 
-main[product] > article > section:last-of-type > md-chip-set {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-}
-
 main[product] > article > section:last-of-type > h1 {
-    margin: 0;
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     font-weight: 800;
     line-height: 1.15;
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Description */
+main[product] > article > section:last-of-type > h3 {
+    margin: var(--md-sys-spacing-2) 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
@@ -198,8 +175,13 @@ main[product] > article > section:last-of-type > p:first-of-type {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: baseline;
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    margin: 0;
+    gap: var(--md-sys-spacing-2);
+}
+
+main[product] > article > section:last-of-type > p:first-of-type > span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 main[product] > article > section:last-of-type > p:first-of-type > strong {
@@ -209,155 +191,168 @@ main[product] > article > section:last-of-type > p:first-of-type > strong {
     letter-spacing: -0.02em;
 }
 
-main[product] > article > section:last-of-type > p:first-of-type > span {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
 main[product] > article > section:last-of-type > p:first-of-type > small {
     font-size: 1rem;
     color: var(--md-sys-color-outline);
 }
 
-/* Description */
-main[product] > article > section:last-of-type > h3 {
-    margin: var(--md-sys-spacing-2, 0.5rem) 0 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-}
-
 main[product] > article > section:last-of-type > p:not(:first-of-type) {
-    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
     line-height: 1.6;
 }
 
-/* Specifications Grid */
-main[product] > article > section:last-of-type > ul[role="list"] {
+main[product] > article > section:last-of-type > md-chip-set {
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+}
+
+/* Specifications Grid */
+main[product] > article > section:last-of-type > ul {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    margin: 0;
-    padding: var(--md-sys-spacing-4, 1rem);
-    list-style: none;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
 }
 
-main[product] > article > section:last-of-type > ul[role="list"] > li {
-    display: grid;
+main[product] > article > section:last-of-type > ul > li {
     grid-auto-flow: column;
     grid-auto-columns: max-content minmax(0, 1fr);
     align-items: center;
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
 }
 
-main[product] > article > section:last-of-type > ul[role="list"] > li > md-icon {
-    font-size: 1.5rem;
-    color: var(--md-sys-color-primary);
-}
-
-main[product] > article > section:last-of-type > ul[role="list"] > li > hgroup {
-    display: grid;
+main[product] > article > section:last-of-type > ul > li > hgroup {
     gap: 2px;
 }
 
-main[product] > article > section:last-of-type > ul[role="list"] > li > hgroup > span {
+main[product] > article > section:last-of-type > ul > li > hgroup > span {
     font-size: 0.75rem;
     color: var(--md-sys-color-outline);
 }
 
-main[product] > article > section:last-of-type > ul[role="list"] > li > hgroup > strong {
+main[product] > article > section:last-of-type > ul > li > hgroup > strong {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
-/* Action Menu */
-main[product] > article > section:last-of-type > menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    margin: var(--md-sys-spacing-2, 0.5rem) 0 0;
-    padding: 0;
+main[product] > article > section:last-of-type > ul > li > md-icon {
+    font-size: 1.5rem;
+    color: var(--md-sys-color-primary);
+}
+
+/* Seller Card */
+main[product] > article > section:last-of-type > aside:has(> hgroup) {
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-4);
+    margin-top: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large);
+    background: var(--md-sys-color-surface-container);
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > img {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    object-fit: cover;
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > hgroup {
+    gap: 2px;
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > hgroup > span {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > hgroup > a {
+    display: inline-grid;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > hgroup > a:hover {
+    color: var(--md-sys-color-primary);
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > md-icon {
+    font-size: 2.5rem;
+    color: var(--md-sys-color-outline);
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > a:last-child {
+    display: inline-grid;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+    white-space: nowrap;
+}
+
+main[product] > article > section:last-of-type > aside:has(> hgroup) > a:last-child:hover {
+    text-decoration: underline;
 }
 
 /* Toast */
-main[product] > article > section:last-of-type > aside[role="status"] {
+main[product] > article > section:last-of-type > aside:not(:has(> hgroup)) {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-inverse-surface);
     color: var(--md-sys-color-inverse-on-surface);
     font-size: 0.875rem;
     font-weight: 600;
 }
 
-/* Seller Card */
-main[product] > article > section:last-of-type > aside:not([role]) {
-    display: grid;
-    grid-template-columns: 56px minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-4, 1rem);
-    margin-top: var(--md-sys-spacing-4, 1rem);
-    padding: var(--md-sys-spacing-4, 1rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
-    background: var(--md-sys-color-surface-container);
+/* Action Menu */
+main[product] > article > section:last-of-type > menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: var(--md-sys-spacing-3);
+    margin: var(--md-sys-spacing-2) 0 0;
 }
 
-main[product] > article > section:last-of-type > aside:not([role]) > img {
-    width: 56px;
-    height: 56px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    object-fit: cover;
+@media (max-width: 839.98px) {
+main[product] > article {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--md-sys-spacing-6);
+    }
 }
 
-main[product] > article > section:last-of-type > aside:not([role]) > md-icon {
-    font-size: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    color: var(--md-sys-color-outline);
+@media (max-width: 599.98px) {
+main[product] > article > section:last-of-type > menu {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+    }
 }
 
-main[product] > article > section:last-of-type > aside:not([role]) > hgroup {
-    display: grid;
-    gap: 2px;
-}
+@media (max-width: 599.98px) {
+main[product] > article > section:last-of-type > aside:has(> hgroup) {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: var(--md-sys-spacing-2);
+    }
 
-main[product] > article > section:last-of-type > aside:not([role]) > hgroup > a {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-    text-decoration: none;
+main[product] > article > section:last-of-type > aside:has(> hgroup) > a {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
 }
-
-main[product] > article > section:last-of-type > aside:not([role]) > hgroup > a:hover {
-    color: var(--md-sys-color-primary);
-}
-
-main[product] > article > section:last-of-type > aside:not([role]) > hgroup > span {
-    font-size: 0.8rem;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-main[product] > article > section:last-of-type > aside:not([role]) > a:last-child {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--md-sys-color-primary);
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-main[product] > article > section:last-of-type > aside:not([role]) > a:last-child:hover {
-    text-decoration: underline;
-}
-

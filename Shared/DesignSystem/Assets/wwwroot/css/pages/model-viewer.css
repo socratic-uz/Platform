@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Socratic Design System — PAGES / model-viewer.css
+   Direct Body Landmarks for 3D Model Viewer: <main model-viewer>
+   ========================================================================== */
+
+main[model-viewer] {
+    grid-column: 1 / -1;
+    height: calc(100dvh - 64px);
+    padding: 0;
+    overflow: clip;
+}

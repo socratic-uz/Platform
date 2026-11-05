@@ -3,14 +3,21 @@
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
+article[level="error"] { border-left-color: var(--md-sys-color-error); }
+
+article[level="info"] { border-left-color: var(--md-sys-color-primary); }
+
+article[level="success"] { border-left-color: var(--md-sys-color-tertiary); }
+
+article[level="warning"] { border-left-color: var(--md-sys-color-error-container); }
+
 aside[smart-toasts] {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    z-index: var(--md-sys-z-toast, 1200);
-    display: grid;
+    z-index: var(--md-sys-z-toast);
     align-content: end;
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
     max-width: 400px;
     pointer-events: none;
 }
@@ -19,36 +26,19 @@ aside[smart-toasts] > article {
     pointer-events: auto;
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    border-radius: var(--md-sys-shape-expressive-card, 24px);
+    border-radius: var(--md-sys-shape-expressive-card);
     box-shadow: var(--md-sys-elevation-expressive-3);
     padding: 14px 18px;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-left: 5px solid var(--md-sys-color-primary);
     backdrop-filter: var(--md-sys-glass-blur);
     -webkit-backdrop-filter: var(--md-sys-glass-blur);
-    animation: smart-toast-enter var(--md-sys-motion-duration-medium3, 350ms) var(--md-sys-motion-easing-spring, cubic-bezier(0.175, 0.885, 0.32, 1.275));
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) ease, opacity var(--md-sys-motion-duration-short4, 200ms) ease;
+    animation: smart-toast-enter var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring);
+    transition: transform var(--md-sys-motion-duration-short4) ease, opacity var(--md-sys-motion-duration-short4) ease;
     font-family: inherit;
 }
 
-@keyframes smart-toast-enter {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.92);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-aside[smart-toasts] > article[level="success"] { border-left-color: var(--md-sys-color-tertiary); }
-aside[smart-toasts] > article[level="error"] { border-left-color: var(--md-sys-color-error); }
-aside[smart-toasts] > article[level="warning"] { border-left-color: var(--md-sys-color-error-container); }
-aside[smart-toasts] > article[level="info"] { border-left-color: var(--md-sys-color-primary); }
-
 aside[smart-toasts] > article > header {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 10px;
@@ -66,15 +56,25 @@ aside[smart-toasts] > article > header > strong {
     color: var(--md-sys-color-on-surface);
 }
 
+aside[smart-toasts] > article > header > md-icon-button {
+    --md-icon-button-icon-size: 20px;
+    width: 44px;
+    height: 44px;
+}
+
 aside[smart-toasts] > article > p {
     font-size: 0.88rem;
     color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
-    margin: 0;
 }
 
-aside[smart-toasts] > article md-icon-button {
-    --md-icon-button-icon-size: 20px;
-    width: 44px;
-    height: 44px;
+@keyframes smart-toast-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

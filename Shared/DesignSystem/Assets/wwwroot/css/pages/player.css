@@ -5,14 +5,10 @@
 
 main[player],
 main[fullscreen-player] {
-    display: grid;
     place-items: center;
     position: fixed;
     inset: 0;
-    z-index: var(--md-sys-z-tooltip, 1300);
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
+    z-index: var(--md-sys-z-tooltip);
     height: 100dvh;
     padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
     background-color: var(--md-sys-color-scrim);
@@ -26,15 +22,13 @@ main[player] > video {
     object-fit: contain;
 }
 
-main[player] > aside[role="status"] {
-    display: grid;
+main[player] > aside {
     gap: var(--md-sys-spacing-4);
     place-items: center;
     color: var(--md-sys-color-on-surface);
 }
 
-main[player] > aside[role="status"] > p {
-    margin: 0;
+main[player] > aside > p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
 }

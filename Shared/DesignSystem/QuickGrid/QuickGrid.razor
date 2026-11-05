@@ -15,7 +15,7 @@
         }
         <ColumnsCollectedNotifier TGridItem="TGridItem" />
 
-        <table theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes" class=@GridClass()>
+        <table smart-grid theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
             <thead>
                 <tr>
                     @_renderColumnHeaders

@@ -106,6 +106,7 @@ Interaction (IX)
 #### 1. Experience (UX) ➔ Structure (Markup) — строго в `*.razor`
 - **Тотальный Classless-подход и атрибуты первого уровня (Pure Attribute-Driven Classless)**:
   - Полный отказ от CSS-классов (`class=@...`) на семантических HTML5-тегах.
+  - Кодогенераторы классов (`Classes.g.cs`, `generate-css-classes.mjs`, `component-classes-snapshot.json`) полностью ликвидированы. Единственными активными генераторами C#-констант являются: `Assets.g.cs`, `Loc.g.cs` и `Icons.g.cs`.
   - **Трехуровневая семантическая навигация селекторов (3-Level Landmark Model)**:
     1. **Уровень документа (`body`)**: `body:has(layout[grid]) { ... }`, `body:has(layout[landing]) { ... }` — макросетка определяется самим тегом `body`, а переключателем макросетки является исключительно тег `<layout [variant]>` (`<layout grid />`, `<layout landing />`, `<layout chat />`, `<layout map />`).
     2. **Уровень страницы (`landmarks`)**: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`. Стили пишутся напрямую от ориентира: `header[kiosk] > tag1 > tag2`, `main[kiosk] > tag1 > tag2`, `footer[kiosk] > tag1 > tag2`. Запрещено адресовать `header` через `body:has(main[page]) header` — `header` сам является ориентиром первого уровня страницы (`header[page]`).
@@ -113,31 +114,33 @@ Interaction (IX)
   - **Атрибут строго ТОЛЬКО на первом уровне DOM-дерева**: Атрибут задается исключительно на корневом контейнере компонента/виджета/страницы (`header[kiosk]`, `main[kiosk]`, `footer[kiosk]`, `aside[cart]`, `aside[order]`, `dialog[modal]`). Внутри контейнера дочерние элементы не несут атрибутов и являются чистыми HTML5-тегами.
   - Внутренняя стилизация строится по **прямой семантической иерархии HTML5-тегов**: `[card] > figure > img`, `main[kiosk] > section > article`, `aside[cart] > header > hgroup > h3`, `aside[cart] > ul > li`, `aside[cart] > footer > dl > p:last-child`.
   - **Макросетка `body` и переключатель `<layout>`**: Макросеткой приложения является сам тег `<body>` (`body { display: grid; ... }`). Тег `<layout [variant]>` служит исключительно механизмом-переключателем стилей макросетки через селектор `body:has(layout[variant])`.
-  - Директивы `@using static Classes.*` ликвидируются в пользу чистого HTML5 дерева.
-- **Компоненты `Material.Web` First`: при наличии готового Blazor-компонента в `Material.Web` используй его:
+  - Директивы `@using static Classes.*` ликвидированы в пользу чистого HTML5 дерева.
+- **Компоненты `Material.Web` First**: при наличии готового Blazor-компонента в `Material.Web` используй его:
   `<Button>` / `<IconButton>`, `<TextField>`, `<Select>`, `<Divider>`, `<Checkbox>`, `<Radio>`, `<MaterialDialog>`, `<Progress>`, `<Tabs>` / `<Tab>`, `<Chip>` / `<ChipSet>`, `<Badge>`.
 - **Семантический HTML5**: при отсутствии готового аналога в `Material.Web` используй правильные семантические теги: `<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<fieldset>`, `<legend>`, `<ul>`/`<li>`.
 - **Плоская структура и Контракт глубины (DOM Depth Contract)**: разметка строится без лишних промежуточных `<div>`; отступы и раскладка задаются CSS Grid родительского контейнера. **Строгие метрики**: сквозная целевая глубина от `<body>` — **ровно 6 уровней**, абсолютный потолок для листовых атомов (`<Icon>`, `<span>`) — **7 уровней**, глубина внутри одного `.razor` файла — **не более 4 уровней**. Глубина 8+ запрещена как дефект. Виджеты в сетке страницы располагаются параллельно как независимые братья (виджеты-матрёшки запрещены).
 - **Ультра-короткий синтаксис атрибутов `что-то=@*` или `*=@*` (Zero Quotes)**:
-  - Все C#-выражения в параметрах компонентов записываются без кавычек: `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`, `Open=@IsOpen`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`, `Label=@L[StepCart]`.
-  - Все атрибуты оформляются строго ультра-коротко: `что-то=@*` (например: `class=@ItemUnitPrice`, `class=@HeaderTitleBox`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`).
-  - **Составные классы без кавычек**: вместо интерполяции строк с кавычками `class=@($"{A} {B}")` строго используется метод форматирования `string.Format`:
-    `const string Temp = "{0} {1} {2}";` ➔ `class=@string.Format(Temp, Const1, Const2, Const3)` или `class=@string.Format(Two, Card, Elevated)` через `@using static Formats`. В разметке не остаётся ни одной двойной кавычки `"`!
+  - Все C#-выражения в параметрах компонентов записываются без кавычек: `Icon=@Close`, `OnClick=@CloseDialogAsync`, `Open=@IsOpen`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`, `Label=@L[StepCart]`.
+  - Все атрибуты оформляются строго ультра-коротко: `что-то=@*` (например: `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`, `Selected=@IsActive`).
   - Строковые кавычки остаются только для литеральных HTML-атрибутов: `Slot="icon"`. Дженерики экранируются круглыми скобками: `Variant=@(...)`.
 - **Импорт констант строго через `@using static`**:
   - Все константы подключаются директивами `@using static` в заголовке файла:
-    `@using static Classes.<Group>` ➔ `@Card`, `@Headline`, `@PanelHeader`
     `@using static Icons` ➔ `@Add`, `@Search`, `@Close`
     `@using static Loc.<Domain>` ➔ `@L[HeaderTitle]`, `@L[StepCart]`
     `@using static Assets.<Group>` ➔ `@LogoSvg`, `@AvatarPlaceholder`
     `@using static <EnumName>` ➔ `@Outlined`, `@Filled`, `@Filter`
-  - Разрешение коллизий: если в двух группах есть одноименные константы, импортируется профильная группа в заголовке файла, а в теле разметки имя остаётся ультра-коротким (`class=@HeaderTitleBox`).
+  - Разрешение коллизий: если в двух группах есть одноименные константы, импортируется профильная группа в заголовке файла, а в теле разметки имя остаётся ультра-коротким (`Icon=@Close`).
 - **Локализация (3-way Parity)**: весь пользовательский текст выносится в словари `.resx` (`ResourceRu.resx`, `ResourceUz.resx`, `ResourceEn.resx`) и вызывается через `@L[Key]`.
 - **Zero `@page` и `@attribute` в `*.razor`**: директивы `@page "/route"` и `@attribute [Authorize]` в `*.razor` строго запрещены. Маршрутизация и права доступа выносятся в C# code-behind `*.razor.cs` через `[Route("/route")]` и `[Authorize]` над `partial class`.
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
 - Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
+- **Динамическая генерация манифеста стилей**: мастер-манифест `styles.css` генерируется автоматически скриптом `scripts/generate-styles-manifest.mjs` (при `dotnet build Assets.csproj` и `npm run generate:styles`) через рекурсивное сканирование слоев.
+- **Шрифтовая архитектура вне слоев (Unlayered Variable Fonts)**: правила `@font-face` подключаются в `styles.css` **вне `@layer`** на самом верху файла, гарантируя максимальный приоритет, мгновенное обнаружение браузером и исключение FOUT для иконочных лигатур (`Material Symbols Outlined`). Используются исключительно вариативные шрифты (`Roboto` и `Montserrat` с диапазоном весов `100 900`, а также вариативный `Material Symbols Outlined`); статические TTF-файлы полностью ликвидированы.
+- **Строгий скоуп `layouts/` (Макросетка `body` ONLY)**: все файлы слоя `layouts/` управляют исключительно макросеткой `body:has(layout[variant])` и координатами прямых ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`). Любая стилизация внутренних элементов, кнопок или заголовков в `layouts/` строго запрещена. Базовые стили ориентиров изолированы в `foundations/landmarks.css`.
+- **Строгий паритет 1-в-1 (1 `.razor` = 1 корневой атрибут 1-го уровня = 1 dedicated `*.css`)**: каждая страница и виджет имеет свой собственный одноимённый файл стилей (`wishlist.css`, `kiosk.css`, `home.css`, `qr.css`, `qr-designer.css`).
+- **Сортировка по DOM-дереву (DOM Pre-Order CSS Sorting)**: порядок правил внутри `.css` файлов строго следует прямому обходу DOM-дерева в глубину (Depth-First Pre-Order), форматируется и валидируется через `npm run sort:css` / `npm run sort:css:check`.
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
 - **Модульность и нулевая специфичность**: независимые компоненты в соответствующих слоях `@layer`, примитивы обнуляют вес через `:where(...)` (0, 0, 0).
@@ -145,16 +148,16 @@ Interaction (IX)
 
 #### 3. Interaction (IX) ➔ Behavior (Logic) — строго в `*.razor.cs` (Code-Behind)
 - Вся C#-логика, внедрение зависимостей (`[Inject]`), параметры (`[Parameter]`, `EventCallback`), состояние и хуки жизненного цикла (`OnInitializedAsync`, `DisposeAsync`) выносятся в парный класс `public partial class ComponentName : ComponentBase`.
-- **Zero Aliases**: в `*.razor.cs` категорически запрещено создавать поля-алиасы или свойства-геттеры констант дизайн-системы (`public const string ConstName = global::Assets.*.*.***` или `public string PropName => Classes.*.*`). Константы подключаются напрямую через `@using static` в `.razor` и `using static` в `.razor.cs`.
+- **Zero Aliases**: в `*.razor.cs` категорически запрещено создавать поля-алиасы или свойства-геттеры констант дизайн-системы (`public const string ConstName = global::Assets.*.*.***`). Константы подключаются напрямую через `@using static` в `.razor` и `using static` в `.razor.cs`.
 - В классе объявляются только уникальные внутренние технические константы компонента (DOM ID, ключи хранилища).
 - Обработчики событий именуются с суффиксом `Async` и глаголом (`CloseDialogAsync`, `SubmitOrderAsync`) во избежание коллизий с иконками.
-- **?????????? JavaScript ? ????????????? ????????? ???? (Universal Lifecycle Dispatcher)**:
-  - ??? JS-?????? ??????????????? ???????? ? `Assets/wwwroot/js/` (???? `components/`, `layouts/`, `features/`, `widgets/`, `pages/`). ?????????????? ????? `*.razor.js` ????????????? ?????????.
-  - ?????????? ???????????? ? ??????, SSR ? ???????? ???????????? ?????? ????? ?????? ????????? `lifecycle.js` (`registerComponent(selector, { mount, unmount })`) ? ????? **?????** ????????? `MutationObserver`.
-  - ????????? ????????? ????????? `MutationObserver` ? ????????? `DOMContentLoaded` ?????? ?????? ????????? ????????.
-  - ????????? ??????????? ???????? ?? ?????? ????????????? HTML5 ????? ? ??????? ????????? (`figure[map]`, `main[player]`, `main[landing]`, `figure[seat-designer]`, `color`) ??? ????????????? ????????? ? ?????????.
-  - ??????? ????????? ??????????: ??????? JS-?????????? (MapLibre, Konva, ??????) ??????????? ? ?????? ???????? ???? ? Razor ?? ????????? DOM diffing ?????????? ? Blazor.
-- ???????????: [rules/frontend-ix.md](rules/frontend-ix.md).
+- **Интеграция JavaScript и универсальный диспетчер узлов DOM (Universal Lifecycle Dispatcher)**:
+  - Все JS-модули централизованно живут в `Assets/wwwroot/js/` (`components/`, `layouts/`, `features/`, `widgets/`, `pages/`). Изолированные файлы `*.razor.js` категорически запрещены.
+  - Управление жизненным циклом в SPA, SSR и динамических обновлениях дерева DOM ведется через единый диспетчер `lifecycle.js` (`registerComponent(selector, { mount, unmount })`) и ровно **один** глобальный `MutationObserver`.
+  - Диспетчер автоматически запускает `MutationObserver` и перехватывает `DOMContentLoaded` против любых гонок гидратации.
+  - Селекторы монтирования строятся на чистых семантических HTML5-тегах и целевых атрибутах (`figure[map]`, `main[player]`, `main[landing]`, `figure[seat-designer]`, `color`) без искусственных префиксов и суффиксов.
+  - Принцип листового контейнера: сложные JS-библиотеки (MapLibre, Konva, плееры) монтируются в пустые конечные узлы в Razor во избежание DOM diffing конфликтов движка Blazor.
+- Подробности: [rules/frontend-ix.md](rules/frontend-ix.md).
 
 ### 8.3 Дата-дривен рефакторинг UI/UX/IX
 - **Рефакторинг интерфейса и стилей (UI & Presentation)**: воркфлоу [plugins/ecosystem/skills/ui-refactor-loop/SKILL.md](plugins/ecosystem/skills/ui-refactor-loop/SKILL.md).

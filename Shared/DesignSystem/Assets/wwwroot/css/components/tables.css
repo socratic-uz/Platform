@@ -1,224 +1,123 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / tables.css
-   Component-Driven Architecture
+   Layer: components — Data Tables & QuickGrid (Pure Attribute Classless)
    ========================================================================== */
 
-.col-justify-center .col-title {
-    justify-content: center;
-    text-align: center;
+section:has(> table), article:has(> table) {
+    overflow-x: auto;
 }
 
-.col-justify-end .col-options {
-    right: 0;
-    left: unset;
-}
-
-.col-justify-end .col-title {
-    justify-content: end;
-    text-align: right;
-}
-
-.col-justify-start .col-options {
-    right: unset;
-    left: 0;
-}
-
-.col-justify-start .col-title {
-    justify-content: start;
-    text-align: left;
-}
-
-.col-options {
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    padding: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level3);
-}
-
-.col-options-button {
-    align-self: stretch;
-    width: 1rem;
-    padding: 0;
-    border: none;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 21 24" stroke="%2379747e" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" /></svg>') center center / 1rem no-repeat;
-    cursor: pointer;
-}
-
-.col-sort-asc .col-title::after {
-    align-self: center;
-    width: 1rem;
-    height: 1rem;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: scaleY(-1);
-    content: "";
-}
-
-.col-sort-desc .col-title::after {
-    align-self: center;
-    width: 1rem;
-    height: 1rem;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 2 3.25 L 12 20.75 L 22 3.25 L 12 10 z" fill="%236750a4" /></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    content: "";
-}
-
-.col-title {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    min-height: 44px;
-    padding: 0;
-}
-
+/* Paginator footer */
 footer[paginator],
-.paginator {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    grid-column: 1 / -1;
-    justify-content: space-between;
+nav[pagination] {
+    grid-template-columns: 1fr auto;
     align-items: center;
-    position: sticky;
-    left: 0;
-    box-sizing: border-box;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--shape-md);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+table[smart-grid], table {
     width: 100%;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: var(--shape-lg);
+    overflow: hidden;
+    font-size: var(--type-body-md-size);
+}
+
+thead {
     background: var(--md-sys-color-surface-container);
 }
 
-footer[paginator] > span {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
-}
-
-footer[paginator] > nav,
-.paginator nav {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    margin-left: auto;
-}
-
-[contenteditable="true"] {
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-table.quickgrid {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--md-sys-color-surface);
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
-}
-
-table.quickgrid tbody > :last-child > * {
+tbody > tr:last-child > td {
     border-bottom: none;
 }
 
-table.quickgrid tbody > * > :first-child {
-    border-left: none;
+tbody > tr:hover {
+    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.04);
 }
 
-table.quickgrid tbody > * > :last-child {
-    border-right: none;
-}
-
-table.quickgrid td {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
+th {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    font-size: var(--type-label-md-size);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-on-surface-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     white-space: nowrap;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    vertical-align: middle;
 }
 
-table.quickgrid th {
-    position: relative;
-    padding: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-    font-weight: 600;
-    white-space: nowrap;
-    vertical-align: middle;
+/* QuickGrid header sort button & options */
+th > div {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-1);
 }
 
-table.quickgrid thead > :first-child > * {
-    border-top: none;
+th > div > button,
+th > button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 4px var(--space-xs);
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border-radius: var(--shape-sm);
 }
 
-table.quickgrid thead > * > :first-child {
-    border-left: none;
+th[aria-sort="ascending"], th[aria-sort="descending"] {
+    color: var(--md-sys-color-primary);
 }
 
-table.quickgrid thead > * > :last-child {
-    border-right: none;
-}
-
-table.quickgrid tr:hover td {
-    background: var(--md-sys-color-surface-container-highest);
-}
-
-td.col-justify-center {
-    justify-content: center;
+/* Column alignment via data-align */
+th[data-align="center"],
+td[data-align="center"] {
     text-align: center;
 }
 
-td.col-justify-end {
-    justify-content: end;
+th[data-align="end"],
+td[data-align="end"],
+th[data-align="right"],
+td[data-align="right"] {
     text-align: right;
 }
 
-td.col-justify-left {
-    justify-content: start;
+th[data-align="start"],
+td[data-align="start"],
+th[data-align="left"],
+td[data-align="left"] {
     text-align: left;
 }
 
-td.col-justify-right {
-    justify-content: end;
-    text-align: right;
-}
-
-td.col-justify-start {
-    justify-content: start;
-    text-align: left;
+td {
+    padding: var(--space-sm) var(--space-md);
+    color: var(--md-sys-color-on-surface);
+    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
+    vertical-align: middle;
 }
 
 @media (max-width: 599.98px) {
-    .paginator {
-        grid-auto-flow: row;
+footer[paginator], nav[pagination] {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem 0.5rem;
+        gap: var(--md-sys-spacing-1);
+        padding: 4px;
     }
 
-    .paginator nav {
-        margin-left: 0;
+footer[paginator] > nav {
+        gap: 2px;
         justify-content: center;
-        max-width: 100%;
-        overflow-x: auto;
+    }
+
+footer[paginator] > nav > span {
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 }
-
-/* --- Amount Value Cell --- */

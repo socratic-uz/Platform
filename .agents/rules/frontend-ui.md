@@ -6,7 +6,9 @@
 
 ### 1.1. Централизованная нативная платформа (Native W3C Platform)
 - **Единый центр стилизации**: все стили живут в `Assets/wwwroot/css/` с точкой входа [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css).
-- **Zero Build-Step для CSS**: чистый нативный W3C CSS без препроцессоров, утилитных генераторов и монолитных бандлов. Браузер напрямую парсит валидные спецификации W3C через параллельные мультиплексированные потоки HTTP/2 и HTTP/3.
+- **Динамическая сборка манифеста (`generate-styles-manifest.mjs`)**: `styles.css` генерируется автоматически скриптом `scripts/generate-styles-manifest.mjs` (при `dotnet build Assets.csproj` и `npm run generate:styles`) через рекурсивное сканирование слоев.
+- **Шрифтовая архитектура вне слоев (Unlayered Variable Fonts)**: правила `@font-face` подключаются в самом верху `styles.css` **вне `@layer`**, что обеспечивает наивысший приоритет браузерного парсинга, мгновенное обнаружение глифов и исключение FOUT для лигатур иконок (`Material Symbols Outlined`). Используются исключительно вариативные шрифты (`Roboto` и `Montserrat` с диапазоном весов `100 900`, а также вариативный `Material Symbols Outlined`); статические TTF-файлы полностью ликвидированы.
+- **Строгий скоуп `layouts/` (Макросетка `body` ONLY)**: файлы слоя `layouts/` стилизуют **исключительно** `body:has(layout[variant])` и координаты прямых ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`). Любая внутренняя стилизация компонентов, кнопок или заголовков в `layouts/` строго запрещена. Базовые стили ориентиров изолированы в `foundations/landmarks.css`.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей, тегов `<style>` и классов `class=@...`. Стилизация детерминирована на уровне атрибутов первого уровня (`[card]`, `main[kiosk]`, `aside[cart]`) и семантической иерархии тегов HTML5.
 
 ### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
@@ -46,7 +48,26 @@
 | **Состав** | Неделимый примитив (кнопка, чип, инпут, модалка, таблица) | Композиция нескольких компонентов (в корзине есть кнопки, чипы, карточки) |
 | **Примеры в кодовой базе** | `buttons.css`, `cards.css`, `chips.css`, `forms.css`, `dialogs.css`, `tables.css`, `feedback.css`, `smart-data-view.css` | `cart.css`, `fiscal.css`, `faceid-viewfinder.css`, `booking-picker.css`, `seat-designer.css`, `qr-designer.css`, `commerce-modes.css` |
 
-### 1.4. Онтология токенов W3C DTCG & Material Design 3 Expressive
+### 1.5. Иерархический порядок стилей по DOM-дереву (DOM-Hierarchical Pre-Order Sorting)
+Все таблицы стилей дизайн-системы упорядочиваются строго в соответствии со сквозным обходом DOM-дерева в глубину (Depth-First Search / Pre-Order):
+1. **Корень контейнера / ориентира**: `main[kiosk]`, `header[orders]`, `aside[cart]`, `body:has(layout[...])`.
+2. **Семантические потомки по цепочке `>`**: свойства родителя объявляются строго перед его детьми (`root` $\rightarrow$ `root > child` $\rightarrow$ `root > child > grandchild`).
+3. **Состояния интерактивности**: базовый селектор всегда предшествует своим псевдоклассам (`article` $\rightarrow$ `article:hover`, `button` $\rightarrow$ `button:focus-visible`).
+4. **Адаптивные блоки (`@media`)**: выносятся в конец файла/слоя и упорядочиваются по `max-width` по убыванию ($1024\text{px} \rightarrow 840\text{px} \rightarrow 600\text{px}$), а правила внутри каждого `@media` также строго подчиняются DOM-порядку.
+5. **Автоматизация**: проверка и форматирование порядка осуществляется командой `npm run sort:css` (проверка: `npm run sort:css:check`).
+
+### 1.6. Принцип строгого паритета 1-в-1 (Razor Markup ⟷ CSS Stylesheet Parity)
+Каждый файл разметки `*.razor` (страница, виджет, компонент) подчиняется закону взаимно однозначного соответствия:
+- **Атрибут строго на 1-м корневом уровне DOM**: компонент разметки маркируется уникальным атрибутом на своём корневом контейнере (`<header kiosk>`, `<main kiosk>`, `<aside cart>`, `<main wishlist>`).
+- **Собственный файл стилей**: у каждой сущности есть свой собственный одноимённый `.css` файл стилей, опирающийся строго на её атрибут:
+  - `Kiosk.razor` $\iff$ `pages/kiosk.css` (`[kiosk]`)
+  - `WishList.razor` $\iff$ `pages/wishlist.css` (`[wishlist]`)
+  - `Home.razor` $\iff$ `pages/home.css` (`[home]`)
+  - `Qr.razor` $\iff$ `pages/qr.css` (`[qr]`)
+  - `QrDesignerPage.razor` $\iff$ `pages/qr-designer.css` (`[qr-designer]`)
+- **Запрет смешивания контекстов**: категорически запрещено помещать стили разных страниц или разнородных сущностей в один `.css` файл (например, стили `wishlist` в `kiosk.css` или `qr` в `qr-designer.css`).
+
+### 1.7. Онтология токенов W3C DTCG & Material Design 3 Expressive
 - Слой `tokens/` организован строго по 10 каноническим типам спецификации W3C Design Tokens Community Group:
   1. `border.css` — радиусы скруглений и толщины рамок ($type: border)
   2. `colors.css` — системная палитра M3X и режимы тем Dark/Light ($type: color)
@@ -58,9 +79,9 @@
   8. `sizing.css` — брейкпоинты, тач-таргеты и пропорции ($type: dimension / sizing)
   9. `spacing.css` — модульная сетка отступов ($type: dimension / spacing)
   10. `typography.css` — шрифтовая шкала Material Typescale ($type: typography)
-- **Сквозная типизация в C#**: все CSS-классы, токены, иконки и ресурсы компилируются Roslyn генераторами в строго типизированные структуры (`Classes.g.cs`, `Icons.g.cs`, `Assets.g.cs`), обеспечивая 100% проверку компилятором без строковой магии.
+- **Сквозная типизация в C#**: иконки, ресурсы и локализация компилируются генераторами в строго типизированные структуры (`Icons.g.cs`, `Assets.g.cs`, `Loc.g.cs`), обеспечивая 100% проверку компилятором без строковой магии. Генераторы классов (`Classes.g.cs`) ликвидированы в пользу Pure Attribute-Driven Classless.
 
-### 1.5. Детерминированная геометрия: Pure CSS Grid & Container Queries
+### 1.8. Детерминированная геометрия: Pure CSS Grid & Container Queries
 - **Двумерная математическая модель**: все сетки, колонки, ряды и стеки строятся исключительно на `display: grid`.
 - **UI Geometry Contract**:
   - Каждая гибкая колонка защищена `minmax(0, 1fr)` (исключает переполнение контейнера).
@@ -68,7 +89,7 @@
 - **CSS Container Queries (`@container`)**: Micro Layout (карточки, модальные окна, виджеты) адаптируется к ширине своего непосредственного родителя, а не экрана.
 - **M3 Window Size Classes**: Macro Layout (каркас приложения, навигация, рабочие зоны) управляется адаптивной матрицей вьюпортов M3 (`Compact`, `Medium`, `Expanded`, `Large`, `ExtraLarge`).
 
-### 1.6. Pure Attribute-Driven Classless — Трёхуровневая семантическая навигация и селекторы
+### 1.9. Pure Attribute-Driven Classless — Трёхуровневая семантическая навигация и селекторы
 Все стили компонентов, виджетов и страниц строятся строго по трёхуровневой модели без классов:
 
 ```text
@@ -280,17 +301,18 @@
 
 /* 2. Foundations & Reset */
 @import "foundations/base.css" layer(foundations);
+@import "foundations/landmarks.css" layer(foundations);
 @import "foundations/typography.css" layer(foundations);
 @import "foundations/scrollbars.css" layer(foundations);
 @import "foundations/animations.css" layer(foundations);
 
-/* 3. Blazor Layouts (Page Skeletons & Shells) */
-@import "layouts/footer.css" layer(layouts);
+/* 3. Blazor Layouts (Page Skeletons & Shells: 1-to-1 with <layout [variant]>) */
+@import "layouts/chat-layout.css" layer(layouts);
 @import "layouts/grid-layout.css" layer(layouts);
-@import "layouts/header.css" layer(layouts);
-@import "layouts/navigation.css" layer(layouts);
 @import "layouts/landing-layout.css" layer(layouts);
+@import "layouts/main-layout.css" layer(layouts);
 @import "layouts/map-layout.css" layer(layouts);
+@import "layouts/nav-only-layout.css" layer(layouts);
 
 /* 4. Page-Specific Styles (Macro Screen Contexts) */
 @import "pages/about.css" layer(pages);

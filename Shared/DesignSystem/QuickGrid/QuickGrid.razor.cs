@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components;
 
-using AssetConstants = global::Assets.Constants;
 
 namespace QuickGrid;
 
@@ -458,25 +457,14 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
             ? (_sortByAscending ? "ascending" : "descending")
             : "none";
 
-    protected string? ColumnHeaderClass(ColumnBase<TGridItem> column)
-        => _sortByColumn == column
-        ? $"{ColumnClass(column)} {(_sortByAscending ? "col-sort-asc" : "col-sort-desc")}"
-        : ColumnClass(column);
-
-    protected string GridClass()
+    protected static string? ColumnAlign(ColumnBase<TGridItem> column) => column.Align switch
     {
-        var gridClass = $"quickgrid {Class} {(_pendingDataLoadCancellationTokenSource is null ? null : "loading")}";
-        return AttributeUtilities.CombineClassNames(AdditionalAttributes, gridClass) ?? string.Empty;
-    }
-
-    protected static string? ColumnClass(ColumnBase<TGridItem> column) => column.Align switch
-    {
-        Align.Start => $"col-justify-start {column.Class}",
-        Align.Center => $"col-justify-center {column.Class}",
-        Align.End => $"col-justify-end {column.Class}",
-        Align.Left => $"col-justify-left {column.Class}",
-        Align.Right => $"col-justify-right {column.Class}",
-        _ => column.Class,
+        Align.Start => "start",
+        Align.Center => "center",
+        Align.End => "end",
+        Align.Left => "left",
+        Align.Right => "right",
+        _ => null,
     };
 
     /// <inheritdoc />
@@ -535,7 +523,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
                 foreach (var col in _columns)
                 {
                     builder.OpenElement(1, "td");
-                    builder.AddAttribute(2, "class", ColumnClass(col));
+                    builder.AddAttribute(2, "data-align", ColumnAlign(col));
                     builder.SetKey(col);
                     builder.CloseElement();
                 }
@@ -550,12 +538,10 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
         builder.OpenElement(0, "tr");
         builder.SetKey(ItemKey(item));
         builder.AddAttribute(1, "aria-rowindex", rowIndex);
-        builder.AddAttribute(2, "class", rowClass);
-
         foreach (var col in _columns)
         {
             builder.OpenElement(3, "td");
-            builder.AddAttribute(4, "class", ColumnClass(col));
+            builder.AddAttribute(4, "data-align", ColumnAlign(col));
             builder.SetKey(col);
             col.CellContent(builder, item);
             builder.CloseElement();
@@ -572,7 +558,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
         foreach (var col in _columns)
         {
             builder.OpenElement(2, "td");
-            builder.AddAttribute(3, "class", $"grid-cell-placeholder {ColumnClass(col)}");
+            builder.AddAttribute(3, "data-align", ColumnAlign(col));
             builder.SetKey(col);
             col.RenderPlaceholderContent(builder, placeholderContext);
             builder.CloseElement();
@@ -586,7 +572,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
         foreach (var col in _columns)
         {
             builder.OpenElement(0, "th");
-            builder.AddAttribute(1, "class", ColumnHeaderClass(col));
+            builder.AddAttribute(1, "data-align", ColumnAlign(col));
             builder.AddAttribute(2, "aria-sort", AriaSortValue(col));
             builder.SetKey(col);
             builder.AddAttribute(3, "scope", "col");
@@ -596,7 +582,7 @@ public partial class QuickGrid<TGridItem> : IAsyncDisposable
             if (col == _displayOptionsForColumn)
             {
                 builder.OpenElement(7, "div");
-                builder.AddAttribute(8, "class", AssetConstants.Classes.Table.ColOptions);
+                builder.AddAttribute(8, "data-col-options-panel", "");
                 builder.AddContent(9, col.ColumnOptions);
                 builder.CloseElement();
             }

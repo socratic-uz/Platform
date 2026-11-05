@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / forms.css
+   Fieldsets, Labels, Touch Target Minimums & Disclosure (<details>/<summary>)
+   ========================================================================== */
+
+fieldset {
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+}
+
+fieldset > legend {
+    padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
+    color: var(--md-sys-color-primary);
+    font-family: var(--md-ref-typeface-brand);
+    font-weight: 600;
+}
+
+form {
+    gap: var(--md-sys-spacing-4);
+}
+
+label {
+    gap: var(--md-sys-spacing-1);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-label-medium-size);
+    font-weight: var(--md-sys-typescale-label-medium-weight);
+}
+
+label:has(md-checkbox, md-radio, md-switch) {
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    min-height: var(--md-sys-touch-target-min);
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-body-large-size);
+    font-weight: inherit;
+    cursor: pointer;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+summary {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+details:not(:has(> summary > md-list-item)) {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background-color: var(--md-sys-color-surface-container-low);
+    overflow: clip;
+}
+
+details:not(:has(> summary > md-list-item))[open] {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+details:not(:has(> summary > md-list-item)) > summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    min-height: var(--md-sys-touch-target-min);
+    padding: var(--md-sys-spacing-4);
+    font-weight: 600;
+    list-style: none;
+    user-select: none;
+}
+
+details:not(:has(> summary > md-list-item)) > summary::-webkit-details-marker {
+    display: none;
+}
+
+details:not(:has(> summary > md-list-item)) > summary::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid currentcolor;
+    border-bottom: 2px solid currentcolor;
+    rotate: 45deg;
+    transition: rotate var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+details:not(:has(> summary > md-list-item))[open] > summary::after {
+    rotate: -135deg;
+}
+
+details:not(:has(> summary > md-list-item)) > :not(summary) {
+    padding: var(--md-sys-spacing-4);
+}
+

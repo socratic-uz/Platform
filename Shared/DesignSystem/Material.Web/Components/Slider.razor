@@ -2,9 +2,8 @@
 @using Microsoft.AspNetCore.Components.Forms
 @inherits InputBase<decimal>
 
-<md-slider id="@Id"
-           class="@CssClass material-slider"
-           min="@Min"
+<md-slider id=@Id
+           min=@Min
            max="@Max"
            value="@CurrentValueAsString"
            step="@Step"

@@ -39,13 +39,3 @@
     --md-sys-viewport-height-small: 100svh;
     --tg-viewport-height: 100dvh;
 }
-
-.m3-touch-target {
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-}
-
-.m3-touch-target-kiosk {
-    min-width: var(--md-sys-touch-target-kiosk);
-    min-height: var(--md-sys-touch-target-kiosk);
-}

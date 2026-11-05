@@ -1,159 +1,24 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / pricing-tiers.css
-   Subscription Plans, Pricing Tiers, Feature Lists & Plan Indicators
+   Layer: widgets — Pricing Tiers & Plan Comparison (Pure Attribute Classless)
    ========================================================================== */
 
-article[organization-subscription] {
-    display: grid;
-    gap: var(--md-sys-spacing-5, 1.25rem);
-    padding: var(--md-sys-spacing-6, 1.5rem);
+section[pricing-tiers] {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    align-items: stretch;
+    gap: var(--space-lg);
+}
+
+section[pricing-tiers] > article {
+    grid-template-rows: auto 1fr auto;
+    align-content: start;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    border-radius: var(--shape-xl);
+    background: var(--md-sys-color-surface-container-low);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
-    background: var(--md-sys-color-surface);
 }
 
-article[organization-subscription] > header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-}
-
-article[organization-subscription] > section > h2 {
-    margin: 0 0 0.4rem;
-    font-size: 1.45rem;
-    font-weight: 700;
-}
-
-article[organization-subscription] > section > p {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    margin: 0;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-article[pricing-tier] {
-    display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
-    align-content: space-between;
-    position: relative;
-    padding: var(--md-sys-spacing-5, 1.25rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
-    background: var(--md-sys-color-surface-container);
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-    cursor: pointer;
-}
-
-article[pricing-tier] :where(md-filled-button, md-outlined-button, button) {
-    width: 100%;
-}
-
-article[pricing-tier]:hover {
-    border-color: var(--md-sys-color-outline);
-    transform: translateY(-2px);
-}
-
-article[pricing-tier][active] {
+article[data-featured="true"] {
     border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-surface-container-high);
-}
-
-article[pricing-tier][pro] {
-    border-color: var(--md-sys-color-tertiary);
-}
-
-span[current-plan] {
-    display: block;
-    padding: 0.4rem;
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-span[current-plan][pro] {
-    background: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
-}
-
-span[tag-pro] {
-    position: absolute;
-    top: -12px;
-    right: 20px;
-    padding: 2px 10px;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
-    background: var(--md-sys-color-tertiary);
-    color: var(--md-sys-color-on-tertiary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* --- Plans & Subscriptions --- */
-
-article[pricing-tier] > ul {
-    display: grid;
-    gap: 0.6rem;
-    margin: 0;
-    padding: 0;
-    font-size: 0.9rem;
-    list-style: none;
-}
-
-article[pricing-tier] > ul > li {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-}
-
-article[pricing-tier] > header {
-    display: grid;
-    gap: 0.35rem;
-}
-
-article[pricing-tier] > header > h3 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 700;
-}
-
-article[pricing-tier] > header > span {
-    color: var(--md-sys-color-primary);
-    font-size: 1.75rem;
-    font-weight: 800;
-}
-
-p[trial-counter],
-.trial-counter {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.4rem;
-    align-items: baseline;
-    margin: 0;
-}
-
-p[trial-counter] > strong {
-    color: var(--md-sys-color-primary);
-    font-size: 1.6rem;
-    font-weight: 800;
-}
-
-p[trial-counter] > span {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-}
-
-section[pricing] {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    gap: var(--md-sys-spacing-4, 1rem);
-    width: 100%;
+    box-shadow: var(--md-sys-elevation-level2);
 }

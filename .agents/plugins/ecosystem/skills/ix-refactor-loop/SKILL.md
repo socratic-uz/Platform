@@ -24,7 +24,7 @@ description: >-
    - Атомарные компоненты в `Components/`, которые инжектируют бизнес-сервисы вместо общения через `[Parameter]` и `EventCallback`.
    - Виджеты или экраны, перемешанные в одной папке без разделения на `Pages/` и `Widgets/`.
 3. **Нарушения Zero Aliases**:
-   - Наличие полей-алиасов дизайн-системы вида `public const string Alias = global::Assets.***` или `public string PropClass => Classes.***`.
+   - Наличие полей-алиасов дизайн-системы вида `public const string Alias = global::Assets.***`.
 4. **Проблемы жизненного цикла и гидратации**:
    - Отсутствие `PersistentComponentState` в компонентах экранов с `InteractiveAuto` (приводит к двойным сетевым запросам и морганию UI).
    - Подписки на аппаратные службы (сканер, PinPad, фискальный регистратор) или таймеры без реализации `IAsyncDisposable` / `IDisposable`.
@@ -103,13 +103,12 @@ description: >-
 - Удали из `*.razor.cs` любые поля и свойства-алиасы:
   ```csharp
   // ❌ УДАЛИТЬ:
-  public const string TitleLarge = Classes.Typography.TitleLarge;
-  public string CardClass => Classes.Cards.CardElevated;
+  public const string CloseIcon = Icons.Close;
   ```
 - Подключи группы напрямую через `using static` в `*.razor.cs` или `@using static` в `*.razor`:
   ```csharp
-  using static Assets.Constants.Classes.Cards;
-  using static Assets.Constants.Classes.Buttons;
+  using static Assets.Constants.Icons;
+  using static Assets.Constants.Loc.Checkout;
   ```
 - Оставь в классе только уникальные технические константы:
   ```csharp

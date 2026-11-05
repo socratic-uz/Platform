@@ -1,160 +1,151 @@
 /* ==========================================================================
    Socratic Design System — FOUNDATIONS / typography.css
-   Component-Driven Architecture
+   Semantic Headings, Inline Text, Code & Blockquotes
    ========================================================================== */
 
-.header-title-box {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.5rem;
-    justify-content: start;
-    align-items: center;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+mark {
+    font-family: var(--md-ref-typeface-brand);
 }
 
-.m3-title-large {
-    font-size: var(--md-sys-typescale-title-large-size);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    line-height: var(--md-sys-typescale-title-large-line-height);
-    letter-spacing: var(--md-sys-typescale-title-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.m3-title-medium {
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.section-title-box {
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-    width: 100%;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.section-title-box h2 {
-    background: linear-gradient(135deg, var(--md-sys-color-on-surface) 0%, var(--md-sys-color-on-surface-variant) 100%);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--md-sys-color-on-surface);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.section-title-box p {
-    max-width: 680px;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-    .section-title-box h2 {
-        font-size: clamp(1.6rem, 5.5vw, 2.1rem);
-    }
-
-    .ux-modes-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1rem;
-    }
-
-}
-
-
-.m3-body-large {
-    font-size: var(--md-sys-typescale-body-large-size);
-    font-weight: var(--md-sys-typescale-body-large-weight);
-    line-height: var(--md-sys-typescale-body-large-line-height);
     overflow-wrap: anywhere;
-    word-break: break-word;
-    user-select: text;
-    -webkit-user-select: text;
+    text-wrap: balance;
 }
 
-.m3-body-medium {
-    font-size: var(--md-sys-typescale-body-medium-size);
-    font-weight: var(--md-sys-typescale-body-medium-weight);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    user-select: text;
-    -webkit-user-select: text;
-}
-
-.m3-display-large {
+h1 {
     font-size: var(--md-sys-typescale-display-large-size);
     font-weight: var(--md-sys-typescale-display-large-weight);
     line-height: var(--md-sys-typescale-display-large-line-height);
     letter-spacing: var(--md-sys-typescale-display-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
 }
 
-.m3-headline-large {
+h2 {
     font-size: var(--md-sys-typescale-headline-large-size);
     font-weight: var(--md-sys-typescale-headline-large-weight);
     line-height: var(--md-sys-typescale-headline-large-line-height);
     letter-spacing: var(--md-sys-typescale-headline-large-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
 }
 
-.m3-headline-medium {
+h3 {
     font-size: var(--md-sys-typescale-headline-medium-size);
     font-weight: var(--md-sys-typescale-headline-medium-weight);
     line-height: var(--md-sys-typescale-headline-medium-line-height);
     letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
-    overflow-wrap: anywhere;
-    word-break: break-word;
 }
 
-.m3-label-small {
-    font-size: var(--md-sys-typescale-label-small-size);
-    font-weight: var(--md-sys-typescale-label-small-weight);
-    line-height: var(--md-sys-typescale-label-small-line-height);
-    letter-spacing: var(--md-sys-typescale-label-small-tracking);
-    text-transform: uppercase;
+h4 {
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+    line-height: var(--md-sys-typescale-title-large-line-height);
+    letter-spacing: var(--md-sys-typescale-title-large-tracking);
 }
 
-.m3-line-clamp-2 {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
+h5 {
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
 }
 
-.m3-line-clamp-3 {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
+h6 {
+    font-size: var(--md-sys-typescale-body-large-size);
+    font-weight: 600;
+    line-height: 1.4;
 }
 
-:where(.m3-truncate, .col-title-text) {
-    min-width: 0;
-    min-inline-size: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+p {
+    text-wrap: pretty;
 }
 
-/* --- Headings & Section Titles --- */
-
-.headline {
-    margin: 0;
+a {
     color: var(--md-sys-color-primary);
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    font-weight: 700;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+    touch-action: manipulation;
 }
 
-
-.monospace {
-    font-family: monospace;
-    font-size: 0.8125rem;
-    letter-spacing: 0.05em;
+a:hover {
+    text-decoration: underline;
 }
+
+small {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+mark {
+    padding: 0.2em;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: var(--md-ref-typeface-mono);
+    font-size: 0.875em;
+}
+
+code {
+    padding: 0.25em;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+}
+
+kbd {
+    padding: 0.25em;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom-width: 2px;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+pre {
+    padding: var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+pre > code {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+}
+
+blockquote {
+    padding: var(--md-sys-spacing-4);
+    border-inline-start: 4px solid var(--md-sys-color-primary);
+    border-radius: 0 var(--md-sys-shape-corner-small) var(--md-sys-shape-corner-small) 0;
+    background-color: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface-variant);
+}
+

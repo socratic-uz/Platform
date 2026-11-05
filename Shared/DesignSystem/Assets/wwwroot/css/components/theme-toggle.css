@@ -4,31 +4,23 @@
    ========================================================================== */
 
 aside[settings] {
-    display: grid;
-    gap: var(--md-sys-spacing-4, 1rem);
-    padding: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-2);
 }
 
 aside[settings] > fieldset {
-    display: grid;
-    gap: var(--md-sys-spacing-2, 0.5rem);
+    gap: var(--md-sys-spacing-2);
     border: none;
     padding: 0;
-    margin: 0;
 }
 
 aside[settings] > fieldset > legend {
-    margin: 0;
     color: var(--md-sys-color-on-surface);
-    font-size: var(--md-sys-typescale-title-small-size, 0.875rem);
+    font-size: var(--md-sys-typescale-title-small-size);
     font-weight: 600;
 }
 
-aside[settings] menu {
-    display: grid;
+aside[settings] > fieldset > menu {
     grid-template-columns: repeat(auto-fit, minmax(110px, max-content));
-    gap: var(--md-sys-spacing-2, 0.5rem);
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    gap: var(--md-sys-spacing-2);
 }

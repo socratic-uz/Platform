@@ -1,14 +1,11 @@
 @namespace Material.Web.Components
 @using Microsoft.AspNetCore.Components.Forms
-@using Assets.Constants
-@using static Assets.Constants.Formats
 @using static Assets.Constants.Icons
-@using static Assets.Constants.Classes.Picker
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<section class=@FilePickerContainer>
+<section file-picker>
     <PickerTriggerCard Label=@EffectiveLabel
                        Icon=@AttachFile
                        ActiveIcon=@FolderOpen
@@ -20,7 +17,7 @@
                        ResetAriaLabel=@L[FilePickerClearAll]
                        OnReset=@ClearAll>
         <CustomActions>
-            <label for=@inputId class=@FileAddBtnLabel>
+            <label for=@inputId>
                 <Button Variant=@FilledTonal Type="button" Icon=@AddPhotoAlternate>
                     @EffectiveUploadLabel
                 </Button>
@@ -35,7 +32,7 @@
         </CustomActions>
     </PickerTriggerCard>
 
-    <menu class=@FileGrid>
+    <menu>
         <!-- Universal Attachments -->
         @if (Attachments != null)
         {
@@ -45,24 +42,24 @@
                 if (index < Attachments.Count)
                 {
                     var (fileName, contentType, url, isNew, bytesData) = GetAttachmentData(index);
-                    <article class=@GetFileCardClass(isNew)>
-                        <figure class=@FilePreviewArea>
+                    <article>
+                        <figure>
                             @if (IsImage(contentType, fileName))
                             {
                                 var imgUrl = isNew ? GetBase64DataUrl(bytesData!, contentType) : GetPreviewUrl(url);
-                                <img src=@imgUrl alt=@fileName class=@ImagePreview />
+                                <img src=@imgUrl alt=@fileName />
                             }
                             else
                             {
-                                <Icon Name=@GetFileIcon(contentType, fileName) class=@GetIconPreviewClass(contentType, fileName) />
+                                <Icon Name=@GetFileIcon(contentType, fileName) />
                             }
                         </figure>
-                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
+                        <footer title=@fileName>@fileName</footer>
                         @if (isNew)
                         {
-                            <span class=@NewBadge>New</span>
+                            <span>New</span>
                         }
-                        <menu class=@FileOverlay>
+                        <menu>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveAttachment(index)) />
@@ -81,12 +78,12 @@
                 if (index < ExistingImages.Count)
                 {
                     var (previewUrl, fileName) = GetExistingImageData(index);
-                    <article class=@FileCard>
-                        <figure class=@FilePreviewArea>
-                            <img src=@previewUrl alt=@fileName class=@ImagePreview />
+                    <article>
+                        <figure>
+                            <img src=@previewUrl alt=@fileName />
                         </figure>
-                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
-                        <menu class=@FileOverlay>
+                        <footer title=@fileName>@fileName</footer>
+                        <menu>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveExistingImage(index)) />
@@ -105,20 +102,20 @@
                 if (index < NewImagesContent.Count)
                 {
                     var (dataUrl, contentType, fileName) = GetNewImageData(index);
-                    <article class=@FileCard>
-                        <figure class=@FilePreviewArea>
+                    <article>
+                        <figure>
                             @if (IsImage(contentType, fileName))
                             {
-                                <img src=@dataUrl alt=@fileName class=@ImagePreview />
+                                <img src=@dataUrl alt=@fileName />
                             }
                             else
                             {
-                                <Icon Name=@GetFileIcon(contentType, fileName) class=@GetIconPreviewClass(contentType, fileName) />
+                                <Icon Name=@GetFileIcon(contentType, fileName) />
                             }
                         </figure>
-                        <footer class=@string.Format(Two, FileInfo, FileName) title=@fileName>@fileName</footer>
-                        <span class=@NewBadge>New</span>
-                        <menu class=@FileOverlay>
+                        <footer title=@fileName>@fileName</footer>
+                        <span>New</span>
+                        <menu>
                             <IconButton Icon=@Delete
                                         AriaLabel=@EffectiveRemoveLabel
                                         OnClick=@(() => RemoveNewImage(index)) />
@@ -129,7 +126,7 @@
         }
 
         <!-- Upload Card -->
-        <label for=@inputId class=@UploadCardClass
+        <label for=@inputId data-dragging=@(isDragging ? "true" : null)
              @ondragenter=@HandleDragEnter
              @ondragleave=@HandleDragLeave
              @ondragover=@HandleDragOver
@@ -137,17 +134,17 @@
              @ondrop=@HandleDrop
              @ondrop:preventDefault>
             
-            <span class=@UploadZoneLabel>
-                <Icon Name=@CloudUpload class=@UploadIcon />
-                <span class=@UploadText>@EffectiveUploadLabel</span>
-                <span class=@UploadSubtext>@L[FilePickerDragFilesOrClick]</span>
+            <span>
+                <Icon Name=@CloudUpload />
+                <span>@EffectiveUploadLabel</span>
+                <span>@L[FilePickerDragFilesOrClick]</span>
             </span>
             
             <InputFile id=@inputId 
                        OnChange=@HandleFileSelected 
                        multiple=@Multiple 
                        accept=@Accept 
-                       class=@FileInputHidden />
+                       hidden />
         </label>
     </menu>
 </section>

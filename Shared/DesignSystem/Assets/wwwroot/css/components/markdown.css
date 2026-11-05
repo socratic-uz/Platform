@@ -1,142 +1,54 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / markdown.css
-   Rendered Markdown, Syntax Highlighting & Mermaid Diagrams
+   Layer: components — Markdown & Rich Prose Content (Pure Attribute Classless)
    ========================================================================== */
 
-:where(.markdown-body, article[markdown]) {
-    color: var(--md-sys-color-on-background);
-    line-height: 1.6;
-}
-
-:where(.markdown-body) :where(h1, h2, h3, h4, h5, h6) {
-    justify-self: initial;
-    color: var(--md-sys-color-on-surface);
-    background-image: none;
-    background-clip: initial;
-    -webkit-background-clip: initial;
-}
-
-:where(.markdown-body) :where(table) {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-:where(.markdown-body) :where(tr):hover {
-    background: var(--md-sys-color-surface-container-high);
-}
-
-:where(.markdown-body) :where( th, td) {
-    border: 1px solid var(--md-sys-color-outline-variant);
-    vertical-align: middle;
-}
-
-:where(.markdown-body) :where(th) {
-    padding: var(--md-sys-spacing-4, 1rem);
+article[markdown], [data-markdown] {
     align-content: start;
-    white-space: nowrap;
-}
-
-:where(.markdown-body) :where(td) {
-    padding: 0 var(--md-sys-spacing-4, 1rem);
-    white-space: nowrap;
-}
-
-:where(.markdown-body) :where(thead > :first-child > *) {
-    border-top: none;
-}
-
-:where(.markdown-body) :where(tbody > :last-child > *) {
-    border-bottom: none;
-}
-
-:where(.markdown-body) :where(thead > * > :first-child, tbody > * > :first-child) {
-    border-left: none;
-}
-
-:where(.markdown-body) :where(thead > * > :last-child, tbody > * > :last-child) {
-    border-right: none;
-}
-
-:where(.markdown-body) :where(.snippet) {
-    margin-bottom: var(--md-sys-spacing-3, 0.75rem);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background-color: var(--md-sys-color-surface-container);
-    overflow-y: auto;
-}
-
-:where(.markdown-body) :where(.hljs) {
-    background-color: var(--md-sys-color-surface-container);
+    gap: var(--space-md);
+    line-height: 1.65;
     color: var(--md-sys-color-on-surface);
-    font-family: var(--md-ref-typeface-mono, monospace);
-    tab-size: 2em;
 }
 
-:where(.markdown-body) :where(.hljs-copy-wrapper) {
-    position: relative;
-    overflow: hidden;
+article[markdown] > h1,
+article[markdown] > h2,
+article[markdown] > h3,
+article[markdown] > h4,
+[data-markdown] > h1,
+[data-markdown] > h2,
+[data-markdown] > h3,
+[data-markdown] > h4 {
+    margin-top: var(--space-md);
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
 }
 
-:where(.markdown-body) :where([data-action="copy"]) {
-    position: absolute;
-    top: 0.4rem;
-    right: 1em;
-    min-width: var(--md-sys-touch-target-min, 48px);
-    min-height: var(--md-sys-touch-target-min, 48px);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-small, 8px);
-    background-color: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-primary);
-    transform: translateX(calc(100% + 1.125em));
-    transition: background-color var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard),
-        transform var(--md-sys-motion-duration-short3, 200ms) var(--md-sys-motion-easing-spring);
-    cursor: pointer;
-    touch-action: manipulation;
+article[markdown] > pre, [data-markdown] > pre {
+    padding: var(--space-md);
+    border-radius: var(--shape-md);
+    background: var(--md-sys-color-surface-container-highest);
+    overflow-x: auto;
 }
 
-:where(.markdown-body) :where(.hljs-copy-wrapper):hover :where([data-action="copy"]),
-:where(.markdown-body) :where([data-action="copy"]):focus {
-    transform: translateX(0);
+article[markdown] > ul,
+article[markdown] > ol,
+[data-markdown] > ul,
+[data-markdown] > ol {
+    display: block;
+    padding-left: var(--space-lg);
 }
 
-/* Mermaid Diagrams */
-:where(.markdown-body) :where(.edgePaths path) {
-    stroke: var(--md-sys-color-primary) !important;
-    stroke-width: 1.5 !important;
-    stroke-dasharray: 10 20 !important;
-    fill: none;
-    filter: drop-shadow(0 0 2px var(--md-sys-color-primary));
-    animation: dashmove 0.5s linear infinite;
-    paint-order: stroke;
+article[markdown] > ul > li,
+article[markdown] > ol > li,
+[data-markdown] > ul > li,
+[data-markdown] > ol > li {
+    display: list-item;
+    margin-bottom: var(--md-sys-spacing-1);
 }
 
-:where(.markdown-body) :where(.clusters rect) {
-    border-radius: var(--md-sys-shape-corner-large, 24px);
-    fill: var(--md-sys-color-surface-variant) !important;
-    stroke: var(--md-sys-color-outline) !important;
-    rx: 24px;
-    ry: 24px;
-}
-
-:where(.markdown-body) :where(.nodes rect) {
-    border-radius: var(--md-sys-shape-corner-large, 24px);
-    fill: var(--md-sys-color-tertiary-container) !important;
-    stroke: var(--md-sys-color-outline) !important;
-    rx: 24px;
-    ry: 24px;
-}
-
-:where(.markdown-body) :where(rect.actor) {
-    border-radius: var(--md-sys-shape-corner-large, 24px);
-    fill: var(--md-sys-color-secondary-container) !important;
-    stroke: var(--md-sys-color-outline) !important;
-    rx: 24px;
-    ry: 24px;
-}
-
-@keyframes dashmove {
-    to {
-        stroke-dashoffset: -90;
-    }
+article[markdown] > blockquote, [data-markdown] > blockquote {
+    padding: var(--space-sm) var(--space-md);
+    border-left: 3px solid var(--md-sys-color-primary);
+    background: var(--md-sys-color-surface-container-low);
+    border-radius: 0 var(--shape-sm) var(--shape-sm) 0;
+    color: var(--md-sys-color-on-surface-variant);
 }

@@ -115,10 +115,7 @@ namespace Assets.Constants
         public const string MaterialSymbolsOutlined = "_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2";
         public const string MontserratItalicVariableFontWght = "_content/Assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf";
         public const string MontserratVariableFontWght = "_content/Assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf";
-        public const string RobotoBold = "_content/Assets/fonts/Roboto/static/Roboto-Bold.ttf";
         public const string RobotoItalicVariableFont = "_content/Assets/fonts/Roboto/Roboto-Italic-VariableFont.ttf";
-        public const string RobotoMedium = "_content/Assets/fonts/Roboto/static/Roboto-Medium.ttf";
-        public const string RobotoRegular = "_content/Assets/fonts/Roboto/static/Roboto-Regular.ttf";
         public const string RobotoVariableFont = "_content/Assets/fonts/Roboto/Roboto-VariableFont.ttf";
     }
 
@@ -130,6 +127,7 @@ namespace Assets.Constants
 
     public static class AppManifest
     {
+        public const string Css = "_content/Assets/css.zip";
         public const string Manifest = "_content/Assets/manifest.webmanifest";
     }
 

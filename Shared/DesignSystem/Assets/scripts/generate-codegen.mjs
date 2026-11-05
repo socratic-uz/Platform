@@ -1,17 +1,13 @@
 /**
  * generate-codegen.mjs — Parallel Code-Gen Orchestrator
  *
- * Runs all four independent C# code-generation scripts in parallel:
- *   • generate-css-classes.mjs    → Constants/Classes.g.cs
- *   • generate-asset-paths.mjs    → Constants/Assets.g.cs + manifest.json
+ * Runs all three independent C# code-generation scripts in parallel:
+ *   • generate-asset-paths.mjs       → Constants/Assets.g.cs + manifest.json
  *   • generate-localization-keys.mjs → Constants/Loc.g.cs
- *   • generate-icon-constants.mjs → Constants/Icons.g.cs
+ *   • generate-icon-constants.mjs    → Constants/Icons.g.cs
  *
- * All four read disjoint source files and write to disjoint output files.
+ * All three read disjoint source files and write to disjoint output files.
  * No cross-dependencies → safe to run fully in parallel.
- *
- * Expected wall-clock: max(≈61, ≈69, ≈50, ≈88) ms ≈ 90ms
- * vs sequential:  61 + 69 + 50 + 88 ≈ 268ms  (~3x speedup)
  */
 
 import { fileURLToPath } from 'node:url';
@@ -63,7 +59,6 @@ async function main() {
   const extraArgs = process.argv.slice(2);
 
   const results = await Promise.allSettled([
-    runScript('classes', 'generate-css-classes.mjs', extraArgs),
     runScript('assets ', 'generate-asset-paths.mjs', extraArgs),
     runScript('loc    ', 'generate-localization-keys.mjs', extraArgs),
     runScript('icons  ', 'generate-icon-constants.mjs', extraArgs),
@@ -73,7 +68,7 @@ async function main() {
   const failed = results.find((r) => r.status === 'rejected');
   if (failed) throw failed.reason;
 
-  const [classesMs, assetsMs, locMs, iconsMs] = results.map((r) => r.value ?? 0);
+  const [assetsMs, locMs, iconsMs] = results.map((r) => r.value ?? 0);
   const totalMs = performance.now() - t0;
 
   const pad = (s) => String(s).padEnd(10);
@@ -81,7 +76,6 @@ async function main() {
 ┌────────────────────────────────────────────┐
 │  ⚙️  Code-Gen Summary (all parallel)        │
 ├────────────────────────────────────────────┤
-│  generate-css-classes     : ${pad(msLabel(classesMs))}     │
 │  generate-asset-paths     : ${pad(msLabel(assetsMs))}     │
 │  generate-localization-keys: ${pad(msLabel(locMs))}     │
 │  generate-icon-constants  : ${pad(msLabel(iconsMs))}     │

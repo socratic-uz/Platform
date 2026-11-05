@@ -3,7 +3,6 @@
    Consolidated Zero-Specificity Scrollbar Architecture
    ========================================================================== */
 
-/* 1. Global Default Webkit Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -11,7 +10,7 @@
 
 ::-webkit-scrollbar-thumb {
     border: 2px solid transparent;
-    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-outline-variant);
     background-clip: content-box;
 }
@@ -26,63 +25,20 @@
     background: transparent;
 }
 
-/* 2. Hidden Scrollbars (Zero Specificity Master Group) */
-.no-scrollbar {
-    scrollbar-width: none;
+dialog::-webkit-scrollbar, table::-webkit-scrollbar {
+    width: var(--md-sys-scrollbar-width);
+    height: var(--md-sys-scrollbar-height);
 }
 
-:where(
-    .no-scrollbar,
-    .scrollbar-none)::-webkit-scrollbar {
-    display: none;
+dialog::-webkit-scrollbar-thumb, table::-webkit-scrollbar-thumb {
+    border-radius: var(--md-sys-scrollbar-thumb-radius);
+    background: var(--md-sys-scrollbar-color-thumb);
 }
 
-/* 3. Utility Classes */
-
-.scrollbar-thin {
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    scrollbar-color: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5))
-                     var(--md-sys-scrollbar-color-track, transparent);
+dialog::-webkit-scrollbar-thumb:hover, table::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-scrollbar-color-thumb-hover);
 }
 
-/* 4. Thin Custom Scrollbars (Consolidated Master Group) */
-:where(
-    .m3-config-dialog,
-    .m3-dialog-surface,
-    .scrollbar-thin,
-    table.quickgrid
-)::-webkit-scrollbar {
-    width: var(--md-sys-scrollbar-width, 6px);
-    height: var(--md-sys-scrollbar-height, 6px);
+dialog::-webkit-scrollbar-track, table::-webkit-scrollbar-track {
+    background: var(--md-sys-scrollbar-color-track);
 }
-
-:where(
-    .m3-config-dialog,
-    .m3-dialog-surface,
-    .scrollbar-thin,
-    table.quickgrid
-)::-webkit-scrollbar-thumb {
-    border-radius: var(--md-sys-scrollbar-thumb-radius, var(--md-sys-shape-corner-full, 9999px));
-    background: var(--md-sys-scrollbar-color-thumb, rgb(from var(--md-sys-color-outline-variant) r g b / 0.5));
-}
-
-:where(
-    .m3-config-dialog,
-    .m3-dialog-surface,
-    .scrollbar-thin,
-    table.quickgrid
-)::-webkit-scrollbar-thumb:hover {
-    background: var(--md-sys-scrollbar-color-thumb-hover, var(--md-sys-color-outline));
-}
-
-:where(
-    .m3-config-dialog,
-    .m3-dialog-surface,
-    .scrollbar-thin,
-    table.quickgrid
-)::-webkit-scrollbar-track {
-    background: var(--md-sys-scrollbar-color-track, transparent);
-}
-
-/* 5. Custom Unique Scrollbar Modifiers */

@@ -40,11 +40,10 @@
 
 ## 2. 🔤 Обязательный `@using static` для ВСЕХ констант (Только короткие имена)
 
-Все константы классов, иконок, локализации и статических ассетов подключаются в начале `.razor` файла через лаконичные директивы `@using static` (благодаря `@using Assets.Constants` в `_Imports.razor`):
+Все константы иконок, локализации, перечислений и статических ассетов подключаются в начале `.razor` файла через лаконичные директивы `@using static` (благодаря `@using Assets.Constants` в `_Imports.razor`):
 
 | Группа констант / Enums | Директива подключения | Использование в разметке | Пример в шаблоне |
 |---|---|---|---|
-| **CSS-классы** | `@using static Classes.<Group>` | `@<ClassName>` | `<section class=@PanelHeader>` или `class=@($"{Card} {Elevated}")` |
 | **Иконки** | `@using static Icons` | `@<IconName>` | `<Icon Name=@AccountBalanceWallet />` |
 | **Локализация** | `@using static Loc.<Domain>` | `@L[<KeyName>]` | `<h3>@L[HeaderTitle]</h3>` или `<TextField Label=@L[HeaderTitle] />` |
 | **Ассеты / URL** | `@using static Assets.<Group>` | `@<AssetName>` | `<img src=@LogoSvg alt=@L[LogoAlt] />` |
@@ -59,7 +58,6 @@
 - `Icon=@Close` (вместо `Icon="@Close"`)
 - `OnClick=@CloseDialogAsync` (вместо `OnClick="CloseDialogAsync"` или `OnClick="@CloseDialogAsync"`)
 - `Open=@IsOpen` (вместо `Open="@IsOpen"`)
-- `class=@HeaderBar` (вместо `class="@HeaderBar"`)
 - `Variant=@Outlined` (вместо `Variant="ButtonVariant.Outlined"` или `Variant=@ButtonVariant.Outlined`)
 - `Variant=@Filled` (вместо `Variant="Filled"` или `Variant=@ButtonVariant.Filled`)
 - `Selected=@(durationMonths == 1)` (вместо `Selected="@(durationMonths == 1)"`)
@@ -71,11 +69,11 @@
 ### Стандарт ультра-короткого синтаксиса: `что-то=@*` или `*=@*`
 В разметке `*.razor` все атрибуты записываются в чистом ультра-коротком формате: `что-то=@*` (или `*=@*`).
 
-- **Канонический синтаксис**: `class=@ItemUnitPrice`, `class=@HeaderTitleBox`, `class=@TotalRow`, `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`.
-- **Импорт через `using static`**: короткие имена подключаются напрямую директивами `@using static Classes.<Group>`, `@using static Icons`, `@using static Loc.<Domain>`, `@using static <EnumName>` в заголовке файла.
+- **Канонический синтаксис**: `Icon=@Close`, `Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`, `Label=@L[StepCart]`, `Selected=@IsActive`.
+- **Импорт через `using static`**: короткие имена подключаются напрямую директивами `@using static Icons`, `@using static Loc.<Domain>`, `@using static <EnumName>` в заголовке файла.
 - **Без полей-алиасов в code-behind**: константы дизайн-системы не дублируются в `*.razor.cs` (`public const string Alias = ...`), а подключаются через `using static`.
-- **Без составных путей с точками**: составные выражения вида `class=@Classes.Common.ItemUnitPrice`, `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined` заменяются на ультра-короткие `class=@ItemUnitPrice`, `Icon=@Close`, `Variant=@Outlined`.
-- **Разрешение коллизий без точек в атрибутах**: если две группы содержат одноименные константы, импортируйте профильную группу в заголовке файла, сохраняя ультра-короткий синтаксис в атрибуте (`class=@HeaderTitleBox`).
+- **Без составных путей с точками**: составные выражения вида `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined`, `Label=@Loc.Checkout.StepCart` заменяются на ультра-короткие `Icon=@Close`, `Variant=@Outlined`, `Label=@L[StepCart]`.
+- **Разрешение коллизий без точек в атрибутах**: если две группы содержат одноименные константы, импортируйте профильную группу в заголовке файла, сохраняя ультра-короткий синтаксис в атрибуте.
 
 ### Тотальное сокращение перечислений через `@using static <EnumName>`:
 Для всех перечислений (enums), типов вариантов и фабрик используется директива `@using static`:
@@ -88,11 +86,6 @@
 2. **Дженерики в атрибутах оборачиваются в скобки** `Variant=@(...)`, чтобы Razor-парсер не спутал `<T>` с открывающим HTML-тегом:
    - `Variant=@(TextField<decimal>.TextFieldVariant.Outlined)`
    - `Format=@(NumberFormat<decimal>.Currency)`
-3. **Составные классы (Тотальная минимизация кавычек через `string.Format`)**:
-   - Для объединения нескольких CSS-классов без кавычек используется метод `string.Format(Temp, ...)`:
-     `const string Temp = "{0} {1} {2}";` (в code-behind или через `@using static Formats` / `Two`, `Three`, `Temp`)
-     В разметке: `class=@string.Format(Temp, Const1, Const2, Const3)` или `class=@string.Format(Two, Card, Elevated)`.
-   - В отличие от интерполяции `class=@($"{Card} {Elevated}")`, вызов `class=@string.Format(Two, Card, Elevated)` **не содержит ни одной двойной кавычки `"`**, гарантируя 100% Zero-Quote синтаксис разметки.
 4. **Именование методов-обработчиков (Zero Collisions)**: методы в `*.razor.cs` именуются полно и описательно (`CloseDialogAsync`, `SubmitOrderAsync`), чтобы исключить коллизии со статическими именами иконок (`Icons.Close`).
 
 ---
@@ -101,8 +94,8 @@
 
 | Антипаттерн | Канонический стандарт | Инженерное обоснование |
 |---|---|---|
-| `Icon="@Close"`, `OnClick="Close"`, `class="@Header"` | `Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@Header` | Чистый синтаксис без кавычек исключает путаницу C#-выражений со строками |
-| `class=@Classes.Common.ItemUnitPrice`, `Icon=@Icons.Close` | `class=@ItemUnitPrice`, `Icon=@Close` через `@using static` | Ультра-короткий синтаксис без точек делает разметку чистой и читаемой |
+| `Icon="@Close"`, `OnClick="Close"` | `Icon=@Close`, `OnClick=@CloseDialogAsync` | Чистый синтаксис без кавычек исключает путаницу C#-выражений со строками |
+| `Icon=@Icons.Close`, `Variant=@ButtonVariant.Outlined` | `Icon=@Close`, `Variant=@Outlined` через `@using static` | Ультра-короткий синтаксис без точек делает разметку чистой и читаемой |
 | `Variant=@ButtonVariant.Outlined`, `Type=@ChipType.Filter` | `Variant=@Outlined`, `Type=@Filter` через `@using static <Enum>` | Краткие имена вариантов перечислений без длинных префиксов |
 | Поля-алиасы в code-behind (`public const string Alias = ...`) | Прямой `@using static` в `.razor` / `using static` в `.razor.cs` | Исключает дублирование констант и засорение C#-классов |
 | Излишняя вложенность (`div > div > div`) | Плоское дерево, выравнивание через CSS Grid на родителе | Облегчает DOM-дерево, ускоряет рендеринг и исключает паразитные обертки |
@@ -111,7 +104,6 @@
 | `<div>` вместо семантики (`<div class="header">`) | `<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<nav>` | Семантическая структура для скринридеров и доступности |
 | Строковые литералы вида `"любой текст"` | `@L[Key]` через словари локализации | Поддержка мультиязычности (RU, UZ, EN) без хардкода |
 | `class="m3-card elevated"` или `class=@($"{A} {B}")` | `class=@HeaderBar` или `class=@string.Format(Two, Card, Elevated)` | Тотальное исключение двойных кавычек в разметке и типобезопасность классов |
-| `@Classes.Cards.Card` или `@Classes.Common.Header` | `@Card`, `@Header` через `@using static Classes.<Group>` | Лаконичная разметка без длинных префиксов |
 | `L["HeaderTitle"]` (сырые строки ключей) | `@L[HeaderTitle]` через `@using static Loc.<Domain>` | Проверка ключей компилятором при рефакторинге |
 | `@(L[Title] ?? "Заголовок")` (fallback `??`) | `@L[Title]` без заглушек | Чистый вызов локализации, гарантированный parity в `.resx` |
 | `<style>...</style>` и инлайн `style="..."` | Стили в `Assets/wwwroot/css/` по слоёной архитектуре Cascade Layers (`@layer`) | Чистая разметка и предсказуемый каскад стилей |
@@ -211,7 +203,7 @@
 | **Уровень 1** | `@layer layouts;` | **Макро-каркас приложения** (App Shell) | `<body>`, `<header>`, `<nav>`, `<main>`, `<footer>` |
 | **Уровень 2** | `@layer pages;` | **Сетка страницы / экрана** (Page Macro-Grid) | `<main>`, `<section>`, `<header>`, `<nav>`, `<aside>` |
 | **Уровень 3** | `@layer widgets;` | **Отраслевой бизнес-организм** (Smart Widget) | `<section>`, `<aside>`, `<fieldset>` + `<legend>`, `<article>`, `<MaterialDialog>` |
-| **Уровень 4** | `@layer widgets;` / `@layer components;` | **Внутренняя группировка виджета** (Sub-Grid) | `<ul>` / `<ol>`, `<div class=@Grid2Col>`, `<div class=@ActionRow>` |
+| **Уровень 4** | `@layer widgets;` / `@layer components;` | **Внутренняя группировка виджета** (Sub-Grid) | `<ul>` / `<ol>`, `<fieldset grid-2-col>`, `<menu actions>` |
 | **Уровень 5** | `@layer components;` | **UI-примитивы и молекулы** (Dumb Components) | `<Button>`, `<IconButton>`, `<TextField>`, `<Select>`, `<Card>`, `<li>`, `<Tabs>` |
 | **Уровень 6** | `@layer components;` | **Внутренний слот / контейнер компонента** | `<span>`, `<div slot="...">`, `<strong>` |
 | **Уровень 7** | — | **Листовой неделимый атом** (Leaf Atom) | `<Icon Name=@...>`, `<time>`, текст `@L[...]` |
@@ -239,12 +231,12 @@
 
 | Зачем разработчик ставил <div> | Антипаттерн (<div>) | Канонический стандарт Socratic |
 | :--- | :--- | :--- |
-| **2–3 колонки полей ввода** | <fieldset> <div class="grid-2col"> <input/> </div> </fieldset> | <fieldset class="grid-2-col"> <legend>...</legend> <TextField/> </fieldset> (сетка на самом <fieldset>) |
-| **Ряд кнопок действий** | <div class="action-buttons"> <Button/> </div> | <menu class=@ActionMenu> или <footer class=@DialogFooter> |
+| **2–3 колонки полей ввода** | <fieldset> <div class="grid-2col"> <input/> </div> </fieldset> | <fieldset grid-2-col> <legend>...</legend> <TextField/> </fieldset> (сетка на самом <fieldset>) |
+| **Ряд кнопок действий** | <div class="action-buttons"> <Button/> </div> | <menu actions> или <footer actions> |
 | **Группа заголовка и иконки** | <div class="title-box"> <Icon/> <h3>...</h3> </div> | <header> с grid-auto-flow или <hgroup> |
-| **Скроллируемый список** | <div class="scroll-box"> <ul>...</ul> </div> | <ul class="scrollable"> (прямой overflow-y: auto; на <ul>) |
-| **Фон/тень/стекло (Glass/Card)** | <div class="glass-card"> <section>...</section> </div> | <section class=@string.Format(Two, SectionRoot, Glass)> (класс прямо на теге) |
-| **Боковая панель / сайдбар** | <div class="sidebar">...</div> | <aside class=@SidebarLayout>... |
+| **Скроллируемый список** | <div class="scroll-box"> <ul>...</ul> </div> | <ul scrollable> (прямой overflow-y: auto; на <ul>) |
+| **Фон/тень/стекло (Glass/Card)** | <div class="glass-card"> <section>...</section> </div> | <section card glass> (семантические атрибуты прямо на теге) |
+| **Боковая панель / сайдбар** | <div class="sidebar">...</div> | <aside sidebar>... |
 5. **Виджеты — плоские соседи, а не матрёшки**:
    - Бизнес-виджеты размещаются в сетке страницы параллельно, как независимые братья, а не вкладываются один в другой. Любая матрёшечная вложенность виджета в виджет запрещена.
 
@@ -272,39 +264,35 @@
 
 ```razor
 @namespace Socratic.Checkout
-@using static Classes.Cards
-@using static Classes.Buttons
-@using static Classes.Typography
-@using static Classes.Payment
 @using static Icons
 @using static Loc.Checkout
 @using static ButtonVariant
 @inject IStringLocalizer L
 
-<article class=@($"{CheckoutPanel} {Card} {Elevated}")>
-    <header class=@PanelHeader>
-        <h3 class=@($"{Headline} {TitleLarge}")>
+<article panel-checkout>
+    <header>
+        <h3>
             <Icon Name=@AccountBalanceWallet />
             @L[HeaderTitle]
         </h3>
-        <p class=@($"{BodySubtext} {BodyMedium}")>@L[HeaderSubtitle]</p>
+        <p>@L[HeaderSubtitle]</p>
     </header>
 
-    <nav class=@WorkflowStepper aria-label=@L[StepPayment]>
-        <ol class=@StepList>
-            <li class=@($"{StepItem} completed")>
-                <span class=@StepNum>✓</span>
-                <span class=@Label>@L[StepCart]</span>
+    <nav stepper aria-label=@L[StepPayment]>
+        <ol>
+            <li completed>
+                <span>✓</span>
+                <span>@L[StepCart]</span>
             </li>
-            <li class=@($"{StepLine} active") aria-hidden="true"></li>
-            <li class=@($"{StepItem} active") aria-current="step">
-                <span class=@StepNum>2</span>
-                <span class=@Label>@L[StepPayment]</span>
+            <li line active aria-hidden="true"></li>
+            <li active aria-current="step">
+                <span>2</span>
+                <span>@L[StepPayment]</span>
             </li>
         </ol>
     </nav>
 
-    <footer class=@ActionsGroup>
+    <footer actions>
         <Button Variant=@Filled LeadingIcon=@Payment OnClick=@ProcessPaymentAsync>
             @L[PayButton]
         </Button>
@@ -320,12 +308,12 @@
 ## 10. ✅ Definition of Done (DoD) для разметки (*.razor)
 
 Перед сдачей любого Razor-компонента или страницы агент обязан проверить:
-1. **Чистые короткие имена и тотальное сокращение через `@using static` (Ultra-Short Syntax)**: Константы классов (`@Card`), иконок (`@Add`), локализации (`@L[Key]`), ассетов (`@LogoSvg`) и перечислений (`Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`) подключены строго через короткие `@using static Classes.<Group>`, `@using static Icons`, `@using static Loc.<Domain>`, `@using static ButtonVariant`. Запрещены длинные квалификаторы `@ButtonVariant.*`, `@ChipType.*`, `@Classes.*`, `@L[Loc.*]`.
-2. **Синтаксис атрибутов без кавычек и ультра-короткий формат `что-то=@*` (0 составных путей с точками `что-то=@*.*.*`)**: Для всех C#-констант, параметров компонентов, методов-обработчиков, классов, булевых флагов и перечислений используется чистый синтаксис без кавычек (`Icon=@Close`, `OnClick=@CloseDialogAsync`, `class=@HeaderBar`, `Open=@IsOpen`, `Variant=@Outlined`). Категорически запрещены любые выражения с точками вида `что-то=@*.*.*` (строго `что-то=@*`); категорически запрещены поля-алиасы в code-behind (только `using static`). Строковые кавычки остаются только для литеральных HTML-атрибутов (`Slot="icon"`). Выражения с дженериками экранируются круглыми скобками `Variant=@(...)`.
+1. **Чистые короткие имена и тотальное сокращение через `@using static` (Ultra-Short Syntax)**: Константы иконок (`@Add`, `@Close`), локализации (`@L[Key]`), ассетов (`@LogoSvg`) и перечислений (`Variant=@Outlined`, `Variant=@Filled`, `Type=@Filter`) подключены строго через короткие директивы `@using static Icons`, `@using static Loc.<Domain>`, `@using static ButtonVariant`. Запрещены длинные квалификаторы `@ButtonVariant.*`, `@ChipType.*`, `@L[Loc.*]`. Кодогенераторы классов ликвидированы; директивы `@using static Classes.*` запрещены.
+2. **Синтаксис параметров без кавычек и ультра-короткий формат `что-то=@*` (0 составных путей с точками `что-то=@*.*.*`)**: Для всех C#-констант, параметров компонентов, методов-обработчиков, булевых флагов и перечислений используется чистый синтаксис без кавычек (`Icon=@Close`, `OnClick=@CloseDialogAsync`, `Open=@IsOpen`, `Variant=@Outlined`, `Label=@L[Key]`). CSS-классы (`class=@...`) исключены. Категорически запрещены любые выражения с точками вида `что-то=@*.*.*` (строго `что-то=@*`); категорически запрещены поля-алиасы в code-behind (только `using static`). Строковые кавычки остаются только для литеральных HTML-атрибутов (`Slot="icon"`). Выражения с дженериками экранируются круглыми скобками `Variant=@(...)`.
 3. **Плоская семантическая структура (Zero Wrapper Bloat)**: Использованы правильные теги HTML5 (`<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<fieldset>`, `<ul>`/`<li>`). Отсутствует лишняя вложенность дерева; исключены паразитные `<div>` ради отступов; запрещены кликабельные `<div>`/`<span>` с `@onclick`.
 4. **Zero Hardcoded Strings**: Никаких строковых констант вида `"любой текст"` в разметке. Весь UI-текст выносится строго в `.resx` (`@L[Key]`) либо в типизированные C#-константы.
-5. **Zero Magic Strings**: Ни одной сырой строки `class="..."` и ни одного строкового ключа `L["..."]`.
-6. **Zero Prefixes**: Отсутствуют длинные квалификаторы `@Classes.*` и `@L[Loc.*]`.
+5. **Zero Magic Strings & Zero Classes**: Полное отсутствие атрибутов `class` на HTML5-тегах и ни одного строкового ключа `L["..."]`.
+6. **Zero Prefixes**: Отсутствуют длинные квалификаторы вида `@L[Loc.*]` или составные пути с точками в параметрах.
 7. **Zero Fallback Clutter**: Ни одного `?? "..."` в вызовах локализации.
 8. **Material.Web First**: Использованы готовые компоненты `Material.Web` (`<Button>`, `<TextField>`, `<MaterialDialog>`).
 9. **Zero Style Clutter**: Ни одного блока `<style>` и ни одного инлайн-стиля `style="..."`.

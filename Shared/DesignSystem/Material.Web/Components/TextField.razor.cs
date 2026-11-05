@@ -9,17 +9,12 @@ using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
-using static Assets.Constants.Classes.Common;
-using static Assets.Constants.Formats;
 using Enum = System.Enum;
 
 namespace Material.Web.Components;
 
 public partial class TextField<TValue> : InputBase<TValue>
 {
-    protected string ComputedTextFieldClass => string.IsNullOrEmpty(CssClass)
-        ? MaterialTextField
-        : string.Format(Two, CssClass, MaterialTextField);
     public enum TextFieldVariant
     {
         Filled,
@@ -81,10 +76,6 @@ public partial class TextField<TValue> : InputBase<TValue>
     [Parameter] public RenderFragment? ChildContent { get; set; }
 
     protected bool HasValidationErrors => EditContext?.GetValidationMessages(FieldIdentifier).Any() == true;
-
-    protected new string CssClass => AdditionalAttributes?.TryGetValue("class", out var cssClass) == true 
-        ? $"material-text-field {cssClass}" 
-        : "material-text-field";
 
     protected string? ComputedStyle
     {

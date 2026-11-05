@@ -1,132 +1,26 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / chat.css
-   Chat Messaging Widgets, Message Stream, Bubbles & Input Controls
+   Layer: widgets — Conversational Chat & Message Stream (Pure Classless)
    ========================================================================== */
 
-.assistant-message {
-    display: grid;
-    grid-template: min-content / 2rem minmax(0, 1fr);
-    gap: 0.25rem;
+section[chat-stream], [data-chat-widget] {
+    grid-template-rows: 1fr auto;
+    gap: var(--space-md);
+    height: 100%;
+    overflow: hidden;
 }
 
-.citation {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-bottom: 2px solid var(--md-sys-color-tertiary);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background-color: var(--md-sys-color-surface-container);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-decoration: none;
-    box-shadow: var(--md-sys-elevation-level1);
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring-soft);
-}
-
-.citation svg {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.citation:active {
-    background-color: var(--md-sys-color-surface-container-high);
-    transform: scale(0.96);
-}
-
-.citation[href]:hover {
-    border-color: var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-expressive-1);
-    transform: translateY(-1px);
-}
-
-assistant-message h3 {
-    margin: 1rem 0;
-    font-weight: 600;
-}
-
-assistant-message li {
-    margin: 0.5rem 0;
-}
-
-assistant-message ol {
-    margin-left: 1.5rem;
-    list-style-type: decimal;
-}
-
-assistant-message p + p {
-    margin-top: 1rem;
-}
-
-assistant-message pre > code {
-    display: block;
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background-color: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-    overflow-x: auto;
-}
-
-assistant-message strong {
-    font-weight: 600;
-}
-
-assistant-message td {
-    padding: 0.1rem 0.5rem;
-}
-
-assistant-message th {
-    padding: 0.1rem 0.5rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    background-color: var(--md-sys-color-surface-container-high);
-    text-align: left;
-}
-
-assistant-message tr:nth-child(even) {
-    background-color: var(--md-sys-color-surface-container-high);
-}
-
-assistant-message ul {
-    margin-left: 1.5rem;
-    list-style-type: disc;
-}
-
-chat-messages > :where(div, article, section):last-of-type {
-    margin-bottom: 1rem;
-}
-
-assistant-message table {
-    margin: 1rem 0;
-}
-
-.user-message {
-    justify-self: end;
-    min-width: 25%;
-    max-width: calc(100% - 5rem);
-    padding: 0.5rem 1.25rem;
-    border-radius: var(--md-sys-shape-expressive-asymmetric-1, 24px 24px 4px 24px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    white-space: pre-wrap;
-    box-shadow: var(--md-sys-elevation-level1);
-}
-
-.message-list-container {
-    min-height: 0;
-    padding: 1.5rem 1.5rem calc(1rem + env(safe-area-inset-bottom, 0));
-    color: var(--md-sys-color-on-surface);
-    overflow-x: hidden;
+section[chat-stream] > ul, [data-chat-widget] > ul {
+    align-content: start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
     overflow-y: auto;
-    overscroll-behavior-y: contain;
 }
 
-/* --- Call Container --- */
-
+section[chat-stream] > footer, [data-chat-widget] > footer {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--md-sys-color-surface-container);
+    border-radius: var(--shape-full);
+}

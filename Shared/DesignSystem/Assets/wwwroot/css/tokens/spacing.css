@@ -26,6 +26,7 @@
     --md-sys-spacing-8: 2rem;
     --md-sys-spacing-9: 2.25rem;
     --md-sys-spacing-bottom-nav: 72px;
+    --md-sys-spacing-header: 64px;
 }
 
 @media (max-width: 599.98px) {

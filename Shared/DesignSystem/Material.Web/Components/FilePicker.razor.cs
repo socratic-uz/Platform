@@ -7,8 +7,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Assets.Constants;
-using static Assets.Constants.Classes.Picker;
-using static Assets.Constants.Formats;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
@@ -20,18 +18,7 @@ namespace Material.Web.Components;
 
 public partial class FilePicker : ComponentBase
 {
-    protected string GetFileCardClass(bool isNew) => FileCard;
-
-    protected string GetIconPreviewClass(string? contentType, string? fileName)
-    {
-        var iconCls = GetIconClass(contentType, fileName);
-        return string.IsNullOrEmpty(iconCls) ? IconPreview : string.Format(Two, IconPreview, iconCls);
-    }
-
-    protected string UploadCardClass => isDragging
-        ? string.Format(Two, UploadCard, Dragging)
-        : UploadCard;
-    [Inject] public IStringLocalizer L { get; set; } = default!;
+        [Inject] public IStringLocalizer L { get; set; } = default!;
 
     protected string inputId = $"file-picker-{Guid.NewGuid():N}";
     protected bool isDragging = false;
@@ -181,21 +168,7 @@ public partial class FilePicker : ComponentBase
         return AssetConstants.Icons.InsertDriveFile;
     }
 
-    protected string GetIconClass(string contentType, string fileName)
-    {
-        var mime = contentType.ToLowerInvariant();
-        var ext = Path.GetExtension(fileName).ToLowerInvariant();
-
-        if (mime == "application/pdf" || ext == ".pdf") return AssetConstants.Classes.Picker.PdfType;
-        if (mime.Contains("zip") || mime.Contains("compressed") || ext == ".zip" || ext == ".rar" || ext == ".7z") return AssetConstants.Classes.Picker.ArchiveType;
-        if (mime.Contains("word") || ext == ".doc" || ext == ".docx") return AssetConstants.Classes.Picker.DocType;
-        if (mime.Contains("excel") || ext == ".xls" || ext == ".xlsx" || ext == ".csv") return AssetConstants.Classes.Picker.SheetType;
-        if (mime.StartsWith("audio/", StringComparison.OrdinalIgnoreCase)) return AssetConstants.Classes.Picker.AudioType;
-        if (mime.StartsWith("video/", StringComparison.OrdinalIgnoreCase)) return AssetConstants.Classes.Picker.VideoType;
-
-        return AssetConstants.Classes.Picker.GenericType;
-    }
-
+    
     protected (string fileName, string contentType, string url, bool isNew, byte[]? bytesData) GetAttachmentData(int index)
     {
         if (Attachments == null || index < 0 || index >= Attachments.Count)

@@ -1,33 +1,33 @@
 @namespace Web.UI.Components.Layout
-@using static Assets.Constants.Classes.Common
+@using Material.Web.Components
 
 <script type="module" src=@Scripts.Layouts.ReconnectModal></script>
 
 <dialog id="components-reconnect-modal" data-nosnippet>
-    <section class=@ComponentsReconnectContainer>
-        <figure class=@ComponentsRejoiningAnimation aria-hidden="true">
+    <section>
+        <figure aria-hidden="true">
             <span></span>
             <span></span>
         </figure>
-        <p class=@ComponentsReconnectFirstAttemptVisible>
+        <p data-state="first-attempt">
             Rejoining the server...
         </p>
-        <p class=@ComponentsReconnectRepeatedAttemptVisible>
+        <p data-state="repeated-attempt">
             Rejoin failed... trying again in <span id="components-seconds-to-next-attempt"></span> seconds.
         </p>
-        <p class=@ComponentsReconnectFailedVisible>
+        <p data-state="failed">
             Failed to rejoin.<br />Please retry or reload the page.
         </p>
-        <button id="components-reconnect-button" class=@ComponentsReconnectFailedVisible>
+        <Button id="components-reconnect-button" data-state="failed">
             Retry
-        </button>
-        <p class=@ComponentsPauseVisible>
+        </Button>
+        <p data-state="paused">
             The session has been paused by the server.
         </p>
-        <button id="components-resume-button" class=@ComponentsPauseVisible>
+        <Button id="components-resume-button" data-state="paused">
             Resume
-        </button>
-        <p class=@ComponentsResumeFailedVisible>
+        </Button>
+        <p data-state="resume-failed">
             Failed to resume the session.<br />Please reload the page.
         </p>
     </section>

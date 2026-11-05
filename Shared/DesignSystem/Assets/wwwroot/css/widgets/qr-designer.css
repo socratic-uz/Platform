@@ -3,81 +3,52 @@
    Component-Driven Architecture
    ========================================================================== */
 
-figure[qr] {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-figure[qr] svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-figure[qr][placeholder] {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-outline-variant);
-    font-size: 48px;
-}
-
 section[qr-customizer] {
-    display: grid;
     gap: 0.75rem;
-    padding: var(--md-sys-spacing-4, 1rem);
+    padding: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container);
 }
 
 section[qr-customizer] > section {
-    display: grid;
     gap: 14px;
-    margin-top: var(--md-sys-spacing-3, 0.75rem);
+    margin-top: var(--md-sys-spacing-3);
 }
 
-section[qr-customizer] fieldset {
+section[qr-customizer] > section > fieldset,
+section[qr-customizer] > section > fieldset > fieldset {
     border: none;
     padding: 0;
-    margin: 0;
-    display: grid;
     gap: 14px;
 }
 
-section[qr-customizer] fieldset legend {
+section[qr-customizer] > section > fieldset > legend,
+section[qr-customizer] > section > fieldset > fieldset > legend {
     color: var(--md-sys-color-outline);
     font-size: 0.75rem;
     font-weight: 600;
     padding: 0;
-    margin: 0;
 }
 
-section[qr-customizer] menu {
-    display: grid;
+section[qr-customizer] > section > fieldset > menu,
+section[qr-customizer] > section > fieldset > fieldset > menu {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
-section[qr-customizer] menu > label {
-    display: grid;
-    gap: var(--md-sys-spacing-1, 0.25rem);
+section[qr-customizer] > section > fieldset > menu > label,
+section[qr-customizer] > section > fieldset > fieldset > menu > label {
+    gap: var(--md-sys-spacing-1);
     justify-items: center;
     color: var(--md-sys-color-outline);
     font-size: 0.7rem;
     font-weight: 600;
 }
 
-section[qr-customizer] fieldset[slider] > legend {
+section[qr-customizer] > section > fieldset:has(> md-slider) > legend,
+section[qr-customizer] > section > fieldset > fieldset:has(> md-slider) > legend {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -86,6 +57,27 @@ section[qr-customizer] fieldset[slider] > legend {
     font-weight: 600;
 }
 
-section[qr-customizer] fieldset[slider] > legend > span:last-child {
+section[qr-customizer] > section > fieldset:has(> md-slider) > legend > span:last-child,
+section[qr-customizer] > section > fieldset > fieldset:has(> md-slider) > legend > span:last-child {
     color: var(--md-sys-color-primary);
+}
+
+figure[qr] {
+    place-items: center;
+    height: 100%;
+}
+
+figure[qr] > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+figure[qr][placeholder] {
+    place-items: center;
+    height: 100%;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-outline-variant);
+    font-size: 48px;
 }

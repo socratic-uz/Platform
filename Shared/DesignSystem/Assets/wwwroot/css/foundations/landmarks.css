@@ -1,0 +1,581 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / landmarks.css
+   Document Landmarks (header, nav, main, footer) & Sectioning (section, article, aside)
+   ========================================================================== */
+
+/* --- Media Elements --- */
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+figure {
+    gap: var(--md-sys-spacing-2);
+}
+
+figcaption {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ==========================================================================
+   Document Level Landmarks (1st DOM Level under body)
+   ========================================================================== */
+
+body > header,
+body > nav,
+body > main,
+body > footer {
+    color: var(--md-sys-color-on-surface);
+}
+
+/* --- Top App Bar (body > header) --- */
+
+body > header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: var(--md-sys-z-overlay);
+    min-height: 72px;
+    padding: var(--md-sys-spacing-4);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface);
+    transition:
+        background-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard),
+        border-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+}
+
+body > header > nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.75rem;
+    align-items: center;
+    width: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+}
+
+body > header > nav > hgroup {
+    display: inline-grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    width: auto;
+    white-space: nowrap;
+}
+
+body > header > nav > hgroup > h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body > header > nav > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 0.5rem;
+    color: inherit;
+    white-space: nowrap;
+}
+
+body > header > menu:last-child {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    justify-self: end;
+    align-items: center;
+    width: auto;
+}
+
+body > header:has(> :nth-child(3)) {
+    grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
+}
+
+/* --- Navigation Rail / Shell (body > nav) --- */
+
+body > nav > a {
+    display: grid;
+    border-radius: var(--md-sys-shape-corner-large);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+body > nav > a > span {
+    min-inline-size: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+body > nav > a > md-icon {
+    border-radius: var(--md-sys-shape-corner-large);
+}
+
+/* --- Main Page Body (body > main) --- */
+
+body > main {
+    align-content: start;
+    gap: var(--md-sys-gutter-section);
+    padding: var(--md-sys-gutter-page);
+}
+
+body > main > header {
+    gap: var(--md-sys-spacing-2);
+}
+
+body > main > header > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+}
+
+/* --- Footer (body > footer) --- */
+
+body > footer {
+    position: relative;
+    padding: var(--md-sys-spacing-6);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+body > footer > section:first-of-type,
+body > footer > section:only-child {
+    grid-template-columns: minmax(0, 1.35fr) repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+    gap: 2.5rem 1.5rem;
+    align-items: start;
+}
+
+body > footer > section > nav {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    align-content: start;
+    overflow: hidden;
+}
+
+body > footer > section > nav > h4 {
+    color: var(--md-sys-color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+body > footer > section > nav > ul {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: 0.25rem;
+}
+
+body > footer > section > nav > ul > li > a {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 0.55rem;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem;
+    border-radius: var(--md-sys-shape-corner-small);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+body > footer > section > nav > ul > li > a > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body > footer > section > nav > ul > li > a > md-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+body > footer > section > nav > ul > li > a:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
+    color: var(--md-sys-color-on-surface);
+    transform: translateX(2px);
+}
+
+body > footer > section > article {
+    gap: 0.75rem;
+    align-content: start;
+    max-width: 340px;
+}
+
+body > footer > section > article > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    line-height: 1.55;
+}
+
+body > footer > section > article > aside {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    width: max-content;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-medium);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+body > footer > section > article > aside > span:first-child {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+    box-shadow: 0 0 8px var(--md-sys-color-primary);
+}
+
+body > footer > section > article > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    min-height: 44px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+body > footer > section > article > a > md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 28px;
+}
+
+body > footer > section:last-of-type:not(:first-of-type),
+body > footer > aside {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > span {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: end;
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > span > md-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > menu {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Sectioning & Structural Containers
+   ========================================================================== */
+
+section,
+article,
+aside {
+    align-content: start;
+}
+
+section {
+    gap: var(--md-sys-spacing-4);
+}
+
+hgroup {
+    gap: var(--md-sys-spacing-2);
+}
+
+hgroup > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+section > header {
+    gap: var(--md-sys-spacing-1);
+}
+
+article {
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-5);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-large);
+    background-color: var(--md-sys-color-surface-container-low);
+}
+
+article > header,
+article > footer {
+    gap: var(--md-sys-spacing-3);
+}
+
+aside {
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background-color: var(--md-sys-color-surface-container);
+}
+
+nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-4);
+}
+
+nav > ul,
+nav > ol {
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+}
+
+/* ==========================================================================
+   Centering Attributes Contract
+   ========================================================================== */
+
+[center] {
+    place-content: center;
+    place-items: center;
+}
+
+[center-h] {
+    justify-content: center;
+    justify-items: center;
+}
+
+[center-v] {
+    align-content: center;
+    align-items: center;
+}
+
+[center-self] {
+    justify-self: center;
+    margin-inline: auto;
+}
+
+[center-text] {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Media Queries & Responsive Overrides
+   ========================================================================== */
+
+@media all and (display-mode: fullscreen) {
+    body > nav,
+    body > footer,
+    body > header {
+        display: none;
+    }
+}
+
+@media print {
+    body > nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    body > nav {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-flow: row;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        gap: 0.5rem;
+        align-self: start;
+        place-content: start stretch;
+        place-items: center stretch;
+        position: sticky;
+        top: 0;
+        z-index: var(--md-sys-z-surface);
+        width: calc(76px + env(safe-area-inset-left, 0px));
+        height: 100dvh;
+        max-height: 100dvh;
+        padding: var(--md-sys-spacing-2);
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 0;
+        background: var(--md-sys-color-surface-container-low);
+        color: var(--md-sys-color-on-surface);
+        text-align: start;
+        overflow: hidden auto;
+    }
+
+    body > nav > a {
+        grid-template-rows: auto auto;
+        gap: 3px;
+        justify-items: center;
+        align-content: center;
+        width: 64px;
+        min-height: 56px;
+        margin: 4px auto;
+        padding: var(--md-sys-spacing-1);
+        color: var(--md-sys-color-on-surface-variant);
+    }
+
+    body > nav > a > span {
+        max-width: 64px;
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 0.72rem;
+        font-weight: 500;
+        line-height: 1.15;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    body > nav > a > md-icon {
+        width: 52px;
+        height: 30px;
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 22px;
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    body > nav > a:hover > md-icon {
+        background: var(--md-sys-color-surface-container-highest);
+        color: var(--md-sys-color-on-surface);
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+    body > header {
+        padding: var(--md-sys-spacing-3);
+    }
+
+    body > header:has(> nav:first-child):has(> :nth-child(3)) {
+        grid-template: auto auto / minmax(0, 1fr) auto;
+        grid-template-areas:
+            "start end"
+            "center center";
+        gap: 0.5rem 0.75rem;
+    }
+
+    body > header:has(> nav:first-child):has(> :nth-child(3)) > nav:first-child {
+        grid-area: start;
+    }
+
+    body > header:has(> nav:first-child):has(> :nth-child(3)) > menu:last-child {
+        grid-area: end;
+        justify-self: end;
+    }
+
+    body > header:has(> nav:first-child):has(> :nth-child(3)) > :nth-child(2) {
+        grid-area: center;
+        grid-column: 1 / -1;
+    }
+
+    body > nav > a {
+        gap: 2px;
+        place-items: center;
+        position: relative;
+        min-width: 48px;
+        min-height: 48px;
+        padding: var(--md-sys-spacing-1);
+        border-radius: var(--md-sys-shape-corner-medium);
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 0.75rem;
+    }
+
+    body > nav > a > span {
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    body > nav > a > md-icon {
+        width: 56px;
+        height: 32px;
+        color: var(--md-sys-color-on-surface-variant);
+        font-size: 24px;
+        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    body > footer {
+        padding: var(--md-sys-spacing-5);
+    }
+
+    body > footer > section > article {
+        grid-column: 1 / -1;
+    }
+
+    body > footer > section:first-of-type,
+    body > footer > section:only-child {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1.25rem;
+    }
+
+    body > footer > section:last-of-type:not(:first-of-type),
+    body > footer > aside {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    body > footer > section:last-of-type:not(:first-of-type) > span {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+    body > header {
+        min-height: calc(56px + env(safe-area-inset-top, 0px));
+        padding: var(--md-sys-spacing-2);
+    }
+
+    body > header > nav {
+        gap: 0.25rem;
+    }
+
+    body > header > nav > hgroup > h1 {
+        font-size: 1.05rem;
+    }
+
+    body > header > nav > a {
+        padding: 0 0.375rem;
+        font-size: 0.85rem;
+    }
+}

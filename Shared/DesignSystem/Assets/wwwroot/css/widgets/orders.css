@@ -7,62 +7,30 @@
    1. Orders Kanban Board: section[kanban]
    ========================================================================== */
 section[kanban] {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-5, 1.25rem);
+    gap: var(--md-sys-spacing-5);
     align-items: start;
-    width: 100%;
-}
-
-@media (max-width: 599.98px) {
-    section[kanban] {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1rem;
-    }
 }
 
 /* Kanban Columns */
 section[kanban] > section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     min-height: 380px;
-    padding: var(--md-sys-spacing-5, 1.25rem);
+    padding: var(--md-sys-spacing-5);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-top: 4px solid var(--md-sys-color-tertiary);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
-}
-
-section[kanban] > section:last-child {
-    border-top-color: var(--md-sys-color-primary);
 }
 
 /* Kanban Column Header */
 section[kanban] > section > header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-section[kanban] > section > header > hgroup {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    margin: 0;
-}
-
-section[kanban] > section > header > hgroup > h5 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.05rem;
-    font-weight: 600;
 }
 
 section[kanban] > section > header > mark {
@@ -74,62 +42,44 @@ section[kanban] > section > header > mark {
     font-weight: 700;
 }
 
-/* Kanban Column Body & Empty State */
-section[kanban] > section > section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-    align-content: start;
-    width: 100%;
+section[kanban] > section > header > hgroup {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
 }
 
-section[kanban] > section > section > aside[role="status"] {
-    display: grid;
-    opacity: 0.8;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-    justify-items: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
-    color: var(--md-sys-color-outline);
-    font-size: 0.9rem;
-    text-align: center;
+section[kanban] > section > header > hgroup > h5 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Kanban Column Body & Empty State */
+section[kanban] > section > section {
+    gap: 0.75rem;
+    align-content: start;
 }
 
 /* Kanban Card */
-section[kanban] article {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
+section[kanban] > section > section > article {
     gap: 0.5rem;
     padding: 1rem;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
     box-shadow: var(--md-sys-elevation-level1);
-    transition: transform var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard),
-        box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard);
+    transition: transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard),
+        box-shadow var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
     cursor: pointer;
 }
 
-section[kanban] article:hover {
-    box-shadow: var(--md-sys-elevation-level2);
-    transform: translateY(-2px);
-}
-
-section[kanban] article > header {
-    display: grid;
+section[kanban] > section > section > article > header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
 
-section[kanban] article > header > span {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-section[kanban] article > header > mark {
+section[kanban] > section > section > article > header > mark {
     padding: 0.15rem 0.5rem;
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-secondary-container);
@@ -138,8 +88,13 @@ section[kanban] article > header > mark {
     font-weight: 600;
 }
 
-section[kanban] article > section {
-    display: grid;
+section[kanban] > section > section > article > header > span {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+section[kanban] > section > section > article > section {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
     align-items: center;
@@ -147,14 +102,13 @@ section[kanban] article > section {
     font-size: 0.9375rem;
 }
 
-section[kanban] article > section > strong {
+section[kanban] > section > section > article > section > strong {
     color: var(--md-sys-color-primary);
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-section[kanban] article > footer {
-    display: grid;
+section[kanban] > section > section > article > footer {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.4rem;
@@ -166,66 +120,54 @@ section[kanban] article > footer {
     font-weight: 600;
 }
 
+section[kanban] > section > section > article:hover {
+    box-shadow: var(--md-sys-elevation-level2);
+    transform: translateY(-2px);
+}
+
+section[kanban] > section > section > aside {
+    opacity: 0.8;
+    gap: var(--md-sys-spacing-2);
+    justify-items: center;
+    align-items: center;
+    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
+    color: var(--md-sys-color-outline);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+section[kanban] > section:last-child {
+    border-top-color: var(--md-sys-color-primary);
+}
+
 /* ==========================================================================
    2. Kitchen Display System (KDS): section[kds]
    ========================================================================== */
 section[kds] {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-5, 1.25rem);
+    gap: var(--md-sys-spacing-5);
     align-items: start;
-    width: 100%;
-}
-
-@media (max-width: 599.98px) {
-    section[kds] {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1rem;
-    }
 }
 
 /* KDS Columns */
 section[kds] > section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4, 1rem);
+    gap: var(--md-sys-spacing-4);
     min-height: 380px;
-    padding: var(--md-sys-spacing-5, 1.25rem);
+    padding: var(--md-sys-spacing-5);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-top: 4px solid var(--md-sys-color-tertiary);
-    border-radius: var(--md-sys-shape-expressive-corner-large, 24px);
+    border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
-}
-
-section[kds] > section:last-child {
-    border-top-color: var(--md-sys-color-primary);
 }
 
 /* KDS Column Header */
 section[kds] > section > header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-
-section[kds] > section > header > hgroup {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    margin: 0;
-}
-
-section[kds] > section > header > hgroup > h2 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.05rem;
-    font-weight: 600;
 }
 
 section[kds] > section > header > mark {
@@ -237,62 +179,42 @@ section[kds] > section > header > mark {
     font-weight: 700;
 }
 
-/* KDS Column Content & Empty State */
-section[kds] > section > section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-    align-content: start;
-    width: 100%;
+section[kds] > section > header > hgroup {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
 }
 
-section[kds] > section > section > aside[role="status"] {
-    display: grid;
-    opacity: 0.8;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-    justify-items: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
-    color: var(--md-sys-color-outline);
-    font-size: 0.9rem;
-    text-align: center;
+section[kds] > section > header > hgroup > h2 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* KDS Column Content & Empty State */
+section[kds] > section > section {
+    gap: 0.75rem;
+    align-content: start;
 }
 
 /* KDS Card */
-section[kds] article {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-3, 0.75rem);
-    padding: var(--md-sys-spacing-4, 1rem);
+section[kds] > section > section > article {
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-section[kds] article > header {
-    display: grid;
+section[kds] > section > section > article > header {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
     align-items: center;
 }
 
-section[kds] article > header > span {
-    color: var(--md-sys-color-primary);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-}
-
-section[kds] article > header > time,
-section[kds] article > header > mark {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.8125rem;
-}
-
-section[kds] article > header > mark {
+section[kds] > section > section > article > header > mark {
     padding: 0.15rem 0.5rem;
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-primary-container);
@@ -300,22 +222,26 @@ section[kds] article > header > mark {
     font-weight: 700;
 }
 
-section[kds] article > section {
-    display: grid;
+section[kds] > section > section > article > header > span {
+    color: var(--md-sys-color-primary);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+section[kds] > section > section > article > header > time,
+section[kds] > section > section > article > header > mark {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+}
+
+section[kds] > section > section > article > section {
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3, 0.75rem);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-section[kds] article > section > h3 {
-    margin: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.25;
-}
-
-section[kds] article > section > mark {
+section[kds] > section > section > article > section > mark {
     padding: 0.2rem 0.6rem;
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-primary-container);
@@ -324,6 +250,38 @@ section[kds] article > section > mark {
     font-weight: 700;
 }
 
-section[kds] article > md-filled-button {
-    width: 100%;
+section[kds] > section > section > article > section > h3 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+section[kds] > section > section > aside {
+    opacity: 0.8;
+    gap: var(--md-sys-spacing-2);
+    justify-items: center;
+    align-items: center;
+    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-4);
+    color: var(--md-sys-color-outline);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+section[kds] > section:last-child {
+    border-top-color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 599.98px) {
+section[kanban] {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 599.98px) {
+section[kds] {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
 }

@@ -1,31 +1,15 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / profile-dialog.css
-   Pure CSS Grid, Material 3 Tokens & Responsive Ergonomics
+   Layer: widgets — Profile & Account Dialog (Pure Attribute Classless)
    ========================================================================== */
 
-/* Face ID Enrollment Modal */
+dialog[profile] {
+    width: min(440px, calc(100vw - 2 * var(--space-md)));
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
 
-/* --- Profile Dialog Containers --- */
-.profile-title {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.5rem;
-    justify-content: start;
+dialog[profile] > header {
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-primary);
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.profile-container {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 1.5rem;
-}
-
-@media screen and (max-width: 839.98px) {
-    .profile-container {
-        grid-template-columns: minmax(0, 1fr);
-    }
+    gap: var(--space-md);
 }

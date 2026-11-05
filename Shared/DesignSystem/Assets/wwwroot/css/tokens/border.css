@@ -4,6 +4,10 @@
    ========================================================================== */
 
 :root {
+    --md-filled-select-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
+    --md-filled-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
+    --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
+    --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
     --md-sys-shape-asymmetric-end: var(--md-sys-shape-expressive-asymmetric-2);
     --md-sys-shape-asymmetric-start: var(--md-sys-shape-expressive-asymmetric-1);
     --md-sys-shape-card-expressive: var(--md-sys-shape-expressive-card);

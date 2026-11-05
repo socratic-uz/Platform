@@ -1,99 +1,39 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / ai-blob.css
-   AI Neural Visualizer, Spatial Blob & Face Detection Canvas
+   Layer: widgets — AI Orb / Socratic Blob Widget (Pure Attribute Classless)
    ========================================================================== */
+
+figure[ai-blob], [data-ai-blob] {
+    position: relative;
+    place-items: center;
+    aspect-ratio: 1;
+    width: clamp(96px, 18vw, 180px);
+    margin-inline: auto;
+    border-radius: var(--shape-full);
+    background: radial-gradient(
+        circle at 35% 30%,
+        var(--md-sys-color-primary),
+        var(--md-sys-color-tertiary) 65%,
+        transparent 100%
+    );
+    box-shadow: 0 0 48px rgb(from var(--md-sys-color-primary) r g b / 0.35);
+    overflow: hidden;
+}
+
+figure[ai-blob] > canvas,
+[data-ai-blob] > canvas,
+figure[ai-blob] > svg,
+[data-ai-blob] > svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
 svg[ai-blob] {
     position: fixed;
     inset: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100dvh;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-svg[ai-blob] rect {
+    z-index: 0;
     width: 100%;
     height: 100%;
-}
-
-svg[ai-blob] svg {
-    display: block;
-    width: auto;
-    height: auto;
-    background: transparent;
-    overflow: visible;
-    animation: blobSpin 20s linear infinite;
     pointer-events: none;
-}
-
-#blob {
-    --blob-scale: 1;
-    transform: scale(var(--blob-scale));
-    transform-origin: center;
-}
-
-#blob1 {
-    transform: translate(0, 0);
-}
-
-#blob2 {
-    transform: translate(-50%, -50%);
-}
-
-#blob3 {
-    transform: translate(50%, 50%);
-}
-
-#blob4 {
-    transform: translate(50%, -80%);
-}
-
-#blob5 {
-    transform: translate(-50%, 80%);
-}
-
-/* --- Blob SVG Layers --- */
-use[level="0"],
-.l0 {
-    opacity: 1;
-    transform: var(--tr0);
-}
-
-use[level="1"],
-.l1 {
-    opacity: 0.05;
-    filter: url("#blur4");
-    transform: var(--tr1);
-}
-
-use[level="2"] {
-    opacity: 0.05;
-    filter: url("#blur4");
-    transform: var(--tr2);
-}
-
-use[level="3"] {
-    opacity: 0.05;
-    filter: url("#blur4");
-    transform: var(--tr3);
-}
-
-use[level="4"] {
-    opacity: 0.05;
-    filter: url("#blur4");
-    transform: var(--tr4);
-}
-
-[href="#baseBlob2"]:is([level="0"], .l0) {
-    --s0: 0.8;
-    --t0: calc((1 - var(--s0)) * 50%);
-    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
-}
-
-[href="#baseBlob3"]:is([level="0"], .l0) {
-    --s0: 0.6;
-    --t0: calc((1 - var(--s0)) * 50%);
-    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
+    display: block;
 }

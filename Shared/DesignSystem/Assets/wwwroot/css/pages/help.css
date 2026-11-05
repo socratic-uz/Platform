@@ -4,42 +4,20 @@
    ========================================================================== */
 
 main[help] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
     gap: 3.5rem;
     position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
     padding: 2.5rem var(--md-sys-gutter-page) 3rem;
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
     overflow-x: clip;
 }
 
-@media (max-width: 839.98px) {
-    main[help] {
-        gap: 2.5rem;
-        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav, 72px) + env(safe-area-inset-bottom, 0px) + 2rem);
-        padding-right: max(1rem, env(safe-area-inset-right, 0px));
-        padding-left: max(1rem, env(safe-area-inset-left, 0px));
-    }
-}
-
 /* Header Hero */
 main[help] > header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
 }
 
-main[help] > header mark {
+main[help] > header > mark {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -54,8 +32,7 @@ main[help] > header mark {
     font-weight: 600;
 }
 
-main[help] > header h1 {
-    margin: 0;
+main[help] > header > h1 {
     color: var(--md-sys-color-on-surface);
     font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 800;
@@ -63,114 +40,46 @@ main[help] > header h1 {
     overflow-wrap: anywhere;
 }
 
-main[help] > header h1 > span:first-child {
+main[help] > header > h1 > span:first-child {
     background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 main[help] > header > p {
-    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1.15rem;
     line-height: 1.6;
 }
 
-main[help] > header md-chip-set {
+main[help] > header > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.75rem;
     justify-content: start;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
     padding: 0.5rem 0 0.75rem;
     overflow-x: auto;
     scrollbar-width: thin;
 }
 
 /* FAQ Accordion Section */
-main[help] > section[aria-label] {
-    display: grid;
+main[help] > section:first-of-type {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 1.5rem;
-    width: 100%;
 }
 
-main[help] > section[aria-label] details {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
+main[help] > section:first-of-type > details {
     align-content: start;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
     padding: 1.25rem 1.5rem;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large, 16px);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level1);
-    transition: all var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-spring);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
-main[help] > section[aria-label] details summary {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1rem;
-    align-items: center;
-    width: 100%;
-    min-height: 48px;
-    list-style: none;
-    cursor: pointer;
-    user-select: none;
-}
-
-main[help] > section[aria-label] details summary::-webkit-details-marker {
-    display: none;
-}
-
-main[help] > section[aria-label] details summary > span {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.85rem;
-    align-items: center;
-    min-width: 0;
-    color: var(--md-sys-color-on-surface);
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-main[help] > section[aria-label] details summary > span > md-icon:not([slot]) {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-}
-
-main[help] > section[aria-label] details summary > md-icon:last-child {
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    color: var(--md-sys-color-outline);
-    transition: transform var(--md-sys-motion-duration-short4, 200ms) var(--md-sys-motion-easing-standard);
-}
-
-main[help] > section[aria-label] details[open] summary > md-icon:last-child {
-    transform: rotate(180deg);
-}
-
-main[help] > section[aria-label] details:not([open]) > :not(summary) {
-    display: none;
-}
-
-main[help] > section[aria-label] details > p {
-    box-sizing: border-box;
-    width: 100%;
+main[help] > section:first-of-type > details > p {
     margin: 1rem 0 0;
     padding-top: 1rem;
     border-top: 1px solid var(--md-sys-color-outline-variant);
@@ -179,21 +88,57 @@ main[help] > section[aria-label] details > p {
     line-height: 1.6;
 }
 
+main[help] > section:first-of-type > details > summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+    min-height: 48px;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+main[help] > section:first-of-type > details > summary > span {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.85rem;
+    align-items: center;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main[help] > section:first-of-type > details > summary > span > md-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+main[help] > section:first-of-type > details > summary > md-icon:last-child {
+    width: 32px;
+    height: 32px;
+    color: var(--md-sys-color-outline);
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+main[help] > section:first-of-type > details > summary::-webkit-details-marker {
+    display: none;
+}
+
 /* Support Channels Section */
 main[help] > section:last-of-type {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
-    width: 100%;
 }
 
 main[help] > section:last-of-type > header {
     grid-column: 1 / -1;
-    display: grid;
     gap: 0.75rem;
 }
 
-main[help] > section:last-of-type > header mark {
+main[help] > section:last-of-type > header > mark {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -209,72 +154,58 @@ main[help] > section:last-of-type > header mark {
 }
 
 main[help] > section:last-of-type > header > h2 {
-    margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1.75rem;
     font-weight: 700;
 }
 
 main[help] > section:last-of-type > header > p {
-    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 1rem;
 }
 
 main[help] > section:last-of-type > article {
-    display: grid;
     grid-template-rows: auto auto minmax(0, 1fr) auto;
     gap: 1rem;
     padding: 1.5rem;
     border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-medium, 16px);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[help] > section:last-of-type > article > md-icon:not([slot]) {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: var(--md-sys-shape-corner-medium, 12px);
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 24px;
-}
-
 main[help] > section:last-of-type > article > h3 {
-    margin: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1.15rem;
     font-weight: 700;
 }
 
 main[help] > section:last-of-type > article > p {
-    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9375rem;
     line-height: 1.5;
 }
 
 main[help] > section:last-of-type > article > menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
-    margin: 0;
-    padding: 0;
 }
 
-/* Footer Landmark */
-footer[help] {
-    display: grid;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 48px;
-    padding: var(--md-sys-spacing-4) var(--md-sys-gutter-page);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.875rem;
+main[help] > section:last-of-type > article > md-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 24px;
+}
+
+@media (max-width: 839.98px) {
+main[help] {
+        gap: 2.5rem;
+        padding: 1.5rem 1rem calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + 2rem);
+        padding-right: max(1rem, env(safe-area-inset-right, 0px));
+        padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    }
 }
