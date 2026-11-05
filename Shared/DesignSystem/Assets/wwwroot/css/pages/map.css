@@ -19,14 +19,14 @@ main[map] {
 /* ==========================================================================
    1. Map Viewport & Fullscreen Canvas
    ========================================================================== */
-main[map] > section {
+main[map]>section {
     position: absolute;
     inset: 0;
     height: 100%;
     overflow: hidden;
 }
 
-main[map] > section > figure {
+main[map]>section>figure {
     position: absolute;
     inset: 0;
     height: 100%;
@@ -34,30 +34,32 @@ main[map] > section > figure {
 }
 
 /* Floating Map Controls (Zoom, Geolocation, 3D, Floor Stack) */
-main[map] > section > aside {
+main[map]>section>aside {
     position: absolute;
     right: 16px;
     bottom: max(24px, env(safe-area-inset-bottom, 24px));
     z-index: var(--md-sys-z-sticky);
     gap: 0.75rem;
-    justify-items: end;
+    justify-items: center;
     pointer-events: auto;
+    padding: 0;
+    background: initial;
 }
 
-main[map] > section > aside > nav:first-of-type {
+main[map]>section>aside>nav:first-of-type {
     grid-auto-flow: row;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    gap: 0;
 }
 
-main[map] > section > aside > nav:last-of-type {
+main[map]>section>aside>nav:last-of-type {
     grid-auto-flow: row;
-    gap: 0.25rem;
+    gap: 0.5rem;
     align-items: center;
     justify-items: center;
-    padding: 0.5rem 0.25rem;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
@@ -66,10 +68,15 @@ main[map] > section > aside > nav:last-of-type {
     font-weight: 600;
 }
 
+main[map]>section>aside :where(md-icon-button, md-filled-icon-button) {
+    min-width: 48px;
+    min-height: 48px;
+}
+
 /* ==========================================================================
    2. Main Controls Overlay Panel (Search, Routes, POI Details)
    ========================================================================== */
-main[map] > aside:first-of-type {
+main[map]>aside:first-of-type {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -90,7 +97,7 @@ main[map] > aside:first-of-type {
     transition: transform 0.3s ease;
 }
 
-main[map] > aside:first-of-type > section > nav {
+main[map]>aside:first-of-type>section>nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
@@ -98,14 +105,29 @@ main[map] > aside:first-of-type > section > nav {
     padding-bottom: 0.25rem;
 }
 
-main[map] > aside:first-of-type > section > search {
+main[map]>aside:first-of-type>section>search {
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 0.5rem;
     align-items: center;
 }
 
-main[map] > aside:first-of-type > md-icon-button {
-    justify-self: end;
+main[map]>aside:first-of-type>section>search>md-icon-button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+main[map]>aside:first-of-type>md-icon-button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+main[map]>aside:first-of-type:not([expanded]) {
+    width: auto;
+    padding: 0.5rem;
+}
+
+main[map]>aside:first-of-type:not([expanded])> :not(md-icon-button:first-child) {
+    display: none;
 }
 
 /* Route Mode Panel */
@@ -113,32 +135,32 @@ section[route-mode] {
     gap: 1rem;
 }
 
-section[route-mode] > header {
+section[route-mode]>header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-section[route-mode] > nav {
+section[route-mode]>nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
     overflow-x: auto;
 }
 
-section[route-mode] > fieldset {
+section[route-mode]>fieldset {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
     padding: 0;
     border: none;
 }
 
-section[route-mode] > fieldset > ol {
+section[route-mode]>fieldset>ol {
     gap: 0.5rem;
 }
 
-section[route-mode] > menu {
+section[route-mode]>menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
 }
@@ -149,7 +171,7 @@ article[place-details] {
     padding: 0.5rem 0;
 }
 
-article[place-details] > header {
+article[place-details]>header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
@@ -157,13 +179,13 @@ article[place-details] > header {
     font-weight: 600;
 }
 
-article[place-details] > section {
+article[place-details]>section {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
 }
 
-article[place-details] > menu {
+article[place-details]>menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
 }
@@ -179,7 +201,7 @@ aside[navigator] {
     pointer-events: none;
 }
 
-aside[navigator] > header {
+aside[navigator]>header {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1rem;
     align-items: center;
@@ -192,29 +214,29 @@ aside[navigator] > header {
     pointer-events: auto;
 }
 
-aside[navigator] > header > hgroup {
+aside[navigator]>header>hgroup {
     gap: 2px;
 }
 
-aside[navigator] > header > hgroup > span:first-child {
+aside[navigator]>header>hgroup>span:first-child {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
 }
 
-aside[navigator] > header > hgroup > span:last-child {
+aside[navigator]>header>hgroup>span:last-child {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-aside[navigator] > header > menu {
+aside[navigator]>header>menu {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.5rem;
 }
 
-aside[navigator] > footer {
+aside[navigator]>footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
     align-items: center;
@@ -228,18 +250,18 @@ aside[navigator] > footer {
     text-align: center;
 }
 
-aside[navigator] > footer > p {
+aside[navigator]>footer>p {
     display: grid;
     gap: 2px;
 }
 
-aside[navigator] > footer > p > span:first-child {
+aside[navigator]>footer>p>span:first-child {
     font-size: 0.75rem;
     color: var(--md-sys-color-outline);
     text-transform: uppercase;
 }
 
-aside[navigator] > footer > p > span:last-child {
+aside[navigator]>footer>p>span:last-child {
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -249,16 +271,28 @@ aside[navigator] > footer > p > span:last-child {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-main[map] > section > aside {
-        bottom: calc(60dvh + 16px);
+main[map]>section>aside {
+        top: 16px;
+        bottom: auto;
+        right: 16px;
     }
 
-main[map] > aside:first-of-type {
+main[map]>aside:first-of-type {
         top: auto;
         right: 0;
         bottom: 0;
         left: 0;
+        width: 100%;
         max-height: 60dvh;
-        border-radius: 24px 24px 0 0;
+        border-radius: var(--md-sys-shape-corner-extra-large) var(--md-sys-shape-corner-extra-large) 0 0;
+    }
+
+main[map]>aside:first-of-type:not([expanded]) {
+        top: 16px;
+        bottom: auto;
+        left: 16px;
+        right: auto;
+        width: auto;
+        border-radius: var(--md-sys-shape-corner-full);
     }
 }

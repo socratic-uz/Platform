@@ -98,11 +98,11 @@ export function loadMapLibre() {
     if (libraryLoadingPromise) return libraryLoadingPromise;
 
     libraryLoadingPromise = new Promise((resolve, reject) => {
-        if (!document.querySelector('link[href*="maplibre-gl.css"]')) {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css';
-            document.head.appendChild(link);
+        if (!document.querySelector('style[data-maplibre-css]') && !document.querySelector('link[href*="maplibre-gl.css"]')) {
+            const style = document.createElement('style');
+            style.setAttribute('data-maplibre-css', 'true');
+            style.textContent = '@import url("https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css") layer(foundations);';
+            document.head.appendChild(style);
         }
 
         const script = document.querySelector('script[src*="maplibre-gl.js"]');
@@ -371,11 +371,11 @@ export function loadMapboxDraw() {
     if (drawLoadingPromise) return drawLoadingPromise;
 
     drawLoadingPromise = new Promise((resolve, reject) => {
-        if (!document.querySelector('link[href*="mapbox-gl-draw.css"]')) {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css';
-            document.head.appendChild(link);
+        if (!document.querySelector('style[data-mapbox-draw-css]') && !document.querySelector('link[href*="mapbox-gl-draw.css"]')) {
+            const style = document.createElement('style');
+            style.setAttribute('data-mapbox-draw-css', 'true');
+            style.textContent = '@import url("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css") layer(foundations);';
+            document.head.appendChild(style);
         }
 
         const script = document.createElement('script');

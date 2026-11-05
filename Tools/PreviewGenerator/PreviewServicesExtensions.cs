@@ -144,9 +144,9 @@ public sealed class NullJsRuntime : IJSRuntime
 
 public sealed class FakeStringLocalizer : IStringLocalizer
 {
-    private static readonly System.Resources.ResourceManager RuManager = new("Assets.Resources.ResourceRu", typeof(AssetConstants.Classes).Assembly);
-    private static readonly System.Resources.ResourceManager UzManager = new("Assets.Resources.ResourceUz", typeof(AssetConstants.Classes).Assembly);
-    private static readonly System.Resources.ResourceManager EnManager = new("Assets.Resources.ResourceEn", typeof(AssetConstants.Classes).Assembly);
+    private static readonly System.Resources.ResourceManager RuManager = new("Assets.Resources.ResourceRu", typeof(AssetConstants.Icons).Assembly);
+    private static readonly System.Resources.ResourceManager UzManager = new("Assets.Resources.ResourceUz", typeof(AssetConstants.Icons).Assembly);
+    private static readonly System.Resources.ResourceManager EnManager = new("Assets.Resources.ResourceEn", typeof(AssetConstants.Icons).Assembly);
 
     internal static string Resolve(string name)
         => RuManager.GetString(name)

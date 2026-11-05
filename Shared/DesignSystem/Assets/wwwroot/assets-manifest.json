@@ -193,8 +193,8 @@
     },
     {
       "url": "_content/Assets/css/pages/map.css",
-      "size": 7156,
-      "hash": "sha256-c67f7b15f69b"
+      "size": 7846,
+      "hash": "sha256-6d535aa4f75d"
     },
     {
       "url": "_content/Assets/css/pages/model-viewer.css",
@@ -358,8 +358,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 16114,
-      "hash": "sha256-421b94004073"
+      "size": 18087,
+      "hash": "sha256-e5ccbe09698a"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -538,8 +538,8 @@
     },
     {
       "url": "_content/Assets/js/features/map/map-libre-core.js",
-      "size": 21581,
-      "hash": "sha256-e9347087eb5c"
+      "size": 21673,
+      "hash": "sha256-d6b341fdca56"
     },
     {
       "url": "_content/Assets/js/features/map/map-libre-layers.js",
