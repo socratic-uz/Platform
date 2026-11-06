@@ -21,9 +21,9 @@ export function initReconnectModal() {
 
 function handleReconnectStateChanged(event, reconnectModal) {
     if (event.detail.state === "show") {
-        reconnectModal.showModal();
+        reconnectModal.open = true;
     } else if (event.detail.state === "hide") {
-        reconnectModal.close();
+        reconnectModal.open = false;
     } else if (event.detail.state === "failed") {
         document.addEventListener("visibilitychange", retryWhenDocumentBecomesVisible);
     } else if (event.detail.state === "rejected") {
@@ -41,7 +41,7 @@ async function retry(reconnectModal) {
             if (!resumeSuccessful) {
                 location.reload();
             } else if (reconnectModal) {
-                reconnectModal.close();
+                reconnectModal.open = false;
             }
         }
     } catch {

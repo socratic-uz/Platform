@@ -25,20 +25,20 @@
     background: transparent;
 }
 
-dialog::-webkit-scrollbar, table::-webkit-scrollbar {
+md-dialog::-webkit-scrollbar, table::-webkit-scrollbar {
     width: var(--md-sys-scrollbar-width);
     height: var(--md-sys-scrollbar-height);
 }
 
-dialog::-webkit-scrollbar-thumb, table::-webkit-scrollbar-thumb {
+md-dialog::-webkit-scrollbar-thumb, table::-webkit-scrollbar-thumb {
     border-radius: var(--md-sys-scrollbar-thumb-radius);
     background: var(--md-sys-scrollbar-color-thumb);
 }
 
-dialog::-webkit-scrollbar-thumb:hover, table::-webkit-scrollbar-thumb:hover {
+md-dialog::-webkit-scrollbar-thumb:hover, table::-webkit-scrollbar-thumb:hover {
     background: var(--md-sys-scrollbar-color-thumb-hover);
 }
 
-dialog::-webkit-scrollbar-track, table::-webkit-scrollbar-track {
+md-dialog::-webkit-scrollbar-track, table::-webkit-scrollbar-track {
     background: var(--md-sys-scrollbar-color-track);
 }

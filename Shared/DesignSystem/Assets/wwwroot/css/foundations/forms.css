@@ -60,6 +60,10 @@ details:not(:has(> summary > md-list-item))[open] {
     background-color: var(--md-sys-color-surface-container);
 }
 
+details:not([open]) > :not(summary) {
+    display: none;
+}
+
 details:not(:has(> summary > md-list-item)) > summary {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;

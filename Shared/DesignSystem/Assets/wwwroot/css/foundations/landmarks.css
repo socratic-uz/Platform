@@ -111,6 +111,13 @@ body > header > menu:last-child {
     width: auto;
 }
 
+body > header > menu :where(md-text-button, md-icon-button) {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
+}
+
 body > header:has(> :nth-child(3)) {
     grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
 }
@@ -567,7 +574,7 @@ nav > ol {
     }
 
     body > header > nav {
-        gap: 0.25rem;
+        gap: 0.5rem;
     }
 
     body > header > nav > hgroup > h1 {

@@ -376,28 +376,14 @@ fieldset[pan] {
     border: none;
 }
 
-/* POS Payment Modal & Cashier Ergonomics */
-md-dialog[payment],
-dialog[payment] {
-    display: grid;
-    gap: var(--md-sys-spacing-4);
-    padding: 4px 0;
-}
-
-md-dialog[payment] > div:first-child,
-dialog[payment] > div:first-child,
-md-dialog[payment] > header,
-dialog[payment] > header {
+md-dialog[payment] > header[slot="headline"] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-4);
 }
 
-md-dialog[payment] > div:first-child > hgroup,
-dialog[payment] > div:first-child > hgroup,
-md-dialog[payment] > header > hgroup,
-dialog[payment] > header > hgroup {
+md-dialog[payment] > header[slot="headline"] > hgroup {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -407,10 +393,7 @@ dialog[payment] > header > hgroup {
     font-weight: 700;
 }
 
-md-dialog[payment] > div:first-child > aside,
-dialog[payment] > div:first-child > aside,
-md-dialog[payment] > header > aside,
-dialog[payment] > header > aside {
+md-dialog[payment] > header[slot="headline"] > aside {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -422,24 +405,23 @@ dialog[payment] > header > aside {
     color: var(--md-sys-color-on-primary-container);
 }
 
-md-dialog[payment] > div:first-child > aside > span,
-dialog[payment] > div:first-child > aside > span,
-md-dialog[payment] > header > aside > span,
-dialog[payment] > header > aside > span {
+md-dialog[payment] > header[slot="headline"] > aside > span {
     font-size: 0.85rem;
     opacity: 0.8;
 }
 
-md-dialog[payment] > div:first-child > aside > strong,
-dialog[payment] > div:first-child > aside > strong,
-md-dialog[payment] > header > aside > strong,
-dialog[payment] > header > aside > strong {
+md-dialog[payment] > header[slot="headline"] > aside > strong {
     font-size: 1.15rem;
     font-weight: 800;
 }
 
-md-dialog[payment] > div:nth-child(2) > section,
-dialog[payment] > div:nth-child(2) > section {
+/* POS Payment Modal & Cashier Ergonomics */
+md-dialog[payment] > section[slot="content"] {
+    gap: var(--md-sys-spacing-4);
+    padding: 4px 0;
+}
+
+md-dialog[payment] > section[slot="content"] > section {
     min-height: 260px;
 }
 

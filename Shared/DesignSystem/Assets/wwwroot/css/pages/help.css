@@ -192,6 +192,14 @@ main[help] > section:last-of-type > article > menu {
     gap: 0.5rem;
 }
 
+main[help] > section:last-of-type > article :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-filled-tonal-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+}
+
 main[help] > section:last-of-type > article > md-icon {
     width: 44px;
     height: 44px;

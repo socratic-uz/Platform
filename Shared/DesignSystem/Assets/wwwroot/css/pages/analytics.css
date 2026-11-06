@@ -6,11 +6,12 @@
 header[analytics] > hgroup {
     display: inline-grid;
     grid-auto-flow: column;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
 header[analytics] > hgroup > h1 {
+    margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
@@ -26,15 +27,21 @@ header[analytics] > hgroup > md-icon {
    ========================================================================== */
 header[analytics] > span {
     color: var(--md-sys-color-outline-variant);
-    margin: 0 0.5rem;
+    margin: 0 var(--md-sys-spacing-2);
 }
 
+/* ==========================================================================
+   LANDMARK: MAIN (Analytics Workspace Canvas)
+   ========================================================================== */
 main[analytics] {
-    gap: var(--md-sys-gutter-section);
+    gap: var(--md-sys-gutter-section, var(--md-sys-spacing-6));
     align-content: start;
-    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
-    padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
-    padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page, var(--md-sys-spacing-6)) var(--md-sys-spacing-12);
+    padding-right: max(var(--md-sys-gutter-page, var(--md-sys-spacing-6)), env(safe-area-inset-right, 0px));
+    padding-left: max(var(--md-sys-gutter-page, var(--md-sys-spacing-6)), env(safe-area-inset-left, 0px));
 }
 
 /* ==========================================================================
@@ -42,7 +49,7 @@ main[analytics] {
    ========================================================================== */
 main[analytics] > header {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
@@ -60,7 +67,7 @@ main[analytics] > header > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     padding: 0 0 2px;
     border: none;
@@ -71,7 +78,7 @@ main[analytics] > header > md-chip-set {
 main[analytics] > header > menu {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     justify-content: end;
     align-items: center;
 }
@@ -80,7 +87,7 @@ main[analytics] > header > menu > data {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     padding: 0.25rem 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -88,46 +95,152 @@ main[analytics] > header > menu > data {
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.75rem;
+    font-weight: 500;
 }
 
 main[analytics] > header > menu > data > span:first-child {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--md-sys-color-primary);
-    animation: bboxPulse 1.5s infinite alternate ease-in-out;
+    box-shadow: 0 0 8px var(--md-sys-color-primary);
+    animation: analyticsPulse 1.8s infinite alternate ease-in-out;
 }
 
 /* ==========================================================================
-   LANDMARK: KPI CARDS GRID
+   LANDMARK: BREAKDOWN PANELS (section[breakdown])
    ========================================================================== */
-main[analytics] > section:first-of-type {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+main[analytics] > section[breakdown],
+main[analytics] > section:has(ul > li > md-linear-progress) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    gap: var(--md-sys-spacing-5);
+}
+
+main[analytics] > section[breakdown] > article,
+main[analytics] > section:has(ul > li > md-linear-progress) > article {
+    grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
-}
-
-main[analytics] > section:first-of-type > article {
-    grid-template-rows: auto auto auto;
-    gap: var(--md-sys-spacing-2);
-    padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
+    padding: var(--md-sys-spacing-5);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    overflow: hidden;
-    transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[analytics] > section:first-of-type > article > header {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.5rem;
+main[analytics] > section[breakdown] > article > header,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-main[analytics] > section:first-of-type > article > header > span {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.825rem;
+main[analytics] > section[breakdown] > article > header > span:first-child,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > header > span:first-child {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+main[analytics] > section[breakdown] > article > header > span:first-child > h4,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > header > span:first-child > h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[analytics] > section[breakdown] > article > header > span:first-child > md-icon,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > header > span:first-child > md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 20px;
+}
+
+main[analytics] > section[breakdown] > article > header > span:last-child,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > header > span:last-child {
+    font-size: 0.8125rem;
     font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+main[analytics] > section[breakdown] > article > ul,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > ul {
+    gap: var(--md-sys-spacing-3);
+    align-content: start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main[analytics] > section[breakdown] > article > ul > li,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > ul > li {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+}
+
+main[analytics] > section[breakdown] > article > ul > li > header,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > ul > li > header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[analytics] > section[breakdown] > article > ul > li > header > span:last-child,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > ul > li > header > span:last-child {
+    font-weight: 600;
+    font-feature-settings: "tnum";
+    color: var(--md-sys-color-on-surface);
+}
+
+main[analytics] > section[breakdown] > article > ul > li > md-linear-progress,
+main[analytics] > section:has(ul > li > md-linear-progress) > article > ul > li > md-linear-progress {
+    width: 100%;
+    --md-linear-progress-track-shape: var(--md-sys-shape-corner-full);
+    --md-linear-progress-active-indicator-shape: var(--md-sys-shape-corner-full);
+}
+
+/* ==========================================================================
+   LANDMARK: KPI CARDS GRID (section[kpi])
+   ========================================================================== */
+main[analytics] > section[kpi],
+main[analytics] > section:has(article > h3) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: var(--md-sys-spacing-4);
+}
+
+main[analytics] > section[kpi] > article,
+main[analytics] > section:has(article > h3) > article {
+    grid-template-rows: auto auto auto;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: var(--md-sys-shape-corner-large);
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+    box-shadow: var(--md-sys-elevation-level1);
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+                box-shadow var(--md-sys-motion-duration-short4) ease,
+                border-color var(--md-sys-motion-duration-short4) ease;
+}
+
+main[analytics] > section[kpi] > article > header,
+main[analytics] > section:has(article > h3) > article > header {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+}
+
+main[analytics] > section[kpi] > article > header > span,
+main[analytics] > section:has(article > h3) > article > header > span {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.8125rem;
+    font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     overflow: hidden;
@@ -135,44 +248,53 @@ main[analytics] > section:first-of-type > article > header > span {
     white-space: nowrap;
 }
 
-main[analytics] > section:first-of-type > article > header > md-icon {
-    width: 32px;
-    height: 32px;
+main[analytics] > section[kpi] > article > header > md-icon,
+main[analytics] > section:has(article > h3) > article > header > md-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    font-size: 18px;
+    font-size: 20px;
 }
 
-main[analytics] > section:first-of-type > article > h3 {
+main[analytics] > section[kpi] > article > h3,
+main[analytics] > section:has(article > h3) > article > h3 {
+    margin: 0;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.4rem;
+    gap: var(--md-sys-spacing-2);
     align-items: baseline;
-    font-size: 1.75rem;
+    font-size: 1.875rem;
     font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     color: var(--md-sys-color-on-surface);
+    font-feature-settings: "tnum";
 }
 
-main[analytics] > section:first-of-type > article > h3 > span {
+main[analytics] > section[kpi] > article > h3 > span,
+main[analytics] > section:has(article > h3) > article > h3 > span {
     margin-left: 0.25rem;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
     font-weight: 600;
 }
 
-main[analytics] > section:first-of-type > article > footer {
+main[analytics] > section[kpi] > article > footer,
+main[analytics] > section:has(article > h3) > article > footer {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 0.35rem;
+    gap: var(--md-sys-spacing-2);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.775rem;
 }
 
-main[analytics] > section:first-of-type > article > footer > span:first-child {
+main[analytics] > section[kpi] > article > footer > span:first-child,
+main[analytics] > section:has(article > h3) > article > footer > span:first-child {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
@@ -183,75 +305,88 @@ main[analytics] > section:first-of-type > article > footer > span:first-child {
     font-weight: 600;
 }
 
-main[analytics] > section:first-of-type > article > footer > span:first-child > span {
+main[analytics] > section[kpi] > article > footer > span:first-child > span,
+main[analytics] > section:has(article > h3) > article > footer > span:first-child > span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-main[analytics] > section:first-of-type > article:hover {
-    border-color: var(--md-sys-color-outline);
+main[analytics] > section[kpi] > article:hover,
+main[analytics] > section:has(article > h3) > article:hover {
+    border-color: var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-level2);
     transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   LANDMARK: REGISTERS MODE (Tabular Data Explorer)
+   LANDMARK: REGISTERS MODE (section[registers] - Tabular Data Explorer)
    ========================================================================== */
-main[analytics] > section:last-of-type {
+main[analytics] > section[registers],
+main[analytics] > section:has(smart-grid, [smart-grid], table) {
     gap: var(--md-sys-spacing-5);
     padding: var(--md-sys-spacing-6);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-low);
     overflow-x: auto;
+    box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[analytics] > section:last-of-type > header {
+main[analytics] > section[registers] > header,
+main[analytics] > section:has(smart-grid, [smart-grid], table) > header {
     gap: var(--md-sys-spacing-1);
 }
 
-main[analytics] > section:last-of-type > header > hgroup {
+main[analytics] > section[registers] > header > hgroup,
+main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
-main[analytics] > section:last-of-type > header > hgroup > h4 {
+main[analytics] > section[registers] > header > hgroup > h4,
+main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup > h4 {
+    margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
+    color: var(--md-sys-color-on-surface);
 }
 
-main[analytics] > section:last-of-type > header > p {
+main[analytics] > section[registers] > header > hgroup > md-icon,
+main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup > md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 24px;
+}
+
+main[analytics] > section[registers] > header > p,
+main[analytics] > section:has(smart-grid, [smart-grid], table) > header > p {
+    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
+    font-size: 0.875rem;
 }
 
 /* ==========================================================================
-   LANDMARK: BREAKDOWN PANELS (Payments & Statuses)
+   WIDGET: CONFIGURATION MODAL DIALOG (md-dialog[config])
    ========================================================================== */
-main[analytics] > section:nth-of-type(2) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
-    gap: var(--md-sys-spacing-5);
+md-dialog[config],
+md-dialog:has(h3#modal-title) {
+    --md-dialog-container-max-inline-size: min(560px, calc(100vw - var(--md-sys-spacing-6)));
 }
 
-main[analytics] > section:nth-of-type(2) > article {
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-4);
-    padding: var(--md-sys-spacing-5);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-card);
-    background: var(--md-sys-color-surface-container-low);
-}
-
-main[analytics] > section:nth-of-type(2) > article > header {
+md-dialog[config] > header[slot="headline"],
+md-dialog:has(h3#modal-title) > header[slot="headline"],
+md-dialog:has(h3#modal-title) > [slot="headline"] {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
     align-items: center;
+    gap: var(--md-sys-spacing-3);
 }
 
-main[analytics] > section:nth-of-type(2) > article > header > span:first-child {
+md-dialog[config] > header[slot="headline"] > hgroup,
+md-dialog:has(h3#modal-title) > header[slot="headline"] > hgroup,
+md-dialog:has(h3#modal-title) > [slot="headline"] > hgroup {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -259,80 +394,84 @@ main[analytics] > section:nth-of-type(2) > article > header > span:first-child {
     align-items: center;
 }
 
-main[analytics] > section:nth-of-type(2) > article > header > span:first-child > h4,
-main[analytics] > section:nth-of-type(2) > article > header > h4 {
-    font-size: 1rem;
+md-dialog[config] > header[slot="headline"] h3,
+md-dialog:has(h3#modal-title) > header[slot="headline"] h3,
+md-dialog:has(h3#modal-title) > [slot="headline"] h3 {
+    margin: 0;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
-main[analytics] > section:nth-of-type(2) > article > ul {
-    gap: 0.85rem;
-    align-content: start;
-}
-
-main[analytics] > section:nth-of-type(2) > article > ul > li {
-    gap: 0.35rem;
-}
-
-main[analytics] > section:nth-of-type(2) > article > ul > li > header {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-main[analytics] > section:nth-of-type(2) > article > ul > li > md-linear-progress {
-    width: 100%;
-}
-
-/* ==========================================================================
-   WIDGET: CONFIGURATION MODAL DIALOG
-   ========================================================================== */
-md-dialog:has(h3#modal-title) > div:first-child {
+md-dialog[config] > section[slot="content"] fieldset,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-md-dialog:has(h3#modal-title) > div:first-child > hgroup {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset {
-    gap: 0.75rem;
-    margin: 1rem 0 0 0;
+    gap: var(--md-sys-spacing-2);
+    margin: var(--md-sys-spacing-2) 0 0;
     padding: 0;
     border: none;
 }
 
-md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset > label {
+md-dialog[config] > section[slot="content"] fieldset > label,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label {
+    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-    padding: 0.75rem 1rem;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-high);
+    background: var(--md-sys-color-surface-container);
     cursor: pointer;
+    transition: background-color var(--md-sys-motion-duration-short2) ease,
+                border-color var(--md-sys-motion-duration-short2) ease;
 }
 
-md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset > label > span {
+md-dialog[config] > section[slot="content"] fieldset > label > span,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label > span,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label > span {
     display: grid;
     gap: 2px;
 }
 
-md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset > label > span > span:first-child {
+md-dialog[config] > section[slot="content"] fieldset > label > span > span:first-child,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label > span > span:first-child,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label > span > span:first-child {
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
 }
 
-md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset > label > span > span:last-child {
-    font-size: 0.8rem;
+md-dialog[config] > section[slot="content"] fieldset > label > span > span:last-child,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label > span > span:last-child,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label > span > span:last-child {
+    font-size: 0.8125rem;
     color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog[config] > section[slot="content"] fieldset > label > md-icon,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label > md-icon,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label > md-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog[config] > section[slot="content"] fieldset > label:hover,
+md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label:hover,
+md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label:hover {
+    background: var(--md-sys-color-surface-container-high);
+    border-color: var(--md-sys-color-outline);
+}
+
+@keyframes analyticsPulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
 }
 
 /* ==========================================================================
@@ -341,14 +480,14 @@ md-dialog:has(h3#modal-title) > div:nth-child(2) > fieldset > label > span > spa
 
 @media screen and (max-width: 839.98px) {
 main[analytics] {
-        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
+        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav, 64px) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
     }
 
 main[analytics] > header {
         grid-template-columns: minmax(0, 1fr);
-        gap: 0.75rem;
+        gap: var(--md-sys-spacing-3);
     }
 }
 
@@ -357,10 +496,11 @@ main[analytics] > header > menu {
         grid-template-columns: minmax(0, 1fr);
         grid-auto-flow: row;
         justify-items: start;
-        gap: 0.5rem;
+        gap: var(--md-sys-spacing-2);
     }
 
-main[analytics] > section:last-of-type {
-        padding: var(--md-sys-spacing-3);
+main[analytics] > section[registers],
+    main[analytics] > section:has(smart-grid, [smart-grid], table) {
+        padding: var(--md-sys-spacing-4);
     }
 }

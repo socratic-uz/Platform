@@ -246,29 +246,6 @@ main[kiosk] > section > md-filled-card > footer {
     padding-top: var(--md-sys-spacing-2);
 }
 
-main[kiosk] > section > md-filled-card > footer :where(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {
-    min-height: var(--md-sys-touch-target-min);
-    --md-filled-button-container-height: var(--md-sys-touch-target-min);
-    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
-    --md-text-button-container-height: var(--md-sys-touch-target-min);
-    --md-tonal-button-container-height: var(--md-sys-touch-target-min);
-}
-
-main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    padding: 0;
-    border: none;
-}
-
-main[kiosk] > section > md-filled-card > footer > fieldset[counter] > :where(md-icon-button, md-filled-icon-button, button) {
-    min-width: 44px;
-    min-height: 44px;
-}
-
 main[kiosk] > section > md-filled-card > footer > span {
     min-inline-size: 0;
     color: var(--md-sys-color-primary);
@@ -289,9 +266,32 @@ main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
     border: none;
 }
 
+main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0;
+    border: none;
+}
+
 main[kiosk] > section > md-filled-card > footer > fieldset[counter] > :where(md-icon-button, md-filled-icon-button, button) {
     min-width: 44px;
     min-height: 44px;
+}
+
+main[kiosk] > section > md-filled-card > footer > fieldset[counter] > :where(md-icon-button, md-filled-icon-button, button) {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+main[kiosk] > section > md-filled-card > footer :where(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+    --md-tonal-button-container-height: var(--md-sys-touch-target-min);
 }
 
 main[kiosk] > section > md-filled-card > footer :where(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {

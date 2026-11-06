@@ -1,0 +1,238 @@
+/* ==========================================================================
+   Layer: components — Dialogs & Modal Surfaces (Pure Attribute Classless)
+   Material Design 3 Expressive Specification & W3C Web Components Support
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Universal Material.Web Dialog Container
+   -------------------------------------------------------------------------- */
+md-dialog {
+    margin: auto;
+    --md-dialog-container-color: var(--md-sys-color-surface-container-high);
+    --md-dialog-container-shape: var(--md-sys-shape-corner-extra-large, 28px);
+    --md-dialog-headline-color: var(--md-sys-color-on-surface);
+    --md-dialog-headline-font: var(--md-sys-typescale-headline-small-font, var(--md-ref-typeface-brand, Roboto));
+    --md-dialog-supporting-text-color: var(--md-sys-color-on-surface-variant);
+    --md-dialog-supporting-text-font: var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));
+    --md-dialog-icon-color: var(--md-sys-color-primary);
+    --md-dialog-container-min-inline-size: min(320px, calc(100vw - var(--md-sys-spacing-6)));
+    --md-dialog-container-max-inline-size: min(560px, calc(100vw - var(--md-sys-spacing-6)));
+}
+
+/* --------------------------------------------------------------------------
+   3. Headline Slot & Header Landmark
+   -------------------------------------------------------------------------- */
+md-dialog > header[slot="headline"],
+md-dialog > [slot="headline"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    width: 100%;
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-2);
+    box-sizing: border-box;
+}
+
+md-dialog > header[slot="headline"] > hgroup,
+md-dialog > [slot="headline"] > hgroup {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+md-dialog > header[slot="headline"] > hgroup > span,
+md-dialog > [slot="headline"] > hgroup > span {
+    font-size: var(--md-sys-typescale-headline-small-size, 1.25rem);
+    font-weight: 600;
+    line-height: var(--md-sys-typescale-headline-small-line-height, 1.75rem);
+    color: var(--md-dialog-headline-color);
+}
+
+md-dialog > header[slot="headline"] md-icon,
+md-dialog > [slot="headline"] md-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog > header[slot="headline"] md-icon-button,
+md-dialog > [slot="headline"] md-icon-button {
+    justify-self: end;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog > header[slot="headline"] :is(h2, h3, h4),
+md-dialog > [slot="headline"] :is(h2, h3, h4) {
+    margin: 0;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    font-size: var(--md-sys-typescale-headline-small-size, 1.25rem);
+    font-weight: 600;
+    line-height: var(--md-sys-typescale-headline-small-line-height, 1.75rem);
+    color: var(--md-dialog-headline-color);
+}
+
+/* --------------------------------------------------------------------------
+   4. Content Slot & Body Section
+   -------------------------------------------------------------------------- */
+md-dialog > section[slot="content"],
+md-dialog > form[slot="content"],
+md-dialog > [slot="content"] {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6);
+    color: var(--md-dialog-supporting-text-color);
+    font-family: var(--md-dialog-supporting-text-font);
+    font-size: var(--md-sys-typescale-body-medium-size, 0.875rem);
+    line-height: var(--md-sys-typescale-body-medium-line-height, 1.25rem);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+md-dialog > section[slot="content"] > p,
+md-dialog > [slot="content"] > p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog > section[slot="content"] fieldset,
+md-dialog > [slot="content"] fieldset {
+    display: grid;
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+md-dialog > section[slot="content"] fieldset > legend,
+md-dialog > [slot="content"] fieldset > legend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: var(--md-sys-spacing-1);
+}
+
+md-dialog > section[slot="content"] fieldset > label,
+md-dialog > [slot="content"] fieldset > label {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    transition: background-color var(--md-sys-motion-duration-short2) ease,
+                border-color var(--md-sys-motion-duration-short2) ease,
+                box-shadow var(--md-sys-motion-duration-short2) ease;
+}
+
+md-dialog > section[slot="content"] fieldset > label > span,
+md-dialog > [slot="content"] fieldset > label > span {
+    display: grid;
+    gap: 2px;
+}
+
+md-dialog > section[slot="content"] fieldset > label > span > span:first-child,
+md-dialog > [slot="content"] fieldset > label > span > span:first-child {
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+md-dialog > section[slot="content"] fieldset > label > span > span:last-child,
+md-dialog > [slot="content"] fieldset > label > span > span:last-child {
+    font-size: 0.8125rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog > section[slot="content"] fieldset > label > md-icon,
+md-dialog > [slot="content"] fieldset > label > md-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog > section[slot="content"] fieldset > label:hover,
+md-dialog > [slot="content"] fieldset > label:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    border-color: var(--md-sys-color-outline);
+}
+
+/* --------------------------------------------------------------------------
+   5. Actions Slot & Footer Landmark
+   -------------------------------------------------------------------------- */
+md-dialog > footer[slot="actions"],
+md-dialog > [slot="actions"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    justify-content: end;
+    align-items: center;
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+    box-sizing: border-box;
+}
+
+md-dialog[extra-large],
+md-dialog[wide] {
+    --md-dialog-container-max-inline-size: min(1020px, calc(100vw - var(--md-sys-spacing-6)));
+}
+
+md-dialog[fullscreen] {
+    --md-dialog-container-min-inline-size: 100vw;
+    --md-dialog-container-max-inline-size: 100vw;
+    --md-dialog-container-shape: 0px;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+md-dialog[large] {
+    --md-dialog-container-max-inline-size: min(780px, calc(100vw - var(--md-sys-spacing-6)));
+}
+
+md-dialog[medium] {
+    --md-dialog-container-max-inline-size: min(560px, calc(100vw - var(--md-sys-spacing-6)));
+}
+
+/* --------------------------------------------------------------------------
+   2. Attribute-Driven Classless Sizing Variants
+   -------------------------------------------------------------------------- */
+md-dialog[small],
+md-dialog[alert] {
+    --md-dialog-container-max-inline-size: min(400px, calc(100vw - var(--md-sys-spacing-6)));
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Adaptations
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 599.98px) {
+md-dialog {
+        --md-dialog-container-min-inline-size: calc(100vw - var(--md-sys-spacing-4));
+        --md-dialog-container-max-inline-size: calc(100vw - var(--md-sys-spacing-4));
+    }
+
+md-dialog > header[slot="headline"],
+    md-dialog > [slot="headline"] {
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4) var(--md-sys-spacing-1);
+    }
+
+md-dialog > section[slot="content"],
+    md-dialog > form[slot="content"],
+    md-dialog > [slot="content"] {
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+        max-height: min(72vh, 520px);
+    }
+
+md-dialog > footer[slot="actions"],
+    md-dialog > [slot="actions"] {
+        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4) var(--md-sys-spacing-3);
+    }
+}

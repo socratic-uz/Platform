@@ -2,7 +2,7 @@
    Layer: widgets — Fiscal Receipt & Payment Summary (Pure Attribute Classless)
    ========================================================================== */
 
-aside[fiscal], dialog[receipt], section[fiscal] {
+aside[fiscal], md-dialog[receipt], section[fiscal] {
     align-content: start;
     gap: var(--space-md);
     padding: var(--space-lg);
@@ -11,7 +11,7 @@ aside[fiscal], dialog[receipt], section[fiscal] {
     border: 1px solid var(--md-sys-color-outline-variant);
 }
 
-aside[fiscal] > header, dialog[receipt] > header, section[fiscal] > header {
+aside[fiscal] > header, md-dialog[receipt] > header, section[fiscal] > header {
     justify-items: center;
     text-align: center;
     gap: var(--space-xs);
@@ -19,7 +19,7 @@ aside[fiscal] > header, dialog[receipt] > header, section[fiscal] > header {
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
-aside[fiscal] > dl > div, dialog[receipt] > dl > div, section[fiscal] > dl > div {
+aside[fiscal] > dl > div, md-dialog[receipt] > dl > div, section[fiscal] > dl > div {
     grid-template-columns: 1fr auto;
     align-items: baseline;
     font-family: var(--md-ref-typeface-mono);

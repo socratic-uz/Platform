@@ -36,6 +36,7 @@
 
 /* 3. Material 3 Component Primitives (Protected UI Units) */
 @import "components/cards.css" layer(components);
+@import "components/dialogs.css" layer(components);
 @import "components/feedback.css" layer(components);
 @import "components/markdown.css" layer(components);
 @import "components/reconnect-modal.css" layer(components);
