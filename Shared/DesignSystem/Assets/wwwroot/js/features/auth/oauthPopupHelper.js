@@ -101,5 +101,27 @@ window.oauthPopupHelper = {
             console.warn("[OAuthPopup] Could not access window.opener:", e);
         }
         window.location.href = returnUrl || "/";
+    },
+
+    getAccessToken: function () {
+        try {
+            var match = document.cookie.match(new RegExp('(^|;\\s*)AccessToken=([^;]+)'));
+            if (match) return decodeURIComponent(match[2]);
+            if (window.opener && !window.opener.closed) {
+                try {
+                    var openerMatch = window.opener.document.cookie.match(new RegExp('(^|;\\s*)AccessToken=([^;]+)'));
+                    if (openerMatch) return decodeURIComponent(openerMatch[2]);
+                } catch (e) {}
+                try {
+                    var openerLs = window.opener.localStorage.getItem("AccessToken") || window.opener.sessionStorage.getItem("AccessToken");
+                    if (openerLs) return openerLs;
+                } catch (e) {}
+            }
+            var ls = localStorage.getItem("AccessToken") || sessionStorage.getItem("AccessToken");
+            if (ls) return ls;
+        } catch (e) {
+            console.warn("[OAuthPopup] Error getting access token:", e);
+        }
+        return null;
     }
 };
