@@ -733,8 +733,9 @@ namespace Shared.Components
             }
 
             var redirectUri = nav.BaseUri.TrimEnd('/') + "/signin-google-callback";
-            var state = "link";
-            Logger.LogInformation("[Profile.Google] Opening Google Account Selector popup for linking. RedirectUri: {RedirectUri}", redirectUri);
+            var currentUserId = userIdStr ?? await Settings.GetUserIdAsync();
+            var state = string.IsNullOrWhiteSpace(currentUserId) ? "link" : $"link:{currentUserId}";
+            Logger.LogInformation("[Profile.Google] Opening Google Account Selector popup for linking. RedirectUri: {RedirectUri}, State: {State}", redirectUri, state);
             var opened = await js.InvokeAsync<bool>("oauthPopupHelper.openGooglePopup", clientId, redirectUri, state);
             if (!opened)
             {
