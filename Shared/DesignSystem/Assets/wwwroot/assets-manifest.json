@@ -358,8 +358,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 18087,
-      "hash": "sha256-e5ccbe09698a"
+      "size": 18651,
+      "hash": "sha256-8f2abefdf67b"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -538,8 +538,8 @@
     },
     {
       "url": "_content/Assets/js/features/map/map-libre-core.js",
-      "size": 21673,
-      "hash": "sha256-d6b341fdca56"
+      "size": 21827,
+      "hash": "sha256-094f0bf83c9d"
     },
     {
       "url": "_content/Assets/js/features/map/map-libre-layers.js",

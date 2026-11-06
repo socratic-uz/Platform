@@ -224,6 +224,10 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingAuthenticationStateProvider>();
 builder.Services.AddScoped<ISettingsManager, Web.UI.Services.ServerSettingsManager>();
 builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
+builder.Services.AddScoped<Domain.Interfaces.Identity.IUserAccountGateway, Infrastructure.Gateways.Identity.UserAccountGateway>();
+builder.Services.AddScoped<Infrastructure.Gateways.Identity.UserAccountGateway>();
+builder.Services.AddScoped<Domain.State.ICartStore, Infrastructure.State.CartStore>();
+builder.Services.AddSingleton<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
 #if FEATURE_MARKDOWN
 builder.Services.AddMarkdownServices();
 #endif

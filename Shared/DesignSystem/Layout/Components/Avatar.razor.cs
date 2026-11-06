@@ -37,7 +37,7 @@ namespace Shared.Components
         [Inject] private IServiceProvider? ServiceProvider { get; set; }
         [Inject] public IStringLocalizer l { get; set; } = default!;
         [Inject] public NavigationManager nav { get; set; } = default!;
-        [Inject] public Domain.Interfaces.Identity.IUserAccountGateway UserAccountGateway { get; set; } = default!;
+        [Inject] public Domain.Interfaces.Identity.IUserAccountGateway? UserAccountGateway { get; set; }
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;
         [Inject] public ISettingsManager settings { get; set; } = default!;
         [Inject] public IJSRuntime js { get; set; } = default!;
@@ -455,7 +455,7 @@ namespace Shared.Components
         {
             var oldRole = roleId;
             roleId = id;
-            var token = await UserAccountGateway.SwitchRoleAsync(id);
+            var token = UserAccountGateway != null ? await UserAccountGateway.SwitchRoleAsync(id) : null;
             if (token != null)
             {
                 await settings.SetAccessTokenAsync(token);
@@ -769,7 +769,7 @@ namespace Shared.Components
                 if (regDto != null)
                 {
                     regDto.UserId = currentUserId;
-                    var success = await UserAccountGateway.RegisterPasskeyAsync(
+                    var success = UserAccountGateway != null && await UserAccountGateway.RegisterPasskeyAsync(
                         currentUserId ?? string.Empty,
                         regDto.Id,
                         regDto.RawId,
