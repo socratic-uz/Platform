@@ -1,5 +1,10 @@
+using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.JSInterop;
 using SharedKernel.ValueObjects;
+using Shared.Extensions;
 using Shared.Services;
 
 namespace Web.UI.Services
@@ -7,10 +12,12 @@ namespace Web.UI.Services
     public class ServerSettingsManager : ISettingsManager
     {
         private readonly IHttpContextAccessor _accessor;
+        private readonly IServiceProvider _serviceProvider;
 
-        public ServerSettingsManager(IHttpContextAccessor accessor)
+        public ServerSettingsManager(IHttpContextAccessor accessor, IServiceProvider serviceProvider)
         {
             _accessor = accessor;
+            _serviceProvider = serviceProvider;
         }
 
         public Task<Theme> GetThemeAsync()
@@ -76,10 +83,28 @@ namespace Web.UI.Services
             return Task.CompletedTask;
         }
 
-        public Task<string?> GetAccessTokenAsync()
+        public async Task<string?> GetAccessTokenAsync()
         {
             var accessToken = _accessor.HttpContext?.Request?.Cookies["AccessToken"];
-            return Task.FromResult(accessToken);
+            if (!string.IsNullOrWhiteSpace(accessToken))
+            {
+                return accessToken;
+            }
+
+            try
+            {
+                var js = _serviceProvider.GetService<IJSRuntime>();
+                if (js != null)
+                {
+                    return await js.GetAsync("AccessToken");
+                }
+            }
+            catch
+            {
+                // Fallback for cases where JS interop is not connected or prerendering
+            }
+
+            return null;
         }
 
         public Task SetAccessTokenAsync(string accessToken)
