@@ -13,10 +13,10 @@ main[qr] {
 
 main[qr] > section {
     grid-template-rows: auto minmax(0, 1fr);
-    gap: 1.5rem;
+    gap: var(--md-sys-spacing-6);
     height: 100%;
     padding: 2rem;
-    background: var(--md-sys-color-surface);
+    background: var(--md-sys-color-surface-container-low);
     overflow-y: auto;
 }
 
@@ -48,15 +48,16 @@ main[qr] > section > section:has(> article) {
 }
 
 main[qr] > section > section:has(> article) > article {
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
     justify-items: center;
     align-content: center;
-    padding: 2rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--md-sys-spacing-6);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.55);
     border-radius: var(--md-sys-shape-expressive-corner-large);
-    background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    background: var(--md-sys-color-surface-container-lowest);
+    box-shadow: var(--md-sys-elevation-level2);
     text-align: center;
+    transition: box-shadow 220ms cubic-bezier(0.2, 0, 0, 1), transform 220ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 main[qr] > section > section:has(> article) > article > figure {
@@ -74,12 +75,20 @@ main[qr] > section > section:has(> article) > article > p {
     font-size: 0.875rem;
 }
 
+main[qr] > section > section:has(> article) > article:hover {
+    box-shadow: var(--md-sys-elevation-level3);
+    transform: translateY(-2px);
+}
+
 main[qr] > section > section:not(:has(> article)) {
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
     place-content: center;
     place-items: center;
     height: 100%;
-    padding: 3rem 1.5rem;
+    padding: var(--md-sys-spacing-8) var(--md-sys-spacing-6);
+    border: 1px dashed var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-large);
+    background: radial-gradient(ellipse at 50% 40%, rgb(from var(--md-sys-color-primary-container) r g b / 0.44), transparent 68%);
     text-align: center;
 }
 
@@ -102,11 +111,13 @@ main[qr] > section > section:not(:has(> article)) > md-icon {
 
 main[qr] > form {
     grid-template-rows: auto auto minmax(0, 1fr) auto;
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
     height: 100%;
-    padding: 1.5rem;
-    border-right: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--md-sys-spacing-6);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.55);
+    border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
     overflow: hidden;
 }
 
@@ -138,10 +149,12 @@ main[qr] > form > header > md-icon {
 }
 
 main[qr] > form > section {
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
     align-content: start;
     padding-right: 0.25rem;
     overflow-y: auto;
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+    scrollbar-width: thin;
 }
 
 main[qr] > form > section > section > header {
@@ -151,6 +164,11 @@ main[qr] > form > section > section > header {
     color: var(--md-sys-color-on-surface);
     font-size: 0.9375rem;
     font-weight: 600;
+}
+
+main[qr] > form > section > section > header > md-text-button {
+    min-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
 }
 
 main[qr] > form > section > section:not(:has(> header)) {
@@ -164,8 +182,19 @@ main[qr] > form > section > section:not(:has(> header)) {
     text-align: center;
 }
 
+main[qr] > form > section > section[qr-customizer] > md-text-button {
+    min-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+}
+
+main[qr] > form > section > md-filled-text-field {
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-text-field-container-height: var(--md-sys-touch-target-min);
+}
+
 main[qr] > form > md-filled-button {
-    min-height: 48px;
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
 }
 
 main[qr] > form > a {
@@ -197,9 +226,18 @@ main[qr] {
 @media screen and (max-width: 839.98px) {
 main[qr] > form {
         height: auto;
+        border-radius: 0;
         border-right: none;
+        border-left: none;
+        border-top: none;
         border-bottom: 1px solid var(--md-sys-color-outline-variant);
         overflow: visible;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+main[qr] > section > section:has(> article) > article {
+        transition: none;
     }
 }
 

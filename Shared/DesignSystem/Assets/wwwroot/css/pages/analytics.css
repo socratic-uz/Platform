@@ -67,7 +67,7 @@ main[analytics] > header > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     padding: 0 0 2px;
     border: none;
@@ -323,7 +323,7 @@ main[analytics] > section:has(article > h3) > article:hover {
    LANDMARK: REGISTERS MODE (section[registers] - Tabular Data Explorer)
    ========================================================================== */
 main[analytics] > section[registers],
-main[analytics] > section:has(smart-grid, [smart-grid], table) {
+main[analytics] > section:has([smart-grid], table) {
     gap: var(--md-sys-spacing-5);
     padding: var(--md-sys-spacing-6);
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
@@ -334,12 +334,12 @@ main[analytics] > section:has(smart-grid, [smart-grid], table) {
 }
 
 main[analytics] > section[registers] > header,
-main[analytics] > section:has(smart-grid, [smart-grid], table) > header {
+main[analytics] > section:has([smart-grid], table) > header {
     gap: var(--md-sys-spacing-1);
 }
 
 main[analytics] > section[registers] > header > hgroup,
-main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup {
+main[analytics] > section:has([smart-grid], table) > header > hgroup {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
@@ -347,7 +347,7 @@ main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup
 }
 
 main[analytics] > section[registers] > header > hgroup > h4,
-main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup > h4 {
+main[analytics] > section:has([smart-grid], table) > header > hgroup > h4 {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
@@ -355,13 +355,13 @@ main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup
 }
 
 main[analytics] > section[registers] > header > hgroup > md-icon,
-main[analytics] > section:has(smart-grid, [smart-grid], table) > header > hgroup > md-icon {
+main[analytics] > section:has([smart-grid], table) > header > hgroup > md-icon {
     color: var(--md-sys-color-primary);
     font-size: 24px;
 }
 
 main[analytics] > section[registers] > header > p,
-main[analytics] > section:has(smart-grid, [smart-grid], table) > header > p {
+main[analytics] > section:has([smart-grid], table) > header > p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
@@ -500,7 +500,7 @@ main[analytics] > header > menu {
     }
 
 main[analytics] > section[registers],
-    main[analytics] > section:has(smart-grid, [smart-grid], table) {
+    main[analytics] > section:has([smart-grid], table) {
         padding: var(--md-sys-spacing-4);
     }
 }

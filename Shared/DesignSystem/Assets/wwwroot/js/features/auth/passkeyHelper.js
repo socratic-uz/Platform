@@ -1,17 +1,32 @@
 // Socratic FIDO2 / WebAuthn Passkey Helper (Zero Trust Hardware-backed Biometrics)
 window.passkeyHelper = {
     isSupported: async function () {
-        return window.PublicKeyCredential && 
-               typeof window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable === 'function' &&
-               await window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+        if (!window.PublicKeyCredential) {
+            console.warn("[Passkey] PublicKeyCredential is not supported in this browser.");
+            return false;
+        }
+        try {
+            if (typeof window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable === 'function') {
+                const available = await window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+                return available;
+            }
+            return true;
+        } catch (e) {
+            console.warn("[Passkey] Error checking platform authenticator:", e);
+            return false;
+        }
     },
 
     register: async function (userId, userName, challengeBase64) {
         try {
-            if (!await this.isSupported()) return null;
+            console.log("[Passkey] Starting Passkey registration for User:", userId, "Name:", userName);
+            if (!window.PublicKeyCredential) {
+                alert("Ваш браузер или устройство не поддерживает Passkeys (WebAuthn).");
+                return null;
+            }
 
             const challenge = Uint8Array.from(atob(challengeBase64), c => c.charCodeAt(0));
-            const userHandle = new TextEncoder().encode(userId);
+            const userHandle = new TextEncoder().encode(userId || "socratic-user");
 
             const publicKey = {
                 challenge: challenge,
@@ -29,16 +44,21 @@ window.passkeyHelper = {
                     { alg: -257, type: "public-key" } // RS256
                 ],
                 authenticatorSelection: {
-                    authenticatorAttachment: "platform",
-                    userVerification: "required",
+                    userVerification: "preferred",
                     residentKey: "preferred"
                 },
                 timeout: 60000,
                 attestation: "none"
             };
 
+            console.log("[Passkey] Calling navigator.credentials.create with publicKey options...");
             const credential = await navigator.credentials.create({ publicKey });
-            if (!credential) return null;
+            if (!credential) {
+                console.warn("[Passkey] User cancelled credential creation or no credential returned.");
+                return null;
+            }
+
+            console.log("[Passkey] Credential successfully created:", credential.id);
 
             const rawId = btoa(String.fromCharCode(...new Uint8Array(credential.rawId)));
             const clientDataJSON = btoa(String.fromCharCode(...new Uint8Array(credential.response.clientDataJSON)));
@@ -51,21 +71,23 @@ window.passkeyHelper = {
                 attestationObject: attestationObject
             });
         } catch (err) {
-            console.warn("[Passkey] Registration error or cancelled:", err);
+            console.error("[Passkey] Registration error:", err);
+            alert("Ошибка регистрации Passkey: " + (err.message || err.name));
             return null;
         }
     },
 
     authenticate: async function (challengeBase64) {
         try {
-            if (!await this.isSupported()) return null;
+            console.log("[Passkey] Starting Passkey authentication...");
+            if (!window.PublicKeyCredential) return null;
 
             const challenge = Uint8Array.from(atob(challengeBase64), c => c.charCodeAt(0));
 
             const publicKey = {
                 challenge: challenge,
                 rpId: window.location.hostname,
-                userVerification: "required",
+                userVerification: "preferred",
                 timeout: 60000
             };
 
@@ -87,7 +109,7 @@ window.passkeyHelper = {
                 userHandle: userHandle
             });
         } catch (err) {
-            console.warn("[Passkey] Authentication error or cancelled:", err);
+            console.error("[Passkey] Authentication error:", err);
             return null;
         }
     }

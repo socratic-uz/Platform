@@ -17,6 +17,12 @@ nav[pagination] {
     background: var(--md-sys-color-surface-container-low);
 }
 
+footer[paginator] > nav > md-icon-button {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
+}
+
 table[smart-grid], table {
     width: 100%;
     border-collapse: separate;
@@ -112,7 +118,7 @@ footer[paginator], nav[pagination] {
     }
 
 footer[paginator] > nav {
-        gap: 2px;
+        gap: var(--md-sys-spacing-2);
         justify-content: center;
     }
 

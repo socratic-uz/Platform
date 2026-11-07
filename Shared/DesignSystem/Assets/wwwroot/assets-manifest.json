@@ -53,8 +53,8 @@
     },
     {
       "url": "_content/Assets/css/components/tables.css",
-      "size": 2975,
-      "hash": "sha256-587f75bb8a85"
+      "size": 3207,
+      "hash": "sha256-e6598fbe6763"
     },
     {
       "url": "_content/Assets/css/components/theme-toggle.css",
@@ -153,8 +153,8 @@
     },
     {
       "url": "_content/Assets/css/pages/analytics.css",
-      "size": 18426,
-      "hash": "sha256-076177dc7174"
+      "size": 18342,
+      "hash": "sha256-a222deee2a0f"
     },
     {
       "url": "_content/Assets/css/pages/auth.css",
@@ -214,7 +214,7 @@
     {
       "url": "_content/Assets/css/pages/payment.css",
       "size": 9395,
-      "hash": "sha256-e2c94ff5f090"
+      "hash": "sha256-879a8eb68e48"
     },
     {
       "url": "_content/Assets/css/pages/player.css",
@@ -233,8 +233,8 @@
     },
     {
       "url": "_content/Assets/css/pages/qr.css",
-      "size": 5446,
-      "hash": "sha256-e1706ccb3b6f"
+      "size": 7252,
+      "hash": "sha256-b98e103ecc7c"
     },
     {
       "url": "_content/Assets/css/pages/seat-designer.css",
@@ -518,8 +518,8 @@
     },
     {
       "url": "_content/Assets/js/features/auth/passkeyHelper.js",
-      "size": 4067,
-      "hash": "sha256-57f92725cbb7"
+      "size": 5163,
+      "hash": "sha256-8b2b0e2b0801"
     },
     {
       "url": "_content/Assets/js/features/auth/telegramHelper.js",

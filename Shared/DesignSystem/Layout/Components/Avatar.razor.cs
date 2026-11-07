@@ -38,6 +38,7 @@ namespace Shared.Components
         [Inject] public IStringLocalizer l { get; set; } = default!;
         [Inject] public NavigationManager nav { get; set; } = default!;
         [Inject] public Domain.Interfaces.Identity.IUserAccountGateway? UserAccountGateway { get; set; }
+        [Inject] public Infrastructure.Gateways.Identity.IPasskeyService? PasskeyService { get; set; }
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;
         [Inject] public ISettingsManager settings { get; set; } = default!;
         [Inject] public IJSRuntime js { get; set; } = default!;
@@ -745,13 +746,27 @@ namespace Shared.Components
             }
         }
 
-        public IPasskeyService? PasskeyService => ServiceProvider?.GetService(typeof(IPasskeyService)) as IPasskeyService;
         private bool isPasskeyConfigured = false;
 
         private async Task RegisterPasskey()
         {
-            if (PasskeyService == null) return;
-            var currentUserId = userIdStr ?? await Settings.GetUserIdAsync();
+            Logger.LogInformation("[Profile.Passkey] RegisterPasskey button clicked. Service available: {HasService}", PasskeyService != null);
+            if (PasskeyService == null)
+            {
+                Logger.LogError("[Profile.Passkey] PasskeyService is not resolved from DI container.");
+                return;
+            }
+
+            var currentUserId = userIdStr;
+            if (string.IsNullOrWhiteSpace(currentUserId))
+            {
+                currentUserId = await Settings.GetUserIdAsync();
+            }
+            if (string.IsNullOrWhiteSpace(currentUserId) && auth != null)
+            {
+                var authId = await auth.GetUserIdAsync();
+                if (authId != Guid.Empty) currentUserId = authId.ToString();
+            }
             if (string.IsNullOrWhiteSpace(currentUserId) && FormModel?.Id != null && FormModel.Id.Value != Guid.Empty)
             {
                 currentUserId = FormModel.Id.ToString();
@@ -760,7 +775,8 @@ namespace Shared.Components
             var userName = FormModel?.Name?.FirstName ?? "User";
             var challenge = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
 
-            var credJson = await PasskeyService.RegisterAsync(currentUserId, userName, challenge);
+            Logger.LogInformation("[Profile.Passkey] Requesting browser WebAuthn prompt for User: {UserId}, Name: {UserName}", currentUserId, userName);
+            var credJson = await PasskeyService.RegisterAsync(currentUserId ?? "socratic-user", userName, challenge);
             if (!string.IsNullOrEmpty(credJson))
             {
                 var regDto = System.Text.Json.JsonSerializer.Deserialize<Domain.DTOs.PasskeyRegisterDto>(
@@ -770,6 +786,7 @@ namespace Shared.Components
                 if (regDto != null)
                 {
                     regDto.UserId = currentUserId;
+                    Logger.LogInformation("[Profile.Passkey] Sending registered Passkey {CredId} to server...", regDto.Id);
                     var success = UserAccountGateway != null && await UserAccountGateway.RegisterPasskeyAsync(
                         currentUserId ?? string.Empty,
                         regDto.Id,
@@ -787,6 +804,10 @@ namespace Shared.Components
                     Logger.LogInformation("[Profile.Passkey] Passkey successfully registered on server for User {UserId}", currentUserId);
                     await InvokeAsync(StateHasChanged);
                 }
+            }
+            else
+            {
+                Logger.LogWarning("[Profile.Passkey] Browser returned null/empty credential (user cancelled or unsupported).");
             }
         }
 
