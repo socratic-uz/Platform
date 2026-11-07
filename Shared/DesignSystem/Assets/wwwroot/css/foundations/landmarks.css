@@ -311,9 +311,18 @@ body > footer > section:last-of-type:not(:first-of-type) > span > md-icon {
 body > footer > section:last-of-type:not(:first-of-type) > menu {
     display: inline-grid;
     grid-auto-flow: column;
-    gap: 0.25rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     justify-content: center;
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > menu > :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-filled-tonal-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
 }
 
 /* ==========================================================================

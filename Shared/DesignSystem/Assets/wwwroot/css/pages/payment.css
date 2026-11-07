@@ -39,6 +39,14 @@ main[payment] {
     overflow-x: hidden;
 }
 
+main[payment] :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+    min-height: 48px;
+    --md-filled-button-container-height: 48px;
+    --md-filled-tonal-button-container-height: 48px;
+    --md-outlined-button-container-height: 48px;
+    --md-text-button-container-height: 48px;
+}
+
 /* ==========================================================================
    LANDMARK: USER PROFILE & SCORING SECTION (First Section)
    ========================================================================== */
@@ -191,7 +199,7 @@ main[payment] > section:last-of-type > section:has(> article) > article > sectio
 
 main[payment] > section:last-of-type > section:has(> article) > article > footer {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), max-content));
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     margin-top: 0.5rem;
 }

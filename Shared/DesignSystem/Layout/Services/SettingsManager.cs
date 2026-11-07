@@ -134,7 +134,19 @@ namespace Shared.Services
 
             public async Task SetAccessTokenAsync(string accessToken)
             {
-                try { await _js.SetAsync("AccessToken", accessToken); } catch { }
+                try
+                {
+                    if (string.IsNullOrEmpty(accessToken))
+                    {
+                        await _js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'; try { localStorage.removeItem('AccessToken'); sessionStorage.removeItem('AccessToken'); } catch(e){}");
+                    }
+                    else
+                    {
+                        var escaped = Uri.EscapeDataString(accessToken);
+                        await _js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=" + escaped + "; path=/; max-age=2592000; SameSite=Lax; Secure'; try { localStorage.setItem('AccessToken', '" + escaped + "'); } catch(e){}");
+                    }
+                }
+                catch { }
             }
         }
     }

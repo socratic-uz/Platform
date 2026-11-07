@@ -86,8 +86,24 @@ window.oauthPopupHelper = {
         }
     },
 
-    notifyAndClose: function (returnUrl) {
+    notifyAndClose: function (returnUrl, token) {
         try {
+            if (token) {
+                // Set cookie and storage in current window
+                try {
+                    document.cookie = "AccessToken=" + encodeURIComponent(token) + "; path=/; max-age=2592000; SameSite=Lax; Secure";
+                    localStorage.setItem("AccessToken", token);
+                } catch (e) {}
+
+                // Set cookie and storage in parent window
+                if (window.opener && !window.opener.closed) {
+                    try {
+                        window.opener.document.cookie = "AccessToken=" + encodeURIComponent(token) + "; path=/; max-age=2592000; SameSite=Lax; Secure";
+                        window.opener.localStorage.setItem("AccessToken", token);
+                    } catch (e) {}
+                }
+            }
+
             if (window.opener && !window.opener.closed) {
                 try {
                     window.opener.location.href = returnUrl || "/";

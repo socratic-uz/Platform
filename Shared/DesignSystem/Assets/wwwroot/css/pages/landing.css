@@ -280,7 +280,7 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-c
 main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
+    gap: var(--md-sys-spacing-3);
 }
 
 main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-child > nav > a {
@@ -658,7 +658,7 @@ main[landing] > section:nth-of-type(5) > header:nth-of-type(3) {
 main[landing] > section:nth-of-type(5) > header:nth-of-type(3) > nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     overflow-x: auto;
     scrollbar-width: none;
@@ -804,6 +804,12 @@ main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer
     gap: var(--md-sys-spacing-2);
     align-items: center;
     margin-top: auto;
+}
+
+main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer > md-icon-button {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
 }
 
 main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer > a {

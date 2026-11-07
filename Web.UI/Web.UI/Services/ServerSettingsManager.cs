@@ -107,19 +107,48 @@ namespace Web.UI.Services
             return null;
         }
 
-        public Task SetAccessTokenAsync(string accessToken)
+        public async Task SetAccessTokenAsync(string accessToken)
         {
             if (_accessor.HttpContext?.Response != null && !_accessor.HttpContext.Response.HasStarted)
             {
-                _accessor.HttpContext.Response.Cookies.Append("AccessToken", accessToken, new CookieOptions
+                try
                 {
-                    HttpOnly = false,
-                    Secure = true,
-                    SameSite = SameSiteMode.Lax,
-                    Path = "/"
-                });
+                    _accessor.HttpContext.Response.Cookies.Append("AccessToken", accessToken ?? string.Empty, new CookieOptions
+                    {
+                        HttpOnly = false,
+                        Secure = true,
+                        SameSite = SameSiteMode.Lax,
+                        Path = "/",
+                        Expires = string.IsNullOrEmpty(accessToken) ? DateTimeOffset.UtcNow.AddDays(-1) : DateTimeOffset.UtcNow.AddDays(30)
+                    });
+                }
+                catch
+                {
+                    // Response headers may have started in interactive mode
+                }
             }
-            return Task.CompletedTask;
+
+            // Always also write via JS Interop when in interactive SignalR / client mode or if Response already started
+            try
+            {
+                var js = _serviceProvider.GetService<IJSRuntime>();
+                if (js != null)
+                {
+                    if (string.IsNullOrEmpty(accessToken))
+                    {
+                        await js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'; try { localStorage.removeItem('AccessToken'); sessionStorage.removeItem('AccessToken'); } catch(e){}");
+                    }
+                    else
+                    {
+                        var escaped = Uri.EscapeDataString(accessToken);
+                        await js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=" + escaped + "; path=/; max-age=2592000; SameSite=Lax; Secure'; try { localStorage.setItem('AccessToken', '" + escaped + "'); } catch(e){}");
+                    }
+                }
+            }
+            catch
+            {
+                // Prerendering fallback where JS is not yet interactive
+            }
         }
     }
 }

@@ -8,3 +8,8 @@ section[lang-selector] {
     align-items: center;
     position: relative;
 }
+
+menu[lang-selector][variant="pill"] > md-text-button {
+    min-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+}
