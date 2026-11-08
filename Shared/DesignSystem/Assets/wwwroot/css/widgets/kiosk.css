@@ -4,18 +4,6 @@
    Classless Architecture: root landmark main[kiosk]
    ========================================================================== */
 
-/* --- Kiosk Header Context Branding --- */
-header[kiosk] > nav > img {
-    width: 36px;
-    height: 36px;
-    aspect-ratio: 1 / 1;
-    padding: var(--md-sys-spacing-1);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-full);
-    background: var(--md-sys-color-surface-container-lowest);
-    object-fit: contain;
-}
-
 header[kiosk] > nav > hgroup {
     gap: var(--md-sys-spacing-1);
 }
@@ -53,6 +41,20 @@ header[kiosk] > nav > hgroup > p > md-icon {
     font-size: 13px;
 }
 
+/* --- Kiosk Header Context Branding --- */
+header[kiosk] > a > img,
+header[kiosk] > nav > img {
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1 / 1;
+    padding: var(--md-sys-spacing-1);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-surface-container-lowest);
+    object-fit: contain;
+}
+
+header[kiosk] > a > md-icon,
 header[kiosk] > nav > md-icon {
     width: 36px;
     height: 36px;

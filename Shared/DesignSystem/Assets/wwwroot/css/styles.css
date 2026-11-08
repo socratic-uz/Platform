@@ -95,9 +95,4 @@
 @import "pages/wishlist.css" layer(pages);
 
 /* 6. Blazor Layouts (Page Skeletons, Shells & Chrome) */
-@import "layouts/chat-layout.css" layer(layouts);
-@import "layouts/grid-layout.css" layer(layouts);
-@import "layouts/landing-layout.css" layer(layouts);
-@import "layouts/main-layout.css" layer(layouts);
-@import "layouts/map-layout.css" layer(layouts);
-@import "layouts/nav-only-layout.css" layer(layouts);
+@import "layouts/layout.css" layer(layouts);

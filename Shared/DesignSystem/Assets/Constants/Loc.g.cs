@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1689.
+    /// Total unique keys: 1690.
     /// </summary>
     public static class Loc
     {
@@ -471,7 +471,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (575 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (577 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -1777,6 +1777,14 @@ namespace Assets.Constants
             public const string HeroTerminal = "HeroTerminal";
 
             /// <summary>
+            /// Key: <c>Home_DirectorySubtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+            /// </summary>
+            public const string Home_DirectorySubtitle = "Home_DirectorySubtitle";
+
+            /// <summary>
             /// Key: <c>Home_LoadingPlayer</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка плеера...&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Pleyer yuklanmoqda...&quot;<br/>
@@ -1847,6 +1855,14 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
             /// </summary>
             public const string Home_SearchNoResultsDesc = "Home_SearchNoResultsDesc";
+
+            /// <summary>
+            /// Key: <c>Home_DirectorySubtitle</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+            /// </summary>
+            public const string HomeDirectorySubtitle = "Home_DirectorySubtitle";
 
             /// <summary>
             /// Key: <c>Home</c><br/>
@@ -41665,6 +41681,14 @@ namespace Assets.Constants
         public const string HeroTerminal = "HeroTerminal";
 
         /// <summary>
+        /// Key: <c>Home_DirectorySubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+        /// </summary>
+        public const string Home_DirectorySubtitle = "Home_DirectorySubtitle";
+
+        /// <summary>
         /// Key: <c>Home_LoadingPlayer</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Загрузка плеера...&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Pleyer yuklanmoqda...&quot;<br/>
@@ -41735,6 +41759,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Try changing your search terms.&quot;
         /// </summary>
         public const string Home_SearchNoResultsDesc = "Home_SearchNoResultsDesc";
+
+        /// <summary>
+        /// Key: <c>Home_DirectorySubtitle</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+        /// </summary>
+        public const string HomeDirectorySubtitle = "Home_DirectorySubtitle";
 
         /// <summary>
         /// Key: <c>Home_LoadingPlayer</c><br/>

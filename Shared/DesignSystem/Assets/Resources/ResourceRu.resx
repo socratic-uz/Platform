@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -5163,6 +5163,9 @@
   </data>
   <data name="Analytics_SkuUnit" xml:space="preserve">
     <value>SKU</value>
+  </data>
+  <data name="Home_DirectorySubtitle" xml:space="preserve">
+    <value>Выберите заведение для заказа через киоск самообслуживания или бронирования</value>
   </data>
   <data name="Home_PageTitle" xml:space="preserve">
     <value>Каталог заведений и организаций • Socratic</value>

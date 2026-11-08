@@ -1,18 +1,18 @@
 @using Domain.Interfaces
 @using System.Diagnostics.CodeAnalysis
 @using static Assets.Constants.Icons
-@attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(MainLayout)")]
+@attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(GridLayout)")]
 
-<Router AppAssembly=@typeof(Layout.MainLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
+<Router AppAssembly=@typeof(Layout.GridLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
    <Found Context="routeData">
-	   <AuthorizeRouteView RouteData=@routeData DefaultLayout=@typeof(Layout.MainLayout)>
+	   <AuthorizeRouteView RouteData=@routeData DefaultLayout=@typeof(Layout.GridLayout)>
 		   <NotAuthorized>
 			   <RedirectToSignIn />
 		   </NotAuthorized>
 	   </AuthorizeRouteView>
    </Found>
    <NotFound>
-	   <LayoutView Layout=@typeof(Layout.MainLayout)>
+	   <LayoutView Layout=@typeof(Layout.GridLayout)>
 		   @{
 			   var modules = FeatureRegistry.GetAllModules();
 			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));

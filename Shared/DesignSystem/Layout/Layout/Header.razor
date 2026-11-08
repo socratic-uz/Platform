@@ -1,55 +1,8 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
-@using static Assets.Constants.Icons
 
-@if (Visible && !Empty)
-{
-	<SectionContent SectionName=@Name>
-		@if (ShouldRenderCustom)
-		{
-			@ChildContent
-		}
-		else
-		{
-			<!-- START ZONE: Socratic Platform Brand + Tenant / Breadcrumb -->
-			<nav aria-label="Breadcrumb">
-				@if (ShowBrand)
-				{
-					<a href="/" title="Socratic">
-						<Icon Name=@AutoAwesome />
-						<span>Socratic</span>
-					</a>
-				}
-				@if (StartContent != null)
-				{
-					@StartContent
-				}
-				<HeaderStartOutlet />
-			</nav>
-
-			<!-- CENTER ZONE: Navigation Links or Center Search Bar -->
-			@if (CenterContent != null)
-			{
-				@CenterContent
-			}
-			<HeaderCenterOutlet />
-
-			<!-- END ZONE: Actions (Trial, Custom Actions, Language, Avatar) -->
-			<menu aria-label="User Actions">
-				@if (EndContent != null)
-				{
-					@EndContent
-				}
-				<HeaderEndOutlet />
-				@if (ShowDefaultActions)
-				{
-					<LanguageSelector Variant="pill" />
-				}
-				@if (ShowAvatar)
-				{
-					<Avatar />
-				}
-			</menu>
-		}
-	</SectionContent>
-}
+<SectionContent SectionName=@Name>
+	<header @attributes=@AdditionalAttributes>
+		@ChildContent
+	</header>
+</SectionContent>

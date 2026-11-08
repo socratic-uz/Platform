@@ -6,9 +6,9 @@ using Microsoft.Extensions.Localization;
 using Shared.Extensions;
 using Shared.Services;
 
-public partial class Nav : ComponentBase
+public partial class Aside : ComponentBase
 {
-    public const string Name = "nav";
+    public const string Name = "aside";
 
     [Inject] public IStringLocalizerFactory F { get; set; } = default!;
     [Inject] public ISettingsManager Settings { get; set; } = default!;

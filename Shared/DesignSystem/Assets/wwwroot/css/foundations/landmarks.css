@@ -35,6 +35,7 @@ figcaption {
    ========================================================================== */
 
 body > header,
+body > aside,
 body > nav,
 body > main,
 body > footer {
@@ -44,7 +45,7 @@ body > footer {
 /* --- Top App Bar (body > header) --- */
 
 body > header {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
     gap: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
     align-items: center;
     position: sticky;
@@ -57,6 +58,22 @@ body > header {
     transition:
         background-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard),
         border-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+}
+
+body > header > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 body > header > nav {
@@ -118,26 +135,66 @@ body > header > menu :where(md-text-button, md-icon-button) {
     --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
 }
 
-body > header:has(> :nth-child(3)) {
-    grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
+body > header > search {
+    display: grid;
+    grid-column: 2 / 3;
+    min-width: 0;
+    width: 100%;
+    align-items: center;
 }
 
-/* --- Navigation Rail / Shell (body > nav) --- */
+body > header > search > md-outlined-text-field {
+    width: 100%;
+}
 
+/* --- Navigation Rail / Shell (body > aside > nav, body > nav) --- */
+
+body > aside {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-items: center;
+}
+
+body > aside > nav,
+body > nav {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-items: center;
+}
+
+body > aside > nav > a,
 body > nav > a {
     display: grid;
+    grid-template-rows: auto auto;
+    gap: 3px;
+    place-items: center;
+    justify-content: center;
     border-radius: var(--md-sys-shape-corner-large);
+    text-decoration: none;
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
+body > aside > nav > a > span,
 body > nav > a > span {
     min-inline-size: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    text-align: center;
 }
 
+body > aside > nav > a > md-icon,
 body > nav > a > md-icon {
+    display: grid;
+    place-items: center;
     border-radius: var(--md-sys-shape-corner-large);
 }
 
@@ -375,7 +432,6 @@ aside {
 nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    align-items: center;
     gap: var(--md-sys-spacing-4);
 }
 
@@ -432,13 +488,14 @@ nav > ol {
 }
 
 @media screen and (min-width: 840px) {
+    body > aside,
     body > nav {
         display: grid;
         grid-template-columns: 100%;
         grid-auto-flow: row;
         grid-column: 1 / 2;
         grid-row: 1 / 4;
-        gap: 0.5rem;
+        gap: var(--md-sys-spacing-2);
         align-self: start;
         place-content: start stretch;
         place-items: center stretch;
@@ -448,16 +505,32 @@ nav > ol {
         width: calc(76px + env(safe-area-inset-left, 0px));
         height: 100dvh;
         max-height: 100dvh;
-        padding: var(--md-sys-spacing-2);
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
+        padding-left: max(var(--md-sys-spacing-1), env(safe-area-inset-left, 0px));
         border-right: 1px solid var(--md-sys-color-outline-variant);
         border-radius: 0;
         background: var(--md-sys-color-surface-container-low);
         color: var(--md-sys-color-on-surface);
         text-align: start;
         overflow: hidden auto;
+        scrollbar-width: none;
     }
 
+    body > aside > nav {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        gap: 0.5rem;
+        align-content: start;
+        justify-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    body > aside > nav > a,
     body > nav > a {
+        display: grid;
         grid-template-rows: auto auto;
         gap: 3px;
         justify-items: center;
@@ -465,10 +538,14 @@ nav > ol {
         width: 64px;
         min-height: 56px;
         margin: 4px auto;
-        padding: var(--md-sys-spacing-1);
+        padding: var(--md-sys-spacing-1) 0;
+        border-radius: var(--md-sys-shape-corner-large);
         color: var(--md-sys-color-on-surface-variant);
+        text-decoration: none;
+        transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
     }
 
+    body > aside > nav > a > span,
     body > nav > a > span {
         max-width: 64px;
         color: var(--md-sys-color-on-surface-variant);
@@ -477,28 +554,58 @@ nav > ol {
         line-height: 1.15;
         text-align: center;
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
+    body > aside > nav > a > md-icon,
     body > nav > a > md-icon {
-        width: 52px;
-        height: 30px;
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 32px;
         color: var(--md-sys-color-on-surface-variant);
-        font-size: 22px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+        font-size: 24px;
+        border-radius: var(--md-sys-shape-corner-full);
+        transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
     }
 
+    body > aside > nav > a:hover > md-icon,
     body > nav > a:hover > md-icon {
         background: var(--md-sys-color-surface-container-highest);
         color: var(--md-sys-color-on-surface);
+    }
+
+    body > aside > nav > a[aria-current="page"] > md-icon,
+    body > aside > nav > a.active > md-icon,
+    body > nav > a[aria-current="page"] > md-icon,
+    body > nav > a.active > md-icon {
+        background: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+    }
+
+    body > aside > nav > a[aria-current="page"] > span,
+    body > aside > nav > a.active > span,
+    body > nav > a[aria-current="page"] > span,
+    body > nav > a.active > span {
+        color: var(--md-sys-color-on-surface);
+        font-weight: 700;
     }
 }
 
 @media screen and (max-width: 839.98px) {
     body > header {
+        grid-template: auto auto / minmax(0, 1fr);
+        gap: 0.5rem;
         padding: var(--md-sys-spacing-3);
     }
 
-    body > header:has(> nav:first-child):has(> :nth-child(3)) {
+    body > header > search {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    body > header:has(> :nth-child(3)) {
         grid-template: auto auto / minmax(0, 1fr) auto;
         grid-template-areas:
             "start end"
@@ -506,47 +613,106 @@ nav > ol {
         gap: 0.5rem 0.75rem;
     }
 
-    body > header:has(> nav:first-child):has(> :nth-child(3)) > nav:first-child {
+    body > header:has(> :nth-child(3)) > :first-child {
         grid-area: start;
     }
 
-    body > header:has(> nav:first-child):has(> :nth-child(3)) > menu:last-child {
+    body > header:has(> :nth-child(3)) > :last-child {
         grid-area: end;
         justify-self: end;
     }
 
-    body > header:has(> nav:first-child):has(> :nth-child(3)) > :nth-child(2) {
+    body > header:has(> :nth-child(3)) > search,
+    body > header:has(> :nth-child(3)) > :nth-child(2) {
         grid-area: center;
         grid-column: 1 / -1;
     }
 
+    body > aside {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: stretch;
+        padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
+        padding-bottom: max(var(--md-sys-spacing-1), env(safe-area-inset-bottom, 0px));
+        overflow: hidden;
+    }
+
+    body > aside > nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-rows: 1fr;
+        gap: var(--md-sys-spacing-1);
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    body > aside > nav > a,
     body > nav > a {
+        display: grid;
+        grid-template-rows: auto auto;
         gap: 2px;
+        place-content: center;
         place-items: center;
         position: relative;
         min-width: 48px;
         min-height: 48px;
-        padding: var(--md-sys-spacing-1);
+        width: 100%;
+        padding: var(--md-sys-spacing-1) 0;
         border-radius: var(--md-sys-shape-corner-medium);
         color: var(--md-sys-color-on-surface-variant);
         font-size: 0.75rem;
+        text-decoration: none;
     }
 
+    body > aside > nav > a > span,
     body > nav > a > span {
         color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 500;
-        line-height: 1.2;
+        line-height: 1.15;
         text-align: center;
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
+    body > aside > nav > a > md-icon,
     body > nav > a > md-icon {
+        display: grid;
+        place-items: center;
         width: 56px;
         height: 32px;
         color: var(--md-sys-color-on-surface-variant);
         font-size: 24px;
-        transition: background 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+        border-radius: var(--md-sys-shape-corner-full);
+        transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    body > aside > nav > a:hover > md-icon,
+    body > nav > a:hover > md-icon {
+        background: var(--md-sys-color-surface-container-highest);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    body > aside > nav > a[aria-current="page"] > md-icon,
+    body > aside > nav > a.active > md-icon,
+    body > nav > a[aria-current="page"] > md-icon,
+    body > nav > a.active > md-icon {
+        background: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+    }
+
+    body > aside > nav > a[aria-current="page"] > span,
+    body > aside > nav > a.active > span,
+    body > nav > a[aria-current="page"] > span,
+    body > nav > a.active > span {
+        color: var(--md-sys-color-on-surface);
+        font-weight: 700;
     }
 
     body > footer {
