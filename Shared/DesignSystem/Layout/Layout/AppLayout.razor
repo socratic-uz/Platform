@@ -3,16 +3,264 @@
 
 @using Domain.Enums
 @using Microsoft.AspNetCore.Components
+@using SharedKernel.Extensions
+@using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
+@using static Assets.Constants.Loc.Landing
 @using static Material.Web.Components.ButtonVariant
 
-<layout app />
 <Color />
 
-<Aside />
+@if (Mode == LayoutMode.Landing)
+{
+	<layout landing />
+	@if (!IsRootLanding)
+	{
+		<Blob />
+	}
 
-<HeaderOutlet />
-<AsideOutlet />
+	<Header landing>
+		<IconButton drawer
+					Icon=@(IsMobileMenuOpen ? Close : MenuIcon)
+					OnClick=@ToggleMobileMenuAsync
+					AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : L[MainNavigation]) />
+
+		<a href="/" title="Socratic" aria-current=@GetAriaCurrent("/")>
+			<Icon Name=@AutoAwesome />
+			<span>Socratic</span>
+		</a>
+
+		<nav aria-label=@L[MainNavigation]>
+			<menu dropdown>
+				<Button id="nav-anchor-features"
+						Variant=@Text
+						OnClick=@(() => ToggleDropdown(NavDropdownGroup.Features))
+						TrailingIcon=@(ActiveDropdown == NavDropdownGroup.Features ? ArrowDropUp : ArrowDropDown)>
+					<span>@L[CoreSuperpowersTitle]</span>
+				</Button>
+				<Menu Anchor="nav-anchor-features" Positioning="popover" Open=@(ActiveDropdown == NavDropdownGroup.Features) OnClosed=@CloseDropdown>
+					<MenuItem Href="/#superpowers" StartIcon=@Bolt Headline=@L[CoreSuperpowersTitle] OnClick=@CloseDropdown />
+					<MenuItem Href="/#ux-modes" StartIcon=@Widgets Headline=@L[LandingUxModesTitle] OnClick=@CloseDropdown />
+					<MenuItem Href="/#live-showcases" StartIcon=@DevicesIcon Headline=@L[ShowcaseHeading] OnClick=@CloseDropdown />
+					<MenuItem Href="/#maps-and-spaces" StartIcon=@Explore Headline=@L[SpatialTechHeading] OnClick=@CloseDropdown />
+					<MenuItem Href="/#download" StartIcon=@CloudDownload Headline=@L[DownloadTitle] OnClick=@CloseDropdown />
+				</Menu>
+			</menu>
+
+			<menu dropdown>
+				<Button id="nav-anchor-catalog"
+						Variant=@Text
+						OnClick=@(() => ToggleDropdown(NavDropdownGroup.Catalog))
+						TrailingIcon=@(ActiveDropdown == NavDropdownGroup.Catalog ? ArrowDropUp : ArrowDropDown)>
+					<span>@L[FooterCatalog]</span>
+				</Button>
+				<Menu Anchor="nav-anchor-catalog" Positioning="popover" Open=@(ActiveDropdown == NavDropdownGroup.Catalog) OnClosed=@CloseDropdown>
+					<MenuItem Href=@("/kiosk/" + ObjectIdExtension.DemoId) StartIcon=@Storefront Headline=@L[ShowroomDemo] OnClick=@CloseDropdown />
+					<MenuItem Href="/terminal" StartIcon=@PointOfSale Headline=@L[HeroTerminal] OnClick=@CloseDropdown />
+					<MenuItem Href=@("/kiosk/" + ObjectIdExtension.SocraticId) StartIcon=@BusinessCenter Headline=@L[PlansConnect] OnClick=@CloseDropdown />
+					<MenuItem Href="/map" StartIcon=@Map Headline=@L[InteractiveMap] OnClick=@CloseDropdown />
+					<MenuItem Href="/seat-designer" StartIcon=@EventSeat Headline=@L[HeroSeatDesigner] OnClick=@CloseDropdown />
+					<MenuItem Href="/qr-designer" StartIcon=@QrCode2 Headline=@L[QrStudio] OnClick=@CloseDropdown />
+					<MenuItem Href="/home" StartIcon=@Domain Headline=@L[VenuesCatalog] OnClick=@CloseDropdown />
+					<MenuItem Href="/analytics" StartIcon=@Analytics Headline=@L[AnalyticsText] OnClick=@CloseDropdown />
+				</Menu>
+			</menu>
+
+			<menu dropdown>
+				<Button id="nav-anchor-resources"
+						Variant=@Text
+						OnClick=@(() => ToggleDropdown(NavDropdownGroup.Resources))
+						TrailingIcon=@(ActiveDropdown == NavDropdownGroup.Resources ? ArrowDropUp : ArrowDropDown)>
+					<span>@L[FooterResources]</span>
+				</Button>
+				<Menu Anchor="nav-anchor-resources" Positioning="popover" Open=@(ActiveDropdown == NavDropdownGroup.Resources) OnClosed=@CloseDropdown>
+					<MenuItem Href="/docs" StartIcon=@MenuBook Headline=@L[Documentation] OnClick=@CloseDropdown />
+					<MenuItem Href="/help" StartIcon=@HelpOutline Headline=@L[HelpText] OnClick=@CloseDropdown />
+					<MenuItem Href="/about" StartIcon=@Info Headline=@L[AboutText] OnClick=@CloseDropdown />
+				</Menu>
+			</menu>
+
+			<menu dropdown>
+				<Button id="nav-anchor-community"
+						Variant=@Text
+						OnClick=@(() => ToggleDropdown(NavDropdownGroup.Community))
+						TrailingIcon=@(ActiveDropdown == NavDropdownGroup.Community ? ArrowDropUp : ArrowDropDown)>
+					<span>@L[FooterCommunity]</span>
+				</Button>
+				<Menu Anchor="nav-anchor-community" Positioning="popover" Open=@(ActiveDropdown == NavDropdownGroup.Community) OnClosed=@CloseDropdown>
+					<MenuItem Href="https://t.me/sardorsafarovv" Target="_blank" StartIcon=@SupportAgent Headline=@L[SupportText] OnClick=@CloseDropdown />
+					<MenuItem Href="https://t.me/socratic_uz_bot" Target="_blank" StartIcon=@Send Headline="Telegram Bot" OnClick=@CloseDropdown />
+					<MenuItem Href="https://www.instagram.com/socratic.uz/" Target="_blank" StartIcon=@CameraAlt Headline="Instagram" OnClick=@CloseDropdown />
+				</Menu>
+			</menu>
+		</nav>
+
+		<menu aria-label="User Actions">
+			<LanguageSelector Variant="pill" />
+			<Button Variant=@Filled Href="/signin" Icon=@Login AriaLabel=@L[SocraticID]>
+				<span>@L[SocraticID]</span>
+			</Button>
+		</menu>
+	</Header>
+
+	<HeaderOutlet />
+
+	@if (IsMobileMenuOpen)
+	{
+		<span backdrop @onclick=@CloseMobileMenuAsync aria-hidden="true"></span>
+		<aside drawer>
+			<nav aria-label=@L[MainNavigation] tabindex="0" @onkeydown=@HandleKeyDown>
+				<header>
+					<a href="/" @onclick=@CloseMobileMenuAsync title="Socratic">
+						<Icon Name=@AutoAwesome />
+						<span>Socratic</span>
+					</a>
+					<IconButton Icon=@Close OnClick=@CloseMobileMenuAsync AriaLabel=@L[CloseAction] />
+				</header>
+
+				<Button Variant=@Filled Href="/signin" Icon=@Login AriaLabel=@L[SocraticID]>
+					<span>@L[SocraticID]</span>
+				</Button>
+
+				<details open>
+					<summary>
+						<span>@L[CoreSuperpowersTitle]</span>
+						<Icon Name=@ExpandMore />
+					</summary>
+					<section>
+						<a href="/#superpowers" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@Bolt />
+							<span>@L[CoreSuperpowersTitle]</span>
+						</a>
+						<a href="/#ux-modes" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@Widgets />
+							<span>@L[LandingUxModesTitle]</span>
+						</a>
+						<a href="/#live-showcases" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@DevicesIcon />
+							<span>@L[ShowcaseHeading]</span>
+						</a>
+						<a href="/#maps-and-spaces" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@Explore />
+							<span>@L[SpatialTechHeading]</span>
+						</a>
+						<a href="/#download" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@CloudDownload />
+							<span>@L[DownloadTitle]</span>
+						</a>
+					</section>
+				</details>
+
+				<Divider />
+
+				<details>
+					<summary>
+						<span>@L[FooterCatalog]</span>
+						<Icon Name=@ExpandMore />
+					</summary>
+					<section>
+						<a href=@("/kiosk/" + ObjectIdExtension.DemoId) @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/kiosk/" + ObjectIdExtension.DemoId)>
+							<Icon Name=@Storefront />
+							<span>@L[ShowroomDemo]</span>
+						</a>
+						<a href="/terminal" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/terminal")>
+							<Icon Name=@PointOfSale />
+							<span>@L[HeroTerminal]</span>
+						</a>
+						<a href=@("/kiosk/" + ObjectIdExtension.SocraticId) @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/kiosk/" + ObjectIdExtension.SocraticId)>
+							<Icon Name=@BusinessCenter />
+							<span>@L[PlansConnect]</span>
+						</a>
+						<a href="/map" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/map")>
+							<Icon Name=@Map />
+							<span>@L[InteractiveMap]</span>
+						</a>
+						<a href="/seat-designer" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/seat-designer")>
+							<Icon Name=@EventSeat />
+							<span>@L[HeroSeatDesigner]</span>
+						</a>
+						<a href="/qr-designer" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/qr-designer")>
+							<Icon Name=@QrCode2 />
+							<span>@L[QrStudio]</span>
+						</a>
+						<a href="/home" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/home")>
+							<Icon Name=@Domain />
+							<span>@L[VenuesCatalog]</span>
+						</a>
+						<a href="/analytics" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/analytics")>
+							<Icon Name=@Analytics />
+							<span>@L[AnalyticsText]</span>
+						</a>
+					</section>
+				</details>
+
+				<Divider />
+
+				<details>
+					<summary>
+						<span>@L[FooterResources]</span>
+						<Icon Name=@ExpandMore />
+					</summary>
+					<section>
+						<a href="/docs" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/docs")>
+							<Icon Name=@MenuBook />
+							<span>@L[Documentation]</span>
+						</a>
+						<a href="/help" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/help")>
+							<Icon Name=@HelpOutline />
+							<span>@L[HelpText]</span>
+						</a>
+						<a href="/about" @onclick=@CloseMobileMenuAsync aria-current=@GetAriaCurrent("/about")>
+							<Icon Name=@Info />
+							<span>@L[AboutText]</span>
+						</a>
+					</section>
+				</details>
+
+				<Divider />
+
+				<details>
+					<summary>
+						<span>@L[FooterCommunity]</span>
+						<Icon Name=@ExpandMore />
+					</summary>
+					<section>
+						<a href="https://t.me/sardorsafarovv" target="_blank" rel="noopener noreferrer" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@SupportAgent />
+							<span>@L[SupportText]</span>
+						</a>
+						<a href="https://t.me/socratic_uz_bot" target="_blank" rel="noopener noreferrer" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@Send />
+							<span>Telegram Bot</span>
+						</a>
+						<a href="https://www.instagram.com/socratic.uz/" target="_blank" rel="noopener noreferrer" @onclick=@CloseMobileMenuAsync>
+							<Icon Name=@CameraAlt />
+							<span>Instagram</span>
+						</a>
+					</section>
+				</details>
+
+				<Divider />
+
+				<footer>
+					<LanguageSelector Variant="inline" />
+				</footer>
+			</nav>
+		</aside>
+	}
+}
+else if (Mode == LayoutMode.Chat)
+{
+	<layout chat />
+	<Blob />
+}
+else
+{
+	<layout app />
+	<Aside />
+	<AsideOutlet />
+	<HeaderOutlet />
+}
 
 <ErrorBoundary @ref=@ErrorBoundaryRef>
 	<ChildContent>
@@ -27,5 +275,14 @@
 	</ErrorContent>
 </ErrorBoundary>
 
-<FooterOutlet />
-
+@if (Mode == LayoutMode.Landing)
+{
+	@if (!IsRootLanding)
+	{
+		<FooterOutlet />
+	}
+}
+else if (Mode == LayoutMode.App)
+{
+	<FooterOutlet />
+}

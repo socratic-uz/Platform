@@ -81,10 +81,11 @@ body:has(layout[grid]:not(:has(main[no-nav]))) > main {
 
 /* ==========================================================================
    3. CHAT LAYOUT MODE
-   Activated by: body:has(layout[chat])
+   Activated by: body:has(layout[chat]), body:has(main[chat])
    1-column full-viewport height
    ========================================================================== */
-body:has(layout[chat]) {
+body:has(layout[chat]),
+body:has(main[chat]) {
     grid-template-rows: 1fr;
     grid-template-columns: minmax(0, 1fr);
     height: 100dvh;
@@ -93,12 +94,29 @@ body:has(layout[chat]) {
     overflow: hidden;
 }
 
-body:has(layout[chat]) > main {
+body:has(layout[chat]) > main,
+body:has(main[chat]) > main {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     height: 100%;
     min-height: 0;
     overflow: hidden;
+}
+
+/* --- Special Dynamic Display Toggles --- */
+body:has(main[chat]) > header,
+body:has(main[no-header]) > header {
+    display: none;
+}
+
+body:has(main[chat]) > aside,
+body:has(main[no-nav]) > aside {
+    display: none;
+}
+
+body:has(main[chat]) > footer,
+body:has(main[no-footer]) > footer {
+    display: none;
 }
 
 /* ==========================================================================
@@ -170,19 +188,6 @@ body:has(main[map]) > main[map] {
     min-height: 0;
     padding: 0;
     overflow: hidden;
-}
-
-body:has(main[no-footer]) > footer {
-    display: none;
-}
-
-/* --- Special Dynamic Display Toggles --- */
-body:has(main[no-header]) > header {
-    display: none;
-}
-
-body:has(main[no-nav]) > aside {
-    display: none;
 }
 
 /* ==========================================================================
