@@ -488,7 +488,7 @@ nav > ol {
 }
 
 @media screen and (min-width: 840px) {
-    body > aside,
+    body:has(> aside > nav) > aside,
     body > nav {
         display: grid;
         grid-template-columns: 100%;
@@ -605,7 +605,7 @@ nav > ol {
         width: 100%;
     }
 
-    body > header:has(> :nth-child(3)) {
+    body > header:has(> search) {
         grid-template: auto auto / minmax(0, 1fr) auto;
         grid-template-areas:
             "start end"
@@ -613,22 +613,21 @@ nav > ol {
         gap: 0.5rem 0.75rem;
     }
 
-    body > header:has(> :nth-child(3)) > :first-child {
+    body > header:has(> search) > :first-child {
         grid-area: start;
     }
 
-    body > header:has(> :nth-child(3)) > :last-child {
+    body > header:has(> search) > :last-child {
         grid-area: end;
         justify-self: end;
     }
 
-    body > header:has(> :nth-child(3)) > search,
-    body > header:has(> :nth-child(3)) > :nth-child(2) {
+    body > header:has(> search) > search {
         grid-area: center;
         grid-column: 1 / -1;
     }
 
-    body > aside {
+    body:has(> aside > nav) > aside {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 1fr;
@@ -639,7 +638,7 @@ nav > ol {
         overflow: hidden;
     }
 
-    body > aside > nav {
+    body:has(> aside > nav) > aside > nav {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);

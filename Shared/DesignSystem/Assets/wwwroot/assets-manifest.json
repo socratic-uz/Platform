@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/landmarks.css",
-      "size": 20206,
-      "hash": "sha256-05ee74cdde7f"
+      "size": 20179,
+      "hash": "sha256-ad53488ce694"
     },
     {
       "url": "_content/Assets/css/foundations/lists.css",
@@ -118,8 +118,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/app-layout.css",
-      "size": 6963,
-      "hash": "sha256-439fd002e067"
+      "size": 9670,
+      "hash": "sha256-8d8be84b1df8"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -168,8 +168,8 @@
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
-      "size": 54253,
-      "hash": "sha256-2838c2198ebe"
+      "size": 54770,
+      "hash": "sha256-bbb62002dad8"
     },
     {
       "url": "_content/Assets/css/pages/map.css",

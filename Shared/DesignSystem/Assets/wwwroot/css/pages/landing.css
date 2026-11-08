@@ -11,6 +11,13 @@ body:has(nav[drawer]) {
     overflow: hidden;
 }
 
+header[landing] {
+        grid-template-columns: auto auto 1fr auto;
+        gap: var(--md-sys-spacing-2);
+        padding-inline: var(--md-sys-spacing-3);
+        align-items: center;
+    }
+
 /* ==========================================================================
    Header Landmark (<header landing>) & Dropdowns
    ========================================================================== */
@@ -32,6 +39,10 @@ header[landing] {
     border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
     overflow: visible;
 }
+
+header[landing] > nav {
+        display: none;
+    }
 
 /* ==========================================================================
    Header Landmark (<header landing>) & Dropdowns
@@ -71,6 +82,11 @@ header[landing] > nav > menu[dropdown] > md-menu md-menu-item md-icon {
 }
 
 header[landing] > menu {
+        display: inline-flex;
+        justify-self: end;
+    }
+
+header[landing] > menu {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -79,8 +95,17 @@ header[landing] > menu {
 }
 
 header[landing] > md-icon-button[drawer] {
+        display: inline-flex;
+    }
+
+header[landing] > md-icon-button[drawer] {
     display: none;
 }
+
+header[landing] > a:first-of-type {
+        display: inline-flex;
+        align-items: center;
+    }
 
 header[landing] > a:first-of-type {
     display: inline-grid;

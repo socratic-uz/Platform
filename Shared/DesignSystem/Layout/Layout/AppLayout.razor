@@ -108,7 +108,7 @@
 	{
 		<span backdrop @onclick=@CloseMobileMenuAsync aria-hidden="true"></span>
 		<aside drawer>
-			<nav aria-label=@L[MainNavigation] tabindex="0" @onkeydown=@HandleKeyDown>
+			<dialog open aria-label=@L[MainNavigation] tabindex="0" @onkeydown=@HandleKeyDown>
 				<header>
 					<a href="/" @onclick=@CloseMobileMenuAsync title="Socratic">
 						<Icon Name=@AutoAwesome />
@@ -244,7 +244,7 @@
 				<footer>
 					<LanguageSelector Variant="inline" />
 				</footer>
-			</nav>
+			</dialog>
 		</aside>
 	}
 }
