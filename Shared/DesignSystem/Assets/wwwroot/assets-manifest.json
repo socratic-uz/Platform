@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/landmarks.css",
-      "size": 20179,
-      "hash": "sha256-ad53488ce694"
+      "size": 14713,
+      "hash": "sha256-b7416a3ed294"
     },
     {
       "url": "_content/Assets/css/foundations/lists.css",
@@ -228,8 +228,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 4425,
-      "hash": "sha256-442e85ea5d06"
+      "size": 4470,
+      "hash": "sha256-8b905afbd3bf"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",
@@ -330,6 +330,11 @@
       "url": "_content/Assets/css/widgets/fiscal.css",
       "size": 996,
       "hash": "sha256-d65f73f561ff"
+    },
+    {
+      "url": "_content/Assets/css/widgets/footer.css",
+      "size": 5831,
+      "hash": "sha256-79320888712c"
     },
     {
       "url": "_content/Assets/css/widgets/invoice.css",
