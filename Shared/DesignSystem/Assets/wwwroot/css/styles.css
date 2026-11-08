@@ -60,10 +60,12 @@
 @import "widgets/faceid-viewfinder.css" layer(widgets);
 @import "widgets/fiscal.css" layer(widgets);
 @import "widgets/footer.css" layer(widgets);
+@import "widgets/header.css" layer(widgets);
 @import "widgets/invoice.css" layer(widgets);
 @import "widgets/kiosk.css" layer(widgets);
 @import "widgets/lang-selector.css" layer(widgets);
 @import "widgets/map.css" layer(widgets);
+@import "widgets/navigation-rail.css" layer(widgets);
 @import "widgets/orders.css" layer(widgets);
 @import "widgets/payment.css" layer(widgets);
 @import "widgets/pricing-tiers.css" layer(widgets);

@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/landmarks.css",
-      "size": 14713,
-      "hash": "sha256-b7416a3ed294"
+      "size": 3106,
+      "hash": "sha256-b7c457b051d5"
     },
     {
       "url": "_content/Assets/css/foundations/lists.css",
@@ -228,8 +228,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 4470,
-      "hash": "sha256-8b905afbd3bf"
+      "size": 4569,
+      "hash": "sha256-45da84474b8d"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",
@@ -337,6 +337,11 @@
       "hash": "sha256-79320888712c"
     },
     {
+      "url": "_content/Assets/css/widgets/header.css",
+      "size": 4128,
+      "hash": "sha256-9c823457beda"
+    },
+    {
       "url": "_content/Assets/css/widgets/invoice.css",
       "size": 4353,
       "hash": "sha256-317cc0770782"
@@ -355,6 +360,11 @@
       "url": "_content/Assets/css/widgets/map.css",
       "size": 561,
       "hash": "sha256-8433f229d6f0"
+    },
+    {
+      "url": "_content/Assets/css/widgets/navigation-rail.css",
+      "size": 6012,
+      "hash": "sha256-dd2959f83eb5"
     },
     {
       "url": "_content/Assets/css/widgets/orders.css",
