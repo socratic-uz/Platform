@@ -1,9 +1,9 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / app-layout.css
    Universal Polymorphic Classless Macro-Grid Architecture (super-layout model)
-   - App Layout (Rail + Content): body:has(> aside > nav), body:has(layout[app]), body:has(layout[grid])
-   - Landing Layout (Full-width): body:not(:has(> aside > nav)), body:has(layout[landing])
-   - Chat Layout (Full-viewport): body:has(layout[chat])
+   - App Layout (Rail + Content): body:has(> aside > nav)
+   - Landing Layout (Full-width): body:not(:has(> aside > nav))
+   - Chat Layout (Full-viewport): body:has(main[chat])
    - Fullscreen Studio Map: body:has(main[map])
    ========================================================================== */
 
@@ -15,13 +15,11 @@ body {
 }
 
 /* ==========================================================================
-   1. APP LAYOUT MODE
-   Activated by: body:has(> aside > nav), body:has(layout[app]), body:has(layout[grid]:not(:has(main[no-nav])))
+   1. APP LAYOUT MODE (Desktop)
+   Activated by: body:has(> aside > nav)
    Desktop: 2-column macro-grid with fixed 76px navigation rail aside
    ========================================================================== */
-body:has(> aside > nav),
-body:has(layout[app]:not(:has(main[no-nav]))),
-body:has(layout[grid]:not(:has(main[no-nav]))) {
+body:has(> aside > nav) {
     grid-template-columns: calc(76px + env(safe-area-inset-left, 0px)) minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr) auto;
     grid-template-areas:
@@ -30,18 +28,14 @@ body:has(layout[grid]:not(:has(main[no-nav]))) {
         "aside  footer";
 }
 
-body:has(> aside > nav) > header,
-body:has(layout[app]:not(:has(main[no-nav]))) > header,
-body:has(layout[grid]:not(:has(main[no-nav]))) > header {
+body:has(> aside > nav) > header {
     grid-area: header;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     z-index: var(--md-sys-z-sticky);
 }
 
-body:has(> aside > nav) > aside,
-body:has(layout[app]:not(:has(main[no-nav]))) > aside,
-body:has(layout[grid]:not(:has(main[no-nav]))) > aside {
+body:has(> aside > nav) > aside {
     grid-area: aside;
     position: fixed;
     top: 0;
@@ -59,17 +53,13 @@ body:has(layout[grid]:not(:has(main[no-nav]))) > aside {
     scrollbar-width: none;
 }
 
-body:has(> aside > nav) > footer,
-body:has(layout[app]:not(:has(main[no-nav]))) > footer,
-body:has(layout[grid]:not(:has(main[no-nav]))) > footer {
+body:has(> aside > nav) > footer {
     grid-area: footer;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 
-body:has(> aside > nav) > main,
-body:has(layout[app]:not(:has(main[no-nav]))) > main,
-body:has(layout[grid]:not(:has(main[no-nav]))) > main {
+body:has(> aside > nav) > main {
     grid-area: main;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -80,26 +70,63 @@ body:has(layout[grid]:not(:has(main[no-nav]))) > main {
 }
 
 /* ==========================================================================
-   3. CHAT LAYOUT MODE
-   Activated by: body:has(layout[chat]), body:has(main[chat])
+   3. LANDING / SINGLE-COLUMN LAYOUT MODE
+   Activated by: body:not(:has(> aside > nav)), body:has(> aside > nav):has(main[no-nav])
+   1-column macro-grid with full-width content
+   ========================================================================== */
+body:not(:has(> aside > nav)),
+body:has(> aside > nav):has(main[no-nav]) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+body:not(:has(> aside > nav)) > header,
+body:has(> aside > nav):has(main[no-nav]) > header {
+    grid-area: header;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: sticky;
+    top: 0;
+    z-index: var(--md-sys-z-sticky);
+    padding-top: env(safe-area-inset-top, 0);
+}
+
+body:not(:has(> aside > nav)) > aside,
+body:has(> aside > nav):has(main[no-nav]) > aside {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+body:not(:has(> aside > nav)) > footer,
+body:has(> aside > nav):has(main[no-nav]) > footer {
+    grid-area: footer;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+body:not(:has(> aside > nav)) > main,
+body:has(> aside > nav):has(main[no-nav]) > main {
+    grid-area: main;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+/* ==========================================================================
+   2. CHAT LAYOUT MODE
+   Activated by: body:has(main[chat])
    1-column full-viewport height
    ========================================================================== */
-body:has(layout[chat]),
 body:has(main[chat]) {
     grid-template-rows: 1fr;
     grid-template-columns: minmax(0, 1fr);
     height: 100dvh;
     max-height: 100dvh;
     padding: 0;
-    overflow: hidden;
-}
-
-body:has(layout[chat]) > main,
-body:has(main[chat]) > main {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    height: 100%;
-    min-height: 0;
     overflow: hidden;
 }
 
@@ -119,61 +146,12 @@ body:has(main[no-footer]) > footer {
     display: none;
 }
 
-/* ==========================================================================
-   2. LANDING / SINGLE-COLUMN LAYOUT MODE
-   Activated by: body:has(layout[landing]), body:not(:has(> aside > nav)), body:has(layout[app]:has(main[no-nav]))
-   1-column macro-grid with full-width content
-   ========================================================================== */
-body:has(layout[landing]),
-body:not(:has(> aside > nav)),
-body:has(layout[app]:has(main[no-nav])),
-body:has(layout[grid]:has(main[no-nav])) {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
-
-body:has(layout[landing]) > header,
-body:not(:has(> aside > nav)) > header,
-body:has(layout[app]:has(main[no-nav])) > header,
-body:has(layout[grid]:has(main[no-nav])) > header {
-    grid-area: header;
+body:has(main[chat]) > main {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    position: sticky;
-    top: 0;
-    z-index: var(--md-sys-z-sticky);
-    padding-top: env(safe-area-inset-top, 0);
-}
-
-body:has(layout[landing]) > aside,
-body:not(:has(> aside > nav)) > aside,
-body:has(layout[app]:has(main[no-nav])) > aside,
-body:has(layout[grid]:has(main[no-nav])) > aside {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-}
-
-body:has(layout[landing]) > footer,
-body:not(:has(> aside > nav)) > footer,
-body:has(layout[app]:has(main[no-nav])) > footer,
-body:has(layout[grid]:has(main[no-nav])) > footer {
-    grid-area: footer;
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
-    padding-bottom: env(safe-area-inset-bottom, 0);
-}
-
-body:has(layout[landing]) > main,
-body:not(:has(> aside > nav)) > main,
-body:has(layout[app]:has(main[no-nav])) > main,
-body:has(layout[grid]:has(main[no-nav])) > main {
-    grid-area: main;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
 }
 
 /* --- Map Viewport Exception --- */
@@ -195,9 +173,7 @@ body:has(main[map]) > main[map] {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-body:has(> aside > nav),
-    body:has(layout[app]),
-    body:has(layout[grid]) {
+body:has(> aside > nav) {
         grid-template: auto minmax(0, 1fr) auto / minmax(0, 1fr);
         grid-template-areas:
             "header"
@@ -207,16 +183,12 @@ body:has(> aside > nav),
         max-width: 100vw;
     }
 
-body:has(> aside > nav) > header,
-    body:has(layout[app]) > header,
-    body:has(layout[grid]) > header {
+body:has(> aside > nav) > header {
         grid-area: header;
         grid-column: 1 / -1;
     }
 
-body:has(> aside > nav) > aside,
-    body:has(layout[app]) > aside,
-    body:has(layout[grid]) > aside {
+body:has(> aside > nav) > aside {
         grid-area: unset;
         position: fixed;
         inset: auto 0 0;
@@ -238,17 +210,13 @@ body:has(> aside > nav) > aside,
         box-shadow: 0 -2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
     }
 
-body:has(> aside > nav) > footer,
-    body:has(layout[app]) > footer,
-    body:has(layout[grid]) > footer {
+body:has(> aside > nav) > footer {
         grid-area: footer;
         grid-column: 1 / -1;
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0) + 2.5rem);
     }
 
-body:has(> aside > nav) > main,
-    body:has(layout[app]) > main,
-    body:has(layout[grid]) > main {
+body:has(> aside > nav) > main {
         grid-area: main;
         grid-column: 1 / -1;
         padding: var(--md-sys-gutter-page);
@@ -256,17 +224,11 @@ body:has(> aside > nav) > main,
     }
 
 body:has(> aside > nav):has(footer[cart]) > main,
-    body:has(layout[app]:has(footer[cart])) > main,
-    body:has(layout[grid]:has(footer[cart])) > main,
-    body:has(> aside > nav):has(footer[cart]) > footer,
-    body:has(layout[app]:has(footer[cart])) > footer,
-    body:has(layout[grid]:has(footer[cart])) > footer {
+    body:has(> aside > nav):has(footer[cart]) > footer {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + 88px + env(safe-area-inset-bottom, 0));
     }
 
-body:has(> aside > nav):has(main[no-footer]) > main,
-    body:has(layout[app]:has(main[no-footer])) > main,
-    body:has(layout[grid]:has(main[no-footer])) > main {
+body:has(> aside > nav):has(main[no-footer]) > main {
         padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + 24px + env(safe-area-inset-bottom, 0));
     }
 }

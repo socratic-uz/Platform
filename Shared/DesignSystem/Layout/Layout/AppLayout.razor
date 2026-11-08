@@ -13,7 +13,6 @@
 
 @if (Mode == LayoutMode.Landing)
 {
-	<layout landing />
 	@if (!IsRootLanding)
 	{
 		<Blob />
@@ -251,12 +250,10 @@
 }
 else if (Mode == LayoutMode.Chat)
 {
-	<layout chat />
 	<Blob />
 }
 else
 {
-	<layout app />
 	<Aside />
 	<AsideOutlet />
 	<HeaderOutlet />
