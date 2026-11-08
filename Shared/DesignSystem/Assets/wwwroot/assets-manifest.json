@@ -117,9 +117,9 @@
       "hash": "sha256-a15c46102a34"
     },
     {
-      "url": "_content/Assets/css/layouts/layout.css",
-      "size": 7763,
-      "hash": "sha256-4850f9105f46"
+      "url": "_content/Assets/css/layouts/app-layout.css",
+      "size": 8647,
+      "hash": "sha256-3f03dd783adf"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -228,8 +228,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 4421,
-      "hash": "sha256-36628b6cd09d"
+      "size": 4425,
+      "hash": "sha256-442e85ea5d06"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",
