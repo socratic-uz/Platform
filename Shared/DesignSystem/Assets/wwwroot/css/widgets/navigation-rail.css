@@ -4,28 +4,6 @@
    Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
    ========================================================================== */
 
-/* --- Navigation Rail / Shell (body > aside > nav, body > nav) --- */
-body > aside {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-flow: row;
-    grid-auto-rows: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    justify-items: center;
-}
-
-body > aside > nav,
-body > nav {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-flow: row;
-    grid-auto-rows: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    justify-items: center;
-}
-
 body > aside > nav > a,
 body > nav > a {
     display: grid;
@@ -52,6 +30,28 @@ body > nav > a > md-icon {
     display: grid;
     place-items: center;
     border-radius: var(--md-sys-shape-corner-large);
+}
+
+/* --- Navigation Rail / Shell (body > aside > nav, body > nav) --- */
+body:has(> aside > nav) > aside {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-items: center;
+}
+
+body:has(> aside > nav) > aside > nav,
+body > nav {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-items: center;
 }
 
 @media screen and (max-width: 839.98px) {

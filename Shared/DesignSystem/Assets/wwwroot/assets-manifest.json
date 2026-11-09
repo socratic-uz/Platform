@@ -258,8 +258,8 @@
     },
     {
       "url": "_content/Assets/css/tokens/positioning.css",
-      "size": 1527,
-      "hash": "sha256-15603c5d11ca"
+      "size": 1723,
+      "hash": "sha256-f207a38b2663"
     },
     {
       "url": "_content/Assets/css/tokens/shadow.css",
@@ -363,8 +363,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/navigation-rail.css",
-      "size": 6672,
-      "hash": "sha256-e2efe5e12d8c"
+      "size": 6711,
+      "hash": "sha256-e6c75bcdb979"
     },
     {
       "url": "_content/Assets/css/widgets/orders.css",
