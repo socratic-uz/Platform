@@ -118,8 +118,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/app-layout.css",
-      "size": 8718,
-      "hash": "sha256-723bb890971e"
+      "size": 11863,
+      "hash": "sha256-15435fc36106"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -223,8 +223,8 @@
     },
     {
       "url": "_content/Assets/css/pages/rail.css",
-      "size": 3411,
-      "hash": "sha256-a1b37ae28a60"
+      "size": 4928,
+      "hash": "sha256-c7ffda1de266"
     },
     {
       "url": "_content/Assets/css/pages/seat-designer.css",

@@ -5,6 +5,39 @@
    Matching super-layout/visual.css design token architecture
    ========================================================================== */
 
+body > aside > dialog {
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    border: none;
+    padding: var(--md-sys-spacing-4);
+    gap: var(--md-sys-spacing-3);
+}
+
+body > aside > dialog > header {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding-bottom: var(--md-sys-spacing-2);
+}
+
+body > aside > dialog > details > section > a {
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    padding: var(--md-sys-spacing-2);
+    border-radius: var(--md-sys-shape-corner-small);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body > aside > dialog > details > section > a:hover {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+}
+
+body > aside > dialog > details > summary {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
+    padding: var(--md-sys-spacing-2);
+    border-radius: var(--md-sys-shape-corner-small);
+}
+
 /* --- Universal Rail Links & Items --- */
 body:has(> aside > nav) > aside > nav > a {
     display: grid;
@@ -49,6 +82,14 @@ body:has(> aside > nav) > aside > nav > a[aria-current="page"] > md-icon,
 body:has(> aside > nav) > aside > nav > a.active > md-icon {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
+}
+
+/* --- Universal Drawer Dialog & Backdrop Visual Appearance --- */
+span[backdrop],
+body > span[backdrop] {
+    background: rgb(from var(--md-sys-color-scrim) r g b / 0.35);
+    backdrop-filter: blur(4px);
+    transition: opacity var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
 }
 
 /* --- Mobile Bottom Bar (< 840px) --- */
@@ -107,5 +148,10 @@ body:has(> aside > nav) > aside > nav > a > span {
 body:has(> aside > nav) > aside > nav > a > md-icon {
         width: 56px;
         height: 32px;
+    }
+
+body:has(> aside > nav) > aside > dialog {
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        box-shadow: 4px 0 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
     }
 }
