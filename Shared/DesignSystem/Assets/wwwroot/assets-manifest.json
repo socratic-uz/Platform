@@ -152,6 +152,16 @@
       "hash": "sha256-baff9c751f5f"
     },
     {
+      "url": "_content/Assets/css/pages/footer.css",
+      "size": 5829,
+      "hash": "sha256-f2d538300bc9"
+    },
+    {
+      "url": "_content/Assets/css/pages/header.css",
+      "size": 4126,
+      "hash": "sha256-732722d8622d"
+    },
+    {
       "url": "_content/Assets/css/pages/help.css",
       "size": 6182,
       "hash": "sha256-75d6439abe8b"
@@ -212,6 +222,11 @@
       "hash": "sha256-b98e103ecc7c"
     },
     {
+      "url": "_content/Assets/css/pages/rail.css",
+      "size": 3411,
+      "hash": "sha256-a1b37ae28a60"
+    },
+    {
       "url": "_content/Assets/css/pages/seat-designer.css",
       "size": 6514,
       "hash": "sha256-f296663a5e33"
@@ -228,8 +243,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 4569,
-      "hash": "sha256-45da84474b8d"
+      "size": 4546,
+      "hash": "sha256-22f50a3d0657"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",
@@ -332,16 +347,6 @@
       "hash": "sha256-d65f73f561ff"
     },
     {
-      "url": "_content/Assets/css/widgets/footer.css",
-      "size": 5831,
-      "hash": "sha256-79320888712c"
-    },
-    {
-      "url": "_content/Assets/css/widgets/header.css",
-      "size": 4128,
-      "hash": "sha256-9c823457beda"
-    },
-    {
       "url": "_content/Assets/css/widgets/invoice.css",
       "size": 4353,
       "hash": "sha256-317cc0770782"
@@ -360,11 +365,6 @@
       "url": "_content/Assets/css/widgets/map.css",
       "size": 561,
       "hash": "sha256-8433f229d6f0"
-    },
-    {
-      "url": "_content/Assets/css/widgets/navigation-rail.css",
-      "size": 3424,
-      "hash": "sha256-6430c5dc0557"
     },
     {
       "url": "_content/Assets/css/widgets/orders.css",
