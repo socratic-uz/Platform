@@ -2,217 +2,110 @@
    Socratic Design System — WIDGETS / navigation-rail.css
    Global Navigation Rail & Mobile Bottom Bar (Layout/Aside.razor)
    Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
+   Matching super-layout/visual.css design token architecture
    ========================================================================== */
 
-body > aside > nav > a,
-body > nav > a {
+/* --- Universal Rail Links & Items --- */
+body:has(> aside > nav) > aside > nav > a {
     display: grid;
-    grid-template-rows: auto auto;
-    gap: 3px;
+    place-content: center;
     place-items: center;
-    justify-content: center;
-    border-radius: var(--md-sys-shape-corner-large);
+    text-align: center;
     text-decoration: none;
+    color: var(--md-sys-color-on-surface-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
-body > aside > nav > a > span,
-body > nav > a > span {
+body:has(> aside > nav) > aside > nav > a > span {
     min-inline-size: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: center;
+    line-height: 1.15;
 }
 
-body > aside > nav > a > md-icon,
-body > nav > a > md-icon {
+body:has(> aside > nav) > aside > nav > a > md-icon {
     display: grid;
     place-items: center;
-    border-radius: var(--md-sys-shape-corner-large);
+    font-size: 24px;
+    border-radius: var(--md-sys-shape-corner-full);
+    transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* --- Navigation Rail / Shell (body > aside > nav, body > nav) --- */
-body:has(> aside > nav) > aside {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-flow: row;
-    grid-auto-rows: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    justify-items: center;
+body:has(> aside > nav) > aside > nav > a:hover > md-icon {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
 }
 
-body:has(> aside > nav) > aside > nav,
-body > nav {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-flow: row;
-    grid-auto-rows: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    justify-items: center;
+body:has(> aside > nav) > aside > nav > a[aria-current="page"] > span,
+body:has(> aside > nav) > aside > nav > a.active > span {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
 }
 
-@media screen and (max-width: 839.98px) {
-body > aside > nav > a,
-    body > nav > a {
-        display: grid;
-        grid-template-rows: auto auto;
-        gap: 2px;
-        place-content: center;
-        place-items: center;
-        position: relative;
-        min-width: 48px;
-        min-height: 48px;
-        width: 100%;
-        padding: var(--md-sys-spacing-1) 0;
-        border-radius: var(--md-sys-shape-corner-medium);
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.75rem;
-        text-decoration: none;
-    }
-
-body > aside > nav > a > span,
-    body > nav > a > span {
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.72rem;
-        font-weight: 500;
-        line-height: 1.15;
-        text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-body > aside > nav > a > md-icon,
-    body > nav > a > md-icon {
-        display: grid;
-        place-items: center;
-        width: 56px;
-        height: 32px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 24px;
-        border-radius: var(--md-sys-shape-corner-full);
-        transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-body > aside > nav > a:hover > md-icon,
-    body > nav > a:hover > md-icon {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-body > aside > nav > a[aria-current="page"] > span,
-    body > aside > nav > a.active > span,
-    body > nav > a[aria-current="page"] > span,
-    body > nav > a.active > span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 700;
-    }
-
-body > aside > nav > a[aria-current="page"] > md-icon,
-    body > aside > nav > a.active > md-icon,
-    body > nav > a[aria-current="page"] > md-icon,
-    body > nav > a.active > md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-    }
+body:has(> aside > nav) > aside > nav > a[aria-current="page"] > md-icon,
+body:has(> aside > nav) > aside > nav > a.active > md-icon {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
 }
+
+/* --- Mobile Bottom Bar (< 840px) --- */
 
 @media screen and (max-width: 839.98px) {
 body:has(> aside > nav) > aside {
         border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: var(--md-sys-shape-expressive-sheet);
         background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
-    }
-}
-
-@media screen and (min-width: 840px) {
-body > aside > nav {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-auto-flow: row;
-        grid-auto-rows: max-content;
-        gap: 0.5rem;
-        align-content: start;
-        justify-items: center;
-        width: 100%;
-        padding: 0;
+        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
     }
 
-body > aside > nav > a,
-    body > nav > a {
-        display: grid;
+body:has(> aside > nav) > aside > nav > a {
         grid-template-rows: auto auto;
-        gap: 3px;
-        justify-items: center;
-        align-content: center;
-        width: 64px;
-        min-height: 56px;
-        margin: 4px auto;
-        padding: var(--md-sys-spacing-1) 0;
-        border-radius: var(--md-sys-shape-corner-large);
-        color: var(--md-sys-color-on-surface-variant);
-        text-decoration: none;
-        transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+        gap: 2px;
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+        padding: 4px 2px;
     }
 
-body > aside > nav > a > span,
-    body > nav > a > span {
-        max-width: 64px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 0.72rem;
+body:has(> aside > nav) > aside > nav > a > span {
+        font-size: 0.68rem;
         font-weight: 500;
-        line-height: 1.15;
-        text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 
-body > aside > nav > a > md-icon,
-    body > nav > a > md-icon {
-        display: grid;
-        place-items: center;
-        width: 56px;
-        height: 32px;
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 24px;
-        border-radius: var(--md-sys-shape-corner-full);
-        transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
-    }
-
-body > aside > nav > a:hover > md-icon,
-    body > nav > a:hover > md-icon {
-        background: var(--md-sys-color-surface-container-highest);
-        color: var(--md-sys-color-on-surface);
-    }
-
-body > aside > nav > a[aria-current="page"] > span,
-    body > aside > nav > a.active > span,
-    body > nav > a[aria-current="page"] > span,
-    body > nav > a.active > span {
-        color: var(--md-sys-color-on-surface);
-        font-weight: 700;
-    }
-
-body > aside > nav > a[aria-current="page"] > md-icon,
-    body > aside > nav > a.active > md-icon,
-    body > nav > a[aria-current="page"] > md-icon,
-    body > nav > a.active > md-icon {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
+body:has(> aside > nav) > aside > nav > a > md-icon {
+        width: 48px;
+        height: 28px;
+        font-size: 22px;
     }
 }
 
-/* --- Navigation Rail Visual Themes (Desktop & Mobile) --- */
+/* --- Desktop Rail (>= 840px) --- */
 
 @media screen and (min-width: 840px) {
 body:has(> aside > nav) > aside {
         border-right: 1px solid var(--md-sys-color-outline-variant);
         background: var(--md-sys-color-surface-container-low);
+    }
+
+body:has(> aside > nav) > aside > nav > a {
+        grid-template-rows: auto auto;
+        gap: 3px;
+        width: 64px;
+        min-height: 56px;
+        margin: 4px auto;
+        padding: var(--md-sys-spacing-1) 0;
+    }
+
+body:has(> aside > nav) > aside > nav > a > span {
+        max-width: 64px;
+        font-size: 0.72rem;
+        font-weight: 500;
+    }
+
+body:has(> aside > nav) > aside > nav > a > md-icon {
+        width: 56px;
+        height: 32px;
     }
 }
