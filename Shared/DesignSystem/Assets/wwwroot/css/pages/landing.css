@@ -7,7 +7,7 @@
    ========================================================================== */
 
 body:has(aside[drawer]),
-body:has(nav[drawer]) {
+body:has(aside[drawer]) {
     overflow: hidden;
 }
 
@@ -122,162 +122,6 @@ header[landing] > a:first-of-type {
 
 header[landing] > a:first-of-type > md-icon {
     color: var(--md-sys-color-primary);
-}
-
-nav[drawer] > header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-2);
-    padding-bottom: var(--md-sys-spacing-2);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    margin-bottom: var(--md-sys-spacing-1);
-    width: 100%;
-}
-
-nav[drawer] > header > a {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--md-sys-spacing-2);
-    font-weight: 700;
-    font-size: 1.125rem;
-    color: var(--md-sys-color-on-surface);
-    text-decoration: none;
-}
-
-nav[drawer] > header > a > md-icon {
-    color: var(--md-sys-color-primary);
-}
-
-nav[drawer] > footer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
-    width: 100%;
-    padding-top: var(--md-sys-spacing-2);
-}
-
-nav[drawer] > md-filled-button {
-    width: 100%;
-    margin-top: var(--md-sys-spacing-1);
-}
-
-nav[drawer] > md-divider {
-    width: 100%;
-    margin-block: var(--md-sys-spacing-1);
-}
-
-nav[drawer] > details {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    gap: var(--md-sys-spacing-1);
-    width: 100%;
-}
-
-nav[drawer] > details > section {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    gap: var(--md-sys-spacing-1);
-    width: 100%;
-    padding-top: var(--md-sys-spacing-1);
-}
-
-nav[drawer] > details > section > a {
-    display: grid;
-    grid-template-columns: 24px minmax(0, 1fr);
-    grid-auto-flow: column;
-    align-items: center;
-    gap: var(--md-sys-spacing-3);
-    min-height: 44px;
-    width: 100%;
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    border-radius: var(--md-sys-shape-corner-medium);
-    color: var(--md-sys-color-on-surface);
-    font-size: var(--md-sys-typescale-label-large-size);
-    text-decoration: none;
-    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard),
-        color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
-}
-
-nav[drawer] > details > section > a > span {
-    color: inherit;
-    font-size: var(--md-sys-typescale-body-medium-size);
-    font-weight: 500;
-    text-align: start;
-    white-space: nowrap;
-}
-
-nav[drawer] > details > section > a > md-icon {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    color: var(--md-sys-color-on-surface-variant);
-    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
-}
-
-nav[drawer] > details > section > a:focus-visible {
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: 2px;
-}
-
-nav[drawer] > details > section > a:hover {
-    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.08);
-}
-
-nav[drawer] > details > section > a:hover > md-icon,
-nav[drawer] > details > section > a[aria-current="page"] > md-icon {
-    color: var(--md-sys-color-primary);
-}
-
-nav[drawer] > details > section > a[aria-current="page"] {
-    color: var(--md-sys-color-primary);
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
-    font-weight: 600;
-}
-
-nav[drawer] > details > summary {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--md-sys-spacing-2);
-    min-height: 40px;
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    font-size: var(--md-sys-typescale-label-small-size);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--md-sys-color-primary);
-    border-radius: var(--md-sys-shape-corner-medium);
-    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
-}
-
-nav[drawer] > details > summary > md-icon {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    color: var(--md-sys-color-on-surface-variant);
-    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-}
-
-nav[drawer] > details > summary::-webkit-details-marker {
-    display: none;
-}
-
-nav[drawer] > details > summary:hover {
-    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
-}
-
-nav[drawer] > details[open] > summary > md-icon {
-    transform: rotate(180deg);
 }
 
 /* ==========================================================================
@@ -1381,7 +1225,7 @@ main[model-viewer] {
 }
 
 aside[drawer],
-nav[drawer] {
+aside[drawer] > dialog {
     position: fixed;
     top: 0;
     left: 0;
@@ -1404,6 +1248,162 @@ nav[drawer] {
     overflow-x: hidden;
     overscroll-behavior: contain;
     animation: drawer-slide-in var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-emphasized-decelerate);
+}
+
+aside[drawer] > dialog > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    padding-bottom: var(--md-sys-spacing-2);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    margin-bottom: var(--md-sys-spacing-1);
+    width: 100%;
+}
+
+aside[drawer] > dialog > header > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--md-sys-color-on-surface);
+    text-decoration: none;
+}
+
+aside[drawer] > dialog > header > a > md-icon {
+    color: var(--md-sys-color-primary);
+}
+
+aside[drawer] > dialog > footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    width: 100%;
+    padding-top: var(--md-sys-spacing-2);
+}
+
+aside[drawer] > dialog > md-filled-button {
+    width: 100%;
+    margin-top: var(--md-sys-spacing-1);
+}
+
+aside[drawer] > dialog > md-divider {
+    width: 100%;
+    margin-block: var(--md-sys-spacing-1);
+}
+
+aside[drawer] > dialog > details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: var(--md-sys-spacing-1);
+    width: 100%;
+}
+
+aside[drawer] > dialog > details > section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: var(--md-sys-spacing-1);
+    width: 100%;
+    padding-top: var(--md-sys-spacing-1);
+}
+
+aside[drawer] > dialog > details > section > a {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-auto-flow: column;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    min-height: 44px;
+    width: 100%;
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium);
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-label-large-size);
+    text-decoration: none;
+    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard),
+        color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+aside[drawer] > dialog > details > section > a > span {
+    color: inherit;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    font-weight: 500;
+    text-align: start;
+    white-space: nowrap;
+}
+
+aside[drawer] > dialog > details > section > a > md-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+    transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+aside[drawer] > dialog > details > section > a:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 2px;
+}
+
+aside[drawer] > dialog > details > section > a:hover {
+    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.08);
+}
+
+aside[drawer] > dialog > details > section > a:hover > md-icon,
+aside[drawer] > dialog > details > section > a[aria-current="page"] > md-icon {
+    color: var(--md-sys-color-primary);
+}
+
+aside[drawer] > dialog > details > section > a[aria-current="page"] {
+    color: var(--md-sys-color-primary);
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
+    font-weight: 600;
+}
+
+aside[drawer] > dialog > details > summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    min-height: 40px;
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    font-size: var(--md-sys-typescale-label-small-size);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--md-sys-color-primary);
+    border-radius: var(--md-sys-shape-corner-medium);
+    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+}
+
+aside[drawer] > dialog > details > summary > md-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+aside[drawer] > dialog > details > summary::-webkit-details-marker {
+    display: none;
+}
+
+aside[drawer] > dialog > details > summary:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
+}
+
+aside[drawer] > dialog > details[open] > summary > md-icon {
+    transform: rotate(180deg);
 }
 
 /* ==========================================================================

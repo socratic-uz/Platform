@@ -120,6 +120,16 @@ body > aside > nav > a[aria-current="page"] > md-icon,
     }
 }
 
+@media screen and (max-width: 839.98px) {
+body:has(> aside > nav) > aside {
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-right: none;
+        border-radius: var(--md-sys-shape-expressive-sheet);
+        background: var(--md-sys-color-surface-container);
+        box-shadow: 0 -2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+    }
+}
+
 @media screen and (min-width: 840px) {
 body > aside > nav {
         display: grid;
@@ -195,5 +205,14 @@ body > aside > nav > a[aria-current="page"] > md-icon,
     body > nav > a.active > md-icon {
         background: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
+    }
+}
+
+/* --- Navigation Rail Visual Themes (Desktop & Mobile) --- */
+
+@media screen and (min-width: 840px) {
+body:has(> aside > nav) > aside {
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
     }
 }

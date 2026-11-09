@@ -104,11 +104,6 @@ body:has(> aside > nav) > aside {
         padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
         padding-bottom: max(var(--md-sys-spacing-1), env(safe-area-inset-bottom, 0px));
         z-index: var(--md-sys-z-navigation-bar);
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
-        border-radius: var(--md-sys-shape-expressive-sheet);
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 8px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
         overflow: hidden;
     }
 
@@ -228,8 +223,6 @@ body:has(> aside > nav) > aside {
         height: 100dvh;
         padding-left: env(safe-area-inset-left, 0px);
         z-index: var(--md-sys-z-navigation-rail);
-        border-right: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-low);
         transform: translateZ(0);
         will-change: transform;
         overflow-y: auto;
@@ -261,8 +254,7 @@ body:has(> aside > nav) > main {
         gap: var(--md-sys-gutter-section);
         align-content: start;
         padding: var(--md-sys-gutter-page);
-        background: var(--md-sys-color-background);
-    }
+        }
 }
 
 /* ==========================================================================
