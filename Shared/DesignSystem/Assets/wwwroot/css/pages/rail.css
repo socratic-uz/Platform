@@ -111,8 +111,8 @@ body:has(> aside > nav) > aside > nav > a {
     }
 
 body:has(> aside > nav) > aside > nav > a > span {
-        font-size: 0.68rem;
-        font-weight: 500;
+        font-size: var(--md-sys-typescale-label-small-size);
+        font-weight: var(--md-sys-typescale-label-small-weight);
     }
 
 body:has(> aside > nav) > aside > nav > a > md-icon {
@@ -147,8 +147,8 @@ body:has(> aside > nav) > aside > nav > a {
 
 body:has(> aside > nav) > aside > nav > a > span {
         max-width: 64px;
-        font-size: 0.72rem;
-        font-weight: 500;
+        font-size: var(--md-sys-typescale-label-medium-size);
+        font-weight: var(--md-sys-typescale-label-medium-weight);
     }
 
 body:has(> aside > nav) > aside > nav > a > md-icon {
