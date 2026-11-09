@@ -64,7 +64,7 @@ body:has(> aside > nav) > aside > nav > a > md-icon {
     place-items: center;
     font-size: 24px;
     border-radius: var(--md-sys-shape-corner-full);
-    transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+    transition: background-color 0.2s cubic-bezier(0.2, 0, 1), color 0.2s cubic-bezier(0.2, 0, 1);
 }
 
 body:has(> aside > nav) > aside > nav > a:hover > md-icon {
@@ -119,6 +119,12 @@ body:has(> aside > nav) > aside > nav > a > md-icon {
         width: 48px;
         height: 28px;
         font-size: 22px;
+    }
+
+body:has(> aside > nav) > aside > dialog {
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0 0;
+        box-shadow: 0 -4px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
     }
 }
 
