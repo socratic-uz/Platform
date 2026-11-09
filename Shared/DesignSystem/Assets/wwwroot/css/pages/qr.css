@@ -243,7 +243,7 @@ main[qr] > section > section:has(> article) > article {
 
 @media print {
 main[qr] {
-        display: none !important;
+        display: none;
     }
 
 aside[qr-print] {

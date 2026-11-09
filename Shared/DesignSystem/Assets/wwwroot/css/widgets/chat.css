@@ -17,7 +17,7 @@ section[chat-stream] > ul, [data-chat-widget] > ul {
 }
 
 section[chat-stream] > footer, [data-chat-widget] > footer {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-md);

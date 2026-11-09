@@ -6,11 +6,11 @@
 /* ==========================================================================
    Document Level Landmarks (1st DOM Level under body)
    ========================================================================== */
-body > header,
-body > aside,
-body > nav,
-body > main,
-body > footer {
+body>header,
+body>aside,
+body>nav,
+body>main,
+body>footer {
     color: var(--md-sys-color-on-surface);
 }
 
@@ -18,8 +18,15 @@ nav {
     gap: var(--md-sys-spacing-4);
 }
 
-nav > ul,
-nav > ol {
+aside>nav {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+nav>ul,
+nav>ol {
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
 }
@@ -37,7 +44,7 @@ section {
     gap: var(--md-sys-spacing-4);
 }
 
-section > header {
+section>header {
     gap: var(--md-sys-spacing-1);
 }
 
@@ -49,8 +56,8 @@ article {
     background-color: var(--md-sys-color-surface-container-low);
 }
 
-article > header,
-article > footer {
+article>header,
+article>footer {
     gap: var(--md-sys-spacing-3);
 }
 
@@ -74,7 +81,7 @@ hgroup {
     gap: var(--md-sys-spacing-2);
 }
 
-hgroup > p {
+hgroup>p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: var(--md-sys-typescale-body-medium-size);
 }
@@ -128,15 +135,16 @@ figcaption {
    ========================================================================== */
 
 @media all and (display-mode: fullscreen) {
-body > nav,
-    body > footer,
-    body > header {
+
+    body>nav,
+    body>footer,
+    body>header {
         display: none;
     }
 }
 
 @media print {
-body > nav {
+    body>nav {
         display: none;
     }
 }

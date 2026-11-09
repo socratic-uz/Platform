@@ -33,8 +33,8 @@ public static class SeoEndpoints
 Allow: /
 Allow: /kiosk
 Allow: /kiosk/
-Allow: /store/
 Allow: /_content/
+Disallow: /store/
 Disallow: /terminal
 Disallow: /orders
 Disallow: /order-items
@@ -179,6 +179,81 @@ Sitemap: https://socratic.uz/sitemap.xml";
             {
                 _sitemapLock.Release();
             }
+        }).DisableAntiforgery();
+
+        app.MapGet("/sitemap/{orgId}", async (
+            string orgId,
+            IServiceClientFactory clientFactory,
+            HttpContext context,
+            CancellationToken cancellationToken) =>
+        {
+            var cleanOrgId = orgId.Trim();
+            if (cleanOrgId.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
+            {
+                cleanOrgId = cleanOrgId[..^4];
+            }
+
+            var cacheKey = $"sitemap_org_{cleanOrgId}";
+            if (_feedCache.TryGetValue(cacheKey, out var cached) && (DateTime.UtcNow - cached.CachedAt).TotalMinutes < 30)
+            {
+                return Results.Content(cached.Content, "application/xml", Encoding.UTF8);
+            }
+
+            var baseUrl = $"{context.Request.Scheme}://{context.Request.Host}";
+            if (context.Request.Host.Host.Contains("localhost", StringComparison.OrdinalIgnoreCase))
+            {
+                baseUrl = "https://socratic.uz";
+            }
+
+            Guid? targetOrgGuid = Guid.TryParse(cleanOrgId, out var g) ? g : null;
+            var orgService = clientFactory.GetClient<Organization>();
+            var prodService = clientFactory.GetClient<Product>();
+
+            var sb = new StringBuilder();
+            sb.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+            sb.AppendLine("<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">");
+            var nowStr = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+            if (targetOrgGuid.HasValue)
+            {
+                try
+                {
+                    var orgCall = orgService.Read(new Organization { Id = targetOrgGuid.Value });
+                    if (await orgCall.ResponseStream.MoveNext(cancellationToken) && orgCall.ResponseStream.Current?.Id != null)
+                    {
+                        var org = orgCall.ResponseStream.Current;
+                        var orgSlug = SlugHelper.GenerateSlug(org.Name);
+                        sb.AppendLine("  <url>");
+                        sb.AppendLine($"    <loc>{baseUrl}/kiosk/{org.Id}/{orgSlug}</loc>");
+                        sb.AppendLine($"    <lastmod>{nowStr}</lastmod>");
+                        sb.AppendLine("    <changefreq>daily</changefreq>");
+                        sb.AppendLine("    <priority>0.9</priority>");
+                        sb.AppendLine("  </url>");
+
+                        var prodCall = prodService.Read(new Product { OrganizationId = org.Id });
+                        while (await prodCall.ResponseStream.MoveNext(cancellationToken))
+                        {
+                            var prod = prodCall.ResponseStream.Current;
+                            if (prod?.Id != null)
+                            {
+                                var slug = SlugHelper.GenerateSlug(prod.Name);
+                                sb.AppendLine("  <url>");
+                                sb.AppendLine($"    <loc>{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}</loc>");
+                                sb.AppendLine($"    <lastmod>{nowStr}</lastmod>");
+                                sb.AppendLine("    <changefreq>weekly</changefreq>");
+                                sb.AppendLine("    <priority>0.8</priority>");
+                                sb.AppendLine("  </url>");
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+
+            sb.AppendLine("</urlset>");
+            var xml = sb.ToString();
+            _feedCache[cacheKey] = (xml, DateTime.UtcNow);
+            return Results.Content(xml, "application/xml", Encoding.UTF8);
         }).DisableAntiforgery();
 
         app.MapGet("/feeds/yandex/{orgId?}", async (

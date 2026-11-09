@@ -6,6 +6,9 @@
 
 article[invoice],
 article[receipt] {
+    container-type: inline-size;
+    width: 100%;
+    box-sizing: border-box;
     font-family: var(--md-ref-typeface-brand);
     color: var(--md-sys-color-on-surface);
     background: var(--md-sys-color-surface-container-lowest);

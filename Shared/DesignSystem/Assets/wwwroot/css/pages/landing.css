@@ -6,17 +6,9 @@
    Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    ========================================================================== */
 
-body:has(aside[drawer]),
 body:has(aside[drawer]) {
     overflow: hidden;
 }
-
-header[landing] {
-        grid-template-columns: auto auto 1fr auto;
-        gap: var(--md-sys-spacing-2);
-        padding-inline: var(--md-sys-spacing-3);
-        align-items: center;
-    }
 
 /* ==========================================================================
    Header Landmark (<header landing>) & Dropdowns
@@ -26,7 +18,7 @@ header[landing] {
     top: 0;
     z-index: var(--md-sys-z-sticky);
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-4);
     min-height: 64px;
@@ -82,11 +74,7 @@ header[landing] > nav > menu[dropdown] > md-menu md-menu-item md-icon {
 }
 
 header[landing] > menu {
-        display: inline-flex;
-        justify-self: end;
-    }
-
-header[landing] > menu {
+    justify-self: end;
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -95,17 +83,8 @@ header[landing] > menu {
 }
 
 header[landing] > md-icon-button[drawer] {
-        display: inline-flex;
-    }
-
-header[landing] > md-icon-button[drawer] {
     display: none;
 }
-
-header[landing] > a:first-of-type {
-        display: inline-flex;
-        align-items: center;
-    }
 
 header[landing] > a:first-of-type {
     display: inline-grid;
@@ -114,7 +93,7 @@ header[landing] > a:first-of-type {
     align-items: center;
     gap: var(--md-sys-spacing-2);
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: var(--md-sys-typescale-title-medium-size);
     color: var(--md-sys-color-on-surface);
     text-decoration: none;
     margin-right: var(--md-sys-spacing-3);
@@ -122,17 +101,6 @@ header[landing] > a:first-of-type {
 
 header[landing] > a:first-of-type > md-icon {
     color: var(--md-sys-color-primary);
-}
-
-/* ==========================================================================
-   Other Page Landmarks in landing.css (<main home>, <main model-viewer>)
-   ========================================================================== */
-main[home] {
-    gap: var(--md-sys-gutter-section);
-    align-content: start;
-    padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
-    padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
-    padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
 }
 
 main[landing] {
@@ -1217,13 +1185,6 @@ main[landing] > section:nth-of-type(8) > footer {
     margin-top: var(--md-sys-spacing-2);
 }
 
-main[model-viewer] {
-    grid-column: 1 / -1;
-    height: calc(100dvh - 64px);
-    padding: 0;
-    overflow: clip;
-}
-
 aside[drawer],
 aside[drawer] > dialog {
     position: fixed;
@@ -1268,7 +1229,7 @@ aside[drawer] > dialog > header > a {
     align-items: center;
     gap: var(--md-sys-spacing-2);
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: var(--md-sys-typescale-title-medium-size);
     color: var(--md-sys-color-on-surface);
     text-decoration: none;
 }
@@ -1619,19 +1580,14 @@ header[landing] > nav > menu[dropdown] {
     }
 
 header[landing] > md-icon-button[drawer] {
-        display: inline-flex;
+        display: inline-grid;
+        place-items: center;
     }
 
 header[landing] > a:first-of-type,
 header[landing] > nav,
 header[landing] > menu {
-        display: none !important;
-    }
-
-main[home] {
-        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
-        padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
-        padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+        display: none;
     }
 
 main[landing] {

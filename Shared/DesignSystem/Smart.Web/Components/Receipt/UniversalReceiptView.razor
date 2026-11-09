@@ -7,10 +7,10 @@
 
 <article fiscal id="fiscal-receipt-element">
     <header>
-        <span>
+        <h3>
             <Icon Name=@AccountBalance />
-            <span>@L[OfdTitle]</span>
-        </span>
+            @L[OfdTitle]
+        </h3>
         <h4>@OrganizationName</h4>
         <p>@L[InnLabel] <strong>@TaxId</strong> | @L[TerminalLabel] <strong>@TerminalId</strong></p>
         <p>@L[ReceiptNo] <strong>@ReceiptSeq</strong> • @ReceiptDate.ToString("dd.MM.yyyy HH:mm:ss")</p>
@@ -23,16 +23,10 @@
         @foreach (var item in Items)
         {
             <li>
-                <hgroup>
-                    <span>@item.Name</span>
-                    <span>@L[MxikCode] @item.MxikCode (@item.PackageCode)</span>
-                </hgroup>
-                <hgroup>
-                    <span>@item.Quantity × @item.Price.ToString("N0")</span>
-                    <span>@item.TotalPrice.ToString("N0") @L[ReceiptCurrencyUzs]</span>
-                </hgroup>
-            </li>
-            <li>
+                <strong>@item.Name</strong>
+                <b>@item.TotalPrice.ToString("N0") @L[ReceiptCurrencyUzs]</b>
+                <small>@L[MxikCode] @item.MxikCode (@item.PackageCode)</small>
+                <small>@item.Quantity × @item.Price.ToString("N0")</small>
                 <span>@L[IncludingVat]</span>
                 <span>@item.VatAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
             </li>
@@ -45,7 +39,7 @@
     <section>
         <p>
             <span>@L[TotalToPay]</span>
-            <span>@TotalAmount.ToString("N0") @L[ReceiptCurrencyUzs]</span>
+            <strong>@TotalAmount.ToString("N0") @L[ReceiptCurrencyUzs]</strong>
         </p>
         <p>
             <span>@L[VatAmount]</span>
@@ -64,22 +58,20 @@
         <figure>
             @if (!string.IsNullOrWhiteSpace(QrSvg))
             {
-                <span>
-                    @((MarkupString)QrSvg)
-                </span>
+                @((MarkupString)QrSvg)
             }
             else if (!string.IsNullOrWhiteSpace(SoliqQrUrl))
             {
                 <Icon Name=@QrCode2 />
             }
         </figure>
-        <aside>
+        <section>
             <p>@L[FiscalSign] <code>@FiscalSign</code></p>
             <p>@L[OfdHint]</p>
-            <a href=@SoliqQrUrl target="_blank">
-                <Icon Name=@Verified /> @L[VerifySoliq]
-            </a>
-        </aside>
+            <Button Variant=@Text Href=@SoliqQrUrl Target="_blank" Icon=@Verified>
+                @L[VerifySoliq]
+            </Button>
+        </section>
     </footer>
 
     <!-- Thermal Printer Receipt Print Button -->

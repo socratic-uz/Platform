@@ -2,7 +2,9 @@
    Layer: widgets — Shopping Cart & Order Summary (Pure Attribute Classless)
    ========================================================================== */
 
-aside[cart], section[cart] {
+aside[cart],
+section[cart] {
+    container-type: inline-size;
     grid-template-rows: auto 1fr auto;
     align-content: start;
     gap: var(--space-md);
@@ -12,21 +14,24 @@ aside[cart], section[cart] {
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
 }
 
-aside[cart] > header, section[cart] > header {
-    grid-template-columns: 1fr auto;
+aside[cart]>header,
+section[cart]>header {
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
     padding-bottom: var(--space-sm);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-aside[cart] > ul, section[cart] > ul {
+aside[cart]>ul,
+section[cart]>ul {
     align-content: start;
     gap: var(--space-sm);
     overflow-y: auto;
 }
 
-aside[cart] > ul > li, section[cart] > ul > li {
+aside[cart]>ul>li,
+section[cart]>ul>li {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
@@ -35,14 +40,16 @@ aside[cart] > ul > li, section[cart] > ul > li {
     background: var(--md-sys-color-surface-container);
 }
 
-aside[cart] > footer, section[cart] > footer {
+aside[cart]>footer,
+section[cart]>footer {
     align-content: start;
     gap: var(--space-md);
     padding-top: var(--space-sm);
     border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
-aside[cart] > footer > dl > div, section[cart] > footer > dl > div {
-    grid-template-columns: 1fr auto;
+aside[cart]>footer>dl>div,
+section[cart]>footer>dl>div {
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
 }

@@ -9,6 +9,7 @@ section[pricing-tiers] {
 }
 
 section[pricing-tiers] > article {
+    container-type: inline-size;
     grid-template-rows: auto 1fr auto;
     align-content: start;
     gap: var(--space-md);

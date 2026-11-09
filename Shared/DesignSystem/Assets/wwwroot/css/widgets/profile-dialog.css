@@ -2,16 +2,185 @@
    Layer: widgets — Profile & Account Dialog (Pure Attribute Classless)
    ========================================================================== */
 
+/* FaceID Enrollment Modal */
+md-dialog[faceid-enrollment] {
+    --md-dialog-container-max-inline-size: min(440px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    width: min(440px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+}
+
+md-dialog[faceid-enrollment] > section[slot="content"],
+md-dialog[faceid-enrollment] > [slot="content"] {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    text-align: center;
+    justify-items: center;
+    max-height: min(70dvh, 560px);
+    overflow-y: auto;
+}
+
+md-dialog[faceid-enrollment] figure {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    overflow: hidden;
+    border: 3px solid var(--md-sys-color-primary);
+    display: grid;
+    place-items: center;
+    margin: var(--md-sys-spacing-2) auto;
+    background: var(--md-sys-color-surface-container-lowest);
+}
+
+md-dialog[faceid-enrollment] figure > span {
+    position: absolute;
+    bottom: var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-1) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: rgb(from var(--md-sys-color-surface-container-highest) r g b / 0.85);
+    color: var(--md-sys-color-on-surface);
+    font-size: var(--md-sys-typescale-label-small-size, 0.75rem);
+    font-weight: 600;
+}
+
+md-dialog[faceid-enrollment] ol {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: var(--md-sys-spacing-2);
+    width: 100%;
+    max-width: 200px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+md-dialog[faceid-enrollment] ol > li {
+    height: 4px;
+    border-radius: var(--md-sys-shape-corner-full, 9999px);
+    background: var(--md-sys-color-outline-variant);
+    transition: background-color var(--md-sys-motion-duration-short3, 150ms) ease;
+}
+
+md-dialog[faceid-enrollment] ol > li[data-active] {
+    background: var(--md-sys-color-primary);
+}
+
 md-dialog[profile] {
-    --md-dialog-container-max-inline-size: min(480px, calc(100vw - var(--md-sys-spacing-6)));
-    width: min(480px, calc(100vw - var(--md-sys-spacing-6)));
-    gap: var(--md-sys-spacing-4);
-    padding: var(--md-sys-spacing-4);
+    --md-dialog-container-max-inline-size: min(520px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    --md-dialog-container-min-inline-size: min(320px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    width: min(520px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    box-sizing: border-box;
 }
 
 md-dialog[profile] > header[slot="headline"],
 md-dialog[profile] > [slot="headline"] {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-2);
+}
+
+md-dialog[profile] > form[slot="content"],
+md-dialog[profile] > [slot="content"] {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+    max-height: min(70dvh, 600px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+}
+
+md-dialog[profile] details {
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container-low);
+    overflow: hidden;
+    margin-block: var(--md-sys-spacing-1);
+}
+
+md-dialog[profile] details > fieldset,
+md-dialog[profile] details > section {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border: none;
+    margin: 0;
+}
+
+md-dialog[profile] details article {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    background: var(--md-sys-color-surface-container);
+    margin-block: var(--md-sys-spacing-2);
+}
+
+md-dialog[profile] details article > hgroup {
+    display: grid;
+    gap: 2px;
+}
+
+md-dialog[profile] details article > hgroup > strong {
+    font-size: var(--md-sys-typescale-body-medium-size, 0.875rem);
+    color: var(--md-sys-color-on-surface);
+}
+
+md-dialog[profile] details article > hgroup > small {
+    font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog[profile] details article > menu {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+md-dialog[profile] details article > md-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-primary);
+}
+
+md-dialog[profile] details summary {
+    cursor: pointer;
+    list-style: none;
+    min-height: var(--md-sys-touch-target-min, 48px);
+    display: grid;
+    align-items: center;
+    transition: background-color var(--md-sys-motion-duration-short2, 100ms) ease;
+}
+
+md-dialog[profile] details summary::-webkit-details-marker {
+    display: none;
+}
+
+md-dialog[profile] details summary:hover {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+@media screen and (max-width: 599.98px) {
+md-dialog[profile],
+    md-dialog[faceid-enrollment] {
+        --md-dialog-container-min-inline-size: min(100vw - 16px, calc(100% - 16px));
+        --md-dialog-container-max-inline-size: min(100vw - 16px, calc(100% - 16px));
+        width: min(100vw - 16px, calc(100% - 16px));
+    }
+
+md-dialog[profile] > form[slot="content"],
+    md-dialog[profile] > [slot="content"] {
+        max-height: calc(100dvh - 160px);
+        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    }
 }

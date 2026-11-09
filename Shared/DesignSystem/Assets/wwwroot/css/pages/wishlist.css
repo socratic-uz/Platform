@@ -88,9 +88,10 @@ main[wishlist]>section>md-filled-card>figure>img {
     transition: transform 0.3s ease;
 }
 
-main[wishlist]>section>md-filled-card>figure>span {
+main[wishlist]>section>md-filled-card>figure>md-icon {
     display: grid;
     place-items: center;
+    font-size: 48px;
     color: var(--md-sys-color-outline);
 }
 

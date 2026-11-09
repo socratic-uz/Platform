@@ -211,13 +211,13 @@ main[terminal] > aside > header {
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
-main[terminal] > aside > header > span:first-child {
+main[terminal] > aside > header > nav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
 
-main[terminal] > aside > header > span:first-child > span {
+main[terminal] > aside > header > nav > span {
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
     font-weight: 700;
@@ -225,13 +225,13 @@ main[terminal] > aside > header > span:first-child > span {
     text-transform: uppercase;
 }
 
-main[terminal] > aside > header > span:first-child > menu {
+main[terminal] > aside > header > nav > menu {
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
-main[terminal] > aside > header > span:first-child > menu > md-icon-button, main[terminal] > aside > header > span:first-child > menu > md-filled-tonal-icon-button, main[terminal] > aside > header > span:first-child > menu > button {
+main[terminal] > aside > header > nav > menu > md-icon-button, main[terminal] > aside > header > nav > menu > md-filled-tonal-icon-button, main[terminal] > aside > header > nav > menu > button {
     min-width: 48px;
     min-height: 48px;
 }

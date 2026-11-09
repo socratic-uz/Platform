@@ -20,6 +20,9 @@ public partial class Aside : ComponentBase
     [Parameter] public bool Empty { get; set; }
     [Parameter] public bool Visible { get; set; } = true;
 
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
     protected bool ShouldRenderCustom => ChildContent != null && !Default;
 
     protected override async Task OnInitializedAsync()

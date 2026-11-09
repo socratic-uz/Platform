@@ -1,11 +1,12 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / header.css
-   Global Top App Bar & Search Header (Layout/Header.razor & Components/Search.razor)
+   Socratic Design System — LAYOUTS / header.css
+   Global Top App Bar Landmark Sub-Macro-Grid (body > header)
    Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
    ========================================================================== */
 
 /* --- Top App Bar (body > header) --- */
 body > header {
+    grid-area: header;
     grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
     gap: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
     align-items: center;
@@ -13,7 +14,7 @@ body > header {
     top: 0;
     z-index: var(--md-sys-z-overlay);
     min-height: 72px;
-    padding: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-2);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface);
     transition:
@@ -26,6 +27,8 @@ body > header > nav {
     grid-auto-columns: max-content;
     gap: 0.75rem;
     align-items: center;
+    min-width: 0;
+    max-width: 100%;
     width: auto;
     overflow-x: auto;
     scrollbar-width: none;
@@ -50,6 +53,29 @@ body > header > nav > hgroup > h1 {
     text-overflow: ellipsis;
 }
 
+body > header > nav > hgroup > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: var(--md-sys-spacing-1);
+    min-height: 44px;
+    min-width: 44px;
+    color: inherit;
+    text-decoration: none;
+}
+
+body > header > nav > menu {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
 body > header > nav > a {
     display: inline-grid;
     grid-auto-flow: column;
@@ -62,6 +88,14 @@ body > header > nav > a {
     padding: 0 0.5rem;
     color: inherit;
     white-space: nowrap;
+}
+
+body > header > md-outlined-text-field {
+    display: grid;
+    grid-column: 2 / 3;
+    min-width: 0;
+    width: 100%;
+    align-items: center;
 }
 
 body > header > menu :where(md-text-button, md-icon-button) {
@@ -96,16 +130,15 @@ body > header > a {
     white-space: nowrap;
 }
 
-body > header > search {
-    display: grid;
-    grid-column: 2 / 3;
-    min-width: 0;
-    width: 100%;
-    align-items: center;
+body > header [drawer] {
+    display: none;
 }
 
-body > header > search > md-outlined-text-field {
-    width: 100%;
+@media screen and (max-width: 839.98px) {
+body > header [drawer] {
+        display: inline-grid;
+        place-items: center;
+    }
 }
 
 @media screen and (max-width: 839.98px) {
@@ -115,12 +148,12 @@ body > header {
         padding: var(--md-sys-spacing-3);
     }
 
-body > header > search {
+body > header > md-outlined-text-field {
         grid-column: 1 / -1;
         width: 100%;
     }
 
-body > header:has(> search) {
+body > header:has(> md-outlined-text-field) {
         grid-template: auto auto / minmax(0, 1fr) auto;
         grid-template-areas:
             "start end"
@@ -128,18 +161,18 @@ body > header:has(> search) {
         gap: 0.5rem 0.75rem;
     }
 
-body > header:has(> search) > :first-child {
+body > header:has(> md-outlined-text-field) > md-outlined-text-field {
+        grid-area: center;
+        grid-column: 1 / -1;
+    }
+
+body > header:has(> md-outlined-text-field) > :first-child {
         grid-area: start;
     }
 
-body > header:has(> search) > :last-child {
+body > header:has(> md-outlined-text-field) > :last-child {
         grid-area: end;
         justify-self: end;
-    }
-
-body > header:has(> search) > search {
-        grid-area: center;
-        grid-column: 1 / -1;
     }
 }
 

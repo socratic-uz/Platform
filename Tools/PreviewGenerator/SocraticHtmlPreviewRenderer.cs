@@ -18,13 +18,26 @@ public sealed partial class SocraticHtmlPreviewRenderer
         _services = services;
     }
 
-    public async Task<string> RenderComponentAsync<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TComponent>(IDictionary<string, object?>? parameters = null) 
+    public async Task<string> RenderComponentAsync<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TComponent>(
+        IDictionary<string, object?>? parameters = null,
+        Type? explicitLayoutType = null) 
         where TComponent : IComponent
     {
         await using var htmlRenderer = new HtmlRenderer(_services, NullLoggerFactory.Instance);
 
         var layoutAttr = typeof(TComponent).GetCustomAttribute<LayoutAttribute>(inherit: true);
-        var layoutType = layoutAttr?.LayoutType;
+        Type? layoutType = explicitLayoutType;
+        if (layoutType == null)
+        {
+            if (layoutAttr != null)
+            {
+                layoutType = layoutAttr.LayoutType;
+            }
+            else if (!typeof(LayoutComponentBase).IsAssignableFrom(typeof(TComponent)))
+            {
+                layoutType = typeof(Shared.Layout.AppLayout);
+            }
+        }
 
         var wrapperParameters = new Dictionary<string, object?>
         {
@@ -46,7 +59,7 @@ public sealed partial class SocraticHtmlPreviewRenderer
             var headOutput = await htmlRenderer.RenderComponentAsync<Shared.Components.HeadAssets>(headParams);
 
             var bodyOutput = await htmlRenderer.RenderComponentAsync<LayoutWrapper<TComponent>>(paramView);
-
+            await Task.Delay(50);
             return (headOutput.ToHtmlString(), bodyOutput.ToHtmlString());
         });
 

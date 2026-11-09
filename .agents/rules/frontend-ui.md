@@ -23,8 +23,14 @@
   2. `foundations` (`foundations/`): сброс стилей браузера, семантические дефолты HTML5, типографика, анимации и контракт центрирования по требованию (`[center*]`).
   3. `components` (`components/`) — **Уровни 4–6 DOM**: атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
   4. `widgets` (`widgets/`) — **Уровень 3 DOM**: составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`). Виджеты могут переопределять и адаптировать компоненты под специфику бизнес-процесса.
-  5. `pages` (`pages/`) — **Уровень 2 DOM**: стили **строго для прямых ориентиров `body`**, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
-  6. `layouts` (`layouts/`) — **Уровень 1 DOM**: Макросеткой экрана является сам тег `<body>`. Тег `<layout [variant]>` является исключительно механизмом переключения стилей макросетки через селектор `body:has(layout[variant])`, управляющий сеткой прямых ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`).
+  5. `pages` (`pages/`) — **Уровень 2 DOM (Страницы)**: стили **строго для конкретных страниц по булевым атрибутам** (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `main[home]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
+  6. `layouts` (`layouts/`) — **Уровень 1 DOM (Макросетка и 4 подмакросетки документа)**:
+     - **Макросетка**: `body.css` — стили исключительно для тега `<body>` (`body:has(...)`, переключение макросетки, треки и координаты ориентиров).
+     - **4 Подмакросетки (прямые ориентиры 1-го уровня под `body`)**:
+       - `layouts/header.css`: общие стили для тега `body > header` (Top App Bar).
+       - `layouts/aside.css`: общие стили для тега `body > aside` (подмакросетка навигации `aside > nav` и оверлеев `aside > md-dialog`).
+       - `layouts/main.css`: общие стили для тега `body > main` (основная контентная область).
+       - `layouts/footer.css`: общие стили для тега `body > footer` (подвал).
 
 ### 1.3. Контракт растягивания на всю область (Full Width by Default) и центрирования (Opt-in Centering)
 - **Растягивание по умолчанию (Stretch by Default)**:

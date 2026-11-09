@@ -35,6 +35,8 @@
 @import "foundations/typography.css" layer(foundations);
 
 /* 3. Material 3 Component Primitives (Protected UI Units) */
+@import "components/avatar.css" layer(components);
+@import "components/buttons.css" layer(components);
 @import "components/cards.css" layer(components);
 @import "components/dialogs.css" layer(components);
 @import "components/feedback.css" layer(components);
@@ -78,8 +80,6 @@
 @import "pages/chat.css" layer(pages);
 @import "pages/detector.css" layer(pages);
 @import "pages/docs.css" layer(pages);
-@import "pages/footer.css" layer(pages);
-@import "pages/header.css" layer(pages);
 @import "pages/help.css" layer(pages);
 @import "pages/home.css" layer(pages);
 @import "pages/kiosk.css" layer(pages);
@@ -92,10 +92,13 @@
 @import "pages/product.css" layer(pages);
 @import "pages/qr-designer.css" layer(pages);
 @import "pages/qr.css" layer(pages);
-@import "pages/rail.css" layer(pages);
 @import "pages/seat-designer.css" layer(pages);
 @import "pages/terminal.css" layer(pages);
 @import "pages/wishlist.css" layer(pages);
 
 /* 6. Blazor Layouts (Page Skeletons, Shells & Chrome) */
-@import "layouts/app-layout.css" layer(layouts);
+@import "layouts/aside.css" layer(layouts);
+@import "layouts/body.css" layer(layouts);
+@import "layouts/footer.css" layer(layouts);
+@import "layouts/header.css" layer(layouts);
+@import "layouts/main.css" layer(layouts);

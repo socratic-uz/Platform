@@ -134,19 +134,6 @@ main[kiosk] > section > md-filled-card > figure > img {
     object-fit: cover;
 }
 
-main[kiosk] > section > md-filled-card > figure > span {
-    grid-area: media-stack;
-    display: grid;
-    opacity: 0.6;
-    place-items: center;
-    height: 100%;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-main[kiosk] > section > md-filled-card > figure > span > md-icon {
-    font-size: 48px;
-}
-
 main[kiosk] > section > md-filled-card > figure > md-icon-button,
 main[kiosk] > section > md-filled-card > figure > button {
     position: absolute;
@@ -169,6 +156,15 @@ main[kiosk] > section > md-filled-card > figure > button {
 main[kiosk] > section > md-filled-card > figure > md-icon-button:active,
 main[kiosk] > section > md-filled-card > figure > button:active {
     transform: scale(0.96);
+}
+
+main[kiosk] > section > md-filled-card > figure > md-icon {
+    grid-area: media-stack;
+    display: grid;
+    opacity: 0.6;
+    place-self: center;
+    font-size: 48px;
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 main[kiosk] > section > md-filled-card > section > p {
@@ -325,7 +321,7 @@ main[kiosk] > section > md-filled-card:hover > figure > img {
 }
 
 /* --- Kiosk Active Orders Tabs --- */
-main[kiosk] > section:has(nav) {
+main[kiosk] > section:has(md-tabs) {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
@@ -337,7 +333,7 @@ main[kiosk] > section:has(nav) {
     background: var(--md-sys-color-surface-container-low);
 }
 
-main[kiosk] > section:has(nav) > span {
+main[kiosk] > section:has(md-tabs) > span {
     color: var(--md-sys-color-on-surface);
     font-size: 0.85rem;
     font-weight: 700;
@@ -345,14 +341,14 @@ main[kiosk] > section:has(nav) > span {
     text-transform: uppercase;
 }
 
-main[kiosk] > section:has(nav) > nav {
+main[kiosk] > section:has(md-tabs) > md-tabs {
     overflow-x: auto;
     scrollbar-width: none;
     touch-action: pan-y;
     overscroll-behavior-x: contain;
 }
 
-main[kiosk] > section:has(nav) > md-filled-button, main[kiosk] > section:has(nav) > button {
+main[kiosk] > section:has(md-tabs) > md-filled-button, main[kiosk] > section:has(md-tabs) > button {
     min-width: max-content;
     min-height: var(--md-sys-touch-target-kiosk);
 }

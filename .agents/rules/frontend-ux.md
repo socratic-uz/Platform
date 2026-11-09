@@ -125,7 +125,19 @@
   - **Ориентиры не несут атрибутов лейаута**: `<main grid>` запрещен.
   - **Zero Widget Leakage**: внутри `.razor` страниц виджеты размещаются параллельно; внутренняя верстка виджетов стилизуется в `@layer widgets`.
 
-### 5.2. Растягивание на всю область (Full Width by Default) и центрирование (Opt-in Centering)
+### 5.3. Архитектура подмакросетки `body > aside` (Умная подмакросетка навигации и оверлеев)
+Прямой ориентир документа `body > aside` является **умной адаптивной подмакросеткой (Smart Sub-Macro-Grid)** для всех навигационных и модальных механизмов Material Design 3.
+Внутри `aside` используются **строго два канонических механизма** без лишних атрибутов:
+1. **`<nav>`** — постоянная навигация в потоке документа (чистый HTML5 без лишних атрибутов):
+   - Разметка не зависит от вьюпорта: пишется просто `body > aside > nav`.
+   - Адаптивность обеспечивается чисто через CSS Media Queries: на мобилках (`< 840px`) он автоматически отображается как горизонтальный **Navigation Bar** внизу экрана, а на десктопах (`≥ 840px`) — как вертикальный **Navigation Rail** слева.
+2. **`<md-dialog>`** (Blazor-компонент `<MaterialDialog>`) — единая адаптивная модальная поверхность (чистый Material.Web без лишних атрибутов):
+   - Разметка не зависит от вьюпорта: пишется просто `body > aside > md-dialog` (или `<MaterialDialog>`).
+   - На мобилках (`< 840px`) он автоматически позиционируется снизу как **Bottom Sheet** (`bottom: 0`, `28px 28px 0 0`, slide up).
+   - На десктопах (`≥ 840px`) он автоматически позиционируется сбоку как **Side Sheet / Navigation Drawer** (`top: 0`, `height: 100dvh`, `width: 360px`, slide from side).
+- **Pure Attribute-Driven Classless**: полный отказ от искусственных атрибутов `[bar]`, `[rail]`, `[drawer]`, `[side-sheet]`, `[bottom-sheet]` — трансформация между терминами дизайна происходит на 100% нативно через CSS Media Queries.
+
+### 5.4. Растягивание на всю область (Full Width by Default) и центрирование (Opt-in Centering)
 - **По умолчанию элементы занимают всю доступную область**:
   Все страницы, секции и контейнеры по умолчанию растягиваются на 100% доступной ширины (`width: 100%; min-width: 0`). Запрещены глобальные искусственные `max-width: 1200px` и `margin: 0 auto`.
 - **Центрирование подключается только явно через семантические атрибуты**:
@@ -156,6 +168,7 @@
 | `<select>` / `<option>` | `<Select>` / `<SelectOption>` | `<Select Label=@L[Country]>...</Select>` |
 | `<hr>` | `<Divider>` | `<Divider />` |
 | `<dialog>` | `<MaterialDialog>` или `<Dialog>` | `<MaterialDialog Open=@IsOpen Headline=@L[ModalTitle]>` |
+| Drawer / Side Sheet / Bottom Sheet | `<MaterialDialog>` с атрибутом 1-го уровня | `<MaterialDialog drawer>`, `<MaterialDialog side-sheet>`, `<MaterialDialog sheet>` |
 | `<progress>` | `<Progress>` | `<Progress Value=@ProgressValue />` |
 | Вкладки / Табы | `<Tabs>` + `<Tab>` | `<Tabs><Tab Content=@L[TabOverview] /></Tabs>` |
 | Фильтры / Чипы | `<Chip>` + `<ChipSet>` | `<Chip Type=@Filter Label=@L[FilterName] />` |

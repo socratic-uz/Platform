@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / rail.css
-   Global Navigation Rail & Mobile Bottom Bar (Layout/Aside.razor)
+   Socratic Design System — LAYOUTS / aside.css
+   Global Aside Landmark Sub-Macro-Grid (body > aside)
+   Hosting Persistent Navigation (nav) & Modal Surfaces (md-dialog)
    Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
-   Matching super-layout/visual.css design token architecture
    ========================================================================== */
 
-body > aside > dialog {
+body > aside > md-dialog {
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     border: none;
@@ -13,12 +13,12 @@ body > aside > dialog {
     gap: var(--md-sys-spacing-3);
 }
 
-body > aside > dialog > header {
+body > aside > md-dialog > header {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding-bottom: var(--md-sys-spacing-2);
 }
 
-body > aside > dialog > details > section > a {
+body > aside > md-dialog details a {
     color: var(--md-sys-color-on-surface-variant);
     text-decoration: none;
     padding: var(--md-sys-spacing-2);
@@ -26,16 +26,21 @@ body > aside > dialog > details > section > a {
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-body > aside > dialog > details > section > a:hover {
-    background: var(--md-sys-color-surface-container-high);
-    color: var(--md-sys-color-on-surface);
-}
-
-body > aside > dialog > details > summary {
+body > aside > md-dialog details summary {
     color: var(--md-sys-color-on-surface);
     font-weight: 600;
     padding: var(--md-sys-spacing-2);
     border-radius: var(--md-sys-shape-corner-small);
+}
+
+body > aside > md-dialog details a:hover {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+}
+
+/* Второй aside (после main): контекстная панель / инспектор / корзина */
+body > main ~ aside {
+    grid-area: aside;
 }
 
 /* --- Universal Rail Links & Items --- */
@@ -62,9 +67,9 @@ body:has(> aside > nav) > aside > nav > a > span {
 body:has(> aside > nav) > aside > nav > a > md-icon {
     display: grid;
     place-items: center;
-    font-size: 24px;
+    font-size: var(--md-icon-size, 24px);
     border-radius: var(--md-sys-shape-corner-full);
-    transition: background-color 0.2s cubic-bezier(0.2, 0, 1), color 0.2s cubic-bezier(0.2, 0, 1);
+    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 body:has(> aside > nav) > aside > nav > a:hover > md-icon {
@@ -84,6 +89,11 @@ body:has(> aside > nav) > aside > nav > a.active > md-icon {
     color: var(--md-sys-color-on-secondary-container);
 }
 
+/* Первый aside (перед main): навигационный рейл */
+body:has(> aside > nav) > aside:first-of-type {
+    grid-area: rail;
+}
+
 /* --- Universal Drawer Dialog & Backdrop Visual Appearance --- */
 span[backdrop],
 body > span[backdrop] {
@@ -95,10 +105,24 @@ body > span[backdrop] {
 /* --- Mobile Bottom Bar (< 840px) --- */
 
 @media screen and (max-width: 839.98px) {
-body:has(> aside > nav) > aside {
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+body > main ~ aside {
+        display: none;
+    }
+
+body:has(> aside > nav) > aside > nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+        grid-auto-rows: auto;
+        height: 100%;
+        width: 100%;
+        padding: 4px;
+        gap: 4px;
+        align-items: center;
+        justify-items: center;
+        overflow: hidden;
     }
 
 body:has(> aside > nav) > aside > nav > a {
@@ -121,19 +145,55 @@ body:has(> aside > nav) > aside > nav > a > md-icon {
         font-size: 22px;
     }
 
-body:has(> aside > nav) > aside > dialog {
+body:has(> aside > nav) > aside > md-dialog {
         border-top: 1px solid var(--md-sys-color-outline-variant);
         border-radius: var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0 0;
         box-shadow: 0 -4px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+    }
+
+body:has(> aside > nav) > aside:first-of-type {
+        display: grid;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        height: 60px;
+        width: 100vw;
+        max-width: 100vw;
+        z-index: var(--md-sys-z-navigation-bar);
+        padding: 0;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container);
+        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
     }
 }
 
 /* --- Desktop Rail (>= 840px) --- */
 
 @media screen and (min-width: 840px) {
-body:has(> aside > nav) > aside {
-        border-right: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-low);
+body > main ~ aside {
+        display: grid;
+        align-content: start;
+        gap: var(--md-sys-gutter-section);
+        padding: var(--md-sys-gutter-page);
+        border-left: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-lowest);
+        overflow-y: auto;
+    }
+
+body:has(> aside > nav) > aside > nav {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: max-content;
+        grid-auto-columns: auto;
+        gap: var(--md-sys-spacing-2);
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
+        align-content: start;
+        justify-items: center;
+        width: 100%;
     }
 
 body:has(> aside > nav) > aside > nav > a {
@@ -156,8 +216,27 @@ body:has(> aside > nav) > aside > nav > a > md-icon {
         height: 32px;
     }
 
-body:has(> aside > nav) > aside > dialog {
+body:has(> aside > nav) > aside > md-dialog {
         border-right: 1px solid var(--md-sys-color-outline-variant);
         box-shadow: 4px 0 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    }
+
+body:has(> aside > nav) > aside:first-of-type {
+        display: grid;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: calc(76px + env(safe-area-inset-left, 0px));
+        height: 100dvh;
+        z-index: var(--md-sys-z-navigation-rail);
+        padding: 0;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
+        transform: translateZ(0);
+        will-change: transform;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
     }
 }

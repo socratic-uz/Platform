@@ -1,11 +1,12 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / footer.css
-   Global Ecosystem Footer Widget (Layout/Footer.razor)
+   Socratic Design System — LAYOUTS / footer.css
+   Global Ecosystem Footer Landmark Sub-Macro-Grid (body > footer)
    Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
    ========================================================================== */
 
 /* --- Footer (body > footer) --- */
 body > footer {
+    grid-area: footer;
     position: relative;
     padding: var(--md-sys-spacing-6);
     border-top: 1px solid var(--md-sys-color-outline-variant);

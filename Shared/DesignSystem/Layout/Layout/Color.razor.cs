@@ -10,6 +10,8 @@ namespace Shared.Layout
 {
     public partial class Color : ComponentBase
     {
+        public const string Name = "color";
+
         [Inject] public IJSRuntime Js { get; set; } = default!;
         [Inject] public ISettingsManager Settings { get; set; } = default!;
 

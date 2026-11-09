@@ -127,7 +127,6 @@ namespace Assets.Constants
 
     public static class AppManifest
     {
-        public const string Css = "_content/Assets/css.zip";
         public const string Manifest = "_content/Assets/manifest.webmanifest";
     }
 

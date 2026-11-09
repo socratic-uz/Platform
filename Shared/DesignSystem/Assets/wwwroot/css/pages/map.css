@@ -97,28 +97,29 @@ main[map]>aside:first-of-type {
     transition: transform 0.3s ease;
 }
 
-main[map]>aside:first-of-type>section>nav {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+main[map]>aside:first-of-type>md-icon-button {
+    min-width: 48px;
+    min-height: 48px;
 }
 
-main[map]>aside:first-of-type>section>search {
+main[map]>aside:first-of-type>search[search-mode]>header {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 0.5rem;
     align-items: center;
 }
 
-main[map]>aside:first-of-type>section>search>md-icon-button {
+main[map]>aside:first-of-type>search[search-mode]>header>md-icon-button {
     min-width: 48px;
     min-height: 48px;
 }
 
-main[map]>aside:first-of-type>md-icon-button {
-    min-width: 48px;
-    min-height: 48px;
+main[map]>aside:first-of-type>search[search-mode]>nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
 }
 
 main[map]>aside:first-of-type:not([expanded]) {

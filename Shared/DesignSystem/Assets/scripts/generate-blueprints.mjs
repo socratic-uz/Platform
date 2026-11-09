@@ -103,6 +103,9 @@ async function analyzePageLiveAllViewports(browser, filePath) {
       }
     });
 
+    // Disable transitions/animations during layout auditing to evaluate steady-state layout geometry
+    await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; animation: none !important; }' });
+
     // Inject preview-collector.js (cached in memory)
     const collectorCode = getCollectorCode();
     if (collectorCode) {

@@ -2,25 +2,201 @@
    Layer: widgets — Fiscal Receipt & Payment Summary (Pure Attribute Classless)
    ========================================================================== */
 
-aside[fiscal], md-dialog[receipt], section[fiscal] {
+article[fiscal], aside[fiscal], md-dialog[receipt], section[fiscal] {
+    display: grid;
     align-content: start;
-    gap: var(--space-md);
-    padding: var(--space-lg);
+    container-type: inline-size;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
-    border-radius: var(--shape-xl);
+    border-radius: var(--md-sys-shape-corner-large, 24px);
     border: 1px solid var(--md-sys-color-outline-variant);
+    font-family: var(--md-ref-typeface-mono, monospace);
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
 }
 
-aside[fiscal] > header, md-dialog[receipt] > header, section[fiscal] > header {
+article[fiscal] > header, aside[fiscal] > header, md-dialog[receipt] > header, section[fiscal] > header {
+    display: grid;
     justify-items: center;
     text-align: center;
-    gap: var(--space-xs);
-    padding-bottom: var(--space-sm);
+    gap: var(--md-sys-spacing-1);
+    padding-bottom: var(--md-sys-spacing-3);
     border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
-aside[fiscal] > dl > div, md-dialog[receipt] > dl > div, section[fiscal] > dl > div {
-    grid-template-columns: 1fr auto;
+article[fiscal] > header > h3, aside[fiscal] > header > h3,
+article[fiscal] > header > span:first-of-type, aside[fiscal] > header > span:first-of-type {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    font-size: var(--md-sys-typescale-title-small-size, 0.875rem);
+    font-weight: 600;
+}
+
+article[fiscal] > header > h4, aside[fiscal] > header > h4 {
+    margin: 0;
+    font-size: var(--md-sys-typescale-title-medium-size, 1.125rem);
+    color: var(--md-sys-color-on-surface);
+}
+
+article[fiscal] > header > p, aside[fiscal] > header > p {
+    margin: 0;
+    font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[fiscal] > ul, aside[fiscal] > ul, section[fiscal] > ul {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+article[fiscal] > ul > li, aside[fiscal] > ul > li, section[fiscal] > ul > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    font-family: var(--md-ref-typeface-mono);
+    gap: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
+}
+
+article[fiscal] > ul > li > hgroup, aside[fiscal] > ul > li > hgroup {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+}
+
+article[fiscal] > ul > li > hgroup:last-child, aside[fiscal] > ul > li > hgroup:last-child {
+    text-align: right;
+    justify-items: end;
+}
+
+article[fiscal] > ul > li > span, aside[fiscal] > ul > li > span {
+    font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    color: var(--md-sys-color-outline);
+}
+
+article[fiscal] > ul > li > :where(b, small:nth-of-type(2), span:nth-of-type(2), hgroup:last-child) {
+    text-align: right;
+    justify-self: end;
+}
+
+article[fiscal] > ul > li > small, aside[fiscal] > ul > li > small {
+    font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[fiscal] > dl > div, aside[fiscal] > dl > div, md-dialog[receipt] > dl > div, section[fiscal] > dl > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    font-family: var(--md-ref-typeface-mono, monospace);
+}
+
+article[fiscal] > section, aside[fiscal] > section, section[fiscal] > section {
+    display: grid;
+    gap: var(--md-sys-spacing-2);
+}
+
+article[fiscal] > section > p, aside[fiscal] > section > p, section[fiscal] > section > p {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    margin: 0;
+}
+
+article[fiscal] > section > p:first-of-type, aside[fiscal] > section > p:first-of-type {
+    font-weight: 700;
+    font-size: var(--md-sys-typescale-title-medium-size, 1.125rem);
+    color: var(--md-sys-color-on-surface);
+}
+
+article[fiscal] > footer, aside[fiscal] > footer, section[fiscal] > footer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-4);
+    align-items: center;
+    padding-top: var(--md-sys-spacing-2);
+}
+
+article[fiscal] > footer > figure, aside[fiscal] > footer > figure {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    background: var(--md-sys-color-surface-container-highest);
+    border-radius: var(--md-sys-shape-corner-medium, 12px);
+    overflow: hidden;
+}
+
+article[fiscal] > footer > figure svg, aside[fiscal] > footer > figure svg {
+    width: 80px;
+    height: 80px;
+}
+
+article[fiscal] > footer > section, aside[fiscal] > footer > section,
+article[fiscal] > footer > aside, aside[fiscal] > footer > aside {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+    font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+article[fiscal] > footer > section > md-text-button, aside[fiscal] > footer > section > md-text-button {
+    justify-self: start;
+    --md-text-button-label-text-size: var(--md-sys-typescale-body-small-size, 0.75rem);
+}
+
+article[fiscal] > footer > aside > a, aside[fiscal] > footer > aside > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-1);
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+}
+
+article[fiscal] > footer > :where(section, aside) > p {
+    margin: 0;
+}
+
+article[fiscal] > :where(button, md-filled-button), aside[fiscal] > :where(button, md-filled-button) {
+    width: 100%;
+    min-height: 48px;
+    margin-top: var(--md-sys-spacing-2);
+}
+
+@container (max-width: 360px) {
+article[fiscal] > footer,
+    aside[fiscal] > footer,
+    section[fiscal] > footer {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+@media print {
+article[fiscal],
+    aside[fiscal],
+    section[fiscal] {
+        background: transparent;
+        border: none;
+        padding: 0;
+        max-width: 80mm;
+        width: 100%;
+        color: var(--md-sys-color-on-surface);
+        box-shadow: none;
+    }
+
+article[fiscal] > :where(button, md-filled-button),
+    aside[fiscal] > :where(button, md-filled-button) {
+        display: none;
+    }
 }

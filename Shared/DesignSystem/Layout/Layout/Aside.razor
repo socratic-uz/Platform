@@ -7,33 +7,37 @@
 @if (Visible && !Empty)
 {
 	<SectionContent SectionName=@Name>
-		@if (ShouldRenderCustom)
-		{
-			@ChildContent
-		}
-		else
-		{
-			<NavLink href="/home" Match=@NavLinkMatch.All>
-				<Icon Name=@Home />
-				<span>@(L?[NavHome])</span>
-			</NavLink>
-			<NavLink href="/wishlist">
-				<Icon Name=@Favorite />
-				<span>@(L?[NavWishList])</span>
-			</NavLink>
-			<NavLink href="/chat">
-				<Icon Name=@Forum />
-				<span>@(L?[NavChat])</span>
-			</NavLink>
-			<NavLink href="/orders">
-				<Icon Name=@ShoppingBag />
-				<span>@(L?[NavOrders])</span>
-			</NavLink>
-			<NavLink href="/analytics">
-				<Icon Name=@Analytics />
-				<span>@(L?[NavAnalytics])</span>
-			</NavLink>
-		}
+		<aside aria-label="Navigation Rail" @attributes=@AdditionalAttributes>
+			<nav aria-label="Main Navigation">
+				@if (ShouldRenderCustom)
+				{
+					@ChildContent
+				}
+				else
+				{
+					<NavLink href="/home" Match=@NavLinkMatch.All>
+						<Icon Name=@Home />
+						<span>@(L?[NavHome])</span>
+					</NavLink>
+					<NavLink href="/wishlist">
+						<Icon Name=@Favorite />
+						<span>@(L?[NavWishList])</span>
+					</NavLink>
+					<NavLink href="/chat">
+						<Icon Name=@Forum />
+						<span>@(L?[NavChat])</span>
+					</NavLink>
+					<NavLink href="/orders">
+						<Icon Name=@ShoppingBag />
+						<span>@(L?[NavOrders])</span>
+					</NavLink>
+					<NavLink href="/analytics">
+						<Icon Name=@Analytics />
+						<span>@(L?[NavAnalytics])</span>
+					</NavLink>
+				}
+			</nav>
+		</aside>
 	</SectionContent>
 }
 

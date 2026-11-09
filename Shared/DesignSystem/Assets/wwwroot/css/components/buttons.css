@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Layer: components — Material 3 Button Ergonomics & Touch Targets
+   Touch-First Standard (POS >= 48px, Kiosk >= 56px, Mobile >= 44px)
+   Zero Specificity via :where(...)
+   ========================================================================== */
+
+:where(button, md-filled-button, md-outlined-button, md-elevated-button, md-filled-tonal-button, md-text-button) {
+    min-height: var(--md-sys-touch-target-min, 48px);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-elevated-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-filled-tonal-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-text-button-container-height: var(--md-sys-touch-target-min, 48px);
+}
+
+:where(md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-icon-button) {
+    min-width: var(--md-sys-touch-target-min, 48px);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min, 48px);
+    --md-icon-button-container-width: var(--md-sys-touch-target-min, 48px);
+    --md-icon-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-filled-icon-button-container-width: var(--md-sys-touch-target-min, 48px);
+    --md-filled-icon-button-container-height: var(--md-sys-touch-target-min, 48px);
+    --md-outlined-icon-button-container-width: var(--md-sys-touch-target-min, 48px);
+    --md-outlined-icon-button-container-height: var(--md-sys-touch-target-min, 48px);
+}
+
+:where(select, md-filled-select, md-outlined-select) {
+    min-height: var(--md-sys-touch-target-min, 48px);
+}
