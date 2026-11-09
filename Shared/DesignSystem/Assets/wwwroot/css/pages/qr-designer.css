@@ -1,7 +1,11 @@
 /* ==========================================================================
    Socratic Design System — PAGES / qr-designer.css
-   Direct Body Landmarks for QR Designer Page: main[qr-designer]
+   Direct Body Landmarks for QR Designer Page: main[qr-designer] & aside[qr-designer]
    ========================================================================== */
+
+body:has(main[qr-designer]) {
+    --catalog-sidebar-width: 380px;
+}
 
 main[qr-designer] {
     grid-template-rows: auto minmax(0, 1fr);
@@ -30,20 +34,20 @@ main[qr-designer] > header > hgroup {
 }
 
 main[qr-designer] > header > hgroup > h1 {
+    color: var(--md-sys-color-on-surface);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--md-sys-color-on-surface);
 }
 
 main[qr-designer] > header > hgroup > p {
-    font-size: 0.9rem;
     color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9rem;
 }
 
 main[qr-designer] > header > hgroup > md-icon {
     grid-row: 1 / 3;
-    font-size: 2.5rem;
     color: var(--md-sys-color-primary);
+    font-size: 2.5rem;
 }
 
 main[qr-designer] > header > nav {
@@ -60,13 +64,7 @@ main[qr-designer] > header > nav > span {
     font-weight: 600;
 }
 
-main[qr-designer] > section {
-    grid-template-columns: minmax(min(100%, 360px), 380px) minmax(0, 1fr);
-    gap: 1.5rem;
-    align-items: start;
-}
-
-main[qr-designer] > section > article {
+main[qr-designer] > article {
     grid-template-rows: auto minmax(0, 1fr) auto;
     gap: 1.25rem;
     align-items: center;
@@ -78,26 +76,26 @@ main[qr-designer] > section > article {
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[qr-designer] > section > article > figure {
+main[qr-designer] > article > figure {
     place-items: center;
     padding: 2rem;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-lowest);
 }
 
-main[qr-designer] > section > article > header {
+main[qr-designer] > article > header {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
     align-items: center;
 }
 
-main[qr-designer] > section > article > header > span:first-child {
+main[qr-designer] > article > header > span:first-child {
     color: var(--md-sys-color-on-surface);
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-main[qr-designer] > section > article > header > span:last-child {
+main[qr-designer] > article > header > span:last-child {
     padding: 0.25rem 0.65rem;
     border-radius: 9999px;
     background: color-mix(in srgb, var(--md-sys-color-primary) 15%, transparent);
@@ -106,7 +104,7 @@ main[qr-designer] > section > article > header > span:last-child {
     font-weight: 600;
 }
 
-main[qr-designer] > section > article > footer {
+main[qr-designer] > article > footer {
     grid-template-columns: 24px minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
@@ -114,44 +112,44 @@ main[qr-designer] > section > article > footer {
     font-size: 0.85rem;
 }
 
-main[qr-designer] > section > article > footer > span {
+main[qr-designer] > article > footer > span {
     line-height: 1.4;
 }
 
-main[qr-designer] > section > article > footer > md-icon {
+main[qr-designer] > article > footer > md-icon {
     color: var(--md-sys-color-primary);
     font-size: 1.1rem;
 }
 
-main[qr-designer] > section > aside {
+aside[qr-designer] {
     gap: 1.25rem;
     padding: 1.5rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large);
+    border-left: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level1);
+    overflow-y: auto;
 }
 
-main[qr-designer] > section > aside > h2 {
+aside[qr-designer] > h2 {
     color: var(--md-sys-color-on-surface);
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-main[qr-designer] > section > aside > fieldset {
+aside[qr-designer] > fieldset {
     gap: 0.75rem;
     padding: 0;
     border: none;
 }
 
-main[qr-designer] > section > aside > fieldset > legend {
+aside[qr-designer] > fieldset > legend {
     padding: 0;
     color: var(--md-sys-color-on-surface);
     font-size: 0.95rem;
     font-weight: 600;
 }
 
-main[qr-designer] > section > aside > fieldset > label {
+aside[qr-designer] > fieldset > label {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.35rem;
     align-items: center;
@@ -162,7 +160,7 @@ main[qr-designer] > section > aside > fieldset > label {
 @media screen and (max-width: 839.98px) {
 main[qr-designer] {
         gap: 1.25rem;
-        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+        padding: 1.25rem 1rem;
         padding-right: max(1rem, env(safe-area-inset-right, 0px));
         padding-left: max(1rem, env(safe-area-inset-left, 0px));
     }
@@ -176,7 +174,10 @@ main[qr-designer] > header > nav {
         scrollbar-width: none;
     }
 
-main[qr-designer] > section {
-        grid-template-columns: minmax(0, 1fr);
+aside[qr-designer] {
+        display: grid;
+        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + 1.5rem);
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-left: none;
     }
 }

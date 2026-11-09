@@ -4,19 +4,6 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Aside Sub-Macro-Grid Modal Surface (Adaptive Bottom Sheet & Side Sheet)
-   -------------------------------------------------------------------------- */
-aside > md-dialog {
-    --md-dialog-container-shape: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
-    --md-dialog-container-min-inline-size: min(360px, 85vw);
-    --md-dialog-container-max-inline-size: min(360px, 85vw);
-    --md-dialog-container-max-block-size: 100dvh;
-    margin: 0 auto 0 0;
-    height: 100dvh;
-    max-height: 100dvh;
-}
-
-/* --------------------------------------------------------------------------
    1. Universal Material.Web Dialog Container
    -------------------------------------------------------------------------- */
 md-dialog {
@@ -227,18 +214,6 @@ md-dialog[medium] {
 md-dialog[small],
 md-dialog[alert] {
     --md-dialog-container-max-inline-size: min(400px, calc(100vw - var(--md-sys-spacing-6, 24px)));
-}
-
-@media screen and (max-width: 839.98px) {
-aside > md-dialog {
-        --md-dialog-container-shape: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
-        --md-dialog-container-min-inline-size: 100vw;
-        --md-dialog-container-max-inline-size: 100vw;
-        --md-dialog-container-max-block-size: 85dvh;
-        margin: auto auto 0 auto;
-        width: 100vw;
-        max-height: 85dvh;
-    }
 }
 
 /* --------------------------------------------------------------------------

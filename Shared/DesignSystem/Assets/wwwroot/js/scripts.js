@@ -9,6 +9,7 @@ import { registerComponent } from './lifecycle.js';
 import './components/material-web.bundle.js';
 import * as MaterialColorUtilities from './components/material-color-utilities.bundle.js';
 import * as SliderPatch from './components/slider-patch.js';
+import * as DialogPatch from './components/dialog-patch.js';
 
 // 2. Layouts (Color Theme & Reconnect Modal)
 import * as ColorTheme from './layouts/color-theme.js';

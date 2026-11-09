@@ -4,8 +4,17 @@
    ========================================================================== */
 
 :root {
+    --md-filled-field-active-indicator-height: 0px;
+    --md-filled-field-focus-active-indicator-height: 0px;
+    --md-filled-field-hover-active-indicator-height: 0px;
+    --md-filled-select-text-field-active-indicator-height: 0px;
     --md-filled-select-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
+    --md-filled-select-text-field-focus-active-indicator-height: 0px;
+    --md-filled-select-text-field-hover-active-indicator-height: 0px;
+    --md-filled-text-field-active-indicator-height: 0px;
     --md-filled-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
+    --md-filled-text-field-focus-active-indicator-height: 0px;
+    --md-filled-text-field-hover-active-indicator-height: 0px;
     --md-outlined-select-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
     --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-extra-large);
     --md-sys-shape-asymmetric-end: var(--md-sys-shape-expressive-asymmetric-2);

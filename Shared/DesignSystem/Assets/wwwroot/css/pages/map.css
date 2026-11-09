@@ -1,9 +1,8 @@
 /* ==========================================================================
    Socratic Design System — PAGES / map.css
    Direct Body Landmark for Interactive Map Studio: <main map>
-   Level 1: body:has(layout[map])
-   Level 2: <main map>
    Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
+   Material Design 3 Native Components & Clean Surface Styling
    ========================================================================== */
 
 main[map] {
@@ -11,258 +10,227 @@ main[map] {
     height: 100dvh;
     min-height: 0;
     padding: 0;
+    gap: 0;
     background-color: var(--md-sys-color-surface-dim);
     color: var(--md-sys-color-on-surface);
     overflow: hidden;
 }
 
 /* ==========================================================================
-   1. Map Viewport & Fullscreen Canvas
+   1. Map Viewport & Canvas Surface
    ========================================================================== */
-main[map]>section {
+main[map] > section {
     position: absolute;
     inset: 0;
     height: 100%;
     overflow: hidden;
 }
 
-main[map]>section>figure {
+main[map] > section > figure {
     position: absolute;
     inset: 0;
     height: 100%;
     background-color: var(--md-sys-color-surface-dim);
 }
 
-/* Floating Map Controls (Zoom, Geolocation, 3D, Floor Stack) */
-main[map]>section>aside {
+/* --- Floating Map Controls (Right Island: Zoom, Location, 3D, Floor) --- */
+main[map] > section > aside {
     position: absolute;
     right: 16px;
     bottom: max(24px, env(safe-area-inset-bottom, 24px));
     z-index: var(--md-sys-z-sticky);
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     justify-items: center;
     pointer-events: auto;
     padding: 0;
-    background: initial;
+    background: transparent;
 }
 
-main[map]>section>aside>nav:first-of-type {
+main[map] > section > aside > nav:first-of-type {
     grid-auto-flow: row;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    box-shadow: var(--md-sys-elevation-level2);
     gap: 0;
 }
 
-main[map]>section>aside>nav:last-of-type {
+main[map] > section > aside > nav:last-of-type {
     grid-auto-flow: row;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
     justify-items: center;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+    box-shadow: var(--md-sys-elevation-level2);
     font-size: 0.75rem;
     font-weight: 600;
 }
 
-main[map]>section>aside :where(md-icon-button, md-filled-icon-button) {
-    min-width: 48px;
-    min-height: 48px;
-}
-
-/* ==========================================================================
-   2. Main Controls Overlay Panel (Search, Routes, POI Details)
-   ========================================================================== */
-main[map]>aside:first-of-type {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    bottom: 16px;
-    z-index: var(--md-sys-z-sticky);
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 0.75rem;
-    width: clamp(340px, 32vw, 440px);
-    max-height: calc(100% - 32px);
-    padding: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-corner-large);
-    background: color-mix(in srgb, var(--md-sys-color-surface-container) 92%, transparent);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: var(--md-sys-elevation-level3);
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-}
-
-main[map]>aside:first-of-type>md-icon-button {
-    min-width: 48px;
-    min-height: 48px;
-}
-
-main[map]>aside:first-of-type>search[search-mode]>header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-main[map]>aside:first-of-type>search[search-mode]>header>md-icon-button {
-    min-width: 48px;
-    min-height: 48px;
-}
-
-main[map]>aside:first-of-type>search[search-mode]>nav {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
-}
-
-main[map]>aside:first-of-type:not([expanded]) {
-    width: auto;
-    padding: 0.5rem;
-}
-
-main[map]>aside:first-of-type:not([expanded])> :not(md-icon-button:first-child) {
-    display: none;
-}
-
-/* Route Mode Panel */
+/* --- Route Mode Panel --- */
 section[route-mode] {
-    gap: 1rem;
+    gap: var(--md-sys-spacing-4);
 }
 
-section[route-mode]>header {
+section[route-mode] > header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-section[route-mode]>nav {
+section[route-mode] > nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
-section[route-mode]>fieldset {
+section[route-mode] > fieldset {
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
     padding: 0;
     border: none;
 }
 
-section[route-mode]>fieldset>ol {
-    gap: 0.5rem;
+section[route-mode] > fieldset > ol {
+    gap: var(--md-sys-spacing-2);
+    list-style: none;
+    padding: 0;
 }
 
-section[route-mode]>menu {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-}
-
-/* Place Details Inside Controls Panel */
-article[place-details] {
-    gap: 1rem;
-    padding: 0.5rem 0;
-}
-
-article[place-details]>header {
+section[route-mode] > fieldset > ol > li {
+    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+section[route-mode] > menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-2);
+    padding: 0;
+}
+
+/* --- Place Details Inside Controls Panel --- */
+article[place-details] {
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-2) 0;
+    background: transparent;
+    border: none;
+}
+
+article[place-details] > header {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-article[place-details]>section {
+article[place-details] > section {
     grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-article[place-details]>menu {
+article[place-details] > menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
+    padding: 0;
 }
 
 /* ==========================================================================
-   3. Route Navigator HUD Overlay
+   2. Main Controls Drawer Dialog (body > aside > md-dialog[map-controls])
    ========================================================================== */
-aside[navigator] {
-    position: absolute;
-    inset: 0;
-    z-index: var(--md-sys-z-modal);
-    grid-template-rows: auto 1fr auto;
-    pointer-events: none;
+aside > md-dialog[map-controls] {
+    --md-dialog-container-color: var(--md-sys-color-surface-container);
 }
 
-aside[navigator]>header {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1rem;
+aside > md-dialog[map-controls] > section[slot="content"] {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    align-content: start;
+}
+
+aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] {
+    gap: var(--md-sys-spacing-3);
+}
+
+aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-2);
     align-items: center;
-    margin: 16px;
-    padding: 1rem 1.25rem;
-    border-radius: var(--md-sys-shape-expressive-corner-large);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level3);
-    pointer-events: auto;
 }
 
-aside[navigator]>header>hgroup {
+aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] > nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    overflow-x: auto;
+    padding-bottom: var(--md-sys-spacing-1);
+    scrollbar-width: none;
+}
+
+/* ==========================================================================
+   3. Route Navigator Drawer Dialog (body > aside > md-dialog[navigator])
+   ========================================================================== */
+aside > md-dialog[navigator] > header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+}
+
+aside > md-dialog[navigator] > header > hgroup {
     gap: 2px;
 }
 
-aside[navigator]>header>hgroup>span:first-child {
+aside > md-dialog[navigator] > header > hgroup > span:first-child {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--md-sys-color-primary);
 }
 
-aside[navigator]>header>hgroup>span:last-child {
+aside > md-dialog[navigator] > header > hgroup > span:last-child {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-aside[navigator]>header>menu {
+aside > md-dialog[navigator] > header > menu {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 0.5rem;
+    gap: var(--md-sys-spacing-2);
+    padding: 0;
 }
 
-aside[navigator]>footer {
+aside > md-dialog[navigator] > section[slot="content"] > footer {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-    margin: 16px;
-    padding: 1rem 1.25rem;
+    padding: var(--md-sys-spacing-4);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level3);
-    pointer-events: auto;
     text-align: center;
 }
 
-aside[navigator]>footer>p {
+aside > md-dialog[navigator] > section[slot="content"] > footer > p {
     display: grid;
     gap: 2px;
 }
 
-aside[navigator]>footer>p>span:first-child {
+aside > md-dialog[navigator] > section[slot="content"] > footer > p > span:first-child {
     font-size: 0.75rem;
     color: var(--md-sys-color-outline);
     text-transform: uppercase;
 }
 
-aside[navigator]>footer>p>span:last-child {
+aside > md-dialog[navigator] > section[slot="content"] > footer > p > span:last-child {
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -272,28 +240,13 @@ aside[navigator]>footer>p>span:last-child {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-main[map]>section>aside {
+main[map] {
+        height: calc(100dvh - 60px);
+    }
+
+main[map] > section > aside {
         top: 16px;
         bottom: auto;
         right: 16px;
-    }
-
-main[map]>aside:first-of-type {
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        max-height: 60dvh;
-        border-radius: var(--md-sys-shape-corner-extra-large) var(--md-sys-shape-corner-extra-large) 0 0;
-    }
-
-main[map]>aside:first-of-type:not([expanded]) {
-        top: 16px;
-        bottom: auto;
-        left: 16px;
-        right: auto;
-        width: auto;
-        border-radius: var(--md-sys-shape-corner-full);
     }
 }

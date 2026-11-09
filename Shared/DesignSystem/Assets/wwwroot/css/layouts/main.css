@@ -1,10 +1,10 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / main.css
-   Global Main Content Landmark Sub-Macro-Grid (body > main)
-   Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
+   ПОДМАКРОСЕТКА (ТЕГ BODY > MAIN)
+   - Контейнер основной рабочей области (display: grid)
+   - Привязка к grid-area: main
    ========================================================================== */
 
-/* --- Primary Main Content Landmark (body > main) --- */
 body > main {
     display: grid;
     grid-area: main;
@@ -13,12 +13,13 @@ body > main {
     min-height: 100%;
     box-sizing: border-box;
     align-content: start;
+    gap: var(--md-sys-gutter-section);
+    padding: var(--md-sys-gutter-page);
     color: var(--md-sys-color-on-surface);
     background: var(--md-sys-color-surface);
     transition: background-color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
 }
 
-/* --- Internal Direct Structural Containers under body > main --- */
 body > main > section {
     display: grid;
     min-width: 0;

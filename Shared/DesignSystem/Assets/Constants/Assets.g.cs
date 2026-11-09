@@ -67,6 +67,7 @@ namespace Assets.Constants
 
         public static class Components
         {
+            public const string DialogPatch = "./_content/Assets/js/components/dialog-patch.js";
             public const string MaterialColorUtilitiesBundle = "./_content/Assets/js/components/material-color-utilities.bundle.js";
             public const string MaterialWebBundle = "./_content/Assets/js/components/material-web.bundle.js";
             public const string SliderPatch = "./_content/Assets/js/components/slider-patch.js";
@@ -78,6 +79,7 @@ namespace Assets.Constants
         public const string ChatInput = "./_content/Assets/js/widgets/chat-input.js";
         public const string ChatMessageList = "./_content/Assets/js/widgets/chat-message-list.js";
         public const string ColorTheme = "./_content/Assets/js/layouts/color-theme.js";
+        public const string DialogPatch = "./_content/Assets/js/components/dialog-patch.js";
         public const string Home = "./_content/Assets/js/pages/home.js";
         public const string Landing = "./_content/Assets/js/pages/landing.js";
         public const string Lifecycle = "./_content/Assets/js/lifecycle.js";

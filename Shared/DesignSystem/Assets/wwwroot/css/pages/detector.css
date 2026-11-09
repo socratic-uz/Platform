@@ -1,14 +1,15 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / detector.css
-   Classless Page Landmark Architecture — AI Vision Detector
+   Socratic Design System â€” PAGES / detector.css
+   Classless Page Landmark Architecture â€” AI Vision Detector
    ========================================================================== */
 
+body:has(main[detector]) {
+    --catalog-sidebar-width: 420px;
+}
+
 main[detector] {
-    grid-template-columns: minmax(min(100%, 420px), 420px) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
-    grid-template-areas: "sidebar preview";
-    gap: 0;
-    height: 100dvh;
+    min-height: calc(100dvh - var(--md-sys-spacing-header));
     background: var(--md-sys-color-surface);
 }
 
@@ -17,7 +18,6 @@ main[detector] {
    ========================================================================== */
 main[detector] > article {
     grid-template-rows: auto minmax(0, 1fr);
-    grid-area: preview;
     min-height: 0;
     margin: var(--md-sys-spacing-6);
     padding: var(--md-sys-spacing-5);
@@ -183,38 +183,37 @@ main[detector] > article > header > section > span > span:last-child {
 /* ==========================================================================
    LANDMARK: SIDEBAR (Controls & Config)
    ========================================================================== */
-main[detector] > aside {
+aside[detector] {
     grid-template-rows: auto auto minmax(0, 1fr);
-    grid-area: sidebar;
     gap: var(--md-sys-spacing-4);
     height: 100%;
     padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4);
-    border-right: 1px solid var(--md-sys-color-outline-variant);
+    border-left: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
 }
 
-main[detector] > aside > header {
+aside[detector] > header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 14px;
     align-items: center;
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-main[detector] > aside > header > hgroup > h1 {
+aside[detector] > header > hgroup > h1 {
     color: var(--md-sys-color-on-surface);
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-main[detector] > aside > header > hgroup > p {
+aside[detector] > header > hgroup > p {
     margin: 4px 0 0 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
 }
 
-main[detector] > aside > header > md-icon {
+aside[detector] > header > md-icon {
     width: 48px;
     height: 48px;
     border-radius: var(--md-sys-shape-corner-medium);
@@ -223,7 +222,7 @@ main[detector] > aside > header > md-icon {
     font-size: 24px;
 }
 
-main[detector] > aside > md-tabs {
+aside[detector] > md-tabs {
     margin-bottom: var(--md-sys-spacing-2);
     overflow-x: auto;
     scrollbar-width: none;
@@ -232,11 +231,11 @@ main[detector] > aside > md-tabs {
     gap: var(--md-sys-spacing-2);
 }
 
-main[detector] > aside > md-tabs > md-primary-tab {
+aside[detector] > md-tabs > md-primary-tab {
     min-height: 48px;
 }
 
-main[detector] > aside > form {
+aside[detector] > form {
     gap: var(--md-sys-spacing-4);
     align-content: start;
     margin: 8px 0;
@@ -244,7 +243,7 @@ main[detector] > aside > form {
     overflow-y: auto;
 }
 
-main[detector] > aside > form > section {
+aside[detector] > form > section {
     padding: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
@@ -252,12 +251,12 @@ main[detector] > aside > form > section {
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
 }
 
-main[detector] > aside > form > section > header {
+aside[detector] > form > section > header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
 
-main[detector] > aside > form > section > header > span {
+aside[detector] > form > section > header > span {
     display: inline-grid;
     grid-auto-flow: column;
     gap: 6px;
@@ -266,14 +265,14 @@ main[detector] > aside > form > section > header > span {
     color: var(--md-sys-color-on-surface);
 }
 
-main[detector] > aside > form > section > h2 {
+aside[detector] > form > section > h2 {
     margin: 0 0 12px 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1rem;
     font-weight: 600;
 }
 
-main[detector] > aside > form > section > data {
+aside[detector] > form > section > data {
     display: inline-grid;
     grid-auto-flow: column;
     gap: 6px;
@@ -289,7 +288,7 @@ main[detector] > aside > form > section > data {
     margin-bottom: var(--md-sys-spacing-3);
 }
 
-main[detector] > aside > form > section > data > span:first-child {
+aside[detector] > form > section > data > span:first-child {
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -297,12 +296,12 @@ main[detector] > aside > form > section > data > span:first-child {
     background-color: currentColor;
 }
 
-main[detector] > aside > form > section > ul {
+aside[detector] > form > section > ul {
     gap: 0.75rem;
     margin: 1rem 0 0 0;
 }
 
-main[detector] > aside > form > section > ul > li {
+aside[detector] > form > section > ul > li {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 10px 14px;
@@ -311,17 +310,17 @@ main[detector] > aside > form > section > ul > li {
     background: var(--md-sys-color-surface-container-high);
 }
 
-main[detector] > aside > form > section > ul > li > hgroup > span:first-child {
+aside[detector] > form > section > ul > li > hgroup > span:first-child {
     color: var(--md-sys-color-on-surface);
     font-weight: 700;
 }
 
-main[detector] > aside > form > section > ul > li > hgroup > span:last-child {
+aside[detector] > form > section > ul > li > hgroup > span:last-child {
     color: var(--md-sys-color-primary);
     font-size: 0.75rem;
 }
 
-main[detector] > aside > form > section > fieldset {
+aside[detector] > form > section > fieldset {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
     margin: 0 0 var(--md-sys-spacing-3) 0;
@@ -329,21 +328,21 @@ main[detector] > aside > form > section > fieldset {
     border: none;
 }
 
-main[detector] > aside > form > section > fieldset > label {
+aside[detector] > form > section > fieldset > label {
     grid-column: 1 / -1;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
     font-weight: 500;
 }
 
-main[detector] > aside > form > section > md-outlined-select,
-main[detector] > aside > form > section > md-filled-select,
-main[detector] > aside > form > section > md-outlined-text-field,
-main[detector] > aside > form > section > md-filled-text-field {
+aside[detector] > form > section > md-outlined-select,
+aside[detector] > form > section > md-filled-select,
+aside[detector] > form > section > md-outlined-text-field,
+aside[detector] > form > section > md-filled-text-field {
     margin-bottom: var(--md-sys-spacing-3);
 }
 
-main[detector] > aside > form > section > aside {
+aside[detector] > form > section > aside {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.5rem;
     align-items: center;
@@ -355,33 +354,33 @@ main[detector] > aside > form > section > aside {
     font-size: 0.85rem;
 }
 
-main[detector] > aside > form > section > aside > md-icon {
+aside[detector] > form > section > aside > md-icon {
     color: var(--md-sys-color-primary);
     font-size: 1.2rem;
 }
 
-main[detector] > aside > form > section > footer {
+aside[detector] > form > section > footer {
     gap: var(--md-sys-spacing-2);
     margin-top: 1.5rem;
 }
 
-main[detector] > aside > form > section > menu {
+aside[detector] > form > section > menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
 }
 
-main[detector] > aside > form > section > div {
+aside[detector] > form > section > div {
     gap: 6px;
     margin-bottom: var(--md-sys-spacing-3);
 }
 
-main[detector] > aside > form > section > div > span:first-child {
+aside[detector] > form > section > div > span:first-child {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.8rem;
     font-weight: 500;
 }
 
-main[detector] > aside > form > aside {
+aside[detector] > form > aside {
     margin-top: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-4);
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -390,26 +389,26 @@ main[detector] > aside > form > aside {
     box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
 }
 
-main[detector] > aside > form > aside > header {
+aside[detector] > form > aside > header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     margin-bottom: var(--md-sys-spacing-2);
 }
 
-main[detector] > aside > form > aside > header > h3 {
+aside[detector] > form > aside > header > h3 {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
 }
 
-main[detector] > aside > form > aside > h2,
-main[detector] > aside > form > aside > h3 {
+aside[detector] > form > aside > h2,
+aside[detector] > form > aside > h3 {
     margin: 0 0 12px 0;
     color: var(--md-sys-color-on-surface);
     font-size: 1rem;
     font-weight: 600;
 }
 
-main[detector] > aside > form > aside > p {
+aside[detector] > form > aside > p {
     margin: 0.5rem 0 0 0;
     padding: 0.75rem;
     border: 1px solid var(--md-sys-color-error);
@@ -420,7 +419,7 @@ main[detector] > aside > form > aside > p {
     font-weight: 600;
 }
 
-main[detector] > aside > form > aside > pre {
+aside[detector] > form > aside > pre {
     height: 120px;
     padding: 10px;
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -432,14 +431,14 @@ main[detector] > aside > form > aside > pre {
     overflow-y: auto;
 }
 
-main[detector] > aside > form > aside > pre > samp {
+aside[detector] > form > aside > pre > samp {
     display: block;
     margin-bottom: var(--md-sys-spacing-1);
     white-space: pre-wrap;
     word-break: break-all;
 }
 
-main[detector] > aside > form > aside > output {
+aside[detector] > form > aside > output {
     display: block;
     padding: 0.75rem;
     border: 1px solid var(--md-sys-color-outline-variant);
@@ -471,13 +470,8 @@ data[value="active"] {
 
 @media (max-width: 839.98px) {
 main[detector] {
-        grid-template: auto minmax(0, 1fr) / minmax(0, 1fr);
-        grid-template-areas:
-            "preview"
-            "sidebar";
         height: auto;
-        min-height: 100dvh;
-        padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0));
+        min-height: auto;
         padding-left: env(safe-area-inset-left, 0);
         padding-right: env(safe-area-inset-right, 0);
     }
@@ -490,29 +484,17 @@ main[detector] > article {
         border-radius: var(--md-sys-shape-expressive-corner-large);
     }
 
-main[detector] > aside {
+aside[detector] {
+        display: grid;
         height: auto;
         min-height: 0;
-        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-3);
+        padding: var(--md-sys-spacing-4) var(--md-sys-spacing-3) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0) + 1rem);
         border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-right: none;
+        border-left: none;
     }
 }
 
 @media (max-width: 599.98px) {
-main[detector] {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto minmax(360px, 1fr);
-        grid-template-areas:
-            "preview"
-            "sidebar";
-        height: auto;
-        min-height: 100dvh;
-        padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0) + 1rem);
-        padding-left: env(safe-area-inset-left, 0);
-        padding-right: env(safe-area-inset-right, 0);
-    }
-
 main[detector] > article {
         min-height: 280px;
         margin: var(--md-sys-spacing-2);
@@ -524,11 +506,11 @@ main[detector] > article > header {
         gap: var(--md-sys-spacing-2);
     }
 
-main[detector] > aside {
-        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-2);
+aside[detector] {
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-2) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0) + 1rem);
     }
 
-main[detector] > aside > form {
+aside[detector] > form {
         max-height: clamp(240px, 35vh, 400px);
     }
 }

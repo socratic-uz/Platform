@@ -1,21 +1,20 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / aside.css
-   Global Aside Landmark Sub-Macro-Grid (body > aside)
-   Hosting Persistent Navigation (nav) & Modal Surfaces (md-dialog)
-   Pure Attribute-Driven Classless (Semantic HTML5 Direct Hierarchy)
+   ПОДМАКРОСЕТКА (ТЕГ BODY > ASIDE)
+   - 1. Первый aside (перед main): навигационный рейл (grid-area: rail) + дравер (md-dialog)
+   - 2. Второй aside (после main): контекстный сайдбар (grid-area: aside)
    ========================================================================== */
 
+/* --- Всплывающий дравер (body > aside > md-dialog) --- */
 body > aside > md-dialog {
+    display: none;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     border: none;
-    padding: var(--md-sys-spacing-4);
-    gap: var(--md-sys-spacing-3);
 }
 
 body > aside > md-dialog > header {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
-    padding-bottom: var(--md-sys-spacing-2);
 }
 
 body > aside > md-dialog details a {
@@ -38,13 +37,22 @@ body > aside > md-dialog details a:hover {
     color: var(--md-sys-color-on-surface);
 }
 
-/* Второй aside (после main): контекстная панель / инспектор / корзина */
+body > aside > md-dialog[open] {
+    display: grid;
+}
+
+/* Второй aside (идёт после main) — контекстная панель / инспектор / корзина */
 body > main ~ aside {
     grid-area: aside;
 }
 
-/* --- Universal Rail Links & Items --- */
-body:has(> aside > nav) > aside > nav > a {
+/* Первый aside (перед main) — навигационный рейл */
+body:has(> aside > nav) > aside:first-of-type {
+    grid-area: rail;
+}
+
+/* --- Universal Rail Links & Toggle Button --- */
+body:has(> aside > nav) > aside:first-of-type > nav > a {
     display: grid;
     place-content: center;
     place-items: center;
@@ -55,7 +63,7 @@ body:has(> aside > nav) > aside > nav > a {
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
-body:has(> aside > nav) > aside > nav > a > span {
+body:has(> aside > nav) > aside:first-of-type > nav > a > span {
     min-inline-size: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -64,58 +72,81 @@ body:has(> aside > nav) > aside > nav > a > span {
     line-height: 1.15;
 }
 
-body:has(> aside > nav) > aside > nav > a > md-icon {
+body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
     display: grid;
     place-items: center;
     font-size: var(--md-icon-size, 24px);
     border-radius: var(--md-sys-shape-corner-full);
-    transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard), color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+    transition:
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
-body:has(> aside > nav) > aside > nav > a:hover > md-icon {
+body:has(> aside > nav) > aside:first-of-type > nav > a:hover > md-icon {
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
 }
 
-body:has(> aside > nav) > aside > nav > a[aria-current="page"] > span,
-body:has(> aside > nav) > aside > nav > a.active > span {
+body:has(> aside > nav) > aside:first-of-type > nav > a[aria-current="page"] > span,
+body:has(> aside > nav) > aside:first-of-type > nav > a.active > span {
     color: var(--md-sys-color-on-surface);
     font-weight: 700;
 }
 
-body:has(> aside > nav) > aside > nav > a[aria-current="page"] > md-icon,
-body:has(> aside > nav) > aside > nav > a.active > md-icon {
+body:has(> aside > nav) > aside:first-of-type > nav > a[aria-current="page"] > md-icon,
+body:has(> aside > nav) > aside:first-of-type > nav > a.active > md-icon {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
-/* Первый aside (перед main): навигационный рейл */
-body:has(> aside > nav) > aside:first-of-type {
-    grid-area: rail;
-}
-
-/* --- Universal Drawer Dialog & Backdrop Visual Appearance --- */
-span[backdrop],
-body > span[backdrop] {
-    background: rgb(from var(--md-sys-color-scrim) r g b / 0.35);
-    backdrop-filter: blur(4px);
-    transition: opacity var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
-}
-
-/* --- Mobile Bottom Bar (< 840px) --- */
+/* ==========================================================================
+   Mobile (< 840px): Нижний рейл (60px) и Нижний дравер (Bottom Sheet)
+   ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
+/* На мобильных экранах второй aside скрыт */
 body > main ~ aside {
         display: none;
     }
 
-body:has(> aside > nav) > aside > nav {
+/* App: Mobile — подъём дравера снизу над 60px нижним рейлом */
+body:has(> aside > nav) > aside > md-dialog {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        top: auto;
+        width: 100%;
+        max-height: calc(85dvh - 60px);
+        z-index: 999;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
+        box-shadow: 0 -4px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+        overflow: hidden;
+    }
+
+/* App: Mobile — нижний фиксированный рейл (60px) */
+body:has(> aside > nav) > aside:first-of-type {
+        display: grid;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: 60px;
+        z-index: 1000;
+        padding: 0;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container);
+        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+    }
+
+body:has(> aside > nav) > aside:first-of-type > nav {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
-        grid-template-columns: none;
         grid-template-rows: 1fr;
-        grid-auto-rows: auto;
         height: 100%;
         width: 100%;
         padding: 4px;
@@ -125,7 +156,7 @@ body:has(> aside > nav) > aside > nav {
         overflow: hidden;
     }
 
-body:has(> aside > nav) > aside > nav > a {
+body:has(> aside > nav) > aside:first-of-type > nav > a {
         grid-template-rows: auto auto;
         gap: 2px;
         min-width: 0;
@@ -134,44 +165,45 @@ body:has(> aside > nav) > aside > nav > a {
         padding: 4px 2px;
     }
 
-body:has(> aside > nav) > aside > nav > a > span {
+body:has(> aside > nav) > aside:first-of-type > nav > a > span {
         font-size: var(--md-sys-typescale-label-small-size);
         font-weight: var(--md-sys-typescale-label-small-weight);
     }
 
-body:has(> aside > nav) > aside > nav > a > md-icon {
+body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
         width: 48px;
         height: 28px;
         font-size: 22px;
     }
 
-body:has(> aside > nav) > aside > md-dialog {
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-radius: var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0 0;
-        box-shadow: 0 -4px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+/* Landing Layout Mode: Mobile — передаёт дочерний md-dialog напрямую в сетку */
+body:not(:has(> aside > nav)) > aside {
+        display: contents;
     }
 
-body:has(> aside > nav) > aside:first-of-type {
-        display: grid;
+/* Landing: Mobile — выезд слева */
+body:not(:has(> aside > nav)) > aside > md-dialog {
         position: fixed;
+        top: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        top: auto;
-        height: 60px;
-        width: 100vw;
-        max-width: 100vw;
-        z-index: var(--md-sys-z-navigation-bar);
-        padding: 0;
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+        width: min(320px, 85vw);
+        height: 100dvh;
+        max-height: 100dvh;
+        z-index: 999;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
+        box-shadow: var(--md-sys-elevation-level3);
+        overflow: hidden;
     }
 }
 
-/* --- Desktop Rail (>= 840px) --- */
+/* ==========================================================================
+   Desktop (>= 840px): Левый рейл (76px), Боковой дравер (left: 76px) и 2-й aside
+   ========================================================================== */
 
 @media screen and (min-width: 840px) {
+/* Второй aside (контекстная панель справа от main) */
 body > main ~ aside {
         display: grid;
         align-content: start;
@@ -182,54 +214,31 @@ body > main ~ aside {
         overflow-y: auto;
     }
 
-body:has(> aside > nav) > aside > nav {
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-auto-rows: max-content;
-        grid-auto-columns: auto;
-        gap: var(--md-sys-spacing-2);
-        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
-        align-content: start;
-        justify-items: center;
-        width: 100%;
-    }
-
-body:has(> aside > nav) > aside > nav > a {
-        grid-template-rows: auto auto;
-        gap: 3px;
-        width: 64px;
-        min-height: 56px;
-        margin: 4px auto;
-        padding: var(--md-sys-spacing-1) 0;
-    }
-
-body:has(> aside > nav) > aside > nav > a > span {
-        max-width: 64px;
-        font-size: var(--md-sys-typescale-label-medium-size);
-        font-weight: var(--md-sys-typescale-label-medium-weight);
-    }
-
-body:has(> aside > nav) > aside > nav > a > md-icon {
-        width: 56px;
-        height: 32px;
-    }
-
+/* App: Desktop — выезд дравера справа от 76px рельса (left: 76px) */
 body:has(> aside > nav) > aside > md-dialog {
+        position: fixed;
+        top: 0;
+        left: 76px;
+        width: clamp(340px, 32vw, 420px);
+        height: 100dvh;
+        max-height: 100dvh;
+        z-index: 999;
         border-right: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
         box-shadow: 4px 0 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
+        overflow: hidden;
     }
 
+/* App: Desktop — левый фиксированный рейл (76px) */
 body:has(> aside > nav) > aside:first-of-type {
         display: grid;
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
-        width: calc(76px + env(safe-area-inset-left, 0px));
+        width: 76px;
         height: 100dvh;
-        z-index: var(--md-sys-z-navigation-rail);
+        z-index: 1000;
         padding: 0;
         border-right: 1px solid var(--md-sys-color-outline-variant);
         background: var(--md-sys-color-surface-container-low);
@@ -238,5 +247,42 @@ body:has(> aside > nav) > aside:first-of-type {
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: none;
+    }
+
+body:has(> aside > nav) > aside:first-of-type > nav {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+        gap: var(--md-sys-spacing-2);
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
+        align-content: start;
+        justify-items: center;
+        width: 100%;
+    }
+
+body:has(> aside > nav) > aside:first-of-type > nav > a {
+        grid-template-rows: auto auto;
+        gap: 3px;
+        width: 64px;
+        min-height: 56px;
+        margin: 4px auto;
+        padding: var(--md-sys-spacing-1) 0;
+    }
+
+body:has(> aside > nav) > aside:first-of-type > nav > a > span {
+        max-width: 64px;
+        font-size: var(--md-sys-typescale-label-medium-size);
+        font-weight: var(--md-sys-typescale-label-medium-weight);
+    }
+
+body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
+        width: 56px;
+        height: 32px;
+    }
+
+/* Landing Layout Mode: Desktop — скрывается из сетки */
+body:not(:has(> aside > nav)) > aside {
+        display: none;
     }
 }

@@ -1,6 +1,7 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
 @using Microsoft.AspNetCore.Components.Routing
+@using Material.Web
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 
@@ -8,36 +9,52 @@
 {
 	<SectionContent SectionName=@Name>
 		<aside aria-label="Navigation Rail" @attributes=@AdditionalAttributes>
-			<nav aria-label="Main Navigation">
-				@if (ShouldRenderCustom)
-				{
-					@ChildContent
-				}
-				else
-				{
-					<NavLink href="/home" Match=@NavLinkMatch.All>
-						<Icon Name=@Home />
-						<span>@(L?[NavHome])</span>
-					</NavLink>
-					<NavLink href="/wishlist">
-						<Icon Name=@Favorite />
-						<span>@(L?[NavWishList])</span>
-					</NavLink>
-					<NavLink href="/chat">
-						<Icon Name=@Forum />
-						<span>@(L?[NavChat])</span>
-					</NavLink>
-					<NavLink href="/orders">
-						<Icon Name=@ShoppingBag />
-						<span>@(L?[NavOrders])</span>
-					</NavLink>
-					<NavLink href="/analytics">
-						<Icon Name=@Analytics />
-						<span>@(L?[NavAnalytics])</span>
-					</NavLink>
-				}
-			</nav>
+			@if (!NoNav)
+			{
+				<nav aria-label="Main Navigation">
+					@if (OnToggleDialog.HasDelegate)
+					{
+						<IconButton Icon=@MenuIcon
+						            OnClick=@OnToggleDialog
+						            AriaLabel="Toggle drawer" />
+					}
+					@if (NavContent != null)
+					{
+						@NavContent
+					}
+					else if (ShouldRenderCustomNav)
+					{
+						@ChildContent
+					}
+					else
+					{
+						<NavLink href="/home" Match=@NavLinkMatch.All>
+							<Icon Name=@Home />
+							<span>@(L?[NavHome])</span>
+						</NavLink>
+						<NavLink href="/wishlist">
+							<Icon Name=@Favorite />
+							<span>@(L?[NavWishList])</span>
+						</NavLink>
+						<NavLink href="/chat">
+							<Icon Name=@Forum />
+							<span>@(L?[NavChat])</span>
+						</NavLink>
+						<NavLink href="/orders">
+							<Icon Name=@ShoppingBag />
+							<span>@(L?[NavOrders])</span>
+						</NavLink>
+						<NavLink href="/analytics">
+							<Icon Name=@Analytics />
+							<span>@(L?[NavAnalytics])</span>
+						</NavLink>
+					}
+				</nav>
+			}
+			@if (DialogContent != null)
+			{
+				@DialogContent
+			}
 		</aside>
 	</SectionContent>
 }
-
