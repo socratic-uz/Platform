@@ -1,6 +1,7 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / app-layout.css
-   Universal Polymorphic Classless Macro-Grid Architecture (super-layout model)
+   Universal Polymorphic Classless Macro-Grid Architecture
+   100% Geometry, tracks, positioning & z-index (super-layout model)
    - Mode 1: With Rail (App Layout)       => body:has(> aside > nav)
    - Mode 2: Without Rail (Landing Layout) => body:not(:has(> aside > nav))
    - Mode 3: Fullscreen Chat Viewport      => body:has(main[chat])
@@ -15,8 +16,7 @@ body {
 }
 
 /* ==========================================================================
-   5. FULLSCREEN CHAT VIEWPORT MODE
-   Activated by: body:has(main[chat])
+   3. FULLSCREEN CHAT VIEWPORT MODE (body:has(main[chat]))
    ========================================================================== */
 body:has(main[chat]) {
     grid-template-rows: 1fr;
@@ -51,8 +51,7 @@ body:has(main[chat]) > main {
 }
 
 /* ==========================================================================
-   6. FULLSCREEN STUDIO MAP VIEWPORT MODE
-   Activated by: body:has(main[map])
+   4. FULLSCREEN STUDIO MAP VIEWPORT MODE (body:has(main[map]))
    ========================================================================== */
 body:has(main[map]) {
     height: 100dvh;
@@ -67,10 +66,7 @@ body:has(main[map]) > main[map] {
     overflow: hidden;
 }
 
-/* ==========================================================================
-   2. APP LAYOUT MODE (WITH RAIL) — MOBILE (< 840px)
-   Bottom navigation rail shell
-   ========================================================================== */
+/* App: Mobile (< 840px) */
 
 @media screen and (max-width: 839.98px) {
 body:has(> aside > nav) {
@@ -91,19 +87,18 @@ body:has(> aside > nav) > header {
     }
 
 body:has(> aside > nav) > aside {
+        display: grid;
         grid-area: unset;
         position: fixed;
-        inset: auto 0 0;
-        top: auto;
         bottom: 0;
         left: 0;
         right: 0;
+        top: auto;
+        height: 60px;
         width: 100vw;
         max-width: 100vw;
-        height: 60px;
-        padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
-        padding-bottom: max(var(--md-sys-spacing-1), env(safe-area-inset-bottom, 0px));
         z-index: var(--md-sys-z-navigation-bar);
+        padding: 0;
         overflow: hidden;
     }
 
@@ -132,13 +127,11 @@ body:has(> aside > nav) > main {
     }
 
 body:has(> aside > nav):has(footer[cart]) {
-        padding-bottom: calc(var(--md-sys-spacing-bottom-nav) + 88px + env(safe-area-inset-bottom, 0px));
+        padding-bottom: calc(76px + 88px + env(safe-area-inset-bottom, 0px));
     }
 }
 
-/* ==========================================================================
-   4. LANDING / SINGLE-COLUMN MODE (WITHOUT RAIL) — MOBILE (< 840px)
-   ========================================================================== */
+/* Landing: Mobile (< 840px) */
 
 @media screen and (max-width: 839.98px) {
 body:not(:has(> aside > nav)),
@@ -190,10 +183,12 @@ body:not(:has(> aside > nav)) > main,
 }
 
 /* ==========================================================================
-   1. APP LAYOUT MODE (WITH RAIL) — DESKTOP (>= 840px)
-   Activated by: body:has(> aside > nav)
-   Desktop: 2-column macro-grid with fixed 76px navigation rail aside
+   1. APP LAYOUT MODE (body:has(> aside > nav))
+   - Desktop (>= 840px): 2 columns with fixed 76px rail aside
+   - Mobile (< 840px): 1 column with bottom fixed rail aside
    ========================================================================== */
+
+/* App: Desktop (>= 840px) */
 
 @media screen and (min-width: 840px) {
 body:has(> aside > nav) {
@@ -215,6 +210,7 @@ body:has(> aside > nav) > header {
     }
 
 body:has(> aside > nav) > aside {
+        display: grid;
         grid-area: aside;
         position: fixed;
         top: 0;
@@ -222,7 +218,6 @@ body:has(> aside > nav) > aside {
         left: 0;
         width: calc(76px + env(safe-area-inset-left, 0px));
         height: 100dvh;
-        padding-left: env(safe-area-inset-left, 0px);
         z-index: var(--md-sys-z-navigation-rail);
         transform: translateZ(0);
         will-change: transform;
@@ -255,13 +250,15 @@ body:has(> aside > nav) > main {
         gap: var(--md-sys-gutter-section);
         align-content: start;
         padding: var(--md-sys-gutter-page);
-        }
+    }
 }
 
 /* ==========================================================================
-   3. LANDING / SINGLE-COLUMN MODE (WITHOUT RAIL) — DESKTOP (>= 840px)
-   Activated by: body:not(:has(> aside > nav)), body:has(> aside > nav):has(main[no-nav])
+   2. LANDING LAYOUT MODE (body:not(:has(> aside > nav)))
+   - Single column macro-grid for Landing & Auth
    ========================================================================== */
+
+/* Landing: Desktop (>= 840px) */
 
 @media screen and (min-width: 840px) {
 body:not(:has(> aside > nav)),
