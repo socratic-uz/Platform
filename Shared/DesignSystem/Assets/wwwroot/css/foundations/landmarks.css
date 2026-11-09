@@ -15,8 +15,6 @@ body > footer {
 }
 
 nav {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-4);
 }
 

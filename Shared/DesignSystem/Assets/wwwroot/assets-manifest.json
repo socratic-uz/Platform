@@ -88,8 +88,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/landmarks.css",
-      "size": 3106,
-      "hash": "sha256-b7c457b051d5"
+      "size": 3042,
+      "hash": "sha256-501157da508e"
     },
     {
       "url": "_content/Assets/css/foundations/lists.css",
@@ -118,8 +118,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/app-layout.css",
-      "size": 8555,
-      "hash": "sha256-a69dbd34653e"
+      "size": 8718,
+      "hash": "sha256-723bb890971e"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
