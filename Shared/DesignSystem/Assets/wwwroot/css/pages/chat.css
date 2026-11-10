@@ -1,60 +1,38 @@
 /* ==========================================================================
    Socratic Design System — PAGES / chat.css
-   Classless Page Landmark Architecture — AI Chat Page
+   Direct Landmarks for Chat Page: header[chat], aside > md-dialog[chat], main[chat]
    ========================================================================== */
 
 /* ==========================================================================
-   LANDMARK: MAIN (Chat Canvas Container)
+   LANDMARK: HEADER (chat)
    ========================================================================== */
-main[chat] {
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    gap: 0;
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    height: var(--tg-viewport-height, 100dvh);
-    max-height: 100dvh;
-    padding: 0;
-    background: transparent;
-    overflow: hidden;
-}
-
-/* ==========================================================================
-   LANDMARK: HEADER (Topbar Navigation & Actions)
-   ========================================================================== */
-main[chat] > header {
-    position: sticky;
-    top: 0;
-    z-index: var(--md-sys-z-appbar, 10);
+header[chat] {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     width: 100%;
-    max-width: min(840px, 100%);
-    margin: 0 auto;
     box-sizing: border-box;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    padding-top: max(var(--md-sys-spacing-3), env(safe-area-inset-top, 0px));
     background: rgb(from var(--md-sys-color-surface) r g b / 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
 }
 
-main[chat] > header > hgroup {
+header[chat] > nav {
     display: inline-grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-main[chat] > header > hgroup > span {
+header[chat] > nav > span {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
     letter-spacing: -0.01em;
 }
 
-main[chat] > header > hgroup > a {
+header[chat] > nav > a {
     display: grid;
     place-items: center;
     width: var(--md-sys-touch-target-min, 48px);
@@ -69,9 +47,39 @@ main[chat] > header > hgroup > a {
                 background-color var(--md-sys-motion-duration-short2) ease;
 }
 
-main[chat] > header > hgroup > a:hover {
+header[chat] > nav > a > span {
+    display: none;
+}
+
+header[chat] > nav > a:hover {
     background: var(--md-sys-color-surface-container-high);
     transform: scale(1.05);
+}
+
+header[chat] > menu {
+    display: grid;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header[chat] > menu > md-filled-button {
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+}
+
+/* ==========================================================================
+   LANDMARK: MAIN (Chat Canvas Container)
+   ========================================================================== */
+main[chat] {
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+    height: calc(100dvh - var(--md-sys-spacing-header));
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
 }
 
 /* ==========================================================================
@@ -330,7 +338,95 @@ main[chat] > chat-messages > md-circular-progress {
     margin-block: var(--md-sys-spacing-2);
 }
 
-/* Assistant Markdown Prose Rendering */
+/* ==========================================================================
+   SIDEBAR: aside > md-dialog[chat]
+   ========================================================================== */
+aside > md-dialog[chat] > header[slot="headline"] {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+    min-width: 0;
+}
+
+aside > md-dialog[chat] > header[slot="headline"] > hgroup {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    overflow: hidden;
+}
+
+aside > md-dialog[chat] > header[slot="headline"] > hgroup > h3 {
+    min-width: 0;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+aside > md-dialog[chat] > header[slot="headline"] > hgroup > p {
+    color: var(--md-sys-color-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+aside > md-dialog[chat] > header[slot="headline"] > md-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 24px;
+}
+
+aside > md-dialog[chat] > section[slot="content"] {
+    gap: var(--md-sys-spacing-4);
+    align-content: start;
+    padding-right: 0.25rem;
+    overflow-y: auto;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+}
+
+aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > h4 {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article > h5 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+aside > md-dialog[chat] > footer[slot="actions"] > md-filled-button {
+    width: 100%;
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+}
+
+/* ==========================================================================
+   ASSISTANT MARKDOWN PROSE RENDERING
+   ========================================================================== */
 assistant-message {
     display: block;
     line-height: 1.6;
@@ -454,9 +550,8 @@ assistant-message :not(pre) > code {
    ========================================================================== */
 
 @media screen and (max-width: 599.98px) {
-main[chat] > header {
+header[chat] {
         padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-        padding-top: max(var(--md-sys-spacing-2), env(safe-area-inset-top, 0px));
     }
 
 main[chat] > footer {

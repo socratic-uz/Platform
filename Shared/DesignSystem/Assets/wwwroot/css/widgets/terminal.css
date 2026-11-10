@@ -192,78 +192,6 @@ main[terminal] > section > section > md-filled-card > footer > button {
     min-height: 48px;
 }
 
-/* --- POS Right Invoice Sidebar Panel --- */
-main[terminal] > aside {
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    height: 100%;
-    padding: var(--md-sys-spacing-5);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-expressive-dock);
-    background-color: var(--md-sys-color-surface-container-lowest);
-    overflow: hidden;
-    box-shadow: var(--md-sys-elevation-expressive-2);
-}
-
-main[terminal] > aside > header {
-    gap: 0.5rem;
-    margin-bottom: var(--md-sys-spacing-3);
-    padding-bottom: var(--md-sys-spacing-3);
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
-}
-
-main[terminal] > aside > header > nav {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-}
-
-main[terminal] > aside > header > nav > span {
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-main[terminal] > aside > header > nav > menu {
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-}
-
-main[terminal] > aside > header > nav > menu > md-icon-button, main[terminal] > aside > header > nav > menu > md-filled-tonal-icon-button, main[terminal] > aside > header > nav > menu > button {
-    min-width: 48px;
-    min-height: 48px;
-}
-
-main[terminal] > aside > header > md-tabs {
-    overflow-x: auto;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-}
-
-main[terminal] > aside > footer {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-    gap: 0.75rem;
-    padding-top: var(--md-sys-spacing-4);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-}
-
-main[terminal] > aside > footer > md-filled-button, main[terminal] > aside > footer > button:last-child {
-    height: 64px;
-    min-height: 64px;
-    font-weight: 700;
-    box-shadow: var(--md-sys-elevation-expressive-1);
-    --md-filled-button-container-height: 64px;
-    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
-}
-
-main[terminal] > aside > footer > md-outlined-button, main[terminal] > aside > footer > button:first-child {
-    height: 52px;
-    font-weight: 700;
-    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button);
-}
-
 section[pinpad] {
     gap: 14px;
     justify-items: center;
@@ -331,6 +259,79 @@ section[uzqr] > section > h4 {
 section[uzqr] > section > p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.82rem;
+}
+
+/* --- POS Invoice Drawer Panel (body > aside > md-dialog[terminal]) --- */
+aside > md-dialog[terminal] > header[slot="headline"] {
+    display: grid;
+    gap: 0.5rem;
+    padding-bottom: var(--md-sys-spacing-3);
+    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
+}
+
+aside > md-dialog[terminal] > header[slot="headline"] > nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+aside > md-dialog[terminal] > header[slot="headline"] > nav > span {
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+aside > md-dialog[terminal] > header[slot="headline"] > nav > menu {
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+aside > md-dialog[terminal] > header[slot="headline"] > nav > menu > md-icon-button,
+aside > md-dialog[terminal] > header[slot="headline"] > nav > menu > md-filled-tonal-icon-button,
+aside > md-dialog[terminal] > header[slot="headline"] > nav > menu > button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+aside > md-dialog[terminal] > header[slot="headline"] > md-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+}
+
+aside > md-dialog[terminal] > section[slot="content"] {
+    display: grid;
+    align-content: start;
+    min-height: 0;
+}
+
+aside > md-dialog[terminal] > footer[slot="actions"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 0.75rem;
+    width: 100%;
+    padding-top: var(--md-sys-spacing-3);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+aside > md-dialog[terminal] > footer[slot="actions"] > md-filled-button,
+aside > md-dialog[terminal] > footer[slot="actions"] > button:last-child {
+    height: 64px;
+    min-height: 64px;
+    font-weight: 700;
+    box-shadow: var(--md-sys-elevation-expressive-1);
+    --md-filled-button-container-height: 64px;
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
+}
+
+aside > md-dialog[terminal] > footer[slot="actions"] > md-outlined-button,
+aside > md-dialog[terminal] > footer[slot="actions"] > button:first-child {
+    height: 52px;
+    font-weight: 700;
+    --md-outlined-button-container-shape: var(--md-sys-shape-expressive-button);
 }
 
 aside[data-status="error"] {
@@ -437,12 +438,6 @@ main[terminal] > section > section {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
         gap: var(--md-sys-spacing-2);
     }
-
-main[terminal] > aside {
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-    }
 }
 
 @media (max-width: 599.98px) {
@@ -463,7 +458,7 @@ main[terminal] > section > section {
         padding-bottom: var(--md-sys-spacing-6);
     }
 
-main[terminal] > aside > footer {
+aside > md-dialog[terminal] > footer[slot="actions"] {
         grid-template-columns: minmax(0, 1fr);
     }
 }

@@ -128,13 +128,13 @@
     },
     {
       "url": "_content/Assets/css/layouts/aside.css",
-      "size": 9885,
-      "hash": "sha256-5f5233161190"
+      "size": 16006,
+      "hash": "sha256-20131720d668"
     },
     {
       "url": "_content/Assets/css/layouts/body.css",
-      "size": 2668,
-      "hash": "sha256-c43528cc1c66"
+      "size": 1854,
+      "hash": "sha256-6216812837d7"
     },
     {
       "url": "_content/Assets/css/layouts/footer.css",
@@ -143,8 +143,8 @@
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
-      "size": 4909,
-      "hash": "sha256-753d76053eb7"
+      "size": 4525,
+      "hash": "sha256-be0730800432"
     },
     {
       "url": "_content/Assets/css/layouts/main.css",
@@ -168,18 +168,18 @@
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
-      "size": 15155,
-      "hash": "sha256-0cb5c5819cc6"
+      "size": 17844,
+      "hash": "sha256-29e05ded6567"
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
-      "size": 14702,
-      "hash": "sha256-c3afda74c81d"
+      "size": 14322,
+      "hash": "sha256-fd22e90b6c18"
     },
     {
       "url": "_content/Assets/css/pages/docs.css",
-      "size": 4394,
-      "hash": "sha256-baff9c751f5f"
+      "size": 3858,
+      "hash": "sha256-35d314fe210c"
     },
     {
       "url": "_content/Assets/css/pages/help.css",
@@ -203,23 +203,23 @@
     },
     {
       "url": "_content/Assets/css/pages/map.css",
-      "size": 7180,
-      "hash": "sha256-f38b03e5d292"
+      "size": 9324,
+      "hash": "sha256-1eb5084709a5"
     },
     {
       "url": "_content/Assets/css/pages/model-viewer.css",
-      "size": 398,
-      "hash": "sha256-7dd6efd0d678"
+      "size": 360,
+      "hash": "sha256-aa7b083c4f61"
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
-      "size": 13841,
-      "hash": "sha256-c341375b1224"
+      "size": 13234,
+      "hash": "sha256-2c84ba4c9ef8"
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
-      "size": 9395,
-      "hash": "sha256-879a8eb68e48"
+      "size": 10944,
+      "hash": "sha256-ee671183ced1"
     },
     {
       "url": "_content/Assets/css/pages/player.css",
@@ -233,23 +233,23 @@
     },
     {
       "url": "_content/Assets/css/pages/qr-designer.css",
-      "size": 4919,
-      "hash": "sha256-34049a1d9938"
+      "size": 4365,
+      "hash": "sha256-9798adcb5861"
     },
     {
       "url": "_content/Assets/css/pages/qr.css",
-      "size": 7241,
-      "hash": "sha256-b482d2a2a250"
+      "size": 7436,
+      "hash": "sha256-155deefad15a"
     },
     {
       "url": "_content/Assets/css/pages/seat-designer.css",
-      "size": 5058,
-      "hash": "sha256-82b2d73fe555"
+      "size": 4467,
+      "hash": "sha256-45fd7d402261"
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 1294,
-      "hash": "sha256-049c00fcfb6b"
+      "size": 1267,
+      "hash": "sha256-e327637d9956"
     },
     {
       "url": "_content/Assets/css/pages/wishlist.css",
@@ -328,8 +328,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/cart.css",
-      "size": 1571,
-      "hash": "sha256-d0bf3e5bf1aa"
+      "size": 3999,
+      "hash": "sha256-a98addc5ba79"
     },
     {
       "url": "_content/Assets/css/widgets/chat.css",
@@ -363,13 +363,13 @@
     },
     {
       "url": "_content/Assets/css/widgets/invoice.css",
-      "size": 4431,
-      "hash": "sha256-e45d9f1221f5"
+      "size": 4460,
+      "hash": "sha256-e8a1d722db52"
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 18494,
-      "hash": "sha256-390e7698b643"
+      "size": 18630,
+      "hash": "sha256-577a9e5eda74"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -413,8 +413,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/terminal.css",
-      "size": 12584,
-      "hash": "sha256-b5d090b764f2"
+      "size": 12553,
+      "hash": "sha256-a1471804287f"
     },
     {
       "url": "_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2",
@@ -493,8 +493,8 @@
     },
     {
       "url": "_content/Assets/js/components/dialog-patch.js",
-      "size": 5372,
-      "hash": "sha256-dc9b19892b66"
+      "size": 22730,
+      "hash": "sha256-d0ebe60d0975"
     },
     {
       "url": "_content/Assets/js/components/material-color-utilities.bundle.js",
@@ -503,8 +503,8 @@
     },
     {
       "url": "_content/Assets/js/components/material-web.bundle.js",
-      "size": 814981,
-      "hash": "sha256-8f5a2d5967a0"
+      "size": 838515,
+      "hash": "sha256-7b848c2ac462"
     },
     {
       "url": "_content/Assets/js/components/slider-patch.js",

@@ -143,36 +143,20 @@ body > header [drawer] {
 
 @media screen and (max-width: 839.98px) {
 body > header {
-        grid-template: auto auto / minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto;
         gap: 0.5rem;
-        padding: var(--md-sys-spacing-3);
+        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
     }
 
 body > header > md-outlined-text-field {
-        grid-column: 1 / -1;
+        grid-column: auto;
         width: 100%;
     }
 
 body > header:has(> md-outlined-text-field) {
-        grid-template: auto auto / minmax(0, 1fr) auto;
-        grid-template-areas:
-            "start end"
-            "center center";
+        grid-template-columns: auto minmax(0, 1fr);
         gap: 0.5rem 0.75rem;
-    }
-
-body > header:has(> md-outlined-text-field) > md-outlined-text-field {
-        grid-area: center;
-        grid-column: 1 / -1;
-    }
-
-body > header:has(> md-outlined-text-field) > :first-child {
-        grid-area: start;
-    }
-
-body > header:has(> md-outlined-text-field) > :last-child {
-        grid-area: end;
-        justify-self: end;
     }
 }
 

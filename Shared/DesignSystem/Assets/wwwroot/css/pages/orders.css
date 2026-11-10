@@ -90,27 +90,26 @@ main[orders] > header > hgroup > strong {
     font-size: 1.15rem;
 }
 
-/* Order Items: Dual-Column List Section with Summary Aside */
-main[orders] > section:has(aside) {
-    grid-template-columns: minmax(0, 1fr) 340px;
-    gap: var(--md-sys-spacing-6);
-    align-items: start;
+/* Orders List Grid */
+main[orders] > section:has(> a[card]) {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: var(--md-sys-spacing-4);
 }
 
-/* Order Items Left List */
-main[orders] > section:has(aside) > section {
+/* Order Items List */
+main[orders] > section[aria-label] {
     gap: var(--md-sys-spacing-3);
     align-content: start;
 }
 
-main[orders] > section:has(aside) > section > h2 {
+main[orders] > section[aria-label] > h2 {
     margin: 0 0 var(--md-sys-spacing-2);
     color: var(--md-sys-color-on-surface);
     font-size: 1.15rem;
     font-weight: 700;
 }
 
-main[orders] > section:has(aside) > section > article {
+main[orders] > section[aria-label] > article {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-4);
     align-items: center;
@@ -120,11 +119,11 @@ main[orders] > section:has(aside) > section > article {
     background: var(--md-sys-color-surface-container-low);
 }
 
-main[orders] > section:has(aside) > section > article > header {
+main[orders] > section[aria-label] > article > header {
     gap: var(--md-sys-spacing-1);
 }
 
-main[orders] > section:has(aside) > section > article > header > mark {
+main[orders] > section[aria-label] > article > header > mark {
     width: fit-content;
     padding: 0.15rem 0.5rem;
     border-radius: var(--md-sys-shape-corner-full);
@@ -134,7 +133,7 @@ main[orders] > section:has(aside) > section > article > header > mark {
     font-weight: 600;
 }
 
-main[orders] > section:has(aside) > section > article > header > h3 {
+main[orders] > section[aria-label] > article > header > h3 {
     color: var(--md-sys-color-on-surface);
     font-size: 1rem;
     font-weight: 600;
@@ -143,14 +142,14 @@ main[orders] > section:has(aside) > section > article > header > h3 {
     text-overflow: ellipsis;
 }
 
-main[orders] > section:has(aside) > section > article > footer {
+main[orders] > section[aria-label] > article > footer {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-main[orders] > section:has(aside) > section > article > footer > mark {
+main[orders] > section[aria-label] > article > footer > mark {
     padding: 0.2rem 0.5rem;
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
@@ -159,64 +158,10 @@ main[orders] > section:has(aside) > section > article > footer > mark {
     font-weight: 600;
 }
 
-main[orders] > section:has(aside) > section > article > footer > strong {
+main[orders] > section[aria-label] > article > footer > strong {
     color: var(--md-sys-color-primary);
     font-size: 1.05rem;
     font-weight: 700;
-}
-
-/* Order Items Right Aside: Summary Card */
-main[orders] > section:has(aside) > aside {
-    position: sticky;
-    top: var(--md-sys-spacing-6);
-    gap: var(--md-sys-spacing-4);
-    padding: var(--md-sys-spacing-6);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-level1);
-}
-
-main[orders] > section:has(aside) > aside > h3 {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
-    font-weight: 700;
-}
-
-main[orders] > section:has(aside) > aside > ul {
-    gap: var(--md-sys-spacing-3);
-}
-
-main[orders] > section:has(aside) > aside > ul > li {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.9375rem;
-}
-
-main[orders] > section:has(aside) > aside > ul > li > code {
-    padding: 0.15rem 0.4rem;
-    border-radius: var(--md-sys-shape-corner-small);
-    background: var(--md-sys-color-surface-container-high);
-    font-family: var(--md-ref-typeface-mono);
-    font-size: 0.8125rem;
-}
-
-main[orders] > section:has(aside) > aside > ul > li:last-child {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-main[orders] > section:has(aside) > aside > footer {
-    gap: var(--md-sys-spacing-2);
-}
-
-/* Orders List Grid */
-main[orders] > section:not(:has(aside)) {
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: var(--md-sys-spacing-4);
 }
 
 /* Empty State */
@@ -330,6 +275,54 @@ main[orders] > aside {
     font-weight: 600;
 }
 
+/* Order Items Drawer Summary: body > aside > md-dialog[order-items] */
+aside > md-dialog[order-items] > header[slot="headline"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+}
+
+aside > md-dialog[order-items] > header[slot="headline"] > span {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+aside > md-dialog[order-items] > section[slot="content"] > ul {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+}
+
+aside > md-dialog[order-items] > section[slot="content"] > ul > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.9375rem;
+}
+
+aside > md-dialog[order-items] > section[slot="content"] > ul > li > code {
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--md-sys-shape-corner-small);
+    background: var(--md-sys-color-surface-container-high);
+    font-family: var(--md-ref-typeface-mono);
+    font-size: 0.8125rem;
+}
+
+aside > md-dialog[order-items] > section[slot="content"] > ul > li:last-child {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+aside > md-dialog[order-items] > footer[slot="actions"] {
+    display: grid;
+    width: 100%;
+    gap: var(--md-sys-spacing-2);
+}
+
 /* --- Page Landmark: Footer --- */
 footer[orders] {
     align-items: center;
@@ -433,19 +426,6 @@ main[orders] > header {
     }
 }
 
-@media screen and (max-width: 839.98px) {
-main[orders] > section:has(aside) {
-        grid-template-columns: minmax(0, 1fr);
-    }
-}
-
-@media screen and (max-width: 839.98px) {
-main[orders] > section:has(aside) > aside {
-        position: static;
-        top: auto;
-    }
-}
-
 @media screen and (max-width: 599.98px) {
 main[orders] > header > hgroup {
         grid-auto-flow: row;
@@ -461,12 +441,12 @@ main[orders] > article > menu {
 }
 
 @media screen and (max-width: 599.98px) {
-main[orders] > section:has(aside) > section > article {
+main[orders] > section[aria-label] > article {
         grid-template-columns: auto minmax(0, 1fr);
         gap: var(--md-sys-spacing-3);
     }
 
-main[orders] > section:has(aside) > section > article > footer {
+main[orders] > section[aria-label] > article > footer {
         grid-column: 1 / -1;
         justify-content: space-between;
         padding-top: var(--md-sys-spacing-2);

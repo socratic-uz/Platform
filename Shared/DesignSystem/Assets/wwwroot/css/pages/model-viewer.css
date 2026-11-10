@@ -4,8 +4,7 @@
    ========================================================================== */
 
 main[model-viewer] {
-    grid-column: 1 / -1;
-    height: calc(100dvh - 64px);
+    height: 100dvh;
     padding: 0;
     overflow: clip;
 }

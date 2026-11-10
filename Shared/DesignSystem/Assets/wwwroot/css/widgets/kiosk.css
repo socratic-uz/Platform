@@ -167,6 +167,12 @@ main[kiosk] > section > md-filled-card > figure > md-icon {
     color: var(--md-sys-color-on-surface-variant);
 }
 
+main[kiosk] > section > md-filled-card > section > h3 > a {
+    display: inline-grid;
+    align-items: center;
+    min-height: 44px;
+}
+
 main[kiosk] > section > md-filled-card > section > p {
     overflow: hidden;
     text-overflow: ellipsis;

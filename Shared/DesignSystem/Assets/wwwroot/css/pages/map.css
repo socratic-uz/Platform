@@ -19,14 +19,14 @@ main[map] {
 /* ==========================================================================
    1. Map Viewport & Canvas Surface
    ========================================================================== */
-main[map] > section {
+main[map]>section {
     position: absolute;
     inset: 0;
     height: 100%;
     overflow: hidden;
 }
 
-main[map] > section > figure {
+main[map]>section>figure {
     position: absolute;
     inset: 0;
     height: 100%;
@@ -34,7 +34,7 @@ main[map] > section > figure {
 }
 
 /* --- Floating Map Controls (Right Island: Zoom, Location, 3D, Floor) --- */
-main[map] > section > aside {
+main[map]>section>aside {
     position: absolute;
     right: 16px;
     bottom: max(24px, env(safe-area-inset-bottom, 24px));
@@ -46,7 +46,7 @@ main[map] > section > aside {
     background: transparent;
 }
 
-main[map] > section > aside > nav:first-of-type {
+main[map]>section>aside>nav:first-of-type {
     grid-auto-flow: row;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
@@ -55,7 +55,7 @@ main[map] > section > aside > nav:first-of-type {
     gap: 0;
 }
 
-main[map] > section > aside > nav:last-of-type {
+main[map]>section>aside>nav:last-of-type {
     grid-auto-flow: row;
     gap: var(--md-sys-spacing-2);
     align-items: center;
@@ -68,19 +68,119 @@ main[map] > section > aside > nav:last-of-type {
     font-weight: 600;
 }
 
+/* ==========================================================================
+   3. Route Navigator HUD Overlay (main[map] > article[navigator])
+   ========================================================================== */
+main[map] > article[navigator] {
+    position: absolute;
+    inset: 16px;
+    z-index: var(--md-sys-z-sticky);
+    grid-template-rows: auto auto;
+    align-content: space-between;
+    justify-items: start;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+main[map] > article[navigator] > header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    width: clamp(340px, 32vw, 420px);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container-high);
+    box-shadow: var(--md-sys-elevation-level3);
+    pointer-events: auto;
+}
+
+main[map] > article[navigator] > header > hgroup {
+    gap: 2px;
+    min-width: 0;
+}
+
+main[map] > article[navigator] > header > hgroup > span:first-child {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--md-sys-color-primary);
+}
+
+main[map] > article[navigator] > header > hgroup > span:last-child {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main[map] > article[navigator] > header > span:first-child {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+main[map] > article[navigator] > header > menu {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-1);
+    padding: 0;
+}
+
+main[map] > article[navigator] > footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+    width: clamp(340px, 32vw, 420px);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level3);
+    text-align: center;
+    pointer-events: auto;
+}
+
+main[map] > article[navigator] > footer > p {
+    display: grid;
+    gap: 2px;
+}
+
+main[map] > article[navigator] > footer > p > span {
+    font-size: 0.75rem;
+    color: var(--md-sys-color-outline);
+    text-transform: uppercase;
+}
+
+main[map] > article[navigator] > footer > p > strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
 /* --- Route Mode Panel --- */
 section[route-mode] {
     gap: var(--md-sys-spacing-4);
 }
 
-section[route-mode] > header {
+section[route-mode]>header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-section[route-mode] > nav {
+section[route-mode]>nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
@@ -88,27 +188,27 @@ section[route-mode] > nav {
     scrollbar-width: none;
 }
 
-section[route-mode] > fieldset {
+section[route-mode]>fieldset {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-2);
     padding: 0;
     border: none;
 }
 
-section[route-mode] > fieldset > ol {
+section[route-mode]>fieldset>ol {
     gap: var(--md-sys-spacing-2);
     list-style: none;
     padding: 0;
 }
 
-section[route-mode] > fieldset > ol > li {
+section[route-mode]>fieldset>ol>li {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
-section[route-mode] > menu {
+section[route-mode]>menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-2);
     padding: 0;
@@ -122,7 +222,7 @@ article[place-details] {
     border: none;
 }
 
-article[place-details] > header {
+article[place-details]>header {
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
@@ -130,43 +230,44 @@ article[place-details] > header {
     font-weight: 600;
 }
 
-article[place-details] > section {
+article[place-details]>section {
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-article[place-details] > menu {
+article[place-details]>menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--md-sys-spacing-2);
     padding: 0;
 }
 
 /* ==========================================================================
-   2. Main Controls Drawer Dialog (body > aside > md-dialog[map-controls])
+   2. Main Controls Floating Island (body > aside > md-dialog[map-controls])
    ========================================================================== */
-aside > md-dialog[map-controls] {
+aside>md-dialog[map-controls] {
     --md-dialog-container-color: var(--md-sys-color-surface-container);
 }
 
-aside > md-dialog[map-controls] > section[slot="content"] {
+aside>md-dialog[map-controls]>section[slot="content"] {
     display: grid;
     gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3);
     align-content: start;
 }
 
-aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] {
+aside>md-dialog[map-controls]>section[slot="content"]>search[search-mode] {
     gap: var(--md-sys-spacing-3);
 }
 
-aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] > header {
+aside>md-dialog[map-controls]>section[slot="content"]>search[search-mode]>header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: var(--md-sys-spacing-2);
     align-items: center;
 }
 
-aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] > nav {
+aside>md-dialog[map-controls]>section[slot="content"]>search[search-mode]>nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
@@ -175,64 +276,12 @@ aside > md-dialog[map-controls] > section[slot="content"] > search[search-mode] 
     scrollbar-width: none;
 }
 
-/* ==========================================================================
-   3. Route Navigator Drawer Dialog (body > aside > md-dialog[navigator])
-   ========================================================================== */
-aside > md-dialog[navigator] > header {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
+aside>md-dialog[map-controls][expanded]>section[slot="content"]>search[search-mode]>header {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
 }
 
-aside > md-dialog[navigator] > header > hgroup {
-    gap: 2px;
-}
-
-aside > md-dialog[navigator] > header > hgroup > span:first-child {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--md-sys-color-primary);
-}
-
-aside > md-dialog[navigator] > header > hgroup > span:last-child {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-aside > md-dialog[navigator] > header > menu {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    padding: 0;
-}
-
-aside > md-dialog[navigator] > section[slot="content"] > footer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-    padding: var(--md-sys-spacing-4);
-    border-radius: var(--md-sys-shape-expressive-corner-large);
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-    text-align: center;
-}
-
-aside > md-dialog[navigator] > section[slot="content"] > footer > p {
-    display: grid;
-    gap: 2px;
-}
-
-aside > md-dialog[navigator] > section[slot="content"] > footer > p > span:first-child {
-    font-size: 0.75rem;
-    color: var(--md-sys-color-outline);
-    text-transform: uppercase;
-}
-
-aside > md-dialog[navigator] > section[slot="content"] > footer > p > span:last-child {
-    font-size: 1.1rem;
-    font-weight: 700;
+aside>md-dialog[map-controls]:not([expanded])>section[slot="content"] {
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
 }
 
 /* ==========================================================================
@@ -240,13 +289,41 @@ aside > md-dialog[navigator] > section[slot="content"] > footer > p > span:last-
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
+body:has(> aside > md-dialog[data-sheet-snap="full"]) main[map] > section > aside {
+        opacity: 0;
+        pointer-events: none;
+    }
+
 main[map] {
-        height: calc(100dvh - 60px);
+        height: 100%;
+        min-height: 360px;
     }
 
 main[map] > section > aside {
         top: 16px;
         bottom: auto;
-        right: 16px;
+        right: 12px;
+        transition: opacity 200ms ease;
+    }
+
+main[map] > article[navigator] {
+        inset: 12px;
+        justify-items: stretch;
+    }
+
+main[map] > article[navigator] > header,
+    main[map] > article[navigator] > footer {
+        width: 100%;
+    }
+
+main[map]:has(> article[navigator]) > section > aside {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (min-width: 840px) {
+aside > md-dialog[map-controls]:not([expanded]) > section[slot="content"] > search[search-mode] > :not(header) {
+        display: none;
     }
 }

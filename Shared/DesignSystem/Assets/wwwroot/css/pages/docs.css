@@ -22,7 +22,7 @@ header[docs] > nav > span:last-child {
 
 /* Main Landmark */
 main[docs] {
-    grid-template-columns: minmax(min(100%, 280px), 280px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-6);
     align-items: start;
     min-height: calc(100dvh - var(--md-sys-spacing-header));
@@ -79,42 +79,29 @@ main[docs] > section > article > md-icon {
     font-size: 48px;
 }
 
-/* Sidebar Navigation Aside */
-main[docs] > aside {
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 1rem;
-    position: sticky;
-    top: var(--md-sys-spacing-6);
-    height: calc(100dvh - var(--md-sys-spacing-header) - 3rem);
-    padding: 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-surface-container-low);
-    overflow-y: auto;
-}
-
-main[docs] > aside > header {
+/* Sidebar Navigation Drawer (body > aside > md-dialog[docs]) */
+aside > md-dialog[docs] > header[slot="headline"] {
+    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-main[docs] > aside > header > span {
+aside > md-dialog[docs] > header[slot="headline"] > span {
     font-size: 1rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
 }
 
-main[docs] > aside > nav {
+aside > md-dialog[docs] > nav[slot="content"] {
+    display: grid;
     grid-auto-flow: row;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
     align-content: start;
 }
 
-main[docs] > aside > nav > header {
+aside > md-dialog[docs] > nav[slot="content"] > header {
     padding: 0.5rem 0.75rem 0.25rem;
     color: var(--md-sys-color-primary);
     font-size: 0.8125rem;
@@ -132,9 +119,7 @@ main[docs] {
         padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
         padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
     }
-}
 
-@media screen and (max-width: 839.98px) {
 main[docs] > section > header {
         grid-template-columns: auto minmax(0, 1fr);
         gap: 0.75rem;

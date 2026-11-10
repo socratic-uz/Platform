@@ -92,10 +92,9 @@
 	</menu>
 </Header>
 
-@if (IsMobileMenuOpen)
-{
-	<aside>
-		<MaterialDialog Open=@IsMobileMenuOpen OnClose=@CloseMobileMenuAsync aria-label=@L[MainNavigation]>
+<Aside NoNav=@true>
+	<DialogContent>
+		<MaterialDialog Open=@IsMobileMenuOpen NoFocusTrap=@true OnClose=@CloseMobileMenuAsync aria-label=@L[MainNavigation]>
 			<header slot="headline">
 				<a href="/" @onclick=@CloseMobileMenuAsync title="Socratic">
 					<Icon Name=@AutoAwesome />
@@ -234,6 +233,6 @@
 				<LanguageSelector Variant="inline" />
 			</footer>
 		</MaterialDialog>
-	</aside>
-}
+	</DialogContent>
+</Aside>
 

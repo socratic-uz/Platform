@@ -2,10 +2,11 @@
    Socratic Design System — LAYOUTS / body.css
    МАКРОСЕТКА (ТЕГ BODY)
    - Контейнер макросетки (display: grid)
-   - Определение треков колонок, строк и именованных областей (grid-areas)
-   - Поддержка динамического правого сайдбара (2-й aside после main):
-     - При наличии 2-го aside: 3 колонки ("rail main aside")
-     - При отсутствии 2-го aside: 2 колонки ("rail main")
+   - Трек подмакросетки (rail) имеет размер auto:
+     * Desktop (>= 840px): ширина rail равна сумме ширин потоковых элементов внутри body > aside
+       (0px если пусто или fixed; 76px если только nav; 76px + ширина md-dialog если дравер в потоке)
+     * Mobile (< 840px): высота rail равна сумме высот потоковых элементов внутри body > aside
+       (0px если пусто или fixed; 60px если только nav; высота md-dialog + 60px если дравер в потоке)
    ========================================================================== */
 
 body {
@@ -14,28 +15,12 @@ body {
     overflow-x: clip;
 }
 
-/* --------------------------------------------------------------------------
-   LANDING LAYOUT MODE (без рельса: body:not(:has(> aside > nav)))
-   -------------------------------------------------------------------------- */
-body:not(:has(> aside > nav)) {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
-
-/* --------------------------------------------------------------------------
-   APP LAYOUT MODE (наличие рельса: body:has(> aside > nav))
-   -------------------------------------------------------------------------- */
-
-/* App Mobile (< 840px) — одноколоночный стек: шапка, контент, подвал, рейл */
+/* Mobile (< 840px) — одноколоночный стек: шапка, контент, подвал, подмакросетка (auto) */
 
 @media screen and (max-width: 839.98px) {
-body:has(> aside > nav) {
+body {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto minmax(0, 1fr) auto 60px;
+        grid-template-rows: auto minmax(0, 1fr) auto auto;
         grid-template-areas:
             "header"
             "main"
@@ -44,22 +29,11 @@ body:has(> aside > nav) {
     }
 }
 
-/* App Desktop (>= 840px) */
+/* Desktop (>= 840px) — 2 колонки: подмакросетка (auto) + рабочая область (minmax(0, 1fr)) */
 
 @media screen and (min-width: 840px) {
-/* 3 КОЛОНКИ (когда есть 2-й aside после main) */
-body:has(> aside > nav):has(> main ~ aside) {
-        grid-template-columns: 76px minmax(0, 1fr) var(--catalog-sidebar-width, 280px);
-        grid-template-rows: auto minmax(0, 1fr) auto;
-        grid-template-areas:
-            "rail  header  header"
-            "rail  main    aside"
-            "rail  footer  footer";
-    }
-
-/* 2 КОЛОНКИ (когда 2-го aside нет) */
-body:has(> aside > nav):not(:has(> main ~ aside)) {
-        grid-template-columns: 76px minmax(0, 1fr);
+body {
+        grid-template-columns: auto minmax(0, 1fr);
         grid-template-rows: auto minmax(0, 1fr) auto;
         grid-template-areas:
             "rail  header"

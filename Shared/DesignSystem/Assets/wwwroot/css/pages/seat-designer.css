@@ -1,11 +1,7 @@
 /* ==========================================================================
    Socratic Design System — PAGES / seat-designer.css
-   Direct Body Landmark for Seat Designer: <main seat-designer> & <aside toolbar>
+   Direct Body Landmark for Seat Designer: <main seat-designer> & aside > md-dialog[toolbar]
    ========================================================================== */
-
-body:has(main[seat-designer]) {
-    --catalog-sidebar-width: 340px;
-}
 
 main[seat-designer] {
     grid-template-rows: auto auto minmax(0, 1fr);
@@ -16,7 +12,7 @@ main[seat-designer] {
     color: var(--md-sys-color-on-surface);
 }
 
-main[seat-designer] > figure {
+main[seat-designer]>figure {
     position: relative;
     min-height: 520px;
     height: 100%;
@@ -26,7 +22,7 @@ main[seat-designer] > figure {
     overflow: hidden;
 }
 
-main[seat-designer] > header {
+main[seat-designer]>header {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.25rem;
     align-items: center;
@@ -37,37 +33,39 @@ main[seat-designer] > header {
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-main[seat-designer] > header > hgroup {
+main[seat-designer]>header>hgroup {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.25rem 1rem;
     align-items: center;
 }
 
-main[seat-designer] > header > hgroup > h1 {
+main[seat-designer]>header>hgroup>h1 {
     color: var(--md-sys-color-on-surface);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-main[seat-designer] > header > hgroup > p {
+main[seat-designer]>header>hgroup>p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.9rem;
 }
 
-main[seat-designer] > header > hgroup > md-icon {
+main[seat-designer]>header>hgroup>md-icon {
     grid-row: 1 / 3;
     color: var(--md-sys-color-primary);
     font-size: 2.5rem;
 }
 
-main[seat-designer] > header > nav {
+main[seat-designer]>header>nav {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 0.75rem;
     align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
-main[seat-designer] > header > nav > span {
+main[seat-designer]>header>nav>span {
     display: inline-grid;
     place-items: center;
     padding: 0.35rem 0.85rem;
@@ -78,7 +76,7 @@ main[seat-designer] > header > nav > span {
     font-weight: 600;
 }
 
-main[seat-designer] > aside {
+main[seat-designer]>aside {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
     align-items: center;
@@ -89,50 +87,31 @@ main[seat-designer] > aside {
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-aside[toolbar] {
+aside>md-dialog[toolbar]>section[slot="content"] {
+    display: grid;
     align-content: start;
     gap: 1rem;
-    padding: 1.25rem;
-    border-left: 1px solid var(--md-sys-color-outline-variant);
-    background-color: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level1);
-    overflow-y: auto;
 }
 
-aside[toolbar] > header {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-aside[toolbar] > header > md-icon {
-    color: var(--md-sys-color-primary);
-    font-size: 24px;
-}
-
-aside[toolbar] > fieldset {
+aside>md-dialog[toolbar]>section[slot="content"]>fieldset {
     gap: 0.75rem;
     padding: 0;
     border: none;
 }
 
-aside[toolbar] > fieldset > legend {
+aside>md-dialog[toolbar]>section[slot="content"]>fieldset>legend {
     padding: 0;
     color: var(--md-sys-color-outline);
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-aside[toolbar] > fieldset > menu {
+aside>md-dialog[toolbar]>section[slot="content"]>fieldset>menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
 }
 
-aside[toolbar] > aside[card] {
+aside>md-dialog[toolbar]>section[slot="content"]>aside[card] {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
@@ -143,18 +122,18 @@ aside[toolbar] > aside[card] {
     box-shadow: var(--md-sys-elevation-level1);
 }
 
-aside[toolbar] > aside[card] > hgroup > h6 {
+aside>md-dialog[toolbar]>section[slot="content"]>aside[card]>hgroup>h6 {
     color: var(--md-sys-color-on-surface);
     font-size: 0.95rem;
     font-weight: 600;
 }
 
-aside[toolbar] > aside[card] > hgroup > p {
+aside>md-dialog[toolbar]>section[slot="content"]>aside[card]>hgroup>p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.825rem;
 }
 
-aside[toolbar] > aside[card] > md-icon {
+aside>md-dialog[toolbar]>section[slot="content"]>aside[card]>md-icon {
     color: var(--md-sys-color-primary);
     font-size: 1.5rem;
 }
@@ -167,19 +146,12 @@ main[seat-designer] {
         padding-left: max(1rem, env(safe-area-inset-left, 0px));
     }
 
-main[seat-designer] > header {
+main[seat-designer]>header {
         grid-template-columns: minmax(0, 1fr);
     }
 
-main[seat-designer] > header > nav {
+main[seat-designer]>header>nav {
         overflow-x: auto;
         scrollbar-width: none;
-    }
-
-aside[toolbar] {
-        display: grid;
-        padding: 1.25rem 1rem calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + 1.5rem);
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-left: none;
     }
 }

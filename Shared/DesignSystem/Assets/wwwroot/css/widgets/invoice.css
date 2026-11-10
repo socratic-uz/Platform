@@ -7,6 +7,7 @@
 article[invoice],
 article[receipt] {
     container-type: inline-size;
+    align-content: start;
     width: 100%;
     box-sizing: border-box;
     font-family: var(--md-ref-typeface-brand);
@@ -19,7 +20,7 @@ article[receipt] {
     box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.06);
     border: 1px dashed var(--md-sys-color-outline-variant);
     position: relative;
-    overflow-x: auto;
+    height: max-content;
 }
 
 article[invoice] > header,

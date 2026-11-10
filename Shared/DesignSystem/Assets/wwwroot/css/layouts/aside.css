@@ -1,20 +1,102 @@
 /* ==========================================================================
    Socratic Design System — LAYOUTS / aside.css
    ПОДМАКРОСЕТКА (ТЕГ BODY > ASIDE)
-   - 1. Первый aside (перед main): навигационный рейл (grid-area: rail) + дравер (md-dialog)
-   - 2. Второй aside (после main): контекстный сайдбар (grid-area: aside)
+   - Размер body > aside динамически вычисляется от потоковых дочерних элементов:
+     * Desktop: сумма ширин потоковых элементов (nav 76px + потоковый md-dialog)
+     * Mobile: сумма высот потоковых элементов (потоковый md-dialog + nav 60px)
+     * Если элементов нет или они display: none / position: fixed — размер 0px.
    ========================================================================== */
 
-/* --- Всплывающий дравер (body > aside > md-dialog) --- */
+/* Контейнер подмакросетки без собственных отступов (пустой = 0x0) */
+body > aside {
+    grid-area: rail;
+    padding: 0;
+    gap: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+/* --- Universal Rail Links & Toggle Button --- */
+body > aside > nav > md-icon-button {
+    justify-self: center;
+    align-self: center;
+}
+
+body > aside > nav > a {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+body > aside > nav > a > span {
+    min-inline-size: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1.15;
+}
+
+body > aside > nav > a > md-icon {
+    display: grid;
+    place-items: center;
+    font-size: var(--md-icon-size, 24px);
+    border-radius: var(--md-sys-shape-corner-full);
+    transition:
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+body > aside > nav > a:hover > md-icon {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+body > aside > nav > a[aria-current="page"] > span,
+body > aside > nav > a.active > span {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+}
+
+body > aside > nav > a[aria-current="page"] > md-icon,
+body > aside > nav > a.active > md-icon {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+/* --- Модальная/боковая поверхность (body > aside > md-dialog) --- */
 body > aside > md-dialog {
     display: none;
+    position: fixed;
+    inset: auto;
+    margin: 0;
+    min-height: 0;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     border: none;
+    --md-dialog-container-color: var(--md-sys-color-surface-container);
+    --md-dialog-container-min-block-size: 0px;
 }
 
 body > aside > md-dialog > header {
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+body > aside > md-dialog > section[slot="content"],
+body > aside > md-dialog > [slot="content"] {
+    grid-auto-rows: max-content;
+    min-height: 0;
+    max-height: 100%;
+    height: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+    align-content: start;
 }
 
 body > aside > md-dialog details a {
@@ -39,124 +121,55 @@ body > aside > md-dialog details a:hover {
 
 body > aside > md-dialog[open] {
     display: grid;
+    grid-template-rows: minmax(0, 1fr);
 }
 
-/* Второй aside (идёт после main) — контекстная панель / инспектор / корзина */
-body > main ~ aside {
-    grid-area: aside;
+body > aside > md-dialog[open]:has(> header):has(> footer) {
+    grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
-/* Первый aside (перед main) — навигационный рейл */
-body:has(> aside > nav) > aside:first-of-type {
-    grid-area: rail;
-}
-
-/* --- Universal Rail Links & Toggle Button --- */
-body:has(> aside > nav) > aside:first-of-type > nav > a {
-    display: grid;
-    place-content: center;
-    place-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: var(--md-sys-color-on-surface-variant);
-    border-radius: var(--md-sys-shape-corner-medium);
-    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
-}
-
-body:has(> aside > nav) > aside:first-of-type > nav > a > span {
-    min-inline-size: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: center;
-    line-height: 1.15;
-}
-
-body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
-    display: grid;
-    place-items: center;
-    font-size: var(--md-icon-size, 24px);
-    border-radius: var(--md-sys-shape-corner-full);
-    transition:
-        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-}
-
-body:has(> aside > nav) > aside:first-of-type > nav > a:hover > md-icon {
-    background: var(--md-sys-color-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
-}
-
-body:has(> aside > nav) > aside:first-of-type > nav > a[aria-current="page"] > span,
-body:has(> aside > nav) > aside:first-of-type > nav > a.active > span {
-    color: var(--md-sys-color-on-surface);
-    font-weight: 700;
-}
-
-body:has(> aside > nav) > aside:first-of-type > nav > a[aria-current="page"] > md-icon,
-body:has(> aside > nav) > aside:first-of-type > nav > a.active > md-icon {
-    background: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+body > aside > md-dialog[open]:has(> header):not(:has(> footer)) {
+    grid-template-rows: auto minmax(0, 1fr);
 }
 
 /* ==========================================================================
-   Mobile (< 840px): Нижний рейл (60px) и Нижний дравер (Bottom Sheet)
+   Mobile (< 840px):
+   1) Если есть нижний бар (body:has(> aside > nav)):
+      Нижний бар (nav 60px) + Нижняя шторка с ручкой (Bottom Sheet: встроенная [docked] или всплывающая)
+   2) Если нижнего бара нет (body:not(:has(> aside > nav)), например Landing):
+      Всплывающая левая боковая шторка (Side Sheet) без ручки во всю высоту экрана
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-/* На мобильных экранах второй aside скрыт */
-body > main ~ aside {
-        display: none;
-    }
-
-/* App: Mobile — подъём дравера снизу над 60px нижним рейлом */
-body:has(> aside > nav) > aside > md-dialog {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 60px;
-        top: auto;
-        width: 100%;
-        max-height: calc(85dvh - 60px);
-        z-index: 999;
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
-        box-shadow: 0 -4px 32px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
-        overflow: hidden;
-    }
-
-/* App: Mobile — нижний фиксированный рейл (60px) */
-body:has(> aside > nav) > aside:first-of-type {
-        display: grid;
-        position: fixed;
-        left: 0;
-        right: 0;
+body > aside {
+        position: sticky;
         bottom: 0;
-        top: auto;
-        width: 100%;
-        height: 60px;
         z-index: 1000;
-        padding: 0;
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        width: 100%;
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav {
+/* Нижний потоковый бар (60px) */
+body > aside > nav {
         display: grid;
+        order: 2;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
         grid-template-rows: 1fr;
-        height: 100%;
+        height: 60px;
         width: 100%;
         padding: 4px;
         gap: 4px;
         align-items: center;
         justify-items: center;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container);
+        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
         overflow: hidden;
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a {
+body > aside > nav > a {
         grid-template-rows: auto auto;
         gap: 2px;
         min-width: 0;
@@ -165,92 +178,158 @@ body:has(> aside > nav) > aside:first-of-type > nav > a {
         padding: 4px 2px;
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a > span {
+body > aside > nav > a > span {
         font-size: var(--md-sys-typescale-label-small-size);
         font-weight: var(--md-sys-typescale-label-small-weight);
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
+body > aside > nav > a > md-icon {
         width: 48px;
         height: 28px;
         font-size: 22px;
     }
 
-/* Landing Layout Mode: Mobile — передаёт дочерний md-dialog напрямую в сетку */
-body:not(:has(> aside > nav)) > aside {
-        display: contents;
+/* 1. С нижним баром (body:has(> aside > nav)) — Нижняя шторка с ручкой (Bottom Sheet) над 60px баром */
+body:has(> aside > nav) > aside > md-dialog {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        top: auto;
+        width: 100%;
+        max-width: 100%;
+        height: max-content;
+        max-height: calc(85dvh - 60px);
+        z-index: 999;
+        border: none;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
+        box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.16);
+        overflow: hidden;
+        --md-dialog-container-shape: 28px;
+        --md-dialog-container-max-inline-size: 100%;
+        --md-dialog-container-max-block-size: calc(85dvh - 60px);
     }
 
-/* Landing: Mobile — выезд слева */
+/* Встроенная нижняя шторка ([docked]) в режиме Peek находится в потоке body > aside над нижним баром */
+body:has(> aside > nav) > aside > md-dialog[docked] {
+        position: relative;
+        inset: auto;
+        order: 1;
+        max-height: 48dvh;
+        --md-dialog-container-max-block-size: 48dvh;
+    }
+
+body:has(> aside > nav) > aside > md-dialog[docked]:not([data-sheet-snap="half"], [data-sheet-snap="full"], [data-sheet-dragging]) > header {
+        border-bottom: none;
+        touch-action: none;
+        user-select: none;
+    }
+
+/* В режиме Peek у встроенных шторок ([docked]) видна только ручка и шапка header */
+body:has(> aside > nav) > aside > md-dialog[docked]:not([data-sheet-snap="half"], [data-sheet-snap="full"], [data-sheet-dragging]) > :not(header) {
+        display: none;
+    }
+
+/* В режиме Peek у поисковой шторки карты ([map-controls]) видна только ручка и строка поиска header */
+body:has(> aside > nav) > aside > md-dialog[map-controls]:not([data-sheet-snap="half"], [data-sheet-snap="full"], [data-sheet-dragging]) > section[slot="content"] > search[search-mode] > :not(header) {
+        display: none;
+    }
+
+/* Перетаскивание и выдвинутые состояния Half (48dvh) / Full (85dvh) скользят поверх main */
+body:has(> aside > nav) > aside > md-dialog[open][data-sheet-dragging] {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        top: auto;
+        height: var(--sheet-drag-h, 48dvh);
+        max-height: var(--sheet-drag-h, 48dvh);
+        transition: none;
+        --md-dialog-container-max-block-size: var(--sheet-drag-h, 48dvh);
+    }
+
+body:has(> aside > nav) > aside > md-dialog[open][data-sheet-snap="full"] {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        top: auto;
+        height: calc(85dvh - 60px);
+        max-height: calc(85dvh - 60px);
+        transition: height 260ms cubic-bezier(0.2, 0, 0, 1), max-height 260ms cubic-bezier(0.2, 0, 0, 1);
+        --md-dialog-container-max-block-size: calc(85dvh - 60px);
+    }
+
+body:has(> aside > nav) > aside > md-dialog[open][data-sheet-snap="half"] {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        top: auto;
+        height: 48dvh;
+        max-height: 48dvh;
+        transition: height 260ms cubic-bezier(0.2, 0, 0, 1), max-height 260ms cubic-bezier(0.2, 0, 0, 1);
+        --md-dialog-container-max-block-size: 48dvh;
+    }
+
+/* Для встроенной шторки ([docked]) при раскрытии в Half/Full резервируем высоту Peek в потоке, чтобы main не прыгал */
+body:has(> aside > nav) > aside:has(> md-dialog[docked][open][data-sheet-snap="half"])::before,
+    body:has(> aside > nav) > aside:has(> md-dialog[docked][open][data-sheet-snap="full"])::before,
+    body:has(> aside > nav) > aside:has(> md-dialog[docked][open][data-sheet-dragging])::before {
+        content: "";
+        display: block;
+        order: 1;
+        width: 100%;
+        height: var(--sheet-peek-h, 76px);
+        pointer-events: none;
+    }
+
+/* 2. Без нижнего бара (body:not(:has(> aside > nav)), например Landing) — Боковая шторка слева без ручки */
 body:not(:has(> aside > nav)) > aside > md-dialog {
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
+        right: auto;
         width: min(320px, 85vw);
+        max-width: min(320px, 85vw);
         height: 100dvh;
         max-height: 100dvh;
         z-index: 999;
+        border: none;
         border-right: 1px solid var(--md-sys-color-outline-variant);
         border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
         box-shadow: var(--md-sys-elevation-level3);
         overflow: hidden;
+        --md-dialog-container-shape: 0px;
+        --md-dialog-container-max-inline-size: min(320px, 85vw);
+        --md-dialog-container-max-block-size: 100dvh;
     }
 }
 
 /* ==========================================================================
-   Desktop (>= 840px): Левый рейл (76px), Боковой дравер (left: 76px) и 2-й aside
+   Desktop (>= 840px): Левый рельс (nav 76px) + Боковая шторка без ручки (md-dialog)
+   - Встроенная боковая шторка ([docked]): в потоке справа от рельса (ширина aside = 76px + шторка)
+   - Всплывающая боковая шторка (:not([docked])): position: fixed поверх main (ширина aside = 76px)
    ========================================================================== */
 
 @media screen and (min-width: 840px) {
-/* Второй aside (контекстная панель справа от main) */
-body > main ~ aside {
-        display: grid;
-        align-content: start;
-        gap: var(--md-sys-gutter-section);
-        padding: var(--md-sys-gutter-page);
-        border-left: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-lowest);
-        overflow-y: auto;
+body > aside {
+        --aside-rail-w: 0px;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: stretch;
     }
 
-/* App: Desktop — выезд дравера справа от 76px рельса (left: 76px) */
-body:has(> aside > nav) > aside > md-dialog {
-        position: fixed;
-        top: 0;
-        left: 76px;
-        width: clamp(340px, 32vw, 420px);
-        height: 100dvh;
-        max-height: 100dvh;
-        z-index: 999;
-        border-right: 1px solid var(--md-sys-color-outline-variant);
-        border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
-        box-shadow: 4px 0 24px rgb(from var(--md-sys-color-shadow) r g b / 0.15);
-        overflow: hidden;
-    }
-
-/* App: Desktop — левый фиксированный рейл (76px) */
-body:has(> aside > nav) > aside:first-of-type {
+/* Левый потоковый рельс (76px) */
+body > aside > nav {
         display: grid;
-        position: fixed;
+        position: sticky;
         top: 0;
-        bottom: 0;
-        left: 0;
         width: 76px;
         height: 100dvh;
         z-index: 1000;
-        padding: 0;
-        border-right: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-low);
-        transform: translateZ(0);
-        will-change: transform;
-        overflow-y: auto;
-        overflow-x: hidden;
-        scrollbar-width: none;
-    }
-
-body:has(> aside > nav) > aside:first-of-type > nav {
-        display: grid;
         grid-auto-flow: row;
         grid-template-columns: 1fr;
         grid-auto-rows: max-content;
@@ -258,10 +337,14 @@ body:has(> aside > nav) > aside:first-of-type > nav {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
         align-content: start;
         justify-items: center;
-        width: 100%;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a {
+body > aside > nav > a {
         grid-template-rows: auto auto;
         gap: 3px;
         width: 64px;
@@ -270,19 +353,79 @@ body:has(> aside > nav) > aside:first-of-type > nav > a {
         padding: var(--md-sys-spacing-1) 0;
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a > span {
+body > aside > nav > a > span {
         max-width: 64px;
         font-size: var(--md-sys-typescale-label-medium-size);
         font-weight: var(--md-sys-typescale-label-medium-weight);
     }
 
-body:has(> aside > nav) > aside:first-of-type > nav > a > md-icon {
+body > aside > nav > a > md-icon {
         width: 56px;
         height: 32px;
     }
 
-/* Landing Layout Mode: Desktop — скрывается из сетки */
-body:not(:has(> aside > nav)) > aside {
+/* По умолчанию на десктопе — всплывающая боковая шторка (Side Sheet, вне потока, ширина aside = 76px) */
+body > aside > md-dialog {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: var(--aside-rail-w, 0);
+        width: clamp(320px, 25vw, 380px);
+        max-width: clamp(320px, 25vw, 380px);
+        height: 100dvh;
+        max-height: 100dvh;
+        z-index: 999;
+        border: none;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
+        box-shadow: var(--md-sys-elevation-level3);
+        overflow: hidden;
+        --md-dialog-container-shape: 0px;
+        --md-dialog-container-max-inline-size: clamp(320px, 25vw, 380px);
+        --md-dialog-container-max-block-size: 100dvh;
+    }
+
+/* Встроенная потоковая боковая шторка ([docked]) внутри body > aside (ширина складывается с 76px рельсом) */
+body > aside > md-dialog[docked] {
+        position: sticky;
+        top: 0;
+        bottom: auto;
+        left: auto;
+        width: clamp(320px, 25vw, 380px);
+        max-width: clamp(320px, 25vw, 380px);
+        height: 100dvh;
+        max-height: 100dvh;
+        border: none;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 0;
+        box-shadow: none;
+        --md-dialog-container-shape: 0px;
+        --md-dialog-container-max-inline-size: clamp(320px, 25vw, 380px);
+        --md-dialog-container-max-block-size: 100dvh;
+    }
+
+/* Всплывающая боковая шторка-остров на Картах ([map-controls]) */
+body > aside > md-dialog[map-controls] {
+        top: 16px;
+        bottom: auto;
+        left: calc(var(--aside-rail-w, 0px) + 16px);
+        width: clamp(340px, 28vw, 400px);
+        max-width: clamp(340px, 28vw, 400px);
+        height: max-content;
+        max-height: calc(100dvh - 32px);
+        border: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+        --md-dialog-container-shape: 28px;
+        --md-dialog-container-max-inline-size: clamp(340px, 28vw, 400px);
+        --md-dialog-container-max-block-size: calc(100dvh - 32px);
+    }
+
+body > aside:has(> nav) {
+        --aside-rail-w: 76px;
+    }
+
+/* Landing Layout Mode: на десктопе мобильное меню скрыто (используется шапка header[landing]) */
+body:not(:has(> aside > nav)) > aside > md-dialog {
         display: none;
     }
 }

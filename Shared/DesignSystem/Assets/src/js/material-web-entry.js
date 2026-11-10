@@ -1,2 +1,3 @@
 import '@lit-labs/ssr-client/lit-element-hydrate-support.js';
 export * from '@material/web/all.js';
+import '../../wwwroot/js/components/dialog-patch.js';
