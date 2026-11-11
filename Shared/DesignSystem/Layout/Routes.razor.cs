@@ -15,7 +15,11 @@ public partial class Routes : ComponentBase
     public NavigationManager Navigation { get; set; } = default!;
 
     [Inject]
-    public IModuleAssemblyLoader AssemblyLoader { get; set; } = default!;
+    public IServiceProvider ServiceProvider { get; set; } = default!;
+
+    private IModuleAssemblyLoader AssemblyLoader =>
+        ServiceProvider.GetService(typeof(IModuleAssemblyLoader)) as IModuleAssemblyLoader
+        ?? NoOpModuleAssemblyLoader.Instance;
 
     private readonly List<Assembly> _lazyLoadedAssemblies = new();
 

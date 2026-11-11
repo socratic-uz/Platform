@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Unified Design System static assets, Web Components bundling, and design system styling pipeline",
   "scripts": {
+    "extract:tokens": "node scripts/extract-material-tokens.mjs",
     "build:js": "rollup -c rollup.config.js",
     "generate:styles": "node scripts/generate-styles-manifest.mjs",
     "generate:assets": "node scripts/generate-asset-paths.mjs",
