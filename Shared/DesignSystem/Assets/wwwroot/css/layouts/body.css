@@ -2,43 +2,44 @@
    Socratic Design System — LAYOUTS / body.css
    МАКРОСЕТКА (ТЕГ BODY)
    - Контейнер макросетки (display: grid)
-   - Desktop (>= 840px): ВСЕГДА 3 колонки ("rail header header" / "rail main aside" / "rail footer footer")
-     * 1-я колонка (rail, auto): левый навигационный рельс (76px) + потоковая левая шторка (если есть; 0px если пусто)
-     * 2-я колонка (main, minmax(0, 1fr)): центральная рабочая область
-     * 3-я колонка (aside, auto): правый контекстный сайдбар после main (body > main ~ aside; 0px если отсутствует)
-   - Mobile (< 840px): одноколоночный стек ("header" / "main" / "footer" / "aside" / "rail")
+   - Единая 3-колоночная сетка (grid-template-columns задаётся 1 раз на body: auto minmax(0, 1fr) auto):
+     * 1-я колонка (left, auto): левая подмакросетка (body > aside:has(~ main), навигационный рельс 76px / шторки)
+     * 2-я колонка (main, minmax(0, 1fr)): центральная контентная область
+     * 3-я колонка (right, auto): правая подмакросетка (body > main ~ aside, контекстные панели)
+   - Адаптивность реализуется переключением grid-template-areas:
+     * Mobile (< 840px): 3 колонки со строками на всю ширину ("header header header" / "main main main" / ...)
+     * Desktop (>= 840px): 3 колонки ("left header header" / "left main right" / "left footer footer")
    ========================================================================== */
 
 body {
     display: grid;
     min-height: 100dvh;
     overflow-x: clip;
+    grid-template-columns: auto minmax(0, 1fr) auto;
 }
 
-/* Mobile (< 840px) — одноколоночный стек: шапка, контент, подвал, правая шторка (auto), нижний бар (auto) */
+/* Mobile (< 840px) — 3 колонки со строками на всю ширину: шапка, контент, подвал, правая шторка (auto), нижний бар (auto) */
 
 @media screen and (max-width: 839.98px) {
 body {
-        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto minmax(0, 1fr) auto auto auto;
         grid-template-areas:
-            "header"
-            "main"
-            "footer"
-            "aside"
-            "rail";
+            "header header header"
+            "main   main   main"
+            "footer footer footer"
+            "right  right  right"
+            "left   left   left";
     }
 }
 
-/* Desktop (>= 840px) — ВСЕГДА 3 колонки: левая подмакросетка (rail) + рабочая область (main) + правая подмакросетка (aside) */
+/* Desktop (>= 840px) — ВСЕГДА 3 колонки: левая подмакросетка (left) + рабочая область (main) + правая подмакросетка (right) */
 
 @media screen and (min-width: 840px) {
 body {
-        grid-template-columns: auto minmax(0, 1fr) auto;
         grid-template-rows: auto minmax(0, 1fr) auto;
         grid-template-areas:
-            "rail  header  header"
-            "rail  main    aside"
-            "rail  footer  footer";
+            "left  header  header"
+            "left  main    right"
+            "left  footer  footer";
     }
 }

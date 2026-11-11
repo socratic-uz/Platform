@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Socratic Design System — WIDGETS / footer.css
+   СОДЕРЖИМОЕ ГЛОБАЛЬНОГО ПОДВАЛА (BODY > FOOTER)
+   - Колонки навигации, заголовки секций и списки ссылок
+   - Описание платформы, брендинг и статус системы
+   - Копирайт, сервисные ссылки и кнопки действий
+   ========================================================================== */
+
+body > footer > section > nav {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: 0.85rem;
+    align-content: start;
+    overflow: hidden;
+}
+
+body > footer > section > nav > h4 {
+    color: var(--md-sys-color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+body > footer > section > nav > ul {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    gap: 0.25rem;
+}
+
+body > footer > section > nav > ul > li > a {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 0.55rem;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem;
+    border-radius: var(--md-sys-shape-corner-small);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+body > footer > section > nav > ul > li > a > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body > footer > section > nav > ul > li > a > md-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+body > footer > section > nav > ul > li > a:hover {
+    background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
+    color: var(--md-sys-color-on-surface);
+    transform: translateX(2px);
+}
+
+body > footer > section > article {
+    gap: 0.75rem;
+    align-content: start;
+    max-width: 340px;
+}
+
+body > footer > section > article > p {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    line-height: 1.55;
+}
+
+body > footer > section > article > aside {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    width: max-content;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-expressive-corner-medium);
+    background: rgb(from var(--md-sys-color-surface-container) r g b / 0.7);
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+body > footer > section > article > aside > span:first-child {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--md-sys-color-primary);
+    box-shadow: 0 0 8px var(--md-sys-color-primary);
+}
+
+body > footer > section > article > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    min-height: 44px;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+body > footer > section > article > a > md-icon {
+    color: var(--md-sys-color-primary);
+    font-size: 28px;
+}
+
+body > footer > section:first-of-type,
+body > footer > section:only-child {
+    grid-template-columns: minmax(0, 1.35fr) repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+    gap: 2.5rem 1.5rem;
+    align-items: start;
+}
+
+body > footer > section:last-of-type:not(:first-of-type),
+body > footer > aside {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > span {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: end;
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > span > md-icon {
+    font-size: 18px;
+    color: var(--md-sys-color-primary);
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > menu {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    justify-content: center;
+}
+
+body > footer > section:last-of-type:not(:first-of-type) > menu > :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    --md-filled-tonal-button-container-height: var(--md-sys-touch-target-min);
+    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
+    --md-text-button-container-height: var(--md-sys-touch-target-min);
+}
+
+@media screen and (max-width: 839.98px) {
+body > footer > section > article {
+        grid-column: 1 / -1;
+    }
+
+body > footer > section:first-of-type,
+    body > footer > section:only-child {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1.25rem;
+    }
+
+body > footer > section:last-of-type:not(:first-of-type),
+    body > footer > aside {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+body > footer > section:last-of-type:not(:first-of-type) > span {
+        justify-content: center;
+    }
+}
+

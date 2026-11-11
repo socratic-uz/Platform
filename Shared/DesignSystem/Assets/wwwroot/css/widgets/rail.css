@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Socratic Design System — WIDGETS / rail.css
+   НАВИГАЦИОННЫЙ РЕЙЛ И НИЖНИЙ БАР (BODY > ASIDE:HAS(~ MAIN) > NAV)
+   - Desktop (>= 840px): вертикальный навигационный рельс (76px)
+   - Mobile (< 840px): горизонтальный навигационный бар (60px)
+   ========================================================================== */
+
+/* --- Universal Rail Links, Toggle Button & Avatar --- */
+body > aside:has(~ main) > nav > md-icon-button {
+    justify-self: center;
+    align-self: center;
+}
+
+body > aside:has(~ main) > nav > a {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface-variant);
+    border-radius: var(--md-sys-shape-corner-medium);
+    transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+body > aside:has(~ main) > nav > a > span {
+    min-inline-size: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1.15;
+}
+
+body > aside:has(~ main) > nav > a > md-icon {
+    display: grid;
+    place-items: center;
+    font-size: var(--md-icon-size, 24px);
+    border-radius: var(--md-sys-shape-corner-full);
+    transition:
+        background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
+        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+body > aside:has(~ main) > nav > a:hover > md-icon {
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+}
+
+body > aside:has(~ main) > nav > a[aria-current="page"] > span,
+body > aside:has(~ main) > nav > a.active > span {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+}
+
+body > aside:has(~ main) > nav > a[aria-current="page"] > md-icon,
+body > aside:has(~ main) > nav > a.active > md-icon {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+/* В мобильном нижнем баре кнопка аватара не отображается */
+body > aside:has(~ main) > nav > [avatar] {
+    display: none;
+}
+
+/* ==========================================================================
+   Mobile (< 840px): Нижний навигационный бар (60px)
+   ========================================================================== */
+
+@media screen and (max-width: 839.98px) {
+body > aside:has(~ main) > nav {
+        display: grid;
+        order: 2;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-rows: 1fr;
+        height: 60px;
+        width: 100%;
+        padding: 4px;
+        gap: 4px;
+        align-items: center;
+        justify-items: center;
+        z-index: 90;
+        border-top: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container);
+        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+        overflow: hidden;
+    }
+
+body > aside:has(~ main) > nav > a {
+        grid-template-rows: auto auto;
+        gap: 2px;
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+        padding: 4px 2px;
+    }
+
+body > aside:has(~ main) > nav > a > span {
+        font-size: var(--md-sys-typescale-label-small-size);
+        font-weight: var(--md-sys-typescale-label-small-weight);
+    }
+
+body > aside:has(~ main) > nav > a > md-icon {
+        width: 48px;
+        height: 28px;
+        font-size: 22px;
+    }
+}
+
+/* ==========================================================================
+   Desktop (>= 840px): Левый потоковый рельс (76px)
+   ========================================================================== */
+
+@media screen and (min-width: 840px) {
+body > aside:has(~ main) > nav {
+        display: grid;
+        position: sticky;
+        top: 0;
+        width: 76px;
+        height: 100dvh;
+        z-index: 1000;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, max-content) minmax(max-content, 1fr);
+        grid-auto-rows: max-content;
+        gap: var(--md-sys-spacing-2);
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
+        align-content: normal;
+        justify-items: center;
+        border-right: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-container-low);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
+    }
+
+body > aside:has(~ main) > nav > a {
+        grid-template-rows: auto auto;
+        gap: 3px;
+        width: 64px;
+        min-height: 56px;
+        margin: 4px auto;
+        padding: var(--md-sys-spacing-1) 0;
+    }
+
+body > aside:has(~ main) > nav > a > span {
+        max-width: 64px;
+        font-size: var(--md-sys-typescale-label-medium-size);
+        font-weight: var(--md-sys-typescale-label-medium-weight);
+    }
+
+body > aside:has(~ main) > nav > a > md-icon {
+        width: 56px;
+        height: 32px;
+    }
+
+body > aside:has(~ main) > nav > [avatar] {
+        display: inline-grid;
+        align-self: end;
+        margin-top: auto;
+    }
+
+body > aside:has(~ main) > nav:has(> md-icon-button) {
+        grid-template-rows: repeat(6, max-content) minmax(max-content, 1fr);
+    }
+}
+

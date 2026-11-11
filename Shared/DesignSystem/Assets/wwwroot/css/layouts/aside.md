@@ -1,4 +1,4 @@
-# Архитектура `<Aside>` (`layouts/aside.css`)
+# Архитектура `<Aside>` (`layouts/aside-left.css` и `layouts/aside-right.css`)
 
 Единый термин для `<md-dialog>` внутри `<aside>` — **Панель**:
 - **Встроенная панель (`Встр.`)** — `md-dialog[docked]` в потоке сетки `body` (всегда открыта на десктопе, сдвигает `<main>`).

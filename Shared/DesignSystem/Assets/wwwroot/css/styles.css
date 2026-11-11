@@ -113,8 +113,11 @@
 @import "widgets/color-picker.css" layer(widgets);
 @import "widgets/commerce-modes.css" layer(widgets);
 @import "widgets/detector.css" layer(widgets);
+@import "widgets/drawer.css" layer(widgets);
 @import "widgets/faceid-viewfinder.css" layer(widgets);
 @import "widgets/fiscal.css" layer(widgets);
+@import "widgets/footer.css" layer(widgets);
+@import "widgets/header.css" layer(widgets);
 @import "widgets/invoice.css" layer(widgets);
 @import "widgets/kiosk.css" layer(widgets);
 @import "widgets/lang-selector.css" layer(widgets);
@@ -124,6 +127,7 @@
 @import "widgets/pricing-tiers.css" layer(widgets);
 @import "widgets/profile-dialog.css" layer(widgets);
 @import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/rail.css" layer(widgets);
 @import "widgets/seat-designer.css" layer(widgets);
 @import "widgets/terminal.css" layer(widgets);
 
@@ -151,7 +155,8 @@
 @import "pages/wishlist.css" layer(pages);
 
 /* 6. Blazor Layouts (Page Skeletons, Shells & Chrome) */
-@import "layouts/aside.css" layer(layouts);
+@import "layouts/aside-left.css" layer(layouts);
+@import "layouts/aside-right.css" layer(layouts);
 @import "layouts/body.css" layer(layouts);
 @import "layouts/footer.css" layer(layouts);
 @import "layouts/header.css" layer(layouts);
