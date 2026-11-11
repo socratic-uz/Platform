@@ -257,7 +257,6 @@ AuthenticationExtensions.AddAuthentication(builder.Services);
 
 builder.Services.AddGrpcClients(builder.Configuration);
 builder.Services.AddSingleton<IFormFactor, WebFormFactor>();
-builder.Services.AddSingleton<Domain.Interfaces.IModuleAssemblyLoader, Domain.Interfaces.NoOpModuleAssemblyLoader>();
 
 builder.Services.AddHttpClient();
 

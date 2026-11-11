@@ -27,23 +27,6 @@
 		<TrimMode Condition="'$(Configuration)' != 'Debug'">partial</TrimMode>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<!-- Map lazy assemblies -->
-		<BlazorWebAssemblyLazyLoad Include="Map.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="NetTopologySuite.wasm" />
-
-		<!-- Chat lazy assemblies (OpenAI SDK is 5MB) -->
-		<BlazorWebAssemblyLazyLoad Include="Chat.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="OpenAI.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="Microsoft.Extensions.AI.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="Microsoft.Extensions.AI.OpenAI.wasm" />
-
-		<!-- Vision, Biometrics & Video lazy assemblies -->
-		<BlazorWebAssemblyLazyLoad Include="Vision.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="Biometrics.Processor.wasm" />
-		<BlazorWebAssemblyLazyLoad Include="FFmpegProcessor.wasm" />
-	</ItemGroup>
-
 
 	<ItemGroup>
 
