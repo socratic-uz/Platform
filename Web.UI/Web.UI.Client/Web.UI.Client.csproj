@@ -19,8 +19,12 @@
 		<WasmNativeStrip Condition="'$(Configuration)' != 'Debug'">true</WasmNativeStrip>
 		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
 		
-		<!-- Отключаем инвариантную глобализацию для правильной работы локализации -->
-		<InvariantGlobalization>false</InvariantGlobalization>
+		<!-- Hybrid Globalization: использует нативный браузерный Intl API вместо 2.6 МБ ICU .dat таблиц -->
+		<HybridGlobalization>true</HybridGlobalization>
+
+		<!-- Trimming: вырезает неиспользуемые BCL-сборки (System.Security, System.Xml и др.) из WebAssembly -->
+		<PublishTrimmed Condition="'$(Configuration)' != 'Debug'">true</PublishTrimmed>
+		<TrimMode Condition="'$(Configuration)' != 'Debug'">partial</TrimMode>
 	</PropertyGroup>
 
 
