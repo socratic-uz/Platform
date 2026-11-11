@@ -3,7 +3,12 @@
 @using static Assets.Constants.Icons
 @attribute [UnconditionalSuppressMessage("Trimming", "IL2111", Justification = "Layout is statically referenced typeof(AppLayout)")]
 
-<Router AppAssembly=@typeof(Layout.AppLayout).Assembly AdditionalAssemblies=@FeatureRegistry.GetFeatureAssemblies()>
+<Router AppAssembly=@typeof(Layout.AppLayout).Assembly AdditionalAssemblies=@GetAdditionalAssemblies() OnNavigateAsync=@OnNavigateAsync>
+   <Navigating>
+	   <LayoutView Layout=@typeof(Layout.AppLayout)>
+		   <Progress Indeterminate=@true FourColor=@true />
+	   </LayoutView>
+   </Navigating>
    <Found Context="routeData">
 	   <AuthorizeRouteView RouteData=@routeData DefaultLayout=@typeof(Layout.AppLayout)>
 		   <NotAuthorized>

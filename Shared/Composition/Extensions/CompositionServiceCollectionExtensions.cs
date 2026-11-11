@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -50,10 +51,16 @@ namespace Socratic.Platform.Composition.Extensions
                 FeatureRegistry.Register(new Socratic.Commerce.CommerceFeatureModule());
 #endif
 #if FEATURE_VISION
-                FeatureRegistry.Register(new Socratic.Vision.VisionFeatureModule());
+                if (!OperatingSystem.IsBrowser())
+                {
+                    RegisterVisionModule();
+                }
 #endif
 #if FEATURE_CHAT
-                FeatureRegistry.Register(new Socratic.Chat.ChatFeatureModule());
+                if (!OperatingSystem.IsBrowser())
+                {
+                    RegisterChatModule();
+                }
 #endif
 #if FEATURE_LANDING
                 FeatureRegistry.Register(new Socratic.Landing.LandingFeatureModule());
@@ -71,7 +78,10 @@ namespace Socratic.Platform.Composition.Extensions
                 FeatureRegistry.Register(new Socratic.Identity.IdentityFeatureModule());
 #endif
 #if FEATURE_MAP
-                FeatureRegistry.Register(new Socratic.Map.MapFeatureModule());
+                if (!OperatingSystem.IsBrowser())
+                {
+                    RegisterMapModule();
+                }
 #endif
 #if FEATURE_QRDESIGNER
                 FeatureRegistry.Register(new Socratic.QrDesigner.QrDesignerFeatureModule());
@@ -95,20 +105,30 @@ namespace Socratic.Platform.Composition.Extensions
             // 2. Register UI and Design System services
             services.AddSmartWebServices();
 #if FEATURE_MAP
-            services.AddMapServices();
+            if (!OperatingSystem.IsBrowser())
+            {
+                AddMapServices(services);
+            }
 #endif
 #if FEATURE_MARKDOWN
             services.AddMarkdownServices();
 #endif
 #if FEATURE_FFMPEG
-            services.AddFFmpegProcessorServices();
+            if (!OperatingSystem.IsBrowser())
+            {
+                AddFFmpegServices(services);
+            }
 #endif
 #if FEATURE_BIOMETRICS
-            services.AddBiometricProcessorServices();
+            if (!OperatingSystem.IsBrowser())
+            {
+                AddBiometricsServices(services);
+            }
 #endif
 
             // 3. Register Platform & Layout services
             services.AddLayoutServices();
+            services.TryAddSingleton<Domain.Interfaces.IModuleAssemblyLoader, Domain.Interfaces.NoOpModuleAssemblyLoader>();
 #if FEATURE_CHAT
             services.AddScoped<global::Chat.Abstractions.IChatService, global::Chat.Services.SignalRChatService>();
 #endif
@@ -155,6 +175,54 @@ namespace Socratic.Platform.Composition.Extensions
             }
 
             return services;
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void RegisterMapModule()
+        {
+#if FEATURE_MAP
+            FeatureRegistry.Register(new Socratic.Map.MapFeatureModule());
+#endif
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void RegisterChatModule()
+        {
+#if FEATURE_CHAT
+            FeatureRegistry.Register(new Socratic.Chat.ChatFeatureModule());
+#endif
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void RegisterVisionModule()
+        {
+#if FEATURE_VISION
+            FeatureRegistry.Register(new Socratic.Vision.VisionFeatureModule());
+#endif
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void AddMapServices(IServiceCollection services)
+        {
+#if FEATURE_MAP
+            services.AddMapServices();
+#endif
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void AddFFmpegServices(IServiceCollection services)
+        {
+#if FEATURE_FFMPEG
+            services.AddFFmpegProcessorServices();
+#endif
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void AddBiometricsServices(IServiceCollection services)
+        {
+#if FEATURE_BIOMETRICS
+            services.AddBiometricProcessorServices();
+#endif
         }
     }
 }

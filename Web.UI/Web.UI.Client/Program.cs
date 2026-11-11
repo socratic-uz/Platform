@@ -40,6 +40,8 @@ builder.Services.AddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(new
 builder.Services.AddCompositionServices(builder.Configuration);
 
 // 3. WebAssembly platform-specific adaptations
+builder.Services.AddScoped<Microsoft.AspNetCore.Components.WebAssembly.Services.LazyAssemblyLoader>();
+builder.Services.AddScoped<Domain.Interfaces.IModuleAssemblyLoader, Web.UI.Client.Services.WasmModuleAssemblyLoader>();
 builder.Services.AddSingleton<IFormFactor, WebFormFactor>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddAuthenticationStateDeserialization();
