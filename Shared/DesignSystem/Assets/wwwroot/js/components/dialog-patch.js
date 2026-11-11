@@ -24,31 +24,91 @@ export function patchDialog() {
         );
     }
 
-    function getAsideNavHeight(aside) {
-        if (!aside) return 0;
-        const nav = aside.querySelector(':scope > nav');
+    function getAsideNavHeight() {
+        if (typeof document === 'undefined' || !document.body) return 0;
+        const nav = document.body.querySelector(':scope > aside > nav');
         return nav ? 60 : 0;
     }
 
-    function isMobileBottomSheet(instance) {
-        return (
-            isMobileViewport() &&
-            isBodyAsideDialog(instance) &&
-            getAsideNavHeight(instance.parentElement) > 0
-        );
+    function isBottomSheet(instance) {
+        if (!isBodyAsideDialog(instance)) return false;
+        if (instance.hasAttribute('left') || instance.hasAttribute('right')) return false;
+        if (instance.hasAttribute('order') || instance.hasAttribute('terminal')) return false;
+        if (instance.hasAttribute('detector') || instance.hasAttribute('qr') || instance.hasAttribute('payment')) return false;
+        if (instance.hasAttribute('order-items') || instance.hasAttribute('qr-designer') || instance.hasAttribute('toolbar')) return false;
+        if (instance.hasAttribute('bottom')) return true;
+        if (instance.hasAttribute('profile')) return isMobileViewport();
+        if (instance.hasAttribute('map-controls')) return isMobileViewport();
+        return false;
+    }
+
+    function isSecondAsideDialog(instance) {
+        if (!isBodyAsideDialog(instance)) return false;
+        const aside = instance.parentElement;
+        return Boolean(aside.parentElement && aside.parentElement.querySelector(':scope > main ~ aside') === aside);
+    }
+
+    function isFirstAsideDockedDialog(instance) {
+        return Boolean(isBodyAsideDialog(instance) && !isSecondAsideDialog(instance) && instance.hasAttribute('docked'));
     }
 
     function isPermanentSheet(instance) {
-        return (
-            instance.hasAttribute('docked') ||
-            instance.hasAttribute('map-controls')
-        );
+        if (!instance) return false;
+        if (instance.hasAttribute('map-controls')) return true;
+        if (!isMobileViewport() && instance.hasAttribute('docked')) return true;
+        return false;
+    }
+
+    function isFloatingModalSheet(instance) {
+        if (!isBodyAsideDialog(instance)) return false;
+        if (isPermanentSheet(instance)) return false;
+        return true;
+    }
+
+    function closeOtherFloatingDialogs(activeInstance) {
+        if (typeof document === 'undefined' || !document.body) return;
+        if (!isFloatingModalSheet(activeInstance)) return;
+
+        document.body.querySelectorAll(':scope > aside > md-dialog[open]').forEach((other) => {
+            if (other === activeInstance) return;
+            if (isFloatingModalSheet(other)) {
+                if (typeof other.close === 'function') {
+                    other.close();
+                } else {
+                    other.removeAttribute('open');
+                }
+            } else if (isMobileViewport() && isPermanentSheet(other)) {
+                setSheetSnap(other, 'peek');
+            }
+        });
+    }
+
+    function findActiveScrimOwner() {
+        if (typeof document === 'undefined' || !document.body) return null;
+        const openDialogs = Array.from(document.body.querySelectorAll(':scope > aside > md-dialog[open]'));
+        for (let i = openDialogs.length - 1; i >= 0; i--) {
+            const dlg = openDialogs[i];
+            if (!isPermanentSheet(dlg)) {
+                return dlg;
+            }
+        }
+        return null;
+    }
+
+    function syncResponsiveDockedState(instance) {
+        if (!isFirstAsideDockedDialog(instance)) return;
+        if (!isMobileViewport() && instance.dialog) {
+            instance.dialog.setAttribute('open', '');
+        }
     }
 
     function syncHandleVisibility(instance) {
         if (!isBodyAsideDialog(instance)) return;
-        const bottomMode = isMobileBottomSheet(instance);
+        const bottomMode = isBottomSheet(instance);
         instance.setAttribute('data-sheet-mode', bottomMode ? 'bottom' : 'side');
+        if (!bottomMode) {
+            instance.removeAttribute('data-sheet-snap');
+        }
         const shadow = instance && instance.shadowRoot;
         if (!shadow) return;
         const handle = shadow.querySelector('.sheet-drag-handle');
@@ -57,19 +117,13 @@ export function patchDialog() {
         }
     }
 
-    function ensureSheetScrim(instance, snap) {
+    function ensureSheetScrim(instance) {
         if (typeof document === 'undefined') return;
-        if (!isBodyAsideDialog(instance)) return;
-        const aside = instance.parentElement;
+        if (instance && !isBodyAsideDialog(instance)) return;
 
-        const isOpen = instance.hasAttribute('open');
-        const needsScrim =
-            isMobileViewport() &&
-            isOpen &&
-            (snap === 'full' || !isPermanentSheet(instance));
-
-        let scrim = document.getElementById('socratic-sheet-scrim');
-        if (!needsScrim) {
+        const owner = findActiveScrimOwner();
+        let scrim = document.getElementById('sheet-scrim');
+        if (!owner) {
             if (scrim) {
                 scrim.style.opacity = '0';
                 scrim.style.pointerEvents = 'none';
@@ -77,29 +131,34 @@ export function patchDialog() {
             return;
         }
 
-        const navH = getAsideNavHeight(aside);
+        const targetParent = owner.parentElement || document.body;
         if (!scrim) {
             scrim = document.createElement('div');
-            scrim.id = 'socratic-sheet-scrim';
+            scrim.id = 'sheet-scrim';
             Object.assign(scrim.style, {
                 position: 'fixed',
-                inset: `0 0 ${navH}px 0`,
-                background: 'rgba(0, 0, 0, 0.32)',
-                zIndex: '998',
+                inset: '0',
+                background: 'rgba(0, 0, 0, 0.4)',
+                backdropFilter: 'blur(2px)',
+                webkitBackdropFilter: 'blur(2px)',
+                zIndex: '1000',
                 opacity: '0',
                 pointerEvents: 'none',
-                transition: 'opacity 200ms ease'
+                transition: 'opacity 250ms cubic-bezier(0.2, 0, 0, 1)'
             });
-            document.body.appendChild(scrim);
-        } else {
-            scrim.style.inset = `0 0 ${navH}px 0`;
         }
+        if (scrim.parentElement !== targetParent) {
+            targetParent.insertBefore(scrim, owner);
+        }
+        scrim.style.inset = '0';
+        scrim.style.zIndex = '1000';
 
         scrim.onclick = () => {
-            if (isPermanentSheet(instance)) {
-                setSheetSnap(instance, 'peek');
-            } else if (typeof instance.close === 'function') {
-                instance.close();
+            const currentOwner = findActiveScrimOwner() || owner;
+            if (currentOwner && typeof currentOwner.close === 'function') {
+                currentOwner.close();
+            } else if (currentOwner) {
+                currentOwner.removeAttribute('open');
             }
         };
 
@@ -112,6 +171,11 @@ export function patchDialog() {
     }
 
     function setSheetSnap(instance, nextSnap) {
+        if (!isBottomSheet(instance)) {
+            instance.removeAttribute('data-sheet-snap');
+            ensureSheetScrim(instance);
+            return;
+        }
         const aside = isBodyAsideDialog(instance) ? instance.parentElement : null;
         const currentSnap = instance.getAttribute('data-sheet-snap') || 'peek';
 
@@ -136,10 +200,14 @@ export function patchDialog() {
         if (!instance.__sheetGesturesAttached) {
             instance.__sheetGesturesAttached = true;
 
-            const initialSnap = isPermanentSheet(instance)
-                ? (instance.hasAttribute('expanded') ? 'half' : 'peek')
-                : 'half';
-            instance.setAttribute('data-sheet-snap', initialSnap);
+            if (isBottomSheet(instance)) {
+                const initialSnap = isPermanentSheet(instance)
+                    ? (instance.hasAttribute('expanded') ? 'half' : 'peek')
+                    : 'half';
+                instance.setAttribute('data-sheet-snap', initialSnap);
+            } else {
+                instance.removeAttribute('data-sheet-snap');
+            }
 
             // Observe 'expanded' and 'open' attribute changes from Blazor
             const attrObserver = new MutationObserver((mutations) => {
@@ -153,6 +221,9 @@ export function patchDialog() {
                             setSheetSnap(instance, 'peek');
                         }
                     } else if (m.attributeName === 'open') {
+                        if (instance.hasAttribute('open')) {
+                            closeOtherFloatingDialogs(instance);
+                        }
                         syncHandleVisibility(instance);
                         ensureSheetScrim(instance, instance.getAttribute('data-sheet-snap') || 'peek');
                     }
@@ -180,7 +251,7 @@ export function patchDialog() {
             }
 
             instance.__onSheetPointerDown = function onPointerDown(e, isHandle) {
-                if (!isMobileBottomSheet(instance)) return;
+                if (!isBottomSheet(instance)) return;
                 if (e.button !== undefined && e.button !== 0) return;
                 if (!canStartDragFromTarget(e.target, isHandle)) return;
 
@@ -303,7 +374,7 @@ export function patchDialog() {
     }
 
     function applyPatch(dialogClass) {
-        if (!dialogClass || dialogClass.prototype.__asidePatchedV4) {
+        if (!dialogClass || dialogClass.prototype.__asidePatchedV5) {
             return;
         }
 
@@ -312,6 +383,7 @@ export function patchDialog() {
         proto.__asidePatchedV2 = true;
         proto.__asidePatchedV3 = true;
         proto.__asidePatchedV4 = true;
+        proto.__asidePatchedV5 = true;
 
         const origShow = proto.show;
         const origClose = proto.close;
@@ -331,15 +403,20 @@ export function patchDialog() {
             }
 
             const shadow = instance.shadowRoot;
-            if (shadow && !shadow.querySelector('style[data-socratic-aside-sheet="v4"]')) {
+            if (shadow && !shadow.querySelector('style[data-aside-sheet="v4"]')) {
                 const style = document.createElement('style');
-                style.setAttribute('data-socratic-aside-sheet', 'v4');
+                style.setAttribute('data-aside-sheet', 'v4');
                 style.textContent = `
                     :host {
                         display: none;
                     }
                     :host([open]) {
                         display: grid !important;
+                    }
+                    @media screen and (min-width: 840px) {
+                        :host([docked]) {
+                            display: grid !important;
+                        }
                     }
                     .scrim {
                         display: none !important;
@@ -370,34 +447,32 @@ export function patchDialog() {
                     .sheet-drag-handle > span {
                         display: none !important;
                     }
-                    @media screen and (max-width: 839.98px) {
-                        :host([data-sheet-mode="bottom"]) .sheet-drag-handle {
-                            position: relative !important;
-                            z-index: 2 !important;
-                            display: grid !important;
-                            place-items: center !important;
-                            width: 100% !important;
-                            height: 22px !important;
-                            padding-top: 6px !important;
-                            box-sizing: border-box !important;
-                            cursor: grab !important;
-                            touch-action: none !important;
-                            user-select: none !important;
-                            flex-shrink: 0 !important;
-                        }
-                        :host([data-sheet-mode="bottom"]) .sheet-drag-handle > span {
-                            display: block !important;
-                            width: 36px !important;
-                            height: 4px !important;
-                            border-radius: 999px !important;
-                            background: var(--md-sys-color-on-surface-variant, #79747e) !important;
-                            opacity: 0.55 !important;
-                            transition: opacity 0.15s ease, transform 0.15s ease !important;
-                        }
-                        :host([data-sheet-mode="bottom"]) .sheet-drag-handle:active > span {
-                            opacity: 0.9 !important;
-                            transform: scaleX(1.18) !important;
-                        }
+                    :host([data-sheet-mode="bottom"]) .sheet-drag-handle {
+                        position: relative !important;
+                        z-index: 2 !important;
+                        display: grid !important;
+                        place-items: center !important;
+                        width: 100% !important;
+                        height: 22px !important;
+                        padding-top: 6px !important;
+                        box-sizing: border-box !important;
+                        cursor: grab !important;
+                        touch-action: none !important;
+                        user-select: none !important;
+                        flex-shrink: 0 !important;
+                    }
+                    :host([data-sheet-mode="bottom"]) .sheet-drag-handle > span {
+                        display: block !important;
+                        width: 36px !important;
+                        height: 4px !important;
+                        border-radius: 999px !important;
+                        background: var(--md-sys-color-on-surface-variant, #79747e) !important;
+                        opacity: 0.55 !important;
+                        transition: opacity 0.15s ease, transform 0.15s ease !important;
+                    }
+                    :host([data-sheet-mode="bottom"]) .sheet-drag-handle:active > span {
+                        opacity: 0.9 !important;
+                        transform: scaleX(1.18) !important;
                     }
                     .scroller {
                         flex: 1 1 auto !important;
@@ -435,12 +510,13 @@ export function patchDialog() {
                     handle.className = 'sheet-drag-handle';
                     handle.setAttribute('part', 'drag-handle');
                     handle.setAttribute('aria-hidden', 'true');
-                    handle.hidden = !isMobileBottomSheet(instance);
+                    handle.hidden = !isBottomSheet(instance);
                     handle.innerHTML = '<span></span>';
                     container.insertBefore(handle, container.firstChild);
                 }
             }
 
+            syncResponsiveDockedState(instance);
             syncHandleVisibility(instance);
             setupBottomSheetGestures(instance);
             return true;
@@ -450,14 +526,22 @@ export function patchDialog() {
             if (origFirstUpdated) {
                 origFirstUpdated.apply(this, args);
             }
-            if (ensureAsideDrawerLayout(this) && this.open && this.dialog) {
-                this.dialog.setAttribute('open', '');
+            if (ensureAsideDrawerLayout(this) && this.hasAttribute('open')) {
+                closeOtherFloatingDialogs(this);
+                if (this.dialog) {
+                    this.dialog.setAttribute('open', '');
+                }
+                ensureSheetScrim(this);
             }
         };
 
         proto.show = async function () {
             if (ensureAsideDrawerLayout(this)) {
                 this.isOpening = true;
+                closeOtherFloatingDialogs(this);
+                if (isMobileViewport() && isFirstAsideDockedDialog(this)) {
+                    this.setAttribute('data-mobile-open', '');
+                }
                 await this.isConnectedPromise;
                 await this.updateComplete;
                 ensureAsideDrawerLayout(this);
@@ -467,12 +551,13 @@ export function patchDialog() {
                     }
                     this.dialog.setAttribute('open', '');
                 }
-                if (!isPermanentSheet(this)) {
+                if (!isPermanentSheet(this) && isBottomSheet(this)) {
                     setSheetSnap(this, 'half');
                 }
                 this.isOpen = true;
                 this.isOpening = false;
-                ensureSheetScrim(this, this.getAttribute('data-sheet-snap') || 'peek');
+                this.setAttribute('open', '');
+                ensureSheetScrim(this);
                 this.dispatchEvent(new Event('opened'));
                 return;
             }
@@ -481,14 +566,28 @@ export function patchDialog() {
 
         proto.close = async function (returnValue = this.returnValue) {
             if (isBodyAsideDialog(this)) {
+                if (!isMobileViewport() && isFirstAsideDockedDialog(this)) {
+                    return;
+                }
+                if (this.hasAttribute('open') && !this.hasAttribute('data-closing')) {
+                    this.setAttribute('data-closing', '');
+                    const scrim = document.getElementById('sheet-scrim');
+                    if (scrim) {
+                        scrim.style.opacity = '0';
+                        scrim.style.pointerEvents = 'none';
+                    }
+                    await new Promise((r) => setTimeout(r, 220));
+                    this.removeAttribute('data-closing');
+                }
                 this.isOpening = false;
+                this.removeAttribute('data-mobile-open');
                 await this.updateComplete;
                 if (this.dialog) {
                     this.dialog.removeAttribute('open');
                 }
                 this.isOpen = false;
                 this.removeAttribute('open');
-                ensureSheetScrim(this, 'peek');
+                ensureSheetScrim(this);
                 this.dispatchEvent(new Event('close', { cancelable: true }));
                 this.dispatchEvent(new Event('closed'));
                 return;
@@ -496,23 +595,63 @@ export function patchDialog() {
             return origClose.call(this, returnValue);
         };
 
-        // Sync handle visibility & scrim when crossing the 840px breakpoint
-        if (typeof window.matchMedia === 'function' && !window.__socraticAsideMqlAttached) {
-            window.__socraticAsideMqlAttached = true;
+        // Sync handle visibility, docked state & scrim when crossing the 840px breakpoint
+        if (typeof window.matchMedia === 'function' && !window.__asideMqlAttached) {
+            window.__asideMqlAttached = true;
             const mql = window.matchMedia('(max-width: 839.98px)');
             const onViewportChange = () => {
                 if (typeof document === 'undefined') return;
                 document.querySelectorAll('body > aside > md-dialog').forEach((el) => {
+                    syncResponsiveDockedState(el);
                     syncHandleVisibility(el);
                     if (!isMobileViewport()) {
                         el.removeAttribute('data-sheet-dragging');
                         el.style.removeProperty('--sheet-drag-h');
                     }
-                    ensureSheetScrim(el, el.getAttribute('data-sheet-snap') || 'peek');
+                    ensureSheetScrim(el);
                 });
             };
             if (typeof mql.addEventListener === 'function') {
                 mql.addEventListener('change', onViewportChange);
+            }
+            window.addEventListener('resize', onViewportChange);
+            document.addEventListener('click', (e) => {
+                if (!isMobileViewport()) return;
+                const trigger = e.target instanceof Element
+                    ? e.target.closest('body > main > md-fab, body > header > [drawer]')
+                    : null;
+                if (!trigger) return;
+                const docked = document.body.querySelector(':scope > aside:not(main ~ aside) > md-dialog[docked]');
+                if (docked && typeof docked.show === 'function') {
+                    docked.setAttribute('data-mobile-open', '');
+                    docked.show();
+                }
+            });
+
+            if (typeof MutationObserver !== 'undefined' && document.body) {
+                const bodyObserver = new MutationObserver((mutations) => {
+                    for (const m of mutations) {
+                        for (const node of m.addedNodes) {
+                            if (!(node instanceof Element)) continue;
+                            const dialogs = node.tagName === 'MD-DIALOG'
+                                ? [node]
+                                : Array.from(node.querySelectorAll ? node.querySelectorAll('md-dialog') : []);
+                            for (const dlg of dialogs) {
+                                if (isBodyAsideDialog(dlg)) {
+                                    ensureAsideDrawerLayout(dlg);
+                                    if (dlg.hasAttribute('open')) {
+                                        closeOtherFloatingDialogs(dlg);
+                                        ensureSheetScrim(dlg);
+                                    }
+                                }
+                            }
+                        }
+                        if (m.removedNodes.length > 0) {
+                            ensureSheetScrim();
+                        }
+                    }
+                });
+                bodyObserver.observe(document.body, { childList: true, subtree: true });
             }
         }
 

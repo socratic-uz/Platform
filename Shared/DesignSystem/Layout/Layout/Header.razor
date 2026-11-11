@@ -1,8 +1,10 @@
 @namespace Shared.Layout
 @using Microsoft.AspNetCore.Components.Sections
+@using Shared.Components
 
 <SectionContent SectionName=@Name>
 	<header @attributes=@AdditionalAttributes>
 		@ChildContent
+		<Avatar />
 	</header>
 </SectionContent>

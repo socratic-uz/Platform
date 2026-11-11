@@ -2,11 +2,11 @@
    Socratic Design System — LAYOUTS / body.css
    МАКРОСЕТКА (ТЕГ BODY)
    - Контейнер макросетки (display: grid)
-   - Трек подмакросетки (rail) имеет размер auto:
-     * Desktop (>= 840px): ширина rail равна сумме ширин потоковых элементов внутри body > aside
-       (0px если пусто или fixed; 76px если только nav; 76px + ширина md-dialog если дравер в потоке)
-     * Mobile (< 840px): высота rail равна сумме высот потоковых элементов внутри body > aside
-       (0px если пусто или fixed; 60px если только nav; высота md-dialog + 60px если дравер в потоке)
+   - Desktop (>= 840px): ВСЕГДА 3 колонки ("rail header header" / "rail main aside" / "rail footer footer")
+     * 1-я колонка (rail, auto): левый навигационный рельс (76px) + потоковая левая шторка (если есть; 0px если пусто)
+     * 2-я колонка (main, minmax(0, 1fr)): центральная рабочая область
+     * 3-я колонка (aside, auto): правый контекстный сайдбар после main (body > main ~ aside; 0px если отсутствует)
+   - Mobile (< 840px): одноколоночный стек ("header" / "main" / "footer" / "aside" / "rail")
    ========================================================================== */
 
 body {
@@ -15,29 +15,30 @@ body {
     overflow-x: clip;
 }
 
-/* Mobile (< 840px) — одноколоночный стек: шапка, контент, подвал, подмакросетка (auto) */
+/* Mobile (< 840px) — одноколоночный стек: шапка, контент, подвал, правая шторка (auto), нижний бар (auto) */
 
 @media screen and (max-width: 839.98px) {
 body {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto minmax(0, 1fr) auto auto;
+        grid-template-rows: auto minmax(0, 1fr) auto auto auto;
         grid-template-areas:
             "header"
             "main"
             "footer"
+            "aside"
             "rail";
     }
 }
 
-/* Desktop (>= 840px) — 2 колонки: подмакросетка (auto) + рабочая область (minmax(0, 1fr)) */
+/* Desktop (>= 840px) — ВСЕГДА 3 колонки: левая подмакросетка (rail) + рабочая область (main) + правая подмакросетка (aside) */
 
 @media screen and (min-width: 840px) {
 body {
-        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-columns: auto minmax(0, 1fr) auto;
         grid-template-rows: auto minmax(0, 1fr) auto;
         grid-template-areas:
-            "rail  header"
-            "rail  main"
-            "rail  footer";
+            "rail  header  header"
+            "rail  main    aside"
+            "rail  footer  footer";
     }
 }

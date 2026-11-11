@@ -66,13 +66,20 @@ header[kiosk] > nav > md-icon {
 
 /* --- Kiosk Category Filter Bar --- */
 main[kiosk] > nav {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-4);
     align-items: center;
     margin: var(--md-sys-spacing-1) 0 var(--md-sys-spacing-3);
 }
 
-main[kiosk] > nav > md-chip-set,
+main[kiosk] > nav > md-text-button, main[kiosk] > nav > button {
+    align-self: start;
+    min-width: max-content;
+    min-height: var(--md-sys-touch-target-kiosk);
+}
+
 main[kiosk] > md-chip-set,
 main[kiosk] > section > md-filled-card > md-chip-set {
     display: grid;
@@ -88,12 +95,6 @@ main[kiosk] > section > md-filled-card > md-chip-set {
     touch-action: pan-x;
     overscroll-behavior-x: contain;
     overflow-y: clip;
-}
-
-main[kiosk] > nav > md-text-button, main[kiosk] > nav > button {
-    align-self: start;
-    min-width: max-content;
-    min-height: var(--md-sys-touch-target-kiosk);
 }
 
 /* --- Kiosk Product Cards --- */
@@ -212,7 +213,9 @@ main[kiosk] > section > md-filled-card > aside {
 
 main[kiosk] > section > md-filled-card > aside > p {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
     font-weight: 700;
@@ -243,7 +246,9 @@ main[kiosk] > section > md-filled-card > aside:not(:has(> p)) {
 
 /* --- Card Footer --- */
 main[kiosk] > section > md-filled-card > footer {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
     margin-top: auto;
@@ -394,11 +399,15 @@ main[kiosk] > article > md-icon {
 
 /* --- Floating Bottom Cart Bar --- */
 footer[kiosk] {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: max-content;
     gap: 1rem;
     align-items: center;
     position: fixed;
-    inset: auto 0 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: var(--md-sys-z-bottom-nav);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-6) calc(var(--md-sys-spacing-3) + env(safe-area-inset-bottom, 0));
     border-top: 1px solid var(--md-sys-color-outline-variant);

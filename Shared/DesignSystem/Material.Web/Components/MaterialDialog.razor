@@ -1,6 +1,6 @@
 @using Microsoft.AspNetCore.Components.Web
 
-@if (Open)
+@if (Open || IsDocked)
 {
     <md-dialog open=@Open
                type=@Type

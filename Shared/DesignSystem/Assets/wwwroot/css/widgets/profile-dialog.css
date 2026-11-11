@@ -65,33 +65,31 @@ md-dialog[faceid-enrollment] ol > li[data-active] {
     background: var(--md-sys-color-primary);
 }
 
-md-dialog[profile] {
-    --md-dialog-container-max-inline-size: min(520px, calc(100vw - var(--md-sys-spacing-6, 24px)));
-    --md-dialog-container-min-inline-size: min(320px, calc(100vw - var(--md-sys-spacing-6, 24px)));
-    width: min(520px, calc(100vw - var(--md-sys-spacing-6, 24px)));
-    box-sizing: border-box;
-}
-
 md-dialog[profile] > header[slot="headline"],
 md-dialog[profile] > [slot="headline"] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3);
-    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-2);
 }
 
-md-dialog[profile] > form[slot="content"],
+md-dialog[profile] > section[slot="content"],
 md-dialog[profile] > [slot="content"] {
     display: grid;
+    align-content: start;
     gap: var(--md-sys-spacing-3);
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
-    max-height: min(70dvh, 600px);
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+}
+
+md-dialog[profile] > footer[slot="actions"] {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: var(--md-sys-spacing-2);
 }
 
 md-dialog[profile] details {
@@ -171,16 +169,9 @@ md-dialog[profile] details summary:hover {
 }
 
 @media screen and (max-width: 599.98px) {
-md-dialog[profile],
-    md-dialog[faceid-enrollment] {
+md-dialog[faceid-enrollment] {
         --md-dialog-container-min-inline-size: min(100vw - 16px, calc(100% - 16px));
         --md-dialog-container-max-inline-size: min(100vw - 16px, calc(100% - 16px));
         width: min(100vw - 16px, calc(100% - 16px));
-    }
-
-md-dialog[profile] > form[slot="content"],
-    md-dialog[profile] > [slot="content"] {
-        max-height: calc(100dvh - 160px);
-        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
     }
 }

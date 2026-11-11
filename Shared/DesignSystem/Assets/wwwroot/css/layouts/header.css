@@ -98,22 +98,6 @@ body > header > md-outlined-text-field {
     align-items: center;
 }
 
-body > header > menu :where(md-text-button, md-icon-button) {
-    min-width: var(--md-sys-touch-target-min);
-    min-height: var(--md-sys-touch-target-min);
-    --md-text-button-container-height: var(--md-sys-touch-target-min);
-    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
-}
-
-body > header > menu:last-child {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 0.5rem;
-    justify-self: end;
-    align-items: center;
-    width: auto;
-}
-
 body > header > a {
     display: inline-grid;
     grid-auto-flow: column;
@@ -130,15 +114,12 @@ body > header > a {
     white-space: nowrap;
 }
 
-body > header [drawer] {
-    display: none;
+body > header > [avatar] {
+    justify-self: end;
 }
 
-@media screen and (max-width: 839.98px) {
 body > header [drawer] {
-        display: inline-grid;
-        place-items: center;
-    }
+    display: none;
 }
 
 @media screen and (max-width: 839.98px) {
@@ -154,9 +135,15 @@ body > header > md-outlined-text-field {
         width: 100%;
     }
 
-body > header:has(> md-outlined-text-field) {
-        grid-template-columns: auto minmax(0, 1fr);
-        gap: 0.5rem 0.75rem;
+body > header:has(> a):has(> md-outlined-text-field),
+    body > header:has(> [drawer]) {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 0.5rem;
+    }
+
+body > header [drawer] {
+        display: inline-grid;
+        place-items: center;
     }
 }
 
@@ -177,5 +164,20 @@ body > header > nav > hgroup > h1 {
 body > header > nav > a {
         padding: 0 0.375rem;
         font-size: 0.85rem;
+    }
+}
+
+@media screen and (min-width: 840px) {
+body > header:not(:has(> a), :has(> nav)) > md-outlined-text-field {
+        grid-column: 1 / -1;
+    }
+
+body:has(> aside > nav) > header > md-outlined-text-field {
+        grid-column: 2 / -1;
+    }
+
+/* Если на десктопе есть боковой рельс, аватарка отображается внизу рельса, а в хедере скрывается */
+body:has(> aside > nav) > header > [avatar] {
+        display: none;
     }
 }

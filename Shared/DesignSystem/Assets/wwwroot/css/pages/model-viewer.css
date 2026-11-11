@@ -5,6 +5,7 @@
 
 main[model-viewer] {
     height: 100dvh;
+    min-height: 0;
     padding: 0;
     overflow: clip;
 }

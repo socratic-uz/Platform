@@ -22,6 +22,8 @@ public partial class MaterialDialog : ComponentBase
     [Parameter] public EventCallback<bool> OpenChanged { get; set; }
     [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object>? AdditionalAttributes { get; set; }
 
+    protected bool IsDocked => AdditionalAttributes != null && AdditionalAttributes.ContainsKey("docked");
+
     protected async Task HandleClose(EventArgs e)
     {
         Open = false;

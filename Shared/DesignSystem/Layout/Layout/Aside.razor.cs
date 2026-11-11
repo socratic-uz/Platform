@@ -11,6 +11,7 @@ using Shared.Services;
 public partial class Aside : ComponentBase
 {
     public const string Name = "aside";
+    public const string SecondaryName = "aside-secondary";
 
     [Inject] public IStringLocalizerFactory F { get; set; } = default!;
     [Inject] public ISettingsManager Settings { get; set; } = default!;
@@ -22,6 +23,7 @@ public partial class Aside : ComponentBase
     [Parameter] public RenderFragment? DialogContent { get; set; }
     [Parameter] public EventCallback<MouseEventArgs> OnToggleDialog { get; set; }
     [Parameter] public bool NoNav { get; set; }
+    [Parameter] public bool Secondary { get; set; }
     [Parameter] public bool Default { get; set; }
     [Parameter] public bool Empty { get; set; }
     [Parameter] public bool Visible { get; set; } = true;

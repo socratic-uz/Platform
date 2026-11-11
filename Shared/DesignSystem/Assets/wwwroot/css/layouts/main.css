@@ -32,3 +32,24 @@ body > main > article {
     min-width: 0;
     box-sizing: border-box;
 }
+
+body > main > md-fab {
+    position: fixed;
+    right: max(var(--md-sys-spacing-4, 16px), env(safe-area-inset-right, 0px));
+    bottom: calc(var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
+    z-index: 990;
+    min-width: 56px;
+    min-height: 56px;
+}
+
+@media screen and (max-width: 839.98px) {
+body:has(> aside > nav) > main > md-fab {
+        bottom: calc(60px + var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media screen and (min-width: 840px) {
+body:has(> aside > md-dialog[docked]) > main > md-fab {
+        display: none;
+    }
+}

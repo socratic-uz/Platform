@@ -1,38 +1,26 @@
 /* ==========================================================================
    Socratic Design System — PAGES / chat.css
-   Direct Landmarks for Chat Page: header[chat], aside > md-dialog[chat], main[chat]
+   Classless Page Landmark Architecture — AI Chat Page
    ========================================================================== */
 
 /* ==========================================================================
-   LANDMARK: HEADER (chat)
+   LANDMARK: HEADER (Topbar Navigation & Actions)
    ========================================================================== */
-header[chat] {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    background: rgb(from var(--md-sys-color-surface) r g b / 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
-}
-
-header[chat] > nav {
+header[chat] > hgroup {
     display: inline-grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-3);
     align-items: center;
 }
 
-header[chat] > nav > span {
+header[chat] > hgroup > span {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface);
     letter-spacing: -0.01em;
 }
 
-header[chat] > nav > a {
+header[chat] > hgroup > a {
     display: grid;
     place-items: center;
     width: var(--md-sys-touch-target-min, 48px);
@@ -47,25 +35,13 @@ header[chat] > nav > a {
                 background-color var(--md-sys-motion-duration-short2) ease;
 }
 
-header[chat] > nav > a > span {
-    display: none;
-}
-
-header[chat] > nav > a:hover {
+header[chat] > hgroup > a:hover {
     background: var(--md-sys-color-surface-container-high);
     transform: scale(1.05);
 }
 
-header[chat] > menu {
-    display: grid;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-header[chat] > menu > md-filled-button {
-    min-height: var(--md-sys-touch-target-min);
-    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+header[chat] > md-filled-button {
+    justify-self: end;
 }
 
 /* ==========================================================================
@@ -76,7 +52,9 @@ main[chat] {
     gap: 0;
     position: relative;
     z-index: 1;
-    height: calc(100dvh - var(--md-sys-spacing-header));
+    min-height: 0;
+    height: calc(100dvh - 72px);
+    max-height: calc(100dvh - 72px);
     padding: 0;
     background: transparent;
     overflow: hidden;
@@ -338,95 +316,79 @@ main[chat] > chat-messages > md-circular-progress {
     margin-block: var(--md-sys-spacing-2);
 }
 
-/* ==========================================================================
-   SIDEBAR: aside > md-dialog[chat]
-   ========================================================================== */
 aside > md-dialog[chat] > header[slot="headline"] {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.75rem;
-    align-items: center;
-    min-width: 0;
-}
-
-aside > md-dialog[chat] > header[slot="headline"] > hgroup {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: minmax(0, 1fr);
-    min-width: 0;
-    overflow: hidden;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
 }
 
-aside > md-dialog[chat] > header[slot="headline"] > hgroup > h3 {
-    min-width: 0;
+aside > md-dialog[chat] > header[slot="headline"] > span {
     color: var(--md-sys-color-on-surface);
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 
-aside > md-dialog[chat] > header[slot="headline"] > hgroup > p {
-    color: var(--md-sys-color-primary);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
 aside > md-dialog[chat] > header[slot="headline"] > md-icon {
-    width: 40px;
-    height: 40px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    font-size: 24px;
+    font-size: 20px;
 }
 
 aside > md-dialog[chat] > section[slot="content"] {
+    display: grid;
     gap: var(--md-sys-spacing-4);
     align-content: start;
-    padding-right: 0.25rem;
-    overflow-y: auto;
 }
 
-aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] {
-    display: grid;
-    gap: var(--md-sys-spacing-3);
-}
-
-aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > h4 {
+aside > md-dialog[chat] > section[slot="content"] > p {
+    margin: 0;
     color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1.45;
 }
 
-aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article {
+aside > md-dialog[chat] > section[slot="content"] > ul {
     display: grid;
-    gap: 0.25rem;
-    padding: 0.75rem 1rem;
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.5);
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > ul > li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    align-items: baseline;
+    padding: var(--md-sys-spacing-3);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
-}
-
-aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article > h5 {
     color: var(--md-sys-color-on-surface);
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.8125rem;
+    line-height: 1.4;
 }
 
-aside > md-dialog[chat] > section[slot="content"] > section[chat-roles] > article > p {
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: 0.85rem;
-    line-height: 1.4;
+aside > md-dialog[chat] > footer[slot="actions"] {
+    display: grid;
+    width: 100%;
+    padding-top: var(--md-sys-spacing-2);
+    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 aside > md-dialog[chat] > footer[slot="actions"] > md-filled-button {
     width: 100%;
-    min-height: var(--md-sys-touch-target-min);
-    --md-filled-button-container-height: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min, 48px);
+    --md-filled-button-container-height: var(--md-sys-touch-target-min, 48px);
 }
 
-/* ==========================================================================
-   ASSISTANT MARKDOWN PROSE RENDERING
-   ========================================================================== */
+/* Assistant Markdown Prose Rendering */
 assistant-message {
     display: block;
     line-height: 1.6;
@@ -549,11 +511,19 @@ assistant-message :not(pre) > code {
    RESPONSIVE MOBILE ADJUSTMENTS
    ========================================================================== */
 
-@media screen and (max-width: 599.98px) {
-header[chat] {
-        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+@media screen and (max-width: 839.98px) {
+header[chat] > hgroup > a,
+    header[chat] > md-filled-button {
+        display: none;
     }
 
+main[chat] {
+        height: calc(100dvh - 64px - 60px);
+        max-height: calc(100dvh - 64px - 60px);
+    }
+}
+
+@media screen and (max-width: 599.98px) {
 main[chat] > footer {
         padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3) max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
     }
@@ -565,5 +535,11 @@ main[chat] > chat-messages {
 main[chat] > chat-messages > article[user],
     main[chat] > chat-messages > article:not(:has(header), [empty], aside) {
         max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 840px) {
+header[chat] {
+        grid-template-columns: minmax(0, 1fr) auto;
     }
 }

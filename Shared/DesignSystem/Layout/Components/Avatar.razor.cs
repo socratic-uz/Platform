@@ -138,14 +138,28 @@ namespace Shared.Components
 
         public string AccentHex => FormModel != null ? Shared.Layout.Color.ToHex(FormModel.Accent) : "#00ffb3";
 
+        public bool IsAuthenticated => profile != null && profile.Id.HasValue && profile.Id.Value != Guid.Empty;
+
         public async Task SetLanguage(Language lang)
         {
             if (FormModel != null)
             {
                 FormModel.Language = lang;
-                await settings.SetLanguageAsync(lang);
-                StateHasChanged();
             }
+            try
+            {
+                await settings.SetLanguageAsync(lang);
+            }
+            catch { }
+
+            if (profile != null && IsAuthenticated)
+            {
+                profile.Language = lang;
+                try { await ClientFactory.GetClient<User>().Update(profile); } catch { }
+            }
+
+            StateHasChanged();
+            nav.NavigateTo(nav.Uri, forceLoad: true);
         }
 
         public async Task SetTheme(Theme theme)
@@ -184,11 +198,23 @@ namespace Shared.Components
             }
         }
 
+        private static Avatar? _dialogInstance;
+
+        [Parameter] public bool RenderButton { get; set; } = true;
+        [Parameter] public bool RenderDialog { get; set; }
         [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
         [Parameter] public EventCallback OnStateHasChanged { get; set; }
         [SupplyParameterFromForm] public User? FormModel { get; set; } = default!;
         [Parameter] public bool IsOpen { get; set; }
         [Parameter] public EventCallback<EventArgs> OnClose { get; set; }
+
+        protected override void OnParametersSet()
+        {
+            if (RenderDialog)
+            {
+                _dialogInstance = this;
+            }
+        }
 
         [Inject] NavigationManager Nav { get; set; } = default!;
         [Inject] IStringLocalizer L { get; set; } = default!;
@@ -221,22 +247,47 @@ namespace Shared.Components
 
         async Task OpenProfile(MouseEventArgs args)
         {
+            if (!RenderDialog && _dialogInstance != null && _dialogInstance != this)
+            {
+                await _dialogInstance.OpenProfile(args);
+                return;
+            }
+
             IsOpen = !IsOpen;
             Logger.LogInformation("[Profile] Opening profile dialog. IsOpen: {IsOpen}", IsOpen);
+            if (!IsOpen)
+            {
+                StateHasChanged();
+                await OnStateHasChanged.InvokeAsync();
+                return;
+            }
+
+            var currentLang = Language.Ru;
+            var currentTheme = Theme.System;
+            var currentAccent = 65459;
+
+            try { currentLang = await Settings.GetLanguageAsync(); } catch { }
+            try { currentTheme = await Settings.GetThemeAsync(); } catch { }
+            try { currentAccent = await Settings.GetAccentAsync(); } catch { }
+            color = currentAccent;
+
             try
             {
                 userIdStr = await Settings.GetUserIdAsync();
                 Logger.LogInformation("[Profile] Current user ID from settings: {UserId}", userIdStr ?? "(empty)");
-                profile ??= await ClientFactory.GetClient<User>().Read(new() { Id = Guid.TryParse(userIdStr, out var uG) ? uG : null });
-
-                if (profile == null)
+                if (Guid.TryParse(userIdStr, out var uG) && uG != Guid.Empty)
                 {
-                    Logger.LogWarning("[Profile] Profile entity could not be retrieved. Clearing access token and refreshing.");
-                    await Settings.SetAccessTokenAsync(string.Empty);
-                    Nav.Refresh(true);
-                    return;
+                    profile ??= await ClientFactory.GetClient<User>().Read(new() { Id = uG });
                 }
+            }
+            catch (Exception e)
+            {
+                Logger.LogWarning(e, "[Profile] Remote user profile unavailable (guest mode)");
+                profile = null;
+            }
 
+            if (profile != null && profile.Id.HasValue && profile.Id.Value != Guid.Empty)
+            {
                 Logger.LogInformation("[Profile] Profile loaded successfully. Email: {Email}, Phone: {Phone}, Theme: {Theme}",
                     profile.Email, profile.Phone, profile.Theme);
 
@@ -245,29 +296,51 @@ namespace Shared.Components
                 FormModel.Address ??= new SharedKernel.Protos.Address();
                 FormModel.Image ??= new Domain.Entities.File();
                 SyncImageAttachments();
-                StateHasChanged();
                 await Settings.SetLanguageAsync(profile.Language);
                 await Settings.SetThemeAsync(profile.Theme);
                 await Settings.SetAccentAsync(profile.Accent);
-
                 await CheckFaceIdStatusAsync();
-
-                await OnStateHasChanged.InvokeAsync();
             }
-            catch (Exception e)
+            else
             {
-                Logger.LogError(e, "[Profile] Error loading user profile");
-                Dialog.Window = b => b.AddContent(1, e.Message);
+                Logger.LogInformation("[Profile] Opening profile drawer in guest mode (Language/Theme/Accent settings enabled).");
+                FormModel = new User
+                {
+                    Language = currentLang,
+                    Theme = currentTheme,
+                    Accent = currentAccent,
+                    Name = new SharedKernel.Protos.Name(),
+                    Address = new SharedKernel.Protos.Address(),
+                    Image = new Domain.Entities.File()
+                };
             }
+
+            StateHasChanged();
             await OnStateHasChanged.InvokeAsync();
         }
         protected override async Task OnInitializedAsync()
         {
-            var lang = FormModel?.Language;
-            var theme = FormModel?.Theme;
-            color = await settings.GetAccentAsync();
-            languages = languages.OrderBy(l => l == lang ? 0 : 1).ToArray();
-            permission = await settings.GetPermissionAsync();
+            var currentLang = Language.Ru;
+            var currentTheme = Theme.System;
+            var currentAccent = 65459;
+
+            try { currentLang = await settings.GetLanguageAsync(); } catch { }
+            try { currentTheme = await settings.GetThemeAsync(); } catch { }
+            try { currentAccent = await settings.GetAccentAsync(); } catch { }
+
+            color = currentAccent;
+            FormModel ??= profile?.Clone() ?? new User
+            {
+                Language = currentLang,
+                Theme = currentTheme,
+                Accent = currentAccent,
+                Name = new SharedKernel.Protos.Name(),
+                Address = new SharedKernel.Protos.Address(),
+                Image = new Domain.Entities.File()
+            };
+
+            languages = languages.OrderBy(l => l == FormModel.Language ? 0 : 1).ToArray();
+            try { permission = await settings.GetPermissionAsync(); } catch { }
             await CheckFaceIdStatusAsync();
         }
 

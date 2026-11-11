@@ -10,10 +10,12 @@ using Microsoft.AspNetCore.Components.Sections;
 /// </summary>
 public sealed class AsideOutlet : ComponentBase
 {
+    [Parameter] public bool Secondary { get; set; }
+
     protected override void BuildRenderTree(RenderTreeBuilder builder)
     {
         builder.OpenComponent<SectionOutlet>(0);
-        builder.AddAttribute(1, nameof(SectionOutlet.SectionName), Aside.Name);
+        builder.AddAttribute(1, nameof(SectionOutlet.SectionName), Secondary ? Aside.SecondaryName : Aside.Name);
         builder.CloseComponent();
     }
 }

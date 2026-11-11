@@ -73,7 +73,7 @@ header[landing] > nav > menu[dropdown] > md-menu md-menu-item md-icon {
     color: var(--md-sys-color-primary);
 }
 
-header[landing] > menu {
+header[landing] > md-filled-button {
     justify-self: end;
     display: inline-grid;
     grid-auto-flow: column;
@@ -1569,7 +1569,7 @@ footer[landing] {
 
 @media screen and (max-width: 839.98px) {
 header[landing] {
-        grid-template-columns: auto;
+        grid-template-columns: auto minmax(0, 1fr);
         gap: var(--md-sys-spacing-2);
         padding-inline: var(--md-sys-spacing-3);
         justify-content: start;
@@ -1586,7 +1586,7 @@ header[landing] > md-icon-button[drawer] {
 
 header[landing] > a:first-of-type,
 header[landing] > nav,
-header[landing] > menu {
+header[landing] > md-filled-button {
         display: none;
     }
 

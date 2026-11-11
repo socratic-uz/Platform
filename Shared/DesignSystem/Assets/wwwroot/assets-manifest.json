@@ -128,13 +128,13 @@
     },
     {
       "url": "_content/Assets/css/layouts/aside.css",
-      "size": 16006,
-      "hash": "sha256-20131720d668"
+      "size": 25156,
+      "hash": "sha256-110166dd8be1"
     },
     {
       "url": "_content/Assets/css/layouts/body.css",
-      "size": 1854,
-      "hash": "sha256-6216812837d7"
+      "size": 2037,
+      "hash": "sha256-0b6cad0a986d"
     },
     {
       "url": "_content/Assets/css/layouts/footer.css",
@@ -143,13 +143,13 @@
     },
     {
       "url": "_content/Assets/css/layouts/header.css",
-      "size": 4525,
-      "hash": "sha256-be0730800432"
+      "size": 4588,
+      "hash": "sha256-95be2643d0d4"
     },
     {
       "url": "_content/Assets/css/layouts/main.css",
-      "size": 1041,
-      "hash": "sha256-1ef08119011a"
+      "size": 1628,
+      "hash": "sha256-95427a9489b9"
     },
     {
       "url": "_content/Assets/css/pages/about.css",
@@ -168,8 +168,8 @@
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
-      "size": 17844,
-      "hash": "sha256-29e05ded6567"
+      "size": 16793,
+      "hash": "sha256-70336d6fa428"
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
@@ -198,8 +198,8 @@
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
-      "size": 53593,
-      "hash": "sha256-bb2d0afb4549"
+      "size": 53632,
+      "hash": "sha256-a35a982f402f"
     },
     {
       "url": "_content/Assets/css/pages/map.css",
@@ -208,8 +208,8 @@
     },
     {
       "url": "_content/Assets/css/pages/model-viewer.css",
-      "size": 360,
-      "hash": "sha256-aa7b083c4f61"
+      "size": 379,
+      "hash": "sha256-a010b26ae4ac"
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
@@ -218,8 +218,8 @@
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
-      "size": 10944,
-      "hash": "sha256-ee671183ced1"
+      "size": 9862,
+      "hash": "sha256-485c209515b9"
     },
     {
       "url": "_content/Assets/css/pages/player.css",
@@ -238,8 +238,8 @@
     },
     {
       "url": "_content/Assets/css/pages/qr.css",
-      "size": 7436,
-      "hash": "sha256-155deefad15a"
+      "size": 6978,
+      "hash": "sha256-9468e0fa33a4"
     },
     {
       "url": "_content/Assets/css/pages/seat-designer.css",
@@ -368,8 +368,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 18630,
-      "hash": "sha256-577a9e5eda74"
+      "size": 18867,
+      "hash": "sha256-d7f567dab208"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -398,8 +398,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/profile-dialog.css",
-      "size": 5879,
-      "hash": "sha256-915a7a83b6a4"
+      "size": 5311,
+      "hash": "sha256-6e8d00c55914"
     },
     {
       "url": "_content/Assets/css/widgets/qr-designer.css",
@@ -493,8 +493,8 @@
     },
     {
       "url": "_content/Assets/js/components/dialog-patch.js",
-      "size": 22730,
-      "hash": "sha256-d0ebe60d0975"
+      "size": 29282,
+      "hash": "sha256-be17a408c242"
     },
     {
       "url": "_content/Assets/js/components/material-color-utilities.bundle.js",
@@ -503,8 +503,8 @@
     },
     {
       "url": "_content/Assets/js/components/material-web.bundle.js",
-      "size": 838515,
-      "hash": "sha256-7b848c2ac462"
+      "size": 814981,
+      "hash": "sha256-8f5a2d5967a0"
     },
     {
       "url": "_content/Assets/js/components/slider-patch.js",

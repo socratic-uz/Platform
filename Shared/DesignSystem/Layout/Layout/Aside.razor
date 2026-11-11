@@ -2,14 +2,15 @@
 @using Microsoft.AspNetCore.Components.Sections
 @using Microsoft.AspNetCore.Components.Routing
 @using Material.Web
+@using Shared.Components
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 
 @if (Visible && !Empty)
 {
-	<SectionContent SectionName=@Name>
-		<aside aria-label="Navigation Rail" @attributes=@AdditionalAttributes>
-			@if (!NoNav)
+	<SectionContent SectionName=@(Secondary ? SecondaryName : Name)>
+		<aside aria-label=@(Secondary ? "Contextual Sidebar" : "Navigation Rail") @attributes=@AdditionalAttributes>
+			@if (!NoNav && !Secondary)
 			{
 				<nav aria-label="Main Navigation">
 					@if (OnToggleDialog.HasDelegate)
@@ -49,11 +50,16 @@
 							<span>@(L?[NavAnalytics])</span>
 						</NavLink>
 					}
+					<Avatar />
 				</nav>
 			}
 			@if (DialogContent != null)
 			{
 				@DialogContent
+			}
+			@if (!Secondary)
+			{
+				<Avatar RenderButton=@false RenderDialog=@true />
 			}
 		</aside>
 	</SectionContent>

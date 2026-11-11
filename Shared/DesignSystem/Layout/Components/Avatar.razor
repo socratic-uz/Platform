@@ -1,333 +1,361 @@
 @using System.Diagnostics.CodeAnalysis
+@using Shared.Layout
 @using static Assets.Constants.Icons
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Actions
 @using static Material.Web.Components.ButtonVariant
 
-<Button Variant=@Outlined OnClick=@OpenProfile avatar AriaLabel=@l[Profile]>
-	@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
-	{
-		<img src=@profile.Image.ToProfileImage() alt="Avatar" />
-	}
-	else
-	{
-		<Icon Name=@Person />
-	}
-</Button>
-
-@if (IsOpen)
+@if (RenderButton)
 {
-	<MaterialDialog profile Open=@IsOpen OnClose=@OnClose Type="alert">
-		<Headline>
-			<span>@l[EditProfile]</span>
-			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
-		</Headline>
-		<ChildContent>
-		@if (FormModel is null)
+	<Button Variant=@Outlined OnClick=@OpenProfile avatar AriaLabel=@l[Profile]>
+		@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
 		{
-			<Progress slot="content" IsCircular="true" FourColor="true" Indeterminate="true" />
+			<img src=@profile.Image.ToProfileImage() alt="Avatar" />
 		}
 		else
 		{
-			<EditForm Model=@FormModel slot="content" method="dialog" @onsubmit:preventDefault>
-				<AntiforgeryToken />
-				<List>
-					<!--Id-->
-					<details @ontoggle=@GetRoles>
-						<summary>
-							<ListItem type="button" Headline=@($"{FormModel?.Name.FirstName} {FormModel?.Name?.LastName}") StartIcon=@Person EndIcon=@ArrowDropDown />
-						</summary>
-						<fieldset>
-							<input type="hidden" name=@profile.Id value=@FormModel.Id />
-							<TextField TValue="Guid?"
-									   Variant=@(TextField<Guid?>.TextFieldVariant.Outlined)
-									   Label=@l[Id]
-									   Value=@FormModel.Id
-									   ValueExpression="() => FormModel.Id"
-									   Disabled="true" />
-							@if (Roles.Any())
-							{
-								@foreach (var role in Roles.Where(r => r.UserId == profile?.Id))
-								{
-									<label>
-										<Radio Name="role"
-											   Checked=@(role.Id.ToString() == roleId)
-											   OnChange=@(async () => await Switch(role.Id.ToString()))
-											   touch-target="wrapper" />
-										<span aria-hidden="true">@role.Name</span>
-									</label>
-								}
-							}
-							else
-							{
-								<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
-							}
-						</fieldset>
-						<Divider />
-					</details>
-
-					<Divider />
-
-					<!--Phone-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[Phone] StartIcon=@Phone EndIcon=@ArrowDropDown />
-						</summary>
-
-						<TextField TValue="string"
-								   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-								   Label=@l[Phone]
-								   Value=@FormModel.Phone
-								   ValueExpression="() => FormModel.Phone"
-								   Disabled="true" />
-						<Divider />
-					</details>
-
-					<!--Photo-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[PhotoLabel] StartIcon=@AddPhotoAlternate EndIcon=@ArrowDropDown />
-						</summary>
-
-						<Material.Web.Components.FilePicker
-							Attachments=@_imageAttachments
-							Label=@l[PhotoLabel]
-							UploadLabel=@l[ProfileUploadPhoto]
-							RemoveLabel=@l[Delete]
-							Multiple="false"
-							Accept="image/*"
-							MaxAllowedFiles="1"
-							OnChanged=@HandleImageChanged />
-						<Divider />
-					</details>
-
-					<!--Name-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[NameLabel] StartIcon=@IdCard EndIcon=@ArrowDropDown />
-						</summary>
-
-						<fieldset>
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[FirstName]
-									   autofocus
-									   Value=@FormModel.Name.FirstName
-									   ValueChanged=@(val => FormModel.Name.FirstName = val)
-									   ValueExpression="() => FormModel.Name.FirstName"
-									   OnInput=@(e => FormModel.Name.FirstName = e.Value?.ToString() ?? string.Empty)
-									   MaxLength="10"
-									   Required="true"
-									   SupportingText="*required"
-									   ErrorText="Please fill out this field" />
-
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[LastName]
-									   Value=@FormModel.Name.LastName
-									   ValueChanged=@(val => FormModel.Name.LastName = val)
-									   ValueExpression="() => FormModel.Name.LastName"
-									   OnInput=@(e => FormModel.Name.LastName = e.Value?.ToString() ?? string.Empty)
-									   MaxLength="10"
-									   Required="true"
-									   SupportingText="*required"
-									   ErrorText="Please fill out this field" />
-
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[MiddleName]
-									   Value=@FormModel.Name.MiddleName
-									   ValueChanged=@(val => FormModel.Name.MiddleName = val)
-									   ValueExpression="() => FormModel.Name.MiddleName"
-									   OnInput=@(e => FormModel.Name.MiddleName = e.Value?.ToString() ?? string.Empty)
-									   MaxLength="10"
-									   Required="true"
-									   SupportingText="*required"
-									   ErrorText="Please fill out this field" />
-						</fieldset>
-						<Divider />
-					</details>
-
-					<!--Address-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[AddressLabel] StartIcon=@LocationOn EndIcon=@ArrowDropDown />
-						</summary>
-						<section>
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[City]
-									   Value=@(GetOrCreateAddress().City)
-									   ValueChanged=@(c => GetOrCreateAddress().City = c)
-									   ValueExpression="() => GetOrCreateAddress().City" />
-							<TextField TValue="string"
-									   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-									   Label=@l[Street]
-									   Value=@(GetOrCreateAddress().Street)
-									   ValueChanged=@(s => GetOrCreateAddress().Street = s)
-									   ValueExpression="() => GetOrCreateAddress().Street" />
-						</section>
-						<Divider />
-					</details>
-
-					<!--Language-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[LanguageLabel] StartIcon=@Translate EndIcon=@ArrowDropDown />
-						</summary>
-
-						<fieldset>
-							@foreach (var language in languages)
-							{
-								<label>
-									<Radio Name="language"
-										   Checked=@(language == (Language)FormModel.Language)
-										   OnChange=@(() => FormModel.Language = language)
-										   touch-target="wrapper" />
-									<span aria-hidden="true">@l[language.ToString()]</span>
-								</label>
-							}
-						</fieldset>
-						<Divider />
-					</details>
-
-					<!--Accent-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[AccentLabel] StartIcon=@Palette EndIcon=@ArrowDropDown />
-						</summary>
-
-						<fieldset>
-							<Select Label=@l[ThemeLabel]
-									Value=@ThemeString
-									ValueChanged=@OnThemeChanged
-									ValueExpression="() => ThemeString"
-									Options=@ThemeOptions />
-							<ColorPicker Label=@l[PaletteColor] Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
-						</fieldset>
-						<Divider />
-					</details>
-
-					<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
-					<details>
-						<summary>
-							<ListItem type="button" Headline=@l[ProfileSecurityAndLogin] StartIcon=@Security EndIcon=@ArrowDropDown />
-						</summary>
-							<p>
-								@l[Profile_SecuritySubtext]
-							</p>
-
-							<!-- Face ID -->
-							<article>
-								<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
-								<hgroup>
-									<strong>@l[ProfileFaceIdTitle]</strong>
-									<small>
-										@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
-									</small>
-								</hgroup>
-								<menu>
-									<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
-										@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
-									</Button>
-									@if (isFaceIdConfigured)
-									{
-										<IconButton Icon=@DeleteOutline OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
-									}
-								</menu>
-							</article>
-
-							<!-- Google SSO -->
-							<article>
-								<Icon Name=@AccountCircle />
-								<hgroup>
-									<strong>Google SSO</strong>
-									<small>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
-								</hgroup>
-								<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
-									@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
-								</Button>
-							</article>
-
-							<!-- Passkeys (FIDO2 / WebAuthn) -->
-							<article>
-								<Icon Name=@Fingerprint />
-								<hgroup>
-									<strong>Passkeys (WebAuthn)</strong>
-									<small>@l[ProfileDeviceBiometricsSubtext]</small>
-								</hgroup>
-								<Button Variant=@Outlined OnClick=@RegisterPasskey>
-									@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
-								</Button>
-							</article>
-						<Divider />
-					</details>
-
-					<!--Support-->
-					<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link" Headline=@l[Support] StartIcon=@SupportAgent EndIcon=@Link />
-
-					@if (permission > Permission.Customer)
-					{
-						<!--Roles-->
-						<ListItem Href="roles" type="button" Headline=@l[RolesLabel] StartIcon=@Group EndIcon=@ChevronRight />
-					}
-
-					<!--Log out-->
-					<ListItem type="button" Headline=@l[LogOut] StartIcon=@Logout OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); nav.Refresh(); }) />
-				</List>
-			</EditForm>
+			<Icon Name=@Person />
 		}
-		</ChildContent>
-		<Actions>
-			<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
-			<Button Variant=@Text value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
-			<Button Variant=@Text value="cancel" OnClick=@(e => IsOpen = false)>@l[Cancel]</Button>
-		</Actions>
-	</MaterialDialog>
+	</Button>
 }
 
-@if (isFaceIdModalOpen)
+@if (RenderDialog)
 {
-	<MaterialDialog faceid-enrollment Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
-		<Headline>
-			<span>@l[ProfileFaceIdTitle]</span>
-			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
-		</Headline>
-		<Content>
-			<!-- 3-Step Calibration Progress Bar -->
-			<ol>
-				<li data-active=@(currentEnrollmentStage >= 1)></li>
-				<li data-active=@(currentEnrollmentStage >= 2)></li>
-				<li data-active=@(currentEnrollmentStage >= 3)></li>
-			</ol>
+	<MaterialDialog profile Open=@IsOpen OpenChanged=@(v => IsOpen = v) NoFocusTrap=@true OnClose=@OnClose aria-label=@l[Profile]>
+		<header slot="headline">
+			<span>@(IsAuthenticated ? l[EditProfile] : l[Profile])</span>
+			<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@(e => IsOpen = false) Icon=@Close />
+		</header>
 
-			<figure>
-				@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
-				{
-					<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
-									  Parameters=@CameraStreamerParameters />
-				}
-				else if (isFaceIdModalOpen)
-				{
-					<figure>
-						<Icon Name=@VideocamOff />
-						<span>@l[ProfileCameraUnavailable]</span>
-					</figure>
-				}
-				<!-- Dynamic Pose Direction Badge -->
-				<span>
-					@(currentEnrollmentStage == 1 ? l[ProfileLookStraight] : currentEnrollmentStage == 2 ? l[ProfileTurnLeft] : l[ProfileTurnRight])
-				</span>
-			</figure>
-			<p>
-				@faceIdStatusMessage
-			</p>
-			<p>
-				@l[ProfileCenterFaceInstruction]
-			</p>
-		</Content>
-		<Actions>
-			<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
-		</Actions>
+		<section slot="content">
+			@if (FormModel is null)
+			{
+				<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
+			}
+			else
+			{
+				<EditForm Model=@FormModel method="dialog" @onsubmit:preventDefault>
+					<AntiforgeryToken />
+					<List>
+						@if (IsAuthenticated)
+						{
+							<!--Id-->
+							<details @ontoggle=@GetRoles>
+								<summary>
+									<ListItem type="button" Headline=@($"{FormModel?.Name.FirstName} {FormModel?.Name?.LastName}") StartIcon=@Person EndIcon=@ArrowDropDown />
+								</summary>
+								<fieldset>
+									<input type="hidden" name=@profile!.Id value=@FormModel.Id />
+									<TextField TValue="Guid?"
+											   Variant=@(TextField<Guid?>.TextFieldVariant.Outlined)
+											   Label=@l[Id]
+											   Value=@FormModel.Id
+											   ValueExpression="() => FormModel.Id"
+											   Disabled="true" />
+									@if (Roles.Any())
+									{
+										@foreach (var role in Roles.Where(r => r.UserId == profile?.Id))
+										{
+											<label>
+												<Radio Name="role"
+													   Checked=@(role.Id.ToString() == roleId)
+													   OnChange=@(async () => await Switch(role.Id.ToString()))
+													   touch-target="wrapper" />
+												<span aria-hidden="true">@role.Name</span>
+											</label>
+										}
+									}
+									else
+									{
+										<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
+									}
+								</fieldset>
+								<Divider />
+							</details>
+
+							<Divider />
+
+							<!--Phone-->
+							<details>
+								<summary>
+									<ListItem type="button" Headline=@l[Phone] StartIcon=@Phone EndIcon=@ArrowDropDown />
+								</summary>
+
+								<TextField TValue="string"
+										   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+										   Label=@l[Phone]
+										   Value=@FormModel.Phone
+										   ValueExpression="() => FormModel.Phone"
+										   Disabled="true" />
+								<Divider />
+							</details>
+
+							<!--Photo-->
+							<details>
+								<summary>
+									<ListItem type="button" Headline=@l[PhotoLabel] StartIcon=@AddPhotoAlternate EndIcon=@ArrowDropDown />
+								</summary>
+
+								<Material.Web.Components.FilePicker
+									Attachments=@_imageAttachments
+									Label=@l[PhotoLabel]
+									UploadLabel=@l[ProfileUploadPhoto]
+									RemoveLabel=@l[Delete]
+									Multiple="false"
+									Accept="image/*"
+									MaxAllowedFiles="1"
+									OnChanged=@HandleImageChanged />
+								<Divider />
+							</details>
+
+							<!--Name-->
+							<details>
+								<summary>
+									<ListItem type="button" Headline=@l[NameLabel] StartIcon=@IdCard EndIcon=@ArrowDropDown />
+								</summary>
+
+								<fieldset>
+									<TextField TValue="string"
+											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+											   Label=@l[FirstName]
+											   autofocus
+											   Value=@FormModel.Name.FirstName
+											   ValueChanged=@(val => FormModel.Name.FirstName = val)
+											   ValueExpression="() => FormModel.Name.FirstName"
+											   OnInput=@(e => FormModel.Name.FirstName = e.Value?.ToString() ?? string.Empty)
+											   MaxLength="10"
+											   Required="true"
+											   SupportingText="*required"
+											   ErrorText="Please fill out this field" />
+
+									<TextField TValue="string"
+											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+											   Label=@l[LastName]
+											   Value=@FormModel.Name.LastName
+											   ValueChanged=@(val => FormModel.Name.LastName = val)
+											   ValueExpression="() => FormModel.Name.LastName"
+											   OnInput=@(e => FormModel.Name.LastName = e.Value?.ToString() ?? string.Empty)
+											   MaxLength="10"
+											   Required="true"
+											   SupportingText="*required"
+											   ErrorText="Please fill out this field" />
+
+									<TextField TValue="string"
+											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+											   Label=@l[MiddleName]
+											   Value=@FormModel.Name.MiddleName
+											   ValueChanged=@(val => FormModel.Name.MiddleName = val)
+											   ValueExpression="() => FormModel.Name.MiddleName"
+											   OnInput=@(e => FormModel.Name.MiddleName = e.Value?.ToString() ?? string.Empty)
+											   MaxLength="10"
+											   Required="true"
+											   SupportingText="*required"
+											   ErrorText="Please fill out this field" />
+								</fieldset>
+								<Divider />
+							</details>
+
+							<!--Address-->
+							<details>
+								<summary>
+									<ListItem type="button" Headline=@l[AddressLabel] StartIcon=@LocationOn EndIcon=@ArrowDropDown />
+								</summary>
+								<section>
+									<TextField TValue="string"
+											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+											   Label=@l[City]
+											   Value=@(GetOrCreateAddress().City)
+											   ValueChanged=@(c => GetOrCreateAddress().City = c)
+											   ValueExpression="() => GetOrCreateAddress().City" />
+									<TextField TValue="string"
+											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+											   Label=@l[Street]
+											   Value=@(GetOrCreateAddress().Street)
+											   ValueChanged=@(s => GetOrCreateAddress().Street = s)
+											   ValueExpression="() => GetOrCreateAddress().Street" />
+								</section>
+								<Divider />
+							</details>
+						}
+
+						<!--Language-->
+						<details open=@(!IsAuthenticated)>
+							<summary>
+								<ListItem type="button" Headline=@l[LanguageLabel] StartIcon=@Translate EndIcon=@ArrowDropDown />
+							</summary>
+
+							<fieldset>
+								@foreach (var language in languages)
+								{
+									<label>
+										<Radio Name="language"
+											   Checked=@(language == (Language)FormModel.Language)
+											   OnChange=@(async () => await SetLanguage(language))
+											   touch-target="wrapper" />
+										<span aria-hidden="true">@l[language.ToString()]</span>
+									</label>
+								}
+							</fieldset>
+							<Divider />
+						</details>
+
+						<!--Accent-->
+						<details open=@(!IsAuthenticated)>
+							<summary>
+								<ListItem type="button" Headline=@l[AccentLabel] StartIcon=@Palette EndIcon=@ArrowDropDown />
+							</summary>
+
+							<fieldset>
+								<Select Label=@l[ThemeLabel]
+										Value=@ThemeString
+										ValueChanged=@OnThemeChanged
+										ValueExpression="() => ThemeString"
+										Options=@ThemeOptions />
+								<ColorPicker Label=@l[PaletteColor] Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
+							</fieldset>
+							<Divider />
+						</details>
+
+						@if (IsAuthenticated)
+						{
+							<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
+							<details>
+								<summary>
+									<ListItem type="button" Headline=@l[ProfileSecurityAndLogin] StartIcon=@Security EndIcon=@ArrowDropDown />
+								</summary>
+									<p>
+										@l[Profile_SecuritySubtext]
+									</p>
+
+									<!-- Face ID -->
+									<article>
+										<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
+										<hgroup>
+											<strong>@l[ProfileFaceIdTitle]</strong>
+											<small>
+												@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
+											</small>
+										</hgroup>
+										<menu>
+											<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
+												@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
+											</Button>
+											@if (isFaceIdConfigured)
+											{
+												<IconButton Icon=@DeleteOutline OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
+											}
+										</menu>
+									</article>
+
+									<!-- Google SSO -->
+									<article>
+										<Icon Name=@AccountCircle />
+										<hgroup>
+											<strong>Google SSO</strong>
+											<small>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
+										</hgroup>
+										<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
+											@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
+										</Button>
+									</article>
+
+									<!-- Passkeys (FIDO2 / WebAuthn) -->
+									<article>
+										<Icon Name=@Fingerprint />
+										<hgroup>
+											<strong>Passkeys (WebAuthn)</strong>
+											<small>@l[ProfileDeviceBiometricsSubtext]</small>
+										</hgroup>
+										<Button Variant=@Outlined OnClick=@RegisterPasskey>
+											@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
+										</Button>
+									</article>
+								<Divider />
+							</details>
+						}
+
+						<!--Support-->
+						<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link" Headline=@l[Support] StartIcon=@SupportAgent EndIcon=@Link />
+
+						@if (IsAuthenticated)
+						{
+							@if (permission > Permission.Customer)
+							{
+								<!--Roles-->
+								<ListItem Href="roles" type="button" Headline=@l[RolesLabel] StartIcon=@Group EndIcon=@ChevronRight />
+							}
+
+							<!--Log out-->
+							<ListItem type="button" Headline=@l[LogOut] StartIcon=@Logout OnClick=@(async e => { await settings.SetAccessTokenAsync(string.Empty); profile = null; IsOpen = false; nav.Refresh(); }) />
+						}
+						else
+						{
+							<!--Sign In-->
+							<ListItem Href="/signin" type="link" Headline=@l[Login] StartIcon=@Login EndIcon=@ChevronRight />
+						}
+					</List>
+				</EditForm>
+			}
+		</section>
+
+		@if (IsAuthenticated)
+		{
+			<footer slot="actions">
+				<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
+				<Button Variant=@Filled value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
+			</footer>
+		}
+		else
+		{
+			<footer slot="actions">
+				<Button Variant=@Filled Href="/signin" Icon=@Login>@l[Login]</Button>
+			</footer>
+		}
 	</MaterialDialog>
+
+	@if (isFaceIdModalOpen)
+	{
+		<MaterialDialog faceid-enrollment Open=@isFaceIdModalOpen OnClose=@CloseFaceIdModal Type="alert">
+			<Headline>
+				<span>@l[ProfileFaceIdTitle]</span>
+				<IconButton form="form" value="close" AriaLabel=@l[Close] OnClick=@CloseFaceIdModal Icon=@Close />
+			</Headline>
+			<Content>
+				<!-- 3-Step Calibration Progress Bar -->
+				<ol>
+					<li data-active=@(currentEnrollmentStage >= 1)></li>
+					<li data-active=@(currentEnrollmentStage >= 2)></li>
+					<li data-active=@(currentEnrollmentStage >= 3)></li>
+				</ol>
+
+				<figure>
+					@if (isFaceIdModalOpen && CameraStreamerUiProvider?.CameraStreamerComponentType != null)
+					{
+						<DynamicComponent Type=@CameraStreamerUiProvider.CameraStreamerComponentType
+										  Parameters=@CameraStreamerParameters />
+					}
+					else if (isFaceIdModalOpen)
+					{
+						<figure>
+							<Icon Name=@VideocamOff />
+							<span>@l[ProfileCameraUnavailable]</span>
+						</figure>
+					}
+					<!-- Dynamic Pose Direction Badge -->
+					<span>
+						@(currentEnrollmentStage == 1 ? l[ProfileLookStraight] : currentEnrollmentStage == 2 ? l[ProfileTurnLeft] : l[ProfileTurnRight])
+					</span>
+				</figure>
+				<p>
+					@faceIdStatusMessage
+				</p>
+				<p>
+					@l[ProfileCenterFaceInstruction]
+				</p>
+			</Content>
+			<Actions>
+				<Button Variant=@Text value="cancel" OnClick=@CloseFaceIdModal>@l[Cancel]</Button>
+			</Actions>
+		</MaterialDialog>
+	}
 }
