@@ -1,17 +1,17 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / rail.css
+   Socratic Design System — FOUNDATIONS / rail.css
    НАВИГАЦИОННЫЙ РЕЙЛ И НИЖНИЙ БАР (BODY > ASIDE:HAS(~ MAIN) > NAV)
    - Desktop (>= 840px): вертикальный навигационный рельс (76px)
    - Mobile (< 840px): горизонтальный навигационный бар (60px)
    ========================================================================== */
 
 /* --- Universal Rail Links, Toggle Button & Avatar --- */
-body > aside:has(~ main) > nav > md-icon-button {
+body>aside:has(~ main)>nav>md-icon-button {
     justify-self: center;
     align-self: center;
 }
 
-body > aside:has(~ main) > nav > a {
+body>aside:has(~ main)>nav>a {
     display: grid;
     place-content: center;
     place-items: center;
@@ -22,7 +22,7 @@ body > aside:has(~ main) > nav > a {
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
-body > aside:has(~ main) > nav > a > span {
+body>aside:has(~ main)>nav>a>span {
     min-inline-size: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -31,7 +31,7 @@ body > aside:has(~ main) > nav > a > span {
     line-height: 1.15;
 }
 
-body > aside:has(~ main) > nav > a > md-icon {
+body>aside:has(~ main)>nav>a>md-icon {
     display: grid;
     place-items: center;
     font-size: var(--md-icon-size, 24px);
@@ -41,25 +41,25 @@ body > aside:has(~ main) > nav > a > md-icon {
         color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
-body > aside:has(~ main) > nav > a:hover > md-icon {
+body>aside:has(~ main)>nav>a:hover>md-icon {
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
 }
 
-body > aside:has(~ main) > nav > a[aria-current="page"] > span,
-body > aside:has(~ main) > nav > a.active > span {
+body>aside:has(~ main)>nav>a[aria-current="page"]>span,
+body>aside:has(~ main)>nav>a.active>span {
     color: var(--md-sys-color-on-surface);
     font-weight: 700;
 }
 
-body > aside:has(~ main) > nav > a[aria-current="page"] > md-icon,
-body > aside:has(~ main) > nav > a.active > md-icon {
+body>aside:has(~ main)>nav>a[aria-current="page"]>md-icon,
+body>aside:has(~ main)>nav>a.active>md-icon {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
 /* В мобильном нижнем баре кнопка аватара не отображается */
-body > aside:has(~ main) > nav > [avatar] {
+body>aside:has(~ main)>nav>[avatar] {
     display: none;
 }
 
@@ -68,7 +68,7 @@ body > aside:has(~ main) > nav > [avatar] {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-body > aside:has(~ main) > nav {
+    body>aside:has(~ main)>nav {
         display: grid;
         order: 2;
         grid-auto-flow: column;
@@ -81,13 +81,13 @@ body > aside:has(~ main) > nav {
         align-items: center;
         justify-items: center;
         z-index: 90;
-        border-top: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container);
-        box-shadow: 0 -2px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.12);
+        border: none;
+        background: var(--md-sys-color-surface-container-lowest);
+        box-shadow: none;
         overflow: hidden;
     }
 
-body > aside:has(~ main) > nav > a {
+    body>aside:has(~ main)>nav>a {
         grid-template-rows: auto auto;
         gap: 2px;
         min-width: 0;
@@ -96,12 +96,12 @@ body > aside:has(~ main) > nav > a {
         padding: 4px 2px;
     }
 
-body > aside:has(~ main) > nav > a > span {
+    body>aside:has(~ main)>nav>a>span {
         font-size: var(--md-sys-typescale-label-small-size);
         font-weight: var(--md-sys-typescale-label-small-weight);
     }
 
-body > aside:has(~ main) > nav > a > md-icon {
+    body>aside:has(~ main)>nav>a>md-icon {
         width: 48px;
         height: 28px;
         font-size: 22px;
@@ -113,7 +113,7 @@ body > aside:has(~ main) > nav > a > md-icon {
    ========================================================================== */
 
 @media screen and (min-width: 840px) {
-body > aside:has(~ main) > nav {
+    body>aside:has(~ main)>nav {
         display: grid;
         position: sticky;
         top: 0;
@@ -128,14 +128,14 @@ body > aside:has(~ main) > nav {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
         align-content: normal;
         justify-items: center;
-        border-right: 1px solid var(--md-sys-color-outline-variant);
-        background: var(--md-sys-color-surface-container-low);
+        border: none;
+        background: var(--md-sys-color-surface-container-lowest);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: none;
     }
 
-body > aside:has(~ main) > nav > a {
+    body>aside:has(~ main)>nav>a {
         grid-template-rows: auto auto;
         gap: 3px;
         width: 64px;
@@ -144,25 +144,24 @@ body > aside:has(~ main) > nav > a {
         padding: var(--md-sys-spacing-1) 0;
     }
 
-body > aside:has(~ main) > nav > a > span {
+    body>aside:has(~ main)>nav>a>span {
         max-width: 64px;
         font-size: var(--md-sys-typescale-label-medium-size);
         font-weight: var(--md-sys-typescale-label-medium-weight);
     }
 
-body > aside:has(~ main) > nav > a > md-icon {
+    body>aside:has(~ main)>nav>a>md-icon {
         width: 56px;
         height: 32px;
     }
 
-body > aside:has(~ main) > nav > [avatar] {
+    body>aside:has(~ main)>nav>[avatar] {
         display: inline-grid;
         align-self: end;
         margin-top: auto;
     }
 
-body > aside:has(~ main) > nav:has(> md-icon-button) {
+    body>aside:has(~ main)>nav:has(> md-icon-button) {
         grid-template-rows: repeat(6, max-content) minmax(max-content, 1fr);
     }
 }
-

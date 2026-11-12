@@ -1,29 +1,8 @@
 /* ==========================================================================
-   Layer: widgets — Picker Trigger Cards, File/Date/Time Pickers (Pure Classless)
+   Socratic Design System — COMPONENTS / picker-trigger.css
+   Picker Trigger Cards & Pickers (article[picker-trigger], md-dialog[date-picker], md-dialog[time-picker])
    ========================================================================== */
 
-/* 2. File Picker (<section file-picker>) */
-section[file-picker] {
-    position: relative;
-    align-content: start;
-    gap: var(--space-sm);
-}
-
-section[file-picker] > input {
-    display: none;
-}
-
-section[file-picker] > footer {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    align-items: center;
-    gap: var(--space-xs);
-    padding: 0 var(--space-xs);
-    font-size: var(--type-label-md-size);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-/* 1. Picker Trigger Card (<article picker-trigger>) */
 article[picker-trigger] {
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
@@ -37,8 +16,7 @@ article[picker-trigger] {
     user-select: none;
     transition:
         border-color var(--md-sys-motion-duration-short2) ease,
-        background-color var(--md-sys-motion-duration-short2) ease,
-        box-shadow var(--md-sys-motion-duration-short2) ease;
+        background-color var(--md-sys-motion-duration-short2) ease;
 }
 
 article[picker-trigger] > hgroup {
@@ -93,7 +71,6 @@ article[picker-trigger]:hover:not([disabled]) {
     background: var(--md-sys-color-surface-container);
 }
 
-/* 3. Date & Time Picker Dialogs */
 md-dialog[date-picker],
 md-dialog[time-picker] {
     width: min(380px, calc(100vw - 2 * var(--space-md)));

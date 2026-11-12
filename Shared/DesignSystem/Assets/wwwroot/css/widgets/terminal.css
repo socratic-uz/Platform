@@ -322,7 +322,7 @@ aside > md-dialog[terminal] > footer[slot="actions"] > button:last-child {
     height: 64px;
     min-height: 64px;
     font-weight: 700;
-    box-shadow: var(--md-sys-elevation-expressive-1);
+    box-shadow: none;
     --md-filled-button-container-height: 64px;
     --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
 }

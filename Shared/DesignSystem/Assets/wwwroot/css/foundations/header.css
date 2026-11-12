@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / header.css
+   Socratic Design System — FOUNDATIONS / header.css
    СОДЕРЖИМОЕ ГЛОБАЛЬНОЙ ШАПКИ (BODY > HEADER)
    - Навигация шапки, брендинг и заголовок
    - Поле глобального поиска
@@ -147,4 +147,3 @@ body:has(> aside:has(~ main) > nav) > header > [avatar] {
         display: none;
     }
 }
-

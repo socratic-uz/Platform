@@ -75,7 +75,7 @@ main[help] > section:first-of-type > details {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
 
@@ -171,7 +171,7 @@ main[help] > section:last-of-type > article {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[help] > section:last-of-type > article > h3 {

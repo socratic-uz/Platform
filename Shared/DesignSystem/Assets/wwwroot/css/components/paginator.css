@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / paginator.css
+   Data Table Paginator (footer[paginator], nav[pagination])
+   ========================================================================== */
+
+footer[paginator],
+nav[pagination] {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--shape-md);
+    background: var(--md-sys-color-surface-container-low);
+}
+
+footer[paginator] > nav > md-icon-button {
+    min-width: var(--md-sys-touch-target-min);
+    min-height: var(--md-sys-touch-target-min);
+    --md-icon-button-state-layer-size: var(--md-sys-touch-target-min);
+}
+
+@media (max-width: 599.98px) {
+footer[paginator],
+    nav[pagination] {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: var(--md-sys-spacing-1);
+        padding: 4px;
+    }
+
+footer[paginator] > nav {
+        gap: var(--md-sys-spacing-2);
+        justify-content: center;
+    }
+
+footer[paginator] > nav > span {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+}

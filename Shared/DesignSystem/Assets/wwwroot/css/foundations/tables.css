@@ -3,6 +3,11 @@
    Semantic Data Tables (<table>, <thead>, <tbody>, <tfoot>)
    ========================================================================== */
 
+section:has(> table),
+article:has(> table) {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

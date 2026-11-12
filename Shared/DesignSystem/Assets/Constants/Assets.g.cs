@@ -20,6 +20,7 @@ namespace Assets.Constants
         public const string LandingQrStudio = "_content/Assets/img/landing_qr_studio.png";
         public const string LandingSmartKiosk = "_content/Assets/img/landing_smart_kiosk.png";
         public const string Loading = "_content/Assets/img/loading.webp";
+        public const string ScallopBorder = "_content/Assets/img/patterns/scallop-border.svg";
         public const string Socratic = "_content/Assets/img/socratic.svg";
     }
 

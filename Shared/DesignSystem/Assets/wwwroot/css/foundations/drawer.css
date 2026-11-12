@@ -1,10 +1,14 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / drawer.css
+   Socratic Design System — FOUNDATIONS / drawer.css
    ВСПЛЫВАЮЩИЕ И МОДАЛЬНЫЕ ПОВЕРХНОСТИ (MD-DIALOG В ASIDE)
    - Всплывающие шторки (Side Sheet / Bottom Sheet)
    - Встроенные панели на десктопе ([docked])
    - Кнопка-триггер FAB (body > main > md-fab) на мобильных устройствах
    ========================================================================== */
+
+body:has(aside[drawer]) {
+    overflow: hidden;
+}
 
 /* --- Базовые модальные поверхности (md-dialog) --- */
 body>aside:has(~ main)>md-dialog,
@@ -159,9 +163,8 @@ body>main~aside>md-dialog:not([docked]) {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-
-    /* Нижняя всплывающая панель ([bottom]) или профиль ([profile]) — поверх нижнего бара */
-    body>aside:has(~ main)>md-dialog[bottom],
+/* Нижняя всплывающая панель ([bottom]) или профиль ([profile]) — поверх нижнего бара */
+body>aside:has(~ main)>md-dialog[bottom],
     body>aside:has(~ main)>md-dialog[profile] {
         position: fixed;
         left: 0;
@@ -176,25 +179,25 @@ body>main~aside>md-dialog:not([docked]) {
         border: none;
         border-top: 1px solid var(--md-sys-color-outline-variant);
         border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
-        box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.16);
+        box-shadow: none;
         overflow: hidden;
         --md-dialog-container-shape: 28px;
         --md-dialog-container-max-inline-size: 100%;
         --md-dialog-container-max-block-size: 85dvh;
     }
 
-    body>aside:has(~ main)>md-dialog[bottom][data-closing],
+body>aside:has(~ main)>md-dialog[bottom][data-closing],
     body>aside:has(~ main)>md-dialog[profile][data-closing] {
         animation: slide-out-bottom 220ms cubic-bezier(0.3, 0, 0.8, 0.15) forwards;
     }
 
-    body>aside:has(~ main)>md-dialog[bottom][open],
+body>aside:has(~ main)>md-dialog[bottom][open],
     body>aside:has(~ main)>md-dialog[profile][open] {
         animation: slide-in-bottom 320ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
     }
 
-    /* Перетаскивание и выдвинутые состояния Half (48dvh) / Full (85dvh) скользят поверх main */
-    body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-dragging] {
+/* Перетаскивание и выдвинутые состояния Half (48dvh) / Full (85dvh) скользят поверх main */
+body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-dragging] {
         position: fixed;
         left: 0;
         right: 0;
@@ -207,7 +210,7 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: var(--sheet-drag-h, 48dvh);
     }
 
-    body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-snap="full"] {
+body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-snap="full"] {
         position: fixed;
         left: 0;
         right: 0;
@@ -220,7 +223,7 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: 85dvh;
     }
 
-    body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-snap="half"] {
+body>aside:has(~ main)>md-dialog:not(:where([left], [right]))[open][data-sheet-snap="half"] {
         position: fixed;
         left: 0;
         right: 0;
@@ -233,8 +236,8 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: 48dvh;
     }
 
-    /* Правая всплывающая боковая панель ([right], корзина [order] или чек [terminal]) — полная высота 100dvh */
-    body>aside:has(~ main)>md-dialog[right],
+/* Правая всплывающая боковая панель ([right], корзина [order] или чек [terminal]) — полная высота 100dvh */
+body>aside:has(~ main)>md-dialog[right],
     body>aside:has(~ main)>md-dialog[order],
     body>aside:has(~ main)>md-dialog:is([detector], [qr], [payment], [order-items], [qr-designer], [toolbar]),
     body>main~aside>md-dialog:is([terminal], [right]) {
@@ -251,29 +254,29 @@ body>main~aside>md-dialog:not([docked]) {
         border: none;
         border-left: 1px solid var(--md-sys-color-outline-variant);
         border-radius: var(--md-sys-shape-corner-large, 16px) 0 0 var(--md-sys-shape-corner-large, 16px);
-        box-shadow: var(--md-sys-elevation-level3);
+        box-shadow: none;
         overflow: hidden;
         --md-dialog-container-shape: 0px;
         --md-dialog-container-max-inline-size: min(320px, 85vw);
         --md-dialog-container-max-block-size: 100dvh;
     }
 
-    body>aside:has(~ main)>md-dialog[right][data-closing],
+body>aside:has(~ main)>md-dialog[right][data-closing],
     body>aside:has(~ main)>md-dialog[order][data-closing],
     body>aside:has(~ main)>md-dialog:is([detector], [qr], [payment], [order-items], [qr-designer], [toolbar])[data-closing],
     body>main~aside>md-dialog:is([terminal], [right])[data-closing] {
         animation: slide-out-right 220ms cubic-bezier(0.3, 0, 0.8, 0.15) forwards;
     }
 
-    body>aside:has(~ main)>md-dialog[right][open],
+body>aside:has(~ main)>md-dialog[right][open],
     body>aside:has(~ main)>md-dialog[order][open],
     body>aside:has(~ main)>md-dialog:is([detector], [qr], [payment], [order-items], [qr-designer], [toolbar])[open],
     body>main~aside>md-dialog:is([terminal], [right])[open] {
         animation: slide-in-right 320ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
     }
 
-    /* Поисковая панель карты на мобилке над нижним баром без скрима */
-    body:has(> aside:has(~ main) > nav)>aside:has(~ main)>md-dialog[map-controls] {
+/* Поисковая панель карты на мобилке над нижним баром без скрима */
+body:has(> aside:has(~ main) > nav)>aside:has(~ main)>md-dialog[map-controls] {
         position: fixed;
         left: 0;
         right: 0;
@@ -287,24 +290,24 @@ body>main~aside>md-dialog:not([docked]) {
         border: none;
         border-top: 1px solid var(--md-sys-color-outline-variant);
         border-radius: var(--md-sys-shape-corner-extra-large, 28px) var(--md-sys-shape-corner-extra-large, 28px) 0 0;
-        box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.16);
+        box-shadow: none;
         overflow: hidden;
         --md-dialog-container-shape: 28px;
         --md-dialog-container-max-inline-size: 100%;
         --md-dialog-container-max-block-size: calc(85dvh - 60px);
     }
 
-    /* В режиме Peek у поисковой шторки карты ([map-controls]) видна только ручка и строка поиска header */
-    body:has(> aside:has(~ main) > nav)>aside:has(~ main)>md-dialog[map-controls]:not([data-sheet-snap="half"], [data-sheet-snap="full"], [data-sheet-dragging])>section[slot="content"]>search[search-mode]> :not(header) {
+/* В режиме Peek у поисковой шторки карты ([map-controls]) видна только ручка и строка поиска header */
+body:has(> aside:has(~ main) > nav)>aside:has(~ main)>md-dialog[map-controls]:not([data-sheet-snap="half"], [data-sheet-snap="full"], [data-sheet-dragging])>section[slot="content"]>search[search-mode]> :not(header) {
         display: none;
     }
 
-    body:has(> aside:has(~ main) > nav)>main>md-fab {
+body:has(> aside:has(~ main) > nav)>main>md-fab {
         bottom: calc(60px + var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
     }
 
-    /* Всплывающая левая боковая панель — полная высота 100dvh */
-    body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom])),
+/* Всплывающая левая боковая панель — полная высота 100dvh */
+body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom])),
     body>aside:has(~ main)>md-dialog[left],
     body>aside:has(~ main)>md-dialog:is([chat], [docs]) {
         position: fixed;
@@ -320,20 +323,20 @@ body>main~aside>md-dialog:not([docked]) {
         border: none;
         border-right: 1px solid var(--md-sys-color-outline-variant);
         border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
-        box-shadow: var(--md-sys-elevation-level3);
+        box-shadow: none;
         overflow: hidden;
         --md-dialog-container-shape: 0px;
         --md-dialog-container-max-inline-size: min(320px, 85vw);
         --md-dialog-container-max-block-size: 100dvh;
     }
 
-    body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom]))[open],
+body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom]))[open],
     body>aside:has(~ main)>md-dialog[left][open],
     body>aside:has(~ main)>md-dialog:is([chat], [docs])[open] {
         animation: slide-in-left 320ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
     }
 
-    body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom]))[data-closing],
+body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog:not(:where([right], [profile], [bottom]))[data-closing],
     body>aside:has(~ main)>md-dialog[left][data-closing],
     body>aside:has(~ main)>md-dialog:is([chat], [docs])[data-closing] {
         animation: slide-out-left 220ms cubic-bezier(0.3, 0, 0.8, 0.15) forwards;
@@ -345,9 +348,8 @@ body>main~aside>md-dialog:not([docked]) {
    ========================================================================== */
 
 @media screen and (min-width: 840px) {
-
-    /* Всплывающая боковая шторка с самого левого края (left: 0) */
-    body>aside:has(~ main)>md-dialog {
+/* Всплывающая боковая шторка с самого левого края (left: 0) */
+body>aside:has(~ main)>md-dialog {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -360,15 +362,15 @@ body>main~aside>md-dialog:not([docked]) {
         border: none;
         border-right: 1px solid var(--md-sys-color-outline-variant);
         border-radius: 0 var(--md-sys-shape-corner-large, 16px) var(--md-sys-shape-corner-large, 16px) 0;
-        box-shadow: var(--md-sys-elevation-level3);
+        box-shadow: none;
         overflow: hidden;
         --md-dialog-container-shape: 0px;
         --md-dialog-container-max-inline-size: clamp(320px, 25vw, 380px);
         --md-dialog-container-max-block-size: 100dvh;
     }
 
-    /* Явно нижняя всплывающая шторка с ручкой ([bottom]) в первом aside на десктопе */
-    body>aside:has(~ main)>md-dialog[bottom] {
+/* Явно нижняя всплывающая шторка с ручкой ([bottom]) в первом aside на десктопе */
+body>aside:has(~ main)>md-dialog[bottom] {
         top: auto;
         bottom: 0;
         left: var(--aside-rail-w, 0);
@@ -386,12 +388,12 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: 85dvh;
     }
 
-    body>aside:has(~ main)>md-dialog[data-closing]:not([docked]) {
+body>aside:has(~ main)>md-dialog[data-closing]:not([docked]) {
         animation: slide-out-left 220ms cubic-bezier(0.3, 0, 0.8, 0.15) forwards;
     }
 
-    /* Встроенная потоковая боковая шторка ([docked]) в первом aside */
-    body>aside:has(~ main)>md-dialog[docked] {
+/* Встроенная потоковая боковая шторка ([docked]) в первом aside */
+body>aside:has(~ main)>md-dialog[docked] {
         display: grid;
         grid-template-rows: minmax(0, 1fr);
         position: sticky;
@@ -411,16 +413,16 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: 100dvh;
     }
 
-    body>aside:has(~ main)>md-dialog[docked]:has(> header):has(> footer) {
+body>aside:has(~ main)>md-dialog[docked]:has(> header):has(> footer) {
         grid-template-rows: auto minmax(0, 1fr) auto;
     }
 
-    body>aside:has(~ main)>md-dialog[docked]:has(> header):not(:has(> footer)) {
+body>aside:has(~ main)>md-dialog[docked]:has(> header):not(:has(> footer)) {
         grid-template-rows: auto minmax(0, 1fr);
     }
 
-    /* Всплывающая боковая шторка-остров на Картах ([map-controls]) */
-    body>aside:has(~ main)>md-dialog[map-controls] {
+/* Всплывающая боковая шторка-остров на Картах ([map-controls]) */
+body>aside:has(~ main)>md-dialog[map-controls] {
         top: 16px;
         bottom: auto;
         left: calc(var(--aside-rail-w, 0) + 16px);
@@ -435,17 +437,17 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: calc(100dvh - 32px);
     }
 
-    body>aside:has(~ main)>md-dialog[open]:not([docked]) {
+body>aside:has(~ main)>md-dialog[open]:not([docked]) {
         animation: slide-in-left 320ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
     }
 
-    /* Всплывающая боковая шторка профиля ([profile]) поверх других шторок */
-    body>aside:has(~ main)>md-dialog[profile] {
+/* Всплывающая боковая шторка профиля ([profile]) поверх других шторок */
+body>aside:has(~ main)>md-dialog[profile] {
         z-index: 1001;
     }
 
-    /* Явно [right], корзина [order] в первом aside или [profile] без бокового рельса */
-    body>aside:has(~ main)>md-dialog[right],
+/* Явно [right], корзина [order] в первом aside или [profile] без бокового рельса */
+body>aside:has(~ main)>md-dialog[right],
     body>aside:has(~ main)>md-dialog[order],
     body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog[profile] {
         left: auto;
@@ -456,20 +458,20 @@ body>main~aside>md-dialog:not([docked]) {
         border-radius: var(--md-sys-shape-corner-large, 16px) 0 0 var(--md-sys-shape-corner-large, 16px);
     }
 
-    body>aside:has(~ main)>md-dialog[right][data-closing],
+body>aside:has(~ main)>md-dialog[right][data-closing],
     body>aside:has(~ main)>md-dialog[order][data-closing],
     body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog[profile][data-closing] {
         animation: slide-out-right 220ms cubic-bezier(0.3, 0, 0.8, 0.15) forwards;
     }
 
-    body>aside:has(~ main)>md-dialog[right][open],
+body>aside:has(~ main)>md-dialog[right][open],
     body>aside:has(~ main)>md-dialog[order][open],
     body:not(:has(> aside:has(~ main) > nav))>aside:has(~ main)>md-dialog[profile][open] {
         animation: slide-in-right 320ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
     }
 
-    /* Встроенная потоковая правая панель ([docked]) во втором aside */
-    body>main~aside>md-dialog[docked] {
+/* Встроенная потоковая правая панель ([docked]) во втором aside */
+body>main~aside>md-dialog[docked] {
         display: grid;
         grid-template-rows: minmax(0, 1fr);
         position: sticky;
@@ -490,21 +492,21 @@ body>main~aside>md-dialog:not([docked]) {
         --md-dialog-container-max-block-size: calc(100dvh - 72px);
     }
 
-    body>main~aside>md-dialog[docked]:has(> header):has(> footer) {
+body>main~aside>md-dialog[docked]:has(> header):has(> footer) {
         grid-template-rows: auto minmax(0, 1fr) auto;
     }
 
-    body>main~aside>md-dialog[docked]:has(> header):not(:has(> footer)) {
+body>main~aside>md-dialog[docked]:has(> header):not(:has(> footer)) {
         grid-template-rows: auto minmax(0, 1fr);
     }
 
-    /* Landing Layout Mode: на десктопе мобильное меню навигации скрыто */
-    body:has(> header[landing])>aside:has(~ main)>md-dialog:not([profile]) {
+/* Landing Layout Mode: на десктопе мобильное меню навигации скрыто */
+body:has(> header[landing])>aside:has(~ main)>md-dialog:not([profile]) {
         display: none;
     }
 
-    /* FAB скрыт на десктопе при наличии встроенной панели */
-    body:has(> aside > md-dialog[docked])>main>md-fab {
+/* FAB скрыт на десктопе при наличии встроенной панели */
+body:has(> aside > md-dialog[docked])>main>md-fab {
         display: none;
     }
 }

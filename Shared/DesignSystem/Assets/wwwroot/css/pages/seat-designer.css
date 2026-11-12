@@ -30,7 +30,7 @@ main[seat-designer]>header {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[seat-designer]>header>hgroup {
@@ -84,7 +84,7 @@ main[seat-designer]>aside {
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 aside>md-dialog[toolbar]>section[slot="content"] {
@@ -119,7 +119,7 @@ aside>md-dialog[toolbar]>section[slot="content"]>aside[card] {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 aside>md-dialog[toolbar]>section[slot="content"]>aside[card]>hgroup>h6 {

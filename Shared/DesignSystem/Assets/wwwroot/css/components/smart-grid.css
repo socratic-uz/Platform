@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / smart-grid.css
+   QuickGrid Semantic Grid (table[smart-grid])
+   ========================================================================== */
+
+table[smart-grid] {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--md-sys-color-surface-container-low);
+    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
+    border-radius: var(--shape-lg);
+    overflow: hidden;
+    font-size: var(--type-body-md-size);
+}
+
+table[smart-grid] tbody > tr:last-child > td {
+    border-bottom: none;
+}
+
+table[smart-grid] tbody > tr:hover {
+    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.04);
+}
+
+table[smart-grid] td {
+    padding: var(--space-sm) var(--space-md);
+    color: var(--md-sys-color-on-surface);
+    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
+    vertical-align: middle;
+}
+
+table[smart-grid] th {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    font-size: var(--type-label-md-size);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--md-sys-color-on-surface-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    white-space: nowrap;
+}
+
+table[smart-grid] th > div {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-1);
+}
+
+table[smart-grid] th > div > button,
+table[smart-grid] th > button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 4px var(--space-xs);
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border-radius: var(--shape-sm);
+}
+
+table[smart-grid] th[aria-sort="ascending"],
+table[smart-grid] th[aria-sort="descending"] {
+    color: var(--md-sys-color-primary);
+}
+
+table[smart-grid] th[data-align="center"],
+table[smart-grid] td[data-align="center"] {
+    text-align: center;
+}
+
+table[smart-grid] th[data-align="end"],
+table[smart-grid] td[data-align="end"],
+table[smart-grid] th[data-align="right"],
+table[smart-grid] td[data-align="right"] {
+    text-align: right;
+}
+
+table[smart-grid] th[data-align="start"],
+table[smart-grid] td[data-align="start"],
+table[smart-grid] th[data-align="left"],
+table[smart-grid] td[data-align="left"] {
+    text-align: left;
+}
+
+table[smart-grid] thead {
+    background: var(--md-sys-color-surface-container);
+}

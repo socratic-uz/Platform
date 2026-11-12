@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / grid.css
+   ЧИСТАЯ ГЕОМЕТРИЯ СЕТКИ ДОКУМЕНТА И ОРИЕНТИРОВ (CSS GRID ONLY)
+   - Макросетка экрана (тег body): 3 колонки (left, main, right)
+   - Сетки прямых ориентиров 1-го уровня (header, aside, main, footer)
+   - Переключение grid-template-areas и треков
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Макросетка экрана (body) — единая 3-колоночная сетка
+   -------------------------------------------------------------------------- */
+body {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Подмакросетка шапки (body > header)
+   -------------------------------------------------------------------------- */
+body>header {
+    grid-area: header;
+    grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content);
+    gap: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+}
+
+/* --------------------------------------------------------------------------
+   3. Левая подмакросетка (body > aside:has(~ main))
+   -------------------------------------------------------------------------- */
+body>aside:has(~ main) {
+    grid-area: left;
+    gap: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Подмакросетка подвала (body > footer)
+   -------------------------------------------------------------------------- */
+body>footer {
+    grid-area: footer;
+}
+
+/* --------------------------------------------------------------------------
+   4. Контентная подмакросетка (body > main)
+   -------------------------------------------------------------------------- */
+body>main {
+    grid-area: main;
+    gap: var(--md-sys-gutter-section);
+}
+
+/* --------------------------------------------------------------------------
+   5. Правая подмакросетка (body > main ~ aside)
+   -------------------------------------------------------------------------- */
+body>main~aside {
+    grid-area: right;
+    gap: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. Адаптивность: переключение треков и grid-template-areas
+   -------------------------------------------------------------------------- */
+
+/* Mobile (< 840px) */
+
+@media screen and (max-width: 839.98px) {
+body {
+        grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "main   main   main"
+            "footer footer footer"
+            "right  right  right"
+            "left   left   left";
+    }
+
+body>header {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto;
+        gap: 0.5rem;
+    }
+
+body>header:has(> a):has(> md-outlined-text-field),
+    body>header:has(> [drawer]) {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 0.5rem;
+    }
+
+body>aside:has(~ main) {
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+    }
+}
+
+/* Desktop (>= 840px) */
+
+@media screen and (min-width: 840px) {
+body {
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        grid-template-areas:
+            "left  header  header"
+            "left  main    right"
+            "left  footer  footer";
+    }
+
+body>aside:has(~ main) {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+
+body>main~aside {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+}

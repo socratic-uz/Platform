@@ -5,7 +5,7 @@ import postcss from 'postcss';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const cssRoot = path.resolve(__dirname, '../wwwroot/css');
-const targetDirs = ['layouts', 'components', 'widgets', 'pages'];
+const targetDirs = ['layouts', 'foundations/grid.css', 'components', 'widgets', 'pages'];
 
 // Top-level document landmark ranking (1st level under body)
 const LANDMARK_RANKS = {
@@ -336,8 +336,14 @@ if (targetArg) {
 } else {
   // Collect all files in targetDirs recursively
   for (const d of targetDirs) {
-    const dirPath = path.join(cssRoot, d);
-    files.push(...findCssFiles(dirPath));
+    const targetPath = path.join(cssRoot, d);
+    if (fs.existsSync(targetPath)) {
+      if (fs.statSync(targetPath).isDirectory()) {
+        files.push(...findCssFiles(targetPath));
+      } else if (targetPath.endsWith('.css')) {
+        files.push(targetPath);
+      }
+    }
   }
 }
 

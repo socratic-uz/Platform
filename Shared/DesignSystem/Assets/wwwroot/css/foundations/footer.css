@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / footer.css
+   Socratic Design System — FOUNDATIONS / footer.css
    СОДЕРЖИМОЕ ГЛОБАЛЬНОГО ПОДВАЛА (BODY > FOOTER)
    - Колонки навигации, заголовки секций и списки ссылок
    - Описание платформы, брендинг и статус системы
    - Копирайт, сервисные ссылки и кнопки действий
    ========================================================================== */
 
-body > footer > section > nav {
+body>footer>section>nav {
     grid-template-columns: minmax(0, 1fr);
     grid-auto-flow: row;
     gap: 0.85rem;
@@ -14,7 +14,7 @@ body > footer > section > nav {
     overflow: hidden;
 }
 
-body > footer > section > nav > h4 {
+body>footer>section>nav>h4 {
     color: var(--md-sys-color-primary);
     font-size: 0.85rem;
     font-weight: 700;
@@ -22,13 +22,13 @@ body > footer > section > nav > h4 {
     text-transform: uppercase;
 }
 
-body > footer > section > nav > ul {
+body>footer>section>nav>ul {
     grid-template-columns: minmax(0, 1fr);
     grid-auto-flow: row;
     gap: 0.25rem;
 }
 
-body > footer > section > nav > ul > li > a {
+body>footer>section>nav>ul>li>a {
     display: grid;
     grid-template-columns: 20px minmax(0, 1fr);
     gap: 0.55rem;
@@ -41,36 +41,36 @@ body > footer > section > nav > ul > li > a {
     transition: color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
-body > footer > section > nav > ul > li > a > span {
+body>footer>section>nav>ul>li>a>span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-body > footer > section > nav > ul > li > a > md-icon {
+body>footer>section>nav>ul>li>a>md-icon {
     font-size: 18px;
     color: var(--md-sys-color-primary);
 }
 
-body > footer > section > nav > ul > li > a:hover {
+body>footer>section>nav>ul>li>a:hover {
     background: rgb(from var(--md-sys-color-primary) r g b / 0.06);
     color: var(--md-sys-color-on-surface);
     transform: translateX(2px);
 }
 
-body > footer > section > article {
+body>footer>section>article {
     gap: 0.75rem;
     align-content: start;
     max-width: 340px;
 }
 
-body > footer > section > article > p {
+body>footer>section>article>p {
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
     line-height: 1.55;
 }
 
-body > footer > section > article > aside {
+body>footer>section>article>aside {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
@@ -86,15 +86,14 @@ body > footer > section > article > aside {
     color: var(--md-sys-color-on-surface-variant);
 }
 
-body > footer > section > article > aside > span:first-child {
+body>footer>section>article>aside>span:first-child {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: var(--md-sys-color-primary);
-    box-shadow: 0 0 8px var(--md-sys-color-primary);
 }
 
-body > footer > section > article > a {
+body>footer>section>article>a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
@@ -106,20 +105,20 @@ body > footer > section > article > a {
     font-weight: 800;
 }
 
-body > footer > section > article > a > md-icon {
+body>footer>section>article>a>md-icon {
     color: var(--md-sys-color-primary);
     font-size: 28px;
 }
 
-body > footer > section:first-of-type,
-body > footer > section:only-child {
+body>footer>section:first-of-type,
+body>footer>section:only-child {
     grid-template-columns: minmax(0, 1.35fr) repeat(auto-fit, minmax(min(100%, 160px), 1fr));
     gap: 2.5rem 1.5rem;
     align-items: start;
 }
 
-body > footer > section:last-of-type:not(:first-of-type),
-body > footer > aside {
+body>footer>section:last-of-type:not(:first-of-type),
+body>footer>aside {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 1.5rem;
     align-items: center;
@@ -130,7 +129,7 @@ body > footer > aside {
     color: var(--md-sys-color-on-surface-variant);
 }
 
-body > footer > section:last-of-type:not(:first-of-type) > span {
+body>footer>section:last-of-type:not(:first-of-type)>span {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: auto minmax(0, 1fr);
@@ -139,12 +138,12 @@ body > footer > section:last-of-type:not(:first-of-type) > span {
     justify-content: end;
 }
 
-body > footer > section:last-of-type:not(:first-of-type) > span > md-icon {
+body>footer>section:last-of-type:not(:first-of-type)>span>md-icon {
     font-size: 18px;
     color: var(--md-sys-color-primary);
 }
 
-body > footer > section:last-of-type:not(:first-of-type) > menu {
+body>footer>section:last-of-type:not(:first-of-type)>menu {
     display: inline-grid;
     grid-auto-flow: column;
     gap: var(--md-sys-spacing-2);
@@ -152,7 +151,7 @@ body > footer > section:last-of-type:not(:first-of-type) > menu {
     justify-content: center;
 }
 
-body > footer > section:last-of-type:not(:first-of-type) > menu > :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+body>footer>section:last-of-type:not(:first-of-type)>menu> :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
     min-width: var(--md-sys-touch-target-min);
     min-height: var(--md-sys-touch-target-min);
     --md-filled-button-container-height: var(--md-sys-touch-target-min);
@@ -162,26 +161,25 @@ body > footer > section:last-of-type:not(:first-of-type) > menu > :where(md-fill
 }
 
 @media screen and (max-width: 839.98px) {
-body > footer > section > article {
+    body>footer>section>article {
         grid-column: 1 / -1;
     }
 
-body > footer > section:first-of-type,
-    body > footer > section:only-child {
+    body>footer>section:first-of-type,
+    body>footer>section:only-child {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem 1.25rem;
     }
 
-body > footer > section:last-of-type:not(:first-of-type),
-    body > footer > aside {
+    body>footer>section:last-of-type:not(:first-of-type),
+    body>footer>aside {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
         text-align: center;
         gap: 1rem;
     }
 
-body > footer > section:last-of-type:not(:first-of-type) > span {
+    body>footer>section:last-of-type:not(:first-of-type)>span {
         justify-content: center;
     }
 }
-

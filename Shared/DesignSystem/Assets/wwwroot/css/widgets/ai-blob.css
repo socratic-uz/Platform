@@ -15,7 +15,7 @@ figure[ai-blob], [data-ai-blob] {
         var(--md-sys-color-tertiary) 65%,
         transparent 100%
     );
-    box-shadow: 0 0 48px rgb(from var(--md-sys-color-primary) r g b / 0.35);
+    box-shadow: none;
     overflow: hidden;
 }
 

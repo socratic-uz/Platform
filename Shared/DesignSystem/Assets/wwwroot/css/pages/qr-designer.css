@@ -20,7 +20,7 @@ main[qr-designer]>header {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[qr-designer]>header>hgroup {
@@ -69,7 +69,7 @@ main[qr-designer]>article {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[qr-designer]>article>figure {

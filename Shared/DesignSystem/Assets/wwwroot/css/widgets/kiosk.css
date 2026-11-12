@@ -413,7 +413,7 @@ footer[kiosk] {
     border-top: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
-    box-shadow: 0 -4px 24px rgb(from var(--md-sys-color-shadow) r g b / 0.3);
+    box-shadow: none;
     backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
 }
@@ -421,7 +421,7 @@ footer[kiosk] {
 footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
     min-width: 160px;
     font-weight: 700;
-    box-shadow: var(--md-sys-elevation-expressive-2);
+    box-shadow: none;
     --md-filled-button-container-height: var(--md-sys-touch-target-kiosk);
     --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
     --md-filled-button-label-text-size: 1.05rem;

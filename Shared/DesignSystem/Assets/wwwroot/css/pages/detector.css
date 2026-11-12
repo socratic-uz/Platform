@@ -60,7 +60,7 @@ main[detector] > article > figure > figure > section > span {
     position: absolute;
     border: 2px solid var(--md-sys-color-primary);
     border-radius: var(--md-sys-shape-corner-extra-small);
-    box-shadow: 0 0 12px var(--md-sys-color-primary-container);
+    box-shadow: none;
     animation: bboxPulse 1.5s infinite alternate ease-in-out;
     pointer-events: none;
     left: var(--x);
@@ -80,7 +80,7 @@ main[detector] > article > figure > figure > section > span > span {
     font-size: 0.72rem;
     font-weight: 700;
     white-space: nowrap;
-    box-shadow: 0 2px 6px rgb(from var(--md-sys-color-shadow) r g b / 0.2);
+    box-shadow: none;
 }
 
 main[detector] > article > figure > figure:has(audio) {
@@ -211,7 +211,7 @@ aside > md-dialog[detector] > section[slot="content"] > form > section {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
+    box-shadow: none;
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form > section > header {
@@ -349,7 +349,7 @@ aside > md-dialog[detector] > section[slot="content"] > form > aside {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: 0 4px 12px rgb(from var(--md-sys-color-shadow) r g b / 0.05);
+    box-shadow: none;
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form > aside > header {
@@ -420,10 +420,10 @@ data[value="active"] {
 
 @keyframes bboxPulse {
     from {
-        box-shadow: 0 0 6px var(--md-sys-color-primary);
+        box-shadow: none;
     }
     to {
-        box-shadow: 0 0 16px var(--md-sys-color-primary-container), 0 0 8px var(--md-sys-color-primary);
+        box-shadow: none;
     }
 }
 

@@ -6,11 +6,10 @@
  * Cascade Layers (@layer):
  *   0. fonts/        → Unlayered @import
  *   1. tokens/       → @layer tokens
- *   2. foundations/  → @layer foundations (reset.css first, then alphabetical)
+ *   2. foundations/  → @layer foundations (reset.css first, layouts, then alphabetical)
  *   3. components/   → @layer components
  *   4. widgets/      → @layer widgets
  *   5. pages/        → @layer pages
- *   6. layouts/      → @layer layouts
  *
  * Zero hardcoded file lists. Any new file added to any directory or nested subfolder
  * is automatically discovered and registered on MSBuild compilation or `npm run generate:styles`.

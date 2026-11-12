@@ -113,9 +113,9 @@ Interaction (IX)
   - Полный отказ от CSS-классов (`class=@...`) на семантических HTML5-тегах.
   - Кодогенераторы классов (`Classes.g.cs`, `generate-css-classes.mjs`, `component-classes-snapshot.json`) полностью ликвидированы. Единственными активными генераторами C#-констант являются: `Assets.g.cs`, `Loc.g.cs` и `Icons.g.cs`.
   - **Трехуровневая семантическая навигация селекторов (3-Level Landmark Model)**:
-    1. **Уровень документа (`body`)**: `body:has(layout[grid]) { ... }`, `body:has(layout[landing]) { ... }` — макросетка определяется самим тегом `body`, а переключателем макросетки является исключительно тег `<layout [variant]>` (`<layout grid />`, `<layout landing />`, `<layout chat />`, `<layout map />`).
+    1. **Уровень документа (`body`)**: единый универсальный 3-колоночный лейаут на самом теге `body` (`grid-template-columns: auto minmax(0, 1fr) auto;`). Адаптивность реализуется переключением `grid-template-areas` между Mobile и Desktop. Механизм служебного тега `<layout [variant]>` ликвидирован.
     2. **Уровень страницы (`landmarks`)**: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`, `aside[navigation]`. Стили пишутся напрямую от ориентира: `header[kiosk] > tag1 > tag2`, `main[kiosk] > tag1 > tag2`, `footer[kiosk] > tag1 > tag2`. Запрещено адресовать `header` через `body:has(main[page]) header` — `header` сам является ориентиром первого уровня страницы (`header[page]`).
-    3. **Уровень подмакросеток `body > aside` (Двух-Aside модель и мобильная триада триггеров)**:
+    3. **Уровень ориентиров `body > aside` (Двух-Aside модель и мобильная триада триггеров)**:
        - **Первичный aside (`body > aside:not(main ~ aside)`)**: постоянная навигация (`nav`: рельс 76px на десктопе, бар 60px на мобилке) и всплывающие модальные поверхности `md-dialog`. На десктопе левая шторка открывается от края экрана (`left: 0; z-index: 1001;`), перекрывая 76px рельс. На мобилках боковые шторки занимают **всю высоту экрана** (`100dvh`, `top: 0`, `bottom: 0`, `z-index: 1001`), полностью перекрывая нижний бар навигации (`z-index: 90`). Нижняя шторка (`Вспл. ниж.`, Профиль) открывается от `bottom: 0` со скруглением `28px 28px 0 0`.
        - **Вторичный aside (`body > main ~ aside`)**: встроенная панель на десктопе (`[docked]`, `Встр. прав.`, 3-я колонка сетки `body`, например чек терминала, боковик чата). На мобилках встроенные панели отсутствуют — все панели превращаются во всплывающие правые шторки (`Вспл. прав.`), вызываемые через FAB в правом нижнем углу `main`.
        - **Эргономическая триада триггеров на мобилках (< 840px)**:
@@ -129,7 +129,7 @@ Interaction (IX)
     4. **Уровень виджетов (`widgets`)**: `root-tag[widget] > child-tag > child-child-tag` (например, `aside[cart] > section > ...`, `dialog[modal] > fieldset`).
   - **Атрибут строго ТОЛЬКО на первом уровне DOM-дерева**: Атрибут задается исключительно на корневом контейнере компонента/виджета/страницы (`header[kiosk]`, `main[kiosk]`, `footer[kiosk]`, `aside[cart]`, `aside[order]`, `dialog[modal]`). Внутри контейнера дочерние элементы не несут атрибутов и являются чистыми HTML5-тегами.
   - Внутренняя стилизация строится по **прямой семантической иерархии HTML5-тегов**: `[card] > figure > img`, `main[kiosk] > section > article`, `aside[cart] > header > hgroup > h3`, `aside[cart] > ul > li`, `aside[cart] > footer > dl > p:last-child`.
-  - **Макросетка `body` и переключатель `<layout>`**: Макросеткой приложения является сам тег `<body>` (`body { display: grid; ... }`). Тег `<layout [variant]>` служит исключительно механизмом-переключателем стилей макросетки через селектор `body:has(layout[variant])`.
+  - **Единый универсальный лейаут `body`**: Макросеткой приложения является сам тег `<body>` (`body { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; }`). Механизм служебного тега `<layout>` ликвидирован.
   - Директивы `@using static Classes.*` ликвидированы в пользу чистого HTML5 дерева.
 - **Компоненты `Material.Web` First**: при наличии готового Blazor-компонента в `Material.Web` используй его:
   `<Button>` / `<IconButton>`, `<TextField>`, `<Select>`, `<Divider>`, `<Checkbox>`, `<Radio>`, `<MaterialDialog>`, `<Progress>`, `<Tabs>` / `<Tab>`, `<Chip>` / `<ChipSet>`, `<Badge>`.
@@ -151,13 +151,13 @@ Interaction (IX)
 - Подробности: [rules/frontend-ux.md](rules/frontend-ux.md).
 
 #### 2. Interface (UI) ➔ Presentation (Styles) — строго в `*.css` (Assets)
-- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
+- Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages`) с токенами W3C DTCG в `tokens/` через мастер-манифест `styles.css` (нативный W3C CSS `@import`, HTTP/2 и HTTP/3).
 - **Динамическая генерация манифеста стилей**: мастер-манифест `styles.css` генерируется автоматически скриптом `scripts/generate-styles-manifest.mjs` (при `dotnet build Assets.csproj` и `npm run generate:styles`) через рекурсивное сканирование слоев.
 - **Шрифтовая архитектура вне слоев (Unlayered Variable Fonts)**: правила `@font-face` подключаются в `styles.css` **вне `@layer`** на самом верху файла, гарантируя максимальный приоритет, мгновенное обнаружение браузером и исключение FOUT для иконочных лигатур (`Material Symbols Outlined`). Используются исключительно вариативные шрифты (`Roboto` и `Montserrat` с диапазоном весов `100 900`, а также вариативный `Material Symbols Outlined`); статические TTF-файлы полностью ликвидированы.
-- **Строгий скоуп `layouts/` (Макросетка `body` и 4 подмакросетки)**:
-  - `layouts/body.css`: макросетка экрана (единая 3-колоночная сетка задаётся ровно 1 раз: `grid-template-columns: auto minmax(0, 1fr) auto;`, а адаптивность и режимы переключаются исключительно через `grid-template-areas`).
-  - `layouts/header.css`, `layouts/aside.css`, `layouts/main.css`, `layouts/footer.css`: базовые подмакросетки ориентиров документа (общие стили для прямых ориентиров 1-го уровня `body > header`, `body > aside`, `body > main`, `body > footer`).
-  - Слой `pages/` управляет исключительно конкретными страницами по булевым атрибутам (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`). Базовые стили примитивов изолированы в `foundations/landmarks.css`.
+- **Чистая геометрия `foundations/grid.css` (Сетка документа и ориентиров — CSS Grid Only)**:
+  - `foundations/grid.css`: макросетка экрана `body` (единая 3-колоночная сетка: `grid-template-columns: auto minmax(0, 1fr) auto;`, переключение `grid-template-areas`) и координаты сетки прямых ориентиров 1-го уровня (`header`, `left`, `main`, `right`, `footer`). Файл содержит строго свойства CSS Grid.
+  - Визуальные стили ориентиров (цвета, фоны, рамки, отступы, sticky, z-index) изолированы в `foundations/landmarks.css`.
+  - Слой `pages/` управляет исключительно конкретными страницами по булевым атрибутам (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`).
 - **Строгий паритет 1-в-1 (1 `.razor` = 1 корневой атрибут 1-го уровня = 1 dedicated `*.css`)**: каждая страница и виджет имеет свой собственный одноимённый файл стилей (`wishlist.css`, `kiosk.css`, `home.css`, `qr.css`, `qr-designer.css`).
 - **Сортировка по DOM-дереву (DOM Pre-Order CSS Sorting)**: порядок правил внутри `.css` файлов строго следует прямому обходу DOM-дерева в глубину (Depth-First Pre-Order), форматируется и валидируется через `npm run sort:css` / `npm run sort:css:check`.
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).

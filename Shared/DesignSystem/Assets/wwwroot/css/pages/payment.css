@@ -62,7 +62,7 @@ main[payment] > section:last-of-type > section:has(> article) > article {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[payment] > section:last-of-type > section:has(> article) > article > header {
@@ -191,7 +191,7 @@ aside > md-dialog[payment] > section[slot="content"] > article {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 aside > md-dialog[payment] > section[slot="content"] > article > h3 {

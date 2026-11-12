@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Socratic Design System — LAYOUTS / app.css
+   Root Application Shell & Document Layout (body[app])
+   Cascade Layer: @layer layouts
+   ========================================================================== */
+
+body[app] {
+    min-height: 100dvh;
+    background-color: var(--md-sys-color-surface-container-lowest);
+    color: var(--md-sys-color-on-surface);
+}

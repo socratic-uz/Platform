@@ -21,7 +21,7 @@ main[auth] > article:has(nav) {
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
@@ -53,7 +53,7 @@ main[auth] > article:has(nav) > header > md-icon {
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
-    box-shadow: 0 8px 16px rgb(from var(--md-sys-color-shadow) r g b / 0.25);
+    box-shadow: none;
 }
 
 /* Top Navigation Bar: Brand & Language */
@@ -199,7 +199,7 @@ main[auth] > article:not(:has(nav)) {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: 0 20px 40px -15px rgb(from var(--md-sys-color-shadow) r g b / 0.35);
+    box-shadow: none;
     backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
     text-align: center;

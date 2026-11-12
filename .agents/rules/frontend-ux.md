@@ -11,7 +11,7 @@
 ### 1.1. ⚡ Тотальный отказ от CSS-классов (Pure Attribute-Driven Classless)
 В файлах `*.razor` **строго запрещено** использовать CSS-классы (`class=@...`) на семантических HTML5-элементах.
 - **Трёхуровневая модель навигации и селекторов**:
-  1. **Уровень документа (`body`)**: `body:has(layout[grid]) { ... }`, `body:has(layout[landing]) { ... }` — макросетка на самом теге `body`, переключаемая тегом `<layout [variant]>`.
+  1. **Уровень документа (`body`)**: единый универсальный 3-колоночный лейаут на самом теге `body` (`grid-template-columns: auto minmax(0, 1fr) auto;`). Адаптивность переключается через `grid-template-areas`.
   2. **Уровень страницы (`landmarks первого уровня DOM`)**: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`. Например: `<header kiosk>`, `<main kiosk>`, `<footer kiosk>`. Их стили пишутся напрямую: `header[kiosk] > tag1 > tag2`, `main[kiosk] > tag1 > tag2`, `footer[kiosk] > tag1 > tag2`. Запрещено писать `body:has(main[kiosk]) header...` — `header[kiosk]` сам является ориентиром 1-го уровня.
   3. **Уровень виджетов (`root-tag первого уровня внутри виджета`)**: `root-tag[widget] > child-tag > child-child-tag` (например: `<aside cart>`, `<aside order>`, `<dialog modal>`).
 - **Атрибут ТОЛЬКО на первом уровне DOM дерева**: Атрибут указывается строго на корневом теге компонента/виджета/ориентира страницы (`header[kiosk]`, `main[kiosk]`, `footer[kiosk]`, `aside[cart]`, `aside[order]`, `dialog[modal]`). Дочерние узлы внутри контейнера НЕ несут вспомогательных атрибутов.
@@ -113,11 +113,11 @@
 
 ## 5. 🏛️ Архитектура ориентиров страниц (Page Landmarks) и Контракт растягивания/центрирования
 
-### 5.1. Макросетка body и переключатель лейаутов <layout [variant]>
-- **Макросеткой приложения является сам тег `<body>`**:
-  Каркас раскладки ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`) задается исключительно CSS Grid на теге `body`.
-- **Тег `<layout [variant]>` — исключительно механизм переключения**:
-  Тег `<layout [variant]>` (`<layout grid>`, `<layout landing>`, `<layout map>`, `<layout chat>`) не создает элементов макросетки, а служит декларативным триггером для селектора `body:has(layout[variant])`, переключающего CSS Grid стили на `body`.
+### 5.1. Единый универсальный лейаут body
+- **Единая 3-колоночная макросетка на теге `<body>`**:
+  Каркас раскладки ориентиров (`body > header`, `body > aside:has(~ main)`, `body > main`, `body > footer`, `body > main ~ aside`) задается исключительно CSS Grid на теге `body` (`grid-template-columns: auto minmax(0, 1fr) auto;`).
+- **Ликвидация служебного тега `<layout>`**:
+  Механизм переключения через `<layout [variant]>` упразднен в пользу единого универсального адаптивного лейаута.
 - **Булевы атрибуты ориентиров страниц (Boolean Page Flags)**:
   Прямые семантические ориентиры экрана (`<header>`, `<nav>`, `<main>`, `<footer>`) помечаются **строго булевым атрибутом страницы**:
   `<main kiosk>`, `<main terminal>`, `<main orders>`, `<main payment>`, `<main about>`, `<header about>`.
@@ -125,8 +125,8 @@
   - **Ориентиры не несут атрибутов лейаута**: `<main grid>` запрещен.
   - **Zero Widget Leakage**: внутри `.razor` страниц виджеты размещаются параллельно; внутренняя верстка виджетов стилизуется в `@layer widgets`.
 
-### 5.3. Архитектура подмакросеток `body > aside` (Двух-Aside модель, Панели и Мобильные Триггеры)
-Ориентиры документа `body > aside` служат **умными адаптивными подмакросетками** для навигации и модальных/встроенных поверхностей Material Design 3.
+### 5.3. Архитектура ориентиров `body > aside` (Двух-Aside модель, Панели и Мобильные Триггеры)
+Ориентиры документа `body > aside` служат **адаптивными зонами сетки** для навигации и модальных/встроенных поверхностей Material Design 3.
 
 #### 1. Двух-Aside модель (Two Asides Model)
 - **Первичный aside (`body > aside:not(main ~ aside)`)**:

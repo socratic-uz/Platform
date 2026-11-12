@@ -36,7 +36,7 @@ header[analytics] > span {
 main[analytics] {
     gap: var(--md-sys-gutter-section, var(--md-sys-spacing-6));
     align-content: start;
-    width: 100%;
+    width: auto;
     min-width: 0;
     box-sizing: border-box;
     padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page, var(--md-sys-spacing-6)) var(--md-sys-spacing-12);
@@ -104,7 +104,7 @@ main[analytics] > header > menu > data > span:first-child {
     height: 8px;
     border-radius: 50%;
     background-color: var(--md-sys-color-primary);
-    box-shadow: 0 0 8px var(--md-sys-color-primary);
+    box-shadow: none;
     animation: analyticsPulse 1.8s infinite alternate ease-in-out;
 }
 
@@ -125,7 +125,7 @@ main[analytics] > section:has(ul > li > md-linear-progress) > article {
     border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[analytics] > section[breakdown] > article > header,
@@ -223,7 +223,7 @@ main[analytics] > section:has(article > h3) > article {
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4) ease,
                 border-color var(--md-sys-motion-duration-short4) ease;
@@ -315,7 +315,7 @@ main[analytics] > section:has(article > h3) > article > footer > span:first-chil
 main[analytics] > section[kpi] > article:hover,
 main[analytics] > section:has(article > h3) > article:hover {
     border-color: var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     transform: translateY(-2px);
 }
 
@@ -330,7 +330,7 @@ main[analytics] > section:has([smart-grid], table) {
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-low);
     overflow-x: auto;
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[analytics] > section[registers] > header,

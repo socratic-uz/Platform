@@ -99,7 +99,7 @@ main[about] > section > article {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -140,7 +140,7 @@ main[about] > article:has(video) {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[about] > article:has(video) > video {

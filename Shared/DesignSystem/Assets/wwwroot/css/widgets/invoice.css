@@ -17,7 +17,7 @@ article[receipt] {
     margin: 0 auto;
     padding: var(--md-sys-spacing-6) var(--md-sys-spacing-5);
     border-radius: var(--md-sys-shape-corner-large);
-    box-shadow: 0 4px 20px rgb(from var(--md-sys-color-shadow) r g b / 0.06);
+    box-shadow: none;
     border: 1px dashed var(--md-sys-color-outline-variant);
     position: relative;
     height: max-content;

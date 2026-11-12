@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Socratic Design System — COMPONENTS / file-picker.css
+   File Picker Component (section[file-picker])
+   ========================================================================== */
+
+section[file-picker] {
+    position: relative;
+    align-content: start;
+    gap: var(--space-sm);
+}
+
+section[file-picker] > input {
+    display: none;
+}
+
+section[file-picker] > footer {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0 var(--space-xs);
+    font-size: var(--type-label-md-size);
+    color: var(--md-sys-color-on-surface-variant);
+}

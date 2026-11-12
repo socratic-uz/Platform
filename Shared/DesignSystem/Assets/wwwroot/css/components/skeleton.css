@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / feedback.css
-   Component-Driven Architecture
+   Socratic Design System — COMPONENTS / skeleton.css
+   Skeleton Loading State ([skeleton])
    ========================================================================== */
 
 [skeleton] {
@@ -35,19 +35,3 @@
     animation: m3-shimmer 1.8s var(--md-sys-motion-easing-expressive-standard) infinite;
     content: '';
 }
-
-#blazor-error-ui {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--md-sys-z-toast);
-    width: 100%;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    border-radius: var(--md-sys-shape-corner-large);
-    background: var(--md-sys-color-error-container);
-    color: var(--md-sys-color-on-error-container);
-    box-shadow: var(--md-sys-elevation-level3);
-}
-
-/* --- Toasts, Pulses & Support Telemetry --- */

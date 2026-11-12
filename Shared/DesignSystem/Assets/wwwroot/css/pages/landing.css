@@ -6,10 +6,6 @@
    Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    ========================================================================== */
 
-body:has(aside[drawer]) {
-    overflow: hidden;
-}
-
 /* ==========================================================================
    Header Landmark (<header landing>) & Dropdowns
    ========================================================================== */
@@ -137,7 +133,7 @@ main[landing] {
    0. Atmospheric Canvas & Cursor Follower
    ========================================================================== */
 main[landing] > figure {
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
@@ -294,14 +290,14 @@ main[landing] > section > article {
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--landing-surface);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     transition: transform 0.3s var(--md-sys-motion-easing-spring-soft), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 main[landing] > section > section > article:hover,
 main[landing] > section > article:hover {
     border-color: var(--landing-border-hover);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     transform: translateY(-2px);
 }
 
@@ -321,7 +317,7 @@ main[landing] > section:nth-of-type(1) > section:first-of-type {
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: color-mix(in srgb, var(--landing-surface) 90%, transparent);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 /* Hero Content */
@@ -444,7 +440,7 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-ch
     color: var(--landing-text-main);
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
 }
 
 main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span:nth-of-type(1) {
@@ -477,7 +473,7 @@ main[landing] > section:nth-of-type(1) > section:last-of-type {
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: color-mix(in srgb, var(--landing-surface) 85%, transparent);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -1162,7 +1158,7 @@ main[landing] > section:nth-of-type(8) {
     border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: radial-gradient(circle at center, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, var(--landing-surface) 100%);
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
 }
 
 main[landing] > section:nth-of-type(8) > h2 {
@@ -1203,7 +1199,7 @@ aside[drawer] > dialog {
     padding: var(--md-sys-spacing-5) var(--md-sys-spacing-4);
     background: var(--md-sys-color-surface-container);
     border-right: 1px solid var(--md-sys-color-outline-variant);
-    box-shadow: var(--md-sys-elevation-level3);
+    box-shadow: none;
     z-index: var(--md-sys-z-modal);
     overflow-y: auto;
     overflow-x: hidden;

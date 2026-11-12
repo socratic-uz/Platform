@@ -51,7 +51,7 @@ main[map]>section>aside>nav:first-of-type {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     gap: 0;
 }
 
@@ -63,7 +63,7 @@ main[map]>section>aside>nav:last-of-type {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     font-size: 0.75rem;
     font-weight: 600;
 }
@@ -94,7 +94,7 @@ main[map] > article[navigator] > header {
     border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     background: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level3);
+    box-shadow: none;
     pointer-events: auto;
 }
 
@@ -147,7 +147,7 @@ main[map] > article[navigator] > footer {
     border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-sys-elevation-level3);
+    box-shadow: none;
     text-align: center;
     pointer-events: auto;
 }

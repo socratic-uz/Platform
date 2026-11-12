@@ -21,5 +21,5 @@ section[pricing-tiers] > article {
 
 article[data-featured="true"] {
     border-color: var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
 }

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / runtime.css
+   Blazor Runtime Framework Overlays (#components-reconnect-modal, #blazor-error-ui)
+   ========================================================================== */
+
+#components-reconnect-modal {
+    --md-dialog-container-max-inline-size: min(420px, calc(100vw - 2 * var(--space-md)));
+    text-align: center;
+}
+
+#components-reconnect-modal > section[slot="content"] {
+    justify-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+#blazor-error-ui {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--md-sys-z-toast);
+    width: 100%;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    border-radius: var(--md-sys-shape-corner-large);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+    box-shadow: none;
+}
+

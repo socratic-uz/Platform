@@ -8,35 +8,37 @@
 - **Единый центр стилизации**: все стили живут в `Assets/wwwroot/css/` с точкой входа [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css).
 - **Динамическая сборка манифеста (`generate-styles-manifest.mjs`)**: `styles.css` генерируется автоматически скриптом `scripts/generate-styles-manifest.mjs` (при `dotnet build Assets.csproj` и `npm run generate:styles`) через рекурсивное сканирование слоев.
 - **Шрифтовая архитектура вне слоев (Unlayered Variable Fonts)**: правила `@font-face` подключаются в самом верху `styles.css` **вне `@layer`**, что обеспечивает наивысший приоритет браузерного парсинга, мгновенное обнаружение глифов и исключение FOUT для лигатур иконок (`Material Symbols Outlined`). Используются исключительно вариативные шрифты (`Roboto` и `Montserrat` с диапазоном весов `100 900`, а также вариативный `Material Symbols Outlined`); статические TTF-файлы полностью ликвидированы.
-- **Строгий скоуп `layouts/` (Макросетка `body` ONLY)**: файлы слоя `layouts/` стилизуют **исключительно** `body:has(layout[variant])` и координаты прямых ориентиров (`body > header`, `body > nav`, `body > main`, `body > footer`, `body > aside`). Любая внутренняя стилизация компонентов, кнопок или заголовков в `layouts/` строго запрещена. Базовые стили ориентиров изолированы в `foundations/landmarks.css`.
+- **Строгий скоуп `foundations/grid.css` (Сетка документа и ориентиров — CSS Grid ONLY)**: файл `foundations/grid.css` содержит исключительно свойства CSS Grid для макросетки `body` и прямых ориентиров (`body > header`, `body > aside`, `body > main`, `body > footer`). Вся внутренняя стилизация компонентов, кнопок или заголовков выносится в соответствующие виджеты (`widgets/`), а визуальные свойства ориентиров изолированы в `foundations/landmarks.css`.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей, тегов `<style>` и классов `class=@...`. Стилизация детерминирована на уровне атрибутов первого уровня (`[card]`, `main[kiosk]`, `aside[cart]`) и семантической иерархии тегов HTML5.
 
 ### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
 Иерархия каскада построена на нативных каскадных слоях **Cascade Layers (`@layer`)** в начале `styles.css`:
 ```css
-@layer tokens, foundations, components, widgets, pages, layouts;
+@layer tokens, foundations, components, widgets, pages;
 ```
 - **Приоритет слоев**: нарастает слева направо (от абстрактного/базового к конкретному контексту экрана):
-  `tokens` (1) ➔ `foundations` (2) ➔ `components` (3) ➔ `widgets` (4) ➔ `pages` (5) ➔ `layouts` (6).
+  `tokens` (1) ➔ `foundations` (2) ➔ `components` (3) ➔ `widgets` (4) ➔ `pages` (5).
 - **Строгое соответствие слоев и структуры каталогов (Clean Layer Isolation)**:
   1. `tokens` (`tokens/`): дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
-  2. `foundations` (`foundations/`): сброс стилей браузера, семантические дефолты HTML5, типографика, анимации и контракт центрирования по требованию (`[center*]`).
-  3. `components` (`components/`) — **Уровни 4–6 DOM**: атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
-   4. `widgets` (`widgets/`) — **Уровень 3 DOM**: составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`), а также внутренние организмы ориентиров (`rail.css`, `drawer.css`, `header.css`, `footer.css`).
-   5. `pages` (`pages/`) — **Уровень 2 DOM (Страницы)**: стили **строго для конкретных страниц по булевым атрибутам** (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `main[home]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
-   6. `layouts` (`layouts/`) — **Уровень 1 DOM (Чистый каркас макросеток — Zero Widget Bleed)**:
-      - **Макросетка**: `body.css` — стили исключительно для тега `<body>` (единая 3-колоночная сетка задаётся ровно 1 раз: `grid-template-columns: auto minmax(0, 1fr) auto;`, а адаптивность и режимы переключаются исключительно через `grid-template-areas`).
-      - **Подмакросетки прямых ориентиров 1-го уровня под `body` (ТОЛЬКО правила сетки, без внутреннего контента)**:
-        - `layouts/header.css`: каркас шапки (привязка `grid-area: header;`, треки колонок, отступы).
-        - `layouts/aside-left.css`: чистая левая подмакросетка (`body > aside:has(~ main)`, `grid-area: left;`).
-        - `layouts/aside-right.css`: чистая правая подмакросетка (`body > main ~ aside`, `grid-area: right;`).
-        - `layouts/main.css`: чистая контентная подмакросетка (`body > main`, `grid-area: main;`).
-        - `layouts/footer.css`: чистый каркас подвала (`body > footer`, `grid-area: footer;`).
-        - **Внутреннее наполнение ориентиров вынесено в `widgets/`**:
-          - `widgets/rail.css`: навигационный рельс 76px на Desktop и нижний бар 60px на Mobile (ссылки, иконки, бейджи, аватар).
-          - `widgets/drawer.css`: модальные шторки `md-dialog`, snap-состояния (half/full), скрим `#sheet-scrim`, GPU-анимации и кнопка FAB.
-          - `widgets/header.css`: наполнение шапки (брендинг, заголовок, глобальный поиск, аватар, гамбургер).
-          - `widgets/footer.css`: наполнение подвала (колонки навигации, заголовки секций `h4`, списки ссылок, копирайт).
+  2. `foundations` (`foundations/`): сброс стилей браузера, семантические дефолты HTML5, типографика, анимации, контракт центрирования (`[center*]`), базовая стилизация ориентиров в `landmarks.css` и чистая геометрия сетки в `foundations/grid.css`.
+  3. `components` (`components/`): атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
+  4. `widgets` (`widgets/`): составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`), а также внутренние организмы ориентиров (`rail.css`, `drawer.css`, `header.css`, `footer.css`).
+  5. `pages` (`pages/`): стили **строго для конкретных страниц по булевым атрибутам** (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `main[home]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
+  6. `layouts` (`layouts/`): Blazor AppLayout шеллы (`app.css`, селектор `body[app]`).
+
+- **Чистая геометрия сетки документа и ориентиров (`foundations/grid.css` — CSS Grid Only)**:
+  - **Макросетка `body`**: единая 3-колоночная сетка задаётся ровно 1 раз: `grid-template-columns: auto minmax(0, 1fr) auto;`, а адаптивность и режимы переключаются исключительно через `grid-template-areas`.
+  - **Сетка ориентиров 1-го уровня под `body` (ТОЛЬКО свойства CSS Grid)**:
+    - Шапка: `grid-area: header; grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content); gap: ...`
+    - Левый ориентир: `body > aside:has(~ main) { grid-area: left; gap: 0; }`
+    - Рабочая область: `body > main { grid-area: main; gap: ... }`
+    - Правый ориентир: `body > main ~ aside { grid-area: right; gap: 0; }`
+    - Подвал: `body > footer { grid-area: footer; }`
+  - **Внутреннее визуальное наполнение ориентиров вынесено в `widgets/`**:
+    - `widgets/rail.css`: навигационный рельс 76px на Desktop и нижний бар 60px на Mobile (ссылки, иконки, бейджи, аватар).
+    - `widgets/drawer.css`: модальные шторки `md-dialog`, snap-состояния (half/full), скрим `#sheet-scrim`, GPU-анимации и кнопка FAB.
+    - `widgets/header.css`: наполнение шапки (брендинг, заголовок, глобальный поиск, аватар, гамбургер).
+    - `widgets/footer.css`: наполнение подвала (колонки навигации, заголовки секций `h4`, списки ссылок, копирайт).
        - **Эргономическая триада триггеров на мобильных устройствах (< 840px)**:
            - ☰ **Левый верхний угол `header`** ➔ `Вспл. лев.` (Главное меню, AI-чат, Документация) — на всю высоту `100dvh`.
            - 👤 **Правый верхний угол `header` (Аватар)** ➔ `Вспл. ниж.` (Профиль пользователя, поиск карты) — снизу экрана (`bottom: 0`).
@@ -71,7 +73,7 @@
 | **Определение** | Атомарные и базовые молекулярные примитивы дизайн-системы | Составные отраслевые организмы бизнеса (HoReCa / POS / Retail) |
 | **Доменная привязка** | **Нейтральны**: универсальны для любого приложения в мире без привязки к Socratic | **Специфичны**: решают конкретную задачу торговли, платежей или зала |
 | **Состав** | Неделимый примитив (кнопка, чип, инпут, модалка, таблица) | Композиция нескольких компонентов (в корзине есть кнопки, чипы, карточки) |
-| **Примеры в кодовой базе** | `buttons.css`, `cards.css`, `chips.css`, `forms.css`, `dialogs.css`, `tables.css`, `feedback.css`, `smart-data-view.css` | `cart.css`, `fiscal.css`, `faceid-viewfinder.css`, `booking-picker.css`, `seat-designer.css`, `qr-designer.css`, `commerce-modes.css` |
+| **Примеры в кодовой базе** | `card.css`, `avatar.css`, `color-picker.css`, `file-picker.css`, `picker-trigger.css`, `skeleton.css`, `smart-grid.css`, `paginator.css` | `cart.css`, `fiscal.css`, `kanban.css`, `merchant-settings.css`, `faceid-enrollment.css`, `qr-customizer.css`, `settings.css` |
 
 ### 1.5. Иерархический порядок стилей по DOM-дереву (DOM-Hierarchical Pre-Order Sorting)
 Все таблицы стилей дизайн-системы упорядочиваются строго в соответствии со сквозным обходом DOM-дерева в глубину (Depth-First Search / Pre-Order):
@@ -133,7 +135,7 @@
 ```
 
 - **1. Уровень документа (`body`)**:
-  - `body:has(...)` применяется **исключительно** для макросетки через тег `<layout [variant]>` (`body:has(layout[grid])`, `body:has(layout[landing])`, `body:has(layout[chat])`, `body:has(layout[map])`).
+  - Единая универсальная 3-колоночная макросетка (`grid-template-columns: auto minmax(0, 1fr) auto;`). Адаптивность переключается через `grid-template-areas`. Механизм служебного тега `<layout>` упразднен.
 - **2. Уровень страницы (`landmarks`)**:
   - На первом уровне DOM страницы находятся её семантические ориентиры: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`.
   - Стили каждого ориентира пишутся **строго от самого landmark'а**:
@@ -331,13 +333,8 @@
 @import "foundations/scrollbars.css" layer(foundations);
 @import "foundations/animations.css" layer(foundations);
 
-/* 3. Blazor Layouts (Page Skeletons & Shells: 1-to-1 with <layout [variant]>) */
-@import "layouts/chat-layout.css" layer(layouts);
-@import "layouts/grid-layout.css" layer(layouts);
-@import "layouts/landing-layout.css" layer(layouts);
-@import "layouts/main-layout.css" layer(layouts);
-@import "layouts/map-layout.css" layer(layouts);
-@import "layouts/nav-only-layout.css" layer(layouts);
+/* 3. Blazor Layouts (Page Skeletons & Shells) */
+@import "layouts/app.css" layer(layouts);
 
 /* 4. Page-Specific Styles (Macro Screen Contexts) */
 @import "pages/about.css" layer(pages);
@@ -356,41 +353,40 @@
 /* 5. Smart Widgets & Composite Tools (Domain Organisms) */
 @import "widgets/ads.css" layer(widgets);
 @import "widgets/ai-blob.css" layer(widgets);
-@import "widgets/booking-picker.css" layer(widgets);
 @import "widgets/cart.css" layer(widgets);
-@import "widgets/color-picker.css" layer(widgets);
+@import "widgets/chat.css" layer(widgets);
 @import "widgets/commerce-modes.css" layer(widgets);
+@import "widgets/detector.css" layer(widgets);
+@import "widgets/faceid-enrollment.css" layer(widgets);
 @import "widgets/faceid-viewfinder.css" layer(widgets);
 @import "widgets/fiscal.css" layer(widgets);
+@import "widgets/invoice.css" layer(widgets);
+@import "widgets/kanban.css" layer(widgets);
+@import "widgets/kiosk.css" layer(widgets);
 @import "widgets/lang-selector.css" layer(widgets);
 @import "widgets/map.css" layer(widgets);
-@import "widgets/media-player.css" layer(widgets);
+@import "widgets/merchant-settings.css" layer(widgets);
 @import "widgets/pricing-tiers.css" layer(widgets);
-@import "widgets/qr-designer.css" layer(widgets);
+@import "widgets/qr-customizer.css" layer(widgets);
 @import "widgets/seat-designer.css" layer(widgets);
+@import "widgets/settings.css" layer(widgets);
+@import "widgets/terminal.css" layer(widgets);
 
-/* 6. Material 3 Component Primitives (Protected UI Units) */
-@import "components/buttons.css" layer(components);
-@import "components/cards.css" layer(components);
-@import "components/chips.css" layer(components);
-@import "components/common.css" layer(components);
-@import "components/dialogs.css" layer(components);
-@import "components/reconnect-modal.css" layer(components);
-@import "components/search.css" layer(components);
-@import "components/expressive.css" layer(components);
-@import "components/feedback.css" layer(components);
-@import "components/forms.css" layer(components);
-@import "components/info-grid.css" layer(components);
-@import "components/invoice.css" layer(components);
-@import "components/link-stack.css" layer(components);
-@import "components/profile-dialog.css" layer(components);
-@import "components/smart-data-view.css" layer(components);
-@import "components/smart-enum.css" layer(components);
+/* 6. Material 3 Component Primitives (Attribute-Driven UI Units) */
+@import "components/avatar.css" layer(components);
+@import "components/card.css" layer(components);
+@import "components/color-picker.css" layer(components);
+@import "components/file-picker.css" layer(components);
+@import "components/markdown.css" layer(components);
+@import "components/paginator.css" layer(components);
+@import "components/picker-trigger.css" layer(components);
+@import "components/skeleton.css" layer(components);
+@import "components/smart-checkbox.css" layer(components);
+@import "components/smart-dataview.css" layer(components);
 @import "components/smart-filter.css" layer(components);
 @import "components/smart-form.css" layer(components);
-@import "components/smart-toast.css" layer(components);
-@import "components/tables.css" layer(components);
-@import "components/theme-toggle.css" layer(components);
+@import "components/smart-grid.css" layer(components);
+@import "components/smart-toasts.css" layer(components);
 ```
 
 ---

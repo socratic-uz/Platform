@@ -141,7 +141,7 @@ main[chat] > chat-messages > article > section > a {
     color: var(--md-sys-color-on-surface);
     font-size: 0.8125rem;
     line-height: 1.25;
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     transition: transform var(--md-sys-motion-duration-short2) ease,
                 border-color var(--md-sys-motion-duration-short2) ease,
                 box-shadow var(--md-sys-motion-duration-short2) ease;
@@ -173,7 +173,7 @@ main[chat] > chat-messages > article > section > a > md-icon {
 
 main[chat] > chat-messages > article > section > a:hover {
     border-color: var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-level2);
+    box-shadow: none;
     transform: translateY(-1px);
 }
 
@@ -278,7 +278,7 @@ main[chat] > chat-messages > article:not(:has(header), [empty], aside) {
     color: var(--md-sys-color-on-primary-container);
     white-space: pre-wrap;
     word-break: break-word;
-    box-shadow: var(--md-sys-elevation-level1);
+    box-shadow: none;
     font-size: var(--md-sys-typescale-body-large-size, 1rem);
     line-height: 1.5;
 }
@@ -530,6 +530,16 @@ main[chat] > footer {
 
 main[chat] > chat-messages {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-3);
+    }
+
+main[chat] > chat-messages > article[empty],
+main[chat] > chat-messages > article:only-child:has(ul) {
+        margin-top: var(--md-sys-spacing-2);
+    }
+
+main[chat] > chat-messages > article[empty] > ul,
+main[chat] > chat-messages > article:only-child:has(ul) > ul {
+        margin-top: var(--md-sys-spacing-3);
     }
 
 main[chat] > chat-messages > article[user],

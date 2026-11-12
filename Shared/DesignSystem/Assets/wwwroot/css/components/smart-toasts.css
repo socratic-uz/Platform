@@ -1,15 +1,7 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / smart-toast.css
-   Pure CSS Grid, MD3 Expressive tokens
+   Socratic Design System — COMPONENTS / smart-toasts.css
+   Pure CSS Grid, MD3 Expressive tokens (aside[smart-toasts])
    ========================================================================== */
-
-article[level="error"] { border-left-color: var(--md-sys-color-error); }
-
-article[level="info"] { border-left-color: var(--md-sys-color-primary); }
-
-article[level="success"] { border-left-color: var(--md-sys-color-tertiary); }
-
-article[level="warning"] { border-left-color: var(--md-sys-color-error-container); }
 
 aside[smart-toasts] {
     position: fixed;
@@ -22,12 +14,12 @@ aside[smart-toasts] {
     pointer-events: none;
 }
 
-aside[smart-toasts] > article {
+aside[smart-toasts]>article {
     pointer-events: auto;
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
     border-radius: var(--md-sys-shape-expressive-card);
-    box-shadow: var(--md-sys-elevation-expressive-3);
+    box-shadow: none;
     padding: 14px 18px;
     border: 1px solid var(--md-sys-color-outline-variant);
     border-left: 5px solid var(--md-sys-color-primary);
@@ -38,41 +30,57 @@ aside[smart-toasts] > article {
     font-family: inherit;
 }
 
-aside[smart-toasts] > article > header {
+aside[smart-toasts]>article>header {
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 10px;
     margin-bottom: 6px;
 }
 
-aside[smart-toasts] > article > header > span {
+aside[smart-toasts]>article>header>span {
     font-weight: 700;
     font-size: 1.1rem;
 }
 
-aside[smart-toasts] > article > header > strong {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--md-sys-color-on-surface);
+aside[smart-toasts]>article>header>strong {
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-aside[smart-toasts] > article > header > md-icon-button {
-    --md-icon-button-icon-size: 20px;
-    width: 44px;
-    height: 44px;
+aside[smart-toasts]>article>header>md-icon-button {
+    --md-icon-button-icon-size: 18px;
+    margin-left: auto;
 }
 
-aside[smart-toasts] > article > p {
-    font-size: 0.88rem;
+aside[smart-toasts]>article>p {
+    font-size: 0.85rem;
     color: var(--md-sys-color-on-surface-variant);
     line-height: 1.4;
+    margin: 0;
+}
+
+aside[smart-toasts]>article[level="error"] {
+    border-left-color: var(--md-sys-color-error);
+}
+
+aside[smart-toasts]>article[level="info"] {
+    border-left-color: var(--md-sys-color-primary);
+}
+
+aside[smart-toasts]>article[level="success"] {
+    border-left-color: var(--md-sys-color-tertiary);
+}
+
+aside[smart-toasts]>article[level="warning"] {
+    border-left-color: var(--md-sys-color-error-container);
 }
 
 @keyframes smart-toast-enter {
     from {
         opacity: 0;
-        transform: translateY(20px) scale(0.92);
+        transform: translateY(20px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);

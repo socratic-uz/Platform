@@ -81,54 +81,57 @@
 /* 2. Foundations & Reset */
 @import "foundations/reset.css" layer(foundations);
 @import "foundations/animations.css" layer(foundations);
+@import "foundations/buttons.css" layer(foundations);
+@import "foundations/dialogs.css" layer(foundations);
+@import "foundations/drawer.css" layer(foundations);
+@import "foundations/footer.css" layer(foundations);
 @import "foundations/forms.css" layer(foundations);
+@import "foundations/grid.css" layer(foundations);
+@import "foundations/header.css" layer(foundations);
 @import "foundations/landmarks.css" layer(foundations);
 @import "foundations/lists.css" layer(foundations);
+@import "foundations/rail.css" layer(foundations);
+@import "foundations/runtime.css" layer(foundations);
 @import "foundations/scrollbars.css" layer(foundations);
 @import "foundations/tables.css" layer(foundations);
 @import "foundations/typography.css" layer(foundations);
 
 /* 3. Material 3 Component Primitives (Protected UI Units) */
 @import "components/avatar.css" layer(components);
-@import "components/buttons.css" layer(components);
-@import "components/cards.css" layer(components);
-@import "components/dialogs.css" layer(components);
-@import "components/feedback.css" layer(components);
+@import "components/card.css" layer(components);
+@import "components/color-picker.css" layer(components);
+@import "components/file-picker.css" layer(components);
 @import "components/markdown.css" layer(components);
-@import "components/reconnect-modal.css" layer(components);
-@import "components/smart-data-view.css" layer(components);
-@import "components/smart-enum.css" layer(components);
+@import "components/paginator.css" layer(components);
+@import "components/picker-trigger.css" layer(components);
+@import "components/skeleton.css" layer(components);
+@import "components/smart-checkbox.css" layer(components);
+@import "components/smart-dataview.css" layer(components);
 @import "components/smart-filter.css" layer(components);
 @import "components/smart-form.css" layer(components);
-@import "components/smart-toast.css" layer(components);
-@import "components/tables.css" layer(components);
-@import "components/theme-toggle.css" layer(components);
+@import "components/smart-grid.css" layer(components);
+@import "components/smart-toasts.css" layer(components);
 
 /* 4. Smart Widgets & Composite Tools (Domain Organisms) */
 @import "widgets/ads.css" layer(widgets);
 @import "widgets/ai-blob.css" layer(widgets);
-@import "widgets/booking-picker.css" layer(widgets);
 @import "widgets/cart.css" layer(widgets);
 @import "widgets/chat.css" layer(widgets);
-@import "widgets/color-picker.css" layer(widgets);
 @import "widgets/commerce-modes.css" layer(widgets);
 @import "widgets/detector.css" layer(widgets);
-@import "widgets/drawer.css" layer(widgets);
+@import "widgets/faceid-enrollment.css" layer(widgets);
 @import "widgets/faceid-viewfinder.css" layer(widgets);
 @import "widgets/fiscal.css" layer(widgets);
-@import "widgets/footer.css" layer(widgets);
-@import "widgets/header.css" layer(widgets);
 @import "widgets/invoice.css" layer(widgets);
+@import "widgets/kanban.css" layer(widgets);
 @import "widgets/kiosk.css" layer(widgets);
 @import "widgets/lang-selector.css" layer(widgets);
 @import "widgets/map.css" layer(widgets);
-@import "widgets/orders.css" layer(widgets);
-@import "widgets/payment.css" layer(widgets);
+@import "widgets/merchant-settings.css" layer(widgets);
 @import "widgets/pricing-tiers.css" layer(widgets);
-@import "widgets/profile-dialog.css" layer(widgets);
-@import "widgets/qr-designer.css" layer(widgets);
-@import "widgets/rail.css" layer(widgets);
+@import "widgets/qr-customizer.css" layer(widgets);
 @import "widgets/seat-designer.css" layer(widgets);
+@import "widgets/settings.css" layer(widgets);
 @import "widgets/terminal.css" layer(widgets);
 
 /* 5. Page-Specific Styles (Macro Screen Contexts) */
@@ -155,9 +158,4 @@
 @import "pages/wishlist.css" layer(pages);
 
 /* 6. Blazor Layouts (Page Skeletons, Shells & Chrome) */
-@import "layouts/aside-left.css" layer(layouts);
-@import "layouts/aside-right.css" layer(layouts);
-@import "layouts/body.css" layer(layouts);
-@import "layouts/footer.css" layer(layouts);
-@import "layouts/header.css" layer(layouts);
-@import "layouts/main.css" layer(layouts);
+@import "layouts/app.css" layer(layouts);
