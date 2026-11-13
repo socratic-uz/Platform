@@ -15,7 +15,7 @@
         }
         <ColumnsCollectedNotifier TGridItem="TGridItem" />
 
-        <table smart-grid theme="@Theme" aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
+        <table smart-grid theme=@Theme aria-rowcount=@(_ariaBodyRowCount + 1) @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
             <thead>
                 <tr>
                     @_renderColumnHeaders
@@ -24,13 +24,13 @@
             <tbody>
                 @if (Virtualize)
                 {
-                    <Virtualize @ref="@_virtualizeComponent"
+                    <Virtualize @ref=@_virtualizeComponent
                                 TItem="(int RowIndex, TGridItem Data)"
-                                ItemSize="@ItemSize"
-                                OverscanCount="@OverscanCount"
-                                ItemsProvider="@ProvideVirtualizedItems"
-                                ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
-                                Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                                ItemSize=@ItemSize
+                                OverscanCount=@OverscanCount
+                                ItemsProvider=@ProvideVirtualizedItems
+                                ItemContent=@(item => builder => RenderRow(builder, item.RowIndex, item.Data))
+                                Placeholder=@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext)) />
                 }
                 else
                 {

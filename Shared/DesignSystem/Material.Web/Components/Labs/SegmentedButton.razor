@@ -1,10 +1,10 @@
 @namespace Material.Web.Components.Labs
 @using Microsoft.AspNetCore.Components.Web
 
-<md-segmented-button selected="@Selected"
-                     disabled="@Disabled"
-                     label="@Label"
-                     value="@Value"
+<md-segmented-button selected=@Selected
+                     disabled=@Disabled
+                     label=@Label
+                     value=@Value
                      @onclick="HandleClick"
                      @attributes="AdditionalAttributes">
     @ChildContent

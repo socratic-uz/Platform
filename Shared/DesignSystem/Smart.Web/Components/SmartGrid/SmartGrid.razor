@@ -136,16 +136,16 @@
 
         @if (AsCards)
         {
-            <section card-grid aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
+            <section card-grid aria-rowcount=@(_ariaBodyRowCount + 1) @ref="_tableReference" @onclosecolumnoptions="HideColumnOptionsAsync" @attributes="AdditionalAttributes">
                 @if (Virtualize)
                 {
-                    <Virtualize @ref="@_virtualizeComponent"
+                    <Virtualize @ref=@_virtualizeComponent
                                 TItem="(int RowIndex, TItem Data)"
-                                ItemSize="@ItemSize"
-                                OverscanCount="@OverscanCount"
-                                ItemsProvider="@ProvideVirtualizedItems"
-                                ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
-                                Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                                ItemSize=@ItemSize
+                                OverscanCount=@OverscanCount
+                                ItemsProvider=@ProvideVirtualizedItems
+                                ItemContent=@(item => builder => RenderRow(builder, item.RowIndex, item.Data))
+                                Placeholder=@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext)) />
                 }
                 else
                 {
@@ -156,7 +156,7 @@
         else
         {
             <h4>@L?[typeof(TItem).Name.EndsWith("Dto") ? typeof(TItem).Name.Substring(0, typeof(TItem).Name.Length - 3) : typeof(TItem).Name]</h4>
-            <table smart-grid theme=@Theme aria-rowcount="@(_ariaBodyRowCount + 1)" @ref="_tableReference" @onclosecolumnoptions=@HideColumnOptionsAsync @attributes=AdditionalAttributes>
+            <table smart-grid theme=@Theme aria-rowcount=@(_ariaBodyRowCount + 1) @ref="_tableReference" @onclosecolumnoptions=@HideColumnOptionsAsync @attributes=AdditionalAttributes>
                     <thead>
                         <tr>
                             @_renderColumnHeaders
@@ -170,8 +170,8 @@
                                         ItemSize=@ItemSize
                                         OverscanCount=@OverscanCount
                                         ItemsProvider=@ProvideVirtualizedItems
-                                        ItemContent="@(item => builder => RenderRow(builder, item.RowIndex, item.Data))"
-                                        Placeholder="@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext))" />
+                                        ItemContent=@(item => builder => RenderRow(builder, item.RowIndex, item.Data))
+                                        Placeholder=@(placeholderContext => builder => RenderPlaceholderRow(builder, placeholderContext)) />
                         }
                         else
                         {

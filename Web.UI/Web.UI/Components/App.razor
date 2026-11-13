@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" data-theme="@InitialTheme" style="color-scheme: @InitialTheme;">
+<html lang=@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName data-theme=@InitialTheme style="color-scheme: @InitialTheme;">
 <head>
     <HeadAssets />
     <SectionOutlet SectionName="style" />
-    <link rel="stylesheet" href="@Assets["Web.UI.styles.css"]" />
+    <link rel="stylesheet" href=@Assets["Web.UI.styles.css"] />
     <ImportMap />
     <HeadOutlet @rendermode="InteractiveAuto" />
     <AntiforgeryToken />
@@ -15,6 +15,6 @@
 
     <ReconnectModal />
     <script src="https://oauth.telegram.org/js/telegram-login.js?6"></script>
-    <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script src=@Assets["_framework/blazor.web.js"]></script>
 </body>
 </html>

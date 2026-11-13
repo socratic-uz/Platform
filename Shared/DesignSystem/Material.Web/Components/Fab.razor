@@ -2,7 +2,7 @@
 
 @if (Branded)
 {
-    <md-branded-fab label="@Label" size="@Size" variant="@Variant" lowered="@Lowered" @attributes="AdditionalAttributes" @onclick="OnClick">
+    <md-branded-fab label=@Label size=@Size variant=@Variant lowered=@Lowered @attributes="AdditionalAttributes" @onclick="OnClick">
         @if (!string.IsNullOrEmpty(Icon))
         {
             <md-icon slot="icon">@Icon</md-icon>
@@ -12,7 +12,7 @@
 }
 else
 {
-    <md-fab label="@Label" size="@Size" variant="@Variant" lowered="@Lowered" @attributes="AdditionalAttributes" @onclick="OnClick">
+    <md-fab label=@Label size=@Size variant=@Variant lowered=@Lowered @attributes="AdditionalAttributes" @onclick="OnClick">
         @if (!string.IsNullOrEmpty(Icon))
         {
             <md-icon slot="icon">@Icon</md-icon>

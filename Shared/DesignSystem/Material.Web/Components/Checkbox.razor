@@ -6,16 +6,16 @@
 {
     <label>
         <md-checkbox touch-target="wrapper"
-                     checked="@CurrentValue"
-                     required="@Required"
-                     disabled="@Disabled"
-                     indeterminate="@Indeterminate"
-                     value="@FormValue"
-                     name="@NameAttributeValue"
-                     aria-label="@(AriaLabel ?? Label)"
+                     checked=@CurrentValue
+                     required=@Required
+                     disabled=@Disabled
+                     indeterminate=@Indeterminate
+                     value=@FormValue
+                     name=@NameAttributeValue
+                     aria-label=@(AriaLabel ?? Label)
                      @attributes="AdditionalAttributes"
-                     @onchange="@HandleChange"
-                     @oninput="@HandleInput">
+                     @onchange=@HandleChange
+                     @oninput=@HandleInput>
         </md-checkbox>
         @Label
     </label>
@@ -23,16 +23,16 @@
 else
 {
     <md-checkbox touch-target="wrapper"
-                 checked="@CurrentValue"
-                 required="@Required"
-                 disabled="@Disabled"
-                 indeterminate="@Indeterminate"
-                 value="@FormValue"
-                 name="@NameAttributeValue"
-                 aria-label="@AriaLabel"
+                 checked=@CurrentValue
+                 required=@Required
+                 disabled=@Disabled
+                 indeterminate=@Indeterminate
+                 value=@FormValue
+                 name=@NameAttributeValue
+                 aria-label=@AriaLabel
                  @attributes="AdditionalAttributes"
-                 @onchange="@HandleChange"
-                 @oninput="@HandleInput">
+                 @onchange=@HandleChange
+                 @oninput=@HandleInput>
         @ChildContent
     </md-checkbox>
 }

@@ -72,7 +72,7 @@
                         <label active=@(SelectedGateway == PromotionPaymentGatewayType.UzQr)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.UzQr) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.UzQr) Name="gateway" />
                             <span>
-                                <span>📱 UzQR (MUNIS QR-Online)</span>
+                                <span><Icon Name=@QrCode2 /> UzQR (MUNIS QR-Online)</span>
                                 <span>@L[UzQrDesc]</span>
                             </span>
                         </label>
@@ -80,7 +80,7 @@
                         <label active=@(SelectedGateway == PromotionPaymentGatewayType.Click)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Click) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Click) Name="gateway" />
                             <span>
-                                <span>🟡 Click / Click Up</span>
+                                <span><Icon Name=@Payments /> Click / Click Up</span>
                                 <span>@L[ClickDesc]</span>
                             </span>
                         </label>
@@ -88,7 +88,7 @@
                         <label active=@(SelectedGateway == PromotionPaymentGatewayType.Payme)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Payme) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Payme) Name="gateway" />
                             <span>
-                                <span>🟢 Payme Business</span>
+                                <span><Icon Name=@CreditCard /> Payme Business</span>
                                 <span>@L[PaymeDesc]</span>
                             </span>
                         </label>
@@ -96,7 +96,7 @@
                         <label active=@(SelectedGateway == PromotionPaymentGatewayType.Uzum)>
                             <Radio Checked=@(SelectedGateway == PromotionPaymentGatewayType.Uzum) OnChange=@(() => SelectedGateway = PromotionPaymentGatewayType.Uzum) Name="gateway" />
                             <span>
-                                <span>🟣 Uzum Bank</span>
+                                <span><Icon Name=@AccountBalanceWallet /> Uzum Bank</span>
                                 <span>@L[UzumDesc]</span>
                             </span>
                         </label>

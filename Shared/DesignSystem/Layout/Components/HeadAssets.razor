@@ -2,7 +2,7 @@
 
 @if (IncludeBase)
 {
-    <base href="@BaseHref" />
+    <base href=@BaseHref />
 }
 
 <meta charset="utf-8" />
@@ -25,17 +25,17 @@
 }
 
 <!-- Early Theme Initialization (Zero FOUC) -->
-<script src="@(BasePath)js/layouts/theme-init.js"></script>
+<script src=@($"{BasePath}js/layouts/theme-init.js")></script>
 
 <!-- Local Font Preload -->
-<link rel="preload" href="@(BasePath)fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href=@($"{BasePath}fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2") as="font" type="font/woff2" crossorigin />
 
 <!-- Master Design System Stylesheet & Scripts (7-Layer Mirrored Architecture) -->
-<link rel="stylesheet" href="@(BasePath)css/styles.css" />
-<script type="module" src="@(BasePath)js/scripts.js"></script>
+<link rel="stylesheet" href=@($"{BasePath}css/styles.css") />
+<script type="module" src=@($"{BasePath}js/scripts.js")></script>
 
 <!-- App Icons & Manifest -->
-<link rel="icon" type="image/png" href="@(BasePath)img/favicon.png" />
-<link rel="apple-touch-icon" sizes="512x512" href="@(BasePath)img/icon-512.png" />
-<link rel="apple-touch-icon" sizes="192x192" href="@(BasePath)img/icon-192.png" />
-<link rel="manifest" href="@(BasePath)manifest.webmanifest" />
+<link rel="icon" type="image/png" href=@($"{BasePath}img/favicon.png") />
+<link rel="apple-touch-icon" sizes="512x512" href=@($"{BasePath}img/icon-512.png") />
+<link rel="apple-touch-icon" sizes="192x192" href=@($"{BasePath}img/icon-192.png") />
+<link rel="manifest" href=@($"{BasePath}manifest.webmanifest") />

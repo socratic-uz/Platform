@@ -2,14 +2,14 @@
 @using System.Linq.Expressions
 @inherits InputBase<bool>
 
-<md-switch selected="@CurrentValue"
-           icons="@Icons"
-           show-only-selected-icon="@ShowOnlySelectedIcon"
-           required="@Required"
-           value="@FormValue"
-           disabled="@Disabled"
-           name="@NameAttributeValue"
-           aria-label="@AriaLabel"
+<md-switch selected=@CurrentValue
+           icons=@Icons
+           show-only-selected-icon=@ShowOnlySelectedIcon
+           required=@Required
+           value=@FormValue
+           disabled=@Disabled
+           name=@NameAttributeValue
+           aria-label=@AriaLabel
            @attributes="AdditionalAttributes"
            @oninput=@HandleInput
            @onchange=@HandleChange> 

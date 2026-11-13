@@ -10,15 +10,13 @@
     {
         <article level=@GetToastLevelName(toast.Level) @key=@toast.Id role="status">
             <header>
-                <span>
-                    @(toast.Level switch
-                    {
-                        ToastLevel.Success => "✓",
-                        ToastLevel.Error => "✕",
-                        ToastLevel.Warning => "⚠",
-                        _ => "ℹ"
-                    })
-                </span>
+                <Icon Name=@(toast.Level switch
+                {
+                    ToastLevel.Success => CheckCircle,
+                    ToastLevel.Error => Error,
+                    ToastLevel.Warning => Warning,
+                    _ => Info
+                }) />
                 @if (!string.IsNullOrEmpty(toast.Title))
                 {
                     <strong>@toast.Title</strong>

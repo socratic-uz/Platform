@@ -21,7 +21,7 @@
                 Open=@Open
                 Type=@Type
                 NoFocusTrap=@NoFocusTrap
-                aria-label="@AriaLabel"
+                aria-label=@AriaLabel
                 @attributes=@AdditionalAttributes
                 OnClose=@OnClose
                 OnCancel=@OnCancel>
@@ -30,7 +30,7 @@
         @Headline
     </Headline>
     <Content>
-        <EditForm EditContext="@editContext" id="@formId" >
+        <EditForm EditContext=@editContext id=@formId >
             <DataAnnotationsValidator />
 
             @if (ShowValidationSummary)
@@ -124,8 +124,8 @@ private RenderFragment RenderWorkScheduleField(PropertyInfo info, object obj, ob
     info.SetValue(obj, schedule);
 
     return @<text>
-        <SmartSchedulePicker Schedule="@schedule"
-                             ScheduleChanged="@((SharedKernel.ValueObjects.WorkSchedule updated) => { info.SetValue(obj, updated); })" />
+        <SmartSchedulePicker Schedule=@schedule
+                             ScheduleChanged=@((SharedKernel.ValueObjects.WorkSchedule updated) => { info.SetValue(obj, updated); }) />
     </text>;
 }
 
@@ -206,20 +206,20 @@ private RenderFragment CreateTextField<T>(PropertyInfo property, object parentOb
         {
             Expression<Func<T>> fallbackExpression = () => typedValue;
             <TextField T="T"
-                       Label="@displayName"
-                       Type="@fieldType"
-                       Required="@isRequired"
+                       Label=@displayName
+                       Type=@fieldType
+                       Required=@isRequired
                        Variant="TextField<T>.TextFieldVariant.Outlined"
-                       Rows="@(fieldType == "textarea" ? GetTextAreaRows(property) : 0)"
-                       Value="@typedValue"
-                       ValueChanged="@((T value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
-                       ValueExpression="@fallbackExpression" />
+                       Rows=@(fieldType == "textarea" ? GetTextAreaRows(property) : 0)
+                       Value=@typedValue
+                       ValueChanged=@((T value) => { property.SetValue(parentObj, value); StateHasChanged(); })
+                       ValueExpression=@fallbackExpression />
         }
         else
         {
             var rawVal = property.GetValue(parentObj)?.ToString() ?? "";
-            <TextField Value="@rawVal"
-                       ValueChanged="@((string valStr) =>
+            <TextField Value=@rawVal
+                       ValueChanged=@((string valStr) =>
                        {
                            if (typeof(T) == typeof(string))
                            {
@@ -234,13 +234,13 @@ private RenderFragment CreateTextField<T>(PropertyInfo property, object parentOb
                                if (decimal.TryParse(valStr, out var decVal)) property.SetValue(parentObj, decVal);
                            }
                            StateHasChanged();
-                       })"
+                       })
                        ValueExpression="() => rawVal"
-                       Label="@displayName"
-                       Type="@fieldType"
-                       Required="@isRequired"
+                       Label=@displayName
+                       Type=@fieldType
+                       Required=@isRequired
                        Variant="TextField<string>.TextFieldVariant.Outlined"
-                       Rows="@(fieldType == "textarea" ? GetTextAreaRows(property) : 0)" />
+                       Rows=@(fieldType == "textarea" ? GetTextAreaRows(property) : 0) />
         }
     </text>;
 }
@@ -277,24 +277,24 @@ private RenderFragment CreateSwitch(PropertyInfo property, object parentObj)
                 @{
                     Expression<Func<bool>> fallbackExpression = () => boolValue;
                 }
-                <Switch Required="@isRequired"
-                        AriaLabel="@displayName"
+                <Switch Required=@isRequired
+                        AriaLabel=@displayName
                         Icons="true"
-                        Value="@boolValue"
-                        ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
-                        ValueExpression="@fallbackExpression" />
+                        Value=@boolValue
+                        ValueChanged=@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })
+                        ValueExpression=@fallbackExpression />
             </label>
         }
         else
         {
             Expression<Func<bool>> fallbackCheckboxExpression = () => boolValue;
             <Checkbox 
-                      Label="@(isRequired ? $"{displayName} *" : displayName)"
-                      Required="@isRequired"
-                      AriaLabel="@displayName"
-                      Value="@boolValue"
-                      ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
-                      ValueExpression="@fallbackCheckboxExpression" />
+                      Label=@(isRequired ? $"{displayName} *" : displayName)
+                      Required=@isRequired
+                      AriaLabel=@displayName
+                      Value=@boolValue
+                      ValueChanged=@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })
+                      ValueExpression=@fallbackCheckboxExpression />
         }
     </text>;
 }
@@ -322,12 +322,12 @@ private RenderFragment CreateCheckbox(PropertyInfo property, object parentObj)
         {
             Expression<Func<bool>> fallbackExpression = () => boolValue;
             <Checkbox 
-                      Label="@displayName"
-                      Required="@isRequired"
-                      AriaLabel="@displayName"
-                      Value="@boolValue"
-                      ValueChanged="@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })"
-                      ValueExpression="@fallbackExpression" />
+                      Label=@displayName
+                      Required=@isRequired
+                      AriaLabel=@displayName
+                      Value=@boolValue
+                      ValueChanged=@((bool value) => { property.SetValue(parentObj, value); StateHasChanged(); })
+                      ValueExpression=@fallbackExpression />
         }
         else
         {
@@ -466,19 +466,19 @@ private RenderFragment CreateEnumSelect(PropertyInfo property, object parentObj,
     return @<text>
         @if (canUseSelect)
         {
-            <Select Label="@displayName"
-                    Required="@isRequired"
+            <Select Label=@displayName
+                    Required=@isRequired
                     Variant="Select.SelectVariant.Outlined"
-                    Options="@options"
-                    Value="@(currentValue?.ToString() ?? "")"
-                    ValueChanged="@((string value) =>
+                    Options=@options
+                    Value=@(currentValue?.ToString() ?? "")
+                    ValueChanged=@((string value) =>
                                                                                                                                                                                                                                                                                             {
                                                                                                                                                                                                                                                                                                 if (!string.IsNullOrEmpty(value))
                                                                                                                                                                                                                                                                                                 {
                                                                                                                                                                                                                                                                                                     property.SetValue(parentObj, SystemEnum.Parse(enumType, value));
                                                                                                                                                                                                                                                                                                     StateHasChanged();
                                                                                                                                                                                                                                                                                                 }
-                                                                                                                                                                                                                                                                                            })" />
+                                                                                                                                                                                                                                                                                            }) />
         }
         else
         {
@@ -490,18 +490,18 @@ private RenderFragment CreateEnumSelect(PropertyInfo property, object parentObj,
 
             <Select 
                     Variant="Select.SelectVariant.Outlined"
-                    Label="@(isRequired ? $"{displayName} *" : displayName)"
-                    Value="@currentValStr"
-                    ValueChanged="@((string val) =>
+                    Label=@(isRequired ? $"{displayName} *" : displayName)
+                    Value=@currentValStr
+                    ValueChanged=@((string val) =>
                     {
                         if (!string.IsNullOrEmpty(val))
                         {
                             property.SetValue(parentObj, SystemEnum.Parse(enumType, val));
                             StateHasChanged();
                         }
-                    })"
+                    })
                     ValueExpression="() => currentValStr"
-                    Options="@selectOptions" />
+                    Options=@selectOptions />
         }
     </text>;
 }
@@ -665,7 +665,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
                 }
 
                 // Рендерим компонент через декларативный DynamicComponent
-                <DynamicComponent Type="@smartCheckboxType" Parameters="@parameters" />
+                <DynamicComponent Type=@smartCheckboxType Parameters=@parameters />
             }
             catch (Exception ex)
             {
@@ -713,7 +713,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             return @<text>
                 <fieldset >
                     <legend>@displayName</legend>
-                    <DynamicComponent Type="@pointPickerType" Parameters="@parameters" />
+                    <DynamicComponent Type=@pointPickerType Parameters=@parameters />
                 </fieldset>
             </text>;
         }
@@ -824,7 +824,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
             };
 
             return @<text>
-                <DynamicComponent Type="@zonePickerType" Parameters="@parameters" />
+                <DynamicComponent Type=@zonePickerType Parameters=@parameters />
             </text>;
         }
 
@@ -840,12 +840,12 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
 
         return @<text>
             <Material.Web.Components.FilePicker 
-                ExistingImages="@existingImages"
-                NewImagesContent="@newContent"
-                NewImagesFileName="@newFileNames"
-                NewImagesContentType="@newContentTypes"
-                Label="@GetDisplayName(info)"
-                ImageUrlResolver="@ResolveImageUrl" />
+                ExistingImages=@existingImages
+                NewImagesContent=@newContent
+                NewImagesFileName=@newFileNames
+                NewImagesContentType=@newContentTypes
+                Label=@GetDisplayName(info)
+                ImageUrlResolver=@ResolveImageUrl />
         </text>;
     }
 
@@ -855,9 +855,9 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
 
         return @<text>
             <Material.Web.Components.FilePicker 
-                Attachments="@attachments"
-                Label="@GetDisplayName(info)"
-                ImageUrlResolver="@ResolveImageUrl" />
+                Attachments=@attachments
+                Label=@GetDisplayName(info)
+                ImageUrlResolver=@ResolveImageUrl />
         </text>;
     }
 
@@ -906,7 +906,7 @@ private RenderFragment CreateEnumSmartCheckbox(PropertyInfo property, object par
                         { "ValueExpression", valueExpression! }
                     };
 
-                    <DynamicComponent Type="@smartEnumType" Parameters="@parameters" />
+                    <DynamicComponent Type=@smartEnumType Parameters=@parameters />
                 }
                 catch (Exception ex)
                 {

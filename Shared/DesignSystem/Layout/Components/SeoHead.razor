@@ -14,33 +14,33 @@
 
     @if (!string.IsNullOrWhiteSpace(Description))
     {
-        <meta name="description" content="@Description" />
-        <meta property="og:description" content="@Description" />
-        <meta name="twitter:description" content="@Description" />
+        <meta name="description" content=@Description />
+        <meta property="og:description" content=@Description />
+        <meta name="twitter:description" content=@Description />
     }
 
     @if (!string.IsNullOrWhiteSpace(Keywords))
     {
-        <meta name="keywords" content="@Keywords" />
+        <meta name="keywords" content=@Keywords />
     }
 
-    <meta property="og:title" content="@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title)" />
-    <meta property="og:type" content="@(string.IsNullOrWhiteSpace(Type) ? "website" : Type)" />
-    <meta property="og:image" content="@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl)" />
+    <meta property="og:title" content=@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title) />
+    <meta property="og:type" content=@(string.IsNullOrWhiteSpace(Type) ? "website" : Type) />
+    <meta property="og:image" content=@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl) />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title)" />
-    <meta name="twitter:image" content="@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl)" />
+    <meta name="twitter:title" content=@(string.IsNullOrWhiteSpace(Title) ? DefaultTitle : Title) />
+    <meta name="twitter:image" content=@(string.IsNullOrWhiteSpace(ImageUrl) ? DefaultImage : ImageUrl) />
 
     @if (!string.IsNullOrWhiteSpace(CanonicalUrl))
     {
-        <link rel="canonical" href="@CanonicalUrl" />
-        <meta property="og:url" content="@CanonicalUrl" />
+        <link rel="canonical" href=@CanonicalUrl />
+        <meta property="og:url" content=@CanonicalUrl />
 
-        <link rel="alternate" hreflang="ru" href="@GetLocalizedUrl("ru")" />
-        <link rel="alternate" hreflang="uz" href="@GetLocalizedUrl("uz")" />
-        <link rel="alternate" hreflang="en" href="@GetLocalizedUrl("en")" />
-        <link rel="alternate" hreflang="x-default" href="@CanonicalUrl" />
+        <link rel="alternate" hreflang="ru" href=@GetLocalizedUrl("ru") />
+        <link rel="alternate" hreflang="uz" href=@GetLocalizedUrl("uz") />
+        <link rel="alternate" hreflang="en" href=@GetLocalizedUrl("en") />
+        <link rel="alternate" hreflang="x-default" href=@CanonicalUrl />
     }
 
     @if (!string.IsNullOrWhiteSpace(JsonLd))

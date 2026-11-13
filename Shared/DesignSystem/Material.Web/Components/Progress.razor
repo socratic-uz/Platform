@@ -1,14 +1,14 @@
 @if (IsCircular)
 {
-    <md-circular-progress value="@(IsIndeterminate ? null : Value)"
-                          indeterminate="@IsIndeterminate"
-                          four-color="@FourColor"
+    <md-circular-progress value=@(IsIndeterminate ? null : Value)
+                          indeterminate=@IsIndeterminate
+                          four-color=@FourColor
                           @attributes="AdditionalAttributes"></md-circular-progress>
 }
 else
 {
-    <md-linear-progress value="@(IsIndeterminate ? null : Value)"
-                        buffer="@(IsIndeterminate ? null : Buffer)"
-                        indeterminate="@IsIndeterminate"
+    <md-linear-progress value=@(IsIndeterminate ? null : Value)
+                        buffer=@(IsIndeterminate ? null : Buffer)
+                        indeterminate=@IsIndeterminate
                         @attributes="AdditionalAttributes"></md-linear-progress>
 }

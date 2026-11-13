@@ -3,7 +3,7 @@
 @switch (Variant)
 {
     case IconButtonVariant.Filled:
-        <md-filled-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+        <md-filled-icon-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel toggle=@Toggle selected=@Selected @attributes="AdditionalAttributes" @onclick="HandleClick">
             @if (!string.IsNullOrEmpty(Icon))
             {
                 <md-icon>@Icon</md-icon>
@@ -12,7 +12,7 @@
         </md-filled-icon-button>
         break;
     case IconButtonVariant.FilledTonal:
-        <md-filled-tonal-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+        <md-filled-tonal-icon-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel toggle=@Toggle selected=@Selected @attributes="AdditionalAttributes" @onclick="HandleClick">
             @if (!string.IsNullOrEmpty(Icon))
             {
                 <md-icon>@Icon</md-icon>
@@ -21,7 +21,7 @@
         </md-filled-tonal-icon-button>
         break;
     case IconButtonVariant.Outlined:
-        <md-outlined-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+        <md-outlined-icon-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel toggle=@Toggle selected=@Selected @attributes="AdditionalAttributes" @onclick="HandleClick">
             @if (!string.IsNullOrEmpty(Icon))
             {
                 <md-icon>@Icon</md-icon>
@@ -31,7 +31,7 @@
         break;
     case IconButtonVariant.Standard:
     default:
-        <md-icon-button disabled="@Disabled" href="@Href" target="@Target" type="@Type" aria-label="@AriaLabel" toggle="@Toggle" selected="@Selected" @attributes="AdditionalAttributes" @onclick="HandleClick">
+        <md-icon-button disabled=@Disabled href=@Href target=@Target type=@Type aria-label=@AriaLabel toggle=@Toggle selected=@Selected @attributes="AdditionalAttributes" @onclick="HandleClick">
             @if (!string.IsNullOrEmpty(Icon))
             {
                 <md-icon>@Icon</md-icon>

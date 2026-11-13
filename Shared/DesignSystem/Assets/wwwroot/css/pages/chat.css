@@ -105,6 +105,7 @@ main[chat] > footer > form > md-filled-text-field {
    ========================================================================== */
 main[chat] > chat-messages {
     height: 100%;
+    grid-auto-rows: max-content;
     gap: var(--md-sys-spacing-4);
     align-content: start;
     min-height: 0;
@@ -114,6 +115,10 @@ main[chat] > chat-messages {
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior-y: contain;
+}
+
+main[chat] > chat-messages > article {
+    overflow: visible;
 }
 
 /* Citation card */

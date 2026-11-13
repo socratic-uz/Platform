@@ -1,6 +1,6 @@
 @if (IsSecondary)
 {
-    <md-secondary-tab active="@IsActive" inline-icon="@InlineIcon" @onclick="HandleClick" @attributes="AdditionalAttributes">
+    <md-secondary-tab active=@IsActive inline-icon=@InlineIcon @onclick="HandleClick" @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {
             <md-icon slot="icon">@Icon</md-icon>
@@ -10,7 +10,7 @@
 }
 else
 {
-    <md-primary-tab active="@IsActive" inline-icon="@InlineIcon" @onclick="HandleClick" @attributes="AdditionalAttributes">
+    <md-primary-tab active=@IsActive inline-icon=@InlineIcon @onclick="HandleClick" @attributes="AdditionalAttributes">
         @if (!string.IsNullOrEmpty(Icon))
         {
             <md-icon slot="icon">@Icon</md-icon>

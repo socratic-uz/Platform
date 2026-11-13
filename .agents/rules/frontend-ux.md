@@ -58,6 +58,8 @@
 | **Ассеты / URL** | `@using static Assets.<Group>` | `@<AssetName>` | `<img src=@LogoSvg alt=@L[LogoAlt] />` |
 | **Перечисления (Enums)** | `@using static <EnumName>` | `@<EnumValue>` | `<Button Variant=@Outlined />`, `<Chip Type=@Filter />` |
 
+Для интерфейсных иконок, индикаторов и визуальных маркеров в разметке используем `<Icon Name=@... />` (`Material Symbols` через `@using static Icons`) вместо эмодзи и текстовых символов.
+
 ---
 
 ## 3. ⚡ Чистый синтаксис атрибутов без кавычек (Unquoted Razor Syntax)
