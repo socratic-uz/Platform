@@ -1,7 +1,8 @@
 {
     "short_name": "Socratic",
-    "id": "./",
-    "start_url": "./",
+    "id": "/",
+    "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "prefer_related_applications": false,
     "icons": [
