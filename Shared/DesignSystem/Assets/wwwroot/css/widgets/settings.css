@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / settings.css
+   Socratic Design System â€” WIDGETS / settings.css
    Settings Panel Widget (aside[settings])
    ========================================================================== */
 
@@ -10,7 +10,6 @@ aside[settings] {
 
 aside[settings] > fieldset {
     gap: var(--md-sys-spacing-2);
-    border: none;
     padding: 0;
 }
 

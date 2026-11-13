@@ -1,5 +1,5 @@
-/* ==========================================================================
-   Socratic Design System — FOUNDATIONS / typography.css
+﻿/* ==========================================================================
+   Socratic Design System â€” FOUNDATIONS / typography.css
    Semantic Headings, Inline Text, Code & Blockquotes
    ========================================================================== */
 
@@ -119,7 +119,6 @@ code {
 
 kbd {
     padding: 0.25em;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-bottom-width: 2px;
     border-radius: var(--md-sys-shape-corner-extra-small);
     background-color: var(--md-sys-color-surface-container-highest);

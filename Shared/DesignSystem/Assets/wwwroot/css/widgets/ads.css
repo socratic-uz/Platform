@@ -1,16 +1,14 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / ads.css
+   Socratic Design System â€” WIDGETS / ads.css
    Ad Network, Digital Signage & Kiosk Screensaver Ad Units
    ========================================================================== */
 
 aside[ads] {
     align-items: stretch;
     padding: 0.75rem;
-    border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container);
     overflow: hidden;
-    box-shadow: none;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring);
 }
@@ -27,7 +25,6 @@ aside[ads] > footer {
     align-items: center;
     margin-top: 0.5rem;
     padding-top: 0.5rem;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     font-size: 0.75rem;
     color: var(--md-sys-color-outline);
 }
@@ -49,6 +46,5 @@ aside[ads][google] {
 }
 
 aside[ads]:hover {
-    box-shadow: none;
     transform: translateY(-2px);
 }

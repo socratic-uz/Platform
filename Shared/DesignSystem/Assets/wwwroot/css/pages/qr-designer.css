@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / qr-designer.css
+   Socratic Design System â€” PAGES / qr-designer.css
    Direct Body Landmarks for QR Designer Page: main[qr-designer] & aside > md-dialog[qr-designer]
    ========================================================================== */
 
@@ -17,10 +17,8 @@ main[qr-designer]>header {
     gap: 1.25rem;
     align-items: center;
     padding: 1.25rem 1.5rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: none;
 }
 
 main[qr-designer]>header>hgroup {
@@ -66,10 +64,8 @@ main[qr-designer]>article {
     align-items: center;
     justify-items: center;
     padding: 2rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: none;
 }
 
 main[qr-designer]>article>figure {
@@ -126,7 +122,6 @@ aside>md-dialog[qr-designer]>section[slot="content"] {
 aside>md-dialog[qr-designer]>section[slot="content"]>fieldset {
     gap: 0.75rem;
     padding: 0;
-    border: none;
 }
 
 aside>md-dialog[qr-designer]>section[slot="content"]>fieldset>legend {

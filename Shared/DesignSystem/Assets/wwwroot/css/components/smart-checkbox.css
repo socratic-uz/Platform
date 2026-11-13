@@ -1,11 +1,10 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / smart-checkbox.css
+   Socratic Design System â€” COMPONENTS / smart-checkbox.css
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
 fieldset[smart-checkbox] {
     gap: var(--md-sys-spacing-2);
-    border: none;
     padding: 0;
 }
 
@@ -40,7 +39,6 @@ fieldset[smart-checkbox][layout="vertical"] > ul {
 
 fieldset[smart-enum] {
     gap: var(--md-sys-spacing-2);
-    border: none;
     padding: 0;
 }
 

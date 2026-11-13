@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / payment.css
-   Classless Page Landmark Architecture — Payment Dashboard & Plans
+   Socratic Design System Ã¢â‚¬â€ PAGES / payment.css
+   Classless Page Landmark Architecture Ã¢â‚¬â€ Payment Dashboard & Plans
    ========================================================================== */
 
 header[payment] > hgroup {
@@ -59,10 +59,8 @@ main[payment] > section:last-of-type > section:has(> article) {
 main[payment] > section:last-of-type > section:has(> article) > article {
     gap: 1rem;
     padding: 1.25rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: none;
 }
 
 main[payment] > section:last-of-type > section:has(> article) > article > header {
@@ -126,7 +124,6 @@ main[payment] > section:last-of-type > section:not(:has(> article)) {
     place-items: center;
     gap: 1rem;
     padding: 3rem 1.5rem;
-    border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-lowest);
     text-align: center;
@@ -146,7 +143,7 @@ main[payment] > section:last-of-type > section:not(:has(> article)) > md-icon {
     color: var(--md-sys-color-outline);
 }
 
-main[payment] :where(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
+main[payment] :is(md-filled-button, md-filled-tonal-button, md-outlined-button, md-text-button) {
     min-height: 48px;
     --md-filled-button-container-height: 48px;
     --md-filled-tonal-button-container-height: 48px;
@@ -188,10 +185,8 @@ aside > md-dialog[payment] > section[slot="content"] > article {
     display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: none;
 }
 
 aside > md-dialog[payment] > section[slot="content"] > article > h3 {
@@ -212,7 +207,6 @@ aside > md-dialog[payment] > section[slot="content"] > article > p:has(> span) {
     align-items: center;
     margin: 0;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     font-size: 0.85rem;
 }
 
@@ -228,7 +222,6 @@ aside > md-dialog[payment] > section[slot="content"] > article > p:has(> span) >
 
 aside > md-dialog[payment] > section[slot="content"] > article > p:last-child {
     padding-bottom: 0;
-    border-bottom: none;
 }
 
 aside > md-dialog[payment] > section[slot="content"] > article:first-of-type {
@@ -242,7 +235,6 @@ aside > md-dialog[payment] > section[slot="content"] > article:first-of-type > f
     width: 96px;
     height: 96px;
     margin: 0 auto;
-    border: 6px solid var(--md-sys-color-primary);
     border-radius: 50%;
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-primary);
@@ -275,6 +267,8 @@ footer[payment] > md-chip-set {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
+    max-width: 100%;
+    overflow-x: auto;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;

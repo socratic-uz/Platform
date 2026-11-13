@@ -1,11 +1,10 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / merchant-settings.css
+   Socratic Design System â€” WIDGETS / merchant-settings.css
    Payment Widgets, Checkout Panels, QR Sections & Merchant Settings
    ========================================================================== */
 
 section[merchant-settings] {
     background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     padding: var(--md-sys-spacing-6);
     color: var(--md-sys-color-on-surface);
@@ -30,7 +29,6 @@ section[merchant-settings] > header > p {
 
 section[merchant-settings] > fieldset {
     background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     padding: var(--md-sys-spacing-4);
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -73,5 +71,4 @@ section[merchant-settings] > fieldset:last-of-type {
 section[merchant-settings] > footer {
     justify-content: end;
     padding-top: var(--md-sys-spacing-3);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }

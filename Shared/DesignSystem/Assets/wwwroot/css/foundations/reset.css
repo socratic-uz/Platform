@@ -85,7 +85,7 @@ chat-messages {
 
 html {
     height: 100%;
-    background: var(--md-sys-color-background);
+    background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-plain);
     scroll-behavior: smooth;
@@ -98,7 +98,6 @@ html {
 
 body {
     min-height: var(--md-sys-viewport-height);
-    background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-plain);
     font-size: var(--md-sys-typescale-body-large-size);

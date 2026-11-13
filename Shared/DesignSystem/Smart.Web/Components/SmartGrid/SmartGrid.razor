@@ -120,10 +120,10 @@
 
         <TemplateColumn Context="item" TGridItem="TItem">
             <HeaderTemplate>
-                <Fab Variant="primary" Lowered=@true aria-label=@L[CreateAction] OnClick=@(e => OpenCreateDialog())>@Add</Fab>
+                <Fab Variant="primary" Lowered=@true Icon=@Add aria-label=@L[CreateAction] OnClick=@(e => OpenCreateDialog()) />
             </HeaderTemplate>
             <ChildContent>
-                <IconButton Variant=@FilledTonal title=@L[EditAction] AriaLabel=@L[EditAction] OnClick=@(e => OpenEditDialog(item))>@Edit</IconButton>
+                <IconButton Variant=@FilledTonal Icon=@Edit title=@L[EditAction] AriaLabel=@L[EditAction] OnClick=@(e => OpenEditDialog(item)) />
             </ChildContent>
         </TemplateColumn>
     }

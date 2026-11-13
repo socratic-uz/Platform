@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — FaceID Biometric Viewfinder (Pure Attribute Classless)
+   Layer: widgets â€” FaceID Biometric Viewfinder (Pure Attribute Classless)
    ========================================================================== */
 
 figure[faceid-viewfinder], section[faceid] > figure {
@@ -12,7 +12,6 @@ figure[faceid-viewfinder], section[faceid] > figure {
     border: 3px solid var(--faceid-status-color);
     background: var(--md-sys-color-surface-container-lowest);
     overflow: hidden;
-    box-shadow: none;
 }
 
 figure[faceid-viewfinder] > video,

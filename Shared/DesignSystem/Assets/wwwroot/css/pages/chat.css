@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / chat.css
-   Classless Page Landmark Architecture — AI Chat Page
+   Socratic Design System Ã¢â‚¬â€ PAGES / chat.css
+   Classless Page Landmark Architecture Ã¢â‚¬â€ AI Chat Page
    ========================================================================== */
 
 /* ==========================================================================
@@ -27,7 +27,6 @@ header[chat] > hgroup > a {
     min-width: var(--md-sys-touch-target-min, 48px);
     height: var(--md-sys-touch-target-min, 48px);
     min-height: var(--md-sys-touch-target-min, 48px);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.4);
     border-radius: var(--md-sys-shape-corner-full);
     background: rgb(from var(--md-sys-color-surface-container) r g b / 0.6);
     color: var(--md-sys-color-on-surface);
@@ -70,7 +69,6 @@ main[chat] > footer {
     width: 100%;
     box-sizing: border-box;
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4) max(var(--md-sys-spacing-3), env(safe-area-inset-bottom, 0px));
-    border-top: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
     background: rgb(from var(--md-sys-color-surface) r g b / 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -134,14 +132,11 @@ main[chat] > chat-messages > article > section > a {
     align-items: center;
     margin-top: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-bottom: 2px solid var(--md-sys-color-tertiary);
     border-radius: var(--md-sys-shape-corner-medium);
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
     font-size: 0.8125rem;
     line-height: 1.25;
-    box-shadow: none;
     transition: transform var(--md-sys-motion-duration-short2) ease,
                 border-color var(--md-sys-motion-duration-short2) ease,
                 box-shadow var(--md-sys-motion-duration-short2) ease;
@@ -173,7 +168,6 @@ main[chat] > chat-messages > article > section > a > md-icon {
 
 main[chat] > chat-messages > article > section > a:hover {
     border-color: var(--md-sys-color-primary);
-    box-shadow: none;
     transform: translateY(-1px);
 }
 
@@ -258,7 +252,6 @@ main[chat] > chat-messages > article:only-child:has(ul) > ul > li {
     gap: var(--md-sys-spacing-3);
     align-items: baseline;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
@@ -278,7 +271,6 @@ main[chat] > chat-messages > article:not(:has(header), [empty], aside) {
     color: var(--md-sys-color-on-primary-container);
     white-space: pre-wrap;
     word-break: break-word;
-    box-shadow: none;
     font-size: var(--md-sys-typescale-body-large-size, 1rem);
     line-height: 1.5;
 }
@@ -294,7 +286,6 @@ main[chat] > chat-messages > aside {
     padding: 0.35rem 0.85rem;
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     font-size: 0.8125rem;
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -363,23 +354,33 @@ aside > md-dialog[chat] > section[slot="content"] > ul {
 
 aside > md-dialog[chat] > section[slot="content"] > ul > li {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-    align-items: baseline;
-    padding: var(--md-sys-spacing-3);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
-    border-radius: var(--md-sys-shape-corner-medium);
-    background: var(--md-sys-color-surface-container-low);
-    color: var(--md-sys-color-on-surface);
-    font-size: 0.8125rem;
-    line-height: 1.4;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > ul > li > button > md-icon {
+    font-size: 20px;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > ul > li > button:hover {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+aside > md-dialog[chat] > section[slot="content"] > ul > li > button[aria-current="true"] {
+    background: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    font-weight: 600;
+}
+
+aside > md-dialog[chat] > section[slot="content"] > ul > li > :is(md-filled-tonal-button, md-text-button) {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    text-align: start;
 }
 
 aside > md-dialog[chat] > footer[slot="actions"] {
     display: grid;
     width: 100%;
     padding-top: var(--md-sys-spacing-2);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 aside > md-dialog[chat] > footer[slot="actions"] > md-filled-button {
@@ -417,7 +418,6 @@ assistant-message > ol > li > strong {
 assistant-message > pre {
     margin: var(--md-sys-spacing-3) 0;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background-color: var(--md-sys-color-surface-container-highest);
     overflow-x: auto;
@@ -447,28 +447,21 @@ assistant-message > table {
     margin: var(--md-sys-spacing-3) 0;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     overflow: hidden;
 }
 
 assistant-message > table td {
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     font-size: 0.8125rem;
 }
 
 assistant-message > table th {
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
     background-color: var(--md-sys-color-surface-container-high);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     font-size: 0.8125rem;
     font-weight: 600;
     text-align: left;
-}
-
-assistant-message > table tr:last-child td {
-    border-bottom: none;
 }
 
 assistant-message > table tr:nth-child(even) td {

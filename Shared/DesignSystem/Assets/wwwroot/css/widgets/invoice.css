@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / invoice.css
+   Socratic Design System â€” WIDGETS / invoice.css
    Pure Attribute-Driven Classless Invoice & Receipt Viewer
    Root Landmarks: article[invoice], article[receipt]
    ========================================================================== */
@@ -17,8 +17,6 @@ article[receipt] {
     margin: 0 auto;
     padding: var(--md-sys-spacing-6) var(--md-sys-spacing-5);
     border-radius: var(--md-sys-shape-corner-large);
-    box-shadow: none;
-    border: 1px dashed var(--md-sys-color-outline-variant);
     position: relative;
     height: max-content;
 }
@@ -29,7 +27,6 @@ article[receipt] > header {
     text-align: center;
     margin-bottom: var(--md-sys-spacing-4);
     padding-bottom: var(--md-sys-spacing-3);
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 article[invoice] > header > h3,
@@ -70,7 +67,6 @@ article[invoice] > table:last-of-type,
 article[receipt] > table:last-of-type {
     margin-top: var(--md-sys-spacing-3);
     padding-top: 10px;
-    border-top: 2px solid var(--md-sys-color-on-surface);
     font-size: 0.85rem;
 }
 
@@ -103,14 +99,12 @@ article[receipt] > table:nth-of-type(2) > thead > tr > th {
     font-weight: 700;
     font-size: 0.7rem;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     padding: 6px 0;
 }
 
 article[invoice] > table:nth-of-type(2) > tbody > tr > td,
 article[receipt] > table:nth-of-type(2) > tbody > tr > td {
     padding: 6px 0;
-    border-bottom: 1px dotted var(--md-sys-color-outline-variant);
 }
 
 article[invoice] > table:nth-of-type(2) > tbody > tr:hover,
@@ -124,7 +118,6 @@ article[receipt] > footer {
     text-align: center;
     margin-top: var(--md-sys-spacing-4);
     padding-top: var(--md-sys-spacing-3);
-    border-top: 1px dashed var(--md-sys-color-outline-variant);
     font-size: 0.72rem;
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -139,8 +132,6 @@ article[receipt] > footer > h4 {
 @media print {
 article[invoice],
     article[receipt] {
-        box-shadow: none;
-        border: none;
         background: transparent;
         padding: 0;
         color: var(--md-sys-color-on-surface);

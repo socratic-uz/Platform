@@ -88,6 +88,8 @@
 @import "foundations/forms.css" layer(foundations);
 @import "foundations/grid.css" layer(foundations);
 @import "foundations/header.css" layer(foundations);
+@import "foundations/icons.css" layer(foundations);
+@import "foundations/island.css" layer(foundations);
 @import "foundations/landmarks.css" layer(foundations);
 @import "foundations/lists.css" layer(foundations);
 @import "foundations/rail.css" layer(foundations);

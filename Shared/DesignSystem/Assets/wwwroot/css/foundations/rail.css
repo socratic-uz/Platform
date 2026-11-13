@@ -3,11 +3,6 @@
    НАВИГАЦИОННЫЙ РЕЙЛ И НИЖНИЙ БАР (BODY > ASIDE:HAS(~ MAIN) > NAV)
    - Desktop (>= 840px): вертикальный навигационный рельс (76px)
    - Mobile (< 840px): горизонтальный навигационный бар (60px)
-   - Material Design 3 Expressive Specification:
-     * Active Indicator Pill (56x32px desktop / 64x32px mobile)
-     * Secondary-container container fill + on-secondary-container icon
-     * Filled icon glyph via font-variation-settings: 'FILL' 1
-     * Keyboard focus-visible ring (2px primary, offset 2px)
    ========================================================================== */
 
 /* --- Universal Rail Links, Toggle Button & Avatar --- */
@@ -24,7 +19,6 @@ body>aside:has(~ main)>nav>a {
     text-decoration: none;
     color: var(--md-sys-color-on-surface-variant);
     border-radius: var(--md-sys-shape-corner-medium);
-    outline: none;
     transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
 }
 
@@ -35,36 +29,21 @@ body>aside:has(~ main)>nav>a>span {
     white-space: nowrap;
     text-align: center;
     line-height: 1.15;
-    transition: color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
 body>aside:has(~ main)>nav>a>md-icon {
     display: grid;
     place-items: center;
-    width: 56px;
-    height: 32px;
     font-size: var(--md-icon-size, 24px);
     border-radius: var(--md-sys-shape-corner-full);
-    font-variation-settings: 'FILL' 0, 'wght' 400;
     transition:
         background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        font-variation-settings var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
-        outline var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+        color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
-body>aside:has(~ main)>nav>a:hover:not([aria-current="page"]):not(.active)>md-icon {
+body>aside:has(~ main)>nav>a:hover>md-icon {
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
-}
-
-body>aside:has(~ main)>nav>a:focus-visible {
-    outline: none;
-}
-
-body>aside:has(~ main)>nav>a:focus-visible>md-icon {
-    outline: 2px solid var(--md-sys-color-primary);
-    outline-offset: 2px;
 }
 
 body>aside:has(~ main)>nav>a[aria-current="page"]>span,
@@ -77,12 +56,7 @@ body>aside:has(~ main)>nav>a[aria-current="page"]>md-icon,
 body>aside:has(~ main)>nav>a.active>md-icon {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
-    font-variation-settings: 'FILL' 1, 'wght' 600;
-}
-
-/* В мобильном нижнем баре кнопка аватара не отображается */
-body>aside:has(~ main)>nav>[avatar] {
-    display: none;
+    font-variation-settings: 'FILL' 1;
 }
 
 /* ==========================================================================
@@ -103,9 +77,7 @@ body>aside:has(~ main)>nav>[avatar] {
         align-items: center;
         justify-items: center;
         z-index: 90;
-        border: none;
-        background: var(--md-sys-color-surface-container-lowest);
-        box-shadow: none;
+        background: var(--md-sys-color-surface-container);
         overflow: hidden;
     }
 
@@ -124,9 +96,9 @@ body>aside:has(~ main)>nav>[avatar] {
     }
 
     body>aside:has(~ main)>nav>a>md-icon {
-        width: 64px;
-        height: 32px;
-        font-size: 24px;
+        width: 48px;
+        height: 28px;
+        font-size: 22px;
     }
 }
 
@@ -150,8 +122,7 @@ body>aside:has(~ main)>nav>[avatar] {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-1);
         align-content: normal;
         justify-items: center;
-        border: none;
-        background: var(--md-sys-color-surface-container-lowest);
+        background: var(--md-sys-color-surface-container);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: none;
@@ -175,7 +146,6 @@ body>aside:has(~ main)>nav>[avatar] {
     body>aside:has(~ main)>nav>a>md-icon {
         width: 56px;
         height: 32px;
-        font-size: 24px;
     }
 
     body>aside:has(~ main)>nav>[avatar] {

@@ -162,7 +162,7 @@ Interaction (IX)
 - **Сортировка по DOM-дереву (DOM Pre-Order CSS Sorting)**: порядок правил внутри `.css` файлов строго следует прямому обходу DOM-дерева в глубину (Depth-First Pre-Order), форматируется и валидируется через `npm run sort:css` / `npm run sort:css:check`.
 - **CSS Grid Only**: все сетки, раскладки, стеки и строки строятся на CSS Grid (`display: grid`) с токенами Material Design 3 (`var(--md-sys-color-*)`).
 - **Геометрия**: соблюдай правило `minmax(0, 1fr)` для колонок и `min-width: 0` для ячеек с текстом (`text-overflow: ellipsis`).
-- **Модульность и нулевая специфичность**: независимые компоненты в соответствующих слоях `@layer`, примитивы обнуляют вес через `:where(...)` (0, 0, 0).
+- **Модульность и изоляция**: независимые компоненты в соответствующих слоях `@layer` с изоляцией по уникальному корневому атрибуту (1 компонент/виджет/страница = 1 уникальный корневой атрибут, аналог CSS-изоляции Blazor, без вторых атрибутов-модификаторов).
 - Подробности: [rules/frontend-ui.md](rules/frontend-ui.md).
 
 #### 3. Interaction (IX) ➔ Behavior (Logic) — строго в `*.razor.cs` (Code-Behind)
@@ -186,7 +186,7 @@ Interaction (IX)
 ### 8.4 Архитектура фронтенд-модулей (Clean Architecture + Vertical Slice)
 Каждый фронтенд-модуль (`Retail/PointOfSale`, `Commerce/Checkout`, `Kiosk`) организуется по схеме Clean Architecture + Vertical Slice:
 - **`Features/`**: бизнес-сценарии (UseCases, команды, DTO, правила валидации). Чистый C# (POCO) без Blazor-зависимостей, 100% Native AOT, вызовы через `ValueTask<Result<T>>`.
-- **`Pages/`**: каркас экрана и маршрутизация (`[Route("/pos")]` в `*.razor.cs`), привязка к макро-сетке layout. Зеркально соответствует CSS-слою `pages/`.
+- **`Pages/`**: каркас экрана и маршрутизация (`[Route("/pos")]` в `*.razor.cs`), привязка к макро-сетке layout. Зеркально соответствует CSS-слою `pages/`. Каждая страница обязана иметь парный файл спецификаций `*.razor.md` (бизнес-назначение и возможности, маршрут/доступ, ориентиры и панели, виджеты/стили, ключевые сценарии UX/IX).
 - **`Widgets/`**: умные отраслевые составные организмы (Smart Components: Корзина, Фискальная панель). Внедряют UseCases из `Features/` и связывают компоненты. Зеркально соответствует CSS-слою `widgets/`.
 - **`Components/`**: презентационные примитивы (Dumb Components). Общаются с миром только через `[Parameter]` и `EventCallback`, ничего не знают о `Features/` и UseCases. Зеркально соответствует CSS-слою `components/`.
 - **Общий проект `Domain`**: контракты межмодульного взаимодействия (Value Objects: `Money`, `OrderId`; интерфейсы стейта: `ICartStore`; доменные события). Исключает прямую связанность между модулями.
@@ -229,6 +229,6 @@ Interaction (IX)
 | :--- | :--- | :--- | :--- |
 | **Backend Architect** | `backend-architect` | `src/Backend/`, `src/Shared/SharedKernel/` | ScyllaDB NoSQL (zero EF Core), gRPC Protobuf, Kafka, Redis, Native AOT. |
 | **Frontend UX Specialist** | `frontend-ux-specialist` | Разметка `*.razor` в `src/Frontend/`, `Material.Web/` | Experience & Structure: чистая разметка, HTML5 семантика, Material.Web first, unquoted синтаксис `что-то=@*`, 3-way .resx parity. |
-| **Frontend UI Specialist** | `frontend-ui-specialist` | `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/` | Interface & Presentation: стили в `Assets`, токены M3X, селекторы `:where(...)`, pure CSS Grid, touch targets $\ge 48\text{px}$. |
+| **Frontend UI Specialist** | `frontend-ui-specialist` | `src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/` | Interface & Presentation: стили в `Assets`, токены M3X, `@layer` + изоляция по уникальному корневому атрибуту, pure CSS Grid, touch targets $\ge 48\text{px}$. |
 | **Frontend IX Specialist** | `frontend-ix-specialist` | Код `*.razor.cs` и `Features/` в `src/Frontend/` | Interaction & Behavior: Clean Architecture + Vertical Slice (`Features/UseCases`), слои `Pages/Widgets/Components`, чистый C# code-behind, `using static` (0 алиасов), `PersistentComponentState`, жизненный цикл. |
 

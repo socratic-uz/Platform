@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / smart-toasts.css
+   Socratic Design System â€” COMPONENTS / smart-toasts.css
    Pure CSS Grid, MD3 Expressive tokens (aside[smart-toasts])
    ========================================================================== */
 
@@ -19,10 +19,7 @@ aside[smart-toasts]>article {
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
     border-radius: var(--md-sys-shape-expressive-card);
-    box-shadow: none;
     padding: 14px 18px;
-    border: 1px solid var(--md-sys-color-outline-variant);
-    border-left: 5px solid var(--md-sys-color-primary);
     backdrop-filter: var(--md-sys-glass-blur);
     -webkit-backdrop-filter: var(--md-sys-glass-blur);
     animation: smart-toast-enter var(--md-sys-motion-duration-medium3) var(--md-sys-motion-easing-spring);

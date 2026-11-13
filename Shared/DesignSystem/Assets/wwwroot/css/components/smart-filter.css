@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / smart-filter.css
+   Socratic Design System â€” COMPONENTS / smart-filter.css
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
@@ -11,7 +11,6 @@ search[smart-filter] {
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-medium);
     margin-bottom: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 search[smart-filter] > md-outlined-text-field {

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / map.css
+   Socratic Design System â€” PAGES / map.css
    Direct Body Landmark for Interactive Map Studio: <main map>
    Pure Attribute-Driven Classless Architecture (Zero Specificity via Direct Hierarchy)
    Material Design 3 Native Components & Clean Surface Styling
@@ -48,10 +48,8 @@ main[map]>section>aside {
 
 main[map]>section>aside>nav:first-of-type {
     grid-auto-flow: row;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: none;
     gap: 0;
 }
 
@@ -60,10 +58,8 @@ main[map]>section>aside>nav:last-of-type {
     gap: var(--md-sys-spacing-2);
     align-items: center;
     justify-items: center;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: none;
     font-size: 0.75rem;
     font-weight: 600;
 }
@@ -79,9 +75,7 @@ main[map] > article[navigator] {
     align-content: space-between;
     justify-items: start;
     padding: 0;
-    border: none;
     background: transparent;
-    box-shadow: none;
     pointer-events: none;
 }
 
@@ -91,10 +85,8 @@ main[map] > article[navigator] > header {
     align-items: center;
     width: clamp(340px, 32vw, 420px);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     background: var(--md-sys-color-surface-container-high);
-    box-shadow: none;
     pointer-events: auto;
 }
 
@@ -143,11 +135,9 @@ main[map] > article[navigator] > footer {
     align-items: center;
     width: clamp(340px, 32vw, 420px);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large, 28px);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    box-shadow: none;
     text-align: center;
     pointer-events: auto;
 }
@@ -192,7 +182,6 @@ section[route-mode]>fieldset {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-2);
     padding: 0;
-    border: none;
 }
 
 section[route-mode]>fieldset>ol {
@@ -219,7 +208,6 @@ article[place-details] {
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-2) 0;
     background: transparent;
-    border: none;
 }
 
 article[place-details]>header {

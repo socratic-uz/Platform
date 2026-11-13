@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / picker-trigger.css
+   Socratic Design System â€” COMPONENTS / picker-trigger.css
    Picker Trigger Cards & Pickers (article[picker-trigger], md-dialog[date-picker], md-dialog[time-picker])
    ========================================================================== */
 
@@ -10,13 +10,13 @@ article[picker-trigger] {
     padding: var(--space-md);
     min-height: 68px;
     border-radius: var(--shape-lg);
-    border: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-low);
     cursor: pointer;
     user-select: none;
     transition:
         border-color var(--md-sys-motion-duration-short2) ease,
-        background-color var(--md-sys-motion-duration-short2) ease;
+        background-color var(--md-sys-motion-duration-short2) ease,
+        box-shadow var(--md-sys-motion-duration-short2) ease;
 }
 
 article[picker-trigger] > hgroup {

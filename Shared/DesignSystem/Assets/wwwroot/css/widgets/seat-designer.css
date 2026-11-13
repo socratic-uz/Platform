@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — Venue Seat Designer Canvas (Pure Attribute Classless)
+   Layer: widgets â€” Venue Seat Designer Canvas (Pure Attribute Classless)
    ========================================================================== */
 
 figure[seat-designer] {
@@ -7,7 +7,6 @@ figure[seat-designer] {
     min-height: 520px;
     border-radius: var(--shape-xl);
     background: var(--md-sys-color-surface-container-lowest);
-    border: 1px solid var(--md-sys-color-outline-variant);
     overflow: hidden;
 }
 

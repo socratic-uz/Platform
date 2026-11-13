@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / auth.css
-   Classless Page Landmark Architecture — Authentication & OAuth Callbacks
+   Socratic Design System â€” PAGES / auth.css
+   Classless Page Landmark Architecture â€” Authentication & OAuth Callbacks
    ========================================================================== */
 
 main[auth] {
@@ -17,11 +17,9 @@ main[auth] > article:has(nav) {
     gap: var(--md-sys-spacing-6);
     max-width: 480px;
     padding: var(--md-sys-spacing-10) var(--md-sys-spacing-8);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
     color: var(--md-sys-color-on-surface);
-    box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
@@ -53,7 +51,6 @@ main[auth] > article:has(nav) > header > md-icon {
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
     color: var(--md-sys-color-on-primary);
     font-size: 1.75rem;
-    box-shadow: none;
 }
 
 /* Top Navigation Bar: Brand & Language */
@@ -103,7 +100,6 @@ main[auth] > article:has(nav) > section > figure {
     width: 220px;
     height: 220px;
     margin: 0 auto;
-    border: 2px dashed var(--md-sys-color-outline-variant);
     border-radius: 50%;
     overflow: hidden;
     background: var(--md-sys-color-surface-container);
@@ -128,14 +124,12 @@ main[auth] > article:has(nav) > section > strong {
 main[auth] > article:has(nav) > fieldset {
     gap: 1rem;
     padding: 0;
-    border: none;
 }
 
 main[auth] > article:has(nav) > fieldset > header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 10px 14px;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
@@ -173,7 +167,6 @@ main[auth] > article:has(nav) > aside {
     justify-content: start;
     align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-error);
@@ -196,10 +189,8 @@ main[auth] > article:not(:has(nav)) {
     justify-items: center;
     max-width: 440px;
     padding: 2.5rem 2rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: none;
     backdrop-filter: var(--md-sys-glass-blur-standard);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
     text-align: center;
@@ -220,7 +211,6 @@ main[auth] > article:not(:has(nav)) > figure > span {
     inset: 0;
     width: 100%;
     height: 100%;
-    border: 3px solid rgb(from var(--md-sys-color-primary) r g b / 0.2);
     border-top-color: var(--md-sys-color-primary);
     border-right-color: var(--md-sys-color-tertiary);
     border-radius: 50%;
@@ -256,7 +246,6 @@ main[auth] > article:not(:has(nav)) > md-icon {
     width: 64px;
     height: 64px;
     margin-bottom: 1.25rem;
-    border: 1px solid var(--md-sys-color-error);
     border-radius: 50%;
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);

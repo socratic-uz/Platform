@@ -5,12 +5,28 @@
 
 footer[paginator],
 nav[pagination] {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-sm) var(--space-md);
-    border-radius: var(--shape-md);
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
+}
+
+footer[paginator] > nav {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-1);
+}
+
+footer[paginator] > nav > span {
+    padding: 0 var(--md-sys-spacing-2);
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+    white-space: nowrap;
 }
 
 footer[paginator] > nav > md-icon-button {
@@ -25,15 +41,17 @@ footer[paginator],
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
         gap: var(--md-sys-spacing-1);
-        padding: 4px;
+        padding: var(--md-sys-spacing-1);
     }
 
 footer[paginator] > nav {
-        gap: var(--md-sys-spacing-2);
+        max-width: 100%;
+        gap: var(--md-sys-spacing-1);
         justify-content: center;
     }
 
 footer[paginator] > nav > span {
+        padding: 0 var(--md-sys-spacing-1);
         font-size: 0.75rem;
         white-space: nowrap;
     }

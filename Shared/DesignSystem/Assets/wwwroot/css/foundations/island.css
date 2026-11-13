@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / island.css
+   Material 3 Island Shell Effect (Canvas, Island Surface & Corner Masks)
+   ========================================================================== */
+
+body {
+    --island-r: var(--md-sys-shape-corner-extra-large, 28px);
+    background: var(--md-sys-color-surface-container);
+}
+
+/* Fallback верхних скруглений через body::before, если на странице нет <header> или он пустой */
+body:not(:has(> header > *))::before {
+    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    z-index: var(--md-sys-z-overlay);
+    height: var(--island-r);
+    pointer-events: none;
+    content: '';
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) bottom left / var(--island-r) var(--island-r) no-repeat,
+        radial-gradient(
+            circle at 0% 100%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) bottom right / var(--island-r) var(--island-r) no-repeat;
+}
+
+/* Нижние скругления островка рисуются через body::after в сетке body */
+body::after {
+    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+    align-self: end;
+    position: sticky;
+    bottom: 0;
+    z-index: var(--md-sys-z-overlay);
+    height: var(--island-r);
+    pointer-events: none;
+    content: '';
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) top left / var(--island-r) var(--island-r) no-repeat,
+        radial-gradient(
+            circle at 0% 0%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) top right / var(--island-r) var(--island-r) no-repeat;
+}
+
+@media screen and (max-width: 839.98px) {
+    body:has(> aside:not(main ~ aside) > nav)::after {
+        bottom: var(--aside-bar-h, 60px);
+    }
+}
+
+@media screen and (min-width: 840px) {
+    body {
+        padding-right: var(--md-sys-spacing-3);
+    }
+
+    body:not(:has(> aside:not(main ~ aside) > nav)) {
+        padding-left: var(--md-sys-spacing-3);
+    }
+
+    body:not(:has(> header > *))::before {
+        grid-column: 2 / 4;
+        height: calc(var(--island-r) + var(--md-sys-spacing-3));
+        background:
+            linear-gradient(var(--md-sys-color-surface-container), var(--md-sys-color-surface-container)) top / 100% var(--md-sys-spacing-3) no-repeat,
+            radial-gradient(
+                circle at 100% 100%,
+                transparent var(--island-r),
+                var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+            ) bottom left / var(--island-r) var(--island-r) no-repeat,
+            radial-gradient(
+                circle at 0% 100%,
+                transparent var(--island-r),
+                var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+            ) bottom right / var(--island-r) var(--island-r) no-repeat;
+    }
+
+    body::after {
+        grid-column: 2 / 4;
+        height: calc(var(--island-r) + var(--md-sys-spacing-3));
+        background:
+            radial-gradient(
+                circle at 100% 0%,
+                transparent var(--island-r),
+                var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+            ) top left / var(--island-r) var(--island-r) no-repeat,
+            radial-gradient(
+                circle at 0% 0%,
+                transparent var(--island-r),
+                var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+            ) top right / var(--island-r) var(--island-r) no-repeat,
+            linear-gradient(var(--md-sys-color-surface-container), var(--md-sys-color-surface-container)) bottom / 100% var(--md-sys-spacing-3) no-repeat;
+    }
+}
+
+body > header {
+    background: var(--md-sys-color-surface-container);
+}
+
+/* Пустой хедер полностью скрывается — верхние скругления островка рисует body::before */
+body > header:not(:has(*)) {
+    display: none;
+}
+
+/* Sticky Inverted Corner Masks — верхние скругления островка не прячутся при скролле */
+body > header::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: var(--island-r);
+    pointer-events: none;
+    content: '';
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) top left / var(--island-r) var(--island-r) no-repeat,
+        radial-gradient(
+            circle at 0% 100%,
+            transparent var(--island-r),
+            var(--md-sys-color-surface-container) calc(var(--island-r) + 0.5px)
+        ) top right / var(--island-r) var(--island-r) no-repeat;
+}
+
+body > main {
+    background: var(--md-sys-color-surface);
+}
+
+@media screen and (min-width: 840px) {
+    body:has(> main ~ aside > [docked]) > main ~ aside {
+        background: var(--md-sys-color-surface);
+    }
+}
+
+body > footer {
+    background: var(--md-sys-color-surface);
+}
+
+/* Пустой футер полностью скрывается — нижние скругления островка рисует body::after */
+body > footer:not(:has(*)) {
+    display: none;
+}

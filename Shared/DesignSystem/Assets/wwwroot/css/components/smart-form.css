@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / smart-form.css
+   Socratic Design System â€” COMPONENTS / smart-form.css
    Pure CSS Grid, MD3 Expressive tokens
    ========================================================================== */
 
@@ -32,7 +32,6 @@ md-dialog[smart-form] > div:nth-child(2) > form {
 }
 
 md-dialog[smart-form] > div:nth-child(2) > form > fieldset {
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     padding: 14px;
     margin: 0 0 10px 0;
@@ -56,7 +55,6 @@ md-dialog[smart-form] > div:nth-child(2) > form > fieldset > label {
     padding: 10px 14px;
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-medium);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 md-dialog[smart-form] > div:nth-child(2) > form > label > span,

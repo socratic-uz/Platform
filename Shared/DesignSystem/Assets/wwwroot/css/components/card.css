@@ -1,13 +1,9 @@
 /* ==========================================================================
-   Layer: components — Card & Surface Containers ([card]) (Pure Attribute Classless)
+   Layer: components â€” Card & Surface Containers ([card]) (Pure Attribute Classless)
    Material Design 3 Expressive Specification:
    - Elevated, Filled, Outlined card surfaces (M3 Zero-Border standard)
    - Full-bleed media support: figures and images flush to edges without gaps
    - Decorative Scallop Top Border ([card][scallop])
-   - Standard M3 Card Typography:
-     * Card Title: title-medium (16px, 600 weight, 1.4 line-height)
-     * Card Body: body-medium (14px, 400 weight, 1.5 line-height)
-     * Card Price / Label: title-small (14px, 700 weight)
    ========================================================================== */
 
 article,
@@ -23,10 +19,10 @@ md-outlined-card,
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
     border-radius: var(--md-sys-shape-corner-large);
-    border: none;
     overflow: hidden;
     transition:
         transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
+        box-shadow var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard),
         background-color var(--md-sys-motion-duration-short4) ease;
 }
 
@@ -36,7 +32,6 @@ md-filled-card,
 [card][filled],
 [data-variant="filled"]:is(article, section, aside) {
     background: var(--md-sys-color-surface-container-highest);
-    border: none;
 }
 
 md-outlined-card,
@@ -52,7 +47,7 @@ md-elevated-card,
 [card][elevated],
 [data-variant="elevated"]:is(article, section, aside) {
     background: var(--md-sys-color-surface-container-low);
-    border: none;
+    box-shadow: none;
 }
 
 /* --- Card Grid Layout --- */
@@ -79,41 +74,6 @@ article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > figure:
     object-fit: cover;
 }
 
-/* --- Card Typography & Content Hierarchy --- */
-[card] > section > h3,
-[card] > header > h3,
-article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > section > h3,
-article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > header > h3 {
-    margin: 0;
-    font-size: var(--md-sys-typescale-title-medium-size);
-    font-weight: var(--md-sys-typescale-title-medium-weight);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-    letter-spacing: 0.15px;
-    color: var(--md-sys-color-on-surface);
-}
-
-[card] > section > h3 > a,
-article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > section > h3 > a {
-    color: inherit;
-    text-decoration: none;
-}
-
-[card] > section > p,
-article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > section > p {
-    margin: 0;
-    font-size: var(--md-sys-typescale-body-medium-size);
-    font-weight: var(--md-sys-typescale-body-medium-weight);
-    line-height: var(--md-sys-typescale-body-medium-line-height);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-[card] > footer > span,
-article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > footer > span {
-    font-size: var(--md-sys-typescale-title-small-size);
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-}
-
 /* --- Decorative Scallop Top Border ([card][scallop]) --- */
 [card][scallop]::before,
 [card][data-scallop]::before {
@@ -123,10 +83,10 @@ article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > footer 
     right: 0;
     height: 8px;
     background-color: var(--md-sys-color-outline-variant);
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='91' height='8' viewBox='0 0 91 8' fill='none'%3E%3Cpath d='M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0' stroke='black' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="91" height="8" fill="none"><path d="M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0" stroke="black" stroke-linecap="square"/></svg>');
     mask-repeat: repeat-x;
     mask-size: 91px 8px;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='91' height='8' viewBox='0 0 91 8' fill='none'%3E%3Cpath d='M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0' stroke='black' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="91" height="8" fill="none"><path d="M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0-10.133 4.667-15.2 0" stroke="black" stroke-linecap="square"/></svg>');
     -webkit-mask-repeat: repeat-x;
     -webkit-mask-size: 91px 8px;
     pointer-events: none;
@@ -139,5 +99,4 @@ article:is([card], md-filled-card, md-elevated-card, md-outlined-card) > footer 
 [data-glass] {
     background: var(--md-sys-glass-surface-container);
     backdrop-filter: blur(var(--md-sys-glass-blur-subtle));
-    border: var(--md-sys-glass-border);
 }

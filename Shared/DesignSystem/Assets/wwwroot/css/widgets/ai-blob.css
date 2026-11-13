@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — AI Orb / Socratic Blob Widget (Pure Attribute Classless)
+   Layer: widgets â€” AI Orb / Socratic Blob Widget (Pure Attribute Classless)
    ========================================================================== */
 
 figure[ai-blob], [data-ai-blob] {
@@ -15,7 +15,6 @@ figure[ai-blob], [data-ai-blob] {
         var(--md-sys-color-tertiary) 65%,
         transparent 100%
     );
-    box-shadow: none;
     overflow: hidden;
 }
 

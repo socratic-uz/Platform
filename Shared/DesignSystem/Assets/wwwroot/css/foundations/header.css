@@ -138,12 +138,7 @@ body > header:not(:has(> a), :has(> nav)) > md-outlined-text-field {
         grid-column: 1 / -1;
     }
 
-body:has(> aside:has(~ main) > nav) > header > md-outlined-text-field {
+body:has(> aside:not(main ~ aside) > nav) > header > md-outlined-text-field {
         grid-column: 2 / -1;
-    }
-
-/* Если на десктопе есть боковой рельс, аватарка отображается внизу рельса, а в хедере скрывается */
-body:has(> aside:has(~ main) > nav) > header > [avatar] {
-        display: none;
     }
 }

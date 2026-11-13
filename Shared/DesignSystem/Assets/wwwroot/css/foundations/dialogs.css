@@ -1,5 +1,5 @@
-/* ==========================================================================
-   Layer: foundations — Dialogs & Modal Surfaces (Semantic md-dialog)
+﻿/* ==========================================================================
+   Layer: foundations â€” Dialogs & Modal Surfaces (Semantic md-dialog)
    Material Design 3 Expressive Specification & W3C Web Components Support
    ========================================================================== */
 
@@ -130,7 +130,6 @@ md-dialog > [slot="content"] fieldset > label {
     gap: var(--md-sys-spacing-3);
     align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface);
@@ -249,8 +248,8 @@ md-dialog > footer[slot="actions"],
         padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4) var(--md-sys-spacing-3);
     }
 
-md-dialog > footer[slot="actions"] > :where(button, md-filled-button, md-outlined-button, md-text-button),
-    md-dialog > [slot="actions"] > :where(button, md-filled-button, md-outlined-button, md-text-button) {
+md-dialog > footer[slot="actions"] > :is(button, md-filled-button, md-outlined-button, md-text-button),
+    md-dialog > [slot="actions"] > :is(button, md-filled-button, md-outlined-button, md-text-button) {
         width: 100%;
         min-height: 48px;
     }

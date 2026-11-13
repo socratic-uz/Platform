@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / seat-designer.css
+   Socratic Design System â€” PAGES / seat-designer.css
    Direct Body Landmark for Seat Designer: <main seat-designer> & aside > md-dialog[toolbar]
    ========================================================================== */
 
@@ -16,7 +16,6 @@ main[seat-designer]>figure {
     position: relative;
     min-height: 520px;
     height: 100%;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background-color: var(--md-sys-color-surface-dim);
     overflow: hidden;
@@ -27,10 +26,8 @@ main[seat-designer]>header {
     gap: 1.25rem;
     align-items: center;
     padding: 1.25rem 1.5rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: none;
 }
 
 main[seat-designer]>header>hgroup {
@@ -84,7 +81,6 @@ main[seat-designer]>aside {
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
-    box-shadow: none;
 }
 
 aside>md-dialog[toolbar]>section[slot="content"] {
@@ -96,7 +92,6 @@ aside>md-dialog[toolbar]>section[slot="content"] {
 aside>md-dialog[toolbar]>section[slot="content"]>fieldset {
     gap: 0.75rem;
     padding: 0;
-    border: none;
 }
 
 aside>md-dialog[toolbar]>section[slot="content"]>fieldset>legend {
@@ -116,10 +111,8 @@ aside>md-dialog[toolbar]>section[slot="content"]>aside[card] {
     gap: 0.75rem;
     align-items: center;
     padding: 0.75rem 1rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-high);
-    box-shadow: none;
 }
 
 aside>md-dialog[toolbar]>section[slot="content"]>aside[card]>hgroup>h6 {

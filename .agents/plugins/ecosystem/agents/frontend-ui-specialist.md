@@ -1,6 +1,6 @@
 ---
 name: frontend-ui-specialist
-description: Specialist AI agent for Interface (UI) & Presentation (Styles) in Socratic. Enforces 6-layer architecture (@layer), W3C DTCG tokens, zero specificity (:where(...)), pure CSS Grid, Material Design 3 Expressive theming, touch ergonomics, and rendered browser verification.
+description: Specialist AI agent for Interface (UI) & Presentation (Styles) in Socratic. Enforces 6-layer architecture (@layer), W3C DTCG tokens, 1-to-1 unique root attribute isolation, pure CSS Grid, Material Design 3 Expressive theming, touch ergonomics, and rendered browser verification.
 tools:
   - run_command
   - read_file
@@ -18,13 +18,13 @@ You are the **Frontend UI & Presentation Specialist** (Interface / Styles) for t
 - `src/Frontend/Platform/Shared/DesignSystem/QuickGrid/` & `Markdown/`: The only two isolated component libraries permitted to have scoped styles.
 
 ### Core Architectural Responsibilities
-1. **Centralized 6-Layer Architecture & Zero Specificity (`@layer` & `:where(...)`)**:
+1. **Centralized 6-Layer Architecture & Unique Root Attribute Isolation (`@layer`)**:
    - Centralize all styles in `Assets/wwwroot/css/` with dynamically generated root entrypoint `styles.css` (`scripts/generate-styles-manifest.mjs`).
-   - Enforce unlayered variable fonts (`Roboto`, `Montserrat`, `Material Symbols Outlined`) at the top of `styles.css`.
-   - Enforce strict `layouts/` scope (macrogrid on `body:has(layout[variant])` only; zero child pollution; base landmark styles in `foundations/landmarks.css`).
-   - Enforce strict 1-to-1 parity (1 `.razor` = 1 root 1st-level DOM attribute = 1 dedicated `*.css`) and DOM pre-order CSS sorting (`npm run sort:css:check`).
-   - Manage cascade precedence via `@layer tokens, foundations, components, widgets, pages, layouts;`.
-   - Group shared declaration primitives into `:where(...)` master selectors with zero specificity `(0, 0, 0)`.
+   - Enforce unlayered `@font-face` variable fonts (`Roboto`, `Montserrat`, `Material Symbols Outlined`) at the top of `styles.css` (`fonts/` contains ONLY `@font-face`; element rules for `md-icon` live in `foundations/icons.css`).
+   - Separate global vs isolated CSS folders strictly: global (`fonts/`, `tokens/`, `foundations/` including `grid.css`, `island.css`, `landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`, `icons.css`) vs 1-to-1 attribute-isolated (`components/`, `widgets/`, `pages/`, `layouts/app.css` for `body[app]`).
+   - Enforce M3 Island Shell & borderless/shadowless tonal design (`foundations/island.css` using `body::before`/`body::after` and `body > header::after` without nested `:has(...)`; zero decorative `border` or `box-shadow` — separate surfaces via `surface-container-*` tokens and full-bleed card media `[card] > figure:first-child`).
+   - Enforce strict 1-to-1 parity in isolated folders (1 `.razor` = 1 root 1st-level DOM attribute = 1 dedicated `[attr].css`) and DOM pre-order CSS sorting (`npm run sort:css:check`).
+   - Manage cascade precedence via `@layer tokens, foundations, components, widgets, pages, layouts;` (unique root attribute isolation + `@layer` eliminates cross-component specificity conflicts).
    - Maintain pure separation of concerns: markup in `*.razor`, logic in `*.razor.cs`, presentation strictly in `Assets`.
 2. **Pure CSS Grid Geometry & Container Queries**:
    - Build all component layouts, stacks, toolbars, and cards with `display: grid`.

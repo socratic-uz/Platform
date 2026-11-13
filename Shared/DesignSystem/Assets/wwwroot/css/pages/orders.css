@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / orders.css
+   Socratic Design System Ã¢â‚¬â€ PAGES / orders.css
    Direct Body Landmarks for Orders: header[orders], main[orders], footer[orders]
    ========================================================================== */
 
@@ -10,12 +10,42 @@ header[orders] {
     align-items: center;
     min-height: 64px;
     padding: 0 var(--md-sys-gutter-page);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container);
 }
 
-header[orders] > mark,
-header[orders] > hgroup > mark {
+header[orders] > span {
+    color: var(--md-sys-color-outline-variant);
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+header[orders] > nav > hgroup {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-3);
+    align-items: center;
+}
+
+header[orders] > nav > hgroup > h1 {
+    color: var(--md-sys-color-on-surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+header[orders] > nav > hgroup > a {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    align-items: center;
+    min-height: 48px;
+    color: var(--md-sys-color-primary);
+    font-weight: 600;
+}
+
+header[orders] mark,
+header[orders] > nav > mark {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -27,37 +57,6 @@ header[orders] > hgroup > mark {
     color: var(--md-sys-color-on-secondary-container);
     font-size: 0.8125rem;
     font-weight: 700;
-}
-
-header[orders] > hgroup {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-3);
-    align-items: center;
-}
-
-header[orders] > hgroup > h1 {
-    color: var(--md-sys-color-on-surface);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-header[orders] > hgroup > a {
-    display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-    min-height: 48px;
-    color: var(--md-sys-color-primary);
-    font-weight: 600;
-}
-
-header[orders] > span {
-    color: var(--md-sys-color-outline-variant);
-    font-size: 1.25rem;
-    font-weight: 300;
 }
 
 /* --- Page Landmark: Main --- */
@@ -90,6 +89,21 @@ main[orders] > header > hgroup > strong {
     font-size: 1.15rem;
 }
 
+main[orders] > nav,
+main[orders] > header > nav {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-1);
+    width: fit-content;
+    max-width: 100%;
+    padding: var(--md-sys-spacing-1);
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-surface-container-high);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
 /* Orders List Grid */
 main[orders] > section:has(> a[card]) {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
@@ -114,7 +128,6 @@ main[orders] > section[aria-label] > article {
     gap: var(--md-sys-spacing-4);
     align-items: center;
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
 }
@@ -170,7 +183,6 @@ main[orders] > article {
     justify-items: center;
     align-content: center;
     padding: var(--md-sys-spacing-12) var(--md-sys-spacing-4);
-    border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container-low);
     text-align: center;
@@ -207,7 +219,6 @@ main[orders] > table,
 main[orders] > section > table {
     width: 100%;
     min-width: min(100%, 680px);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-collapse: collapse;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
@@ -218,7 +229,6 @@ main[orders] > section > table {
 main[orders] > table > thead > tr > th,
 main[orders] > section > table > thead > tr > th {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.85rem;
     font-weight: 600;
@@ -228,7 +238,6 @@ main[orders] > section > table > thead > tr > th {
 main[orders] > table > tbody > tr > td,
 main[orders] > section > table > tbody > tr > td {
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     color: var(--md-sys-color-on-surface);
     font-size: 0.9rem;
 }
@@ -258,11 +267,6 @@ main[orders] > section > table > tbody > tr > td > strong {
     font-weight: 700;
 }
 
-main[orders] > table > tbody > tr:last-child > td,
-main[orders] > section > table > tbody > tr:last-child > td {
-    border-bottom: none;
-}
-
 /* Error Banner Aside */
 main[orders] > aside {
     grid-template-columns: auto minmax(0, 1fr);
@@ -273,6 +277,10 @@ main[orders] > aside {
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     font-weight: 600;
+}
+
+main[orders] > md-filled-button {
+    justify-self: start;
 }
 
 /* Order Items Drawer Summary: body > aside > md-dialog[order-items] */
@@ -323,12 +331,22 @@ aside > md-dialog[order-items] > footer[slot="actions"] {
     gap: var(--md-sys-spacing-2);
 }
 
+aside > md-dialog[order-items] > footer[slot="actions"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    width: 100%;
+}
+
+aside > md-dialog[order-items] > footer[slot="actions"] > :is(md-filled-button, md-outlined-button) {
+    width: 100%;
+}
+
 /* --- Page Landmark: Footer --- */
 footer[orders] {
     align-items: center;
     min-height: 48px;
     padding: var(--md-sys-spacing-4) var(--md-sys-gutter-page);
-    border-top: 1px solid var(--md-sys-color-outline-variant);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
@@ -341,7 +359,6 @@ a[card] {
     gap: 1rem;
     min-height: 140px;
     padding: 1.25rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-low);
     color: inherit;
@@ -403,7 +420,6 @@ a[card] > footer {
 a[card]:hover {
     transform: translateY(-2px);
     border-color: var(--md-sys-color-primary);
-    box-shadow: none;
 }
 
 a[card]:hover > footer > md-icon {
@@ -450,6 +466,5 @@ main[orders] > section[aria-label] > article > footer {
         grid-column: 1 / -1;
         justify-content: space-between;
         padding-top: var(--md-sys-spacing-2);
-        border-top: 1px dashed var(--md-sys-color-outline-variant);
     }
 }

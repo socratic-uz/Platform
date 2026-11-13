@@ -14,17 +14,25 @@
 ### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
 Иерархия каскада построена на нативных каскадных слоях **Cascade Layers (`@layer`)** в начале `styles.css`:
 ```css
-@layer tokens, foundations, components, widgets, pages;
+@layer tokens, foundations, components, widgets, pages, layouts;
 ```
 - **Приоритет слоев**: нарастает слева направо (от абстрактного/базового к конкретному контексту экрана):
-  `tokens` (1) ➔ `foundations` (2) ➔ `components` (3) ➔ `widgets` (4) ➔ `pages` (5).
-- **Строгое соответствие слоев и структуры каталогов (Clean Layer Isolation)**:
-  1. `tokens` (`tokens/`): дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
-  2. `foundations` (`foundations/`): сброс стилей браузера, семантические дефолты HTML5, типографика, анимации, контракт центрирования (`[center*]`), базовая стилизация ориентиров в `landmarks.css` и чистая геометрия сетки в `foundations/grid.css`.
-  3. `components` (`components/`): атомарные и молекулярные примитивы UI Material 3 (`buttons`, `cards`, `forms`, `dialogs`, `chips`).
-  4. `widgets` (`widgets/`): составные отраслевые бизнес-организмы (`cart`, `fiscal`, `map`, `chat`, `detector`, `landing`, `analytics`, `kiosk`, `orders`, `payment`), а также внутренние организмы ориентиров (`rail.css`, `drawer.css`, `header.css`, `footer.css`).
-  5. `pages` (`pages/`): стили **строго для конкретных страниц по булевым атрибутам** (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `main[home]`). Вся внутренняя структура страниц, карточки, панели и списки выносятся в `widgets/`.
-  6. `layouts` (`layouts/`): Blazor AppLayout шеллы (`app.css`, селектор `body[app]`).
+  `tokens` (1) ➔ `foundations` (2) ➔ `components` (3) ➔ `widgets` (4) ➔ `pages` (5) ➔ `layouts` (6).
+- **Строгое соответствие слоев (Глобальные vs Изолированные)**:
+  - **Глобальные**:
+    0. `fonts/` (вне `@layer`): **строго `@font-face`** (`roboto.css`, `montserrat.css`, `material-symbols-outlined.css`). Стили элементов (например, `md-icon`) сюда класть запрещено.
+    1. `tokens` (`tokens/`): дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
+    2. `foundations` (`foundations/`): сброс стилей браузера (`reset.css`), базовая стилизация `md-icon` (`icons.css`), геометрия сетки (`grid.css`), эффект островка (`island.css`), ориентиры (`landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`), базовые элементы (`buttons.css`, `dialogs.css`, `forms.css`, `tables.css`, `typography.css`, `scrollbars.css`, `animations.css`, `runtime.css`).
+  - **Изолированные по атрибуту 1-в-1 (`[attr].css`)**:
+    3. `components` (`components/`): атомарные и молекулярные примитивы UI Material 3 (`card.css`, `avatar.css`, `paginator.css`, `smart-*.css`).
+    4. `widgets` (`widgets/`): составные отраслевые бизнес-организмы (`cart.css`, `fiscal.css`, `map.css`, `kiosk.css`, `terminal.css`, `kanban.css`).
+    5. `pages` (`pages/`): стили **строго для конкретных страниц по булевым атрибутам** (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `main[home]`).
+    6. `layouts` (`layouts/`): корневая оболочка (`app.css`, селектор `body[app]`).
+- **Эффект островка Material 3 (`foundations/island.css`) и стиль без рамок/теней**:
+  - Оболочка использует `var(--md-sys-color-surface-container)`, а поверхность островка — `var(--md-sys-color-surface)`.
+  - Верхние липкие скругления рисуются через `body > header::after` (`top: 100%`) с fallback на `body:not(:has(> header > *))::before`; нижние липкие скругления — через `body::after` в сетке `body`.
+  - Вложенные `:has()` (`:has(...:has(...)...)`) строго запрещены как невалидные в CSS Selectors Level 4.
+  - Декоративные `border` и `box-shadow` в `components/`, `widgets/`, `pages/` и `foundations/` (кроме нативных сбросов `<fieldset>`, `<dialog>`, форм, таблиц, цитат, видоискателя FaceID и `[card="outlined"]`) запрещены — разделение поверхностей строится только тональными `surface-container-*` токенами.
 
 - **Чистая геометрия сетки документа и ориентиров (`foundations/grid.css` — CSS Grid Only)**:
   - **Макросетка `body`**: единая 3-колоночная сетка задаётся ровно 1 раз: `grid-template-columns: auto minmax(0, 1fr) auto;`, а адаптивность и режимы переключаются исключительно через `grid-template-areas`.
@@ -34,11 +42,11 @@
     - Рабочая область: `body > main { grid-area: main; gap: ... }`
     - Правый ориентир: `body > main ~ aside { grid-area: right; gap: 0; }`
     - Подвал: `body > footer { grid-area: footer; }`
-  - **Внутреннее визуальное наполнение ориентиров вынесено в `widgets/`**:
-    - `widgets/rail.css`: навигационный рельс 76px на Desktop и нижний бар 60px на Mobile (ссылки, иконки, бейджи, аватар).
-    - `widgets/drawer.css`: модальные шторки `md-dialog`, snap-состояния (half/full), скрим `#sheet-scrim`, GPU-анимации и кнопка FAB.
-    - `widgets/header.css`: наполнение шапки (брендинг, заголовок, глобальный поиск, аватар, гамбургер).
-    - `widgets/footer.css`: наполнение подвала (колонки навигации, заголовки секций `h4`, списки ссылок, копирайт).
+  - **Глобальное визуальное наполнение ориентиров вынесено в `foundations/`**:
+    - `foundations/rail.css`: навигационный рельс 76px на Desktop и нижний бар 60px на Mobile (ссылки, иконки, `FILL 1` на активной, бейджи, аватар).
+    - `foundations/drawer.css`: модальные шторки `md-dialog`, snap-состояния (half/full), скрим `#sheet-scrim`, GPU-анимации и кнопка FAB.
+    - `foundations/header.css`: наполнение шапки (брендинг, заголовок, глобальный поиск, аватар, гамбургер).
+    - `foundations/footer.css`: наполнение подвала (колонки навигации, заголовки секций `h4`, списки ссылок, копирайт).
        - **Эргономическая триада триггеров на мобильных устройствах (< 840px)**:
            - ☰ **Левый верхний угол `header`** ➔ `Вспл. лев.` (Главное меню, AI-чат, Документация) — на всю высоту `100dvh`.
            - 👤 **Правый верхний угол `header` (Аватар)** ➔ `Вспл. ниж.` (Профиль пользователя, поиск карты) — снизу экрана (`bottom: 0`).
@@ -140,26 +148,25 @@
   - На первом уровне DOM страницы находятся её семантические ориентиры: `header[page]`, `nav[page]`, `main[page]`, `footer[page]`.
   - Стили каждого ориентира пишутся **строго от самого landmark'а**:
     - `header[kiosk] > nav > hgroup > p` (категорически запрещено писать `body:has(main[kiosk]) header...` — `header[kiosk]` сам является ориентиром 1-го уровня).
-    - `main[kiosk] > nav`, `main[kiosk] > article`, `main[kiosk] :where(md-filled-card)`.
-    - `footer[kiosk] > :where(md-text-button, button)`.
+    - `main[kiosk] > nav`, `main[kiosk] > article`, `main[kiosk] md-filled-card`.
+    - `footer[kiosk] > :is(md-text-button, button)`.
 - **3. Уровень виджетов (`widgets`)**:
   - Корневой тег первого уровня виджета несёт атрибут виджета:
     - `aside[cart] > section > ul > li`
     - `aside[order] > section > article`
     - `dialog[modal] > fieldset > menu`
-- **Атрибут строго на первом уровне DOM-дерева в Razor-разметке**:
-  - Дочерние элементы внутри контейнеров не несут атрибутов и являются чистыми HTML5-тегами (`tag1`, `tag2`, `child-tag`).
-- **Нулевая специфичность**: использование `:where(...)` сохраняет вес `(0, 0, 0)`, позволяя слоям каскада (`@layer`) и токенам управлять оформлением без специфических конфликтов.
+- **Уникальный корневой атрибут строго на первом уровне DOM-дерева в Razor-разметке**:
+  - На каждый компонент, виджет или страницу задаётся ровно один **уникальный корневой атрибут** (без вторых атрибутов-модификаторов вроде `[large]`/`[small]`). Дочерние элементы внутри контейнеров не несут атрибутов и являются чистыми HTML5-тегами (`tag1`, `tag2`, `child-tag`).
+- **Каскад и изоляция**: приоритет между слоями полностью контролируется через `@layer`, а изоляция по уникальному корневому атрибуту (`[attr]`) исключает конфликты между компонентами, виджетами и страницами.
 
-### 1.6. Модульность компонентов и нулевая специфичность примитивов (`:where(...)`)
-- **Модульная изоляция**: каждый компонент (`buttons.css`, `cards.css`, `dialogs.css`, `forms.css`) независим и инкапсулирует собственные правила. Компоненты слабо связаны (Loose Coupling).
-- **Сетки-примитивы (Layout Primitives)**: переиспользуемая геометрия выносится в семантические Grid-примитивы (`.grid-split`, `.grid-center`, `.m3-stack`) в слое `layouts/`.
-- **Роль `:where(...)`**: псевдокласс `:where(...)` применяется исключительно для обнуления специфичности `(0, 0, 0)` базовых сбросов (CSS Reset в `foundations/`) и UI-примитивов, чтобы компоненты верхних слоев могли легко переопределять их без хаков специфичности и без `!important`. Склеивание разнородных селекторов через запятую запрещено как антипаттерн.
+### 1.6. Модульность компонентов и изоляция по уникальному корневому атрибуту
+- **Модульная изоляция**: каждый компонент (`avatar.css`, `card.css` и др.) независим и инкапсулирует собственные правила по своему уникальному корневому атрибуту. Компоненты слабо связаны (Loose Coupling).
+- **Изоляция и `@layer`**: в `@layer` специфичность не участвует в споре между слоями, а изоляция по уникальному корневому атрибуту (аналог CSS-изоляции Blazor) исключает перекрёстные конфликты. Для группировки однотипных тегов в одном селекторе используется `:is(...)` или перечисление через запятую. Склеивание разнородных селекторов через запятую запрещено как антипаттерн.
 
-### 1.7. Classless-First Foundation (`foundations/base.css`)
-- **Цель**: минимум CSS и классов. Нативные теги HTML5 стилизуются глобально токенами M3 в `@layer foundations`, всё через `:where(...)` → специфичность `(0, 0, 0)`.
+### 1.7. Classless-First Foundation (`foundations/`)
+- **Цель**: минимум CSS и классов. Нативные теги HTML5 стилизуются глобально токенами M3 в `@layer foundations` (так как `foundations` ниже `components`/`widgets`/`pages` по `@layer`, компоненты верхних слоёв всегда перебивают базовые стили).
 - **Типографика глобально**: `h1–h6`, `p`, `a`, `small`, `strong`, `mark`, `code`, `kbd`, `pre`, `blockquote`, `hr`, `figure/figcaption`, `dl/dt/dd` — без классов.
-- **Classless-when-classless**: богатые M3-дефолты для структурных и интерактивных тегов применяются только к элементам **без атрибута `class`** — `:where(tag:not([class]))`:
+- **Classless-when-classless**: богатые M3-дефолты для структурных и интерактивных тегов применяются только к элементам **без атрибута `class`** (`tag:not([class])`):
   - `<button>` ➔ M3 Filled (≥ 48px), `<button type="reset">` ➔ Outlined;
   - `<article>` ➔ карточка, `<aside>` ➔ панель, `<nav>` ➔ горизонтальный ряд, `<section>` ➔ grid-стек;
   - `<ul>/<ol>` ➔ контентный список; `<table>` ➔ M3 таблица; `<fieldset>/<legend>` ➔ outlined-группа;
@@ -190,7 +197,7 @@
 ### 2.2. Обязательный `min-width: 0` для усечения текста
 В любой ячейке сетки, где применяется `text-overflow: ellipsis`, контейнер имеет `min-width: 0;` для корректного расчета границ сжатия браузером:
 ```css
-:where(.m3-label-truncated) {
+[card] > header > h3 {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -201,36 +208,28 @@
 ### 2.3. Канонические Grid-паттерны
 - **Центрирование**:
   ```css
-  :where(.grid-center) {
-      display: grid;
-      place-items: center;
-  }
+  display: grid;
+  place-items: center;
   ```
 - **Разделение по краям (Split / Space-Between)**:
   ```css
-  :where(.grid-split) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: var(--md-sys-spacing-3);
-  }
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--md-sys-spacing-3);
   ```
 - **Стек (Вертикальная колонка)**:
   ```css
-  :where(.m3-stack) {
-      display: grid;
-      gap: var(--md-sys-spacing-3);
-  }
+  display: grid;
+  gap: var(--md-sys-spacing-3);
   ```
 - **Компактный горизонтальный ряд**:
   ```css
-  :where(.grid-flow-col) {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: max-content;
-      align-items: center;
-      gap: var(--md-sys-spacing-2);
-  }
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: var(--md-sys-spacing-2);
   ```
 
 ---
@@ -240,12 +239,12 @@
 ### 3.1. Micro Layout (Компоненты и Виджеты)
 Адаптивность карточек, виджетов и диалоговых окон строится от ширины родителя через **Container Queries**:
 ```css
-:where(.m3-card) {
+[card] {
     container-type: inline-size;
 }
 
 @container (max-width: 480px) {
-    :where(.m3-card-body) {
+    [card] > section {
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-2);
     }
@@ -327,7 +326,10 @@
 @import "tokens/colors.css" layer(tokens);
 
 /* 2. Foundations & Reset */
-@import "foundations/base.css" layer(foundations);
+@import "foundations/reset.css" layer(foundations);
+@import "foundations/grid.css" layer(foundations);
+@import "foundations/icons.css" layer(foundations);
+@import "foundations/island.css" layer(foundations);
 @import "foundations/landmarks.css" layer(foundations);
 @import "foundations/typography.css" layer(foundations);
 @import "foundations/scrollbars.css" layer(foundations);

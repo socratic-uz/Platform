@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / detector.css
-   Classless Page Landmark Architecture — AI Vision Detector
+   Socratic Design System Ã¢â‚¬â€ PAGES / detector.css
+   Classless Page Landmark Architecture Ã¢â‚¬â€ AI Vision Detector
    ========================================================================== */
 
 main[detector] {
@@ -17,7 +17,6 @@ main[detector] > article {
     min-height: 0;
     margin: var(--md-sys-spacing-6);
     padding: var(--md-sys-spacing-5);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-medium);
     background: var(--md-sys-color-surface-container);
     overflow: hidden;
@@ -27,7 +26,6 @@ main[detector] > article > figure {
     place-items: center;
     position: relative;
     height: 100%;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-lowest);
     overflow: hidden;
@@ -58,9 +56,7 @@ main[detector] > article > figure > figure > section {
 
 main[detector] > article > figure > figure > section > span {
     position: absolute;
-    border: 2px solid var(--md-sys-color-primary);
     border-radius: var(--md-sys-shape-corner-extra-small);
-    box-shadow: none;
     animation: bboxPulse 1.5s infinite alternate ease-in-out;
     pointer-events: none;
     left: var(--x);
@@ -80,7 +76,6 @@ main[detector] > article > figure > figure > section > span > span {
     font-size: 0.72rem;
     font-weight: 700;
     white-space: nowrap;
-    box-shadow: none;
 }
 
 main[detector] > article > figure > figure:has(audio) {
@@ -160,7 +155,6 @@ main[detector] > article > header > section > span {
     gap: 6px;
     align-items: center;
     padding: 6px var(--md-sys-spacing-3);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-high);
     font-size: 0.78rem;
@@ -208,10 +202,8 @@ aside > md-dialog[detector] > section[slot="content"] > form {
 
 aside > md-dialog[detector] > section[slot="content"] > form > section {
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: none;
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form > section > header {
@@ -241,7 +233,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > section > data {
     gap: 6px;
     align-items: center;
     padding: var(--md-sys-spacing-1) var(--md-sys-spacing-3);
-    border: 1px solid var(--md-sys-color-error);
     border-radius: var(--md-sys-shape-expressive-pill);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
@@ -268,7 +259,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > section > ul > li
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 10px 14px;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-high);
 }
@@ -288,7 +278,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > section > fieldse
     gap: 0.5rem;
     margin: 0 0 var(--md-sys-spacing-3) 0;
     padding: 0;
-    border: none;
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form > section > fieldset > label {
@@ -346,10 +335,8 @@ aside > md-dialog[detector] > section[slot="content"] > form > section > div > s
 aside > md-dialog[detector] > section[slot="content"] > form > aside {
     margin-top: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: var(--md-sys-color-surface-container);
-    box-shadow: none;
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form > aside > header {
@@ -374,7 +361,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > aside > h3 {
 aside > md-dialog[detector] > section[slot="content"] > form > aside > p {
     margin: 0.5rem 0 0 0;
     padding: 0.75rem;
-    border: 1px solid var(--md-sys-color-error);
     border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
@@ -385,7 +371,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > aside > p {
 aside > md-dialog[detector] > section[slot="content"] > form > aside > pre {
     height: 120px;
     padding: 10px;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface);
@@ -404,7 +389,6 @@ aside > md-dialog[detector] > section[slot="content"] > form > aside > pre > sam
 aside > md-dialog[detector] > section[slot="content"] > form > aside > output {
     display: block;
     padding: 0.75rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small);
     background: var(--md-sys-color-surface-container-highest);
     font-size: 0.8rem;
@@ -416,15 +400,6 @@ data[value="active"] {
     border-color: var(--md-sys-color-primary);
     background: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-}
-
-@keyframes bboxPulse {
-    from {
-        box-shadow: none;
-    }
-    to {
-        box-shadow: none;
-    }
 }
 
 /* ==========================================================================

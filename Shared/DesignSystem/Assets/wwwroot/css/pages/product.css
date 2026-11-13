@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / product.css
+   Socratic Design System â€” PAGES / product.css
    Product Detail Screen, Gallery, Specs, Actions, Seller Info
    Classless Landmark: main[product]
    ========================================================================== */
@@ -54,7 +54,6 @@ main[product] > section {
     min-height: 400px;
     padding: var(--md-sys-spacing-8);
     text-align: center;
-    border: 1px dashed var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-low);
 }
@@ -90,7 +89,6 @@ main[product] > article > section:first-of-type > figure {
     aspect-ratio: 1 / 1;
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
     overflow: hidden;
 }
 
@@ -137,7 +135,6 @@ main[product] > article > section:first-of-type > nav > md-text-button {
     --md-text-button-container-shape: var(--md-sys-shape-corner-medium);
     padding: 0;
     overflow: hidden;
-    border: 2px solid transparent;
     border-radius: var(--md-sys-shape-corner-medium);
 }
 
@@ -214,7 +211,6 @@ main[product] > article > section:last-of-type > ul {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
 }
@@ -253,7 +249,6 @@ main[product] > article > section:last-of-type > aside:has(> hgroup) {
     gap: var(--md-sys-spacing-4);
     margin-top: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container);
 }

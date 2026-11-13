@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — COMPONENTS / color-picker.css
+   Socratic Design System â€” COMPONENTS / color-picker.css
    Color Picker Compact & Popover (section[color-picker], section[color-picker-compact])
    ========================================================================== */
 
@@ -18,7 +18,6 @@ section[color-picker-compact] > input {
     min-width: 44px;
     min-height: 44px;
     padding: 2px;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-small);
     background: transparent;
     cursor: pointer;

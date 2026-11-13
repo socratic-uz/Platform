@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / landing.css
+   Socratic Design System â€” PAGES / landing.css
    Direct Body Landmarks for Socratic Landing & Media Showcases
    Level 1: body:has(layout[landing])
    Level 2: <header landing>, <main landing>, <footer landing>, <nav drawer>
@@ -21,10 +21,9 @@ header[landing] {
     padding: var(--md-sys-spacing-2) var(--md-sys-gutter-page);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
-    background: var(--md-sys-glass-surface-container);
+    background: var(--md-sys-color-surface-container);
     backdrop-filter: var(--md-sys-glass-blur-subtle);
     -webkit-backdrop-filter: var(--md-sys-glass-blur-subtle);
-    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
     overflow: visible;
 }
 
@@ -111,7 +110,7 @@ main[landing] {
     color: var(--landing-text-main);
     overflow-x: clip;
 
-    --landing-bg: var(--md-sys-color-background);
+    --landing-bg: var(--md-sys-color-surface);
     --landing-cyan: var(--md-sys-color-tertiary);
     --landing-emerald: var(--md-sys-color-primary);
     --landing-indigo: var(--md-sys-color-secondary);
@@ -236,7 +235,6 @@ main[landing] > section > article > section > mark {
     width: fit-content;
     max-width: 100%;
     padding: 0.35rem 0.85rem;
-    border: 1px solid var(--landing-border);
     border-radius: 9999px;
     background: color-mix(in srgb, var(--landing-surface) 80%, transparent);
     color: var(--md-sys-color-primary);
@@ -287,17 +285,14 @@ main[landing] > section > span:first-child {
 main[landing] > section > section > article,
 main[landing] > section > article {
     position: relative;
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--landing-surface);
-    box-shadow: none;
     transition: transform 0.3s var(--md-sys-motion-easing-spring-soft), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 main[landing] > section > section > article:hover,
 main[landing] > section > article:hover {
     border-color: var(--landing-border-hover);
-    box-shadow: none;
     transform: translateY(-2px);
 }
 
@@ -314,10 +309,8 @@ main[landing] > section:nth-of-type(1) > section:first-of-type {
     gap: var(--md-sys-spacing-8);
     align-items: center;
     padding: var(--landing-card-padding);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: color-mix(in srgb, var(--landing-surface) 90%, transparent);
-    box-shadow: none;
 }
 
 /* Hero Content */
@@ -327,9 +320,7 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-c
     gap: var(--md-sys-spacing-5);
     justify-items: start;
     align-content: start;
-    border: none;
     background: transparent;
-    box-shadow: none;
     padding: 0;
 }
 
@@ -375,7 +366,6 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:first-c
     min-width: 44px;
     min-height: 44px;
     padding: 0.4rem 0.85rem;
-    border: 1px solid var(--landing-border);
     border-radius: 9999px;
     background: var(--landing-surface);
     color: var(--landing-text-main);
@@ -402,7 +392,6 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-ch
     gap: var(--md-sys-spacing-4);
     position: relative;
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: var(--md-sys-color-surface-container);
     overflow: hidden;
@@ -432,7 +421,6 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-ch
     gap: var(--md-sys-spacing-2);
     align-items: center;
     padding: 0.4rem 0.85rem;
-    border: 1px solid var(--landing-border);
     border-radius: 9999px;
     background: color-mix(in srgb, var(--landing-surface) 85%, transparent);
     backdrop-filter: blur(12px);
@@ -440,7 +428,6 @@ main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-ch
     color: var(--landing-text-main);
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: none;
 }
 
 main[landing] > section:nth-of-type(1) > section:first-of-type > article:last-child > figure > span:nth-of-type(1) {
@@ -470,10 +457,8 @@ main[landing] > section:nth-of-type(1) > section:last-of-type {
     align-items: center;
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-6) var(--md-sys-spacing-8);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: color-mix(in srgb, var(--landing-surface) 85%, transparent);
-    box-shadow: none;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -488,9 +473,7 @@ main[landing] > section:nth-of-type(1) > section:last-of-type > article {
     gap: var(--md-sys-spacing-1);
     justify-items: center;
     text-align: center;
-    border: none;
     background: transparent;
-    box-shadow: none;
     padding: 0;
 }
 
@@ -632,7 +615,6 @@ main[landing] > section:nth-of-type(4) > article > header > hgroup > p {
 main[landing] > section:nth-of-type(4) > article > article {
     gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
 }
@@ -811,7 +793,6 @@ main[landing] > section:nth-of-type(5) > section:first-of-type > article > a {
     min-height: 44px;
     margin-top: auto;
     padding: 0.5rem 0.85rem;
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--landing-surface);
     color: var(--landing-text-main);
@@ -903,7 +884,6 @@ main[landing] > section:nth-of-type(5) > section:last-of-type > article > footer
     min-width: 44px;
     min-height: 44px;
     padding: 0.45rem 0.85rem;
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--landing-surface);
     color: var(--landing-text-main);
@@ -999,7 +979,6 @@ main[landing] > section:nth-of-type(6) > article > section > section {
 main[landing] > section:nth-of-type(6) > article > section > section > figure {
     gap: var(--md-sys-spacing-1);
     padding: var(--md-sys-spacing-3);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
 }
@@ -1078,7 +1057,6 @@ main[landing] > section:nth-of-type(7) > section > article > a {
     min-height: 44px;
     margin-top: auto;
     padding: 0.65rem 1.25rem;
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--landing-surface);
     color: var(--landing-text-main);
@@ -1132,7 +1110,6 @@ main[landing] > section:nth-of-type(7) > section > article:last-child > footer >
     min-width: 44px;
     min-height: 44px;
     padding: 0.5rem 1rem;
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--landing-surface);
     color: var(--landing-text-main);
@@ -1155,10 +1132,8 @@ main[landing] > section:nth-of-type(8) {
     justify-items: center;
     text-align: center;
     padding: var(--landing-section-padding);
-    border: 1px solid var(--landing-border);
     border-radius: var(--md-sys-shape-expressive-card);
     background: radial-gradient(circle at center, color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent) 0%, var(--landing-surface) 100%);
-    box-shadow: none;
 }
 
 main[landing] > section:nth-of-type(8) > h2 {
@@ -1198,8 +1173,6 @@ aside[drawer] > dialog {
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-5) var(--md-sys-spacing-4);
     background: var(--md-sys-color-surface-container);
-    border-right: 1px solid var(--md-sys-color-outline-variant);
-    box-shadow: none;
     z-index: var(--md-sys-z-modal);
     overflow-y: auto;
     overflow-x: hidden;
@@ -1213,7 +1186,6 @@ aside[drawer] > dialog > header {
     align-items: center;
     gap: var(--md-sys-spacing-2);
     padding-bottom: var(--md-sys-spacing-2);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     margin-bottom: var(--md-sys-spacing-1);
     width: 100%;
 }
@@ -1372,7 +1344,6 @@ footer[landing] {
     padding: var(--md-sys-spacing-12) var(--md-sys-gutter-page) var(--md-sys-spacing-16);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
-    border-top: 1px solid var(--landing-border);
     background: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-on-surface);
 }

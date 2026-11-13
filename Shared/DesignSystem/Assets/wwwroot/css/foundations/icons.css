@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / icons.css
+   Base Material Symbols Icon Element & Fallback Rules
+   ========================================================================== */
+
+md-icon,
+[class*="material-symbols"] {
+    display: inline-grid;
+    place-items: center;
+    width: var(--md-icon-size);
+    height: var(--md-icon-size);
+    font-family: 'Material Symbols Outlined', sans-serif !important;
+    font-size: var(--md-icon-size);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+md-icon:not(:defined) {
+    display: inline-grid;
+    place-items: center;
+    width: var(--md-icon-size);
+    height: var(--md-icon-size);
+    font-family: var(--md-icon-font);
+    overflow: hidden;
+    vertical-align: middle;
+}

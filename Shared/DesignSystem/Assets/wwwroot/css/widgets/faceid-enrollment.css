@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — Profile & Account Dialog (Pure Attribute Classless)
+   Layer: widgets â€” Profile & Account Dialog (Pure Attribute Classless)
    ========================================================================== */
 
 /* FaceID Enrollment Modal */
@@ -93,7 +93,6 @@ md-dialog[profile] > footer[slot="actions"] {
 }
 
 md-dialog[profile] details {
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium, 12px);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
@@ -105,7 +104,6 @@ md-dialog[profile] details > section {
     display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: none;
     margin: 0;
 }
 

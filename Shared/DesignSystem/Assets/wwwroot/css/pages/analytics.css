@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / analytics.css
-   Classless Page Landmark Architecture — Analytics Dashboard & Data Explorer
+   Socratic Design System â€” PAGES / analytics.css
+   Classless Page Landmark Architecture â€” Analytics Dashboard & Data Explorer
    ========================================================================== */
 
 header[analytics] > hgroup {
@@ -36,7 +36,7 @@ header[analytics] > span {
 main[analytics] {
     gap: var(--md-sys-gutter-section, var(--md-sys-spacing-6));
     align-content: start;
-    width: auto;
+    width: 100%;
     min-width: 0;
     box-sizing: border-box;
     padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page, var(--md-sys-spacing-6)) var(--md-sys-spacing-12);
@@ -58,7 +58,6 @@ main[analytics] > header > nav {
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     padding: var(--md-sys-spacing-1);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
 }
@@ -70,7 +69,6 @@ main[analytics] > header > md-chip-set {
     gap: var(--md-sys-spacing-3);
     align-items: center;
     padding: 0 0 2px;
-    border: none;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -90,7 +88,6 @@ main[analytics] > header > menu > data {
     gap: var(--md-sys-spacing-2);
     align-items: center;
     padding: 0.25rem 0.75rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-surface-variant);
@@ -104,7 +101,6 @@ main[analytics] > header > menu > data > span:first-child {
     height: 8px;
     border-radius: 50%;
     background-color: var(--md-sys-color-primary);
-    box-shadow: none;
     animation: analyticsPulse 1.8s infinite alternate ease-in-out;
 }
 
@@ -122,10 +118,8 @@ main[analytics] > section:has(ul > li > md-linear-progress) > article {
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
     padding: var(--md-sys-spacing-5);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
-    box-shadow: none;
 }
 
 main[analytics] > section[breakdown] > article > header,
@@ -219,11 +213,9 @@ main[analytics] > section:has(article > h3) > article {
     grid-template-rows: auto auto auto;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4) var(--md-sys-spacing-5);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-low);
     overflow: hidden;
-    box-shadow: none;
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring),
                 box-shadow var(--md-sys-motion-duration-short4) ease,
                 border-color var(--md-sys-motion-duration-short4) ease;
@@ -315,7 +307,6 @@ main[analytics] > section:has(article > h3) > article > footer > span:first-chil
 main[analytics] > section[kpi] > article:hover,
 main[analytics] > section:has(article > h3) > article:hover {
     border-color: var(--md-sys-color-primary);
-    box-shadow: none;
     transform: translateY(-2px);
 }
 
@@ -326,11 +317,9 @@ main[analytics] > section[registers],
 main[analytics] > section:has([smart-grid], table) {
     gap: var(--md-sys-spacing-5);
     padding: var(--md-sys-spacing-6);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background: var(--md-sys-color-surface-container-low);
     overflow-x: auto;
-    box-shadow: none;
 }
 
 main[analytics] > section[registers] > header,
@@ -365,6 +354,16 @@ main[analytics] > section:has([smart-grid], table) > header > p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 0.875rem;
+}
+
+main[analytics] > section[registers] > md-chip-set,
+main[analytics] > section:has([smart-grid], table) > md-chip-set {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
 /* ==========================================================================
@@ -409,7 +408,6 @@ md-dialog:has(h3#modal-title) > [slot="content"] fieldset {
     gap: var(--md-sys-spacing-2);
     margin: var(--md-sys-spacing-2) 0 0;
     padding: 0;
-    border: none;
 }
 
 md-dialog[config] > section[slot="content"] fieldset > label,
@@ -420,7 +418,6 @@ md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label {
     gap: var(--md-sys-spacing-3);
     align-items: center;
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container);
     cursor: pointer;

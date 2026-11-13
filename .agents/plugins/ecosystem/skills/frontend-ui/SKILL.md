@@ -13,24 +13,18 @@ license: MIT
 
 ## 1. Слоёная архитектура — Cascade Layers в Assets
 
-Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages`) с токенами W3C DTCG в `tokens/` через автоматически генерируемый мастер-манифест `styles.css` (`npm run generate:styles` / `scripts/generate-styles-manifest.mjs`).
-Шрифты подключаются вне слоев на самом верху `styles.css` и используют исключительно вариативные шрифты (`Roboto` и `Montserrat` `100 900`, `Material Symbols Outlined`). Порядок селекторов внутри таблиц строго упорядочен по обходу DOM-дерева в глубину (`npm run sort:css`).
-Слои строго соответствуют файловой структуре:
-- `foundations/` (**Уровень 1 DOM и базовый сброс**): Сброс стилей браузера, семантические дефолты HTML5 в `landmarks.css`, типографика и макрокаркас приложения в `foundations/layouts/` (`body.css`, `header.css`, `aside-left.css`, `aside-right.css`, `main.css`, `footer.css`).
-- `pages/` (**Уровень 2 DOM**): Стили строго для прямых ориентиров `body`, помеченных булевым атрибутом страницы (`main[kiosk]`, `main[terminal]`, `main[orders]`, `main[about]`, `header[about]`). Внутренние стили виджетов здесь строго запрещены.
-- `widgets/` (**Уровень 3 DOM**): Составные смарт-организмы бизнеса (корзина, KDS, карточки, фискальная панель, бенто-сетки).
-- `components/` (**Уровни 4–6 DOM**): Атомы и защищенные примитивы UI (кнопки, чипы, инпуты, диалоги) и общие утилиты.
+Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через автоматически генерируемый мастер-манифест `styles.css` (`npm run generate:styles` / `scripts/generate-styles-manifest.mjs`).
+В `fonts/` подключаются **только `@font-face`** вне слоёв (`Roboto` и `Montserrat` `100 900`, `Material Symbols Outlined`), а стили `md-icon` лежат в `foundations/icons.css`. Порядок селекторов внутри изолированных таблиц строго упорядочен по обходу DOM-дерева в глубину (`npm run sort:css`).
+Слои делятся на **глобальные** и **изолированные по атрибуту 1-в-1 (`[attr].css`)**:
+- **Глобальные**: `fonts/`, `tokens/`, `foundations/` (сброс `reset.css`, макросетка `grid.css`, эффект островка `island.css` через `body::before`/`body::after` и `body > header::after` без вложенных `:has()`, ориентиры `landmarks.css`, `header.css`, `footer.css`, `rail.css`, `drawer.css`, `buttons.css`, `dialogs.css`, `icons.css`, `typography.css`).
+- **Изолированные по атрибуту 1-в-1 (`[attr].css`)**:
+  - `components/`: переиспользуемые UI-примитивы (`card.css`, `avatar.css`, `paginator.css`, `smart-*.css`).
+  - `widgets/`: составные бизнес-виджеты (`cart.css`, `kiosk.css`, `terminal.css`, `kanban.css` и др.).
+  - `pages/`: стили конкретных страниц (`landing.css`, `map.css`, `orders.css`, `home.css` и др.).
+  - `layouts/`: корневая оболочка (`app.css` для `body[app]`).
+- **Стиль Material 3 без рамок и теней**: декоративные `border` и `box-shadow` запрещены (кроме нативных сбросов `<fieldset>`, `<dialog>`, форм, таблиц, цитат и видоискателя FaceID); поверхности разделяются тональными цветами (`surface-container-*`) и скруглениями.
 
-Компоненты независимы и инкапсулируют свои стили в целевых файлах, а повторно используемые сетки оформляются как примитивы с нулевой специфичностью `:where(...)` (0, 0, 0):
-
-```css
-:where(.grid-split) {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: var(--md-sys-spacing-3);
-}
-```
+Компоненты независимы и инкапсулируют свои стили по уникальному корневому атрибуту — каскад между слоями полностью контролируется через `@layer`.
 
 ---
 

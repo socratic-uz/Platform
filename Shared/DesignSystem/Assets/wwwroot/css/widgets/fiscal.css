@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — Fiscal Receipt & Payment Summary (Pure Attribute Classless)
+   Layer: widgets Ã¢â‚¬â€ Fiscal Receipt & Payment Summary (Pure Attribute Classless)
    ========================================================================== */
 
 article[fiscal], aside[fiscal], md-dialog[receipt], section[fiscal] {
@@ -10,7 +10,6 @@ article[fiscal], aside[fiscal], md-dialog[receipt], section[fiscal] {
     padding: var(--md-sys-spacing-6);
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-large, 24px);
-    border: 1px solid var(--md-sys-color-outline-variant);
     font-family: var(--md-ref-typeface-mono, monospace);
     width: 100%;
     max-width: 480px;
@@ -23,7 +22,6 @@ article[fiscal] > header, aside[fiscal] > header, md-dialog[receipt] > header, s
     text-align: center;
     gap: var(--md-sys-spacing-1);
     padding-bottom: var(--md-sys-spacing-3);
-    border-bottom: 1px dashed var(--md-sys-color-outline-variant);
 }
 
 article[fiscal] > header > h3, aside[fiscal] > header > h3,
@@ -80,7 +78,7 @@ article[fiscal] > ul > li > span, aside[fiscal] > ul > li > span {
     color: var(--md-sys-color-outline);
 }
 
-article[fiscal] > ul > li > :where(b, small:nth-of-type(2), span:nth-of-type(2), hgroup:last-child) {
+article[fiscal] > ul > li > :is(b, small:nth-of-type(2), span:nth-of-type(2), hgroup:last-child) {
     text-align: right;
     justify-self: end;
 }
@@ -162,11 +160,11 @@ article[fiscal] > footer > aside > a, aside[fiscal] > footer > aside > a {
     text-decoration: none;
 }
 
-article[fiscal] > footer > :where(section, aside) > p {
+article[fiscal] > footer > :is(section, aside) > p {
     margin: 0;
 }
 
-article[fiscal] > :where(button, md-filled-button), aside[fiscal] > :where(button, md-filled-button) {
+article[fiscal] > :is(button, md-filled-button), aside[fiscal] > :is(button, md-filled-button) {
     width: 100%;
     min-height: 48px;
     margin-top: var(--md-sys-spacing-2);
@@ -187,16 +185,14 @@ article[fiscal],
     aside[fiscal],
     section[fiscal] {
         background: transparent;
-        border: none;
         padding: 0;
         max-width: 80mm;
         width: 100%;
         color: var(--md-sys-color-on-surface);
-        box-shadow: none;
     }
 
-article[fiscal] > :where(button, md-filled-button),
-    aside[fiscal] > :where(button, md-filled-button) {
+article[fiscal] > :is(button, md-filled-button),
+    aside[fiscal] > :is(button, md-filled-button) {
         display: none;
     }
 }

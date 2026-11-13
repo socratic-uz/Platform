@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — Computer Vision Detector Viewport (Pure Attribute Classless)
+   Layer: widgets â€” Computer Vision Detector Viewport (Pure Attribute Classless)
    ========================================================================== */
 
 figure[detector-viewport], section[detector] > figure {
@@ -7,7 +7,6 @@ figure[detector-viewport], section[detector] > figure {
     aspect-ratio: 16 / 9;
     border-radius: var(--shape-lg);
     background: var(--md-sys-color-surface-container-lowest);
-    border: 1px solid var(--md-sys-color-outline-variant);
     overflow: hidden;
 }
 

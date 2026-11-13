@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layer: widgets — Pricing Tiers & Plan Comparison (Pure Attribute Classless)
+   Layer: widgets â€” Pricing Tiers & Plan Comparison (Pure Attribute Classless)
    ========================================================================== */
 
 section[pricing-tiers] {
@@ -16,10 +16,8 @@ section[pricing-tiers] > article {
     padding: var(--space-xl);
     border-radius: var(--shape-xl);
     background: var(--md-sys-color-surface-container-low);
-    border: 1px solid var(--md-sys-color-outline-variant);
 }
 
 article[data-featured="true"] {
     border-color: var(--md-sys-color-primary);
-    box-shadow: none;
 }

@@ -1,12 +1,11 @@
 /* ==========================================================================
-   Socratic Design System — WIDGETS / qr-customizer.css
+   Socratic Design System â€” WIDGETS / qr-customizer.css
    Component-Driven Architecture
    ========================================================================== */
 
 section[qr-customizer] {
     gap: 0.75rem;
     padding: var(--md-sys-spacing-4);
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container);
 }
@@ -18,7 +17,6 @@ section[qr-customizer] > section {
 
 section[qr-customizer] > section > fieldset,
 section[qr-customizer] > section > fieldset > fieldset {
-    border: none;
     padding: 0;
     gap: 14px;
 }

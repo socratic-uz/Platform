@@ -8,40 +8,43 @@ table[smart-grid] {
     border-collapse: separate;
     border-spacing: 0;
     background: var(--md-sys-color-surface-container-low);
-    border: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.45);
-    border-radius: var(--shape-lg);
+    border-radius: var(--md-sys-shape-corner-large);
     overflow: hidden;
-    font-size: var(--type-body-md-size);
+    font-size: var(--md-sys-typescale-body-medium-size);
+    font-variant-numeric: tabular-nums;
 }
 
-table[smart-grid] tbody > tr:last-child > td {
-    border-bottom: none;
+table[smart-grid] tbody > tr:nth-child(even) {
+    background: var(--md-sys-color-surface);
 }
 
 table[smart-grid] tbody > tr:hover {
-    background: rgb(from var(--md-sys-color-on-surface) r g b / 0.04);
+    background: var(--md-sys-color-surface-container-high);
 }
 
 table[smart-grid] td {
-    padding: var(--space-sm) var(--space-md);
+    max-width: 240px;
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     color: var(--md-sys-color-on-surface);
-    border-bottom: 1px solid rgb(from var(--md-sys-color-outline-variant) r g b / 0.3);
     vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 table[smart-grid] th {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     text-align: left;
-    font-size: var(--type-label-md-size);
+    font-size: var(--md-sys-typescale-label-medium-size);
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--md-sys-color-on-surface-variant);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
     white-space: nowrap;
 }
 
 table[smart-grid] th > div {
+    display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;
@@ -52,12 +55,13 @@ table[smart-grid] th > div > button,
 table[smart-grid] th > button {
     min-width: 44px;
     min-height: 44px;
-    padding: 4px var(--space-xs);
+    padding: 4px var(--md-sys-spacing-2);
     border: none;
     background: transparent;
     color: inherit;
     font: inherit;
-    border-radius: var(--shape-sm);
+    border-radius: var(--md-sys-shape-corner-small);
+    cursor: pointer;
 }
 
 table[smart-grid] th[aria-sort="ascending"],
@@ -86,4 +90,10 @@ table[smart-grid] td[data-align="left"] {
 
 table[smart-grid] thead {
     background: var(--md-sys-color-surface-container);
+}
+
+table[smart-grid] td:last-child {
+    max-width: none;
+    overflow: visible;
+    text-align: end;
 }

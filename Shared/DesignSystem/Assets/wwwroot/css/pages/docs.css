@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Socratic Design System — PAGES / docs.css
+   Socratic Design System â€” PAGES / docs.css
    Direct Body Landmarks for Documentation: header[docs], main[docs]
    ========================================================================== */
 
@@ -39,10 +39,8 @@ main[docs] > section {
     gap: 1.5rem;
     align-content: start;
     padding: 1.5rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-large);
     background: var(--md-sys-color-surface-container-lowest);
-    box-shadow: none;
 }
 
 main[docs] > section > header {
@@ -56,7 +54,6 @@ main[docs] > section > article {
     max-width: 480px;
     margin: 2rem auto;
     padding: 2rem;
-    border: 1px solid var(--md-sys-color-outline-variant);
     border-radius: var(--md-sys-shape-corner-extra-large);
     background-color: var(--md-sys-color-surface-container-low);
     text-align: center;
@@ -126,7 +123,6 @@ main[docs] > section > header {
         align-items: center;
         min-height: 56px;
         padding: 0.5rem 1rem;
-        border-bottom: 1px solid var(--md-sys-color-outline-variant);
         background: var(--md-sys-color-surface-container-low);
     }
 }
