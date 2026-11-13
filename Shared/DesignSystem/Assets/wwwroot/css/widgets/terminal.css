@@ -34,7 +34,6 @@ header[terminal] > nav > menu > button {
 main[terminal] > section {
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 1rem;
-    height: 100%;
     min-inline-size: 0;
     overflow: hidden;
 }
@@ -259,13 +258,11 @@ section[uzqr] > section > p {
 
 /* --- POS Invoice Drawer Panel (body > aside > md-dialog[terminal]) --- */
 aside > md-dialog[terminal] > header[slot="headline"] {
-    display: grid;
     gap: 0.5rem;
     padding-bottom: var(--md-sys-spacing-3);
 }
 
 aside > md-dialog[terminal] > header[slot="headline"] > nav {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
 }
@@ -298,16 +295,13 @@ aside > md-dialog[terminal] > header[slot="headline"] > md-tabs {
 }
 
 aside > md-dialog[terminal] > section[slot="content"] {
-    display: grid;
     align-content: start;
     min-height: 0;
 }
 
 aside > md-dialog[terminal] > footer[slot="actions"] {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 0.75rem;
-    width: 100%;
     padding-top: var(--md-sys-spacing-3);
 }
 
@@ -369,7 +363,6 @@ fieldset[pan] {
 }
 
 md-dialog[payment] > header[slot="headline"] {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-4);
@@ -386,7 +379,6 @@ md-dialog[payment] > header[slot="headline"] > hgroup {
 }
 
 md-dialog[payment] > header[slot="headline"] > aside {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: baseline;

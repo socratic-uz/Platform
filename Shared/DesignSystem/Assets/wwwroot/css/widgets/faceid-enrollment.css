@@ -25,7 +25,6 @@ md-dialog[faceid-enrollment] figure {
     border-radius: var(--md-sys-shape-corner-full, 9999px);
     overflow: hidden;
     border: 3px solid var(--md-sys-color-primary);
-    display: grid;
     place-items: center;
     margin: var(--md-sys-spacing-2) auto;
     background: var(--md-sys-color-surface-container-lowest);
@@ -50,7 +49,6 @@ md-dialog[faceid-enrollment] ol {
     width: 100%;
     max-width: 200px;
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -86,7 +84,6 @@ md-dialog[profile] > [slot="content"] {
 }
 
 md-dialog[profile] > footer[slot="actions"] {
-    display: grid;
     grid-auto-flow: column;
     justify-content: end;
     gap: var(--md-sys-spacing-2);
@@ -101,14 +98,11 @@ md-dialog[profile] details {
 
 md-dialog[profile] details > fieldset,
 md-dialog[profile] details > section {
-    display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
-    margin: 0;
 }
 
 md-dialog[profile] details article {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3);
@@ -119,7 +113,6 @@ md-dialog[profile] details article {
 }
 
 md-dialog[profile] details article > hgroup {
-    display: grid;
     gap: 2px;
 }
 
@@ -140,7 +133,6 @@ md-dialog[profile] details article > menu {
     gap: var(--md-sys-spacing-2);
     align-items: center;
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -153,7 +145,6 @@ md-dialog[profile] details summary {
     cursor: pointer;
     list-style: none;
     min-height: var(--md-sys-touch-target-min, 48px);
-    display: grid;
     align-items: center;
     transition: background-color var(--md-sys-motion-duration-short2, 100ms) ease;
 }

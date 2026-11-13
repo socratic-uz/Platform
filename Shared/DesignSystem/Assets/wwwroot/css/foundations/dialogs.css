@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Layer: foundations â€” Dialogs & Modal Surfaces (Semantic md-dialog)
    Material Design 3 Expressive Specification & W3C Web Components Support
    ========================================================================== */
@@ -32,12 +32,10 @@ md-dialog > [slot="headline"] {
     gap: var(--md-sys-spacing-3);
     width: 100%;
     padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-2);
-    box-sizing: border-box;
 }
 
 md-dialog > header[slot="headline"] > hgroup,
 md-dialog > [slot="headline"] > hgroup {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
@@ -91,7 +89,6 @@ md-dialog > [slot="content"] {
     font-family: var(--md-dialog-supporting-text-font);
     font-size: var(--md-sys-typescale-body-medium-size, 0.875rem);
     line-height: var(--md-sys-typescale-body-medium-line-height, 1.25rem);
-    box-sizing: border-box;
     max-height: min(68dvh, 600px);
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -108,9 +105,7 @@ md-dialog > [slot="content"] > p {
 
 md-dialog > section[slot="content"] fieldset,
 md-dialog > [slot="content"] fieldset {
-    display: grid;
     gap: var(--md-sys-spacing-2);
-    margin: 0;
     padding: 0;
     border: none;
 }
@@ -125,7 +120,6 @@ md-dialog > [slot="content"] fieldset > legend {
 
 md-dialog > section[slot="content"] fieldset > label,
 md-dialog > [slot="content"] fieldset > label {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3);
     align-items: center;
@@ -181,7 +175,6 @@ md-dialog > [slot="actions"] {
     justify-content: end;
     align-items: center;
     padding: var(--md-sys-spacing-2) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
-    box-sizing: border-box;
 }
 
 md-dialog[extra-large],

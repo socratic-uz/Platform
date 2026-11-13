@@ -114,7 +114,6 @@ main[qr-designer]>article>footer>md-icon {
 }
 
 aside>md-dialog[qr-designer]>section[slot="content"] {
-    display: grid;
     gap: 1.25rem;
     align-content: start;
 }

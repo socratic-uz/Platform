@@ -34,7 +34,6 @@ body>main~aside>md-dialog>[slot="content"] {
     max-height: 100%;
     height: auto;
     overflow-y: auto;
-    box-sizing: border-box;
     align-content: start;
 }
 

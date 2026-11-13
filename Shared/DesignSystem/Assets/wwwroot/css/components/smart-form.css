@@ -12,7 +12,6 @@ md-dialog[smart-form] {
 }
 
 md-dialog[smart-form] > div:last-child {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     align-items: center;

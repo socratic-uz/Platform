@@ -25,7 +25,6 @@ main[detector] > article {
 main[detector] > article > figure {
     place-items: center;
     position: relative;
-    height: 100%;
     border-radius: var(--md-sys-shape-corner-medium);
     background: var(--md-sys-color-surface-container-lowest);
     overflow: hidden;
@@ -171,7 +170,6 @@ main[detector] > article > header > section > span > span:last-child {
 }
 
 aside > md-dialog[detector] > section[slot="content"] {
-    display: grid;
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
     height: 100%;
@@ -192,7 +190,6 @@ aside > md-dialog[detector] > section[slot="content"] > md-tabs > md-primary-tab
 }
 
 aside > md-dialog[detector] > section[slot="content"] > form {
-    display: grid;
     gap: var(--md-sys-spacing-4);
     align-content: start;
     margin: 8px 0;

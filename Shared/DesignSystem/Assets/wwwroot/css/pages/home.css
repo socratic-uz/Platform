@@ -3,12 +3,101 @@
    Direct Body Landmarks for Organization Home: <main home>
    ========================================================================== */
 
+body > aside[role="status"] {
+    position: fixed;
+    inset: 0;
+    place-content: center;
+    justify-items: center;
+    gap: var(--md-sys-spacing-4);
+    text-align: center;
+}
+
 main[home] {
     gap: var(--md-sys-gutter-section);
     align-content: start;
     padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page) var(--md-sys-spacing-12);
     padding-right: max(var(--md-sys-gutter-page), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page), env(safe-area-inset-left, 0px));
+}
+
+main[home] > h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[home] > section > a {
+    padding: 0;
+    gap: 0;
+}
+
+main[home] > section > a > figure {
+    position: relative;
+    height: 200px;
+    border-radius: var(--md-sys-shape-corner-large);
+    overflow: hidden;
+}
+
+main[home] > section > a > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main[home] > section > a > section {
+    gap: var(--md-sys-spacing-1);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4) var(--md-sys-spacing-4);
+}
+
+main[home] > section > a > section > h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+}
+
+main[home] > section > a > section > p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+main[home] > section:has(> a) {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: var(--md-sys-spacing-4);
+    align-items: stretch;
+}
+
+main[home] > section[role="status"] {
+    justify-items: center;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-12) var(--md-sys-spacing-4);
+    text-align: center;
+}
+
+main[home] > section[role="status"] > md-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    color: var(--md-sys-color-outline);
+}
+
+main[home] > section[role="status"][aria-live="assertive"] > md-icon {
+    color: var(--md-sys-color-error);
+}
+
+main[home] > aside[role="status"] {
+    place-content: center;
+    justify-items: center;
+    gap: var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-8);
+    text-align: center;
+}
+
+main[home] > md-circular-progress {
+    display: block;
+    margin: var(--md-sys-spacing-8) auto;
 }
 
 /* ==========================================================================

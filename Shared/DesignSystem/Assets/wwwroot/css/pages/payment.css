@@ -152,7 +152,6 @@ main[payment] :is(md-filled-button, md-filled-tonal-button, md-outlined-button, 
 }
 
 aside > md-dialog[payment] > header[slot="headline"] {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
@@ -176,13 +175,11 @@ aside > md-dialog[payment] > header[slot="headline"] > md-icon {
 }
 
 aside > md-dialog[payment] > section[slot="content"] {
-    display: grid;
     gap: var(--md-sys-spacing-4);
     align-content: start;
 }
 
 aside > md-dialog[payment] > section[slot="content"] > article {
-    display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);
     border-radius: var(--md-sys-shape-expressive-card);
@@ -230,7 +227,6 @@ aside > md-dialog[payment] > section[slot="content"] > article:first-of-type {
 }
 
 aside > md-dialog[payment] > section[slot="content"] > article:first-of-type > figure {
-    display: grid;
     place-items: center;
     width: 96px;
     height: 96px;

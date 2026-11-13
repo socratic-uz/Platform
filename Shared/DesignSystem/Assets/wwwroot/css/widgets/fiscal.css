@@ -13,11 +13,9 @@ article[fiscal], aside[fiscal], md-dialog[receipt], section[fiscal] {
     font-family: var(--md-ref-typeface-mono, monospace);
     width: 100%;
     max-width: 480px;
-    box-sizing: border-box;
 }
 
 article[fiscal] > header, aside[fiscal] > header, md-dialog[receipt] > header, section[fiscal] > header {
-    display: grid;
     justify-items: center;
     text-align: center;
     gap: var(--md-sys-spacing-1);
@@ -31,7 +29,6 @@ article[fiscal] > header > span:first-of-type, aside[fiscal] > header > span:fir
     grid-auto-columns: max-content;
     align-items: center;
     gap: var(--md-sys-spacing-2);
-    margin: 0;
     font-size: var(--md-sys-typescale-title-small-size, 0.875rem);
     font-weight: 600;
 }
@@ -49,22 +46,18 @@ article[fiscal] > header > p, aside[fiscal] > header > p {
 }
 
 article[fiscal] > ul, aside[fiscal] > ul, section[fiscal] > ul {
-    display: grid;
     gap: var(--md-sys-spacing-3);
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
 article[fiscal] > ul > li, aside[fiscal] > ul > li, section[fiscal] > ul > li {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
     gap: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
 }
 
 article[fiscal] > ul > li > hgroup, aside[fiscal] > ul > li > hgroup {
-    display: grid;
     gap: var(--md-sys-spacing-1);
 }
 
@@ -89,14 +82,12 @@ article[fiscal] > ul > li > small, aside[fiscal] > ul > li > small {
 }
 
 article[fiscal] > dl > div, aside[fiscal] > dl > div, md-dialog[receipt] > dl > div, section[fiscal] > dl > div {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
     font-family: var(--md-ref-typeface-mono, monospace);
 }
 
 article[fiscal] > section, aside[fiscal] > section, section[fiscal] > section {
-    display: grid;
     gap: var(--md-sys-spacing-2);
 }
 
@@ -114,7 +105,6 @@ article[fiscal] > section > p:first-of-type, aside[fiscal] > section > p:first-o
 }
 
 article[fiscal] > footer, aside[fiscal] > footer, section[fiscal] > footer {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-4);
     align-items: center;
@@ -122,8 +112,6 @@ article[fiscal] > footer, aside[fiscal] > footer, section[fiscal] > footer {
 }
 
 article[fiscal] > footer > figure, aside[fiscal] > footer > figure {
-    margin: 0;
-    display: grid;
     place-items: center;
     width: 96px;
     height: 96px;
@@ -139,7 +127,6 @@ article[fiscal] > footer > figure svg, aside[fiscal] > footer > figure svg {
 
 article[fiscal] > footer > section, aside[fiscal] > footer > section,
 article[fiscal] > footer > aside, aside[fiscal] > footer > aside {
-    display: grid;
     gap: var(--md-sys-spacing-1);
     font-size: var(--md-sys-typescale-body-small-size, 0.75rem);
     color: var(--md-sys-color-on-surface-variant);
@@ -174,7 +161,6 @@ article[fiscal] > :is(button, md-filled-button), aside[fiscal] > :is(button, md-
 article[fiscal] > footer,
     aside[fiscal] > footer,
     section[fiscal] > footer {
-        grid-template-columns: minmax(0, 1fr);
         justify-items: center;
         text-align: center;
     }

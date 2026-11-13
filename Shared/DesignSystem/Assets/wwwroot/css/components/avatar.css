@@ -13,7 +13,6 @@ span[avatar] {
     background: var(--md-sys-color-surface-container-high);
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    box-sizing: border-box;
 }
 
 button[avatar],
@@ -31,7 +30,6 @@ md-text-button[avatar] {
     aspect-ratio: 1 / 1;
     overflow: hidden;
     cursor: pointer;
-    box-sizing: border-box;
     background: var(--md-sys-color-surface-container-high);
     --md-outlined-button-container-shape: var(--md-sys-shape-corner-full, 9999px);
     --md-outlined-button-trailing-space: 0px;

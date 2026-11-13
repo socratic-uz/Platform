@@ -15,7 +15,6 @@ section[cart] {
 aside>md-dialog[cart]>header[slot="headline"],
 aside>md-dialog[order]>header[slot="headline"],
 section[cart]>header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
@@ -32,7 +31,6 @@ aside>md-dialog[order]>header[slot="headline"]>hgroup>h3 {
 
 aside>md-dialog[cart]>section[slot="content"],
 aside>md-dialog[order]>section[slot="content"] {
-    display: grid;
     align-content: start;
     gap: var(--space-md);
 }
@@ -40,7 +38,6 @@ aside>md-dialog[order]>section[slot="content"] {
 aside>md-dialog[cart]>section[slot="content"]>ul,
 aside>md-dialog[order]>section[slot="content"]>ul,
 section[cart]>ul {
-    display: grid;
     align-content: start;
     gap: var(--space-sm);
     overflow-y: auto;
@@ -49,7 +46,6 @@ section[cart]>ul {
 aside>md-dialog[cart]>section[slot="content"]>ul>li,
 aside>md-dialog[order]>section[slot="content"]>ul>li,
 section[cart]>ul>li {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
@@ -60,7 +56,6 @@ section[cart]>ul>li {
 
 aside>md-dialog[cart]>section[slot="content"]>ul>li>menu,
 aside>md-dialog[order]>section[slot="content"]>ul>li>menu {
-    display: grid;
     grid-auto-flow: column;
     align-items: center;
     gap: var(--space-xs, 6px);
@@ -68,7 +63,6 @@ aside>md-dialog[order]>section[slot="content"]>ul>li>menu {
 
 aside>md-dialog[cart]>section[slot="content"]>ul>li>menu>fieldset,
 aside>md-dialog[order]>section[slot="content"]>ul>li>menu>fieldset {
-    display: grid;
     grid-auto-flow: column;
     align-items: center;
     gap: 4px;
@@ -78,7 +72,6 @@ aside>md-dialog[order]>section[slot="content"]>ul>li>menu>fieldset {
 
 aside>md-dialog[cart]>section[slot="content"]>article,
 aside>md-dialog[order]>section[slot="content"]>article {
-    display: grid;
     justify-items: center;
     gap: var(--space-sm);
     padding: var(--space-xl, 32px) var(--space-md);
@@ -88,8 +81,6 @@ aside>md-dialog[order]>section[slot="content"]>article {
 aside>md-dialog[cart]>footer[slot="actions"],
 aside>md-dialog[order]>footer[slot="actions"],
 section[cart]>footer {
-    display: grid;
-    width: 100%;
     align-content: start;
     gap: var(--space-md);
     padding-top: var(--space-sm);
@@ -108,7 +99,6 @@ aside>md-dialog[order]>section[slot="content"]>ul>li {
 }
 
 aside>md-dialog[order]>section[slot="content"]>ul>li>figure {
-    display: grid;
     place-items: center;
     width: 48px;
     height: 48px;
@@ -124,7 +114,6 @@ aside>md-dialog[order]>section[slot="content"]>ul>li>figure>img {
 }
 
 aside>md-dialog[order]>footer[slot="actions"]>menu {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--space-sm);
 }

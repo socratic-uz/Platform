@@ -65,13 +65,11 @@ body>aside:has(~ main)>nav>a.active>md-icon {
 
 @media screen and (max-width: 839.98px) {
     body>aside:has(~ main)>nav {
-        display: grid;
         order: 2;
         grid-auto-flow: column;
         grid-auto-columns: minmax(0, 1fr);
         grid-template-rows: 1fr;
         height: 60px;
-        width: 100%;
         padding: 4px;
         gap: 4px;
         align-items: center;
@@ -108,7 +106,6 @@ body>aside:has(~ main)>nav>a.active>md-icon {
 
 @media screen and (min-width: 840px) {
     body>aside:has(~ main)>nav {
-        display: grid;
         position: sticky;
         top: 0;
         width: 76px;

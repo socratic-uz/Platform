@@ -92,7 +92,6 @@ main[map] > article[navigator] > header {
 
 main[map] > article[navigator] > header > hgroup {
     gap: 2px;
-    min-width: 0;
 }
 
 main[map] > article[navigator] > header > hgroup > span:first-child {
@@ -191,7 +190,6 @@ section[route-mode]>fieldset>ol {
 }
 
 section[route-mode]>fieldset>ol>li {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
@@ -238,7 +236,6 @@ aside>md-dialog[map-controls] {
 }
 
 aside>md-dialog[map-controls]>section[slot="content"] {
-    display: grid;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-3);
     align-content: start;
@@ -249,7 +246,6 @@ aside>md-dialog[map-controls]>section[slot="content"]>search[search-mode] {
 }
 
 aside>md-dialog[map-controls]>section[slot="content"]>search[search-mode]>header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: var(--md-sys-spacing-2);
     align-items: center;
@@ -297,11 +293,6 @@ main[map] > section > aside {
 main[map] > article[navigator] {
         inset: 12px;
         justify-items: stretch;
-    }
-
-main[map] > article[navigator] > header,
-    main[map] > article[navigator] > footer {
-        width: 100%;
     }
 
 main[map]:has(> article[navigator]) > section > aside {

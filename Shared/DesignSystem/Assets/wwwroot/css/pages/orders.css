@@ -285,7 +285,6 @@ main[orders] > md-filled-button {
 
 /* Order Items Drawer Summary: body > aside > md-dialog[order-items] */
 aside > md-dialog[order-items] > header[slot="headline"] {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-2);
     align-items: center;
@@ -298,12 +297,10 @@ aside > md-dialog[order-items] > header[slot="headline"] > span {
 }
 
 aside > md-dialog[order-items] > section[slot="content"] > ul {
-    display: grid;
     gap: var(--md-sys-spacing-3);
 }
 
 aside > md-dialog[order-items] > section[slot="content"] > ul > li {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-2);
     align-items: center;
@@ -326,16 +323,7 @@ aside > md-dialog[order-items] > section[slot="content"] > ul > li:last-child {
 }
 
 aside > md-dialog[order-items] > footer[slot="actions"] {
-    display: grid;
-    width: 100%;
     gap: var(--md-sys-spacing-2);
-}
-
-aside > md-dialog[order-items] > footer[slot="actions"] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-2);
-    width: 100%;
 }
 
 aside > md-dialog[order-items] > footer[slot="actions"] > :is(md-filled-button, md-outlined-button) {
@@ -390,7 +378,6 @@ a[card] > header > span {
 }
 
 a[card] > ul {
-    grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
 }
 

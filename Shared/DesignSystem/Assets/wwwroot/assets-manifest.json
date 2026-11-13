@@ -3,18 +3,18 @@
   "assets": [
     {
       "url": "_content/Assets/css/components/avatar.css",
-      "size": 3071,
-      "hash": "sha256-94f997e04fd8"
+      "size": 3074,
+      "hash": "sha256-f8c977a92075"
     },
     {
       "url": "_content/Assets/css/components/card.css",
-      "size": 4685,
-      "hash": "sha256-389de2145a13"
+      "size": 4641,
+      "hash": "sha256-30a94cf323cf"
     },
     {
       "url": "_content/Assets/css/components/color-picker.css",
-      "size": 1470,
-      "hash": "sha256-39b71370e25c"
+      "size": 1430,
+      "hash": "sha256-ddf9a199c2b5"
     },
     {
       "url": "_content/Assets/css/components/file-picker.css",
@@ -58,8 +58,8 @@
     },
     {
       "url": "_content/Assets/css/components/smart-form.css",
-      "size": 2650,
-      "hash": "sha256-c5d03d5ae838"
+      "size": 2630,
+      "hash": "sha256-b53b3551b149"
     },
     {
       "url": "_content/Assets/css/components/smart-grid.css",
@@ -98,18 +98,18 @@
     },
     {
       "url": "_content/Assets/css/foundations/dialogs.css",
-      "size": 9839,
-      "hash": "sha256-4bf9103106f2"
+      "size": 9929,
+      "hash": "sha256-f64df548886a"
     },
     {
       "url": "_content/Assets/css/foundations/drawer.css",
-      "size": 18864,
-      "hash": "sha256-5f00ef928d58"
+      "size": 19321,
+      "hash": "sha256-93e04915e4eb"
     },
     {
       "url": "_content/Assets/css/foundations/footer.css",
-      "size": 5823,
-      "hash": "sha256-82e1367ce46b"
+      "size": 5735,
+      "hash": "sha256-fb44e44b9341"
     },
     {
       "url": "_content/Assets/css/foundations/forms.css",
@@ -123,8 +123,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/header.css",
-      "size": 3305,
-      "hash": "sha256-286c2e9f14b2"
+      "size": 3411,
+      "hash": "sha256-476dea63a219"
     },
     {
       "url": "_content/Assets/css/foundations/icons.css",
@@ -138,8 +138,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/landmarks.css",
-      "size": 6081,
-      "hash": "sha256-d0f3f81a1187"
+      "size": 6219,
+      "hash": "sha256-618473c02418"
     },
     {
       "url": "_content/Assets/css/foundations/lists.css",
@@ -148,8 +148,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/rail.css",
-      "size": 5070,
-      "hash": "sha256-e49427bdf101"
+      "size": 5161,
+      "hash": "sha256-bdd847c058cc"
     },
     {
       "url": "_content/Assets/css/foundations/reset.css",
@@ -188,8 +188,8 @@
     },
     {
       "url": "_content/Assets/css/pages/analytics.css",
-      "size": 18315,
-      "hash": "sha256-5d994010e94b"
+      "size": 18153,
+      "hash": "sha256-0bdb490fb2ef"
     },
     {
       "url": "_content/Assets/css/pages/auth.css",
@@ -198,28 +198,28 @@
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
-      "size": 16816,
-      "hash": "sha256-3e7865c6629e"
+      "size": 16328,
+      "hash": "sha256-06c632ec2047"
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
-      "size": 13510,
-      "hash": "sha256-ea3d878ddcd4"
+      "size": 13451,
+      "hash": "sha256-87e3c16e5467"
     },
     {
       "url": "_content/Assets/css/pages/docs.css",
-      "size": 3718,
-      "hash": "sha256-4500e0480a7e"
+      "size": 3590,
+      "hash": "sha256-9e3e761563a1"
     },
     {
       "url": "_content/Assets/css/pages/help.css",
-      "size": 6059,
-      "hash": "sha256-fb9cba3fde1c"
+      "size": 6015,
+      "hash": "sha256-7ac69d8ecd40"
     },
     {
       "url": "_content/Assets/css/pages/home.css",
-      "size": 1204,
-      "hash": "sha256-975a1643c73f"
+      "size": 3240,
+      "hash": "sha256-52b41183549e"
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
@@ -228,13 +228,13 @@
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
-      "size": 52241,
-      "hash": "sha256-62d12b8da6ce"
+      "size": 51733,
+      "hash": "sha256-60e5668494e8"
     },
     {
       "url": "_content/Assets/css/pages/map.css",
-      "size": 9047,
-      "hash": "sha256-a2bd36f7dde5"
+      "size": 8850,
+      "hash": "sha256-b10e63b703ad"
     },
     {
       "url": "_content/Assets/css/pages/model-viewer.css",
@@ -243,13 +243,13 @@
     },
     {
       "url": "_content/Assets/css/pages/orders.css",
-      "size": 13619,
-      "hash": "sha256-31e5b2999e6e"
+      "size": 13298,
+      "hash": "sha256-a6dd3eca1627"
     },
     {
       "url": "_content/Assets/css/pages/payment.css",
-      "size": 9736,
-      "hash": "sha256-de4109e72c05"
+      "size": 9656,
+      "hash": "sha256-00bb96e42348"
     },
     {
       "url": "_content/Assets/css/pages/player.css",
@@ -263,28 +263,28 @@
     },
     {
       "url": "_content/Assets/css/pages/qr-designer.css",
-      "size": 4248,
-      "hash": "sha256-4b80157acdab"
+      "size": 4228,
+      "hash": "sha256-8f57195f8d18"
     },
     {
       "url": "_content/Assets/css/pages/qr.css",
-      "size": 6787,
-      "hash": "sha256-1f19c567a822"
+      "size": 6583,
+      "hash": "sha256-e48058e844ab"
     },
     {
       "url": "_content/Assets/css/pages/seat-designer.css",
-      "size": 4239,
-      "hash": "sha256-a9113c9782b2"
+      "size": 4200,
+      "hash": "sha256-de15f27c6ac3"
     },
     {
       "url": "_content/Assets/css/pages/terminal.css",
-      "size": 1267,
-      "hash": "sha256-e327637d9956"
+      "size": 1247,
+      "hash": "sha256-5689bcf906f5"
     },
     {
       "url": "_content/Assets/css/pages/wishlist.css",
-      "size": 5182,
-      "hash": "sha256-1d0c1d522965"
+      "size": 5380,
+      "hash": "sha256-5d65626797bf"
     },
     {
       "url": "_content/Assets/css/styles.css",
@@ -623,8 +623,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/cart.css",
-      "size": 3662,
-      "hash": "sha256-bf50b948198b"
+      "size": 3543,
+      "hash": "sha256-0812837ba69b"
     },
     {
       "url": "_content/Assets/css/widgets/chat.css",
@@ -643,8 +643,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/faceid-enrollment.css",
-      "size": 5367,
-      "hash": "sha256-5654b726aed2"
+      "size": 5199,
+      "hash": "sha256-0de0d0a0c9b5"
     },
     {
       "url": "_content/Assets/css/widgets/faceid-viewfinder.css",
@@ -653,13 +653,13 @@
     },
     {
       "url": "_content/Assets/css/widgets/fiscal.css",
-      "size": 6275,
-      "hash": "sha256-92aeaa367f26"
+      "size": 5970,
+      "hash": "sha256-17e9c49a5b1e"
     },
     {
       "url": "_content/Assets/css/widgets/invoice.css",
-      "size": 4060,
-      "hash": "sha256-cb063a588040"
+      "size": 4031,
+      "hash": "sha256-d255f327cf4b"
     },
     {
       "url": "_content/Assets/css/widgets/kanban.css",
@@ -668,8 +668,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 19351,
-      "hash": "sha256-6b083ae79da4"
+      "size": 18608,
+      "hash": "sha256-d9ad0338b3d9"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -708,8 +708,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/terminal.css",
-      "size": 12406,
-      "hash": "sha256-a54dfcc6baa3"
+      "size": 12249,
+      "hash": "sha256-db9247f98f58"
     },
     {
       "url": "_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2",

@@ -12,7 +12,6 @@ md-filled-card,
 md-outlined-card,
 [card] {
     position: relative;
-    grid-template-columns: minmax(0, 1fr);
     align-content: start;
     gap: var(--md-sys-spacing-3);
     padding: var(--md-sys-spacing-4);

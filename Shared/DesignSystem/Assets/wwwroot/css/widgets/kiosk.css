@@ -179,9 +179,9 @@ main[kiosk] > section > md-filled-card {
 
     min-height: 380px;
 
-    padding: var(--md-sys-spacing-3);
+    padding: 0;
 
-    overflow: visible;
+    overflow: hidden;
 
     will-change: transform, box-shadow;
 
@@ -201,7 +201,6 @@ main[kiosk] > section > md-filled-card {
 
 }
 
-/* --- Card Figure & Media --- */
 main[kiosk] > section > md-filled-card > figure {
 
     position: relative;
@@ -210,7 +209,7 @@ main[kiosk] > section > md-filled-card > figure {
 
     aspect-ratio: 16 / 9;
 
-    border-radius: var(--md-sys-shape-corner-medium);
+    border-radius: var(--md-sys-shape-expressive-card);
 
     background: var(--md-sys-color-surface-container-highest);
 
@@ -474,7 +473,6 @@ main[kiosk] > section > md-filled-card > footer > span {
 
 main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
 
-    display: grid;
 
     grid-auto-flow: column;
 
@@ -486,31 +484,6 @@ main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
 
     padding: 0;
 
-
-}
-
-main[kiosk] > section > md-filled-card > footer > fieldset[counter] {
-
-    display: grid;
-
-    grid-auto-flow: column;
-
-    grid-auto-columns: max-content;
-
-    gap: var(--md-sys-spacing-2);
-
-    align-items: center;
-
-    padding: 0;
-
-
-}
-
-main[kiosk] > section > md-filled-card > footer > fieldset[counter] > :is(md-icon-button, md-filled-icon-button, button) {
-
-    min-width: 44px;
-
-    min-height: 44px;
 
 }
 
@@ -536,18 +509,13 @@ main[kiosk] > section > md-filled-card > footer :is(md-filled-button, md-outline
 
 }
 
-main[kiosk] > section > md-filled-card > footer :is(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {
+main[kiosk] > section > md-filled-card > :last-child:not(figure) {
+    padding-bottom: var(--md-sys-spacing-3);
+}
 
-    min-height: var(--md-sys-touch-target-min);
-
-    --md-filled-button-container-height: var(--md-sys-touch-target-min);
-
-    --md-outlined-button-container-height: var(--md-sys-touch-target-min);
-
-    --md-text-button-container-height: var(--md-sys-touch-target-min);
-
-    --md-tonal-button-container-height: var(--md-sys-touch-target-min);
-
+/* --- Card Figure & Media --- */
+main[kiosk] > section > md-filled-card > :not(figure) {
+    padding-inline: var(--md-sys-spacing-3);
 }
 
 main[kiosk] > section > md-filled-card:has(> aside, > md-chip-set) {

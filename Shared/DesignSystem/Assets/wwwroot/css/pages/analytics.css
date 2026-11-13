@@ -36,9 +36,6 @@ header[analytics] > span {
 main[analytics] {
     gap: var(--md-sys-gutter-section, var(--md-sys-spacing-6));
     align-content: start;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
     padding: var(--md-sys-spacing-6) var(--md-sys-gutter-page, var(--md-sys-spacing-6)) var(--md-sys-spacing-12);
     padding-right: max(var(--md-sys-gutter-page, var(--md-sys-spacing-6)), env(safe-area-inset-right, 0px));
     padding-left: max(var(--md-sys-gutter-page, var(--md-sys-spacing-6)), env(safe-area-inset-left, 0px));
@@ -166,14 +163,12 @@ main[analytics] > section[breakdown] > article > ul,
 main[analytics] > section:has(ul > li > md-linear-progress) > article > ul {
     gap: var(--md-sys-spacing-3);
     align-content: start;
-    margin: 0;
     padding: 0;
     list-style: none;
 }
 
 main[analytics] > section[breakdown] > article > ul > li,
 main[analytics] > section:has(ul > li > md-linear-progress) > article > ul > li {
-    display: grid;
     gap: var(--md-sys-spacing-1);
 }
 
@@ -386,7 +381,6 @@ md-dialog:has(h3#modal-title) > [slot="headline"] {
 md-dialog[config] > header[slot="headline"] > hgroup,
 md-dialog:has(h3#modal-title) > header[slot="headline"] > hgroup,
 md-dialog:has(h3#modal-title) > [slot="headline"] > hgroup {
-    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
@@ -404,7 +398,6 @@ md-dialog:has(h3#modal-title) > [slot="headline"] h3 {
 md-dialog[config] > section[slot="content"] fieldset,
 md-dialog:has(h3#modal-title) > section[slot="content"] fieldset,
 md-dialog:has(h3#modal-title) > [slot="content"] fieldset {
-    display: grid;
     gap: var(--md-sys-spacing-2);
     margin: var(--md-sys-spacing-2) 0 0;
     padding: 0;
@@ -413,7 +406,6 @@ md-dialog:has(h3#modal-title) > [slot="content"] fieldset {
 md-dialog[config] > section[slot="content"] fieldset > label,
 md-dialog:has(h3#modal-title) > section[slot="content"] fieldset > label,
 md-dialog:has(h3#modal-title) > [slot="content"] fieldset > label {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3);
     align-items: center;

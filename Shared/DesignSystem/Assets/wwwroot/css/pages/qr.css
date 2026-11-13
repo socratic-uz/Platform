@@ -4,7 +4,6 @@
    ========================================================================== */
 
 main[qr] {
-    grid-template-columns: minmax(0, 1fr);
     gap: 0;
     min-height: calc(100dvh - var(--md-sys-spacing-header));
     background: var(--md-sys-color-surface);
@@ -14,7 +13,6 @@ main[qr] {
 main[qr] > section {
     grid-template-rows: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-6);
-    height: 100%;
     padding: 2rem;
     background: var(--md-sys-color-surface-container-low);
     overflow-y: auto;
@@ -81,7 +79,6 @@ main[qr] > section > section:not(:has(> article)) {
     gap: var(--md-sys-spacing-4);
     place-content: center;
     place-items: center;
-    height: 100%;
     padding: var(--md-sys-spacing-8) var(--md-sys-spacing-6);
     border-radius: var(--md-sys-shape-expressive-corner-large);
     background: radial-gradient(ellipse at 50% 40%, rgb(from var(--md-sys-color-primary-container) r g b / 0.44), transparent 68%);
@@ -110,7 +107,6 @@ main[qr] > aside {
 }
 
 aside > md-dialog[qr] > header[slot="headline"] {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.75rem;
     align-items: center;
@@ -140,13 +136,11 @@ aside > md-dialog[qr] > header[slot="headline"] > md-icon {
 }
 
 aside > md-dialog[qr] > section[slot="content"] {
-    display: grid;
     gap: var(--md-sys-spacing-4);
     align-content: start;
 }
 
 aside > md-dialog[qr] > section[slot="content"] > section > header {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     padding: 0.5rem 0.25rem;
@@ -194,8 +188,6 @@ aside > md-dialog[qr] > section[slot="content"] > a {
 }
 
 aside > md-dialog[qr] > footer[slot="actions"] {
-    display: grid;
-    width: 100%;
     padding-top: var(--md-sys-spacing-2);
 }
 
@@ -225,7 +217,6 @@ body > aside,
     }
 
 main[qr] > aside {
-        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(60mm, 1fr));
         gap: 10mm;
         padding: 10mm;

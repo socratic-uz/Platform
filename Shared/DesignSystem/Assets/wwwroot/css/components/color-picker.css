@@ -25,7 +25,6 @@ section[color-picker-compact] > input {
 
 md-dialog[color-picker] > div:first-child,
 md-dialog[color-picker-popover] > div:first-child {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);
@@ -33,7 +32,6 @@ md-dialog[color-picker-popover] > div:first-child {
 
 md-dialog[color-picker] > div:last-child,
 md-dialog[color-picker-popover] > div:last-child {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--space-sm);

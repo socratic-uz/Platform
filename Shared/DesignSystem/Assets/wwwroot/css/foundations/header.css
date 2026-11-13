@@ -11,7 +11,6 @@ body > header > nav {
     grid-auto-columns: max-content;
     gap: 0.75rem;
     align-items: center;
-    min-width: 0;
     max-width: 100%;
     width: auto;
     overflow-x: auto;
@@ -54,7 +53,6 @@ body > header > nav > menu {
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     align-items: center;
-    min-width: 0;
     max-width: 100%;
     overflow-x: auto;
     scrollbar-width: none;

@@ -22,7 +22,6 @@ header[docs] > nav > span:last-child {
 
 /* Main Landmark */
 main[docs] {
-    grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-6);
     align-items: start;
     min-height: calc(100dvh - var(--md-sys-spacing-header));
@@ -78,7 +77,6 @@ main[docs] > section > article > md-icon {
 
 /* Sidebar Navigation Drawer (body > aside > md-dialog[docs]) */
 aside > md-dialog[docs] > header[slot="headline"] {
-    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: center;
@@ -91,9 +89,7 @@ aside > md-dialog[docs] > header[slot="headline"] > span {
 }
 
 aside > md-dialog[docs] > nav[slot="content"] {
-    display: grid;
     grid-auto-flow: row;
-    grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
     align-content: start;
 }

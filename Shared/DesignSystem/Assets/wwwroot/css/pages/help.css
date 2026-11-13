@@ -183,7 +183,6 @@ main[help] > section:last-of-type > article > p {
 
 main[help] > section:last-of-type > article > menu {
     grid-auto-flow: row;
-    grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
 }
 

@@ -4,7 +4,6 @@
    ========================================================================== */
 
 main[terminal] {
-    grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-5);
     align-items: stretch;
     max-width: 100%;
