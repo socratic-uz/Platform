@@ -328,16 +328,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 
-// Configure MIME types for static assets (especially RCL JavaScript modules)
-var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
-provider.Mappings[".js"] = "application/javascript";
-provider.Mappings[".json"] = "application/json";
-
-app.UseStaticFiles(new Microsoft.AspNetCore.Builder.StaticFileOptions
-{
-    ContentTypeProvider = provider
-});
-
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
