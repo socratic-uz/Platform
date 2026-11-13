@@ -495,7 +495,7 @@ main[kiosk] > section > md-filled-card > footer > fieldset[counter] > :is(md-ico
 
 }
 
-main[kiosk] > section > md-filled-card > footer :is(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {
+main[kiosk] > section > md-filled-card > footer > :is(md-filled-button, md-outlined-button, md-tonal-button, md-text-button, button) {
 
     min-height: var(--md-sys-touch-target-min);
 

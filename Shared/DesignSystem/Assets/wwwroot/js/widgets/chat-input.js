@@ -17,8 +17,15 @@ export function init(elem) {
     });
 }
 
+export function clear(elem) {
+    if (!elem) return;
+    elem.value = '';
+    elem.setAttribute('value', '');
+    resizeToFit(elem);
+}
+
 function resizeToFit(elem) {
-    const lineHeight = parseFloat(getComputedStyle(elem).lineHeight);
+    const lineHeight = parseFloat(getComputedStyle(elem).lineHeight) || 24;
 
     elem.rows = 1;
     const numLines = Math.ceil(elem.scrollHeight / lineHeight);

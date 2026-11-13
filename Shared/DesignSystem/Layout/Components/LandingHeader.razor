@@ -20,7 +20,9 @@
 	</a>
 
 	<nav aria-label=@L[MainNavigation]>
-		<menu dropdown>
+		<menu dropdown
+			  @onmouseenter=@(() => OpenDropdown(NavDropdownGroup.Features))
+			  @onmouseleave=@(() => ScheduleCloseDropdownAsync(NavDropdownGroup.Features))>
 			<Button id="nav-anchor-features"
 					Variant=@Text
 					OnClick=@(() => ToggleDropdown(NavDropdownGroup.Features))
@@ -36,7 +38,9 @@
 			</Menu>
 		</menu>
 
-		<menu dropdown>
+		<menu dropdown
+			  @onmouseenter=@(() => OpenDropdown(NavDropdownGroup.Catalog))
+			  @onmouseleave=@(() => ScheduleCloseDropdownAsync(NavDropdownGroup.Catalog))>
 			<Button id="nav-anchor-catalog"
 					Variant=@Text
 					OnClick=@(() => ToggleDropdown(NavDropdownGroup.Catalog))
@@ -55,7 +59,9 @@
 			</Menu>
 		</menu>
 
-		<menu dropdown>
+		<menu dropdown
+			  @onmouseenter=@(() => OpenDropdown(NavDropdownGroup.Resources))
+			  @onmouseleave=@(() => ScheduleCloseDropdownAsync(NavDropdownGroup.Resources))>
 			<Button id="nav-anchor-resources"
 					Variant=@Text
 					OnClick=@(() => ToggleDropdown(NavDropdownGroup.Resources))
@@ -69,7 +75,9 @@
 			</Menu>
 		</menu>
 
-		<menu dropdown>
+		<menu dropdown
+			  @onmouseenter=@(() => OpenDropdown(NavDropdownGroup.Community))
+			  @onmouseleave=@(() => ScheduleCloseDropdownAsync(NavDropdownGroup.Community))>
 			<Button id="nav-anchor-community"
 					Variant=@Text
 					OnClick=@(() => ToggleDropdown(NavDropdownGroup.Community))
@@ -87,7 +95,7 @@
 
 <Aside NoNav=@true>
 	<DialogContent>
-		<MaterialDialog Open=@IsMobileMenuOpen NoFocusTrap=@true OnClose=@CloseMobileMenuAsync aria-label=@L[MainNavigation]>
+		<MaterialDialog landing Open=@IsMobileMenuOpen NoFocusTrap=@true OnClose=@CloseMobileMenuAsync aria-label=@L[MainNavigation]>
 			<header slot="headline">
 				<a href="/" @onclick=@CloseMobileMenuAsync title="Socratic">
 					<Icon Name=@AutoAwesome />

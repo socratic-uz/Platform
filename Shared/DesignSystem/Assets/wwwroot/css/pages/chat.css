@@ -93,8 +93,8 @@ main[chat] > footer > form {
     margin-inline: auto;
 }
 
-main[chat] > footer > form md-outlined-text-field,
-main[chat] > footer > form md-filled-text-field {
+main[chat] > footer > form > md-outlined-text-field,
+main[chat] > footer > form > md-filled-text-field {
     width: 100%;
     --md-outlined-text-field-container-shape: var(--md-sys-shape-corner-extra-large, 24px);
     --md-filled-text-field-container-shape: var(--md-sys-shape-corner-extra-large, 24px);
@@ -104,13 +104,12 @@ main[chat] > footer > form md-filled-text-field {
    LANDMARK: CHAT MESSAGES STREAM
    ========================================================================== */
 main[chat] > chat-messages {
+    height: 100%;
     gap: var(--md-sys-spacing-4);
     align-content: start;
     min-height: 0;
     width: 100%;
-    max-width: min(840px, 100%);
-    margin: 0 auto;
-    padding: var(--md-sys-spacing-5) var(--md-sys-spacing-4) var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-5) max(var(--md-sys-spacing-4), calc((100% - 840px) / 2)) var(--md-sys-spacing-4);
     color: var(--md-sys-color-on-surface);
     overflow-x: hidden;
     overflow-y: auto;

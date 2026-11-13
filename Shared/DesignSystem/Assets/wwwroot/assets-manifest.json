@@ -198,8 +198,8 @@
     },
     {
       "url": "_content/Assets/css/pages/chat.css",
-      "size": 16328,
-      "hash": "sha256-06c632ec2047"
+      "size": 15963,
+      "hash": "sha256-eb4eba6e5cb5"
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
@@ -218,8 +218,8 @@
     },
     {
       "url": "_content/Assets/css/pages/home.css",
-      "size": 3240,
-      "hash": "sha256-52b41183549e"
+      "size": 3274,
+      "hash": "sha256-5932e9d5e58a"
     },
     {
       "url": "_content/Assets/css/pages/kiosk.css",
@@ -228,13 +228,13 @@
     },
     {
       "url": "_content/Assets/css/pages/landing.css",
-      "size": 51733,
-      "hash": "sha256-60e5668494e8"
+      "size": 50514,
+      "hash": "sha256-5d6d172612ae"
     },
     {
       "url": "_content/Assets/css/pages/map.css",
-      "size": 8850,
-      "hash": "sha256-b10e63b703ad"
+      "size": 8852,
+      "hash": "sha256-efd7d20ac0fd"
     },
     {
       "url": "_content/Assets/css/pages/model-viewer.css",
@@ -653,8 +653,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/fiscal.css",
-      "size": 5970,
-      "hash": "sha256-17e9c49a5b1e"
+      "size": 5974,
+      "hash": "sha256-d3ac76536eea"
     },
     {
       "url": "_content/Assets/css/widgets/invoice.css",
@@ -668,8 +668,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/kiosk.css",
-      "size": 18608,
-      "hash": "sha256-d9ad0338b3d9"
+      "size": 18610,
+      "hash": "sha256-2582f115b874"
     },
     {
       "url": "_content/Assets/css/widgets/lang-selector.css",
@@ -913,13 +913,13 @@
     },
     {
       "url": "_content/Assets/js/widgets/chat-input.js",
-      "size": 1957,
-      "hash": "sha256-0e70ac546e40"
+      "size": 2045,
+      "hash": "sha256-5bc6196c3288"
     },
     {
       "url": "_content/Assets/js/widgets/chat-message-list.js",
-      "size": 4695,
-      "hash": "sha256-5d7fabb8037a"
+      "size": 4932,
+      "hash": "sha256-c70c1c52d699"
     },
     {
       "url": "_content/Assets/js/widgets/markdown.js",

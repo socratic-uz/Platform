@@ -21,22 +21,31 @@ if (typeof window !== 'undefined' && window.customElements) {
             _scheduleAutoScroll(mutations) {
                 cancelAnimationFrame(this._nextAutoScroll);
                 this._nextAutoScroll = requestAnimationFrame(() => {
-                    const container = this.closest('.message-list-container') || this.parentElement;
                     const elem = this.lastElementChild;
                     if (!elem) return;
 
-                    const addedUserMessage = mutations.some(m => Array.from(m.addedNodes).some(n => n.parentElement === this && n.classList?.contains('user-message')));
-                    if (ChatMessages._isFirstAutoScroll || addedUserMessage || this._elemIsNearScrollBoundary(container, elem, 250)) {
-                        elem.scrollIntoView({ behavior: ChatMessages._isFirstAutoScroll ? 'instant' : 'smooth', block: 'end' });
+                    const addedUserMessage = mutations.some(m =>
+                        Array.from(m.addedNodes).some(n =>
+                            n.nodeType === 1 &&
+                            n.parentElement === this &&
+                            n.tagName === 'ARTICLE' &&
+                            (n.hasAttribute('user') || (!n.hasAttribute('empty') && !n.querySelector('header')))
+                        )
+                    );
+                    if (ChatMessages._isFirstAutoScroll || addedUserMessage || this._elemIsNearScrollBoundary(this, 120)) {
+                        this.scrollTo({
+                            top: this.scrollHeight,
+                            behavior: (ChatMessages._isFirstAutoScroll || !addedUserMessage) ? 'instant' : 'smooth'
+                        });
                         ChatMessages._isFirstAutoScroll = false;
                     }
                 });
             }
 
-            _elemIsNearScrollBoundary(container, elem, threshold) {
+            _elemIsNearScrollBoundary(container, threshold) {
                 if (!container) return true;
                 const remainingScrollDistance = container.scrollHeight - container.clientHeight - container.scrollTop;
-                return remainingScrollDistance < (elem.offsetHeight || 50) + threshold;
+                return remainingScrollDistance < threshold;
             }
         });
     }

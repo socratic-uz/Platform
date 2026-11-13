@@ -34,6 +34,8 @@ main[home] > section > a {
 
 main[home] > section > a > figure {
     position: relative;
+    width: 100%;
+    margin: 0;
     height: 200px;
     border-radius: var(--md-sys-shape-corner-large);
     overflow: hidden;

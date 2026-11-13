@@ -273,7 +273,7 @@ aside>md-dialog[map-controls]:not([expanded])>section[slot="content"] {
    ========================================================================== */
 
 @media screen and (max-width: 839.98px) {
-body:has(> aside > md-dialog[data-sheet-snap="full"]) main[map] > section > aside {
+body:has(> aside > md-dialog[data-sheet-snap="full"]) > main[map] > section > aside {
         opacity: 0;
         pointer-events: none;
     }

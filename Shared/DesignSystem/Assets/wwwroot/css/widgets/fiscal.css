@@ -120,7 +120,7 @@ article[fiscal] > footer > figure, aside[fiscal] > footer > figure {
     overflow: hidden;
 }
 
-article[fiscal] > footer > figure svg, aside[fiscal] > footer > figure svg {
+article[fiscal] > footer > figure > svg, aside[fiscal] > footer > figure > svg {
     width: 80px;
     height: 80px;
 }

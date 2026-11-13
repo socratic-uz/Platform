@@ -1,6 +1,8 @@
 namespace Shared.Layout;
 
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.Extensions.Localization;
@@ -21,6 +23,7 @@ public partial class LandingHeader : ComponentBase, IDisposable
 
     public bool IsMobileMenuOpen { get; set; }
     public NavDropdownGroup ActiveDropdown { get; set; } = NavDropdownGroup.None;
+    private CancellationTokenSource? _hoverCloseCts;
 
     protected override void OnInitialized()
     {
@@ -39,19 +42,50 @@ public partial class LandingHeader : ComponentBase, IDisposable
 
     public void Dispose()
     {
+        _hoverCloseCts?.Cancel();
+        _hoverCloseCts?.Dispose();
         if (Nav != null)
         {
             Nav.LocationChanged -= OnLocationChanged;
         }
     }
 
+    public void OpenDropdown(NavDropdownGroup group)
+    {
+        _hoverCloseCts?.Cancel();
+        ActiveDropdown = group;
+    }
+
+    public async Task ScheduleCloseDropdownAsync(NavDropdownGroup group)
+    {
+        _hoverCloseCts?.Cancel();
+        _hoverCloseCts?.Dispose();
+        _hoverCloseCts = new CancellationTokenSource();
+        var token = _hoverCloseCts.Token;
+
+        try
+        {
+            await Task.Delay(120, token);
+            if (!token.IsCancellationRequested && ActiveDropdown == group)
+            {
+                ActiveDropdown = NavDropdownGroup.None;
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+        catch (TaskCanceledException)
+        {
+        }
+    }
+
     public void ToggleDropdown(NavDropdownGroup group)
     {
+        _hoverCloseCts?.Cancel();
         ActiveDropdown = ActiveDropdown == group ? NavDropdownGroup.None : group;
     }
 
     public void CloseDropdown()
     {
+        _hoverCloseCts?.Cancel();
         ActiveDropdown = NavDropdownGroup.None;
     }
 

@@ -59,11 +59,11 @@ header[landing] > nav > menu[dropdown] > md-menu {
     min-width: 240px;
 }
 
-header[landing] > nav > menu[dropdown] > md-menu md-menu-item {
+header[landing] > nav > menu[dropdown] > md-menu > md-menu-item {
     min-height: 44px;
 }
 
-header[landing] > nav > menu[dropdown] > md-menu md-menu-item md-icon {
+header[landing] > nav > menu[dropdown] > md-menu > md-menu-item > md-icon {
     color: var(--md-sys-color-primary);
 }
 
@@ -1153,38 +1153,13 @@ main[landing] > section:nth-of-type(8) > footer {
     margin-top: var(--md-sys-spacing-2);
 }
 
-aside[drawer],
-aside[drawer] > dialog {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;
-    width: min(340px, 85vw);
-    display: grid;
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    align-content: start;
-    justify-items: stretch;
-    gap: var(--md-sys-spacing-3);
-    padding: var(--md-sys-spacing-5) var(--md-sys-spacing-4);
-    background: var(--md-sys-color-surface-container);
-    z-index: var(--md-sys-z-modal);
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-    animation: drawer-slide-in var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-emphasized-decelerate);
-}
-
-aside[drawer] > dialog > header {
+aside > md-dialog[landing] > header[slot="headline"] {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-2);
-    padding-bottom: var(--md-sys-spacing-2);
-    margin-bottom: var(--md-sys-spacing-1);
 }
 
-aside[drawer] > dialog > header > a {
+aside > md-dialog[landing] > header[slot="headline"] > a {
     display: inline-grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -1196,42 +1171,39 @@ aside[drawer] > dialog > header > a {
     text-decoration: none;
 }
 
-aside[drawer] > dialog > header > a > md-icon {
+aside > md-dialog[landing] > header[slot="headline"] > a > md-icon {
     color: var(--md-sys-color-primary);
 }
 
-aside[drawer] > dialog > footer {
-    grid-auto-flow: row;
-    padding-top: var(--md-sys-spacing-2);
+aside > md-dialog[landing] > section[slot="content"] {
+    gap: var(--md-sys-spacing-2);
+    align-content: start;
 }
 
-aside[drawer] > dialog > md-filled-button {
+aside > md-dialog[landing] > section[slot="content"] > md-filled-button {
     width: 100%;
-    margin-top: var(--md-sys-spacing-1);
 }
 
-aside[drawer] > dialog > md-divider {
+aside > md-dialog[landing] > section[slot="content"] > md-divider {
     width: 100%;
     margin-block: var(--md-sys-spacing-1);
 }
 
-aside[drawer] > dialog > details {
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
+aside > md-dialog[landing] > section[slot="content"] > details {
+    border: none;
+    border-radius: 0;
+    background: transparent;
     gap: var(--md-sys-spacing-1);
 }
 
-aside[drawer] > dialog > details > section {
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
+aside > md-dialog[landing] > section[slot="content"] > details > section {
     gap: var(--md-sys-spacing-1);
-    padding-top: var(--md-sys-spacing-1);
+    padding: var(--md-sys-spacing-1) 0 0;
 }
 
-aside[drawer] > dialog > details > section > a {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a {
     display: grid;
-    grid-template-columns: 24px minmax(0, 1fr);
-    grid-auto-flow: column;
+    grid-template-columns: 20px minmax(0, 1fr);
     align-items: center;
     gap: var(--md-sys-spacing-3);
     min-height: 44px;
@@ -1240,19 +1212,18 @@ aside[drawer] > dialog > details > section > a {
     color: var(--md-sys-color-on-surface);
     font-size: var(--md-sys-typescale-label-large-size);
     text-decoration: none;
-    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard),
-        color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
+    transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard), color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
 }
 
-aside[drawer] > dialog > details > section > a > span {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a > span {
     color: inherit;
     font-size: var(--md-sys-typescale-body-medium-size);
     font-weight: 500;
+    line-height: 1.35;
     text-align: start;
-    white-space: nowrap;
 }
 
-aside[drawer] > dialog > details > section > a > md-icon {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a > md-icon {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -1260,27 +1231,27 @@ aside[drawer] > dialog > details > section > a > md-icon {
     transition: color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
 }
 
-aside[drawer] > dialog > details > section > a:focus-visible {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a:focus-visible {
     outline: 2px solid var(--md-sys-color-primary);
     outline-offset: 2px;
 }
 
-aside[drawer] > dialog > details > section > a:hover {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a:hover {
     background: rgb(from var(--md-sys-color-on-surface) r g b / 0.08);
 }
 
-aside[drawer] > dialog > details > section > a:hover > md-icon,
-aside[drawer] > dialog > details > section > a[aria-current="page"] > md-icon {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a:hover > md-icon,
+aside > md-dialog[landing] > section[slot="content"] > details > section > a[aria-current="page"] > md-icon {
     color: var(--md-sys-color-primary);
 }
 
-aside[drawer] > dialog > details > section > a[aria-current="page"] {
+aside > md-dialog[landing] > section[slot="content"] > details > section > a[aria-current="page"] {
     color: var(--md-sys-color-primary);
     background: rgb(from var(--md-sys-color-primary) r g b / 0.12);
     font-weight: 600;
 }
 
-aside[drawer] > dialog > details > summary {
+aside > md-dialog[landing] > section[slot="content"] > details > summary {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-2);
@@ -1298,7 +1269,7 @@ aside[drawer] > dialog > details > summary {
     transition: background-color var(--md-sys-motion-duration-short2) var(--md-sys-motion-easing-standard);
 }
 
-aside[drawer] > dialog > details > summary > md-icon {
+aside > md-dialog[landing] > section[slot="content"] > details > summary > md-icon {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -1306,15 +1277,22 @@ aside[drawer] > dialog > details > summary > md-icon {
     transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
 }
 
-aside[drawer] > dialog > details > summary::-webkit-details-marker {
+aside > md-dialog[landing] > section[slot="content"] > details > summary::-webkit-details-marker,
+aside > md-dialog[landing] > section[slot="content"] > details > summary::marker {
+    display: none;
+    content: "";
+}
+
+aside > md-dialog[landing] > section[slot="content"] > details > summary::after {
+    content: none;
     display: none;
 }
 
-aside[drawer] > dialog > details > summary:hover {
+aside > md-dialog[landing] > section[slot="content"] > details > summary:hover {
     background: rgb(from var(--md-sys-color-primary) r g b / 0.08);
 }
 
-aside[drawer] > dialog > details[open] > summary > md-icon {
+aside > md-dialog[landing] > section[slot="content"] > details[open] > summary > md-icon {
     transform: rotate(180deg);
 }
 
