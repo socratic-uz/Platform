@@ -613,8 +613,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/ads.css",
-      "size": 1370,
-      "hash": "sha256-5456d9e62d70"
+      "size": 1755,
+      "hash": "sha256-45b9641be272"
     },
     {
       "url": "_content/Assets/css/widgets/ai-blob.css",
@@ -813,8 +813,8 @@
     },
     {
       "url": "_content/Assets/js/features/ads/ad-network.js",
-      "size": 947,
-      "hash": "sha256-d16b6b5369a0"
+      "size": 3149,
+      "hash": "sha256-372439dfca20"
     },
     {
       "url": "_content/Assets/js/features/auth/oauthPopupHelper.js",

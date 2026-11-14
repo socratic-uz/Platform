@@ -135,8 +135,24 @@ Sitemap: https://socratic.uz/sitemap.xml";
 
         app.MapGet("/ads.txt", () =>
         {
-            const string content = "google.com, pub-3226044876387611, DIRECT, f08c47fec0942fa0\n";
+            const string content =
+@"google.com, pub-3226044876387611, DIRECT, f08c47fec0942fa0
+yandex.com, 331122791, DIRECT
+google.com, pub-5533854580432370, RESELLER, f08c47fec0942fa0
+improvedigital.com, 2031, RESELLER
+uis.mobfox.com, 165, RESELLER
+hyperad.tech, 215, RESELLER
+betweendigital.com, 43554, RESELLER
+Contextweb.com, 562899, RESELLER, 89ff185a4c4e857c
+hyperad.tech, 150, RESELLER
+";
             return Results.Content(content, "text/plain", Encoding.UTF8);
+        }).DisableAntiforgery();
+
+        // IndexNow verification key for instant Bing & Yandex indexing
+        app.MapGet("/2a451d9f7df84eb5a509e28fab8ab142.txt", () =>
+        {
+            return Results.Content("2a451d9f7df84eb5a509e28fab8ab142", "text/plain", Encoding.UTF8);
         }).DisableAntiforgery();
 
         app.MapGet("/sitemap.xml", async (
