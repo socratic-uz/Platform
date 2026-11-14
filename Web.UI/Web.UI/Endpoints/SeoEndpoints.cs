@@ -365,12 +365,14 @@ Sitemap: https://socratic.uz/sitemap.xml";
             {
                 foreach (var prod in products)
                 {
+                    var price = (long)Math.Round(prod.Price);
+                    if (price <= 0) continue;
+
                     var slug = SlugHelper.GenerateSlug(prod.Name);
                     var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
                     var img = prod.Images?.FirstOrDefault()?.Url;
                     if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
                     var desc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
-                    var price = (long)Math.Round(prod.Price);
 
                     sb.AppendLine($"      <shop id=\"{prod.Id}\" available=\"true\">");
                     sb.AppendLine($"        <name>{EscapeXml(prod.Name)}</name>");
@@ -477,12 +479,14 @@ Sitemap: https://socratic.uz/sitemap.xml";
             {
                 foreach (var prod in products)
                 {
+                    var price = (long)Math.Round(prod.Price);
+                    if (price <= 0) continue;
+
                     var slug = SlugHelper.GenerateSlug(prod.Name);
                     var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
                     var img = prod.Images?.FirstOrDefault()?.Url;
                     if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
                     var itemDesc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
-                    var price = (long)Math.Round(prod.Price);
 
                     sb.AppendLine("    <item>");
                     sb.AppendLine($"      <g:id>{prod.Id}</g:id>");
