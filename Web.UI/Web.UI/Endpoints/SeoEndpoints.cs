@@ -24,6 +24,90 @@ public static class SeoEndpoints
             .Replace("'", "&apos;");
     }
 
+    private static async Task<List<(Organization Org, List<Product> Products)>> FetchFeedDataAsync(
+        IServiceClientFactory clientFactory,
+        Guid? targetOrgGuid,
+        CancellationToken cancellationToken)
+    {
+        var orgService = clientFactory.GetClient<Organization>();
+        var prodService = clientFactory.GetClient<Product>();
+
+        var orgs = new List<Organization>();
+        using var orgCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+        orgCts.CancelAfter(TimeSpan.FromSeconds(5));
+
+        if (targetOrgGuid.HasValue)
+        {
+            try
+            {
+                var singleOrgCall = orgService.Read(new Organization { Id = targetOrgGuid.Value });
+                if (await singleOrgCall.ResponseStream.MoveNext(orgCts.Token) && singleOrgCall.ResponseStream.Current?.Id != null)
+                {
+                    orgs.Add(singleOrgCall.ResponseStream.Current);
+                }
+            }
+            catch { }
+
+            if (orgs.Count == 0)
+            {
+                orgs.Add(new Organization { Id = targetOrgGuid.Value, Name = "Организация" });
+            }
+        }
+        else
+        {
+            try
+            {
+                var orgCall = orgService.Read(new Organization());
+                while (await orgCall.ResponseStream.MoveNext(orgCts.Token))
+                {
+                    if (orgCall.ResponseStream.Current?.Id != null)
+                    {
+                        orgs.Add(orgCall.ResponseStream.Current);
+                    }
+                }
+            }
+            catch { }
+
+            if (orgs.Count == 0)
+            {
+                orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.DemoId, Name = "Demo" });
+                orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.SocraticId, Name = "Socratic" });
+            }
+        }
+
+        using var prodLimiter = new SemaphoreSlim(8, 8);
+        var results = await Task.WhenAll(orgs.Select(async org =>
+        {
+            await prodLimiter.WaitAsync(cancellationToken);
+            try
+            {
+                using var prodCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+                prodCts.CancelAfter(TimeSpan.FromSeconds(4));
+                var list = new List<Product>();
+                var prodCall = prodService.Read(new Product { OrganizationId = org.Id });
+                while (await prodCall.ResponseStream.MoveNext(prodCts.Token))
+                {
+                    var prod = prodCall.ResponseStream.Current;
+                    if (prod?.Id != null && !string.IsNullOrWhiteSpace(prod.Name))
+                    {
+                        list.Add(prod);
+                    }
+                }
+                return (Org: org, Products: list);
+            }
+            catch
+            {
+                return (Org: org, Products: new List<Product>());
+            }
+            finally
+            {
+                prodLimiter.Release();
+            }
+        }));
+
+        return results.ToList();
+    }
+
     public static void MapSeoEndpoints(this IEndpointRouteBuilder app)
     {
         app.MapGet("/robots.txt", () =>
@@ -103,52 +187,20 @@ Sitemap: https://socratic.uz/sitemap.xml";
 
                 try
                 {
-                    var orgService = clientFactory.GetClient<Organization>();
-                    var prodService = clientFactory.GetClient<Product>();
+                    var orgProducts = await FetchFeedDataAsync(clientFactory, null, cancellationToken);
 
-                    var orgs = new List<Organization>();
-                    try
-                    {
-                        var orgCall = orgService.Read(new Organization());
-                        while (await orgCall.ResponseStream.MoveNext(cancellationToken))
-                        {
-                            if (orgCall.ResponseStream.Current?.Id != null)
-                            {
-                                orgs.Add(orgCall.ResponseStream.Current);
-                            }
-                        }
-                    }
-                    catch { }
-
-                    if (orgs.Count == 0)
-                    {
-                        orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.DemoId, Name = "Demo" });
-                        orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.SocraticId, Name = "Socratic" });
-                    }
-
-                    foreach (var org in orgs)
+                    foreach (var (org, products) in orgProducts)
                     {
                         var orgSlug = SlugHelper.GenerateSlug(org.Name);
                         AddUrl($"/kiosk/{org.Id}/{orgSlug}", "0.9", "daily");
 
-                        var prodCount = 0;
-                        try
+                        foreach (var prod in products)
                         {
-                            var prodCall = prodService.Read(new Product { OrganizationId = org.Id });
-                            while (await prodCall.ResponseStream.MoveNext(cancellationToken))
-                            {
-                                var prod = prodCall.ResponseStream.Current;
-                                if (prod?.Id != null)
-                                {
-                                    prodCount++;
-                                    var slug = SlugHelper.GenerateSlug(prod.Name);
-                                    AddUrl($"/kiosk/{org.Id}/product/{prod.Id}/{slug}", "0.8", "weekly");
-                                }
-                            }
+                            var slug = SlugHelper.GenerateSlug(prod.Name);
+                            AddUrl($"/kiosk/{org.Id}/product/{prod.Id}/{slug}", "0.8", "weekly");
                         }
-                        catch { }
 
-                        if (prodCount == 0)
+                        if (products.Count == 0)
                         {
                             if (org.Id == SharedKernel.Extensions.ObjectIdExtension.DemoId)
                             {
@@ -280,62 +332,21 @@ Sitemap: https://socratic.uz/sitemap.xml";
                 baseUrl = "https://socratic.uz";
             }
 
-            var orgService = clientFactory.GetClient<Organization>();
-            var prodService = clientFactory.GetClient<Product>();
-
             Guid? targetOrgGuid = null;
             if (Guid.TryParse(cleanOrgId, out var parsedGuid))
             {
                 targetOrgGuid = parsedGuid;
             }
 
-            var orgs = new List<Organization>();
-            if (targetOrgGuid.HasValue)
-            {
-                try
-                {
-                    var singleOrgCall = orgService.Read(new Organization { Id = targetOrgGuid.Value });
-                    if (await singleOrgCall.ResponseStream.MoveNext(cancellationToken) && singleOrgCall.ResponseStream.Current?.Id != null)
-                    {
-                        orgs.Add(singleOrgCall.ResponseStream.Current);
-                    }
-                }
-                catch { }
-
-                if (orgs.Count == 0)
-                {
-                    orgs.Add(new Organization { Id = targetOrgGuid.Value, Name = "Организация" });
-                }
-            }
-            else
-            {
-                try
-                {
-                    var orgCall = orgService.Read(new Organization());
-                    while (await orgCall.ResponseStream.MoveNext(cancellationToken))
-                    {
-                        if (orgCall.ResponseStream.Current?.Id != null)
-                        {
-                            orgs.Add(orgCall.ResponseStream.Current);
-                        }
-                    }
-                }
-                catch { }
-
-                if (orgs.Count == 0)
-                {
-                    orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.DemoId, Name = "Demo" });
-                    orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.SocraticId, Name = "Socratic" });
-                }
-            }
+            var orgProducts = await FetchFeedDataAsync(clientFactory, targetOrgGuid, cancellationToken);
 
             var sb = new StringBuilder();
             sb.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             sb.AppendLine($"<yml_catalog date=\"{DateTime.UtcNow:yyyy-MM-dd HH:mm}\">");
 
-            var mainOrg = orgs.FirstOrDefault();
-            var shopName = orgs.Count == 1 ? $"Socratic - {mainOrg?.Name}" : "Socratic Marketplace";
-            var shopCompany = orgs.Count == 1 ? (mainOrg?.Name ?? "Socratic") : "Socratic Ecosystem";
+            var mainOrg = orgProducts.FirstOrDefault().Org;
+            var shopName = orgProducts.Count == 1 ? $"Socratic - {mainOrg?.Name}" : "Socratic Marketplace";
+            var shopCompany = orgProducts.Count == 1 ? (mainOrg?.Name ?? "Socratic") : "Socratic Ecosystem";
             var shopUrl = targetOrgGuid.HasValue ? $"{baseUrl}/kiosk/{targetOrgGuid.Value}" : baseUrl;
 
             sb.AppendLine("  <shop>");
@@ -350,41 +361,30 @@ Sitemap: https://socratic.uz/sitemap.xml";
             sb.AppendLine("    </categories>");
             sb.AppendLine("    <shops>");
 
-            foreach (var org in orgs)
+            foreach (var (org, products) in orgProducts)
             {
-                var prodCount = 0;
-                try
+                foreach (var prod in products)
                 {
-                    var prodCall = prodService.Read(new Product { OrganizationId = org.Id });
-                    while (await prodCall.ResponseStream.MoveNext(cancellationToken))
-                    {
-                        var prod = prodCall.ResponseStream.Current;
-                        if (prod?.Id != null && !string.IsNullOrWhiteSpace(prod.Name))
-                        {
-                            prodCount++;
-                            var slug = SlugHelper.GenerateSlug(prod.Name);
-                            var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
-                            var img = prod.Images?.FirstOrDefault()?.Url;
-                            if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
-                            var desc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
-                            var price = (long)Math.Round(prod.Price);
+                    var slug = SlugHelper.GenerateSlug(prod.Name);
+                    var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
+                    var img = prod.Images?.FirstOrDefault()?.Url;
+                    if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
+                    var desc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
+                    var price = (long)Math.Round(prod.Price);
 
-                            sb.AppendLine($"      <shop id=\"{prod.Id}\" available=\"true\">");
-                            sb.AppendLine($"        <name>{EscapeXml(prod.Name)}</name>");
-                            sb.AppendLine($"        <url>{prodUrl}</url>");
-                            sb.AppendLine($"        <price>{price}</price>");
-                            sb.AppendLine("        <currencyId>UZS</currencyId>");
-                            sb.AppendLine("        <categoryId>1</categoryId>");
-                            sb.AppendLine($"        <picture>{EscapeXml(img)}</picture>");
-                            sb.AppendLine($"        <description>{EscapeXml(desc)}</description>");
-                            sb.AppendLine($"        <vendor>{EscapeXml(org.Name)}</vendor>");
-                            sb.AppendLine("      </shop>");
-                        }
-                    }
+                    sb.AppendLine($"      <shop id=\"{prod.Id}\" available=\"true\">");
+                    sb.AppendLine($"        <name>{EscapeXml(prod.Name)}</name>");
+                    sb.AppendLine($"        <url>{prodUrl}</url>");
+                    sb.AppendLine($"        <price>{price}</price>");
+                    sb.AppendLine("        <currencyId>UZS</currencyId>");
+                    sb.AppendLine("        <categoryId>1</categoryId>");
+                    sb.AppendLine($"        <picture>{EscapeXml(img)}</picture>");
+                    sb.AppendLine($"        <description>{EscapeXml(desc)}</description>");
+                    sb.AppendLine($"        <vendor>{EscapeXml(org.Name)}</vendor>");
+                    sb.AppendLine("      </shop>");
                 }
-                catch { }
 
-                if (prodCount == 0)
+                if (products.Count == 0)
                 {
                     void AddFallbackShop(string id, string name, decimal price, string desc)
                     {
@@ -451,61 +451,20 @@ Sitemap: https://socratic.uz/sitemap.xml";
                 baseUrl = "https://socratic.uz";
             }
 
-            var orgService = clientFactory.GetClient<Organization>();
-            var prodService = clientFactory.GetClient<Product>();
-
             Guid? targetOrgGuid = null;
             if (Guid.TryParse(cleanOrgId, out var parsedGuid))
             {
                 targetOrgGuid = parsedGuid;
             }
 
-            var orgs = new List<Organization>();
-            if (targetOrgGuid.HasValue)
-            {
-                try
-                {
-                    var singleOrgCall = orgService.Read(new Organization { Id = targetOrgGuid.Value });
-                    if (await singleOrgCall.ResponseStream.MoveNext(cancellationToken) && singleOrgCall.ResponseStream.Current?.Id != null)
-                    {
-                        orgs.Add(singleOrgCall.ResponseStream.Current);
-                    }
-                }
-                catch { }
-
-                if (orgs.Count == 0)
-                {
-                    orgs.Add(new Organization { Id = targetOrgGuid.Value, Name = "Организация" });
-                }
-            }
-            else
-            {
-                try
-                {
-                    var orgCall = orgService.Read(new Organization());
-                    while (await orgCall.ResponseStream.MoveNext(cancellationToken))
-                    {
-                        if (orgCall.ResponseStream.Current?.Id != null)
-                        {
-                            orgs.Add(orgCall.ResponseStream.Current);
-                        }
-                    }
-                }
-                catch { }
-
-                if (orgs.Count == 0)
-                {
-                    orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.DemoId, Name = "Demo" });
-                    orgs.Add(new Organization { Id = SharedKernel.Extensions.ObjectIdExtension.SocraticId, Name = "Socratic" });
-                }
-            }
+            var orgProducts = await FetchFeedDataAsync(clientFactory, targetOrgGuid, cancellationToken);
 
             var sb = new StringBuilder();
             sb.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             sb.AppendLine("<rss version=\"2.0\" xmlns:g=\"http://base.google.com/ns/1.0\">");
 
-            var mainOrg = orgs.FirstOrDefault();
-            var title = orgs.Count == 1 ? $"Socratic - {mainOrg?.Name}" : "Socratic Catalog";
+            var mainOrg = orgProducts.FirstOrDefault().Org;
+            var title = orgProducts.Count == 1 ? $"Socratic - {mainOrg?.Name}" : "Socratic Catalog";
             var desc = "Товары и услуги экосистемы Socratic";
             var link = targetOrgGuid.HasValue ? $"{baseUrl}/kiosk/{targetOrgGuid.Value}" : baseUrl;
 
@@ -514,42 +473,31 @@ Sitemap: https://socratic.uz/sitemap.xml";
             sb.AppendLine($"    <link>{link}</link>");
             sb.AppendLine($"    <description>{EscapeXml(desc)}</description>");
 
-            foreach (var org in orgs)
+            foreach (var (org, products) in orgProducts)
             {
-                var prodCount = 0;
-                try
+                foreach (var prod in products)
                 {
-                    var prodCall = prodService.Read(new Product { OrganizationId = org.Id });
-                    while (await prodCall.ResponseStream.MoveNext(cancellationToken))
-                    {
-                        var prod = prodCall.ResponseStream.Current;
-                        if (prod?.Id != null && !string.IsNullOrWhiteSpace(prod.Name))
-                        {
-                            prodCount++;
-                            var slug = SlugHelper.GenerateSlug(prod.Name);
-                            var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
-                            var img = prod.Images?.FirstOrDefault()?.Url;
-                            if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
-                            var itemDesc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
-                            var price = (long)Math.Round(prod.Price);
+                    var slug = SlugHelper.GenerateSlug(prod.Name);
+                    var prodUrl = $"{baseUrl}/kiosk/{org.Id}/product/{prod.Id}/{slug}";
+                    var img = prod.Images?.FirstOrDefault()?.Url;
+                    if (string.IsNullOrWhiteSpace(img)) img = $"{baseUrl}/img/icon-512.png";
+                    var itemDesc = !string.IsNullOrWhiteSpace(prod.Description) ? prod.Description : prod.Name;
+                    var price = (long)Math.Round(prod.Price);
 
-                            sb.AppendLine("    <item>");
-                            sb.AppendLine($"      <g:id>{prod.Id}</g:id>");
-                            sb.AppendLine($"      <g:title>{EscapeXml(prod.Name)}</g:title>");
-                            sb.AppendLine($"      <g:description>{EscapeXml(itemDesc)}</g:description>");
-                            sb.AppendLine($"      <g:link>{prodUrl}</g:link>");
-                            sb.AppendLine($"      <g:image_link>{EscapeXml(img)}</g:image_link>");
-                            sb.AppendLine("      <g:condition>new</g:condition>");
-                            sb.AppendLine("      <g:availability>in_stock</g:availability>");
-                            sb.AppendLine($"      <g:price>{price} UZS</g:price>");
-                            sb.AppendLine($"      <g:brand>{EscapeXml(org.Name)}</g:brand>");
-                            sb.AppendLine("    </item>");
-                        }
-                    }
+                    sb.AppendLine("    <item>");
+                    sb.AppendLine($"      <g:id>{prod.Id}</g:id>");
+                    sb.AppendLine($"      <g:title>{EscapeXml(prod.Name)}</g:title>");
+                    sb.AppendLine($"      <g:description>{EscapeXml(itemDesc)}</g:description>");
+                    sb.AppendLine($"      <g:link>{prodUrl}</g:link>");
+                    sb.AppendLine($"      <g:image_link>{EscapeXml(img)}</g:image_link>");
+                    sb.AppendLine("      <g:condition>new</g:condition>");
+                    sb.AppendLine("      <g:availability>in_stock</g:availability>");
+                    sb.AppendLine($"      <g:price>{price} UZS</g:price>");
+                    sb.AppendLine($"      <g:brand>{EscapeXml(org.Name)}</g:brand>");
+                    sb.AppendLine("    </item>");
                 }
-                catch { }
 
-                if (prodCount == 0)
+                if (products.Count == 0)
                 {
                     void AddFallbackItem(string id, string name, decimal price, string fallbackDesc)
                     {
