@@ -17,7 +17,7 @@ namespace Smart.Web.Components
         /// <summary>
         /// Идентификатор рекламного блока (slot id)
         /// </summary>
-        [Parameter] public string? Slot { get; set; }
+        [Parameter] public string? Slot { get; set; } = "2572626662";
 
         /// <summary>
         /// Формат объявления (auto, horizontal, rectangle, etc.)
