@@ -605,6 +605,18 @@ namespace Shared.Components
             return FormModel.Address;
         }
 
+        [return: System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)]
+        private Type? GetPointPickerComponentType() =>
+            (ServiceProvider?.GetService(typeof(Domain.Interfaces.Map.IMapUiProvider)) as Domain.Interfaces.Map.IMapUiProvider)
+            ?.GetPointPickerComponentType();
+
+        private Dictionary<string, object?> GetPointPickerParameters() => new()
+        {
+            ["Address"] = GetOrCreateAddress(),
+            ["Label"] = l[global::Assets.Constants.Loc.Common.AddressLabel].Value,
+            ["AddressChanged"] = Microsoft.AspNetCore.Components.EventCallback.Factory.Create<object?>(this, _ => StateHasChanged())
+        };
+
         public IFaceIdService? FaceIdService => ServiceProvider?.GetService(typeof(IFaceIdService)) as IFaceIdService;
 
         public bool isFaceIdModalOpen = false;

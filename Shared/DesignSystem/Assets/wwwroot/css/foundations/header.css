@@ -27,6 +27,7 @@ body > header > nav > hgroup {
     white-space: nowrap;
 }
 
+body > header > nav > h1,
 body > header > nav > hgroup > h1 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -72,6 +73,18 @@ body > header > nav > a {
     white-space: nowrap;
 }
 
+body > header > nav > a:first-child:has(> img) {
+    gap: 0.75rem;
+    padding-inline: 0.25rem 0;
+}
+
+body > header > nav > a:first-child:has(> img)::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: var(--md-sys-color-outline-variant);
+}
+
 body > header > md-outlined-text-field {
     display: grid;
     grid-column: 2 / 3;
@@ -94,6 +107,23 @@ body > header > a {
     text-decoration: none;
     font-weight: 700;
     white-space: nowrap;
+}
+
+body > header > a > img,
+body > header > nav > a > img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+body > header > a > img[src*="socratic.svg"],
+body > header > nav > a > img[src*="socratic.svg"] {
+    filter: grayscale(1) brightness(0.45) contrast(1.4);
+}
+
+html[data-theme="dark"] body > header > a > img[src*="socratic.svg"],
+html[data-theme="dark"] body > header > nav > a > img[src*="socratic.svg"] {
+    filter: grayscale(1) brightness(1.35) contrast(1.2);
 }
 
 body > header > [avatar] {
@@ -121,6 +151,7 @@ body > header > nav {
         gap: 0.5rem;
     }
 
+body > header > nav > h1,
 body > header > nav > hgroup > h1 {
         font-size: 1.05rem;
     }

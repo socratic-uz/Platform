@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / fullscreen.css
+   Display Mode Overrides (PWA Fullscreen & Print Chrome Hiding)
+   ========================================================================== */
+
+@media all and (display-mode: fullscreen) {
+    body > header,
+    body > footer,
+    body > aside:not(main ~ aside) > nav {
+        display: none;
+    }
+}
+
+@media print {
+    body > aside:not(main ~ aside) > nav {
+        display: none;
+    }
+}

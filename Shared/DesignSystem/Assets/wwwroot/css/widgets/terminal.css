@@ -62,6 +62,15 @@ main[terminal] > section > header > hgroup > span {
     font-size: 0.82rem;
 }
 
+main[terminal] > section > header > menu {
+    grid-column: 1 / -1;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-2);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
 main[terminal] > section > section {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
     gap: var(--md-sys-spacing-3);

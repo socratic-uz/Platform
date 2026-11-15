@@ -5,7 +5,7 @@ import postcss from 'postcss';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const cssRoot = path.resolve(__dirname, '../wwwroot/css');
-const targetDirs = ['layouts', 'foundations/grid.css', 'components', 'widgets', 'pages'];
+const targetDirs = ['layouts', 'foundations/scaffold.css', 'components', 'widgets', 'pages'];
 
 // Top-level document landmark ranking (1st level under body)
 const LANDMARK_RANKS = {

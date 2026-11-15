@@ -660,54 +660,36 @@ main[kiosk] > article > md-icon {
 
 /* --- Floating Bottom Cart Bar --- */
 footer[kiosk] {
-
+    display: grid;
     grid-auto-flow: column;
-
-    grid-template-columns: minmax(0, 1fr);
-
-    grid-auto-columns: max-content;
-
-    gap: 1rem;
-
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-
     position: fixed;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    z-index: var(--md-sys-z-bottom-nav);
-
-    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-6) calc(var(--md-sys-spacing-3) + env(safe-area-inset-bottom, 0));
-
-    border-radius: var(--md-sys-shape-corner-extra-large);
-
+    left: auto;
+    right: calc(max(var(--md-sys-spacing-4, 16px), env(safe-area-inset-right, 0px)) + 56px + var(--md-sys-spacing-3, 12px));
+    bottom: calc(var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
+    z-index: var(--md-sys-z-bottom-nav, 90);
+    height: 56px; min-height: 56px;
+    padding: 4px 4px 4px 16px;
+    border-radius: var(--md-sys-shape-corner-full);
     background: var(--md-sys-color-surface-container-high);
-
     backdrop-filter: var(--md-sys-glass-blur-standard);
-
     -webkit-backdrop-filter: var(--md-sys-glass-blur-standard);
-
 }
 
-footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
-
-    min-width: 160px;
-
-    font-weight: 700;
-
-
-    --md-filled-button-container-height: var(--md-sys-touch-target-kiosk);
-
-    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
-
-    --md-filled-button-label-text-size: 1.05rem;
-
+footer[kiosk] > p {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
 }
 
+footer[kiosk] > p > span,
 footer[kiosk] > md-text-button > span, footer[kiosk] > button:first-child > span {
 
     color: var(--md-sys-color-on-surface-variant);
@@ -718,6 +700,7 @@ footer[kiosk] > md-text-button > span, footer[kiosk] > button:first-child > span
 
 }
 
+footer[kiosk] > p > strong,
 footer[kiosk] > md-text-button > strong, footer[kiosk] > button:first-child > strong {
 
     color: var(--md-sys-color-on-surface);
@@ -727,6 +710,26 @@ footer[kiosk] > md-text-button > strong, footer[kiosk] > button:first-child > st
     font-weight: 800;
 
     white-space: nowrap;
+
+}
+
+footer[kiosk] > p > md-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
+
+    min-width: 128px;
+
+    font-weight: 700;
+
+
+    --md-filled-button-container-height: 48px;
+
+    --md-filled-button-container-shape: var(--md-sys-shape-expressive-pill);
+
+    --md-filled-button-label-text-size: 1.05rem;
 
 }
 
@@ -920,6 +923,18 @@ md-dialog > div > fieldset > menu > md-filled-button, md-dialog > div > fieldset
 
 }
 
+@media screen and (max-width: 839.98px) {
+body:has(> aside:not(main ~ aside) > nav) footer[kiosk] {
+        bottom: calc(60px + var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media screen and (max-width: 839.98px) {
+body:has(> aside:not(main ~ aside) > nav) footer[kiosk] {
+        bottom: calc(60px + var(--md-sys-spacing-4, 16px) + env(safe-area-inset-bottom, 0px));
+    }
+}
+
 @media screen and (max-width: 599.98px) {
 header[kiosk] > nav > hgroup > p {
 
@@ -930,10 +945,64 @@ header[kiosk] > nav > hgroup > p {
 }
 
 @media screen and (max-width: 599.98px) {
+header[kiosk] > a > span {
+        display: none;
+    }
+
 footer[kiosk] {
+        left: max(var(--md-sys-spacing-4, 16px), env(safe-area-inset-left, 0px));
+        right: calc(max(var(--md-sys-spacing-4, 16px), env(safe-area-inset-right, 0px)) + 56px + var(--md-sys-spacing-2, 8px));
+        gap: var(--md-sys-spacing-2);
+        padding: var(--md-sys-spacing-1) var(--md-sys-spacing-1) var(--md-sys-spacing-1) var(--md-sys-spacing-4);
+    }
 
-        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+footer[kiosk] > p {
+        grid-auto-flow: row;
+        grid-auto-columns: minmax(0, 1fr);
+        gap: 0;
+        align-content: center;
+    }
 
+footer[kiosk] > p > span {
+        font-size: 0.75rem;
+        line-height: 1.15;
+    }
+
+footer[kiosk] > p > strong {
+        font-size: 1rem;
+        line-height: 1.15;
+    }
+
+footer[kiosk] > p > md-icon {
+        display: none;
+    }
+
+footer[kiosk] > p {
+        grid-auto-flow: row;
+        grid-auto-columns: minmax(0, 1fr);
+        gap: 0;
+        align-content: center;
+    }
+
+footer[kiosk] > p > md-icon {
+        display: none;
+    }
+
+footer[kiosk] > p > strong {
+        font-size: 1rem;
+        line-height: 1.15;
+    }
+
+footer[kiosk] > p > span {
+        font-size: 0.75rem;
+        line-height: 1.15;
+    }
+
+footer[kiosk] > md-filled-button,
+    footer[kiosk] > button:last-child {
+        min-width: auto;
+        --md-filled-button-leading-space: 16px;
+        --md-filled-button-trailing-space: 16px;
     }
 
 }
@@ -941,7 +1010,7 @@ footer[kiosk] {
 @media (hover: none) and (pointer: coarse) {
 footer[kiosk] > md-filled-button, footer[kiosk] > button:last-child {
 
-        min-height: 64px;
+        min-height: 48px;
 
     }
 

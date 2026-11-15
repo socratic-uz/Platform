@@ -3,6 +3,26 @@
    Classless Page Landmark Architecture
    ========================================================================== */
 
+header[terminal] {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+}
+
+header[terminal] > nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+}
+
+header[terminal] > nav > h1 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+}
+
 main[terminal] {
     gap: var(--md-sys-spacing-5);
     align-items: stretch;
@@ -16,6 +36,26 @@ main[terminal] {
 }
 
 @media screen and (max-width: 839.98px) {
+header[terminal] {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+}
+
+header[terminal] > nav {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+}
+
+header[terminal] > nav > h1 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+}
+
 main[terminal] {
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-4);

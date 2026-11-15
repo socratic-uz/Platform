@@ -3,8 +3,9 @@
    Semantic Data Tables (<table>, <thead>, <tbody>, <tfoot>)
    ========================================================================== */
 
-section:has(> table),
-article:has(> table) {
+figure:has(> table) {
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
 }
 

@@ -3,13 +3,19 @@
    QuickGrid Semantic Grid (table[smart-grid])
    ========================================================================== */
 
+figure:has(> table[smart-grid]) {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: var(--md-sys-shape-corner-large);
+}
+
 table[smart-grid] {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     background: var(--md-sys-color-surface-container-low);
     border-radius: var(--md-sys-shape-corner-large);
-    overflow: hidden;
     font-size: var(--md-sys-typescale-body-medium-size);
     font-variant-numeric: tabular-nums;
 }
@@ -96,4 +102,28 @@ table[smart-grid] td:last-child {
     max-width: none;
     overflow: visible;
     text-align: end;
+}
+
+table[smart-grid]:has(tbody td:last-child :is(button, a, md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-button, md-filled-button, md-text-button)) :is(th, td):last-child {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    box-shadow: -8px 0 12px -8px rgb(0 0 0 / 0.14);
+}
+
+table[smart-grid]:has(tbody td:last-child :is(button, a, md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-button, md-filled-button, md-text-button)) thead th:last-child {
+    z-index: 2;
+    background: var(--md-sys-color-surface-container);
+}
+
+table[smart-grid]:has(tbody td:last-child :is(button, a, md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-button, md-filled-button, md-text-button)) tbody tr:nth-child(odd) > td:last-child {
+    background: var(--md-sys-color-surface-container-low);
+}
+
+table[smart-grid]:has(tbody td:last-child :is(button, a, md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-button, md-filled-button, md-text-button)) tbody tr:nth-child(even) > td:last-child {
+    background: var(--md-sys-color-surface);
+}
+
+table[smart-grid]:has(tbody td:last-child :is(button, a, md-icon-button, md-filled-icon-button, md-filled-tonal-icon-button, md-outlined-button, md-filled-button, md-text-button)) tbody tr:hover > td:last-child {
+    background: var(--md-sys-color-surface-container-high);
 }

@@ -49,7 +49,6 @@ aside[ads]:hover {
     transform: translateY(-2px);
 }
 
-
 /* Collapse unfilled AdSense units and empty ad wrappers per Google AdSense best practices */
 ins.adsbygoogle[data-ad-status="unfilled"],
 aside[ads="google"]:has(ins.adsbygoogle[data-ad-status="unfilled"]),

@@ -41,7 +41,7 @@ Skip pages already marked done in the Ledger below.
    - Вся стилизация строго в `Assets/wwwroot/css/` (структура Cascade Layers: `tokens/`, `foundations/`, `components/`, `widgets/`, `pages/`, `layouts/`).
    - Мастер-манифест `styles.css` генерируется автоматически (`scripts/generate-styles-manifest.mjs`).
    - Правила `@font-face` подключаются **вне слоев** в самом верху `styles.css` (`fonts/` содержит только `@font-face`, стили `md-icon` — в `foundations/icons.css`); используются только вариативные шрифты (`Roboto` и `Montserrat` `100 900`, `Material Symbols Outlined`).
-   - Глобальные стили (`foundations/`): макросетка `body` и прямые ориентиры в `foundations/grid.css`, эффект островка в `foundations/island.css` (`body::before`/`body::after` + `body > header::after`, без вложенных `:has()`), ориентиры и оболочка в `landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`. Слой `layouts/` содержит `app.css` (`body[app]`).
+   - Глобальные стили (`foundations/`): макросетка `body` и прямые ориентиры в `foundations/scaffold.css`, эффект островка в `foundations/island.css` (`body::before`/`body::after` + `body > header::after`, без вложенных `:has()`), ориентиры и оболочка в `landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`. Слой `layouts/` содержит `app.css` (`body[app]`).
    - Принцип паритета 1-в-1 для изолированных папок (`components/`, `widgets/`, `pages/`, `layouts/`): 1 `.razor` = 1 корневой атрибут 1-го уровня = 1 dedicated `[attr].css`.
    - Запрет декоративных `border` и `box-shadow` (тональное разделение через `surface-container-*`, full-bleed медиа `[card] > figure:first-child`).
    - Порядок селекторов внутри таблиц строго упорядочен по прямому обходу DOM-дерева в глубину (`npm run sort:css`).

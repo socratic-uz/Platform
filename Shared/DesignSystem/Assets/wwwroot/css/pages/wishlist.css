@@ -12,10 +12,9 @@ header[wishlist]>nav {
 
 header[wishlist]>nav>hgroup {
     display: inline-grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto auto minmax(0, 1fr);
-    gap: 0.5rem;
-    align-items: center;
+    grid-auto-flow: row;
+    gap: 0.125rem;
+    min-width: 0;
 }
 
 header[wishlist]>nav>hgroup>h1 {
@@ -26,16 +25,11 @@ header[wishlist]>nav>hgroup>h1 {
 }
 
 header[wishlist]>nav>hgroup>p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--md-sys-color-on-surface-variant);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-header[wishlist]>nav>hgroup>md-icon {
-    font-size: 20px;
-    color: var(--md-sys-color-primary);
 }
 
 header[wishlist]>nav>span {
@@ -176,6 +170,12 @@ main[wishlist] {
         padding: var(--md-sys-spacing-4) var(--md-sys-spacing-4) calc(var(--md-sys-spacing-bottom-nav) + env(safe-area-inset-bottom, 0px) + var(--md-sys-spacing-6));
         padding-right: max(var(--md-sys-spacing-4), env(safe-area-inset-right, 0px));
         padding-left: max(var(--md-sys-spacing-4), env(safe-area-inset-left, 0px));
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+header[wishlist]>nav>hgroup>p {
+        display: none;
     }
 }
 

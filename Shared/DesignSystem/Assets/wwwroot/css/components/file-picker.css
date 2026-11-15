@@ -5,20 +5,107 @@
 
 section[file-picker] {
     position: relative;
+    display: grid;
     align-content: start;
-    gap: var(--space-sm);
+    gap: var(--md-sys-spacing-3);
 }
 
-section[file-picker] > input {
-    display: none;
+section[file-picker] > menu {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    padding: 0;
 }
 
-section[file-picker] > footer {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+section[file-picker] > menu > article {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) auto auto;
     align-items: center;
-    gap: var(--space-xs);
-    padding: 0 var(--space-xs);
-    font-size: var(--type-label-md-size);
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+}
+
+section[file-picker] > menu > article > figure {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border-radius: var(--md-sys-shape-corner-small);
+    overflow: hidden;
+    background: var(--md-sys-color-surface-container-highest);
     color: var(--md-sys-color-on-surface-variant);
+}
+
+section[file-picker] > menu > article > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section[file-picker] > menu > article > span {
+    padding: 2px 8px;
+    border-radius: var(--md-sys-shape-corner-small);
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    font-size: var(--md-sys-typescale-label-small-size);
+    font-weight: 600;
+}
+
+section[file-picker] > menu > article > footer {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--md-sys-typescale-body-medium-size);
+    color: var(--md-sys-color-on-surface);
+}
+
+section[file-picker] > menu > article > menu {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+section[file-picker] > menu > label {
+    display: grid;
+    place-items: center;
+    padding: var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--md-sys-motion-duration-short2) ease;
+}
+
+section[file-picker] > menu > label > span {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+section[file-picker] > menu > label > span > span:first-of-type {
+    font-size: var(--md-sys-typescale-label-large-size);
+    font-weight: 600;
+    color: var(--md-sys-color-primary);
+}
+
+section[file-picker] > menu > label > span > span:last-of-type {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+section[file-picker] > menu > label > span > md-icon {
+    color: var(--md-sys-color-primary);
+}
+
+section[file-picker] > menu > label:hover,
+section[file-picker] > menu > label[data-dragging="true"] {
+    background: var(--md-sys-color-surface-container-high);
 }

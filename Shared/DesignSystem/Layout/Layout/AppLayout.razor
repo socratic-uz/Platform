@@ -24,3 +24,8 @@
 
 <AsideOutlet Secondary=@true />
 <FooterOutlet />
+
+@if (MapPopupHostType is { } mapPopupHostType)
+{
+	<DynamicComponent Type=@mapPopupHostType />
+}

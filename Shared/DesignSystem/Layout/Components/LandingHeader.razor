@@ -4,6 +4,7 @@
 @using Microsoft.AspNetCore.Components
 @using SharedKernel.Extensions
 @using static Assets.Constants.Icons
+@using static Assets.Constants.Images
 @using static Assets.Constants.Loc.Common
 @using static Assets.Constants.Loc.Landing
 @using static Material.Web.Components.ButtonVariant
@@ -15,8 +16,7 @@
 				AriaLabel=@(IsMobileMenuOpen ? L[CloseAction] : L[MainNavigation]) />
 
 	<a href="/" title="Socratic" aria-current=@GetAriaCurrent("/")>
-		<Icon Name=@AutoAwesome />
-		<span>Socratic</span>
+		<img src=@Socratic alt="Socratic" />
 	</a>
 
 	<nav aria-label=@L[MainNavigation]>
@@ -98,8 +98,7 @@
 		<MaterialDialog landing Open=@IsMobileMenuOpen NoFocusTrap=@true OnClose=@CloseMobileMenuAsync aria-label=@L[MainNavigation]>
 			<header slot="headline">
 				<a href="/" @onclick=@CloseMobileMenuAsync title="Socratic">
-					<Icon Name=@AutoAwesome />
-					<span>Socratic</span>
+					<img src=@Socratic alt="Socratic" />
 				</a>
 				<IconButton Icon=@Close OnClick=@CloseMobileMenuAsync AriaLabel=@L[CloseAction] />
 			</header>

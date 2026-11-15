@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Layer: widgets — Universal Checkout Panel & Workflow Stepper (Pure Attribute)
+   ========================================================================== */
+
+section[checkout] {
+    display: grid;
+    gap: var(--md-sys-spacing-4);
+    min-width: 0;
+}
+
+section[checkout]>header>hgroup {
+    display: grid;
+    gap: var(--md-sys-spacing-1);
+}
+
+section[checkout]>header>hgroup>h3 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    margin: 0;
+    font-size: var(--md-sys-typescale-title-medium-size);
+    color: var(--md-sys-color-on-surface);
+}
+
+section[checkout]>header>hgroup>p {
+    margin: 0;
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+section[checkout]>md-tabs {
+    min-width: 0;
+    width: 100%;
+}
+
+section[checkout]>md-outlined-card {
+    min-width: 0;
+    width: 100%;
+}
+
+section[checkout]>md-outlined-card>section {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-4);
+}
+
+section[checkout]>md-outlined-card>section>nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(84px, max-content));
+    gap: var(--md-sys-spacing-2);
+}
+
+section[checkout]>md-outlined-card>section>nav>span {
+    padding: 4px 10px;
+    border-radius: var(--md-sys-shape-corner-small);
+    background: var(--md-sys-color-surface-container-high);
+    font-size: var(--md-sys-typescale-label-small-size);
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+}
+
+ol[stepper] {
+    display: grid;
+    grid-template-columns: auto minmax(16px, 1fr) auto minmax(16px, 1fr) auto;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol[stepper]>li[aria-hidden="true"] {
+    height: 2px;
+    background: var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-full);
+}
+
+ol[stepper]>li:not([aria-hidden="true"]) {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: var(--md-sys-spacing-2);
+    font-size: var(--md-sys-typescale-label-medium-size);
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+ol[stepper]>li:not([aria-hidden="true"])>span:first-child {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+ol[stepper]>li[data-active="true"] {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 600;
+}
+
+ol[stepper]>li[data-completed="true"]>span:first-child,
+ol[stepper]>li[data-active="true"]>span:first-child {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}

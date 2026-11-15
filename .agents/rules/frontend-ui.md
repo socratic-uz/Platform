@@ -8,7 +8,7 @@
 - **Единый центр стилизации**: все стили живут в `Assets/wwwroot/css/` с точкой входа [`styles.css`](file:///d:/source/repos/Socratic/src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/styles.css).
 - **Динамическая сборка манифеста (`generate-styles-manifest.mjs`)**: `styles.css` генерируется автоматически скриптом `scripts/generate-styles-manifest.mjs` (при `dotnet build Assets.csproj` и `npm run generate:styles`) через рекурсивное сканирование слоев.
 - **Шрифтовая архитектура вне слоев (Unlayered Variable Fonts)**: правила `@font-face` подключаются в самом верху `styles.css` **вне `@layer`**, что обеспечивает наивысший приоритет браузерного парсинга, мгновенное обнаружение глифов и исключение FOUT для лигатур иконок (`Material Symbols Outlined`). Используются исключительно вариативные шрифты (`Roboto` и `Montserrat` с диапазоном весов `100 900`, а также вариативный `Material Symbols Outlined`); статические TTF-файлы полностью ликвидированы.
-- **Строгий скоуп `foundations/grid.css` (Сетка документа и ориентиров — CSS Grid ONLY)**: файл `foundations/grid.css` содержит исключительно свойства CSS Grid для макросетки `body` и прямых ориентиров (`body > header`, `body > aside`, `body > main`, `body > footer`). Вся внутренняя стилизация компонентов, кнопок или заголовков выносится в соответствующие виджеты (`widgets/`), а визуальные свойства ориентиров изолированы в `foundations/landmarks.css`.
+- **Строгий скоуп `foundations/scaffold.css` (Сетка документа и ориентиров — CSS Grid ONLY)**: файл `foundations/scaffold.css` содержит исключительно свойства CSS Grid для макросетки `body` и прямых ориентиров (`body > header`, `body > aside`, `body > main`, `body > footer`). Вся внутренняя стилизация компонентов, кнопок или заголовков выносится в соответствующие виджеты (`widgets/`), а визуальные свойства ориентиров изолированы в `foundations/landmarks.css`.
 - **Разделение ответственности**: разметка компонентов (`*.razor`) свободна от инлайн-стилей, тегов `<style>` и классов `class=@...`. Стилизация детерминирована на уровне атрибутов первого уровня (`[card]`, `main[kiosk]`, `aside[cart]`) и семантической иерархии тегов HTML5.
 
 ### 1.2. Слоёная архитектура — Cascade Layers (`@layer`) и структура директорий
@@ -22,7 +22,7 @@
   - **Глобальные**:
     0. `fonts/` (вне `@layer`): **строго `@font-face`** (`roboto.css`, `montserrat.css`, `material-symbols-outlined.css`). Стили элементов (например, `md-icon`) сюда класть запрещено.
     1. `tokens` (`tokens/`): дизайн-токены W3C DTCG и системная палитра Material Design 3 Expressive (M3X).
-    2. `foundations` (`foundations/`): сброс стилей браузера (`reset.css`), базовая стилизация `md-icon` (`icons.css`), геометрия сетки (`grid.css`), эффект островка (`island.css`), ориентиры (`landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`), базовые элементы (`buttons.css`, `dialogs.css`, `forms.css`, `tables.css`, `typography.css`, `scrollbars.css`, `animations.css`, `runtime.css`).
+    2. `foundations` (`foundations/`): сброс стилей браузера (`reset.css`), базовая стилизация `md-icon` (`icons.css`), геометрия каркаса (`scaffold.css`), эффект островка (`island.css`), ориентиры (`landmarks.css`, `rail.css`, `drawer.css`, `header.css`, `footer.css`), базовые элементы (`buttons.css`, `dialogs.css`, `forms.css`, `tables.css`, `typography.css`, `scrollbars.css`, `animations.css`, `runtime.css`).
   - **Изолированные по атрибуту 1-в-1 (`[attr].css`)**:
     3. `components` (`components/`): атомарные и молекулярные примитивы UI Material 3 (`card.css`, `avatar.css`, `paginator.css`, `smart-*.css`).
     4. `widgets` (`widgets/`): составные отраслевые бизнес-организмы (`cart.css`, `fiscal.css`, `map.css`, `kiosk.css`, `terminal.css`, `kanban.css`).
@@ -34,7 +34,7 @@
   - Вложенные `:has()` (`:has(...:has(...)...)`) строго запрещены как невалидные в CSS Selectors Level 4.
   - Декоративные `border` и `box-shadow` в `components/`, `widgets/`, `pages/` и `foundations/` (кроме нативных сбросов `<fieldset>`, `<dialog>`, форм, таблиц, цитат, видоискателя FaceID и `[card="outlined"]`) запрещены — разделение поверхностей строится только тональными `surface-container-*` токенами.
 
-- **Чистая геометрия сетки документа и ориентиров (`foundations/grid.css` — CSS Grid Only)**:
+- **Чистая геометрия сетки документа и ориентиров (`foundations/scaffold.css` — CSS Grid Only)**:
   - **Макросетка `body`**: единая 3-колоночная сетка задаётся ровно 1 раз: `grid-template-columns: auto minmax(0, 1fr) auto;`, а адаптивность и режимы переключаются исключительно через `grid-template-areas`.
   - **Сетка ориентиров 1-го уровня под `body` (ТОЛЬКО свойства CSS Grid)**:
     - Шапка: `grid-area: header; grid-template-columns: minmax(0, max-content) minmax(0, 1fr) minmax(0, max-content); gap: ...`
@@ -327,7 +327,7 @@
 
 /* 2. Foundations & Reset */
 @import "foundations/reset.css" layer(foundations);
-@import "foundations/grid.css" layer(foundations);
+@import "foundations/scaffold.css" layer(foundations);
 @import "foundations/icons.css" layer(foundations);
 @import "foundations/island.css" layer(foundations);
 @import "foundations/landmarks.css" layer(foundations);

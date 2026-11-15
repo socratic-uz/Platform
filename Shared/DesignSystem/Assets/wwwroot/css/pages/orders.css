@@ -5,12 +5,9 @@
 
 /* --- Page Landmark: Header --- */
 header[orders] {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--md-sys-spacing-4);
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-    min-height: 64px;
-    padding: 0 var(--md-sys-gutter-page);
-    background: var(--md-sys-color-surface-container);
 }
 
 header[orders] > span {
@@ -430,6 +427,20 @@ main[orders] > header {
 }
 
 @media screen and (max-width: 599.98px) {
+header[orders] > nav > hgroup > h1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+header[orders] > nav > hgroup > a > span {
+        display: none;
+    }
+
+header[orders] > md-outlined-button > span {
+        display: none;
+    }
+
 main[orders] > header > hgroup {
         grid-auto-flow: row;
         gap: var(--md-sys-spacing-1);

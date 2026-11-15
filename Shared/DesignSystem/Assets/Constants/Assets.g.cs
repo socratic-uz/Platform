@@ -130,6 +130,7 @@ namespace Assets.Constants
 
     public static class AppManifest
     {
+        public const string Ads = "_content/Assets/ads.txt";
         public const string Manifest = "_content/Assets/manifest.webmanifest";
     }
 

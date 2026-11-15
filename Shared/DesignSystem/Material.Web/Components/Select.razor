@@ -35,9 +35,9 @@
         {
             @foreach (var option in Options)
             {
-                <md-select-option value=@option.Value 
-                                  headline=@option.Text
+                <md-select-option value=@option.Value
                                   selected=@(option.Value == CurrentValueAsString)>
+                    <span slot="headline">@option.Text</span>
                     @if (!string.IsNullOrEmpty(option.SupportingText))
                     {
                         <span slot="supporting-text">@option.SupportingText</span>
@@ -96,9 +96,9 @@ else
         {
             @foreach (var option in Options)
             {
-                <md-select-option value=@option.Value 
-                                  headline=@option.Text
+                <md-select-option value=@option.Value
                                   selected=@(option.Value == CurrentValueAsString)>
+                    <span slot="headline">@option.Text</span>
                     @if (!string.IsNullOrEmpty(option.SupportingText))
                     {
                         <span slot="supporting-text">@option.SupportingText</span>

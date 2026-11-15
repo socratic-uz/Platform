@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Socratic Design System — FOUNDATIONS / tabs.css
+   Material Design 3 Expressive Pill Tabs (Connected Capsule Bar)
+   ========================================================================== */
+
+md-tabs {
+    background: var(--md-sys-color-surface-container);
+    border-radius: var(--md-sys-shape-corner-full);
+    overflow: hidden;
+    --md-divider-thickness: 0px;
+}
+
+md-primary-tab,
+md-secondary-tab {
+    --md-primary-tab-container-color: transparent;
+    --md-secondary-tab-container-color: transparent;
+    --md-primary-tab-container-shape: var(--md-sys-shape-corner-full);
+    --md-secondary-tab-container-shape: var(--md-sys-shape-corner-full);
+    --md-primary-tab-active-indicator-shape: var(--md-sys-shape-corner-full);
+    --md-secondary-tab-active-indicator-shape: var(--md-sys-shape-corner-full);
+    --md-primary-tab-hover-state-layer-opacity: 0;
+    --md-primary-tab-pressed-state-layer-opacity: 0;
+    --md-primary-tab-active-hover-state-layer-opacity: 0;
+    --md-primary-tab-active-pressed-state-layer-opacity: 0;
+    --md-secondary-tab-hover-state-layer-opacity: 0;
+    --md-secondary-tab-pressed-state-layer-opacity: 0;
+    --md-secondary-tab-active-hover-state-layer-opacity: 0;
+    --md-secondary-tab-active-pressed-state-layer-opacity: 0;
+    border-radius: var(--md-sys-shape-corner-full);
+    transition: background-color var(--md-sys-motion-duration-short4) ease;
+}
+
+md-primary-tab:not([active]):hover,
+md-secondary-tab:not([active]):hover {
+    background: var(--md-sys-color-surface-container-high);
+}
+
+md-primary-tab[active],
+md-secondary-tab[active] {
+    background: var(--md-sys-color-secondary-container);
+    --md-primary-tab-active-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-primary-tab-active-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-primary-tab-active-hover-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-primary-tab-active-hover-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-primary-tab-active-focus-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-primary-tab-active-focus-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-hover-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-hover-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-focus-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-secondary-tab-active-focus-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+md-primary-tab[active]:hover,
+md-secondary-tab[active]:hover {
+    filter: brightness(1.06);
+}

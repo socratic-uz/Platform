@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1690.
+    /// Total unique keys: 1691.
     /// </summary>
     public static class Loc
     {
@@ -471,7 +471,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (577 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (579 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -538,6 +538,22 @@ namespace Assets.Constants
             /// &#x1F1EC;&#x1F1E7; EN: &quot;All rights reserved.&quot;
             /// </summary>
             public const string AllRightsReserved = "AllRightsReserved";
+
+            /// <summary>
+            /// Key: <c>Apartment</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Квартира / Офис&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xonadon / Ofis&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Apartment / Office&quot;
+            /// </summary>
+            public const string ApartmentLabel = "Apartment";
+
+            /// <summary>
+            /// Key: <c>Apartment</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Квартира / Офис&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xonadon / Ofis&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Apartment / Office&quot;
+            /// </summary>
+            public const string ApartmentText = "Apartment";
 
             /// <summary>
             /// Key: <c>B2bBadge</c><br/>
@@ -34914,6 +34930,14 @@ namespace Assets.Constants
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Items volume&quot;
         /// </summary>
         public const string AnalyticsVolumeItems = "Analytics_VolumeItems";
+
+        /// <summary>
+        /// Key: <c>Apartment</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Квартира / Офис&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Xonadon / Ofis&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Apartment / Office&quot;
+        /// </summary>
+        public const string ApartmentText = "Apartment";
 
         /// <summary>
         /// Key: <c>Apply</c><br/>

@@ -20,4 +20,10 @@ public interface IMapUiProvider
     /// </summary>
     [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
     Type? GetZonePickerComponentType();
+
+    /// <summary>
+    /// Возвращает тип корневого хоста модального окна выбора точки/зоны на карте.
+    /// </summary>
+    [return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)]
+    Type? GetMapPopupHostComponentType();
 }

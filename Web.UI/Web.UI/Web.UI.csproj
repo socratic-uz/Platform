@@ -50,8 +50,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="../../../../../docs/**/*.md" Condition="Exists('../../../../../docs')" Link="wwwroot/_docs/%(RecursiveDir)%(Filename)%(Extension)" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
-		<Content Include="../../../../../README.md" Condition="Exists('../../../../../README.md')" Link="wwwroot/_docs/ROOT_README.md" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="../../../../../docs/**/*.md" Condition="Exists('../../../../../docs')" Link="wwwroot/_docs/%(RecursiveDir)%(Filename)%(Extension)" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="../../../../../README.md" Condition="Exists('../../../../../README.md')" Link="wwwroot/_docs/ROOT_README.md" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="PreserveNewest" />
 		<Content Include="libgomp.so.1" Condition="Exists('libgomp.so.1')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
 		<Content Include="libgomp.so.1.0.0" Condition="Exists('libgomp.so.1.0.0')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="runtimes/**/libgomp.so.1*" Condition="Exists('runtimes')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />

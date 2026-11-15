@@ -333,6 +333,18 @@ main[product] > article {
     }
 }
 
+@media screen and (max-width: 599.98px) {
+header[product] > nav > a > span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599.98px) {
+header[product] > nav > a > span {
+        display: none;
+    }
+}
+
 @media (max-width: 599.98px) {
 main[product] > article > section:last-of-type > menu {
         grid-template-columns: minmax(0, 1fr);

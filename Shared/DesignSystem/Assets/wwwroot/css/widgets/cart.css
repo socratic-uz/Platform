@@ -33,6 +33,8 @@ aside>md-dialog[cart]>section[slot="content"],
 aside>md-dialog[order]>section[slot="content"] {
     align-content: start;
     gap: var(--space-md);
+    height: 100%;
+    max-height: none;
 }
 
 aside>md-dialog[cart]>section[slot="content"]>ul,
@@ -55,7 +57,8 @@ section[cart]>ul>li {
 }
 
 aside>md-dialog[cart]>section[slot="content"]>ul>li>menu,
-aside>md-dialog[order]>section[slot="content"]>ul>li>menu {
+aside>aside>md-dialog[order]>section[slot="content"]>ul>li>menu,
+md-dialog[order]>section[slot="content"]>ul>li>menu {
     grid-auto-flow: column;
     align-items: center;
     gap: var(--space-xs, 6px);
@@ -78,14 +81,6 @@ aside>md-dialog[order]>section[slot="content"]>article {
     text-align: center;
 }
 
-aside>md-dialog[cart]>footer[slot="actions"],
-aside>md-dialog[order]>footer[slot="actions"],
-section[cart]>footer {
-    align-content: start;
-    gap: var(--space-md);
-    padding-top: var(--space-sm);
-}
-
 aside>md-dialog[cart]>footer[slot="actions"]>dl>p,
 aside>md-dialog[order]>footer[slot="actions"]>dl>p,
 section[cart]>footer>dl>div {
@@ -94,8 +89,14 @@ section[cart]>footer>dl>div {
     align-items: baseline;
 }
 
-aside>md-dialog[order]>section[slot="content"]>ul>li {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+aside>md-dialog[order]>section[slot="content"] {
+    height: 100%;
+    max-height: none;
+}
+
+aside>md-dialog[order]>section[slot="content"]>ul>li,
+md-dialog[order]>section[slot="content"]>ul>li {
+    grid-template-columns: auto minmax(0, 1fr);
 }
 
 aside>md-dialog[order]>section[slot="content"]>ul>li>figure {
@@ -113,7 +114,44 @@ aside>md-dialog[order]>section[slot="content"]>ul>li>figure>img {
     object-fit: cover;
 }
 
-aside>md-dialog[order]>footer[slot="actions"]>menu {
+aside>md-dialog[order]>section[slot="content"]>ul>li>menu,
+md-dialog[order]>section[slot="content"]>ul>li>menu {
+    grid-column: 1 / -1;
+    justify-self: end;
+}
+
+md-dialog[cart]>footer[slot="actions"],
+md-dialog[order]>footer[slot="actions"],
+section[cart]>footer {
+    width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+    align-content: start;
+    gap: var(--space-md);
+    padding-top: var(--space-sm);
+}
+
+md-dialog[cart]>footer[slot="actions"]>dl,
+md-dialog[order]>footer[slot="actions"]>dl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-1, 4px);
+    margin: 0;
+}
+
+md-dialog[cart]>footer[slot="actions"]>dl,
+md-dialog[order]>footer[slot="actions"]>dl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-1, 4px);
+    margin: 0;
+}
+
+md-dialog[order]>footer[slot="actions"]>menu {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
 }

@@ -3,27 +3,12 @@
    Classless Page Landmark Architecture Ã¢â‚¬â€ Payment Dashboard & Plans
    ========================================================================== */
 
-header[payment] > hgroup {
-    display: inline-grid;
+header[payment] {
+    grid-template-columns: minmax(0, 1fr);
     grid-auto-flow: column;
-    gap: 0.5rem;
+    grid-auto-columns: max-content;
+    gap: var(--md-sys-spacing-3);
     align-items: center;
-}
-
-header[payment] > hgroup > h1 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-}
-
-header[payment] > hgroup > md-icon {
-    font-size: 20px;
-    color: var(--md-sys-color-primary);
-}
-
-header[payment] > span {
-    color: var(--md-sys-color-outline-variant);
-    margin: 0 0.5rem;
 }
 
 main[payment] {
@@ -307,6 +292,11 @@ footer[payment] {
 }
 
 @media (max-width: 599.98px) {
+header[payment] > md-outlined-button > span,
+header[payment] > md-filled-button > span {
+        display: none;
+    }
+
 main[payment] > section:last-of-type > section:has(> article) > article > footer {
         grid-template-columns: minmax(0, 1fr);
     }

@@ -21,55 +21,70 @@ md-dialog {
     --md-dialog-container-max-block-size: calc(100dvh - var(--md-sys-spacing-6, 24px));
 }
 
+body>md-dialog[open] {
+    z-index: 1002;
+}
+
 /* --------------------------------------------------------------------------
    3. Headline Slot & Header Landmark
    -------------------------------------------------------------------------- */
-md-dialog > header[slot="headline"],
-md-dialog > [slot="headline"] {
+md-dialog>header[slot="headline"],
+md-dialog>[slot="headline"] {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: var(--md-sys-spacing-3);
     width: 100%;
-    padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6) var(--md-sys-spacing-2);
+    padding: var(--md-sys-spacing-5, 20px) var(--md-sys-spacing-5, 20px) var(--md-sys-spacing-3, 12px) var(--md-sys-spacing-6, 24px);
 }
 
-md-dialog > header[slot="headline"] > hgroup,
-md-dialog > [slot="headline"] > hgroup {
+md-dialog>header[slot="headline"]>hgroup,
+md-dialog>[slot="headline"]>hgroup {
     grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
+    min-width: 0;
+    width: 100%;
 }
 
-md-dialog > header[slot="headline"] > hgroup > span,
-md-dialog > [slot="headline"] > hgroup > span {
+md-dialog>header[slot="headline"]>hgroup>span,
+md-dialog>[slot="headline"]>hgroup>span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: var(--md-sys-typescale-headline-small-size, 1.25rem);
     font-weight: 600;
     line-height: var(--md-sys-typescale-headline-small-line-height, 1.75rem);
     color: var(--md-dialog-headline-color);
 }
 
-md-dialog > header[slot="headline"] md-icon,
-md-dialog > [slot="headline"] md-icon {
+md-dialog>header[slot="headline"] md-icon,
+md-dialog>[slot="headline"] md-icon {
     font-size: var(--md-icon-size, 24px);
     color: var(--md-sys-color-primary);
 }
 
-md-dialog > header[slot="headline"] md-icon-button,
-md-dialog > [slot="headline"] md-icon-button {
+md-dialog>header[slot="headline"] md-icon-button,
+md-dialog>[slot="headline"] md-icon-button {
     justify-self: end;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-md-dialog > header[slot="headline"] :is(h2, h3, h4),
-md-dialog > [slot="headline"] :is(h2, h3, h4) {
+md-dialog>header[slot="headline"] :is(h2, h3, h4),
+md-dialog>[slot="headline"] :is(h2, h3, h4) {
     margin: 0;
     display: inline-grid;
     grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--md-sys-spacing-2);
     align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: var(--md-sys-typescale-headline-small-size, 1.25rem);
     font-weight: 600;
     line-height: var(--md-sys-typescale-headline-small-line-height, 1.75rem);
@@ -79,11 +94,12 @@ md-dialog > [slot="headline"] :is(h2, h3, h4) {
 /* --------------------------------------------------------------------------
    4. Content Slot & Body Section (With Guaranteed Fluid Scroll)
    -------------------------------------------------------------------------- */
-md-dialog > section[slot="content"],
-md-dialog > form[slot="content"],
-md-dialog > [slot="content"] {
+md-dialog>section[slot="content"],
+md-dialog>form[slot="content"],
+md-dialog>[slot="content"] {
     display: grid;
     gap: var(--md-sys-spacing-4);
+    min-width: 0;
     padding: var(--md-sys-spacing-4) var(--md-sys-spacing-6);
     color: var(--md-dialog-supporting-text-color);
     font-family: var(--md-dialog-supporting-text-font);
@@ -97,29 +113,29 @@ md-dialog > [slot="content"] {
     scrollbar-color: var(--md-sys-color-outline-variant) transparent;
 }
 
-md-dialog > section[slot="content"] > p,
-md-dialog > [slot="content"] > p {
+md-dialog>section[slot="content"]>p,
+md-dialog>[slot="content"]>p {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-md-dialog > section[slot="content"] fieldset,
-md-dialog > [slot="content"] fieldset {
+md-dialog>section[slot="content"] fieldset,
+md-dialog>[slot="content"] fieldset {
     gap: var(--md-sys-spacing-2);
     padding: 0;
     border: none;
 }
 
-md-dialog > section[slot="content"] fieldset > legend,
-md-dialog > [slot="content"] fieldset > legend {
+md-dialog>section[slot="content"] fieldset>legend,
+md-dialog>[slot="content"] fieldset>legend {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
     margin-bottom: var(--md-sys-spacing-1);
 }
 
-md-dialog > section[slot="content"] fieldset > label,
-md-dialog > [slot="content"] fieldset > label {
+md-dialog>section[slot="content"] fieldset>label,
+md-dialog>[slot="content"] fieldset>label {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: var(--md-sys-spacing-3);
     align-items: center;
@@ -129,57 +145,85 @@ md-dialog > [slot="content"] fieldset > label {
     color: var(--md-sys-color-on-surface);
     cursor: pointer;
     transition: background-color var(--md-sys-motion-duration-short2) ease,
-                border-color var(--md-sys-motion-duration-short2) ease,
-                box-shadow var(--md-sys-motion-duration-short2) ease;
+        border-color var(--md-sys-motion-duration-short2) ease,
+        box-shadow var(--md-sys-motion-duration-short2) ease;
 }
 
-md-dialog > section[slot="content"] fieldset > label > span,
-md-dialog > [slot="content"] fieldset > label > span {
+md-dialog>section[slot="content"] fieldset>label>span,
+md-dialog>[slot="content"] fieldset>label>span {
     display: grid;
     gap: 2px;
 }
 
-md-dialog > section[slot="content"] fieldset > label > span > span:first-child,
-md-dialog > [slot="content"] fieldset > label > span > span:first-child {
+md-dialog>section[slot="content"] fieldset>label>span>span:first-child,
+md-dialog>[slot="content"] fieldset>label>span>span:first-child {
     font-weight: 600;
     color: var(--md-sys-color-on-surface);
 }
 
-md-dialog > section[slot="content"] fieldset > label > span > span:last-child,
-md-dialog > [slot="content"] fieldset > label > span > span:last-child {
+md-dialog>section[slot="content"] fieldset>label>span>span:last-child,
+md-dialog>[slot="content"] fieldset>label>span>span:last-child {
     font-size: 0.8125rem;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-md-dialog > section[slot="content"] fieldset > label > md-icon,
-md-dialog > [slot="content"] fieldset > label > md-icon {
+md-dialog>section[slot="content"] fieldset>label>md-icon,
+md-dialog>[slot="content"] fieldset>label>md-icon {
     font-size: 20px;
     color: var(--md-sys-color-primary);
 }
 
-md-dialog > section[slot="content"] fieldset > label:hover,
-md-dialog > [slot="content"] fieldset > label:hover {
+md-dialog>section[slot="content"] fieldset>label:hover,
+md-dialog>[slot="content"] fieldset>label:hover {
     background: var(--md-sys-color-surface-container-highest);
-    border-color: var(--md-sys-color-outline);
 }
 
 /* --------------------------------------------------------------------------
    5. Actions Slot & Footer Landmark
    -------------------------------------------------------------------------- */
-md-dialog > footer[slot="actions"],
-md-dialog > [slot="actions"] {
+md-dialog>footer[slot="actions"],
+md-dialog>[slot="actions"] {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: var(--md-sys-spacing-2);
     justify-content: end;
     align-items: center;
-    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+}
+
+md-dialog>footer[slot="actions"]:has(> p),
+md-dialog>[slot="actions"]:has(> p) {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    justify-content: stretch;
+}
+
+md-dialog>footer[slot="actions"]>p,
+md-dialog>[slot="actions"]>p {
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--md-sys-typescale-body-medium-size, 0.875rem);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 md-dialog[extra-large],
 md-dialog[wide] {
+    width: min(920px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    max-width: min(920px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+    height: min(760px, calc(100dvh - var(--md-sys-spacing-6, 24px)));
+    max-height: calc(100dvh - var(--md-sys-spacing-6, 24px));
+    --md-dialog-container-min-inline-size: min(920px, calc(100vw - var(--md-sys-spacing-6, 24px)));
     --md-dialog-container-max-inline-size: min(1020px, calc(100vw - var(--md-sys-spacing-6, 24px)));
+}
+
+md-dialog>section[map-viewport][slot="content"] {
+    height: 100%;
+    max-height: none;
+    overflow: hidden;
+    padding: 0 var(--md-sys-spacing-6);
 }
 
 md-dialog[fullscreen] {
@@ -213,36 +257,36 @@ md-dialog[alert] {
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 599.98px) {
-md-dialog {
+    md-dialog {
         --md-dialog-container-min-inline-size: min(100vw - 16px, calc(100% - 16px));
         --md-dialog-container-max-inline-size: min(100vw - 16px, calc(100% - 16px));
         max-height: calc(100dvh - 16px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
         --md-dialog-container-max-block-size: calc(100dvh - 16px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
     }
 
-md-dialog > header[slot="headline"],
-    md-dialog > [slot="headline"] {
+    md-dialog>header[slot="headline"],
+    md-dialog>[slot="headline"] {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4) var(--md-sys-spacing-1);
     }
 
-md-dialog > section[slot="content"],
-    md-dialog > form[slot="content"],
-    md-dialog > [slot="content"] {
+    md-dialog>section[slot="content"],
+    md-dialog>form[slot="content"],
+    md-dialog>[slot="content"] {
         padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
         max-height: calc(100dvh - 150px);
     }
 
-md-dialog > footer[slot="actions"],
-    md-dialog > [slot="actions"] {
+    md-dialog>footer[slot="actions"],
+    md-dialog>[slot="actions"] {
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: minmax(0, 1fr);
         gap: var(--md-sys-spacing-2);
-        padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4) var(--md-sys-spacing-3);
+        padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
     }
 
-md-dialog > footer[slot="actions"] > :is(button, md-filled-button, md-outlined-button, md-text-button),
-    md-dialog > [slot="actions"] > :is(button, md-filled-button, md-outlined-button, md-text-button) {
+    md-dialog>footer[slot="actions"]> :is(button, md-filled-button, md-outlined-button, md-text-button),
+    md-dialog>[slot="actions"]> :is(button, md-filled-button, md-outlined-button, md-text-button) {
         width: 100%;
         min-height: 48px;
     }

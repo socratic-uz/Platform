@@ -36,13 +36,38 @@
 			{
 				<EditForm Model=@FormModel method="dialog" @onsubmit:preventDefault>
 					<AntiforgeryToken />
-					<List>
-						@if (IsAuthenticated)
-						{
+					@if (IsAuthenticated)
+					{
+						var fullName = $"{FormModel?.Name.FirstName} {FormModel?.Name.LastName}".Trim();
+						var displayName = string.IsNullOrWhiteSpace(fullName) ? l[Profile] : fullName;
+						var subtitle = !string.IsNullOrWhiteSpace(FormModelEmail) ? FormModelEmail : FormModel?.Phone;
+
+						<header>
+							<figure avatar>
+								@if (profile?.Image != null && (!string.IsNullOrEmpty(profile.Image.Url) || (profile.Image.Content != null && profile.Image.Content.Length > 0)))
+								{
+									<img src=@profile.Image.ToProfileImage() alt=@displayName />
+								}
+								else
+								{
+									<Icon Name=@Person />
+								}
+							</figure>
+							<hgroup>
+								<strong>@displayName</strong>
+								@if (!string.IsNullOrWhiteSpace(subtitle))
+								{
+									<small>@subtitle</small>
+								}
+							</hgroup>
+						</header>
+
+						<!-- Account & Profile Group -->
+						<section>
 							<!--Id-->
 							<details @ontoggle=@GetRoles>
 								<summary>
-									<ListItem type="button" Headline=@($"{FormModel?.Name.FirstName} {FormModel?.Name?.LastName}") StartIcon=@Person EndIcon=@ArrowDropDown />
+									<ListItem type="button" Headline=@displayName StartIcon=@Person EndIcon=@ArrowDropDown />
 								</summary>
 								<fieldset>
 									<input type="hidden" name=@profile!.Id value=@FormModel.Id />
@@ -70,24 +95,20 @@
 										<Progress IsCircular="true" FourColor="true" Indeterminate="true" />
 									}
 								</fieldset>
-								<Divider />
 							</details>
-
-							<Divider />
 
 							<!--Phone-->
 							<details>
 								<summary>
-									<ListItem type="button" Headline=@l[Phone] StartIcon=@Phone EndIcon=@ArrowDropDown />
+									<ListItem type="button" Headline=@l[PhoneLabel] StartIcon=@Phone EndIcon=@ArrowDropDown />
 								</summary>
 
 								<TextField TValue="string"
 										   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-										   Label=@l[Phone]
+										   Label=@l[PhoneLabel]
 										   Value=@FormModel.Phone
 										   ValueExpression="() => FormModel.Phone"
 										   Disabled="true" />
-								<Divider />
 							</details>
 
 							<!--Photo-->
@@ -105,7 +126,6 @@
 									Accept="image/*"
 									MaxAllowedFiles="1"
 									OnChanged=@HandleImageChanged />
-								<Divider />
 							</details>
 
 							<!--Name-->
@@ -152,7 +172,6 @@
 											   SupportingText="*required"
 											   ErrorText="Please fill out this field" />
 								</fieldset>
-								<Divider />
 							</details>
 
 							<!--Address-->
@@ -160,24 +179,22 @@
 								<summary>
 									<ListItem type="button" Headline=@l[AddressLabel] StartIcon=@LocationOn EndIcon=@ArrowDropDown />
 								</summary>
-								<section>
-									<TextField TValue="string"
-											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-											   Label=@l[City]
-											   Value=@(GetOrCreateAddress().City)
-											   ValueChanged=@(c => GetOrCreateAddress().City = c)
-											   ValueExpression="() => GetOrCreateAddress().City" />
-									<TextField TValue="string"
-											   Variant=@(TextField<string>.TextFieldVariant.Outlined)
-											   Label=@l[Street]
-											   Value=@(GetOrCreateAddress().Street)
-											   ValueChanged=@(s => GetOrCreateAddress().Street = s)
-											   ValueExpression="() => GetOrCreateAddress().Street" />
-								</section>
-								<Divider />
+								@if (GetPointPickerComponentType() is { } pointPickerType)
+								{
+									<DynamicComponent Type=@pointPickerType Parameters=@GetPointPickerParameters() />
+								}
+								<TextField TValue="string"
+										   Variant=@(TextField<string>.TextFieldVariant.Outlined)
+										   Label=@l[ApartmentLabel]
+										   Value=@(GetOrCreateAddress().Apartment)
+										   ValueChanged=@(a => GetOrCreateAddress().Apartment = a)
+										   ValueExpression="() => GetOrCreateAddress().Apartment" />
 							</details>
-						}
+						</section>
+					}
 
+					<!-- Preferences Group -->
+					<section>
 						<!--Language-->
 						<details open=@(!IsAuthenticated)>
 							<summary>
@@ -196,7 +213,6 @@
 									</label>
 								}
 							</fieldset>
-							<Divider />
 						</details>
 
 						<!--Accent-->
@@ -206,16 +222,19 @@
 							</summary>
 
 							<fieldset>
-								<Select Label=@l[ThemeLabel]
+								<Select Variant=@(Material.Web.Components.Select.SelectVariant.Outlined)
+										Label=@l[ThemeLabel]
 										Value=@ThemeString
 										ValueChanged=@OnThemeChanged
 										ValueExpression="() => ThemeString"
 										Options=@ThemeOptions />
 								<ColorPicker Label=@l[PaletteColor] Value=@(color.HasValue ? Shared.Layout.Color.ToHex(color.Value) : "#00ffb3") ValueChanged=@ChangeTheme />
 							</fieldset>
-							<Divider />
 						</details>
+					</section>
 
+					<!-- Security & Actions Group -->
+					<section>
 						@if (IsAuthenticated)
 						{
 							<!--Security & Fast Login Methods (Face ID, Google, Passkeys)-->
@@ -223,59 +242,58 @@
 								<summary>
 									<ListItem type="button" Headline=@l[ProfileSecurityAndLogin] StartIcon=@Security EndIcon=@ArrowDropDown />
 								</summary>
-									<p>
-										@l[Profile_SecuritySubtext]
-									</p>
+								<p>
+									@l[Profile_SecuritySubtext]
+								</p>
 
-									<!-- Face ID -->
-									<article>
-										<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
-										<hgroup>
-											<strong>@l[ProfileFaceIdTitle]</strong>
-											<small>
-												@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
-											</small>
-										</hgroup>
-										<menu>
-											<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
-												@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
-											</Button>
-											@if (isFaceIdConfigured)
-											{
-												<IconButton Icon=@DeleteOutline OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
-											}
-										</menu>
-									</article>
-
-									<!-- Google SSO -->
-									<article>
-										<Icon Name=@AccountCircle />
-										<hgroup>
-											<strong>Google SSO</strong>
-											<small>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
-										</hgroup>
-										<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
-											@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
+								<!-- Face ID -->
+								<article>
+									<Icon Name=@(isFaceIdConfigured ? CheckCircle : Face) />
+									<hgroup>
+										<strong>@l[ProfileFaceIdTitle]</strong>
+										<small>
+											@(isFaceIdConfigured ? l[ProfileLinkedToAccount] : l[ProfileFaceLoginSubtext])
+										</small>
+									</hgroup>
+									<menu>
+										<Button Variant=@Outlined OnClick=@NavigateToFaceIdSetup>
+											@(isFaceIdConfigured ? l[Update] : l[CommonConfigure])
 										</Button>
-									</article>
+										@if (isFaceIdConfigured)
+										{
+											<IconButton Icon=@DeleteOutline OnClick=@RemoveFaceId title=@l[ProfileDeleteBiometrics] AriaLabel=@l[ProfileDeleteBiometrics] />
+										}
+									</menu>
+								</article>
 
-									<!-- Passkeys (FIDO2 / WebAuthn) -->
-									<article>
-										<Icon Name=@Fingerprint />
-										<hgroup>
-											<strong>Passkeys (WebAuthn)</strong>
-											<small>@l[ProfileDeviceBiometricsSubtext]</small>
-										</hgroup>
-										<Button Variant=@Outlined OnClick=@RegisterPasskey>
-											@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
-										</Button>
-									</article>
-								<Divider />
+								<!-- Google SSO -->
+								<article>
+									<Icon Name=@AccountCircle />
+									<hgroup>
+										<strong>Google SSO</strong>
+										<small>@(string.IsNullOrEmpty(FormModelEmail) ? l[ProfileNotLinked] : FormModelEmail)</small>
+									</hgroup>
+									<Button Variant=@Outlined OnClick=@LinkGoogleAccount>
+										@(string.IsNullOrEmpty(FormModelEmail) ? l[Link] : l[Update])
+									</Button>
+								</article>
+
+								<!-- Passkeys (FIDO2 / WebAuthn) -->
+								<article>
+									<Icon Name=@Fingerprint />
+									<hgroup>
+										<strong>Passkeys (WebAuthn)</strong>
+										<small>@l[ProfileDeviceBiometricsSubtext]</small>
+									</hgroup>
+									<Button Variant=@Outlined OnClick=@RegisterPasskey>
+										@(isPasskeyConfigured ? l[Update] : l[CommonConfigure])
+									</Button>
+								</article>
 							</details>
 						}
 
 						<!--Support-->
-						<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link" Headline=@l[Support] StartIcon=@SupportAgent EndIcon=@Link />
+						<ListItem Href="https://t.me/sardorsafarovv" Target="_blank" type="link" Headline=@l[SupportText] StartIcon=@SupportAgent EndIcon=@Link />
 
 						@if (IsAuthenticated)
 						{
@@ -293,7 +311,7 @@
 							<!--Sign In-->
 							<ListItem Href="/signin" type="link" Headline=@l[Login] StartIcon=@Login EndIcon=@ChevronRight />
 						}
-					</List>
+					</section>
 				</EditForm>
 			}
 		</section>
@@ -302,7 +320,7 @@
 		{
 			<footer slot="actions">
 				<Button Variant=@Text value="reset" Type="reset" OnClick=@(e => { FormModel = profile?.Clone(); })>@l[ResetAction]</Button>
-				<Button Variant=@Filled value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[Save]</Button>
+				<Button Variant=@Filled value="save" OnClick=@(async e => { await UpdateProfile(); IsOpen = false; })>@l[SaveAction]</Button>
 			</footer>
 		}
 		else

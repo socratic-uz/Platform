@@ -37,8 +37,8 @@ md-text-button[avatar] {
     --md-outlined-button-outline-color: var(--md-sys-color-outline-variant);
     --md-outlined-button-outline-width: 1.5px;
     transition: border-color var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard),
-                box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard),
-                transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
+        box-shadow var(--md-sys-motion-duration-short3, 150ms) var(--md-sys-motion-easing-standard),
+        transform var(--md-sys-motion-duration-short2, 100ms) var(--md-sys-motion-easing-spring);
 }
 
 :is(button[avatar], md-outlined-button[avatar]):hover {
@@ -49,7 +49,7 @@ md-text-button[avatar] {
     transform: scale(0.95);
 }
 
-:is(button[avatar], md-outlined-button[avatar], figure[avatar], span[avatar]) > img {
+:is(button[avatar], md-outlined-button[avatar], figure[avatar], span[avatar])>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -58,17 +58,199 @@ md-text-button[avatar] {
     aspect-ratio: 1 / 1;
 }
 
-:is(button[avatar], md-outlined-button[avatar], figure[avatar], span[avatar]) > :is(md-icon, i, svg) {
+:is(button[avatar], md-outlined-button[avatar], figure[avatar], span[avatar])> :is(md-icon, i, svg) {
     font-size: 24px;
     color: var(--md-sys-color-primary);
     display: grid;
     place-items: center;
 }
 
+/* ==========================================================================
+   Material 3 Expressive Profile Sheet (md-dialog[profile])
+   ========================================================================== */
+md-dialog[profile] {
+    background: var(--md-sys-color-surface-container-lowest);
+    --md-dialog-container-color: var(--md-sys-color-surface-container-lowest);
+}
+
+md-dialog[profile]>section[slot="content"] {
+    padding: var(--md-sys-spacing-2) var(--md-sys-spacing-4) var(--md-sys-spacing-4);
+}
+
+md-dialog[profile]>section[slot="content"] form {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+}
+
+/* Hero Account Card */
+md-dialog[profile]>section[slot="content"] form>header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3) var(--md-sys-spacing-4);
+    border-radius: var(--md-sys-shape-corner-extra-large, 24px);
+    background: var(--md-sys-color-surface-container-high);
+}
+
+md-dialog[profile]>section[slot="content"] form>header>hgroup {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+md-dialog[profile]>section[slot="content"] form>header>hgroup>strong {
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+md-dialog[profile]>section[slot="content"] form>header>hgroup>small {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Segmented M3 Expressive Groups */
+md-dialog[profile]>section[slot="content"] form>section {
+    display: grid;
+    gap: 2px;
+    border-radius: var(--md-sys-shape-corner-extra-large, 28px);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details,
+md-dialog[profile]>section[slot="content"] form>section>md-list-item {
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--md-sys-shape-corner-extra-small, 4px);
+    background: var(--md-sys-color-surface-container-high);
+    --md-list-item-container-color: var(--md-sys-color-surface-container-high);
+    --md-list-item-one-line-container-height: 52px;
+    --md-list-item-top-space: 10px;
+    --md-list-item-bottom-space: 10px;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details>summary {
+    padding: 0;
+    border-radius: inherit;
+    background: var(--md-sys-color-surface-container-high);
+    list-style: none;
+    cursor: pointer;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details>summary>md-list-item {
+    border-radius: inherit;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details>summary::-webkit-details-marker {
+    display: none;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details>summary:hover,
+md-dialog[profile]>section[slot="content"] form>section>md-list-item:hover {
+    background: var(--md-sys-color-surface-container-highest);
+    --md-list-item-container-color: var(--md-sys-color-surface-container-highest);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details:first-child,
+md-dialog[profile]>section[slot="content"] form>section>md-list-item:first-child {
+    border-start-start-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-start-end-radius: var(--md-sys-shape-corner-extra-large, 28px);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details:last-child,
+md-dialog[profile]>section[slot="content"] form>section>md-list-item:last-child {
+    border-end-start-radius: var(--md-sys-shape-corner-extra-large, 28px);
+    border-end-end-radius: var(--md-sys-shape-corner-extra-large, 28px);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>p {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger]) {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: var(--md-sys-spacing-2) var(--md-sys-spacing-3);
+    padding: var(--md-sys-spacing-3);
+    border-radius: var(--md-sys-shape-corner-medium);
+    background: var(--md-sys-color-surface-container);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger])>hgroup {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger])>hgroup>strong {
+    font-size: var(--md-sys-typescale-title-small-size);
+    color: var(--md-sys-color-on-surface);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger])>hgroup>small {
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger])>menu,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article:not([picker-trigger])>md-outlined-button {
+    grid-column: 1 / -1;
+    justify-self: end;
+    margin: 0;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>fieldset,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>section,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>md-outlined-text-field,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>section[file-picker],
+md-dialog[profile]>section[slot="content"] form>section>details[open]>p,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>article[picker-trigger] {
+    margin: var(--md-sys-spacing-2) var(--md-sys-spacing-4);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>fieldset,
+md-dialog[profile]>section[slot="content"] form>section>details[open]>section {
+    display: grid;
+    gap: var(--md-sys-spacing-3);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>md-outlined-text-field {
+    display: grid;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>md-outlined-text-field {
+    display: grid;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>md-outlined-text-field {
+    display: grid;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]>md-outlined-text-field {
+    display: grid;
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]> :last-child {
+    margin-bottom: var(--md-sys-spacing-4);
+}
+
+md-dialog[profile]>section[slot="content"] form>section>details[open]> :last-child {
+    margin-bottom: var(--md-sys-spacing-4);
+}
+
 /* В мобильном нижнем баре кнопка аватара не отображается */
 
 @media screen and (max-width: 839.98px) {
-body > aside:has(~ main) > nav > [avatar] {
+body>aside:has(~ main)>nav>[avatar] {
         display: none;
     }
 }
@@ -76,7 +258,7 @@ body > aside:has(~ main) > nav > [avatar] {
 /* Если на десктопе есть боковой рельс, аватарка отображается внизу рельса, а в хедере скрывается */
 
 @media screen and (min-width: 840px) {
-body:has(> aside:not(main ~ aside) > nav) > header > [avatar] {
+body:has(> aside:not(main ~ aside) > nav)>header>[avatar] {
         display: none;
     }
 }

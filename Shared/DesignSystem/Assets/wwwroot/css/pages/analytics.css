@@ -3,25 +3,6 @@
    Classless Page Landmark Architecture â€” Analytics Dashboard & Data Explorer
    ========================================================================== */
 
-header[analytics] > hgroup {
-    display: inline-grid;
-    grid-auto-flow: column;
-    gap: var(--md-sys-spacing-2);
-    align-items: center;
-}
-
-header[analytics] > hgroup > h1 {
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--md-sys-color-on-surface);
-}
-
-header[analytics] > hgroup > md-icon {
-    font-size: 20px;
-    color: var(--md-sys-color-primary);
-}
-
 /* ==========================================================================
    LANDMARK: HEADER (Start Section & Title)
    ========================================================================== */

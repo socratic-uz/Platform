@@ -16,7 +16,7 @@ license: MIT
 Все стили централизованно выносятся в проект `Assets` (`src/Frontend/Platform/Shared/DesignSystem/Assets/wwwroot/css/`) по слоёной архитектуре Cascade Layers (`@layer tokens, foundations, components, widgets, pages, layouts`) с токенами W3C DTCG в `tokens/` через автоматически генерируемый мастер-манифест `styles.css` (`npm run generate:styles` / `scripts/generate-styles-manifest.mjs`).
 В `fonts/` подключаются **только `@font-face`** вне слоёв (`Roboto` и `Montserrat` `100 900`, `Material Symbols Outlined`), а стили `md-icon` лежат в `foundations/icons.css`. Порядок селекторов внутри изолированных таблиц строго упорядочен по обходу DOM-дерева в глубину (`npm run sort:css`).
 Слои делятся на **глобальные** и **изолированные по атрибуту 1-в-1 (`[attr].css`)**:
-- **Глобальные**: `fonts/`, `tokens/`, `foundations/` (сброс `reset.css`, макросетка `grid.css`, эффект островка `island.css` через `body::before`/`body::after` и `body > header::after` без вложенных `:has()`, ориентиры `landmarks.css`, `header.css`, `footer.css`, `rail.css`, `drawer.css`, `buttons.css`, `dialogs.css`, `icons.css`, `typography.css`).
+- **Глобальные**: `fonts/`, `tokens/`, `foundations/` (сброс `reset.css`, макросетка `scaffold.css`, эффект островка `island.css` через `body::before`/`body::after` и `body > header::after` без вложенных `:has()`, ориентиры `landmarks.css`, `header.css`, `footer.css`, `rail.css`, `drawer.css`, `buttons.css`, `dialogs.css`, `icons.css`, `typography.css`).
 - **Изолированные по атрибуту 1-в-1 (`[attr].css`)**:
   - `components/`: переиспользуемые UI-примитивы (`card.css`, `avatar.css`, `paginator.css`, `smart-*.css`).
   - `widgets/`: составные бизнес-виджеты (`cart.css`, `kiosk.css`, `terminal.css`, `kanban.css` и др.).
