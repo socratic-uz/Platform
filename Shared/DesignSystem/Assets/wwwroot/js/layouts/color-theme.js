@@ -189,6 +189,7 @@ export function applyTheme(source, isDark) {
             document.head.appendChild(el);
         }
         el.textContent = css;
+        syncNativeSystemBars();
         return css;
     } catch (e) {
         console.warn('Failed to apply dynamic theme accent:', e);
@@ -212,4 +213,35 @@ export function autoMountTheme() {
             applyTheme(hex, isDark);
         }
     }
+}
+
+let _barSyncScheduled = false;
+export function syncNativeSystemBars() {
+    if (typeof navigator === 'undefined' || !navigator.userAgent.includes('SocraticAndroidApp')) return;
+    if (_barSyncScheduled) return;
+    _barSyncScheduled = true;
+    requestAnimationFrame(() => {
+        _barSyncScheduled = false;
+        try {
+            const pickBg = (el) => {
+                if (!el) return null;
+                const bg = getComputedStyle(el).backgroundColor;
+                if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') return null;
+                return bg;
+            };
+            const header = document.querySelector('body > header') || document.querySelector('header');
+            const nav = document.querySelector('body > aside:not(main ~ aside) > nav');
+            const bodyBg = pickBg(document.body) || 'rgb(14, 21, 19)';
+            const top = pickBg(header) || bodyBg;
+            const bottom = (nav && getComputedStyle(nav).display !== 'none' ? pickBg(nav) : null) || bodyBg;
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            window.prompt('__SOCRATIC_BARS__:' + JSON.stringify({ top, bottom, isLight }));
+        } catch { }
+    });
+}
+
+if (typeof navigator !== 'undefined' && navigator.userAgent.includes('SocraticAndroidApp')) {
+    window.addEventListener('DOMContentLoaded', syncNativeSystemBars);
+    const observer = new MutationObserver(() => syncNativeSystemBars());
+    observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-theme', 'style'] });
 }

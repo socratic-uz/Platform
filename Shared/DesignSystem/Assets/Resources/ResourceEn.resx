@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -379,7 +379,7 @@
     <value>Elevate Your Business Operations with Socratic</value>
   </data>
   <data name="ms2ap" xml:space="preserve">
-    <value>At Socratic, we build a complete full-cycle ecosystem: from self-service smart kiosks and dynamic catalogs to inventory tracking, AI vision, and multi-currency payments. Our platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.</value>
+    <value>We build a complete full-cycle ecosystem: from kiosks and terminals to dynamic catalogs, inventory tracking, AI vision, and multi-currency payments. The platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.</value>
   </data>
   <data name="ms3ah" xml:space="preserve">
     <value>What We Shop:</value>
@@ -424,10 +424,13 @@
     <value>Color</value>
   </data>
   <data name="DownloadTitle" xml:space="preserve">
-    <value>Download Socratic UI</value>
+    <value>Download Socratic</value>
+  </data>
+  <data name="DownloadBadge" xml:space="preserve">
+    <value>Cross-Platform Application</value>
   </data>
   <data name="DownloadSubTitle" xml:space="preserve">
-    <value>Access Socratic anywhere. Multi-platform support for Desktop, Mobile, and Web.</value>
+    <value>A single cross-platform application for Desktop, Mobile, and Web.</value>
   </data>
   <data name="QrInstantAccess" xml:space="preserve">
     <value>Socratic Instant Access</value>
@@ -1198,13 +1201,13 @@
     <value>For Business Owners:</value>
   </data>
   <data name="Chat_WelcomeOwners" xml:space="preserve">
-    <value>launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation</value>
+    <value>launching and choosing retail workflows (28 UX modes), kiosks, commerce automation</value>
   </data>
   <data name="Chat_RoleStaff" xml:space="preserve">
     <value>For Employees:</value>
   </data>
   <data name="Chat_WelcomeStaff" xml:space="preserve">
-    <value>cash register, orders, product catalog, payments and POS terminals</value>
+    <value>orders, product catalog, payments and POS</value>
   </data>
   <data name="Schedule_NotSet" xml:space="preserve">
     <value>Schedule not set</value>
@@ -1471,7 +1474,7 @@
     <value>Store catalog</value>
   </data>
   <data name="Store_OpenSmartKiosk" xml:space="preserve">
-    <value>Open smart kiosk</value>
+    <value>Open kiosk</value>
   </data>
   <data name="Store_QrMenu" xml:space="preserve">
     <value>QR Menu</value>
@@ -1568,7 +1571,7 @@
   </data>
   <!-- Layout, Header &amp; Global Footer Translations -->
   <data name="Footer_Tagline" xml:space="preserve">
-    <value>Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.</value>
+    <value>Omnichannel cross-platform ecosystem for business and customers.</value>
   </data>
   <data name="Footer_Status" xml:space="preserve">
     <value>All systems operational</value>
@@ -1740,7 +1743,7 @@
     <value>New</value>
   </data>
   <data name="Kiosk_UniversalKiosk" xml:space="preserve">
-    <value>Universal AI Kiosk</value>
+    <value>Universal Kiosk</value>
   </data>
   <data name="Kiosk_Trial" xml:space="preserve">
     <value>Trial ({0} d.)</value>
@@ -1809,31 +1812,31 @@
     <value>No</value>
   </data>
   <data name="AboutTitleMain" xml:space="preserve">
-    <value>Intelligent ecosystem</value>
+    <value>Omnichannel cross-platform ecosystem</value>
   </data>
   <data name="AboutTitleSub" xml:space="preserve">
-    <value>for omnichannel business and commerce</value>
+    <value>for business and customers</value>
   </data>
   <data name="AboutSubtitle" xml:space="preserve">
-    <value>Socratic unites AI vision, smart kiosks, 3D WebGL and 28 universal interaction modes in a single high-performance environment.</value>
+    <value>A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.</value>
   </data>
   <data name="About_VideoBadge" xml:space="preserve">
     <value>Video presentation</value>
   </data>
   <data name="About_VideoTitle" xml:space="preserve">
-    <value>Overview of Socratic platform capabilities</value>
+    <value>Overview of platform capabilities</value>
   </data>
   <data name="About_VideoNotSupported" xml:space="preserve">
     <value>Your browser does not support embedded video playback.</value>
   </data>
   <data name="About_VideoCaption" xml:space="preserve">
-    <value>Demonstration of computer vision modules, self-service kiosks and analytics.</value>
+    <value>Demonstration of computer vision modules, kiosks and analytics.</value>
   </data>
   <data name="About_PillarsBadge" xml:space="preserve">
     <value>Key directions</value>
   </data>
   <data name="About_PillarsTitle" xml:space="preserve">
-    <value>Four pillars of Socratic architecture</value>
+    <value>Four pillars of architecture</value>
   </data>
   <data name="About_PillarsSubtitle" xml:space="preserve">
     <value>Modular structure allows deploying required services without excessive coupling.</value>
@@ -1845,10 +1848,10 @@
     <value>Real-time YOLO object detection, Face ID biometrics and queue analytics.</value>
   </data>
   <data name="About_PillarKioskTitle" xml:space="preserve">
-    <value>Smart Kiosks &amp; POS</value>
+    <value>Kiosks &amp; Terminals</value>
   </data>
   <data name="About_PillarKioskDesc" xml:space="preserve">
-    <value>Touch self-service kiosks, POS cashier terminals and instant fiscal printing.</value>
+    <value>Points of sale (touch kiosks and terminals), instant fiscal printing and real-time sync.</value>
   </data>
   <data name="About_PillarModesTitle" xml:space="preserve">
     <value>28 Commerce UX Modes</value>
@@ -1869,10 +1872,10 @@
     <value>Quality and performance without compromise</value>
   </data>
   <data name="About_ValueFpsTitle" xml:space="preserve">
-    <value>Zero-Flicker &amp; Hardware Acceleration</value>
+    <value>Smooth Interface &amp; Hardware Acceleration</value>
   </data>
   <data name="About_ValueFpsDesc" xml:space="preserve">
-    <value>Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.</value>
+    <value>Modern web and native .NET 10 application with fast response and adaptive layout.</value>
   </data>
   <data name="About_ValuePlatformTitle" xml:space="preserve">
     <value>Cross-platform</value>
@@ -1896,7 +1899,7 @@
     <value>Open Demo Kiosk</value>
   </data>
   <data name="About_BtnTerminal" xml:space="preserve">
-    <value>POS Terminal</value>
+    <value>Open Demo Terminal</value>
   </data>
   <data name="About_BtnDocs" xml:space="preserve">
     <value>Documentation</value>
@@ -1908,7 +1911,7 @@
     <value>All questions</value>
   </data>
   <data name="Help_CatPos" xml:space="preserve">
-    <value>Cash registers &amp; POS</value>
+    <value>Points of Sale (POS)</value>
   </data>
   <data name="Help_CatPayments" xml:space="preserve">
     <value>Payments &amp; QR</value>
@@ -1956,22 +1959,22 @@
     <value>37 interactive guides, architecture diagrams and module specifications.</value>
   </data>
   <data name="Help_FaqKioskLaunchTitle" xml:space="preserve">
-    <value>How to launch self-service kiosk mode?</value>
+    <value>How to launch kiosk mode?</value>
   </data>
   <data name="Help_FaqKioskLaunchAnswer" xml:space="preserve">
-    <value>To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.</value>
+    <value>To launch kiosk mode, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects POS payments.</value>
   </data>
   <data name="Help_FaqOfflineTitle" xml:space="preserve">
-    <value>Can the cash register work in offline mode without internet?</value>
+    <value>How does a point of sale handle connection drops?</value>
   </data>
   <data name="Help_FaqOfflineAnswer" xml:space="preserve">
-    <value>Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.</value>
+    <value>Local order state is cached on the device and synced once connection returns. Internet access is required for card POS acquiring, dynamic QR payments, and Soliq OFD fiscalization.</value>
   </data>
   <data name="Help_FaqPaymentsTitle" xml:space="preserve">
     <value>What payment methods are supported out of the box?</value>
   </data>
   <data name="Help_FaqPaymentsAnswer" xml:space="preserve">
-    <value>The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.</value>
+    <value>The platform supports cash, bank cards via POS (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.</value>
   </data>
   <data name="Help_FaqDynamicQrTitle" xml:space="preserve">
     <value>How does dynamic QR work on customer display?</value>
@@ -2094,10 +2097,10 @@
     <value>Search products</value>
   </data>
   <data name="AboutPageTitle" xml:space="preserve">
-    <value>About Platform — Socratic</value>
+    <value>About Ecosystem — Socratic</value>
   </data>
   <data name="AboutBadge" xml:space="preserve">
-    <value>About Socratic Platform</value>
+    <value>About Ecosystem</value>
   </data>
   <data name="QuickActions" xml:space="preserve">
     <value>Quick Actions</value>
@@ -2130,7 +2133,7 @@
     <value>and Frequently Asked Questions (FAQ)</value>
   </data>
   <data name="HelpSubtitle" xml:space="preserve">
-    <value>Quick answers on setting up POS terminals, smart kiosks, AI modules, acquiring, and retail equipment integration.</value>
+    <value>Quick answers on setting up terminals, kiosks, AI modules, acquiring, and retail equipment integration.</value>
   </data>
   <data name="Help_BtnDocs" xml:space="preserve">
     <value>Go to Documentation</value>
@@ -3057,10 +3060,10 @@
     <value>No orders yet</value>
   </data>
   <data name="Orders_EmptySubtitle" xml:space="preserve">
-    <value>New orders from POS terminal, kiosk, and storefront will appear here in real-time.</value>
+    <value>New orders from terminal and kiosk will appear here in real-time.</value>
   </data>
   <data name="Orders_GoToTerminal" xml:space="preserve">
-    <value>Open Cashier Terminal</value>
+    <value>Open Terminal</value>
   </data>
   <data name="Orders_LoadSample" xml:space="preserve">
     <value>Load Sample Orders</value>
@@ -3312,13 +3315,13 @@
     <value>{0} — digital kiosk, menu and online ordering | Socratic</value>
   </data>
   <data name="Kiosk_SeoMetaDescFormat" xml:space="preserve">
-    <value>{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.</value>
+    <value>{0}. Kiosk, item catalog, interactive ordering and fiscal payment.</value>
   </data>
   <data name="Kiosk_TitleSelfService" xml:space="preserve">
-    <value>Self-service kiosk</value>
+    <value>Kiosk</value>
   </data>
   <data name="Kiosk_DefaultMetaDesc" xml:space="preserve">
-    <value>Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.</value>
+    <value>Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.</value>
   </data>
   <data name="Kiosk_CategoryFilters" xml:space="preserve">
     <value>Category filters</value>
@@ -3686,19 +3689,19 @@
 
   <!-- Landing & Universal UX Modes Localization -->
   <data name="HeroBadge" xml:space="preserve">
-    <value>Socratic 2.0 • Universal Business Ecosystem</value>
+    <value>Omnichannel Cross-Platform Ecosystem</value>
   </data>
   <data name="HeroSubtitle" xml:space="preserve">
-    <value>Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.</value>
+    <value>A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.</value>
   </data>
   <data name="HeroShowroom" xml:space="preserve">
-    <value>Demo Product Showroom</value>
+    <value>Demo Kiosk</value>
   </data>
   <data name="HeroTerminal" xml:space="preserve">
-    <value>POS Terminal</value>
+    <value>Demo Terminal</value>
   </data>
   <data name="HeroSocraticOrg" xml:space="preserve">
-    <value>Socratic Plans</value>
+    <value>Plans</value>
   </data>
   <data name="HeroModulesLabel" xml:space="preserve">
     <value>Specialized modules:</value>
@@ -3737,16 +3740,16 @@
     <value>Hero interface stages</value>
   </data>
   <data name="TabPos" xml:space="preserve">
-    <value>POS Terminal</value>
+    <value>Terminal</value>
   </data>
   <data name="TabKiosk" xml:space="preserve">
-    <value>Smart Kiosk</value>
+    <value>Kiosk</value>
   </data>
   <data name="TabSpaces" xml:space="preserve">
     <value>Spaces &amp; QR</value>
   </data>
   <data name="SpecOffline" xml:space="preserve">
-    <value>Offline-First Reliability</value>
+    <value>System Reliability</value>
   </data>
   <data name="SpecSpeed" xml:space="preserve">
     <value>Terminal Speed</value>
@@ -3770,7 +3773,7 @@
     <value>Retail &amp; Wholesale</value>
   </data>
   <data name="PillarRetailDesc" xml:space="preserve">
-    <value>Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.</value>
+    <value>Fast barcode scanning, stock balances, SKU variations, point of sale and shift tracking.</value>
   </data>
   <data name="PillarServicesTitle" xml:space="preserve">
     <value>Services &amp; Booking</value>
@@ -3797,34 +3800,34 @@
     <value>Test Socratic in Real Business Scenarios</value>
   </data>
   <data name="ShowcaseSub" xml:space="preserve">
-    <value>Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.</value>
+    <value>Two demonstration organizations: test the point of sale with a product catalog or see how the platform offers plans, subscriptions, and hardware through its kiosk.</value>
   </data>
   <data name="OrgDemoBadge" xml:space="preserve">
-    <value>Public Demonstration</value>
+    <value>Demonstration Organization</value>
   </data>
   <data name="OrgDemoTitle" xml:space="preserve">
-    <value>Coffee &amp; Bakery Chain &quot;Demo&quot;</value>
+    <value>Demo Organization</value>
   </data>
   <data name="OrgDemoDesc" xml:space="preserve">
-    <value>Interactive showcase of beverages, desserts, modifiers, and instant card checkout.</value>
+    <value>Interactive product catalog across 28 scenarios: modifiers, weighed items, bookings, subscriptions, delivery, and Soliq OFD fiscalization.</value>
   </data>
   <data name="OpenDemoShowroom" xml:space="preserve">
-    <value>Open Demo Showroom</value>
+    <value>Open Kiosk</value>
   </data>
   <data name="OpenTerminalDemo" xml:space="preserve">
-    <value>Launch POS Terminal</value>
+    <value>Open Terminal</value>
   </data>
   <data name="OrgSocraticBadge" xml:space="preserve">
     <value>Official Organization</value>
   </data>
   <data name="OrgSocraticTitle" xml:space="preserve">
-    <value>Socratic Ecosystem Core</value>
+    <value>Tariff &amp; Module Storefront</value>
   </data>
   <data name="OrgSocraticDesc" xml:space="preserve">
     <value>Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.</value>
   </data>
   <data name="OpenSocraticSelfSelling" xml:space="preserve">
-    <value>Socratic Self-Selling Portal</value>
+    <value>Open Plans</value>
   </data>
   <data name="PlatformDocs" xml:space="preserve">
     <value>Architecture Documentation</value>
@@ -3908,7 +3911,7 @@
     <value>28 Universal Commercial UX Scenarios</value>
   </data>
   <data name="LandingUxModesDesc" xml:space="preserve">
-    <value>From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.</value>
+    <value>From instant restaurant ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — 28 distinct commercial interaction models unified in a single engine.</value>
   </data>
   <data name="LandingFlagshipTitle" xml:space="preserve">
     <value>Flagship Archetypes</value>
@@ -3959,7 +3962,7 @@
     <value>AI &amp; Cloud Flagship</value>
   </data>
   <data name="LandingAiFlagshipTitle" xml:space="preserve">
-    <value>Online Service &amp; AI Access</value>
+    <value>SaaS Services &amp; AI Access</value>
   </data>
   <data name="LandingAiFlagshipDesc" xml:space="preserve">
     <value>Instant API keys issuance, LLM token quotas, computer vision access, and microservice billing.</value>
@@ -4055,13 +4058,13 @@
     <value>Cash Register Terminal</value>
   </data>
   <data name="PillarPosHeading" xml:space="preserve">
-    <value>Touch POS for any sales format</value>
+    <value>Point of Sale for any sales format</value>
   </data>
   <data name="PillarPosDesc" xml:space="preserve">
-    <value>Ultra-fast touch terminal for sellers, cashiers, and store managers.</value>
+    <value>Ultra-fast touch terminal for barcoding, weighed items, split payments, and instant checkout.</value>
   </data>
   <data name="PillarPosFeat1" xml:space="preserve">
-    <value>100% Offline-First: uninterrupted checkout without Internet connection.</value>
+    <value>Instant search, barcode scanning, and quick order entry.</value>
   </data>
   <data name="PillarPosFeat2" xml:space="preserve">
     <value>Direct connection to ESC/POS thermal printers, CAS scales, and 2D barcode scanners.</value>
@@ -4070,7 +4073,7 @@
     <value>Installment &amp; BNPL sales: Uzum Nasiya, Zoodpay, and split bills.</value>
   </data>
   <data name="LaunchTerminalBtn" xml:space="preserve">
-    <value>Open POS Terminal</value>
+    <value>Open Terminal</value>
   </data>
   <data name="PillarQrBadge" xml:space="preserve">
     <value>QR Payments &amp; Soliq OFD</value>
@@ -4085,10 +4088,10 @@
     <value>QR Code Studio</value>
   </data>
   <data name="PillarKioskBadge" xml:space="preserve">
-    <value>Smart Self-Service Kiosks</value>
+    <value>Kiosks</value>
   </data>
   <data name="PillarKioskHeading" xml:space="preserve">
-    <value>Autonomous Self-Ordering Terminals</value>
+    <value>Interactive Kiosks</value>
   </data>
   <data name="PillarKioskDesc" xml:space="preserve">
     <value>Queue reduction in rush hours, interactive electronic menu, and automated upselling.</value>
@@ -4115,7 +4118,7 @@
     <value>Transparent warehouse tracking, automatic write-offs, cashier shift reports, and P&amp;L analytics.</value>
   </data>
   <data name="PlatformWindowsDesc" xml:space="preserve">
-    <value>Full-screen POS cashier terminal, back-office administration, and offline local cache.</value>
+    <value>Full-screen terminal, back-office administration, and desktop app.</value>
   </data>
   <data name="DownloadWindows" xml:space="preserve">
     <value>Download for Windows</value>
@@ -4136,7 +4139,7 @@
     <value>Download for Android</value>
   </data>
   <data name="PlatformIOSDesc" xml:space="preserve">
-    <value>Elegant solution for iPad cashier desks and customer-facing displays.</value>
+    <value>Elegant solution for iPad points of sale and monitoring on iPhone.</value>
   </data>
   <data name="DownloadIOS" xml:space="preserve">
     <value>Download for iOS</value>
@@ -4151,7 +4154,7 @@
     <value>Ready to Scale Your Business with Socratic?</value>
   </data>
   <data name="B2bDesc" xml:space="preserve">
-    <value>Connect your retail store, restaurant, service salon, or chain in a single unified system.</value>
+    <value>Connect your retail store, venue, service business, or chain into a single system: points of sale (terminal and kiosk), 28 product scenarios, and Soliq OFD fiscalization.</value>
   </data>
   <data name="B2bKioskConnectBtn" xml:space="preserve">
     <value>Connect in Socratic Kiosk</value>
@@ -4181,7 +4184,7 @@
     <value>Launch in Interactive Kiosk</value>
   </data>
   <data name="FooterTagline" xml:space="preserve">
-    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+    <value>Omnichannel cross-platform ecosystem for business and customers.</value>
   </data>
   <data name="FooterRights" xml:space="preserve">
     <value>All rights reserved.</value>
@@ -4322,7 +4325,7 @@
     <value>28 UX modes</value>
   </data>
   <data name="LandingPillSmartKiosk" xml:space="preserve">
-    <value>Smart kiosk</value>
+    <value>Kiosk</value>
   </data>
   <data name="LandingPillOfdCashback" xml:space="preserve">
     <value>Soliq OFD 1%</value>
@@ -4334,7 +4337,7 @@
     <value>Ecosystem plans</value>
   </data>
   <data name="LandingPillPosKiosks" xml:space="preserve">
-    <value>POS &amp; Kiosks</value>
+    <value>Terminals &amp; Kiosks</value>
   </data>
   <data name="LandingPillDirectPurchase" xml:space="preserve">
     <value>Direct purchase</value>
@@ -4406,20 +4409,20 @@
     <value>Branches in unified network</value>
   </data>
   <data name="LandingMetricOfflineDesc" xml:space="preserve">
-    <value>Autonomous offline work</value>
+    <value>Continuous operation</value>
   </data>
   <data name="LandingPageTitle" xml:space="preserve">
-    <value>Socratic — Universal Business Ecosystem</value>
+    <value>Socratic — Omnichannel Cross-Platform Ecosystem for Business and Customers</value>
   </data>
   <data name="LandingMetaDesc" xml:space="preserve">
-    <value>Socratic — unified platform for retail sales, services, space booking, and payment processing.</value>
+    <value>A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.</value>
   </data>
   <data name="LandingHeroTitleSocratic" xml:space="preserve">
     <value>Socratic</value>
     <comment>Hero title flagship Socratic</comment>
   </data>
   <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
-    <value>Universal operating system for commerce and services</value>
+    <value>Omnichannel cross-platform ecosystem for business and customers</value>
     <comment>Hero title operating system subtitle</comment>
   </data>
   <data name="LandingNoModesFoundDesc" xml:space="preserve">
@@ -4562,7 +4565,7 @@
     <value>Video link not found</value>
   </data>
   <data name="LandingKeywords" xml:space="preserve">
-    <value>universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic</value>
+    <value>universal business ecosystem, retail automation, terminal, kiosk, POS, QR payments, fiscalization, Soliq OFD, space booking, retail, services</value>
   </data>
   <data name="LandingSoliqCashback" xml:space="preserve">
     <value>Soliq OFD • 1% Cashback</value>
@@ -4757,7 +4760,7 @@
     <value>Partner sponsored banners are displayed on kiosks. You can disable ads at any time by upgrading to PRO.</value>
   </data>
   <data name="Org_DescPro" xml:space="preserve">
-    <value>Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.</value>
+    <value>Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.</value>
   </data>
   <data name="Promo_Title" xml:space="preserve">
     <value>Product Promotion in Google &amp; Yandex</value>
@@ -5165,7 +5168,7 @@
     <value>SKU</value>
   </data>
   <data name="Home_DirectorySubtitle" xml:space="preserve">
-    <value>Choose a venue to order via self-service kiosk or make a reservation</value>
+    <value>Choose a venue to order via kiosk or make a reservation</value>
   </data>
   <data name="Home_PageTitle" xml:space="preserve">
     <value>Organizations &amp; Locations Catalog • Socratic</value>

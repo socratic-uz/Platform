@@ -224,6 +224,7 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingAuthenticationStateProvider>();
 builder.Services.AddScoped<ISettingsManager, Web.UI.Services.ServerSettingsManager>();
 builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
+builder.Services.AddScoped<Infrastructure.Gateways.Identity.IExternalAuthBrowser, Infrastructure.Gateways.Identity.DefaultExternalAuthBrowser>();
 builder.Services.AddScoped<Domain.Interfaces.Identity.IUserAccountGateway, Infrastructure.Gateways.Identity.UserAccountGateway>();
 builder.Services.AddScoped<Infrastructure.Gateways.Identity.UserAccountGateway>();
 builder.Services.AddScoped<Domain.State.ICartStore, Infrastructure.State.CartStore>();
@@ -328,6 +329,37 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 
+// Native OAuth bridge: when Chrome Custom Tabs / ASWebAuthenticationSession hits HTTPS callback with state=native:...,
+// redirect immediately to the custom scheme so WebAuthenticator completes and closes the system browser.
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.Equals("/signin-google-callback", StringComparison.OrdinalIgnoreCase) ||
+        context.Request.Path.Equals("/signin-telegram-callback", StringComparison.OrdinalIgnoreCase))
+    {
+        var state = context.Request.Query["state"].ToString();
+        if (state.StartsWith("native:", StringComparison.Ordinal))
+        {
+            var provider = context.Request.Path.Equals("/signin-google-callback", StringComparison.OrdinalIgnoreCase)
+                ? "google"
+                : "telegram";
+            var cleanState = state["native:".Length..];
+            var queryBuilder = new System.Text.StringBuilder("socratic://auth?provider=").Append(provider);
+            foreach (var kv in context.Request.Query)
+            {
+                var value = kv.Key.Equals("state", StringComparison.OrdinalIgnoreCase) ? cleanState : kv.Value.ToString();
+                queryBuilder.Append('&')
+                    .Append(Uri.EscapeDataString(kv.Key))
+                    .Append('=')
+                    .Append(Uri.EscapeDataString(value));
+            }
+            context.Response.Redirect(queryBuilder.ToString());
+            return;
+        }
+    }
+
+    await next();
+});
+
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
@@ -361,6 +393,70 @@ app.MapSeoEndpoints();
 app.MapStreamingEndpoints();
 #endif
 app.MapDocsEndpoints();
+
+// Digital Asset Links (Android Passkeys & App Links) and Apple App Site Association (iOS/macOS WebCredentials)
+app.MapGet("/.well-known/assetlinks.json", (IConfiguration config) =>
+{
+    var packageName = config["Auth:AndroidPackageName"] ?? "uz.socratic.app";
+    var debugFingerprint = "65:F1:23:59:99:BC:67:66:55:C7:2D:72:BE:D4:9D:52:8D:B0:8E:A6:AA:08:D6:8A:FF:83:DD:6D:16:B2:AA:F9";
+    var releaseFingerprint = config["Auth:AndroidSha256"];
+
+    var fingerprintsArray = new System.Text.Json.Nodes.JsonArray();
+    if (!string.IsNullOrWhiteSpace(releaseFingerprint))
+    {
+        fingerprintsArray.Add(releaseFingerprint);
+    }
+    fingerprintsArray.Add(debugFingerprint);
+
+    var payload = new System.Text.Json.Nodes.JsonArray
+    {
+        new System.Text.Json.Nodes.JsonObject
+        {
+            ["relation"] = new System.Text.Json.Nodes.JsonArray
+            {
+                "delegate_permission/common.handle_all_urls",
+                "delegate_permission/common.get_login_creds"
+            },
+            ["target"] = new System.Text.Json.Nodes.JsonObject
+            {
+                ["namespace"] = "android_app",
+                ["package_name"] = packageName,
+                ["sha256_cert_fingerprints"] = fingerprintsArray
+            }
+        }
+    };
+
+    return Results.Content(payload.ToJsonString(), "application/json");
+});
+
+app.MapGet("/.well-known/apple-app-site-association", (IConfiguration config) =>
+{
+    var appleAppId = config["Auth:AppleAppId"] ?? "TEAM_ID.uz.socratic.app";
+    var payload = new System.Text.Json.Nodes.JsonObject
+    {
+        ["applinks"] = new System.Text.Json.Nodes.JsonObject
+        {
+            ["details"] = new System.Text.Json.Nodes.JsonArray
+            {
+                new System.Text.Json.Nodes.JsonObject
+                {
+                    ["appIDs"] = new System.Text.Json.Nodes.JsonArray { appleAppId },
+                    ["components"] = new System.Text.Json.Nodes.JsonArray
+                    {
+                        new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-google-callback" },
+                        new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-telegram-callback" }
+                    }
+                }
+            }
+        },
+        ["webcredentials"] = new System.Text.Json.Nodes.JsonObject
+        {
+            ["apps"] = new System.Text.Json.Nodes.JsonArray { appleAppId }
+        }
+    };
+
+    return Results.Content(payload.ToJsonString(), "application/json");
+});
 
 try
 {

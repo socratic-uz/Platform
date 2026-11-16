@@ -1033,6 +1033,9 @@ main[landing]>section:nth-of-type(7)>section>article>header>hgroup>span {
 }
 
 main[landing]>section:nth-of-type(7)>section>article>header>md-icon {
+    --md-icon-size: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
     font-size: 2.25rem;
     color: var(--md-sys-color-primary);
 }
@@ -1060,6 +1063,13 @@ main[landing]>section:nth-of-type(7)>section>article>a {
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.25s ease;
+}
+
+main[landing]>section:nth-of-type(7)>section>article>a>md-icon {
+    --md-icon-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
 }
 
 main[landing]>section:nth-of-type(7)>section>article>a:hover {

@@ -11,7 +11,7 @@ namespace Assets.Constants
 {
     /// <summary>
     /// Strongly-typed string keys for <see cref="Microsoft.Extensions.Localization.IStringLocalizer"/>.
-    /// Total unique keys: 1691.
+    /// Total unique keys: 1692.
     /// </summary>
     public static class Loc
     {
@@ -471,7 +471,7 @@ namespace Assets.Constants
         }
 
         /// <summary>
-        /// Domain group: Common (579 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
+        /// Domain group: Common (580 keys). Use with <c>@using static Assets.Constants.Loc.Common;</c>.
         /// </summary>
         public static class Common
         {
@@ -581,9 +581,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>B2bDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, restaurant, service salon, or chain in a single unified system.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, заведение, сервис или сеть в единую систему: точки продаж (терминал и киоск), 28 сценариев продуктов и фискализация Soliq ОФД.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, muassasa, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang: savdo nuqtalari (terminal va kiosk), 28 ta mahsulot ssenariysi va Soliq OFD fiskallashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, venue, service business, or chain into a single system: points of sale (terminal and kiosk), 28 product scenarios, and Soliq OFD fiscalization.&quot;
             /// </summary>
             public const string B2bDesc = "B2bDesc";
 
@@ -1281,6 +1281,14 @@ namespace Assets.Constants
             public const string DownloadAndroid = "DownloadAndroid";
 
             /// <summary>
+            /// Key: <c>DownloadBadge</c><br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кроссплатформенное приложение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kross-platformali ilova&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cross-Platform Application&quot;
+            /// </summary>
+            public const string DownloadBadge = "DownloadBadge";
+
+            /// <summary>
             /// Key: <c>DownloadButton</c><br/>
             /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuklab olish&quot;<br/>
@@ -1306,17 +1314,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>DownloadSubTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Доступ к Socratic в любом месте. Поддержка десктопных, мобильных и веб-платформ.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ga har qanday joyda kiring. Ish stoli, mobil va veb-platformalar uchun qo'llab-quvvatlash.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Access Socratic anywhere. Multi-platform support for Desktop, Mobile, and Web.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое кроссплатформенное приложение для десктопных, мобильных и веб-платформ.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ish stoli, mobil va veb-platformalar uchun yagona kross-platformali ilova.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;A single cross-platform application for Desktop, Mobile, and Web.&quot;
             /// </summary>
             public const string DownloadSubTitle = "DownloadSubTitle";
 
             /// <summary>
             /// Key: <c>DownloadTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать Socratic UI&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic UI-ni yuklab olish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic UI&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ni yuklab olish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic&quot;
             /// </summary>
             public const string DownloadTitle = "DownloadTitle";
 
@@ -1570,9 +1578,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Footer_Tagline</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers.&quot;
             /// </summary>
             public const string Footer_Tagline = "Footer_Tagline";
 
@@ -1618,8 +1626,8 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>FooterCommunity</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Community &amp;amp; Support&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Community &amp;amp; Support&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сообщество и поддержка&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hamjamiyat va yordam&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Community &amp;amp; Support&quot;
             /// </summary>
             public const string FooterCommunity = "FooterCommunity";
@@ -1650,9 +1658,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>FooterTagline</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Advanced AI &amp;amp; Multi-Platform Ecosystem&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers.&quot;
             /// </summary>
             public const string FooterTagline = "FooterTagline";
 
@@ -1714,9 +1722,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>HeroBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Omnikanal kross-platformali ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel Cross-Platform Ecosystem&quot;
             /// </summary>
             public const string HeroBadge = "HeroBadge";
 
@@ -1754,17 +1762,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>HeroShowroom</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Product Showroom&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Kiosk&quot;
             /// </summary>
             public const string HeroShowroom = "HeroShowroom";
 
             /// <summary>
             /// Key: <c>HeroSocraticOrg</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tariflari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Plans&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Plans&quot;
             /// </summary>
             public const string HeroSocraticOrg = "HeroSocraticOrg";
 
@@ -1778,25 +1786,25 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>HeroSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
             /// </summary>
             public const string HeroSubtitle = "HeroSubtitle";
 
             /// <summary>
             /// Key: <c>HeroTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminal&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Terminal&quot;
             /// </summary>
             public const string HeroTerminal = "HeroTerminal";
 
             /// <summary>
             /// Key: <c>Home_DirectorySubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск или бронирования&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via kiosk or make a reservation&quot;
             /// </summary>
             public const string Home_DirectorySubtitle = "Home_DirectorySubtitle";
 
@@ -1874,9 +1882,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Home_DirectorySubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск или бронирования&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via kiosk or make a reservation&quot;
             /// </summary>
             public const string HomeDirectorySubtitle = "Home_DirectorySubtitle";
 
@@ -2114,9 +2122,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LaunchTerminalBtn</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
             /// </summary>
             public const string LaunchTerminalBtn = "LaunchTerminalBtn";
 
@@ -2762,9 +2770,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>ms2ap</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;В Socratic мы создаем экосистему полного цикла: от смарт-киосков самообслуживания и онлайн-каталогов до складского учета, AI-аналитики и приема платежей. Наша платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasida biz to'liq siklli ekotizim yaratamiz: o'z-o'ziga xizmat ko'rsatuvchi aqlli kiosklar va onlayn kataloglardan tortib ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Bizning platformamiz biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;At Socratic, we build a complete full-cycle ecosystem: from self-service smart kiosks and dynamic catalogs to inventory tracking, AI vision, and multi-currency payments. Our platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мы создаем экосистему полного цикла: от киосков и терминалов до онлайн-каталогов, складского учета, AI-аналитики и приема платежей. Платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz to'liq siklli ekotizim yaratamiz: kiosk va terminallardan tortib onlayn kataloglar, ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Platforma biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;We build a complete full-cycle ecosystem: from kiosks and terminals to dynamic catalogs, inventory tracking, AI vision, and multi-currency payments. The platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.&quot;
             /// </summary>
             public const string Ms2ap = "ms2ap";
 
@@ -3026,9 +3034,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>OpenDemoShowroom</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть витрину Demo&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo vitrinani ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Showroom&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Kiosk&quot;
             /// </summary>
             public const string OpenDemoShowroom = "OpenDemoShowroom";
 
@@ -3042,17 +3050,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>OpenSocraticSelfSelling</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic в Киоске&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic o'zini-o'zi sotish portali&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Self-Selling Portal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть тарифы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Plans&quot;
             /// </summary>
             public const string OpenSocraticSelfSelling = "OpenSocraticSelfSelling";
 
             /// <summary>
             /// Key: <c>OpenTerminalDemo</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS kassani ishga tushirish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
             /// </summary>
             public const string OpenTerminalDemo = "OpenTerminalDemo";
 
@@ -3130,31 +3138,31 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>OrgDemoBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo • Шоурум товаров&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommaviy namoyish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Public Demonstration&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрационная организация&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish tashkiloti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration Organization&quot;
             /// </summary>
             public const string OrgDemoBadge = "OrgDemoBadge";
 
             /// <summary>
             /// Key: <c>OrgDemoDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive showcase of beverages, desserts, modifiers, and instant card checkout.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный каталог продуктов в 28 сценариях: модификаторы, весовые позиции, бронирование, подписки, доставка и фискализация Soliq ОФД.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta ssenariydagi interaktiv mahsulotlar katalogi: modifikatorlar, vaznli pozitsiyalar, bron qilish, obunalar, yetkazib berish va Soliq OFD fiskallashtirish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive product catalog across 28 scenarios: modifiers, weighed items, bookings, subscriptions, delivery, and Soliq OFD fiscalization.&quot;
             /// </summary>
             public const string OrgDemoDesc = "OrgDemoDesc";
 
             /// <summary>
             /// Key: <c>OrgDemoTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо-витрина ритейла, блюд и услуг&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;quot;Demo&amp;quot; qahvaxona va novvoyxona tarmog'i&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Coffee &amp;amp; Bakery Chain &amp;quot;Demo&amp;quot;&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo tashkiloti&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Organization&quot;
             /// </summary>
             public const string OrgDemoTitle = "OrgDemoTitle";
 
             /// <summary>
             /// Key: <c>OrgSocraticBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Официальная организация&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Official Organization&quot;
             /// </summary>
@@ -3162,7 +3170,7 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>OrgSocraticDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа использует собственный интерактивный киоск для продажи своих тарифов, подписок, лицензий, POS-оборудования и модулей.&quot;<br/>
             /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.&quot;
             /// </summary>
@@ -3170,9 +3178,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>OrgSocraticTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic продает сама себя&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ekotizimi yadrosi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина тарифов и модулей&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif va modullar vitrinasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff &amp;amp; Module Storefront&quot;
             /// </summary>
             public const string OrgSocraticTitle = "OrgSocraticTitle";
 
@@ -3402,9 +3410,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PillarKioskBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-Киоски&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-Kiosklar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Self-Service Kiosks&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks&quot;
             /// </summary>
             public const string PillarKioskBadge = "PillarKioskBadge";
 
@@ -3442,33 +3450,33 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PillarKioskHeading</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономные терминалы самообслуживания&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous Self-Ordering Terminals&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивные киоски&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Kiosks&quot;
             /// </summary>
             public const string PillarKioskHeading = "PillarKioskHeading";
 
             /// <summary>
             /// Key: <c>PillarPosBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассовый терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminali&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash Register Terminal&quot;
             /// </summary>
             public const string PillarPosBadge = "PillarPosBadge";
 
             /// <summary>
             /// Key: <c>PillarPosDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for sellers, cashiers, and store managers.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый сенсорный терминал. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shtrix-kod skanerlash, vaznli tovarlar, bo'lib to'lash va tezkor hisob-kitob uchun o'ta tezkor sensorli terminal.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for barcoding, weighed items, split payments, and instant checkout.&quot;
             /// </summary>
             public const string PillarPosDesc = "PillarPosDesc";
 
             /// <summary>
             /// Key: <c>PillarPosFeat1</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Offline-First: продажи не останавливаются при обрыве интернета&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Offline-First: uninterrupted checkout without Internet connection.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный поиск, штрихкодирование и добавление позиций в заказ&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor qidiruv, shtrix-kod skanerlash va buyurtmaga qo'shish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant search, barcode scanning, and quick order entry.&quot;
             /// </summary>
             public const string PillarPosFeat1 = "PillarPosFeat1";
 
@@ -3490,9 +3498,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PillarPosHeading</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорная касса для любого формата продаж&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun sensorli kassa&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch POS for any sales format&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка продаж для любого формата&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun savdo nuqtasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Point of Sale for any sales format&quot;
             /// </summary>
             public const string PillarPosHeading = "PillarPosHeading";
 
@@ -3522,9 +3530,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PillarRetailDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе, точка продаж и учет смен.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, savdo nuqtasi va smenalar hisobi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, point of sale and shift tracking.&quot;
             /// </summary>
             public const string PillarRetailDesc = "PillarRetailDesc";
 
@@ -3626,9 +3634,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PlatformIOSDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad cashier desks and customer-facing displays.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для точек продаж на iPad и мониторинга со смартфонов iPhone.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad savdo nuqtalari va iPhone smartfonlaridan monitoring uchun qulay yechim.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad points of sale and monitoring on iPhone.&quot;
             /// </summary>
             public const string PlatformIOSDesc = "PlatformIOSDesc";
 
@@ -3674,9 +3682,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>PlatformWindowsDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen POS cashier terminal, back-office administration, and offline local cache.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный терминал, бэк-офис и десктопное приложение.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli terminal, bek-ofis va kompyuter ilovasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen terminal, back-office administration, and desktop app.&quot;
             /// </summary>
             public const string PlatformWindowsDesc = "PlatformWindowsDesc";
 
@@ -4578,9 +4586,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>ShowcaseSub</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Две демонстрационные организации: протестируйте точку продаж с каталогом продуктов или посмотрите, как платформа оформляет тарифы, подписки и оборудование через свой киоск.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ikki namoyish tashkiloti: mahsulotlar katalogiga ega savdo nuqtasini sinab ko'ring yoki platforma o'z kioski orqali tariflar, obunalar va uskunalarni qanday rasmiylashtirishini ko'ring.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Two demonstration organizations: test the point of sale with a product catalog or see how the platform offers plans, subscriptions, and hardware through its kiosk.&quot;
             /// </summary>
             public const string ShowcaseSub = "ShowcaseSub";
 
@@ -4594,8 +4602,8 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>ShowroomDemo</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kiosk&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom Demo&quot;
             /// </summary>
             public const string ShowroomDemo = "ShowroomDemo";
@@ -4714,16 +4722,16 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>SpecOffline</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Offline-First надежность&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Offline-First ishonchliligi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Offline-First Reliability&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Надежность системы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim ishonchliligi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;System Reliability&quot;
             /// </summary>
             public const string SpecOffline = "SpecOffline";
 
             /// <summary>
             /// Key: <c>SpecSpeed</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость кассы&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa tezligi&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость терминала&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal tezligi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal Speed&quot;
             /// </summary>
             public const string SpecSpeed = "SpecSpeed";
@@ -4786,17 +4794,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>TabKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
             /// </summary>
             public const string TabKiosk = "TabKiosk";
 
             /// <summary>
             /// Key: <c>TabPos</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal&quot;
             /// </summary>
             public const string TabPos = "TabPos";
 
@@ -8508,17 +8516,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Chat_WelcomeOwners</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), kiosks, commerce automation&quot;
             /// </summary>
             public const string Chat_WelcomeOwners = "Chat_WelcomeOwners";
 
             /// <summary>
             /// Key: <c>Chat_WelcomeStaff</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с кассой, заказами, каталогом, оплатами и POS-терминалами&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;cash register, orders, product catalog, payments and POS terminals&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с заказами, каталогом, оплатами и POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;buyurtmalar, katalog, to'lovlar va POS bilan ishlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;orders, product catalog, payments and POS&quot;
             /// </summary>
             public const string Chat_WelcomeStaff = "Chat_WelcomeStaff";
 
@@ -8604,17 +8612,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Chat_WelcomeOwners</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), kiosks, commerce automation&quot;
             /// </summary>
             public const string ChatWelcomeOwners = "Chat_WelcomeOwners";
 
             /// <summary>
             /// Key: <c>Chat_WelcomeStaff</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с кассой, заказами, каталогом, оплатами и POS-терминалами&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;cash register, orders, product catalog, payments and POS terminals&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с заказами, каталогом, оплатами и POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;buyurtmalar, katalog, to'lovlar va POS bilan ishlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;orders, product catalog, payments and POS&quot;
             /// </summary>
             public const string ChatWelcomeStaff = "Chat_WelcomeStaff";
 
@@ -8692,17 +8700,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Chat_WelcomeOwners</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), kiosks, commerce automation&quot;
             /// </summary>
             public const string WelcomeOwners = "Chat_WelcomeOwners";
 
             /// <summary>
             /// Key: <c>Chat_WelcomeStaff</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с кассой, заказами, каталогом, оплатами и POS-терминалами&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;cash register, orders, product catalog, payments and POS terminals&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с заказами, каталогом, оплатами и POS&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;buyurtmalar, katalog, to'lovlar va POS bilan ishlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;orders, product catalog, payments and POS&quot;
             /// </summary>
             public const string WelcomeStaff = "Chat_WelcomeStaff";
 
@@ -14657,9 +14665,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_DefaultMetaDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
             /// </summary>
             public const string DefaultMetaDesc = "Kiosk_DefaultMetaDesc";
 
@@ -14865,9 +14873,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_DefaultMetaDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
             /// </summary>
             public const string Kiosk_DefaultMetaDesc = "Kiosk_DefaultMetaDesc";
 
@@ -15153,9 +15161,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_SeoMetaDescFormat</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Kiosk, item catalog, interactive ordering and fiscal payment.&quot;
             /// </summary>
             public const string Kiosk_SeoMetaDescFormat = "Kiosk_SeoMetaDescFormat";
 
@@ -15241,9 +15249,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_TitleSelfService</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск самообслуживания&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O‘z-o‘ziga xizmat ko‘rsatish kioski&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Self-service kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
             /// </summary>
             public const string Kiosk_TitleSelfService = "Kiosk_TitleSelfService";
 
@@ -15281,9 +15289,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_UniversalKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный AI-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal AI Kiosk&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal AI Kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Kiosk&quot;
             /// </summary>
             public const string Kiosk_UniversalKiosk = "Kiosk_UniversalKiosk";
 
@@ -15409,9 +15417,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_DefaultMetaDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
             /// </summary>
             public const string KioskDefaultMetaDesc = "Kiosk_DefaultMetaDesc";
 
@@ -15697,9 +15705,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_SeoMetaDescFormat</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Kiosk, item catalog, interactive ordering and fiscal payment.&quot;
             /// </summary>
             public const string KioskSeoMetaDescFormat = "Kiosk_SeoMetaDescFormat";
 
@@ -15785,9 +15793,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_TitleSelfService</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск самообслуживания&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O‘z-o‘ziga xizmat ko‘rsatish kioski&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Self-service kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
             /// </summary>
             public const string KioskTitleSelfService = "Kiosk_TitleSelfService";
 
@@ -15825,9 +15833,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_UniversalKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный AI-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal AI Kiosk&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal AI Kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Kiosk&quot;
             /// </summary>
             public const string KioskUniversalKiosk = "Kiosk_UniversalKiosk";
 
@@ -16089,9 +16097,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_SeoMetaDescFormat</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Kiosk, item catalog, interactive ordering and fiscal payment.&quot;
             /// </summary>
             public const string SeoMetaDescFormat = "Kiosk_SeoMetaDescFormat";
 
@@ -16217,9 +16225,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_TitleSelfService</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск самообслуживания&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O‘z-o‘ziga xizmat ko‘rsatish kioski&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Self-service kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
             /// </summary>
             public const string TitleSelfService = "Kiosk_TitleSelfService";
 
@@ -16257,9 +16265,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Kiosk_UniversalKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный AI-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal AI Kiosk&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal AI Kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Kiosk&quot;
             /// </summary>
             public const string UniversalKiosk = "Kiosk_UniversalKiosk";
 
@@ -16376,33 +16384,33 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_BtnKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kioskni ochish&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
             /// </summary>
             public const string About_BtnKiosk = "About_BtnKiosk";
 
             /// <summary>
             /// Key: <c>About_BtnTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Terminal&quot;
             /// </summary>
             public const string About_BtnTerminal = "About_BtnTerminal";
 
             /// <summary>
             /// Key: <c>About_PillarKioskDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (сенсорные киоски и терминалы), моментальная фискальная печать и синхронизация в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (sensorli kiosklar va terminallar), fiskal chop etish va real vaqt sinxronizatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of sale (touch kiosks and terminals), instant fiscal printing and real-time sync.&quot;
             /// </summary>
             public const string About_PillarKioskDesc = "About_PillarKioskDesc";
 
             /// <summary>
             /// Key: <c>About_PillarKioskTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски и терминалы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar va terminallar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks &amp;amp; Terminals&quot;
             /// </summary>
             public const string About_PillarKioskTitle = "About_PillarKioskTitle";
 
@@ -16440,9 +16448,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_PillarsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitekturaning to'rt ustuni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of architecture&quot;
             /// </summary>
             public const string About_PillarsTitle = "About_PillarsTitle";
 
@@ -16480,17 +16488,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_ValueFpsDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Современное веб- и нативное приложение на .NET 10 с быстрым откликом и адаптивной сеткой.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 asosidagi tezkor va moslashuvchan zamonaviy veb hamda nativ ilova.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Modern web and native .NET 10 application with fast response and adaptive layout.&quot;
             /// </summary>
             public const string About_ValueFpsDesc = "About_ValueFpsDesc";
 
             /// <summary>
             /// Key: <c>About_ValueFpsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Плавный интерфейс и аппаратное ускорение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Silliq interfeys va apparat tezlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smooth Interface &amp;amp; Hardware Acceleration&quot;
             /// </summary>
             public const string About_ValueFpsTitle = "About_ValueFpsTitle";
 
@@ -16552,9 +16560,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_VideoCaption</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков и аналитики.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, kiosklar va tahlil modullari ishlashini namoyish etish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, kiosks and analytics.&quot;
             /// </summary>
             public const string About_VideoCaption = "About_VideoCaption";
 
@@ -16568,9 +16576,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_VideoTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma imkoniyatlari sharhi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of platform capabilities&quot;
             /// </summary>
             public const string About_VideoTitle = "About_VideoTitle";
 
@@ -16592,9 +16600,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>AboutBadge</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;О платформе Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi haqida&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Socratic Platform&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Об экосистеме&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim haqida&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Ecosystem&quot;
             /// </summary>
             public const string AboutBadge = "AboutBadge";
 
@@ -16608,41 +16616,41 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_BtnKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kioskni ochish&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
             /// </summary>
             public const string AboutBtnKiosk = "About_BtnKiosk";
 
             /// <summary>
             /// Key: <c>About_BtnTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Terminal&quot;
             /// </summary>
             public const string AboutBtnTerminal = "About_BtnTerminal";
 
             /// <summary>
             /// Key: <c>AboutPageTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;О платформе — Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma haqida — Socratic&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Platform — Socratic&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Об экосистеме — Socratic&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim haqida — Socratic&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;About Ecosystem — Socratic&quot;
             /// </summary>
             public const string AboutPageTitle = "AboutPageTitle";
 
             /// <summary>
             /// Key: <c>About_PillarKioskDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (сенсорные киоски и терминалы), моментальная фискальная печать и синхронизация в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (sensorli kiosklar va terminallar), fiskal chop etish va real vaqt sinxronizatsiyasi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of sale (touch kiosks and terminals), instant fiscal printing and real-time sync.&quot;
             /// </summary>
             public const string AboutPillarKioskDesc = "About_PillarKioskDesc";
 
             /// <summary>
             /// Key: <c>About_PillarKioskTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски и терминалы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar va terminallar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks &amp;amp; Terminals&quot;
             /// </summary>
             public const string AboutPillarKioskTitle = "About_PillarKioskTitle";
 
@@ -16680,9 +16688,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_PillarsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitekturaning to'rt ustuni&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of architecture&quot;
             /// </summary>
             public const string AboutPillarsTitle = "About_PillarsTitle";
 
@@ -16720,9 +16728,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>AboutSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic объединяет AI-зрение, смарт-киоски, 3D WebGL и 28 универсальных режимов взаимодействия в единой высокопроизводительной среде для автоматизации ритейла, сферы услуг и HoReCa.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic AI-ko'rish, smart-kiosklar, 3D WebGL va 28 ta universal rejimni yagona muhitda birlashtiradi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic unites AI vision, smart kiosks, 3D WebGL and 28 universal interaction modes in a single high-performance environment.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
             /// </summary>
             public const string AboutSubtitle = "AboutSubtitle";
 
@@ -16736,33 +16744,33 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>AboutTitleMain</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Интеллектуальная экосистема&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intellektual ekotizim&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Intelligent ecosystem&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Omnikanal kross-platformali ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem&quot;
             /// </summary>
             public const string AboutTitleMain = "AboutTitleMain";
 
             /// <summary>
             /// Key: <c>AboutTitleSub</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;для омниканального бизнеса и торговли&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;omnichannel biznes va savdo uchun&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;for omnichannel business and commerce&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;для бизнеса и клиентов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes va mijozlar uchun&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;for business and customers&quot;
             /// </summary>
             public const string AboutTitleSub = "AboutTitleSub";
 
             /// <summary>
             /// Key: <c>About_ValueFpsDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Современное веб- и нативное приложение на .NET 10 с быстрым откликом и адаптивной сеткой.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 asosidagi tezkor va moslashuvchan zamonaviy veb hamda nativ ilova.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Modern web and native .NET 10 application with fast response and adaptive layout.&quot;
             /// </summary>
             public const string AboutValueFpsDesc = "About_ValueFpsDesc";
 
             /// <summary>
             /// Key: <c>About_ValueFpsTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Плавный интерфейс и аппаратное ускорение&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Silliq interfeys va apparat tezlashtirish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smooth Interface &amp;amp; Hardware Acceleration&quot;
             /// </summary>
             public const string AboutValueFpsTitle = "About_ValueFpsTitle";
 
@@ -16824,9 +16832,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_VideoCaption</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков и аналитики.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, kiosklar va tahlil modullari ishlashini namoyish etish.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, kiosks and analytics.&quot;
             /// </summary>
             public const string AboutVideoCaption = "About_VideoCaption";
 
@@ -16840,9 +16848,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>About_VideoTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma imkoniyatlari sharhi&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of platform capabilities&quot;
             /// </summary>
             public const string AboutVideoTitle = "About_VideoTitle";
 
@@ -18424,9 +18432,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_CatPos</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (POS)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (POS)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Sale (POS)&quot;
             /// </summary>
             public const string Help_CatPos = "Help_CatPos";
 
@@ -18496,17 +18504,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в полноэкранном режиме (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и POS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va POS to'lovlarini ulaydi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk mode, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects POS payments.&quot;
             /// </summary>
             public const string Help_FaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
 
             /// <summary>
             /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска?&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch kiosk mode?&quot;
             /// </summary>
             public const string Help_FaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
 
@@ -18528,25 +18536,25 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Локальное состояние заказа сохраняется в кэше устройства, а при восстановлении связи данные синхронизируются. Для банковского эквайринга (POS), динамических QR-платежей и отправки чеков в Soliq ОФД требуется подключение к интернету.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmaning mahalliy holati qurilma keshida saqlanadi va aloqa tiklangach sinxronlanadi. Karta ekvayringi (POS), dinamik QR-to'lovlar va Soliq OFD fiskallashtirish uchun internet aloqasi talab qilinadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Local order state is cached on the device and synced once connection returns. Internet access is required for card POS acquiring, dynamic QR payments, and Soliq OFD fiscalization.&quot;
             /// </summary>
             public const string Help_FaqOfflineAnswer = "Help_FaqOfflineAnswer";
 
             /// <summary>
             /// Key: <c>Help_FaqOfflineTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как точка продаж работает при перебоях со связью?&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aloqa uzilganda savdo nuqtasi qanday ishlaydi?&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;How does a point of sale handle connection drops?&quot;
             /// </summary>
             public const string Help_FaqOfflineTitle = "Help_FaqOfflineTitle";
 
             /// <summary>
             /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS orqali bank kartalari (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
             /// </summary>
             public const string Help_FaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
 
@@ -18728,9 +18736,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_CatPos</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (POS)&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (POS)&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Sale (POS)&quot;
             /// </summary>
             public const string HelpCatPos = "Help_CatPos";
 
@@ -18800,17 +18808,17 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в полноэкранном режиме (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и POS.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va POS to'lovlarini ulaydi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk mode, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects POS payments.&quot;
             /// </summary>
             public const string HelpFaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
 
             /// <summary>
             /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска?&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch kiosk mode?&quot;
             /// </summary>
             public const string HelpFaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
 
@@ -18832,25 +18840,25 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Локальное состояние заказа сохраняется в кэше устройства, а при восстановлении связи данные синхронизируются. Для банковского эквайринга (POS), динамических QR-платежей и отправки чеков в Soliq ОФД требуется подключение к интернету.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmaning mahalliy holati qurilma keshida saqlanadi va aloqa tiklangach sinxronlanadi. Karta ekvayringi (POS), dinamik QR-to'lovlar va Soliq OFD fiskallashtirish uchun internet aloqasi talab qilinadi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Local order state is cached on the device and synced once connection returns. Internet access is required for card POS acquiring, dynamic QR payments, and Soliq OFD fiscalization.&quot;
             /// </summary>
             public const string HelpFaqOfflineAnswer = "Help_FaqOfflineAnswer";
 
             /// <summary>
             /// Key: <c>Help_FaqOfflineTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Как точка продаж работает при перебоях со связью?&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aloqa uzilganda savdo nuqtasi qanday ishlaydi?&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;How does a point of sale handle connection drops?&quot;
             /// </summary>
             public const string HelpFaqOfflineTitle = "Help_FaqOfflineTitle";
 
             /// <summary>
             /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS orqali bank kartalari (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
             /// </summary>
             public const string HelpFaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
 
@@ -18888,9 +18896,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>HelpSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрые ответы по настройке кассовых аппаратов, смарт-киосков, AI-модулей, эквайринга и интеграции торгового оборудования.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa apparatlari, smart-kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick answers on setting up POS terminals, smart kiosks, AI modules, acquiring, and retail equipment integration.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрые ответы по настройке терминалов, киосков, AI-модулей, эквайринга и интеграции торгового оборудования.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar, kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick answers on setting up terminals, kiosks, AI modules, acquiring, and retail equipment integration.&quot;
             /// </summary>
             public const string HelpSubtitle = "HelpSubtitle";
 
@@ -18968,9 +18976,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingAiFlagshipTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-сервис &amp;amp; AI Доступ&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn xizmat &amp;amp; AI ruxsat&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Online Service &amp;amp; AI Access&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;SaaS-сервисы и доступ к AI&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlari va AI ruxsat&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS Services &amp;amp; AI Access&quot;
             /// </summary>
             public const string LandingAiFlagshipTitle = "LandingAiFlagshipTitle";
 
@@ -19104,8 +19112,8 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingFlagshipSubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых столпа коммерческой автоматизации Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых направления коммерческой автоматизации&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tijorat avtomatlashtirishining to'rtta asosiy yo'nalishi&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Top four foundational scenarios powering enterprise automation&quot;
             /// </summary>
             public const string LandingFlagshipSubtitle = "LandingFlagshipSubtitle";
@@ -19136,9 +19144,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingHeroTitleOperatingSystem</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная операционная система торговли и услуг&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo va xizmatlarning universal operatsion tizimi&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal operating system for commerce and services&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers&quot;
             /// </summary>
             public const string LandingHeroTitleOperatingSystem = "LandingHeroTitleOperatingSystem";
 
@@ -19200,9 +19208,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingKeywords</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, терминал, киоск, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, terminal, kiosk, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, terminal, kiosk, POS, QR payments, fiscalization, Soliq OFD, space booking, retail, services&quot;
             /// </summary>
             public const string LandingKeywords = "LandingKeywords";
 
@@ -19248,9 +19256,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingMetaDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — unified platform for retail sales, services, space booking, and payment processing.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
             /// </summary>
             public const string LandingMetaDesc = "LandingMetaDesc";
 
@@ -19272,9 +19280,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingMetricOfflineDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономная работа&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtonom ishlash&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous offline work&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Непрерывная работа&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzluksiz ishlash&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Continuous operation&quot;
             /// </summary>
             public const string LandingMetricOfflineDesc = "LandingMetricOfflineDesc";
 
@@ -19336,9 +19344,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingPageTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — Универсальная экосистема для бизнеса&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — Biznes uchun universal ekotizim&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Universal Business Ecosystem&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — омниканальная кроссплатформенная экосистема для бизнеса и клиентов&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — biznes va mijozlar uchun omnikanal kross-platformali ekotizim&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Omnichannel Cross-Platform Ecosystem for Business and Customers&quot;
             /// </summary>
             public const string LandingPageTitle = "LandingPageTitle";
 
@@ -19448,9 +19456,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingPillPosKiosks</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы &amp;amp; Киоски&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar &amp;amp; Kiosklar&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;POS &amp;amp; Kiosks&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминалы &amp;amp; Киоски&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar &amp;amp; Kiosklar&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminals &amp;amp; Kiosks&quot;
             /// </summary>
             public const string LandingPillPosKiosks = "LandingPillPosKiosks";
 
@@ -19472,9 +19480,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingPillSmartKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
             /// </summary>
             public const string LandingPillSmartKiosk = "LandingPillSmartKiosk";
 
@@ -19536,16 +19544,16 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingRetailFlagshipDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрое оформление заказа.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va buyurtmani chaqqon rasmiylashtirish.&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.&quot;
             /// </summary>
             public const string LandingRetailFlagshipDesc = "LandingRetailFlagshipDesc";
 
             /// <summary>
             /// Key: <c>LandingRetailFlagshipTitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Экспресс-касса&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor kassa&quot;<br/>
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Быстрое оформление&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor rasmiylashtirish&quot;<br/>
             /// &#x1F1EC;&#x1F1E7; EN: &quot;Catalog &amp;amp; Fast Checkout&quot;
             /// </summary>
             public const string LandingRetailFlagshipTitle = "LandingRetailFlagshipTitle";
@@ -19616,9 +19624,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>LandingUxModesDesc</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — yagona kengaytiriladigan yadroda 28 ta tijorat modeli birlashtirilgan.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — 28 distinct commercial interaction models unified in a single engine.&quot;
             /// </summary>
             public const string LandingUxModesDesc = "LandingUxModesDesc";
 
@@ -22333,9 +22341,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_EmptySubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from POS terminal, kiosk, and storefront will appear here in real-time.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала и киоска появятся здесь в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from terminal and kiosk will appear here in real-time.&quot;
             /// </summary>
             public const string EmptySubtitle = "Orders_EmptySubtitle";
 
@@ -22373,9 +22381,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_GoToTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Cashier Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
             /// </summary>
             public const string GoToTerminal = "Orders_GoToTerminal";
 
@@ -23221,9 +23229,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_EmptySubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from POS terminal, kiosk, and storefront will appear here in real-time.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала и киоска появятся здесь в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from terminal and kiosk will appear here in real-time.&quot;
             /// </summary>
             public const string Orders_EmptySubtitle = "Orders_EmptySubtitle";
 
@@ -23253,9 +23261,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_GoToTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Cashier Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
             /// </summary>
             public const string Orders_GoToTerminal = "Orders_GoToTerminal";
 
@@ -23477,9 +23485,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_EmptySubtitle</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from POS terminal, kiosk, and storefront will appear here in real-time.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала и киоска появятся здесь в реальном времени.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from terminal and kiosk will appear here in real-time.&quot;
             /// </summary>
             public const string OrdersEmptySubtitle = "Orders_EmptySubtitle";
 
@@ -23509,9 +23517,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Orders_GoToTerminal</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Cashier Terminal&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
             /// </summary>
             public const string OrdersGoToTerminal = "Orders_GoToTerminal";
 
@@ -27484,9 +27492,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Store_OpenSmartKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть смарт-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kioskni ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open smart kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open kiosk&quot;
             /// </summary>
             public const string OpenSmartKiosk = "Store_OpenSmartKiosk";
 
@@ -27724,9 +27732,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Store_OpenSmartKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть смарт-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kioskni ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open smart kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open kiosk&quot;
             /// </summary>
             public const string Store_OpenSmartKiosk = "Store_OpenSmartKiosk";
 
@@ -28012,9 +28020,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Store_OpenSmartKiosk</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть смарт-киоск&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kioskni ochish&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open smart kiosk&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Open kiosk&quot;
             /// </summary>
             public const string StoreOpenSmartKiosk = "Store_OpenSmartKiosk";
 
@@ -28355,9 +28363,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Org_DescPro</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.&quot;
             /// </summary>
             public const string DescPro = "Org_DescPro";
 
@@ -28611,9 +28619,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Org_DescPro</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.&quot;
             /// </summary>
             public const string Org_DescPro = "Org_DescPro";
 
@@ -28947,9 +28955,9 @@ namespace Assets.Constants
 
             /// <summary>
             /// Key: <c>Org_DescPro</c><br/>
-            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
-            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
-            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+            /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.&quot;<br/>
+            /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.&quot;<br/>
+            /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.&quot;
             /// </summary>
             public const string OrgDescPro = "Org_DescPro";
 
@@ -33181,33 +33189,33 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_BtnKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kioskni ochish&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
         /// </summary>
         public const string About_BtnKiosk = "About_BtnKiosk";
 
         /// <summary>
         /// Key: <c>About_BtnTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Terminal&quot;
         /// </summary>
         public const string About_BtnTerminal = "About_BtnTerminal";
 
         /// <summary>
         /// Key: <c>About_PillarKioskDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (сенсорные киоски и терминалы), моментальная фискальная печать и синхронизация в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (sensorli kiosklar va terminallar), fiskal chop etish va real vaqt sinxronizatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of sale (touch kiosks and terminals), instant fiscal printing and real-time sync.&quot;
         /// </summary>
         public const string About_PillarKioskDesc = "About_PillarKioskDesc";
 
         /// <summary>
         /// Key: <c>About_PillarKioskTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски и терминалы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar va terminallar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks &amp;amp; Terminals&quot;
         /// </summary>
         public const string About_PillarKioskTitle = "About_PillarKioskTitle";
 
@@ -33245,9 +33253,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_PillarsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitekturaning to'rt ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of architecture&quot;
         /// </summary>
         public const string About_PillarsTitle = "About_PillarsTitle";
 
@@ -33285,17 +33293,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_ValueFpsDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Современное веб- и нативное приложение на .NET 10 с быстрым откликом и адаптивной сеткой.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 asosidagi tezkor va moslashuvchan zamonaviy veb hamda nativ ilova.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Modern web and native .NET 10 application with fast response and adaptive layout.&quot;
         /// </summary>
         public const string About_ValueFpsDesc = "About_ValueFpsDesc";
 
         /// <summary>
         /// Key: <c>About_ValueFpsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Плавный интерфейс и аппаратное ускорение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Silliq interfeys va apparat tezlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smooth Interface &amp;amp; Hardware Acceleration&quot;
         /// </summary>
         public const string About_ValueFpsTitle = "About_ValueFpsTitle";
 
@@ -33357,9 +33365,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_VideoCaption</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков и аналитики.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, kiosklar va tahlil modullari ishlashini namoyish etish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, kiosks and analytics.&quot;
         /// </summary>
         public const string About_VideoCaption = "About_VideoCaption";
 
@@ -33373,9 +33381,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_VideoTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma imkoniyatlari sharhi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of platform capabilities&quot;
         /// </summary>
         public const string About_VideoTitle = "About_VideoTitle";
 
@@ -33397,9 +33405,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>AboutBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;О платформе Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi haqida&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Socratic Platform&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Об экосистеме&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim haqida&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Ecosystem&quot;
         /// </summary>
         public const string AboutBadge = "AboutBadge";
 
@@ -33413,41 +33421,41 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_BtnKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Демо-Киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo-Kioskni ochish&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kioskni ochish&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Kiosk&quot;
         /// </summary>
         public const string AboutBtnKiosk = "About_BtnKiosk";
 
         /// <summary>
         /// Key: <c>About_BtnTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;POS Терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Terminal&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть Demo Терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Terminal&quot;
         /// </summary>
         public const string AboutBtnTerminal = "About_BtnTerminal";
 
         /// <summary>
         /// Key: <c>AboutPageTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;О платформе — Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma haqida — Socratic&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Platform — Socratic&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Об экосистеме — Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ekotizim haqida — Socratic&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;About Ecosystem — Socratic&quot;
         /// </summary>
         public const string AboutPageTitle = "AboutPageTitle";
 
         /// <summary>
         /// Key: <c>About_PillarKioskDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch self-service kiosks, POS cashier terminals and instant fiscal printing.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (сенсорные киоски и терминалы), моментальная фискальная печать и синхронизация в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (sensorli kiosklar va terminallar), fiskal chop etish va real vaqt sinxronizatsiyasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of sale (touch kiosks and terminals), instant fiscal printing and real-time sync.&quot;
         /// </summary>
         public const string AboutPillarKioskDesc = "About_PillarKioskDesc";
 
         /// <summary>
         /// Key: <c>About_PillarKioskTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоски и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kiosklar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosks &amp;amp; POS&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски и терминалы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar va terminallar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks &amp;amp; Terminals&quot;
         /// </summary>
         public const string AboutPillarKioskTitle = "About_PillarKioskTitle";
 
@@ -33485,9 +33493,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_PillarsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic arxitekturasining to'rt ustuni&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of Socratic architecture&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре столпа архитектуры&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Arxitekturaning to'rt ustuni&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Four pillars of architecture&quot;
         /// </summary>
         public const string AboutPillarsTitle = "About_PillarsTitle";
 
@@ -33525,9 +33533,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>AboutSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic объединяет AI-зрение, смарт-киоски, 3D WebGL и 28 универсальных режимов взаимодействия в единой высокопроизводительной среде для автоматизации ритейла, сферы услуг и HoReCa.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic AI-ko'rish, smart-kiosklar, 3D WebGL va 28 ta universal rejimni yagona muhitda birlashtiradi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic unites AI vision, smart kiosks, 3D WebGL and 28 universal interaction modes in a single high-performance environment.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
         /// </summary>
         public const string AboutSubtitle = "AboutSubtitle";
 
@@ -33541,33 +33549,33 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>AboutTitleMain</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интеллектуальная экосистема&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Intellektual ekotizim&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Intelligent ecosystem&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Omnikanal kross-platformali ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem&quot;
         /// </summary>
         public const string AboutTitleMain = "AboutTitleMain";
 
         /// <summary>
         /// Key: <c>AboutTitleSub</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;для омниканального бизнеса и торговли&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;omnichannel biznes va savdo uchun&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;for omnichannel business and commerce&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;для бизнеса и клиентов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes va mijozlar uchun&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;for business and customers&quot;
         /// </summary>
         public const string AboutTitleSub = "AboutTitleSub";
 
         /// <summary>
         /// Key: <c>About_ValueFpsDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Blazor Web App on .NET 10 with InteractiveAuto and instant hydration.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Современное веб- и нативное приложение на .NET 10 с быстрым откликом и адаптивной сеткой.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;.NET 10 asosidagi tezkor va moslashuvchan zamonaviy veb hamda nativ ilova.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Modern web and native .NET 10 application with fast response and adaptive layout.&quot;
         /// </summary>
         public const string AboutValueFpsDesc = "About_ValueFpsDesc";
 
         /// <summary>
         /// Key: <c>About_ValueFpsTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Zero-Flicker &amp;amp; Аппаратное ускорение&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Zero-Flicker &amp;amp; Uskunaviy tezlashtirish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Zero-Flicker &amp;amp; Hardware Acceleration&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Плавный интерфейс и аппаратное ускорение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Silliq interfeys va apparat tezlashtirish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smooth Interface &amp;amp; Hardware Acceleration&quot;
         /// </summary>
         public const string AboutValueFpsTitle = "About_ValueFpsTitle";
 
@@ -33629,9 +33637,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_VideoCaption</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, self-service kiosks and analytics.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрация работы модулей компьютерного зрения, киосков и аналитики.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kompyuter ko'rishi, kiosklar va tahlil modullari ishlashini namoyish etish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration of computer vision modules, kiosks and analytics.&quot;
         /// </summary>
         public const string AboutVideoCaption = "About_VideoCaption";
 
@@ -33645,9 +33653,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>About_VideoTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasi imkoniyatlari sharhi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of Socratic platform capabilities&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Обзор возможностей платформы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma imkoniyatlari sharhi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Overview of platform capabilities&quot;
         /// </summary>
         public const string AboutVideoTitle = "About_VideoTitle";
 
@@ -35165,9 +35173,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>B2bDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, restaurant, service salon, or chain in a single unified system.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Подключите розничный магазин, заведение, сервис или сеть в единую систему: точки продаж (терминал и киоск), 28 сценариев продуктов и фискализация Soliq ОФД.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Do'kon, muassasa, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang: savdo nuqtalari (terminal va kiosk), 28 ta mahsulot ssenariysi va Soliq OFD fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Connect your retail store, venue, service business, or chain into a single system: points of sale (terminal and kiosk), 28 product scenarios, and Soliq OFD fiscalization.&quot;
         /// </summary>
         public const string B2bDesc = "B2bDesc";
 
@@ -36597,17 +36605,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Chat_WelcomeOwners</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), kiosks, commerce automation&quot;
         /// </summary>
         public const string Chat_WelcomeOwners = "Chat_WelcomeOwners";
 
         /// <summary>
         /// Key: <c>Chat_WelcomeStaff</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с кассой, заказами, каталогом, оплатами и POS-терминалами&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;cash register, orders, product catalog, payments and POS terminals&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с заказами, каталогом, оплатами и POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;buyurtmalar, katalog, to'lovlar va POS bilan ishlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;orders, product catalog, payments and POS&quot;
         /// </summary>
         public const string Chat_WelcomeStaff = "Chat_WelcomeStaff";
 
@@ -36701,17 +36709,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Chat_WelcomeOwners</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), smart kiosks, commerce automation&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;launching and choosing retail workflows (28 UX modes), kiosks, commerce automation&quot;
         /// </summary>
         public const string ChatWelcomeOwners = "Chat_WelcomeOwners";
 
         /// <summary>
         /// Key: <c>Chat_WelcomeStaff</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с кассой, заказами, каталогом, оплатами и POS-терминалами&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;cash register, orders, product catalog, payments and POS terminals&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;работа с заказами, каталогом, оплатами и POS&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;buyurtmalar, katalog, to'lovlar va POS bilan ishlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;orders, product catalog, payments and POS&quot;
         /// </summary>
         public const string ChatWelcomeStaff = "Chat_WelcomeStaff";
 
@@ -39777,6 +39785,14 @@ namespace Assets.Constants
         public const string DownloadAndroid = "DownloadAndroid";
 
         /// <summary>
+        /// Key: <c>DownloadBadge</c><br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кроссплатформенное приложение&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kross-platformali ilova&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cross-Platform Application&quot;
+        /// </summary>
+        public const string DownloadBadge = "DownloadBadge";
+
+        /// <summary>
         /// Key: <c>DownloadButton</c><br/>
         /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Yuklab olish&quot;<br/>
@@ -39802,17 +39818,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>DownloadSubTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Доступ к Socratic в любом месте. Поддержка десктопных, мобильных и веб-платформ.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ga har qanday joyda kiring. Ish stoli, mobil va veb-platformalar uchun qo'llab-quvvatlash.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Access Socratic anywhere. Multi-platform support for Desktop, Mobile, and Web.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое кроссплатформенное приложение для десктопных, мобильных и веб-платформ.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ish stoli, mobil va veb-platformalar uchun yagona kross-platformali ilova.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;A single cross-platform application for Desktop, Mobile, and Web.&quot;
         /// </summary>
         public const string DownloadSubTitle = "DownloadSubTitle";
 
         /// <summary>
         /// Key: <c>DownloadTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать Socratic UI&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic UI-ni yuklab olish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic UI&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скачать Socratic&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic-ni yuklab olish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Download Socratic&quot;
         /// </summary>
         public const string DownloadTitle = "DownloadTitle";
 
@@ -40138,9 +40154,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Footer_Tagline</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers.&quot;
         /// </summary>
         public const string Footer_Tagline = "Footer_Tagline";
 
@@ -40186,8 +40202,8 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>FooterCommunity</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Community &amp;amp; Support&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Community &amp;amp; Support&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сообщество и поддержка&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Hamjamiyat va yordam&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Community &amp;amp; Support&quot;
         /// </summary>
         public const string FooterCommunity = "FooterCommunity";
@@ -40218,9 +40234,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Footer_Tagline</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal omnichannel AI ecosystem for business, commerce, smart kiosks, and computer vision.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers.&quot;
         /// </summary>
         public const string FooterTagline = "Footer_Tagline";
 
@@ -41098,9 +41114,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_CatPos</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (POS)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (POS)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Sale (POS)&quot;
         /// </summary>
         public const string Help_CatPos = "Help_CatPos";
 
@@ -41170,17 +41186,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в полноэкранном режиме (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и POS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va POS to'lovlarini ulaydi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk mode, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects POS payments.&quot;
         /// </summary>
         public const string Help_FaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
 
         /// <summary>
         /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch kiosk mode?&quot;
         /// </summary>
         public const string Help_FaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
 
@@ -41202,25 +41218,25 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Локальное состояние заказа сохраняется в кэше устройства, а при восстановлении связи данные синхронизируются. Для банковского эквайринга (POS), динамических QR-платежей и отправки чеков в Soliq ОФД требуется подключение к интернету.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmaning mahalliy holati qurilma keshida saqlanadi va aloqa tiklangach sinxronlanadi. Karta ekvayringi (POS), dinamik QR-to'lovlar va Soliq OFD fiskallashtirish uchun internet aloqasi talab qilinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Local order state is cached on the device and synced once connection returns. Internet access is required for card POS acquiring, dynamic QR payments, and Soliq OFD fiscalization.&quot;
         /// </summary>
         public const string Help_FaqOfflineAnswer = "Help_FaqOfflineAnswer";
 
         /// <summary>
         /// Key: <c>Help_FaqOfflineTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как точка продаж работает при перебоях со связью?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aloqa uzilganda savdo nuqtasi qanday ishlaydi?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;How does a point of sale handle connection drops?&quot;
         /// </summary>
         public const string Help_FaqOfflineTitle = "Help_FaqOfflineTitle";
 
         /// <summary>
         /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS orqali bank kartalari (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
         /// </summary>
         public const string Help_FaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
 
@@ -41402,9 +41418,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_CatPos</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы и POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar va POS&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash registers &amp;amp; POS&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точки продаж (POS)&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo nuqtalari (POS)&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Points of Sale (POS)&quot;
         /// </summary>
         public const string HelpCatPos = "Help_CatPos";
 
@@ -41474,17 +41490,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_FaqKioskLaunchAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects the payment terminal.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Для запуска киоска перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в полноэкранном режиме (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и POS.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va POS to'lovlarini ulaydi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;To launch kiosk mode, go to /kiosk/{tenantId}. The kiosk automatically syncs the menu and connects POS payments.&quot;
         /// </summary>
         public const string HelpFaqKioskLaunchAnswer = "Help_FaqKioskLaunchAnswer";
 
         /// <summary>
         /// Key: <c>Help_FaqKioskLaunchTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска самообслуживания?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch self-service kiosk mode?&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как запустить режим киоска?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk rejimini qanday ishga tushirish mumkin?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;How to launch kiosk mode?&quot;
         /// </summary>
         public const string HelpFaqKioskLaunchTitle = "Help_FaqKioskLaunchTitle";
 
@@ -41506,25 +41522,25 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Help_FaqOfflineAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Yes. Socratic uses a local database with Outbox Pattern background sync. The cashier continues issuing receipts when offline.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Локальное состояние заказа сохраняется в кэше устройства, а при восстановлении связи данные синхронизируются. Для банковского эквайринга (POS), динамических QR-платежей и отправки чеков в Soliq ОФД требуется подключение к интернету.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Buyurtmaning mahalliy holati qurilma keshida saqlanadi va aloqa tiklangach sinxronlanadi. Karta ekvayringi (POS), dinamik QR-to'lovlar va Soliq OFD fiskallashtirish uchun internet aloqasi talab qilinadi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Local order state is cached on the device and synced once connection returns. Internet access is required for card POS acquiring, dynamic QR payments, and Soliq OFD fiscalization.&quot;
         /// </summary>
         public const string HelpFaqOfflineAnswer = "Help_FaqOfflineAnswer";
 
         /// <summary>
         /// Key: <c>Help_FaqOfflineTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Может ли касса работать в режиме офлайн без интернета?&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa internetsiz oflayn rejimda ishlay oladimi?&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Can the cash register work in offline mode without internet?&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Как точка продаж работает при перебоях со связью?&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Aloqa uzilganda savdo nuqtasi qanday ishlaydi?&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;How does a point of sale handle connection drops?&quot;
         /// </summary>
         public const string HelpFaqOfflineTitle = "Help_FaqOfflineTitle";
 
         /// <summary>
         /// Key: <c>Help_FaqPaymentsAnswer</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS terminals (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа поддерживает оплату наличными, банковскими картами через POS (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Platforma naqd pul, POS orqali bank kartalari (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;The platform supports cash, bank cards via POS (Humo, Uzcard, Visa, MasterCard), dynamic QR payments and bonus points.&quot;
         /// </summary>
         public const string HelpFaqPaymentsAnswer = "Help_FaqPaymentsAnswer";
 
@@ -41562,9 +41578,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>HelpSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрые ответы по настройке кассовых аппаратов, смарт-киосков, AI-модулей, эквайринга и интеграции торгового оборудования.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa apparatlari, smart-kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick answers on setting up POS terminals, smart kiosks, AI modules, acquiring, and retail equipment integration.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Быстрые ответы по настройке терминалов, киосков, AI-модулей, эквайринга и интеграции торгового оборудования.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar, kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Quick answers on setting up terminals, kiosks, AI modules, acquiring, and retail equipment integration.&quot;
         /// </summary>
         public const string HelpSubtitle = "HelpSubtitle";
 
@@ -41626,9 +41642,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>HeroBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic 2.0 • Универсальная экосистема для бизнеса&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic 2.0 • Biznes uchun universal ekotizim&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic 2.0 • Universal Business Ecosystem&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Omnikanal kross-platformali ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel Cross-Platform Ecosystem&quot;
         /// </summary>
         public const string HeroBadge = "HeroBadge";
 
@@ -41666,17 +41682,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>HeroShowroom</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Product Showroom&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Kiosk&quot;
         /// </summary>
         public const string HeroShowroom = "HeroShowroom";
 
         /// <summary>
         /// Key: <c>HeroSocraticOrg</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tariflari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Plans&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Plans&quot;
         /// </summary>
         public const string HeroSocraticOrg = "HeroSocraticOrg";
 
@@ -41690,25 +41706,25 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>HeroSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Unified platform for retail, HoReCa, services, and fintech. Touch POS terminal, smart kiosks, interactive halls, and official Soliq OFD fiscalization with 1% cashback.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
         /// </summary>
         public const string HeroSubtitle = "HeroSubtitle";
 
         /// <summary>
         /// Key: <c>HeroTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Terminal&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Terminal&quot;
         /// </summary>
         public const string HeroTerminal = "HeroTerminal";
 
         /// <summary>
         /// Key: <c>Home_DirectorySubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск или бронирования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via kiosk or make a reservation&quot;
         /// </summary>
         public const string Home_DirectorySubtitle = "Home_DirectorySubtitle";
 
@@ -41786,9 +41802,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Home_DirectorySubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск самообслуживания или бронирования&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via self-service kiosk or make a reservation&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Выберите заведение для заказа через киоск или бронирования&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk yoki bron qilish orqali buyurtma berish uchun muassasani tanlang&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a venue to order via kiosk or make a reservation&quot;
         /// </summary>
         public const string HomeDirectorySubtitle = "Home_DirectorySubtitle";
 
@@ -42426,9 +42442,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_DefaultMetaDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
         /// </summary>
         public const string Kiosk_DefaultMetaDesc = "Kiosk_DefaultMetaDesc";
 
@@ -42714,9 +42730,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_SeoMetaDescFormat</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Kiosk, item catalog, interactive ordering and fiscal payment.&quot;
         /// </summary>
         public const string Kiosk_SeoMetaDescFormat = "Kiosk_SeoMetaDescFormat";
 
@@ -42802,9 +42818,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_TitleSelfService</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск самообслуживания&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O‘z-o‘ziga xizmat ko‘rsatish kioski&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Self-service kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
         /// </summary>
         public const string Kiosk_TitleSelfService = "Kiosk_TitleSelfService";
 
@@ -42842,9 +42858,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_UniversalKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный AI-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal AI Kiosk&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal AI Kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Kiosk&quot;
         /// </summary>
         public const string Kiosk_UniversalKiosk = "Kiosk_UniversalKiosk";
 
@@ -42970,9 +42986,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_DefaultMetaDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic interactive self-service kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive kiosk: ordering, menu, multi-vertical catalog and fast payment.&quot;
         /// </summary>
         public const string KioskDefaultMetaDesc = "Kiosk_DefaultMetaDesc";
 
@@ -43258,9 +43274,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_SeoMetaDescFormat</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Self-service online kiosk, item catalog, interactive ordering and fiscal payment in the Socratic ecosystem.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;{0}. Kiosk, item catalog, interactive ordering and fiscal payment.&quot;
         /// </summary>
         public const string KioskSeoMetaDescFormat = "Kiosk_SeoMetaDescFormat";
 
@@ -43354,9 +43370,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_TitleSelfService</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск самообслуживания&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;O‘z-o‘ziga xizmat ko‘rsatish kioski&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Self-service kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
         /// </summary>
         public const string KioskTitleSelfService = "Kiosk_TitleSelfService";
 
@@ -43394,9 +43410,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Kiosk_UniversalKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный AI-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal AI Kiosk&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal AI Kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальный киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Universal kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal Kiosk&quot;
         /// </summary>
         public const string KioskUniversalKiosk = "Kiosk_UniversalKiosk";
 
@@ -43474,9 +43490,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingAiFlagshipTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Онлайн-сервис &amp;amp; AI Доступ&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Onlayn xizmat &amp;amp; AI ruxsat&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Online Service &amp;amp; AI Access&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;SaaS-сервисы и доступ к AI&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;SaaS xizmatlari va AI ruxsat&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;SaaS Services &amp;amp; AI Access&quot;
         /// </summary>
         public const string LandingAiFlagshipTitle = "LandingAiFlagshipTitle";
 
@@ -43610,8 +43626,8 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingFlagshipSubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых столпа коммерческой автоматизации Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Четыре ключевых направления коммерческой автоматизации&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tijorat avtomatlashtirishining to'rtta asosiy yo'nalishi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Top four foundational scenarios powering enterprise automation&quot;
         /// </summary>
         public const string LandingFlagshipSubtitle = "LandingFlagshipSubtitle";
@@ -43642,9 +43658,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingHeroTitleOperatingSystem</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Универсальная операционная система торговли и услуг&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Savdo va xizmatlarning universal operatsion tizimi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Universal operating system for commerce and services&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Омниканальная кроссплатформенная экосистема для бизнеса и клиентов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biznes va mijozlar uchun omnikanal kross-platformali ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Omnichannel cross-platform ecosystem for business and customers&quot;
         /// </summary>
         public const string LandingHeroTitleOperatingSystem = "LandingHeroTitleOperatingSystem";
 
@@ -43706,9 +43722,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingKeywords</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, POS terminal, QR payments, fiscalization, Soliq OFD, space booking, retail, services, Socratic&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;универсальная экосистема для бизнеса, автоматизация торговли, терминал, киоск, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;biznes uchun universal ekotizim, savdoni avtomatlashtirish, terminal, kiosk, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;universal business ecosystem, retail automation, terminal, kiosk, POS, QR payments, fiscalization, Soliq OFD, space booking, retail, services&quot;
         /// </summary>
         public const string LandingKeywords = "LandingKeywords";
 
@@ -43754,9 +43770,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingMetaDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — unified platform for retail sales, services, space booking, and payment processing.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;A unified application for organization management and customer interaction: interactive map, 28 product scenarios, points of sale (terminal and kiosk), 3D venue layouts and QR studio, payments with Soliq OFD fiscalization, analytics, and computer vision.&quot;
         /// </summary>
         public const string LandingMetaDesc = "LandingMetaDesc";
 
@@ -43778,9 +43794,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingMetricOfflineDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономная работа&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Avtonom ishlash&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous offline work&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Непрерывная работа&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Uzluksiz ishlash&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Continuous operation&quot;
         /// </summary>
         public const string LandingMetricOfflineDesc = "LandingMetricOfflineDesc";
 
@@ -43842,9 +43858,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingPageTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — Универсальная экосистема для бизнеса&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — Biznes uchun universal ekotizim&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Universal Business Ecosystem&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic — омниканальная кроссплатформенная экосистема для бизнеса и клиентов&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic — biznes va mijozlar uchun omnikanal kross-platformali ekotizim&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic — Omnichannel Cross-Platform Ecosystem for Business and Customers&quot;
         /// </summary>
         public const string LandingPageTitle = "LandingPageTitle";
 
@@ -43954,9 +43970,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingPillPosKiosks</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассы &amp;amp; Киоски&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassalar &amp;amp; Kiosklar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS &amp;amp; Kiosks&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминалы &amp;amp; Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminallar &amp;amp; Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminals &amp;amp; Kiosks&quot;
         /// </summary>
         public const string LandingPillPosKiosks = "LandingPillPosKiosks";
 
@@ -43978,9 +43994,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingPillSmartKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
         /// </summary>
         public const string LandingPillSmartKiosk = "LandingPillSmartKiosk";
 
@@ -44042,16 +44058,16 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingRetailFlagshipDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрое оформление заказа.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va buyurtmani chaqqon rasmiylashtirish.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Full SKU matrix, modifiers, inventory variants, instant search, and lightning-fast checkout.&quot;
         /// </summary>
         public const string LandingRetailFlagshipDesc = "LandingRetailFlagshipDesc";
 
         /// <summary>
         /// Key: <c>LandingRetailFlagshipTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Экспресс-касса&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor kassa&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Каталог &amp;amp; Быстрое оформление&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Katalog &amp;amp; Tezkor rasmiylashtirish&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Catalog &amp;amp; Fast Checkout&quot;
         /// </summary>
         public const string LandingRetailFlagshipTitle = "LandingRetailFlagshipTitle";
@@ -44122,9 +44138,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LandingUxModesDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant POS ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — Socratic natively unifies 28 distinct commercial interaction models in a single engine.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — 28 коммерческих моделей в едином масштабируемом ядре.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — yagona kengaytiriladigan yadroda 28 ta tijorat modeli birlashtirilgan.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;From instant restaurant ordering and hotel reservations to auctions, P2P marketplaces, and subscription billing — 28 distinct commercial interaction models unified in a single engine.&quot;
         /// </summary>
         public const string LandingUxModesDesc = "LandingUxModesDesc";
 
@@ -44202,9 +44218,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>LaunchTerminalBtn</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
         /// </summary>
         public const string LaunchTerminalBtn = "LaunchTerminalBtn";
 
@@ -46402,9 +46418,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>ms2ap</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;В Socratic мы создаем экосистему полного цикла: от смарт-киосков самообслуживания и онлайн-каталогов до складского учета, AI-аналитики и приема платежей. Наша платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic platformasida biz to'liq siklli ekotizim yaratamiz: o'z-o'ziga xizmat ko'rsatuvchi aqlli kiosklar va onlayn kataloglardan tortib ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Bizning platformamiz biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;At Socratic, we build a complete full-cycle ecosystem: from self-service smart kiosks and dynamic catalogs to inventory tracking, AI vision, and multi-currency payments. Our platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мы создаем экосистему полного цикла: от киосков и терминалов до онлайн-каталогов, складского учета, AI-аналитики и приема платежей. Платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Biz to'liq siklli ekotizim yaratamiz: kiosk va terminallardan tortib onlayn kataloglar, ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Platforma biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;We build a complete full-cycle ecosystem: from kiosks and terminals to dynamic catalogs, inventory tracking, AI vision, and multi-currency payments. The platform empowers modern businesses to streamline operations, delight customers, and accelerate growth.&quot;
         /// </summary>
         public const string Ms2ap = "ms2ap";
 
@@ -46802,9 +46818,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OpenDemoShowroom</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть витрину Demo&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo vitrinani ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Demo Showroom&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Kiosk&quot;
         /// </summary>
         public const string OpenDemoShowroom = "OpenDemoShowroom";
 
@@ -46818,17 +46834,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OpenSocraticSelfSelling</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Тарифы Socratic в Киоске&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic o'zini-o'zi sotish portali&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Self-Selling Portal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть тарифы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Plans&quot;
         /// </summary>
         public const string OpenSocraticSelfSelling = "OpenSocraticSelfSelling";
 
         /// <summary>
         /// Key: <c>OpenTerminalDemo</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Рабочее место POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS kassani ishga tushirish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Launch POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
         /// </summary>
         public const string OpenTerminalDemo = "OpenTerminalDemo";
 
@@ -47394,9 +47410,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Orders_EmptySubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from POS terminal, kiosk, and storefront will appear here in real-time.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала и киоска появятся здесь в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from terminal and kiosk will appear here in real-time.&quot;
         /// </summary>
         public const string Orders_EmptySubtitle = "Orders_EmptySubtitle";
 
@@ -47426,9 +47442,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Orders_GoToTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Cashier Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
         /// </summary>
         public const string Orders_GoToTerminal = "Orders_GoToTerminal";
 
@@ -47602,9 +47618,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Orders_EmptySubtitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from POS terminal, kiosk, and storefront will appear here in real-time.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Новые заказы из терминала и киоска появятся здесь в реальном времени.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;New orders from terminal and kiosk will appear here in real-time.&quot;
         /// </summary>
         public const string OrdersEmptySubtitle = "Orders_EmptySubtitle";
 
@@ -47634,9 +47650,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Orders_GoToTerminal</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть кассовый терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminalini ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Cashier Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminalni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open Terminal&quot;
         /// </summary>
         public const string OrdersGoToTerminal = "Orders_GoToTerminal";
 
@@ -48018,9 +48034,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Org_DescPro</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.&quot;
         /// </summary>
         public const string Org_DescPro = "Org_DescPro";
 
@@ -48362,33 +48378,33 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OrgDemoBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo • Шоурум товаров&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ommaviy namoyish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Public Demonstration&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демонстрационная организация&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish tashkiloti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demonstration Organization&quot;
         /// </summary>
         public const string OrgDemoBadge = "OrgDemoBadge";
 
         /// <summary>
         /// Key: <c>OrgDemoDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive showcase of beverages, desserts, modifiers, and instant card checkout.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивный каталог продуктов в 28 сценариях: модификаторы, весовые позиции, бронирование, подписки, доставка и фискализация Soliq ОФД.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;28 ta ssenariydagi interaktiv mahsulotlar katalogi: modifikatorlar, vaznli pozitsiyalar, bron qilish, obunalar, yetkazib berish va Soliq OFD fiskallashtirish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive product catalog across 28 scenarios: modifiers, weighed items, bookings, subscriptions, delivery, and Soliq OFD fiscalization.&quot;
         /// </summary>
         public const string OrgDemoDesc = "OrgDemoDesc";
 
         /// <summary>
         /// Key: <c>OrgDemoTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Демо-витрина ритейла, блюд и услуг&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;&amp;quot;Demo&amp;quot; qahvaxona va novvoyxona tarmog'i&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Coffee &amp;amp; Bakery Chain &amp;quot;Demo&amp;quot;&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Demo&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo tashkiloti&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Demo Organization&quot;
         /// </summary>
         public const string OrgDemoTitle = "OrgDemoTitle";
 
         /// <summary>
         /// Key: <c>Org_DescPro</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and POS terminals. Branded screensaver with your logo and food photos is active.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Third-party ads disabled on all kiosks and terminals. Branded screensaver with your logo and food photos is active.&quot;
         /// </summary>
         public const string OrgDescPro = "Org_DescPro";
 
@@ -48506,7 +48522,7 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OrgSocraticBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Организация Socratic • Self-Selling&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Официальная организация&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Rasmiy tashkilot&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Official Organization&quot;
         /// </summary>
@@ -48514,7 +48530,7 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OrgSocraticDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Платформа использует собственный интерактивный киоск для продажи своих тарифов, подписок, лицензий, POS-оборудования и модулей.&quot;<br/>
         /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff management, SaaS modules, fiscal licenses, and ecosystem connectivity.&quot;
         /// </summary>
@@ -48522,9 +48538,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>OrgSocraticTitle</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Socratic продает сама себя&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Socratic ekotizimi yadrosi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Socratic Ecosystem Core&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина тарифов и модулей&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tarif va modullar vitrinasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Tariff &amp;amp; Module Storefront&quot;
         /// </summary>
         public const string OrgSocraticTitle = "OrgSocraticTitle";
 
@@ -49698,9 +49714,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PillarKioskBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-Киоски&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-Kiosklar&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Self-Service Kiosks&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosks&quot;
         /// </summary>
         public const string PillarKioskBadge = "PillarKioskBadge";
 
@@ -49738,33 +49754,33 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PillarKioskHeading</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Автономные терминалы самообслуживания&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Autonomous Self-Ordering Terminals&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Интерактивные киоски&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Interaktiv kiosklar&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Interactive Kiosks&quot;
         /// </summary>
         public const string PillarKioskHeading = "PillarKioskHeading";
 
         /// <summary>
         /// Key: <c>PillarPosBadge</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Кассовый терминал&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa terminali&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Cash Register Terminal&quot;
         /// </summary>
         public const string PillarPosBadge = "PillarPosBadge";
 
         /// <summary>
         /// Key: <c>PillarPosDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for sellers, cashiers, and store managers.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сверхбыстрый сенсорный терминал. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Shtrix-kod skanerlash, vaznli tovarlar, bo'lib to'lash va tezkor hisob-kitob uchun o'ta tezkor sensorli terminal.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Ultra-fast touch terminal for barcoding, weighed items, split payments, and instant checkout.&quot;
         /// </summary>
         public const string PillarPosDesc = "PillarPosDesc";
 
         /// <summary>
         /// Key: <c>PillarPosFeat1</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;100% Offline-First: продажи не останавливаются при обрыве интернета&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;100% Offline-First: uninterrupted checkout without Internet connection.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Мгновенный поиск, штрихкодирование и добавление позиций в заказ&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor qidiruv, shtrix-kod skanerlash va buyurtmaga qo'shish.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Instant search, barcode scanning, and quick order entry.&quot;
         /// </summary>
         public const string PillarPosFeat1 = "PillarPosFeat1";
 
@@ -49786,9 +49802,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PillarPosHeading</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Сенсорная касса для любого формата продаж&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun sensorli kassa&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Touch POS for any sales format&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Точка продаж для любого формата&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Har qanday savdo formati uchun savdo nuqtasi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Point of Sale for any sales format&quot;
         /// </summary>
         public const string PillarPosHeading = "PillarPosHeading";
 
@@ -49818,9 +49834,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PillarRetailDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, cash register and cashier shifts.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Штрихкодирование, модификаторы, весовой товар, учет остатков на складе, точка продаж и учет смен.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, savdo nuqtasi va smenalar hisobi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Fast barcode scanning, stock balances, SKU variations, point of sale and shift tracking.&quot;
         /// </summary>
         public const string PillarRetailDesc = "PillarRetailDesc";
 
@@ -49922,9 +49938,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PlatformIOSDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad cashier desks and customer-facing displays.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Элегантное решение для точек продаж на iPad и мониторинга со смартфонов iPhone.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;iPad savdo nuqtalari va iPhone smartfonlaridan monitoring uchun qulay yechim.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Elegant solution for iPad points of sale and monitoring on iPhone.&quot;
         /// </summary>
         public const string PlatformIOSDesc = "PlatformIOSDesc";
 
@@ -49970,9 +49986,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>PlatformWindowsDesc</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen POS cashier terminal, back-office administration, and offline local cache.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Полноэкранный терминал, бэк-офис и десктопное приложение.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;To'liq ekranli terminal, bek-ofis va kompyuter ilovasi.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Full-screen terminal, back-office administration, and desktop app.&quot;
         /// </summary>
         public const string PlatformWindowsDesc = "PlatformWindowsDesc";
 
@@ -53090,9 +53106,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>ShowcaseSub</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Choose a demonstration mode and evaluate ergonomics, touch responsiveness, and zero-latency performance.&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Две демонстрационные организации: протестируйте точку продаж с каталогом продуктов или посмотрите, как платформа оформляет тарифы, подписки и оборудование через свой киоск.&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Ikki namoyish tashkiloti: mahsulotlar katalogiga ega savdo nuqtasini sinab ko'ring yoki platforma o'z kioski orqali tariflar, obunalar va uskunalarni qanday rasmiylashtirishini ko'ring.&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Two demonstration organizations: test the point of sale with a product catalog or see how the platform offers plans, subscriptions, and hardware through its kiosk.&quot;
         /// </summary>
         public const string ShowcaseSub = "ShowcaseSub";
 
@@ -53106,8 +53122,8 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>ShowroomDemo</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Витрина товаров Demo&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Mahsulotlar vitrinasi&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Demo Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Demo Kiosk&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Product Showroom Demo&quot;
         /// </summary>
         public const string ShowroomDemo = "ShowroomDemo";
@@ -53738,16 +53754,16 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>SpecOffline</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Offline-First надежность&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Offline-First ishonchliligi&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Offline-First Reliability&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Надежность системы&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Tizim ishonchliligi&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;System Reliability&quot;
         /// </summary>
         public const string SpecOffline = "SpecOffline";
 
         /// <summary>
         /// Key: <c>SpecSpeed</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость кассы&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kassa tezligi&quot;<br/>
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Скорость терминала&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal tezligi&quot;<br/>
         /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal Speed&quot;
         /// </summary>
         public const string SpecSpeed = "SpecSpeed";
@@ -53898,9 +53914,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Store_OpenSmartKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть смарт-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kioskni ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open smart kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open kiosk&quot;
         /// </summary>
         public const string Store_OpenSmartKiosk = "Store_OpenSmartKiosk";
 
@@ -54170,9 +54186,9 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>Store_OpenSmartKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть смарт-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart-kioskni ochish&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open smart kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Открыть киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kioskni ochish&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Open kiosk&quot;
         /// </summary>
         public const string StoreOpenSmartKiosk = "Store_OpenSmartKiosk";
 
@@ -54778,17 +54794,17 @@ namespace Assets.Constants
 
         /// <summary>
         /// Key: <c>TabKiosk</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Смарт-киоск&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Smart kiosk&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;Smart Kiosk&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Киоск&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Kiosk&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Kiosk&quot;
         /// </summary>
         public const string TabKiosk = "TabKiosk";
 
         /// <summary>
         /// Key: <c>TabPos</c><br/>
-        /// &#x1F1F7;&#x1F1FA; RU: &quot;Касса POS&quot;<br/>
-        /// &#x1F1FA;&#x1F1FF; UZ: &quot;POS Kassa&quot;<br/>
-        /// &#x1F1EC;&#x1F1E7; EN: &quot;POS Terminal&quot;
+        /// &#x1F1F7;&#x1F1FA; RU: &quot;Терминал&quot;<br/>
+        /// &#x1F1FA;&#x1F1FF; UZ: &quot;Terminal&quot;<br/>
+        /// &#x1F1EC;&#x1F1E7; EN: &quot;Terminal&quot;
         /// </summary>
         public const string TabPos = "TabPos";
 

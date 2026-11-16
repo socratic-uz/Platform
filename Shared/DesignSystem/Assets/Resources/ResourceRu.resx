@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -379,7 +379,7 @@
     <value>Выведите свой бизнес на новый уровень с помощью Socratic</value>
   </data>
   <data name="ms2ap" xml:space="preserve">
-    <value>В Socratic мы создаем экосистему полного цикла: от смарт-киосков самообслуживания и онлайн-каталогов до складского учета, AI-аналитики и приема платежей. Наша платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.</value>
+    <value>Мы создаем экосистему полного цикла: от киосков и терминалов до онлайн-каталогов, складского учета, AI-аналитики и приема платежей. Платформа позволяет бизнесу любого масштаба оптимизировать процессы, повысить лояльность клиентов и кратно увеличить доходы.</value>
   </data>
   <data name="ms3ah" xml:space="preserve">
     <value>Что мы предлагаем:</value>
@@ -424,10 +424,13 @@
     <value>Цвет</value>
   </data>
   <data name="DownloadTitle" xml:space="preserve">
-    <value>Скачать Socratic UI</value>
+    <value>Скачать Socratic</value>
+  </data>
+  <data name="DownloadBadge" xml:space="preserve">
+    <value>Кроссплатформенное приложение</value>
   </data>
   <data name="DownloadSubTitle" xml:space="preserve">
-    <value>Доступ к Socratic в любом месте. Поддержка десктопных, мобильных и веб-платформ.</value>
+    <value>Единое кроссплатформенное приложение для десктопных, мобильных и веб-платформ.</value>
   </data>
   <data name="QrInstantAccess" xml:space="preserve">
     <value>Мгновенный доступ Socratic</value>
@@ -1198,13 +1201,13 @@
     <value>Владельцам бизнеса:</value>
   </data>
   <data name="Chat_WelcomeOwners" xml:space="preserve">
-    <value>запуск и выбор сценариев продаж (28 UX-режимов), смарт-киоски, автоматизация торговли</value>
+    <value>запуск и выбор сценариев продаж (28 UX-режимов), киоски, автоматизация торговли</value>
   </data>
   <data name="Chat_RoleStaff" xml:space="preserve">
     <value>Сотрудникам:</value>
   </data>
   <data name="Chat_WelcomeStaff" xml:space="preserve">
-    <value>работа с кассой, заказами, каталогом, оплатами и POS-терминалами</value>
+    <value>работа с заказами, каталогом, оплатами и POS</value>
   </data>
   <data name="Schedule_NotSet" xml:space="preserve">
     <value>График работы не задан</value>
@@ -1471,7 +1474,7 @@
     <value>Каталог заведения</value>
   </data>
   <data name="Store_OpenSmartKiosk" xml:space="preserve">
-    <value>Открыть смарт-киоск</value>
+    <value>Открыть киоск</value>
   </data>
   <data name="Store_QrMenu" xml:space="preserve">
     <value>QR Меню</value>
@@ -1568,7 +1571,7 @@
   </data>
   <!-- Layout, Header &amp; Global Footer Translations -->
   <data name="Footer_Tagline" xml:space="preserve">
-    <value>Универсальная омниканальная AI-экосистема для бизнеса, торговли, смарт-киосков и компьютерного зрения.</value>
+    <value>Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.</value>
   </data>
   <data name="Footer_Status" xml:space="preserve">
     <value>Все системы работают стабильно</value>
@@ -1740,7 +1743,7 @@
     <value>Новый</value>
   </data>
   <data name="Kiosk_UniversalKiosk" xml:space="preserve">
-    <value>Универсальный AI-киоск</value>
+    <value>Универсальный киоск</value>
   </data>
   <data name="Kiosk_Trial" xml:space="preserve">
     <value>Триал ({0} дн.)</value>
@@ -1809,31 +1812,31 @@
     <value>Нет</value>
   </data>
   <data name="AboutTitleMain" xml:space="preserve">
-    <value>Интеллектуальная экосистема</value>
+    <value>Омниканальная кроссплатформенная экосистема</value>
   </data>
   <data name="AboutTitleSub" xml:space="preserve">
-    <value>для омниканального бизнеса и торговли</value>
+    <value>для бизнеса и клиентов</value>
   </data>
   <data name="AboutSubtitle" xml:space="preserve">
-    <value>Socratic объединяет AI-зрение, смарт-киоски, 3D WebGL и 28 универсальных режимов взаимодействия в единой высокопроизводительной среде для автоматизации ритейла, сферы услуг и HoReCa.</value>
+    <value>Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.</value>
   </data>
   <data name="About_VideoBadge" xml:space="preserve">
     <value>Видео-презентация</value>
   </data>
   <data name="About_VideoTitle" xml:space="preserve">
-    <value>Обзор возможностей платформы Socratic</value>
+    <value>Обзор возможностей платформы</value>
   </data>
   <data name="About_VideoNotSupported" xml:space="preserve">
     <value>Ваш браузер не поддерживает встроенное воспроизведение видео.</value>
   </data>
   <data name="About_VideoCaption" xml:space="preserve">
-    <value>Демонстрация работы модулей компьютерного зрения, киосков самообслуживания и аналитики.</value>
+    <value>Демонстрация работы модулей компьютерного зрения, киосков и аналитики.</value>
   </data>
   <data name="About_PillarsBadge" xml:space="preserve">
     <value>Ключевые направления</value>
   </data>
   <data name="About_PillarsTitle" xml:space="preserve">
-    <value>Четыре столпа архитектуры Socratic</value>
+    <value>Четыре столпа архитектуры</value>
   </data>
   <data name="About_PillarsSubtitle" xml:space="preserve">
     <value>Модульная структура позволяет развертывать необходимые сервисы без избыточной связности.</value>
@@ -1845,10 +1848,10 @@
     <value>Детекция объектов YOLO в реальном времени, биометрия Face ID, аналитика очередей и WebRTC-трансляции.</value>
   </data>
   <data name="About_PillarKioskTitle" xml:space="preserve">
-    <value>Смарт-киоски и POS</value>
+    <value>Киоски и терминалы</value>
   </data>
   <data name="About_PillarKioskDesc" xml:space="preserve">
-    <value>Сенсорные киоски самообслуживания, кассовые терминалы, моментальная фискальная печать и офлайн-синхронизация.</value>
+    <value>Точки продаж (сенсорные киоски и терминалы), моментальная фискальная печать и синхронизация в реальном времени.</value>
   </data>
   <data name="About_PillarModesTitle" xml:space="preserve">
     <value>28 UX-режимов коммерции</value>
@@ -1869,10 +1872,10 @@
     <value>Качество и производительность без компромиссов</value>
   </data>
   <data name="About_ValueFpsTitle" xml:space="preserve">
-    <value>Zero-Flicker &amp; Аппаратное ускорение</value>
+    <value>Плавный интерфейс и аппаратное ускорение</value>
   </data>
   <data name="About_ValueFpsDesc" xml:space="preserve">
-    <value>Blazor Web App на .NET 10 с InteractiveAuto, чистый CSS Grid без reflow и мгновенная гидратация.</value>
+    <value>Современное веб- и нативное приложение на .NET 10 с быстрым откликом и адаптивной сеткой.</value>
   </data>
   <data name="About_ValuePlatformTitle" xml:space="preserve">
     <value>Кроссплатформенность</value>
@@ -1893,10 +1896,10 @@
     <value>Попробуйте интерактивные сценарии в живом окружении прямо сейчас.</value>
   </data>
   <data name="About_BtnKiosk" xml:space="preserve">
-    <value>Открыть Демо-Киоск</value>
+    <value>Открыть Demo Киоск</value>
   </data>
   <data name="About_BtnTerminal" xml:space="preserve">
-    <value>POS Терминал</value>
+    <value>Открыть Demo Терминал</value>
   </data>
   <data name="About_BtnDocs" xml:space="preserve">
     <value>Документация</value>
@@ -1908,7 +1911,7 @@
     <value>Все вопросы</value>
   </data>
   <data name="Help_CatPos" xml:space="preserve">
-    <value>Кассы и POS</value>
+    <value>Точки продаж (POS)</value>
   </data>
   <data name="Help_CatPayments" xml:space="preserve">
     <value>Платежи и QR</value>
@@ -1956,22 +1959,22 @@
     <value>37 интерактивных руководств, архитектурные схемы и спецификация всех модулей.</value>
   </data>
   <data name="Help_FaqKioskLaunchTitle" xml:space="preserve">
-    <value>Как запустить режим киоска самообслуживания?</value>
+    <value>Как запустить режим киоска?</value>
   </data>
   <data name="Help_FaqKioskLaunchAnswer" xml:space="preserve">
-    <value>Для запуска киоска самообслуживания перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в режиме киоска (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и банковский терминал.</value>
+    <value>Для запуска киоска перейдите по URL /kiosk/{tenantId}. Рекомендуется открыть браузер в полноэкранном режиме (F11 или Chrome с флагом --kiosk). Киоск автоматически синхронизирует меню, подключит сенсорный ввод и POS.</value>
   </data>
   <data name="Help_FaqOfflineTitle" xml:space="preserve">
-    <value>Может ли касса работать в режиме офлайн без интернета?</value>
+    <value>Как точка продаж работает при перебоях со связью?</value>
   </data>
   <data name="Help_FaqOfflineAnswer" xml:space="preserve">
-    <value>Да. Socratic использует локальную базу данных с механизмом фоновой синхронизации Outbox Pattern. При отключении сети кассир продолжает пробивать чеки, а при восстановлении связи чеки автоматически регистрируются в фискальном сервисе и облачной аналитике.</value>
+    <value>Локальное состояние заказа сохраняется в кэше устройства, а при восстановлении связи данные синхронизируются. Для банковского эквайринга (POS), динамических QR-платежей и отправки чеков в Soliq ОФД требуется подключение к интернету.</value>
   </data>
   <data name="Help_FaqPaymentsTitle" xml:space="preserve">
     <value>Какие платежные методы поддерживаются из коробки?</value>
   </data>
   <data name="Help_FaqPaymentsAnswer" xml:space="preserve">
-    <value>Платформа поддерживает оплату наличными, банковскими картами через POS-терминалы (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.</value>
+    <value>Платформа поддерживает оплату наличными, банковскими картами через POS (Humo, Uzcard, Visa, MasterCard), мгновенные платежи по динамическому QR-коду (Payme, Click, Uzum, СБП), а также списание бонусных баллов и подарочных сертификатов.</value>
   </data>
   <data name="Help_FaqDynamicQrTitle" xml:space="preserve">
     <value>Как работает динамический QR-код на дисплее покупателя?</value>
@@ -2094,10 +2097,10 @@
     <value>Поиск товаров</value>
   </data>
   <data name="AboutPageTitle" xml:space="preserve">
-    <value>О платформе — Socratic</value>
+    <value>Об экосистеме — Socratic</value>
   </data>
   <data name="AboutBadge" xml:space="preserve">
-    <value>О платформе Socratic</value>
+    <value>Об экосистеме</value>
   </data>
   <data name="QuickActions" xml:space="preserve">
     <value>Быстрые действия</value>
@@ -2130,7 +2133,7 @@
     <value>и база частых вопросов (FAQ)</value>
   </data>
   <data name="HelpSubtitle" xml:space="preserve">
-    <value>Быстрые ответы по настройке кассовых аппаратов, смарт-киосков, AI-модулей, эквайринга и интеграции торгового оборудования.</value>
+    <value>Быстрые ответы по настройке терминалов, киосков, AI-модулей, эквайринга и интеграции торгового оборудования.</value>
   </data>
   <data name="Help_BtnDocs" xml:space="preserve">
     <value>Перейти в документацию</value>
@@ -3057,10 +3060,10 @@
     <value>Заказов пока нет</value>
   </data>
   <data name="Orders_EmptySubtitle" xml:space="preserve">
-    <value>Новые заказы из терминала, киоска и онлайн-витрины появятся здесь в реальном времени.</value>
+    <value>Новые заказы из терминала и киоска появятся здесь в реальном времени.</value>
   </data>
   <data name="Orders_GoToTerminal" xml:space="preserve">
-    <value>Открыть кассовый терминал</value>
+    <value>Открыть терминал</value>
   </data>
   <data name="Orders_LoadSample" xml:space="preserve">
     <value>Загрузить тестовые заказы</value>
@@ -3312,13 +3315,13 @@
     <value>{0} — цифровой киоск, меню и онлайн-заказ | Socratic</value>
   </data>
   <data name="Kiosk_SeoMetaDescFormat" xml:space="preserve">
-    <value>{0}. Онлайн-киоск самообслуживания, каталог позиций, интерактивное оформление заказов и фискальная оплата в экосистеме Socratic.</value>
+    <value>{0}. Киоск, каталог позиций, интерактивное оформление заказов и фискальная оплата.</value>
   </data>
   <data name="Kiosk_TitleSelfService" xml:space="preserve">
-    <value>Киоск самообслуживания</value>
+    <value>Киоск</value>
   </data>
   <data name="Kiosk_DefaultMetaDesc" xml:space="preserve">
-    <value>Интерактивный киоск самообслуживания платформы Socratic: заказ, меню, мультивертикальный каталог и быстрая оплата.</value>
+    <value>Интерактивный киоск: заказ, меню, мультивертикальный каталог и быстрая оплата.</value>
   </data>
   <data name="Kiosk_CategoryFilters" xml:space="preserve">
     <value>Фильтры категорий</value>
@@ -3686,19 +3689,19 @@
 
   <!-- Landing & Universal UX Modes Localization -->
   <data name="HeroBadge" xml:space="preserve">
-    <value>Socratic 2.0 • Универсальная экосистема для бизнеса</value>
+    <value>Омниканальная кроссплатформенная экосистема</value>
   </data>
   <data name="HeroSubtitle" xml:space="preserve">
-    <value>Единая платформа для ритейла, HoReCa, сферы услуг и финтеха. Сенсорная касса POS, смарт-киоски, интерактивные залы и официальная фискализация Soliq ОФД с 1% кешбэком.</value>
+    <value>Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.</value>
   </data>
   <data name="HeroShowroom" xml:space="preserve">
-    <value>Витрина товаров Demo</value>
+    <value>Demo Киоск</value>
   </data>
   <data name="HeroTerminal" xml:space="preserve">
-    <value>Касса POS</value>
+    <value>Demo Терминал</value>
   </data>
   <data name="HeroSocraticOrg" xml:space="preserve">
-    <value>Тарифы Socratic</value>
+    <value>Тарифы</value>
   </data>
   <data name="HeroModulesLabel" xml:space="preserve">
     <value>Специализированные модули:</value>
@@ -3737,19 +3740,19 @@
     <value>Интерфейсные сценарии</value>
   </data>
   <data name="TabPos" xml:space="preserve">
-    <value>Касса POS</value>
+    <value>Терминал</value>
   </data>
   <data name="TabKiosk" xml:space="preserve">
-    <value>Смарт-киоск</value>
+    <value>Киоск</value>
   </data>
   <data name="TabSpaces" xml:space="preserve">
     <value>Залы &amp; QR</value>
   </data>
   <data name="SpecOffline" xml:space="preserve">
-    <value>Offline-First надежность</value>
+    <value>Надежность системы</value>
   </data>
   <data name="SpecSpeed" xml:space="preserve">
-    <value>Скорость кассы</value>
+    <value>Скорость терминала</value>
   </data>
   <data name="SpecCashback" xml:space="preserve">
     <value>Кешбэк Soliq ОФД</value>
@@ -3770,7 +3773,7 @@
     <value>Розничная торговля и товары</value>
   </data>
   <data name="PillarRetailDesc" xml:space="preserve">
-    <value>Штрихкодирование, модификаторы, весовой товар, учет остатков на складе и быстрый сенсорный кассовый терминал.</value>
+    <value>Штрихкодирование, модификаторы, весовой товар, учет остатков на складе, точка продаж и учет смен.</value>
   </data>
   <data name="PillarServicesTitle" xml:space="preserve">
     <value>Сфера услуг и мастера</value>
@@ -3797,34 +3800,34 @@
     <value>Испытайте экосистему в реальном действии</value>
   </data>
   <data name="ShowcaseSub" xml:space="preserve">
-    <value>Две полноценные организации экосистемы: испытайте витрину товаров и услуг глазами покупателя или проверьте, как Socratic продает саму себя через свой собственный смарт-киоск.</value>
+    <value>Две демонстрационные организации: протестируйте точку продаж с каталогом продуктов или посмотрите, как платформа оформляет тарифы, подписки и оборудование через свой киоск.</value>
   </data>
   <data name="OrgDemoBadge" xml:space="preserve">
-    <value>Организация Demo • Шоурум товаров</value>
+    <value>Демонстрационная организация</value>
   </data>
   <data name="OrgDemoTitle" xml:space="preserve">
-    <value>Демо-витрина ритейла, блюд и услуг</value>
+    <value>Организация Demo</value>
   </data>
   <data name="OrgDemoDesc" xml:space="preserve">
-    <value>Полноценный интерактивный каталог с 28 режимами торговли: модификаторы блюд, весовые товары, бронирование столиков, доставка курьером и моментальная фискализация Soliq ОФД с 1% кешбэком.</value>
+    <value>Интерактивный каталог продуктов в 28 сценариях: модификаторы, весовые позиции, бронирование, подписки, доставка и фискализация Soliq ОФД.</value>
   </data>
   <data name="OpenDemoShowroom" xml:space="preserve">
-    <value>Открыть витрину Demo</value>
+    <value>Открыть киоск</value>
   </data>
   <data name="OpenTerminalDemo" xml:space="preserve">
-    <value>Рабочее место POS</value>
+    <value>Открыть терминал</value>
   </data>
   <data name="OrgSocraticBadge" xml:space="preserve">
-    <value>Организация Socratic • Self-Selling</value>
+    <value>Официальная организация</value>
   </data>
   <data name="OrgSocraticTitle" xml:space="preserve">
-    <value>Socratic продает сама себя</value>
+    <value>Витрина тарифов и модулей</value>
   </data>
   <data name="OrgSocraticDesc" xml:space="preserve">
-    <value>Архитектурная модель Dogfooding: платформа Socratic использует свой собственный интерактивный смарт-киоск для продажи своих же тарифов, подписок, кассовых лицензий, POS-оборудования и модулей.</value>
+    <value>Платформа использует собственный интерактивный киоск для продажи своих тарифов, подписок, лицензий, POS-оборудования и модулей.</value>
   </data>
   <data name="OpenSocraticSelfSelling" xml:space="preserve">
-    <value>Тарифы Socratic в Киоске</value>
+    <value>Открыть тарифы</value>
   </data>
   <data name="PlatformDocs" xml:space="preserve">
     <value>Документация</value>
@@ -3908,22 +3911,22 @@
     <value>28 Универсальных Сценариев Взаимодействия</value>
   </data>
   <data name="LandingUxModesDesc" xml:space="preserve">
-    <value>От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — Socratic нативно объединяет 28 коммерческих моделей в едином масштабируемом ядре.</value>
+    <value>От ресторанного экспресс-чекаута и бронирования номеров до аукционов, P2P-маркетплейсов и рекуррентного биллинга — 28 коммерческих моделей в едином масштабируемом ядре.</value>
   </data>
   <data name="LandingFlagshipTitle" xml:space="preserve">
     <value>Флагманские Архетипы</value>
   </data>
   <data name="LandingFlagshipSubtitle" xml:space="preserve">
-    <value>Четыре ключевых столпа коммерческой автоматизации Socratic</value>
+    <value>Четыре ключевых направления коммерческой автоматизации</value>
   </data>
   <data name="LandingRetailFlagshipBadge" xml:space="preserve">
     <value>Флагман Ритейла</value>
   </data>
   <data name="LandingRetailFlagshipTitle" xml:space="preserve">
-    <value>Каталог &amp; Экспресс-касса</value>
+    <value>Каталог &amp; Быстрое оформление</value>
   </data>
   <data name="LandingRetailFlagshipDesc" xml:space="preserve">
-    <value>Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрый расчет на кассе.</value>
+    <value>Полная SKU-матрица, модификаторы, складские остатки, мгновенный поиск и сверхбыстрое оформление заказа.</value>
   </data>
   <data name="LandingRetailPillSku" xml:space="preserve">
     <value>SKU Матрица</value>
@@ -3959,7 +3962,7 @@
     <value>Флагман AI &amp; SaaS</value>
   </data>
   <data name="LandingAiFlagshipTitle" xml:space="preserve">
-    <value>Онлайн-сервис &amp; AI Доступ</value>
+    <value>SaaS-сервисы и доступ к AI</value>
   </data>
   <data name="LandingAiFlagshipDesc" xml:space="preserve">
     <value>Мгновенная выдача API-ключей, квоты токенов LLM, компьютерное зрение и тарификация микросервисов.</value>
@@ -4052,16 +4055,16 @@
     <value>Всё необходимое для бесперебойных продаж, быстрого обслуживания клиентов, фискализации и учета в едином решении.</value>
   </data>
   <data name="PillarPosBadge" xml:space="preserve">
-    <value>Кассовый терминал</value>
+    <value>Терминал</value>
   </data>
   <data name="PillarPosHeading" xml:space="preserve">
-    <value>Сенсорная касса для любого формата продаж</value>
+    <value>Точка продаж для любого формата</value>
   </data>
   <data name="PillarPosDesc" xml:space="preserve">
-    <value>Сверхбыстрый Touch-терминал для продавцов, кассиров и администраторов. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.</value>
+    <value>Сверхбыстрый сенсорный терминал. Сканирование штрихкодов, весовые товары, отложенные чеки, раздельная оплата (сплит) и моментальный расчет.</value>
   </data>
   <data name="PillarPosFeat1" xml:space="preserve">
-    <value>100% Offline-First: продажи не останавливаются при обрыве интернета</value>
+    <value>Мгновенный поиск, штрихкодирование и добавление позиций в заказ</value>
   </data>
   <data name="PillarPosFeat2" xml:space="preserve">
     <value>Прямое подключение термопринтеров ESC/POS, весов CAS и денежных ящиков</value>
@@ -4070,7 +4073,7 @@
     <value>Продажи в рассрочку (BNPL): Uzum Nasiya, Zoodpay, Alif Nasiya в 1 клик</value>
   </data>
   <data name="LaunchTerminalBtn" xml:space="preserve">
-    <value>Открыть кассовый терминал</value>
+    <value>Открыть терминал</value>
   </data>
   <data name="PillarQrBadge" xml:space="preserve">
     <value>QR-Платежи &amp; Soliq ОФД</value>
@@ -4085,10 +4088,10 @@
     <value>Студия QR-кодов</value>
   </data>
   <data name="PillarKioskBadge" xml:space="preserve">
-    <value>Смарт-Киоски</value>
+    <value>Киоски</value>
   </data>
   <data name="PillarKioskHeading" xml:space="preserve">
-    <value>Автономные терминалы самообслуживания</value>
+    <value>Интерактивные киоски</value>
   </data>
   <data name="PillarKioskDesc" xml:space="preserve">
     <value>Разгрузка очередей в часы пик, интерактивный электронный каталог, умные рекомендации и допродажи (upsell), увеличивающие средний чек на 25%.</value>
@@ -4115,7 +4118,7 @@
     <value>Прозрачный складской учет, списание остатков при каждой продаже, учет сроков годности и глубокая финансовая аналитика для руководителя в реальном времени.</value>
   </data>
   <data name="PlatformWindowsDesc" xml:space="preserve">
-    <value>Полноэкранный кассовый терминал POS, бэк-офис и автономная станция.</value>
+    <value>Полноэкранный терминал, бэк-офис и десктопное приложение.</value>
   </data>
   <data name="DownloadWindows" xml:space="preserve">
     <value>Скачать для Windows</value>
@@ -4136,7 +4139,7 @@
     <value>Скачать для Android</value>
   </data>
   <data name="PlatformIOSDesc" xml:space="preserve">
-    <value>Элегантное решение для кассовых зон iPad и мониторинга со смартфонов iPhone.</value>
+    <value>Элегантное решение для точек продаж на iPad и мониторинга со смартфонов iPhone.</value>
   </data>
   <data name="DownloadIOS" xml:space="preserve">
     <value>Скачать для iOS</value>
@@ -4151,7 +4154,7 @@
     <value>Готовы масштабировать ваш бизнес с Socratic?</value>
   </data>
   <data name="B2bDesc" xml:space="preserve">
-    <value>Подключите розничный магазин, ресторан, сферу услуг или онлайн-сервис. Государственная фискализация Soliq ОФД, сенсорные кассы, смарт-киоски и круглосуточная техническая поддержка под ключ.</value>
+    <value>Подключите розничный магазин, заведение, сервис или сеть в единую систему: точки продаж (терминал и киоск), 28 сценариев продуктов и фискализация Soliq ОФД.</value>
   </data>
   <data name="B2bKioskConnectBtn" xml:space="preserve">
     <value>Оформить тариф в киоске Socratic</value>
@@ -4181,7 +4184,7 @@
     <value>Запустить в интерактивном Kiosk</value>
   </data>
   <data name="FooterTagline" xml:space="preserve">
-    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+    <value>Омниканальная кроссплатформенная экосистема для бизнеса и клиентов.</value>
   </data>
   <data name="FooterRights" xml:space="preserve">
     <value>Все права защищены.</value>
@@ -4190,7 +4193,7 @@
     <value>Платформа &amp; Каталог</value>
   </data>
   <data name="ShowroomDemo" xml:space="preserve">
-    <value>Витрина товаров Demo</value>
+    <value>Demo Киоск</value>
   </data>
   <data name="PlansConnect" xml:space="preserve">
     <value>Тарифы и подключение</value>
@@ -4208,7 +4211,7 @@
     <value>Ресурсы &amp; Инфо</value>
   </data>
   <data name="FooterCommunity" xml:space="preserve">
-    <value>Community &amp; Support</value>
+    <value>Сообщество и поддержка</value>
   </data>
   <data name="CategoryRetailCatalog" xml:space="preserve">
     <value>Ритейл &amp; Каталог</value>
@@ -4322,7 +4325,7 @@
     <value>28 UX-режимов</value>
   </data>
   <data name="LandingPillSmartKiosk" xml:space="preserve">
-    <value>Смарт-киоск</value>
+    <value>Киоск</value>
   </data>
   <data name="LandingPillOfdCashback" xml:space="preserve">
     <value>Soliq ОФД 1%</value>
@@ -4334,7 +4337,7 @@
     <value>Тарифы экосистемы</value>
   </data>
   <data name="LandingPillPosKiosks" xml:space="preserve">
-    <value>Кассы &amp; Киоски</value>
+    <value>Терминалы &amp; Киоски</value>
   </data>
   <data name="LandingPillDirectPurchase" xml:space="preserve">
     <value>Прямая покупка</value>
@@ -4406,20 +4409,20 @@
     <value>Филиалов в единой сети</value>
   </data>
   <data name="LandingMetricOfflineDesc" xml:space="preserve">
-    <value>Автономная работа</value>
+    <value>Непрерывная работа</value>
   </data>
   <data name="LandingPageTitle" xml:space="preserve">
-    <value>Socratic — Универсальная экосистема для бизнеса</value>
+    <value>Socratic — омниканальная кроссплатформенная экосистема для бизнеса и клиентов</value>
   </data>
   <data name="LandingMetaDesc" xml:space="preserve">
-    <value>Socratic — единая платформа для розничных продаж, сферы услуг, бронирования пространств и приема платежей. Касса, склад, QR, схемы залов и фискализация Soliq ОФД.</value>
+    <value>Единое приложение для управления организацией и взаимодействия с клиентами: интерактивная карта, 28 продуктовых сценариев, точки продаж (терминал и киоск), 3D-схемы залов и QR-студия, платежи с фискализацией Soliq ОФД, аналитика и компьютерное зрение.</value>
   </data>
   <data name="LandingHeroTitleSocratic" xml:space="preserve">
     <value>Socratic</value>
     <comment>Hero title flagship Socratic</comment>
   </data>
   <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
-    <value>Универсальная операционная система торговли и услуг</value>
+    <value>Омниканальная кроссплатформенная экосистема для бизнеса и клиентов</value>
     <comment>Hero title operating system subtitle</comment>
   </data>
   <data name="LandingNoModesFoundDesc" xml:space="preserve">
@@ -4562,7 +4565,7 @@
     <value>Ссылка на видео не найдена</value>
   </data>
   <data name="LandingKeywords" xml:space="preserve">
-    <value>универсальная экосистема для бизнеса, автоматизация торговли, кассовый терминал, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги, Socratic</value>
+    <value>универсальная экосистема для бизнеса, автоматизация торговли, терминал, киоск, POS, QR оплата, фискализация, Soliq ОФД, бронирование залов, ритейл, услуги</value>
   </data>
   <data name="LandingSoliqCashback" xml:space="preserve">
     <value>Soliq ОФД • 1% Кешбэк</value>
@@ -4757,7 +4760,7 @@
     <value>На экранах ваших киосков транслируются спонсорские баннеры партнеров. Вы можете отключить рекламу в любой момент, перейдя на PRO.</value>
   </data>
   <data name="Org_DescPro" xml:space="preserve">
-    <value>На всех киосках и кассах отключена сторонняя реклама. Доступен фирменный screensaver с вашим логотипом и фото блюд.</value>
+    <value>На всех киосках и терминалах отключена сторонняя реклама. Доступна фирменная заставка с вашим логотипом и фото блюд.</value>
   </data>
   <data name="Promo_Title" xml:space="preserve">
     <value>Продвижение товара в Google и Яндекс</value>
@@ -5165,7 +5168,7 @@
     <value>SKU</value>
   </data>
   <data name="Home_DirectorySubtitle" xml:space="preserve">
-    <value>Выберите заведение для заказа через киоск самообслуживания или бронирования</value>
+    <value>Выберите заведение для заказа через киоск или бронирования</value>
   </data>
   <data name="Home_PageTitle" xml:space="preserve">
     <value>Каталог заведений и организаций • Socratic</value>

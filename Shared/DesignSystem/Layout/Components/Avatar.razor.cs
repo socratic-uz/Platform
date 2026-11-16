@@ -39,6 +39,7 @@ namespace Shared.Components
         [Inject] public NavigationManager nav { get; set; } = default!;
         [Inject] public Domain.Interfaces.Identity.IUserAccountGateway? UserAccountGateway { get; set; }
         [Inject] public Infrastructure.Gateways.Identity.IPasskeyService? PasskeyService { get; set; }
+        [Inject] public Infrastructure.Gateways.Identity.IExternalAuthBrowser? ExternalAuthBrowser { get; set; }
         [Inject] public AuthenticationStateProvider auth { get; set; } = default!;
         [Inject] public ISettingsManager settings { get; set; } = default!;
         [Inject] public IJSRuntime js { get; set; } = default!;
@@ -818,9 +819,30 @@ namespace Shared.Components
                 return;
             }
 
-            var redirectUri = nav.BaseUri.TrimEnd('/') + "/signin-google-callback";
             var currentUserId = userIdStr ?? await Settings.GetUserIdAsync();
             var state = string.IsNullOrWhiteSpace(currentUserId) ? "link" : $"link:{currentUserId}";
+
+            if (ExternalAuthBrowser is { IsSupported: true })
+            {
+                var nativeRedirectUri = $"{ExternalAuthBrowser.PublicOrigin}/signin-google-callback";
+                var scope = "openid email profile";
+                var authUrl = new Uri($"https://accounts.google.com/o/oauth2/v2/auth?client_id={clientId}&redirect_uri={Uri.EscapeDataString(nativeRedirectUri)}&response_type=code&scope={Uri.EscapeDataString(scope)}&state={Uri.EscapeDataString($"native:{state}")}&prompt=select_account");
+                var authResult = await ExternalAuthBrowser.AuthenticateAsync(authUrl, new Uri("socratic://auth"));
+                if (authResult != null)
+                {
+                    var sb = new System.Text.StringBuilder("?native_redirect_uri=")
+                        .Append(Uri.EscapeDataString(nativeRedirectUri));
+                    foreach (var kv in authResult.Properties)
+                    {
+                        if (kv.Key.Equals("provider", StringComparison.OrdinalIgnoreCase)) continue;
+                        sb.Append('&').Append(Uri.EscapeDataString(kv.Key)).Append('=').Append(Uri.EscapeDataString(kv.Value));
+                    }
+                    nav.NavigateTo($"/signin-google-callback{sb}");
+                }
+                return;
+            }
+
+            var redirectUri = nav.BaseUri.TrimEnd('/') + "/signin-google-callback";
             Logger.LogInformation("[Profile.Google] Opening Google Account Selector popup for linking. RedirectUri: {RedirectUri}, State: {State}", redirectUri, state);
             var opened = await js.InvokeAsync<bool>("oauthPopupHelper.openGooglePopup", clientId, redirectUri, state);
             if (!opened)

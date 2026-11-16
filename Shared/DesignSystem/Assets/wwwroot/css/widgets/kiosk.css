@@ -963,20 +963,6 @@ footer[kiosk] > p {
         align-content: center;
     }
 
-footer[kiosk] > p > span {
-        font-size: 0.75rem;
-        line-height: 1.15;
-    }
-
-footer[kiosk] > p > strong {
-        font-size: 1rem;
-        line-height: 1.15;
-    }
-
-footer[kiosk] > p > md-icon {
-        display: none;
-    }
-
 footer[kiosk] > p {
         grid-auto-flow: row;
         grid-auto-columns: minmax(0, 1fr);
@@ -984,8 +970,14 @@ footer[kiosk] > p {
         align-content: center;
     }
 
-footer[kiosk] > p > md-icon {
-        display: none;
+footer[kiosk] > p > span {
+        font-size: 0.75rem;
+        line-height: 1.15;
+    }
+
+footer[kiosk] > p > span {
+        font-size: 0.75rem;
+        line-height: 1.15;
     }
 
 footer[kiosk] > p > strong {
@@ -993,9 +985,17 @@ footer[kiosk] > p > strong {
         line-height: 1.15;
     }
 
-footer[kiosk] > p > span {
-        font-size: 0.75rem;
+footer[kiosk] > p > strong {
+        font-size: 1rem;
         line-height: 1.15;
+    }
+
+footer[kiosk] > p > md-icon {
+        display: none;
+    }
+
+footer[kiosk] > p > md-icon {
+        display: none;
     }
 
 footer[kiosk] > md-filled-button,

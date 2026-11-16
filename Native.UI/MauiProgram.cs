@@ -36,56 +36,25 @@ namespace Native.UI
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            // 1. Загрузка конфигураций из Embedded Resource (гарантированно работает на Android, iOS, Windows, MacCatalyst)
-            var assembly = typeof(MauiProgram).Assembly;
-            try
-            {
-                using var baseConfigStream = assembly.GetManifestResourceStream("appsettings.json");
-                if (baseConfigStream != null)
-                {
-                    builder.Configuration.AddJsonStream(baseConfigStream);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"[Config] Embedded appsettings.json load error: {ex.Message}");
-            }
-
+            // 1. Удалённая конфигурация (https://socratic.uz/appsettings.json и appsettings.Development.json) с локальным кэшем на устройстве
+            LoadRemoteJson(builder.Configuration, EnvironmentVariables.APPSETTINGS);
 #if DEBUG
-            try
-            {
-                using var devConfigStream = assembly.GetManifestResourceStream("appsettings.Development.json");
-                if (devConfigStream != null)
-                {
-                    builder.Configuration.AddJsonStream(devConfigStream);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"[Config] Embedded appsettings.Development.json load error: {ex.Message}");
-            }
+            LoadRemoteJson(builder.Configuration, EnvironmentVariables.APPSETTINGS_DEVELOPMENT);
 #endif
 
-            // 2. Локальное переопределение из физического файла на диске (для Windows Desktop / локальной отладки)
-            try
+            // 2. Переменные окружения (Aspire и локальный запуск переопределяют удалённый конфиг)
+            var envVars = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
+            foreach (System.Collections.DictionaryEntry entry in Environment.GetEnvironmentVariables())
             {
-                builder.Configuration.AddJsonFile(EnvironmentVariables.APPSETTINGS, optional: true, reloadOnChange: true);
+                if (entry.Key is string key && entry.Value is string value)
+                {
+                    envVars[key.Replace("__", ":")] = value;
+                }
             }
-            catch (Exception ex)
+            if (envVars.Count > 0)
             {
-                Debug.WriteLine($"[Config] File appsettings.json load info: {ex.Message}");
+                builder.Configuration.AddInMemoryCollection(envVars);
             }
-
-#if DEBUG
-            try
-            {
-                builder.Configuration.AddJsonFile(EnvironmentVariables.APPSETTINGS_DEVELOPMENT, optional: true, reloadOnChange: true);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"[Config] File appsettings.Development.json load info: {ex.Message}");
-            }
-#endif
 
             MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
@@ -98,6 +67,8 @@ namespace Native.UI
             builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
             builder.Services.AddScoped(sp => new HttpClient());
             builder.Services.AddScoped<Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider, MauiAuthenticationStateProvider>();
+            builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Services.MauiPasskeyService>();
+            builder.Services.AddScoped<Infrastructure.Gateways.Identity.IExternalAuthBrowser, Services.MauiExternalAuthBrowser>();
 
             builder.Services.AddMauiBlazorWebView();
 
@@ -144,6 +115,52 @@ namespace Native.UI
                 }
                 throw;
             }
+        }
+
+        private const string RemoteConfigBaseUrl = "https://socratic.uz/";
+
+        private static void LoadRemoteJson(ConfigurationManager configuration, string fileName)
+        {
+            var url = $"{RemoteConfigBaseUrl}{fileName}";
+            var cachePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+
+            if (!File.Exists(cachePath))
+            {
+                try
+                {
+                    using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(3) };
+                    var json = http.GetStringAsync(url).GetAwaiter().GetResult();
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        File.WriteAllText(cachePath, json);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"[Config] Initial remote {fileName} fetch error: {ex.Message}");
+                }
+            }
+            else
+            {
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
+                        var json = await http.GetStringAsync(url).ConfigureAwait(false);
+                        if (!string.IsNullOrWhiteSpace(json))
+                        {
+                            await File.WriteAllTextAsync(cachePath, json).ConfigureAwait(false);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"[Config] Background remote {fileName} refresh error: {ex.Message}");
+                    }
+                });
+            }
+
+            configuration.AddJsonFile(cachePath, optional: true, reloadOnChange: true);
         }
     }
 }

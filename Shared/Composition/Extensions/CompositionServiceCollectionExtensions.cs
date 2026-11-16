@@ -115,6 +115,7 @@ namespace Socratic.Platform.Composition.Extensions
             services.AddScoped<IDetectorService, Infrastructure.Gateways.Vision.RemoteDetectorService>();
             services.AddScoped<ISettingsManager, SettingsManager>();
             services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Infrastructure.Gateways.Identity.PasskeyService>();
+            services.AddScoped<Infrastructure.Gateways.Identity.IExternalAuthBrowser, Infrastructure.Gateways.Identity.DefaultExternalAuthBrowser>();
             services.AddScoped<Domain.Interfaces.Identity.IUserAccountGateway, Infrastructure.Gateways.Identity.UserAccountGateway>();
             services.AddScoped<Infrastructure.Gateways.Identity.UserAccountGateway>();
             services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();

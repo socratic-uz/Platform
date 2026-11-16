@@ -5,7 +5,7 @@
     <TargetFrameworks Condition="'$(BuildAllPlatforms)' == 'true' or '$(ContinuousIntegrationBuild)' == 'true'">net10.0-windows10.0.19041.0;net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
     <!-- Windows and Android targets on Windows workstation for Visual Studio IDE -->
     <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows')) and '$(TargetAndroid)' == 'true'">net10.0-android</TargetFrameworks>
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net10.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net10.0-windows10.0.19041.0;net10.0-android</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('osx'))">net10.0-maccatalyst;net10.0-ios;net10.0-android</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">net10.0-android</TargetFrameworks>
 
@@ -60,10 +60,20 @@
     <DefineConstants>$(DefineConstants);DEBUG;LOCALDEBUG</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' or $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
+    <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" VersionOverride="$(MauiVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" VersionOverride="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
+    <PackageReference Include="Xamarin.AndroidX.Credentials" />
+    <PackageReference Include="Xamarin.AndroidX.Credentials.PlayServicesAuth" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" />
   </ItemGroup>
 
   <!-- MAUI Sherpa / DevFlow Inspector Agent & Blazor CDP bridge (only for Debug and LocalDebug) -->

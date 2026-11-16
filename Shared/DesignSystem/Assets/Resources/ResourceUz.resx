@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -379,7 +379,7 @@
     <value>Socratic bilan biznesingizni yangi bosqichga olib chiqing</value>
   </data>
   <data name="ms2ap" xml:space="preserve">
-    <value>Socratic platformasida biz to'liq siklli ekotizim yaratamiz: o'z-o'ziga xizmat ko'rsatuvchi aqlli kiosklar va onlayn kataloglardan tortib ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Bizning platformamiz biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.</value>
+    <value>Biz to'liq siklli ekotizim yaratamiz: kiosk va terminallardan tortib onlayn kataloglar, ombor hisobi, AI ko'rish va to'lovlarni qabul qilishgacha. Platforma biznesga jarayonlarni soddalashtirish va daromadni oshirish imkonini beradi.</value>
   </data>
   <data name="ms3ah" xml:space="preserve">
     <value>Biz nimani taklif qilamiz:</value>
@@ -424,10 +424,13 @@
     <value>Rang</value>
   </data>
   <data name="DownloadTitle" xml:space="preserve">
-    <value>Socratic UI-ni yuklab olish</value>
+    <value>Socratic-ni yuklab olish</value>
+  </data>
+  <data name="DownloadBadge" xml:space="preserve">
+    <value>Kross-platformali ilova</value>
   </data>
   <data name="DownloadSubTitle" xml:space="preserve">
-    <value>Socratic-ga har qanday joyda kiring. Ish stoli, mobil va veb-platformalar uchun qo'llab-quvvatlash.</value>
+    <value>Ish stoli, mobil va veb-platformalar uchun yagona kross-platformali ilova.</value>
   </data>
   <data name="QrInstantAccess" xml:space="preserve">
     <value>Socratic tezkor kirish</value>
@@ -1198,13 +1201,13 @@
     <value>Biznes egalariga:</value>
   </data>
   <data name="Chat_WelcomeOwners" xml:space="preserve">
-    <value>savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), smart-kiosklar, savdo avtomatizatsiyasi</value>
+    <value>savdo stsenariylarini ishga tushirish va tanlash (28 UX rejimi), kiosklar, savdo avtomatizatsiyasi</value>
   </data>
   <data name="Chat_RoleStaff" xml:space="preserve">
     <value>Xodimlarga:</value>
   </data>
   <data name="Chat_WelcomeStaff" xml:space="preserve">
-    <value>kassa, buyurtmalar, katalog, to'lovlar va POS-terminallar bilan ishlash</value>
+    <value>buyurtmalar, katalog, to'lovlar va POS bilan ishlash</value>
   </data>
   <data name="Schedule_NotSet" xml:space="preserve">
     <value>Ish grafigi belgilanmagan</value>
@@ -1471,7 +1474,7 @@
     <value>Muassasa katalogi</value>
   </data>
   <data name="Store_OpenSmartKiosk" xml:space="preserve">
-    <value>Smart-kioskni ochish</value>
+    <value>Kioskni ochish</value>
   </data>
   <data name="Store_QrMenu" xml:space="preserve">
     <value>QR Menyu</value>
@@ -1568,7 +1571,7 @@
   </data>
   <!-- Layout, Header &amp; Global Footer Translations -->
   <data name="Footer_Tagline" xml:space="preserve">
-    <value>Biznes, savdo, smart-kiosklar va kompyuter ko'rishi uchun universal sun'iy intellekt ekotizimi.</value>
+    <value>Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.</value>
   </data>
   <data name="Footer_Status" xml:space="preserve">
     <value>Barcha tizimlar barqaror ishlamoqda</value>
@@ -1740,7 +1743,7 @@
     <value>Yangi</value>
   </data>
   <data name="Kiosk_UniversalKiosk" xml:space="preserve">
-    <value>Universal AI Kiosk</value>
+    <value>Universal kiosk</value>
   </data>
   <data name="Kiosk_Trial" xml:space="preserve">
     <value>Sinov ({0} kun)</value>
@@ -1809,31 +1812,31 @@
     <value>Yo'q</value>
   </data>
    <data name="AboutTitleMain" xml:space="preserve">
-    <value>Intellektual ekotizim</value>
+    <value>Omnikanal kross-platformali ekotizim</value>
   </data>
   <data name="AboutTitleSub" xml:space="preserve">
-    <value>omnichannel biznes va savdo uchun</value>
+    <value>biznes va mijozlar uchun</value>
   </data>
   <data name="AboutSubtitle" xml:space="preserve">
-    <value>Socratic AI-ko'rish, smart-kiosklar, 3D WebGL va 28 ta universal rejimni yagona muhitda birlashtiradi.</value>
+    <value>Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.</value>
   </data>
   <data name="About_VideoBadge" xml:space="preserve">
     <value>Video taqdimot</value>
   </data>
   <data name="About_VideoTitle" xml:space="preserve">
-    <value>Socratic platformasi imkoniyatlari sharhi</value>
+    <value>Platforma imkoniyatlari sharhi</value>
   </data>
   <data name="About_VideoNotSupported" xml:space="preserve">
     <value>Brauzeringiz video ijrosini qo'llab-quvvatlamaydi.</value>
   </data>
   <data name="About_VideoCaption" xml:space="preserve">
-    <value>Kompyuter ko'rishi, o'z-o'ziga xizmat ko'rsatish kiosklari va tahlil modullari ishlashini namoyish etish.</value>
+    <value>Kompyuter ko'rishi, kiosklar va tahlil modullari ishlashini namoyish etish.</value>
   </data>
   <data name="About_PillarsBadge" xml:space="preserve">
     <value>Asosiy yo'nalishlar</value>
   </data>
   <data name="About_PillarsTitle" xml:space="preserve">
-    <value>Socratic arxitekturasining to'rt ustuni</value>
+    <value>Arxitekturaning to'rt ustuni</value>
   </data>
   <data name="About_PillarsSubtitle" xml:space="preserve">
     <value>Modulli tuzilma ortiqcha bog'liqliksiz zarur xizmatlarni joylashtirish imkonini beradi.</value>
@@ -1845,10 +1848,10 @@
     <value>Real vaqtda YOLO obyektlarni aniqlash, Face ID biometriyasi va navbatlar tahlili.</value>
   </data>
   <data name="About_PillarKioskTitle" xml:space="preserve">
-    <value>Smart-kiosklar va POS</value>
+    <value>Kiosklar va terminallar</value>
   </data>
   <data name="About_PillarKioskDesc" xml:space="preserve">
-    <value>Sensorli o'z-o'ziga xizmat ko'rsatish kiosklari, kassa terminallari va fiskal chop etish.</value>
+    <value>Savdo nuqtalari (sensorli kiosklar va terminallar), fiskal chop etish va real vaqt sinxronizatsiyasi.</value>
   </data>
   <data name="About_PillarModesTitle" xml:space="preserve">
     <value>28 ta tijorat UX-rejimi</value>
@@ -1869,10 +1872,10 @@
     <value>Murosasiz sifat va unumdorlik</value>
   </data>
   <data name="About_ValueFpsTitle" xml:space="preserve">
-    <value>Zero-Flicker &amp; Uskunaviy tezlashtirish</value>
+    <value>Silliq interfeys va apparat tezlashtirish</value>
   </data>
   <data name="About_ValueFpsDesc" xml:space="preserve">
-    <value>.NET 10 da InteractiveAuto bilan Blazor Web App va bir lahzalik gidratsiya.</value>
+    <value>.NET 10 asosidagi tezkor va moslashuvchan zamonaviy veb hamda nativ ilova.</value>
   </data>
   <data name="About_ValuePlatformTitle" xml:space="preserve">
     <value>Ko'p platformalilik</value>
@@ -1893,10 +1896,10 @@
     <value>Jonli muhitda interaktiv ssenariylarni hoziroq sinab ko'ring.</value>
   </data>
   <data name="About_BtnKiosk" xml:space="preserve">
-    <value>Demo-Kioskni ochish</value>
+    <value>Demo Kioskni ochish</value>
   </data>
   <data name="About_BtnTerminal" xml:space="preserve">
-    <value>POS Terminal</value>
+    <value>Demo Terminalni ochish</value>
   </data>
   <data name="About_BtnDocs" xml:space="preserve">
     <value>Hujjatlar</value>
@@ -1908,7 +1911,7 @@
     <value>Barcha savollar</value>
   </data>
   <data name="Help_CatPos" xml:space="preserve">
-    <value>Kassalar va POS</value>
+    <value>Savdo nuqtalari (POS)</value>
   </data>
   <data name="Help_CatPayments" xml:space="preserve">
     <value>To'lovlar va QR</value>
@@ -1956,22 +1959,22 @@
     <value>37 ta interaktiv qo'llanma va barcha modullar spetsifikatsiyasi.</value>
   </data>
   <data name="Help_FaqKioskLaunchTitle" xml:space="preserve">
-    <value>O'z-o'ziga xizmat ko'rsatish kiosk rejimini qanday ishga tushirish mumkin?</value>
+    <value>Kiosk rejimini qanday ishga tushirish mumkin?</value>
   </data>
   <data name="Help_FaqKioskLaunchAnswer" xml:space="preserve">
-    <value>Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va to'lov terminalini ulaydi.</value>
+    <value>Kioskni ishga tushirish uchun /kiosk/{tenantId} manziliga o'ting. Kiosk avtomatik ravishda menyuni sinxronlashtiradi va POS to'lovlarini ulaydi.</value>
   </data>
   <data name="Help_FaqOfflineTitle" xml:space="preserve">
-    <value>Kassa internetsiz oflayn rejimda ishlay oladimi?</value>
+    <value>Aloqa uzilganda savdo nuqtasi qanday ishlaydi?</value>
   </data>
   <data name="Help_FaqOfflineAnswer" xml:space="preserve">
-    <value>Ha. Socratic Outbox Pattern mexanizmiga ega mahalliy ma'lumotlar bazasidan foydalanadi. Tarmoq uzilganda kassir cheklarni chiqarishda davom etadi.</value>
+    <value>Buyurtmaning mahalliy holati qurilma keshida saqlanadi va aloqa tiklangach sinxronlanadi. Karta ekvayringi (POS), dinamik QR-to'lovlar va Soliq OFD fiskallashtirish uchun internet aloqasi talab qilinadi.</value>
   </data>
   <data name="Help_FaqPaymentsTitle" xml:space="preserve">
     <value>Qaysi to'lov usullari qutidan tashqarida qo'llab-quvvatlanadi?</value>
   </data>
   <data name="Help_FaqPaymentsAnswer" xml:space="preserve">
-    <value>Platforma naqd pul, POS-terminallar (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.</value>
+    <value>Platforma naqd pul, POS orqali bank kartalari (Humo, Uzcard, Visa, MasterCard) va dinamik QR-kod orqali to'lovlarni qo'llab-quvvatlaydi.</value>
   </data>
   <data name="Help_FaqDynamicQrTitle" xml:space="preserve">
     <value>Xaridor displeyidagi dinamik QR-kod qanday ishlaydi?</value>
@@ -2094,10 +2097,10 @@
     <value>Mahsulotlarni qidirish</value>
   </data>
   <data name="AboutPageTitle" xml:space="preserve">
-    <value>Platforma haqida — Socratic</value>
+    <value>Ekotizim haqida — Socratic</value>
   </data>
   <data name="AboutBadge" xml:space="preserve">
-    <value>Socratic platformasi haqida</value>
+    <value>Ekotizim haqida</value>
   </data>
   <data name="QuickActions" xml:space="preserve">
     <value>Tezkor harakatlar</value>
@@ -2130,7 +2133,7 @@
     <value>va tez-tez beriladigan savollar bazasi (FAQ)</value>
   </data>
   <data name="HelpSubtitle" xml:space="preserve">
-    <value>Kassa apparatlari, smart-kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.</value>
+    <value>Terminallar, kiosklar, AI-modullar, ekvayring va savdo uskunalarini ulash bo'yicha tezkor javoblar.</value>
   </data>
   <data name="Help_BtnDocs" xml:space="preserve">
     <value>Hujjatlarga o'tish</value>
@@ -3057,10 +3060,10 @@
     <value>Hozircha buyurtmalar yo'q</value>
   </data>
   <data name="Orders_EmptySubtitle" xml:space="preserve">
-    <value>Terminal, kiosk va onlayn vitrinadan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.</value>
+    <value>Terminal va kioskdan yangi buyurtmalar bu yerda real vaqt rejimida paydo bo‘ladi.</value>
   </data>
   <data name="Orders_GoToTerminal" xml:space="preserve">
-    <value>Kassa terminalini ochish</value>
+    <value>Terminalni ochish</value>
   </data>
   <data name="Orders_LoadSample" xml:space="preserve">
     <value>Sinov buyurtmalarini yuklash</value>
@@ -3312,13 +3315,13 @@
     <value>{0} — raqamli kiosk, menyu va onlayn-buyurtma | Socratic</value>
   </data>
   <data name="Kiosk_SeoMetaDescFormat" xml:space="preserve">
-    <value>{0}. O‘z-o‘ziga xizmat ko‘rsatish onlayn-kioski, mahsulotlar katalogi, interaktiv buyurtma berish va Socratic ekotizimida fiskal to‘lov.</value>
+    <value>{0}. Kiosk, mahsulotlar katalogi, interaktiv buyurtma berish va fiskal to‘lov.</value>
   </data>
   <data name="Kiosk_TitleSelfService" xml:space="preserve">
-    <value>O‘z-o‘ziga xizmat ko‘rsatish kioski</value>
+    <value>Kiosk</value>
   </data>
   <data name="Kiosk_DefaultMetaDesc" xml:space="preserve">
-    <value>Socratic platformasining interaktiv o‘z-o‘ziga xizmat ko‘rsatish kioski: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.</value>
+    <value>Interaktiv kiosk: buyurtma, menyu, multivertikal katalog va tezkor to‘lov.</value>
   </data>
   <data name="Kiosk_CategoryFilters" xml:space="preserve">
     <value>Kategoriya filtrlari</value>
@@ -3686,19 +3689,19 @@
 
   <!-- Landing & Universal UX Modes Localization -->
   <data name="HeroBadge" xml:space="preserve">
-    <value>Socratic 2.0 • Biznes uchun universal ekotizim</value>
+    <value>Omnikanal kross-platformali ekotizim</value>
   </data>
   <data name="HeroSubtitle" xml:space="preserve">
-    <value>Chakana savdo, HoReCa, xizmat ko'rsatish va fintex uchun yagona platforma. Sensorli POS kassa, smart-kiosklar, interaktiv zallar va 1% keshbekli rasmiy Soliq OFD fiskallashtirish.</value>
+    <value>Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.</value>
   </data>
   <data name="HeroShowroom" xml:space="preserve">
-    <value>Demo Mahsulotlar vitrinasi</value>
+    <value>Demo Kiosk</value>
   </data>
   <data name="HeroTerminal" xml:space="preserve">
-    <value>POS Kassa</value>
+    <value>Demo Terminal</value>
   </data>
   <data name="HeroSocraticOrg" xml:space="preserve">
-    <value>Socratic tariflari</value>
+    <value>Tariflar</value>
   </data>
   <data name="HeroModulesLabel" xml:space="preserve">
     <value>Ixtisoslashgan modullar:</value>
@@ -3737,19 +3740,19 @@
     <value>Interfeys bosqichlari</value>
   </data>
   <data name="TabPos" xml:space="preserve">
-    <value>POS Kassa</value>
+    <value>Terminal</value>
   </data>
   <data name="TabKiosk" xml:space="preserve">
-    <value>Smart kiosk</value>
+    <value>Kiosk</value>
   </data>
   <data name="TabSpaces" xml:space="preserve">
     <value>Zallar &amp; QR</value>
   </data>
   <data name="SpecOffline" xml:space="preserve">
-    <value>Offline-First ishonchliligi</value>
+    <value>Tizim ishonchliligi</value>
   </data>
   <data name="SpecSpeed" xml:space="preserve">
-    <value>Kassa tezligi</value>
+    <value>Terminal tezligi</value>
   </data>
   <data name="SpecCashback" xml:space="preserve">
     <value>Soliq OFD keshbek</value>
@@ -3770,7 +3773,7 @@
     <value>Chakana &amp; Ulgurji savdo</value>
   </data>
   <data name="PillarRetailDesc" xml:space="preserve">
-    <value>Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, kassa va smenalar hisobi.</value>
+    <value>Tezkor shtrix-kod skanerlash, ombor qoldiqlari, SKU modifikatsiyalari, savdo nuqtasi va smenalar hisobi.</value>
   </data>
   <data name="PillarServicesTitle" xml:space="preserve">
     <value>Xizmatlar &amp; Bron qilish</value>
@@ -3797,34 +3800,34 @@
     <value>Socratic-ni real biznes ssenariylarida sinab ko'ring</value>
   </data>
   <data name="ShowcaseSub" xml:space="preserve">
-    <value>Namoyish rejimini tanlang va ergonomika, sensor tezligi hamda nol kechikishni baholang.</value>
+    <value>Ikki namoyish tashkiloti: mahsulotlar katalogiga ega savdo nuqtasini sinab ko'ring yoki platforma o'z kioski orqali tariflar, obunalar va uskunalarni qanday rasmiylashtirishini ko'ring.</value>
   </data>
   <data name="OrgDemoBadge" xml:space="preserve">
-    <value>Ommaviy namoyish</value>
+    <value>Namoyish tashkiloti</value>
   </data>
   <data name="OrgDemoTitle" xml:space="preserve">
-    <value>&quot;Demo&quot; qahvaxona va novvoyxona tarmog'i</value>
+    <value>Demo tashkiloti</value>
   </data>
   <data name="OrgDemoDesc" xml:space="preserve">
-    <value>Ichimliklar, shirinliklar, modifikatorlar va tezkor karta to'lovlarining interaktiv namoyishi.</value>
+    <value>28 ta ssenariydagi interaktiv mahsulotlar katalogi: modifikatorlar, vaznli pozitsiyalar, bron qilish, obunalar, yetkazib berish va Soliq OFD fiskallashtirish.</value>
   </data>
   <data name="OpenDemoShowroom" xml:space="preserve">
-    <value>Demo vitrinani ochish</value>
+    <value>Kioskni ochish</value>
   </data>
   <data name="OpenTerminalDemo" xml:space="preserve">
-    <value>POS kassani ishga tushirish</value>
+    <value>Terminalni ochish</value>
   </data>
   <data name="OrgSocraticBadge" xml:space="preserve">
     <value>Rasmiy tashkilot</value>
   </data>
   <data name="OrgSocraticTitle" xml:space="preserve">
-    <value>Socratic ekotizimi yadrosi</value>
+    <value>Tarif va modullar vitrinasi</value>
   </data>
   <data name="OrgSocraticDesc" xml:space="preserve">
     <value>Tariflarni boshqarish, SaaS modullari, fiskal litsenziyalar va ekotizim ulanishi.</value>
   </data>
   <data name="OpenSocraticSelfSelling" xml:space="preserve">
-    <value>Socratic o'zini-o'zi sotish portali</value>
+    <value>Tariflarni ochish</value>
   </data>
   <data name="PlatformDocs" xml:space="preserve">
     <value>Arxitektura hujjatlari</value>
@@ -3908,22 +3911,22 @@
     <value>28 ta universal tijorat UX ssenariylari</value>
   </data>
   <data name="LandingUxModesDesc" xml:space="preserve">
-    <value>Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — Socratic yagona kengaytiriladigan yadroda 28 ta tijorat modelini birlashtiradi.</value>
+    <value>Restoran ekspress-hisob-kitobidan va xonalar bron qilishdan kimoshdi savdolari, P2P bozorlari va obuna billingigacha — yagona kengaytiriladigan yadroda 28 ta tijorat modeli birlashtirilgan.</value>
   </data>
   <data name="LandingFlagshipTitle" xml:space="preserve">
     <value>Yetakchi arxetiplar</value>
   </data>
   <data name="LandingFlagshipSubtitle" xml:space="preserve">
-    <value>Socratic tijorat avtomatlashtirishining to'rtta asosiy ustuni</value>
+    <value>Tijorat avtomatlashtirishining to'rtta asosiy yo'nalishi</value>
   </data>
   <data name="LandingRetailFlagshipBadge" xml:space="preserve">
     <value>Chakana savdo yetakchisi</value>
   </data>
   <data name="LandingRetailFlagshipTitle" xml:space="preserve">
-    <value>Katalog &amp; Tezkor kassa</value>
+    <value>Katalog &amp; Tezkor rasmiylashtirish</value>
   </data>
   <data name="LandingRetailFlagshipDesc" xml:space="preserve">
-    <value>To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va kassada chaqqon hisob-kitob.</value>
+    <value>To'liq SKU-matritsasi, modifikatorlar, ombor qoldiqlari, tezkor qidiruv va buyurtmani chaqqon rasmiylashtirish.</value>
   </data>
   <data name="LandingRetailPillSku" xml:space="preserve">
     <value>SKU matritsasi</value>
@@ -3959,7 +3962,7 @@
     <value>AI &amp; SaaS yetakchisi</value>
   </data>
   <data name="LandingAiFlagshipTitle" xml:space="preserve">
-    <value>Onlayn xizmat &amp; AI ruxsat</value>
+    <value>SaaS xizmatlari va AI ruxsat</value>
   </data>
   <data name="LandingAiFlagshipDesc" xml:space="preserve">
     <value>Tezkor API kalitlari berish, LLM token kvotalari, kompyuter ko'rishi va mikroxizmatlar billingi.</value>
@@ -4052,16 +4055,16 @@
     <value>Uzluksiz savdo, tezkor mijozlarga xizmat ko'rsatish va to'liq soliq shaffofligi uchun barcha zarur narsalar.</value>
   </data>
   <data name="PillarPosBadge" xml:space="preserve">
-    <value>Kassa terminali</value>
+    <value>Terminal</value>
   </data>
   <data name="PillarPosHeading" xml:space="preserve">
-    <value>Har qanday savdo formati uchun sensorli kassa</value>
+    <value>Har qanday savdo formati uchun savdo nuqtasi</value>
   </data>
   <data name="PillarPosDesc" xml:space="preserve">
-    <value>Sotuvchilar, kassirlar va do'kon menejerlari uchun o'ta tezkor sensorli terminal.</value>
+    <value>Shtrix-kod skanerlash, vaznli tovarlar, bo'lib to'lash va tezkor hisob-kitob uchun o'ta tezkor sensorli terminal.</value>
   </data>
   <data name="PillarPosFeat1" xml:space="preserve">
-    <value>100% Offline-First: Internetsiz uzluksiz savdo va hisob-kitob.</value>
+    <value>Tezkor qidiruv, shtrix-kod skanerlash va buyurtmaga qo'shish.</value>
   </data>
   <data name="PillarPosFeat2" xml:space="preserve">
     <value>ESC/POS termoprinterlari, CAS tarozilari va 2D skanerlarni to'g'ridan-to'g'ri ulash.</value>
@@ -4070,7 +4073,7 @@
     <value>Muddatli to'lov (BNPL): Uzum Nasiya, Zoodpay va hisobni bo'lib to'lash.</value>
   </data>
   <data name="LaunchTerminalBtn" xml:space="preserve">
-    <value>Kassa terminalini ochish</value>
+    <value>Terminalni ochish</value>
   </data>
   <data name="PillarQrBadge" xml:space="preserve">
     <value>QR to'lovlar &amp; Soliq OFD</value>
@@ -4085,10 +4088,10 @@
     <value>QR-kodlar studiyasi</value>
   </data>
   <data name="PillarKioskBadge" xml:space="preserve">
-    <value>Smart-Kiosklar</value>
+    <value>Kiosklar</value>
   </data>
   <data name="PillarKioskHeading" xml:space="preserve">
-    <value>Mustaqil o'z-o'ziga xizmat ko'rsatish terminallari</value>
+    <value>Interaktiv kiosklar</value>
   </data>
   <data name="PillarKioskDesc" xml:space="preserve">
     <value>Tig'iz vaqtlarda navbatlarni qisqartirish, interaktiv elektron menyu va avtomatik takliflar.</value>
@@ -4115,7 +4118,7 @@
     <value>Shaffof ombor hisobi, avtomatik hisobdan chiqarish, smena hisobotlari va P&amp;L tahlili.</value>
   </data>
   <data name="PlatformWindowsDesc" xml:space="preserve">
-    <value>To'liq ekranli POS kassa terminali, bek-ofis va oflayn lokal kesh.</value>
+    <value>To'liq ekranli terminal, bek-ofis va kompyuter ilovasi.</value>
   </data>
   <data name="DownloadWindows" xml:space="preserve">
     <value>Windows uchun yuklab olish</value>
@@ -4136,7 +4139,7 @@
     <value>Android uchun yuklab olish</value>
   </data>
   <data name="PlatformIOSDesc" xml:space="preserve">
-    <value>iPad kassa zonalari va mijoz monitorlari uchun oqlangan yechim.</value>
+    <value>iPad savdo nuqtalari va iPhone smartfonlaridan monitoring uchun qulay yechim.</value>
   </data>
   <data name="DownloadIOS" xml:space="preserve">
     <value>iOS uchun yuklab olish</value>
@@ -4151,7 +4154,7 @@
     <value>Biznesingizni Socratic bilan kengaytirishga tayyormisiz?</value>
   </data>
   <data name="B2bDesc" xml:space="preserve">
-    <value>Do'kon, restoran, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang.</value>
+    <value>Do'kon, muassasa, xizmat ko'rsatish yoki tarmog'ingizni yagona tizimga ulang: savdo nuqtalari (terminal va kiosk), 28 ta mahsulot ssenariysi va Soliq OFD fiskallashtirish.</value>
   </data>
   <data name="B2bKioskConnectBtn" xml:space="preserve">
     <value>Socratic kioskida ulanish</value>
@@ -4181,7 +4184,7 @@
     <value>Interaktiv Kioskda ochish</value>
   </data>
   <data name="FooterTagline" xml:space="preserve">
-    <value>Advanced AI &amp; Multi-Platform Ecosystem</value>
+    <value>Biznes va mijozlar uchun omnikanal kross-platformali ekotizim.</value>
   </data>
   <data name="FooterRights" xml:space="preserve">
     <value>Barcha huquqlar himoyalangan.</value>
@@ -4190,7 +4193,7 @@
     <value>Platforma &amp; Katalog</value>
   </data>
   <data name="ShowroomDemo" xml:space="preserve">
-    <value>Demo Mahsulotlar vitrinasi</value>
+    <value>Demo Kiosk</value>
   </data>
   <data name="PlansConnect" xml:space="preserve">
     <value>Tariflar va ulanish</value>
@@ -4208,7 +4211,7 @@
     <value>Resurslar &amp; Ma'lumot</value>
   </data>
   <data name="FooterCommunity" xml:space="preserve">
-    <value>Community &amp; Support</value>
+    <value>Hamjamiyat va yordam</value>
   </data>
   <data name="CategoryRetailCatalog" xml:space="preserve">
     <value>Chakana savdo &amp; Katalog</value>
@@ -4322,7 +4325,7 @@
     <value>28 ta UX-rejim</value>
   </data>
   <data name="LandingPillSmartKiosk" xml:space="preserve">
-    <value>Smart kiosk</value>
+    <value>Kiosk</value>
   </data>
   <data name="LandingPillOfdCashback" xml:space="preserve">
     <value>Soliq OFD 1%</value>
@@ -4334,7 +4337,7 @@
     <value>Ekotizim tariflari</value>
   </data>
   <data name="LandingPillPosKiosks" xml:space="preserve">
-    <value>Kassalar &amp; Kiosklar</value>
+    <value>Terminallar &amp; Kiosklar</value>
   </data>
   <data name="LandingPillDirectPurchase" xml:space="preserve">
     <value>To'g'ridan-to'g'ri xarid</value>
@@ -4406,20 +4409,20 @@
     <value>Yagona tarmoqdagi filiallar</value>
   </data>
   <data name="LandingMetricOfflineDesc" xml:space="preserve">
-    <value>Avtonom ishlash</value>
+    <value>Uzluksiz ishlash</value>
   </data>
   <data name="LandingPageTitle" xml:space="preserve">
-    <value>Socratic — Biznes uchun universal ekotizim</value>
+    <value>Socratic — biznes va mijozlar uchun omnikanal kross-platformali ekotizim</value>
   </data>
   <data name="LandingMetaDesc" xml:space="preserve">
-    <value>Socratic — chakana savdo, xizmat ko'rsatish, joylarni bron qilish va to'lovlarni qabul qilish uchun yagona platforma.</value>
+    <value>Tashkilotni boshqarish va mijozlar bilan ishlash uchun yagona ilova: interaktiv xarita, 28 ta mahsulot ssenariysi, savdo nuqtalari (terminal va kiosk), 3D zal sxemalari va QR-studiya, Soliq OFD fiskallashtirish bilan to'lovlar, tahlil va kompyuter ko'rishi.</value>
   </data>
   <data name="LandingHeroTitleSocratic" xml:space="preserve">
     <value>Socratic</value>
     <comment>Hero title flagship Socratic</comment>
   </data>
   <data name="LandingHeroTitleOperatingSystem" xml:space="preserve">
-    <value>Savdo va xizmatlarning universal operatsion tizimi</value>
+    <value>Biznes va mijozlar uchun omnikanal kross-platformali ekotizim</value>
     <comment>Hero title operating system subtitle</comment>
   </data>
   <data name="LandingNoModesFoundDesc" xml:space="preserve">
@@ -4562,7 +4565,7 @@
     <value>Video havolasi topilmadi</value>
   </data>
   <data name="LandingKeywords" xml:space="preserve">
-    <value>biznes uchun universal ekotizim, savdoni avtomatlashtirish, kassa terminali, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar, Socratic</value>
+    <value>biznes uchun universal ekotizim, savdoni avtomatlashtirish, terminal, kiosk, POS, QR to‘lov, fiskallashtirish, Soliq OFD, zallarni band qilish, chakana savdo, xizmatlar</value>
   </data>
   <data name="LandingSoliqCashback" xml:space="preserve">
     <value>Soliq OFD • 1% Keshbek</value>
@@ -4757,7 +4760,7 @@
     <value>Kiosklaringiz ekranlarida hamkorlarning homiylik bannerlari ko'rsatiladi. Istalgan vaqtda PRO ga o'tib reklamani o'chirishingiz mumkin.</value>
   </data>
   <data name="Org_DescPro" xml:space="preserve">
-    <value>Barcha kiosk va kassalarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend screensaver mavjud.</value>
+    <value>Barcha kiosk va terminallarda uchinchi tomon reklamasi o'chirilgan. Logotip va taomlar suratlari bilan brend zastavkasi mavjud.</value>
   </data>
   <data name="Promo_Title" xml:space="preserve">
     <value>Mahsulotni Google va Yandex-da targ'ib qilish</value>
@@ -5165,7 +5168,7 @@
     <value>SKU</value>
   </data>
   <data name="Home_DirectorySubtitle" xml:space="preserve">
-    <value>O'z-o'ziga xizmat ko'rsatish kioski yoki bron qilish orqali buyurtma berish uchun muassasani tanlang</value>
+    <value>Kiosk yoki bron qilish orqali buyurtma berish uchun muassasani tanlang</value>
   </data>
   <data name="Home_PageTitle" xml:space="preserve">
     <value>Tashkilotlar va muassasalar katalogi • Socratic</value>
