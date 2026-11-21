@@ -12,10 +12,23 @@
 	   </AuthorizeRouteView>
    </Found>
    <NotFound>
+	   @if (TryResolveFileHashRoute(out var fileRouteData))
+	   {
+		   <AuthorizeRouteView RouteData=@fileRouteData DefaultLayout=@typeof(Layout.AppLayout)>
+			   <NotAuthorized>
+				   <RedirectToSignIn />
+			   </NotAuthorized>
+		   </AuthorizeRouteView>
+	   }
+	   else
+	   {
 	   <LayoutView Layout=@typeof(Layout.AppLayout)>
 		   @{
 			   var modules = FeatureRegistry.GetAllModules();
-			   var isRoot = string.IsNullOrEmpty(Navigation.ToBaseRelativePath(Navigation.Uri));
+			   var relPath = Navigation.ToBaseRelativePath(Navigation.Uri);
+			   var isRoot = string.IsNullOrEmpty(relPath)
+				   || (Navigation.Uri.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
+					   && relPath.Equals("index.html", StringComparison.OrdinalIgnoreCase));
 		   }
 		   <main not-found>
 			   <header>
@@ -55,5 +68,6 @@
 			   }
 		   </main>
 	   </LayoutView>
+	   }
    </NotFound>
 </Router>

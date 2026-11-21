@@ -1,0 +1,4 @@
+wwwroot/_framework/
+wwwroot/_content/
+wwwroot/index.html
+wwwroot/appsettings*.json

@@ -41,7 +41,8 @@ function findCssFiles(dir) {
       entry.isFile() &&
       entry.name.endsWith('.css') &&
       !entry.name.endsWith('.min.css') &&
-      entry.name !== 'styles.css'
+      entry.name !== 'styles.css' &&
+      !entry.name.startsWith('_md-')
     ) {
       results.push(fullPath);
     }

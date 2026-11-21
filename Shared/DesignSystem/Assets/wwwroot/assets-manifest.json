@@ -308,8 +308,8 @@
     },
     {
       "url": "_content/Assets/css/styles.css",
-      "size": 8304,
-      "hash": "sha256-bab3b7d6902d"
+      "size": 5230,
+      "hash": "sha256-17303954100e"
     },
     {
       "url": "_content/Assets/css/tokens/border.css",
@@ -733,8 +733,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/terminal.css",
-      "size": 12474,
-      "hash": "sha256-99fb1e04cfa0"
+      "size": 12473,
+      "hash": "sha256-eb75306ce215"
     },
     {
       "url": "_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2",
@@ -838,36 +838,36 @@
     },
     {
       "url": "_content/Assets/js/features/ads/ad-network.js",
-      "size": 3149,
-      "hash": "sha256-372439dfca20"
+      "size": 3942,
+      "hash": "sha256-a05248e3f516"
     },
     {
-      "url": "_content/Assets/js/features/auth/oauthPopupHelper.js",
+      "url": "_content/Assets/js/features/auth/oauth-popup.js",
       "size": 7604,
       "hash": "sha256-4a6372fc1a95"
     },
     {
-      "url": "_content/Assets/js/features/auth/passkeyHelper.js",
+      "url": "_content/Assets/js/features/auth/passkey.js",
       "size": 5163,
       "hash": "sha256-8b2b0e2b0801"
     },
     {
-      "url": "_content/Assets/js/features/auth/telegramHelper.js",
+      "url": "_content/Assets/js/features/auth/telegram.js",
       "size": 783,
       "hash": "sha256-ca5bc1abbc6e"
     },
     {
       "url": "_content/Assets/js/features/hardware/camera-streamer-loader.js",
-      "size": 444,
-      "hash": "sha256-5736ee327b27"
+      "size": 445,
+      "hash": "sha256-3b02b9fdb4fe"
     },
     {
-      "url": "_content/Assets/js/features/hardware/CameraStreamer.js",
+      "url": "_content/Assets/js/features/hardware/camera-streamer.js",
       "size": 12276,
       "hash": "sha256-65550e83bc6f"
     },
     {
-      "url": "_content/Assets/js/features/hardware/receipt-printer-helper.js",
+      "url": "_content/Assets/js/features/hardware/receipt-printer.js",
       "size": 2562,
       "hash": "sha256-736783994586"
     },
@@ -892,14 +892,19 @@
       "hash": "sha256-b4d0ad5bf859"
     },
     {
-      "url": "_content/Assets/js/features/map/socratic-map.js",
+      "url": "_content/Assets/js/features/map/map.js",
       "size": 730,
       "hash": "sha256-c51c86e0e7a9"
     },
     {
+      "url": "_content/Assets/js/file-shim.js",
+      "size": 8988,
+      "hash": "sha256-33354627d905"
+    },
+    {
       "url": "_content/Assets/js/layouts/color-theme.js",
-      "size": 15102,
-      "hash": "sha256-e95190a9e532"
+      "size": 15066,
+      "hash": "sha256-76b988ab5b2f"
     },
     {
       "url": "_content/Assets/js/layouts/reconnect-modal.js",
@@ -933,8 +938,13 @@
     },
     {
       "url": "_content/Assets/js/scripts.js",
-      "size": 5665,
-      "hash": "sha256-fb2b99669b0e"
+      "size": 4392,
+      "hash": "sha256-89d5f71f9d18"
+    },
+    {
+      "url": "_content/Assets/js/wasm-boot.js",
+      "size": 3809,
+      "hash": "sha256-8195004e69bd"
     },
     {
       "url": "_content/Assets/js/widgets/chat-input.js",
@@ -952,12 +962,12 @@
       "hash": "sha256-82d82b244078"
     },
     {
-      "url": "_content/Assets/js/widgets/qr-styling-helper.js",
+      "url": "_content/Assets/js/widgets/qr-styling.js",
       "size": 7958,
       "hash": "sha256-ae1529467ef2"
     },
     {
-      "url": "_content/Assets/js/widgets/remoteSupportWebRtc.js",
+      "url": "_content/Assets/js/widgets/remote-support-webrtc.js",
       "size": 15188,
       "hash": "sha256-a4891fb04ae2"
     },

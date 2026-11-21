@@ -1,30 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru" data-theme="dark">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Socratic Platform</title>
-    <base href="/" />
-
-    <!-- Local Font Preload -->
-    <link rel="preload" href="_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font"
-        type="font/woff2" crossorigin />
-
-    <!-- Master Design System Stylesheet & Scripts (7-Layer Mirrored Architecture) -->
-    <link rel="stylesheet" href="_content/Assets/css/styles.css" />
-    <link rel="stylesheet" href="Native.UI.styles.css" />
-    <script type="module" src="_content/Assets/js/scripts.js"></script>
-    <link rel="icon" type="image/png" href="_content/Assets/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="512x512" href="_content/Assets/img/icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="_content/Assets/img/icon-192.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Socratic</title>
+  <base href="/" />
+  <script src="_content/Assets/js/layouts/theme-init.js"></script>
+  <link rel="preload" href="_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="_content/Assets/css/styles.css" />
+  <script type="module" src="_content/Assets/js/scripts.js"></script>
+  <link rel="icon" type="image/png" href="_content/Assets/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="_content/Assets/img/icon-512.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="_content/Assets/img/icon-192.png" />
+  <link rel="manifest" href="_content/Assets/manifest.webmanifest" />
 </head>
-
 <body app oncontextmenu="return false;">
-
-    <script src="_framework/blazor.webview.js" autostart="false"></script>
-
+  <script src="_framework/blazor.webview.js" autostart="false"></script>
 </body>
-
 </html>

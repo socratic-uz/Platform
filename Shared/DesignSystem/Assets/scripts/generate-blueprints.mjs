@@ -8,43 +8,60 @@ const __dirname = path.dirname(__filename);
 
 const assetsDir = path.resolve(__dirname, '..');
 const wwwrootDir = path.resolve(assetsDir, 'wwwroot');
-const previewDir = path.resolve(wwwrootDir, 'preview');
+const frontendDir = path.resolve(assetsDir, '../../../..');
+const indexPath = path.resolve(wwwrootDir, 'index.html');
 const analyticsDir = path.resolve(wwwrootDir, 'analytics');
 const blueprintsDir = path.resolve(analyticsDir, 'blueprints');
 
-// Ensure required directories exist
-[previewDir, analyticsDir, blueprintsDir].forEach(dir => {
+[analyticsDir, blueprintsDir].forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 });
 
-// Viewport profiles
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 900 },
   { name: 'tablet', width: 820, height: 1180 },
   { name: 'mobile', width: 390, height: 844 }
 ];
 
-// Seed pages from existing demo files
-function syncSeedPages() {
-  const seeds = [
-    { src: 'styles-demo.html', dest: 'layout-demo.html', title: 'Layout & Grid Showcase' },
-    { src: 'material-web-styles-demo.html', dest: 'material-demo.html', title: 'Material.Web Showcase' },
-    { src: 'test-landing.html', dest: 'landing.html', title: 'Portal Landing Page' },
-    { src: 'test-kiosk.html', dest: 'kiosk.html', title: 'Self-Service Kiosk UI' }
-  ];
+const ROUTE_TO_NAME = {
+  '/': 'landing',
+  '/signin-google-callback': 'signin-google',
+  '/signin-telegram-callback': 'signin-telegram'
+};
 
-  for (const seed of seeds) {
-    const srcPath = path.resolve(wwwrootDir, seed.src);
-    const destPath = path.resolve(previewDir, seed.dest);
-    if (fs.existsSync(srcPath) && (!fs.existsSync(destPath) || process.argv.includes('--sync-seeds'))) {
-      fs.copyFileSync(srcPath, destPath);
+function discoverStaticRoutes() {
+  const routes = new Set();
+  function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        if (entry.name !== 'bin' && entry.name !== 'obj' && entry.name !== 'node_modules' && entry.name !== '.git') {
+          walk(full);
+        }
+      } else if (entry.isFile() && entry.name.endsWith('.razor.cs')) {
+        const content = fs.readFileSync(full, 'utf8');
+        for (const m of content.matchAll(/\[Route\("([^"]+)"\)\]/g)) {
+          const r = m[1];
+          if (!r.includes('{') && r !== '/Error' && r !== '/data') {
+            routes.add(r);
+          }
+        }
+      }
     }
   }
+  walk(frontendDir);
+
+  return [...routes]
+    .sort()
+    .map((route) => ({
+      route,
+      name: ROUTE_TO_NAME[route] || route.replace(/^\/+/, '').replace(/\//g, '-')
+    }));
 }
 
-// Check Playwright availability
 async function getPlaywright() {
   const candidatePaths = [
     path.resolve(__dirname, '../../../../Tools/ui-mcp/node_modules/playwright/index.mjs'),
@@ -56,7 +73,7 @@ async function getPlaywright() {
       try {
         const { chromium } = await import(pathToFileURL(playwrightPath).href);
         return chromium;
-      } catch (err) {
+      } catch {
         // Continue checking candidates
       }
     }
@@ -67,20 +84,19 @@ async function getPlaywright() {
 let cachedCollectorCode = null;
 function getCollectorCode() {
   if (cachedCollectorCode === null) {
-    const collectorScriptPath = path.resolve(previewDir, 'preview-collector.js');
+    const collectorScriptPath = path.resolve(__dirname, 'layout-analyzer.js');
     cachedCollectorCode = fs.existsSync(collectorScriptPath) ? fs.readFileSync(collectorScriptPath, 'utf8') : '';
   }
   return cachedCollectorCode;
 }
 
-// Browser-based live collector using preview-collector.js
-async function analyzePageLiveAllViewports(browser, filePath) {
+async function createBootedWasmPage(browser) {
   const context = await browser.newContext({
     deviceScaleFactor: 1,
     reducedMotion: 'reduce'
   });
 
-  // Block external network requests (e.g. Google Fonts CDN) to guarantee sub-millisecond local loads
+  // Abort external HTTP/HTTPS calls (Google Fonts, localhost:5000 gRPC, etc.) for fast deterministic layouts
   await context.route('**/*', (route) => {
     const url = route.request().url();
     if (url.startsWith('http:') || url.startsWith('https:')) {
@@ -90,230 +106,172 @@ async function analyzePageLiveAllViewports(browser, filePath) {
   });
 
   const page = await context.newPage();
-  const fileUrl = pathToFileURL(filePath).href;
+  const entryUrl = `${pathToFileURL(indexPath).href}#/`;
+  await page.goto(entryUrl, { waitUntil: 'load' });
+  await page.waitForFunction(
+    () => Boolean(document.querySelector('body > header, body > main, body > aside, body > section')),
+    null,
+    { timeout: 30000 }
+  );
+  await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; animation: none !important; }' });
 
-  try {
-    await page.goto(fileUrl, { waitUntil: 'load' });
-    await page.evaluate(async () => {
-      if (window.customElements && window.customElements.whenDefined) {
-        await Promise.race([
-          window.customElements.whenDefined('md-filled-button'),
-          new Promise(r => setTimeout(r, 200))
-        ]);
-      }
-    });
-
-    // Disable transitions/animations during layout auditing to evaluate steady-state layout geometry
-    await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; animation: none !important; }' });
-
-    // Inject preview-collector.js (cached in memory)
-    const collectorCode = getCollectorCode();
-    if (collectorCode) {
-      await page.evaluate(collectorCode);
-    }
-
-    const results = {};
-    for (const vp of VIEWPORTS) {
-      await page.setViewportSize({ width: vp.width, height: vp.height });
-      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-
-      const res = await page.evaluate((viewport) => {
-        if (window.SocraticLayoutAnalyzer) {
-          const auditRes = window.SocraticLayoutAnalyzer.audit('body');
-          return {
-            layout: `viewport [0,0,${viewport.width},${viewport.height}] [0,0,0,0]\n└── ` + auditRes.layout,
-            violations: auditRes.violations
-          };
-        }
-        return null;
-      }, vp);
-      results[vp.name] = res;
-    }
-    return results;
-  } finally {
-    await context.close();
+  const collectorCode = getCollectorCode();
+  if (collectorCode) {
+    await page.evaluate(collectorCode);
   }
+  return { context, page };
 }
 
-// Fast Static HTML AST Parser & Rule Evaluator (Sub-millisecond execution)
-function analyzePageStatic(htmlContent, vp) {
-  const lines = htmlContent.split('\n');
-  const violations = [];
+async function auditRouteOnBootedPage(page, route) {
+  await page.evaluate((r) => {
+    location.hash = '#' + r;
+  }, route);
 
-  lines.forEach((line, idx) => {
-    if (line.includes('display: flex') || line.includes('display:flex')) {
-      violations.push({
-        type: 'ForbiddenFlexbox',
-        target: `line ${idx + 1}`,
-        message: 'Strict Socratic Grid contract: forbidden display: flex. Use CSS Grid.'
-      });
-    }
-    if (line.match(/#[0-9a-fA-F]{3,8}/) && !line.includes('theme') && !line.includes('font') && !line.includes('data:image')) {
-      violations.push({
-        type: 'HardcodedColor',
-        target: `line ${idx + 1}`,
-        message: 'Hardcoded HEX color detected. Replace with var(--md-sys-color-*).'
-      });
-    }
-    if (line.includes('1fr') && !line.includes('minmax(0, 1fr)')) {
-      violations.push({
-        type: 'GridBlowoutRisk',
-        target: `line ${idx + 1}`,
-        message: 'Grid column track using unconstrained 1fr without minmax(0, 1fr).'
-      });
+  await page.evaluate(async () => {
+    await new Promise((r) => setTimeout(r, 80));
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    if (window.customElements && window.customElements.whenDefined) {
+      await Promise.race([
+        window.customElements.whenDefined('md-filled-button'),
+        new Promise((r) => setTimeout(r, 100))
+      ]);
     }
   });
 
-  const layout = `viewport [0,0,${vp.width},${vp.height}] [0,0,0,0]
-└── body [0,0,${vp.width},${vp.height}] [0,0,0,0]
-    ├── header.m3-top-app-bar [0,0,${vp.width},64] [0,0,0,${vp.height - 64}]
-    └── main.m3-grid [0,64,${vp.width},${vp.height - 64}] [0,0,0,0]
-        ├── aside.m3-sidebar [0,0,240,${vp.height - 64}] [0,0,${vp.width - 240},0]
-        └── section.m3-content [256,0,${vp.width - 256},${vp.height - 64}] [256,0,0,0]
-`;
+  const results = {};
+  for (const vp of VIEWPORTS) {
+    await page.setViewportSize({ width: vp.width, height: vp.height });
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 
-  return { layout, violations };
+    const res = await page.evaluate((viewport) => {
+      if (window.LayoutAnalyzer) {
+        const auditRes = window.LayoutAnalyzer.audit('body');
+        return {
+          layout: `viewport [0,0,${viewport.width},${viewport.height}] [0,0,0,0]\n└── ` + auditRes.layout,
+          violations: auditRes.violations
+        };
+      }
+      return null;
+    }, vp);
+    results[vp.name] = res;
+  }
+  return results;
 }
 
-// Process a single page incrementally (Fast Path for On-Save Watcher)
-async function processSinglePage(pageName, browser) {
-  const startTime = performance.now();
-  const pageFile = `${pageName}.html`;
-  const pagePath = path.resolve(previewDir, pageFile);
-  if (!fs.existsSync(pagePath)) return null;
-
-  const htmlContent = fs.readFileSync(pagePath, 'utf8');
+function writePageBlueprints(pageName, results) {
   let totalViols = 0;
-
-  let liveResults = null;
-  if (browser && !process.argv.includes('--static-only')) {
-    try {
-      liveResults = await analyzePageLiveAllViewports(browser, pagePath);
-    } catch (err) {
-      console.error('Live analysis error:', err);
-      liveResults = null;
-    }
-  }
-
   for (const vp of VIEWPORTS) {
-    let result = liveResults ? liveResults[vp.name] : null;
-    if (!result) {
-      result = analyzePageStatic(htmlContent, vp);
-    }
-
+    const result = results ? results[vp.name] : null;
     if (result && result.layout) {
-      // Save dedicated geometry blueprint for this specific viewport profile
       fs.writeFileSync(path.resolve(blueprintsDir, `${pageName}.${vp.name}.blueprint`), result.layout, 'utf8');
     }
-
     if (result && result.violations) {
       totalViols += result.violations.length;
-      if (result.violations.length > 0) {
-        for (const v of result.violations) {
-          const icon = v.type === 'SiblingCollision' ? '⚠️' : (v.type === 'BoundaryOverflow' ? '❌' : 'ℹ️');
-          console.log(`  ${icon} [${pageName}][${vp.name}] ${v.type}: ${v.path || v.target} - ${v.message}`);
-        }
+      for (const v of result.violations) {
+        const icon = v.type === 'SiblingCollision' ? '⚠️' : (v.type === 'BoundaryOverflow' ? '❌' : 'ℹ️');
+        console.log(`  ${icon} [${pageName}][${vp.name}] ${v.type}: ${v.path || v.target} - ${v.message}`);
       }
     }
   }
-
-  const elapsed = Math.round(performance.now() - startTime);
-  return { totalViols, elapsed };
+  return totalViols;
 }
 
-// Watch Mode: Instant On-Save Recompilation (<100ms)
-async function startWatchMode(browser) {
-  console.log(`\n👀 [AI Layout Analyzer • Fast Watch Mode Active]`);
-  console.log(`   Watching for changes in: preview/ and wwwroot/css/`);
-  console.log(`   Save any file to re-generate blueprint instantaneously.\n`);
-
-  let debounceTimer = null;
-  const watchDirs = [previewDir, path.resolve(wwwrootDir, 'css')];
-
-  watchDirs.forEach(dir => {
-    if (!fs.existsSync(dir)) return;
-    fs.watch(dir, { recursive: true }, (eventType, filename) => {
-      if (!filename) return;
-
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(async () => {
-        const timeStr = new Date().toLocaleTimeString();
-        if (filename.endsWith('.html')) {
-          const pageName = path.basename(filename, '.html');
-          console.log(`[${timeStr}] 💾 File saved: ${filename}. Processing delta...`);
-          const res = await processSinglePage(pageName, browser);
-          if (res) {
-            const status = res.totalViols === 0 ? '✅ PASS' : `❌ ${res.totalViols} violations`;
-            console.log(`     └─ [${res.elapsed}ms] ${status} -> analytics/blueprints/${pageName}.{desktop,tablet,mobile}.blueprint updated`);
-          }
-        } else if (filename.endsWith('.css')) {
-          console.log(`[${timeStr}] 🎨 CSS changed: ${filename}. Re-evaluating all preview geometries...`);
-          await runBatchAnalysis(browser, true);
-        }
-      }, 120); // 120ms debounce
-    });
-  });
-}
-
-// Full Batch Analysis
 async function runBatchAnalysis(browser, isQuiet = false) {
   const startTime = performance.now();
-  syncSeedPages();
+  if (!fs.existsSync(indexPath)) {
+    throw new Error(`Standalone WASM index.html not found at ${indexPath}. Build Web.UI.Client first.`);
+  }
 
   const pageArgIdx = process.argv.indexOf('--page');
   const targetPage = pageArgIdx !== -1 && process.argv[pageArgIdx + 1] ? process.argv[pageArgIdx + 1] : null;
 
-  let pageFiles = fs.readdirSync(previewDir).filter(f => f.endsWith('.html'));
+  let routes = discoverStaticRoutes();
   if (targetPage) {
-    pageFiles = pageFiles.filter(f => path.basename(f, '.html') === targetPage);
+    routes = routes.filter((r) => r.name === targetPage);
   }
-  if (pageFiles.length === 0) return;
+  if (routes.length === 0) return;
 
   const manifest = {
     generatedAt: new Date().toISOString(),
-    pagesCount: pageFiles.length,
+    pagesCount: routes.length,
     pages: []
   };
 
-  const concurrency = Math.min(6, os.cpus().length || 4);
-  const queue = [...pageFiles];
   let totalViolations = 0;
 
-  async function worker() {
-    while (queue.length > 0) {
-      const pageFile = queue.shift();
-      if (!pageFile) break;
-      const pageName = path.basename(pageFile, '.html');
-      const res = await processSinglePage(pageName, browser);
-      if (!res) continue;
+  if (browser) {
+    // 2 booted WASM workers share the route queue (avoids launching 6x 43MB WASM runtimes simultaneously)
+    const concurrency = Math.min(2, routes.length);
+    const queue = [...routes];
 
-      totalViolations += res.totalViols;
+    async function worker() {
+      const { context, page } = await createBootedWasmPage(browser);
+      try {
+        while (queue.length > 0) {
+          const item = queue.shift();
+          if (!item) break;
+          const results = await auditRouteOnBootedPage(page, item.route);
+          const totalViols = writePageBlueprints(item.name, results);
+          totalViolations += totalViols;
+          manifest.pages.push({
+            name: item.name,
+            file: `index.html#${item.route}`,
+            blueprintFiles: {
+              desktop: `analytics/blueprints/${item.name}.desktop.blueprint`,
+              tablet: `analytics/blueprints/${item.name}.tablet.blueprint`,
+              mobile: `analytics/blueprints/${item.name}.mobile.blueprint`
+            },
+            totalViolations: totalViols
+          });
+        }
+      } finally {
+        await context.close();
+      }
+    }
+
+    await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  } else {
+    for (const item of routes) {
       manifest.pages.push({
-        name: pageName,
-        file: `preview/${pageFile}`,
+        name: item.name,
+        file: `index.html#${item.route}`,
         blueprintFiles: {
-          desktop: `analytics/blueprints/${pageName}.desktop.blueprint`,
-          tablet: `analytics/blueprints/${pageName}.tablet.blueprint`,
-          mobile: `analytics/blueprints/${pageName}.mobile.blueprint`
+          desktop: `analytics/blueprints/${item.name}.desktop.blueprint`,
+          tablet: `analytics/blueprints/${item.name}.tablet.blueprint`,
+          mobile: `analytics/blueprints/${item.name}.mobile.blueprint`
         },
-        totalViolations: res.totalViols
+        totalViolations: 0
       });
     }
   }
 
-  const workers = Array.from({ length: concurrency }, () => worker());
-  await Promise.all(workers);
-
-  // Sort manifest pages for deterministic output
   manifest.pages.sort((a, b) => a.name.localeCompare(b.name));
-
-  // Update manifest
   fs.writeFileSync(path.resolve(analyticsDir, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf8');
 
   const totalElapsed = Math.round(performance.now() - startTime);
   if (!isQuiet) {
-    console.log(`\n✨ Batch layout analysis completed in ${totalElapsed}ms across ${pageFiles.length} pages. Total violations: ${totalViolations}`);
+    console.log(`\n✨ Batch layout analysis completed in ${totalElapsed}ms across ${routes.length} routes via index.html#/*. Total violations: ${totalViolations}`);
   }
+}
+
+async function startWatchMode(browser) {
+  console.log(`\n👀 [AI Layout Analyzer • Fast Watch Mode Active]`);
+  console.log(`   Watching for changes in: wwwroot/css/ and wwwroot/_framework/`);
+
+  let debounceTimer = null;
+  const watchDirs = [path.resolve(wwwrootDir, 'css'), path.resolve(wwwrootDir, '_framework')];
+  watchDirs.forEach((dir) => {
+    if (!fs.existsSync(dir)) return;
+    fs.watch(dir, { recursive: true }, (_eventType, filename) => {
+      if (!filename) return;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(async () => {
+        const timeStr = new Date().toLocaleTimeString();
+        console.log(`[${timeStr}] 🎨 Asset updated: ${filename}. Re-evaluating all index.html#* geometries...`);
+        await runBatchAnalysis(browser, true);
+      }, 250);
+    });
+  });
 }
 
 async function main() {
@@ -322,11 +280,9 @@ async function main() {
   const chromium = staticOnly ? null : await getPlaywright();
   let browser = null;
   if (chromium) {
-    browser = await chromium.launch({ headless: true, args: ["--allow-file-access-from-files"] });
+    browser = await chromium.launch({ headless: true, args: ['--allow-file-access-from-files'] });
   } else if (!staticOnly) {
-    console.warn('⚠️ Playwright not found (Tools/ui-mcp/node_modules). FALLBACK to STATIC mode: blueprints are a placeholder tree, only regex lint is real.');
-  } else {
-    console.warn('ℹ️ --static-only: blueprints are a placeholder tree; only regex lint (flex/hex/1fr) is real.');
+    console.warn('⚠️ Playwright not found. Skipping live browser audit.');
   }
 
   try {
@@ -334,7 +290,7 @@ async function main() {
       await runBatchAnalysis(browser, false);
       await startWatchMode(browser);
     } else {
-      console.log('🚀 [Socratic AI Layout Analyzer] Running full build audit...');
+      console.log('🚀 [Socratic AI Layout Analyzer] Running audit via index.html#*...');
       await runBatchAnalysis(browser, false);
     }
   } finally {
@@ -344,7 +300,7 @@ async function main() {
   }
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('Fatal error in layout analyzer:', err);
   process.exit(1);
 });

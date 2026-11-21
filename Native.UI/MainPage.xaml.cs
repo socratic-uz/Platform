@@ -18,13 +18,13 @@ namespace Native.UI
             e.WebView.Settings.JavaScriptEnabled = true;
             e.WebView.Settings.MediaPlaybackRequiresUserGesture = false;
             e.WebView.Settings.SetGeolocationEnabled(true);
-            e.WebView.Settings.UserAgentString = $"{e.WebView.Settings.UserAgentString} SocraticAndroidApp";
-            e.WebView.SetWebChromeClient(new SocraticWebChromeClient(e.WebView.WebChromeClient));
+            e.WebView.Settings.UserAgentString = $"{e.WebView.Settings.UserAgentString} AndroidApp";
+            e.WebView.SetWebChromeClient(new AppWebChromeClient(e.WebView.WebChromeClient));
 #endif
         }
 
 #if ANDROID
-        private sealed class SocraticWebChromeClient(Android.Webkit.WebChromeClient? inner) : Android.Webkit.WebChromeClient
+        private sealed class AppWebChromeClient(Android.Webkit.WebChromeClient? inner) : Android.Webkit.WebChromeClient
         {
             public override void OnGeolocationPermissionsShowPrompt(string? origin, Android.Webkit.GeolocationPermissions.ICallback? callback)
             {
@@ -81,7 +81,7 @@ namespace Native.UI
                 string? defaultValue,
                 Android.Webkit.JsPromptResult? result)
             {
-                const string prefix = "__SOCRATIC_BARS__:";
+                const string prefix = "__SYSTEM_BARS__:";
                 if (message is not null && message.StartsWith(prefix, StringComparison.Ordinal))
                 {
                     if (Platform.CurrentActivity is MainActivity mainActivity)

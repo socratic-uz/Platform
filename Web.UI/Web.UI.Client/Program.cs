@@ -48,4 +48,13 @@ builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider,
 builder.Services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
 builder.Services.AddScoped<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
 
+// Standalone file:// or WasmAppHost (:5080) preview: mount root router directly
+var baseAddress = builder.HostEnvironment.BaseAddress;
+if (baseAddress.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
+    || (Uri.TryCreate(baseAddress, UriKind.Absolute, out var baseUri) && baseUri.Port == 5080))
+{
+    builder.RootComponents.Add<Routes>("body");
+    builder.RootComponents.Add<Microsoft.AspNetCore.Components.Web.HeadOutlet>("head::after");
+}
+
 await builder.Build().RunAsync();

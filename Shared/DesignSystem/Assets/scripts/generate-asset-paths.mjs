@@ -67,7 +67,7 @@ function scanAssets() {
 
   const IGNORED_EXTENSIONS = new Set(['.br', '.gz', '.map', '.md', '.html', '.blueprint', '.layout']);
   const IGNORED_FILES = new Set(['assets-manifest.json', 'rollup.config.js']);
-  const IGNORED_DIRS = new Set(['preview', 'analytics']);
+  const IGNORED_DIRS = new Set(['preview', '.preview-tmp', 'analytics', '_framework', '_content']);
 
   function walk(currentDir, relativePrefix = '') {
     if (!fs.existsSync(currentDir)) return;
@@ -86,7 +86,12 @@ function scanAssets() {
       }
 
       const ext = path.extname(entry.name).toLowerCase();
-      if (IGNORED_EXTENSIONS.has(ext) || IGNORED_FILES.has(entry.name) || entry.name.endsWith('.config.js')) {
+      if (
+        IGNORED_EXTENSIONS.has(ext) ||
+        IGNORED_FILES.has(entry.name) ||
+        entry.name.endsWith('.config.js') ||
+        /^appsettings(\..+)?\.json$/i.test(entry.name)
+      ) {
         continue;
       }
 

@@ -4,7 +4,7 @@ export function loadScript() {
     }
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        script.src = '_content/Assets/js/features/hardware/CameraStreamer.js';
+        script.src = '_content/Assets/js/features/hardware/camera-streamer.js';
         script.onload = resolve;
         script.onerror = reject;
         document.body.appendChild(script);

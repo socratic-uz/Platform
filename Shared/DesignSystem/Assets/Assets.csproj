@@ -9,6 +9,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DisableStaticWebAssetsCompression>true</DisableStaticWebAssetsCompression>
+    <BundleAssets Condition="'$(BundleAssets)' == '' And ('$(Configuration)' == 'Release' Or '$(Configuration)' == 'Cluster' Or '$(Configuration)' == 'LocalDebug')">true</BundleAssets>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,12 @@
     <Folder Include="Resources\" />
   </ItemGroup>
 
+  <!-- Excluded standalone WASM preview artifacts copied by Web.UI.Client build -->
+  <ItemGroup>
+    <Content Remove="wwwroot\_framework\**;wwwroot\_content\**;wwwroot\index.html;wwwroot\appsettings*.json" />
+    <None Remove="wwwroot\_framework\**;wwwroot\_content\**;wwwroot\index.html;wwwroot\appsettings*.json" />
+  </ItemGroup>
+
   <!-- Track all W3C CSS source modules for incremental build -->
   <ItemGroup>
     <CssSourceFiles Include="wwwroot\css\**\*.css" Exclude="wwwroot\css\styles.css;wwwroot\css\*.min.css*;wwwroot\css\*.map" />
@@ -38,6 +45,26 @@
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-asset-paths.mjs&quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" ContinueOnError="WarnAndContinue" StandardOutputImportance="Normal" />
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-localization-keys.mjs&quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" ContinueOnError="WarnAndContinue" StandardOutputImportance="Normal" />
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-icon-constants.mjs&quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" ContinueOnError="WarnAndContinue" StandardOutputImportance="Normal" />
+  </Target>
+
+  <!-- Single-file CSS & JS bundling for Release/Cluster/LocalDebug (or -p:BundleAssets=true); Debug stays unbundled for Hot Reload -->
+  <Target Name="BuildReleaseAssetsBundle"
+          AfterTargets="BuildAssetsBundle"
+          BeforeTargets="ResolveStaticWebAssetsInputs;AssignTargetPaths"
+          Condition="'$(DesignTimeBuild)' != 'true' And '$(BundleAssets)' == 'true'">
+    <PropertyGroup>
+      <ReleaseBundleDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\$(IntermediateOutputPath)release-bundle'))</ReleaseBundleDir>
+    </PropertyGroup>
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/bundle-assets.mjs&quot; --out &quot;$(ReleaseBundleDir)&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          StandardOutputImportance="Normal" />
+    <ItemGroup>
+      <Content Remove="wwwroot\css\**\*.css" />
+      <Content Remove="wwwroot\js\**\*.js" />
+      <Content Include="wwwroot\js\wasm-boot.js;wwwroot\js\file-shim.js;wwwroot\js\layouts\theme-init.js;wwwroot\js\features\hardware\camera-streamer.js" />
+      <Content Include="$(ReleaseBundleDir)\css\styles.css" Link="wwwroot\css\styles.css" ContentRoot="$(ReleaseBundleDir)\" CopyToOutputDirectory="PreserveNewest" />
+      <Content Include="$(ReleaseBundleDir)\js\scripts.js" Link="wwwroot\js\scripts.js" ContentRoot="$(ReleaseBundleDir)\" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
   </Target>
 
 </Project>

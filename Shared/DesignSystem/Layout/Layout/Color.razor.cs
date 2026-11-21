@@ -73,7 +73,7 @@ namespace Shared.Layout
                     Theme ??= await Settings.GetThemeAsync();
 
                     var hexAccent = ToHex(Accent.Value);
-                    var module = await Js.InvokeAsync<IJSObjectReference>("import", AssetConstants.Scripts.Layouts.ColorTheme);
+                    var module = await Js.InvokeAsync<IJSObjectReference>("import", AssetConstants.Scripts.Master);
 
                     if (Theme == SharedKernel.ValueObjects.Theme.System)
                     {

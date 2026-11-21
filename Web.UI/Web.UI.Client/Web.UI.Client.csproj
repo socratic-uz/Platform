@@ -44,6 +44,13 @@
 	  <PackageReference Include="SkiaSharp.Views.Blazor" />
 	</ItemGroup>
 
-
+	<!-- Pack Web.UI.Client .wasm + icudt into single bundle for standalone WasmAppHost (:5080) and sync modified index.html + _framework to Assets/wwwroot/ -->
+	<Target Name="BundleClientWasmOnBuild"
+	        AfterTargets="Build"
+	        Condition="'$(DesignTimeBuild)' != 'true'">
+		<Exec Command="node &quot;$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../Shared/DesignSystem/Assets/scripts/bundle-wasm.mjs'))&quot; --build-dir &quot;$([System.IO.Path]::GetFullPath('$(OutDir).'))&quot; --manifest-prefix Web.UI.Client --assets-wwwroot &quot;$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../Shared/DesignSystem/Assets/wwwroot'))&quot;"
+		      WorkingDirectory="$(MSBuildThisFileDirectory)"
+		      StandardOutputImportance="Normal" />
+	</Target>
 
 </Project>

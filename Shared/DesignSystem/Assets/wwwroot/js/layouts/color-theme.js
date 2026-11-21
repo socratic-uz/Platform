@@ -182,10 +182,10 @@ export function applyTheme(source, isDark) {
         document.documentElement.style.colorScheme = themeName;
 
         const css = getCssVariables(source, [{ name: "custom-1", value: source, blend: true }], isDark);
-        let el = document.getElementById('socratic-dynamic-accent');
+        let el = document.getElementById('dynamic-accent');
         if (!el) {
             el = document.createElement('style');
-            el.id = 'socratic-dynamic-accent';
+            el.id = 'dynamic-accent';
             document.head.appendChild(el);
         }
         el.textContent = css;
@@ -217,7 +217,7 @@ export function autoMountTheme() {
 
 let _barSyncScheduled = false;
 export function syncNativeSystemBars() {
-    if (typeof navigator === 'undefined' || !navigator.userAgent.includes('SocraticAndroidApp')) return;
+    if (typeof navigator === 'undefined' || !navigator.userAgent.includes('AndroidApp')) return;
     if (_barSyncScheduled) return;
     _barSyncScheduled = true;
     requestAnimationFrame(() => {
@@ -235,12 +235,12 @@ export function syncNativeSystemBars() {
             const top = pickBg(header) || bodyBg;
             const bottom = (nav && getComputedStyle(nav).display !== 'none' ? pickBg(nav) : null) || bodyBg;
             const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-            window.prompt('__SOCRATIC_BARS__:' + JSON.stringify({ top, bottom, isLight }));
+            window.prompt('__SYSTEM_BARS__:' + JSON.stringify({ top, bottom, isLight }));
         } catch { }
     });
 }
 
-if (typeof navigator !== 'undefined' && navigator.userAgent.includes('SocraticAndroidApp')) {
+if (typeof navigator !== 'undefined' && navigator.userAgent.includes('AndroidApp')) {
     window.addEventListener('DOMContentLoaded', syncNativeSystemBars);
     const observer = new MutationObserver(() => syncNativeSystemBars());
     observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-theme', 'style'] });

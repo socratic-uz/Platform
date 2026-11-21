@@ -49,7 +49,7 @@ namespace Smart.Web.Components
         {
             try
             {
-                await JS.InvokeVoidAsync("socraticAdSense.push");
+                await JS.InvokeVoidAsync("adSense.push");
             }
             catch
             {

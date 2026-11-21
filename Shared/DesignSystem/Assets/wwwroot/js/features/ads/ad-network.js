@@ -1,8 +1,30 @@
 /**
- * Socratic Platform - Ad Network Integration (Google AdSense & Yandex Direct)
+ * Socratic Platform - Ad Network & Analytics Integration (GA4, Yandex.Metrika, Google AdSense, Yandex Direct)
  */
 
 window.yaContextCb = window.yaContextCb || [];
+
+if (typeof window !== 'undefined' && /^https?:$/i.test(window.location?.protocol || '')) {
+    // Google Analytics 4 (G-3GKEJC8CEW)
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-3GKEJC8CEW');
+
+    // Yandex.Metrika (114253340)
+    window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
+    window.ym.l = 1 * new Date();
+    window.ym(114253340, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+    });
+}
 
 export const adNetwork = {
     pushGoogle() {
@@ -78,8 +100,8 @@ export const adNetwork = {
     }
 };
 
-window.socraticAdNetwork = adNetwork;
-window.socraticAdSense = {
+window.adNetwork = adNetwork;
+window.adSense = {
     push() {
         adNetwork.pushGoogle();
     }

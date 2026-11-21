@@ -77,7 +77,7 @@ main[terminal] > section > section {
     padding-right: var(--md-sys-spacing-1);
     padding-bottom: var(--md-sys-spacing-6);
     overflow-y: auto;
-    overscroll-behavior-y: contain;
+    /* overscroll-behavior-y: contain; */
 }
 
 main[terminal] > section > section > article {

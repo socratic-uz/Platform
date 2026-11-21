@@ -38,8 +38,8 @@ namespace Assets.Constants
             public const string ChatInput = "./_content/Assets/js/widgets/chat-input.js";
             public const string ChatMessageList = "./_content/Assets/js/widgets/chat-message-list.js";
             public const string Markdown = "./_content/Assets/js/widgets/markdown.js";
-            public const string QrStylingHelper = "./_content/Assets/js/widgets/qr-styling-helper.js";
-            public const string RemoteSupportWebRtc = "./_content/Assets/js/widgets/remoteSupportWebRtc.js";
+            public const string QrStyling = "./_content/Assets/js/widgets/qr-styling.js";
+            public const string RemoteSupportWebrtc = "./_content/Assets/js/widgets/remote-support-webrtc.js";
             public const string SeatDesigner = "./_content/Assets/js/widgets/seat-designer.js";
         }
 
@@ -53,17 +53,17 @@ namespace Assets.Constants
         public static class Features
         {
             public const string AdNetwork = "./_content/Assets/js/features/ads/ad-network.js";
-            public const string CameraStreamer = "./_content/Assets/js/features/hardware/CameraStreamer.js";
+            public const string CameraStreamer = "./_content/Assets/js/features/hardware/camera-streamer.js";
             public const string CameraStreamerLoader = "./_content/Assets/js/features/hardware/camera-streamer-loader.js";
+            public const string Map = "./_content/Assets/js/features/map/map.js";
             public const string MapLibreCore = "./_content/Assets/js/features/map/map-libre-core.js";
             public const string MapLibreLayers = "./_content/Assets/js/features/map/map-libre-layers.js";
             public const string MapLibreServices = "./_content/Assets/js/features/map/map-libre-services.js";
             public const string MapLibreState = "./_content/Assets/js/features/map/map-libre-state.js";
-            public const string OauthPopupHelper = "./_content/Assets/js/features/auth/oauthPopupHelper.js";
-            public const string PasskeyHelper = "./_content/Assets/js/features/auth/passkeyHelper.js";
-            public const string ReceiptPrinterHelper = "./_content/Assets/js/features/hardware/receipt-printer-helper.js";
-            public const string SocraticMap = "./_content/Assets/js/features/map/socratic-map.js";
-            public const string TelegramHelper = "./_content/Assets/js/features/auth/telegramHelper.js";
+            public const string OauthPopup = "./_content/Assets/js/features/auth/oauth-popup.js";
+            public const string Passkey = "./_content/Assets/js/features/auth/passkey.js";
+            public const string ReceiptPrinter = "./_content/Assets/js/features/hardware/receipt-printer.js";
+            public const string Telegram = "./_content/Assets/js/features/auth/telegram.js";
         }
 
         public static class Components
@@ -75,15 +75,17 @@ namespace Assets.Constants
         }
 
         public const string AdNetwork = "./_content/Assets/js/features/ads/ad-network.js";
-        public const string CameraStreamer = "./_content/Assets/js/features/hardware/CameraStreamer.js";
+        public const string CameraStreamer = "./_content/Assets/js/features/hardware/camera-streamer.js";
         public const string CameraStreamerLoader = "./_content/Assets/js/features/hardware/camera-streamer-loader.js";
         public const string ChatInput = "./_content/Assets/js/widgets/chat-input.js";
         public const string ChatMessageList = "./_content/Assets/js/widgets/chat-message-list.js";
         public const string ColorTheme = "./_content/Assets/js/layouts/color-theme.js";
         public const string DialogPatch = "./_content/Assets/js/components/dialog-patch.js";
+        public const string FileShim = "./_content/Assets/js/file-shim.js";
         public const string Home = "./_content/Assets/js/pages/home.js";
         public const string Landing = "./_content/Assets/js/pages/landing.js";
         public const string Lifecycle = "./_content/Assets/js/lifecycle.js";
+        public const string Map = "./_content/Assets/js/features/map/map.js";
         public const string MapLibreCore = "./_content/Assets/js/features/map/map-libre-core.js";
         public const string MapLibreLayers = "./_content/Assets/js/features/map/map-libre-layers.js";
         public const string MapLibreServices = "./_content/Assets/js/features/map/map-libre-services.js";
@@ -91,20 +93,20 @@ namespace Assets.Constants
         public const string Markdown = "./_content/Assets/js/widgets/markdown.js";
         public const string MaterialColorUtilitiesBundle = "./_content/Assets/js/components/material-color-utilities.bundle.js";
         public const string MaterialWebBundle = "./_content/Assets/js/components/material-web.bundle.js";
-        public const string OauthPopupHelper = "./_content/Assets/js/features/auth/oauthPopupHelper.js";
-        public const string PasskeyHelper = "./_content/Assets/js/features/auth/passkeyHelper.js";
+        public const string OauthPopup = "./_content/Assets/js/features/auth/oauth-popup.js";
+        public const string Passkey = "./_content/Assets/js/features/auth/passkey.js";
         public const string Player = "./_content/Assets/js/pages/player.js";
-        public const string QrStylingHelper = "./_content/Assets/js/widgets/qr-styling-helper.js";
-        public const string ReceiptPrinterHelper = "./_content/Assets/js/features/hardware/receipt-printer-helper.js";
+        public const string QrStyling = "./_content/Assets/js/widgets/qr-styling.js";
+        public const string ReceiptPrinter = "./_content/Assets/js/features/hardware/receipt-printer.js";
         public const string ReconnectModal = "./_content/Assets/js/layouts/reconnect-modal.js";
-        public const string RemoteSupportWebRtc = "./_content/Assets/js/widgets/remoteSupportWebRtc.js";
+        public const string RemoteSupportWebrtc = "./_content/Assets/js/widgets/remote-support-webrtc.js";
         public const string Master = "./_content/Assets/js/scripts.js";
         public const string ScriptsFile = "./_content/Assets/js/scripts.js";
         public const string SeatDesigner = "./_content/Assets/js/widgets/seat-designer.js";
         public const string SliderPatch = "./_content/Assets/js/components/slider-patch.js";
-        public const string SocraticMap = "./_content/Assets/js/features/map/socratic-map.js";
-        public const string TelegramHelper = "./_content/Assets/js/features/auth/telegramHelper.js";
+        public const string Telegram = "./_content/Assets/js/features/auth/telegram.js";
         public const string ThemeInit = "./_content/Assets/js/layouts/theme-init.js";
+        public const string WasmBoot = "./_content/Assets/js/wasm-boot.js";
     }
 
     public static class Styles

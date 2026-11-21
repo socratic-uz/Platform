@@ -11,6 +11,7 @@
 		<UserSecretsId>Socratic</UserSecretsId>
 		<LangVersion>preview</LangVersion>
 		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+		<BundleAssets Condition="'$(BundleAssets)' == '' And ('$(Configuration)' == 'Release' Or '$(Configuration)' == 'Cluster' Or '$(Configuration)' == 'LocalDebug')">true</BundleAssets>
 		<AttachWeakETagToCompressedAssetsDuringDevelopment>true</AttachWeakETagToCompressedAssetsDuringDevelopment>
 
 		<!-- Отключаем инвариантную глобализацию для правильной работы локализации -->
@@ -56,5 +57,21 @@
 		<Content Include="libgomp.so.1.0.0" Condition="Exists('libgomp.so.1.0.0')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="runtimes/**/libgomp.so.1*" Condition="Exists('runtimes')" CopyToPublishDirectory="Always" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
+
+	<!-- Pack all Webcil *.wasm assemblies (except dotnet.native.*.wasm) into a single bundle when BundleAssets=true -->
+	<Target Name="BundleWasmAssembliesOnBuild"
+	        AfterTargets="Build"
+	        Condition="'$(DesignTimeBuild)' != 'true' And '$(BundleAssets)' == 'true'">
+		<Exec Command="node &quot;$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../Shared/DesignSystem/Assets/scripts/bundle-wasm.mjs'))&quot; --build-dir &quot;$([System.IO.Path]::GetFullPath('$(OutDir).'))&quot;"
+		      WorkingDirectory="$(MSBuildThisFileDirectory)"
+		      StandardOutputImportance="Normal" />
+	</Target>
+	<Target Name="BundleWasmAssembliesOnPublish"
+	        AfterTargets="Publish"
+	        Condition="'$(DesignTimeBuild)' != 'true' And '$(BundleAssets)' == 'true'">
+		<Exec Command="node &quot;$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../Shared/DesignSystem/Assets/scripts/bundle-wasm.mjs'))&quot; --publish-dir &quot;$([System.IO.Path]::GetFullPath('$(PublishDir).'))&quot;"
+		      WorkingDirectory="$(MSBuildThisFileDirectory)"
+		      StandardOutputImportance="Normal" />
+	</Target>
 </Project>
 <!--CI/CD Trigger * -->
