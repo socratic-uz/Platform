@@ -943,8 +943,8 @@
     },
     {
       "url": "_content/Assets/js/wasm-boot.js",
-      "size": 3809,
-      "hash": "sha256-8195004e69bd"
+      "size": 4068,
+      "hash": "sha256-4f0452c871b0"
     },
     {
       "url": "_content/Assets/js/widgets/chat-input.js",

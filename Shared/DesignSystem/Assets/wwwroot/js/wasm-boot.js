@@ -69,9 +69,16 @@
       };
     }
 
-    if (bundleFile && !bundleFile.startsWith('__')) {
+    const configureRuntime = function (dotnet) {
+      if (dotnet && dotnet.withEnvironmentVariable) {
+        dotnet.withEnvironmentVariable('STANDALONE_WASM', '1');
+      }
+    };
+
+    if (bundleFile && !bundleFile.includes('#[') && !bundleFile.startsWith('__')) {
       getBundleMap().catch(() => { });
       Blazor.start({
+        configureRuntime,
         loadBootResource: function (type, name, defaultUri, integrity) {
           if ((type === 'assembly' || type === 'globalization') && !name.startsWith('dotnet.native')) {
             const uriFile = (defaultUri || '').split('/').pop().split('?')[0];
@@ -92,7 +99,7 @@
         }
       });
     } else {
-      Blazor.start();
+      Blazor.start({ configureRuntime });
     }
   }
 

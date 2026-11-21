@@ -316,6 +316,13 @@ if (publishDir) {
       for (const m of dotnetRaw.matchAll(/Web\.UI\.Client\.[a-z0-9]+\.lib\.module\.js/g)) {
         if (!libKeys.includes(m[0])) libKeys.push(m[0]);
       }
+      const gzNode = fwChildren['dotnet.js.gz'];
+      if (gzNode?.Asset) {
+        const gzPath = path.join(runtime.ContentRoots[gzNode.Asset.ContentRootIndex], gzNode.Asset.SubPath);
+        if (fs.existsSync(path.dirname(gzPath))) {
+          fs.writeFileSync(gzPath, zlib.gzipSync(dotnetBuf, { level: 6 }));
+        }
+      }
     }
   }
 
