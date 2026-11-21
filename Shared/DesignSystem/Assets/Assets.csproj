@@ -55,10 +55,23 @@
     <PropertyGroup>
       <ReleaseBundleDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\$(IntermediateOutputPath)release-bundle'))</ReleaseBundleDir>
     </PropertyGroup>
+    <!-- CI images start from a clean checkout: install bundler deps (postcss, rollup, ...) when node_modules is missing -->
+    <Exec Command="npm ci --no-audit --no-fund"
+          Condition="!Exists('$(MSBuildThisFileDirectory)node_modules/postcss')"
+          WorkingDirectory="$(MSBuildThisFileDirectory)"
+          IgnoreExitCode="true"
+          IgnoreStandardErrorWarningFormat="true"
+          StandardOutputImportance="Normal" />
+    <!-- Bundling is an optimization: if node/npm are unavailable (e.g. android/aot images) fall back to unbundled assets instead of failing the build -->
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/bundle-assets.mjs&quot; --out &quot;$(ReleaseBundleDir)&quot;"
           WorkingDirectory="$(MSBuildThisFileDirectory)"
-          StandardOutputImportance="Normal" />
-    <ItemGroup>
+          IgnoreExitCode="true"
+          IgnoreStandardErrorWarningFormat="true"
+          StandardOutputImportance="Normal">
+      <Output TaskParameter="ExitCode" PropertyName="_AssetsBundleExitCode" />
+    </Exec>
+    <Warning Condition="'$(_AssetsBundleExitCode)' != '0'" Text="Assets single-file bundling failed (exit $(_AssetsBundleExitCode)); falling back to unbundled css/js." />
+    <ItemGroup Condition="'$(_AssetsBundleExitCode)' == '0' And Exists('$(ReleaseBundleDir)\js\scripts.js')">
       <Content Remove="wwwroot\css\**\*.css" />
       <Content Remove="wwwroot\js\**\*.js" />
       <Content Include="wwwroot\js\wasm-boot.js;wwwroot\js\file-shim.js;wwwroot\js\layouts\theme-init.js;wwwroot\js\features\hardware\camera-streamer.js" />
