@@ -303,6 +303,22 @@ if (publishDir) {
     }
   }
 
+  // Also inspect dotnet.js in _framework to ensure any referenced Web.UI.Client.<hash>.lib.module.js is registered
+  let dotnetBuf = null;
+  let dotnetSha = null;
+  const dotnetNode = fwChildren['dotnet.js'];
+  if (dotnetNode?.Asset) {
+    const dotnetSrc = path.join(runtime.ContentRoots[dotnetNode.Asset.ContentRootIndex], dotnetNode.Asset.SubPath);
+    if (fs.existsSync(dotnetSrc)) {
+      dotnetBuf = fs.readFileSync(dotnetSrc);
+      dotnetSha = crypto.createHash('sha256').update(dotnetBuf).digest('base64');
+      const dotnetRaw = dotnetBuf.toString('utf8');
+      for (const m of dotnetRaw.matchAll(/Web\.UI\.Client\.[a-z0-9]+\.lib\.module\.js/g)) {
+        if (!libKeys.includes(m[0])) libKeys.push(m[0]);
+      }
+    }
+  }
+
   let patchedLibBuf = null;
   let patchedLibSha = null;
   if (libSourcePath) {
@@ -315,23 +331,26 @@ if (publishDir) {
     fs.writeFileSync(path.join(bundleRootDir, 'Web.UI.Client.lib.module.js'), patchedLibBuf);
   }
 
-  // Build map of clean asset path -> fingerprinted route from endpoints.json
+  // Build map of clean asset path -> fingerprinted route from endpoints.json using the 'fingerprint' EndpointProperty
   const fingerprintedByAsset = new Map();
   for (const ep of endpoints.Endpoints || []) {
     const route = ep.Route || '';
-    const asset = ep.AssetFile || '';
-    if (!route || !asset || route.endsWith('.gz') || route.endsWith('.br') || asset.endsWith('.gz') || asset.endsWith('.br')) {
+    if (!route || route.endsWith('.gz') || route.endsWith('.br')) {
       continue;
     }
-    if (route !== asset) {
-      fingerprintedByAsset.set(asset, route);
+    const fpProp = (ep.EndpointProperties || []).find((p) => p.Name === 'fingerprint' && p.Value);
+    if (fpProp) {
+      const cleanAsset = route.replace(`.${fpProp.Value}.`, '.');
+      if (cleanAsset !== route) {
+        fingerprintedByAsset.set(cleanAsset, route);
+      }
     }
   }
 
   function buildFingerprintedImportMap() {
     const imports = {};
     for (const [asset, route] of fingerprintedByAsset.entries()) {
-      if ((asset.endsWith('.js') || asset.endsWith('.mjs')) && !asset.startsWith('_framework/')) {
+      if (asset.endsWith('.js') || asset.endsWith('.mjs')) {
         imports[`./${asset}`] = `./${route}`;
       }
     }
@@ -411,7 +430,11 @@ if (publishDir) {
       }
     }
     for (const key of libKeys) {
-      rootChildren[key].Asset = { ContentRootIndex: bundleRootIdx, SubPath: 'Web.UI.Client.lib.module.js' };
+      rootChildren[key] = {
+        Children: null,
+        Asset: { ContentRootIndex: bundleRootIdx, SubPath: 'Web.UI.Client.lib.module.js' },
+        Patterns: null
+      };
     }
   }
 
@@ -420,6 +443,9 @@ if (publishDir) {
     delete rootChildren['index.html.gz'];
     rootChildren['index.html'].Asset = { ContentRootIndex: bundleRootIdx, SubPath: 'index.html' };
   }
+
+  delete fwChildren['dotnet.js.br'];
+  delete fwChildren['dotnet.js.gz'];
 
   fs.writeFileSync(runtimePath, JSON.stringify(runtime), 'utf8');
 
@@ -432,14 +458,48 @@ if (publishDir) {
     if (packedAssets.has(baseAsset)) return false;
     if (/^_framework\/assemblies\.[a-f0-9]+\.(bundle|wasm)(\.br|\.gz)?$/.test(asset)) return false;
     if (/^Web\.UI\.Client.*\.lib\.module\.js\.(br|gz)$/.test(asset)) return false;
+    if (/^_framework\/dotnet(\.[a-z0-9]+)?\.js\.(br|gz)$/.test(asset)) return false;
     if (patchedIndexBuf && /^index\.html\.(br|gz)$/.test(asset)) return false;
     return true;
   });
 
+  if (dotnetBuf && dotnetSha) {
+    for (const ep of endpoints.Endpoints) {
+      if ((ep.AssetFile || '') === '_framework/dotnet.js') {
+        updateEndpointHeaders(ep, dotnetBuf, dotnetSha, nowUtc);
+      }
+    }
+  }
+
   if (patchedLibBuf && patchedLibSha) {
+    let libEndpointTemplate = null;
     for (const ep of endpoints.Endpoints) {
       if (/^Web\.UI\.Client.*\.lib\.module\.js$/.test(ep.AssetFile || '')) {
         updateEndpointHeaders(ep, patchedLibBuf, patchedLibSha, nowUtc);
+        if (!libEndpointTemplate) libEndpointTemplate = ep;
+      }
+    }
+    for (const key of libKeys) {
+      if (!endpoints.Endpoints.some((ep) => ep.Route === key)) {
+        const cloned = libEndpointTemplate
+          ? JSON.parse(JSON.stringify(libEndpointTemplate))
+          : {
+              Route: key,
+              AssetFile: key,
+              Selectors: [],
+              ResponseHeaders: [
+                { Name: 'Cache-Control', Value: 'no-cache' },
+                { Name: 'Content-Length', Value: String(patchedLibBuf.length) },
+                { Name: 'Content-Type', Value: 'text/javascript' },
+                { Name: 'ETag', Value: `"${patchedLibSha}"` },
+                { Name: 'Last-Modified', Value: nowUtc }
+              ],
+              EndpointProperties: [{ Name: 'integrity', Value: `sha256-${patchedLibSha}` }]
+            };
+        cloned.Route = key;
+        cloned.AssetFile = key;
+        updateEndpointHeaders(cloned, patchedLibBuf, patchedLibSha, nowUtc);
+        endpoints.Endpoints.push(cloned);
       }
     }
   }
