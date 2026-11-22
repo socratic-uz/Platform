@@ -138,8 +138,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/icons.css",
-      "size": 1097,
-      "hash": "sha256-c41cfc9ea75c"
+      "size": 1232,
+      "hash": "sha256-78f27e34e397"
     },
     {
       "url": "_content/Assets/css/foundations/island.css",
@@ -173,8 +173,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/scaffold.css",
-      "size": 4101,
-      "hash": "sha256-938bffd74de6"
+      "size": 4151,
+      "hash": "sha256-57ba3ebe1e0a"
     },
     {
       "url": "_content/Assets/css/foundations/scrollbars.css",
@@ -913,8 +913,8 @@
     },
     {
       "url": "_content/Assets/js/layouts/theme-init.js",
-      "size": 745,
-      "hash": "sha256-6ab22e53fca1"
+      "size": 1429,
+      "hash": "sha256-ecebfeda8525"
     },
     {
       "url": "_content/Assets/js/lifecycle.js",
