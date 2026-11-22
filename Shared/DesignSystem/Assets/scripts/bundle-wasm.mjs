@@ -148,7 +148,22 @@ if (publishDir) {
     }
   }
 
-  const patchedLibFiles = [];
+  const patchedFiles = [];
+  const renamedModules = [];
+
+  function writeWithCompressedVariants(fullPath, buf) {
+    fs.writeFileSync(fullPath, buf);
+    if (fs.existsSync(`${fullPath}.br`)) {
+      fs.writeFileSync(
+        `${fullPath}.br`,
+        zlib.brotliCompressSync(buf, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 } })
+      );
+    }
+    if (fs.existsSync(`${fullPath}.gz`)) {
+      fs.writeFileSync(`${fullPath}.gz`, zlib.gzipSync(buf, { level: 9 }));
+    }
+  }
+
   function patchJsInDir(dir, relPrefix = '') {
     if (!fs.existsSync(dir)) return;
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -165,22 +180,60 @@ if (publishDir) {
               .replaceAll('__ASSEMBLIES_BUNDLE_FILE__', packed.bundleName),
             'utf8'
           );
-          fs.writeFileSync(full, updatedBuf);
-          if (fs.existsSync(`${full}.br`)) {
-            fs.writeFileSync(
-              `${full}.br`,
-              zlib.brotliCompressSync(updatedBuf, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 } })
-            );
+          const fpMatch = entry.name.match(/^Web\.UI\.Client\.([a-z0-9]+)\.lib\.module\.js$/);
+          if (fpMatch) {
+            const oldFp = fpMatch[1];
+            const newFp = crypto.createHash('sha256').update(updatedBuf).digest('hex').slice(0, 10);
+            const newName = `Web.UI.Client.${newFp}.lib.module.js`;
+            const newFull = path.join(dir, newName);
+            const newRel = relPrefix ? `${relPrefix}/${newName}` : newName;
+
+            fs.writeFileSync(newFull, updatedBuf);
+            if (fs.existsSync(`${full}.br`)) {
+              fs.unlinkSync(`${full}.br`);
+              fs.writeFileSync(
+                `${newFull}.br`,
+                zlib.brotliCompressSync(updatedBuf, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 } })
+              );
+            }
+            if (fs.existsSync(`${full}.gz`)) {
+              fs.unlinkSync(`${full}.gz`);
+              fs.writeFileSync(`${newFull}.gz`, zlib.gzipSync(updatedBuf, { level: 9 }));
+            }
+            if (newFull !== full && fs.existsSync(full)) {
+              fs.unlinkSync(full);
+            }
+            renamedModules.push({ oldRel: rel, newRel, oldName: entry.name, newName, oldFp, newFp });
+            patchedFiles.push(newRel);
+          } else {
+            writeWithCompressedVariants(full, updatedBuf);
+            patchedFiles.push(rel);
           }
-          if (fs.existsSync(`${full}.gz`)) {
-            fs.writeFileSync(`${full}.gz`, zlib.gzipSync(updatedBuf, { level: 9 }));
-          }
-          patchedLibFiles.push(rel);
         }
       }
     }
   }
   patchJsInDir(wwwrootDir);
+
+  if (renamedModules.length > 0) {
+    const refTargets = ['Web.UI.modules.json', '_framework/dotnet.js'];
+    for (const refRel of refTargets) {
+      const refFull = path.join(wwwrootDir, refRel);
+      if (!fs.existsSync(refFull)) continue;
+      let refText = fs.readFileSync(refFull, 'utf8');
+      let changed = false;
+      for (const r of renamedModules) {
+        if (refText.includes(r.oldName)) {
+          refText = refText.replaceAll(r.oldName, r.newName);
+          changed = true;
+        }
+      }
+      if (changed) {
+        writeWithCompressedVariants(refFull, Buffer.from(refText, 'utf8'));
+        patchedFiles.push(refRel);
+      }
+    }
+  }
 
   if (fs.existsSync(endpointsPath)) {
     const manifest = JSON.parse(fs.readFileSync(endpointsPath, 'utf8'));
@@ -192,7 +245,23 @@ if (publishDir) {
       return !packedSet.has(baseAsset);
     });
 
-    for (const rel of patchedLibFiles) {
+    for (const r of renamedModules) {
+      for (const ep of manifest.Endpoints) {
+        if (ep.Route && ep.Route.includes(r.oldName)) {
+          ep.Route = ep.Route.replaceAll(r.oldName, r.newName);
+        }
+        if (ep.AssetFile && ep.AssetFile.includes(r.oldName)) {
+          ep.AssetFile = ep.AssetFile.replaceAll(r.oldName, r.newName);
+        }
+        for (const p of ep.EndpointProperties || []) {
+          if (p.Name === 'fingerprint' && p.Value === r.oldFp) {
+            p.Value = r.newFp;
+          }
+        }
+      }
+    }
+
+    for (const rel of patchedFiles) {
       const full = path.join(wwwrootDir, rel);
       const variants = [
         { assetFile: rel, buf: fs.readFileSync(full) },
