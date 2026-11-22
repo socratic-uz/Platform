@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <base href="/" />
   <ImportMap />
-  <script src=@Assets["_content/Assets/js/layouts/theme-init.js"]></script>
-  <link rel="preload" href=@Assets["_content/Assets/fonts/MaterialSymbolsOutlined/Material-Symbols-Outlined.woff2"] as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href=@Assets["_content/Assets/css/styles.css"] />
-  <script type="module" src=@Assets["_content/Assets/js/scripts.js"]></script>
-  <link rel="icon" type="image/png" href=@Assets["_content/Assets/img/favicon.png"] />
-  <link rel="apple-touch-icon" sizes="512x512" href=@Assets["_content/Assets/img/icon-512.png"] />
-  <link rel="apple-touch-icon" sizes="192x192" href=@Assets["_content/Assets/img/icon-192.png"] />
-  <link rel="manifest" href=@Assets["_content/Assets/manifest.webmanifest"] />
+  <script src=@Assets[Scripts.ThemeInit[2..]]></script>
+  <link rel="preload" href=@Fonts.MaterialSymbolsOutlined as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href=@Assets[Styles.Master] />
+  <script type="module" src=@Assets[Scripts.Master[2..]]></script>
+  <link rel="icon" type="image/png" href=@Assets[Images.Favicon] />
+  <link rel="apple-touch-icon" sizes="512x512" href=@Assets[Images.Icon512] />
+  <link rel="apple-touch-icon" sizes="192x192" href=@Assets[Images.Icon192] />
+  <link rel="manifest" href=@Assets[AppManifest.Manifest] />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3226044876387611" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GKEJC8CEW"></script>
   <script async src="https://mc.yandex.ru/metrika/tag.js?id=114253340"></script>
