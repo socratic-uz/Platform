@@ -18,8 +18,11 @@
             return;
         }
         const markIcons = () => {
-            if (document.fonts.check('24px "Material Symbols Outlined"')) {
-                document.documentElement.setAttribute('data-icons-ready', '');
+            for (const face of document.fonts) {
+                if (face.family.replace(/['"]/g, '') === 'Material Symbols Outlined' && face.status === 'loaded') {
+                    document.documentElement.setAttribute('data-icons-ready', '');
+                    return;
+                }
             }
         };
         markIcons();
