@@ -137,7 +137,9 @@ if (publishDir) {
   const brBuffer = zlib.brotliCompressSync(packed.bundleBuffer, {
     params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 }
   });
+  const gzBuffer = zlib.gzipSync(packed.bundleBuffer, { level: 9 });
   fs.writeFileSync(`${bundlePath}.br`, brBuffer);
+  fs.writeFileSync(`${bundlePath}.gz`, gzBuffer);
 
   for (const fileName of wasmFiles) {
     for (const suffix of ['', '.br', '.gz']) {
@@ -210,6 +212,7 @@ if (publishDir) {
     const route = `_framework/${packed.bundleName}`;
     manifest.Endpoints.push(
       createBundleEndpoint(route, `${route}.br`, 'br', brBuffer, packed.sha256Base64, nowUtc),
+      createBundleEndpoint(route, `${route}.gz`, 'gz', gzBuffer, packed.sha256Base64, nowUtc),
       createBundleEndpoint(route, route, null, packed.bundleBuffer, packed.sha256Base64, nowUtc)
     );
 
