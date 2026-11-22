@@ -12,5 +12,19 @@
         document.documentElement.setAttribute('data-theme', normalized);
         document.documentElement.style.colorScheme = normalized;
     } catch (_) {}
+    try {
+        if (!document.fonts) {
+            document.documentElement.setAttribute('data-icons-ready', '');
+            return;
+        }
+        const markIcons = () => {
+            if (document.fonts.check('24px "Material Symbols Outlined"')) {
+                document.documentElement.setAttribute('data-icons-ready', '');
+            }
+        };
+        markIcons();
+        document.fonts.ready.then(markIcons);
+        document.fonts.addEventListener?.('loadingdone', markIcons);
+    } catch (_) {}
 })();
 

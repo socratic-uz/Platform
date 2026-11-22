@@ -34,3 +34,8 @@ md-icon:not(:defined) {
     overflow: hidden;
     vertical-align: middle;
 }
+
+html:not([data-icons-ready]) md-icon,
+html:not([data-icons-ready]) [class*="material-symbols"] {
+    color: transparent !important;
+}
