@@ -83,8 +83,8 @@
     },
     {
       "url": "_content/Assets/css/fonts/material-symbols-outlined.css",
-      "size": 312,
-      "hash": "sha256-69abe1dd5880"
+      "size": 313,
+      "hash": "sha256-14205d8d19bb"
     },
     {
       "url": "_content/Assets/css/fonts/montserrat.css",
@@ -173,8 +173,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/scaffold.css",
-      "size": 3978,
-      "hash": "sha256-0142d9c6ec3a"
+      "size": 4101,
+      "hash": "sha256-938bffd74de6"
     },
     {
       "url": "_content/Assets/css/foundations/scrollbars.css",
