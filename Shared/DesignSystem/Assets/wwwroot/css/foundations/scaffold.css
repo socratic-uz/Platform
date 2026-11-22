@@ -33,6 +33,15 @@ body>aside:has(~ main) {
 /* --------------------------------------------------------------------------
    6. Подмакросетка подвала (body > footer)
    -------------------------------------------------------------------------- */
+body>aside:has(~ main):not(:has(> nav)) {
+    width: 0;
+    min-width: 0;
+}
+
+md-dialog:not([open]) {
+    display: none;
+}
+
 body>footer {
     grid-area: footer;
 }

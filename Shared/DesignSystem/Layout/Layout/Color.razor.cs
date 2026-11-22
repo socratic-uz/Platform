@@ -18,9 +18,11 @@ namespace Shared.Layout
         [Parameter] public SharedKernel.ValueObjects.Theme? Theme { get; set; }
         [Parameter] public int? Accent { get; set; }
 
-        private bool _isDark;
+        private bool _isDark = true;
 
-        public string ModeValue => _isDark ? "dark" : "light";
+        public string? ModeValue => Theme == SharedKernel.ValueObjects.Theme.System
+            ? null
+            : (_isDark ? "dark" : "light");
         public string ModeClass => _isDark ? "dark-mode" : "light-mode";
         public string ColorClass => string.Format(AssetConstants.Formats.Two, Accent?.ToString().ToLower(), ModeClass);
 
