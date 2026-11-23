@@ -89,7 +89,6 @@ html {
     color: var(--md-sys-color-on-surface);
     font-family: var(--md-ref-typeface-plain);
     scroll-behavior: smooth;
-    overscroll-behavior: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -102,7 +101,6 @@ body {
     font-family: var(--md-ref-typeface-plain);
     font-size: var(--md-sys-typescale-body-large-size);
     line-height: var(--md-sys-typescale-body-large-line-height);
-    overscroll-behavior: none;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;

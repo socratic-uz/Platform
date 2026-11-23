@@ -163,8 +163,8 @@
     },
     {
       "url": "_content/Assets/css/foundations/reset.css",
-      "size": 2475,
-      "hash": "sha256-739d6ba89173"
+      "size": 2413,
+      "hash": "sha256-3abce75a7f74"
     },
     {
       "url": "_content/Assets/css/foundations/runtime.css",
@@ -638,8 +638,8 @@
     },
     {
       "url": "_content/Assets/css/widgets/ai-blob.css",
-      "size": 2615,
-      "hash": "sha256-7d0666dde692"
+      "size": 2561,
+      "hash": "sha256-bb878ce2cb14"
     },
     {
       "url": "_content/Assets/css/widgets/cart.css",
