@@ -24,6 +24,7 @@ public partial class App : ComponentBase
         {
             var path = HttpContext?.Request.Path.Value;
             if (string.IsNullOrEmpty(path)) return false;
+            if (path == "/") return true;
 
             foreach (var prefix in StaticSsrPrefixes)
             {
