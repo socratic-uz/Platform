@@ -13,6 +13,7 @@ import * as DialogPatch from './components/dialog-patch.js';
 
 // 2. Layouts (Color Theme & Reconnect Modal)
 import * as ColorTheme from './layouts/color-theme.js';
+import * as LandingHeader from './layouts/landing-header.js';
 import * as ReconnectModal from './layouts/reconnect-modal.js';
 
 // 3. Features (Auth, Hardware Peripherals, Spatial Map & Ads)
@@ -42,6 +43,10 @@ import * as Player from './pages/player.js';
 // ==========================================================================
 registerComponent('color', {
     mount: () => ColorTheme.autoMountTheme()
+});
+
+registerComponent('header[landing]', {
+    mount: (el) => LandingHeader.mountLandingHeader(el)
 });
 
 registerComponent('figure[map]', {

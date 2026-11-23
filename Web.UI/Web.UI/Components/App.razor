@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName data-theme=@InitialTheme style="color-scheme: @InitialTheme;">
+<html lang=@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName data-theme=@InitialTheme data-ssr=@(IsStaticSsr ? "true" : null) style="color-scheme: @InitialTheme;">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
@@ -24,11 +24,11 @@
   <script async src="https://yandex.ru/ads/system/ap-loader.js" data-page-id="20027116"></script>
   <script defer src="https://telegram.org/js/telegram-web-app.js"></script>
   <SectionOutlet SectionName="style" />
-  <HeadOutlet @rendermode="InteractiveAuto" />
+  <HeadOutlet @rendermode=@PageRenderMode />
   <AntiforgeryToken />
 </head>
 <body app oncontextmenu="return false;">
-  <Routes @rendermode="InteractiveAuto" />
+  <Routes @rendermode=@PageRenderMode />
   <SectionOutlet SectionName="script" />
   <ReconnectModal />
   <script async src="https://oauth.telegram.org/js/telegram-login.js?6"></script>
