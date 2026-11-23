@@ -1,27 +1,26 @@
 /* ==========================================================================
-   Layer: widgets â€” AI Orb / Socratic Blob Widget (Pure Attribute Classless)
+   Layer: widgets — AI Orb / Socratic Blob Widget (Pure Attribute Classless)
    ========================================================================== */
 
-figure[ai-blob], [data-ai-blob] {
+figure[ai-blob],
+[data-ai-blob] {
     position: relative;
     place-items: center;
     aspect-ratio: 1;
     width: clamp(96px, 18vw, 180px);
     margin-inline: auto;
     border-radius: var(--shape-full);
-    background: radial-gradient(
-        circle at 35% 30%,
-        var(--md-sys-color-primary),
-        var(--md-sys-color-tertiary) 65%,
-        transparent 100%
-    );
+    background: radial-gradient(circle at 35% 30%,
+            var(--md-sys-color-primary),
+            var(--md-sys-color-tertiary) 65%,
+            transparent 100%);
     overflow: hidden;
 }
 
-figure[ai-blob] > canvas,
-[data-ai-blob] > canvas,
-figure[ai-blob] > svg,
-[data-ai-blob] > svg {
+figure[ai-blob]>canvas,
+[data-ai-blob]>canvas,
+figure[ai-blob]>svg,
+[data-ai-blob]>svg {
     width: 100%;
     height: 100%;
     display: block;
@@ -35,4 +34,78 @@ svg[ai-blob] {
     height: 100%;
     pointer-events: none;
     display: block;
+}
+
+body>aside:has(~ main)>nav:has(svg[ai-blob]) {
+    overflow: visible;
+}
+
+body>aside:has(~ main)>nav>a:has(> svg[ai-blob]) {
+    position: relative;
+}
+
+body>aside:has(~ main)>nav>a>svg[ai-blob] {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+    width: 1px;
+    height: 1px;
+    overflow: visible;
+    pointer-events: none;
+    --blob-scale: 80;
+    transition: transform var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-spring-soft);
+}
+
+body>aside:has(~ main)>nav>a:hover>svg[ai-blob],
+body>aside:has(~ main)>nav>a[aria-current="page"]>svg[ai-blob],
+body>aside:has(~ main)>nav>a.active>svg[ai-blob] {
+    transform: scale(1.12);
+}
+
+/* --- Blob SVG Layers --- */
+svg[ai-blob] #blob {
+    transform: scale(var(--blob-scale, 1));
+    transform-origin: center;
+}
+
+svg[ai-blob] use[level="0"] {
+    opacity: 1;
+    transform: var(--tr0);
+}
+
+svg[ai-blob] use[level="1"] {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr1);
+}
+
+svg[ai-blob] use[level="2"] {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr2);
+}
+
+svg[ai-blob] use[level="3"] {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr3);
+}
+
+svg[ai-blob] use[level="4"] {
+    opacity: 0.05;
+    filter: url("#blur4");
+    transform: var(--tr4);
+}
+
+svg[ai-blob] [href="#baseBlob2"][level="0"] {
+    --s0: 0.8;
+    --t0: calc((1 - var(--s0)) * 50%);
+    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
+}
+
+svg[ai-blob] [href="#baseBlob3"][level="0"] {
+    --s0: 0.6;
+    --t0: calc((1 - var(--s0)) * 50%);
+    --tr0: translate(var(--t0), var(--t0)) scale(var(--s0));
 }

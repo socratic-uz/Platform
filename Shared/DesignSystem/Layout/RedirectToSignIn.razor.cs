@@ -10,7 +10,7 @@ namespace Shared.Layout
 
         protected override async Task OnInitializedAsync()
         {
-            Nav.NavigateTo($"/signin?ReturnUrl={Uri.EscapeDataString(Nav.Uri)}");
+            Nav.NavigateTo($"/signin?ReturnUrl={Uri.EscapeDataString(Nav.Uri)}", replace: true);
             await Task.CompletedTask;
         }
     }
