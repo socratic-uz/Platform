@@ -23,7 +23,6 @@ public static class StreamingEndpoints
 
     private static readonly SKPaint PaintText = new()
     {
-        TextSize = 24,
         IsAntialias = true,
         Color = SKColors.Red,
         IsStroke = false

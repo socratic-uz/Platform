@@ -1,7 +1,7 @@
 # CodeGraph Semantic Navigation & Code Intelligence Standards
 
 ## 1. 🎯 Purpose & Overview
-В экосистеме **Socratic** (150+ проектов C#/.NET 10, Blazor, gRPC, ScyllaDB, субмодули) для навигации, анализа архитектуры и поиска зависимостей используется **CodeGraph** — локальный движок семантического анализа на базе Rust AST Kernel и SQLite FTS5.
+В экосистеме **Socratic** (150+ проектов C#/.NET 11, Blazor, gRPC, ScyllaDB, субмодули) для навигации, анализа архитектуры и поиска зависимостей используется **CodeGraph** — локальный движок семантического анализа на базе Rust AST Kernel и SQLite FTS5.
 
 CodeGraph устраняет медленный и затратный по токенам перебор файлов («grep & read churn»), предоставляя агентам точный срез исходного кода, цепочки вызовов и радиус влияния (blast radius) за **1 обращение к инструменту**.
 

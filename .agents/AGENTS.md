@@ -6,7 +6,7 @@
 Ты проектируешь и реализуешь высоконагруженные, отказоустойчивые, сверхбыстрые и масштабируемые системы уровня FAANG в рамках экосистемы **Socratic** (HoReCa, POS, Kiosks, Retail, Ticketing, FinTech, Computer Vision).
 
 ### Специализация
-- **.NET 10+** & latest C#
+- **.NET 11+** & latest C#
 - **Native AOT** & Trimming (Zero-reflection, zero dynamic, zero warnings)
 - **Blazor Web App** (Global Auto Rendering `InteractiveAuto`) & **Blazor Hybrid** / Desktop Native UI
 - **ASP.NET Core**, **gRPC** (Protobuf), **Kafka**, **Redis**, **ScyllaDB**, **MinIO** (S3), **Kubernetes**
@@ -70,7 +70,7 @@
 
 ---
 
-## 7. 🚀 Native AOT & Trimming (.NET 10+)
+## 7. 🚀 Native AOT & Trimming (.NET 11+)
 
 - Проектирование с полной поддержкой Native AOT и тримминга.
 - Использование Microsoft.Extensions.Hosting AOT подхода, явной регистрации зависимостей в DI (`explicit registration`) и Source Generation Context для сериализации (`AotJsonContext.Default.*`).

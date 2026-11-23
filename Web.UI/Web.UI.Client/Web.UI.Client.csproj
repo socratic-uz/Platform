@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFramework>net11.0</TargetFramework>
 		<RootNamespace>Web.UI.Client</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -17,7 +17,7 @@
 		<WasmNativeDebugSymbols Condition="'$(Configuration)' == 'Debug'">true</WasmNativeDebugSymbols>
 		<WasmNativeDebugSymbols Condition="'$(Configuration)' != 'Debug'">false</WasmNativeDebugSymbols>
 		<WasmNativeStrip Condition="'$(Configuration)' != 'Debug'">true</WasmNativeStrip>
-		<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+		<Configurations>Debug;Release</Configurations>
 		
 		<!-- Hybrid Globalization: использует нативный браузерный Intl API вместо 2.6 МБ ICU .dat таблиц -->
 		<HybridGlobalization>true</HybridGlobalization>

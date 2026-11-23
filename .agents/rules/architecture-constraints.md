@@ -85,7 +85,8 @@
 - Универсальный хост `Web.UI` подключает фичи через компиляционные константы (`FEATURE_COMMERCE`, `FEATURE_POS`, `FEATURE_KIOSK`, `FEATURE_VISION`) или динамическое обнаружение Razor-компонентов. Отсутствие директивы сборки для фичи не должно приводить к ошибкам компиляции хоста.
 
 ### 8.3 Стандартизация конфигураций сборки
-- Все проекты (.csproj) обязаны поддерживать 5 стандартных конфигураций:
-  `<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>`.
+- Все проекты (.csproj) используют 2 стандартные конфигурации:
+  `<Configurations>Debug;Release</Configurations>`.
+- Режимы запуска `AppHost` (`Cluster`, `Runner`) переключаются через профили в `launchSettings.json` (переменная `APPHOST_MODE`).
 - Сборка и запуск должны работать идентично как в Standalone-режиме фичи, так и в рамках Umbrella Meta-Repository (`Socratic.slnx`, `Frontend.slnx`).
 

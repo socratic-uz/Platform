@@ -907,11 +907,6 @@
       "hash": "sha256-76b988ab5b2f"
     },
     {
-      "url": "_content/Assets/js/layouts/landing-header.js",
-      "size": 2662,
-      "hash": "sha256-c471d1628f8a"
-    },
-    {
       "url": "_content/Assets/js/layouts/reconnect-modal.js",
       "size": 2422,
       "hash": "sha256-a42d0ecce073"
@@ -933,8 +928,8 @@
     },
     {
       "url": "_content/Assets/js/pages/landing.js",
-      "size": 27783,
-      "hash": "sha256-e1d3d98e5a4d"
+      "size": 20973,
+      "hash": "sha256-0150a10678d8"
     },
     {
       "url": "_content/Assets/js/pages/player.js",
@@ -943,8 +938,8 @@
     },
     {
       "url": "_content/Assets/js/scripts.js",
-      "size": 4554,
-      "hash": "sha256-77776c362575"
+      "size": 4392,
+      "hash": "sha256-89d5f71f9d18"
     },
     {
       "url": "_content/Assets/js/wasm-boot.js",

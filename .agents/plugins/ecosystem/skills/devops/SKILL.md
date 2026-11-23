@@ -32,7 +32,7 @@ The generated manifests and Helm charts are stored in `infrastructure/` and depl
 ## 2. 🚀 GitHub Actions CI/CD (`.github/workflows/Socratic.yml`)
 
 - Custom self-hosted and container runners are defined in `.github/runners/base/Dockerfile` and `.github/runners/dotnet-aot/Dockerfile`.
-- Standard build configurations across all solutions and projects: `Debug`, `Release`, `LocalDebug`, `Runner`, `Cluster`.
+- Standard build configurations across all solutions and projects: `Debug`, `Release`.
 - Artifact publishing uses `.github/actions/upload-s3/action.yml` (MinIO/S3) and `.github/actions/update-gitops/action.yml`.
 
 ---

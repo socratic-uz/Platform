@@ -46,7 +46,6 @@ namespace Assets.Constants
         public static class Layouts
         {
             public const string ColorTheme = "./_content/Assets/js/layouts/color-theme.js";
-            public const string LandingHeader = "./_content/Assets/js/layouts/landing-header.js";
             public const string ReconnectModal = "./_content/Assets/js/layouts/reconnect-modal.js";
             public const string ThemeInit = "./_content/Assets/js/layouts/theme-init.js";
         }
@@ -85,7 +84,6 @@ namespace Assets.Constants
         public const string FileShim = "./_content/Assets/js/file-shim.js";
         public const string Home = "./_content/Assets/js/pages/home.js";
         public const string Landing = "./_content/Assets/js/pages/landing.js";
-        public const string LandingHeader = "./_content/Assets/js/layouts/landing-header.js";
         public const string Lifecycle = "./_content/Assets/js/lifecycle.js";
         public const string Map = "./_content/Assets/js/features/map/map.js";
         public const string MapLibreCore = "./_content/Assets/js/features/map/map-libre-core.js";

@@ -1,6 +1,6 @@
-# Native AOT & Trimming Safety Guidelines (.NET 10+)
+# Native AOT & Trimming Safety Guidelines (.NET 11+)
 
-Socratic проектируется с обязательным учетом **Native AOT** и максимальной готовности к триммингу (.NET 10+).
+Socratic проектируется с обязательным учетом **Native AOT** и максимальной готовности к триммингу (.NET 11+).
 
 ---
 

@@ -17,7 +17,7 @@ using Domain.Interfaces.Pages;
 using static SharedKernel.Options.MinioOptions;
 using static Shared.Helpers.FileHelper;
 
-#if DEBUG || LOCALDEBUG
+#if DEBUG
 using MauiDevFlow.Agent;
 using MauiDevFlow.Blazor;
 #endif
@@ -72,7 +72,7 @@ namespace Native.UI
 
             builder.Services.AddMauiBlazorWebView();
 
-#if DEBUG || LOCALDEBUG
+#if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
             builder.Logging.AddDebug();
             builder.AddMauiDevFlowAgent();

@@ -47,5 +47,5 @@ cd src/Frontend/Platform/Shared/DesignSystem/Assets
 npm run validate:syntax
 npm run lint:css
 npm run generate:codegen
-dotnet build ../../Platform.slnx -c LocalDebug -v q
+dotnet build ../../Platform.slnx -c Debug -v q
 ```

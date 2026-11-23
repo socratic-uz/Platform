@@ -66,19 +66,18 @@ graph TD
 
 ## 3. ⚙️ Standard Build Configurations (Strict Standard)
 
-All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the entire ecosystem define the **5 standardized configurations**:
+All `.csproj` files, `Directory.Build.props`, and `.slnx` solution files in the entire ecosystem define the **2 standardized configurations**:
 
 ```xml
-<Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+<Configurations>Debug;Release</Configurations>
 ```
 
 | Configuration | Intent / Target Environment | Optimization & Constants |
 |---|---|---|
-| `Debug` | Standard local development with full debug symbols and local services | Optimization off, `DEBUG;TRACE` |
-| `Release` | Production build optimized for deployment, AOT and trimming | Optimization on, symbols stripped |
-| `LocalDebug` | Local debugging against standalone mock backend or local containers | Custom local endpoints, mock auth |
-| `Runner` | CI/CD test runners, automated smoke tests and benchmark executions | Deterministic build, headless mode |
-| `Cluster` | Containerized in-cluster deployment (Kubernetes / Aspire Service Discovery) | OTLP telemetry enabled, DNS resolution |
+| `Debug` | Standard local development with full debug symbols, Hot Reload, and local services | Optimization off, `DEBUG;TRACE` |
+| `Release` | Production build optimized for deployment, AOT, trimming, and asset bundling | Optimization on, symbols stripped |
+
+`AppHost` launch modes (`Cluster`, `Runner`, or default local with `kubectl port-forward`) are selected via `src/Shared/AppHost/Properties/launchSettings.json` profiles (`APPHOST_MODE`).
 
 ---
 

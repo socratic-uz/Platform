@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <!-- Full platform set for CI or when explicitly requested via /p:BuildAllPlatforms=true -->
-    <TargetFrameworks Condition="'$(BuildAllPlatforms)' == 'true' or '$(ContinuousIntegrationBuild)' == 'true'">net10.0-windows10.0.19041.0;net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="'$(BuildAllPlatforms)' == 'true' or '$(ContinuousIntegrationBuild)' == 'true'">net11.0-windows10.0.19041.0;net11.0-android;net11.0-ios;net11.0-maccatalyst</TargetFrameworks>
     <!-- Windows and Android targets on Windows workstation for Visual Studio IDE -->
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows')) and '$(TargetAndroid)' == 'true'">net10.0-android</TargetFrameworks>
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net10.0-windows10.0.19041.0;net10.0-android</TargetFrameworks>
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('osx'))">net10.0-maccatalyst;net10.0-ios;net10.0-android</TargetFrameworks>
-    <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">net10.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows')) and '$(TargetAndroid)' == 'true'">net11.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('windows'))">net11.0-windows10.0.19041.0;net11.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' and $([MSBuild]::IsOSPlatform('osx'))">net11.0-maccatalyst;net11.0-ios;net11.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">net11.0-android</TargetFrameworks>
 
-    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <OutputType>Exe</OutputType>
     <RootNamespace>Native.UI</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -25,10 +25,11 @@
 
     <!-- .NET 11 Mobile CoreCLR & Native AOT Settings for Android -->
     <UseMonoRuntime Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">false</UseMonoRuntime>
-    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android' and '$(Configuration)' != 'Debug' and '$(Configuration)' != 'LocalDebug'">android-arm64;android-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android' and '$(Configuration)' != 'Debug'">android-arm64;android-x64</RuntimeIdentifiers>
     <PublishAot Condition="'$(PublishAot)' == 'true' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">true</PublishAot>
     <AndroidEnableMultiDex Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">true</AndroidEnableMultiDex>
-    <PublishReadyToRun Condition="'$(PublishReadyToRun)' == '' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' != 'Debug' and '$(Configuration)' != 'LocalDebug'">true</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(PublishReadyToRun)' == '' and $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' != 'Debug'">true</PublishReadyToRun>
+    <PublishReadyToRun Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">false</PublishReadyToRun>
 
     <WindowsPackageType>None</WindowsPackageType>
 
@@ -56,10 +57,6 @@
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == 'LocalDebug'">
-    <DefineConstants>$(DefineConstants);DEBUG;LOCALDEBUG</DefineConstants>
-  </PropertyGroup>
-
   <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' or $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
     <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
@@ -70,14 +67,14 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-android'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net11.0-android'">
     <PackageReference Include="Xamarin.AndroidX.Credentials" />
     <PackageReference Include="Xamarin.AndroidX.Credentials.PlayServicesAuth" />
     <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" />
   </ItemGroup>
 
-  <!-- MAUI Sherpa / DevFlow Inspector Agent & Blazor CDP bridge (only for Debug and LocalDebug) -->
-  <ItemGroup Condition="'$(Configuration)' == 'Debug' or '$(Configuration)' == 'LocalDebug'">
+  <!-- MAUI Sherpa / DevFlow Inspector Agent & Blazor CDP bridge (only for Debug) -->
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PackageReference Include="Redth.MauiDevFlow.Agent" />
     <PackageReference Include="Redth.MauiDevFlow.Blazor" />
   </ItemGroup>

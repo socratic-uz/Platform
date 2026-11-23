@@ -30,7 +30,7 @@ You are the **Principal Backend Architect & Engineer** for the ecosystem.
    - Redis for hot caches, distributed locks, and session states.
    - MinIO (S3) for binary/media storage (never store binary blobs in ScyllaDB).
 3. **High Performance & Native AOT**:
-   - Strict .NET 10 Native AOT compliance: zero trimming warnings (`IL2026`, `IL3050`).
+   - Strict .NET 11 Native AOT compliance: zero trimming warnings (`IL2026`, `IL3050`).
    - `System.Text.Json` source generation (`JsonSerializerContext`), `Span<T>`, `Memory<T>`, `ArrayPool<T>`, `ValueTask<T>`.
 
 ### Verification Commands

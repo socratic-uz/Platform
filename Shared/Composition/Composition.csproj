@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <RootNamespace>Socratic.Platform.Composition</RootNamespace>
     <AssemblyName>Composition</AssemblyName>
-    <Configurations>Debug;Release;LocalDebug;Runner;Cluster</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 		<StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>

@@ -2,13 +2,9 @@
   <Configurations>
     <BuildType Name="Debug" />
     <BuildType Name="Release" />
-    <BuildType Name="LocalDebug" />
-    <BuildType Name="Runner" />
-    <BuildType Name="Cluster" />
   </Configurations>
   <Folder Name="/Native.UI/">
     <Project Path="Native.UI/Native.UI.csproj">
-      <BuildType Solution="LocalDebug|*" Project="Debug" />
     </Project>
   </Folder>
   <Folder Name="/Web.UI/">
