@@ -67,8 +67,6 @@ namespace Native.UI.Services
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "JWT payload dictionary deserialization uses primitive JSON elements")]
-        [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "JWT payload dictionary deserialization uses primitive JSON elements")]
         private static IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
         {
             var claims = new List<Claim>();
@@ -77,25 +75,24 @@ namespace Native.UI.Services
 
             var payload = parts[1];
             var jsonBytes = ParseBase64WithoutPadding(payload);
-            var keyValuePairs = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonBytes);
+            using var doc = JsonDocument.Parse(jsonBytes);
+            if (doc.RootElement.ValueKind != JsonValueKind.Object) return claims;
 
-            if (keyValuePairs != null)
+            foreach (var prop in doc.RootElement.EnumerateObject())
             {
-                foreach (var kvp in keyValuePairs)
+                if (prop.Value.ValueKind == JsonValueKind.Array)
                 {
-                    if (kvp.Value is JsonElement element && element.ValueKind == JsonValueKind.Array)
+                    foreach (var item in prop.Value.EnumerateArray())
                     {
-                        foreach (var item in element.EnumerateArray())
-                        {
-                            claims.Add(new Claim(kvp.Key, item.ToString() ?? ""));
-                        }
-                    }
-                    else
-                    {
-                        claims.Add(new Claim(kvp.Key, kvp.Value?.ToString() ?? ""));
+                        claims.Add(new Claim(prop.Name, item.ToString()));
                     }
                 }
+                else if (prop.Value.ValueKind != JsonValueKind.Null && prop.Value.ValueKind != JsonValueKind.Undefined)
+                {
+                    claims.Add(new Claim(prop.Name, prop.Value.ToString()));
+                }
             }
+
             return claims;
         }
 

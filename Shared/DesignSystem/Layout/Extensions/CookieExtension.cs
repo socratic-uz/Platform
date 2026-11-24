@@ -61,7 +61,7 @@ namespace Shared.Extensions
             var curExp = span.HasValue && span.Value.Ticks > 0 && isSession != true && !maxAgeInSeconds.HasValue ? DateToUTC(span.Value) : "";
 
             List<string> keyvals = new List<string>();
-            keyvals.Add($"{key}={value}");
+            keyvals.Add($"{key}={Uri.EscapeDataString(value ?? string.Empty)}");
             if (!string.IsNullOrWhiteSpace(curExp))
             {
                 keyvals.Add($"expires={curExp}");
@@ -77,8 +77,13 @@ namespace Shared.Extensions
             }
             if (sameSite.HasValue)
             {
-                DescriptionAttribute desc = (DescriptionAttribute)typeof(SameSite).GetMember(sameSite.Value.ToString()).First().GetCustomAttributes(typeof(DescriptionAttribute), false).First();
-                keyvals.Add($"samesite={desc.Description}");
+                var sameSiteText = sameSite.Value switch
+                {
+                    SameSite.Strict => "strict",
+                    SameSite.None => "none",
+                    _ => "lax"
+                };
+                keyvals.Add($"samesite={sameSiteText}");
             }
             string cookieToSet = string.Join(";", keyvals);
             if (partitioned == true)
@@ -88,7 +93,7 @@ namespace Shared.Extensions
 
             await js.SetAsync(cookieToSet);
         }
-        public static async Task RemoveAsync(this IJSRuntime js, string key, string path = null)
+        public static async Task RemoveAsync(this IJSRuntime js, string key, string? path = null)
         {
             if (string.IsNullOrWhiteSpace(path))
                 path = _settings.Path;
@@ -121,16 +126,16 @@ namespace Shared.Extensions
             foreach (var val in vals)
                 if (!string.IsNullOrEmpty(val) && val.IndexOf('=') > 0)
                     if (val.Substring(0, val.IndexOf('=')).Trim().Equals(key, StringComparison.OrdinalIgnoreCase))
-                        return val.Substring(val.IndexOf('=') + 1);
+                        return Uri.UnescapeDataString(val.Substring(val.IndexOf('=') + 1));
             return null;
         }
         public static async ValueTask SetAsync(this IJSRuntime js, string value)
         {
-            await js.InvokeVoidAsync("eval", $"document.cookie = \'{value}\'");
+            await js.InvokeVoidAsync("oauthPopupHelper.setDocumentCookie", value);
         }
         public static async Task<string> GetAsync(this IJSRuntime js)
         {
-            return await js.InvokeAsync<string>("eval", $"document.cookie");
+            return await js.InvokeAsync<string>("oauthPopupHelper.getDocumentCookie");
         }
         public static string DateToUTC(TimeSpan span) => DateTime.Now.Add(span).ToUniversalTime().ToString("R");
     }

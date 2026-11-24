@@ -86,57 +86,59 @@ window.oauthPopupHelper = {
         }
     },
 
-    notifyAndClose: function (returnUrl, token) {
+    getDocumentCookie: function () {
+        try { return document.cookie || ""; } catch { return ""; }
+    },
+
+    setDocumentCookie: function (cookieString) {
+        try { if (cookieString) document.cookie = cookieString; } catch {}
+    },
+
+    setAccessToken: function (token) {
+        if (!token) return this.clearAccessToken();
+        var sec = window.location.protocol === "https:" ? "; Secure" : "";
+        var cookie = "AccessToken=" + encodeURIComponent(token) + "; path=/; max-age=2592000; SameSite=Lax" + sec;
+        [window, window.opener].forEach(function (w) {
+            if (!w || w.closed) return;
+            try {
+                w.document.cookie = cookie;
+                w.localStorage.removeItem("AccessToken");
+                w.sessionStorage.removeItem("AccessToken");
+            } catch {}
+        });
+    },
+
+    clearAccessToken: function () {
+        var sec = window.location.protocol === "https:" ? "; Secure" : "";
         try {
-            if (token) {
-                // Set cookie and storage in current window
-                try {
-                    document.cookie = "AccessToken=" + encodeURIComponent(token) + "; path=/; max-age=2592000; SameSite=Lax; Secure";
-                    localStorage.setItem("AccessToken", token);
-                } catch (e) {}
+            document.cookie = "AccessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax" + sec;
+            localStorage.removeItem("AccessToken");
+            sessionStorage.removeItem("AccessToken");
+        } catch {}
+    },
 
-                // Set cookie and storage in parent window
-                if (window.opener && !window.opener.closed) {
-                    try {
-                        window.opener.document.cookie = "AccessToken=" + encodeURIComponent(token) + "; path=/; max-age=2592000; SameSite=Lax; Secure";
-                        window.opener.localStorage.setItem("AccessToken", token);
-                    } catch (e) {}
-                }
-            }
-
+    notifyAndClose: function (returnUrl, token) {
+        if (token) this.setAccessToken(token);
+        try {
             if (window.opener && !window.opener.closed) {
-                try {
-                    window.opener.location.href = returnUrl || "/";
-                } catch (e) {
-                    window.opener.location.reload();
-                }
+                try { window.opener.location.href = returnUrl || "/"; } catch { window.opener.location.reload(); }
                 window.close();
                 return;
             }
-        } catch (e) {
-            console.warn("[OAuthPopup] Could not access window.opener:", e);
-        }
+        } catch {}
         window.location.href = returnUrl || "/";
     },
 
     getAccessToken: function () {
-        try {
-            var match = document.cookie.match(new RegExp('(^|;\\s*)AccessToken=([^;]+)'));
-            if (match) return decodeURIComponent(match[2]);
-            if (window.opener && !window.opener.closed) {
-                try {
-                    var openerMatch = window.opener.document.cookie.match(new RegExp('(^|;\\s*)AccessToken=([^;]+)'));
-                    if (openerMatch) return decodeURIComponent(openerMatch[2]);
-                } catch (e) {}
-                try {
-                    var openerLs = window.opener.localStorage.getItem("AccessToken") || window.opener.sessionStorage.getItem("AccessToken");
-                    if (openerLs) return openerLs;
-                } catch (e) {}
-            }
-            var ls = localStorage.getItem("AccessToken") || sessionStorage.getItem("AccessToken");
-            if (ls) return ls;
-        } catch (e) {
-            console.warn("[OAuthPopup] Error getting access token:", e);
+        var re = /(?:^|;\s*)AccessToken=([^;]+)/;
+        var targets = [window, window.opener];
+        for (var i = 0; i < targets.length; i++) {
+            var w = targets[i];
+            if (!w || w.closed) continue;
+            try {
+                var m = w.document.cookie.match(re);
+                if (m && m[1]) return decodeURIComponent(m[1]);
+            } catch {}
         }
         return null;
     }

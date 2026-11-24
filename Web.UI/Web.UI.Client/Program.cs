@@ -37,7 +37,7 @@ var isStandaloneWasm = Environment.GetEnvironmentVariable("STANDALONE_WASM") == 
 builder.Services.AddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(new Socratic.Platform.Composition.Services.SocraticHostEnvironment
 {
     EnvironmentName = builder.HostEnvironment.Environment,
-    ApplicationName = "Socratic.Web.UI.Client",
+    ApplicationName = typeof(Program).Assembly.GetName().Name!,
     ContentRootPath = builder.HostEnvironment.BaseAddress
 });
 

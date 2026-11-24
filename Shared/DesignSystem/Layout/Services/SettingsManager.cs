@@ -129,7 +129,7 @@ namespace Shared.Services
 
             public async Task<string?> GetAccessTokenAsync()
             {
-                try { return await _js.GetAsync("AccessToken"); } catch { return null; }
+                try { return await _js.InvokeAsync<string?>("oauthPopupHelper.getAccessToken"); } catch { return null; }
             }
 
             public async Task SetAccessTokenAsync(string accessToken)
@@ -138,12 +138,11 @@ namespace Shared.Services
                 {
                     if (string.IsNullOrEmpty(accessToken))
                     {
-                        await _js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'; try { localStorage.removeItem('AccessToken'); sessionStorage.removeItem('AccessToken'); } catch(e){}");
+                        await _js.InvokeVoidAsync("oauthPopupHelper.clearAccessToken");
                     }
                     else
                     {
-                        var escaped = Uri.EscapeDataString(accessToken);
-                        await _js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=" + escaped + "; path=/; max-age=2592000; SameSite=Lax; Secure'; try { localStorage.setItem('AccessToken', '" + escaped + "'); } catch(e){}");
+                        await _js.InvokeVoidAsync("oauthPopupHelper.setAccessToken", accessToken);
                     }
                 }
                 catch { }

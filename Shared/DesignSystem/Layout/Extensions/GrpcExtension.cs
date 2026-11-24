@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Threading.Tasks;
 using Grpc.Core;
@@ -14,7 +15,7 @@ namespace Shared
             => Infrastructure.Core.GrpcExtension.CreateCallCredentials(context, metadata, serviceProvider);
 
         [Obsolete("Use Infrastructure.Core.GrpcExtension.AddGrpcClient instead.")]
-        public static void AddGrpcClient<TClient>(this IServiceCollection services, string? uriString) where TClient : ClientBase
+        public static void AddGrpcClient<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)] TClient>(this IServiceCollection services, string? uriString) where TClient : ClientBase
             => Infrastructure.Core.GrpcExtension.AddGrpcClient<TClient>(services, uriString);
 
         [Obsolete("Use Infrastructure.Core.GrpcExtension.AddGrpcClientWrappers instead.")]

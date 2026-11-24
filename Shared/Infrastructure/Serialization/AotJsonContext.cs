@@ -19,6 +19,8 @@ namespace Shared.Serialization
     [JsonSerializable(typeof(Dictionary<string, string>))]
     [JsonSerializable(typeof(List<string>))]
     [JsonSerializable(typeof(string[]))]
+    [JsonSerializable(typeof(List<byte[]>))]
+    [JsonSerializable(typeof(HashSet<System.Guid?>))]
     [JsonSerializable(typeof(Domain.DTOs.FaceRegisterRequest))]
     [JsonSerializable(typeof(Domain.DTOs.FaceRegisterResponse))]
     [JsonSerializable(typeof(Domain.DTOs.FaceSearchRequest))]

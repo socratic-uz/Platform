@@ -43,7 +43,7 @@ namespace Shared.Layout
             return Task.CompletedTask;
         }
 
-        public static async Task Create<T>(MouseEventArgs e)
+        public static async Task Create<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)] T>(MouseEventArgs e)
         {
             Instance?.Open = true;
             Window = b => b.AddContent(0, builder =>
@@ -54,7 +54,7 @@ namespace Shared.Layout
             });
             await Task.CompletedTask;
         }
-        public static async Task Details<T, A>(MouseEventArgs e, A model)
+        public static async Task Details<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)] T, A>(MouseEventArgs e, A model)
         {
             Instance?.Open = true;
             Window = b => b.AddContent(0, builder =>
@@ -66,7 +66,7 @@ namespace Shared.Layout
             });
             await Task.CompletedTask;
         }
-        public static async Task Edit<T, A>(MouseEventArgs e, A model)
+        public static async Task Edit<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)] T, A>(MouseEventArgs e, A model)
         {
             Instance?.Open = true;
             Window = b => b.AddContent(0, builder =>
@@ -79,7 +79,7 @@ namespace Shared.Layout
             });
             await Task.CompletedTask;
         }
-        public static async Task Delete<T, A>(MouseEventArgs e, A model)
+        public static async Task Delete<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All)] T, A>(MouseEventArgs e, A model)
         {
             Instance?.Open = true;
             Window = b => b.AddContent(0, builder =>

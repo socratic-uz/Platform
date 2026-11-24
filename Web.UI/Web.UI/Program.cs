@@ -253,7 +253,7 @@ builder.Services.AddScoped<Domain.Interfaces.Pages.IDetectorService, Web.UI.Serv
 builder.Services.AddLocalization().AddScoped<IStringLocalizer, StringLocalizer>();
 
 
-AuthenticationExtensions.AddAuthentication(builder.Services);
+builder.AddAuthentication();
 
 
 builder.Services.AddGrpcClients(builder.Configuration);
@@ -404,19 +404,17 @@ app.MapGet("/.well-known/assetlinks.json", (IConfiguration config) =>
     var fingerprintsArray = new System.Text.Json.Nodes.JsonArray();
     if (!string.IsNullOrWhiteSpace(releaseFingerprint))
     {
-        fingerprintsArray.Add(releaseFingerprint);
+        fingerprintsArray.Add((System.Text.Json.Nodes.JsonNode?)releaseFingerprint);
     }
-    fingerprintsArray.Add(debugFingerprint);
+    fingerprintsArray.Add((System.Text.Json.Nodes.JsonNode?)debugFingerprint);
 
-    var payload = new System.Text.Json.Nodes.JsonArray
-    {
-        new System.Text.Json.Nodes.JsonObject
+    var payload = new System.Text.Json.Nodes.JsonArray(
+        (System.Text.Json.Nodes.JsonNode)new System.Text.Json.Nodes.JsonObject
         {
-            ["relation"] = new System.Text.Json.Nodes.JsonArray
-            {
-                "delegate_permission/common.handle_all_urls",
-                "delegate_permission/common.get_login_creds"
-            },
+            ["relation"] = new System.Text.Json.Nodes.JsonArray(
+                (System.Text.Json.Nodes.JsonNode?)"delegate_permission/common.handle_all_urls",
+                (System.Text.Json.Nodes.JsonNode?)"delegate_permission/common.get_login_creds"
+            ),
             ["target"] = new System.Text.Json.Nodes.JsonObject
             {
                 ["namespace"] = "android_app",
@@ -424,7 +422,7 @@ app.MapGet("/.well-known/assetlinks.json", (IConfiguration config) =>
                 ["sha256_cert_fingerprints"] = fingerprintsArray
             }
         }
-    };
+    );
 
     return Results.Content(payload.ToJsonString(), "application/json");
 });
@@ -436,22 +434,20 @@ app.MapGet("/.well-known/apple-app-site-association", (IConfiguration config) =>
     {
         ["applinks"] = new System.Text.Json.Nodes.JsonObject
         {
-            ["details"] = new System.Text.Json.Nodes.JsonArray
-            {
-                new System.Text.Json.Nodes.JsonObject
+            ["details"] = new System.Text.Json.Nodes.JsonArray(
+                (System.Text.Json.Nodes.JsonNode)new System.Text.Json.Nodes.JsonObject
                 {
-                    ["appIDs"] = new System.Text.Json.Nodes.JsonArray { appleAppId },
-                    ["components"] = new System.Text.Json.Nodes.JsonArray
-                    {
-                        new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-google-callback" },
-                        new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-telegram-callback" }
-                    }
+                    ["appIDs"] = new System.Text.Json.Nodes.JsonArray((System.Text.Json.Nodes.JsonNode?)appleAppId),
+                    ["components"] = new System.Text.Json.Nodes.JsonArray(
+                        (System.Text.Json.Nodes.JsonNode)new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-google-callback" },
+                        (System.Text.Json.Nodes.JsonNode)new System.Text.Json.Nodes.JsonObject { ["path"] = "/signin-telegram-callback" }
+                    )
                 }
-            }
+            )
         },
         ["webcredentials"] = new System.Text.Json.Nodes.JsonObject
         {
-            ["apps"] = new System.Text.Json.Nodes.JsonArray { appleAppId }
+            ["apps"] = new System.Text.Json.Nodes.JsonArray((System.Text.Json.Nodes.JsonNode?)appleAppId)
         }
     };
 

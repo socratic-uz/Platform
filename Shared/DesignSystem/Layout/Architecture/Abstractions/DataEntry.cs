@@ -46,15 +46,9 @@ namespace Domain.Abstractions
             {
                 try
                 {
-                    string? queryStr = null;
-                    if (Query is Google.Protobuf.IMessage msg)
-                    {
-                        queryStr = Google.Protobuf.JsonFormatter.Default.Format(msg);
-                    }
-                    else
-                    {
-                        queryStr = System.Text.Json.JsonSerializer.Serialize(Query);
-                    }
+                    string? queryStr = Query is Google.Protobuf.IMessage msg
+                        ? Google.Protobuf.JsonFormatter.Default.Format(msg)
+                        : Query.ToString();
 
                     if (!string.IsNullOrEmpty(queryStr) && queryStr != "{}" && queryStr != "null")
                     {
@@ -67,6 +61,7 @@ namespace Domain.Abstractions
         }
 
         [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "DTO types for DataEntry are explicitly preserved in the AOT Json Context")]
+        [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2087", Justification = "DTO types for DataEntry are explicitly preserved")]
         public override bool TryRestore(PersistentComponentState state)
         {
             var key = GetKey();

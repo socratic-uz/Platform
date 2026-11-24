@@ -1,21 +1,28 @@
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
-
 using Web.UI.Services;
-
 
 public static partial class AuthenticationExtensions
 {
-    public static void AddAuthentication(this IServiceCollection services)
-    {
-        IConfiguration configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
+    public const string AccessTokenCookie = "AccessToken";
 
-        services.AddAuthentication(IdentityConstants.ApplicationScheme)
-            .AddCookie(IdentityConstants.ApplicationScheme, o =>
+    public static void AddAuthentication(this IHostApplicationBuilder builder)
+    {
+        builder.Services.AddDataProtection()
+            .SetApplicationName(builder.Environment.ApplicationName)
+            .AddKeyManagementOptions(o =>
             {
-                o.Cookie.Name = "AccessToken";
-                o.TicketDataFormat = new SecureDataFormat(configuration, IdentityConstants.ApplicationScheme);
-                o.LoginPath = new PathString("/signin");
+                o.XmlRepository = new DeterministicJwtKeyXmlRepository(builder.Configuration);
+                o.AutoGenerateKeys = false;
             });
 
+        builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
+            .AddCookie(IdentityConstants.ApplicationScheme, o =>
+            {
+                o.Cookie.Name = AccessTokenCookie;
+                o.Cookie.SameSite = SameSiteMode.Lax;
+                o.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+                o.TicketDataFormat = new SecureDataFormat(builder.Configuration, IdentityConstants.ApplicationScheme);
+            });
     }
 }

@@ -1,20 +1,17 @@
-using Biometrics.Processor;
-using FFmpegProcessor;
-using Map;
-using Markdown.Web;
+using System.Collections;
+using System.Diagnostics;
+using Domain.Interfaces;
+using Domain.Interfaces.Pages;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using SharedKernel.ValueObjects;
-using System.Diagnostics;
+using Microsoft.Extensions.Options;
 using Native.UI.Services;
-using Socratic.Platform.Composition.Extensions;
 using Shared;
 using Shared.Services;
-using Domain.Interfaces;
-using Domain.Interfaces.Pages;
-
+using Socratic.Platform.Composition.Extensions;
 using static SharedKernel.Options.MinioOptions;
+using static SharedKernel.ValueObjects.EnvironmentVariables;
 using static Shared.Helpers.FileHelper;
 
 #if DEBUG
@@ -22,145 +19,102 @@ using MauiDevFlow.Agent;
 using MauiDevFlow.Blazor;
 #endif
 
-namespace Native.UI
+namespace Native.UI;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts => fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular"));
 
-            // 1. Удалённая конфигурация (https://socratic.uz/appsettings.json и appsettings.Development.json) с локальным кэшем на устройстве
-            LoadRemoteJson(builder.Configuration, EnvironmentVariables.APPSETTINGS);
+        AddConfig(builder.Configuration, APPSETTINGS);
 #if DEBUG
-            LoadRemoteJson(builder.Configuration, EnvironmentVariables.APPSETTINGS_DEVELOPMENT);
+        AddConfig(builder.Configuration, APPSETTINGS_DEVELOPMENT);
 #endif
+        builder.Configuration.AddInMemoryCollection(
+            Environment.GetEnvironmentVariables()
+                .Cast<DictionaryEntry>()
+                .Where(e => e.Key is string && e.Value is string)
+                .Select(e => new KeyValuePair<string, string?>(((string)e.Key).Replace("__", ":"), e.Value as string)));
 
-            // 2. Переменные окружения (Aspire и локальный запуск переопределяют удалённый конфиг)
-            var envVars = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
-            foreach (System.Collections.DictionaryEntry entry in Environment.GetEnvironmentVariables())
-            {
-                if (entry.Key is string key && entry.Value is string value)
-                {
-                    envVars[key.Replace("__", ":")] = value;
-                }
-            }
-            if (envVars.Count > 0)
-            {
-                builder.Configuration.AddInMemoryCollection(envVars);
-            }
+        MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
-            MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
-
-            // 1. Единое подключение всех возможностей Composition (Layout, 13 фич, дизайн-система, gRPC, аппаратные интерфейсы)
-            builder.Services.AddCompositionServices(builder.Configuration);
-
-            // 2. Специфичные платформенные адаптеры для MAUI
-            builder.Services.AddSingleton<IFormFactor, MauiFormFactor>();
-            builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Infrastructure.Gateways.Biometrics.ClientFaceIdService>();
-            builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
-            builder.Services.AddScoped(sp => new HttpClient());
-            builder.Services.AddScoped<Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider, MauiAuthenticationStateProvider>();
-            builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, Services.MauiPasskeyService>();
-            builder.Services.AddScoped<Infrastructure.Gateways.Identity.IExternalAuthBrowser, Services.MauiExternalAuthBrowser>();
-
-            builder.Services.AddMauiBlazorWebView();
+        builder.Services.AddCompositionServices(builder.Configuration);
+        builder.Services.AddHttpClient(Options.DefaultName, client =>
+        {
+            if (Uri.TryCreate(builder.Configuration[WEB_UI_URL], UriKind.Absolute, out var baseUri))
+                client.BaseAddress = baseUri;
+            client.Timeout = TimeSpan.FromSeconds(15);
+        });
+        builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient());
+        builder.Services.AddSingleton<IFormFactor, MauiFormFactor>();
+        builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Infrastructure.Gateways.Biometrics.ClientFaceIdService>();
+        builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
+        builder.Services.AddScoped<Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider, MauiAuthenticationStateProvider>();
+        builder.Services.AddScoped<Infrastructure.Gateways.Identity.IPasskeyService, MauiPasskeyService>();
+        builder.Services.AddScoped<Infrastructure.Gateways.Identity.IExternalAuthBrowser, MauiExternalAuthBrowser>();
+        builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
-            builder.Services.AddBlazorWebViewDeveloperTools();
-            builder.Logging.AddDebug();
-            builder.AddMauiDevFlowAgent();
-            builder.AddMauiBlazorDevFlowTools();
+        builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Logging.AddDebug();
+        builder.AddMauiDevFlowAgent();
+        builder.AddMauiBlazorDevFlowTools();
 #endif
 
-            try
-            {
-                var logDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Socratic", "Logs");
-                Directory.CreateDirectory(logDir);
-                var configDiagnostic = $"[Socratic MAUI Diagnostic Log - {DateTime.Now}]\n" +
-                                       $"Identifying URL: {builder.Configuration[SharedKernel.ValueObjects.EnvironmentVariables.IDENTIFYING_SERVICE_URL] ?? "http://localhost:5001 (default)"}\n" +
-                                       $"Shopping URL:    {builder.Configuration[SharedKernel.ValueObjects.EnvironmentVariables.SHOPPING_SERVICE_URL] ?? "http://localhost:5002 (default)"}\n" +
-                                       $"Ordering URL:    {builder.Configuration[SharedKernel.ValueObjects.EnvironmentVariables.ORDERING_SERVICE_URL] ?? "http://localhost:5003 (default)"}\n" +
-                                       $"Paying URL:      {builder.Configuration[SharedKernel.ValueObjects.EnvironmentVariables.PAYING_SERVICE_URL] ?? "http://localhost:5004 (default)"}\n";
-                File.WriteAllText(Path.Combine(logDir, "maui_config.log"), configDiagnostic);
-                Console.WriteLine(configDiagnostic);
-                System.Diagnostics.Debug.WriteLine(configDiagnostic);
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"[MauiProgram Diagnostic Log Error]: {ex.Message}");
-            }
-
-            try
-            {
-                return builder.Build();
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    var logDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Socratic", "Logs");
-                    Directory.CreateDirectory(logDir);
-                    File.WriteAllText(Path.Combine(logDir, "maui_crash.txt"), ex.ToString());
-                }
-                catch (Exception writeEx)
-                {
-                    System.Diagnostics.Debug.WriteLine($"[MauiProgram Crash Log Write Error]: {writeEx.Message}");
-                }
-                throw;
-            }
-        }
-
-        private const string RemoteConfigBaseUrl = "https://socratic.uz/";
-
-        private static void LoadRemoteJson(ConfigurationManager configuration, string fileName)
-        {
-            var url = $"{RemoteConfigBaseUrl}{fileName}";
-            var cachePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
-
-            if (!File.Exists(cachePath))
-            {
-                try
-                {
-                    using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(3) };
-                    var json = http.GetStringAsync(url).GetAwaiter().GetResult();
-                    if (!string.IsNullOrWhiteSpace(json))
-                    {
-                        File.WriteAllText(cachePath, json);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"[Config] Initial remote {fileName} fetch error: {ex.Message}");
-                }
-            }
-            else
-            {
-                _ = Task.Run(async () =>
-                {
-                    try
-                    {
-                        using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-                        var json = await http.GetStringAsync(url).ConfigureAwait(false);
-                        if (!string.IsNullOrWhiteSpace(json))
-                        {
-                            await File.WriteAllTextAsync(cachePath, json).ConfigureAwait(false);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine($"[Config] Background remote {fileName} refresh error: {ex.Message}");
-                    }
-                });
-            }
-
-            configuration.AddJsonFile(cachePath, optional: true, reloadOnChange: true);
-        }
+        var app = builder.Build();
+        var httpFactory = app.Services.GetRequiredService<IHttpClientFactory>();
+        RefreshRemoteConfig(httpFactory, APPSETTINGS);
+#if DEBUG
+        RefreshRemoteConfig(httpFactory, APPSETTINGS_DEVELOPMENT);
+#endif
+        return app;
     }
+
+    private static void AddConfig(ConfigurationManager configuration, string fileName)
+    {
+        var bundledPath = Path.Combine(AppContext.BaseDirectory, fileName);
+        if (File.Exists(bundledPath))
+        {
+            configuration.AddJsonFile(bundledPath, optional: true);
+        }
+#if ANDROID
+        else
+        {
+            try
+            {
+                using var asset = Android.App.Application.Context.Assets?.Open(fileName);
+                if (asset is not null)
+                    configuration.AddJsonStream(asset);
+            }
+            catch { }
+        }
+#endif
+        configuration.AddJsonFile(Path.Combine(FileSystem.AppDataDirectory, fileName), optional: true, reloadOnChange: true);
+    }
+
+    private static void RefreshRemoteConfig(IHttpClientFactory httpFactory, string fileName) =>
+        _ = Task.Run(async () =>
+        {
+            try
+            {
+                using var client = httpFactory.CreateClient();
+                if (client.BaseAddress is null) return;
+
+                var json = await client.GetStringAsync(fileName).ConfigureAwait(false);
+                if (string.IsNullOrWhiteSpace(json)) return;
+
+                var cachePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+                var tempPath = $"{cachePath}.tmp";
+                await File.WriteAllTextAsync(tempPath, json).ConfigureAwait(false);
+                File.Move(tempPath, cachePath, overwrite: true);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[Config] Remote {fileName} refresh failed: {ex.Message}");
+            }
+        });
 }

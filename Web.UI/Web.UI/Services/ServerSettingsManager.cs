@@ -85,70 +85,49 @@ namespace Web.UI.Services
 
         public async Task<string?> GetAccessTokenAsync()
         {
-            var accessToken = _accessor.HttpContext?.Request?.Cookies["AccessToken"];
+            var accessToken = _accessor.HttpContext?.Request?.Cookies[AuthenticationExtensions.AccessTokenCookie];
             if (!string.IsNullOrWhiteSpace(accessToken))
-            {
-                return accessToken;
-            }
+                return Uri.UnescapeDataString(accessToken);
 
             try
             {
-                var js = _serviceProvider.GetService<IJSRuntime>();
-                if (js != null)
-                {
-                    return await js.GetAsync("AccessToken");
-                }
+                if (_serviceProvider.GetService<IJSRuntime>() is { } js)
+                    return await js.InvokeAsync<string?>("oauthPopupHelper.getAccessToken");
             }
-            catch
-            {
-                // Fallback for cases where JS interop is not connected or prerendering
-            }
+            catch { }
 
             return null;
         }
 
         public async Task SetAccessTokenAsync(string accessToken)
         {
-            if (_accessor.HttpContext?.Response != null && !_accessor.HttpContext.Response.HasStarted)
+            if (_accessor.HttpContext?.Response is { HasStarted: false } response)
             {
                 try
                 {
-                    _accessor.HttpContext.Response.Cookies.Append("AccessToken", accessToken ?? string.Empty, new CookieOptions
+                    response.Cookies.Append(AuthenticationExtensions.AccessTokenCookie, accessToken ?? string.Empty, new CookieOptions
                     {
                         HttpOnly = false,
-                        Secure = true,
+                        Secure = _accessor.HttpContext.Request.IsHttps,
                         SameSite = SameSiteMode.Lax,
                         Path = "/",
                         Expires = string.IsNullOrEmpty(accessToken) ? DateTimeOffset.UtcNow.AddDays(-1) : DateTimeOffset.UtcNow.AddDays(30)
                     });
                 }
-                catch
-                {
-                    // Response headers may have started in interactive mode
-                }
+                catch { }
             }
 
-            // Always also write via JS Interop when in interactive SignalR / client mode or if Response already started
             try
             {
-                var js = _serviceProvider.GetService<IJSRuntime>();
-                if (js != null)
+                if (_serviceProvider.GetService<IJSRuntime>() is { } js)
                 {
                     if (string.IsNullOrEmpty(accessToken))
-                    {
-                        await js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'; try { localStorage.removeItem('AccessToken'); sessionStorage.removeItem('AccessToken'); } catch(e){}");
-                    }
+                        await js.InvokeVoidAsync("oauthPopupHelper.clearAccessToken");
                     else
-                    {
-                        var escaped = Uri.EscapeDataString(accessToken);
-                        await js.InvokeVoidAsync("eval", "document.cookie = 'AccessToken=" + escaped + "; path=/; max-age=2592000; SameSite=Lax; Secure'; try { localStorage.setItem('AccessToken', '" + escaped + "'); } catch(e){}");
-                    }
+                        await js.InvokeVoidAsync("oauthPopupHelper.setAccessToken", accessToken);
                 }
             }
-            catch
-            {
-                // Prerendering fallback where JS is not yet interactive
-            }
+            catch { }
         }
     }
 }

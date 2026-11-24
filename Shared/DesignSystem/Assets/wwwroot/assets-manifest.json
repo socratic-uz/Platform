@@ -843,8 +843,8 @@
     },
     {
       "url": "_content/Assets/js/features/auth/oauth-popup.js",
-      "size": 7604,
-      "hash": "sha256-4a6372fc1a95"
+      "size": 7336,
+      "hash": "sha256-d73a7214abfd"
     },
     {
       "url": "_content/Assets/js/features/auth/passkey.js",

@@ -37,7 +37,11 @@ namespace Domain.Abstractions
 
         [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access", Justification = "Protobuf state strings are preserved via BackendJsonContext")]
         [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage("AOT", "IL3050:Calling members annotated with RequiresDynamicCodeAttribute may break functionality when AOT compiling", Justification = "Protobuf reflection list instantiation uses preserved element types")]
-        public static bool TryTakeProtobufListReflection(this PersistentComponentState state, string key, System.Type elementType, out IList list)
+        public static bool TryTakeProtobufListReflection(
+            this PersistentComponentState state,
+            string key,
+            [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] System.Type elementType,
+            out IList list)
         {
             var listType = typeof(List<>).MakeGenericType(elementType);
             list = (IList)System.Activator.CreateInstance(listType)!;

@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -38,21 +39,21 @@ namespace Infrastructure.Core
             }
         }
 
-        public static void AddGrpcClient<TClient>(this IServiceCollection services, string? uriString) where TClient : ClientBase
+        public static void AddGrpcClient<[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)] TClient>(this IServiceCollection services, string? uriString) where TClient : ClientBase
         {
-            uriString = string.IsNullOrWhiteSpace(uriString) ? "http://localhost:5000" : uriString;
+            if (!Uri.TryCreate(uriString, UriKind.Absolute, out var targetUri))
+                return;
 
-            services.AddGrpcClient<TClient>(typeof(TClient).Name, o => { o.Address = new(uriString); })
-                    .ConfigurePrimaryHttpMessageHandler(() =>
+            services.AddGrpcClient<TClient>(typeof(TClient).Name, o => o.Address = targetUri)
+                    .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(new HttpClientHandler
                     {
-                        var handler = new HttpClientHandler();
-                        if (!OperatingSystem.IsBrowser())
-                        {
-                            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-                        }
-                        return new GrpcWebHandler(handler);
-                    })
-                    .ConfigureChannel(o => o.UnsafeUseInsecureChannelCallCredentials = true)
+#if DEBUG
+                        ServerCertificateCustomValidationCallback = !OperatingSystem.IsBrowser() && targetUri.IsLoopback
+                            ? HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                            : null
+#endif
+                    }))
+                    .ConfigureChannel(o => o.UnsafeUseInsecureChannelCallCredentials = targetUri.Scheme == Uri.UriSchemeHttp)
                     .AddCallCredentials((c, m, s) => CreateCallCredentials(c, m, s));
         }
 
