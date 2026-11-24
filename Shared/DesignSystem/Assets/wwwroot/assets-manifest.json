@@ -223,8 +223,8 @@
     },
     {
       "url": "_content/Assets/css/pages/detector.css",
-      "size": 13451,
-      "hash": "sha256-87e3c16e5467"
+      "size": 13891,
+      "hash": "sha256-ddf53bccda94"
     },
     {
       "url": "_content/Assets/css/pages/docs.css",
@@ -863,8 +863,8 @@
     },
     {
       "url": "_content/Assets/js/features/hardware/camera-streamer.js",
-      "size": 12276,
-      "hash": "sha256-65550e83bc6f"
+      "size": 22741,
+      "hash": "sha256-6c53569268f4"
     },
     {
       "url": "_content/Assets/js/features/hardware/receipt-printer.js",

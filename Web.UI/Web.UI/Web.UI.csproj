@@ -48,6 +48,7 @@
 		<ProjectReference Include="../../Shared/Composition/Composition.csproj" Condition="('$(Composition)' == '' or !Exists('$(Composition)')) and Exists('../../Shared/Composition/Composition.csproj')" ReferenceOutputAssembly="true" />
 
 		<ProjectReference Include="$(ServiceDefaults)" Condition="'$(ServiceDefaults)' != '' and Exists('$(ServiceDefaults)')" />
+		<ProjectReference Include="../../../Hardware/WebRtc/WebRtc.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

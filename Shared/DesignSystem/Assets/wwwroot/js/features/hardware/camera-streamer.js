@@ -80,12 +80,11 @@ var JSInterop;
                     this._stream = mediaStream;
                     if (this._video) {
                         this._video.srcObject = this._stream;
-                        if (this._callInvoke)
-                            this._video.ontimeupdate = (ev) => this.onFrame(ev);
                         this._video.onloadedmetadata = (ev) => __awaiter(this, void 0, void 0, function* () {
                             try {
                                 yield this._video.play();
                                 this._streamActive = true;
+                                if (this._callInvoke) this.startFrameLoop();
                             } catch (e) {
                                 console.warn("[CameraStreamer] Error playing video stream:", e);
                             }
@@ -93,6 +92,7 @@ var JSInterop;
                         if (this._video.readyState >= 1) {
                             this._video.play().catch(e => console.warn("[CameraStreamer] Error playing video stream:", e));
                             this._streamActive = true;
+                            if (this._callInvoke) this.startFrameLoop();
                         }
                     }
                 }).catch(err => {
@@ -103,10 +103,9 @@ var JSInterop;
                             this._stream = mediaStream;
                             if (this._video) {
                                 this._video.srcObject = this._stream;
-                                if (this._callInvoke)
-                                    this._video.ontimeupdate = (ev) => this.onFrame(ev);
                                 this._video.play().catch(e => console.warn("[CameraStreamer] Fallback play error:", e));
                                 this._streamActive = true;
+                                if (this._callInvoke) this.startFrameLoop();
                             }
                         }).catch(err2 => console.error("[CameraStreamer] Fallback getUserMedia also failed:", err2));
                     }
@@ -117,11 +116,12 @@ var JSInterop;
              */
             stop() {
                 var _a, _b;
-                // Используйте метод pause, поскольку в интерфейсе HTMLVideoElement нет метода stop
+                this.stopFrameLoop();
+                this.stopWebRtc();
                 (_a = this._video) === null || _a === void 0 ? void 0 : _a.pause();
-                // Остановите все треки потока (без этого поток все равно будет обрабатываться, и браузер покажет, что камера все еще используется сайтом)
                 (_b = this._stream) === null || _b === void 0 ? void 0 : _b.getTracks().forEach(t => t.stop());
                 this._streamActive = false;
+                this._inFlight = false;
                 if (this._video !== null)
                     this._video.ontimeupdate = null;
             }
@@ -177,35 +177,242 @@ var JSInterop;
                 this._stream = null;
                 this._constraints = null;
                 this._lastFrame = null;
+                this._canvas = null;
+                this._ctx = null;
             }
             /**
              * Вызывает объект dotnet на предоставленном методе с предоставленными данными
              * @param data Строка, которую получает метод dotnet
              */
             invokeDotnetObject(data) {
-                if (this._callInvoke)
-                    this._dotnetObject.invokeMethodAsync(this._invokeIdentifier, data);
+                if (!this._callInvoke || !this._dotnetObject) return Promise.resolve();
+                return this._dotnetObject.invokeMethodAsync(this._invokeIdentifier, data);
             }
-            getCurrentCanvasFrame() {
-                if (!this._video) return "";
-                let canvas = document.createElement("canvas");
+            setBinaryEndpoint(endpoint) {
+                this._binaryEndpoint = endpoint || null;
+            }
+            drawVideoToCanvas() {
+                if (!this._video) return false;
                 let w = this._video.videoWidth || (this._width || 640);
                 let h = this._video.videoHeight || (this._height || 360);
-                if (w === 0 || h === 0) return "";
-                canvas.width = w;
-                canvas.height = h;
-                // Нарисуйте текущее изображение потока на холсте
-                let ctx = canvas.getContext("2d");
-                if (!ctx) return "";
-                ctx.drawImage(this._video, 0, 0, w, h);
-                // Получить изображение как строку 64base
-                return canvas.toDataURL("image/png");
+                if (w === 0 || h === 0) return false;
+                if (!this._canvas) {
+                    this._canvas = document.createElement("canvas");
+                    this._ctx = this._canvas.getContext("2d", { alpha: false });
+                }
+                if (this._canvas.width !== w) this._canvas.width = w;
+                if (this._canvas.height !== h) this._canvas.height = h;
+                if (!this._ctx) return false;
+                this._ctx.drawImage(this._video, 0, 0, w, h);
+                return true;
             }
-            /**
-             * Обрабатывает событие ontimeupdate видео и вызывает объект dotnet с img
-             */
+            getCurrentCanvasFrame() {
+                if (!this.drawVideoToCanvas() || !this._canvas) return "";
+                return this._canvas.toDataURL("image/jpeg", 0.72);
+            }
+            ensureOverlayCanvas() {
+                if (!this._video || !this._video.parentElement) return null;
+                if (!this._overlayCanvas) {
+                    const c = document.createElement("canvas");
+                    c.style.position = "absolute";
+                    c.style.inset = "0";
+                    c.style.width = "100%";
+                    c.style.height = "100%";
+                    c.style.pointerEvents = "none";
+                    this._video.parentElement.appendChild(c);
+                    this._overlayCanvas = c;
+                    this._overlayCtx = c.getContext("2d");
+                }
+                return this._overlayCanvas;
+            }
+            drawOverlayBoxes(data) {
+                const c = this.ensureOverlayCanvas();
+                if (!c || !this._overlayCtx) return;
+                const w = data.w || this._video.videoWidth || 640;
+                const h = data.h || this._video.videoHeight || 360;
+                if (c.width !== w) c.width = w;
+                if (c.height !== h) c.height = h;
+                const ctx = this._overlayCtx;
+                ctx.clearRect(0, 0, w, h);
+                const boxes = data.boxes || [];
+                if (!boxes.length) return;
+                ctx.font = "600 12px Roboto, sans-serif";
+                for (let i = 0; i < boxes.length; i++) {
+                    const b = boxes[i];
+                    const x = (b.x / 100) * w;
+                    const y = (b.y / 100) * h;
+                    const bw = (b.w / 100) * w;
+                    const bh = (b.h / 100) * h;
+                    ctx.strokeStyle = "rgba(130, 224, 170, 0.92)";
+                    ctx.lineWidth = 2;
+                    ctx.fillStyle = "rgba(130, 224, 170, 0.08)";
+                    ctx.beginPath();
+                    ctx.roundRect(x, y, bw, bh, 8);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    const label = `${b.l} (${Math.round((b.s || 0) * 100)} %)`;
+                    const tw = ctx.measureText(label).width;
+                    const px = x + 6;
+                    const py = y + 6;
+                    ctx.fillStyle = "rgba(24, 28, 32, 0.82)";
+                    ctx.beginPath();
+                    ctx.roundRect(px, py, tw + 16, 22, 999);
+                    ctx.fill();
+                    ctx.fillStyle = "#82e0aa";
+                    ctx.fillText(label, px + 8, py + 15);
+                }
+            }
+            startWebRtc(endpoint) {
+                return __awaiter(this, void 0, void 0, function* () {
+                    this.stopWebRtc();
+                    if (!this._stream) return;
+                    const track = this._stream.getVideoTracks()[0];
+                    if (!track) return;
+                    const token = (this._rtcToken = (this._rtcToken || 0) + 1);
+                    const pc = new RTCPeerConnection({ iceServers: [] });
+                    this._pc = pc;
+                    const dc = pc.createDataChannel("boxes");
+                    this._dc = dc;
+                    let frames = 0;
+                    let fps = 0;
+                    let lastAt = 0;
+                    let lastReportAt = 0;
+                    dc.onmessage = (ev) => {
+                        if (token !== this._rtcToken || !this._streamActive) return;
+                        try {
+                            const data = JSON.parse(ev.data);
+                            frames++;
+                            const now = performance.now();
+                            if (lastAt > 0) {
+                                const inst = 1000 / Math.max(1, now - lastAt);
+                                fps = fps === 0 ? inst : (fps * 0.8 + inst * 0.2);
+                            }
+                            lastAt = now;
+                            requestAnimationFrame(() => {
+                                if (token === this._rtcToken && this._streamActive)
+                                    this.drawOverlayBoxes(data);
+                            });
+                            if (now - lastReportAt >= 350) {
+                                lastReportAt = now;
+                                this.invokeDotnetObject(JSON.stringify({
+                                    ms: data.ms,
+                                    w: data.w,
+                                    h: data.h,
+                                    fps: Math.round(fps * 10) / 10,
+                                    frames: frames,
+                                    boxes: []
+                                }));
+                            }
+                        } catch {}
+                    };
+                    pc.addTrack(track, this._stream);
+                    const offer = yield pc.createOffer();
+                    yield pc.setLocalDescription(offer);
+                    if (pc.iceGatheringState !== "complete") {
+                        yield new Promise((resolve) => {
+                            const timer = setTimeout(resolve, 1200);
+                            pc.onicegatheringstatechange = () => {
+                                if (pc.iceGatheringState === "complete") {
+                                    clearTimeout(timer);
+                                    resolve();
+                                }
+                            };
+                        });
+                    }
+                    if (token !== this._rtcToken || !this._streamActive) return;
+                    const resp = yield fetch(endpoint, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ sdp: pc.localDescription.sdp })
+                    });
+                    if (!resp.ok || token !== this._rtcToken || !this._streamActive) return;
+                    const ans = yield resp.json();
+                    this._rtcSessionId = ans.sessionId;
+                    yield pc.setRemoteDescription({ type: "answer", sdp: ans.sdp });
+                });
+            }
+            stopWebRtc() {
+                this._rtcToken = (this._rtcToken || 0) + 1;
+                if (this._dc) { try { this._dc.close(); } catch {} this._dc = null; }
+                if (this._pc) { try { this._pc.close(); } catch {} this._pc = null; }
+                if (this._rtcSessionId) {
+                    const sid = this._rtcSessionId;
+                    this._rtcSessionId = null;
+                    try { fetch(`/api/detector/webrtc/${sid}`, { method: "DELETE", keepalive: true }); } catch {}
+                }
+                if (this._overlayCanvas) {
+                    if (this._overlayCtx)
+                        this._overlayCtx.clearRect(0, 0, this._overlayCanvas.width, this._overlayCanvas.height);
+                    this._overlayCanvas.remove();
+                    this._overlayCanvas = null;
+                    this._overlayCtx = null;
+                }
+            }
+            startFrameLoop() {
+                this.stopFrameLoop();
+                if (this._binaryEndpoint && this._binaryEndpoint.endsWith("/webrtc/offer")) {
+                    this.startWebRtc(this._binaryEndpoint).catch(e => console.warn("[CameraStreamer] WebRTC start error:", e));
+                    return;
+                }
+                this._loopToken = (this._loopToken || 0) + 1;
+                const token = this._loopToken;
+                const tick = () => {
+                    if (token !== this._loopToken || !this._streamActive || !this._video) return;
+                    if (this._callInvoke && !this._inFlight && this._video.readyState >= 2) {
+                        if (this._binaryEndpoint) {
+                            if (this.drawVideoToCanvas() && this._canvas) {
+                                this._inFlight = true;
+                                this._canvas.toBlob(async (blob) => {
+                                    try {
+                                        if (!blob || token !== this._loopToken || !this._streamActive) return;
+                                        const resp = await fetch(this._binaryEndpoint, { method: "POST", body: blob });
+                                        if (resp.ok) {
+                                            const json = await resp.text();
+                                            await this.invokeDotnetObject(json);
+                                        }
+                                    } catch {}
+                                    finally {
+                                        this._inFlight = false;
+                                    }
+                                }, "image/jpeg", 0.72);
+                            }
+                        } else {
+                            const frame = this.getCurrentCanvasFrame();
+                            if (frame) {
+                                this._lastFrame = frame;
+                                this._inFlight = true;
+                                Promise.resolve(this.invokeDotnetObject(frame))
+                                    .catch(() => {})
+                                    .finally(() => { this._inFlight = false; });
+                            }
+                        }
+                    }
+                    if (typeof this._video.requestVideoFrameCallback === "function") {
+                        this._rvfcId = this._video.requestVideoFrameCallback(tick);
+                    } else {
+                        this._rafId = requestAnimationFrame(tick);
+                    }
+                };
+                if (typeof this._video.requestVideoFrameCallback === "function") {
+                    this._rvfcId = this._video.requestVideoFrameCallback(tick);
+                } else {
+                    this._rafId = requestAnimationFrame(tick);
+                }
+            }
+            stopFrameLoop() {
+                this._loopToken = (this._loopToken || 0) + 1;
+                if (this._video && this._rvfcId && typeof this._video.cancelVideoFrameCallback === "function") {
+                    try { this._video.cancelVideoFrameCallback(this._rvfcId); } catch {}
+                    this._rvfcId = 0;
+                }
+                if (this._rafId) {
+                    cancelAnimationFrame(this._rafId);
+                    this._rafId = 0;
+                }
+            }
             onFrame(ev) {
-                if (this._callInvoke && this._streamActive)
+                if (this._callInvoke && this._streamActive && !this._inFlight)
                     this.invokeDotnetObject(this._lastFrame = this.getCurrentCanvasFrame());
             }
         }

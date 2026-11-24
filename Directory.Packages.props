@@ -83,6 +83,7 @@
     <PackageVersion Include="Redth.MauiDevFlow.Blazor" Version="0.8.1" />
     <PackageVersion Include="ScyllaDBCSharpDriver" Version="3.22.0.2" />
     <PackageVersion Include="SIPSorcery" Version="10.0.16" />
+    <PackageVersion Include="SIPSorceryMedia.Encoders" Version="10.0.4" />
     <PackageVersion Include="SkiaSharp" Version="4.157.0" />
     <PackageVersion Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.157.0" />
     <PackageVersion Include="SkiaSharp.Views.Blazor" Version="4.157.0" />

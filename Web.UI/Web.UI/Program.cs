@@ -282,6 +282,7 @@ app.MapDefaultEndpoints();
 app.MapProtomapsTileEndpoints();
 #if FEATURE_BIOMETRICS || FEATURE_VISION
 app.MapFaceIdEndpoints();
+app.MapDetectorEndpoints();
 #endif
 app.MapAuthEndpoints();
 
