@@ -603,27 +603,45 @@ if (publishDir) {
 
   // Ensure _framework/blazor.webassembly.js is registered if index.html exists in this build (WasmAppHost standalone)
   if (indexNode && !fwChildren['blazor.webassembly.js']) {
-    const nugetRoot = process.env.NUGET_PACKAGES || 'D:\\packages\\nuget';
-    const wasmPkgDir = path.join(nugetRoot, 'microsoft.aspnetcore.components.webassembly');
-    if (fs.existsSync(wasmPkgDir)) {
-      for (const ver of fs.readdirSync(wasmPkgDir).sort().reverse()) {
-        const candidate = path.join(wasmPkgDir, ver, 'build', 'net10.0', 'blazor.webassembly.js');
-        if (fs.existsSync(candidate)) {
-          const jsBuf = fs.readFileSync(candidate);
-          const jsSha = crypto.createHash('sha256').update(jsBuf).digest('base64');
-          fs.writeFileSync(path.join(bundleFrameworkDir, 'blazor.webassembly.js'), jsBuf);
-          fwChildren['blazor.webassembly.js'] = {
-            Children: null,
-            Asset: { ContentRootIndex: bundleRootIdx, SubPath: '_framework/blazor.webassembly.js' },
-            Patterns: null
-          };
-          fs.writeFileSync(runtimePath, JSON.stringify(runtime), 'utf8');
-          const ep = createBundleEndpoint('_framework/blazor.webassembly.js', '_framework/blazor.webassembly.js', null, jsBuf, jsSha, nowUtc);
-          ep.ResponseHeaders.find((h) => h.Name === 'Content-Type').Value = 'text/javascript';
-          endpoints.Endpoints.push(ep);
-          break;
+    let candidate = null;
+    for (const root of runtime.ContentRoots || []) {
+      const fxCandidate = path.join(root, '_framework', 'blazor.webassembly.js');
+      if (fs.existsSync(fxCandidate)) {
+        candidate = fxCandidate;
+        break;
+      }
+    }
+    if (!candidate) {
+      const nugetRoot = process.env.NUGET_PACKAGES || path.join(process.env.USERPROFILE || process.env.HOME || '', '.nuget', 'packages');
+      const wasmPkgDir = path.join(nugetRoot, 'microsoft.aspnetcore.components.webassembly');
+      if (fs.existsSync(wasmPkgDir)) {
+        for (const ver of fs.readdirSync(wasmPkgDir).sort().reverse()) {
+          const buildDirPath = path.join(wasmPkgDir, ver, 'build');
+          if (!fs.existsSync(buildDirPath)) continue;
+          for (const tfm of fs.readdirSync(buildDirPath).sort().reverse()) {
+            const p = path.join(buildDirPath, tfm, 'blazor.webassembly.js');
+            if (fs.existsSync(p)) {
+              candidate = p;
+              break;
+            }
+          }
+          if (candidate) break;
         }
       }
+    }
+    if (candidate) {
+      const jsBuf = fs.readFileSync(candidate);
+      const jsSha = crypto.createHash('sha256').update(jsBuf).digest('base64');
+      fs.writeFileSync(path.join(bundleFrameworkDir, 'blazor.webassembly.js'), jsBuf);
+      fwChildren['blazor.webassembly.js'] = {
+        Children: null,
+        Asset: { ContentRootIndex: bundleRootIdx, SubPath: '_framework/blazor.webassembly.js' },
+        Patterns: null
+      };
+      fs.writeFileSync(runtimePath, JSON.stringify(runtime), 'utf8');
+      const ep = createBundleEndpoint('_framework/blazor.webassembly.js', '_framework/blazor.webassembly.js', null, jsBuf, jsSha, nowUtc);
+      ep.ResponseHeaders.find((h) => h.Name === 'Content-Type').Value = 'text/javascript';
+      endpoints.Endpoints.push(ep);
     }
   }
 
@@ -648,7 +666,6 @@ if (publishDir) {
         !name.endsWith('.gz') &&
         !name.endsWith('.pdb') &&
         !name.startsWith('assemblies.') &&
-        name !== 'blazor.webassembly.js' &&
         !name.includes('HotReload')
       ) {
         const src = path.join(runtime.ContentRoots[node.Asset.ContentRootIndex], node.Asset.SubPath);
@@ -672,6 +689,9 @@ if (publishDir) {
             }
           } else {
             fs.copyFileSync(src, path.join(assetsFwDir, name));
+            if (/^blazor\.webassembly\.[a-z0-9]+\.js$/i.test(name) && !fs.existsSync(path.join(assetsFwDir, 'blazor.webassembly.js'))) {
+              fs.copyFileSync(src, path.join(assetsFwDir, 'blazor.webassembly.js'));
+            }
           }
         }
       }

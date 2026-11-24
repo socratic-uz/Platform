@@ -15,3 +15,7 @@ Design/Screenshots/*.png
 # Regenerated web assets
 **/wwwroot/preview/
 **/wwwroot/analytics/
+**/wwwroot/_framework/
+**/wwwroot/_content/
+**/wwwroot/index.html
+**/wwwroot/appsettings*.json
