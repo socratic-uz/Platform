@@ -270,7 +270,12 @@ var JSInterop;
                     const track = this._stream.getVideoTracks()[0];
                     if (!track) return;
                     const token = (this._rtcToken = (this._rtcToken || 0) + 1);
-                    const pc = new RTCPeerConnection({ iceServers: [] });
+                    const pc = new RTCPeerConnection({
+                        iceServers: [
+                            { urls: "stun:netbird.socratic.uz:3478" },
+                            { urls: "stun:stun.l.google.com:19302" }
+                        ]
+                    });
                     this._pc = pc;
                     const dc = pc.createDataChannel("boxes");
                     this._dc = dc;
@@ -278,8 +283,25 @@ var JSInterop;
                     let fps = 0;
                     let lastAt = 0;
                     let lastReportAt = 0;
+                    let gotFrame = false;
+                    const triggerFallback = () => {
+                        if (gotFrame || token !== this._rtcToken || !this._streamActive) return;
+                        console.warn("[CameraStreamer] WebRTC ICE/DataChannel timeout; falling back to /api/detector/frame");
+                        this.stopWebRtc();
+                        this._binaryEndpoint = "/api/detector/frame";
+                        this.startFrameLoop();
+                    };
+                    const fallbackTimer = setTimeout(triggerFallback, 3500);
+                    this._rtcFallbackTimer = fallbackTimer;
+                    pc.oniceconnectionstatechange = () => {
+                        if (pc.iceConnectionState === "failed") triggerFallback();
+                    };
                     dc.onmessage = (ev) => {
                         if (token !== this._rtcToken || !this._streamActive) return;
+                        if (!gotFrame) {
+                            gotFrame = true;
+                            clearTimeout(fallbackTimer);
+                        }
                         try {
                             const data = JSON.parse(ev.data);
                             frames++;
@@ -334,6 +356,7 @@ var JSInterop;
             }
             stopWebRtc() {
                 this._rtcToken = (this._rtcToken || 0) + 1;
+                if (this._rtcFallbackTimer) { clearTimeout(this._rtcFallbackTimer); this._rtcFallbackTimer = 0; }
                 if (this._dc) { try { this._dc.close(); } catch {} this._dc = null; }
                 if (this._pc) { try { this._pc.close(); } catch {} this._pc = null; }
                 if (this._rtcSessionId) {

@@ -133,7 +133,14 @@ public static class DetectorEndpoints
 
         public async Task<string> StartAsync(string offerSdp, CancellationToken ct)
         {
-            var pc = new RTCPeerConnection(new RTCConfiguration { iceServers = new List<RTCIceServer>() });
+            var pc = new RTCPeerConnection(new RTCConfiguration
+            {
+                iceServers = new List<RTCIceServer>
+                {
+                    new() { urls = "stun:netbird.socratic.uz:3478" },
+                    new() { urls = "stun:stun.l.google.com:19302" }
+                }
+            });
             _pc = pc;
 
             var videoTrack = new MediaStreamTrack(new VideoFormat(VideoCodecsEnum.VP8, 96), MediaStreamStatusEnum.RecvOnly);
