@@ -28,6 +28,11 @@ using static Shared.Helpers.FileHelper;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 MinIOUrl = builder.Configuration[MINIO_URL] ?? MinIOUrl;
 
+var baseAddress = builder.HostEnvironment.BaseAddress;
+var isStandaloneWasm = Environment.GetEnvironmentVariable("STANDALONE_WASM") == "1"
+    || baseAddress.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
+    || (Uri.TryCreate(baseAddress, UriKind.Absolute, out var baseUri) && baseUri.Port is 5080 or 5443);
+
 // 1. WebAssembly IHostEnvironment bridge
 builder.Services.AddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(new Socratic.Platform.Composition.Services.SocraticHostEnvironment
 {
@@ -36,23 +41,25 @@ builder.Services.AddSingleton<Microsoft.Extensions.Hosting.IHostEnvironment>(new
     ContentRootPath = builder.HostEnvironment.BaseAddress
 });
 
+// Must be registered BEFORE AddCompositionServices() so AddLayoutServices()'s TryAddScoped<AuthenticationStateProvider, StandaloneAuthenticationStateProvider> does not override PersistentAuthenticationStateProvider in production WASM.
+if (!isStandaloneWasm)
+{
+    builder.Services.AddAuthenticationStateDeserialization();
+}
+
 // 2. Unified Composition Application Services (Layout, all 13 features, Design System, gRPC, Localization)
 builder.Services.AddCompositionServices(builder.Configuration);
 
 // 3. WebAssembly platform-specific adaptations
 builder.Services.AddSingleton<IFormFactor, WebFormFactor>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-builder.Services.AddAuthenticationStateDeserialization();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.IFaceIdService, Infrastructure.Gateways.Biometrics.ClientFaceIdService>();
 builder.Services.AddScoped<Domain.Interfaces.Biometrics.ISupportSessionProvider, Infrastructure.Gateways.Support.ClientSupportSessionProvider>();
 builder.Services.AddScoped<Domain.Interfaces.Hardware.IReceiptPrinterService, Infrastructure.Gateways.Receipt.BrowserReceiptPrinterService>();
 builder.Services.AddScoped<Domain.Interfaces.Hardware.ICameraStreamerUiProvider, CameraStreamer.Web.CameraStreamerUiProvider>();
 
 // Standalone file:// or WasmAppHost (http :5080 / https :5443 / STANDALONE_WASM=1): mount root router directly
-var baseAddress = builder.HostEnvironment.BaseAddress;
-if (Environment.GetEnvironmentVariable("STANDALONE_WASM") == "1"
-    || baseAddress.StartsWith("file:", StringComparison.OrdinalIgnoreCase)
-    || (Uri.TryCreate(baseAddress, UriKind.Absolute, out var baseUri) && baseUri.Port is 5080 or 5443))
+if (isStandaloneWasm)
 {
     builder.RootComponents.Add<Routes>("body");
     builder.RootComponents.Add<Microsoft.AspNetCore.Components.Web.HeadOutlet>("head::after");
