@@ -326,7 +326,7 @@ var JSInterop;
                                     boxes: []
                                 }));
                             }
-                        } catch {}
+                        } catch { }
                     };
                     pc.addTrack(track, this._stream);
                     const offer = yield pc.createOffer();
@@ -357,12 +357,12 @@ var JSInterop;
             stopWebRtc() {
                 this._rtcToken = (this._rtcToken || 0) + 1;
                 if (this._rtcFallbackTimer) { clearTimeout(this._rtcFallbackTimer); this._rtcFallbackTimer = 0; }
-                if (this._dc) { try { this._dc.close(); } catch {} this._dc = null; }
-                if (this._pc) { try { this._pc.close(); } catch {} this._pc = null; }
+                if (this._dc) { try { this._dc.close(); } catch { } this._dc = null; }
+                if (this._pc) { try { this._pc.close(); } catch { } this._pc = null; }
                 if (this._rtcSessionId) {
                     const sid = this._rtcSessionId;
                     this._rtcSessionId = null;
-                    try { fetch(`/api/detector/webrtc/${sid}`, { method: "DELETE", keepalive: true }); } catch {}
+                    try { fetch(`/api/detector/webrtc/${sid}`, { method: "DELETE", keepalive: true }); } catch { }
                 }
                 if (this._overlayCanvas) {
                     if (this._overlayCtx)
@@ -394,7 +394,7 @@ var JSInterop;
                                             const json = await resp.text();
                                             await this.invokeDotnetObject(json);
                                         }
-                                    } catch {}
+                                    } catch { }
                                     finally {
                                         this._inFlight = false;
                                     }
@@ -406,7 +406,7 @@ var JSInterop;
                                 this._lastFrame = frame;
                                 this._inFlight = true;
                                 Promise.resolve(this.invokeDotnetObject(frame))
-                                    .catch(() => {})
+                                    .catch(() => { })
                                     .finally(() => { this._inFlight = false; });
                             }
                         }
@@ -426,7 +426,7 @@ var JSInterop;
             stopFrameLoop() {
                 this._loopToken = (this._loopToken || 0) + 1;
                 if (this._video && this._rvfcId && typeof this._video.cancelVideoFrameCallback === "function") {
-                    try { this._video.cancelVideoFrameCallback(this._rvfcId); } catch {}
+                    try { this._video.cancelVideoFrameCallback(this._rvfcId); } catch { }
                     this._rvfcId = 0;
                 }
                 if (this._rafId) {
