@@ -20,7 +20,7 @@ using Biometrics.Processor;
 using FFmpegProcessor;
 #endif
 
-using static SharedKernel.Options.MinioOptions;
+using static SharedKernel.Options.S3Options;
 using static SharedKernel.ValueObjects.EnvironmentVariables;
 using static Shared.Helpers.FileHelper;
 

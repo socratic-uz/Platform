@@ -10,7 +10,7 @@ using Native.UI.Services;
 using Shared;
 using Shared.Services;
 using Socratic.Platform.Composition.Extensions;
-using static SharedKernel.Options.MinioOptions;
+using static SharedKernel.Options.S3Options;
 using static SharedKernel.ValueObjects.EnvironmentVariables;
 using static Shared.Helpers.FileHelper;
 

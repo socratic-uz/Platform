@@ -2,7 +2,7 @@ global using static SharedKernel.ValueObjects.EnvironmentVariables;
 global using System.Linq;
 global using System.Linq.Expressions;
 
-using static SharedKernel.Options.MinioOptions;
+using static SharedKernel.Options.S3Options;
 using static SharedKernel.Options.OpenAiOptions;
 using static SharedKernel.Options.GoogleOptions;
 using System.Text;
